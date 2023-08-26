@@ -1,0 +1,275 @@
+package org.stepbible.textconverter
+
+import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.debug.Logger
+import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
+import org.stepbible.textconverter.support.miscellaneous.Translations.stringFormatWithLookup
+import org.stepbible.textconverter.support.ref.Ref
+import org.stepbible.textconverter.support.ref.RefKey
+import org.stepbible.textconverter.support.usx.Usx
+import org.w3c.dom.Document
+import org.w3c.dom.Node
+
+
+
+/******************************************************************************/
+/**
+ * Handles the creation and annotation of empty verses.
+ *
+ * Empty verses may turn up for a number of reasons.  The raw text may simply
+ * contain verses which are empty.  We may create them as part of elision
+ * processing (an elided verse covering verses 1-4, for instance, is turned
+ * into three empty verses -- verses 1-3 -- and then verse 4 contains the
+ * entire text).  Reversification may create them where necessary.  And
+ * finally after all other processing is complete, we compare the verses now
+ * available against those required by the selected versification scheme, and
+ * create empty verses to fill in any gaps.
+ *
+ * It has turned out to be convenient to group together all of these various
+ * pieces of functionality in one place so that I can coordinate things like
+ * whether the verses are supplied with footnotes or not, whether they are
+ * given a marker (like a dash) to indicate they are deliberately empty, etc.
+ *
+ * @author ARA "Jamie" Jamieson
+ */
+
+object EmptyVerseHandler
+{
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Public                                  **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+   * The various other methods in this class let you create empty verses for
+   * specific purposes.  They all of them add an _X_reasonEmpty attribute to
+   * sids to explain why they have been created empty.
+   *
+   * If there remain any empty verses without this attribute, it must be
+   * because they were empty in the raw USX, and we need to add content and
+   * explanatory content to these too.
+   *
+   * This method addresses this requirement.
+   *
+   * @param document Document to be processed.
+   * @return True if changes are made.
+   */
+
+  fun annotateEmptyVerses (document: Document): Boolean
+  {
+    /************************************************************************/
+    var isEmpty = false
+    var sid: Node? = null
+    var res = false
+
+
+
+    /************************************************************************/
+    fun addContent ()
+    {
+      res = true
+      Dom.insertNodeAfter(sid!!, makeReferenceSpecificFootnote(document, Dom.getAttribute(sid!!, "sid")!!, "V_emptyContentFootnote_verseEmptyInThisTranslation"))
+      Dom.insertNodeAfter(sid!!, makeContent(document, m_Content_EmptyVerse))
+    }
+
+
+    /************************************************************************/
+    /* Run over the entire document checking each verse to see whether it is
+       empty and also whether it already has a footnote. */
+
+    val nodes = Dom.collectNodesInTree(document)
+    for (i in nodes.indices)
+    {
+      /**********************************************************************/
+      when (Dom.getNodeName(nodes[i]))
+      {
+        /********************************************************************/
+        "verse" ->
+        {
+          if (Dom.hasAttribute(nodes[i], "sid"))
+          {
+            isEmpty = !Dom.hasAttribute(nodes[i], "_X_reasonEmpty") // Assume verse is empty until we know otherwise.  Except that we pretend it's non-empty if it's already marked as empty.
+            sid = nodes[i]
+            continue
+          }
+
+          if (isEmpty)
+          {
+            Dom.setAttribute(sid!!, "_X_reasonEmpty", "verseEmptyInThisTranslation")
+            addContent()
+          }
+
+          isEmpty = false
+          sid = null
+
+          continue
+        } // verse
+
+
+
+        /********************************************************************/
+        else ->
+        {
+          if (null != sid && !Usx.isInherentlyNonCanonicalTagOrIsUnderNonCanonicalTag(nodes[i]))
+            isEmpty = false
+        }
+      } // when
+    } // for
+
+
+
+    /************************************************************************/
+    return res
+  } // fun
+
+
+  /****************************************************************************/
+  /**
+   * Creates an empty verse for use in elisions, and inserts it before the
+   * given node.
+   *
+   * An empty elision verse does have a content, but is not given a footnote.
+   *
+   * @param insertBefore Node before which the verse and its content are to be
+   *   inserted.  This needs to be the verse which was originally flagged as the
+   *   elision.
+   *
+   * @param sid sid to be used in new verse.
+   *
+   * @return A pair containing the sid and eid nodes.
+   */
+
+  fun createEmptyVerseForElision (insertBefore: Node, sid: String): Pair<Node, Node>
+  {
+    val elisionSid = Dom.getAttribute(insertBefore, "sid")
+    val template = "<verse ID _X_generatedReason='inElision' _X_reasonEmpty='inElision' _X_elided='y' _X_originalId='$elisionSid'/>"
+    val start = Dom.createNode(insertBefore.ownerDocument, template.replace("ID", "sid='$sid'"))
+    val end   = Dom.createNode(insertBefore.ownerDocument, template.replace("ID", "eid='$sid'"))
+
+    Dom.insertNodeBefore(insertBefore, start)
+    Dom.insertNodeBefore(insertBefore, makeContent(insertBefore.ownerDocument, m_Content_Elision))
+    Dom.insertNodeBefore(insertBefore, end)
+
+    return Pair(start, end)
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Creates an empty verse to fill in a gap in the versification, and inserts
+   * it before the given node.
+   *
+   * The verse is assigned content, and is also given a footnote -- either one
+   * specific to the verse reference, or failing that, a generic one.
+   *
+   * @param insertBefore Node before which the verse and its content are to be
+   *   inserted.
+   *
+   * @param sid sid to be used in new verse.
+   *
+   * @return A pair containing the sid and eid nodes.
+   */
+
+  fun createEmptyVerseForMissingVerse (insertBefore: Node, sid: String): Pair<Node, Node>
+  {
+    Logger.warning(Ref.rdUsx(sid).toRefKey(), "Created verse which was missing from the original text.")
+    val template = "<verse ID _X_generatedReason='verseWasMissingFromOriginalText' _X_reasonEmpty='verseWasMissingFromOriginalText'/>"
+    val start = Dom.createNode(insertBefore.ownerDocument, template.replace("ID", "sid='$sid'"))
+    val end   = Dom.createNode(insertBefore.ownerDocument, template.replace("ID", "eid='$sid'"))
+
+    Dom.insertNodeBefore(insertBefore, start)
+    Dom.insertNodeBefore(insertBefore, makeReferenceSpecificFootnote(insertBefore.ownerDocument, sid, "V_emptyContentFootnote_verseEmptyInThisTranslation"))
+    Dom.insertNodeBefore(insertBefore, makeContent(insertBefore.ownerDocument, m_Content_MissingVerse))
+    Dom.insertNodeBefore(insertBefore, end)
+
+    return Pair(start, end)
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Creates an empty verse on behalf of reversification processing.
+   *
+   * This does not add any footnote -- I assume that reversification is going
+   * to do that.
+   *
+   * @param insertBefore Node before which the verse and its content are to be
+   *   inserted.
+   *
+   * @param sid sid to be used in new verse.
+   *
+   * @return A pair containing the sid and eid nodes.
+   */
+
+  fun createEmptyVerseForReversification (insertBefore: Node, sid: String): Pair<Node, Node>
+  {
+    val template = "<verse ID _X_generatedReason='requiredByReversification' _X_revAction='generatedVerse' _X_reasonEmpty='requiredByReversification'/>"
+    val start = Dom.createNode(insertBefore.ownerDocument, template.replace("ID", "sid='$sid'"))
+    val end   = Dom.createNode(insertBefore.ownerDocument, template.replace("ID", "eid='$sid'"))
+
+    Dom.insertNodeBefore(insertBefore, start)
+    Dom.insertNodeBefore(insertBefore, end)
+
+    return Pair(start, end)
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Private                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  private fun makeReferenceSpecificFootnote (doc: Document, sid: String, dflt: String): Node
+  {
+    val refKey = Ref.rdUsx(sid).toRefKey()
+    val dataRow = m_VerseSpecificFootnoteText[refKey]
+    val footnoteText = if (null == dataRow) stringFormatWithLookup(dflt) else ReversificationData.getFootnoteA(dataRow)
+    return MiscellaneousUtils.makeFootnote(doc, refKey, text = footnoteText , callout = ConfigData.get("stepExplanationCallout"))
+  }
+
+
+  /****************************************************************************/
+  /* Most (all?) 'empty' verses do in fact have some content, either to make it
+     clear that they have deliberately been left empty, or at least because
+     osis2mod seems to suppress genuinely empty verses.  There is a further
+     complication here in that consecutive verses with identical content are
+     also suppressed, and this is a risk particularly if you have a run of empty
+     verses arising from elision processing.  I get round this by enclosing
+     the content with some markup on alternate calls to this method. */
+
+  private fun makeContent (doc: Document, content: String): Node
+  {
+    val textNode = Dom.createTextNode(doc, content)
+    val contentNode = if (m_Toggle) Dom.createNode(doc, "<char style='no'/>") else textNode
+    if (contentNode !== textNode) contentNode.appendChild(textNode)
+    m_Toggle = !m_Toggle
+    return contentNode
+  }
+
+
+  /****************************************************************************/
+  private val m_Content_Elision = stringFormatWithLookup("V_contentForEmptyVerse_verseInElision")
+  private val m_Content_EmptyVerse = stringFormatWithLookup("V_contentForEmptyVerse_verseEmptyInThisTranslation")
+  private val m_Content_MissingVerse = stringFormatWithLookup("V_contentForEmptyVerse_verseWasMissing")
+  private var m_Toggle = true
+  private val m_VerseSpecificFootnoteText: MutableMap<RefKey, ReversificationDataRow> = mutableMapOf()
+
+
+  /****************************************************************************/
+  init
+  {
+    ReversificationData.getIfEmptyRows().forEach { m_VerseSpecificFootnoteText[it.sourceRefAsRefKey] = it }
+  }
+}
