@@ -21,7 +21,7 @@ fun main (args: Array<String>)
   try
   {
     mainCommon(args)
-    if (!ConfigData.get("stepReversificationDataLocation")!!.startsWith("http")) println(C_Local_ReversificationData)
+    if (!ConfigData["stepReversificationDataLocation"]!!.startsWith("http")) println(C_Local_ReversificationData)
     if (!ConfigData.getAsBoolean("stepEncryptionApplied", "no")) println(C_NotEncrypted)
     println("Finished\n")
   }

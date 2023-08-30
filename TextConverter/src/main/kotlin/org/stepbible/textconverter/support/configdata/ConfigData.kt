@@ -2,7 +2,7 @@
 package org.stepbible.textconverter.support.configdata
 
 
-import org.stepbible.textconverter.ReversificationData
+import org.stepbible.textconverter.ReversificationDataimport org.stepbible.textconverter.SamiTestDetails
 import org.stepbible.textconverter.TestController
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
@@ -966,7 +966,7 @@ object ConfigData
               if (getAsBoolean("stepHasAddedValue") && getAsBoolean("stepDecorateModuleNamesWhereStepHasAddedValue", "No")) moduleName += "_"
 
               if (TestController.C_SamiTest)
-                moduleName += LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
+                moduleName += SamiTestDetails.makeModuleNameSuffix()
 
               return moduleName
             }
