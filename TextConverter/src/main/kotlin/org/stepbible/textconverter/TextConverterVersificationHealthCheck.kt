@@ -2,6 +2,7 @@ package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.support.bibledetails.BibleStructureTextUnderConstruction
 import org.stepbible.textconverter.support.bibledetails.BibleStructuresSupportedByOsis2modAll
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
@@ -21,16 +22,20 @@ import java.util.*
 /******************************************************************************/
 /**
  * Checks for the validity of the chapter / verse structure of a document or a
- * chapter.  Note that this is done without reference to the particular
- * versification scheme at which we are aiming: the present class is concerned
- * purely with checking that all chapters do indeed come under the book node to
- * which purportedly they belong, that all verses come under the correct
- * chapter, that things are in the right order, that there are no holes in the
- * chapter, that things are in the right order, that there are no holes in the
- * numbering, etc.
+ * chapter.  There are two aspects to this.  We look at the validity of the
+ * structure in isolation -- things like are chapters and verses in ascending,
+ * are all verses within chapters etc; and, where we are targetting a known
+ * versification scheme, we check to see whether all expected verses are
+ * present.
  *
- * By default, all issues are reported as errors, and are reported via the
- * logging system.
+ * CAUTION: Do not confuse this with EnhancedUsxValidator.  The latter assumes
+ * any relevant structural issues have been addressed, and is concerned mainly
+ * with attempting to confirm that the canonical text of the enhanced USX is
+ * what we should expect, based upon the raw text and any reversification
+ * processing.
+ *
+ * By default, missing verses are reported as warnings, and all other issues
+ * as reported as errors, and are reported via the logging system.
  *
  * A configuration flag *stepValidationReportOutOfOrderAsError* determines
  * whether out-of-order issues are reported as errors or as warnings.  In
@@ -39,11 +44,6 @@ import java.util.*
  * deliberately been included out of order in the raw text, and clearly we
  * would not wish these to be reported as errors, or processing will be
  * aborted.
- *
- * You can also override the default reporting mechanism by using
- * setErrorReporter and setErrorWarning to insert your own error and
- * warning handler.  This makes it possible to accumulate the information,
- * rather than have it reported.
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -57,44 +57,6 @@ object TextConverterVersificationHealthCheck
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
-
-  /****************************************************************************/
-  /**
-  * By default, errors are reported via Logger.error.  If you want to do
-  * something else instead (like accumulating them so you can work upon them),
-  * you can supply your own error reporter.
-  *
-  * The *refAsString* argument to the reporter gives the reference at which the
-  * issue has been detected, or is null if it cannot be localised.
-  *
-  * @param reporter The reporter.  Optional.  If omitted, reverts to using
-  *   Logger.error.
-  */
-
-  fun setErrorReporter (reporter: (refAsString: String?, msg: String) -> Unit = ::logError)
-  {
-    m_ErrorReporter = reporter
-  }
-
-
-  /****************************************************************************/
-  /**
-  * By default, warnings are reported via Logger.warning.  If you want to do
-  * something else instead (like accumulating them so you can work upon them),
-  * you can supply your own error reporter.
-  *
-  * The *refAsString* argument to the reporter gives the reference at which the
-  * issue has been detected, or is null if it cannot be localised.
-  *
-  * @param reporter The reporter.  Optional.  If omitted, reverts to using
-  *   Logger.warning.
-  */
-
-  fun setWarningReporter (reporter: (refAsString: String?, msg: String) -> Unit = ::logWarning)
-  {
-    m_WarningReporter = reporter
-  }
-
 
   /****************************************************************************/
   /**
@@ -113,19 +75,20 @@ object TextConverterVersificationHealthCheck
    * Carries out checks on a single document.
    *
    * @param document Document to be validated.
-   * @return True if any changes have been applied.
    */
 
-  fun checkBook (document: Document): Boolean
+  fun checkBook (document: Document)
   {
-    var res = false
-    Logger.setPrefix("Ordering")
+    Logger.setPrefix("Structural health check")
+
+    if (XXXOsis2ModInterface.usingCrosswireOsis2Mod())
+      checkForMissingAndExcessVerses(document) // We can do this only with the Crosswire osis2mod, because with the STEP version we don't know what the expectations are.
+
     val chapters = Dom.findNodesByName(document, "_X_chapter").filter{ Dom.hasAttribute(it,"sid") }
     checkChapterOrdering(chapters)
     checkAllVersesAreWithinChapters(document)
-    chapters.forEach { res = checkAndOptionallyRemedyChapterContent(it) or res }
+    chapters.forEach { checkChapterContent(it) }
     Logger.setPrefix(null)
-    return res
   }
 
 
@@ -160,27 +123,55 @@ object TextConverterVersificationHealthCheck
   /****************************************************************************/
   /* Performs checks on a single chapter. */
 
-  private fun checkAndOptionallyRemedyChapterContent (chapter: Node): Boolean
+  private fun checkChapterContent (chapter: Node)
   {
     m_SubverseTwosWhichDontNeedChecking = ReversificationData.getImplicitRenumbers()
     Logger.setPrefix("Validating structure")
-    val res = checkAndOptionallyRemedyChapterContent1(chapter)
-    Logger.setPrefix(null)
-    return res
-  }
-
-
-  /****************************************************************************/
-  /* Basic checks -- do sids and eids alternate, do they start at 1, do they
-     have gaps. */
-
-  private fun checkAndOptionallyRemedyChapterContent1 (chapter: Node): Boolean
-  {
     checkVerseSidsAndEidsAreValidRefs(chapter)
     checkVerseSidsAndEidsAlternate(chapter)
-    val res = checkAndOptionallyRemedyChapterContent2(chapter, !TextConverterProcessorReversification.runMe())
     checkVerseOrderingWithinChapter(chapter)
-    return res
+    checkForDuplicatesAndHoles(chapter)
+    Logger.setPrefix(null)
+  }
+
+  /****************************************************************************/
+  /* Reports issues to do with chapter ordering or positioning, but does not
+     attempt to remedy matters. */
+
+  private fun checkChapterOrdering (chapters: List<Node>)
+  {
+     val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.getAttribute(Dom.findNodeByName(chapters[0].ownerDocument, "_X_book")!!, "code")!!)
+     var expectation = 1
+
+     fun checkExpectation (chapterNode: Node)
+     {
+       val refAsString = Dom.getAttribute(chapterNode, "sid")!!
+       try
+       {
+         val ref = Ref.rdUsx(refAsString)
+         val thisBook = ref.getB()
+         val  chapter = ref.getC()
+         if (thisBook != bookNo)
+         {
+            m_ErrorReporter(refAsString, "Chapter in wrong book.")
+            throw StepException("")
+         }
+
+         if (chapter != expectation)
+         {
+            m_ErrorReporter(refAsString, "Chapter ordering issue.")
+            throw StepException("")
+         }
+
+         ++expectation
+       }
+      catch (e: Exception)
+      {
+        if (e.toString().isNotEmpty()) m_ErrorReporter(null, "Invalid sid: $refAsString.")
+      }
+    }
+
+    chapters.forEach{ checkExpectation(it) }
   }
 
 
@@ -188,14 +179,13 @@ object TextConverterVersificationHealthCheck
   /* Looks for the highest number verse in the chapter, and checks all numbers
      up to that point are present. */
 
-  private fun checkAndOptionallyRemedyChapterContent2 (chapter: Node, okToInsertMissingVerses: Boolean): Boolean
+  private fun checkForDuplicatesAndHoles (chapter: Node)
   {
     /**************************************************************************/
     /* Collect all verse numbers and also determine the maximum verse number. */
 
     val verseCollection: MutableMap<Int, Int?> = HashMap(2000)
     var maxVerse = 0
-    var res = false
 
 
 
@@ -248,11 +238,21 @@ object TextConverterVersificationHealthCheck
     /**************************************************************************/
     /* ... and for missing verses. */
 
+    var missings: MutableList<Int> = mutableListOf()
     val chapterSid = Dom.getAttribute(chapter, "sid")!!
-    val missings: MutableList<Int> = mutableListOf()
-    for (i in 1 .. BibleStructuresSupportedByOsis2modAll.getStructureFor(ConfigData.get("stepVersificationScheme")!!).getLastVerseNo(chapterSid))
-      if (null == verseCollection[i])
-        missings.add(i)
+
+    if (XXXOsis2ModInterface.usingCrosswireOsis2Mod())
+    {
+      for (i in 1 .. BibleStructuresSupportedByOsis2modAll.getStructureFor(ConfigData["stepVersificationScheme"]!!).getLastVerseNo(chapterSid))
+        if (null == verseCollection[i])
+          missings.add(i)
+    }
+    else
+    {
+      val chapter = Ref.rdUsx(chapterSid).getC()
+      missings = BibleStructureTextUnderConstruction.getAllRefKeysForMissingVerses().filter { Ref.getC(it) == chapter } .map { Ref.getV(it) } as MutableList<Int>
+    }
+
 
 
 
@@ -272,61 +272,32 @@ object TextConverterVersificationHealthCheck
       val missingMsg = "Missing verse(s): ${reportableMissings.joinToString(", ")}"
       m_WarningReporter(chapterSid, missingMsg)
     }
-
-
-
-    /**************************************************************************/
-    if (okToInsertMissingVerses && missings.isNotEmpty())
-    {
-      res = true
-      createVerses(chapter, missings)
-    }
-
-
-
-    /**************************************************************************/
-    return res
   }
 
 
   /****************************************************************************/
-  /* Reports issues to do with chapter ordering or positioning, but does not
-     attempt to remedy matters. */
-
-  private fun checkChapterOrdering (chapters: List<Node>)
+  private fun checkForMissingAndExcessVerses (document: Document)
   {
-     val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.getAttribute(Dom.findNodeByName(chapters[0].ownerDocument, "_X_book")!!, "code")!!)
-     var expectation = 1
+    /**************************************************************************/
+    val osis2modSchemeDetails = BibleStructuresSupportedByOsis2modAll.getStructureFor(ConfigData["stepVersificationScheme"]!!)
+    val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.getAttribute(Dom.findNodeByName(document,"_X_book")!!, "code")!!)
+    BibleStructureTextUnderConstruction.populate(document, wantWordCount = false, reportIssues = false)
+    val diffs = BibleStructureTextUnderConstruction.compareWithGivenScheme(bookNumber, osis2modSchemeDetails)
 
-     fun checkExpectation (chapterNode: Node)
-     {
-       val refAsString = Dom.getAttribute(chapterNode, "sid")!!
-       try
-       {
-         val ref = Ref.rdUsx(refAsString)
-         val thisBook = ref.getB()
-         val  chapter = ref.getC()
-         if (thisBook != bookNo)
-         {
-            m_ErrorReporter(refAsString, "Chapter in wrong book.")
-            throw StepException("")
-         }
 
-         if (chapter != expectation)
-         {
-            m_ErrorReporter(refAsString, "Chapter ordering issue.")
-            throw StepException("")
-         }
 
-         ++expectation
-       }
-      catch (e: Exception)
-      {
-        if (e.toString().isNotEmpty()) m_ErrorReporter(null, "Invalid sid: $refAsString.")
-      }
-    }
+    /**************************************************************************/
+    if (diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.isNotEmpty())
+      m_MissingElementReporter(null, "Text lacks chapter(s) which target versification scheme expects: ${diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.joinToString(", ")}.")
 
-    chapters.forEach{ checkExpectation(it) }
+    if (diffs.chaptersInTextUnderConstructionButNotInTargetScheme.isNotEmpty())
+      m_ExcessElementReporter(null, "Text contains chapter(s) which target versification scheme does not expect: ${diffs.chaptersInTextUnderConstructionButNotInTargetScheme.joinToString(", ")}.")
+
+    if (diffs.versesInTargetSchemeButNotInTextUnderConstruction.isNotEmpty())
+      m_MissingElementReporter(null, "Text lacks verse(s) which target versification scheme expects: ${diffs.versesInTargetSchemeButNotInTextUnderConstruction.joinToString(", ")}.")
+
+    if (diffs.versesInTextUnderConstructionButNotInTargetScheme.isNotEmpty())
+      m_ExcessElementReporter(null, "Text contains verse(s) which target versification scheme does not expect: ${diffs.versesInTextUnderConstructionButNotInTargetScheme.joinToString(", ")}.")
   }
 
 
@@ -367,7 +338,7 @@ object TextConverterVersificationHealthCheck
       {
         var ok = verse == prevVerse && subverse == prevSubverse + 1 // We're ok if we're still in the same verse and have moved on by 1
         if (!ok) ok = subverse == 1 && verse == prevVerse + 1 // We're also ok if this is subverse 1 and we've just moved to a new verse.
-        if (!ok) ok = null != m_SubverseTwosWhichDontNeedChecking && ref.toRefKey() in m_SubverseTwosWhichDontNeedChecking // And we're ok if this is a verse which doesn't need checking.
+        if (!ok) ok = ref.toRefKey() in m_SubverseTwosWhichDontNeedChecking // And we're ok if this is a verse which doesn't need checking.
         if (!ok)
         {
           m_ErrorReporter(refAsString, "Subverse / verse ordering errors at and possibly also after verse $verse")
@@ -377,8 +348,6 @@ object TextConverterVersificationHealthCheck
         prevVerse = verse
         prevSubverse = subverse
       } // else
-
-
     } // fun check
 
 
@@ -503,34 +472,6 @@ object TextConverterVersificationHealthCheck
 }
 
 
-   /****************************************************************************/
-   /* Creates missing verses if required and permitted. */
-
-   private fun createVerses (chapter: Node, versesRequired: List<Int>)
-   {
-     val chapterSid = Dom.getAttribute(chapter, "sid")
-     var verseNumbersRequired = versesRequired.toMutableList()
-
-     fun process (verseSid: Node): Boolean
-     {
-       val verseSidV = Ref.rdUsx(Dom.getAttribute(verseSid, "sid")!!).getV()
-
-       while (true)
-       {
-         if (verseNumbersRequired.isEmpty()) return false
-         if (verseSidV <= verseNumbersRequired[0]) return true
-         val sid = chapterSid + ":" + verseNumbersRequired[0].toString()
-         EmptyVerseHandler.createEmptyVerseForMissingVerse(verseSid, sid)
-         verseNumbersRequired = verseNumbersRequired.subList(1, verseNumbersRequired.size)
-       }
-    }
-
-
-     val verseSids = Dom.findNodesByAttributeName(chapter, "verse", "sid")
-     run processSids@ { verseSids.forEach { if (!process(it)) return@processSids } }
-   }
-
-
   /****************************************************************************/
   private fun getId (verse: Node): String
   {
@@ -564,7 +505,7 @@ object TextConverterVersificationHealthCheck
   /****************************************************************************/
   private fun logError (ref:String?,  message:String)
   {
-    val refKey = if (null == ref) 0 else Ref.rd(ref).toRefKey()
+    val refKey = if (null == ref) -1 else Ref.rd(ref).toRefKey()
     Logger.error(refKey, message)
   }
 
@@ -572,7 +513,7 @@ object TextConverterVersificationHealthCheck
   /****************************************************************************/
   private fun logWarning (ref:String?,  message:String)
   {
-    val refKey = if (null == ref) 0 else Ref.rd(ref).toRefKey()
+    val refKey = if (null == ref) -1 else Ref.rd(ref).toRefKey()
     Logger.warning(refKey, message)
   }
 
@@ -580,7 +521,8 @@ object TextConverterVersificationHealthCheck
   /****************************************************************************/
   private var m_ErrorReporter: (refAsString: String?, msg: String) -> Unit = ::logError
   private var m_WarningReporter: (refAsString: String?, msg: String) -> Unit = ::logWarning
-  private var m_MissingVerseReporter = m_ErrorReporter
+  private var m_ExcessElementReporter = m_ErrorReporter
+  private var m_MissingElementReporter = m_WarningReporter
   private var m_OutOfOrderReporter = m_ErrorReporter
 
 
@@ -609,8 +551,12 @@ object TextConverterVersificationHealthCheck
 
     if (!ConfigData.getAsBoolean("stepValidationReportOutOfOrderAsError", "y"))
     {
-      m_MissingVerseReporter = m_WarningReporter
+      m_MissingElementReporter = m_WarningReporter
       m_OutOfOrderReporter = m_WarningReporter
     }
   }
 }
+
+
+
+

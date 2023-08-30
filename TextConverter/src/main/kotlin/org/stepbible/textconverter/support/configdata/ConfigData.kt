@@ -3,6 +3,7 @@ package org.stepbible.textconverter.support.configdata
 
 
 import org.stepbible.textconverter.ReversificationData
+import org.stepbible.textconverter.TestController
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
@@ -18,6 +19,7 @@ import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.*
 import java.text.SimpleDateFormat
 import java.time.LocalDate
+import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
@@ -585,6 +587,8 @@ object ConfigData
     {
       if (key in m_Metadata) m_Metadata.remove(key)
     }
+
+
     /****************************************************************************/
     /**
     * Gets the value associated with a given key, or returns null if the key
@@ -594,9 +598,25 @@ object ConfigData
     * @return Associated value or null.
     */
 
-    fun get (key: String): String?
+    operator fun get (key: String): String?
     {
       return getInternal(key, true)
+    }
+
+
+    /****************************************************************************/
+    /**
+    * Gets the value associated with a given key, or returns the default if the
+    * key has no associated value.
+    *
+    * @param key
+    * @para dflt
+    * @return Associated value or null.
+    */
+
+    fun get (key: String, dflt: String): String
+    {
+      return getInternal(key, true) ?: dflt
     }
 
 
@@ -668,7 +688,7 @@ object ConfigData
     fun put (key: String, theValue: String, force: Boolean)
     {
       /************************************************************************/
-      //Dbg.dCont(key, "stepTextIdSuppliedBySourceRepositoryOrOwnerOrganisation")
+      //Dbg.dCont(key, "stepVersificationScheme")
 
 
 
@@ -728,6 +748,20 @@ object ConfigData
         val parmDetails = m_Metadata[key] ?: return null
         return expandReferences(parmDetails.m_Value, nullsOk)
     }
+
+
+    /****************************************************************************/
+    /**
+    * Sets a value, without forcing.
+    *
+    * @param key
+    * @param value
+    */
+    operator fun set (key: String, value: String)
+    {
+      put(key, value, false)
+    }
+
 
 
 
@@ -930,6 +964,10 @@ object ConfigData
             {
               var moduleName = getInternal("stepModuleNameWithoutSuffix", false)
               if (getAsBoolean("stepHasAddedValue") && getAsBoolean("stepDecorateModuleNamesWhereStepHasAddedValue", "No")) moduleName += "_"
+
+              if (TestController.C_SamiTest)
+                moduleName += LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
+
               return moduleName
             }
 

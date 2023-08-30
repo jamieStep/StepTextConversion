@@ -496,7 +496,7 @@ object StepFileUtils
     if (!regexPattern)
     {
       val x: MutableList<String> = fileName.split("").toMutableList()
-      for (i in 0 until x.size)
+      for (i in 0..< x.size)
         when (x[i])
         {
           "*" -> x[i] = ".*"

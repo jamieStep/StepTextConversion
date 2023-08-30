@@ -129,13 +129,6 @@ object EnhancedUsxValidator: TextConverterProcessorBase ()
 
 
     /**************************************************************************/
-    /* Check ordering etc.  May also create verses if missing. */
-
-    val madeChanges = TextConverterVersificationHealthCheck.checkBook(enhancedDocument)
-
-
-
-    /**************************************************************************/
     /* Get the basic data structures with which we need to work. */
 
     m_EnhancedBookAnatomy = getBookAnatomy(enhancedDocument) // Maps relating sid refKeys to sid nodes, etc.
@@ -150,16 +143,14 @@ object EnhancedUsxValidator: TextConverterProcessorBase ()
        processing having removed 'awkward' verses from the list of those still
        to be handled. */
 
-    checkReversifiedEverythingButCanonicalTitles(reversificationDetails)
-    checkReversifiedCanonicalTitles(reversificationDetails)
+    if (TextConverterProcessorReversification.runMe())
+    {
+      checkReversifiedEverythingButCanonicalTitles(reversificationDetails)
+      checkReversifiedCanonicalTitles(reversificationDetails)
+    }
+
     checkNonReversified(enhancedBookNumber)
     checkResidual()
-
-
-
-    /**************************************************************************/
-    if (madeChanges)
-      Dom.outputDomAsXml(enhancedDocument, filePath,null)
   }
 
 
@@ -557,7 +548,6 @@ object EnhancedUsxValidator: TextConverterProcessorBase ()
        which feed into it. */
 
     val standardRefKeysForRowsOfInterest = reversificationDetails.m_MapNonTitleItemsStandardRefKeyToAssociatedReversificationRows.keys
-    //$$$ val standardRefKeysOfInterest = m_EnhancedBookAnatomy.m_SidToIndex.keys intersect standardRefKeysForRowsOfInterest // This gives just the verses we need to check on this call.
     standardRefKeysForRowsOfInterest.forEach { check(reversificationDetails.m_MapNonTitleItemsStandardRefKeyToAssociatedReversificationRows[it]!!) }
     done()
   }
@@ -899,7 +889,6 @@ object EnhancedUsxValidator: TextConverterProcessorBase ()
      has a fair number of knock-on effects, and since psalm title processing
      also goes through the affected methods and _may_ still require a map,
      I don't want to upset the apple cart too much. */
-
   private fun getReversificationDetails (enhancedBookNumber: Int): ReversificationDetails
   {
     val res = ReversificationDetails()

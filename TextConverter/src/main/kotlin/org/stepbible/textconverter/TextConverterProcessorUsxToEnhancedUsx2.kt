@@ -4,7 +4,6 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.makeFootnote
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.recordTagChange
@@ -12,11 +11,9 @@ import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.repo
 import org.stepbible.textconverter.support.miscellaneous.Translations
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefCollection
-import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.shared.Language
 import org.w3c.dom.Document
 import org.w3c.dom.Node
-import java.util.*
 
 
 
@@ -72,7 +69,7 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase()
   override fun process (): Boolean
   {
     BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::processFile)
-    XXXSamiInterface.process()
+    XXXOsis2ModInterface.createSupportingData()
     DataSummary.process()
     return true
   }
@@ -113,12 +110,20 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase()
 
     //Dbg.d(document)
     reportBookBeingProcessed(document)
+    TextConverterVersificationHealthCheck.checkBook(document)
+
     var changed = false // As a reminder below, 'or' does an OR _without_ short-circuit evaluation.
     changed = changed or handleCanonicalTitlesContainingVerses(document)
     changed = changed or handleVersesContainingCanonicalTitles(document)
     changed = changed or markManualEmptyContentMain(document)
 
-    if (!C_MinimalChangesOnly) changed = changed or handleMissingOrExcessVersesMain(document)
+    if (!C_MinimalChangesOnly)
+    {
+      if (XXXOsis2ModInterface.usingCrosswireOsis2Mod())
+        changed = changed or EmptyVerseHandler.createEmptyVersesForKnownOsis2modScheme(document)
+      else
+        changed = changed or EmptyVerseHandler.createEmptyVersesForAdHocVersificationScheme(document)
+    }
 
     changed = changed or EmptyVerseHandler.annotateEmptyVerses(document)
     changed = changed or deleteDummyVerses(document)
@@ -312,115 +317,6 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase()
     /**************************************************************************/
     Dom.findNodesByAttributeName(document, "verse", "_TEMP_dummy").forEach { Dom.deleteNode(it) }
     Dom.findNodesByName(document, "_TEMP_dummy").forEach { doDeletion(it) }
-    return res
-  }
-
-
-  /****************************************************************************/
-  /* Looks for missing or excess verses versus the chosen osis2mod scheme
-     (bear in mind, incidentally, that NRSV(A) is itself an osis2mod scheme,
-     and therefore is effectively nothing particularly special). */
-
-  private fun handleMissingOrExcessVersesMain (document: Document): Boolean
-  {
-    /**************************************************************************/
-    //Dbg.d(Dom.getAttribute(Dom.findNodeByName(document, "_X_book")!!, "code")!!)
-
-
-
-    /**************************************************************************/
-    val osis2modSchemeDetails = BibleStructuresSupportedByOsis2modAll.getStructureFor(ConfigData.get("stepVersificationScheme")!!)
-    val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.getAttribute(Dom.findNodeByName(document,"_X_book")!!, "code")!!)
-    BibleStructureTextUnderConstruction.populate(document, wantWordCount = false, reportIssues = false)
-    val diffs = BibleStructureTextUnderConstruction.compareWithGivenScheme(bookNumber, osis2modSchemeDetails)
-    var res = false
-
-
-
-    /**************************************************************************/
-    fun generateMissingChapter (refKey: RefKey)
-    {
-      val chapterRefKey = Ref.clearV(Ref.clearS(refKey))
-      val chapterRefAsString = Ref.rd(chapterRefKey).toStringUsx()
-      val chapterNode = Dom.createNode(document, "<_X_chapter sid='$chapterRefAsString' _X_generatedReason='Not found on completion of processing' _X_reasonEmpty='verseWasMissing'/>")
-      val dummyVerseSidNode = Dom.createNode(document,"<verse _TEMP_dummy='y' sid='$chapterRefAsString:500'/>")
-      val dummyVerseEidNode = Dom.createNode(document,"<verse _TEMP_dummy='y' eid='$chapterRefAsString:500'/>")
-      chapterNode.appendChild(dummyVerseSidNode)
-      chapterNode.appendChild(dummyVerseEidNode)
-      Dom.findNodeByName(document, "_X_book")!!.appendChild(chapterNode)
-    }
-
-
-
-    /**************************************************************************/
-    /* Verses which we need to create. */
-
-    if (diffs.inOtherSchemeButNotInTextUnderConstruction.isNotEmpty())
-    {
-      //Dbg.outputDom(document, "a")
-      res = true
-      var existingSids: NavigableMap<RefKey, Node> = Dom.findNodesByAttributeName(document, "verse", "sid").associateBy { Ref.rdUsx(Dom.getAttribute(it, "sid")!!).toRefKey() } .toSortedMap() as NavigableMap<RefKey, Node>
-
-      fun generateMissingVerse (refKey: RefKey)
-      {
-        val refAsString = Ref.rd(refKey).toString()
-
-        if (!BibleStructureTextUnderConstruction.hasChapter(refKey))
-        {
-          Logger.warning(refKey, "Created verse which was missing from the original text.")
-          generateMissingChapter(refKey)
-          BibleStructureTextUnderConstruction.populate(document, wantWordCount = false, reportIssues = false)
-          existingSids = Dom.findNodesByAttributeName(document, "verse", "sid").associateBy { Ref.rdUsx(Dom.getAttribute(it, "sid")!!).toRefKey() } .toSortedMap() as NavigableMap<RefKey, Node>
-        }
-
-
-        //Dbg.d(refAsString)
-        Logger.warning(refKey, "Created verse which was missing from the original text.")
-        val emptySid = Dom.createNode(document, "<verse sid='$refAsString' _X_generatedReason='Not found on completion of processing' _X_reasonEmpty='verseWasMissing'/>")
-        val emptyEid = Dom.createNode(document, "<verse eid='$refAsString' _X_generatedReason='Not found on completion of processing' />")
-
-        var insertionPoint = existingSids[existingSids.ceilingKey(refKey)]!! // Find the sid after that for the new verse.  If this is in the same chapter as the new verse, we're ok to insert before it.
-        if (Ref.rdUsx(Dom.getAttribute(insertionPoint, "sid")!!).getC() == Ref.getC(refKey))
-        {
-          Dom.insertNodeBefore(insertionPoint, emptySid)
-          Dom.insertNodeBefore(insertionPoint, emptyEid)
-        }
-        else // That insertion point was in the next chapter, so instead we want to insert after the eid which should precede the new verse.
-        {
-           insertionPoint = existingSids[existingSids.floorKey(refKey)]!!
-           insertionPoint = Dom.findNodeByAttributeValue(document, "verse", "eid", Dom.getAttribute(insertionPoint, "sid")!!)!!
-           Dom.insertNodeAfter(insertionPoint, emptyEid)
-           Dom.insertNodeAfter(insertionPoint, emptySid)
-        }
-
-        val footnote = makeFootnote(emptySid.ownerDocument,
-                                    refKey,
-                                    text = Translations.stringFormatWithLookup("V_emptyContentFootnote_verseWasMissing"),
-                                    callout = null)
-        Dom.insertNodeAfter(emptySid, footnote)
-
-        DataSummary.addMissingVerse(refAsString)
-      }
-
-      diffs.inOtherSchemeButNotInTextUnderConstruction.forEach { generateMissingVerse(it) }
-    }
-
-
-
-    /**************************************************************************/
-    /* Verses which we have in excess and which may be subject to tweaking by
-       osis2mod. */
-
-    if (diffs.inTextUnderConstructionButNotInOtherScheme.isNotEmpty())
-    {
-      var s = ""
-      diffs.inTextUnderConstructionButNotInOtherScheme.forEach { val x = Ref.rd(it).toString(); DataSummary.addExcessVerse(x); s += " / $x"  }
-      Logger.warning("Text contains verses which osis2mod does not cater for ... " + s.substring(3))
-    }
-
-
-
-    /**************************************************************************/
     return res
   }
 

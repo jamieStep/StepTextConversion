@@ -14,61 +14,27 @@ import java.io.PrintWriter
 
 /******************************************************************************/
 /**
- * Generates a JSON file describing the verse structure of the text.
+ * Handles the interface to osis2mod.
  *
- * At present this is, I think, somewhat experimental, so as well as describing
- * what we are doing here, let me give a few caveats.
+ * Until the present, we have always used the Crosswire variant of osis2mod,
+ * and therefore this present class has not been necessary.
  *
- * Originally the purpose of reversification was to generate something fully
- * aligned with NRSVA, so that STEP's added value features would work correctly.
- * However, to achieve that, we may have to restructure the text quite
- * significantly, and this results in a text which looks wrong to readers who
- * are familiar with the 'proper' version of the text and will usually also be
- * ruled out by the licence conditions imposed upon copyright texts.
- *
- * In an effort to circumvent this, we are changing the processing to be applied
- * by reversification where verses are being moved: we move them to their new
- * location, but we also leave a copy in the original location to give the
- * impression that the text has not been altered significantly.
- *
- * I still struggle with this (although we need to bear in mind that if _we_
- * don't apply reversification, osis2mod is quite likely to do so anyway, which
- * is no better).  This _may_ work where, for instance, we are moving large
- * blocks of verses out of Daniel and into deuterocanonical books, because you
- * never see the original verses (which we will leave in Daniel) at the same
- * time as you see the moved copies.  But there are still plenty of cases where
- * this processing cannot be applied (for example, with the Ten Commandments,
- * whose order differs in some texts: we can't both move the verses and leave
- * copies in situ, because the user will now see two copies of everything,
- * which will be confusing).  And in some texts, the psalms are renumbered,
- * so that Psalm 10 in the text actually corresponds to Psalm 11 in NRVSA,
- * and it seems to me there is no way of handling this at all -- if we
- * _don't_ duplicate the verses, then each psalm apparently contains the
- * wrong content; but if we _do_ duplicate them, then each ends up containing
- * the whole of _two_ psalms -- the one from the original text, and the one
- * which appears there as the result of moving things around.
- *
- * At the time of writing it is assumed that we can minimise these impacts
- * by having our own custom version of osis2mod (and I think also JSword) which
- * can adapt to different versification schemes on the fly, and which also
- * leaves verses in the order in which they are supplied (the official version
- * reorders verses which are passed to it in the wrong order).
- *
- * I remain very dubious that this is going to work: it is a hugely complicated
- * approach, will produce texts which we cannot share with third parties even
- * where copyright conditions permit, and I think will neither fully support
- * STEP's added value features nor produce a text which will be close enough
- * to the original to be acceptable either to users or to copyright holders.
- *
- * Be all that as it may, though, in order for these bespoke osis2mod and
- * JSword programs to work, we need a JSON file which describes the
- * actual versification structure present in the reversified text, and it is
- * the purpose of this present class to create it.
+ * It has become apparent, though, that the Crosswire variant gets in the way of
+ * some of the things we want to do.  In particular, it doesn't sit too well
+ * with reversification, and also it forces verses to be in 'correct' order
+ * despite the fact that in a few texts the translators may deliberately have
+ * put them in the wrong order.  To address this, at the time of writing we have
+ * our own variant of osis2mod.  Whether this will turn out to be a permanent
+ * feature or not is not certain at present; but so long as we opt to use it,
+ * it does have implications for the processing at large, which needs to know
+ * which variant we are using, and there are certain things we need to do to
+ * support it, notably creating a JSON file containing information about the
+ * structure of the text.
  *
  * @author ARA "Jamie" Jamieson
  */
 
-object XXXSamiInterface
+object XXXOsis2ModInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -79,22 +45,56 @@ object XXXSamiInterface
   /****************************************************************************/
 
   /****************************************************************************/
-  const val C_UsingSamisInterface = true
+  enum class Osis2ModVariant { CROSSWIRE, STEP }
 
 
   /****************************************************************************/
+  val C_CreateEmptyChapters: Boolean
+  val C_ExpandElisions: Boolean
+
+
+
+
+ /****************************************************************************/
   /**
-  * Outputs all relevant information to the JSON files.
+  * Outputs all relevant information to the JSON files where we are using
+  * the STEP variant of osis2mod.
   */
 
-  fun process ()
+  fun createSupportingData ()
   {
-    if (!C_UsingSamisInterface) return
+    if (usingCrosswireOsis2Mod()) return
     BibleStructureTextUnderConstruction.populate(BibleBookAndFileMapperEnhancedUsx, wantWordCount = false, reportIssues = true) // Make sure we have up-to-date structural information.
     populateBibleStructure()
     populateReversificationMappings()
     outputJson(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath())
   }
+
+
+  /****************************************************************************/
+  /**
+  * Determines whether we are using the Crosswire variant of osis2mod.
+  *
+  * @return True if using the Crosswire variant of osis2mod.
+  */
+
+  fun usingCrosswireOsis2Mod (): Boolean
+  {
+    return Osis2ModVariant.CROSSWIRE == m_Osis2ModVariant
+  }
+
+
+   /****************************************************************************/
+   /**
+   * Determines whether we are using the STEP variant of osis2mod.
+   *
+   * @return True if using the STEP variant of osis2mod.
+   */
+
+   fun usingStepOsis2Mod (): Boolean
+   {
+     return Osis2ModVariant.STEP == m_Osis2ModVariant
+   }
 
 
 
@@ -124,8 +124,8 @@ object XXXSamiInterface
        print(writer, "{\n")
        print(writer, "  'v11nName': '$v11nName',\n")
 
-       outputBookDetails(writer,"otBooks", otBooks)
-       outputBookDetails(writer,"ntBooks", ntBooks)
+       outputBookDetails(writer,"otbooks", otBooks)
+       outputBookDetails(writer,"ntbooks", ntBooks)
 
        print(writer, "  'vm': [")
        outputMaxVerses(writer, otBooks)
@@ -150,9 +150,9 @@ object XXXSamiInterface
     fun outputMappings (writer: PrintWriter)
     {
       print(writer, "  'jsword_mappings': [\n")
-      val mappings = m_BibleStructure.jswordMappings.map { "${Ref.rd(it.first).toStringUsx()}=${Ref.rd(it.second).toStringUsx()}" }
-      print(writer, mappings.joinToString(",\n    "))
-      print(writer, "    ]\n")
+      val mappings = m_BibleStructure.jswordMappings.map { "${Ref.rd(it.first).toStringOsis()}=${Ref.rd(it.second).toStringOsis()}" }
+      print(writer, "    \"" + mappings.joinToString("\",\n    \""))
+      print(writer, "\"\n    ]\n")
     }
 
 
@@ -197,7 +197,7 @@ object XXXSamiInterface
 
   private fun populateBibleStructure ()
   {
-    m_BibleStructure.v11nName = ConfigData.get("stepModuleName")!!
+    m_BibleStructure.v11nName = ConfigData["stepVersificationScheme"]!!
     populateBibleStructure(m_BibleStructure.otBooks, BibleAnatomy.getBookNumberForStartOfOt(), BibleAnatomy.getBookNumberForEndOfOt())
     populateBibleStructure(m_BibleStructure.otBooks, BibleAnatomy.getBookNumberForStartOfDc(), BibleAnatomy.getBookNumberForEndOfDc()) // otbooks _is_ intended here -- see head of method comments.
     populateBibleStructure(m_BibleStructure.ntBooks, BibleAnatomy.getBookNumberForStartOfNt(), BibleAnatomy.getBookNumberForEndOfNt())
@@ -230,7 +230,7 @@ object XXXSamiInterface
   private fun populateReversificationMappings ()
   {
     val renumbers = ReversificationData.getReferenceMappings()
-    renumbers.forEach { m_BibleStructure.jswordMappings.add(Pair(it.key, it.value)) }
+    renumbers.forEach { m_BibleStructure.jswordMappings.add(Pair(it.key, Ref.clearS(it.value))) }
 
     val psalmTitles = ReversificationData.getAllAcceptedRows().filter { 0 != it.processingFlags.and(ReversificationData.C_StandardIsPsalmTitle) }
     psalmTitles.forEach { m_BibleStructure.jswordMappings.add(Pair(it.sourceRefAsRefKey, Ref.setV(it.standardRefAsRefKey, 0))) }
@@ -281,16 +281,12 @@ object XXXSamiInterface
   /****************************************************************************/
   private val m_BibleStructure = BibleStructure()
   private val m_CrosswireBookDetails: MutableMap<String, CrosswireBookDetails?>  = mutableMapOf()
+  private val m_Osis2ModVariant: Osis2ModVariant
+
 
 
   /****************************************************************************/
-  /* Sadly Crosswire use neither OSIS nor UBS book names and abbreviations, so
-     I need a mapping from UBS to Crosswire.  Note that the two collections are
-     not identical: UBS supports a number of DC books which Crosswire does not
-     and Crosswire supports some which UBS does not (unless they're
-     masquerading under different names and I haven't recognised the fact.) */
-
-  init
+  private fun initialiseBookDetails ()
   {
     m_CrosswireBookDetails["Gen"] = CrosswireBookDetails("Genesis", "Gen")
     m_CrosswireBookDetails["Exo"] = CrosswireBookDetails("Exodus", "Exo")
@@ -387,5 +383,34 @@ object XXXSamiInterface
     m_CrosswireBookDetails["Eza"] = null
     m_CrosswireBookDetails["5Ez"] = null
     m_CrosswireBookDetails["6Ez"] = null
+  }
+
+  /****************************************************************************/
+  /* Sadly Crosswire use neither OSIS nor UBS book names and abbreviations, so
+     I need a mapping from UBS to Crosswire.  Note that the two collections are
+     not identical: UBS supports a number of DC books which Crosswire does not
+     and Crosswire supports some which UBS does not (unless they're
+     masquerading under different names and I haven't recognised the fact.) */
+
+  init
+  {
+    when (ConfigData.get("stepOsis2ModVariant", "crosswire").lowercase())
+    {
+      "crosswire" ->
+      {
+        throw StepException("Can't run with Crosswire osis2mod without first changing file structure.")
+        m_Osis2ModVariant = Osis2ModVariant.CROSSWIRE
+        C_CreateEmptyChapters = true
+        C_ExpandElisions = true
+      }
+
+      else -> // ie "step"
+      {
+        m_Osis2ModVariant = Osis2ModVariant.STEP
+        C_CreateEmptyChapters = false
+        C_ExpandElisions = false
+        initialiseBookDetails()
+      }
+    }
   }
 }

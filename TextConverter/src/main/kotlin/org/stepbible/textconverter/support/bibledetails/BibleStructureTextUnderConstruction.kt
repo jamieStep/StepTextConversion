@@ -92,9 +92,12 @@ object BibleStructureTextUnderConstruction: BibleStructure("underconstruction")
      *  scheme.  Hopefully the purposes of the fields are obvious.  All are
      *  returned as sorted lists of RefKeys. */
 
-    data class ComparisonWithOtherScheme (val inTextUnderConstructionButNotInOtherScheme: List<RefKey>,
-                                          val inOtherSchemeButNotInTextUnderConstruction: List<RefKey>,
-                                          val inBoth: List<RefKey>)
+    data class ComparisonWithOtherScheme (val chaptersInTextUnderConstructionButNotInTargetScheme: List<RefKey>,
+                                          val chaptersInTargetSchemeButNotInTextUnderConstruction: List<RefKey>,
+                                          val chaptersInBoth: List<RefKey>,
+                                          val versesInTextUnderConstructionButNotInTargetScheme: List<RefKey>,
+                                          val versesInTargetSchemeButNotInTextUnderConstruction: List<RefKey>,
+                                          val versesInBoth: List<RefKey>)
 
 
     /****************************************************************************/
@@ -115,13 +118,19 @@ object BibleStructureTextUnderConstruction: BibleStructure("underconstruction")
 
     fun compareWithGivenScheme (bookNumber: Int, otherScheme: BibleStructureSupportedByOsis2modIndividual): ComparisonWithOtherScheme
     {
-      val inTextUnderConstruction = getAllRefKeysForBook(bookNumber).toSet()
-      val inOtherScheme = otherScheme.getAllRefKeysForBook(bookNumber).toSet()
-      val inTextUnderConstructionButNotInOtherScheme = inTextUnderConstruction subtract inOtherScheme
-      val inOtherSchemeButNotInTextUnderConstruction = inOtherScheme subtract inTextUnderConstruction
-      val inBoth = inTextUnderConstruction intersect inOtherScheme
-      //if ("act".equals(BibleBookNamesUsx.numberToAbbreviatedName(bookNumber), ignoreCase = true)) Dbg.d(inTextUnderConstruction.joinToString(", "))
-      return ComparisonWithOtherScheme(inTextUnderConstructionButNotInOtherScheme.sorted(), inOtherSchemeButNotInTextUnderConstruction.sorted(), inBoth.sorted())
+      val versesInTextUnderConstruction = getAllRefKeysForBook(bookNumber).toSet()
+      val versesInOtherScheme = otherScheme.getAllRefKeysForBook(bookNumber).toSet()
+      val versesInTextUnderConstructionButNotInOtherScheme = versesInTextUnderConstruction subtract versesInOtherScheme
+      val versesInOtherSchemeButNotInTextUnderConstruction = versesInOtherScheme subtract versesInTextUnderConstruction
+      val versesInBoth = versesInTextUnderConstruction intersect versesInOtherScheme
+
+      val chaptersInTextUnderConstruction = versesInTextUnderConstruction.map { Ref.clearV(Ref.clearS(it)) }.toSet()
+      val chaptersInOtherScheme = versesInOtherScheme.map { Ref.clearV(Ref.clearS(it)) }.toSet()
+      val chaptersInTextUnderConstructionButNotInOtherScheme = chaptersInTextUnderConstruction subtract chaptersInOtherScheme
+      val chaptersInOtherSchemeButNotInTextUnderConstruction = chaptersInOtherScheme subtract chaptersInTextUnderConstruction
+      val chaptersInBoth = chaptersInTextUnderConstructionButNotInOtherScheme intersect chaptersInOtherScheme
+      return ComparisonWithOtherScheme(chaptersInTextUnderConstructionButNotInOtherScheme.sorted(), chaptersInOtherSchemeButNotInTextUnderConstruction.sorted(), chaptersInBoth.sorted(),
+                                       versesInTextUnderConstructionButNotInOtherScheme.sorted(), versesInOtherSchemeButNotInTextUnderConstruction.sorted(), versesInBoth.sorted())
     }
 
 

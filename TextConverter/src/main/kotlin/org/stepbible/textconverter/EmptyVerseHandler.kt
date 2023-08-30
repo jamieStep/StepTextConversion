@@ -1,5 +1,8 @@
 package org.stepbible.textconverter
 
+import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.support.bibledetails.BibleStructureTextUnderConstruction
+import org.stepbible.textconverter.support.bibledetails.BibleStructuresSupportedByOsis2modAll
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
@@ -10,6 +13,7 @@ import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.usx.Usx
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import java.util.*
 
 
 
@@ -30,6 +34,16 @@ import org.w3c.dom.Node
  * pieces of functionality in one place so that I can coordinate things like
  * whether the verses are supplied with footnotes or not, whether they are
  * given a marker (like a dash) to indicate they are deliberately empty, etc.
+ *
+ *
+ * CAUTION !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * The processing here doesn't create entirely new books, and probably should
+ * not be changed to do so.  If you are working against a versification scheme
+ * which requires a book and your text does not have it, it is almost certainly
+ * because you are working with a partial translation, and in this case you
+ * probably want the output to be similarly incomplete.  Whether this always
+ * works -- in particular with DC books -- I don't know; but assume this is
+ * correct until you know otherwise.
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -144,8 +158,10 @@ object EmptyVerseHandler
    * @return A pair containing the sid and eid nodes.
    */
 
-  fun createEmptyVerseForElision (insertBefore: Node, sid: String): Pair<Node, Node>
+  fun createEmptyVerseForElision (insertBefore: Node, sid: String): Pair<Node, Node>?
   {
+    if (!XXXOsis2ModInterface.C_ExpandElisions) return null
+
     val elisionSid = Dom.getAttribute(insertBefore, "sid")
     val template = "<verse ID _X_generatedReason='inElision' _X_reasonEmpty='inElision' _X_elided='y' _X_originalId='$elisionSid'/>"
     val start = Dom.createNode(insertBefore.ownerDocument, template.replace("ID", "sid='$sid'"))
@@ -161,33 +177,74 @@ object EmptyVerseHandler
 
   /****************************************************************************/
   /**
-   * Creates an empty verse to fill in a gap in the versification, and inserts
-   * it before the given node.
-   *
-   * The verse is assigned content, and is also given a footnote -- either one
-   * specific to the verse reference, or failing that, a generic one.
-   *
-   * @param insertBefore Node before which the verse and its content are to be
-   *   inserted.
-   *
-   * @param sid sid to be used in new verse.
-   *
-   * @return A pair containing the sid and eid nodes.
-   */
-
-  fun createEmptyVerseForMissingVerse (insertBefore: Node, sid: String): Pair<Node, Node>
+  * Checks for missing verses within the given document (and also for missing
+  * chapters) and fills things in as necessary.  This version is for the case
+  * where we are dealing with an ad hoc versification scheme, and therefore do
+  * not know where each chapter is supposed to end (and consequently cannot
+  * determine if we need to add trailing verses to the text under
+  * construction).
+  *
+  * @param document
+  * @return True if changes were made.
+  */
+  fun createEmptyVersesForAdHocVersificationScheme (document: Document): Boolean
   {
-    Logger.warning(Ref.rdUsx(sid).toRefKey(), "Created verse which was missing from the original text.")
-    val template = "<verse ID _X_generatedReason='verseWasMissingFromOriginalText' _X_reasonEmpty='verseWasMissingFromOriginalText'/>"
-    val start = Dom.createNode(insertBefore.ownerDocument, template.replace("ID", "sid='$sid'"))
-    val end   = Dom.createNode(insertBefore.ownerDocument, template.replace("ID", "eid='$sid'"))
+    /**************************************************************************/
+    BibleStructureTextUnderConstruction.populate(document, wantWordCount = false, reportIssues = false)
+    val holes = BibleStructureTextUnderConstruction.getAllRefKeysForMissingVerses()
+    if (holes.isEmpty()) return false
 
-    Dom.insertNodeBefore(insertBefore, start)
-    Dom.insertNodeBefore(insertBefore, makeReferenceSpecificFootnote(insertBefore.ownerDocument, sid, "V_emptyContentFootnote_verseEmptyInThisTranslation"))
-    Dom.insertNodeBefore(insertBefore, makeContent(insertBefore.ownerDocument, m_Content_MissingVerse))
-    Dom.insertNodeBefore(insertBefore, end)
 
-    return Pair(start, end)
+
+    /**************************************************************************/
+    val map = getSidMap(document, "verse")
+    holes.forEach { createEmptyVerseForMissingVerse(document, it, map[map.ceilingKey(it)]) }
+    return true
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Checks for missing verses within the given document (and also for missing
+  * chapters) and fills things in as necessary.  This version is for the case
+  * where we are dealing with a known Crosswire osis2mod scheme, and therefore
+  * know what verses each chapter is supposed to contain.
+  *
+  * @param document
+  * @return True if changes were made.
+  */
+  fun createEmptyVersesForKnownOsis2modScheme (document: Document): Boolean
+  {
+    /**************************************************************************/
+    var res = false
+    val osis2modSchemeDetails = BibleStructuresSupportedByOsis2modAll.getStructureFor(ConfigData["stepVersificationScheme"]!!)
+    val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.getAttribute(Dom.findNodeByName(document,"_X_book")!!, "code")!!)
+    BibleStructureTextUnderConstruction.populate(document, wantWordCount = false, reportIssues = false)
+    val diffs = BibleStructureTextUnderConstruction.compareWithGivenScheme(bookNumber, osis2modSchemeDetails)
+
+
+
+    /**************************************************************************/
+    if (diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.isNotEmpty() && XXXOsis2ModInterface.C_CreateEmptyChapters)
+    {
+      res = true
+      val map = getSidMap(document, "_X_chapter")
+      diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { createEmptyChapter(document, it, map[map.ceilingKey(it)]) }
+    }
+
+
+
+    /**************************************************************************/
+    if (diffs.versesInTargetSchemeButNotInTextUnderConstruction.isNotEmpty())
+    {
+      res = true
+      val map = getSidMap(document, "verse")
+      diffs.versesInTargetSchemeButNotInTextUnderConstruction.forEach { createEmptyVerseForMissingVerse(document, it, map[map.ceilingKey(it)]) }
+    }
+
+
+    /**************************************************************************/
+    return res
   }
 
 
@@ -231,12 +288,69 @@ object EmptyVerseHandler
   /****************************************************************************/
 
   /****************************************************************************/
+  private fun createEmptyChapter (document: Document, refKey: RefKey, insertBefore: Node?, generatedReason: String = "Not found on completion of processing", reasonEmpty: String = "chapterWasMissing"): Node
+  {
+    Logger.warning(refKey, "Created chapter which was missing from the original text.")
+
+    val newChapterRefKey = Ref.clearV(Ref.clearS(refKey))
+    val newChapterRefAsString = Ref.rd(newChapterRefKey).toStringUsx()
+
+    val chapterNode = Dom.createNode(document, "<_X_chapter sid='$newChapterRefAsString' _X_generatedReason='$generatedReason' _X_reasonEmpty='$reasonEmpty'/>")
+    val dummyVerseSidNode = Dom.createNode(document,"<verse _TEMP_dummy='y' sid='$newChapterRefAsString:500'/>")
+    val dummyVerseEidNode = Dom.createNode(document,"<verse _TEMP_dummy='y' eid='$newChapterRefAsString:500'/>")
+    chapterNode.appendChild(dummyVerseSidNode)
+    chapterNode.appendChild(dummyVerseEidNode)
+
+    if (null == insertBefore)
+      Dom.findNodeByName(document, "_X_book")!!.appendChild(chapterNode)
+    else
+      Dom.insertNodeBefore(insertBefore, chapterNode)
+
+    return chapterNode
+  }
+
+
+  /****************************************************************************/
+  /* Creates an empty verse to fill in a gap in the versification, and inserts
+     it before the given node, or at the end of the parent chapter if
+     insertBefore is null.  Returns a pair consisting of the sid and the eid. */
+  private fun createEmptyVerseForMissingVerse (document: Document, refKey: RefKey, insertBefore: Node?, generatedReason: String = "Not found on completion of processing", reasonEmpty: String = "verseWasMissing"): Pair<Node, Node>
+  {
+    Logger.warning(refKey, "Created verse which was missing from the original text.")
+
+    val sidAsString = Ref.rd(refKey).toString()
+    val template = "<verse ID _X_generatedReason='$generatedReason' _X_reasonEmpty='$reasonEmpty'/>"
+    val start = Dom.createNode(document, template.replace("ID", "sid='$sidAsString'"))
+    val end   = Dom.createNode(document, template.replace("ID", "eid='$sidAsString'"))
+
+    val ib = insertBefore ?: Dom.createNode(document,"<_TEMP/>")
+
+    Dom.insertNodeBefore(ib, start)
+    Dom.insertNodeBefore(ib, makeReferenceSpecificFootnote(document, sidAsString, "V_emptyContentFootnote_verseEmptyInThisTranslation"))
+    Dom.insertNodeBefore(ib, makeContent(document, m_Content_MissingVerse))
+    Dom.insertNodeBefore(ib, end)
+
+    if (null == insertBefore)
+      Dom.deleteNode(ib)
+
+    return Pair(start, end)
+  }
+
+
+  /****************************************************************************/
+  private fun getSidMap (document: Document, nodeName: String): NavigableMap<RefKey, Node>
+  {
+    return Dom.findNodesByName(document, nodeName).associateBy { Ref.rd(Dom.getAttribute(it, "sid")!!).toRefKey() }.toSortedMap() as NavigableMap<RefKey, Node>
+  }
+
+
+  /****************************************************************************/
   private fun makeReferenceSpecificFootnote (doc: Document, sid: String, dflt: String): Node
   {
     val refKey = Ref.rdUsx(sid).toRefKey()
     val dataRow = m_VerseSpecificFootnoteText[refKey]
     val footnoteText = if (null == dataRow) stringFormatWithLookup(dflt) else ReversificationData.getFootnoteA(dataRow)
-    return MiscellaneousUtils.makeFootnote(doc, refKey, text = footnoteText , callout = ConfigData.get("stepExplanationCallout"))
+    return MiscellaneousUtils.makeFootnote(doc, refKey, text = footnoteText , callout = ConfigData["stepExplanationCallout"])
   }
 
 

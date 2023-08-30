@@ -183,20 +183,6 @@ object ReversificationData
 
   /****************************************************************************/
   /**
-  * Forces the versification scheme where we are applying reversification and
-  * therefore know that we will want either NRSV or NRSVA.
-  */
-
-  fun forceVersificationSchemeIfAppropriate ()
-  {
-    // Note that to keep osis2mod happy, the scheme names _must_ be all caps.
-    if (TextConverterProcessorReversification.runMe())
-      ConfigData.put("stepVersificationScheme", if (BibleStructureTextUnderConstruction.hasDc() || targetsDc()) "NRSVA" else "NRSV", true)
-  }
-
-
-  /****************************************************************************/
-  /**
   * Does what it says on the tin.  The 'IfNecessary' part is there because we
   * need do this only on reversification runs.
   */
@@ -699,16 +685,13 @@ object ReversificationData
       {
         if (0 == processedRow.processingFlags and C_IfEmpty)
         {
-          if (TextConverterProcessorReversification.runMe())
-          {
-            m_SelectedRows.add(processedRow)
-            debugRecordReversificationRow(true, processedRow)
-          }
+          m_SelectedRows.add(processedRow)
+          debugRecordReversificationRow(true, processedRow)
         }
         else
           m_IfEmptyRows.add(processedRow)
       }
-      else
+      else // Not accepted.
         debugRecordReversificationRow(false, processedRow)
     }
   }

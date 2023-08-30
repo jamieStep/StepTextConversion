@@ -180,7 +180,7 @@ object StandardFileLocations
   private fun getVernacularBibleStructureFileName (): String { return m_VernacularBibleStructureFileName }
   fun getVernacularBibleStructureFilePath (): String { return Paths.get(getTextFeaturesFolderPath(), getVernacularBibleStructureFileName()).toString() }
   fun getVersificationFilePath (): String { return Paths.get(getTextFeaturesFolderPath(), "stepRawTextVersification.txt").toString() }
-  fun getVersificationStructureForBespokeOsis2ModFilePath (): String { return Paths.get(getEncryptionDataRootFolder(), "versification", ConfigData.get("stepModuleName")!! + ".json").toString() }
+  fun getVersificationStructureForBespokeOsis2ModFilePath (): String { return Paths.get(getEncryptionDataRootFolder(), "versification", ConfigData["stepVersificationScheme"]!! + ".json").toString() }
   fun getVLFilePath (): String { return Paths.get(getRootFolderPath(), "VL", "vl.txt").toString() }
 
 

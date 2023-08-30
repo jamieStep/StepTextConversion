@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.support.debug
 
+import org.stepbible.textconverter.TestController
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -141,7 +142,14 @@ object Logger
 
   @Synchronized fun error (refKey: Long, text: String)
   {
-   ++m_ErrorCount
+    if (TestController.C_SamiTest)
+    {
+      warning("!!!!!!!!!!!!!! Logger.error called, but currently disabled while testing.")
+     return // $$$$$$$$$
+    }
+
+
+    ++m_ErrorCount
     addMessage(m_Errors, refKey, text)
   }
   
@@ -174,6 +182,12 @@ object Logger
     addMessage(m_Info, refKey, text)
   }
   
+
+  /****************************************************************************/
+  fun nullReporter (text: String) { }
+  fun nullReporter (refKey: Long, text: String) { }
+
+
 
   /****************************************************************************/
   /**

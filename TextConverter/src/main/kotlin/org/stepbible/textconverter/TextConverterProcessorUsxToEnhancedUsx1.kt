@@ -316,9 +316,10 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     override fun process (): Boolean
     {
       runPreprocessor()
-      BibleStructureTextUnderConstruction.populate(BibleBookAndFileMapperRawUsx)  // Gets the chapter / verse structure -- how many chapters in each verse, etc.
-      ReversificationData.process()                      // b) Does what it says on the tin.  This gives the chance (which I may not take) to do 'difficult' restructuring only where reversification will require it.
-      BibleBookAndFileMapperRawUsx.iterateOverSelectedFiles(::processFile) // Creates the enhanced USX.
+      BibleStructureTextUnderConstruction.populate(BibleBookAndFileMapperRawUsx) // Gets the chapter / verse structure -- how many chapters in each verse, etc.
+      forceVersificationSchemeIfAppropriate()
+      ReversificationData.process()                                              // Does what it says on the tin.  This gives the chance (which I may not take) to do 'difficult' restructuring only where reversification will require it.
+      BibleBookAndFileMapperRawUsx.iterateOverSelectedFiles(::processFile)       // Creates the enhanced USX.
       return true
     }
 
@@ -448,8 +449,6 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
         CrossReferenceProcessor.canonicalise(document)     // a) There are all sorts of awkward things about refs and associated tags which it would be nice to sort out.
 
         positionVerseEnds(); x()                           // b) Move sids and eids where possible to avoid cross-verse-boundary markup.
-        ReversificationData.forceVersificationSchemeIfAppropriate()
-                                                           // b) If we're reversifying, we can force the versification scheme to either NRSV or NRSVA.
 
         getSampleTextForConfigData()                       // c) Supplies ConfigData with some sample text which it can use to determine text direction.
         getFeatureDetailsCountVersesInParas()              // c) Does what it says on the tin.  I just don't know _why_ I need to do it ...
@@ -1053,7 +1052,8 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
       for (i in 0 until n - 1)
       {
          val refAsString = Ref.rd(refKeys[i]).toString()
-         val (start, end) = EmptyVerseHandler.createEmptyVerseForElision(sid, refAsString)
+         val nodePair = EmptyVerseHandler.createEmptyVerseForElision(sid, refAsString) ?: continue
+         val (start, end) = nodePair!!
          if (Dom.hasAttribute(sid, "_X_wasInTable"))
          {
             Dom.setAttribute(start, "_X_wasInTable", "y")
@@ -2053,6 +2053,31 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     /**                                                                                                              **/
     /******************************************************************************************************************/
     /******************************************************************************************************************/
+
+    /******************************************************************************************************************/
+    /* The user may use the configuration data to specify the versification scheme to be used.  However, we may need to
+       override anything they give under certain circumstances ...
+
+       * If we are using the (currently experimental) STEP variant of osis2mod, we don't want to use any of the schemes
+         built into osis2mod -- and indeed we want the scheme name to be unique.  For this, I prepend v11n on to the
+         module name.
+
+       * Otherwise if we're reversifying, we need the scheme to be either NRSV or NRSVA, depending upon whether or not
+         we have DC books.
+
+       Note that all of this may be up for grabs at present -- if we go with the STEP variant of osis2mod, we may well
+       no longer be using reversification as originally anticipated, and the non-STEP branch below will be irrelevant.
+  */
+
+    private fun forceVersificationSchemeIfAppropriate ()
+    {
+        if (XXXOsis2ModInterface.usingStepOsis2Mod())
+          ConfigData.put("stepVersificationScheme", "v11n" + ConfigData["stepModuleName"], true)
+        // Note that to keep osis2mod happy, the scheme names _must_ be all caps.
+        else if (TextConverterProcessorReversification.runMe())
+          ConfigData.put("stepVersificationScheme", if (BibleStructureTextUnderConstruction.hasDc() || ReversificationData.targetsDc()) "NRSVA" else "NRSV", true)
+  }
+
 
     /******************************************************************************************************************/
     private fun initialise (rawUsxPath: String, document: Document)

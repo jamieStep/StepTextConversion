@@ -199,8 +199,8 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
      fun evaluate (bookNumber: Int)
      {
        val comparisonDetails = BibleStructureTextUnderConstruction.compareWithGivenScheme(bookNumber, bibleStructureOther)
-       versesMissingInOsis2modScheme += comparisonDetails.inTextUnderConstructionButNotInOtherScheme.size
-       versesInExcessInOsis2modScheme += comparisonDetails.inOtherSchemeButNotInTextUnderConstruction.size
+       versesMissingInOsis2modScheme += comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.size
+       versesInExcessInOsis2modScheme += comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.size
      }
 
      bookNumbersInTextUnderConstruction.forEach { evaluate(it) }

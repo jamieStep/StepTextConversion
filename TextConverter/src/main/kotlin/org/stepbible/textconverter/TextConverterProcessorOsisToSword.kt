@@ -80,7 +80,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
   override fun process (): Boolean
   {
     /**************************************************************************/
-    m_ModuleName = ConfigData.get("stepModuleName")!!
+    m_ModuleName = ConfigData["stepModuleName"]!!
     createFolderStructure(StandardFileLocations.getSwordTextFolderPath(m_ModuleName))
     generateEncryptionData()
     if (!ConfigData.getAsBoolean("stepEncryptionApplied", "no")) Logger.warning("********** NOT ENCRYPTED **********")
@@ -111,8 +111,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
     Logger.setLogFile(StandardFileLocations.getConverterLogFilePath())
 
-    val programName = if (XXXSamiInterface.C_UsingSamisInterface) "samisOsis2Mod.exe" else "osis2Mod.exe"
-    val workingDirectory = if (XXXSamiInterface.C_UsingSamisInterface) "C:\\Program Files\\Jamie\\STEP\\SamiOsis2mod" else null
+    val programName = if (XXXOsis2ModInterface.usingCrosswireOsis2Mod()) "osis2mod.exe" else "samisOsis2Mod.exe"
 
     val swordExternalConversionCommand: MutableList<String> = ArrayList()
     swordExternalConversionCommand.add("cmd")
@@ -121,19 +120,20 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
     swordExternalConversionCommand.add("\"" + StandardFileLocations.getSwordTextFolderPath(m_ModuleName) + "\"")
     swordExternalConversionCommand.add("\"" + StandardFileLocations.getOsisFilePath() + "\"")
 
-    if (XXXSamiInterface.C_UsingSamisInterface)
-    {
-      swordExternalConversionCommand.add("-V")
-      swordExternalConversionCommand.add(ConfigData.get("stepModuleName")!!)
-      swordExternalConversionCommand.add("-z")    }
-    else
+    if (XXXOsis2ModInterface.usingCrosswireOsis2Mod())
     {
       swordExternalConversionCommand.add("-v")
-      swordExternalConversionCommand.add(ConfigData.get("stepVersificationScheme")!!)
-      swordExternalConversionCommand.add("-z")
+      swordExternalConversionCommand.add(ConfigData["stepVersificationScheme"]!!)
+    }
+    else
+    {
+      swordExternalConversionCommand.add("-V")
+      swordExternalConversionCommand.add("\"" + StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath() + "\"")
     }
 
-    val osis2modEncryptionKey = ConfigData.get("stepOsis2ModEncryptionKey")
+    swordExternalConversionCommand.add("-z")
+
+    val osis2modEncryptionKey = ConfigData["stepOsis2ModEncryptionKey"]
     if (null != osis2modEncryptionKey)
     {
       swordExternalConversionCommand.add("-c")
@@ -142,7 +142,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
     generateChangesFile()
     Dbg.reportProgress("")
-    runCommand("Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = StandardFileLocations.getOsisToModLogFilePath(), workingDirectory = workingDirectory)
+    runCommand("Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = StandardFileLocations.getOsisToModLogFilePath())
     getFileSizeIndicator()
     generateConfigFile()
     checkOsis2ModLog()
@@ -175,8 +175,8 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
 
     /**************************************************************************/
-    val textMajorRevision = ConfigData.get("stepTextMajorRevisionNoSuppliedBySourceRepositoryOrOwnerOrganisation")!!
-    val textMinorRevision = ConfigData.get("stepTextMinorRevisionNoSuppliedBySourceRepositoryOrOwnerOrganisation") ?: ""
+    val textMajorRevision = ConfigData["stepTextMajorRevisionNoSuppliedBySourceRepositoryOrOwnerOrganisation"]!!
+    val textMinorRevision = ConfigData["stepTextMinorRevisionNoSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""
     var textRevision = textMajorRevision + if (textMinorRevision.isEmpty()) "" else ".$textMinorRevision"
     if (textRevision.isEmpty()) textRevision = "Not known"
     ConfigData.put("stepTextRevision", textRevision, true)
@@ -197,10 +197,10 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 """
 
     stepInfo = stepInfo.replace("-", "&nbsp;")
-      .replace("@(stepTextRevision)", ConfigData.get("stepTextRevision") ?: "")
-      .replace("@(stepTextModifiedDate)", ConfigData.get("stepTextModifiedDate")!!)
-      .replace("@(stepModuleName)", ConfigData.get("stepModuleName")!!)
-      .replace("@(stepThanks)", ConfigData.get("stepThanks")!!)
+      .replace("@(stepTextRevision)", ConfigData["stepTextRevision"] ?: "")
+      .replace("@(stepTextModifiedDate)", ConfigData["stepTextModifiedDate"]!!)
+      .replace("@(stepModuleName)", ConfigData["stepModuleName"]!!)
+      .replace("@(stepThanks)", ConfigData["stepThanks"]!!)
       .replace("@(ModuleDate)", moduleDate)
       .replace("@(OsisSha256)", osisSha256)
       .replace("\n", "NEWLINE")
@@ -221,7 +221,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
       if (ConfigData.getAsBoolean("stepAddedValueReversification", "No"))
       {
         texts.add(Translations.stringFormatWithLookup("V_AddedValue_Reversification"))
-        reversificationDetails = Translations.stringFormatWithLookup("V_reversification_LongDescription_" + sentenceCaseFirstLetter(ConfigData.get("stepReversificationType")!!))
+        reversificationDetails = Translations.stringFormatWithLookup("V_reversification_LongDescription_" + sentenceCaseFirstLetter(ConfigData["stepReversificationType"]!!))
         reversificationDetails = reversificationDetails.replace("%d", SharedData.VersesAmendedByReversification.size.toString())
       }
 
@@ -257,14 +257,14 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
 
     /**************************************************************************/
-    ConfigData.put("stepDataPath", "./modules/texts/ztext/" + ConfigData.get("stepModuleName") + "/", true)
+    ConfigData.put("stepDataPath", "./modules/texts/ztext/" + ConfigData["stepModuleName"] + "/", true)
 
 
 
     /**************************************************************************/
-    var textSource = ConfigData.get("stepSourceRepositoryForText") ?: ""
-    if (textSource.isEmpty()) textSource = ConfigData.get("stepTextRepositoryOrganisationAbbreviatedName") ?: ""
-    if (textSource.isEmpty()) textSource = ConfigData.get("stepTextRepositoryOrganisationFullName") ?: ""
+    var textSource = ConfigData["stepSourceRepositoryForText"] ?: ""
+    if (textSource.isEmpty()) textSource = ConfigData["stepTextRepositoryOrganisationAbbreviatedName"] ?: ""
+    if (textSource.isEmpty()) textSource = ConfigData["stepTextRepositoryOrganisationFullName"] ?: ""
     if (textSource.isEmpty()) textSource = "Unknown"
 
     var ownerOrganisation = ConfigData.getOrError("stepTextOwnerOrganisationFullName")
@@ -273,7 +273,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
     var textDisambiguatorForId = ConfigData.getOrError("stepDisambiguatorForId")
     if (textDisambiguatorForId.isBlank() || "unknown".equals(textDisambiguatorForId, ignoreCase = true)) textDisambiguatorForId = ""
 
-    var textId: String = ConfigData.get("stepTextIdSuppliedBySourceRepositoryOrOwnerOrganisation") ?: ""
+    var textId: String = ConfigData["stepTextIdSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""
     if (textId.isBlank() || "unknown".equals(textId, ignoreCase = true)) textId = ""
 
     var textCombinedId = "$textDisambiguatorForId.$textId"
