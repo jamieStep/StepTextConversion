@@ -142,10 +142,10 @@ object Logger
 
   @Synchronized fun error (refKey: Long, text: String)
   {
-    if (TestController.C_SamiTest)
+    if (TestController.suppressErrors())
     {
-      warning("!!!!!!!!!!!!!! Logger.error called, but currently disabled while testing.")
-     return // $$$$$$$$$
+      warning(refKey,"!!!!!!!!!!!!!! Error converted to warning while testing: $text")
+      return
     }
 
 

@@ -164,7 +164,7 @@ object StandardFileLocations
   fun getPreprocessorPythonFilePath (): String { return Paths.get(m_RootFolderPath, "Preprocessor", "preprocessor.py").toString() }
   fun getRawUsxFolderPath (): String { return m_RawUsxFolderPath }
   fun getRootFolderName (): String { return m_RootFolderName }
-  private fun getRootFolderPath (): String { return m_RootFolderPath }
+  fun getRootFolderPath (): String { return m_RootFolderPath }
   fun getStepChangeHistoryFilePath (): String { return m_StepChangeHistoryFilePath }
   fun getSwordChangesFilePath (moduleName:String): String { return Paths.get(getSwordTextFolderPath(moduleName), m_StepChangeHistoryFileName).toString() }
   fun getSwordConfigFolderPath (): String { return m_SwordConfigFolderPath }
@@ -180,7 +180,8 @@ object StandardFileLocations
   private fun getVernacularBibleStructureFileName (): String { return m_VernacularBibleStructureFileName }
   fun getVernacularBibleStructureFilePath (): String { return Paths.get(getTextFeaturesFolderPath(), getVernacularBibleStructureFileName()).toString() }
   fun getVersificationFilePath (): String { return Paths.get(getTextFeaturesFolderPath(), "stepRawTextVersification.txt").toString() }
-  fun getVersificationStructureForBespokeOsis2ModFilePath (): String { return Paths.get(getEncryptionDataRootFolder(), "versification", ConfigData["stepVersificationScheme"]!! + ".json").toString() }
+  private fun getVersificationStructureForBespokeOsis2ModFileName (): String { return ConfigData["stepVersificationScheme"]!! + ".json" }
+  fun getVersificationStructureForBespokeOsis2ModFilePath (): String { return Paths.get(getEncryptionDataRootFolder(), "versification", getVersificationStructureForBespokeOsis2ModFileName()).toString() }
   fun getVLFilePath (): String { return Paths.get(getRootFolderPath(), "VL", "vl.txt").toString() }
 
 
@@ -191,7 +192,7 @@ object StandardFileLocations
    * @param ubsBookAbbreviation If null, the result is a regex which will match
    *   _any_ USX file.  Otherwise it will match the file for the specific
    *   book.
-   * 
+   *
    * @return Pattern-match string for raw USX files.
    */
   

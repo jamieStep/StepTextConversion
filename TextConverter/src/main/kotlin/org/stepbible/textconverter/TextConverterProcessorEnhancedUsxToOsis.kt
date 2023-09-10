@@ -273,19 +273,19 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
          format required by the OSIS reference manual, qv.
     */
     
-    var yearOfText: String = ConfigData.get("stepTextModifiedDate")!!
+    var yearOfText: String = ConfigData["stepTextModifiedDate"]!!
     if (yearOfText.contains("-")) yearOfText = yearOfText.split("-")[2]
 
-    var publicationType = if ("bible" == (ConfigData.get("stepTypeOfDocument") ?: "bible").lowercase()) "zText" else "zCom"
+    var publicationType = if ("bible" == (ConfigData["stepTypeOfDocument"] ?: "bible").lowercase()) "zText" else "zCom"
     publicationType = if (publicationType.equals("zText", ignoreCase = true)) "Bible" else "Commentary"
 
     val vals: MutableMap<String, String?> = HashMap()
-    vals["languageCode"] = ConfigData.get("stepLanguageCode3Char")
-    vals["moduleName"] = ConfigData.get("stepModuleName")
+    vals["languageCode"] = ConfigData["stepLanguageCode3Char"]
+    vals["moduleName"] = ConfigData["stepModuleName"]
     vals["publicationType"] = publicationType
-    vals["revisionDesc"] = ConfigData.get("revisionDesc") ?: "" // See note above.
+    vals["revisionDesc"] = ConfigData["revisionDesc"] ?: "" // See note above.
     vals["scope"] = makeScope()
-    vals["shortCopyright"] = ConfigData.get("stepShortCopyright")!!.replace("<.*?>".toRegex(), " ")
+    vals["shortCopyright"] = ConfigData["stepShortCopyright"]!!.replace("<.*?>".toRegex(), " ")
     vals["title"] = ConfigData.makeStepDescription()
     vals["toLowerPublicationType"] = publicationType.lowercase(Locale.getDefault())
     vals["todaysDate"] = SimpleDateFormat("dd-MMM-yy").format(Date())
@@ -769,7 +769,7 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
     {
       val splitTags = tags.split("<".toRegex())
       output(splitTags[0]) // May have leading non-tag text.
-      for (i in 1 until splitTags.size) output("<" + splitTags[i]) // This assumes no inter-tag text, but does permit text at the end.
+      for (i in 1..< splitTags.size) output("<" + splitTags[i]) // This assumes no inter-tag text, but does permit text at the end.
     }
 
     if (isClosing && null != tagProcessDetails && ConfigData.TagAction.SuppressContent === tagProcessDetails.second) --m_SuppressOutput

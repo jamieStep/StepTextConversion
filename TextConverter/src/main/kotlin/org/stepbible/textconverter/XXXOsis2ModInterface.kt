@@ -3,6 +3,7 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -236,6 +237,7 @@ object XXXOsis2ModInterface
     psalmTitles.forEach { m_BibleStructure.jswordMappings.add(Pair(it.sourceRefAsRefKey, Ref.setV(it.standardRefAsRefKey, 0))) }
 
     m_BibleStructure.jswordMappings.sortBy { it.first }
+    m_BibleStructure.jswordMappings.forEach { Dbg.d("" + it.first + "=" + it.second)}
   }
 
 

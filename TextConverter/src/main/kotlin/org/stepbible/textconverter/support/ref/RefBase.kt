@@ -300,7 +300,7 @@ abstract class RefBase
      * Psa 51:Title, and I need to turn it into a pretend verse.
      */
 
-    const val C_TitlePseudoVerseNumber: Int = 499
+    const val C_TitlePseudoVerseNumber = 499
 
 
     /******************************************************************************/

@@ -16,7 +16,7 @@ import org.stepbible.textconverter.support.debug.Logger
 
 fun main (args: Array<String>)
 {
-  //Dbg.setBooksToBeProcessed("Exo")
+  Dbg.setBooksToBeProcessed("Psa")
 
   try
   {
@@ -37,6 +37,7 @@ fun main (args: Array<String>)
 private fun mainCommon (args: Array<String>)
 {
   TextConverterController().process(args)
+  TestController.atEndOfProcessing()
   Logger.summariseResults()
 }
 

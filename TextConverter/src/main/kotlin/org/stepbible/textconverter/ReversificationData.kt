@@ -417,7 +417,7 @@ object ReversificationData
 
     /**************************************************************************/
     /* Debug. */
-    //Dbg.d(processedRow.rowNumber == 2603)
+    //Dbg.d(processedRow.rowNumber == 4863)
     //Dbg.d(processedRow.rowNumber)
 
 
@@ -491,7 +491,7 @@ object ReversificationData
        val sourceVerse = Ref.rdUsx(sourceRefAsString).getV()
        standardRefAsString += convertNumberToRepeatingString(sourceVerse, 'a', 'z')
      }
-     processedRow.processingFlags = processedRow.processingFlags.or(C_StandardIsPsalmTitle)
+     processedRow.processingFlags = processedRow.processingFlags or C_StandardIsPsalmTitle
    }
 
    if (sourceRefAsString.contains("title"))
@@ -1099,7 +1099,10 @@ object ReversificationData
       row.processingFlags = row.processingFlags.or(C_IfEmpty)
 
     else if (row.action.contains("renumber"))
-      row.processingFlags = row.processingFlags.or(C_Renumber)
+    {
+      if (!row.action.contains("title"))
+        row.processingFlags = row.processingFlags.or(C_Renumber)
+    }
 
     else if (row.action.contains("empty"))
       row.processingFlags = row.processingFlags.or(C_CreateIfNecessary)

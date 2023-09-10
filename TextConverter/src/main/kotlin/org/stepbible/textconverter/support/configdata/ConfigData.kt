@@ -2,7 +2,7 @@
 package org.stepbible.textconverter.support.configdata
 
 
-import org.stepbible.textconverter.ReversificationDataimport org.stepbible.textconverter.SamiTestDetails
+import org.stepbible.textconverter.ReversificationData
 import org.stepbible.textconverter.TestController
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
@@ -19,7 +19,6 @@ import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.*
 import java.text.SimpleDateFormat
 import java.time.LocalDate
-import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
@@ -964,10 +963,7 @@ object ConfigData
             {
               var moduleName = getInternal("stepModuleNameWithoutSuffix", false)
               if (getAsBoolean("stepHasAddedValue") && getAsBoolean("stepDecorateModuleNamesWhereStepHasAddedValue", "No")) moduleName += "_"
-
-              if (TestController.C_SamiTest)
-                moduleName += SamiTestDetails.makeModuleNameSuffix()
-
+              moduleName = TestController.getModuleNamePrefix() + moduleName
               return moduleName
             }
 
@@ -1488,7 +1484,7 @@ object ConfigData
 
         if (englishTitle.contains(officialYear.trim()) || vernacularTitleIfNotSameAsEnglish.contains(officialYear.trim())) officialYear = "" // DIB: 2021-09-10.
 
-        var text = englishTitle + vernacularTitleIfNotSameAsEnglish + abbreviatedNameOfRightsHolder + officialYear + " " + biblePortion + language + moduleMonthYear
+        var text = "$englishTitle$vernacularTitleIfNotSameAsEnglish$abbreviatedNameOfRightsHolder$officialYear $biblePortion$language$moduleMonthYear"
         text = expandReferences(text, false)!!
         text = text.replace("\\s+".toRegex(), " ").trim()
         return text

@@ -512,17 +512,6 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
 
     /**************************************************************************/
-    /* The actual configuration file used by JSword. */
-
-    //var writer = File(localMachineDecryptionFilePath).bufferedWriter()
-    //writer.write("[$m_ModuleName]");              writer.write("\n");
-    //writer.write("CipherKey=$stepEncryptionKey"); writer.write("\n");
-    //writer.write("STEPLocked=true");              writer.write("\n");
-    //writer.close()
-
-
-
-    /**************************************************************************/
     /* And a copy of it in the Metadata folder, to make it easier to find if I
        need to pass it to anyone else. */
 
