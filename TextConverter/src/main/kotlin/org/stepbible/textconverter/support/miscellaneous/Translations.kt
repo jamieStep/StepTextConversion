@@ -1,6 +1,7 @@
 /******************************************************************************/
 package org.stepbible.textconverter.support.miscellaneous
 
+import org.stepbible.textconverter.DataSummary
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.miscellaneous.StepStringFormatter.convertNameAndValueListToMap
 import org.stepbible.textconverter.support.shared.Language
@@ -98,9 +99,11 @@ object Translations
 
   fun stringFormatWithLookup (key: String, vararg otherBits: Any): String
   {
-    val text = ConfigData.get(key) ?: throw StepException("stringFormatWithLookup lookup failed on $key")
+    val text = ConfigData[key] ?: throw StepException("stringFormatWithLookup lookup failed on $key")
     if (text.isEmpty()) return ""
-    return StepStringFormatter.format(text, if (1 == otherBits.size) otherBits[0] else convertNameAndValueListToMap(*otherBits))
+    val res = StepStringFormatter.format(text, if (1 == otherBits.size) otherBits[0] else convertNameAndValueListToMap(*otherBits))
+    DataSummary.addTranslatableText(key, text) // Record details of
+    return res
   }
 
 
@@ -113,7 +116,7 @@ object Translations
 
   private fun getEnglish (key: String): String?
   {
-    return ConfigData.get(key)
+    return ConfigData[key]
   }
 
 
@@ -127,7 +130,7 @@ object Translations
 
   private fun getVernacular (key: String): String?
   {
-    var res = ConfigData.get(key)
+    var res = ConfigData[key]
     if (null == res) res = getEnglish(key)
     return res
   }

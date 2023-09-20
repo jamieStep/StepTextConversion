@@ -1717,28 +1717,28 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
 
 
 
-    /**************************************************************************/
-    /* We know that verseTags cannot be empty, because this method is called
-       only for those situations where the table contains verse tags.  However,
-       we might still have the situation where the table contains only a
-       verse start or only a verse end.  In fact, I can't imagine this
-       happening; and since I don't want to be bothered with catering for it,
-       I will simply test for it and report it.
-
-       In fact, I'm going to go beyond this -- I'm going to assume that all
-       tables have at least two starts. */
-
-    if (verseStarts.size < 2)
-    {
-      Logger.error(locationAsRefKey,"Table containing fewer than two start tags at or about $location")
-      return
-    }
-
-    if (verseEnds.isEmpty())
-    {
-      Logger.error(locationAsRefKey, "Table containing only a start tag at or about $location")
-      return
-    }
+//    /**************************************************************************/
+//    /* We know that verseTags cannot be empty, because this method is called
+//       only for those situations where the table contains verse tags.  However,
+//       we might still have the situation where the table contains only a
+//       verse start or only a verse end.  In fact, I can't imagine this
+//       happening; and since I don't want to be bothered with catering for it,
+//       I will simply test for it and report it.
+//
+//       In fact, I'm going to go beyond this -- I'm going to assume that all
+//       tables have at least two starts. */
+//
+//    if (verseStarts.size < 2)
+//    {
+//      Logger.error(locationAsRefKey,"Table containing fewer than two start tags at or about $location")
+//      return
+//    }
+//
+//    if (verseEnds.isEmpty())
+//    {
+//      Logger.error(locationAsRefKey, "Table containing only a start tag at or about $location")
+//      return
+//    }
 
 
 
@@ -1754,10 +1754,10 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
        cope if the eid more or less follows the end of the table -- we just
        move the eid back inside the table. */
 
-    val eid = Dom.findNodeByAttributeValue(m_Document, "verse", "eid", Dom.getAttribute(verseTags.last(), "sid")!!)!!
     if (Dom.hasAttribute(verseTags.last(), "sid"))
     {
-      if (Dom.isNextSiblingOf(table, eid, true))
+     val eid = Dom.findNodeByAttributeValue(m_Document, "verse", "eid", Dom.getAttribute(verseTags.last(), "sid")!!)!!
+     if (Dom.isNextSiblingOf(table, eid, true))
       {
         Dom.deleteNode(eid)
         table.appendChild(eid)

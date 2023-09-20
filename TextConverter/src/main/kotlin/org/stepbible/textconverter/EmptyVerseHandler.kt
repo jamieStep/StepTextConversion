@@ -313,7 +313,18 @@ object EmptyVerseHandler
   /****************************************************************************/
   /* Creates an empty verse to fill in a gap in the versification, and inserts
      it before the given node, or at the end of the parent chapter if
-     insertBefore is null.  Returns a pair consisting of the sid and the eid. */
+     insertBefore is null.  Returns a pair consisting of the sid and the eid.
+
+     Note 2023-09-20
+     ---------------
+
+     The commented-out Dom.insertNodeBefore line was what was originally in the
+     code.  It looked up the target verse to see if we had a specific override
+     for the footnote text.  However, I think this was specific to cases where
+     we were doing reversification, and I don't _think_ this method gets
+     called for that.  So I have replaced it with the two lines which refer to
+     footnoteText.
+  */
   private fun createEmptyVerseForMissingVerse (document: Document, refKey: RefKey, insertBefore: Node?, generatedReason: String = "Not found on completion of processing", reasonEmpty: String = "verseWasMissing"): Pair<Node, Node>
   {
     Logger.warning(refKey, "Created verse which was missing from the original text.")
@@ -325,8 +336,11 @@ object EmptyVerseHandler
 
     val ib = insertBefore ?: Dom.createNode(document,"<_TEMP/>")
 
+
     Dom.insertNodeBefore(ib, start)
-    Dom.insertNodeBefore(ib, makeReferenceSpecificFootnote(document, sidAsString, "V_emptyContentFootnote_verseEmptyInThisTranslation"))
+    val footnoteNode = MiscellaneousUtils.makeFootnote(document, refKey, text = stringFormatWithLookup("V_emptyContentFootnote_verseEmptyInThisTranslation") , callout = ConfigData["stepExplanationCallout"])  // See note for 2023-09-20 above.
+    Dom.insertNodeBefore(ib, footnoteNode)  // See note for 2023-09-20 above.
+    // Dom.insertNodeBefore(ib, makeReferenceSpecificFootnote(document, sidAsString, "V_emptyContentFootnote_verseEmptyInThisTranslation"))  // See note for 2023-09-20 above.
     Dom.insertNodeBefore(ib, makeContent(document, m_Content_MissingVerse))
     Dom.insertNodeBefore(ib, end)
 
@@ -340,7 +354,9 @@ object EmptyVerseHandler
   /****************************************************************************/
   private fun getSidMap (document: Document, nodeName: String): NavigableMap<RefKey, Node>
   {
-    return Dom.findNodesByName(document, nodeName).associateBy { Ref.rd(Dom.getAttribute(it, "sid")!!).toRefKey() }.toSortedMap() as NavigableMap<RefKey, Node>
+    return Dom.findNodesByName(document, nodeName)
+      .filter { Dom.hasAttribute(it, "sid") }
+      .associateBy { Ref.rd(Dom.getAttribute(it, "sid")!!).toRefKey() }.toSortedMap() as NavigableMap<RefKey, Node>
   }
 
 

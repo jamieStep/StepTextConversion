@@ -8,7 +8,6 @@ import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.stepexception.StepException
-import org.stepbible.textconverter.support.usx.Usx
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File

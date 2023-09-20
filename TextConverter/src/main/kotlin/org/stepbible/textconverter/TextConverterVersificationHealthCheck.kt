@@ -288,16 +288,16 @@ object TextConverterVersificationHealthCheck
 
     /**************************************************************************/
     if (diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.isNotEmpty())
-      m_MissingElementReporter(null, "Text lacks chapter(s) which target versification scheme expects: ${diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.joinToString(", ")}.")
+      m_MissingElementReporter(null, "Text lacks chapter(s) which target versification scheme expects: ${diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.joinToString(", ") { Ref.rd(it).toString() } }.")
 
     if (diffs.chaptersInTextUnderConstructionButNotInTargetScheme.isNotEmpty())
-      m_ExcessElementReporter(null, "Text contains chapter(s) which target versification scheme does not expect: ${diffs.chaptersInTextUnderConstructionButNotInTargetScheme.joinToString(", ")}.")
+      m_ExcessElementReporter(null, "Text contains chapter(s) which target versification scheme does not expect: ${diffs.chaptersInTextUnderConstructionButNotInTargetScheme.joinToString(", ") { Ref.rd(it).toString() } }.")
 
     if (diffs.versesInTargetSchemeButNotInTextUnderConstruction.isNotEmpty())
-      m_MissingElementReporter(null, "Text lacks verse(s) which target versification scheme expects: ${diffs.versesInTargetSchemeButNotInTextUnderConstruction.joinToString(", ")}.")
+      m_MissingElementReporter(null, "Text lacks verse(s) which target versification scheme expects: ${diffs.versesInTargetSchemeButNotInTextUnderConstruction.joinToString(", ") { Ref.rd(it).toString() } }.")
 
     if (diffs.versesInTextUnderConstructionButNotInTargetScheme.isNotEmpty())
-      m_ExcessElementReporter(null, "Text contains verse(s) which target versification scheme does not expect: ${diffs.versesInTextUnderConstructionButNotInTargetScheme.joinToString(", ")}.")
+      m_ExcessElementReporter(null, "Text contains verse(s) which target versification scheme does not expect: ${diffs.versesInTextUnderConstructionButNotInTargetScheme.joinToString(", ") { Ref.rd(it).toString() } }.")
   }
 
 

@@ -1,8 +1,8 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
-import org.apache.commons.codec.digest.DigestUtils
-import org.apache.commons.codec.digest.MessageDigestAlgorithms.SHA_256
+//import org.apache.commons.codec.digest.DigestUtils
+//import org.apache.commons.codec.digest.MessageDigestAlgorithms.SHA_256
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
@@ -112,10 +112,9 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
     Logger.setLogFile(StandardFileLocations.getConverterLogFilePath())
 
     val programName = if (XXXOsis2ModInterface.usingCrosswireOsis2Mod()) "osis2mod.exe" else "samisOsis2Mod.exe"
+    val workingDirectoryName = if (XXXOsis2ModInterface.usingCrosswireOsis2Mod()) "C:\\Program Files\\Jamie\\STEP\\SwordUtilities" else "C:\\Program Files\\Jamie\\STEP\\SamiOsis2mod"
 
     val swordExternalConversionCommand: MutableList<String> = ArrayList()
-    swordExternalConversionCommand.add("cmd")
-    swordExternalConversionCommand.add("/C")
     swordExternalConversionCommand.add(programName)
     swordExternalConversionCommand.add("\"" + StandardFileLocations.getSwordTextFolderPath(m_ModuleName) + "\"")
     swordExternalConversionCommand.add("\"" + StandardFileLocations.getOsisFilePath() + "\"")
@@ -142,7 +141,8 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
     generateChangesFile()
     Dbg.reportProgress("")
-    runCommand("Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = StandardFileLocations.getOsisToModLogFilePath())
+    runCommand("Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = StandardFileLocations.getOsisToModLogFilePath(), workingDirectory = workingDirectoryName)
+    ChangeHistoryHandler.process()
     getFileSizeIndicator()
     generateConfigFile()
     checkOsis2ModLog()
@@ -175,34 +175,24 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
 
     /**************************************************************************/
-    val textMajorRevision = ConfigData["stepTextMajorRevisionNoSuppliedBySourceRepositoryOrOwnerOrganisation"]!!
-    val textMinorRevision = ConfigData["stepTextMinorRevisionNoSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""
-    var textRevision = textMajorRevision + if (textMinorRevision.isEmpty()) "" else ".$textMinorRevision"
-    if (textRevision.isEmpty()) textRevision = "Not known"
-    ConfigData.put("stepTextRevision", textRevision, true)
-
-
-
-    /**************************************************************************/
-    val moduleDate: String = SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date())
+    val moduleCreationDate: String = SimpleDateFormat("dd MMM yyyy").format(Date())
+    val moduleCreationDateAndTime: String = SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date())
+    ConfigData.put("stepModuleCreationDate", moduleCreationDateAndTime, true)
     val osisFilePath = File(StandardFileLocations.getOsisFilePath())
-    val osisSha256: String = DigestUtils(SHA_256).digestAsHex(osisFilePath)
+    //val osisSha256: String = DigestUtils(SHA_256).digestAsHex(osisFilePath)
     var stepInfo = """
-¬¬--Text version: @(stepTextRevision).
-¬--@(stepTextModifiedDate).
-¬--Sword module @(stepModuleName) created @(ModuleDate).
-¬--OSIS SHA256: @(OsisSha256).
+¬--Sword module @(stepModuleName) created @(stepModuleCreationDate) (@(stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation)).
 ¬--@(stepThanks)
 @(AddedValue)
 """
 
     stepInfo = stepInfo.replace("-", "&nbsp;")
-      .replace("@(stepTextRevision)", ConfigData["stepTextRevision"] ?: "")
+      .replace("@(stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation)", ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: "")
       .replace("@(stepTextModifiedDate)", ConfigData["stepTextModifiedDate"]!!)
       .replace("@(stepModuleName)", ConfigData["stepModuleName"]!!)
       .replace("@(stepThanks)", ConfigData["stepThanks"]!!)
-      .replace("@(ModuleDate)", moduleDate)
-      .replace("@(OsisSha256)", osisSha256)
+      .replace("@(stepModuleCreationDate)", moduleCreationDate)
+      //.replace("@(OsisSha256)", osisSha256)
       .replace("\n", "NEWLINE")
 
     stepInfo = stepInfo.replace("^¬*(&nbsp;)*\\s*\\u0001".toRegex(), "") // Get rid of entirely 'blank' lines.
@@ -249,9 +239,8 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
 
     /**************************************************************************/
-    ConfigData.put("stepModuleCreationDate", moduleDate, true)
     ConfigData.put("stepModuleName", m_ModuleName, true)
-    ConfigData.put("stepOsisSha256", osisSha256, true)
+    //ConfigData.put("stepOsisSha256", osisSha256, true)
     ConfigData.put("stepConversionInfo", stepInfo, true)
 
 
@@ -453,12 +442,27 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
     for (x in lines)
     {
       var line = x.trim()
+
+      if ("\$includeChangeHistory".equals(line, ignoreCase = true))
+      {
+        val newLines = StandardFileLocations.getInputStream(StandardFileLocations.getHistoryFilePath(), null)!!.bufferedReader().readLines().map { it.trim() }
+        newLines.filterNot { it.startsWith("#!") } .forEach { writer.write(it); writer.write("\n")}
+        continue
+      }
+
+      if ("\$includeCopyAsIsLines".equals(line, ignoreCase = true))
+      {
+        val newLines = ConfigData.getCopyAsIsLines().forEach { writer.write(it); writer.write("\n")}
+        continue
+      }
+
       if (line.startsWith("#!")) continue // Internal comment only.
       line = line.split("#!")[0].trim() // Remove any trailing comment.
       line = line.replace("@reversificationMap", m_ReversificationMap) // Could use ordinary dollar expansions here, but it's too slow because the map is so big.
       writer.write(ConfigData.expandReferences(line, false)!!)
       writer.write("\n")
     }
+
 
 
 
@@ -497,7 +501,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
 
     /**************************************************************************/
-    val withinModuleDecryptionFilePath = StandardFileLocations.getEncryptionDataFilePath("$m_ModuleName.conf").toString()
+    val withinModuleDecryptionFilePath = StandardFileLocations.getEncryptionDataFilePath("$m_ModuleName.conf")
     createFolderStructure(StandardFileLocations.getEncryptionDataFolder())
 
 

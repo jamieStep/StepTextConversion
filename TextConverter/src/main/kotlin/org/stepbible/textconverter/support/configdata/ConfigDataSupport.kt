@@ -76,7 +76,7 @@ object ConfigDataSupport
   fun determineModuleDetails ()
   {
     /**************************************************************************/
-    val rootName = StandardFileLocations.getRootFolderName().replace("%Text_", "")
+    val rootName = StandardFileLocations.getRootFolderName().replace("Text_", "")
     var languageCode: String
     var abbreviatedName: String
 

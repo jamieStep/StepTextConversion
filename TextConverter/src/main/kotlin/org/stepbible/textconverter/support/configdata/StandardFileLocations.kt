@@ -151,6 +151,8 @@ object StandardFileLocations
   fun getEncryptionDataFilePath (moduleName: String): String { return Paths.get(getEncryptionDataFolder(), moduleName).toString() }
   fun getEnhancedUsxFilePattern (): String { return "*.usx" }
   fun getEnhancedUsxFolderPath (): String { return m_EnhancedUsxFolderPath }
+  fun getHistoryFilePath (): String { return return Paths.get(getMetadataFolderPath(), "history.conf").toString() }
+  fun getHistoryTemplateFilePath (): String { return "\$common/historyTemplate.conf" }
   private fun getMetadataFolderPath (): String { return m_MetadataFolderPath }
   fun getOsisFilePath (): String { return m_OsisFilePath }
   fun getOsisFolderPath (): String { return m_OsisFolderPath }
@@ -243,7 +245,7 @@ object StandardFileLocations
     
     m_StepChangeHistoryFileName = "TH_development.txt"
     m_StepChangeHistoryFilePath = Paths.get(m_RootFolderPath, "Metadata", m_StepChangeHistoryFileName).toString()
-    m_OsisFilePath = Paths.get(m_OsisFolderPath, m_RootFolderName + "_osis.xml").toString()
+    m_OsisFilePath = Paths.get(m_OsisFolderPath, m_RootFolderName.replace("Text_", "") + "_osis.xml").toString()
     
     m_TextFeaturesFolderPath = Paths.get(m_RootFolderPath, "TextFeatures").toString()
     m_TextFeaturesFileName = "textFeatures.json"

@@ -10,10 +10,14 @@ import org.stepbible.textconverter.support.configdata.StandardFileLocations.getV
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.getExtendedNodeName
 import org.stepbible.textconverter.support.ref.Ref
+import org.stepbible.textconverter.support.ref.RefCollection
 import org.stepbible.textconverter.support.ref.RefRange
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.w3c.dom.Node
 import java.io.PrintWriter
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.HashSet
 
 
 
@@ -88,6 +92,25 @@ object DataSummary
   {
     if (null == m_TextFeatures.ReversificationDataIssues) m_TextFeatures.ReversificationDataIssues = ArrayList()
     m_TextFeatures.ReversificationDataIssues!!.add(details)
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Records the key and value of a piece of translatable text which has
+  * actually been used during processing.  The idea is that this can make it
+  * easier to identify things for which we might want translations.
+  *
+  * @param key Key for text: V_emptyContentFootnote_verseEmptyInThisTranslation
+  *   or whatever.
+  *
+  * @param text Corresponding text.  Unfortunately I have no easy way of
+  *   overtly identifying whether the text is in English or not, so there is
+  *   no automated way of determing whether we need a translation.
+  */
+  fun addTranslatableText (key: String, text: String)
+  {
+    m_TextFeatures.TranslatableText[key] = text
   }
 
 
@@ -220,31 +243,37 @@ object DataSummary
 
     /**************************************************************************/
     var HasElisions = false
-    var AllElisionLocations: MutableList<String> = ArrayList() // All elisions.
+    val AllElisionLocations: MutableList<String> = ArrayList() // All elisions.
+
+
+
+    /**************************************************************************/
+    var HasSubverses = false
+    val SubverseLocations: MutableList<String> = ArrayList()
 
 
 
     /**************************************************************************/
     var HasElidedSubverses = false
-    var SubverseElisionLocations: MutableList<String> = ArrayList() // Elisions which start and end with a subverse.
+    val SubverseElisionLocations: MutableList<String> = ArrayList() // Elisions which start and end with a subverse.
 
 
 
     /**************************************************************************/
     var HasMismatchedVerseSubverseElisions = false
-    var MismatchedVerseSubverseElisionLocations: MutableList<String> = ArrayList() // Elisions which start with a verse and end with a subverse or vice versa.
+    val MismatchedVerseSubverseElisionLocations: MutableList<String> = ArrayList() // Elisions which start with a verse and end with a subverse or vice versa.
 
 
 
     /**************************************************************************/
     var HasTables = false
-    var TableLocations: MutableList<String> = ArrayList()
+    val TableLocations: MutableList<String> = ArrayList()
 
 
 
     /**************************************************************************/
     var HasSpeakers = false
-    var SpeakerLocations: MutableList<String> = ArrayList()
+    val SpeakerLocations: MutableList<String> = ArrayList()
 
 
 
@@ -264,6 +293,11 @@ object DataSummary
     /**************************************************************************/
     var ExcessVerses: MutableList<String>? = null // Verses in the text which the selected osis2mod scheme doesn't cater for.
     var MissingVerses: MutableList<String>? = null  // Verses which the selected osis2mod scheme expects and which I had to create at the end of processing to fill the blanks.
+
+
+
+    /**************************************************************************/
+    val TranslatableText = TreeMap<String, String>()
   }
 
 
@@ -302,12 +336,16 @@ object DataSummary
                  //   of _all_ elisions, regardless of flavour (see below to make sense of that).
                  //   HasElisions is true if AllElisionLocations is non-empty.
                  //
-                 // * HasElidedSubverses / SubverseElisionLocations: SubverseElisionLocations the
-                 //   locations of all places where the start and end of an elision are both
-                 //   subverses, and HasElidedSubverses is true if the list is non-empty.  Note
-                 //   that at present, I don't check that the start and end locations are in the
-                 //   same verse (or not for purposes of reporting here: the code at large may well
-                 //   do so).  SubverseElisionLocations will be a possibly empty subset of
+                 // * HasSubverses /SubverseLocations: SubverseLocations indicates all of the
+                 //   verses which contain subverses.  HasSubverses is true if the list is non-
+                 //   empty.
+                 //
+                 // * HasElidedSubverses / SubverseElisionLocations: SubverseElisionLocations
+                 //   gives the locations of all places where the start and end of an elision are
+                 //   both subverses, and HasElidedSubverses is true if the list is non-empty.
+                 //   Note that at present, I don't check that the start and end locations are in
+                 //   the same verse (or not for purposes of reporting here: the code at large may
+                 //   well do so).  SubverseElisionLocations will be a possibly empty subset of
                  //   AllElisionLocations.
                  //
                  // * HasMismatchedVerseSubverseElisions/MismatchedVerseSubverseElisionLocations:
@@ -339,6 +377,12 @@ object DataSummary
                  //
                  // * TagNamesInRawUsx: What it says on the tin: a full list of tag names.
                  //
+                 // * TranslatableText: A collection of key/value pairs listing all of the
+                 //   translatable footnote texts used by this Bible.  It is intended to give
+                 //   a handle on the list of texts which might require translation.
+                 //   Unfortunately I have no easy way of indicating whether a particular
+                 //   item is in English or not, so this list will have to be scanned manually.
+                 //
                  //******************************************************************************
                  """.trimIndent()
 
@@ -350,9 +394,9 @@ object DataSummary
   private fun populateTextFeatures ()
   {
     /**************************************************************************/
-    m_TextFeatures.ModuleName = ConfigData.get("stepModuleName")!!
-    m_TextFeatures.VersificationScheme = ConfigData.get("stepVersificationScheme")!!
-    m_TextFeatures.ReversificationType = ConfigData.get("stepReversificationType")!!
+    m_TextFeatures.ModuleName = ConfigData["stepModuleName"]!!
+    m_TextFeatures.VersificationScheme = ConfigData["stepVersificationScheme"]!!
+    m_TextFeatures.ReversificationType = ConfigData["stepReversificationType"]!!
     BibleBookAndFileMapperRawUsx.iterateOverAllFiles(::populateTextFeatures)
     m_TextFeatures.TagNamesInRawUsx = m_NodeNames.sorted()
 
@@ -377,7 +421,7 @@ object DataSummary
   /****************************************************************************/
   private fun populateTextFeatures (@Suppress("UNUSED_PARAMETER") filePath: String, document: Document)
   {
-    Dom.collectNodesInTree(document).forEach {populateTextFeaturesFromNode(it) }
+    Dom.collectNodesInTree(document).forEach { populateTextFeaturesFromNode(it) }
   }
 
 
@@ -443,6 +487,13 @@ object DataSummary
 
       "verse" ->
       {
+        val rc = RefCollection.rd(m_CurrentVerseSid)
+        if (rc.getLowAsRef().hasS() || rc.getHighAsRef().hasS())
+        {
+          m_TextFeatures.SubverseLocations.add(m_CurrentVerseSid)
+          m_TextFeatures.HasSubverses = true
+        }
+
         if (m_CurrentVerseSid.contains("-"))
         {
           if (m_CurrentVerseSid !in m_TextFeatures.AllElisionLocations)

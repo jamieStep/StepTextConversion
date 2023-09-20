@@ -471,6 +471,16 @@ object ConfigData
             }
 
 
+
+            /**************************************************************************/
+            if (line.matches(Regex("(?i)copyAsIs.*")))
+            {
+              m_CopyAsIsLines.add(line.substring(line.indexOf("=") + 1))
+              continue
+            }
+
+
+
             /**************************************************************************/
             if (line.contains("=")) // I think this should account for all remaining lines.
                 loadParameterSetting(line)
@@ -617,6 +627,20 @@ object ConfigData
     {
       return getInternal(key, true) ?: dflt
     }
+
+
+    /****************************************************************************/
+    /**
+    * The configuration data may include lines which are simply to be copied
+    * as-is to the Sword configuration file.  This returns that list.
+    *
+    * @return As-is lines.
+    */
+    fun getCopyAsIsLines (): List<String>
+    {
+      return m_CopyAsIsLines
+    }
+
 
 
     /****************************************************************************/
@@ -1492,25 +1516,6 @@ object ConfigData
 
 
     /****************************************************************************/
-    /**
-    * Gets the text used to describe the reversification activity for use in
-    * either the short or long description.  (The parameter 'rootName'
-    * determines which.)
-    *
-    * @param rootName eg "V_reversification_ShortDescription_"
-    * @return Text, or empty string if reversification has not been applied.
-    */
-
-    private fun makeStepShortOrLongDescription_getReversificationDetails (rootName: String): String
-    {
-        if (SharedData.VersesAmendedByReversification.isEmpty()) return ""
-        var reversificationType = get("stepReversificationType")!!
-        reversificationType = reversificationType.lowercase().replaceFirstChar { it.uppercase() }
-        return Translations.stringFormat(rootName + reversificationType, true) + " "
-    }
-
-
-    /****************************************************************************/
     /* Simplest if I just copy the relevant portion of the spec :-
 
      - The part of the Bible (OT+NT+Apoc) is only stated if it doesn’t contain
@@ -1771,6 +1776,7 @@ object ConfigData
 
     /****************************************************************************/
     private val m_BookDescriptors: MutableList<VernacularBookDescriptor> = ArrayList()
+    private val m_CopyAsIsLines: MutableList<String> = ArrayList()
     private var m_Initialised: Boolean = false
     private val m_Metadata: MutableMap<String, ParameterSetting> = HashMap()
     private val m_UsxToOsisTagTranslationDetails: MutableMap<String, Pair<String, TagAction>> = TreeMap(String.CASE_INSENSITIVE_ORDER)

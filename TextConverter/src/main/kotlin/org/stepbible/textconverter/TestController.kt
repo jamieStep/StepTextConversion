@@ -20,7 +20,7 @@ import java.time.format.DateTimeFormatter
  * More particularly, this caters for ...
  *
  *   - Returning a date/time-stamped prefix which can be used on module names
- *     etc in case more than one version is lying around..
+ *     etc in case more than one version is lying around.
  *
  *   - Creating a few lines of HTML which can be added to the Sword
  *     configuration file, for example to point to the files upon which the
@@ -33,7 +33,7 @@ import java.time.format.DateTimeFormatter
  *     versions of the module.)
  *
  *
- * To control this, look for the line marked with asterisks in TestController.
+ * To control this, look for the line marked with plus signs in TestController.
  * If you are applying a particular test, you need to set m_TestController to
  * be an appropriate instance of a class derived from TestControllerBase.  If
  * you do _not_ wish to apply tests (ie if you just want a plain vanilla run
@@ -67,7 +67,7 @@ object TestController: TestControllerBase()
   private var m_TestController = TestControllerBase() // TestControllerBase is a null implementation, so unless this is overridden in the init block, the TestController does nothing.
   init
   {
-    m_TestController = SamiTestController // *********** Change as per the kind of test to be applied, or comment out if not performing tests.
+    //m_TestController = SamiTestController // ++++++++++++ Change as per the kind of test to be applied, or comment out if not performing tests.
     m_TestController.initialise()
   }
 }
@@ -114,7 +114,10 @@ open class TestControllerBase
   /**
    * Initialisation.
    */
-  open fun initialise () {}
+  open fun initialise ()
+  {
+    ConfigData.put("stepOsis2ModVariant", "Crosswire", true)
+  }
 
 
   /*****************************************************************************/
@@ -126,8 +129,13 @@ open class TestControllerBase
    */
   fun getModuleNamePrefix (): String
   {
-    if (m_UniquePrefix.isEmpty()) m_UniquePrefix = getTestName() + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
-    return m_UniquePrefix
+    if (getTestName().isEmpty())
+      return ""
+    else
+    {
+      if (m_UniquePrefix.isEmpty()) m_UniquePrefix = getTestName() + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
+      return m_UniquePrefix
+    }
   }
 
 

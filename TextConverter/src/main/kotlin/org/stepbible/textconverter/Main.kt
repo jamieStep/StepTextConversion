@@ -16,7 +16,7 @@ import org.stepbible.textconverter.support.debug.Logger
 
 fun main (args: Array<String>)
 {
-  Dbg.setBooksToBeProcessed("Psa")
+  Dbg.setBooksToBeProcessed("Rev")
 
   try
   {

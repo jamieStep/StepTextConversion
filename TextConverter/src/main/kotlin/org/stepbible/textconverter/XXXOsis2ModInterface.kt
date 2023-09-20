@@ -400,7 +400,7 @@ object XXXOsis2ModInterface
     {
       "crosswire" ->
       {
-        throw StepException("Can't run with Crosswire osis2mod without first changing file structure.")
+        //initialiseBookDetails()
         m_Osis2ModVariant = Osis2ModVariant.CROSSWIRE
         C_CreateEmptyChapters = true
         C_ExpandElisions = true
