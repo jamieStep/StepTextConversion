@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="2JN" style="id">- Spanish (Castellano): Nueva Versión Internacional</book>
+  <para style="rem">Copyright © 1999, 2005, 2017 by Biblica, Inc.®</para>
+  <para style="h">2 JUAN</para>
+  <para style="toc1">Segunda Carta de Juan</para>
+  <para style="toc2">2 Juan</para>
+  <para style="toc3">2Jn</para>
+  <para style="mt2">Segunda Carta de</para>
+  <para style="mt1">Juan</para>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>El <char style="w">anciano</char>,</para>
+  <para style="b"/>
+  <para style="p">a la iglesia elegida y a sus miembros,<note caller="+" style="f"><char style="fr" closed="false">1 </char><char style="fq" closed="false">la iglesia … miembros</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">la señora elegida y a sus hijos.</char></note> a quienes amo en la verdad —y no solo yo, sino todos los que han conocido la verdad—, <verse number="2" style="v"/>a causa de esa verdad que permanece en nosotros y que estará con nosotros para siempre:</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="3" style="v"/>La gracia, la misericordia y la paz de Dios el Padre y de <char style="w">Jesucristo</char>, el Hijo del Padre, estarán con nosotros en verdad y en amor.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="4" style="v"/>Me alegré muchísimo de encontrarme con algunos de vosotros<note caller="+" style="f"><char style="fr" closed="false">4 </char><char style="fq" closed="false">vosotros</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">tus hijos.</char></note> que estáis practicando la verdad, según el mandamiento que nos dio el Padre. <verse number="5" style="v"/>Y ahora, hermanos, os ruego que nos amemos los unos a los otros. Y no es que os<note caller="+" style="f"><char style="fr" closed="false">5 </char><char style="fq" closed="false">hermanos, os ruego … Y no es que os</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">señora, te ruego … Y no es que te.</char></note> esté escribiendo un mandamiento nuevo, sino el que hemos tenido desde el principio. <verse number="6" style="v"/>En esto consiste el amor: en que pongamos en práctica sus mandamientos. Y este es el mandamiento: que viváis en este amor, tal como lo habéis escuchado desde el principio.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Es que han salido por el mundo muchos engañadores que no reconocen que Jesucristo ha venido en cuerpo humano. El que así actúa es el engañador y el anticristo. <verse number="8" style="v"/>Cuidaos de no echar a perder el fruto de nuestro trabajo;<note caller="+" style="f"><char style="fr" closed="false">8 </char><char style="fq" closed="false">el fruto de nuestro trabajo</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">lo que hemos trabajado</char><char style="ft" closed="false">. Var. </char><char style="fqa" closed="false">lo que vosotros habéis trabajado.</char></note> procurad, más bien, recibir la recompensa completa. <verse number="9" style="v"/>Todo el que se descarría y no permanece en la enseñanza de Cristo no tiene a Dios; el que permanece en la enseñanza<note caller="+" style="f"><char style="fr" closed="false">9 </char><char style="fq" closed="false">enseñanza</char><char style="ft" closed="false">. Var. </char><char style="fqa" closed="false">enseñanza de Cristo.</char></note> sí tiene al Padre y al Hijo. <verse number="10" style="v"/>Si alguien os visita y no lleva esta enseñanza, no lo recibáis en casa ni le deis la bienvenida, <verse number="11" style="v"/>pues quien le da la bienvenida se hace cómplice de sus malas obras.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Aunque tengo muchas cosas que deciros, no he querido hacerlo por escrito, pues espero visitaros y hablar personalmente con vosotros, para que nuestra alegría sea completa.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="13" style="v"/>Los miembros de la comunidad elegida, hermana tuya, te<note caller="+" style="f"><char style="fr" closed="false">13 </char><char style="fq" closed="false">Los miembros … te</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">Los hijos de tu hermana, la elegida, te.</char></note> mandan saludos.</para>
+</usx>

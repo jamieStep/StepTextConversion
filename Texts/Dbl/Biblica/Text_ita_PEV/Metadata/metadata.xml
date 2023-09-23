@@ -1,0 +1,371 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata id="f69a84b51a2d1036" revision="9" version="2.1">
+  <identification>
+    <name>La Parola è Vita</name>
+    <description>Italian: La Parola è Vita (New Testament)</description>
+    <abbreviation>PEV</abbreviation>
+    <scope>New Testament</scope>
+    <dateCompleted>1994-12-01</dateCompleted>
+    <bundleProducer>Paratext/8.0.100.59</bundleProducer>
+    <systemId type="paratext">
+      <id>6483673ad05cd441a7cff081e4c21c397da4934b</id>
+      <csetId>c19c6d132cfed983644b107db33f360237df7b4f</csetId>
+      <name>itaPEV94</name>
+      <fullName>La Parola è Vita</fullName>
+    </systemId>
+    <systemId type="ptreg">
+      <id>GNKunSqCntHaRQyZJ</id>
+    </systemId>
+  </identification>
+  <type>
+    <medium>text</medium>
+    <isConfidential>false</isConfidential>
+    <hasCharacters>true</hasCharacters>
+    <isTranslation>true</isTranslation>
+    <isExpression>true</isExpression>
+    <translationType>Revision</translationType>
+    <audience>Basic</audience>
+  </type>
+  <relationships />
+  <agencies>
+    <rightsHolder>
+      <abbr>Biblica</abbr>
+      <url>http://www.Biblica.com</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsHolder>
+    <rightsAdmin>
+      <url>http://www.Biblica.com</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsAdmin>
+    <contributor>
+      <content>true</content>
+      <publication>false</publication>
+      <management>false</management>
+      <finance>false</finance>
+      <qa>false</qa>
+      <uid>54b5df925117ad3258dd4cd2</uid>
+      <name>Living Bibles International</name>
+    </contributor>
+    <contributor>
+      <content>false</content>
+      <publication>true</publication>
+      <management>true</management>
+      <finance>true</finance>
+      <qa>true</qa>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </contributor>
+  </agencies>
+  <language>
+    <iso>ita</iso>
+    <name>Italian</name>
+    <nameLocal>Italiano</nameLocal>
+    <script>Latin</script>
+    <scriptCode>Latn</scriptCode>
+    <scriptDirection>LTR</scriptDirection>
+    <ldml>it</ldml>
+    <numerals>Arabic</numerals>
+  </language>
+  <countries>
+    <country>
+      <iso>IT</iso>
+      <name>Italy</name>
+    </country>
+  </countries>
+  <format>
+    <versedParagraphs>false</versedParagraphs>
+  </format>
+  <names>
+    <name id="book-mat">
+      <abbr>Mt</abbr>
+      <short>Matteo</short>
+      <long>Vangelo secondo Matteo</long>
+    </name>
+    <name id="book-mrk">
+      <abbr>Mc</abbr>
+      <short>Marco</short>
+      <long>Vangelo secondo Marco</long>
+    </name>
+    <name id="book-luk">
+      <abbr>Lc</abbr>
+      <short>Luca</short>
+      <long>Vangelo secondo Luca</long>
+    </name>
+    <name id="book-jhn">
+      <abbr>Gv</abbr>
+      <short>Giovanni</short>
+      <long>Vangelo secondo Giovanni</long>
+    </name>
+    <name id="book-act">
+      <abbr>At</abbr>
+      <short>Atti</short>
+      <long>Atti degli Apostoli</long>
+    </name>
+    <name id="book-rom">
+      <abbr>Rm</abbr>
+      <short>Romani</short>
+      <long>Lettera ai Romani</long>
+    </name>
+    <name id="book-1co">
+      <abbr>1Cor</abbr>
+      <short>1 Corinzi</short>
+      <long>Prima Lettera ai Corinzi</long>
+    </name>
+    <name id="book-2co">
+      <abbr>2Cor</abbr>
+      <short>2 Corinzi</short>
+      <long>Seconda Lettera ai Corinzi</long>
+    </name>
+    <name id="book-gal">
+      <abbr>Gal</abbr>
+      <short>Galati</short>
+      <long>Lettera ai Galati</long>
+    </name>
+    <name id="book-eph">
+      <abbr>Ef</abbr>
+      <short>Efesini</short>
+      <long>Lettera agli Efesini</long>
+    </name>
+    <name id="book-php">
+      <abbr>Fil</abbr>
+      <short>Filippesi</short>
+      <long>Lettera ai Filippesi</long>
+    </name>
+    <name id="book-col">
+      <abbr>Col</abbr>
+      <short>Colossesi</short>
+      <long>Lettera ai Colossesi</long>
+    </name>
+    <name id="book-1th">
+      <abbr>1Ts</abbr>
+      <short>1 Tessalonicesi</short>
+      <long>Prima Lettera ai Tessalonicesi</long>
+    </name>
+    <name id="book-2th">
+      <abbr>2Ts</abbr>
+      <short>2 Tessalonicesi</short>
+      <long>Seconda Lettera ai Tessalonicesi</long>
+    </name>
+    <name id="book-1ti">
+      <abbr>1Tm</abbr>
+      <short>1 Timoteo</short>
+      <long>Prima Lettera a Timoteo</long>
+    </name>
+    <name id="book-2ti">
+      <abbr>2Tm</abbr>
+      <short>2 Timoteo</short>
+      <long>Seconda Lettera a Timoteo</long>
+    </name>
+    <name id="book-tit">
+      <abbr>Tt</abbr>
+      <short>Tito</short>
+      <long>Lettera a Tito</long>
+    </name>
+    <name id="book-phm">
+      <abbr>Fm</abbr>
+      <short>Filemone</short>
+      <long>Lettera a Filemone</long>
+    </name>
+    <name id="book-heb">
+      <abbr>Eb</abbr>
+      <short>Ebrei</short>
+      <long>Lettera agli Ebrei</long>
+    </name>
+    <name id="book-jas">
+      <abbr>Gc</abbr>
+      <short>Giacomo</short>
+      <long>Lettera di Giacomo</long>
+    </name>
+    <name id="book-1pe">
+      <abbr>1Pt</abbr>
+      <short>1 Pietro</short>
+      <long>Prima Lettera di Pietro</long>
+    </name>
+    <name id="book-2pe">
+      <abbr>2Pt</abbr>
+      <short>2 Pietro</short>
+      <long>Seconda Lettera di Pietro</long>
+    </name>
+    <name id="book-1jn">
+      <abbr>1Gv</abbr>
+      <short>1 Giovanni</short>
+      <long>Prima Lettera di Giovanni</long>
+    </name>
+    <name id="book-2jn">
+      <abbr>2Gv</abbr>
+      <short>2 Giovanni</short>
+      <long>Seconda Lettera di Giovanni</long>
+    </name>
+    <name id="book-3jn">
+      <abbr>3Gv</abbr>
+      <short>3 Giovanni</short>
+      <long>Terza Lettera di Giovanni</long>
+    </name>
+    <name id="book-jud">
+      <abbr>Gd</abbr>
+      <short>Giuda</short>
+      <long>Lettera di Giuda</long>
+    </name>
+    <name id="book-rev">
+      <abbr>Ap</abbr>
+      <short>Apocalisse</short>
+      <long>Apocalisse</long>
+    </name>
+  </names>
+  <manifest>
+    <container uri="release">
+      <container uri="USX_1">
+        <resource checksum="eccd1e8cf49b1153e6fd2fe4fe543eda" mimeType="application/xml" size="86831" uri="1CO.usx" />
+        <resource checksum="288bf597588501478722153ce0244f7e" mimeType="application/xml" size="20748" uri="1JN.usx" />
+        <resource checksum="f53d93d43552157981df531098cfd93a" mimeType="application/xml" size="22938" uri="1PE.usx" />
+        <resource checksum="a909f73bf85d7b299e4ed626c1b91df6" mimeType="application/xml" size="16965" uri="1TH.usx" />
+        <resource checksum="936daf859b5ccf2f6517346545c5559e" mimeType="application/xml" size="23016" uri="1TI.usx" />
+        <resource checksum="23eefd603c224a528032e55adf9d2e92" mimeType="application/xml" size="57259" uri="2CO.usx" />
+        <resource checksum="af8e6ce36c8b4bbbb1edb8134812a301" mimeType="application/xml" size="2930" uri="2JN.usx" />
+        <resource checksum="abc0db54b1560bb50f172611f006844c" mimeType="application/xml" size="14501" uri="2PE.usx" />
+        <resource checksum="6ea86e060ee971e17b00e25f5725cba2" mimeType="application/xml" size="9566" uri="2TH.usx" />
+        <resource checksum="a4524ec44ab025d19dffdec2fc9b20a8" mimeType="application/xml" size="16339" uri="2TI.usx" />
+        <resource checksum="fa4b69642a72a10f2f9354945c2d18a3" mimeType="application/xml" size="3249" uri="3JN.usx" />
+        <resource checksum="4bfc06801e5b5c2c23e21415621d1d82" mimeType="application/xml" size="188881" uri="ACT.usx" />
+        <resource checksum="e22876573b5b6234f0522f8aa276216f" mimeType="application/xml" size="19341" uri="COL.usx" />
+        <resource checksum="889d08c8e40e70c44a0baee4e837db7f" mimeType="application/xml" size="29683" uri="EPH.usx" />
+        <resource checksum="6a7e795e31cf2678527706161e1b5d14" mimeType="application/xml" size="32300" uri="GAL.usx" />
+        <resource checksum="5d9998e6380ff2f7aa12363e4c34ef0b" mimeType="application/xml" size="67669" uri="HEB.usx" />
+        <resource checksum="277512a5028d77eb22cf4a7308f3e9a3" mimeType="application/xml" size="21251" uri="JAS.usx" />
+        <resource checksum="24cd3b243f205d263743b656efd8c985" mimeType="application/xml" size="144045" uri="JHN.usx" />
+        <resource checksum="c1e9603cad157330e7c74cbd46f2185b" mimeType="application/xml" size="6516" uri="JUD.usx" />
+        <resource checksum="a5dc8689bb472b2830778a5fffcbf63a" mimeType="application/xml" size="205389" uri="LUK.usx" />
+        <resource checksum="39a8954df24dcc0c943cf3d5ea18e241" mimeType="application/xml" size="186780" uri="MAT.usx" />
+        <resource checksum="c027b0eec838acf5602ebe576609d4c4" mimeType="application/xml" size="121047" uri="MRK.usx" />
+        <resource checksum="37487e73190f175ce8708b25c4a981d7" mimeType="application/xml" size="4383" uri="PHM.usx" />
+        <resource checksum="18d9cbd73578cab98bc62232bcfba077" mimeType="application/xml" size="20891" uri="PHP.usx" />
+        <resource checksum="eae1af857c8166952670592f06113f16" mimeType="application/xml" size="87222" uri="REV.usx" />
+        <resource checksum="786f447c3da761fb9f9a4dba45296d9f" mimeType="application/xml" size="93743" uri="ROM.usx" />
+        <resource checksum="5de0c53aeb66e40deeb93dfc04695b26" mimeType="application/xml" size="9315" uri="TIT.usx" />
+      </container>
+      <resource checksum="95c54cb6c4c794b6817980f2e7c81783" mimeType="application/xml" size="3680" uri="ita_it.ldml" />
+      <resource checksum="0302357cf6ced8cc076efcae20e7168f" mimeType="application/xml" size="82190" uri="styles.xml" />
+      <resource checksum="101b5ce47792268dcce7da1e9a2b3b30" mimeType="text/plain" size="10121" uri="versification.vrs" />
+    </container>
+    <container uri="source">
+      <resource checksum="7ef99d3be3994cbb8df43eb5dce4c51a" mimeType="application/zip" size="1249993" uri="source.zip" />
+    </container>
+  </manifest>
+  <source>
+    <canonicalContent>
+      <book code="1CO" />
+      <book code="1JN" />
+      <book code="1PE" />
+      <book code="1TH" />
+      <book code="1TI" />
+      <book code="2CO" />
+      <book code="2JN" />
+      <book code="2PE" />
+      <book code="2TH" />
+      <book code="2TI" />
+      <book code="3JN" />
+      <book code="ACT" />
+      <book code="COL" />
+      <book code="EPH" />
+      <book code="GAL" />
+      <book code="HEB" />
+      <book code="JAS" />
+      <book code="JHN" />
+      <book code="JUD" />
+      <book code="LUK" />
+      <book code="MAT" />
+      <book code="MRK" />
+      <book code="PHM" />
+      <book code="PHP" />
+      <book code="REV" />
+      <book code="ROM" />
+      <book code="TIT" />
+    </canonicalContent>
+    <structure>
+      <content role="sourceZip" src="source/source.zip" />
+    </structure>
+  </source>
+  <publications>
+    <publication default="true" id="p1">
+      <nameLocal>La Parola è Vita</nameLocal>
+      <description>Protestant Living New Testament</description>
+      <descriptionLocal>Protestant Living New Testament</descriptionLocal>
+      <canonicalContent>
+        <book code="1CO" />
+        <book code="1JN" />
+        <book code="1PE" />
+        <book code="1TH" />
+        <book code="1TI" />
+        <book code="2CO" />
+        <book code="2JN" />
+        <book code="2PE" />
+        <book code="2TH" />
+        <book code="2TI" />
+        <book code="3JN" />
+        <book code="ACT" />
+        <book code="COL" />
+        <book code="EPH" />
+        <book code="GAL" />
+        <book code="HEB" />
+        <book code="JAS" />
+        <book code="JHN" />
+        <book code="JUD" />
+        <book code="LUK" />
+        <book code="MAT" />
+        <book code="MRK" />
+        <book code="PHM" />
+        <book code="PHP" />
+        <book code="REV" />
+        <book code="ROM" />
+        <book code="TIT" />
+      </canonicalContent>
+      <structure>
+        <content name="book-mat" role="MAT" src="release/USX_1/MAT.usx" />
+        <content name="book-mrk" role="MRK" src="release/USX_1/MRK.usx" />
+        <content name="book-luk" role="LUK" src="release/USX_1/LUK.usx" />
+        <content name="book-jhn" role="JHN" src="release/USX_1/JHN.usx" />
+        <content name="book-act" role="ACT" src="release/USX_1/ACT.usx" />
+        <content name="book-rom" role="ROM" src="release/USX_1/ROM.usx" />
+        <content name="book-1co" role="1CO" src="release/USX_1/1CO.usx" />
+        <content name="book-2co" role="2CO" src="release/USX_1/2CO.usx" />
+        <content name="book-gal" role="GAL" src="release/USX_1/GAL.usx" />
+        <content name="book-eph" role="EPH" src="release/USX_1/EPH.usx" />
+        <content name="book-php" role="PHP" src="release/USX_1/PHP.usx" />
+        <content name="book-col" role="COL" src="release/USX_1/COL.usx" />
+        <content name="book-1th" role="1TH" src="release/USX_1/1TH.usx" />
+        <content name="book-2th" role="2TH" src="release/USX_1/2TH.usx" />
+        <content name="book-1ti" role="1TI" src="release/USX_1/1TI.usx" />
+        <content name="book-2ti" role="2TI" src="release/USX_1/2TI.usx" />
+        <content name="book-tit" role="TIT" src="release/USX_1/TIT.usx" />
+        <content name="book-phm" role="PHM" src="release/USX_1/PHM.usx" />
+        <content name="book-heb" role="HEB" src="release/USX_1/HEB.usx" />
+        <content name="book-jas" role="JAS" src="release/USX_1/JAS.usx" />
+        <content name="book-1pe" role="1PE" src="release/USX_1/1PE.usx" />
+        <content name="book-2pe" role="2PE" src="release/USX_1/2PE.usx" />
+        <content name="book-1jn" role="1JN" src="release/USX_1/1JN.usx" />
+        <content name="book-2jn" role="2JN" src="release/USX_1/2JN.usx" />
+        <content name="book-3jn" role="3JN" src="release/USX_1/3JN.usx" />
+        <content name="book-jud" role="JUD" src="release/USX_1/JUD.usx" />
+        <content name="book-rev" role="REV" src="release/USX_1/REV.usx" />
+      </structure>
+    </publication>
+  </publications>
+  <copyright>
+    <fullStatement>
+      <statementContent type="xhtml">
+        <p>La Parola è Vita</p>
+        <p>(Italian Contemporary New Testament)</p>
+        <p>Copyright © 1981–1994 by Biblica, Inc.®</p>
+        <p>Used by permission of Biblica, Inc.® All rights reserved worldwide.</p>
+      </statementContent>
+    </fullStatement>
+  </copyright>
+  <promotion />
+  <archiveStatus>
+    <archivistName>Kent Spielmann</archivistName>
+    <dateArchived>2012-01-11T19:49:15.1937509+00:00</dateArchived>
+    <dateUpdated>2018-05-16T20:49:26.944079</dateUpdated>
+    <comments>Updated version</comments>
+  </archiveStatus>
+</DBLMetadata>

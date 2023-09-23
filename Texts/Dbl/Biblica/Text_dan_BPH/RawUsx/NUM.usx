@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="NUM" style="id">- Bibelen på hverdagsdansk (The Bible in Everyday Danish)</book>
+  <para style="rem">Copyright © 1985, 1992, 2005, 2013, 2015 by Biblica, Inc.®</para>
+  <para style="h">4. MOSEBOG</para>
+  <para style="toc1">Fjerde Mosebog</para>
+  <para style="toc2">4. Mosebog</para>
+  <para style="toc3">4.Mos.</para>
+  <para style="mt1">Fjerde Mosebog</para>
+  <para style="imt">Indledning</para>
+  <para style="ip">
+    <char style="bd">Forfatter og datering:</char> Se indledningen til Første Mosebog.</para>
+  <para style="ip">
+    <char style="bd">Indhold:</char> Bogen fortæller om israelitternes rejse fra Sinaibjerget, hvor de modtog lovens ord, til Moabs sletter øst for Jordanfloden på grænsen til Kana’ans land. Denne strækning kunne være tilbagelagt på under et år, men tog faktisk 38 år på grund af folkets vantro og ulydighed imod Gud. Da folket i første omgang fik ordre til at gå ind i landet (<char style="xt">kap. <ref loc="NUM 13-14">13–14</ref></char>), turde de ikke—og derfor måtte de fortsætte deres ørkenvandring, indtil hele den ulydige generation var uddød. Det blev deres børn, som under Josvas og Kalebs ledelse indtog landet (<char style="xt"><ref loc="JOS 1-12">Jos. 1–12</ref></char>).</para>
+  <para style="ip">
+    <char style="bd">Budskab:</char> Bogen er en beretning om Guds vrede over sit folks oprørskhed—men også om hans barmhjertighed og om hans trofasthed over for sine løfter. Den Gud, der sluttede pagt med Abraham (1. Mosebog), og som befriede hans efterkommere fra slaveriet i Egypten og gjorde dem til sit ejendomsfolk (2. Mosebog), som åbenbarede sin hellighed og viste dem vejen til fællesskab med ham (3. Mosebog), var også en Gud, som straffede synd, men som alligevel velsignede sit folk på ny. Beretningen om Bileam (<char style="xt">kap. <ref loc="NUM 23-24">23–24</ref></char>) er et eksempel på dette.</para>
+  <para style="ip">I det Ny Testamente henvises der til israelitternes ørkenvandring som et advarende eksempel på konsekvensen af at være ulydig mod Gud (f.eks. <char style="xt"><ref loc="HEB 3:7-9">Hebr. 3,7-9</ref> og <ref loc="HEB 4:8-11">4,8-11</ref></char>).</para>
+  <chapter number="1" style="c"/>
+  <para style="s1">Israels første folketælling</para>
+  <para style="p">
+    <verse number="1" style="v"/>På den første dag i den anden måned<note caller="+" style="f"><char style="fr" closed="false">1,1 </char><char style="ft" closed="false">Den anden måned svarer til april-maj.</char></note> året efter, at israelitterne havde forladt Egypten, talte Herren til Moses i åbenbaringsteltet, mens folket opholdt sig i Sinais ørken.</para>
+  <para style="p">Herren sagde: <verse number="2-4" style="v"/>„Lav en liste over alle våbenføre mænd over 20 år med deres stamme- og slægtsnavne. Du og Aron skal være ansvarlige for optællingen, som skal uddelegeres til en leder fra hver enkelt stamme. <verse number="5" style="v"/>Følgende ledere skal hjælpe jer: fra Rubens stamme: Elitzur, Shedeurs søn; <verse number="6" style="v"/>fra Simeons stamme: Shelumiel, Zurishaddajs søn; <verse number="7" style="v"/>fra Judas stamme: Nahshon, Amminadabs søn; <verse number="8" style="v"/>fra Issakars stamme: Netanel, Suars søn; <verse number="9" style="v"/>fra Zebulons stamme: Eliab, Helons søn; <verse number="10" style="v"/>fra Efraims, Josefs søns, stamme: Elishama, Ammihuds søn; fra Manasses, Josefs søns, stamme: Gamliel, Pedasurs søn; <verse number="11" style="v"/>fra Benjamins stamme: Abidan, Gidonis søn; <verse number="12" style="v"/>fra Dans stamme: Ahiezer, Ammishaddajs søn; <verse number="13" style="v"/>fra Ashers stamme: Pagiel, Okrans søn; <verse number="14" style="v"/>fra Gads stamme: Eljasaf, Deuels søn; <verse number="15" style="v"/>fra Naftalis stamme: Ahira, Enans søn.” <verse number="16" style="v"/>Disse mænd var ledere blandt folket, overhoveder for hver deres slægt.</para>
+  <para style="p">
+    <verse number="17-46" style="v"/>Samme dag sammenkaldte Moses, Aron og de ovennævnte ledere samtlige våbenføre mænd i Israel over 20 år. Hver person fik besked på at oplyse sit stamme- og slægtsnavn, sådan som Herren havde befalet Moses. Her følger den samlede opgørelse: Jakobs førstefødte søns, Rubens, stamme: 46.500; Simeons stamme: 59.300; Gads stamme: 45.650; Judas stamme: 74.600; Issakars stamme: 54.400; Zebulons stamme: 57.400; Efraims, Josefs søns, stamme: 40.500; Manasses, Josefs søns, stamme: 32.200; Benjamins stamme: 35.400; Dans stamme: 62.700; Ashers stamme: 41.500; Naftalis stamme: 53.400. Det samlede antal våbenføre mænd udgjorde 603.550 personer.</para>
+  <para style="p">
+    <verse number="47-49" style="v"/>Dette tal indbefatter dog ikke levitterne, for Herren havde sagt til Moses: „Du må ikke bruge levitterne som soldater, og du skal ikke tage dem med på listen. <verse number="50" style="v"/>Jeg har nemlig givet dem ansvar for at tage sig af min bolig, det hellige telt, som indeholder pagtens ark. Derfor skal de altid have deres lejr i nærheden af boligen. <verse number="51" style="v"/>Det er levitternes opgave at pakke teltet sammen og rejse det igen, og hvis nogen andre blander sig i den opgave eller blot rører ved teltet, skal de henrettes. <verse number="52" style="v"/>Resten af Israels stammer skal tildeles hver deres lejrplads med hver deres banner, <verse number="53" style="v"/>men levitterne skal slå lejr rundt om teltet med pagtens ark, så de udgør en mur mellem folket og Herren, for at ingen af de menige israelitter skal komme til at røre ved teltet og rammes af Herrens vrede.”</para>
+  <para style="p">
+    <verse number="54" style="v"/>Israels folk fulgte omhyggeligt de befalinger, som Herren havde givet Moses.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Stammerne får tildelt deres områder i lejren</para>
+  <para style="p">
+    <verse number="1" style="v"/>Derpå sagde Herren til Moses og Aron: <verse number="2" style="v"/>„Hver enkelt stamme skal tildeles deres eget område i lejren, og det skal markeres med deres stammes banner. Deres lejre skal ligge i en kreds rundt om åbenbaringsteltet.</para>
+  <para style="p">
+    <verse number="3-9" style="v"/>På teltets østside skal Judas stamme stå i spidsen for en hærafdeling. Foruden de 74.600 våbenføre mænd fra Judas stamme under ledelse af Nahshon er der Issakars stamme med 54.400 våbenføre mænd under ledelse af Netanel og Zebulons stamme med 57.400 våbenføre mænd under ledelse af Eliab. Det samlede antal våbenføre mænd i Judas hærafdeling er således 186.400. Disse tre stammer skal gå forrest, hver gang israelitterne bryder op og drager af sted til næste lejrplads.</para>
+  <para style="p">
+    <verse number="10-16" style="v"/>På teltets sydside skal Rubens stamme stå i spidsen for en hærafdeling: Foruden Rubens stamme med dens 46.500 våbenføre mænd under ledelse af Elitzur er der Simeons stamme med 59.300 våbenføre mænd under ledelse af Shelumiel og Gads stamme med 45.650 våbenføre mænd under ledelse af Eljasaf. Det samlede antal våbenføre mænd i Rubens hærafdeling er således 151.450. Disse tre stammer skal følge efter Judas hærafdeling, hver gang israelitterne bryder op og drager af sted til næste lejrplads.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Derefter skal levitterne bryde op med deres egne telte og med åbenbaringsteltet, så de hele tiden holder sig i midten. De skal følge denne orden, når de bryder op, og når de slår lejr igen, hver hærafdeling med sit eget banner.</para>
+  <para style="p">
+    <verse number="18-24" style="v"/>På teltets vestside skal Efraims stamme stå i spidsen for en hærafdeling. Foruden Efraims stamme med dens 40.500 våbenføre mænd under ledelse af Elishama er der Manasses stamme med 32.200 våbenføre mænd under ledelse af Gamliel og Benjamins stamme med 35.400 våbenføre mænd under ledelse af Abidan. Det samlede antal våbenføre mænd i Efraims hærafdeling er således 108.100. Disse tre stammer skal følge efter Rubens hærafdeling, hver gang israelitterne bryder op og drager af sted til næste lejrplads.</para>
+  <para style="p">
+    <verse number="25-31" style="v"/>På teltets nordside skal Dans stamme stå i spidsen for en hærafdeling. Foruden Dans stamme med dens 62.700 våbenføre mænd under ledelse af Ahiezer er der Ashers stamme med 41.500 våbenføre mænd under ledelse af Pagiel og Naftalis stamme med 53.400 våbenføre mænd under ledelse af Ahira. Det samlede antal våbenføre mænd i Dans hærafdeling er således 157.600. Disse tre stammer skal danne bagtrop, hver gang israelitterne bryder op og drager af sted til næste lejrplads.”</para>
+  <para style="p">
+    <verse number="32-33" style="v"/>I alt udgjorde den israelitiske hær altså 603.550 våbenføre mænd foruden levitterne, der ifølge Herrens befaling til Moses var fritaget for værnepligt. <verse number="34" style="v"/>Og israelitterne fulgte omhyggeligt de befalinger, som Herren havde givet Moses, så de brød op i den angivne rækkefølge og slog lejr på deres tildelte områder under deres respektive stammefaner.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Levis stamme</para>
+  <para style="p">
+    <verse number="1" style="v"/>Dengang Herren talte til Moses på Sinaibjerget, <verse number="2" style="v"/>havde Aron følgende sønner: Nadab (den førstefødte), Abihu, Eleazar og Itamar. <verse number="3" style="v"/>Moses salvede og indsatte dem alle til at gøre tjeneste som præster for Herren. <verse number="4" style="v"/>Men Nadab og Abihu døde i Sinai ørken, for Herren straffede dem, da de forsøgte at bringe et forkert røgelsesoffer. De havde ingen børn, så Eleazar og Itamar var derefter alene om at gøre præstetjeneste under deres fars opsyn.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Da sagde Herren til Moses: <verse number="6" style="v"/>„Kald Levis stamme sammen og lad dem træde frem for Aron. <verse number="7-9" style="v"/>Levitterne skal efter Arons anvisninger hjælpe præsterne med at udføre deres forskellige pligter i åbenbaringsteltet på Israels folks vegne; for disse mænd er udpeget til at repræsentere hele folket, og de har ansvaret for boligens inventar og vedligeholdelse. <verse number="10" style="v"/>Men kun Aron og hans sønner må udføre præstetjeneste. Hvis nogen lægmand trænger ind i helligdommen, skal han henrettes.”</para>
+  <para style="p">
+    <verse number="11-13" style="v"/>Og Herren fortsatte: „Dengang jeg dræbte egypternes førstefødte sønner, var det på betingelse af, at alle Israels førstefødte sønner og dyr skulle tilhøre mig. Jeres førstefødte sønner skulle blive min ejendom og tjene mig. Men nu vil jeg acceptere levitterne som erstatning, således at det i stedet bliver dem, der skal tilhøre mig og tjene mig.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>Senere talte Herren igen til Moses i Sinai ørken. <verse number="15" style="v"/>„Nu skal du optælle Levis stamme,” sagde han. „Lav et slægtsregister over samtlige mandspersoner, der er over en måned gamle.” <verse number="16" style="v"/>Moses begyndte straks på den opgave, Herren havde givet ham.</para>
+  <para style="p">
+    <verse number="17-20" style="v"/>Levi havde tre sønner: Gershon, Kehat og Merari, som blev stamfædre til de slægter blandt levitterne, der bærer deres navne. Gershon havde to sønner: Libni og Shimi; Kehat havde fire sønner: Amram, Jitzhar, Hebron og Uzziel; Merari havde to sønner: Mahli og Mushi.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Gershons slægt gennem sønnerne Libni og Shimi <verse number="22" style="v"/>blev optalt til 7500 mandspersoner over en måned gamle, <verse number="23" style="v"/>og de skulle slå lejr bag ved boligen, på vestsiden. <verse number="24" style="v"/>Den øverste for Gershon-slægten var Laels søn Eljasaf. <verse number="25" style="v"/>Denne slægts ansvarsområde var boligens teltduge, presenninger og indgangsforhæng, <verse number="26" style="v"/>forgårdens teltduge, der indhegnede åbenbaringsteltet og brændofferalteret og forhænget foran indgangen til forgården. De havde også ansvar for de snore, der hørte til.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Kehats slægt gennem sønnerne Amram, Jitzhar, Hebron og Uzziel <verse number="28" style="v"/>blev optalt til 8600<note caller="+" style="f"><char style="fr" closed="false">3,28 </char><char style="ft" closed="false">Sikkert en fejlskrivning for 8300, som der står i nogle af de græske håndskrifter. Ellers passer sammentællingen i vers 39 ikke.</char></note> mandspersoner over en måned gamle, <verse number="29" style="v"/>og de skulle slå lejr ved boligens sydside. <verse number="30" style="v"/>Lederen af denne slægt var Elitzafan, søn af Uzziel. <verse number="31" style="v"/>De var ansvarlige for pagtens ark, bordet med brødene, lysestagen, altrene, de forskellige redskaber, der blev brugt i helligdommen, samt for forhænget i helligdommen. Alt det praktiske arbejde vedrørende disse ting var deres ansvar.</para>
+  <para style="p">
+    <verse number="32" style="v"/>Præsten Eleazar, Arons søn, fik overopsynet med levitterne. Det blev hans opgave at føre tilsyn med dem, der arbejdede i helligdommen.</para>
+  <para style="p">
+    <verse number="33" style="v"/>Meraris slægt gennem sønnerne Mahli og Mushit <verse number="34" style="v"/>blev optalt til 6200 mandspersoner over en måned gamle, <verse number="35" style="v"/>og de skulle slå lejr ved boligens nordside. Lederen af denne slægt var Zuriel, søn af Abihajil. <verse number="36" style="v"/>De var ansvarlige for boligens vægmoduler, tværstænger, stolper, sokler og det værktøj, der blev brugt under monteringen, <verse number="37" style="v"/>forgårdens stolper og sokler, samt alle pløkker og barduner.</para>
+  <para style="p">
+    <verse number="38" style="v"/>På østsiden af åbenbaringsteltet, ud for indgangen, skulle Moses, Aron og Arons sønner slå deres telte op, for de havde overopsynet med al tjenesten i helligdommen, hvor de repræsenterede folket. Og hvis nogen lægmand trængte ind i helligdommen, skulle han henrettes.</para>
+  <para style="p">
+    <verse number="39" style="v"/>Optællingen af levitterne, som Moses og Aron på Herrens befaling udførte, resulterede i en liste med 22.000 mandspersoner over en måned gamle.</para>
+  <para style="p">
+    <verse number="40" style="v"/>Da sagde Herren til Moses: „Optæl nu hvor mange førstefødte sønner blandt hele Israels folk, der er over en måned gamle. <verse number="41" style="v"/>Alle Israels førstefødte sønner og det førstefødte blandt jeres husdyr tilhører jo mig, men i stedet for kan I give mig levitterne, og alle levitternes husdyr skal tilhøre mig som erstatning for de førstefødte blandt resten af folkets husdyr.”</para>
+  <para style="p">
+    <verse number="42-43" style="v"/>Så gjorde Moses, som Herren havde befalet. Han optalte alle folkets førstefødte sønner, der var over en måned gamle, og det samlede antal viste sig at være 22.273.</para>
+  <para style="p">
+    <verse number="44" style="v"/>Derefter sagde Herren til Moses: <verse number="45" style="v"/>„Giv mig levitterne i stedet for disse førstefødte sønner, og levitternes dyr i stedet for folkets førstefødte dyr, for jeg er Herren. <verse number="46-48" style="v"/>Da antallet af de førstefødte sønner overstiger levitternes antal med 273, skal du løskøbe de 273 overskydende sønner ved at betale fem shekel<note caller="+" style="f"><char style="fr" closed="false">3,46-48 </char><char style="ft" closed="false">En shekel menes at være godt 11 gram på dette tidspunkt, men vægten varierede en del gennem tiden.</char></note> sølv for hver af dem. Sølvstykkerne skal gives til Aron og hans sønner, og de skal vejes efter den standardvægt, der bruges i helligdommen.”</para>
+  <para style="p">
+    <verse number="49" style="v"/>Så indsamlede Moses løsesummen for de overskydende 273 førstefødte sønner. De øvrige 22.000 førstefødte sønner var allerede købt fri ved, at alle de levitiske mænd blev indviet til Herren i deres sted. <verse number="50" style="v"/>Den samlede løsesum blev således 1365 shekel sølv. <verse number="51" style="v"/>Og Moses gav pengene til Aron og hans sønner, sådan som Herren havde befalet ham.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Levitternes arbejde med åbenbaringsteltet</para>
+  <para style="p">
+    <verse number="1" style="v"/>Da sagde Herren til Moses og Aron: <verse number="2-3" style="v"/>„Optæl hvor mange mandlige efterkommere af Levis søn Kehat, der er mellem 30 og 50 år. Det er dem, der skal arbejde i åbenbaringsteltet <verse number="4" style="v"/>med de helligste ting:</para>
+  <para style="p">
+    <verse number="5" style="v"/>Hver gang I er klar til at pakke lejren sammen, skal Aron og hans sønner først gå ind i helligdommen og tage forhænget mellem det hellige og det allerhelligste rum ned og lægge det over pagtens ark. <verse number="6" style="v"/>Oven på det skal de lægge et kraftigt stykke læder, som igen skal dækkes med purpurfarvet klæde, før de anbringer bærestængerne i guldringene.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Dernæst skal de brede et purpurfarvet klæde ud over bordet med de hellige brød og anbringe de forskellige fade, skåle og kander, der bruges ved drikofrene, oven på klædet sammen med de brød, der altid ligger fremme. <verse number="8" style="v"/>Ovenpå igen skal de brede et skarlagenrødt klæde og et kraftigt stykke læder, før de anbringer bærestængerne i bordets guldringe.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Lysestagen, lamperne, vægesaksene, vægebakkerne og beholderne til olivenolie skal anbringes på bærestativet, hvorefter de dækkes med et purpurfarvet klæde <verse number="10" style="v"/>og derefter med et stykke kraftigt læder.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Så skal de brede et purpurfarvet klæde over røgelsesalteret af guld, dække det med et kraftigt stykke læder og anbringe bærestængerne i alterets guldringe. <verse number="12" style="v"/>Alle de øvrige redskaber, der bruges i helligdommen, skal dækkes med purpurfarvet klæde og kraftigt læder, før de anbringes på bærestativet.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Brændofferalteret skal også dækkes til med et purpurfarvet klæde, men først skal asken fjernes. <verse number="14" style="v"/>Alle redskaber, der bruges ved ofringen, skal lægges oven på klædet—både bakker til gløder, kødgafler, skovle og skåle—hvorefter det hele skal dækkes til med kraftigt læder. Til sidst skal bærestængerne anbringes i ringene.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Når Aron og hans sønner har pakket helligdommens inventar og redskaber sammen, skal kehatitterne træde til og bære det hele til næste lejrplads. Men hvis de rører disse hellige ting, skal de dø. Det er altså kehatitternes opgave at bære helligdommens inventar.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Arons søn Eleazar er ansvarlig for lampeolien, den hellige røgelse, det daglige afgrødeoffer og salveolien—ja, han skal have overopsynet med åbenbaringsteltet og alt dets inventar og de hellige redskaber.”</para>
+  <para style="p">
+    <verse number="17" style="v"/>Dernæst sagde Herren til Moses og Aron: <verse number="18" style="v"/>„I må passe på, at kehatitterne ikke mister livet. <verse number="19" style="v"/>I skal nøje overholde de forskrifter, jeg her har givet, så de ikke dør under udførelsen af deres opgave. Det er Aron og hans sønner, der skal fortælle kehatitterne, hvad de hver især skal bære. <verse number="20" style="v"/>Men kehatitterne må først komme ind i helligdommen, efter at det hele er pakket ned, for hvis de ser de hellige ting, skal de dø.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>Herren sagde nu til Moses: <verse number="22-23" style="v"/>„Optæl hvor mange mandlige efterkommere af Levis søn Gershon, der er mellem 30 og 50 år. De skal også arbejde ved åbenbaringsteltet. <verse number="24-25" style="v"/>Det er deres opgave at transportere boligens teltduge, de to tagdækninger af vædderskind og kraftigt læder samt indgangsforhænget. <verse number="26" style="v"/>Derudover har de til opgave at transportere forgårdens teltvægge og forhænget over indgangen til forgården, som indhegner helligdommen og brændofferalteret. Endelig skal de også transportere diverse snore og værktøj, der bruges ved arbejdet. <verse number="27" style="v"/>Aron og hans sønner skal uddelegere arbejdet blandt gershonitterne, <verse number="28" style="v"/>og gershonitterne skal stå til regnskab for deres arbejde over for Arons søn Itamar.</para>
+  <para style="p">
+    <verse number="29-30" style="v"/>Optæl hvor mange mandlige efterkommere af Levis søn Merari, der er mellem 30 og 50 år. De skal også arbejde ved åbenbaringsteltet. <verse number="31" style="v"/>Efter at teltet er pakket sammen, er det deres opgave at afmontere og transportere helligdommens vægmoduler, tværstænger, stolper og sokler, <verse number="32" style="v"/>forgårdens stolper og sokler, samt alle pløkker og barduner—og alt det værktøj, der bruges under arbejdet. Enhver skal være helt klar over, hvori deres opgave består, <verse number="33" style="v"/>så arbejdet kan gå hurtigt; og Arons søn Itamar skal have overopsynet med det.”</para>
+  <para style="p">
+    <verse number="34-37" style="v"/>På Herrens befaling foretog Moses og Aron og folkets ledere så en optælling af levitterne. Først lavede de en liste over Kehats slægt, familie for familie, over alle mænd, der var mellem 30 og 50 år, og som havde pligt til at arbejde ved åbenbaringsteltet. Det samlede antal var 2750. <verse number="38-41" style="v"/>En tilsvarende optælling over Gershons slægt blev til 2630, <verse number="42-45" style="v"/>og over Meraris slægt 3200. <verse number="46-48" style="v"/>Det samlede antal mænd mellem 30 og 50 år, der havde pligt til at arbejde ved åbenbaringsteltet, var 8580. <verse number="49" style="v"/>Aron mønstrede alle disse mænd og forklarede dem deres opgaver, sådan som Herren havde befalet gennem Moses.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Lejren skal være hellig</para>
+  <para style="p">
+    <verse number="1" style="v"/>Herren sagde til Moses: <verse number="2" style="v"/>„Giv Israels folk ordre til at sende alle, der lider af smittefarlige hudsygdomme, ud af lejren. Desuden skal alle, der har udflåd eller har været i berøring med lig, udelukkes fra at opholde sig i lejren, for den slags personer er urene. <verse number="3" style="v"/>Denne ordning gælder for både mænd og kvinder. I skal udelukke disse mennesker, så de ikke besmitter lejren, hvor jeg har taget bolig.” <verse number="4" style="v"/>Israelitterne gjorde straks, som Herren havde befalet Moses: alle de urene blev sendt uden for lejren.</para>
+  <para style="s1">Erstatningspligt og offergaver</para>
+  <para style="p">
+    <verse number="5" style="v"/>Da sagde Herren til Moses: <verse number="6" style="v"/>„Sig til Israels folk, at hvis en mand eller en kvinde svigter mig ved at begå en synd og dermed pådrager sig skyld, <verse number="7" style="v"/>skal de bekende den synd, de har begået. Hvis synden drejer sig om materielle værdier, skal den forurettede have erstatning med et tillæg på 20 procent. <verse number="8" style="v"/>Men hvis den forurettede er død, og der ikke er nogen slægtning til at modtage erstatning, skal betalingen tilfalde præsten sammen med den vædder, som bringes til soning for synden. <verse number="9-10" style="v"/>Ligeledes tilfalder alle særlige offergaver præsten.”</para>
+  <para style="s1">Kvinder, der mistænkes for utroskab</para>
+  <para style="p">
+    <verse number="11" style="v"/>Herren sagde til Moses: <verse number="12-14" style="v"/>„Sig til Israels folk, at hvis en mand har mistanke om, at hans kone har været ham utro, så han er jaloux, men der ikke findes vidner eller klare beviser, <verse number="15" style="v"/>skal manden føre sin kone til præsten, og han skal medbringe et offer på et kilo rent bygmel, men ingen olivenolie eller røgelse. Det skal være et jalousioffer—dvs. mandens anmodning til Herren om, at sandheden må komme frem i lyset. <verse number="16" style="v"/>Derpå skal præsten fremstille den mistænkte kvinde for Herren, <verse number="17" style="v"/>mens han hælder indviet vand i en lerskål og rører lidt støv fra boligens gulv i vandet. <verse number="18" style="v"/>Så skal han tage hendes hovedbeklædning væk og lægge jalousiofferet i hendes hænder, for at det kan blive afgjort, om der er baggrund for mandens mistanke. Imens skal præsten stille sig foran hende med krukken, der indeholder den bitre forbandelses vand. <verse number="19" style="v"/>Da skal han sige til hende: ‚Hvis du ikke har haft seksuel omgang med andre end din mand, skal du fritages for den forbandelse, der ligger i dette vand. <verse number="20" style="v"/>Men hvis du har vendt dig fra din mand og gjort dig selv uren ved en anden mand, <verse number="21-22" style="v"/>vil Herren forbande dig midt iblandt dit folk, og vandet vil få din livmoder til at svulme op, og du vil ikke kunne få børn.’ Da skal kvinden svare: ‚Lad denne forbandelse ramme mig, hvis jeg er skyldig.’ <verse number="23" style="v"/>Præsten skal skrive forbandelsen på et stykke læder, hvorefter han skal vaske den skrevne forbandelse af i det bitre vand, <verse number="24" style="v"/>så når hun drikker vandet, vil hun samtidig drikke sig en forbandelse til. <verse number="25" style="v"/>Præsten skal nu tage jalousiofferet ud af hendes hænder, svinge det for Herrens ansigt og bringe det hen til alteret. <verse number="26" style="v"/>Så skal han tage en håndfuld af dette offer og hælde det på alterets ild som et røgoffer, hvorefter kvinden skal drikke vandet. <verse number="27" style="v"/>Hvis hun virkelig har gjort sig selv uren og har været sin mand utro, skal forbandelsesvandet blive bittert i hende, så hendes livmoder svulmer op, og hun ikke længere kan få børn—og man skal bruge hendes navn som en forbandelse. <verse number="28" style="v"/>Men hvis hun er uskyldig og ikke har været manden utro, vil der ikke ske hende noget—og hun vil fortsat være i stand til at få børn.</para>
+  <para style="p">
+    <verse number="29-30" style="v"/>Det er de forskrifter, der skal følges, når en mand mistænker sin kone for utroskab—og ved at følge dem vil det blive afgjort, hvem der har ret. Manden skal føre sin kone frem for Herren, og præsten skal handle efter ovennævnte forskrifter. <verse number="31" style="v"/>Men hvis forbandelsen rammer hende, er manden uden skyld—for kvinden har fået den straf, hun har fortjent.”</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Forskrifter for naziræerne</para>
+  <para style="p">
+    <verse number="1" style="v"/>Herren sagde til Moses: <verse number="2" style="v"/>„Sig til Israels folk, at hvis en mand eller en kvinde aflægger naziræerløftet og således indvier sig til Herren på en særlig måde, <verse number="3-4" style="v"/>må de, så længe de er bundet af deres løfte, hverken drikke øl eller vin—ikke engang druesaft—og de må heller ikke spise druer eller rosiner. De må ikke nyde noget, der har med vindruer at gøre—ikke engang kernerne eller skrællerne.</para>
+  <para style="p">
+    <verse number="5" style="v"/>I den periode løftet gælder, må de ikke lade deres hår klippe, for de er helliget og indviet til Herren. Derfor skal de lade håret vokse.</para>
+  <para style="p">
+    <verse number="6-7" style="v"/>I den periode løftet gælder, må de ikke komme i nærheden af lig—heller ikke, hvis det drejer sig om deres forældre eller søskende, for de er indviet til Gud på en særlig måde— <verse number="8" style="v"/>de er naziræere og helliget Herren. <verse number="9" style="v"/>Men hvis nogen falder død om, så de ikke kan undgå at røre ved den døde, så de bliver urene, skal de være urene i syv dage og derefter lade deres hår klippe af. Da vil de være renset for deres urenhed. <verse number="10" style="v"/>Næste dag skal de så bringe to turtelduer eller to unge duer til præsten ved åbenbaringsteltets indgang, <verse number="11" style="v"/>og præsten skal ofre den ene due som syndoffer og den anden som brændoffer, så der skaffes soning for deres urenhed. Først da kan de aflægge løfte på ny og lade håret vokse igen. <verse number="12" style="v"/>Den del af løftet, som blev opfyldt, før de blev urene, tæller ikke længere. Nej, de må begynde forfra og aflægge et nyt løfte. Samtidig skal de ofre et etårs vædderlam som skyldoffer.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Når de har opfyldt deres naziræerløfte, og indvielsestiden er udløbet, skal de gå hen til åbenbaringsteltets indgang <verse number="14" style="v"/>og ofre et etårs vædderlam uden skavanker som brændoffer til Herren. De skal desuden ofre et tilsvarende gimmerlam som syndoffer, et takoffer bestående af en vædder uden skavanker, <verse number="15" style="v"/>en kurv med usyrnede brød, dels ringbrød lavet af fint mel blandet med olivenolie, dels fladbrød penslet med olivenolie, samt de sædvanlige afgrøde- og drikofre. <verse number="16" style="v"/>Da skal præsten bringe ofrene til Herren i denne rækkefølge: syndofferet først, så brændofferet <verse number="17" style="v"/>og takoffervædderen sammen med de usyrnede brød—og endelig afgrødeofferet og drikofferet.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Derefter skal naziræerne ved åbenbaringsteltets indgang klippe deres hår, for det lange hår var tegnet på, at de havde indviet sig på en særlig måde til Herren, og de skal ofre håret på alteret sammen med takofferet. <verse number="19" style="v"/>Efter at de har klippet håret af, skal præsten tage vædderens kogte bov, et usyrnet ringbrød og et usyrnet fladbrød fra kurven og lægge disse ting i deres hænder. <verse number="20" style="v"/>Så skal præsten svinge det foran Herrens alter som et offer til Herren. Denne del af offeret tilfalder præsten sammen med bryststykket og låret, der blev svunget foran Herrens alter. Derefter kan naziræerne drikke vin igen, for de er løst fra deres løfte.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Det er forskrifterne for naziræerløftet og de påkrævede ofre, efter at løftet er opfyldt. Ud over disse ofre skal de naturligvis bringe de ofre, de eventuelt måtte have lovet Herren, da de aflagde deres naziræerløfte.”</para>
+  <para style="s1">Den aronitiske velsignelse</para>
+  <para style="p">
+    <verse number="22" style="v"/>Herren sagde til Moses: <verse number="23" style="v"/>„Sig til Aron og hans sønner, at de skal velsigne Israels folk på følgende måde: <verse number="24-26" style="v"/>Herren velsigne dig og bevare dig. Herren våge over dig og være dig nådig. Herren være dig nær og give dig fred. <verse number="27" style="v"/>Aron og hans sønner skal med denne velsignelse stemple mit navn på Israels folk—og jeg vil velsigne dem.”</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Stammeledernes gaver ved indvielsen af åbenbaringsteltet</para>
+  <para style="p">
+    <verse number="1" style="v"/>Så snart Moses havde rejst boligen, salvede og indviede han både den og inventaret, alteret og alle redskaberne. <verse number="2" style="v"/>Derefter kom Israels 12 stammeoverhoveder, dem der havde haft ansvaret for folketællingen, med deres offergaver: <verse number="3" style="v"/>Seks overdækkede vogne, som hver blev trukket af to okser, altså en vogn for hver to ledere og en okse for hver leder. Alle disse offergaver bragte de til Herren ved boligens indgang.</para>
+  <para style="p">
+    <verse number="4-5" style="v"/>„Tag imod deres gaver,” sagde Herren til Moses, „og brug vognene i forbindelse med arbejdet ved åbenbaringsteltet. Giv dem til levitterne svarende til deres behov.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Så overdrog Moses vognene og okserne til levitterne, <verse number="7" style="v"/>således at gershonitterne fik to vogne og fire okser, <verse number="8" style="v"/>og meraritterne fik fire vogne og otte okser. De arbejdede alle under Arons søn Itamar. <verse number="9" style="v"/>Kehatitterne fik imidlertid ingen vogne eller okser, for de skulle personligt bære de allerhelligste ting fra boligen på deres skuldre.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Den dag alteret blev indviet, bragte lederne også gaver, som skulle ofres på alteret. <verse number="11" style="v"/>Da sagde Herren til Moses: „Sørg for, at lederne bringer deres gaver på skift, så der ofres én gave hver dag til indvielse af alteret.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Den første dag bragte Nahshon fra Judas stamme sin gave. <verse number="13" style="v"/>Gaven bestod af et sølvfad der vejede ca. 1,5 kilo, og en sølvskål der vejede ca. 800 gram. Begge var fyldt med et afgrødeoffer, der bestod af fint mel blandet med olivenolie. <verse number="14" style="v"/>Desuden bragte han en guldtallerken, der vejede 115 gram, fyldt med røgelse, <verse number="15" style="v"/>og brændofre der bestod af en ung tyr, en vædder og et etårs lam. <verse number="16" style="v"/>Som syndoffer bragte han en gedebuk, <verse number="17" style="v"/>og som takoffer bragte han to tyre, fem væddere, fem gedebukke og fem etårs lam.</para>
+  <para style="p">
+    <verse number="18-23" style="v"/>Næste dag bragte Netanel fra Issakars stamme sine offergaver. Det var nøjagtig det samme, som Nahshon havde bragt dagen før.</para>
+  <para style="p">
+    <verse number="24-29" style="v"/>På den tredje dag bragte Eliab fra Zebulons stamme sine offergaver. Det var også nøjagtig de samme gaver.</para>
+  <para style="p">
+    <verse number="30-35" style="v"/>På den fjerde dag bragte Elitzur fra Rubens stamme sine offergaver, igen det samme som de andre.</para>
+  <para style="p">
+    <verse number="36-41" style="v"/>På den femte dag bragte Shelumiel fra Simeons stamme sine gaver, magen til de andres.</para>
+  <para style="p">
+    <verse number="42-47" style="v"/>På den sjette dag bragte Eljasaf fra Gads stamme sine gaver, magen til de andres.</para>
+  <para style="p">
+    <verse number="48-53" style="v"/>På den syvende dag bragte Elishama fra Efraims stamme sine gaver, magen til de andres.</para>
+  <para style="p">
+    <verse number="54-59" style="v"/>På den ottende dag bragte Gamliel fra Manasses stamme sine gaver, magen til de andres.</para>
+  <para style="p">
+    <verse number="60-65" style="v"/>På den niende dag bragte Abidan fra Benjamins stamme sine gaver, magen til de andres.</para>
+  <para style="p">
+    <verse number="66-71" style="v"/>På den tiende dag bragte Ahiezer fra Dans stamme sine gaver, magen til de andres.</para>
+  <para style="p">
+    <verse number="72-77" style="v"/>På den 11. dag bragte Pagiel fra Ashers stamme sine gaver, magen til de andres.</para>
+  <para style="p">
+    <verse number="78-83" style="v"/>På den 12. dag bragte Ahira fra Naftalis stamme sine gaver, magen til de andres.</para>
+  <para style="p">
+    <verse number="84-86" style="v"/>Den gave, som folkets stammeledere bragte til alterindvielsen, udgjorde altså tilsammen: Tolv sølvfade, der hver vejede ca. 1,5 kilo; 12 sølvskåle, der hver vejede ca. 800 gram; 12 guldtallerkener, der hver vejede 115 gram. Sølvets samlede vægt var ca. 28 kilo, og guldets vægt var ca. 1,4 kilo. <verse number="87" style="v"/>Brændoffergaverne udgjorde i alt 12 tyre, 12 væddere, 12 etårs lam med dertil hørende afgrødeofre. Syndoffergaverne udgjorde 12 gedebukke, <verse number="88" style="v"/>og takoffergaverne udgjorde 24 unge tyre, 60 væddere, 60 gedebukke og 60 etårs lam.</para>
+  <para style="p">
+    <verse number="89" style="v"/>Når Moses derefter gik ind i åbenbaringsteltet for at tale med Herren, hørte han Herrens stemme tale til sig fra et sted oven over pagtens ark mellem de to keruber.</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Forklaring om lysestagen</para>
+  <para style="p">
+    <verse number="1" style="v"/>Herren sagde til Moses: <verse number="2" style="v"/>„Sig til Aron, at når han anbringer de syv lamper på lysestagen, skal de vendes, så lyset bliver kastet fremad.”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Aron gjorde som Herren havde befalet gennem Moses. <verse number="4" style="v"/>Lysestagen var hamret ud i rent guld fra fodstykket til blomstermotiverne, og den svarede nøjagtig til den beskrivelse, Herren havde givet Moses.</para>
+  <para style="s1">Indvielsen af levitterne</para>
+  <para style="p">
+    <verse number="5" style="v"/>Da sagde Herren til Moses: <verse number="6" style="v"/>„Udskil levitterne fra de andre stammer og lad dem gennemgå en særlig renselsesceremoni. <verse number="7" style="v"/>Først skal du stænke renselsesvandet på dem, derefter skal de barbere sig over hele kroppen og vaske både sig selv og deres tøj. <verse number="8" style="v"/>Så skal de komme med en ung tyr til brændoffer, et afgrødeoffer bestående af fintmalet mel blandet med olivenolie samt en anden ung tyr til syndoffer. <verse number="9" style="v"/>Derefter skal du kalde folket sammen og føre levitterne hen foran åbenbaringsteltets indgang, <verse number="10" style="v"/>hvor israelitterne skal lægge hænderne på dem. <verse number="11" style="v"/>Da skal Aron med et svingningsoffer overgive levitterne til Herren som en gave fra hele Israels folk. På den måde bliver de indviet til at tjene Herren på folkets vegne. <verse number="12" style="v"/>Derefter skal levitterne lægge hænderne på hovedet af de to unge tyre, som derpå skal ofres til Herren, den ene som syndoffer og den anden som brændoffer, som tegn på forsoning med Herren. <verse number="13" style="v"/>Så skal levitterne føres til Aron og hans sønner, og du skal med et svingningsoffer overgive dem til præsterne som deres medhjælpere. <verse number="14" style="v"/>På den måde skal levitterne udskilles fra folket for at tilhøre og tjene mig.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Efter at de således er helliget og overgivet til mig, kan de udføre deres opgaver ved åbenbaringsteltet. <verse number="16" style="v"/>De skal helt og fuldt tilhøre mig som en erstatning for folkets førstefødte sønner, <verse number="17" style="v"/>for samtlige førstefødte sønner og handyr skulle egentlig tilhøre mig siden den nat, jeg dræbte egypternes førstefødte sønner. <verse number="18" style="v"/>Men jeg anerkender levitterne som stedfortrædere for folkets ældste sønner, <verse number="19" style="v"/>og jeg har overdraget levitterne til Aron og hans sønner, så de på folkets vegne kan udføre deres hellige opgaver ved åbenbaringsteltet. De skal være med til at bringe folket forsoning for deres synder, så Israels folk ikke rammes af plager, når de kommer i nærheden af helligdommen.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Så indviede Moses og Aron og Israels folk levitterne til deres tjeneste ved nøje at følge Herrens befalinger til Moses. <verse number="21" style="v"/>Levitterne gennemgik renselsesceremonien og vaskede deres tøj, hvorefter Aron fremstillede dem for Herren med et svingningsoffer som tegn på, at de var en gave til ham. Da det var gjort, udførte han forsoningsritualet over dem, så de blev renset. <verse number="22" style="v"/>Derefter var levitterne klar til at gå ind i åbenbaringsteltet og hjælpe Aron og hans sønner. Alt, hvad Herren havde befalet Moses med hensyn til levitterne, blev udført.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Desuden sagde Herren til Moses: <verse number="24" style="v"/>„Levitterne har tjenestepligt ved åbenbaringsteltet fra deres 25. år, <verse number="25" style="v"/>men når de fylder 50, skal de trække sig tilbage. <verse number="26" style="v"/>Derefter må de gerne hjælpe med vagttjeneste i åbenbaringsteltet, men de må ikke udføre det samme arbejde som før.”</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Regler for påskehøjtiden</para>
+  <para style="p">
+    <verse number="1" style="v"/>De følgende forskrifter gav Herren til Moses i årets første måned,<note caller="+" style="f"><char style="fr" closed="false">9,1 </char><char style="ft" closed="false">Årets første måned svarer til marts-april.</char></note> året efter, at israelitterne havde forladt Egypten. På det tidspunkt opholdt de sig endnu i Sinaiørkenen. Herren sagde:</para>
+  <para style="p">
+    <verse number="2-3" style="v"/>„For fremtiden skal Israels folk hvert år fejre påske. På den 14. dag i årets første måned, når solen er gået ned, skal I holde højtid—og I må sørge for nøje at overholde alle mine befalinger for denne fest.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Så bekendtgjorde Moses for folket, at Herren havde befalet, at de nu skulle fejre påskefesten. <verse number="5" style="v"/>Og festen blev fejret om aftenen på den 14. dag i den første måned efter alle de forskrifter, Herren havde givet. <verse number="6" style="v"/>Men den dag festen skulle begynde, var der nogle mænd, som var blevet urene efter at have rørt ved et lig. Derfor kunne de ikke komme med deres påskelam, som jo skulle slagtes ved alteret udenfor helligdommen før solnedgang. Disse mænd kom så til Moses og Aron <verse number="7" style="v"/>og sagde: „Vi er blevet urene ved et lig, så vi ikke kan træde frem for Herren. Hvorfor skal det hindre os i at bringe vores offergave til Herren på det fastsatte tidspunkt sammen med de andre israelitter?”</para>
+  <para style="p">
+    <verse number="8" style="v"/>Moses svarede: „Vent til jeg hører, hvad Herren har at sige om det.” <verse number="9" style="v"/>Herrens svar til Moses lød:</para>
+  <para style="p">
+    <verse number="10-11" style="v"/>„Sig til israelitterne: Hvis nogen af jer eller jeres efterkommere er urene, når påskedagen kommer, fordi I har været i berøring med lig, kan I fejre påske den følgende måned, dvs. ved aftenstid den 14. dag i årets anden måned. Det samme gælder, hvis I er ude på en lang rejse i den første måned. Den aften kan I så spise påskelammet sammen med det usyrnede brød og de bitre urter, <verse number="12" style="v"/>og I må ikke levne noget til næste morgen eller brække nogen af dyrets knogler. I skal på alle områder følge de normale regler for påskefesten.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Men hvis nogen ikke er på rejse og heller ikke er uren, men alligevel nægter at bringe et påskeoffer til Herren på det fastsatte tidspunkt, så skal den person udryddes. Han må bære straffen for sin ulydighed. <verse number="14" style="v"/>Hvis en af de fremmede, der bor iblandt jer, ønsker at fejre påske for Herren, skal han følge samme retningslinier som alle andre, for loven om påsken gælder både for indfødte israelitter og de fremmede iblandt jer.”</para>
+  <para style="s1">Skyen over helligdommen</para>
+  <para style="p">
+    <verse number="15" style="v"/>Den dag, boligen blev rejst, sænkede en sky sig over teltet med pagtens ark, så det hele blev overdækket af skyen. Om aftenen forvandledes skyen til noget, der lignede ild, og den blev stående over boligen hele natten.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Sådan fortsatte det dag for dag: Om dagen lignede det en almindelig sky, og om natten lignede det en ildsky. <verse number="17" style="v"/>Når skyen flyttede sig, fulgte folket efter. Når den standsede, slog de lejr dér. <verse number="18-20" style="v"/>På den måde var det Herren, som bestemte, hvornår det var tid til opbrud, og hvornår det var tid til at slå lejr. Så længe skyen blev stående, brød folket ikke op—uanset om det var nogle få dage, eller det var i længere tid, for sådan ønskede Herren det. <verse number="21" style="v"/>Somme tider blev skyen kun stående en enkelt nat, og så snart det blev morgen, løftede den sig. Til andre tider blev den stående hele den næste dag og natten med, <verse number="22" style="v"/>eller den blev stående i to hele dage, en måned eller i længere tid. Uanset tidsrummet blev Israels folk boende i lejren så længe skyen forblev over boligen, og de brød op, når skyen løftede sig. <verse number="23" style="v"/>Herren bestemte, hvornår det var tid at slå lejr, og hvornår det var tid at bryde op—og folket fulgte alle de befalinger, Herren havde givet Moses.</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">De to sølvtrompeter</para>
+  <para style="p">
+    <verse number="1" style="v"/>Herren sagde nu til Moses: <verse number="2" style="v"/>„Lav to trompeter af hamret sølv. De skal bruges som signalhorn, så folket ved, hvornår det er tid at samles, og hvornår det er tid at bryde op. <verse number="3" style="v"/>Når der blæses i begge trompeter på en gang, er det signal til, at folket skal samles ved åbenbaringsteltets indgang, <verse number="4" style="v"/>men når der kun blæses i den ene, er det signal til at kun stammelederne skal mødes.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Når I blæser signalet til opbrud, skal de stammer, der ligger i lejr ved østsiden af boligen, bryde op først. <verse number="6" style="v"/>Når opbrudssignalet lyder en gang til, skal stammerne ved sydsiden følge efter. Ved det tredje trompetsignal skal stammerne mod vest bryde op, og ved det fjerde signal skal stammerne mod nord bryde op.<note caller="+" style="f"><char style="fr" closed="false">10,6 </char><char style="ft" closed="false">Den sidste del af verset er åbenbart faldet ud af den masoretiske tekst. De manglende ord er her oversat fra LXX.</char></note> <verse number="7" style="v"/>Men skal folket blot kaldes sammen, skal I blæse et andet signal. <verse number="8" style="v"/>Præsterne er de eneste, som må blæse i trompeterne. Denne ordning skal gælde fremover fra slægt til slægt.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Når I kommer ind i det land, jeg har lovet jer, og I går i krig mod en fjende, der undertrykker jer, skal I blæse opbrudssignalet i trompeterne, så vil jeg gribe ind og redde jer fra jeres fjender. <verse number="10" style="v"/>Når det er tid til at fejre de årlige og månedlige højtider, skal I blæse i trompeterne. Det er signalet til, at der skal bringes brændofre og takofre. De skal minde jer om, at jeg er iblandt jer. Jeg er Herren, jeres Gud.”</para>
+  <para style="s1">Rejsen bort fra Sinaibjerget begynder</para>
+  <para style="p">
+    <verse number="11" style="v"/>På den 20. dag i den anden måned, et år efter, at Israels folk havde forladt Egypten, løftede skyen sig fra boligen med pagtens ark, <verse number="12" style="v"/>og skyen viste israelitterne vej fra Sinaiørkenen hele vejen op til Parans ørken.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Vandringen skete i overensstemmelse med de instrukser, Herren havde givet Moses. <verse number="14" style="v"/>Først skulle Judas stamme bryde op med banneret for den første hærafdeling. De blev anført af Nahshon. <verse number="15" style="v"/>Issakars stamme, anført af Netanel, <verse number="16" style="v"/>og Zebulons stamme, anført af Eliab, fulgte med i den første afdeling. <verse number="17" style="v"/>Derefter blev åbenbaringsteltet pakket sammen, og det var Gershons og Meraris slægter af Levis stamme, der drog af sted med det på skuldrene.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Så skulle Rubens stamme bryde op med banneret for den anden hærafdeling. De blev anført af Elitzur. <verse number="19" style="v"/>Simeons stamme, anført af Shelumiel, <verse number="20" style="v"/>og Gads stamme, anført af Eljasaf, fulgte med i den anden hærafdeling. <verse number="21" style="v"/>Derpå skulle Kehats slægt bryde op. Det var dem, der bar de hellige ting fra boligen, og åbenbaringsteltet ville så allerede være stillet op, når de nåede frem til den nye lejrplads.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Derefter skulle Efraims stamme bryde op med banneret for den tredje hærafdeling. De blev anført af Elishama. <verse number="23" style="v"/>Manasses stamme, anført af Gamliel, <verse number="24" style="v"/>og Benjamins stamme, anført af Abidan, fulgte med i den tredje hærafdeling.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Til sidst skulle Dans stamme bryde op med banneret for den fjerde hærafdeling. De blev anført af Ahiezer. <verse number="26" style="v"/>Ashers stamme, anført af Pagiel, <verse number="27" style="v"/>og Naftalis stamme, anført af Ahira, fulgte med i den sidste hærafdeling. <verse number="28" style="v"/>Således skulle stammerne bryde op i rækkefølge og vandre af sted i de foreskrevne hærafdelinger.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Da de skulle til at begynde vandringen, sagde Moses til sin svoger,<note caller="+" style="f"><char style="fr" closed="false">10,29 </char><char style="ft" closed="false">Den hebraiske tekst siger: „søn af midjanitten Reuel, svigerfar til Moses”.</char></note> midjanitten Hobab: „Endelig er vi på vej mod det land, Herren har lovet os. Hvis du vil følge med os, vil vi belønne dig rigeligt, for Herren har givet Israels folk gode løfter.”</para>
+  <para style="p">
+    <verse number="30" style="v"/>Men Hobab svarede: „Nej tak, jeg må tilbage til mit land og min slægt.”</para>
+  <para style="p">
+    <verse number="31" style="v"/>„Jo, bliv nu hos os,” bad Moses. „Vi har brug for dig, for du kender ørkenen og ved, hvor det er bedst at slå lejr. <verse number="32" style="v"/>Hvis du går med os, skal du nok få del i alt det gode, Herren vil give os.” Det gjorde han så.</para>
+  <para style="p">
+    <verse number="33-34" style="v"/>De vandrede derefter væk fra Herrens bjerg, mens skyen svævede over pagtens ark, som blev båret forrest for at vise dem vej. Efter tre dagsrejser kom de til et sted, hvor de kunne slå lejr og hvile ud.</para>
+  <para style="p">
+    <verse number="35" style="v"/>Hver gang de løftede arken for at gå videre, råbte Moses: „Rejs dig, Herre. Slå dine fjender på flugt, så de spredes for alle vinde.” <verse number="36" style="v"/>Og hver gang de holdt hvil, sagde han: „Vend tilbage, Herre. Bliv hos disse tusindvis af israelitter.”</para>
+  <chapter number="11" style="c"/>
+  <para style="s1">Israelitterne begynder at beklage sig</para>
+  <para style="p">
+    <verse number="1" style="v"/>Folket begyndte ret hurtigt at beklage sig højlydt over de dårlige forhold, de måtte leve under; og da Herren hørte det, blev han så vred, at han sendte ild ned over dem, og det begyndte at brænde i lejrens udkant. <verse number="2" style="v"/>Folket skreg til Moses om hjælp, og da han gik i forbøn for dem, døde ilden ud. <verse number="3" style="v"/>Stedet kaldte man Tabera,<note caller="+" style="f"><char style="fr" closed="false">11,3 </char><char style="ft" closed="false">Navnet betyder „brand” eller „et sted, der brænder”.</char></note> for på det sted begyndte Herrens ild at brænde.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Kort efter begyndte nogle af de fremmede, som fulgte med, at længes efter Egyptens kødgryder, og de fik hele Israels folk til at græde af selvmedlidenhed. „Bare vi dog kunne få lidt kød,” klagede de alle sammen. <verse number="5" style="v"/>„Åh, hvor vi længes efter de fisk, der var nok af i Egypten—og agurker, vandmeloner, porrer, løg og hvidløg. <verse number="6" style="v"/>Man mister appetitten, når det eneste, man får at spise, er manna.”</para>
+  <para style="p">
+    <verse number="7" style="v"/>Den manna, folket spiste, var hvidgule flager, der lignede korianderfrø, <verse number="8-9" style="v"/>og som lå på jorden hver morgen, når duggen var forsvundet. De samlede det op og malede det til mel med en håndkværn eller i en morter. Derefter kogte de det i en gryde og lavede en slags pandekager, der smagte som var de bagt med olivenolie.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Da Moses hørte folket beklage sig fra deres teltåbninger, blev han meget nedslået, og Herren blev vred. <verse number="11" style="v"/>Moses sagde da til Herren: „Hvad har jeg gjort, siden jeg skal belemres med det her genstridige folk? <verse number="12" style="v"/>De opfører sig som børn. Men det er ikke mig, der har sat dem i verden. Skal jeg virkelig bære dem i favnen, som en far bærer sit spædbarn, hele vejen til det land, du lovede deres forfædre? <verse number="13" style="v"/>Hvor skal jeg få kød fra til alle de mennesker? De græder og plager mig om at få kød at spise. <verse number="14" style="v"/>Jeg kan ikke klare at bære ansvaret for dette folk—det er for tung en byrde for mig. <verse number="15" style="v"/>Hvis det skal være på den måde, foretrækker jeg, at du tager mit liv, så jeg kan slippe for denne elendighed.”</para>
+  <para style="s1">Gud lader sin Ånd komme over 70 ledere</para>
+  <para style="p">
+    <verse number="16" style="v"/>Da sagde Herren til Moses: „Tilkald 70 af folkets ledere og før dem hen til åbenbaringsteltets indgang. <verse number="17" style="v"/>Så vil jeg komme ned og tale med dig, og jeg vil tage noget af den Ånd, der er over dig, og lade den komme over disse ledere, så de kan tage medansvar og løfte byrden sammen med dig. <verse number="18" style="v"/>Samtidig skal du befale folket at hellige sig og være parate til i morgen, så skal de få kød at spise. Sig til dem: Herren har hørt jer klage over, at I ikke har kød at spise. Han har også hørt jer sige, at I havde det bedre i Egypten. Derfor vil han nu give jer kød at spise— <verse number="19" style="v"/>ikke bare i morgen og i overmorgen, eller i de næste 5 eller 10 eller 20 dage— <verse number="20" style="v"/>nej, I skal få kød i en hel måned, så det hænger jer langt ud af halsen, og I får kvalme bare ved tanken. For I har forkastet Herren, som er midt iblandt jer, og I har anklaget ham, fordi han førte jer ud af Egypten.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>Men Moses indvendte: „Der er mere end 600.000 voksne mænd foruden kvinder og børn. Hvordan kan du love dem kød i en hel måned? <verse number="22" style="v"/>Selv om vi slagter samtlige husdyr i lejren, er det ikke nok. Hvis det, du siger, skulle kunne gå i opfyldelse, måtte vi fange hver eneste fisk i havet.”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Herren svarede: „Er noget umuligt for mig? Vent bare—så skal du få at se, om jeg står ved mit ord eller ej.”</para>
+  <para style="p">
+    <verse number="24" style="v"/>Så gik Moses ud og fortalte folket, hvad Herren havde sagt. Derpå udvalgte han 70 af folkets ledere og lod dem tage opstilling rundt om teltet. <verse number="25" style="v"/>Da kom Herren ned i skyen for at tale med Moses, og han tog noget af den Ånd, der var over Moses, og lod den komme over de 70 ledere, som straks begyndte at profetere—noget som de dog kun gjorde denne ene gang.</para>
+  <para style="p">
+    <verse number="26" style="v"/>To mænd ved navn Eldad og Medad var ikke gået hen til teltet, selv om de hørte med blandt de udvalgte ledere. Alligevel kom Guds Ånd over dem, og de begyndte at profetere dér, hvor de befandt sig i lejren. <verse number="27" style="v"/>En ung mand kom nu løbende hen til Moses og fortalte ham, hvad der var på færde. <verse number="28" style="v"/>Josva, Nuns søn, der havde været Moses’ medhjælper fra sin ungdom, udbrød: „Mester, stands dem dog.” <verse number="29" style="v"/>Men Moses svarede: „Hvorfor er du så nidkær på mine vegne? Jeg ville ønske, at hele folket var profeter, og at Herren ville lade sin Ånd komme over dem alle.” <verse number="30" style="v"/>Så vendte Moses og Israels ledere tilbage til deres telte.</para>
+  <para style="s1">Gud udfører endnu et bespisningsunder</para>
+  <para style="p">
+    <verse number="31" style="v"/>Herren sendte nu en storm fra havet, og den drev en umådelig flok vagtler ind over lejren. Vagtlerne baskede rundt<note caller="+" style="f"><char style="fr" closed="false">11,31 </char><char style="ft" closed="false">Eller: „lå”. Teksten er uklar.</char></note> i to alens højde udenom lejren i en radius af en dagsrejse. <verse number="32" style="v"/>Hele den dag og natten med og den næste dag havde folk travlt med at samle vagtler, som de lagde ud til tørring på jorden over hele lejren efter at have slagtet dem. Det mindste, der blev fanget af en enkelt person, var ca. 2200 liter. <verse number="33" style="v"/>Men endnu mens de spiste kødet, slog Herrens vrede ud mod folket, så mange af dem omkom. <verse number="34" style="v"/>Derfor kaldte man stedet „De Grådiges Grav”, fordi man her begravede dem, der havde været så grådige efter kød.</para>
+  <para style="p">
+    <verse number="35" style="v"/>Derfra rejste folket videre til Hatzerot, hvor de slog lejr.</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">Mirjam gør oprør mod Moses</para>
+  <para style="p">
+    <verse number="1" style="v"/>En dag gjorde Mirjam og Aron oprør imod Moses, fordi han havde taget sig en kone fra det land, der hed Kush,<note caller="+" style="f"><char style="fr" closed="false">12,1 </char><char style="ft" closed="false">Landet Kush oversættes undertiden med Etiopien, men det henviser til den nordlige del af det nuværende Sudan, også kaldet Nubien.</char></note> syd for Egypten. <verse number="2" style="v"/>„Kan Herren kun tale til Moses?” sagde de. „Hvad med os? Herren kan vel lige så godt tale til os.” Herren hørte det, <verse number="3" style="v"/>men Moses prøvede ikke at forsvare sig, for han var jordens mest ydmyge menneske. <verse number="4" style="v"/>Herren talte nu til både Moses, Aron og Mirjam og sagde: „Gå alle tre hen til åbenbaringsteltet!” Da stillede de sig foran teltet.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Derpå steg Herren ned, skjult i en sky, og stillede sig ved indgangen til teltet. „Aron og Mirjam, træd frem,” beordrede han. Det gjorde de så. <verse number="6" style="v"/>Herren fortsatte: „Når jeg taler til en profet, gør jeg det normalt gennem syner og drømme, <verse number="7" style="v"/>men det er ikke på den måde, jeg kommunikerer med min tjener Moses. Han er en trofast leder for mit folk.<note caller="+" style="f"><char style="fr" closed="false">12,7 </char><char style="ft" closed="false">Eller: „Han er den mest trofaste i hele mit folk.”</char></note> <verse number="8" style="v"/>Med ham taler jeg ansigt til ansigt og ikke i gåder. Han har set mig, som jeg er. Hvor vover I så at gøre oprør imod ham?”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Så forlod Herren dem i vrede, <verse number="10" style="v"/>og da skyen løftede sig fra teltet, var Mirjam fyldt med hvide pletter over hele kroppen. Aron var rystet over synet af det <verse number="11" style="v"/>og udbrød: „Åh Moses, gå i forbøn for os, så vi ikke mister livet på grund af denne tåbelige synd. <verse number="12" style="v"/>Mirjam ligner jo et dødfødt barn, der allerede er begyndt at gå i forrådnelse.”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Da råbte Moses til Herren: „Herre, jeg beder dig: Gør hende rask.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>Herren svarede: „Hvis hendes egen far havde spyttet hende i ansigtet, var hun blevet uren og måtte bære sin skam i syv dage. Send hende derfor uden for lejren. Efter syv dage kan hun vende tilbage igen.”</para>
+  <para style="p">
+    <verse number="15" style="v"/>Så blev Mirjam udstødt af lejren i syv dage, og folket måtte vente på hende, før de kunne rejse videre. <verse number="16" style="v"/>Derefter forlod de Hatzerot og nåede frem til Parans ørken, hvor de slog lejr og blev et stykke tid.</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">Moses sender spioner til Kana’an</para>
+  <para style="p">
+    <verse number="1" style="v"/>Herren sagde nu til Moses: <verse number="2" style="v"/>„Udtag en leder fra hver stamme og send dem af sted for at udspionere det land, jeg vil give jer.”</para>
+  <para style="p">
+    <verse number="3-15" style="v"/>På det tidspunkt lå folket i lejr i Parans ørken. Moses gjorde, som Herren havde befalet. Følgende stammeledere blev udtaget som spioner: Shammua, søn af Zakkur, fra Rubens stamme; Shafat, søn af Hori, fra Simeons stamme; Kaleb, søn af Jefunne, fra Judas stamme; Jigal, søn af Josef, fra Issakars stamme; Hosea, søn af Nun, fra Efraims stamme; Palti, søn af Rafu, fra Benjamins stamme; Gaddiel, søn af Sodi, fra Zebulons stamme; Gaddi, søn af Susi, fra Manasses stamme; Ammiel, søn af Gemalli, fra Dans stamme; Setur, søn af Mikael, fra Ashers stamme; Nahbi, søn af Vafsi, fra Naftalis stamme; og Geuel, søn af Maki, fra Gads stamme. <verse number="16" style="v"/>Det var ved den lejlighed, at Moses ændrede Hoseas navn til Josva.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Inden Moses sendte dem af sted, sagde han: „Gå nordpå gennem Negev<note caller="+" style="f"><char style="fr" closed="false">13,17 </char><char style="fq" closed="false">Negev </char><char style="ft" closed="false">betyder „syd” eller „sydlandet” og betegner her det ørkenagtige område i den sydlige del af Israel.</char></note> op i bjergene <verse number="18" style="v"/>hvor I har overblik og kan danne jer et indtryk af landet og dets indbyggere. Læg mærke til, hvor mange de er, og hvor stærke de er. <verse number="19-20" style="v"/>Læg mærke til, om jorden er frugtbar, om der er mange træer, og om folket bor i åbne landsbyer eller i byer med mure omkring. Drag modigt af sted og kom tilbage med nogle af landets frugter.” Det var nemlig den tid på året, hvor druerne var ved at være modne.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Så tog de af sted og udspionerede landet lige fra Zins ørken til Rehob nær Lebo-Hamat. <verse number="22" style="v"/>På rejsen kom de først gennem Negev og nåede derefter til Hebron—en by så gammel, at den var blevet grundlagt syv år før Zoan i Egypten. I Hebron så de akimanitterne, sheshajitterne og talmajitterne—tre slægter, der nedstammede fra de anakitiske kæmper. <verse number="23" style="v"/>Derefter kom de til et sted, som de kaldte Eshkoldalen. Der tog de en drueklase så stor, at der måtte to mand til at bære den på en stang imellem sig. De plukkede også nogle af landets granatæbler og figner. <verse number="24" style="v"/>Den enorme drueklase, de fandt der, var årsag til, at de kaldte stedet Eshkoldalen.<note caller="+" style="f"><char style="fr" closed="false">13,24 </char><char style="fq" closed="false">Eshkol </char><char style="ft" closed="false">betyder „drueklase”.</char></note></para>
+  <para style="p">
+    <verse number="25" style="v"/>Efter at have udspioneret landet i 40 dage vendte de tilbage <verse number="26" style="v"/>og aflagde rapport til Moses, Aron og Israels folk, der nu var nået til Kadesh i Parans ørken, og de viste dem de frugter, de havde taget med sig fra landet.</para>
+  <para style="p">
+    <verse number="27" style="v"/>„Da vi kom et stykke ind i det land, du sendte os til, så vi, hvor rigt landet var,” sagde de til Moses. „Det er virkelig et land, der ‚flyder med mælk og honning’. De frugter, vi har med tilbage, er bevis nok. <verse number="28" style="v"/>Men med hensyn til indbyggerne har vi dårlige nyheder: Det er et uhyre stærkt folk, som bor i store, befæstede byer. Ja, vi så tilmed nogle af de berygtede anakitiske kæmper iblandt dem. <verse number="29" style="v"/>I Negev-området bor amalekitterne; i bjerglandet bor hittitterne, jebusitterne og amoritterne; og langs Middelhavet og Jordanfloden bor kana’anæerne.”</para>
+  <para style="p">
+    <verse number="30" style="v"/>Efter den rapport begyndt folket straks at beklage sig over for Moses. Men Kaleb kaldte forsamlingen til ro og orden. „Lad os komme af sted! Vi kan helt afgjort indtage landet,” sagde han.</para>
+  <para style="p">
+    <verse number="31-33" style="v"/>„Det er lettere sagt end gjort,” indvendte de andre spioner. „Glem ikke, at vi her står over for nogle uhyre stærke krigere—selveste Anaks efterkommere. De er kæmper, og vi har ikke en chance imod dem. Da vi så dem, følte vi os på størrelse med græshopper—og sådan ser de nok også på os.” På den måde tog de modet fra folket.</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">Folk gør oprør på grund af vantro</para>
+  <para style="p">
+    <verse number="1" style="v"/>Da brød hele folket ud i klageråb, og de græd og klagede hele natten. <verse number="2" style="v"/>Derefter gik de hen til Moses og Aron og beklagede sig: „Gid vi var døde i Egypten—eller endda her i ørkenen. <verse number="3" style="v"/>Hvorfor har Herren ført os hertil, når vi skal dø i krig og vores koner og børn føres bort som slaver. Lad os dog vende om og se at komme tilbage til Egypten.” <verse number="4" style="v"/>Længslen efter Egypten bredte sig i lejren. „Ja, lad os vælge en anden leder og vende tilbage til Egypten!” blev der råbt.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Da kastede Moses og Aron sig ned foran folket med ansigtet mod jorden, <verse number="6" style="v"/>og to af spionerne—Josva og Kaleb—som havde været inde og udspejde landet, rev flænger i deres tøj af fortvivlelse over folkets oprør. <verse number="7" style="v"/>„Begriber I ikke, at det er et vidunderligt land?” råbte de. <verse number="8" style="v"/>„Hvis vi er lydige mod Herren, vil han føre os ind i landet og give det til os. Det er et fantastisk frugtbart land, der i den grad ‚flyder med mælk og honning’. <verse number="9" style="v"/>Hvorfor vil I gøre oprør imod Herren? Hvorfor er I bange for landets indbyggere? Vi kan sagtens indtage landet, for Herren er med os, mens de er uden beskyttelse. Hvad er I bange for?”</para>
+  <para style="p">
+    <verse number="10" style="v"/>Josvas og Kalebs ord gjorde kun ondt værre, og folket talte allerede om at stene dem. Da viste Herrens herlighed sig pludselig over åbenbaringsteltet, <verse number="11" style="v"/>og Herren sagde til Moses: „Hvor længe skal det her folk have lov til at foragte mig? Hvor længe vil de nægte at tro på mig, selv efter alle de undere, jeg har udført iblandt dem? <verse number="12" style="v"/>Jeg vil sende sygdom imod dem og udrydde dem, og så vil jeg begynde forfra med dig og gøre dig til et endnu mægtigere folk end dem.”</para>
+  <para style="s1">Moses går i forbøn for folket</para>
+  <para style="p">
+    <verse number="13" style="v"/>„Men hvad vil egypterne sige, når de hører om det?” indvendte Moses. „De så jo din vældige kraft demonstreret, da du befriede dit folk. <verse number="14" style="v"/>Indbyggerne i dette land er også allerede klar over, at du bor blandt dit folk Israel og taler til dem ansigt til ansigt. De har hørt om skysøjlen, der går foran os om dagen, og ildsøjlen, der lyser for os om natten. <verse number="15" style="v"/>Men hvis du nu udrydder dit folk, vil disse nationer sige: <verse number="16" style="v"/>‚Herren dræbte sit folk, fordi han ikke var i stand til at føre dem ind i det land, han havde lovet dem.’ <verse number="17" style="v"/>Herre, vis nu din storhed ved at stå ved de ord, du har udtalt: <verse number="18" style="v"/>at du sjældent bliver vred, og at din trofasthed er stor. Du tilgiver mennesker deres synd og oprør, også selv om den skyldige skal straffes og fædrenes synd får konsekvenser indtil tredje eller fjerde slægtled. <verse number="19" style="v"/>Jeg trygler dig, Herre: Vis din trofasthed og nåde imod dette folk, så du tilgiver dem deres synd, sådan som du har tilgivet dem hele vejen, siden de forlod Egypten.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Da svarede Herren: „Godt, jeg vil tilgive dem, sådan som du har bedt om. <verse number="21" style="v"/>Men så sandt jeg er den levende Gud, så sandt min herlighed fylder hele jorden, <verse number="22" style="v"/>så skal ingen af de mænd, som har været vidne til de undere, jeg gjorde i Egypten og i ørkenen, og som nu for tiende gang har provokeret mig med deres ulydighed, <verse number="23" style="v"/>få det land at se, som jeg lovede deres forfædre. Ingen af dem, der har vist mig foragt, skal få landet at se. <verse number="24" style="v"/>Men min tjener Kaleb har en anden ånd end resten af folket, og han har bevist sin lydighed imod mig. Derfor skal han få lov til at komme ind i landet, og hans efterkommere skal tage deres del i besiddelse. <verse number="25" style="v"/>Da nu amalekitterne og kana’anæerne bor i lavlandet,<note caller="+" style="f"><char style="fr" closed="false">14,25 </char><char style="ft" closed="false">Dvs. de har blokeret alle indfaldsveje til det lovede land.</char></note> skal I i morgen tidlig bryde op og vende tilbage til ørkenen ad vejen mod Det Røde Hav.”</para>
+  <para style="s1">Herrens straf over det vantro folk</para>
+  <para style="p">
+    <verse number="26" style="v"/>Herren sagde til Moses og Aron: <verse number="27" style="v"/>„Hvor længe skal jeg finde mig i, at det her onde folk hele tiden beklager sig? Jeg har set deres oprør og hørt deres beklagelser. <verse number="28" style="v"/>Giv dem nu følgende besked fra mig: Så sandt jeg lever, skal I få, hvad I har bedt om: <verse number="29" style="v"/>I skal få lov at dø i ørkenen—alle I, der er over 20 år, I, der beklagede jer over mig. <verse number="30" style="v"/>Ingen af jer skal nå ind i det land, som jeg svor at give til jer—bortset fra Kaleb og Josva. <verse number="31" style="v"/>I sagde, at jeres børn ville blive taget til fange og gjort til slaver; men jeg siger, at det bliver dem, der går ind og tager det land i besiddelse, som I har vraget, <verse number="32" style="v"/>mens I selv skal dø i ørkenen.</para>
+  <para style="p">
+    <verse number="33" style="v"/>Jeres børn skal vokse op som nomader, mens I vandrer rundt i ørkenen i 40 år, indtil den sidste af jer, som gjorde oprør, er død. Det er resultatet af jeres troløshed. <verse number="34" style="v"/>Ligesom spionerne vandrede rundt i landet i 40 dage, skal I vandre rundt i ørkenen i 40 år—ét år for hver dag er straffen for jeres synd. På den måde vil jeg lære jer, hvilke konsekvenser det får, når I forkaster mig. <verse number="35" style="v"/>Jeg, Herren, har talt. Sådan vil jeg gøre mod dette onde folk, som har rottet sig sammen imod mig og derfor skal dø her i ørkenen.”</para>
+  <para style="p">
+    <verse number="36-38" style="v"/>De ti spioner, som havde foranlediget oprøret imod Herren ved at sprede frygt blandt folket, faldt derefter døde om for Herrens ansigt; kun Josva og Kaleb var tilbage. <verse number="39" style="v"/>Og da Moses bekendtgjorde Herrens ord til folket, blev de grebet af dyb sorg.</para>
+  <para style="p">
+    <verse number="40" style="v"/>Men tidligt næste morgen var de klar til at drage af sted mod løfternes land. „Vi tog fejl,” sagde de, „men nu er vi parat til at gå ind i det land, Herren har lovet os.”</para>
+  <para style="p">
+    <verse number="41" style="v"/>„Nej,” svarede Moses, „I har forspildt jeres chance. Vil I nu synde igen ved at gøre oprør mod Herrens ordre om at vende tilbage til ørkenen? <verse number="42" style="v"/>Gå ikke ind i landet nu, for Herren er ikke med jer. Gør I det alligevel, vil I blot blive slået af fjenderne. <verse number="43" style="v"/>Amalekitterne og kana’anæerne vil besejre jer. Når I vender jer fra Herren, vender han sig fra jer.”</para>
+  <para style="p">
+    <verse number="44" style="v"/>Alligevel satte de kursen mod bjerglandet, selv om pagtens ark og Moses blev tilbage i lejren. <verse number="45" style="v"/>Men de amalekitter og kana’anæere, der boede på vejen til bjerglandet, rykkede ud mod dem, slog dem og forfulgte dem helt til Horma.</para>
+  <chapter number="15" style="c"/>
+  <para style="s1">Yderligere regler for ofringer</para>
+  <para style="p">
+    <verse number="1" style="v"/>Herren sagde til Moses: <verse number="2" style="v"/>„Giv Israels folk denne besked fra mig: Når folket engang kommer ind i det land, jeg vil give dem, <verse number="3-5" style="v"/>og de ønsker at glæde mig med et ildoffer, hvad enten det er et brændoffer eller et slagtoffer, skal de udvælge offerdyret blandt deres småkvæg eller hornkvæg. Hvert eneste offer—hvad enten det drejer sig om et almindeligt offer, et løfteoffer, et frivilligt offer eller et særligt offer i forbindelse med de årlige festdage—skal bringes sammen med et afgrødeoffer. Hvis det er et lam, de ofrer, skal afgrødeofferet bestå af to liter fint mel blandet med en liter olivenolie. Desuden skal der ofres et drikoffer bestående af en liter vin.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Hvis de ofrer en vædder, skal det medfølgende afgrødeoffer bestå af fire liter fint mel blandet med godt en liter olivenolie <verse number="7" style="v"/>og drikofferet skal bestå af godt en liter vin. Duften af dette offer vil glæde mig.</para>
+  <para style="p">
+    <verse number="8-9" style="v"/>Hvis de ofrer en ung tyr, skal det medfølgende afgrødeoffer bestå af seks liter fint mel blandet med to liter olivenolie, <verse number="10" style="v"/>og drikofferet skal bestå af to liter vin. Duften af dette offer vil glæde mig.</para>
+  <para style="p">
+    <verse number="11-12" style="v"/>Det er reglerne for de ofre, der skal følge med, hvad enten offerdyret er en tyr, en vædder, et lam eller et gedekid— <verse number="13-14" style="v"/>og reglerne er de samme for israelitter som for de fremmede, der bor iblandt dem. <verse number="15-16" style="v"/>Denne lov skal gælde fremover fra slægt til slægt. Samme lov skal gælde for alle.”</para>
+  <para style="p">
+    <verse number="17" style="v"/>Herren sagde også dette til Moses: <verse number="18" style="v"/>„Sig til Israels folk: Når I kommer ind i det land, jeg vil give jer, <verse number="19-21" style="v"/>skal I ofre en smagsprøve af landets første høst til mig ved at tage noget korn fra tærskepladsen og bage et grovbrød af det. Loven om et offer fra den første høst skal gælde fremover fra slægt til slægt.</para>
+  <para style="p">
+    <verse number="22-24" style="v"/>Hvis I eller jeres efterkommere som folk betragtet uforvarende kommer til at overtræde de love, som jeg har givet jer gennem Moses indtil nu, skal hele folket, så snart fejltagelsen er opdaget, ofre en ung tyr som brændoffer. Da vil jeg anerkende duften af brændofferet som et lifligt offer, når det ofres sammen med det sædvanlige afgrødeoffer og drikoffer samt et syndoffer bestående af en gedebuk. <verse number="25" style="v"/>Præsten skal på den måde skaffe soning for hele folket, og da skal de blive tilgivet, fordi der var tale om en fejltagelse, som er rettet, efter at der er ofret et brændoffer og et syndoffer. <verse number="26" style="v"/>Da skal hele folket få tilgivelse, også de fremmede, der bor iblandt jer, fordi der var tale om uforvarende, kollektiv synd.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Hvis en enkeltperson uforvarende kommer til at overtræde lovene, skal han ofre en etårs hun-ged som syndoffer; <verse number="28" style="v"/>og præsten skal skaffe ham soning, hvorefter han er tilgivet. <verse number="29" style="v"/>Denne lov gælder også de fremmede, der bor iblandt jer.</para>
+  <para style="p">
+    <verse number="30-31" style="v"/>Men enhver der synder forsætligt—hvad enten han er indfødt israelit eller fremmed—skal udryddes, fordi han har vist ringeagt for mig og mine bud og med vilje overtrådt min lov. Derfor skal han bære sin straf.”</para>
+  <para style="s1">Straffen for at bryde sabbatsloven</para>
+  <para style="p">
+    <verse number="32" style="v"/>En sabbatsdag, da Israels folk opholdt sig i ørkenen, blev en mand taget på fersk gerning i at gå og samle brænde. <verse number="33" style="v"/>Manden blev ført til Moses og Aron og de øvrige ledere, <verse number="34" style="v"/>som fængslede ham, indtil de kunne få en afgørelse fra Herren angående mandens forseelse.</para>
+  <para style="p">
+    <verse number="35" style="v"/>Da sagde Herren til Moses: „Manden skal føres uden for lejren og stenes til døde af hele folket.” <verse number="36" style="v"/>Så førte man ham uden for lejren og henrettede ham, som Herren havde befalet.</para>
+  <para style="s1">Om kvaster på kappen</para>
+  <para style="p">
+    <verse number="37" style="v"/>Herren sagde til Moses: <verse number="38" style="v"/>„Sig til Israels folk, at de fremover fra slægt til slægt skal gøre det til en vane at sætte kvaster i hjørnerne af deres kapper; kvasterne skal sys i med purpurtråd. <verse number="39" style="v"/>Hensigten med denne ordning er at minde jer selv om at følge mine befalinger. Hver gang I får øje på kvasten, skal I tænke på at adlyde mig i stedet for at adlyde jeres egne lyster og indskydelser, som I har så let ved at gøre. <verse number="40" style="v"/>Når I ser kvasten, skal I rette jeres indre blik på mig, så I kommer til at ligne mig i hellighed; <verse number="41" style="v"/>for jeg er Herren, jeres Gud, der førte jer ud af Egyptens land—ja, jeg er Herren, jeres Gud.”</para>
+  <chapter number="16" style="c"/>
+  <para style="s1">Tre mænd gør oprør</para>
+  <para style="p">
+    <verse number="1" style="v"/>Blandt israelitterne var der en mand, der hed Kora, søn af Jitzhar, der igen var søn af Kehat, som var en af Levis sønner. Kora gjorde oprør imod Moses, og han blev bakket op af Datan og Abiram, der var sønner af den Eliab, som var søn af Pallu.<note caller="+" style="f"><char style="fr" closed="false">16,1 </char><char style="ft" closed="false">Teksten er usikker, jævnfør 1931 oversættelsen, <char style="xt"><ref loc="GEN 46:9">1.Mos. 46,9</ref> og <ref loc="NUM 26:5-11">4.Mos. 26,5-11</ref></char>. Den hebraiske tekst siger: „og On, søn af Pelet, sønner af Ruben”, men Pelet er muligvis en fejlskrivning for Pallu, der på hebraisk ligner Pelet til forveksling. Der nævnes ingen andre steder, at en mand ved navn On var med i komplottet, ligesom Pelet heller ikke kendes som en sønnesøn af Ruben. Den Eliab, der nævnes her, er ikke lederen af Zebulon stammen, jf. <char style="xt"><ref loc="NUM 2:7">4.Mos. 2,7</ref></char>.</char></note> De var fra Rubens stamme. <verse number="2" style="v"/>250 andre mænd gik med i oprøret mod Moses, og de var alle sammen ansete og folkevalgte ledere.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Alle disse mænd gik nu til Moses og Aron og sagde: „Nu må det være nok med det præstestyre. Vi kan vel alle træde frem for Herren og ofre til ham. Hvorfor ophøjer I jer selv over Herrens folk?”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Da Moses hørte det, kastede han sig fortvivlet ned med ansigtet mod jorden, <verse number="5" style="v"/>og han sagde til Kora og hans tilhængere: „Vent til i morgen, så vil Herren vise, hvem der hører ham til, og hvem der er indviet til at træde frem for ham. <verse number="6-7" style="v"/>Kora, du og dine tilhængere skal komme tilbage i morgen med hver jeres røgelseskar, tænd op i dem og brænd røgelse for Herren. Så får vi at se, hvem Herren har udvalgt som præster. I levitter er gået for vidt!”</para>
+  <para style="p">
+    <verse number="8-9" style="v"/>Moses sagde videre til Kora: „Er I levitter nu ikke længere tilfredse med den særstilling, Israels Gud har givet jer? Har han ikke udvalgt jer til på folkets vegne at hjælpe med arbejdet ved Herrens bolig? <verse number="10" style="v"/>Han har givet jer denne særlige tjeneste for ham. Vil I nu også være præster? <verse number="11" style="v"/>Det er Herren selv, ikke Aron og hans sønner, du og dine tilhængere gør oprør imod.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Derefter sendte Moses bud efter Datan og Abiram, men de sendte følgende besked tilbage: „Vi kommer ikke. <verse number="13" style="v"/>Det er jo dig, der har lokket os bort fra det frugtbare Egypten, for at vi skulle dø her i ørkenen. Vil du stadig påstå, at du er Guds udvalgte leder? <verse number="14" style="v"/>Hvad med det vidunderlige land med frugtbare marker og vingårde, du lovede os? Hvor er det blevet af? Tror du ikke, folk har øjne i hovedet? Vi vil ikke have noget med dig at gøre mere.”</para>
+  <para style="p">
+    <verse number="15" style="v"/>Da blev Moses meget vred, og han sagde til Herren: „Lad være med at anerkende deres røgelsesofre. Jeg har aldrig forurettet nogen af dem eller stjålet så meget som et æsel fra dem.”</para>
+  <para style="p">
+    <verse number="16" style="v"/>Derpå sagde han til Kora: „Husk nu at komme tilbage i morgen sammen med dine tilhængere, så I kan træde frem for Herren sammen med Aron. <verse number="17" style="v"/>Sørg for, at alle de 250 mænd kommer med hver deres røgelseskar. Du selv og Aron skal også komme med hver jeres røgelsesoffer.”</para>
+  <para style="p">
+    <verse number="18" style="v"/>Næste dags morgen kom de med deres røgelseskar med ild i. Efter at de havde lagt røgelse på, stillede de sig op sammen med Moses og Aron ved åbenbaringsteltets indgang. <verse number="19" style="v"/>I mellemtiden havde Kora fået en stor del af folket over på sin side, og nu stod de og ventede på, hvad der ville ske. Da viste Herrens herlighed sig for folket, <verse number="20" style="v"/>og Herren sagde til Moses og Aron: <verse number="21" style="v"/>„Træk jer væk fra dette folk, så jeg kan komme til at udrydde dem.”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Men Moses og Aron kastede sig ned for Herren med ansigtet mod jorden. „Åh Gud, du som er livets ophav,” bad de, „er det nødvendigt at slå hele folket ihjel på grund af en enkelt mands synd?”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Da svarede Herren: <verse number="24" style="v"/>„Så sig til folket, at de, der befinder sig i nærheden af Koras, Datans og Abirams telte, skal fjerne sig langt væk.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>Så skyndte Moses sig hen til Datans og Abirams telte, og folkets ledere fulgte i hælene på ham. <verse number="26" style="v"/>„Skynd jer at komme væk fra disse onde mænds telte,” advarede han de omkringstående. „I må ikke røre nogen af deres ejendele, for så mister I livet på grund af deres synd.”</para>
+  <para style="p">
+    <verse number="27" style="v"/>Folket trak sig skyndsomt væk fra Koras, Datans og Abirams telte. Datan og Abiram kom ud og stillede sig foran døren til deres telte sammen med deres koner og børn.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Da sagde Moses til folket: „Nu skal I få at se, at jeg ikke er en selvbestaltet leder iblandt jer, men at det er Herren, som har sendt mig, for at jeg skal udføre den opgave, han har givet mig. <verse number="29" style="v"/>Hvis disse mennesker dør en naturlig død som alle andre, så har Herren ikke udvalgt mig, <verse number="30" style="v"/>men hvis Herren griber ind og lader jorden åbne sig, så den opsluger dem sammen med deres ejendele, og de ryger direkte ned i dødsriget, så er det bevis på, at disse mænd har forhånet Herren.”</para>
+  <para style="p">
+    <verse number="31" style="v"/>Næppe var Moses færdig med at tale, før jorden revnede under dem <verse number="32" style="v"/>og åbnede sig som et vældigt gab, og gabet opslugte de oprørske mænd, deres familier og deres ejendele, <verse number="33" style="v"/>så de røg lige lukt ned i dødsriget. Jordens gab lukkede sig over dem, og dermed var de udryddet af folket. <verse number="34" style="v"/>Men israelitterne flygtede skrækslagne ved lyden af deres skrig. De var bange for at lide samme skæbne.</para>
+  <para style="p">
+    <verse number="35" style="v"/>I det samme fór der ild ud fra Herren og opbrændte de 250 mænd, der stod med deres røgelsesofre.</para>
+  <chapter number="17" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Da sagde Herren til Moses: <verse number="2" style="v"/>„Sig til præsten Eleazar, Arons søn, at han skal rage røgelseskarrene ud af ilden og smide den brændende røgelse væk. Disse røgelseskar er hellige, <verse number="3" style="v"/>også selv om de tilhørte oprørske mænd, der måtte dø for deres synd. Tag disse røgelseskar og sørg for, at de bliver hamret flade og brugt som beklædning på alteret. De er hellige, fordi de blev brugt i tjenesten for Herren. På alteret skal de tjene som en advarsel overfor israelitterne.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Så tog præsten Eleazar de 250 røgelseskar af bronze, hamrede dem ud til plader og beklædte alteret med dem. <verse number="5" style="v"/>Det blev en advarsel til Israels folk om, at ingen uindviede personer, der ikke var af Arons slægt, måtte brænde røgelse for Herren, for så ville det gå dem som Kora og hans tilhængere. Således blev den befaling, Herren havde givet Eleazar gennem Moses, ført ud i livet.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Men allerede næste dag begyndte folket igen at beklage sig overfor Moses og Aron: „Det er jer, vi kan takke for, at nogle af Herrens folk er blevet dræbt.”</para>
+  <para style="p">
+    <verse number="7-8" style="v"/>Mens folket gav luft for deres utilfredshed overfor Moses og Aron, kom Herrens herligheds sky pludselig til syne over åbenbaringsteltet, og Moses og Aron vendte sig og gik hen til indgangen.</para>
+  <para style="p">
+    <verse number="9-10" style="v"/>„Træk jer væk fra folket,” beordrede Herren dem, „så jeg kan komme til at udrydde dem.” Men Moses og Aron kastede sig ned med ansigtet mod jorden foran Herren. <verse number="11" style="v"/>Derefter sagde Moses til Aron: „Skynd dig hen til alteret med dit røgelseskar. Læg gløder fra alteret i det, kom røgelse ovenpå og bær det rundt blandt folket, så der kan skaffes soning for dem, for Herren har i sin vrede sendt en plage over folket.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Aron adlød Moses og skyndte sig rundt blandt folket for at skaffe dem soning, så den plage, der allerede var begyndt, kunne blive stoppet, <verse number="13" style="v"/>og da Aron stillede sig mellem de døde og de levende, standsede plagen. <verse number="14" style="v"/>Den dag døde 14.700 mennesker af plagen, ud over alle dem, der den foregående dag var døde sammen med Kora. <verse number="15" style="v"/>Da plagen var standset, vendte Aron tilbage til Moses ved åbenbaringsteltets indgang.</para>
+  <para style="s1">Arons blomstrende stav</para>
+  <para style="p">
+    <verse number="16" style="v"/>Da sagde Herren til Moses: <verse number="17" style="v"/>„Sig til Israels folk, at hver af de 12 stammeledere skal bringe dig en stav. Skriv så lederens navn på den stav, han kommer med. <verse number="18" style="v"/>Arons navn skal skrives på den stav, der repræsenterer Levis stamme. <verse number="19" style="v"/>Tag nu disse stave og læg dem foran pagtens ark i åbenbaringsteltet, hvorfra jeg kommunikerer med jer. <verse number="20" style="v"/>En af stavene vil sætte skud, og det vil vise jer, hvem jeg har udvalgt til at tjene mig. Sådan vil jeg lukke munden på israelitterne, så jeg kan blive fri for deres evindelige klager.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>Derefter fortalte Moses folket, hvad Herren havde sagt, og hver af de 12 stammeledere kom med deres stav. Også Arons stav var med i bunken. <verse number="22" style="v"/>Moses tog nu stavene og lagde dem for Herrens ansigt i det allerhelligste rum, <verse number="23" style="v"/>og næste dag, da han kom tilbage, så han, at Arons stav ikke blot havde sat skud, men havde sat blomster og nu bar modne mandler.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Moses tog stavene med sig ud til de ventende israelitter. De kiggede på dem, og lederne tog hver deres stav, <verse number="25-26" style="v"/>men Arons stav lagde Moses på Herrens befaling tilbage foran pagtens ark, for at den skulle være en påmindelse om folkets oprør og en advarsel om den dødsstraf, der ventede dem, hvis de igen satte sig op mod Moses og præsterne.</para>
+  <para style="p">
+    <verse number="27-28" style="v"/>Men folkets beklagelser var stadig ikke forbi. „Hvordan kan vi undgå at dø,” sagde de, „hvis der er dødsstraf for at komme i nærheden af Herrens bolig? Det er ude med os.”</para>
+  <chapter number="18" style="c"/>
+  <para style="s1">Præsternes og levitternes tjeneste</para>
+  <para style="p">
+    <verse number="1" style="v"/>Da sagde Herren til Aron: „Jeg har overdraget tjenesten ved helligdommen til levitterne. Det er deres ansvar, hvis der sker et lovbrud under tjenesten. Men præstetjenesten er overdraget til dig og dine efterkommere, og sker der noget galt der, er det jer, der bliver krævet til ansvar. <verse number="2" style="v"/>Levitterne skal hjælpe jer under præstetjenesten foran teltet med pagtens ark. <verse number="3" style="v"/>Men når de udfører deres arbejde, må de under ingen omstændigheder røre direkte ved nogen af de hellige ting eller ved alteret. Gør de det, skal de dø—og det skal I også. <verse number="4" style="v"/>Levitterne skal tage sig af åbenbaringsteltet og transportere det omkring, men ingen af de andre israelitter må hjælpe til med det arbejde.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Det er jer præster, som skal udføre tjenesten i selve helligdommen og ved alteret, så Israels folk ikke igen skal rammes af min vrede ved ikke at respektere præstetjenesten. <verse number="6" style="v"/>Jeg har udvalgt levitterne til at hjælpe jer under jeres præstetjeneste i åbenbaringsteltet. De er en gave til jer fra Herren. <verse number="7" style="v"/>Men du og dine efterkommere, som er mine præster, skal alene varetage altertjenesten. Det er kun jer, som har tilladelse til at gå ind bag forhænget til helligdommen, for I er mine præster. Enhver anden, der trænger ind i helligdommen, skal dø.”</para>
+  <para style="s1">Præsternes og levitternes underhold</para>
+  <para style="p">
+    <verse number="8" style="v"/>Herren sagde videre til Aron: „Jeg giver jer præster jeres del af de offergaver, som folket bringer til mig. Denne ordning skal gælde for altid. <verse number="9" style="v"/>I må få de dele af de hellige ofre, som ikke skal brændes på alteret, hvad enten det er afgrødeofre, syndofre eller skyldofre. <verse number="10" style="v"/>I skal spise dem på et helligt sted, men kun mændene må spise dem. <verse number="11" style="v"/>De offergaver, som svinges foran alteret, skal for altid tilhøre jer og jeres familier. Både mænd, kvinder og børn må spise af disse ofre—med undtagelse af dem, der er urene på det tidspunkt.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Det samme gælder for de høstofre, som folket bringer til mig—det første og bedste af deres olivenolie, nylavede vin, korn <verse number="13" style="v"/>og frugter. De ofre må alle jeres familiemedlemmer få del i—med undtagelse af dem, der er urene på det tidspunkt. <verse number="14" style="v"/>Alt hvad der tilhører mig, tilhører også jer. <verse number="15" style="v"/>Alt det førstefødte blandt mennesker og dyr tilhører mig, og skal derfor tilhøre jer. Dog skal israelitterne løskøbe de førstefødte sønner og det førstefødte blandt alle urene dyr. <verse number="16" style="v"/>I stedet for at bringe disse førstefødte sønner og urene dyr som offergaver, skal de en måned efter fødslen løskøbe dem med fem sølvstykker for hver.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Hvad de førstefødte blandt hornkvæget og småkvæget angår, kan de ikke løskøbes, men de skal ofres til mig. Deres blod skal stænkes på alteret, og deres fedt skal brændes som et lifligt offer til mig. <verse number="18" style="v"/>Men kødet skal tilhøre jer—ligesom brystet og det højre lårstykke, der svinges foran alteret, tilhører jer. <verse number="19" style="v"/>Alle de ofre, som folket bringer til mig ved at svinge dem foran alteret, skal tilhøre jer, og I og jeres familier må spise af dem. Dette er en permanent lov, en troskabspagt<note caller="+" style="f"><char style="fr" closed="false">18,19 </char><char style="ft" closed="false">På hebraisk en „saltpagt”.</char></note> mellem mig på den ene side og jer og jeres efterkommere på den anden side.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Herren sagde videre til Aron: „I præster må ikke eje jord eller anden ejendom i landet. Hvad der tilhører mig, tilhører også jer. <verse number="21" style="v"/>Men hvad levitterne angår, skal de modtage betaling for deres arbejde ved åbenbaringsteltet i form af den tiende, Israels folk bringer. De får nemlig heller ikke jord eller ejendom i landet.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Fra nu af skal israelitterne, med undtagelse af præsterne og levitterne, holde sig på afstand af åbenbaringsteltet. Gør de ikke det, skal de dø. <verse number="23" style="v"/>Levitterne skal gøre tjeneste ved åbenbaringsteltet og hjælpe præsterne, men de må ikke få del i landets jord. Det skal være en fast ordning som varer fra slægt til slægt. <verse number="24" style="v"/>I stedet for jord får de den tiende, som israelitterne bringer til mig.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>Herren sagde videre til Moses: <verse number="26" style="v"/>„Sig til levitterne, at en tiendedel af den tiende, de modtager fra israelitterne, skal de give videre til mig. <verse number="27-30" style="v"/>Det bliver deres ‚høstoffer’ og skal i mine øjne regnes på lige fod med de øvrige israelitters høstofre, der betales af det første korn fra tærskepladsen og den første vin, de producerer. Den skal bestå af den bedste del af de tiendegaver, som de modtager fra folket og denne tiende skal de overdrage til Aron som repræsentant for præsterne. <verse number="31-32" style="v"/>Så længe levitterne sørger for at bringe den bedste del af den tiende, de selv modtager, videre til præsterne, må de spise resten, hvor de vil, sammen med deres familier, uden derved at pådrage sig skyld. Det er deres løn for det arbejde, de udfører ved åbenbaringsteltet. Men hvis de overtræder denne lov, skal de dø.”</para>
+  <chapter number="19" style="c"/>
+  <para style="s1">Renselsesvandet</para>
+  <para style="p">
+    <verse number="1" style="v"/>Herren sagde til Moses og Aron: <verse number="2" style="v"/>„Jeg giver jer følgende lovregel: Sig til Israels folk, at de skal komme med en rød kvie, som er uden skavanker og aldrig har været spændt i åg. <verse number="3" style="v"/>Den skal overgives til præsten Eleazar, føres uden for lejren og slagtes, mens han ser på det. <verse number="4" style="v"/>Så skal præsten dyppe sin finger i blodet og stænke det syv gange i retning af åbenbaringsteltet, <verse number="5" style="v"/>hvorpå kvien skal brændes, mens han ser på det—både dens hud, kød, blod og indvolde skal brændes. <verse number="6" style="v"/>Og han skal tage noget cedertræ, nogle isopgrene og noget skarlagenrødt garn og kaste det ind i ilden, mens kvien brændes.</para>
+  <para style="p">
+    <verse number="7-8" style="v"/>Derefter skal både Eleazar og den mand, der brændte kvien, vaske deres tøj og bade, hvorefter de kan vende tilbage til lejren, men de er urene indtil aften. <verse number="9" style="v"/>En mand, som ikke er uren, skal derefter samle kviens aske op, så den kan opbevares på et dertil indviet sted uden for lejren. Asken skal bruges til at blande i det vand, der benyttes som renselsesvand, for kvien er et syndoffer. <verse number="10" style="v"/>Den mand, som samler kviens aske op, skal også vaske sit tøj, og han vil være uren indtil aften. Det her er en permanent lov, som skal gælde både for Israels folk og de fremmede, der bor iblandt dem.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Enhver, der rører ved et lig, er uren i syv dage. <verse number="12-13" style="v"/>På den tredje og den syvende dag skal de lade sig rense med vand, hvori der er blandet aske fra den røde kvie. Hvis de ikke på den måde bliver renset, forbliver de urene. De gør dermed min bolig uren, og de skal udryddes, fordi der ikke blev stænket renselsesvand på dem. De blev aldrig renset for deres synd.</para>
+  <para style="p">
+    <verse number="14" style="v"/>I tilfælde af at et menneske dør hjemme i sit telt, skal alle tilstedeværende og alle, der kommer ind i teltet, så længe den døde er der, være urene i syv dage. <verse number="15" style="v"/>Enhver beholder i teltet, der ikke er tildækket med klæde eller låg, bliver også uren.</para>
+  <para style="p">
+    <verse number="16" style="v"/>I tilfælde af at et menneske dør i krig, og nogen rører ved liget, mens det ligger på jorden, bliver vedkommende uren. Uanset hvad dødsårsagen er, gælder det samme: Den, der rører ved et lig, er uren i syv dage—ja, man bliver uren, bare man rører ved en knogle eller et gravsted.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Renselsesritualet for et menneske, der dør i sit telt, skal foregå på følgende måde: Først skal noget af asken fra den røde kvie, der blev bragt som syndoffer, drysses i en skål, og der skal hældes frisk vand over. <verse number="18" style="v"/>Derefter skal en person, der ikke selv er uren, tage en isopgren, dyppe den i vandet og stænke det på selve teltet, de ting, der er i teltet, og de personer, som var til stede. På samme måde skal der stænkes renselsesvand på de personer, der på anden vis har været i kontakt med knogler, lig eller gravsteder. <verse number="19" style="v"/>Dette ritual skal foretages på den tredje og den syvende dag, hvorefter de urene skal vaske deres tøj og bade. På den syvende aften er de så rene igen.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Men hvis de, der er urene, ikke ønsker at lade sig rense for deres synd, skal de udryddes, for de har gjort min helligdom uren. De blev aldrig renset. <verse number="21" style="v"/>Dette er en permanent ordning. Den, som stænker renselsesvand på den urene, bliver selv uren og skal vaske sit tøj og være uren indtil aften. Det samme gælder for dem, der på en eller anden måde kommer i berøring med renselsesvandet. <verse number="22" style="v"/>Alt hvad de urene rører ved bliver urent, og hvis nogen rører ved de urene ting, bliver de også urene indtil aften.”</para>
+  <chapter number="20" style="c"/>
+  <para style="s1">Moses slår på klippen i modstrid med Herrens befaling</para>
+  <para style="p">
+    <verse number="1" style="v"/>Det var i årets første måned,<note caller="+" style="f"><char style="fr" closed="false">20,1 </char><char style="ft" closed="false">Det vil sige i april hen imod slutningen af de 40 års ørkenvandring.</char></note> at Israels folk nåede frem til Zins ørken. Mens de lå i lejr ved Kadesh, døde Mirjam og blev begravet.</para>
+  <para style="p">
+    <verse number="2-3" style="v"/>Der var næsten ingen vand på stedet, og derfor begyndte folket igen at klage til Moses og Aron. „Gid vi var døde, dengang Herren slog en masse israelitter ihjel,” jamrede de. <verse number="4" style="v"/>„Hvorfor har I ført os ud i den her ørken? Var det bare, for at vi og vores dyr skulle dø? <verse number="5" style="v"/>Hvorfor overtalte I os til at forlade Egypten for at føre os ud til det her gudsforladte sted? Hvad er der blevet af det frugtbare land med korn, figner, druer og granatæbler, som I lovede os? Vi er ved at dø af tørst.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Da forlod Moses og Aron forsamlingen og gik hen til åbenbaringsteltets indgang, hvor de bøjede sig i støvet for Herren, og Herrens herlighed viste sig for dem.</para>
+  <para style="p">
+    <verse number="7-8" style="v"/>„Tag Arons stav og kald folket sammen,” sagde Herren til Moses. „Mens de alle ser på det, skal du tale til klippen og befale den at give vand. Så vil der strømme vand ud fra klippen, og der bliver rigeligt til både folket og dyrene.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Moses gjorde, som Herren havde sagt, og hentede staven fra dens plads foran pagtens ark. <verse number="10" style="v"/>Så kaldte han og Aron folket sammen rundt om klippen. „Se her, I oprørske mennesker!” råbte Moses. „Tror I, vi kan skaffe vand til jer fra denne klippe?” <verse number="11" style="v"/>Så løftede han staven og slog to gange på klippen, og vandet strømmede ud, så folket og dyrene kunne drikke, så meget de ville.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Men Herren sagde til Moses og Aron: „I havde åbenbart ikke tro nok til at gøre, nøjagtig som jeg sagde, og I tog tilmed selv æren over for folket. Jeg er en hellig Gud, som skal adlydes. Nu får I ikke æren af at føre folket ind i det land, jeg har lovet dem.”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Man kaldte stedet Meribas<note caller="+" style="f"><char style="fr" closed="false">20,13 </char><char style="fq" closed="false">Meriba </char><char style="ft" closed="false">betyder „skænderi, oprør”. Det er et andet sted end det Meriba, der omtales ved den tidligere episode i <char style="xt"><ref loc="EXO 17:7">2.Mos. 17,7</ref></char>, hvor Moses fik besked på at slå på en klippe.</char></note> vand, for her satte Israels folk sig igen op imod Herren, og her viste han dem, at man bliver straffet for at sætte sig op mod den hellige Gud.</para>
+  <para style="s1">Israelitterne får ikke lov at rejse gennem Edoms land</para>
+  <para style="p">
+    <verse number="14" style="v"/>Mens de opholdt sig ved Kadesh, sendte Moses bud til Edoms<note caller="+" style="f"><char style="fr" closed="false">20,14 </char><char style="ft" closed="false">„Edom” er et andet navn for Esau, Jakobs bror. Edomitterne boede øst for Zin ørkenen, syd for Det Døde Hav.</char></note> konge. Budskabet lød: „Dit broderfolk, israelitterne, sender hilsen. Du har hørt om alle de strabadser, vi har været igennem, <verse number="15" style="v"/>siden vores forfædre kom til Egypten og slog sig ned i landet, hvor de blev gjort til slaver. <verse number="16" style="v"/>Men i vores nød råbte vi til Herren, og han sendte sin engel for at befri os fra slaveriet i Egypten. For øjeblikket befinder vi os ved Kadesh ved grænsen til jeres land, <verse number="17" style="v"/>og vi beder om tilladelse til at rejse gennem landet. Vi skal nok gå uden om jeres marker og vingårde—ikke engang jeres brønde vil vi tage vand af. Vi lover at holde os til Kongevejen<note caller="+" style="f"><char style="fr" closed="false">20,17 </char><char style="ft" closed="false">„Kongevejen” var en berømt og ældgammel hovedfærdselsvej øst om Jordanfloden fra Etzjon-Geber mod syd (nuværende Eilat) til Damaskus mod nord. Den gik tværs gennem Edoms land fra syd til nord.</char></note> og ikke gå til nogen af siderne, så længe vi er i jeres land.”</para>
+  <para style="p">
+    <verse number="18" style="v"/>Men Edoms konge svarede: „Hold jer væk fra mit land, ellers sender jeg hæren imod jer.”</para>
+  <para style="p">
+    <verse number="19" style="v"/>„Jamen, vi lover at holde os til landevejen,” protesterede de israelitiske sendebud. „Vi lover også, at hvis nogen af os eller vores kvæg kommer til at drikke af jeres vand, betaler vi for det. Vi ønsker ikke at være til ulejlighed, men vil bare gerne have lov til at rejse igennem jeres land.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Men Edoms konge var ubøjelig. „I får ikke lov at rejse igennem mit land,” gentog han og gav befaling om at mobilisere hæren til at holde vagt ved grænsen. <verse number="21-22" style="v"/>Det blev afslutningen på den diskussion: Edomitternes konge holdt stædigt fast ved sit afslag, og derfor måtte Israels folk opgive at tage den vej.</para>
+  <para style="s1">Arons død</para>
+  <para style="p">
+    <verse number="23" style="v"/>Ved Hors bjerg nær ved grænsen til Edom sagde Herren til Moses og Aron: <verse number="24" style="v"/>„Tiden er kommet, hvor Aron skal dø. Han får ikke lov at komme ind i det land, jeg har lovet Israels folk, for I var begge ulydige imod mig ved Meribas vand.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Moses skal føre Aron og hans søn Eleazar op på Hors bjerg, <verse number="26" style="v"/>og dér skal han tage Arons præstedragt af ham og give hans søn Eleazar den på, hvorefter Aron skal dø.”</para>
+  <para style="p">
+    <verse number="27" style="v"/>Moses adlød Herren, og mens folket fulgte dem med øjnene, gik de tre mænd op på Hors bjerg. <verse number="28" style="v"/>Da de nåede toppen, tog Moses præstedragten af Aron og gav Eleazar den på, hvorefter Aron døde oppe på bjerget. Moses og Eleazar gik så ned igen, <verse number="29" style="v"/>og da folket hørte, at Aron var død, sørgede de over ham i 30 dage.</para>
+  <chapter number="21" style="c"/>
+  <para style="s1">Moses laver en kobberslange</para>
+  <para style="p">
+    <verse number="1" style="v"/>Da kongen af Arad i Negev hørte, at israelitterne kom op ad vejen mod Atarim, samlede han sin hær og angreb dem, og det lykkedes ham at tage en del af dem til fange. <verse number="2" style="v"/>Da lovede Israels folk højt og helligt Herren, at hvis han ville hjælpe dem med at besejre kongen af Arad og hans hær, ville de totalt udslette alle de kana’anæiske byer i området uden at tage noget bytte til sig selv. <verse number="3" style="v"/>Herren hørte deres bøn og gav dem sejr over kana’anæerne, så alle byerne og deres indbyggere blev udslettet. Stedet er siden kendt under navnet Horma.<note caller="+" style="f"><char style="fr" closed="false">21,3 </char><char style="ft" closed="false">Det hebraiske ord betyder „udslettelse” og henviser til noget, som er overgivet til Herrens dom.</char></note></para>
+  <para style="p">
+    <verse number="4" style="v"/>Derfra vendte israelitterne tilbage til Hors bjerg, hvorefter de fortsatte ad vejen mod Det Røde Hav i en bue uden om Edom. Men undervejs blev de utålmodige, <verse number="5" style="v"/>og de begyndte atter at kritisere både Gud og Moses. „Hvorfor førte du os ud af Egypten?” klagede de. „Var det for at lade os dø her i ørkenen? Her er jo hverken vand eller mad—og vi er trætte af den evindelige manna.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Da sendte Herren giftslanger imod dem, og mange blev bidt og døde.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Nu kom folket til Moses og sagde: „Vi har syndet ved at gøre oprør mod dig og Herren. Bed Herren om at fjerne slangerne fra os.” Da gik Moses i forbøn for folket, <verse number="8" style="v"/>og Herren sagde Moses: „Lav en slange af kobber<note caller="+" style="f"><char style="fr" closed="false">21,8 </char><char style="ft" closed="false">Eller: „bronze”. Hebraisk brugte det samme ord for kobber og bronze.</char></note> og hæng den op på en stang—så skal alle, som ser hen på den, leve, selvom de er blevet bidt af giftslangerne.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Så lavede Moses en kobberslange og satte den op på en stang. Og alle, som så hen på den, når de var blevet bidt af en slange, reddede livet.</para>
+  <para style="s1">Rejsen fortsætter uden om Edom gennem Moab</para>
+  <para style="p">
+    <verse number="10" style="v"/>Derefter rejste Israels folk videre og slog lejr ved Obot. <verse number="11" style="v"/>Fra Obot tog de til Ijje-ha-Abarim i ørkenen umiddelbart øst for Moab, <verse number="12" style="v"/>og videre til Zereddalen, hvor de igen slog lejr. <verse number="13" style="v"/>Fra Zereddalen rejste de videre mod nord til det øde område på den anden side af Arnonfloden ved grænsen til amoritternes land. Arnonfloden danner grænse mellem moabitterne og amoritterne. <verse number="14" style="v"/>„Bogen om Herrens krige” nævner byen Vaheb med dens bække i Sufaområdet i Arnonflodens kløft, <verse number="15" style="v"/>som strækker sig langs grænsen til Moab helt til byen Ar.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Derfra rejste israelitterne til Be’er.<note caller="+" style="f"><char style="fr" closed="false">21,16 </char><char style="ft" closed="false">Det betyder: „brønd”.</char></note> Det var ved dette vandsted, at Herren sagde til Moses: „Kald folket sammen, så vil jeg give dem vand.” <verse number="17-18" style="v"/>Episoden står beskrevet i følgende sang:</para>
+  <para style="q1">„Du ældgamle brønd, hvor kilden fremsprang,</para>
+  <para style="q2">vi viser vor glæde ved at synge en sang.</para>
+  <para style="q1">Denne brønd lod stormænd grave,</para>
+  <para style="q2">fyrster med scepter og herskerstave.”</para>
+  <para style="p">Så forlod de ørkenen og fortsatte gennem Mattana, <verse number="19" style="v"/>Nahaliel og Bamot <verse number="20" style="v"/>og videre gennem dalen i Moabs højland, hvorfra man kan se ørkenen og Pisgas bjergtinder længere borte.</para>
+  <para style="s1">Israelitterne besejrer kong Sihon og Kong Og</para>
+  <para style="p">
+    <verse number="21" style="v"/>Da sendte Israel følgende budskab til amoritterkongen Sihon: <verse number="22" style="v"/>„Giv os tilladelse til at rejse igennem dit land. Vi lover, at vi ikke vil nedtrampe jeres marker og vingårde eller drikke jeres vand, men holde os på Kongevejen, så længe vi er i jeres land.”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Men kong Sihon gav dem ikke lov. I stedet samlede han sin hær og rykkede ud mod israelitterne i ørkenen. Ved Jahatz mødtes de to hære, <verse number="24" style="v"/>og Israel huggede amoritterne ned. Derefter besatte de området fra Arnonfloden i syd til Jabbokfloden mod nord og ud til ammonitternes område mod øst, men ikke længere, for ammonitternes grænse var stærkt befæstet.</para>
+  <para style="p">
+    <verse number="25-26" style="v"/>Israelitterne indtog således amoritternes byer, og de slog sig ned i disse byer, også i Heshbon, kong Sihons residensby, og i området op til Arnonfloden, der tidligere havde tilhørt moabitterne, men som kong Sihon havde erobret. <verse number="27-30" style="v"/>Den gamle digter udtrykker det sådan:</para>
+  <para style="q1">„Kom til Heshbon, Sihons by</para>
+  <para style="q2">som nu bygges op på ny.</para>
+  <para style="q1">Ild fór ud fra Heshbon,</para>
+  <para style="q2">flammer skød frem fra Sihon.</para>
+  <para style="q1">Moabs byer gik op i røg,</para>
+  <para style="q2">Arnons fjelde, hver en høj.</para>
+  <para style="q1">Moabitter, nu er det forbi</para>
+  <para style="q2">med jeres Kemosh-afguderi.</para>
+  <para style="q1">Han sendte jo jer alle på flugt,</para>
+  <para style="q2">kvinder blev fanger—åh, hvor smukt!</para>
+  <para style="q1">Men vi erobred’ Heshbon,</para>
+  <para style="q2">indtog landet op til Dibon.</para>
+  <para style="q1">Vi dræbte dem helt til Nofa</para>
+  <para style="q2">som ligger tæt ved Medeba.”</para>
+  <para style="p">
+    <verse number="31-32" style="v"/>Mens Israels folk opholdt sig i amoritternes land, sendte Moses nogle spioner ud for at undersøge, hvordan han lettest kunne indtage byen Jazer. Derefter angreb de byen og de omkringliggende landsbyer, og amoritterne måtte flygte.</para>
+  <para style="p">
+    <verse number="33" style="v"/>Derefter satte de kursen nordpå mod Bashan, hvor kong Og straks mobiliserede sin hær og rykkede ud mod dem ved byen Edrei. <verse number="34" style="v"/>Men Herren sagde til Moses: „Du skal ikke være bange. Jeg vil udlevere kongen og hans hær og hans land til dig. Du skal gøre med ham, som du gjorde med amoritternes kong Sihon af Heshbon.” <verse number="35" style="v"/>Og ganske rigtigt: Israelitterne sejrede og dræbte kong Og, hans sønner og hans hær, så der ikke var en eneste overlevende tilbage. Således lykkedes det israelitterne at erobre hele området.</para>
+  <chapter number="22" style="c"/>
+  <para style="s1">Moabs konge søger hjælp fra Bileam</para>
+  <para style="p">
+    <verse number="1" style="v"/>Israelitterne brød op fra Bashan og tog sydpå igen. Da de nåede Moabs højslette øst for Jordanfloden over for Jeriko, slog de lejr der. <verse number="2-4" style="v"/>På det tidspunkt var Balak, en søn af Zippor, konge over Moab. Da han blev klar over, hvor talrige israelitterne var, og hvordan de havde udryddet amoritterne, blev både han og hans folk skrækslagne. Balak klagede sin nød til midjanitternes ledere: „Denne enorme menneskemængde vil gøre det fuldstændig af med os, som når en stor flok køer spiser græsset på marken rub og stub.”</para>
+  <para style="p">
+    <verse number="5-6" style="v"/>Derpå sendte Balak bud til Bileam, Beors søn, der boede i Petor<note caller="+" style="f"><char style="fr" closed="false">22,5-6 </char><char style="ft" closed="false">Tæt ved det sted, hvor Eufratfloden krydser den nuværende grænse mellem Tyrkiet og Syrien.</char></note> ved Eufratfloden, og bad ham komme og hjælpe. „Jeg er ved at blive rendt over ende af et mægtigt folk, der kommer fra Egypten,” forklarede han. „Skynd dig! Kom og forband dette folk, så jeg kan få held til at jage dem ud af landet. Jeg ved jo, at den du velsigner, er velsignet, og at den, du forbander, er forbandet.”</para>
+  <para style="p">
+    <verse number="7" style="v"/>Kong Balaks sendebud, nogle af de mest betroede moabitiske og midjanitiske ledere, havde penge med for at betale Bileam for hans tjeneste. Da de nåede frem, satte de straks Bileam ind i situationen. <verse number="8" style="v"/>„Bliv her i nat,” sagde Bileam, „så skal jeg i morgen fortælle jer, hvad Herren til den tid har sagt til mig.” Så blev de der natten over.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Samme nat viste Gud sig for Bileam og spurgte: „Hvem er de mænd, der er hos dig?” <verse number="10" style="v"/>„De kommer fra kong Balak af Moab,” svarede han. <verse number="11" style="v"/>„Kongen siger, at et mægtigt folk fra Egypten er på vej mod hans land, og han har bedt mig komme og forbande dem, så han kan få held til at besejre dem.” <verse number="12" style="v"/>„Følg ikke med dem,” sagde Gud. „Du må ikke forbande dem, for jeg har velsignet dem.”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Næste morgen sagde Bileam til sendebudene: „I må hellere vende hjem, for Herren siger, at jeg ikke må følge med jer.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>Sendebudene vendte så tilbage til kong Balak med uforrettet sag. <verse number="15" style="v"/>Men Balak gav ikke op. Han sendte endnu flere af sine mest betroede ledere af sted. <verse number="16-17" style="v"/>Da de nåede frem, sagde de: „Kong Balak beder dig inderligt om at komme. Han lover dig store æresbevisninger og en god betaling. Ja, han vil give dig hvad som helst, du forlanger—bare du vil komme og forbande disse mennesker.” <verse number="18" style="v"/>Men Bileam svarede: „Om han så giver mig et helt palads fuldt af guld og sølv, har jeg ikke magt til at handle imod Herren min Guds vilje. <verse number="19" style="v"/>Men bliv her i nat—så skal jeg finde ud af, om Herren har noget at tilføje til det, han allerede har sagt.” <verse number="20" style="v"/>Samme nat sagde Gud til Bileam: „Når du er så opsat på at følge med disse mænd, så gør det bare—men du må ikke gøre andet end det, jeg siger til dig.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>Næste morgen sadlede Bileam sit æsel og fulgte med sendebudene tilbage. <verse number="22" style="v"/>Men Gud var vred over, at Bileam var så forhippet på at tage af sted—og derfor sendte han en engel i forvejen for at blokere vejen. Da Bileam og hans to tjenere nu kom ridende, <verse number="23" style="v"/>fik Bileams æsel pludselig øje på Herrens engel, der stod på vejen med draget sværd. Æslet drejede straks fra vejen og gik ind over marken, men Bileam slog æslet og tvang det tilbage på vejen. <verse number="24" style="v"/>Så stillede Herrens engel sig længere fremme på et sted, hvor vejen løb mellem to vingårdsmure. <verse number="25" style="v"/>Da æslet så englen, der blokerede vejen, prøvede det at klemme sig forbi langs muren, og Bileams ene fod kom i klemme. Endnu en gang slog han på æslet. <verse number="26" style="v"/>Herrens engel stillede sig nu længere fremme på vejen på et sted, der var så snævert, at æslet umuligt kunne komme uden om englen. <verse number="27" style="v"/>Så lagde æslet sig ned på vejen.</para>
+  <para style="p">Nu blev Bileam rasende. Han slog æslet værre end før, <verse number="28" style="v"/>men i det samme gav Herren æslet mund og mæle. „Hvad har jeg gjort, siden du nu har slået mig tre gange?” sagde æslet. <verse number="29" style="v"/>„Du har gjort mig til grin,” hvæsede Bileam. „Hvis jeg havde haft mit sværd med mig, havde jeg slået dig ihjel på stedet.” <verse number="30" style="v"/>„Du kender min trofasthed,” fortsatte æslet. „Har jeg før været ulydig imod dig?” „Nej,” indrømmede Bileam.</para>
+  <para style="p">
+    <verse number="31" style="v"/>I det samme åbnede Herren Bileams øjne, så han fik øje på englen, der stod med draget sværd på vejen. Da kastede Bileam sig til jorden. <verse number="32" style="v"/>„Hvorfor slog du dit eget æsel så voldsomt?” spurgte englen. „Det var jo mig, der stod i vejen for at standse dig, fordi du var mere opsat på at gøre din egen vilje end Guds vilje. <verse number="33" style="v"/>Tre gange så æslet mig og veg tilbage. Det blev din redning, for var det ikke sket, havde jeg for længst slået dig ihjel og ladet æslet leve.”</para>
+  <para style="p">
+    <verse number="34" style="v"/>Da indrømmede Bileam: „Jeg har syndet. Jeg vidste ikke, at det var dig, der forsøgte at standse mig. Jeg vil straks vende om, hvis jeg har handlet forkert.” <verse number="35" style="v"/>Herrens engel svarede: „Følg bare med mændene, men du må kun sige det, jeg giver dig lov til at sige.” Så fortsatte Bileam rejsen.</para>
+  <para style="p">
+    <verse number="36" style="v"/>Da kong Balak fik at vide, at Bileam var på vej, forlod han byen og gik ham i møde ved landegrænsen langs Arnonfloden. <verse number="37" style="v"/>„Hvorfor kom du ikke med det samme, da jeg sendte bud efter dig?” spurgte han Bileam. „Tror du ikke, jeg har råd til at belønne dig rigeligt?” <verse number="38" style="v"/>„Nu er jeg her,” svarede Bileam. „Men jeg kan ikke sige andet end det, Gud giver mig lov at sige.” <verse number="39" style="v"/>Så fulgte Bileam med kongen til Kirjat-Hutzot, <verse number="40" style="v"/>hvor kong Balak ofrede køer og får og gav noget af kødet til Bileam og hans ledsagere. <verse number="41" style="v"/>Næste morgen førte Balak så Bileam op på toppen af Bamot-Ba’al, hvorfra de kunne se ud over hele<note caller="+" style="f"><char style="fr" closed="false">22,41 </char><char style="ft" closed="false">På hebraisk: den „yderste” eller „sidste” del, dvs. i hele sin udstrækning</char></note> det israelitiske folk.</para>
+  <chapter number="23" style="c"/>
+  <para style="s1">Bileam velsigner israelitterne</para>
+  <para style="p">
+    <verse number="1" style="v"/>Da sagde Bileam til kongen: „Byg syv altre her og bring mig syv tyre og syv væddere.” <verse number="2" style="v"/>Balak adlød, hvorefter de i fællesskab ofrede en tyr og en vædder på hvert af de syv altre.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Bileam sagde nu til kongen: „Bliv stående her ved dine brændofre, så vil jeg gå hen og prøve at få Herren i tale. Bagefter skal jeg fortælle dig, hvad Herren siger.” Så gik han op på en nøgen klippetop, <verse number="4" style="v"/>og Herren mødte ham dér. Bileam sagde til Herren: „Jeg har bygget syv altre og ofret en tyr og en vædder på hvert alter.” <verse number="5" style="v"/>Da gav Herren Bileam et budskab til kong Balak.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Så vendte Bileam tilbage til kongen, der stod ved sine brændofre sammen med de moabitiske ledere. <verse number="7" style="v"/>Det budskab, Herren havde givet ham, lød som følger:</para>
+  <para style="q1">„Fra Aram lod Balak mig hente,</para>
+  <para style="q2">han sendte bud fra østlandets bjerge:</para>
+  <para style="q1">‚Kom og forband Jakob,</para>
+  <para style="q2">nedkald Guds vrede over Israel.’</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Kan jeg mon forbande, når Gud ikke vil,</para>
+  <para style="q2">nedkalde vrede, uden at Herren er vred?</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Jeg ser dem fra min udkigspost,</para>
+  <para style="q2">fra bjergene skuer mit øje dem:</para>
+  <para style="q1">De er et udvalgt folk,</para>
+  <para style="q2">udskilt fra andre nationer.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Jakobs slægt kan ikke tælles,</para>
+  <para style="q2">Israels folk er som sand på stranden.</para>
+  <para style="q1">Det er et gudfrygtigt folk,</para>
+  <para style="q2">gid jeg må leve og dø som dem.”</para>
+  <para style="p">
+    <verse number="11" style="v"/>„Hvad i alverden er det, du siger?” udbrød kong Balak. „Bad jeg dig ikke om at forbande mine fjender? Hvorfor velsigner du dem så i stedet for?”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Bileam svarede: „Kan jeg gøre andet end at gentage, hvad Herren har sagt til mig?”</para>
+  <para style="p">
+    <verse number="13" style="v"/>„Nuvel,” sagde Balak, „følg med hen til et andet sted, hvor vi kun kan se en mindre del af folket. Dem kan du i det mindste forbande for mig.” <verse number="14" style="v"/>Så førte Balak ham op til udkigsstedet på toppen af Pisgas bjerg. Her byggede han igen syv altre og ofrede en tyr og en vædder på hvert alter.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Derefter sagde Bileam til kongen: „Bliv stående her ved dit brændoffer, mens jeg går hen og prøver at få Herren i tale.” <verse number="16" style="v"/>Da talte Herren til Bileam og gav ham et budskab til Balak, <verse number="17" style="v"/>hvorpå Bileam vendte tilbage til kongen og de moabitiske ledere, der stod rundt om altrene.</para>
+  <para style="p">„Nå, hvad sagde Herren så?” spurgte kongen ivrigt. <verse number="18" style="v"/>Bileam svarede:</para>
+  <para style="q1">„Hør godt efter, kong Balak,</para>
+  <para style="q2">spids dine ører, Zippors søn.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Gud er ikke som mennesker, der lyver,</para>
+  <para style="q2">han skifter ikke mening, som vi gør.</para>
+  <para style="q1">Når han siger noget, så gør han det.</para>
+  <para style="q2">Han holder, hvad han lover.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Når han har befalet at velsigne,</para>
+  <para style="q2">kan jeg ikke andet end velsigne.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>I Jakobs lejr lider man ingen nød,</para>
+  <para style="q2">ingen ulykke rammer Israels folk.</para>
+  <para style="q1">For Herren, deres Gud, er med dem,</para>
+  <para style="q2">de hylder ham som deres konge.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Gud førte dem ud af Egypten,</para>
+  <para style="q2">han gav dem styrke som en vildokse.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Forbandelser preller af på Jakob,</para>
+  <para style="q2">trolddom har ingen magt over Israel.</para>
+  <para style="q1">Nu siger folkeslagene om Israel:</para>
+  <para style="q2">‚Se, hvad Gud har gjort for sit folk.’</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Det er et folk, der rejser sig som en løve,</para>
+  <para style="q2">som en hanløve, der jager sit bytte.</para>
+  <para style="q1">De hviler sig først, efter at de har spist,</para>
+  <para style="q2">og når de har drukket de dræbtes blod.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>Da udbrød kong Balak: „Hvis du ikke vil forbande dem, så kunne du i det mindste lade være med at velsigne dem.” <verse number="26" style="v"/>„Kan jeg gøre andet end at gentage, hvad Herren har sagt til mig?” svarede Bileam. <verse number="27" style="v"/>„Nuvel,” sagde Balak, „følg med hen til et tredje sted. Måske Gud går med til, at du forbander dem fra det sted.”</para>
+  <para style="p">
+    <verse number="28" style="v"/>Så førte kong Balak ham op på toppen af Peors bjerg, hvorfra de kunne se ud over ørkenen, <verse number="29" style="v"/>og Bileam opfordrede igen kongen til at bygge syv altre og tilberede syv tyre og syv væddere som brændofre. <verse number="30" style="v"/>Kongen adlød Bileam og ofrede en tyr og en vædder på hvert alter.</para>
+  <chapter number="24" style="c"/>
+  <para style="s1">Bileams sidste budskaber</para>
+  <para style="p">
+    <verse number="1" style="v"/>Nu stod det klart for Bileam, at Herren ønskede at velsigne Israel. Derfor gik han ikke afsides som før for at få Herren i tale. I stedet kastede han et blik ud over ørkenen, <verse number="2" style="v"/>hvor folket havde slået lejr stamme for stamme. Da kom Guds Ånd over ham, <verse number="3" style="v"/>og han kom med følgende budskab:</para>
+  <para style="q1">„Således siger Bileam, Beors søn,</para>
+  <para style="q2">manden, der ser med lukkede øjne,</para>
+  <para style="q1">
+    <verse number="4" style="v"/>manden, som hører Guds stemme,</para>
+  <para style="q2">kender den Højestes hemmeligheder,</para>
+  <para style="q1">manden, som skuer syner fra den Almægtige,</para>
+  <para style="q2">hensunket med sit indre øje vidt åbent:</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Hvor er dine telte smukke, Israel,</para>
+  <para style="q2">dine boliger er skønne at se på.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Som frodige planter i en frugtbar dal,</para>
+  <para style="q2">som velvandede haver ved flodens bred,</para>
+  <para style="q1">som agaver, plantet af Herren selv,</para>
+  <para style="q2">som cedertræer, plantet ved vandløb.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Vand har de i overflod,</para>
+  <para style="q2">rigeligt til at vande deres korn.</para>
+  <para style="q1">Deres konge er mægtigere end Agag,</para>
+  <para style="q2">hans kongerige uden sidestykke.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Gud førte dem ud af Egypten,</para>
+  <para style="q2">han gav dem styrke som vildoksen.</para>
+  <para style="q1">De opæder de folk, som står dem i vejen,</para>
+  <para style="q2">skyder dem med pile, knuser deres knogler.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Som en sejrende løve lægger de sig til ro.</para>
+  <para style="q2">Hvem vover at vække deres vrede?</para>
+  <para style="q1">Velsignet er den, der velsigner dig.</para>
+  <para style="q2">Forbandet er den, der forbander dig.”</para>
+  <para style="p">
+    <verse number="10" style="v"/>Kong Balak blev nu så rasende på Bileam, at han knyttede næverne og skreg: „Jeg sendte bud efter dig, for at du skulle forbande mine fjender, og i stedet har du nu velsignet dem tre gange! <verse number="11" style="v"/>Nu kan det være nok! Forsvind med dig. Rejs hjem til dit eget land. Jeg havde tænkt at lønne dig rigeligt, men det har Herren nu forhindret.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Bileam svarede: „Jeg fortalte for længst dine sendebud, <verse number="13" style="v"/>at om du så gav mig et helt palads fuldt af guld og sølv, kunne jeg ikke modsætte mig Herrens vilje eller lave om på den. Jeg sagde udtrykkeligt, at jeg ikke kunne sige andet end det, Herren gav mig at sige. <verse number="14" style="v"/>Ja, nu vil jeg vende hjem til mit folk, men først vil jeg lade dig vide, hvad dette folk skal gøre ved dit folk i tiden, der kommer.”</para>
+  <para style="p">
+    <verse number="15" style="v"/>Og Bileam fremkom med følgende profeti:</para>
+  <para style="q1">„Således siger Bileam, Beors søn,</para>
+  <para style="q2">manden, der ser med lukkede øjne,</para>
+  <para style="q1">
+    <verse number="16" style="v"/>manden, som hører Guds stemme,</para>
+  <para style="q2">og kender den Højestes hemmeligheder,</para>
+  <para style="q1">manden, som skuer syner fra den Almægtige,</para>
+  <para style="q2">hensunket med sit indre øje vidt åbent:</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Jeg ser ham komme—dog ikke endnu.</para>
+  <para style="q2">Jeg skuer ham i det fjerne.</para>
+  <para style="q1">En stjerne stiger op fra Jakob,</para>
+  <para style="q2">en konge fremstår fra Israel.</para>
+  <para style="q1">Han knuser begge Moabs flanker,</para>
+  <para style="q2">tilintetgør alle Sets sønner.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Edom bliver underlagt Israel,</para>
+  <para style="q2">Seirs land bliver dets ejendom.</para>
+  <para style="q1">Israel skal vokse sig stærk,</para>
+  <para style="q2">Guds folk skal kue sine fjender.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>En hersker skal fremstå fra Jakob,</para>
+  <para style="q2">han udrydder de overlevende i byen.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Da vendte Bileam sig mod amalekitternes land og fortsatte:</para>
+  <para style="q1">„Først var amalekitterne en stormagt,</para>
+  <para style="q2">men de går undergangen i møde til sidst.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>Derefter vendte han sig i retning af kenitternes land og sagde:</para>
+  <para style="q1">„Du stoler på din stærke borg,</para>
+  <para style="q2">din rede er bygget på bjergets top.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Men jeres land bliver ødelagt,</para>
+  <para style="q2">når assyrerne fører jer bort i eksil.”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Bileams sidste budskab lød:</para>
+  <para style="q1">„Hvem kan bestå, når Gud sender sin hær?</para>
+  <para style="q2">
+    <verse number="24" style="v"/>Skibe skal komme fra grækernes<note caller="+" style="f"><char style="fr" closed="false">24,24 </char><char style="ft" closed="false">På hebraisk: <char style="tl">kittim</char> eller „kittæerne”. Det henviser til et folk, som først slog sig ned på Cypern, men senere bredte sig til andre kyststrækninger i det østlige Middelhav. Se <char style="xt"><ref loc="GEN 10:4">1.Mos. 10,4</ref></char>.</char></note> kyst,</para>
+  <para style="q1">de kuer både assyrerne og hebræerne.<note caller="+" style="f"><char style="fr" closed="false">24,24 </char><char style="ft" closed="false">På hebraisk: <char style="tl">Eber</char>. Det var en søn af Sem og stamfar til Abraham. Se <char style="xt"><ref loc="GEN 10:21">1.Mos. 10,21</ref> og <ref loc="1CH 1:24-27">1.Krøn. 1,24-27</ref></char>.</char></note></para>
+  <para style="q2">Men derefter går de selv til grunde.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>Så skiltes Bileam og kong Balak og drog hver til sit.</para>
+  <chapter number="25" style="c"/>
+  <para style="s1">Israelitternes utroskab</para>
+  <para style="p">
+    <verse number="1" style="v"/>Mens israelitterne lå i lejr i Shittim,<note caller="+" style="f"><char style="fr" closed="false">25,1 </char><char style="ft" closed="false">På hebraisk betyder ordet „Akacietræer”, og det er navnet på en by øst for Jordanfloden på højde med Jeriko.</char></note> syndede nogle af de unge mænd ved at ligge med moabitiske piger. <verse number="2" style="v"/>Det skete ved, at pigerne inviterede dem med til de fester, de holdt for deres afguder, og det førte til, at mændene ikke bare spiste afgudsofferkød, men deltog åbenlyst i afgudsdyrkelsen med dertil hørende utugt.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Inden længe begyndte mange af israelitterne at dyrke moabitternes gud, Ba’al-Peor. Da sendte Herren i sin vrede en plage over folket, <verse number="4" style="v"/>og han sagde til Moses: „Kald folkets ledere sammen og lad alle de ansvarlige blive henrettet og hængt op i solen foran mit telt, så min vrede ikke skal udslette hele folket.” <verse number="5" style="v"/>Så gav Moses folkets ledere følgende besked: „De af jeres folk, der er begyndt at dyrke Ba’al-Peor, skal I henrette.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>En af de israelitiske mænd var fræk nok til at tage en af de midjanitiske piger med ind i sit telt nær ved midten af lejren, hvor Moses og folket stod grædende og sørgede foran indgangen til åbenbaringsteltet. <verse number="7" style="v"/>En ung mand ved navn Pinehas, søn af ypperstepræsten Eleazar, opdagede det, sprang op, greb et spyd <verse number="8" style="v"/>og fulgte efter dem ind i teltet, hvor han jog spyddet gennem mandens krop og ind i pigens mave. Da standsede plagen, <verse number="9" style="v"/>som indtil da havde kostet 24.000 mennesker livet.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Herren sagde nu til Moses: <verse number="11" style="v"/>„Du kan takke Pinehas for at plagen standsede, for han forstod min harme og afværgede, at min vrede gjorde yderligere indhug iblandt jer. <verse number="12-13" style="v"/>Fordi han handlede i nidkærhed for Gud, og fordi han derved skaffede soning for Israels folk, lover jeg ham og hans efterkommere, at de altid skal være mine præster.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>Den mand, som blev dræbt sammen med den midjanitiske pige, hed Zimri. Han var søn af Salu, som var en af lederne i Simeons stamme. <verse number="15" style="v"/>Pigens navn var Kozbi. Hun var datter af en midjanitisk fyrste ved navn Zur.</para>
+  <para style="p">
+    <verse number="16-17" style="v"/>„Du skal udrydde midjanitterne,” sagde Herren til Moses, <verse number="18" style="v"/>„for de forførte jer ved at lokke jer bort fra mig og få jer til at dyrke deres afguder i stedet. Det, der skete med Kozbi, som døde den dag, plagen brød løs på grund af Ba’al-Peor, er et eksempel på, hvad der vil ske med hele det midjanitiske folk.”</para>
+  <para style="s1">Moses afholder en ny folketælling</para>
+  <para style="p">
+    <verse number="19" style="v"/>Efter at plagen var standset,</para>
+  <chapter number="26" style="c"/>
+  <para style="nb">
+    <verse number="1" style="v"/>sagde Herren til Moses og præsten Eleazar, Arons søn: <verse number="2" style="v"/>„Lav en optælling over samtlige israelitiske mænd over 20 år, så I ved, hvor mange våbenføre mænd hver enkelt stamme og slægt kan bidrage med.” <verse number="3-4" style="v"/>Så optalte Moses og Eleazar folket, mens de lå i lejr på Moabs sletter ved Jordanfloden over for Jeriko. Her følger resultatet af denne anden mønstring, stamme for stamme, slægt for slægt:</para>
+  <para style="p">
+    <verse number="5" style="v"/>Først Rubens stamme (Ruben var jo Jakobs førstefødte søn): Stammen bestod af følgende slægter, opkaldt efter Rubens sønner: hanokitterne opkaldt efter Hanok; palluitterne opkaldt efter Pallu; <verse number="6" style="v"/>hesronitterne opkaldt efter Hesron; karmitterne opkaldt efter Karmi. <verse number="7" style="v"/>Fra Rubens slægter mønstredes der 43.730 våbenføre mænd.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Eliab, der var søn af Pallu, <verse number="9" style="v"/>havde tre sønner: Nemuel, Datan og Abiram. Det var Datan og Abiram, der sammen med Kora gjorde oprør imod Moses og Aron—ja, imod Herren selv. <verse number="10" style="v"/>Derfor åbnede jorden sit gab og opslugte dem, så de sammen med de 250 mænd, der blev brændt op af Herrens ild, blev til skræk og advarsel for hele folket. <verse number="11" style="v"/>Koras slægt uddøde dog ikke.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Dernæst Simeons stamme, som bestod af følgende slægter, opkaldt efter Simeons sønner: nemuelitterne opkaldt efter Nemuel; jaminitterne opkaldt efter Jamin; jakinitterne opkaldt efter Jakin; <verse number="13" style="v"/>zerahitterne opkaldt efter Zerach; shaulitterne opkaldt efter Shaul. <verse number="14" style="v"/>Fra Simeons slægter mønstredes i alt 22.200 mand.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Gads stamme bestod af følgende slægter, opkaldt efter Gads sønner: zefonitterne opkaldt efter Zefon; haggitterne opkaldt efter Haggi; shunitterne opkaldt efter Shuni; <verse number="16" style="v"/>oznitterne opkaldt efter Ozni; eritterne opkaldt efter Eri; <verse number="17" style="v"/>aroditterne opkaldt efter Arod; arelitterne opkaldt efter Areli. <verse number="18" style="v"/>Fra Gads slægter i alt 40.500 mand.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Dernæst Judas stamme: Judas sønner Er og Onan, der døde i Kana’an, er ikke medregnet. <verse number="20" style="v"/>Stammens slægter er opkaldt efter Judas øvrige sønner: shelanitterne opkaldt efter Shela; peretzitterne opkaldt efter Peretz; zerahitterne opkaldt efter Zerach. <verse number="21" style="v"/>Peretzitterne var yderligere opdelt i hesronitterne, opkaldt efter Hesron, og hamulitterne, opkaldt efter Hamul, begge sønner af Peretz. <verse number="22" style="v"/>Fra Judas slægter i alt 76.500 mand.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Issakars stamme bestod af følgende slægter, opkaldt efter Issakars sønner: tolaitterne opkaldt efter Tola; punitterne opkaldt efter Pua; <verse number="24" style="v"/>jashubitterne opkaldt efter Jashub; shimronitterne opkaldt efter Shimron. <verse number="25" style="v"/>Fra Issakars slægter i alt 64.300 mand.</para>
+  <para style="p">
+    <verse number="26" style="v"/>Zebulons stamme bestod af følgende slægter, opkaldt efter Zebulons sønner: sereditterne opkaldt efter Sered; elonitterne opkaldt efter Elon; jale’elitterne opkaldt efter Jale’el. <verse number="27" style="v"/>Fra Zebulons slægter i alt 60.500 mand.</para>
+  <para style="p">
+    <verse number="28" style="v"/>To stammer udsprang fra Josefs to sønner: Manasse og Efraim. <verse number="29" style="v"/>Manasses stamme bestod af makiritterne, opkaldt efter Manasses søn Makir, og gileaditterne, opkaldt efter Makirs søn Gilead. <verse number="30" style="v"/>Gileaditterne var opdelt i følgende slægter: iezritterne opkaldt efter Iezer; helekitterne opkaldt efter Helek; <verse number="31" style="v"/>asrielitterne opkaldt efter Asriel; shekemitterne opkaldt efter Shekem; <verse number="32" style="v"/>shemidaitterne opkaldt efter Shemida; heferitterne opkaldt efter Hefer. <verse number="33" style="v"/>Hefers søn Zelofhad havde ingen sønner, men fem døtre ved navn Mala, Noa, Hogla, Milka og Tirtza. <verse number="34" style="v"/>Fra Manasses slægter var der i alt 52.700 mand.</para>
+  <para style="p">
+    <verse number="35" style="v"/>Efraims stamme bestod af følgende slægter, opkaldt efter Efraims sønner: shutelaitterne opkaldt efter Shutela; bekeritterne opkaldt efter Beker; tahanitterne opkaldt efter Tahan. <verse number="36" style="v"/>Shutela fik sønnen Eran, hvorfra eranitterne stammer. <verse number="37" style="v"/>Fra Efraims slægter var der i alt 32.500 mand.</para>
+  <para style="p">
+    <verse number="38" style="v"/>Benjamins stamme bestod af følgende slægter, opkaldt efter Benjamins sønner: belaitterne opkaldt efter Bela; ashbelitterne opkaldt efter Ashbel; ahiramitterne opkaldt efter Ahiram; <verse number="39" style="v"/>shufamitterne opkaldt efter Shufam; hufamitterne opkaldt efter Hufam. <verse number="40" style="v"/>Bela fik sønnerne Ard og Na’aman, hvorfra arditterne og na’amitterne stammer. <verse number="41" style="v"/>Fra Benjamins slægter var der i alt 45.600 mand.</para>
+  <para style="p">
+    <verse number="42-43" style="v"/>Dans stamme bestod af shuhamitterne, opkaldt efter Shuham,<note caller="+" style="f"><char style="fr" closed="false">26,42-43 </char><char style="ft" closed="false">Også kaldet Hushim, se <char style="xt"><ref loc="GEN 46:23">1.Mos. 46,23</ref></char>.</char></note> Dans søn. Fra Dans stamme var der 64.400 mand.</para>
+  <para style="p">
+    <verse number="44" style="v"/>Ashers stamme bestod af følgende slægter, opkaldt efter Ashers sønner: jimnitterne opkaldt efter Jimna; jishvitterne opkaldt efter Jishvi; beriaitterne opkaldt efter Beria. <verse number="45" style="v"/>Følgende slægter stammer fra Berias sønner Heber og Malkiel: heberitterne og malkielitterne. <verse number="46" style="v"/>Asher havde en datter ved navn Sera. <verse number="47" style="v"/>Fra Ashers slægter var der i alt 53.400 mand.</para>
+  <para style="p">
+    <verse number="48" style="v"/>Naftalis stamme bestod af følgende slægter, opkaldt efter Naftalis sønner: jahtze’elitterne opkaldt efter Jahtze’el; gunitterne opkaldt efter Guni; <verse number="49" style="v"/>jetzeritterne opkaldt efter Jetzer; shillemitterne opkaldt efter Shillem. <verse number="50" style="v"/>Fra Naftalis slægter i alt 45.400 mand.</para>
+  <para style="p">
+    <verse number="51" style="v"/>Det samlede antal våbenføre israelitiske mænd over 20 år var altså 601.730.</para>
+  <para style="p">
+    <verse number="52-54" style="v"/>Derefter sagde Herren til Moses: „Du skal fordele landet mellem stammerne i forhold til stammernes størrelse, således at de store stammer vil få et stort landområde, og de mindre stammer vil få et mindre landområde. <verse number="55" style="v"/>Der skal kastes lod om rækkefølgen af fordelingen mellem stammerne. <verse number="56" style="v"/>Nogle vil få et stort område, andre et mindre område, alt sammen ved lodkastning.”</para>
+  <para style="p">
+    <verse number="57" style="v"/>Levis stamme bestod af følgende slægter: gershonitterne opkaldt efter Gershon; kehatitterne opkaldt efter Kehat; meraritterne opkaldt efter Merari. <verse number="58-59" style="v"/>Under dem hørte følgende slægter: libnitterne, hebronitterne, mahlitterne, mushitterne og koraitterne.</para>
+  <para style="p">En af Kehats efterkommere hed Amram, som i Egypten blev gift med Jokebed af Levis stamme, hvorefter hun fødte Aron, Moses og Mirjam. <verse number="60" style="v"/>Aron fik sønnerne Nadab, Abihu, Eleazar og Itamar. <verse number="61" style="v"/>Nadab og Abihu døde, fordi de bragte et røgelsesoffer, der var i modstrid med Herrens befalinger.</para>
+  <para style="p">
+    <verse number="62" style="v"/>Det samlede antal levitter af hankøn fra en måned og opefter var 23.000. Levitterne blev imidlertid ikke regnet med i folketællingen, for de fik ikke arvelod i landet sammen med de øvrige stammer.</para>
+  <para style="p">
+    <verse number="63" style="v"/>Det var så resultatet af den folketælling, som Moses og præsten Eleazar holdt på Moabs sletter ved Jordanfloden over for Jeriko. <verse number="64-65" style="v"/>Ikke en eneste af alle disse mennesker var med i den første folketælling, som Moses og præsten Aron havde foretaget i Sinaiørkenen; alle, der havde været med i den første optælling, var døde i mellemtiden, sådan som Herren havde sagt: „De skal alle dø i ørkenen.” De eneste, der var tilbage fra dengang, var Kaleb og Josva.</para>
+  <chapter number="27" style="c"/>
+  <para style="p">
+    <verse number="1-2" style="v"/>En dag, hvor israelitterne og deres ledere var forsamlet ved åbenbaringsteltets indgang, kom Zelofhads døtre med en forespørgsel til Moses, Eleazar, og stammelederne. Disse fem søstre hed Mala, Noa, Hogla, Milka og Tirtza, og de hørte til Manasses, Josefs søns, stamme. Deres far, Zelofhad, var fra heferitternes slægt. Hefer var søn af Gilead, som var søn af Makir, en af Manasses sønner.</para>
+  <para style="p">
+    <verse number="3" style="v"/>„Vores far døde i ørkenen,” sagde de, „men han var ikke iblandt dem, der sammen med Kora gjorde oprør imod Herren. Han døde en naturlig død, men uden at efterlade sig nogen sønner. <verse number="4" style="v"/>Kan det være rigtigt, at vores fars navn skal gå i glemmebogen, bare fordi han ikke opnåede at få nogen sønner? Bør vi døtre ikke få tildelt et jordstykke på lige fod med vores fars brødre?”</para>
+  <para style="p">
+    <verse number="5" style="v"/>Moses gik til Herren for at få klarhed i denne sag, <verse number="6" style="v"/>og Herren sagde til ham:</para>
+  <para style="p">
+    <verse number="7" style="v"/>„Zelofhads døtre har ret. De bør få tildelt jord på lige fod med deres farbrødre. Giv dem det jordstykke, deres far ville have fået, hvis han stadig havde været i live. <verse number="8" style="v"/>Sig til israelitterne: Hvis en mand dør uden at efterlade sig nogen sønner, skal hans døtre overtage faderens jord. <verse number="9" style="v"/>Hvis han slet ingen børn har, tilfalder jorden hans brødre. <verse number="10" style="v"/>Hvis han ikke har nogen brødre, tilfalder jorden hans farbrødre, <verse number="11" style="v"/>og hvis han heller ikke har nogen farbrødre, skal den overdrages til nærmeste slægtning.”</para>
+  <para style="s1">Josva indsættes som folkets leder efter Moses</para>
+  <para style="p">
+    <verse number="12" style="v"/>En dag sagde Herren til Moses: „Gå op på Abarimbjerget og se over på den anden side af Jordanfloden ind i det land, jeg har lovet at give til Israels folk. <verse number="13" style="v"/>Efter at du har set ind i landet, er tiden kommet til, at du skal dø, ligesom Aron allerede er død. <verse number="14" style="v"/>I var jo ulydige imod mig i Zins ørken, dengang folket gjorde oprør. I skaffede folket vand, men gav ikke mig æren for det.” Hermed refererede Herren til episoden ved Meriba i Kadesh i Zins ørken.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Da sagde Moses til Herren: <verse number="16" style="v"/>„Herre, du som er livets ophav, jeg beder dig om først at udvælge en ny leder for folket, <verse number="17" style="v"/>en mand, som kan være deres anfører i krigene og gå foran dem, hvor de end drager hen, så dit folk ikke skal være som en flok får uden hyrde.”</para>
+  <para style="p">
+    <verse number="18-20" style="v"/>Herren svarede: „Gå hen og hent Josva, Nuns søn. Han er en mand af den rette støbning. Ham skal du tage med hen til præsten Eleazar, og i folkets påsyn skal du lægge hænderne på ham og dermed indsætte ham som leder for dem, så de herefter skal adlyde ham. <verse number="21" style="v"/>Han skal søge råd hos præsten Eleazar, og Eleazar skal ved hjælp af Urim rådspørge mig. Så vil jeg give Eleazar svar, hvorefter han skal give svaret videre til Josva. På den måde vil jeg lede dem.”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Moses adlød Herren og førte Josva til præsten Eleazar, og i folkets påsyn <verse number="23" style="v"/>lagde Moses sine hænder på ham og indviede ham til den ledertjeneste, som Herren havde udvalgt ham til.</para>
+  <chapter number="28" style="c"/>
+  <para style="s1">De daglige ofre</para>
+  <para style="p">
+    <verse number="1" style="v"/>Herren sagde til Moses: <verse number="2" style="v"/>„Indskærp over for israelitterne, at de skal bringe de forskellige ofre på de fastsatte tidspunkter. Jeg glæder mig over røgen fra disse ofre.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Det daglige brændoffer består af to etårs vædderlam uden skavanker. <verse number="4" style="v"/>Det ene lam skal ofres om morgenen og det andet lige før solnedgang. <verse number="5" style="v"/>Sammen med hvert lam skal der ofres et afgrødeoffer bestående af to liter fintmalet mel blandet med en liter olivenolie. <verse number="6" style="v"/>Det er det daglige offer, som blev indstiftet på Sinaibjerget, et brændoffer med en liflig duft for Herren. <verse number="7" style="v"/>Desuden skal I sammen med hvert lam ofre et drikoffer på en liter øl. Drikofferet skal udgydes for Herren i helligdommen. <verse number="8" style="v"/>Om aftenen skal I ofre det andet lam med et tilsvarende afgrødeoffer og drikoffer. Disse ofre vil frembringe en liflig duft for Herren.</para>
+  <para style="s1">Sabbatsofferet</para>
+  <para style="p">
+    <verse number="9-10" style="v"/>På sabbatsdagen skal der i tilknytning til de daglige morgen- og aftenbrændofre med tilhørende drikofre bringes et ekstra brændoffer på to etårs vædderlam uden skavanker. Det skal ledsages af et afgrødeoffer på fire liter fint mel blandet med olivenolie med tilhørende drikoffer.</para>
+  <para style="s1">Det månedlige offer</para>
+  <para style="p">
+    <verse number="11" style="v"/>På den første dag i hver måned skal I ofre et særligt brændoffer til Herren bestående af to unge tyre, en vædder og syv etårs vædderlam, alle uden skavanker. <verse number="12" style="v"/>Sammen med hvert dyr skal I ofre et afgrødeoffer: seks liter fint mel blandet med olivenolie for hver tyr, fire liter fint mel blandet med olivenolie for hver vædder, <verse number="13" style="v"/>og to liter fint mel blandet med olivenolie for hvert lam.<note caller="+" style="f"><char style="fr" closed="false">28,13 </char><char style="ft" closed="false">På hebraisk henholdsvis 3 tiendedele, 2 tiendedele og en tiendedel efa, hvor en efa er ca. 22 liter. Det samme i vers 20 og 28.</char></note> Dette er et lifligt brændoffer for Herren. <verse number="14" style="v"/>Hvert offer skal ledsages af et drikoffer bestående af to liter vin for hver tyr, godt en liter vin for hver vædder og knap en liter vin for hvert lam. Dette brændoffer skal I bringe Herren på den første dag i måneden hele året igennem. <verse number="15" style="v"/>Desuden skal I ofre en gedebuk som syndoffer for Herren. Alt dette er ud over det daglige brændoffer og drikoffer.</para>
+  <para style="s1">Påskeofferet</para>
+  <para style="p">
+    <verse number="16" style="v"/>Den 14. dag i den første måned skal I fejre påskehøjtid til ære for Herren. <verse number="17" style="v"/>Den følgende dag begynder den ugelange fest, og i det tidsrum må I under ingen omstændigheder spise brød, der er bagt med surdej. <verse number="18" style="v"/>På festens første dag skal I hvile fra jeres daglige arbejde og samles for Herrens ansigt. <verse number="19" style="v"/>Ved den lejlighed skal I ofre to unge tyre, en vædder og syv etårs vædderlam, alle uden skavanker, som brændofre til Herren. <verse number="20-21" style="v"/>Med hvert dyr skal der ofres et afgrødeoffer: seks liter fint mel blandet med olivenolie for hver tyr, fire liter fint mel blandet med olivenolie for hver vædder, og to liter fint mel blandet med olivenolie for hvert lam. <verse number="22" style="v"/>Desuden skal der ofres en gedebuk til soning for jeres synder. <verse number="23" style="v"/>Disse ofre er ud over de daglige morgenbrændofre. <verse number="24" style="v"/>Tilsvarende ofre skal I bringe på hver af de syv dage, festen varer, som liflige ofre for Herren. <verse number="25" style="v"/>På festens syvende dag skal I atter lade det daglige arbejde hvile og samles for Herrens ansigt.</para>
+  <para style="s1">Høstofferet</para>
+  <para style="p">
+    <verse number="26" style="v"/>Under høstfesten<note caller="+" style="f"><char style="fr" closed="false">28,26 </char><char style="ft" closed="false">Dvs. hvedehøsten. Denne fest blev senere kaldt pinsefesten, men er bedst kendt under navnet ugefesten, fordi den blev afholdt syv hele uger efter festen for den første byghøst, der blev holdt dagen efter sabbatten under de usyrnede brøds fest, der fulgte umiddelbart efter påskedagen. Se <char style="xt"><ref loc="LEV 23:15">3.Mos. 23,15ff</ref></char>.</char></note> skal I også hvile fra det daglige arbejde og samles for Herrens ansigt. På den dag skal I ofre den første afgrøde til Herren. <verse number="27" style="v"/>Som brændoffer skal I ofre to unge tyre, en vædder og syv etårs vædderlam. <verse number="28" style="v"/>Som afgrødeoffer skal I ofre seks liter fint mel blandet med olivenolie for hver tyr, fire liter for hver vædder <verse number="29" style="v"/>og to liter for hvert lam. <verse number="30" style="v"/>Ved samme lejlighed skal der ofres en gedebuk som soning for jeres synder. <verse number="31" style="v"/>På den dag skal I stadig ofre de daglige brændofre, afgrødeofre og drikofre ved siden af de særlige brændofre med tilhørende drikofre. Sørg altid for at ofre dyr uden skavanker.</para>
+  <chapter number="29" style="c"/>
+  <para style="s1">Nytårsofferet</para>
+  <para style="p">
+    <verse number="1" style="v"/>Den første dag i den syvende<note caller="+" style="f"><char style="fr" closed="false">29,1 </char><char style="ft" closed="false">Svarende til september-oktober.</char></note> måned skal I indvarsle det nye år ved hornblæsning og fest.<note caller="+" style="f"><char style="fr" closed="false">29,1 </char><char style="ft" closed="false">Ifølge jødisk tradition (Mishnah) er det et vædderhorn (shofar), der bruges her. Muligvis blev der også blæst i sølvtrompeten. Teksten taler blot om at blæse et signal.</char></note> På den dag skal I hvile fra det daglige arbejde og samles for Herrens ansigt. <verse number="2" style="v"/>I skal ofre liflige brændofre bestående af en ung tyr, en vædder og syv etårs vædderlam, alle uden skavanker. <verse number="3" style="v"/>De tilhørende afgrødeofre skal bestå af seks liter fint mel blandet med olivenolie for hver tyr, fire liter fint mel blandet med olivenolie for hver vædder <verse number="4" style="v"/>og to liter fint mel blandet med olivenolie for hvert lam. <verse number="5" style="v"/>Derudover skal I ofre en gedebuk som soning for jeres synder <verse number="6" style="v"/>samt det månedlige og det daglige offer med tilhørende afgrødeofre og drikofre efter de forskrifter, som allerede er givet. Disse ofre vil frembringe en liflig duft for Herren.</para>
+  <para style="s1">Ofre på forsoningsdagen</para>
+  <para style="p">
+    <verse number="7" style="v"/>På den tiende dag i den syvende måned skal I atter samles for Herrens ansigt. På den dag skal I faste og lade det daglige arbejde hvile. <verse number="8" style="v"/>I skal ofre brændofre til Herren bestående af en ung tyr, en vædder og syv etårs vædderlam, alle uden skavanker. Disse ofre vil frembringe en liflig duft for Herren. <verse number="9" style="v"/>Det tilhørende afgrødeofre skal bestå af seks liter fint mel blandet med olivenolie for hver tyr, fire liter fint mel blandet med olivenolie for hver vædder <verse number="10" style="v"/>og to liter fint mel blandet med olivenolie for hvert lam. <verse number="11" style="v"/>Desuden skal der ofres en gedebuk som syndoffer. Dette er ud over det særlige forsoningsoffer på den dag og de daglige brændofre med tilhørende afgrødeofre og drikofre.</para>
+  <para style="s1">Ofre under løvhyttefesten</para>
+  <para style="p">
+    <verse number="12" style="v"/>På den 15. dag i den syvende måned skal I atter hvile fra det daglige arbejde og samles for Herrens ansigt, for da begynder løvhyttefesten til Herrens ære, og den varer i syv dage. <verse number="13" style="v"/>Det særlige brændoffer der skal bringes på den dag, og som vil frembringe en liflig duft for Herren, består af 13 unge tyre, to væddere og 14 etårs vædderlam, alle uden skavanker. <verse number="14" style="v"/>De tilhørende afgrødeofre skal bestå af seks liter fint mel blandet med olivenolie for hver tyr, fire liter fint mel blandet med olivenolie for hver vædder <verse number="15" style="v"/>og to liter fint mel blandet med olivenolie for hvert lam. <verse number="16" style="v"/>Ud over de daglige brændofre, afgrødeofre og drikofre skal der også ofres en gedebuk som syndoffer.</para>
+  <para style="p">
+    <verse number="17" style="v"/>På festugens anden dag skal der ofres 12 unge tyre, to væddere og 14 etårs vædderlam, alle uden skavanker, <verse number="18" style="v"/>med de tilhørende afgrødeofre og drikofre for hvert dyr. <verse number="19" style="v"/>Ud over de daglige ofre skal der også ofres en gedebuk som syndoffer med tilhørende afgrøde- og drikofre.</para>
+  <para style="p">
+    <verse number="20" style="v"/>På festugens tredje dag skal der ofres 11 unge tyre, to væddere og 14 etårs vædderlam, alle uden skavanker, <verse number="21" style="v"/>med tilhørende afgrøde- og drikofre. <verse number="22" style="v"/>Ud over de daglige ofre skal der igen med tilhørende afgrøde- og drikofre ofres en gedebuk som syndoffer.</para>
+  <para style="p">
+    <verse number="23-34" style="v"/>Sådan skal I fortsætte ugen ud. Hver dag skal der ud over de daglige ofre ofres en gedebuk som syndoffer med tilhørende afgrøde- og drikofre samt de særlige brændofre, afgrødeofre og drikofre. For hver dag der går, skal der dog ofres en tyr mindre end dagen før, således at der den sidste dag—på festens syvende dag—ofres syv unge tyre. Men de øvrige ofre er de samme hver dag.</para>
+  <para style="p">
+    <verse number="35" style="v"/>På den ottende dag skal I hvile fra det daglige arbejde og samles for Herrens ansigt. <verse number="36-37" style="v"/>Den dag skal brændofferet bestå af en ung tyr, en vædder og syv etårs vædderlam, alle uden skavanker, samt de tilhørende afgrøde- og drikofre. Disse ofre vil frembringe en liflig duft for Herren. <verse number="38" style="v"/>Desuden skal I ofre de daglige ofre og en gedebuk med tilhørende afgrøde- og drikofre som syndoffer.</para>
+  <para style="p">
+    <verse number="39" style="v"/>Det er de ofre, I skal bringe i forbindelse med de årlige højtider. Hertil kommer de frivillige ofre og ofre i forbindelse med løfter, som I har aflagt over for Herren, hvad enten det drejer sig om brændofre, afgrødeofre, drikofre eller takofre.”</para>
+  <chapter number="30" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Moses overbragte israelitterne alle disse forskrifter, som Herren havde givet ham.</para>
+  <para style="s1">Regler vedrørende løfter</para>
+  <para style="p">
+    <verse number="2" style="v"/>Moses gav stammelederne følgende instrukser: „Herren har befalet: <verse number="3" style="v"/>Hvis en mand aflægger Herren et højtideligt løfte eller ved en ed forpligter sig til afholdenhed på et bestemt område, så må han ikke bryde sit løfte. Hans løfte eller ed står fast.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Hvis en ugift kvinde, der endnu bor hjemme i sin fars hus, aflægger et løfte og forpligter sig til afholdenhed på et bestemt område, <verse number="5" style="v"/>og hvis hendes far efter at være gjort bekendt med løftet, ikke gør indsigelse, står løftet ved magt. <verse number="6" style="v"/>Men hvis hendes far, samme dag han hører om det, nægter at godkende hendes løfte, træder løftet ud af kraft. Da vil Herren tilgive hende, for hendes far har modsat sig løftet.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Hvis en kvinde gifter sig, mens hun stadig er forpligtet af et løfte, hun har aflagt uden at tænke så meget over konsekvenserne, <verse number="8" style="v"/>og hendes mand ikke gør indsigelse den dag, han bliver gjort bekendt med løftet, står løftet ved magt. <verse number="9" style="v"/>Men hvis hendes mand samme dag nægter at godkende løftet, træder det ud af kraft, og Herren vil tilgive hende.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Hvis kvinden er enke eller fraskilt, vil et løfte hun har aflagt, stå ved magt.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Hvis kvinden allerede er gift og bor sammen med sin mand, når hun aflægger sit løfte, <verse number="12" style="v"/>og manden bliver gjort bekendt med løftet uden at gøre indsigelse, står løftet ved magt. <verse number="13" style="v"/>Men hvis han modsætter sig løftet, samme dag han hører om det, træder løftet ud af kraft, og Herren vil tilgive hende. <verse number="14" style="v"/>Hendes mand kan altså enten bekræfte eller afkræfte et løfte eller en forpligtelse til afholdenhed, som hans kone ved en ed har fremsagt, <verse number="15" style="v"/>men hvis han ikke gør indsigelse den samme dag, han hører om det, har han dermed godkendt løftet som gyldigt. <verse number="16" style="v"/>Hvis han overskrider denne frist og senere får hende til at bryde sit løftet, bliver det hans ansvar, og straffen for løftebruddet rammer ham selv.”</para>
+  <para style="p">
+    <verse number="17" style="v"/>Det var de regler, Herren gav Moses om forholdet mellem en mand og hans kone og mellem en far og hans ugifte datter.</para>
+  <chapter number="31" style="c"/>
+  <para style="s1">Guds straf over midjanitterne</para>
+  <para style="p">
+    <verse number="1" style="v"/>Herren sagde nu til Moses: <verse number="2" style="v"/>„Jeg vil, at du skal straffe midjanitterne, fordi de lokkede Israels folk til at dyrke afguder. Dette bliver din sidste opgave, inden du skal dø.”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Da sagde Moses til folket: „Nogle af jer skal ruste sig til kamp imod midjanitterne, så Herren kan straffe dem. <verse number="4-6" style="v"/>Hver stamme skal stille med 1000 mand.”</para>
+  <para style="p">Denne hær, som i alt talte 12.000 mand, sendte Moses nu af sted imod midjanitterne, anført af Pinehas, præsten Eleazars søn. De havde pagtens ark og alarmtrompeterne med. <verse number="7" style="v"/>Det var på Herrens befaling, de angreb midjanitterne og dræbte samtlige mænd iblandt dem. <verse number="8" style="v"/>Blandt de dræbte var der fem midjanitiske konger, Evi, Rekem, Zur, Hur og Reba. Også Bileam, Beors søn, blev dræbt.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Den israelitiske hær tog alle kvinder og børn til fange, beslaglagde midjanitternes husdyr og rigdomme <verse number="10" style="v"/>og brændte alle deres byer og landsbyer af.</para>
+  <para style="p">
+    <verse number="11-13" style="v"/>Så førte de fangerne og krigsbyttet i triumftog hjem til lejren på Moabs sletter ved Jordanfloden over for Jeriko. Moses, præsten Eleazar og folkets ledere kom dem i møde uden for lejren. <verse number="14" style="v"/>Moses blev vred på officererne, da han så, hvad de bragte med sig hjem. <verse number="15" style="v"/>„Hvorfor har I ladet kvinderne leve?” spurgte han. <verse number="16" style="v"/>„Det var jo netop dem, der fulgte Bileams råd og lokkede Israels folk til at dyrke afguder på Peors bjerg, så Herrens folk blev ramt af en frygtelig plage. <verse number="17" style="v"/>Derfor skal I dræbe alle drenge og alle kvinder, der har haft samleje med en mand. <verse number="18" style="v"/>Kun småpigerne og de kvinder, der er jomfruer, må I skåne og bruge som slaver. <verse number="19" style="v"/>Alle de af jer, som har dræbt nogen eller rørt ved en død, skal blive uden for lejren i syv dage, og på den tredje og den syvende dag skal I og jeres fanger gennemgå renselsesritualet, så I renses for synd. <verse number="20" style="v"/>Husk også at vaske jeres tøj og alt, hvad der er lavet af læder, gedehår og træ.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>Præsten Eleazar sagde derefter til de mænd, der havde deltaget i krigen: „Herren har befalet Moses, <verse number="22-23" style="v"/>at I skal rense alt det, der ikke er brændbart, såsom guld, sølv, bronze, jern, tin og bly, ved at lægge det i ilden. Men alt det, der er brændbart, skal I rense ved at lægge det i vand. <verse number="24" style="v"/>Når det er gjort, skal I vente i syv dage, før I gennemgår renselsesritualet og vasker jeres tøj. Først da kan I vende tilbage til lejren.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>Herren sagde nu til Moses: <verse number="26" style="v"/>„Sammen med præsten Eleazar og stammelederne skal du lave en liste over alt krigsbyttet, deriblandt også krigsfangerne og husdyrene, <verse number="27" style="v"/>hvorefter du skal dele byttet i to dele. Den ene halvdel skal deles ud til dem, der tog del i krigen, og den anden halvdel skal deles ud til resten af folket, <verse number="28" style="v"/>efter at Herren har fået sin del af fangerne, kvæget, æslerne, fårene og gederne. Herrens andel af krigernes udbytte er én ud af hver 500. <verse number="29" style="v"/>Denne andel skal overdrages præsten Eleazar som en ydelse til præstetjenesten for Herren. <verse number="30" style="v"/>Herrens andel af folkets udbytte skal være én ud af hver 50. Denne andel skal overdrages levitterne, som arbejder ved Herrens bolig.”</para>
+  <para style="p">
+    <verse number="31" style="v"/>Moses og præsten Eleazar gjorde, som Herren havde befalet. <verse number="32-35" style="v"/>Krigsbyttet udgjorde 675.000 får og geder, 72.000 stykker kvæg, 61.000 æsler og 32.000 småpiger og unge jomfruer.</para>
+  <para style="p">
+    <verse number="36-40" style="v"/>Den halvdel, som tilfaldt dem, der havde været i kamp, udgjorde således 337.500 får og geder, hvoraf 675 blev givet til præsterne, 36.000 stykker kvæg, hvoraf 72 blev givet til præsterne, 30.500 æsler, hvoraf 61 blev givet til præsterne, 16.000 småpiger og unge jomfruer, hvoraf 32 blev overdraget til præsterne som slaver. <verse number="41" style="v"/>Præsternes andel blev overdraget til Eleazar, sådan som Herren havde sagt.</para>
+  <para style="p">
+    <verse number="42-46" style="v"/>Den anden halvdel, som tilfaldt folket, beløb sig til 337.500 får og geder, 36.000 stykker kvæg, 30.500 æsler og 16.000 småpiger og unge jomfruer. <verse number="47" style="v"/>Af disse dyr og mennesker blev én ud af hver 50 overdraget til levitterne, sådan som Herren havde sagt.</para>
+  <para style="p">
+    <verse number="48" style="v"/>Da kom lederne for de forskellige hærafdelinger til Moses <verse number="49" style="v"/>og sagde: „Efter at vi har optalt de hjemvendte krigere, kan vi melde, at vi ikke har mistet en eneste mand i krigen. <verse number="50" style="v"/>Derfor har vi besluttet at give Herren alle de guldsmykker vi tog fra fjenden, dvs. samtlige ankelringe,<note caller="+" style="f"><char style="fr" closed="false">31,50 </char><char style="ft" closed="false">Betydningen af det hebraiske ord er omstridt. Muligvis er der tale om en ring omkring overarmen.</char></note> armbånd, fingerringe, øreringe og halssmykker. Dette offer skal skaffe os soning hos Herren.”</para>
+  <para style="p">
+    <verse number="51-53" style="v"/>Moses og præsten Eleazar tog imod denne særlige gave. Den samlede vægt af alle disse kunstfærdigt udførte guldsmykker, som krigerne havde taget i krigsbytte, beløb sig til næsten 200 kilo. <verse number="54" style="v"/>Hærførernes gave blev bragt til åbenbaringsteltet, hvor det blev opbevaret som et minde for Herrens ansigt.</para>
+  <chapter number="32" style="c"/>
+  <para style="s1">Nogle israelitter bosætter sig øst for Jordanfloden</para>
+  <para style="p">
+    <verse number="1" style="v"/>Rubens og Gads stammer havde masser af kvæg, og da de opdagede, hvor velegnet Jazers og Gileads land var til kvægavl, <verse number="2" style="v"/>henvendte deres ledere sig til Moses og præsten Eleazar og de øvrige stammeledere og sagde: <verse number="3-4" style="v"/>„Herren har hjulpet sit folk med at erobre hele området omkring byerne Atarot, Dibon, Jazer, Nimra, Heshbon, Elale, Sebam, Nebo og Beon. Dette område er særdeles velegnet til kvægavl. <verse number="5" style="v"/>Derfor vi vil gerne bede om at få tildelt det område som vores ejendom, så vi kan slå os ned her frem for at tage over på den anden side af Jordanfloden.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>„Skal de andre stammer så gå i krig alene?” spurgte Moses. <verse number="7" style="v"/>„Det vil tage modet fra resten af folket, så vi risikerer, at de går glip af det land, Herren har lovet dem. <verse number="8" style="v"/>Var det ikke netop det, der skete for jeres fædre, dengang jeg sendte spioner fra Kadesh-Barnea ind i landet? <verse number="9" style="v"/>Kom spionerne ikke tilbage fra Eshkoldalen og tog modet fra folket, så de ikke nåede ind i det land, Herren havde lovet dem? <verse number="10-11" style="v"/>Ved den lejlighed blev Herren så vred over deres vantro, at han svor på, at ikke en eneste over 20 år af alle dem, der havde været med fra begyndelsen, da de forlod Egypten, skulle få det land at se, han havde lovet Abraham, Isak og Jakob. <verse number="12" style="v"/>Kun Kaleb og Josva var undtaget, for de havde fuld tillid til Herren, og de opfordrede folket til at gå ind og tage landet i besiddelse.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Efter den episode lod Herren os strejfe omkring i ørkenen i 40 år, indtil den oprørske generation var uddød i ørkenen som følge af deres synd. <verse number="14" style="v"/>Og nu kommer I og vil gøre det samme igen. Hvis I nu også nægter at adlyde Herren, vil han i sin vrede straffe Israels folk endnu værre. <verse number="15" style="v"/>Hvis I svigter, vil folket få forlænget opholdet i ørkenen, og på den måde bringer I ulykke over hele folket.”</para>
+  <para style="p">
+    <verse number="16" style="v"/>„Nej, nej,” svarede de, „vi har kun tænkt os at lave indhegninger og bygge byer, så vi kan efterlade vores kvæg og vores familier her, <verse number="17" style="v"/>mens vi selv ruster os til krig og går i spidsen for Israels folk ind i landet, så vi kan sikre os, at de når deres bestemmelsessted, hvor de kan slå sig ned i fred og ro. Men forinden må vi bygge befæstede byer til vores familier for at sikre os, at de ikke bliver udplyndret af de øvrige indbyggere i området. <verse number="18" style="v"/>Når det er gjort, vil vi følge med folket og ikke vende tilbage, før alle Israels stammer har taget deres land i besiddelse. <verse number="19" style="v"/>Det eneste, vi siger, er, at vi vil foretrække at bo på den østlige side af Jordanfloden i stedet for på den vestlige side.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>„Godt,” svarede Moses, „hvis I vil holde jeres ord og ruste jer til krig, <verse number="21-22" style="v"/>kan I overtage området øst for Jordanfloden på den betingelse, at I ikke vender tilbage, før Herren har jaget fjenderne bort, og folket har indtaget landet. Først da har I opfyldt jeres forpligtelser over for Herren og folket, så Herren kan give jer det område, I er interesseret i. <verse number="23" style="v"/>Men hvis I løber fra jeres ord, har I syndet imod Herren selv—og da skal I få konsekvensen af jeres synd at mærke. <verse number="24" style="v"/>Gå bare i gang med at lave indhegninger til jeres kvæg og bygge byer til jeres familier, sådan som I foreslår.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>„Vi vil gøre nøjagtig, som du siger,” svarede Gads og Rubens stammeledere. <verse number="26" style="v"/>„Vi vil efterlade vores børn, koner, kvæg og øvrige husdyr i byerne her i Gilead, <verse number="27" style="v"/>men alle våbenføre mænd iblandt os følger med over på den anden side af Jordanfloden for at kæmpe i krigen for Herren, sådan som du har befalet.”</para>
+  <para style="p">
+    <verse number="28" style="v"/>Moses bekendtgjorde denne afgørelse for Eleazar, Josva og stammelederne. <verse number="29" style="v"/>„Hvis alle våbenføre mænd fra Gads og Rubens stammer hjælper med til at erobre landet på den anden side af Jordanfloden,” sagde han, „skal Gileads land bagefter tilfalde dem. <verse number="30" style="v"/>Men hvis de kryber udenom, skal de have jord side om side med de øvrige stammer i Kana’an.”</para>
+  <para style="p">
+    <verse number="31" style="v"/>Gads og Rubens stammeledere bekræftede Moses’ ord. „Vi vil gøre, som Herren har befalet,” erklærede de. <verse number="32" style="v"/>„Alle våbenføre mænd følger med til Kana’an og deltager i krigen for Herren, og vi overtager så ejendomsretten til området øst for Jordanfloden.”</para>
+  <para style="p">
+    <verse number="33" style="v"/>Derpå overdrog Moses officielt amoritterkongen Sihons område og kong Og af Bashans område med de tilhørende byer til Gads, Rubens og det halve af Manasses stammer.</para>
+  <para style="p">
+    <verse number="34" style="v"/>Gads stamme genopbyggede følgende byer: Dibon, Atarot, Aroer, <verse number="35" style="v"/>Atarot-Shofan, Jazer, Jogbeha, <verse number="36" style="v"/>Bet-Nimra og Bet-Haran. De var alle befæstede byer med indhegnede græsgange udenom.</para>
+  <para style="p">
+    <verse number="37" style="v"/>Rubens stamme genopbyggede følgende byer: Heshbon, Elale, Kirjatajim, <verse number="38" style="v"/>Nebo, Ba’al-Meon og Sibma. De gav mange af byerne nye navne.</para>
+  <para style="p">
+    <verse number="39" style="v"/>Makirs slægt af Manasses stamme tog op til Gilead, erobrede landet og jog amoritterne bort. <verse number="40" style="v"/>Derfor gav Moses Gilead til makiritterne, som bosatte sig der. <verse number="41" style="v"/>Jair-slægten fra Manasses stamme erobrede en lang række byer i Gilead, hvorefter de gav området navneforandring til Jairs landsbyer. <verse number="42" style="v"/>En mand ved navn Noba erobrede med sin hærstyrke byen Kenat og de omkringliggende landsbyer og opkaldte området efter sig selv.</para>
+  <chapter number="33" style="c"/>
+  <para style="s1">Ruten fra Egypten til Jordanfloden</para>
+  <para style="p">
+    <verse number="1" style="v"/>Her følger en beskrivelse af israelitternes rejserute fra det tidspunkt, Moses og Aron førte dem ud af Egypten. <verse number="2" style="v"/>På Herrens befaling havde Moses nedskrevet navnene på alle de steder, hvor de slog lejr på vejen til Kana’an.</para>
+  <para style="p">
+    <verse number="3-4" style="v"/>Efter den første påske i Egypten brød de i sejrsrus op fra Ramses for øjnene af de forfærdede egyptere, der var i færd med at begrave deres førstefødte, som Herren havde slået ihjel natten forinden, da han havde fuldendt dommen over de egyptiske guder.</para>
+  <para style="p">
+    <verse number="5-7" style="v"/>Første gang, israelitterne slog lejr, var i Sukkot, dernæst i Etam på grænsen til ørkenen og i Pi-ha-Hirot ved Migdols bjerg nær Ba’al-Zefon. <verse number="8" style="v"/>Derfra gik de gennem Det Røde Hav og tre dagsrejser ind i Etams ørken, hvor de slog lejr ved Mara. <verse number="9" style="v"/>Fra Mara kom de til Elim med de 12 kilder og 70 palmetræer. Dér blev de et stykke tid.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Efter Elim slog de lejr ved Det Røde Hav <verse number="11" style="v"/>og fortsatte ind i Sins ørken, <verse number="12" style="v"/>hvor de slog lejr ved Dofka <verse number="13" style="v"/>og senere ved Alush. <verse number="14" style="v"/>Fra Alush tog de til Refidim, hvor der intet vand var.</para>
+  <para style="p">
+    <verse number="15-37" style="v"/>Fra Refidim rejste de ind i Sinai ørken og videre gennem „De Grådiges Grav”, Hatzerot, Ritma, Rimmon-Peretz, Libna, Rissa, Kehelata, Har-Shefer, Harada, Mahelot, Tahat, Tara, Mitka, Hashmona, Moserot, Bene-Ja’akan, Hor-ha-Gidgad, Jotbata, Abrona, Etzjon-Geber, Kadesh i Zins ørken og endte ved Hors bjerg nær grænsen til Edom.</para>
+  <para style="p">
+    <verse number="38-39" style="v"/>Mens de lå i lejr ved foden af Hors bjerg, gik præsten Aron på Herrens befaling op på bjerget, hvor han døde 123 år gammel. Hans dødsdag var den første dag i den femte måned, 40 år efter at israelitterne havde forladt Egypten.</para>
+  <para style="p">
+    <verse number="40" style="v"/>På det tidspunkt hørte Arads konge i det sydlige Kana’an, at israelitterne var på vej, <verse number="41-48" style="v"/>og efter at han var besejret, fortsatte de fra Hors bjerg til Zalmona, Punon, Obot, Ijje-ha-Abarim nær grænsen til Moabs land, Dibon-Gad, Almon-Diblatajim og Abarimbjergene nær Nebos bjerg, indtil de endelig nåede frem til Moabs sletter ved Jordanfloden over for Jeriko. <verse number="49" style="v"/>På Moabs sletter slog de lejr flere steder på strækningen mellem Bet-ha-Jeshimot og Abel-Shittim.</para>
+  <para style="p">
+    <verse number="50-51" style="v"/>Det var, mens de lå i lejr øst for Jordanfloden, at Herren gav folket denne besked gennem Moses: „Efter at I er kommet over Jordanfloden og ind i Kana’ans land, <verse number="52" style="v"/>skal I jage folkene på flugt foran jer og ødelægge deres udskårne og støbte afgudsbilleder og offerhøjene, hvor de dyrker deres afguder. <verse number="53" style="v"/>For jeg har givet jer landet, og derfor skal I tage det i besiddelse og bosætte jer i det. <verse number="54" style="v"/>Landet skal I dele imellem jer ved lodkastning og i forhold til de enkelte stammers størrelse, så de største stammer får et større område end de mindre stammer. <verse number="55" style="v"/>Men hvis I undlader at jage folkene bort, vil de af dem, som bliver tilbage, blive som en torn i øjet og et spyd i siden på jer, for de vil ikke lade jer være i fred. <verse number="56" style="v"/>Så ender det med, at jeg jager jer bort fra landet i stedet for dem.”</para>
+  <chapter number="34" style="c"/>
+  <para style="s1">Landets grænser</para>
+  <para style="p">
+    <verse number="1-2" style="v"/>Gennem Moses gav Herren israelitterne følgende besked: „I står nu på tærskelen til Kana’ans land. Jeg giver jer hele dette land, og det skal være jeres hjemland. <verse number="3" style="v"/>Mod syd grænser landet op til Edom og Zins ørken. Grænsen løber fra sydspidsen af Det Døde Hav <verse number="4" style="v"/>sydpå til Akrabbimpasset og videre mod Zins ørken. Det sydligste punkt er Kadesh-Barnea. Derfra løber grænsen mod nordvest til Hatzar-Addar og videre til Atzmon. <verse number="5" style="v"/>Fra Atzmon følger grænsen Egyptens Bæk helt ud til Middelhavet.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Mod vest danner Middelhavet grænse.</para>
+  <para style="p">
+    <verse number="7-9" style="v"/>Nordgrænsen løber i lige linie fra Middelhavet og østpå til Hors bjerg og videre til Lebo-Hamat, Zedad og Zifron og ender ved Hatzar-Enan.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Den østlige grænse går fra Hatzar-Enan sydpå til Shefam <verse number="11" style="v"/>og videre til Ribla øst for Ajin. Derfra slår den en bue, først sydpå og derefter vestpå til den rammer Galilæasøens sydligste punkt. <verse number="12" style="v"/>Derfra følger den Jordanfloden sydpå til Det Døde Hav.”</para>
+  <para style="s1">Fordelingen af landet</para>
+  <para style="p">
+    <verse number="13" style="v"/>Moses sagde nu til israelitterne: „Hele dette område skal fordeles ved lodkastning mellem de ni stammer og den halve Manasse-stamme. <verse number="14-15" style="v"/>Rubens og Gads stammer samt den anden halvdel af Manasses stamme skal ikke være med i lodtrækningen, for de har allerede fået tildelt området øst for Jordanfloden.”</para>
+  <para style="p">
+    <verse number="16" style="v"/>Derefter sagde Herren til Moses: <verse number="17" style="v"/>„Jeg har udvalgt præsten Eleazar og Josva til at overvåge fordelingen af landet. <verse number="18" style="v"/>De skal have hjælp af en leder fra hver stamme.”</para>
+  <para style="p">
+    <verse number="19-29" style="v"/>Herren udpegede følgende mænd til opgaven: Kaleb, Jefunnes søn, fra Judas stamme; Shemuel, Ammihuds søn, fra Simeons stamme; Elidad, Kislons søn, fra Benjamins stamme; Bukki, Joglis søn, fra Dans stamme; Hanniel, Efods søn, fra Manasses stamme; Kemuel, Shiftans søn, fra Efraims stamme; Elitzafan, Parnaks søn, fra Zebulons stamme; Paltiel, Azzans søn, fra Issakars stamme; Ahihud, Shelomis søn, fra Ashers stamme; og Pedael, Ammihuds søn, fra Naftalis stamme.</para>
+  <chapter number="35" style="c"/>
+  <para style="s1">Levitbyerne</para>
+  <para style="p">
+    <verse number="1" style="v"/>Mens israelitterne stadig lå i lejr på Moabs sletter langs Jordanfloden over for Jeriko, sagde Herren til Moses:</para>
+  <para style="p">
+    <verse number="2" style="v"/>„Sig til folket, at de skal overdrage nogle af deres byer med omliggende græsmarker til levitterne. <verse number="3" style="v"/>Der skal levitterne bo og deres husdyr græsse. <verse number="4" style="v"/>I skal afmåle et område rundt om byerne, som skal være levitternes græsmarker. Afmål 450 m fra bymuren udad, <verse number="5" style="v"/>og 900 m langs hver af de fire sider af byen, mod øst, mod syd, mod vest og mod nord.</para>
+  <para style="p">
+    <verse number="6-7" style="v"/>Levitterne skal i alt tildeles 48 byer med omliggende græsmarker. Heraf skal de seks være tilflugtsbyer, hvor personer, der uforsætligt er kommet til at slå et andet menneske ihjel, kan søge asyl. <verse number="8" style="v"/>Levitbyerne skal ligge jævnt fordelt ud over hele landet, således at de store stammer skal afstå mange byer til levitterne, og de mindre stammer færre.”</para>
+  <para style="s1">Tilflugtsbyerne</para>
+  <para style="p">
+    <verse number="9" style="v"/>Herren sagde videre til Moses: <verse number="10-11" style="v"/>„Sig til folket: Når I kommer ind i landet, skal I udpege nogle byer til at være tilflugtsbyer. En person, som er skyldig i uagtsomt manddrab, kan flygte til sådan en by, <verse number="12" style="v"/>så vedkommende undgår at blive dræbt af blodhævnere, endnu inden der er afsagt dom i sagen. <verse number="13-14" style="v"/>Der skal ligge tre tilflugtsbyer i Kana’ans land og tre i området øst for Jordanfloden. <verse number="15" style="v"/>Både israelitterne, de fremmede iblandt jer og folk på gennemrejse skal kunne søge tilflugt i disse byer.</para>
+  <para style="p">
+    <verse number="16-18" style="v"/>Hvis en person slår et andet menneske ihjel ved at gøre brug af våben af jern, sten eller træ, er der ikke tale om uagtsomt manddrab; det må formodes at være mord, og derfor skal den skyldige lide døden: <verse number="19" style="v"/>Den myrdedes nærmeste slægtning har ansvaret for at hævne mordet, og han skal slå morderen ihjel. <verse number="20-21" style="v"/>Det samme gælder, hvis en person af had til en anden forsætligt skubber til ham, kaster noget imod ham eller slår ham, så han dør.</para>
+  <para style="p">
+    <verse number="22-23" style="v"/>Men hvis der er tale om et uheld, hvor en person uforvarende kommer til at skubbe til en anden eller ramme ham med en sten eller noget andet, så han dør, <verse number="24" style="v"/>skal domstolen afgøre, hvorvidt der er tale om uagtsomt manddrab eller mord, og om den skyldige skal udleveres til blodhævneren eller ej. <verse number="25" style="v"/>Hvis domstolen så har afsagt kendelse om uagtsomt manddrab, skal drabsmanden beskyttes mod blodhævneren og bringes tilbage til den tilflugtsby, han var flygtet til. Der skal han blive boende, indtil den fungerende ypperstepræst er død.</para>
+  <para style="p">
+    <verse number="26" style="v"/>Hvis drabsmanden forlader tilflugtsbyen, <verse number="27" style="v"/>har blodhævneren ret til at slå ham ihjel uden at gøre sig skyldig i mord, <verse number="28" style="v"/>for manden burde være blevet i tilflugtsbyen indtil ypperstepræstens død. Først efter ypperstepræstens død kan han vende tilbage til sit hjem. <verse number="29" style="v"/>Denne lov skal gælde fra slægt til slægt i det land, hvor I kommer til at bo.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Enhver morder skal henrettes, medmindre der er mangel på vidneudsagn. Der skal mindst to vidneudsagn til for at dømme en person til døden. <verse number="31" style="v"/>Men hvis han dømmes skyldig i mord, skal han henrettes. Han kan ikke frigives mod, at der betales løsepenge for ham. <verse number="32" style="v"/>En flygtning, der bor i en tilflugtsby, kan heller ikke løskøbes, så han kan forlade tilflugtsbyen og vende tilbage til sit hjem før ypperstepræstens død. <verse number="33-34" style="v"/>I må ikke gøre det land, som I skal ind og bo i, urent, for jeg, Herren, bor i jeres midte. Hvis et menneske udgyder et andet menneskes blod, bliver landet urent, og der kan kun skaffes soning ved at den skyldige dør.”</para>
+  <chapter number="36" style="c"/>
+  <para style="s1">Lov angående kvinders arveret</para>
+  <para style="p">
+    <verse number="1" style="v"/>Familieoverhovederne i Gileads slægt kom nu til Moses og folkets ledere med et problem. De sagde: <verse number="2" style="v"/>„Herren har befalet dig at lade Israels folk fordele landet ved lodtrækning, og du har givet os besked på at overdrage vores slægtning Zelofhads jord til hans døtre. <verse number="3" style="v"/>Men hvis de nu gifter sig med mænd fra en anden stamme, vil deres jordstykke tilfalde den stamme, og vores område vil i så fald blive formindsket, <verse number="4" style="v"/>uden at vi kan gøre os håb om at få den mistede jord tilbage i det førstkommende jubelår.”</para>
+  <para style="p">
+    <verse number="5" style="v"/>Derfor bekendtgjorde Moses på Herrens befaling følgende ordning for kvinders arvelod: „Disse mænd fra Manasses stamme har ret. <verse number="6" style="v"/>Derfor siger Herren, at Zelofhads døtre kun må gifte sig inden for deres egen stamme. <verse number="7" style="v"/>Derved undgår vi, at deres jordstykke kommer på andre stammers hænder, hvilket ville være forkert, for der må ikke overdrages jord fra en stamme til en anden. <verse number="8-9" style="v"/>Enhver arveberettiget kvinde skal derfor gifte sig inden for sin egen stamme, så hendes arvelod forbliver på stammens hænder.”</para>
+  <para style="p">
+    <verse number="10-12" style="v"/>Zelofhads døtre, som hed Mala, Tirtza, Hogla, Milka og Noa, gjorde, som Herren havde befalet Moses. De giftede sig med mænd fra deres egen stamme, Manasses stamme. På den måde forblev deres jord på stammens hænder.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Alle disse bud og forskrifter gav Herren til Israels folk gennem Moses, mens de lå i lejr på Moabs sletter ved Jordanfloden over for Jeriko.</para>
+</usx>

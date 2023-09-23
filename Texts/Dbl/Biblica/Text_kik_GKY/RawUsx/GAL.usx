@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="GAL" style="id">GAL- The Holy Word of God</book>
+  <para style="rem">Copyright © 2013 by Biblica, Inc.®</para>
+  <para style="h">Agalatia</para>
+  <para style="toc1">Agalatia</para>
+  <para style="toc2">Agalatia</para>
+  <para style="toc3">Agal</para>
+  <para style="mt1">MARŨA MA PAŨLŨ KŨRĨ AGALATIA</para>
+  <para style="imt1">Ũhoro wa Ibuku Rĩĩrĩ</para>
+  <para style="ip">Paũlũ aandĩkire marũa maya kũrĩ makanitha marĩa maarĩ bũrũri wa Galatia. Paũlũ nĩagwetire maũndũ meerĩ kũrĩ makanitha marĩa aandĩkagĩra marũa maya. Ũndũ wa mbere nĩ atĩ we aarĩ mũtũmwo wa ma, na wa keerĩ nĩ atĩ ndũmĩrĩri ĩrĩa aahunjagia yoimĩte kũrĩ Ngai (1:1-10).</para>
+  <para style="ip">Maũndũ maya meerĩ maarĩ ma bata mũno tondũ andũ amwe moigaga atĩ Paũlũ aarĩ mũtũmwo wa maheeni, na ndũmĩrĩri ĩrĩa aahunjagia ndĩarĩ ya ma. Paũlũ nĩerire andũ acio atĩ we aarĩ mũtũmwo wa ma, na ũtungata wake kũrĩ andũ-a-Ndũrĩrĩ woimĩte kũrĩ Ngai. Atũmwo a Jerusalemu nĩmamwamũkĩrire makĩonania atĩ maarĩ ngwatanĩro nake.</para>
+  <para style="ip">Ningĩ Paũlũ nĩerire Petero atĩ nĩahĩtĩtie nĩ ũndũ wa gũtiga kũrĩĩanĩra na andũ-a-Ndũrĩrĩ nĩ ũndũ wa gwĩtigĩra Ayahudi arĩa moimĩte Jerusalemu (2:1-18).</para>
+  <para style="ip">Paũlũ nĩameerire atĩ mũndũ ahonokaga nĩ ũndũ wa gwĩtĩkia, tondũ o na Iburahĩmu aamũkĩrire kĩĩranĩro kĩa Ngai na ũndũ wa gwĩtĩkia (3:26-29).</para>
+  <para style="iot">Mwandĩki</para>
+  <para style="im">Ibuku rĩĩrĩ rĩandĩkirwo nĩ Mũtũmwo Paũlũ.</para>
+  <para style="iot">Ũrĩa Ibuku Rĩĩrĩ Rĩgayanĩtio</para>
+  <para style="io1">· Paũlũ kũrũĩrĩra Ũhoro-ũrĩa-Mwega <char style="ior"><ref loc="GAL 1:1-2:21">1:1–2:21</ref></char></para>
+  <para style="io1">· Kuohorwo kuuma harĩ kĩrumi kĩa watho <char style="ior"><ref loc="GAL 3:1-24">3:1-24</ref></char></para>
+  <para style="io1">· Wathani wa ũhoro mwega igũrũ rĩa watho <char style="ior"><ref loc="GAL 3:25-4:31">3:25–4:31</ref></char></para>
+  <para style="io1">· Kuohorwo kwa Mũkristiano <char style="ior"><ref loc="GAL 5:1-26">5:1-26</ref></char></para>
+  <para style="io1">· Ũtaaro harĩ mwĩtĩkia <char style="ior"><ref loc="GAL 6:1-18">6:1-18</ref></char>.</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 1:1-16">1Akor 1:1-16</ref>; <ref loc="ACT 2:24">Atũm 2:24</ref></char>
+    </note>Nĩ niĩ mũtũmwo Paũlũ, na rĩrĩ, ndirĩ mũtũmwo ũtũmĩtwo nĩ andũ o na kana ngatũmwo na njĩra ya mũndũ, no ndũmĩtwo nĩ Jesũ Kristũ na Ngai Ithe witũ, ũrĩa wamũriũkirie kuuma kũrĩ arĩa akuũ. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:2 </char><char style="xt" closed="false"><ref loc="PHP 4:21">Afil 4:21</ref>; <ref loc="ACT 16:6">Atũm 16:6</ref></char></note>Niĩ hamwe na ariũ na aarĩ a Ithe witũ othe arĩa tũrĩ nao, nĩ ithuĩ tũramũtũmĩra marũa maya,</para>
+  <para style="q1">Kũrĩ inyuĩ andũ a makanitha ma Galatia:</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:7">Arom 1:7</ref>
+      </char>
+    </note>Mũrogĩa na wega na thayũ iria ciumĩte kũrĩ Ngai Ithe witũ, o na kũrĩ Mwathani Jesũ Kristũ, <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:4 </char><char style="xt" closed="false"><ref loc="MAT 20:28">Math 20:28</ref>; <ref loc="ROM 4:25">Arom 4:25</ref>; <ref loc="GAL 2:20">Agal 2:20</ref></char></note>ũrĩa werutire nĩ ũndũ wa mehia maitũ nĩguo atũhonokie kuuma kũrĩ mahinda maya tũrĩ, marĩa maiyũrĩtwo nĩ maũndũ mooru, kũringana na wendi wa Ngai Ithe witũ, <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:5 </char><char style="xt" closed="false"><ref loc="ROM 11:36">Arom 11:36</ref></char></note>nake arotũũra akumagio nginya tene na tene. Ameni.</para>
+  <para style="s1">Ũhoro-Ũrĩa-Mwega no Ũmwe</para>
+  <para style="p">
+    <verse number="6" style="v"/>Niĩ nĩkũgega ndĩragega nĩ ũndũ wa ũrĩa mũrahiũha gũtigana na ũrĩa wamwĩtire na ũndũ wa wega wa Kristũ, mũkagarũrũkĩra ũhoro mwega wa mũthemba ũngĩ, <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:7 </char><char style="xt" closed="false"><ref loc="ACT 15:24">Atũm 15:24</ref>; <ref loc="JER 23:16">Jer 23:16</ref>, <ref loc="JER 23:36">36</ref></char></note>naguo ti Ũhoro-ũrĩa-Mwega o na atĩa. No nĩ kũrĩ andũ maramũhĩngĩĩca makĩenda gũthũkia Ũhoro-ũrĩa-Mwega wa Kristũ. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:8 </char><char style="xt" closed="false"><ref loc="GAL 2:2">Agal 2:2</ref>; <ref loc="ROM 9:3">Arom 9:3</ref></char></note>No rĩrĩ, o na kũngĩkorwo nĩ ithuĩ o na kana mũraika uumĩte igũrũ, ũngĩmũhunjĩria ũhoro mwega ũngĩ tiga ũrĩa twamũhunjĩirie-rĩ, mũndũ ũcio aronyiitwo nĩ kĩrumi nginya tene! <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:9 </char><char style="xt" closed="false"><ref loc="ROM 16:17">Arom 16:17</ref></char></note>O ta ũrĩa tũmwĩrĩte, o na rĩu nĩ nguuga o rĩngĩ atĩrĩ, mũndũ o wothe angĩmũhunjĩria ũhoro mwega ũngĩ tiga ũrĩa mwetĩkirie-rĩ, aronyiitwo nĩ kĩrumi nginya tene!</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 2:29">Arom 2:29</ref>
+      </char>
+    </note>Atĩrĩrĩ, ngiuga ũguo-rĩ, kaĩ arĩ andũ ndĩrenda kwĩyendithia kũrĩ o, kana nĩ kũrĩ Ngai? Kana hihi nĩ andũ ndĩrenda gũkenia? Korwo nĩ andũ ngeragia gũkenia-rĩ, ndingĩkorwo ndĩ ndungata ya Kristũ.</para>
+  <para style="s1">Paũlũ gwĩtwo nĩ Ngai</para>
+  <para style="p">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 15:1">1Akor 15:1</ref>
+      </char>
+    </note>Ariũ na aarĩ a Ithe witũ, ngwenda mũmenye atĩ Ũhoro-ũrĩa-Mwega ndamũhunjĩirie ti ũhoro woimanĩte na mũndũ. <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:12 </char><char style="xt" closed="false"><ref loc="1CO 2:10">1Akor 2:10</ref></char></note>Ũhoro ũcio ndiaheirwo nĩ mũndũ, o na kana ngĩthomithio nĩ mũndũ; no nĩ kũguũrĩrio ndaguũrĩirio Ũhoro ũcio nĩ Jesũ Kristũ.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Nĩgũkorwo nĩmũiguĩte ũhoro wa mĩthiĩre yakwa ya tene, ũrĩa ndaatũire njĩkaga ndĩ thĩinĩ wa ndini ya Ayahudi, na ũrĩa ndanyariiraga kanitha wa Ngai na hinya ngĩgeria kũũniina. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:14 </char><char style="xt" closed="false"><ref loc="ACT 21:20">Atũm 21:20</ref>; <ref loc="MAT 15:2">Math 15:2</ref></char></note>Niĩ ha ũhoro wa maũndũ makoniĩ ndini ya Ayahudi, nĩ ndaathiĩte mbere o na gũkĩra Ayahudi aingĩ a riika rĩakwa na ndaarĩ na kĩyo kĩnene gĩa kũrũmia mĩtugo ya maithe maitũ. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:15 </char><char style="xt" closed="false"><ref loc="ISA 49:1">Isa 49:1</ref>, <ref loc="ISA 49:5">5</ref>; <ref loc="ROM 8:28">Arom 8:28</ref></char></note>No rĩrĩ, Ngai ũrĩa wanyamũrire kuuma ndaciarwo, na akĩnjĩta nĩ ũndũ wa wega wake-rĩ, nĩ oonire arĩ wega, <verse number="16" style="v"/>anguũrĩrie Mũriũ nĩgeetha hunjagĩrie andũ-a-Ndũrĩrĩ ũhoro wake; gũtirĩ mũndũ o na ũrĩkũ ndaahoire kĩrĩra, <verse number="17" style="v"/>o na ndiambatire Jerusalemu kuonana na arĩa maarĩ atũmwo mbere yakwa, no ndathiire bũrũri wa Arabia na ihenya, na thuutha ũcio ngĩcooka Dameski.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Na rĩrĩ, thuutha wa mĩaka ĩtatũ, nĩndambatire Jerusalemu nĩguo tũkamenyane na Petero, na ngĩikara nake matukũ ikũmi na matano. <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:19 </char><char style="xt" closed="false"><ref loc="MAT 13:55">Math 13:55</ref></char></note>Tũtionanire na atũmwo acio angĩ, tiga o Jakubu, mũrũ wa nyina na Mwathani. <verse number="20" style="v"/>Ũhoro ũyũ ndĩramwandĩkĩra, ndĩramwĩra ndĩ mbere ya Ngai atĩ nĩ wa ma na ndiraheenania. <verse number="21" style="v"/>Thuutha ũcio nĩndacookire ngĩthiĩ Suriata na Kilikia. <verse number="22" style="v"/>Niĩ mwene ndiamenyekete nĩ makanitha ma Judea marĩa marĩ thĩinĩ wa Kristũ. <verse number="23" style="v"/>No kũigua maiguaga atĩrĩ, “Mũndũ ũrĩa ũratũire atũnyariiraga rĩu nĩwe ũrahunjia wĩtĩkio ũrĩa aageragia kũniina mbere ĩyo.” <verse number="24" style="v"/>Nao makĩgooca Ngai nĩ ũndũ wakwa.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Paũlũ Gwĩtĩkĩrwo nĩ Atũmwo</para>
+  <para style="p">
+    <verse number="1" style="v"/>Mĩaka ikũmi na ĩna yathira nĩndambatire rĩngĩ Jerusalemu, na ihinda rĩĩrĩ tũgĩthiĩ hamwe na Baranaba o na tũgĩthiĩ na Tito. <verse number="2" style="v"/>Ndathiire tondũ Ngai nĩanguũrĩirie thiĩ kuo, na nĩguo ngataarĩrie atũmwo Ũhoro-ũrĩa-Mwega ũrĩa hunjagĩria andũ-a-Ndũrĩrĩ. No ndataarĩirie o arĩa monekaga marĩ atongoria hatarĩ andũ angĩ, nĩgeetha gũtigatuĩke atĩ ihenya rĩrĩa ndatengʼeraga, o na kana rĩrĩa ndatengʼerete, rĩarĩ rĩa tũhũ. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:3 </char><char style="xt" closed="false"><ref loc="ACT 16:3">Atũm 16:3</ref></char></note>No o na Tito, ũrĩa warĩ hamwe na niĩ, ndaringĩrĩirio kũrua, o na gũtuĩka aarĩ Mũyunani. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:4 </char><char style="xt" closed="false"><ref loc="2CO 11:26">2Akor 11:26</ref>; <ref loc="GAL 5:1">Agal 5:1</ref>, <ref loc="GAL 5:13">13</ref></char></note>Ũhoro ũyũ wa kũrua wagĩire ho tondũ nĩ kwarĩ na ariũ na aarĩ a Ithe witũ a maheeni arĩa maatoonyete gatagatĩ gaitũ na hitho marĩ athigaani nĩguo matuĩrie ũhoro wa wĩyathi ũrĩa tũkoragwo naguo tũrĩ thĩinĩ wa Kristũ Jesũ, makĩenda gũtũtua ngombo. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:5 </char><char style="xt" closed="false"><ref loc="GAL 2:14">Agal 2:14</ref></char></note>Tũtietĩkĩrire ũhoro wao o na hanini, nĩgeetha ma ya Ũhoro-ũrĩa-Mwega ĩtũũre na inyuĩ.</para>
+  <para style="p">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 10:34">Atũm 10:34</ref>; <ref loc="REV 2:23">Kũg 2:23</ref></char>
+    </note>Nao andũ arĩa moonekaga taarĩ o anene-rĩ, (harĩ niĩ hatiarĩ na ũtiganu o ũrĩa mangĩakorirwo marĩ, nĩgũkorwo Ngai ndaroraga mũndũ ũrĩa ahaana) andũ acio gũtirĩ ũndũ moongereire harĩ ndũmĩrĩri yakwa. <verse number="7" style="v"/>O na rĩrĩ, o nĩmoonire atĩ niĩ nĩndehokeirwo wĩra wa kũhunjia Ũhoro-ũrĩa-Mwega kũrĩ andũ-a-Ndũrĩrĩ, o ta ũrĩa Petero eehokeirwo wĩra wa kũhunjĩria Ayahudi. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:8 </char><char style="xt" closed="false"><ref loc="ACT 1:25">Atũm 1:25</ref>; <ref loc="1CO 1:1">1Akor 1:1</ref></char></note>Nĩgũkorwo Ngai ũrĩa warutaga wĩra thĩinĩ wa ũtungata wa Petero arĩ mũtũmwo kũrĩ Ayahudi, nowe warutaga wĩra ũtungata-inĩ wakwa ndĩ mũtũmwo kũrĩ andũ-a-Ndũrĩrĩ. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:9 </char><char style="xt" closed="false"><ref loc="ROM 12:3">Arom 12:3</ref>; <ref loc="ACT 9:15">Atũm 9:15</ref></char></note>Ningĩ Jakubu, na Petero, na Johana, arĩa moonagwo marĩ itugĩ cia gũtiira kanitha-rĩ, nĩmatwamũkĩrire tũrĩ hamwe na Baranaba na guoko kwa ũrĩo kwa ngwatanĩro, rĩrĩa maamenyire wega wa Ngai ũrĩa ndaaheetwo. Nĩmetĩkĩrire atĩ ithuĩ tũthiĩ tũkahunjĩrie andũ-a-Ndũrĩrĩ, nao mathiĩ kũrĩ Ayahudi. <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:10 </char><char style="xt" closed="false"><ref loc="ACT 24:17">Atũm 24:17</ref></char></note>Ũndũ ũrĩa maatwĩrire twĩkage nĩ atĩ tũririkanage athĩĩni na noguo ũndũ ũrĩa niĩ mwene ndaarĩ na kĩyo gĩa gwĩka.</para>
+  <para style="s1">Paũlũ Gũkararia Petero</para>
+  <para style="p">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 11:19">Atũm 11:19</ref>
+      </char>
+    </note>Na rĩrĩ, hĩndĩ ĩrĩa Petero ookire Antiokia,<note caller="+" style="f"><char style="fr" closed="false">2:11 </char><char style="ft" closed="false">Antiokia rĩarĩ itũũra inene rĩa Suriata, na rĩarĩ rĩa gatatũ thuutha wa Roma na Alekisanderia thĩinĩ wa mabũrũri marĩa maathagwo nĩ Aroma.</char></note> nĩndamũkararirie mbere ya andũ tondũ nĩahĩtĩtie mũno. <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:12 </char><char style="xt" closed="false"><ref loc="ACT 11:3">Atũm 11:3</ref></char></note>Andũ amwe moimĩte kũrĩ Jakubu matanakinya-rĩ, Petero nĩarĩĩanagĩra na andũ-a-Ndũrĩrĩ, no rĩrĩa maakinyire, akĩmeherera, na akĩĩamũrania na andũ-a-Ndũrĩrĩ tondũ nĩetigagĩra andũ arĩa maarĩ a gĩkundi kĩa andũ arĩa maruaga. <verse number="13" style="v"/>O na Ayahudi arĩa angĩ makĩnyiitanĩra na Petero ũhinga-inĩ wake, o nginya o na Baranaba akĩhĩtithio nĩ ũhinga ũcio wao.</para>
+  <para style="p">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 10:28">Atũm 10:28</ref>
+      </char>
+    </note>Rĩrĩa ndonire atĩ matiekaga kũringana na ma ya Ũhoro-ũrĩa-Mwega, ngĩĩra Petero atĩrĩ, andũ othe makĩiguaga, “Angĩkorwo wee ũrĩ Mũyahudi, ũtũũraga na mĩtugo ya andũ-a-Ndũrĩrĩ na ti ta Mũyahudi-rĩ, ũngĩkĩhota atĩa kũhatĩrĩria andũ-a-Ndũrĩrĩ atĩ nĩguo marũmĩrĩre mĩtugo ya Ayahudi?</para>
+  <para style="p">
+    <verse number="15" style="v"/>“Ithuĩ arĩa tũciarĩtwo tũrĩ Ayahudi na tũtarĩ ehia ta andũ-a-Ndũrĩrĩ-rĩ, <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:16 </char><char style="xt" closed="false"><ref loc="ROM 9:30">Arom 9:30</ref></char></note>nĩtũũĩ atĩ mũndũ ndatuĩkaga mũthingu nĩ ũndũ wa gwathĩkĩra watho, no atuĩkaga mũthingu nĩ ũndũ wa gwĩtĩkia Jesũ Kristũ. Nĩ ũndũ ũcio o na ithuĩ twĩtĩkĩtie Kristũ Jesũ nĩguo tũtuuo athingu nĩ ũndũ wa gwĩtĩkia Kristũ, no ti ũndũ wa gwathĩkĩra watho, tondũ gũtirĩ mũndũ ũgaatuuo mũthingu nĩ ũndũ wa gwathĩkĩra watho.</para>
+  <para style="p">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 3:21">Agal 3:21</ref>
+      </char>
+    </note>“Angĩgĩkorwo rĩrĩa tũgũcaria gũtuuo athingu nĩ Kristũ kuonanagia atĩ ithuĩ ene tũrĩ ehia-rĩ, ũguo nĩ kuuga atĩ Kristũ atungatagĩra mehia? Hĩ! Kũroaga gũtuĩka ũguo! <verse number="18" style="v"/>Angĩkorwo nĩ ngwaka rĩngĩ kĩrĩa ndaanangire-rĩ, nĩkuonania atĩ niĩ nĩnyunĩte watho. <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:19 </char><char style="xt" closed="false"><ref loc="ROM 7:4">Arom 7:4</ref>; <ref loc="2CO 5:15">2Akor 5:15</ref></char></note>Nĩgũkorwo na ũndũ wa watho nĩndakuĩrĩire watho ũcio nĩguo ndũũre muoyo ndĩ wa Ngai. <verse number="20" style="v"/>Niĩ nĩndĩkĩtie kwambanĩrio hamwe na Kristũ, na rĩu ti niĩ ndũũraga muoyo, no Kristũ nĩwe ũtũũraga muoyo thĩinĩ wakwa. Muoyo ũrĩa ndũũraga mwĩrĩ-inĩ ũyũ ndũũraga na ũndũ wa gwĩtĩkia Mũrũ wa Ngai, ũrĩa wanyendire na akĩĩruta nĩ ũndũ wakwa. <verse number="21" style="v"/>Ndingĩĩtĩkĩra gũtua wega wa Ngai kĩndũ gĩa tũhũ, tondũ kũngĩtuĩka atĩ ũthingu wonekaga nĩ ũndũ wa watho-rĩ, Kristũ aakuire tũhũ!”</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Gwĩtĩkia, kana Gwathĩkĩra Watho?</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 5:7">Agal 5:7</ref>; <ref loc="1CO 1:23">1Akor 1:23</ref></char>
+    </note>Atĩrĩrĩ inyuĩ Agalatia aya akĩĩgu! Mũrogetwo nũũ? O inyuĩ muonirio wega Jesũ Kristũ arĩ mwambe mũtĩ igũrũ. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:2 </char><char style="xt" closed="false"><ref loc="JHN 20:22">Joh 20:22</ref>; <ref loc="ROM 10:17">Arom 10:17</ref></char></note>No nyende kũmenya ũndũ ũmwe tu kuuma kũrĩ inyuĩ: Mwaheirwo Roho nĩ ũndũ wa gwathĩkĩra watho, kana nĩ ũndũ wa gwĩtĩkia ũhoro ũrĩa mwaiguire? <verse number="3" style="v"/>Kaĩ mũrĩ akĩĩgu atĩa? Mwambĩrĩirie na Roho wa Ngai, na rĩu mũrenda kũrĩkĩrĩria na hinya wa mwĩrĩ? <verse number="4" style="v"/>Anga mwathĩĩnirio na maũndũ maingĩ ũguo o tũhũ, angĩkorwo ũhoro ũcio wothe warĩ wa tũhũ? <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:5 </char><char style="xt" closed="false"><ref loc="GAL 2:16">Agal 2:16</ref></char></note>Wee Ngai amũheaga Roho wake na akaringaga ciama gatagatĩ kanyu nĩ ũndũ wanyu gwathĩkĩra watho, kana nĩ ũndũ wa gwĩtĩkia ũhoro ũrĩa mwaiguire?</para>
+  <para style="p">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 15:6">Kĩam 15:6</ref>; <ref loc="ROM 4:3">Arom 4:3</ref></char>
+    </note>Ta ririkanai ũhoro wa Iburahĩmu, Maandĩko moigĩte atĩrĩ: “Etĩkirie Ngai, nake Ngai akĩmũtua mũthingu.” <verse number="7" style="v"/>Nĩ ũndũ ũcio kĩmenyei atĩ andũ arĩa metĩkĩtie nĩo ciana cia Iburahĩmu. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:8 </char><char style="xt" closed="false"><ref loc="GEN 12:3">Kĩam 12:3</ref></char></note>Na tondũ Maandĩko marĩa matheru nĩmooigĩte o mbere atĩ Ngai nĩagatua andũ-a-Ndũrĩrĩ athingu na ũndũ wa gwĩtĩkia-rĩ, na Maandĩko macio nĩmahunjĩirie Iburahĩmu Ũhoro-ũrĩa-Mwega o kabere, makiuga atĩrĩ: “Ndũrĩrĩ ciothe nĩikaarathimwo nĩ ũndũ waku.” <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:9 </char><char style="xt" closed="false"><ref loc="ROM 4:16">Arom 4:16</ref></char></note>Nĩ ũndũ ũcio andũ arĩa metĩkĩtie nĩmarathimanagĩrio hamwe na Iburahĩmu, mũndũ ũcio warĩ mwĩtĩkia.</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 4:15">Arom 4:15</ref>; <ref loc="DEU 27:26">Gũcook 27:26</ref></char>
+    </note>Andũ arĩa othe mehokaga ũhoro wa gwathĩkĩra watho-rĩ, marĩ na kĩrumi, nĩgũkorwo Maandĩko moigaga atĩrĩ, “Kũgwatwo nĩ kĩrumi nĩ mũndũ o wothe ũtahingagia maũndũ marĩa mothe mandĩkĩtwo Ibuku-inĩ rĩa Watho.” <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:11 </char><char style="xt" closed="false"><ref loc="HAB 2:4">Hab 2:4</ref>; <ref loc="ROM 9:30">Arom 9:30</ref>; <ref loc="HEB 10:38">Ahib 10:38</ref></char></note>Nĩtũũĩ wega atĩ gũtirĩ mũndũ ũngĩtuuo mũthingu mbere ya Ngai nĩ ũndũ wa gwathĩkĩra watho, tondũ Maandĩko moigĩte atĩrĩ: “Mũndũ ũrĩa mũthingu agaatũũra muoyo nĩ ũndũ wa gwĩtĩkia.” <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:12 </char><char style="xt" closed="false"><ref loc="LEV 18:5">Alaw 18:5</ref>; <ref loc="ROM 10:5">Arom 10:5</ref></char></note>No watho-rĩ, nduumanĩte na ũhoro wa gwĩtĩkia; handũ ha ũguo Maandĩko moigaga atĩrĩ, “Mũndũ ũrĩa wathĩkagĩra maũndũ ma watho agaatũũrio muoyo nĩ mo.” <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:13 </char><char style="xt" closed="false"><ref loc="DEU 21:23">Gũcook 21:23</ref>; <ref loc="ACT 5:30">Atũm 5:30</ref></char></note>Nake Kristũ nĩatũkũũrire agĩtũruta kĩrumi-inĩ kĩa watho na ũndũ wake mwene gũtuĩka kĩrumi ithenya riitũ, nĩgũkorwo nĩ kwandĩkĩtwo atĩrĩ, “Kũgwatwo nĩ kĩrumi nĩ mũndũ o wothe wambĩtwo mũtĩ-igũrũ.” <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:14 </char><char style="xt" closed="false"><ref loc="ROM 4:9">Arom 4:9</ref>, <ref loc="ROM 4:16">16</ref>; <ref loc="ACT 2:33">Atũm 2:33</ref></char></note>Aatũkũũrire nĩguo kĩrathimo kĩrĩa Iburahĩmu aarathimĩtwo nakĩo gĩkinyĩre andũ-a-Ndũrĩrĩ na ũndũ wa Kristũ Jesũ, nĩguo atĩ na ũndũ wa gwĩtĩkia twamũkĩre Roho ũrĩa weranĩirwo.</para>
+  <para style="s1">Watho na Kĩĩranĩro</para>
+  <para style="p">
+    <verse number="15" style="v"/>Ariũ na aarĩ a Ithe witũ, rekei ndĩmuonie na ngerekano yumanĩte na maũndũ marĩa mũũĩ. O ta ũrĩa gũtarĩ mũndũ ũngĩhota kweheria ũndũ kana kuongerera ũndũ harĩ kĩrĩkanĩro kĩrĩa gĩthondeketwo nĩ mũndũ-rĩ, no taguo ũhoro ũyũ ũtariĩ. <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:16 </char><char style="xt" closed="false"><ref loc="GEN 17:19">Kĩam 17:19</ref></char></note>Maũndũ marĩa meranĩirwo, meerĩirwo Iburahĩmu na mbeũ yake. Maandĩko matiugĩte “mbeũ ciake”, taarĩ ũhoro wa andũ aingĩ, no moigĩte “na mbeũ yake”, ũguo nĩ kuuga mũndũ ũmwe, na nĩwe Kristũ. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:17 </char><char style="xt" closed="false"><ref loc="ACT 7:6">Atũm 7:6</ref></char></note>Ũrĩa ndĩrenda kuuga nĩ atĩrĩ: Watho, ũcio wokire thuutha wa mĩaka 430, ndũngĩeheria kĩrĩkanĩro kĩrĩa gĩekĩrĩtwo ho nĩ Ngai mbere ĩyo, na ndũngĩtũma kĩĩranĩro kĩu gĩtuĩke gĩa tũhũ. <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:18 </char><char style="xt" closed="false"><ref loc="ROM 4:14">Arom 4:14</ref></char></note>Nĩ ũndũ-rĩ, angĩkorwo igai rĩngĩoneka nĩ ũndũ wa watho-rĩ, rĩtikiumanĩte na kĩĩranĩro; no Ngai, nĩ ũndũ wa wega wake, nĩaheire Iburahĩmu igai na ũndũ wa kĩĩranĩro.</para>
+  <para style="p">
+    <verse number="19" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:19 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 7:53">Atũm 7:53</ref>; <ref loc="EXO 20:19">Thaam 20:19</ref></char>
+    </note>Watho-rĩ, wakĩrĩ wa bata ũrĩkũ? Wongereirwo kũrĩ kĩĩranĩro nĩguo wonanagie mahĩtia o nginya rĩrĩa mbeũ ĩrĩa kĩrĩkanĩro kĩeranĩire ĩgooka. Watho ũcio wathanirwo nĩ araika ũkĩnengererio andũ na guoko kwa mũiguithania. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:20 </char><char style="xt" closed="false"><ref loc="HEB 8:6">Ahib 8:6</ref></char></note>No rĩrĩ, mũiguithania ndakoragwo arũgamĩrĩire o mwena ũmwe; no Ngai nĩ ũmwe.</para>
+  <para style="p">
+    <verse number="21" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:21 </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 2:17">Agal 2:17</ref>
+      </char>
+    </note>Nĩ ũndũ ũcio-rĩ, kaĩ watho ũreganĩte na ciĩranĩro cia Ngai? Aca ti ũguo! Tondũ korwo kwarĩ na watho waheanirwo nĩguo andũ magĩe na muoyo-rĩ, ti-itherũ o naguo ũthingu nĩ ũngĩakĩrehirwo nĩ watho. <verse number="22" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:22 </char><char style="xt" closed="false"><ref loc="ROM 11:32">Arom 11:32</ref></char></note>No Maandĩko moigaga atĩ andũ a thĩ nĩ mohetwo nĩ mehia, nĩgeetha kĩĩranĩro kĩrĩa kĩheanagwo nĩ ũndũ wa gwĩtĩkia Jesũ Kristũ kĩheagwo o arĩa metĩkĩtie.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Ũhoro wa gwĩtĩkia ũtanooka-rĩ, twarĩ ohe nĩ watho, tũkahingĩrĩrio o nginya wĩtĩkio ũkaaguũranĩrio. <verse number="24" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:24 </char><char style="xt" closed="false"><ref loc="ROM 10:4">Arom 10:4</ref>; <ref loc="GAL 2:16">Agal 2:16</ref></char></note>Nĩ ũndũ ũcio watho nĩguo waheirwo ũhoti wa gũtũtwara kũrĩ Kristũ, nĩguo tũtuuo athingu na ũndũ wa gwĩtĩkia. <verse number="25" style="v"/>Na rĩrĩ, kuona atĩ rĩu ũhoro wa gwĩtĩkia nĩmũkinyu, tũtingĩcooka kũrũgamĩrĩrwo nĩ watho.</para>
+  <para style="s1">Ciana cia Ngai</para>
+  <para style="p">
+    <verse number="26" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:26 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 8:14">Arom 8:14</ref>
+      </char>
+    </note>Inyuothe mũrĩ ciana cia Ngai nĩ ũndũ wa gwĩtĩkia Kristũ Jesũ, <verse number="27" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:27 </char><char style="xt" closed="false"><ref loc="MAT 28:19">Math 28:19</ref>; <ref loc="ROM 13:14">Arom 13:14</ref></char></note>nĩgũkorwo inyuothe arĩa mwabatithirio thĩinĩ wa Kristũ nĩmwĩhumbĩte Kristũ. <verse number="28" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:28 </char><char style="xt" closed="false"><ref loc="COL 3:11">Akol 3:11</ref>; <ref loc="EPH 2:14">Aef 2:14</ref>, <ref loc="EPH 2:15">15</ref></char></note>Nĩ ũndũ ũcio gũtingĩcooka gũthuuranio Mũyahudi kana Mũyunani, na gũtirĩ ngombo kana mũndũ ũtarĩ ngombo, na gũtirĩ mũndũ mũrũme kana mũndũ-wa-nja, nĩgũkorwo inyuothe mũrĩ ũmwe ki thĩinĩ wa Kristũ Jesũ. <verse number="29" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:29 </char><char style="xt" closed="false"><ref loc="LUK 3:8">Luk 3:8</ref>; <ref loc="GAL 3:16">Agal 3:16</ref></char></note>Angĩkorwo mũrĩ a Kristũ-rĩ, mũkĩrĩ a mbeũ ya Iburahĩmu, na mũrĩ agai a kũgaya kũringana na kĩĩranĩro kĩu kĩĩranĩirwo.</para>
+  <chapter number="4" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Ũrĩa ndĩroiga nĩ atĩrĩ, ihinda rĩothe rĩrĩa mũgai arĩ o mwana-rĩ, ndarĩ ũtiganu na ngombo, o na atuĩka nĩwe mwene indo icio ciothe. <verse number="2" style="v"/>Nĩ gwathwo athagwo nĩ amũrori hamwe na aramati a indo ciake, nginya ihinda rĩrĩa ithe atuĩte rĩgaakinya. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:3 </char><char style="xt" closed="false"><ref loc="GAL 2:4">Agal 2:4</ref>; <ref loc="COL 2:8">Akol 2:8</ref>, <ref loc="COL 2:20">20</ref></char></note>Ũguo noguo o na ithuĩ, hĩndĩ ĩrĩa twarĩ ciana, twatũire ũkombo-inĩ wa maũndũ marĩa ma ndũire ma thĩ ĩno. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:4 </char><char style="xt" closed="false"><ref loc="JHN 1:14">Joh 1:14</ref>; <ref loc="LUK 2:27">Luk 2:27</ref></char></note>No hĩndĩ ĩrĩa ihinda rĩrĩa rĩagĩrĩru kũna rĩakinyire, Ngai nĩatũmire Mũriũ, nake agĩciarwo nĩ mũndũ-wa-nja, na agĩciarwo arĩ wa gwathagwo nĩ watho, <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:5 </char><char style="xt" closed="false"><ref loc="JHN 1:12">Joh 1:12</ref>; <ref loc="ROM 8:14">Arom 8:14</ref></char></note>nĩguo akũũre andũ arĩa matũire mathagwo nĩ watho, nĩgeetha tũgĩe na kĩhooto gĩa gũtuĩka ciana ciake, <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:6 </char><char style="xt" closed="false"><ref loc="ACT 16:7">Atũm 16:7</ref>; <ref loc="ROM 8:15">Arom 8:15</ref>, <ref loc="ROM 8:16">16</ref></char></note>Tondũ inyuĩ mũrĩ ciana ciake-rĩ, Ngai nĩatũmire Roho wa Mũriũ ngoro-inĩ ciitũ, o we Roho ũrĩa wĩtanaga ũkiugaga atĩrĩ, “Abba, Baba.” <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:7 </char><char style="xt" closed="false"><ref loc="ROM 8:17">Arom 8:17</ref></char></note>Nĩ ũndũ ũcio, we ndũrĩ ngombo rĩngĩ, no ũrĩ mwana wake; na tondũ rĩu ũrĩ mwana wake, Ngai nĩagũtuĩte mũgai wa indo ciake.</para>
+  <para style="s1">Paũlũ Kũrũmbũiya Agalatia</para>
+  <para style="p">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 1:21">1Akor 1:21</ref>; <ref loc="2CH 13:9">2Maũ 13:9</ref></char>
+    </note>Tene rĩrĩa mũtooĩ Ngai-rĩ, mwarĩ ngombo cia ciũmbe iria itarĩ ngai. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:9 </char><char style="xt" closed="false"><ref loc="1CO 8:3">1Akor 8:3</ref>; <ref loc="COL 2:20">Akol 2:20</ref></char></note>No rĩrĩ, tondũ rĩu nĩmũmenyete Ngai, kana njuge nĩmũrĩkĩtie kũmenywo nĩ Ngai-rĩ, mũrakĩenda gũcookerera maũndũ macio maagĩte hinya na matarĩ kĩene nĩkĩ? Kaĩ mũrenda gũcooka ũkombo-inĩ wamo o rĩngĩ? <verse number="10" style="v"/>Nĩmũrũmĩtie ũhoro wa mĩthenya mĩamũre, na mĩeri mĩamũre, na imera, o na mĩaka! <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:11 </char><char style="xt" closed="false"><ref loc="1TH 3:5">1Athe 3:5</ref></char></note>Ndĩ na kĩeha mũno tondũ gũkuoneka atĩ wĩra ũrĩa wothe ndanenogia naguo nĩ ũndũ wanyu nĩ wa tũhũ!</para>
+  <para style="p">
+    <verse number="12" style="v"/>Ndamũthaitha, inyuĩ ariũ na aarĩ a Ithe witũ, tuĩkai ta niĩ, nĩgũkorwo niĩ nduĩkĩte ta inyuĩ. Mũtirĩ mwanjĩka ũũru. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:13 </char><char style="xt" closed="false"><ref loc="1CO 2:3">1Akor 2:3</ref></char></note>O ta ũrĩa mũũĩ, ndamũhunjĩirie Ũhoro-ũrĩa-Mwega ihinda rĩa mbere tondũ ndaarĩ mũrũaru. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:14 </char><char style="xt" closed="false"><ref loc="MAT 10:40">Math 10:40</ref></char></note>O na gũtuĩka ndwari yakwa yarĩ magerio kũrĩ inyuĩ, mũtianyararire kana mũkĩĩmena, no mwanyiitire ũgeni ta ndaarĩ mũraika wa Ngai, o na ta ndaarĩ Jesũ Kristũ we mwene. <verse number="15" style="v"/>Kaĩ ũndũ ũcio watũmaga mũkene ũthiĩte kũ? Niĩ ndĩ mũira atĩ, korwo nĩmũngĩahotire, nĩmũngĩakũũrire maitho manyu mũũhe. <verse number="16" style="v"/>Kaĩ rĩu nduĩkĩte thũ yanyu nĩ ũndũ wa kũmũhe ũhoro ũrĩa wa ma?</para>
+  <para style="p">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 2:4">Agal 2:4</ref>, <ref loc="GAL 2:12">12</ref></char>
+    </note>Andũ acio me na kĩyo magĩcaria ũrĩa mũngĩtuĩka a thiritũ yao, no ti ũndũ wa gĩtũmi kĩega. Ũrĩa mendaga nĩ kũmũtigithania na ithuĩ mũtuĩke ao, nĩgeetha mũgĩe na kĩyo gĩa kũmarũmĩrĩra. <verse number="18" style="v"/>Nĩ wega kũgĩa na kĩyo, angĩkorwo muoroto nĩ mwega, na mwĩkage ũguo hĩndĩ ciothe to hĩndĩ ĩrĩa ndĩ hamwe na inyuĩ. <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:19 </char><char style="xt" closed="false"><ref loc="ROM 8:29">Arom 8:29</ref>; <ref loc="EPH 4:13">Aef 4:13</ref></char></note>Ciana ciakwa nyendete mũno, o inyuĩ arĩa njiguagĩra ruo ta rwa mũtumia akĩheo mwana, nginya hĩndĩ ĩrĩa Kristũ agaakorwo eyũmbĩte thĩinĩ wanyu, <verse number="20" style="v"/>naarĩ korwo ndakorwo hamwe na inyuĩ ta rĩu, nĩguo ngarũrĩre mwarĩrie wakwa tondũ nĩndigĩtwo nĩ ũhoro wanyu!</para>
+  <para style="s1">Hagari na Sara</para>
+  <para style="p">
+    <verse number="21" style="v"/>Ta njĩĩrai, inyuĩ arĩa mũrenda gũkorwo mũgĩathwo nĩ watho-rĩ, kaĩ mũtooĩ ũrĩa watho uugaga? <verse number="22" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:22 </char><char style="xt" closed="false"><ref loc="GEN 21:2">Kĩam 21:2</ref></char></note>Nĩgũkorwo nĩ kwandĩkĩtwo atĩ, Iburahĩmu aarĩ na ariũ eerĩ, ũmwe aaciarĩtwo nĩ mũtumia ũrĩa warĩ ngombo, nake ũcio ũngĩ agaciarwo nĩ mũtumia ũrĩa ũtaarĩ ngombo. <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:23 </char><char style="xt" closed="false"><ref loc="ROM 9:7">Arom 9:7</ref>, <ref loc="ROM 9:8">8</ref>; <ref loc="HEB 11:11">Ahib 11:11</ref></char></note>Mũriũ wake wa mũtumia ũrĩa warĩ ngombo aaciarĩtwo na njĩra ya ũndũire; no mũriũ ũrĩa waciarĩtwo nĩ mũtumia ũcio ũtaarĩ ngombo aaciarĩtwo na ũndũ wa kũhingia kĩĩranĩro.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Namo maũndũ macio nĩ ma ngerekano, nĩ ũndũ atumia acio marũgamĩrĩire irĩkanĩro igĩrĩ. Kĩrĩkanĩro kĩmwe nĩ gĩa Kĩrĩma gĩa Sinai nakĩo gĩciaraga ciana cia ũkombo: Nakĩo kĩgerekanĩtio na Hagari. <verse number="25" style="v"/>Na rĩrĩ, Hagari arũgamĩrĩire Kĩrĩma gĩa Sinai kĩrĩa kĩrĩ kũu bũrũri wa Arabia, nake nĩwe ũgerekanĩtio na itũũra rĩa Jerusalemu ũrĩa rĩhaana ũmũthĩ, tondũ nĩatũire ũkombo-inĩ hamwe na ciana ciake. <verse number="26" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:26 </char><char style="xt" closed="false"><ref loc="HEB 12:22">Ahib 12:22</ref></char></note>No Jerusalemu, itũũra rĩrĩa rĩa kũũrĩa igũrũ, rĩtirĩ ũkombo-inĩ, na nĩrĩo nyina witũ, <verse number="27" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:27 </char><char style="xt" closed="false"><ref loc="ISA 54:1">Isa 54:1</ref></char></note>nĩgũkorwo nĩ kwandĩkĩtwo atĩrĩ:</para>
+  <para style="q1">“Kena wee mũndũ-wa-nja thata,</para>
+  <para style="q2">wee ũtaciaraga ciana,</para>
+  <para style="q1">tumũra kanua na wanĩrĩre,</para>
+  <para style="q2">wee ũtarĩ waigua ruo rwa kũgĩa mwana;</para>
+  <para style="q1">tondũ ciana cia mũndũ-wa-nja ũrĩa ũtiganĩirio</para>
+  <para style="q2">nĩ nyingĩ gũkĩra cia ũrĩa ũrĩ na mũthuuri.”</para>
+  <para style="p">
+    <verse number="28" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:28 </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 3:16">Agal 3:16</ref>
+      </char>
+    </note>Na rĩrĩ, inyuĩ ariũ na aarĩ a Ithe witũ, mũrĩ ciana cia kĩĩranĩro, o ta ũrĩa Isaaka aarĩ. <verse number="29" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:29 </char><char style="xt" closed="false"><ref loc="GEN 21:9">Kĩam 21:9</ref></char></note>Hĩndĩ ĩyo, mũriũ ũrĩa waciarĩtwo na njĩra ya ndũire-rĩ, nĩanyariiraga mũriũ ũcio waciarĩtwo na ũndũ wa hinya wa Roho. Ũguo noguo kũhaana o na rĩu. <verse number="30" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:30 </char><char style="xt" closed="false"><ref loc="GEN 21:10">Kĩam 21:10</ref></char></note>No rĩrĩ, Maandĩko moigĩte atĩa? Moigĩte atĩrĩ, “Ingata ngombo ĩyo ya mũndũ-wa-nja na mũriũ wake, tondũ mũriũ ũcio wa mũtumia ngombo ndarĩ hĩndĩ akagayana igai hamwe na mũriũ wa mũtumia ũcio ũtarĩ ngombo.” <verse number="31" style="v"/>Nĩ ũndũ ũcio, ariũ na aarĩ a Ithe witũ, ithuĩ tũtirĩ ciana cia mũtumia ũcio ngombo, no tũrĩ ciana cia mũtumia ũcio ũtarĩ ngombo.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Wĩyathi thĩinĩ wa Kristũ</para>
+  <para style="p">
+    <verse number="1" style="v"/>Kristũ nĩgũtuohora aatuohorire nĩguo tũgĩe na wĩyathi. Nĩ ũndũ ũcio, mwĩhaandei wega na mũtigetĩkĩre kuohwo icooki rĩa ũkombo rĩngĩ.</para>
+  <para style="p">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 15:1">Atũm 15:1</ref>
+      </char>
+    </note>Ta thikĩrĩriai ciugo ciakwa! Niĩ Paũlũ ngũmwĩra atĩrĩ, mũngĩtĩkĩra kũrua-rĩ, Kristũ ndangĩgĩa bata na inyuĩ o na hanini. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:3 </char><char style="xt" closed="false"><ref loc="GAL 3:10">Agal 3:10</ref></char></note>Ningĩ nĩngũmwĩra o rĩngĩ atĩ mũndũ o wothe ũngĩtĩkĩra kũrua, ũcio amenye atĩ nĩagĩrĩirwo nĩ gwathĩkĩra watho ũrĩ wothe. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:4 </char><char style="xt" closed="false"><ref loc="ROM 3:28">Arom 3:28</ref>; <ref loc="HEB 12:15">Ahib 12:15</ref></char></note>Inyuĩ arĩa mũrageria gũtuĩka athingu nĩ ũndũ wa watho-rĩ, nĩmũtigithanĩtio na Kristũ; inyuĩ nĩmũgwĩte mũgatigana na wega wa Ngai. <verse number="5" style="v"/>No ithuĩ-rĩ, tũkoragwo twĩhokete atĩ nĩtũgatuuo athingu. Ũndũ ũcio nĩguo tũkoragwo twĩrĩgĩrĩire tũrĩ na wĩtĩkio, tũhotithĩtio nĩ Roho. <verse number="6" style="v"/>Nĩgũkorwo thĩinĩ wa Kristũ Jesũ, kũrua kana kwaga kũrua gũtirĩ bata. Ũndũ ũrĩa ũrĩ bata nĩ wĩtĩkio ũrĩa ũrutaga wĩra na njĩra ya wendani.</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 9:24">1Akor 9:24</ref>; <ref loc="GAL 3:1">Agal 3:1</ref></char>
+    </note>Nĩmũratengʼagĩra ihenya rĩega. Nũũ wamũgiririe mũgĩtiga gũcooka gwathĩkĩra ũhoro-ũrĩa-wa-ma? <verse number="8" style="v"/>Kũringĩrĩrio kwa mũthemba ũcio gũtiumĩte kũrĩ ũrĩa wamwĩtire. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:9 </char><char style="xt" closed="false"><ref loc="1CO 5:6">1Akor 5:6</ref></char></note>“Ndawa nini tu ya kũimbia mĩgate nĩĩtũmaga mũtu ũrĩa mũkande nayo wothe ũimbe.” <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:10 </char><char style="xt" closed="false"><ref loc="2CO 2:3">2Akor 2:3</ref>; <ref loc="GAL 1:7">Agal 1:7</ref></char></note>Nĩndĩhokete thĩinĩ wa Mwathani atĩ inyuĩ mũtikũgarũrũka mũgĩe na meciiria mangĩ. Ũrĩa ũramũtururia nĩwe ũkaaherithio o na angĩkorwo arĩ ũ. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:11 </char><char style="xt" closed="false"><ref loc="GAL 6:12">Agal 6:12</ref>; <ref loc="LUK 2:34">Luk 2:34</ref></char></note>Ariũ na aarĩ a Ithe witũ, angĩkorwo no ndĩrahunjia ũhoro wa kũrua-rĩ, ndĩrakĩnyariirwo nĩkĩ? Angĩkorwo ũguo nĩguo-rĩ, ũndũ ũrĩa ũtũmaga andũ mahĩngwo, na nĩguo ũhoro wa mũtharaba-rĩ, nĩmweherie. <verse number="12" style="v"/>No nyende andũ acio mamũthĩĩnagia mathiĩ na mbere o nginya mehakũre.</para>
+  <para style="p">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 8:9">1Akor 8:9</ref>; <ref loc="1PE 2:16">1Pet 2:16</ref>; <ref loc="1CO 9:19">1Akor 9:19</ref></char>
+    </note>Inyuĩ ariũ na aarĩ a Ithe witũ, mwetirwo nĩguo mũgĩe na wĩyathi. No rĩrĩ, mũtikahũthĩre wĩyathi wanyu kũrũmagĩrĩra merirĩria ma mwĩrĩ, no handũ ha ũguo-rĩ, tungatanagĩrai inyuĩ-ene mũrĩ na wendani. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:14 </char><char style="xt" closed="false"><ref loc="LEV 19:18">Alaw 19:18</ref></char></note>Tondũ-rĩ, ũhoro wothe wa watho ũhingagio nĩ rĩathani rĩĩrĩ rĩmwe: “Enda mũndũ ũrĩa ũngĩ o ta ũrĩa wĩendete wee mwene.” <verse number="15" style="v"/>No rĩrĩ, mũngĩrũmana mũkĩrĩĩanaga-rĩ, mwĩmenyererei mũtikaniinane inyuĩ ene.</para>
+  <para style="s1">Mũtũũrĩre wa Gũtongorio nĩ Roho</para>
+  <para style="p">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 8:2">Arom 8:2</ref>
+      </char>
+    </note>Nĩ ũndũ ũcio nguuga atĩrĩ, thiiagai mũtongoretio nĩ Roho, na mũtirĩhingagia merirĩria ma mwĩrĩ. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:17 </char><char style="xt" closed="false"><ref loc="ROM 7:15-23">Arom 7:15-23</ref></char></note>Nĩgũkorwo mwĩrĩ nĩwĩriragĩria maũndũ marĩa matangĩendwo nĩ Roho, nake Roho nĩareganaga na maũndũ marĩa meriragĩrio nĩ mwĩrĩ. Nĩ ũndũ ũcio Roho na mwĩrĩ itũũraga irũaga, na nĩkĩo mũtahotaga gwĩka ũrĩa mwendaga gwĩka. <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:18 </char><char style="xt" closed="false"><ref loc="1TI 1:9">1Tim 1:9</ref></char></note>No rĩrĩ, mũngĩtongorio nĩ Roho, inyuĩ mũtingĩkorwo mũgĩathwo nĩ watho.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Na rĩrĩ, maũndũ marĩa mekagwo nĩ mwĩrĩ nĩmoĩo, namo nĩ: ũmaraya, na meciiria mooru, na ũmaramari, <verse number="20" style="v"/>na kũhooya mĩhianano, na kũrogana, na ũthũ, na kũũgitana, na ũiru, na mangʼũrĩ, na kwĩyenda, na nyamũkano, na ngarari, <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:21 </char><char style="xt" closed="false"><ref loc="MAT 15:19">Math 15:19</ref></char></note>gũcumĩkĩra na kũrĩĩo nĩ njoohi, na maruga marĩa mainagwo nyĩmbo iria itaagĩrĩire, o na maũndũ mangĩ ta macio. Nĩndamũkaanirie, o ta ũrĩa ndamũkaanirie hĩndĩ ya mbere, atĩ andũ arĩa mekaga maũndũ ta macio matikagaya ũthamaki wa Ngai.</para>
+  <para style="p">
+    <verse number="22" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 5:9">Aef 5:9</ref>; <ref loc="COL 3:12-15">Akol 3:12-15</ref></char>
+    </note>No rĩrĩ, maciaro ma Roho nĩ wendani, na gĩkeno, na thayũ, na gũkirĩrĩria, na kũiguanĩra tha, na gũtugana, na kwĩhokeka, <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:23 </char><char style="xt" closed="false"><ref loc="ACT 24:25">Atũm 24:25</ref></char></note>na ũhooreri, na kwĩgirĩrĩria merirĩria ma mwĩrĩ. Macio-rĩ, gũtirĩ watho wa kũgiria mekagwo. <verse number="24" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:24 </char><char style="xt" closed="false"><ref loc="ROM 6:6">Arom 6:6</ref></char></note>Nao andũ arĩa marĩ thĩinĩ wa Kristũ Jesũ nĩmambithĩtie mĩĩrĩ yao mũtĩ-igũrũ hamwe na thuti ciayo na merirĩria mayo. <verse number="25" style="v"/>Angĩkorwo tũtũire muoyo nĩ ũndũ wa Roho-rĩ, kĩrekei tũtongoragio nĩ Roho. <verse number="26" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:26 </char><char style="xt" closed="false"><ref loc="PHP 2:3">Afil 2:3</ref></char></note>Rekei tũtige gwĩtĩĩa, na kũũgitana, o na kũiguanagĩra ũiru.</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Gwĩka Andũ othe Wega</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 2:15">1Akor 2:15</ref>; <ref loc="MAT 18:15">Math 18:15</ref></char>
+    </note>Ariũ na aarĩ a Ithe witũ, mũndũ angĩkorwo ahĩtĩtie-rĩ, inyuĩ arĩa mũrĩ na roho mũcookagĩrĩriei mũhooreire. No mwĩmenyererei, o na inyuĩ mũtikae kũgerio. <verse number="2" style="v"/>Teithanagiai mũndũ na ũrĩa ũngĩ maũndũ marĩa mamũritũhagĩra, na mweka ũguo-rĩ, nĩmũrĩhingagia watho wa Kristũ. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:3 </char><char style="xt" closed="false"><ref loc="ROM 12:3">Arom 12:3</ref>; <ref loc="1CO 3:18">1Akor 3:18</ref></char></note>Mũndũ angĩĩciiria atĩ we nĩ wa bata hĩndĩ ĩrĩa atarĩ kĩene-rĩ, nĩ kwĩheenia areheenia. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:4 </char><char style="xt" closed="false"><ref loc="2CO 13:5">2Akor 13:5</ref></char></note>O mũndũ nĩarorage wĩra wake mwene. Hĩndĩ ĩyo no ahote kwĩraha, atekwĩiganania na mũndũ ũngĩ, <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:5 </char><char style="xt" closed="false"><ref loc="JER 31:30">Jer 31:30</ref></char></note>nĩgũkorwo o mũndũ no nginya akuue mũrigo wake.</para>
+  <para style="p">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 9:11">1Akor 9:11</ref>, <ref loc="1CO 9:14">14</ref></char>
+    </note>Mũndũ o wothe ũrĩa ũrutagwo ũhoro wa Ngai nĩagayanage indo ciothe iria njega na mũmũruti.</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 6:9">1Akor 6:9</ref>; <ref loc="PRO 22:8">Thim 22:8</ref></char>
+    </note>Mũtikanaheenio: Ngai ndangĩnyũrũrio. Kĩrĩa mũndũ ahaandaga no kĩo agethaga. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:8 </char><char style="xt" closed="false"><ref loc="JOB 4:8">Ayub 4:8</ref>; <ref loc="JAS 3:18">Jak 3:18</ref></char></note>Mũndũ ũrĩa ũhaandaga maũndũ ma gũkenia merirĩria ma mwĩrĩ-rĩ, ũcio akaagetha kwanangĩka kũrĩa kuumanaga na maũndũ macio. No ũrĩa ũhaandaga maũndũ ma gũkenia Roho-rĩ, ũcio akaagetha muoyo wa tene na tene ũrĩa uumanaga na Roho. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:9 </char><char style="xt" closed="false"><ref loc="1CO 15:58">1Akor 15:58</ref>; <ref loc="JOB 42:12">Ayub 42:12</ref></char></note>Ningĩ tũtikanogio nĩ gwĩka wega, nĩgũkorwo ihinda rĩrĩa rĩagĩrĩru rĩakinya nĩtũkaagetha magetha twaga gũkua ngoro. <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:10 </char><char style="xt" closed="false"><ref loc="PRO 3:27">Thim 3:27</ref>; <ref loc="EPH 2:19">Aef 2:19</ref></char></note>Na nĩ ũndũ ũcio, rĩrĩa rĩothe twagĩa na ihinda rĩagĩrĩru, nĩtwĩkage andũ othe maũndũ mega, na makĩria twĩkage wega andũ arĩa marĩ a nyũmba ya arĩa metĩkĩtie.</para>
+  <para style="s1">Kũrua kana kwaga Kũrua gũtirĩ Bata</para>
+  <para style="p">
+    <verse number="11" style="v"/>Onei ũrĩa ndĩramwandĩkĩra marũa maya na ndemwa nene na guoko gwakwa mwene! <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:12 </char><char style="xt" closed="false"><ref loc="MAT 23:25">Math 23:25</ref>, <ref loc="MAT 23:26">26</ref>; <ref loc="ACT 15:1">Atũm 15:1</ref>; <ref loc="GAL 5:11">Agal 5:11</ref></char></note>Andũ acio mendaga kwĩonania atĩ nĩagĩrĩru makĩonwo-rĩ, nĩo maramũringĩrĩria atĩ mũrue. Mekaga ũguo no geetha matikanyariirwo nĩ ũndũ wa mũtharaba wa Kristũ. <verse number="13" style="v"/>O na acio maruaga matiathĩkagĩra watho, no nĩmendaga inyuĩ mũrue nĩguo metĩĩage nĩ ũndũ wa mĩĩrĩ yanyu. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:14 </char><char style="xt" closed="false"><ref loc="1CO 2:2">1Akor 2:2</ref>; <ref loc="ROM 6:2">Arom 6:2</ref>, <ref loc="ROM 6:6">6</ref></char></note>No niĩ-rĩ, ndĩroaga gwĩtĩĩa, tiga o ndĩtĩĩire nĩ ũndũ wa mũtharaba wa Mwathani witũ Jesũ Kristũ, na nĩ ũndũ waguo-rĩ, maũndũ ma thĩ nĩmambĩtwo mũtĩ-igũrũ nĩguo mehere harĩ niĩ, na niĩ ngaambwo harĩ maũndũ ma thĩ nĩguo njehere harĩ mo. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:15 </char><char style="xt" closed="false"><ref loc="1CO 7:19">1Akor 7:19</ref>; <ref loc="2CO 5:17">2Akor 5:17</ref></char></note>Kũrua kana kwaga kũrua gũtirĩ bata; kĩrĩa kĩrĩ bata nĩ mũndũ agarũrũke atuĩke kĩũmbe kĩerũ. <verse number="16" style="v"/>Thayũ na kũiguĩrwo tha kũrogĩa na andũ arĩa marũmagĩrĩra wathani ũyũ, o hamwe na andũ a Isiraeli arĩa a Ngai.</para>
+  <para style="p">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 44:5">Isa 44:5</ref>
+      </char>
+    </note>Ngĩrĩkĩrĩria nguuga atĩrĩ, gũtikagĩe mũndũ o na ũrĩkũ ũkũndehere thĩĩna, nĩgũkorwo nĩnjoretwo njoro cia Jesũ mwĩrĩ-inĩ wakwa.</para>
+  <para style="p">
+    <verse number="18" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 16:20">Arom 16:20</ref>; <ref loc="PHP 4:23">Afil 4:23</ref></char>
+    </note>Wega wa Mwathani witũ Jesũ Kristũ ũrogĩa na maroho manyu, inyuĩ ariũ na aarĩ a Ithe witũ. Ameni.</para>
+</usx>

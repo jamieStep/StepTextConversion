@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="HEB" style="id">La Bible du Semeur (The Bible of the Sower)</book>
+  <para style="rem">Copyright © 1992, 1999, 2015 by Biblica, Inc.®</para>
+  <para style="h">HÉBREUX</para>
+  <para style="toc1">Lettre aux Hébreux</para>
+  <para style="toc2">Hébreux</para>
+  <para style="toc3">Hé</para>
+  <para style="mt1">Lettre aux Hébreux</para>
+  <para style="imt">Introduction</para>
+  <para style="ip">La lettre aux Hébreux est l’une des plus longues et des plus importantes du Nouveau Testament.</para>
+  <para style="ip">De son auteur, qui ne se nomme pas, on peut seulement dire que c’est un chrétien d’origine juive (« nos ancêtres » <char style="xt"><ref loc="HEB 1:1">1.1</ref></char>) versé dans la connaissance de l’Ancien Testament et, en particulier, du rituel décrit dans le livre du Lévitique. L’Evangile lui est peut-être parvenu par l’intermédiaire des premiers témoins (<char style="xt"><ref loc="HEB 2:3">2.3</ref></char>).</para>
+  <para style="ip">Il s’adresse à des Juifs convertis, comme lui, membres d’une Eglise qui lui est familière, à laquelle il espère rendre bientôt visite (<char style="xt"><ref loc="HEB 13:19">13.19</ref></char> et 23). La plupart des exégètes proposent Rome comme lieu de destination de la lettre (<char style="xt">cf. <ref loc="HEB 13:24">13.24</ref></char>). C’est là en tout cas que l’on trouve les premières traces de cette lettre (dans la lettre de Clément de Rome en 95-96). La mention de la persécution en <char style="xt"><ref loc="HEB 10:33-34">10.33-34</ref></char> pourrait se rapporter à l’édit de l’empereur Claude en 49, qui chassa, pour quelques années, les Juifs de Rome. La lettre pourrait dater de 60-64.</para>
+  <para style="ip">L’auteur définit son écrit comme une « lettre d’encouragement » (<char style="xt"><ref loc="HEB 13:22">13.22</ref></char>) ; de fait, recommandations et avertissements entrecoupent le développement doctrinal. Il semble en effet que ses interlocuteurs soient en butte à une opposition croissante. Les nombreuses mises en garde contre l’abandon de la foi (<char style="xt">2.1-4 ; 4.1-11 ; 6.4-6 ; 10.26-31</char>) qui s’insèrent dans une démonstration suivie de la supériorité de Christ sur les anges (<char style="xt">chap. <ref loc="HEB 1">1</ref> et <ref loc="HEB 2">2</ref></char>), sur Moïse et Josué (<char style="xt"><ref loc="HEB 3:1-4:13">3.1 à 4.13</ref></char>) et sur les grands-prêtres de l’ancienne alliance (<char style="xt"><ref loc="HEB 4:14-8:13">4.14 à 8.13</ref></char>) laissent à penser que ses destinataires étaient tentés de retourner au judaïsme. L’auteur leur montre la supériorité du sacrifice de Christ, accompli une fois pour toutes, sur ceux de l’ancien Israël (<char style="xt"><ref loc="HEB 9:1-10:18">9.1 à 10.18</ref></char>).</para>
+  <para style="ip">Pour les encourager, il leur donne en exemple les hommes de l’ancienne alliance qui avaient déjà la foi (<char style="xt">chap. <ref loc="HEB 11">11</ref></char>). Il les invite à garder « les yeux fixés sur Jésus » (<char style="xt"><ref loc="HEB 12:2">12.2</ref></char>), modèle de persévérance dans l’adversité.</para>
+  <para style="ip">Cette lettre est fondamentale pour la compréhension du sens des institutions cultuelles de l’ancienne alliance, en particulier des sacrifices, qui préfiguraient le sacrifice de Christ, accompli une fois pour toutes.</para>
+  <para style="ip">Elle contient aussi des encouragements précieux qui gardent toute leur force pour les hommes de notre temps : « Nous n’avons pas un grand-prêtre qui serait incapable de compatir à nos faiblesses. Au contraire, il a été tenté en tout point comme nous le sommes, mais sans commettre de péché. Approchons-nous donc du trône du Dieu de grâce avec une pleine assurance… » (<char style="xt"><ref loc="HEB 4:1">4.1</ref></char> et <char style="xt" link-href="HEB 4:16"><ref loc="HEB 4:16">16</ref></char>).</para>
+  <chapter number="1" style="c" sid="HEB 1"/>
+  <para style="ms1">La personne du Fils de Dieu</para>
+  <para style="s1">La révélation de Dieu par le Fils</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 1:1"/>A bien des reprises et de bien des manières, Dieu a parlé autrefois à nos ancêtres par les prophètes. <verse eid="HEB 1:1"/><verse number="2" style="v" sid="HEB 1:2"/>Et maintenant, dans ces jours qui sont les derniers<note caller="+" style="f"><char style="fr" closed="false">1.2 </char><char style="ft" closed="false">C’est-à-dire la période finale de l’histoire qu’a inaugurée la venue de Jésus-Christ.</char></note>, il nous a parlé par le Fils. Il a fait de lui l’héritier de toutes choses et c’est aussi par lui qu’il a créé l’univers. <verse eid="HEB 1:2"/><verse number="3" style="v" sid="HEB 1:3"/>Ce Fils est le rayonnement de la gloire de Dieu et l’expression parfaite de son être. Il soutient toutes choses par sa parole puissante et, après avoir accompli la purification des péchés, il s’est assis dans les cieux à la droite du Dieu majestueux.<verse eid="HEB 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 1:4"/>Il a ainsi acquis un rang bien plus éminent que celui des anges, dans la mesure où le titre que Dieu lui a donné est incomparablement supérieur au leur.<verse eid="HEB 1:4"/></para>
+  <para style="s1">Le Fils de Dieu supérieur aux anges</para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 1:5"/>En effet, auquel des anges Dieu a-t-il jamais dit ceci :</para>
+  <para style="q1" vid="HEB 1:5">
+    <char style="qt">Tu es mon Fils ; aujourd’hui,</char></para>
+  <para style="q1" vid="HEB 1:5">
+    <char style="qt">je fais de toi mon enfant</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">1.5 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 2:7">Ps 2.7</ref>
+        </char>. Il s’agit de la formule d’intronisation du Messie-Roi.</char>
+    </note>
+    <char style="qt">.</char></para>
+  <para style="m" vid="HEB 1:5">Et encore :</para>
+  <para style="q1" vid="HEB 1:5">
+    <char style="qt">Je serai pour lui un Père</char></para>
+  <para style="q1" vid="HEB 1:5">
+    <char style="qt">et lui sera pour moi un Fils</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">1.5 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="2SA 7:14">2 S 7.14</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="HEB 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 1:6"/>Mais lorsqu’il introduit de nouveau le Premier-né dans le monde<note caller="+" style="f"><char style="fr" closed="false">1.6 </char><char style="ft" closed="false">Il doit s’agir de l’entrée de Jésus dans le </char><char style="fqa" closed="false">monde à venir </char><char style="ft" closed="false">dont parle <char style="xt"><ref loc="HEB 2:5">2.5</ref></char>. Certains identifient le </char><char style="fqa" closed="false">monde </char><char style="ft" closed="false">avec le monde actuel et pensent qu’il s’agit de la résurrection. Autre traduction : </char><char style="fqa" closed="false">lorsqu’il introduit le Premier-né dans le monde, il dit encore ; </char><char style="ft" closed="false">certains pensent alors que le texte vise l’incarnation du Fils.</char></note>, il dit :</para>
+  <para style="q1" vid="HEB 1:6">
+    <char style="qt">Que tous les anges de Dieu</char> ╵<char style="qt">se prosternent devant lui</char><note caller="+" style="f"><char style="fr" closed="false">1.6 </char><char style="ft" closed="false"><char style="xt">Ps 97.7 ; Dt 32.43</char> cité selon l’ancienne version grecque.</char></note><char style="qt">.</char><verse eid="HEB 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 1:7"/>Au sujet des anges, il dit :</para>
+  <para style="q1" vid="HEB 1:7">
+    <char style="qt">Il utilise ses anges comme des vents,</char></para>
+  <para style="q1" vid="HEB 1:7">
+    <char style="qt">et ses serviteurs comme des flammes de feu</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">1.7 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 104:4">Ps 104.4</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">.</char><verse eid="HEB 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 1:8"/>Mais au sujet du Fils, il dit :</para>
+  <para style="q1" vid="HEB 1:8">
+    <char style="qt">Ton trône, ô Dieu, subsiste</char> ╵<char style="qt">pour toute éternité,</char></para>
+  <para style="q1" vid="HEB 1:8">
+    <char style="qt">le sceptre de ton règne</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">1.8 </char>
+      <char style="ft" closed="false">Certains manuscrits ont : </char>
+      <char style="fqa" closed="false">son règne.</char>
+    </note> ╵<char style="qt">est sceptre d’équité.</char><verse eid="HEB 1:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HEB 1:9"/>
+    <char style="qt">Tu aimes la justice,</char> ╵<char style="qt">et tu détestes la méchanceté.</char></para>
+  <para style="q1" vid="HEB 1:9">
+    <char style="qt">Aussi, ô Dieu, ton Dieu</char> ╵<char style="qt">t’a oint d’une huile d’allégresse</char></para>
+  <para style="q1" vid="HEB 1:9">
+    <char style="qt">et t’a ainsi fait roi,</char></para>
+  <para style="q1" vid="HEB 1:9">
+    <char style="qt">de préférence à tous tes compagnons</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">1.9 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 45:7-8">Ps 45.7-8</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="HEB 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 1:10"/>Il dit aussi :</para>
+  <para style="q1" vid="HEB 1:10">
+    <char style="qt">C’est toi, Seigneur,</char> ╵<char style="qt">qui, au commencement,</char> ╵<char style="qt">as posé les fondations de la terre.</char></para>
+  <para style="q1" vid="HEB 1:10">
+    <char style="qt">Le ciel est l’œuvre de tes mains.</char><verse eid="HEB 1:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HEB 1:11"/>
+    <char style="qt">Ils périront, mais tu subsistes,</char></para>
+  <para style="q1" vid="HEB 1:11">
+    <char style="qt">tous s’useront comme un habit,</char><verse eid="HEB 1:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HEB 1:12"/>
+    <char style="qt">comme un manteau, tu les enrouleras,</char></para>
+  <para style="q1" vid="HEB 1:12">
+    <char style="qt">comme un vêtement, tu les changeras.</char></para>
+  <para style="q1" vid="HEB 1:12">
+    <char style="qt">Mais toi, tu es toujours le même,</char></para>
+  <para style="q1" vid="HEB 1:12">
+    <char style="qt">tes années ne finiront pas</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">1.12 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 102:26-28">Ps 102.26-28</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">.</char><verse eid="HEB 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 1:13"/>Or, auquel des anges Dieu a-t-il jamais dit :</para>
+  <para style="q1" vid="HEB 1:13">
+    <char style="qt">Viens siéger à ma droite</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">1.13 </char>
+      <char style="ft" closed="false">La droite du roi est la place d’honneur (<char style="xt">Ps 45.10 ; 1 R 2.19</char>).</char>
+    </note></para>
+  <para style="q1" vid="HEB 1:13">
+    <char style="qt">jusqu’à ce que j’aie mis</char> ╵<char style="qt">tes ennemis</char> ╵<char style="qt">à terre sous tes pieds</char><note caller="+" style="f"><char style="fr" closed="false">1.13 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 110:1">Ps 110.1</ref></char>.</char></note><char style="qt">.</char><verse eid="HEB 1:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 1:14"/>En effet, que sont les anges ? Des esprits au service de Dieu, qui sont envoyés pour exercer un ministère en faveur de ceux qui vont hériter le salut.<verse eid="HEB 1:14"/></para>
+  <chapter eid="HEB 1"/>
+  <chapter number="2" style="c" sid="HEB 2"/>
+  <para style="s1">Ne pas négliger le salut apporté par le Fils</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 2:1"/>Puisqu’il en est ainsi, nous devons prendre encore plus au sérieux les enseignements que nous avons reçus afin de ne pas être entraînés à la dérive.<verse eid="HEB 2:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HEB 2:2"/>En effet, la parole transmise à nos ancêtres par des anges est entrée pleinement en vigueur et chaque transgression, chaque désobéissance, a reçu la sanction qu’elle méritait. <verse eid="HEB 2:2"/><verse number="3" style="v" sid="HEB 2:3"/>Alors, comment pourrons-nous échapper nous-mêmes au châtiment si nous négligeons un si grand salut ? Car ce salut a tout d’abord été annoncé par le Seigneur lui-même, ceux qui l’ont entendu en ont ensuite confirmé la validité pour nous <verse eid="HEB 2:3"/><verse number="4" style="v" sid="HEB 2:4"/>et Dieu a authentifié leur témoignage en y ajoutant le sien, c’est-à-dire, en accomplissant toutes sortes de signes miraculeux, d’actes extraordinaires, de manifestations diverses de sa puissance et en accordant à ces témoins, selon sa propre volonté, de recevoir chacun sa juste part de l’Esprit Saint.<verse eid="HEB 2:4"/></para>
+  <para style="s1">Dieu a tout soumis au Fils</para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 2:5"/>Car ce n’est pas à des anges que Dieu a soumis le monde à venir dont nous parlons. <verse eid="HEB 2:5"/><verse number="6" style="v" sid="HEB 2:6"/>Au contraire, quelqu’un, dans un texte de l’Ecriture, déclare :</para>
+  <para style="q1" vid="HEB 2:6">
+    <char style="qt">Qu’est-ce que l’homme,</char> ╵<char style="qt">pour que tu prennes soin de lui ?</char></para>
+  <para style="q1" vid="HEB 2:6">
+    <char style="qt">Qu’est-ce qu’un être humain</char> ╵<char style="qt">pour que tu t’intéresses à lui ?</char><verse eid="HEB 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HEB 2:7"/>
+    <char style="qt">Tu l’as abaissé pour un peu de temps</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">2.7 </char>
+      <char style="ft" closed="false">Autre traduction : </char>
+      <char style="fqa" closed="false">quelque peu.</char>
+    </note> ╵<char style="qt">au-dessous des anges,</char></para>
+  <para style="q1" vid="HEB 2:7">
+    <char style="qt">tu l’as couronné de gloire et d’honneur</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">2.7 </char>
+      <char style="ft" closed="false">Certains manuscrits ajoutent : </char>
+      <char style="fqa" closed="false">tu l’as établi roi sur les œuvres de tes mains.</char>
+    </note>
+    <char style="qt">,</char><verse eid="HEB 2:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HEB 2:8"/>
+    <char style="qt">tu as tout mis sous ses pieds</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">2.8 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 8:5-7">Ps 8.5-7</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">.</char></para>
+  <para style="p" vid="HEB 2:8">En soumettant <char style="qt">tout</char> à son autorité, Dieu n’a rien laissé qui puisse ne pas lui être soumis. Or actuellement nous ne voyons pas encore que tout lui soit soumis. <verse eid="HEB 2:8"/><verse number="9" style="v" sid="HEB 2:9"/>Mais voici ce que nous constatons : après avoir été <char style="qt">abaissé pour un peu de temps au-dessous des anges</char><note caller="+" style="f"><char style="fr" closed="false">2.9 </char><char style="ft" closed="false">Durant le ministère terrestre de Jésus.</char></note>, Jésus se trouve maintenant <char style="qt">couronné de gloire et d’honneur</char>, à cause de la mort qu’il a soufferte. Ainsi, par la grâce de Dieu, c’est pour tous les hommes qu’il a connu la mort.<verse eid="HEB 2:9"/></para>
+  <para style="s1">Le Fils, frère des hommes</para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 2:10"/>En effet, Dieu, qui a créé tout ce qui existe et pour qui sont toutes choses, voulait conduire beaucoup de fils à participer à la gloire. Il lui convenait pour cela d’élever à la perfection par ses souffrances celui qui devait leur ouvrir le chemin du salut<note caller="+" style="f"><char style="fr" closed="false">2.10 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">le chef du salut </char><char style="ft" closed="false">(<char style="xt">voir <ref loc="HEB 12:2">12.2</ref></char>).</char></note>. <verse eid="HEB 2:10"/><verse number="11" style="v" sid="HEB 2:11"/>Car Jésus, qui purifie les hommes de leurs péchés, et ceux qui sont ainsi purifiés partagent la même humanité<note caller="+" style="f"><char style="fr" closed="false">2.11 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">ont tous la même origine : Dieu.</char></note>. C’est pourquoi il n’a pas honte de les appeler ses <char style="qt">frères et sœurs</char> <verse eid="HEB 2:11"/><verse number="12" style="v" sid="HEB 2:12"/>lorsqu’il dit :</para>
+  <para style="q1" vid="HEB 2:12">
+    <char style="qt">Je proclamerai à mes frères</char> ╵<char style="qt">quel Dieu tu es,</char></para>
+  <para style="q1" vid="HEB 2:12">
+    <char style="qt">je te louerai</char> ╵<char style="qt">dans l’assemblée</char><note caller="+" style="f"><char style="fr" closed="false">2.12 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 22:23">Ps 22.23</ref></char>.</char></note><char style="qt">.</char><verse eid="HEB 2:12"/></para>
+  <para style="m">
+    <verse number="13" style="v" sid="HEB 2:13"/>Il dit aussi : <char style="qt">Pour moi, je mettrai toute ma <char style="w">confiance</char> en Dieu</char><note caller="+" style="f"><char style="fr" closed="false">2.13 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 8:17">Es 8.17</ref></char> cité selon l’ancienne version grecque.</char></note>, et encore : <char style="qt">Me voici avec les disciples que Dieu m’a donnés</char><note caller="+" style="f"><char style="fr" closed="false">2.13 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 8:18">Es 8.18</ref></char>.</char></note><char style="qt">.</char><verse eid="HEB 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 2:14"/>Ainsi donc, puisque ces <char style="qt">disciples</char> sont des êtres de chair et de sang, lui aussi, de la même façon, a partagé leur condition. Il l’a fait pour réduire à l’impuissance, par la mort, celui qui détenait le pouvoir de la mort, c’est-à-dire le diable, <verse eid="HEB 2:14"/><verse number="15" style="v" sid="HEB 2:15"/>et pour délivrer tous ceux qui étaient réduits à l’esclavage leur vie durant par la peur de la mort.<verse eid="HEB 2:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 2:16"/>Car ce n’est évidemment pas pour porter secours à des anges qu’il est venu ; non, c’est à la descendance d’Abraham qu’il vient en aide. <verse eid="HEB 2:16"/><verse number="17" style="v" sid="HEB 2:17"/>Voilà pourquoi il devait être rendu, à tous égards, semblable à ses <char style="qt">frères</char> afin de devenir un grand-prêtre plein de compassion et fidèle dans le domaine des relations de l’homme avec Dieu, en vue d’expier les péchés de son peuple. <verse eid="HEB 2:17"/><verse number="18" style="v" sid="HEB 2:18"/>Car, puisqu’il a lui-même été éprouvé dans ce qu’il a souffert, il peut secourir ceux qui sont éprouvés.<verse eid="HEB 2:18"/></para>
+  <chapter eid="HEB 2"/>
+  <chapter number="3" style="c" sid="HEB 3"/>
+  <para style="s1">Jésus supérieur à Moïse</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 3:1"/>C’est pourquoi, frères et sœurs, vous qui faites partie du peuple saint et qu’il a appelés à avoir part aux biens célestes, fixez vos pensées sur Jésus, l’apôtre et grand-prêtre de la foi que nous reconnaissons comme vraie. <verse eid="HEB 3:1"/><verse number="2" style="v" sid="HEB 3:2"/>Il est <char style="qt">fidèle</char><note caller="+" style="f"><char style="fr" closed="false">3.2 </char><char style="ft" closed="false">Autre traduction, ici et plus loin : </char><char style="fqa" closed="false">digne de confiance.</char></note> à celui qui l’a établi dans ces fonctions, comme autrefois <char style="qt"><char style="w">Moïse</char></char> l’a été <char style="qt">dans toute la maison de Dieu</char><note caller="+" style="f"><char style="fr" closed="false">3.2 </char><char style="ft" closed="false"><char style="xt"><ref loc="NUM 12:7">Nb 12.7</ref></char>.</char></note><char style="qt">.</char> <verse eid="HEB 3:2"/><verse number="3" style="v" sid="HEB 3:3"/>En effet, Jésus a été jugé digne d’une gloire bien plus grande que celle de Moïse, tout comme l’architecte qui a construit une maison reçoit plus d’honneur que la maison elle-même. <verse eid="HEB 3:3"/><verse number="4" style="v" sid="HEB 3:4"/>Il n’y a pas de maison sans constructeur et celui qui a construit toutes choses, c’est Dieu.<verse eid="HEB 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 3:5"/>Moïse, pour sa part, a été <char style="qt">fidèle dans toute la maison de Dieu</char>, mais en tant que <char style="qt">serviteur</char>, chargé de rendre témoignage à ce que Dieu allait dire par la suite. <verse eid="HEB 3:5"/><verse number="6" style="v" sid="HEB 3:6"/>Christ, lui, est fidèle en tant que Fils, à la tête de sa maison. Et sa maison, c’est nous, si du moins nous gardons la pleine assurance et la fierté que nous donne notre espérance<note caller="+" style="f"><char style="fr" closed="false">3.6 </char><char style="ft" closed="false">Certains manuscrits précisent : </char><char style="fqa" closed="false">fermement jusqu’à la fin.</char></note>.<verse eid="HEB 3:6"/></para>
+  <para style="s1">Le repos de Dieu pour ceux qui croient</para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 3:7"/>C’est pourquoi, comme le dit l’Esprit Saint :</para>
+  <para style="q1" vid="HEB 3:7">
+    <char style="qt">Aujourd’hui,</char> ╵<char style="qt">si vous entendez la voix de Dieu,</char><verse eid="HEB 3:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HEB 3:8"/>
+    <char style="qt">ne vous endurcissez pas,</char> ╵<char style="qt">comme l’ont fait vos ancêtres</char> ╵<char style="qt">lorsqu’ils se sont révoltés</char></para>
+  <para style="q1" vid="HEB 3:8">
+    <char style="qt">et qu’ils ont, dans le désert,</char> ╵<char style="qt">voulu me forcer la main.</char><verse eid="HEB 3:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HEB 3:9"/>
+    <char style="qt">Ce jour-là,</char> ╵<char style="qt">vos ancêtres m’ont provoqué,</char></para>
+  <para style="q1" vid="HEB 3:9">
+    <char style="qt">voulant me forcer la main,</char> ╵<char style="qt">bien qu’ils m’aient vu à l’action</char><verse eid="HEB 3:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HEB 3:10"/>
+    <char style="qt">pendant quarante ans.</char></para>
+  <para style="q1" vid="HEB 3:10">
+    <char style="qt">C’est pourquoi</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">3.10 </char>
+      <char style="ft" closed="false">Autre traduction : </char>
+      <char style="fqa" closed="false">…action. C’est pourquoi, pendant quarante ans, j’ai été…</char>
+    </note> ╵<char style="qt">j’ai été plein de colère</char> ╵<char style="qt">contre cette génération-là.</char></para>
+  <para style="q1" vid="HEB 3:10">
+    <char style="qt">Et j’ai dit : Leur cœur</char> ╵<char style="qt">s’égare sans cesse.</char></para>
+  <para style="q1" vid="HEB 3:10">
+    <char style="qt">Oui, ils n’ont fait aucun cas</char> ╵<char style="qt">des voies que je leur prescris.</char><verse eid="HEB 3:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HEB 3:11"/>
+    <char style="qt">C’est pourquoi, dans ma colère,</char> ╵<char style="qt">j’ai fait ce serment :</char></para>
+  <para style="q1" vid="HEB 3:11">
+    <char style="qt">ils n’entreront pas dans le lieu de repos</char> ╵<char style="qt">que j’avais prévu pour eux</char><note caller="+" style="f"><char style="fr" closed="false">3.11 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 95:7-11">Ps 95.7-11</ref></char> cité selon l’ancienne version grecque.</char></note><char style="qt">!</char><verse eid="HEB 3:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 3:12"/>Prenez donc bien garde, frères et sœurs, que personne parmi vous n’ait le cœur mauvais et incrédule au point de se détourner du Dieu vivant. <verse eid="HEB 3:12"/><verse number="13" style="v" sid="HEB 3:13"/>Mais encouragez-vous les uns les autres, jour après jour, aussi longtemps qu’on peut dire <char style="qt">aujourd’hui,</char> afin qu’aucun d’entre vous ne se laisse tromper par le péché et ne s’endurcisse. <verse eid="HEB 3:13"/><verse number="14" style="v" sid="HEB 3:14"/>En effet, nous sommes associés à Christ, si toutefois nous conservons fermement, et jusqu’au bout, l’assurance que nous avons eue dès le début, <verse eid="HEB 3:14"/><verse number="15" style="v" sid="HEB 3:15"/>et cela aussi longtemps qu’il est dit :</para>
+  <para style="q1" vid="HEB 3:15">
+    <char style="qt">Aujourd’hui,</char> ╵<char style="qt">si vous entendez la voix de Dieu,</char></para>
+  <para style="q1" vid="HEB 3:15">
+    <char style="qt">ne vous endurcissez pas,</char> ╵<char style="qt">comme l’ont fait vos ancêtres</char> ╵<char style="qt">lorsqu’ils se sont révoltés</char><note caller="+" style="f"><char style="fr" closed="false">3.15 </char><char style="ft" closed="false">Voir v. 7, 8.</char></note><char style="qt">.</char><verse eid="HEB 3:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 3:16"/>En effet, qui sont ceux qui <char style="qt">se sont révoltés</char> contre Dieu après avoir entendu sa voix ? N’est-ce pas tous ceux qui étaient sortis d’Egypte sous la conduite de Moïse ? <verse eid="HEB 3:16"/><verse number="17" style="v" sid="HEB 3:17"/>Et contre qui Dieu a-t-il été <char style="qt">plein de colère pendant quarante ans ?</char> N’est-ce pas contre ceux qui avaient péché et dont <char style="qt">les cadavres sont tombés dans le désert</char><note caller="+" style="f"><char style="fr" closed="false">3.17 </char><char style="ft" closed="false"><char style="xt"><ref loc="NUM 14:29">Nb 14.29</ref>, <ref loc="NUM 14:32">32</ref></char>.</char></note> ? <verse eid="HEB 3:17"/><verse number="18" style="v" sid="HEB 3:18"/>Enfin, à qui a-t-il <char style="qt">fait ce serment : ils n’entreront pas dans le lieu de repos que j’avais prévu pour eux ?</char> N’est-ce pas à ceux qui avaient refusé de lui obéir ?<verse eid="HEB 3:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 3:19"/>Nous voyons donc qu’ils n’ont pas pu entrer dans le lieu de repos parce qu’ils n’ont pas fait confiance à Dieu.<verse eid="HEB 3:19"/></para>
+  <chapter eid="HEB 3"/>
+  <chapter number="4" style="c" sid="HEB 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 4:1"/>Ainsi donc, pendant que la promesse d’entrer dans le repos prévu par Dieu est toujours en vigueur, craignons que l’un d’entre vous se trouve coupable<note caller="+" style="f"><char style="fr" closed="false">4.1 </char><char style="ft" closed="false">Autres traductions : </char><char style="fqa" closed="false">estime être resté, </char><char style="ft" closed="false">ou : </char><char style="fqa" closed="false">décide de rester.</char></note> d’être resté en arrière<note caller="+" style="f"><char style="fr" closed="false">4.1 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">d’être arrivé trop tard.</char></note>. <verse eid="HEB 4:1"/><verse number="2" style="v" sid="HEB 4:2"/>Car nous aussi, nous avons entendu une Bonne Nouvelle, l’Evangile, tout comme eux. Mais le message qu’ils ont entendu ne leur a servi à rien, car ils ne se sont pas associés par leur foi à ceux qui l’ont reçu<note caller="+" style="f"><char style="fr" closed="false">4.2 </char><char style="ft" closed="false">Certains manuscrits portent : </char><char style="fqa" closed="false">car ce message n’a pas rencontré la foi chez ceux qui l’ont entendu.</char></note>. <verse eid="HEB 4:2"/><verse number="3" style="v" sid="HEB 4:3"/>En effet, c’est nous qui avons cru, qui entrons dans ce repos, conformément à la parole de Dieu, quand il a dit :</para>
+  <para style="q1" vid="HEB 4:3">
+    <char style="qt">C’est pourquoi, dans ma colère,</char> ╵<char style="qt">j’ai fait ce serment :</char></para>
+  <para style="q1" vid="HEB 4:3">
+    <char style="qt">ils n’entreront pas dans le lieu de repos</char> ╵<char style="qt">que j’avais prévu pour eux !</char></para>
+  <para style="p" vid="HEB 4:3">C’est ainsi que Dieu a parlé alors que ses œuvres étaient achevées depuis la création du monde. <verse eid="HEB 4:3"/><verse number="4" style="v" sid="HEB 4:4"/>En effet, il est dit quelque part à propos du septième jour : <char style="qt">Et Dieu se reposa le septième jour de toutes ses œuvres</char><note caller="+" style="f"><char style="fr" closed="false">4.4 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 2:2">Gn 2.2</ref></char>.</char></note>.<verse eid="HEB 4:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 4:5"/>Et, dans notre texte, il dit : <char style="qt">Ils n’entreront pas dans le lieu de repos que j’avais prévu pour eux</char> !<verse eid="HEB 4:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 4:6"/>Il demeure donc établi que certains doivent entrer dans le repos. Or, ceux qui ont les premiers entendu cette Bonne Nouvelle n’y sont pas entrés parce qu’ils ont désobéi à Dieu, <verse eid="HEB 4:6"/><verse number="7" style="v" sid="HEB 4:7"/>c’est pourquoi Dieu fixe de nouveau un jour, qu’il appelle aujourd’hui, lorsqu’il dit beaucoup plus tard, dans les psaumes de David, ces paroles déjà citées :</para>
+  <para style="q1" vid="HEB 4:7">
+    <char style="qt">Aujourd’hui,</char> ╵<char style="qt">si vous entendez la voix de Dieu,</char></para>
+  <para style="q1" vid="HEB 4:7">
+    <char style="qt">ne vous endurcissez pas.</char><verse eid="HEB 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 4:8"/>En effet, si Josué avait assuré le repos aux Israélites, Dieu ne parlerait pas, après cela, d’un autre <char style="qt">jour</char>. <verse eid="HEB 4:8"/><verse number="9" style="v" sid="HEB 4:9"/>C’est donc qu’un repos de sabbat<note caller="+" style="f"><char style="fr" closed="false">4.9 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">une célébration de sabbat.</char></note> subsiste pour le peuple de Dieu. <verse eid="HEB 4:9"/><verse number="10" style="v" sid="HEB 4:10"/>Car celui qui est entré dans le repos prévu par Dieu se repose de ses œuvres, comme Dieu s’est reposé des siennes.<verse eid="HEB 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 4:11"/>Empressons-nous donc d’entrer dans ce repos afin que personne ne tombe dans la désobéissance à l’exemple des Israélites. <verse eid="HEB 4:11"/><verse number="12" style="v" sid="HEB 4:12"/>Car la Parole de Dieu est vivante et efficace. Elle est plus tranchante que toute épée à double tranchant et, pénétrant jusqu’à la division de l’âme ainsi que de l’esprit, et des jointures ainsi que de la moelle<note caller="+" style="f"><char style="fr" closed="false">4.12 </char><char style="ft" closed="false">D’autres comprennent : </char><char style="fqa" closed="false">elle pénètre jusqu’au point de division de l’âme et l’esprit, des jointures et de la moelle.</char></note>, elle juge les dispositions et les pensées du cœur. <verse eid="HEB 4:12"/><verse number="13" style="v" sid="HEB 4:13"/>Nulle créature n’échappe au regard de Dieu, tout est à nu et à découvert aux yeux de celui à qui nous devons rendre compte.<verse eid="HEB 4:13"/></para>
+  <para style="s1">Un grand-prêtre qui nous permet de nous approcher de Dieu</para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 4:14"/>Ainsi, puisque nous avons en Jésus, le Fils de Dieu, un grand-prêtre éminent qui a traversé les cieux, demeurons fermement attachés à la foi que nous reconnaissons comme vraie. <verse eid="HEB 4:14"/><verse number="15" style="v" sid="HEB 4:15"/>En effet, nous n’avons pas un grand-prêtre qui serait incapable de compatir à nos faiblesses. Au contraire, il a été tenté en tout point comme nous le sommes, mais sans commettre de péché.<verse eid="HEB 4:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 4:16"/>Approchons-nous donc du trône du Dieu de grâce avec une pleine assurance. Là, Dieu nous accordera sa bonté et nous donnera sa grâce pour que nous soyons secourus au bon moment.<verse eid="HEB 4:16"/></para>
+  <chapter eid="HEB 4"/>
+  <chapter number="5" style="c" sid="HEB 5"/>
+  <para style="ms1">Le ministère sacerdotal de Christ</para>
+  <para style="s1">Christ, grand-prêtre et auteur du salut des siens</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 5:1"/>Tout grand-prêtre est pris parmi les hommes et il est établi en faveur des hommes pour leurs relations avec Dieu. Il est chargé de présenter à Dieu des offrandes et des sacrifices pour les péchés. <verse eid="HEB 5:1"/><verse number="2" style="v" sid="HEB 5:2"/>Il peut avoir de la compréhension pour ceux qui sont dans l’ignorance et qui s’égarent, parce qu’il est lui aussi exposé à la faiblesse. <verse eid="HEB 5:2"/><verse number="3" style="v" sid="HEB 5:3"/>A cause de cette faiblesse, il doit offrir des sacrifices, non seulement pour les péchés du peuple, mais aussi, de la même manière, pour les siens propres.<verse eid="HEB 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 5:4"/>De plus, on ne s’attribue pas, de sa propre initiative, l’honneur d’être grand-prêtre : on le reçoit en y étant appelé par Dieu, comme ce fut le cas pour Aaron. <verse eid="HEB 5:4"/><verse number="5" style="v" sid="HEB 5:5"/>Il en est de même pour Christ. Ce n’est pas lui qui s’est attribué, de son propre chef, l’honneur de devenir grand-prêtre, mais c’est Dieu qui lui a déclaré :</para>
+  <para style="q1" vid="HEB 5:5">
+    <char style="qt">Tu es mon Fils ; aujourd’hui,</char></para>
+  <para style="q1" vid="HEB 5:5">
+    <char style="qt">je fais de toi mon enfant</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">5.5 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 2:7">Ps 2.7</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="HEB 5:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 5:6"/>Et, dans un autre passage :</para>
+  <para style="q1" vid="HEB 5:6">
+    <char style="qt">Tu seras <char style="w">prêtre</char> pour toujours</char></para>
+  <para style="q1" vid="HEB 5:6">
+    <char style="qt">selon la ligne de Melchisédek</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">5.6 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 110:4">Ps 110.4</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="HEB 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 5:7"/>Ainsi, au cours de sa vie sur terre, Jésus, avec de grands cris et des larmes, a présenté des prières et des supplications à celui qui pouvait le sauver de la mort, et il a été exaucé, à cause de sa soumission à Dieu<note caller="+" style="f"><char style="fr" closed="false">5.7 </char><char style="ft" closed="false">Ce passage se rapporte à l’agonie de Jésus à Gethsémané (<char style="xt"><ref loc="MAT 26:36-46">Mt 26.36-46</ref></char>).</char></note>. <verse eid="HEB 5:7"/><verse number="8" style="v" sid="HEB 5:8"/>Bien qu’étant Fils de Dieu, il a appris l’obéissance par tout ce qu’il a souffert. <verse eid="HEB 5:8"/><verse number="9" style="v" sid="HEB 5:9"/>Et c’est parce qu’il a été ainsi amené à la perfection qu’il est devenu, pour tous ceux qui lui obéissent, l’auteur d’un salut éternel : <verse eid="HEB 5:9"/><verse number="10" style="v" sid="HEB 5:10"/>Dieu, en effet, l’a déclaré grand-prêtre <char style="qt">selon la ligne de Melchisédek.</char><verse eid="HEB 5:10"/></para>
+  <para style="s1">Recevoir une nourriture pour adultes</para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 5:11"/>C’est un sujet sur lequel nous avons bien des choses à dire, et qui sont difficiles à expliquer ; car vous êtes devenus lents à comprendre.<verse eid="HEB 5:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 5:12"/>En effet, après tout ce temps, vous devriez être des maîtres dans les choses de Dieu ; or vous avez de nouveau besoin qu’on vous enseigne les rudiments des paroles de Dieu. Vous en êtes venus au point d’avoir besoin, non de nourriture solide, mais de lait. <verse eid="HEB 5:12"/><verse number="13" style="v" sid="HEB 5:13"/>Celui qui continue à se nourrir de lait n’a aucune expérience de la parole qui enseigne ce qu’est la vie juste : car c’est encore un bébé. <verse eid="HEB 5:13"/><verse number="14" style="v" sid="HEB 5:14"/>Les adultes, quant à eux, prennent de la nourriture solide : par la pratique<note caller="+" style="f"><char style="fr" closed="false">5.14 </char><char style="fq" closed="false">par la pratique. </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">en raison de leurs dispositions.</char></note>, ils ont exercé leurs facultés à distinguer ce qui est bien de ce qui est mal.<verse eid="HEB 5:14"/></para>
+  <chapter eid="HEB 5"/>
+  <chapter number="6" style="c" sid="HEB 6"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 6:1"/>C’est pourquoi ne nous attardons pas aux notions élémentaires de l’enseignement relatif à Christ. Tournons-nous plutôt vers ce qui correspond au stade adulte, sans nous remettre à poser les fondements, c’est-à-dire : l’abandon des actes qui mènent à la mort et la foi en Dieu, <verse eid="HEB 6:1"/><verse number="2" style="v" sid="HEB 6:2"/>l’enseignement sur les différents baptêmes<note caller="+" style="f"><char style="fr" closed="false">6.2 </char><char style="ft" closed="false">Peut-être, puisque l’auteur s’adresse à des chrétiens issus du judaïsme, s’agit-il des ablutions juives, du baptême de Jean et du baptême chrétien.</char></note>, l’imposition des mains, la résurrection et le jugement éternel. <verse eid="HEB 6:2"/><verse number="3" style="v" sid="HEB 6:3"/>Nous allons donc nous occuper de ce qui correspond au stade adulte, si Dieu le permet.<verse eid="HEB 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 6:4"/>En effet, ceux qui ont été une fois éclairés, qui ont goûté au don du ciel, qui ont eu part au Saint-Esprit, <verse eid="HEB 6:4"/><verse number="5" style="v" sid="HEB 6:5"/>qui ont expérimenté combien la Parole de Dieu est bienfaisante et fait l’expérience des forces du monde à venir <verse eid="HEB 6:5"/><verse number="6" style="v" sid="HEB 6:6"/>et qui, pourtant, se sont détournés de la foi, ne peuvent être amenés de nouveau à changer d’attitude, car ils crucifient le Fils de Dieu, pour leur propre compte, et le déshonorent publiquement.<verse eid="HEB 6:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 6:7"/>En effet, lorsqu’une terre arrosée par des pluies fréquentes produit des plantes utiles à ceux pour qui on la cultive, Dieu la bénit. <verse eid="HEB 6:7"/><verse number="8" style="v" sid="HEB 6:8"/>Mais si elle ne produit que des buissons d’épines et des chardons, elle ne vaut rien, elle ne tardera pas à être maudite et on finira par y mettre le feu.<verse eid="HEB 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 6:9"/>Mes chers amis, même si nous tenons ici un tel langage, nous sommes convaincus qu’une meilleure part vous attend, celle du salut. <verse eid="HEB 6:9"/><verse number="10" style="v" sid="HEB 6:10"/>Car Dieu n’est pas injuste au point d’oublier l’activité que vous avez déployée, par amour pour lui, dans les services que vous avez rendus – et que vous rendez encore – à ceux qui font partie du peuple saint. <verse eid="HEB 6:10"/><verse number="11" style="v" sid="HEB 6:11"/>Mais nous désirons que chacun de vous fasse preuve du même zèle pour amener votre espérance à son plein épanouissement jusqu’à la fin. <verse eid="HEB 6:11"/><verse number="12" style="v" sid="HEB 6:12"/>Ainsi vous ne vous relâcherez pas, mais vous imiterez ceux qui, par leur foi et leur attente patiente, reçoivent l’héritage promis.<verse eid="HEB 6:12"/></para>
+  <para style="s1">Une espérance certaine</para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 6:13"/>Lorsque Dieu fit sa promesse à Abraham, <char style="qt">il prêta serment par lui-même</char><note caller="+" style="f"><char style="fr" closed="false">6.13 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 22:16">Gn 22.16</ref></char>.</char></note><char style="qt">,</char> car il ne pouvait pas jurer par un plus grand que lui. <verse eid="HEB 6:13"/><verse number="14" style="v" sid="HEB 6:14"/>Il déclara : <char style="qt">Assurément, je te comblerai de bénédictions et je multiplierai ta descendance</char><note caller="+" style="f"><char style="fr" closed="false">6.14 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 22:16-17">Gn 22.16-17</ref></char>.</char></note><char style="qt">.</char> <verse eid="HEB 6:14"/><verse number="15" style="v" sid="HEB 6:15"/>Abraham attendit patiemment et c’est ainsi qu’il vit se réaliser ce que Dieu lui avait promis<note caller="+" style="f"><char style="fr" closed="false">6.15 </char><char style="ft" closed="false">Pendant 25 ans ; la réalisation eut lieu par la naissance d’Isaac (<char style="xt">Gn 17.2 ; 18.10 ; 21.5</char>).</char></note>.<verse eid="HEB 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 6:16"/>En effet, les hommes prêtent serment par un plus grand qu’eux. Le serment leur sert de garantie pour mettre fin à toute contestation. <verse eid="HEB 6:16"/><verse number="17" style="v" sid="HEB 6:17"/>De même, voulant donner aux héritiers de ce qu’il avait promis une preuve plus forte encore du caractère irrévocable de sa décision, Dieu a garanti sa promesse par un serment. <verse eid="HEB 6:17"/><verse number="18" style="v" sid="HEB 6:18"/>Ainsi, il nous a mis en présence de deux actes irrévocables, dans lesquels il est impossible que Dieu mente. Ces actes constituent un puissant encouragement pour nous qui avons cherché refuge en saisissant fermement l’espérance qui nous est proposée.<verse eid="HEB 6:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 6:19"/>Cette espérance est pour nous comme l’ancre de notre vie, sûre et solide. Elle pénètre, par-delà le voile, dans le lieu très saint <verse eid="HEB 6:19"/><verse number="20" style="v" sid="HEB 6:20"/>où Jésus est entré pour nous en précurseur. Car il est devenu grand-prêtre <char style="qt">pour l’éternité selon la ligne de Melchisédek.</char><verse eid="HEB 6:20"/></para>
+  <chapter eid="HEB 6"/>
+  <chapter number="7" style="c" sid="HEB 7"/>
+  <para style="s1">La ligne de Melchisédek supérieure à celle d’Aaron</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 7:1"/>Ce <char style="qt">Melchisédek</char> était, selon l’Ecriture, <char style="qt">roi de Salem et <char style="w">prêtre</char> du Dieu très-haut.</char> C’est lui qui <char style="qt">a rencontré <char style="w">Abraham</char> quand celui-ci revenait de sa victoire sur les rois</char> et qui <char style="qt">l’a béni</char>. <verse eid="HEB 7:1"/><verse number="2" style="v" sid="HEB 7:2"/>Et c’est à lui qu’<char style="qt">Abraham a donné le dixième de tout son butin</char><note caller="+" style="f"><char style="fr" closed="false">7.2 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 14:17-20">Gn 14.17-20</ref></char>.</char></note><char style="qt">.</char></para>
+  <para style="p" vid="HEB 7:2">Tout d’abord, le nom de Melchisédek signifie roi de justice. Ensuite, il est <char style="qt">roi de Salem</char>, ce qui veut dire : roi de paix. <verse eid="HEB 7:2"/><verse number="3" style="v" sid="HEB 7:3"/>En outre, l’Ecriture ne lui attribue ni père, ni mère, ni généalogie. Elle ne mentionne ni sa naissance, ni sa mort. Elle le rend ainsi semblable au Fils de Dieu, et il demeure prêtre pour toujours.<verse eid="HEB 7:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 7:4"/>Remarquez quel rang éminent occupait cet homme pour qu’Abraham, le patriarche, lui donne la dîme de son butin. <verse eid="HEB 7:4"/><verse number="5" style="v" sid="HEB 7:5"/>Certes, la Loi ordonne à ceux des lévites qui sont prêtres de prélever la dîme sur le peuple d’Israël<note caller="+" style="f"><char style="fr" closed="false">7.5 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="NUM 18:21">Nb 18.21</ref></char>.</char></note>, c’est-à-dire sur leurs frères, bien que ceux-ci soient, comme eux, des descendants d’Abraham. <verse eid="HEB 7:5"/><verse number="6" style="v" sid="HEB 7:6"/>Mais Melchisédek, qui ne figure pas parmi les descendants de Lévi, a reçu la dîme d’Abraham. En outre, il a invoqué la bénédiction de Dieu sur celui qui avait reçu les promesses divines. <verse eid="HEB 7:6"/><verse number="7" style="v" sid="HEB 7:7"/>Or, incontestablement, c’est l’inférieur qui est béni par le supérieur.<verse eid="HEB 7:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 7:8"/>De plus, dans le premier cas, ceux qui perçoivent la dîme sont des hommes mortels ; dans le second, selon le témoignage de l’Ecriture, il s’agit de quelqu’un qui vit.<verse eid="HEB 7:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 7:9"/>Enfin, concernant Lévi, qui perçoit la dîme, on peut même dire qu’il l’a versée à Melchisédek en la personne d’Abraham. <verse eid="HEB 7:9"/><verse number="10" style="v" sid="HEB 7:10"/>En effet, puisqu’il n’était pas encore né, il était encore en puissance dans la personne de son ancêtre Abraham lorsque Melchisédek a rencontré celui-ci.<verse eid="HEB 7:10"/></para>
+  <para style="s1">Christ est prêtre selon la ligne de Melchisédek</para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 7:11"/>La Loi donnée au peuple d’Israël repose sur le sacerdoce lévitique. Or, s’il avait été possible d’atteindre la perfection par ce sacerdoce, pourquoi était-il nécessaire d’établir un autre <char style="qt"><char style="w">prêtre</char>, selon la ligne de Melchisédek</char>, et non pas <char style="qt">selon la ligne</char> d’Aaron ?<verse eid="HEB 7:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 7:12"/>Or, ce changement de sacerdoce entraîne forcément un changement de loi. <verse eid="HEB 7:12"/><verse number="13" style="v" sid="HEB 7:13"/>Car les affirmations du texte que nous venons de citer concernent un prêtre qui est d’une autre tribu que celle de Lévi, une tribu dont aucun membre n’a jamais été affecté au service de l’autel. <verse eid="HEB 7:13"/><verse number="14" style="v" sid="HEB 7:14"/>Comme on le sait bien, en effet, notre Seigneur est issu de la tribu de Juda, et Moïse n’a jamais parlé de sacerdoce pour cette tribu.<verse eid="HEB 7:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 7:15"/>Cela devient plus évident encore quand on considère ce fait : c’est sur le modèle de Melchisédek qu’un autre prêtre s’est levé ; <verse eid="HEB 7:15"/><verse number="16" style="v" sid="HEB 7:16"/>et il n’est pas devenu prêtre en vertu d’une règle liée à la filiation naturelle, mais par la puissance d’une vie indestructible. <verse eid="HEB 7:16"/><verse number="17" style="v" sid="HEB 7:17"/>Car il est déclaré à son sujet :</para>
+  <para style="q1" vid="HEB 7:17">
+    <char style="qt">Tu es prêtre pour toujours</char></para>
+  <para style="q1" vid="HEB 7:17">
+    <char style="qt">selon la ligne de Melchisédek</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">7.17 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 110:4">Ps 110.4</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="HEB 7:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 7:18"/>D’une part donc, la règle antérieure se trouve abrogée parce qu’elle était impuissante et inutile. <verse eid="HEB 7:18"/><verse number="19" style="v" sid="HEB 7:19"/>La Loi, en effet, n’a rien amené à la perfection. D’autre part, une meilleure espérance a été introduite, par laquelle nous nous approchons de Dieu.<verse eid="HEB 7:19"/></para>
+  <para style="s1">Christ, grand-prêtre pour l’éternité</para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 7:20"/>En outre, tout cela ne s’est pas fait sans serment de Dieu. Les autres prêtres ont reçu la prêtrise sans un tel serment, <verse eid="HEB 7:20"/><verse number="21" style="v" sid="HEB 7:21"/>mais Jésus est devenu prêtre en vertu d’un serment que Dieu a prononcé quand il lui a dit :</para>
+  <para style="q1" vid="HEB 7:21">
+    <char style="qt">Le Seigneur l’a juré,</char> ╵<char style="qt">il ne reviendra pas</char> ╵<char style="qt">sur son engagement :</char></para>
+  <para style="q1" vid="HEB 7:21">
+    <char style="qt">tu seras <char style="w">prêtre</char> pour toujours</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">7.21 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 110:4">Ps 110.4</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="HEB 7:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 7:22"/>Ainsi, Jésus est devenu le garant d’une alliance meilleure.<verse eid="HEB 7:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 7:23"/>De plus, de nombreux prêtres se sont succédé parce que la mort les empêchait d’exercer leurs fonctions à perpétuité. <verse eid="HEB 7:23"/><verse number="24" style="v" sid="HEB 7:24"/>Mais Jésus, lui, parce qu’il demeure éternellement, possède le sacerdoce perpétuel. <verse eid="HEB 7:24"/><verse number="25" style="v" sid="HEB 7:25"/>Voilà pourquoi il est en mesure de sauver parfaitement ceux qui s’approchent de Dieu par lui, puisqu’il est toujours vivant pour intercéder en leur faveur auprès de Dieu.<verse eid="HEB 7:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="HEB 7:26"/>Jésus est donc bien le grand-prêtre qu’il nous fallait : il est saint, pleinement innocent, indemne de tout péché, séparé des pécheurs et il a été élevé plus haut que les cieux. <verse eid="HEB 7:26"/><verse number="27" style="v" sid="HEB 7:27"/>Les autres grands-prêtres sont obligés d’offrir chaque jour des sacrifices, d’abord pour leurs propres péchés, ensuite pour ceux du peuple. Lui n’en a pas besoin, car il a tout accompli une fois pour toutes, en s’offrant lui-même.<verse eid="HEB 7:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="HEB 7:28"/>Les grands-prêtres institués par la Loi sont des hommes marqués par leur faiblesse. Mais celui que Dieu a établi grand-prêtre par un serment solennel, prononcé après la promulgation de la Loi, est son propre Fils, et il a été rendu parfait pour toujours.<verse eid="HEB 7:28"/></para>
+  <chapter eid="HEB 7"/>
+  <chapter number="8" style="c" sid="HEB 8"/>
+  <para style="s1">Christ, grand-prêtre d’une alliance bien meilleure</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 8:1"/>Or, voici le point capital de ce que nous sommes en train de dire : nous avons bien un grand-prêtre comme celui-ci, qui s’est assis dans le ciel à la droite du trône du Dieu majestueux. <verse eid="HEB 8:1"/><verse number="2" style="v" sid="HEB 8:2"/>Il y accomplit le service du grand-prêtre dans le sanctuaire, c’est-à-dire dans le véritable tabernacle, dressé non par des hommes, mais par le Seigneur.<verse eid="HEB 8:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 8:3"/>Tout grand-prêtre, en effet, est établi pour présenter à Dieu des offrandes et des sacrifices. Il faut donc que notre grand-prêtre aussi ait quelque chose à présenter. <verse eid="HEB 8:3"/><verse number="4" style="v" sid="HEB 8:4"/>S’il était sur terre, il ne serait même pas prêtre. En effet, ceux qui présentent les offrandes conformément à la Loi sont déjà là. <verse eid="HEB 8:4"/><verse number="5" style="v" sid="HEB 8:5"/>Ils sont au service d’un sanctuaire qui n’est qu’une image, que l’ombre du sanctuaire céleste. Moïse en a été averti au moment où il allait construire le tabernacle : <char style="qt">Aie soin,</char> lui dit le Seigneur, <char style="qt">de faire tout selon le modèle qui t’est montré sur la montagne</char><note caller="+" style="f"><char style="fr" closed="false">8.5 </char><char style="ft" closed="false"><char style="xt"><ref loc="EXO 25:40">Ex 25.40</ref></char>.</char></note><char style="qt">.</char><verse eid="HEB 8:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 8:6"/>Mais maintenant, c’est un service bien supérieur qui a été confié à notre grand-prêtre car il est le médiateur d’une alliance bien meilleure fondée sur de meilleures promesses.<verse eid="HEB 8:6"/></para>
+  <para style="s1">L’ancienne et la nouvelle alliance</para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 8:7"/>En effet, si la première alliance avait été sans défaut, il n’aurait pas été nécessaire de la remplacer par une seconde.<verse eid="HEB 8:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 8:8"/>Or, c’est bien un reproche que Dieu adresse à son peuple lorsqu’il déclare :</para>
+  <para style="q1" vid="HEB 8:8">
+    <char style="qt">Mais des jours vont venir,</char> ╵<char style="qt">dit le Seigneur,</char></para>
+  <para style="q1" vid="HEB 8:8">
+    <char style="qt">où je conclurai</char> ╵<char style="qt">avec le peuple d’<char style="w">Israël</char></char> ╵<char style="qt">et celui de <char style="w">Juda</char></char> ╵<char style="qt">une alliance nouvelle.</char><verse eid="HEB 8:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HEB 8:9"/>
+    <char style="qt">Elle ne sera pas</char> ╵<char style="qt">comme celle que j’ai conclue</char> ╵<char style="qt">avec leurs pères</char></para>
+  <para style="q1" vid="HEB 8:9">
+    <char style="qt">quand je les ai pris par la main</char> ╵<char style="qt">pour les faire sortir d’Egypte.</char></para>
+  <para style="q1" vid="HEB 8:9">
+    <char style="qt">Puisqu’ils n’ont pas été fidèles</char> ╵<char style="qt">à mon alliance,</char></para>
+  <para style="q1" vid="HEB 8:9">
+    <char style="qt">moi alors, je me suis détourné d’eux,</char> ╵<char style="qt">dit le Seigneur.</char><verse eid="HEB 8:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HEB 8:10"/>
+    <char style="qt">Mais voici quelle alliance je vais conclure</char> ╵<char style="qt">avec le peuple d’<char style="w">Israël</char></char></para>
+  <para style="q1" vid="HEB 8:10">
+    <char style="qt">après ces jours,</char> ╵<char style="qt">dit le Seigneur :</char></para>
+  <para style="q1" vid="HEB 8:10">
+    <char style="qt">je placerai mes lois dans leur pensée,</char></para>
+  <para style="q1" vid="HEB 8:10">
+    <char style="qt">je les graverai sur leur cœur ;</char></para>
+  <para style="q1" vid="HEB 8:10">
+    <char style="qt">je serai leur Dieu,</char></para>
+  <para style="q1" vid="HEB 8:10">
+    <char style="qt">et ils seront mon peuple.</char><verse eid="HEB 8:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HEB 8:11"/>
+    <char style="qt">Ils n’auront plus besoin</char> ╵<char style="qt">de s’enseigner l’un l’autre</char></para>
+  <para style="q1" vid="HEB 8:11">
+    <char style="qt">en répétant chacun</char> ╵<char style="qt">à son concitoyen</char> ╵<char style="qt">ou à son frère :</char></para>
+  <para style="q1" vid="HEB 8:11">
+    <char style="qt">« Il faut que tu connaisses le Seigneur ! »</char></para>
+  <para style="q1" vid="HEB 8:11">
+    <char style="qt">Car tous me connaîtront,</char></para>
+  <para style="q1" vid="HEB 8:11">
+    <char style="qt">du plus petit jusqu’au plus grand d’entre eux.</char><verse eid="HEB 8:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HEB 8:12"/>
+    <char style="qt">Car je pardonnerai leurs fautes,</char></para>
+  <para style="q1" vid="HEB 8:12">
+    <char style="qt">je ne tiendrai plus compte</char> ╵<char style="qt">de leurs péchés</char><note caller="+" style="f"><char style="fr" closed="false">8.12 </char><char style="ft" closed="false"><char style="xt"><ref loc="JER 31:31-34">Jr 31.31-34</ref></char>.</char></note><char style="qt">.</char><verse eid="HEB 8:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 8:13"/>Par le simple fait d’appeler cette alliance-là <char style="qt">nouvelle,</char> le Seigneur a rendu la première ancienne ; or, ce qui devient ancien et ce qui vieillit est près de disparaître.<verse eid="HEB 8:13"/></para>
+  <chapter eid="HEB 8"/>
+  <chapter number="9" style="c" sid="HEB 9"/>
+  <para style="s1">L’imperfection du rituel de l’ancienne alliance</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 9:1"/>Certes, la première alliance avait un rituel pour le culte, ainsi qu’un sanctuaire qui était terrestre. <verse eid="HEB 9:1"/><verse number="2" style="v" sid="HEB 9:2"/>On avait, en effet, installé une tente – le tabernacle – partagée en deux : dans la première partie se trouvaient le chandelier et la table avec les pains offerts à Dieu. On l’appelait le « lieu saint ». <verse eid="HEB 9:2"/><verse number="3" style="v" sid="HEB 9:3"/>Derrière le second rideau venait la partie de la tente qu’on appelait le « lieu très saint ». <verse eid="HEB 9:3"/><verse number="4" style="v" sid="HEB 9:4"/>Là étaient placés un brûle-parfum en or et le coffre de l’alliance, entièrement plaqué d’or. Ce coffre contenait un vase d’or avec de la manne, le bâton d’Aaron qui avait fleuri et les tablettes de pierre sur lesquelles étaient gravées les paroles de l’alliance.<verse eid="HEB 9:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 9:5"/>Au-dessus du coffre, les chérubins glorieux couvraient le propitiatoire de l’ombre de leurs ailes. Mais ce n’est pas le moment de parler de chacun de ces objets en détail. <verse eid="HEB 9:5"/><verse number="6" style="v" sid="HEB 9:6"/>Cet ensemble étant ainsi installé, les prêtres entrent en tout temps dans la première partie du tabernacle pour accomplir leur service. <verse eid="HEB 9:6"/><verse number="7" style="v" sid="HEB 9:7"/>Dans la seconde, le grand-prêtre est le seul à pénétrer, et cela une seule fois par an. Or, il ne peut y entrer sans apporter le sang de sacrifices qu’il offre pour lui-même et pour les fautes que le peuple a commises par ignorance.<verse eid="HEB 9:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 9:8"/>Le Saint-Esprit montre par là que l’accès au lieu très saint n’est pas ouvert tant que subsiste le premier tabernacle. <verse eid="HEB 9:8"/><verse number="9" style="v" sid="HEB 9:9"/>Nous avons là une représentation symbolique en vue de l’époque actuelle. Elle signifie que les offrandes et les sacrifices qu’on présente ainsi à Dieu sont incapables de donner une conscience parfaitement nette à celui qui rend un tel culte.<verse eid="HEB 9:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 9:10"/>En effet, il n’y a là que des prescriptions portant sur des rites d’ordre matériel, concernant des aliments, des boissons et des ablutions diverses. Elles ne devaient rester en vigueur que jusqu’au temps où Dieu instituerait un ordre nouveau.<verse eid="HEB 9:10"/></para>
+  <para style="s1">Christ, grand-prêtre des biens qu’il nous a acquis</para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 9:11"/>Or, Christ est venu en tant que grand-prêtre pour nous procurer les biens qu’il nous a désormais acquis<note caller="+" style="f"><char style="fr" closed="false">9.11 </char><char style="ft" closed="false">Certains manuscrits ont : </char><char style="fqa" closed="false">les biens à venir.</char></note>. Il a traversé un tabernacle plus grand et plus parfait que le sanctuaire terrestre, un tabernacle qui n’a pas été fabriqué par des mains humaines, c’est-à-dire qui n’appartient pas à ce monde créé. <verse eid="HEB 9:11"/><verse number="12" style="v" sid="HEB 9:12"/>Il a pénétré une fois pour toutes dans le sanctuaire ; il y a offert, non le sang de boucs ou de veaux, mais son propre sang. Il nous a ainsi acquis un salut éternel. <verse eid="HEB 9:12"/><verse number="13" style="v" sid="HEB 9:13"/>En effet, le sang des boucs et des taureaux et les cendres d’une vache que l’on répand sur des personnes rituellement impures <verse eid="HEB 9:13"/><verse number="14" style="v" sid="HEB 9:14"/>leur rendent la pureté extérieure. Mais Christ s’est offert lui-même à Dieu, sous la conduite de l’Esprit éternel, comme une victime sans défaut. A combien plus forte raison, par conséquent, son sang purifiera-t-il notre conscience des œuvres qui mènent à la mort afin que nous servions le Dieu vivant.<verse eid="HEB 9:14"/></para>
+  <para style="s1">La nouvelle alliance, conclue par le sacrifice de Christ</para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 9:15"/>Voilà pourquoi il est le médiateur d’une alliance nouvelle, afin que ceux qui sont appelés reçoivent l’héritage éternel que Dieu leur avait promis. Car une mort est intervenue pour libérer de leur culpabilité les hommes qui avaient péché sous la première alliance.<verse eid="HEB 9:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 9:16"/>En effet, là où il y a alliance, il est nécessaire que la mort de celui qui conclut l’alliance soit produite, <verse eid="HEB 9:16"/><verse number="17" style="v" sid="HEB 9:17"/>car une alliance est établie par la mise à mort d’animaux<note caller="+" style="f"><char style="fr" closed="false">9.17 </char><char style="ft" closed="false">La mise à mort d’animaux représentait le sort auquel s’exposait celui qui, après avoir conclu l’alliance, la transgressait.</char></note>. Elle n’entre pas en vigueur tant que celui qui la conclut est encore en vie<note caller="+" style="f"><char style="fr" closed="false">9.17 </char><char style="ft" closed="false">C’est-à-dire tant que la mort de celui qui conclut l’alliance n’a pas été symboliquement représentée par la mise à mort d’animaux au cours de la procédure de conclusion d’alliance. Autre traduction, v. 16-17 : </char><char style="fv" closed="false">16 </char><char style="fqa" closed="false">En effet, lorsqu’il est question de testament, il faut que la mort du testateur soit constatée, </char><char style="fv" closed="false">17 </char><char style="fqa" closed="false">car un testament n’entre en vigueur qu’après le décès de celui qui l’a établi : il est sans effet tant qu’il est en vie. </char><char style="ft" closed="false">Une telle compréhension s’appuie sur le fait qu’en grec, le même mot signifie </char><char style="fqa" closed="false">testament </char><char style="ft" closed="false">et </char><char style="fqa" closed="false">alliance.</char></note>. <verse eid="HEB 9:17"/><verse number="18" style="v" sid="HEB 9:18"/>C’est pourquoi la première alliance non plus n’est pas entrée en vigueur sans aspersion de sang. <verse eid="HEB 9:18"/><verse number="19" style="v" sid="HEB 9:19"/>En effet, Moïse a d’abord exposé au peuple entier tous les commandements tels qu’ils se trouvent consignés dans la Loi. Puis il a pris le sang des veaux et des boucs avec de l’eau, de la laine rouge et une branche d’hysope, et il en a aspergé le livre ainsi que tout le peuple, <verse eid="HEB 9:19"/><verse number="20" style="v" sid="HEB 9:20"/>en disant : <char style="qt">Ceci est le sang de l’alliance que Dieu a conclue avec vous</char><note caller="+" style="f"><char style="fr" closed="false">9.20 </char><char style="ft" closed="false"><char style="xt"><ref loc="EXO 24:8">Ex 24.8</ref></char>.</char></note><char style="qt">.</char><verse eid="HEB 9:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="HEB 9:21"/>Puis il a aspergé aussi, avec le sang, le tabernacle et tous les ustensiles du culte. <verse eid="HEB 9:21"/><verse number="22" style="v" sid="HEB 9:22"/>En fait, selon la Loi, presque tout est purifié avec du sang, et il n’y a pas de pardon des péchés sans que du sang soit versé. <verse eid="HEB 9:22"/><verse number="23" style="v" sid="HEB 9:23"/>Ces objets, qui représentaient des réalités célestes, devaient donc être purifiés de cette manière-là. Il fallait de même que les réalités célestes le soient, elles, par des sacrifices bien meilleurs.<verse eid="HEB 9:23"/></para>
+  <para style="s1">Une fois pour toutes</para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 9:24"/>Car ce n’est pas dans un sanctuaire construit par des hommes, simple image du véritable, que Christ est entré : c’est dans le ciel même, afin de se présenter maintenant devant Dieu pour nous.<verse eid="HEB 9:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 9:25"/>De plus, c’est chaque année que le grand-prêtre de l’ancienne alliance pénètre dans le sanctuaire avec du sang qui n’est pas le sien ; mais Christ, lui, n’y est pas entré pour s’offrir plusieurs fois en sacrifice. <verse eid="HEB 9:25"/><verse number="26" style="v" sid="HEB 9:26"/>Autrement, il aurait dû souffrir la mort à plusieurs reprises depuis le commencement du monde. Non, il est apparu une seule fois, à la fin des temps, pour ôter les péchés par son sacrifice.<verse eid="HEB 9:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="HEB 9:27"/>Et comme le sort de tout homme est de mourir une seule fois – après quoi vient son jugement par Dieu – <verse eid="HEB 9:27"/><verse number="28" style="v" sid="HEB 9:28"/>de même, Christ s’est offert une seule fois en sacrifice pour porter les péchés de beaucoup d’hommes. Et il viendra une seconde fois, non plus pour ôter les péchés, mais pour sauver ceux qui attendent de lui leur salut.<verse eid="HEB 9:28"/></para>
+  <chapter eid="HEB 9"/>
+  <chapter number="10" style="c" sid="HEB 10"/>
+  <para style="s1">L’inefficacité de la Loi et l’efficacité du sacrifice de Christ</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 10:1"/>La Loi de Moïse ne possède qu’une ombre des biens à venir et non pas l’image même de ces réalités. Elle ne peut donc en aucun cas amener à la perfection ceux qui s’approchent ainsi de Dieu sur la base des mêmes sacrifices offerts perpétuellement d’année en année. <verse eid="HEB 10:1"/><verse number="2" style="v" sid="HEB 10:2"/>Si elle l’avait pu, ceux qui participent à ce culte auraient depuis longtemps cessé d’offrir ces sacrifices car, purifiés une fois pour toutes, ils n’auraient plus eu la conscience chargée d’aucun péché.<verse eid="HEB 10:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 10:3"/>Mais, en fait, ces sacrifices rappellent chaque année le souvenir des péchés. <verse eid="HEB 10:3"/><verse number="4" style="v" sid="HEB 10:4"/>En effet, il est impossible que du sang de taureaux et de boucs ôte les péchés. <verse eid="HEB 10:4"/><verse number="5" style="v" sid="HEB 10:5"/>Voilà pourquoi, en entrant dans le monde, Christ a dit :</para>
+  <para style="q1" vid="HEB 10:5">
+    <char style="qt">Tu n’as voulu</char> ╵<char style="qt">ni sacrifice, ni offrande :</char></para>
+  <para style="q1" vid="HEB 10:5">
+    <char style="qt">tu m’as formé un corps.</char><verse eid="HEB 10:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HEB 10:6"/>
+    <char style="qt">Tu n’as pris nul plaisir</char> ╵<char style="qt">aux <char style="w" lemma="holocauste">holocaustes</char></char><note caller="+" style="f"><char style="fr" closed="false">10.6 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="LEV 1">Lv 1</ref></char>.</char></note><char style="qt">,</char> ╵<char style="qt">aux sacrifices</char> ╵<char style="qt">pour le péché.</char><verse eid="HEB 10:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HEB 10:7"/>
+    <char style="qt">Alors j’ai dit : Voici je viens</char></para>
+  <para style="q1" vid="HEB 10:7">
+    <char style="qt">– dans le rouleau du livre,</char> ╵<char style="qt">il est question de moi –</char></para>
+  <para style="q1" vid="HEB 10:7">
+    <char style="qt">pour faire, ô Dieu, ta volonté</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">10.7 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 40:7-9">Ps 40.7-9</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="HEB 10:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 10:8"/>Il commence ainsi par dire : « <char style="qt">Tu n’as voulu ni sacrifice, ni offrande, ni holocaustes, ni sacrifices pour le péché ; tu n’y as pris nul plaisir</char>. » Pourtant, ces sacrifices sont offerts conformément à la Loi. <verse eid="HEB 10:8"/><verse number="9" style="v" sid="HEB 10:9"/>Ensuite il déclare : <char style="qt">Voici, je viens pour faire ta volonté</char>. Ainsi il abolit le premier état des choses pour établir le second.<verse eid="HEB 10:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 10:10"/>Et c’est en raison de cette <char style="qt">volonté</char> de Dieu que nous sommes purifiés du péché, grâce au sacrifice de son propre <char style="qt">corps</char> que Jésus-Christ a offert une fois pour toutes. <verse eid="HEB 10:10"/><verse number="11" style="v" sid="HEB 10:11"/>Tout prêtre se présente chaque jour pour accomplir son service et offrir souvent les mêmes sacrifices qui, cependant, ne peuvent jamais ôter les péchés. <verse eid="HEB 10:11"/><verse number="12" style="v" sid="HEB 10:12"/>Christ, lui, a offert un sacrifice unique pour les péchés, valable pour toujours, et il <char style="qt">s’est assis à la droite de Dieu</char> <verse eid="HEB 10:12"/><verse number="13" style="v" sid="HEB 10:13"/>où il attend désormais que <char style="qt">ses ennemis soient mis à terre sous ses pieds</char><note caller="+" style="f"><char style="fr" closed="false">10.13 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 110:1">Ps 110.1</ref></char>.</char></note><char style="qt">.</char> <verse eid="HEB 10:13"/><verse number="14" style="v" sid="HEB 10:14"/>Par une offrande unique, en effet, il a rendu parfaits pour toujours ceux qu’il purifie du péché. <verse eid="HEB 10:14"/><verse number="15" style="v" sid="HEB 10:15"/>C’est là ce que le Saint-Esprit nous confirme de son côté. Car il dit d’abord :<verse eid="HEB 10:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HEB 10:16"/>
+    <char style="qt">Mais voici quelle alliance</char> ╵<char style="qt">je vais conclure avec eux</char></para>
+  <para style="q1" vid="HEB 10:16">
+    <char style="qt">après ces jours-là, dit le Seigneur :</char></para>
+  <para style="q1" vid="HEB 10:16">
+    <char style="qt">je placerai mes lois sur leur cœur</char></para>
+  <para style="q1" vid="HEB 10:16">
+    <char style="qt">et je les graverai dans leur pensée.</char><verse eid="HEB 10:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 10:17"/>Puis il ajoute :</para>
+  <para style="q1" vid="HEB 10:17">
+    <char style="qt">Je ne tiendrai plus compte</char> ╵<char style="qt">ni de leurs péchés, ni de leurs fautes</char><note caller="+" style="f"><char style="fr" closed="false">10.17 </char><char style="ft" closed="false"><char style="xt"><ref loc="JER 31:33-34">Jr 31.33-34</ref></char>.</char></note><char style="qt">.</char><verse eid="HEB 10:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 10:18"/>Or, lorsque les péchés ont été pardonnés, il n’est plus nécessaire de présenter une offrande pour les ôter.<verse eid="HEB 10:18"/></para>
+  <para style="s1">Ne pas abandonner son assurance</para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 10:19"/>Ainsi donc, frères et sœurs, nous avons une pleine liberté pour entrer dans le lieu très saint, grâce au sang du sacrifice de Jésus. <verse eid="HEB 10:19"/><verse number="20" style="v" sid="HEB 10:20"/>Il nous en a ouvert le chemin, un chemin nouveau et vivant à travers le rideau du sanctuaire<note caller="+" style="f"><char style="fr" closed="false">10.20 </char><char style="ft" closed="false">C’est-à-dire dans le lieu très saint, dans la présence même de Dieu.</char></note>, c’est-à-dire à travers son propre corps. <verse eid="HEB 10:20"/><verse number="21" style="v" sid="HEB 10:21"/>Ainsi, nous avons un grand-prêtre éminent placé à la tête de la maison de Dieu. <verse eid="HEB 10:21"/><verse number="22" style="v" sid="HEB 10:22"/>Approchons-nous donc de Dieu avec un cœur sincère, avec la pleine assurance que donne la foi, le cœur purifié de toute mauvaise conscience, et le corps lavé d’une eau pure.<verse eid="HEB 10:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 10:23"/>Restons fermement attachés à l’espérance que nous reconnaissons comme vraie, sans fléchir, car celui qui nous a fait les promesses est fidèle. <verse eid="HEB 10:23"/><verse number="24" style="v" sid="HEB 10:24"/>Et veillons les uns sur les autres pour nous encourager mutuellement à l’amour et à la pratique du bien.<verse eid="HEB 10:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 10:25"/>Ne délaissons pas nos réunions, comme certains en ont pris l’habitude. Au contraire, encourageons-nous mutuellement, et cela d’autant plus que vous voyez se rapprocher le jour du Seigneur.<verse eid="HEB 10:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="HEB 10:26"/>En effet, si, après avoir reçu la connaissance de la vérité, nous vivons délibérément dans le péché, il ne reste plus pour nous de sacrifice pour les péchés. <verse eid="HEB 10:26"/><verse number="27" style="v" sid="HEB 10:27"/>La seule perspective est alors l’attente terrifiante du jugement et du feu ardent qui embrasera ceux qui se révoltent contre Dieu.<verse eid="HEB 10:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="HEB 10:28"/>Celui qui désobéit à la Loi de Moïse est <char style="qt">mis à mort</char> sans pitié, <char style="qt">sur la déposition de deux ou trois témoins</char><note caller="+" style="f"><char style="fr" closed="false">10.28 </char><char style="ft" closed="false"><char style="xt"><ref loc="DEU 17:6">Dt 17.6</ref></char>.</char></note><char style="qt">.</char> <verse eid="HEB 10:28"/><verse number="29" style="v" sid="HEB 10:29"/>A votre avis, si quelqu’un couvre de mépris le Fils de Dieu, s’il considère comme sans valeur le sang de l’alliance, par lequel il a été purifié<note caller="+" style="f"><char style="fr" closed="false">10.29 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">par lequel cette alliance a été consacrée.</char></note>, s’il outrage le Saint-Esprit, qui nous transmet la grâce divine, ne pensez-vous pas qu’il mérite un châtiment plus sévère encore ?<verse eid="HEB 10:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="HEB 10:30"/>Nous connaissons bien celui qui a déclaré : <char style="qt">C’est à moi qu’il appartient de faire justice ; c’est moi qui rendrai à chacun son dû,</char> et encore : <char style="qt">Le Seigneur jugera son peuple</char><note caller="+" style="f"><char style="fr" closed="false">10.30 </char><char style="ft" closed="false"><char style="xt"><ref loc="DEU 32:35-36">Dt 32.35-36</ref></char>.</char></note><char style="qt">.</char> <verse eid="HEB 10:30"/><verse number="31" style="v" sid="HEB 10:31"/>Il est terrible de tomber entre les mains du Dieu vivant !<verse eid="HEB 10:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="HEB 10:32"/>Rappelez-vous au contraire les premiers temps où, après avoir été éclairés par Dieu, vous avez enduré les souffrances d’un rude combat. <verse eid="HEB 10:32"/><verse number="33" style="v" sid="HEB 10:33"/>Car tantôt vous avez été exposés publiquement aux injures et aux mauvais traitements, tantôt vous vous êtes rendus solidaires de ceux qui étaient traités de cette manière-là. <verse eid="HEB 10:33"/><verse number="34" style="v" sid="HEB 10:34"/>Oui, vous avez pris part à la souffrance des prisonniers et vous avez accepté avec joie d’être dépouillés de vos biens, car vous vous saviez en possession de richesses plus précieuses, et qui durent toujours.<verse eid="HEB 10:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="HEB 10:35"/>N’abandonnez donc pas votre assurance : une grande récompense lui appartient. <verse eid="HEB 10:35"/><verse number="36" style="v" sid="HEB 10:36"/>Car il vous faut de la persévérance, afin qu’après avoir accompli la volonté de Dieu vous obteniez ce qu’il a promis. <verse eid="HEB 10:36"/><verse number="37" style="v" sid="HEB 10:37"/><char style="qt">Encore un peu de temps, un tout petit peu de temps</char><note caller="+" style="f"><char style="fr" closed="false">10.37 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 26:20">Es 26.20</ref></char> cité selon l’ancienne version grecque.</char></note>, et</para>
+  <para style="q1" vid="HEB 10:37">
+    <char style="qt">celui qui doit venir viendra,</char> ╵<char style="qt">il ne tardera pas.</char><verse eid="HEB 10:37"/></para>
+  <para style="q1">
+    <verse number="38" style="v" sid="HEB 10:38"/>
+    <char style="qt">Celui qui est juste à mes yeux</char> ╵<char style="qt">vivra par la foi,</char></para>
+  <para style="q1" vid="HEB 10:38">
+    <char style="qt">mais s’il retourne en arrière,</char> ╵<char style="qt">je ne prends pas plaisir en lui</char><note caller="+" style="f"><char style="fr" closed="false">10.38 </char><char style="ft" closed="false"><char style="xt"><ref loc="HAB 2:3-4">Ha 2.3-4</ref></char> cité selon l’ancienne version grecque.</char></note><char style="qt">.</char><verse eid="HEB 10:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="HEB 10:39"/>Quant à nous, nous ne sommes pas de ceux qui <char style="qt">retournent en arrière</char> pour aller se perdre, mais de ceux qui ont <char style="qt">la foi</char> pour être sauvés.<verse eid="HEB 10:39"/></para>
+  <chapter eid="HEB 10"/>
+  <chapter number="11" style="c" sid="HEB 11"/>
+  <para style="ms1">Foi et endurance</para>
+  <para style="s1">La foi des témoins de l’ancienne alliance</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 11:1"/>La foi est une façon de posséder<note caller="+" style="f"><char style="fr" closed="false">11.1 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">l’assurance de posséder.</char></note> ce qu’on espère, c’est un moyen d’être sûr des réalités qu’on ne voit pas. <verse eid="HEB 11:1"/><verse number="2" style="v" sid="HEB 11:2"/>C’est parce qu’ils ont eu cette foi que les hommes des temps passés ont été approuvés par Dieu.<verse eid="HEB 11:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 11:3"/>Par la foi, nous comprenons que l’univers a été harmonieusement organisé par la parole de Dieu, et qu’ainsi le monde visible tire son origine de l’invisible.<verse eid="HEB 11:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 11:4"/>Par la foi, Abel a offert à Dieu un sacrifice meilleur que celui de Caïn. Grâce à elle, il a été reconnu comme juste par Dieu qui a témoigné lui-même qu’il approuvait ses dons, et grâce à elle Abel parle encore, bien que mort.<verse eid="HEB 11:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 11:5"/>Par la foi, Hénok a été enlevé auprès de Dieu pour échapper à la mort et <char style="qt">on ne le trouva plus, parce que Dieu l’avait enlevé</char>. En effet, avant de nous parler de son enlèvement, l’Ecriture lui rend ce témoignage : <char style="qt">il était agréable à Dieu</char><note caller="+" style="f"><char style="fr" closed="false">11.5 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 5:24">Gn 5.24</ref></char> cité selon l’ancienne version grecque.</char></note><char style="qt">.</char> <verse eid="HEB 11:5"/><verse number="6" style="v" sid="HEB 11:6"/>Or, sans la foi, il est impossible de lui être agréable. Car celui qui s’approche de Dieu doit croire qu’il existe et qu’il récompense ceux qui se tournent vers lui.<verse eid="HEB 11:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 11:7"/>Par la foi, Noé a construit un bateau pour sauver sa famille : il avait pris au sérieux la révélation qu’il avait reçue au sujet d’événements qu’on ne voyait pas encore. En agissant ainsi, il a condamné le monde. Et Dieu lui a accordé d’être déclaré juste en raison de sa foi.<verse eid="HEB 11:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 11:8"/>Par la foi, Abraham a obéi à l’appel de Dieu qui lui ordonnait de partir pour un pays qu’il devait recevoir plus tard en héritage. Il est parti sans savoir où il allait. <verse eid="HEB 11:8"/><verse number="9" style="v" sid="HEB 11:9"/>Par la foi, il a séjourné en étranger dans le pays qui lui avait été promis, vivant sous des tentes, de même qu’Isaac et Jacob qui sont héritiers avec lui de la même promesse. <verse eid="HEB 11:9"/><verse number="10" style="v" sid="HEB 11:10"/>Car il attendait la cité aux fondements inébranlables dont Dieu lui-même est l’architecte et le constructeur.<verse eid="HEB 11:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 11:11"/>Par la foi, Sara, elle aussi, qui était stérile, a été rendue capable de devenir mère alors qu’elle en avait depuis longtemps passé l’âge. En effet, elle était convaincue que celui qui avait fait la promesse est fidèle. <verse eid="HEB 11:11"/><verse number="12" style="v" sid="HEB 11:12"/>C’est pourquoi aussi, d’un seul homme – plus encore : d’un homme déjà marqué par la mort – sont issus des descendants <char style="qt">aussi nombreux que les étoiles du ciel et que les grains de sable qu’on ne saurait compter sur le rivage de la mer</char><note caller="+" style="f"><char style="fr" closed="false">11.12 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 15:15">Gn 15.15</ref></char>.</char></note>.<verse eid="HEB 11:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 11:13"/>C’est dans la foi que tous ces gens sont morts sans avoir reçu ce qui leur avait été promis. Mais ils l’ont vu et salué de loin, et ils ont reconnu qu’ils étaient eux-mêmes <char style="qt">étrangers et voyageurs sur la terre</char><note caller="+" style="f"><char style="fr" closed="false">11.13 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 23:4">Gn 23.4</ref></char>.</char></note><char style="qt">.</char> <verse eid="HEB 11:13"/><verse number="14" style="v" sid="HEB 11:14"/>Ceux qui parlent ainsi montrent clairement qu’ils recherchent une patrie. <verse eid="HEB 11:14"/><verse number="15" style="v" sid="HEB 11:15"/>En effet, s’ils avaient eu la nostalgie de celle qu’ils avaient quittée, ils auraient eu l’occasion d’y retourner. <verse eid="HEB 11:15"/><verse number="16" style="v" sid="HEB 11:16"/>En fait, c’est une meilleure patrie qu’ils désirent, c’est-à-dire la patrie céleste. Aussi Dieu n’a pas honte d’être appelé « leur Dieu », et il leur a préparé une cité.<verse eid="HEB 11:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 11:17"/>Par la foi, Abraham a offert Isaac lorsque Dieu l’a mis à l’épreuve. Oui, il était en train d’offrir son fils unique, lui qui avait eu la promesse, <verse eid="HEB 11:17"/><verse number="18" style="v" sid="HEB 11:18"/>et à qui Dieu avait dit : <char style="qt">C’est par Isaac que te sera suscitée une descendance</char><note caller="+" style="f"><char style="fr" closed="false">11.18 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 21:12">Gn 21.12</ref></char>.</char></note><char style="qt">.</char> <verse eid="HEB 11:18"/><verse number="19" style="v" sid="HEB 11:19"/>Dieu, estimait-il, est assez puissant pour ressusciter un mort. Et son fils lui a été rendu : c’est une préfiguration.<verse eid="HEB 11:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 11:20"/>Par la foi aussi, Isaac a béni Jacob et Esaü, en vue de l’avenir. <verse eid="HEB 11:20"/><verse number="21" style="v" sid="HEB 11:21"/>Par la foi, Jacob a béni, peu avant sa mort, chacun des fils de Joseph et <char style="qt">s’est prosterné pour adorer Dieu, en prenant appui sur l’extrémité de son bâton</char><note caller="+" style="f"><char style="fr" closed="false">11.21 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 47:31">Gn 47.31</ref></char> cité selon l’ancienne version grecque.</char></note><char style="qt">.</char><verse eid="HEB 11:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 11:22"/>Par la foi, Joseph, à la fin de sa vie, a évoqué la sortie d’Egypte des descendants d’Israël, et a donné des instructions au sujet de ses ossements.<verse eid="HEB 11:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 11:23"/>Par la foi, Moïse, après sa naissance, a été tenu caché pendant trois mois par ses parents, car en voyant combien cet enfant était beau, ils ne se sont pas laissés intimider par le décret du roi.<verse eid="HEB 11:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 11:24"/>Par la foi, Moïse, devenu adulte, a refusé d’être reconnu comme le fils de la fille du pharaon<note caller="+" style="f"><char style="fr" closed="false">11.24 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="EXO 2:10">Ex 2.10</ref></char>.</char></note>. <verse eid="HEB 11:24"/><verse number="25" style="v" sid="HEB 11:25"/>Il a choisi de prendre part aux souffrances du peuple de Dieu plutôt que de jouir – momentanément – d’une vie dans le péché. <verse eid="HEB 11:25"/><verse number="26" style="v" sid="HEB 11:26"/>Car, estimait-il, subir l’humiliation que Christ devait connaître constituait une richesse bien supérieure aux trésors de l’Egypte : il avait, en effet, les yeux fixés sur la récompense à venir.<verse eid="HEB 11:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="HEB 11:27"/>Par la foi, il a quitté l’Egypte sans craindre la fureur du roi et il est resté ferme, en homme qui voit le Dieu invisible. <verse eid="HEB 11:27"/><verse number="28" style="v" sid="HEB 11:28"/>Par la foi, il a célébré la Pâque et a fait répandre du sang sur les linteaux des portes pour que l’ange exterminateur ne touche pas les fils aînés des Israélites.<verse eid="HEB 11:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="HEB 11:29"/>Par la foi, les Israélites ont traversé la mer Rouge comme une terre sèche ; alors que les Egyptiens, qui ont essayé d’en faire autant, ont été engloutis.<verse eid="HEB 11:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="HEB 11:30"/>Par la foi, les murailles de Jéricho se sont écroulées quand le peuple en eut fait le tour pendant sept jours.<verse eid="HEB 11:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="HEB 11:31"/>Par la foi, Rahab la prostituée n’est pas morte avec ceux qui étaient désobéissants envers Dieu, parce qu’elle avait accueilli avec bienveillance les Israélites envoyés en éclaireurs.<verse eid="HEB 11:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="HEB 11:32"/>Que dirai-je encore ? Le temps me manquerait pour parler en détail de Gédéon, de Baraq, de Samson, de Jephté, de David, de Samuel et des prophètes. <verse eid="HEB 11:32"/><verse number="33" style="v" sid="HEB 11:33"/>Grâce à la foi, ils ont remporté la victoire sur des royaumes, exercé la justice, obtenu la réalisation de promesses, fermé la gueule des lions. <verse eid="HEB 11:33"/><verse number="34" style="v" sid="HEB 11:34"/>Ils ont éteint des feux violents, ont échappé au tranchant de l’épée. Ils ont été remplis de force alors qu’ils étaient faibles. Ils se sont montrés vaillants dans les batailles, ils ont mis en fuite des armées ennemies ; <verse eid="HEB 11:34"/><verse number="35" style="v" sid="HEB 11:35"/>des femmes ont vu leurs morts ressusciter pour leur être rendus.</para>
+  <para style="p" vid="HEB 11:35">D’autres, en revanche, ont été torturés ; ils ont refusé d’être délivrés, afin d’obtenir ce qui est meilleur : la résurrection. <verse eid="HEB 11:35"/><verse number="36" style="v" sid="HEB 11:36"/>D’autres encore ont enduré les moqueries, le fouet, ainsi que les chaînes et la prison. <verse eid="HEB 11:36"/><verse number="37" style="v" sid="HEB 11:37"/>Certains ont été lapidés, d’autres ont été torturés<note caller="+" style="f"><char style="fr" closed="false">11.37 </char><char style="ft" closed="false">Les mots </char><char style="fqa" closed="false">d’autres ont été torturés </char><char style="ft" closed="false">sont absents dans plusieurs manuscrits.</char></note>, sciés en deux ou mis à mort par l’épée. D’autres ont mené une vie errante, vêtus de peaux de moutons ou de chèvres, dénués de tout, persécutés et maltraités, <verse eid="HEB 11:37"/><verse number="38" style="v" sid="HEB 11:38"/>eux dont le monde n’était pas digne. Ils ont erré dans les déserts et sur les montagnes, vivant dans les cavernes et les antres de la terre.<verse eid="HEB 11:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="HEB 11:39"/>Dieu a approuvé tous ces gens à cause de leur foi, et pourtant, aucun d’eux n’a reçu ce qu’il leur avait promis. <verse eid="HEB 11:39"/><verse number="40" style="v" sid="HEB 11:40"/>C’est que Dieu avait prévu quelque chose de meilleur pour nous : ils ne devaient donc pas parvenir sans nous à la perfection.<verse eid="HEB 11:40"/></para>
+  <chapter eid="HEB 11"/>
+  <chapter number="12" style="c" sid="HEB 12"/>
+  <para style="s1">Courir avec endurance</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 12:1"/>C’est pourquoi, nous aussi qui sommes entourés d’une si grande nuée de témoins<note caller="+" style="f"><char style="fr" closed="false">12.1 </char><char style="ft" closed="false">Il s’agit de tous ceux qui ont témoigné de leur foi.</char></note>, débarrassons-nous de tout fardeau, et du péché qui nous cerne si facilement de tous côtés, et courons avec endurance l’épreuve qui nous est proposée. <verse eid="HEB 12:1"/><verse number="2" style="v" sid="HEB 12:2"/>Gardons les yeux fixés sur Jésus, qui nous a ouvert le chemin de la foi<note caller="+" style="f"><char style="fr" closed="false">12.2 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HEB 2:10">2.10</ref></char>.</char></note> et qui la porte à la perfection. Parce qu’il avait en vue la joie qui lui était réservée<note caller="+" style="f"><char style="fr" closed="false">12.2 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">en renonçant à la joie qui lui revenait.</char></note>, il a enduré la mort sur la croix, en méprisant la honte attachée à un tel supplice, et désormais il siège à la droite du trône de Dieu.<verse eid="HEB 12:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 12:3"/>Pensez à celui qui a enduré de la part des hommes pécheurs une telle opposition contre lui, pour que vous ne vous laissiez pas abattre par le découragement. <verse eid="HEB 12:3"/><verse number="4" style="v" sid="HEB 12:4"/>Vous n’avez pas encore résisté jusqu’à la mort dans votre lutte contre le péché, <verse eid="HEB 12:4"/><verse number="5" style="v" sid="HEB 12:5"/>et vous avez oublié cette parole d’encouragement que Dieu vous adresse comme à des fils :</para>
+  <para style="q1" vid="HEB 12:5">
+    <char style="qt">Mon fils, ne prends pas à la légère la correction du Seigneur</char></para>
+  <para style="q1" vid="HEB 12:5">
+    <char style="qt">et ne te décourage pas lorsqu’il te reprend.</char><verse eid="HEB 12:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HEB 12:6"/>
+    <char style="qt">Car le Seigneur corrige celui qu’il aime :</char></para>
+  <para style="q1" vid="HEB 12:6">
+    <char style="qt">il châtie tous ceux qu’il reconnaît pour ses fils</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">12.6 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PRO 3:11-12">Pr 3.11-12</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">.</char><verse eid="HEB 12:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 12:7"/>Supportez vos souffrances : elles servent à vous corriger. C’est en fils que Dieu vous traite. Quel est le fils que son père ne corrige pas ? <verse eid="HEB 12:7"/><verse number="8" style="v" sid="HEB 12:8"/>Si vous êtes dispensés de la correction qui est le lot de tous les fils, alors vous êtes des enfants illégitimes, et non des fils.<verse eid="HEB 12:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 12:9"/>D’ailleurs, nous avions notre père terrestre pour nous corriger, et nous le respections. N’allons-nous pas, à plus forte raison, nous soumettre à notre Père céleste pour avoir la vie ? <verse eid="HEB 12:9"/><verse number="10" style="v" sid="HEB 12:10"/>Notre père nous corrigeait pour un temps limité, selon ses idées, mais Dieu, c’est pour notre bien qu’il nous corrige, afin de nous faire participer à sa sainteté.<verse eid="HEB 12:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 12:11"/>Certes, sur le moment, une correction ne semble pas être un sujet de joie mais plutôt une cause de tristesse. Mais par la suite, elle a pour fruit, chez ceux qui ont ainsi été formés, une vie juste, vécue dans la paix.<verse eid="HEB 12:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 12:12"/>C’est pourquoi : <char style="qt">Relevez vos mains qui faiblissent et raffermissez vos genoux qui fléchissent</char><note caller="+" style="f"><char style="fr" closed="false">12.12 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 35:3">Es 35.3</ref></char>.</char></note><char style="qt">.</char> <verse eid="HEB 12:12"/><verse number="13" style="v" sid="HEB 12:13"/><char style="qt">Faites-vous des pistes droites pour votre course</char><note caller="+" style="f"><char style="fr" closed="false">12.13 </char><char style="ft" closed="false"><char style="xt"><ref loc="PRO 4:26">Pr 4.26</ref></char>.</char></note>, afin que le pied qui boite ne se démette pas complètement, mais qu’il guérisse plutôt.<verse eid="HEB 12:13"/></para>
+  <para style="ms1">Recommandations diverses</para>
+  <para style="s1">Vivre une vie sainte</para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 12:14"/>Faites tous vos efforts pour être en paix avec tout le monde et cultivez la sainteté sans laquelle nul ne verra le Seigneur. <verse eid="HEB 12:14"/><verse number="15" style="v" sid="HEB 12:15"/>Veillez à ce que personne ne passe à côté de la grâce de Dieu, qu’aucune racine d’amertume ne pousse et ne cause du trouble en empoisonnant plusieurs d’entre vous<note caller="+" style="f"><char style="fr" closed="false">12.15 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="DEU 29:17">Dt 29.17</ref></char>.</char></note>.<verse eid="HEB 12:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 12:16"/>Qu’il n’y ait personne qui vive dans l’immoralité ou qui méprise les choses saintes, comme Esaü qui, pour un simple repas, a vendu son droit d’aînesse. <verse eid="HEB 12:16"/><verse number="17" style="v" sid="HEB 12:17"/>Vous savez que plus tard, lorsqu’il a voulu recevoir en héritage la bénédiction de son père, il a été rejeté, car il n’a trouvé aucun moyen de revenir en arrière<note caller="+" style="f"><char style="fr" closed="false">12.17 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="GEN 27:30-40">Gn 27.30-40</ref></char>. Autre traduction : </char><char style="fqa" closed="false">d’amener son père à revenir sur ce qu’il avait fait.</char></note>, bien qu’il l’ait cherché en pleurant.<verse eid="HEB 12:17"/></para>
+  <para style="s1">Le royaume inébranlable</para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 12:18"/>Car vous ne vous êtes pas approchés, comme les Israélites au désert, d’une réalité que l’on pourrait toucher : un feu ardent, l’obscurité, des ténèbres et un ouragan. <verse eid="HEB 12:18"/><verse number="19" style="v" sid="HEB 12:19"/>Vous n’avez pas entendu de sonneries de trompettes, ni l’éclat d’une voix telle que ceux qui l’ont entendue ont demandé qu’elle ne s’adresse plus à eux. <verse eid="HEB 12:19"/><verse number="20" style="v" sid="HEB 12:20"/>En effet, ils ne pouvaient supporter l’ordre qui leur avait été donné : <char style="qt">Quiconque touchera la montagne – même si c’est un animal – sera tué à coups de pierres</char><note caller="+" style="f"><char style="fr" closed="false">12.20 </char><char style="ft" closed="false"><char style="xt"><ref loc="EXO 19:12-13">Ex 19.12-13</ref></char>.</char></note><char style="qt">.</char> <verse eid="HEB 12:20"/><verse number="21" style="v" sid="HEB 12:21"/>Le spectacle était si terrifiant que Moïse s’est écrié : <char style="qt">Je suis épouvanté</char><note caller="+" style="f"><char style="fr" closed="false">12.21 </char><char style="ft" closed="false"><char style="xt"><ref loc="DEU 9:19">Dt 9.19</ref></char>.</char></note> et tout tremblant.<verse eid="HEB 12:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 12:22"/>Non, vous, au contraire, vous vous êtes approchés de la montagne de Sion, de la cité du Dieu vivant, de la Jérusalem céleste et de milliers d’anges en fête. <verse eid="HEB 12:22"/><verse number="23" style="v" sid="HEB 12:23"/>Vous vous êtes approchés de l’assemblée des premiers-nés de Dieu dont les noms sont inscrits dans les cieux. Vous vous êtes approchés de Dieu, le Juge de tous les hommes, et des esprits des justes qui sont parvenus à la perfection. <verse eid="HEB 12:23"/><verse number="24" style="v" sid="HEB 12:24"/>Vous vous êtes approchés de Jésus, le médiateur d’une alliance nouvelle, et de son sang répandu qui parle mieux encore que celui d’Abel<note caller="+" style="f"><char style="fr" closed="false">12.24 </char><char style="ft" closed="false">Abel est mort, victime de la méchanceté de son frère. Son sang criait vengeance (<char style="xt"><ref loc="GEN 4:10">Gn 4.10</ref></char>). Jésus aussi est mort par suite de la méchanceté de ses « frères », mais son sang couvre les péchés de ceux qui croient en lui.</char></note>.<verse eid="HEB 12:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 12:25"/>Prenez donc garde : ne refusez pas d’écouter celui qui vous parle. Les Israélites qui ont refusé d’écouter celui qui les avertissait sur la terre, n’ont pas échappé au châtiment. A combien plus forte raison en sera-t-il de même pour nous, si nous nous détournons de celui qui nous parle du haut des cieux.<verse eid="HEB 12:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="HEB 12:26"/>Celui dont la voix a fait alors trembler la terre fait maintenant cette promesse : <char style="qt">Une fois encore j’ébranlerai, non seulement la terre, mais aussi le ciel</char><note caller="+" style="f"><char style="fr" closed="false">12.26 </char><char style="ft" closed="false"><char style="xt"><ref loc="HAG 2:6">Ag 2.6</ref></char> cité selon l’ancienne version grecque.</char></note><char style="qt">.</char> <verse eid="HEB 12:26"/><verse number="27" style="v" sid="HEB 12:27"/>Ces mots : <char style="qt">une fois encore</char> signifient que tout ce qui peut être <char style="qt">ébranlé</char>, c’est-à-dire ce qui appartient à l’ordre ancien de la création, disparaîtra, pour que subsistent seules les réalités inébranlables. <verse eid="HEB 12:27"/><verse number="28" style="v" sid="HEB 12:28"/>Le royaume que nous recevons est inébranlable : soyons donc reconnaissants et servons Dieu d’une manière qui lui soit agréable, avec crainte et profond respect, <verse eid="HEB 12:28"/><verse number="29" style="v" sid="HEB 12:29"/>car notre Dieu est un <char style="qt">feu qui consume</char><note caller="+" style="f"><char style="fr" closed="false">12.29 </char><char style="ft" closed="false"><char style="xt"><ref loc="DEU 4:24">Dt 4.24</ref></char>.</char></note><char style="qt">.</char><verse eid="HEB 12:29"/></para>
+  <chapter eid="HEB 12"/>
+  <chapter number="13" style="c" sid="HEB 13"/>
+  <para style="s1">Autres recommandations</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 13:1"/>Que votre amour fraternel demeure vivant. <verse eid="HEB 13:1"/><verse number="2" style="v" sid="HEB 13:2"/>Ne négligez pas de pratiquer l’hospitalité<note caller="+" style="f"><char style="fr" closed="false">13.2 </char><char style="ft" closed="false">Envers les chrétiens qui voyageaient, comme Abraham l’a fait envers les anges qu’il a accueillis (voir <char style="xt"><ref loc="GEN 18:1-8">Gn 18.1-8</ref></char>).</char></note>. Car certains, en l’exerçant, ont accueilli des anges sans le savoir.<verse eid="HEB 13:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 13:3"/>Ayez le souci de ceux qui sont en prison, comme si vous étiez en prison avec eux, et de ceux qui sont maltraités, puisque vous aussi vous partagez leur condition terrestre.<verse eid="HEB 13:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 13:4"/>Que chacun respecte le mariage et que les époux restent fidèles l’un à l’autre, car Dieu jugera les débauchés et les adultères.<verse eid="HEB 13:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 13:5"/>Que votre conduite ne soit pas guidée par l’amour de l’argent. Contentez-vous de ce que vous avez présentement. Car Dieu lui-même a dit : <char style="qt">Je ne te laisserai pas : non, je ne t’abandonnerai jamais</char><note caller="+" style="f"><char style="fr" closed="false">13.5 </char><char style="ft" closed="false"><char style="xt"><ref loc="JOS 1:5">Jos 1.5</ref></char>.</char></note><char style="qt">.</char> <verse eid="HEB 13:5"/><verse number="6" style="v" sid="HEB 13:6"/>Aussi pouvons-nous dire avec assurance :</para>
+  <para style="q1" vid="HEB 13:6">
+    <char style="qt">Le Seigneur vient à mon secours,</char> ╵<char style="qt">je n’aurai pas de crainte,</char></para>
+  <para style="q1" vid="HEB 13:6">
+    <char style="qt">que me feraient les hommes</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">13.6 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 118:6">Ps 118.6</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">?</char><verse eid="HEB 13:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 13:7"/>Souvenez-vous de vos anciens conducteurs qui vous ont annoncé la Parole de Dieu. Considérez l’aboutissement de toute leur vie<note caller="+" style="f"><char style="fr" closed="false">13.7 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">la manière dont ils ont vécu et sont morts.</char></note> et imitez leur foi.<verse eid="HEB 13:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 13:8"/>Jésus-Christ est le même hier, aujourd’hui et pour toujours. <verse eid="HEB 13:8"/><verse number="9" style="v" sid="HEB 13:9"/>Ne vous laissez pas entraîner par toutes sortes de doctrines qui sont étrangères à notre foi. Ce qui est bien, en effet, c’est que notre cœur soit affermi par la grâce divine et non par des aliments qui n’ont jamais profité à ceux qui avaient coutume de les consommer. <verse eid="HEB 13:9"/><verse number="10" style="v" sid="HEB 13:10"/>Nous avons un autel, mais les prêtres qui servent dans le sanctuaire n’ont pas le droit de manger ce qui y est offert. <verse eid="HEB 13:10"/><verse number="11" style="v" sid="HEB 13:11"/>En effet, le sang des animaux offerts en sacrifice pour le péché est apporté dans le sanctuaire par le grand-prêtre, mais leurs corps sont brûlés <char style="qt">à l’extérieur du camp</char><note caller="+" style="f"><char style="fr" closed="false">13.11 </char><char style="ft" closed="false"><char style="xt"><ref loc="LEV 16:27">Lv 16.27</ref></char>.</char></note><char style="qt">.</char> <verse eid="HEB 13:11"/><verse number="12" style="v" sid="HEB 13:12"/>C’est pourquoi Jésus, lui aussi, est mort à l’extérieur de la ville pour purifier le peuple par son propre sang.<verse eid="HEB 13:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 13:13"/>Allons donc à lui en sortant <char style="qt">à l’extérieur du camp</char>, et acceptons d’être méprisés comme lui <verse eid="HEB 13:13"/><verse number="14" style="v" sid="HEB 13:14"/>car, ici-bas, nous n’avons pas de cité permanente : c’est la cité à venir que nous recherchons. <verse eid="HEB 13:14"/><verse number="15" style="v" sid="HEB 13:15"/>Par Jésus, offrons donc en tout temps à Dieu un <char style="qt">sacrifice de louange</char><note caller="+" style="f"><char style="fr" closed="false">13.15 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 50:14">Ps 50.14</ref>, <ref loc="PSA 50:23">23</ref></char>.</char></note> qui consiste à célébrer son nom. <verse eid="HEB 13:15"/><verse number="16" style="v" sid="HEB 13:16"/>Ne négligez pas de pratiquer la bienfaisance et l’entraide : voilà les <char style="qt">sacrifices</char> auxquels Dieu prend plaisir.<verse eid="HEB 13:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 13:17"/>Obéissez à vos conducteurs et soumettez-vous à eux, car ils veillent sur vous en sachant qu’ils devront un jour rendre compte à Dieu de leur service. Qu’ils puissent ainsi s’acquitter de leur tâche avec joie et non pas en gémissant, ce qui ne vous serait d’aucun avantage.<verse eid="HEB 13:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 13:18"/>Priez pour nous ! Car nous sommes convaincus d’avoir une bonne conscience, puisque nous sommes résolus à bien nous conduire en toute occasion. <verse eid="HEB 13:18"/><verse number="19" style="v" sid="HEB 13:19"/>Je vous demande tout particulièrement de prier pour que je vous sois bien vite rendu.<verse eid="HEB 13:19"/></para>
+  <para style="ms1">Salutations</para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 13:20"/>Le Dieu qui donne la paix a ressuscité notre Seigneur Jésus qui est devenu le grand berger des brebis en scellant de son sang une alliance éternelle. <verse eid="HEB 13:20"/><verse number="21" style="v" sid="HEB 13:21"/>Que ce Dieu vous rende capables de faire le bien sous toutes ses formes, pour que vous accomplissiez sa volonté. Qu’il réalise lui-même en nous, par Jésus-Christ, ce qui lui est agréable. A lui soit la gloire pour l’éternité ! Amen !<verse eid="HEB 13:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 13:22"/>Je vous le demande, frères et sœurs, accueillez avec patience la parole d’encouragement que je vous adresse. Je vous ai d’ailleurs écrit brièvement. <verse eid="HEB 13:22"/><verse number="23" style="v" sid="HEB 13:23"/>Sachez que notre frère Timothée a été libéré. S’il arrive assez tôt, j’irai vous voir avec lui.<verse eid="HEB 13:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 13:24"/>Saluez tous vos dirigeants et tous ceux qui font partie du peuple saint. Les frères et sœurs d’Italie<note caller="+" style="f"><char style="fr" closed="false">13.24 </char><char style="ft" closed="false">Il s’agit sans doute de chrétiens originaires d’Italie qui saluent leurs compatriotes au pays. C’est l’un des indices qui ont amené certains à penser que la lettre a été adressée à une partie de l’Eglise de Rome. D’autres pensent que l’auteur se trouve en Italie, probablement à Rome, lorsqu’il écrit la lettre aux Hébreux qui serait alors adressée à des chrétiens d’origine juive vivant en Israël.</char></note> vous saluent.<verse eid="HEB 13:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 13:25"/>Que la grâce de Dieu vous accompagne tous<note caller="+" style="f"><char style="fr" closed="false">13.25 </char><char style="ft" closed="false">Certains manuscrits ajoutent : </char><char style="fqa" closed="false">Amen !</char></note> !<verse eid="HEB 13:25"/></para>
+  <chapter eid="HEB 13"/>
+</usx>

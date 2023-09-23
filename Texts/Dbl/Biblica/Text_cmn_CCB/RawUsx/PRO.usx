@@ -1,0 +1,2883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="PRO" style="id">- Chinese Contemporary Bible - Simplified Script 2011</book>
+  <para style="rem">Copyright © 1979, 2005, 2007, 2011 by Biblica, Inc.®</para>
+  <para style="h">箴言</para>
+  <para style="toc1">箴言</para>
+  <para style="toc2">箴言</para>
+  <para style="toc3">箴</para>
+  <para style="mt1">箴言</para>
+  <chapter number="1" style="c"/>
+  <para style="s1">箴言的价值</para>
+  <para style="p">
+    <verse number="1" style="v"/>这是<char style="pn">大卫</char>的儿子<char style="pn">以色列</char>王<char style="pn">所罗门</char>的箴言。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v"/>为使人认识智慧和教诲，</para>
+  <para style="q2">领悟真知灼见；</para>
+  <para style="q1">
+    <verse number="3" style="v"/>为使人接受劝诫，</para>
+  <para style="q2">为人处事仁义、公平、正直；</para>
+  <para style="q1">
+    <verse number="4" style="v"/>使愚昧人明智，</para>
+  <para style="q2">使青年有知识和明辨力；</para>
+  <para style="q1">
+    <verse number="5" style="v"/>使智者听了长学问，</para>
+  <para style="q2">明哲听了得指引；</para>
+  <para style="q1">
+    <verse number="6" style="v"/>使人领悟箴言和比喻，</para>
+  <para style="q2">明白智者的话和谜语。</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="7" style="v"/>知识始于敬畏耶和华，</para>
+  <para style="q2">愚人轻视智慧和教诲。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>孩子啊，</para>
+  <para style="q2">你要听从父亲的教诲，</para>
+  <para style="q2">不可背弃母亲的训言。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>因为这要作你头上的华冠，</para>
+  <para style="q2">颈上的项链。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>孩子啊，恶人若引诱你，</para>
+  <para style="q2">千万不要听从。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>他们若说：“跟我们来吧，</para>
+  <para style="q2">我们去埋伏杀人，</para>
+  <para style="q2">暗害无辜者取乐；</para>
+  <para style="q1">
+    <verse number="12" style="v"/>我们要像阴间一样生吞他们，</para>
+  <para style="q2">整个吞没他们，</para>
+  <para style="q2">使他们如坠入坟墓的人；</para>
+  <para style="q1">
+    <verse number="13" style="v"/>我们必得到各样宝物，</para>
+  <para style="q2">把战利品装满我们的房屋。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>跟我们一起干吧，</para>
+  <para style="q2">大家有福同享！”</para>
+  <para style="q1">
+    <verse number="15" style="v"/>孩子啊，</para>
+  <para style="q2">不要走他们的道，</para>
+  <para style="q2">切莫行他们的路。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>因为他们奔向罪恶，</para>
+  <para style="q2">急速地去杀人流血。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>在飞鸟眼前设网罗，徒劳无功。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>他们埋伏，却自流己血；</para>
+  <para style="q2">他们伏击，却自害己命。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>这就是贪爱不义之财者的结局，</para>
+  <para style="q2">不义之财终要夺去他们的性命。</para>
+  <para style="s1">智慧的劝诫</para>
+  <para style="q1">
+    <verse number="20" style="v"/>智慧在大街上高喊，</para>
+  <para style="q2">在广场上扬声，</para>
+  <para style="q1">
+    <verse number="21" style="v"/>在热闹的市集宣告，</para>
+  <para style="q2">在城门口演说：</para>
+  <para style="q1">
+    <verse number="22" style="v"/>“你们愚昧人喜爱愚昧，</para>
+  <para style="q2">嘲讽者以嘲弄为乐，</para>
+  <para style="q2">无知者厌恶知识，</para>
+  <para style="q2">要到什么时候呢？</para>
+  <para style="q1">
+    <verse number="23" style="v"/>你们若因我的责备而回转，</para>
+  <para style="q2">我就向你们显明我的旨意<note caller="+" style="f"><char style="fr" closed="false">1:23 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">我就向你们显明我的旨意</char><char style="ft" closed="false">”希伯来文是“我就将我的灵浇灌你们”。</char></note>，</para>
+  <para style="q2">叫你们明白我的话语。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>我呼唤你们，</para>
+  <para style="q2">你们却充耳不闻；</para>
+  <para style="q2">我向你们招手，</para>
+  <para style="q2">你们却视若无睹。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>你们漠视我的劝诫，</para>
+  <para style="q2">不接受我的责备。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>因此，</para>
+  <para style="q2">你们遭遇灾难时，</para>
+  <para style="q2">我必发笑；</para>
+  <para style="q2">惊恐临到你们时，</para>
+  <para style="q2">我必嗤笑——</para>
+  <para style="q1">
+    <verse number="27" style="v"/>那时，恐惧如风暴袭击你们，</para>
+  <para style="q2">灾难如旋风临到你们，</para>
+  <para style="q2">忧愁和苦难吞没你们。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>你们呼求我，</para>
+  <para style="q2">我也不回答；</para>
+  <para style="q2">你们恳切地寻找我，</para>
+  <para style="q2">却找不到。</para>
+  <para style="q1">
+    <verse number="29" style="v"/>因为你们厌恶知识，</para>
+  <para style="q2">不愿意敬畏耶和华，</para>
+  <para style="q1">
+    <verse number="30" style="v"/>不接受我的劝诫，</para>
+  <para style="q2">又藐视我的责备。</para>
+  <para style="q1">
+    <verse number="31" style="v"/>所以，你们必自食其果，</para>
+  <para style="q2">因自己的恶谋而吃尽苦头。</para>
+  <para style="q1">
+    <verse number="32" style="v"/>愚昧人背离正道，</para>
+  <para style="q2">自招灭亡；</para>
+  <para style="q2">愚顽人逍遥自在，</para>
+  <para style="q2">毁掉自己。</para>
+  <para style="q1">
+    <verse number="33" style="v"/>然而，那听从我的必安然居住，</para>
+  <para style="q2">得享安宁，</para>
+  <para style="q2">不怕灾祸。”</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">智慧的益处</para>
+  <para style="q1">
+    <verse number="1" style="v"/>孩子啊，</para>
+  <para style="q2">你若接受我的教诲，</para>
+  <para style="q2">珍爱我的诫命，</para>
+  <para style="q1">
+    <verse number="2" style="v"/>侧耳聆听智慧，</para>
+  <para style="q2">倾心渴慕悟性；</para>
+  <para style="q1">
+    <verse number="3" style="v"/>你若呼求洞见，</para>
+  <para style="q2">竭力追求悟性，</para>
+  <para style="q1">
+    <verse number="4" style="v"/>寻它如寻银子，</para>
+  <para style="q2">找它如找宝藏，</para>
+  <para style="q1">
+    <verse number="5" style="v"/>你就会懂得敬畏耶和华，</para>
+  <para style="q2">认识上帝。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>因为耶和华赐人智慧，</para>
+  <para style="q2">知识和悟性出自祂的口。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>祂使正直人充满智慧，</para>
+  <para style="q2">是行为纯全者的盾牌。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>祂看守正义之路，</para>
+  <para style="q2">护卫虔诚人的道。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>这样，你就明白何为仁义、</para>
+  <para style="q2">公平和正直，</para>
+  <para style="q2">懂得一切美善之道。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>因为智慧必进入你心，</para>
+  <para style="q2">知识必令你的灵欢快。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>明辨力必护佑你，</para>
+  <para style="q2">悟性必看顾你。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>智慧必救你远离恶道，</para>
+  <para style="q2">脱离言语荒谬的人。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>他们舍弃正道，走上黑路，</para>
+  <para style="q1">
+    <verse number="14" style="v"/>以行恶为乐，喜爱恶人的邪僻；</para>
+  <para style="q1">
+    <verse number="15" style="v"/>他们的道路歪邪，行径扭曲。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v"/>智慧要救你脱离淫妇，</para>
+  <para style="q2">脱离花言巧语的妓女。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>她撇弃了年轻时的丈夫，</para>
+  <para style="q2">忘了在上帝面前立的约。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>她的家通向死亡，</para>
+  <para style="q2">她的路直达阴间。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>到她那里的人都有去无回，</para>
+  <para style="q2">找不到生命之道。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>所以你要行善人的路，</para>
+  <para style="q2">守义人的道。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>因为在地上，</para>
+  <para style="q2">正直人必安居，</para>
+  <para style="q2">纯全无过的人必长存，</para>
+  <para style="q1">
+    <verse number="22" style="v"/>恶人必遭灭绝，</para>
+  <para style="q2">奸徒必被铲除。</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">信靠耶和华</para>
+  <para style="q1">
+    <verse number="1" style="v"/>孩子啊，不要忘记我的训言，</para>
+  <para style="q2">要把我的诫命存在心里，</para>
+  <para style="q1">
+    <verse number="2" style="v"/>因为这必使你延年益寿，</para>
+  <para style="q2">幸福平安。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>不要让慈爱和信实离开你，</para>
+  <para style="q2">要把他们系在你的颈项上，</para>
+  <para style="q2">刻在你的心坎上。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>这样，你必蒙上帝和世人的喜悦，</para>
+  <para style="q2">享有美誉。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>你要全心信靠耶和华，</para>
+  <para style="q2">不可倚靠自己的悟性。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>凡事都要寻求祂，</para>
+  <para style="q2">祂必指引你走正路。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>不要自以为有智慧，</para>
+  <para style="q2">要敬畏耶和华，远离恶事。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>这样可医治你的身体，</para>
+  <para style="q2">滋润你的筋骨。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>你要用自己的财富和一切初熟的物产来尊崇耶和华，</para>
+  <para style="q1">
+    <verse number="10" style="v"/>祂必使你五谷满仓，</para>
+  <para style="q2">榨酒池溢出新酿。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>孩子啊，不可轻视耶和华的管教，</para>
+  <para style="q2">也不可厌烦祂的责备。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>因为耶和华责备祂所爱的人，</para>
+  <para style="q2">就像父亲责备他所疼爱的孩子。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>找到智慧、得到悟性的人有福了，</para>
+  <para style="q1">
+    <verse number="14" style="v"/>因为智慧比银子更有价值，</para>
+  <para style="q2">比金子更有益处，</para>
+  <para style="q1">
+    <verse number="15" style="v"/>比珠宝更珍贵；</para>
+  <para style="q2">你所喜爱的一切都难以相比。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>智慧的右手有长寿，</para>
+  <para style="q2">左手有富贵和尊荣。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>她的路上有福乐，</para>
+  <para style="q2">她的道上有平安。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>对持守智慧的人来说，</para>
+  <para style="q2">智慧是生命树，</para>
+  <para style="q2">紧握智慧的人必蒙祝福。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>耶和华以智慧奠立大地，</para>
+  <para style="q2">以悟性铺设诸天；</para>
+  <para style="q1">
+    <verse number="20" style="v"/>祂的知识使深渊裂开，</para>
+  <para style="q2">使天上降下甘霖。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>孩子啊，你要守护智慧和明辨力，</para>
+  <para style="q2">别让她们离开你的视线。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>她们必给你带来生命，</para>
+  <para style="q2">作你颈项上华美的装饰。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>如此，你必步履稳健，不致失足；</para>
+  <para style="q1">
+    <verse number="24" style="v"/>你必安然躺卧，睡得香甜。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>不要怕突来的灾祸，</para>
+  <para style="q2">不要怕恶人遭毁灭，</para>
+  <para style="q1">
+    <verse number="26" style="v"/>因为耶和华是你的靠山，</para>
+  <para style="q2">祂使你的脚不陷入网罗。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="27" style="v"/>倘若有力量行善，</para>
+  <para style="q2">就当帮助有需要的人，不要推托。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>倘若可以帮忙，</para>
+  <para style="q2">就不可对有求于你的邻人说：</para>
+  <para style="q2">“回去吧，明天再来，我必给你！”</para>
+  <para style="q1">
+    <verse number="29" style="v"/>邻舍在你附近安分居住，</para>
+  <para style="q2">不可谋害他。</para>
+  <para style="q1">
+    <verse number="30" style="v"/>别人若没有害你，</para>
+  <para style="q2">不要无故与他相争。</para>
+  <para style="q1">
+    <verse number="31" style="v"/>不要羡慕残暴之徒，</para>
+  <para style="q2">也不可步其后尘，</para>
+  <para style="q1">
+    <verse number="32" style="v"/>因为耶和华憎恶邪僻之徒，</para>
+  <para style="q2">喜爱正直的人。</para>
+  <para style="q1">
+    <verse number="33" style="v"/>耶和华咒诅恶人的家，</para>
+  <para style="q2">赐福义人的家。</para>
+  <para style="q1">
+    <verse number="34" style="v"/>耶和华讥笑好讥诮的人，</para>
+  <para style="q2">恩待谦卑的人。</para>
+  <para style="q1">
+    <verse number="35" style="v"/>智者得尊荣，</para>
+  <para style="q2">愚人受羞辱。</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">父亲的教诲</para>
+  <para style="q1">
+    <verse number="1" style="v"/>孩子们啊，</para>
+  <para style="q2">你们要听从父亲的教诲，</para>
+  <para style="q2">留心学习，以便领悟，</para>
+  <para style="q1">
+    <verse number="2" style="v"/>因为我给你们的训诲是美好的，</para>
+  <para style="q2">不可背弃我的教导。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>我年幼时在父亲身边，</para>
+  <para style="q2">是母亲唯一的宠儿。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>父亲教导我说：</para>
+  <para style="q2">“要牢记我的话，</para>
+  <para style="q2">遵守我的诫命，就必存活。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>你要寻求智慧和悟性，</para>
+  <para style="q2">不要忘记或违背我的吩咐。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>不可离弃智慧，智慧必护佑你；</para>
+  <para style="q2">你要热爱智慧，智慧必看顾你。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>智慧至上，要寻求智慧，</para>
+  <para style="q2">要不惜一切，求得悟性。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>高举智慧，她必使你受尊崇；</para>
+  <para style="q2">拥抱智慧，她必使你得尊荣。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>她必为你戴上华冠，</para>
+  <para style="q2">加上荣冕。”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>孩子啊，你要听从我的教导，</para>
+  <para style="q2">就必延年益寿。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>我已经指示你走智慧之道，</para>
+  <para style="q2">引导你行正确的路。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>你行走，必不受妨碍；</para>
+  <para style="q2">你奔跑，绝不会跌倒。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>你要持守教诲，不要松懈；</para>
+  <para style="q2">要守护好，因为那是你的生命。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>不要涉足恶人的道，</para>
+  <para style="q2">不要行走坏人的路；</para>
+  <para style="q1">
+    <verse number="15" style="v"/>要避开，不可踏足，</para>
+  <para style="q2">要绕道而行。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>因为他们不作恶就无法入睡，</para>
+  <para style="q2">不绊倒人就无法安眠；</para>
+  <para style="q1">
+    <verse number="17" style="v"/>他们吃的是邪恶饼，</para>
+  <para style="q2">喝的是残暴酒。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>义人的道路好像黎明的曙光，</para>
+  <para style="q2">越照越亮，直到大放光明。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>恶人的道路一片幽暗，</para>
+  <para style="q2">他们不知被何物绊倒。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>孩子啊，你要聆听我的吩咐，</para>
+  <para style="q2">侧耳听我的训言；</para>
+  <para style="q1">
+    <verse number="21" style="v"/>不要让它们离开你的视线，</para>
+  <para style="q2">要牢记在心。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>因为得到它们就得到生命，</para>
+  <para style="q2">全身也必康健。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>要一丝不苟地守护你的心，</para>
+  <para style="q2">因为生命之泉从心中涌出。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>不讲欺诈之言，</para>
+  <para style="q2">不说荒谬的话。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>眼睛要正视前方，</para>
+  <para style="q2">双目要向前直看。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>要铺平脚下的路，</para>
+  <para style="q2">使所行之道稳妥。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>不可偏右偏左，</para>
+  <para style="q2">要远离恶事。</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">远避淫乱</para>
+  <para style="q1">
+    <verse number="1" style="v"/>孩子啊，要留心听我的智言，</para>
+  <para style="q2">侧耳听我的慧语，</para>
+  <para style="q1">
+    <verse number="2" style="v"/>好保持明辨力，</para>
+  <para style="q2">嘴唇谨守知识。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>淫妇满口甜言蜜语，</para>
+  <para style="q2">油嘴滑舌，</para>
+  <para style="q1">
+    <verse number="4" style="v"/>最后却苦如艾草，</para>
+  <para style="q2">锋利似双刃剑。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>她的双脚走进死地，</para>
+  <para style="q2">她的步伐迈向阴间。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>她不走生命的康庄大道，</para>
+  <para style="q2">偏离了正途也不自知。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>孩子们啊，要听从我，</para>
+  <para style="q2">不可违背我的话！</para>
+  <para style="q1">
+    <verse number="8" style="v"/>要远远避开淫妇，</para>
+  <para style="q2">不可靠近她的家门，</para>
+  <para style="q1">
+    <verse number="9" style="v"/>免得你为别人枉费精力，</para>
+  <para style="q2">为残忍之徒断送青春；</para>
+  <para style="q1">
+    <verse number="10" style="v"/>免得外人吞尽你的财富，</para>
+  <para style="q2">你的辛劳所得归给他人。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>临终之时，肉体衰残，</para>
+  <para style="q2">你必呻吟不止，</para>
+  <para style="q1">
+    <verse number="12" style="v"/>说：“我为何厌恶教诲，</para>
+  <para style="q2">心里藐视责备！</para>
+  <para style="q1">
+    <verse number="13" style="v"/>不听从老师的话，</para>
+  <para style="q2">不侧耳听导师之言。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>在众人面前，</para>
+  <para style="q2">我几乎身败名裂。”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>你当喝自己池中的水，</para>
+  <para style="q2">饮自己井里的活水。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>你的泉水岂可外流？</para>
+  <para style="q2">你的河水怎可溢到街上？</para>
+  <para style="q1">
+    <verse number="17" style="v"/>这些要专属于你，</para>
+  <para style="q2">不可与外人共享。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>要使你的泉源蒙福，</para>
+  <para style="q2">要爱你年轻时所娶的妻。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>她高贵可爱宛如母鹿，</para>
+  <para style="q2">愿她的胸令你时时满足，</para>
+  <para style="q2">愿她的爱令你常常陶醉。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>孩子啊，为何迷恋淫妇？</para>
+  <para style="q2">为何拥抱妓女的胸？</para>
+  <para style="q1">
+    <verse number="21" style="v"/>因为人的所作所为逃不过耶和华的眼目，</para>
+  <para style="q2">祂必鉴察人走的一切路。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>恶人被自己的罪恶捉住，</para>
+  <para style="q2">被自己的罪恶捆绑。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>他因不听教诲而丧命，</para>
+  <para style="q2">因极其愚妄而入歧途。</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">日常警言</para>
+  <para style="q1">
+    <verse number="1" style="v"/>孩子啊，你若为邻人作保，</para>
+  <para style="q2">为外人击掌立约；</para>
+  <para style="q1">
+    <verse number="2" style="v"/>你若被自己口中的话套住，</para>
+  <para style="q2">被自己的诺言缠住，</para>
+  <para style="q1">
+    <verse number="3" style="v"/>孩子啊，你已落入邻人的手中，</para>
+  <para style="q2">你当如此自救：</para>
+  <para style="q2">要谦卑地向他求情。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>勿让你的眼睛睡觉，</para>
+  <para style="q2">莫叫你的眼皮打盹。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>要救自己脱离困境，</para>
+  <para style="q2">像羚羊挣脱猎人的手，</para>
+  <para style="q2">飞鸟逃脱捕鸟人的手。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>懒惰的人啊，去看看蚂蚁，</para>
+  <para style="q2">观察它的生活，就会有智慧。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>蚂蚁没有元帅，</para>
+  <para style="q2">没有官长，</para>
+  <para style="q2">也没有君王，</para>
+  <para style="q1">
+    <verse number="8" style="v"/>却在夏季储备粮食，</para>
+  <para style="q2">在收割时积聚食物。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>懒惰的人啊，你要躺到何时？</para>
+  <para style="q2">要睡到何时才起床？</para>
+  <para style="q1">
+    <verse number="10" style="v"/>再睡一会儿，再打个盹儿，</para>
+  <para style="q2">抱着手躺一会儿，</para>
+  <para style="q1">
+    <verse number="11" style="v"/>贫穷要像盗贼一样攻击你，</para>
+  <para style="q2">缺乏要像武士一样扑向你。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>无赖与恶人满口诡诈，</para>
+  <para style="q1">
+    <verse number="13" style="v"/>挤眉弄眼，手脚示意，</para>
+  <para style="q1">
+    <verse number="14" style="v"/>心术不正，设下诡计，惹事生非。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>因此，灾难必突然临到，</para>
+  <para style="q2">他们顷刻之间遭到毁灭，</para>
+  <para style="q2">无可挽救。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>耶和华所憎恶的事有六样，</para>
+  <para style="q1">连祂厌恶的事共有七样：</para>
+  <para style="q1">
+    <verse number="17" style="v"/>高傲的眼睛，</para>
+  <para style="q2">撒谎的舌头，</para>
+  <para style="q2">杀害无辜的手，</para>
+  <para style="q1">
+    <verse number="18" style="v"/>图谋诡计的心，</para>
+  <para style="q2">奔跑作恶的脚，</para>
+  <para style="q1">
+    <verse number="19" style="v"/>撒谎的假证人和在弟兄中挑起争端的人。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>孩子啊，要遵守你父亲的诫命，</para>
+  <para style="q2">不可背弃你母亲的训言。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>你要常常将这些刻在心坎上，</para>
+  <para style="q2">系在颈项上。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>你行走，它们必引领你；</para>
+  <para style="q2">你躺卧，它们必护卫你；</para>
+  <para style="q2">你醒来，它们必与你交谈。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>因为诫命是灯，训言是光，</para>
+  <para style="q2">管教责备是生命之道，</para>
+  <para style="q1">
+    <verse number="24" style="v"/>能使你远离邪恶的女人，</para>
+  <para style="q2">避开油嘴滑舌的妓女。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>你的心不要贪恋她的美色，</para>
+  <para style="q2">也不要被她的媚眼所迷惑，</para>
+  <para style="q1">
+    <verse number="26" style="v"/>因为娼妓会使人倾家荡产<note caller="+" style="f"><char style="fr" closed="false">6:26 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">娼妓会使人倾家荡产</char><char style="ft" closed="false">”或译“娼妓的淫资不过是一个饼”。</char></note>，</para>
+  <para style="q2">淫妇会猎杀人宝贵的生命。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>人若将火藏在怀中，</para>
+  <para style="q2">哪能不烧着衣服呢？</para>
+  <para style="q1">
+    <verse number="28" style="v"/>人若行走在火炭上，</para>
+  <para style="q2">哪能不烫伤双脚呢？</para>
+  <para style="q1">
+    <verse number="29" style="v"/>与别人妻子通奸也是这样，</para>
+  <para style="q2">凡靠近她的必难逃罪责。</para>
+  <para style="q1">
+    <verse number="30" style="v"/>贼因充饥而偷，</para>
+  <para style="q2">没有人藐视他；</para>
+  <para style="q1">
+    <verse number="31" style="v"/>但若被抓到，他要偿还七倍，</para>
+  <para style="q2">就是倾家荡产也要偿还。</para>
+  <para style="q1">
+    <verse number="32" style="v"/>和有夫之妇通奸的，</para>
+  <para style="q2">实在愚不可及，</para>
+  <para style="q2">他是自寻死路。</para>
+  <para style="q1">
+    <verse number="33" style="v"/>他必挨打，受辱，</para>
+  <para style="q2">他的耻辱永难抹去。</para>
+  <para style="q1">
+    <verse number="34" style="v"/>那丈夫妒火燃烧，</para>
+  <para style="q2">报仇时绝不留情。</para>
+  <para style="q1">
+    <verse number="35" style="v"/>赔他再多财物，他也不会接受；</para>
+  <para style="q2">送他再多礼物，他都不肯罢休。</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">要远离淫妇</para>
+  <para style="q1">
+    <verse number="1" style="v"/>孩子啊，你要遵从我的吩咐，</para>
+  <para style="q2">把我的诫命珍藏在心中。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>遵守我的诫命，你便存活。</para>
+  <para style="q2">要爱护我的训言，</para>
+  <para style="q2">如爱护眼中的瞳仁。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>要系在你的指头上，</para>
+  <para style="q2">刻在你的心版上。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>你要把智慧当作姊妹，</para>
+  <para style="q2">将悟性视为亲人。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>她们能使你远离淫妇，</para>
+  <para style="q2">远离妓女的甜言蜜语。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>我曾在家里的窗前，</para>
+  <para style="q2">透过窗棂往外观看，</para>
+  <para style="q1">
+    <verse number="7" style="v"/>只见在愚昧的青年人中，</para>
+  <para style="q2">有个无知的青年，</para>
+  <para style="q1">
+    <verse number="8" style="v"/>他穿过靠近淫妇的巷口，</para>
+  <para style="q2">朝她的家门走去，</para>
+  <para style="q1">
+    <verse number="9" style="v"/>趁着日暮黄昏，</para>
+  <para style="q2">借着夜色昏暗。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>看啊！一个妓女打扮、</para>
+  <para style="q2">心术不正的女子出来迎接他。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>她喧嚷放荡，不安分守家，</para>
+  <para style="q1">
+    <verse number="12" style="v"/>有时在街上，有时在广场，</para>
+  <para style="q2">或在各巷口守候。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>她缠着那青年，与他亲吻，</para>
+  <para style="q2">厚颜无耻地说：</para>
+  <para style="q1">
+    <verse number="14" style="v"/>“我今天刚献祭还了愿，</para>
+  <para style="q2">家里有平安祭肉<note caller="+" style="f"><char style="fr" closed="false">7:14 </char><char style="ft" closed="false">按犹太律法规定，还愿之后所得的祭肉要在第二天吃完。参考</char><char style="xt"><ref loc="LEV 7:16">利未记7:16</ref></char>。</note>，</para>
+  <para style="q1">
+    <verse number="15" style="v"/>因此我出来四处寻找你，</para>
+  <para style="q2">终于找到了你！</para>
+  <para style="q1">
+    <verse number="16" style="v"/>我已经铺好了床，</para>
+  <para style="q2">铺上了埃及的绣花布，</para>
+  <para style="q1">
+    <verse number="17" style="v"/>又用没药、沉香、肉桂熏了床。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>来吧，让我们通宵畅饮爱情，</para>
+  <para style="q2">让我们尽情欢爱！</para>
+  <para style="q1">
+    <verse number="19" style="v"/>因为我丈夫不在家，出远门了。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>他带着钱囊去了，月底才回来。”</para>
+  <para style="q1">
+    <verse number="21" style="v"/>淫妇花言巧语勾引他，</para>
+  <para style="q2">用谄媚的话语诱惑他。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>那青年立刻随她而去，</para>
+  <para style="q2">像走向屠宰场的公牛，</para>
+  <para style="q2">又像掉入陷阱的雄鹿，</para>
+  <para style="q1">
+    <verse number="23" style="v"/>直等到利箭射穿他的肝。</para>
+  <para style="q2">他像只自投网罗的飞鸟，</para>
+  <para style="q2">浑然不知要赔上性命！</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="24" style="v"/>孩子们啊，你们要听从我的话，</para>
+  <para style="q2">留意我口中的训言，</para>
+  <para style="q1">
+    <verse number="25" style="v"/>别让你的心偏向淫妇的道，</para>
+  <para style="q2">步入她的歧途。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>因为她使许多人丧命，</para>
+  <para style="q2">被她杀害的数目众多。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>她的家是通往阴间的路，</para>
+  <para style="q2">引人坠入死亡的殿。</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">智慧的呼唤</para>
+  <para style="q1">
+    <verse number="1" style="v"/>智慧不是在呼唤吗？</para>
+  <para style="q2">悟性不是在呐喊吗？</para>
+  <para style="q1">
+    <verse number="2" style="v"/>她在路边高处站立，</para>
+  <para style="q2">她在十字街头停留，</para>
+  <para style="q1">
+    <verse number="3" style="v"/>在城门旁，在入口处大喊：</para>
+  <para style="q1">
+    <verse number="4" style="v"/>“世人啊，我呼唤你们，</para>
+  <para style="q2">我向全人类大声呼吁。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>愚昧人啊，要学会谨慎！</para>
+  <para style="q2">愚顽人啊，要慎思明辨！</para>
+  <para style="q1">
+    <verse number="6" style="v"/>你们听啊，我要说美好的话，</para>
+  <para style="q2">开口谈论正直的事。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>我的口传扬真理，</para>
+  <para style="q2">我的嘴憎恨邪恶。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>我口中的言语公正，</para>
+  <para style="q2">没有一句错谬的话。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>我的话，智者明白，哲士认同。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>要接受我的教诲，而非白银；</para>
+  <para style="q2">要选择知识，而非黄金。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>因为智慧比宝石更珍贵，</para>
+  <para style="q2">一切美物都不能与之相比。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>“我智慧与谨慎同住，</para>
+  <para style="q2">我拥有知识和明辨力。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>敬畏耶和华就当憎恨邪恶，</para>
+  <para style="q2">我憎恨骄傲、狂妄、恶道和谎言。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>我有谋略和真知，</para>
+  <para style="q2">又有悟性和能力。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>君王靠我安邦定国，</para>
+  <para style="q2">首领借我秉公行义，</para>
+  <para style="q1">
+    <verse number="16" style="v"/>王公大臣靠我治理天下，</para>
+  <para style="q2">官宦贵胄凭我公正断案。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>爱我的，我也爱他；</para>
+  <para style="q2">恳切寻求我的，必能寻见。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>富贵和尊荣在我，</para>
+  <para style="q2">恒久的产业和公义也在我。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>我的果实胜过纯金，</para>
+  <para style="q2">我的出产胜过纯银。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>我在公义的道上奔走，</para>
+  <para style="q2">在公平的路上前行。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>我要赐财富给爱我的人，</para>
+  <para style="q2">使他们的库房充盈。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="22" style="v"/>“在耶和华造物的起头，</para>
+  <para style="q2">在太初万物被造以前，</para>
+  <para style="q2">就已经有我。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>从亘古，从太初，</para>
+  <para style="q2">大地还没有形成以前，</para>
+  <para style="q2">我已经被立。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>没有深渊，</para>
+  <para style="q2">没有涌流的水泉以前，</para>
+  <para style="q2">我已经诞生。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>大山未曾奠定，</para>
+  <para style="q2">小丘未曾形成，</para>
+  <para style="q2">我已经出生。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>那时耶和华还没有造大地和原野，</para>
+  <para style="q2">还没有造一粒尘土。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>祂铺设诸天的时候，我已在场。</para>
+  <para style="q2">祂在深渊上画出地平线，</para>
+  <para style="q1">
+    <verse number="28" style="v"/>上使穹苍坚固，</para>
+  <para style="q2">下使深渊的泉源安稳，</para>
+  <para style="q1">
+    <verse number="29" style="v"/>设定沧海的界限，</para>
+  <para style="q2">使海水不得越过祂定的范围，</para>
+  <para style="q2">为大地奠定根基的时候，</para>
+  <para style="q1">
+    <verse number="30" style="v"/>我就在祂身旁，</para>
+  <para style="q2">做祂的工程师，</para>
+  <para style="q2">天天成为祂的喜乐，</para>
+  <para style="q2">终日在祂面前欢悦，</para>
+  <para style="q1">
+    <verse number="31" style="v"/>因祂所造的人世而欢悦，</para>
+  <para style="q2">因祂所造的世人而喜乐。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="32" style="v"/>“孩子们啊，你们要听从我，</para>
+  <para style="q2">持守我道路的人有福了。</para>
+  <para style="q1">
+    <verse number="33" style="v"/>要听从教诲，不可轻忽，</para>
+  <para style="q2">要做智者。</para>
+  <para style="q1">
+    <verse number="34" style="v"/>人若听从我、天天在我门口仰望、</para>
+  <para style="q2">时时在我门边等候，就有福了。</para>
+  <para style="q1">
+    <verse number="35" style="v"/>因为找到我的，便找到了生命，</para>
+  <para style="q2">他必蒙耶和华的恩惠。</para>
+  <para style="q1">
+    <verse number="36" style="v"/>没找到我就是害自己；</para>
+  <para style="q2">憎恨我就是喜爱死亡。”</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">智慧和愚昧</para>
+  <para style="q1">
+    <verse number="1" style="v"/>智慧建造她的房屋，</para>
+  <para style="q2">凿出七根柱子。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>她宰了牲口，</para>
+  <para style="q2">调了美酒，</para>
+  <para style="q2">设了宴席，</para>
+  <para style="q1">
+    <verse number="3" style="v"/>派婢女出去邀请宾客，</para>
+  <para style="q2">自己在城中高处呼喊：</para>
+  <para style="q1">
+    <verse number="4" style="v"/>“愚昧人啊，到这里来吧！”</para>
+  <para style="q2">她又对无知者说：</para>
+  <para style="q1">
+    <verse number="5" style="v"/>“来吃我做的饭，</para>
+  <para style="q2">尝尝我调的酒吧！</para>
+  <para style="q1">
+    <verse number="6" style="v"/>你们要抛弃愚昧，就能存活，</para>
+  <para style="q2">要转向悟性之道。”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>纠正嘲讽者，必自招羞辱；</para>
+  <para style="q2">责备恶人，必自招伤害。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>不要责备嘲讽者，免得他恨你；</para>
+  <para style="q2">要责备智者，他必爱你。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>教导智者，他就更有智慧；</para>
+  <para style="q2">指教义人，他就更有见识。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>智慧始于敬畏耶和华，</para>
+  <para style="q2">认识至圣者便是明智。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>智慧可增添你的年日，</para>
+  <para style="q2">加添你的寿数。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>人有智慧，自得益处；</para>
+  <para style="q2">人好嘲讽，自食恶果。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>愚昧的女人喧嚷，蒙昧，无知。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>她坐在自己的家门口，</para>
+  <para style="q2">坐在城中高处的座位上，</para>
+  <para style="q1">
+    <verse number="15" style="v"/>招呼着行色匆匆的过客：</para>
+  <para style="q1">
+    <verse number="16" style="v"/>“愚昧人啊，到这里来吧！”</para>
+  <para style="q2">她又对无知者说：</para>
+  <para style="q1">
+    <verse number="17" style="v"/>“偷喝的水甜，偷吃的饼香。”</para>
+  <para style="q1">
+    <verse number="18" style="v"/>他们却不知她那里鬼影憧憧，</para>
+  <para style="q2">她的客人已落在阴间的深处。</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">所罗门的箴言</para>
+  <para style="p">
+    <verse number="1" style="v"/>以下是<char style="pn">所罗门</char>的箴言：</para>
+  <para style="q2">智慧儿使父亲快乐，</para>
+  <para style="q2">愚昧儿叫母亲担忧。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>不义之财毫无益处，</para>
+  <para style="q2">公义救人脱离死亡。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>耶和华不让义人挨饿，</para>
+  <para style="q2">祂使恶人的奢望成空。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>游手好闲招致贫穷，</para>
+  <para style="q2">勤奋努力带来富足。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>精明儿夏季时贮藏，</para>
+  <para style="q2">不肖子收成时酣睡。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>祝福临到义人的头，</para>
+  <para style="q2">残暴充满恶人的口。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>义人流芳于世，</para>
+  <para style="q2">恶人名声朽烂。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>心存智慧的接受诫命；</para>
+  <para style="q2">说话愚昧的自招灭亡。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>行正道者活得安稳，</para>
+  <para style="q2">走歪路者终必败露。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>挤眉弄眼，带来忧伤；</para>
+  <para style="q2">胡言乱语，导致灭亡。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>义人的口是生命之泉，</para>
+  <para style="q2">恶人的口却充满残暴。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>恨能挑起各样纷争，</para>
+  <para style="q2">爱能遮掩一切过犯。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>明哲人口中有智慧，</para>
+  <para style="q2">无知者背上受鞭打。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>智者储藏知识，</para>
+  <para style="q2">愚人口惹祸端。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>钱财是富人的坚垒，</para>
+  <para style="q2">贫乏带给穷人毁灭。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>义人的报酬是生命，</para>
+  <para style="q2">恶人的果子是惩罚。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>听从教诲的，走生命之路；</para>
+  <para style="q2">拒绝责备的，必步入歧途。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>暗藏仇恨的满口虚谎，</para>
+  <para style="q2">散布流言的愚不可及。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>言多必失，智者慎言。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>义人之舌似纯银，</para>
+  <para style="q2">恶人之心无价值。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>义人的口滋养众人，</para>
+  <para style="q2">愚人因无知而死亡。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>耶和华的祝福使人富足，</para>
+  <para style="q2">祝福中不加任何忧愁<note caller="+" style="f"><char style="fr" closed="false">10:22 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">祝福中不加任何忧愁</char><char style="ft" closed="false">”或译“劳苦无法使其加增”。</char></note>。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>愚人以恶为乐，</para>
+  <para style="q2">哲士喜爱智慧。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>恶人所怕的必临到他，</para>
+  <para style="q2">义人的心愿必得实现。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>暴风扫过，</para>
+  <para style="q2">恶人消逝无踪，</para>
+  <para style="q2">义人永不动摇。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>雇用懒惰人，</para>
+  <para style="q2">如醋倒牙，如烟熏目。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>敬畏耶和华的享长寿，</para>
+  <para style="q2">恶人的寿数必被缩短。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>义人的憧憬带来欢乐，</para>
+  <para style="q2">恶人的希望终必破灭。</para>
+  <para style="q1">
+    <verse number="29" style="v"/>耶和华的道保护正直人，</para>
+  <para style="q2">毁灭作恶之人。</para>
+  <para style="q1">
+    <verse number="30" style="v"/>义人永不动摇，</para>
+  <para style="q2">恶人无处容身。</para>
+  <para style="q1">
+    <verse number="31" style="v"/>义人的口发出智慧，</para>
+  <para style="q2">诡诈的舌必被割掉。</para>
+  <para style="q1">
+    <verse number="32" style="v"/>义人说话得体合宜，</para>
+  <para style="q2">恶人的口胡言乱语。</para>
+  <chapter number="11" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>耶和华憎恶骗人的天平，</para>
+  <para style="q2">喜爱公平的砝码。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>傲慢带来羞辱，</para>
+  <para style="q2">谦卑者有智慧。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>正直人靠诚实引导，</para>
+  <para style="q2">奸诈者被奸诈毁灭。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>在降怒之日，财富毫无益处，</para>
+  <para style="q2">唯有公义能救人免于死亡。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>纯全人行义走坦途，</para>
+  <para style="q2">恶人作恶致沉沦。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>正直人被义行所救，</para>
+  <para style="q2">奸诈者被私欲所掳。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>恶人一死，他的希望就破灭，</para>
+  <para style="q2">他对财势的冀望转眼成空。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>义人脱离患难，</para>
+  <para style="q2">恶人落入苦难。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>不敬虔的张口败坏邻舍，</para>
+  <para style="q2">义人却因知识获得拯救。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>义人亨通，全城快乐；</para>
+  <para style="q2">恶人灭亡，人人欢呼。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>城因正直人的祝福而兴盛，</para>
+  <para style="q2">因恶人的口舌而倾覆。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>无知者轻视邻舍，</para>
+  <para style="q2">明哲人保持缄默。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>嚼舌者泄露秘密，</para>
+  <para style="q2">忠信者守口如瓶。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>缺乏智谋，国必败亡；</para>
+  <para style="q2">谋士众多，战无不胜。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>为他人作保，必受亏损；</para>
+  <para style="q2">厌恶当保人，得享平安。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>贤淑的女子得到尊荣，</para>
+  <para style="q2">残暴的男子得到资财。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>仁慈的人造福自己，</para>
+  <para style="q2">残酷的人惹祸上身。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>恶人赚来的转眼成空，</para>
+  <para style="q2">播种公义的必获奖赏。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>坚持行义，必得生命；</para>
+  <para style="q2">追逐罪恶，终必灭亡。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>心术不正的人令耶和华憎恶，</para>
+  <para style="q2">纯全无过的人蒙耶和华喜爱。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>恶人终必落入法网，</para>
+  <para style="q2">义人的子孙必得拯救。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>女子貌美无内涵，</para>
+  <para style="q2">如同猪鼻挂金环。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>义人的愿望结出善果，</para>
+  <para style="q2">恶人的希望招致烈怒。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>有人乐善好施，反倒越来越富；</para>
+  <para style="q2">有人一毛不拔，反而越来越穷。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>慷慨好施的必得昌盛，</para>
+  <para style="q2">恩待他人的必蒙恩待。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>囤粮不卖，惹人咒诅；</para>
+  <para style="q2">乐意卖粮，必蒙祝福。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>寻求良善得恩惠，</para>
+  <para style="q2">追求罪恶遭祸患。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>倚仗财势者必衰败，</para>
+  <para style="q2">义人必兴旺如绿叶。</para>
+  <para style="q1">
+    <verse number="29" style="v"/>祸害自家，必一无所有，</para>
+  <para style="q2">愚人必做智者的仆役。</para>
+  <para style="q1">
+    <verse number="30" style="v"/>义人结果如生命之树，</para>
+  <para style="q2">智者深得人心。</para>
+  <para style="q1">
+    <verse number="31" style="v"/>看啊！义人在世上尚且遭报<note caller="+" style="f"><char style="fr" closed="false">11:31 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">义人在世上尚且遭报</char><char style="ft" closed="false">”七十士译本为“义人尚且难以得救”，参见</char><char style="xt"><ref loc="1PE 4:18">彼得前书4:18</ref></char>。</note>，</para>
+  <para style="q2">更何况罪人和恶人呢？</para>
+  <chapter number="12" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>喜爱管教的喜爱知识，</para>
+  <para style="q2">厌恶责备的愚不可及。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>善良的人蒙耶和华赐恩，</para>
+  <para style="q2">诡诈的人被耶和华定罪。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>人不能靠恶行坚立自己，</para>
+  <para style="q2">义人的根基却不会动摇。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>贤德的妻子是丈夫的冠冕，</para>
+  <para style="q2">无耻的妻子如丈夫的骨瘤。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>义人的心思公平正直，</para>
+  <para style="q2">恶人的计谋阴险诡诈。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>恶人的言语暗藏杀机，</para>
+  <para style="q2">正直人的口拯救生命。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>恶人覆灭不复存在，</para>
+  <para style="q2">义人的家屹立不倒。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>人有智慧受称赞，</para>
+  <para style="q2">心术不正遭唾弃。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>地位卑微却有仆人，</para>
+  <para style="q2">胜过自高却饿肚子。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>义人顾惜自己的牲畜，</para>
+  <para style="q2">恶人的怜悯也是残忍。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>努力耕耘者丰衣足食；</para>
+  <para style="q2">追求虚荣者愚不可及。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>恶人贪恋坏人的赃物，</para>
+  <para style="q2">义人的根结出硕果。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>恶人被自己的恶言所困，</para>
+  <para style="q2">但义人可以脱离险境。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>口出良言，饱尝美福；</para>
+  <para style="q2">双手勤劳，终得回报。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>愚人自以为是，</para>
+  <para style="q2">智者肯听劝诫。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>愚人难压怒气，</para>
+  <para style="q2">明哲忍辱负重。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>忠实的证人讲真话，</para>
+  <para style="q2">作伪证者满口谎言。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>出言不慎犹如利剑伤人，</para>
+  <para style="q2">智者之言却能医治创伤。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>诚实的口永远长存，</para>
+  <para style="q2">撒谎的舌转瞬即逝。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>图谋恶事的心怀诡诈，</para>
+  <para style="q2">劝人和睦的喜乐洋溢。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>义人无往不利，</para>
+  <para style="q2">恶人灾祸连连。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>耶和华厌恶说谎的嘴，</para>
+  <para style="q2">祂喜爱行为诚实的人。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>明哲不露锋芒，</para>
+  <para style="q2">愚人心吐愚昧。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>殷勤的手必掌权，</para>
+  <para style="q2">懒惰者必做奴仆。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>忧虑的心使人消沉，</para>
+  <para style="q2">一句良言振奋人心。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>义人引人走正路，</para>
+  <para style="q2">恶人领人入歧途。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>懒汉不烤猎物，</para>
+  <para style="q2">勤快人得资财。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>公义的道上有生命，</para>
+  <para style="q2">公义的路上无死亡。</para>
+  <chapter number="13" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>智慧儿听从父训，</para>
+  <para style="q2">嘲讽者不听责备。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>口出良言尝善果，</para>
+  <para style="q2">奸徒贪行残暴事<note caller="+" style="f"><char style="fr" closed="false">13:2 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">奸徒贪行残暴事</char><char style="ft" closed="false">”或译“奸徒必饱受虐待”。</char></note>。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>说话谨慎，可保性命；</para>
+  <para style="q2">口无遮拦，自取灭亡。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>懒惰人空有幻想，</para>
+  <para style="q2">勤快人心想事成。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>义人憎恶虚谎，</para>
+  <para style="q2">恶人行事可耻。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>公义守卫正直的人，</para>
+  <para style="q2">邪恶倾覆犯罪之徒。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>有人强充富有，</para>
+  <para style="q2">其实身无分文；</para>
+  <para style="q2">有人假装贫穷，</para>
+  <para style="q2">却是腰缠万贯。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>富人用财富赎命，</para>
+  <para style="q2">穷人却免受惊吓。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>义人的光灿烂，</para>
+  <para style="q2">恶人的灯熄灭。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>自高自大招惹纷争，</para>
+  <para style="q2">虚心受教才是睿智。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>不义之财必耗尽，</para>
+  <para style="q2">勤俭积蓄财富增。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>盼望无期，使人忧伤；</para>
+  <para style="q2">夙愿得偿，带来生机<note caller="+" style="f"><char style="fr" closed="false">13:12 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">带来生机</char><char style="ft" closed="false">”希伯来文是“使人像棵生命树”。</char></note>。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>蔑视训言，自招灭亡；</para>
+  <para style="q2">敬畏诫命，必得赏赐。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>智者的训言是生命之泉，</para>
+  <para style="q2">可使人避开死亡的网罗。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>睿智使人蒙恩惠，</para>
+  <para style="q2">奸徒之路通灭亡。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>明哲知而后行，</para>
+  <para style="q2">愚人炫耀愚昧。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>奸恶的使者陷入灾祸，</para>
+  <para style="q2">忠诚的使者带来医治。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>不受管教的贫穷羞愧，</para>
+  <para style="q2">接受责备的受到尊崇。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>愿望实现使心甘甜，</para>
+  <para style="q2">远离恶事为愚人憎恶。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>与智者同行必得智慧，</para>
+  <para style="q2">与愚人结伴必受亏损。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>祸患追赶罪人，</para>
+  <para style="q2">义人必得善报。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>善人为子孙留下产业，</para>
+  <para style="q2">罪人给义人积聚财富。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>穷人的田地出产丰富，</para>
+  <para style="q2">因不公而被抢掠一空。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>不用杖管教儿女是憎恶他们，</para>
+  <para style="q2">疼爱儿女的随时管教他们。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>义人丰衣足食，</para>
+  <para style="q2">恶人食不果腹。</para>
+  <chapter number="14" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>智慧的女子建立家园，</para>
+  <para style="q2">愚昧的女子亲手拆毁。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>行为正直的人敬畏耶和华，</para>
+  <para style="q2">行事邪僻的人轻视耶和华。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>愚人的狂言招来鞭打，</para>
+  <para style="q2">智者的唇舌保护自己。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>没有耕牛槽头净，</para>
+  <para style="q2">五谷丰登需壮牛。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>忠实的证人不会撒谎，</para>
+  <para style="q2">虚假的证人谎话连篇。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>嘲讽者徒然寻智慧，</para>
+  <para style="q2">明哲人轻易得知识。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>你要远离愚昧人，</para>
+  <para style="q2">他口中毫无知识。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>明哲凭智慧辨道，</para>
+  <para style="q2">愚人被愚昧欺骗。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>愚妄人戏看罪恶，</para>
+  <para style="q2">正直人彼此恩待。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>心头的愁苦，唯有自己明白；</para>
+  <para style="q2">心中的喜乐，外人无法分享。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>恶人的房屋必遭毁灭，</para>
+  <para style="q2">正直人的帐篷必兴盛。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>有的路看似正确，</para>
+  <para style="q2">最终却通向死亡。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>欢笑难消内心的痛苦，</para>
+  <para style="q2">欢乐过后，悲伤犹在。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>背弃正道，自食恶果；</para>
+  <para style="q2">善人行善，必得善报。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>愚昧人什么都信，</para>
+  <para style="q2">明哲人步步谨慎。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>智者小心谨慎，远离恶事；</para>
+  <para style="q2">愚人骄傲自负，行事鲁莽。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>急躁易怒的人做事愚昧，</para>
+  <para style="q2">阴险奸诈之人遭人痛恨。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>愚昧人得愚昧作产业，</para>
+  <para style="q2">明哲人得知识为冠冕。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>坏人俯伏在善人面前，</para>
+  <para style="q2">恶人俯伏在义人门口。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>穷人遭邻舍厌，</para>
+  <para style="q2">富人朋友众多。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>藐视邻舍是罪过，</para>
+  <para style="q2">怜悯穷人蒙福乐。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>图谋恶事的步入歧途，</para>
+  <para style="q2">行善的受爱戴和拥护。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>殷勤工作，带来益处；</para>
+  <para style="q2">满嘴空谈，导致贫穷。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>智者以财富为冠冕，</para>
+  <para style="q2">愚人以愚昧为装饰。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>诚实的证人挽救性命，</para>
+  <para style="q2">口吐谎言者欺骗他人。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>敬畏耶和华的信心坚定，</para>
+  <para style="q2">他的子孙也有庇护所。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>敬畏耶和华是生命的泉源，</para>
+  <para style="q2">可以使人避开死亡的陷阱。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>人民众多，是君王的荣耀；</para>
+  <para style="q2">没有臣民，君主必然败亡。</para>
+  <para style="q1">
+    <verse number="29" style="v"/>不轻易发怒者深明事理，</para>
+  <para style="q2">鲁莽急躁的人显出愚昧。</para>
+  <para style="q1">
+    <verse number="30" style="v"/>心平气和，滋润生命；</para>
+  <para style="q2">妒火中烧，啃蚀骨头。</para>
+  <para style="q1">
+    <verse number="31" style="v"/>欺压穷人等于侮辱造物主，</para>
+  <para style="q2">怜悯贫弱就是尊敬造物主。</para>
+  <para style="q1">
+    <verse number="32" style="v"/>恶人因恶行而灭亡，</para>
+  <para style="q2">义人到死仍有倚靠。</para>
+  <para style="q1">
+    <verse number="33" style="v"/>智慧存在哲士心里，</para>
+  <para style="q2">愚人心中充满无知。</para>
+  <para style="q1">
+    <verse number="34" style="v"/>公义能叫邦国兴盛，</para>
+  <para style="q2">罪恶是人民的耻辱。</para>
+  <para style="q1">
+    <verse number="35" style="v"/>明智的臣子蒙王喜悦，</para>
+  <para style="q2">可耻的仆人惹王发怒。</para>
+  <chapter number="15" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>温和的回答平息怒气，</para>
+  <para style="q2">粗暴的言词激起愤怒。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>智者的舌头传扬知识，</para>
+  <para style="q2">愚人的嘴巴吐露愚昧。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>耶和华的眼目无所不在，</para>
+  <para style="q2">善人和恶人都被祂鉴察。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>温和的言词带来生命，</para>
+  <para style="q2">乖谬的话语伤透人心。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>愚人蔑视父亲的管教，</para>
+  <para style="q2">接受责备的才算明智。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>义人家中财富充足，</para>
+  <para style="q2">恶人得利惹来祸患。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>智者的嘴传扬知识，</para>
+  <para style="q2">愚人的心并非如此。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>耶和华憎恨恶人的祭物，</para>
+  <para style="q2">悦纳正直人的祈祷。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>耶和华憎恨恶人的行径，</para>
+  <para style="q2">喜爱追求公义的人。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>背离正道，必遭严惩；</para>
+  <para style="q2">厌恶责备，必致死亡。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>阴间和冥府<note caller="+" style="f"><char style="fr" closed="false">15:11 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">冥府</char><char style="ft" closed="false">”希伯来文是“亚巴顿”，参考</char><char style="xt"><ref loc="REV 9:11">启示录9:11</ref></char>。</note>在耶和华面前尚且无法隐藏，</para>
+  <para style="q2">何况世人的心思呢！</para>
+  <para style="q1">
+    <verse number="12" style="v"/>嘲讽者不爱听责备，</para>
+  <para style="q2">也不愿请教智者。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>心中喜乐，容光焕发；</para>
+  <para style="q2">心里悲伤，精神颓丧。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>哲士渴慕知识，</para>
+  <para style="q2">愚人安于愚昧。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>困苦人天天受煎熬，</para>
+  <para style="q2">乐观者常常有喜乐。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>财物虽少但敬畏耶和华，</para>
+  <para style="q2">胜过家财万贯却充满烦恼。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>粗茶淡饭但彼此相爱，</para>
+  <para style="q2">胜过美酒佳肴却互相憎恨。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>脾气暴躁，惹起争端；</para>
+  <para style="q2">忍耐克制，平息纠纷。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>懒惰人的路布满荆棘，</para>
+  <para style="q2">正直人的道平坦宽阔。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>智慧之子使父亲欢喜，</para>
+  <para style="q2">愚昧的人却藐视母亲。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>无知者以愚昧为乐，</para>
+  <para style="q2">明哲人遵循正道。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>独断专行，计划失败；</para>
+  <para style="q2">集思广益，事无不成。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>应对得体，心中愉快；</para>
+  <para style="q2">言语合宜，何等美好！</para>
+  <para style="q1">
+    <verse number="24" style="v"/>智者循生命之路上升，</para>
+  <para style="q2">以免坠入阴间。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>耶和华拆毁傲慢人的房屋，</para>
+  <para style="q2">祂使寡妇的地界完整无损。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>耶和华憎恨恶人的意念，</para>
+  <para style="q2">喜爱纯洁的言语。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>贪爱财富，自害己家；</para>
+  <para style="q2">厌恶贿赂，安然存活。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>义人三思而后答，</para>
+  <para style="q2">恶人张口吐恶言。</para>
+  <para style="q1">
+    <verse number="29" style="v"/>耶和华远离恶人，</para>
+  <para style="q2">却听义人的祷告。</para>
+  <para style="q1">
+    <verse number="30" style="v"/>笑颜令人心喜，</para>
+  <para style="q2">喜讯滋润骨头。</para>
+  <para style="q1">
+    <verse number="31" style="v"/>倾听生命的训诫，</para>
+  <para style="q2">使人与智者同列。</para>
+  <para style="q1">
+    <verse number="32" style="v"/>不受管教就是轻看自己，</para>
+  <para style="q2">听从责备才能得到智慧。</para>
+  <para style="q1">
+    <verse number="33" style="v"/>敬畏耶和华使人得智慧，</para>
+  <para style="q2">学会谦卑后才能得尊荣。</para>
+  <chapter number="16" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>心中的策划在于人，</para>
+  <para style="q2">应对之言来自耶和华。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>人看自己的行为都纯全，</para>
+  <para style="q2">但是耶和华却衡量人心。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>把你的事交托耶和华，</para>
+  <para style="q2">你的计划必实现。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>耶和华所造的万物各有其用，</para>
+  <para style="q2">连恶人也是为灾难之日所造。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>耶和华厌恶心骄气傲者，</para>
+  <para style="q2">他们必逃不过祂的责罚。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>慈爱和忠信可让罪恶得赎，</para>
+  <para style="q2">敬畏耶和华使人远离罪恶。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>人所行的若蒙耶和华喜悦，</para>
+  <para style="q2">耶和华必使仇敌与他和好。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>财物虽少但行事公义，</para>
+  <para style="q2">胜过家财万贯却不公义。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>人心中筹划自己的道路，</para>
+  <para style="q2">但耶和华决定他的脚步。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>王口中有上帝的话，</para>
+  <para style="q2">断案时必无差错。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>公道的秤与天平属于耶和华，</para>
+  <para style="q2">袋中一切的砝码由祂制定。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>君王憎恨恶行，</para>
+  <para style="q2">因王位靠公义而立。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>王喜爱公义的言词，</para>
+  <para style="q2">器重说话正直的人。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>王的烈怒如死亡使者，</para>
+  <para style="q2">然而智者能平息王怒。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>王的笑容带给人生命，</para>
+  <para style="q2">他的恩惠像春雨之云。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>得智慧胜过得黄金，</para>
+  <para style="q2">获悟性胜过获白银。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>正直人的大道远离罪恶，</para>
+  <para style="q2">坚守正道的保全性命。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>骄横是沦亡的前奏，</para>
+  <para style="q2">狂傲是败落的预兆。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>宁可谦卑地与贫寒人相处，</para>
+  <para style="q2">也不跟狂傲人共享战利品。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>听从训言的人受益匪浅，</para>
+  <para style="q2">信靠耶和华的人蒙祝福。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>智者以明辨著称，</para>
+  <para style="q2">甜言能说服人心。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>智慧是智者的生命泉，</para>
+  <para style="q2">愚昧为愚人带来惩罚。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>智者三思而后言，</para>
+  <para style="q2">其言使人长见识。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>良言如蜜，</para>
+  <para style="q2">使人心灵甘甜、身体康健。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>有一条路看似正确，</para>
+  <para style="q2">最终却通向死亡。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>工人的胃口促他工作，</para>
+  <para style="q2">口腹之需是他的动力。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>不务正业的人图谋恶事，</para>
+  <para style="q2">他的口舌如烈焰般危险。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>邪僻的人散播纷争，</para>
+  <para style="q2">造谣的人破坏友情。</para>
+  <para style="q1">
+    <verse number="29" style="v"/>残暴之徒引诱邻舍走入歧途。</para>
+  <para style="q1">
+    <verse number="30" style="v"/>恶人眯起眼睛图谋不轨，</para>
+  <para style="q2">歹徒咬着嘴唇策划恶事。</para>
+  <para style="q1">
+    <verse number="31" style="v"/>白发是荣耀的冠冕，</para>
+  <para style="q2">行为公义方能得到。</para>
+  <para style="q1">
+    <verse number="32" style="v"/>不轻易发怒者胜过勇士，</para>
+  <para style="q2">能自我控制胜过攻陷城池。</para>
+  <para style="q1">
+    <verse number="33" style="v"/>人可以摇签求问，</para>
+  <para style="q2">但耶和华决定一切。</para>
+  <chapter number="17" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>粗茶淡饭但相安无事，</para>
+  <para style="q2">胜过佳肴满桌却勾心斗角。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>精明的仆人必管辖主人的不肖子，</para>
+  <para style="q2">并与他们一同承受家业。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>鼎炼银，炉炼金，</para>
+  <para style="q2">耶和华试炼人心。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>作恶者留心听恶言，</para>
+  <para style="q2">说谎者侧耳听坏话。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>嘲笑穷人等于侮辱造物主，</para>
+  <para style="q2">幸灾乐祸的人必难逃惩罚。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>子孙是老人的华冠，</para>
+  <para style="q2">父母是儿女的荣耀。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>愚人高谈阔论不相称，</para>
+  <para style="q2">统治者说谎更不合适。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>行贿者视贿赂为法宝，</para>
+  <para style="q2">可以使他无往不利。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>饶恕过犯，促进友爱；</para>
+  <para style="q2">重提旧恨，破坏友情。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>责备哲士一句，</para>
+  <para style="q2">胜过杖打愚人百下。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>恶人一心反叛，</para>
+  <para style="q2">残忍的使者必奉命来惩罚他。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>宁愿遇见丢失幼崽的母熊，</para>
+  <para style="q2">也不愿碰上做蠢事的愚人。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>人若以恶报善，</para>
+  <para style="q2">家里必祸患不断。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>争端爆发如洪水决堤，</para>
+  <para style="q2">当在爆发前将其制止。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>放过罪人、冤枉义人，</para>
+  <para style="q2">都为耶和华所憎恶。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>愚人无心求智慧，</para>
+  <para style="q2">手中有钱有何用？</para>
+  <para style="q1">
+    <verse number="17" style="v"/>朋友时时彼此关爱，</para>
+  <para style="q2">手足生来患难与共。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>无知的人才会为他人作保。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>喜爱争斗的喜爱犯罪，</para>
+  <para style="q2">骄傲自大的自招灭亡。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>心术不正，难觅幸福；</para>
+  <para style="q2">口吐谎言，陷入祸患。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>生愚昧子带来忧伤，</para>
+  <para style="q2">愚人之父毫无喜乐。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>喜乐的心乃是良药，</para>
+  <para style="q2">忧伤的灵使骨枯干。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>恶人暗中收受贿赂，</para>
+  <para style="q2">颠倒是非。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>哲士追求智慧，</para>
+  <para style="q2">愚人漫无目标。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>愚昧的孩子令父亲忧虑，让母亲苦恼。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>责罚义人不妥，</para>
+  <para style="q2">杖责君子不义。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>谨言慎行的有知识，</para>
+  <para style="q2">温和冷静的有悟性。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>愚人缄默可算为智慧，</para>
+  <para style="q2">闭口不言可算为明智。</para>
+  <chapter number="18" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>孤傲者独善其身，</para>
+  <para style="q2">他恼恨一切真知。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>愚人不喜欢悟性，</para>
+  <para style="q2">只喜欢发表意见。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>邪恶与藐视同行，</para>
+  <para style="q2">无耻与羞辱为伴。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>人口中的话如同深水，</para>
+  <para style="q2">智慧之泉像涓涓溪流。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>袒护恶人、冤枉义人都为不善。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>愚人说话引起纷争，</para>
+  <para style="q2">他的口招来鞭打。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>愚人的口自招灭亡，</para>
+  <para style="q2">他的嘴坑害他自己。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>闲言碎语如同美食，</para>
+  <para style="q2">深入人的五脏六腑。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>懒惰人与毁坏者臭味相投。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>耶和华的名是坚固保障，</para>
+  <para style="q2">义人投奔其中就得安稳。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>财富是富人的坚城，</para>
+  <para style="q2">在他幻想中是高墙。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>骄傲是败亡的前奏，</para>
+  <para style="q2">谦虚是尊荣的先锋。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>未听先答的人，</para>
+  <para style="q2">自显愚昧和羞辱。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>人的心灵能忍受疾病，</para>
+  <para style="q2">谁能忍受破碎的心灵？</para>
+  <para style="q1">
+    <verse number="15" style="v"/>哲士的心得知识，</para>
+  <para style="q2">智者的耳求知识。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>礼物为人开路，</para>
+  <para style="q2">领人晋见权贵。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>先告状的看似有理，</para>
+  <para style="q2">一经对质真相大白。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>抽签可以平息争端，</para>
+  <para style="q2">调解强者间的纠纷。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>与结怨的兄弟和解比攻城还难，</para>
+  <para style="q2">争端难破，如坚城的门闩。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>人因口中所说的话而饱足，</para>
+  <para style="q2">因嘴中所出的言语而满足。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>口舌能够定生死，</para>
+  <para style="q2">多嘴多言食恶果。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>得到妻子就是得到珍宝，</para>
+  <para style="q2">也是蒙了耶和华的恩惠。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>穷人哀声恳求，</para>
+  <para style="q2">富人恶言相向。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>滥交友，自招损；</para>
+  <para style="q2">得知己，胜手足。</para>
+  <chapter number="19" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>行为正直的穷人，</para>
+  <para style="q2">胜过诡诈的愚人。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>热诚却无知不足取，</para>
+  <para style="q2">行动急躁难免有错。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>人因愚昧而自毁前程，</para>
+  <para style="q2">他的心却抱怨耶和华。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>财富招来许多朋友，</para>
+  <para style="q2">穷人却遭朋友抛弃。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>作伪证者难免受罚，</para>
+  <para style="q2">撒谎的人罪责难逃。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>大家都讨好慷慨的人，</para>
+  <para style="q2">人人都结交好施赠的。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>穷人被亲人厌弃，</para>
+  <para style="q2">朋友都远远躲避。</para>
+  <para style="q2">他苦苦哀求，也无人理会。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>得到智慧的珍惜生命，</para>
+  <para style="q2">持守悟性的享受福乐。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>作伪证者难免受罚，</para>
+  <para style="q2">撒谎的人自取灭亡。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>愚人奢华宴乐不相宜，</para>
+  <para style="q2">奴隶管辖王子更离谱。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>智者不轻易发怒，</para>
+  <para style="q2">饶恕是他的荣耀。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>君王的震怒像雄狮怒吼，</para>
+  <para style="q2">君王的恩泽如草上甘露。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>愚昧之子是父亲的灾殃，</para>
+  <para style="q2">争闹之妻如雨滴漏不止。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>房屋钱财是祖先的遗产，</para>
+  <para style="q2">贤慧之妻乃耶和华所赐。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>懒惰使人沉睡，</para>
+  <para style="q2">懈怠使人挨饿。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>遵守诫命的保全性命，</para>
+  <para style="q2">藐视诫命的自寻死路。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>善待穷人等于借贷给耶和华，</para>
+  <para style="q2">耶和华必回报他的善行。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>管教孩子宜早不宜晚，</para>
+  <para style="q2">不可任由他走向灭亡。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>脾气暴躁的人必吃苦头。</para>
+  <para style="q2">你若救他，一次肯定不够。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>你要受教听劝，</para>
+  <para style="q2">以便得到智慧。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>人心中有许多计划，</para>
+  <para style="q2">唯耶和华的旨意成就。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>人心爱慕忠诚，</para>
+  <para style="q2">受穷胜过撒谎。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>敬畏耶和华使人得享生命，</para>
+  <para style="q2">安然满足，免遭祸患。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>懒惰人手放在餐盘，</para>
+  <para style="q2">却懒得送食物进嘴。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>责打嘲讽者，愚人学会谨慎；</para>
+  <para style="q2">责备明哲人，他会增长见识。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>苛待父亲的人可鄙，</para>
+  <para style="q2">逼走母亲的人可耻。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>孩子啊，你若不听教诲，</para>
+  <para style="q2">就会偏离知识。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>作伪证者嘲讽公义，</para>
+  <para style="q2">恶人的口吞吃罪恶。</para>
+  <para style="q1">
+    <verse number="29" style="v"/>刑罚对付嘲讽者，</para>
+  <para style="q2">鞭子责打愚人背。</para>
+  <chapter number="20" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>酒使人放肆，烈酒叫人吵闹。</para>
+  <para style="q2">因酒误事，实为不智。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>君王震怒如狮子咆哮，</para>
+  <para style="q2">触怒他的人自寻死路。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>避免纷争是光荣，</para>
+  <para style="q2">愚人个个爱争吵。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>懒惰人不按时耕种，</para>
+  <para style="q2">收获时必一无所得。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>人心的谋略如深水，</para>
+  <para style="q2">唯有哲士才能汲取。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>人都声称自己忠诚，</para>
+  <para style="q2">但谁能找到忠信者？</para>
+  <para style="q1">
+    <verse number="7" style="v"/>义人行为正直，</para>
+  <para style="q2">他的后代也蒙福。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>王坐在宝座上审判，</para>
+  <para style="q2">他的眼目明察罪恶。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>谁敢说：“我心灵洁净，纯洁无罪？”</para>
+  <para style="q1">
+    <verse number="10" style="v"/>缺斤少两、尺寸不足，</para>
+  <para style="q2">都为耶和华所憎恶。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>孩童的举动是否纯良，</para>
+  <para style="q2">都显明他的本性。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>能听的耳，能看的眼，</para>
+  <para style="q2">两者都为耶和华所造。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>不要贪睡，免得贫穷；</para>
+  <para style="q2">勤劳工作，粮食丰足。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>买主总说货物不好，</para>
+  <para style="q2">买走后又连连自夸。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>智慧之言胜过黄金和许多珠宝。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>谁为陌生人作保，就拿去谁的外衣；</para>
+  <para style="q2">谁为外族人作保，就要承担责任。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>骗来的饼觉得香甜，</para>
+  <para style="q2">最后却是满口泥沙。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>集思出良策，</para>
+  <para style="q2">征战靠智谋。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>嚼舌的人泄露秘密，</para>
+  <para style="q2">不可结交多嘴的人。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>咒骂父母的人，</para>
+  <para style="q2">他的生命<note caller="+" style="f"><char style="fr" closed="false">20:20 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">生命</char><char style="ft" closed="false">”希伯来文是“灯”。</char></note>必消逝在黑暗中。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>早年轻易得来之财，</para>
+  <para style="q2">最终不会成为祝福。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>不要说：“我要以恶报恶”，</para>
+  <para style="q2">要等候耶和华替你申冤。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>耶和华憎恶缺斤少两，</para>
+  <para style="q2">祂厌恶骗人的天平。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>人的脚步由耶和华所定，</para>
+  <para style="q2">人怎能知道自己的道路？</para>
+  <para style="q1">
+    <verse number="25" style="v"/>人向主许愿要三思，</para>
+  <para style="q2">免得事后作茧自缚。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>明君必筛出恶人，</para>
+  <para style="q2">用石磙碾轧他们。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>心灵是耶和华的灯，</para>
+  <para style="q2">鉴察人的肺腑心肠。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>君王靠慈爱和忠信护佑，</para>
+  <para style="q2">他的王位因慈爱而稳固。</para>
+  <para style="q1">
+    <verse number="29" style="v"/>力量是青年的荣耀，</para>
+  <para style="q2">白发是老人的尊荣。</para>
+  <para style="q1">
+    <verse number="30" style="v"/>鞭伤能驱除罪恶，</para>
+  <para style="q2">责打能洁净人心。</para>
+  <chapter number="21" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>耶和华掌管君王的心，</para>
+  <para style="q2">易如支配垄沟的流水。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>人自以为行事正确，</para>
+  <para style="q2">但耶和华衡量人心。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>秉公行义比献祭更蒙耶和华喜悦。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>高傲的眼，狂妄的心，恶人的灯，</para>
+  <para style="q2">都是罪恶。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>勤劳者的计划必致富足，</para>
+  <para style="q2">行事急躁的人必致贫困。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>骗来的财如过眼云雾，</para>
+  <para style="q2">使人掉进死亡的陷阱。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>恶人的暴力必毁灭自己，</para>
+  <para style="q2">因为他们行事不公不义。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>犯罪的人行径扭曲，</para>
+  <para style="q2">纯洁的人行为正直。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>宁愿住在房顶的一角，</para>
+  <para style="q2">也不跟争闹之妻同屋。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>恶人贪恋邪恶，</para>
+  <para style="q2">对邻舍残忍无情。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>惩罚嘲讽者，愚人得智慧；</para>
+  <para style="q2">训诫智者，他便长见识。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>公义的上帝鉴察恶人的家，</para>
+  <para style="q2">祂必使他们灭亡。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>掩耳不听穷人呼求的，</para>
+  <para style="q2">他将来求救也无人管。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>暗中送的礼物能平息愤怒，</para>
+  <para style="q2">塞进怀里的贿赂止息盛怒。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>正义得到伸张，</para>
+  <para style="q2">义人喜、恶人怕。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>人偏离明智之道，</para>
+  <para style="q2">终必与阴魂为伍。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>贪图享受必穷困，</para>
+  <para style="q2">奢华宴乐难富足。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>恶人作义人的赎价，</para>
+  <para style="q2">奸徒替正直人受苦。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>宁愿独居旷野，</para>
+  <para style="q2">不跟吵闹易怒的女子同住。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>智者家中积存宝物和油，</para>
+  <para style="q2">愚人将所有的挥霍一空。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>追求公义与慈爱的，</para>
+  <para style="q2">必寻得生命、公义和尊荣。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>智者攀上勇士的城池，</para>
+  <para style="q2">摧毁他们倚仗的坚垒。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>管住口舌，免遭祸患。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>嘲讽者狂妄自大，</para>
+  <para style="q2">行事骄横无比。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>懒人的欲望害死自己，</para>
+  <para style="q2">因为他的手不肯做工。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>懒人整天贪得无厌，</para>
+  <para style="q2">义人施舍毫不吝啬。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>恶人的祭物已经可憎，</para>
+  <para style="q2">何况他怀着恶意来献！</para>
+  <para style="q1">
+    <verse number="28" style="v"/>作伪证的终灭亡，</para>
+  <para style="q2">道实情的常发言。</para>
+  <para style="q1">
+    <verse number="29" style="v"/>恶人虚张声势，</para>
+  <para style="q2">正直人谨慎行事。</para>
+  <para style="q1">
+    <verse number="30" style="v"/>任何智慧、悟性和谋略，</para>
+  <para style="q2">都不能对抗耶和华。</para>
+  <para style="q1">
+    <verse number="31" style="v"/>马为争战之日预备，</para>
+  <para style="q2">胜败由耶和华决定。</para>
+  <chapter number="22" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>美名胜过巨富，</para>
+  <para style="q2">恩宠比金银宝贵。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>富人和穷人相同：</para>
+  <para style="q2">都由耶和华所造。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>明哲人遇祸躲避，</para>
+  <para style="q2">愚昧人前往受害。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>心存谦卑、敬畏耶和华，</para>
+  <para style="q2">必得财富、尊荣和生命。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>奸徒之道有荆棘和陷阱，</para>
+  <para style="q2">想保全生命的必须远避。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>教导孩童走正路，</para>
+  <para style="q2">他到老也不偏离。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>富人管辖穷人，</para>
+  <para style="q2">欠债的是债主的仆人。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>播种不义的必收灾祸，</para>
+  <para style="q2">他的恶势力终必瓦解。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>慷慨的人必蒙福，</para>
+  <para style="q2">因他给穷人食物。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>赶走嘲讽者，纷争平息，</para>
+  <para style="q2">争吵和羞辱也会消除。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>喜爱清心、口吐恩言的人，</para>
+  <para style="q2">必与君王为友。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>耶和华的眼目护卫真理，</para>
+  <para style="q2">祂必推翻奸徒的言论。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>懒惰人说：“外面有狮子，</para>
+  <para style="q2">我会丧命街头。”</para>
+  <para style="q1">
+    <verse number="14" style="v"/>淫妇的口是深坑，</para>
+  <para style="q2">耶和华憎恶的人必陷进去。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>愚昧缠住孩童的心，</para>
+  <para style="q2">教棍能远远赶走它。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>靠压榨穷人敛财和送礼给富人的，</para>
+  <para style="q2">都必穷困潦倒。</para>
+  <para style="s1">智者之言</para>
+  <para style="q1">
+    <verse number="17" style="v"/>你要侧耳听智者之言，</para>
+  <para style="q2">专心领受我的教诲，</para>
+  <para style="q1">
+    <verse number="18" style="v"/>铭记在心、随时诵咏，</para>
+  <para style="q2">方为美事。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>今天我将这些指示你，</para>
+  <para style="q2">为要使你倚靠耶和华。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>关于谋略和知识，</para>
+  <para style="q2">我已写给你三十条，</para>
+  <para style="q1">
+    <verse number="21" style="v"/>要使你认识真理，</para>
+  <para style="q2">能准确答复差你来的人。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="22" style="v"/>不可仗势剥削贫穷人，</para>
+  <para style="q2">法庭上不可欺凌弱者，</para>
+  <para style="q1">
+    <verse number="23" style="v"/>因为耶和华必为他们申冤，</para>
+  <para style="q2">夺去掠夺他们之人的性命。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="24" style="v"/>不可结交脾气暴躁者，</para>
+  <para style="q2">不要跟易怒之人来往，</para>
+  <para style="q1">
+    <verse number="25" style="v"/>免得你沾染他们的恶习，</para>
+  <para style="q2">不能自拔。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="26" style="v"/>不要为人击掌作保，</para>
+  <para style="q2">不要为欠债的抵押。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>如果你还不起，</para>
+  <para style="q2">连你的床也会被抬走。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="28" style="v"/>不可移动祖先定下的界石。</para>
+  <para style="q1">
+    <verse number="29" style="v"/>你看那精明能干的人，</para>
+  <para style="q2">他必侍立在君王面前，</para>
+  <para style="q2">不会效力于泛泛之辈。</para>
+  <chapter number="23" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>你若与官长同席，</para>
+  <para style="q2">要注意面对的是谁。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>如果你是贪吃的人，</para>
+  <para style="q2">就要节制食欲<note caller="+" style="f"><char style="fr" closed="false">23:2 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">节制食欲</char><char style="ft" closed="false">”希伯来文是“把刀放在喉咙上”。</char></note>；</para>
+  <para style="q1">
+    <verse number="3" style="v"/>不可贪恋他的美食，</para>
+  <para style="q2">这美食是圈套。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>别为钱财耗尽心力，</para>
+  <para style="q2">要明智，适可而止。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>钱财眨眼之间消逝无踪，</para>
+  <para style="q2">它必长出翅膀如鹰飞去。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>不要吃吝啬人的饭，</para>
+  <para style="q2">不可贪图他的美味。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>因为他总是精于算计，</para>
+  <para style="q2">嘴上说“请吃，请喝”，</para>
+  <para style="q2">心里却另有盘算。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>你必呕出所吃的那点饭，</para>
+  <para style="q2">你说的美言都必枉费。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>不要和愚人说话，</para>
+  <para style="q2">他必藐视你的智言。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>不可挪移古时的界石，</para>
+  <para style="q2">不可侵占孤儿的田地。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>因他们的救赎主强大，</para>
+  <para style="q2">祂必对付你，替他们申冤。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>你要专心接受教诲，</para>
+  <para style="q2">侧耳倾听智言。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>不要疏于管教孩子，</para>
+  <para style="q2">杖责不会使他毙命，</para>
+  <para style="q1">
+    <verse number="14" style="v"/>杖责能救他脱离死亡。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>孩子啊，</para>
+  <para style="q2">你若心里有智慧，</para>
+  <para style="q2">我心里也会欢喜。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>你的口若说正直的话，</para>
+  <para style="q2">我的内心也欢畅不已。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>不要心里羡慕罪人，</para>
+  <para style="q2">要终日敬畏耶和华。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>这样，你必前途光明，</para>
+  <para style="q2">你的盼望不会幻灭。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>孩子啊，听我的话，</para>
+  <para style="q2">要有智慧，心守正道。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>不要结交酒肉朋友，</para>
+  <para style="q1">
+    <verse number="21" style="v"/>因为好酒贪吃者必穷困，</para>
+  <para style="q2">贪睡的人必穿破衣烂衫。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>要听从生养你的父亲，</para>
+  <para style="q2">不可轻视年老的母亲。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>要买真理、智慧、教诲和悟性，</para>
+  <para style="q2">不可卖掉。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>义人的父亲喜乐无限，</para>
+  <para style="q2">智慧之子使父母欢欣。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>你要使父母快乐，</para>
+  <para style="q2">叫生你的人欢欣。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>孩子啊，把你的心交给我，</para>
+  <para style="q2">欢然走我的道路。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>妓女是深坑，淫妇是陷阱；</para>
+  <para style="q1">
+    <verse number="28" style="v"/>她像强盗般埋伏，</para>
+  <para style="q2">使世间增添奸徒。</para>
+  <para style="q1">
+    <verse number="29" style="v"/>谁有灾祸？谁有忧伤？</para>
+  <para style="q2">谁有争吵？谁有怨言？</para>
+  <para style="q2">谁无故受伤？谁两眼发红？</para>
+  <para style="q1">
+    <verse number="30" style="v"/>就是那些沉迷醉乡，</para>
+  <para style="q2">品尝醇和之酒的人！</para>
+  <para style="q1">
+    <verse number="31" style="v"/>虽然鲜红的酒在杯中闪烁，</para>
+  <para style="q2">喝下去痛快，但不要盯着它。</para>
+  <para style="q1">
+    <verse number="32" style="v"/>它终必像蛇一样伤你，</para>
+  <para style="q2">像毒蛇一样咬你。</para>
+  <para style="q1">
+    <verse number="33" style="v"/>你的眼会看见怪异的景象，</para>
+  <para style="q2">你会神智不清，胡言乱语。</para>
+  <para style="q1">
+    <verse number="34" style="v"/>你好像躺在怒海中，</para>
+  <para style="q2">又像卧在桅杆顶上。</para>
+  <para style="q1">
+    <verse number="35" style="v"/>你会说：“人打我，我不痛；</para>
+  <para style="q2">人揍我，我不知。</para>
+  <para style="q2">什么时候醒了，再干一杯！”</para>
+  <chapter number="24" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>不要羡慕恶人，</para>
+  <para style="q2">不要向往与他们为友；</para>
+  <para style="q1">
+    <verse number="2" style="v"/>因为他们心里图谋暴行，</para>
+  <para style="q2">口中谈论恶事。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>家靠智慧而建立，</para>
+  <para style="q2">靠悟性而稳固，</para>
+  <para style="q1">
+    <verse number="4" style="v"/>借知识而充满各种珍宝。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>智者充满能力，</para>
+  <para style="q2">哲士力上加力。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>出征打仗，要凭智谋；</para>
+  <para style="q2">谋士众多，胜券在握。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>智慧对愚人高不可及，</para>
+  <para style="q2">他在城门口沉默不语。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>图谋作恶的必被称为阴谋家。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>愚人的计谋是罪恶，</para>
+  <para style="q2">人人都厌恶嘲讽者。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>逆境中丧胆的是弱者。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>被拉去屠杀的，你要抢救；</para>
+  <para style="q2">踉跄受死的，你要拦阻。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>不要推说自己毫不知情，</para>
+  <para style="q2">鉴察人心的主洞悉一切，</para>
+  <para style="q2">保守你生命的上帝知情，</para>
+  <para style="q2">祂必按你的行为报应你。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>孩子啊，你要吃美好的蜂蜜，</para>
+  <para style="q2">蜂房滴下的蜜甘甜可口。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>智慧同样使你的心灵甘甜；</para>
+  <para style="q2">你若找到智慧，前途必光明，</para>
+  <para style="q2">盼望也不会幻灭。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>不要像恶人一样暗算义人，</para>
+  <para style="q2">破坏他的家。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>因为义人跌倒七次也必起来，</para>
+  <para style="q2">恶人却被灾祸击垮。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>仇敌跌倒，不要幸灾乐祸；</para>
+  <para style="q2">仇敌败落，不要心里欢喜。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>否则，耶和华看见会不悦，</para>
+  <para style="q2">不再向仇敌发烈怒。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>不要因恶人而愤愤不平，</para>
+  <para style="q2">也不要羡慕歹徒；</para>
+  <para style="q1">
+    <verse number="20" style="v"/>因为恶人毫无前途，</para>
+  <para style="q2">恶人的灯终必熄灭。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>孩子啊，要敬畏耶和华和君王，</para>
+  <para style="q2">不要跟反复无常之徒为伍。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>因为灾祸必骤然临到他们，</para>
+  <para style="q2">谁知道耶和华和君王如何毁灭他们？</para>
+  <para style="s1">其他智言</para>
+  <para style="q1">
+    <verse number="23" style="v"/>以下也是智者的箴言：</para>
+  <para style="q2">判案时偏袒实为不善。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>判恶人无罪的，</para>
+  <para style="q2">必遭万人咒诅，</para>
+  <para style="q2">为列国痛恨。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>责备恶人的必有欢乐，</para>
+  <para style="q2">美好的福气必临到他。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>诚实的回答如同友好的亲吻。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>要安排好外面的事，</para>
+  <para style="q2">把田间的工作准备妥当，</para>
+  <para style="q2">然后建造房屋。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>别无故作证害邻舍，</para>
+  <para style="q2">也不可撒谎欺骗人。</para>
+  <para style="q1">
+    <verse number="29" style="v"/>不可说：“别人怎样待我，</para>
+  <para style="q2">我就怎样待他；</para>
+  <para style="q2">我要照他所做的报复他。”</para>
+  <para style="q1">
+    <verse number="30" style="v"/>我走过懒惰人的田地和无知者的葡萄园，</para>
+  <para style="q1">
+    <verse number="31" style="v"/>那里荆棘遍地，</para>
+  <para style="q2">刺草丛生，</para>
+  <para style="q2">石墙倒塌。</para>
+  <para style="q1">
+    <verse number="32" style="v"/>我仔细思想所见之事，</para>
+  <para style="q2">领悟到一个教训：</para>
+  <para style="q1">
+    <verse number="33" style="v"/>再睡一会儿，</para>
+  <para style="q2">打个盹儿，</para>
+  <para style="q2">抱着手躺一会儿，</para>
+  <para style="q1">
+    <verse number="34" style="v"/>贫穷必像强盗一样临到你，</para>
+  <para style="q2">缺乏必像武士一样扑向你。</para>
+  <chapter number="25" style="c"/>
+  <para style="s1">所罗门的箴言（续）</para>
+  <para style="p">
+    <verse number="1" style="v"/>以下也是<char style="pn">所罗门</char>的箴言，由<char style="pn">犹大</char>王<char style="pn">希西迦</char>的人抄录。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>将事隐藏是上帝的荣耀，</para>
+  <para style="q2">把事查明是君王的光荣。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>天之高，地之厚，</para>
+  <para style="q2">君王的心测不透。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>除掉银子里的渣滓，</para>
+  <para style="q2">银匠就能铸造器皿。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>清除君王身边的恶人，</para>
+  <para style="q2">王位必因公义而巩固。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>不可在王面前妄自尊大，</para>
+  <para style="q2">不要占据大人物的位子。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>与其在权贵面前受羞辱，</para>
+  <para style="q2">不如等人邀请你坐上座。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>不可鲁莽地打官司，</para>
+  <para style="q2">以免败诉、羞愧难当。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>遇到跟邻舍争讼，</para>
+  <para style="q2">不可泄露其秘密，</para>
+  <para style="q1">
+    <verse number="10" style="v"/>免得听见的人辱骂你，</para>
+  <para style="q2">你的恶名将永难洗刷。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>一句话说得合宜，</para>
+  <para style="q2">就像金苹果放在银器里。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>对受教者而言，</para>
+  <para style="q2">智者的责备犹如金耳环和金饰物。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>忠信的使者叫主人心里舒畅，</para>
+  <para style="q2">就像夏收之时有冰雪的凉气。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>夸口送礼物却食言的人，</para>
+  <para style="q2">就像没有雨水的风和云。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>坚忍说服君王，</para>
+  <para style="q2">柔舌折断骨头。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>找到蜂蜜要酌量而食，</para>
+  <para style="q2">免得吃多了呕吐。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>不要频频去邻舍家，</para>
+  <para style="q2">免得惹人烦、遭人厌。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>作伪证陷害邻舍的人，</para>
+  <para style="q2">无异于大锤、刀和利箭。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>危难时投靠奸诈之人，</para>
+  <para style="q2">形同倚靠坏牙和跛脚。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>对忧伤的人唱歌，</para>
+  <para style="q2">如同天寒脱衣、伤口撒盐。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>你的仇敌若饿了，</para>
+  <para style="q2">就给他吃的；</para>
+  <para style="q2">若渴了，就给他水喝；</para>
+  <para style="q1">
+    <verse number="22" style="v"/>因为你这是把炭火堆在他头上，</para>
+  <para style="q2">耶和华必奖赏你。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>北风带来雨水，</para>
+  <para style="q2">谗言激起愤怒。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>宁愿住在屋顶的一角，</para>
+  <para style="q2">不跟争闹的妻子同屋。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>有好消息从远方传来，</para>
+  <para style="q2">如凉水滋润干渴的人。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>义人向恶人低头，</para>
+  <para style="q2">就像清泉被搅浑，</para>
+  <para style="q2">水井受污染。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>蜂蜜吃得太多有害无益，</para>
+  <para style="q2">追求自己的荣耀也不光彩。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>无法自制的人就像被攻破的无墙之城。</para>
+  <chapter number="26" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>愚人得尊荣本不合宜，</para>
+  <para style="q2">如夏天降雪、收割时下雨。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>麻雀翻飞，燕子翱翔，</para>
+  <para style="q2">咒诅不会无端降临。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>鞭子打马，缰绳勒驴，</para>
+  <para style="q2">棍棒责打愚人的背。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>别照愚人的愚昧回答他，</para>
+  <para style="q2">免得你像他一样。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>要照愚人的愚昧回答他，</para>
+  <para style="q2">免得他自以为有智慧。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>靠愚人传信，</para>
+  <para style="q2">如同砍断自己的脚，</para>
+  <para style="q2">自讨苦吃。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>愚人口中说箴言，</para>
+  <para style="q2">如同跛子空有腿。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>把尊荣给愚人，</para>
+  <para style="q2">就像把石子绑在甩石器上。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>愚人口中说箴言，</para>
+  <para style="q2">如同醉汉握荆棘。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>雇用愚人或路人，</para>
+  <para style="q2">如同弓箭手乱箭伤人。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>愚人一再重复愚昧事，</para>
+  <para style="q2">就像狗回头吃所吐的。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>自以为有智慧的人，</para>
+  <para style="q2">还不如愚人有希望。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>懒惰人说：“路上有狮子，</para>
+  <para style="q2">街上有猛狮。”</para>
+  <para style="q1">
+    <verse number="14" style="v"/>懒惰人赖在床上滚来滚去，</para>
+  <para style="q2">就像门在门轴上转来转去。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>懒惰人手放在餐盘，</para>
+  <para style="q2">却懒得送食物进嘴。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>懒惰人自以为比七个善于应对的人更有智慧。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>插手他人的纠纷，</para>
+  <para style="q2">犹如揪狗的耳朵。</para>
+  <para style="q1">
+    <verse number="18-19" style="v"/>欺骗邻舍还说是开玩笑，</para>
+  <para style="q2">如同疯子乱抛火把、乱射箭。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>没有木柴，火自然熄灭；</para>
+  <para style="q2">没有闲话，争端便平息。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>好斗之人煽动争端，</para>
+  <para style="q2">如同余火加炭、火上加柴。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>闲言闲语如可口的美食，</para>
+  <para style="q2">轻易进入人的五脏六腑。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>火热的嘴，邪恶的心，</para>
+  <para style="q2">犹如瓦器镀了层银。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>怨恨人的用美言掩饰自己，</para>
+  <para style="q2">心中却藏着诡诈。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>纵然他甜言蜜语，你也不可信他，</para>
+  <para style="q2">因为他心中充满各种可憎之事。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>虽然他用诡计掩饰怨恨，</para>
+  <para style="q2">他的邪恶必被会众揭穿。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>挖陷阱的，必自陷其中；</para>
+  <para style="q2">滚石头的，必自伤己身。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>撒谎的舌恨它所害的人，</para>
+  <para style="q2">谄媚的嘴带来毁灭。</para>
+  <chapter number="27" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>不要为明天夸口，</para>
+  <para style="q2">因为你不知明天会怎样。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>让别人夸奖你，不要开口自夸；</para>
+  <para style="q2">让外人称赞你，不要自吹自擂。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>石头沉，沙土重，</para>
+  <para style="q2">不如愚人惹的麻烦重。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>暴怒固然残酷，</para>
+  <para style="q2">愤恨好比狂澜，</para>
+  <para style="q2">然而嫉妒更是无人能敌。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>开诚布公的责备胜过隐藏的爱。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>朋友加的创伤出自真诚，</para>
+  <para style="q2">仇敌连连亲吻却是多余。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>饱足的人连蜂蜜也嫌弃，</para>
+  <para style="q2">饥饿的人吃苦食也甘甜。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>离乡背井的人就像离巢的飞鸟。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>膏油和香料使人畅快，</para>
+  <para style="q2">朋友的劝诫更加甘甜。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>不可抛弃你的朋友和父亲的至交。</para>
+  <para style="q2">患难时别投靠兄弟，</para>
+  <para style="q2">近邻胜过远亲。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>孩子啊，你要做智者，</para>
+  <para style="q2">使我的心喜乐，</para>
+  <para style="q2">我好回答讥笑我的人。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>明哲人遇祸躲避，</para>
+  <para style="q2">愚昧人前去受害。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>谁为陌生人作保，</para>
+  <para style="q2">就拿谁的衣服；</para>
+  <para style="q2">谁为淫妇作保，</para>
+  <para style="q2">谁就得交抵押。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>清早高声为邻舍祝福，</para>
+  <para style="q2">无异于咒诅他。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>喋喋不休的妇人，</para>
+  <para style="q2">就像雨天房屋漏个不停；</para>
+  <para style="q1">
+    <verse number="16" style="v"/>想制止她犹如制止狂风，</para>
+  <para style="q2">又像用手抓油一样困难。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>朋友互相切磋，</para>
+  <para style="q1">如铁磨铁越磨越利。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>看无花果树的吃无花果，</para>
+  <para style="q2">照顾主人的也必得尊荣。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>水能映照人的面貌，</para>
+  <para style="q2">心能反映人的本相。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>阴间和死亡填不满，</para>
+  <para style="q2">人的眼目永不满足。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>鼎炼银，炉炼金，</para>
+  <para style="q2">赞美也考验人。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>就算把愚人放在臼里与麦子一起捣碎，</para>
+  <para style="q2">他仍然难脱愚昧。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>你要了解你的羊群，</para>
+  <para style="q2">小心照料你的牲畜。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>因为钱财有用尽时，</para>
+  <para style="q2">冠冕不能万代长存。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>干草割去，嫩草长出，</para>
+  <para style="q2">山间的野草都被收起来。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>小羊的皮毛可做衣服，</para>
+  <para style="q2">卖山羊的钱可买田地，</para>
+  <para style="q1">
+    <verse number="27" style="v"/>母山羊的奶足够你和家人喝，</para>
+  <para style="q2">也够养活你的仆婢。</para>
+  <chapter number="28" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>恶人未被追赶也逃窜，</para>
+  <para style="q2">义人坦然无惧如雄狮。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>国中有罪，君王常换；</para>
+  <para style="q2">国有哲士，长治久安。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>穷人<note caller="+" style="f"><char style="fr" closed="false">28:3 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">穷人</char><char style="ft" closed="false">”有些抄本作“暴君”。</char></note>欺压贫民，</para>
+  <para style="q2">如暴雨冲毁粮食。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>背弃律法的称赞恶人，</para>
+  <para style="q2">遵守律法的抗拒恶人。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>邪恶之人不明白公义，</para>
+  <para style="q2">寻求耶和华的全然明白。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>行为正直的穷人，</para>
+  <para style="q2">胜过行事邪僻的富人。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>遵守律法的是智慧之子，</para>
+  <para style="q2">与贪食者为伍令父蒙羞。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>人放高利贷牟利，</para>
+  <para style="q2">等于为扶贫者积财。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>人若不听从律法，</para>
+  <para style="q2">他的祷告也可憎。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>引诱正直人走邪道，</para>
+  <para style="q2">必掉进自己设的陷阱；</para>
+  <para style="q2">但纯全无过的人必承受福分。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>富人自以为有智慧，</para>
+  <para style="q2">却被明智的穷人看透。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>义人得胜，遍地欢腾；</para>
+  <para style="q2">恶人当道，人人躲藏。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>自掩其罪，必不亨通；</para>
+  <para style="q2">痛改前非，必蒙怜悯。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>敬畏上帝必蒙福，</para>
+  <para style="q2">顽固不化必遭祸。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>暴虐的君王辖制穷人，</para>
+  <para style="q2">如咆哮的狮、觅食的熊。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>昏庸的君王残暴不仁，</para>
+  <para style="q2">恨不义之财的享长寿。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>背负血债者必终生逃亡，</para>
+  <para style="q2">谁也不要帮他。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>纯全无过的必蒙拯救，</para>
+  <para style="q2">行为邪僻的转眼灭亡。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>勤奋耕耘，丰衣足食；</para>
+  <para style="q2">追求虚荣，穷困潦倒。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>忠信的人必大蒙祝福，</para>
+  <para style="q2">急于发财的难免受罚。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>徇私偏袒实不可取，</para>
+  <para style="q2">人却为一饼而枉法。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>贪婪的人急于发财，</para>
+  <para style="q2">却不知贫穷即将临到。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>责备人的至终比谄媚者更受爱戴。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>窃取父母之财而不知罪者与匪类无异。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>贪得无厌的人挑起纷争，</para>
+  <para style="q2">信靠耶和华的富足昌盛。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>愚人心中自以为是，</para>
+  <para style="q2">凭智慧行事的平安稳妥。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>周济穷人的一无所缺，</para>
+  <para style="q2">视而不见的多受咒诅。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>恶人当道，人人躲藏；</para>
+  <para style="q2">恶人灭亡，义人增多。</para>
+  <chapter number="29" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>屡教不改、顽固不化者，</para>
+  <para style="q2">必突然灭亡，无可挽救。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>义人增多，万众欢腾；</para>
+  <para style="q2">恶人得势，万民叹息。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>爱慕智慧的使父亲欢欣，</para>
+  <para style="q2">结交妓女的必耗尽钱财。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>君王秉公行义，国家安定；</para>
+  <para style="q2">他若收受贿赂，国必倾倒。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>奉承邻舍，等于设网罗绊他。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>恶人被自己的罪缠住，</para>
+  <para style="q2">义人却常常欢喜歌唱。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>义人关心穷人的冤屈，</para>
+  <para style="q2">恶人对此漠不关心。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>狂徒煽动全城，</para>
+  <para style="q2">智者平息众怒。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>智者跟愚人对簿公堂，</para>
+  <para style="q2">愚人会怒骂嬉笑不止。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>嗜杀之徒憎恶纯全无过的人，</para>
+  <para style="q2">但正直的人保护他们<note caller="+" style="f"><char style="fr" closed="false">29:10 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">但正直的人保护他们</char><char style="ft" closed="false">”或译“索取正直人的性命”。</char></note>。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>愚人尽发其怒，</para>
+  <para style="q2">智者忍气含怒。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>君王若听谗言，</para>
+  <para style="q2">臣仆必成奸徒。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>贫穷人和欺压者有共同点：</para>
+  <para style="q2">他们的眼睛都是耶和华所赐。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>君王若秉公审判穷人，</para>
+  <para style="q2">他的王位必永远坚立。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>管教之杖使孩子得智慧，</para>
+  <para style="q2">放纵的子女让母亲蒙羞。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>恶人当道，罪恶泛滥；</para>
+  <para style="q2">义人必得见他们败亡。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>好好管教儿子，</para>
+  <para style="q2">他会带给你平安和喜乐。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>百姓无神谕便任意妄为，</para>
+  <para style="q2">但遵守律法的人必蒙福。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>管教仆人不能单靠言语，</para>
+  <para style="q2">因为他虽明白却不服从。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>言语急躁的人，</para>
+  <para style="q2">还不如愚人有希望。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>主人若从小就娇惯仆人，</para>
+  <para style="q2">他终必成为主人的麻烦。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>愤怒的人挑起纷争，</para>
+  <para style="q2">暴躁的人多有过犯。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>骄傲的人必遭贬抑，</para>
+  <para style="q2">谦卑的人必得尊荣。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>与盗贼为伍是憎恶自己，</para>
+  <para style="q2">他即使发誓也不敢作证。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>惧怕人的必自陷网罗，</para>
+  <para style="q2">信靠耶和华的必安稳。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>许多人讨君王的欢心，</para>
+  <para style="q2">但正义伸张靠耶和华。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>为非作歹，义人厌恶；</para>
+  <para style="q2">行为正直，恶人憎恨。</para>
+  <chapter number="30" style="c"/>
+  <para style="s1">亚古珥的箴言</para>
+  <para style="p">
+    <verse number="1" style="v"/>以下是<char style="pn">雅基</char>的儿子<char style="pn">亚古珥</char>的箴言。</para>
+  <para style="q2">这人说：上帝啊，我很疲倦；</para>
+  <para style="q2">上帝啊，我很疲倦，精疲力尽。<note caller="+" style="f"><char style="fr" closed="false">30:1 </char><char style="ft" closed="false">希伯来文或译“这人对以铁说，对以铁和乌甲说：”</char></note></para>
+  <para style="q1">
+    <verse number="2" style="v"/>我比众人都愚蠢，</para>
+  <para style="q2">不具备人的悟性。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>我从未学到智慧，</para>
+  <para style="q2">也不认识至圣者。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>谁升上高天又降下来？</para>
+  <para style="q2">谁将风聚在掌中？</para>
+  <para style="q2">谁将众水裹在衣服里？</para>
+  <para style="q2">谁定了地的边界？</para>
+  <para style="q2">祂叫什么名字？</para>
+  <para style="q2">祂儿子叫什么名字？</para>
+  <para style="q2">你知道吗？</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>上帝的话句句千真万确，</para>
+  <para style="q2">祂作投靠祂之人的盾牌。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>你不可对祂的话有所添加，</para>
+  <para style="q2">免得祂责备你，</para>
+  <para style="q2">揭穿你的虚谎。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>上帝啊，我向你求两件事，</para>
+  <para style="q2">求你在我未死以前赐给我。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>求你使虚伪和谎言远离我，</para>
+  <para style="q2">求你让我不贫穷也不富足，</para>
+  <para style="q2">赐给我需用的饮食，</para>
+  <para style="q1">
+    <verse number="9" style="v"/>免得我因为饱足就不认你，</para>
+  <para style="q2">说：“耶和华是谁呢？”</para>
+  <para style="q2">又恐怕我因穷困而偷窃，</para>
+  <para style="q2">以致辱没我上帝的名。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>别向主人毁谤他的仆人，</para>
+  <para style="q2">免得你受咒诅、担当罪责。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>有一种<note caller="+" style="f"><char style="fr" closed="false">30:11 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">种</char><char style="ft" closed="false">”希伯来文是“世代”，11-14节也相同。</char></note>人咒诅父亲，</para>
+  <para style="q2">不为母亲祝福。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>有一种人自以为纯洁，</para>
+  <para style="q2">却没有洗掉自己的污秽。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>有一种人趾高气扬，</para>
+  <para style="q2">目空一切。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>有一种人牙如剑，</para>
+  <para style="q2">齿如刀，</para>
+  <para style="q2">要吞吃世间的困苦人和贫穷人。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>水蛭有两个女儿，</para>
+  <para style="q2">她们不停地叫：“给我！给我！”</para>
+  <para style="q1">三样东西从不知足，</para>
+  <para style="q1">永不言“够”的共有四样：</para>
+  <para style="q1">
+    <verse number="16" style="v"/>阴间、不孕的妇人、</para>
+  <para style="q2">干旱的土地和火焰。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>嘲笑父亲、藐视母亲教诲的，</para>
+  <para style="q2">眼睛必被谷中的乌鸦啄出，</para>
+  <para style="q2">被秃鹰吃掉。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v"/>我测不透的妙事有三样，</para>
+  <para style="q1">我不明白的事共有四样：</para>
+  <para style="q1">
+    <verse number="19" style="v"/>鹰在空中飞翔之道，</para>
+  <para style="q2">蛇在石上爬行之道，</para>
+  <para style="q2">船在海中航行之道，</para>
+  <para style="q2">男女相爱之道。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>淫妇的道是这样：</para>
+  <para style="q2">她吃完就擦擦嘴，</para>
+  <para style="q2">说，“我没有做坏事。”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>使大地震动的事有三样，</para>
+  <para style="q1">大地无法承受的事共有四样：</para>
+  <para style="q1">
+    <verse number="22" style="v"/>奴仆做王，</para>
+  <para style="q2">愚人吃饱，</para>
+  <para style="q1">
+    <verse number="23" style="v"/>丑恶女子出嫁，</para>
+  <para style="q2">婢女取代主母。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="24" style="v"/>地上有四种动物，</para>
+  <para style="q2">身体虽小却极其聪明：</para>
+  <para style="q1">
+    <verse number="25" style="v"/>蚂蚁力量虽小，</para>
+  <para style="q2">却在夏天储备粮食；</para>
+  <para style="q1">
+    <verse number="26" style="v"/>石獾虽不强壮，</para>
+  <para style="q2">却在岩石中筑巢穴；</para>
+  <para style="q1">
+    <verse number="27" style="v"/>蝗虫虽无君王，</para>
+  <para style="q2">却整齐地列队前进；</para>
+  <para style="q1">
+    <verse number="28" style="v"/>壁虎虽易捕捉，</para>
+  <para style="q2">却居住在王宫大内。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="29" style="v"/>步履威武的有三样，</para>
+  <para style="q1">走路雄壮的共有四样：</para>
+  <para style="q1">
+    <verse number="30" style="v"/>威震百兽、从不畏缩的狮子，</para>
+  <para style="q1">
+    <verse number="31" style="v"/>昂首阔步的雄鸡，</para>
+  <para style="q2">公山羊和率领军队的君王。</para>
+  <para style="q1">
+    <verse number="32" style="v"/>你若行事愚昧、</para>
+  <para style="q2">妄自尊大或图谋不轨，</para>
+  <para style="q2">就当用手掩口。</para>
+  <para style="q1">
+    <verse number="33" style="v"/>激起愤怒会引起争端，</para>
+  <para style="q2">正如搅牛奶会搅出奶油，</para>
+  <para style="q2">拧鼻子会拧出血。</para>
+  <chapter number="31" style="c"/>
+  <para style="s1">利慕伊勒王的箴言</para>
+  <para style="p">
+    <verse number="1" style="v"/>以下是<char style="pn">利慕伊勒</char>王的箴言，</para>
+  <para style="q2">是他母亲给他的教诲：</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v"/>我儿，我亲生的骨肉，</para>
+  <para style="q2">我许愿得来的孩子啊，</para>
+  <para style="q2">我该怎样教导你呢？</para>
+  <para style="q1">
+    <verse number="3" style="v"/>不要在女人身上耗废精力，</para>
+  <para style="q2">不要迷恋那些能毁灭王的人。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <char style="pn">利慕伊勒</char>啊，</para>
+  <para style="q2">君王不可喝酒，</para>
+  <para style="q2">不可喝酒，</para>
+  <para style="q2">首领不宜喝烈酒，</para>
+  <para style="q1">
+    <verse number="5" style="v"/>免得喝酒后忘记律例，</para>
+  <para style="q2">不为困苦人伸张正义。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>把烈酒给灭亡的人，</para>
+  <para style="q2">把淡酒给忧伤的人，</para>
+  <para style="q1">
+    <verse number="7" style="v"/>让他们喝了忘掉贫穷，</para>
+  <para style="q2">不再记得自己的痛苦。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>要为不能自辩者说话，</para>
+  <para style="q2">为一切不幸的人申冤。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>你要发言，秉公审判，</para>
+  <para style="q2">为贫穷困苦者主持公道。</para>
+  <para style="s1">贤德的妻子</para>
+  <para style="q1">
+    <verse number="10" style="v"/>谁能找到贤德之妻？</para>
+  <para style="q2">她的价值远胜过珠宝。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>她丈夫信赖她，</para>
+  <para style="q2">什么也不缺乏。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>她一生对丈夫有益无损。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>她寻找羊毛和细麻，</para>
+  <para style="q2">愉快地亲手做衣。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>她好像商船，</para>
+  <para style="q2">从远方运来粮食。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>天未亮她就起床，</para>
+  <para style="q2">为全家预备食物，</para>
+  <para style="q2">分派女仆做家事。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>她选中田地便买下来，</para>
+  <para style="q2">亲手赚钱栽种葡萄园。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>她精力充沛，</para>
+  <para style="q2">双臂有力。</para>
+  <para style="q1">
+    <verse number="18" style="v"/>她深谙经营之道，</para>
+  <para style="q2">她的灯彻夜不熄。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>她手拿卷线杆，</para>
+  <para style="q2">手握纺线锤。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>她乐于周济穷人，</para>
+  <para style="q2">伸手帮助困苦者。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>她不因下雪而为家人担心，</para>
+  <para style="q2">因为全家都穿着朱红暖衣。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>她为自己缝制绣花毯，</para>
+  <para style="q2">用细麻和紫布做衣服。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>她丈夫在城门口与当地长老同坐，</para>
+  <para style="q2">受人尊重。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>她缝制细麻衣裳出售，</para>
+  <para style="q2">又制作腰带卖给商人。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>她充满力量和尊荣，</para>
+  <para style="q2">她以笑颜迎接未来。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>她说的话带着智慧，</para>
+  <para style="q2">她的训言充满慈爱。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>她料理一切家务，</para>
+  <para style="q2">从不偷懒吃闲饭。</para>
+  <para style="q1">
+    <verse number="28" style="v"/>她的儿女肃立，</para>
+  <para style="q2">为她祝福，</para>
+  <para style="q2">她的丈夫也称赞她，</para>
+  <para style="q1">
+    <verse number="29" style="v"/>说：“世上贤德的女子很多，</para>
+  <para style="q2">唯有你无与伦比。”</para>
+  <para style="q1">
+    <verse number="30" style="v"/>艳丽是虚假的，</para>
+  <para style="q2">美貌是短暂的，</para>
+  <para style="q2">唯有敬畏耶和华的女子配得称赞。</para>
+  <para style="q1">
+    <verse number="31" style="v"/>愿她享受自己的劳动成果，</para>
+  <para style="q2">愿她的事迹使她在城门口受称赞。</para>
+</usx>

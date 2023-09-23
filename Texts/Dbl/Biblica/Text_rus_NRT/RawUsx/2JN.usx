@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="2JN" style="id">- New Russian Translation (Новый русский перевод)</book>
+  <para style="rem">Copyright © 1988, 1991, 1998, 2006, 2010, 2014 by Biblica, Inc.</para>
+  <para style="h">2 ИОАННА</para>
+  <para style="toc1">Второе Послание Иоанна</para>
+  <para style="toc2">2 Иоанна</para>
+  <para style="toc3">2 Ин.</para>
+  <para style="mt1">Второе Послание Иоанна</para>
+  <para style="ili1">Автор: Иоанн, апостол Христа</para>
+  <para style="ili1">Место написания: предположительно, Эфес</para>
+  <para style="ili1">Время написания: приблизительно 90 г.</para>
+  <para style="ip">Иоанн написал свое второе послание, скорее всего, из Эфеса практически сразу после первого. В отличии от первого, Иоанн пишет свое второе послание определенной церкви (которую он символически называет «избранной госпожой» (<char style="xt"><ref loc="2JN 1:1">1:1</ref></char>)); вполне вероятно, что эта церковь была одной из тех, кому он адресовал и свое первое послание. Несмотря на то что церковь испытывает те же самые проблемы, что и во время написания первого послания, Иоанн рад слышать, что многие из верующих остались в истине (<char style="xt"><ref loc="2JN 1:4">1:4</ref></char>).</para>
+  <para style="ip">В этом послании Иоанн ободряет верующих продолжать соблюдать заповедь Бога – любить друг друга (<char style="xt"><ref loc="2JN 1:5-6">1:5-6</ref></char>). Он предупреждает их о лжеучителях (<char style="xt"><ref loc="2JN 1:7-8">1:7-8</ref></char>) и напоминает им о важности верить в истину об Иисусе, особенно в Его воплощение; ведь все, кто не пребывает в этой истине, не знают Бога (<char style="xt"><ref loc="2JN 1:9">1:9</ref></char>). В конце Иоанн предупреждает не оказывать гостеприимство странствующим лжеучителям. В противном случае верующие станут соучастниками в их злых делах (<char style="xt"><ref loc="2JN 1:10-11">1:10-11</ref></char>).</para>
+  <para style="iot">Содержание</para>
+  <para style="io1">Приветствие (<char style="ior"><ref loc="2JN 1:1-3">1:1-3</ref></char>).</para>
+  <para style="io1">Повеление о любви (<char style="ior"><ref loc="2JN 1:4-6">1:4-6</ref></char>).</para>
+  <para style="io1">Предостережение о лжеучителях (<char style="ior"><ref loc="2JN 1:7-11">1:7-11</ref></char>).</para>
+  <para style="io1">Заключение (<char style="ior"><ref loc="2JN 1:12-13">1:12-13</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="2JN 1"/>
+  <para style="s1">Приветствие</para>
+  <para style="p">
+    <verse number="1" style="v" sid="2JN 1:1"/>От старейшины<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">Или: «от старца».</char></note> – избранной госпоже<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">Под госпожой, возможно, имеется в виду не какая-то женщина, а поместная церковь. Под детьми, в таком случае, подразумеваются ее члены.</char></note> и ее детям, которых я люблю <char style="add">как пребывающих</char> в истине, и не только я, но и все, кто знает истину; <verse eid="2JN 1:1"/><verse number="2" style="v" sid="2JN 1:2"/>потому что истина эта живет в нас и будет с нами всегда.<verse eid="2JN 1:2"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="3" style="v" sid="2JN 1:3"/>Благодать, милость и мир будут с нами в истине и любви от Бога Отца и от Иисуса Христа, Его Сына.<verse eid="2JN 1:3"/></para>
+  <para style="s1">Повеление о любви</para>
+  <para style="p">
+    <verse number="4" style="v" sid="2JN 1:4"/>Меня очень радует, что среди твоих детей есть ходящие в истине, как нам повелел Отец.<verse eid="2JN 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="2JN 1:5"/>И сейчас, госпожа, я пишу тебе не какое-то новое повеление, но то, которое было у нас с самого начала: будем любить друг друга. <verse eid="2JN 1:5"/><verse number="6" style="v" sid="2JN 1:6"/>И любовь эта заключается в том, чтобы мы соблюдали Его повеления. Вы с самого начала слышали Его повеление, по нему и поступайте.<verse eid="2JN 1:6"/></para>
+  <para style="s1">Оставайтесь верными Христу</para>
+  <para style="p">
+    <verse number="7" style="v" sid="2JN 1:7"/>Много обманщиков вышло в мир, не признающих, что Иисус Христос пришел в человеческом теле<note caller="+" style="f"><char style="fr" closed="false">1:7 </char><char style="ft" closed="false">Букв.: «во плоти».</char></note>. Такой человек – обманщик и антихрист. <verse eid="2JN 1:7"/><verse number="8" style="v" sid="2JN 1:8"/>Смотрите, чтобы не потерять то, ради чего мы трудились<note caller="+" style="f"><char style="fr" closed="false">1:8 </char><char style="ft" closed="false">В ряде древних рукописей: «вы трудились».</char></note>, но чтобы получить полную награду. <verse eid="2JN 1:8"/><verse number="9" style="v" sid="2JN 1:9"/>Кто не живет согласно учению Христа, но идет иным путем, тот не имеет в себе Бога. Но тот, кто остается верным Его учению, имеет в себе и Отца, и Сына. <verse eid="2JN 1:9"/><verse number="10" style="v" sid="2JN 1:10"/>Если кто-либо приходит к вам и приносит не это учение, того вы не должны принимать в дом и приветствовать его. <verse eid="2JN 1:10"/><verse number="11" style="v" sid="2JN 1:11"/>Кто приветствует такого человека, тот становится соучастником в его злых делах.<verse eid="2JN 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="2JN 1:12"/>О многом еще я хотел бы вам сказать, но я не хочу доверять это бумаге и чернилам. Я надеюсь скоро быть у вас и лично поговорить с вами, чтобы наша радость<note caller="+" style="f"><char style="fr" closed="false">1:12 </char><char style="ft" closed="false">В ряде древних рукописей: «ваша радость».</char></note> была полной.<verse eid="2JN 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="2JN 1:13"/>Привет тебе от детей твоей избранной сестры<note caller="+" style="f"><char style="fr" closed="false">1:13 </char><char style="ft" closed="false">Под сестрой, возможно, подразумевается родственная церковь, от членов которой Иоанн передает привет.</char></note>.<verse eid="2JN 1:13"/></para>
+  <chapter eid="2JN 1"/>
+</usx>

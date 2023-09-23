@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="JOL" style="id">- New Russian Translation (Новый русский перевод)</book>
+  <para style="rem">Copyright © 1988, 1991, 1998, 2006, 2010, 2014 by Biblica, Inc.</para>
+  <para style="h">ИОИЛЬ</para>
+  <para style="toc1">Иоиль</para>
+  <para style="toc2">Иоиль</para>
+  <para style="toc3">Иоиль</para>
+  <para style="mt1">Иоиль</para>
+  <para style="ip">Датировка книги Иоиля весьма сложна. Вот три наиболее правдоподобных мнения: 1) Иоиль служил во время царствования царя Иоаса, правившего в 835–796 гг. до н. э.; 2) накануне плена – между 597 и 587 гг. до н. э.; 3) после возвращения из плена и восстановления храма в 515 г. до н. э.</para>
+  <para style="ip">Послание Иоиля было адресовано жителям Иудеи и Иерусалима. Он возвещал о дне Господа, когда Бог придет, чтобы судить землю и править ею. Иоиль сравнивает этот день с нашествием саранчи, с наступлением засухи (<char style="xt"><ref loc="JOL 1:2-14">1:2-14</ref></char>) и с атакой вражеской армии (<char style="xt"><ref loc="JOL 2:1-11">2:1-11</ref></char>); он говорит о суде над всеми народами (<char style="xt"><ref loc="JOL 3:1-16">3:1-16</ref></char>). Но этот день также принесет излияние Духа Божьего (<char style="xt"><ref loc="JOL 2:28-32">2:28-32</ref></char>) и спасение для верного остатка в Иерусалиме (<char style="xt"><ref loc="JOL 3:17-21">3:17-21</ref></char>). Иоиль призывает всех покаяться и приготовиться к этому дню (<char style="xt"><ref loc="JOL 1:2-14">1:2-14</ref>; <ref loc="JOL 2:12-18">2:12-18</ref></char>).</para>
+  <para style="ip">Частичное исполнение пророчества о Духе Божьем описано в Новом Завете (см. <char style="xt"><ref loc="ACT 2:1-21">Деян. 2:1-21</ref></char>), где также уточняется, что спасенный остаток – все верующие в Иисуса Христа (см. <char style="xt"><ref loc="ROM 10:9-13">Рим. 10:9-13</ref></char>).</para>
+  <para style="iot">Содержание</para>
+  <para style="io1">Наказание Иудеи через нашествие саранчи (<char style="ior"><ref loc="JOL 1:1-2:17">1:1–2:17</ref></char>).</para>
+  <para style="io2">Призыв к плачу и молитве (<char style="ior"><ref loc="JOL 1:1-14">1:1-14</ref></char>).</para>
+  <para style="io2">Страшный суд в день Господа (<char style="ior"><ref loc="JOL 1:15-2:11">1:15–2:11</ref></char>).</para>
+  <para style="io2">Призыв к покаянию (<char style="ior"><ref loc="JOL 2:12-17">2:12-17</ref></char>).</para>
+  <para style="io1">Спасение Иудеи в день Господа (<char style="ior"><ref loc="JOL 2:18-3:21">2:18–3:21</ref></char>).</para>
+  <para style="io2">Обновление земли (<char style="ior"><ref loc="JOL 2:18-27">2:18-27</ref></char>).</para>
+  <para style="io2">Обновление народа Господа (<char style="ior"><ref loc="JOL 2:28-32">2:28-32</ref></char>).</para>
+  <para style="io2">Суд над народами и благословение народа Бога (<char style="ior"><ref loc="JOL 3:1-21">3:1-21</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="JOL 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="JOL 1:1"/>Слово Господне, которое было к Иоилю, сыну Петуила:<verse eid="JOL 1:1"/></para>
+  <para style="s1">Нашествие саранчи</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="JOL 1:2"/>Слушайте, старцы,</para>
+  <para style="q2" vid="JOL 1:2">внимайте, все жители этой страны!</para>
+  <para style="q1" vid="JOL 1:2">Случалось ли что-либо, подобное этому, в ваши дни</para>
+  <para style="q2" vid="JOL 1:2">или в дни ваших отцов?<verse eid="JOL 1:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="JOL 1:3"/>Расскажите об этом вашим детям,</para>
+  <para style="q2" vid="JOL 1:3">они же пусть перескажут это своим,</para>
+  <para style="q2" vid="JOL 1:3">а их дети пусть передадут следующему поколению.<verse eid="JOL 1:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="JOL 1:4"/>То, что осталось от подбирающей саранчи,</para>
+  <para style="q2" vid="JOL 1:4">ела грызущая саранча,</para>
+  <para style="q1" vid="JOL 1:4">то, что осталось от грызущей саранчи,</para>
+  <para style="q2" vid="JOL 1:4">ела поедающая саранча,</para>
+  <para style="q1" vid="JOL 1:4">а то, что осталось от поедающей саранчи,</para>
+  <para style="q2" vid="JOL 1:4">доела пожирающая саранча<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="ft" closed="false">В этом стихе на языке оригинала для обозначения саранчи использованы четыре слова. Эти слова могут быть либо просто синонимами, либо терминами, которые отражают четыре стадии развития саранчи. То же в ст. <char style="xt"><ref loc="JOL 2:25">2:25</ref></char>.</char></note>.<verse eid="JOL 1:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="JOL 1:5"/>Пробудитесь, пьяницы, и плачьте,</para>
+  <para style="q2" vid="JOL 1:5">причитайте, пьющие вино,</para>
+  <para style="q1" vid="JOL 1:5">оплакивайте молодое вино,</para>
+  <para style="q2" vid="JOL 1:5">потому что оно отнято от уст ваших!<verse eid="JOL 1:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="JOL 1:6"/>На мою землю вступил народ,</para>
+  <para style="q2" vid="JOL 1:6">сильный и бесчисленный.</para>
+  <para style="q1" vid="JOL 1:6">Его зубы – зубы льва,</para>
+  <para style="q2" vid="JOL 1:6">а клыки – как у львицы.<verse eid="JOL 1:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="JOL 1:7"/>Он разорил мою виноградную лозу,</para>
+  <para style="q2" vid="JOL 1:7">обломал мой инжир.</para>
+  <para style="q1" vid="JOL 1:7">Обнажил, ободрав его кору, и бросил;</para>
+  <para style="q2" vid="JOL 1:7">белыми стали его ветви.<verse eid="JOL 1:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="JOL 1:8"/>Плачьте, как девушка, что облачилась в рубище</para>
+  <para style="q2" vid="JOL 1:8">и оплакивает своего возлюбленного.<verse eid="JOL 1:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="JOL 1:9"/>Прекратились хлебные приношения</para>
+  <para style="q2" vid="JOL 1:9">и возлияния в доме Господнем.</para>
+  <para style="q2" vid="JOL 1:9">Скорбят священники, служители Господа.<verse eid="JOL 1:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="JOL 1:10"/>Опустошено поле</para>
+  <para style="q2" vid="JOL 1:10">и плачет земля;</para>
+  <para style="q1" vid="JOL 1:10">уничтожено зерно,</para>
+  <para style="q2" vid="JOL 1:10">засох молодой виноград</para>
+  <para style="q2" vid="JOL 1:10">и увяла олива.<verse eid="JOL 1:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="JOL 1:11"/>Сокрушайтесь, земледельцы,</para>
+  <para style="q2" vid="JOL 1:11">о пшенице и ячмене,</para>
+  <para style="q1" vid="JOL 1:11">потому что погиб урожай на полях.</para>
+  <para style="q2" vid="JOL 1:11">Рыдайте, виноградари,<verse eid="JOL 1:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="JOL 1:12"/>потому что засохла виноградная лоза</para>
+  <para style="q2" vid="JOL 1:12">и завял инжир;</para>
+  <para style="q1" vid="JOL 1:12">гранат, пальма и яблоня –</para>
+  <para style="q2" vid="JOL 1:12">все деревья на поле засохли;</para>
+  <para style="q1" vid="JOL 1:12">потому и прекратилось веселье</para>
+  <para style="q2" vid="JOL 1:12">у сынов человеческих.<verse eid="JOL 1:12"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v" sid="JOL 1:13"/>Облекитесь в рубище, священники, и плачьте,</para>
+  <para style="q2" vid="JOL 1:13">рыдайте, служащие перед жертвенником.</para>
+  <para style="q1" vid="JOL 1:13">Придите, служители моего Бога,</para>
+  <para style="q2" vid="JOL 1:13">и проведите ночь в рубищах,</para>
+  <para style="q1" vid="JOL 1:13">потому что хлебные приношения и возлияния</para>
+  <para style="q2" vid="JOL 1:13">прекратились в доме вашего Бога.<verse eid="JOL 1:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="JOL 1:14"/>Объявите священный пост,</para>
+  <para style="q2" vid="JOL 1:14">созовите собрание,</para>
+  <para style="q1" vid="JOL 1:14">пригласите старцев</para>
+  <para style="q2" vid="JOL 1:14">и всех жителей страны</para>
+  <para style="q1" vid="JOL 1:14">в дом Господа, вашего Бога,</para>
+  <para style="q2" vid="JOL 1:14">и взывайте к Господу.<verse eid="JOL 1:14"/></para>
+  <para style="s1">День Господень</para>
+  <para style="q1">
+    <verse number="15" style="v" sid="JOL 1:15"/>О, этот день!</para>
+  <para style="q2" vid="JOL 1:15">Близок день Господень,</para>
+  <para style="q1" vid="JOL 1:15">придет он подобно разрушению от Всемогущего.<verse eid="JOL 1:15"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v" sid="JOL 1:16"/>Не на наших ли глазах отнимается пища,</para>
+  <para style="q2" vid="JOL 1:16">а радость и веселье уходят из дома нашего Бога?<verse eid="JOL 1:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="JOL 1:17"/>Истлели зерна под глыбами земли,</para>
+  <para style="q2" vid="JOL 1:17">разрушены кладовые,</para>
+  <para style="q1" vid="JOL 1:17">опустели амбары,</para>
+  <para style="q2" vid="JOL 1:17">потому что нет больше зерна.<verse eid="JOL 1:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="JOL 1:18"/>О, как стонет скот!</para>
+  <para style="q2" vid="JOL 1:18">Уныло бродят стада,</para>
+  <para style="q1" vid="JOL 1:18">потому что нет для них пищи;</para>
+  <para style="q2" vid="JOL 1:18">даже отары овец несут наказание.<verse eid="JOL 1:18"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v" sid="JOL 1:19"/>Я взываю к Тебе, Господи,</para>
+  <para style="q2" vid="JOL 1:19">потому что огонь спалил степные пастбища</para>
+  <para style="q1" vid="JOL 1:19">и пламя пожрало все деревья в поле.<verse eid="JOL 1:19"/></para>
+  <para style="q2">
+    <verse number="20" style="v" sid="JOL 1:20"/>Даже дикие животные взывают к Тебе,</para>
+  <para style="q1" vid="JOL 1:20">потому что высохли источники воды</para>
+  <para style="q2" vid="JOL 1:20">и огонь спалил степные пастбища.<verse eid="JOL 1:20"/></para>
+  <chapter eid="JOL 1"/>
+  <chapter number="2" style="c" sid="JOL 2"/>
+  <para style="s1">Нашествие армий</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="JOL 2:1"/>Трубите в рог на Сионе,</para>
+  <para style="q2" vid="JOL 2:1">бейте тревогу на Моей святой горе.</para>
+  <para style="b" vid="JOL 2:1"/>
+  <para style="q1" vid="JOL 2:1">Пусть трепещут все жители земли,</para>
+  <para style="q2" vid="JOL 2:1">потому что наступает день Господень.</para>
+  <para style="q1" vid="JOL 2:1">Этот день уже близок:<verse eid="JOL 2:1"/></para>
+  <para style="q2">
+    <verse number="2" style="v" sid="JOL 2:2"/>день тьмы и мрака,</para>
+  <para style="q1" vid="JOL 2:2">день туч и мглы:</para>
+  <para style="q2" vid="JOL 2:2">подобно утренней заре распространяется по горам</para>
+  <para style="q1" vid="JOL 2:2">многочисленный и сильный народ.</para>
+  <para style="q2" vid="JOL 2:2">Такого не бывало с древних времен</para>
+  <para style="q1" vid="JOL 2:2">и не будет в грядущих поколениях.<verse eid="JOL 2:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="JOL 2:3"/>Перед ними – пожирающее пламя,</para>
+  <para style="q2" vid="JOL 2:3">а позади – опаляющий огонь.</para>
+  <para style="q1" vid="JOL 2:3">До них земля – как Эдемский сад,</para>
+  <para style="q2" vid="JOL 2:3">а после них – как выжженная пустыня,</para>
+  <para style="q1" vid="JOL 2:3">и никому не будет спасения от этого народа.<verse eid="JOL 2:3"/></para>
+  <para style="q2">
+    <verse number="4" style="v" sid="JOL 2:4"/>Они похожи на лошадей,</para>
+  <para style="q1" vid="JOL 2:4">и несутся они, словно конница.<verse eid="JOL 2:4"/></para>
+  <para style="q2">
+    <verse number="5" style="v" sid="JOL 2:5"/>Скачут они по вершинам гор</para>
+  <para style="q1" vid="JOL 2:5">с шумом, как от колесниц,</para>
+  <para style="q2" vid="JOL 2:5">с треском, как от пожирающего солому пламени.</para>
+  <para style="q1" vid="JOL 2:5">Они как могучий народ, готовящийся к битве.<verse eid="JOL 2:5"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v" sid="JOL 2:6"/>При виде воинов этой армии затрепещут народы,</para>
+  <para style="q2" vid="JOL 2:6">и у всех побледнеют лица.<verse eid="JOL 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="JOL 2:7"/>Они нападают, подобно бойцам,</para>
+  <para style="q2" vid="JOL 2:7">взбираются на стены, подобно воинам.</para>
+  <para style="q1" vid="JOL 2:7">Все они выступают ровно,</para>
+  <para style="q2" vid="JOL 2:7">не отклоняясь от выбранного направления.<verse eid="JOL 2:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="JOL 2:8"/>Они не толкают друг друга,</para>
+  <para style="q2" vid="JOL 2:8">и каждый идет своей дорогой;</para>
+  <para style="q1" vid="JOL 2:8">прорываются сквозь оборону,</para>
+  <para style="q2" vid="JOL 2:8">не нарушая строя.<verse eid="JOL 2:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="JOL 2:9"/>Они врываются в город,</para>
+  <para style="q2" vid="JOL 2:9">пробегают вдоль стен,</para>
+  <para style="q1" vid="JOL 2:9">забираются в дома</para>
+  <para style="q2" vid="JOL 2:9">через окна, как воры.<verse eid="JOL 2:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="JOL 2:10"/>Перед ними трепещет земля</para>
+  <para style="q2" vid="JOL 2:10">и колеблется небо,</para>
+  <para style="q1" vid="JOL 2:10">меркнут солнце и луна</para>
+  <para style="q2" vid="JOL 2:10">и не сияют звезды.<verse eid="JOL 2:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="JOL 2:11"/>Подобно грому прозвучит голос Господень</para>
+  <para style="q2" vid="JOL 2:11">перед Его войском.</para>
+  <para style="q1" vid="JOL 2:11">Его армия бесчисленна,</para>
+  <para style="q2" vid="JOL 2:11">и сильны исполнители Его воли.</para>
+  <para style="q1" vid="JOL 2:11">Велик день Господень и очень страшен.</para>
+  <para style="q2" vid="JOL 2:11">Кто выдержит его?<verse eid="JOL 2:11"/></para>
+  <para style="s1">Призыв к покаянию</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="JOL 2:12"/>– Даже сейчас, – возвещает Господь, –</para>
+  <para style="q2" vid="JOL 2:12">обратитесь ко Мне всем сердцем</para>
+  <para style="q1" vid="JOL 2:12">в посте, плаче и рыдании.<verse eid="JOL 2:12"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v" sid="JOL 2:13"/>Разорвите ваши сердца, а не одежды,</para>
+  <para style="q2" vid="JOL 2:13">и вернитесь к Господу, вашему Богу,</para>
+  <para style="q1" vid="JOL 2:13">потому что Он милостив и милосерден,</para>
+  <para style="q2" vid="JOL 2:13">долготерпелив и богат любовью,</para>
+  <para style="q1" vid="JOL 2:13">и не хочет насылать бедствие.<verse eid="JOL 2:13"/></para>
+  <para style="q2">
+    <verse number="14" style="v" sid="JOL 2:14"/>Кто знает, не сжалится ли Он</para>
+  <para style="q1" vid="JOL 2:14">и не оставит ли вам благословения –</para>
+  <para style="q2" vid="JOL 2:14">и будут в достатке у вас хлебное приношение</para>
+  <para style="q1" vid="JOL 2:14">и жертвенное возлияние Господу, вашему Богу.<verse eid="JOL 2:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="JOL 2:15"/>Трубите в рог на Сионе,</para>
+  <para style="q2" vid="JOL 2:15">объявите священный пост,</para>
+  <para style="q2" vid="JOL 2:15">созовите собрание.<verse eid="JOL 2:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="JOL 2:16"/>Соберите народ</para>
+  <para style="q2" vid="JOL 2:16">и освятите собравшихся,</para>
+  <para style="q1" vid="JOL 2:16">созовите старцев,</para>
+  <para style="q2" vid="JOL 2:16">позовите детей и младенцев.</para>
+  <para style="q1" vid="JOL 2:16">Пусть даже жених и невеста</para>
+  <para style="q2" vid="JOL 2:16">выйдут из брачных покоев.<verse eid="JOL 2:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="JOL 2:17"/>Пусть священники, служащие перед Господом,</para>
+  <para style="q2" vid="JOL 2:17">плачут между притвором храма и жертвенником.</para>
+  <para style="q1" vid="JOL 2:17">Пусть взывают: «Господи, пощади Свой народ!</para>
+  <para style="q2" vid="JOL 2:17">Не дай насмехаться над Своим наследием,</para>
+  <para style="q1" vid="JOL 2:17">не дай чужим народам править нами<note caller="+" style="f"><char style="fr" closed="false">2:17 </char><char style="ft" closed="false">Не дай чужим народам править нами – или: «не дай быть нам посмешищем».</char></note>.</para>
+  <para style="q2" vid="JOL 2:17">Зачем им говорить: „Где их Бог?“»<verse eid="JOL 2:17"/></para>
+  <para style="s1">Ответ Господа</para>
+  <para style="q1">
+    <verse number="18" style="v" sid="JOL 2:18"/>И тогда Господь возревнует о Своей земле</para>
+  <para style="q2" vid="JOL 2:18">и сжалится над Своим народом.<verse eid="JOL 2:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="JOL 2:19"/>Отвечая Своему народу, Господь скажет:</para>
+  <para style="q1" vid="JOL 2:19">– Я посылаю вам хлеб, молодое вино и масло</para>
+  <para style="q2" vid="JOL 2:19">для того, чтобы вы насытились,</para>
+  <para style="q1" vid="JOL 2:19">и больше Я не позволю другим народам насмехаться над вами.<verse eid="JOL 2:19"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v" sid="JOL 2:20"/>Я удалю от вас северное войско<note caller="+" style="f"><char style="fr" closed="false">2:20 </char><char style="ft" closed="false">Это может быть ассирийская (<char style="xt"><ref loc="ZEP 2:13">Соф. 2:13</ref></char>) или вавилонская (<char style="xt"><ref loc="JER 25:9">Иер. 25:9</ref></char>) армия, или же армия Гога и Магога (<char style="xt"><ref loc="EZK 38:2">Иез. 38:2</ref>, <ref loc="EZK 38:14-15">14-15</ref>; <ref loc="REV 20:7">Отк. 20:7</ref></char>).</char></note></para>
+  <para style="q2" vid="JOL 2:20">и изгоню это войско</para>
+  <para style="q1" vid="JOL 2:20">в землю бесплодную и иссушенную зноем.</para>
+  <para style="q2" vid="JOL 2:20">Его передние ряды Я сброшу в восточное море,</para>
+  <para style="q1" vid="JOL 2:20">а задние – в западное море<note caller="+" style="f"><char style="fr" closed="false">2:20 </char><char style="ft" closed="false">То есть в Мертвое море и в Средиземное море.</char></note>.</para>
+  <para style="q2" vid="JOL 2:20">И пойдет от них зловоние,</para>
+  <para style="q1" vid="JOL 2:20">и поднимется от них смрад,</para>
+  <para style="q2" vid="JOL 2:20">потому что они сделали много зла.<verse eid="JOL 2:20"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v" sid="JOL 2:21"/>Не бойся, земля, радуйся и веселись,</para>
+  <para style="q2" vid="JOL 2:21">потому что Господь совершил великие дела!<verse eid="JOL 2:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="JOL 2:22"/>Не бойтесь, дикие животные,</para>
+  <para style="q2" vid="JOL 2:22">потому что зеленеют степные пастбища,</para>
+  <para style="q1" vid="JOL 2:22">деревья приносят свои плоды,</para>
+  <para style="q2" vid="JOL 2:22">инжир и виноградная лоза</para>
+  <para style="q2" vid="JOL 2:22">одаривают обильными плодами.<verse eid="JOL 2:22"/></para>
+  <para style="q1">
+    <verse number="23" style="v" sid="JOL 2:23"/>Радуйся, народ Сиона,</para>
+  <para style="q2" vid="JOL 2:23">веселись о Господе, твоем Боге!</para>
+  <para style="q1" vid="JOL 2:23">Он даст тебе осенний дождь в праведности<note caller="+" style="f"><char style="fr" closed="false">2:23 </char><char style="ft" closed="false">Или: «Он даст тебе учителя, который наставит тебя в праведности».</char></note>.</para>
+  <para style="q2" vid="JOL 2:23">Он пошлет тебе обильные дожди,</para>
+  <para style="q2" vid="JOL 2:23">осенние и весенние, как бывало прежде.<verse eid="JOL 2:23"/></para>
+  <para style="q1">
+    <verse number="24" style="v" sid="JOL 2:24"/>И наполнятся гумна зерном,</para>
+  <para style="q2" vid="JOL 2:24">и переполнятся давильни молодым вином и маслом.<verse eid="JOL 2:24"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="25" style="v" sid="JOL 2:25"/>– Я воздам вам за те годы, – <char style="add">отвечает Господь</char>, –</para>
+  <para style="q2" vid="JOL 2:25">в которые пожирала урожай подбирающая саранча,</para>
+  <para style="q1" vid="JOL 2:25">грызущая, поедающая и пожирающая саранча.</para>
+  <para style="q2" vid="JOL 2:25">Это было Мое великое воинство,</para>
+  <para style="q1" vid="JOL 2:25">которое Я послал на вас.<verse eid="JOL 2:25"/></para>
+  <para style="q2">
+    <verse number="26" style="v" sid="JOL 2:26"/>Досыта будете есть, и насыщаться,</para>
+  <para style="q1" vid="JOL 2:26">и славить имя Господа, вашего Бога,</para>
+  <para style="q2" vid="JOL 2:26">Который совершил чудеса для вас.</para>
+  <para style="q1" vid="JOL 2:26">И Мой народ больше не испытает позора.<verse eid="JOL 2:26"/></para>
+  <para style="q2">
+    <verse number="27" style="v" sid="JOL 2:27"/>Тогда вы узнаете, что Я среди Моего народа Израиля,</para>
+  <para style="q1" vid="JOL 2:27">и что Я – Господь, ваш Бог,</para>
+  <para style="q2" vid="JOL 2:27">и нет другого.</para>
+  <para style="q1" vid="JOL 2:27">И Мой народ больше не испытает позора!<verse eid="JOL 2:27"/></para>
+  <para style="s1">Излияние Духа в день Господа</para>
+  <para style="q1">
+    <verse number="28" style="v" sid="JOL 2:28"/>– И после этого</para>
+  <para style="q2" vid="JOL 2:28">Я изолью Духа Моего на всех людей.</para>
+  <para style="q1" vid="JOL 2:28">Ваши сыновья и дочери будут пророчествовать,</para>
+  <para style="q2" vid="JOL 2:28">вашим старцам будут сниться сны</para>
+  <para style="q2" vid="JOL 2:28">и ваши юноши будут видеть видения.<verse eid="JOL 2:28"/></para>
+  <para style="q1">
+    <verse number="29" style="v" sid="JOL 2:29"/>Даже на слуг и на служанок Моих</para>
+  <para style="q2" vid="JOL 2:29">Я изолью в те дни Моего Духа.<verse eid="JOL 2:29"/></para>
+  <para style="q1">
+    <verse number="30" style="v" sid="JOL 2:30"/>Я покажу чудеса на небесах и на земле:</para>
+  <para style="q2" vid="JOL 2:30">кровь, огонь и клубы дыма.<verse eid="JOL 2:30"/></para>
+  <para style="q1">
+    <verse number="31" style="v" sid="JOL 2:31"/>Солнце превратится во тьму,</para>
+  <para style="q2" vid="JOL 2:31">а луна – в кровь</para>
+  <para style="q2" vid="JOL 2:31">перед тем, как наступит великий и славный день Господа.<verse eid="JOL 2:31"/></para>
+  <para style="q1">
+    <verse number="32" style="v" sid="JOL 2:32"/>И каждый, кто призовет имя Господа,</para>
+  <para style="q2" vid="JOL 2:32">будет спасен.</para>
+  <para style="q1" vid="JOL 2:32">На горе Сионе и в Иерусалиме будет спасение,</para>
+  <para style="q2" vid="JOL 2:32">как сказал Господь, –</para>
+  <para style="q2" vid="JOL 2:32">спасение для уцелевших,</para>
+  <para style="q1" vid="JOL 2:32">кого Господь призовет.<verse eid="JOL 2:32"/></para>
+  <chapter eid="JOL 2"/>
+  <chapter number="3" style="c" sid="JOL 3"/>
+  <para style="s1">Суд над народами</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="JOL 3:1"/>– В те дни и в то время,</para>
+  <para style="q2" vid="JOL 3:1">когда Я верну из плена</para>
+  <para style="q2" vid="JOL 3:1">жителей Иудеи и Иерусалима,<verse eid="JOL 3:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="JOL 3:2"/>Я соберу все народы</para>
+  <para style="q2" vid="JOL 3:2">и приведу их в долину Иосафата<note caller="+" style="f"><char style="fr" closed="false">3:2 </char><char style="ft" closed="false">Иосафат означает «Господь судит». Также в ст. 12.</char></note>.</para>
+  <para style="q1" vid="JOL 3:2">Я буду судить их там</para>
+  <para style="q2" vid="JOL 3:2">за Мой народ и за Мое наследие – Израиль,</para>
+  <para style="q1" vid="JOL 3:2">который они рассеяли между народами,</para>
+  <para style="q2" vid="JOL 3:2">и за Мою землю, которую они разделили.<verse eid="JOL 3:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="JOL 3:3"/>Они бросали жребий о Моем народе,</para>
+  <para style="q2" vid="JOL 3:3">отдавали мальчиков за блудниц</para>
+  <para style="q1" vid="JOL 3:3">и продавали девочек за вино чтобы напиться.<verse eid="JOL 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JOL 3:4"/>– Итак, что вы имеете против Меня, народы Тира и Сидона и все жители округов филистимских? Хотите ли воздать Мне возмездие? Если и воздадите Мне, то Я легко и быстро верну возмездие на ваши головы. <verse eid="JOL 3:4"/><verse number="5" style="v" sid="JOL 3:5"/>Вы забрали Мое серебро и золото и внесли лучшие драгоценности в свои капища. <verse eid="JOL 3:5"/><verse number="6" style="v" sid="JOL 3:6"/>Вы продавали людей Иудеи и Иерусалима грекам<note caller="+" style="f"><char style="fr" closed="false">3:6 </char><char style="ft" closed="false">Букв.: «сыновьям Иавана».</char></note> для того, чтобы отдалить их от родины. <verse eid="JOL 3:6"/><verse number="7" style="v" sid="JOL 3:7"/>Смотрите, Я подниму их из тех мест, куда вы продали их, и обращу содеянное вами на ваши же головы. <verse eid="JOL 3:7"/><verse number="8" style="v" sid="JOL 3:8"/>Я продам ваших сыновей и дочерей людям из Иудеи, а они продадут их отдаленному народу – шевеянам, – так сказал Господь.<verse eid="JOL 3:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="JOL 3:9"/>Провозгласите это между народами:</para>
+  <para style="q2" vid="JOL 3:9">«Приготовьтесь к войне!</para>
+  <para style="q1" vid="JOL 3:9">Поднимайте лучших бойцов!</para>
+  <para style="q2" vid="JOL 3:9">Пусть выступят все воины,</para>
+  <para style="q1" vid="JOL 3:9">пусть они идут в атаку.<verse eid="JOL 3:9"/></para>
+  <para style="q2">
+    <verse number="10" style="v" sid="JOL 3:10"/>Перекуйте ваши плуги на мечи</para>
+  <para style="q1" vid="JOL 3:10">и ваши серпы на копья.</para>
+  <para style="q2" vid="JOL 3:10">Пусть слабый говорит: „Я сильный воин!“<verse eid="JOL 3:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="JOL 3:11"/>Спешите, все народы, со всех сторон</para>
+  <para style="q2" vid="JOL 3:11">и собирайтесь там».</para>
+  <para style="b" vid="JOL 3:11"/>
+  <para style="q1" vid="JOL 3:11">– О Господь, веди Своих воинов!<verse eid="JOL 3:11"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v" sid="JOL 3:12"/>– Пусть воспрянут народы,</para>
+  <para style="q2" vid="JOL 3:12">пусть пойдут в долину Иосафата,</para>
+  <para style="q1" vid="JOL 3:12">потому что там Я воссяду,</para>
+  <para style="q2" vid="JOL 3:12">чтобы судить все народы вокруг.<verse eid="JOL 3:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="JOL 3:13"/>Взмахните серпами,</para>
+  <para style="q2" vid="JOL 3:13">потому что созрела жатва,</para>
+  <para style="q1" vid="JOL 3:13">давите виноград,</para>
+  <para style="q2" vid="JOL 3:13">потому что давильня наполнена,</para>
+  <para style="q1" vid="JOL 3:13">и как переливается из сосудов вино,</para>
+  <para style="q2" vid="JOL 3:13">так велика и злоба их!<verse eid="JOL 3:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="JOL 3:14"/>Огромные массы людей толпятся в долине Приговора,</para>
+  <para style="q2" vid="JOL 3:14">потому что близок день Господень</para>
+  <para style="q3" vid="JOL 3:14">в долине Приговора!<verse eid="JOL 3:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="JOL 3:15"/>Померкнут солнце и луна,</para>
+  <para style="q2" vid="JOL 3:15">и потеряют звезды свой блеск.<verse eid="JOL 3:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="JOL 3:16"/>Прогремит Господь с Сиона,</para>
+  <para style="q2" vid="JOL 3:16">воскликнет Он громким голосом из Иерусалима,</para>
+  <para style="q1" vid="JOL 3:16">и поколеблются земля и небо.</para>
+  <para style="q2" vid="JOL 3:16">Но Господь будет убежищем для Своего народа,</para>
+  <para style="q1" vid="JOL 3:16">крепостью – для народа Израиля.<verse eid="JOL 3:16"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v" sid="JOL 3:17"/>– И тогда вы узнаете, что Я – Господь, ваш Бог,</para>
+  <para style="q2" vid="JOL 3:17">живущий на Сионе, Моей святой горе.</para>
+  <para style="q1" vid="JOL 3:17">Иерусалим будет святыней,</para>
+  <para style="q2" vid="JOL 3:17">и никогда более в него не вступит чужеземцев рать.<verse eid="JOL 3:17"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v" sid="JOL 3:18"/>В тот день с гор будет капать молодое вино,</para>
+  <para style="q2" vid="JOL 3:18">и с холмов потечет молоко,</para>
+  <para style="q1" vid="JOL 3:18">и все русла Иудеи наполнятся водою.</para>
+  <para style="q2" vid="JOL 3:18">В доме Господнем забьет источник</para>
+  <para style="q1" vid="JOL 3:18">и напоит безводную долину акаций<note caller="+" style="f"><char style="fr" closed="false">3:18 </char><char style="ft" closed="false">Букв.: «долина Шиттим». Акация любит сухую почву и поэтому растет только в засушливых регионах.</char></note>.<verse eid="JOL 3:18"/></para>
+  <para style="q2">
+    <verse number="19" style="v" sid="JOL 3:19"/>Египет будет опустошен,</para>
+  <para style="q1" vid="JOL 3:19">а Эдом станет безлюдной пустыней –</para>
+  <para style="q2" vid="JOL 3:19">за насилие, которое они причинили народу Иуды,</para>
+  <para style="q1" vid="JOL 3:19">и за невинную кровь, пролитую в их земле.<verse eid="JOL 3:19"/></para>
+  <para style="q2">
+    <verse number="20" style="v" sid="JOL 3:20"/>Иуда будет жить вечно,</para>
+  <para style="q1" vid="JOL 3:20">и Иерусалим – из поколения в поколение.<verse eid="JOL 3:20"/></para>
+  <para style="q2">
+    <verse number="21" style="v" sid="JOL 3:21"/>Я смою их кровь, которую еще не смыл.</para>
+  <para style="b" vid="JOL 3:21"/>
+  <para style="qc" vid="JOL 3:21">Господь будет жить на Сионе!<verse eid="JOL 3:21"/></para>
+  <chapter eid="JOL 3"/>
+</usx>

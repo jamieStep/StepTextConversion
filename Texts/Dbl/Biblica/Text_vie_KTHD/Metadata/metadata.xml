@@ -1,0 +1,753 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata id="ed484deed765564d" revision="5" version="2.2.1">
+  <identification>
+    <systemId type="gbc">
+      <id>564121525117ad64c84ffc44</id>
+    </systemId>
+    <systemId type="paratext">
+      <id>ed484deed765564d004cca168d4c768b815cb4db</id>
+      <csetId>e6368fc57bc00be095e5c84086aa6ed16fbbab2a</csetId>
+      <name>viVCB15</name>
+      <fullName>Vietnamese Contemporary Bible (Kinh Thánh Hiện Đại) 2015</fullName>
+    </systemId>
+    <systemId type="biblica">
+      <id>2513</id>
+    </systemId>
+    <name>Vietnamese Contemporary Bible (Kinh Thánh Hiện Đại)</name>
+    <nameLocal>Kinh Thánh Hiện Đại</nameLocal>
+    <abbreviation>VCB</abbreviation>
+    <description>Vietnamese: Kinh Thánh Hiện Đại Bible</description>
+    <scope>Bible</scope>
+    <dateCompleted>2015-11-09</dateCompleted>
+    <bundleProducer>nathanael/0.57.0</bundleProducer>
+  </identification>
+  <relationships>
+    <relation id="98ffe11056294aa9" relationType="expression" revision="2" type="audio" />
+  </relationships>
+  <agencies>
+    <rightsHolder>
+      <abbr>Biblica</abbr>
+      <url>http://www.Biblica.com/permissions</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsHolder>
+    <contributor>
+      <content>true</content>
+      <publication>true</publication>
+      <management>true</management>
+      <qa>true</qa>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </contributor>
+  </agencies>
+  <language>
+    <iso>vie</iso>
+    <name>Vietnamese</name>
+    <nameLocal>tiếng Việt</nameLocal>
+    <script>Latin</script>
+    <scriptCode>Latn</scriptCode>
+    <scriptDirection>LTR</scriptDirection>
+    <ldml>vi</ldml>
+    <numerals>Arabic</numerals>
+  </language>
+  <countries>
+    <country>
+      <iso>VN</iso>
+      <name>Viet Nam</name>
+    </country>
+  </countries>
+  <type>
+    <medium>text</medium>
+    <isConfidential>false</isConfidential>
+    <hasCharacters>true</hasCharacters>
+    <isTranslation>true</isTranslation>
+    <isExpression>true</isExpression>
+    <translationType>Revision</translationType>
+    <audience>Common</audience>
+  </type>
+  <format>
+    <versedParagraphs>false</versedParagraphs>
+  </format>
+  <manifest>
+    <resource checksum="5939d49cbd236628e1e5cd2b38826f37" mimeType="application/xml" size="189233" uri="release/USX_1/1CH.usx" />
+    <resource checksum="0061c48f3682cffabe9c057d82045db1" mimeType="application/xml" size="91726" uri="release/USX_1/1CO.usx" />
+    <resource checksum="b0a91e4bacdd07c8ba40e74aa16541d3" mimeType="application/xml" size="25494" uri="release/USX_1/1JN.usx" />
+    <resource checksum="fc260286363d25325b0fa0f320ebee5f" mimeType="application/xml" size="180275" uri="release/USX_1/1KI.usx" />
+    <resource checksum="1d5f7bc70426071ccde6623a04e6c5de" mimeType="application/xml" size="30404" uri="release/USX_1/1PE.usx" />
+    <resource checksum="1985ef2c27ccdf549e65514dc5b8d107" mimeType="application/xml" size="183555" uri="release/USX_1/1SA.usx" />
+    <resource checksum="3bc56861d129552222c7e32f66e8111b" mimeType="application/xml" size="18812" uri="release/USX_1/1TH.usx" />
+    <resource checksum="beefdce94013f05a622ce60e634d8eeb" mimeType="application/xml" size="23147" uri="release/USX_1/1TI.usx" />
+    <resource checksum="804f8370189db2ec0bfef018af4d1076" mimeType="application/xml" size="213424" uri="release/USX_1/2CH.usx" />
+    <resource checksum="b1cd9124f829fcc18609df346154b6e9" mimeType="application/xml" size="59575" uri="release/USX_1/2CO.usx" />
+    <resource checksum="9f7a01d86214487780e278b3ed0b11b7" mimeType="application/xml" size="3681" uri="release/USX_1/2JN.usx" />
+    <resource checksum="d9e444477e8d64a8fe059859cdb3f8da" mimeType="application/xml" size="173526" uri="release/USX_1/2KI.usx" />
+    <resource checksum="1d2b708f14774c128e57324cef662ec4" mimeType="application/xml" size="16628" uri="release/USX_1/2PE.usx" />
+    <resource checksum="9ca4376e367d8c5bedf3ed5520a621e6" mimeType="application/xml" size="153495" uri="release/USX_1/2SA.usx" />
+    <resource checksum="3fe8e308cb01a7a8ce570ff9e24e5450" mimeType="application/xml" size="10783" uri="release/USX_1/2TH.usx" />
+    <resource checksum="70149a19861dc25632ca8aa51d2641ef" mimeType="application/xml" size="16755" uri="release/USX_1/2TI.usx" />
+    <resource checksum="8c138cb8f2641f6a579286d63953e2dd" mimeType="application/xml" size="3945" uri="release/USX_1/3JN.usx" />
+    <resource checksum="f978d4e4f6259ba6056f9141efec13ec" mimeType="application/xml" size="208135" uri="release/USX_1/ACT.usx" />
+    <resource checksum="c5e6529a98b010118436bee1c83d3079" mimeType="application/xml" size="51866" uri="release/USX_1/AMO.usx" />
+    <resource checksum="ed926aa541e209c956037816531c38df" mimeType="application/xml" size="22130" uri="release/USX_1/COL.usx" />
+    <resource checksum="b34d227d0aa16c98d563bb25b096c455" mimeType="application/xml" size="102307" uri="release/USX_1/DAN.usx" />
+    <resource checksum="779b9ec6644dbb63f3b0dc91bc28d27b" mimeType="application/xml" size="213901" uri="release/USX_1/DEU.usx" />
+    <resource checksum="35032b3ecb6d23169182afb8dd7ff4aa" mimeType="application/xml" size="50611" uri="release/USX_1/ECC.usx" />
+    <resource checksum="9b6b652b3764e52e13334ae618b9df7c" mimeType="application/xml" size="32380" uri="release/USX_1/EPH.usx" />
+    <resource checksum="3992b6955d802711edc7e05f86f2c920" mimeType="application/xml" size="39052" uri="release/USX_1/EST.usx" />
+    <resource checksum="744446337b22a8c6aa2ade1ffd29c040" mimeType="application/xml" size="251307" uri="release/USX_1/EXO.usx" />
+    <resource checksum="ba8a023f3ae59ef4899ef3354fc135d9" mimeType="application/xml" size="316613" uri="release/USX_1/EZK.usx" />
+    <resource checksum="b954d640d2c902a85c91bc8ecb039db8" mimeType="application/xml" size="61932" uri="release/USX_1/EZR.usx" />
+    <resource checksum="e64c9004e434226b4528bdcacf73b26b" mimeType="application/xml" size="36240" uri="release/USX_1/GAL.usx" />
+    <resource checksum="e43162ebfe068278be3c658dfda26855" mimeType="application/xml" size="303747" uri="release/USX_1/GEN.usx" />
+    <resource checksum="f8eaa60e55877ce9acbf11908da53351" mimeType="application/xml" size="21256" uri="release/USX_1/HAB.usx" />
+    <resource checksum="ad02b6771faf6400dd0567eee9668c38" mimeType="application/xml" size="9546" uri="release/USX_1/HAG.usx" />
+    <resource checksum="a55d333477d0b35477cba756151a8afa" mimeType="application/xml" size="75526" uri="release/USX_1/HEB.usx" />
+    <resource checksum="23d1e142faa53a8c1c8bfbeae39a09e7" mimeType="application/xml" size="68567" uri="release/USX_1/HOS.usx" />
+    <resource checksum="964b516ceb95e4fe21f86c60ce66c588" mimeType="application/xml" size="433474" uri="release/USX_1/ISA.usx" />
+    <resource checksum="c78c5e3ddc19c6b568b420118db5e333" mimeType="application/xml" size="24447" uri="release/USX_1/JAS.usx" />
+    <resource checksum="d470b8554a96bc8a48462730daee0f24" mimeType="application/xml" size="144432" uri="release/USX_1/JDG.usx" />
+    <resource checksum="2e73acfcbd1a5e6dcb221a3c3e1e22f4" mimeType="application/xml" size="420738" uri="release/USX_1/JER.usx" />
+    <resource checksum="15398c6b14b8e081f809ddd5c5d62687" mimeType="application/xml" size="175296" uri="release/USX_1/JHN.usx" />
+    <resource checksum="627b6f377fdf2b3d3ef52607926b8f80" mimeType="application/xml" size="226211" uri="release/USX_1/JOB.usx" />
+    <resource checksum="9771311ba19059e442f972faaf33b8c4" mimeType="application/xml" size="25871" uri="release/USX_1/JOL.usx" />
+    <resource checksum="0b92b67d587907a89ceb400c29b5b8d1" mimeType="application/xml" size="12964" uri="release/USX_1/JON.usx" />
+    <resource checksum="29aea0a8d17a0d9ee0b037b27b97c4ab" mimeType="application/xml" size="137399" uri="release/USX_1/JOS.usx" />
+    <resource checksum="26593ed47ebcda1a8e7d91e596868693" mimeType="application/xml" size="7646" uri="release/USX_1/JUD.usx" />
+    <resource checksum="b9004f3312a37bb0796b6b2d8b5102f5" mimeType="application/xml" size="46440" uri="release/USX_1/LAM.usx" />
+    <resource checksum="04eb9f5c5a8486c80788251ff70e9038" mimeType="application/xml" size="174502" uri="release/USX_1/LEV.usx" />
+    <resource checksum="fd71bda86464742b4306b51751459f27" mimeType="application/xml" size="230656" uri="release/USX_1/LUK.usx" />
+    <resource checksum="ce4e55fee415265a5a0dd4c9467a8f2e" mimeType="application/xml" size="18064" uri="release/USX_1/MAL.usx" />
+    <resource checksum="e29a86290759c3f892a21d36cf0e5ca4" mimeType="application/xml" size="218835" uri="release/USX_1/MAT.usx" />
+    <resource checksum="242dc83fa52b3a8907f19121d58469b6" mimeType="application/xml" size="39919" uri="release/USX_1/MIC.usx" />
+    <resource checksum="7493bc1a9db81c0c599d0b196888f170" mimeType="application/xml" size="138337" uri="release/USX_1/MRK.usx" />
+    <resource checksum="c320264edbe60f7b6d54ab882f96a6f6" mimeType="application/xml" size="18585" uri="release/USX_1/NAM.usx" />
+    <resource checksum="a928317e08b18aefcd0351b1fbb1203e" mimeType="application/xml" size="86964" uri="release/USX_1/NEH.usx" />
+    <resource checksum="9e1a85f63829701e56e2d2085d963cee" mimeType="application/xml" size="253335" uri="release/USX_1/NUM.usx" />
+    <resource checksum="0717f354ece04d4805b3d26e61c7782e" mimeType="application/xml" size="9603" uri="release/USX_1/OBA.usx" />
+    <resource checksum="5f750c5909a34cb2ff2e677ad4623606" mimeType="application/xml" size="5576" uri="release/USX_1/PHM.usx" />
+    <resource checksum="64ce5f21c708387b01df742bd142f5fc" mimeType="application/xml" size="23956" uri="release/USX_1/PHP.usx" />
+    <resource checksum="428b4c372caa0d1f548d663f0e4b411d" mimeType="application/xml" size="180814" uri="release/USX_1/PRO.usx" />
+    <resource checksum="b951d023e4f72c5fe9267707de6f501f" mimeType="application/xml" size="594530" uri="release/USX_1/PSA.usx" />
+    <resource checksum="95eb1a35cd94c2b3755426b4a46bdb93" mimeType="application/xml" size="98625" uri="release/USX_1/REV.usx" />
+    <resource checksum="7b8b7fed222cd04115cd0d63f2387272" mimeType="application/xml" size="109050" uri="release/USX_1/ROM.usx" />
+    <resource checksum="b5aa7909cc74692137b4ef15d948708b" mimeType="application/xml" size="20860" uri="release/USX_1/RUT.usx" />
+    <resource checksum="b987f1df699ccd3750347cb0fa7294de" mimeType="application/xml" size="35728" uri="release/USX_1/SNG.usx" />
+    <resource checksum="f42a20e6af256f25a8b477e83d40588c" mimeType="application/xml" size="9930" uri="release/USX_1/TIT.usx" />
+    <resource checksum="937629d864b8b2845b8720e829bae323" mimeType="application/xml" size="54540" uri="release/USX_1/ZEC.usx" />
+    <resource checksum="13d3d5bcae9bcaede52e2a5a66bd80a2" mimeType="application/xml" size="22007" uri="release/USX_1/ZEP.usx" />
+    <resource checksum="a88e8bc2e1a7ce5704890efb0d1e28d4" mimeType="application/octet-stream" size="1662" uri="release/Vietnamese.lds" />
+    <resource checksum="b72b4390bc4295118614e24a5de33939" mimeType="application/xml" size="41775" uri="release/styles.xml" />
+    <resource checksum="313d64dd625d19cba0e804006c0040ca" mimeType="application/octet-stream" size="13301" uri="release/versification.vrs" />
+    <resource checksum="9e51f2ad30cdb72564fe09b11a226185" mimeType="application/octet-stream" size="14981" uri="release/vie_vi.ldml" />
+    <resource checksum="c472d89beddf899347b15069352fd535" mimeType="application/zip" size="4274076" uri="source/source.zip" />
+  </manifest>
+  <names>
+    <name id="book-gen">
+      <abbr>Sáng</abbr>
+      <short>Sáng Thế Ký</short>
+      <long>Sáng Thế Ký</long>
+    </name>
+    <name id="book-exo">
+      <abbr>Xuất</abbr>
+      <short>Xuất Ai Cập</short>
+      <long>Xuất Ai Cập</long>
+    </name>
+    <name id="book-lev">
+      <abbr>Lê</abbr>
+      <short>Lê-vi Ký</short>
+      <long>Lê-vi Ký</long>
+    </name>
+    <name id="book-num">
+      <abbr>Dân</abbr>
+      <short>Dân Số Ký</short>
+      <long>Dân Số Ký</long>
+    </name>
+    <name id="book-deu">
+      <abbr>Phục</abbr>
+      <short>Phục Truyền Luật Lệ Ký</short>
+      <long>Phục Truyền Luật Lệ Ký</long>
+    </name>
+    <name id="book-jos">
+      <abbr>Giôs</abbr>
+      <short>Giô-suê</short>
+      <long>Giô-suê</long>
+    </name>
+    <name id="book-jdg">
+      <abbr>Thẩm</abbr>
+      <short>Thẩm Phán</short>
+      <long>Thẩm Phán</long>
+    </name>
+    <name id="book-rut">
+      <abbr>Ru</abbr>
+      <short>Ru-tơ</short>
+      <long>Ru-tơ</long>
+    </name>
+    <name id="book-1sa">
+      <abbr>1 Sa</abbr>
+      <short>1 Sa-mu-ên</short>
+      <long>1 Sa-mu-ên</long>
+    </name>
+    <name id="book-2sa">
+      <abbr>2 Sa</abbr>
+      <short>2 Sa-mu-ên</short>
+      <long>2 Sa-mu-ên</long>
+    </name>
+    <name id="book-1ki">
+      <abbr>1 Vua</abbr>
+      <short>1 Các Vua</short>
+      <long>1 Các Vua</long>
+    </name>
+    <name id="book-2ki">
+      <abbr>2 Vua</abbr>
+      <short>2 Các Vua</short>
+      <long>2 Các Vua</long>
+    </name>
+    <name id="book-1ch">
+      <abbr>1 Sử</abbr>
+      <short>1 Sử Ký</short>
+      <long>1 Sử Ký</long>
+    </name>
+    <name id="book-2ch">
+      <abbr>2 Sử</abbr>
+      <short>2 Sử Ký</short>
+      <long>2 Sử Ký</long>
+    </name>
+    <name id="book-ezr">
+      <abbr>Era</abbr>
+      <short>E-xơ-ra</short>
+      <long>E-xơ-ra</long>
+    </name>
+    <name id="book-neh">
+      <abbr>Nê</abbr>
+      <short>Nê-hê-mi</short>
+      <long>Nê-hê-mi</long>
+    </name>
+    <name id="book-est">
+      <abbr>Êtê</abbr>
+      <short>Ê-xơ-tê</short>
+      <long>Ê-xơ-tê</long>
+    </name>
+    <name id="book-job">
+      <abbr>Gióp</abbr>
+      <short>Gióp</short>
+      <long>Gióp</long>
+    </name>
+    <name id="book-psa">
+      <abbr>Thi</abbr>
+      <short>Thi Thiên</short>
+      <long>Thi Thiên</long>
+    </name>
+    <name id="book-pro">
+      <abbr>Châm</abbr>
+      <short>Châm Ngôn</short>
+      <long>Châm Ngôn</long>
+    </name>
+    <name id="book-ecc">
+      <abbr>Truyền</abbr>
+      <short>Truyền Đạo</short>
+      <long>Truyền Đạo</long>
+    </name>
+    <name id="book-sng">
+      <abbr>Nhã</abbr>
+      <short>Nhã Ca</short>
+      <long>Nhã Ca</long>
+    </name>
+    <name id="book-isa">
+      <abbr>Ysai</abbr>
+      <short>Y-sai</short>
+      <long>Y-sai</long>
+    </name>
+    <name id="book-jer">
+      <abbr>Giê</abbr>
+      <short>Giê-rê-mi</short>
+      <long>Giê-rê-mi</long>
+    </name>
+    <name id="book-lam">
+      <abbr>Ai Ca</abbr>
+      <short>Ai Ca</short>
+      <long>Ai Ca</long>
+    </name>
+    <name id="book-ezk">
+      <abbr>Êxê</abbr>
+      <short>Ê-xê-chi-ên</short>
+      <long>Ê-xê-chi-ên</long>
+    </name>
+    <name id="book-dan">
+      <abbr>Đa</abbr>
+      <short>Đa-ni-ên</short>
+      <long>Đa-ni-ên</long>
+    </name>
+    <name id="book-hos">
+      <abbr>Ôsê</abbr>
+      <short>Ô-sê</short>
+      <long>Ô-sê</long>
+    </name>
+    <name id="book-jol">
+      <abbr>Giôên</abbr>
+      <short>Giô-ên</short>
+      <long>Giô-ên</long>
+    </name>
+    <name id="book-amo">
+      <abbr>Amốt</abbr>
+      <short>A-mốt</short>
+      <long>A-mốt</long>
+    </name>
+    <name id="book-oba">
+      <abbr>Ápđia</abbr>
+      <short>Áp-đia</short>
+      <long>Áp-đia</long>
+    </name>
+    <name id="book-jon">
+      <abbr>Giôna</abbr>
+      <short>Giô-na</short>
+      <long>Giô-na</long>
+    </name>
+    <name id="book-mic">
+      <abbr>Mi</abbr>
+      <short>Mi-ca</short>
+      <long>Mi-ca</long>
+    </name>
+    <name id="book-nam">
+      <abbr>Na</abbr>
+      <short>Na-hum</short>
+      <long>Na-hum</long>
+    </name>
+    <name id="book-hab">
+      <abbr>Ha</abbr>
+      <short>Ha-ba-cúc</short>
+      <long>Ha-ba-cúc</long>
+    </name>
+    <name id="book-zep">
+      <abbr>Sô</abbr>
+      <short>Sô-phô-ni</short>
+      <long>Sô-phô-ni</long>
+    </name>
+    <name id="book-hag">
+      <abbr>Aghê</abbr>
+      <short>A-gai</short>
+      <long>A-ghê</long>
+    </name>
+    <name id="book-zec">
+      <abbr>Xa</abbr>
+      <short>Xa-cha-ri</short>
+      <long>Xa-cha-ri</long>
+    </name>
+    <name id="book-mal">
+      <abbr>Mal</abbr>
+      <short>Ma-la-chi</short>
+      <long>Ma-la-chi</long>
+    </name>
+    <name id="book-mat">
+      <abbr>Mat</abbr>
+      <short>Ma-thi-ơ</short>
+      <long>Phúc Âm theo Ma-thi-ơ</long>
+    </name>
+    <name id="book-mrk">
+      <abbr>Mác</abbr>
+      <short>Mác</short>
+      <long>Phúc Âm theo Mác</long>
+    </name>
+    <name id="book-luk">
+      <abbr>Lu</abbr>
+      <short>Lu-ca</short>
+      <long>Phúc Âm theo Lu-ca</long>
+    </name>
+    <name id="book-jhn">
+      <abbr>Gi</abbr>
+      <short>Giăng</short>
+      <long>Phúc Âm theo Giăng</long>
+    </name>
+    <name id="book-act">
+      <abbr>Công</abbr>
+      <short>Công Vụ Các Sứ Đồ</short>
+      <long>Công Vụ Các Sứ Đồ</long>
+    </name>
+    <name id="book-rom">
+      <abbr>Rô</abbr>
+      <short>Rô-ma</short>
+      <long>Thư của Phao-lô Gửi cho Các Tín Hữu tại Rô-ma</long>
+    </name>
+    <name id="book-1co">
+      <abbr>1 Cô</abbr>
+      <short>1 Cô-rinh-tô</short>
+      <long>Thư Thứ Nhất của Phao-lô Gửi cho Các Tín Hữu tại Cô-rinh-tô</long>
+    </name>
+    <name id="book-2co">
+      <abbr>2 Cô</abbr>
+      <short>2 Cô-rinh-tô</short>
+      <long>Thư Thứ Hai của Phao-lô Gửi cho Các Tín Hữu tại Cô-rinh-tô</long>
+    </name>
+    <name id="book-gal">
+      <abbr>Ga</abbr>
+      <short>Ga-la-ti</short>
+      <long>Thư của Phao-lô Gửi cho Các Tín Hữu tại Ga-la-ti</long>
+    </name>
+    <name id="book-eph">
+      <abbr>Êph</abbr>
+      <short>Ê-phê-sô</short>
+      <long>Thư của Phao-lô Gửi cho Các Tín Hữu tại Ê-phê-sô</long>
+    </name>
+    <name id="book-php">
+      <abbr>Phil</abbr>
+      <short>Phi-líp</short>
+      <long>Thư của Phao-lô Gửi cho Các Tín Hữu tại Phi-líp</long>
+    </name>
+    <name id="book-col">
+      <abbr>Côl</abbr>
+      <short>Cô-lô-se</short>
+      <long>Thư của Phao-lô Gửi cho Các Tín Hữu tại Cô-lô-se</long>
+    </name>
+    <name id="book-1th">
+      <abbr>1 Tê</abbr>
+      <short>1 Tê-sa-lô-ni-ca</short>
+      <long>Thư Thứ Nhất của Phao-lô Gửi cho Các Tín Hữu tại Tê-sa-lô-ni-ca</long>
+    </name>
+    <name id="book-2th">
+      <abbr>2 Tê</abbr>
+      <short>2 Tê-sa-lô-ni-ca</short>
+      <long>Thư Thứ Hai của Phao-lô Gửi cho Các Tín Hữu tại Tê-sa-lô-ni-ca</long>
+    </name>
+    <name id="book-1ti">
+      <abbr>1 Ti</abbr>
+      <short>1 Ti-mô-thê</short>
+      <long>Thư Thứ Nhất của Phao-lô Gửi cho Ti-mô-thê</long>
+    </name>
+    <name id="book-2ti">
+      <abbr>2 Ti</abbr>
+      <short>2 Ti-mô-thê</short>
+      <long>Thư Thứ Hai của Phao-lô Gửi cho Ti-mô-thê</long>
+    </name>
+    <name id="book-tit">
+      <abbr>Tít</abbr>
+      <short>Tích</short>
+      <long>Thư của Phao-lô Gửi cho Tích</long>
+    </name>
+    <name id="book-phm">
+      <abbr>Phlm</abbr>
+      <short>Phi-lê-môn</short>
+      <long>Thư của Phao-lô Gửi cho Phi-lê-môn</long>
+    </name>
+    <name id="book-heb">
+      <abbr>Hê</abbr>
+      <short>Hê-bơ-rơ</short>
+      <long>Thư Gửi Người Hê-bơ-rơ</long>
+    </name>
+    <name id="book-jas">
+      <abbr>Gia</abbr>
+      <short>Gia-cơ</short>
+      <long>Thư của Gia-cơ</long>
+    </name>
+    <name id="book-1pe">
+      <abbr>1 Phi</abbr>
+      <short>1 Phi-e-rơ</short>
+      <long>Thư Thứ Nhất của Phi-e-rơ</long>
+    </name>
+    <name id="book-2pe">
+      <abbr>2 Phi</abbr>
+      <short>2 Phi-e-rơ</short>
+      <long>Thư Thứ Hai của Phi-e-rơ</long>
+    </name>
+    <name id="book-1jn">
+      <abbr>1 Gi</abbr>
+      <short>1 Giăng</short>
+      <long>Thư Thứ Nhất của Giăng</long>
+    </name>
+    <name id="book-2jn">
+      <abbr>2 Gi</abbr>
+      <short>2 Giăng</short>
+      <long>Thư Thứ Hai của Giăng</long>
+    </name>
+    <name id="book-3jn">
+      <abbr>3 Gi</abbr>
+      <short>3 Giăng</short>
+      <long>Thư Thứ Ba của Giăng</long>
+    </name>
+    <name id="book-jud">
+      <abbr>Giu</abbr>
+      <short>Giu-đe</short>
+      <long>Thư của Giu-đe</long>
+    </name>
+    <name id="book-rev">
+      <abbr>Khải</abbr>
+      <short>Khải Huyền</short>
+      <long>Sách Khải Huyền của Giăng</long>
+    </name>
+  </names>
+  <source>
+    <canonicalContent>
+      <book code="1CH" />
+      <book code="1CO" />
+      <book code="1JN" />
+      <book code="1KI" />
+      <book code="1PE" />
+      <book code="1SA" />
+      <book code="1TH" />
+      <book code="1TI" />
+      <book code="2CH" />
+      <book code="2CO" />
+      <book code="2JN" />
+      <book code="2KI" />
+      <book code="2PE" />
+      <book code="2SA" />
+      <book code="2TH" />
+      <book code="2TI" />
+      <book code="3JN" />
+      <book code="ACT" />
+      <book code="AMO" />
+      <book code="COL" />
+      <book code="DAN" />
+      <book code="DEU" />
+      <book code="ECC" />
+      <book code="EPH" />
+      <book code="EST" />
+      <book code="EXO" />
+      <book code="EZK" />
+      <book code="EZR" />
+      <book code="GAL" />
+      <book code="GEN" />
+      <book code="HAB" />
+      <book code="HAG" />
+      <book code="HEB" />
+      <book code="HOS" />
+      <book code="ISA" />
+      <book code="JAS" />
+      <book code="JDG" />
+      <book code="JER" />
+      <book code="JHN" />
+      <book code="JOB" />
+      <book code="JOL" />
+      <book code="JON" />
+      <book code="JOS" />
+      <book code="JUD" />
+      <book code="LAM" />
+      <book code="LEV" />
+      <book code="LUK" />
+      <book code="MAL" />
+      <book code="MAT" />
+      <book code="MIC" />
+      <book code="MRK" />
+      <book code="NAM" />
+      <book code="NEH" />
+      <book code="NUM" />
+      <book code="OBA" />
+      <book code="PHM" />
+      <book code="PHP" />
+      <book code="PRO" />
+      <book code="PSA" />
+      <book code="REV" />
+      <book code="ROM" />
+      <book code="RUT" />
+      <book code="SNG" />
+      <book code="TIT" />
+      <book code="ZEC" />
+      <book code="ZEP" />
+    </canonicalContent>
+    <structure>
+      <content role="sourceZip" src="source/source.zip" />
+    </structure>
+  </source>
+  <publications>
+    <publication default="true" id="p1">
+      <name>Vietnamese Contemporary Bible</name>
+      <description>Protestant Bible</description>
+      <descriptionLocal>Kinh Thánh</descriptionLocal>
+      <abbreviationLocal>KTHD</abbreviationLocal>
+      <canonicalContent>
+        <book code="1CH" />
+        <book code="1CO" />
+        <book code="1JN" />
+        <book code="1KI" />
+        <book code="1PE" />
+        <book code="1SA" />
+        <book code="1TH" />
+        <book code="1TI" />
+        <book code="2CH" />
+        <book code="2CO" />
+        <book code="2JN" />
+        <book code="2KI" />
+        <book code="2PE" />
+        <book code="2SA" />
+        <book code="2TH" />
+        <book code="2TI" />
+        <book code="3JN" />
+        <book code="ACT" />
+        <book code="AMO" />
+        <book code="COL" />
+        <book code="DAN" />
+        <book code="DEU" />
+        <book code="ECC" />
+        <book code="EPH" />
+        <book code="EST" />
+        <book code="EXO" />
+        <book code="EZK" />
+        <book code="EZR" />
+        <book code="GAL" />
+        <book code="GEN" />
+        <book code="HAB" />
+        <book code="HAG" />
+        <book code="HEB" />
+        <book code="HOS" />
+        <book code="ISA" />
+        <book code="JAS" />
+        <book code="JDG" />
+        <book code="JER" />
+        <book code="JHN" />
+        <book code="JOB" />
+        <book code="JOL" />
+        <book code="JON" />
+        <book code="JOS" />
+        <book code="JUD" />
+        <book code="LAM" />
+        <book code="LEV" />
+        <book code="LUK" />
+        <book code="MAL" />
+        <book code="MAT" />
+        <book code="MIC" />
+        <book code="MRK" />
+        <book code="NAM" />
+        <book code="NEH" />
+        <book code="NUM" />
+        <book code="OBA" />
+        <book code="PHM" />
+        <book code="PHP" />
+        <book code="PRO" />
+        <book code="PSA" />
+        <book code="REV" />
+        <book code="ROM" />
+        <book code="RUT" />
+        <book code="SNG" />
+        <book code="TIT" />
+        <book code="ZEC" />
+        <book code="ZEP" />
+      </canonicalContent>
+      <structure>
+        <content name="book-gen" role="GEN" src="release/USX_1/GEN.usx" />
+        <content name="book-exo" role="EXO" src="release/USX_1/EXO.usx" />
+        <content name="book-lev" role="LEV" src="release/USX_1/LEV.usx" />
+        <content name="book-num" role="NUM" src="release/USX_1/NUM.usx" />
+        <content name="book-deu" role="DEU" src="release/USX_1/DEU.usx" />
+        <content name="book-jos" role="JOS" src="release/USX_1/JOS.usx" />
+        <content name="book-jdg" role="JDG" src="release/USX_1/JDG.usx" />
+        <content name="book-rut" role="RUT" src="release/USX_1/RUT.usx" />
+        <content name="book-1sa" role="1SA" src="release/USX_1/1SA.usx" />
+        <content name="book-2sa" role="2SA" src="release/USX_1/2SA.usx" />
+        <content name="book-1ki" role="1KI" src="release/USX_1/1KI.usx" />
+        <content name="book-2ki" role="2KI" src="release/USX_1/2KI.usx" />
+        <content name="book-1ch" role="1CH" src="release/USX_1/1CH.usx" />
+        <content name="book-2ch" role="2CH" src="release/USX_1/2CH.usx" />
+        <content name="book-ezr" role="EZR" src="release/USX_1/EZR.usx" />
+        <content name="book-neh" role="NEH" src="release/USX_1/NEH.usx" />
+        <content name="book-est" role="EST" src="release/USX_1/EST.usx" />
+        <content name="book-job" role="JOB" src="release/USX_1/JOB.usx" />
+        <content name="book-psa" role="PSA" src="release/USX_1/PSA.usx" />
+        <content name="book-pro" role="PRO" src="release/USX_1/PRO.usx" />
+        <content name="book-ecc" role="ECC" src="release/USX_1/ECC.usx" />
+        <content name="book-sng" role="SNG" src="release/USX_1/SNG.usx" />
+        <content name="book-isa" role="ISA" src="release/USX_1/ISA.usx" />
+        <content name="book-jer" role="JER" src="release/USX_1/JER.usx" />
+        <content name="book-lam" role="LAM" src="release/USX_1/LAM.usx" />
+        <content name="book-ezk" role="EZK" src="release/USX_1/EZK.usx" />
+        <content name="book-dan" role="DAN" src="release/USX_1/DAN.usx" />
+        <content name="book-hos" role="HOS" src="release/USX_1/HOS.usx" />
+        <content name="book-jol" role="JOL" src="release/USX_1/JOL.usx" />
+        <content name="book-amo" role="AMO" src="release/USX_1/AMO.usx" />
+        <content name="book-oba" role="OBA" src="release/USX_1/OBA.usx" />
+        <content name="book-jon" role="JON" src="release/USX_1/JON.usx" />
+        <content name="book-mic" role="MIC" src="release/USX_1/MIC.usx" />
+        <content name="book-nam" role="NAM" src="release/USX_1/NAM.usx" />
+        <content name="book-hab" role="HAB" src="release/USX_1/HAB.usx" />
+        <content name="book-zep" role="ZEP" src="release/USX_1/ZEP.usx" />
+        <content name="book-hag" role="HAG" src="release/USX_1/HAG.usx" />
+        <content name="book-zec" role="ZEC" src="release/USX_1/ZEC.usx" />
+        <content name="book-mal" role="MAL" src="release/USX_1/MAL.usx" />
+        <content name="book-mat" role="MAT" src="release/USX_1/MAT.usx" />
+        <content name="book-mrk" role="MRK" src="release/USX_1/MRK.usx" />
+        <content name="book-luk" role="LUK" src="release/USX_1/LUK.usx" />
+        <content name="book-jhn" role="JHN" src="release/USX_1/JHN.usx" />
+        <content name="book-act" role="ACT" src="release/USX_1/ACT.usx" />
+        <content name="book-rom" role="ROM" src="release/USX_1/ROM.usx" />
+        <content name="book-1co" role="1CO" src="release/USX_1/1CO.usx" />
+        <content name="book-2co" role="2CO" src="release/USX_1/2CO.usx" />
+        <content name="book-gal" role="GAL" src="release/USX_1/GAL.usx" />
+        <content name="book-eph" role="EPH" src="release/USX_1/EPH.usx" />
+        <content name="book-php" role="PHP" src="release/USX_1/PHP.usx" />
+        <content name="book-col" role="COL" src="release/USX_1/COL.usx" />
+        <content name="book-1th" role="1TH" src="release/USX_1/1TH.usx" />
+        <content name="book-2th" role="2TH" src="release/USX_1/2TH.usx" />
+        <content name="book-1ti" role="1TI" src="release/USX_1/1TI.usx" />
+        <content name="book-2ti" role="2TI" src="release/USX_1/2TI.usx" />
+        <content name="book-tit" role="TIT" src="release/USX_1/TIT.usx" />
+        <content name="book-phm" role="PHM" src="release/USX_1/PHM.usx" />
+        <content name="book-heb" role="HEB" src="release/USX_1/HEB.usx" />
+        <content name="book-jas" role="JAS" src="release/USX_1/JAS.usx" />
+        <content name="book-1pe" role="1PE" src="release/USX_1/1PE.usx" />
+        <content name="book-2pe" role="2PE" src="release/USX_1/2PE.usx" />
+        <content name="book-1jn" role="1JN" src="release/USX_1/1JN.usx" />
+        <content name="book-2jn" role="2JN" src="release/USX_1/2JN.usx" />
+        <content name="book-3jn" role="3JN" src="release/USX_1/3JN.usx" />
+        <content name="book-jud" role="JUD" src="release/USX_1/JUD.usx" />
+        <content name="book-rev" role="REV" src="release/USX_1/REV.usx" />
+      </structure>
+    </publication>
+  </publications>
+  <archiveStatus>
+    <dateArchived>2015-11-09T22:48:56.174186</dateArchived>
+    <dateUpdated>2021-01-31T02:38:11.508017</dateUpdated>
+    <bundleCreatorName>John Dunham</bundleCreatorName>
+    <archivistName>John Dunham</archivistName>
+    <comments>Relationships update</comments>
+  </archiveStatus>
+  <copyright>
+    <fullStatement>
+      <statementContent type="xhtml">
+        <p>Vietnamese Contemporary Bible (Kinh Thánh Hiện Đại)<br /> Copyright © 1982, 1987, 1994, 2005, 2015 by Biblica, Inc.®<br /> Used by permission.  All rights reserved worldwide. <br /></p>
+      </statementContent>
+    </fullStatement>
+  </copyright>
+  <promotion>
+    <promoVersionInfo contentType="xhtml">
+      <p>Trước năm 1975 tại Việt Nam, Mục Sư Tiến Sĩ Lê Hoàng Phu đã bắt đầu phiên dịch bản Kinh Thánh Living Bible sang Việt ngữ. Sau khi rời Việt Nam năm 1975, ông tiếp tục công tác này. Năm 1994, bản dịch Living Bible được gọi là Thánh Kinh – Bản Diễn Ý, được Thánh Kinh Hội Quốc Tế (The International Bible Society – nay là Biblica, Inc.) phát hành nhằm đáp ứng nhu cầu của tân tín hữu và người chưa tin Chúa <br /></p>
+      <p>Bản Kinh Thánh quý vị đang có trong tay là bản Kinh Thánh Hiện Đại (Vietnamese Contemporary Bible), được hiệu đính từ Bản Diễn Ý và sửa đổi nhiều lần trong thời gian khoảng 17 năm. Trong suốt thời gian này, Cơ Quan Văn Phẩm Nguồn Sống (VMI) đã làm việc không mệt mỏi để bản Kinh Thánh Hiện Đại đi gần với triết lý và phong cách phiên dịch của Hội Biblica, Inc., đó là chuyển dịch ý tưởng (thought for thought) từ bản văn gốc (source text), chú trọng đến tính chính xác, rõ ràng, tự nhiên, và trung thành với nguyên bản. <br /><br /></p>
+    </promoVersionInfo>
+  </promotion>
+  <progress>
+    <book code="GEN" stage="2" />
+    <book code="EXO" stage="2" />
+    <book code="LEV" stage="2" />
+    <book code="NUM" stage="2" />
+    <book code="DEU" stage="2" />
+    <book code="JOS" stage="2" />
+    <book code="JDG" stage="2" />
+    <book code="RUT" stage="2" />
+    <book code="1SA" stage="2" />
+    <book code="2SA" stage="2" />
+    <book code="1KI" stage="2" />
+    <book code="2KI" stage="2" />
+    <book code="1CH" stage="2" />
+    <book code="2CH" stage="2" />
+    <book code="EZR" stage="2" />
+    <book code="NEH" stage="2" />
+    <book code="EST" stage="2" />
+    <book code="JOB" stage="2" />
+    <book code="PSA" stage="2" />
+    <book code="PRO" stage="2" />
+    <book code="ECC" stage="2" />
+    <book code="SNG" stage="2" />
+    <book code="ISA" stage="2" />
+    <book code="JER" stage="2" />
+    <book code="LAM" stage="2" />
+    <book code="EZK" stage="2" />
+    <book code="DAN" stage="2" />
+    <book code="HOS" stage="2" />
+    <book code="JOL" stage="2" />
+    <book code="AMO" stage="2" />
+    <book code="OBA" stage="2" />
+    <book code="JON" stage="2" />
+    <book code="MIC" stage="2" />
+    <book code="NAM" stage="2" />
+    <book code="HAB" stage="2" />
+    <book code="ZEP" stage="2" />
+    <book code="HAG" stage="2" />
+    <book code="ZEC" stage="2" />
+    <book code="MAL" stage="2" />
+  </progress>
+</DBLMetadata>

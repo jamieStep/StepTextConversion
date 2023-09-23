@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="EZR" style="id">- Spanish (Castellano): Nueva Versión Internacional</book>
+  <para style="rem">Copyright © 1999, 2005, 2017 by Biblica, Inc.®</para>
+  <para style="h">ESDRAS</para>
+  <para style="toc1">Esdras</para>
+  <para style="toc2">Esdras</para>
+  <para style="toc3">Esd</para>
+  <para style="mt1">Esdras</para>
+  <chapter number="1" style="c"/>
+  <para style="s1">Decreto de Ciro</para>
+  <para style="p">
+    <verse number="1" style="v"/>En el primer año del reinado de Ciro, rey de Persia, el <char style="nd">Señor</char> dispuso el corazón del rey para que este promulgara un decreto en todo su reino y así se cumpliera la palabra del <char style="nd">Señor</char> por medio del profeta Jeremías. Tanto oralmente como por escrito, el rey decretó lo siguiente:</para>
+  <para style="pmo">
+    <verse number="2" style="v"/>«Esto es lo que ordena Ciro, rey de Persia:</para>
+  <para style="pm">»El <char style="nd">Señor</char>, Dios del cielo, que me ha dado todos los reinos de la tierra, me ha encargado que le construya un templo en la ciudad de Jerusalén, que está en Judá. <verse number="3" style="v"/>Por tanto, cualquiera que pertenezca a Judá, vaya a Jerusalén a construir el templo del <char style="nd">Señor</char>, Dios de Israel, el Dios que habita en Jerusalén; y que Dios lo acompañe. <verse number="4" style="v"/>También ordeno que los habitantes de cada lugar donde haya judíos sobrevivientes los ayuden dándoles plata y oro, bienes y ganado, y ofrendas voluntarias para el templo de Dios en Jerusalén».</para>
+  <para style="s1">El regreso de los judíos</para>
+  <para style="p">
+    <verse number="5" style="v"/>Entonces los jefes de familia de Benjamín y de Judá, junto con los sacerdotes y levitas, es decir, con todos aquellos en cuyo corazón Dios puso el deseo de construir el templo, se dispusieron a ir a Jerusalén. <verse number="6" style="v"/>Todos sus vecinos los ayudaron con plata y oro, bienes y ganado, objetos valiosos y todo tipo de ofrendas voluntarias. <verse number="7" style="v"/>Además, el rey Ciro hizo sacar los utensilios que Nabucodonosor se había llevado del templo del <char style="nd">Señor</char> en Jerusalén y había depositado en el templo de su dios.<note caller="+" style="f"><char style="fr" closed="false">1:7 </char><char style="fq" closed="false">su dios</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">sus dioses.</char></note> <verse number="8" style="v"/>Ciro los entregó a su tesorero Mitrídates, el cual los contó y se los pasó a Sesbasar, jefe de Judá.</para>
+  <para style="p">
+    <verse number="9" style="v"/>El inventario de dichos utensilios fue el siguiente:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">tazones de oro</cell>
+      <cell style="tcr2" align="end">30</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">tazones de plata</cell>
+      <cell style="tcr2" align="end">1.000</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">cuchillos</cell>
+      <cell style="tcr2" align="end">29</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="10" style="v"/>tazas de oro</cell>
+      <cell style="tcr2" align="end">30</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">tazas de plata</cell>
+      <cell style="tcr2" align="end">410</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">objetos diversos</cell>
+      <cell style="tcr2" align="end">1.000</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="p">
+    <verse number="11" style="v"/>En total fueron cinco mil cuatrocientos los utensilios de oro y de plata. Todos estos objetos los llevó Sesbasar a Jerusalén cuando a los deportados se les permitió regresar de Babilonia.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Lista de los que regresaron</para>
+  <para style="p">
+    <verse number="1" style="v"/>La siguiente es la lista de la gente de la provincia que Nabucodonosor, rey de Babilonia, había llevado cautiva a Babilonia, y a la que se le permitió regresar a Jerusalén y a Judá. Cada uno volvió a su propia población <verse number="2" style="v"/>en compañía de Zorobabel, Jesúa, Nehemías, Seraías, Relaías, Mardoqueo, Bilsán, Mispar, Bigvay, Rejún y Baná.</para>
+  <para style="b"/>
+  <para style="p">Esta es la lista de los israelitas que regresaron:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="3" style="v"/>de Parós</cell>
+      <cell style="tcr2" align="end">2.172</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="4" style="v"/>de Sefatías</cell>
+      <cell style="tcr2" align="end">372</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="5" style="v"/>de Araj</cell>
+      <cell style="tcr2" align="end">775</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="6" style="v"/>de Pajat Moab, es decir, de Jesúa y Joab</cell>
+      <cell style="tcr2" align="end">2.812</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="7" style="v"/>de Elam</cell>
+      <cell style="tcr2" align="end">1.254</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="8" style="v"/>de Zatú</cell>
+      <cell style="tcr2" align="end">945</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="9" style="v"/>de Zacay</cell>
+      <cell style="tcr2" align="end">760</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="10" style="v"/>de Baní</cell>
+      <cell style="tcr2" align="end">642</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="11" style="v"/>de Bebay</cell>
+      <cell style="tcr2" align="end">623</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="12" style="v"/>de Azgad</cell>
+      <cell style="tcr2" align="end">1.222</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="13" style="v"/>de Adonicán</cell>
+      <cell style="tcr2" align="end">666</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="14" style="v"/>de Bigvay</cell>
+      <cell style="tcr2" align="end">2.056</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="15" style="v"/>de Adín</cell>
+      <cell style="tcr2" align="end">454</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="16" style="v"/>de Ater, es decir, de Ezequías</cell>
+      <cell style="tcr2" align="end">98</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="17" style="v"/>de Bezay</cell>
+      <cell style="tcr2" align="end">323</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="18" style="v"/>de Jorá</cell>
+      <cell style="tcr2" align="end">112</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="19" style="v"/>de Jasún</cell>
+      <cell style="tcr2" align="end">223</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="20" style="v"/>de Guibar</cell>
+      <cell style="tcr2" align="end">95</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="21" style="v"/>de Belén</cell>
+      <cell style="tcr2" align="end">123</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="22" style="v"/>de Netofa</cell>
+      <cell style="tcr2" align="end">56</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="23" style="v"/>de Anatot</cell>
+      <cell style="tcr2" align="end">128</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="24" style="v"/>de Azmávet</cell>
+      <cell style="tcr2" align="end">42</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="25" style="v"/>de Quiriat Yearín, Cafira y Berot</cell>
+      <cell style="tcr2" align="end">743</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="26" style="v"/>de Ramá y Gueba</cell>
+      <cell style="tcr2" align="end">621</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="27" style="v"/>de Micmás</cell>
+      <cell style="tcr2" align="end">122</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="28" style="v"/>de Betel y de Hai</cell>
+      <cell style="tcr2" align="end">223</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="29" style="v"/>de Nebo</cell>
+      <cell style="tcr2" align="end">52</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="30" style="v"/>de Magbís</cell>
+      <cell style="tcr2" align="end">156</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="31" style="v"/>del otro Elam</cell>
+      <cell style="tcr2" align="end">1.254</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="32" style="v"/>de Jarín</cell>
+      <cell style="tcr2" align="end">320</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="33" style="v"/>de Lod, Jadid y Ono</cell>
+      <cell style="tcr2" align="end">725</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="34" style="v"/>de Jericó</cell>
+      <cell style="tcr2" align="end">345</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="35" style="v"/>de Sená</cell>
+      <cell style="tcr2" align="end">3.630</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="36" style="v"/>De los sacerdotes descendientes de Jedaías, de la familia de Jesúa </cell>
+      <cell style="tcr2" align="end">973</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="37" style="v"/>de Imer</cell>
+      <cell style="tcr2" align="end">1.052</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="38" style="v"/>de Pasur</cell>
+      <cell style="tcr2" align="end">1.247</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="39" style="v"/>de Jarín</cell>
+      <cell style="tcr2" align="end">1.017</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="40" style="v"/>De los levitas descendientes de Jesúa y de Cadmiel, que pertenecían a la familia de Hodavías</cell>
+      <cell style="tcr2" align="end">74</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="41" style="v"/>De los cantores descendientes de Asaf</cell>
+      <cell style="tcr2" align="end">128</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="42" style="v"/>De los porteros descendientes de Salún, Ater, Talmón, Acub, Jatitá y Sobay</cell>
+      <cell style="tcr2" align="end">139</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="43" style="v"/>Los servidores del templo eran de las familias de Zijá, Jasufá, Tabaot, <verse number="44" style="v"/>Querós, Sigajá, Padón, <verse number="45" style="v"/>Lebaná, Jagabá, Acub, <verse number="46" style="v"/>Jagab, Salmay, Janán, <verse number="47" style="v"/>Guidel, Gajar, Reaías, <verse number="48" style="v"/>Rezín, Necoda, Gazán, <verse number="49" style="v"/>Uza, Paseaj, Besay, <verse number="50" style="v"/>Asena, Meunín, Nefusín, <verse number="51" style="v"/>Bacbuc, Jacufá, Jarjur, <verse number="52" style="v"/>Baslut, Mejidá, Jarsa, <verse number="53" style="v"/>Barcós, Sísara, Temá, <verse number="54" style="v"/>Neziaj y Jatifá.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="55" style="v"/>Los descendientes de los servidores de Salomón eran de las familias de Sotay, Soféret, Peruda, <verse number="56" style="v"/>Jalá, Darcón, Guidel, <verse number="57" style="v"/>Sefatías, Jatil, Poquéret Hasebayin y Amón.</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="58" style="v"/>Los servidores del templo y de los descendientes de los servidores de Salomón</cell>
+      <cell style="tcr2" align="end">392</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="p">
+    <verse number="59" style="v"/>Los siguientes regresaron de Tel Melaj, Tel Jarsá, Querub, Adón e Imer, pero no pudieron demostrar ascendencia israelita:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="60" style="v"/>De los descendientes de Delaías, Tobías y Necoda</cell>
+      <cell style="tcr2" align="end">652</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="61" style="v"/>De entre los sacerdotes, los siguientes tampoco pudieron demostrar su ascendencia israelita: los descendientes de Jabaías, Cos y Barzilay (este último se casó con una de las hijas de un galaadita llamado Barzilay, del cual tomó su nombre). <verse number="62" style="v"/>Estos buscaron sus registros genealógicos, pero, como no los encontraron, fueron excluidos del sacerdocio. <verse number="63" style="v"/>A ellos el gobernador les prohibió comer de los alimentos sagrados hasta que un sacerdote decidiera su suerte por medio del <char style="w" lemma="urim y tumim"><char style="tl">urim</char> y el <char style="tl">tumim</char></char>.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="64" style="v"/>El número total de los miembros de la asamblea era de cuarenta y dos mil trescientas sesenta personas, <verse number="65" style="v"/>sin contar esclavos y esclavas, que sumaban siete mil trescientos treinta y siete; y tenían doscientos cantores y cantoras. <verse number="66" style="v"/>Tenían además setecientos treinta y seis caballos, doscientas cuarenta y cinco mulas, <verse number="67" style="v"/>cuatrocientos treinta y cinco camellos y seis mil setecientos veinte burros.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="68" style="v"/>Cuando llegaron al templo del <char style="nd">Señor</char> en Jerusalén, algunos jefes de familia dieron donativos para que se reconstruyera el templo de Dios en el mismo sitio. <verse number="69" style="v"/>De acuerdo con sus capacidades económicas, dieron para la obra de reconstrucción cuatrocientos ochenta y ocho kilos<note caller="+" style="f"><char style="fr" closed="false">2:69 </char><char style="fq" closed="false">cuatrocientos ochenta y ocho kilos</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">sesenta y un mil <char style="w" lemma="dracma">dracmas</char>.</char></note> de oro, dos mil setecientos cincuenta kilos<note caller="+" style="f"><char style="fr" closed="false">2:69 </char><char style="fq" closed="false">dos mil setecientos cincuenta kilos</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">cinco mil <char style="w" lemma="mina">minas</char>.</char></note> de plata y cien túnicas sacerdotales.</para>
+  <para style="p">
+    <verse number="70" style="v"/>Los sacerdotes, los levitas y algunos del pueblo se establecieron en Jerusalén,<note caller="+" style="f"><char style="fr" closed="false">2:70 </char><char style="fq" closed="false">en Jerusalén </char><char style="ft" closed="false">(LXX, 3 Esdras 5:46); </char><char style="fqa" closed="false">en sus ciudades </char><char style="ft" closed="false">(TM).</char></note> en tanto que los cantores, los porteros, los servidores del templo y los demás israelitas se fueron a vivir a sus propias poblaciones.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Restauración del altar</para>
+  <para style="p">
+    <verse number="1" style="v"/>En el mes séptimo, cuando ya todos los israelitas se habían establecido en sus poblaciones, se reunió el pueblo en Jerusalén con un mismo propósito. <verse number="2" style="v"/>Entonces Jesúa hijo de Josadac con sus parientes, que eran sacerdotes, y Zorobabel hijo de Salatiel con sus parientes empezaron a construir el altar del Dios de Israel para ofrecer <char style="w" lemma="holocausto">holocaustos</char>, según lo estipulado en la <char style="w">ley</char> de Moisés, hombre de Dios. <verse number="3" style="v"/>A pesar del miedo que tenían de los pueblos vecinos, colocaron el altar en su mismo sitio. Y todos los días, por la mañana y por la tarde, ofrecían holocaustos al <char style="nd">Señor</char>. <verse number="4" style="v"/>Luego, según lo estipulado en la ley, celebraron la fiesta de las <char style="w">Enramadas</char>, ofreciendo el número de holocaustos prescrito para cada día, <verse number="5" style="v"/>como también los holocaustos diarios, los de luna nueva, los de las fiestas solemnes ordenadas por el <char style="nd">Señor</char> y los que el pueblo le ofrecía voluntariamente. <verse number="6" style="v"/>A pesar de que aún no se habían echado los cimientos del templo, desde el primer día del mes séptimo el pueblo comenzó a ofrecer holocaustos al <char style="nd">Señor</char>.</para>
+  <para style="s1">Se comienza la reconstrucción del templo</para>
+  <para style="p">
+    <verse number="7" style="v"/>Luego dieron dinero a los albañiles y carpinteros. A los de Sidón y Tiro les dieron comida, bebida y aceite para que por mar llevaran madera de cedro desde el Líbano hasta Jope, conforme a la autorización que había dado Ciro, rey de Persia. <verse number="8" style="v"/>Zorobabel hijo de Salatiel, y Jesúa hijo de Josadac, junto con el resto de sus parientes, que eran sacerdotes, y con los levitas y con todos los que habían regresado del cautiverio, comenzaron la reconstrucción del templo en el mes segundo del segundo año de haber llegado a Jerusalén. A los levitas mayores de veinte años les encomendaron la tarea de supervisar las obras del templo del <char style="nd">Señor</char>. <verse number="9" style="v"/>Entonces Jesúa, junto con sus hijos y hermanos, y Cadmiel y sus hijos, que eran descendientes de Hodavías,<note caller="+" style="f"><char style="fr" closed="false">3:9 </char><char style="fq" closed="false">Hodavías </char><char style="ft" closed="false">(lectura probable; véase <char style="xt"><ref loc="EZR 2:40">2:40</ref></char>); </char><char style="fqa" closed="false">Judá </char><char style="ft" closed="false">(TM).</char></note> y los descendientes de Henadad, y sus hijos y hermanos, que eran levitas, se unieron para supervisar a los obreros que trabajaban en el templo de Dios.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Cuando los constructores echaron los cimientos del templo del <char style="nd">Señor</char>, llegaron los sacerdotes con sus vestimentas sagradas y sus trompetas, junto con los levitas descendientes de Asaf con sus platillos, para alabar al <char style="nd">Señor</char>, según lo establecido por David, rey de Israel. <verse number="11" style="v"/>Todos daban gracias al <char style="nd">Señor</char>, y a una le cantaban esta alabanza: «Dios es bueno; su gran amor por Israel perdura para siempre». Y todo el pueblo alabó con grandes aclamaciones al <char style="nd">Señor</char>, porque se habían echado los cimientos del templo. <verse number="12" style="v"/>Muchos de los sacerdotes, levitas y jefes de familia, que eran ya ancianos y habían conocido el primer templo, prorrumpieron en llanto cuando vieron los cimientos del nuevo templo, mientras muchos otros gritaban de alegría. <verse number="13" style="v"/>Y no se podía distinguir entre los gritos de alegría y las voces de llanto, pues la gente gritaba en voz alta, y el ruido se escuchaba desde muy lejos.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Oposición samaritana</para>
+  <para style="p">
+    <verse number="1" style="v"/>Cuando los enemigos del pueblo de Judá y de Benjamín se enteraron de que los repatriados estaban reconstruyendo el templo del <char style="nd">Señor</char>, Dios de Israel, <verse number="2" style="v"/>se presentaron ante Zorobabel y ante los jefes de familia y les dijeron:</para>
+  <para style="p">―Permitidnos participar en la reconstrucción, pues nosotros, al igual que vosotros, hemos buscado a vuestro Dios y le hemos ofrecido <char style="w" lemma="holocausto">holocaustos</char> desde el día en que Esarjadón, rey de Asiria, nos trajo acá.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Pero Zorobabel, Jesúa y los jefes de las familias de Israel les respondieron:</para>
+  <para style="p">―No podemos permitir que os unáis a nosotros en la reconstrucción del templo de nuestro Dios. Nosotros solos nos encargaremos de reedificar el templo para el <char style="nd">Señor</char>, Dios de Israel, tal como lo decretó Ciro, rey de Persia.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Entonces los habitantes de la región comenzaron a desanimar e intimidar a los de Judá para que abandonaran la reconstrucción. <verse number="5" style="v"/>Y hasta llegaron a sobornar a algunos de los consejeros para impedirles llevar a cabo sus planes. Esto sucedió durante todo el reinado de Ciro, rey de Persia, y hasta el reinado de Darío, que también fue rey de Persia.</para>
+  <para style="p">
+    <verse number="6" style="v"/>También al comienzo del reinado de Asuero,<note caller="+" style="f"><char style="fr" closed="false">4:6 </char><char style="fq" closed="false">Asuero</char><char style="ft" closed="false">. Variante hebrea de Jerjes, nombre persa.</char></note> aquellos enemigos enviaron una carta en la cual acusaban a los habitantes de Judá y de Jerusalén. <verse number="7" style="v"/>Luego, cuando Artajerjes llegó a ser rey de Persia, también Bislán, Mitrídates, Tabel y sus demás compañeros le enviaron una carta, que fue traducida al arameo.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Además, el comandante Rejún y el cronista Simsay enviaron a Artajerjes una carta en contra de los habitantes de Jerusalén. La carta decía:</para>
+  <para style="pmo">
+    <verse number="9" style="v"/>El comandante Rejún y el cronista Simsay escriben esta carta, junto con sus compañeros los jueces, gobernadores y funcionarios de Persia, Érec, Babilonia y Susa (es decir, Elam). <verse number="10" style="v"/>Esta carta la suscriben también las demás naciones que el grande y noble Asnapar llevó cautivas y estableció en la ciudad de Samaria y en las otras provincias al oeste del río Éufrates.</para>
+  <para style="b"/>
+  <para style="pmo">
+    <verse number="11" style="v"/>Al rey Artajerjes, de parte de tus siervos que habitan al oeste del río Éufrates:</para>
+  <para style="b"/>
+  <para style="pm">
+    <verse number="12" style="v"/>Sepa el rey que los judíos enviados por ti han llegado a Jerusalén y están reconstruyendo esa ciudad rebelde y mala. Ya están echados los cimientos.</para>
+  <para style="pm">
+    <verse number="13" style="v"/>Sepa también el rey que, si esta gente reconstruye la ciudad y termina la muralla, sus habitantes se rebelarán y no pagarán tributos, ni impuestos ni contribución alguna, lo cual sería perjudicial para el tesoro real. <verse number="14" style="v"/>Como nosotros somos tus vasallos,<note caller="+" style="f"><char style="fr" closed="false">4:14 </char><char style="fq" closed="false">somos tus vasallos</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">comemos la sal del palacio.</char></note> no podemos permitir que se te deshonre. Por eso te enviamos esta denuncia. <verse number="15" style="v"/>Pida el rey que se investigue en los archivos donde están las crónicas de los reyes que te han precedido. Así comprobarás que esta ciudad ha sido rebelde y nociva para los reyes y las provincias, y que fue destruida porque hace ya mucho tiempo allí se fraguaron sediciones. <verse number="16" style="v"/>Por eso te advertimos que, si esa ciudad es reconstruida y la muralla levantada, el rey perderá el dominio de la región al oeste del Éufrates.</para>
+  <para style="p">
+    <verse number="17" style="v"/>En respuesta, el rey les escribió:</para>
+  <para style="pmo">Al comandante Rejún y al cronista Simsay, y al resto de sus compañeros que viven en Samaria y en las otras regiones al oeste del río Éufrates:</para>
+  <para style="b"/>
+  <para style="pmo">Saludos.</para>
+  <para style="b"/>
+  <para style="pm">
+    <verse number="18" style="v"/>La carta que vosotros enviasteis ha sido traducida y leída en mi presencia. <verse number="19" style="v"/>Di orden de investigar en los archivos y, en efecto, se encontró que anteriormente en dicha ciudad se fraguaron sediciones y se tramaron rebeliones contra los reyes; <verse number="20" style="v"/>que en Jerusalén hubo reyes poderosos, gobernantes de toda la región al oeste del río Éufrates, a quienes se les pagaban impuestos, tributos y rentas. <verse number="21" style="v"/>Por eso, ordenadles a esos hombres que cesen sus labores, que suspendan la reconstrucción de la ciudad, hasta que yo promulgue un nuevo edicto. <verse number="22" style="v"/>Sed diligentes en hacer cumplir esta orden, para que no crezca la amenaza de perjuicio a los intereses reales.</para>
+  <para style="p">
+    <verse number="23" style="v"/>En cuanto la carta del rey Artajerjes se leyó en presencia de Rejún, del cronista Simsay y de sus compañeros, todos ellos fueron a Jerusalén y, por la fuerza de las armas, obligaron a los judíos a detener la obra. <verse number="24" style="v"/>De este modo, el trabajo de reconstrucción del templo de Dios en Jerusalén quedó suspendido hasta el año segundo del reinado de Darío, rey de Persia.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Se reinicia la reconstrucción del templo</para>
+  <para style="p">
+    <verse number="1" style="v"/>Los profetas Hageo y Zacarías hijo de Idó profetizaron a los judíos que estaban en Judá y Jerusalén, en el <char style="w">nombre</char> del Dios de Israel, que velaba por ellos. <verse number="2" style="v"/>Entonces Zorobabel hijo de Salatiel y Jesúa hijo de Josadac se dispusieron a continuar la reconstrucción del templo de Dios en Jerusalén. Y los profetas estaban con ellos ayudándolos.</para>
+  <para style="p">
+    <verse number="3" style="v"/>En ese mismo tiempo, Tatenay, gobernador de la provincia al oeste del río Éufrates, y Setar Bosnay y sus compañeros se presentaron ante los judíos y les preguntaron: «¿Quién os autorizó a reconstruir ese templo y restaurar su estructura?» <verse number="4" style="v"/>Y añadieron:<note caller="+" style="f"><char style="fr" closed="false">5:4 </char><char style="fq" closed="false">añadieron </char><char style="ft" closed="false">(lectura probable; véanse LXX y Siríaca); </char><char style="fqa" closed="false">les dijimos </char><char style="ft" closed="false">(TM).</char></note> «¿Cómo se llaman los que están reconstruyendo ese edificio?» <verse number="5" style="v"/>Pero, como Dios velaba por los <char style="w" lemma="dirigente">dirigentes</char> judíos, no los obligaron a interrumpir el trabajo hasta que se consultara a Darío y este respondiera por escrito.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Entonces Tatenay, gobernador de la provincia al oeste del río Éufrates, y Setar Bosnay y sus compañeros, que eran los funcionarios del gobierno de esa provincia, enviaron una carta al rey Darío, <verse number="7" style="v"/>la cual decía:</para>
+  <para style="pmo">Al rey Darío:</para>
+  <para style="b"/>
+  <para style="pmo">Un cordial saludo.</para>
+  <para style="b"/>
+  <para style="pm">
+    <verse number="8" style="v"/>Ponemos en conocimiento del rey que fuimos a la provincia de Judá, al templo del gran Dios, y vimos que se está reconstruyendo con grandes piedras, y que sus paredes se están recubriendo con madera. El trabajo se hace con esmero y avanza rápidamente.</para>
+  <para style="pm">
+    <verse number="9" style="v"/>A los dirigentes les preguntamos quién les había autorizado a reconstruir ese templo y restaurar su estructura, <verse number="10" style="v"/>y cómo se llaman los que dirigen la obra, para comunicárselo por escrito al rey.</para>
+  <para style="pm">
+    <verse number="11" style="v"/>Ellos nos respondieron:</para>
+  <para style="b"/>
+  <para style="pm">«Somos siervos del Dios del cielo y de la tierra, y estamos reconstruyendo el templo que fue edificado y terminado hace ya mucho tiempo por un gran rey de Israel. <verse number="12" style="v"/>Pero, como nuestros antepasados provocaron a ira al Dios del cielo, él los entregó en manos de Nabucodonosor, rey de Babilonia, el <char style="w" lemma="caldeos">caldeo</char> que destruyó este templo y que llevó al pueblo cautivo a Babilonia.</para>
+  <para style="pm">
+    <verse number="13" style="v"/>»Pero más tarde, en el primer año de su reinado, Ciro, rey de Babilonia, ordenó que este templo de Dios fuera reconstruido. <verse number="14" style="v"/>También hizo sacar del templo de Babilonia los utensilios de oro y de plata que Nabucodonosor se había llevado del templo de Jerusalén y había puesto en el templo de Babilonia, y se los entregó a Sesbasar, a quien había nombrado gobernador. <verse number="15" style="v"/>Ciro, pues, ordenó a Sesbasar que tomara esos utensilios y los devolviera al templo de Jerusalén, y que reedificara en el mismo sitio el templo de Dios. <verse number="16" style="v"/>Entonces Sesbasar llegó a Jerusalén y echó los cimientos del templo de Dios. Desde entonces se ha estado trabajando en su reconstrucción, pero aún no se ha terminado».</para>
+  <para style="b"/>
+  <para style="pm">
+    <verse number="17" style="v"/>Ahora bien, si el rey lo considera conveniente, pedimos que se investiguen los archivos donde están las crónicas de los reyes de Babilonia, para saber si es verdad que el rey Ciro ordenó la reconstrucción del templo de Dios en Jerusalén. Además, solicitamos que se nos dé a conocer la decisión del rey con respecto a este asunto.</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Decreto de Darío</para>
+  <para style="p">
+    <verse number="1" style="v"/>Entonces el rey Darío ordenó que se investigara en los archivos donde se guardaban los tesoros de Babilonia. <verse number="2" style="v"/>Y en el palacio de Ecbatana, en la provincia de Media, se encontró un rollo que contenía la siguiente memoria:</para>
+  <para style="pm">
+    <verse number="3" style="v"/>En el primer año de su reinado, el rey Ciro promulgó el siguiente edicto respecto al templo de Dios en Jerusalén:</para>
+  <para style="b"/>
+  <para style="pm">Que se echen los cimientos y se reconstruya el templo, para que en él se ofrezcan <char style="w" lemma="holocausto">holocaustos</char>. Tendrá veintisiete metros<note caller="+" style="f"><char style="fr" closed="false">6:3 </char><char style="fq" closed="false">veintisiete metros</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">sesenta <char style="w" lemma="codo">codos</char>.</char></note> tanto de alto como de ancho, <verse number="4" style="v"/>tres hileras de piedras grandes, y una de madera. Todos los gastos serán sufragados por el tesoro real. <verse number="5" style="v"/>Con respecto a los utensilios de oro y de plata que Nabucodonosor sacó del templo de Jerusalén y llevó a Babilonia, que los devuelvan a Jerusalén, y que se pongan en el templo de Dios, donde deben estar.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Entonces el rey Darío dio la siguiente orden<note caller="+" style="f"><char style="fr" closed="false">6:6 </char><char style="fq" closed="false">Entonces el rey Darío dio la siguiente orden</char><char style="ft" closed="false">. Se ha añadido esta frase para indicar el cambio de sujeto.</char></note> a Tatenay, gobernador de la provincia al oeste del río Éufrates, y a Setar Bosnay y a sus compañeros, los funcionarios de dicha provincia:</para>
+  <para style="pm">Alejaos de Jerusalén <verse number="7" style="v"/>y no estorbéis la obra de reconstrucción del templo de Dios. Dejad que el gobernador de la provincia de Judá y los <char style="w" lemma="dirigente">dirigentes</char> judíos reconstruyan el templo en su antiguo sitio.</para>
+  <para style="pm">
+    <verse number="8" style="v"/>También he decidido que debéis prestarles ayuda, sufragando los gastos de la reconstrucción del templo con los impuestos que la provincia al oeste del río Éufrates paga al tesoro real. No os retraséis en pagar todos los gastos, para que no se interrumpan las obras. <verse number="9" style="v"/>Además, todos los días, sin falta, deberéis suministrarles becerros, carneros y corderos para ofrecerlos en holocausto al Dios del cielo, junto con trigo, sal, vino y aceite, y todo lo que necesiten, según las instrucciones de los sacerdotes que están en Jerusalén. <verse number="10" style="v"/>Así podrán ellos ofrecer sacrificios gratos al Dios del cielo y rogar por la vida del rey y de sus hijos.</para>
+  <para style="pm">
+    <verse number="11" style="v"/>He determinado así mismo que, a quien desobedezca esta orden, lo empalen en una viga sacada de su propia casa, y que le derrumben la casa. <verse number="12" style="v"/>¡Que el Dios que decidió habitar en Jerusalén derribe a cualquier rey o nación que intente modificar este decreto o destruir ese templo de Dios!</para>
+  <para style="pm">Yo, Darío, promulgo este decreto. Publíquese y cúmplase al pie de la letra.</para>
+  <para style="s1">Terminación y dedicación del templo</para>
+  <para style="p">
+    <verse number="13" style="v"/>Entonces Tatenay, gobernador de la provincia al oeste del río Éufrates, y Setar Bosnay y sus compañeros cumplieron al pie de la letra lo que el rey Darío les había ordenado. <verse number="14" style="v"/>Así los <char style="w" lemma="dirigente">dirigentes</char> judíos pudieron continuar y terminar la obra de reconstrucción, conforme a la palabra de los profetas Hageo y Zacarías hijo de Idó. Terminaron, pues, la obra de reconstrucción, según el mandato del Dios de Israel y por decreto de Ciro, Darío y Artajerjes, reyes de Persia. <verse number="15" style="v"/>La reconstrucción del templo se terminó el día tres del mes de <char style="w"><char style="tl">adar</char></char>, en el año sexto del reinado de Darío.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Entonces los israelitas —es decir, los sacerdotes, los levitas y los demás que regresaron del cautiverio—, llenos de júbilo dedicaron el templo de Dios. <verse number="17" style="v"/>Como ofrenda de dedicación, ofrecieron a Dios cien becerros, doscientos carneros, cuatrocientos corderos y doce machos cabríos, conforme al número de las tribus de Israel, para <char style="w">expiación</char> por el pecado del pueblo. <verse number="18" style="v"/>Luego, según lo que está escrito en el libro de Moisés, instalaron a los sacerdotes en sus turnos y a los levitas en sus funciones, para el culto que se ofrece a Dios en Jerusalén.</para>
+  <para style="s1">Celebración de la Pascua</para>
+  <para style="p">
+    <verse number="19" style="v"/>Los que regresaron del cautiverio celebraron la Pascua el día catorce del mes primero. <verse number="20" style="v"/>Los sacerdotes y levitas se habían unido para <char style="w" lemma="purificar">purificarse</char> y, ya estando ritualmente <char style="w" lemma="limpio">limpios</char>, mataron el cordero pascual por todos los que habían regresado del cautiverio, por sus compañeros los sacerdotes y por ellos mismos. <verse number="21" style="v"/>Los israelitas que regresaron del cautiverio comieron la Pascua junto con los que se habían apartado de la impureza de sus vecinos para seguir al <char style="nd">Señor</char>, Dios de Israel. <verse number="22" style="v"/>Durante siete días celebraron con mucho gozo la fiesta de los Panes sin levadura, porque el <char style="nd">Señor</char> les había devuelto la alegría y había hecho que el rey de Persia<note caller="+" style="f"><char style="fr" closed="false">6:22 </char><char style="fq" closed="false">rey de Persia</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">rey de Asiria </char><char style="ft" closed="false">(uno de los títulos dado al rey persa).</char></note> los ayudara y permitiera reconstruir el templo del Dios de Israel.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Esdras llega a Jerusalén</para>
+  <para style="p">
+    <verse number="1" style="v"/>Durante el reinado de Artajerjes, rey de Persia, vivió un hombre llamado Esdras hijo de Seraías, que era descendiente en línea directa de Azarías, Jilquías, <verse number="2" style="v"/>Salún, Sadoc, Ajitob, <verse number="3" style="v"/>Amarías, Azarías, Merayot, <verse number="4" style="v"/>Zeraías, Uzi, Buquí, <verse number="5" style="v"/>Abisúa, Finés, Eleazar y Aarón, que fue el primer sacerdote. <verse number="6" style="v"/>Este Esdras llegó de Babilonia. Era un maestro muy versado en la <char style="w">ley</char> que el <char style="nd">Señor</char>, Dios de Israel, le había dado a Moisés. Gozaba de la simpatía del rey, y el <char style="nd">Señor</char> su Dios estaba con él.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Con Esdras regresaron a Jerusalén algunos israelitas, entre los cuales había sacerdotes, levitas, cantores, porteros y servidores del templo. Esto sucedió en el séptimo año del reinado de Artajerjes. <verse number="8" style="v"/>Así que Esdras llegó a Jerusalén en el mes quinto del séptimo año del reinado de Artajerjes. <verse number="9" style="v"/>Había salido de Babilonia el día primero del mes primero, y llegó a Jerusalén el día primero del mes quinto, porque la mano bondadosa de Dios estaba con él. <verse number="10" style="v"/>Esdras se había dedicado por completo a estudiar la ley del <char style="nd">Señor</char>, a ponerla en práctica y a enseñar sus preceptos y normas a los israelitas.</para>
+  <para style="s1">Carta de Artajerjes a Esdras</para>
+  <para style="p">
+    <verse number="11" style="v"/>El rey Artajerjes le entregó la siguiente carta a Esdras, quien era sacerdote y maestro de los mandamientos y preceptos que el <char style="nd">Señor</char> le dio a Israel:</para>
+  <para style="pmo">
+    <verse number="12" style="v"/>Artajerjes, rey de reyes,</para>
+  <para style="b"/>
+  <para style="pmo">a Esdras, sacerdote y maestro versado en la <char style="w">ley</char> del Dios del cielo:</para>
+  <para style="b"/>
+  <para style="pmo">Saludos.<note caller="+" style="f"><char style="fr" closed="false">7:12 </char><char style="fq" closed="false">Saludos</char><char style="ft" closed="false">. Texto de difícil traducción.</char></note></para>
+  <para style="b"/>
+  <para style="pm">
+    <verse number="13" style="v"/>He dispuesto que todos los israelitas que quieran ir contigo a Jerusalén puedan hacerlo, incluyendo a los sacerdotes y levitas. <verse number="14" style="v"/>El rey y sus siete consejeros te mandan para investigar la situación de Jerusalén y de Judá, conforme a la ley de tu Dios que se te ha confiado. <verse number="15" style="v"/>Lleva el oro y la plata que el rey y sus consejeros han ofrecido voluntariamente al Dios de Israel, que habita en Jerusalén. <verse number="16" style="v"/>También lleva contigo toda la plata y el oro que obtengas de la provincia de Babilonia, junto con los donativos del pueblo y de los sacerdotes para el templo de su Dios en Jerusalén. <verse number="17" style="v"/>Con ese dinero compra, sin falta, becerros, carneros y corderos, con sus respectivas ofrendas de cereales y de vino, para ofrecerlos en el altar del templo de vuestro Dios en Jerusalén.</para>
+  <para style="pm">
+    <verse number="18" style="v"/>Con el resto de la plata y del oro, tú y tus compañeros podréis hacer lo que os parezca mejor, de acuerdo con la voluntad de vuestro Dios. <verse number="19" style="v"/>Pero deposita en el templo los utensilios sagrados que se te han entregado para rendir culto a tu Dios en Jerusalén. <verse number="20" style="v"/>Cualquier otro gasto que sea necesario para el templo de tu Dios se cubrirá del tesoro real.</para>
+  <para style="pm">
+    <verse number="21" style="v"/>Ahora bien, yo, el rey Artajerjes, les ordeno a todos los tesoreros que están al oeste del río Éufrates que entreguen de inmediato todo cuanto solicite Esdras, sacerdote y maestro versado en la ley del Dios del cielo. <verse number="22" style="v"/>Pueden darle hasta tres mil trescientos kilos de plata, veintidós mil litros de trigo, dos mil doscientos litros de vino, dos mil doscientos litros de aceite<note caller="+" style="f"><char style="fr" closed="false">7:22 </char><char style="fq" closed="false">hasta … aceite</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">hasta cien <char style="w" lemma="talento">talentos</char> de plata y hasta cien <char style="w" lemma="coro">coros</char> de trigo y hasta cien <char style="w" lemma="bato">batos</char> de vino y hasta cien batos de aceite.</char></note> y toda la sal que se requiera.</para>
+  <para style="pm">
+    <verse number="23" style="v"/>Todo lo que ha ordenado el Dios del cielo para su templo, sea hecho de inmediato, de modo que no se descargue su ira contra el dominio del rey y su familia. <verse number="24" style="v"/>También ordeno que exoneréis de impuestos a los sacerdotes, levitas, cantores, porteros y servidores del templo de Dios.</para>
+  <para style="pm">
+    <verse number="25" style="v"/>Por cuanto tú, Esdras, posees la sabiduría de Dios, serás el encargado de nombrar funcionarios y jueces para que juzguen a los habitantes de la provincia al oeste del río Éufrates, es decir, a todos los que conocen la ley de Dios. Pero, a quienes no la conozcan, enséñasela. <verse number="26" style="v"/>Si alguien desobedece la ley de tu Dios y las órdenes del rey, haz que se le castigue de inmediato con la pena de muerte, el destierro, la confiscación de bienes o la cárcel.</para>
+  <para style="s1">Oración de Esdras</para>
+  <para style="p">
+    <verse number="27" style="v"/>«Bendito sea el <char style="nd">Señor</char>, Dios de nuestros antepasados, que puso en el <char style="w">corazón</char> del rey el propósito de honrar el templo del <char style="nd">Señor</char> en Jerusalén. <verse number="28" style="v"/>Por su infinito amor, él me ha permitido recibir el favor del rey, de sus consejeros y de todos sus funcionarios más importantes. Y porque el <char style="nd">Señor</char> mi Dios estaba conmigo, cobré ánimo y reuní a los jefes de Israel para que me acompañaran a Jerusalén».</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Lista de los que regresaron con Esdras</para>
+  <para style="p">
+    <verse number="1" style="v"/>Según los registros genealógicos, esta es la lista de los jefes de familia que durante el reinado de Artajerjes regresaron conmigo de Babilonia:</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="2" style="v"/>de los descendientes de Finés: Guersón;</para>
+  <para style="li1">de Itamar: Daniel;</para>
+  <para style="li1">de David: Jatús, <verse number="3" style="v"/>que era de la familia de Secanías;</para>
+  <para style="li1">de Parós: Zacarías y ciento cincuenta hombres que se registraron con él;</para>
+  <para style="li1">
+    <verse number="4" style="v"/>de Pajat Moab: Elihoenay hijo de Zeraías y doscientos hombres más;</para>
+  <para style="li1">
+    <verse number="5" style="v"/>de Secanías: el hijo de Jahaziel y trescientos hombres más;</para>
+  <para style="li1">
+    <verse number="6" style="v"/>de Adín: Ébed hijo de Jonatán y cincuenta hombres más;</para>
+  <para style="li1">
+    <verse number="7" style="v"/>de Elam: Isaías hijo de Atalías y setenta hombres más;</para>
+  <para style="li1">
+    <verse number="8" style="v"/>de Sefatías: Zebadías hijo de Micael y ochenta hombres más;</para>
+  <para style="li1">
+    <verse number="9" style="v"/>de Joab: Abdías hijo de Jehiel y doscientos dieciocho hombres más;</para>
+  <para style="li1">
+    <verse number="10" style="v"/>de Selomit: el hijo de Josifías y ciento sesenta hombres más;</para>
+  <para style="li1">
+    <verse number="11" style="v"/>de Bebay: Zacarías hijo de Bebay y veintiocho hombres más;</para>
+  <para style="li1">
+    <verse number="12" style="v"/>de Azgad: Johanán hijo de Hacatán y ciento diez hombres más;</para>
+  <para style="li1">
+    <verse number="13" style="v"/>de Adonicán: Elifelet, Jeyel y Semaías, los últimos de esta familia, con los cuales se registraron sesenta hombres más;</para>
+  <para style="li1">
+    <verse number="14" style="v"/>de Bigvay: Utay, Zabud y setenta hombres más.</para>
+  <para style="s1">El regreso a Jerusalén</para>
+  <para style="p">
+    <verse number="15" style="v"/>A estos jefes de familia los reuní junto al arroyo que corre hacia el río Ahava, y allí estuvimos acampados tres días. Cuando pasé revista a todo el pueblo y a los sacerdotes, no encontré a ningún descendiente de Leví. <verse number="16" style="v"/>Entonces mandé llamar a Eliezer, Ariel, Semaías, Elnatán, Jarib, Elnatán, Natán, Zacarías y Mesulán, que eran jefes del pueblo, y también a Joyarib y Elnatán, que eran maestros, <verse number="17" style="v"/>y los envié a Idó, que era el jefe de Casifiá. Les encargué que les pidieran a Idó y a sus compañeros, quienes estaban al frente de Casifiá, que nos proveyeran servidores para el templo de nuestro Dios. <verse number="18" style="v"/>Y, como Dios estaba con nosotros, nos enviaron a un israelita muy capacitado llamado Serebías hijo de Majlí, descendiente de Leví. Con él vinieron sus hijos y sus hermanos, dieciocho personas en total. <verse number="19" style="v"/>También nos enviaron a Jasabías y a Isaías, descendientes de Merari, junto con sus hijos y hermanos, veinte personas en total. <verse number="20" style="v"/>Además, del grupo que David y sus oficiales habían asignado para que ayudaran a los levitas, nos enviaron doscientos veinte servidores, los cuales fueron registrados por su nombre.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Luego, estando cerca del río Ahava, proclamé un ayuno para que nos humilláramos ante nuestro Dios y le pidiéramos que nos acompañara durante el camino, a nosotros, a nuestros hijos y nuestras posesiones. <verse number="22" style="v"/>En realidad, sentí vergüenza de pedirle al rey que nos enviara un pelotón de caballería para que nos protegiera de los enemigos, ya que le habíamos dicho al rey que la mano de Dios protege a todos los que confían en él, pero que Dios descarga su poder y su ira contra quienes lo abandonan. <verse number="23" style="v"/>Así que ayunamos y oramos a nuestro Dios pidiéndole su protección, y él nos escuchó.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Después aparté a doce jefes de los sacerdotes: Serebías, Jasabías y diez de sus parientes. <verse number="25" style="v"/>En presencia de ellos pesé el oro, los utensilios sagrados y las ofrendas que el rey, sus consejeros, sus funcionarios más importantes y todos los israelitas allí presentes habían entregado para el templo de Dios. <verse number="26" style="v"/>Lo que pesé fue lo siguiente: veintiún mil cuatrocientos cincuenta kilos de plata, utensilios de plata que pesaban tres mil trescientos kilos, tres mil trescientos kilos de oro, <verse number="27" style="v"/>veinte tazas de oro que pesaban ocho kilos,<note caller="+" style="f"><char style="fr" closed="false">8:26-27 </char><char style="fq" closed="false">veintiún mil </char><char style="fq" closed="false">… ocho kilos</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">seiscientos cincuenta <char style="w" lemma="talento">talentos</char> de plata, utensilios de plata que pesaban cien talentos, cien talentos de oro, </char><char style="fv" closed="false">27 </char><char style="fqa" closed="false">veinte tazas de oro que valían mil <char style="w" lemma="dracma">dracmas</char>.</char></note> y dos recipientes de bronce bruñido de la mejor calidad, tan preciosos como el oro.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Luego les dije: «Vosotros y los utensilios habéis sido consagrados al <char style="nd">Señor</char>. La plata y el oro son una ofrenda voluntaria para el <char style="nd">Señor</char>, Dios de nuestros antepasados. <verse number="29" style="v"/>Vigiladlos y guardadlos hasta que los peséis en los aposentos del templo del <char style="nd">Señor</char> en Jerusalén, en presencia de los principales sacerdotes, de los levitas y de los jefes de familia del pueblo de Israel». <verse number="30" style="v"/>Así que los sacerdotes y levitas recibieron la plata, el oro y los utensilios que fueron pesados para llevarlos al templo de nuestro Dios en Jerusalén.</para>
+  <para style="p">
+    <verse number="31" style="v"/>El día doce del mes primero partimos del río Ahava para ir a Jerusalén. Durante todo el trayecto Dios nos acompañó y nos libró de enemigos y asaltantes. <verse number="32" style="v"/>Al llegar a Jerusalén nos quedamos descansando tres días. <verse number="33" style="v"/>Al cuarto día pesamos la plata, el oro y los utensilios en el templo de nuestro Dios, y lo entregamos todo al sacerdote Meremot hijo de Urías. Eleazar hijo de Finés estaba allí con él, lo mismo que los levitas Jozabad hijo de Jesúa, y Noadías hijo de Binuy. <verse number="34" style="v"/>Ese día lo pesamos y contamos todo, y registramos el peso total.</para>
+  <para style="p">
+    <verse number="35" style="v"/>Luego, en honor del <char style="nd">Señor</char>, Dios de Israel, los que habían regresado del cautiverio ofrecieron, en <char style="w">holocausto</char> y como ofrenda de <char style="w">expiación</char> por todo el pueblo, doce novillos, noventa y seis carneros, setenta y siete corderos y doce machos cabríos. <verse number="36" style="v"/>Y se les entregaron los decretos del rey a los <char style="w" lemma="sátrapa">sátrapas</char> del reino y a los gobernadores de la provincia al oeste del río Éufrates, los cuales prestaron todo su apoyo al pueblo y al templo de Dios.</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Esdras confiesa el pecado del pueblo</para>
+  <para style="p">
+    <verse number="1" style="v"/>Después de todo esto, se me acercaron los jefes y me dijeron: «El pueblo de Israel, incluso los sacerdotes y levitas, no se ha mantenido separado de los pueblos vecinos, sino que practica las costumbres abominables de todos ellos, es decir, de los cananeos, hititas, ferezeos, jebuseos, amonitas, moabitas, egipcios y amorreos. <verse number="2" style="v"/>De entre las mujeres de esos pueblos han tomado esposas para sí mismos y para sus hijos, mezclando así la raza <char style="w" lemma="santo">santa</char> con la de los pueblos vecinos. Y los primeros en cometer tal infidelidad han sido los jefes y los gobernantes».</para>
+  <para style="p">
+    <verse number="3" style="v"/>Cuando escuché esto, me rasgué la túnica y el manto, me arranqué los pelos de la cabeza y de la barba, y me postré muy angustiado. <verse number="4" style="v"/>Entonces, por causa del pecado cometido por los repatriados, se reunieron a mi alrededor todos los que obedecían<note caller="+" style="f"><char style="fr" closed="false">9:4 </char><char style="fq" closed="false">obedecían</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">temían.</char></note> la palabra de Dios. Y yo seguí angustiado hasta la hora del sacrificio de la tarde.</para>
+  <para style="p">
+    <verse number="5" style="v"/>A la hora del sacrificio me recobré de mi abatimiento y, con la túnica y el manto rasgados, caí de rodillas, extendí mis manos hacia el <char style="nd">Señor</char> mi Dios, <verse number="6" style="v"/>y le dije en oración:</para>
+  <para style="pm">«Dios mío, estoy confundido y siento vergüenza de levantar el rostro hacia ti, porque nuestras maldades se han amontonado hasta cubrirnos por completo; nuestra culpa ha llegado hasta el cielo. <verse number="7" style="v"/>Desde los días de nuestros antepasados hasta hoy, nuestra culpa ha sido grande. Debido a nuestras maldades, nosotros, nuestros reyes y nuestros sacerdotes fuimos entregados al poder de los reyes de los países vecinos. Hemos sufrido la espada, el cautiverio, el pillaje y la humillación, como nos sucede hasta hoy.</para>
+  <para style="pm">
+    <verse number="8" style="v"/>»Pero ahora tú, <char style="nd">Señor</char> y Dios nuestro, por un breve momento nos has mostrado tu bondad al permitir que un remanente quede en libertad y se establezca en tu lugar santo. Has permitido que nuestros ojos vean una nueva luz, y nos has concedido un pequeño alivio en medio de nuestra esclavitud. <verse number="9" style="v"/>Aunque somos esclavos, no nos has abandonado, Dios nuestro, sino que nos has extendido tu misericordia a la vista de los reyes de Persia. Nos has dado nueva vida para reedificar tu templo y reparar sus ruinas, y nos has brindado tu protección en Judá y en Jerusalén.<note caller="+" style="f"><char style="fr" closed="false">9:8-9 </char><char style="ft" closed="false">En el hebreo de estos versículos, Esdras se refiere a Dios en tercera persona.</char></note></para>
+  <para style="pm">
+    <verse number="10" style="v"/>»Y ahora, después de lo que hemos hecho, ¿qué podemos decirte? No hemos cumplido los mandamientos <verse number="11" style="v"/>que nos diste por medio de tus siervos los profetas, cuando nos advertiste: “La tierra que vais a poseer está corrompida por la <char style="w" lemma="impuro">impureza</char> de los pueblos que la habitan, pues de un extremo a otro ellos la han llenado con sus abominaciones. <verse number="12" style="v"/>Por eso, no permitáis vosotros que vuestras hijas ni vuestros hijos se casen con los de esos pueblos. Nunca busquéis el <char style="w">bienestar</char> ni la prosperidad que tienen ellos, para que vosotros os mantengáis fuertes y comáis de los frutos de la buena tierra y luego se la dejéis por herencia a vuestros descendientes para siempre”.</para>
+  <para style="pm">
+    <verse number="13" style="v"/>»Después de todo lo que nos ha acontecido por causa de nuestras maldades y de nuestra grave culpa, reconocemos que tú, Dios nuestro, no nos has dado el castigo que merecemos, sino que nos has dejado un remanente. <verse number="14" style="v"/>¿Cómo es posible que volvamos a quebrantar tus mandamientos contrayendo matrimonio con las mujeres de estos pueblos que tienen prácticas abominables? ¿Acaso no sería justo que te enojaras con nosotros y nos destruyeras hasta no dejar remanente ni que nadie escape? <verse number="15" style="v"/>¡<char style="nd">Señor</char>, Dios de Israel, tú eres justo! Tú has permitido que hasta hoy sobrevivamos como remanente. Culpables como somos, estamos en tu presencia, aunque no lo merecemos».</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">El pueblo reconoce su pecado</para>
+  <para style="p">
+    <verse number="1" style="v"/>Mientras Esdras oraba y hacía esta confesión llorando y postrándose delante del templo de Dios, a su alrededor se reunió una gran asamblea de hombres, mujeres y niños del pueblo de Israel. Toda la multitud lloraba amargamente. <verse number="2" style="v"/>Entonces uno de los descendientes de Elam, que se llamaba Secanías hijo de Jehiel, se dirigió a Esdras y le dijo: «Nosotros hemos sido infieles a nuestro Dios, pues tomamos por esposas a mujeres de los pueblos vecinos; pero todavía hay esperanza para Israel. <verse number="3" style="v"/>Hagamos un <char style="w">pacto</char> con nuestro Dios, comprometiéndonos a expulsar a todas estas mujeres y a sus hijos, conforme al consejo que nos has dado tú, y todos los que aman el mandamiento de Dios. ¡Que todo se haga de acuerdo con la ley! <verse number="4" style="v"/>Levántate, pues esta es tu responsabilidad; nosotros te apoyamos. ¡Cobra ánimo y pon manos a la obra!»</para>
+  <para style="p">
+    <verse number="5" style="v"/>Al oír esto, Esdras se levantó e hizo que los jefes de los sacerdotes, los levitas y todo el pueblo de Israel se comprometieran, bajo juramento, a cumplir con lo que habían dicho; y ellos lo juraron. <verse number="6" style="v"/>Luego Esdras salió del templo de Dios y fue a la habitación de Johanán hijo de Eliasib. Allí se quedó sin comer pan ni beber agua, porque estaba muy deprimido por causa de la infidelidad de los repatriados.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Posteriormente anunciaron en Judá y Jerusalén que todos los que habían regresado del cautiverio debían reunirse en Jerusalén. <verse number="8" style="v"/>Y advirtieron que a todo el que no se presentara en el plazo de tres días, según la decisión de los jefes y <char style="w" lemma="dirigente">dirigentes</char>, se le quitarían sus propiedades y se le expulsaría de la asamblea de los repatriados.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Por lo tanto, a los tres días, en el día veinte del mes noveno, se reunieron en Jerusalén todos los <char style="w" lemma="hombre">hombres</char> de Judá y de Benjamín. Todo el pueblo se sentó en la plaza del templo de Dios, temblando por causa de ese asunto e intimidados por el aguacero que caía. <verse number="10" style="v"/>Entonces el sacerdote Esdras se puso en pie y les dijo:</para>
+  <para style="p">―Vosotros habéis sido infieles y habéis aumentado la culpa de Israel, pues habéis contraído matrimonio con mujeres extranjeras. <verse number="11" style="v"/>Ahora, pues, confesad vuestro pecado<note caller="+" style="f"><char style="fr" closed="false">10:11 </char><char style="fq" closed="false">confesad vuestro pecado</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">dad gracias.</char></note> al <char style="nd">Señor</char>, Dios de nuestros antepasados, y haced lo que a él le agrada. Separaos de los <char style="w">paganos</char> y de las mujeres extranjeras.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Toda la asamblea contestó en alta voz:</para>
+  <para style="p">―Haremos todo lo que nos has dicho. <verse number="13" style="v"/>Pero no podemos quedarnos a la intemperie; estamos en época de lluvias y esto no es asunto de uno o dos días, pues somos muchos los que hemos cometido este pecado. <verse number="14" style="v"/>Proponemos que se queden solo los jefes del pueblo, y que todos los que viven en nuestras ciudades y se han casado con mujeres extranjeras se presenten en fechas determinadas, junto con los dirigentes y jueces de cada ciudad, hasta que se aparte de nosotros la terrible ira de nuestro Dios por causa de esta infidelidad.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Solo se opusieron Jonatán hijo de Asael y Jahazías hijo de Ticvá, apoyados por los levitas Mesulán y Sabetay. <verse number="16" style="v"/>Los que habían regresado del cautiverio actuaron según lo que se había convenido. Entonces el sacerdote Esdras seleccionó y llamó por nombre a ciertos jefes de familia, y a partir del primer día del mes décimo se reunió con ellos para tratar cada caso. <verse number="17" style="v"/>Y el primer día del mes primero terminaron de resolver los casos de todos los que se habían casado con mujeres extranjeras.</para>
+  <para style="s1">Lista de los culpables</para>
+  <para style="li1">
+    <verse number="18" style="v"/>Los descendientes de los sacerdotes que se habían casado con mujeres extranjeras fueron los siguientes:</para>
+  <para style="b"/>
+  <para style="li1">De Jesúa hijo de Josadac, y de sus hermanos: Maseías, Eliezer, Jarib y Guedalías, <verse number="19" style="v"/>los cuales se comprometieron a despedir a sus mujeres extranjeras, y ofrecieron un carnero como ofrenda de <char style="w">expiación</char> por su pecado.</para>
+  <para style="li1">
+    <verse number="20" style="v"/>De Imer: Jananí y Zebadías.</para>
+  <para style="li1">
+    <verse number="21" style="v"/>De Jarín: Maseías, Elías, Semaías, Jehiel y Uzías.</para>
+  <para style="li1">
+    <verse number="22" style="v"/>De Pasur: Elihoenay, Maseías, Ismael, Natanael, Jozabad y Elasá.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="23" style="v"/>De los levitas:</para>
+  <para style="b"/>
+  <para style="li1">Jozabad, Simí, Quelaías o Quelitá, Petaías, Judá y Eliezer.</para>
+  <para style="li1">
+    <verse number="24" style="v"/>De los cantores: Eliasib.</para>
+  <para style="li1">De los porteros: Salún, Telén y Uri.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="25" style="v"/>Y de los demás israelitas:</para>
+  <para style="b"/>
+  <para style="li1">De Parós: Ramías, Jezías, Malquías, Mijamín, Eleazar, Malquías y Benaías.</para>
+  <para style="li1">
+    <verse number="26" style="v"/>De Elam: Matanías, Zacarías, Jehiel, Abdí, Jeremot y Elías.</para>
+  <para style="li1">
+    <verse number="27" style="v"/>De Zatú: Elihoenay, Eliasib, Matanías, Jeremot, Zabad y Azizá.</para>
+  <para style="li1">
+    <verse number="28" style="v"/>De Bebay: Johanán, Jananías, Zabay y Atlay.</para>
+  <para style="li1">
+    <verse number="29" style="v"/>De Baní: Mesulán, Maluc, Adaías, Yasub, Seal y Ramot.</para>
+  <para style="li1">
+    <verse number="30" style="v"/>De Pajat Moab: Adná, Quelal, Benaías, Maseías, Matanías, Bezalel, Binuy y Manasés.</para>
+  <para style="li1">
+    <verse number="31" style="v"/>De Jarín: Eliezer, Isías, Malquías, Semaías, Simeón, <verse number="32" style="v"/>Benjamín, Maluc y Semarías.</para>
+  <para style="li1">
+    <verse number="33" style="v"/>De Jasún: Matenay, Matatá, Zabad, Elifelet, Jeremay, Manasés y Simí.</para>
+  <para style="li1">
+    <verse number="34" style="v"/>De Baní: Maday, Amirán, Uel, <verse number="35" style="v"/>Benaías, Bedías, Queluhi, <verse number="36" style="v"/>Vanías, Meremot, Eliasib, <verse number="37" style="v"/>Matanías, Matenay, Jasay.</para>
+  <para style="li1">
+    <verse number="38" style="v"/>De Binuy:<note caller="+" style="f"><char style="fr" closed="false">10:38 </char><char style="fq" closed="false">de Binuy</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">Bani, Binuy.</char></note> Simí, <verse number="39" style="v"/>Selemías, Natán, Adaías, <verse number="40" style="v"/>Macnadebay, Sasay, Saray, <verse number="41" style="v"/>Azarel, Selemías, Semarías, <verse number="42" style="v"/>Salún, Amarías y José.</para>
+  <para style="li1">
+    <verse number="43" style="v"/>De Nebo: Jeyel, Matatías, Zabad, Zebiná, Jadau, Joel y Benaías.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="44" style="v"/>Todos estos se habían casado con mujeres extranjeras, y algunos habían tenido hijos con ellas.</para>
+</usx>

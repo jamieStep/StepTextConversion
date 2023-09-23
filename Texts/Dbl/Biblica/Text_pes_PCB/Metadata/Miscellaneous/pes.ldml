@@ -1,0 +1,39 @@
+﻿<ldml><identity><version number="" /><generation date="0001-01-01T00:00:00Z" /><language type="pes" /></identity><characters><exemplarCharacters>[\u0627-\u0634\u0639\u063A\u0642-\u0648\u067E\u0686\u0695\u0698\u06A4\u06AF\u06B5\u06BE\u06C6\u06CC\u06CE{\u0622\u0623}{\u0627\u064B}{\u0627\u064E}{\u0627\u064F}{\u0627\u0650}{\u0627\u0651}{\u0628\u064E}{\u0628\u064F}{\u0628\u0650}{\u0628\u0651}{\u0628\u0651\u064E}{\u062A\u064E}{\u062A\u064F}{\u062A\u0650}{\u062A\u0651}{\u062C\u064E}{\u062C\u064F}{\u062C\u0650}{\u062C\u0651}{\u062D\u064E}{\u062D\u064F}{\u062D\u0650}{\u062D\u0651}{\u062E\u064E}{\u062E\u064F}{\u062E\u0650}{\u062F\u064E}{\u062F\u064F}{\u062F\u0650}{\u062F\u0651}{\u062F\u0652}{\u0631\u064E}{\u0631\u064F}{\u0631\u0650}{\u0631\u0651}{\u0632\u064E}{\u0632\u064F}{\u0632\u0651}{\u0640\u0641}]</exemplarCharacters><exemplarCharacters type="punctuation">[!(),.\:?\u00AB\u00BB\u060C\u061B\u061F\u066B\u066C\u200C\u200D\u2026]</exemplarCharacters><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:exemplarCharacters type="diacritics">[\u0640]</sil:exemplarCharacters><sil:exemplarCharacters type="wordFormingPunctuation">[]</sil:exemplarCharacters><sil:exemplarCharacters type="footnotes">[* {**} {***} {****} {*****} {******}]</sil:exemplarCharacters><sil:exemplarCharacters type="crossrefs">[]</sil:exemplarCharacters><sil:exemplarCharacters type="verseSegments">[a b]</sil:exemplarCharacters><sil:exemplarCharacters type="wordBreaks">[]</sil:exemplarCharacters></special></characters><delimiters><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:matched-pairs><sil:matched-pair open="(" close=")" paraClose="false" /><sil:matched-pair open="[" close="]" paraClose="false" /><sil:matched-pair open="{" close="}" paraClose="false" /></sil:matched-pairs><sil:quotation-marks paraContinueType="all"><sil:quotationContinue>«</sil:quotationContinue><sil:alternateQuotationContinue>«</sil:alternateQuotationContinue><sil:quotation open="«" close="»" continue="«" level="3" /><sil:quotation open="" continue="«" level="1" type="narrative" /><sil:quotation open="" continue="«" level="2" type="narrative" /><sil:quotation open="" continue="«" level="3" type="narrative" /></sil:quotation-marks></special><quotationStart>«</quotationStart><quotationEnd>»</quotationEnd><alternateQuotationStart>«</alternateQuotationStart><alternateQuotationEnd>»</alternateQuotationEnd></delimiters><layout><orientation><characterOrder>right-to-left</characterOrder></orientation></layout><collations><defaultCollation>standard</defaultCollation><collation type="standard"><cr><![CDATA[&[before 1] [first regular] < ء < آ < أ < ؤ < ئ << ئُ < ا << اً << اَ << اُ << اِ < ب << بَ << بَّ << بُ << بِ << بّ < ت << تَ << تُ << تِ << تّ << تْ < ث << ثَ < ج << جَ << جُ << جِ << جّ < ح << حَ << حُ << حِ << حّ < خ << خَ << خُ << خِ < د << دَ << دُ << دِ << دّ << دْ < ذ << ذّ < ر << رَ << رُ << رِ << رّ < ز << زَ << زُ << زِ << زّ < س << سَ << سُ << سِ << سّ < ش << شَ << شُ << شِ < ص << صَ << صِ << صّ < ض < ط << طَ << طِ << طّ < ظ < ع << عَ << عُ << عِ << عّ < غ << غَ << غُ < ف << فَ << فُ << فِ << فّ << فْ < ق << قَ << قُ << قِ < ك << كَ << كُ << كِ << كّ < ل << لَ << لُ << لِ << لّ << لْ < م << مَ << مُ << مِ << مّ < ن << نَ << نُ << نِ << نِّ << نّ << نْ < ه << هَ << هِ << هٔ < و << وَ << وَّ << وُ << وِ << وّ << وْ < ي << يَ << يُ << يِ << يّ < پ << پَ << پُ << پِ < چ < ژ < ک << کِ < گ << گَ << گُ << گِ < ی << یٰ]]></cr><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:simple><![CDATA[ء
+آ
+أ
+ؤ
+ئ ئُ
+ا اً اَ اُ اِ
+ب بَ بَّ بُ بِ بّ
+ت تَ تُ تِ تّ تْ
+ث ثَ
+ج جَ جُ جِ جّ
+ح حَ حُ حِ حّ
+خ خَ خُ خِ
+د دَ دُ دِ دّ دْ
+ذ ذّ
+ر رَ رُ رِ رّ
+ز زَ زُ زِ زّ
+س سَ سُ سِ سّ
+ش شَ شُ شِ
+ص صَ صِ صّ
+ض
+ط طَ طِ طّ
+ظ
+ع عَ عُ عِ عّ
+غ غَ غُ
+ف فَ فُ فِ فّ فْ
+ق قَ قُ قِ
+ك كَ كُ كِ كّ
+ل لَ لُ لِ لّ لْ
+م مَ مُ مِ مّ
+ن نَ نُ نِ نِّ نّ نْ
+ه هَ هِ هٔ
+و وَ وَّ وُ وِ وّ وْ
+ي يَ يُ يِ يّ
+پ پَ پُ پِ
+چ
+ژ
+ک کِ
+گ گَ گُ گِ
+ی یٰ]]></sil:simple></special></collation></collations><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:external-resources><sil:font name="Arabic Typesetting" /><sil:font name="Naskh Unicode" size="2.2" /><sil:font name="Adobe Arabic" size="1.6" /></sil:external-resources></special></ldml>

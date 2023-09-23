@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="HAB" style="id">- New Amharic Standard Version, 2020 Update</book>
+  <para style="rem">Copyright © 2001 by Biblica, Inc.</para>
+  <para style="h">ዕንባቆም</para>
+  <para style="toc1">ትንቢተ ዕንባቆም</para>
+  <para style="toc2">ዕንባቆም</para>
+  <para style="toc3">ዕን</para>
+  <para style="mt1">ትንቢተ ዕንባቆም</para>
+  <chapter number="1" style="c" sid="HAB 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HAB 1:1"/>ነቢዩ ዕንባቆም የተቀበለው ንግር፤<verse eid="HAB 1:1"/></para>
+  <para style="b"/>
+  <para style="s1">የዕንባቆም ማጕረምረም</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HAB 1:2"/>
+    <char style="nd">እግዚአብሔር</char> ሆይ፤ ለርዳታ እየተጣራሁ፣</para>
+  <para style="q2" vid="HAB 1:2">አንተ የማትሰማው እስከ መቼ ነው?</para>
+  <para style="q1" vid="HAB 1:2">“ግፍ በዛ” ብዬ እየጮኽሁ፣</para>
+  <para style="q2" vid="HAB 1:2">አንተ የማታድነው እስከ መቼ ነው?<verse eid="HAB 1:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HAB 1:3"/>ስለ ምን በደልን እንዳይ አደረግኸኝ?</para>
+  <para style="q2" vid="HAB 1:3">እንዴትስ ግፍ ሲፈጸም ትታገሣለህ?</para>
+  <para style="q1" vid="HAB 1:3">ጥፋትና ግፍ በፊቴ አለ፤</para>
+  <para style="q2" vid="HAB 1:3">ጠብና ግጭት በዝቷል።<verse eid="HAB 1:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HAB 1:4"/>ስለዚህ ሕግ ላልቷል፤</para>
+  <para style="q2" vid="HAB 1:4">ፍትሕ ድል አይነሣም፤</para>
+  <para style="q1" vid="HAB 1:4">ፍትሕ ይጣመም ዘንድ፣</para>
+  <para style="q2" vid="HAB 1:4">ክፉዎች ጻድቃንን ይከብባሉ።<verse eid="HAB 1:4"/></para>
+  <para style="s1">
+    <char style="nd">የእግዚአብሔር</char> መልስ</para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HAB 1:5"/>“ቢነገራችሁም እንኳ፣</para>
+  <para style="q2" vid="HAB 1:5">የማታምኑትን እናንተን፣</para>
+  <para style="q1" vid="HAB 1:5">በዘመናችሁ አንድ ነገር ስለማደርግ፣</para>
+  <para style="q2" vid="HAB 1:5">እነሆ፤ ሕዝቡን እዩ፤ ተመልከቱም፤</para>
+  <para style="q2" vid="HAB 1:5">እጅግም ተደነቁ።<verse eid="HAB 1:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HAB 1:6"/>የራሳቸው ያልሆኑትን መኖሪያ ስፍራዎች ለመያዝ፣</para>
+  <para style="q2" vid="HAB 1:6">ምድርን ሁሉ የሚወርሩትን፣</para>
+  <para style="q1" vid="HAB 1:6">ጨካኝና ፈጣን የሆኑትን፣</para>
+  <para style="q2" vid="HAB 1:6">ባቢሎናውያንን<note caller="+" style="f"><char style="fr" closed="false">1፥6 </char><char style="fqa" closed="false">ከለዳውያን </char><char style="ft" closed="false">ማለት ነው።</char></note> አስነሣለሁ።<verse eid="HAB 1:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HAB 1:7"/>እነርሱም የሚያስፈሩና የሚያስደነግጡ ናቸው፤</para>
+  <para style="q2" vid="HAB 1:7">ፍርዳቸውና ክብራቸው፣</para>
+  <para style="q2" vid="HAB 1:7">ከራሳቸው ይወጣል።<verse eid="HAB 1:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HAB 1:8"/>ፈረሶቻቸው ከነብር ይልቅ ፈጣኖች፣</para>
+  <para style="q2" vid="HAB 1:8">ከማታም ተኵላ ይልቅ ጨካኞች ናቸው።</para>
+  <para style="q1" vid="HAB 1:8">ፈረሰኞቻቸው በፍጥነት ይጋልባሉ፤</para>
+  <para style="q2" vid="HAB 1:8">ከሩቅ ስፍራም ይመጣሉ።</para>
+  <para style="q1" vid="HAB 1:8">ነጥቆ ለመብላት እንደሚቸኵል አሞራ ይበርራሉ፤<verse eid="HAB 1:8"/></para>
+  <para style="q2">
+    <verse number="9" style="v" sid="HAB 1:9"/>ሁሉም ለዐመፅ ታጥቀው ይመጣሉ።</para>
+  <para style="q1" vid="HAB 1:9">ሰራዊታቸው<note caller="+" style="f"><char style="fr" closed="false">1፥9 </char><char style="ft" closed="false">የዕብራይስጡ ቃል ትርጕም በትክክል አይታወቅም።</char></note> እንደ ምድረ በዳ ነፋስ ወደ ፊት ይገሠግሣል፤</para>
+  <para style="q2" vid="HAB 1:9">ምርኮኞችንም እንደ አሸዋ ይሰበስባል።<verse eid="HAB 1:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HAB 1:10"/>ነገሥታትን ይንቃል፤</para>
+  <para style="q2" vid="HAB 1:10">በገዦችም ላይ ያፌዛል፤</para>
+  <para style="q1" vid="HAB 1:10">በምሽግ ሁሉ ላይ ይሥቃል፤</para>
+  <para style="q2" vid="HAB 1:10">የዐፈር ቍልል ሠርቶም ይይዘዋል።<verse eid="HAB 1:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HAB 1:11"/>ከዚያም በኋላ እንደ ነፋስ ዐልፎ ይሄዳል፤</para>
+  <para style="q2" vid="HAB 1:11">ጕልበታቸውን አምላካቸው ያደረጉ በደለኞች ናቸው።”<verse eid="HAB 1:11"/></para>
+  <para style="s1">የዕንባቆም ዳግመኛ ማጕረምረም</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HAB 1:12"/>
+    <char style="nd">እግዚአብሔር</char> ሆይ፤ ከዘላለም ጀምሮ ያለህ አይደለህምን?</para>
+  <para style="q2" vid="HAB 1:12">የእኔ አምላክ፣ የእኔ ቅዱስ እኛ አንሞትም፤</para>
+  <para style="q1" vid="HAB 1:12">
+    <char style="nd">እግዚአብሔር</char> ሆይ፤ እንዲፈርዱ ሾመሃቸዋል፤</para>
+  <para style="q2" vid="HAB 1:12">ዐለት ሆይ፤ ይቀጡ ዘንድ ሥልጣን ሰጠሃቸው።<verse eid="HAB 1:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HAB 1:13"/>ዐይኖችህ ክፉውን እንዳያዩ እጅግ ንጹሓን ናቸው፤</para>
+  <para style="q2" vid="HAB 1:13">አንተ በደልን መታገሥ አትችልም፤</para>
+  <para style="q1" vid="HAB 1:13">ታዲያ፣ አታላዮችን ለምን ትታገሣለህ?</para>
+  <para style="q2" vid="HAB 1:13">ክፉው ከራሱ ይልቅ ጻድቅ የሆነውን ሲውጠውስ፣</para>
+  <para style="q2" vid="HAB 1:13">ለምን ዝም ትላለህ?<verse eid="HAB 1:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HAB 1:14"/>አንተ ሰዎችን በባሕር ውስጥ እንዳለ ዓሣ፣</para>
+  <para style="q2" vid="HAB 1:14">ገዥ እንደሌላቸውም የባሕር ፍጥረታት አደረግህ።<verse eid="HAB 1:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HAB 1:15"/>ክፉ ጠላት ሁሉንም በመንጠቆ ያወጣቸዋል፤</para>
+  <para style="q2" vid="HAB 1:15">በመረቡ ይይዛቸዋል፤</para>
+  <para style="q1" vid="HAB 1:15">በአሽክላው ውስጥ ይሰበስባቸዋል፤</para>
+  <para style="q2" vid="HAB 1:15">በዚህም ይደሰታል፤ ሐሤትም ያደርጋል።<verse eid="HAB 1:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HAB 1:16"/>በእነርሱ ተዝናንቶ ይኖራልና፤</para>
+  <para style="q2" vid="HAB 1:16">ምግቡም ሠብቷል።</para>
+  <para style="q1" vid="HAB 1:16">ስለዚህ ለመረቡ ይሠዋል፤</para>
+  <para style="q2" vid="HAB 1:16">ለአሽክላውም ያጥናል።<verse eid="HAB 1:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="HAB 1:17"/>ታዲያ መረቡን ባለማቋረጥ መጣል፣</para>
+  <para style="q2" vid="HAB 1:17">ሕዝቦችንስ ያለ ርኅራኄ መግደል አለበትን?<verse eid="HAB 1:17"/></para>
+  <para style="b"/>
+  <chapter eid="HAB 1"/>
+  <chapter number="2" style="c" sid="HAB 2"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="HAB 2:1"/>በመጠበቂያዬ ላይ እቆማለሁ፤</para>
+  <para style="q2" vid="HAB 2:1">በምሽጉ ቅጥር ላይ ወጥቼ እቈያለሁ፤</para>
+  <para style="q1" vid="HAB 2:1">ምን እንደሚለኝ፣</para>
+  <para style="q2" vid="HAB 2:1">ለክርክሩም<note caller="+" style="f"><char style="fr" closed="false">2፥1 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">በተገሠጽሁ ጊዜ የምሰጠውን ምላሽ</char></note> የምሰጠውን መልስ ለማወቅ እጠባበቃለሁ።<verse eid="HAB 2:1"/></para>
+  <para style="s1">የእግዚአብሔር መልስ</para>
+  <para style="p">
+    <verse number="2" style="v" sid="HAB 2:2"/>
+    <char style="nd">እግዚአብሔርም</char> እንዲህ ሲል መለሰ፤</para>
+  <para style="q1" vid="HAB 2:2">“በቀላሉ እንዲነበብ፣</para>
+  <para style="q2" vid="HAB 2:2">ራእዩን ጻፈው፤</para>
+  <para style="q2" vid="HAB 2:2">በሰሌዳም ላይ ቅረጸው።<verse eid="HAB 2:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HAB 2:3"/>ራእዩ የተወሰነለትን ጊዜ ይጠብቃልና፤</para>
+  <para style="q2" vid="HAB 2:3">ስለ መጨረሻውም ይናገራል፤</para>
+  <para style="q2" vid="HAB 2:3">እርሱም አይዋሽም፤</para>
+  <para style="q1" vid="HAB 2:3">የሚዘገይ ቢመስልም ጠብቀው፤</para>
+  <para style="q2" vid="HAB 2:3">በርግጥ ይመጣል<note caller="+" style="f"><char style="fr" closed="false">2፥3 </char><char style="ft" closed="false">የሚመጣ ሰው እንዳለ የሚያመለክቱ አሉ።</char></note>፤ ከቶም አይዘገይም።<verse eid="HAB 2:3"/></para>
+  <para style="b"/>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v" sid="HAB 2:4"/>“እነሆ፤ እርሱ ታብዮአል፤</para>
+  <para style="q2" vid="HAB 2:4">ምኞቱ ቀና አይደለም፤</para>
+  <para style="q2" vid="HAB 2:4">ጻድቅ ግን በእምነት<note caller="+" style="f"><char style="fr" closed="false">2፥4 </char><char style="fqa" closed="false">በታማኝነቱ </char><char style="ft" closed="false">የሚሉ አሉ።</char></note> ይኖራል።<verse eid="HAB 2:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HAB 2:5"/>በርግጥ የወይን ጠጅ አታልሎታል፤</para>
+  <para style="q2" vid="HAB 2:5">ትዕቢተኛ ነው፤ ከቶ አያርፍም፤</para>
+  <para style="q1" vid="HAB 2:5">እንደ ሲኦል<note caller="+" style="f"><char style="fr" closed="false">2፥5 </char><char style="fqa" closed="false">መቃብር </char><char style="ft" closed="false">የሚሉ አሉ።</char></note> ስስታም ነው፣</para>
+  <para style="q2" vid="HAB 2:5">እንደ ሞት ከቶ አይጠግብም፤</para>
+  <para style="q1" vid="HAB 2:5">ሕዝቦችን ለራሱ ይሰበስባል፤</para>
+  <para style="q2" vid="HAB 2:5">ሰዎችንም ሁሉ ማርኮ ይወስዳል።<verse eid="HAB 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HAB 2:6"/>“ታዲያ በእንደዚህ ዐይነቱ ሰው ላይ በማፌዝና በመዘበት እንዲህ እያሉ ሁሉም አይሣለቁበትምን?</para>
+  <para style="q1" vid="HAB 2:6">“ ‘የተሰረቀውን ሸቀጥ ለራሱ ለሚያከማች፣</para>
+  <para style="q2" vid="HAB 2:6">ራሱን በዐመፅ ባለጠጋ ለሚያደርግ ወዮለት!</para>
+  <para style="q2" vid="HAB 2:6">ይህ የሚቀጥለውስ እስከ መቼ ነው?’<verse eid="HAB 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HAB 2:7"/>ባለ ዕዳ ያደረግሃቸው ድንገት አይነሡብህምን?</para>
+  <para style="q2" vid="HAB 2:7">ነቅተውስ አያስደነግጡህምን?</para>
+  <para style="q2" vid="HAB 2:7">በእጃቸውም ትወድቃለህ።<verse eid="HAB 2:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HAB 2:8"/>አንተ ብዙ ሕዝብ ስለ ዘረፍህ፣</para>
+  <para style="q2" vid="HAB 2:8">የተረፉት ሕዝቦች ይዘርፉሃል፤</para>
+  <para style="q1" vid="HAB 2:8">የሰው ደም አፍስሰሃልና፤</para>
+  <para style="q2" vid="HAB 2:8">አገሮችንና ከተሞችን፣ በውስጣቸው የሚኖሩትን ሁሉ አጥፍተሃል።<verse eid="HAB 2:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="HAB 2:9"/>“በተጭበረበረ ትርፍ መኖሪያውን ለሚገነባ፣</para>
+  <para style="q2" vid="HAB 2:9">ከጠላት እጅ ለማምለጥ፣</para>
+  <para style="q2" vid="HAB 2:9">ቤቱን በከፍታ ላይ ለሚሠራ ወዮለት!<verse eid="HAB 2:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HAB 2:10"/>የብዙ ሰዎች ነፍስ እንዲጠፋ አሢረሃል፤</para>
+  <para style="q2" vid="HAB 2:10">በገዛ ቤትህ ላይ ውርደትን፣ በራስህም ላይ ጥፋትን አምጥተሃል።<verse eid="HAB 2:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HAB 2:11"/>ድንጋይ ከቅጥሩ ውስጥ ይጮኻል፤</para>
+  <para style="q2" vid="HAB 2:11">ከዕንጨት የተሠሩ ተሸካሚዎችም ይመልሱለታል።<verse eid="HAB 2:11"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v" sid="HAB 2:12"/>“ከተማን ደም በማፍሰስ ለሚሠራ፣</para>
+  <para style="q2" vid="HAB 2:12">በወንጀልም ለሚመሠርታት ወዮለት።<verse eid="HAB 2:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HAB 2:13"/>ሰዎች፣ ለእሳት ማገዶ እንዲሆን እንዲለፉ፣</para>
+  <para style="q2" vid="HAB 2:13">ሕዝቦችም በከንቱ እንዲደክሙ፣</para>
+  <para style="q2" vid="HAB 2:13">
+    <char style="nd">እግዚአብሔር</char> ጸባኦት ወስኖ የለምን?<verse eid="HAB 2:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HAB 2:14"/>ውሃ ባሕርን እንደሚሸፍን ሁሉ፣</para>
+  <para style="q2" vid="HAB 2:14">ምድርም <char style="nd">የእግዚአብሔርን</char> ክብር በማወቅ ትሞላለችና።<verse eid="HAB 2:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="HAB 2:15"/>“ኀፍረተ ሥጋቸውን ለማየት፣</para>
+  <para style="q2" vid="HAB 2:15">ባልንጀሮቹን ለሚያጠጣ፣</para>
+  <para style="q2" vid="HAB 2:15">እስኪሰክሩም ድረስ ወይን ለሚቀዳላቸው ወዮለት!<verse eid="HAB 2:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HAB 2:16"/>በክብር ፈንታ ዕፍረት ትሞላለህ፤</para>
+  <para style="q2" vid="HAB 2:16">አሁን ደግሞ ተራው የአንተ ነውና፤ ጠጣ፤ ኀፍረተ ሥጋህም ይገለጥ፤</para>
+  <para style="q1" vid="HAB 2:16">
+    <char style="nd">በእግዚአብሔር</char> ቀኝ እጅ ያለው ጽዋ ይመለስብሃል፤</para>
+  <para style="q2" vid="HAB 2:16">ክብርህንም ውርደት ይሸፍነዋል።<verse eid="HAB 2:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="HAB 2:17"/>በሊባኖስ ላይ የሠራኸው ግፍ ያጥለቀልቅሃል፤</para>
+  <para style="q2" vid="HAB 2:17">እንስሳቱን ማጥፋትህም ያስደነግጥሃል፤</para>
+  <para style="q1" vid="HAB 2:17">የሰው ደም አፍስሰሃልና፤</para>
+  <para style="q2" vid="HAB 2:17">አገሮችንና ከተሞችን በውስጣቸው የሚኖሩትንም ሁሉ አጥፍተሃልና።<verse eid="HAB 2:17"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v" sid="HAB 2:18"/>“የሰው እጅ የቀረጸው ጣዖት፣</para>
+  <para style="q2" vid="HAB 2:18">ሐሰትንም የሚናገር ምስል ምን ፋይዳ አለው?</para>
+  <para style="q1" vid="HAB 2:18">ሠሪው በገዛ እጁ ሥራ ይታመናልና፣</para>
+  <para style="q2" vid="HAB 2:18">መናገር የማይችሉ ጣዖታትን ይሠራልና።<verse eid="HAB 2:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="HAB 2:19"/>ዕንጨቱን፣ ‘ንቃ!’</para>
+  <para style="q2" vid="HAB 2:19">ሕይወት የሌለውንም ድንጋይ፣ ‘ተነሣ!’ ለሚል ወዮለት፤</para>
+  <para style="q1" vid="HAB 2:19">በውኑ ማስተማር ይችላልን?</para>
+  <para style="q2" vid="HAB 2:19">እነሆ፤ በወርቅና በብር ተለብጧል፤</para>
+  <para style="q2" vid="HAB 2:19">እስትንፋስም የለውም።”<verse eid="HAB 2:19"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v" sid="HAB 2:20"/>
+    <char style="nd">እግዚአብሔር</char> ግን በተቀደሰ መቅደሱ አለ፣</para>
+  <para style="q2" vid="HAB 2:20">ምድር ሁሉ በፊቱ ጸጥ ትበል።<verse eid="HAB 2:20"/></para>
+  <chapter eid="HAB 2"/>
+  <chapter number="3" style="c" sid="HAB 3"/>
+  <para style="s1">የዕንባቆም ጸሎት</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HAB 3:1"/>በዝማሬ የቀረበ የነቢዩ የዕንባቆም ጸሎት፤ በሺግዮኖት።<note caller="+" style="f"><char style="fr" closed="false">3፥1 </char><char style="ft" closed="false">የሥነ ጽሑፍ ወይም </char><char style="fqa" closed="false">የሙዚቃ ቋንቋ </char><char style="ft" closed="false">ሳይሆን አይቀርም።</char></note><verse eid="HAB 3:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HAB 3:2"/>
+    <char style="nd">እግዚአብሔር</char> ሆይ፤ ዝናህን ሰምቻለሁ፤</para>
+  <para style="q2" vid="HAB 3:2">
+    <char style="nd">እግዚአብሔር</char> ሆይ፤ ሥራህም አስፈራኝ፤</para>
+  <para style="q1" vid="HAB 3:2">በእኛ ዘመን አድሳቸው፤</para>
+  <para style="q2" vid="HAB 3:2">በእኛም ጊዜ እንዲታወቁ አድርግ፤</para>
+  <para style="q2" vid="HAB 3:2">በመዓት ጊዜ ምሕረትን ዐስብ።<verse eid="HAB 3:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="HAB 3:3"/>እግዚአብሔር ከቴማን፣</para>
+  <para style="q2" vid="HAB 3:3">ቅዱሱም ከፋራን ተራራ መጣ። <char style="qs">ሴላ</char><note caller="+" style="f"><char style="fr" closed="false">3፥3 </char><char style="ft" closed="false">ትርጕሙ በትክክል የማይታወቅ ቢሆንም የዜማ ቃል ሳይሆን አይቀርም።</char></note></para>
+  <para style="q1" vid="HAB 3:3">ክብሩ ሰማያትን ሸፈነ፤</para>
+  <para style="q2" vid="HAB 3:3">ውዳሴውም ምድርን ሞላ።<verse eid="HAB 3:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HAB 3:4"/>ጸዳሉ እንደ ፀሓይ ብርሃን ነው፤</para>
+  <para style="q2" vid="HAB 3:4">ጨረር ከእጁ ወጣ፤</para>
+  <para style="q2" vid="HAB 3:4">ኀይሉም በዚያ ተሰውሯል።<verse eid="HAB 3:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HAB 3:5"/>መቅሠፍት በፊቱ ሄደ፤</para>
+  <para style="q2" vid="HAB 3:5">ቸነፈርም እግር በእግር ተከተለው።<verse eid="HAB 3:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HAB 3:6"/>ቆመ፤ ምድርን አንቀጠቀጠ፤</para>
+  <para style="q2" vid="HAB 3:6">ተመለከተ፤ ሕዝቦችን አብረከረከ፤</para>
+  <para style="q1" vid="HAB 3:6">የዘላለም ተራሮች ተፈረካከሱ፤</para>
+  <para style="q2" vid="HAB 3:6">የጥንት ኰረብቶችም ፈራረሱ፤</para>
+  <para style="q2" vid="HAB 3:6">መንገዱ ዘላለማዊ ነው።<verse eid="HAB 3:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HAB 3:7"/>የኢትዮጵያ ድንኳኖች ሲጨነቁ፣</para>
+  <para style="q2" vid="HAB 3:7">የምድያምም መኖሪያዎች ሲታወኩ አየሁ።<verse eid="HAB 3:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="HAB 3:8"/>
+    <char style="nd">እግዚአብሔር</char> ሆይ፤ በወንዞች ላይ ተቈጣህን?</para>
+  <para style="q2" vid="HAB 3:8">መዓትህስ በምንጮች ላይ ነበርን?</para>
+  <para style="q1" vid="HAB 3:8">በፈረሶችህና በድል አድራጊ ሠረገሎችህ</para>
+  <para style="q2" vid="HAB 3:8">በጋለብህ ጊዜ፣</para>
+  <para style="q2" vid="HAB 3:8">በባሕር ላይ ተቈጥተህ ነበርን?<verse eid="HAB 3:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HAB 3:9"/>ቀስትህን አዘጋጀህ፤</para>
+  <para style="q2" vid="HAB 3:9">ፍላጻም እንዲመጣልህ አዘዝህ፤ <char style="qs">ሴላ</char></para>
+  <para style="q1" vid="HAB 3:9">ምድርን በወንዞች ከፈልህ፤<verse eid="HAB 3:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HAB 3:10"/>ተራሮች አዩህ፤ ተጨነቁም፤</para>
+  <para style="q1" vid="HAB 3:10">የውሃ ሞገድ ዐልፎ ሄደ፤</para>
+  <para style="q2" vid="HAB 3:10">ቀላዩ ደነፋ፤</para>
+  <para style="q2" vid="HAB 3:10">ማዕበሉንም ወደ ላይ አነሣ።<verse eid="HAB 3:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="HAB 3:11"/>ከሚወረወሩ ፍላጾችህ፣</para>
+  <para style="q2" vid="HAB 3:11">ከሚያብረቀርቅ የጦርህ ነጸብራቅ የተነሣም፣</para>
+  <para style="q2" vid="HAB 3:11">ፀሓይና ጨረቃ በቦታቸው ቆሙ።<verse eid="HAB 3:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HAB 3:12"/>በምድር ላይ በመዓት ተመላለስህ፤</para>
+  <para style="q2" vid="HAB 3:12">ሕዝቦችንም በቍጣ ረገጥሃቸው።<verse eid="HAB 3:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HAB 3:13"/>ሕዝብህን ለመታደግ፣</para>
+  <para style="q2" vid="HAB 3:13">የቀባኸውንም ለማዳን ወጣህ፤</para>
+  <para style="q1" vid="HAB 3:13">የክፋትን ምድር መሪ ቀጠቀጥህ፤</para>
+  <para style="q2" vid="HAB 3:13">ከራስ ጠጕሩ እስከ እግር ጥፍሩም ዕርቃኑን አስቀረኸው። <char style="qs">ሴላ</char><verse eid="HAB 3:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HAB 3:14"/>እንደ ዐውሎ ነፋስ ሊበታትነን የመጣውን፣</para>
+  <para style="q2" vid="HAB 3:14">ምስኪኑን በስውር በመዋጥ የሚደሰተውን፣</para>
+  <para style="q1" vid="HAB 3:14">የሰራዊት አለቃ ራስ፣</para>
+  <para style="q2" vid="HAB 3:14">በገዛ ጦሩ ወጋህ።<verse eid="HAB 3:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HAB 3:15"/>ታላላቅ ውሆችን በመናጥ፣</para>
+  <para style="q2" vid="HAB 3:15">ባሕሩን በፈረሶችህ ረገጥህ።<verse eid="HAB 3:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HAB 3:16"/>እኔ ሰማሁ፤ ልቤም ደነገጠብኝ፤</para>
+  <para style="q2" vid="HAB 3:16">ከንፈሬ ከድምፁ የተነሣ ተንቀጠቀጠ፤</para>
+  <para style="q1" vid="HAB 3:16">ፍርሀት እስከ ዐጥንቴ ዘልቆ ገባ፤</para>
+  <para style="q2" vid="HAB 3:16">እግሬም ተብረከረከ፤</para>
+  <para style="q1" vid="HAB 3:16">ሆኖም በሚወርረን ሕዝብ ላይ እስኪመጣ ድረስ፣</para>
+  <para style="q2" vid="HAB 3:16">የጥፋትን ቀን በትዕግሥት እጠባበቃለሁ።<verse eid="HAB 3:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="HAB 3:17"/>ምንም እንኳ የበለስ ዛፍ ባያፈራ፣</para>
+  <para style="q2" vid="HAB 3:17">ከወይን ተክልም ፍሬ ባይገኝ፣</para>
+  <para style="q1" vid="HAB 3:17">የወይራም ዛፍ ፍሬ ባይሰጥ፣</para>
+  <para style="q2" vid="HAB 3:17">ዕርሻዎችም ሰብል ባይሰጡ፣</para>
+  <para style="q1" vid="HAB 3:17">የበጎች ጕረኖ እንኳ ባዶውን ቢቀር፣</para>
+  <para style="q2" vid="HAB 3:17">ላሞችም በበረት ውስጥ ባይገኙ፣<verse eid="HAB 3:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="HAB 3:18"/>እኔ ግን <char style="nd">በእግዚአብሔር</char> ደስ ይለኛል፤</para>
+  <para style="q2" vid="HAB 3:18">በድነቴ አምላክ ሐሤት አደርጋለሁ።<verse eid="HAB 3:18"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v" sid="HAB 3:19"/>ጌታ <char style="nd">እግዚአብሔር</char> ኀይሌ ነው፤</para>
+  <para style="q2" vid="HAB 3:19">እግሮቼን እንደ ዋላ እግሮች ያደርጋል፤</para>
+  <para style="q2" vid="HAB 3:19">በከፍታዎችም ላይ ያስሄደኛል።</para>
+  <para style="b" vid="HAB 3:19"/>
+  <para style="q1" vid="HAB 3:19">ለመዘምራን አለቃ፣ በባለ አውታር መሣሪያዎቼ የተዘመረ መዝሙር።<verse eid="HAB 3:19"/></para>
+  <chapter eid="HAB 3"/>
+</usx>

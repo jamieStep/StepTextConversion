@@ -1,0 +1,368 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata id="7db214bcc316fddc" revision="5" version="2.1">
+  <identification>
+    <name>New Chhattisghari Translation (Nawan Chhattisgarhi Anuwad) 2016</name>
+    <nameLocal>पबितर बाईबल नवां नियम</nameLocal>
+    <description>Chhattisgarhi: पबितर बाईबल नवां नियम (New Testament)</description>
+    <abbreviation>NCT</abbreviation>
+    <scope>New Testament</scope>
+    <dateCompleted>2016-11-01</dateCompleted>
+    <bundleProducer>Paratext/8.0.100.47</bundleProducer>
+    <systemId type="paratext">
+      <id>ba69b5bf4b7f2b5f14bb7ce321cc2d2be02661c3</id>
+      <csetId>738434cfc2f62bb9b09e9442edba89bd80c00fac</csetId>
+      <name>hneNCA16</name>
+      <fullName>Migrated to PT8 as hneNCA16- Chhattisgarhi NT 2012 Second edition 2016</fullName>
+    </systemId>
+    <systemId type="ptreg">
+      <id>tLYnRLa7vBi3Wqiv5</id>
+    </systemId>
+  </identification>
+  <type>
+    <medium>text</medium>
+    <isConfidential>false</isConfidential>
+    <hasCharacters>true</hasCharacters>
+    <isTranslation>true</isTranslation>
+    <isExpression>true</isExpression>
+    <translationType>Revision</translationType>
+    <audience>Basic</audience>
+  </type>
+  <relationships />
+  <agencies>
+    <rightsHolder>
+      <abbr>Biblica</abbr>
+      <url>http://www.Biblica.com/permissions</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsHolder>
+    <rightsAdmin>
+      <url>http://www.Biblica.com</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsAdmin>
+    <contributor>
+      <content>true</content>
+      <publication>true</publication>
+      <management>true</management>
+      <finance>true</finance>
+      <qa>true</qa>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </contributor>
+  </agencies>
+  <language>
+    <iso>hne</iso>
+    <name>Chhattisgarhi</name>
+    <script>Devanagari</script>
+    <scriptCode>Zzzz</scriptCode>
+    <scriptDirection>LTR</scriptDirection>
+    <ldml>hne</ldml>
+    <numerals>Arabic</numerals>
+  </language>
+  <countries>
+    <country>
+      <iso>IN</iso>
+      <name>India</name>
+    </country>
+  </countries>
+  <format>
+    <versedParagraphs>false</versedParagraphs>
+  </format>
+  <names>
+    <name id="book-mat">
+      <abbr>मत्ती</abbr>
+      <short>मत्ती</short>
+      <long>मत्ती के लिखे सुघर संदेस</long>
+    </name>
+    <name id="book-mrk">
+      <abbr>मरकुस</abbr>
+      <short>मरकुस</short>
+      <long>मरकुस के लिखे सुघर संदेस</long>
+    </name>
+    <name id="book-luk">
+      <abbr>लूका</abbr>
+      <short>लूका</short>
+      <long>लूका के लिखे सुघर संदेस</long>
+    </name>
+    <name id="book-jhn">
+      <abbr>यूहन्ना</abbr>
+      <short>यूहन्ना</short>
+      <long>यूहन्ना के लिखे सुघर संदेस</long>
+    </name>
+    <name id="book-act">
+      <abbr>प्रेरितमन</abbr>
+      <short>प्रेरितमन के काम</short>
+      <long>लूका के दुवारा लिखे प्रेरितमन के काम</long>
+    </name>
+    <name id="book-rom">
+      <abbr>रोमी</abbr>
+      <short>रोमीमन</short>
+      <long>रोमीमन ला पौलुस के लिखे चिट्ठी</long>
+    </name>
+    <name id="book-1co">
+      <abbr>1 कुरिन्थ</abbr>
+      <short>1 कुरिन्‍थुस</short>
+      <long>कुरिन्‍थुस सहर के कलीसिया ला पौलुस के लिखे पहिली चिट्ठी</long>
+    </name>
+    <name id="book-2co">
+      <abbr>2 कुरिन्थ</abbr>
+      <short>2 कुरिन्‍थुस</short>
+      <long>कुरिन्‍थुस सहर के कलीसिया ला पौलुस के लिखे दूसरा चिट्ठी</long>
+    </name>
+    <name id="book-gal">
+      <abbr>गलाति</abbr>
+      <short>गलातिया</short>
+      <long>गलातिया के कलीसिया ला पौलुस के लिखे चिट्ठी</long>
+    </name>
+    <name id="book-eph">
+      <abbr>इफिसुस</abbr>
+      <short>इफिसुस</short>
+      <long>इफिसुस सहर के कलीसिया ला पौलुस के लिखे चिट्ठी</long>
+    </name>
+    <name id="book-php">
+      <abbr>फिलिप्‍पी</abbr>
+      <short>फिलिप्‍पी</short>
+      <long>फिलिप्‍पी सहर के कलीसिया ला पौलुस के लिखे चिट्ठी</long>
+    </name>
+    <name id="book-col">
+      <abbr>कुलुस्सी</abbr>
+      <short>कुलुस्सी</short>
+      <long>कुलुस्सी सहर कर कलीसिया ला पौलुस के लिखे चिट्ठी</long>
+    </name>
+    <name id="book-1th">
+      <abbr>1थिस्‍सलुनीके</abbr>
+      <short>1 थिस्‍सलुनीके</short>
+      <long>थिस्‍सलुनीके सहर के कलीसिया ला पौलुस के लिखे पहिली चिट्ठी</long>
+    </name>
+    <name id="book-2th">
+      <abbr>2थिस्‍सलुनीके</abbr>
+      <short>2 थिस्‍सलुनीके</short>
+      <long>थिस्‍सलुनीके सहर के कलीसिया ला पौलुस के लिखे दूसरा चिट्ठी</long>
+    </name>
+    <name id="book-1ti">
+      <abbr>1तीमुथियुस</abbr>
+      <short>1 तीमुथियुस</short>
+      <long>तीमुथियुस के नांव पौलुस के लिखे पहिली चिट्ठी</long>
+    </name>
+    <name id="book-2ti">
+      <abbr>2तीमुथियुस</abbr>
+      <short>2 तीमुथियुस</short>
+      <long>तीमुथियुस के नांव पौलुस के लिखे दूसरा चिट्ठी</long>
+    </name>
+    <name id="book-tit">
+      <abbr>तीतुस</abbr>
+      <short>तीतुस</short>
+      <long>तीतुस के नांव पौलुस के लिखे चिट्ठी</long>
+    </name>
+    <name id="book-phm">
+      <abbr>फिलेमोन</abbr>
+      <short>फिलेमोन</short>
+      <long>फिलेमोन के नांव पौलुस के लिखे चिट्ठी</long>
+    </name>
+    <name id="book-heb">
+      <abbr>इबरानीमन</abbr>
+      <short>इबरानीमन</short>
+      <long>इबरानीमन के नांव के चिट्ठी</long>
+    </name>
+    <name id="book-jas">
+      <abbr>याकूब</abbr>
+      <short>याकूब</short>
+      <long>याकूब के लिखे चिट्ठी</long>
+    </name>
+    <name id="book-1pe">
+      <abbr>1पतरस</abbr>
+      <short>1 पतरस</short>
+      <long>पतरस के लिखे पहिली चिट्ठी</long>
+    </name>
+    <name id="book-2pe">
+      <abbr>2पतरस</abbr>
+      <short>2 पतरस</short>
+      <long>पतरस के लिखे दूसरा चिट्ठी</long>
+    </name>
+    <name id="book-1jn">
+      <abbr>1यूहन्ना</abbr>
+      <short>1 यूहन्ना</short>
+      <long>यूहन्ना के लिखे पहिली चिट्ठी</long>
+    </name>
+    <name id="book-2jn">
+      <abbr>2यूहन्ना</abbr>
+      <short>2 यूहन्ना</short>
+      <long>यूहन्ना के लिखे दूसरा चिट्ठी</long>
+    </name>
+    <name id="book-3jn">
+      <abbr>3यूहन्ना</abbr>
+      <short>3 यूहन्ना</short>
+      <long>यूहन्ना के लिखे तीसरा चिट्ठी</long>
+    </name>
+    <name id="book-jud">
+      <abbr>यहूदा</abbr>
+      <short>यहूदा</short>
+      <long>यहूदा के लिखे चिट्ठी</long>
+    </name>
+    <name id="book-rev">
+      <abbr>दरसन</abbr>
+      <short>दरसन</short>
+      <long>यूहन्ना के लिखे दरसन के किताब</long>
+    </name>
+  </names>
+  <manifest>
+    <container uri="release">
+      <container uri="USX_1">
+        <resource checksum="7ee9a6c329d062a3a2a68222125cfe6c" mimeType="application/xml" size="161437" uri="1CO.usx" />
+        <resource checksum="e4e0174a8bd37b918d23cdb7172f04e6" mimeType="application/xml" size="42853" uri="1JN.usx" />
+        <resource checksum="e794ebe3035a680c953e95ff56b83e99" mimeType="application/xml" size="45469" uri="1PE.usx" />
+        <resource checksum="fb351106c6b3c50dcfd2a0c6bd3e36d5" mimeType="application/xml" size="35081" uri="1TH.usx" />
+        <resource checksum="7ec1a6aaadf58be2d908267ce4b30904" mimeType="application/xml" size="42418" uri="1TI.usx" />
+        <resource checksum="a2573eafa7899beba7661e5f9329b18c" mimeType="application/xml" size="102677" uri="2CO.usx" />
+        <resource checksum="54fd7b83444bbc7ca0d788b173ce8c90" mimeType="application/xml" size="7004" uri="2JN.usx" />
+        <resource checksum="6e117e51111b881a179e0e79e736fd48" mimeType="application/xml" size="27454" uri="2PE.usx" />
+        <resource checksum="965146032f8f323db7e1095e8aa75b05" mimeType="application/xml" size="20010" uri="2TH.usx" />
+        <resource checksum="8678c52ea22193d588648862db6989b5" mimeType="application/xml" size="30799" uri="2TI.usx" />
+        <resource checksum="1ac2145ff5c1a3061b6d4d7792f2fa51" mimeType="application/xml" size="7225" uri="3JN.usx" />
+        <resource checksum="0c99ea0bea74880af9509a75c8953691" mimeType="application/xml" size="373240" uri="ACT.usx" />
+        <resource checksum="cc25f355a99f18710e4ae4de50e81c4e" mimeType="application/xml" size="36829" uri="COL.usx" />
+        <resource checksum="5957b0fa791c62222fac984f17a2d6bc" mimeType="application/xml" size="53064" uri="EPH.usx" />
+        <resource checksum="959418d397ad30198355bde5f71c60c1" mimeType="application/xml" size="61178" uri="GAL.usx" />
+        <resource checksum="498212d847ecd2ebd6b8fe5e4e6e1d09" mimeType="application/xml" size="127269" uri="HEB.usx" />
+        <resource checksum="e985c16f1ef67caa0052f0d30e08a688" mimeType="application/xml" size="40229" uri="JAS.usx" />
+        <resource checksum="8cf8b690f473a57a79267dc238679715" mimeType="application/xml" size="310438" uri="JHN.usx" />
+        <resource checksum="9514bdfe8d6add198c7495ad28489aef" mimeType="application/xml" size="13080" uri="JUD.usx" />
+        <resource checksum="884bad3344c777651efc2741cf3b0dbf" mimeType="application/xml" size="415528" uri="LUK.usx" />
+        <resource checksum="d4edbba4163f4bfd243ed51419123783" mimeType="application/xml" size="391658" uri="MAT.usx" />
+        <resource checksum="662c1b0a8ad7968ab57d9238a165c3e8" mimeType="application/xml" size="236652" uri="MRK.usx" />
+        <resource checksum="ba643f1f4d9ac61a78e067cbc8d862d6" mimeType="application/xml" size="10480" uri="PHM.usx" />
+        <resource checksum="7ad30c81f7aef06cdfc1bb04450fac4c" mimeType="application/xml" size="41620" uri="PHP.usx" />
+        <resource checksum="3e55c031352de95da3ebac3e8229f7e4" mimeType="application/xml" size="180226" uri="REV.usx" />
+        <resource checksum="c7be6661d0c46b9a0da120ddea883e89" mimeType="application/xml" size="174402" uri="ROM.usx" />
+        <resource checksum="2c457f2adf18e2f15065a361bc9b6e31" mimeType="application/xml" size="19186" uri="TIT.usx" />
+      </container>
+      <resource checksum="446a4c0128486d7c2cd0fed5ce899e60" mimeType="application/xml" size="25239" uri="hne.ldml" />
+      <resource checksum="18cfd82202b9beecce3045d04219605e" mimeType="application/xml" size="81699" uri="styles.xml" />
+      <resource checksum="7bac69d13d1c9e55d03a90415de993b4" mimeType="text/plain" size="15388" uri="versification.vrs" />
+    </container>
+    <container uri="source">
+      <resource checksum="edcae88da0742eca760f307917dc08ae" mimeType="application/zip" size="8865545" uri="source.zip" />
+    </container>
+  </manifest>
+  <source>
+    <canonicalContent>
+      <book code="1CO" />
+      <book code="1JN" />
+      <book code="1PE" />
+      <book code="1TH" />
+      <book code="1TI" />
+      <book code="2CO" />
+      <book code="2JN" />
+      <book code="2PE" />
+      <book code="2TH" />
+      <book code="2TI" />
+      <book code="3JN" />
+      <book code="ACT" />
+      <book code="COL" />
+      <book code="EPH" />
+      <book code="GAL" />
+      <book code="HEB" />
+      <book code="JAS" />
+      <book code="JHN" />
+      <book code="JUD" />
+      <book code="LUK" />
+      <book code="MAT" />
+      <book code="MRK" />
+      <book code="PHM" />
+      <book code="PHP" />
+      <book code="REV" />
+      <book code="ROM" />
+      <book code="TIT" />
+    </canonicalContent>
+    <structure>
+      <content role="sourceZip" src="source/source.zip" />
+    </structure>
+  </source>
+  <publications>
+    <publication default="true" id="p1">
+      <name>The New Testament in Chhattisgarhi</name>
+      <nameLocal>नवां नियम छत्तीसगढ़ी</nameLocal>
+      <description>The New Testament in Chhattisgarhi</description>
+      <descriptionLocal>The New Testament in Chhattisgarhi</descriptionLocal>
+      <abbreviation>NTC</abbreviation>
+      <abbreviationLocal>NNC</abbreviationLocal>
+      <canonicalContent>
+        <book code="1CO" />
+        <book code="1JN" />
+        <book code="1PE" />
+        <book code="1TH" />
+        <book code="1TI" />
+        <book code="2CO" />
+        <book code="2JN" />
+        <book code="2PE" />
+        <book code="2TH" />
+        <book code="2TI" />
+        <book code="3JN" />
+        <book code="ACT" />
+        <book code="COL" />
+        <book code="EPH" />
+        <book code="GAL" />
+        <book code="HEB" />
+        <book code="JAS" />
+        <book code="JHN" />
+        <book code="JUD" />
+        <book code="LUK" />
+        <book code="MAT" />
+        <book code="MRK" />
+        <book code="PHM" />
+        <book code="PHP" />
+        <book code="REV" />
+        <book code="ROM" />
+        <book code="TIT" />
+      </canonicalContent>
+      <structure>
+        <content name="book-mat" role="MAT" src="release/USX_1/MAT.usx" />
+        <content name="book-mrk" role="MRK" src="release/USX_1/MRK.usx" />
+        <content name="book-luk" role="LUK" src="release/USX_1/LUK.usx" />
+        <content name="book-jhn" role="JHN" src="release/USX_1/JHN.usx" />
+        <content name="book-act" role="ACT" src="release/USX_1/ACT.usx" />
+        <content name="book-rom" role="ROM" src="release/USX_1/ROM.usx" />
+        <content name="book-1co" role="1CO" src="release/USX_1/1CO.usx" />
+        <content name="book-2co" role="2CO" src="release/USX_1/2CO.usx" />
+        <content name="book-gal" role="GAL" src="release/USX_1/GAL.usx" />
+        <content name="book-eph" role="EPH" src="release/USX_1/EPH.usx" />
+        <content name="book-php" role="PHP" src="release/USX_1/PHP.usx" />
+        <content name="book-col" role="COL" src="release/USX_1/COL.usx" />
+        <content name="book-1th" role="1TH" src="release/USX_1/1TH.usx" />
+        <content name="book-2th" role="2TH" src="release/USX_1/2TH.usx" />
+        <content name="book-1ti" role="1TI" src="release/USX_1/1TI.usx" />
+        <content name="book-2ti" role="2TI" src="release/USX_1/2TI.usx" />
+        <content name="book-tit" role="TIT" src="release/USX_1/TIT.usx" />
+        <content name="book-phm" role="PHM" src="release/USX_1/PHM.usx" />
+        <content name="book-heb" role="HEB" src="release/USX_1/HEB.usx" />
+        <content name="book-jas" role="JAS" src="release/USX_1/JAS.usx" />
+        <content name="book-1pe" role="1PE" src="release/USX_1/1PE.usx" />
+        <content name="book-2pe" role="2PE" src="release/USX_1/2PE.usx" />
+        <content name="book-1jn" role="1JN" src="release/USX_1/1JN.usx" />
+        <content name="book-2jn" role="2JN" src="release/USX_1/2JN.usx" />
+        <content name="book-3jn" role="3JN" src="release/USX_1/3JN.usx" />
+        <content name="book-jud" role="JUD" src="release/USX_1/JUD.usx" />
+        <content name="book-rev" role="REV" src="release/USX_1/REV.usx" />
+      </structure>
+    </publication>
+  </publications>
+  <copyright>
+    <fullStatement>
+      <statementContent type="xhtml">
+        <p>New Chhattisgarhi Translation™ (नवां नियम छत्तीसगढ़ी™) </p>
+        <p>Copyright © 2012, 2016 by Biblica, Inc</p>
+        <p>All rights reserved worldwide.</p>
+      </statementContent>
+    </fullStatement>
+  </copyright>
+  <promotion>
+    <promoVersionInfo contentType="xhtml">
+      <p>Biblica, <em>The International Bible Society,</em> ह मनिेमन ला परमेसर के िचन, िाईिल अनुवाि अऊ िाईिल परकासन के जररये, अऊ आबरिका, एलसया पैलसफीक, यूरोप, लैबटिन अमेररका, मधय पूव्क, उत्र अमेररका, अऊ िसक्िन एलसया म िाईिल के काम म साबमल होके िेवत हे। जममो संसार म पहंुच के जररये, बििलीका ह मनिेमन ला परमेसर के िचन म साबमल करथे, ताबक ओमन के लजनगी ह यीसू मसीह के संग रर्ता म जुरके ििल जावय।</p>
+    </promoVersionInfo>
+  </promotion>
+  <archiveStatus>
+    <archivistName>Kent Spielmann</archivistName>
+    <dateArchived>2014-11-26T19:33:37.696123</dateArchived>
+    <dateUpdated>2019-12-09T18:50:57.767258</dateUpdated>
+    <comments>Metadata update</comments>
+  </archiveStatus>
+</DBLMetadata>

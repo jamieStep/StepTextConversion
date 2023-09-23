@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="HEB" style="id">- Kiyombe New Testament &amp; Psalms</book>
+  <para style="rem">Copyright © 2002 by Biblica, Inc.®</para>
+  <para style="h">Ba Ebelewo</para>
+  <para style="toc1">Nkanda kuidi ba Ebelewo</para>
+  <para style="toc2">Ebelewo</para>
+  <para style="toc3">Ebelewo</para>
+  <para style="mt2">Nkanda kuidi ba</para>
+  <para style="mt1">Ebelewo</para>
+  <para style="ip">Nkanda kuidi basi Ebelewo wulutidi kula ayi mfunu va kimosi ayi minkanda misonika Polo mu minkanda mioso midi mu Nguizani yimona.</para>
+  <para style="ip">Mutu wusonika nkanda beni kasi zabakana ko vayi tulenda kaka tuba ti widi nkua Klisto ; wuba nyuda bu kalembo tubi ti : (“Bakulu beto” <char style="xt"><ref loc="HEB 1:1">1.1</ref></char>) ; wuzaba mambu ma Nguizani yikhulu banga buididi mambu matedi zithumunu ayi zitsadulu zitedi mambu ma Nzambi masonimini mu nkanda wu Levitiko (nkanda wuntatu wusonika Moyize). Niandi wulongo Nsamu Wumboti kuidi bambangi batheti (<char style="xt"><ref loc="HEB 2:3">2.3</ref></char>).</para>
+  <para style="ip">Niandi wusonika nkanda beni kuidi bayuda batambudila Yesu Klisto, bobo baba banga niandi, minkuikizi mi dibundu diodi kayuku. Mayindu mandi maba mu kuenda bumina dibundu beni mu nsualu-nsualu (<char style="xt"><ref loc="HEB 13:19">13.19</ref>,<ref loc="HEB 13:23">23</ref></char>). Batu bawombo bobo bazebi sudikisa minsamu mi Bibila banyindulanga ti divula di Loma diawu dikubukulu nkanda wawu (<char style="xt"><ref loc="HEB 13:24">13.24</ref></char>). Muna mu monikina mambu matheti ma nkanda wawu (mu nkanda wu Kelema wukala ku Loma mu mvu 95 ayi 96). Mambu matedi yamusu koko kuidi mu 10.33-34 yilenda totukila mu lutumunu lu ntinu Klode mu mvu 49. Ntinu Klode niandi wukuka bayuda baba ku Loma mu ndambu mimvu. Nkanda wawu wusonama nduka-nduka tona mu mvu 60 nate 64.</para>
+  <para style="ip">Nsoniki wulembo sudikisa nkandꞌandi banga “nkanda weti kindisa” (<char style="xt"><ref loc="HEB 13:22">13.22</ref></char>). Diawu zithumunu ayi zindubu zilembo monikina mu malongi ma nkandꞌandi. Muna mulembo monika banga ti batu bobo kasonikina nkanda beni bakakudulu kuwombo. Buna nsoniki wulembo kuba lubula mu zikhumbu ziwombo mu diambu babika yekula minu (<char style="xt"><ref loc="HEB 2:1-4">2.1-4</ref> ; <ref loc="HEB 4:1-11">4.1-11</ref> ; <ref loc="HEB 6:4-6">6.4-6</ref> ; <ref loc="HEB 10:26-31">10.26-31</ref></char>). Zindubu beni zilembo monisa ti Klisto viatukidi zimbasi (<char style="xt">kapu <ref loc="HEB 1">1</ref> ayi <ref loc="HEB 2">2</ref></char>) ; Klisto viatukidi Moyize ayi Yosua (<char style="xt"><ref loc="HEB 3:1-4:13">3.1–4.13</ref></char>) ; Klisto viatukidi bapfumu zi zinganga-Nzambi zi Nguizani yikhulu (<char style="xt"><ref loc="HEB 4:14-8:13">4.14–8.13</ref></char>). Zindubu beni zilembo monisa banga ti batu bobo kasonikina nkanda beni baba mayindu ma vutuka mu malongi ma kikhulu ki bayuda. Nsoniki wulembo bamonisa ti dikaba di Klisto, ditambuku mu khumbu yimosi, dilutidi makaba momo matambuku mu Iseli di khulu (<char style="xt"><ref loc="HEB 9:1-10:18">9.1–10.18</ref></char>).</para>
+  <para style="ip">Mu diambu di kuba kindisa, nsoniki wulembo kuba monisa bifuani bi batu ba Nguizani yi khulu bobo baba ayi minu (<char style="xt">kapu <ref loc="HEB 11">11</ref></char>). Wulembo kuba lebi muingi thalu awu yiba kuidi Yesu (<char style="xt"><ref loc="HEB 12:2">12.2</ref></char>) bila Yesu niandi kifuani ki thatumunu mu zikhakudulu.</para>
+  <para style="ip">Nkanda wawu widi mfunu mu diambu di sudikisa zitsundu zi makaba ma Nguizani yikhulu ; makaba momo malembo tombi bu dedakana banga dikaba di Klisto, diodi ditambuku mu khumbu yimosi.</para>
+  <para style="ip">Zikhindusulu zithalu zidi mu nkanda wawu zibeki luvalu mu diambu di batu ba thangu yayi “bila tuisi ko nganga Nzambi yinneni yoyi yinkambu fubakananga mu ziphasi zieto. Vayi tubeki wumosi wutoto banga beto mu mambu moso vayi kasia vola kadi disumu dimosi ko. Diawu tufikamanu mu diana dioso ku kundu ki nlemvo wu Nzambi mu diambu katumona kiadi ayi tutambula nlemvo wunsadisanga mu thangu yifuana” (<char style="xt"><ref loc="HEB 4:15-16">4.15-16</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="ms1">BUMUTU BU MUANA WU NZAMBI</para>
+  <para style="s1">Nzambi wukimonikisa mu Muanꞌandi</para>
+  <para style="p">
+    <verse number="1" style="v"/>Mu zikhumbu ziwombo ayi mu zinzila ziwombo, Nzambi wuyolukila mutsi khulu, bakulu beto mu nzila yi mimbikudi. <verse number="2" style="v"/>Vayi mu bilumbu biabi bi tsuka Nzambi wutuyolukila mu Muanꞌandi, mutu wowo kabieka mvingidi wu bima bioso ayi mu niandi kavangila bima bioso. <verse number="3" style="v"/>Muana beni wulembo monikisa lezama ku nkembo wu Nzambi ayi niandi mfikula yimonisa bumboti bumutu buandi. Niandi weta kindisa bima bioso mu mambu mandi ma lulendo. Bu kamanisa kubika tsukudulu yi masumu ; buna wuvuanda ku Diyilu va koko ku lubakala lu Nzambi, nkua ngolo yoso.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Buna niandi wulutila zimbasi mu luvalu bila dizina di katambula dilutidi dizina di zimbasi.</para>
+  <para style="s1">Muana Nzambi lutidi zimbasi</para>
+  <para style="p">
+    <verse number="5" style="v"/>Muaki kuidi mbasi mbi yoyi Nzambi kakamba :</para>
+  <para style="q1">
+    <char style="qt">ngeyo widi Muanꞌama,</char></para>
+  <para style="q1">
+    <char style="qt">minu ndibutidi mu lumbu kiaki Voti diaka :</char></para>
+  <para style="q1">
+    <char style="qt">Minu ndiela ba dise diandi</char></para>
+  <para style="q1">
+    <char style="qt">ayi niandi wela ba muanꞌama e ?</char></para>
+  <para style="p">
+    <verse number="6" style="v"/>Bosi bu kakotisa mutu wutheti wu butuka va nza, wubuela tuba ti :</para>
+  <para style="q1">
+    <char style="qt">Bika zimbasi zioso zi Nzambi</char></para>
+  <para style="q1">
+    <char style="qt">zifukama va ntualꞌandi.</char></para>
+  <para style="p">
+    <verse number="7" style="v"/>Mu diambu di zimbasi, niandi wutuba ti :</para>
+  <para style="q1">
+    <char style="qt">Niandi wunkitulanga zimbasi ziandi phemo</char></para>
+  <para style="q1">
+    <char style="qt">ayi bisadi biandi minlaki mi mbazu.</char></para>
+  <para style="p">
+    <verse number="8" style="v"/>Vayi mu diambu di Muana, niandi wutuba ti :</para>
+  <para style="q1">
+    <char style="qt">A Nzambi, kundu kiaku ki kipfumu kinzinganga</char></para>
+  <para style="q1">
+    <char style="qt">mu zithangu zioso.</char></para>
+  <para style="q1">
+    <char style="qt">Nkawꞌaku wu busonga widi nkawa wu kipfumu</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">1.8 </char>
+      <char style="fq" closed="false">Nkawa wu kipfumu</char>
+      <char style="fqa" closed="false"> : </char>
+      <char style="ft" closed="false">voti wela yadila kipfumu kiaku mu busonga.</char>
+    </note>
+    <char style="qt">.</char></para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <char style="qt">Wunzolanga masonga vayi wunlendanga mambimbi.</char></para>
+  <para style="q1">
+    <char style="qt">Diawu Nzambi, Nzambi aku, kasobudila</char></para>
+  <para style="q1">
+    <char style="qt">ayi kamonisa khini yi nzitusu</char></para>
+  <para style="q1">
+    <char style="qt">viokila yoyi kamonisa bakundi baku.</char></para>
+  <para style="p">
+    <verse number="10" style="v"/>Wubuela diaka :</para>
+  <para style="q1">
+    <char style="qt">A Pfumu, va thonono</char></para>
+  <para style="q1">
+    <char style="qt">ngeyo wuvanga zifundasio zi ntoto ayi</char></para>
+  <para style="q1">
+    <char style="qt">diyilu divangulu mu mioko miaku.</char></para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <char style="qt">Biela bungana</char></para>
+  <para style="q1">
+    <char style="qt">vayi ngeyo wela zinga mu mimvu mi kamimani ;</char></para>
+  <para style="q1">
+    <char style="qt">Biela nuna banga minledi.</char></para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <char style="qt">Wela bizinga banga bu nzingulungu nledi</char></para>
+  <para style="q1">
+    <char style="qt">ayi biela sienza</char></para>
+  <para style="q1">
+    <char style="qt">vayi ngeyo wusienzanga ko ayi</char></para>
+  <para style="q1">
+    <char style="qt">mimvu miaku milendi suka ko !</char></para>
+  <para style="p">
+    <verse number="13" style="v"/>Ayi kuidi mbasi mbi katuba ti :</para>
+  <para style="q1">
+    <char style="qt">Vuanda va lubakala luama</char></para>
+  <para style="q1">
+    <char style="qt">nate ndiela mana kitula bambeni ziaku</char></para>
+  <para style="q1">
+    <char style="qt">diatulu ki malu maku.</char></para>
+  <para style="p">
+    <verse number="14" style="v"/>A ziawu zisi ko ziphevi zinsadilanga Nzambi, zifidusu mu diambu di sadila batu bobo bela vinginina kiuka ki phulusu e ?</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Kadi lenza phulusu yinata Muana</para>
+  <para style="p">
+    <verse number="1" style="v"/>Diawu, tufueti luta keba mu mambu momo tuwa, tala tuedi zimbala.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Bila enati mambu momo zimbasi zisamuna maba makinda ayi enati mbundudulu yi Mina ayi kambu ku tumamana koso kutambula thumbudulu yifuana ; <verse number="3" style="v"/>buna buevi tulenda vukila enati tulembo lenzi phulusu yoyi yinneni ? Lolo niandi veka Pfumu katuama samuna bosi yikindusu kuidi batu bobo banwa. <verse number="4" style="v"/>Nzambi wukindisa kimbangi kiawu mu bidimbu, mu mavanga matsiminanga ayi mu bikumu bi phila mu phila ayi mu makaba ma Pheve Yinlongo makabulu boso buididi luzolo luandi.</para>
+  <para style="s1">Nzambi wuyekula mamo kuidi Muana</para>
+  <para style="p">
+    <verse number="5" style="v"/>Muaki bika sia ti kuidi zimbasi Nzambi kayekudila nza yinkuiza, wowo tulembo yolukila. <verse number="6" style="v"/>Muaki vadi vama vamosi mutu wumosi, wutelama kimbangi kiaki :</para>
+  <para style="q1">
+    <char style="qt">Mutu, widi nani muingi wuntebukilanga moyo e ?</char></para>
+  <para style="q1">
+    <char style="qt">voti Muana mutu widi nani muingi wumbelanga mayindu e ?</char></para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <char style="qt">ngeyo wumvanga mutu wukambu luvalu,</char></para>
+  <para style="q1">
+    <char style="qt">mu ndambu thangu zimbasi bu zimviokila mu luvalu,</char></para>
+  <para style="q1">
+    <char style="qt">vayi wumvuika nkembo ayi nzitusu.</char></para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <char style="qt">Ngeyo wutula bima bioso ku tsi bitambi biandi.</char></para>
+  <para style="p">Mu thangu kamana tula bima bioso ku tsi luyalu luandi, Nzambi kasia zimbakana ko kadi kima kimosi kibika ba ku tsi luyalu luandi. Muaki nate buabu tumueni ko ti bima bioso bidi ku tsi luyalu luandi. <verse number="9" style="v"/>Vayi Yesu, mutu wowo wutuama ba wukambu luvalu mu ndambu thangu zimbasi bu zimviokila mu luvalu, tulembo moni buabu wuvuiku nkembo ayi nzitusu mu diambu di ziphasi zi lufua ziozi kamona mu diambu di nlemvo wu Nzambi bu kafuila batu boso.</para>
+  <para style="s1">Muana Nzambi niandi khomba yi batu boso</para>
+  <para style="p">
+    <verse number="10" style="v"/>Muaki dimonika ti didi difuana kuidi Nzambi, wuvanga bima bioso ayi wunzingisa bima bioso, mu kitula Yesu mutu wufuana mu nzila yi ziphasi mu diambu di nata bana bawombo ku nkembo andi. Bila Yesu niandi mutu wukubanatanga ku phulusu. <verse number="11" style="v"/>Bila ayi mutu wowo wumvedisa ayi batu bobo bavedoso, babo mu dise dimosi batotukila. Diawu kamonanga tsoni ko mu kuba tedila bakhomba bandi <verse number="12" style="v"/>mu thangu kakamba :</para>
+  <para style="q1">
+    <char style="qt">Ndiela yolukila dizina diaku kuidi bakhomba ziama,</char></para>
+  <para style="q1">
+    <char style="qt">ndiela kuyimbidila va ntuala dibundu dioso.</char></para>
+  <para style="p">
+    <verse number="13" style="v"/>Wubuela diaka :</para>
+  <para style="q1">
+    <char style="qt">Minu ndiela tula diana diama mu niandi.</char></para>
+  <para style="p">Wubuela diaka :</para>
+  <para style="q1">
+    <char style="qt">Minu wawu va kimosi ayi bana bobo baphana Nzambi.</char></para>
+  <para style="p">
+    <verse number="14" style="v"/>Sumbu didi ti bana bafubakana mu menga ayi nsuni buna niandi mamvandi wutumbu fubakana. Wuvanga buawu mu diambu di kosikisa, mu nzila yi lufua, satana, mutu wowo beki lulendo lu lufua, <verse number="15" style="v"/>ayi mu diambu di kula batu boso bobo baba bavika ba boma bu lufua mu luzingu luawu loso.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Bila bukiedika kasia kuiza mu diambu di sadisa zimbasi ko vayi wuyiza mu diambu di sadisa nkuna wu Abalahami. <verse number="17" style="v"/>Mu bila kioki, nganu wutumbu dedakana, mu mambu moso, banga bakhomba muingi kakituka pfumu yi zinganga Nzambi yilenda vanga dioso di kazodidi, pfumu yi zinganga Nzambi yimmonanga kiadi ayi yikuikama mu kisalu ki Nzambi mu diambu masumu ma batu malemvokolo. <verse number="18" style="v"/>Bila sumbu niandi veka katoto mu ziphasi zikamona buna wulenda kuandi sadisa babo balembo toto.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Yesu viokidi Moyize</para>
+  <para style="p">
+    <verse number="1" style="v"/>Diawu diodi bakhomba zinlongo, beno lutelo kuidi Nzambi mu baka kuku mu bima bi Diyilu, bika lutadidila Yesu mvuala ayi nganga Nzambi yi minu kioki tulembo samuni. <verse number="2" style="v"/>Niandi wuba wukuikama kuidi mutu wowo wumbieka banga bu bela Moyize mu nzo yimvimba yi Nzambi. <verse number="3" style="v"/>Bila Yesu wumono ti widi wufuana mu tambula nkembo viokila wowo wutambula Moyize. Banga kuandi ntungi wu nzo wuntambulanga nzitusu viokila nzo yika tungidi. <verse number="4" style="v"/>Bila kadika nzo yitungu kuidi mutu ; vayi Nzambi niandi wutunga bima bioso.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Mu diambu di Moyize, niandi wuba wukuikama mu nzo yi mvimba yi Nzambi banga kisadi mu diambu di telamanga kimbangi mu mambu momo mafueti samunu. <verse number="6" style="v"/>Vayi Klisto, niandi widi wukuikama banga Muana mu nzo yi Nzambi. Beto tuidi nzoꞌandi enati tunsimbidila nate tsukulu bufula ayi diana di ngolo diodi tueti ku kiniemisina.</para>
+  <para style="s1">Luvundulu mu diambu di bobo bawilukila Nzambi</para>
+  <para style="p">
+    <verse number="7" style="v"/>Diawu, banga bueti tuba Pheve Yinlongo ti :</para>
+  <para style="q1">
+    <char style="qt">Enati lumbu kiaki luwilu mbembo andi</char></para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <char style="qt">Lubika kitula mintima mieno banga matadi</char></para>
+  <para style="q1">
+    <char style="qt">banga bu lutinguna</char></para>
+  <para style="q1">
+    <char style="qt">mu lumbu ki phukumunu mu dikanga.</char></para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <char style="qt">Mu lumbu kina bakulu beno batsoka</char></para>
+  <para style="q1">
+    <char style="qt">ayi bathota</char></para>
+  <para style="q1">
+    <char style="qt">ayi bamona mavanga mama mu tezo</char></para>
+  <para style="q1">
+    <char style="qt">ki makumaya ma mimvu.</char></para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <char style="qt">Diawu ndifuemina buwombo tsungi yina ayi ndituba :</char></para>
+  <para style="q1">
+    <char style="qt">“Mintima miawu midi kaka mizimbala</char></para>
+  <para style="q1">
+    <char style="qt">ayi basia zaba zinzila ziama ko.”</char></para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <char style="qt">Diawu ku tsi nganzi ama</char></para>
+  <para style="q1">
+    <char style="qt">ndilefa ndefi yayi :</char></para>
+  <para style="q1">
+    <char style="qt">Balendi kota ko mu luvundulu luama.</char></para>
+  <para style="p">
+    <verse number="12" style="v"/>Diawu bakhomba, lukeba mu diambu mutu mu beno kabika ba ntima wumbimbi ayi wunkambu wilukilanga ; tala kedi tamba Nzambi yi moyo manima. <verse number="13" style="v"/>Vayi lulubasananga kadika lumbu beno na beno, bu tuidi ayi “lumbu kiaki” muingi mutu mu beno kabika vunuka mu masumu ayi kabika ba matingu. <verse number="14" style="v"/>Bila enati tunsimbidila nate kuna tsukulu diana diodi diba yeto vana thonono, buna tuidi mu kithuadi ayi Klisto. <verse number="15" style="v"/>Banga bu tubulu :</para>
+  <para style="q1">
+    <char style="qt">Enati lumbu kiaki luwilu mbembo andi,</char></para>
+  <para style="q1">
+    <char style="qt">lubika kitula mintima mieno banga matadi</char></para>
+  <para style="q1">
+    <char style="qt">banga bu lutinguna.</char></para>
+  <para style="p">
+    <verse number="16" style="v"/>Buna banani bobo batinguna bu bawa mbemboꞌandi e ? Buna keti babo bobo Moyize katotula mu Ezipite e ? <verse number="17" style="v"/>Buna banani bobo Nzambi kafuemina mu makumaya ma mimvu e ? Buna keti batu bobo bavola masumu ayi bafua mu dikanga e ? <verse number="18" style="v"/>Buna kuidi banani Nzambi kalefila ndefi ti balendi kota ko mu luvundulu luandi e ? Buna keti bobo bamanga kuntumukina e ?</para>
+  <para style="p">
+    <verse number="19" style="v"/>Buna tumueni ti basia nunga ko mu kota mu diambu di kambu kuawu ku minu.</para>
+  <chapter number="4" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Sumbu tsila yi kotila mu luvundulu lu Nzambi bu yikidi, bunatukeba tala wumosi mu beno kedi kambu bu kotila. <verse number="2" style="v"/>Bila beto mamveto, batulonga Nsamu Wumboti, banga batu bana. Vayi mambu bawa masia ku basadisa ko bila masia bundana ko ayi minu ki bawu batambula mawu. <verse number="3" style="v"/>Bila kuidi beto tuwilukila, tueka kota mu luvundulu banga Nzambi bu katubila ti :</para>
+  <para style="q1">
+    <char style="qt">Diawu ku tsi nganzi ama</char></para>
+  <para style="q1">
+    <char style="qt">ndilefa ndefi ti :</char></para>
+  <para style="q1">
+    <char style="qt">“Balendi kota ko mu luvundulu luama.”</char></para>
+  <para style="p">Ka diambu ko mavanga makivangimina tona vana va vangimina nza. <verse number="4" style="v"/>Bila vama va nkaka vayolokolo mu diambu di lumbu kitsambudi ti : <char style="qt">Nzambi wuvunda mu lumbu kitsambudi bu kamanisa kisalu kiandi kioso.</char></para>
+  <para style="p">
+    <verse number="5" style="v"/>Ayi mu yo yawu nzila, wutuba ti : <char style="qt">balendi kota ko mu luvundulu luama.</char></para>
+  <para style="p">
+    <verse number="6" style="v"/>Sumbu didi ti batu bankaka bafueti kota mu luvundulu lolo, vayi batu bobo batuama longo Nsamu wumboti basia kota ko mu diambu di kambu kuawu ku tumama ; <verse number="7" style="v"/>diawu Nzambi kabuela kubikila Lumbu kinkaka, kintedolo “Lumbu kiaki” bu katuba, bilumbu biwombo bu bivioka, mu Davidi boso butuama yolokolo :</para>
+  <para style="q1">
+    <char style="qt">Enati lumbu kiaki luwilu mbembo andi</char></para>
+  <para style="q1">
+    <char style="qt">lubika kitula mintima mieno banga matadi.</char></para>
+  <para style="p">
+    <verse number="8" style="v"/>Bila enati Zosue wuba vana luvundulu nganu Nzambi kalendi buela tubila lumbu kinkaka ko. <verse number="9" style="v"/>Vayi luvundulu lusiedi kuidi batu ba Nzambi luidi banga lu lumbu ki saba. <verse number="10" style="v"/>Bila mutu wowo wukota mu luvundulu lu Nzambi, niandi mamvandi wuvunda bu kamanisini kisalu kiandi banga bu vundila Nzambi bu kamanisa kisalu kiandi.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Tunuana mu kota mu luvundulu beni mu diambu mutu kabika bua mu sokudila kambu ku tumama ku phila yoyi. <verse number="12" style="v"/>Bila mambu ma Nzambi madi moyo ayi malembo sadi ngolo ; maviokidi sabala mu meno, mankotanga ngolo nate mu vambisa moyo ayi pheve, nate mu vambisa madikulu ayi tonzo tu mimvesi ayi meti fiongunina mayindu ayi makani ma mintima. <verse number="13" style="v"/>Kuisi ko kadi vangu kimosi kidi kisuama va meso ma Nzambi. Bima bioso bidi va yambi ayi bisi ko bisuama va meso ma mutu wowo wela kutusambisa.</para>
+  <para style="s1">Yesu niandi pfumu yi zinganga Nzambi</para>
+  <para style="p">
+    <verse number="14" style="v"/>Diawu bu tubeki pfumu yi zinganga yisabuka Diyilu, Yesu Muana Nzambi, buna bika tusimbidila kimbangi kieto ki minu. <verse number="15" style="v"/>Bila tuisi pfumu yi zinganga Nzambi ko yoyi yinkambu fubakananga mu ziphasi zieto. Vayi tubeki wumosi wutoto banga beto mu mambu moso, vayi kasia vola kadi disumu dimosi ko.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Diawu tufikamanu mu diana dioso ku kundu ki nlemvo wu Nzambi muingi katumona kiadi ayi tutambula nlemvo wunsadisanga mu thangu yifuana.</para>
+  <chapter number="5" style="c"/>
+  <para style="ms1">KISALU KI KINGANGA KI KLISTO</para>
+  <para style="s1">Klisto niandi pfumu yi zinganga Nzambi ayi tho yi phulusu kuidi batu</para>
+  <para style="p">
+    <verse number="1" style="v"/>Bila kadika pfumu yi ziganga Nzambi wunsobolongo va khatitsika batu, wumbiekongo mu diambu di batu mu kuba sadisa mu mambu ma Nzambi, muingi katambikanga makaba ma batu ayi makaba mayoko mu diambu di masumu. <verse number="2" style="v"/>Niandi wulenda sudika bumboti batu bobo bakambulu diela ayi batu bobo banzimbala bila niandi veka widi wulebakana. <verse number="3" style="v"/>Bila mamvandi, mu diambu di lebakana kuandi, diawu kafueti tambikilanga makaba mu diambu di masumu mandi veka ayi mu diambu di masumu ma batu.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Mutu kalendi kukivana nzitusu wowo ko enati Nzambi kasia kuntela mbila ko banga bu bela Aloni. <verse number="5" style="v"/>Bobuawu Klisto mamvandi kasia kiniemisa ko mu bieko pfumu yi zinganga Nzambi. Vayi mutu wuna wunniemisa, niandi wutuba ti :</para>
+  <para style="q1">
+    <char style="qt">Ngeyo widi Muanꞌama,</char></para>
+  <para style="q1">
+    <char style="qt">lumbu kiaki ndibutidi.</char></para>
+  <para style="p">
+    <verse number="6" style="v"/>Bosi mu nzila yinkaka :</para>
+  <para style="q1">
+    <char style="qt">ngeyo widi nganga Nzambi mu zithangu zioso</char></para>
+  <para style="q1">
+    <char style="qt">banga buididi kinganga ki Meleshisedeki.</char></para>
+  <para style="p">
+    <verse number="7" style="v"/>Mu bilumbu bi luzingu luandi lu kintoto, niandi wutambika zitsambulu ayi zindombolo mu yamikina ayi mu matsuela mu meso kuidi mutu wowo wulenda kumvukisa mu lufua. Mu diambu di kinzikanga Nzambi, niandi wubaka mvutu. <verse number="8" style="v"/>Ka diambu ko wuba Muana, vayi wulonguka tumama mu ziphasi ziozi kamona. <verse number="9" style="v"/>Bu kamana kitulu mutu wufuana, wuyika tho yi phulusu yi kayimani kuidi bobo beti kuntumukina. <verse number="10" style="v"/>Niandi wubieko kuidi Nzambi pfumu yi zinganga Nzambi banga buididi Meleshisedeki.</para>
+  <para style="s1">Lutambula bidia bi bakulutu</para>
+  <para style="p">
+    <verse number="11" style="v"/>Mambu mawombo madi yeto matuba mu diambu di nsamu wawu vayi phasi madi mu sudikisa bila luyikidi miolo mu sudika.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Nganu thama luyika minlongi mu mambu ma Nzambi ; vayi nate buabu lukidi moni mfunu balulonga malongi ma thonono mu mambu ma Nzambi. Luyikidi banga batu bobo beti mona tsatu miliki vayi bika tsatu bidia bingolo. <verse number="13" style="v"/>Bila woso kuandi mutu wunsadilanga miliki kasi zaba ko Mambu ma busonga, bila wukidi muana lezi. <verse number="14" style="v"/>Vayi bidia bingolo bidi mu diambu di bakulutu ; bila bawu bayuku sadilanga diela diawu mu tulanga luviakunu mu mamboti ayi mu mambimbi.</para>
+  <chapter number="6" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Diawu tubikeno viokisa thangu mu malongi ma thonono ma Klisto, vayi bika tubaluka kuidi malongi ma bakulutu mu kambu buela tula zifundasio. Bu dinsundula ti : balula khadulu yintotukilanga mu mavanga mannatanga ku lufua ayi mu minu mu Nzambi, <verse number="2" style="v"/>mu malongi ma mbotokolo ayi ma thetokolo yi mioko, mu mfulukulu yi bafua ayi mu tsambusulu yi mvu ka mvu. <verse number="3" style="v"/>Buna buawu bobo tuela vanga enati Nzambi veni minsua.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Bila bulendi baka bubela ko ti batu bobo batuama kienzolo, bobo babimba lueki lu dikaba di Diyilu, bobo baba kithuadi mu Pheve Yinlongo, <verse number="5" style="v"/>bobo babimba lueki lu Mambu ma Nzambi ayi lulendo lu tsungi yidi ku ntuala, <verse number="6" style="v"/>vayi bawu bua, buna balendi buela vutuka balula mavanga ko bila balembo bandi muana Nzambi va dikulusi mu diambu diawu vekaayi balembo mfuisi tsoni va meso ma batu.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Bila ntoto wowo wunokonongo zimvula ziwombo ayi weti buta bikunusu binsadulungu kuidi batu bobo bakununu wawu, buna Nzambi wunsakumunanga ntoto beni. <verse number="8" style="v"/>Vayi enati ntoto beni weti buta zitsolokoto ayi zitsendi buna wusiedi kadi luvalu ko. Buna weka nduka singu bosi tsukuluꞌandi yoko ku mbazu.</para>
+  <para style="p">
+    <verse number="9" style="v"/>A bakundi ba luzolo, ka diambu ko tuntuba bobo vayi diana tusidi ti lubeki mambu malutidi mu mboti, mannatanga ku phulusu. <verse number="10" style="v"/>Bila Nzambi widi wusonga ; kalendi zimbakana ko kisalu kioki lusala ayi luzolo lueno lolo lumonisa mu diambu di dizina diandi bu lusadila banlongo ayi lukidi ku basadila. <verse number="11" style="v"/>Tutidi ti kadika mutu mu beno kamonisa bufula bu phila yoyi mu diambu di keba diana di duka nate kuna tsukulu ; <verse number="12" style="v"/>mu diambu lubika kituka miolo vayi lusokudila batu bobo beti vingila kiuka kioki bavanina tsila, mu minu ayi mu mvibudulu.</para>
+  <para style="s1">Diana di kiedika</para>
+  <para style="p">
+    <verse number="13" style="v"/>Nzambi bu kavana tsila kuidi Abalahami, Nzambi wulevila ndefi mu dizina diandi veka, bu kasia baka ko mutu wunkaka wunlutila wowo kafueti levila ndefi ; <verse number="14" style="v"/>ayi wukamba ti : <char style="qt">bukiedika, ndiela kusakumuna buwombo ayi ndiela todisa nkunꞌaku.</char> <verse number="15" style="v"/>Mu mvibudulu yingolo Abalahami kavingidila ayi katambudila mambu momo mamvanina Nzambi tsila.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Bila batu beta levila ndefi mu dizina di mutu wunkaka wubalutidi. Bila, mu diambu diawu, ndefi yidi dimbu mu manisa ziphakazioso. <verse number="17" style="v"/>Diawu Nzambi bu kazola monisa kuidi batu bobo bela vinginina kiuka kiandi kioki kavanina tsila ti lukanu luandi lulendi baluka ko, buna wuleva ndefi. <verse number="18" style="v"/>Mu diambu di mambu muadi malendi viakana ko, mawu mammonisa ti Nzambi kalendi vuna ko. Mu mawu tubaka bu kindusulu mu simbidila diana diodi tukubukulu, beto tumana baka suamunu. <verse number="19" style="v"/>Diana diodi didi kuidi beto banga sengo kinsingiminanga muela, diana beni didi dikinda ayi dingolo. Diana beni dinkotanga, sabuka lido nate ku khati buangu kioki kilutidi nlongo, <verse number="20" style="v"/>kuna ku kota Yesu banga ntuami ntuala, mu diambu dieto. Wuyikidi pfumu yi zinganga Nzambi mu zithangu zioso banga buididi Meleshisedeki.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Meleshisedeki viatukidi Aloni</para>
+  <para style="p">
+    <verse number="1" style="v"/>Bila Meleshisedeki beni, ntinu wu Salemi, Nganga Nzambi yi Nzambi yizangama, wuyenda dengana Abalahami bu kaba ku mvita yika kanuana ayi kabedisila mintinu miwombo. Buna Meleshisedeki beni wunsakumuna. <verse number="2" style="v"/>Ayi Abalahami wuvana kuku ki kumi mu bima bioso biobikabaka kuidi Meleshisedeki.</para>
+  <para style="p">Tsundu Maleshisedeki : Ntinu wu busonga, bosi widi ntinu wu Salemi ; bu dinsundula ntinu wu ndembama. <verse number="3" style="v"/>Meleshisedeki kasia ba kadi dise ayi kadi ngudi ko ayi kikhulu kiandi kisi zabakana ko. Thonono yi bilumbu biandi ayi tsukusunu yi luzingu luandi bisi zabakana ko vayi luzingu luandi ludedakani ayi lu Muana Nzambi ; widi Nganga Nzambi mu zithangu zioso.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Tala boso bu kabela mutu wunneni, mutu wowo Abalahami kavana kuku ki kumi ki bima bi kabaka bu tuzebi ti Abalahami niandi dise di makanda. <verse number="5" style="v"/>Ayi mu batu bobo badi mu bana ba Levi bansalanga kinganga babeki minsua mi tambulanga kuku ki kumi boso buididi Mina, kuidi batu bu dinsundula bakhomba, ka diambu ko batotukila mu luketo lu Abalahami. <verse number="6" style="v"/>Vayi Meleshisedeki, kasi mu dikanda di bana ba Levi ko vayi wutambula kuku ki kumi kuidi Abalahami ayi wusakumuna mutu wowo wutambula zitsila zi Nzambi. <verse number="7" style="v"/>Mu kambu findana ziphaka beto boso tuzebi ti mutu wowo sakumuni niandi lutidi ayi mutu wowo basakumuni.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Banganga Nzambi bantambulanga kuku ki kumi badi batu bamfuanga vayi Meleshisedeki wutambula kuku ki kumi kiaki, wulembo telomono kimbangi ti widi moyo.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Tulenda tuba ti Levi wuntambulanga kuku ki kumi mamvandi wuvana kuku ki kumi mu nzila yi Abalahami. <verse number="10" style="v"/>Bila buna kabutukidi ko, vayi buna wukidi mu luketo lu nkulu andi mu thangu Meleshisedeki kadengana Abalahami.</para>
+  <para style="s1">Klisto widi nganga Nzambi mu ntanda wu Meleshisedeki</para>
+  <para style="p">
+    <verse number="11" style="v"/>Enati diluaku didi mu ba wufuana mu nzila yi kinganga ki ba Levi, bila mu kiawu batu bavanunu Mina, buna mfunu mbi widi mu buela bieka diaka nganga Nzambi yinkaka mu ntanda wu Meleshisedeki vayi kasia bieko ko boso buididi Aloni e ?</para>
+  <para style="p">
+    <verse number="12" style="v"/>Bila bawu viakisa kinganga buna Mina miviakini. <verse number="13" style="v"/>Bila mutu wowo wutubulu mambu beni widi muisi dikanda dinkaka, mu kambulu mutu wusala va diziku di <verse number="14" style="v"/>bila dizabikini ti Pfumu eto wutotukila mu dikanda di Yuda, dikanda dikambu tubila Moyize mu diambu di kinganga.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Tala diambu dilutidi zabakana bu tumueni ti : Nganga Nzambi yinkaka yitotukidi yidi mu ntanda wu Meleshisedeki ; <verse number="16" style="v"/>kasia bieko Nganga Nzambi ko mu lusadusu lu Mina boso buididi lutumunu lu batu vayi boso buididi lulendo lu luzingu lu kalulendi bungana ko. <verse number="17" style="v"/>Bila niandi wutelomono kimbangi kiaki :</para>
+  <para style="q1">
+    <char style="qt">ngeye widi Nganga Nzambi mu zithangu zioso</char></para>
+  <para style="q1">
+    <char style="qt">mu ntanda wu Meleshisedeki !</char></para>
+  <para style="p">
+    <verse number="18" style="v"/>Buna Mina mituama mibotolo mu diambu di misiala lulendo ko ayi misiala ko mfunu. <verse number="19" style="v"/>Bila Mina misia fuanisa kadi diambu dimosi ko. Vayi diana dimboti dikotoso ; mu diawu tulenda fikiminina Nzambi.</para>
+  <para style="s1">Klisto widi pfumu yi zinganga Nzambi mu zithangu zioso</para>
+  <para style="p">
+    <verse number="20" style="v"/>Mamo momo mavangimina mu ndefi yi leva Nzambi. Bila bana bayika zinganga zinzambi mu kambu leva ndefi. <verse number="21" style="v"/>Vayi Yesu wuyika nganga Nzambi boso bu bela ndefi yi leva Nzambi bu kankamba ti :</para>
+  <para style="q1">
+    <char style="qt">Pfumu wuleva ndefi</char></para>
+  <para style="q1">
+    <char style="qt">ayi kalendi viakisa mayindu mandi ko ;</char></para>
+  <para style="q1">
+    <char style="qt">ngeyo widi Nganga Nzambi mu zithangu zioso.</char></para>
+  <para style="p">
+    <verse number="22" style="v"/>Buna Yesu wuyika mvangi wu zitsila mu nguizani yoyi yilutidi kitoko.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Banganga Nzambi baba ziwombo mu kisalu ki kinganga mu diambu lufua luba kuba bikilanga ko thangu mu sala kisalu kiawu mu zithangu zioso bila baba fuanga wumosi-wumosi.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Vayi Yesu widi moyo mu zithangu zioso ayi diawu kadidi ayi kinganga kioki kilendi yekodolo mutu ko. <verse number="25" style="v"/>Diawu kalenda vukisila batu boso bobo bamfikama Nzambi mu niandi sumbu kadi moyo mu zithangu zioso mu diambu di kuba lombila.</para>
+  <para style="p">
+    <verse number="26" style="v"/>Bukiedika ti pfumu yi zinganga Nzambi yi phila yoyi yifueni kuidi beto ; niandi widi wunlongo, kasi zaba kadi diambu dimosi ko, kadi disumu kasi ko ayi widi wumvambana ayi bankua masumu ; niandi wutombolo ku yilu viokila diyilu. <verse number="27" style="v"/>Bapfumu zi zinganga Nzambi bankaka zifueti tambikanga kadika lumbu makaba mu diambu di masumu mawu veka bosi mu diambu di masumu ma batu boso. Vayi kuidi niandi kasi mfunu mu vanganga buawu ko bila niandi wutumbu manisa mamo mu khumbu yimosi bu kakivana niandi veka. <verse number="28" style="v"/>Mina mibieka batu balebakana mu ba bapfumu banganga Nzambi. Vayi mambu ma ndefi matotuka ku manima ma Mina, mabieka muana widi wufuana mu zithangu zioso.</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Klisto niandi Pfumu yi zinganga Nzambi yilutidi kitoko</para>
+  <para style="p">
+    <verse number="1" style="v"/>Diambu di mfunu mu mambu tuyolukidi diawu diadi : beto tubeki Pfumu yi zinganga Nzambi yinneni banga yayi, yidi ku Diyilu, va koko ku lubakala lu Kundu ki nkembo ki niandi veka Pfumu Nzambi. <verse number="2" style="v"/>Pfumu yi zinganga Nzambi beni widi banga kisadi mu buangu kilutidi nlongo ayi nlongo, nzo ngoto yitungu kuidi niandi Pfumu vayi bika kuidi batu.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Yoso-yoso Pfumu yy zinganga Nzambi yeti bieko mu diambu ditambikanga makaba ayi makaba mayoko. Diawu bufueni ti Pfumu yi zinganga Nzambi yayi, mamvandi kafueti ba ayi kima kioki kafueti tambikanga. <verse number="4" style="v"/>Enati wuba va ntoto, nganu kasia ba Nganga Nzambi ko, bila vadi ayi banganga Nzambi ziozi zintambikanga makaba boso buididi Mina. <verse number="5" style="v"/>Ziawu zieti sadila mfikula ayi kitsuisula ki bima bi diyilu banga Nzambi bu kalubudila Moyize bu kabaka lukanu lu tunga nzo ngoto ti : keba, ngeyo wela vangila bibioso boso buididi kifuani kioki bammonisa ku mbata mongo.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Vayi buabu Yesu wuyekodolo kisalu kilutidi mu kitoko bila niandi widi phovi yi nguizani yilutidi kitoko yitungu va zitsila zi kitoko.</para>
+  <para style="s1">Nguizani yikhulu ayi yimona</para>
+  <para style="p">
+    <verse number="7" style="v"/>Bukiedika, enati Nguizani yitheti yiba yikambu tsembolo nganu kadi mfunu mu viakisa yawu mu nguizani yimmuadi.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Vayi bu kasemba, buna wutuba :</para>
+  <para style="q1">
+    <char style="qt">Pfumu wutuba : ti bilumbu bilembo yizi</char></para>
+  <para style="q1">
+    <char style="qt">biobi ndiela wizana nguizani yimona</char></para>
+  <para style="q1">
+    <char style="qt">va kimosi ayi dikanda di Iseli ayi dikanda di Yuda.</char></para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <char style="qt">Bika sia ti boso buididi Nguizani yoyi</char></para>
+  <para style="q1">
+    <char style="qt">ndiwizana ayi bakulu bawu</char></para>
+  <para style="q1">
+    <char style="qt">mu lumbu kioki ndiba simba mu koko ;</char></para>
+  <para style="q1">
+    <char style="qt">mu kuba totula mu tsi yi Ezipite</char></para>
+  <para style="q1">
+    <char style="qt">bila basia ba bakuikama ko mu Nguizani yama.</char></para>
+  <para style="q1">
+    <char style="qt">Buna ndiba yekula.</char></para>
+  <para style="q1">
+    <char style="qt">Pfumu tubidi buawu.</char></para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <char style="qt">Pfumu tubidi ti : mu bilumbu bina, yawu yayi</char></para>
+  <para style="q1">
+    <char style="qt">Nguizani ndiela wizana ayi dikanda di Iseli :</char></para>
+  <para style="q1">
+    <char style="qt">ndiela tula Mina miama mu mayindu mama</char></para>
+  <para style="q1">
+    <char style="qt">ayi ndiela misonika mu mintima miawu.</char></para>
+  <para style="q1">
+    <char style="qt">Minu veka ndiela ba Nzambi awu</char></para>
+  <para style="q1">
+    <char style="qt">ayi bawu bela ba batu bama.</char></para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <char style="qt">Kuisi ko mutu wela mona mfunu mu longa ndiandi</char></para>
+  <para style="q1">
+    <char style="qt">voti khomba mu longa khombꞌandi ti :</char></para>
+  <para style="q1">
+    <char style="qt">“Bufueni ngeyo wuzaba Pfumu”</char></para>
+  <para style="q1">
+    <char style="qt">Bila batu boso bela kunzaba :</char></para>
+  <para style="q1">
+    <char style="qt">tona ku muana wu lezi nate</char></para>
+  <para style="q1">
+    <char style="qt">kuidi lutidi mimvu mu bawu.</char></para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <char style="qt">Bila ndiela kuba mona kiadi mu zinzimbala ziawu.</char></para>
+  <para style="q1">
+    <char style="qt">Ndilendi buela tebukila ko masumu mawu moyo.</char></para>
+  <para style="p">
+    <verse number="13" style="v"/>Bu katuba ti : Nguizani yimona buna wukitula yoyi yitheti yikhulu. Muaki yoyi yinkitukanga yikhulu ayi yoyi yeti nuna buna yimbanga nduka mu zimbala.</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Tsambudulu mu Nguizani yikhulu</para>
+  <para style="p">
+    <verse number="1" style="v"/>Mu nguizani yitheti, muba ayi zithumunu mu diambu di lusambulu ayi buangu kinlongo ki kintoto. <verse number="2" style="v"/>Batunga nzo ngoto. Mu ndambu yitheti muawu muba kima kioki bankietikanga muinda ayi meza ayi mapha matambuku kuidi Nzambi. Ndambu beni yawu “Buangu kinlongo.” <verse number="3" style="v"/>Ku manima ma mbusa lido kuawu kuba nzo ngoto batedila “Buangu kilutidi nlongo ayi nlongo”. <verse number="4" style="v"/>Muna khati muawu muba kimfimbu ki nolo ayi kesi yi Nguizani yimana vindu nolo mu zindambu zioso. Muna kesi beni muawu muba mvungu wu nolo, mana ; nti wu Aloni wutotula biteka ayi zimeza zi matadi musonama mambu ma nguizani.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Vana mbata kesi vawu vaba zimbasi ziozi beti tedila : “Baselibe ba nkembo” ; zifuka mu kitsuisula ki mavavi mawu buanguki nlemvo. Vayi buabu tulendi baka bu yolukila mambu mama mu dimosi-dimosi ko.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Mambu mama bu mamana kubuku ; banganga Nzambi babakotanga kadika thangu ku ndambu yitheti yi buangu kinlongo mu diambu di sala kisalu kiawu. <verse number="7" style="v"/>Vayi pfumu yi zinganga Nzambi niandi kaka wuba kotanga muna khati ndambu yinzole. Khumbu yimosi kaba mu kotilanga mu kadika mvu. Kadika khumbu kankota ayi menga momo kafueti tambika mu diambu di niandi veka ayi mu diambu di zinzimbala zi batu.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Pheve Yinlongo weti kutumonisa bumboti ti nzila yoyi yinkotolongo ku buangu kilutidi nlongo ayi nlongo yikidi yikangama sumbu nzo ngoto yitheti yikidi. <verse number="9" style="v"/>Yawu yidi mfikula mu diambu di thangu yayi. Diodi dinsundula ti makaba ayi makaba mayoko momo baba tambikanga kuidi Nzambi malendi nunga ko mu fuanisa bumboti mayindu ma ntima ma mutu wowo wuntambikanga mawu.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Bila mambu momo matedi kaka ndiwulu ; ndiunu ayi zitsukudulu zi phila mu phila. Mambu beni madi zithumunu zi kinsuni zivanu nate thangu Nzambi kela fuanisa mambu moso.</para>
+  <para style="ms1">MENGA MA KLISTO</para>
+  <para style="s1">Klisto niandi Pfumu yi zinganga Nzambi yi bima bimboti biobi katubakila</para>
+  <para style="p">
+    <verse number="11" style="v"/>Klisto bu kayiza banga Pfumu yi banganga Nzambi mu diambu di kutuvana bima biobi bimboti katubakila tona thama, buna wusabuka buangu kinlongo kilutidi tola ayi kilutidi fuana. Kiawu kisia tungulu mu mioko mi batu ko ; kiawu kisi ki ntoto wawu ko. <verse number="12" style="v"/>Khumbu yimosi kaka kakotila muna buangu kilutidi nlongo ayi nlongo ; wutambika, bika sia ti menga ma zikhombo voti ma zingombi vayi wutambika menga mandi veka. Buawu bobo katubakila khudulu yi kayimani. <verse number="13" style="v"/>Bila enati menga ma zikhombo ayi ma zingombi zimbakala votidibombi di ngombi yi kheto, diodi divindulu batu bobo basumuka, dieti kuba vedisanga va mbata nitu. <verse number="14" style="v"/>Vayi tufueti zaba ti menga ma Klisto, mutu wowo mu lusadusu lu Pheve yi mvu ka mvu, wukiyekula niandi veka kuidi Nzambi banga dikaba dikambulu ditona, mela vedisa mayindu meto ma ntima mu mavanga meti natanga ku lufua muingi tusadila Nzambi yi moyo.</para>
+  <para style="s1">Nguizani yimona yivangimina mu dikaba di Klisto</para>
+  <para style="p">
+    <verse number="15" style="v"/>Diawu diodi Klisto kadidi phovi yi Nguizani yimona muingi babo batelo batambula kiuka kika kisukanga ko, kioki kivanunu tsila. Bila Klisto niandi wufua mu diambu di kuba kula mu masumu momo bavola mu Nguizani yitheti.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Bila vadi tesitama<note caller="+" style="f"><char style="fr" closed="false">9.16 </char><char style="fq" closed="false">Tesitama</char><char style="fqa" closed="false"> : </char><char style="ft" closed="false">widi nkanda wummonisa buevi bufueti sadulu bima bi mutu niandi bu kafuidi.</char></note> buna vana vafueti telomono kimbangi ki lufua lu mutu wusonika kiawu. <verse number="17" style="v"/>Bila mfunu tesitama wumonikanga mu thangu mutu wowo sonikini kiawu kafuidi. Kisi kadi mfunu wumosi ko mu thangu mutu wusonika kiawu kakidi zingi. <verse number="18" style="v"/>Diawu Nguizani yitheti bu yitona, buna menga matengolo. <verse number="19" style="v"/>Bila Moyize bu kamana sudikisa zithumunu zioso zi Mina kuidi batu, wubonga menga ma bana ba zingombi ayi ma zikhombo zimbakala va kimosi ayi nlangu, lino yi mbuaki ayi ditafi di nti bantedilanga “Izopi”, wumuangina buku va kimosi ayi batu boso ; <verse number="20" style="v"/>bu katuba : <char style="qt">mama mawu menga ma Nguizani yoyi Nzambi kawizani ayi beno.</char></para>
+  <para style="p">
+    <verse number="21" style="v"/>Bosi wumuangina diaka buangu kinlongo menga va kimosi ayi bima bioso beti sadila mu lusambulu. <verse number="22" style="v"/>Muaki nduka-nduka bima bioso bimvedosongo mu menga landila boso buididi Mina. Ayi enati menga makadi tenguka buna masumu malendi lemvokolo ko. <verse number="23" style="v"/>Buna diba diambu di mfunu ti zimfikula zi bima biobi bidi mu diyilu zifueti vedoso mu bima bi phila yina. Vayi biawu veka bima bi diyilu bifueti vedosolo mu makaba mayoko malutidi kitoko.</para>
+  <para style="s1">Yesu wukota ku buangu kilutidi nlongo mu khumbu yimosi</para>
+  <para style="p">
+    <verse number="24" style="v"/>Bila Klisto kasia kota ko mu buangu kinlongo kitungulu mu mioko mi batu, kidi kaka mfikula yi kioki kikiedika. Vayi niandi wukota ku khati diyilu mu diambu kamonika va meso ma Nzambi mu diambu dieto.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Bika sia ti wukota muawu mu diambu kakitambika niandi veka mu zikhumbu ziwombo banga bueti vangilanga pfumu yi banganga Nzambi, mutu wunkotanga kadika mvu ku buangu kilutidi nlongo ayi nlongo va kimosi ayi menga mangana. <verse number="26" style="v"/>Bila enati bobo nganu zikhumbu ziwombo kamonina ziphasi tona ntoto wuvangulu. Vayi buabu wumonika mu khumbu yimosi mu tsukulu yi thangu mu diambu di katula masumu bu kakitambika niandi veka banga dikaba. <verse number="27" style="v"/>Sambusu buidi ti mutu khumbu yimosi kaka keti fua, bosi weka <verse number="28" style="v"/>bobuawu, Klisto wukitambika khumbu yimosi mu diambu di nata masumu ma batu bawombo. Bosi wela monika mu khumbu yimmuadi, bika sia ti muingi kanata masumu ma batu, vayi mu diambu di nata phulusu kuidi batu bobo balembo mvingila.</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">Dikaba di Klisto diviokidi Mina</para>
+  <para style="p">
+    <verse number="1" style="v"/>Mina midi kitsuisula ki mambu mamboti momo mankuiza vayi bika khatika lunitu lu mambu beni. Buna Mina milendi ko fuanisa, mu diambu di makaba momo bantambikanga thangu ka thangu kadika mvu, batu bobo bamfikamanga Nzambi. <verse number="2" style="v"/>Enati minunga, nganu batu bobo bantambikanga makaba momo balendi buela tambikanga mawu ko bila nganu bu bakivedosolo mu khumbu yimosi balendi buela bela ko masumu mawu mayindu.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Vayi mu makaba momo baba tambikanga muawu baba tebukilanga, kadika mvu, masumu mawu moyo. <verse number="4" style="v"/>Bila menga ma zingombi ayi ma zikhombo malendi botula ko masumu.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Diawu Klisto katubila bu kayiza va nza ti :</para>
+  <para style="q1">
+    <char style="qt">Ngeyo wumanga tambula makaba mayoko ayi makaba</char></para>
+  <para style="q1">
+    <char style="qt">vayi ngeyo wukhubikila nitu.</char></para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <char style="qt">Ngeyo wusia mona ko khini</char></para>
+  <para style="q1">
+    <char style="qt">mu makaba ma bibulu biobi bayokila,</char></para>
+  <para style="q1">
+    <char style="qt">mu makaba mayoko</char></para>
+  <para style="q1">
+    <char style="qt">mu diambu di masumu</char></para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <char style="qt">Buna ndituba : tala, ndilembo yizi.</char></para>
+  <para style="q1">
+    <char style="qt">Mu buku muidi musonama mu diambu diama :</char></para>
+  <para style="q1">
+    <char style="qt">A Nzambi, ndizidi mu diambu di vanga luzolo luaku.</char></para>
+  <para style="p">
+    <verse number="8" style="v"/>Wutuama tuba ti : <char style="qt">Ngeyo wumanga kuaku makaba, makaba mayoko, makaba ma bibulu biobi bayokila, makaba mayoko mu diambu di masumu. Kadi khini wusia mamona ko. Muaki makaba beni maba tambukungu boso bubela Mina.</char> <verse number="9" style="v"/>Bosi wutuba diaka : <char style="qt">Minu ndizidi mu diambu di vanga luzolo luaku.</char> Buawu bobo kabotudila makaba moso ma khulu ayi kavingisila va buangu beni dikaba di Klisto.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Mu luzolo lolo tukitudulu banlongo mu diambu di dikaba ditambika Yesu Klisto bu katambika nitu andi veka mu khumbu yimosi.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Kadika nganga Nzambi kafueti telamanga kadika lumbu mu sala kisalu kiandi ayi mu tambikanga kadika thangu makaba mo mawu, momo malendi botula masumu. <verse number="12" style="v"/>Vayi Klisto niandi bu katumbu tambika dikaba dimosi kaka mu diambu di masumu buna wuvuanda va koko ku lubakala lu Nzambi. <verse number="13" style="v"/>Kuna kamvingidila Nzambi kakitula bambeni bandi banga kima kinketo kongo bitambi biandi.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Bila mu diambu di dikaba dimosi kaka niandi wukitula, mu zithangu zioso batu bafuana ; bobo kavedisa mu masumu.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Pheve Yinlongo, wututelimina kimbangi mu diambu beni bila wutuama tuba ti :</para>
+  <para style="p">
+    <verse number="16" style="v"/>Pfumu kakembi : bilumbu bina bu biela vioka,</para>
+  <para style="q1">
+    <char style="qt">Tala phila nguizani ndiela wizana yawu :</char></para>
+  <para style="q1">
+    <char style="qt">Ndiela tula Mina miama mu mintima miawu,</char></para>
+  <para style="q1">
+    <char style="qt">ayi ndiela misonika mu mayindu mawu.</char></para>
+  <para style="p">
+    <verse number="17" style="v"/>Bosi wubuela diaka</para>
+  <para style="q1">
+    <char style="qt">Ndilendi buela tebukilanga masumu mawu</char></para>
+  <para style="q1">
+    <char style="qt">ayi mambimbi mawu moyo ko.</char></para>
+  <para style="p">
+    <verse number="18" style="v"/>Muaki masumu mawu lemvokolo, kadi mfunu kusiedi ko mu buela tambikanga makaba mu diambu di masumu.</para>
+  <para style="ms1">MINU AYI THATUMUNU</para>
+  <para style="s1">Tubika loza diana dieto</para>
+  <para style="p">
+    <verse number="19" style="v"/>Diawu bakhomba, sumbu tuidi ayi diana di kotila ku buangu kilutidi nlongo ayi nlongo mu diambu di menga ma Yesu, <verse number="20" style="v"/>mu nzila yimona ayi yi moyo yoyi katuzibudila mu lido ; yi buangu kilutidi nlongo ayi nlongo lido beni nitu andi. <verse number="21" style="v"/>Ayi sumbu tubeki Pfumu yi zinganga Nzambi yinyadila Nzo Nzambi, <verse number="22" style="v"/>diawu bika tufikama vadi Nzambi mu mintima milulama, mudiana dioso diodi dintotukilanga minu va kimosi ayi mintima mivedoso mu mayindu mambimbi ma ntima ayi nitu yisukulu mu nlangu wuvedila.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Diawu bika tusimbidila bumboti diana diodi tuzebi ti didi di kiedika bila mutu wowo wutuvana zitsila widi wukuikama.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Tusungasananga beto na beto mu diambu di salasananga beto na beto muingi tumonikisa luzolo ayi vanga mavanga mamboti.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Tubikeno tina mabundu meto banga bueti vangila batu bankaka ; vayi bika tukikindisanga beto na beto bu lumueni ti lumbu ki Pfumu kieka nduka.</para>
+  <para style="p">
+    <verse number="26" style="v"/>Enati tulembo vodi masumu mu luzolo bu tumana tambula nzayilu yi kiedika, buna kusiedi diaka dikaba ko mu diambu di masumu. <verse number="27" style="v"/>Vayi tufueti kaka vingila, mu tsisi, tsambusu ayi mbazu yingolo yela zinisa zimbzni zioso zi Nzambi.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Woso mutu wummanga tumukina Mina mi Moyize kafueti fua mu kambu kiadi mu kimbangi ki batu buadi voti batu batatu. <verse number="29" style="v"/>Yindulanu beno veka, buevi buela bela thumbudulu yingolo yoyi yela tambula mutu wowo wela lenza Muana Nzambi, wela mona menga ma nguizani, mu momo kavedosolo ti masi kadi mfunu ko ayi wumfinga Pheve Yinlongoyi nlemvo e ?</para>
+  <para style="p">
+    <verse number="30" style="v"/>Bila tuzebi bumboti mutu wowo wutuba :</para>
+  <para style="q1">
+    <char style="qt">Minu veka ndiela vutula landi</char></para>
+  <para style="q1">
+    <char style="qt">ayi minu veka ndiela futa.</char></para>
+  <para style="p">Ayi wubuela tuba ti :</para>
+  <para style="q1">
+    <char style="qt">Pfumu wela sambisa batu bandi.</char></para>
+  <para style="p">
+    <verse number="31" style="v"/>Didi diambu di tsisi mu bua mu mioko mi Nzambi yi moyo.</para>
+  <para style="p">
+    <verse number="32" style="v"/>Lutebukila moyo bilumbu bituama biobi lutambudila kiezila ki Nzambi, beno luvibidila ziphasi zi khindu yinneni. <verse number="33" style="v"/>Bila zithangu zinkaka balu finga va meso ma batu bawombo ayi balu monisa ziphasi ; zithangu zinkaka lufubakana ayi batu bankaka bammona ziphasi banga ziozi lulembo moni. <verse number="34" style="v"/>Bila lufubakana mu ziphasi zi batu baba mu nloko ayi beno veka lummona khini bu baluziona bima bieno bu luzebi ti kimvuama bu kitoko ayi kinzingilanga buidi yeno.</para>
+  <para style="p">
+    <verse number="35" style="v"/>Kadi loza diana dieno bila dibeki mfutu wunneni. <verse number="36" style="v"/>Bila mfunu wu thatumunu widi yeno muingi lutambula mambu momo Nzambi kaluvanina tsila bu lumeni vanga luzolo luandi.</para>
+  <para style="q1">
+    <verse number="37" style="v"/>
+    <char style="qt">Bila fioti fisiedi, fioti kuandi fisiedi</char></para>
+  <para style="q1">
+    <char style="qt">buna mutu wowo wufueti kuiza, wela kuiza,</char></para>
+  <para style="q1">
+    <char style="qt">ayi kalendi zingila ko.</char></para>
+  <para style="q1">
+    <verse number="38" style="v"/>
+    <char style="qt">Muaki mutu widi wusonga va meso mama wela zingila mu minu</char></para>
+  <para style="q1">
+    <char style="qt">vayi enati vutukidi ku mbusa,</char></para>
+  <para style="q1">
+    <char style="qt">buna ndilendi buela kummona khini ko.</char></para>
+  <para style="p">
+    <verse number="39" style="v"/>Beto tuisi ko mu ntanda wu batu bobo bamvutukanga ku mbusa muingi tuzimbala vayi tuidi mu ntanda wu batu bobo badi minu ayi baambula phulusu.</para>
+  <chapter number="11" style="c"/>
+  <para style="s1">Minu ki bambangi ba Nguizani yi khulu</para>
+  <para style="p">
+    <verse number="1" style="v"/>Minu kinsundula tula diana dingolo mu bima, biobi bi nsiwulungu diana ayi ayi kikinina ti wutambudi bima ka diambu ko bimonikini ko. <verse number="2" style="v"/>Mu diambu di minu bakulu batelomono kimbangi.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Mu diambu di minu tuzabidi ti nza yivangulu mu mbembo yi Nzambi, ayi, bima bioso biobi bieti monika bivangimina mu biobi kabi monikanga ko.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Mu diambu di minu, Abeli wutambika kuidi Nzambi dikaba diyoko dilutidi dimboti viokila ditambika Kayini. Mu diambu di minu Nzambi kammonina mutu wusonga bu katelama niandi veka kimbangi ti wukikinina makaba mandi. Ayi mu diambu di minu Abeli wukidi yoluka diaka, ka diambu ko wufua kuandi.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Mu diambu di minu, Enoki wukatulu mu diambu kabika mona lufua. Basia kummona ko bila Nzambi wunkatula. Muaki tuamina kakatulu, bantelimina kimbangi kiaki : <char style="qt">Niandi wumonisa Nzambi khini.</char> <verse number="6" style="v"/>Muaki mutu kambulu minu kalendi monisa Nzambi khini ko. Bila bulutidi mboti ti woso mutu tidi fikama Nzambi kawilukila ti Nzambi widi ayi kafueti wilukila ti niandi wumfutanga batu boso bankuntombanga.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Mu diambu di minu, mu thangu Nzambi kalubula Nowa mu mambu momo katueni mona, wukinzika Nzambi ayi wutunga masuwa mu diambu di vukisa nzoꞌandi. Mu minu kiandi, wuzengila nza nkanu ayi wukituka mvingidi wu kiuka ki busonga kintotukilanga mu minu.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Mu diambu di minu, Abalahami wutumamana, bu katelo, mu kuenda ku tsi yoyi kafueti tambula banga kiuka ; ka diambu ko kasia zaba ko kuevi kankuenda. <verse number="9" style="v"/>Mu diambu di minu niandi wuzingila mu kinzenza mu tsi yi tsila ; wuzingila mu zinzo zingoto va kimosi ayi Isaki ayi Yakobi ; bobo baba mu tsila yimosi banga niandi. <verse number="10" style="v"/>Bila niandi wuvingila divula didi zifundasio ziozi zilendi nikuka ko. Nzambi niandi nkubiki ayi ntungi wu divula beni.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Mu diambu di minu ; Sala mamvandi, wubaka zingolo zi butila ka diambu ko mimvu mi butila mivioka ; bila wumona ti mutu wowo wuvana tsila widi wukuikama.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Diawu mu mutu wumosi, mutu wowo wuyika nunu, wuba nduka mu fua, mu butukila nkuna wu batu bobo baviokidi zimbuetete zi Diyilu ayi baviokidi tsengisini yidi va disimu di mbu, yilendi baka bu tangulu ko.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Batu bobo bafuila mu minu mu kambu baka bima biobi baba vanina tsila, vayi bamona biawu ayi bavana biawu mboti buna bakidi thama ayi bawu veka bazaba ti badi banzenza ayi minkibi vava ntoto. <verse number="14" style="v"/>Batu bantubila bobo bammonisa bumboti ti tsi awu veka bantomba. <verse number="15" style="v"/>Bila enati beti yindula tsi yoyi batotukila nganu babaka diluaku di buela mu vutuka. <verse number="16" style="v"/>Vayi buabu tsi yi kitoko bantomba, tsi yi diyilu. Diawu Nzambi kamonanga tsoni ko ti bantedila Nzambi awu, bila wuba kubikila divula.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Mu diambu di minu, Abalahami wutambika Isaki banga dikaba diyoko mu thangu Nzambi kantota. Niandi wutambula tsila vayi wuba wukubama mu tambika muanꞌandi wumosi kaka. <verse number="18" style="v"/>Ka diambu ko Nzambi wunkamba : <char style="qt">Mu Isaki wela bakila nkuna.</char></para>
+  <para style="p">
+    <verse number="19" style="v"/>Abalahami wumona ti Nzambi beki lulendo lu fulukisila Isaki mu bafua. Bukiedika Abalahami wutambula Isaki bu bamfulukisa.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Mu diambu di minu, Isaki wusakumuna Yakobi ayi Esawu mu diambu di mambu momo mankuiza ku ntuala. <verse number="21" style="v"/>Mu diambu di minu, Yakobi, tuamina lufua luandi, wusakumuna kadika muana wu Zozefi ayi wusambila Nzambi bu kasingimina mutsongi ntiꞌandi.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Mu diambu di minu, Zozefi, bu kamona ti weka nduka fua, wuyolukila thotokolo yi bana ba Iseli mu tsi Ezipite ayi wuvana lutumunu mu diambu di mambu momo bafueti vanga mu mimvesi miandi.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Mu diambu di minu, bambuta ba Moyize basueka muanꞌawu mu tezo ki zingondi zitatu bila zimona ti muana wuba wukitoko ayi kadi tsisi zisia mona ko mu tinguna lutumunu lu ntinu.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Mu diambu di minu, Moyize, bu kayunduka, wumanga kuandi tedolo muana wu muana wunketo wu Falawo. <verse number="25" style="v"/>Wumanga mona makhini mu ndambu thangu madi mu masumu vayi wuluta zola mona ziphasi va kimosi ayi batu ba Nzambi. <verse number="26" style="v"/>Bila niandi wumona tsoni yoyi Klisto kafueti fua yidi kimvuama kinneni kiviokidi kioki ki Ezipite bila meso mandi maba ntadidila mfutu wowo widi ku ntuala.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Mu diambu di minu, niandi wubika Ezipite mu kambu mona zinganzi zi ntinu tsisi. Wuba wukinda, bila niandi wumona Nzambi yika yimonikanga ko. <verse number="28" style="v"/>Mu diambu di minu, niandi wukembila pasika ayi wudukula menga mu mielo mu diambu di mbasi yitumu mu bunga yibika bunga bana batheti ba bana ba Iseli.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Mu diambu di minu, bana ba Iseli basabuka mbu wu mbuaki banga mu ntoto wuyuma. Vayi basi Ezipite bu bedi ka sabuka buna bamana diama.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Mu diambu di minu, bibaka bi Yeliko bi bua bana ba Iseli bu bazunga biawu tsambudi di bilumbu.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Mu diambu di minu, Lahabi, ka diambu ko wuba kuandi ndumba leta, wuvuka mu lufua va kimosi ayi batu bobo bamanga tumukina Nzambi, mu diambu kayakula bumboti batu batumu mu kinsueki mu tala Yeliko mu diela. <verse number="32" style="v"/>A mambu mbi ndieka buela tuba e ? Buna thangu mayiba yi fioti enati mfueti yolukila Ngedewoni, Balaki, Samisoni, Zefeti, Davidi, Samueli ayi mimbikudi. <verse number="33" style="v"/>Mu diambu di minu bawu babedisa mintinu, bavanga mambu ma busonga, batambula mambu momo baba vanina tsila ; bakangisa miunu mi zikhosi ; <verse number="34" style="v"/>bazima lulendo lu zimbazu zingolo ; bavuka bu bedi kavondo mu sabala ; batambula zingolo ka diambu ko baba bavonga ; bamonika binuani bingolo ku mvita ; batinisa nkangu wu masodi ma banzenza. <verse number="35" style="v"/>Mu diambu di minu kiawu baketo baba vutudila batu bawu bafua, mu mfulukulu.</para>
+  <para style="p">Muaki bankaka bayamusu ayi bamanga baba kula mu diambu di bazaba ti bela fuluka mu mfulukulu yi kitoko. <verse number="36" style="v"/>Bankaka basekonono, babeto bikoti, babakanga zisieni ayi bakotoso mu minloko. <verse number="37" style="v"/>Bankaka balozolo matadi, babasu mu bisi banga bu mbasulungu mabaya ; bavondolo mu bisabala, bakituka mindiengidi, bamvuata minkanda mi mamemi ayi mi zikhombo. Bakambu mamo ayi bibioso, babamonisa ziphasi ayi bayamusu. <verse number="38" style="v"/>Nza yisia ba yifuana mu diambu diawu ko. Badiengila mu makanga ayi mu miongo ; mu zithadi ayi mu mabulu madi mu ntoto.</para>
+  <para style="p">
+    <verse number="39" style="v"/>Batu boso bobo, ka diambu ko batelomono kimbangi mu diambu di minu kiawu, vayi, kadi mutu kasia tambula ko bina biba vanunu tsila. <verse number="40" style="v"/>Bila Nzambi wutukubikila mambu ma kitoko, wuzola ti bakituka batu bafuana banga beto.</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">Tuzawula thinu mu kambu bonga</para>
+  <para style="p">
+    <verse number="1" style="v"/>Sumbu tuzungulu kuidi bambangi bawombo, bika tulozanu bizitu bioso ayi masumu makutuzungidilanga mu zindambu zioso. Vayi bika tuzawula thinu mu kambu vonga mu tsisani yidi yeto ku ntuala. <verse number="2" style="v"/>Bika thalu eto yiba kaka kuidi Yesu bila niandi wutona ayi wudukisa minu kieto. Niandi, mu diambu di khini yoyi yiba ku ntualꞌandi, wuvibidila va dikulusi ; kasia mona tsoni ko ayi buabu vuendi va koko ku lubakala lu kundu ki Kipfumu ki Nzambi.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Bika luyindulanu mutu wowo wuvibidila batu ba masumu, muingi lubika vonga ayi lebakana mu miela mieno.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Bu lueti nuanisa masumu, lutudidi ko mu tezo ki totula menga. <verse number="5" style="v"/>Buna luzimbakana kueno mambu mama makulukindisanga, momo Nzambi kalukamba banga ti niandi wunyoluka kuidi bana bandi e ?</para>
+  <para style="q1">
+    <char style="qt">A Muanꞌama, kadi lenzanga thumbudulu yi Pfumu ;</char></para>
+  <para style="q1">
+    <char style="qt">kadi vonga mu thangu kalembo ku temina,</char></para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <char style="qt">bila Pfumu wuntumbudilanga mutu wowo keta zola,</char></para>
+  <para style="q1">
+    <char style="qt">ayi wunzubanga lusuadi kuidi bobo kazebi</char></para>
+  <para style="q1">
+    <char style="qt">ti badi bana bandi.</char></para>
+  <para style="p">
+    <verse number="7" style="v"/>Luvibidila ziphasi zieno. Nzambi ziawu zidi mu diambu di kululudika. Nzambi wukulumonanga banga bana. Muana mbi wowo kakabakanga thumbudulu ko kuidi Dise ? <verse number="8" style="v"/>Enati lukadi baka thumbudulu yoyi yintambulanga bana boso, buna diodi dimmonisa ti luidi bana ba kindumba ; luisi khatika bana ko.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Beto tuba ayi madise meto ma kinsuni makutuvananga thumbudulu vayi tukubakinzikanga. Mbi bi kutukandika mu luta tumukina dise di diyilu muingi tuzinga e ? <verse number="10" style="v"/>Madise meto ma kinsuni makutuvananga thumbudulu mu ndambu thangu, boso bubela mayindu mawu vayi Nzambi wukutuvananga thumbudulu mu diambu di mamboti meto, muingi mamveto tuba kithuadi mu bunlongo buandi.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Bukiedika ti mu thangu yayi, thumbudulu yidi diambu di kiadi, bika di khini. Vayi kunzimunina yimbutanga luzingu lusonga lunzingulungu mu ndembama kuidi bawu batambula thumbudulu beni.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Diawu vumunanu mioko mieno mivonga ayi makuma meno ma lebakana, <verse number="13" style="v"/>bika luludika minsolo mu diambu di malu meno ; mu diambu di kulu ku bela kubika luta fumbuka vayi ku beluka.</para>
+  <para style="s1">Zinga luzingu lu nlongo</para>
+  <para style="p">
+    <verse number="14" style="v"/>Tunuananu mu ba mu ndembama ayi batu boso ayi zinga luzingu lunlongo bila kambu luzingu lunlongo, mutu kalendi mona Pfumu ko. <verse number="15" style="v"/>Lulubuka tala mutu kabika kambu nlemvo wu Nzambi, mu diambu di muanzi wu ndudi wedi mena va luidi ; muingi wubika totula divunzi ayi wubika bivisa bawombo mu beno. <verse number="16" style="v"/>Lulubuka muingi muna luidi, mutu kabika sala kindumba voti sekinina mambu ma nlongo banga bubela Esawu ; mutu wusumbisa kikulutu kiandi mu diambu di bidia. <verse number="17" style="v"/>Bila, luzebi kueno ti kunzimunina bu kedi ka buela tomba baka kiuka ki lusakumunu, kasia kikununu ko bila diluaku disia buela ba ko muingi kaviakisa mambu mavanga dise diandi ; ka diambu ko boso kaba ntomba lusakumunu buna wulembo didi.</para>
+  <para style="s1">Kipfumu kioki kakilendi nikuka ko</para>
+  <para style="p">
+    <verse number="18" style="v"/>Lusia fikama ko banga bana ba Iseli, ku mongo wulenda simbu ; wowo wuba lema mbazu, ku tombi ki nkobo ayi ku vuka ; <verse number="19" style="v"/>voti ku tulumbeta ko voti ku mbembo yimosi yi tsisi yiba wakikisa mambu ma tsisi. Diawu batu bobo bawa yawu balomba mu diambu babika buela wa diaka mbembo beni. <verse number="20" style="v"/>Bila bamona ti balendi nunga ko mu kinzikanga lutumunu lolo lutotukila muawu ti : ka diambu ko bulu kinsimba mongo, kifueti vondolo mu matadi. <verse number="21" style="v"/>Mambu beni bu mabela ngolo tsisi, diawu niandi veka Moyize kayamikina ti : <char style="qt">Tsisi ndimmona ayi ndieka tita.</char></para>
+  <para style="p">
+    <verse number="22" style="v"/>Vayi beno lutumbu fikama ku mongo wu Sioni, ku divula di Nzambi yi moyo, ku Yelusalemi di Diyilu ayi kuidi minkangu na minkangu mi zimbasi midi mu nkembo ; <verse number="23" style="v"/>ayi kuidi Dibundu di bana batheti ba Nzambi bobo mazina mawu madi masonama mu Diyilu. Beno lufikama kuidi Nzambi, zuzi di batu boso ; ayi kuidi ziphevi zi batu banlongo bamana fuana.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Beno lutumbu fikama kuidi Yesu, phovi yi Nguizani yimona ayi kuidi menga mandi matenguka ; momo meti yoluka bumboti viokila buyolukila menga ma Abeli. <verse number="25" style="v"/>Lukeba tala luedi kambu wila mutu wowo wulembo yoluka. Bila enati bobo bamanga wila mutu wowo wuba lubula vava ntoto, basia vuka ko mu thumbudulu ; buna buevi buela bela kuidi beto enati tutembi manima kuidi mutu wowo wulembo yoluka tona ku Diyilu e ? <verse number="26" style="v"/>Mbemboꞌandi yinikuna ntoto vayi buabu wuveni tsila yayi : <char style="qt">Ndiela buela nikuna diaka, vayi bika sia ti wo ntoto kaka vayi ayi diyilu.</char> <verse number="27" style="v"/>Diambu diadi : diaka dinsundula ti bima bioso bilenda nikunu biobi bivangama, biela viakusu mu diambu biobi bi kabinikukanga ko bizingila.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Diawu, sumbu tuela tambula kipfumu kioki kakilendi nikuka ko, bika tuzaba vutudilanga Nzambi matondo ayi tunsadila mu phila yikumonisa khini mu tumamana ayi mu lukinzu. <verse number="29" style="v"/>Bila Nzambi eto widi mbazu yeti zinisanga.</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">Zindubu zi phila mu phila</para>
+  <para style="p">
+    <verse number="1" style="v"/>Bika luzolo lu kikhomba luzingila. <verse number="2" style="v"/>Lubika zimbakananga yakulanga banzenza bumboti bila batu bankaka bayakula zimbasi mu kambu zaba.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Lutebukilanga moyo batu badi mu nloko banga ti mamveno luidi bakangama va kimosi ayi bawu. Lutebukilanga moyo batu bobo banyamusu bila beno mamveno lubeki zinitu ziozi zilenda yamusu.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Bika batu boso bakinzikanga dikuela. Mfulu yi batu bakuela yifueti banga yivedila bila Nzambi wela sambisa batu boso bansadilanga kindumba ayi kitsuza.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Bika khadulu eno yibika diatusu kuidi luzolo lu zimbongo. Monanganu khini mu bima bibi bidi yeno bila niandi veka Nzambi wutuba ti : <char style="qt">Ndilendi kuyekula ko, ndilendi ku loza ko !</char></para>
+  <para style="p">
+    <verse number="6" style="v"/>Diawu tubeki bu tubila mu diana dioso, ti :</para>
+  <para style="q1">
+    <char style="qt">Pfumu niandi wukutsadisanga,</char></para>
+  <para style="q1">
+    <char style="qt">ndilendi mona tsisi ko.</char></para>
+  <para style="q1">
+    <char style="qt">Mutu mbi kalenda kuphanga e ?</char></para>
+  <para style="p">
+    <verse number="7" style="v"/>Lutebukilanga moyo mintuadisi mieno mi lulonga mambu ma Nzambi. Luyindulanga tsukulu yi khadulu awu ayi lusokudila minu kiawu.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Yesu Klisto widi phila yimosi kibedi yono ayi lumbu kiaki ayi mu mimvu mikamimani. <verse number="9" style="v"/>Lubika vunu mu malongi ma phila mu phila ayi ma nzenza. Bila bulutidi mfunu mintima mikindusu mu nlemvo wu Nzambi vayi bika mu khebolo yi mina mitedi ndiwulu, bila misadisanga ko bobobansadilanga miawu. <verse number="10" style="v"/>Tubeki diziku dintambukulungu makaba vayi batu bobo bansalanga mu nzo ngoto basi ko minsua mu dia. <verse number="11" style="v"/>Bila Pfumu yi zinganga Nzambi wunata menga ma bibulu mu diambu di ndemvokolo yi masumu, ku Buangu kilutidi nlongo. Vayi zinitu zi bibulu beni ziyokolo ku difula di Ka. <verse number="12" style="v"/>Diawu Yesu mamvandi kamonina ziphasi ku difula di Ka, mu diambu di vedisa batu mu menga mandi.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Diawu bika tuenda kuidi niandi, kuna difula di Ka ayi tukikinina fua zitsoni ziozi kafua. <verse number="14" style="v"/>Bila vava tuisi ko divula dinzingilanga mu zithangu ziosovayi tulembo tombi divula diodi di nkuiza. <verse number="15" style="v"/>Mu diambu di Yesu, bika tutambikanga kuidi Nzambi dikaba di minkunga ; bu dinsundula ti tufueti sanisinanga dizina diandi. <verse number="16" style="v"/>Lubika zimbakana vanganga mamboti ayi kabulanga kuidi bakhomba bila makaba ma phila yoyi mawu mamonisanga Nzambi khini.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Lutumukinanga mintuadisi mieno ayi luba kinzikanga ; bila bawu beti sunga miela mieno ayi bela vumbudila Nzambi kipholo mu kisalu kiawu mu diambu basala kisalu kiawu mu khini vayi bika ku tsi manuinguta bila lulendi baka kadi lusadusu ko.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Lutusambidilanga bila tuzebi ti mayindu ma mintima mieto madi mamboti bu tutidi ba khadulu yimboti mu mambu moso. <verse number="19" style="v"/>Ndinluta kululomba luvanga diawu muingi ndivutulu nsualu kuidi beno.</para>
+  <para style="s1">Zimboti</para>
+  <para style="p">
+    <verse number="20" style="v"/>Bika Nzambi yi ndembama, yoyi yifulukisa Pfumu eto Yesu mu bafua ; mutu wowo widi nsungi wunneni wu mamemi mu nzila yi menga ma Nguizani yikayimani, <verse number="21" style="v"/>kalukitula bafuana mu vanga mavanga mamo mamboti mu diambu di vanga luzolo luandi bu keti vanga mu beto mambu moso momo makummonisanga khini mu lulendo lu Yesu Klisto. Bika katambula nkembo mu mimvu mioso. Amen.</para>
+  <para style="p">
+    <verse number="22" style="v"/>A bakhomba, ndikululubula mu vibidila mambu momo ndilulubudidi bila mu mambu ma khufi kaka ndilusonikini. <verse number="23" style="v"/>Muaki luzaba ti khombꞌeto Timote wutotolo mu nloko. Enati wela vika kuiza, buna ndiela kuiza kulutala va kimosi ayi niandi.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Luvana mboti kuidi mintuadisi mieno mioso ayi kuidi banlongo boso. Basi Itali baluveni mboti.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Bika nlemvo wuba yeno beno boso. Amen !</para>
+</usx>

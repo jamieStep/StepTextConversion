@@ -1,0 +1,362 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata version="2.2.1" id="46c3dec0ed0f56b9" revision="3">
+    <identification>
+      <name>Croatian Living New Testament (Knjiga O Kristu) 2000</name>
+      <nameLocal>Knjiga O Kristu</nameLocal>
+      <description>Croatian: Knjiga O Kristu (New Testament)</description>
+      <abbreviation>KOK</abbreviation>
+      <abbreviationLocal>KOK</abbreviationLocal>
+      <scope>New Testament</scope>
+      <dateCompleted>2000-12-01</dateCompleted>
+      <bundleProducer>Paratext/9.2.102.13</bundleProducer>
+      <systemId type="paratext">
+        <id>46c3dec0ed0f56b9d1d4c0d2808deac0930f99de</id>
+        <csetId>3b956be2dfaf6b8617ba9e4cf617b882ecb276b2</csetId>
+        <name>hrKOK00</name>
+        <fullName>Croatian Living New Testament (Knjiga O Kristu) 2000</fullName>
+      </systemId>
+      <systemId type="ptreg">
+        <id>igkFKQHd3P24BMcmp</id>
+      </systemId>
+    </identification>
+    <type>
+      <medium>text</medium>
+      <isConfidential>false</isConfidential>
+      <hasCharacters>true</hasCharacters>
+      <isTranslation>true</isTranslation>
+      <isExpression>true</isExpression>
+      <translationType>New</translationType>
+      <audience>Basic</audience>
+      <projectType>Standard</projectType>
+    </type>
+    <relationships/>
+    <agencies>
+      <rightsHolder>
+        <abbr>Biblica</abbr>
+        <url>http://www.Biblica.com</url>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </rightsHolder>
+      <rightsAdmin>
+        <url>http://www.Biblica.com</url>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </rightsAdmin>
+      <contributor>
+        <content>true</content>
+        <publication>true</publication>
+        <management>true</management>
+        <finance>true</finance>
+        <qa>true</qa>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </contributor>
+    </agencies>
+    <language>
+      <iso>hrv</iso>
+      <name>Croatian</name>
+      <nameLocal>Hrvatski</nameLocal>
+      <script>Latin</script>
+      <scriptCode>Latn</scriptCode>
+      <scriptDirection>LTR</scriptDirection>
+      <ldml>hr</ldml>
+      <numerals>Arabic</numerals>
+    </language>
+    <countries>
+      <country>
+        <iso>HR</iso>
+        <name>Croatia</name>
+      </country>
+    </countries>
+    <format>
+      <usxVersion>3.0</usxVersion>
+      <versedParagraphs>false</versedParagraphs>
+    </format>
+    <names>
+      <name id="book-mat">
+        <abbr>Mt</abbr>
+        <short>Matej</short>
+        <long>Evanđelje po Mateju</long>
+      </name>
+      <name id="book-mrk">
+        <abbr>Mk</abbr>
+        <short>Marko</short>
+        <long>Evanđelje po Marku</long>
+      </name>
+      <name id="book-luk">
+        <abbr>Lk</abbr>
+        <short>Luka</short>
+        <long>Evanđelje po Luki</long>
+      </name>
+      <name id="book-jhn">
+        <abbr>Iv</abbr>
+        <short>Ivan</short>
+        <long>Evanđelje po Ivanu</long>
+      </name>
+      <name id="book-act">
+        <abbr>Djela</abbr>
+        <short>Djela Apostolska</short>
+        <long>Djela Apostolska</long>
+      </name>
+      <name id="book-rom">
+        <abbr>Rim</abbr>
+        <short>Rimljanima</short>
+        <long>Poslanica Rimljanima</long>
+      </name>
+      <name id="book-1co">
+        <abbr>1 Kor</abbr>
+        <short>1 Korinćanima</short>
+        <long>Prva poslanica Korinćanima</long>
+      </name>
+      <name id="book-2co">
+        <abbr>2 Kor</abbr>
+        <short>2 Korinćanima</short>
+        <long>Druga poslanica Korinćanima</long>
+      </name>
+      <name id="book-gal">
+        <abbr>Gal</abbr>
+        <short>Galaćanima</short>
+        <long>Poslanica Galaćanima</long>
+      </name>
+      <name id="book-eph">
+        <abbr>Ef</abbr>
+        <short>Efežanima</short>
+        <long>Poslanica Efežanima</long>
+      </name>
+      <name id="book-php">
+        <abbr>Flp</abbr>
+        <short>Filipljanima</short>
+        <long>Poslanica Filipljanima</long>
+      </name>
+      <name id="book-col">
+        <abbr>Kol</abbr>
+        <short>Kološanima</short>
+        <long>Poslanica Kološanima</long>
+      </name>
+      <name id="book-1th">
+        <abbr>1 Sol</abbr>
+        <short>1 Solunjanima</short>
+        <long>Prva poslanica Solunjanima</long>
+      </name>
+      <name id="book-2th">
+        <abbr>2 Sol</abbr>
+        <short>2 Solunjanima</short>
+        <long>Druga poslanica Solunjanima</long>
+      </name>
+      <name id="book-1ti">
+        <abbr>1 Tim</abbr>
+        <short>1 Timoteju</short>
+        <long>Prva poslanica Timoteju</long>
+      </name>
+      <name id="book-2ti">
+        <abbr>2 Tim</abbr>
+        <short>2 Timoteju</short>
+        <long>Druga poslanica Timoteju</long>
+      </name>
+      <name id="book-tit">
+        <abbr>Tit</abbr>
+        <short>Titu</short>
+        <long>Poslanica Titu</long>
+      </name>
+      <name id="book-phm">
+        <abbr>Flm</abbr>
+        <short>Filemonu</short>
+        <long>Poslanica Filemonu</long>
+      </name>
+      <name id="book-heb">
+        <abbr>Heb</abbr>
+        <short>Hebrejima</short>
+        <long>Poslanica Hebrejima</long>
+      </name>
+      <name id="book-jas">
+        <abbr>Jak</abbr>
+        <short>Jakovljeva</short>
+        <long>Jakovljeva poslanica</long>
+      </name>
+      <name id="book-1pe">
+        <abbr>1 Pet</abbr>
+        <short>1 Petrova</short>
+        <long>Prva Petrova poslanica</long>
+      </name>
+      <name id="book-2pe">
+        <abbr>2 Pet</abbr>
+        <short>2 Petrova</short>
+        <long>Druga Petrova poslanica</long>
+      </name>
+      <name id="book-1jn">
+        <abbr>1 Iv</abbr>
+        <short>1 Ivanova</short>
+        <long>Prva Ivanova poslanica</long>
+      </name>
+      <name id="book-2jn">
+        <abbr>2 Iv</abbr>
+        <short>2 Ivanova</short>
+        <long>Druga Ivanova poslanica</long>
+      </name>
+      <name id="book-3jn">
+        <abbr>3 Iv</abbr>
+        <short>3 Ivanova</short>
+        <long>Treća Ivanova poslanica</long>
+      </name>
+      <name id="book-jud">
+        <abbr>Jud</abbr>
+        <short>Judina</short>
+        <long>Judina poslanica</long>
+      </name>
+      <name id="book-rev">
+        <abbr>Otk</abbr>
+        <short>Otkrivenje</short>
+        <long>Otkrivenje</long>
+      </name>
+    </names>
+    <manifest>
+      <resource checksum="ad8d47d1304bf384a3d67d6c9315fd53" mimeType="application/xml" size="94403" uri="release/USX_1/1CO.usx"/>
+      <resource checksum="5ae65ab77a8d700091cddcd3b0e8c8b2" mimeType="application/xml" size="22209" uri="release/USX_1/1JN.usx"/>
+      <resource checksum="3ab6c76823b3d3e7f5efb377342e0144" mimeType="application/xml" size="25746" uri="release/USX_1/1PE.usx"/>
+      <resource checksum="3cf6307f7d55606b252b8eaa0dd0c91d" mimeType="application/xml" size="17784" uri="release/USX_1/1TH.usx"/>
+      <resource checksum="9faf0f2bc51c27426324124ac889a9c9" mimeType="application/xml" size="24484" uri="release/USX_1/1TI.usx"/>
+      <resource checksum="a891ab5f2384efb3b12e4c10a4fc4bc9" mimeType="application/xml" size="57239" uri="release/USX_1/2CO.usx"/>
+      <resource checksum="838ee81306bbb226582fbda9b3c3e15f" mimeType="application/xml" size="3863" uri="release/USX_1/2JN.usx"/>
+      <resource checksum="0242e36be973640a19d3e352e690f492" mimeType="application/xml" size="13989" uri="release/USX_1/2PE.usx"/>
+      <resource checksum="ecfe7429923f22e22668953afd5fceb2" mimeType="application/xml" size="9765" uri="release/USX_1/2TH.usx"/>
+      <resource checksum="18ef153250d3e3dd416dc19ddc67d87c" mimeType="application/xml" size="17445" uri="release/USX_1/2TI.usx"/>
+      <resource checksum="9b70701738caa4ecff6dd45cafd76e68" mimeType="application/xml" size="3956" uri="release/USX_1/3JN.usx"/>
+      <resource checksum="a39d333d0dee9581fe801d7ed05dbf42" mimeType="application/xml" size="215221" uri="release/USX_1/ACT.usx"/>
+      <resource checksum="a2c1c2e05e1d4e1e07e166d6893089eb" mimeType="application/xml" size="18940" uri="release/USX_1/COL.usx"/>
+      <resource checksum="8831b12332ed3a31d721049353d0b0a3" mimeType="application/xml" size="30940" uri="release/USX_1/EPH.usx"/>
+      <resource checksum="19c7042adca82fd415834249a544ed30" mimeType="application/xml" size="33784" uri="release/USX_1/GAL.usx"/>
+      <resource checksum="a44c3f29aa986c189811c7c6a8208031" mimeType="application/xml" size="77041" uri="release/USX_1/HEB.usx"/>
+      <resource checksum="741be9841c910667da1817b72c8ebb0f" mimeType="application/xml" size="23003" uri="release/USX_1/JAS.usx"/>
+      <resource checksum="2414e1c9f1e86688c673bace4d8cb4f2" mimeType="application/xml" size="185162" uri="release/USX_1/JHN.usx"/>
+      <resource checksum="d06e0d644730c96dbe1589a3ea514313" mimeType="application/xml" size="7661" uri="release/USX_1/JUD.usx"/>
+      <resource checksum="d0b544222dfa8b604e740dab92a2a632" mimeType="application/xml" size="257670" uri="release/USX_1/LUK.usx"/>
+      <resource checksum="23dd8a180d62bdb879457b9e3b66fbc8" mimeType="application/xml" size="249702" uri="release/USX_1/MAT.usx"/>
+      <resource checksum="d90a60e2f4dcf3474809de87f64c16b6" mimeType="application/xml" size="156706" uri="release/USX_1/MRK.usx"/>
+      <resource checksum="c849974c3143c0ec7170662c9089d9c1" mimeType="application/xml" size="5272" uri="release/USX_1/PHM.usx"/>
+      <resource checksum="5ae3f060bdce3f442ba6712de5392ba4" mimeType="application/xml" size="20583" uri="release/USX_1/PHP.usx"/>
+      <resource checksum="6415778165112fc63f59bc2b350c06a2" mimeType="application/xml" size="95330" uri="release/USX_1/REV.usx"/>
+      <resource checksum="a9e6fe599425b79d091d8ef1bb028e7b" mimeType="application/xml" size="105765" uri="release/USX_1/ROM.usx"/>
+      <resource checksum="0b952848b3db3a4767f7a52a57457039" mimeType="application/xml" size="10089" uri="release/USX_1/TIT.usx"/>
+      <resource checksum="d31a68e574733463f8942ec00ebd8afc" mimeType="application/xml" size="2655" uri="release/hrv_hr.ldml"/>
+      <resource checksum="a5f7f3768c4a5651db1c29d803e5e542" mimeType="application/xml" size="94831" uri="release/styles.xml"/>
+      <resource checksum="ff05ccd06261f82182e800cd15b0f739" mimeType="text/plain" size="10181" uri="release/versification.vrs"/>
+      <resource checksum="0cb3ad6bf0a2cce6b2e58f67b2cc768c" mimeType="application/zip" size="425717" uri="source/source.zip"/>
+    </manifest>
+    <source>
+      <canonicalContent>
+        <book code="1CO"/>
+        <book code="1JN"/>
+        <book code="1PE"/>
+        <book code="1TH"/>
+        <book code="1TI"/>
+        <book code="2CO"/>
+        <book code="2JN"/>
+        <book code="2PE"/>
+        <book code="2TH"/>
+        <book code="2TI"/>
+        <book code="3JN"/>
+        <book code="ACT"/>
+        <book code="COL"/>
+        <book code="EPH"/>
+        <book code="GAL"/>
+        <book code="HEB"/>
+        <book code="JAS"/>
+        <book code="JHN"/>
+        <book code="JUD"/>
+        <book code="LUK"/>
+        <book code="MAT"/>
+        <book code="MRK"/>
+        <book code="PHM"/>
+        <book code="PHP"/>
+        <book code="REV"/>
+        <book code="ROM"/>
+        <book code="TIT"/>
+      </canonicalContent>
+      <structure>
+        <content src="source/source.zip" role="sourceZip"/>
+      </structure>
+    </source>
+    <publications>
+      <publication id="p1" default="true">
+        <name>Croatian Living New Testament 2000</name>
+        <nameLocal>Knjiga O Kristu</nameLocal>
+        <description>The New Testament in contemporary Croatian</description>
+        <descriptionLocal>Novi zavjet je u jednostavan za čitanje hrvatski jezik.</descriptionLocal>
+        <abbreviation>KOK</abbreviation>
+        <abbreviationLocal>KOK</abbreviationLocal>
+        <canonicalContent>
+          <book code="1CO"/>
+          <book code="1JN"/>
+          <book code="1PE"/>
+          <book code="1TH"/>
+          <book code="1TI"/>
+          <book code="2CO"/>
+          <book code="2JN"/>
+          <book code="2PE"/>
+          <book code="2TH"/>
+          <book code="2TI"/>
+          <book code="3JN"/>
+          <book code="ACT"/>
+          <book code="COL"/>
+          <book code="EPH"/>
+          <book code="GAL"/>
+          <book code="HEB"/>
+          <book code="JAS"/>
+          <book code="JHN"/>
+          <book code="JUD"/>
+          <book code="LUK"/>
+          <book code="MAT"/>
+          <book code="MRK"/>
+          <book code="PHM"/>
+          <book code="PHP"/>
+          <book code="REV"/>
+          <book code="ROM"/>
+          <book code="TIT"/>
+        </canonicalContent>
+        <structure>
+          <content name="book-1co" src="release/USX_1/1CO.usx" role="1CO"/>
+          <content name="book-1jn" src="release/USX_1/1JN.usx" role="1JN"/>
+          <content name="book-1pe" src="release/USX_1/1PE.usx" role="1PE"/>
+          <content name="book-1th" src="release/USX_1/1TH.usx" role="1TH"/>
+          <content name="book-1ti" src="release/USX_1/1TI.usx" role="1TI"/>
+          <content name="book-2co" src="release/USX_1/2CO.usx" role="2CO"/>
+          <content name="book-2jn" src="release/USX_1/2JN.usx" role="2JN"/>
+          <content name="book-2pe" src="release/USX_1/2PE.usx" role="2PE"/>
+          <content name="book-2th" src="release/USX_1/2TH.usx" role="2TH"/>
+          <content name="book-2ti" src="release/USX_1/2TI.usx" role="2TI"/>
+          <content name="book-3jn" src="release/USX_1/3JN.usx" role="3JN"/>
+          <content name="book-act" src="release/USX_1/ACT.usx" role="ACT"/>
+          <content name="book-col" src="release/USX_1/COL.usx" role="COL"/>
+          <content name="book-eph" src="release/USX_1/EPH.usx" role="EPH"/>
+          <content name="book-gal" src="release/USX_1/GAL.usx" role="GAL"/>
+          <content name="book-heb" src="release/USX_1/HEB.usx" role="HEB"/>
+          <content name="book-jas" src="release/USX_1/JAS.usx" role="JAS"/>
+          <content name="book-jhn" src="release/USX_1/JHN.usx" role="JHN"/>
+          <content name="book-jud" src="release/USX_1/JUD.usx" role="JUD"/>
+          <content name="book-luk" src="release/USX_1/LUK.usx" role="LUK"/>
+          <content name="book-mat" src="release/USX_1/MAT.usx" role="MAT"/>
+          <content name="book-mrk" src="release/USX_1/MRK.usx" role="MRK"/>
+          <content name="book-phm" src="release/USX_1/PHM.usx" role="PHM"/>
+          <content name="book-php" src="release/USX_1/PHP.usx" role="PHP"/>
+          <content name="book-rev" src="release/USX_1/REV.usx" role="REV"/>
+          <content name="book-rom" src="release/USX_1/ROM.usx" role="ROM"/>
+          <content name="book-tit" src="release/USX_1/TIT.usx" role="TIT"/>
+        </structure>
+      </publication>
+    </publications>
+    <copyright>
+      <fullStatement>
+        <statementContent type="xhtml">
+          <p>Croatian Living New Testament™ (Knjiga O Kristu™)</p>
+          <p>Copyright © 1982, 1992, 2000 by Biblica, Inc.</p>
+          <p>Used with permission. All rights reserved worldwide.</p>
+        </statementContent>
+      </fullStatement>
+    </copyright>
+    <promotion/>
+    <archiveStatus>
+      <archivistName>Samuel Gutiérrez</archivistName>
+      <dateArchived>2016-02-19T21:51:03.603724</dateArchived>
+      <dateUpdated>2022-05-06T23:45:35.616873</dateUpdated>
+      <comments>Update to PT9</comments>
+    </archiveStatus>
+  </DBLMetadata>

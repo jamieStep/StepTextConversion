@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="EXO" style="id">- Chinese Contemporary Bible - Traditional Script 2012</book>
+  <para style="rem">Copyright © 1979, 2005, 2007, 2012 by Biblica, Inc.®</para>
+  <para style="h">出埃及記</para>
+  <para style="toc1">出埃及記</para>
+  <para style="toc2">出埃及記</para>
+  <para style="toc3">出</para>
+  <para style="mt1">出埃及記</para>
+  <chapter number="1" style="c"/>
+  <para style="s1">以色列人受欺壓</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">以色列</char>的眾子帶著家眷跟<char style="pn">雅各</char><note caller="+" style="f"><char style="fr" closed="false">1·1 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">雅各</char><char style="ft" closed="false">」就是「以色列」，上帝為雅各改名以色列，故事參考<char style="xt"><ref loc="GEN 32:28">創世記32·28</ref></char>。</char></note>一起去了<char style="pn">埃及</char>，以下是他們的名字： <verse number="2" style="v"/><char style="pn">呂便</char>、<char style="pn">西緬</char>、<char style="pn">利未</char>、<char style="pn">猶大</char>、 <verse number="3" style="v"/><char style="pn">以薩迦</char>、<char style="pn">西布倫</char>、<char style="pn">便雅憫</char>、 <verse number="4" style="v"/><char style="pn">但</char>、<char style="pn">拿弗他利</char>、<char style="pn">迦得</char>、<char style="pn">亞設</char>。 <verse number="5" style="v"/><char style="pn">雅各</char>的子孫總共有七十人。那時，<char style="pn">約瑟</char>已經住在<char style="pn">埃及</char>。 <verse number="6" style="v"/>後來，<char style="pn">約瑟</char>和他的弟兄以及同輩的人都相繼去世。 <verse number="7" style="v"/><char style="pn">以色列</char>人生養眾多，人口大增，很快就遍佈<char style="pn">埃及</char>，成為一個強大的民族。 <verse number="8" style="v"/>那時，<char style="pn">埃及</char>有一位不認識<char style="pn">約瑟</char>的新王登基， <verse number="9" style="v"/>對他的百姓說：「你們看，<char style="pn">以色列</char>人比我們多，又比我們強。 <verse number="10" style="v"/>來吧！我們要設法阻止他們人口增長，否則一遇到戰爭，他們便會加入我們敵人的陣營來攻打我們，然後一走了之。」</para>
+  <para style="p">
+    <verse number="11" style="v"/>於是，<char style="pn">埃及</char>人派監工強迫<char style="pn">以色列</char>人服勞役，在<char style="pn">比東</char>和<char style="pn">蘭塞</char>兩地為法老興建儲貨城。 <verse number="12" style="v"/><char style="pn">以色列</char>人越受奴役，人口增長得越快，散居的範圍也越廣，令<char style="pn">埃及</char>人感到恐懼。 <verse number="13" style="v"/>於是，<char style="pn">埃及</char>人更殘酷地奴役他們， <verse number="14" style="v"/>強迫他們和泥造磚，並做田間一切的苦工，使他們痛苦不堪。 <verse number="15" style="v"/><char style="pn">埃及</char>王又命令兩個<char style="pn">希伯來</char>的接生婆<char style="pn">施弗拉</char>和<char style="pn">普阿</char>： <verse number="16" style="v"/>「你們在替<char style="pn">希伯來</char>婦女接生的時候，如果看到生下的是男嬰，就把他殺掉；如果是女嬰，就讓她活下來。」 <verse number="17" style="v"/>但這兩個接生婆敬畏上帝，沒有執行王的命令，而是保留了男嬰的性命。 <verse number="18" style="v"/><char style="pn">埃及</char>王召見那兩個接生婆，質問她們：「你們為什麼這樣做？為什麼讓男嬰活著？」 <verse number="19" style="v"/>她們回答說：「因為<char style="pn">希伯來</char>婦女跟<char style="pn">埃及</char>婦女不同。她們身體強健，我們還沒有趕到，嬰兒就生下來了。」 <verse number="20-21" style="v"/>因此，<char style="pn">以色列</char>人口繼續增加，更加繁盛。因為這兩個接生婆敬畏上帝，上帝便賜福給她們，使她們生兒育女。 <verse number="22" style="v"/>後來，法老命令全<char style="pn">埃及</char>的人把<char style="pn">以色列</char>人生的所有男嬰都拋進<char style="pn">尼羅</char>河裡，只讓女嬰活著。</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">摩西出生</para>
+  <para style="p">
+    <verse number="1" style="v"/>有一個<char style="pn">利未</char>族人跟他同族的女子結婚。 <verse number="2" style="v"/>那女子懷孕，生了一個男嬰。她看見孩子可愛，就把他藏了三個月。 <verse number="3" style="v"/>後來無法再藏下去，她就拿來一個蒲草籃子，外面塗上防水的瀝青和柏油，然後把嬰兒放在裡面，又把籃子放在<char style="pn">尼羅</char>河邊的蘆葦叢中。 <verse number="4" style="v"/>嬰兒的姐姐遠遠地站著，要看看她的弟弟究竟會怎樣。</para>
+  <para style="p">
+    <verse number="5" style="v"/>這時，法老的女兒來到河邊沐浴，宮女們在河邊行走。公主發現了蘆葦叢中的籃子，便吩咐一個婢女去把它取來。 <verse number="6" style="v"/>公主打開一看，原來是一個男嬰。公主看見孩子在哭，就可憐他，說：「他是<char style="pn">希伯來</char>人的孩子。」 <verse number="7" style="v"/>嬰兒的姐姐對公主說：「我去找一個<char style="pn">希伯來</char>婦女當奶媽，為你哺養他好嗎？」 <verse number="8" style="v"/>公主回答說：「好！」那女孩就跑去把嬰孩的母親帶來。 <verse number="9" style="v"/>公主對那婦女說：「你把孩子抱去，替我哺養他，我會給你工錢。」她便把孩子抱去哺養。 <verse number="10" style="v"/>孩子漸漸長大，她便把他帶到公主那裡，孩子就做了公主的兒子。公主給孩子取名叫<char style="pn">摩西</char>，意思是「我把他從水中拉了上來」。</para>
+  <para style="p">
+    <verse number="11" style="v"/>後來，<char style="pn">摩西</char>長大了，他去看望做苦工的<char style="pn">希伯來</char>同胞，看見一個<char style="pn">埃及</char>人在毆打他的一個<char style="pn">希伯來</char>同胞。 <verse number="12" style="v"/>他左右觀望，見四下無人，便下手殺了那<char style="pn">埃及</char>人，把屍體埋藏在沙地裡。 <verse number="13" style="v"/>第二天，他又出去，看見兩個<char style="pn">希伯來</char>人在打架，便過去對理虧的人說：「你為什麼打自己的同胞呢？」 <verse number="14" style="v"/>那人說：「你以為你是誰啊？誰立你做我們的首領和審判官？難道你要殺我，像殺那個<char style="pn">埃及</char>人一樣嗎？」<char style="pn">摩西</char>聽了，害怕起來，心想：「我做的事一定被人知道了。」 <verse number="15" style="v"/>法老聽說這件事後，便想殺死<char style="pn">摩西</char>。<char style="pn">摩西</char>為了躲避法老，就逃到<char style="pn">米甸</char>居住。一天他坐在一口井旁， <verse number="16" style="v"/><char style="pn">米甸</char>祭司的七個女兒來打水，要把水倒進槽裡飲她們父親的羊。 <verse number="17" style="v"/>這時，來了另外一群牧人要把她們趕走。<char style="pn">摩西</char>便起來幫助她們，打水飲她們的羊群。 <verse number="18" style="v"/>她們回到父親<char style="pn">流珥</char><note caller="+" style="f"><char style="fr" closed="false">2·18 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">流珥</char><char style="ft" closed="false">」又名「葉忒羅」。</char></note>那裡，父親問她們：「你們今天怎麼這麼快就回來了？」 <verse number="19" style="v"/>她們答道：「有一個<char style="pn">埃及</char>人救我們免遭牧人的欺負，還幫我們打水飲羊群。」 <verse number="20" style="v"/>他又問女兒們：「現在那人在哪裡？你們怎麼可以丟下他不管呢？去請他來吃點東西。」 <verse number="21" style="v"/>後來，<char style="pn">摩西</char>同意住在那人家裡。那人把女兒<char style="pn">西坡拉</char>許配給他。 <verse number="22" style="v"/>後來，<char style="pn">西坡拉</char>生了一個兒子，<char style="pn">摩西</char>給他取名叫<char style="pn">革舜</char>，意思是「我成了在異鄉寄居的人」。</para>
+  <para style="p">
+    <verse number="23" style="v"/>過了多年，<char style="pn">埃及</char>王死了。<char style="pn">以色列</char>人受盡奴役，就哀歎呼求，聲音傳到上帝那裡。 <verse number="24" style="v"/>上帝聽見他們的哀聲，顧念從前跟<char style="pn">亞伯拉罕</char>、<char style="pn">以撒</char>、<char style="pn">雅各</char>所立的約， <verse number="25" style="v"/>就垂顧他們，體恤他們。</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">上帝呼召摩西</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">摩西</char>為岳父<char style="pn">米甸</char>祭司<char style="pn">葉忒羅</char>放羊。一天他領著羊群穿越曠野，來到上帝的山——<char style="pn">何烈</char>山。 <verse number="2" style="v"/>忽然有耶和華的天使在荊棘裡的火焰中向他顯現。<char style="pn">摩西</char>看見荊棘雖然在燃燒，卻沒有被燒毀。 <verse number="3" style="v"/><char style="pn">摩西</char>想：「我要過去看這個奇異的景象，荊棘為什麼沒有被燒掉呢？」 <verse number="4" style="v"/>耶和華上帝見他要上前觀看，就從荊棘叢中呼喚他說：「<char style="pn">摩西</char>！<char style="pn">摩西</char>！」<char style="pn">摩西</char>說：「我在這裡。」 <verse number="5" style="v"/>上帝說：「別再靠近，脫下你腳上的鞋子，因為你所站的地方是聖地。」 <verse number="6" style="v"/>又說：「我是你祖先的上帝，是<char style="pn">亞伯拉罕</char>的上帝，<char style="pn">以撒</char>的上帝，<char style="pn">雅各</char>的上帝。」<char style="pn">摩西</char>害怕看上帝，就把臉蒙起來。 <verse number="7" style="v"/>耶和華說：「我已經看見我子民在<char style="pn">埃及</char>所受的苦難，聽見了他們因監工的壓迫而發出的呼求。我知道他們的痛苦。 <verse number="8" style="v"/>我下來是要從<char style="pn">埃及</char>人手中救他們，帶他們離開那裡，到一個遼闊肥沃的奶蜜之鄉，就是現在<char style="pn">迦南</char>人、<char style="pn">赫</char>人、<char style="pn">亞摩利</char>人、<char style="pn">比利洗</char>人、<char style="pn">希未</char>人和<char style="pn">耶布斯</char>人居住的地方。 <verse number="9" style="v"/>現在，<char style="pn">以色列</char>人的呼求傳到我耳中，我也看到了<char style="pn">埃及</char>人怎樣壓迫他們。 <verse number="10" style="v"/>現在去吧，我要派你到法老那裡，帶領我的<char style="pn">以色列</char>子民離開<char style="pn">埃及</char>。」 <verse number="11" style="v"/>但<char style="pn">摩西</char>對上帝說：「我是誰啊？怎麼能去見法老，把<char style="pn">以色列</char>人從<char style="pn">埃及</char>領出來呢？」 <verse number="12" style="v"/>上帝說：「我必與你同在，你帶百姓離開<char style="pn">埃及</char>後，你們必在這座山上事奉我——這將是我派你去的證據。」 <verse number="13" style="v"/><char style="pn">摩西</char>問上帝：「假如我到<char style="pn">以色列</char>人那裡，對他們說，『你們祖先的上帝派我來你們這裡。』他們如果問我，『祂叫什麼名字？』我該怎樣回答他們呢？」 <verse number="14" style="v"/>上帝對<char style="pn">摩西</char>說：「我是自有永有者。你要這樣回答<char style="pn">以色列</char>人，『那位自有永有者派我到你們這裡。』」 <verse number="15" style="v"/>上帝又對<char style="pn">摩西</char>說：「你要告訴<char style="pn">以色列</char>人是我派遣你到他們那裡，我是他們祖先的上帝耶和華，是<char style="pn">亞伯拉罕</char>的上帝，<char style="pn">以撒</char>的上帝，<char style="pn">雅各</char>的上帝。耶和華是我的名字，直到永遠，世世代代的人都要這樣稱呼我。 <verse number="16" style="v"/>你去招聚<char style="pn">以色列</char>的長老，對他們說，『你們祖先的上帝耶和華，就是<char style="pn">亞伯拉罕</char>、<char style="pn">以撒</char>、<char style="pn">雅各</char>的上帝向我顯現，說祂關切你們，知道你們在<char style="pn">埃及</char>的遭遇。 <verse number="17" style="v"/>祂應許要帶領你們脫離在<char style="pn">埃及</char>所受的苦難，到<char style="pn">迦南</char>人、<char style="pn">赫</char>人、<char style="pn">亞摩利</char>人、<char style="pn">比利洗</char>人，<char style="pn">希未</char>人和<char style="pn">耶布斯</char>人住的地方，那裡是奶蜜之鄉。』 <verse number="18" style="v"/><char style="pn">以色列</char>的長老們必定聽從你的話，你就跟他們一起去見<char style="pn">埃及</char>王，對他說，『<char style="pn">希伯來</char>人的上帝耶和華向我們顯現。現在請你容許我們走三天的路程，到曠野去，向我們的上帝耶和華獻祭。』 <verse number="19" style="v"/>我也知道除非我用大能的手向他施壓，不然<char style="pn">埃及</char>王不會讓你們離開。 <verse number="20" style="v"/>因此，我必伸手行各種神蹟攻擊<char style="pn">埃及</char>，之後他必讓你們離開。 <verse number="21" style="v"/>我必使<char style="pn">埃及</char>人恩待你們，好叫你們不致空手離開<char style="pn">埃及</char>。 <verse number="22" style="v"/>你們的婦女只管向<char style="pn">埃及</char>鄰居及住在鄰居家的婦女索取金器、銀器和衣服，給自己的兒女穿戴，你們必這樣奪取<char style="pn">埃及</char>人的財物。」</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">上帝賜摩西能力</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">摩西</char>回答說：「他們不會相信我或聽我的話，他們會說，『耶和華根本沒有向你顯現。』」 <verse number="2" style="v"/>耶和華對<char style="pn">摩西</char>說：「你手裡拿的是什麼？」<char style="pn">摩西</char>說：「是一根手杖。」 <verse number="3" style="v"/>耶和華說：「把它丟在地上！」於是，<char style="pn">摩西</char>把杖丟在地上，杖變成了一條蛇。<char style="pn">摩西</char>連忙跑開。 <verse number="4" style="v"/>耶和華說：「你伸手抓住牠的尾巴！」<char style="pn">摩西</char>就伸手抓蛇的尾巴，蛇在他手中變回了杖。 <verse number="5" style="v"/>耶和華說：「這樣，他們就會相信他們祖先的上帝耶和華，就是<char style="pn">亞伯拉罕</char>、<char style="pn">以撒</char>和<char style="pn">雅各</char>的上帝，曾經向你顯現。」</para>
+  <para style="p">
+    <verse number="6" style="v"/>耶和華又說：「把手放進懷裡。」<char style="pn">摩西</char>把手放進懷裡，手抽出來的時候，竟患了痲瘋病，像雪一樣白。 <verse number="7" style="v"/>耶和華說：「再把手放進懷裡。」<char style="pn">摩西</char>又把手放進懷裡，這次再抽出來的時候，手已經復原，跟其他地方的皮肉一樣。 <verse number="8" style="v"/>耶和華說：「縱然他們不聽你的話，不信第一個神蹟，也必定相信第二個神蹟。 <verse number="9" style="v"/>如果他們兩個神蹟都不相信，還是不聽你的話，你就從<char style="pn">尼羅</char>河裡取些水來倒在旱地上，那水就會在旱地上變成血。」</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <char style="pn">摩西</char>對耶和華說：「主啊！我向來不善言辭，即使你對僕人說話以後，我還是不善言辭，因為我是個拙口笨舌的人。」 <verse number="11" style="v"/>耶和華對他說：「是誰造人的口舌？是誰使人變成啞巴或聾子？是誰使人目明或眼瞎？不都是我耶和華嗎？ <verse number="12" style="v"/>去吧！我必賜給你口才，指示你說什麼話。」 <verse number="13" style="v"/>但是<char style="pn">摩西</char>說：「主啊，請派其他人去吧。」 <verse number="14" style="v"/>耶和華向<char style="pn">摩西</char>發怒說：「<char style="pn">利未</char>人<char style="pn">亞倫</char>不是你哥哥嗎？他是個能言善辯的人，正要來迎接你。他見到你一定很歡喜。 <verse number="15" style="v"/>你要把該說的話傳給他，我會賜你們口才，教你們如何行事。 <verse number="16" style="v"/>他要替你向百姓說話，做你的發言人，你對他來說就像上帝一樣。 <verse number="17" style="v"/>你要把手杖帶在身邊，以便行神蹟。」</para>
+  <para style="p">
+    <verse number="18" style="v"/>
+    <char style="pn">摩西</char>回到家裡，對他的岳父<char style="pn">葉忒羅</char>說：「求你讓我回<char style="pn">埃及</char>去探望我的親人，看看他們是否在世。」<char style="pn">葉忒羅</char>說：「你平安地去吧。」 <verse number="19" style="v"/>耶和華在<char style="pn">米甸</char>對<char style="pn">摩西</char>說：「你只管放心回<char style="pn">埃及</char>去，想害你性命的人都已經死了。」 <verse number="20" style="v"/>於是，<char style="pn">摩西</char>拿著上帝的杖，帶著妻子和兒子騎驢返回<char style="pn">埃及</char>。 <verse number="21" style="v"/>耶和華對<char style="pn">摩西</char>說：「你到了<char style="pn">埃及</char>，見到法老的時候，務要照我賜給你的能力在法老面前行神蹟。但我要使他的心剛硬，他必不讓百姓離開。 <verse number="22" style="v"/>那時，你就告訴法老，『耶和華說，<char style="pn">以色列</char>是我的長子， <verse number="23" style="v"/>我對你說過讓我的長子出去事奉我，但你執意不肯。看啊，我要殺你的長子。』」</para>
+  <para style="p">
+    <verse number="24" style="v"/>
+    <char style="pn">摩西</char>在途中夜宿的時候，耶和華遇見<char style="pn">摩西</char>，想要殺他。 <verse number="25" style="v"/>他的妻子<char style="pn">西坡拉</char>拿起鋒利的火石，割下兒子的包皮，放在<char style="pn">摩西</char>腳前，說：「你真是我的血郎。」 <verse number="26" style="v"/>這樣，耶和華才沒殺他。當時，<char style="pn">西坡拉</char>說「血郎」是指割禮一事。</para>
+  <para style="p">
+    <verse number="27" style="v"/>耶和華對<char style="pn">亞倫</char>說：「你到曠野去迎接<char style="pn">摩西</char>。」他就在上帝的山上遇見<char style="pn">摩西</char>，並親吻他。 <verse number="28" style="v"/><char style="pn">摩西</char>把耶和華吩咐他的以及要他行的神蹟都告訴了<char style="pn">亞倫</char>。 <verse number="29" style="v"/><char style="pn">摩西</char>和<char style="pn">亞倫</char>一起回去招聚<char style="pn">以色列</char>的眾長老， <verse number="30" style="v"/><char style="pn">亞倫</char>把耶和華對<char style="pn">摩西</char>的吩咐詳細地告訴他們。<char style="pn">摩西</char>又在百姓面前行了那些神蹟， <verse number="31" style="v"/>百姓相信了。<char style="pn">以色列</char>人聽見耶和華眷顧他們、看到了他們的苦難，都俯伏敬拜祂。</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">摩西和亞倫見法老</para>
+  <para style="p">
+    <verse number="1" style="v"/>之後，<char style="pn">摩西</char>和<char style="pn">亞倫</char>去見法老，對他說：「<char style="pn">以色列</char>的上帝耶和華說，『放我的子民走，讓他們到曠野去為我守節期。』」 <verse number="2" style="v"/>法老說：「耶和華是誰？我憑什麼要聽從祂，放走<char style="pn">以色列</char>人？我不認識祂，也不會讓<char style="pn">以色列</char>人離開！」 <verse number="3" style="v"/><char style="pn">摩西</char>和<char style="pn">亞倫</char>說：「<char style="pn">希伯來</char>人的上帝向我們顯現了。求你容我們走三天的路程，到曠野去向我們的上帝耶和華獻祭，請你讓我們去吧，免得祂用刀劍、瘟疫來攻擊我們。」 <verse number="4" style="v"/><char style="pn">埃及</char>王說：「<char style="pn">摩西</char>、<char style="pn">亞倫</char>，你們竟敢煽動百姓曠工！快回去工作！」 <verse number="5" style="v"/>法老又說：「這地方的<char style="pn">以色列</char>人如此眾多，你竟叫他們停止工作！」 <verse number="6" style="v"/>當天，法老就對<char style="pn">埃及</char>監工和<char style="pn">以色列</char>人的工頭下令： <verse number="7" style="v"/>「從今天開始，不許再供應草給他們製磚，叫他們自己去撿， <verse number="8" style="v"/>但上交的磚的數量要和往常一樣，一塊也不可少。因為他們懶惰，所以才嚷著要去給他們的上帝獻祭。 <verse number="9" style="v"/>你們要加重他們的工作，他們就無暇再聽那些蠱惑人心的話了！」</para>
+  <para style="p">
+    <verse number="10" style="v"/>於是，那些監工和工頭就出來向百姓宣佈：「法老下令不再供應草給你們製磚。 <verse number="11" style="v"/>你們要自己設法去找，但上交的磚一塊也不能少。」 <verse number="12" style="v"/>百姓只好在<char style="pn">埃及</char>全國收集碎禾稭當草用。 <verse number="13" style="v"/>監工催逼他們說：「你們要完成每天規定的數目，像從前有草時一樣。」 <verse number="14" style="v"/>他們又鞭打<char style="pn">以色列</char>人的工頭，說：「你們這兩天為什麼沒有像從前一樣完成規定的磚數？」</para>
+  <para style="p">
+    <verse number="15" style="v"/>
+    <char style="pn">以色列</char>人的工頭來見法老，向他哀求說：「你為什麼要這樣對待僕人們？ <verse number="16" style="v"/>監工不給僕人們草，卻命令我們做磚，還打我們，其實是你百姓的錯。」 <verse number="17" style="v"/>法老說：「你們是懶惰的人，懶惰的人！所以才嚷著要去給耶和華獻祭。 <verse number="18" style="v"/>回去繼續工作！我不再供應草給你們，但磚要如數交齊。」 <verse number="19" style="v"/><char style="pn">以色列</char>人的工頭聽見每天做的磚數不可減少，就知道情況不妙。 <verse number="20" style="v"/>他們從法老那裡出來的時候，遇見<char style="pn">摩西</char>和<char style="pn">亞倫</char>站在外面等候， <verse number="21" style="v"/>便埋怨二人說：「願耶和華鑒察、懲罰你們！你們使我們在法老和他的臣僕面前有了臭名，使他們有藉口來殺我們。」</para>
+  <para style="p">
+    <verse number="22" style="v"/>
+    <char style="pn">摩西</char>回到耶和華那裡說：「主啊！你為什麼這樣苦待你的子民呢？為什麼要派我去呢？ <verse number="23" style="v"/>自從我去法老那裡奉你的名發言後，他更加虐待你的子民，你並沒有拯救他們。」</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">上帝應許拯救以色列人</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說：「你就要看見我怎樣用大能的手對付法老，那時他會讓<char style="pn">以色列</char>人走，甚至把他們趕出<char style="pn">埃及</char>！」 <verse number="2" style="v"/>上帝又對<char style="pn">摩西</char>說：「我是耶和華， <verse number="3" style="v"/>我曾以全能上帝的身份向<char style="pn">亞伯拉罕</char>、<char style="pn">以撒</char>和<char style="pn">雅各</char>顯現，但沒有讓他們知道我的名字是耶和華。 <verse number="4" style="v"/>我向他們堅守所立的約，要把他們寄居的<char style="pn">迦南</char>賜給他們。 <verse number="5" style="v"/>我已聽見<char style="pn">以色列</char>人因受<char style="pn">埃及</char>人的奴役而發出的呼求，也想起了我的約。 <verse number="6" style="v"/>所以，你要轉告<char style="pn">以色列</char>人說，『我是耶和華。我要伸出臂膀重重地懲罰<char style="pn">埃及</char>，救贖你們脫離<char style="pn">埃及</char>人的轄制，脫離他們的奴役。 <verse number="7" style="v"/>我要接納你們做我的子民，我要做你們的上帝。這樣，你們就知道我是你們的上帝耶和華，曾救你們脫離<char style="pn">埃及</char>人的轄制。 <verse number="8" style="v"/>我必帶領你們進入我舉手起誓要給<char style="pn">亞伯拉罕</char>、<char style="pn">以撒</char>和<char style="pn">雅各</char>的那片土地，把它賜給你們作產業。我是耶和華。』」</para>
+  <para style="p">
+    <verse number="9" style="v"/>
+    <char style="pn">摩西</char>把這番話轉告百姓，可是他們因為殘酷的勞役無比沮喪，不肯聽他的話。 <verse number="10" style="v"/>耶和華對<char style="pn">摩西</char>說： <verse number="11" style="v"/>「你再去見法老，要他讓<char style="pn">以色列</char>人離開他的土地。」 <verse number="12" style="v"/><char style="pn">摩西</char>卻說：「<char style="pn">以色列</char>人都不聽我的話，法老又怎麼肯聽我這拙口笨舌的人呢？」 <verse number="13" style="v"/>耶和華吩咐<char style="pn">摩西</char>和<char style="pn">亞倫</char>回到<char style="pn">以色列</char>人和法老那裡，要他們領<char style="pn">以色列</char>人離開<char style="pn">埃及</char>。</para>
+  <para style="s1">摩西和亞倫的族譜</para>
+  <para style="p">
+    <verse number="14" style="v"/>以下是<char style="pn">以色列</char>各宗族族長的名字：</para>
+  <para style="p">
+    <char style="pn">以色列</char>長子<char style="pn">呂便</char>的兒子是<char style="pn">哈諾</char>、<char style="pn">法路</char>、<char style="pn">希斯崙</char>和<char style="pn">迦米</char>。這些是<char style="pn">呂便</char>的宗族。</para>
+  <para style="p">
+    <verse number="15" style="v"/>
+    <char style="pn">西緬</char>的兒子是<char style="pn">耶姆利</char>、<char style="pn">雅憫</char>、<char style="pn">阿轄</char>、<char style="pn">雅斤</char>、<char style="pn">瑣轄</char>和<char style="pn">掃羅</char>，<char style="pn">掃羅</char>的母親是<char style="pn">迦南</char>人。這些是<char style="pn">西緬</char>的各宗族。</para>
+  <para style="p">
+    <verse number="16" style="v"/>
+    <char style="pn">利未</char>的兒子依次是<char style="pn">革順</char>、<char style="pn">哥轄</char>和<char style="pn">米拉利</char>，<char style="pn">利未</char>享年一百三十七歲。 <verse number="17" style="v"/><char style="pn">革順</char>的兒子是<char style="pn">立尼</char>和<char style="pn">示每</char>，二人各成宗族。 <verse number="18" style="v"/><char style="pn">哥轄</char>的兒子是<char style="pn">暗蘭</char>、<char style="pn">以斯哈</char>、<char style="pn">希伯崙</char>和<char style="pn">烏薛</char>，<char style="pn">哥轄</char>享年一百三十三歲。 <verse number="19" style="v"/><char style="pn">米拉利</char>的兒子是<char style="pn">抹利</char>和<char style="pn">姆示</char>。這些是<char style="pn">利未</char>的各宗族。 <verse number="20" style="v"/><char style="pn">暗蘭</char>娶了他父親的妹妹<char style="pn">約基別</char>，生了<char style="pn">亞倫</char>和<char style="pn">摩西</char>，<char style="pn">暗蘭</char>享年一百三十七歲。 <verse number="21" style="v"/><char style="pn">哥轄</char>另一個兒子<char style="pn">以斯哈</char>生了<char style="pn">可拉</char>、<char style="pn">尼斐</char>和<char style="pn">細基利</char>。 <verse number="22" style="v"/><char style="pn">烏薛</char>的兒子是<char style="pn">米沙利</char>、<char style="pn">以利撒反</char>和<char style="pn">西提利</char>。 <verse number="23" style="v"/><char style="pn">亞倫</char>與<char style="pn">亞米拿達</char>的女兒、<char style="pn">拿順</char>的妹妹<char style="pn">以利沙巴</char>結婚，生了<char style="pn">拿答</char>、<char style="pn">亞比戶</char>、<char style="pn">以利亞撒</char>和<char style="pn">以他瑪</char>。 <verse number="24" style="v"/><char style="pn">可拉</char>的兒子是<char style="pn">亞惜</char>、<char style="pn">以利加拿</char>和<char style="pn">亞比亞撒</char>，這些是<char style="pn">可拉</char>的各宗族。 <verse number="25" style="v"/><char style="pn">亞倫</char>的兒子<char style="pn">以利亞撒</char>與<char style="pn">普鐵</char>的一個女兒結婚，生了<char style="pn">非尼哈</char>。以上是<char style="pn">利未</char>各宗族的族長。</para>
+  <para style="p">
+    <verse number="26" style="v"/>正是<char style="pn">亞倫</char>和<char style="pn">摩西</char>受耶和華之命，要按<char style="pn">以色列</char>人的宗族支派把他們帶出<char style="pn">埃及</char>。 <verse number="27" style="v"/>也是這二人要求<char style="pn">埃及</char>王法老讓他們把<char style="pn">以色列</char>人帶出<char style="pn">埃及</char>。 <verse number="28" style="v"/>那時，耶和華曾經在<char style="pn">埃及</char>對<char style="pn">摩西</char>說： <verse number="29" style="v"/>「我是耶和華，你要把我吩咐你的一切話告訴<char style="pn">埃及</char>王<char style="pn">法老</char>。」 <verse number="30" style="v"/><char style="pn">摩西</char>卻對耶和華說：「你看，我拙口笨舌，法老怎肯聽我的話？」</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">亞倫和摩西面見法老</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說：「我要使你在法老面前像上帝一樣，你哥哥<char style="pn">亞倫</char>是你的發言人。 <verse number="2" style="v"/>你要把我吩咐你的話告訴你哥哥<char style="pn">亞倫</char>，由他要求法老讓<char style="pn">以色列</char>人離開<char style="pn">埃及</char>。 <verse number="3" style="v"/>可是，我要使法老的心剛硬，雖然我在<char style="pn">埃及</char>行許多神蹟奇事， <verse number="4" style="v"/>他將無動於衷。那時，我必伸手重重地懲罰<char style="pn">埃及</char>，然後領我的大隊子民離開<char style="pn">埃及</char>。 <verse number="5" style="v"/><char style="pn">埃及</char>人看見我伸手攻擊他們、把<char style="pn">以色列</char>人帶出<char style="pn">埃及</char>，就會知道我是耶和華。」 <verse number="6" style="v"/><char style="pn">摩西</char>和<char style="pn">亞倫</char>便遵命而行。 <verse number="7" style="v"/>去見法老的時候，<char style="pn">摩西</char>八十歲，<char style="pn">亞倫</char>八十三歲。</para>
+  <para style="p">
+    <verse number="8" style="v"/>耶和華對<char style="pn">摩西</char>和<char style="pn">亞倫</char>說： <verse number="9" style="v"/>「倘若法老要你們行神蹟給他看，你就吩咐<char style="pn">亞倫</char>把手杖丟在法老面前，使杖變作蛇。」</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <char style="pn">摩西</char>和<char style="pn">亞倫</char>照耶和華的吩咐來到法老面前。<char style="pn">亞倫</char>把手杖丟在法老和他的臣僕面前，杖就變作蛇。 <verse number="11" style="v"/>法老召他的謀士和巫師前來，這些人是<char style="pn">埃及</char>的術士，他們也用邪術如法炮製。 <verse number="12" style="v"/>各人將自己的手杖扔在地上，杖就變作蛇，但<char style="pn">亞倫</char>的杖吞噬了他們的杖。 <verse number="13" style="v"/>法老卻仍然硬著心，不肯聽從<char style="pn">摩西</char>和<char style="pn">亞倫</char>，正如耶和華所言。</para>
+  <para style="s1">水變血之災</para>
+  <para style="p">
+    <verse number="14" style="v"/>耶和華對<char style="pn">摩西</char>說：「法老非常頑固，不肯釋放百姓。 <verse number="15" style="v"/>明天早晨，法老會去<char style="pn">尼羅</char>河邊，你就在那裡等他，要拿著曾變成蛇的手杖。 <verse number="16" style="v"/>你要對他說，『<char style="pn">希伯來</char>人的上帝耶和華差遣我來告訴你，要讓祂的子民到曠野去事奉祂，但到如今你還是不肯。 <verse number="17" style="v"/>所以祂說要用手杖擊打<char style="pn">尼羅</char>河水，使河水變成血，好叫你知道祂是耶和華。 <verse number="18" style="v"/>河裡的魚會死，河水會發臭，<char style="pn">埃及</char>人不能再喝<char style="pn">尼羅</char>河的水。』」</para>
+  <para style="p">
+    <verse number="19" style="v"/>耶和華對<char style="pn">摩西</char>說：「你告訴<char style="pn">亞倫</char>，讓他向<char style="pn">埃及</char>境內的各江河、溪流、池塘伸杖，使水變成血。<char style="pn">埃及</char>境內，包括木桶和石缸裡將到處是血。」 <verse number="20" style="v"/><char style="pn">摩西</char>和<char style="pn">亞倫</char>就按著耶和華所吩咐的去做，<char style="pn">亞倫</char>在法老和<char style="pn">埃及</char>眾臣僕面前舉杖擊打<char style="pn">尼羅</char>河水，河水都變成了血。 <verse number="21" style="v"/>河裡的魚都死了，河水臭得不能飲用。<char style="pn">埃及</char>遍地都是血。 <verse number="22" style="v"/>可是，法老的巫師也一樣用邪術使水變成血。法老的心仍然剛硬，不肯聽從<char style="pn">摩西</char>和<char style="pn">亞倫</char>的話，正如耶和華所言。 <verse number="23" style="v"/>法老若無其事地轉身回宮去了。 <verse number="24" style="v"/>因為河水不能飲用，<char style="pn">埃及</char>人就在<char style="pn">尼羅</char>河兩岸掘井取水飲用。</para>
+  <para style="p">
+    <verse number="25" style="v"/>擊打河水後，七天過去了。</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">蛙災</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說：「你進宮去告訴法老，『耶和華說，讓<char style="pn">以色列</char>百姓離開，好事奉我。 <verse number="2" style="v"/>如果你不聽從，我就使青蛙來毀壞你的國土。 <verse number="3" style="v"/><char style="pn">尼羅</char>河將充滿青蛙，牠們要跳到你的宮裡、臥室和床鋪上，你的臣僕和百姓家裡，你的爐灶和揉麵盆裡。 <verse number="4" style="v"/>青蛙還會跳到你和你的百姓及眾臣僕身上。』」</para>
+  <para style="p">
+    <verse number="5" style="v"/>耶和華對<char style="pn">摩西</char>說：「你叫<char style="pn">亞倫</char>向<char style="pn">埃及</char>各地的江河、溪流和池塘伸杖，使青蛙遍佈<char style="pn">埃及</char>全境。」 <verse number="6" style="v"/><char style="pn">亞倫</char>伸杖，青蛙就遍佈了<char style="pn">埃及</char>全境。 <verse number="7" style="v"/>巫師也行邪術如法炮製，叫青蛙上來。 <verse number="8" style="v"/>法老召<char style="pn">摩西</char>和<char style="pn">亞倫</char>進宮，對他們說：「你們快求耶和華，使這些青蛙離開我們，我便讓百姓去獻祭給耶和華。」 <verse number="9" style="v"/><char style="pn">摩西</char>對法老說：「好吧，你要我在什麼時候為你以及你的臣僕和百姓禱告，叫這些青蛙離開你和你的宮殿，只留在河裡呢？」 <verse number="10" style="v"/>法老說：「明天。」<char style="pn">摩西</char>說：「就照你說的，這樣你就知道沒有神明能比得上我們的上帝耶和華。 <verse number="11" style="v"/>明天青蛙會離開你、你的宮殿、你的臣僕和百姓，只留在河裡。」 <verse number="12" style="v"/><char style="pn">摩西</char>和<char style="pn">亞倫</char>離開法老後，<char style="pn">摩西</char>就為法老所受的蛙災一事向耶和華呼求。 <verse number="13" style="v"/>耶和華答應了<char style="pn">摩西</char>的祈求。凡在房屋內、院子裡和田野中的青蛙都死了。 <verse number="14" style="v"/>百姓把青蛙的屍體堆積起來，<char style="pn">埃及</char>全境都充滿了死青蛙的腐臭氣味。 <verse number="15" style="v"/>法老看見災難已經過去，便又硬著心，不肯聽從<char style="pn">摩西</char>和<char style="pn">亞倫</char>的話，正如耶和華所言。</para>
+  <para style="s1">虱災</para>
+  <para style="p">
+    <verse number="16" style="v"/>耶和華對<char style="pn">摩西</char>說：「你吩咐<char style="pn">亞倫</char>用杖擊打地上的塵土，使<char style="pn">埃及</char>境內的塵土變成蝨子。」 <verse number="17" style="v"/>他們就照上帝的吩咐去做，<char style="pn">亞倫</char>伸杖擊打地上的塵土，蝨子就跑到人和牲畜身上，全<char style="pn">埃及</char>的塵土都變成了蝨子。 <verse number="18" style="v"/>巫師們也試圖用邪術變出蝨子來，卻無法成功。<char style="pn">埃及</char>的百姓和牲畜身上長滿了蝨子。 <verse number="19" style="v"/>巫師們對法老說：「這是上帝的作為。」法老的心卻仍然剛硬，不肯答應<char style="pn">摩西</char>和<char style="pn">亞倫</char>的要求，正如耶和華所言。</para>
+  <para style="s1">蒼蠅之災</para>
+  <para style="p">
+    <verse number="20" style="v"/>耶和華對<char style="pn">摩西</char>說：「明天清早，你趁法老去河邊時去見他，告訴他，『耶和華說，放我的子民走，他們好事奉我， <verse number="21" style="v"/>不然，我就叫無數的蒼蠅飛到你、你的臣僕和百姓身上，進到你們各自的家中，使<char style="pn">埃及</char>遍地佈滿蒼蠅。 <verse number="22" style="v"/>但那天，我子民居住的<char style="pn">歌珊</char>卻絲毫不會受攪擾，這樣你就知道我耶和華主宰天下。 <verse number="23" style="v"/>我要把我的子民跟你的百姓分開，明天我必行這神蹟。』」 <verse number="24" style="v"/>耶和華果然這樣行。密密麻麻的蒼蠅飛進法老的王宮和他臣僕的家裡，<char style="pn">埃及</char>全國都受到蒼蠅的毀壞。 <verse number="25" style="v"/>法老召見<char style="pn">摩西</char>和<char style="pn">亞倫</char>，對他們說：「你們可以去獻祭給你們的上帝，不過要在我的境內舉行。」 <verse number="26" style="v"/><char style="pn">摩西</char>說：「這怎麼行？我們用來獻祭的東西，是<char style="pn">埃及</char>人最憎惡的。如果我們在<char style="pn">埃及</char>境內舉行這樣的儀式，他們一定會拿石頭打死我們。 <verse number="27" style="v"/>我們要照我們上帝耶和華的吩咐離開這裡，走三天的路程到曠野去獻祭給祂。」 <verse number="28" style="v"/>法老說：「好，我讓你們去曠野獻祭給你們的上帝耶和華，只是不要走得太遠。現在為我祈求吧。」 <verse number="29" style="v"/><char style="pn">摩西</char>說：「我離開這裡就去祈求耶和華，使蒼蠅明天就離開你及你的臣僕和百姓，但這次你不可再食言，阻止<char style="pn">以色列</char>人去向耶和華獻祭。」 <verse number="30" style="v"/><char style="pn">摩西</char>說完以後，便離開王宮，去祈求耶和華。 <verse number="31" style="v"/>耶和華就照<char style="pn">摩西</char>的祈求，使成群的蒼蠅離開法老及其臣僕和百姓，一隻也沒有留下。 <verse number="32" style="v"/>這一次，法老又硬著心，不肯讓百姓離開<char style="pn">埃及</char>。</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">瘟疫之災</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說：「你再進宮見法老，告訴他，『<char style="pn">希伯來</char>人的上帝耶和華說，讓我的子民去事奉我。 <verse number="2" style="v"/>如果你不讓他們走，繼續扣留他們， <verse number="3" style="v"/>我就會使你田間所有的牲畜，包括馬、驢、駱駝和牛羊，都染上嚴重的瘟疫。 <verse number="4" style="v"/>但我要把<char style="pn">埃及</char>和<char style="pn">以色列</char>的牲畜分開，<char style="pn">以色列</char>人的牲畜必絲毫無損。』」 <verse number="5" style="v"/>耶和華定了日期，說：「明天耶和華必在此地行這事。」 <verse number="6" style="v"/>第二天，耶和華就這樣行了，<char style="pn">埃及</char>的牲畜都死了，但<char style="pn">以色列</char>人的牲畜一頭也沒死。 <verse number="7" style="v"/>法老派人去探查，發現<char style="pn">以色列</char>人的牲畜真的安然無恙。可是，他仍然頑固，不肯讓<char style="pn">以色列</char>人離開。</para>
+  <para style="s1">膿瘡之災</para>
+  <para style="p">
+    <verse number="8" style="v"/>耶和華對<char style="pn">摩西</char>和<char style="pn">亞倫</char>說：「你們去取幾把窯裡的灰，<char style="pn">摩西</char>要在法老面前把灰拋向空中。 <verse number="9" style="v"/>這灰要變成塵土，散佈在<char style="pn">埃及</char>每一個角落，落在人或牲畜身上，就會起皰長瘡。」 <verse number="10" style="v"/><char style="pn">摩西</char>和<char style="pn">亞倫</char>便取了一些窯裡的灰，站在法老面前，<char style="pn">摩西</char>把灰拋向空中，<char style="pn">埃及</char>人和牲畜身上就開始起皰長瘡。 <verse number="11" style="v"/><char style="pn">埃及</char>的巫師無法與<char style="pn">摩西</char>對抗，因為他們及所有<char style="pn">埃及</char>人身上都長了膿瘡。 <verse number="12" style="v"/>耶和華使法老的心剛硬，他就不聽他們的話，正如耶和華對<char style="pn">摩西</char>說的。</para>
+  <para style="s1">冰雹之災</para>
+  <para style="p">
+    <verse number="13" style="v"/>耶和華對<char style="pn">摩西</char>說：「明天一早你再去見法老，對他說，『<char style="pn">希伯來</char>人的上帝耶和華這樣說，你要讓我的子民出去事奉我。 <verse number="14" style="v"/>這一次，我要降下大災禍在你及你的臣僕和百姓身上，好叫你知道普天之下我獨一無二。 <verse number="15" style="v"/>我若用瘟疫攻擊你和你的百姓，你們早就滅亡了。 <verse number="16" style="v"/>我讓你活到現在，是為了向你彰顯我的權能，使我的名傳遍天下。 <verse number="17" style="v"/>但你竟然在我的子民面前狂傲自大，不讓他們離開。 <verse number="18" style="v"/>明天這個時候，我要使天上降下大冰雹，是你們<char style="pn">埃及</char>立國以來從沒有見過的。 <verse number="19" style="v"/>現在，你要叫人趕快到田間把牲畜和屬於你的一切都帶到安全的地方。凡留在田間的人或牲畜都會被冰雹打死。』」 <verse number="20" style="v"/>有些法老的臣僕聽了耶和華的話就很害怕，趕忙把在田間的僕人和牲畜都召回屋裡。 <verse number="21" style="v"/>但那些不把耶和華的話放在心上的，仍把他們的奴僕和牲畜留在田間。 <verse number="22" style="v"/>耶和華對<char style="pn">摩西</char>說：「你向天伸杖，天就會降下冰雹，落在<char style="pn">埃及</char>的一切人畜身上，摧毀田間的一切農作物。」 <verse number="23" style="v"/><char style="pn">摩西</char>向天伸出手杖，耶和華就發出雷電和冰雹，火光飛向大地。耶和華在<char style="pn">埃及</char>降下冰雹。 <verse number="24" style="v"/>那時冰雹夾雜著火降下來，極為嚴重，在<char style="pn">埃及</char>史無前例。 <verse number="25" style="v"/>冰雹摧毀了<char style="pn">埃及</char>境內田間的一切，包括人和牲畜，摧毀了田裡的一切作物，打斷了所有的樹木， <verse number="26" style="v"/>只有<char style="pn">以色列</char>人所住的<char style="pn">歌珊</char>沒有冰雹。 <verse number="27" style="v"/>法老派人召來<char style="pn">摩西</char>和<char style="pn">亞倫</char>，對他們說：「這次我犯罪了，耶和華是對的，我和我的百姓錯了。 <verse number="28" style="v"/>請你們向耶和華禱告，好止住雷電和冰雹。我准許<char style="pn">以色列</char>人出去，你們不必再留在這裡了。」 <verse number="29" style="v"/><char style="pn">摩西</char>回答說：「我一出城，就向耶和華舉手禱告，雷電和冰雹必立刻停止，這樣你就知道普天下都屬於耶和華。 <verse number="30" style="v"/>但我知道你和你的臣僕還是不敬畏上帝耶和華。」</para>
+  <para style="p">
+    <verse number="31" style="v"/>這場冰雹發生在大麥吐穗和亞麻開花的時候。 <verse number="32" style="v"/>小麥和粗麥較晚成熟，沒有被冰雹打壞。 <verse number="33" style="v"/><char style="pn">摩西</char>離開法老，走出城外向耶和華舉手禱告，雷和冰雹便停止了，豪雨也不下了。 <verse number="34" style="v"/>法老看見災禍停止，就又犯罪，他和他的臣僕都心裡頑固。 <verse number="35" style="v"/>法老硬著心，不讓<char style="pn">以色列</char>人離開，正如耶和華藉<char style="pn">摩西</char>所言。</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">蝗蟲之災</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說：「你去見法老，我已使他和他臣僕的心剛硬，好在他們當中行我這些神蹟。 <verse number="2" style="v"/>這樣，你就可以把我如何嚴懲<char style="pn">埃及</char>人以及我在他們當中所行的神蹟告訴你的子孫，好叫你們知道我是耶和華。」</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <char style="pn">摩西</char>和<char style="pn">亞倫</char>便進宮去見法老，對他說：「<char style="pn">希伯來</char>人的上帝耶和華說，『你要到什麼時候才肯在我面前謙卑下來，讓我的子民離開這裡去事奉我？ <verse number="4" style="v"/>這次你若再不答應，明天我要使蝗蟲飛入你的國境。 <verse number="5" style="v"/>牠們鋪天蓋地，要吃光冰雹過後田間所剩的，包括一切樹木。 <verse number="6" style="v"/>你的王宮及臣僕和所有<char style="pn">埃及</char>人的房屋都要佈滿蝗蟲，這是你祖祖輩輩從未見過的蝗災。』」<char style="pn">摩西</char>說完，便轉身離開法老。</para>
+  <para style="p">
+    <verse number="7" style="v"/>臣僕對法老說：「這個人還要給我們添多少麻煩呢？讓他們離開去事奉他們的上帝耶和華吧！<char style="pn">埃及</char>已經快崩潰了，你不知道嗎？」 <verse number="8" style="v"/>法老便召<char style="pn">摩西</char>和<char style="pn">亞倫</char>進宮，對他們說：「你們去事奉你們的上帝耶和華吧！但你們誰要去呢？」 <verse number="9" style="v"/><char style="pn">摩西</char>回答說：「我們男女老幼都要去，還有我們的牛群和羊群，因為我們要去守耶和華的節期，向祂獻祭。」 <verse number="10" style="v"/>法老聽後，說：「我若讓你們帶走婦女和孩子，最好耶和華能保護你們！你們真是居心叵測。 <verse number="11" style="v"/>不行！只有男子可以去事奉耶和華，這是你們一直要求的。」法老說完，便下令把他們趕出去。</para>
+  <para style="p">
+    <verse number="12" style="v"/>耶和華對<char style="pn">摩西</char>說：「你向<char style="pn">埃及</char>伸杖，使蝗蟲飛來吃盡冰雹過後剩下的植物。」 <verse number="13" style="v"/><char style="pn">摩西</char>就向<char style="pn">埃及</char>伸杖。耶和華使東風在<char style="pn">埃及</char>境內颳了整整一天一夜，到早晨，東風帶來了蝗蟲。 <verse number="14" style="v"/><char style="pn">埃及</char>到處都佈滿了蝗蟲，數目之多實在是空前絕後。 <verse number="15" style="v"/>整個<char style="pn">埃及</char>鋪滿蝗蟲，地上一片黑暗。這些蝗蟲吃盡了冰雹過後剩下的農作物和樹上的果子，沒有留下一點青綠。 <verse number="16" style="v"/>法老急忙召見<char style="pn">摩西</char>和<char style="pn">亞倫</char>，對他們說：「我得罪了你們的上帝耶和華，又得罪了你們。 <verse number="17" style="v"/>現在求你饒恕我的罪，就這一次，為我祈求你們的上帝耶和華撤去這場死亡之災吧！」 <verse number="18" style="v"/><char style="pn">摩西</char>就離開法老出去祈求耶和華， <verse number="19" style="v"/>耶和華就把風向倒轉，變成猛烈的西風，把蝗蟲颳走，吹進紅海。<char style="pn">埃及</char>境內一隻蝗蟲也沒留下。 <verse number="20" style="v"/>可是，耶和華又使法老心硬，不讓<char style="pn">以色列</char>人離開<char style="pn">埃及</char>。</para>
+  <para style="s1">黑暗之災</para>
+  <para style="p">
+    <verse number="21" style="v"/>耶和華對<char style="pn">摩西</char>說：「你向天伸杖，使<char style="pn">埃及</char>全境漆黑一片，那黑暗濃得甚至可以摸到。」 <verse number="22" style="v"/><char style="pn">摩西</char>向天伸杖，<char style="pn">埃及</char>全境便漆黑了三天之久。 <verse number="23" style="v"/><char style="pn">埃及</char>人彼此看不見，誰也不敢移動半步。可是，<char style="pn">以色列</char>人住的地方卻有光。 <verse number="24" style="v"/>法老把<char style="pn">摩西</char>召來，對他說：「去吧，帶著你們的婦女和孩子去事奉耶和華吧，但你們要把牛羊留下。」 <verse number="25" style="v"/><char style="pn">摩西</char>回答說：「你要讓我們帶走牛羊，因為牠們是獻給我們上帝耶和華的祭物和燔祭牲。 <verse number="26" style="v"/>我們要帶走所有的牲畜，一隻蹄子也不留下，因為我們要從其中選一些來獻給我們的上帝耶和華。我們抵達目的地前，還不知道把哪些獻給祂。」 <verse number="27" style="v"/>但耶和華使法老的心剛硬，不肯讓<char style="pn">以色列</char>百姓離開。 <verse number="28" style="v"/>法老對<char style="pn">摩西</char>說：「給我滾出去！不要再讓我見到你，因為你再見我面之日必死。」 <verse number="29" style="v"/><char style="pn">摩西</char>回答說：「你說得好，我必不再見你的面。」</para>
+  <chapter number="11" style="c"/>
+  <para style="s1">滅長子之災</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說：「我給法老和<char style="pn">埃及</char>再降下一場災難，之後他必放你們走，甚至是迫不及待地趕你們走。 <verse number="2" style="v"/>你要告訴<char style="pn">以色列</char>人，不論男女，去向鄰近的<char style="pn">埃及</char>人索取金器銀器。」 <verse number="3" style="v"/>耶和華使<char style="pn">埃及</char>人恩待<char style="pn">以色列</char>人，法老的臣僕和百姓極其尊重<char style="pn">摩西</char>。</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <char style="pn">摩西</char>說：「耶和華說，『今晚半夜，我要走遍<char style="pn">埃及</char>。 <verse number="5" style="v"/><char style="pn">埃及</char>境內，從坐王位的法老的長子到推磨的女奴的長子，以及所有頭生的牲畜，都必死亡。 <verse number="6" style="v"/>那時整個<char style="pn">埃及</char>必充滿悲慘的哭號聲，慘況空前絕後。 <verse number="7" style="v"/>但在<char style="pn">以色列</char>人中，連狗也不會向人或牲畜吠叫，這樣你們就知道耶和華將把<char style="pn">埃及</char>人和<char style="pn">以色列</char>人分開。 <verse number="8" style="v"/>到那天，你所有的臣僕都要來俯伏在我面前，求我和跟隨我的百姓離開這裡。那時我才會離開。』」<char style="pn">摩西</char>說完便怒氣沖沖地離開法老。 <verse number="9" style="v"/>耶和華曾對<char style="pn">摩西</char>說：「法老一定不肯聽你的話，因此我要在<char style="pn">埃及</char>多行神蹟。」 <verse number="10" style="v"/><char style="pn">摩西</char>和<char style="pn">亞倫</char>在法老面前行了這一切的神蹟，但耶和華使法老的心剛硬，他不讓<char style="pn">以色列</char>人離開他的國土。</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">逾越節</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華在<char style="pn">埃及</char>對<char style="pn">摩西</char>和<char style="pn">亞倫</char>說： <verse number="2" style="v"/>「從現在開始，你們要以這個月為一月，為一年之首。 <verse number="3" style="v"/>你要向<char style="pn">以色列</char>全體會眾宣佈，本月的第十日，每家都要預備一隻羊羔，一家一隻。 <verse number="4" style="v"/>倘若家人太少，吃不了一隻，可以跟最近的鄰居共享一隻，你們要按人數和各人的食量預備羊羔。 <verse number="5" style="v"/>羊羔必須是毫無殘疾、一歲的公綿羊或公山羊。 <verse number="6" style="v"/>全體會眾要把羊留到本月十四日，在黃昏時分宰殺， <verse number="7" style="v"/>然後取點血塗在房子的門框和門楣上，全家要在房子裡吃羊肉。 <verse number="8" style="v"/>當晚，你們要用火把羊肉烤熟，與無酵餅和苦菜一起吃。 <verse number="9" style="v"/>不可吃生羊肉，也不可煮著吃，要把整隻羊，連頭帶腿和內臟一併烤著吃。 <verse number="10" style="v"/>不可把肉留到早晨，留到早晨的肉要燒掉。 <verse number="11" style="v"/>你們吃的時候，要束腰、穿鞋、手中拿杖，要趕快吃，這是耶和華的逾越節。</para>
+  <para style="p">
+    <verse number="12" style="v"/>「因為那一夜我要巡遍<char style="pn">埃及</char>，把境內所有長子和頭生的牲畜全都殺掉，也要嚴懲<char style="pn">埃及</char>所有的神明。我是耶和華。 <verse number="13" style="v"/>塗在你們房屋上的血是一個記號，我見到這血就會越過你們。我擊打<char style="pn">埃及</char>的時候，那災禍不會落到你們身上。 <verse number="14" style="v"/>你們要記住這一天，守為耶和華的節期，作為世世代代永遠的定例。</para>
+  <para style="s1">除酵節</para>
+  <para style="p">
+    <verse number="15" style="v"/>「七天之內你們都要吃無酵餅。第一天，要清除家中所有的酵。任何人若在這七天當中吃有酵的餅，要將他從<char style="pn">以色列</char>人中剷除。 <verse number="16" style="v"/>在節期的第一天和第七天，你們都要招聚百姓舉行聖會。這兩天所有人都不得工作，除了預備各人要吃的以外，不可做任何工。 <verse number="17" style="v"/>你們要守這無酵節，因為我在這天把你們大隊人馬從<char style="pn">埃及</char>領了出來。你們要守這節期，作為世世代代永遠的定例。 <verse number="18" style="v"/>從一月十四日晚上開始，直到二十一日晚上，你們都要吃無酵餅。 <verse number="19" style="v"/>在這七天內，你們屋裡不能有酵。任何人若吃了有酵的東西，不論他是寄居者還是本地人，要將他從<char style="pn">以色列</char>會眾中剷除。 <verse number="20" style="v"/>無論你們住在哪裡都要吃無酵餅，不能吃有酵的食物。」</para>
+  <para style="p">
+    <verse number="21" style="v"/>於是，<char style="pn">摩西</char>召集<char style="pn">以色列</char>的眾長老，對他們說：「你們家家戶戶都要挑選羊羔，把這逾越節的羊羔宰了。 <verse number="22" style="v"/>拿一把牛膝草蘸盆裡的血，把血塗在門框和門楣上。天亮前，你們不可踏出門外。 <verse number="23" style="v"/>因為耶和華要巡行各地，擊殺<char style="pn">埃及</char>人，祂看見你們的門框和門楣上有血，就必越過你們的家門，不讓滅命者進你們家殺人。 <verse number="24" style="v"/>這是你們世世代代都要遵守的定例。 <verse number="25" style="v"/>你們進入耶和華應許給你們的地方以後，要守這逾越節。 <verse number="26" style="v"/>你們的兒女問你們守這節期的意義時， <verse number="27" style="v"/>你們就說，『這是獻給耶和華逾越節的祭，因為我們從前在<char style="pn">埃及</char>時，祂擊殺<char style="pn">埃及</char>人，卻越過<char style="pn">以色列</char>人所住的房子，救了我們各家。』」百姓聽了<char style="pn">摩西</char>這番話，都低頭下拜。 <verse number="28" style="v"/>耶和華怎麼吩咐<char style="pn">摩西</char>和<char style="pn">亞倫</char>，<char style="pn">以色列</char>人就照樣遵行。</para>
+  <para style="p">
+    <verse number="29" style="v"/>到了半夜，耶和華把所有<char style="pn">埃及</char>人的長子都殺了，包括坐王位的法老的長子、牢中囚犯的長子和一切頭生的牲畜。 <verse number="30" style="v"/>晚上，法老及其臣僕和所有<char style="pn">埃及</char>人都驚醒了，到處都是哭號聲，因為沒有一家不死人的。 <verse number="31" style="v"/>法老連夜召見<char style="pn">摩西</char>和<char style="pn">亞倫</char>，對他們說：「你們和<char style="pn">以色列</char>人走吧，離開我的人民。就照你們的要求，去事奉耶和華吧！ <verse number="32" style="v"/>照你們的要求，把所有的牛羊都帶走吧！也要為我祝福。」 <verse number="33" style="v"/><char style="pn">埃及</char>人催促<char style="pn">以色列</char>人趕快離開<char style="pn">埃及</char>，因為他們說：「我們都要死了。」 <verse number="34" style="v"/>於是，<char style="pn">以色列</char>百姓就把沒有酵的麵團放在揉麵盆裡，用衣服包起來扛在肩上， <verse number="35" style="v"/>又遵照<char style="pn">摩西</char>的吩咐向<char style="pn">埃及</char>人索取金器、銀器和衣服。 <verse number="36" style="v"/>耶和華使<char style="pn">埃及</char>人恩待<char style="pn">以色列</char>人，他們要什麼，<char style="pn">埃及</char>人就給什麼。這樣，<char style="pn">以色列</char>人奪取了<char style="pn">埃及</char>人的財富。</para>
+  <para style="p">
+    <verse number="37" style="v"/>
+    <char style="pn">以色列</char>百姓從<char style="pn">埃及</char>的<char style="pn">蘭塞</char>啟行，前往<char style="pn">疏割</char>，婦女孩童不算在內，單是步行的男子就有六十萬， <verse number="38" style="v"/>同行的還有許多外族人和大群的牛羊。 <verse number="39" style="v"/>他們用從<char style="pn">埃及</char>帶出來的麵團烤成無酵餅，麵團沒有酵，因為他們被催促離開<char style="pn">埃及</char>，沒有時間準備食物。 <verse number="40" style="v"/><char style="pn">以色列</char>人在<char style="pn">埃及</char>共住了四百三十年， <verse number="41" style="v"/>正好滿了四百三十年的那一天，耶和華帶領<char style="pn">以色列</char>大隊人馬離開了<char style="pn">埃及</char>。 <verse number="42" style="v"/>那天晚上是耶和華把祂的子民帶出<char style="pn">埃及</char>之夜，因此以後世世代代的<char style="pn">以色列</char>人都要在那日守夜，以尊崇耶和華。</para>
+  <para style="p">
+    <verse number="43" style="v"/>耶和華對<char style="pn">摩西</char>和<char style="pn">亞倫</char>說：「以下是逾越節的條例。</para>
+  <para style="p">「所有外族人都不可吃逾越節的羊羔， <verse number="44" style="v"/>但那些買來的奴隸若接受了割禮，就可以吃。 <verse number="45" style="v"/>寄居的外族人和雇用的工人不可吃。 <verse number="46" style="v"/>你們吃的時候，應當在房子裡吃，不得把肉帶到外面去，也不可折斷羊羔的一根骨頭。 <verse number="47" style="v"/><char style="pn">以色列</char>全體會眾都要守這節期。 <verse number="48" style="v"/>跟你們住在一起的外族人如果想為耶和華守逾越節，他全家的男子都必須接受割禮，這樣才可以像<char style="pn">以色列</char>人一樣守逾越節，但沒有接受割禮的人絕不可吃逾越節的羊羔。 <verse number="49" style="v"/>本地人和在你們中間寄居的外族人都要遵守這規矩。」</para>
+  <para style="p">
+    <verse number="50" style="v"/>耶和華怎樣吩咐<char style="pn">摩西</char>和<char style="pn">亞倫</char>，<char style="pn">以色列</char>百姓都遵命而行。 <verse number="51" style="v"/>就在那一天，耶和華帶領<char style="pn">以色列</char>大隊人馬離開了<char style="pn">埃及</char>。</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">奉獻頭胎</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說： <verse number="2" style="v"/>「<char style="pn">以色列</char>人中的長子和頭生的牲畜都屬於我，因此要把他們分別出來，使他們聖潔，歸給我。」</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <char style="pn">摩西</char>對百姓說：「你們要記住離開<char style="pn">埃及</char>的這一天，因為耶和華用大能的手把你們從受奴役的地方解救出來。不可吃帶酵的食物。 <verse number="4" style="v"/>你們是在亞筆月<note caller="+" style="f"><char style="fr" closed="false">13·4 </char><char style="ft" closed="false">亞筆月是猶太曆的第一個月，約在陽曆三月中旬到四月中旬，相當於中國的春分時節。</char></note>的這一天從<char style="pn">埃及</char>出來的， <verse number="5" style="v"/>將來耶和華帶領你們進入<char style="pn">迦南</char>以後，你們每逢此月都要為祂守節期。那裡現在住著<char style="pn">迦南</char>人、<char style="pn">赫</char>人、<char style="pn">亞摩利</char>人、<char style="pn">希未</char>人和<char style="pn">耶布斯</char>人。耶和華已經向你們祖先起誓，應許賜給你們那奶蜜之鄉。 <verse number="6" style="v"/>在節期的七天之內，你們只可以吃無酵餅，到了第七天，你們要為耶和華守節期。 <verse number="7" style="v"/>七天之內要吃無酵餅，你們境內不得有酵或是帶酵的東西。 <verse number="8" style="v"/>那時，要告訴你們的子孫，『這節期是紀念我們離開<char style="pn">埃及</char>時耶和華為我們所做的一切。』 <verse number="9" style="v"/>這節期就好像在你們手上或額上作的記號，叫你們記得耶和華的律法，祂曾經用大能的手把你們帶出<char style="pn">埃及</char>。 <verse number="10" style="v"/>因此，每一年你們都要按時守這節期。</para>
+  <para style="p">
+    <verse number="11" style="v"/>「將來耶和華成就祂起誓給你們祖先的應許，領你們進入<char style="pn">迦南</char>人的土地，把那裡賜給你們以後， <verse number="12" style="v"/>你們要把所有長子和頭生的公畜歸給祂。 <verse number="13" style="v"/>所有頭生的公驢必須用羊羔贖回，不然就要打斷牠的脖子。要贖回你們所有的長子。 <verse number="14" style="v"/>將來你們的子孫問起這件事的意義，你們就回答，『耶和華曾經用大能的手把我們從受奴役之地——<char style="pn">埃及</char>領出來。 <verse number="15" style="v"/>當時法老硬著心不肯放我們走，所以耶和華就把<char style="pn">埃及</char>人的長子和頭生的牲畜全都殺了。因此，我們把所有頭生的公畜當作祭牲獻給耶和華，只把長子贖回來。』 <verse number="16" style="v"/>這事就像在你們手上作記號，額上作標記，以牢記耶和華曾用大能的手領我們離開<char style="pn">埃及</char>。」</para>
+  <para style="s1">雲柱和火柱</para>
+  <para style="p">
+    <verse number="17" style="v"/>法老讓<char style="pn">以色列</char>人離開<char style="pn">埃及</char>後，上帝沒有帶領他們穿越<char style="pn">非利士</char>地區，雖然那是條捷徑。因為上帝說：「如果他們遇上戰爭，就會改變主意，返回<char style="pn">埃及</char>。」 <verse number="18" style="v"/>所以，上帝領他們繞道而行，走曠野的路，前往紅海<note caller="+" style="f"><char style="fr" closed="false">13·18 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">紅海</char><char style="ft" closed="false">」或譯「蘆葦湖」，確切地點約在今紅海北端蘇伊士運河附近。</char></note>。<char style="pn">以色列</char>人離開<char style="pn">埃及</char>時都帶著兵器。 <verse number="19" style="v"/><char style="pn">摩西</char>把<char style="pn">約瑟</char>的骸骨一起帶走，因為<char style="pn">約瑟</char>曾叫<char style="pn">以色列</char>人鄭重發誓，對他們說：「上帝必眷顧你們，把你們帶出<char style="pn">埃及</char>，那時你們要把我的骸骨也一起帶走。」 <verse number="20" style="v"/><char style="pn">以色列</char>人從<char style="pn">疏割</char>啟程，來到曠野邊緣的<char style="pn">以倘</char>安營。 <verse number="21" style="v"/>耶和華走在他們前面，白天用雲柱為他們指示道路，晚上用火柱照亮他們，這樣他們可以日夜趕路。 <verse number="22" style="v"/>白天的雲柱和晚上的火柱從不離開他們。</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">過紅海</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說： <verse number="2" style="v"/>「你吩咐<char style="pn">以色列</char>人改變方向，在<char style="pn">比·哈希錄</char>附近的海邊紮營，在紅海和<char style="pn">密奪</char>之間，對面是<char style="pn">巴力·洗分</char>。 <verse number="3" style="v"/>法老必定以為你們走迷了路，被困在曠野。 <verse number="4" style="v"/>我要使法老的心剛硬，使他派兵追趕你們。我要在法老和<char style="pn">埃及</char>軍兵身上得到榮耀，好叫<char style="pn">埃及</char>人知道我是耶和華。」於是，<char style="pn">以色列</char>人依言而行。</para>
+  <para style="p">
+    <verse number="5" style="v"/>有人向<char style="pn">埃及</char>王報信，說<char style="pn">以色列</char>百姓逃走了。法老和他的臣僕便改變主意，說：「我們怎麼可以讓<char style="pn">以色列</char>人就這樣離開我們，不再服侍我們呢？」 <verse number="6" style="v"/>法老便吩咐人預備戰車，他親自領軍， <verse number="7" style="v"/>率領<char style="pn">埃及</char>所有的戰車，包括六百輛最精銳的戰車，每輛車上都有戰車長。 <verse number="8" style="v"/>耶和華使法老的心剛硬，法老就追趕毫無懼色地離開<char style="pn">埃及</char>的<char style="pn">以色列</char>人。 <verse number="9" style="v"/><char style="pn">埃及</char>大軍的戰車騎兵傾巢而出，沿著海邊追趕，在<char style="pn">巴力·洗分</char>對面的<char style="pn">比·哈希錄</char>附近追上了正在那裡安營的<char style="pn">以色列</char>人。</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <char style="pn">以色列</char>人看見法老大軍追了上來，非常害怕，便呼求耶和華。 <verse number="11" style="v"/>他們對<char style="pn">摩西</char>說：「難道<char style="pn">埃及</char>沒有墳地，要你帶我們出來死在曠野嗎？為什麼要帶我們離開<char style="pn">埃及</char>呢？ <verse number="12" style="v"/>我們對你說過，別管我們，就讓我們服侍<char style="pn">埃及</char>人吧。服侍<char style="pn">埃及</char>人總比死在曠野好啊！」 <verse number="13" style="v"/><char style="pn">摩西</char>對百姓說：「你們不用害怕，站穩了，看耶和華用什麼方法解救你們。你們再也看不到你們今天看到的<char style="pn">埃及</char>人了。 <verse number="14" style="v"/>耶和華必為你們爭戰，你們要保持鎮靜。」 <verse number="15" style="v"/>耶和華對<char style="pn">摩西</char>說：「為什麼向我呼求呢？吩咐<char style="pn">以色列</char>人往前走吧。 <verse number="16" style="v"/>你舉手向海伸出手杖，把海水分開，<char style="pn">以色列</char>人可以從中間的乾地走過去。 <verse number="17" style="v"/>我要使<char style="pn">埃及</char>人的心剛硬，他們會緊追不捨，跟著你們走進海底。我要在法老及其大軍、戰車和騎兵身上得到榮耀。 <verse number="18" style="v"/>當我在法老及其戰車和騎兵身上得到榮耀時，<char style="pn">埃及</char>人就知道我是耶和華。」</para>
+  <para style="p">
+    <verse number="19" style="v"/>這時，在<char style="pn">以色列</char>人前面領路的上帝的天使，轉到百姓後面，雲柱也隨著移到後面立住。 <verse number="20" style="v"/>雲柱停在<char style="pn">埃及</char>軍隊和<char style="pn">以色列</char>人的中間，<char style="pn">埃及</char>軍隊這邊一片黑暗，<char style="pn">以色列</char>人那邊卻有光，雙方整夜都無法接近對方。</para>
+  <para style="p">
+    <verse number="21" style="v"/>
+    <char style="pn">摩西</char>向海伸出手，耶和華便整夜用強勁的東風吹退海水，將海底變成乾地。海水分開後， <verse number="22" style="v"/><char style="pn">以色列</char>人踏著乾地走入海中，海水如兩道牆立在他們左右。 <verse number="23" style="v"/>法老的軍兵車馬緊追不捨，都跟著下到海中。 <verse number="24" style="v"/>到了破曉時分，耶和華從雲柱火柱中俯視<char style="pn">埃及</char>軍隊，擾亂他們的隊伍。 <verse number="25" style="v"/>祂使他們戰車的輪子脫落，難以前行。於是，<char style="pn">埃及</char>人說：「我們逃命吧，因為耶和華在幫助<char style="pn">以色列</char>人對付我們！」</para>
+  <para style="p">
+    <verse number="26" style="v"/>耶和華對<char style="pn">摩西</char>說：「你向海伸出手，使海水回流，淹沒<char style="pn">埃及</char>軍隊。」 <verse number="27" style="v"/>天剛亮的時候，<char style="pn">摩西</char>向海伸出手，海水便復原。<char style="pn">埃及</char>人紛紛向岸上逃命，耶和華卻使大水把他們捲回海中。 <verse number="28" style="v"/>海水回流，法老的戰車和人馬都淹沒在大海之中，全軍覆沒。 <verse number="29" style="v"/>全體<char style="pn">以色列</char>人卻在乾地上走過紅海，海水在他們兩邊築成水牆。 <verse number="30" style="v"/>那天，耶和華就這樣從<char style="pn">埃及</char>人手中拯救了<char style="pn">以色列</char>人。後來，<char style="pn">以色列</char>人還看見<char style="pn">埃及</char>人的屍體橫在海邊。 <verse number="31" style="v"/><char style="pn">以色列</char>百姓親眼看見耶和華怎樣以大能對付<char style="pn">埃及</char>人，他們就敬畏耶和華，又信服祂和祂的僕人<char style="pn">摩西</char>。</para>
+  <chapter number="15" style="c"/>
+  <para style="s1">摩西頌讚耶和華</para>
+  <para style="p">
+    <verse number="1" style="v"/>那時，<char style="pn">摩西</char>和<char style="pn">以色列</char>人便歌頌耶和華說：</para>
+  <para style="q1">「我要歌頌耶和華，</para>
+  <para style="q1">因祂大獲全勝，</para>
+  <para style="q1">祂把戰馬騎兵都捲入海中。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>耶和華是我的力量，我的詩歌，</para>
+  <para style="q1">也成了我的拯救；</para>
+  <para style="q1">祂是我的上帝，我要讚美祂；</para>
+  <para style="q1">祂是我父親的上帝，我要尊崇祂。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>耶和華是戰士，</para>
+  <para style="q1">祂名叫耶和華。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>祂把法老的戰車和全軍都拋進海中，</para>
+  <para style="q1">法老的優秀將領都葬身於紅海，</para>
+  <para style="q1">
+    <verse number="5" style="v"/>大水淹沒他們，</para>
+  <para style="q1">他們如同石塊沉入深海。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>耶和華啊，你大能的右手顯出榮耀；</para>
+  <para style="q1">耶和華啊，你的右手擊碎仇敵。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>你大顯威嚴，擊倒那些起來對抗你的人；</para>
+  <para style="q1">你大發雷霆，他們便像枯草遇火，</para>
+  <para style="q1">一燒而盡。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>你的鼻孔一呼氣，海水便堆聚起來，</para>
+  <para style="q1">洪濤便堆起水牆，海底深處也都凝固。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>敵人說，『追啊，追上他們，</para>
+  <para style="q1">瓜分他們的財物，盡情地擄掠他們，</para>
+  <para style="q1">拔出刀來把他們斬盡殺絕。』</para>
+  <para style="q1">
+    <verse number="10" style="v"/>你叫風一吹，海水就淹沒他們，</para>
+  <para style="q1">他們好像鉛塊一樣沉沒在怒海中。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>耶和華啊，萬神之中，誰能像你？</para>
+  <para style="q1">誰能像你——威嚴神聖，</para>
+  <para style="q1">可頌可畏，廣行神蹟？</para>
+  <para style="q1">
+    <verse number="12" style="v"/>你伸出右手，大地便吞滅他們。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>你以不變的愛引領你所救贖的子民，</para>
+  <para style="q1">以大能帶他們進入你的聖所。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>各邦各族聽見這些事就發抖，</para>
+  <para style="q1">
+    <char style="pn">非利士</char>人也痛苦不堪，</para>
+  <para style="q1">
+    <verse number="15" style="v"/>
+    <char style="pn">以東</char>的族長惶恐，</para>
+  <para style="q1">
+    <char style="pn">摩押</char>的英雄顫慄，</para>
+  <para style="q1">
+    <char style="pn">迦南</char>的居民都膽戰心驚。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>驚駭恐懼籠罩著他們。</para>
+  <para style="q1">耶和華啊，</para>
+  <para style="q1">你臂膀的大能嚇得他們僵立如石，</para>
+  <para style="q1">直到你的子民都安然走過，</para>
+  <para style="q1">直到你買贖的子民都安然走過。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>耶和華啊，</para>
+  <para style="q1">你要帶領自己的子民到你的山上安居——</para>
+  <para style="q1">到你為自己所造的住處，</para>
+  <para style="q1">主啊，到你親手建的聖所。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v"/>「耶和華必做王，直到永永遠遠。」</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="19" style="v"/>法老的戰車和騎兵追到海中，耶和華使海水回流淹沒他們，<char style="pn">以色列</char>人卻在海中踏著乾地走到對岸。 <verse number="20" style="v"/><char style="pn">亞倫</char>的姐姐<char style="pn">米利暗</char>是個先知，她手拿小鼓，帶領婦女擊鼓跳舞， <verse number="21" style="v"/>唱道：「要歌頌耶和華，因祂大獲全勝，把馬和騎兵都拋進海中。」</para>
+  <para style="s1">苦水</para>
+  <para style="p">
+    <verse number="22" style="v"/>
+    <char style="pn">摩西</char>帶領<char style="pn">以色列</char>人離開紅海，來到<char style="pn">書珥</char>曠野，走了三天仍然找不到水喝。 <verse number="23" style="v"/>到了<char style="pn">瑪拉</char>，那裡的水卻是苦的，不能喝。因此那地方叫<char style="pn">瑪拉</char><note caller="+" style="f"><char style="fr" closed="false">15·23 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">瑪拉</char><char style="ft" closed="false">」意思是「苦」。</char></note>。 <verse number="24" style="v"/>百姓就埋怨<char style="pn">摩西</char>說：「我們喝什麼呢？」 <verse number="25" style="v"/><char style="pn">摩西</char>向耶和華呼求，耶和華就指示他把一棵樹丟在水中，使水變得甘甜。耶和華又在<char style="pn">瑪拉</char>給百姓定下一些律例和法令，並在那裡試驗他們， <verse number="26" style="v"/>說：「你們若留心聽你們上帝耶和華的話，做我視為正的事，遵守我所定下的律例，我就不把降在<char style="pn">埃及</char>的疾病加在你們身上，因為我耶和華是醫治你們的上帝。」</para>
+  <para style="p">
+    <verse number="27" style="v"/>到了<char style="pn">以琳</char>，那裡有十二股水泉和七十棵棕樹，他們就在水邊安營。</para>
+  <chapter number="16" style="c"/>
+  <para style="s1">天糧</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">以色列</char>全體會眾從<char style="pn">以琳</char>出發，來到<char style="pn">以琳</char>和<char style="pn">西奈</char>中間的<char style="pn">汛</char>曠野，時值他們離開<char style="pn">埃及</char>後的第二個月的十五日。 <verse number="2" style="v"/><char style="pn">以色列</char>全體會眾在曠野向<char style="pn">摩西</char>和<char style="pn">亞倫</char>發怨言說： <verse number="3" style="v"/>「我們還不如當初在<char style="pn">埃及</char>就死在耶和華手中。在那裡，我們至少可以圍在肉鍋旁吃個飽。現在，你把我們帶到曠野來，是要叫全體會眾餓死在這裡嗎？」</para>
+  <para style="p">
+    <verse number="4" style="v"/>耶和華對<char style="pn">摩西</char>說：「我要從天上降下食物給你們。百姓可以每天出去拾取他們當天所需的分量，這樣我就可以試驗他們是否遵行我的訓誨。 <verse number="5" style="v"/>到第六天，他們要比平時多拾取一倍，好夠兩天的分量。」 <verse number="6" style="v"/><char style="pn">摩西</char>和<char style="pn">亞倫</char>對<char style="pn">以色列</char>百姓說：「今天晚上你們就知道把你們從<char style="pn">埃及</char>領出來的是耶和華。 <verse number="7" style="v"/>明天早上，你們會看見祂的榮耀，因為祂聽見了你們向祂所發的怨言。我們算什麼，你們何必埋怨我們？ <verse number="8" style="v"/>耶和華聽見你們發的怨言了，晚上祂必給你們肉吃，早晨再給你們餅吃。我們算什麼？你們埋怨的其實不是我們，而是耶和華。」 <verse number="9" style="v"/><char style="pn">摩西</char>對<char style="pn">亞倫</char>說：「你去叫<char style="pn">以色列</char>全體會眾到耶和華面前來，因為祂已聽見他們的怨言。」 <verse number="10" style="v"/><char style="pn">亞倫</char>對<char style="pn">以色列</char>全體會眾說話的時候，他們向曠野遠望，果然看見耶和華的榮光在雲彩中顯現。 <verse number="11" style="v"/>耶和華對<char style="pn">摩西</char>說： <verse number="12" style="v"/>「我已經聽見<char style="pn">以色列</char>人的怨言。你告訴他們，『到了黃昏，你們就會有肉吃，早晨就會有餅可以吃飽，這樣你們就知道我是你們的上帝耶和華。』」</para>
+  <para style="p">
+    <verse number="13" style="v"/>到了黃昏，果然有許多鵪鶉飛來，把營地都遮蓋了。到了早晨，營區四周的地上佈滿露水， <verse number="14" style="v"/>露水蒸發以後，曠野便出現一層薄薄的、像白霜的東西。 <verse number="15" style="v"/><char style="pn">以色列</char>人見了，不知道是何物，便彼此議論說：「這是什麼？」<char style="pn">摩西</char>對他們說：「這就是耶和華給你們的食物。 <verse number="16" style="v"/>耶和華吩咐你們要按自己和家人的食量來拾取，每人約拾取兩升。」</para>
+  <para style="p">
+    <verse number="17" style="v"/>於是，<char style="pn">以色列</char>人遵命而行，有些拾的多，有些拾的少。 <verse number="18" style="v"/>後來，他們用俄梅珥<note caller="+" style="f"><char style="fr" closed="false">16·18 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">俄梅珥</char><char style="ft" closed="false">」，量器，約「兩升」。</char></note>量的時候，就發現多拾的沒有剩餘，少拾的也沒有缺乏，剛好是每人所需要的量。 <verse number="19" style="v"/><char style="pn">摩西</char>又吩咐他們說：「你們所拾取的，不可留到早晨！」 <verse number="20" style="v"/>可是，有的人不聽，留了一些。到第二天早上，食物已腐爛生蟲，發出惡臭，<char style="pn">摩西</char>就向他們發怒。 <verse number="21" style="v"/>於是，百姓每天早晨出營拾取食物，各人按著所需分量拾取，到太陽升起後，食物就融化了。 <verse number="22" style="v"/>到第六天，他們就拾取雙倍的分量，也就是每人四升。會眾的首領來稟告<char style="pn">摩西</char>， <verse number="23" style="v"/><char style="pn">摩西</char>對他們說：「耶和華說，『明天是安息日，是向耶和華守的聖安息日。你們要把一切食物預備好，或烤或煮，吃剩的可以留到明天。』」 <verse number="24" style="v"/>百姓就照<char style="pn">摩西</char>的吩咐，把吃剩的食物留到第二天早晨，食物沒有發臭生蟲。 <verse number="25" style="v"/><char style="pn">摩西</char>對他們說：「你們今天就吃這些吧，因為今天是耶和華的安息日，地上不會有食物讓你們拾取。 <verse number="26" style="v"/>你們有六天可以拾取食物，但第七天是安息日，沒有食物可以拾取。」 <verse number="27" style="v"/>到了第七天早晨，有些人仍然出去要拾取食物，結果什麼也找不到。 <verse number="28" style="v"/>耶和華對<char style="pn">摩西</char>說：「你們到什麼時候才肯遵行我的誡命和吩咐呢？ <verse number="29" style="v"/>要知道，耶和華已將安息日賜給你們，所以第六天我會賜你們雙倍的食物。第七天，人人都要留在營中，不許外出。」 <verse number="30" style="v"/>於是，百姓在第七天休息。</para>
+  <para style="p">
+    <verse number="31" style="v"/>
+    <char style="pn">以色列</char>人稱這種食物為嗎哪，它形狀像芫荽的種子，白色，味道像用蜜糖製成的薄餅。 <verse number="32" style="v"/><char style="pn">摩西</char>說：「以下是耶和華的吩咐，『把兩升的嗎哪存留起來，直到世世代代，以便你們的子子孫孫可以看見上帝帶你們離開<char style="pn">埃及</char>時在曠野賜給你們的食物。』」 <verse number="33" style="v"/>於是，<char style="pn">摩西</char>吩咐<char style="pn">亞倫</char>：「拿個罐子盛滿兩升的嗎哪，放在耶和華面前，留到世世代代。」 <verse number="34" style="v"/><char style="pn">亞倫</char>便照耶和華給<char style="pn">摩西</char>的吩咐，把嗎哪放在約櫃前保存起來。 <verse number="35" style="v"/><char style="pn">以色列</char>百姓就在曠野吃了四十年的嗎哪，直到他們到達有人煙的<char style="pn">迦南</char>為止。 <verse number="36" style="v"/>一俄梅珥等於十分之一伊法。</para>
+  <chapter number="17" style="c"/>
+  <para style="s1">磐石出水</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">以色列</char>全體會眾按照耶和華的吩咐，從<char style="pn">汛</char>曠野啟程，一程一程往前行，來到<char style="pn">利非訂</char>安營，可是那裡沒有水喝。 <verse number="2" style="v"/>百姓便跟<char style="pn">摩西</char>吵鬧，要他給他們水喝。<char style="pn">摩西</char>便對他們說：「你們為什麼跟我吵鬧？為什麼試探耶和華？」 <verse number="3" style="v"/>百姓非常口渴，他們向<char style="pn">摩西</char>抱怨說：「你為什麼要把我們帶出<char style="pn">埃及</char>，讓我們一家大小和牲畜都在這裡渴死？」</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <char style="pn">摩西</char>就呼求耶和華說：「我拿這些百姓怎麼辦？他們準備拿石塊打死我！」 <verse number="5" style="v"/>耶和華對<char style="pn">摩西</char>說：「你帶著之前擊打<char style="pn">尼羅</char>河水的杖，率領<char style="pn">以色列</char>的幾個長老走在眾人前面。 <verse number="6" style="v"/>我必在<char style="pn">何烈</char>的磐石那裡等候你們，你用杖擊打磐石，磐石必流出水來給眾人喝。」<char style="pn">摩西</char>便當著<char style="pn">以色列</char>長老的面這樣做了。 <verse number="7" style="v"/><char style="pn">摩西</char>稱那地方為<char style="pn">瑪撒</char>和<char style="pn">米利巴</char><note caller="+" style="f"><char style="fr" closed="false">17·7 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">瑪撒</char><char style="ft" closed="false">」意思是「試探」；「米利巴」意思是「爭鬧」。</char></note>，因為百姓在那裡吵鬧，又試探耶和華，說：「耶和華真的在我們當中嗎？」</para>
+  <para style="s1">戰勝亞瑪力人</para>
+  <para style="p">
+    <verse number="8" style="v"/>後來，<char style="pn">亞瑪力</char>人到<char style="pn">利非訂</char>攻打<char style="pn">以色列</char>人。 <verse number="9" style="v"/><char style="pn">摩西</char>對<char style="pn">約書亞</char>說：「選一些人出去迎戰<char style="pn">亞瑪力</char>人。明天，我會帶著上帝的杖站在山頂上。」 <verse number="10" style="v"/><char style="pn">約書亞</char>便遵照<char style="pn">摩西</char>的吩咐迎戰<char style="pn">亞瑪力</char>人，<char style="pn">摩西</char>、<char style="pn">亞倫</char>和<char style="pn">戶珥</char>站在山頂上。 <verse number="11" style="v"/><char style="pn">摩西</char>什麼時候舉手，<char style="pn">以色列</char>人就得勝；他的手什麼時候垂下來，<char style="pn">亞瑪力</char>人就佔上風。 <verse number="12" style="v"/>不久，<char style="pn">摩西</char>的手疲倦發軟，<char style="pn">亞倫</char>和<char style="pn">戶珥</char>就抬來一塊石頭讓<char style="pn">摩西</char>坐下，然後站在他的兩邊扶著他的手，他就穩穩地舉著手，直到日落。 <verse number="13" style="v"/>這樣，<char style="pn">約書亞</char>用刀殺敗了<char style="pn">亞瑪力</char>人。</para>
+  <para style="p">
+    <verse number="14" style="v"/>耶和華對<char style="pn">摩西</char>說：「我要抹去世人對<char style="pn">亞瑪力</char>人的記憶。你要把這話記在書卷上作紀念，也要把這話告訴<char style="pn">約書亞</char>。」 <verse number="15" style="v"/><char style="pn">摩西</char>在那裡築了一座壇，稱之為耶和華尼西<note caller="+" style="f"><char style="fr" closed="false">17·15 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">耶和華尼西</char><char style="ft" closed="false">」意思是「耶和華是我的旌旗」。</char></note>。 <verse number="16" style="v"/><char style="pn">摩西</char>說：「耶和華已經起誓要世代與<char style="pn">亞瑪力</char>人為敵。」</para>
+  <chapter number="18" style="c"/>
+  <para style="s1">葉忒羅看望摩西</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">摩西</char>的岳父——<char style="pn">米甸</char>的祭司<char style="pn">葉忒羅</char>，聽說上帝為<char style="pn">摩西</char>和祂的子民<char style="pn">以色列</char>人所做的一切事——如何帶領他們離開<char style="pn">埃及</char>， <verse number="2" style="v"/>就帶著女兒<char style="pn">西坡拉</char>和兩個外孫去見<char style="pn">摩西</char>。<char style="pn">西坡拉</char>是<char style="pn">摩西</char>的妻子，<char style="pn">摩西</char>曾讓她回娘家暫時居住。 <verse number="3" style="v"/><char style="pn">摩西</char>的兩個兒子一個叫<char style="pn">革舜</char>，因為<char style="pn">摩西</char>說：「我成了在異鄉寄居的人」； <verse number="4" style="v"/>一個叫<char style="pn">以利以謝</char>，因為<char style="pn">摩西</char>說：「我父親的上帝幫助我，從法老的刀下拯救了我。」 <verse number="5" style="v"/><char style="pn">摩西</char>的岳父<char style="pn">葉忒羅</char>帶著<char style="pn">摩西</char>的妻子和兩個兒子來到上帝的山，就是<char style="pn">摩西</char>在曠野安營的地方。 <verse number="6" style="v"/><char style="pn">葉忒羅</char>事先差人把他帶著<char style="pn">摩西</char>的妻子和兩個兒子要來的消息通知<char style="pn">摩西</char>。 <verse number="7" style="v"/><char style="pn">摩西</char>出去迎接岳父，向他下拜，與他親吻，彼此問安，然後大家都進了帳篷。 <verse number="8" style="v"/><char style="pn">摩西</char>把耶和華為拯救<char style="pn">以色列</char>人而向法老和<char style="pn">埃及</char>人所行的事，以及怎樣救百姓脫離路上遇見的種種困難，都告訴了<char style="pn">葉忒羅</char>。 <verse number="9" style="v"/><char style="pn">葉忒羅</char>為耶和華恩待<char style="pn">以色列</char>人、把他們救出<char style="pn">埃及</char>而高興， <verse number="10" style="v"/>便說：「耶和華當受稱頌，因為祂從<char style="pn">埃及</char>人和法老手中拯救了你們，把這百姓從<char style="pn">埃及</char>人手中拯救了出來。 <verse number="11" style="v"/>我現在知道，耶和華比一切神明都偉大，因為祂懲治了虐待這些百姓的狂妄之徒。」</para>
+  <para style="p">
+    <verse number="12" style="v"/>
+    <char style="pn">摩西</char>的岳父<char style="pn">葉忒羅</char>說完，便向上帝獻燔祭及其他祭物。<char style="pn">亞倫</char>和<char style="pn">以色列</char>的長老都來與他一起在上帝面前吃飯。</para>
+  <para style="p">
+    <verse number="13" style="v"/>第二天，<char style="pn">摩西</char>坐著審理百姓的糾紛，百姓從早到晚都站在<char style="pn">摩西</char>周圍。 <verse number="14" style="v"/><char style="pn">摩西</char>的岳父<char style="pn">葉忒羅</char>看見<char style="pn">摩西</char>對百姓所行的一切，就對<char style="pn">摩西</char>說：「你為什麼這樣處理百姓的事？為什麼你獨自坐著，眾百姓從早到晚都站在你周圍？」 <verse number="15" style="v"/><char style="pn">摩西</char>對岳父說：「他們是來求問上帝的， <verse number="16" style="v"/>我親自審理他們中間的是非，教他們認識上帝的律例和法度。」 <verse number="17" style="v"/><char style="pn">摩西</char>的岳父<char style="pn">葉忒羅</char>勸<char style="pn">摩西</char>說：「這不是好方法， <verse number="18" style="v"/>你和這些百姓都會疲憊不堪，你一個人無法擔當如此繁重的工作。 <verse number="19" style="v"/>你要聽我的勸告，願上帝與你同在。你要做百姓的代表，把案件奏明上帝， <verse number="20" style="v"/>又要教導他們律例和法度，指示他們當行的道、當做的事。 <verse number="21" style="v"/>此外，要在百姓當中挑選一些敬畏上帝、有才幹、誠實、正直、憎惡不義之財的人，派他們做千夫長、百夫長、五十夫長和十夫長，管理百姓。 <verse number="22" style="v"/>讓他們隨時為百姓判案，處理小糾紛，遇到大事才由你審理。有他們分擔你的責任，你會更輕省。 <verse number="23" style="v"/>如果你這樣做，並且上帝也這樣吩咐你，你就能承受得住，百姓也可以平安地回家。」</para>
+  <para style="p">
+    <verse number="24" style="v"/>於是，<char style="pn">摩西</char>接納了岳父的建議，依言而行， <verse number="25" style="v"/>從百姓中挑選有才幹的人，委派他們做千夫長、百夫長、五十夫長和十夫長管理百姓。 <verse number="26" style="v"/>他們負責隨時審理百姓的事，遇到難斷的案件就呈到<char style="pn">摩西</char>那裡，自己則審理普通的事。 <verse number="27" style="v"/>之後，<char style="pn">摩西</char>送岳父上路，他就返回了家鄉。</para>
+  <chapter number="19" style="c"/>
+  <para style="s1">以色列人在西奈山</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">以色列</char>人離開<char style="pn">埃及</char>滿三個月的那一天，他們來到<char style="pn">西奈</char>半島的曠野。 <verse number="2" style="v"/>他們離開<char style="pn">利非訂</char>，來到<char style="pn">西奈</char>曠野，在那裡的山下安營。</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <char style="pn">摩西</char>上山到上帝那裡，耶和華從山上呼喚他說：「你告訴<char style="pn">雅各</char>家，告訴<char style="pn">以色列</char>人， <verse number="4" style="v"/>『我怎樣對付<char style="pn">埃及</char>人，你們都看見了，我好像鷹一樣把你們背在翅膀上帶到我這裡。 <verse number="5" style="v"/>現在，倘若你們認真聽從我的話，遵守我的約，就必在萬民中做我的子民，因為普天下都是我的。 <verse number="6" style="v"/>你們要歸於我，作祭司之國、聖潔之邦。這些話你要告訴<char style="pn">以色列</char>人。』」</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <char style="pn">摩西</char>召集<char style="pn">以色列</char>的長老，把耶和華對他的一切吩咐都轉告他們。 <verse number="8" style="v"/>百姓都齊聲回答說：「凡耶和華所吩咐的，我們都願意遵從。」</para>
+  <para style="p">
+    <char style="pn">摩西</char>便把他們的話回報耶和華。 <verse number="9" style="v"/>耶和華對<char style="pn">摩西</char>說：「我會在密雲中臨到你那裡，使百姓也可以親耳聽見我與你說話的聲音，這樣他們就會永遠信賴你。」<char style="pn">摩西</char>把<char style="pn">以色列</char>人的話回報耶和華。 <verse number="10" style="v"/>耶和華對<char style="pn">摩西</char>說：「你現在回到他們那裡，吩咐他們今天和明天要潔淨自己，洗淨衣服， <verse number="11" style="v"/>到後天都要預備好，因為這一天耶和華要在百姓眼前降臨在<char style="pn">西奈</char>山上。 <verse number="12" style="v"/>此外，你要在山的四圍劃定界線，吩咐百姓不得上山或碰到界線，違例者死。 <verse number="13" style="v"/>你們不可用手觸摸違例者，要用石頭打死他或用箭射死他，牲畜也不例外。百姓要一直等到聽見角聲長鳴才可上山。」 <verse number="14" style="v"/>於是，<char style="pn">摩西</char>下山回到百姓那裡，吩咐他們各人潔淨自己，洗淨衣服。 <verse number="15" style="v"/>又吩咐他們說：「到後天一切都要準備好，這期間你們不可親近女人。」</para>
+  <para style="p">
+    <verse number="16" style="v"/>到了第三天早晨，山上雷電大作，烏雲密佈，又有嘹亮的號角聲，營中的百姓都膽戰心驚。 <verse number="17" style="v"/><char style="pn">摩西</char>率領百姓出營迎接上帝，他們都站在山腳下。 <verse number="18" style="v"/>因為耶和華在火中降臨到<char style="pn">西奈</char>山，整座山都冒著濃煙，滾滾上騰，好像一個大火窯，整座山都震動起來。 <verse number="19" style="v"/>號角聲越來越嘹亮。<char style="pn">摩西</char>說話，上帝就回應他，聲音好像雷鳴。 <verse number="20" style="v"/>耶和華降臨在<char style="pn">西奈</char>山頂，召<char style="pn">摩西</char>到山頂，<char style="pn">摩西</char>就上去了。 <verse number="21" style="v"/>耶和華對<char style="pn">摩西</char>說：「你下去囑咐百姓不可闖過界線到我這裡觀看，以免很多人死亡。 <verse number="22" style="v"/>吩咐到我面前來的祭司要潔淨自己，免得我忽然出來擊殺他們。」</para>
+  <para style="p">
+    <verse number="23" style="v"/>
+    <char style="pn">摩西</char>對耶和華說：「百姓不能上<char style="pn">西奈</char>山，因為你已經吩咐我們要在山的四圍劃定界限，使這山成為聖山。」 <verse number="24" style="v"/>耶和華對他說：「你下去把<char style="pn">亞倫</char>一起帶來，祭司和百姓仍要留在原來的地方，不得亂闖到我面前，免得我忽然出來擊殺他們。」 <verse number="25" style="v"/><char style="pn">摩西</char>就下去，把耶和華的話轉告給百姓。</para>
+  <chapter number="20" style="c"/>
+  <para style="s1">十誡</para>
+  <para style="p">
+    <verse number="1" style="v"/>以下是上帝的訓示：</para>
+  <para style="li1">
+    <verse number="2" style="v"/>「我是你的上帝耶和華，曾把你領出<char style="pn">埃及</char>，使你不再受奴役。</para>
+  <para style="li1">
+    <verse number="3" style="v"/>「除我以外，你不可有別的神。</para>
+  <para style="li1">
+    <verse number="4" style="v"/>「不可為自己雕刻神像，不可仿照任何飛禽走獸或水族的樣子造神像， <verse number="5" style="v"/>不可跪拜它們，也不可供奉它們，因為我——你的上帝耶和華痛恨不貞，我必追討背棄我之人的罪，從父到子直到三四代。 <verse number="6" style="v"/>但那些愛我、遵守我誡命的人，我必以慈愛待他們，直到千代。</para>
+  <para style="li1">
+    <verse number="7" style="v"/>「不可妄用你上帝耶和華的名，違者必被耶和華定罪。</para>
+  <para style="li1">
+    <verse number="8" style="v"/>「要記住安息日，守為聖日。 <verse number="9" style="v"/>你一週可工作六天， <verse number="10" style="v"/>但第七天是你的上帝耶和華的安息日，這一天你和兒女、僕婢、牲畜及你那裡的外族人不可做任何工。 <verse number="11" style="v"/>因為耶和華用六天造了天、地、海和其中的萬物，第七天便休息了，所以耶和華賜福這日，把它定為聖日。</para>
+  <para style="li1">
+    <verse number="12" style="v"/>「要孝敬父母，以便在你的上帝耶和華賜給你的土地上享長壽。</para>
+  <para style="li1">
+    <verse number="13" style="v"/>「不可殺人。</para>
+  <para style="li1">
+    <verse number="14" style="v"/>「不可通姦。</para>
+  <para style="li1">
+    <verse number="15" style="v"/>「不可偷盜。</para>
+  <para style="li1">
+    <verse number="16" style="v"/>「不可作偽證陷害人。</para>
+  <para style="li1">
+    <verse number="17" style="v"/>「不可貪戀別人的房屋，不可貪戀別人的妻子、僕婢、牛驢或其他任何物品。」</para>
+  <para style="p">
+    <verse number="18" style="v"/>那時雷電交加，號角嘹亮，山上冒煙，百姓看見此情景，都嚇得渾身顫抖，不敢挨近。 <verse number="19" style="v"/>他們對<char style="pn">摩西</char>說：「求你跟我們說話，我們必聽從。不要讓上帝直接跟我們說話，恐怕我們會喪命！」 <verse number="20" style="v"/><char style="pn">摩西</char>對百姓說：「不用害怕，上帝降臨是要試驗你們，好讓你們時時敬畏祂，不致犯罪。」</para>
+  <para style="p">
+    <verse number="21" style="v"/>百姓都站得遠遠的，<char style="pn">摩西</char>獨自走進上帝所在的密雲中。 <verse number="22" style="v"/>耶和華吩咐<char style="pn">摩西</char>對<char style="pn">以色列</char>百姓說：「既然你們已經親眼看見我從天上向你們說話， <verse number="23" style="v"/>除了敬拜我之外，不可為自己製造金銀神像。 <verse number="24" style="v"/>你們要為我築一座土壇，把你們的牛羊獻在壇上作燔祭和平安祭。凡是我使自己的名號被尊崇的地方，我會親臨那裡賜福給你們。 <verse number="25" style="v"/>你們若為我築石壇，不可用鑿刻的石頭，因為用工具鑿刻的石頭會玷污祭壇。 <verse number="26" style="v"/>不可踩著臺階登我的祭壇，免得露出你們的下體。</para>
+  <chapter number="21" style="c"/>
+  <para style="s1">如何對待奴僕</para>
+  <para style="p">
+    <verse number="1" style="v"/>「你要向百姓頒佈下列法令。 <verse number="2" style="v"/>你若買一個<char style="pn">希伯來</char>人當奴僕，他必須服侍你六年，到第七年便可以獲得自由，不用支付任何贖金。 <verse number="3" style="v"/>倘若買他的時候，他是單身，那麼期滿的時候，他可以單身離開。如果他跟妻子一同被買，就可以帶妻子一起離開。 <verse number="4" style="v"/>倘若主人給他娶了妻，妻子生了兒女，那麼期滿的時候，他只能單獨離開，他的妻兒要歸主人。 <verse number="5" style="v"/>倘若奴僕說，『我愛我的主人和我的妻子兒女，我不願意離開他們做自由人。』 <verse number="6" style="v"/>主人就要帶他到審判官面前，讓他靠著門或門框，用錐子為他穿耳洞。這樣，他就要永遠服侍主人。 <verse number="7" style="v"/>倘若有人把女兒賣為奴婢，她不可像男僕那樣離開。 <verse number="8" style="v"/>倘若買她的主人本想把她留在身邊，後來卻不喜歡她，就應當讓她贖身。主人無權把她轉賣給外族人，因為是主人對她不守信用。 <verse number="9" style="v"/>倘若是買來給自己的兒子，就要把她當作自己的女兒一般看待。 <verse number="10" style="v"/>倘若有人娶了奴婢為妻，後來又另娶，他還是要照常供給她飯食和衣服，並履行同房的義務。 <verse number="11" style="v"/>倘若主人不履行以上的三個條件，奴婢就可以隨時離開，不用繳付任何贖金。</para>
+  <para style="s1">如何處理人身傷害</para>
+  <para style="p">
+    <verse number="12" style="v"/>「打人致死的，必須被處死。 <verse number="13" style="v"/>倘若不是故意殺人，而是上帝許可那人死在他手裡，他就可以逃往我指定的地方。 <verse number="14" style="v"/>倘若是蓄意殺人，就算他逃到我的祭壇那裡，也要把他拉出來處死。 <verse number="15" style="v"/>毆打父母的，必須被處死。 <verse number="16" style="v"/>綁架他人販賣或自用的，必須被處死。 <verse number="17" style="v"/>咒罵父母的，必須被處死。 <verse number="18" style="v"/>倘若鬥毆時一方用拳頭或石塊致另一方受傷、躺臥在床，但不至於死， <verse number="19" style="v"/>日後能起床扶著拐杖走路，傷人者便不算有罪，但要賠償受傷者停工期間的損失，並要負責醫好他。</para>
+  <para style="p">
+    <verse number="20" style="v"/>「倘若有人用棍子打他的僕婢，導致他們當場死亡，他必須受懲罰。 <verse number="21" style="v"/>倘若傷者過了一兩天才死去，主人就可免刑，因為死者是他的財產。 <verse number="22" style="v"/>倘若有人彼此鬥毆，傷了孕婦，導致早產，但未造成其他傷害，傷人者要按她丈夫所要求的金額，經審判官判定以後，如數賠償。 <verse number="23" style="v"/>倘若孕婦身體其他部位也受了傷，傷人者就要以命償命， <verse number="24" style="v"/>以眼還眼，以牙還牙，以手還手，以腳還腳， <verse number="25" style="v"/>以燒傷還燒傷，以創傷還創傷，以毆打還毆打。</para>
+  <para style="p">
+    <verse number="26" style="v"/>「主人若打壞僕婢的一隻眼睛，就要因僕婢眼睛受傷而使僕婢得自由。 <verse number="27" style="v"/>同樣，倘若他打掉了僕婢的一顆牙齒，也要因此而釋放他。</para>
+  <para style="p">
+    <verse number="28" style="v"/>「倘若有牛牴死了人，要用石頭打死那頭牛，並且不可吃牠的肉，牛的主人可算無罪。 <verse number="29" style="v"/>但倘若牛常常用角傷人，並且已經有人向牛的主人投訴，他卻不拴好牛，以致牛牴死了人，就要用石塊打死牛，並處死主人。 <verse number="30" style="v"/>若判他以罰款抵命，不論金額多少，他都得照付。 <verse number="31" style="v"/>牛若牴死了別人的兒女，也要照以上的條例辦理。 <verse number="32" style="v"/>牛若牴死了別人的僕婢，牛的主人要賠三百三十克銀子<note caller="+" style="f"><char style="fr" closed="false">21·32 </char><char style="ft" closed="false">三百三十克銀子約是當時一個奴僕的身價。</char></note>給那僕婢的主人，並要用石頭打死牛。 <verse number="33" style="v"/>倘若有人打開井蓋或挖了井後不把井口蓋好，以致有牛或驢掉進井裡， <verse number="34" style="v"/>井的主人就要賠償牲畜的主人，死牲畜則歸井的主人。 <verse number="35" style="v"/>倘若某人的牛牴死了別人的牛，兩家的主人就要賣掉活牛，平分所得，同時也要平分那頭死掉的牛。 <verse number="36" style="v"/>倘若素知牛好牴，主人卻沒有拴好牠，他就要以牛還牛，死牛則歸他。</para>
+  <chapter number="22" style="c"/>
+  <para style="s1">賠償條例</para>
+  <para style="p">
+    <verse number="1" style="v"/>「倘若有人偷了別人的牛羊，然後宰了或賣了，他要用五頭牛抵償一頭牛，四隻羊抵償一隻羊。 <verse number="2" style="v"/>倘若有人打死正入屋偷竊的賊，這人不算犯殺人罪。 <verse number="3" style="v"/>倘若事情發生在白天，家主就犯了殺人罪。倘若盜賊被擒，他就要賠償家主，若他一無所有，就要把他賣為奴隸作賠償。 <verse number="4" style="v"/>倘若他偷的牲畜如牛、羊或驢在他手上還活著，他要償還失主雙倍。</para>
+  <para style="p">
+    <verse number="5" style="v"/>「倘若有人在田野或葡萄園裡牧放牲畜，任由牲畜吃別人田裡的農作物或葡萄，他必須拿自己田裡最好的農作物或葡萄作賠償。 <verse number="6" style="v"/>倘若有人在自己的田間焚燒荊棘，不小心燒掉了別人的莊稼、禾捆或整個田園，那生火的人就要賠償一切損失。</para>
+  <para style="p">
+    <verse number="7" style="v"/>「倘若有人把金錢或物件交給鄰居保管，鄰居家遭盜，盜賊被緝拿歸案後要賠償雙倍； <verse number="8" style="v"/>倘若沒捉到盜賊，鄰居就要到審判官那裡證明自己沒有偷拿。 <verse number="9" style="v"/>倘若二人之間有什麼糾紛，無論是為了牛、驢、羊、衣服或失物，爭執的雙方要把案件呈報審判官，審判官判誰敗訴，誰就要賠償雙倍。 <verse number="10" style="v"/>倘若有人把驢、牛、羊或別的牲畜交給鄰居看管，牲畜死傷或被人搶走，並且無人看見， <verse number="11" style="v"/>看守的人就要在耶和華面前起誓沒有動鄰居的東西，這樣失主就應當作罷，看守的人不用賠償。 <verse number="12" style="v"/>但若牲畜是被人偷去的，受託人就要賠償失主。 <verse number="13" style="v"/>倘若牲畜被野獸咬死，受託人要把殘骸帶來當證據，無需賠償被咬死的牲畜。 <verse number="14" style="v"/>倘若有人向鄰居借牲畜，牲畜受傷或死掉，而當時物主不在場，借的人就要賠償。 <verse number="15" style="v"/>倘若物主當時在場，借的人就不用賠償。倘若牲畜是租來的，租的人只需付租金不用賠償。</para>
+  <para style="s1">社會條例</para>
+  <para style="p">
+    <verse number="16" style="v"/>「倘若有人誘姦了尚未許配的處女，他就要交出聘禮，娶她為妻； <verse number="17" style="v"/>倘若女方家長反對婚事，男方要付出相當於聘禮的金錢給女方家長。</para>
+  <para style="p">
+    <verse number="18" style="v"/>「凡行邪術的女人，必須被處死。</para>
+  <para style="p">
+    <verse number="19" style="v"/>「與動物性交的人，必須被處死。</para>
+  <para style="p">
+    <verse number="20" style="v"/>「祭拜耶和華以外的其他任何神明的人，必須被處死。</para>
+  <para style="p">
+    <verse number="21" style="v"/>「不可欺壓在你們中間寄居的人，因為你們在<char style="pn">埃及</char>也做過寄居的人。</para>
+  <para style="p">
+    <verse number="22" style="v"/>「不可虧待寡婦和孤兒， <verse number="23" style="v"/>倘若你們欺凌他們，他們向我呼求，我必聽他們的呼求， <verse number="24" style="v"/>向你們發怒，用刀殺掉你們，使你們的妻子變為寡婦，兒女成為孤兒。</para>
+  <para style="p">
+    <verse number="25" style="v"/>「倘若有貧苦的同胞向你借錢，你不可像放債的一樣從中取利。 <verse number="26" style="v"/>倘若他把衣服給你作抵押，你要在日落之前把衣服還給他。 <verse number="27" style="v"/>因為他只有這件蔽體的衣服，若是沒有，他晚上如何睡覺？他若呼求我，我必定幫助他，因為我是仁慈的。 <verse number="28" style="v"/>不可褻瀆上帝，也不可咒詛百姓的官長。 <verse number="29" style="v"/>你們要向我獻上五穀和新酒，不可遲疑耽延。要把你們的長子獻給我。 <verse number="30" style="v"/>也要獻上頭生的牛羊，牠們生下來後可以留在母親身邊七天，第八天要獻給我。 <verse number="31" style="v"/>你們要做我聖潔的子民，不要吃田野間被野獸咬死的牲畜，要把牠丟給狗吃。</para>
+  <chapter number="23" style="c"/>
+  <para style="s1">公義與憐憫</para>
+  <para style="p">
+    <verse number="1" style="v"/>「不可散佈謠言，也不可與惡人一起作偽證陷害別人。 <verse number="2" style="v"/>不可隨眾行惡。在法庭作證時不可附和多數人，顛倒是非。 <verse number="3" style="v"/>在訴訟的事上不可偏袒窮人。</para>
+  <para style="p">
+    <verse number="4" style="v"/>「倘若看見仇人的牛或驢走迷了路，總要牽回去交給他。 <verse number="5" style="v"/>倘若遇見仇人的驢被馱的重物壓倒，不可逕自走開，總要幫助仇人抬開重物。</para>
+  <para style="p">
+    <verse number="6" style="v"/>「不可在訴訟案中冤枉窮人。 <verse number="7" style="v"/>不可誣告別人，不可殺害正直無辜的人，因為我必懲罰作惡之人。 <verse number="8" style="v"/>不可收受賄賂，因為賄賂蒙蔽人的眼目，使人顛倒是非。 <verse number="9" style="v"/>不可欺凌在你們中間寄居的人，因為你們也曾經在<char style="pn">埃及</char>寄居，知道身在異鄉的滋味。</para>
+  <para style="s1">安息年和安息日</para>
+  <para style="p">
+    <verse number="10" style="v"/>「六年之內你要耕種收割， <verse number="11" style="v"/>第七年要讓土地休息，不耕不種，你們當中的窮人可以吃田中長出來的，剩下的可以留給動物吃。你也要這樣耕作葡萄園和橄欖園。 <verse number="12" style="v"/>六天之內，你要工作，但第七天要休息。這樣，牛、驢可以歇息，你家裡的奴僕和寄居的也可以休息。 <verse number="13" style="v"/>你們要謹慎遵從我對你們說的話。不可提其他神明的名字，不可從你口中聽到它們的名字。</para>
+  <para style="s1">三大節期</para>
+  <para style="p">
+    <verse number="14" style="v"/>「你每年要向我守三個節期。 <verse number="15" style="v"/>要守除酵節，照我的吩咐在每年亞筆月所定的日期連續吃七天的無酵餅，因為你是在這個月離開了<char style="pn">埃及</char>。誰也不可空手來朝拜我。 <verse number="16" style="v"/>要在耕種後、收取初熟之物的時候守收割節。要在年終從田間收取勞動成果時守收藏節。 <verse number="17" style="v"/><char style="pn">以色列</char>所有的男子都要在這三個節期上來朝見主耶和華。</para>
+  <para style="p">
+    <verse number="18" style="v"/>「不可把祭牲的血和有酵的餅一起獻給我，也不可把祭牲的脂肪留到第二天早晨。 <verse number="19" style="v"/>要把田中最好的初熟之物送到你們的上帝耶和華的殿中。不可用母山羊的奶煮牠的小羊羔。</para>
+  <para style="s1">應許賜迦南</para>
+  <para style="p">
+    <verse number="20" style="v"/>「看啊，我要差遣天使走在你前面，在路上保護你，帶領你平安地到達我為你預備的地方。 <verse number="21" style="v"/>他是奉我的名來的，你們要謹遵他的話，不可悖逆，不然他必不赦免你們的過犯。</para>
+  <para style="p">
+    <verse number="22" style="v"/>「你若認真聽從他的吩咐，遵行我的話，我就與你的仇敵為敵，與你的對頭作對。 <verse number="23" style="v"/>我的天使要走在你前面，帶領你去<char style="pn">亞摩利</char>人、<char style="pn">赫</char>人、<char style="pn">比利洗</char>人、<char style="pn">迦南</char>人、<char style="pn">希未</char>人和<char style="pn">耶布斯</char>人所住的地方，我會把他們全部消滅。 <verse number="24" style="v"/>不可叩拜他們的神明，不可供奉它們，也不可效法他們的行為，要徹底拆毀神像，打碎他們的神柱。 <verse number="25" style="v"/>你們要事奉你們的上帝耶和華，我必賜給你日用的飲食，使你們身體健康，不受疾病的侵害， <verse number="26" style="v"/>在你境內必沒有人流產或不育，我會使你壽終正寢。 <verse number="27" style="v"/>你所到之處，我必使那裡的人惶恐不安，使你一切的仇敵都在你面前轉身逃跑。 <verse number="28" style="v"/>我要派黃蜂做你的先鋒，趕走那些<char style="pn">希未</char>人、<char style="pn">迦南</char>人和<char style="pn">赫</char>人。 <verse number="29" style="v"/>我不會在一年之內把這些人全部趕走，免得土地荒涼，野獸肆虐。 <verse number="30" style="v"/>我會逐漸地趕走他們，直到你們人丁興旺，可以佔據那片土地。 <verse number="31" style="v"/>我給你定下國界，從紅海到<char style="pn">非利士</char>海岸，從曠野到<char style="pn">幼發拉底</char>河。我要把其中所有的人都交在你手中，你要把他們全部趕出去。 <verse number="32" style="v"/>不可跟這些民族及其神明立約， <verse number="33" style="v"/>也不可讓這些民族住在你的土地上，免得他們使你得罪我，你若供奉他們的神明，必因此而陷入網羅。」</para>
+  <chapter number="24" style="c"/>
+  <para style="s1">在西奈山立約</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華又指示<char style="pn">摩西</char>說：「你和<char style="pn">亞倫</char>、<char style="pn">拿答</char>、<char style="pn">亞比戶</char>及<char style="pn">以色列</char>的七十位長老上我這裡來，遠遠地敬拜我。 <verse number="2" style="v"/>只有你可以靠近我，其他人，包括全體百姓，都不得走近。」</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <char style="pn">摩西</char>下山把耶和華的話和法令都告訴百姓，百姓齊聲回答：「我們願意遵行耶和華的一切吩咐。」 <verse number="4" style="v"/><char style="pn">摩西</char>把耶和華的這些話記錄下來。第二天清晨，<char style="pn">摩西</char>在山腳築了一座壇，立了十二根柱子代表<char style="pn">以色列</char>的十二支派。 <verse number="5" style="v"/>他又吩咐<char style="pn">以色列</char>的青年去給耶和華獻燔祭，又獻上公牛作平安祭。 <verse number="6" style="v"/><char style="pn">摩西</char>把祭牲的血一半放在盆裡，一半灑在壇上。 <verse number="7" style="v"/>他又把約書念給百姓聽，百姓聽了都說：「我們願意遵行耶和華的一切吩咐，我們願意順服。」 <verse number="8" style="v"/><char style="pn">摩西</char>便把盆中的血灑在百姓身上，說：「這是立約的血，是耶和華按所說的話與你們立約的憑據。」</para>
+  <para style="p">
+    <verse number="9" style="v"/>之後，<char style="pn">摩西</char>、<char style="pn">亞倫</char>、<char style="pn">拿答</char>、<char style="pn">亞比戶</char>及七十位長老便上了山。 <verse number="10" style="v"/>他們都看見了<char style="pn">以色列</char>的上帝，祂的腳下好像是一片藍寶石，像天一樣明淨。 <verse number="11" style="v"/>上帝沒有伸手殺這些<char style="pn">以色列</char>的首領，允許他們看見祂，在祂面前吃喝。</para>
+  <para style="p">
+    <verse number="12" style="v"/>耶和華對<char style="pn">摩西</char>說：「你上山到我這裡來，留在這裡，我要把寫著律法和誡命的石版賜給你，你可以用來教導百姓。」 <verse number="13" style="v"/>於是，<char style="pn">摩西</char>帶著他的助手<char style="pn">約書亞</char>動身上了上帝的山。 <verse number="14" style="v"/>離開之前，<char style="pn">摩西</char>吩咐長老說：「你們在這裡等候我們回來。<char style="pn">亞倫</char>和<char style="pn">戶珥</char>跟你們在一起，百姓當中有什麼訴訟的事情，可以交給他們處理。」</para>
+  <para style="p">
+    <verse number="15" style="v"/>
+    <char style="pn">摩西</char>上了山，密雲遮蓋著整座山。 <verse number="16" style="v"/>耶和華的榮耀停留在<char style="pn">西奈</char>山上，密雲遮蓋了山六天。第七天，耶和華在雲中召喚<char style="pn">摩西</char>。 <verse number="17" style="v"/>在<char style="pn">以色列</char>人眼中，耶和華的榮耀在山上好像烈火。 <verse number="18" style="v"/><char style="pn">摩西</char>上到山上，走進雲中，在那裡停留了四十晝夜。</para>
+  <chapter number="25" style="c"/>
+  <para style="s1">奉獻的條例</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說： <verse number="2" style="v"/>「你去告訴<char style="pn">以色列</char>百姓要獻禮物給我。你們要為我收下所有甘願獻上的禮物。 <verse number="3" style="v"/>你們要收的禮物是金，銀，銅， <verse number="4" style="v"/>細麻線，山羊毛，藍色、紫色和朱紅色的線， <verse number="5" style="v"/>染成紅色的公羊皮，海狗皮，皂莢木， <verse number="6" style="v"/>燈油，製作膏油和香的香料， <verse number="7" style="v"/>用來鑲嵌在以弗得和胸牌上的紅瑪瑙及其他寶石。 <verse number="8" style="v"/>要為我造一座聖所，我好住在他們中間。 <verse number="9" style="v"/>你們要照我的指示去造聖幕和裡面各樣的器具。</para>
+  <para style="s1">造約櫃的條例</para>
+  <para style="p">
+    <verse number="10" style="v"/>「要用皂莢木做一個櫃，長一點一米，寬六十六釐米，高六十六釐米， <verse number="11" style="v"/>裡外都要包上純金，要用金子鑲櫃邊。 <verse number="12" style="v"/>再造四個金環，安在櫃的四個腳上，每邊兩個環。 <verse number="13" style="v"/>用皂莢木造兩根橫杠，外面要包上金， <verse number="14" style="v"/>然後把橫杠穿過櫃旁的金環，便於抬櫃。 <verse number="15" style="v"/>橫杠穿進環以後，不可再抽出來。 <verse number="16" style="v"/>把我將要賜給你的兩塊約版放在櫃裡。 <verse number="17" style="v"/>要用純金造一個施恩<note caller="+" style="f"><char style="fr" closed="false">25·17 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">施恩</char><char style="ft" closed="false">」或譯「贖罪」。</char></note>座，長一點一米，寬六十六釐米。 <verse number="18" style="v"/>用純金在施恩座的兩端打造兩個基路伯天使， <verse number="19" style="v"/>跟施恩座連在一起，一端一個。 <verse number="20" style="v"/>兩個基路伯天使要面對面朝向施恩座，向上展開翅膀，遮蓋施恩座。 <verse number="21" style="v"/>要把施恩座放在櫃上面，把我賜給你的約版放在櫃裡。 <verse number="22" style="v"/>我就在那裡跟你會面，從兩個基路伯天使中間的施恩座上，把要傳給<char style="pn">以色列</char>百姓的一切誡命告訴你。</para>
+  <para style="s1">造供桌的條例</para>
+  <para style="p">
+    <verse number="23" style="v"/>「要用皂莢木造一張桌子，長八十八釐米，寬四十四釐米，高六十六釐米。 <verse number="24" style="v"/>整張桌子都要包上純金，四周鑲上金邊， <verse number="25" style="v"/>在桌子四周造一個八釐米寬的外框，上面也鑲上金邊。 <verse number="26" style="v"/>要造四個金環，安在桌子四角的桌腿上， <verse number="27" style="v"/>金環要靠近外框，以便穿橫杠抬桌子。 <verse number="28" style="v"/>兩根橫杠要用皂莢木製作，外面包金，用來抬桌子。 <verse number="29" style="v"/>你們要用純金造桌子上的盤、碟和獻酒用的杯和瓶。 <verse number="30" style="v"/>桌子上要一直擺著供餅，獻在我面前。</para>
+  <para style="s1">造燈臺的條例</para>
+  <para style="p">
+    <verse number="31" style="v"/>「要用純金造一個燈臺，燈臺的燈座、燈柱、油杯、花瓣和花苞要用一塊純金打造。 <verse number="32" style="v"/>燈臺的兩邊要各伸出三個分枝，共六個分枝。 <verse number="33" style="v"/>每個分枝要伸出三個杏花形狀、有花瓣和花苞的杯，六個分枝都是這樣。 <verse number="34" style="v"/>燈臺上要有四個杏花形狀、有花瓣和花苞的杯。 <verse number="35" style="v"/>燈臺上每一對分枝的相連處要有花苞，三對都是這樣。 <verse number="36" style="v"/>整座燈臺，包括一切裝飾，都要用一塊純金打造。 <verse number="37" style="v"/>此外，要為燈臺造七個燈盞，放在燈臺上面，照亮前面的地方。 <verse number="38" style="v"/>燈臺用的燈剪和燈花盤都要用純金造。 <verse number="39" style="v"/>造整座燈臺和燈臺的器具要用三十四公斤純金。 <verse number="40" style="v"/>你務要照著在山上指示你的樣式造這些器具。</para>
+  <chapter number="26" style="c"/>
+  <para style="s1">聖幕的做法</para>
+  <para style="p">
+    <verse number="1" style="v"/>「要用十幅幔子造聖幕，這些幔子要用細麻線和藍、紫、朱紅三種顏色的毛線織成，還要用精緻的手工繡上基路伯天使。 <verse number="2" style="v"/>每幅幔子的尺寸都一樣，長十二米、寬兩米。 <verse number="3" style="v"/>每五幅連在一起，形成兩幅大幔子。 <verse number="4" style="v"/>要在每幅大幔子邊緣釘上藍色的扣環， <verse number="5" style="v"/>每幅大幔子釘五十個，扣環要兩兩相對， <verse number="6" style="v"/>再做五十個金鉤，把兩幅大幔子連在一起，成為聖幕。</para>
+  <para style="p">
+    <verse number="7" style="v"/>「要用山羊毛織十一幅幔子作聖幕的罩棚， <verse number="8" style="v"/>每幅長十三米、寬兩米。十一幅幔子的尺寸都要一樣。 <verse number="9" style="v"/>然後，你們要把五幅連成一大幅，其餘六幅連成一大幅，第六幅要在聖幕前疊起來。 <verse number="10" style="v"/>要在這兩幅幔子的邊緣各釘上五十個扣環， <verse number="11" style="v"/>再做五十個銅鉤，把這兩幅大幔子扣在一起，成為一個完整的罩棚。 <verse number="12" style="v"/>鋪罩棚所剩下來的半幅幔子要垂到聖幕後面。 <verse number="13" style="v"/>兩旁餘下的幔子可垂在聖幕的兩邊，每邊長五十釐米，蓋著聖幕。 <verse number="14" style="v"/>罩棚上面要蓋一層染成紅色的公羊皮，再蓋一層海狗皮做頂蓋。</para>
+  <para style="p">
+    <verse number="15" style="v"/>「要用皂莢木做支撐聖幕的木板， <verse number="16" style="v"/>每塊木板長四米，寬六十六釐米。 <verse number="17" style="v"/>每塊木板要有兩個接榫，好連接在一起。聖幕的所有木板都要這樣。 <verse number="18" style="v"/>聖幕的南面要有二十塊木板， <verse number="19" style="v"/>在這些木板下面要造四十個帶凹槽的銀底座，每塊木板下面兩個，用來套在木板的兩個接榫上。 <verse number="20" style="v"/>聖幕北面也要有二十塊木板， <verse number="21" style="v"/>這些木板下面也要裝上四十個帶凹槽的銀底座，每塊木板下面有兩個銀底座。 <verse number="22" style="v"/>聖幕後面，就是西面，要有六塊木板。 <verse number="23" style="v"/>聖幕後面的兩個拐角要各有兩塊木板， <verse number="24" style="v"/>木板的下端連於底座<note caller="+" style="f"><char style="fr" closed="false">26·24 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">連於底座</char><char style="ft" closed="false">」或譯「是雙層的」。</char></note>，頂端用一個環固定。兩個拐角都要這樣做。 <verse number="25" style="v"/>這樣，兩端便共有八塊木板，每塊木板下面各有兩個帶凹槽的銀底座，一共有十六個銀底座。</para>
+  <para style="p">
+    <verse number="26-27" style="v"/>「要用皂莢木做橫閂，聖幕左右兩邊及後面的牆板上要各有五根橫閂， <verse number="28" style="v"/>攔腰固定牆板的那根橫閂要從這端貫穿到那端。 <verse number="29" style="v"/>所有的木板和橫閂都要包上金，並要在木板上造金環，用來穿橫閂。 <verse number="30" style="v"/>要照著我在山上所指示你的樣式，把聖幕支搭起來。</para>
+  <para style="s1">造至聖所的條例</para>
+  <para style="p">
+    <verse number="31" style="v"/>「要用細麻線和藍色、紫色、朱紅色的線織成一幅幔子，上面用精緻的手工繡上基路伯天使。 <verse number="32" style="v"/>要把這幅幔子掛在四根包金的皂莢木柱上，木柱上面有金鉤，木柱立在四個帶凹槽的銀底座上面。 <verse number="33" style="v"/>要把整幅幔子掛在木柱的金鉤上，把約櫃抬進幔子裡。這幔子把聖幕分為兩個部分，幔子裡面是至聖所，外面是聖所。 <verse number="34" style="v"/>要把施恩座放在至聖所裡面的約櫃上。 <verse number="35" style="v"/>桌子要放在幔子的外面、聖所的北面，燈臺放在南面，跟桌子相對。 <verse number="36" style="v"/>要用細麻線和藍色、紫色、朱紅色的線繡製聖幕的門簾。 <verse number="37" style="v"/>要用皂莢木做五根掛門簾的柱子，柱子包上金，上面要有金鉤，並要為柱子造五個帶凹槽的銅底座。</para>
+  <chapter number="27" style="c"/>
+  <para style="s1">造燔祭壇的條例</para>
+  <para style="p">
+    <verse number="1" style="v"/>「要用皂莢木造一個四方形的祭壇，長寬各二點三米，高一點三米。 <verse number="2" style="v"/>要在壇的四角造四個角狀物，與壇連成一體，壇外面要包上銅。 <verse number="3" style="v"/>用銅造盛壇灰的盆和其他祭壇用具，即鏟、碗、肉叉、火鼎。 <verse number="4" style="v"/>要造一個銅網，在銅網的四角裝置四個銅環。 <verse number="5" style="v"/>銅網在祭壇圍邊的下方，向下伸展到祭壇的腰部。 <verse number="6" style="v"/>要用皂莢木為祭壇造兩根橫杠，外面包上銅。 <verse number="7" style="v"/>要將兩根橫杠穿在祭壇兩旁的銅環裡，以便抬祭壇。 <verse number="8" style="v"/>整座壇都用木板製成，壇是中空的。一切都要照我在山上給你的指示去做。</para>
+  <para style="s1">聖幕院子的規劃</para>
+  <para style="p">
+    <verse number="9" style="v"/>「要為聖幕圍出一個院子。院子的南面要用細麻線做帷幔，長四十六米， <verse number="10" style="v"/>帷幔有二十根柱子，二十個帶凹槽的銅底座，柱子上的鉤子和橫杆都是銀的。 <verse number="11" style="v"/>北面的帷幔也是長四十六米，柱子、銅底座、鉤子、橫杆的樣式都與南面的一樣。 <verse number="12" style="v"/>院子西面的帷幔寬二十三米，有十根柱子和十個帶凹槽的底座。 <verse number="13" style="v"/>院子東面的帷幔也是寬二十三米。 <verse number="14-15" style="v"/>入口兩邊的帷幔都是寬六點九米，各有三根柱子和三個帶凹槽的底座。 <verse number="16" style="v"/>院子的入口要有門簾，長九米，用細麻線和藍色、紫色、朱紅色的線織成，上面有精緻的刺繡，還有四根柱子和四個帶凹槽的底座。 <verse number="17" style="v"/>所有繞著院子的柱子都要用銀製的橫杆連接，所有的鉤子都要用銀製作，帶凹槽的底座要用銅製作。 <verse number="18" style="v"/>整個院子長四十四米，寬二十二米，高二點三米，所有的帷幔都要用細麻線精工製作，帶凹槽的底座要用銅製作。 <verse number="19" style="v"/>聖幕裡其他一切器具以及聖幕、院子所用的橛子都要用銅製作。</para>
+  <para style="p">
+    <verse number="20" style="v"/>「你要吩咐<char style="pn">以色列</char>百姓，把榨出的純橄欖油拿來做會幕內的燈油，使燈臺上的燈經常亮著。 <verse number="21" style="v"/><char style="pn">亞倫</char>和他的子孫要負責照看聖所內約櫃前的幔子外的燈，使燈在耶和華面前日夜亮著。這是<char style="pn">以色列</char>百姓世世代代當守的條例。</para>
+  <chapter number="28" style="c"/>
+  <para style="s1">祭司聖衣的規定</para>
+  <para style="p">
+    <verse number="1" style="v"/>「你要從<char style="pn">以色列</char>百姓當中把你的哥哥<char style="pn">亞倫</char>和他四個兒子——<char style="pn">拿答</char>、<char style="pn">亞比戶</char>、<char style="pn">以利亞撒</char>和<char style="pn">以他瑪</char>帶到你身邊，立他們為祭司事奉我。 <verse number="2" style="v"/>你要為你哥哥<char style="pn">亞倫</char>做一件聖衣，顯出他職位的榮耀和尊貴。 <verse number="3" style="v"/>你要吩咐所有我賦予智慧的巧手裁縫師為<char style="pn">亞倫</char>縫製衣服，使他分別出來，做聖潔的祭司事奉我。 <verse number="4" style="v"/>他們要做的聖衣包括胸牌、以弗得、外袍、雜色的內袍、禮冠和腰帶。要為你哥哥<char style="pn">亞倫</char>及其眾子做這樣的聖衣，好讓他們做祭司事奉我。 <verse number="5" style="v"/>要用金線和細麻線及藍色、紫色、朱紅色的線製作聖衣。</para>
+  <para style="s1">以弗得</para>
+  <para style="p">
+    <verse number="6" style="v"/>「以弗得要用金線和細麻線及藍色、紫色、朱紅色的線精工製作。 <verse number="7" style="v"/>要在以弗得兩邊用兩條肩帶縫合起來。 <verse number="8" style="v"/>用金線和細麻線及藍色、紫色、朱紅色的線精工製作一條帶子，縫在以弗得上，連成一整件。</para>
+  <para style="p">
+    <verse number="9" style="v"/>「你要找兩塊紅瑪瑙，刻上<char style="pn">以色列</char>十二個兒子的名字， <verse number="10" style="v"/>按他們的長幼次序，每一塊寶石刻上六個名字。 <verse number="11" style="v"/>要用工匠雕刻圖章的方法將他們的名字刻在兩塊寶石上，把寶石鑲在兩個金框裡面。 <verse number="12" style="v"/>然後將鑲著金框的寶石縫在以弗得的兩條肩帶上，作<char style="pn">以色列</char>人的紀念石。<char style="pn">亞倫</char>要把他們的名字放在肩上，在耶和華面前作紀念。 <verse number="13" style="v"/>要做兩個金框， <verse number="14" style="v"/>並像搓繩子一樣用純金搓成兩條金鏈，把鏈子連接在鑲寶石的金框上。</para>
+  <para style="s1">胸牌</para>
+  <para style="p">
+    <verse number="15" style="v"/>「要精心製作一個用來明白上帝旨意的胸牌，製作的方法和造以弗得一樣，用金線和細麻線及藍色、紫色、朱紅色的線製作。 <verse number="16" style="v"/>胸牌是方形的，長寬各二十二釐米，分成上下兩層。 <verse number="17" style="v"/>上面要鑲上四行寶石：第一行是紅寶石、黃玉和翠玉； <verse number="18" style="v"/>第二行是綠寶石、藍寶石和金剛石； <verse number="19" style="v"/>第三行是紫瑪瑙、白瑪瑙和紫晶； <verse number="20" style="v"/>第四行是水蒼玉、紅瑪瑙和碧玉。這些寶石都要用金框圍著，鑲在胸牌上。 <verse number="21" style="v"/>要用刻圖章的方法在每一顆寶石上刻一個<char style="pn">以色列</char>兒子的名字，十二顆寶石代表十二支派。</para>
+  <para style="p">
+    <verse number="22" style="v"/>「要用純金擰成兩條像繩子一樣的鏈子，連在胸牌上， <verse number="23" style="v"/>造兩個金環安在胸牌兩端， <verse number="24" style="v"/>把鏈子穿在金環上， <verse number="25" style="v"/>再把金鏈的另一端接在以弗得肩帶的兩個金框上。 <verse number="26" style="v"/>造兩個金環，安在胸牌下端靠近以弗得內側的兩邊。 <verse number="27" style="v"/>再造兩個金環安在以弗得前面兩條肩帶的下端，靠近接縫處，在精緻的以弗得腰帶上方。 <verse number="28" style="v"/>再用一條藍色的繩子繫住以弗得和胸牌上面的金環，使胸牌貼在精工織成的以弗得腰帶上，不會從以弗得上鬆脫。 <verse number="29" style="v"/><char style="pn">亞倫</char>進聖所時，要佩戴這塊刻著<char style="pn">以色列</char>眾子名字的胸牌，在耶和華面前常作紀念。 <verse number="30" style="v"/>又要把烏陵和土明放在胸牌裡面，<char style="pn">亞倫</char>到耶和華面前的時候，要佩帶這胸牌，以便明白上帝的旨意，為<char style="pn">以色列</char>人做決定。</para>
+  <para style="s1">外袍</para>
+  <para style="p">
+    <verse number="31" style="v"/>「也要縫製一件藍色的以弗得的外袍， <verse number="32" style="v"/>袍上要留領口，還要在領口周圍織領邊，好像鎧甲上的領口，免得領口破裂。 <verse number="33" style="v"/>外袍的底邊要另外用藍色、紫色、朱紅色的線做成石榴狀的飾物，石榴中間要掛金鈴鐺。 <verse number="34" style="v"/>一個石榴一個金鈴鐺，相間排列，圍在外袍的底邊。 <verse number="35" style="v"/><char style="pn">亞倫</char>事奉的時候，要穿上這外袍，以便他進聖所到耶和華面前和出聖所的時候，鈴鐺會發出響聲，他就不至於死。</para>
+  <para style="p">
+    <verse number="36" style="v"/>「你也要用純金造一塊牌子，以刻印章的方法刻上『奉獻給耶和華』的字樣， <verse number="37" style="v"/>再拿一條藍色帶子，把它繫在禮冠前面。 <verse number="38" style="v"/><char style="pn">亞倫</char>要把這金牌戴在額上，表示他承擔<char style="pn">以色列</char>人獻聖物時的過犯，這聖物是<char style="pn">以色列</char>百姓特別獻上的禮物。這金牌要常常留在<char style="pn">亞倫</char>的額上，好使百姓蒙耶和華悅納。</para>
+  <para style="p">
+    <verse number="39" style="v"/>「要用雜色的細麻線織成祭司的內袍，用細麻布做禮冠，腰帶上要有刺繡， <verse number="40" style="v"/>也要為<char style="pn">亞倫</char>的兒子們縫製內袍、腰帶、帽子，顯出他們職位的榮耀和尊貴。 <verse number="41" style="v"/>你哥哥<char style="pn">亞倫</char>及其眾子穿上這些衣服後，你要用油膏立他們，使他們分別出來，做聖潔的祭司事奉我。</para>
+  <para style="s1">褲子</para>
+  <para style="p">
+    <verse number="42" style="v"/>「要用細麻布為他們做褲子，以遮蓋下體，褲子要從腰部到大腿。 <verse number="43" style="v"/><char style="pn">亞倫</char>父子們進出會幕或到聖所的祭壇事奉的時候，都要穿上褲子，免得因為觸犯聖禮而死亡。這是<char style="pn">亞倫</char>及其子孫永遠當遵守的條例。</para>
+  <chapter number="29" style="c"/>
+  <para style="s1">立祭司的條例</para>
+  <para style="p">
+    <verse number="1" style="v"/>「你要使<char style="pn">亞倫</char>父子們分別出來，做聖潔的祭司事奉我。你要選一頭公牛犢和兩隻毫無殘疾的公綿羊， <verse number="2" style="v"/>用細麵粉預備無酵餅、調上油的無酵餅和塗上油的無酵薄餅。 <verse number="3" style="v"/>所有的餅都要用一個籃子盛，連同公牛和綿羊一起帶到會幕那裡。 <verse number="4" style="v"/>你要先讓<char style="pn">亞倫</char>父子們在會幕門前沐浴， <verse number="5" style="v"/>然後給<char style="pn">亞倫</char>穿上內袍、以弗得和以弗得的外袍，戴上胸牌，束上精緻的以弗得帶子， <verse number="6" style="v"/>戴上禮冠，把聖冠<note caller="+" style="f"><char style="fr" closed="false">29·6 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">聖冠</char><char style="ft" closed="false">」應指<char style="xt"><ref loc="EXO 28">28</ref>章</char>提到的金牌。</char></note>繫在禮冠上。 <verse number="7" style="v"/>之後，把膏油倒在他的頭上，立他為祭司。 <verse number="8" style="v"/>接著輪到<char style="pn">亞倫</char>的兒子們，要給他們穿上內袍， <verse number="9" style="v"/>為他們束上腰帶，戴上帽子，他們就按永遠的條例得到祭司的職分。你要這樣把聖職授予他們。</para>
+  <para style="p">
+    <verse number="10" style="v"/>「要把公牛牽到會幕前面，<char style="pn">亞倫</char>父子們要把手按在公牛頭上， <verse number="11" style="v"/>在會幕門前，在耶和華面前宰牛。 <verse number="12" style="v"/>然後，把血帶到祭壇那裡，用手指把血塗在壇的四個角上，剩下的血倒在壇腳。 <verse number="13" style="v"/>再把遮蓋內臟的脂肪、肝、兩個腎臟和附在上面的脂肪都放在祭壇上燒掉。 <verse number="14" style="v"/>但牛皮、肉和糞要拿到營外焚燒。這是贖罪祭。</para>
+  <para style="p">
+    <verse number="15" style="v"/>「要把一隻公綿羊牽來，<char style="pn">亞倫</char>父子們要把手按在羊頭上， <verse number="16" style="v"/>然後宰羊，把血灑在祭壇的四周。 <verse number="17" style="v"/>再把羊切成塊狀，用水洗淨所有的內臟和腿，跟肉塊和頭放在一起。 <verse number="18" style="v"/>然後，把整隻羊放在祭壇上焚燒，這是獻給耶和華的燔祭，是蒙耶和華悅納的馨香火祭。</para>
+  <para style="p">
+    <verse number="19" style="v"/>「你要把另一隻公綿羊牽來，<char style="pn">亞倫</char>父子們要把手按在羊頭上， <verse number="20" style="v"/>然後宰羊，取一點血塗在<char style="pn">亞倫</char>和他兒子們的右耳垂、右手的大拇指和右腳的大腳趾上，餘下的血就灑在祭壇的四周。 <verse number="21" style="v"/>再從祭壇上取一點血，與膏油一起灑在<char style="pn">亞倫</char>父子及其衣服上。這樣，他們和他們的衣服就被分別出來，變得聖潔。</para>
+  <para style="p">
+    <verse number="22" style="v"/>「你要取出羊的脂肪、肥尾巴、遮蓋內臟的脂肪、肝葉、兩個腎臟和附在上面的脂肪以及右腿，因為這是授聖職時所獻的羊。 <verse number="23" style="v"/>再從耶和華面前的籃子裡取一個無酵餅、一個調油的無酵餅和一個薄餅。 <verse number="24" style="v"/>把這些祭物都放在<char style="pn">亞倫</char>和他兒子的手中，作為搖祭在耶和華面前搖一搖。 <verse number="25" style="v"/>然後，你要把這些祭物接過來，放在祭壇上焚燒獻給耶和華，成為蒙耶和華悅納的馨香火祭。 <verse number="26" style="v"/>你要拿起<char style="pn">亞倫</char>承受聖職時所獻的那頭公羊的胸肉，作為搖祭在耶和華面前搖一搖。之後，這份祭肉就歸你。</para>
+  <para style="p">
+    <verse number="27" style="v"/>「要將屬於<char style="pn">亞倫</char>父子們、授聖職時所獻的搖祭胸肉和舉祭腿肉分別出來，使之聖潔。 <verse number="28" style="v"/>這些祭物要從<char style="pn">以色列</char>人所獻的平安祭中取出來，歸給<char style="pn">亞倫</char>父子們，作為永遠的定例。這是<char style="pn">以色列</char>人當向耶和華獻的祭物。</para>
+  <para style="p">
+    <verse number="29" style="v"/>「<char style="pn">亞倫</char>的聖衣要留給他的子孫，他們可以穿上這聖衣受膏，承受聖職。 <verse number="30" style="v"/>接替<char style="pn">亞倫</char>做祭司的那位後裔，每次進會幕的聖所供職時，都要一連七天穿著聖衣。</para>
+  <para style="p">
+    <verse number="31" style="v"/>「要在聖潔的地方煮授聖職時所用的公綿羊肉。 <verse number="32" style="v"/><char style="pn">亞倫</char>父子們可以在會幕的門前吃這些祭肉和籃內的餅。 <verse number="33" style="v"/>他們要吃這些在授聖職時用來贖罪、使他們聖潔的祭物。但普通人不能吃，因為這些是聖物。 <verse number="34" style="v"/>若有授聖職時的肉或餅留到早上，就要燒掉，不可再吃，因為這些都是聖物。</para>
+  <para style="p">
+    <verse number="35" style="v"/>「你要照我的吩咐，為<char style="pn">亞倫</char>父子們舉行授聖職禮，歷時七天。 <verse number="36" style="v"/>每天要獻一頭公牛作贖罪祭潔淨祭壇，然後用膏油抹祭壇，使祭壇聖潔。 <verse number="37" style="v"/>你們連續七天都要這樣做，這樣祭壇便完全聖潔，凡是碰到祭壇的都變得聖潔。</para>
+  <para style="p">
+    <verse number="38" style="v"/>「你們每天要獻上兩隻一歲的羊羔作燔祭。 <verse number="39" style="v"/>一隻在早晨獻上，另一隻在黃昏獻上。 <verse number="40" style="v"/>要用一公斤細麵粉調一升橄欖油做成素祭，與早晨獻的羊羔一同獻上，再獻上一升酒作奠祭。 <verse number="41" style="v"/>另一隻羊要在黃昏的時候獻上，所獻的素祭和奠祭要跟早晨的一樣，作為蒙耶和華悅納的馨香火祭。</para>
+  <para style="p">
+    <verse number="42" style="v"/>「你們世世代代要不斷地在我面前獻上燔祭，祭禮要在會幕門前舉行，這會幕就是我跟你們會面和交談的地方。 <verse number="43" style="v"/>我要在那裡和<char style="pn">以色列</char>人相會，我的榮耀將使整座會幕聖潔。</para>
+  <para style="p">
+    <verse number="44" style="v"/>「我要使會幕和祭壇聖潔，也要使<char style="pn">亞倫</char>父子們聖潔，做祭司事奉我。 <verse number="45" style="v"/>我要住在<char style="pn">以色列</char>人中間，做他們的上帝。 <verse number="46" style="v"/>他們必知道我是他們的上帝耶和華。我帶領他們離開<char style="pn">埃及</char>，就是為了要住在他們中間。我是他們的上帝耶和華。</para>
+  <chapter number="30" style="c"/>
+  <para style="s1">造香壇的條例</para>
+  <para style="p">
+    <verse number="1" style="v"/>「你要用皂莢木造一座燒香用的壇。 <verse number="2" style="v"/>壇是四方形的，長寬各四十五釐米，高九十釐米，上面有突出的角狀物，與壇連成一體。 <verse number="3" style="v"/>壇頂、壇的四面和壇上的角狀物要包上純金，四周鑲上金邊。 <verse number="4" style="v"/>要在壇兩側的金邊下面安兩個金環，使橫杠穿過金環，以便抬香壇。 <verse number="5" style="v"/>要用皂莢木造橫杠，包上金。 <verse number="6" style="v"/>要把香壇放在約櫃前幔子的外面，對著約櫃上的施恩座——就是我要跟你會面的地方。</para>
+  <para style="p">
+    <verse number="7" style="v"/>「<char style="pn">亞倫</char>每天早上料理燈臺的時候，要在這壇上燒芬芳的香。 <verse number="8" style="v"/>黃昏點燈的時候，他也要在耶和華面前燒香，世世代代都要如此。 <verse number="9" style="v"/>不可在這香壇上燒別的香料，不可用這壇來獻燔祭或素祭，也不可在上面澆奠祭。 <verse number="10" style="v"/><char style="pn">亞倫</char>每年要在壇的角上行一次贖罪禮，用贖罪祭牲的血塗在壇角上，世代如此。這是耶和華至聖的壇。」</para>
+  <para style="s1">人丁的贖價</para>
+  <para style="p">
+    <verse number="11" style="v"/>耶和華對<char style="pn">摩西</char>說： <verse number="12" style="v"/>「你統計<char style="pn">以色列</char>人口的時候，每一個被統計的男子都要繳付贖價給耶和華，贖回自己的性命，免得在統計人口期間發生災禍。 <verse number="13" style="v"/>凡被統計的人都要付六克銀子，即十季拉，以聖所的秤為準，作為獻給耶和華的禮物。 <verse number="14" style="v"/>凡被統計的，年齡在二十歲以上的男子都要獻此禮物給耶和華。 <verse number="15" style="v"/>富有的不用多繳，貧窮的也不可少付，每個人都要付六克銀子，作為獻給耶和華的禮物，用來贖他們自己的性命。 <verse number="16" style="v"/>要向<char style="pn">以色列</char>人收贖命的款項，供會幕使用，可以使<char style="pn">以色列</char>人在耶和華面前蒙眷顧，贖性命。」</para>
+  <para style="s1">洗濯盆</para>
+  <para style="p">
+    <verse number="17" style="v"/>耶和華對<char style="pn">摩西</char>說： <verse number="18" style="v"/>「你用銅造一個洗濯盆和盆座，放在會幕和祭壇之間，盆裡盛著水， <verse number="19" style="v"/>供<char style="pn">亞倫</char>父子們洗手洗腳， <verse number="20" style="v"/>他們進會幕或在壇上獻火祭之前，一定要自潔才可以供職，免得死亡。 <verse number="21" style="v"/>他們要洗手洗腳，免得死亡，這是<char style="pn">亞倫</char>和他的子孫世世代代都要守的條例。」</para>
+  <para style="p">
+    <verse number="22" style="v"/>耶和華對<char style="pn">摩西</char>說： <verse number="23" style="v"/>「要以聖所的秤為準，用上等的香料，就是沒藥液六公斤、香肉桂和菖蒲各三公斤、 <verse number="24" style="v"/>肉桂皮六公斤，再加上橄欖油四升， <verse number="25" style="v"/>按著調製香料的方法製作聖膏油。 <verse number="26" style="v"/>要用這些膏油來抹會幕、約櫃、 <verse number="27" style="v"/>桌子和桌上所有的器具、燈臺和燈臺上的器具、香壇、 <verse number="28" style="v"/>燔祭壇和壇上所有的器具、洗濯盆和盆座。 <verse number="29" style="v"/>你要使這一切聖潔，成為至聖之物。凡碰到它們的都會聖潔。</para>
+  <para style="p">
+    <verse number="30" style="v"/>「你也要用這種油來膏<char style="pn">亞倫</char>父子們，使他們分別出來，做聖潔的祭司事奉我。 <verse number="31" style="v"/>你要把我的話告訴<char style="pn">以色列</char>百姓，『我要世世代代以這油為聖膏油。 <verse number="32" style="v"/>不要把這膏油用在普通人身上，也不可仿製，因為這是聖膏油，你們也要視之為聖物。 <verse number="33" style="v"/>任何人若仿製或用這油抹祭司以外的人，要將他從民中剷除。』」</para>
+  <para style="p">
+    <verse number="34" style="v"/>耶和華對<char style="pn">摩西</char>說：「要取各種芬芳的香料，就是蘇合香、香螺、白松香和純乳香，分量相同， <verse number="35" style="v"/>用調製香料的方法調製，加上鹽，做成純淨聖潔的香。 <verse number="36" style="v"/>你們要把一些香搗成極細的粉末，放在會幕內的約櫃前面，就是我與你會面的地方，你們要視這香為至聖之物。 <verse number="37" style="v"/>你們不可用同樣的配方為自己做香，要視它為耶和華的聖物。 <verse number="38" style="v"/>任何人若仿製這香，自己拿來私用<note caller="+" style="f"><char style="fr" closed="false">30·38 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">私用</char><char style="ft" closed="false">」希伯來文是「聞這香味」。</char></note>，必從民中被剷除。」</para>
+  <chapter number="31" style="c"/>
+  <para style="s1">會幕的工匠</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說： <verse number="2" style="v"/>「看啊，在<char style="pn">猶大</char>支派中我已經親自選出<char style="pn">戶珥</char>的孫子、<char style="pn">烏利</char>的兒子<char style="pn">比撒列</char>， <verse number="3" style="v"/>用我的靈充滿他，使他有聰明智慧，精於各種技能和手藝， <verse number="4" style="v"/>懂得用金、銀和銅製造各式各樣精巧的器具， <verse number="5" style="v"/>又能雕刻和鑲嵌寶石，精通木工和各種手藝。 <verse number="6" style="v"/>我委派<char style="pn">但</char>支派<char style="pn">亞希撒抹</char>的兒子<char style="pn">亞何利亞伯</char>做他的助手。至於其他能工巧匠，我已賜給他們智慧，好照我對你的吩咐製造一切器具， <verse number="7" style="v"/>即會幕、約櫃和約櫃上面的施恩座、會幕裡面所有的器具、 <verse number="8" style="v"/>桌子和桌上的器具、純金的燈臺和燈臺的一切器具、香壇、 <verse number="9" style="v"/>燔祭壇和壇上的一切器具、洗濯盆和盆座， <verse number="10" style="v"/>還有精工製作的禮服，即<char style="pn">亞倫</char>祭司的聖衣及其眾子供祭司之職時穿的禮服， <verse number="11" style="v"/>以及膏油和聖所使用的芬芳的香。他們要照我對你的吩咐去做。」</para>
+  <para style="s1">安息日</para>
+  <para style="p">
+    <verse number="12" style="v"/>耶和華對<char style="pn">摩西</char>說： <verse number="13" style="v"/>「你要吩咐<char style="pn">以色列</char>百姓務必守我的安息日，因為這是我與你們之間世世代代的記號，叫你們知道使你們聖潔的是我耶和華。 <verse number="14" style="v"/>你們要守安息日，以它為聖日。凡不守這誡命的，必被處死。凡在這天工作的，必從民中被剷除。 <verse number="15" style="v"/>一週要工作六天，第七天是莊嚴的安息日，是耶和華的聖日。凡在安息日做工的，必被處死。 <verse number="16" style="v"/>因此，<char style="pn">以色列</char>人世世代代都要守安息日，作為永久的約， <verse number="17" style="v"/>這是我和<char style="pn">以色列</char>人之間永久的記號。耶和華用六天的時間創造天地萬物，在第七天停工休息。」 <verse number="18" style="v"/>耶和華在<char style="pn">西奈</char>山對<char style="pn">摩西</char>說完這些話以後，就把自己用指頭刻上誡命的兩塊石版交給<char style="pn">摩西</char>。</para>
+  <chapter number="32" style="c"/>
+  <para style="s1">金牛犢</para>
+  <para style="p">
+    <verse number="1" style="v"/>百姓見<char style="pn">摩西</char>遲遲沒有下山，就聚集到<char style="pn">亞倫</char>那裡，對他說：「領我們離開<char style="pn">埃及</char>的那個<char style="pn">摩西</char>不知怎樣了，你給我們造神像來帶領我們吧。」 <verse number="2" style="v"/><char style="pn">亞倫</char>對他們說：「你們去摘下妻子、兒女的金耳環，拿來給我。」 <verse number="3" style="v"/>百姓就都摘下金耳環交給<char style="pn">亞倫</char>。 <verse number="4" style="v"/><char style="pn">亞倫</char>用這些金耳環鑄造了一頭牛犢。他們說：「<char style="pn">以色列</char>人啊，這就是把你們帶出埃及的神明。」 <verse number="5" style="v"/><char style="pn">亞倫</char>見狀，便在牛犢前面築了一座壇，然後宣告說：「明天是耶和華定的節期。」 <verse number="6" style="v"/>第二天清晨，百姓都上前來獻燔祭和平安祭，獻完祭後就坐下吃喝，起來狂歡。</para>
+  <para style="p">
+    <verse number="7" style="v"/>耶和華對<char style="pn">摩西</char>說：「你快下山吧，你的百姓，就是你從<char style="pn">埃及</char>領出來的那些人已經敗壞了。 <verse number="8" style="v"/>他們這麼快就偏離了我吩咐他們走的道路，為自己造了一頭牛犢來叩拜獻祭，說，『<char style="pn">以色列</char>人啊，這就是把你們帶出<char style="pn">埃及</char>的神明。』」 <verse number="9" style="v"/>耶和華又說：「我看到了，這些百姓真是頑固不化。 <verse number="10" style="v"/>你不要阻止我，我要向他們發烈怒，毀滅他們。我要使你的後代成為大國。」</para>
+  <para style="p">
+    <verse number="11" style="v"/>
+    <char style="pn">摩西</char>懇求他的上帝耶和華說：「耶和華啊，你為什麼要向你的子民發烈怒呢？這些子民是你親自用神蹟和大能從<char style="pn">埃及</char>領出來的。 <verse number="12" style="v"/>難道你要讓<char style="pn">埃及</char>人議論說你領他們出來是出於惡意，是為了在山野之間殺掉他們，從地上滅絕他們嗎？求你息怒，施憐憫，不要降禍給你的子民。 <verse number="13" style="v"/>求你顧念你的僕人<char style="pn">亞伯拉罕</char>、<char style="pn">以撒</char>和<char style="pn">以色列</char>，你曾憑自己向他們起誓說，『我必使你們的後代像天上的星星那麼多。我應許給你們後代的這整片土地，我必賜給他們作永遠的產業。』」 <verse number="14" style="v"/>耶和華聽了<char style="pn">摩西</char>的話，就心生憐憫，不把所說的災禍降在百姓身上。</para>
+  <para style="p">
+    <verse number="15" style="v"/>
+    <char style="pn">摩西</char>轉身下山，手裡拿著兩塊石版，石版的正反兩面都有字。 <verse number="16" style="v"/>石版是上帝做的，字是上帝刻的。 <verse number="17" style="v"/><char style="pn">約書亞</char>聽見山下百姓嘈雜的喊叫聲，便對<char style="pn">摩西</char>說：「營地裡有打仗的聲音。」 <verse number="18" style="v"/><char style="pn">摩西</char>對他說：「這不是打勝仗的聲音，也不是打敗仗的聲音，而是狂歡的聲音。」 <verse number="19" style="v"/><char style="pn">摩西</char>走近營地的時候，看見牛犢，又看見百姓在跳舞，心中大怒，便把手上的兩塊石版摔碎在山腳下， <verse number="20" style="v"/>又把他們鑄造的牛犢熔化掉，磨成粉末撒在水面上，叫<char style="pn">以色列</char>百姓喝。 <verse number="21" style="v"/><char style="pn">摩西</char>對<char style="pn">亞倫</char>說：「這些百姓對你做了什麼？你竟使他們陷入大罪中！」 <verse number="22" style="v"/><char style="pn">亞倫</char>回答說：「求我主不要動怒，你知道這些人專門作惡。 <verse number="23" style="v"/>他們對我說，『為我們造神明來帶領我們吧，因為領我們離開埃及<char style="pn">的那</char>個摩西<char style="pn">不知</char>怎樣了。』 <verse number="24" style="v"/>於是，我吩咐他們摘下金耳環給我，我把這些金耳環丟進火裡，這頭牛犢就出來了。」</para>
+  <para style="p">
+    <verse number="25" style="v"/>
+    <char style="pn">摩西</char>見百姓放肆，<char style="pn">亞倫</char>縱容他們，使他們成為敵人的笑柄， <verse number="26" style="v"/>便站在營門口對會眾說：「凡跟從耶和華的，都站到我這邊來。」所有的<char style="pn">利未</char>人都聚集到<char style="pn">摩西</char>身邊。 <verse number="27" style="v"/><char style="pn">摩西</char>對他們說：「<char style="pn">以色列</char>的上帝耶和華這樣說，『你們各人帶著刀，從這個門到那個門，走遍整個營，不論遇見的是兄弟、夥伴還是鄰居，只管殺他們。』」 <verse number="28" style="v"/><char style="pn">利未</char>人便照<char style="pn">摩西</char>的話去做。那一天，約有三千人被殺。 <verse number="29" style="v"/><char style="pn">摩西</char>對<char style="pn">利未</char>人說：「今天你們已經把自己奉獻給耶和華了，因為你們大義滅親，祂必賜福給你們。」</para>
+  <para style="p">
+    <verse number="30" style="v"/>第二天，<char style="pn">摩西</char>對百姓說：「你們犯了大罪，我現在要到耶和華那裡，也許可以為你們求得赦免。」 <verse number="31" style="v"/><char style="pn">摩西</char>回到耶和華那裡，說：「唉，百姓犯了大罪，用金子為自己造了神像。 <verse number="32" style="v"/>懇求你赦免他們的罪，不然請你從你的冊子上抹掉我的名字吧。」 <verse number="33" style="v"/>耶和華對<char style="pn">摩西</char>說：「誰得罪我，我就從我的冊子上抹掉誰的名字。 <verse number="34" style="v"/>你現在回去帶領這些百姓，往我指示你的地方去，我的天使必在你前面引路。只是到我懲罰的日子，我必因他們的罪懲罰他們。」</para>
+  <para style="p">
+    <verse number="35" style="v"/>耶和華擊殺百姓，是因為他們曾與<char style="pn">亞倫</char>一起造牛犢。</para>
+  <chapter number="33" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說：「我曾向<char style="pn">亞伯拉罕</char>、<char style="pn">以撒</char>和<char style="pn">雅各</char>起誓，應許把<char style="pn">迦南</char>賜給他們的後代。現在你和你從<char style="pn">埃及</char>領出來的百姓要動身去那裡。 <verse number="2" style="v"/>我必差遣天使走在你們前面，趕出當地的<char style="pn">迦南</char>人、<char style="pn">亞摩利</char>人、<char style="pn">赫</char>人、<char style="pn">比利洗</char>人、<char style="pn">希未</char>人和<char style="pn">耶布斯</char>人， <verse number="3" style="v"/>帶你們進入那奶蜜之鄉。但我不會跟你們一起去，免得我在途中就把你們滅絕了，因為你們是頑固不化的百姓。」</para>
+  <para style="p">
+    <verse number="4" style="v"/>百姓聽見這壞消息，都非常哀傷，不再佩戴飾物了。 <verse number="5" style="v"/>耶和華對<char style="pn">摩西</char>說：「你去向<char style="pn">以色列</char>百姓宣佈，『你們這些頑固不化的人，我就是跟你們在一起待一刻，都恐怕會滅絕你們。現在你們要摘下自己身上的飾物，我再決定怎樣處置你們。』」 <verse number="6" style="v"/>因此，<char style="pn">以色列</char>百姓從<char style="pn">何烈</char>山開始就不再佩戴飾物了。</para>
+  <para style="s1">耶和華的會幕</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <char style="pn">摩西</char>通常把帳幕支搭在營外離百姓較遠的地方，<char style="pn">摩西</char>稱帳幕為會幕。凡求問耶和華的，都會去那裡。 <verse number="8" style="v"/>當<char style="pn">摩西</char>離營去會幕的時候，百姓就都一同起來，各人站在自己的帳篷門口目送<char style="pn">摩西</char>走進會幕。 <verse number="9" style="v"/><char style="pn">摩西</char>進入會幕後，便有雲柱降下來，停在會幕門口，耶和華就跟<char style="pn">摩西</char>說話。 <verse number="10" style="v"/>每當百姓看見這景象，他們都站在自己的帳篷門口敬拜耶和華。 <verse number="11" style="v"/>在會幕內，耶和華跟<char style="pn">摩西</char>面對面說話，好像兩個朋友談話一樣。然後，<char style="pn">摩西</char>返回營中，但他的年輕助手、<char style="pn">嫩</char>的兒子<char style="pn">約書亞</char>仍然留在會幕。</para>
+  <para style="s1">耶和華的榮耀</para>
+  <para style="p">
+    <verse number="12" style="v"/>
+    <char style="pn">摩西</char>對耶和華說：「你吩咐我帶領這些百姓，卻沒有告訴我你將要派誰與我同去，只說，『我憑名字認識你，你在我面前蒙了恩。』 <verse number="13" style="v"/>我若已經在你面前蒙恩，就求你把你的道路指示我，好讓我認識你，繼續在你面前蒙恩。求你顧念這些百姓是你的子民。」 <verse number="14" style="v"/>耶和華回答他說：「我必親自與你同去，使你平安穩妥。」 <verse number="15" style="v"/><char style="pn">摩西</char>說：「你若不與我們同去，就不要讓我們離開這裡。 <verse number="16" style="v"/>你若不與我們同去，誰會知道我和你的子民在你面前蒙了恩呢？豈不是因為你的同在才使我們不同於地上其他民族嗎？」</para>
+  <para style="p">
+    <verse number="17" style="v"/>耶和華回答說：「我答應你的請求，因為你在我面前蒙了恩，我憑名字認識你。」 <verse number="18" style="v"/><char style="pn">摩西</char>說：「求你向我彰顯你的榮耀。」 <verse number="19" style="v"/>耶和華說：「我必叫你看見我一切的美善，我要在你面前宣告我的名——耶和華，我要恩待誰就恩待誰，我要憐憫誰就憐憫誰。 <verse number="20" style="v"/>但你不能看我的臉，因為凡看見的，都不能存活。 <verse number="21" style="v"/>你要站在我旁邊的磐石上， <verse number="22" style="v"/>我的榮耀經過你面前的時候，我會先把你安置在石縫裡，用我的手遮掩你，直到我從你面前走過。 <verse number="23" style="v"/>然後我會收回我的手，你就可以看見我的背，但看不到我的臉。」</para>
+  <chapter number="34" style="c"/>
+  <para style="s1">新的約版</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說：「你要鑿出兩塊石版，跟你之前摔碎的兩塊一樣，我要把前兩塊石版上的字刻在上面。 <verse number="2" style="v"/>你要預備好，明天清早你要上<char style="pn">西奈</char>山頂來見我。 <verse number="3" style="v"/>誰也不可與你同來，整座山上都不可有人，就是牛羊也不得在山前吃草。」 <verse number="4" style="v"/>於是，<char style="pn">摩西</char>鑿出兩塊石版，跟先前的兩塊一樣。他清早起來，照著耶和華的吩咐把石版帶到<char style="pn">西奈</char>山上。 <verse number="5" style="v"/>耶和華在雲中降臨和<char style="pn">摩西</char>一同站在那裡，宣告祂的名——耶和華。 <verse number="6" style="v"/>耶和華在<char style="pn">摩西</char>面前經過，並且宣告說：「我是耶和華，我是耶和華，是有憐憫和恩典的上帝，不輕易發怒，充滿慈愛，無比信實， <verse number="7" style="v"/>向千萬人彰顯慈愛，赦免罪惡和過犯，但決不免除罪責，必向子孫追討父輩的罪債，直到三四代。」 <verse number="8" style="v"/><char style="pn">摩西</char>急忙俯伏在地上敬拜， <verse number="9" style="v"/>說：「主啊，如果我在你面前蒙了恩，求你與我們同行。雖然百姓頑固不化，求你赦免我們的過犯和罪惡，接納我們做你的子民。」</para>
+  <para style="p">
+    <verse number="10" style="v"/>耶和華說：「我要與你立約，我要在你的同胞面前行奇事，是天下萬國從未有過的奇事，你周圍的外族人必看見我為你做的偉大而可畏的事。 <verse number="11" style="v"/>你要遵行我今天的吩咐。我必從你面前驅逐<char style="pn">亞摩利</char>人、<char style="pn">迦南</char>人、<char style="pn">赫</char>人、<char style="pn">比利洗</char>人、<char style="pn">希未</char>人和<char style="pn">耶布斯</char>人。 <verse number="12" style="v"/>你要謹慎，到了目的地後，不可與當地的居民立約，免得因此而陷入網羅。 <verse number="13" style="v"/>相反，要拆掉他們的祭壇，打碎他們的神柱，砍掉他們的亞舍拉神像。 <verse number="14" style="v"/>不可拜別的神明，因為耶和華是痛恨不貞的上帝，祂名為『痛恨不貞』。</para>
+  <para style="p">
+    <verse number="15" style="v"/>「不可與當地的居民立約，免得他們與自己的神明苟合時邀請你，你就吃他們的祭物， <verse number="16" style="v"/>給兒子娶他們的女兒為妻，以致她們與自己的神明苟合時誘使你的兒子犯同樣的罪。</para>
+  <para style="p">
+    <verse number="17" style="v"/>「不可為自己鑄造神像。</para>
+  <para style="p">
+    <verse number="18" style="v"/>「要守除酵節，照我的吩咐在亞筆月所定的時間吃七天的無酵餅，因為你是在亞筆月離開<char style="pn">埃及</char>的。</para>
+  <para style="p">
+    <verse number="19" style="v"/>「凡是頭胎生的兒子都屬於我，包括牲畜中一切頭胎生的公牛和公羊。 <verse number="20" style="v"/>頭胎生的驢要用羊贖回，如果不用羊贖回，就要打斷牠的脖子。凡頭胎生的男嬰，都要贖回他的性命。誰也不可空手來朝見我。</para>
+  <para style="p">
+    <verse number="21" style="v"/>「一週工作六天，第七天要休息，就是耕種和收割時也要休息。</para>
+  <para style="p">
+    <verse number="22" style="v"/>「在收割初熟麥子的時候，要守七七收割節，年底要守收藏節。 <verse number="23" style="v"/>所有的男子都要一年三次來朝見主耶和華——<char style="pn">以色列</char>的上帝。 <verse number="24" style="v"/>我要從你面前趕走外族人，擴張你的領土。你一年三次來朝見你的上帝耶和華時，必沒有人貪戀你的土地。</para>
+  <para style="p">
+    <verse number="25" style="v"/>「不可把祭牲的血和有酵的餅一起獻給我。逾越節的祭物也不可留到第二天早晨。</para>
+  <para style="p">
+    <verse number="26" style="v"/>「要把田中最好的初熟之物送到你們的上帝耶和華的殿中。</para>
+  <para style="p">「不可用母山羊的奶煮牠的小羊羔。」</para>
+  <para style="p">
+    <verse number="27" style="v"/>耶和華又對<char style="pn">摩西</char>說：「你要把我說的這些話記錄下來，因為我要按這些話跟你和<char style="pn">以色列</char>人立約。」 <verse number="28" style="v"/><char style="pn">摩西</char>在耶和華那裡待了四十晝夜，沒吃也沒喝。耶和華把約的內容，就是十條誡命，寫在石版上。</para>
+  <para style="p">
+    <verse number="29" style="v"/>
+    <char style="pn">摩西</char>手裡拿著兩塊約版下<char style="pn">西奈</char>山，他不知道自己因為曾與耶和華說話而臉上發光。 <verse number="30" style="v"/><char style="pn">亞倫</char>和所有的<char style="pn">以色列</char>百姓看見<char style="pn">摩西</char>臉上發光，都不敢走近他。 <verse number="31" style="v"/><char style="pn">摩西</char>召他們過來，<char style="pn">亞倫</char>和會眾的首領便上前來。<char style="pn">摩西</char>與他們說話。 <verse number="32" style="v"/>之後，所有的<char style="pn">以色列</char>人都來到他面前，他就把耶和華在<char style="pn">西奈</char>山上的吩咐都告訴他們。 <verse number="33" style="v"/>說完之後，他就用帕子遮住自己的臉。 <verse number="34" style="v"/>每當進到會幕跟耶和華說話時，他就揭開帕子，出來後便把耶和華的吩咐告訴<char style="pn">以色列</char>百姓。 <verse number="35" style="v"/>百姓會看到他臉上發光，於是他再用帕子遮住臉，直到下次與耶和華說話的時候才揭開。</para>
+  <chapter number="35" style="c"/>
+  <para style="s1">安息日的條例</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">摩西</char>招聚<char style="pn">以色列</char>全體會眾，對他們宣佈說：「以下是耶和華吩咐你們遵守的事。 <verse number="2" style="v"/>一週可以工作六天，但第七天是聖日，是你們為耶和華守安息的日子。凡在這一天工作的，必被處死。 <verse number="3" style="v"/>在安息日，家家戶戶都不可生火。」</para>
+  <para style="s1">為造聖幕奉獻</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <char style="pn">摩西</char>對<char style="pn">以色列</char>全體會眾說：「以下是耶和華給你們的吩咐。</para>
+  <para style="p">
+    <verse number="5" style="v"/>「凡慷慨樂捐的，都可以把下列物品獻給耶和華為禮物，即金，銀，銅， <verse number="6" style="v"/>細麻線，山羊毛，藍色、紫色和朱紅色的線， <verse number="7" style="v"/>染成紅色的公羊皮，海狗皮，皂莢木， <verse number="8" style="v"/>燈油，製作膏油和香的香料， <verse number="9" style="v"/>鑲嵌在以弗得和胸牌上的紅瑪瑙及其他寶石。</para>
+  <para style="p">
+    <verse number="10" style="v"/>「你們當中的能工巧匠都要來建造耶和華所吩咐的物件， <verse number="11" style="v"/>即聖幕和聖幕的罩棚、頂蓋、鉤子、木板、橫閂、柱子和底座； <verse number="12" style="v"/>約櫃和抬約櫃的橫杠、施恩座和遮掩約櫃的幔子； <verse number="13" style="v"/>桌子和抬桌子的橫杠、桌上的一切器具和供餅； <verse number="14" style="v"/>燈臺和燈臺用的器具、燈盞和燈油； <verse number="15" style="v"/>香壇和抬香壇的橫杠、膏油和芬芳的香；聖幕門口的簾子； <verse number="16" style="v"/>燔祭壇、祭壇的銅網、抬祭壇的橫杠、祭壇用的一切器具、洗濯盆和盆座； <verse number="17" style="v"/>院子的帷幔、懸掛幔子的柱子和底座、遮擋院子入口的門簾； <verse number="18" style="v"/>聖幕和院子用的橛子和繩索； <verse number="19" style="v"/>在聖所供職時穿的精製禮服、<char style="pn">亞倫</char>祭司的聖衣及其眾子供祭司之職時穿的衣服。」</para>
+  <para style="p">
+    <verse number="20" style="v"/>
+    <char style="pn">摩西</char>說完後，<char style="pn">以色列</char>全體會眾便從他面前退去。 <verse number="21" style="v"/>凡心裡有感動又甘願奉獻的，都把禮物拿來獻給耶和華，作會幕、會幕中的一切器具及聖衣之用。 <verse number="22" style="v"/>凡甘心奉獻的，不論男女，都把別針、耳環、戒指、項鏈等各樣金飾拿來獻給耶和華。 <verse number="23" style="v"/>凡有細麻線，山羊毛，藍色、紫色和朱紅色的線，染成紅色的公羊皮，海狗皮的，都把它們拿來了。 <verse number="24" style="v"/>凡奉獻銀器和銅器的，都拿來獻給耶和華。凡有皂莢木的，只要用得上，都拿來奉獻。 <verse number="25" style="v"/>凡懂得紡線的婦女，都把親手紡成的細麻線和藍色、紫色、朱紅色的線拿來奉獻。 <verse number="26" style="v"/>凡心裡受感動又懂得紡織的婦女都來紡山羊毛。 <verse number="27" style="v"/>眾首領奉獻了紅瑪瑙和其他寶石，用來鑲嵌在以弗得和胸牌上。 <verse number="28" style="v"/>他們又獻出香料和油，用來做香、點燈、做膏油。 <verse number="29" style="v"/><char style="pn">以色列</char>人，不論男女、凡是甘心樂意奉獻的，都把禮物帶來獻給耶和華，好完成耶和華藉<char style="pn">摩西</char>吩咐他們的一切工作。</para>
+  <para style="p">
+    <verse number="30" style="v"/>
+    <char style="pn">摩西</char>對<char style="pn">以色列</char>人說：「看啊，耶和華已經親自選出<char style="pn">猶大</char>支派中<char style="pn">戶珥</char>的孫子、<char style="pn">烏利</char>的兒子<char style="pn">比撒列</char>， <verse number="31" style="v"/>上帝的靈已經充滿他，使他有聰明智慧，精於各種技能和手藝， <verse number="32" style="v"/>懂得用金、銀和銅製造各式各樣精巧的器具， <verse number="33" style="v"/>又能雕刻和鑲嵌寶石，精通木工和各種手藝。 <verse number="34" style="v"/>耶和華又使他與<char style="pn">但</char>支派<char style="pn">亞希撒抹</char>的兒子<char style="pn">亞何利亞伯</char>有能力教授別人。 <verse number="35" style="v"/>耶和華使他們成為能工巧匠，精通各樣技藝，包括雕刻、圖案設計、紡織以及用細麻線和藍色、紫色、朱紅色的線刺繡。」</para>
+  <chapter number="36" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">摩西</char>說：「<char style="pn">比撒列</char>、<char style="pn">亞何利亞伯</char>以及所有蒙耶和華賜智慧聰明、有技能、懂得如何建造聖所的人，都要按照耶和華的吩咐去做。」</para>
+  <para style="p">
+    <verse number="2" style="v"/>於是，<char style="pn">摩西</char>召來<char style="pn">比撒列</char>、<char style="pn">亞何利亞伯</char>和所有蒙耶和華賜智慧、有技能、願意參與建造的人。 <verse number="3" style="v"/>他們從<char style="pn">摩西</char>那裡領取了<char style="pn">以色列</char>百姓奉獻出來建造聖所的一切禮物。每天早上，百姓仍然甘心樂意地來奉獻禮物， <verse number="4" style="v"/>以致所有建造聖所的能工巧匠都放下自己的工作， <verse number="5" style="v"/>前來對<char style="pn">摩西</char>說：「百姓的奉獻太多了，我們建造耶和華吩咐的聖所用不了。」</para>
+  <para style="p">
+    <verse number="6" style="v"/>於是，<char style="pn">摩西</char>傳令全營：「大家不用再為聖所奉獻禮物了。」百姓這才停止奉獻。 <verse number="7" style="v"/>因為所獻的材料已經足夠建造聖所，而且綽綽有餘。</para>
+  <para style="p">
+    <verse number="8" style="v"/>工人中的能工巧匠用十幅幔子做成了聖幕，幔子用細麻線和藍色、紫色、朱紅色的線織成，上面精工繡製了基路伯天使。 <verse number="9" style="v"/>每幅幔子的尺寸都一樣，長十二米、寬兩米。 <verse number="10" style="v"/>又把每五幅幔子連在一起，共連成兩幅大幔子。 <verse number="11" style="v"/>然後在每幅大幔子邊緣釘上了藍色的扣環， <verse number="12" style="v"/>每幅各釘上五十個扣環，都是兩兩相對。 <verse number="13" style="v"/>又做了五十個金鉤，把兩幅大幔子連在一起，成為聖幕。</para>
+  <para style="p">
+    <verse number="14" style="v"/>
+    <char style="pn">比撒列</char>用山羊毛織成十一幅幔子，做聖幕的罩棚， <verse number="15" style="v"/>每幅幔子的尺寸都一樣，長十三米、寬兩米。 <verse number="16" style="v"/>然後把五幅連成一大幅，餘下的六幅又連成一大幅。 <verse number="17" style="v"/>又在這兩幅大幔子邊緣各釘上五十個對稱的扣環， <verse number="18" style="v"/>再用五十個銅鉤，把兩幅大幔子連在一起，成為一個罩棚， <verse number="19" style="v"/>並在罩棚上面蓋一層染成紅色的公羊皮，再蓋一層海狗皮做頂蓋。</para>
+  <para style="p">
+    <verse number="20" style="v"/>他用皂莢木做支撐聖幕的木板， <verse number="21" style="v"/>每塊木板長四米，寬六十六釐米， <verse number="22" style="v"/>上面都有兩個接榫，用來把木板連接在一起。聖幕的所有木板都這樣做。 <verse number="23" style="v"/>聖幕的南面共有二十塊木板， <verse number="24" style="v"/>在這些木板下面又造了四十個帶凹槽的銀底座，每塊木板下面有兩個，套在木板的兩個接榫上。 <verse number="25" style="v"/>聖幕北面也有二十塊木板， <verse number="26" style="v"/>木板下面同樣有四十個帶凹槽的銀底座，每塊木板下面有兩個銀底座。 <verse number="27" style="v"/>聖幕的後面，就是西面，有六塊木板， <verse number="28" style="v"/>聖幕的兩個拐角各有兩塊木板， <verse number="29" style="v"/>木板的下端連於底座，頂端用一個環固定。兩個拐角都要這樣做。 <verse number="30" style="v"/>這樣後面共有八塊木板，每塊木板下面各有兩個銀底座，一共是十六個銀底座。</para>
+  <para style="p">
+    <verse number="31-32" style="v"/>他用皂莢木做橫閂，聖幕左右兩邊和後面的牆板上各有五根橫閂， <verse number="33" style="v"/>攔腰固定牆板的那根橫閂從這端貫穿到那端。 <verse number="34" style="v"/>所有的木板和橫閂都包上金，並在木板上造金環，用來穿橫閂。</para>
+  <para style="p">
+    <verse number="35" style="v"/>他用細麻線和藍色、紫色、朱紅色的線織成一幅幔子，精工繡上基路伯天使， <verse number="36" style="v"/>把這幅幔子掛在四根用皂莢木造的柱子上，柱子外面包上金，加上金鉤，四根柱子下面有四個銀底座。 <verse number="37" style="v"/>他又用細麻線和藍色、紫色、朱紅色的線繡製聖幕的門簾， <verse number="38" style="v"/>用皂莢木做五根掛門簾的柱子，上面有金鉤，柱頂和橫杆包上金。柱子的五個底座是銅造的。</para>
+  <chapter number="37" style="c"/>
+  <para style="s1">約櫃</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">比撒列</char>用皂莢木造了一個櫃，長一點一米，寬六十六釐米，高六十六釐米。 <verse number="2" style="v"/>這櫃子裡外都包上純金，還鑲了一圈金邊。 <verse number="3" style="v"/>他造了四個金環，安在櫃的四個腳上，每邊兩個環， <verse number="4" style="v"/>又用皂莢木造了兩根橫杠，外面包上金， <verse number="5" style="v"/>然後把橫杠穿過櫃旁的金環，便於抬櫃。 <verse number="6" style="v"/>他用純金造施恩座，長一點一米，寬六十六釐米。 <verse number="7" style="v"/>又在施恩座的兩端用金子打造兩個基路伯天使， <verse number="8" style="v"/>這兩個基路伯天使跟施恩座連在一起， <verse number="9" style="v"/>在施恩座的兩端，面對面朝向施恩座，向上展開翅膀遮蓋施恩座。</para>
+  <para style="s1">桌子</para>
+  <para style="p">
+    <verse number="10" style="v"/>他用皂莢木造了一張桌子，長八十八釐米，寬四十四釐米，高六十六釐米。 <verse number="11" style="v"/>整張桌子都包上純金，四周鑲上金邊。 <verse number="12" style="v"/>在桌子四周造一個八釐米寬的外框，上面也鑲上金邊。 <verse number="13" style="v"/>他又造四個金環，安在桌子四角的桌腿上， <verse number="14" style="v"/>金環靠近外框，以便穿橫杠抬桌子。 <verse number="15" style="v"/>他用皂莢木造兩根橫杠，外面包金，用來抬桌子。 <verse number="16" style="v"/>又用純金造桌子上的器具，就是盤、碟及獻酒用的杯和瓶。</para>
+  <para style="p">
+    <verse number="17" style="v"/>他用純金造了一座燈臺，燈臺的燈座、燈柱、油杯、花瓣和花苞都是用一塊純金打成的。 <verse number="18" style="v"/>燈臺兩邊各伸出三個分枝，共有六個分枝。 <verse number="19" style="v"/>每個分枝都伸出三個杏花形狀、有花瓣和花苞的油杯，六個分枝都是這樣。 <verse number="20" style="v"/>燈臺上有四個杏花形狀、有花瓣和花苞的杯。 <verse number="21" style="v"/>燈臺上每一對分枝的相連處有花苞，三對分枝都是這樣。 <verse number="22" style="v"/>整座燈臺，包括一切裝飾，都是用一塊純金打成的。 <verse number="23" style="v"/>他又用純金為這座燈臺造了七個燈盞，以及燈剪和燈花盤。 <verse number="24" style="v"/>造整座燈臺和燈臺的器具共用了三十四公斤純金。</para>
+  <para style="s1">造香壇</para>
+  <para style="p">
+    <verse number="25" style="v"/>他又用皂莢木造了一座方形的香壇，長寬各四十五釐米，高九十釐米，壇的四角與壇連成一體， <verse number="26" style="v"/>壇頂、壇的四面和壇上的角狀物包上純金，四周鑲上金邊。 <verse number="27" style="v"/>他造了兩個金環，安在壇兩側的金邊下面， <verse number="28" style="v"/>又用皂莢木造橫杠，包上金，穿在兩個環裡，用來抬香壇。</para>
+  <para style="p">
+    <verse number="29" style="v"/>他又用調製香料的方法製作聖膏油和純淨芬芳的香。</para>
+  <chapter number="38" style="c"/>
+  <para style="s1">祭壇、院子和奉獻的物品</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">比撒列</char>用皂莢木造燒祭物的方形祭壇，長寬各二點三米，高一點三米， <verse number="2" style="v"/>在壇的四角造四個角狀物，與壇連成一體，祭壇外面包上銅。 <verse number="3" style="v"/>他用銅造一切的器具，就是盆、鏟、碗、肉叉、火鼎。 <verse number="4" style="v"/>又造了一個銅網，銅網在祭壇圍邊的下方，向下伸展到祭壇的腰部， <verse number="5" style="v"/>在銅網的四角鑄四個銅環，以便抬壇。 <verse number="6" style="v"/>他用皂莢木做橫杠，包上銅， <verse number="7" style="v"/>把橫杠穿在壇邊的銅環裡，以便抬壇。壇是中空的，用木板製作。</para>
+  <para style="p">
+    <verse number="8" style="v"/>他用在會幕門口服侍的婦女們的銅鏡造銅盆和盆座。</para>
+  <para style="p">
+    <verse number="9" style="v"/>他用帷幔圍成院子，南面的帷幔用細麻線織成，長四十六米。 <verse number="10" style="v"/>帷幔有二十根柱子，二十個帶凹槽的銅底座，柱子上的鉤子和橫杆都是銀的。 <verse number="11" style="v"/>北面的帷幔也是長四十六米，柱子、銅底座、鉤子、橫杆的樣式與南面的一樣。 <verse number="12" style="v"/>西面的帷幔寬二十三米，有十根柱子和十個帶凹槽的底座，鉤子和橫杆都是銀的。 <verse number="13" style="v"/>東面的帷幔也是寬二十三米。 <verse number="14-15" style="v"/>入口兩邊的兩幅帷幔都是寬六點九米，各有三根柱子和三個帶凹槽的底座。 <verse number="16" style="v"/>院子四面的帷幔都用細麻線織成。 <verse number="17" style="v"/>柱子帶凹槽的底座是銅的，柱子上面的鉤和橫杆是銀的，柱頂包銀，院子所有的柱子都用銀杆相連。 <verse number="18" style="v"/>院子入口的門簾用藍色、紫色、朱紅色毛線和細麻線繡製，長九米、高二點三米，與院子帷幔的高度一樣。 <verse number="19" style="v"/>門簾有四根柱子和四個帶凹槽的銅底座，柱子上的鉤子和橫杆都是銀的，柱頂包銀。 <verse number="20" style="v"/>聖幕和院子四圍所有的橛子都是銅的。 <verse number="21" style="v"/>以上是安放約櫃的聖幕中所用的物品，是照<char style="pn">摩西</char>的吩咐，由<char style="pn">亞倫</char>祭司的兒子<char style="pn">以他瑪</char>指揮<char style="pn">利未</char>人清點的。</para>
+  <para style="p">
+    <verse number="22" style="v"/>
+    <char style="pn">猶大</char>支派<char style="pn">戶珥</char>的孫子、<char style="pn">烏利</char>的兒子<char style="pn">比撒列</char>做好了耶和華吩咐<char style="pn">摩西</char>預備的一切物品。 <verse number="23" style="v"/>他的助手是<char style="pn">但</char>支派<char style="pn">亞希撒抹</char>的兒子<char style="pn">亞何利亞伯</char>，是雕刻家和設計師，並懂得用細麻線和藍色、紫色、朱紅色的線刺繡。</para>
+  <para style="p">
+    <verse number="24" style="v"/>按聖所的秤計算，建造聖所共用了奉獻的金子一噸。 <verse number="25" style="v"/>按聖所的秤計算，從登記的人口所收到的銀子是三點四二噸。 <verse number="26" style="v"/>這是所有登記的、年齡在二十歲以上的人所繳納的銀子，共有六十萬三千五百五十人，每人交六克銀子，以聖所的秤為準。 <verse number="27" style="v"/>鑄造聖所帶凹槽的底座和帷幔柱子帶凹槽的底座共用了三點四噸銀子，共鑄造了一百個底座，每個底座用了三十四公斤銀子。 <verse number="28" style="v"/>剩下的二十公斤銀子用來製造柱子上的鉤子和橫杆以及包柱頂。 <verse number="29" style="v"/>百姓奉獻的銅共有二點四噸， <verse number="30" style="v"/>用來製造會幕入口帶凹槽的底座、祭壇、壇上的銅網及一切器具、 <verse number="31" style="v"/>院子周圍和院子入口帶凹槽的底座以及聖幕、院子周圍所有的橛子。</para>
+  <chapter number="39" style="c"/>
+  <para style="s1">祭司的衣服</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">比撒列</char>按照耶和華對<char style="pn">摩西</char>的吩咐，用藍色、紫色、朱紅色的線精工製作在聖所供職時穿的禮服，又為<char style="pn">亞倫</char>製作聖衣。 <verse number="2" style="v"/>用金線和細麻線及藍色、紫色、朱紅色的線精工製作以弗得， <verse number="3" style="v"/>把金子打成薄片，剪成細線，與細麻線和藍色、紫色、朱紅色的線巧妙地織在一起。 <verse number="4" style="v"/>他做了兩條肩帶，固定在以弗得兩邊，用來連接以弗得。 <verse number="5" style="v"/>又按耶和華對<char style="pn">摩西</char>的吩咐，照以弗得的做法用金線和細麻線及藍色、紫色、朱紅色的線精工製作腰帶，縫在以弗得上。 <verse number="6" style="v"/>他選了兩塊紅瑪瑙，用刻圖章的方法刻上<char style="pn">以色列</char>十二個兒子的名字，鑲在兩個金框裡， <verse number="7" style="v"/>再縫在以弗得的兩條肩帶上，作<char style="pn">以色列</char>人的紀念石。這些都是照耶和華對<char style="pn">摩西</char>的吩咐做的。</para>
+  <para style="p">
+    <verse number="8" style="v"/>他精工製作胸牌，與以弗得一樣用金線和細麻線及藍色、紫色、朱紅色的線織成。 <verse number="9" style="v"/>胸牌呈正方形，疊成兩層，長寬各二十二釐米。 <verse number="10" style="v"/>上面鑲上四行寶石：第一行是紅寶石、黃玉和翠玉； <verse number="11" style="v"/>第二行是綠寶石、藍寶石和金剛石； <verse number="12" style="v"/>第三行是紫瑪瑙、白瑪瑙和紫晶； <verse number="13" style="v"/>第四行是水蒼玉、紅瑪瑙和碧玉。以上四行寶石都鑲在胸牌的金框內。 <verse number="14" style="v"/>他用刻圖章的方法，在十二顆寶石上刻上<char style="pn">以色列</char>兒子的名字，代表<char style="pn">以色列</char>的十二支派。</para>
+  <para style="p">
+    <verse number="15" style="v"/>他用純金擰成兩條像繩子一樣的鏈子，連在胸牌上， <verse number="16" style="v"/>又造兩個金框和兩個金環，把金環安在胸牌兩端。 <verse number="17" style="v"/>把兩條金鏈分別穿在兩個金環裡， <verse number="18" style="v"/>又把兩條金鏈的另一端分別連在以弗得前面肩帶的兩個金框上。 <verse number="19" style="v"/>在靠近以弗得內側、胸牌下面的兩端造了兩個金環。 <verse number="20" style="v"/>在以弗得肩帶下端、接近腰帶的地方又造了兩個金環。 <verse number="21" style="v"/>用一條藍色的帶子繫住以弗得和胸牌上面的金環，使胸牌貼在精工織成的以弗得腰帶上，不會從以弗得上鬆脫。這些都是照耶和華對<char style="pn">摩西</char>的吩咐做的。</para>
+  <para style="p">
+    <verse number="22" style="v"/>以弗得的外袍用純藍色的線織成， <verse number="23" style="v"/>上面有領口，領口上織領邊，像鎧甲上的領口一樣，免得領口破裂。 <verse number="24" style="v"/>外袍的底邊用細麻線和藍色、紫色、朱紅色的線做成石榴狀的飾物， <verse number="25" style="v"/>又造純金的鈴鐺掛在外袍底邊的石榴間， <verse number="26" style="v"/>一個石榴一個金鈴鐺，相間排列，圍在外袍的底邊。這件外袍是祭司供職時穿的，正如耶和華對<char style="pn">摩西</char>的吩咐。</para>
+  <para style="p">
+    <verse number="27" style="v"/>他用細麻布為<char style="pn">亞倫</char>父子們縫製內袍、 <verse number="28" style="v"/>禮冠、頭巾和褲子， <verse number="29" style="v"/>還用細麻線和藍色、紫色、朱紅色的線繡製腰帶。這是照耶和華對<char style="pn">摩西</char>的吩咐做的。 <verse number="30" style="v"/>又用純金造了牌子，就是聖冠，上面用刻圖章的方法刻上「奉獻給耶和華」的字樣， <verse number="31" style="v"/>然後用一條藍色的帶子把這個牌子繫在禮冠上。這些都是照耶和華對<char style="pn">摩西</char>的吩咐做的。</para>
+  <para style="s1">聖幕完工</para>
+  <para style="p">
+    <verse number="32" style="v"/>聖幕，就是會幕的工作就這樣全部完成了，都是<char style="pn">以色列</char>人照耶和華對<char style="pn">摩西</char>的吩咐做的。 <verse number="33" style="v"/>他們把聖幕和各樣器具都送到<char style="pn">摩西</char>那裡，即鉤子、木板、橫閂、柱子、帶凹槽的底座； <verse number="34" style="v"/>海狗皮頂蓋、遮掩約櫃的幔子、染成紅色的公羊皮蓋； <verse number="35" style="v"/>約櫃、抬約櫃的橫杠、施恩座； <verse number="36" style="v"/>桌子、桌上的一切器具和供餅； <verse number="37" style="v"/>純金的燈臺、燈盞、燈臺的一切器具、燈油； <verse number="38" style="v"/>金壇、膏油、芬芳的香；會幕的門簾； <verse number="39" style="v"/>銅祭壇、祭壇的銅網、抬祭壇的橫杠、祭壇用的一切器具、洗濯盆和盆座； <verse number="40" style="v"/>院子的帷幔、柱子、帶凹槽的底座、院子入口的門簾、繩子、橛子和會幕，即聖幕所需的一切器具； <verse number="41" style="v"/>在聖所供職時穿的精製禮服、<char style="pn">亞倫</char>祭司的聖衣及其眾子供祭司之職時穿的衣服。 <verse number="42" style="v"/>這一切都是<char style="pn">以色列</char>人照耶和華對<char style="pn">摩西</char>的吩咐做的。 <verse number="43" style="v"/><char style="pn">摩西</char>察看這一切工作，見他們都是按照耶和華的吩咐做的，就給他們祝福。</para>
+  <chapter number="40" style="c"/>
+  <para style="s1">支起會幕</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶和華對<char style="pn">摩西</char>說： <verse number="2" style="v"/>「你要在一月一日支起聖幕，即會幕， <verse number="3" style="v"/>把約櫃安置在裡面，用幔子遮掩。 <verse number="4" style="v"/>把桌子搬進去，擺好桌上的器具，再把燈臺搬進去，點上燈， <verse number="5" style="v"/>把燒香的金壇放在約櫃前面，掛上聖幕入口的簾子。 <verse number="6" style="v"/>要把燔祭壇放在聖幕前面， <verse number="7" style="v"/>洗濯盆放在會幕和祭壇中間，盆裡要有水。 <verse number="8" style="v"/>用帷幔在聖幕四周圍成院子，在院子的入口掛上簾子。 <verse number="9" style="v"/>你要用膏油抹聖幕和裡面所有的器具，使它們分別出來，成為聖潔之物。 <verse number="10" style="v"/>要抹燔祭壇和壇上所有器具，使燔祭壇分別出來，成為至聖之物。 <verse number="11" style="v"/>要抹洗濯盆和盆座，使它們分別出來，成為聖潔之物。 <verse number="12" style="v"/>要把<char style="pn">亞倫</char>父子們叫到會幕入口，用水為他們沐浴， <verse number="13" style="v"/>給<char style="pn">亞倫</char>穿上聖衣後膏立他，使他分別出來，做聖潔的祭司事奉我。 <verse number="14" style="v"/>也要把他的兒子們叫來，給他們穿上內袍， <verse number="15" style="v"/>用同樣的儀式膏立他們，使他們做祭司事奉我。他們的受膏將使他們永遠做祭司，世代相傳。」</para>
+  <para style="p">
+    <verse number="16" style="v"/>
+    <char style="pn">摩西</char>照耶和華的吩咐把事情都辦好了。 <verse number="17" style="v"/>第二年一月一日，聖幕支起來了。 <verse number="18" style="v"/><char style="pn">摩西</char>支起聖幕，裝上帶凹槽的底座，豎起木板，插上橫閂，立起柱子， <verse number="19" style="v"/>在聖幕上面搭起罩棚，鋪上頂蓋，都遵照耶和華的吩咐。 <verse number="20" style="v"/>他把約版放在約櫃裡，橫杠穿在約櫃的兩旁，施恩座放在約櫃上， <verse number="21" style="v"/>把約櫃抬進聖幕，掛起幔子遮掩約櫃，都遵照耶和華的吩咐。 <verse number="22" style="v"/>他把桌子放在會幕內、遮掩約櫃的幔子外面、聖幕的北側， <verse number="23" style="v"/>將獻給耶和華的供餅放在桌上，都遵照耶和華的吩咐。 <verse number="24" style="v"/>他把燈臺放在會幕內的桌子對面，在聖幕的南側， <verse number="25" style="v"/>然後在耶和華面前點燈，都遵照耶和華的吩咐。 <verse number="26" style="v"/>他把金香壇放在會幕裡、遮掩約櫃的幔子前面， <verse number="27" style="v"/>在壇上點燃芬芳的香，都遵照耶和華的吩咐。 <verse number="28" style="v"/>他掛上聖幕入口的簾子， <verse number="29" style="v"/>在會幕，即聖幕入口的前面設立燔祭壇，在壇上獻燔祭和素祭，都遵照耶和華的吩咐。 <verse number="30" style="v"/>他把洗濯盆放在會幕和祭壇之間，盆裡盛水，供洗濯用。 <verse number="31" style="v"/><char style="pn">摩西</char>、<char style="pn">亞倫</char>及其眾子都在那裡清洗手腳， <verse number="32" style="v"/>他們進會幕或走近祭壇的時候，都要先清洗，都遵照耶和華的吩咐。 <verse number="33" style="v"/><char style="pn">摩西</char>又在聖幕和祭壇的四周用帷幔圍成院子，然後在院子入口掛上簾子。這樣，<char style="pn">摩西</char>完成了工作。</para>
+  <para style="s1">耶和華的榮光</para>
+  <para style="p">
+    <verse number="34" style="v"/>那時，有雲彩遮蓋會幕，耶和華的榮光充滿了聖幕。 <verse number="35" style="v"/><char style="pn">摩西</char>不能進會幕，因為雲彩停在上面，耶和華的榮光充滿了聖幕。 <verse number="36" style="v"/>一路上，雲彩從聖幕升起，他們就出發。 <verse number="37" style="v"/>雲彩不升起，他們就不出發，一直等到雲彩升起。 <verse number="38" style="v"/>一路上，白天有耶和華的雲彩停留在聖幕上面，夜間雲中有火光為<char style="pn">以色列</char>百姓照明。</para>
+</usx>

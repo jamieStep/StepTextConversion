@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="MRK" style="id">- New Amharic Standard Version, 2020 Update</book>
+  <para style="rem">Copyright © 2001 by Biblica, Inc.</para>
+  <para style="h">ማርቆስ</para>
+  <para style="toc1">የማርቆስ ወንጌል</para>
+  <para style="toc2">ማርቆስ</para>
+  <para style="toc3">ማር</para>
+  <para style="mt1">የማርቆስ ወንጌል</para>
+  <chapter number="1" style="c" sid="MRK 1"/>
+  <para style="s1">የመጥምቁ ዮሐንስ ስብከት</para>
+  <para style="sr">
+    <ref loc="MRK 1:2-8">1፥2-8</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 3:1-11">ማቴ 3፥1-11</ref>፤ <ref loc="LUK 3:2-16">ሉቃ 3፥2-16</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 1:1"/>የእግዚአብሔር ልጅ<note caller="+" style="f"><char style="fr" closed="false">1፥1 </char><char style="ft" closed="false">አንዳንድ ቅጆች </char><char style="fq" closed="false">የእግዚአብሔር ልጅ </char><char style="ft" closed="false">የሚለው ሐረግ የላቸውም።</char></note>፣ የኢየሱስ ክርስቶስ ወንጌል መጀመሪያ።<verse eid="MRK 1:1"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="2" style="v" sid="MRK 1:2"/>በነቢዩ በኢሳይያስ፣ እንዲህ ተብሎ ተጽፏል፤</para>
+  <para style="q1" vid="MRK 1:2">“እነሆ፤ መንገድህን የሚያዘጋጅ መልእክተኛዬን</para>
+  <para style="q2" vid="MRK 1:2">በፊትህ እልካለሁ፤<verse eid="MRK 1:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="MRK 1:3"/>‘የጌታን መንገድ አዘጋጁ፤</para>
+  <para style="q2" vid="MRK 1:3">ጥርጊያውንም አስተካክሉ’</para>
+  <para style="m" vid="MRK 1:3">እያለ በበረሓ የሚጮኽ ድምፅ።” <verse eid="MRK 1:3"/><verse number="4" style="v" sid="MRK 1:4"/>ስለዚህ መጥምቁ ዮሐንስ በበረሓ እያጠመቀና ለኀጢአት ስርየት የንስሓ ጥምቀት እየሰበከ መጣ። <verse eid="MRK 1:4"/><verse number="5" style="v" sid="MRK 1:5"/>የይሁዳ አገር በሞላ፣ የኢየሩሳሌም ሰዎች በጠቅላላ ወደ እርሱ በመሄድ ኀጢአታቸውን እየተናዘዙ በዮርዳኖስ ወንዝ በእርሱ እጅ ተጠመቁ። <verse eid="MRK 1:5"/><verse number="6" style="v" sid="MRK 1:6"/>ዮሐንስ የግመል ጠጕር ይለብስ፣ በወገቡ ጠፍር ይታጠቅ፣ አንበጣና የበረሓ ማርም ይበላ ነበር። <verse eid="MRK 1:6"/><verse number="7" style="v" sid="MRK 1:7"/>ስብከቱም፣ “እኔ ጐንበስ ብዬ የጫማውን ማሰሪያ መፍታት ከማይገባኝ፣ ከእኔ የሚበልጥ ከእኔ በኋላ ይመጣል፤ <verse eid="MRK 1:7"/><verse number="8" style="v" sid="MRK 1:8"/>እኔ በውሃ አጠምቃችኋለሁ፤ እርሱ ግን በመንፈስ ቅዱስ ያጠምቃችኋል” የሚል ነበር።<verse eid="MRK 1:8"/></para>
+  <para style="s1">የኢየሱስ መጠመቅና መፈተን</para>
+  <para style="sr">
+    <ref loc="MRK 1:9-11">1፥9-11</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 3:13-17">ማቴ 3፥13-17</ref>፤ <ref loc="LUK 3:21-22">ሉቃ 3፥21-22</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 1:12">1፥12</ref>፡<ref loc="MRK 1:13">13</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 4:1-11">ማቴ 4፥1-11</ref>፤ <ref loc="LUK 4:1-13">ሉቃ 4፥1-13</ref></char></para>
+  <para style="p">
+    <verse number="9" style="v" sid="MRK 1:9"/>በዚህ ጊዜ ኢየሱስ የገሊላ ከተማ ከሆነችው ከናዝሬት መጥቶ በዮርዳኖስ ወንዝ በዮሐንስ እጅ ተጠመቀ። <verse eid="MRK 1:9"/><verse number="10" style="v" sid="MRK 1:10"/>ከውሃው በሚወጣበትም ጊዜ፣ ሰማያት ተከፍተው፣ መንፈስ ቅዱስ እንደ ርግብ በእርሱ ላይ ሲወርድ አየ፤ <verse eid="MRK 1:10"/><verse number="11" style="v" sid="MRK 1:11"/>“የምወድድህ ልጄ አንተ ነህ፤ በአንተ ደስ ይለኛል” የሚል ድምፅ ከሰማይ ተሰማ።<verse eid="MRK 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="MRK 1:12"/>ወዲያውም መንፈስ ቅዱስ ወደ በረሓ መራው፤ <verse eid="MRK 1:12"/><verse number="13" style="v" sid="MRK 1:13"/>በሰይጣንም እየተፈተነ አርባ ቀን በበረሓ ቈየ። ከአራዊት ጋር ነበር፤ መላእክትም አገለገሉት።<verse eid="MRK 1:13"/></para>
+  <para style="s1">የመጀመሪያዎቹ ደቀ መዛሙርት መመረጥ</para>
+  <para style="sr">
+    <ref loc="MRK 1:16-20">1፥16-20</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 4:18-22">ማቴ 4፥18-22</ref>፤ <ref loc="LUK 5:2-11">ሉቃ 5፥2-11</ref>፤ <ref loc="JHN 1:35-42">ዮሐ 1፥35-42</ref></char></para>
+  <para style="p">
+    <verse number="14" style="v" sid="MRK 1:14"/>ዮሐንስ እስር ቤት ከገባ በኋላ፣ ኢየሱስ የእግዚአብሔርን ወንጌል እየሰበከ ወደ ገሊላ ሄዶ፣ <verse eid="MRK 1:14"/><verse number="15" style="v" sid="MRK 1:15"/><char style="wj">“ጊዜው ደርሷል፤ የእግዚአብሔር መንግሥት ቀርባለች፤ ንስሓ ግቡ፤ በወንጌልም እመኑ”</char> እያለ ይሰብክ ነበር።<verse eid="MRK 1:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="MRK 1:16"/>ኢየሱስ በገሊላ ባሕር አጠገብ ሲያልፍ፣ ስምዖንና ወንድሙ እንድርያስ ዓሣ አጥማጆች ስለ ነበሩ፣ መረብ ወደ ባሕር ሲጥሉ አያቸው። <verse eid="MRK 1:16"/><verse number="17" style="v" sid="MRK 1:17"/>ኢየሱስም፣ <char style="wj">“ተከተሉኝ፤ ሰው አጥማጆች አደርጋችኋለሁ”</char> አላቸው። <verse eid="MRK 1:17"/><verse number="18" style="v" sid="MRK 1:18"/>እነርሱም ወዲያውኑ መረባቸውን ትተው ተከተሉት።<verse eid="MRK 1:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="MRK 1:19"/>ትንሽ ዕልፍ እንዳለ፣ የዘብዴዎስ ልጅ ያዕቆብና ወንድሙ ዮሐንስ በጀልባ ሆነው መረባቸውን ሲያበጃጁ አያቸውና፣ <verse eid="MRK 1:19"/><verse number="20" style="v" sid="MRK 1:20"/>ወዲያውኑ ጠራቸው። እነርሱም አባታቸውን ከቅጥር ሠራተኞቹ ጋር በጀልባው ላይ ትተው ተከትለውት ሄዱ።<verse eid="MRK 1:20"/></para>
+  <para style="s1">ኢየሱስ ርኩስ መንፈስ አስወጣ</para>
+  <para style="sr">
+    <ref loc="MRK 1:21-28">1፥21-28</ref> ተጓ ምብ – <char style="xt"><ref loc="LUK 4:31-37">ሉቃ 4፥31-37</ref></char></para>
+  <para style="p">
+    <verse number="21" style="v" sid="MRK 1:21"/>ከዚያም ወደ ቅፍርናሆም ሄዱ፤ ኢየሱስም ወዲያው በሰንበት ቀን ወደ ምኵራብ ገብቶ ማስተማር ጀመረ። <verse eid="MRK 1:21"/><verse number="22" style="v" sid="MRK 1:22"/>እንደ ጸሐፍት ሳይሆን፣ እንደ ባለ ሥልጣን በማስተማሩ ሕዝቡ በትምህርቱ ተገረሙ። <verse eid="MRK 1:22"/><verse number="23" style="v" sid="MRK 1:23"/>በዚያን ጊዜ በምኵራባቸው ውስጥ የነበረ ርኩስ<note caller="+" style="f"><char style="fr" closed="false">1፥23 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">ክፉ</char><char style="ft" closed="false">፤ እንዲሁም 26 እና 27 ይመ</char></note> መንፈስ ያደረበት አንድ ሰው እንዲህ በማለት ጮኸ፤ <verse eid="MRK 1:23"/><verse number="24" style="v" sid="MRK 1:24"/>“የናዝሬቱ ኢየሱስ ሆይ፤ ከእኛ ምን ትሻለህ? ልታጠፋን መጣህን? እኔ ማን እንደ ሆንህ ዐውቃለሁ፤ አንተ የእግዚአብሔር ቅዱስ ነህ!”<verse eid="MRK 1:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="MRK 1:25"/>ኢየሱስም፣ <char style="wj">“ጸጥ በል፤ ከእርሱም ውጣ!”</char> ብሎ ገሠጸው። <verse eid="MRK 1:25"/><verse number="26" style="v" sid="MRK 1:26"/>ርኩሱም መንፈስ ሰውየውን በኀይል ካንፈራገጠው በኋላ እየጮኸ ወጣ።<verse eid="MRK 1:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="MRK 1:27"/>ሕዝቡ በሙሉ በመገረም፣ “ይህ ነገር ምንድን ነው? ሥልጣን ያለው አዲስ ትምህርት መሆኑ ነው! ርኩሳን መናፍስትን እንኳ ያዝዛል፤ እነርሱም ይታዘዙለታል!” እያሉ እርስ በርስ ተጠያየቁ። <verse eid="MRK 1:27"/><verse number="28" style="v" sid="MRK 1:28"/>ወዲያውም ዝናው በገሊላ ዙሪያ ባሉ ስፍራዎች ሁሉ ተዳረሰ።<verse eid="MRK 1:28"/></para>
+  <para style="s1">ኢየሱስ ብዙዎችን ፈወሰ</para>
+  <para style="sr">
+    <ref loc="MRK 1:29-31">1፥29-31</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 8:14-15">ማቴ 8፥14-15</ref>፤ <ref loc="LUK 4:38">ሉቃ 4፥38</ref>፡<ref loc="LUK 4:39">39</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 1:32-34">1፥32-34</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 8:16">ማቴ 8፥16</ref>፡<ref loc="MAT 8:17">17</ref>፤ <ref loc="LUK 4:40">ሉቃ 4፥40</ref>፡<ref loc="LUK 4:41">41</ref></char></para>
+  <para style="p">
+    <verse number="29" style="v" sid="MRK 1:29"/>ወዲያው ከምኵራብ እንደ ወጡ፣ ከያዕቆብና ከዮሐንስ ጋር ወደ ስምዖንና ወደ እንድርያስ ቤት ገቡ። <verse eid="MRK 1:29"/><verse number="30" style="v" sid="MRK 1:30"/>የስምዖን ዐማት በትኵሳት በሽታ ታማ ተኝታ ነበር፤ ስለ እርሷም ነገሩት፤ <verse eid="MRK 1:30"/><verse number="31" style="v" sid="MRK 1:31"/>ስለዚህም እርሱ ወደ ተኛችበት በመሄድ እጇን ይዞ አስነሣት፤ ትኵሳቱም ተዋት፤ ተነሥታም ታገለግላቸው ጀመር።<verse eid="MRK 1:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="MRK 1:32"/>ጀንበር ከጠለቀች በኋላ፣ ምሽት ላይ የአካባቢው ሰዎች ሕመምተኞችንና በአጋንንት የተያዙትን ሁሉ ወደ እርሱ አመጡ።<verse eid="MRK 1:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="MRK 1:33"/>የከተማዋ ሕዝብ በሙሉ በቤቱ ደጅ ላይ ተሰብስቦ ነበር። <verse eid="MRK 1:33"/><verse number="34" style="v" sid="MRK 1:34"/>እርሱም በተለያየ በሽታ የታመሙትን ብዙዎችን ፈወሰ፤ ብዙ አጋንንትም አወጣ፤ ነገር ግን አጋንንቱ የኢየሱስን ማንነት ያውቁ ስለ ነበር እንዲናገሩ አልፈቀደላቸውም።<verse eid="MRK 1:34"/></para>
+  <para style="s1">ኢየሱስ በገለልተኛ ስፍራ ጸለየ</para>
+  <para style="sr">
+    <ref loc="MRK 1:35-38">1፥35-38</ref> ተጓ ምብ – <char style="xt"><ref loc="LUK 4:42">ሉቃ 4፥42</ref>፡<ref loc="LUK 4:43">43</ref></char></para>
+  <para style="p">
+    <verse number="35" style="v" sid="MRK 1:35"/>ማለዳም ገና ጎሕ ሳይቀድ፣ ኢየሱስ ተነሥቶ ከቤት ወጣ፤ ወደ አንድ ገለልተኛ ስፍራም ሄዶ ይጸልይ ጀመር። <verse eid="MRK 1:35"/><verse number="36" style="v" sid="MRK 1:36"/>ስምዖንና ባልደረቦቹም ተከትለው ይፈልጉት ጀመር፤ <verse eid="MRK 1:36"/><verse number="37" style="v" sid="MRK 1:37"/>ባገኙትም ጊዜ፣ “ሰው ሁሉ ይፈልግሃል” አሉት።<verse eid="MRK 1:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="MRK 1:38"/>እርሱም፣ <char style="wj">“ከዚህ ተነሥተን በአቅራቢያ ወዳሉት መንደሮች እንሂድ፤ እዚያም ልስበክ፤ የመጣሁት ለዚሁ ነውና”</char> አላቸው። <verse eid="MRK 1:38"/><verse number="39" style="v" sid="MRK 1:39"/>ስለዚህ ወደ ምኵራባቸው እየገባ በመስበክና አጋንንትን በማስወጣት በመላዋ ገሊላ ይዘዋወር ጀመር።<verse eid="MRK 1:39"/></para>
+  <para style="s1">ኢየሱስ ለምጻሙን ሰው አነጻ</para>
+  <para style="sr">
+    <ref loc="MRK 1:40-44">1፥40-44</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 8:2-4">ማቴ 8፥2-4</ref>፤ <ref loc="LUK 5:12-14">ሉቃ 5፥12-14</ref></char></para>
+  <para style="p">
+    <verse number="40" style="v" sid="MRK 1:40"/>አንድ ለምጻም<note caller="+" style="f"><char style="fr" closed="false">1፥40 </char><char style="fqa" closed="false">ለምጽ </char><char style="ft" closed="false">የሚለው ቃል በግሪኩ አገላለጽ የተለያዩ የቈዳ በሽታዎችን ያመለክታል።</char></note> ወደ እርሱ ቀርቦ ከፊቱ በመንበርከክ፣ “ብትፈቅድ እኮ ልታነጻኝ ትችላለህ” በማለት ለመነው።<verse eid="MRK 1:40"/></para>
+  <para style="p">
+    <verse number="41" style="v" sid="MRK 1:41"/>ኢየሱስም ለሰውየው በመራራት እጁን ዘርግቶ ዳሰሰውና፣ <char style="wj">“እፈቅዳለሁ፣ ንጻ”</char> አለው። <verse eid="MRK 1:41"/><verse number="42" style="v" sid="MRK 1:42"/>እርሱም ወዲያው ከለምጹ ነጻ፤ ከበሽታውም ተፈወሰ።<verse eid="MRK 1:42"/></para>
+  <para style="p">
+    <verse number="43" style="v" sid="MRK 1:43"/>ኢየሱስም ሰውየውን አጥብቆ በማስጠንቀቅ እንዲህ ሲል አሰናበተው፤ <verse eid="MRK 1:43"/><verse number="44" style="v" sid="MRK 1:44"/><char style="wj">“ለማንም አንድ ነገር እንኳ እንዳትናገር ተጠንቀቅ፤ ነገር ግን ምስክር እንዲሆናቸው ሄደህ ራስህን ለካህን አሳይ፤ ስለ መንጻትህም ሙሴ ያዘዘውን መሥዋዕት አቅርብ”</char> አለው። <verse eid="MRK 1:44"/><verse number="45" style="v" sid="MRK 1:45"/>ሰውየው ግን በሄደበት ሁሉ ነገሩን በሰፊው አወራ፤ ወሬውንም አሠራጨ። በዚህ ምክንያት ኢየሱስ ወደ ማንኛውም ከተማ በግልጽ መግባት አልተቻለውም፤ ከዚህም የተነሣ ከከተማ ውጭ በሚገኙ ሰዋራ ቦታዎች መኖር ጀመረ፤ ሰዎች ግን ከየአቅጣጫው እርሱ ወዳለበት መምጣት አላቋረጡም።<verse eid="MRK 1:45"/></para>
+  <chapter eid="MRK 1"/>
+  <chapter number="2" style="c" sid="MRK 2"/>
+  <para style="s1">ኢየሱስ ሽባ ፈወሰ</para>
+  <para style="sr">
+    <ref loc="MRK 2:3-12">2፥3-12</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 9:2-8">ማቴ 9፥2-8</ref>፤ <ref loc="LUK 5:18-26">ሉቃ 5፥18-26</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 2:1"/>ኢየሱስ ከጥቂት ቀን በኋላ ወደ ቅፍርናሆም እንደ ተመለሰ፣ ወደ ቤት መግባቱን ሕዝቡ ሰማ። <verse eid="MRK 2:1"/><verse number="2" style="v" sid="MRK 2:2"/>ስለዚህ ከበሩ ውጭ እንኳ ሳይቀር ስፍራ እስኪታጣ ድረስ ብዙ ሕዝብ ተሰበሰበ፤ እርሱም የእግዚአብሔርን ቃል ሰበከላቸው። <verse eid="MRK 2:2"/><verse number="3" style="v" sid="MRK 2:3"/>ጥቂት ሰዎችም አንድ ሽባ በአራት ሰዎች አሸክመው ወደ እርሱ አመጡ። <verse eid="MRK 2:3"/><verse number="4" style="v" sid="MRK 2:4"/>ከሕዝቡ ብዛት የተነሣ ኢየሱስ ወዳለበት መቅረብ ስላልቻሉ፣ የቤቱን ጣራ እርሱ ባለበት በኩል ነድለው ቀዳዳ በማበጀት ሽባው የተኛበትን ዐልጋ በዚያ አወረዱ። <verse eid="MRK 2:4"/><verse number="5" style="v" sid="MRK 2:5"/>ኢየሱስም እምነታቸውን አይቶ ሽባውን፣ <char style="wj">“አንተ ልጅ፣ ኀጢአትህ ተሰርዮልሃል!”</char> አለው።<verse eid="MRK 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="MRK 2:6"/>በዚያ ተቀምጠው የነበሩ አንዳንድ ጸሐፍት ስለዚህ ነገር በልባቸው እያሰላሰሉ፣ <verse eid="MRK 2:6"/><verse number="7" style="v" sid="MRK 2:7"/>“ይህ ሰው እንዴት እንዲህ ይላል? በአምላክ ላይ የስድብ ቃል እየተናገረ እኮ ነው! ከአንዱ ከእግዚአብሔር በስተቀር ማን ኀጢአትን ሊያሰተሰርይ ይችላል?” ብለው አሰቡ።<verse eid="MRK 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="MRK 2:8"/>ኢየሱስም ወዲያው በልባቸው የሚያስቡትን በመንፈሱ ተረድቶ፣ <char style="wj">“እንዴት እንዲህ ታስባላችሁ?</char> <verse eid="MRK 2:8"/><verse number="9" style="v" sid="MRK 2:9"/><char style="wj">ሽባውን፣ ‘ኀጢአትህ ተሰርዮልሃል’ ከማለትና፣ ‘ተነሥተህ ዐልጋህን ተሸክመህ ሂድ’ ከማለት የቱ ይቀልላል?</char> <verse eid="MRK 2:9"/><verse number="10" style="v" sid="MRK 2:10"/><char style="wj">ነገር ግን የሰው ልጅ በምድር ላይ ኀጢአትን ለማስተስረይ ሥልጣን እንዳለው እንድታውቁ”</char> በማለት ሽባውን፣ <verse eid="MRK 2:10"/><verse number="11" style="v" sid="MRK 2:11"/><char style="wj">“ተነሥተህ ዐልጋህን ተሸክመህ ወደ ቤትህ ሂድ”</char> አለው። <verse eid="MRK 2:11"/><verse number="12" style="v" sid="MRK 2:12"/>እርሱም ተነሥቶ ሁሉም እያዩት ዐልጋውን ተሸክሞ ሄደ፤ በስፍራው የነበሩትም ሁሉ በሁኔታው በመደነቅ፣ “የዚህ ዐይነት ነገር ፈጽሞ አይተን አናውቅም!” በማለት ለእግዚአብሔር ምስጋና አቀረቡ።<verse eid="MRK 2:12"/></para>
+  <para style="s1">የሌዊ መጠራት</para>
+  <para style="sr">
+    <ref loc="MRK 2:14-17">2፥14-17</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 9:9-13">ማቴ 9፥9-13</ref>፤ <ref loc="LUK 5:27-32">ሉቃ 5፥27-32</ref></char></para>
+  <para style="p">
+    <verse number="13" style="v" sid="MRK 2:13"/>ኢየሱስም ዳግም ወደ ባሕሩ ዳርቻ ወጣ፤ ሕዝቡም በብዛት ወደ እርሱ መጡ፤ እርሱም አስተማራቸው። <verse eid="MRK 2:13"/><verse number="14" style="v" sid="MRK 2:14"/>በዚያም ሲያልፍ የእልፍዮስን ልጅ ሌዊን በቀረጥ መቀበያው ስፍራ ተቀምጦ አየውና፣ <char style="wj">“ተከተለኝ”</char> አለው፤ እርሱም ተነሥቶ ተከተለው።<verse eid="MRK 2:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="MRK 2:15"/>በማቴዎስ ቤት በማእድ ተቀምጦ ሳለ፣ ብዙ ቀረጥ ሰብሳቢዎችና ኀጢአተኞች ተከትለውት ስለ ነበር፣ ከኢየሱስና ከደቀ መዛሙርቱ ጋር ይመገቡ ነበር። <verse eid="MRK 2:15"/><verse number="16" style="v" sid="MRK 2:16"/>ከፈሪሳውያን ወገን የነበሩ ጸሐፍት ከኀጢአተኞችና ከቀረጥ ሰብሳቢዎች ጋር ሲበላ ባዩት ጊዜ፣ ደቀ መዛሙርቱን “ከቀረጥ ሰብሳቢዎችና ከኀጢአተኞች ጋር ለምን ይበላል?” ሲሉ ጠየቋቸው።<verse eid="MRK 2:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="MRK 2:17"/>ኢየሱስም የሚናገሩትን ሰምቶ፣ <char style="wj">“ሐኪም የሚያስፈልጋቸው ሕመምተኞች እንጂ ጤነኞች አይደሉም፤ እኔ ኀጢአተኞችን እንጂ ጻድቃንን ወደ ንስሓ ልጠራ አልመጣሁም”</char> አላቸው።<verse eid="MRK 2:17"/></para>
+  <para style="s1">ስለ ጾም የቀረበ ጥያቄ</para>
+  <para style="sr">
+    <ref loc="MRK 2:18-22">2፥18-22</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 9:14-17">ማቴ 9፥14-17</ref>፤ <ref loc="LUK 5:33-38">ሉቃ 5፥33-38</ref></char></para>
+  <para style="p">
+    <verse number="18" style="v" sid="MRK 2:18"/>የዮሐንስ ደቀ መዛሙርትና ፈሪሳውያን ይጾሙ ነበር፤ አንዳንድ ሰዎችም መጥተው ኢየሱስን፣ “የዮሐንስና የፈሪሳውያን ደቀ መዛሙርት ሲጾሙ፣ የአንተ ደቀ መዛሙርት የማይጾሙት ለምንድን ነው?” አሉት።<verse eid="MRK 2:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="MRK 2:19"/>ኢየሱስም፣ እንዲህ አላቸው፤ <char style="wj">“ሙሽራው ከእነርሱ ጋር እያለ ሚዜዎቹ ሊጾሙ ይችላሉን? ሙሽራው ከእነርሱ ጋር እያለ ሊጾሙ አይችሉም፤</char> <verse eid="MRK 2:19"/><verse number="20" style="v" sid="MRK 2:20"/><char style="wj">ሙሽራው ከእነርሱ የሚወሰድበት ወቅት ይመጣል፤ በዚያን ጊዜ ግን ይጾማሉ።</char><verse eid="MRK 2:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="MRK 2:21"/>
+    <char style="wj">“በአሮጌ ልብስ ላይ አዲስ ጨርቅ የሚጥፍ ማንም የለም፤ ይህ ቢደረግ ግን፣ አዲሱ ጨርቅ አሮጌውን ይቦጭቀዋል፤ ቀዳዳውም የባሰ ይሰፋል።</char> <verse eid="MRK 2:21"/><verse number="22" style="v" sid="MRK 2:22"/><char style="wj">እንዲሁም አዲስ የወይን ጠጅ በአሮጌ አቍማዳ የሚያስቀምጥ የለም፤ ይህ ከተደረገማ የወይን ጠጁ አቍማዳውን ያፈነዳዋል፤ የወይን ጠጁም አቍማዳውም ይበላሻሉ። ስለዚህ አዲስ የወይን ጠጅ መቀመጥ ያለበት በአዲስ አቍማዳ ነው።”</char><verse eid="MRK 2:22"/></para>
+  <para style="s1">ኢየሱስ የሰንበት ጌታ ነው</para>
+  <para style="sr">
+    <ref loc="MRK 2:23-28">2፥23-28</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 12:1-8">ማቴ 12፥1-8</ref>፤ <ref loc="LUK 6:1-5">ሉቃ 6፥1-5</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 3:1-6">3፥1-6</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 12:9-14">ማቴ 12፥9-14</ref>፤ <ref loc="LUK 6:6-11">ሉቃ 6፥6-11</ref></char></para>
+  <para style="p">
+    <verse number="23" style="v" sid="MRK 2:23"/>በሰንበት ቀን ኢየሱስ በዕርሻ መካከል ሲያልፍ፣ አብረውት በመጓዝ ላይ የነበሩት ደቀ መዛሙርቱ እሸት ይቀጥፉ ጀመር። <verse eid="MRK 2:23"/><verse number="24" style="v" sid="MRK 2:24"/>ፈሪሳውያንም፣ “እነሆ፤ በሰንበት ቀን ለምን የተከለከለ ነገር ያደርጋሉ?” ሲሉ ጠየቁት።<verse eid="MRK 2:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="MRK 2:25"/>እርሱም እንዲህ አላቸው፤ <char style="wj">“ዳዊት በተራበና የምግብ ፍላጎት በጸናበት ጊዜ አብረውት ከነበሩት ሰዎች ጋር ያደረገውን አላነበባችሁምን?</char> <verse eid="MRK 2:25"/><verse number="26" style="v" sid="MRK 2:26"/><char style="wj">በሊቀ ካህናቱ በአብያታር ዘመን ወደ እግዚአብሔር ቤት ገብቶ፣ ካህናት ብቻ እንዲበሉት የተፈቀደውን የተቀደሰ ኅብስት ራሱ በልቶ አብረውት ለነበሩትም ሰዎች ሰጣቸው።”</char><verse eid="MRK 2:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="MRK 2:27"/>ደግሞም እንዲህ አላቸው፤ <char style="wj">“ሰንበት ለሰው ተፈጠረ እንጂ፣ ሰው ለሰንበት አልተፈጠረም፤</char> <verse eid="MRK 2:27"/><verse number="28" style="v" sid="MRK 2:28"/><char style="wj">ስለዚህ የሰው ልጅ የሰንበት ጌታዋ ነው።”</char><verse eid="MRK 2:28"/></para>
+  <chapter eid="MRK 2"/>
+  <chapter number="3" style="c" sid="MRK 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 3:1"/>በሌላ ጊዜ ወደ ምኵራብ ገባ፤ በዚያም እጁ የሰለለች ሰው ነበር። <verse eid="MRK 3:1"/><verse number="2" style="v" sid="MRK 3:2"/>በምክንያት ሊከስሱት የሚፈልጉ ሰዎችም በሰንበት ቀን ይፈውሰው እንደ ሆነ ለማየት ይጠባበቁ ነበር። <verse eid="MRK 3:2"/><verse number="3" style="v" sid="MRK 3:3"/>እርሱም እጁ የሰለለችውን ሰው፣ <char style="wj">“በተሰበሰበው ሕዝብ ፊት ተነሥተህ ቁም”</char> አለው።<verse eid="MRK 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="MRK 3:4"/>ኢየሱስም፣ <char style="wj">“በሰንበት ቀን የተፈቀደው መልካም ማድረግ ነው ወይስ ክፉ? ሕይወት ማዳን ነውን ወይስ ማጥፋት?”</char> አላቸው። እነርሱ ግን ዝም አሉ።<verse eid="MRK 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="MRK 3:5"/>በልባቸው ደንዳናነት ዐዝኖ በዙሪያው የቆሙትን በቍጣ ተመለከታቸውና ሰውየውን፣ <char style="wj">“እጅህን ዘርጋ!”</char> አለው፤ ሰውየውም እጁን ዘረጋ፤ እጁም ፍጹም ደኅና ሆነችለት።<verse eid="MRK 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="MRK 3:6"/>ፈሪሳውያንም እንዴት ሊያጠፉት እንደሚችሉ ከሄሮድስ ወገን ከሆኑት ጋር መመካከር ጀመሩ።<verse eid="MRK 3:6"/></para>
+  <para style="s1">ብዙ ሰዎች ኢየሱስን ተከተሉ</para>
+  <para style="sr">
+    <ref loc="MRK 3:7-12">3፥7-12</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 12:15">ማቴ 12፥15</ref>፡<ref loc="MAT 12:16">16</ref>፤ <ref loc="LUK 6:17-19">ሉቃ 6፥17-19</ref></char></para>
+  <para style="p">
+    <verse number="7" style="v" sid="MRK 3:7"/>ኢየሱስ ከደቀ መዛሙርቱ ጋር ወደ ባሕሩ ሄደ፤ ከገሊላ የመጣ እጅግ ብዙ ሕዝብም ተከተለው፤ <verse eid="MRK 3:7"/><verse number="8" style="v" sid="MRK 3:8"/>የሚሠራውን ነገር የሰሙ ሰዎችም ከይሁዳ፣ ከኢየሩሳሌም፣ ከኤዶምያስ፣ በዮርዳኖስ ማዶ ካለው አገር እንዲሁም ከጢሮስና ከሲዶና አካባቢ ወደ እርሱ መጡ። <verse eid="MRK 3:8"/><verse number="9" style="v" sid="MRK 3:9"/>የተሰበሰበውም ሕዝብ እንዳያጨናንቀው አነስተኛ የሆነ ጀልባ እንዲያዘጋጁለት ደቀ መዛሙርቱን አዘዛቸው። <verse eid="MRK 3:9"/><verse number="10" style="v" sid="MRK 3:10"/>ብዙዎችን ፈውሶ ስለ ነበር፣ በሕመም የሚሠቃዩ ሁሉ ሊዳስሱት ይሽቀዳደሙ ነበር። <verse eid="MRK 3:10"/><verse number="11" style="v" sid="MRK 3:11"/>ርኩሳን<note caller="+" style="f"><char style="fr" closed="false">3፥11 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">ክፉ፤ </char><char style="ft" closed="false">እንዲሁም 30 ይመ</char></note> መናፍስትም ባዩት ቍጥር ከፊቱ እየወደቁ፣ “አንተ የእግዚአብሔር ልጅ ነህ!” በማለት ይጮኹ ነበር። <verse eid="MRK 3:11"/><verse number="12" style="v" sid="MRK 3:12"/>እርሱ ግን ማንነቱን እንዳይገልጹ አጥብቆ ይገሥጻቸው ነበር።<verse eid="MRK 3:12"/></para>
+  <para style="s1">የዐሥራ ሁለቱ ሐዋርያት መሾም</para>
+  <para style="sr">
+    <ref loc="MRK 3:16-19">3፥16-19</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 10:2-4">ማቴ 10፥2-4</ref>፤ <ref loc="LUK 6:14-16">ሉቃ 6፥14-16</ref>፤ <ref loc="ACT 1:13">ሐሥ 1፥13</ref></char></para>
+  <para style="p">
+    <verse number="13" style="v" sid="MRK 3:13"/>ኢየሱስ ወደ ተራራ ወጥቶ የሚፈልጋቸውን ወደ እርሱ እንዲመጡ ጠራቸው፤ እነርሱም ወደ እርሱ መጡ። <verse eid="MRK 3:13"/><verse number="14" style="v" sid="MRK 3:14"/>ከእርሱ ጋር እንዲሆኑ፣ ለስብከትም ይልካቸው ዘንድ ዐሥራ ሁለቱን ሾማቸው፤ ሐዋርያትም ብሎ ጠራቸው<note caller="+" style="f"><char style="fr" closed="false">3፥14 </char><char style="ft" closed="false">አንዳንድ ቅጆች </char><char style="fq" closed="false">ሐዋርያትም ብሎ ጠራቸው </char><char style="ft" closed="false">የሚለው ሐረግ የላቸውም።</char></note>፤ <verse eid="MRK 3:14"/><verse number="15" style="v" sid="MRK 3:15"/>አጋንንትን እንዲያስወጡም ሥልጣን ሰጣቸው። <verse eid="MRK 3:15"/><verse number="16" style="v" sid="MRK 3:16"/>የሾማቸውም ዐሥራ ሁለቱ እነዚህ ናቸው፤ ጴጥሮስ ብሎ የጠራው ስምዖን፣ <verse eid="MRK 3:16"/><verse number="17" style="v" sid="MRK 3:17"/>ቦአኔርጌስ ይኸውም፣ “የነጐድጓድ ልጆች” ብሎ የጠራቸው የዘብዴዎስ ልጆች ያዕቆብና ወንድሙ ዮሐንስ፤ <verse eid="MRK 3:17"/><verse number="18" style="v" sid="MRK 3:18"/>እንድርያስ፣ ፊልጶስ፣ በርተሎሜዎስ፣ ማቴዎስ፣ ቶማስ፣ የእልፍዮስ ልጅ ያዕቆብ፣ ታዴዎስ፣ ተቀናቃኙ ስምዖን፣ <verse eid="MRK 3:18"/><verse number="19" style="v" sid="MRK 3:19"/>እንዲሁም አሳልፎ የሰጠው የአስቆሮቱ ይሁዳ።<verse eid="MRK 3:19"/></para>
+  <para style="s1">ኢየሱስና ብዔልዜቡል</para>
+  <para style="sr">
+    <ref loc="MRK 3:23-27">3፥23-27</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 12:25-29">ማቴ 12፥25-29</ref>፤ <ref loc="LUK 11:17-22">ሉቃ 11፥17-22</ref></char></para>
+  <para style="p">
+    <verse number="20" style="v" sid="MRK 3:20"/>ከዚያም ኢየሱስ ወደ አንድ ቤት ገባ፤ እርሱና ደቀ መዛሙርቱ ምግብ መብላት እንኳ እስኪሳናቸው ድረስ ሕዝቡ እንደ ገና በብዛት ተሰበሰበ። <verse eid="MRK 3:20"/><verse number="21" style="v" sid="MRK 3:21"/>ሁኔታውን የሰሙ ዘመዶቹም፣ “አእምሮውን ስቷል” በማለት ይዘውት ለመሄድ ወዳለበት መጡ።<verse eid="MRK 3:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="MRK 3:22"/>ከኢየሩሳሌም የመጡ ጸሐፍትም፣ “ብዔልዜቡል<note caller="+" style="f"><char style="fr" closed="false">3፥22 </char><char style="ft" closed="false">ግሪኩ </char><char style="fqa" closed="false">ብዔዜቡል </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">ብዔልዜቡል </char><char style="ft" closed="false">ይላል።</char></note> ዐድሮበታል፤ አጋንንትን የሚያወጣው በአጋንንት አለቃ ነው” አሉ።<verse eid="MRK 3:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="MRK 3:23"/>እርሱም ጠራቸውና በምሳሌ እንዲህ አላቸው፤ <char style="wj">“ሰይጣን ሰይጣንን እንዴት ሊያስወጣ ይችላል?</char> <verse eid="MRK 3:23"/><verse number="24" style="v" sid="MRK 3:24"/><char style="wj">እርስ በርሱ የሚከፋፈል መንግሥት ሊጸና አይችልም፤</char> <verse eid="MRK 3:24"/><verse number="25" style="v" sid="MRK 3:25"/><char style="wj">ቤትም እርስ በርሱ ከተለያየ ሊቆም አይችልም።</char> <verse eid="MRK 3:25"/><verse number="26" style="v" sid="MRK 3:26"/><char style="wj">እንደዚሁም ሰይጣን እርስ በርሱ የሚፃረርና የሚከፋፈል ከሆነ ሊቆም አይችልም፤ ያበቃለታል።</char> <verse eid="MRK 3:26"/><verse number="27" style="v" sid="MRK 3:27"/><char style="wj">ከዚህም የተነሣ አንድ ሰው አስቀድሞ ኀይለኛውን ሰው ሳያስር ወደ ኀይለኛው ሰው ቤት ሊገባና ንብረቱን ሊዘርፍ አይችልም፤ ቤቱን መዝረፍ የሚቻለው ኀይለኛውን ሰው ሲያስር ብቻ ነው።</char> <verse eid="MRK 3:27"/><verse number="28" style="v" sid="MRK 3:28"/><char style="wj">እውነት እላችኋለሁ፤ የሰው ልጆች ኀጢአትና የሚሳደቡት ስድብ ሁሉ ይሰረይላቸዋል፤</char> <verse eid="MRK 3:28"/><verse number="29" style="v" sid="MRK 3:29"/><char style="wj">ነገር ግን በመንፈስ ቅዱስ ላይ የስድብ ቃል የሚናገር ሁሉ የዘላለም ኀጢአት ዕዳ ይሆንበታል እንጂ ለዘላለም አይሰረይለትም።”</char><verse eid="MRK 3:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="MRK 3:30"/>ይህንም ያለው፣ “ርኩስ መንፈስ አለበት” ስላሉት ነበር።<verse eid="MRK 3:30"/></para>
+  <para style="s1">የኢየሱስ እናትና ወንድሞቹ</para>
+  <para style="sr">
+    <ref loc="MRK 3:31-35">3፥31-35</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 12:46-50">ማቴ 12፥46-50</ref>፤ <ref loc="LUK 8:19-21">ሉቃ 8፥19-21</ref></char></para>
+  <para style="p">
+    <verse number="31" style="v" sid="MRK 3:31"/>ከዚህ በኋላ እናቱና ወንድሞቹ መጡ፤ በውጭ ቆመውም ሰው ልከውበት አስጠሩት። <verse eid="MRK 3:31"/><verse number="32" style="v" sid="MRK 3:32"/>በዙሪያው የተቀመጡ ብዙ ሰዎችም፣ “እነሆ፤ እናትህና ወንድሞችህ ውጭ ይፈልጉሃል” አሉት።<verse eid="MRK 3:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="MRK 3:33"/>እርሱም መልሶ፣ <char style="wj">“እናቴ ማን ናት፣ ወንድሞቼስ እነማን ናቸው?”</char> አላቸው።<verse eid="MRK 3:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="MRK 3:34"/>በዙሪያው ወደ ተቀመጡትም በመመልከት፣ እንዲህ አለ፤ <char style="wj">“እናቴና ወንድሞቼ እነዚህ ናቸው!</char> <verse eid="MRK 3:34"/><verse number="35" style="v" sid="MRK 3:35"/><char style="wj">የእግዚአብሔርን ፈቃድ የሚያደርግ ሁሉ እርሱ ወንድሜ፣ እኅቴ፣ እናቴም ነውና።”</char><verse eid="MRK 3:35"/></para>
+  <chapter eid="MRK 3"/>
+  <chapter number="4" style="c" sid="MRK 4"/>
+  <para style="s1">የዘሪው ምሳሌ</para>
+  <para style="sr">
+    <ref loc="MRK 4:1-12">4፥1-12</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 13:1-15">ማቴ 13፥1-15</ref>፤ <ref loc="LUK 8:4-10">ሉቃ 8፥4-10</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 4:13-20">4፥13-20</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 13:18-23">ማቴ 13፥18-23</ref>፤ <ref loc="LUK 8:11-15">ሉቃ 8፥11-15</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 4:1"/>በሌላ ጊዜ ደግሞ በባሕሩ አጠገብ ያስተምር ጀመር። እርሱ ባለበት አካባቢ እጅግ ብዙ ሕዝብ ስለ ተሰበሰበ፣ በባሕሩ ላይ ወዳለች ጀልባ ገብቶ ተቀመጠ፤ ሕዝቡም ሁሉ በባሕሩ ዳርቻ ባለው ስፍራ ላይ ተሰብስቦ ነበር። <verse eid="MRK 4:1"/><verse number="2" style="v" sid="MRK 4:2"/>እርሱም ብዙ ነገሮችን በምሳሌ አስተማራቸው፤ እንዲህም አላቸው፤ <verse eid="MRK 4:2"/><verse number="3" style="v" sid="MRK 4:3"/><char style="wj">“ስሙ፤ አንድ ዘሪ ዘር ሊዘራ ወጣ።</char> <verse eid="MRK 4:3"/><verse number="4" style="v" sid="MRK 4:4"/><char style="wj">ዘሩን በሚዘራበትም ጊዜ አንዳንዱ መንገድ ላይ ወደቀ፤ ወፎችም መጥተው ለቅመው በሉት።</char> <verse eid="MRK 4:4"/><verse number="5" style="v" sid="MRK 4:5"/><char style="wj">ሌላው በቂ ዐፈር በሌለበት በጭንጫ ቦታ ላይ ወደቀ፤ ዐፈሩ ጥልቀት ስላልነበረው ወዲያው በቀለ፤</char> <verse eid="MRK 4:5"/><verse number="6" style="v" sid="MRK 4:6"/><char style="wj">ፀሓይ በወጣ ጊዜ ግን ጠወለገ፤ ሥር ስላልነበረውም ደረቀ።</char> <verse eid="MRK 4:6"/><verse number="7" style="v" sid="MRK 4:7"/><char style="wj">ሌላው ዘር ደግሞ በእሾኽ መካከል ወደቀ፤ እሾኹም አድጎ የዘሩን ተክል ስላነቀው ፍሬ አላፈራም።</char> <verse eid="MRK 4:7"/><verse number="8" style="v" sid="MRK 4:8"/><char style="wj">ሌላው ዘር ደግሞ በመልካም መሬት ላይ ስለ ወደቀ በቅሎ አደገ፤ ፍሬም ሰጠ፤ አንዱ ሠላሳ፣ አንዱ ስድሳ፣ ሌላውም መቶ ፍሬ አፈራ።”</char><verse eid="MRK 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="MRK 4:9"/>ቀጥሎም ኢየሱስ፣ <char style="wj">“የሚሰማ ጆሮ ያለው ይስማ”</char> አለ።<verse eid="MRK 4:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="MRK 4:10"/>ብቻውን በሆነ ጊዜ፣ ዐሥራ ሁለቱና አብረውት የነበሩት ሌሎች ስለ ምሳሌዎቹ ጠየቁት። <verse eid="MRK 4:10"/><verse number="11" style="v" sid="MRK 4:11"/>እርሱም፣ <char style="wj">“ለእናንተ የእግዚአብሔር መንግሥት ምስጢር ተሰጥቷችኋል፤ በውጭ ላሉት ግን ነገር ሁሉ በምሳሌ ይነገራቸዋል፤</char> <verse eid="MRK 4:11"/><verse number="12" style="v" sid="MRK 4:12"/><char style="wj">ይኸውም፣</char></para>
+  <para style="q1" vid="MRK 4:12">
+    <char style="wj">“ ‘ማየቱን እንዲያዩ እንዳያስተውሉትም፣</char></para>
+  <para style="q2" vid="MRK 4:12">
+    <char style="wj">መስማቱን እንዲሰሙ</char></para>
+  <para style="q1" vid="MRK 4:12">
+    <char style="wj">ልብ እንዳይሉትም፣ እንዳይመለሱና ኀጢአታቸው</char></para>
+  <para style="q2" vid="MRK 4:12">
+    <char style="wj">እንዳይሰረይላቸው ነው’ አላቸው።”</char><verse eid="MRK 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="MRK 4:13"/>ከዚያም ኢየሱስ እንዲህ አላቸው፤ <char style="wj">“ይህን ምሳሌ አልተረዳችሁትምን? ታዲያ ሌሎቹን ምሳሌዎች ሁሉ እንዴት ልትረዱ ትችላላችሁ?</char> <verse eid="MRK 4:13"/><verse number="14" style="v" sid="MRK 4:14"/><char style="wj">ዘሪው ቃሉን ይዘራል።</char> <verse eid="MRK 4:14"/><verse number="15" style="v" sid="MRK 4:15"/><char style="wj">አንዳንድ ሰዎች በመንገድ ላይ የወደቀውን ዘር ይመስላሉ፤ ቃሉን በሚሰሙበት ጊዜ ሰይጣን ወዲያውኑ መጥቶ በውስጣቸው የተዘራውን ቃል ይወስደዋል።</char> <verse eid="MRK 4:15"/><verse number="16" style="v" sid="MRK 4:16"/><char style="wj">እንዲሁም ሌሎች በጭንጫ ቦታ ላይ የተዘራውን ዘር ይመስላሉ፤ ቃሉን በሚሰሙበት ጊዜ ወዲያው በደስታ ይቀበሉታል፤</char> <verse eid="MRK 4:16"/><verse number="17" style="v" sid="MRK 4:17"/><char style="wj">ነገር ግን ሥር የሌላቸው ስለ ሆኑ የሚቈዩት ለጥቂት ጊዜ ብቻ ነው፤ በቃሉ ምክንያት መከራ ወይም ስደት በመጣ ጊዜ ወዲያውኑ ይሰናከላሉ።</char> <verse eid="MRK 4:17"/><verse number="18" style="v" sid="MRK 4:18"/><char style="wj">ሌሎቹ ደግሞ በእሾኽ መካከል የተዘራውን ዘር ይመስላሉ፤ ቃሉን መስማት ይሰማሉ፤</char> <verse eid="MRK 4:18"/><verse number="19" style="v" sid="MRK 4:19"/><char style="wj">ነገር ግን የዚህ ዓለም ውጣ ውረድ፣ የሀብት አጓጊነት እንዲሁም የሌሎች ነገሮች ምኞት ቃሉን ዐንቀው በመያዝ ፍሬ እንዳያፈራ ያደርጉታል።</char> <verse eid="MRK 4:19"/><verse number="20" style="v" sid="MRK 4:20"/><char style="wj">ሌሎቹ በመልካም መሬት ላይ የተዘራውን ዘር ይመስላሉ፤ እነዚህም ቃሉን ሰምተው የሚቀበሉና ሠላሳ፣ ስድሳ፣ መቶም ፍሬ የሚያፈሩ ናቸው።”</char><verse eid="MRK 4:20"/></para>
+  <para style="s1">የመቅረዙ መብራት ምሳሌ</para>
+  <para style="p">
+    <verse number="21" style="v" sid="MRK 4:21"/>እንዲህም አላቸው፤ <char style="wj">“መብራት አምጥታችሁ ከዕንቅብ ወይም ከዐልጋ ሥር ታስቀምጣላችሁን? የምታስቀምጡት በመቅረዙ ላይ አይደለምን?</char> <verse eid="MRK 4:21"/><verse number="22" style="v" sid="MRK 4:22"/><char style="wj">ስለዚህ ተደብቆ የማይገለጥ፣ ተሸሽጎ ወደ ብርሃን የማይወጣ የለም፤</char> <verse eid="MRK 4:22"/><verse number="23" style="v" sid="MRK 4:23"/><char style="wj">ሰሚ ጆሮ ያለው ይስማ።”</char><verse eid="MRK 4:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="MRK 4:24"/>በመቀጠልም፣ <char style="wj">“ስለምትሰሙት ነገር ጥንቃቄ አድርጉ፤ በምትሰፍሩበት መስፈሪያ ይሰፈርላችኋል፤ እንዲያውም ከዚያ የበለጠ ይጨመርላችኋል።</char> <verse eid="MRK 4:24"/><verse number="25" style="v" sid="MRK 4:25"/><char style="wj">ላለው ይጨመርለታል፤ ከሌለው ላይ ግን፣ ያው ያለው እንኳ ይወሰድበታል”</char> አላቸው።<verse eid="MRK 4:25"/></para>
+  <para style="s1">የአዳጊው ዘር ምሳሌ</para>
+  <para style="p">
+    <verse number="26" style="v" sid="MRK 4:26"/>ከዚያም፣ እንዲህ አለ፤ <char style="wj">“የእግዚአብሔር መንግሥት ይህን ትመስላለች፤ አንድ ሰው መሬት ላይ ዘር ይዘራል።</char> <verse eid="MRK 4:26"/><verse number="27" style="v" sid="MRK 4:27"/><char style="wj">ሰውየው ሌሊት ይተኛል፤ ቀን ይነሣል፤ ነገር ግን እርሱ ሳያውቅ ያ ዘር በቅሎ ያድጋል፤</char> <verse eid="MRK 4:27"/><verse number="28" style="v" sid="MRK 4:28"/><char style="wj">ምድርም ራሷ በመጀመሪያ ቡቃያውን፣ ቀጥሎ ዛላውን፣ ከዚያም በዛላው ላይ የጐመራ ፍሬ ታስገኛለች፤</char> <verse eid="MRK 4:28"/><verse number="29" style="v" sid="MRK 4:29"/><char style="wj">ፍሬው እንደ በሰለም መከር በመድረሱ፣ ሰውየው ወዲያው ማጭዱን አንሥቶ ዐጨዳ ይጀምራል።”</char><verse eid="MRK 4:29"/></para>
+  <para style="s1">የሰናፍጭ ቅንጣት ምሳሌ</para>
+  <para style="sr">
+    <ref loc="MRK 4:30-32">4፥30-32</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 13:31">ማቴ 13፥31</ref>፡<ref loc="MAT 13:32">32</ref>፤ <ref loc="LUK 13:18">ሉቃ 13፥18</ref>፡<ref loc="LUK 13:19">19</ref></char></para>
+  <para style="p">
+    <verse number="30" style="v" sid="MRK 4:30"/>ደግሞም እንዲህ አለ፤ <char style="wj">“የእግዚአብሔርን መንግሥት ከምን ጋር እናነጻጽራታለን? በምንስ ምሳሌ እንገልጻታለን?</char> <verse eid="MRK 4:30"/><verse number="31" style="v" sid="MRK 4:31"/><char style="wj">በምድር ላይ ከሚዘራው ዘር ሁሉ እጅግ ያነሰችውን የሰናፍጭ ቅንጣት ትመስላለች፤</char> <verse eid="MRK 4:31"/><verse number="32" style="v" sid="MRK 4:32"/><char style="wj">ተዘርታ ካደገች በኋላ ግን፣ በአትክልቱ ቦታ ከሚገኙት ዕፀዋት ሁሉ ትበልጣለች፤ የሰማይ ወፎችም በትልልቅ ቅርንጫፎቿ ጥላ ሥር ያርፋሉ።”</char><verse eid="MRK 4:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="MRK 4:33"/>ኢየሱስም ሰዎች መረዳት በሚችሉበት መጠን፣ እነዚህን በመሳሰሉ ብዙ ምሳሌዎች ነገራቸው። <verse eid="MRK 4:33"/><verse number="34" style="v" sid="MRK 4:34"/>ምንም ነገር ያለ ምሳሌ አይነግራቸውም ነበር። እርሱና ደቀ መዛሙርቱ ብቻ በሚሆኑበት ጊዜ ግን ሁሉንም ነገር በዝርዝር ያስረዳቸው ነበር።<verse eid="MRK 4:34"/></para>
+  <para style="s1">ኢየሱስ ማዕበሉን ጸጥ አደረገ</para>
+  <para style="sr">
+    <ref loc="MRK 4:35-41">4፥35-41</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 8:18">ማቴ 8፥18</ref>፡<ref loc="MAT 8:23-27">23-27</ref>፤ <ref loc="LUK 8:22-25">ሉቃ 8፥22-25</ref></char></para>
+  <para style="p">
+    <verse number="35" style="v" sid="MRK 4:35"/>ያ ቀን በመሸ ጊዜ፣ <char style="wj">“ወደ ማዶ እንሻገር”</char> አላቸው። <verse eid="MRK 4:35"/><verse number="36" style="v" sid="MRK 4:36"/>እነርሱ ሕዝቡን ትተው በጀልባዋ ውስጥ እንዳለ በዚያው ይዘውት ሄዱ፤ ሌሎች ጀልባዎችም አብረውት ነበሩ። <verse eid="MRK 4:36"/><verse number="37" style="v" sid="MRK 4:37"/>በዚህ ጊዜ ኀይለኛ ዐውሎ ነፋስ ተነሣ፤ ማዕበሉም ውሃ እስኪሞላት ድረስ ጀልባዋን ያናውጣት ነበር። <verse eid="MRK 4:37"/><verse number="38" style="v" sid="MRK 4:38"/>ኢየሱስ ግን ትራስ ተንተርሶ ከጀልባዋ በስተ ኋላ በኩል ተኝቶ ነበር። እነርሱም ቀስቅሰውት፣ “መምህር ሆይ፤ ስናልቅ አይገድህምን?” አሉት።<verse eid="MRK 4:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="MRK 4:39"/>እርሱም ተነሥቶ ነፋሱን ገሠጸው፤ ባሕሩንም፣ <char style="wj">“ጸጥ፣ ረጭ በል!”</char> አለው። ነፋሱም ጸጥ፣ ረጭ አለ፤ ፍጹምም ጸጥታ ሆነ።<verse eid="MRK 4:39"/></para>
+  <para style="p">
+    <verse number="40" style="v" sid="MRK 4:40"/>ደቀ መዛሙርቱንም፣ <char style="wj">“ስለ ምን እንዲህ ፈራችሁ? እስከዚህ እምነት የላችሁምን?”</char> አላቸው።<verse eid="MRK 4:40"/></para>
+  <para style="p">
+    <verse number="41" style="v" sid="MRK 4:41"/>እነርሱም በፍርሀት ተውጠው እርስ በርሳቸው፣ “ነፋሱም ሞገዱም የሚታዘዙለት ይህ ማን ነው?” ተባባሉ።<verse eid="MRK 4:41"/></para>
+  <chapter eid="MRK 4"/>
+  <chapter number="5" style="c" sid="MRK 5"/>
+  <para style="s1">አጋንንት ያደሩበት ሰው መፈወሱ</para>
+  <para style="sr">
+    <ref loc="MRK 5:1-17">5፥1-17</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 8:28-34">ማቴ 8፥28-34</ref>፤ <ref loc="LUK 8:26-37">ሉቃ 8፥26-37</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 5:18-20">5፥18-20</ref> ተጓ ምብ – <char style="xt"><ref loc="LUK 8:38">ሉቃ 8፥38</ref>፡<ref loc="LUK 8:39">39</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 5:1"/>ባሕሩን ተሻግረው ጌራሴኖን<note caller="+" style="f"><char style="fr" closed="false">5፥1 </char><char style="ft" closed="false">አንዳንድ ቅጆች ደግሞ </char><char style="fqa" closed="false">ጌርጌሴኖን </char><char style="ft" closed="false">ይላሉ።</char></note> ወደ ተባለ አገር መጡ። <verse eid="MRK 5:1"/><verse number="2" style="v" sid="MRK 5:2"/>ኢየሱስ ከጀልባ እንደ ወረደ፣ ርኩስ<note caller="+" style="f"><char style="fr" closed="false">5፥2 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">ክፉ</char><char style="ft" closed="false">፤ እንዲሁም 8 እና 13 ይመ</char></note> መንፈስ ያደረበት ሰው ከመቃብር ቦታ ወጥቶ ሊገናኘው ወደ እርሱ መጣ። <verse eid="MRK 5:2"/><verse number="3" style="v" sid="MRK 5:3"/>ይህ ሰው በመቃብር ቦታ ውስጥ የሚኖርና ማንም በሰንሰለት እንኳ ሊያስረው የማይችል ነበር። <verse eid="MRK 5:3"/><verse number="4" style="v" sid="MRK 5:4"/>ብዙ ጊዜ በእግር ብረትና በሰንሰለት ይታሰር ነበር፤ ነገር ግን የእጅ ሰንሰለቱን ይበጥስ፣ የእግር ብረቱንም ይሰብር ነበር። ማንም ይዞ ሊያቈየው የሚችል አልነበረም።<verse eid="MRK 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="MRK 5:5"/>በመቃብሮቹና በተራራዎቹ መካከል ቀንና ሌሊት እየተዘዋወረ በመጮኽ ሰውነቱን በድንጋይ ይቈራርጥ ነበር።<verse eid="MRK 5:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="MRK 5:6"/>ይህም ሰው ኢየሱስን ከሩቅ ባየው ጊዜ ወደ እርሱ ሮጦ ከፊቱ ተንበርክኮ ሰገደለት፤ <verse eid="MRK 5:6"/><verse number="7" style="v" sid="MRK 5:7"/>በታላቅ ድምፅ ጮኾም፣ “አንተ የልዑል እግዚአብሔር ልጅ ኢየሱስ ሆይ፤ ከእኔ ምን አለህ? እንዳታሠቃየኝ በእግዚአብሔር ይዤሃለሁ” አለው። <verse eid="MRK 5:7"/><verse number="8" style="v" sid="MRK 5:8"/>ይህንም ያለው ኢየሱስ፣ <char style="wj">“አንተ ርኩስ መንፈስ ከዚህ ሰው ውጣ!”</char> ብሎት ስለ ነበር ነው።<verse eid="MRK 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="MRK 5:9"/>ከዚያም ኢየሱስ፣ <char style="wj">“ስምህ ማን ነው?”</char> ብሎ ጠየቀው።</para>
+  <para style="p" vid="MRK 5:9">“ብዙ ነንና ስሜ ሌጌዎን ነው” አለው። <verse eid="MRK 5:9"/><verse number="10" style="v" sid="MRK 5:10"/>ከአገር እንዳያስወጣቸውም አጥብቆ ለመነው።<verse eid="MRK 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="MRK 5:11"/>በአቅራቢያውም በሚገኝ ኰረብታ ላይ ትልቅ የዐሣማ መንጋ ተሰማርቶ ነበር። <verse eid="MRK 5:11"/><verse number="12" style="v" sid="MRK 5:12"/>ርኩሳን መናፍስቱም ኢየሱስን፣ “ወደ ዐሣማዎቹ ስደደን፤ እንድንገባባቸውም ፍቀድልን” ብለው ለመኑት። <verse eid="MRK 5:12"/><verse number="13" style="v" sid="MRK 5:13"/>እርሱም ፈቀደላቸው። ርኩሳን መናፍስቱም ወጥተው በዐሣማዎቹ ገቡባቸው፤ ሁለት ሺሕ ያህል ዐሣማዎችም በገደሉ አፋፍ በመንደርደር ቍልቍል ወርደው በባሕር ውስጥ ሰጠሙ።<verse eid="MRK 5:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="MRK 5:14"/>እረኞቹ ሸሽተው ሄዱ፤ ወሬውን በከተማና በገጠር አዳረሱት፤ ሕዝቡም የሆነውን ለማየት ካለበት ወጣ። <verse eid="MRK 5:14"/><verse number="15" style="v" sid="MRK 5:15"/>ወደ ኢየሱስም በመጡ ጊዜ፣ የአጋንንት ሰራዊት ዐድረውበት የነበረው ሰው፣ ልብስ ለብሶና አእምሮው ተመልሶለት በዚያ ተቀምጦ አዩት፤ ፈሩም። <verse eid="MRK 5:15"/><verse number="16" style="v" sid="MRK 5:16"/>ይህን ያዩ ሰዎችም አጋንንት ስላደረበት ሰው የተደረገውንና ስለ ዐሣማዎቹም ለሕዝቡ አወሩ። <verse eid="MRK 5:16"/><verse number="17" style="v" sid="MRK 5:17"/>ከዚያም ሕዝቡ አገራቸውን ለቅቆ እንዲሄድላቸው ኢየሱስን ይለምኑት ጀመር።<verse eid="MRK 5:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="MRK 5:18"/>ኢየሱስ ወደ ጀልባዪቱ በሚገባበት ጊዜ፣ አጋንንት ዐድሮበት የነበረው ሰው አብሮት ለመሄድ ለመነው። <verse eid="MRK 5:18"/><verse number="19" style="v" sid="MRK 5:19"/>ኢየሱስ አልፈቀደለትም፤ ነገር ግን፣ <char style="wj">“ወደ ቤትህ ሂድ፣ ለዘመዶችህም ጌታ ምን ያህል ታላቅ ነገር እንዳደረገልህና ያሳየህን ምሕረት ንገራቸው”</char> አለው። <verse eid="MRK 5:19"/><verse number="20" style="v" sid="MRK 5:20"/>ሰውየውም ሄደ፤ ኢየሱስ ያደረገለትን ነገር ሁሉ ዐሥር ከተማ<note caller="+" style="f"><char style="fr" closed="false">5፥20 </char><char style="fq" closed="false">ዐሥር ከተማ </char><char style="ft" closed="false">የሚባለውን አካባቢ ግሪኩ </char><char style="fqa" closed="false">ዴካፖሊስ </char><char style="ft" closed="false">ይለዋል።</char></note> በተባለው አገር ያወራ ጀመር፤ የሰሙትም ሁሉ ተደነቁ።<verse eid="MRK 5:20"/></para>
+  <para style="s1">የሞተችው ልጅና የታመመችው ሴት</para>
+  <para style="sr">
+    <ref loc="MRK 5:22-43">5፥22-43</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 9:18-26">ማቴ 9፥18-26</ref>፤ <ref loc="LUK 8:41-56">ሉቃ 8፥41-56</ref></char></para>
+  <para style="p">
+    <verse number="21" style="v" sid="MRK 5:21"/>ኢየሱስ እንደ ገና በጀልባ ወደ ማዶ በተሻገረ ጊዜ፣ ብዙ ሕዝብ በዙሪያው ተሰባሰበ፤ በባሕሩ ዳርቻም እንዳለ፣ <verse eid="MRK 5:21"/><verse number="22" style="v" sid="MRK 5:22"/>ከምኵራብ አለቆች አንዱ ኢያኢሮስ የተባለው ወደዚያ መጥቶ ስለ ነበር፣ ኢየሱስን ባየው ጊዜ በእግሩ ላይ ወድቆ፣ <verse eid="MRK 5:22"/><verse number="23" style="v" sid="MRK 5:23"/>“ትንሿ ልጄ በሞት አፋፍ ላይ ናትና ድና በሕይወት እንድትኖር መጥተህ እጅህን ጫንባት” በማለት አጥብቆ ለመነው። <verse eid="MRK 5:23"/><verse number="24" style="v" sid="MRK 5:24"/>ኢየሱስም አብሮት ሄደ።</para>
+  <para style="p" vid="MRK 5:24">ብዙ ሕዝብም ዙሪያውን እያጨናነቀው ተከተለው። <verse eid="MRK 5:24"/><verse number="25" style="v" sid="MRK 5:25"/>ዐሥራ ሁለት ዓመት ደም ሲፈስሳት የኖረችም ሴት በዚያ ነበረች፤ <verse eid="MRK 5:25"/><verse number="26" style="v" sid="MRK 5:26"/>በብዙ ባለ መድኀኒቶች ዘንድ በመንከራተት ያላትን ሁሉ ብትጨርስም፣ ሕመሙ ባሰባት እንጂ አልተሻላትም ነበር። <verse eid="MRK 5:26"/><verse number="27" style="v" sid="MRK 5:27"/>ስለ ኢየሱስም በሰማች ጊዜ፣ ከበስተ ኋላው በሰዎች መካከል መጥታ ልብሱን ነካች፤ <verse eid="MRK 5:27"/><verse number="28" style="v" sid="MRK 5:28"/>ምክንያቱም፣ “እንደ ምንም ብዬ ልብሱን ብቻ እንኳ ብነካ እፈወሳለሁ” የሚል እምነት ነበራት። <verse eid="MRK 5:28"/><verse number="29" style="v" sid="MRK 5:29"/>የሚፈስሰው ደሟ ወዲያውኑ ቆመ፤ ከሥቃይዋ መገላገሏም በሰውነቷ ታወቃት።<verse eid="MRK 5:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="MRK 5:30"/>ወዲያውኑ ኢየሱስ፣ ኀይል ከእርሱ እንደ ወጣ ዐውቆ፤ ወደ ሕዝቡ ዘወር በማለት፣ <char style="wj">“ልብሴን የነካው ማን ነው?”</char> አለ።<verse eid="MRK 5:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="MRK 5:31"/>ደቀ መዛሙርቱም፣ “ሕዝቡ ተጨናንቆ ሲጋፋህ እያየህ፣ <char style="wj">‘ማን ነው የነካኝ?’</char> እንዴት ትላለህ?” አሉት።<verse eid="MRK 5:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="MRK 5:32"/>ኢየሱስ ግን ይህን ያደረገው ማን እንደ ሆነ ለማየት ዙሪያውን ተመለከተ። <verse eid="MRK 5:32"/><verse number="33" style="v" sid="MRK 5:33"/>ሴትዮዋም ምን እንደ ተደረገላት ባወቀች ጊዜ እየፈራችና እየተንቀጠቀጠች መጥታ በፊቱ ተደፋች፤ እውነቱንም ሁሉ ነገረችው። <verse eid="MRK 5:33"/><verse number="34" style="v" sid="MRK 5:34"/>እርሱም፣ <char style="wj">“ልጄ ሆይ፤ እምነትሽ አድኖሻል፤ በሰላም ሂጂ፤ ከሥቃይሽም ዕረፊ”</char> አላት።<verse eid="MRK 5:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="MRK 5:35"/>ኢየሱስም በመነጋገር ላይ እያለ፣ ሰዎች ከምኵራቡ አለቃ ከኢያኢሮስ ቤት መጥተው፣ “ልጅህ ሞታለች፤ ከእንግዲህ መምህሩን ለምን ታደክመዋለህ?” አሉት።<verse eid="MRK 5:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="MRK 5:36"/>ኢየሱስ ግን ሰዎቹ የተናገሩትን ችላ በማለት የምኵራቡን አለቃ፣ <char style="wj">“እመን ብቻ እንጂ አትፍራ፤”</char> አለው።<verse eid="MRK 5:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="MRK 5:37"/>ከጴጥሮስና ከያዕቆብ እንዲሁም ከያዕቆብ ወንድም ከዮሐንስ በቀር ማንም እንዲከተለው አልፈቀደም። <verse eid="MRK 5:37"/><verse number="38" style="v" sid="MRK 5:38"/>ወደ ምኵራቡ አለቃ ቤት እንደ ደረሱ፣ ኢየሱስ ግርግሩንና ሰዎቹም ዋይ ዋይ እያሉ አምርረው ሲያለቅሱ ተመለከተ። <verse eid="MRK 5:38"/><verse number="39" style="v" sid="MRK 5:39"/>ወደ ቤትም ገብቶ፣ <char style="wj">“ይህ ሁሉ ግርግርና ልቅሶ ምንድን ነው? ብላቴናዪቱ ተኝታለች እንጂ አልሞተችም”</char> አላቸው። <verse eid="MRK 5:39"/><verse number="40" style="v" sid="MRK 5:40"/>ሰዎቹ ግን ሣቁበት።</para>
+  <para style="p" vid="MRK 5:40">ሰዎቹን ሁሉ ከቤት ካስወጣ በኋላ፣ የብላቴናዪቱን አባትና እናት እንዲሁም አብረውት የመጡትን ደቀ መዛሙርት አስከትሎ ብላቴናዪቱ ወዳለችበት ገባ። <verse eid="MRK 5:40"/><verse number="41" style="v" sid="MRK 5:41"/>ከዚያም የብላቴናዪቱን እጅ ይዞ፣ <char style="wj">“ጣሊታ ቁሚ!”</char> አላት፤ ትርጕሙም፣ <char style="wj">“አንቺ ልጅ ተነሺ”</char> ማለት ነው። <verse eid="MRK 5:41"/><verse number="42" style="v" sid="MRK 5:42"/>ብላቴናዪቱም ወዲያውኑ ተነሥታ ቆመች፤ ወዲያ ወዲህም ሄደች። ዕድሜዋም ዐሥራ ሁለት ዓመት ነበር። ሰዎቹም በሁኔታው እጅግ ተደነቁ። <verse eid="MRK 5:42"/><verse number="43" style="v" sid="MRK 5:43"/>እርሱም ይህን ነገር ማንም እንዳያውቅ አጥብቆ አስጠነቀቃቸው፤ የሚበላ ነገር እንዲሰጧትም ነገራቸው።<verse eid="MRK 5:43"/></para>
+  <chapter eid="MRK 5"/>
+  <chapter number="6" style="c" sid="MRK 6"/>
+  <para style="s1">ነቢይ በአገሩ አይከበርም</para>
+  <para style="sr">
+    <ref loc="MRK 6:1-6">6፥1-6</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 13:54-58">ማቴ 13፥54-58</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 6:1"/>ከዚህ በኋላ ኢየሱስ ከዚያ ተነሥቶ ወደ ገዛ አገሩ ሄደ፤ ደቀ መዛሙርቱም ተከተሉት። <verse eid="MRK 6:1"/><verse number="2" style="v" sid="MRK 6:2"/>ሰንበትም በደረሰ ጊዜ፣ በምኵራብ ያስተምር ጀመር፤ የሰሙትም ብዙ ሰዎች ተደነቁ።</para>
+  <para style="p" vid="MRK 6:2">እነርሱም እንዲህ አሉ፤ “ይህ ሰው እነዚህን ነገሮች ከየት አገኛቸው? ይህ የተሰጠው ጥበብ ምንድን ነው? ደግሞም እነዚህ ታምራት እንዴት በእጁ ይደረጋሉ! <verse eid="MRK 6:2"/><verse number="3" style="v" sid="MRK 6:3"/>ይህ ዐናጢው አይደለምን? የማርያም ልጅ፣ የያዕቆብና የዮሴፍ<note caller="+" style="f"><char style="fr" closed="false">6፥3 </char><char style="ft" closed="false">ግሪኩ </char><char style="fqa" closed="false">ዮሴስ </char><char style="ft" closed="false">ይላል።</char></note>፣ የይሁዳና የስምዖን ወንድም አይደለምን? እኅቶቹስ እዚሁ እኛው ዘንድ አይደሉምን?” ከዚህም የተነሣ ተሰናከሉበት።<verse eid="MRK 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="MRK 6:4"/>ኢየሱስም፣ <char style="wj">“ነቢይ የማይከበረው በገዛ አገሩ፣ በዘመዶቹ መካከልና በቤተ ሰቡ ዘንድ ብቻ ነው”</char> አላቸው። <verse eid="MRK 6:4"/><verse number="5" style="v" sid="MRK 6:5"/>እዚያም በጥቂት ሕመምተኞች ላይ እጁን ጭኖ ከመፈወሱ በስተቀር ምንም ታምራት ሊሠራ አልቻለም፤ <verse eid="MRK 6:5"/><verse number="6" style="v" sid="MRK 6:6"/>ባለ ማመናቸውም ተደነቀ።</para>
+  <para style="s1" vid="MRK 6:6">ኢየሱስ ዐሥራ ሁለቱን ላከ</para>
+  <para style="sr" vid="MRK 6:6">
+    <ref loc="MRK 6:7-11">6፥7-11</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 10:1">ማቴ 10፥1</ref>፡<ref loc="MAT 10:9-14">9-14</ref>፤ <ref loc="LUK 9:1">ሉቃ 9፥1</ref>፡<ref loc="LUK 9:3-5">3-5</ref></char></para>
+  <para style="p" vid="MRK 6:6">ከዚያም ኢየሱስ በየመንደሩ እየተዘዋወረ ያስተምር ነበር። <verse eid="MRK 6:6"/><verse number="7" style="v" sid="MRK 6:7"/>ዐሥራ ሁለቱን ወደ እርሱ ጠርቶ፣ ሁለት ሁለቱን ላካቸው፤ በርኩሳን<note caller="+" style="f"><char style="fr" closed="false">6፥7 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">ክፉ</char></note> መናፍስትም ላይ ሥልጣን ሰጣቸው።<verse eid="MRK 6:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="MRK 6:8"/>ይህንም ትእዛዝ ሰጣቸው፤ <char style="wj">“ለመንገዳችሁ ከበትር በስተቀር፣ እንጀራ ወይም ከረጢት ወይም ደግሞ ገንዘብ በመቀነታችሁ አትያዙ፤</char> <verse eid="MRK 6:8"/><verse number="9" style="v" sid="MRK 6:9"/><char style="wj">ጫማ አድርጉ፤ ነገር ግን ሁለት እጀ ጠባብ አትልበሱ፤</char> <verse eid="MRK 6:9"/><verse number="10" style="v" sid="MRK 6:10"/><char style="wj">ወደ አንድ ቤት በምትገቡበት ጊዜ ከዚያች ከተማ እስክትወጡ ድረስ እዚያው ቈዩ፤</char> <verse eid="MRK 6:10"/><verse number="11" style="v" sid="MRK 6:11"/><char style="wj">የትኛውም ቦታ የማይቀበላችሁ ወይም የማይሰማችሁ ከሆነ፣ ከዚያ ስፍራ ስትወጡ ምስክር እንዲሆንባቸው ከእግራችሁ ሥር ያለውን ትቢያ በዚያ አራግፉ።”</char><verse eid="MRK 6:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="MRK 6:12"/>እነርሱም ከዚያ ወጥተው፤ ሰዎች ንስሓ እንዲገቡ ሰበኩ፤ <verse eid="MRK 6:12"/><verse number="13" style="v" sid="MRK 6:13"/>ብዙ አጋንንት አስወጡ፤ ብዙ ሕመምተኞችንም ዘይት እየቀቡ ፈወሱ።<verse eid="MRK 6:13"/></para>
+  <para style="s1">የመጥምቁ ዮሐንስ መሰየፍ</para>
+  <para style="sr">
+    <ref loc="MRK 6:14-29">6፥14-29</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 14:1-12">ማቴ 14፥1-12</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 6:14-16">6፥14-16</ref> ተጓ ምብ – <char style="xt"><ref loc="LUK 9:7-9">ሉቃ 9፥7-9</ref></char></para>
+  <para style="p">
+    <verse number="14" style="v" sid="MRK 6:14"/>የኢየሱስ ስም እየታወቀ በመምጣቱ፣ ንጉሥ ሄሮድስ ይህንኑ ሰማ። አንዳንዶችም፣ “የዚህ ዐይነት ታምር በእርሱ የሚሠራው መጥምቁ ዮሐንስ ከሙታን ቢነሣ ነው” ይሉ ነበር<note caller="+" style="f"><char style="fr" closed="false">6፥14 </char><char style="ft" closed="false">አንዳንድ ቅጆች </char><char style="fqa" closed="false">ይል ነበር </char><char style="ft" closed="false">ይላሉ።</char></note>።<verse eid="MRK 6:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="MRK 6:15"/>ሌሎቹም፣ “ኤልያስ ነው” አሉ።</para>
+  <para style="p" vid="MRK 6:15">አንዳንዶች ደግሞ፣ “ከቀደምት ነቢያት እንደ አንዱ ነቢይ ነው” ይሉ ነበር።<verse eid="MRK 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="MRK 6:16"/>ሄሮድስ ነገሩን ሲሰማ ግን፣ “እኔ ራሱን ያስቈረጥሁት ዮሐንስ ከሙታን ተነሥቷል!” አለ።<verse eid="MRK 6:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="MRK 6:17"/>ሄሮድስ ራሱ የወንድሙን የፊልጶስን ሚስት ሄሮድያዳን በማግባቱ ምክንያት፣ ተይዞ እንዲታሰር ትእዛዝ በመስጠት ዮሐንስን ወህኒ ቤት አስገብቶት ነበር። <verse eid="MRK 6:17"/><verse number="18" style="v" sid="MRK 6:18"/>ዮሐንስ ሄሮድስን፣ “የወንድምህን ሚስት ታገባት ዘንድ ሕግ ይከለክልሃል” ይለው ነበርና። <verse eid="MRK 6:18"/><verse number="19" style="v" sid="MRK 6:19"/>ሄሮድያዳም በዚህ ቂም ይዛበት ልታስገድለው ፈለገች፤ ነገር ግን አልሆነላትም። <verse eid="MRK 6:19"/><verse number="20" style="v" sid="MRK 6:20"/>ምክንያቱም ዮሐንስ ጻድቅና ቅዱስ ሰው መሆኑን ሄሮድስ በማወቁ ይፈራውና ይጠብቀው ነበር። ዮሐንስ የሚናገረውን ሲሰማ ሄሮድስ ቢታወክም<note caller="+" style="f"><char style="fr" closed="false">6፥20 </char><char style="ft" closed="false">አንዳንድ የጥንት ቅጆች </char><char style="fqa" closed="false">ብዙ ነገር ያደርግ ነበር </char><char style="ft" closed="false">ይላሉ።</char></note> በደስታ ያደምጠው ነበር።<verse eid="MRK 6:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="MRK 6:21"/>በመጨረሻም አመቺ ቀን መጣ። ሄሮድስ በተወለደበት ዕለት ለከፍተኛ ሹማምቱ፣ ለጦር አዛዦቹና በገሊላ ለታወቁ ታላላቅ ሰዎች ግብዣ አደረገ። <verse eid="MRK 6:21"/><verse number="22" style="v" sid="MRK 6:22"/>የሄሮድያዳም ልጅ ገብታ በዘፈነች ጊዜ ሄሮድስንና ተጋባዦቹን ደስ አሰኘቻቸው። ንጉሡም ብላቴናዪቱን፣ “የምትፈልጊውን ሁሉ ጠይቂኝ እሰጥሻለሁ” አላት። <verse eid="MRK 6:22"/><verse number="23" style="v" sid="MRK 6:23"/>ደግሞም “እስከ መንግሥቴ እኩሌታ ድረስ እንኳ ቢሆን፣ የምትጠይቂኝን ሁሉ እሰጥሻለሁ” ሲል በመሐላ ቃል ገባላት።<verse eid="MRK 6:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="MRK 6:24"/>እርሷም ወጥታ እናቷን፣ “ምን ልለምነው?” አለቻት።</para>
+  <para style="p" vid="MRK 6:24">እናቷም፣ “የመጥምቁ ዮሐንስን ራስ” አለቻት።<verse eid="MRK 6:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="MRK 6:25"/>ብላቴናዪቱም ወዲያው ፈጥና ወደ ንጉሡ በመመለስ፣ “የመጥምቁ ዮሐንስን ራስ አሁን በሳሕን እንድትሰጠኝ እፈልጋለሁ” አለችው።<verse eid="MRK 6:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="MRK 6:26"/>ንጉሡ በነገሩ እጅግ ዐዘነ፤ በተጋበዙት እንግዶች ፊት የመሐላ ቃሉን ለማጠፍ አልፈለገም። <verse eid="MRK 6:26"/><verse number="27" style="v" sid="MRK 6:27"/>ስለዚህ አንዱን ወታደር በፍጥነት ልኮ፣ የዮሐንስን ራስ ቈርጦ እንዲያመጣ አዘዘው፤ እርሱም ሄዶ በወህኒ ቤቱ ውስጥ ራሱን ቈረጠ፤ <verse eid="MRK 6:27"/><verse number="28" style="v" sid="MRK 6:28"/>በሳሕን አምጥቶ ለብላቴናዪቱ ሰጣት፤ ብላቴናዪቱም ለእናቷ ሰጠች። <verse eid="MRK 6:28"/><verse number="29" style="v" sid="MRK 6:29"/>የዮሐንስ ደቀ መዛሙርትም ይህን እንደ ሰሙ መጡ፤ ሬሳውንም ወስደው ቀበሩት።<verse eid="MRK 6:29"/></para>
+  <para style="s1">ኢየሱስ አምስት ሺሕ ሰዎች መገበ</para>
+  <para style="sr">
+    <ref loc="MRK 6:32-44">6፥32-44</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 14:13-21">ማቴ 14፥13-21</ref>፤ <ref loc="LUK 9:10-17">ሉቃ 9፥10-17</ref>፤ <ref loc="JHN 6:5-13">ዮሐ 6፥5-13</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 6:32-44">6፥32-44</ref> ተጓ ምብ – <char style="xt"><ref loc="MRK 8:2-9">ማር 8፥2-9</ref></char></para>
+  <para style="p">
+    <verse number="30" style="v" sid="MRK 6:30"/>ሐዋርያትም በኢየሱስ ዙሪያ ተሰብስበው የሠሩትንና ያስተማሩትን ሁሉ ነገሩት። <verse eid="MRK 6:30"/><verse number="31" style="v" sid="MRK 6:31"/>ብዙ ሰዎች ይመጡና ይሄዱ ስለ ነበር ምግብ እንኳ ለመብላት ጊዜ ስላልነበራቸው፣ <char style="wj">“እስቲ ብቻችሁን ከእኔ ጋር ወደ አንድ ገለልተኛ ስፍራ እንሂድና ጥቂት ዕረፉ”</char> አላቸው።<verse eid="MRK 6:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="MRK 6:32"/>ስለዚህ ብቻቸውን ወደ አንድ ገለልተኛ ስፍራ በጀልባ ሄዱ። <verse eid="MRK 6:32"/><verse number="33" style="v" sid="MRK 6:33"/>እነርሱም ሲሄዱ ብዙ ሰዎች አይተው ዐወቋቸው፤ ከከተሞችም ሁሉ በእግር እየሮጡ ቀድመዋቸው ደረሱ። <verse eid="MRK 6:33"/><verse number="34" style="v" sid="MRK 6:34"/>ኢየሱስ ከጀልባዋ በሚወርድበት ጊዜ ብዙ ሕዝብ ተሰብስቦ አየ፤ እረኛ እንደሌላቸው በጎች ስለ ነበሩም ዐዘነላቸው፤ ብዙ ነገርም ያስተምራቸው ጀመር።<verse eid="MRK 6:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="MRK 6:35"/>በዚህ ጊዜ ቀኑ እየመሸ በመሄዱ ደቀ መዛሙርቱ ወደ እርሱ ቀርበው እንዲህ አሉት፤ “ይህ ቦታ ምድረ በዳ ነው፤ ቀኑም መሽቷል፤ <verse eid="MRK 6:35"/><verse number="36" style="v" sid="MRK 6:36"/>በአካባቢው ሰው ወዳለበት መንደር ሄደው የሚበላ ነገር ገዝተው እንዲመገቡ ሕዝቡን አሰናብታቸው።”<verse eid="MRK 6:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="MRK 6:37"/>እርሱ ግን መልሶ፣ <char style="wj">“የሚበሉትን እናንተው ስጧቸው”</char> አላቸው።</para>
+  <para style="p" vid="MRK 6:37">እነርሱም፣ “ሄደን በሁለት መቶ ዲናር እንጀራ ገዝተን የሚበሉትን እንስጣቸውን?” አሉት።<verse eid="MRK 6:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="MRK 6:38"/>እርሱም፣ <char style="wj">“ስንት እንጀራ አላችሁ? እስቲ ሄዳችሁ እዩ”</char> አላቸው።</para>
+  <para style="p" vid="MRK 6:38">አይተውም፣ “አምስት እንጀራና ሁለት ዓሣ” አሉት።<verse eid="MRK 6:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="MRK 6:39"/>ከዚያም፣ ሕዝቡን በለመለመ ሣር ላይ በቡድን በቡድን እንዲያስቀምጡ አዘዛቸው። <verse eid="MRK 6:39"/><verse number="40" style="v" sid="MRK 6:40"/>ሕዝቡም መቶ መቶና አምሳ አምሳ ሆነው በቡድን በቡድን ተቀመጡ። <verse eid="MRK 6:40"/><verse number="41" style="v" sid="MRK 6:41"/>እርሱም አምስቱን እንጀራና ሁለቱን ዓሣ ይዞ ወደ ሰማይ በማየት ባረከ፤ እንጀራውንም ቈርሶ እንዲያቀርቡላቸው ለደቀ መዛሙርቱ ሰጠ፤ ሁለቱንም ዓሣ ለሁሉም አካፈለ። <verse eid="MRK 6:41"/><verse number="42" style="v" sid="MRK 6:42"/>ሁሉም በልተው ጠገቡ፤ <verse eid="MRK 6:42"/><verse number="43" style="v" sid="MRK 6:43"/>ደቀ መዛሙርቱም ከተበላው እንጀራና ዓሣ፣ ዐሥራ ሁለት መሶብ ሙሉ ፍርፋሪ አነሡ። <verse eid="MRK 6:43"/><verse number="44" style="v" sid="MRK 6:44"/>እንጀራውንም የበሉት አምስት ሺሕ ወንዶች ነበሩ።<verse eid="MRK 6:44"/></para>
+  <para style="s1">ኢየሱስ በባሕር ላይ በእግሩ ሄደ</para>
+  <para style="sr">
+    <ref loc="MRK 6:45-51">6፥45-51</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 14:22-32">ማቴ 14፥22-32</ref>፤ <ref loc="JHN 6:15-21">ዮሐ 6፥15-21</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 6:53-56">6፥53-56</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 14:34-36">ማቴ 14፥34-36</ref></char></para>
+  <para style="p">
+    <verse number="45" style="v" sid="MRK 6:45"/>ወዲያውም እርሱ ሕዝቡን እያሰናበተ ሳለ፣ ደቀ መዛሙርቱ በጀልባ ወደ ቤተ ሳይዳ ቀድመውት እንዲሻገሩ አዘዛቸው፤ <verse eid="MRK 6:45"/><verse number="46" style="v" sid="MRK 6:46"/>ከዚያም ትቷቸው ሊጸልይ ወደ ተራራ ወጣ።<verse eid="MRK 6:46"/></para>
+  <para style="p">
+    <verse number="47" style="v" sid="MRK 6:47"/>በመሸም ጊዜ ጀልባዋ ባሕሩ መካከል ነበረች፤ እርሱም ብቻውን በምድር ላይ ነበር። <verse eid="MRK 6:47"/><verse number="48" style="v" sid="MRK 6:48"/>ነፋስ በርትቶባቸው ስለ ነበር፣ ደቀ መዛሙርቱ ከመቅዘፊያው ጋር ሲታገሉ አያቸው፤ በአራተኛውም ክፍለ ሌሊት ገደማ፣ በባሕር ላይ እየሄደ ወደ እነርሱ መጣ፤ በአጠገባቸውም ዐልፎ ሊሄድ ነበር። <verse eid="MRK 6:48"/><verse number="49" style="v" sid="MRK 6:49"/>ነገር ግን በባሕር ላይ ሲሄድ ባዩት ጊዜ ምትሀት መስሏቸው ጮኹ፤ <verse eid="MRK 6:49"/><verse number="50" style="v" sid="MRK 6:50"/>ሁሉም እርሱን ባዩት ጊዜ ደንግጠው ነበርና። እርሱም ወዲያውኑ አነጋገራቸውና፣ <char style="wj">“አይዟችሁ እኔ ነኝ፤ አትፍሩ!”</char> አላቸው። <verse eid="MRK 6:50"/><verse number="51" style="v" sid="MRK 6:51"/>እርሱም በጀልባዋ ላይ ወጥቶ አብሯቸው ሆነ፤ ነፋሱም ተወ፤ እነርሱም እጅግ ተደነቁ። <verse eid="MRK 6:51"/><verse number="52" style="v" sid="MRK 6:52"/>የእንጀራውን ታምር አላስተዋሉም ነበርና፤ ልባቸውም ደንድኖ ነበር።<verse eid="MRK 6:52"/></para>
+  <para style="p">
+    <verse number="53" style="v" sid="MRK 6:53"/>በተሻገሩም ጊዜ፣ ጌንሴሬጥ ደርሰው ወረዱ፤ ጀልባዋንም እዚያው አቆሙ። <verse eid="MRK 6:53"/><verse number="54" style="v" sid="MRK 6:54"/>ወዲያው እንደ ወረዱም፣ ሕዝቡ ኢየሱስን ዐወቁት፤ <verse eid="MRK 6:54"/><verse number="55" style="v" sid="MRK 6:55"/>ወደ አካባቢውም ሁሉ በመሮጥ ሕመምተኞችን በዐልጋ ላይ እየተሸከሙ እርሱ ወደሚገኝበት ስፍራ ሁሉ ያመጡ ነበር። <verse eid="MRK 6:55"/><verse number="56" style="v" sid="MRK 6:56"/>በየደረሰበት መንደር ወይም ከተማ ወይም ገጠር ሁሉ ሕመምተኞችን በየአደባባዩ እያስቀመጡ የልብሱን ጫፍ እንኳ ለመንካት ይለምኑት ነበር፤ የነኩትም ሁሉ ይድኑ ነበር።<verse eid="MRK 6:56"/></para>
+  <chapter eid="MRK 6"/>
+  <chapter number="7" style="c" sid="MRK 7"/>
+  <para style="s1">ኢየሱስ የአይሁድን ውጫዊ ሥርዐት ተቃወመ</para>
+  <para style="sr">
+    <ref loc="MRK 7:1-23">7፥1-23</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 15:1-20">ማቴ 15፥1-20</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 7:1"/>ከዚህ በኋላ ፈሪሳውያንና ከኢየሩሳሌም የመጡ አንዳንድ ጸሐፍት በዙሪያው ተሰበሰቡ፤ <verse eid="MRK 7:1"/><verse number="2" style="v" sid="MRK 7:2"/>ከደቀ መዛሙርቱም አንዳንዶቹ ባልነጻ ማለት ባልታጠበ እጅ እንጀራ ሲበሉ አዩ፤ <verse eid="MRK 7:2"/><verse number="3" style="v" sid="MRK 7:3"/>ፈሪሳውያንና አይሁድ ሁሉ የአባቶችን ወግ ለመጠበቅ ሲሉ፣ በሥርዐቱ መሠረት እጃቸውን በጥንቃቄ ሳይታጠቡ አይበሉም ነበርና። <verse eid="MRK 7:3"/><verse number="4" style="v" sid="MRK 7:4"/>ከገበያ ሲመለሱም ታጥበው ራሳቸውን ካላነጹ በስተቀር አይበሉም ነበር። እንዲሁም ዋንጫን፣ ማሰሮን፣ ሳሕንና ዐልጋን<note caller="+" style="f"><char style="fr" closed="false">7፥4 </char><char style="ft" closed="false">አንዳንድ የጥንት ቅጆች </char><char style="fqa" closed="false">የማእድ ዐልጋ </char><char style="ft" closed="false">ይላሉ።</char></note> እንደ ማጠብ ያሉትን ሌሎችን ወጎች ይጠብቁ ነበር።<verse eid="MRK 7:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="MRK 7:5"/>ፈሪሳውያንና ጸሐፍትም፣ “ደቀ መዛሙርትህ እንደ አባቶች ወግ በመኖር ፈንታ ባልታጠበ እጃቸው ለምን እንጀራ ይበላሉ?” ብለው ጠየቁት።<verse eid="MRK 7:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="MRK 7:6"/>እርሱም እንዲህ ሲል መለሰ፤ <char style="wj">“ኢሳይያስ ስለ እናንተ፣ ስለ ግብዞች በትክክል ተንብዮአል፤ እንዲህ ተብሎ ተጽፏልና፤</char></para>
+  <para style="q1" vid="MRK 7:6">
+    <char style="wj">“ ‘ይህ ሕዝብ በከንፈሩ ያከብረኛል፤</char></para>
+  <para style="q2" vid="MRK 7:6">
+    <char style="wj">ልቡ ግን ከእኔ የራቀ ነው፤</char><verse eid="MRK 7:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="MRK 7:7"/>
+    <char style="wj">በከንቱ ያመልከኛል፤</char></para>
+  <para style="q2" vid="MRK 7:7">
+    <char style="wj">ትምህርታቸውም ሰው ሠራሽ ሥርዐት ብቻ ነው።’</char><verse eid="MRK 7:7"/></para>
+  <para style="m">
+    <verse number="8" style="v" sid="MRK 7:8"/>
+    <char style="wj">የእግዚአብሔርን ትእዛዝ ትታችሁ የሰዎችን ወግና ሥርዐት ታጠብቃላችሁ።”</char><verse eid="MRK 7:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="MRK 7:9"/>ደግሞም፣ እንዲህ አላቸው፤ <char style="wj">“የራሳችሁን ወግ ለመጠበቅ</char><note caller="+" style="f"><char style="fr" closed="false">7፥9 </char><char style="ft" closed="false">አንዳንድ ቅጆች </char><char style="fqa" closed="false">ለማቆም </char><char style="ft" closed="false">ይላሉ።</char></note> <char style="wj">ስትሉ፣ የእግዚአብሔርን ትእዛዝ የምትተዉበት ዘዴ አላችሁ።</char> <verse eid="MRK 7:9"/><verse number="10" style="v" sid="MRK 7:10"/><char style="wj">ሙሴ፣ ‘አባትህንና እናትህን አክብር፤ አባቱን ወይም እናቱን የሚሳደብ ፈጽሞ ይሙት’ ብሎ ነበርና፤</char> <verse eid="MRK 7:10"/><verse number="11" style="v" sid="MRK 7:11"/><char style="wj">እናንተ ግን አንድ ሰው አባቱን ወይም እናቱን፣ ከእኔ ማግኘት የሚገባችሁን ርዳታ ሁሉ ቍርባን፣ ይኸውም መባ አድርጌአለሁ ቢላቸው፣</char> <verse eid="MRK 7:11"/><verse number="12" style="v" sid="MRK 7:12"/><char style="wj">እናንተም ይህ ሰው ለአባቱም ሆነ ለእናቱ ከዚህ በኋላ ምንም ነገር እንዲያደርግ አትፈቅዱለትም።</char> <verse eid="MRK 7:12"/><verse number="13" style="v" sid="MRK 7:13"/><char style="wj">ስለዚህ ለትውልድ በምታስተላልፉት ወግ የእግዚአብሔርን ቃል ትሽራላችሁ፤ ይህን የመሰለም ብዙ ነገር ታደርጋላችሁ።”</char><verse eid="MRK 7:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="MRK 7:14"/>ደግሞም ኢየሱስ ሕዝቡን ወደ እርሱ ጠርቶ እንዲህ አላቸው፤ <char style="wj">“ስሙኝ፤ ሁላችሁም አስተውሉ፤</char> <verse eid="MRK 7:14"/><verse number="15" style="v" sid="MRK 7:15"/><char style="wj">ከውጭ ወደ ውስጥ ገብቶ ሰውን የሚያረክሰው አንዳች ነገር የለም፤ ይልቁን ሰውን የሚያረክሰው ከራሱ ወደ ውጭ የሚወጣው ነገር ነው፤</char> <verse eid="MRK 7:15"/><verse number="16" style="v" sid="MRK 7:16"/><char style="wj">ሰሚ ጆሮ ያለው ቢኖር ይስማ</char><note caller="+" style="f"><char style="fr" closed="false">7፥16 </char><char style="ft" closed="false">አንዳንድ የጥንት ቅጆች ይህ ቍጥር የላቸውም።</char></note><char style="wj">።”</char><verse eid="MRK 7:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="MRK 7:17"/>ሕዝቡን ትቶ ወደ ቤት ከገባ በኋላ ደቀ መዛሙርቱ ስለ ምሳሌው ጠየቁት። <verse eid="MRK 7:17"/><verse number="18" style="v" sid="MRK 7:18"/>እርሱም፣ <char style="wj">“እናንተም ነገሩ አይገባችሁምን? ከውጭ ወደ ሰው ገብቶ ሊያረክሰው የሚችል አንዳች ነገር የለም፤</char> <verse eid="MRK 7:18"/><verse number="19" style="v" sid="MRK 7:19"/><char style="wj">ወደ ልቡ ሳይሆን ወደ ሆዱ ይገባል፤ ከዚያም ከሰውነቱ ይወጣልና።”</char> ኢየሱስ ይህን በማለቱ ምግብ ሁሉ ንጹሕ መሆኑን ገለጠ።<verse eid="MRK 7:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="MRK 7:20"/>ቀጥሎም፣ እንዲህ አለ፤ <char style="wj">“ከሰው የሚወጣ ያ ሰውን ያረክሰዋል፤</char> <verse eid="MRK 7:20"/><verse number="21" style="v" sid="MRK 7:21"/><char style="wj">ከውስጥ፣ ከሰው ልብ የሚወጡት ክፉ ሐሳብ፣ ምንዝር፣ ስርቆት፤ ሰው መግደል፣ ዝሙት፣</char> <verse eid="MRK 7:21"/><verse number="22" style="v" sid="MRK 7:22"/><char style="wj">መስገብገብ፣ ክፋት፣ ማታለል፣ መዳራት፣ ምቀኝነት፣ ስም ማጥፋት፣ ትዕቢት፣ ስንፍና ናቸው።</char> <verse eid="MRK 7:22"/><verse number="23" style="v" sid="MRK 7:23"/><char style="wj">እነዚህ ክፉ ነገሮች ሁሉ ከሰው ይወጣሉ፤ ሰውንም ያረክሱታል።”</char><verse eid="MRK 7:23"/></para>
+  <para style="s1">ሲሮፊኒቃዊቷ ሴት</para>
+  <para style="sr">
+    <ref loc="MRK 7:24-30">7፥24-30</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 15:21-28">ማቴ 15፥21-28</ref></char></para>
+  <para style="p">
+    <verse number="24" style="v" sid="MRK 7:24"/>ከዚያ ተነሥቶ ወደ ጢሮስ<note caller="+" style="f"><char style="fr" closed="false">7፥24 </char><char style="ft" closed="false">አያሌ የጥንት ቅጆች </char><char style="fqa" closed="false">ጢሮስና ሲዶና </char><char style="ft" closed="false">የሚለው አላቸው።</char></note> አገር ሄደ፤ ወደ አንድ ቤት ገብቶ እዚያ መኖሩን ማንም እንዳያውቅበት ፈለገ፤ ሆኖም እዚያ መኖሩ ሊሸሸግ አልቻለም። <verse eid="MRK 7:24"/><verse number="25" style="v" sid="MRK 7:25"/>ወዲያው ግን ትንሺቱ ልጇ በርኩስ<note caller="+" style="f"><char style="fr" closed="false">7፥25 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">ክፉ</char></note> መንፈስ የተያዘችባት አንዲት ሴት ስለ እርሱ ሰምታ መጣችና በእግሩ ላይ ወደቀች። <verse eid="MRK 7:25"/><verse number="26" style="v" sid="MRK 7:26"/>ሴትዮዋም ግሪካዊት፣ በትውልዷም ሲሮፊኒቃዊት ነበረች። እርሷም ኢየሱስ ጋኔኑን ከልጇ እንዲያስወጣላት ለመነችው።<verse eid="MRK 7:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="MRK 7:27"/>እርሱ ግን፣ <char style="wj">“የልጆችን እንጀራ ወስዶ ለውሾች መጣል ተገቢ ስላልሆነ፣ መጀመሪያ ልጆቹ ጠግበው ይብሉ”</char> አላት።<verse eid="MRK 7:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="MRK 7:28"/>እርሷም መልሳ፣ “አዎን፣ ጌታ ሆይ፤ ውሾችም ከገበታ በታች ሆነው የልጆችን ትራፊ ይበላሉ” አለችው።<verse eid="MRK 7:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="MRK 7:29"/>እርሱም፣ <char style="wj">“ስለዚህ ይህን ስላልሽ ሂጂ፤ ጋኔኑ ከልጅሽ ወጥቷል”</char> አላት።<verse eid="MRK 7:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="MRK 7:30"/>እርሷም ወደ ቤቷ ስትመለስ ልጇ ዐልጋ ላይ ተኝታ፣ ጋኔኑም ለቅቋት አገኘቻት።<verse eid="MRK 7:30"/></para>
+  <para style="s1">የደንቈሮውና የድዳው መፈወስ</para>
+  <para style="sr">
+    <ref loc="MRK 7:31-37">7፥31-37</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 15:29-31">ማቴ 15፥29-31</ref></char></para>
+  <para style="p">
+    <verse number="31" style="v" sid="MRK 7:31"/>ከዚያም ኢየሱስ ከጢሮስ አገር ተነሥቶ፣ በሲዶና በኩል አድርጎ ዐሥር ከተማ<note caller="+" style="f"><char style="fr" closed="false">7፥31 </char><char style="ft" closed="false">የግሪኩ </char><char style="fqa" closed="false">ዴካፖሊስ </char><char style="ft" closed="false">ይለዋል።</char></note> በተባለው አገር በማለፍ ወደ ገሊላ ባሕር መጣ። <verse eid="MRK 7:31"/><verse number="32" style="v" sid="MRK 7:32"/>በዚያም ሰዎች ደንቈሮና ዲዳ የሆነ አንድ ሰው ወደ እርሱ አመጡ፤ እጁንም እንዲጭንበት ለመኑት።<verse eid="MRK 7:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="MRK 7:33"/>ኢየሱስም ሰውየውን ከሕዝቡ ለይቶ ከወሰደው በኋላ፣ ጣቶቹን በጆሮው አስገባ፤ ከዚያም እንትፍ ብሎ የሰውየውን ምላስ ዳሰሰ። <verse eid="MRK 7:33"/><verse number="34" style="v" sid="MRK 7:34"/>ወደ ሰማይም ተመልክቶ ቃተተና፣ <char style="wj">“ኤፍታህ!”</char> አለው፤ ይኸውም፣ <char style="wj">“ተከፈት”</char> ማለት ነው። <verse eid="MRK 7:34"/><verse number="35" style="v" sid="MRK 7:35"/>ወዲያውም ጆሮዎቹ ተከፈቱ፤ ምላሱም ተፈትቶ አጥርቶ መናገር ጀመረ።<verse eid="MRK 7:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="MRK 7:36"/>ኢየሱስ ይህን ለማንም እንዳይናገሩ አዘዛቸው፤ ሆኖም እርሱ እንዳይናገሩ ባዘዛቸው መጠን፣ ነገሩን አስፍተው አወሩት። <verse eid="MRK 7:36"/><verse number="37" style="v" sid="MRK 7:37"/>ሕዝቡም ከመጠን በላይ በመደነቅ፣ “ያደረገው ሁሉ ጥሩ ነው፤ ደንቈሮዎች እንዲሰሙ፣ ድዳዎች እንዲናገሩ እንኳ አድርጓል” አሉ።<verse eid="MRK 7:37"/></para>
+  <chapter eid="MRK 7"/>
+  <chapter number="8" style="c" sid="MRK 8"/>
+  <para style="s1">ኢየሱስ አራት ሺሕ ሰዎች መገበ</para>
+  <para style="sr">
+    <ref loc="MRK 8:1-9">8፥1-9</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 15:32-39">ማቴ 15፥32-39</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 8:1-9">8፥1-9</ref> ተጓ ምብ – <char style="xt"><ref loc="MRK 6:32-44">ማር 6፥32-44</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 8:11-21">8፥11-21</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 16:1-12">ማቴ 16፥1-12</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 8:1"/>በዚያን ጊዜ፣ እንደ ገና ብዙ ሕዝብ ተሰበሰበ። የሚበሉት ምንም ምግብ ስላልነበራቸው ደቀ መዛሙርቱን ወደ እርሱ ጠርቶ፣ እንዲህ አላቸው፤ <verse eid="MRK 8:1"/><verse number="2" style="v" sid="MRK 8:2"/><char style="wj">“ከእኔ ጋር ሦስት ቀን ስለ ቈዩና የሚበሉትም ስለሌላቸው እነዚህ ሰዎች ያሳዝኑኛል፤</char> <verse eid="MRK 8:2"/><verse number="3" style="v" sid="MRK 8:3"/><char style="wj">እንዲህ እንደ ተራቡ ወደ ቤታቸው ብሰድዳቸው አንዳንዶቹ ከሩቅ የመጡ ስለ ሆኑ በመንገድ ላይ ዝለው ይወድቃሉ።”</char><verse eid="MRK 8:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="MRK 8:4"/>ደቀ መዛሙርቱም መልሰው፣ “በዚህ ምድረ በዳ እነዚህን ለመመገብ የሚያስችል እንጀራ ከወዴት ይገኛል?” አሉት።<verse eid="MRK 8:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="MRK 8:5"/>እርሱም፣ <char style="wj">“ስንት እንጀራ አላችሁ?”</char> ብሎ ጠየቃቸው።</para>
+  <para style="p" vid="MRK 8:5">እነርሱም፣ “ሰባት” አሉት።<verse eid="MRK 8:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="MRK 8:6"/>እርሱም፣ መሬት ላይ እንዲቀመጡ ሕዝቡን አዘዘ፤ ሰባቱን እንጀራ ይዞ ካመሰገነ በኋላ ቈርሶ ለሰዎቹ እንዲያድሉ ለደቀ መዛሙርቱ ሰጣቸው፤ እነርሱም ለሕዝቡ ዐደሉት። <verse eid="MRK 8:6"/><verse number="7" style="v" sid="MRK 8:7"/>እንዲሁም ትንንሽ ዓሣዎች ነበሯቸው፤ እርሱም ዓሣዎቹን ባርኮ እንዲያድሏቸው አዘዘ። <verse eid="MRK 8:7"/><verse number="8" style="v" sid="MRK 8:8"/>ሕዝቡም በልተው ጠገቡ፤ ከዚያም ደቀ መዛሙርቱ የተረፈውን ቍርስራሽ ሰባት መሶብ ሙሉ አነሡ። <verse eid="MRK 8:8"/><verse number="9" style="v" sid="MRK 8:9"/>በዚያም አራት ሺሕ ያህል ሰዎች ነበሩ፤ ካሰናበታቸውም በኋላ፣ <verse eid="MRK 8:9"/><verse number="10" style="v" sid="MRK 8:10"/>ከደቀ መዛሙርቱ ጋር ዳልማኑታ ወደ ተባለ ስፍራ ሄደ።<verse eid="MRK 8:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="MRK 8:11"/>ፈሪሳውያንም ወጥተው ከኢየሱስ ጋር ይከራከሩ ጀመር። ሊፈትኑትም ፈልገው ከሰማይ ምልክት እንዲያሳያቸው ጠየቁት። <verse eid="MRK 8:11"/><verse number="12" style="v" sid="MRK 8:12"/>እርሱም በመንፈሱ እጅግ በመቃተት፣ <char style="wj">“ይህ ትውልድ ምልክት የሚፈልገው ለምንድን ነው? እውነት እላችኋለሁ፤ ለዚህ ትውልድ ምንም ምልክት አይሰጠውም!”</char> አለ። <verse eid="MRK 8:12"/><verse number="13" style="v" sid="MRK 8:13"/>ከዚያም ትቷቸው በጀልባ ወደ ማዶ ተሻገረ።<verse eid="MRK 8:13"/></para>
+  <para style="s1">የፈሪሳውያንና የሄሮድስ እርሾ</para>
+  <para style="p">
+    <verse number="14" style="v" sid="MRK 8:14"/>ደቀ መዛሙርቱ እንጀራ መያዝ ስለ ረሱ፣ ከአንድ እንጀራ በቀር በጀልባ ውስጥ ምንም አልነበራቸውም። <verse eid="MRK 8:14"/><verse number="15" style="v" sid="MRK 8:15"/>ኢየሱስም፣ <char style="wj">“ተጠንቀቁ፤ ከፈሪሳውያንና ከሄሮድስ እርሾ ተጠበቁ”</char> ብሎ አዘዛቸው።<verse eid="MRK 8:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="MRK 8:16"/>እነርሱም እርስ በርሳቸው፣ “እንዲህ የሚለን እኮ እንጀራ ስለሌለን ነው” ተባባሉ።<verse eid="MRK 8:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="MRK 8:17"/>ኢየሱስም ሐሳባቸውን ዐውቆ፣ እንዲህ አላቸው፤ <char style="wj">“እንጀራ ስለሌለን ነው በማለት ምን ያነጋግራችኋል? አሁንም አታስተውሉምን? ልብስ አትሉምን? ወይስ ልባችሁ ደንድኗል?</char> <verse eid="MRK 8:17"/><verse number="18" style="v" sid="MRK 8:18"/><char style="wj">ዐይን እያላችሁ አታዩምን? ጆሮ እያላችሁ አትሰሙምን? አታስታውሱምን?</char> <verse eid="MRK 8:18"/><verse number="19" style="v" sid="MRK 8:19"/><char style="wj">አምስቱን እንጀራ ለአምስት ሺሕ ሰው በቈረስሁ ጊዜ ስንት መሶብ ሙሉ ትርፍራፊ አነሣችሁ?”</char></para>
+  <para style="p" vid="MRK 8:19">እነርሱም፣ “ዐሥራ ሁለት” አሉት።<verse eid="MRK 8:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="MRK 8:20"/>
+    <char style="wj">“ሰባቱንስ እንጀራ ለአራት ሺሕ በቈረስሁ ጊዜ ስንት መሶብ ሙሉ ትርፍራፊ አነሣችሁ?”</char> አላቸው።</para>
+  <para style="p" vid="MRK 8:20">እነርሱም፣ “ሰባት” አሉት።<verse eid="MRK 8:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="MRK 8:21"/>እርሱም፣ <char style="wj">“እስከ አሁን አላስተዋላችሁም ማለት ነውን?”</char> አላቸው።<verse eid="MRK 8:21"/></para>
+  <para style="s1">በቤተ ሳይዳ የተፈወሰው ዐይነ ስውር</para>
+  <para style="p">
+    <verse number="22" style="v" sid="MRK 8:22"/>ከዚያም ወደ ቤተ ሳይዳ መጡ፤ ጥቂት ሰዎችም አንድ ዐይነ ስውር ወደ ኢየሱስ አምጥተው እንዲዳስሰው ለመኑት። <verse eid="MRK 8:22"/><verse number="23" style="v" sid="MRK 8:23"/>እርሱም የዐይነ ስውሩን እጅ ይዞ ከሰፈር ውጭ አወጣው፤ በዐይኖቹም ላይ እንትፍ ብሎበት፣ እጁንም በላዩ ጭኖ፣ <char style="wj">“ምን የሚታይህ ነገር አለ?”</char> ሲል ጠየቀው።<verse eid="MRK 8:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="MRK 8:24"/>እርሱም ቀና ብሎ አይቶ፣ “ሰዎች እንደ ዛፍ ሲንቀሳቀሱ አያለሁ” አለ።<verse eid="MRK 8:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="MRK 8:25"/>ኢየሱስም እንደ ገና እጆቹን በሰውየው ዐይኖች ላይ ጫነ፤ በዚህ ጊዜ ዐይኖቹ በሩ፤ ብርሃኑም ተመለሰለት፤ ሁሉንም ነገር አጥርቶ ማየት ቻለ። <verse eid="MRK 8:25"/><verse number="26" style="v" sid="MRK 8:26"/>ከዚያም፣ <char style="wj">“ወደ መንደሩ አትግባ! በመንደሩም ለማንም አትናገር</char><note caller="+" style="f"><char style="fr" closed="false">8፥26 </char><char style="ft" closed="false">አንዳንድ ቅጆች </char><char style="fqa" closed="false">በመንደሩም፤ ለማንም አትናገር! </char><char style="ft" closed="false">የሚለው የላቸውም።</char></note><char style="wj">”</char> ብሎ ወደ ቤቱ ሰደደው።<verse eid="MRK 8:26"/></para>
+  <para style="s1">ጴጥሮስ ስለ ኢየሱስ የነበረው ግንዛቤ</para>
+  <para style="sr">
+    <ref loc="MRK 8:27-29">8፥27-29</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 16:13-16">ማቴ 16፥13-16</ref>፤ <ref loc="LUK 9:18-20">ሉቃ 9፥18-20</ref></char></para>
+  <para style="p">
+    <verse number="27" style="v" sid="MRK 8:27"/>ኢየሱስ ከደቀ መዛሙርቱ ጋር ወደ ፊልጶስ ቂሳርያ መንደሮች ሄደ፤ በመንገድ ላይ ሳሉም ደቀ መዛሙርቱን፣ <char style="wj">“ሰዎች እኔን ማን ይሉኛል?”</char> ብሎ ጠየቃቸው።<verse eid="MRK 8:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="MRK 8:28"/>እነርሱም፣ “መጥምቁ ዮሐንስ የሚሉህ አሉ፤ ሌሎች ኤልያስ ነው ይሉሃል፤ ሌሎች ደግሞ ከነቢያት አንዱ ነው ይላሉ” ብለው ነገሩት።<verse eid="MRK 8:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="MRK 8:29"/>ቀጥሎም፣ <char style="wj">“እናንተሳ ማን ትሉኛላችሁ?”</char> ሲል ጠየቃቸው።</para>
+  <para style="p" vid="MRK 8:29">ጴጥሮስም፤ “አንተ ክርስቶስ<note caller="+" style="f"><char style="fr" closed="false">8፥29 </char><char style="ft" closed="false">በግሪኩ </char><char style="fqa" closed="false">ክርስቶስ፣ </char><char style="ft" closed="false">በዕብራይስጡ </char><char style="fqa" closed="false">መሲሕ </char><char style="ft" closed="false">የሁለቱም ቃላት ትርጕም </char><char style="fqa" closed="false">የተቀባው </char><char style="ft" closed="false">ማለት ነው።</char></note> ነህ” አለው።<verse eid="MRK 8:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="MRK 8:30"/>ኢየሱስም ስለ እርሱ ለማንም እንዳይናገሩ አስጠነቀቃቸው።<verse eid="MRK 8:30"/></para>
+  <para style="s1">ኢየሱስ ስለ ሞቱ አስቀድሞ ተናገረ</para>
+  <para style="sr">
+    <ref loc="MRK 8:31-9:1">8፥31–9፥1</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 16:21-28">ማቴ 16፥21-28</ref>፤ <ref loc="LUK 9:22-27">ሉቃ 9፥22-27</ref></char></para>
+  <para style="p">
+    <verse number="31" style="v" sid="MRK 8:31"/>ከዚያም የሰው ልጅ ብዙ መከራ እንደሚቀበል፣ በሽማግሌዎች፣ በካህናት አለቆችና በጸሐፍት እንደሚናቅ፣ እንደሚገደል፣ ከሦስት ቀንም በኋላ እንደሚነሣ ያስተምራቸው ጀመር።<verse eid="MRK 8:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="MRK 8:32"/>እርሱም ይህን በግልጽ ነገራቸው። በዚህ ጊዜ ጴጥሮስ ኢየሱስን ለብቻው ወስዶ ይገሥጸው ጀመር።<verse eid="MRK 8:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="MRK 8:33"/>ኢየሱስ ግን ዘወር ብሎ ደቀ መዛሙርቱን እያየ ጴጥሮስን፣ <char style="wj">“አንተ ሰይጣን፣ ወደ ኋላዬ ሂድ! አንተ የሰውን እንጂ የእግዚአብሔርን ነገር አታስብምና”</char> በማለት ገሠጸው።<verse eid="MRK 8:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="MRK 8:34"/>ከዚህ በኋላ፣ ሕዝቡን ከደቀ መዛሙርቱ ጋር ወደ እርሱ ጠርቶ እንዲህ አላቸው፤ <char style="wj">“ሊከተለኝ የሚወድድ ቢኖር ራሱን ይካድ፤ መስቀሉንም ተሸክሞ ይከተለኝ።</char> <verse eid="MRK 8:34"/><verse number="35" style="v" sid="MRK 8:35"/><char style="wj">ነፍሱን</char><note caller="+" style="f"><char style="fr" closed="false">8፥35 </char><char style="ft" closed="false">የግሪኩ ቃል </char><char style="fqa" closed="false">ሕይወት </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">ነፍስ </char><char style="ft" closed="false">ማለት ይሆናል።</char></note> <char style="wj">ለማዳን የሚወድድ ሁሉ ያጠፋታል፤ ስለ እኔና ስለ ወንጌል ነፍሱን የሚያጠፋት ሁሉ ግን ያድናታል።</char> <verse eid="MRK 8:35"/><verse number="36" style="v" sid="MRK 8:36"/><char style="wj">ሰው ዓለሙ ሁሉ የእርሱ ቢሆንና ነፍሱን ቢያጣ ምን ይጠቅመዋል?</char> <verse eid="MRK 8:36"/><verse number="37" style="v" sid="MRK 8:37"/><char style="wj">ለመሆኑ፣ ሰው ለነፍሱ ምን መተኪያ አለው?</char> <verse eid="MRK 8:37"/><verse number="38" style="v" sid="MRK 8:38"/><char style="wj">በዚህ ዘማዊና ኀጢአተኛ ትውልድ መካከል በእኔና በቃሌ የሚያፍር ሁሉ፣ የሰው ልጅም በአባቱ ግርማ፣ ከቅዱሳን መላእክት ጋር ሲመጣ ያፍርበታል።”</char><verse eid="MRK 8:38"/></para>
+  <chapter eid="MRK 8"/>
+  <chapter number="9" style="c" sid="MRK 9"/>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 9:1"/>ቀጥሎም፣ <char style="wj">“እውነት እላችኋለሁ፤ እዚህ ከቆሙት መካከል የእግዚአብሔር መንግሥት በኀይል ስትመጣ እስከሚያዩ ድረስ ሞትን የማይቀምሱ አንዳንዶች አሉ”</char> አላቸው።<verse eid="MRK 9:1"/></para>
+  <para style="s1">የኢየሱስ መልክ አበራ</para>
+  <para style="sr">
+    <ref loc="MRK 9:2-8">9፥2-8</ref> ተጓ ምብ – <char style="xt"><ref loc="LUK 9:28-36">ሉቃ 9፥28-36</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 9:2-13">9፥2-13</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 17:1-13">ማቴ 17፥1-13</ref></char></para>
+  <para style="p">
+    <verse number="2" style="v" sid="MRK 9:2"/>ከስድስት ቀን በኋላ ኢየሱስ ጴጥሮስን፣ ያዕቆብንና ዮሐንስን አስከትሎ ወደ አንድ ረዥም ተራራ ይዟቸው ወጣ፤ ብቻቸውንም ነበሩ፤ በፊታቸውም ተለወጠ፤ <verse eid="MRK 9:2"/><verse number="3" style="v" sid="MRK 9:3"/>ልብሱም በምድር ላይ ማንም ዐጣቢ ዐጥቦ ሊያነጣው በማይችልበት ሁናቴ እጅግ ነጭ ሆነ። <verse eid="MRK 9:3"/><verse number="4" style="v" sid="MRK 9:4"/>ኤልያስና ሙሴም ከኢየሱስ ጋር ሲነጋገሩ ታዩአቸው።<verse eid="MRK 9:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="MRK 9:5"/>ጴጥሮስም ኢየሱስን፣ “መምህር ሆይ፣ እዚህ ብንኖር ለእኛ መልካም ነው፤ አንድ ለአንተ፣ አንድ ለሙሴ፣ አንድ ለኤልያስ የሚሆኑ ሦስት ዳሶች እንሥራ” አለው። <verse eid="MRK 9:5"/><verse number="6" style="v" sid="MRK 9:6"/>እጅግ ስለ ፈሩ የሚናገረውን አያውቅም ነበር።<verse eid="MRK 9:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="MRK 9:7"/>ከዚያም ደመና መጥቶ ጋረዳቸው፤ ከደመናውም ውስጥ፣ “ይህ የምወድደው ልጄ ነው፤ እርሱን ስሙት!” የሚል ድምፅ መጣ።<verse eid="MRK 9:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="MRK 9:8"/>ወዲያውም ዙሪያቸውን ሲመለከቱ ከኢየሱስ በቀር ማንም አብሯቸው አልነበረም።<verse eid="MRK 9:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="MRK 9:9"/>ከተራራው ላይ በሚወርዱበትም ጊዜ፣ የሰው ልጅ ከሙታን እስኪነሣ ድረስ ያዩትን ለማንም እንዳይናገሩ አዘዛቸው። <verse eid="MRK 9:9"/><verse number="10" style="v" sid="MRK 9:10"/>እነርሱም የተናገራቸውን ቃል በልባቸው አሳደሩት፤ ነገር ግን፣ “ከሙታን መነሣት” ምን ማለት እንደ ሆነ እርስ በርሳቸው ይነጋገሩ ነበር።<verse eid="MRK 9:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="MRK 9:11"/>ከዚያም፣ “ጸሐፍት አስቀድሞ መምጣት ያለበት ኤልያስ ነው ለምን ይላሉ?” ሲሉ ጠየቁት።<verse eid="MRK 9:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="MRK 9:12"/>ኢየሱስም፣ እንዲህ አላቸው፤ <char style="wj">“ኤልያስ በርግጥ አስቀድሞ መጥቶ ሁሉን ነገር እንደ ነበረ ያደርጋል፤ ታዲያ፣ የሰው ልጅ ብዙ መከራ መቀበልና መናቅ እንዳለበት የተጻፈው ለምን ይመስላችኋል?</char> <verse eid="MRK 9:12"/><verse number="13" style="v" sid="MRK 9:13"/><char style="wj">ነገር ግን እላችኋለሁ፤ ኤልያስማ መጥቶ ነበር፤ እነርሱም ስለ እርሱ በተጻፈው መሠረት ያሻቸውን ሁሉ አድርገውበታል።”</char><verse eid="MRK 9:13"/></para>
+  <para style="s1">ርኩስ መንፈስ ያለበት ልጅ ተፈወሰ</para>
+  <para style="sr">
+    <ref loc="MRK 9:14-28">9፥14-28</ref>፡<ref loc="MRK 9:30">30</ref>፡<ref loc="MRK 9:32">32</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 17:14-19">ማቴ 17፥14-19</ref>፡<ref loc="MAT 17:22-23">22-23</ref>፤ <ref loc="LUK 9:37-45">ሉቃ 9፥37-45</ref></char></para>
+  <para style="p">
+    <verse number="14" style="v" sid="MRK 9:14"/>ወደ ቀሩት ደቀ መዛሙርት ተመልሰው ሲመጡ፣ ብዙ ሕዝብ ከብበዋቸው፣ ጸሐፍት ከእነርሱ ጋር ሲከራከሩ አዩ። <verse eid="MRK 9:14"/><verse number="15" style="v" sid="MRK 9:15"/>ሕዝቡ ሁሉ ሲያዩት ወዲያው ተደንቀው እጅ ሊነሡት ወደ እርሱ ሮጡ።<verse eid="MRK 9:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="MRK 9:16"/>እርሱም፣ <char style="wj">“ከእነርሱ ጋር የምትከራከሩት ስለ ምን ጕዳይ ነበር”</char> ሲል ጠየቃቸው።<verse eid="MRK 9:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="MRK 9:17"/>ከሕዝቡ መካከል አንድ ሰው እንዲህ አለው፤ “መምህር ሆይ፤ ርኩስ መንፈስ ዐድሮበት ድዳ የሆነውን ልጄን ወደ አንተ አምጥቼዋለሁ፤ <verse eid="MRK 9:17"/><verse number="18" style="v" sid="MRK 9:18"/>በተነሣበት ጊዜ ሁሉ ይጥለዋል፤ ዐረፋ ይደፍቃል፤ ጥርሱንም ያፋጫል፤ ሰውነቱም ይደርቃል፤ ርኩስ መንፈሱን እንዲያስወጡት ደቀ መዛሙርትህን ጠየቅኋቸው፤ እነርሱ ግን አልቻሉም።”<verse eid="MRK 9:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="MRK 9:19"/>ኢየሱስም መልሶ፣ <char style="wj">“የማታምን ትውልድ ሆይ፤ እስከ መቼ ከእናንተ ጋር እኖራለሁ? እስከ መቼስ እታገሣችኋለሁ? ልጁን ወደ እኔ አምጡት!”</char> አላቸው።<verse eid="MRK 9:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="MRK 9:20"/>ሰዎቹም ወደ እርሱ አመጡት፤ ርኩስ መንፈሱም ኢየሱስን ባየው ጊዜ ልጁን ወዲያውኑ አንዘፈዘፈው፤ እርሱም መሬት ላይ ወድቆ በመንፈራገጥም ዐረፋ ይደፍቅ ጀመር።<verse eid="MRK 9:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="MRK 9:21"/>ኢየሱስም የልጁን አባት፣ <char style="wj">“ከያዘው ስንት ጊዜው ነው?”</char> ብሎ ጠየቀው።</para>
+  <para style="p" vid="MRK 9:21">እርሱም እንዲህ አለው፤ “ከሕፃንነቱ ጀምሮ ነው፤ <verse eid="MRK 9:21"/><verse number="22" style="v" sid="MRK 9:22"/>ሊገድለው ፈልጎ ብዙ ጊዜ እሳትም ውስጥ ውሃም ውስጥ፣ ይጥለዋል፤ የሚቻልህ ከሆነ ራራልን፤ ርዳንም።”<verse eid="MRK 9:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="MRK 9:23"/>ኢየሱስም፣ <char style="wj">“የሚቻልህ ከሆነ አልህ? ለሚያምን ሰው ሁሉም ነገር ይቻላል”</char> አለው።<verse eid="MRK 9:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="MRK 9:24"/>ወዲያውኑ የልጁ አባት፣ “አምናለሁ፤ አለማመኔን ርዳው!” በማለት ጮኸ።<verse eid="MRK 9:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="MRK 9:25"/>ኢየሱስም ሕዝቡ ወደዚያ እየተንጋጋ በሩጫ መምጣቱን ባየ ጊዜ፣ <char style="wj">“አንተ ደንቈሮና ድዳ መንፈስ ከእርሱ ውጣ! ከእንግዲህም ተመልሰህ እንዳትገባበት አዝዝሃለሁ”</char> ብሎ ርኩሱን<note caller="+" style="f"><char style="fr" closed="false">9፥25 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">ክፉ</char></note> መንፈስ ገሠጸው።<verse eid="MRK 9:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="MRK 9:26"/>ርኩሱም መንፈስ እየጮኸ ክፉኛ ካንፈራገጠው በኋላ ከልጁ ወጣ፤ ብዙዎቹ “ሞቷል” እስኪሉ ድረስ ልጁ እንደ በድን ሆነ። <verse eid="MRK 9:26"/><verse number="27" style="v" sid="MRK 9:27"/>ኢየሱስ ግን እጁን ይዞ አስነሣው፤ ልጁም ተነሥቶ ቆመ።<verse eid="MRK 9:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="MRK 9:28"/>ኢየሱስ ወደ ቤት ከገባ በኋላ ደቀ መዛሙርቱ ለብቻቸው፣ “እኛ ልናስወጣው ያልቻልነው ለምንድን ነው?” ብለው ጠየቁት።<verse eid="MRK 9:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="MRK 9:29"/>እርሱም፣ <char style="wj">“የዚህ ዐይነቱ ሊወጣ የሚችለው በጸሎትና በጾም</char><note caller="+" style="f"><char style="fr" closed="false">9፥29 </char><char style="ft" closed="false">አንዳንድ ቅጆች </char><char style="fqa" closed="false">በጾም </char><char style="ft" closed="false">የሚለው የላቸውም።</char></note> <char style="wj">ብቻ ነው”</char> አላቸው።<verse eid="MRK 9:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="MRK 9:30"/>ከዚያም ተነሥተው በገሊላ በኩል ዐለፉ፤ ኢየሱስም ያሉበትን ስፍራ ማንም እንዲያውቅ አልፈለገም፤ <verse eid="MRK 9:30"/><verse number="31" style="v" sid="MRK 9:31"/>ለደቀ መዛሙርቱ፣ <char style="wj">“የሰው ልጅ በሰዎች እጅ ዐልፎ ይሰጣል፤ እነርሱም ይገድሉታል፤ ከሦስት ቀንም በኋላ ይነሣል”</char> እያለ ያስተምራቸው ነበር። <verse eid="MRK 9:31"/><verse number="32" style="v" sid="MRK 9:32"/>እነርሱ ግን የሚላቸው አልገባቸውም፤ እንዳይጠይቁትም ፈሩ።<verse eid="MRK 9:32"/></para>
+  <para style="s1">ከሁሉ የሚበልጥ ማን ነው?</para>
+  <para style="sr">
+    <ref loc="MRK 9:33-37">9፥33-37</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 18:1-5">ማቴ 18፥1-5</ref>፤ <ref loc="LUK 9:46-48">ሉቃ 9፥46-48</ref></char></para>
+  <para style="p">
+    <verse number="33" style="v" sid="MRK 9:33"/>ከዚህ በኋላ ወደ ቅፍርናሆም መጡ። ቤት ከገባ በኋላም፣ <char style="wj">“በመንገድ ላይ የምትከራከሩት ስለ ምን ነበር?”</char> ብሎ ጠየቃቸው። <verse eid="MRK 9:33"/><verse number="34" style="v" sid="MRK 9:34"/>እነርሱ ግን በመንገድ ላይ የተከራከሩት ከሁሉ የሚበልጥ ማን ነው በሚል ስለ ነበር ዝም አሉ።<verse eid="MRK 9:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="MRK 9:35"/>ከተቀመጠ በኋላ ዐሥራ ሁለቱን ጠርቶ፣ <char style="wj">“መጀመሪያ ለመሆን የሚፈልግ፣ ከሁሉ መጨረሻና የሁሉም አገልጋይ ይሁን”</char> አላቸው።<verse eid="MRK 9:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="MRK 9:36"/>ትንሽ ልጅ አምጥቶም በመካከላቸው አቆመ፤ ዐቅፎትም፣ <verse eid="MRK 9:36"/><verse number="37" style="v" sid="MRK 9:37"/><char style="wj">“ከእነዚህ ሕፃናት አንዱን በስሜ የሚቀበል ሁሉ እኔን ይቀበላል፤ እኔንም የሚቀበለኝ ሁሉ የሚቀበለው እኔን ሳይሆን የላከኝን ነው”</char> አላቸው።<verse eid="MRK 9:37"/></para>
+  <para style="s1">የማይቃወመን ሁሉ ከእኛ ጋር ነው</para>
+  <para style="sr">
+    <ref loc="MRK 9:38-40">9፥38-40</ref> ተጓ ምብ – <char style="xt"><ref loc="LUK 9:49">ሉቃ 9፥49</ref>፡<ref loc="LUK 9:50">50</ref></char></para>
+  <para style="p">
+    <verse number="38" style="v" sid="MRK 9:38"/>ዮሐንስም፣ “መምህር ሆይ፤ አንድ ሰው በስምህ አጋንንት ሲያወጣ አየን፣ እኛን ስለማይከተልም ከለከልነው” አለው።<verse eid="MRK 9:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="MRK 9:39"/>ኢየሱስ ግን እንዲህ አለ፤ <char style="wj">“አትከልክሉት፤ ማንም በስሜ ታምር ሠርቶ ወዲያውኑ በእኔ ላይ ክፉ መናገር አይችልም፤</char> <verse eid="MRK 9:39"/><verse number="40" style="v" sid="MRK 9:40"/><char style="wj">የማይቃወመን ሁሉ ከእኛ ጋር ነውና፤</char> <verse eid="MRK 9:40"/><verse number="41" style="v" sid="MRK 9:41"/><char style="wj">እውነት እላችኋለሁ፣ የክርስቶስ በመሆናችሁ በስሜ አንድ ኩባያ ውሃ የሚሰጣችሁ ሁሉ ዋጋውን አያጣም።</char><verse eid="MRK 9:41"/></para>
+  <para style="s1">ለሌላው መሰናክል መሆን</para>
+  <para style="p">
+    <verse number="42" style="v" sid="MRK 9:42"/>
+    <char style="wj">“በእኔ ከሚያምኑት ከእነዚህ ከታናናሾቹ አንዱን የሚያሰናክል ሁሉ ከባድ የወፍጮ ድንጋይ በዐንገቱ ታስሮ ወደ ባሕር ቢጣል ይሻለዋል።</char> <verse eid="MRK 9:42"/><verse number="43" style="v" sid="MRK 9:43"/><char style="wj">ስለዚህ እጅህ ብታሰናክልህ ቍረጣት፤ ሁለት እጅ ኖሮህ ወደ ገሃነም ከመሄድ፣ ጕንድሽ ሆነህ ወደ ሕይወት መግባት ይሻልሃል፤</char> <verse eid="MRK 9:43"/><verse number="44" style="v" sid="MRK 9:44"/><char style="wj">በገሃነም ትሉ አይሞትም፤ እሳቱ አይጠፋምና</char><note caller="+" style="f"><char style="fr" closed="false">9፥44 </char><char style="ft" closed="false">እነዚህ ጥቅሶች በአንዳንድ ቅጆች አይገኙም።</char></note><char style="wj">።</char> <verse eid="MRK 9:44"/><verse number="45" style="v" sid="MRK 9:45"/><char style="wj">እግርህ ብታሰናክልህ ቍረጣት፤ ሁለት እግር ኖሮህ ወደ ገሃነም ከመጣል፣ ዐንካሳ ሆነህ ወደ ሕይወት መግባት ይሻልሃል፤</char> <verse eid="MRK 9:45"/><verse number="46" style="v" sid="MRK 9:46"/><char style="wj">በገሃነም ትሉ አይሞትም፤ እሳቱ አይጠፋምና</char><note caller="+" style="f"><char style="fr" closed="false">9፥46 </char><char style="ft" closed="false">እነዚህ ጥቅሶች በአንዳንድ ቅጆች አይገኙም።</char></note><char style="wj">።</char> <verse eid="MRK 9:46"/><verse number="47" style="v" sid="MRK 9:47"/><char style="wj">ዐይንህ ብታሰናክልህ ጐልጕለህ አውጣት፤ ሁለት ዐይን ኖሮህ ወደ ገሃነም ከመጣል፣ አንድ ዐይን ኖሮህ ወደ እግዚአብሔር መንግሥት መግባት ይሻልሃል፤</char><verse eid="MRK 9:47"/></para>
+  <para style="q1">
+    <verse number="48" style="v" sid="MRK 9:48"/>
+    <char style="wj">“በገሃነም ትሉ አይሞትም፤</char></para>
+  <para style="q2" vid="MRK 9:48">
+    <char style="wj">እሳቱ አይጠፋምና፤</char><verse eid="MRK 9:48"/></para>
+  <para style="m">
+    <verse number="49" style="v" sid="MRK 9:49"/>
+    <char style="wj">ሰው ሁሉ በእሳት ይቀመማልና።</char><verse eid="MRK 9:49"/></para>
+  <para style="p">
+    <verse number="50" style="v" sid="MRK 9:50"/>
+    <char style="wj">“ጨው መልካም ነው፤ ነገር ግን ጨው ጨውነቱን ቢያጣ እንዴት መልሳችሁ ጣዕም እንዲኖረው ታደርጉታላችሁ? ጨው በውስጣችሁ ይኑራችሁ፤ እርስ በርሳችሁም ተስማሙ።”</char><verse eid="MRK 9:50"/></para>
+  <chapter eid="MRK 9"/>
+  <chapter number="10" style="c" sid="MRK 10"/>
+  <para style="s1">የባልና የሚስት ፍች</para>
+  <para style="sr">
+    <ref loc="MRK 10:1-12">10፥1-12</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 19:1-9">ማቴ 19፥1-9</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 10:1"/>ኢየሱስ ከዚያ ተነሥቶ ወደ ይሁዳ አገርና በዮርዳኖስ ማዶ ወዳለው አካባቢ ሄደ፤ ሕዝቡም እንደ ገና በዙሪያው ተሰበሰበ፤ ከዚህ ቀደም ያደርገው እንደ ነበረውም አስተማራቸው።<verse eid="MRK 10:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="MRK 10:2"/>አንዳንድ ፈሪሳውያንም መጥተው፣ “ሰው ሚስቱን መፍታት ይገባዋልን?” ብለው ሊፈትኑት ጠየቁት።<verse eid="MRK 10:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="MRK 10:3"/>እርሱም መልሶ፣ <char style="wj">“ሙሴ ምን ብሎ አዘዛችሁ?”</char> አላቸው።<verse eid="MRK 10:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="MRK 10:4"/>እነርሱም፣ “ሙሴማ የፍች ወረቀት ጽፎ እንዲፈታት ፈቅዷል” አሉ።<verse eid="MRK 10:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="MRK 10:5"/>ኢየሱስም መልሶ እንዲህ አላቸው፤ <char style="wj">“ሙሴ ይህን ሕግ የጻፈላችሁ ልባችሁ ደንዳና በመሆኑ ነው።</char> <verse eid="MRK 10:5"/><verse number="6" style="v" sid="MRK 10:6"/><char style="wj">ነገር ግን በፍጥረት መጀመሪያ እግዚአብሔር ወንድና ሴት አድርጎ ፈጠራቸው።</char> <verse eid="MRK 10:6"/><verse number="7" style="v" sid="MRK 10:7"/><char style="wj">ስለዚህ ሰው አባቱንና እናቱን ይተዋል፤ ከሚስቱም ጋር ይጣመራል</char><note caller="+" style="f"><char style="fr" closed="false">10፥7 </char><char style="ft" closed="false">አንዳንድ የጥንት ቅጆች </char><char style="fqa" closed="false">ከሚስቱ ጋር ይጣመራል </char><char style="ft" closed="false">የሚለው የላቸውም።</char></note>፤ <verse eid="MRK 10:7"/><verse number="8" style="v" sid="MRK 10:8"/><char style="wj">ሁለቱም አንድ ሥጋ ይሆናሉ፤ ከእንግዲህ አንድ ሥጋ ናቸው እንጂ ሁለት አይደሉም፤</char> <verse eid="MRK 10:8"/><verse number="9" style="v" sid="MRK 10:9"/><char style="wj">ስለዚህ እግዚአብሔር ያጣመረውን ማንም አይለየው።”</char><verse eid="MRK 10:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="MRK 10:10"/>እንደ ገና ወደ ቤት በገቡ ጊዜ፣ ደቀ መዛሙርቱ ይህንኑ አንሥተው ጠየቁት። <verse eid="MRK 10:10"/><verse number="11" style="v" sid="MRK 10:11"/>እርሱም፣ <char style="wj">“ማንም ሚስቱን ፈትቶ ሌላዪቱን የሚያገባ በእርሷ ላይ ያመነዝራል፤</char> <verse eid="MRK 10:11"/><verse number="12" style="v" sid="MRK 10:12"/><char style="wj">እርሷም ባሏን ፈትታ ሌላ ብታገባ ታመነዝራለች”</char> አላቸው።<verse eid="MRK 10:12"/></para>
+  <para style="s1">ኢየሱስ ሕፃናትን ባረከ</para>
+  <para style="sr">
+    <ref loc="MRK 10:13-16">10፥13-16</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 19:13-15">ማቴ 19፥13-15</ref>፤ <ref loc="LUK 18:15-17">ሉቃ 18፥15-17</ref></char></para>
+  <para style="p">
+    <verse number="13" style="v" sid="MRK 10:13"/>ኢየሱስ እንዲዳስሳቸው፣ ሰዎች ሕፃናትን ወደ እርሱ አመጡ፤ ደቀ መዛሙርቱ ግን ገሠጿቸው። <verse eid="MRK 10:13"/><verse number="14" style="v" sid="MRK 10:14"/>ኢየሱስም ይህን ሲያይ ተቈጥቶ እንዲህ አላቸው፤ <char style="wj">“ሕፃናት ወደ እኔ ይምጡ፤ አትከልክሏቸው፤ የእግዚአብሔር መንግሥት እንደ እነዚህ ላሉት ናትና።</char> <verse eid="MRK 10:14"/><verse number="15" style="v" sid="MRK 10:15"/><char style="wj">እውነት እላችኋለሁ፤ የእግዚአብሔርን መንግሥት እንደ ሕፃን የማይቀበል ሁሉ ከቶ አይገባባትም።”</char> <verse eid="MRK 10:15"/><verse number="16" style="v" sid="MRK 10:16"/>ሕፃናቱንም ዐቀፋቸው፤ እጁንም ጭኖ ባረካቸው።<verse eid="MRK 10:16"/></para>
+  <para style="s1">ሀብታሙ ወጣት</para>
+  <para style="sr">
+    <ref loc="MRK 10:17-31">10፥17-31</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 19:16-30">ማቴ 19፥16-30</ref>፤ <ref loc="LUK 18:18-30">ሉቃ 18፥18-30</ref></char></para>
+  <para style="p">
+    <verse number="17" style="v" sid="MRK 10:17"/>ከዚያ ተነሥቶ መንገዱን ሲጀመር፣ አንድ ሰው ወደ እርሱ እየሮጠ መጣ፤ በፊቱም በጕልበቱ ተንበርክኮ፣ “ቸር መምህር ሆይ፤ የዘላለምን ሕይወት ለመውረስ ምን ማድረግ ይገባኛል” አለው።<verse eid="MRK 10:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="MRK 10:18"/>ኢየሱስም እንዲህ ሲል መለሰለት፤ <char style="wj">“ለምን ቸር ትለኛለህ? ከአንዱ ከእግዚአብሔር በስተቀር ቸር የለም፤</char> <verse eid="MRK 10:18"/><verse number="19" style="v" sid="MRK 10:19"/><char style="wj">ትእዛዞችን ታውቃለህ፤ አትግደል፤ አታመንዝር፤ አትስረቅ፤ በሐሰት አትመስክር፤ አታታልል፤ አባትህንና እናትህን አክብር።”</char><verse eid="MRK 10:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="MRK 10:20"/>ሰውየውም፣ “መምህር ሆይ፤ እነዚህን ሁሉ ከልጅነቴ ጀምሮ ጠብቄአለሁ” አለው።<verse eid="MRK 10:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="MRK 10:21"/>ኢየሱስም ተመለከተውና ወደደው፤ <char style="wj">“እንግዲያው አንድ ነገር ይጐድልሃል፤ ሂድና ያለህን ሁሉ ሽጥ፤ ለድኾችም ስጥ፤ በሰማይ የተከማቸ ሀብት ታገኛለህ፤ ከዚያ በኋላ ና፤ ተከተለኝም”</char> አለው።<verse eid="MRK 10:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="MRK 10:22"/>ሰውየው ይህን ሲሰማ ክፉኛ ዐዘነ፤ ብዙ ሀብት ስለ ነበረውም እየተከዘ ሄደ።<verse eid="MRK 10:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="MRK 10:23"/>ኢየሱስ ዙሪያውን በመመልከት ደቀ መዛሙርቱን፣ <char style="wj">“ለሀብታሞች ወደ እግዚአብሔር መንግሥት መግባት እንዴት ከባድ ነገር ነው!”</char> አላቸው።<verse eid="MRK 10:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="MRK 10:24"/>ደቀ መዛሙርቱም በንግግሩ ተገረሙ፤ ኢየሱስ ግን እንደ ገና መልሶ እንዲህ አላቸው፤ <char style="wj">“ልጆች ሆይ</char><note caller="+" style="f"><char style="fr" closed="false">10፥24 </char><char style="ft" closed="false">አንዳንድ ቅጆች </char><char style="fqa" closed="false">በሀብት ለሚታመኑ </char><char style="ft" closed="false">የሚል ሐረግ አላቸው።</char></note><char style="wj">፤ ወደ እግዚአብሔር መንግሥት መግባት እንዴት ከባድ ነገር ነው!</char> <verse eid="MRK 10:24"/><verse number="25" style="v" sid="MRK 10:25"/><char style="wj">ሀብታም ወደ እግዚአብሔር መንግሥት ከሚገባ ይልቅ ግመል በመርፌ ቀዳዳ ቢያልፍ ይቀልለዋል።”</char><verse eid="MRK 10:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="MRK 10:26"/>ደቀ መዛሙርቱም ይበልጥ በመገረም፣ “ታዲያ ማን ሊድን ይችላል?” ተባባሉ።<verse eid="MRK 10:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="MRK 10:27"/>ኢየሱስም አያቸውና፣ <char style="wj">“ይህ በሰው ዘንድ አይቻልም፤ በእግዚአብሔር ዘንድ ግን እንዲህ አይደለም፤ በእግዚአብሔር ዘንድ ሁሉ ይቻላል”</char> አላቸው።<verse eid="MRK 10:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="MRK 10:28"/>ጴጥሮስም፣ “እነሆ፤ እኛ ሁሉን ትተን ተከተልንህ” አለው።<verse eid="MRK 10:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="MRK 10:29"/>ኢየሱስም መልሶ እንዲህ አለ፤ <char style="wj">“እውነት እላችኋለሁ፤ ስለ እኔና ስለ ወንጌል ሲል ቤቱን ወይም ወንድሞቹን ወይም እኅቶቹን ወይም እናቱን ወይም አባቱን ወይም ልጆቹን ወይም ዕርሻውን የተወ ሁሉ፣</char> <verse eid="MRK 10:29"/><verse number="30" style="v" sid="MRK 10:30"/><char style="wj">አሁን በዚህ ዘመን ከስደት ጋር ቤቶችን፣ ወንድሞችን፣ እኅቶችን፣ እናቶችን፣ ልጆችንና ዕርሻን መቶ ዕጥፍ የማይቀበል፣ በሚመጣውም ዓለም የዘላለም ሕይወት የማይወርስ የለም።</char> <verse eid="MRK 10:30"/><verse number="31" style="v" sid="MRK 10:31"/><char style="wj">ነገር ግን ብዙ ፊተኞች የሆኑ ኋለኞች፣ ኋለኞች የሆኑም ፊተኞች ይሆናሉ።”</char><verse eid="MRK 10:31"/></para>
+  <para style="s1">ኢየሱስ ዳግም ስለ ሞቱ አስቀድሞ ተናገረ</para>
+  <para style="sr">
+    <ref loc="MRK 10:32-34">10፥32-34</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 20:17-19">ማቴ 20፥17-19</ref>፤ <ref loc="LUK 18:31-33">ሉቃ 18፥31-33</ref></char></para>
+  <para style="p">
+    <verse number="32" style="v" sid="MRK 10:32"/>ወደ ኢየሩሳሌም ለመውጣት በመንገድ ላይ ሳሉ፣ ኢየሱስ ፊት ፊታቸው ይሄድ ነበር፤ ደቀ መዛሙርቱ ተገረሙ፣ ሌሎች የተከተሉት ደግሞ ፈርተው ነበር። ደግሞም ዐሥራ ሁለቱን ከሕዝቡ ለይቶ ምን እንደሚደርስበት ነገራቸው፤ <verse eid="MRK 10:32"/><verse number="33" style="v" sid="MRK 10:33"/>እንዲህም አላቸው፤ <char style="wj">“ወደ ኢየሩሳሌም እንወጣለን፤ የሰው ልጅ ለካህናት አለቆችና ለጸሐፍት ዐልፎ ይሰጣል፤ እነርሱም የሞት ፍርድ ይፈርዱበታል፤ አሳልፈው ለአሕዛብ ይሰጡታል፤</char> <verse eid="MRK 10:33"/><verse number="34" style="v" sid="MRK 10:34"/><char style="wj">ያፌዙበታል፤ ይተፉበታል፤ ይገርፉታል፤ ከዚያም ይገድሉታል፤ እርሱ ግን ከሦስት ቀን በኋላ ይነሣል።”</char><verse eid="MRK 10:34"/></para>
+  <para style="s1">የያዕቆብና የዮሐንስ ጥያቄ</para>
+  <para style="sr">
+    <ref loc="MRK 10:35-45">10፥35-45</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 20:20-28">ማቴ 20፥20-28</ref></char></para>
+  <para style="p">
+    <verse number="35" style="v" sid="MRK 10:35"/>ከዚያም የዘብዴዎስ ልጆች ያዕቆብና ዮሐንስ ወደ እርሱ ቀርበው፣ “መምህር ሆይ፤ የምንለምንህን ሁሉ እንድታደርግልን እንፈልጋለን” አሉት።<verse eid="MRK 10:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="MRK 10:36"/>እርሱም፣ <char style="wj">“ምን እንዳደርግላችሁ ትፈልጋላችሁ?”</char> አላቸው።<verse eid="MRK 10:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="MRK 10:37"/>እነርሱም፣ “በክብርህ ጊዜ አንዳችን በቀኝህ፣ አንዳችን በግራህ እንድንቀመጥ ፍቀድልን” አሉት።<verse eid="MRK 10:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="MRK 10:38"/>ኢየሱስም፣ <char style="wj">“የምትለምኑትን አታውቁም፤ እኔ የምጠጣውን ጽዋ ልትጠጡ፣ የምጠመቀውንስ ጥምቀት ልትጠመቁ ትችላላችሁን?”</char> አላቸው።<verse eid="MRK 10:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="MRK 10:39"/>እነርሱም፣ “አዎን እንችላለን” አሉት።</para>
+  <para style="p" vid="MRK 10:39">ኢየሱስም፣ <char style="wj">“እኔ የምጠጣውን ጽዋ ትጠጣላችሁ፤ እኔ የምጠመቀውንም ጥምቀት ትጠመቃላችሁ፤</char> <verse eid="MRK 10:39"/><verse number="40" style="v" sid="MRK 10:40"/><char style="wj">ነገር ግን በቀኜ ወይም በግራዬ መቀመጥ ለተዘጋጀላቸው የሚሆን እንጂ እኔ የምሰጠው ነገር አይደለም”</char> አላቸው።<verse eid="MRK 10:40"/></para>
+  <para style="p">
+    <verse number="41" style="v" sid="MRK 10:41"/>ዐሥሩ ይህን ሲሰሙ፣ ያዕቆብንና ዮሐንስን መቈጣት ጀመሩ። <verse eid="MRK 10:41"/><verse number="42" style="v" sid="MRK 10:42"/>ኢየሱስም በአንድነት ሰብስቦ እንዲህ አላቸው፤ <char style="wj">“የአሕዛብ አለቆች ተብለው የሚታሰቡት እንደሚገዟቸው፤ ሹሞቻቸውም በእነርሱ ላይ ሥልጣናቸውን እንደሚያሳዩ ታውቃላችሁ፤</char> <verse eid="MRK 10:42"/><verse number="43" style="v" sid="MRK 10:43"/><char style="wj">በእናንተ ዘንድ ግን እንዲህ አይደለም፤ ከመካከላችሁ ታላቅ መሆን የሚፈልግ ሁሉ አገልጋይ ይሁን፤</char> <verse eid="MRK 10:43"/><verse number="44" style="v" sid="MRK 10:44"/><char style="wj">ፊተኛ ለመሆን የሚፈልግ ሁሉ፣ የሁሉ ባሪያ ይሁን፤</char> <verse eid="MRK 10:44"/><verse number="45" style="v" sid="MRK 10:45"/><char style="wj">የሰው ልጅ ሊያገለግልና ሕይወቱን ለብዙዎች ቤዛ አድርጎ ሊሰጥ መጣ እንጂ ሊገለገል አልመጣምና።”</char><verse eid="MRK 10:45"/></para>
+  <para style="s1">ኢየሱስ ዐይነ ስውሩን በርጤሜዎስን ፈወሰ</para>
+  <para style="sr">
+    <ref loc="MRK 10:46-52">10፥46-52</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 20:29-34">ማቴ 20፥29-34</ref>፤ <ref loc="LUK 18:35-43">ሉቃ 18፥35-43</ref></char></para>
+  <para style="p">
+    <verse number="46" style="v" sid="MRK 10:46"/>ከዚህ በኋላ ወደ ኢያሪኮ መጡ። ኢየሱስና ደቀ መዛሙርቱ ከብዙ ሕዝብ ጋር ከኢያሪኮ ሲወጡ ዐይነ ስውሩ የጤሜዎስ ልጅ በርጤሜዎስ በመንገድ ዳር ተቀምጦ ይለምን ነበር። <verse eid="MRK 10:46"/><verse number="47" style="v" sid="MRK 10:47"/>እርሱም የናዝሬቱ ኢየሱስ መሆኑን በሰማ ጊዜ፣ “የዳዊት ልጅ፣ ኢየሱስ ሆይ፤ ማረኝ!” እያለ ይጮኽ ጀመር።<verse eid="MRK 10:47"/></para>
+  <para style="p">
+    <verse number="48" style="v" sid="MRK 10:48"/>ብዙዎችም ዝም እንዲል ገሠጹት፤ እርሱ ግን፣ “የዳዊት ልጅ ሆይ፤ ማረኝ!” እያለ የባሰ ጮኸ።<verse eid="MRK 10:48"/></para>
+  <para style="p">
+    <verse number="49" style="v" sid="MRK 10:49"/>ኢየሱስም ቆም ብሎ፣ <char style="wj">“ጥሩት”</char> አላቸው።</para>
+  <para style="p" vid="MRK 10:49">እነርሱም ዐይነ ስውሩን፣ “አይዞህ፤ ተነሥ፤ ይጠራሃል!” አሉት። <verse eid="MRK 10:49"/><verse number="50" style="v" sid="MRK 10:50"/>እርሱም ልብሱን ጥሎ ብድግ በማለት፣ ተነሥቶ ወደ ኢየሱስ መጣ።<verse eid="MRK 10:50"/></para>
+  <para style="p">
+    <verse number="51" style="v" sid="MRK 10:51"/>ኢየሱስም፣ <char style="wj">“ምን እንዳደርግልህ ትፈልጋለህ?”</char> አለው።</para>
+  <para style="p" vid="MRK 10:51">ዐይነ ስውሩም፣ “መምህር ሆይ፤ እንዳይ እፈልጋለሁ” አለው።<verse eid="MRK 10:51"/></para>
+  <para style="p">
+    <verse number="52" style="v" sid="MRK 10:52"/>ኢየሱስም፣ <char style="wj">“ሂድ፣ እምነትህ አድኖሃል”</char> አለው፤ ወዲያውም ዐይኑ በራለት፤ በመንገድም ኢየሱስን ተከትሎት ሄደ።<verse eid="MRK 10:52"/></para>
+  <chapter eid="MRK 10"/>
+  <chapter number="11" style="c" sid="MRK 11"/>
+  <para style="s1">ኢየሱስ በታላቅ ክብር ወደ ኢየሩሳሌም ገባ</para>
+  <para style="sr">
+    <ref loc="MRK 11:1-10">11፥1-10</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 21:1-9">ማቴ 21፥1-9</ref>፤ <ref loc="LUK 19:29-38">ሉቃ 19፥29-38</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 11:7-10">11፥7-10</ref> ተጓ ምብ – <char style="xt"><ref loc="JHN 12:12-15">ዮሐ 12፥12-15</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 11:1"/>ወደ ኢየሩሳሌም በደብረ ዘይት ተራራ አጠገብ ወዳሉት ወደ ቤተ ፋጌና ወደ ቢታንያ በቀረቡ ጊዜ፣ ኢየሱስ ከደቀ መዛሙርቱ ሁለቱን እንዲህ በማለት ላካቸው፤ <verse eid="MRK 11:1"/><verse number="2" style="v" sid="MRK 11:2"/><char style="wj">“በፊታችሁ ወዳለው መንደር ሂዱ፣ ሰው ተቀምጦበት የማያውቅ የአህያ ውርንጫ እዚያ ታስሮ ታገኛላችሁ፤ ፈታችሁ አምጡት፤</char> <verse eid="MRK 11:2"/><verse number="3" style="v" sid="MRK 11:3"/><char style="wj">ማንም፣ ‘ምን ማድረጋችሁ ነው?’ ቢላችሁ፣ ‘ለጌታ ያስፈልገዋል፤ በቶሎም መልሶ ይልከዋል’ ብላችሁ ንገሩት።”</char><verse eid="MRK 11:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="MRK 11:4"/>እነርሱም ሄዱ፤ በአንድ ቤት በራፍ መንገድ ላይ የአህያ ውርንጫ ታስሮ አገኙ፤ ፈቱትም። <verse eid="MRK 11:4"/><verse number="5" style="v" sid="MRK 11:5"/>በዚያ ከቆሙት አንዳንድ ሰዎች፣ “ውርንጫውን የምትፈቱት ለምንድን ነው?” አሏቸው። <verse eid="MRK 11:5"/><verse number="6" style="v" sid="MRK 11:6"/>ደቀ መዛሙርቱም ኢየሱስ ያላቸውን ለሰዎቹ በነገሯቸው ጊዜ ፈቀዱላቸው። <verse eid="MRK 11:6"/><verse number="7" style="v" sid="MRK 11:7"/>ውርንጫውንም ወደ ኢየሱስ አምጥተው ልብሳቸውን በጀርባው ላይ አደረጉ፤ እርሱም ተቀመጠበት። <verse eid="MRK 11:7"/><verse number="8" style="v" sid="MRK 11:8"/>ብዙ ሰዎች ልብሳቸውን በመንገድ ላይ አነጠፉ፤ ሌሎች ደግሞ ለምለም የዛፍ ቅርንጫፍ እየቈረጡ ያነጥፉ ነበር። <verse eid="MRK 11:8"/><verse number="9" style="v" sid="MRK 11:9"/>ከፊቱ የቀደሙትና ከኋላው የተከተሉትም በታላቅ ድምፅ እንዲህ ይሉ ነበር፤</para>
+  <para style="q1" vid="MRK 11:9">“ሆሣዕና!”<note caller="+" style="f"><char style="fr" closed="false">11፥9 </char><char style="ft" closed="false">በዕብራይስጡ </char><char style="fqa" closed="false">አድን! </char><char style="ft" closed="false">ማለት ሲሆን፣ ምስጋናን የሚገልጽ አባባል ነው፤ እንዲሁም 10 ይመ።</char></note></para>
+  <para style="b" vid="MRK 11:9"/>
+  <para style="q1" vid="MRK 11:9">“በጌታ ስም የሚመጣ የተባረከ ነው!”<verse eid="MRK 11:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="MRK 11:10"/>“የምትመጣው የአባታችን የዳዊት መንግሥት የተባረከች ናት!”</para>
+  <para style="b" vid="MRK 11:10"/>
+  <para style="q1" vid="MRK 11:10">“ሆሣዕና በአርያም!”<verse eid="MRK 11:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="MRK 11:11"/>ኢየሱስም ኢየሩሳሌም ደረሰ፤ ከዚያም ወደ ቤተ መቅደስ ገባ፤ በዙሪያው ያለውንም ሁሉ ተመለከተ፤ ቀኑም ስለ መሸ ከዐሥራ ሁለቱ ጋር ወደ ቢታንያ ወጣ።<verse eid="MRK 11:11"/></para>
+  <para style="s1">ኢየሱስ ቤተ መቅደስን አጸዳ</para>
+  <para style="sr">
+    <ref loc="MRK 11:12-14">11፥12-14</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 21:18-22">ማቴ 21፥18-22</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 11:15-18">11፥15-18</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 21:12-16">ማቴ 21፥12-16</ref>፤ <ref loc="LUK 19:45-47">ሉቃ 19፥45-47</ref>፤ <ref loc="JHN 2:13-16">ዮሐ 2፥13-16</ref></char></para>
+  <para style="p">
+    <verse number="12" style="v" sid="MRK 11:12"/>በማግስቱም ከቢታንያ ሲወጡ ኢየሱስ ተራበ።<verse eid="MRK 11:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="MRK 11:13"/>እርሱም ቅጠል ያላት የበለስ ዛፍ ከሩቅ አየ፤ ምናልባት ፍሬ ይገኝባት እንደ ሆነ ብሎ ወደ እርሷ መጣ፤ ነገር ግን የበለስ ወራት አልነበረምና ከቅጠል በቀር ምንም አላገኘባትም። <verse eid="MRK 11:13"/><verse number="14" style="v" sid="MRK 11:14"/>ከዚያም ዛፏን፣ <char style="wj">“ከአሁን ጀምሮ ለዘላለም ማንም ፍሬ ከአንቺ አይብላ”</char> አላት። ደቀ መዛሙርቱም ይህን ሲናገር ሰሙ።<verse eid="MRK 11:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="MRK 11:15"/>ወደ ኢየሩሳሌምም መጡ፤ ከዚያም ወደ ቤተ መቅደስ ገብቶ፣ የሚሸጡትንና የሚገዙትን ያስወጣ ጀመር። የገንዘብ መንዛሪዎችን ጠረጴዛና የርግብ ሻጮችን መቀመጫ ገለባበጠ፤ <verse eid="MRK 11:15"/><verse number="16" style="v" sid="MRK 11:16"/>ማንም ዕቃ ተሸክሞ በቤተ መቅደሱ ቅጥር ግቢ ውስጥ እንዳያልፍ ከለከለ። <verse eid="MRK 11:16"/><verse number="17" style="v" sid="MRK 11:17"/>ሲያስተምራቸውም፣</para>
+  <para style="q1" vid="MRK 11:17">
+    <char style="wj">“ ‘ቤቴ ለሕዝቦች ሁሉ የጸሎት ቤት ይባላል’</char></para>
+  <para style="m" vid="MRK 11:17">
+    <char style="wj">ተብሎ አልተጻፈምን? እናንተ ግን የሌቦች ዋሻ አደረጋችሁት!”</char> አላቸው።<verse eid="MRK 11:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="MRK 11:18"/>የካህናት አለቆችና ጸሐፍትም፣ ይህን ሲሰሙ እንዴት እንደሚያጠፉት መንገድ ይፈልጉ ጀመር፤ ሕዝቡ ሁሉ በትምህርቱ በመገረማቸው ፈርተውታልና።<verse eid="MRK 11:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="MRK 11:19"/>በመሸም ጊዜ ከከተማዪቱ ወጥተው ሄዱ<note caller="+" style="f"><char style="fr" closed="false">11፥19 </char><char style="ft" closed="false">አንዳንድ ቅጆች </char><char style="fqa" closed="false">ወጥቶ ሄደ </char><char style="ft" closed="false">ይላሉ።</char></note>።<verse eid="MRK 11:19"/></para>
+  <para style="s1">የበለሷ ዛፍ ደረቀች</para>
+  <para style="sr">
+    <ref loc="MRK 11:20-24">11፥20-24</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 21:19-22">ማቴ 21፥19-22</ref></char></para>
+  <para style="p">
+    <verse number="20" style="v" sid="MRK 11:20"/>በማግስቱም ጧት በመንገድ ሲያልፉ፣ በለሲቱ ከነሥሯ ደርቃ አዩ። <verse eid="MRK 11:20"/><verse number="21" style="v" sid="MRK 11:21"/>ጴጥሮስ ነገሩ ትዝ አለውና ኢየሱስን፣ “መምህር ሆይ፤ እነሆ፤ የረገምሃት በለስ ደርቃለች” አለው።<verse eid="MRK 11:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="MRK 11:22"/>ኢየሱስም መልሶ እንዲህ አላቸው፤ <char style="wj">“በእግዚአብሔር እመኑ</char><note caller="+" style="f"><char style="fr" closed="false">11፥22 </char><char style="ft" closed="false">አንዳንድ የጥንት ቅጆች </char><char style="fqa" closed="false">በእግዚአብሔር ላይ እምነት ካላችሁ </char><char style="ft" closed="false">ይላሉ።</char></note>፤ <verse eid="MRK 11:22"/><verse number="23" style="v" sid="MRK 11:23"/><char style="wj">እውነት እላችኋለሁ፤ ማንም ይህን ተራራ፣ ‘ተነቅለህ ወደ ባሕር ተወርወር’ ቢለውና ይህንም በልቡ ሳይጠራጠር ቢያምን ይሆንለታል።</char> <verse eid="MRK 11:23"/><verse number="24" style="v" sid="MRK 11:24"/><char style="wj">ስለዚህ በጸሎት የምትለምኑትን ሁሉ እንደ ተቀበላችሁት አድርጋችሁ ብታምኑ ይሆንላችኋል።</char> <verse eid="MRK 11:24"/><verse number="25" style="v" sid="MRK 11:25"/><char style="wj">እንዲሁም ለጸሎት በምትቆሙበት ጊዜ፣ የሰማዩ አባታችሁ ኀጢአታችሁን ይቅር እንዲልላችሁ፣ እናንተም በሰው ላይ ያላችሁን ሁሉ ይቅር በሉ።</char> <verse eid="MRK 11:25"/><verse number="26" style="v" sid="MRK 11:26"/><char style="wj">ይቅር ባትሉ ግን የሰማዩ አባታችሁ ኀጢአታችሁን ይቅር አይላችሁም።</char><note caller="+" style="f"><char style="fr" closed="false">11፥26 </char><char style="ft" closed="false">አንዳንድ ቅጆች 26 የላቸውም።</char></note><char style="wj">”</char><verse eid="MRK 11:26"/></para>
+  <para style="s1">በኢየሱስ ሥልጣን ላይ ጥያቄ ተነሣ</para>
+  <para style="sr">
+    <ref loc="MRK 11:27-33">11፥27-33</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 21:23-27">ማቴ 21፥23-27</ref>፤ <ref loc="LUK 20:1-8">ሉቃ 20፥1-8</ref></char></para>
+  <para style="p">
+    <verse number="27" style="v" sid="MRK 11:27"/>እንደ ገና ወደ ኢየሩሳሌም መጡ፤ ኢየሱስ በቤተ መቅደሱ ቅጥር ግቢ ውስጥ በሚዘዋወርበት ጊዜ፣ የካህናት አለቆች፣ ጸሐፍትና የሕዝብ ሽማግሌዎች ወደ እርሱ ቀርበው፣ <verse eid="MRK 11:27"/><verse number="28" style="v" sid="MRK 11:28"/>“እነዚህን ነገሮች የምታደርገው በምን ሥልጣን ነው? እነዚህን እንድታደርግስ ይህን ሥልጣን የሰጠህ ማን ነው?” አሉት።<verse eid="MRK 11:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="MRK 11:29"/>ኢየሱስም መልሶ እንዲህ አላቸው፤ <char style="wj">“እስቲ እኔም አንድ ጥያቄ ልጠይቃችሁ፤ መልሱልኝ፤ እኔም እነዚህን ነገሮች በምን ሥልጣን እንደማደርግ እነግራችኋለሁ።</char> <verse eid="MRK 11:29"/><verse number="30" style="v" sid="MRK 11:30"/><char style="wj">የዮሐንስ ጥምቀት ከሰማይ ነበረችን ወይስ ከሰው? መልሱልኝ።”</char><verse eid="MRK 11:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="MRK 11:31"/>እነርሱም እርስ በርሳቸው እንዲህ ተባባሉ፤ “ ‘ከሰማይ ነው’ ብንል፣ ‘ታዲያ ለምን አላመናችሁትም?’ ይለናል፤ <verse eid="MRK 11:31"/><verse number="32" style="v" sid="MRK 11:32"/>‘ታዲያ፣ ከሰው ነው’ እንበልን?” ሕዝቡ ሁሉ ዮሐንስ እውነተኛ ነቢይ መሆኑን ያምኑ ስለ ነበር ፈሩ።<verse eid="MRK 11:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="MRK 11:33"/>ስለዚህ ለኢየሱስ “አናውቅም” ብለው መለሱለት።</para>
+  <para style="p" vid="MRK 11:33">ኢየሱስም፣ <char style="wj">“እንግዲያው እኔም እነዚህን ነገሮች በምን ሥልጣን እንደማደርግ አልነግራችሁም”</char> አላቸው።<verse eid="MRK 11:33"/></para>
+  <chapter eid="MRK 11"/>
+  <chapter number="12" style="c" sid="MRK 12"/>
+  <para style="s1">የወይን ስፍራ የተከራዩ ገበሬዎች ምሳሌ</para>
+  <para style="sr">
+    <ref loc="MRK 12:1-12">12፥1-12</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 21:33-46">ማቴ 21፥33-46</ref>፤ <ref loc="LUK 20:9-19">ሉቃ 20፥9-19</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 12:1"/>ከዚያም እንዲህ እያለ በምሳሌ ይነግራቸው ጀመር፤ <char style="wj">“አንድ ሰው ወይን ተከለ፤ ዙሪያውን ዐጠረ፤ ለመጭመቂያው ጕድጓድ ቈፈረ፤ የመጠበቂያም ማማ ሠራለት፤ ከዚያም ለገበሬዎች አከራይቶ ወደ ሌላ አገር ሄደ።</char> <verse eid="MRK 12:1"/><verse number="2" style="v" sid="MRK 12:2"/><char style="wj">በመከር ጊዜም ከወይኑ ፍሬ እንዲያመጣለት ከአገልጋዮቹ አንዱን ወደ ገበሬዎቹ ላከ።</char> <verse eid="MRK 12:2"/><verse number="3" style="v" sid="MRK 12:3"/><char style="wj">እነርሱ ግን ይዘው ደበደቡት፤ ባዶ እጁንም ሰደዱት።</char> <verse eid="MRK 12:3"/><verse number="4" style="v" sid="MRK 12:4"/><char style="wj">እንደ ገናም ሌላ አገልጋይ ላከ። እነርሱም ራሱን ፈንክተውና አዋርደው መለሱት።</char> <verse eid="MRK 12:4"/><verse number="5" style="v" sid="MRK 12:5"/><char style="wj">አሁንም እንደ ገና ሌላ ላከ፤ ይህኛውንም ገደሉት፤ ከሌሎች ከብዙዎቹ መካከል አንዳንዶቹን ደበደቡ፤ አንዳንዶቹንም ገደሉ።</char><verse eid="MRK 12:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="MRK 12:6"/>
+    <char style="wj">“አሁንም የሚላክ ሌላ ነበረው፤ እርሱም የሚወድደው ልጁ ነበረ፤ ‘ልጄንስ ያከብሩታል’ በማለት ከሁሉ በኋላ ላከው።</char><verse eid="MRK 12:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="MRK 12:7"/>
+    <char style="wj">“ገበሬዎቹ ግን እርስ በርሳቸው፣ ‘ይህማ ዋናው ወራሹ ነው፤ ኑ እንግደለው፤ ርስቱ የእኛ ይሆናል’ ተባባሉ፤</char> <verse eid="MRK 12:7"/><verse number="8" style="v" sid="MRK 12:8"/><char style="wj">ከዚያም ይዘው ገደሉት፤ ከወይኑ ስፍራም አውጥተው ጣሉት።</char><verse eid="MRK 12:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="MRK 12:9"/>
+    <char style="wj">“እንግዲህ የወይኑ አትክልት ባለቤት ምን የሚያደርግ ይመስላችኋል? ይመጣል፤ ገበሬዎቹን ይገድላል፤ የወይኑንም አትክልት ለሌሎች ይሰጣል።</char> <verse eid="MRK 12:9"/><verse number="10" style="v" sid="MRK 12:10"/><char style="wj">እንዲህ የሚለውን የመጽሐፍ ቃል አላነበባችሁምን፤</char></para>
+  <para style="q1" vid="MRK 12:10">
+    <char style="wj">“ ‘ግንበኞች የናቁት ድንጋይ፣</char></para>
+  <para style="q2" vid="MRK 12:10">
+    <char style="wj">እርሱ የማእዘን ራስ</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">12፥10 </char>
+      <char style="ft" closed="false">ወይም </char>
+      <char style="fqa" closed="false">የማእዘን ድንጋይ</char>
+    </note> <char style="wj">ሆነ፤</char><verse eid="MRK 12:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="MRK 12:11"/>
+    <char style="wj">ጌታ ይህን አድርጓል፣</char></para>
+  <para style="q2" vid="MRK 12:11">
+    <char style="wj">ይህም ለዐይናችን ድንቅ ነው’?”</char><verse eid="MRK 12:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="MRK 12:12"/>ምሳሌውን የተናገረው ስለ እነርሱ መሆኑን ስላወቁ፣ ሊይዙት ፈለጉ፤ ነገር ግን ሕዝቡን ስለ ፈሩ ትተውት ሄዱ።<verse eid="MRK 12:12"/></para>
+  <para style="s1">ለቄሳር ግብር ስለ መክፈል</para>
+  <para style="sr">
+    <ref loc="MRK 12:13-17">12፥13-17</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 22:15-22">ማቴ 22፥15-22</ref>፤ <ref loc="LUK 20:20-26">ሉቃ 20፥20-26</ref></char></para>
+  <para style="p">
+    <verse number="13" style="v" sid="MRK 12:13"/>ከዚያም በነገር እንዲያጠምዱት ከፈሪሳውያንና ከሄሮድስ ወገን ሰዎች ወደ እርሱ ላኩ። <verse eid="MRK 12:13"/><verse number="14" style="v" sid="MRK 12:14"/>እነርሱም መጥተው እንዲህ አሉት፤ “መምህር ሆይ፤ አንተ ትክክለኛ ሰው መሆንህን እናውቃለን፤ የሰዎች ማንነት ስለማይገድህም አታዳላም፤ የእግዚአብሔርን መንገድ ብቻ በእውነት ታስተምራለህ፤ ለመሆኑ ለቄሳር ግብር መክፈል ይገባል ወይስ አይገባም? <verse eid="MRK 12:14"/><verse number="15" style="v" sid="MRK 12:15"/>እኛስ እንክፈል ወይስ አንክፈል?”</para>
+  <para style="p" vid="MRK 12:15">ኢየሱስ ግን ግብዝነታቸውን ዐውቆ፣ <char style="wj">“ለምን ልታጠምዱኝ ትፈልጋላችሁ? እስቲ አንድ ዲናር አምጡልኝና ልየው”</char> አላቸው። <verse eid="MRK 12:15"/><verse number="16" style="v" sid="MRK 12:16"/>እነርሱም አመጡለት፣ <char style="wj">“ይህ የማን መልክ ነው? ጽሕፈቱስ የማን ነው?”</char></para>
+  <para style="p" vid="MRK 12:16">አላቸው፤ እነርሱም፣ “የቄሳር ነው” አሉት።<verse eid="MRK 12:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="MRK 12:17"/>ኢየሱስም፣ <char style="wj">“የቄሳርን ለቄሳር፣ የእግዚአብሔርን ለእግዚአብሔር ስጡ”</char> አላቸው። እነርሱም በእርሱ ተደነቁ።<verse eid="MRK 12:17"/></para>
+  <para style="s1">ጋብቻና ትንሣኤ</para>
+  <para style="sr">
+    <ref loc="MRK 12:18-27">12፥18-27</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 22:23-33">ማቴ 22፥23-33</ref>፤ <ref loc="LUK 20:27-38">ሉቃ 20፥27-38</ref></char></para>
+  <para style="p">
+    <verse number="18" style="v" sid="MRK 12:18"/>ከዚህ በኋላ የሙታን ትንሣኤ የለም የሚሉ ሰዱቃውያን ወደ እርሱ መጥተው እንዲህ ሲሉ ጠየቁት፤ <verse eid="MRK 12:18"/><verse number="19" style="v" sid="MRK 12:19"/>“መምህር ሆይ፤ የአንድ ሰው ወንድም ሚስት አግብቶ ልጅ ሳይወልድ ቢሞት፣ ይህ ሰው ሴትየዋን አግብቶ ለወንድሙ ዘር እንዲተካ ሙሴ ጽፎልናል። <verse eid="MRK 12:19"/><verse number="20" style="v" sid="MRK 12:20"/>ታዲያ ሰባት ወንድማማቾች ነበሩ፤ የመጀመሪያው አግብቷት ዘር ሳይተካ ሞተ፤ <verse eid="MRK 12:20"/><verse number="21" style="v" sid="MRK 12:21"/>ሁለተኛውም ሴትየዋን አገባት፤ እርሱም ዘር ሳይተካ ሞተ፤ ሦስተኛውም እንዲሁ፤ <verse eid="MRK 12:21"/><verse number="22" style="v" sid="MRK 12:22"/>ሰባቱም አገቧት፤ ዘር ግን አልተኩም፤ በመጨረሻም ሴትየዋ ሞተች። <verse eid="MRK 12:22"/><verse number="23" style="v" sid="MRK 12:23"/>እንግዲህ፣ ሰባቱም አግብተዋታልና በትንሣኤ<note caller="+" style="f"><char style="fr" closed="false">12፥23 </char><char style="ft" closed="false">አንዳንድ ቅጆች </char><char style="fqa" closed="false">በትንሣኤ ሰዎች ከሙታን ሲነሡ </char><char style="ft" closed="false">የሚል አላቸው</char></note> ለማናቸው ሚስት ልትሆን ነው?” አሉት።<verse eid="MRK 12:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="MRK 12:24"/>ኢየሱስም፣ እንዲህ ሲል መለሰላቸው፤ <char style="wj">“የምትስቱት እኮ ቅዱሳት መጻሕፍትንና የእግዚአብሔርን ኀይል ስለማታውቁ ነው!</char> <verse eid="MRK 12:24"/><verse number="25" style="v" sid="MRK 12:25"/><char style="wj">ሙታን በሚነሡበት ጊዜ እንደ ሰማይ መላእክት ይሆናሉ እንጂ አያገቡም፤ አይጋቡም።</char> <verse eid="MRK 12:25"/><verse number="26" style="v" sid="MRK 12:26"/><char style="wj">ስለ ሙታን መነሣት ግን፣ በሙሴ መጽሐፍ ይኸውም ስለ ቍጥቋጦው በተነገረው ክፍል፣ እግዚአብሔር ‘እኔ የአብርሃም አምላክ፣ የይስሐቅ አምላክ፣ የያዕቆብ አምላክ ነኝ’ ያለውን አላነበባችሁምን?</char> <verse eid="MRK 12:26"/><verse number="27" style="v" sid="MRK 12:27"/><char style="wj">እግዚአብሔር የሕያዋን አምላክ እንጂ የሙታን አምላክ አይደለም፤ ስለዚህ እጅግ ተሳስታችኋል።”</char><verse eid="MRK 12:27"/></para>
+  <para style="s1">ከሁሉ የሚበልጠው ትእዛዝ</para>
+  <para style="sr">
+    <ref loc="MRK 12:28-34">12፥28-34</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 22:34-40">ማቴ 22፥34-40</ref></char></para>
+  <para style="p">
+    <verse number="28" style="v" sid="MRK 12:28"/>ከጸሐፍትም አንዱ መጥቶ ሲከራከሩ ሰማቸው፤ ኢየሱስ ለቀረበለት ጥያቄ ተገቢውን መልስ መስጠቱን አስተውሎ፣ “ለመሆኑ ከትእዛዞች ሁሉ የሚበልጠው የትኛው ነው?” ሲል ጠየቀው።<verse eid="MRK 12:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="MRK 12:29"/>ኢየሱስም እንዲህ ሲል መለሰለት፤ <char style="wj">“ከሁሉ የሚበልጠው ይህ ነው፤ ‘እስራኤል ሆይ ስማ፤ ጌታ አምላካችን አንድ ጌታ ነው፤</char> <verse eid="MRK 12:29"/><verse number="30" style="v" sid="MRK 12:30"/><char style="wj">አንተም ጌታ አምላክህን በፍጹም ልብህ፣ በፍጹም ነፍስህ፣ በፍጹም ሐሳብህና በፍጹም ኀይልህ ውደድ።’</char> <verse eid="MRK 12:30"/><verse number="31" style="v" sid="MRK 12:31"/><char style="wj">ሁለተኛውም ይህ ነው፤ ‘ባልንጀራህን እንደ ራስህ ውደድ።’ ከእነዚህም የሚበልጥ ትእዛዝ የለም።”</char><verse eid="MRK 12:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="MRK 12:32"/>ጸሓፊውም እንዲህ አለው፤ “መምህር ሆይ፤ መልካም ብለሃል፤ እርሱ አንድ መሆኑን፣ ከእርሱም ሌላ አለመኖሩን መናገርህ ትክክል ነው፤ <verse eid="MRK 12:32"/><verse number="33" style="v" sid="MRK 12:33"/>እርሱን በፍጹም ልብህ፣ በፍጹም አእምሮህ፣ በፍጹም ነፍስህ፣ በፍጹም ኀይልህ መውደድ፣ እንዲሁም ባልንጀራህን እንደ ራስህ መውደድ ከሚቃጠል መሥዋዕት ሁሉና ከሌሎችም መሥዋዕቶች ይበልጣል።”<verse eid="MRK 12:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="MRK 12:34"/>ኢየሱስም በማስተዋል እንደ መለሰለት አይቶ፣ <char style="wj">“አንተ ከእግዚአብሔር መንግሥት የራቅህ አይደለህም”</char> አለው። ከዚህ በኋላ ሊጠይቀው የደፈረ ማንም አልነበረም።<verse eid="MRK 12:34"/></para>
+  <para style="s1">ክርስቶስ የማን ልጅ ነው?</para>
+  <para style="sr">
+    <ref loc="MRK 12:35-37">12፥35-37</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 24:41-46">ማቴ 24፥41-46</ref>፤ <ref loc="LUK 20:41-44">ሉቃ 20፥41-44</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 12:38-40">12፥38-40</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 23:1-7">ማቴ 23፥1-7</ref>፤ <ref loc="LUK 20:45-47">ሉቃ 20፥45-47</ref></char></para>
+  <para style="p">
+    <verse number="35" style="v" sid="MRK 12:35"/>ኢየሱስ በቤተ መቅደሱ አደባባይ በሚያስተምርበት ጊዜ እንዲህ ሲል ጥያቄ አቀረበ፤ <char style="wj">“ጸሐፍት እንዴት ክርስቶስ የዳዊት ልጅ ነው ይላሉ?</char> <verse eid="MRK 12:35"/><verse number="36" style="v" sid="MRK 12:36"/><char style="wj">ዳዊት በመንፈስ ቅዱስ ሲናገር፣</char></para>
+  <para style="q1" vid="MRK 12:36">
+    <char style="wj">“ ‘ጌታ ጌታዬን፣</char></para>
+  <para style="q2" vid="MRK 12:36">
+    <char style="wj">“ጠላቶችህን ከእግርህ በታች</char></para>
+  <para style="q1" vid="MRK 12:36">
+    <char style="wj">እስካደርጋቸው ድረስ</char></para>
+  <para style="q2" vid="MRK 12:36">
+    <char style="wj">በቀኜ ተቀመጥ” ’ አለው። ይላል፤</char><verse eid="MRK 12:36"/></para>
+  <para style="m">
+    <verse number="37" style="v" sid="MRK 12:37"/>
+    <char style="wj">ታዲያ ዳዊት ራሱ ‘ጌታ’ ካለው፣ እንዴት ተመልሶ ልጁ ይሆናል?”</char> ብዙ ሕዝብም በደስታ ይሰማው ነበር።<verse eid="MRK 12:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="MRK 12:38"/>በሚያስተምርበትም ጊዜ እንዲህ አለ፤ <char style="wj">“ከጸሐፍት ተጠንቀቁ፤ የተንዘረፈፈ ቀሚስ ለብሰው መዞርን ይወድዳሉ፤ በየአደባባዩም የአክብሮት ሰላምታ ይሻሉ፤</char> <verse eid="MRK 12:38"/><verse number="39" style="v" sid="MRK 12:39"/><char style="wj">በምኵራብ ከፍተኛውን ወንበር፣ በግብዣም ቦታ የከበሬታን ስፍራ ይፈልጋሉ፤</char> <verse eid="MRK 12:39"/><verse number="40" style="v" sid="MRK 12:40"/><char style="wj">በረጅም ጸሎታቸው እያሳበቡ የመበለቶችን ቤት ያራቍታሉ፤ እነዚህ የባሰ ፍርድ ይቀበላሉ።”</char><verse eid="MRK 12:40"/></para>
+  <para style="s1">የመበለቲቱ ስጦታ</para>
+  <para style="sr">
+    <ref loc="MRK 12:41-44">12፥41-44</ref> ተጓ ምብ – <char style="xt"><ref loc="LUK 21:1-4">ሉቃ 21፥1-4</ref></char></para>
+  <para style="p">
+    <verse number="41" style="v" sid="MRK 12:41"/>ኢየሱስ በገንዘብ ማስቀመጫው አንጻር ተቀምጦ፣ ብዙ ሰዎች ስጦታቸውን ወደ ቤተ መቅደሱ ገንዘብ ማስቀመጫ ሣጥን ሲያስገቡ ይመለከት ነበር። ብዙ ሀብታሞች ብዙ ገንዘብ አስገቡ፤ <verse eid="MRK 12:41"/><verse number="42" style="v" sid="MRK 12:42"/>አንዲት ምስኪን መበለት ግን ከአንድ ሳንቲም የማይበልጡ ሁለት የናስ ቤሳዎች አስገባች።<verse eid="MRK 12:42"/></para>
+  <para style="p">
+    <verse number="43" style="v" sid="MRK 12:43"/>ኢየሱስም ደቀ መዛሙርቱን ጠርቶ፣ እንዲህ አላቸው፤ <char style="wj">“እውነት እላችኋለሁ፤ ይህች ድኻ መበለት ሣጥኑ ውስጥ ከጣሉት ከሌሎቹ የበለጠ አስገባች።</char> <verse eid="MRK 12:43"/><verse number="44" style="v" sid="MRK 12:44"/><char style="wj">እነዚህ ሁሉ ከተረፈው ሀብታቸው ሰጡ፤ እርሷ ግን በድኽነት ዐቅሟ ያላትን ሁሉ አውጥታ ለመኖሪያ የሚሆናትን እንዳለ ሰጠች።”</char><verse eid="MRK 12:44"/></para>
+  <chapter eid="MRK 12"/>
+  <chapter number="13" style="c" sid="MRK 13"/>
+  <para style="s1">የመጨረሻው ዘመን ምልክቶች</para>
+  <para style="sr">
+    <ref loc="MRK 13:1-37">13፥1-37</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 24:1-51">ማቴ 24፥1-51</ref>፤ <ref loc="LUK 21:5-36">ሉቃ 21፥5-36</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 13:1"/>ከቤተ መቅደስ ሲወጣ ከደቀ መዛሙርቱ አንዱ፣ “መምህር ሆይ፤ ድንጋዮቹ እንዴት እንደ ሆኑ፣ ሕንጻውም እንዴት ውብ እንደ ሆነ እይ” አለው።<verse eid="MRK 13:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="MRK 13:2"/>ኢየሱስም መልሶ፣ <char style="wj">“እነዚህን ታላላቅ ሕንጻዎች ታያለህን? አንዱ ድንጋይ በሌላው ላይ እንደ ሆነ አይቀርም፤ ሁሉም ፈራሽ ነው”</char> አለው።<verse eid="MRK 13:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="MRK 13:3"/>ኢየሱስ በቤተ መቅደሱ ትይዩ፣ በደብረ ዘይት ተራራ ላይ ተቀምጦ ሳለ ጴጥሮስ፣ ያዕቆብ፣ ዮሐንስና እንድርያስ እንዲህ ሲሉ ጠየቁት፤ <verse eid="MRK 13:3"/><verse number="4" style="v" sid="MRK 13:4"/>“ይህ መቼ እንደሚሆን ንገረን፤ የዚህስ ሁሉ ፍጻሜ ምልክቱ ምንድን ነው?”<verse eid="MRK 13:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="MRK 13:5"/>ኢየሱስም እንዲህ ይላቸው ጀመር፤ <char style="wj">“ማንም እንዳያስታችሁ ተጠንቀቁ፤</char> <verse eid="MRK 13:5"/><verse number="6" style="v" sid="MRK 13:6"/><char style="wj">ብዙዎች፣ ‘እኔ እርሱ ነኝ’ እያሉ በስሜ ይመጣሉ፤ ብዙዎችንም ያስታሉ።</char> <verse eid="MRK 13:6"/><verse number="7" style="v" sid="MRK 13:7"/><char style="wj">ስለ ጦርነትና ስለ ጦርነት ወሬ በምትሰሙበት ጊዜ አትደንግጡ፤ ይህማ መሆን አለበት፤ ፍጻሜው ግን ገና ነው።</char> <verse eid="MRK 13:7"/><verse number="8" style="v" sid="MRK 13:8"/><char style="wj">ሕዝብ በሕዝብ ላይ፣ መንግሥት በመንግሥት ላይ ይነሣል፤ በብዙ ቦታም የመሬት መንቀጥቀጥና ራብ ይሆናል፤ እነዚህ ሁሉ የምጥ ጣር መጀመሪያ ናቸው።</char><verse eid="MRK 13:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="MRK 13:9"/>
+    <char style="wj">“ለራሳችሁ ተጠንቀቁ፤ ለአካባቢ ሸንጎ አሳልፈው ይሰጧችኋል፤ በምኵራብ ይገርፏችኋል፤ ምስክር ትሆኑም ዘንድ በእኔ ምክንያት በገዦችና በነገሥታት ፊት ትቆማላችሁ።</char> <verse eid="MRK 13:9"/><verse number="10" style="v" sid="MRK 13:10"/><char style="wj">አስቀድሞ ግን ወንጌል ለሕዝብ ሁሉ መሰበክ አለበት።</char> <verse eid="MRK 13:10"/><verse number="11" style="v" sid="MRK 13:11"/><char style="wj">ተይዛችሁ ለፍርድ በምትቀርቡበት ጊዜ፣ በዚያች ሰዓት የሚሰጣችሁን ተናገሩ እንጂ ምን እንናገራለን በማለት አስቀድማችሁ አትጨነቁ፤ የሚናገረው መንፈስ ቅዱስ እንጂ እናንተ አይደላችሁምና።</char><verse eid="MRK 13:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="MRK 13:12"/>
+    <char style="wj">“ወንድም ወንድሙን፣ አባትም ልጁን ለሞት አሳልፎ ይሰጣል፤ ልጆች በወላጆቻቸው ላይ ያምፃሉ፤ ይገድሏቸዋልም።</char> <verse eid="MRK 13:12"/><verse number="13" style="v" sid="MRK 13:13"/><char style="wj">በእኔ ምክንያት በሰው ሁሉ ዘንድ የተጠላችሁ ትሆናላችሁ፤ እስከ መጨረሻው የሚጸና ግን ይድናል።</char><verse eid="MRK 13:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="MRK 13:14"/>
+    <char style="wj">“ ‘የጥፋት ርኩሰት’ ስፍራው ባልሆነ ቦታ ቆሞ በምታዩት ጊዜ አንባቢው ያስተውል፤ በይሁዳ ያሉ ወደ ተራሮች ይሽሹ፤</char> <verse eid="MRK 13:14"/><verse number="15" style="v" sid="MRK 13:15"/><char style="wj">በቤቱ ጣራ ላይ ያለ አይውረድ፤ ንብረቱንም ለማውጣት ወደ ቤቱ አይግባ፤</char> <verse eid="MRK 13:15"/><verse number="16" style="v" sid="MRK 13:16"/><char style="wj">በዕርሻ ቦታ ያለ ልብሱን ለመውሰድ አይመለስ።</char> <verse eid="MRK 13:16"/><verse number="17" style="v" sid="MRK 13:17"/><char style="wj">በእነዚያ ቀናት ለነፍሰ ጡሮችና ለሚያጠቡ ወዮላቸው!</char> <verse eid="MRK 13:17"/><verse number="18" style="v" sid="MRK 13:18"/><char style="wj">ይህም በክረምት እንዳይሆን ጸልዩ፤</char> <verse eid="MRK 13:18"/><verse number="19" style="v" sid="MRK 13:19"/><char style="wj">በመጀመሪያ እግዚአብሔር ፍጥረትን ከፈጠረበት ጊዜ አንሥቶ እስከ አሁን ድረስ፣ እንዲሁ ደግሞም ወደ ፊት አቻ የሌለው ታላቅ መከራ ይሆናልና።</char> <verse eid="MRK 13:19"/><verse number="20" style="v" sid="MRK 13:20"/><char style="wj">ጌታ ቀኖቹን ባያሳጥራቸው ኖሮ ማንም ባልዳነ ነበር፤ ስለ መረጣቸው ስለ ምርጦቹ ሲል ግን ቀኖቹን አሳጥሯል።</char> <verse eid="MRK 13:20"/><verse number="21" style="v" sid="MRK 13:21"/><char style="wj">በዚያን ጊዜ ማንም፣ ‘እነሆ፤ ክርስቶስ</char><note caller="+" style="f"><char style="fr" closed="false">13፥21 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">መሲሑ</char></note> <char style="wj">እዚህ ነው?’ ቢላችሁ ወይም፣ ‘እነሆ፤ እዚያ ነው’ ቢላችሁ አትመኑ።</char> <verse eid="MRK 13:21"/><verse number="22" style="v" sid="MRK 13:22"/><char style="wj">ሐሰተኛ ክርስቶሶችና ሐሰተኛ ነቢያት ተነሥተው፣ ምልክቶችንና ድንቆችን በማድረግ፣ ቢቻላቸው የተመረጡትን እንኳ ያስታሉ።</char> <verse eid="MRK 13:22"/><verse number="23" style="v" sid="MRK 13:23"/><char style="wj">ስለዚህ ተጠንቀቁ፤ ጊዜው ሳይደርስ ሁሉን ነግሬአችኋለሁ።</char><verse eid="MRK 13:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="MRK 13:24"/>
+    <char style="wj">“በዚያን ጊዜ፣ ከመከራው በኋላ ‘ፀሓይ ትጨልማለች፣</char></para>
+  <para style="q1" vid="MRK 13:24">
+    <char style="wj">“ ‘ጨረቃም ብርሃኗን አትሰጥም፤</char><verse eid="MRK 13:24"/></para>
+  <para style="q1">
+    <verse number="25" style="v" sid="MRK 13:25"/>
+    <char style="wj">ከዋክብት ከሰማይ ይረግፋሉ፤</char></para>
+  <para style="q2" vid="MRK 13:25">
+    <char style="wj">የሰማይ ኀይላትም ይናወጣሉ።’</char><verse eid="MRK 13:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="MRK 13:26"/>
+    <char style="wj">“በዚያን ጊዜም የሰው ልጅ በታላቅ ኀይልና ግርማ በደመና ሲመጣ ያዩታል።</char> <verse eid="MRK 13:26"/><verse number="27" style="v" sid="MRK 13:27"/><char style="wj">እርሱም መላእክቱን ልኮ ከአራቱ ነፋሳት፣ ከምድር ዳርቻ እስከ ሰማያት ዳርቻ ምርጦቹን ይሰበስባል።</char><verse eid="MRK 13:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="MRK 13:28"/>
+    <char style="wj">“ምሳሌውን ከበለስ ተማሩ፤ ቅርንጫፏ ሲለመልም፣ ቅጠሏ ሲያቈጠቍጥ በጋ እንደ ተቃረበ ታውቃላችሁ፤</char> <verse eid="MRK 13:28"/><verse number="29" style="v" sid="MRK 13:29"/><char style="wj">እንዲሁ ደግሞ እነዚህ ነገሮች መፈጸማቸውን ስታዩ እንደ ቀረበ፣ በደጅም እንደ ሆነ ዕወቁ።</char> <verse eid="MRK 13:29"/><verse number="30" style="v" sid="MRK 13:30"/><char style="wj">እውነት እላችኋለሁ፣ እነዚህ ነገሮች እስከሚፈጸሙ ድረስ ይህ ትውልድ</char><note caller="+" style="f"><char style="fr" closed="false">13፥30 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">ዘር</char></note> <char style="wj">አያልፍም፤</char> <verse eid="MRK 13:30"/><verse number="31" style="v" sid="MRK 13:31"/><char style="wj">ሰማይና ምድር ያልፋሉ፣ ቃሌ ግን አያልፍም።</char><verse eid="MRK 13:31"/></para>
+  <para style="s1">ቀኑና ሰዓቱ አይታወቅም</para>
+  <para style="p">
+    <verse number="32" style="v" sid="MRK 13:32"/>
+    <char style="wj">“ነገር ግን ስለዚያች ቀን ወይም ስለዚያችም ሰዓት ከአብ በቀር፣ የሰማይ መላእክትም ቢሆኑ፣ ወልድም ቢሆን፣ ማንም አያውቅም።</char> <verse eid="MRK 13:32"/><verse number="33" style="v" sid="MRK 13:33"/><char style="wj">ስለዚህ ጊዜው መቼ እንደሚሆን አታውቁምና ተጠንቀቁ፤ ትጉ፣ ጸልዩም</char><note caller="+" style="f"><char style="fr" closed="false">13፥33 </char><char style="fqa" closed="false">ጸልዩ </char><char style="ft" closed="false">የሚለው ቃል በአንዳንድ ቅጆች አይገኝም።</char></note><char style="wj">።</char> <verse eid="MRK 13:33"/><verse number="34" style="v" sid="MRK 13:34"/><char style="wj">ይህም ቤቱን ለአገልጋዮቹ ትቶ፣ እያንዳንዱን አገልጋይ በየሥራ ድርሻው ላይ አሰማርቶ፣ በረኛው ነቅቶ እንዲጠብቅ አዝዞ የሄደውን ሰው ይመስላል።</char> <verse eid="MRK 13:34"/><verse number="35" style="v" sid="MRK 13:35"/><char style="wj">እንግዲህ የቤቱ ባለቤት በምሽት ወይም በውድቅት፣ በዶሮ ጩኸት ወይም ጎሕ ሲቀድድ እንደሚመጣ አታውቁምና ተግታችሁ ጠብቁ፤</char> <verse eid="MRK 13:35"/><verse number="36" style="v" sid="MRK 13:36"/><char style="wj">ድንገት ሲመጣ ተኝታችሁ እንዳያገኛችሁ፤</char> <verse eid="MRK 13:36"/><verse number="37" style="v" sid="MRK 13:37"/><char style="wj">ለእናንተ የምነግራችሁን ለሰው ሁሉ እናገራለሁ፤ ተግታችሁ ጠብቁ!”</char><verse eid="MRK 13:37"/></para>
+  <chapter eid="MRK 13"/>
+  <chapter number="14" style="c" sid="MRK 14"/>
+  <para style="s1">ኢየሱስን ሽቶ የቀባችው ሴት</para>
+  <para style="sr">
+    <ref loc="MRK 14:1-11">14፥1-11</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 26:2-16">ማቴ 26፥2-16</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 14:1">14፥1</ref>፡<ref loc="MRK 14:2">2</ref>፡<ref loc="MRK 14:10">10</ref>፡<ref loc="MRK 14:11">11</ref> ተጓ ምብ – <char style="xt"><ref loc="LUK 22:1-6">ሉቃ 22፥1-6</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 14:3-8">14፥3-8</ref> ተጓ ምብ – <char style="xt"><ref loc="JHN 12:1-8">ዮሐ 12፥1-8</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 14:1"/>ፋሲካና የቂጣ በዓል ሊከበር ሁለት ቀን ሲቀረው፣ የካህናት አለቆችና ጸሐፍት ኢየሱስን የሚይዙበትና የሚገድሉበትን ዘዴ ይፈልጉ ነበር። <verse eid="MRK 14:1"/><verse number="2" style="v" sid="MRK 14:2"/>ሆኖም፣ “ሕዝቡ ዐመፅ እንዳያነሣ በበዓሉ ሰሞን መሆን የለበትም” ይባባሉ ነበር።<verse eid="MRK 14:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="MRK 14:3"/>እርሱም በቢታንያ በለምጻሙ ስምዖን ቤት በማእድ ተቀምጦ ሳለ፣ አንዲት ሴት ዋጋው እጅግ ውድ የሆነ ንጹሕ የናርዶስ ሽቱ የተሞላበት የአልባስጥሮስ ቢልቃጥ ይዛ መጣች፣ ቢልቃጡንም ሰብራ ሽቱውን በራሱ ላይ አፈሰሰችው።<verse eid="MRK 14:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="MRK 14:4"/>በዚያ ከነበሩት አንዳንዶቹ በድርጊቱ ተቈጥተው እንዲህ ይባባሉ ነበር፤ “ሽቱው ለምን በከንቱ ይባክናል? <verse eid="MRK 14:4"/><verse number="5" style="v" sid="MRK 14:5"/>ከሦስት መቶ ዲናር በላይ ተሸጦ፣ ገንዘቡን ለድኾች መስጠት ይቻል ነበር።” ሴትዮዋንም ነቀፏት።<verse eid="MRK 14:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="MRK 14:6"/>ኢየሱስ ግን እንዲህ አላቸው፤ <char style="wj">“ተዉአት፣ ለምን ታስቸግሯታላችሁ? መልካም ነገር አድርጋልኛለች።</char> <verse eid="MRK 14:6"/><verse number="7" style="v" sid="MRK 14:7"/><char style="wj">ድኾች ምንጊዜም ከእናንተ ጋር ናቸው፤ በፈለጋችሁ ጊዜ ልትረዷቸው ትችላላችሁ፤ እኔ ግን ሁልጊዜ ከእናንተ ጋር አልኖርም፤</char> <verse eid="MRK 14:7"/><verse number="8" style="v" sid="MRK 14:8"/><char style="wj">እርሷ ማድረግ የምትችለውን ያህል አድርጋለች፤ ለመቃብሬ እንዲሆን ሰውነቴን አስቀድማ ቀብታለች።</char> <verse eid="MRK 14:8"/><verse number="9" style="v" sid="MRK 14:9"/><char style="wj">እውነት እላችኋለሁ፤ ይህ ወንጌል በዓለም ሁሉ በሚሰበክበት በማንኛውም ስፍራ እርሷ ያደረገችው መታሰቢያ ሆኖ ይነገርላታል።”</char><verse eid="MRK 14:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="MRK 14:10"/>ከዚህ በኋላ ከዐሥራ ሁለቱ አንዱ የሆነው የአስቆሮቱ ይሁዳ አሳልፎ ሊሰጠው ወደ ካህናት አለቆች ሄደ። <verse eid="MRK 14:10"/><verse number="11" style="v" sid="MRK 14:11"/>እነርሱም ይህን ሲሰሙ ደስ አላቸው፤ ገንዘብ ሊሰጡትም ቃል ገቡለት፤ ስለዚህ እርሱን አሳልፎ የሚሰጥበትን ምቹ ጊዜ ይጠባበቅ ነበር።<verse eid="MRK 14:11"/></para>
+  <para style="s1">የጌታ እራት</para>
+  <para style="sr">
+    <ref loc="MRK 14:12-26">14፥12-26</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 26:17-30">ማቴ 26፥17-30</ref>፤ <ref loc="LUK 22:7-23">ሉቃ 22፥7-23</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 14:22-25">14፥22-25</ref> ተጓ ምብ – <char style="xt"><ref loc="1CO 11:23-25">1ቆሮ 11፥23-25</ref></char></para>
+  <para style="p">
+    <verse number="12" style="v" sid="MRK 14:12"/>የፋሲካ በግ በሚታረድበት በቂጣ በዓል የመጀመሪያው ቀን፣ ደቀ መዛሙርቱ ወደ ኢየሱስ ቀርበው፣ “የፋሲካ እራት የት እንድናዘጋጅልህ ትፈልጋለህ?” አሉት።<verse eid="MRK 14:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="MRK 14:13"/>እርሱም ከደቀ መዛሙርቱ ሁለቱን እንዲህ ሲል ላካቸው፤ <char style="wj">“ወደ ከተማ ሂዱ፤ እንስራ ውሃ የተሸከመ ሰው ይገናኛችኋል፤</char> <verse eid="MRK 14:13"/><verse number="14" style="v" sid="MRK 14:14"/><char style="wj">ወደሚገባበት ቤትም ተከተሉት፤ የቤቱንም ጌታ፣ ‘መምህሩ፣ ከደቀ መዛሙርቴ ጋር የፋሲካን ራት የምበላበት የእንግዳ ማረፊያ የትኛው ነው?’ ብሏል በሉት፤</char> <verse eid="MRK 14:14"/><verse number="15" style="v" sid="MRK 14:15"/><char style="wj">እርሱም በሰገነቱ ላይ የተሰናዳና የተነጠፈ ሰፊ አዳራሽ ያሳያችኋል፤ እዚያ አዘጋጁልን።”</char><verse eid="MRK 14:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="MRK 14:16"/>ደቀ መዛሙርቱም ወጥተው ወደ ከተማዪቱ ሄዱ፤ ማንኛውም ነገር ኢየሱስ እንዳላቸው ሆኖ አገኙት፤ ፋሲካውንም አሰናዱ።<verse eid="MRK 14:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="MRK 14:17"/>በመሸም ጊዜ ኢየሱስ ከዐሥራ ሁለቱ ጋር መጣ። <verse eid="MRK 14:17"/><verse number="18" style="v" sid="MRK 14:18"/>በማእድ ላይ ሳሉም፣ <char style="wj">“እውነት እላችኋለሁ፣ ከመካከላችሁ አንዱ፣ አብሮኝ የሚበላው እርሱ አሳልፎ ይሰጠኛል”</char> አላቸው።<verse eid="MRK 14:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="MRK 14:19"/>እነርሱም ዐዘኑ፤ እያንዳንዳቸውም፣ “እኔ እሆንን?” ይሉት ጀመር።<verse eid="MRK 14:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="MRK 14:20"/>እርሱም እንዲህ አላቸው፤ <char style="wj">“ከዐሥራ ሁለቱ አንዱ፣ ከእኔ ጋር እጁን በወጭቱ ውስጥ የሚያጠልቀው ነው።</char> <verse eid="MRK 14:20"/><verse number="21" style="v" sid="MRK 14:21"/><char style="wj">የሰው ልጅስ ስለ እርሱ እንደ ተጻፈው ይሄዳል፤ የሰውን ልጅ አሳልፎ ለሚሰጥ ለዚያ ሰው ግን ወዮለት! ያ ሰው ባይወለድ ይሻለው ነበር።”</char><verse eid="MRK 14:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="MRK 14:22"/>ሲበሉም እንጀራ አንሥቶ ባረከ፤ ቈርሶም ለደቀ መዛሙርቱ ሰጣቸውና፣ <char style="wj">“ዕንኩ፤ ይህ ሥጋዬ ነው”</char> አላቸው።<verse eid="MRK 14:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="MRK 14:23"/>ጽዋውንም አነሣ፤ አመስግኖም ሰጣቸው፤ ሁሉም ከዚያ ጠጡ።<verse eid="MRK 14:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="MRK 14:24"/>ደግሞም እንዲህ አላቸው፤ <char style="wj">“ይህ ስለ ብዙዎች የሚፈስስ የአዲስ</char><note caller="+" style="f"><char style="fr" closed="false">14፥24 </char><char style="ft" closed="false">አንዳንድ ቅጆች </char><char style="fqa" closed="false">“አዲስ” </char><char style="ft" closed="false">የሚለው ቃል የላቸውም።</char></note> <char style="wj">ኪዳን ደሜ ነው፤</char> <verse eid="MRK 14:24"/><verse number="25" style="v" sid="MRK 14:25"/><char style="wj">እውነት እላችኋለሁ፤ በእግዚአብሔር መንግሥት አዲሱን የወይን ፍሬ እስከምጠጣበት እስከዚያች ቀን ድረስ ዳግም ይህን አልጠጣም።”</char><verse eid="MRK 14:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="MRK 14:26"/>ከዚህ በኋላ መዝሙር ዘምረው ወደ ደብረ ዘይት ተራራ ወጡ።<verse eid="MRK 14:26"/></para>
+  <para style="s1">ጴጥሮስ እንደሚክደው ኢየሱስ አስቀድሞ ተናገረ</para>
+  <para style="sr">
+    <ref loc="MRK 14:27-31">14፥27-31</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 26:31-35">ማቴ 26፥31-35</ref></char></para>
+  <para style="p">
+    <verse number="27" style="v" sid="MRK 14:27"/>ኢየሱስም እንዲህ አላቸው፤ <char style="wj">“እንዲህ ተብሎ እንደ ተጻፈ፣ ሁላችሁ ትክዱኛላችሁ፤</char></para>
+  <para style="q1" vid="MRK 14:27">
+    <char style="wj">“ ‘እረኛውን እመታለሁ በጎቹም ይበተናሉ’</char><verse eid="MRK 14:27"/></para>
+  <para style="m">
+    <verse number="28" style="v" sid="MRK 14:28"/>
+    <char style="wj">ከተነሣሁ በኋላ ግን፣ ቀድሜአችሁ ወደ ገሊላ እሄዳለሁ።”</char><verse eid="MRK 14:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="MRK 14:29"/>ጴጥሮስም፣ “ሁሉም ቢሰናከሉ እንኳ እኔ አላደርገውም” አለ።<verse eid="MRK 14:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="MRK 14:30"/>ኢየሱስም፣ <char style="wj">“እውነት እልሃለሁ፤ በዚህች ሌሊት ዶሮ ሁለት</char><note caller="+" style="f"><char style="fr" closed="false">14፥30 </char><char style="ft" closed="false">አንዳንድ የጥንት ቅጆች </char><char style="fqa" closed="false">“ሁለት ጊዜ” </char><char style="ft" closed="false">የሚለው ሐረግ የላቸውም።</char></note> <char style="wj">ጊዜ ሳይጮኽ ሦስት ጊዜ ትክደኛለህ”</char> አለው።<verse eid="MRK 14:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="MRK 14:31"/>ጴጥሮስም፣ “ከአንተ ጋር ብሞት እንኳ ከቶ አልክድህም” በማለት ይበልጥ አጽንቶ ተናገረ። ሁሉም ደግሞ እንደዚሁ አሉ።<verse eid="MRK 14:31"/></para>
+  <para style="s1">ኢየሱስ በጌቴሴማኒ ጸለየ</para>
+  <para style="sr">
+    <ref loc="MRK 14:32-42">14፥32-42</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 26:36-46">ማቴ 26፥36-46</ref>፤ <ref loc="LUK 22:40-46">ሉቃ 22፥40-46</ref></char></para>
+  <para style="p">
+    <verse number="32" style="v" sid="MRK 14:32"/>ከዚህ በኋላ ጌቴሴማኒ ወደሚባል ስፍራ ሄዱ፤ ኢየሱስም ደቀ መዛሙርቱን፣ <char style="wj">“እኔ ስጸልይ እናንተ እዚህ ቈዩ”</char> አላቸው። <verse eid="MRK 14:32"/><verse number="33" style="v" sid="MRK 14:33"/>ጴጥሮስን፣ ያዕቆብንና ዮሐንስንም ይዞ ሄደ፤ እጅግ ያዝን ይጨነቅ ጀመር። <verse eid="MRK 14:33"/><verse number="34" style="v" sid="MRK 14:34"/>ደግሞም፣ <char style="wj">“ነፍሴ እስከ ሞት ድረስ እጅግ ዐዘነች፤ እዚሁ ሁኑና ነቅታችሁ ጠብቁ”</char> አላቸው።<verse eid="MRK 14:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="MRK 14:35"/>ጥቂት ዕልፍ ብሎም በምድር ላይ በመውደቅ ቢቻል ሰዓቱ ከእርሱ እንዲያልፍ ጸለየና፣ <verse eid="MRK 14:35"/><verse number="36" style="v" sid="MRK 14:36"/><char style="wj">“አባ</char><note caller="+" style="f"><char style="fr" closed="false">14፥36 </char><char style="ft" closed="false">በአራማይክ ቋንቋ አባት የሚጠራበት ነው።</char></note><char style="wj">፤ አባት ሆይ፤ ሁሉ ነገር ይቻልሃልና ይህን ጽዋ ከእኔ አርቀው፤ ነገር ግን የእኔ ፈቃድ ሳይሆን የአንተ ፈቃድ ይሁን”</char> አለ።<verse eid="MRK 14:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="MRK 14:37"/>ተመልሶም ሲመጣ ደቀ መዛሙርቱን ተኝተው አገኛቸው፤ ጴጥሮስንም እንዲህ አለው፣ <char style="wj">“ስምዖን ሆይ፤ ተኝተሃልን? አንድ ሰዓት እንኳ ነቅተህ መጠበቅ አቃተህ?</char> <verse eid="MRK 14:37"/><verse number="38" style="v" sid="MRK 14:38"/><char style="wj">ወደ ፈተና እንዳትገቡ ትጉ፤ ጸልዩም፤ መንፈስ ዝግጁ ነው፣ ሥጋ ግን ደካማ ነው።”</char><verse eid="MRK 14:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="MRK 14:39"/>እንደ ገናም ሄዶ መጀመሪያ የጸለየውን ደግሞ ጸለየ። <verse eid="MRK 14:39"/><verse number="40" style="v" sid="MRK 14:40"/>ዳግመኛም ሲመለስ ዐይናቸውን እንቅልፍ ከብዶት ተኝተው አገኛቸው፤ የሚመልሱለትንም አያውቁም ነበር።<verse eid="MRK 14:40"/></para>
+  <para style="p">
+    <verse number="41" style="v" sid="MRK 14:41"/>ሦስተኛ ጊዜም መጥቶ እንዲህ አላቸው፤ <char style="wj">“አሁንም እንደ ተኛችሁና እንዳረፋችሁ ናችሁ? ይበቃል! ሰዓቲቱ ደርሳለች፤ እነሆ፤ የሰው ልጅ ለኀጢአተኞች እጅ ዐልፎ ይሰጣል።</char> <verse eid="MRK 14:41"/><verse number="42" style="v" sid="MRK 14:42"/><char style="wj">ተነሡ፤ እንሂድ፤ አሳልፎ የሚሰጠኝ መጥቷል።”</char><verse eid="MRK 14:42"/></para>
+  <para style="s1">ኢየሱስ ተያዘ</para>
+  <para style="sr">
+    <ref loc="MRK 14:43-50">14፥43-50</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 26:47-56">ማቴ 26፥47-56</ref>፤ <ref loc="LUK 22:47-50">ሉቃ 22፥47-50</ref>፤ <ref loc="JHN 18:3-11">ዮሐ 18፥3-11</ref></char></para>
+  <para style="p">
+    <verse number="43" style="v" sid="MRK 14:43"/>ወዲያው እየተናገረ ሳለ ከዐሥራ ሁለቱ አንዱ ይሁዳ መጣ፤ አብረውትም ሰይፍና ዱላ የያዙ፣ ከካህናት አለቆች፣ ከጸሓፍትና ከሽማግሌዎች የተላኩ ብዙ ሰዎች ነበሩ።<verse eid="MRK 14:43"/></para>
+  <para style="p">
+    <verse number="44" style="v" sid="MRK 14:44"/>አሳልፎ የሚሰጠውም፣ “እኔ የምስመው እርሱ ነውና ያዙት፤ ተጠንቅቃችሁም ውሰዱት” በማለት አስቀድሞ ምልክት ሰጥቷቸው ነበር። <verse eid="MRK 14:44"/><verse number="45" style="v" sid="MRK 14:45"/>እንደ ደረሰም ወዲያው ወደ ኢየሱስ ቀርቦ፣ “መምህር ሆይ!” ብሎ ሳመው፤ <verse eid="MRK 14:45"/><verse number="46" style="v" sid="MRK 14:46"/>ሰዎቹም ኢየሱስን ያዙት አሰሩትም። <verse eid="MRK 14:46"/><verse number="47" style="v" sid="MRK 14:47"/>በአቅራቢያው ቆመው ከነበሩት አንዱ ሰይፉን መዝዞ የሊቀ ካህናቱን አገልጋይ ጆሮ ቈረጠ።<verse eid="MRK 14:47"/></para>
+  <para style="p">
+    <verse number="48" style="v" sid="MRK 14:48"/>ኢየሱስም እንዲህ አላቸው፤ <char style="wj">“እንደ ወንበዴ በሰይፍና በቈመጥ ልትይዙኝ መጣችሁን?</char> <verse eid="MRK 14:48"/><verse number="49" style="v" sid="MRK 14:49"/><char style="wj">በየዕለቱም በቤተ መቅደስ እያስተማርሁ ከእናንተ ጋር ስኖር አልያዛችሁኝም፤ መጻሕፍት ይፈጸሙ ዘንድ ይህ ሆነ።”</char> <verse eid="MRK 14:49"/><verse number="50" style="v" sid="MRK 14:50"/>በዚህ ጊዜ ሁሉም ትተውት ሸሹ።<verse eid="MRK 14:50"/></para>
+  <para style="p">
+    <verse number="51" style="v" sid="MRK 14:51"/>ዕርቃኑን ለመሸፈን በፍታ ያገለደመ አንድ ወጣት ኢየሱስን ይከተል ነበር። ሰዎቹም ይህን ወጣት በያዙት ጊዜ፣ <verse eid="MRK 14:51"/><verse number="52" style="v" sid="MRK 14:52"/>ግልድሙን ጥሎ ዕራቍቱን ሸሸ።<verse eid="MRK 14:52"/></para>
+  <para style="s1">ኢየሱስ በሸንጎ ፊት</para>
+  <para style="sr">
+    <ref loc="MRK 14:53-65">14፥53-65</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 26:57-68">ማቴ 26፥57-68</ref>፤ <ref loc="JHN 18:12">ዮሐ 18፥12</ref>፡<ref loc="JHN 18:13">13</ref>፡<ref loc="JHN 18:19-24">19-24</ref></char></para>
+  <para style="sr">
+    <ref loc="MRK 14:61-63">14፥61-63</ref> ተጓ ምብ – <char style="xt"><ref loc="LUK 22:67-71">ሉቃ 22፥67-71</ref></char></para>
+  <para style="p">
+    <verse number="53" style="v" sid="MRK 14:53"/>ኢየሱስንም ወደ ሊቀ ካህናቱ ወሰዱት፤ በዚያም የካህናት አለቆች፣ ሽማግሌዎችና ጸሐፍት ሁሉ ተሰበሰቡ። <verse eid="MRK 14:53"/><verse number="54" style="v" sid="MRK 14:54"/>ጴጥሮስም ከሩቅ እየተከተለው፣ እስከ ሊቀ ካህናቱ ግቢ ዘለቀ፤ በዚያም ተቀምጦ ከሎሌዎቹ ጋር እሳት ይሞቅ ነበር።<verse eid="MRK 14:54"/></para>
+  <para style="p">
+    <verse number="55" style="v" sid="MRK 14:55"/>የካህናት አለቆችና ሸንጎው በሙሉ ኢየሱስን ለመግደል ምስክር ፈለጉ፤ ነገር ግን ማግኘት አልቻሉም። <verse eid="MRK 14:55"/><verse number="56" style="v" sid="MRK 14:56"/>ብዙዎች በሐሰት ቢመሰክሩበትም፣ ቃላቸው አንድ ሊሆን አልቻለም። <verse eid="MRK 14:56"/><verse number="57" style="v" sid="MRK 14:57"/>አንዳንዶቹም ተነሥተው እንዲህ ሲሉ በሐሰት መሰከሩበት፤ <verse eid="MRK 14:57"/><verse number="58" style="v" sid="MRK 14:58"/>“ይህ፣ ‘የሰው እጅ የሠራውን ቤተ መቅደስ አፍርሼ፣ በሦስት ቀን ሌላ የሰው እጅ ያልሠራውን እሠራለሁ’ ሲል ሰምተነዋል።” <verse eid="MRK 14:58"/><verse number="59" style="v" sid="MRK 14:59"/>ይህም ሆኖ፣ እንኳ ምስክርነታቸው አንድ አልሆነም።<verse eid="MRK 14:59"/></para>
+  <para style="p">
+    <verse number="60" style="v" sid="MRK 14:60"/>ሊቀ ካህናቱም ተነሥቶ በፊታቸው በመቆም፣ “እነዚህ በአንተ ላይ የሚመሰክሩት ምንድን ነው? ለምን አትመልስም?” በማለት ኢየሱስን ጠየቀው። <verse eid="MRK 14:60"/><verse number="61" style="v" sid="MRK 14:61"/>ኢየሱስ ግን ዝም አለ፤ ምንም መልስ አልሰጠም።</para>
+  <para style="p" vid="MRK 14:61">ሊቀ ካህናቱም እንደ ገና፣ የቡሩኩ ልጅ፣ ክርስቶስ<note caller="+" style="f"><char style="fr" closed="false">14፥61 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">መሲሑ</char></note> አንተ ነህን? ሲል ጠየቀው።<verse eid="MRK 14:61"/></para>
+  <para style="p">
+    <verse number="62" style="v" sid="MRK 14:62"/>ኢየሱስም፣ <char style="wj">“አዎን ነኝ፤ የሰው ልጅ በኀያሉ ቀኝ ሲቀመጥ፣ በሰማይ ደመናም ሲመጣ ታዩታላችሁ”</char> አለ።<verse eid="MRK 14:62"/></para>
+  <para style="p">
+    <verse number="63" style="v" sid="MRK 14:63"/>ሊቀ ካህናቱም ልብሱን ቀደደና፣ እንዲህ አለ፤ “ሌላ ምን ምስክር ያስፈልገናል? <verse eid="MRK 14:63"/><verse number="64" style="v" sid="MRK 14:64"/>ስድቡን ሰምታችኋል፤ ታዲያ ምን ይመስላችኋል?”</para>
+  <para style="p" vid="MRK 14:64">እነርሱም ሞት ይገባዋል በማለት በአንድ ቃል ፈረዱበት። <verse eid="MRK 14:64"/><verse number="65" style="v" sid="MRK 14:65"/>በዚህ ጊዜ አንዳንዶቹ ይተፉበት ጀመር፤ ዐይኑንም ሸፍነው በጡጫ እየመቱት፣ “እስቲ ትንቢት ተናገር!” ይሉት ነበር። ሎሌዎችም በጥፊ እየመቱ ወሰዱት።<verse eid="MRK 14:65"/></para>
+  <para style="s1">ጴጥሮስ ኢየሱስን አላውቀውም አለ</para>
+  <para style="sr">
+    <ref loc="MRK 14:66-72">14፥66-72</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 26:69-75">ማቴ 26፥69-75</ref>፤ <ref loc="LUK 22:56-62">ሉቃ 22፥56-62</ref>፤ <ref loc="JHN 18:16-18">ዮሐ 18፥16-18</ref>፡<ref loc="JHN 18:25-27">25-27</ref></char></para>
+  <para style="p">
+    <verse number="66" style="v" sid="MRK 14:66"/>ጴጥሮስ በግቢው ውስጥ በታችኛው በኩል ሳለ፣ ከሊቀ ካህናቱ ገረዶች አንዲቱ መጣች፤ <verse eid="MRK 14:66"/><verse number="67" style="v" sid="MRK 14:67"/>ጴጥሮስ እሳት ሲሞቅ አይታ ትኵር ብላ ተመለከተችውና፣ “አንተም ከናዝሬቱ ኢየሱስ ጋር ነበርህ” አለችው።<verse eid="MRK 14:67"/></para>
+  <para style="p">
+    <verse number="68" style="v" sid="MRK 14:68"/>እርሱ ግን፣ “የምትዪውን አላውቅም፤ አይገባኝምም” በማለት ካደ። ከዚያም ወደ መግቢያው በር ወጣ አለ፤ በዚህ ጊዜ ዶሮ ጮኸ።<note caller="+" style="f"><char style="fr" closed="false">14፥68 </char><char style="ft" closed="false">አንዳድ ቅጆች </char><char style="fqa" closed="false">“ዶሮ ጮኸ” </char><char style="ft" closed="false">የሚለው የላቸውም።</char></note><verse eid="MRK 14:68"/></para>
+  <para style="p">
+    <verse number="69" style="v" sid="MRK 14:69"/>ገረዲቱም ባየችው ጊዜ እዚያ ለቆሙት፣ “ይህ ሰው ከእነርሱ አንዱ ነው” ብላ እንደ ገና ተናገረች። <verse eid="MRK 14:69"/><verse number="70" style="v" sid="MRK 14:70"/>እርሱ ግን አሁንም ካደ።</para>
+  <para style="p" vid="MRK 14:70">ከጥቂት ጊዜ በኋላ፣ በዚያ የቆሙት ሰዎች ጴጥሮስን፣ “የገሊላ ሰው እንደ መሆንህ መጠን፣ በርግጥ አንተ ከእነርሱ አንዱ ነህ” አሉት።<verse eid="MRK 14:70"/></para>
+  <para style="p">
+    <verse number="71" style="v" sid="MRK 14:71"/>እርሱ ግን፣ “እናንተ የምትሉትን ሰው እኔ አላውቀውም” እያለ ይምል ይገዘት ጀመር።<verse eid="MRK 14:71"/></para>
+  <para style="p">
+    <verse number="72" style="v" sid="MRK 14:72"/>ወዲያውም ዶሮ ሁለተኛ<note caller="+" style="f"><char style="fr" closed="false">14፥72 </char><char style="ft" closed="false">አንዳንድ የጥንት ቅጆች </char><char style="fqa" closed="false">“ሁለተኛ” </char><char style="ft" closed="false">የሚለው ቃል የላቸውም።</char></note> ጮኸ። ጴጥሮስም፣ <char style="wj">“ዶሮ ሁለት ጊዜ</char><note caller="+" style="f"><char style="fr" closed="false">14፥72 </char><char style="ft" closed="false">አንዳንድ የጥንት ቅጆች </char><char style="fqa" closed="false">“ሁለት ጊዜ” </char><char style="fp" closed="false">የሚለው ሐረግ የላቸውም።</char></note> <char style="wj">ከመጮኹ በፊት ሦስት ጊዜ ትክደኛለህ”</char> ያለው የኢየሱስ ቃል ትዝ አለው። ከዚያም ስቅስቅ ብሎ አለቀሰ።<verse eid="MRK 14:72"/></para>
+  <chapter eid="MRK 14"/>
+  <chapter number="15" style="c" sid="MRK 15"/>
+  <para style="s1">ኢየሱስ በጲላጦስ ፊት</para>
+  <para style="sr">
+    <ref loc="MRK 15:2-15">15፥2-15</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 27:11-26">ማቴ 27፥11-26</ref>፤ <ref loc="LUK 23:2">ሉቃ 23፥2</ref>፡<ref loc="LUK 23:3">3</ref>፡<ref loc="LUK 23:18-25">18-25</ref>፤ <ref loc="JHN 18:29-19:16">ዮሐ 18፥29–19፥16</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 15:1"/>ጧት በማለዳ የካህናት አለቆች ከሽማግሌዎች፣ ከጸሓፍትና ከመላው የሸንጎ አባላት ጋር ወዲያው ከተማከሩ በኋላ፣ ኢየሱስን አስረው ወሰዱት፤ ለጲላጦስም አሳልፈው ሰጡት።<verse eid="MRK 15:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="MRK 15:2"/>ጲላጦስም፣ “አንተ የአይሁድ ንጉሥ ነህን?”</para>
+  <para style="p" vid="MRK 15:2">ሲል ጠየቀው፤ ኢየሱስም፣ <char style="wj">“አንተው አልኸው፣”</char> በማለት መለሰለት።<verse eid="MRK 15:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="MRK 15:3"/>የካህናት አለቆችም በብዙ ነገር ከሰሱት። <verse eid="MRK 15:3"/><verse number="4" style="v" sid="MRK 15:4"/>ጲላጦስም፣ “ለምን መልስ አትሰጥም? እነሆ፤ በብዙ ነገር ከስሰውሃል” ሲል እንደ ገና ጠየቀው።<verse eid="MRK 15:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="MRK 15:5"/>ኢየሱስ ግን ምንም አልመለሰም፤ ጲላጦስ ተገረመ።<verse eid="MRK 15:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="MRK 15:6"/>በበዓል ሕዝቡ እንዲፈታላቸው የሚጠይቁትን እስረኛ የመልቀቅ ልማድ ነበር። <verse eid="MRK 15:6"/><verse number="7" style="v" sid="MRK 15:7"/>በዐመፃ ተነሣሥተው ነፍስ ከገደሉ ዐመፀኞች ጋር የታሰረ በርባን የሚባል አንድ ሰው ነበረ። <verse eid="MRK 15:7"/><verse number="8" style="v" sid="MRK 15:8"/>ሕዝቡም መጥተው እንደተለመደው እንዲያደርግላቸው ጲላጦስን ለመኑት።<verse eid="MRK 15:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="MRK 15:9"/>ጲላጦስም፣ “የአይሁድን ንጉሥ እንድፈታላችሁ ትፈልጋላችሁን?” ሲል ጠየቃቸው፤ <verse eid="MRK 15:9"/><verse number="10" style="v" sid="MRK 15:10"/>ምክንያቱም የካህናት አለቆች ኢየሱስን አሳልፈው የሰጡት በቅናት መሆኑን ያውቅ ነበር። <verse eid="MRK 15:10"/><verse number="11" style="v" sid="MRK 15:11"/>የካህናት አለቆች ግን በርባንን በእርሱ ምትክ እንዲፈታላቸው እንዲጠይቁ ሕዝቡን አነሣሡ።<verse eid="MRK 15:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="MRK 15:12"/>ጲላጦስም እንደ ገና፣ “እንግዲያው የአይሁድ ንጉሥ የምትሉትን ምን እንዳደርገው ትፈልጋላችሁ?” አላቸው።<verse eid="MRK 15:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="MRK 15:13"/>እነርሱም እንደ ገና፣ “ስቀለው!” እያሉ ጮኹ።<verse eid="MRK 15:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="MRK 15:14"/>ጲላጦስም፣ “ለምን? ምን የፈጸመው ወንጀል አለ” አላቸው።</para>
+  <para style="p" vid="MRK 15:14">እነርሱ ግን፣ “ስቀለው!” እያሉ የባሰ ጮኹ።<verse eid="MRK 15:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="MRK 15:15"/>ጲላጦስም ሕዝቡን ደስ ለማሰኘት ሲል በርባንን ፈታላቸው፤ ኢየሱስን ግን ገርፎ እንዲሰቀል አሳልፎ ሰጠው።<verse eid="MRK 15:15"/></para>
+  <para style="s1">ወታደሮች በኢየሱስ ላይ አፌዙ</para>
+  <para style="sr">
+    <ref loc="MRK 15:16-20">15፥16-20</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 27:27-31">ማቴ 27፥27-31</ref></char></para>
+  <para style="p">
+    <verse number="16" style="v" sid="MRK 15:16"/>ወታደሮቹ ፕራይቶሪዮን ወደ ተባለ ወደ ገዥው ግቢ ወሰዱት፤ ሰራዊቱንም ሁሉ በአንድነት ሰበሰቡ። <verse eid="MRK 15:16"/><verse number="17" style="v" sid="MRK 15:17"/>ቀይ ልብስም አለበሱት፤ የእሾኽ አክሊል ጐንጕነው በራሱ ላይ ደፉበት። <verse eid="MRK 15:17"/><verse number="18" style="v" sid="MRK 15:18"/>ከዚያም፣ “የአይሁድ ንጉሥ ሆይ፤ ሰላም ለአንተ ይሁን!” እያሉ እጅ ነሡት፤ <verse eid="MRK 15:18"/><verse number="19" style="v" sid="MRK 15:19"/>ራሱንም በበትር መቱት፤ ተፉበትም፤ ተንበርክከውም ሰገዱለት። <verse eid="MRK 15:19"/><verse number="20" style="v" sid="MRK 15:20"/>ካፌዙበት በኋላም ቀዩን ልብስ ገፈፉት፤ የገዛ ልብሱን አለበሱት፤ ሊሰቅሉትም ወሰዱት።<verse eid="MRK 15:20"/></para>
+  <para style="s1">የኢየሱስ ስቅለት</para>
+  <para style="sr">
+    <ref loc="MRK 15:22-32">15፥22-32</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 27:33-44">ማቴ 27፥33-44</ref>፤ <ref loc="LUK 23:33-43">ሉቃ 23፥33-43</ref>፤ <ref loc="JHN 19:17-24">ዮሐ 19፥17-24</ref></char></para>
+  <para style="p">
+    <verse number="21" style="v" sid="MRK 15:21"/>የአሌክሳንድሮስና የሩፎስ አባት ስምዖን የተባለ አንድ የቀሬና ሰው ከገጠር ሲመጣ መስቀሉን እንዲሸከም አስገደዱት። <verse eid="MRK 15:21"/><verse number="22" style="v" sid="MRK 15:22"/>ከዚያም ኢየሱስን፣ ትርጕሙ “የራስ ቅል ስፍራ” ወደ ተባለ ወደ ጎልጎታ ወሰዱት። <verse eid="MRK 15:22"/><verse number="23" style="v" sid="MRK 15:23"/>ከከርቤ ጋር የተቀላቀለ የወይን ጠጅም ሰጡት፤ እርሱ ግን አልተቀበለም። <verse eid="MRK 15:23"/><verse number="24" style="v" sid="MRK 15:24"/>ከዚያም ሰቀሉት፤ እያንዳንዱም ምን እንደሚደርሰው ለማወቅ ዕጣ ተጣጥለው ልብሱን ተከፋፈሉ።<verse eid="MRK 15:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="MRK 15:25"/>ሲሰቅሉትም ጊዜው ከጧቱ ሦስት ሰዓት ነበረ። <verse eid="MRK 15:25"/><verse number="26" style="v" sid="MRK 15:26"/>የክሱ ጽሑፍም፣ “የአይሁድ ንጉሥ” የሚል ነበር። <verse eid="MRK 15:26"/><verse number="27" style="v" sid="MRK 15:27"/>ከእርሱም ጋር ሁለት ወንበዴዎችን አንዱን በቀኙ አንዱን በግራው ሰቀሉ። <verse eid="MRK 15:27"/><verse number="28" style="v" sid="MRK 15:28"/>መጽሐፍ፣ “ከዐመፀኞች ጋር ተቈጠረ” ያለውም በዚሁ ተፈጸመ።<note caller="+" style="f"><char style="fr" closed="false">15፥28 </char><char style="ft" closed="false">አንዳንድ ቅጆች 28 የላቸውም </char><char style="ft" closed="false">(<char style="xt"><ref loc="ISA 53:12">ኢሳ 53፥12</ref></char>)።</char></note> <verse eid="MRK 15:28"/><verse number="29" style="v" sid="MRK 15:29"/>በመንገድ የሚያልፉትም ራሳቸውን እየነቀነቁ የስድብ ናዳ በማውረድ እንዲህ ይሉት ነበር፤ “አዬ! ቤተ መቅደስን አፍርሰህ በሦስት ቀን የምትሠራ አንተ ነህ፤ <verse eid="MRK 15:29"/><verse number="30" style="v" sid="MRK 15:30"/>እስቲ አሁን ከመስቀል ውረድና ራስህን አድን።”<verse eid="MRK 15:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="MRK 15:31"/>እንዲሁም የካህናት አለቆችና ጸሐፍት በማሾፍ እርስ በርሳቸው እንዲህ አሉ፤ “ሌሎችን አዳነ፤ ራሱን ግን ማዳን አልቻለም፤ <verse eid="MRK 15:31"/><verse number="32" style="v" sid="MRK 15:32"/>አይተን እናምን ዘንድ ይህ ክርስቶስ<note caller="+" style="f"><char style="fr" closed="false">15፥32 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">መሲሕ</char></note>፣ ይህ የእስራኤል ንጉሥ እስቲ ከመስቀል ይውረድ።” ከእርሱ ጋር የተሰቀሉትም እንደዚሁ የስድብ ናዳ ያወርዱበት ነበር።<verse eid="MRK 15:32"/></para>
+  <para style="s1">የኢየሱስ መሞት</para>
+  <para style="sr">
+    <ref loc="MRK 15:33-41">15፥33-41</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 27:45-56">ማቴ 27፥45-56</ref>፤ <ref loc="LUK 23:44-49">ሉቃ 23፥44-49</ref></char></para>
+  <para style="p">
+    <verse number="33" style="v" sid="MRK 15:33"/>ከስድስት ሰዓት ጀምሮ እስከ ዘጠኝ ሰዓት ድረስ በምድር ሁሉ ላይ ጨለማ ሆነ። <verse eid="MRK 15:33"/><verse number="34" style="v" sid="MRK 15:34"/>በዘጠኝም ሰዓት ኢየሱስ፣ <char style="wj">“ኤሎሄ፣ ኤሎሄ፣ ላማ ሰበቅታኒ?”</char> ብሎ በታላቅ ድምፅ ጮኸ፤ ትርጓሜውም <char style="wj">“አምላኬ፣ አምላኬ፣ ለምን ተውኸኝ?”</char> ማለት ነው።<verse eid="MRK 15:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="MRK 15:35"/>በዚያ ቆመው ከነበሩት አንዳንዶቹ ይህን ሲሰሙ፣ “ኤልያስን ይጣራል” አሉ።<verse eid="MRK 15:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="MRK 15:36"/>ከዚያም አንድ ሰው ፈጥኖ ሄዶ የሆመጠጠ የወይን ጠጅ በሰፍነግ ነከረ፤ በዘንግም ሰክቶ እንዲጠጣው ለኢየሱስ አቀረበለት፤ ከዚያም፣ “ተዉት፤ እስቲ ኤልያስ መጥቶ ሲያወርደው እናያለን” አለ።<verse eid="MRK 15:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="MRK 15:37"/>ኢየሱስም በታላቅ ድምፅ ጮኾ፤ ነፍሱን ሰጠ።<verse eid="MRK 15:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="MRK 15:38"/>የቤተ መቅደሱም መጋረጃ ከላይ እስከ ታች ከሁለት ተቀደደ። <verse eid="MRK 15:38"/><verse number="39" style="v" sid="MRK 15:39"/>በኢየሱስ ትይዩ ቆሞ የነበረውም የመቶ አለቃ እንደዚህ ጮኾ<note caller="+" style="f"><char style="fr" closed="false">15፥39 </char><char style="ft" closed="false">አንዳንድ ቅጆች </char><char style="fqa" closed="false">እንደዚህ ጮኾ </char><char style="ft" closed="false">የሚለው ሐረግ የላቸውም።</char></note> ነፍሱን ሲሰጥ ባየ ጊዜ፣ “ይህ ሰው በእውነት የእግዚአብሔር ልጅ ነበር” አለ።<verse eid="MRK 15:39"/></para>
+  <para style="p">
+    <verse number="40" style="v" sid="MRK 15:40"/>በዚህ ጊዜ ሴቶች ከሩቅ ሆነው ይመለከቱ ነበር፤ ከእነርሱም መካከል መግደላዊት ማርያም፣ የታናሹ ያዕቆብና የዮሳ እናት ማርያም፣ እንዲሁም ሰሎሜ ነበሩ፤ <verse eid="MRK 15:40"/><verse number="41" style="v" sid="MRK 15:41"/>እነዚህ ሴቶች በገሊላ ሲከተሉትና ሲያገለግሉት የነበሩ ናቸው፤ ደግሞም አብረውት ወደ ኢየሩሳሌም የመጡ ሌሎች ብዙ ሴቶች ነበሩ።<verse eid="MRK 15:41"/></para>
+  <para style="s1">የኢየሱስ መቀበር</para>
+  <para style="sr">
+    <ref loc="MRK 15:42-47">15፥42-47</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 27:57-61">ማቴ 27፥57-61</ref>፤ <ref loc="LUK 23:50-56">ሉቃ 23፥50-56</ref>፤ <ref loc="JHN 19:38-42">ዮሐ 19፥38-42</ref></char></para>
+  <para style="p">
+    <verse number="42" style="v" sid="MRK 15:42"/>ጊዜው እየመሸ መጥቶ የሰንበት ዋዜማ ይኸውም የመዘጋጀት ቀን ሆነ፤ <verse eid="MRK 15:42"/><verse number="43" style="v" sid="MRK 15:43"/>የተከበረ የሸንጎ አባልና የእግዚአብሔርን መንግሥት ይጠባበቅ የነበረው የአርማትያሱ ዮሴፍ በድፍረት ወደ ጲላጦስ ሄዶ የኢየሱስን ሥጋ ለመነው። <verse eid="MRK 15:43"/><verse number="44" style="v" sid="MRK 15:44"/>ጲላጦስም እንዲህ በቶሎ መሞቱን ሲሰማ ተደነቀ፤ የመቶ አለቃውንም ጠርቶ ከሞተ ምን ያህል ጊዜ እንደ ሆነ ጠየቀው፤ <verse eid="MRK 15:44"/><verse number="45" style="v" sid="MRK 15:45"/>መሞቱንም ከመቶ አለቃው ካረጋገጠ በኋላ ሥጋውን ለዮሴፍ ሰጠው። <verse eid="MRK 15:45"/><verse number="46" style="v" sid="MRK 15:46"/>ዮሴፍም በፍታ ገዛ፤ ሥጋውንም አውርዶ በበፍታው ከከፈነው በኋላ፣ ከዐለት በተወቀረ መቃብር አኖረው፤ የመቃብሩንም ደጃፍ በድንጋይ ገጠመው። <verse eid="MRK 15:46"/><verse number="47" style="v" sid="MRK 15:47"/>ማርያም መግደላዊትና የዮሳ እናት ማርያም የት እንዳኖሩት ይመለከቱ ነበር።<verse eid="MRK 15:47"/></para>
+  <chapter eid="MRK 15"/>
+  <chapter number="16" style="c" sid="MRK 16"/>
+  <para style="s1">ትንሣኤው</para>
+  <para style="sr">
+    <ref loc="MRK 16:1-8">16፥1-8</ref> ተጓ ምብ – <char style="xt"><ref loc="MAT 28:1-8">ማቴ 28፥1-8</ref>፤ <ref loc="LUK 24:1-10">ሉቃ 24፥1-10</ref></char></para>
+  <para style="p">
+    <verse number="1" style="v" sid="MRK 16:1"/>ሰንበት ካለፈ በኋላ መግደላዊት ማርያም፣ የያዕቆብ እናት ማርያምና ሰሎሜ ሄደው የኢየሱስን ሥጋ ለመቀባት ሽቱ ገዙ። <verse eid="MRK 16:1"/><verse number="2" style="v" sid="MRK 16:2"/>በሳምንቱ መጀመሪያ ቀን ጧት በማለዳ፣ ገና ፀሓይ እንደ ወጣች፣ ወደ መቃብሩ በመሄድ ላይ ሳሉ፣ <verse eid="MRK 16:2"/><verse number="3" style="v" sid="MRK 16:3"/>“ድንጋዩን ከመቃብሩ ደጃፍ ላይ ማን ያንከባልልልናል?” በማለት እርስ በርሳቸው ይነጋገሩ ነበር።<verse eid="MRK 16:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="MRK 16:4"/>ቀና ብለው ሲመለከቱ፣ በጣም ትልቅ የነበረው ድንጋይ ከደጃፉ ላይ ተንከባልሎ አዩ። <verse eid="MRK 16:4"/><verse number="5" style="v" sid="MRK 16:5"/>ወደ መቃብሩ እንደ ገቡም፣ ነጭ ልብስ የለበሰ ጕልማሳ በቀኝ በኩል ተቀምጦ አዩና ደነገጡ።<verse eid="MRK 16:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="MRK 16:6"/>እርሱ ግን እንዲህ አላቸው፤ “አትደንግጡ፤ የምትፈልጉት የተሰቀለውን የናዝሬቱን ኢየሱስን ነው፤ እርሱ ተነሥቷል፤ እዚህ የለም፤ እርሱን ያኖሩበት ስፍራ ይኸውላችሁ። <verse eid="MRK 16:6"/><verse number="7" style="v" sid="MRK 16:7"/>ነገር ግን ሄዳችሁ ለደቀ መዛሙርቱና ለጴጥሮስ፣ ‘ቀድሟችሁ ወደ ገሊላ ይሄዳል፤ እንደ ነገራችሁ እዚያ ታገኙታላችሁ’ ብላችሁ ንገሯቸው።”<verse eid="MRK 16:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="MRK 16:8"/>ሴቶቹም እየተንቀጠቀጡና እየተደነቁ ከመቃብሩ ሸሽተው ወጡ፤ ፈርተው ስለ ነበር ለማንም አንዳች አልተናገሩም።<verse eid="MRK 16:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="MRK 16:9"/>በሳምንቱ መጀመሪያ ቀን ማለዳ ከሙታን ከተነሣ በኋላ፣ ሰባት አጋንንት ላወጣላት ለማርያም መግደላዊት በመጀመሪያ ታየ። <verse eid="MRK 16:9"/><verse number="10" style="v" sid="MRK 16:10"/>እርሷም ሄዳ፣ ከእርሱ ጋር የነበሩት እያዘኑ ሲያለቅሱ አግኝታ፣ <verse eid="MRK 16:10"/><verse number="11" style="v" sid="MRK 16:11"/>እርሱ ሕያው መሆኑንና ለእርሷም መታየቱን ነገረቻቸው፤ እነርሱ ግን አላመኗትም።<verse eid="MRK 16:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="MRK 16:12"/>ከዚህ በኋላ ከደቀ መዛሙርቱ ሁለቱ ወደ ገጠር ሲሄዱ በሌላ መልክ ታያቸው። <verse eid="MRK 16:12"/><verse number="13" style="v" sid="MRK 16:13"/>እነርሱም ተመልሰው ይህንኑ ለቀሩት ነገሯቸው፤ ይሁን እንጂ እነርሱንም አላመኗቸውም።<verse eid="MRK 16:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="MRK 16:14"/>ከዚያም ዐሥራ አንዱ በማእድ ላይ ሳሉ ተገለጠላቸው፤ ከተነሣ በኋላ ያዩት ሰዎች የነገሯቸውን ስላላመኗቸው፣ አለማመናቸውንና የልባቸውን ድንዳኔ ነቀፈ። <verse eid="MRK 16:14"/><verse number="15" style="v" sid="MRK 16:15"/>እንዲህም አላቸው፤ <char style="wj">“ወደ ዓለም ሁሉ ሂዱ፤ ወንጌልንም ለፍጥረት ሁሉ ስበኩ፤</char> <verse eid="MRK 16:15"/><verse number="16" style="v" sid="MRK 16:16"/><char style="wj">ያመነ የተጠመቀ ይድናል፤ ያላመነ ግን ይፈረድበታል።</char> <verse eid="MRK 16:16"/><verse number="17" style="v" sid="MRK 16:17"/><char style="wj">የሚያምኑትን እነዚህ ምልክቶች ይከተሏቸዋል፤ በስሜ አጋንንትን ያወጣሉ፤ በአዲስ ልሳንም ይናገራሉ፤</char> <verse eid="MRK 16:17"/><verse number="18" style="v" sid="MRK 16:18"/><char style="wj">እባቦችን በእጃቸው ይይዛሉ፤ የሚገድል መርዝ ቢጠጡ እንኳ አይጐዳቸውም፤ እጃቸውንም በሕመምተኞች ላይ ይጭናሉ፤ እነርሱም ይፈወሳሉ።”</char><verse eid="MRK 16:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="MRK 16:19"/>ጌታ ኢየሱስ ይህን ከተናገራቸው በኋላ ወደ ሰማይ ዐረገ፤ በእግዚአብሔርም ቀኝ ተቀመጠ። <verse eid="MRK 16:19"/><verse number="20" style="v" sid="MRK 16:20"/>ከዚያም ደቀ መዛሙርቱ ወጥተው፣ በየስፍራው ሁሉ ሰበኩ፤ ጌታም ከእነርሱ ጋር ይሠራ ነበር፤ ትምህርታቸውንም ተከትለው በሚፈጸሙ ምልክቶች ቃሉን ያጸና ነበር።<note caller="+" style="f"><char style="fr" closed="false">16፥20 </char><char style="ft" closed="false">አንዳንድ የጥንት ቅጆች ከ9-20 ያለው ክፍል የላቸውም።</char></note><verse eid="MRK 16:20"/></para>
+  <chapter eid="MRK 16"/>
+</usx>

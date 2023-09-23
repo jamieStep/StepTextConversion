@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="2SA" style="id">- Bibelen på hverdagsdansk (The Bible in Everyday Danish)</book>
+  <para style="rem">Copyright © 1985, 1992, 2005, 2013, 2015 by Biblica, Inc.®</para>
+  <para style="h">2. SAMUELSBOG</para>
+  <para style="toc1">Anden Samuelsbog</para>
+  <para style="toc2">2. Samuelsbog</para>
+  <para style="toc3">2.Sam.</para>
+  <para style="mt1">Anden Samuelsbog</para>
+  <para style="imt">Indledning</para>
+  <para style="ip">
+    <char style="bd">Forfatter, datering og historisk baggrund:</char> Se indledningen til Første Samuelsbog.</para>
+  <para style="ip">
+    <char style="bd">Indhold:</char> Bogen dækker omkring 40 år af Samuelsbøgernes 130-årige periode: det tidsrum, hvor David var konge, først over Juda i syd (<char style="xt">kap. <ref loc="2SA 1-4">1–4</ref></char>), og senere over hele riget, inklusive Israel i nord (<char style="xt">kap. <ref loc="2SA 5-24">5–24</ref></char>). I løbet af sin regeringstid gjorde David Jerusalem til hovedstad og bragte pagtens ark til byen, hvorved han anerkendte Gud som sin og folkets egentlige Konge. Det lykkedes ham at besejre israelitternes ærkefjende, filistrene, og at indlemme Moab, Ammon, Edom og flere andre områder i sit rige. Desuden fastholdt han herredømmet over landområdet op til Eufratfloden, som Saul havde erobret (<char style="xt">kap. <ref loc="2SA 8">8</ref></char>). Under kong David oplevede landet stabilitet og fremgang.</para>
+  <para style="ip">Selv om David var Guds udvalgte konge, tilsløres hans problemer på ingen måde, hverken hans familiemæssige problemer (sønnen Absaloms oprør) eller hans personlige problemer (forholdet til Batsheba og mordet på Urias).</para>
+  <para style="ip">
+    <char style="bd">Budskab:</char> Davids ønske om at bygge Herren et „gudshus”, et tempel, i Jerusalem, som et center for tilbedelsen af Gud, overskygges af <char style="em">Guds</char> ønske om at bygge <char style="em">David</char> et „kongehus”, dvs. gøre hans slægt til et dynasti, hvorfra den kommende Messias (Kristus) skulle udgå (<char style="xt">kap. <ref loc="2SA 7">7</ref></char>). Selv om David begik fejl og traf forkerte beslutninger, ønskede han at gøre Guds vilje, og han var villig til at bekende sin synd (<char style="xt">kap. <ref loc="2SA 12">12</ref></char>) og derefter på ny sætte sin lid til Gud (<char style="xt">kap. <ref loc="2SA 22">22</ref></char>).</para>
+  <chapter number="1" style="c"/>
+  <para style="s1">Davids reaktion på budskabet om Sauls og Jonatans død</para>
+  <para style="p">
+    <verse number="1" style="v"/>Efter at Saul var død, og David var kommet tilbage til Ziklag fra sin sejr over amalekitterne, <verse number="2" style="v"/>ankom der et par dage senere et sendebud med nyt fra krigen. Han havde revet flænger i sit tøj og kommet jord på hovedet som tegn på sin store sorg. Han gik hen til David og kastede sig til jorden foran ham i dyb respekt.</para>
+  <para style="p">
+    <verse number="3" style="v"/>„Hvor kommer du fra?” spurgte David.</para>
+  <para style="p">„Fra Israels hær,” svarede manden.</para>
+  <para style="p">
+    <verse number="4" style="v"/>„Hvordan gik det?” spurgte David. „Fortæl mig om slaget!”</para>
+  <para style="p">Manden svarede: „Hele hæren flygtede over hals og hoved, og mange mænd lå sårede eller døde på slagmarken. Også Saul og hans søn Jonatan omkom.”</para>
+  <para style="p">
+    <verse number="5" style="v"/>„Er du sikker på det?”</para>
+  <para style="p">
+    <verse number="6" style="v"/>„Ja, jeg så med mine egne øjne, hvordan Saul på Gilboahøjen holdt sig oppe ved hjælp af sit spyd, mens fjendens stridsvogne indkredsede ham. <verse number="7" style="v"/>Da han fik øje på mig, kaldte han på mig. <verse number="8" style="v"/>‚Hvem er du?’ spurgte han. ‚Jeg er amalekit!’ svarede jeg. <verse number="9" style="v"/>‚Kom her hen og giv mig dødsstødet!’ bad han. ‚Jeg er allerede dødeligt såret.’ <verse number="10" style="v"/>Så gik jeg hen og dræbte ham, for jeg kunne se, at han var så hårdt såret, at han ikke kunne overleve. Derefter tog jeg hans krone og en af hans armringe, som jeg hermed overrækker til Dem, nådige herre.”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Da David og hans mænd hørte, at Saul var død, rev de også flænger i deres tøj som tegn på sorg. <verse number="12" style="v"/>Og resten af dagen sørgede, fastede og græd de over Saul og hans søn Jonatan, ja, over alt Herrens folk og over de faldne israelitter.</para>
+  <para style="p">
+    <verse number="13" style="v"/>David spurgte manden, som havde bragt dem budskabet: „Hvor er du fra?”</para>
+  <para style="p">Han svarede: „Jeg er en amalekit, der bor som fremmed iblandt israelitterne.”</para>
+  <para style="p">
+    <verse number="14-16" style="v"/>„Hvordan kunne du få dig selv til at dræbe Guds salvede konge?” udbrød David. „Du har selv indrømmet, at du dræbte ham. Derfor skal du dø.” Derpå vendte David sig til en af sine mænd og sagde: „Dræb ham!”</para>
+  <para style="p">
+    <verse number="17-18" style="v"/>David digtede nu en sørgesang om Saul og Jonatan, og han befalede at sangen, som blev kaldt „Buesangen”, skulle synges over hele Israel. Den citeres her fra „De Retskafnes Bog”:<note caller="+" style="f"><char style="fr" closed="false">1,17-18 </char><char style="ft" closed="false">Eller: <char style="tl">Yashars Bog</char>, en i øvrigt ukendt bog. Der henvises også til den i <char style="xt"><ref loc="JOS 10:13">Jos. 10,13</ref></char>.</char></note></para>
+  <para style="q1">
+    <verse number="19" style="v"/>Israels helte ligger slagne på bjergene,</para>
+  <para style="q2">vore bedste krigere faldt i kampen.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Råb det ikke ud på gaden i Gat,</para>
+  <para style="q2">tal ikke om det på Ashkalons torve.</para>
+  <para style="q1">Filistrenes døtre vil danse af glæde,</para>
+  <para style="q2">det uomskårne folk vil fryde sig.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Måtte Gilboahøjen blive ramt af tørke,</para>
+  <para style="q2">måtte intet mere gro derpå.</para>
+  <para style="q1">Heltenes skjolde havnede i sølet,</para>
+  <para style="q2">Sauls skjold ligger ledigt hen.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Mange forblødte for Jonatans bue,</para>
+  <para style="q2">Sauls sværd slog utallige ned.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Saul og Jonatan, elskede var I,</para>
+  <para style="q2">selv i døden skiltes I ikke.</para>
+  <para style="q1">I var hurtige som ørne på jagt,</para>
+  <para style="q2">stærke som stolte løver.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Israels kvinder, sørg over Saul,</para>
+  <para style="q2">som klædte jer i purpur og smykker af guld.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Vore helte faldt i kampens hede.</para>
+  <para style="q2">Jonatans lig ligger henslængt på højen.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Jonatan, mit hjerte er knust,</para>
+  <para style="q2">jeg elskede dig, som var du min bror!</para>
+  <para style="q1">Dit venskab var noget helt specielt,</para>
+  <para style="q2">mere end kærlighed fra en kvinde.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Alle vore helte er faldet,</para>
+  <para style="q2">deres våben ligger ubrugte hen.</para>
+  <para style="b"/>
+  <chapter number="2" style="c"/>
+  <para style="s1">David bliver konge over Juda</para>
+  <para style="p">
+    <verse number="1" style="v"/>David spurgte nu Herren: „Skal jeg rejse tilbage til Judas land?”</para>
+  <para style="p">Herren svarede: „Ja!”</para>
+  <para style="p">„Hvilken by skal jeg slå mig ned i?”</para>
+  <para style="p">„Hebron,” svarede Herren.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Så tog David sine koner, Ahinoam fra Jizre’el, og Abigajil, Nabals enke fra Karmel, <verse number="3" style="v"/>samt sine trofaste mænd med deres familier, og de bosatte sig i Hebron og omegn. <verse number="4" style="v"/>Derefter kom Judas ledere til David og salvede ham til konge over Juda.</para>
+  <para style="p">Da David fik at vide, at indbyggerne i Jabesh i Gilead havde begravet Saul, <verse number="5" style="v"/>sendte han dem følgende budskab: „Må Herren velsigne jer, fordi I har været trofaste overfor jeres konge ved at give ham en anstændig begravelse. <verse number="6" style="v"/>Må Herren i sin trofasthed belønne jer for jeres storsind. Men også jeg vil gøre godt imod jer, fordi I gjorde dette. <verse number="7" style="v"/>Selvom Saul nu er død, må I ikke lade hænderne synke eller tabe modet. Judas stamme har allerede udråbt mig til konge.”</para>
+  <para style="s1">Ishboshet bliver konge over Nordriget</para>
+  <para style="p">
+    <verse number="8" style="v"/>Men Abner, Sauls hærfører, bragte Sauls søn, Ishboshet, til Mahanajim og udråbte ham til konge over Nordriget. <verse number="9" style="v"/>Han kom til at regere over Gilead, Asher, Jizre’el, Efraim og Benjamins stamme, ja, hele Israel<note caller="+" style="f"><char style="fr" closed="false">2,9 </char><char style="ft" closed="false">Ordet <char style="tl">Israel</char> blev efterhånden en fællesbetegnelse for alle stammerne i den nordlige del af landet, mens <char style="tl">Juda</char> blev fællesbetegnelsen for Judas og Simeons stammer, der boede mod syd. Benjamins stamme boede i grænseområdet, men regnes normalt med til Nordriget.</char></note> bortset fra Judas område.</para>
+  <para style="p">
+    <verse number="10-11" style="v"/>Ishboshet var 40 år gammel, da han blev konge, og han regerede ud fra Mahanajim i to år. David regerede over Judas land i syv et halvt år fra Hebron.</para>
+  <para style="s1">Krigen mellem David og Ishboshet</para>
+  <para style="p">
+    <verse number="12" style="v"/>En dag tog Abner nogle af Ishboshets mænd med sig fra Mahanajim og kom til Gibeon. <verse number="13" style="v"/>Davids hærfører, Joab, Zerujas søn, gik dem i møde med nogle af Davids mænd. De to hære slog lejr på hver sin side af Gibeondammen. <verse number="14" style="v"/>Da foreslog Abner, at de unge krigere skulle åbne slaget med tvekamp. Joab gik med på idéen, <verse number="15" style="v"/>hvorefter man udpegede 12 mænd fra Benjamins stamme til at kæmpe for Ishboshet og 12 fra Judas stamme til at kæmpe for David. <verse number="16" style="v"/>Opgaven gik ud på at gribe modstanderen i håret og støde sværdet i siden på ham. På den måde blev samtlige 24 mænd dræbt. Siden har man kaldt dette sted ved Gibeon for „Sværdkampens mark”.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Derefter gik de to hære løs på hinanden med det resultat, at Abner samme dag måtte erkende sit nederlag til Joab og Davids mænd og tage flugten. <verse number="18" style="v"/>Joabs brødre, Abishaj og Asael, deltog også i slaget. Da Asael var hurtigløber, <verse number="19" style="v"/>satte han efter Abner uden at lade sig distrahere af noget som helst undervejs.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Da Abner så sig tilbage, var Asael ved at hale ind på ham. „Er det dig, Asael?” råbte Abner.</para>
+  <para style="p">„Ja, det er!” svarede Asael.</para>
+  <para style="p">
+    <verse number="21" style="v"/>„Find et andet offer!” råbte Abner advarende. „Der er nok af unge krigere, du kan afvæbne!” Men Asael ville have fat i Abner.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Da råbte Abner: „Hold op med at forfølge mig! Hvis jeg slår dig ihjel, vil jeg aldrig kunne se din bror Joab i øjnene igen!”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Asael lod sig imidlertid ikke ryste af. Pludselig standsede Abner, jog sit spyd bagud og ramte sin forfølger i maven med en sådan kraft, at spydspidsen kom ud på den anden side. Da styrtede Asael omkuld og døde, og alle, som kom til stedet, hvor han lå, standsede op for at kigge på ham.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Nu satte både Joab og Abishaj efter Abner, og ved solnedgang nåede de frem til Amma-højen øst for Gia ved vejen til Gibeons ørken. <verse number="25" style="v"/>På toppen af højen samlede alle krigerne fra Benjamins stamme sig bag Abner, <verse number="26" style="v"/>og Abner råbte ned til Joab: „Skal vi blive ved med at dræbe hinanden? Hvor længe skal det vare, før du befaler dine mænd at holde op med at jagte deres landsmænd?”</para>
+  <para style="p">
+    <verse number="27" style="v"/>Joab råbte tilbage: „Jeg sværger ved den levende Gud, at hvis du ikke havde sagt noget, ville vi have jagtet jer til i morgen tidlig!” <verse number="28" style="v"/>Så afblæste han forfølgelsen, og mændene standsede kampen.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Samme nat begav Abner og hans mænd sig på hjemvejen. De gik op gennem Jordandalen, krydsede floden og nåede næste morgen frem til Mahanajim. <verse number="30" style="v"/>Også Joab og hans mænd vendte hjem. Da Joab opgjorde tabene, fandt han ud af, at ud over Asael manglede der kun 19 mand, <verse number="31" style="v"/>hvorimod Abner havde mistet 360 mand, alle af Benjamins stamme. <verse number="32" style="v"/>Joab og hans mænd bar Asaels lig til Betlehem og begravede ham ved hans fars side. Derefter gik de hele natten og nåede frem til Hebron ved daggry.</para>
+  <chapter number="3" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Den episode var begyndelsen på en lang og opslidende strid mellem Sauls og Davids tilhængere. Men det var en kendsgerning, at David blev stærkere og stærkere, og at hans modstandere blev svagere og svagere.</para>
+  <para style="s1">Davids sønner, født i Hebron</para>
+  <para style="p">
+    <verse number="2" style="v"/>Mens David opholdt sig i Hebron, fik han seks sønner. Den ældste hed Amnon, og hans mor var Ahinoam fra Jizre’el. <verse number="3" style="v"/>Den næstældste hed Kilab, og hans mor var Abigajil, som var enke efter Nabal fra Karmel. Den tredje hed Absalom, og hans mor var Ma’aka, en datter af kong Talmaj af Geshur. <verse number="4" style="v"/>Den fjerde hed Adonija, og hans mor var Haggit. Den femte hed Shefatja, og hans mor var Abital. <verse number="5" style="v"/>Den sjette hed Jitream, og hans mor var Egla.</para>
+  <para style="s1">Abner slutter sig til David</para>
+  <para style="p">
+    <verse number="6" style="v"/>Som striden tilspidsedes, fik Abner større og større magt blandt Sauls tilhængere. <verse number="7" style="v"/>Han mente derfor, at han kunne tillade sig visse friheder, blandt andet at gå i seng med en af Sauls medhustruer, en pige ved navn Ritzpa, en datter af Ajja. Men da Ishboshet irettesatte ham for det, <verse number="8" style="v"/>blev han rasende.</para>
+  <para style="p">„Hvad regner du mig for?” råbte han. „En omstrejfende hund? Her kommer du og kritiserer mig for et lille sidespring med en kvinde! Er det den tak, jeg får for min trofasthed overfor din far? Er det lønnen for ikke at have udleveret dig til David for længst? <verse number="9-10" style="v"/>Må Gud straffe mig, om jeg ikke gør, hvad jeg kan for at tage kongemagten fra dig og gøre David til konge over både Nordriget og Juda, fra Dan i nord til Be’ersheba i syd, sådan som Herren har lovet ham.”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Ishboshet blev stum af skræk, da han hørte de ord.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Derpå sendte Abner bud til David: „Lad os slutte fred. Så vil jeg hjælpe dig til at blive konge over hele Israel.”</para>
+  <para style="p">
+    <verse number="13" style="v"/>„Godt,” svarede David, „men jeg vil ikke forhandle med dig, medmindre du kommer med min første kone Mikal, Sauls datter.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>Samtidig sendte David følgende besked til Ishboshet: „Giv mig min kone Mikal tilbage! Jeg slog 100 filistre ihjel for at få hende!”</para>
+  <para style="p">
+    <verse number="15" style="v"/>Ishboshet sendte straks sine mænd af sted for at hente Mikal hos Paltiel, søn af Lajish, som hun var blevet gift med i mellemtiden. <verse number="16" style="v"/>Manden fulgte grædende efter hende helt til Bahurim. Dér bad Abner ham vende om og gå hjem, og det gjorde han.</para>
+  <para style="p">
+    <verse number="17" style="v"/>I mellemtiden forhandlede Abner med Nordrigets ledere. Han mindede dem om, at de i lang tid havde ønsket David som konge.</para>
+  <para style="p">
+    <verse number="18" style="v"/>„Husk i den forbindelse, hvordan Herren lovede, at David ville redde Israels folk fra filistrene<note caller="+" style="f"><char style="fr" closed="false">3,18 </char><char style="ft" closed="false">Se <char style="xt"><ref loc="1SA 9:16">1.Sam. 9,16</ref></char>.</char></note> og alle vores andre fjender!” sagde han. „Nu har I chancen for at gøre løftet til virkelighed!”</para>
+  <para style="p">
+    <verse number="19" style="v"/>Abner forhandlede også med lederne af Benjamins stamme, hvorefter han tog til Hebron for at informere David om resultatet af sine forhandlinger. <verse number="20" style="v"/>Han havde taget 20 mænd med sig, og David holdt en fest til ære for Abner og hans mænd.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Inden Abner rejste hjem, gav han David følgende løfte: „Så snart jeg kommer hjem, vil jeg kalde alle Nordrigets ledere sammen og få dem til at slutte op om dig, så du kan blive konge over hele riget, sådan som du gerne vil!” Så sendte David ham af sted med ønsket om en god rejse.</para>
+  <para style="s1">Joabs hævn over Abner</para>
+  <para style="p">
+    <verse number="22" style="v"/>Kort efter at Abner var taget af sted, vendte Joab hjem fra et vellykket plyndringstogt sammen med nogle af Davids mænd. <verse number="23" style="v"/>Joab fik nu at vide, at Abner netop havde været på et fredeligt besøg hos kongen. <verse number="24-25" style="v"/>Straks løb han ind til kongen og udbrød: „Hvad i alverden har du gjort? Du har jo ladet manden slippe væk, selv om du må have været klar over, at han kom for at udspionere os!”</para>
+  <para style="p">
+    <verse number="26" style="v"/>Derpå sendte Joab, uden at David vidste det, nogle sendebud af sted efter Abner med besked om, at han skulle komme tilbage. Sendebudene indhentede ham ved Siras vandreservoir, og Abner vendte tilbage sammen med dem. <verse number="27" style="v"/>Da Abner ankom til Hebron, trak Joab ham til side i byporten under foregivende af, at han ville tale privat med ham, men i stedet trak han sin daggert og myrdede ham som hævn for, at Abner havde dræbt hans bror Asael.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Da David hørte om mordet på Abner, erklærede han: „Jeg sværger ved Herren på, at jeg og min slægt er uskyldige i denne forbrydelse! <verse number="29" style="v"/>Joab og hans familie må tage det fulde ansvar for mordet. Må Joabs børn blive ramt af sygdom og ulykke, så de falder i kamp eller bliver invalide eller dør af sygdom eller sult!”</para>
+  <para style="p">
+    <verse number="30" style="v"/>Joab og hans bror Abishaj myrdede altså Abner for at tage hævn over deres bror Asael, som var blevet dræbt af Abner i slaget ved Gibeon.</para>
+  <para style="p">
+    <verse number="31-32" style="v"/>Derefter befalede David, at Joab og alle hans mænd skulle flænge deres tøj og klæde sig i sæk og aske for at vise deres sorg over Abners død. Kongen ledsagede personligt ligbåren til det sted i Hebron, hvor Abner blev begravet. Mens de stod ved graven, brast David og alle hans mænd i gråd, <verse number="33" style="v"/>og David sang følgende sørgesang over Abner:</para>
+  <para style="q1">Ak, Abner, du blev narret i døden.</para>
+  <para style="q1">
+    <verse number="34" style="v"/>Man bandt ikke engang dine hænder</para>
+  <para style="q2">eller lagde dine fødder i lænker!</para>
+  <para style="q1">Du blev myrdet af voldsmænd.</para>
+  <para style="p">Bagefter græd hele folket igen.</para>
+  <para style="p">
+    <verse number="35-36" style="v"/>David nægtede at tage føde til sig på begravelsesdagen. Alle opfordrede ham til at spise, men David aflagde ed på, at han ville faste indtil solnedgang, en gestus, som folket lagde mærke til og syntes om, og som var med til at øge deres respekt for ham. <verse number="37" style="v"/>Det overbeviste både Judas og Nordrigets folk om, at David ikke var skyld i Abners død. <verse number="38" style="v"/>Endvidere sagde David til sine mænd: „Mon I forstår, at det er en af Israels store ledere, vi har begravet i dag! <verse number="39" style="v"/>Selv om jeg er Guds udvalgte konge, kan jeg intet stille op over for de to gerningsmænd, Zerujas<note caller="+" style="f"><char style="fr" closed="false">3,39 </char><char style="ft" closed="false">Joab og Abishaj var sønner af Davids søster, Zeruja, og kendt for deres temperament og voldelige opførsel, men også deres mod og evner som officerer i hæren.</char></note> sønner. De er mig for stærke. Må Herren selv straffe dem for deres ondskab!”</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Mordet på Ishboshet</para>
+  <para style="p">
+    <verse number="1" style="v"/>Da Ishboshet fik at vide, at Abner var blevet myrdet i Hebron, blev han rystet, og Nordrigets folk blev urolige. <verse number="2-3" style="v"/>Ishboshet overgav derefter kommandoen over Nordrigets hær til de to brødre Ba’ana og Rekab, der begge var anførere for kongens udrykningsstyrker. Ba’ana og Rekab var sønner af Rimmon, som boede i Be’erot og var fra Benjamins stamme. Be’erot var nemlig blevet indlemmet under Benjamin, efter at byens oprindelige indbyggere var flygtet til Gittajim, hvor de bor i landflygtighed den dag i dag.</para>
+  <para style="p">
+    <verse number="4" style="v"/>(Jonatan havde en søn, der hed Mefiboshet. Han var kun fem år gammel, da der kom bud om, at Saul og Jonatan var blevet dræbt i slaget ved Jizre’el. Mefiboshets plejemor greb ham straks og flygtede, men i skyndingen snublede hun og tabte ham, og han blev lam i benene.)</para>
+  <para style="p">
+    <verse number="5" style="v"/>En dag, hvor det var meget varmt, ankom Ba’ana og Rekab til kong Ishboshets hus, mens han lå og sov til middag. <verse number="6" style="v"/>Dørvogtersken, som var ved at rense hvede, var også faldet i søvn,<note caller="+" style="f"><char style="fr" closed="false">4,6 </char><char style="ft" closed="false">Oversat efter den græske oversættelse LXX (Septuaginta), da den masoretiske tekst, vi har adgang til, næppe kan være den oprindelige.</char></note> så de slap uset forbi hende. <verse number="7" style="v"/>De sneg sig ind i kongens soveværelse, slog ham ihjel og huggede hovedet af ham. Så tog de hovedet med sig og vandrede hele natten ned gennem Jordandalen. <verse number="8" style="v"/>Da de ankom til Hebron, overbragte de hovedet til David.</para>
+  <para style="p">„Se her er Ishboshets hoved!” sagde de. „Han var jo søn af Saul, som forsøgte at slå dig ihjel. I dag har Herren givet dig hævn over Saul og hans familie!”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Men David svarede: „Jeg sværger ved den levende Gud, som hidtil har reddet mig fra mine fjender, at jeg vil straffe jer for en sådan udåd. <verse number="10" style="v"/>I Ziklag lod jeg den budbringer dræbe, som troede, at jeg ville blive glad for at høre om Sauls død! Det var den belønning, han fik for sit budskab. <verse number="11" style="v"/>Hvor meget strengere straf fortjener da ikke sådan et par forbrydere, der har myrdet en uskyldig mand, mens han lå og sov hjemme i sin seng! I må bøde med jeres liv!”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Så befalede David sine mænd at slå Ba’ana og Rekab ihjel. Da det var gjort, skar de hænder og fødder af dem og hængte ligene op ved dammen i Hebron. Men Ishboshets hoved begravede de i Abners grav i Hebron.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">David bliver konge over hele Israel</para>
+  <para style="p">
+    <verse number="1" style="v"/>Derefter kom alle Nordrigets stammeledere til David i Hebron. „Vi tilhører jo et og samme folk,” sagde de. <verse number="2" style="v"/>„Og du har altid været vores leder i krig, selvom Saul var vores konge! Det er Herren selv, der har sagt, at du skal være hyrde og leder for hele hans folk.” <verse number="3" style="v"/>Derpå sluttede alle Nordrigets ledere en venskabspagt med David for Herrens ansigt, og de salvede ham til konge over Nordriget.</para>
+  <para style="p">
+    <verse number="4" style="v"/>(David var 30 år gammel, da han blev konge, og han regerede i 40 år. <verse number="5" style="v"/>I de første syv et halvt år boede han i Hebron og regerede over Juda. I de næste 33 år boede han i Jerusalem og regerede over både Juda og Nordriget.)</para>
+  <para style="s1">David indtager Jerusalem</para>
+  <para style="p">
+    <verse number="6" style="v"/>Så snart David var blevet udråbt til konge over begge riger, rykkede han og hans mænd op imod Jerusalem for at bekæmpe jebusitterne, som boede der.</para>
+  <para style="p">„Her kommer du aldrig ind!” sagde jebusitterne til David. „Om så vores vagtposter var både blinde og lamme, ville det være umuligt for dig!” <verse number="7-9" style="v"/>Da David hørte deres overmodige ord, sagde han til sine mænd: „Træng ind i byen gennem vandtunnelen og gør det af med disse ‚lamme og blinde’, som er fjendtligt indstillet overfor os.” Derfor siger man, at „lamme og blinde får ikke lov at komme ind i Guds Hus”. Det lykkedes på den måde David at indtage klippeborgen Zion, hvorefter han flyttede ind i den og ændrede dens navn til Davidsbyen. Og han udbyggede og befæstede byen yderligere, både forsvarstårnet og de øvrige bygninger.</para>
+  <para style="p">
+    <verse number="10" style="v"/>I de følgende år styrkede David sit kongedømme, for Herren, den Almægtige, var med ham.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Kong Hiram af Tyrus sendte kong David en masse cedertræ som venskabsgave. Samtidig sendte han tømrere og stenhuggere, der skulle hjælpe med at bygge et flot palads til ham. <verse number="12" style="v"/>Da forstod David, at Herren havde valgt ham til konge og styrket hans kongemagt for sit udvalgte folks skyld.</para>
+  <para style="s1">Davids sønner, født i Jerusalem</para>
+  <para style="p">
+    <verse number="13" style="v"/>Efter at David var flyttet fra Hebron til Jerusalem, tog han flere koner og medhustruer, og han fik mange sønner og døtre. <verse number="14" style="v"/>Her følger navnene på de sønner, der blev født i Jerusalem: Shammua, Shobab, Natan, Salomon, <verse number="15" style="v"/>Jibhar, Elishua, Nefeg, Jafia, <verse number="16" style="v"/>Elishama, Eljada og Elifelet.</para>
+  <para style="s1">David besejrer filistrene</para>
+  <para style="p">
+    <verse number="17" style="v"/>Da filistrene hørte, at David også var blevet kronet til konge over Nordriget, mobiliserede de deres styrker og tog af sted for at tage ham til fange. Men David fik meddelelse om det og tog ned til sin klippeborg. <verse number="18" style="v"/>Filistrenes hær kom og slog lejr i Refaimdalen.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Da spurgte David Herren til råds: „Skal jeg gå ud og kæmpe imod dem? Vil du give mig sejr over dem?”</para>
+  <para style="p">Herren svarede: „Ja, jeg vil udlevere dem til dig.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Derefter rykkede David ud og besejrede dem. „Det var Herren, der gjorde det!” erklærede han. „Herren brød gennem fjendens slagrækker som en flodbølge!” Derfor kaldte han stedet for Ba’al-Peratzim.<note caller="+" style="f"><char style="fr" closed="false">5,20 </char><char style="ft" closed="false">Navnet betyder: „Herren bryder igennem”.</char></note></para>
+  <para style="p">
+    <verse number="21" style="v"/>De flygtende filistre havde efterladt deres afgudsbilleder på slagmarken, og David konfiskerede dem.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Men filistrene kom tilbage og slog atter lejr i Refaimdalen. <verse number="23" style="v"/>David rådførte sig igen med Herren, og svaret lød: „Undgå et frontalt angreb! Gå bag om fjenden og slå til ud for baka-træerne.<note caller="+" style="f"><char style="fr" closed="false">5,23 </char><char style="ft" closed="false">Det vides ikke, hvilke træer der er tale om, måske popler, asp eller morbær.</char></note> <verse number="24" style="v"/>Så snart du hører lyden af taktfaste skridt i toppen af træerne, skal du gå til angreb, for det betyder, at Herren selv er gået i forvejen for at tilintetgøre fjendens hær.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>David gjorde, som Herren havde sagt, og hans hær huggede filistrene ned fra Gibeon og helt til Gezer.</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">David henter arken og fører den til Jerusalem</para>
+  <para style="p">
+    <verse number="1" style="v"/>Derefter udvalgte David 30.000 af Israels bedste krigere <verse number="2" style="v"/>og gik i spidsen for dem til Ba’ala<note caller="+" style="f"><char style="fr" closed="false">6,2 </char><char style="ft" closed="false">Et andet navn for Kirjat-Jearim, jf. <char style="xt"><ref loc="1CH 13:6">1.Krøn. 13,6</ref></char>.</char></note> i Judas stammeområde for at bringe den almægtige Herres Ark hjem—han, der troner mellem keruberne. <verse number="3-4" style="v"/>Arken, der i lang tid havde stået i Abinadabs hus på højen, blev anbragt på en ny oksekærre, som blev styret af Abinadabs to sønner, Uzza og Ahjo. Uzza gik ved siden af arken og Ahjo foran. <verse number="5" style="v"/>David og Israels øvrige ledere dansede og sang af alle kræfter til Herrens ære til musik fra lyrer, harper, tamburiner, kastagnetter og bækkener.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Men da de nåede til Nakons tærskeplads, snublede okserne, og Uzza rakte hånden ud for at støtte Guds Ark. <verse number="7" style="v"/>Da blev Herren vred og straffede Uzza, fordi han ikke viste ærefrygt for Guds Ark, som ikke måtte røres, og han døde på stedet. <verse number="8" style="v"/>David var oprørt over, at Herren havde straffet Uzza så hårdt. Derfor kaldte han stedet for „Peretz-Uzza”,<note caller="+" style="f"><char style="fr" closed="false">6,8 </char><char style="ft" closed="false">Navnet betyder: „Udfaldet mod Uzza”.</char></note> hvilket det hedder den dag i dag.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Episoden gjorde, at David blev bange for Herren. „Hvordan tør jeg bringe Herrens Ark hjem til mig?” sagde han. <verse number="10" style="v"/>Derfor ombestemte han sig, og i stedet for at føre Herrens Ark ind i Davidsbyen, lod han den indtil videre opbevare hos Obed-Edom fra Gat. <verse number="11" style="v"/>Der stod den i tre måneder, og Herren velsignede Obed-Edom og hans familie.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Da David hørte, at Herrens Ark havde bragt velsignelse til Obed-Edoms familie og ejendom, arrangerede han et festligt optog for at føre arken op til Davidsbyen. <verse number="13" style="v"/>Så snart de, som bar Herrens Ark, havde gået seks skridt, gjorde de holdt, mens der blev ofret en tyr og en fedekalv. <verse number="14" style="v"/>David var begejstret og dansede uhæmmet for Herren, iført en præstedragt. <verse number="15" style="v"/>Sådan førte David og israelitterne under jubelråb og trompetfanfarer Herrens Ark op til Davidsbyen.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Men da processionen nåede ind til Davidsbyen, og Davids kone Mikal, Sauls datter, fra sit vindue så kong David hoppe rundt og danse for Herren, følte hun foragt for ham.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Herrens Ark blev anbragt i det telt, som David havde ladet indrette til den. Derefter ofrede han brændofre og takofre til Herren, <verse number="18" style="v"/>og han velsignede folket i Herren den Almægtiges navn. <verse number="19" style="v"/>Så gav han hver af de tilstedeværende, både mænd og kvinder, en gave bestående af et brød, en daddelkage og en rosinkage, og de gik alle hver til sit.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Da David vendte hjem for at velsigne sin familie, kom Mikal ham i møde og udbrød forarget: „Som Israels konge dog tog sig værdigt ud i dag! Hvad skulle det gøre godt for at danse halvnøgen omkring for øjnene af byens kvinder? Sikken tåbelig opførsel!”</para>
+  <para style="p">
+    <verse number="21" style="v"/>David svarede: „Jeg dansede for Herren, som udvalgte mig til konge i stedet for din far og hans slægt, og som gjorde mig til leder for sit folk Israel. <verse number="22" style="v"/>Og jeg vil blive ved med at danse til Guds ære, også selvom det er ydmygende, og du foragter mig for det. Men de kvinder, du nævnte, respekterer mig faktisk for at vise min glæde!”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Mikal, Sauls datter, forblev barnløs hele sit liv.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Guds pagtsløfte til David og hans slægt</para>
+  <para style="p">
+    <verse number="1" style="v"/>David var nu flyttet ind i sit kongelige palads, og Herren havde skaffet fred i landet, så israelitterne ikke længere lå i konstant krig med nabofolkene. <verse number="2" style="v"/>En dag sagde David til profeten Natan: „Her sidder jeg i mit smukke palads af cedertræ—men Guds Ark står stadig i et telt!”</para>
+  <para style="p">
+    <verse number="3" style="v"/>„Gør du bare, hvad du har på hjerte,” svarede Natan, „for Herren er med dig.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Men samme nat sagde Herren til Natan: <verse number="5" style="v"/>„Sig til min tjener David, at han ikke skal bygge et hus til mig! <verse number="6" style="v"/>Jeg har endnu aldrig haft et hus at bo i. Min bolig har været et telt lige siden den dag, jeg førte israelitterne ud af Egypten, og jeg er flyttet med dem fra sted til sted. <verse number="7" style="v"/>Har jeg nogen sinde beklaget mig over det til de ledere, jeg indsatte som hyrder for mit folk, Israel? Har jeg bedt nogen af dem om at bygge mig et fornemt hus af cedertræ? <verse number="8" style="v"/>Derfor skal du give David følgende besked fra den almægtige Herre: ‚Jeg hentede dig fra græsgangen, hvor du vogtede får, og satte dig til at være leder for mit folk. <verse number="9" style="v"/>Overalt hvor du kom frem, var jeg med dig og tilintetgjorde dine fjender. Jeg vil gøre dig lige så berømt som de kendteste mænd i verden. <verse number="10-11" style="v"/>Jeg har givet mit folk et sted at slå sig ned og bo uden frygt og uden at blive mishandlet af deres fjender, sådan som det skete før i tiden, dengang jeg indsatte dommere til at lede mit folk. Jeg har skaffet dig fred for alle dine fjender. Hør nu efter, hvad jeg siger: I stedet for at <char style="em">du</char> bygger <char style="em">mig</char> et hus, vil <char style="em">jeg</char> „bygge” <char style="em">dig</char> et kongehus. <verse number="12" style="v"/>Når du engang er død, skal en af dine efterkommere overtage tronen, og jeg vil gøre hans kongedømme stærkt. <verse number="13" style="v"/>Han skal bygge mig et tempel, og jeg vil gøre hans herredømme urokkeligt for evigt.<note caller="+" style="f"><char style="fr" closed="false">7,13 </char><char style="ft" closed="false">Det hebraiske udtryk „for evigt” betegner en ikke nærmere fastsat tidsperiode uden nogen klar afslutning. Det kan betyde noget vedvarende gennem alle kommende generationer i al fremtid, eller det kan betyde så længe vedkommende lever, jf. <char style="xt"><ref loc="1SA 1:22">1.Sam. 1,22</ref>;</char> 13,13; 20,23.42.</char></note> <verse number="14" style="v"/>Jeg vil være hans far, og han skal være min søn. Når han forsynder sig overfor mig, vil jeg sende andre folkeslag imod ham for at straffe ham, <verse number="15" style="v"/>men jeg vil altid være trofast over for ham. Jeg vil ikke rive kongemagten ud af hans hænder, som jeg gjorde med Saul for at overdrage magten til dig. <verse number="16" style="v"/>Der vil altid stå en konge fra din slægt for mit ansigt. Ja, din slægts herredømme vil vare til evig tid.’ ”</para>
+  <para style="p">
+    <verse number="17" style="v"/>Så gik Natan til David og fortalte ham alt, hvad Herren havde sagt. <verse number="18" style="v"/>David gik da ind i teltet, hvor arken stod, og han satte sig for Herrens ansigt og bad: „Herre, min Gud, du har allerede gjort så meget for mig. <verse number="19" style="v"/>Og nu giver du mig tilmed løfter, der gælder mine efterkommere langt ud i fremtiden! Min Herre og Gud, måtte mennesker forstå, hvad det her betyder.<note caller="+" style="f"><char style="fr" closed="false">7,19 </char><char style="ft" closed="false">Betydningen af den hebraiske tekst er omstridt.</char></note> <verse number="20" style="v"/>Hvad mere kan jeg sige? Du ved, at jeg ønsker at tjene dig. <verse number="21" style="v"/>Du har gjort dette for at stadfæste dit ord, og fordi du ville det. Det er store løfter, du har åbenbaret for din tjener. <verse number="22" style="v"/>Herre, du er uendelig stor—der er ingen anden Gud end dig! Det ved vi så godt. <verse number="23" style="v"/>Hvilket andet folk på den vide jord har du gjort så meget for som for Israel, dit eget folk? Du har befriet dit folk, så de kunne bringe ære til dit navn. Du har udført mægtige undere ved at frelse dit folk fra slaveriet i Egypten og drive de andre folkeslag og deres guder bort foran dig. <verse number="24" style="v"/>Du udvalgte Israels folk til at være dit folk for evigt, og du blev Israels Gud.</para>
+  <para style="p">
+    <verse number="25-26" style="v"/>Min Herre og Gud, gid det løfte, du har givet mig og min slægt, må stå fast for evigt. Må dets opfyldelse bringe dig evig ære, så folk erkender, at Israels Gud er den almægtige Gud. Må din tjener Davids slægt altid tjene dig. <verse number="27" style="v"/>Almægtige Herre, Israels Gud, du har sagt, at du vil bygge mig et kongehus. Det er derfor, jeg drister mig til at komme med følgende bøn til dig. <verse number="28" style="v"/>Almægtige Herre, min Gud, dine ord kan man altid regne med, og du har givet mig gode løfter for fremtiden. <verse number="29" style="v"/>Velsign min slægt, så den altid må bestå for dit ansigt. Min Herre og min Gud, det er dit løfte, og når du velsigner min slægt, vil den altid være velsignet!”</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Davids sejre over nabofolkene</para>
+  <para style="p">
+    <verse number="1" style="v"/>David besejrede efterhånden filistrene fuldstændigt og undertvang dem ved at indtage deres hovedstad. <verse number="2" style="v"/>Han besejrede også moabitterne. Han lod dem lægge sig ned i lange rækker, hvorefter han afmålte dem med en målesnor: To snorlængder blev slået ihjel, en snorlængde fik lov at leve. De overlevende blev Davids skattepligtige undersåtter.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Kong Hadadezer af Zoba, Rehobs søn, forsøgte at generobre sit gamle territorium syd for Eufratfloden,<note caller="+" style="f"><char style="fr" closed="false">8,3 </char><char style="ft" closed="false">Et område, som Saul havde taget fra ham.</char></note> men David besejrede ham. <verse number="4" style="v"/>Ved den lejlighed erobrede David 1000 stridsvogne<note caller="+" style="f"><char style="fr" closed="false">8,4 </char><char style="ft" closed="false">Oplysningen om de 1000 vogne er ved en fejl faldet ud af den hebraiske kopi, men findes i LXX og <char style="xt"><ref loc="1CH 18:4">1.Krøn. 18,4</ref></char>.</char></note> og tog 7000<note caller="+" style="f"><char style="fr" closed="false">8,4 </char><char style="ft" closed="false">Den hebraiske kopi siger 1700, men LXX og <char style="xt"><ref loc="1CH 18:4">1.Krøn. 18,4</ref></char> siger 7000.</char></note> ryttere og 20.000 fodfolk til fange. Han skar haserne over på 90 procent af hestene. <verse number="5" style="v"/>Da aramæerne rykkede ud fra Damaskus for at hjælpe Hadadezer, huggede David 22.000 af dem ned. <verse number="6" style="v"/>I Damaskusområdet udstationerede han flere garnisoner og indlemmede aramæerne blandt sine skattepligtige undersåtter. Herren gav David sejr over alle hans fjender. <verse number="7" style="v"/>David beslaglagde alle de guldskjolde, som kong Hadadezers officerer havde brugt, og førte dem til Jerusalem <verse number="8" style="v"/>sammen med en stor ladning kobber fra byerne Teba og Berotaj.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Da kong Toi af Hamat<note caller="+" style="f"><char style="fr" closed="false">8,9 </char><char style="ft" closed="false">I det nordvestlige Syrien, vest for Zoba området og ca. 200 km nord for Damaskus.</char></note> hørte om Davids triumf over Hadadezers hær, <verse number="10" style="v"/>sendte han sin søn Joram af sted for at lykønske ham. Hadadezer og Toi var nemlig ærkefjender. Joram forærede David mange gaver af sølv, guld og bronze, <verse number="11-12" style="v"/>og David indviede dem til Herren sammen med det guld og sølv, han havde taget i krigsbytte fra edomitterne, moabitterne, ammonitterne, filistrene, amalekitterne og kong Hadadezers hær.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Således voksede Davids ry ude omkring. På hjemvejen fra kampene mod nord tilintetgjorde han 18.000 edomitter i Saltdalen, <verse number="14" style="v"/>hvorefter han etablerede en række garnisoner i Edom, så edomitterne kom under Davids herredømme. Således gav Herren David sejr, hvor som helst han kom frem.</para>
+  <para style="s1">Davids embedsmænd</para>
+  <para style="p">
+    <verse number="15" style="v"/>David var en retfærdig konge i Israel, der gav alle en fair behandling. <verse number="16" style="v"/>Joab var øverstbefalende for hæren; Joshafat, Ahiluds søn, var kongens øverste embedsmand med ansvar for arkiverne; <verse number="17" style="v"/>Zadok, Ahitubs søn, og Ahimelek, Ebjatars søn,<note caller="+" style="f"><char style="fr" closed="false">8,17 </char><char style="ft" closed="false">Ahimelek var far til Ebjatar ifølge <char style="xt"><ref loc="1SA 22:20">1.Sam. 22,20</ref></char>, så enten er der sket en fejl, eller også er det en anden Ebjatar.</char></note> var de ledende præster; Seraja var statssekretær; <verse number="18" style="v"/>Benaja, Jojadas søn, var chef for livgarden; og Davids egne sønner havde ledende stillinger ved hoffet.</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">David viser særlig godhed imod Mefiboshet</para>
+  <para style="p">
+    <verse number="1" style="v"/>En dag kom David til at tænke på, om der mon stadig var nogle tilbage af Sauls efterkommere, som han kunne vise godhed mod, sådan som han havde lovet Jonatan. <verse number="2" style="v"/>Der var en mand ved navn Ziba, der engang havde været en af Sauls betroede tjenere. Ham sendte David bud efter.</para>
+  <para style="p">„Er du Ziba?” spurgte han.</para>
+  <para style="p">„Ja,” svarede manden.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Kongen fortsatte: „Er der ikke nogen tilbage af Sauls efterkommere, som jeg kan vise godhed og derved indfri et løfte, jeg har givet for Guds ansigt?”</para>
+  <para style="p">„Jo, det er der,” svarede Ziba, „der er en søn af Jonatan, men han er lam i benene.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>„Hvor bor han?” spurgte kongen.</para>
+  <para style="p">„Han bor i Lodebar hos Makir, Ammiels søn.”</para>
+  <para style="p">
+    <verse number="5-6" style="v"/>Så sendte kong David bud efter Mefiboshet, Jonatans søn, Sauls barnebarn. Mefiboshet frygtede det værste, og da han kom ind til David, bøjede han sig underdanigt for kongen. <verse number="7" style="v"/>Men David sagde beroligende:</para>
+  <para style="p">„Vær ikke bange! Jeg vil behandle dig godt på grund af din far Jonatan. Du skal få al Sauls ejendom tilbage og bo her i paladset!”</para>
+  <para style="p">
+    <verse number="8" style="v"/>Da bøjede Mefiboshet sig endnu en gang for kongen og udbrød: „Skulle kongen virkelig vise en sådan godhed imod en død hund som mig?”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Kongen tilkaldte nu Sauls tjener, Ziba. „Jeg har givet din herres barnebarn familiens ejendom tilbage,” forklarede han. <verse number="10-11" style="v"/>„Det bliver din opgave at bestyre ejendommen og sørge for, at dine sønner og tjenere opdyrker jorden, så den giver udbytte og føde til hans familie. Men Mefiboshet skal fremover bo her i paladset.”</para>
+  <para style="p">Ziba, der havde 15 sønner og 20 tjenere, svarede: „Jeg skal sørge for at efterkomme kongens ønske.” Og fra da af spiste Mefiboshet regelmæssigt sammen med kong David, og han blev behandlet som Davids egne sønner. <verse number="12" style="v"/>Mefiboshet havde selv en lille søn, der hed Mika.</para>
+  <para style="p">Zibas husstand kom altså til at bestyre Mefiboshets ejendom, <verse number="13" style="v"/>mens Mefiboshet, der jo var lam i benene, flyttede til Jerusalem og tog ophold i kongens palads.</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">Davids sejr over ammonitterne og aramæerne</para>
+  <para style="p">
+    <verse number="1" style="v"/>Nogen tid efter døde ammonitternes konge, Nahash, og han blev efterfulgt af sønnen Hanun.</para>
+  <para style="p">
+    <verse number="2" style="v"/>„Ham vil jeg vise venlighed,” tænkte David, „for hans far viste venlighed mod mig.” Så sendte David nogle sendebud af sted for at kondolere i anledning af faderens død.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Men de ammonitiske officerer sagde til Hanun: „De mænd er ikke kommet for at ære din fars minde! Nej, det er blot et påskud for at udspionere os, for i virkeligheden har David i sinde at angribe os.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Derfor lod Hanun Davids mænd pågribe, hvorefter man vanærede dem ved at barbere den ene side af deres skæg af. Samtidig blev deres tøj skåret af over bagdelen, og sådan blev de sendt hjem. <verse number="5" style="v"/>Da David fik at vide, at hans sendebud var blevet så groft ydmyget, sendte han nogle af sine embedsmænd ud for at møde dem og give dem besked på at blive i Jeriko, indtil deres skæg var vokset ud igen.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Ammonitterne blev klar over, at David var rasende på dem på grund af det, de havde gjort. Derfor hvervede de 20.000 aramæiske lejesoldater fra områderne ved Rehob og Zoba, 1000 mand fra kongen af Ma’aka og 12.000 mand fra Tob. <verse number="7" style="v"/>Da David fik det at vide, sendte han straks Joab og Israels bedste styrker af sted imod dem. <verse number="8" style="v"/>Ammonitterne tog opstilling foran byporten, mens mændene fra Zoba, Rehob, Tob og Ma’aka tog opstilling på den åbne slette. <verse number="9-10" style="v"/>Derved blev Joab tvunget til at kæmpe på to fronter, så han delte styrkerne imellem sig selv og sin bror Abishaj. Selv tog han elitesoldaterne og rykkede ud mod aramæerne på sletten, mens han overlod resten af hæren til Abishaj, der skulle kæmpe imod ammonitterne foran byporten.</para>
+  <para style="p">
+    <verse number="11" style="v"/>„Hvis jeg får brug for hjælp mod aramæerne, må du komme med det samme!” beordrede Joab. „Og hvis det viser sig, at du får besvær med ammonitterne, kommer jeg dig til hjælp. <verse number="12" style="v"/>Vær nu ved godt mod! Vi må være tapre, hvis vi skal gøre os håb om at redde vores folk og vores Guds byer. Herrens vilje ske!”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Så gik Joab og hans krigere til angreb, og aramæerne flygtede. <verse number="14" style="v"/>Da ammonitterne så det, flygtede de også og søgte tilflugt inden for bymuren. Derefter vendte Joab tilbage til Jerusalem med sin hær.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Da aramæerne indså, at de ikke kunne stå sig mod israelitterne, søgte de forstærkning. <verse number="16" style="v"/>Kong Hadadezer fik samlet en hær af aramæere fra den anden side af Eufratfloden, og de ankom til Helam, anført af Shobak, kong Hadadezers hærfører.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Da David hørte det, samlede han hele Israels hær og gik i spidsen for den over Jordanfloden til Helam, hvor de blev angrebet af aramæerne. <verse number="18" style="v"/>Aramæerne led store tab og måtte igen tage flugten. David og hans hær dræbte 700<note caller="+" style="f"><char style="fr" closed="false">10,18 </char><char style="ft" closed="false">Der skulle nok have stået 7000, jf. <char style="xt"><ref loc="1CH 19:18">1.Krøn. 19,18</ref></char>.</char></note> aramæiske vognkæmpere og 40.000 fodfolk, deriblandt hærføreren Shobak. <verse number="19" style="v"/>Da Hadadezers vasalkonger så, at aramæerne var blevet slået, sluttede de fred med israelitterne og blev underlagt Israels herredømme. Fra da af turde aramæerne ikke længere hjælpe ammonitterne.</para>
+  <chapter number="11" style="c"/>
+  <para style="s1">Davids forhold til Batsheba</para>
+  <para style="p">
+    <verse number="1" style="v"/>Næste forår omkring den tid, hvor kongerne sædvanligvis drager i krig, sendte David Joab og Israels hær af sted til kamp. De besejrede den ammonitiske hær og belejrede Rabba.<note caller="+" style="f"><char style="fr" closed="false">11,1 </char><char style="ft" closed="false">Ammons hovedstad, svarende til det nuværende Amman i Jordan.</char></note> Men David selv blev hjemme i Jerusalem.</para>
+  <para style="p">
+    <verse number="2" style="v"/>En dag ved aftenstid, efter at David havde rejst sig fra sit eftermiddagshvil, spadserede han rundt på paladsets flade tag. Derfra fik han øje på en kvinde, der var i færd med at tage bad. Hun var usædvanlig smuk. <verse number="3" style="v"/>Han forhørte sig om, hvem hun var, og fik at vide, at hun hed Batsheba og var en datter af Eliam. Hun var gift med hittitten Urias. <verse number="4" style="v"/>David sendte bud efter hende, og det endte med, at han gik i seng med hende. (Hun var netop færdig med det ugelange renselsesritual efter sin menstruation.) Bagefter gik hun hjem. <verse number="5" style="v"/>Da Batsheba senere opdagede, at hun var gravid, gav hun David besked om det.</para>
+  <para style="s1">David skaffer Urias af vejen</para>
+  <para style="p">
+    <verse number="6" style="v"/>David sendte nu bud til Joab og bad ham om at sende hittitten Urias hjem til Jerusalem. <verse number="7" style="v"/>Da Urias havde meldt sin ankomst i paladset, kaldte David ham ind og spurgte, hvordan det gik med Joab og hæren, og hvordan det gik med krigen. <verse number="8" style="v"/>Derefter bad han ham om at gå hjem og få sig et velfortjent hvil. Så gik Urias sin vej, og kongen sørgede for at sende en gave hjem til ham. <verse number="9" style="v"/>Men Urias gik ikke hjem. I stedet overnattede han i paladsets portrum sammen med andre af kongens folk.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Da David næste dag fik at vide, at Urias ikke var taget hjem, kaldte han ham til sig og spurgte: „Hvorfor gik du ikke hjem til din kone i går aftes? Du har jo været væk hjemmefra meget længe!”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Urias svarede: „Alle andre må nøjes med at sove i telt eller på den bare jord, både Joab og hærens officerer, Herrens Ark, og alle Israels og Judas krigere. Skulle jeg så tage hjem til mit komfortable hus for at spise og drikke og sove hos min kone? Jeg sværger på, at sådan ville jeg aldrig opføre mig.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>„Godt,” sagde David. „Men bliv nu her i byen en dag mere. I morgen kan du tage tilbage til hæren.” Det accepterede Urias, <verse number="13" style="v"/>og senere på dagen inviterede David ham til middag, hvor han sørgede for, at han blev beruset. Men også den nat overnattede Urias i portrummet i stedet for at gå hjem.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Næste morgen skrev David et brev, som han bad Urias aflevere til Joab. <verse number="15" style="v"/>I brevet blev Joab beordret til at placere Urias helt fremme i fronten, på den mest udsatte post. På et passende tidspunkt skulle Joab så trække hovedstyrken tilbage, så Urias blev ladt i stikken og dræbt. <verse number="16" style="v"/>Joab placerede derfor Urias i frontlinien op mod bymuren, hvor han vidste, at fjendens bedste krigere befandt sig, <verse number="17" style="v"/>og Urias faldt på sin post sammen med adskillige andre israelitiske soldater.</para>
+  <para style="p">
+    <verse number="18-20" style="v"/>I sin næste rapport til David gjorde Joab rede for slagets gang, og til sendebudet, som skulle overbringe den, sagde han: „Det kan godt være, at kongen bliver vred og spørger: ‚Hvorfor i alverden kom I så tæt på bymuren? Vidste I ikke, at I der ville blive skudt fra muren? <verse number="21" style="v"/>Har I glemt Abimelek, der i sin tid blev dræbt ved Tebetz, fordi en kvinde smed en møllesten ned fra muren?’ Hvis kongen siger noget i den retning, skal du sige: ‚Urias blev også dræbt!’ ”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Så kom sendebudet til Jerusalem, hvor han aflagde rapport for David. <verse number="23" style="v"/>„Fjenden gjorde et udfald imod os,” forklarede han, „og det lykkedes os at tvinge dem tilbage til byporten. <verse number="24" style="v"/>Men mændene på muren sendte en regn af pile ned over os, så flere af vores folk blev dræbt. Også Urias mistede livet!”</para>
+  <para style="p">
+    <verse number="25" style="v"/>„Sig til Joab, at han ikke skal tage det så tungt,” svarede David. „Soldater falder nu engang i krig. Sig til ham, at han ikke må opgive angrebet, før byen er indtaget.”</para>
+  <para style="p">
+    <verse number="26" style="v"/>Da Batsheba fik at vide, at hendes mand var død, sørgede hun over ham i adskillige dage. <verse number="27" style="v"/>Da sørgetiden var omme, sendte David bud efter hende og giftede sig med hende. Og inden længe fødte hun en søn.</para>
+  <para style="p">Men Herren blev vred over Davids onde handlemåde.</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">Profeten Natan konfronterer David med hans synd</para>
+  <para style="p">
+    <verse number="1" style="v"/>Herren sendte så profeten Natan til David, og Natan fortalte ham følgende historie: „Der var to mænd, som boede i samme by. <verse number="2" style="v"/>Den ene var rig og havde masser af køer, får og geder. <verse number="3" style="v"/>Den anden var fattig. Han ejede kun et eneste lille lam, som det var lykkedes ham at købe. Han elskede det lam, som han elskede sine børn. Han lod det spise af sin egen tallerken, drikke af sit eget krus, og han sad med det på skødet, som var det hans egen datter.</para>
+  <para style="p">
+    <verse number="4" style="v"/>En dag fik den rige mand besøg, men han nænnede ikke at slagte et af sine egne dyr for at beværte gæsten. I stedet tog han den fattige mands lam, slagtede det og serverede det for sin gæst.”</para>
+  <para style="p">
+    <verse number="5-6" style="v"/>Det blev David rasende over at høre: „Jeg sværger ved den levende Gud, at den mand, som har gjort det, skal betale fire lam i erstatning. Ja, sådan en hjerteløs person fortjener at dø!”</para>
+  <para style="p">
+    <verse number="7" style="v"/>„Det er dig, der er den rige mand!” sagde Natan. „Hør, hvad Herren, Israels Gud, siger til dig: ‚Jeg udvalgte dig til at blive Israels konge og reddede dig fra Sauls angreb. <verse number="8" style="v"/>Jeg gav dig hans rige og hans koner og gjorde dig til konge over både Nordriget og Juda, og hvis det var for lidt for dig, havde jeg gerne givet dig meget, meget mere. <verse number="9" style="v"/>Hvorfor gør du oprør imod, hvad jeg har sagt, og handler så ondt? Du har stjålet Urias’ kone, og du har fået ham dræbt for at dække over din synd. <verse number="10" style="v"/>Du har vist foragt for mig ved din skændige opførsel, og derfor vil der blive splid i din egen familie. <verse number="11" style="v"/>Hør efter, hvad jeg nu siger: En af dine nærmeste vil gøre oprør imod dig. Han vil tage dine koner for øjnene af dig og forlyste sig med dem ved højlys dag. <verse number="12" style="v"/>Du handlede i det skjulte. Men det her vil ske ved højlys dag og for øjnene af hele Israels folk!’ ”</para>
+  <para style="s1">David erkender sin skyld og får sin straf</para>
+  <para style="p">
+    <verse number="13" style="v"/>Da gik David til bekendelse: „Jeg har syndet imod Herren!”</para>
+  <para style="p">Natan svarede: „Så har Herren også tilgivet dig, og du skal slippe for at dø for din synd! <verse number="14" style="v"/>Men det nyfødte barn, som er resultatet af din synd, skal dø, for du har bragt skam over Herrens navn.” <verse number="15" style="v"/>Derefter gik Natan hjem.</para>
+  <para style="p">Kort efter ramte Herren det barn, som Batsheba havde født, med sygdom. <verse number="16" style="v"/>Da gik David i forbøn for barnet. Han nægtede at spise på grund af sorg, og selv om natten blev han liggende udstrakt på gulvet i bøn. <verse number="17" style="v"/>Hans rådgivere forsøgte forgæves at få ham til at rejse sig og tage føde til sig. <verse number="18" style="v"/>På den syvende dag døde drengen, men Davids tjenere turde ikke fortælle ham den sørgelige nyhed, for de tænkte: „Han var helt knust før! Hvis vi nu kommer og fortæller ham, at drengen er død, kunne han gå helt amok!”</para>
+  <para style="p">
+    <verse number="19" style="v"/>Da David så dem stå og hviske sammen, gik sandheden op for ham.</para>
+  <para style="p">„Er drengen død?” spurgte han.</para>
+  <para style="p">„Ja, han er,” svarede de.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Så rejste David sig op fra gulvet, gik i bad, gned sig med en vellugtende olie og tog rent tøj på. Derefter gik han ind i Herrens hus for at tilbede, hvorefter han vendte tilbage til paladset og bad om at få noget mad sat frem. <verse number="21" style="v"/>Hans tjenere var forbløffede over hans reaktion.</para>
+  <para style="p">„Forstår man nu det?” udbrød de. „Mens drengen endnu var i live, græd du og nægtede at spise, men så snart han er død, holder du op med at sørge og begynder at spise igen!”</para>
+  <para style="p">
+    <verse number="22" style="v"/>David svarede: „Jeg fastede og græd, så længe drengen var i live, for jeg tænkte, at Herren måske ville vise mig nåde og lade ham leve. <verse number="23" style="v"/>Men nu, hvor han er død, er der ingen grund til at faste mere. Kan jeg måske bringe ham tilbage til livet? Jeg kan følge ham i døden, men han kan ikke komme tilbage til mig!”</para>
+  <para style="p">
+    <verse number="24" style="v"/>David trøstede sin kone Batsheba, så godt han kunne, og hun blev igen gravid og fødte endnu en søn, som hun gav navnet Salomon. Herren elskede den dreng, <verse number="25" style="v"/>og gennem profeten Natan sendte han bud om, at drengen skulle kaldes „Herrens elskede”.</para>
+  <para style="s1">David fuldfører erobringen af ammonitternes byer</para>
+  <para style="p">
+    <verse number="26-27" style="v"/>I mellemtiden var det lykkedes Joab og Israels hær at indtage ammonitternes hovedstad Rabba, og Joab sendte følgende sejrsbudskab hjem til David: „Vi er gået ind i Rabba og kontrollerer byens vandforsyning. <verse number="28" style="v"/>Før nu resten af hæren hertil, så du selv kan sætte kronen på værket og få æren for sejren i stedet for mig.”</para>
+  <para style="p">
+    <verse number="29" style="v"/>Så førte David resten af hæren til Rabba og fuldførte indtagelsen af byen. <verse number="30" style="v"/>Han fjernede kronen fra ammonitterkongens<note caller="+" style="f"><char style="fr" closed="false">12,30 </char><char style="ft" closed="false">I stedet for „deres konges hoved” kan teksten oversættes „Milkoms hoved”. Milkom, det samme som Molek/Molok, var ammonitternes afgud, jf. <char style="xt"><ref loc="1KI 11:5">1.Kong. 11,5</ref>.<ref loc="1KI 11:7">7</ref></char>.</char></note> hoved og satte den på sit eget. Den vejede over 30 kg og var lavet af guld med ædelsten på. Desuden tog han et stort krigsbytte. <verse number="31" style="v"/>Byens befolkning tog han som krigsfanger og satte nogle af dem til at arbejde med save, hakker og økser, mens andre kom til at arbejde i teglværkerne. På samme måde gik det indbyggerne fra de øvrige byer i ammonitternes land. Derefter vendte David og hæren tilbage til Jerusalem.</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">Amnon voldtager sin søster Tamar</para>
+  <para style="p">
+    <verse number="1" style="v"/>Nogen tid efter skete der følgende: Davids søn Absalom havde en smuk søster, som hed Tamar. En anden af Davids sønner, Tamars halvbror Amnon, forelskede sig i hende. <verse number="2" style="v"/>Han var helt syg af begær efter hende, men hun var jomfru, og han havde ingen mulighed for at få sin vilje med hende, for det var skik, at kongens døtre blev holdt skarpt adskilt fra de unge mænd. <verse number="3" style="v"/>Amnon havde imidlertid en snedig ven, hans fætter Jonadab, en søn af Davids bror Shima.</para>
+  <para style="p">
+    <verse number="4" style="v"/>En dag sagde Jonadab til Amnon: „Hvorfor hænger du med hovedet? Det passer sig ikke for en kongesøn! Fortæl mig, hvad der er i vejen!”</para>
+  <para style="p">„Jeg er forelsket i min halvsøster Tamar,” betroede Amnon ham.</para>
+  <para style="p">
+    <verse number="5" style="v"/>„Aha,” svarede Jonadab, „det findes der råd for. Nu lægger du dig syg, og når din far kommer for at se til dig, siger du: ‚Lad min søster Tamar komme og lave mad til mig, så tror jeg, at jeg kan spise lidt. Hvis hun får lov at pleje mig, bliver jeg nok snart rask.’ ”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Amnon gik ind på fætterens plan, og da kongen kom for at se til ham, bad Amnon ham om at sende Tamar ind til ham, så hun kunne bage nogle af sine dejlige kager til ham og selv servere dem for ham. <verse number="7" style="v"/>Det gik David med til, og han sendte besked til Tamar om at indfinde sig hos Amnon og bage kager til ham. <verse number="8" style="v"/>Tamar kom så over til Amnons hus, hvor han lå i sengen. Hun æltede dejen og bagte kagerne, mens han så på det. <verse number="9" style="v"/>Men da de var færdige, og hun havde lagt dem på fadet, klar til, at de kunne blive bragt til ham, nægtede han at spise dem.</para>
+  <para style="p">„Ud, alle sammen!” sagde han til tjenerne, hvorefter de alle gik deres vej.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Så sagde han til Tamar: „Kom her ind i mit soveværelse med kagerne og server dem for mig.” Så gik hun hen til ham med kagefadet. <verse number="11" style="v"/>Men da hun var kommet hen til sengen, greb han fat i hende og sagde: „Tamar, kom op til mig i sengen!”</para>
+  <para style="p">
+    <verse number="12" style="v"/>„Åh nej, bror, lad mig være!” protesterede hun. „Tag mig ikke med vold! Sådan gør man ikke i Israel. Det er tåbeligt at gøre sådan. <verse number="13" style="v"/>Tænk på mig! Hvordan skulle jeg kunne bære min skam? Og tænk på dig selv! Du ville jo miste din ære og værdighed. Nej, tal hellere med kongen om det, så han kan give sin tilladelse til, at vi gifter os.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>Men Amnon lod sig ikke overtale, og da han var stærkere end hende, endte det med, at han voldtog hende.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Men bagefter blussede hadet op i Amnon, så han nu hadede hende mere, end han før havde elsket hende.</para>
+  <para style="p">„Rejs dig og forsvind!” snerrede han.</para>
+  <para style="p">
+    <verse number="16" style="v"/>„Nej, nej,” græd hun, „hvis du forkaster mig nu, begår du en endnu større forbrydelse imod mig!”</para>
+  <para style="p">Men han ville ikke høre på hende. <verse number="17" style="v"/>I stedet kaldte han på sin kammertjener. „Smid den kvinde ud og lås døren efter hende!” befalede han.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Så førte tjeneren hende udenfor og låste døren. Tamar var klædt i en lang kjole med ærmer, sådan som det var skik blandt kongens døtre, der var jomfruer. <verse number="19" style="v"/>Nu rev hun imidlertid kjolen i stykker og strøede aske på hovedet for at vise sin fortvivlelse, og med hænderne for ansigtet løb hun skrigende gennem paladset.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Hendes bror Absalom standsede hende og forsøgte at berolige hende. „Har Amnon ligget med dig?” spurgte han. „Ti nu stille, søster. Han er jo din bror. Lad det blive i familien. Tag det dog ikke så tungt.”</para>
+  <para style="p">Så flyttede Tamar over i sin bror Absaloms hus, hvor hun siden levede i ensomhed.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Da kong David hørte, hvad der var sket, blev han meget vred. Men han bebrejdede ikke Amnon noget, for Amnon var hans førstefødte søn og hans favorit.<note caller="+" style="f"><char style="fr" closed="false">13,21 </char><char style="ft" closed="false">Den sidste sætning mangler i den masoretiske tekst.</char></note> <verse number="22" style="v"/>Men Absalom ville overhovedet ikke tale til Amnon, for han hadede ham af et godt hjerte, fordi han havde voldtaget hans søster.</para>
+  <para style="s1">Absalom tager hævn over Amnon</para>
+  <para style="p">
+    <verse number="23" style="v"/>Der gik to år. En dag var Absalom og hans folk i færd med at klippe får ved Ba’al-Hatzor tæt ved byen Efraim, og han ville gerne invitere sine brødre til fåreklipningsfest. <verse number="24" style="v"/>Han gik så til kongen og sagde, „Vi er i gang med fåreklipningen. Vil kongen og hans tjenere ikke komme og holde fest med os?”</para>
+  <para style="p">
+    <verse number="25" style="v"/>Men kongen svarede: „Nej, min dreng! Det ville være for stor en byrde for dig, hvis vi alle sammen troppede op.”</para>
+  <para style="p">Absalom forsøgte at overtale ham, men kongens beslutning var urokkelig, og han sagde nej tak.</para>
+  <para style="p">
+    <verse number="26" style="v"/>„Godt,” svarede Absalom, „men hvis du ikke vil komme, kan du i det mindste sende Amnon af sted.”</para>
+  <para style="p">„Hvorfor lige Amnon?” spurgte kongen.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Absalom blev ved med at presse kong David, så han til sidst sendte alle sønnerne af sted—også Amnon.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Absalom sagde nu til sine mænd: „Vent til Amnon bliver beruset, og når jeg giver signal, overfalder I ham og slår ham ihjel. I skal ikke være bange for noget. Det er mig, der har givet ordren, og jeg påtager mig det fulde ansvar. I skal bare udføre min ordre.”</para>
+  <para style="p">
+    <verse number="29" style="v"/>Sådan gik det til, at Amnon blev myrdet. De andre kongesønner sprang skrækslagne på deres muldyr og flygtede. <verse number="30" style="v"/>Mens de var undervejs tilbage til Jerusalem, nåede det rygte kong David, at Absalom havde myrdet alle kongesønnerne.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Da sprang kongen op, rev i fortvivlelse sit tøj i stykker og kastede sig med ansigtet mod jorden. De omkringstående tjenere fulgte hans eksempel og flåede deres tøj i stykker.</para>
+  <para style="p">
+    <verse number="32-33" style="v"/>Men i samme øjeblik ankom Jonadab og sagde: „Nej, det er ikke sandt! Alle kongesønnerne er ikke blevet myrdet, det er kun Amnon! Absalom har haft skumle planer om at myrde Amnon, lige siden han voldtog Tamar!”</para>
+  <para style="p">
+    <verse number="34" style="v"/>Absalom var i mellemtiden flygtet.</para>
+  <para style="p">Lidt senere fik vagtposten på Jerusalems mur øje på en flok mennesker, der nærmede sig fra nordvest ad vejen, der gik langs bjergsiden. Han skyndte sig at melde det til kongen: „Jeg ser en gruppe mennesker nærme sig på vejen fra Horon.”<note caller="+" style="f"><char style="fr" closed="false">13,34 </char><char style="ft" closed="false">Den masoretiske tekst er mangelfuld, så oversættelsen her bygger på LXX.</char></note></para>
+  <para style="p">
+    <verse number="35" style="v"/>„Der kan du se,” sagde Jonadab til kongen, „nu kommer de! Dine sønner er uskadte! Var det ikke det jeg sagde?”</para>
+  <para style="p">
+    <verse number="36" style="v"/>Kort efter nåede kongesønnerne grædende og hulkende frem. Da brast også kongen og hans tjenere i gråd.</para>
+  <para style="p">
+    <verse number="37-39" style="v"/>Absalom flygtede til sin morfar, kong Talmaj af Geshur, der var søn af Ammihud, og blev der i tre år. I mellemtiden voksede Davids længsel efter at se sin søn igen, især efter at han var kommet sig over Amnons død.</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">Absalom og David forsones</para>
+  <para style="p">
+    <verse number="1" style="v"/>Da Joab blev klar over, hvor meget kongens tanker hele tiden kredsede om Absalom, <verse number="2-3" style="v"/>sendte han bud til Tekoa efter en bestemt kvinde, som var kendt for sin visdom. „Du skal se ud som en, der sørger,” forklarede Joab. „Tag sørgedragt på og forsøm dit udseende, så du ligner en, der længe har sørget over en afdød. Træd så frem for kongen og sig det, som jeg nu fortæller dig.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Da kvinden trådte frem for kongen, bøjede hun sig underdanigt for ham og udbrød: „Herre konge, hjælp mig!”</para>
+  <para style="p">
+    <verse number="5" style="v"/>„Hvad er der galt?” spurgte han.</para>
+  <para style="p">„Jeg er enke,” svarede hun. <verse number="6" style="v"/>„Jeg havde to sønner, men en dag kom de i slagsmål ude på marken. Der var ingen til at lægge sig imellem, og derfor kom den ene til at slå den anden ihjel. <verse number="7" style="v"/>Nu kræver resten af familien, at jeg udleverer den overlevende søn, så de kan henrette ham for at have myrdet sin bror. Men det er lige så meget for, at de på den måde kan få ryddet min nærmeste arving af vejen. Hvis jeg føjer dem, har jeg ingen sønner tilbage, og dermed uddør min afdøde mands slægt.”</para>
+  <para style="p">
+    <verse number="8" style="v"/>„Overlad den sag til mig,” svarede kongen. „Jeg skal nok sørge for, at ingen rører ham.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>„Tak, herre!” udbrød hun. „Jeg skal nok tage ansvaret, hvis du senere bliver kritiseret for at have hjulpet mig.”</para>
+  <para style="p">
+    <verse number="10" style="v"/>„Det skal du ikke tænke på,” sagde kongen. „Hvis nogen gør indsigelser, så send dem bare til mig, og jeg skal sørge for, at de holder op med at genere dig.”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Kvinden fortsatte: „Vil du sværge ved Herren din Gud på, at ingen får lov at hævne drabet og gøre min søn fortræd?”</para>
+  <para style="p">„Det sværger jeg ved den levende Gud på!” svarede kongen. „Der skal ikke krummes et hår på hans hoved!”</para>
+  <para style="p">
+    <verse number="12" style="v"/>„Tillad mig endnu et par ord,” vedblev kvinden.</para>
+  <para style="p">„Sig frem!” svarede kongen.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Da spurgte kvinden: „Hvorfor viser du ikke samme velvilje overfor din egen slægt, som Gud har udvalgt, som du gør over for min? Med denne beslutning har du dømt dig selv, for du går med tanker om at slå din egen søn ihjel! <verse number="14" style="v"/>Livet er som vandet, der hældes ud og synker ned i jorden—ingen kan samle det op igen, og ingen vender tilbage fra døden. Men Gud ønsker ikke døden. Han vil hellere finde en udvej for at kunne få en forvist søn hjem. <verse number="15" style="v"/>Jeg kom til dig for at bede om hjælp, fordi jeg var bange for, hvad min familie ville gøre ved mig. <verse number="16" style="v"/>Jeg tænkte, at du kunne redde os fra den mand, som er ude på at slå min søn ihjel og derved gøre det umuligt for vores slægt at få andel i det land, Gud har givet os. <verse number="17" style="v"/>Jeg var overbevist om, at du nok skulle finde en udvej—hvad du også gjorde. Jeg ved, at min herre kongen har visdom fra Gud til at skelne mellem godt og ondt. Må Herren din Gud være med dig!”</para>
+  <para style="p">
+    <verse number="18" style="v"/>„Sig mig en ting!” sagde kongen.</para>
+  <para style="p">„Ja, herre?” svarede kvinden.</para>
+  <para style="p">
+    <verse number="19" style="v"/>„Har Joab haft en finger med i spillet i alt det her?”</para>
+  <para style="p">„Det kan ikke nægtes,” svarede kvinden, „for det var Joab, som sendte mig herhen med besked om, hvad jeg skulle sige. <verse number="20" style="v"/>Hans hensigt var, at du skulle se sagen i et nyt lys. Din visdom, herre, er som en engels—intet undslipper din opmærksomhed.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>Så sendte kongen bud efter Joab og sagde til ham: „Godt, du har overbevist mig! Bring Absalom tilbage til mig!”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Joab bøjede sig ærbødigt for kongen og sagde: „Nu ved jeg, at du værdsætter mig, for du har indvilliget i at gøre det, jeg bad dig om.”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Så rejste Joab til Geshur og hentede Absalom, som han førte med sig tilbage til Jerusalem. <verse number="24" style="v"/>Absalom fik lov at komme tilbage til sit gamle hus på paladsets område, men kongen nægtede at se ham.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Ingen i hele Israel var så beundret for sit udseende som Absalom. Der var intet at udsætte på ham fra top til tå. <verse number="26" style="v"/>Når han lod sit lange hår klippe en gang om året, plejede han at veje det. Der var gerne over to kilo, og han lod det kun klippe, fordi det ellers blev for tungt at bære rundt på. <verse number="27" style="v"/>Absalom havde tre sønner og en datter, som også fik navnet Tamar. Hun var en usædvanlig smuk kvinde.</para>
+  <para style="p">
+    <verse number="28" style="v"/>To år efter at Absalom var vendt hjem fra sit eksil, havde han endnu ikke fået foretræde for kongen. <verse number="29" style="v"/>Derfor sendte han bud efter Joab, for at han skulle gå i forbøn for ham. Men Joab kom ikke—heller ikke da Absalom gentog opfordringen.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Derfor gav Absalom sine folk ordre til at gå hen og sætte ild til Joabs bygmark, der grænsede op til hans egen. Det gjorde de så. <verse number="31" style="v"/>Derefter kom Joab ind til Absalom og spurgte:</para>
+  <para style="p">„Hvorfor gav du dine folk ordre til at sætte ild til min mark?”</para>
+  <para style="p">
+    <verse number="32" style="v"/>Absalom svarede: „For at få din opmærksomhed! Jeg vil gerne have, at du henvender dig til kongen og spørger ham, hvorfor han fik mig bragt tilbage fra Geshur, når han altid undgår mig. Jeg kunne jo lige så godt være blevet, hvor jeg var. Jeg ønsker, at du skal arrangere et møde mellem kongen og mig, og hvis han derefter stadig er overbevist om, at jeg er skyldig til døden, kan han for min skyld gerne henrette mig.”</para>
+  <para style="p">
+    <verse number="33" style="v"/>Så gik Joab til kongen og fortalte, hvad Absalom havde sagt. Da gav David efter og tilkaldte Absalom, og da Absalom mødte kongen, bøjede han sig ærbødigt for ham, og kongen omfavnede ham.</para>
+  <chapter number="15" style="c"/>
+  <para style="s1">Absaloms sammensværgelse</para>
+  <para style="p">
+    <verse number="1" style="v"/>Efter at Absalom var blevet taget til nåde, anskaffede han sig en fornem vogn og prægtige heste. Han fik sig også en livvagt på 50 mand, som løb foran vognen. <verse number="2" style="v"/>Hver morgen tog han opstilling ved vejen til paladsets port, og når så nogen kom for at få kongens afgørelse i en retssag, standsede Absalom ham, spurgte, hvor han var fra, og udtrykte interesse for hans sag.</para>
+  <para style="p">
+    <verse number="3" style="v"/>„Det er da klart, at du har ret!” ville han så sige. „Men kongen har ikke nogen, der vil høre på dig. <verse number="4" style="v"/>Hvis jeg var dommer i landet, kunne folk, der følte sig uretfærdigt behandlet, komme til mig, så skulle jeg nok skaffe dem deres ret.”</para>
+  <para style="p">
+    <verse number="5" style="v"/>Når nogen gjorde mine til at kaste sig ned for Absalom i underdanig respekt, standsede han dem og omfavnede dem i stedet for. <verse number="6" style="v"/>På den måde vandt han israelitternes hjerter.</para>
+  <para style="p">
+    <verse number="7-8" style="v"/>Der gik fire år. Så sagde Absalom til kongen: „Giv mig tilladelse til at tage til Hebron og ofre til Herren, så jeg kan opfylde et løfte, jeg engang gav Herren i Geshur i Aram. Dengang lovede jeg ham, at hvis han ville hjælpe mig tilbage til Jerusalem, ville jeg til gengæld bringe ham et offer i Hebron.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>„Godt,” svarede kongen, „tag du bare af sted og opfyld dit løfte.” Så rejste Absalom til Hebron.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Men han havde allerede i hemmelighed sendt besked ud til lederne i alle Israels stammer: „Når I hører trompetfanfaren, skal I råbe: ‚Absalom er kronet til konge i Hebron.’ ” <verse number="11" style="v"/>Han havde desuden inviteret 200 mænd fra Jerusalem med til offerfesten. De anede intet om hans planer. <verse number="12" style="v"/>Under festen sendte han desuden bud efter Ahitofel, Davids øverste rådgiver, der boede i Gilo. Ahitofel gik over på Absaloms side, og flere og flere fulgte efter, så sammensværgelsen voksede sig stærk.</para>
+  <para style="s1">David flygter fra Jerusalem</para>
+  <para style="p">
+    <verse number="13" style="v"/>En af kong Davids mænd skyndte sig til Jerusalem for at fortælle ham, at Absalom havde lavet en sammensværgelse imod ham, og at alle Israels stammer havde givet ham deres støtte.</para>
+  <para style="p">
+    <verse number="14" style="v"/>„Så må vi flygte med det samme,” var Davids spontane reaktion. „Hvis vi skynder os af sted, inden Absalom kommer tilbage til Jerusalem, kan vi nå at redde byen og os selv.”</para>
+  <para style="p">
+    <verse number="15" style="v"/>„Vi er med dig!” svarede hans mænd. „Vi vil følge dig i tykt og tyndt!”</para>
+  <para style="p">
+    <verse number="16" style="v"/>Så tog kongen af sted sammen med hele sin husstand, bortset fra ti medhustruer, der blev hjemme for at tage sig af opgaverne i paladset. <verse number="17-18" style="v"/>I udkanten af byen gjorde David holdt, så hans trofaste støtter, der bestod af hans livvagt og de 600 mænd, som var fulgt med ham fra Gat, kunne passere ham og gå i forvejen.</para>
+  <para style="p">
+    <verse number="19-20" style="v"/>Men pludselig vendte kongen sig til Ittaj, der var leder for de 600 gatitter. „Hvad vil I egentlig med for?” spurgte han Ittaj. „Bliv i Jerusalem og slut jer til kong Absalom, for I bor her jo som fremmede i eksil. Der er ingen grund til, at I flygter sammen med os—hvem ved hvorhen? Nej, vend om og tag dine folk med dig. Må Herren vise jer barmhjertighed!”</para>
+  <para style="p">
+    <verse number="21" style="v"/>Men Ittaj svarede: „Jeg sværger ved den levende Gud, at vi vil følge med dig, uanset hvad der sker—også selv om det kan betyde døden for os!”</para>
+  <para style="p">
+    <verse number="22" style="v"/>„Godt,” svarede David, „så følg med os!” Da fulgte Ittaj og hans 600 mænd samt deres familier med ham.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Dyb sorg sænkede sig over byen, da kongen og hans følge krydsede Kedrondalen og fortsatte i retning af ørkenen. <verse number="24" style="v"/>Præsten Zadok og alle levitterne fulgte med. De havde taget pagtens ark med, og den stillede de i vejkanten, indtil hele følget var gået forbi. Præsten Ebjatar var også fulgt med. <verse number="25" style="v"/>David befalede nu Zadok at føre arken tilbage til byen. „Hvis jeg finder nåde for Herrens øjne,” tilføjede han, „så vil jeg en dag vende tilbage og gense arken og det hellige telt! <verse number="26" style="v"/>Men hvis Herren har forkastet mig, så lad ham gøre ved mig, hvad han mener, er det bedste. <verse number="27" style="v"/>Du og Ebjatar kan trygt vende tilbage til byen sammen med din søn Ahima’atz og Ebjatars søn, Jonatan. Men hold øjne og ører åbne. <verse number="28" style="v"/>Jeg vil vente ved Jordanflodens vadested, indtil vi hører nyt fra jer om, hvad der sker i Jerusalem.”</para>
+  <para style="p">
+    <verse number="29" style="v"/>Så bar Zadok og Ebjatar Guds Ark tilbage til Jerusalem og blev i byen.</para>
+  <para style="p">
+    <verse number="30" style="v"/>David og hans følge fortsatte ad vejen op over Olivenbjerget.<note caller="+" style="f"><char style="fr" closed="false">15,30 </char><char style="ft" closed="false">En mere korrekt oversættelse end det traditionelle „Oliebjerget”. Der har fra gammel tid været mange oliventræer på denne høj lige øst for Jerusalem.</char></note> De gik med tildækkede hoveder og bare fødder, og de græd alle sammen.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Da David fik at vide, at hans egen rådgiver, Ahitofel, havde sluttet sig til Absalom, bad han: „Herre, lad Ahitofel give Absalom dårlige råd!” <verse number="32" style="v"/>På toppen af Olivenbjerget, hvor man plejede at ofre til Gud, ventede Davids ven, arkitten Hushaj, på dem. Han havde i fortvivlelse flænget sit tøj og drysset jord på hovedet.</para>
+  <para style="p">
+    <verse number="33-34" style="v"/>Men David sagde til ham: „Det giver kun problemer, hvis du går med os. Vend hellere tilbage til Jerusalem og sig til Absalom: ‚Jeg ønsker at være din rådgiver og tjene dig, sådan som jeg tjente din far.’ På den måde kan du være med til at sabotere Ahitofels planer. <verse number="35-36" style="v"/>I byen har jeg også præsterne Zadok og Ebjatar. Dem skal du holde underrettet om alt, hvad du hører i kongens palads. De kan så sende deres sønner Ahima’atz og Jonatan til mig med besked om, hvad der foregår.”</para>
+  <para style="p">
+    <verse number="37" style="v"/>Så vendte Davids ven Hushaj tilbage til byen, og han nåede frem samtidig med Absalom.</para>
+  <chapter number="16" style="c"/>
+  <para style="s1">Ziba hjælper David</para>
+  <para style="p">
+    <verse number="1" style="v"/>David fortsatte ned ad vejen på den anden side af Olivenbjerget og mødte kort efter Ziba, som havde været Sauls tjener og nu bestyrede Mefiboshets ejendom. Ziba havde to æsler med sig. De havde sadler på og var læssede med 200 brød, 100 rosinkager, 100 figner<note caller="+" style="f"><char style="fr" closed="false">16,1 </char><char style="ft" closed="false">Det vides ikke med sikkerhed hvilke frugter, der er tale om. Den hebraiske tekst siger sommerfrugter, der sandsynligvis henviser til figner, men LXX taler om dadler.</char></note> og en lædersæk med vin.</para>
+  <para style="p">
+    <verse number="2" style="v"/>„Hvor skal du hen med de ting?” spurgte kongen.</para>
+  <para style="p">Ziba svarede: „Æslerne er en gave til kongens familie, så de har noget at ride på. Brødet, kagerne og frugten er til folkene—og vinen skal styrke dem, der bliver udmattede i ørkenen.”</para>
+  <para style="p">
+    <verse number="3" style="v"/>„Hvor er Mefiboshet?” spurgte kongen ham.</para>
+  <para style="p">„Han blev i Jerusalem,” svarede Ziba, „for han tænkte: Nu vil israelitterne give mig min farfars kongedømme tilbage!”</para>
+  <para style="p">
+    <verse number="4" style="v"/>„Så overdrager jeg al hans ejendom til dig, Ziba!” udbrød kongen opbragt.</para>
+  <para style="p">„Mange, mange tak!” svarede Ziba og bøjede sig til jorden. „Måtte jeg altid bevare kongens velvilje.”</para>
+  <para style="s1">Shimi forbander David</para>
+  <para style="p">
+    <verse number="5" style="v"/>Da David og hans følge passerede Bahurim, kom en mand fra landsbyen ud og råbte forbandelser efter dem. Det var Shimi, Geras søn. Han var en slægtning til Saul. <verse number="6" style="v"/>Han kastede sten efter kongen og hans tjenere til trods for, at de var omgivet af hele hæren og livvagten.</para>
+  <para style="p">
+    <verse number="7-8" style="v"/>„Forsvind, din morder—din bandit!” skreg han mod David. „Nu betaler Herren dig tilbage, fordi du myrdede kong Sauls familie for selv at overtage tronen. Nu har Herren overdraget den til din søn Absalom! Din morder! Nu får du, hvad du har fortjent!”</para>
+  <para style="p">
+    <verse number="9" style="v"/>„Hvor længe skal den forbandede køter have lov til at overfuse kongen?” spurgte Abishaj, Zerujas søn. „Lad mig gå hen og hugge hovedet af ham!”</para>
+  <para style="p">
+    <verse number="10" style="v"/>„I tænker kun på hævn, Zerujas sønner,” svarede David. „Hvis Herren har givet ham besked på at forbande mig—hvem er da jeg, at jeg skulle standse ham? <verse number="11" style="v"/>Min egen søn søger at slå mig ihjel, men denne benjaminit forbander mig jo kun. Lad ham være, for Herren er med i det. <verse number="12" style="v"/>Måske vil Herren ynkes over mig og vende forbandelserne til noget godt.”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Så gik David og hans mænd videre, men Shimi fulgte med i sikker afstand oppe på bakkeskråningen og fortsatte med at forbande David og smide sten og jord efter ham. <verse number="14" style="v"/>Da kongen og hans følge nåede vadestedet ved Jordanfloden, var de så udmattede, at de måtte holde et langt hvil.</para>
+  <para style="s1">Hushaj tilbyder Absalom sin tjeneste</para>
+  <para style="p">
+    <verse number="15" style="v"/>I mellemtiden havde Absalom holdt sit indtog i Jerusalem, ledsaget af sine folk og af Ahitofel. <verse number="16" style="v"/>Davids ven, arkitten Hushaj, opsøgte ham øjeblikkelig.</para>
+  <para style="p">„Kongen leve! Kongen længe leve!” hilste han.</para>
+  <para style="p">
+    <verse number="17" style="v"/>„Er det en måde at behandle din ven David på?” spurgte Absalom. „Hvorfor er du ikke fulgt med ham?”</para>
+  <para style="p">
+    <verse number="18" style="v"/>„Fordi jeg foretrækker at holde med den mand, som Herren og hans folk Israel har valgt,” svarede Hushaj. <verse number="19" style="v"/>„Er der noget forkert i det? Tidligere hjalp jeg din far, nu vil jeg gerne hjælpe dig.”</para>
+  <para style="s1">Ahitofel som Absaloms rådgiver</para>
+  <para style="p">
+    <verse number="20" style="v"/>Derefter sagde Absalom henvendt til Ahitofel: „Hvad skal vi så gøre nu? Kom med et godt råd!” <verse number="21" style="v"/>Ahitofel kom med følgende forslag: „Du skal gå i seng med din fars medhustruer, som han efterlod i paladset! Så vil hele Israels folk indse, at du har krænket ham så groft, at al forsoning er udelukket, og dine tilhængere vil vide, at du mener det alvorligt med dit oprør imod ham.”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Så blev der rejst et telt på paladsets flade tag, hvor alle kunne se det, og ved højlys dag gik Absalom ind i teltet og lå med sin fars medhustruer, den ene efter den anden.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Absalom fulgte altid Ahitofels råd, ligesom David tidligere havde gjort, for når Ahitofel talte, mente man, at han talte på Guds vegne.</para>
+  <chapter number="17" style="c"/>
+  <para style="s1">Hushajs list lykkes</para>
+  <para style="p">
+    <verse number="1" style="v"/>Derefter kom Ahitofel med følgende forslag: „Lad mig udvælge 12.000 mand og sætte efter David allerede i nat. <verse number="2-3" style="v"/>Hvis jeg kan overrumple ham, mens han er træt og modløs, vil alle hans mænd blive grebet af panik og opgive kampen. Så kan jeg nøjes med at slå kongen ihjel, det er jo ham, du vil til livs, og føre hele hans hær uskadt tilbage til dig som en bortløben hustru føres tilbage til sin ægtemand.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Absalom og de israelitiske ledere syntes godt om Ahitofels forslag, <verse number="5" style="v"/>men Absalom sagde: „Lad os lige få fat i Hushaj og spørge, hvad han mener om forslaget.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Da Hushaj ankom, forklarede Absalom ham Ahitofels plan og spurgte: „Hvad mener du? Skal vi følge Ahitofels forslag? Sig frem!”</para>
+  <para style="p">
+    <verse number="7" style="v"/>„Jeg er bange for, at Ahitofel tager fejl denne gang,” svarede Hushaj. <verse number="8" style="v"/>„Du kender selv din far og hans mænd. De er dygtige krigere, der sandsynligvis er lige så rasende som en bjørn, der er blevet berøvet sine unger. Din far er en garvet kriger, der ikke sover blandt soldaterne. <verse number="9" style="v"/>Det er mere sandsynligt, at han har gemt sig i en hule et eller andet sted. Når han så gør udfald, og nogle af dine mænd falder, kan der let gå panik i dem, så de begynder at råbe op om, at din hær er slået. <verse number="10" style="v"/>Da er det ude med jer, for uanset om dine mænd er modige som løver, kan de godt blive lammet af frygt for din far. Hele Israel ved jo, hvor mange krige din far har vundet, og hvor tapre hans mænd er.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Jeg vil derfor foreslå, at du mobiliserer alle Israels mænd lige fra Dan i nord til Be’ersheba i syd. Så får du en mægtig hær, og du skal selv gå i spidsen for den. <verse number="12" style="v"/>Når vi så finder David, falder vi over hans hær, som når morgenduggen falder på jorden, og vi udsletter dem alle rub og stub. <verse number="13" style="v"/>Hvis David skulle nå at flygte ind i en befæstet by, så har du hele Israels hær til din rådighed. Så slår vi et reb om byen og trækker den ned i dalen, så der ikke bliver sten på sten tilbage.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>Da udbrød Absalom og alle hans rådgivere: „Hushajs råd er endnu bedre end Ahitofels!” Herren havde nemlig sørget for at forpurre Ahitofels udmærkede råd for at føre Absalom i ulykke.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Hushaj fortalte derefter præsterne Zadok og Ebjatar om de to forslag. <verse number="16" style="v"/>„Skynd jer at sende bud til David om, at han i nat skal krydse vadestedet ved Jordanfloden og flygte ud i ørkenen. Ellers er det ude med ham og hans mænd.”</para>
+  <para style="p">
+    <verse number="17" style="v"/>De to præstesønner, Jonatan og Ahima’atz, plejede at holde sig skjult ved Rogelkilden uden for Jerusalem, da de ikke turde lade sig se i byen. De blev holdt løbende underrettet af en slavepige, som hentede vand fra kilden, så de hurtigt kunne bringe oplysningerne videre til kong David.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Men da de modtog Hushajs besked, blev de opdaget af en dreng, netop som de begav sig på vej fra Rogelkilden, væk fra Jerusalem, og drengen fortalte Absalom om dem. Jonatan og Ahima’atz var klar over, at de var opdaget, så da de kom til den næste by, Bahurim, søgte de efter et skjulested og en mand gav dem lov til at kravle ned i en tom brønd. <verse number="19" style="v"/>Hans kone bredte et tæppe ud over brøndens munding og spredte korn ud over tæppet, som om det lå til tørre, så ingen fik mistanke om noget.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Absaloms mænd sporede de unge mænd til huset i Bahurim og spurgte konen, om hun havde set noget til Ahima’atz og Jonatan. Hun fortalte, at de to unge mænd allerede var gået videre over på den anden side af bækken. Mændene ledte så efter dem i den retning, men forgæves, og de måtte vende tilbage til Jerusalem med uforrettet sag. <verse number="21" style="v"/>Da Absaloms mænd var borte, kravlede Ahima’atz og Jonatan op af brønden og skyndte sig videre til kong David. „Skynd dig at krydse Jordanfloden allerede i nat!” sagde de og fortalte ham om Ahitofels plan. <verse number="22" style="v"/>Samme nat gik David over floden sammen med hele sit følge, og da morgenen gryede, var de alle kommet over.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Men Ahitofel var dybt krænket over, at Absalom ikke havde fulgt hans råd. Han sadlede sit æsel og red hjem til sin egen by, hvor han overdrog sin ejendom til sine børn og derefter hængte sig selv. Han blev begravet ved siden af sin far.</para>
+  <para style="s1">David finder tilflugt i Mahanajim</para>
+  <para style="p">
+    <verse number="24-26" style="v"/>David og hans følge fortsatte flugten og ankom til Mahanajim.</para>
+  <para style="p">I mellemtiden mobiliserede Absalom hele Israels hær. Han udpegede Amasa til hærfører efter Joab (han var i øvrigt fætter til Joab, for hans mor Abigajil, der var en datter af Isaj, var søster til Joabs mor Zeruja. Hans far var en ishmaelit ved navn Jeter.<note caller="+" style="f"><char style="fr" closed="false">17,24-26 </char><char style="ft" closed="false">Der har åbenbart indsneget sig nogle fejl i den masoretiske tekst her, jf. <char style="xt"><ref loc="1CH 2:13-17">1.Krøn. 2,13-17</ref></char>. Ved kopieringen er Nahash muligvis kommet ind fra vers 27 i stedet for Isaj, ishmaelit er blevet til israelit og Jeter er blevet til Jitra.</char></note>) Absalom og hæren krydsede Jordanfloden og slog lejr i Gileads land, ikke langt fra Mahanajim.</para>
+  <para style="p">
+    <verse number="27" style="v"/>I Mahanajim var David blevet godt modtaget af Shobi (en søn af ammonitten Nahash fra Rabba), Makir (en søn af Ammiel fra Lodebar) og Barzillaj (en gileadit fra Rogelim). <verse number="28-29" style="v"/>Disse mænd bragte David og hans følge måtter til at sove på, baljer og skåle, hvede- og bygmel, ristet korn, bønner, linser, honning, surmælk, får, geder og hytteost. David og hans mænd var naturligvis både trætte, sultne og tørstige efter den lange rejse gennem ødemarken.</para>
+  <chapter number="18" style="c"/>
+  <para style="s1">Kampen mellem David og Absalom</para>
+  <para style="p">
+    <verse number="1" style="v"/>David mønstrede nu alle sine våbenføre mænd og udpegede befalingsmænd over dem. <verse number="2" style="v"/>Så opdelte han hæren i tre afdelinger og satte Joab, Abishaj og Ittaj fra Gat til at lede hver sin afdeling. Selv beredte han sig på at gå i spidsen for hæren, men hans mænd protesterede kraftigt:</para>
+  <para style="p">
+    <verse number="3" style="v"/>„Det går ikke, for det er dig, de er ude efter. For dem er det ikke væsentligt, om <char style="em">vi</char> flygter, eller halvdelen af os dør i kampen. Men du er mere værd end 10.000 mænd. Derfor bør du afvente slagets gang i byen og sende hjælp, hvis vi får brug for det.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>„Godt, jeg følger jeres råd!” svarede kongen til sidst og stillede sig ved byporten, mens tropperne gjorde klar til afgang.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Kongen kaldte de tre hærførere Joab, Abishaj og Ittaj til sig. „I må ikke være for hårde ved den unge Absalom!” beordrede han. Denne befaling blev videregivet til hele hæren.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Davids hær rykkede nu ud mod Israels hær, og slaget kom til at foregå i Efraims tætte skovområde. <verse number="7" style="v"/>Israelitterne blev slået på flugt, og mange blev dræbt af Davids mænd. Det var et totalt nederlag, og den dag døde 20.000 mand. <verse number="8" style="v"/>Flere mænd mistede dog livet ved den hovedkulds flugt gennem skoven end ved at blive hugget ned af Davids krigere. <verse number="9" style="v"/>Hvad Absalom angik, så stødte han på nogle af Davids mænd og flygtede på sit muldyr. Men da muldyret løb ind under et stort egetræ, satte hans lange hår sig fast i grenene. Muldyret løb videre, mens Absalom hang og dinglede i luften. <verse number="10" style="v"/>En af Davids mænd fortalte nu Joab, hvad de havde set.</para>
+  <para style="p">
+    <verse number="11" style="v"/>„Så du Absalom hænge der?” udbrød Joab. „Hvorfor slog du ham så ikke ihjel? Jeg ville have belønnet dig med både penge og et officersbælte!”</para>
+  <para style="p">
+    <verse number="12" style="v"/>„Om du så havde givet mig en formue, havde jeg ikke slået ham ihjel!” svarede soldaten. „Kongen gav jo befaling om, at vi ikke måtte gøre Absalom fortræd, <verse number="13" style="v"/>og han ville før eller senere finde ud af, at det var mig, der havde gjort det. Og du ville sikkert bare lade mig i stikken, hvis jeg blev anklaget.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>„Jeg vil ikke spilde min tid på dig!” afbrød Joab ham og greb tre spyd, løb derhen og stødte dem i brystet på Absalom, der endnu hang og dinglede i egetræet. <verse number="15" style="v"/>Bagefter omringede ti af Joabs unge livvagter Absalom og gav ham dødsstødet.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Så blæste Joab i hornet for at indstille forfølgelsen af Israels hær. <verse number="17" style="v"/>Absaloms lig blev smidt i et stort hul i skoven, hvorefter man dyngede sten over ham. I mellemtiden flygtede Absaloms hær og vendte tilbage til deres hjem.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Absalom havde tidligere rejst en stenstøtte i Kongedalen som et monument over sig selv, fordi han ingen sønner havde til at videreføre sit navn og slægt. Stenstøtten kaldte man for „Absaloms minde”—og det hedder den stadig.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Efter Absaloms død sagde den unge Ahima’atz: „Lad mig løbe hjem til kongen med den glædelige nyhed, at Herren har givet ham hævn over hans fjender.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>„Nej,” svarede Joab, „kongen vil ikke blive glad for at høre, at hans søn er død. Du kan få lov til at bringe bud en anden gang.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>I stedet sendte Joab en sudaneser<note caller="+" style="f"><char style="fr" closed="false">18,21 </char><char style="ft" closed="false">Fra landet Kush, også kaldet Nubien, som lå syd for Egypten, nord for Etiopien, i det nuværende Sudan.</char></note> af sted. „Fortæl kongen, hvad du har set!” befalede han manden, der straks kastede sig for hans fødder i respekt og derefter satte i løb.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Ahima’atz blev ved med at tigge Joab om lov til at løbe bagefter, men Joab svarede: „Hvorfor det? Du får ingen penge for det.” <verse number="23" style="v"/>„Åh,” bad Ahima’atz, „jeg vil så gerne!”</para>
+  <para style="p">„Så løb da!” indvilligede Joab til sidst, hvorefter Ahima’atz skød genvej gennem dalen, så han kom foran sudaneseren. <verse number="24" style="v"/>David ventede ved byporten, og da portvagten gik op til sin udkigspost på muren, fik han øje på en mand, der kom løbende frem imod dem.</para>
+  <para style="p">
+    <verse number="25" style="v"/>„Der kommer en mand løbende!” meldte han kong David i porten.</para>
+  <para style="p">„Hvis han kommer alene, er det sikkert et sendebud!” svarede David.</para>
+  <para style="p">Men da manden kom nærmere, <verse number="26" style="v"/>fik portvagten øje på endnu en mand, der kom løbende. „Nu kommer der en mand til!” meldte han, hvortil kongen svarede: „Så må der være flere nyheder!”</para>
+  <para style="p">
+    <verse number="27" style="v"/>„Den første ligner Ahima’atz med den fart, han har på!” meldte vagten.</para>
+  <para style="p">„Han er en god mand, så han må have gode nyheder,” svarede kongen.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Da Ahima’atz kom nærmere, råbte han til kongen: „Fred være med dig!” og bøjede sig til jorden. Så tilføjede han: „Lovet være Herren, din Gud, som har givet dig sejr over de oprørere, der vovede at sætte sig op imod dig!”</para>
+  <para style="p">
+    <verse number="29" style="v"/>„Hvad med den unge Absalom?” spurgte kongen. „Er han er i god behold?”</para>
+  <para style="p">Ahima’atz svarede undvigende: „Der var en frygtelig råben og skrigen, da jeg blev sendt af sted. Jeg ved ikke, hvad der er sket med ham.”</para>
+  <para style="p">
+    <verse number="30" style="v"/>„Vent her!” beordrede kongen, og Ahima’atz trådte til side.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Straks efter ankom sudaneseren. „Jeg har glædelige nyheder til kongen,” pustede han. „I dag har Herren givet dig hævn over alle dem, som gjorde oprør imod dig!”</para>
+  <para style="p">
+    <verse number="32" style="v"/>„Hvad med Absalom? Er han i god behold?” spurgte kongen.</para>
+  <para style="p">Manden svarede: „Gid alle dine fjender må få samme endeligt som ham!”</para>
+  <chapter number="19" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Da brød kongen sammen og gik grædende op på taget over porten. „Åh, min søn Absalom! Min søn, min søn Absalom!” hulkede han. „Gid jeg var død i dit sted, Absalom—min søn, min søn!”</para>
+  <para style="s1">Joab går i rette med David</para>
+  <para style="p">
+    <verse number="2" style="v"/>Der gik straks bud til Joab om, at kongen græd og sørgede over Absalom, <verse number="3" style="v"/>og da det rygtedes i hæren, hvor fortvivlet kongen var over sin søns død, blev glæden over sejren vendt til sorg. <verse number="4" style="v"/>Alle krigerne luskede tilbage til byen, så skamfulde, at man skulle tro, de var flygtet fra kampen.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Imens sad kongen med ansigtet begravet i hænderne og hulkede: „Åh, min søn Absalom! Absalom, min søn, min søn!”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Da gik Joab til kongen og sagde: „I dag har vi frelst dit liv, og vi har reddet dine sønner, dine døtre, dine koner og medhustruer. Hvorfor opfører du dig, som om vi havde gjort noget forkert? <verse number="7" style="v"/>Du sætter åbenbart større pris på dine fjender end dine venner! Havde Absalom været i live, ville det ikke have gjort dig noget, om alle vi andre var døde! <verse number="8" style="v"/>Gå nu ud og ønsk krigerne til lykke, for jeg sværger ved Herren, at hvis du ikke gør det, deserterer de alle sammen i løbet af natten, og så vil det sidste blive værre for dig end det første!”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Så gik kongen ud og satte sig i byporten, og da rygtet spredtes, at kongen var kommet ud, samledes alle hans krigere foran ham. Absaloms hær var allerede flygtet og vendt hjem.</para>
+  <para style="s1">David vender tilbage til Jerusalem som konge</para>
+  <para style="p">
+    <verse number="10" style="v"/>Nu begyndte man at diskutere situationen ud over hele landet: „David frelste os fra vores værste fjender, filistrene!” sagde folk til hinanden. „Ganske vist valgte vi Absalom til konge, og han jog David bort, <verse number="11" style="v"/>men nu er Absalom død. Lad os derfor udråbe David til konge igen!”</para>
+  <para style="p">
+    <verse number="12-13" style="v"/>Da David hørte, hvad folk snakkede om, sendte han præsterne Zadok og Ebjatar til Judas ledere med følgende besked: „Hvorfor er I så længe om at slutte op om mig? Nordriget har besluttet sig, og nu mangler vi bare jer—til trods for, at jeg tilhører jeres stamme! <verse number="14" style="v"/>Og sig til Amasa: Jeg sværger på, at du skal være min hærfører i stedet for Joab! Jeg er ikke din onkel for ingenting.”</para>
+  <para style="p">
+    <verse number="15" style="v"/>På den måde fik David Judas ledere over på sin side, og de vedtog, at David igen skulle være deres konge. De bad ham derfor komme tilbage til Jerusalem sammen med alle sine folk.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Da kongen på hjemvejen kom til Jordanfloden, var Judas ledere samlet ved Gilgal for at byde ham velkommen og eskortere ham over floden. <verse number="17" style="v"/>Selv Shimi, benjaminitten fra Bahurim, sluttede sig til judæerne for at gå kongen i møde, <verse number="18" style="v"/>og han havde 1000 mand fra sin egen stamme med sig. Ziba, Sauls tjener, og hans 15 sønner og 20 tjenestefolk var også hurtigt taget over Jordanfloden for at møde kongen på den anden side. <verse number="19" style="v"/>Så da han ankom til vadestedet, stod de parate for at eskortere ham og hans familie over.</para>
+  <para style="p">Da kongen skulle til at gå over floden, kastede Shimi sig ned foran ham <verse number="20" style="v"/>og bad: „Herre konge, tilgiv mig det, jeg gjorde, dengang du forlod Jerusalem! Vil du ikke nok glemme det? <verse number="21" style="v"/>Jeg ved, at jeg var ond imod dig dengang, men jeg er den første fra Nordrigets område, der er kommet her i dag for at byde dig velkommen hjem!”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Abishaj brød ind: „Nej, Shimi fortjener døden, fordi han forbandede Herrens salvede!”</para>
+  <para style="p">
+    <verse number="23" style="v"/>„Lad mig være i fred, Zerujas sønner!” svarede David. „I siger mig altid imod. Nej, i dag skal ingen lide døden. Lad os hellere feste, for i dag er jeg igen blevet konge i Israel!” <verse number="24" style="v"/>Så vendte David sig om mod Shimi og svor: „Du skal ikke dø!”</para>
+  <para style="p">
+    <verse number="25-26" style="v"/>Også Mefiboshet, Sauls barnebarn, var kommet ned fra Jerusalem for at modtage kongen. Lige siden den dag David flygtede fra Jerusalem, og til han nu kom tilbage, havde Mefiboshet sørget over kongens skæbne og hverken vasket sine fødder eller sit tøj eller klippet sit skæg.</para>
+  <para style="p">„Hvorfor fulgte du ikke med mig ud af Jerusalem, Mefiboshet?” spurgte kongen.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Han svarede: „Herre konge, min tjener Ziba har løjet om mig. Jeg befalede ham at sadle mit æsel, så jeg kunne følge kongen, men han adlød mig ikke, og så havde jeg ikke noget valg, fordi jeg er lam. <verse number="28" style="v"/>I stedet bagtalte han mig ved at påstå, at jeg nægtede at tage med. Men herre konge, du handler på Guds vegne, og derfor må du gøre, som du synes bedst. <verse number="29" style="v"/>Både jeg selv og resten af min familie kunne lige så godt være blevet henrettet af dig, men i stedet viste du mig den ære at være blandt de udvalgte, der får lov at spise ved dit bord. Jeg kan ikke forvente flere nådesbevisninger fra din side.”</para>
+  <para style="p">
+    <verse number="30" style="v"/>„Javel,” svarede David, „i så fald skal Ziba afstå det halve af ejendommen til dig.”</para>
+  <para style="p">
+    <verse number="31" style="v"/>„Nej, giv ham bare det hele,” svarede Mefiboshet. „Jeg er bare glad for, at du er kommet tilbage i god behold!”</para>
+  <para style="p">
+    <verse number="32-33" style="v"/>Barzillaj fra Gilead, der havde givet kongen og hæren mad under deres eksil i Mahanajim, havde ledsaget kongen fra Rogelim til Jordanfloden. Barzillaj var en meget gammel mand, omkring 80 år, og han var meget rig.</para>
+  <para style="p">
+    <verse number="34" style="v"/>„Følg med mig over floden og slå dig ned i Jerusalem,” sagde kongen til ham. „Jeg skal nok sørge for dig!”</para>
+  <para style="p">
+    <verse number="35" style="v"/>„Nej tak,” svarede han, „det er jeg for gammel til. <verse number="36" style="v"/>Jeg er nu 80 år gammel og har for længst mistet appetitten på livet. Mad og vin smager mig ikke længere, og jeg kan ikke høre, når der bliver sunget og spillet. Nej, der er ingen grund til, at jeg skal ligge kongen til byrde. <verse number="37" style="v"/>At ledsage dig over floden er ære nok for mig! <verse number="38" style="v"/>Derefter vil jeg vende tilbage og dø i min hjemby, så jeg kan blive begravet der, hvor min mor og far ligger. Tag i stedet min søn Kimham med dig, herre konge. Måske kan du gøre noget for ham.”</para>
+  <para style="p">
+    <verse number="39" style="v"/>„Godt,” svarede kongen, „så tager jeg Kimham med mig. Lad mig da vise min taknemmelighed mod ham i stedet for. Jeg vil gøre alt, hvad du beder mig om.”</para>
+  <para style="p">
+    <verse number="40" style="v"/>Kongen og resten af følget gik nu over Jordanfloden. Derefter omfavnede kongen Barzillaj til afsked og velsignede ham, hvorefter Barzillaj vendte tilbage, hvor han kom fra. <verse number="41" style="v"/>Kongen tog Kimham med sig til Gilgal, hvor det meste af Juda og det halve af Nordriget var mødt op for at byde ham velkommen.</para>
+  <para style="s1">Judæerne og israelitterne kommer i klammeri</para>
+  <para style="p">
+    <verse number="42" style="v"/>Nogle af mændene fra Nordriget beklagede sig til kongen over, at det udelukkende var mænd fra Juda, der havde fået den ære at eskortere ham, hans familie og alle hans mænd over Jordanfloden.</para>
+  <para style="p">
+    <verse number="43" style="v"/>„Og hvad så?” indvendte judæerne. „Kongen hører jo til Judas stamme! Er det noget at være vred over? Har vi måske udnyttet vores fortrin ved at søge kongens særlige gunst?”</para>
+  <para style="p">
+    <verse number="44" style="v"/>„Jamen Nordriget består af ti stammer,” svarede de andre. „Derfor har vi meget mere krav på kongen, end I har! Hvorfor har I da ikke indbudt os? Var det måske ikke os, der oprindelig ønskede at få kongen tilbage?”</para>
+  <para style="p">Judæerne gav svar på tiltale, så det endte med et større skænderi mellem judæerne og dem fra Nordriget.</para>
+  <chapter number="20" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Blandt dem fra Nordriget var der en ondsindet mand ved navn Sheba, søn af Bikri af Benjamins stamme. Midt i skænderiet stødte Sheba i hornet og råbte: „Hvad skal vi med David? Han hører jo ikke til blandt os! Kom, alle jer fra Nordriget, lad os gå hjem!” <verse number="2" style="v"/>Da forlod de alle David og fulgte efter Sheba, mens judæerne sluttede op om kongen og ledsagede ham fra Jordanfloden op til Jerusalem.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Da David kom hjem, lod han de ti medhustruer, som havde boet i paladset under hans eksil, flytte til et bevogtet hus et andet sted. Der blev sørget for dem, men han havde aldrig mere noget med dem at gøre. De levede afsondret til deres dødsdag, som om de var enker.</para>
+  <para style="s1">Joab slår Amasa ihjel og nedkæmper Shebas oprør</para>
+  <para style="p">
+    <verse number="4" style="v"/>Derefter befalede kongen Amasa at mobilisere Judas hær og være tilbage inden tre dage. <verse number="5" style="v"/>Amasa begav sig af sted for at samle tropperne, men det tog ham mere end de tre dage, kongen havde afsat til det. <verse number="6" style="v"/>Da sagde kongen til Abishaj:</para>
+  <para style="p">„Jeg er bange for, at Sheba bliver en større trussel for os, end Absalom var. Tag min livvagt og sæt efter ham, så han ikke når i sikkerhed i en befæstet by.”</para>
+  <para style="p">
+    <verse number="7" style="v"/>Straks satte Abishaj og Joab efter Sheba sammen med elitesoldaterne og kongens livvagt. <verse number="8-10" style="v"/>Da de kom til den store sten i Gibeon, stod de pludselig ansigt til ansigt med Amasa. Joab var iført sin kampuniform og havde en daggert spændt i sit bælte. Da han nu gik hen imod Amasa for at hilse på ham, faldt daggerten ud af skeden. Han samlede den hurtigt op med venstre hånd. „Godt at se dig,” sagde han hjerteligt til Amasa, idet han trak ham i skægget med sin højre hånd under foregivende af at ville kysse ham på kinden. Men i det samme stødte han med sin venstre hånd daggerten i maven på den intetanende Amasa, så indvoldene væltede ud på jorden. Sådan gjorde Joab det af med Amasa i et eneste stød. Joab og hans bror Abishaj lod ham ligge på jorden, for de havde travlt med at forfølge Sheba.</para>
+  <para style="p">
+    <verse number="11" style="v"/>En af Joabs unge officerer stillede sig ved Amasas lig og råbte til soldaterne: „Hvis I er loyale overfor David og Joab, så slut jer til os!”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Amasa lå imidlertid i en stor blodpøl midt på vejen, og da Joabs officerer så, at soldaterne stimlede sammen om ham, trak de liget væk fra vejen og dækkede det med en kappe. <verse number="13" style="v"/>Så snart Amasa var blevet fjernet, fulgte krigerne med Joab i jagten på Sheba.</para>
+  <para style="p">
+    <verse number="14-15" style="v"/>I mellemtiden drog Sheba gennem hele Nordriget, hvor det lykkedes ham at få alle sine slægtninge til at slutte op om sig. De fulgte med ham til byen Abel-Bet-Ma’aka, hvor Joab og hans hær indhentede dem og belejrede byen. Joab byggede en vold omkring byen og begyndte en systematisk nedrivning af muren.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Men i byen var der en klog kvinde, som gik op på muren og råbte: „Hør her! Sig til Joab, at han skal komme herhen. Jeg vil tale med ham.”</para>
+  <para style="p">
+    <verse number="17" style="v"/>Da Joab kom derhen, spurgte hun: „Er du Joab?”</para>
+  <para style="p">„Ja,” svarede Joab.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Så fortsatte hun: „Fra gammel tid har man sagt: ‚Søg råd i byen Abel!’ Hos os kunne man få gode råd og hjælp til at løse konflikter. <verse number="19" style="v"/>Men nu er du ved at ødelægge en ældgammel, fredselskende by i Israel! Vil du virkelig ødelægge det, som tilhører Herren?”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Joab svarede: „Nej, det vil jeg bestemt ikke! Jeg er ikke ude på at ødelægge jeres by. <verse number="21" style="v"/>Jeg er kun ude efter en mand ved navn Sheba fra Efraims bjergland, for han har gjort oprør imod kong David. Hvis I vil udlevere ham til os, skal vi gerne lade jeres by være i fred.”</para>
+  <para style="p">„Godt,” svarede kvinden, „så smider vi hans hoved over muren ned til jer.”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Den kloge kvinde fik så byens indbyggere overtalt til at hugge hovedet af Sheba og kaste det over muren.</para>
+  <para style="p">Derefter stødte Joab i hornet, så hæren trak sig tilbage, og alle krigerne vendte hjem, hver til sit. Joab selv vendte tilbage til kongen i Jerusalem.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Joab blev så igen øverstkommanderende for Israels hær. Benaja, Jojadas søn, var chef for den kongelige livvagt; <verse number="24" style="v"/>Adoniram havde opsynet med tvangsarbejderne; Joshafat, Ahiluds søn, var historiker og rigsarkivar; <verse number="25" style="v"/>Sheva var statssekretær; Zadok og Ebjatar var præster i templet; <verse number="26" style="v"/>og Ira fra Jair var hofpræst.</para>
+  <chapter number="21" style="c"/>
+  <para style="s1">Gibeonitternes hævn</para>
+  <para style="p">
+    <verse number="1" style="v"/>Mens David var konge, blev landet ramt af en hungersnød, der varede i tre år. David søgte derfor råd hos Herren, som svarede: „Hungersnøden skyldes den synd, som Saul og hans familie begik ved at slå nogle gibeonitter ihjel på trods af, at Israelitterne havde lovet at lade dem være i fred.” <verse number="2" style="v"/>(Gibeonitterne var et folk, som ikke tilhørte Israel. De var efterkommere af amoritterne, men israelitterne havde med en højtidelig ed sluttet fredspagt med dem. Ikke desto mindre havde Saul i sin iver efter at styrke sit eget herredømme forsøgt at udrydde dem.)</para>
+  <para style="p">Da David hørte Herrens svar, sendte han bud efter gibeonitternes ledere <verse number="3" style="v"/>og spurgte dem: „Hvad kan jeg gøre for jer, så vi bliver skylden kvit, og I kan velsigne Herrens ejendomsfolk?”</para>
+  <para style="p">
+    <verse number="4" style="v"/>„Vores mellemværende med Saul er ikke noget, hans slægt kan betale sig fra,” svarede de. „Og vi har ikke lov at hævne os på Israels folk.”</para>
+  <para style="p">„Hvad ønsker I da?” spurgte David. „Sig frem, så jeg kan opfylde jeres ønske.”</para>
+  <para style="p">
+    <verse number="5-6" style="v"/>„Lad syv af Sauls efterkommere blive udleveret til os, for han gjorde, hvad han kunne for at udrydde os fra Israels land. Som straf vil vi slå disse syv ihjel og hænge dem op ved Herrens offerhøj i Gibea, Sauls egen by.”</para>
+  <para style="p">„Godt,” svarede David. „Jeg vil opfylde jeres ønske!”</para>
+  <para style="p">
+    <verse number="7" style="v"/>David skånede Jonatans søn, Mefiboshet, fordi han havde lovet Jonatan at vise godhed imod hans efterkommere. <verse number="8" style="v"/>Men han udleverede Sauls to sønner Armoni og Mefiboshet, hvis mor var Ritzpa, datter af Ajja, og de fem sønner, som Sauls datter Merab<note caller="+" style="f"><char style="fr" closed="false">21,8 </char><char style="ft" closed="false">Nogle håndskrifter har „Mikal”, andre har „Merab”. Det oprindelige „Merab” må være fejlkopieret til „Mikal”, jf. <char style="xt"><ref loc="1SA 18:17-19">1.Sam. 18,17-19</ref></char>.</char></note> havde fået sammen med Adriel (en søn af Barzillaj fra Mehola). <verse number="9" style="v"/>Gibeonitterne dræbte så de syv mænd og hængte ligene til skue på offerhøjen for Herrens ansigt. Henrettelsen fandt sted ved begyndelsen af byghøsten.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Den sørgende Ritzpa, som nu havde mistet sine sønner, bredte noget sækkelærred ud på klippetoppen og satte sig der for at holde vagt ved ligene. Hun blev der hele høsttiden, indtil regntiden begyndte, fordi hun ville beskytte ligene mod gribbene om dagen og mod rovdyrene om natten.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Da det kom David for øre, hvordan hun på den måde viste sin sorg og sin respekt for de døde, <verse number="12" style="v"/>tog han af sted til Jabesh i Gilead for at få udleveret Sauls og Jonatans knogler. Byens indbyggere havde i sin tid fjernet ligene fra torvet i Bet-Shan, hvor filistrene havde hængt dem op, efter at Saul og Jonatan begge var faldet i slaget på Gilboahøjen. <verse number="13" style="v"/>David fik nu bragt de jordiske rester af både Saul, Jonatan og de syv mænd fra Gibea <verse number="14" style="v"/>til Zela i Benjamins land, og dér blev de alle begravet på det sted, hvor Sauls far, Kish, lå begravet. Alt dette blev udført på kongens befaling. Derefter forbarmede Gud sig over landet, og hungersnøden endte.</para>
+  <para style="s1">Flere kæmper blandt filistrene bliver dræbt</para>
+  <para style="p">
+    <verse number="15" style="v"/>Engang, da filistrene var i krig med Israel, var David blevet helt udmattet under kampen, og da var det lige ved at gå galt for ham. <verse number="16" style="v"/>En af filistrene, en kæmpestor mand ved navn Ishbi-Benob af Rafa-slægten, havde et spyd, hvis spids var lavet af bronze og vejede over tre kilo, og alle hans våben var nye. Denne mand satte efter David og skulle lige til at slå ham ihjel, <verse number="17" style="v"/>da Abishaj i sidste øjeblik kom David til undsætning og huggede filisteren ned. Bagefter erklærede Davids mænd: „Du må ikke længere deltage aktivt i kampen! Det går ikke, at du bliver dræbt, for hele Israel er afhængig af dig!”</para>
+  <para style="p">
+    <verse number="18" style="v"/>Senere, da israelitterne kæmpede mod filistrene ved Gob, dræbte Sibbekaj fra Husha en filister af den frygtede Rafa-slægt, en mand ved navn Saf. <verse number="19" style="v"/>Under en anden kamp mod filistrene ved Gob lykkedes det Elhanan, Jairs søn fra Betlehem, at dræbe en bror til Goliat, hvis spydskaft var på størrelse med en vævebom.<note caller="+" style="f"><char style="fr" closed="false">21,19 </char><char style="ft" closed="false">Da den masoretiske tekst her er fejlkopieret, er der oversat fra parallelstedet <char style="xt"><ref loc="1CH 20:5">1.Krøn. 20,5</ref></char>.</char></note> <verse number="20" style="v"/>Og en anden gang, da israelitterne kæmpede mod filistrene ved Gat, var der en kæmpe af Rafa-slægten med seks fingre på hver hånd og seks tæer på hver fod. <verse number="21" style="v"/>Han hånede Israel, men Jonatan,<note caller="+" style="f"><char style="fr" closed="false">21,21 </char><char style="ft" closed="false">Sandsynligvis en fejlkopiering af Jonadab, jf. <char style="xt"><ref loc="2SA 13:3">2.Sam. 13,3</ref></char>.</char></note> en søn af Davids bror Shima, dræbte ham. <verse number="22" style="v"/>Disse fire filistre, der tilhørte kæmpeslægten Rafa fra Gat, blev hugget ned af Davids mænd.</para>
+  <chapter number="22" style="c"/>
+  <para style="s1">Davids sejrssang</para>
+  <para style="r">Salme 18</para>
+  <para style="p">
+    <verse number="1" style="v"/>Da Herren havde reddet David fra Saul og hans øvrige fjender, sang David følgende lovsang til Herren:</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Herren er min Klippeborg</para>
+  <para style="q2">og min Beskytter.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Han er mit Skjul,</para>
+  <para style="q2">hos ham søger jeg tilflugt.</para>
+  <para style="q1">Han er mit Skjold,</para>
+  <para style="q2">min Frelse og min Fæstning.</para>
+  <para style="q1">Jeg søger ly hos min Frelser,</para>
+  <para style="q2">som redder mig af mine fjenders vold.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Jeg kalder på Herren, den Højlovede,</para>
+  <para style="q2">og frelses fra mine fjender.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>Dødens brænding omsluttede mig,</para>
+  <para style="q2">undergangens bølger væltede ind over mig,</para>
+  <para style="q1">
+    <verse number="6" style="v"/>dødsriget strammede sit greb om mig,</para>
+  <para style="q2">jeg sad fast i dødens fælde.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>I min fortvivlelse råbte jeg til Herren,</para>
+  <para style="q2">jeg bad til min Gud om hjælp.</para>
+  <para style="q1">Han hørte mig fra sin helligdom,</para>
+  <para style="q2">mit skrig nåede hans ører.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Da rystede jorden og skælvede,</para>
+  <para style="q2">verdens grundvolde bævede,</para>
+  <para style="q3">for Herrens vrede var blusset op.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Røg væltede ud af hans næsebor,</para>
+  <para style="q2">fortærende ild skød ud af hans mund,</para>
+  <para style="q3">glødende kul sprang frem fra ham.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Han skubbede himlens forhæng til side</para>
+  <para style="q2">og trådte ud på de mørke stormskyer.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Han steg op på en kerub og fløj,</para>
+  <para style="q2">svævede på vindens vinger.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Han svøbte sig i sorte skyer,</para>
+  <para style="q2">der var tykke af tætte vanddampe.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Lynene glimtede foran ham,</para>
+  <para style="q2">og haglene faldt fra skyerne.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Herren tordnede fra himlen,</para>
+  <para style="q2">den højeste Gud lod sin røst høre.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Han skød sine pile,</para>
+  <para style="q2">sendte fjenderne på flugt.</para>
+  <para style="q1">Han sendte sine lyn af sted,</para>
+  <para style="q2">så fjenderne spredtes for alle vinde.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Herren fnyste i sin harme,</para>
+  <para style="q2">så Jordens vande blev pisket op,</para>
+  <para style="q3">og havets bund kom til syne.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>Fra det høje rakte han hånden ud,</para>
+  <para style="q2">trak mig op af det dybe vand.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Han frelste mig fra mine fjender,</para>
+  <para style="q2">de hadede mig og var mig for stærke.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Da jeg var svag, overfaldt de mig,</para>
+  <para style="q2">men Herren holdt mig fast</para>
+  <para style="q1">
+    <verse number="20" style="v"/>og førte mig i sikkerhed.</para>
+  <para style="q2">Han frelste mig, fordi han elsker mig.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Herren belønnede mig for mit retsind,</para>
+  <para style="q2">tog hensyn til min uskyld,</para>
+  <para style="q1">
+    <verse number="22" style="v"/>for jeg har holdt mig til hans veje.</para>
+  <para style="q2">Jeg har ikke i ondskab vendt mig fra min Gud.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Altid har jeg hans bud i tanke,</para>
+  <para style="q2">aldrig har jeg vendt ryggen til hans love.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Jeg har adlydt ham til punkt og prikke</para>
+  <para style="q2">og holdt mig borte fra synden.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Herren har belønnet min retfærd,</para>
+  <para style="q2">han kender min pletfri levevis.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Herre, du er trofast mod dem, der er trofaste mod dig,</para>
+  <para style="q2">retskaffen overfor de retskafne.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Du handler uskyldsrent med de uskyldige,</para>
+  <para style="q2">men er snu mod de snedige.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Du ophøjer de ydmyge,</para>
+  <para style="q2">men ydmyger de hovmodige.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Herre, du er mit lys og mit håb,</para>
+  <para style="q2">du tænder dit lys i mørket.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Ved din hjælp kan jeg springe over mure</para>
+  <para style="q2">og forcere enhver forhindring.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="31" style="v"/>Guds veje er fuldkomne,</para>
+  <para style="q2">hans løfter er sande.</para>
+  <para style="q1">Han er et skjold for dem,</para>
+  <para style="q2">der søger ly hos ham.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>Hvor findes der en gud som Herren?</para>
+  <para style="q2">Hvor findes en klippe som ham?</para>
+  <para style="q1">
+    <verse number="33" style="v"/>Han giver mig styrke,</para>
+  <para style="q2">han jævner vejen foran mig.</para>
+  <para style="q1">
+    <verse number="34" style="v"/>Han gør mine skridt sikre som hjortens,</para>
+  <para style="q2">han giver mig fodfæste på bjergene.</para>
+  <para style="q1">
+    <verse number="35" style="v"/>Han træner mine arme til kamp,</para>
+  <para style="q2">så jeg kan spænde kobberbuen.</para>
+  <para style="q1">
+    <verse number="36" style="v"/>Herre, du giver mig din frelse som et skjold,</para>
+  <para style="q2">din hjælp giver mig styrke.</para>
+  <para style="q1">
+    <verse number="37" style="v"/>Du udjævner stien foran mig,</para>
+  <para style="q2">så jeg ikke snubler og falder.</para>
+  <para style="q1">
+    <verse number="38" style="v"/>Jeg forfulgte mine fjender og gjorde det af med dem,</para>
+  <para style="q2">jeg holdt ikke inde, før de alle var besejret.</para>
+  <para style="q1">
+    <verse number="39" style="v"/>Jeg huggede dem ned, så de ikke kunne rejse sig,</para>
+  <para style="q2">de ligger faldne ved mine fødder.</para>
+  <para style="q1">
+    <verse number="40" style="v"/>Du gav mig styrke til kampen,</para>
+  <para style="q2">du tvang mine modstandere i knæ,</para>
+  <para style="q1">
+    <verse number="41" style="v"/>du slog mine fjender på flugt,</para>
+  <para style="q2">jeg gjorde det af med dem, som hadede mig.</para>
+  <para style="q1">
+    <verse number="42" style="v"/>De søgte efter hjælp,</para>
+  <para style="q2">men ingen kom til undsætning.</para>
+  <para style="q1">De råbte til dig, Herre,</para>
+  <para style="q2">men du ville ikke høre.</para>
+  <para style="q1">
+    <verse number="43" style="v"/>Jeg knuste dem til støv,</para>
+  <para style="q2">jeg trådte dem ned som snavs på gaden.</para>
+  <para style="q1">
+    <verse number="44" style="v"/>Du hjalp mig i kampen mod fjendtlige hære,</para>
+  <para style="q2">gav mig sejr over fremmede folkeslag,</para>
+  <para style="q3">som nu er blevet mig underlagt.</para>
+  <para style="q1">
+    <verse number="45" style="v"/>De kom krybende hen til mig,</para>
+  <para style="q2">straks de hørte min røst, adlød de.</para>
+  <para style="q1">
+    <verse number="46" style="v"/>De tabte fuldstændigt modet,</para>
+  <para style="q2">kom skælvende frem fra deres skjul.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="47" style="v"/>Herren lever!</para>
+  <para style="q1">Lovet være min redningsmand.</para>
+  <para style="q2">Ære være min Gud, som frelste mig,</para>
+  <para style="q1">
+    <verse number="48" style="v"/>den Gud, som besejrede mine fjender,</para>
+  <para style="q2">som gjorde mig til hersker over fremmede folkeslag.</para>
+  <para style="q1">
+    <verse number="49" style="v"/>Herre, du befriede mig fra mine fjender.</para>
+  <para style="q2">Du førte mig i sikkerhed</para>
+  <para style="q3">og frelste mig fra voldens mænd.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="50" style="v"/>Derfor vil jeg lovprise dig blandt folkeslagene, Herre.</para>
+  <para style="q2">Jeg vil synge om din storhed.</para>
+  <para style="q1">
+    <verse number="51" style="v"/>Du giver din konge en mægtig sejr,</para>
+  <para style="q2">du viser nåde mod din salvede konge,</para>
+  <para style="q3">mod mig og mine efterkommere til evig tid.</para>
+  <para style="b"/>
+  <chapter number="23" style="c"/>
+  <para style="s1">Davids sidste ord</para>
+  <para style="p">
+    <verse number="1" style="v"/>Det følgende er Davids sidste ord:</para>
+  <para style="q1">„Et budskab fra David, Isajs søn,</para>
+  <para style="q2">et budskab fra en, som Gud har gjort stor,</para>
+  <para style="q1">som Jakobs Gud har salvet til konge,</para>
+  <para style="q2">helten som Israel synger om.<note caller="+" style="f"><char style="fr" closed="false">23,1 </char><char style="ft" closed="false">Eller: „elsket af Israels Stærke”. Oversættelsen er usikker.</char></note></para>
+  <para style="q1">
+    <verse number="2" style="v"/>Herrens Ånd talte gennem mig,</para>
+  <para style="q2">hans ord lå på min tunge.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Israels Gud talte,</para>
+  <para style="q2">Israels beskytter sagde til mig:</para>
+  <para style="q1">‚Den, der regerer retfærdigt,</para>
+  <para style="q2">den, der hersker i ærefrygt for Gud,</para>
+  <para style="q1">
+    <verse number="4" style="v"/>stråler som morgenens lys,</para>
+  <para style="q2">skinner som solen fra en skyfri himmel,</para>
+  <para style="q1">som lysglimt i det våde græs,</para>
+  <para style="q2">der lokker urter frem af jorden.’</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Står min slægt ikke ret ind for Gud?</para>
+  <para style="q2">Har Gud ikke oprettet en evig pagt med mig?</para>
+  <para style="q3">En nøje beregnet og bevaret pagt.</para>
+  <para style="q1">Alt, hvad jeg har brug for til frelse,</para>
+  <para style="q2">mine behov og det, jeg længes efter,</para>
+  <para style="q3">dem får han til at spire frem.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Men onde mennesker er som tjørne, der fejes bort,</para>
+  <para style="q2">ingen vil røre ved dem.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Med en jernstang eller et spydskaft bliver de samlet i bunke;</para>
+  <para style="q2">bagefter brændes de op.”</para>
+  <para style="s1">Davids krigshelte</para>
+  <para style="p">
+    <verse number="8" style="v"/>Blandt Davids mægtige mænd var der tre store helte: Den største var takmonitten Josheb-Bashebet. Med sit spyd dræbte han engang 800 modstandere i ét slag.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Den næste af de tre store var Elazar, en søn af ahohitten Dodo. Han var sammen med David, da de triumferede over filistrene i slaget ved Pas-Dammim. Den israelitiske hær flygtede, <verse number="10" style="v"/>men Elazar holdt stand og huggede filistre ned, indtil hans hånd blev så stiv, at han ikke kunne slippe sværdskæftet. Den dag gav Herren ham en stor sejr, så da de andre mænd kom tilbage igen, var der ikke andet for dem at lave end at samle krigsbyttet.</para>
+  <para style="p">
+    <verse number="11-12" style="v"/>Den sidste af de tre store helte var Shamma, Ages søn af Harar-slægten. Engang, da filistrene angreb ham og hans mænd i en linsemark, flygtede alle mændene, men Shamma blev stående midt i marken og slog ene mand filistrene på flugt. Ved den lejlighed gav Gud ham en stor sejr.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Foruden de tre store helte var der en større gruppe tapre krigere, som blev kaldt „De Tredive”. Engang i høsttiden kom tre af dem hen til David, som opholdt sig ved Adullams hule, mens filistrene havde slået lejr i Refaimdalen. <verse number="14" style="v"/>David var i klippeborgen, mens en af filistrenes garnisoner havde besat Betlehem, som lå i nærheden. <verse number="15" style="v"/>David var tørstig og sagde henkastet: „Det kunne være skønt med et krus vand fra brønden ved byporten hjemme i Betlehem!” <verse number="16" style="v"/>Da sneg de tre mænd sig gennem filistrenes lejr, øste vand fra brønden ved byporten og bragte det til David. Men han kunne ikke få sig selv til at drikke det. I stedet hældte han det ud på jorden som et offer til Herren. <verse number="17" style="v"/>„Gud forbyde, at jeg skulle drikke det!” udbrød han. „Det ville jo være som at drikke de tre mænds blod, der satte livet på spil for at hente det!” Derfor drak han det ikke. Det er blot ét eksempel på de tre heltes vovemod.</para>
+  <para style="p">
+    <verse number="18-19" style="v"/>Abishaj, Joabs bror, var anfører for „De Tredive”. Engang dræbte han 300 fjendtlige soldater med sit spyd. Det var på grund af sådanne heltegerninger, at „De Tredive” så op til ham som deres anfører, men han kom ikke på højde med de tre store helte.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Benaja, Jojadas søn fra Kabtze’el, var en anden heltemodig kriger. Det var ham, der dræbte Ariels to sønner, kæmperne fra Moab. Det var også ham, der kravlede ned i en cisterne og dræbte en løve en dag, hvor det sneede. <verse number="21" style="v"/>Ved en anden lejlighed gik han løs på en egyptisk kæmpe, der havde et enormt spyd. Benaja slog spyddet ud af hånden på ham med sin stok og dræbte ham med det. <verse number="22" style="v"/>Det var den slags heltegerninger, som gjorde Benaja lige så berømt som de tre store helte, <verse number="23" style="v"/>selv om han ikke regnedes blandt dem. Men „De Tredive” så op til ham, og David udnævnte ham til chef for sin livvagt.</para>
+  <para style="p">
+    <verse number="24-39" style="v"/>Her følger en liste over de heltemodige krigere, der blev kaldt „De Tredive”: Asael, Joabs bror; Elhanan, Dodos søn fra Betlehem; Shamma fra Harod; Elika fra Harod; Heletz fra Palti; Ira, Ikkesh’ søn fra Tekoa; Abiezer fra Anatot; Sibbekaj fra Husha; Zalmon fra Ahoa; Maharaj fra Netofa; Heled, Ba’anas søn fra Netofa; Ittaj, Ribajs søn fra Gibea i Benjamins land; Benaja fra Piraton; Hiddaj fra Ga’ash kløften; Abi-Albon fra Arba; Azmavet fra Bahurim; Eljahba fra Sha’albon; Jashens sønner; Jonatan, Shammas søn fra Harar; Ahiam, Sharars søn fra Harar; Elifelet, Ahasbajs søn fra Bet-Ma’aka; Eliam, Ahitofels søn fra Gilo; Hetzro fra Karmel; Pa’araj fra Arab; Jigal, Natans søn fra Zoba; Bani fra Gad; Zelek fra Ammon; Nahraj, Joabs våbendrager, fra Be’erot; Ira fra Jattir; Gareb fra Jattir; hittitten Urias. I alt 37 heltemodige mænd.</para>
+  <chapter number="24" style="c"/>
+  <para style="s1">Davids folketælling</para>
+  <para style="p">
+    <verse number="1" style="v"/>Endnu en gang blev Herren vred på Israel. Han fik David til at bringe Israels folk i ulykke ved at give ham den tanke at optælle Judas og Nordrigets samlede hærstyrke.<note caller="+" style="f"><char style="fr" closed="false">24,1 </char><char style="ft" closed="false">I parallelstedet, <char style="xt"><ref loc="1CH 21:1">1.Krøn. 21,1</ref></char>, siges det, at det var Satan, som fristede David til at mønstre folket, noget, som David godt vidste, var imod Guds vilje. Senere i dette kapitel (v. 17) erkender David, at han har syndet. Gud sætter menneskers loyalitet på prøve, og det kan ske ved, at Satan får lov at friste dem, som f.eks. i <char style="xt"><ref loc="JOB 1:6-12">Job 1,6-12</ref></char> eller <char style="xt"><ref loc="MAT 4">Matt. 4</ref></char>.</char></note> <verse number="2" style="v"/>Kongen sagde derfor til Joab og de øvrige officerer: „Rejs rundt blandt alle Israels stammer fra Dan i nord til Be’ersheba i syd og optæl alle de våbenføre mænd, så jeg kan vide, hvor mange jeg råder over.”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Men Joab svarede: „Gud give, at din hær må vokse til 100 gange af, hvad den er nu—og at du må leve så længe, at du oplever det! Hvorfor vil min herre, kongen, begå en sådan synd?”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Men trods deres protester måtte Joab og officererne bøje sig for kongens ord. Joab og hans officerer drog altså af sted for at begynde optællingen. <verse number="5" style="v"/>De krydsede Jordanfloden og slog lejr ved Aroer midt i kløften syd for byen.<note caller="+" style="f"><char style="fr" closed="false">24,5 </char><char style="ft" closed="false">Aroer er den sydligste by i Rubens område øst for Dødehavet.</char></note> Derefter gik de nordpå gennem Gads område og slog lejr ved Jazer. <verse number="6" style="v"/>Derfra tog de videre til Gilead og hittitternes område.<note caller="+" style="f"><char style="fr" closed="false">24,6 </char><char style="ft" closed="false">Flere af stednavnene i teksten er ukendte og oversættelsen usikker.</char></note> Efter at have været i Dan satte de kursen mod Sidon. <verse number="7" style="v"/>Senere kom de til fæstningen i Tyrus og til hivvitternes og kana’anæernes mange byer, inden de nåede til landets sydligste punkt, Be’ersheba i Juda. <verse number="8" style="v"/>Efter denne rundrejse, som varede ni måneder og 20 dage, vendte Joab tilbage til Jerusalem <verse number="9" style="v"/>og meddelte kongen det samlede tal på landets våbenføre mænd, 800.000 mand i Nordriget og 500.000 mand i Juda.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Men da mønstringen var overstået, fik David dårlig samvittighed og sagde til Herren: „Jeg har begået en stor synd! Det var tåbeligt af mig at gøre sådan noget. Tilgiv mig, Herre!”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Da David stod op næste morgen, havde profeten Gad, som var i Davids tjeneste, allerede fået følgende budskab fra Herren: <verse number="12" style="v"/>„Gå hen og sig til David: Jeg, Herren, giver dig tre muligheder for straf, og du må selv vælge, hvilken en af dem det skal være.” <verse number="13" style="v"/>Gad gik derefter hen til David og forelagde ham de tre muligheder: „Skal der komme tre<note caller="+" style="f"><char style="fr" closed="false">24,13 </char><char style="ft" closed="false">Eller: „syv”. Den hebraiske tekst har „syv”, mens LXX og <char style="xt"><ref loc="1CH 21:12">1.Krøn. 21,12</ref></char> har „tre”.</char></note> års hungersnød i hele dit land? Vil du være på flugt for dine fjender i tre måneder? Eller skal Herren sende pest over landet i tre dage? Tænk dig nu godt om og lad mig vide, hvad jeg skal svare Herren, som har sendt mig.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>„Det er et frygteligt valg,” sukkede David. „Men det er bedre for os at være prisgivet Herren, for hans nåde er stor. Lad mig ikke være prisgivet mennesker.”</para>
+  <para style="p">
+    <verse number="15" style="v"/>Straks den samme morgen sendte Herren så pest over hele Israel fra Dan i nord til Be’ersheba i syd. Pesten varede i tre dage, og 70.000 mænd døde. <verse number="16" style="v"/>Da dødsenglen var parat til at ramme Jerusalem, blev Herren bedrøvet over den store ulykke, der var ved at ske. „Stop!” sagde han til englen. „Nu kan det være nok!” Englen stod da ved jebusitten Aravnas tærskeplads.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Da David så englen, som slog folket med pest, sagde han til Herren: „Det er mig, der har syndet! Alle disse mennesker er som uskyldige får. Så er det bedre, at du rammer mig og min familie.”</para>
+  <para style="p">
+    <verse number="18-19" style="v"/>Samme dag kom Gad til David med følgende besked fra Herren: „Gå hen og byg et alter for Herren på jebusitten Aravnas tærskeplads!” David gik straks derop, som Herren havde befalet. <verse number="20" style="v"/>Da Aravna fik øje på kongen og hans mænd, der styrede lige hen imod ham, gik han dem i møde og kastede sig på knæ med ansigtet mod jorden foran kongen.</para>
+  <para style="p">
+    <verse number="21" style="v"/>„Herre, hvad er grunden til dit besøg?” spurgte han David.</para>
+  <para style="p">David svarede: „Jeg vil købe din tærskeplads, så jeg kan bygge et alter for Herren og få pesten til at standse.”</para>
+  <para style="p">
+    <verse number="22" style="v"/>„Min herre og konge, tag hvad du vil have,” svarede Aravna. „Udfør alle de ofre, du vil! Her er mine okser til brændofferet, og du må gerne bruge tærskeslæderne og åget til offerbrænde. <verse number="23" style="v"/>Herre konge, jeg giver det alt sammen til dig. Må Gud Herren vise dig nåde!” <verse number="24" style="v"/>„Nej,” svarede kongen, „jeg vil betale dig for det, for jeg vil ikke bringe Herren, min Gud, et offer, som ikke har kostet mig noget.”</para>
+  <para style="p">Så købte David tærskepladsen og han gav 50 sølvstykker for okserne, <verse number="25" style="v"/>hvorefter han byggede et alter for Herren og ofrede brændofre og takofre. Da forbarmede Herren sig over landet og Israels folk og standsede pesten.</para>
+</usx>

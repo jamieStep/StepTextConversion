@@ -1,0 +1,707 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata version="2.1" id="8676091b758f0d8d" revision="6">
+  <identification>
+    <name>Japanese Contemporary Bible (リビングバイブル) 2016</name>
+    <nameLocal>リビングバイブル</nameLocal>
+    <description>Japanese: リビングバイブル (Bible)</description>
+    <abbreviation>JCB</abbreviation>
+    <scope>Bible</scope>
+    <dateCompleted>2016-06-01</dateCompleted>
+    <bundleProducer>Paratext/8.0.100.15</bundleProducer>
+    <systemId type="paratext">
+      <id>f5f7dcccff04b36f7ee448cb736f1c8245fd1f91</id>
+      <csetId>245a9d26383cfe82fd74d62ef8334ac65397aa01</csetId>
+      <name>jpnJCB16</name>
+      <fullName>Japanese Contemporary Bible 2016</fullName>
+    </systemId>
+    <systemId type="ptreg">
+      <id>GJPMNH8niJ5pvHrqY</id>
+    </systemId>
+  </identification>
+  <type>
+    <medium>text</medium>
+    <isConfidential>false</isConfidential>
+    <hasCharacters>true</hasCharacters>
+    <isTranslation>true</isTranslation>
+    <isExpression>true</isExpression>
+    <translationType>Revision</translationType>
+    <audience>Common</audience>
+  </type>
+  <relationships/>
+  <agencies>
+    <rightsHolder>
+      <abbr>Biblica</abbr>
+      <url>http://www.Biblica.com</url>
+      <nameLocal>Biblica, Inc.</nameLocal>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsHolder>
+    <rightsAdmin>
+      <url>http://www.Biblica.com</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsAdmin>
+    <contributor>
+      <content>true</content>
+      <publication>true</publication>
+      <management>true</management>
+      <qa>false</qa>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </contributor>
+  </agencies>
+  <language>
+    <iso>jpn</iso>
+    <name>Japanese</name>
+    <nameLocal>日本語</nameLocal>
+    <script>Japanese (Han + Hiragana + Katakana)</script>
+    <scriptCode>Zzzz</scriptCode>
+    <scriptDirection>LTR</scriptDirection>
+    <ldml>ja</ldml>
+    <numerals>Arabic</numerals>
+  </language>
+  <countries>
+    <country>
+      <iso>JP</iso>
+      <name>Japan</name>
+    </country>
+  </countries>
+  <format>
+    <versedParagraphs>false</versedParagraphs>
+  </format>
+  <names>
+    <name id="book-gen">
+      <abbr>創世</abbr>
+      <short>創世記</short>
+      <long>創(そう)世(せい)記(き)</long>
+    </name>
+    <name id="book-exo">
+      <abbr>出エジプト</abbr>
+      <short>出エジプト記</short>
+      <long>出(しゅつ)エジプト記(き)</long>
+    </name>
+    <name id="book-lev">
+      <abbr>レビ</abbr>
+      <short>レビ記</short>
+      <long>レビ記(き) （礼(れい)拝(はい)規(き)定(てい)）</long>
+    </name>
+    <name id="book-num">
+      <abbr>民数</abbr>
+      <short>民数記</short>
+      <long>民(みん)数(すう)記(き) （イスラエル放(ほう)浪(ろう)記(き)）</long>
+    </name>
+    <name id="book-deu">
+      <abbr>申命</abbr>
+      <short>申命記</short>
+      <long>申(しん)命(めい)記(き) （モーセの最(さい)後(ご)の説(せっ)教(きょう)）</long>
+    </name>
+    <name id="book-jos">
+      <abbr>ヨシュア</abbr>
+      <short>ヨシュア記</short>
+      <long>ヨシュア記(き) （カナン征(せい)服(ふく)記(き)上(じょう)）</long>
+    </name>
+    <name id="book-jdg">
+      <abbr>士師</abbr>
+      <short>士師記</short>
+      <long>士(し)師(し)記(き) （カナン征(せい)服(ふく)記(き)下(げ)）</long>
+    </name>
+    <name id="book-rut">
+      <abbr>ルツ</abbr>
+      <short>ルツ記</short>
+      <long>ルツ記(き)</long>
+    </name>
+    <name id="book-1sa">
+      <abbr>Ⅰサムエル</abbr>
+      <short>サムエル記Ⅰ</short>
+      <long>サムエル記(き)Ⅰ （王(おう)国(こく)成(せい)立(りつ)記(き)上(じょう)）</long>
+    </name>
+    <name id="book-2sa">
+      <abbr>Ⅱサムエル</abbr>
+      <short>サムエル記Ⅱ</short>
+      <long>サムエル記(き)Ⅱ （王(おう)国(こく)成(せい)立(りつ)記(き)下(げ)）</long>
+    </name>
+    <name id="book-1ki">
+      <abbr>Ⅰ列王</abbr>
+      <short>列王記Ⅰ</short>
+      <long>列(れつ)王(おう)記(き)Ⅰ （王(おう)国(こく)衰(すい)亡(ぼう)記(き)上(じょう)）</long>
+    </name>
+    <name id="book-2ki">
+      <abbr>Ⅱ列王</abbr>
+      <short>列王記Ⅱ</short>
+      <long>列(れつ)王(おう)記(き)Ⅱ （王(おう)国(こく)衰(すい)亡(ぼう)記(き)下(げ)）</long>
+    </name>
+    <name id="book-1ch">
+      <abbr>Ⅰ歴代</abbr>
+      <short>歴代誌Ⅰ</short>
+      <long>歴(れき)代(だい)誌(し)Ⅰ （イスラエル年(ねん)代(だい)記(き)上(じょう)）</long>
+    </name>
+    <name id="book-2ch">
+      <abbr>Ⅱ歴代</abbr>
+      <short>歴代誌Ⅱ</short>
+      <long>歴(れき)代(だい)誌(し)Ⅱ （イスラエル年(ねん)代(だい)記(き)下(げ)）</long>
+    </name>
+    <name id="book-ezr">
+      <abbr>エズラ</abbr>
+      <short>エズラ記</short>
+      <long>エズラ記(き)</long>
+    </name>
+    <name id="book-neh">
+      <abbr>ネヘミヤ</abbr>
+      <short>ネヘミヤ 記</short>
+      <long>ネヘミヤ 記(き)</long>
+    </name>
+    <name id="book-est">
+      <abbr>エステル</abbr>
+      <short>エステル 記</short>
+      <long>エステル 記(き)</long>
+    </name>
+    <name id="book-job">
+      <abbr>ヨブ</abbr>
+      <short>ヨブ 記</short>
+      <long>ヨブ 記(き)</long>
+    </name>
+    <name id="book-psa">
+      <abbr>詩篇</abbr>
+      <short>詩篇</short>
+      <long>詩篇(し へん)</long>
+    </name>
+    <name id="book-pro">
+      <abbr>箴言</abbr>
+      <short>箴言 知恵の泉</short>
+      <long>箴言(しん　げん) 知恵(ち　え)の泉(いずみ)</long>
+    </name>
+    <name id="book-ecc">
+      <abbr>伝道者の</abbr>
+      <short>伝道者の書</short>
+      <long>伝道者(でん　どう　しゃ)の書(しょ) （ソロモンの人生論(じん　せい　ろん)）</long>
+    </name>
+    <name id="book-sng">
+      <abbr>雅歌</abbr>
+      <short>雅歌</short>
+      <long>雅歌(が　か) （愛(あい)の歌(うた)）</long>
+    </name>
+    <name id="book-isa">
+      <abbr>イザヤ</abbr>
+      <short>イザヤ書</short>
+      <long>イザヤ書(しょ)</long>
+    </name>
+    <name id="book-jer">
+      <abbr>エレミヤ</abbr>
+      <short>エレミヤ書</short>
+      <long>エレミヤ書(しょ)</long>
+    </name>
+    <name id="book-lam">
+      <abbr>哀歌</abbr>
+      <short>哀歌</short>
+      <long>哀歌(あい　か)</long>
+    </name>
+    <name id="book-ezk">
+      <abbr>エゼキエル</abbr>
+      <short>エゼキエル書</short>
+      <long>エゼキエル書(しょ)</long>
+    </name>
+    <name id="book-dan">
+      <abbr>ダニエル</abbr>
+      <short>ダニエル書</short>
+      <long>ダニエル書(しょ)</long>
+    </name>
+    <name id="book-hos">
+      <abbr>ホセア</abbr>
+      <short>ホセア書</short>
+      <long>ホセア書(しょ)</long>
+    </name>
+    <name id="book-jol">
+      <abbr>ヨエル</abbr>
+      <short>ヨエル書</short>
+      <long>ヨエル書(しょ)</long>
+    </name>
+    <name id="book-amo">
+      <abbr>アモス</abbr>
+      <short>アモス書</short>
+      <long>アモス書(しょ)</long>
+    </name>
+    <name id="book-oba">
+      <abbr>オバデヤ</abbr>
+      <short>オバデヤ書</short>
+      <long>オバデヤ書(しょ)</long>
+    </name>
+    <name id="book-jon">
+      <abbr>ヨナ</abbr>
+      <short>ヨナ書</short>
+      <long>ヨナ書(しょ)</long>
+    </name>
+    <name id="book-mic">
+      <abbr>ミカ</abbr>
+      <short>ミカ書</short>
+      <long>ミカ書(しょ)</long>
+    </name>
+    <name id="book-nam">
+      <abbr>ナホム</abbr>
+      <short>ナホム書</short>
+      <long>ナホム書(しょ)</long>
+    </name>
+    <name id="book-hab">
+      <abbr>ハバクク</abbr>
+      <short>ハバクク書</short>
+      <long>ハバクク書(しょ)</long>
+    </name>
+    <name id="book-zep">
+      <abbr>ゼパニヤ</abbr>
+      <short>ゼパニヤ書</short>
+      <long>ゼパニヤ書(しょ)</long>
+    </name>
+    <name id="book-hag">
+      <abbr>ハガイ</abbr>
+      <short>ハガイ書</short>
+      <long>ハガイ書(しょ)</long>
+    </name>
+    <name id="book-zec">
+      <abbr>ゼカリヤ</abbr>
+      <short>ゼカリヤ書</short>
+      <long>ゼカリヤ書(しょ)</long>
+    </name>
+    <name id="book-mal">
+      <abbr>マラキ</abbr>
+      <short>マラキ書</short>
+      <long>マラキ書(しょ)</long>
+    </name>
+    <name id="book-mat">
+      <abbr>マタイ</abbr>
+      <short>マタイの福音書</short>
+      <long>マタイの福音書 （取税人マタイの記録）</long>
+    </name>
+    <name id="book-mrk">
+      <abbr>マルコ</abbr>
+      <short>マルコの福音書</short>
+      <long>マルコの福音書 （青年マルコの記録）</long>
+    </name>
+    <name id="book-luk">
+      <abbr>ルカ</abbr>
+      <short>ルカの福音書</short>
+      <long>ルカの福音書 （医者ルカの記録）</long>
+    </name>
+    <name id="book-jhn">
+      <abbr>ヨハネ</abbr>
+      <short>ヨハネの福音書</short>
+      <long>ヨハネの福音書 （漁師ヨハネの記録）</long>
+    </name>
+    <name id="book-act">
+      <abbr>使徒</abbr>
+      <short>使徒の働き</short>
+      <long>使徒の働き （弟子たちの伝道記録）</long>
+    </name>
+    <name id="book-rom">
+      <abbr>ローマ人へ</abbr>
+      <short>ローマ人への手紙</short>
+      <long>ローマ人への手紙 （ローマ教会の人たちへ）</long>
+    </name>
+    <name id="book-1co">
+      <abbr>Ⅰ コリント人へ</abbr>
+      <short>コリント人への手紙Ⅰ</short>
+      <long>コリント人への手紙Ⅰ</long>
+    </name>
+    <name id="book-2co">
+      <abbr>Ⅱ コリント人へ</abbr>
+      <short>コリント人への手紙Ⅱ</short>
+      <long>コリント人への手紙Ⅱ</long>
+    </name>
+    <name id="book-gal">
+      <abbr>ガラテヤ人へ</abbr>
+      <short>ガラテヤ人への手紙</short>
+      <long>ガラテヤ人への手紙 （ガラテヤ教会の人たちへ）</long>
+    </name>
+    <name id="book-eph">
+      <abbr>エペソ人へ</abbr>
+      <short>エペソ人への手紙</short>
+      <long>エペソ人への手紙 (エペソ教会の人たちへ）</long>
+    </name>
+    <name id="book-php">
+      <abbr>ピリピ人へ</abbr>
+      <short>ピリピ人への手紙</short>
+      <long>ピリピ人への手紙 (ピリピ教会の人たちへ）</long>
+    </name>
+    <name id="book-col">
+      <abbr>コロサイ人へ</abbr>
+      <short>コロサイ人への手紙</short>
+      <long>コロサイ人への手紙 (コロサイ教会の人たちへ）</long>
+    </name>
+    <name id="book-1th">
+      <abbr>Ⅰテサロニケ人へ</abbr>
+      <short>テサロニケ人への手紙Ⅰ</short>
+      <long>テサロニケ人への手紙Ⅰ(テサロニケ教会の人たちへⅠ）</long>
+    </name>
+    <name id="book-2th">
+      <abbr>Ⅱテサロニケ人へ</abbr>
+      <short>テサロニケ人への手紙Ⅱ</short>
+      <long>テサロニケ人への手紙Ⅱ (テサロニケ教会の人たちへⅡ）</long>
+    </name>
+    <name id="book-1ti">
+      <abbr>Ⅰ テモテへ</abbr>
+      <short>テモテへの手紙Ⅰ</short>
+      <long>テモテへの手紙Ⅰ</long>
+    </name>
+    <name id="book-2ti">
+      <abbr>Ⅱテモテへ</abbr>
+      <short>テモテへの手紙Ⅱ</short>
+      <long>テモテへの手紙Ⅱ</long>
+    </name>
+    <name id="book-tit">
+      <abbr>テトスへ</abbr>
+      <short>テトスへの手紙</short>
+      <long>テトスへの手紙</long>
+    </name>
+    <name id="book-phm">
+      <abbr>ピレモンへ</abbr>
+      <short>ピレモンへの手紙</short>
+      <long>ピレモンへの手紙</long>
+    </name>
+    <name id="book-heb">
+      <abbr>ヘブル人へ</abbr>
+      <short>へブル人への手紙</short>
+      <long>ヘブル人への手紙</long>
+    </name>
+    <name id="book-jas">
+      <abbr>ヤコブ</abbr>
+      <short>ヤコブの手紙</short>
+      <long>ヤコブの手紙 (ヤコブからの手紙）</long>
+    </name>
+    <name id="book-1pe">
+      <abbr>Ⅰ ペテロ</abbr>
+      <short>ペテロの手紙Ⅰ</short>
+      <long>ペテロの手紙Ⅰ (ペテロからの手紙Ⅰ）</long>
+    </name>
+    <name id="book-2pe">
+      <abbr>Ⅱペテロ</abbr>
+      <short>ペテロの手紙Ⅱ</short>
+      <long>ペテロの手紙Ⅱ (ペテロからの手紙Ⅱ）</long>
+    </name>
+    <name id="book-1jn">
+      <abbr>Ⅰ ヨハネ</abbr>
+      <short>ヨハネの手紙Ⅰ</short>
+      <long>ヨハネの手紙Ⅰ (ヨハネからの手紙Ⅰ）</long>
+    </name>
+    <name id="book-2jn">
+      <abbr>Ⅱヨハネ</abbr>
+      <short>ヨハネの手紙Ⅱ</short>
+      <long>ヨハネの手紙Ⅱ</long>
+    </name>
+    <name id="book-3jn">
+      <abbr>Ⅲ ヨハネ</abbr>
+      <short>ヨハネの手紙Ⅲ</short>
+      <long>ヨハネの手紙Ⅲ</long>
+    </name>
+    <name id="book-jud">
+      <abbr>ユダ</abbr>
+      <short>ユダの手紙</short>
+      <long>ユダの手紙 (ユダからの手紙）</long>
+    </name>
+    <name id="book-rev">
+      <abbr>ヨハネの黙示録</abbr>
+      <short>ヨハネの黙示録</short>
+      <long>ヨハネの黙示録 (ヨハネの見た幻）</long>
+    </name>
+  </names>
+  <manifest>
+    <resource checksum="30967da790b9ccd1b371a130276669ea" mimeType="application/xml" size="166833" uri="release/USX_1/1CH.usx"/>
+    <resource checksum="f1bda8fdd9047ecadd29ed4e4e341869" mimeType="application/xml" size="116697" uri="release/USX_1/1CO.usx"/>
+    <resource checksum="568bde3f7312c0981e31fb9b4ac4c09e" mimeType="application/xml" size="29424" uri="release/USX_1/1JN.usx"/>
+    <resource checksum="669f14b668662c80c14d4a37ca359e15" mimeType="application/xml" size="176307" uri="release/USX_1/1KI.usx"/>
+    <resource checksum="f351969078663a98faed0fd74666b56e" mimeType="application/xml" size="29025" uri="release/USX_1/1PE.usx"/>
+    <resource checksum="717f04e8e1ebe1467f11a34c96b8c2fb" mimeType="application/xml" size="195083" uri="release/USX_1/1SA.usx"/>
+    <resource checksum="d904a09974e63dcfd9dbe50905e52210" mimeType="application/xml" size="22713" uri="release/USX_1/1TH.usx"/>
+    <resource checksum="9c5eea9e923bf591e120d2f55301180c" mimeType="application/xml" size="29357" uri="release/USX_1/1TI.usx"/>
+    <resource checksum="d2e0ba7b8017a2428d9a9b96090e247d" mimeType="application/xml" size="188637" uri="release/USX_1/2CH.usx"/>
+    <resource checksum="662ee368cd68b07a1031a1e87f860fd1" mimeType="application/xml" size="77602" uri="release/USX_1/2CO.usx"/>
+    <resource checksum="d4a4ccc1e6528a2ffcbc1d52686a9b00" mimeType="application/xml" size="3946" uri="release/USX_1/2JN.usx"/>
+    <resource checksum="dcc874437bd68eac4abfc2363ab68989" mimeType="application/xml" size="171770" uri="release/USX_1/2KI.usx"/>
+    <resource checksum="f16d8d648feee3a9df645d4d8ff7c9c6" mimeType="application/xml" size="16579" uri="release/USX_1/2PE.usx"/>
+    <resource checksum="8175de8640061ac71dc5908cc03a6cff" mimeType="application/xml" size="164073" uri="release/USX_1/2SA.usx"/>
+    <resource checksum="36ac61440f1c2f9d1a6548cd94ed8084" mimeType="application/xml" size="13214" uri="release/USX_1/2TH.usx"/>
+    <resource checksum="da71cac5bd4a836f588362f00cacdd91" mimeType="application/xml" size="22322" uri="release/USX_1/2TI.usx"/>
+    <resource checksum="cf435d1e310eea64b21688f3c3e7e24f" mimeType="application/xml" size="4489" uri="release/USX_1/3JN.usx"/>
+    <resource checksum="7fffcd52a02b88141fd4659e091d61d9" mimeType="application/xml" size="237732" uri="release/USX_1/ACT.usx"/>
+    <resource checksum="409541802f2bec5df97346d404049b53" mimeType="application/xml" size="49771" uri="release/USX_1/AMO.usx"/>
+    <resource checksum="fe88335b76de268323337dadb1884fc2" mimeType="application/xml" size="25261" uri="release/USX_1/COL.usx"/>
+    <resource checksum="92d4a4fa583f4bb96034dd5a8109914f" mimeType="application/xml" size="90097" uri="release/USX_1/DAN.usx"/>
+    <resource checksum="5641ca894c3863cc0383e5bfa7eb0d4b" mimeType="application/xml" size="191784" uri="release/USX_1/DEU.usx"/>
+    <resource checksum="56f632618cf2a4115bae326309981f40" mimeType="application/xml" size="51151" uri="release/USX_1/ECC.usx"/>
+    <resource checksum="e5e8f433ed1f41c5a9deb4598619d20d" mimeType="application/xml" size="36735" uri="release/USX_1/EPH.usx"/>
+    <resource checksum="6845d8f406bbbe163996e2015cf2bbd3" mimeType="application/xml" size="43160" uri="release/USX_1/EST.usx"/>
+    <resource checksum="32bbe2eeb13db367d174f3a396b9466d" mimeType="application/xml" size="249029" uri="release/USX_1/EXO.usx"/>
+    <resource checksum="cfad0d428a3040bd533d8279feed6857" mimeType="application/xml" size="286753" uri="release/USX_1/EZK.usx"/>
+    <resource checksum="45c6abe067dfc8a9bbf494f449012e6a" mimeType="application/xml" size="52178" uri="release/USX_1/EZR.usx"/>
+    <resource checksum="00558cd88da1132f663ca9400d388a1f" mimeType="application/xml" size="42672" uri="release/USX_1/GAL.usx"/>
+    <resource checksum="6f14604ff58aa828ae3895ee4f812479" mimeType="application/xml" size="321989" uri="release/USX_1/GEN.usx"/>
+    <resource checksum="dfdb35dbf0cc7a0cbf4f7f0cf1263937" mimeType="application/xml" size="19396" uri="release/USX_1/HAB.usx"/>
+    <resource checksum="aa56a77aabb7844840609cd2e0f0bb39" mimeType="application/xml" size="9493" uri="release/USX_1/HAG.usx"/>
+    <resource checksum="af6c5f2c6111a69f989aecbd48e84989" mimeType="application/xml" size="82158" uri="release/USX_1/HEB.usx"/>
+    <resource checksum="0136447684d8b323b3c51b5281092456" mimeType="application/xml" size="69059" uri="release/USX_1/HOS.usx"/>
+    <resource checksum="0ed09f824f36907d32767761a972dc77" mimeType="application/xml" size="405502" uri="release/USX_1/ISA.usx"/>
+    <resource checksum="bccb9da914a9f5715e520a8692e87460" mimeType="application/xml" size="25921" uri="release/USX_1/JAS.usx"/>
+    <resource checksum="19cb33afde63e2eee100beb84a143f45" mimeType="application/xml" size="145108" uri="release/USX_1/JDG.usx"/>
+    <resource checksum="1a0cb598257a99dd50d606d6a5c26463" mimeType="application/xml" size="374165" uri="release/USX_1/JER.usx"/>
+    <resource checksum="83609beba81d382755567eeebb918014" mimeType="application/xml" size="195825" uri="release/USX_1/JHN.usx"/>
+    <resource checksum="05ca38d9ad78e01fecf4028cb9bf7ed6" mimeType="application/xml" size="214709" uri="release/USX_1/JOB.usx"/>
+    <resource checksum="7f6b01d046ad3132464b40b54a0f0589" mimeType="application/xml" size="22859" uri="release/USX_1/JOL.usx"/>
+    <resource checksum="f63ea01d29b6d32eb986dc89b7587c55" mimeType="application/xml" size="13979" uri="release/USX_1/JON.usx"/>
+    <resource checksum="1a27755dfe872cd561cfd5c23b93fb04" mimeType="application/xml" size="131596" uri="release/USX_1/JOS.usx"/>
+    <resource checksum="47e0532cb45dd0cb6d85becffaa1c0c8" mimeType="application/xml" size="9207" uri="release/USX_1/JUD.usx"/>
+    <resource checksum="2d45c74f676ccf66a416e59003fd0b7e" mimeType="application/xml" size="44404" uri="release/USX_1/LAM.usx"/>
+    <resource checksum="8ff8b10504c3a2ef8291e3de6d982103" mimeType="application/xml" size="148178" uri="release/USX_1/LEV.usx"/>
+    <resource checksum="6ba0f55220d66eb176f6c04048bc8c1f" mimeType="application/xml" size="251904" uri="release/USX_1/LUK.usx"/>
+    <resource checksum="c71b8f895f5835a120eeab4ecd6cdfd1" mimeType="application/xml" size="25602" uri="release/USX_1/MAL.usx"/>
+    <resource checksum="a39a83c5127bf7cb02ed91be5ec722cb" mimeType="application/xml" size="243231" uri="release/USX_1/MAT.usx"/>
+    <resource checksum="c5c0bc578e6b010c9051c3b26988b30e" mimeType="application/xml" size="37781" uri="release/USX_1/MIC.usx"/>
+    <resource checksum="89404ed5b58f12df50d52f21cc8c6996" mimeType="application/xml" size="154118" uri="release/USX_1/MRK.usx"/>
+    <resource checksum="cb7113237e512257ae05814f982f09c2" mimeType="application/xml" size="16663" uri="release/USX_1/NAM.usx"/>
+    <resource checksum="196bb87c75ee0d1d50805dc3bf612843" mimeType="application/xml" size="79829" uri="release/USX_1/NEH.usx"/>
+    <resource checksum="38f9c010387652c1b8777c13d33a8dc6" mimeType="application/xml" size="200891" uri="release/USX_1/NUM.usx"/>
+    <resource checksum="adcbe4d4786c5c74722df702dc1b8664" mimeType="application/xml" size="8662" uri="release/USX_1/OBA.usx"/>
+    <resource checksum="fd52ce3985a85d3aca876c3dd7751c3a" mimeType="application/xml" size="6753" uri="release/USX_1/PHM.usx"/>
+    <resource checksum="5c2e3ce50daf152785c4b3de515a62d9" mimeType="application/xml" size="28527" uri="release/USX_1/PHP.usx"/>
+    <resource checksum="5e2d5a9c478c37e522833b56f37304ba" mimeType="application/xml" size="180152" uri="release/USX_1/PRO.usx"/>
+    <resource checksum="6ddd5f01a1c854fd77584bfac4cf6bd4" mimeType="application/xml" size="580644" uri="release/USX_1/PSA.usx"/>
+    <resource checksum="efc351669553a773416ce798eb42f1fb" mimeType="application/xml" size="102309" uri="release/USX_1/REV.usx"/>
+    <resource checksum="174deda749b245f4e29d1c0c4bd1a9ce" mimeType="application/xml" size="122736" uri="release/USX_1/ROM.usx"/>
+    <resource checksum="8c9835c0513d95aa6f5d8509dd683bd5" mimeType="application/xml" size="22230" uri="release/USX_1/RUT.usx"/>
+    <resource checksum="ac6c26cb751dac41dcc8054021cd6c84" mimeType="application/xml" size="36110" uri="release/USX_1/SNG.usx"/>
+    <resource checksum="9a34d032eebabad37e516b14e981cd78" mimeType="application/xml" size="13348" uri="release/USX_1/TIT.usx"/>
+    <resource checksum="2c890ce59cbcf851ae4ff98c4d715a0b" mimeType="application/xml" size="54569" uri="release/USX_1/ZEC.usx"/>
+    <resource checksum="ed8b3a39bc86e2e73bcfc6834b720601" mimeType="application/xml" size="19806" uri="release/USX_1/ZEP.usx"/>
+    <resource checksum="d9be77f4351a02a97da26f3cc4f735b2" mimeType="application/octet-stream" size="47051" uri="release/jpn_ja.ldml"/>
+    <resource checksum="d76f5cd84da09561e582752a50cd9a9a" mimeType="application/xml" size="79489" uri="release/styles.xml"/>
+    <resource checksum="6387c6f7e067563a14a203a9c22316ee" mimeType="application/octet-stream" size="16295" uri="release/versification.vrs"/>
+    <resource checksum="6e8700ca5c6fed4e62042fcdcc1611a3" mimeType="application/zip" size="7421119" uri="source/source.zip"/>
+</manifest>
+  <source>
+    <canonicalContent>
+      <book code="1CH"/>
+      <book code="1CO"/>
+      <book code="1JN"/>
+      <book code="1KI"/>
+      <book code="1PE"/>
+      <book code="1SA"/>
+      <book code="1TH"/>
+      <book code="1TI"/>
+      <book code="2CH"/>
+      <book code="2CO"/>
+      <book code="2JN"/>
+      <book code="2KI"/>
+      <book code="2PE"/>
+      <book code="2SA"/>
+      <book code="2TH"/>
+      <book code="2TI"/>
+      <book code="3JN"/>
+      <book code="ACT"/>
+      <book code="AMO"/>
+      <book code="COL"/>
+      <book code="DAN"/>
+      <book code="DEU"/>
+      <book code="ECC"/>
+      <book code="EPH"/>
+      <book code="EST"/>
+      <book code="EXO"/>
+      <book code="EZK"/>
+      <book code="EZR"/>
+      <book code="GAL"/>
+      <book code="GEN"/>
+      <book code="HAB"/>
+      <book code="HAG"/>
+      <book code="HEB"/>
+      <book code="HOS"/>
+      <book code="ISA"/>
+      <book code="JAS"/>
+      <book code="JDG"/>
+      <book code="JER"/>
+      <book code="JHN"/>
+      <book code="JOB"/>
+      <book code="JOL"/>
+      <book code="JON"/>
+      <book code="JOS"/>
+      <book code="JUD"/>
+      <book code="LAM"/>
+      <book code="LEV"/>
+      <book code="LUK"/>
+      <book code="MAL"/>
+      <book code="MAT"/>
+      <book code="MIC"/>
+      <book code="MRK"/>
+      <book code="NAM"/>
+      <book code="NEH"/>
+      <book code="NUM"/>
+      <book code="OBA"/>
+      <book code="PHM"/>
+      <book code="PHP"/>
+      <book code="PRO"/>
+      <book code="PSA"/>
+      <book code="REV"/>
+      <book code="ROM"/>
+      <book code="RUT"/>
+      <book code="SNG"/>
+      <book code="TIT"/>
+      <book code="ZEC"/>
+      <book code="ZEP"/>
+    </canonicalContent>
+    <structure>
+      <content src="source/source.zip" role="sourceZip"/>
+    </structure>
+  </source>
+  <publications>
+    <publication id="p1" default="true">
+      <name>Japanese Contemporary Bible</name>
+      <description>Protestant Bible</description>
+      <descriptionLocal>Bible</descriptionLocal>
+      <canonicalContent>
+        <book code="1CH"/>
+        <book code="1CO"/>
+        <book code="1JN"/>
+        <book code="1KI"/>
+        <book code="1PE"/>
+        <book code="1SA"/>
+        <book code="1TH"/>
+        <book code="1TI"/>
+        <book code="2CH"/>
+        <book code="2CO"/>
+        <book code="2JN"/>
+        <book code="2KI"/>
+        <book code="2PE"/>
+        <book code="2SA"/>
+        <book code="2TH"/>
+        <book code="2TI"/>
+        <book code="3JN"/>
+        <book code="ACT"/>
+        <book code="AMO"/>
+        <book code="COL"/>
+        <book code="DAN"/>
+        <book code="DEU"/>
+        <book code="ECC"/>
+        <book code="EPH"/>
+        <book code="EST"/>
+        <book code="EXO"/>
+        <book code="EZK"/>
+        <book code="EZR"/>
+        <book code="GAL"/>
+        <book code="GEN"/>
+        <book code="HAB"/>
+        <book code="HAG"/>
+        <book code="HEB"/>
+        <book code="HOS"/>
+        <book code="ISA"/>
+        <book code="JAS"/>
+        <book code="JDG"/>
+        <book code="JER"/>
+        <book code="JHN"/>
+        <book code="JOB"/>
+        <book code="JOL"/>
+        <book code="JON"/>
+        <book code="JOS"/>
+        <book code="JUD"/>
+        <book code="LAM"/>
+        <book code="LEV"/>
+        <book code="LUK"/>
+        <book code="MAL"/>
+        <book code="MAT"/>
+        <book code="MIC"/>
+        <book code="MRK"/>
+        <book code="NAM"/>
+        <book code="NEH"/>
+        <book code="NUM"/>
+        <book code="OBA"/>
+        <book code="PHM"/>
+        <book code="PHP"/>
+        <book code="PRO"/>
+        <book code="PSA"/>
+        <book code="REV"/>
+        <book code="ROM"/>
+        <book code="RUT"/>
+        <book code="SNG"/>
+        <book code="TIT"/>
+        <book code="ZEC"/>
+        <book code="ZEP"/>
+      </canonicalContent>
+      <structure>
+        <content name="book-gen" src="release/USX_1/GEN.usx" role="GEN"/>
+        <content name="book-exo" src="release/USX_1/EXO.usx" role="EXO"/>
+        <content name="book-lev" src="release/USX_1/LEV.usx" role="LEV"/>
+        <content name="book-num" src="release/USX_1/NUM.usx" role="NUM"/>
+        <content name="book-deu" src="release/USX_1/DEU.usx" role="DEU"/>
+        <content name="book-jos" src="release/USX_1/JOS.usx" role="JOS"/>
+        <content name="book-jdg" src="release/USX_1/JDG.usx" role="JDG"/>
+        <content name="book-rut" src="release/USX_1/RUT.usx" role="RUT"/>
+        <content name="book-1sa" src="release/USX_1/1SA.usx" role="1SA"/>
+        <content name="book-2sa" src="release/USX_1/2SA.usx" role="2SA"/>
+        <content name="book-1ki" src="release/USX_1/1KI.usx" role="1KI"/>
+        <content name="book-2ki" src="release/USX_1/2KI.usx" role="2KI"/>
+        <content name="book-1ch" src="release/USX_1/1CH.usx" role="1CH"/>
+        <content name="book-2ch" src="release/USX_1/2CH.usx" role="2CH"/>
+        <content name="book-ezr" src="release/USX_1/EZR.usx" role="EZR"/>
+        <content name="book-neh" src="release/USX_1/NEH.usx" role="NEH"/>
+        <content name="book-est" src="release/USX_1/EST.usx" role="EST"/>
+        <content name="book-job" src="release/USX_1/JOB.usx" role="JOB"/>
+        <content name="book-psa" src="release/USX_1/PSA.usx" role="PSA"/>
+        <content name="book-pro" src="release/USX_1/PRO.usx" role="PRO"/>
+        <content name="book-ecc" src="release/USX_1/ECC.usx" role="ECC"/>
+        <content name="book-sng" src="release/USX_1/SNG.usx" role="SNG"/>
+        <content name="book-isa" src="release/USX_1/ISA.usx" role="ISA"/>
+        <content name="book-jer" src="release/USX_1/JER.usx" role="JER"/>
+        <content name="book-lam" src="release/USX_1/LAM.usx" role="LAM"/>
+        <content name="book-ezk" src="release/USX_1/EZK.usx" role="EZK"/>
+        <content name="book-dan" src="release/USX_1/DAN.usx" role="DAN"/>
+        <content name="book-hos" src="release/USX_1/HOS.usx" role="HOS"/>
+        <content name="book-jol" src="release/USX_1/JOL.usx" role="JOL"/>
+        <content name="book-amo" src="release/USX_1/AMO.usx" role="AMO"/>
+        <content name="book-oba" src="release/USX_1/OBA.usx" role="OBA"/>
+        <content name="book-jon" src="release/USX_1/JON.usx" role="JON"/>
+        <content name="book-mic" src="release/USX_1/MIC.usx" role="MIC"/>
+        <content name="book-nam" src="release/USX_1/NAM.usx" role="NAM"/>
+        <content name="book-hab" src="release/USX_1/HAB.usx" role="HAB"/>
+        <content name="book-zep" src="release/USX_1/ZEP.usx" role="ZEP"/>
+        <content name="book-hag" src="release/USX_1/HAG.usx" role="HAG"/>
+        <content name="book-zec" src="release/USX_1/ZEC.usx" role="ZEC"/>
+        <content name="book-mal" src="release/USX_1/MAL.usx" role="MAL"/>
+        <content name="book-mat" src="release/USX_1/MAT.usx" role="MAT"/>
+        <content name="book-mrk" src="release/USX_1/MRK.usx" role="MRK"/>
+        <content name="book-luk" src="release/USX_1/LUK.usx" role="LUK"/>
+        <content name="book-jhn" src="release/USX_1/JHN.usx" role="JHN"/>
+        <content name="book-act" src="release/USX_1/ACT.usx" role="ACT"/>
+        <content name="book-rom" src="release/USX_1/ROM.usx" role="ROM"/>
+        <content name="book-1co" src="release/USX_1/1CO.usx" role="1CO"/>
+        <content name="book-2co" src="release/USX_1/2CO.usx" role="2CO"/>
+        <content name="book-gal" src="release/USX_1/GAL.usx" role="GAL"/>
+        <content name="book-eph" src="release/USX_1/EPH.usx" role="EPH"/>
+        <content name="book-php" src="release/USX_1/PHP.usx" role="PHP"/>
+        <content name="book-col" src="release/USX_1/COL.usx" role="COL"/>
+        <content name="book-1th" src="release/USX_1/1TH.usx" role="1TH"/>
+        <content name="book-2th" src="release/USX_1/2TH.usx" role="2TH"/>
+        <content name="book-1ti" src="release/USX_1/1TI.usx" role="1TI"/>
+        <content name="book-2ti" src="release/USX_1/2TI.usx" role="2TI"/>
+        <content name="book-tit" src="release/USX_1/TIT.usx" role="TIT"/>
+        <content name="book-phm" src="release/USX_1/PHM.usx" role="PHM"/>
+        <content name="book-heb" src="release/USX_1/HEB.usx" role="HEB"/>
+        <content name="book-jas" src="release/USX_1/JAS.usx" role="JAS"/>
+        <content name="book-1pe" src="release/USX_1/1PE.usx" role="1PE"/>
+        <content name="book-2pe" src="release/USX_1/2PE.usx" role="2PE"/>
+        <content name="book-1jn" src="release/USX_1/1JN.usx" role="1JN"/>
+        <content name="book-2jn" src="release/USX_1/2JN.usx" role="2JN"/>
+        <content name="book-3jn" src="release/USX_1/3JN.usx" role="3JN"/>
+        <content name="book-jud" src="release/USX_1/JUD.usx" role="JUD"/>
+        <content name="book-rev" src="release/USX_1/REV.usx" role="REV"/>
+      </structure>
+    </publication>
+  </publications>
+  <copyright>
+    <fullStatement>
+      <statementContent type="xhtml">
+        <p>Japanese Contemporary Bible (リビングバイブル)</p>
+        <p>Copyright © 1978, 2011, 2016 by Biblica, Inc.®</p>
+        <p>Used by permission. All rights reserved worldwide.</p>
+      </statementContent>
+    </fullStatement>
+  </copyright>
+  <promotion/>
+  <archiveStatus>
+    <archivistName>Kent Spielmann</archivistName>
+    <dateArchived>2016-08-03T23:53:50.626221</dateArchived>
+    <dateUpdated>2017-07-12T02:27:15.148012</dateUpdated>
+    <comments>Updating source project name to jpnJCB16</comments>
+  </archiveStatus>
+</DBLMetadata>

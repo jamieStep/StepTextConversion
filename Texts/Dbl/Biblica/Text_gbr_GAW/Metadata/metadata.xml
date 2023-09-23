@@ -1,0 +1,365 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata version="2.2.1" id="8e2c55e27f61af1d" revision="3">
+    <identification>
+      <name>Gbagyi New Testament</name>
+      <nameLocal>Alkawali Woiwoyi</nameLocal>
+      <description>Gbagyi: Alkawali Woiwoyi (New Testament)</description>
+      <abbreviation>GAW</abbreviation>
+      <abbreviationLocal>AW</abbreviationLocal>
+      <scope>New Testament</scope>
+      <dateCompleted>1997-12-01</dateCompleted>
+      <bundleProducer>Paratext/9.2.102.13</bundleProducer>
+      <systemId type="paratext">
+        <id>a7095793a2d547b1c5202975862ebc4a16e1dea0</id>
+        <csetId>624579aeabea23deea77c3c3a3481430d4fb9f03</csetId>
+        <name>gbrAW97</name>
+        <fullName>Gbagyi New Testament</fullName>
+      </systemId>
+      <systemId type="ptreg">
+        <id>ZuLzLHGrtqXRYHo9y</id>
+      </systemId>
+    </identification>
+    <type>
+      <medium>text</medium>
+      <isConfidential>false</isConfidential>
+      <hasCharacters>true</hasCharacters>
+      <isTranslation>true</isTranslation>
+      <isExpression>true</isExpression>
+      <translationType>First</translationType>
+      <audience>Basic</audience>
+      <projectType>Standard</projectType>
+    </type>
+    <relationships/>
+    <agencies>
+      <rightsHolder>
+        <abbr>Biblica</abbr>
+        <url>http://www.Biblica.com</url>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </rightsHolder>
+      <rightsAdmin>
+        <url>http://www.Biblica.com</url>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </rightsAdmin>
+      <contributor>
+        <content>true</content>
+        <publication>true</publication>
+        <management>true</management>
+        <finance>true</finance>
+        <qa>true</qa>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </contributor>
+    </agencies>
+    <language>
+      <iso>gbr</iso>
+      <name>Gbagyi</name>
+      <script>Latin</script>
+      <scriptCode>Latn</scriptCode>
+      <scriptDirection>LTR</scriptDirection>
+      <ldml>gbr</ldml>
+      <numerals>Arabic</numerals>
+    </language>
+    <countries>
+      <country>
+        <iso>NG</iso>
+        <name>Nigeria</name>
+      </country>
+    </countries>
+    <format>
+      <usxVersion>3.0</usxVersion>
+      <versedParagraphs>false</versedParagraphs>
+    </format>
+    <names>
+      <name id="book-mat">
+        <abbr>Matta</abbr>
+        <short>Matta</short>
+        <long>Matta</long>
+      </name>
+      <name id="book-mrk">
+        <abbr>Markus</abbr>
+        <short>Markus</short>
+        <long>Markus</long>
+      </name>
+      <name id="book-luk">
+        <abbr>Luka</abbr>
+        <short>Luka</short>
+        <long>Luka</long>
+      </name>
+      <name id="book-jhn">
+        <abbr>Yohanna</abbr>
+        <short>Yohanna</short>
+        <long>Yohanna</long>
+      </name>
+      <name id="book-act">
+        <abbr>Atnu-tnuyi Aɓozhin</abbr>
+        <short>Atnu-tnuyi Aɓozhin</short>
+        <long>Atnu-tnuyi Aɓozhin</long>
+      </name>
+      <name id="book-rom">
+        <abbr>Aromayi</abbr>
+        <short>Aromayi</short>
+        <long>Aromayi</long>
+      </name>
+      <name id="book-1co">
+        <abbr>Akorintiyi I</abbr>
+        <short>Akorintiyi I</short>
+        <long>Akorintiyi Kmisunyi</long>
+      </name>
+      <name id="book-2co">
+        <abbr>Akorintiyi II</abbr>
+        <short>Akorintiyi II</short>
+        <long>Akorintiyi Bayi</long>
+      </name>
+      <name id="book-gal">
+        <abbr>Agalatiyayi</abbr>
+        <short>Agalatiyayi</short>
+        <long>Agalatiyayi</long>
+      </name>
+      <name id="book-eph">
+        <abbr>Afisusuyi</abbr>
+        <short>Afisusuyi</short>
+        <long>Afisusuyi</long>
+      </name>
+      <name id="book-php">
+        <abbr>Afilibiyi</abbr>
+        <short>Afilibiyi</short>
+        <long>Afilibiyi</long>
+      </name>
+      <name id="book-col">
+        <abbr>Akolosiyi</abbr>
+        <short>Akolosiyi</short>
+        <long>Akolosiyi</long>
+      </name>
+      <name id="book-1th">
+        <abbr>Atasalunikayi I</abbr>
+        <short>Atasalunikayi I</short>
+        <long>Atasalunikayi Kmisunyi</long>
+      </name>
+      <name id="book-2th">
+        <abbr>Atasalunikayi II</abbr>
+        <short>Atasalunikayi II</short>
+        <long>Atasalunikayi Bayi</long>
+      </name>
+      <name id="book-1ti">
+        <abbr>Timatawus I</abbr>
+        <short>Timatawus I</short>
+        <long>Timatawus Kmisunyi</long>
+      </name>
+      <name id="book-2ti">
+        <abbr>Timatawus II</abbr>
+        <short>Timatawus II</short>
+        <long>Timatawus Bayi</long>
+      </name>
+      <name id="book-tit">
+        <abbr>Titus</abbr>
+        <short>Titus</short>
+        <long>Titus</long>
+      </name>
+      <name id="book-phm">
+        <abbr>Filimon</abbr>
+        <short>Filimon</short>
+        <long>Filimon</long>
+      </name>
+      <name id="book-heb">
+        <abbr>Aibraniyi</abbr>
+        <short>Aibraniyi</short>
+        <long>Aibraniyi</long>
+      </name>
+      <name id="book-jas">
+        <abbr>Yakubu</abbr>
+        <short>Yakubu</short>
+        <long>Yakubu</long>
+      </name>
+      <name id="book-1pe">
+        <abbr>Bitrus I</abbr>
+        <short>Bitrus I</short>
+        <long>Bitrus Kmisunyi</long>
+      </name>
+      <name id="book-2pe">
+        <abbr>Bitrus II</abbr>
+        <short>Bitrus II</short>
+        <long>Bitrus Bayi</long>
+      </name>
+      <name id="book-1jn">
+        <abbr>Yohanna I</abbr>
+        <short>Yohanna I</short>
+        <long>Yohanna Kmisunyi</long>
+      </name>
+      <name id="book-2jn">
+        <abbr>Yohanna II</abbr>
+        <short>Yohanna II</short>
+        <long>Yohanna Bayi</long>
+      </name>
+      <name id="book-3jn">
+        <abbr>Yohanna III</abbr>
+        <short>Yohanna III</short>
+        <long>Yohanna Tayi</long>
+      </name>
+      <name id="book-jud">
+        <abbr>Yahuda</abbr>
+        <short>Yahuda</short>
+        <long>Yahuda</long>
+      </name>
+      <name id="book-rev">
+        <short>YOHANNA ƁEWYEGYE</short>
+        <long>Yohanna Ɓewyegye</long>
+      </name>
+    </names>
+    <manifest>
+      <resource checksum="a1b5ca1876d5ead9f42aacf4252cf95f" mimeType="application/xml" size="100133" uri="release/USX_1/1CO.usx"/>
+      <resource checksum="79e2877a36044d896d32444680a49fb9" mimeType="application/xml" size="26116" uri="release/USX_1/1JN.usx"/>
+      <resource checksum="e7ec605e55c2cec2a576917c7a2926e5" mimeType="application/xml" size="27522" uri="release/USX_1/1PE.usx"/>
+      <resource checksum="9029d40054dd2940d787b6a35caab104" mimeType="application/xml" size="20932" uri="release/USX_1/1TH.usx"/>
+      <resource checksum="ff9a09f7223077d2cf00253ae05d7b1b" mimeType="application/xml" size="27068" uri="release/USX_1/1TI.usx"/>
+      <resource checksum="4e3193b441fc8b3db0a75373b29d070f" mimeType="application/xml" size="60662" uri="release/USX_1/2CO.usx"/>
+      <resource checksum="531c4018c8c9f6b4d284dedc4528be43" mimeType="application/xml" size="4353" uri="release/USX_1/2JN.usx"/>
+      <resource checksum="5870a0b9f662a8223dfc93dd197cee15" mimeType="application/xml" size="15828" uri="release/USX_1/2PE.usx"/>
+      <resource checksum="230b79d03a5470af8ea81ec3f4802498" mimeType="application/xml" size="11902" uri="release/USX_1/2TH.usx"/>
+      <resource checksum="5b215786993662651e6c91b5909a9660" mimeType="application/xml" size="20420" uri="release/USX_1/2TI.usx"/>
+      <resource checksum="2ea334a73fae38ffaeee269734555bd8" mimeType="application/xml" size="4814" uri="release/USX_1/3JN.usx"/>
+      <resource checksum="9468c037e4bf030b8163fd47c68ae6b8" mimeType="application/xml" size="193612" uri="release/USX_1/ACT.usx"/>
+      <resource checksum="4cd10ccb030eb3518b5588305673b266" mimeType="application/xml" size="23073" uri="release/USX_1/COL.usx"/>
+      <resource checksum="19d514492e003bd51e20d0fc6aab5bfd" mimeType="application/xml" size="34881" uri="release/USX_1/EPH.usx"/>
+      <resource checksum="9c94a65f64f2fc809b9417898ffacffb" mimeType="application/xml" size="36441" uri="release/USX_1/GAL.usx"/>
+      <resource checksum="a1d24e9680b9bef627472f086b303908" mimeType="application/xml" size="69270" uri="release/USX_1/HEB.usx"/>
+      <resource checksum="ff0487dafa45c2ed21df52d10a61d763" mimeType="application/xml" size="25661" uri="release/USX_1/JAS.usx"/>
+      <resource checksum="4fa5f8b6ad72bf9f8766b7556cc5a5b7" mimeType="application/xml" size="171392" uri="release/USX_1/JHN.usx"/>
+      <resource checksum="a56986ab4bea74005f968022698f801b" mimeType="application/xml" size="8330" uri="release/USX_1/JUD.usx"/>
+      <resource checksum="c40832ac1e3a90b9813a6d35594c1ac0" mimeType="application/xml" size="225952" uri="release/USX_1/LUK.usx"/>
+      <resource checksum="5d3583a144861f943cafd9862223285a" mimeType="application/xml" size="207221" uri="release/USX_1/MAT.usx"/>
+      <resource checksum="ee6e9af307883ed387c7995699931b82" mimeType="application/xml" size="131655" uri="release/USX_1/MRK.usx"/>
+      <resource checksum="4236bdfaa48b18be32ce0d90f443f62a" mimeType="application/xml" size="6350" uri="release/USX_1/PHM.usx"/>
+      <resource checksum="962cdf1e45553b725055eab592416f90" mimeType="application/xml" size="24225" uri="release/USX_1/PHP.usx"/>
+      <resource checksum="6555b4fe66bca36e1b8343b27d31e5a4" mimeType="application/xml" size="97670" uri="release/USX_1/REV.usx"/>
+      <resource checksum="39d9aadd22b8cd1dd8e35d7f9c08ae73" mimeType="application/xml" size="101410" uri="release/USX_1/ROM.usx"/>
+      <resource checksum="a8399b4ba88b9bddce7456e5a674cf0a" mimeType="application/xml" size="11707" uri="release/USX_1/TIT.usx"/>
+      <resource checksum="44d00387f1e5d79c5bc9150eb075f226" mimeType="application/xml" size="2864" uri="release/gbr.ldml"/>
+      <resource checksum="aab279eab89ed1d31ceadcd60542bc38" mimeType="application/xml" size="94781" uri="release/styles.xml"/>
+      <resource checksum="2856c5af1ac294d1c2f264ffa5357cb9" mimeType="text/plain" size="15409" uri="release/versification.vrs"/>
+      <resource checksum="bbb9e5474e74bd98233edb2c3356c206" mimeType="application/zip" size="395602" uri="source/source.zip"/>
+    </manifest>
+    <source>
+      <canonicalContent>
+        <book code="1CO"/>
+        <book code="1JN"/>
+        <book code="1PE"/>
+        <book code="1TH"/>
+        <book code="1TI"/>
+        <book code="2CO"/>
+        <book code="2JN"/>
+        <book code="2PE"/>
+        <book code="2TH"/>
+        <book code="2TI"/>
+        <book code="3JN"/>
+        <book code="ACT"/>
+        <book code="COL"/>
+        <book code="EPH"/>
+        <book code="GAL"/>
+        <book code="HEB"/>
+        <book code="JAS"/>
+        <book code="JHN"/>
+        <book code="JUD"/>
+        <book code="LUK"/>
+        <book code="MAT"/>
+        <book code="MRK"/>
+        <book code="PHM"/>
+        <book code="PHP"/>
+        <book code="REV"/>
+        <book code="ROM"/>
+        <book code="TIT"/>
+      </canonicalContent>
+      <structure>
+        <content src="source/source.zip" role="sourceZip"/>
+      </structure>
+    </source>
+    <publications>
+      <publication id="p1" default="true">
+        <name>Gbagyi New Testament (Alkawali Woiwoyi)</name>
+        <nameLocal>Alkawali Woiwoyi</nameLocal>
+        <description>New Testament</description>
+        <descriptionLocal>Alkawali Woiwoyi</descriptionLocal>
+        <abbreviation>GAW</abbreviation>
+        <abbreviationLocal>GAW</abbreviationLocal>
+        <canonicalContent>
+          <book code="1CO"/>
+          <book code="1JN"/>
+          <book code="1PE"/>
+          <book code="1TH"/>
+          <book code="1TI"/>
+          <book code="2CO"/>
+          <book code="2JN"/>
+          <book code="2PE"/>
+          <book code="2TH"/>
+          <book code="2TI"/>
+          <book code="3JN"/>
+          <book code="ACT"/>
+          <book code="COL"/>
+          <book code="EPH"/>
+          <book code="GAL"/>
+          <book code="HEB"/>
+          <book code="JAS"/>
+          <book code="JHN"/>
+          <book code="JUD"/>
+          <book code="LUK"/>
+          <book code="MAT"/>
+          <book code="MRK"/>
+          <book code="PHM"/>
+          <book code="PHP"/>
+          <book code="REV"/>
+          <book code="ROM"/>
+          <book code="TIT"/>
+        </canonicalContent>
+        <structure>
+          <content name="book-mat" src="release/USX_1/MAT.usx" role="MAT"/>
+          <content name="book-mrk" src="release/USX_1/MRK.usx" role="MRK"/>
+          <content name="book-luk" src="release/USX_1/LUK.usx" role="LUK"/>
+          <content name="book-jhn" src="release/USX_1/JHN.usx" role="JHN"/>
+          <content name="book-act" src="release/USX_1/ACT.usx" role="ACT"/>
+          <content name="book-rom" src="release/USX_1/ROM.usx" role="ROM"/>
+          <content name="book-1co" src="release/USX_1/1CO.usx" role="1CO"/>
+          <content name="book-2co" src="release/USX_1/2CO.usx" role="2CO"/>
+          <content name="book-gal" src="release/USX_1/GAL.usx" role="GAL"/>
+          <content name="book-eph" src="release/USX_1/EPH.usx" role="EPH"/>
+          <content name="book-php" src="release/USX_1/PHP.usx" role="PHP"/>
+          <content name="book-col" src="release/USX_1/COL.usx" role="COL"/>
+          <content name="book-1th" src="release/USX_1/1TH.usx" role="1TH"/>
+          <content name="book-2th" src="release/USX_1/2TH.usx" role="2TH"/>
+          <content name="book-1ti" src="release/USX_1/1TI.usx" role="1TI"/>
+          <content name="book-2ti" src="release/USX_1/2TI.usx" role="2TI"/>
+          <content name="book-tit" src="release/USX_1/TIT.usx" role="TIT"/>
+          <content name="book-phm" src="release/USX_1/PHM.usx" role="PHM"/>
+          <content name="book-heb" src="release/USX_1/HEB.usx" role="HEB"/>
+          <content name="book-jas" src="release/USX_1/JAS.usx" role="JAS"/>
+          <content name="book-1pe" src="release/USX_1/1PE.usx" role="1PE"/>
+          <content name="book-2pe" src="release/USX_1/2PE.usx" role="2PE"/>
+          <content name="book-1jn" src="release/USX_1/1JN.usx" role="1JN"/>
+          <content name="book-2jn" src="release/USX_1/2JN.usx" role="2JN"/>
+          <content name="book-3jn" src="release/USX_1/3JN.usx" role="3JN"/>
+          <content name="book-jud" src="release/USX_1/JUD.usx" role="JUD"/>
+          <content name="book-rev" src="release/USX_1/REV.usx" role="REV"/>
+        </structure>
+      </publication>
+    </publications>
+    <copyright>
+      <fullStatement>
+        <statementContent type="xhtml">
+          <p>Alkawali Woiwoyi</p>
+          <p>(Gbagyi New Testament)</p>
+          <p>Copyright © 1997 by Biblica, Inc.®</p>
+          <p>All rights reserved worldwide.</p>
+        </statementContent>
+      </fullStatement>
+    </copyright>
+    <promotion>
+      <promoVersionInfo contentType="xhtml">
+        <p>Biblica, the International Bible Society, provides Godʼs Word to people through Bible translation and Bible publishing, and Bible engagement in Africa, Asia Pacific, Europe, Latin America, Middle East, North America, and South Asia. Through its worldwide reach, Biblica engages people with Godʼs Word so that their lives are transformed through a relationship with Jesus Christ.</p>
+      </promoVersionInfo>
+    </promotion>
+    <archiveStatus>
+      <archivistName>Agatha John-Thomas</archivistName>
+      <dateArchived>2015-11-04T17:09:44.935945</dateArchived>
+      <dateUpdated>2022-05-06T17:17:44.454885</dateUpdated>
+      <comments>Update to PT9</comments>
+    </archiveStatus>
+  </DBLMetadata>

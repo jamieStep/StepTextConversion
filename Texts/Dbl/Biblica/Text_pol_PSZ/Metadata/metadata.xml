@@ -1,0 +1,372 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata id="2e3185bcb90f9381" revision="12" version="2.1">
+  <identification>
+    <name>Polish Living New Testament</name>
+    <nameLocal>Słowo Życia</nameLocal>
+    <description>Polish: Słowo Życia (New Testament)</description>
+    <abbreviation>PSZ</abbreviation>
+    <scope>New Testament</scope>
+    <dateCompleted>2016-12-01</dateCompleted>
+    <bundleProducer>Paratext/8.0.100.67</bundleProducer>
+    <systemId type="paratext">
+      <id>4f4e9f3f4910c3fff1dcfd8f97f09bf36dc49986</id>
+      <csetId>4e3eb8c467abfbd6c748baf465b2f59016bb57cf</csetId>
+      <name>polPSZ16</name>
+      <fullName>Polish Living New Testament</fullName>
+    </systemId>
+    <systemId type="ptreg">
+      <id>ASZvSEvLdhji96fd2</id>
+    </systemId>
+  </identification>
+  <type>
+    <medium>text</medium>
+    <isConfidential>false</isConfidential>
+    <hasCharacters>true</hasCharacters>
+    <isTranslation>true</isTranslation>
+    <isExpression>true</isExpression>
+    <translationType>Revision</translationType>
+    <audience>Basic</audience>
+  </type>
+  <relationships />
+  <agencies>
+    <rightsHolder>
+      <abbr>Biblica</abbr>
+      <url>http://www.Biblica.com</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsHolder>
+    <rightsAdmin>
+      <url>http://www.Biblica.com</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsAdmin>
+    <contributor>
+      <content>true</content>
+      <publication>true</publication>
+      <management>true</management>
+      <finance>true</finance>
+      <qa>true</qa>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </contributor>
+  </agencies>
+  <language>
+    <iso>pol</iso>
+    <name>Polish</name>
+    <nameLocal>Polski</nameLocal>
+    <script>Latin</script>
+    <scriptCode>Latn</scriptCode>
+    <scriptDirection>LTR</scriptDirection>
+    <ldml>pl</ldml>
+    <numerals>Arabic</numerals>
+  </language>
+  <countries>
+    <country>
+      <iso>PL</iso>
+      <name>Poland</name>
+    </country>
+  </countries>
+  <format>
+    <versedParagraphs>false</versedParagraphs>
+  </format>
+  <names>
+    <name id="book-mat">
+      <abbr>Mt</abbr>
+      <short>Mateusza</short>
+      <long>Mateusza</long>
+    </name>
+    <name id="book-mrk">
+      <abbr>Mk</abbr>
+      <short>Marka</short>
+      <long>Marka</long>
+    </name>
+    <name id="book-luk">
+      <abbr>Łk</abbr>
+      <short>Łukasza</short>
+      <long>Łukasza</long>
+    </name>
+    <name id="book-jhn">
+      <abbr>Jn</abbr>
+      <short>Jana</short>
+      <long>Jana</long>
+    </name>
+    <name id="book-act">
+      <abbr>Dz</abbr>
+      <short>Dzieje</short>
+      <long>Dzieje Apostolskie</long>
+    </name>
+    <name id="book-rom">
+      <abbr>Rz</abbr>
+      <short>Rzymian</short>
+      <long>Rzymian</long>
+    </name>
+    <name id="book-1co">
+      <abbr>1Kor</abbr>
+      <short>1 Koryntian</short>
+      <long>1 Koryntian</long>
+    </name>
+    <name id="book-2co">
+      <abbr>2Kor</abbr>
+      <short>2 Koryntian</short>
+      <long>2 Koryntian</long>
+    </name>
+    <name id="book-gal">
+      <abbr>Ga</abbr>
+      <short>Galacjan</short>
+      <long>Galacjan</long>
+    </name>
+    <name id="book-eph">
+      <abbr>Ef</abbr>
+      <short>Efezjan</short>
+      <long>Efezjan</long>
+    </name>
+    <name id="book-php">
+      <abbr>Flp</abbr>
+      <short>Filipian</short>
+      <long>Filipian</long>
+    </name>
+    <name id="book-col">
+      <abbr>Kol</abbr>
+      <short>Kolosan</short>
+      <long>Kolosan</long>
+    </name>
+    <name id="book-1th">
+      <abbr>1Tes</abbr>
+      <short>1 Tesaloniczan</short>
+      <long>1 Tesaloniczan</long>
+    </name>
+    <name id="book-2th">
+      <abbr>2Tes</abbr>
+      <short>2 Tesaloniczan</short>
+      <long>2 Tesaloniczan</long>
+    </name>
+    <name id="book-1ti">
+      <abbr>1Tm</abbr>
+      <short>1 Tymoteusza</short>
+      <long>1 Tymoteusza</long>
+    </name>
+    <name id="book-2ti">
+      <abbr>2Tm</abbr>
+      <short>2 Tymoteusza</short>
+      <long>2 Tymoteusza</long>
+    </name>
+    <name id="book-tit">
+      <abbr>Tt</abbr>
+      <short>Tytusa</short>
+      <long>Tytusa</long>
+    </name>
+    <name id="book-phm">
+      <abbr>Flm</abbr>
+      <short>Filemona</short>
+      <long>Filemona</long>
+    </name>
+    <name id="book-heb">
+      <abbr>Hbr</abbr>
+      <short>Hebrajczyków</short>
+      <long>Hebrajczyków</long>
+    </name>
+    <name id="book-jas">
+      <abbr>Jk</abbr>
+      <short>Jakuba</short>
+      <long>Jakuba</long>
+    </name>
+    <name id="book-1pe">
+      <abbr>1P</abbr>
+      <short>1 Piotra</short>
+      <long>1 Piotra</long>
+    </name>
+    <name id="book-2pe">
+      <abbr>2P</abbr>
+      <short>2 Piotra</short>
+      <long>2 Piotra</long>
+    </name>
+    <name id="book-1jn">
+      <abbr>1Jn</abbr>
+      <short>1 Jana</short>
+      <long>1 Jana</long>
+    </name>
+    <name id="book-2jn">
+      <abbr>2Jn</abbr>
+      <short>2 Jana</short>
+      <long>2 Jana</long>
+    </name>
+    <name id="book-3jn">
+      <abbr>3Jn</abbr>
+      <short>3 Jana</short>
+      <long>3 Jana</long>
+    </name>
+    <name id="book-jud">
+      <abbr>Jud</abbr>
+      <short>Judy</short>
+      <long>Judy</long>
+    </name>
+    <name id="book-rev">
+      <abbr>Ap</abbr>
+      <short>Apokalipsa</short>
+      <long>Apokalipsa</long>
+    </name>
+  </names>
+  <manifest>
+    <container uri="release">
+      <container uri="USX_1">
+        <resource checksum="a74f341f4cd59dbf2b0423680570181b" mimeType="application/xml" size="73718" uri="1CO.usx" />
+        <resource checksum="2c9811ce96b5001056df20be5cddb1c6" mimeType="application/xml" size="20127" uri="1JN.usx" />
+        <resource checksum="74dbedb1368bc3e04dcde466f52f112a" mimeType="application/xml" size="21744" uri="1PE.usx" />
+        <resource checksum="648d9c4e57e1633805c8f6d7026dc823" mimeType="application/xml" size="15913" uri="1TH.usx" />
+        <resource checksum="ef1ac503b86aa86e3969e2dce10d53bc" mimeType="application/xml" size="21906" uri="1TI.usx" />
+        <resource checksum="53dff9431132486cca6b71345be9b9c7" mimeType="application/xml" size="49419" uri="2CO.usx" />
+        <resource checksum="1cc3e411e8f5f012abeb722986689263" mimeType="application/xml" size="3181" uri="2JN.usx" />
+        <resource checksum="9ec518ec5da502ef591f941b8ad702e2" mimeType="application/xml" size="12639" uri="2PE.usx" />
+        <resource checksum="e575fd3d2866de29a7beaa45aa6f1c95" mimeType="application/xml" size="9246" uri="2TH.usx" />
+        <resource checksum="3797dc65da630bcc49db2d6b499e925c" mimeType="application/xml" size="15905" uri="2TI.usx" />
+        <resource checksum="1ee6a8c09d8f1676343cf873b31f999b" mimeType="application/xml" size="3526" uri="3JN.usx" />
+        <resource checksum="e03dc62c650416f51d30fb7c30a3c345" mimeType="application/xml" size="180948" uri="ACT.usx" />
+        <resource checksum="2041c1030ce78fc043184dff4fd9eb82" mimeType="application/xml" size="17168" uri="COL.usx" />
+        <resource checksum="c0a43eb553f5dfd2c6323d6d2ed48822" mimeType="application/xml" size="25367" uri="EPH.usx" />
+        <resource checksum="2fb3393da3ebe73fd6c9febd09022c29" mimeType="application/xml" size="28522" uri="GAL.usx" />
+        <resource checksum="7c91dc42716cb53aa031a1798ef9d219" mimeType="application/xml" size="60794" uri="HEB.usx" />
+        <resource checksum="bb8ad9a8eccef92ba953cae223bba2ca" mimeType="application/xml" size="20038" uri="JAS.usx" />
+        <resource checksum="6d3865491cb072761813d4a54cc10480" mimeType="application/xml" size="147692" uri="JHN.usx" />
+        <resource checksum="0f19dfe3433af25cdc2f1c56b4906d22" mimeType="application/xml" size="6242" uri="JUD.usx" />
+        <resource checksum="f9c14bcb03e95c29943da8c0f1058585" mimeType="application/xml" size="202890" uri="LUK.usx" />
+        <resource checksum="93d87a5b30174eada7ccec24cbf0fcf1" mimeType="application/xml" size="183331" uri="MAT.usx" />
+        <resource checksum="2e247956484c3d1a51b48a87c256bfd2" mimeType="application/xml" size="121017" uri="MRK.usx" />
+        <resource checksum="d2c4220c3adcd93978e2fec2b73d9785" mimeType="application/xml" size="4632" uri="PHM.usx" />
+        <resource checksum="104f86ed02d349a2b063214fc6ffef61" mimeType="application/xml" size="18981" uri="PHP.usx" />
+        <resource checksum="3ec3596dd45914dbd87108b266d49c05" mimeType="application/xml" size="87946" uri="REV.usx" />
+        <resource checksum="8f41e4c53513647bb86ed571130da362" mimeType="application/xml" size="77385" uri="ROM.usx" />
+        <resource checksum="5fd45d5262ffb8ba185e4eb6887744cf" mimeType="application/xml" size="9364" uri="TIT.usx" />
+      </container>
+      <resource checksum="fa3228aadde0db988e1822c2f736c131" mimeType="application/octet-stream" size="1036584" uri="arial.ttf" />
+      <resource checksum="858f5a50a4c3e5e6559a0c9b128eee60" mimeType="application/octet-stream" size="980756" uri="arialbd.ttf" />
+      <resource checksum="b04eb00031bf4d82265b30855d7a314f" mimeType="application/octet-stream" size="721144" uri="arialbi.ttf" />
+      <resource checksum="97f1aa85e8ce271cd2a65759cb230397" mimeType="application/octet-stream" size="717428" uri="ariali.ttf" />
+      <resource checksum="71198197464238a92cb4ca9fde2465a0" mimeType="application/xml" size="3221" uri="pol_pl.ldml" />
+      <resource checksum="397ec68a30bf6ba7f24de921460862d4" mimeType="application/xml" size="82047" uri="styles.xml" />
+      <resource checksum="481be805de1e2e537c419a59b70e37bf" mimeType="text/plain" size="9998" uri="versification.vrs" />
+    </container>
+    <container uri="source">
+      <resource checksum="93571fb515463021c4d5349afcd4ee79" mimeType="application/zip" size="1073853" uri="source.zip" />
+    </container>
+  </manifest>
+  <source>
+    <canonicalContent>
+      <book code="1CO" />
+      <book code="1JN" />
+      <book code="1PE" />
+      <book code="1TH" />
+      <book code="1TI" />
+      <book code="2CO" />
+      <book code="2JN" />
+      <book code="2PE" />
+      <book code="2TH" />
+      <book code="2TI" />
+      <book code="3JN" />
+      <book code="ACT" />
+      <book code="COL" />
+      <book code="EPH" />
+      <book code="GAL" />
+      <book code="HEB" />
+      <book code="JAS" />
+      <book code="JHN" />
+      <book code="JUD" />
+      <book code="LUK" />
+      <book code="MAT" />
+      <book code="MRK" />
+      <book code="PHM" />
+      <book code="PHP" />
+      <book code="REV" />
+      <book code="ROM" />
+      <book code="TIT" />
+    </canonicalContent>
+    <structure>
+      <content role="sourceZip" src="source/source.zip" />
+    </structure>
+  </source>
+  <publications>
+    <publication default="true" id="p1">
+      <name>Polish Living New Testament (The Word of Life)</name>
+      <description>The New Testament in easy to understand Polish</description>
+      <descriptionLocal>Nowy Testament w łatwo zrozumiałym języku polskim</descriptionLocal>
+      <abbreviation>PLNT</abbreviation>
+      <canonicalContent>
+        <book code="1CO" />
+        <book code="1JN" />
+        <book code="1PE" />
+        <book code="1TH" />
+        <book code="1TI" />
+        <book code="2CO" />
+        <book code="2JN" />
+        <book code="2PE" />
+        <book code="2TH" />
+        <book code="2TI" />
+        <book code="3JN" />
+        <book code="ACT" />
+        <book code="COL" />
+        <book code="EPH" />
+        <book code="GAL" />
+        <book code="HEB" />
+        <book code="JAS" />
+        <book code="JHN" />
+        <book code="JUD" />
+        <book code="LUK" />
+        <book code="MAT" />
+        <book code="MRK" />
+        <book code="PHM" />
+        <book code="PHP" />
+        <book code="REV" />
+        <book code="ROM" />
+        <book code="TIT" />
+      </canonicalContent>
+      <structure>
+        <content name="book-mat" role="MAT" src="release/USX_1/MAT.usx" />
+        <content name="book-mrk" role="MRK" src="release/USX_1/MRK.usx" />
+        <content name="book-luk" role="LUK" src="release/USX_1/LUK.usx" />
+        <content name="book-jhn" role="JHN" src="release/USX_1/JHN.usx" />
+        <content name="book-act" role="ACT" src="release/USX_1/ACT.usx" />
+        <content name="book-rom" role="ROM" src="release/USX_1/ROM.usx" />
+        <content name="book-1co" role="1CO" src="release/USX_1/1CO.usx" />
+        <content name="book-2co" role="2CO" src="release/USX_1/2CO.usx" />
+        <content name="book-gal" role="GAL" src="release/USX_1/GAL.usx" />
+        <content name="book-eph" role="EPH" src="release/USX_1/EPH.usx" />
+        <content name="book-php" role="PHP" src="release/USX_1/PHP.usx" />
+        <content name="book-col" role="COL" src="release/USX_1/COL.usx" />
+        <content name="book-1th" role="1TH" src="release/USX_1/1TH.usx" />
+        <content name="book-2th" role="2TH" src="release/USX_1/2TH.usx" />
+        <content name="book-1ti" role="1TI" src="release/USX_1/1TI.usx" />
+        <content name="book-2ti" role="2TI" src="release/USX_1/2TI.usx" />
+        <content name="book-tit" role="TIT" src="release/USX_1/TIT.usx" />
+        <content name="book-phm" role="PHM" src="release/USX_1/PHM.usx" />
+        <content name="book-heb" role="HEB" src="release/USX_1/HEB.usx" />
+        <content name="book-jas" role="JAS" src="release/USX_1/JAS.usx" />
+        <content name="book-1pe" role="1PE" src="release/USX_1/1PE.usx" />
+        <content name="book-2pe" role="2PE" src="release/USX_1/2PE.usx" />
+        <content name="book-1jn" role="1JN" src="release/USX_1/1JN.usx" />
+        <content name="book-2jn" role="2JN" src="release/USX_1/2JN.usx" />
+        <content name="book-3jn" role="3JN" src="release/USX_1/3JN.usx" />
+        <content name="book-jud" role="JUD" src="release/USX_1/JUD.usx" />
+        <content name="book-rev" role="REV" src="release/USX_1/REV.usx" />
+      </structure>
+    </publication>
+  </publications>
+  <copyright>
+    <fullStatement>
+      <statementContent type="xhtml">
+        <p>Polish Living New Testament (Słowo Życia)</p>
+        <p>Copyright © 1991, 2005, 2016 by Biblica, Inc.®</p>
+        <p>Used by permission. All rights reserved worldwide.</p>
+      </statementContent>
+    </fullStatement>
+  </copyright>
+  <promotion>
+    <promoVersionInfo contentType="xhtml">
+      <p>Część przychodów ze sprzedaży Nowego Testamentu Słowo Życia przeznaczona jest dla Biblica, a więc razem wspieramy misję Transforming lives through Godʼs Word (Przemieniając życie przez Słowo Boże).</p>
+      <p>Biblica udostępnia Słowo Boże poprzez jego tłumaczenie i publikowanie oraz wzbudzanie zainteresowania Biblią w Afryce, w Azji, na Pacyfiku, w Europie, w Ameryce Łacińskiej, na Bliskim Wschodzie, w Ameryce Północnej. Swoim globalnym zasięgiem Biblia przyciąga uwagę ludzi na całym świecie, aby ich życie mogło zostać przemienione poprzez relację z Jezusem Chrystusem.</p>
+    </promoVersionInfo>
+  </promotion>
+  <archiveStatus>
+    <archivistName>Ioan Giosanu</archivistName>
+    <dateArchived>2012-01-17T22:48:12.3761573+00:00</dateArchived>
+    <dateUpdated>2018-07-30T10:16:23.427907</dateUpdated>
+    <comments>Project updated on July 30, 2018. Minor changes.</comments>
+  </archiveStatus>
+</DBLMetadata>

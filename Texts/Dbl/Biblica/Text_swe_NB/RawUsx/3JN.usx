@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="3JN" style="id">- nuBibeln (Swedish Contemporary Bible)</book>
+  <para style="rem">Copyright © 2015 by Biblica, Inc.®</para>
+  <para style="h">3 Johannesbrevet</para>
+  <para style="toc1">Tredje Johannesbrevet</para>
+  <para style="toc2">3 Johannesbrevet</para>
+  <para style="toc3">3 Joh</para>
+  <para style="mt1">Tredje Johannesbrevet</para>
+  <chapter number="1" style="c"/>
+  <para style="s1">Hälsningar</para>
+  <para style="p">
+    <verse number="1" style="v"/>Från den gamle.</para>
+  <para style="p">Till min käre vän Gaius, som jag i sanning älskar.<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">Jfr 2 Joh 1 med not.</char></note></para>
+  <para style="p">
+    <verse number="2" style="v"/>Min käre vän, jag hoppas att allt står väl till med dig och att din kropp är lika frisk som din själ. <verse number="3" style="v"/>Jag blev mycket glad när några församlingsmedlemmar som hade besökt dig vittnade om den sanning som finns hos dig och att du lever i sanningen. <verse number="4" style="v"/>Inget gör mig gladare än att höra att mina barn lever i sanningen.</para>
+  <para style="s1">Beröm och tillrättavisning</para>
+  <para style="p">
+    <verse number="5" style="v"/>Min käre vän, du visar dig trogen i allt du gör för de troende, ja, även sådana som du inte känner. <verse number="6" style="v"/>De har vittnat om din kärlek för församlingen här. Du gör väl när du, så som det är Gud värdigt, ger dem vad de behöver för sin fortsatta resa. <verse number="7" style="v"/>Det är ju för Namnets<note caller="+" style="f"><char style="fr" closed="false">1:7 </char><char style="fqa" closed="false">Namnet </char><char style="ft" closed="false">syftar på Kristus, som i sin tur hade tagit på sig det heliga gudsnamnet (<char style="xt">se t.ex. <ref loc="JHN 17:11">Joh 17:11</ref></char>).</char></note> skull som de har gett sig ut, och de tar inte emot något från hedningarna. <verse number="8" style="v"/>Därför bör vi stödja dem och på det sättet hjälpa till att sprida sanningen.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Jag skrev ett brev till församlingen, men Diotrefes, som vill ta över ledningen där, vägrar att ha med oss att göra. <verse number="10" style="v"/>När jag kommer, ska jag därför ta upp hans sätt att sprida onda rykten om oss. Men han nöjer sig inte bara med detta, han vägrar också att ta emot bröderna, och om någon annan vill ta emot dem så hindrar han dem och utesluter dem ur församlingen.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Min käre vän, låt dig inte påverkas av det onda utan av det goda. Den som gör det goda är av Gud, men den som gör det onda har inte sett Gud.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Alla vittnar gott om Demetrios, även sanningen själv. Också vi vittnar, och du vet att vårt vittnesbörd är sant.</para>
+  <para style="s1">Avslutning</para>
+  <para style="p">
+    <verse number="13" style="v"/>Jag har mycket att säga till dig, men jag vill inte göra det med bläck och penna. <verse number="14" style="v"/>Jag hoppas att snart få träffa dig, så att vi kan talas vid personligen.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Frid åt dig. Vännerna här hälsar till dig. Ge en personlig hälsning till var och en av vännerna.</para>
+</usx>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="TIT" style="id">La Bible du Semeur (The Bible of the Sower)</book>
+  <para style="rem">Copyright © 1992, 1999, 2015 by Biblica, Inc.®</para>
+  <para style="h">TITE</para>
+  <para style="toc1">Lettre à Tite</para>
+  <para style="toc2">Tite</para>
+  <para style="toc3">Tt</para>
+  <para style="mt1">Lettre à Tite</para>
+  <para style="imt">Introduction</para>
+  <para style="ip">Après une libération de sa première captivité romaine (<char style="xt"><ref loc="ACT 28">Ac 28</ref></char>), Paul a annoncé l’Evangile en Crète, la plus grande des îles grecques. Auparavant, il n’y avait séjourné que peu de temps, comme prisonnier, lors de son voyage à Rome pour comparaître devant l’empereur (<char style="xt"><ref loc="ACT 27:7-8">Ac 27.7-8</ref></char>).</para>
+  <para style="ip">Lors de son départ de l’île, l’apôtre y laisse Tite, l’un de ses proches collaborateurs, d’origine non juive (<char style="xt"><ref loc="GAL 2:3">Ga 2.3</ref></char>), chargé à plusieurs reprises de missions délicates, en particulier à Corinthe (<char style="xt">2 Co 2.12-13 ; 7.6-7</char>). Il lui confie comme tâche de parachever, dans une situation assez difficile (<char style="xt"><ref loc="TIT 1:12-13">1.12-13</ref></char>), l’organisation de l’Eglise qui y avait été fondée (<char style="xt"><ref loc="TIT 1:5">Tt 1.5</ref></char>).</para>
+  <para style="ip">Paul donne rendez-vous à Tite avant l’hiver à Nicopolis, sur la côte ouest de la Grèce (<char style="xt"><ref loc="TIT 3:12">3.12</ref></char>). Il écrit donc très certainement de Macédoine où il a aussi rédigé, à cette même époque, 1 Timothée. Il existe d’ailleurs une grande parenté dans le vocabulaire, le style et le souci « pastoral » de ces deux lettres de l’apôtre à ses collaborateurs.</para>
+  <para style="ip">Après avoir rappelé les qualités nécessaires aux responsables dans les Eglises, l’apôtre dénonce les erreurs et les « spéculations juives » qui s’opposent à « l’enseignement véritable » (<char style="xt">chap. <ref loc="TIT 1">1</ref></char>). Puis il adresse des recommandations aux différents groupes qui composent l’Eglise (<char style="xt">chap. <ref loc="TIT 2">2</ref></char>) et termine la lettre en rappelant l’œuvre de la grâce divine qui conduit le croyant à vivre de manière conforme à l’Evangile (<char style="xt">chap. <ref loc="TIT 3">3</ref></char>).</para>
+  <chapter number="1" style="c" sid="TIT 1"/>
+  <para style="s1">Salutation</para>
+  <para style="p">
+    <verse number="1" style="v" sid="TIT 1:1"/>Cette lettre t’est adressée par Paul, serviteur de Dieu et apôtre de Jésus-Christ. Ceux que Dieu a choisis, j’ai été chargé de les conduire dans la foi et la pleine connaissance de la vérité qui est conforme à la piété, <verse eid="TIT 1:1"/><verse number="2" style="v" sid="TIT 1:2"/>pour qu’ils aient l’espérance de la vie éternelle. Cette vie nous a été promise de toute éternité, par le Dieu qui ne ment pas. <verse eid="TIT 1:2"/><verse number="3" style="v" sid="TIT 1:3"/>Au moment approprié, il a fait connaître sa Parole par le message que j’ai été chargé de proclamer, selon l’ordre de Dieu notre Sauveur.<verse eid="TIT 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="TIT 1:4"/>Je te salue, Tite, mon véritable enfant en notre foi commune :</para>
+  <para style="p" vid="TIT 1:4">Que Dieu le Père et Jésus-Christ notre Sauveur t’accordent la grâce et la paix.<verse eid="TIT 1:4"/></para>
+  <para style="s1">L’établissement de responsables dans l’Eglise</para>
+  <para style="p">
+    <verse number="5" style="v" sid="TIT 1:5"/>Je t’ai laissé en Crète pour que tu achèves de mettre en ordre ce qui est resté en suspens, et que tu établisses dans chaque ville des responsables dans l’Eglise en suivant les directives que je t’ai données. <verse eid="TIT 1:5"/><verse number="6" style="v" sid="TIT 1:6"/>Chacun d’eux doit être un homme irréprochable et un mari fidèle à sa femme<note caller="+" style="f"><char style="fr" closed="false">1.6 </char><char style="ft" closed="false">Autres traductions : </char><char style="fqa" closed="false">mari d’une seule femme </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">qu’il n’ait été marié qu’une seule fois </char><char style="ft" closed="false">(voir note <char style="xt"><ref loc="1TI 3:2">1 Tm 3.2</ref></char>).</char></note>. Il faut que ses enfants soient dignes de confiance, c’est-à-dire qu’on ne puisse pas les accuser d’inconduite ou d’insoumission.<verse eid="TIT 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="TIT 1:7"/>En effet, il est nécessaire qu’un dirigeant d’Eglise soit irréprochable, puisqu’il a la responsabilité de la famille de Dieu. C’est pourquoi il ne doit être ni imbu de lui-même ni coléreux, ni buveur, ni querelleur, ni attiré par des gains malhonnêtes.<verse eid="TIT 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="TIT 1:8"/>Qu’il soit, au contraire, hospitalier, ami du bien, réfléchi, juste, saint et maître de lui-même ; <verse eid="TIT 1:8"/><verse number="9" style="v" sid="TIT 1:9"/>qu’il soit fidèlement attaché à la parole certaine, qui est conforme à ce qui lui a été enseigné. Ainsi il sera en mesure d’encourager les autres selon l’enseignement sain et de réfuter les contradicteurs.<verse eid="TIT 1:9"/></para>
+  <para style="s1">Contre les enseignants de mensonge</para>
+  <para style="p">
+    <verse number="10" style="v" sid="TIT 1:10"/>Car nombreux sont ceux qui refusent de se soumettre à la vérité. Ils profèrent des discours creux et entraînent les gens dans l’erreur. On en trouve surtout parmi les gens issus du judaïsme. <verse eid="TIT 1:10"/><verse number="11" style="v" sid="TIT 1:11"/>Il faut leur fermer la bouche, car ils bouleversent des familles entières en enseignant ce qu’il ne faut pas, pour s’assurer des gains malhonnêtes.<verse eid="TIT 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="TIT 1:12"/>Un Crétois, qu’ils considèrent comme un prophète, a dit :</para>
+  <para style="q1" vid="TIT 1:12">
+    <char style="qt">Les Crétois ont toujours été menteurs ;</char></para>
+  <para style="q1" vid="TIT 1:12">
+    <char style="qt">ce sont des bêtes méchantes,</char></para>
+  <para style="q1" vid="TIT 1:12">
+    <char style="qt">des gloutons et des fainéants</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">1.12 </char>
+      <char style="ft" closed="false">Vers du poète crétois Epiménide de Cnossos (<char style="sc">vi</char><char style="ord">e</char> siècle av. J.-C.).</char>
+    </note>
+    <char style="qt">.</char><verse eid="TIT 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="TIT 1:13"/>Voilà un jugement qui est bien vrai. C’est pourquoi reprends-les sévèrement pour qu’ils aient une foi saine <verse eid="TIT 1:13"/><verse number="14" style="v" sid="TIT 1:14"/>en ne s’attachant pas à des récits juifs de pure invention et à des commandements provenant d’hommes qui se sont détournés de la vérité.<verse eid="TIT 1:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="TIT 1:15"/>Pour ceux qui sont purs, tout est pur<note caller="+" style="f"><char style="fr" closed="false">1.15 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="LUK 11:41">Lc 11.41</ref></char> et <char style="xt"><ref loc="ROM 14:20">Rm 14.20</ref></char>.</char></note>, mais pour des hommes souillés et incrédules, rien n’est pur. Leur pensée et leur conscience sont souillées. <verse eid="TIT 1:15"/><verse number="16" style="v" sid="TIT 1:16"/>Certes, ils prétendent connaître Dieu, mais ils le renient par leurs actes, car ils sont détestables, rebelles et se sont disqualifiés pour toute œuvre bonne.<verse eid="TIT 1:16"/></para>
+  <chapter eid="TIT 1"/>
+  <chapter number="2" style="c" sid="TIT 2"/>
+  <para style="s1">Recommandations à diverses catégories de fidèles</para>
+  <para style="p">
+    <verse number="1" style="v" sid="TIT 2:1"/>Toi, au contraire, parle selon ce qui est conforme à l’enseignement sain. <verse eid="TIT 2:1"/><verse number="2" style="v" sid="TIT 2:2"/>Dis aux hommes âgés de faire preuve de modération, d’être respectables, réfléchis, et d’exercer une saine pratique de la foi, de l’amour et de la persévérance.<verse eid="TIT 2:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="TIT 2:3"/>Qu’il en soit de même des femmes âgées : qu’elles aient un comportement digne de Dieu ; qu’elles ne soient pas médisantes ni adonnées à la boisson. Qu’elles s’attachent plutôt à enseigner le bien<note caller="+" style="f"><char style="fr" closed="false">2.3 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">qu’elles soient de bonnes enseignantes.</char></note> : <verse eid="TIT 2:3"/><verse number="4" style="v" sid="TIT 2:4"/>qu’elles apprennent aux jeunes femmes à aimer leur mari et leurs enfants, <verse eid="TIT 2:4"/><verse number="5" style="v" sid="TIT 2:5"/>à agir de manière réfléchie et pure, à assumer leurs tâches domestiques, à faire preuve de bonté et à être soumises à leur mari. Ainsi la Parole de Dieu ne sera pas discréditée.<verse eid="TIT 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="TIT 2:6"/>Recommande aussi aux jeunes gens d’agir de manière réfléchie. <verse eid="TIT 2:6"/><verse number="7" style="v" sid="TIT 2:7"/>Sois toi-même en tout un modèle d’œuvres bonnes. Que ton enseignement soit fidèle et qu’il inspire le respect. <verse eid="TIT 2:7"/><verse number="8" style="v" sid="TIT 2:8"/>Que ta prédication soit saine et inattaquable, afin que même nos adversaires soient couverts de honte, ne trouvant aucun mal à dire de nous.<verse eid="TIT 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="TIT 2:9"/>Aux esclaves, tu recommanderas d’être soumis à leurs maîtres en toutes choses. Qu’ils cherchent à leur donner satisfaction, qu’ils évitent de les contredire <verse eid="TIT 2:9"/><verse number="10" style="v" sid="TIT 2:10"/>et se gardent de toute fraude ; qu’ils se montrent au contraire dignes d’une entière confiance. Ainsi ils rendront attrayant l’enseignement de Dieu notre Sauveur.<verse eid="TIT 2:10"/></para>
+  <para style="s1">La grâce, source du salut</para>
+  <para style="p">
+    <verse number="11" style="v" sid="TIT 2:11"/>En effet, la grâce de Dieu s’est révélée comme une source de salut pour tous les hommes. <verse eid="TIT 2:11"/><verse number="12" style="v" sid="TIT 2:12"/>Elle nous éduque et nous amène à nous détourner de tout mépris de Dieu et à rejeter les passions des gens de ce monde. Ainsi nous pourrons mener, dans le temps présent, une vie équilibrée, juste et empreinte de piété, <verse eid="TIT 2:12"/><verse number="13" style="v" sid="TIT 2:13"/>en attendant que se réalise notre bienheureuse espérance : la révélation de la gloire de Jésus-Christ, notre grand Dieu et Sauveur. <verse eid="TIT 2:13"/><verse number="14" style="v" sid="TIT 2:14"/>Il s’est livré lui-même pour nous, afin de nous délivrer de toute désobéissance et de faire de nous, en nous purifiant ainsi, un peuple qui lui appartienne et qui mette toute son ardeur à accomplir des œuvres bonnes.<verse eid="TIT 2:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="TIT 2:15"/>Voilà ce que tu dois enseigner, dans quel sens il te faut encourager et reprendre les gens. Fais-le avec une pleine autorité. Que personne ne te traite avec mépris.<verse eid="TIT 2:15"/></para>
+  <chapter eid="TIT 2"/>
+  <chapter number="3" style="c" sid="TIT 3"/>
+  <para style="s1">L’Evangile et ses conséquences dans la vie quotidienne</para>
+  <para style="p">
+    <verse number="1" style="v" sid="TIT 3:1"/>Rappelle à tous qu’ils ont à se soumettre aux gouvernants et aux autorités, qu’ils doivent leur obéir et être prêts à accomplir toute œuvre bonne. <verse eid="TIT 3:1"/><verse number="2" style="v" sid="TIT 3:2"/>Qu’ils ne dénigrent personne mais qu’ils soient au contraire conciliants, courtois, et qu’ils fassent preuve d’amabilité envers tous les hommes.<verse eid="TIT 3:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="TIT 3:3"/>Car il fut un temps où nous-mêmes, nous vivions en insensés, dans la révolte contre Dieu, égarés, esclaves de toutes sortes de passions et de plaisirs. Nos jours s’écoulaient dans la méchanceté et dans l’envie, nous étions haïssables et nous nous haïssions les uns les autres. <verse eid="TIT 3:3"/><verse number="4" style="v" sid="TIT 3:4"/>Mais quand Dieu notre Sauveur a révélé sa bonté et son amour pour les hommes, il nous a sauvés. <verse eid="TIT 3:4"/><verse number="5" style="v" sid="TIT 3:5"/>S’il l’a fait, ce n’est pas parce que nous avons accompli des actes conformes à ce qui est juste. Non. Il nous a sauvés parce qu’il a eu compassion de nous, en nous faisant passer par le bain purificateur de la nouvelle naissance, c’est-à-dire en nous renouvelant par le Saint-Esprit. <verse eid="TIT 3:5"/><verse number="6" style="v" sid="TIT 3:6"/>Cet Esprit, il l’a répandu sur nous avec abondance par Jésus-Christ notre Sauveur. <verse eid="TIT 3:6"/><verse number="7" style="v" sid="TIT 3:7"/>Il l’a fait pour que, déclarés justes par sa grâce, nous devenions héritiers, selon notre espérance de la vie éternelle.<verse eid="TIT 3:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="TIT 3:8"/>C’est là une parole certaine ; et je veux que tu insistes fortement sur ces choses, afin que ceux qui ont cru en Dieu s’appliquent à accomplir des œuvres bonnes. Voilà ce qui est bon et utile aux hommes.<verse eid="TIT 3:8"/></para>
+  <para style="s1">L’attitude à avoir envers ceux qui causent des divisions</para>
+  <para style="p">
+    <verse number="9" style="v" sid="TIT 3:9"/>Mais évite les spéculations absurdes, l’étude des généalogies, les disputes et les polémiques au sujet de la Loi, car elles sont inutiles et vides de sens. <verse eid="TIT 3:9"/><verse number="10" style="v" sid="TIT 3:10"/>Si quelqu’un cause des divisions, avertis-le, une fois, deux fois, puis écarte-le de l’Eglise ; <verse eid="TIT 3:10"/><verse number="11" style="v" sid="TIT 3:11"/>car, tu peux en être certain, un tel homme est sorti du droit chemin : il fait le mal et se condamne ainsi lui-même.<verse eid="TIT 3:11"/></para>
+  <para style="s1">Dernières recommandations</para>
+  <para style="p">
+    <verse number="12" style="v" sid="TIT 3:12"/>Quand je t’aurai envoyé Artémas ou Tychique, hâte-toi de venir me rejoindre à Nicopolis<note caller="+" style="f"><char style="fr" closed="false">3.12 </char><char style="ft" closed="false">Plusieurs villes s’appelaient ainsi. Il s’agit sans doute de celle qui était située sur la côte adriatique de la Grèce (Nicopolis en Epire).</char></note>, car c’est là que j’ai décidé de passer l’hiver.<verse eid="TIT 3:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="TIT 3:13"/>Aie soin de pourvoir au voyage de Zénas, le juriste, et d’Apollos, afin que rien ne leur manque. <verse eid="TIT 3:13"/><verse number="14" style="v" sid="TIT 3:14"/>Il faut que les nôtres aussi apprennent à accomplir des œuvres bonnes pour faire face à tout besoin et toute nécessité. Ainsi, leur vie ne sera pas improductive.<verse eid="TIT 3:14"/></para>
+  <para style="s1">Salutations</para>
+  <para style="p">
+    <verse number="15" style="v" sid="TIT 3:15"/>Tous ceux qui sont avec moi te saluent. Salue ceux qui nous aiment dans la foi. Que la grâce de Dieu soit avec vous tous.<verse eid="TIT 3:15"/></para>
+  <chapter eid="TIT 3"/>
+</usx>

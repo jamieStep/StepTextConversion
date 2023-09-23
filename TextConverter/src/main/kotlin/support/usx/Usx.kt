@@ -12,7 +12,7 @@ object Usx
     /**
     * Returns details of tags which have numbered levels.
     *
-    * @param Tags with numbered levels.
+    * @return Tags with numbered levels.
     */
 
     fun getTagsWithNumberedLevels (): Set<String>

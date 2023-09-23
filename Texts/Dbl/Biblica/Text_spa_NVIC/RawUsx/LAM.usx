@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="LAM" style="id">- Spanish (Castellano): Nueva Versión Internacional</book>
+  <para style="rem">Copyright © 1999, 2005, 2017 by Biblica, Inc.®</para>
+  <para style="h">LAMENTACIONES</para>
+  <para style="toc1">Lamentaciones</para>
+  <para style="toc2">Lamentaciones</para>
+  <para style="toc3">Lm</para>
+  <para style="mt1">Lamentaciones</para>
+  <chapter number="1" style="c"/>
+  <para style="qa">Álef</para>
+  <para style="q1">
+    <note caller="+" style="f">
+      <char style="ft" closed="false">Este capítulo es un poema acróstico, que sigue el orden del alfabeto hebreo.</char>
+    </note> <verse number="1" style="v"/>¡Ay, cuán desolada se encuentra</para>
+  <para style="q2">la que fue ciudad populosa!</para>
+  <para style="q1">¡Tiene apariencia de viuda</para>
+  <para style="q2">la que fue grande entre las naciones!</para>
+  <para style="q1">¡Hoy es esclava de las provincias</para>
+  <para style="q2">la que fue gran señora entre ellas!</para>
+  <para style="b"/>
+  <para style="qa">Bet</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Amargas lágrimas derrama por las noches;</para>
+  <para style="q2">corre el llanto por sus mejillas.</para>
+  <para style="q1">No hay entre sus amantes</para>
+  <para style="q2">uno solo que la consuele.</para>
+  <para style="q1">Todos sus amigos la traicionaron;</para>
+  <para style="q2">se volvieron sus enemigos.</para>
+  <para style="b"/>
+  <para style="qa">Guímel</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Humillada, cargada de cadenas,</para>
+  <para style="q2">Judá marchó al exilio.</para>
+  <para style="q1">Una más entre las naciones,</para>
+  <para style="q2">no encuentra reposo.</para>
+  <para style="q1">Todos sus perseguidores la acosan,</para>
+  <para style="q2">la ponen en aprietos.</para>
+  <para style="b"/>
+  <para style="qa">Dálet</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Los caminos a <char style="w">Sión</char> están de duelo;</para>
+  <para style="q2">ya nadie asiste a sus fiestas solemnes.</para>
+  <para style="q1">Las <char style="w" lemma="puerta">puertas</char> de la ciudad se ven desoladas:</para>
+  <para style="q2">sollozan sus sacerdotes,</para>
+  <para style="q1">se turban sus doncellas,</para>
+  <para style="q2">¡toda ella es amargura!</para>
+  <para style="b"/>
+  <para style="qa">He</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Sus enemigos se volvieron sus amos;</para>
+  <para style="q2">¡tranquilos se ven sus adversarios!</para>
+  <para style="q1">El <char style="nd">Señor</char> la ha acongojado</para>
+  <para style="q2">por causa de sus muchos pecados.</para>
+  <para style="q1">Sus hijos marcharon al cautiverio,</para>
+  <para style="q2">arrastrados por sus enemigos.</para>
+  <para style="b"/>
+  <para style="qa">Vav</para>
+  <para style="q1">
+    <verse number="6" style="v"/>La bella Sión ha perdido</para>
+  <para style="q2">todo su antiguo esplendor.</para>
+  <para style="q1">Sus príncipes parecen venados</para>
+  <para style="q2">que vagan en busca de pastos.</para>
+  <para style="q1">Exhaustos, se dan a la fuga</para>
+  <para style="q2">frente a sus perseguidores.</para>
+  <para style="b"/>
+  <para style="qa">Zayin</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Jerusalén trae a la memoria</para>
+  <para style="q2">los tristes días de su peregrinaje;</para>
+  <para style="q1">se acuerda de todos los tesoros</para>
+  <para style="q2">que en el pasado fueron suyos.</para>
+  <para style="q1">Cuando su pueblo cayó en manos enemigas</para>
+  <para style="q2">nadie acudió en su ayuda.</para>
+  <para style="q1">Sus adversarios vieron su caída</para>
+  <para style="q2">y se burlaron de ella.</para>
+  <para style="b"/>
+  <para style="qa">Jet</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Grave es el pecado de Jerusalén;</para>
+  <para style="q2">¡por eso se ha vuelto <char style="w" lemma="impuro">impura</char>!</para>
+  <para style="q1">Los que antes la honraban ahora la desprecian,</para>
+  <para style="q2">pues han visto su desnudez;</para>
+  <para style="q1">ella misma se deshace en llanto,</para>
+  <para style="q2">y no se atreve a dar la cara.</para>
+  <para style="b"/>
+  <para style="qa">Tet</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Sus vestidos están llenos de inmundicia;</para>
+  <para style="q2">no tuvo en cuenta lo que le esperaba.</para>
+  <para style="q1">Su caída fue sorprendente;</para>
+  <para style="q2">no hubo nadie que la consolara.</para>
+  <para style="q1">«¡Mira, <char style="nd">Señor</char>, mi aflicción!</para>
+  <para style="q2">¡El enemigo ha triunfado!»</para>
+  <para style="b"/>
+  <para style="qa">Yod</para>
+  <para style="q1">
+    <verse number="10" style="v"/>El enemigo se adueñó</para>
+  <para style="q2">de todos los tesoros de Jerusalén;</para>
+  <para style="q1">vio ella penetrar en su santuario</para>
+  <para style="q2">a las naciones <char style="w" lemma="paganos">paganas</char>,</para>
+  <para style="q1">a las que tú prohibiste</para>
+  <para style="q2">entrar en tu asamblea.</para>
+  <para style="b"/>
+  <para style="qa">Caf</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Todo su pueblo solloza</para>
+  <para style="q2">y anda en busca de pan;</para>
+  <para style="q1">para mantenerse con <char style="w">vida</char></para>
+  <para style="q2">cambian por comida sus tesoros.</para>
+  <para style="q1">«¡Mira, <char style="nd">Señor</char>, date cuenta</para>
+  <para style="q2">de cómo me están humillando!»</para>
+  <para style="b"/>
+  <para style="qa">Lámed</para>
+  <para style="q1">
+    <verse number="12" style="v"/>«Fijaos vosotros, los que pasáis por el camino:</para>
+  <para style="q2">¿Acaso no os importa?</para>
+  <para style="q1">¿Dónde hay un sufrimiento como el mío,</para>
+  <para style="q2">como el que el <char style="nd">Señor</char> me ha hecho padecer,</para>
+  <para style="q1">como el que el <char style="nd">Señor</char> lanzó sobre mí</para>
+  <para style="q2">en el día de su furor?</para>
+  <para style="b"/>
+  <para style="qa">Mem</para>
+  <para style="q1">
+    <verse number="13" style="v"/>»Desde lo alto envió el Señor un fuego</para>
+  <para style="q2">que me caló hasta los huesos.</para>
+  <para style="q1">A mi paso tendió una trampa</para>
+  <para style="q2">y me hizo retroceder.</para>
+  <para style="q1">Me abandonó por completo;</para>
+  <para style="q2">a todas horas me sentía morir.</para>
+  <para style="b"/>
+  <para style="qa">Nun</para>
+  <para style="q1">
+    <verse number="14" style="v"/>»Pesan mis pecados como un yugo sobre mí;</para>
+  <para style="q2">Dios mismo me los ató con sus manos.<note caller="+" style="f"><char style="fr" closed="false">1:14 </char><char style="fq" closed="false">como un yugo … sus manos</char><char style="ft" closed="false">. Texto de difícil traducción.</char></note></para>
+  <para style="q1">Me los ha colgado al cuello,</para>
+  <para style="q2">y ha debilitado mis fuerzas.</para>
+  <para style="q1">Me ha entregado en manos de gente</para>
+  <para style="q2">a la que no puedo ofrecer resistencia.</para>
+  <para style="b"/>
+  <para style="qa">Sámej</para>
+  <para style="q1">
+    <verse number="15" style="v"/>»En mi ciudad, el Señor ha rechazado</para>
+  <para style="q2">a todos los guerreros;</para>
+  <para style="q1">ha reunido un ejército para atacarme,</para>
+  <para style="q2">para despedazar<note caller="+" style="f"><char style="fr" closed="false">1:15 </char><char style="fq" closed="false">ha reunido … despedazar</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">ha establecido mi tiempo, / cuando él despedazará.</char></note> a mis jóvenes.</para>
+  <para style="q1">El Señor ha aplastado a la virginal hija de Judá</para>
+  <para style="q2">como quien pisa uvas para hacer vino.</para>
+  <para style="b"/>
+  <para style="qa">Ayin</para>
+  <para style="q1">
+    <verse number="16" style="v"/>»Todo esto me hace llorar;</para>
+  <para style="q2">los ojos se me nublan de llanto.</para>
+  <para style="q1">No tengo cerca a nadie que me consuele;</para>
+  <para style="q2">no tengo a nadie que me reanime.</para>
+  <para style="q1">Mis hijos quedaron abandonados</para>
+  <para style="q2">porque el enemigo salió victorioso».</para>
+  <para style="b"/>
+  <para style="qa">Pe</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Sión clama pidiendo ayuda,<note caller="+" style="f"><char style="fr" closed="false">1:17 </char><char style="fq" closed="false">clama pidiendo ayuda</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">extiende los brazos.</char></note></para>
+  <para style="q2">pero no hay quien la consuele.</para>
+  <para style="q1">Por decreto del <char style="nd">Señor</char>,</para>
+  <para style="q2">los vecinos de Jacob son ahora sus enemigos;</para>
+  <para style="q1">Jerusalén ha llegado a ser</para>
+  <para style="q2">basura e inmundicia.</para>
+  <para style="b"/>
+  <para style="qa">Tsade</para>
+  <para style="q1">
+    <verse number="18" style="v"/>«El <char style="nd">Señor</char> es justo,</para>
+  <para style="q2">pero yo me rebelé contra sus <char style="w" lemma="ley">leyes</char>.</para>
+  <para style="q1">Escuchad, vosotros los pueblos;</para>
+  <para style="q2">fijaos en mi sufrimiento.</para>
+  <para style="q1">Mis jóvenes y mis doncellas</para>
+  <para style="q2">han marchado al destierro.</para>
+  <para style="b"/>
+  <para style="qa">Qof</para>
+  <para style="q1">
+    <verse number="19" style="v"/>»Llamé a mis amantes,</para>
+  <para style="q2">pero ellos me traicionaron.</para>
+  <para style="q1">Mis sacerdotes y mis <char style="w" lemma="anciano">ancianos</char></para>
+  <para style="q2">perecieron en la ciudad,</para>
+  <para style="q1">mientras buscaban alimentos</para>
+  <para style="q2">para mantenerse con vida.</para>
+  <para style="b"/>
+  <para style="qa">Resh</para>
+  <para style="q1">
+    <verse number="20" style="v"/>»¡Mírame, <char style="nd">Señor</char>, que me encuentro angustiada!</para>
+  <para style="q2">¡Siento una profunda agonía!<note caller="+" style="f"><char style="fr" closed="false">1:20 </char><char style="fq" closed="false">¡Siento … agonía! </char><char style="ft" closed="false">Lit. </char><char style="fqa" closed="false">Mis entrañas se agitan.</char></note></para>
+  <para style="q1">Mi corazón está desconcertado,</para>
+  <para style="q2">pues he sido muy rebelde.</para>
+  <para style="q1">Allá afuera, la espada me deja sin hijos;</para>
+  <para style="q2">aquí adentro, hay un ambiente de muerte.</para>
+  <para style="b"/>
+  <para style="qa">Shin</para>
+  <para style="q1">
+    <verse number="21" style="v"/>»La gente ha escuchado mi gemir,</para>
+  <para style="q2">pero no hay quien me consuele.</para>
+  <para style="q1">Todos mis enemigos conocen mi pesar</para>
+  <para style="q2">y se alegran de lo que has hecho conmigo.</para>
+  <para style="q1">¡Manda ya tu castigo anunciado,</para>
+  <para style="q2">para que sufran lo que he sufrido!</para>
+  <para style="b"/>
+  <para style="qa">Tav</para>
+  <para style="q1">
+    <verse number="22" style="v"/>»¡Que llegue a tu presencia</para>
+  <para style="q2">toda su maldad!</para>
+  <para style="q1">¡Trátalos como me has tratado a mí</para>
+  <para style="q2">por causa de todos mis pecados!</para>
+  <para style="q1">Son muchos mis gemidos,</para>
+  <para style="q2">y mi <char style="w">corazón</char> desfallece».</para>
+  <para style="b"/>
+  <chapter number="2" style="c"/>
+  <para style="qa">Álef</para>
+  <para style="q1">
+    <note caller="+" style="f">
+      <char style="ft" closed="false">Este capítulo es un poema acróstico, que sigue el orden del alfabeto hebreo.</char>
+    </note> <verse number="1" style="v"/>¡Ay, el Señor ha eclipsado a la bella <char style="w">Sión</char></para>
+  <para style="q2">con la nube de su furor!<note caller="+" style="f"><char style="fr" closed="false">2:1 </char><char style="fq" closed="false">¡Ay </char><char style="fq" closed="false">… furor! </char><char style="ft" closed="false">Alt. </char><char style="fqa" closed="false">¡Cómo el Señor, en su enojo, / ha tratado con reproches a la hija de Sión!</char></note></para>
+  <para style="q1">Desde el cielo echó por tierra</para>
+  <para style="q2">el esplendor de Israel;</para>
+  <para style="q1">en el día de su ira se olvidó</para>
+  <para style="q2">del estrado de sus pies.</para>
+  <para style="b"/>
+  <para style="qa">Bet</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Sin compasión el Señor ha destruido</para>
+  <para style="q2">todas las moradas de Jacob;</para>
+  <para style="q1">en su furor ha derribado</para>
+  <para style="q2">los baluartes de la bella Judá</para>
+  <para style="q1">y ha puesto su honra por los suelos</para>
+  <para style="q2">al derrocar a su rey y a sus príncipes.</para>
+  <para style="b"/>
+  <para style="qa">Guímel</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Dio rienda suelta a su furor</para>
+  <para style="q2">y deshizo todo el poder<note caller="+" style="f"><char style="fr" closed="false">2:3 </char><char style="fq" closed="false">todo el poder</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">todo cuerno.</char></note> de Israel.</para>
+  <para style="q1">Nos vimos frente al enemigo,</para>
+  <para style="q2">y el Señor nos negó su ayuda.<note caller="+" style="f"><char style="fr" closed="false">2:3 </char><char style="fq" closed="false">nos negó su ayuda</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">retiró su mano derecha.</char></note></para>
+  <para style="q1">Ardió en Jacob como un fuego encendido</para>
+  <para style="q2">que consumía cuanto le rodeaba.</para>
+  <para style="b"/>
+  <para style="qa">Dálet</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Como enemigo, tensó el arco;</para>
+  <para style="q2">lista estaba su mano derecha.</para>
+  <para style="q1">Como enemigo, eliminó</para>
+  <para style="q2">a nuestros seres queridos.</para>
+  <para style="q1">Como fuego, derramó su ira</para>
+  <para style="q2">sobre las tiendas de la bella Sión.</para>
+  <para style="b"/>
+  <para style="qa">He</para>
+  <para style="q1">
+    <verse number="5" style="v"/>El Señor se porta como enemigo:</para>
+  <para style="q2">ha destruido a Israel.</para>
+  <para style="q1">Ha destruido todos sus palacios</para>
+  <para style="q2">y derribado sus baluartes.</para>
+  <para style="q1">Ha multiplicado el luto y los lamentos</para>
+  <para style="q2">por la bella Judá.</para>
+  <para style="b"/>
+  <para style="qa">Vav</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Ha desolado su morada como a un jardín;</para>
+  <para style="q2">ha derribado su lugar de reunión.</para>
+  <para style="q1">El <char style="nd">Señor</char> ha hecho que Sión olvide</para>
+  <para style="q2">sus fiestas solemnes y sus <char style="w" lemma="sábado">sábados</char>;</para>
+  <para style="q1">se desató su furia contra el rey</para>
+  <para style="q2">y dejó de lado al sacerdote.</para>
+  <para style="b"/>
+  <para style="qa">Zayin</para>
+  <para style="q1">
+    <verse number="7" style="v"/>El Señor ha rechazado su altar;</para>
+  <para style="q2">ha abandonado su santuario.</para>
+  <para style="q1">Ha puesto en manos del enemigo</para>
+  <para style="q2">las murallas de sus palacios.</para>
+  <para style="q1">¡Lanzan gritos en la casa del <char style="nd">Señor</char></para>
+  <para style="q2">como en día de fiesta!</para>
+  <para style="b"/>
+  <para style="qa">Jet</para>
+  <para style="q1">
+    <verse number="8" style="v"/>El <char style="nd">Señor</char> decidió derribar</para>
+  <para style="q2">la muralla que rodea a la bella Sión.</para>
+  <para style="q1">Tomó la vara y midió;</para>
+  <para style="q2">destruyó sin compasión.</para>
+  <para style="q1">Hubo lamentos en rampas y muros;</para>
+  <para style="q2">todos ellos se derrumbaron.</para>
+  <para style="b"/>
+  <para style="qa">Tet</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Las <char style="w" lemma="puerta">puertas</char> se han desplomado;</para>
+  <para style="q2">él rompió por completo sus cerrojos.</para>
+  <para style="q1">Su rey y sus príncipes</para>
+  <para style="q2">andan entre las naciones;</para>
+  <para style="q1">ya no hay ley ni profetas,</para>
+  <para style="q2">ni visiones de parte del <char style="nd">Señor</char>.</para>
+  <para style="b"/>
+  <para style="qa">Yod</para>
+  <para style="q1">
+    <verse number="10" style="v"/>En la bella Sión, los ancianos</para>
+  <para style="q2">se sientan silenciosos en el suelo;</para>
+  <para style="q1">se echan ceniza sobre la cabeza</para>
+  <para style="q2">y se visten de luto.</para>
+  <para style="q1">Postradas yacen en el suelo</para>
+  <para style="q2">las jóvenes de Jerusalén.</para>
+  <para style="b"/>
+  <para style="qa">Caf</para>
+  <para style="q1">
+    <verse number="11" style="v"/>El llanto me consume los ojos;</para>
+  <para style="q2">siento una profunda agonía.<note caller="+" style="f"><char style="fr" closed="false">2:11 </char><char style="fq" closed="false">siento … agonía</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">mis entrañas se agitan.</char></note></para>
+  <para style="q1">Estoy con el ánimo<note caller="+" style="f"><char style="fr" closed="false">2:11 </char><char style="fq" closed="false">Estoy con el ánimo</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">Mi hígado está derramado.</char></note> por los suelos</para>
+  <para style="q2">porque mi pueblo ha sido destruido.</para>
+  <para style="q1">Niños e infantes desfallecen</para>
+  <para style="q2">por las calles de la ciudad.</para>
+  <para style="b"/>
+  <para style="qa">Lámed</para>
+  <para style="q1">
+    <verse number="12" style="v"/>«¿Dónde hay pan y vino?»,</para>
+  <para style="q2">preguntan a sus madres</para>
+  <para style="q1">mientras caen por las calles</para>
+  <para style="q2">como heridos de muerte,</para>
+  <para style="q1">mientras en los brazos maternos</para>
+  <para style="q2">exhalan el último suspiro.</para>
+  <para style="b"/>
+  <para style="qa">Mem</para>
+  <para style="q1">
+    <verse number="13" style="v"/>¿Qué puedo decir de ti, bella Jerusalén?</para>
+  <para style="q2">¿A qué te puedo comparar?</para>
+  <para style="q1">¿Qué ejemplo darte como consuelo,</para>
+  <para style="q2">virginal ciudad de Sión?</para>
+  <para style="q1">Profundas como el mar son tus heridas.</para>
+  <para style="q2">¿Quién podría devolverte la salud?</para>
+  <para style="b"/>
+  <para style="qa">Nun</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Tus profetas te anunciaron</para>
+  <para style="q2">visiones falsas y engañosas.</para>
+  <para style="q1">No denunciaron tu maldad;</para>
+  <para style="q2">no evitaron tu cautiverio.</para>
+  <para style="q1">Los mensajes que te anunciaban</para>
+  <para style="q2">eran patrañas.</para>
+  <para style="b"/>
+  <para style="qa">Sámej</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Cuantos pasan por el camino</para>
+  <para style="q2">aplauden burlones al verte.</para>
+  <para style="q1">Ante ti, bella Jerusalén, hacen muecas,</para>
+  <para style="q2">y entre silbidos preguntan:</para>
+  <para style="q1">«¿Es esta la ciudad de belleza perfecta?</para>
+  <para style="q2">¿Es esta la alegría de toda la tierra?»</para>
+  <para style="b"/>
+  <para style="qa">Pe</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Todos tus enemigos abren la boca</para>
+  <para style="q2">para hablar mal de ti;</para>
+  <para style="q1">rechinando los dientes, declaran burlones:</para>
+  <para style="q2">«Nos la hemos comido viva.</para>
+  <para style="q1">Llegó el día tan esperado;</para>
+  <para style="q2">¡hemos vivido para verlo!»</para>
+  <para style="b"/>
+  <para style="qa">Ayin</para>
+  <para style="q1">
+    <verse number="17" style="v"/>El <char style="nd">Señor</char> ha llevado a cabo sus planes;</para>
+  <para style="q2">ha cumplido su palabra,</para>
+  <para style="q2">que decretó hace mucho tiempo.</para>
+  <para style="q1">Sin piedad, te echó por tierra;</para>
+  <para style="q2">dejó que el enemigo se burlara de ti,</para>
+  <para style="q2">y enalteció el poder<note caller="+" style="f"><char style="fr" closed="false">2:17 </char><char style="fq" closed="false">poder</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">cuerno.</char></note> de tus oponentes.</para>
+  <para style="b"/>
+  <para style="qa">Tsade</para>
+  <para style="q1">
+    <verse number="18" style="v"/>El <char style="w">corazón</char> de la gente</para>
+  <para style="q2">clama al Señor con angustia.</para>
+  <para style="q1">Bella Sión amurallada,</para>
+  <para style="q2">¡deja que día y noche</para>
+  <para style="q2">corran tus lágrimas como un río!</para>
+  <para style="q1">¡No te des un momento de descanso!</para>
+  <para style="q2">¡No retengas el llanto de tus ojos!<note caller="+" style="f"><char style="fr" closed="false">2:18 </char><char style="fq" closed="false">no retengas … ojos</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">no acalles a la niña de tus ojos.</char></note></para>
+  <para style="b"/>
+  <para style="qa">Qof</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Levántate y clama por las noches,</para>
+  <para style="q2">cuando empiece la vigilancia nocturna.</para>
+  <para style="q1">Deja correr el llanto de tu corazón</para>
+  <para style="q2">como ofrenda derramada ante el Señor.</para>
+  <para style="q1">Eleva tus manos a Dios en oración</para>
+  <para style="q2">por la <char style="w">vida</char> de tus hijos,</para>
+  <para style="q1">que desfallecen de hambre</para>
+  <para style="q2">y quedan tendidos por las calles.</para>
+  <para style="b"/>
+  <para style="qa">Resh</para>
+  <para style="q1">
+    <verse number="20" style="v"/>«Mira, <char style="nd">Señor</char>, y ponte a pensar:</para>
+  <para style="q2">¿A quién trataste alguna vez así?</para>
+  <para style="q1">¿Habrán de comerse las mujeres</para>
+  <para style="q2">a sus hijos, fruto de sus entrañas?</para>
+  <para style="q1">¿Habrán de matar a sacerdotes y profetas</para>
+  <para style="q2">en el santuario del Señor?</para>
+  <para style="b"/>
+  <para style="qa">Shin</para>
+  <para style="q1">
+    <verse number="21" style="v"/>»Jóvenes y ancianos por igual</para>
+  <para style="q2">yacen en el polvo de las calles;</para>
+  <para style="q1">mis jóvenes y mis doncellas</para>
+  <para style="q2">cayeron a filo de espada.</para>
+  <para style="q1">En tu enojo les quitaste la vida;</para>
+  <para style="q2">¡los masacraste sin piedad!</para>
+  <para style="b"/>
+  <para style="qa">Tav</para>
+  <para style="q1">
+    <verse number="22" style="v"/>»Como si invitaras a una fiesta solemne,</para>
+  <para style="q2">enviaste contra mí terror de todas partes.</para>
+  <para style="q1">En el día de la ira del <char style="nd">Señor</char>,</para>
+  <para style="q2">nadie pudo escapar, nadie quedó con vida.</para>
+  <para style="q1">A mis seres queridos, a los que eduqué,</para>
+  <para style="q2">los aniquiló el enemigo».</para>
+  <para style="b"/>
+  <chapter number="3" style="c"/>
+  <para style="qa">Álef</para>
+  <para style="q1">
+    <note caller="+" style="f">
+      <char style="ft" closed="false">Este capítulo es un poema acróstico, que sigue el orden del alfabeto hebreo.</char>
+    </note> <verse number="1" style="v"/>Yo soy aquel que ha sufrido la aflicción</para>
+  <para style="q2">bajo la vara de su ira.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Me ha hecho andar en las tinieblas;</para>
+  <para style="q2">me ha apartado de la luz.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Una y otra vez, y a todas horas,</para>
+  <para style="q2">su mano se ha vuelto contra mí.</para>
+  <para style="b"/>
+  <para style="qa">Bet</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Me ha marchitado la carne y la piel;</para>
+  <para style="q2">me ha quebrantado los huesos.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Me ha tendido un cerco</para>
+  <para style="q2">de amargura y tribulaciones.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Me obliga a vivir en las tinieblas,</para>
+  <para style="q2">como a los que hace tiempo murieron.</para>
+  <para style="b"/>
+  <para style="qa">Guímel</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Me tiene encerrado, no puedo escapar;</para>
+  <para style="q2">me ha puesto pesadas cadenas.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Por más que grito y pido ayuda,</para>
+  <para style="q2">él se niega a escuchar mi oración.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Ha sembrado de piedras mi camino;</para>
+  <para style="q2">ha torcido mis senderos.</para>
+  <para style="b"/>
+  <para style="qa">Dálet</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Me vigila como oso agazapado;</para>
+  <para style="q2">me acecha como león.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Me aparta del camino para despedazarme;</para>
+  <para style="q2">¡me deja del todo desvalido!</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Con el arco tenso,</para>
+  <para style="q2">me ha hecho blanco de sus flechas.</para>
+  <para style="b"/>
+  <para style="qa">He</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Me ha partido el <char style="w">corazón</char></para>
+  <para style="q2">con las flechas de su aljaba.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Soy el hazmerreír de todo mi pueblo;</para>
+  <para style="q2">todo el día me parodian.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Me ha llenado de amargura,</para>
+  <para style="q2">me ha hecho beber hiel.</para>
+  <para style="b"/>
+  <para style="qa">Vav</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Me ha estrellado contra el suelo;</para>
+  <para style="q2">me ha hecho morder el polvo.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Me ha quitado la <char style="w">paz</char>;</para>
+  <para style="q2">ya no recuerdo lo que es la dicha.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Y digo: «La vida se me acaba,</para>
+  <para style="q2">junto con mi esperanza en el <char style="nd">Señor</char>».</para>
+  <para style="b"/>
+  <para style="qa">Zayin</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Recuerda que ando errante y afligido,</para>
+  <para style="q2">que estoy saturado de hiel y amargura.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Siempre tengo esto presente,</para>
+  <para style="q2">y por eso me deprimo.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Pero algo más me viene a la memoria,</para>
+  <para style="q2">lo cual me llena de esperanza:</para>
+  <para style="b"/>
+  <para style="qa">Jet</para>
+  <para style="q1">
+    <verse number="22" style="v"/>El gran amor del <char style="nd">Señor</char> nunca se acaba,<note caller="+" style="f"><char style="fr" closed="false">3:22 </char><char style="fq" closed="false">El gran … acaba </char><char style="ft" closed="false">(Siríaca y Targum); </char><char style="fqa" closed="false">Por el gran amor del <char style="nd">Señor</char> no somos consumidos </char><char style="ft" closed="false">(TM).</char></note></para>
+  <para style="q2">y su compasión jamás se agota.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Cada mañana se renuevan sus bondades;</para>
+  <para style="q2">¡muy grande es su fidelidad!</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Por tanto, digo:</para>
+  <para style="q2">«El <char style="nd">Señor</char> es todo lo que tengo.</para>
+  <para style="q2">¡En él esperaré!»</para>
+  <para style="b"/>
+  <para style="qa">Tet</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Bueno es el <char style="nd">Señor</char> con quienes en él confían,</para>
+  <para style="q2">con todos los que lo buscan.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Bueno es esperar calladamente</para>
+  <para style="q2">que el <char style="nd">Señor</char> venga a <char style="w" lemma="salvación">salvarnos</char>.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Bueno es que el hombre aprenda</para>
+  <para style="q2">a llevar el yugo desde su juventud.</para>
+  <para style="b"/>
+  <para style="qa">Yod</para>
+  <para style="q1">
+    <verse number="28" style="v"/>¡Dejadle estar solo y en silencio,</para>
+  <para style="q2">porque así el <char style="nd">Señor</char> se lo impuso!</para>
+  <para style="q1">
+    <verse number="29" style="v"/>¡Que hunda el rostro en el polvo!</para>
+  <para style="q2">¡Tal vez haya esperanza todavía!</para>
+  <para style="q1">
+    <verse number="30" style="v"/>¡Que dé la otra mejilla a quien lo hiera,</para>
+  <para style="q2">y quede así cubierto de oprobio!</para>
+  <para style="b"/>
+  <para style="qa">Caf</para>
+  <para style="q1">
+    <verse number="31" style="v"/>El Señor nos ha rechazado,</para>
+  <para style="q2">pero no será para siempre.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>Nos hace sufrir, pero también nos compadece,</para>
+  <para style="q2">porque es muy grande su amor.</para>
+  <para style="q1">
+    <verse number="33" style="v"/>El Señor nos hiere y nos aflige,</para>
+  <para style="q2">pero no porque sea de su agrado.</para>
+  <para style="b"/>
+  <para style="qa">Lámed</para>
+  <para style="q1">
+    <verse number="34" style="v"/>Cuando se aplasta bajo el pie</para>
+  <para style="q2">a todos los prisioneros de la tierra,</para>
+  <para style="q1">
+    <verse number="35" style="v"/>cuando en presencia del <char style="w">Altísimo</char></para>
+  <para style="q2">se le niegan al <char style="w">hombre</char> sus derechos</para>
+  <para style="q1">
+    <verse number="36" style="v"/>y no se le hace justicia,</para>
+  <para style="q2">¿el Señor no se da cuenta?</para>
+  <para style="b"/>
+  <para style="qa">Mem</para>
+  <para style="q1">
+    <verse number="37" style="v"/>¿Quién puede anunciar algo y hacerlo realidad</para>
+  <para style="q2">sin que el Señor dé la orden?</para>
+  <para style="q1">
+    <verse number="38" style="v"/>¿No es acaso por mandato del Altísimo</para>
+  <para style="q2">por lo que acontece lo bueno y lo malo?</para>
+  <para style="q1">
+    <verse number="39" style="v"/>¿Por qué habría de quejarse en vida</para>
+  <para style="q2">quien es castigado por sus pecados?</para>
+  <para style="b"/>
+  <para style="qa">Nun</para>
+  <para style="q1">
+    <verse number="40" style="v"/>Hagamos un examen de conciencia</para>
+  <para style="q2">y volvamos al <char style="w">camino</char> del <char style="nd">Señor</char>.</para>
+  <para style="q1">
+    <verse number="41" style="v"/>Elevemos al Dios de los cielos</para>
+  <para style="q2">nuestro corazón y nuestras manos.</para>
+  <para style="q1">
+    <verse number="42" style="v"/>Hemos pecado, hemos sido rebeldes,</para>
+  <para style="q2">y tú no has querido perdonarnos.</para>
+  <para style="b"/>
+  <para style="qa">Sámej</para>
+  <para style="q1">
+    <verse number="43" style="v"/>Ardiendo en ira nos persigues;</para>
+  <para style="q2">nos masacras sin piedad.</para>
+  <para style="q1">
+    <verse number="44" style="v"/>Te envuelves en una nube</para>
+  <para style="q2">para no escuchar nuestra oración.</para>
+  <para style="q1">
+    <verse number="45" style="v"/>Como a escoria despreciable,</para>
+  <para style="q2">nos has arrojado entre las naciones.</para>
+  <para style="b"/>
+  <para style="qa">Pe</para>
+  <para style="q1">
+    <verse number="46" style="v"/>Todos nuestros enemigos abren la boca</para>
+  <para style="q2">para hablar mal de nosotros.</para>
+  <para style="q1">
+    <verse number="47" style="v"/>Hemos sufrido terrores, caídas,</para>
+  <para style="q2">ruina y destrucción.</para>
+  <para style="q1">
+    <verse number="48" style="v"/>Ríos de lágrimas corren por mis mejillas</para>
+  <para style="q2">porque ha sido destruida la capital de mi pueblo.</para>
+  <para style="b"/>
+  <para style="qa">Ayin</para>
+  <para style="q1">
+    <verse number="49" style="v"/>Se inundarán de lágrimas mis ojos,</para>
+  <para style="q2">sin cesar y sin consuelo,</para>
+  <para style="q1">
+    <verse number="50" style="v"/>hasta que desde el cielo</para>
+  <para style="q2">el <char style="nd">Señor</char> se digne mirarnos.</para>
+  <para style="q1">
+    <verse number="51" style="v"/>Me duele en lo más profundo del <char style="w">alma</char></para>
+  <para style="q2">ver sufrir a las mujeres de mi ciudad.</para>
+  <para style="b"/>
+  <para style="qa">Tsade</para>
+  <para style="q1">
+    <verse number="52" style="v"/>Mis enemigos me persiguen sin razón,</para>
+  <para style="q2">y quieren atraparme como a un ave.</para>
+  <para style="q1">
+    <verse number="53" style="v"/>Me quieren enterrar vivo</para>
+  <para style="q2">y taparme con piedras la salida.</para>
+  <para style="q1">
+    <verse number="54" style="v"/>Las aguas me han cubierto la cabeza;</para>
+  <para style="q2">parece que me ha llegado el fin.</para>
+  <para style="b"/>
+  <para style="qa">Qof</para>
+  <para style="q1">
+    <verse number="55" style="v"/>Desde lo más profundo de la fosa</para>
+  <para style="q2">invoqué, <char style="nd">Señor</char>, tu nombre,</para>
+  <para style="q1">
+    <verse number="56" style="v"/>y tú escuchaste mi plegaria;</para>
+  <para style="q2">no cerraste tus oídos a mi clamor.</para>
+  <para style="q1">
+    <verse number="57" style="v"/>Te invoqué, y viniste a mí;</para>
+  <para style="q2">«No temas», me dijiste.</para>
+  <para style="b"/>
+  <para style="qa">Resh</para>
+  <para style="q1">
+    <verse number="58" style="v"/>Tú, Señor, te pusiste de mi parte</para>
+  <para style="q2">y me salvaste la vida.</para>
+  <para style="q1">
+    <verse number="59" style="v"/>Tú, <char style="nd">Señor</char>, viste el mal que me causaron;</para>
+  <para style="q2">¡hazme justicia!</para>
+  <para style="q1">
+    <verse number="60" style="v"/>Tú notaste su sed de venganza</para>
+  <para style="q2">y todas sus maquinaciones en mi contra.</para>
+  <para style="b"/>
+  <para style="qa">Shin</para>
+  <para style="q1">
+    <verse number="61" style="v"/>
+    <char style="nd">Señor</char>, tú has escuchado sus insultos</para>
+  <para style="q2">y todas sus maquinaciones en mi contra;</para>
+  <para style="q1">
+    <verse number="62" style="v"/>tú sabes que todo el día mis enemigos</para>
+  <para style="q2">murmuran y se confabulan contra mí.</para>
+  <para style="q1">
+    <verse number="63" style="v"/>¡Míralos! Hagan lo que hagan,<note caller="+" style="f"><char style="fr" closed="false">3:63 </char><char style="fq" closed="false">¡Míralos! Hagan lo que hagan</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">Su sentarse y su levantarse mira.</char></note></para>
+  <para style="q2">se burlan de mí en sus canciones.</para>
+  <para style="b"/>
+  <para style="qa">Tav</para>
+  <para style="q1">
+    <verse number="64" style="v"/>¡Dales, <char style="nd">Señor</char>, su merecido</para>
+  <para style="q2">por todo lo que han hecho!</para>
+  <para style="q1">
+    <verse number="65" style="v"/>Oscurece su entendimiento,</para>
+  <para style="q2">¡y caiga sobre ellos tu maldición!</para>
+  <para style="q1">
+    <verse number="66" style="v"/>Persíguelos, <char style="nd">Señor</char>, en tu enojo,</para>
+  <para style="q2">y bórralos de este mundo.</para>
+  <para style="b"/>
+  <chapter number="4" style="c"/>
+  <para style="qa">Álef</para>
+  <para style="q1">
+    <note caller="+" style="f">
+      <char style="ft" closed="false">Este capítulo es un poema acróstico, que sigue el orden del alfabeto hebreo.</char>
+    </note> <verse number="1" style="v"/>¡El oro ha perdido su lustre!</para>
+  <para style="q2">¡Se ha empañado el oro fino!</para>
+  <para style="q1">¡Regadas por las esquinas de las calles</para>
+  <para style="q2">se han quedado las joyas sagradas!</para>
+  <para style="b"/>
+  <para style="qa">Bet</para>
+  <para style="q1">
+    <verse number="2" style="v"/>A los apuestos habitantes de <char style="w">Sión</char>,</para>
+  <para style="q2">que antaño valían su peso en oro,</para>
+  <para style="q1">hoy se les ve como vasijas de barro,</para>
+  <para style="q2">¡como la obra de un alfarero!</para>
+  <para style="b"/>
+  <para style="qa">Guímel</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Hasta los chacales ofrecen las ubres</para>
+  <para style="q2">y dan leche a sus cachorros,</para>
+  <para style="q1">pero Jerusalén<note caller="+" style="f"><char style="fr" closed="false">4:3 </char><char style="fq" closed="false">Jerusalén</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">la hija de mi pueblo</char><char style="ft" closed="false">; también en vv. 6 y 10.</char></note> ya no tiene sentimientos;</para>
+  <para style="q2">¡es como los avestruces del desierto!</para>
+  <para style="b"/>
+  <para style="qa">Dálet</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Tanta es la sed que tienen los niños</para>
+  <para style="q2">que la lengua se les pega al paladar.</para>
+  <para style="q1">Piden pan los pequeñuelos,</para>
+  <para style="q2">pero nadie se lo da.</para>
+  <para style="b"/>
+  <para style="qa">He</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Quienes antes comían los más ricos manjares</para>
+  <para style="q2">hoy desfallecen de hambre por las calles.</para>
+  <para style="q1">Quienes antes se vestían de fina púrpura</para>
+  <para style="q2">hoy se revuelcan en la inmundicia.</para>
+  <para style="b"/>
+  <para style="qa">Vav</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Más grande que los pecados de Sodoma</para>
+  <para style="q2">es la iniquidad de Jerusalén;</para>
+  <para style="q1">¡fue derribada en un instante,</para>
+  <para style="q2">y nadie le tendió la mano!</para>
+  <para style="b"/>
+  <para style="qa">Zayin</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Más radiantes que la nieve eran sus príncipes,</para>
+  <para style="q2">y más blancos que la leche;</para>
+  <para style="q1">más rosado que el coral era su cuerpo;</para>
+  <para style="q2">su apariencia era la del zafiro.</para>
+  <para style="b"/>
+  <para style="qa">Jet</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Pero ahora están más sucios que el hollín;</para>
+  <para style="q2">en la calle nadie los reconoce.</para>
+  <para style="q1">Su piel, reseca como la leña,</para>
+  <para style="q2">se les pega a los huesos.</para>
+  <para style="b"/>
+  <para style="qa">Tet</para>
+  <para style="q1">
+    <verse number="9" style="v"/>¡<char style="w" lemma="dichoso">Dichosos</char> los que mueren por la espada,</para>
+  <para style="q2">más que los que mueren de hambre!</para>
+  <para style="q1">Torturados por el hambre desfallecen,</para>
+  <para style="q2">pues no cuentan con los frutos del campo.</para>
+  <para style="b"/>
+  <para style="qa">Yod</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Con sus manos, mujeres compasivas</para>
+  <para style="q2">cocinaron a sus propios hijos,</para>
+  <para style="q1">y esos niños fueron su alimento</para>
+  <para style="q2">cuando Jerusalén fue destruida.</para>
+  <para style="b"/>
+  <para style="qa">Caf</para>
+  <para style="q1">
+    <verse number="11" style="v"/>El <char style="nd">Señor</char> dio rienda suelta a su enojo;</para>
+  <para style="q2">dejó correr el ardor de su ira.</para>
+  <para style="q1">Le prendió fuego a Sión</para>
+  <para style="q2">y la consumió hasta sus cimientos.</para>
+  <para style="b"/>
+  <para style="qa">Lámed</para>
+  <para style="q1">
+    <verse number="12" style="v"/>No creían los reyes de la tierra,</para>
+  <para style="q2">ni tampoco los habitantes del mundo,</para>
+  <para style="q1">que los enemigos y adversarios de Jerusalén</para>
+  <para style="q2">cruzarían alguna vez sus <char style="w" lemma="puerta">puertas</char>.</para>
+  <para style="b"/>
+  <para style="qa">Mem</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Pero sucedió</para>
+  <para style="q2">por los pecados de sus profetas,</para>
+  <para style="q2">por las iniquidades de sus sacerdotes,</para>
+  <para style="q1">¡por derramar sangre inocente</para>
+  <para style="q2">en las calles de la ciudad!</para>
+  <para style="b"/>
+  <para style="qa">Nun</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Con las manos manchadas de sangre,</para>
+  <para style="q2">andan por las calles como ciegos.</para>
+  <para style="q1">No hay nadie que se atreva</para>
+  <para style="q2">a tocar siquiera sus vestidos.</para>
+  <para style="b"/>
+  <para style="qa">Sámej</para>
+  <para style="q1">
+    <verse number="15" style="v"/>«¡Largo de aquí, <char style="w" lemma="impuro">impuros</char>!», les grita la gente.</para>
+  <para style="q2">«¡Fuera! ¡Fuera! ¡No nos toquéis!»</para>
+  <para style="q1">Entre las naciones <char style="w" lemma="paganos">paganas</char> dicen de ellos:</para>
+  <para style="q2">«Son unos vagabundos, que andan huyendo.</para>
+  <para style="q2">No pueden quedarse aquí más tiempo».</para>
+  <para style="b"/>
+  <para style="qa">Pe</para>
+  <para style="q1">
+    <verse number="16" style="v"/>El <char style="nd">Señor</char> mismo los ha dispersado;</para>
+  <para style="q2">ya no se preocupa por ellos.</para>
+  <para style="q1">Ya no hay respeto para los sacerdotes</para>
+  <para style="q2">ni compasión para los ancianos.</para>
+  <para style="b"/>
+  <para style="qa">Ayin</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Para colmo, desfallecen nuestros ojos</para>
+  <para style="q2">esperando en vano que alguien nos ayude.</para>
+  <para style="q1">Desde nuestras torres esperamos</para>
+  <para style="q2">a una nación que no puede salvarnos.</para>
+  <para style="b"/>
+  <para style="qa">Tsade</para>
+  <para style="q1">
+    <verse number="18" style="v"/>A cada paso nos acechan;</para>
+  <para style="q2">no podemos ya andar por las calles.</para>
+  <para style="q1">Nuestro fin se acerca, nos ha llegado la hora;</para>
+  <para style="q2">¡nuestros días están contados!</para>
+  <para style="b"/>
+  <para style="qa">Qof</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Nuestros perseguidores resultaron</para>
+  <para style="q2">más veloces que las águilas del cielo;</para>
+  <para style="q1">nos persiguieron por las montañas,</para>
+  <para style="q2">nos acecharon en el desierto.</para>
+  <para style="b"/>
+  <para style="qa">Resh</para>
+  <para style="q1">
+    <verse number="20" style="v"/>También cayó en sus redes el <char style="w">ungido</char> del <char style="nd">Señor</char>,</para>
+  <para style="q2">que era nuestra razón de vivir.</para>
+  <para style="q1">Era él de quien decíamos:</para>
+  <para style="q2">¡Viviremos bajo su sombra entre las naciones!</para>
+  <para style="b"/>
+  <para style="qa">Shin</para>
+  <para style="q1">
+    <verse number="21" style="v"/>¡Regocíjate y alégrate, capital de Edom,</para>
+  <para style="q2">que vives como reina en la tierra de Uz!</para>
+  <para style="q1">¡Pero ya tendrás que beber de esta copa,</para>
+  <para style="q2">y quedarás embriagada y desnuda!</para>
+  <para style="b"/>
+  <para style="qa">Tav</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Tu castigo se ha cumplido, bella Sión;</para>
+  <para style="q2">Dios no volverá a desterrarte.</para>
+  <para style="q1">Pero a ti, capital de Edom, te castigará por tu maldad</para>
+  <para style="q2">y pondrá al descubierto tus pecados.</para>
+  <para style="b"/>
+  <chapter number="5" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Recuerda, <char style="nd">Señor</char>, lo que nos ha sucedido;</para>
+  <para style="q2">ten en cuenta nuestro oprobio.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Nuestra heredad ha caído en manos extrañas;</para>
+  <para style="q2">nuestro hogar, en manos de extranjeros.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>No tenemos padre, hemos quedado huérfanos;</para>
+  <para style="q2">nuestras madres se han quedado viudas.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>El agua que bebemos, tenemos que pagarla;</para>
+  <para style="q2">la leña, tenemos que comprarla.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Los que nos persiguen nos pisan los talones;<note caller="+" style="f"><char style="fr" closed="false">5:5 </char><char style="fq" closed="false">Los que … los talones</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">Sobre nuestro cuello nos persiguen.</char></note></para>
+  <para style="q2">estamos fatigados y no hallamos descanso.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Hicimos tratos<note caller="+" style="f"><char style="fr" closed="false">5:6 </char><char style="fq" closed="false">Hicimos tratos</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">Dimos la mano.</char></note> con Egipto y con Asiria</para>
+  <para style="q2">para conseguir alimentos.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Nuestros padres pecaron y murieron,</para>
+  <para style="q2">pero a nosotros nos tocó el castigo.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Ahora nos gobiernan los esclavos,</para>
+  <para style="q2">y no hay quien nos libre de sus manos.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Exponiéndonos a los peligros<note caller="+" style="f"><char style="fr" closed="false">5:9 </char><char style="fq" closed="false">Exponiéndonos a los peligros</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">Por causa de la espada.</char></note> del desierto,</para>
+  <para style="q2">nos jugamos la <char style="w">vida</char> para obtener alimentos.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>La piel nos arde como un horno;</para>
+  <para style="q2">¡de hambre nos da fiebre!</para>
+  <para style="q1">
+    <verse number="11" style="v"/>En <char style="w">Sión</char> y en los pueblos de Judá</para>
+  <para style="q2">fueron violadas casadas y solteras.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>A nuestros jefes los colgaron de las manos,</para>
+  <para style="q2">y ni siquiera respetaron a nuestros ancianos.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>A nuestros mejores jóvenes los pusieron a moler;</para>
+  <para style="q2">los niños tropezaban bajo el peso de la leña.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Ya no se sientan los <char style="w" lemma="anciano">ancianos</char></para>
+  <para style="q2">a las <char style="w" lemma="puerta">puertas</char> de la ciudad;</para>
+  <para style="q2">no se escucha ya la música de los jóvenes.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>En nuestro corazón ya no hay gozo;</para>
+  <para style="q2">la alegría de nuestras danzas se convirtió en tristeza.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Nuestra cabeza se ha quedado sin corona.</para>
+  <para style="q2">¡Ay de nosotros; hemos pecado!</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Desfallece nuestro <char style="w">corazón</char>;</para>
+  <para style="q2">se apagan nuestros ojos,</para>
+  <para style="q1">
+    <verse number="18" style="v"/>porque el monte Sión se halla desolado,</para>
+  <para style="q2">y sobre él rondan los chacales.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>Pero tú, <char style="nd">Señor</char>, reinas por siempre;</para>
+  <para style="q2">tu trono permanece eternamente.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>¿Por qué siempre nos olvidas?</para>
+  <para style="q2">¿Por qué nos abandonas tanto tiempo?</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Permítenos volver a ti, <char style="nd">Señor</char>, y volveremos;</para>
+  <para style="q2">devuélvenos la gloria de antaño.<note caller="+" style="f"><char style="fr" closed="false">5:21 </char><char style="fq" closed="false">devuélvenos … antaño</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">renueva nuestros días como antes.</char></note></para>
+  <para style="q1">
+    <verse number="22" style="v"/>La verdad es que nos has rechazado</para>
+  <para style="q2">y te has excedido en tu enojo contra nosotros.</para>
+</usx>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="AMO" style="id">- Bibelen på hverdagsdansk (The Bible in Everyday Danish)</book>
+  <para style="rem">Copyright © 1985, 1992, 2005, 2013, 2015 by Biblica, Inc.®</para>
+  <para style="h">AMOS’ BOG</para>
+  <para style="toc1">Amos’ Bog</para>
+  <para style="toc2">Amos’ Bog</para>
+  <para style="toc3">Amos</para>
+  <para style="mt1">Amos’ Bog</para>
+  <para style="imt">Indledning</para>
+  <para style="ip">
+    <char style="bd">Forfatter og datering:</char> Amos var fårehyrde fra Tekoa, en lille by 10 km syd for Betlehem i Juda. Han forkyndte sit budskab ca. 780-750 f.Kr., kort tid før Hoseas, Esajas og Mika. Selv om han kom fra det sydlige rige, Juda, angik hans profetier især det nordlige rige, Israel, der havde sit religiøse centrum i Betel.</para>
+  <para style="ip">
+    <char style="bd">Historisk baggrund:</char> På Amos’ tid oplevede Israel en periode med økonomisk fremgang og militære sejre som forudsagt 40 år tidligere af profeten Elisa (se <char style="xt"><ref loc="2KI 13:17-19">2.Kong. 13,17-19</ref></char>). Også profeten Jonas havde få år tidligere forudsagt, at landet ville opleve militær fremgang (se <char style="xt"><ref loc="2KI 14:25">2.Kong. 14,25</ref></char>). Men under fremgangen forfaldt folk til overdreven selvtillid. Den religiøse og moralske korruption voksede. De blev ved med at dyrke afguderne, og derfor varede det ikke længe, før Gud måtte sende dem i landflygtighed. Israel blev erobret af Assyrien i 722-721 f.Kr.</para>
+  <para style="ip">
+    <char style="bd">Indhold og budskab:</char> Amos forkynder dom over dem, som undertrykker de fattige og svage, over deres stolthed og overdrevne tro på sig selv, og over al deres afgudsdyrkelse. Dog er der samtidig et budskab om håb og genoprettelse for den minoritet, der tager afstand fra ondskaben og vender tilbage til Gud.</para>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Denne bog indeholder de budskaber, som Herren åbenbarede for fårehyrden Amos fra landsbyen Tekoa to år før jordskælvet. Det var mens Uzzija var konge i Juda, og Jeroboam, søn af Joash, var konge i Israel.<note caller="+" style="f"><char style="fr" closed="false">1,1 </char><char style="ft" closed="false">Uzzija var formodentlig konge fra 792-740 f.Kr. og Jeroboam fra 793-753 f. Kr.</char></note> <verse number="2" style="v"/>Amos begyndte:</para>
+  <para style="q1">„Når Herren råber fra Jerusalem,</para>
+  <para style="q2">når han brøler som en løve fra Zion,</para>
+  <para style="q1">da visner græsset på marken,</para>
+  <para style="q2">og Karmels regnskove tørrer ud.”</para>
+  <para style="s1">Guds dom over Israels nabofolk</para>
+  <para style="p">
+    <verse number="3" style="v"/>Herren siger:</para>
+  <para style="q1">„Damaskus har gjort oprør gang på gang,</para>
+  <para style="q2">jeg vil ikke holde min straf tilbage.</para>
+  <para style="q1">De knuste mit folk i Gilead</para>
+  <para style="q2">som under en tærskeslæde med jernpigge.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Jeg sætter ild til kong Hazaels palads,</para>
+  <para style="q2">ødelægger Ben-Hadads fæstningsværker.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Jeg smadrer Damaskus’ byporte,</para>
+  <para style="q2">fjerner dem, der bor på ondskabens slette.<note caller="+" style="f"><char style="fr" closed="false">1,5 </char><char style="ft" closed="false">Eller: <char style="tl">Bikat-Aven</char>, som betyder ondskabens slette.</char></note></para>
+  <para style="q1">Aramæernes konge nyder livet på tronen,<note caller="+" style="f"><char style="fr" closed="false">1,5 </char><char style="ft" closed="false">Mere ordret: „han, der holder scepteret i Bet-Eden (glædens hus).”</char></note></para>
+  <para style="q2">men hele hans folk bliver sendt tilbage til Kir.”</para>
+  <para style="q1">Gud har talt!</para>
+  <para style="p">
+    <verse number="6" style="v"/>Herren siger:</para>
+  <para style="q1">„Gaza har gjort oprør gang på gang,</para>
+  <para style="q2">jeg vil ikke holde min straf tilbage.</para>
+  <para style="q1">De sendte en hel befolkning i eksil,</para>
+  <para style="q2">solgte dem som slaver til Edom.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Jeg sætter ild til Gazas mure,</para>
+  <para style="q2">ødelægger byens fæstningsværker.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Jeg dræber kongen af Ashdod,</para>
+  <para style="q2">og tilintetgør regenten i Ashkalon.</para>
+  <para style="q1">Jeg udrydder Ekrons befolkning,</para>
+  <para style="q2">ja, hver eneste filister skal dræbes.”</para>
+  <para style="q1">Gud Herren har talt!</para>
+  <para style="p">
+    <verse number="9" style="v"/>Herren siger:</para>
+  <para style="q1">„Tyrus har gjort oprør gang på gang,</para>
+  <para style="q2">jeg vil ikke holde min straf tilbage.</para>
+  <para style="q1">De solgte en hel befolkning til Edom,</para>
+  <para style="q2">selv om de havde sluttet fredspagt med dem.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Jeg sætter ild til Tyrus’ mure,</para>
+  <para style="q2">nedbrænder byens fæstningsværker.”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Herren siger:</para>
+  <para style="q1">„Edom har gjort oprør gang på gang,</para>
+  <para style="q2">jeg vil ikke holde min straf tilbage.</para>
+  <para style="q1">De angreb deres broderfolk</para>
+  <para style="q2">og lod hånt om al barmhjertighed.</para>
+  <para style="q1">De rev og flåede uden ophør,</para>
+  <para style="q2">der var ingen ende på deres vrede.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Jeg sætter ild til Teman,</para>
+  <para style="q2">nedbrænder Botzras fæstningsværker.”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Herren siger:</para>
+  <para style="q1">„Ammon har gjort oprør gang på gang,</para>
+  <para style="q2">jeg vil ikke holde min straf tilbage.</para>
+  <para style="q1">Under et erobringstogt i Gilead</para>
+  <para style="q2">skar de maven op på gravide kvinder.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Derfor sætter jeg ild til Rabbas bymure,</para>
+  <para style="q2">nedbrænder deres fæstningsværker.</para>
+  <para style="q1">Slagmarken vil fyldes med råb og skrig,</para>
+  <para style="q2">kampen vil rase som en ødelæggende orkan.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Ammons konge bliver sendt i eksil,</para>
+  <para style="q2">og landets ledere bliver alle ført bort.”</para>
+  <para style="q1">Gud har talt!</para>
+  <chapter number="2" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Herren siger:</para>
+  <para style="q1">„Moab har gjort oprør gang på gang,</para>
+  <para style="q2">jeg vil ikke holde min straf tilbage.</para>
+  <para style="q1">De hånede Edoms afdøde konge</para>
+  <para style="q2">ved at brænde hans knogler til kalk.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Derfor sætter jeg ild til Moab</para>
+  <para style="q2">nedbrænder Kerijots fæstningsværker.</para>
+  <para style="q1">Moab vil gå til i kampens hede,</para>
+  <para style="q2">vædderhorn og krigshyl viser dets fald.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Jeg tilintetgør landets konge</para>
+  <para style="q2">og gør det af med alle dets ledere.”</para>
+  <para style="q1">Gud har talt!</para>
+  <para style="s1">Dom over Juda</para>
+  <para style="p">
+    <verse number="4" style="v"/>Herren siger:</para>
+  <para style="q1">„Juda har gjort oprør gang på gang,</para>
+  <para style="q2">jeg vil ikke holde min straf tilbage.</para>
+  <para style="q1">De har forkastet mine bud</para>
+  <para style="q2">og gjort oprør mod mine befalinger.</para>
+  <para style="q1">De blev ført vild af de falske guder,</para>
+  <para style="q2">som deres forfædre besluttede at følge.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Derfor sætter jeg ild til Juda,</para>
+  <para style="q2">nedbrænder Jerusalems fæstningsværker.”</para>
+  <para style="s1">Dom over Israel</para>
+  <para style="p">
+    <verse number="6" style="v"/>Herren siger:</para>
+  <para style="q1">„Israel har gjort oprør gang på gang,</para>
+  <para style="q2">jeg vil ikke holde min straf tilbage.</para>
+  <para style="q1">De sælger de fattige som slaver,</para>
+  <para style="q2">når de ikke kan betale deres gæld.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>De træder de svage ned i skidtet</para>
+  <para style="q2">og skubber de sagtmodige væk.</para>
+  <para style="q1">Far og søn krænker mit hellige navn</para>
+  <para style="q2">ved at gå ind til den samme luder,</para>
+  <para style="q1">
+    <verse number="8" style="v"/>de lægger sig ved afgudsalteret</para>
+  <para style="q2">på kapper, de har taget i pant.</para>
+  <para style="q1">I afgudstemplerne svælger de i vin,</para>
+  <para style="q2">de har købt for penge, de har taget i bøder.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Har I glemt, at jeg udryddede amoritterne foran jer?</para>
+  <para style="q2">De var høje som cedre og stærke som ege.</para>
+  <para style="q1">Jeg rev bladene af dem</para>
+  <para style="q2">og skar rødderne over.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Var det ikke mig, som førte jer ud af Egypten</para>
+  <para style="q2">og holdt jer i live de 40 år i ørkenen?</para>
+  <para style="q1">Var det ikke mig, der hjalp jer,</para>
+  <para style="q2">så I kunne indtage amoritternes land?</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Jeg lod nogle af jeres sønner vokse op som profeter</para>
+  <para style="q2">og andre blev indviet som naziræere.</para>
+  <para style="q1">Er det ikke rigtigt, mit folk, Israel?</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Men I lokkede naziræerne til at drikke vin,</para>
+  <para style="q2">og I forbød profeterne at profetere.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Derfor vil jeg knuse jer,</para>
+  <para style="q2">som en vogn læsset med neg knuser, hvad den kører over.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Den hurtige når ikke at undslippe,</para>
+  <para style="q2">den stærke har ikke gavn af sine kræfter.</para>
+  <para style="q1">Krigeren kan ikke redde sit liv,</para>
+  <para style="q2">
+    <verse number="15" style="v"/>bueskytten kan ikke holde stand.</para>
+  <para style="q1">De hurtigste løbere er for langsomme,</para>
+  <para style="q2">rytterne når ikke at slippe væk.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Selv de modigste smider den dag deres våben</para>
+  <para style="q2">og flygter i håb om at redde livet.”</para>
+  <para style="q1">Gud har talt!</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Straffen over et udvalgt folk</para>
+  <para style="p">
+    <verse number="1" style="v"/>Hør hvad Herren siger til Israels folk: „Det var jer, jeg førte ud af Egypten. <verse number="2" style="v"/>Af alle jordens folkeslag er det jer, jeg har udvalgt! Derfor må jeg straffe jer, når I gør oprør imod mig. <verse number="3" style="v"/>Kan to mennesker slå følge uden først at have lavet en aftale? <verse number="4" style="v"/>Brøler en løve i buskadset, før den har nedlagt sit bytte? Knurrer ungløven i sin hule uden at have fanget noget? <verse number="5" style="v"/>Går en fugl i en fælde, hvis der ikke er lokkemad? Klapper en fælde i, hvis den ikke bliver udløst? <verse number="6" style="v"/>Mon ikke folk bliver bange, når der blæses alarm i byen? Mon ikke jeg står bag, når en by bliver straffet med krig? <verse number="7" style="v"/>Men jeg skrider ikke til handling, før jeg har åbenbaret mine planer for mine tjenere, profeterne. <verse number="8" style="v"/>Når løven brøler, bliver mennesket bange. Når Herren taler, må profeten give det videre.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Råb til filistrene i Ashdods fæstning og til egypterne i deres befæstede byer: Kom og sæt jer på bakketoppene rundt om Samaria. Se på al den vold og undertrykkelse, der foregår i Israel. <verse number="10" style="v"/>Mit folk har glemt at handle ret. De fylder deres huse med ting, de har røvet. <verse number="11" style="v"/>Derfor vil en fjende belejre landet, nedbryde byens mure og plyndre deres huse.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Som når en hyrde kun redder et par skinneben eller et øre af sit får fra løvens gab, sådan vil kun få af Samarias indbyggere blive reddet, som man kan være heldig at redde et hjørne af sin seng eller et stykke af en divan.”<note caller="+" style="f"><char style="fr" closed="false">3,12 </char><char style="ft" closed="false">Meningen af teksten er uklar.</char></note></para>
+  <para style="p">
+    <verse number="13" style="v"/>Herren, den Almægtige, siger: „Hør efter og advar Israels folk. <verse number="14" style="v"/>Når jeg straffer mit folk for deres oprør, vil jeg ødelægge afgudsaltrene i Betel. Altrenes horn bliver hugget af og falder til jorden. <verse number="15" style="v"/>Jeg ødelægger alle de store, pragtfulde huse, både vinterpalæer, sommerboliger og elfenbenspaladser.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Dom over de fornemme kvinder</para>
+  <para style="p">
+    <verse number="1" style="v"/>Hør her, Israels fornemme kvinder: I ligner det fede slagtekvæg på Samarias bjerg. I undertrykker de svage og mishandler de fattige. I forlanger hele tiden, at jeres mænd skal komme med drikkevarer.” <verse number="2" style="v"/>Herren siger: „Så sandt jeg er den hellige Gud, skal I ikke undslippe straffen. Man skal sætte kroge i jer og trække jer ud som med en fiskestang. <verse number="3" style="v"/>I bliver drevet ud gennem huller i bymuren i en lang række og bliver smidt på Hermons bjerg.<note caller="+" style="f"><char style="fr" closed="false">4,3 </char><char style="ft" closed="false">Meningen uklar. På hebraisk: <char style="tl">Harmon</char>, et ukendt ord eller sted.</char></note>” Gud har talt!</para>
+  <para style="s1">Israels folk fremturer i deres oprør mod Gud</para>
+  <para style="p">
+    <verse number="4" style="v"/>„Tag I bare til Betel og dyrk jeres afguder. Gå til Gilgal og gør oprør imod mig. Bring jeres ofre hver morgen og jeres tiende hver tredje dag. <verse number="5" style="v"/>Brænd frisk brød som takoffer. Pral af jeres frivillige offergaver. Det er jo det I elsker!” siger den almægtige Gud.</para>
+  <para style="p">
+    <verse number="6" style="v"/>„Jeg sørgede for hungersnød i hver eneste by,” siger Herren. „Men alligevel vendte I ikke om til mig.”</para>
+  <para style="p">
+    <verse number="7" style="v"/>„Jeg holdt regnen tilbage tre måneder før høsten. Jeg lod det regne i én by, men ikke i en anden. Én mark fik regn, mens en anden tørrede ud. <verse number="8" style="v"/>Folk fra tre byer flokkedes til én by for at få vand at drikke, men der var aldrig nok. Alligevel vendte I ikke om til mig,” siger Herren.</para>
+  <para style="p">
+    <verse number="9" style="v"/>„Jeg sendte sygdomme over jeres korn- og vinmarker. Græshopper ødelagde jeres figen- og oliventræer. Men I vendte ikke om til mig,” siger Herren.</para>
+  <para style="p">
+    <verse number="10" style="v"/>„Jeg ramte jer med plager og katastrofer som i sin tid i Egypten. Jeg lod jeres unge mænd og jeres heste blive dræbt i krig, så det stank af lig i jeres lejr. Men I vendte ikke om til mig,” siger Herren.</para>
+  <para style="p">
+    <verse number="11" style="v"/>„Jeg ødelagde nogle af jeres byer, som jeg ødelagde Sodoma og Gomorra. I blev som et forkullet stykke træ, reddet ud af ilden. Men I vendte ikke om til mig,” siger Herren.</para>
+  <para style="p">
+    <verse number="12" style="v"/>„Derfor kommer straffen over jer. Gør dig klar til at møde din Gud, Israel! <verse number="13" style="v"/>Husk på, at jeg er den, som dannede bjergene og skabte vinden. Jeg åbenbarer mine planer for mennesker, og jeg skabte lys ud af mørket. Jeg vandrer på jordens bjergtoppe. Mit navn er Herren, den almægtige Gud!”</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Endnu et kald til omvendelse</para>
+  <para style="p">
+    <verse number="1" style="v"/>Israel, lyt til den klagesang, jeg synger over dig:</para>
+  <para style="q1">
+    <verse number="2" style="v"/>„Israel, den skønne ungmø, er faldet,</para>
+  <para style="q2">hun kan ikke rejse sig.</para>
+  <para style="q1">Hun ligger forladt på jorden,</para>
+  <para style="q2">ingen hjælper hende op!”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Gud Herren siger: „Den by, som sender 1000 mænd i krig, får kun 100 tilbage, og den by, som sender 100, får kun 10 tilbage.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Herren siger til Israels folk: „Søg mig, så skal I leve! <verse number="5" style="v"/>Søg ikke afguderne i Betel, Gilgal og Be’ersheba, for Gilgal bliver ført i eksil, og Betel bliver jævnet med jorden.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Ja, søg Herren, så skal I leve. Ellers vil han komme imod jer som en fortærende ild, og ingen af Betels afguder kan slukke den.</para>
+  <para style="p">
+    <verse number="7" style="v"/>I lader hånt om retfærdighed og foragter hæderlighed.</para>
+  <para style="p">
+    <verse number="8" style="v"/>I burde søge Herren, som skabte Syvstjernen og Orion; han, som udskifter nattens mørke med morgenlys og gør dag til nat; han, som opsamler havets vand og lader det øse ned på jorden. Herren er hans navn. <verse number="9" style="v"/>Han sender ødelæggelse over stærke byer og nedbryder alle deres forsvarsværker.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Hvorfor hader I dem, der taler sandhed, og dem, der fælder retfærdige domme? <verse number="11" style="v"/>I tramper på de fattige og lægger urimelige afgifter på deres kornhøst. Derfor skal I ikke opleve at nyde livet i de fornemme stenhuse, I er ved at bygge, eller fylde jer med vinen fra de vingårde, I er ved at anlægge.</para>
+  <para style="p">
+    <verse number="12" style="v"/>„Jeg ved alt om jeres oprør mod mig og jeres mange synder,” siger Herren. „I undertrykker de uskyldige og tager imod bestikkelse, så de svage forhindres i at få deres ret.”</para>
+  <para style="p">
+    <verse number="13" style="v"/>I den slags onde tider tvinges den kloge til tavshed. <verse number="14" style="v"/>Søg det gode og flygt fra det onde, så I kan få lov at leve. Først da vil Herren, den Almægtige, være med jer, sådan som I påstår, han er. <verse number="15" style="v"/>Had det onde og elsk det gode. Lad retfærdigheden sejre i retten. Så vil Gud, den Almægtige, måske tilgive den rest af folket, som overlever.</para>
+  <para style="s1">Dommens dag bliver en sørgedag</para>
+  <para style="p">
+    <verse number="16" style="v"/>Herren, den Almægtige, siger: „Når straffen kommer, vil folk græde på gaden i fortvivlelse, og på torvene vil de sørge over de døde. Landmændene kaldes ind til byen for at deltage i sorgen, og alle grædekoner kommer i arbejde. <verse number="17" style="v"/>I alle vingårdene vil der lyde fortvivlede råb, når jeg går igennem landet og ødelægger dem.”</para>
+  <para style="p">
+    <verse number="18-20" style="v"/>„Gid Herren dog ville gribe ind!” siger I. Men I aner ikke, hvad der vil ske, når jeg griber ind! Det bliver en sorgens dag, ikke en glædens dag. Til den tid går det jer som en mand, der nok undslipper en løve, der har jaget ham, men løber lige i favnen på en bjørn, og når han derefter søger skjul i et hus, bliver han bidt i hånden af en slange. Når jeg griber ind, bliver det en sorgens dag!</para>
+  <para style="p">
+    <verse number="21" style="v"/>Herren siger: „Jeg hader jeres religiøse fester! Jeg er led ved jeres hykleriske højtider! <verse number="22" style="v"/>Selvom I bringer mig brændofre og afgrødeofre, vil jeg ikke tage imod dem. Jeg vil ikke røre ved fedtet fra jeres takofre. <verse number="23" style="v"/>Spar mig for jeres larmende sange. Jeg er træt af at lytte til jeres musik. <verse number="24" style="v"/>Lad godheden strømme som en flod, retfærdigheden risle frem som en uudtømmelig kilde. <verse number="25" style="v"/>Bragte I slagtofre og afgrødeofre til mig de 40 år i ørkenen? <verse number="26" style="v"/>Nu kan I tage de gudebilleder med, I selv har lavet, inklusive Sakkut og stjerneguden Kevan, <verse number="27" style="v"/>for I bliver sendt i landflygtighed langt borte, øst for Damaskus.” Herren, den almægtige Gud, har talt!</para>
+  <chapter number="6" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Ve jer, der tager den med ro i Jerusalem og lever sorgløst i Samaria. I betragter jer selv som de bedste ledere i det bedste land, og Israels folk kommer til jer for at få råd og hjælp. <verse number="2" style="v"/>Men tænk på, hvordan det er gået Kalno<note caller="+" style="f"><char style="fr" closed="false">6,2 </char><char style="ft" closed="false">Eller: „Kalne”, se <char style="xt"><ref loc="ISA 10:9">Es. 10,9</ref></char>.</char></note> og den tidligere storby Hamat. Og hvad med filisterbyen Gat? Når de blev lagt i ruiner, hvad så med jer? Er jeres byer og lande bedre end deres? <verse number="3" style="v"/>I tror, at dommen er langt borte, men jeres handlinger bringer den tæt på.</para>
+  <para style="p">
+    <verse number="4" style="v"/>I nyder livet henslængt på jeres elfenbensudsmykkede senge og divaner. I frådser i fede lamme- og kalvestege, <verse number="5" style="v"/>mens I synger viser og spiller på lyrer fra Davids tid. <verse number="6" style="v"/>I drikker vin af de hellige offerskåle og bruger de bedste aromatiske olier på jer selv i stedet for at faste og sørge over Israels forfald. <verse number="7" style="v"/>Derfor skal I blive de første, som føres i eksil. Jeres lystige fester får en brat ende.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Herren, den almægtige Gud, har svoret ved sig selv: „Jeg hader Israels hovmod og foragter deres paladser. Derfor overgiver jeg deres by med alle dens indbyggere i fjendens hånd.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Om så ti mænd skjuler sig i et hus, skal de alle dø. <verse number="10" style="v"/>Hvis en slægtning kommer for at hente de døde i huset og begrave dem, råber han måske ind i huset, om der er flere tilbage. Hvis svaret er: „Nej!” vil han sige: „Pas på, nævn ikke Herrens navn, for at han ikke skal høre dig!” <verse number="11" style="v"/>For når først Herren har afsagt sin dom, skal både små og store huse jævnes med jorden.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Lader man heste galopere på klipper? Lader man okser pløje havet? Men I har stik imod al fornuft vendt retten til uret og erstattet det gode med det onde. <verse number="13" style="v"/>I praler over at have besejret de magtesløse og er stolte over, hvad I har kunnet udrette i egen kraft.</para>
+  <para style="p">
+    <verse number="14" style="v"/>„Åh, Israels folk,” siger Herren, den almægtige Gud. „Jeg sender et fremmed folk imod jer. De vil hærge jeres land fra Lebo-Hamat i nord til Arabadalen mod syd.”</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Tre syner om dom over Israel</para>
+  <para style="p">
+    <verse number="1" style="v"/>Herren viste mig følgende syn: Efter at den tidlige afgrøde var klar til høst (den, som kongen får en del af), og de andre afgrøder var begyndt at komme op, lod Herren græshopper invadere landet, <verse number="2" style="v"/>og de åd alle grønne planter. Da råbte jeg: „Herre, min Gud, tilgiv dit folk! Hvordan skal Israel overleve? Det er jo kun et lille folk!” <verse number="3" style="v"/>Da forbarmede Herren sig og sagde: „Hvad du så, vil alligevel ikke ske!”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Derpå viste Herren mig et andet syn: Jeg så en regn af ild nærme sig. Den opbrændte havet og var i gang med landjorden. <verse number="5" style="v"/>Da råbte jeg: „Herre, min Gud, stands ilden! Hvordan skal Israel overleve? Det er jo kun et lille folk!” <verse number="6" style="v"/>Da forbarmede Herren sig og sagde: „Hvad du så denne gang, vil heller ikke ske!”</para>
+  <para style="p">
+    <verse number="7" style="v"/>Så viste Herren mig et tredje syn: Han stod på en lodret mur med et blylod i hånden. <verse number="8" style="v"/>Så spurgte han mig: „Amos, hvad ser du?” „Et blylod,” svarede jeg, og han fortsatte: „En mur, der ikke er lodret, skal rives ned,<note caller="+" style="f"><char style="fr" closed="false">7,8 </char><char style="ft" closed="false">Teksten i vers 7 og 8 er usikker, og meningen med billedet er omstridt.</char></note> og når mit folk, Israel, ikke handler ret, er jeg nødt til at skride ind. <verse number="9" style="v"/>Israels offerhøje skal fjernes, deres afgudsaltre skal rives ned, og Jeroboams kongeslægt skal udryddes.”</para>
+  <para style="s1">Amos og Amatzja</para>
+  <para style="p">
+    <verse number="10" style="v"/>Amatzja, som var afgudspræst i Betel, sendte nu besked til kong Jeroboam: „Amos taler ondt imod dig. Vi kan ikke længere tolerere hans profetier. <verse number="11" style="v"/>Han siger, at du vil blive slået ihjel og Israels folk blive ført bort som slaver.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Derefter tog Amatzja hen til Amos og sagde: „Se at komme væk herfra, profet! Rejs hjem til Judas land! Der kan du sikkert leve af at profetere. <verse number="13" style="v"/>Men her i Betel må du ikke tale mere, for her ligger kongens helligdom, Israels riges tempel.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>Amos svarede: „Jeg er hverken profet eller står i lære som profet. Jeg er hyrde og frugtavler. <verse number="15" style="v"/>Men Herren sagde til mig: ‚Gå hen og profetér imod mit folk Israel!’ <verse number="16" style="v"/>Men nu har Herren en besked til dig. Fordi du sagde, at jeg skulle holde op med at fantasere og profetere imod Israel, <verse number="17" style="v"/>så hør hvad Herren siger til dig: ‚Du kommer til at dø i et fremmed land, og dine sønner og døtre bliver slået ihjel. Din jord bliver delt ud til andre, og din kone ender som prostitueret i byen. Og Israels folk bliver som sagt ført i eksil!’ ”</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Dommen står fast</para>
+  <para style="p">
+    <verse number="1" style="v"/>I et syn viste Gud Herren mig en kurv fuld af modne figner.</para>
+  <para style="p">
+    <verse number="2" style="v"/>„Hvad ser du, Amos?” spurgte han. Jeg svarede: „En kurv fuld af modne figner.”</para>
+  <para style="p">Da sagde Herren til mig: „Mit folk Israel er modent til straf, og denne gang vil jeg ikke forbarme mig. <verse number="3" style="v"/>Når straffen kommer, bliver afgudstemplets<note caller="+" style="f"><char style="fr" closed="false">8,3 </char><char style="ft" closed="false">Eller: „paladsets”.</char></note> festsange erstattet af sørgesange, for der ligger lig overalt.” Men ingen tør gå i rette med Gud.<note caller="+" style="f"><char style="fr" closed="false">8,3 </char><char style="ft" closed="false">Ordret: „stilhed”, dvs. stilhed ind for Gud og accept af Guds dom.</char></note></para>
+  <para style="p">
+    <verse number="4" style="v"/>Hør her, I, som tramper på de svage og udnytter de fattige. <verse number="5-6" style="v"/>Når det er helligdag eller sabbat, længes I efter, at dagen skal være forbi, så I kan komme til at sælge jeres korn igen. I blander avner i kornet, bruger falske vægte og snyder, så vandet driver af jer. I tager gerne et par sko i pant og sælger de fattige som slaver, når de ikke kan betale. <verse number="7" style="v"/>Hør, hvad Herren siger til jer: „Jeg glemmer ikke jeres onde handlinger. <verse number="8" style="v"/>Derfor vil der komme et jordskælv, og alle, som bor i landet, kommer til at ryste af skræk. Jorden vil hæve sig og synke ned igen, som når Nilen går over sine bredder. <verse number="9" style="v"/>På dommens dag vil solen forsvinde ved middagstid og mørket indhylle jorden midt på dagen.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Jeg gør jeres festdage til sørgedage og jeres lystige viser til klagesange. I skal klæde jer i sæk og aske og klippe håret af som tegn på jeres fortvivlelse. I vil opleve en ulidelig smerte, som havde I mistet jeres førstefødte søn. <verse number="11" style="v"/>Der kommer en dag,” erklærer den almægtige Gud, „da jeg sender hunger over landet, ikke sult efter brød eller tørst efter vand, men en længsel efter at høre fra Herren. <verse number="12" style="v"/>Folk vil rejse fra øst til vest og fra nord til syd i håb om at få et ord fra Herren. Men de får intet. <verse number="13" style="v"/>Smukke unge piger og stærke unge mænd segner af udmattelse og tørst efter Herrens ord, <verse number="14" style="v"/>og de, som dyrker afguderne i Samaria, Dan og Be’ersheba, vil falde for aldrig at rejse sig igen.”</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Israel rammes af Guds straf, men en rest bliver reddet</para>
+  <para style="p">
+    <verse number="1" style="v"/>Derpå så jeg i et syn Herren stå ved siden af alteret og give følgende befaling: „Slå på søjlehovederne, så afgudstemplet styrter sammen og murbrokkerne knuser alle i nærheden. Resten vil falde i krig. Ingen slipper bort. <verse number="2" style="v"/>Hvis de kunne flygte ned i dødsriget, kunne jeg stadig hente dem op. Hvis de kunne stige op til himlen, kunne jeg stadig hente dem ned. <verse number="3" style="v"/>Hvis de prøver at gemme sig i Karmelbjergets klippehuler, skal jeg nok finde dem. Hvis de kunne søge tilflugt på havets bund, ville jeg befale havuhyret at fortære dem. <verse number="4" style="v"/>Selv hvis de føres i eksil, vil jeg give befaling om, at de skal dræbes dér. Jeg holder øje med dem overalt, men det er for at straffe dem, ikke for at redde dem.”</para>
+  <para style="p">
+    <verse number="5" style="v"/>Når Herren, den Almægtige, sender et jordskælv, vil alle, som bor i landet, fyldes af rædsel. Jorden vil hæve sig og synke ned igen som Egyptens flod. <verse number="6" style="v"/>Herrens bolig har sit fundament på jorden, men den rækker ind i Himlen. Han opsamler vandet fra havet og lader det falde ned på jorden. Herren er hans navn.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Han siger: „Israels folk, tror I, at I er bedre end kushitterne? Jeg førte jer ud af Egypten, men jeg førte også filistrene ud af Kaftor og aramæerne ud af Kir.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Jeg har fæstet blikket på denne oprørske nation og vil fjerne den fra jordens overflade. Dog vil jeg ikke fuldstændigt udrydde Jakobs efterkommere. <verse number="9" style="v"/>Jeg har besluttet at sigte Israels folk i deres eksil og fjerne alt det værdiløse. <verse number="10" style="v"/>Alle selvsikre syndere skal falde for sværdet.</para>
+  <para style="s1">Davids rige skal genrejses</para>
+  <para style="p">
+    <verse number="11" style="v"/>Til sin tid vil jeg genopbygge Davids rige. Jeg vil udbedre skaderne, genopbygge det, som blev revet ned, og få det op at stå igen, så det bliver som før. <verse number="12" style="v"/>Derefter skal Israels folk overtage resterne af Edom og de andre folkeslag, som også tilhører mig.” Det er Herren, der siger det, og han vil gøre det.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Herren siger: „Engang bliver der igen fremgang og frugtbarhed, så man ikke bliver færdig med at høste, før det er tid til at pløje, og så man ikke bliver færdig med at presse druerne, før det er tid til at plante. Bjergskråningerne vil dryppe af druernes saft. <verse number="14" style="v"/>Jeg vil sætte mit folk, Israel, fri af fangenskabet. Da skal de genopbygge deres ødelagte byer og flytte ind i dem. De skal plante vingårde og drikke vinen derfra. De skal anlægge haver og nyde frugten deraf. <verse number="15" style="v"/>Jeg planter dem tilbage i deres land. Aldrig mere skal de rykkes op fra det land, jeg har givet dem.” Herren, Israels Gud, har talt!</para>
+</usx>

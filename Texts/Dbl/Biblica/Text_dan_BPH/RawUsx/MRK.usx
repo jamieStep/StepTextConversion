@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="MRK" style="id">- Bibelen på hverdagsdansk (The Bible in Everyday Danish)</book>
+  <para style="rem">Copyright © 1985, 1992, 2005, 2013, 2015 by Biblica, Inc.®</para>
+  <para style="h">MARKUSEVANGELIET</para>
+  <para style="toc1">Markusevangeliet</para>
+  <para style="toc2">Markusevangeliet</para>
+  <para style="toc3">Mark.</para>
+  <para style="mt1">Markusevangeliet</para>
+  <para style="imt">Indledning</para>
+  <para style="ip">
+    <char style="bd">Forfatter, datering og baggrund:</char> Denne beretning om Jesus og hans virke er sandsynligvis skrevet af Johannes Markus. Som ung mand havde Markus lejlighed til at se og høre Jesus i Jerusalem og kom til tro på ham. Senere fulgte han Paulus og Barnabas på deres første missionsrejse. Han var også i en længere periode medhjælper for apostlen Peter. Mange af detaljerne i hans beretning om Jesus bygger sandsynligvis på, hvad Peter fortalte.</para>
+  <para style="ip">Bogen er skrevet med kristne ikke-jøder i tanke, sandsynligvis omkring 45-50 e.Kr., men det nøjagtige tidspunkt kendes ikke. Det vides ikke med sikkerhed, om Markusevangeliet blev skrevet før Mattæusevangeliet eller efter. Vi mener, at kirkefædrene har ret, når de fortæller os, at Mattæusevangeliet var det første. Ved at sammenligne de to beretninger kan man se, at Markus sandsynligvis har kendt til Mattæusevangeliet og bruger en del materiale derfra. Han udelukker dele, som er mindre relevant for ikke-jøder, og forklarer af og til nogle specielt jødiske traditioner, som ikke-jøder havde vanskeligt ved at forholde sig til.</para>
+  <para style="ip">
+    <char style="bd">Indhold og budskab:</char> Markus koncentrerer sig mere om, hvad Jesus <char style="em">gjorde</char>, end hvad han <char style="em">sagde</char>. Derfor lægges hovedvægten på, at Jesus viser sin magt til at frelse, befri og helbrede mennesker. Der er fokus på Jesus som Guds Tjener og Guds Søn. Hans undere, helbredelser, befrielser fra dæmoner og hans magt til at tilgive synd viser hans identitet som Guds Søn.</para>
+  <para style="ip">Bogen begynder med en beskrivelse af Jesu offentlige tjeneste og hans forkyndelse af, at Guds rige nu er kommet til denne jord. Der henvises flere gange til Jesu korsfæstelse som grundlaget for forsoning mellem Gud og mennesker. Jesus gik frivilligt i døden, for at vi kunne blive sat fri fra syndens magt (se <char style="xt">kap. <ref loc="MRK 8:31">8,31</ref>; <ref loc="MRK 9:31">9,31</ref>; <ref loc="MRK 10:33-34">10,33-34</ref> og 45</char>). Den sidste uge, inden Jesus døde, beskrives indgående og afsluttes med beretningen om hans opstandelse og himmelfart.</para>
+  <para style="ip">Det er et godt og glædeligt budskab, som gælder alle mennesker over hele jorden, ikke kun det jødiske folk. Det græske ord for „godt nyt” er „evangelion”, som gennem latin er blevet til <char style="em">evangelium</char>. Både det græske ord <char style="em">Christos</char> (Kristus) og det hebraiske <char style="em">Mashiach</char> (Messias) betyder „den salvede” og henviser til en person, som Gud på en særlig måde har udrustet og udsendt til en bestemt opgave. Det er et af flere udtryk, der bruges om den befrier og konge, som jøderne havde ventet på i mange hundrede år, og som er omtalt i mange profetier i det Gamle Testamente. De mange citater i det Nye Testamente, som er hentet fra det Gamle Testamente, tjener blandt andet til at forklare, at det ikke var nogen tilfældighed, at Jesus kom til denne jord. Det var en del af Guds plan fra evighed af.</para>
+  <para style="ip">Når man på hebraisk bruger ordet „søn”, forstås det i en videre betydning end på dansk. Det betyder blandt andet, at „sønnen” er lig med „faderen” i karakter. Vi kender den udvidede betydning fra det danske „barn”. Vi er alle børn af vores tid, og vi er alle „Guds børn” i den forstand, at vi er skabt af Gud. De, som tror på Jesus, bliver „Guds børn” i den åndelige betydning, hvilket vil sige, at de har fået deres synder tilgivet og er kommet ind i Guds rige.</para>
+  <chapter number="1" style="c"/>
+  <para style="s1">Johannes Døber og hans budskab</para>
+  <para style="r">
+    <ref loc="MAT 3:1-12">Matt. 3,1-12</ref>; <ref loc="LUK 3:1-18">Luk. 3,1-18</ref>; <ref loc="JHN 1:19-28">Joh. 1,19-28</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Min beretning handler om Jesus, som er Guds Søn og den ventede Messias.</para>
+  <para style="p">
+    <verse number="2" style="v"/>At der skulle komme en forløber for Frelseren, har Gud forudsagt i de profetiske bøger.<note caller="+" style="f"><char style="fr" closed="false">1,2 </char><char style="ft" closed="false">Nogle håndskrifter siger „profeten Esajas” i stedet for „profeterne” (dvs. de profetiske bøger).</char></note> Der står jo skrevet:</para>
+  <para style="q1">„Jeg vil sende min udsending foran dig.</para>
+  <para style="q2">Han skal berede vejen for dig.”<note caller="+" style="f"><char style="fr" closed="false">1,2 </char><char style="ft" closed="false"><char style="xt">Mal. 3,1a</char>.</char></note></para>
+  <para style="m">
+    <verse number="3" style="v"/>og:</para>
+  <para style="q1">„Der lyder en stemme i ødemarken:</para>
+  <para style="q1">‚Ban vej for Herren!</para>
+  <para style="q2">Gør vejen klar til hans komme!’ ”<note caller="+" style="f"><char style="fr" closed="false">1,3 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 40:3">Es. 40,3</ref></char> LXX.</char></note></para>
+  <para style="p">
+    <verse number="4" style="v"/>Den omtalte udsending var Johannes Døber. Han opholdt sig i de øde egne, og han sagde til folk, at de skulle vende om fra deres ondskab og lade sig døbe for at få tilgivelse for deres synder. <verse number="5" style="v"/>Fra Jerusalem og hele Judæaområdet kom folk strømmende til for at se og høre ham. Når de havde bekendt deres synder, døbte han dem i Jordanfloden. <verse number="6" style="v"/>Johannes var klædt i en profetkappe vævet af kamelhår, og han havde et læderbælte om livet.<note caller="+" style="f"><char style="fr" closed="false">1,6 </char><char style="ft" closed="false">Denne særlige påklædning var den samme som profeten Elias havde, og den kendetegnede ham som profet. Se <char style="xt"><ref loc="2KI 1:8">2.Kong. 1,8</ref></char>.</char></note> Han levede af græshopper og honning fra vilde bier. <verse number="7" style="v"/>Hans budskab var: „Der kommer snart en, som har større magt end jeg har. Jeg er end ikke værdig til at knæle ned og løse remmen på hans sandaler.<note caller="+" style="f"><char style="fr" closed="false">1,7 </char><char style="ft" closed="false">At tage gæsternes sandaler af og vaske deres fødder var den ringeste slaves arbejde.</char></note> <verse number="8" style="v"/>Jeg har døbt jer med vand, men han vil døbe jer med Helligåndens kraft.”<note caller="+" style="f"><char style="fr" closed="false">1,8 </char><char style="ft" closed="false">Se noten til <char style="xt"><ref loc="MAT 1:18">Matt. 1,18</ref></char>.</char></note></para>
+  <para style="s1">Jesus bliver døbt med vand og Helligånd</para>
+  <para style="r">
+    <ref loc="MAT 3:13-17">Matt. 3,13-17</ref>; <ref loc="LUK 3:21-22">Luk. 3,21-22</ref></para>
+  <para style="p">
+    <verse number="9" style="v"/>Også Jesus tog af sted fra sin hjemby, Nazaret i Galilæa, og kom til Jordanfloden for at blive døbt af Johannes. <verse number="10" style="v"/>Da Jesus efter dåben steg op af floden, så han himlen blive åbnet og Helligånden dale ned imod ham som en due. <verse number="11" style="v"/>Samtidig lød der en stemme fra himlen: „Du er min elskede Søn, og dig er jeg fuldt ud tilfreds med!”<note caller="+" style="f"><char style="fr" closed="false">1,11 </char><char style="ft" closed="false">Kan muligvis også oversættes: „Jeg glæder mig over dig.” Det græske ord, som her er brugt, betyder egentlig „acceptere nogen eller noget som værende godt”. Det henviser ofte til at gøre Guds vilje, at gøre det, som Gud fuldt ud kan acceptere og stå bag ved.</char></note></para>
+  <para style="s1">Fristelsen i ørkenen</para>
+  <para style="r">
+    <ref loc="MAT 4:1-11">Matt. 4,1-11</ref>; <ref loc="LUK 4:1-13">Luk. 4,1-13</ref></para>
+  <para style="p">
+    <verse number="12-13" style="v"/>Straks efter sendte Helligånden Jesus ud i ødemarken, hvor han blev i 40 dage. Dér blev han fristet af Satan, og rundt omkring ham lurede de vilde dyr. Bagefter kom nogle engle og sørgede for mad til ham.</para>
+  <para style="s1">Jesus begynder at fortælle om Guds rige</para>
+  <para style="r">
+    <ref loc="MAT 4:12-17">Matt. 4,12-17</ref>; <ref loc="LUK 4:14-15">Luk. 4,14-15</ref></para>
+  <para style="p">
+    <verse number="14" style="v"/>Kort tid efter blev Johannes sat i fængsel af kong Herodes,<note caller="+" style="f"><char style="fr" closed="false">1,14 </char><char style="ft" closed="false">Herodes Antipas, en søn af Herodes den Store.</char></note> og Jesus begyndte at gå rundt i Galilæa og fortælle de gode nyheder fra Gud. <verse number="15" style="v"/>„Nu er tiden inde!” sagde han. „Nu er Guds rige kommet. I skal ændre jeres indstilling og tro på det glædelige budskab, som jeg bringer jer.”</para>
+  <para style="s1">Jesus udvælger sine første disciple</para>
+  <para style="r">
+    <ref loc="MAT 4:18-22">Matt. 4,18-22</ref>; <char style="xt">(<ref loc="LUK 5:1-11">Luk. 5,1-11</ref>)</char></para>
+  <para style="p">
+    <verse number="16" style="v"/>En dag, da Jesus gik langs bredden af Galilæasøen, fik han øje på to mænd, som var i færd med at fiske med kastenet i søen. Det var Simon og hans bror Andreas. <verse number="17" style="v"/>„Kom med mig, så skal jeg gøre jer til menneskefiskere!” råbte Jesus til dem. <verse number="18" style="v"/>Øjeblikkelig forlod de deres net og fulgte ham som hans disciple.<note caller="+" style="f"><char style="fr" closed="false">1,18 </char><char style="ft" closed="false">I datidens kultur foregik undervisningen ofte ved, at man fulgte en mester og lærte gennem eksemplets magt. En discipel er altså mere en lærling end en studerende. Derfor kalder lærlingene og andre mennesker ofte Jesus for „mester”.</char></note></para>
+  <para style="p">
+    <verse number="19" style="v"/>Lidt længere henne på stranden fik Jesus øje på Zebedæus’ sønner, Jakob og Johannes. De sad i deres båd og rensede nettene. <verse number="20" style="v"/>Da Jesus kaldte på dem, gik de straks med ham. De efterlod deres far i båden sammen med de folk, han havde i arbejde.</para>
+  <para style="s1">Jesu autoritet—hans magt over de onde ånder</para>
+  <para style="r">
+    <ref loc="LUK 4:31-37">Luk. 4,31-37</ref></para>
+  <para style="p">
+    <verse number="21" style="v"/>Snart efter nåede Jesus og hans disciple frem til Kapernaum. Da det blev sabbat, gik de ind i synagogen, og Jesus fik anledning til at undervise der. <verse number="22" style="v"/>Hans ord gjorde dybt indtryk på de forsamlede, for han talte med en autoritet, som de ikke var vant til fra de skriftlærde.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Blandt tilhørerne var der en mand, som var plaget af en ond ånd. <verse number="24" style="v"/>Pludselig begyndte den onde ånd i manden at råbe: „Lad os være i fred, Jesus Nazaræer! Er du kommet for at ødelægge os? Jeg ved, hvem du er! Du er Guds hellige Søn!”</para>
+  <para style="p">
+    <verse number="25" style="v"/>„Ti stille, og kom ud af ham,” befalede Jesus. <verse number="26" style="v"/>Den onde ånd fik manden til at ryste voldsomt og fór så skrigende ud af ham.</para>
+  <para style="p">
+    <verse number="27" style="v"/>De tilstedeværende blev grebet af forfærdelse og begyndte at diskutere, hvad der var sket: „Hvad er det her for noget? Det er en helt ny måde at undervise på, og sikken en autoritet han har. Selv de onde ånder adlyder ham!” <verse number="28" style="v"/>Det, der var sket, rygtedes hurtigt ud over hele den del af Galilæa.</para>
+  <para style="s1">Jesus viser sin magt til at helbrede alle mulige sygdomme</para>
+  <para style="r">
+    <ref loc="MAT 8:14-17">Matt. 8,14-17</ref>; <ref loc="LUK 4:38-41">Luk. 4,38-41</ref></para>
+  <para style="p">
+    <verse number="29" style="v"/>Da mødet i synagogen var forbi, gik Jesus, Jakob, Johannes og Andreas med Simon hjem. <verse number="30" style="v"/>Det viste sig, at Simons svigermor lå syg med feber, og det fortalte de Jesus. <verse number="31" style="v"/>Jesus gik straks hen til hende, tog hendes hånd og hjalp hende op. Feberen forsvandt med det samme, og hun gik i gang med at sørge for mad til dem.</para>
+  <para style="p">
+    <verse number="32" style="v"/>Da solen var gået ned, og sabbatten dermed var forbi,<note caller="+" style="f"><char style="fr" closed="false">1,32 </char><char style="ft" closed="false">På sabbatsdagen havde jøderne ikke lov til at udføre noget fysisk krævende arbejde og måtte kun gå en kort distance. Sabbatten strakte sig fra fredag ved solnedgang til lørdag ved solnedgang.</char></note> bragte man en masse syge og dæmonbesatte mennesker til Jesus. <verse number="33" style="v"/>Næsten hele byen stimlede sammen uden for huset. <verse number="34" style="v"/>Jesus helbredte mange mennesker, der havde forskellige sygdomme. Desuden uddrev han mange onde ånder, men han tillod dem ikke at røbe, hvem han var.<note caller="+" style="f"><char style="fr" closed="false">1,34 </char><char style="ft" closed="false">Se vers 24. Ånderne vidste udmærket, at Jesus var den ventede Messias, Guds egen Søn, men hvis det blev almindeligt kendt på dette tidlige tidspunkt, ville det lægge hindringer i vejen for det arbejde, Jesus var kommet for at udføre.</char></note></para>
+  <para style="s1">Jesus fortsætter med at fortælle om Gud og helbrede i hele Galilæa</para>
+  <para style="r">
+    <ref loc="MAT 4:23-25">Matt. 4,23-25</ref>; <ref loc="LUK 4:42-44">Luk. 4,42-44</ref></para>
+  <para style="p">
+    <verse number="35" style="v"/>Næste morgen stod Jesus op længe før daggry og gik alene ud til et øde sted for at bede. <verse number="36" style="v"/>Simon og de andre gik noget senere ud for at lede efter ham. <verse number="37" style="v"/>Da de fandt ham, sagde de: „Alle folk spørger efter dig.” <verse number="38" style="v"/>„Lad os tage hen til de andre landsbyer,” sagde Jesus. „De skal også høre det budskab, jeg er kommet for at fortælle.”</para>
+  <para style="p">
+    <verse number="39" style="v"/>Så vandrede Jesus gennem hele Galilæa og fortalte sit budskab i synagogerne, og han befriede mange mennesker fra dæmonernes magt.</para>
+  <para style="s1">Jesus helbreder en spedalsk mand</para>
+  <para style="r">
+    <ref loc="MAT 8:1-4">Matt. 8,1-4</ref>; <ref loc="LUK 5:12-16">Luk. 5,12-16</ref></para>
+  <para style="p">
+    <verse number="40" style="v"/>En dag kom der en spedalsk<note caller="+" style="f"><char style="fr" closed="false">1,40 </char><char style="ft" closed="false">Det vides ikke med sikkerhed, om det var den samme sygdom, man i dag kender som spedalskhed. Muligvis dækker udtrykket over flere smitsomme hudsygdomme. I alle tilfælde blev sådanne mennesker afsondret fra samfundet og betragtet som „urene” mennesker. De skulle bo uden for byerne, og ingen turde røre ved dem af frygt for smittefaren.</char></note> mand til Jesus. Han faldt på knæ og bad indtrængende om at blive helbredt. „Hvis du vil, kan du gøre mig rask!” sagde han. <verse number="41" style="v"/>Jesus fik dyb medlidenhed med ham, rakte hånden ud og rørte ved ham. „Det vil jeg!” sagde Jesus. „Bliv rask!” <verse number="42" style="v"/>I samme øjeblik forsvandt spedalskheden. Manden var totalt helbredt. <verse number="43" style="v"/>Jesus sagde da til ham: <verse number="44" style="v"/>„Lad være med at fortælle det her til nogen. Men gå hen og lad dig undersøge af en præst, så du kan blive erklæret rask. Husk at medbringe den offergave, som Toraen foreskriver for spedalske, der er blevet helbredt.”</para>
+  <para style="p">
+    <verse number="45" style="v"/>Men da manden gik derfra, råbte han til højre og venstre, at han var blevet helbredt. Folk stimlede nu sammen i store klynger omkring Jesus, og fra den dag var det umuligt for ham at gå ubemærket ind i en by. Han opholdt sig på øde steder, men selv dér kom folk til ham alle vegne fra.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Jesus viser sin magt til at tilgive synder</para>
+  <para style="r">
+    <ref loc="MAT 9:1-8">Matt. 9,1-8</ref>; <ref loc="LUK 5:17-26">Luk. 5,17-26</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Nogle dage senere kom Jesus igen til Kapernaum, og det blev hurtigt kendt over hele byen, at han var ankommet. <verse number="2" style="v"/>Det varede ikke længe, før der kom så mange mennesker til det hus, hvor han var, at folk stod langt ud på gaden for om muligt at høre, hvad han havde at sige. <verse number="3" style="v"/>Fire mænd kom gående derhen med en lam mand på en båre. <verse number="4" style="v"/>Da de ikke kunne komme ind til Jesus på grund af mængden af mennesker, gik de op ad trappen til husets flade tag. De fjernede et stykke af taget og firede så båren med den syge mand ned lige foran ham. <verse number="5" style="v"/>Da Jesus så den tro, som disse mænd havde vist, sagde han til den lamme mand: „Min ven, dine synder er dig tilgivet!”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Nogle af de skriftlærde, som sad der, tænkte ved sig selv: <verse number="7" style="v"/>„Hvad bilder han sig ind? Det er da en hån imod Gud! Kun Gud kan tilgive synder.”<note caller="+" style="f"><char style="fr" closed="false">2,7 </char><char style="ft" closed="false">For en jøde betyder „synd” en overtrædelse af Guds bud. En synd bliver begået imod Gud først og fremmest, og derfor er det kun Gud, som kan tilgive. Det kunne kun ske ved de specielle syndofre i templet på den årlige forsoningsdag.</char></note> <verse number="8" style="v"/>Jesus var i sin ånd klar over, hvad de tænkte, og han sagde til dem: „Hvorfor tænker I sådan? <verse number="9" style="v"/>Hvad er lettest at sige til den lamme mand her: ‚Dine synder er tilgivet,’ eller: ‚Rejs dig op, tag din båre og gå på dine ben’? <verse number="10" style="v"/>Lad mig nu vise jer, at Menneskesønnen<note caller="+" style="f"><char style="fr" closed="false">2,10 </char><char style="ft" closed="false">„Menneskesønnen” er ikke den bedste oversættelse, men det er bibeholdt her på grund af traditionen. Udtrykket betegner en, der ligner et menneske uden at være et almindeligt menneske, og henviser til synet i Daniels Bog 7,13-14, hvor Guds Søn, Messias, ses i Himlen i form af et menneske. Jesus bruger titlen „Menneskesøn” om sig selv for på en lidt kryptisk måde at betegne sig selv som den Messias, profetierne talte om skulle komme.</char></note> har magt på jorden til at tilgive synder.” <verse number="11" style="v"/>Med disse ord vendte han sig til den lamme mand og sagde: „Rejs dig op, tag din båre og gå hjem!” <verse number="12" style="v"/>Manden rejste sig, tog sin båre og gik sin vej for øjnene af de forbløffede tilskuere, som straks gav sig til at lovprise Gud for det under, der var sket. „Vi har aldrig set noget lignende!” udbrød de begejstret.</para>
+  <para style="s1">Jesus elsker dem, det religiøse samfund forkaster</para>
+  <para style="r">
+    <ref loc="MAT 9:9-13">Matt. 9,9-13</ref>; <ref loc="LUK 5:27-32">Luk. 5,27-32</ref></para>
+  <para style="p">
+    <verse number="13" style="v"/>Senere gik Jesus igen ud langs Galilæasøen. En masse mennesker fulgte i hælene på ham, og han underviste dem, mens han gik. <verse number="14" style="v"/>Da han passerede toldstedet, så han Levi, Alfæus’ søn, sidde der. „Kom med mig!” sagde Jesus til ham. Straks rejste Levi sig og fulgte med ham som en af hans disciple.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Derefter blev Jesus og disciplene indbudt til spisning i Levis hjem. Mange skatteopkrævere og nogle af de andre „syndere”, som til stadighed fulgte Jesus, blev også inviteret. <verse number="16" style="v"/>Da nu de skriftlærde blandt farisæerne så Jesus i det selskab, sagde de til hans disciple: „Hvordan kan han få sig selv til at spise sammen med den slags syndige mennesker?”</para>
+  <para style="p">
+    <verse number="17" style="v"/>Jesus hørte det og svarede: „Raske mennesker har ikke brug for lægehjælp, men det har de syge. Jeg er kommet for at invitere syndere til at vende om til Gud. Det mener de ‚frelste’ jo ikke, at de har brug for!”</para>
+  <para style="s1">Jesus kommer med en ny lære</para>
+  <para style="r">
+    <ref loc="MAT 9:14-17">Matt. 9,14-17</ref>; <ref loc="LUK 5:33-38">Luk. 5,33-38</ref></para>
+  <para style="p">
+    <verse number="18" style="v"/>En dag, da Johannes Døbers disciple og farisæerne havde en fastedag,<note caller="+" style="f"><char style="fr" closed="false">2,18 </char><char style="ft" closed="false">Farisæerne mente, at en rettroende jøde skulle faste to dage om ugen (mandag og torsdag), altså afholde sig fra at spise fra solen stod op til den gik ned igen.</char></note> kom der nogle og spurgte Jesus: „Hvorfor faster dine disciple ikke, når både farisæernes og Johannes’ disciple gør det?”</para>
+  <para style="p">
+    <verse number="19" style="v"/>„Brudgommens venner kan da ikke faste og sørge, så længe de er sammen med ham,” svarede Jesus. <verse number="20" style="v"/>„Men der kommer et tidspunkt, hvor brudgommen bliver taget fra dem. Så kan de faste.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Man lapper ikke gammelt tøj med et stykke nyt, uvasket stof. Enhver ved, at når den nye lap krymper, river den det gamle tøj i stykker, så hullet bliver endnu værre. <verse number="22" style="v"/>Der er heller ingen, der hælder ny vin på gamle lædersække, for når vinen gærer, vil sækkene sprænges—den nye vin går til spilde, og de gamle sække bliver ødelagt. Nej, til ny vin bruger man nye lædersække.”</para>
+  <para style="s1">Jesus er herre over sabbatten</para>
+  <para style="r">
+    <ref loc="MAT 12:1-8">Matt. 12,1-8</ref>; <ref loc="LUK 6:1-5">Luk. 6,1-5</ref></para>
+  <para style="p">
+    <verse number="23" style="v"/>En dag, da det var sabbat, gik Jesus og hans disciple langs en kornmark, og mens de gik, plukkede disciplene nogle aks og spiste kernerne. <verse number="24" style="v"/>Nogle af farisæerne irettesatte Jesus: „Hvordan kan du tillade, at dine disciple høster korn på en sabbat, hvor man ikke må arbejde?”</para>
+  <para style="p">
+    <verse number="25" style="v"/>„Har I aldrig læst om, hvad David gjorde, da han og hans mænd kom i nød og blev sultne?” svarede Jesus. <verse number="26" style="v"/>„På den tid da Ebjatar var ypperstepræst, gik David hen til Guds hus, og han og hans mænd spiste af de hellige brød, som egentlig kun præsterne havde lov til at spise af.”</para>
+  <para style="p">
+    <verse number="27" style="v"/>Så tilføjede han: „Sabbatten blev til for menneskets skyld—mennesket blev ikke til for sabbattens skyld. <verse number="28" style="v"/>Altså er Menneskesønnen herre over sabbatten.”</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Jesus helbreder en mand på sabbatten</para>
+  <para style="r">
+    <ref loc="MAT 12:9-14">Matt. 12,9-14</ref>; <ref loc="LUK 6:6-11">Luk. 6,6-11</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Jesus og disciplene gik ind i en synagoge, og dér var der en mand med en forkrøblet hånd. <verse number="2" style="v"/>Farisæerne holdt øje med Jesus for at se, om han ville helbrede manden på en sabbat, for så havde de noget at anklage ham for.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Jesus sagde nu til manden med den forkrøblede hånd: „Rejs dig op og stå her i midten.” <verse number="4" style="v"/>Derefter spurgte han forsamlingen: „Hvad siger Guds lov? Skal hviledagen bruges til noget godt eller til noget ondt, til at redde liv eller til at ødelægge liv?” Men ingen svarede. <verse number="5" style="v"/>Jesus så rundt på forsamlingen, vred og bedrøvet over deres stenhårde hjerter. Så sagde han til manden: „Ræk hånden frem!” Det gjorde han—og straks blev hånden rask.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Farisæerne rejste sig øjeblikkeligt og forlod synagogen. Kort efter mødtes de med herodianerne for at drøfte, hvordan de kunne få skaffet Jesus af vejen.</para>
+  <para style="s1">Masser af mennesker flokkes om Jesus</para>
+  <para style="p">
+    <verse number="7" style="v"/>Jesus og hans disciple gik nu ned mod søen, og en masse mennesker fulgte efter dem. De fleste kom fra Galilæa, men mange kom helt fra Judæa, <verse number="8" style="v"/>Jerusalem, Idumæa og fra landet på den anden side af Jordanfloden—ja, endog helt fra Tyrus og Sidon. De store undere, Jesus gjorde, rygtedes vidt omkring, og folk kom strømmende for at se, hvad der foregik. <verse number="9" style="v"/>Jesus gav sine disciple besked på at holde en båd klar, så han kunne gå om bord i den, hvis han blev for voldsomt trængt af folkeskaren på bredden. <verse number="10" style="v"/>For han helbredte så mange mennesker, at de syge pressede på fra alle sider for at røre ved ham. <verse number="11" style="v"/>Når de, som var plaget af dæmoner, så ham, faldt de på knæ foran ham og skreg: „Du er Guds Søn!” <verse number="12" style="v"/>Men Jesus forbød dem strengt at røbe, hvem han var.</para>
+  <para style="s1">Jesus udvælger de 12 apostle</para>
+  <para style="r">
+    <ref loc="MAT 10:1-4">Matt. 10,1-4</ref>; <ref loc="LUK 6:12-16">Luk. 6,12-16</ref></para>
+  <para style="p">
+    <verse number="13" style="v"/>En dag gik Jesus op på en bakketop for at bede. Deredter kaldte han på de disciple, som han ønskede, og de kom til ham. <verse number="14" style="v"/>På den måde gjorde han 12 af sine disciple til apostle. De skulle stå i lære hos ham, så han senere kunne sende dem ud med fuldmagt til at forkynde det glædelige budskab <verse number="15" style="v"/>og til at uddrive onde ånder. <verse number="16" style="v"/>Her er navnene på de 12: Simon, som Jesus senere gav navnet Peter; <verse number="17" style="v"/>Jakob og Johannes, der var sønner af Zebedæus (de blev kaldt „Tordensønnerne”); <verse number="18" style="v"/>Andreas; Filip; Bartolomæus; Mattæus; Thomas; Jakob, søn af Alfæus; Taddæus; Simon Frihedskæmper<note caller="+" style="f"><char style="fr" closed="false">3,18 </char><char style="ft" closed="false">Denne Simon kaldes også <char style="tl">Kananæeren</char> fra et aramæisk ord, der betyder „den kampivrige, den revolutionære”. Han kaldes også <char style="tl">Zelot</char> efter det tilsvarende græske ord.</char></note> <verse number="19" style="v"/>og Judas Iskariot, der senere forrådte Jesus.</para>
+  <para style="s1">Jesus under falsk anklage</para>
+  <para style="r">
+    <ref loc="MAT 12:24-32">Matt. 12,24-32</ref>; <ref loc="LUK 11:15-23">Luk. 11,15-23</ref>; <ref loc="LUK 12:10">12,10</ref></para>
+  <para style="p">
+    <verse number="20" style="v"/>Når Jesus og hans disciple gik hjem, fulgte der ofte så mange mennesker med ind i huset, at de ikke engang kunne komme til at spise. <verse number="21" style="v"/>Da hans familie hørte om det, tog de af sted for at få fat i ham, for de mente, at han var gået fra forstanden.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Nogle skriftlærde, der var kommet helt fra Jerusalem, gik rundt og sagde: „Jesus står i ledtog med Satan,<note caller="+" style="f"><char style="fr" closed="false">3,22 </char><char style="ft" closed="false">Der bruges her et gammeltestamentligt udtryk for Satan: „Beelzebul” eller „Beelzebub”, som muligvis går tilbage til filistrenes gud <char style="tl">Ba’al-Zebub</char>—fluernes herre, nævnt i <char style="xt"><ref loc="2KI 1">2.Kong. 1</ref></char>.</char></note> de onde ånders fyrste. Det er derfor, han kan uddrive de onde ånder!”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Jesus kaldte dem til sig og talte til dem i billeder: <verse number="24" style="v"/>„Hvordan kan Satan uddrive sine egne onde ånder?” spurgte han. „Et land, som ligger i krig med sig selv, kan ikke bestå, <verse number="25" style="v"/>og et hjem, der er i splid med sig selv, går snart i opløsning. <verse number="26" style="v"/>Hvis Satan nu er begyndt at kæmpe mod sine egne, så er han kommet i krig med sig selv, og det er ude med ham.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Man kan ikke bare bryde ind i en stærk mands hus og tage, hvad han har. Man må først binde ham. Derefter kan man tage, hvad han har i sit hus.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Det siger jeg jer: Mennesker kan få tilgivelse for al deres synd og al deres gudsbespottelse, <verse number="29" style="v"/>men hvis de håner Helligånden, så er der ingen tilgivelse længere. Det er en synd med evige konsekvenser.” <verse number="30" style="v"/>Det sagde Jesus til dem, fordi de påstod, at det var ved Satans kraft og ikke ved Helligåndens kraft, han uddrev de onde ånder.</para>
+  <para style="s1">De, der gør Guds vilje, hører Jesus til</para>
+  <para style="r">
+    <ref loc="MAT 12:46-50">Matt. 12,46-50</ref>; <ref loc="LUK 8:19-21">Luk. 8,19-21</ref></para>
+  <para style="p">
+    <verse number="31-32" style="v"/>Nu kom så Jesu mor og brødre til det overfyldte hus, hvor han underviste. De sendte bud ind til ham og bad ham komme udenfor. „Din mor og dine brødre står udenfor og vil tale med dig,” sagde de, der sad nærmest ved ham. <verse number="33" style="v"/>„Hvem er i virkeligheden min mor og mine brødre?” spurgte Jesus og lod blikket glide rundt på den forsamling, der sad omkring ham: <verse number="34" style="v"/>„Min mor og mine brødre sidder her! <verse number="35" style="v"/>For den, der gør Guds vilje, er min bror eller søster eller mor.”</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Billedet med jordbunden</para>
+  <para style="r">
+    <ref loc="MAT 13:1-9">Matt. 13,1-9</ref>; <ref loc="LUK 8:4-8">Luk. 8,4-8</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Senere gav Jesus sig igen til at undervise nede ved søen, og en stor skare mennesker samledes omkring ham. Derfor gik han om bord i en båd, hvorfra han kunne sidde og tale til menneskeskaren, der stod på bredden. <verse number="2" style="v"/>Han illustrerede gerne sin undervisning med billeder fra hverdagslivet.</para>
+  <para style="p">
+    <verse number="3" style="v"/>„Hør godt efter!” sagde han. „En landmand gik en dag ud for at så korn på sin mark. <verse number="4" style="v"/>Som han nu gik og strøede sædekornet ud, faldt noget på vejen, og fuglene kom og spiste det. <verse number="5" style="v"/>Noget af kornet faldt på stengrund, hvor der kun var et tyndt lag jord. Det spirede hurtigt og voksede op, <verse number="6" style="v"/>men eftersom rødderne ikke kunne udvikles i det tynde jordlag, tørrede planterne ud under den brændende sol. <verse number="7" style="v"/>Noget af kornet faldt på steder, hvor der var tidselrødder i jorden. Tidslerne voksede op og kvalte kornplanterne, så de ikke satte aks. <verse number="8" style="v"/>Men noget af kornet faldt i god jord. Det voksede op og gav afgrøde på 30, 60 eller 100 gange så meget, som der var sået. <verse number="9" style="v"/>Lad dem høre, som har øre.”</para>
+  <para style="s1">Guds riges mysterier forklares kun for disciplene</para>
+  <para style="r">
+    <ref loc="MAT 13:10-17">Matt. 13,10-17</ref>; <ref loc="LUK 8:9-10">Luk. 8,9-10</ref>; <ref loc="LUK 10:23-24">10,23-24</ref></para>
+  <para style="p">
+    <verse number="10" style="v"/>Når Jesus var alene med de Tolv og de øvrige, som fulgte ham, plejede de at spørge ham om meningen bag hans billeder.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Hans svar lød: „For jer, som følger mig, vil Guds riges mysterier blive åbenbaret, men de, som ikke følger mig, må nøjes med at spekulere over billedtalen. <verse number="12" style="v"/>Derved opfyldes ordet:</para>
+  <para style="q1">De ser, men fatter dog intet.</para>
+  <para style="q2">De hører, men forstår dog intet.</para>
+  <para style="q1">Derfor kommer de ikke til mig og får tilgivelse.”<note caller="+" style="f"><char style="fr" closed="false">4,12 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 6:9-10">Es. 6,9-10</ref></char> LXX.</char></note></para>
+  <para style="s1">Jesus forklarer billedet med jordbunden</para>
+  <para style="r">
+    <ref loc="MAT 13:18-23">Matt. 13,18-23</ref>; <ref loc="LUK 8:11-15">Luk. 8,11-15</ref></para>
+  <para style="p">
+    <verse number="13" style="v"/>Jesus fortsatte: „Har I ikke forstået billedet med kornet og jordbunden? Hvordan skal I så kunne forstå alle de andre billeder?</para>
+  <para style="p">
+    <verse number="14" style="v"/>Kornet, som landmanden såede, er et billede på Guds ord. <verse number="15" style="v"/>Nogle mennesker er som vejen. Når de hører Guds ord, kommer Satan straks og piller de ord væk, som blev sået i dem. <verse number="16" style="v"/>Nogle er som den tynde jord på stengrund. Når de hører Guds ord, tager de straks imod det med glæde. <verse number="17" style="v"/>Men de lader ikke ordet slå rod, så det varer kun en tid. Når der kommer problemer eller forfølgelser på grund af ordet, giver de op og falder fra. <verse number="18" style="v"/>Nogle er som jorden med tidsler i. De hører godt nok ordet, <verse number="19" style="v"/>men de daglige bekymringer, den forførende materialisme og lysten til at gøre alt muligt andet kvæler ordet, så der ikke bliver nogen frugt af det. <verse number="20" style="v"/>Men nogle er som den gode jord. De hører ordet og tager imod det. Det bærer frugt i deres liv: 30, 60 eller 100 gange så meget, som der var sået.”</para>
+  <para style="s1">Brug det lys, du har fået</para>
+  <para style="r">
+    <ref loc="LUK 8:16-18">Luk. 8,16-18</ref></para>
+  <para style="p">
+    <verse number="21" style="v"/>Jesus fortsatte: „Hvis nogen tænder en lampe, er det vel ikke for at stille den under en spand eller ind under sengen? Nej, de stiller lampen højt og frit, så den kan sprede sit lys. <verse number="22" style="v"/>Det, som er skjult, vil komme frem, så man kan se det, og det, som er hemmeligt, vil blive åbenbaret. <verse number="23" style="v"/>Lad dem høre, som har øre!”</para>
+  <para style="p">
+    <verse number="24" style="v"/>Jesus fortsatte: „Læg godt mærke til, hvad I hører. I skal modtage i samme forhold, som I giver. Ja, I skal få endnu mere, end I har givet. <verse number="25" style="v"/>De, der gør brug af det lys, de har fået, vil få endnu mere. Men de, der ikke bruger det lys, de har fået, vil miste det hele.”</para>
+  <para style="s1">Om Guds riges vækst</para>
+  <para style="r">
+    <ref loc="MAT 13:31-32">Matt. 13,31-32</ref>; <ref loc="LUK 13:18-19">Luk. 13,18-19</ref></para>
+  <para style="p">
+    <verse number="26" style="v"/>Jesus fortsatte med et andet billede på Guds rige: „En landmand går ud og sår korn i sin mark. <verse number="27" style="v"/>Så går han hjem, og den ene dag følger den anden. Mens han sover, og mens han er vågen, vokser kornet ude på marken, uden at han kan forklare, hvordan det går til. <verse number="28" style="v"/>Jorden bærer frugt helt af sig selv. Først strå, så aks og til sidst kerner i aksene. <verse number="29" style="v"/>En dag står hele marken moden og er klar til høst. Så kommer landmanden med sin segl for at gå i gang med indhøstningen.”</para>
+  <para style="p">
+    <verse number="30" style="v"/>Jesus fortsatte: „Hvad kan vi sammenligne Guds rige med? Hvilket billede kan vi bruge? <verse number="31" style="v"/>Jo, Guds rige er som et sennepsfrø. Det frø er det allermindste. <verse number="32" style="v"/>Men når det er sået, vokser planten op og breder sig mere end de andre buske. Den danner grene, som er store nok til, at fuglene kan bygge rede og søge ly i dens skygge.”</para>
+  <para style="s1">Om brugen af billedtale</para>
+  <para style="r">
+    <ref loc="MAT 13:34">Matt. 13,34</ref></para>
+  <para style="p">
+    <verse number="33" style="v"/>Jesus brugte mange sådanne billeder, alt efter hvad folk var i stand til at forstå. <verse number="34" style="v"/>Ja, når han underviste folkeskarerne, brugte han udelukkende den slags billeder, og det var kun, når han var alene med disciplene, at han forklarede, hvad det alt sammen betød.</para>
+  <para style="s1">Jesus befaler blæst og bølger at lægge sig</para>
+  <para style="r">
+    <ref loc="MAT 8:23-27">Matt. 8,23-27</ref>; <ref loc="LUK 8:22-25">Luk. 8,22-25</ref></para>
+  <para style="p">
+    <verse number="35" style="v"/>Efter at Jesus hele dagen havde siddet i båden og talt til skaren inde på bredden, sagde han til sine disciple: „Lad os sejle over til den anden side af søen.” <verse number="36" style="v"/>Da de sejlede bort, fulgte en del andre både med.</para>
+  <para style="p">
+    <verse number="37" style="v"/>Ikke længe efter blev det et voldsomt stormvejr. Bølgerne slog ind over båden, som tog en masse vand ind. <verse number="38" style="v"/>Jesus lå i agterstavnen og sov med hovedet på en pude. Til sidst vækkede de ham. „Mester!” råbte de. „Er du ligeglad med, at vi drukner?” <verse number="39" style="v"/>Jesus rejste sig og befalede stormen og søen at være stille. Straks lagde vinden sig, og det blev blikstille. <verse number="40" style="v"/>„Hvad er I så bange for?” spurgte Jesus. „Har I stadig ikke lært at tro?”</para>
+  <para style="p">
+    <verse number="41" style="v"/>Med forundring og ærefrygt i stemmen sagde de til hinanden: „Hvem er den mand egentlig? Selv stormen og søen adlyder ham!”</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Jesus sætter en ikke-jøde fri fra dæmonernes magt</para>
+  <para style="r">
+    <ref loc="MAT 8:28-34">Matt. 8,28-34</ref>; <ref loc="LUK 8:26-39">Luk. 8,26-39</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Jesus og disciplene var nu nået over søen til den anden bred, til gerasenernes<note caller="+" style="f"><char style="fr" closed="false">5,1 </char><char style="ft" closed="false">Eller: „gadarenernes”. Manuskripterne varierer. Her tænkes næppe på den store by Gerasa, som ligger midtvejs mellem Galilæasøen og Det Døde Hav ca. 30 km øst for Jordanfloden. Det henviser snarere til en lille flække (Gersa?) ved søens bred, som i dag er kendt under navnet Kursi.</char></note> egn. <verse number="2-3" style="v"/>Straks da de gik i land, kom en mand styrtende ud fra en klippehule og hen imod dem. Han var besat af onde ånder og holdt til i de klippehuler, der blev brugt som gravpladser. <verse number="4" style="v"/>Han havde igen og igen sprængt alle de fodjern og lænker, man havde forsøgt at holde ham bundet med. Ingen kunne klare ham, <verse number="5" style="v"/>og dag og nat kunne man høre ham hyle i gravhulerne og oppe i bjergene, hvor han slog sig selv med sten.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Manden havde på lang afstand fået øje på Jesus, og nu kom han styrtende og kastede sig ned på jorden foran ham. <verse number="7-8" style="v"/>Jesus befalede den onde ånd at forlade manden, men blev mødt med et højt skrig: „Lad mig være i fred, Jesus, du, den almægtige Guds Søn! Lov mig højt og helligt, at du ikke vil pine mig.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>„Hvad er dit navn?” spurgte Jesus. „Legion,” svarede han, „for vi er mange!” <verse number="10" style="v"/>Og så gav dæmonerne sig til at bønfalde Jesus om ikke at sende dem bort fra egnen.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Nu var der en stor flok svin, som gik og rodede efter føde på toppen af en skrænt i nærheden. <verse number="12" style="v"/>„Giv os lov til at besætte svinene!” tiggede dæmonerne. <verse number="13" style="v"/>I samme øjeblik Jesus gav dem lov, fór dæmonerne ud af manden og ind i svinene, og hele flokken—omkring 2000—styrtede ned ad skrænten og druknede i søen.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Svinehyrderne flygtede og fortalte om det både i by og på land, så egnens beboere kom strømmende til for at se, hvad der var sket. <verse number="15" style="v"/>Da de kom hen til Jesus, så de manden, der havde haft de mange dæmoner i sig, sidde påklædt og ved sans og samling. Det forbløffede dem og gjorde dem bange. <verse number="16" style="v"/>De, der havde set, hvad der var sket med manden og svinene, fortalte dem, hvordan det var gået til. <verse number="17" style="v"/>Derefter bad de Jesus om at forlade deres egn.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Da Jesus var på vej op i båden, bad manden, der havde været besat af dæmoner, om lov til at følge med ham. <verse number="19" style="v"/>„Nej,” sagde Jesus, „gå du hjem til dine landsmænd og fortæl, hvad Israels Gud<note caller="+" style="f"><char style="fr" closed="false">5,19 </char><char style="ft" closed="false">Den græske tekst siger „Herren”. Som det er tradition hos jøderne, bruger Jesus ordet „Herre” for Jahve, Israels Gud.</char></note> i sin barmhjertighed har gjort for dig.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Manden gik derefter rundt i Dekapolis og fortalte alle om de store ting, Jesus havde gjort for ham. Og folk undrede sig.</para>
+  <para style="s1">Ved tro bliver en kvinde helbredt og en pige oprejst fra de døde</para>
+  <para style="r">
+    <ref loc="MAT 9:18-26">Matt. 9,18-26</ref>; <ref loc="LUK 8:40-56">Luk. 8,40-56</ref></para>
+  <para style="p">
+    <verse number="21" style="v"/>Så snart Jesus var nået tilbage over søen og gået i land, samledes en stor skare mennesker omkring ham. Mens han endnu stod nede på søbredden, <verse number="22" style="v"/>kom en synagogeforstander derhen. Hans navn var Jairus. Da han kom hen til Jesus, faldt han på knæ foran ham <verse number="23" style="v"/>og bad indtrængende: „Min lille datter ligger for døden derhjemme! Men hvis du kommer og lægger hænderne på hende, så vil hun blive rask og leve!”</para>
+  <para style="p">
+    <verse number="24" style="v"/>Jesus gik med ham, men en vældig masse mennesker trængtes stadig om ham. <verse number="25" style="v"/>Mellem de mange mennesker var der en kvinde, som igennem 12 år havde lidt af vedvarende blødninger. <verse number="26" style="v"/>I alle de år havde hun gennemgået meget hos forskellige læger, og selv om hun havde brugt alle sine penge i håb om at blive rask, var hendes tilstand ikke blevet bedre—tværtimod. <verse number="27-28" style="v"/>Hun havde hørt, hvad folk fortalte om Jesus, og hun trængte sig nu frem gennem mængden for at nå hen til ham. „Hvis bare jeg får rørt ved hans bedesjal, bliver jeg helbredt,” tænkte hun. Forsigtigt rørte hun bagfra ved sjalet. <verse number="29" style="v"/>Straks standsede blødningerne, og hun kunne mærke, at hun var blevet rask.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Jesus standsede op og vendte sig om, for han havde mærket, at en helbredende kraft var strømmet ud fra ham. „Hvem var det, der rørte ved mit sjal?” spurgte han.</para>
+  <para style="p">
+    <verse number="31" style="v"/>„Hele mængden maser jo ind på dig,” indvendte disciplene. „Og så spørger du, hvem der har rørt ved dig?”</para>
+  <para style="p">
+    <verse number="32" style="v"/>Jesus blev imidlertid stående og så sig omkring for at få øje på den, der havde gjort det.</para>
+  <para style="p">
+    <verse number="33" style="v"/>Den forskrækkede kvinde kom frem. Hun rystede af sindsbevægelse, for hun vidste jo, hvad der var sket. „Det var mig,” sagde hun og faldt på knæ foran ham. Og så fortalte hun det hele. <verse number="34" style="v"/>„Min ven, det var din tro, der reddede dig,” sagde Jesus. „Gå med fred! Du er nu fuldstændig helbredt.”</para>
+  <para style="p">
+    <verse number="35" style="v"/>Mens han endnu stod og talte med hende, kom der nogle til Jairus med en besked fra hans hjem: „Din datter er død,” sagde de til ham. „Der er ingen grund til at ulejlige mesteren mere.” <verse number="36" style="v"/>Jesus hørte, hvad der blev sagt, og sagde henvendt til Jairus: „Vær ikke bange. Du skal bare tro på mig.”</para>
+  <para style="p">
+    <verse number="37" style="v"/>Jesus ville ikke have andre med sig hen til Jairus’ hjem end Peter, Jakob og dennes bror Johannes. <verse number="38" style="v"/>Da de kom derhen, var der en vældig larm. Folk græd og jamrede højlydt inde i huset. <verse number="39" style="v"/>Jesus og disciplene gik indenfor. „Hvorfor græder og jamrer I sådan?” spurgte han. „Den lille pige er ikke død. Hun sover bare.” <verse number="40" style="v"/>De lo ad ham, men han bad dem alle gå udenfor og tog kun den lille piges far og mor og de tre disciple med ind i det værelse, hvor hun lå.</para>
+  <para style="p">
+    <verse number="41" style="v"/>Han gik hen til sengen, tog pigens hånd og sagde: „Stå op, min pige!” <verse number="42" style="v"/>Straks rejste hun sig op og begyndte at gå omkring. Hun var 12 år gammel. Forældrene stod og stirrede med åben mund. <verse number="43" style="v"/>„I må ikke sige det til nogen,” sagde Jesus strengt, „og sørg for, at hun får noget at spise.”</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Messias bliver mødt med vantro i sin hjemby</para>
+  <para style="r">
+    <ref loc="MAT 13:53-58">Matt. 13,53-58</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Senere tog Jesus sammen med disciplene af sted til sin hjemby, Nazaret. <verse number="2" style="v"/>Da det blev sabbat, gik de alle ind i synagogen, hvor Jesus fik lejlighed til at undervise. De mange tilhørere blev slået af forundring og udbrød: „Hvor har han alt det fra? Hvordan har han fået så stor en visdom? Hvordan har han kunnet udføre de undere, vi hører om? <verse number="3" style="v"/>Han er jo bare en almindelig håndværker, Marias søn. Vi kender hans brødre, Jakob, Jose,<note caller="+" style="f"><char style="fr" closed="false">6,3 </char><char style="ft" closed="false">Det hebraiske navn er sandsynligvis <char style="tl">Joshe</char>, og de græske håndskrifter varierer både her og i <char style="xt"><ref loc="MAT 13:55">Matt. 13,55</ref></char> mellem Josef, Jose og Joses.</char></note> Judas og Simon, og hans søstre bor her i byen.” Og fordi de kendte ham, ville de ikke acceptere, at han kunne være Messias.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Jesus sagde da til dem: „Ingen steder bliver der set så meget ned på en profet som i hans egen by, i hans hjem og i hans familie.” <verse number="5" style="v"/>Han kunne ikke gøre nogen særlige undere iblandt dem, men lagde kun hænderne på nogle få syge og helbredte dem. <verse number="6" style="v"/>Og han undrede sig meget over deres mangel på tro.</para>
+  <para style="p">Derefter gik han videre til landsbyerne deromkring og underviste folk.</para>
+  <para style="s1">Jesus udsender de 12 disciple</para>
+  <para style="r">
+    <ref loc="MAT 10:5-15">Matt. 10,5-15</ref>; <ref loc="LUK 9:1-6">Luk. 9,1-6</ref></para>
+  <para style="p">
+    <verse number="7" style="v"/>En dag kaldte Jesus de Tolv sammen og sagde til dem, at han ville sende dem ud to og to sammen, for at de skulle forkynde budskabet om Guds rige. Han gav dem autoritet til at drive onde ånder ud <verse number="8-9" style="v"/>og sagde til dem, at de ikke skulle tage andet med på rejsen end deres vandringsstav. „I skal hverken tage mad eller penge med,” fortsatte han, „heller ikke en taske med ekstra tøj og sandaler. <verse number="10" style="v"/>Når I kommer til et hjem, hvor de tager imod jer, skal I blive boende dér. Lad være med at flytte fra hus til hus. <verse number="11" style="v"/>Hvis ingen vil invitere jer indenfor eller høre på jer, så forlad den by og ryst støvet af jeres fødder som tegn på, at fra nu af er de overladt til deres egen skæbne.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Så tog disciplene af sted. Overalt hvor de kom frem, forkyndte de, at folk skulle ændre deres indstilling og tro på Jesus. <verse number="13" style="v"/>De uddrev mange dæmoner og helbredte mange syge, idet de salvede dem med olie.</para>
+  <para style="s1">Kong Herodes funderer over, hvem Jesus er</para>
+  <para style="r">
+    <ref loc="MAT 14:1-12">Matt. 14,1-12</ref>; <ref loc="LUK 9:7-9">Luk. 9,7-9</ref></para>
+  <para style="p">
+    <verse number="14" style="v"/>Jesus blev mere og mere kendt, og det varede ikke længe, før også kong Herodes hørte rygterne om ham. Man diskuterede, hvem Jesus egentlig var. Nogle mente, at det måtte være Johannes Døber, der var genopstået fra de døde, og at det var derfor, han kunne gøre mirakler. <verse number="15" style="v"/>Andre mente, at det var profeten Elias, som nu var kommet tilbage, mens andre mente, at han var en profet ligesom de kendte profeter fra gamle dage. <verse number="16" style="v"/>Da Herodes hørte alle rygterne, sagde han: „Det må være Johannes Døber, der er genopstået fra de døde, ham jeg lod halshugge!”</para>
+  <para style="p">
+    <verse number="17-19" style="v"/>Der var nemlig sket det, at Herodes efter pres fra Herodias havde ladet Johannes arrestere og sætte i fængsel. Herodias var egentlig gift med Filip, en bror til Herodes. Alligevel havde Herodes giftet sig med hende, og derfor havde Johannes sagt til ham: „Du har ikke lov til at leve sammen med din brors kone!” Det var Herodias blevet så rasende over, at hun ville have Johannes slået ihjel. Det gik Herodes dog ikke med til, men lod ham arrestere og sætte i fængsel. Herodias blev ved med at hade Johannes, <verse number="20" style="v"/>men Herodes var bange for ham og holdt hånden over ham, fordi han vidste, at Johannes var en retskaffen og hellig mand. Hver gang kongen hørte Johannes tale, blev han ilde berørt, men han ville alligevel gerne høre ham.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Så en dag fik Herodias sin store chance. Det var Herodes’ fødselsdag, og han holdt fest for alle sine hoffolk og officerer samt Galilæas fremstående borgere.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Herodias’ datter kom ind og dansede for selskabet. De blev alle vildt begejstrede, og kongen svor på, at hun skulle få hvad som helst, hun ville have. <verse number="23" style="v"/>„Forlang hvad du vil!” råbte han. „Om det så er det halve kongerige, skal du få det!”</para>
+  <para style="p">
+    <verse number="24" style="v"/>Pigen løb ud til sin mor og spurgte: „Hvad skal jeg forlange?”</para>
+  <para style="p">„Johannes Døbers hoved,” svarede Herodias.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Pigen løb tilbage til kongen. „Giv mig Johannes Døbers hoved,” sagde hun, „nu med det samme—på et fad!”</para>
+  <para style="p">
+    <verse number="26" style="v"/>Kongen blev hed om ørerne, men han kunne ikke få sig selv til at bryde den ed, han lige havde svoret foran alle gæsterne. <verse number="27" style="v"/>Så han gav straks en ordre til en af vagterne, som med det samme gik ned i fængslet og halshuggede Johannes. <verse number="28" style="v"/>Hovedet blev bragt op på et fad og overrakt til den unge pige, der gav det videre til sin mor.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Da Johannes’ disciple hørte, hvad der var sket, kom de og hentede hans lig og begravede det.</para>
+  <para style="s1">Bespisningen af de 5000</para>
+  <para style="r">
+    <ref loc="MAT 14:13-21">Matt. 14,13-21</ref>; <ref loc="LUK 9:10-17">Luk. 9,10-17</ref>; <ref loc="JHN 6:1-13">Joh. 6,1-13</ref></para>
+  <para style="p">
+    <verse number="30" style="v"/>De apostle, som Jesus havde sendt ud to og to, kom nu tilbage og fortalte om alt det, de havde udført og undervist om. <verse number="31" style="v"/>„I trænger til at hvile jer,” sagde Jesus. „Lad os tage hen til et øde sted, hvor vi kan være alene.” Folk blev nemlig ved med at komme og gå, så de ikke engang havde ro til at spise.</para>
+  <para style="p">
+    <verse number="32" style="v"/>Så sejlede de ud på søen for at tage hen til et øde sted. <verse number="33" style="v"/>Men mange mennesker, som havde set dem tage af sted, løb langs bredden og nåede frem til stedet i forvejen. Også mange folk fra byerne deromkring sluttede sig til flokken. <verse number="34" style="v"/>Da Jesus gik i land, blev han mødt af en stor skare mennesker, der havde samlet sig, og han blev fyldt af medlidenhed, for de var som får uden hyrde. Og han begyndte at undervise dem om mange ting.</para>
+  <para style="p">
+    <verse number="35" style="v"/>Sidst på eftermiddagen kom hans disciple hen til ham og sagde: „Det er ved at blive sent, og stedet her er øde. <verse number="36" style="v"/>Du må hellere sende alle de mennesker bort, så de kan gå hen til gårdene og landsbyerne heromkring og købe sig noget at spise.”</para>
+  <para style="p">
+    <verse number="37" style="v"/>„I kan give dem noget at spise!” svarede Jesus.</para>
+  <para style="p">„Vil du have, at vi skal købe brød for 200 denarer<note caller="+" style="f"><char style="fr" closed="false">6,37 </char><char style="ft" closed="false">En denar svarede til en almindelig dagløn.</char></note> til alle de mennesker!” spurgte de.</para>
+  <para style="p">
+    <verse number="38" style="v"/>„Gå hen og se efter, hvad vi selv har af brød,” svarede han.</para>
+  <para style="p">Et øjeblik efter kom de igen. „Vi har fem brød og to fisk,” sagde de.</para>
+  <para style="p">
+    <verse number="39" style="v"/>Han bad dem så om at få folk til at sætte sig ned på rad og række i det grønne græs, <verse number="40" style="v"/>og de satte sig i rækker med 50 mand i hver. Det blev til 100 rækker.<note caller="+" style="f"><char style="fr" closed="false">6,40 </char><char style="ft" closed="false">Teksten her gør det ikke helt klart, hvordan de satte sig, men det har været på en måde, så det var let at beregne, at der var 5000 mænd. Ud fra Lukas 9,14 kan man se, at der var 50 mænd i hver række. Kvinder og børn satte sig formodentlig bag ved manden og blev ikke talt med.</char></note> <verse number="41" style="v"/>Jesus tog nu de fem brød og de to fisk, så op mod himlen og takkede Gud for dem. Derefter brækkede han brødene i stykker og begyndte at dele ud til disciplene, for at de skulle give dem videre til alle de mennesker, der var til stede. Også de to fisk blev delt ud, <verse number="42" style="v"/>og alle fik nok og blev mætte. <verse number="43-44" style="v"/>5000 mænd blev bespist, og bagefter samlede man de tiloversblevne stykker brød og fisk sammen. Det blev til 12 fyldte kurve.</para>
+  <para style="s1">Disciplenes tøvende tro</para>
+  <para style="r">
+    <ref loc="MAT 14:22-33">Matt. 14,22-33</ref>; <ref loc="JHN 6:15b-21">Joh. 6,15b-21</ref></para>
+  <para style="p">
+    <verse number="45" style="v"/>Straks efter gav Jesus disciplene besked om at gå i båden og sejle i forvejen i retning af Betsajda, mens han selv sendte folkeskaren bort. <verse number="46" style="v"/>Da han havde gjort det, gik han op på bjergskråningen for at bede.</para>
+  <para style="p">
+    <verse number="47" style="v"/>Det var efterhånden blevet ud på natten, og båden var allerede et godt stykke ude på søen. Inde på land stod Jesus alene, <verse number="48" style="v"/>og han kunne se, hvordan disciplene sled i det med årerne, for de havde strid modvind. Kort før daggry kom Jesus gående ud til dem på vandet, og han nåede helt op på siden af båden, før de opdagede ham. <verse number="49" style="v"/>Da de så en skikkelse gå på vandet, skreg de af rædsel, for de troede, det var et spøgelse. <verse number="50" style="v"/>Men Jesus råbte til dem: „I skal ikke være bange—det er mig!” <verse number="51" style="v"/>Så klatrede han op i båden til dem, og straks lagde vinden sig. Disciplene var overvældede og ude af stand til at fatte, hvad der foregik. <verse number="52" style="v"/>At Jesus netop havde udført et mirakel ved at bespise 5000 mennesker, var ikke nok til, at de forstod, at for ham var det overnaturlige naturligt.</para>
+  <para style="s1">Helbredelser i Genesaret området</para>
+  <para style="r">
+    <ref loc="MAT 14:34-36">Matt. 14,34-36</ref></para>
+  <para style="p">
+    <verse number="53" style="v"/>De styrede nu båden ind mod land og lagde til ved et sted, som kaldes Genesaret. <verse number="54" style="v"/>Aldrig så snart var de kommet ned fra båden, før folk genkendte ham. <verse number="55" style="v"/>De skyndte sig rundt i hele omegnen for at fortælle, at Jesus var kommet. En masse syge blev bragt til ham på bårer, <verse number="56" style="v"/>og hvor han end kom i landsbyer og byer og omkring på gårdene, blev de syge lagt ud på åbne pladser. Overalt tiggede lidende mennesker om at få lov at røre ved kvasten på hans bedesjal, og alle, der rørte ved ham, blev raske.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Guds befalinger og menneskelige traditioner</para>
+  <para style="r">
+    <ref loc="MAT 15:1-9">Matt. 15,1-9</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>En dag kom der nogle farisæere og skriftlærde fra Jerusalem for at holde Jesus under observation. <verse number="2" style="v"/>De lagde mærke til, at nogle af hans disciple spiste med „vanhellige”, dvs. uvaskede hænder. <verse number="3-4" style="v"/>Jøderne—og ikke mindst farisæerne—var nemlig meget nøjeregnende med at overholde forfædrenes overleveringer, bl.a. de mange forskrifter for, hvordan man skulle rense kobberskåle, kander og krus,<note caller="+" style="f"><char style="fr" closed="false">7,3-4 </char><char style="ft" closed="false">Nogle håndskrifter tilføjer: „og sovepladser”, jf. <char style="xt"><ref loc="LEV 15:4">3.Mos. 15,4</ref></char></char></note> som var blevet urene, og hvordan man skulle rense hænderne på en bestemt måde, når man kom hjem fra markedspladsen, eller når man skulle til at spise.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Farisæerne og de skriftlærde spurgte nu Jesus: „Hvorfor følger dine disciple ikke de regler, vores forfædre har pålagt os? De spiser jo med vanhellige hænder!”</para>
+  <para style="p">
+    <verse number="6" style="v"/>„I er nogle hyklere!” udbrød Jesus. „Det er sådan nogle som jer, Gud har talt om i profeten Esajas’ bog:</para>
+  <para style="q1">‚Dette folk ærer mig i det ydre,</para>
+  <para style="q2">men deres hjerte er fjernt fra mig.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Det er forgæves, de dyrker mig,</para>
+  <para style="q2">når deres lære blot er menneskebud.’<note caller="+" style="f"><char style="fr" closed="false">7,7 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 29:13">Es. 29,13</ref></char> LXX.</char></note></para>
+  <para style="p">
+    <verse number="8" style="v"/>De ord passer på jer, for I tilsidesætter Guds bud og følger menneskelige traditioner i stedet for. <verse number="9" style="v"/>Hvor smukt af jer at ophæve Guds befalinger for at kunne overholde jeres egne traditioner!</para>
+  <para style="p">
+    <verse number="10" style="v"/>For eksempel gav Moses jer følgende befaling fra Gud: ‚Du skal ære din far og din mor!’ Han sagde også: ‚Den, der forbander sin far eller mor, skal dø.’<note caller="+" style="f"><char style="fr" closed="false">7,10 </char><char style="ft" closed="false"><char style="xt"><ref loc="EXO 20:12">2.Mos. 20,12</ref></char> og 21,17.</char></note> <verse number="11" style="v"/>Men I hævder, at hvis blot man siger til sin far eller mor: ‚Det, du skulle have haft, vil jeg i stedet give som gave til templet,’ <verse number="12" style="v"/>så har man lov til at lade være med at hjælpe sine forældre. <verse number="13" style="v"/>På den måde ophæver I Guds ord til fordel for jeres egne traditioner. Det er bare ét eksempel ud af mange.”</para>
+  <para style="s1">Hvad gør et menneske urent i Guds øjne?</para>
+  <para style="r">
+    <ref loc="MAT 15:10-20">Matt. 15,10-20</ref></para>
+  <para style="p">
+    <verse number="14" style="v"/>Så kaldte Jesus folk sammen og sagde: „Hør nu efter, alle sammen! Prøv at forstå, hvad jeg siger: <verse number="15" style="v"/>Det er ikke det, som udefra kommer ind i et menneske, der gør det urent i Guds øjne. Tværtimod—det er det, som kommer ud inde fra mennesket, der gør det urent. <verse number="16" style="v"/>Lad dem høre, som har øre!”<note caller="+" style="f"><char style="fr" closed="false">7,16 </char><char style="ft" closed="false">Nogle håndskrifter mangler vers 16. </char></note></para>
+  <para style="p">
+    <verse number="17" style="v"/>Jesus gik derefter ind i det hus, hvor han holdt til, for at slippe bort fra folkemængden, og hans disciple spurgte ham, hvad meningen var med det billede. <verse number="18" style="v"/>„Forstår I stadig ingenting?” sagde Jesus. „Så hør her: Det er jo ikke den mad, som udefra kommer ind i et menneske, der gør et menneskes tanker urene, <verse number="19" style="v"/>for maden kommer ned i maven og forsvinder ud igen.” Ved at sige det erklærede han, at al slags mad var acceptabel i Guds øjne. <verse number="20" style="v"/>Han tilføjede: „Det, der gør et menneske urent, er det, der udgår fra menneskets indre, <verse number="21" style="v"/>dvs. de onde tanker, som fører til: seksuel synd, tyveri, mord, <verse number="22" style="v"/>utroskab, griskhed, ondskab, bedragerier, udsvævelser, misundelse, bagvaskelse, arrogance og tåbelig snak. <verse number="23" style="v"/>Alle disse onde ting kommer indefra og forurener menneskene.”</para>
+  <para style="s1">En ikke-jødisk kvindes tro</para>
+  <para style="r">
+    <ref loc="MAT 15:21-28">Matt. 15,21-28</ref></para>
+  <para style="p">
+    <verse number="24" style="v"/>Derefter forlod Jesus og disciplene Galilæa og kom til egnene omkring Tyrus. Der fandt de et hus at bo i og ville gerne være forblevet ubemærket. Men det var umuligt. <verse number="25-26" style="v"/>Jesus blev straks opsøgt af en ikke-jødisk kvinde fra egnen, som havde hørt om ham. Hun havde en datter, som var plaget af en ond ånd, og hun kom nu og faldt på knæ foran Jesus og bønfaldt ham om at uddrive den onde ånd af hendes datter.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Jesus sagde til hende: „Jeg må først tage mig af mine egne ‚børn’, jøderne. Det kan ikke være rigtigt at tage børnenes mad og give den til hundehvalpene.”</para>
+  <para style="p">
+    <verse number="28" style="v"/>„Det er sandt, Herre,” sagde hun, „og dog løber hvalpene ind under bordet og spiser de krummer, som børnene taber.”</para>
+  <para style="p">
+    <verse number="29" style="v"/>Så sagde Jesus til hende: „Fordi du svarede på den måde, skal du få, hvad du bad om. Gå nu blot hjem. Den onde ånd har forladt din datter.”</para>
+  <para style="p">
+    <verse number="30" style="v"/>Da hun kom hjem, lå hendes datter roligt i sengen. Den onde ånd var forsvundet.</para>
+  <para style="s1">Jesus helbreder en døvstum mand, som ikke var jøde</para>
+  <para style="r">
+    <ref loc="MAT 15:29-31">Matt. 15,29-31</ref></para>
+  <para style="p">
+    <verse number="31" style="v"/>Fra Tyrus gik Jesus via Sidon til Dekapolis’ egne øst for Genesaret Sø. <verse number="32" style="v"/>En døv mand, der tillige havde svært ved at tale, blev ført hen til ham, og man bad Jesus om at lægge hænderne på ham og helbrede ham. <verse number="33" style="v"/>Jesus tog ham lidt afsides og stak fingrene i ørerne på ham. Dernæst spyttede han på fingrene og rørte ved mandens tunge, <verse number="34" style="v"/>så op mod himlen, sukkede dybt og sagde: „Luk dig op!”</para>
+  <para style="p">
+    <verse number="35" style="v"/>Straks kunne manden høre alt, hvad der blev sagt, og det, der havde hæmmet hans tale, forsvandt, så han kunne tale tydeligt. <verse number="36" style="v"/>Jesus forbød de tilstedeværende at sige det til nogen. Men jo mere han forbød det, desto ivrigere fortalte de om det, <verse number="37" style="v"/>for de var ude af sig selv af forundring. „Han kan klare alt!” sagde folk til hinanden. „Han helbreder både de stumme og de døve.”</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Bespisningen af de 4000 ikke-jøder</para>
+  <para style="r">
+    <ref loc="MAT 15:32-39">Matt. 15,32-39</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Der var igen samlet en stor skare mennesker omkring Jesus, og de havde ikke noget at spise. Jesus kaldte så på disciplene. <verse number="2" style="v"/>„Jeg har ondt af alle de mennesker,” sagde han. „Nu har de været sammen med mig her i tre dage, og de har ikke mere at spise. <verse number="3" style="v"/>Hvis jeg sender dem af sted uden at give dem noget, kan de falde om af udmattelse på vejen hjem. Nogle af dem er jo kommet langvejsfra.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>„Men det er da umuligt at skaffe brød nok her i ødemarken,” indvendte disciplene.</para>
+  <para style="p">
+    <verse number="5" style="v"/>„Hvor mange brød har I?” spurgte Jesus.</para>
+  <para style="p">„Syv,” svarede de.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Så fik han folk til at sætte sig på jorden. Derefter tog han de syv brød, takkede Gud, brækkede dem i stykker og gav stykkerne til disciplene, som så delte mad ud til folkeskaren. <verse number="7" style="v"/>Der var også nogle småfisk, som Jesus bad en takkebøn for, hvorefter han gav dem til disciplene, for at de skulle dele dem ud. <verse number="8" style="v"/>Der var nok til, at alle spiste sig mætte, og da resterne blev samlet sammen, fyldte de syv kurve. <verse number="9" style="v"/>Tallet på de tilstedeværende mænd var ca. 4000. Efter måltidet fik han dem alle til at gå hjem.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Umiddelbart efter gik Jesus om bord i en båd sammen med sine disciple, og de sejlede til egnene ved Dalmanuta.</para>
+  <para style="s1">Farisæerne nægter at tro på Jesus som Messias</para>
+  <para style="r">
+    <ref loc="MAT 16:1-4">Matt. 16,1-4</ref></para>
+  <para style="p">
+    <verse number="11" style="v"/>Da farisæerne der på stedet fik at vide, at Jesus var kommet, gik de hen for at diskutere med ham. De bad ham om at gøre et mirakel som tegn på, at han virkelig var kommet fra Gud. På den måde ville de sætte ham på prøve.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Jesus sukkede dybt i sin ånd: „Visse mennesker forlanger tegn og undere, før de vil tro. Men det siger jeg jer: Sådanne mennesker får ikke noget tegn at se!”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Sammen med sine disciple forlod Jesus nu de vantro farisæere, gik op i båden og sejlede over til den anden side af søen.</para>
+  <para style="s1">Advarsel mod farisæernes vantro</para>
+  <para style="r">
+    <ref loc="MAT 16:5-12">Matt. 16,5-12</ref></para>
+  <para style="p">
+    <verse number="14" style="v"/>Disciplene havde glemt at tage mere brød med, så de havde kun ét brød med sig i båden. <verse number="15" style="v"/>Så da Jesus advarede dem og sagde: „Vær på vagt over for den surdej, der kommer fra Herodes og farisæerne,” <verse number="16" style="v"/>begyndte de at diskutere, om han havde sagt det, fordi de ikke havde brød nok med.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Jesus var klar over, hvad de hviskede sammen om. „Hvorfor snakker I om, at I ikke har brød med?” sagde han. „Fatter I endnu ikke alt det, som allerede er sket? <verse number="18" style="v"/>Har I ikke øjne at se med? Har I ikke ører at høre med? <verse number="19" style="v"/>Har I allerede glemt det, der skete med de 5000, jeg bespiste med fem brød? Hvor mange kurve med brødrester samlede I ind bagefter?”</para>
+  <para style="p">„Tolv,” svarede de.</para>
+  <para style="p">
+    <verse number="20" style="v"/>„Og da jeg bespiste de 4000 med syv brød, hvor meget blev der da tilovers?”</para>
+  <para style="p">„Syv kurvfulde,” svarede de.</para>
+  <para style="p">
+    <verse number="21" style="v"/>„Fatter I stadig ingenting?”</para>
+  <para style="s1">Jesus helbreder en blind mand i Betsajda</para>
+  <para style="p">
+    <verse number="22" style="v"/>Da de ankom til Betsajda, kom folk med en blind mand og bad Jesus røre ved ham og helbrede ham. <verse number="23" style="v"/>Jesus tog den blinde ved hånden og førte ham uden for landsbyen. Så spyttede han på den blinde mands øjne og lagde hænderne på dem. Derefter tog han hænderne væk igen og spurgte: „Kan du se noget nu?”</para>
+  <para style="p">
+    <verse number="24" style="v"/>Manden så sig omkring. „Ja, jeg kan vist se nogle mennesker, for der er noget ligesom træer, der går omkring.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>Jesus lagde igen hænderne over mandens øjne, og nu blev hans syn normalt, så han kunne se alt tydeligt. <verse number="26" style="v"/>Derpå sendte Jesus ham hjem, idet han sagde: „Lad være med at sige det til nogen i landsbyen.”</para>
+  <para style="s1">Peters åbenbaring om Jesus som Messias</para>
+  <para style="r">
+    <ref loc="MAT 16:13-20">Matt. 16,13-20</ref>; <ref loc="LUK 9:18-21">Luk. 9,18-21</ref></para>
+  <para style="p">
+    <verse number="27" style="v"/>Jesus og disciplene forlod nu Galilæa og satte kursen mod landsbyerne omkring Cæsarea Filippi. Undervejs spurgte han dem: „Hvem siger folk, at jeg er?”</para>
+  <para style="p">
+    <verse number="28" style="v"/>„Nogle mener, at du er Johannes Døber, der er kommet tilbage fra de døde,” svarede de. „Andre siger, du er Elias eller en anden af de gamle profeter, der er genopstået.”</para>
+  <para style="p">
+    <verse number="29" style="v"/>„Og hvad siger I? Hvem tror I, at jeg er?”</para>
+  <para style="p">Peter svarede: „Du er Messias, den frelser, vi har ventet på!”</para>
+  <para style="p">
+    <verse number="30" style="v"/>Jesus advarede dem dog imod at fortælle det til nogen.</para>
+  <para style="s1">Messias som den lidende Frelser</para>
+  <para style="r">
+    <ref loc="MAT 16:21-23">Matt. 16,21-23</ref>; <ref loc="LUK 9:22">Luk. 9,22</ref></para>
+  <para style="p">
+    <verse number="31" style="v"/>Derefter gav Jesus sig til at fortælle dem om de lidelser, der ventede ham. „De vil forkaste mig alle sammen,” sagde han, „både ypperstepræsterne, de skriftlærde og de øvrige ledere. Til sidst dræber de mig—men på den tredje dag<note caller="+" style="f"><char style="fr" closed="false">8,31 </char><char style="ft" closed="false">I Mellemøsten og mange andre dele af verden tæller man dagene inklusivt. Det vil sige, at udtrykket „på den tredje dag” eller „tre dage efter” svarer til, når vi på dansk siger „to dage efter”. Vi ved jo også, at det drejer sig om tidsrummet fra fredag til søndag.</char></note> står jeg op fra de døde.”</para>
+  <para style="p">
+    <verse number="32" style="v"/>Jesus talte frit ud om det, men Peter trak ham til side og prøvede at tale ham fra det. <verse number="33" style="v"/>Da vendte Jesus ryggen til Peter og irettesatte ham: „Gå væk fra mig, Satan! Du forstår jo ikke, hvad der er Guds vilje. Du ser det kun fra et menneskeligt synspunkt.”</para>
+  <para style="s1">Det koster dyrt at følge Guds vilje</para>
+  <para style="r">
+    <ref loc="MAT 16:24-28">Matt. 16,24-28</ref>; <ref loc="LUK 9:23-27">Luk. 9,23-27</ref></para>
+  <para style="p">
+    <verse number="34" style="v"/>Han kaldte nu alle disciplene og hele folkeskaren sammen og sagde: „De, der ønsker at være mine disciple, skal lægge alt deres eget til side og følge mig, også selv om det koster livet. <verse number="35" style="v"/>De, der klamrer sig til det jordiske liv, vil miste det himmelske. Men de, der mister livet, fordi de holder fast ved mig og mit budskab, vil få det evige liv. <verse number="36" style="v"/>Hvad gavner det et menneske at vinde hele verden, hvis sjælen går fortabt? <verse number="37" style="v"/>Findes der noget, der er mere værd end et menneskes sjæl? <verse number="38" style="v"/>Hvis I fornægter mig og mine ord, når I står over for denne verdens vantro og syndige mennesker, så vil jeg, Menneskesønnen, også fornægte jer, når jeg kommer i min Fars herlighed sammen med de hellige engle.”</para>
+  <chapter number="9" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Jesus fortsatte: „Det siger jeg jer: Nogle af jer, der står her, skal ikke dø, før I har set Guds herredømme blive åbenbaret med kraft.”</para>
+  <para style="s1">Tre disciple ser et glimt af Jesus i hans herlighed</para>
+  <para style="r">
+    <ref loc="MAT 17:1-9">Matt. 17,1-9</ref>; <ref loc="LUK 9:28-36">Luk. 9,28-36</ref></para>
+  <para style="p">
+    <verse number="2" style="v"/>Seks dage senere tog Jesus Peter, Jakob og Johannes med op på et højt bjerg, hvor de var helt alene. Pludselig skiftede Jesus udseende for øjnene af de tre disciple. <verse number="3" style="v"/>Hans klæder blev så blændende hvide, som intet jordisk blegemiddel kunne gøre dem. <verse number="4" style="v"/>Derefter så disciplene Elias og Moses komme til syne og tale med Jesus.</para>
+  <para style="p">
+    <verse number="5" style="v"/>„Mester, hvor er det skønt at være her,” udbrød Peter. „Lad os bygge tre hytter: en til dig, en til Moses og en til Elias.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Han tænkte ikke over, hvad han sagde, for de var alle helt forfærdede.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Så kom der en sky og indhyllede dem, og de hørte en stemme inde fra skyen: „Det er min elskede Søn! Lyt til ham!”</para>
+  <para style="p">
+    <verse number="8" style="v"/>Da de igen så sig omkring, var Moses og Elias forsvundet, og de var alene med Jesus.</para>
+  <para style="p">
+    <verse number="9" style="v"/>På vej ned ad bjerget sagde Jesus til sine tre ledsagere, at de ikke måtte fortælle nogen, hvad de havde set oppe på bjerget, før han var genopstået fra de døde. <verse number="10" style="v"/>De mærkede sig det, han sagde, men begyndte samtidig at diskutere indbyrdes, hvad det vil sige at genopstå fra de døde.</para>
+  <para style="s1">Skulle „Elias” ikke komme før Messias?</para>
+  <para style="r">
+    <ref loc="MAT 17:10-13">Matt. 17,10-13</ref></para>
+  <para style="p">
+    <verse number="11" style="v"/>Disciplene spurgte nu Jesus: „Hvordan kan det være, at de skriftlærde siger, at Elias skal komme før Messias?”</para>
+  <para style="p">
+    <verse number="12-13" style="v"/>Jesus svarede: „Det er rigtigt, at Elias går i forvejen og genopretter alt.<note caller="+" style="f"><char style="fr" closed="false">9,12-13 </char><char style="ft" closed="false">Se <char style="xt"><ref loc="MAL 3:23-24">Mal. 3,23-24</ref></char>. Johannes Døber kom som en anden Elias og begyndte at skabe grundlaget for at genoprette alt. Det grundlag ligger i Johannes’ budskab: „Vend om fra jeres synder og gør jer parate til at tage imod Messias som Frelseren.”</char></note> Det siger jeg jer: ‚Elias’ har allerede været her, og de gjorde med ham, hvad de ville, sådan som der står skrevet om ham. Men hvordan kan det være, at selv om Elias skulle komme og genoprette alt, står der alligevel skrevet, at Menneskesønnen skal lide meget og behandles med foragt?”</para>
+  <para style="s1">Alt er muligt for den, som tror</para>
+  <para style="r">
+    <ref loc="MAT 17:14-21">Matt. 17,14-21</ref>; Luk. 9,37-43a</para>
+  <para style="p">
+    <verse number="14" style="v"/>Da de kom ned fra bjerget, så de, at der stod en stor flok mennesker omkring de øvrige ni disciple, som var ved at diskutere med nogle jødiske skriftlærde. <verse number="15" style="v"/>Da folkeskaren så Jesus, blev de grebet af ærefrygt, løb ham i møde og hilste ærbødigt på ham. <verse number="16" style="v"/>Så spurgte Jesus dem: „Hvad drejer diskussionen sig om?”</para>
+  <para style="p">
+    <verse number="17" style="v"/>„Mester,” råbte en mand i skaren, „jeg bragte min søn herhen, for at du skulle helbrede ham. Han kan ikke tale, for han er besat af en ond ånd. <verse number="18" style="v"/>Hver gang den tager magten over ham, slår den ham til jorden, og så bliver han helt stiv, ligger med fråde om munden og skærer tænder. Jeg bad dine disciple om at jage dæmonen ud, men de kunne ikke.”</para>
+  <para style="p">
+    <verse number="19" style="v"/>„Åh, I vantro mennesker!” udbrød Jesus. „Hvor længe skal jeg blive hos jer? Hvor længe skal jeg bære over med jer? Kom herhen med drengen.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>De førte drengen derhen, men aldrig så snart havde den onde ånd fået øje på Jesus, før den hev og sled i drengen. Den kastede ham omkuld, så han lå og væltede rundt på jorden med fråde om munden. <verse number="21" style="v"/>Jesus vendte sig mod drengens far: „Hvor længe har han haft det sådan?”</para>
+  <para style="p">„Fra han var ganske lille,” lød svaret. <verse number="22" style="v"/>„Den har tit prøvet at tage livet af ham ved at vælte ham ind i flammer eller ned i vand. Åh, vær dog barmhjertig og hjælp os—hvis du kan!”</para>
+  <para style="p">
+    <verse number="23" style="v"/>„Hvis jeg kan?” sagde Jesus. „For den, som tror, er alting muligt.”</para>
+  <para style="p">
+    <verse number="24" style="v"/>„Jeg tror!” råbte faderen. „Afhjælp min vantro!”</para>
+  <para style="p">
+    <verse number="25" style="v"/>Nu så Jesus, at en masse mennesker kom løbende fra alle sider, så han skyndte sig at tale strengt til den onde ånd: „Du døve og stumme ånd, jeg befaler dig at komme ud af drengen og aldrig mere vende tilbage til ham!”</para>
+  <para style="p">
+    <verse number="26" style="v"/>Ånden skreg vildt og begyndte igen at hive og slide i drengen, men til sidst fór den ud af ham. Drengen lå som livløs på jorden, og der gik en mumlen gennem skaren: „Han er død!”</para>
+  <para style="p">
+    <verse number="27" style="v"/>Men Jesus tog ham ved hånden og hjalp ham på benene—og han blev stående.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Da Jesus kort efter var alene med sine disciple inden døre, spurgte de ham: „Hvorfor kunne vi ikke drive den dæmon ud?”</para>
+  <para style="p">
+    <verse number="29" style="v"/>„Den slags kan kun drives ud ved bøn og faste,”<note caller="+" style="f"><char style="fr" closed="false">9,29 </char><char style="ft" closed="false">Nogle få, tidlige håndskrifter mangler ordene „og faste”.</char></note> svarede han.</para>
+  <para style="s1">Jesus taler igen om sin død og genopstandelse</para>
+  <para style="r">
+    <ref loc="MAT 17:22-23">Matt. 17,22-23</ref>; <ref loc="LUK 9:43b-45">Luk. 9,43b-45</ref></para>
+  <para style="p">
+    <verse number="30" style="v"/>Jesus og hans disciple forlod derefter den egn og vandrede gennem Galilæa, hvor de søgte at undgå for megen opmærksomhed, <verse number="31" style="v"/>for Jesus var optaget af at undervise sine disciple. Han sagde bl.a. til dem: „Menneskesønnen skal snart gives i menneskers vold og blive dræbt. Men på den tredje dag genopstår jeg fra de døde.”</para>
+  <para style="p">
+    <verse number="32" style="v"/>Disciplene fattede ikke, hvad han snakkede om, men de kunne ikke lide at spørge ham om det.</para>
+  <para style="s1">Den største er den, som vil tjene</para>
+  <para style="r">
+    <ref loc="MAT 18:1-5">Matt. 18,1-5</ref>; <ref loc="LUK 9:46-48">Luk. 9,46-48</ref></para>
+  <para style="p">
+    <verse number="33" style="v"/>De fortsatte til Kapernaum, til det hus, hvor Jesus boede. Da de var inden døre, spurgte han: „Hvad var det, I talte med hinanden om undervejs?”</para>
+  <para style="p">
+    <verse number="34" style="v"/>Ingen af dem svarede, for de havde diskuteret hvem af dem, der var den mest betydningsfulde. <verse number="35" style="v"/>Så satte Jesus sig ned og bad de Tolv komme nærmere. „Den af jer, der vil være den største, skal være den mindste, en tjener for alle,” sagde han.</para>
+  <para style="p">
+    <verse number="36" style="v"/>Jesus tog så et barn ved hånden og trak det ind i kredsen. Han lagde armen om skulderen på barnet og sagde: <verse number="37" style="v"/>„Enhver, der accepterer sådan et barn, fordi det hører mig til, accepterer i virkeligheden mig. Og den, der accepterer mig, accepterer min Far, som sendte mig.”</para>
+  <para style="s1">Den, der ikke er imod, er for</para>
+  <para style="r">
+    <ref loc="LUK 9:49-50">Luk. 9,49-50</ref></para>
+  <para style="p">
+    <verse number="38" style="v"/>Johannes sagde nu til Jesus: „Mester! Vi så en mand drive dæmoner ud i dit navn, og vi sagde til ham, at det skulle han holde op med, for han var ikke en af dine disciple.”</para>
+  <para style="p">
+    <verse number="39" style="v"/>„Lad være med at hindre ham,” sagde Jesus. „Ingen kan det ene øjeblik gøre undere i mit navn og så i det næste tale ondt om mig. <verse number="40" style="v"/>Den, der ikke er imod os, er for os.<note caller="+" style="f"><char style="fr" closed="false">9,40 </char><char style="ft" closed="false">En del håndskrifter taler om „jer” i stedet for „os”. De to ord på græsk blev udtalt ens og ofte forvekslet.</char></note> <verse number="41" style="v"/>Og hvis nogen giver jer blot et glas vand, fordi I hører mig til, så kan jeg love jer, at det menneske ikke skal gå glip af sin belønning.</para>
+  <para style="s1">Fristelser, som fører til fortabelse</para>
+  <para style="r">
+    <ref loc="MAT 18:6-9">Matt. 18,6-9</ref>; <ref loc="LUK 17:1-2">Luk. 17,1-2</ref></para>
+  <para style="p">
+    <verse number="42" style="v"/>Men hvis nogen ødelægger troen hos en af de små, der har tillid til mig, var det bedre for det menneske, om det blev kastet i havet med en møllesten om halsen.</para>
+  <para style="p">
+    <verse number="43" style="v"/>Hvis din hånd er skyld i, at du falder fra troen, så hug den af! Det er bedre for dig at gå ind til det evige liv uden din hånd end at blive kastet i Helvedes uudslukkelige ild med begge hænder i behold.<note caller="+" style="f"><char style="fr" closed="false">9,43 </char><char style="ft" closed="false">Nogle håndskrifter har et vers 44 og 46, som er identisk med vers 48.</char></note> <verse number="45" style="v"/>Er det din fod, der får dig til at falde fra troen, så hug den af! Det er bedre for dig at gå haltende ind til det evige liv end at blive kastet i Helvede med begge ben i behold. <verse number="47" style="v"/>Er det øjet, der får dig til at falde fra troen, så riv det ud! Det er bedre for dig at gå enøjet ind i Guds rige end at blive kastet i Helvede med begge øjne i behold. <verse number="48" style="v"/>Det er et sted, hvor ‚ormene aldrig dør, og ilden aldrig slukkes.’<note caller="+" style="f"><char style="fr" closed="false">9,48 </char><char style="ft" closed="false">Citat fra <char style="xt"><ref loc="ISA 66:24">Es. 66,24</ref></char>.</char></note></para>
+  <para style="s1">Gennem prøvelsernes ild til hellighed</para>
+  <para style="p">
+    <verse number="49" style="v"/>Enhver discipel skal renses gennem prøvelsernes ild. <verse number="50" style="v"/>Et liv levet i fuld lydighed til Gud er et prisværdigt liv—men et liv uden lydighed er lige så nytteløst som salt, der har mistet sin kraft. Lev med visdom og hold fred med hinanden.”<note caller="+" style="f"><char style="fr" closed="false">9,49-50 </char><char style="ft" closed="false">Den græske tekst i disse to vers lyder i en ordret—og uforståelig—gengivelse: „For enhver vil blive saltet med ild. Salt er godt. Men hvis saltet bliver til ikke-salt, hvordan vil I så give det kraft igen? I skal have salt i jer, og hold fred med hinanden.” Baggrunden for billedtalen i v. 49 er, at ofrene i den gamle pagt blev helliget Herren ved at blive blandet med salt eller smurt ind i salt, før de blev ofret i ilden. Se <char style="xt"><ref loc="LEV 2:13">3.Mos. 2,13</ref> og <ref loc="EZK 43:24">Ez. 43,24</ref></char>. Saltningen er altså en renselsesproces, som er nødvendig, før Gud kan acceptere ofret. En anden baggrund er, at metaller blev renset for urenheder ved at blive smeltet over ilden, så urenhederne blev skilt fra. Derfor betegner ilden en renselsesproces, som kan være smertefuld. Baggrunden for v. 50 er, at salt i jødisk tankegang forbindes med visdom og lydighed over for Guds befalinger. En anden baggrund er, at salt er forbundet med et fælles måltid, så hvis man deler salt med hinanden, lever man i fred og harmoni og har indbyrdes fællesskab. Salt symboliserer både visdom, troskab og fællesskab, jf. <char style="xt"><ref loc="NUM 18:19">4.Mos. 18,19</ref></char>, hvor grundteksten taler om en saltpagt.</char></note></para>
+  <chapter number="10" style="c"/>
+  <para style="s1">Om ægteskab og skilsmisse</para>
+  <para style="r">
+    <ref loc="MAT 19:1-12">Matt. 19,1-12</ref>; <ref loc="LUK 16:18">Luk. 16,18</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Derefter satte Jesus og disciplene kursen mod Judæa og kom undervejs gennem området øst for Jordanfloden. Som sædvanlig samledes store folkeskarer omkring ham, og han underviste dem, som han plejede.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Nogle farisæere prøvede at stille fælde for ham og spurgte: „Har en mand lov til at skille sig fra sin kone?”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Jesus begyndte med et modspørgsmål: „Hvad sagde Moses om skilsmisse?”</para>
+  <para style="p">
+    <verse number="4" style="v"/>„Moses gav manden lov til at udstede et skilsmissebrev og sende konen bort,” svarede de.<note caller="+" style="f"><char style="fr" closed="false">10,4 </char><char style="ft" closed="false"><char style="xt"><ref loc="DEU 24:1">5.Mos. 24,1</ref></char>.</char></note></para>
+  <para style="p">
+    <verse number="5" style="v"/>„Moses gav den tilladelse på grund af menneskers uforsonlige holdning,” sagde Jesus. <verse number="6" style="v"/>„Men det var ikke Guds mening fra begyndelsen, for der står skrevet, at han ‚skabte dem som mand og kvinde’.<note caller="+" style="f"><char style="fr" closed="false">10,6 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 1:27">1.Mos. 1,27</ref></char>.</char></note> <verse number="7" style="v"/>Der står også skrevet: ‚Derfor skal en mand forlade sin far og mor og knytte sig til sin kone, <verse number="8" style="v"/>og de to skal blive ét.’<note caller="+" style="f"><char style="fr" closed="false">10,8 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 2:24">1.Mos. 2,24</ref></char>.</char></note> Altså er de ikke længere to, men en enhed. <verse number="9" style="v"/>Det, som Gud på den måde har sammenføjet, må intet menneske splitte ad.”</para>
+  <para style="p">
+    <verse number="10" style="v"/>Da Jesus senere var alene med sine disciple inden døre, bragte de atter emnet på bane. <verse number="11" style="v"/>Han sagde da til dem: „Hvis en mand skiller sig fra sin kone og derefter gifter sig med en anden, er han skyldig i ægteskabsbrud mod sin første kone. <verse number="12" style="v"/>Og hvis en kone går fra sin mand og gifter sig med en anden, er det hende, som begår ægteskabsbrud mod sin første mand.”</para>
+  <para style="s1">Hvordan man får adgang til Guds rige</para>
+  <para style="r">
+    <ref loc="MAT 19:13-15">Matt. 19,13-15</ref>; <ref loc="LUK 18:15-17">Luk. 18,15-17</ref></para>
+  <para style="p">
+    <verse number="13" style="v"/>På et tidspunkt bragte nogle forældre deres børn hen til Jesus, for at han skulle velsigne dem. Men disciplene ville jage dem bort. <verse number="14" style="v"/>Da Jesus så det, blev han vred og sagde: „Lad børnene komme til mig. I må ikke hindre dem, for det er sådan nogle som dem, der får adgang til Guds rige. <verse number="15" style="v"/>Det siger jeg jer: Den, der ikke tager imod Guds rige på samme måde, som et barn tager imod, kommer slet ikke ind i det.” <verse number="16" style="v"/>Så tog han børnene ind til sig, lagde hænderne på dem og velsignede dem.</para>
+  <para style="s1">Hvordan man får det evige liv</para>
+  <para style="r">
+    <ref loc="MAT 19:16-26">Matt. 19,16-26</ref>; <ref loc="LUK 18:18-27">Luk. 18,18-27</ref></para>
+  <para style="p">
+    <verse number="17" style="v"/>Da Jesus ville gå videre, kom en mand løbende og faldt på knæ foran ham. „Mester, du er et godt menneske,” sagde han. „Fortæl mig, hvad jeg skal gøre for at få del i det kommende liv?”</para>
+  <para style="p">
+    <verse number="18" style="v"/>„Hvorfor kalder du mig god?” spurgte Jesus. „Det ord kan jo kun bruges om Gud. <verse number="19" style="v"/>Og med hensyn til det, du spørger om, så kender du budene: Du må ikke begå drab, du må ikke bryde ægteskabet, du må ikke stjæle, du må ikke anklage nogen på falsk grundlag, du må ikke bedrage nogen, og du skal ære din far og din mor.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>„Jamen, Mester,” svarede manden, „alle de bud har jeg overholdt, fra jeg var ganske ung.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>Jesus så kærligt på ham. „Du mangler én ting,” sagde han. „Gå hjem, sælg alt, hvad du har, og giv pengene til de fattige. Så skal du få del i Himlens rigdom—og kom så og følg mig.”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Manden blev ilde til mode over det svar og gik nedslået bort. Han var nemlig meget rig.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Jesus kiggede rundt på disciplene. „Hvor er det dog svært for rige folk at komme ind i Guds rige,” sagde han. <verse number="24" style="v"/>De stirrede forfærdet på ham. Jesus gentog: „Det er ikke let at komme ind i Guds rige, når man er bundet af sin rigdom.<note caller="+" style="f"><char style="fr" closed="false">10,24 </char><char style="ft" closed="false">Nogle af de ældste håndskrifter mangler den sidste ledsætning.</char></note> <verse number="25" style="v"/>Ja, faktisk er det lettere for en kamel at gå gennem et nåleøje, end det er for en rig at gå ind i Guds rige.”</para>
+  <para style="p">
+    <verse number="26" style="v"/>Disciplene var rystede. De kunne ikke tro deres egne ører, men sagde til hinanden: „Hvem kan så få det evige liv?”</para>
+  <para style="p">
+    <verse number="27" style="v"/>Jesus så på dem og sagde: „Hvad intet menneske kan gøre, det kan Gud, for Gud kan gøre alt.”</para>
+  <para style="s1">Lønnen for at følge Jesus</para>
+  <para style="r">
+    <ref loc="MAT 19:27-30">Matt. 19,27-30</ref>; <ref loc="LUK 18:28-30">Luk. 18,28-30</ref></para>
+  <para style="p">
+    <verse number="28" style="v"/>„Hvad så med os?” spurgte Peter. „Vi har jo forladt alt for at følge dig.”</para>
+  <para style="p">
+    <verse number="29" style="v"/>Jesus svarede: „Det siger jeg jer: Alle, som har forladt deres hjem, brødre, søstre, far, mor, børn eller deres job for at følge mig og forkynde mit budskab, <verse number="30" style="v"/>skal få det 100 gange igen nu her i det jordiske liv: nye hjem, nye brødre, søstre, mødre, børn og nyt arbejde—men også forfølgelser. Desuden får de det evige liv i den kommende verden. <verse number="31" style="v"/>Men mange, der her på jorden regnes blandt de store, vil i Guds rige være de mindste. Og mange af dem, der her er blandt de mindste, vil dér være de største.”</para>
+  <para style="s1">Tiden nærmer sig, hvor Messias skal lide og dø</para>
+  <para style="r">
+    <ref loc="MAT 20:17-19">Matt. 20,17-19</ref>; <ref loc="LUK 18:31-34">Luk. 18,31-34</ref></para>
+  <para style="p">
+    <verse number="32" style="v"/>Jesus og disciplene fortsatte nu deres vandring ind mod Jerusalem. Jesus gik forrest, mens hans ledsagere sakkede bagud. Disciplene var stadig rystede, og de andre, som fulgte med, var bange. Jesus kaldte nu de Tolv til sig og fortalte dem igen om det, der skulle ske med ham.</para>
+  <para style="p">
+    <verse number="33" style="v"/>„Når vi kommer til Jerusalem,” sagde han, „vil Menneskesønnen blive forrådt og udleveret til ypperstepræsterne og de skriftlærde. De vil dømme mig til døden og udlevere mig til romerne, <verse number="34" style="v"/>som vil håne mig og spytte på mig. Jeg vil blive pisket og til sidst slået ihjel. Men på den tredje dag vil jeg genopstå fra de døde.”</para>
+  <para style="s1">Lederskab i Guds rige</para>
+  <para style="r">
+    <ref loc="MAT 20:20-28">Matt. 20,20-28</ref>; <ref loc="LUK 22:24-27">Luk. 22,24-27</ref></para>
+  <para style="p">
+    <verse number="35" style="v"/>Lidt senere gik Zebedæussønnerne, Jakob og Johannes, hen til Jesus og sagde: „Mester, vi vil bede dig gøre noget for os.”</para>
+  <para style="p">
+    <verse number="36" style="v"/>„Hvad vil I have, jeg skal gøre for jer?” spurgte Jesus.</para>
+  <para style="p">
+    <verse number="37" style="v"/>„Når du bliver konge i Guds rige, vil vi gerne sidde på de troner, der står nærmest ved din. Den ene af os på højre side og den anden på venstre side.”</para>
+  <para style="p">
+    <verse number="38" style="v"/>„I ved ikke, hvad I beder om. Kan I tømme det lidelsens bæger, som jeg skal tømme? Kan I følge mig i den smertefulde dåb, som jeg skal igennem?”</para>
+  <para style="p">
+    <verse number="39" style="v"/>„Ja, det kan vi.”</para>
+  <para style="p">„Godt, I skal få lov at tømme samme bæger og døbes med samme dåb som jeg, <verse number="40" style="v"/>men det er ikke mig, der afgør, hvem der skal sidde ved min højre og venstre side. Gud har allerede bestemt, hvem der skal sidde der.”</para>
+  <para style="p">
+    <verse number="41" style="v"/>Da de andre ti disciple hørte, hvad Jakob og Johannes havde bedt om, blev de vrede. <verse number="42" style="v"/>Men Jesus kaldte dem sammen og sagde: „I ved, hvordan magthaverne i denne verden holder af at herse og hundse med folk, og hvordan de store nyder at vise deres magt over for de små. <verse number="43-44" style="v"/>Sådan må det ikke være hos jer. De, som gerne vil være store og betydningsfulde iblandt jer, skal være tjenere for alle de andre. <verse number="45" style="v"/>Menneskesønnen kom heller ikke for at lade sig betjene, men for selv at tjene og give sit liv som løsesum, for at mange kan blive sat fri.”</para>
+  <para style="s1">En blind bliver helbredt og slutter sig til Jesus</para>
+  <para style="r">
+    <ref loc="MAT 20:29-34">Matt. 20,29-34</ref>; <ref loc="LUK 18:35-43">Luk. 18,35-43</ref></para>
+  <para style="p">
+    <verse number="46" style="v"/>Jesus og disciplene nåede så frem til Jeriko. Da de senere forlod byen, blev de fulgt af en skare af mennesker. Ved vejkanten sad der en blind tigger ved navn Bartimæus, Timæus’ søn. <verse number="47" style="v"/>Da han hørte, at Jesus fra Nazaret nærmede sig, begyndte han at råbe: „Jesus, du Davids Søn,<note caller="+" style="f"><char style="fr" closed="false">10,47 </char><char style="ft" closed="false">På hebraisk betyder „søn” ofte „efterkommer”. Udtrykket „Davidssønnen” var en af titlerne på den ventede Messias, idet Messias skulle blive en mægtig konge, der var endnu større end jødernes hidtil største konge, David, der levede ca. 1000 år, før Jesus kom.</char></note> forbarm dig over mig!”</para>
+  <para style="p">
+    <verse number="48" style="v"/>Der var mange, der skældte ham ud og sagde, at han skulle tie stille. Men han var ikke til at standse. Højere og højere råbte han: „Du Davids Søn, forbarm dig over mig!”</para>
+  <para style="p">
+    <verse number="49" style="v"/>Jesus standsede og sagde: „Bring ham herhen!”</para>
+  <para style="p">Så var der nogle, der gik hen og sagde til den blinde: „Vær ved godt mod! Rejs dig og kom. Jesus kalder på dig.”</para>
+  <para style="p">
+    <verse number="50" style="v"/>Bartimæus kastede sin kappe til side, sprang op og gik hen mod Jesus.</para>
+  <para style="p">
+    <verse number="51" style="v"/>„Hvad vil du, at jeg skal gøre for dig?” spurgte Jesus.</para>
+  <para style="p">„Mester! Jeg vil gerne kunne se,” svarede den blinde.</para>
+  <para style="p">
+    <verse number="52" style="v"/>„Din bøn er hørt! Det var din tro, der reddede<note caller="+" style="f"><char style="fr" closed="false">10,52 </char><char style="ft" closed="false">Eller: „frelste dig” eller „helbredte dig”.</char></note> dig!”</para>
+  <para style="p">Straks fik manden sit syn igen og fulgte derefter med Jesus.</para>
+  <chapter number="11" style="c"/>
+  <para style="s1">Messias’ indtog i Jerusalem</para>
+  <para style="r">
+    <ref loc="MAT 21:1-11">Matt. 21,1-11</ref>; <ref loc="LUK 19:28-38">Luk. 19,28-38</ref>; <ref loc="JHN 12:12-19">Joh. 12,12-19</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Jesus og hans følge var nu tæt på Jerusalem i nærheden af landsbyerne Betfage og Betania på Olivenbjergets skråning.<note caller="+" style="f"><char style="fr" closed="false">11,1 </char><char style="ft" closed="false">Betfage menes at have ligget mellem Betania og Jerusalem, tæt på vejen, de kom ad. Ifølge Johannes 12, havde Jesus og disciplene været i Betania en dag eller to.</char></note> Da kaldte Jesus på to af sine disciple. <verse number="2" style="v"/>„Gå hen til den landsby, I ser foran jer,” sagde han. „Når I kommer derhen, vil I med det samme få øje på et æselføl, der endnu ikke har været brugt som ridedyr. Det står bundet, men I skal løse det og bringe det herhen. <verse number="3" style="v"/>Hvis nogen spørger jer, hvad I skal med det, så sig: ‚Herren har brug for det, men han vil straks sende det tilbage.’ ”</para>
+  <para style="p">
+    <verse number="4" style="v"/>De to mænd gik og fandt æselføllet bundet ved en dør ud til gaden. Da de var ved at løse det, <verse number="5" style="v"/>råbte nogle folk i nærheden: „Hvad er det, I gør? Hvad skal I med det føl?” <verse number="6" style="v"/>De svarede, som Jesus havde sagt, og så fik de lov at tage føllet.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Æslet blev ført hen til Jesus, og disciplene lagde deres kapper over ryggen på det. Derefter satte Jesus sig op på æslet og red ind mod Jerusalem. <verse number="8" style="v"/>Som en hyldest til ham gav mange mennesker sig til at brede deres kapper ud på vejen, mens andre skar nogle palmegrene af og lagde dem som et tæppe på vejen. <verse number="9" style="v"/>Både de, der gik foran, og de, der gik bagved, råbte:</para>
+  <para style="q1">„Hoshana!<note caller="+" style="f"><char style="fr" closed="false">11,9 </char><char style="ft" closed="false">Folkeskaren hentyder til de kendte ord i <char style="xt"><ref loc="PSA 118:25-26">Sl. 118,25-26</ref></char>, som oprindeligt var en velsignelse til dem, som var på vej til templet for at fejre den store påskefest. Her bliver ordene til en velkomsthyldest til Jesus som den konge, der skulle genoprette Davids faldne storhedsrige. Det hebraiske <char style="tl">Hoshi’ah na</char> i <char style="xt"><ref loc="PSA 118:25">Sl. 118,25</ref></char> og variant formen <char style="tl">Hosha-na</char>, som vi møder her, betyder egentlig „Frels (os)!” men er også et hyldestråb til den konge, som nu er på vej. Jøderne havde en stærk længsel efter en konge, der kunne frigøre dem fra romernes overherredømme.</char></note></para>
+  <para style="q1">Velsignet er den, som kommer i Herrens navn!</para>
+  <para style="q2">
+    <verse number="10" style="v"/>Gud velsigne vores forfar Davids rige, som er på vej!</para>
+  <para style="q1">Hoshana til Gud i det Højeste!”</para>
+  <para style="p">
+    <verse number="11" style="v"/>På den måde red Jesus ind i Jerusalem. Han gik straks op til templet, hvor han så sig omkring, men da det var sent, gik han sammen med de Tolv ud til Betania for at overnatte der.</para>
+  <para style="s1">Figentræet uden frugt</para>
+  <para style="r">
+    <ref loc="MAT 21:18-19">Matt. 21,18-19</ref></para>
+  <para style="p">
+    <verse number="12" style="v"/>Næste morgen, da de gik fra Betania ind mod Jerusalem, blev Jesus sulten. <verse number="13" style="v"/>Han så på lang afstand et figentræ, som havde masser af blade, og han gik hen for at se, om der måske var figner på det, men der var kun blade. Frugtsæsonen var jo heller ikke begyndt. <verse number="14" style="v"/>Så sagde han til træet: „Aldrig mere skal nogen spise frugt af dig!”<note caller="+" style="f"><char style="fr" closed="false">11,14 </char><char style="ft" closed="false">Det var en symbolsk, profetisk handling med en åndelig betydning. Figentræet er billede på de daværende vantro, jødiske ledere, som havde megen udvendig pragt og imponerende ritualer, men der var ingen åndelig frugt.</char></note> Det hørte hans disciple.</para>
+  <para style="s1">Den sidste tempeludrensning</para>
+  <para style="r">
+    <ref loc="MAT 21:12-17">Matt. 21,12-17</ref>; <ref loc="LUK 19:45-48">Luk. 19,45-48</ref></para>
+  <para style="p">
+    <verse number="15" style="v"/>Kort efter nåede de Jerusalem, hvor Jesus gik ind på tempelpladsen og begyndte at jage de handlende og deres kunder ud. Han væltede valutahandlernes borde og duesælgernes bænke, <verse number="16" style="v"/>og han tillod ingen at bære deres varer gennem templets område.<note caller="+" style="f"><char style="fr" closed="false">11,16 </char><char style="ft" closed="false">Første gang Jesus var til påskefest i Jerusalem, havde han foretaget en tilsvarende tempeludrensning. Den står omtalt i <char style="xt"><ref loc="JHN 2:13-16">Joh. 2,13-16</ref></char>. I dagene før påske blev al surdej fjernet fra husene som et symbol på udrensning af ondskaben, der griber om sig, ligesom surdej gennemtrænger hele dejen. Jesus havde ansvar for at drive ondskaben bort fra sin Fars hus.</char></note></para>
+  <para style="p">
+    <verse number="17" style="v"/>Derefter begyndte Jesus at undervise folk. Han sagde: „Siger Skriften ikke: ‚Mit hus skal være et bønnens hus for alle folkeslag.’<note caller="+" style="f"><char style="fr" closed="false">11,17 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 56:7">Es. 56,7</ref></char>.</char></note>? Men I har gjort det til et ‚tilholdssted for røvere’<note caller="+" style="f"><char style="fr" closed="false">11,17 </char><char style="ft" closed="false"><char style="xt"><ref loc="JER 7:11">Jer. 7,11</ref></char>.</char></note>!” <verse number="18" style="v"/>Da ypperstepræsterne og de skriftlærde fik at vide, hvad Jesus havde gjort, begyndte de at lægge planer om, hvordan de bedst kunne få ham ryddet af vejen. De var nemlig bange for ham, da han var en trussel mod deres autoritet, og folk var ovenud begejstrede for hans undervisning.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Da det blev aften, gik Jesus og disciplene igen uden for byen.</para>
+  <para style="s1">Betydningen af tro og tilgivelse</para>
+  <para style="r">
+    <ref loc="MAT 21:20-22">Matt. 21,20-22</ref></para>
+  <para style="p">
+    <verse number="20" style="v"/>Næste morgen kom de forbi det figentræ, som Jesus havde forbandet, og disciplene lagde mærke til, at det var visnet fra roden af. <verse number="21" style="v"/>Peter huskede, hvad Jesus dagen forinden havde sagt til træet, og han udbrød: „Se, Mester! Det figentræ, du forbandede, er visnet!”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Jesus svarede sine disciple: „Ja, I må have tro til Gud. <verse number="23" style="v"/>Og det siger jeg jer: Hvis I befaler sådan et ‚bjerg’: ‚Du skal rykkes op og kastes i havet,’ så vil det ske, forudsat at I ikke inderst inde tvivler på det, men virkelig tror på, at det vil ske. <verse number="24" style="v"/>På den baggrund siger jeg til jer: Alt, hvad I beder og bønfalder om—tro, at I har fået det, så er det jeres!</para>
+  <para style="p">
+    <verse number="25" style="v"/>Men før I begynder at bede, skal I tilgive dem, som I har noget imod, så jeres Far i Himlen også kan tilgive jer de synder, I har begået. <verse number="26" style="v"/>Men hvis I ikke tilgiver, så vil jeres Far, som er i Himlen, heller ikke tilgive jeres synder.”<note caller="+" style="f"><char style="fr" closed="false">11,26 </char><char style="ft" closed="false">Nogle håndskrifter mangler vers 26.</char></note></para>
+  <para style="s1">De jødiske lederes uærlighed</para>
+  <para style="r">
+    <ref loc="MAT 21:23-27">Matt. 21,23-27</ref>; <ref loc="LUK 20:1-8">Luk. 20,1-8</ref></para>
+  <para style="p">
+    <verse number="27" style="v"/>Kort efter nåede de frem til Jerusalem, hvor Jesus straks gik op på tempelpladsen for at undervise. Men ypperstepræsterne, de skriftlærde og nogle andre jødiske ledere kom hen og konfronterede ham. <verse number="28" style="v"/>„Hvem har givet dig lov til at gøre det, du gør her i templet?”</para>
+  <para style="p">
+    <verse number="29" style="v"/>„Lad mig først stille jer et spørgsmål,” svarede Jesus. „Hvis I svarer mig på det, skal jeg gerne fortælle jer, hvem der har givet mig lov til at gøre det, jeg gør her. <verse number="30" style="v"/>Var Johannes Døber udsendt af Gud, eller var han ikke? Svar mig på det.”</para>
+  <para style="p">
+    <verse number="31" style="v"/>De drøftede så indbyrdes, hvad de skulle svare: „Hvis vi siger, at Johannes var sendt af Gud, så vil han spørge, hvorfor vi ikke troede på ham. <verse number="32" style="v"/>Hvis vi siger, at han ikke var sendt af Gud, så får vi folket imod os.” Alle var nemlig overbevist om, at Johannes var en profet.</para>
+  <para style="p">
+    <verse number="33" style="v"/>Derfor svarede de: „Det ved vi ikke.”</para>
+  <para style="p">„Så vil jeg heller ikke fortælle jer, hvem der har givet mig lov til at gøre, hvad jeg gør her,” sagde Jesus.</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">Jesus afslører de jødiske lederes ondskab</para>
+  <para style="r">
+    <ref loc="MAT 21:33-46">Matt. 21,33-46</ref>; <ref loc="LUK 20:9-19">Luk. 20,9-19</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Jesus begyndte nu at tale til dem i billeder: „Der var en mand, som ville dyrke vindruer på sin mark. Han tilplantede marken, omgav den med et stengærde og byggede et vagttårn for at beskytte den mod røvere. Så udhuggede han et bassin i klippegrunden, hvor saften kunne presses af druerne. Derefter lejede han sin vinmark ud til nogle forpagtere og rejste selv til udlandet. <verse number="2" style="v"/>Ved høsttid sendte han en af sine folk hen for at få udleveret den del af druehøsten, som tilfaldt ham. <verse number="3" style="v"/>Men forpagterne overfaldt ham og sendte ham tomhændet tilbage. <verse number="4" style="v"/>Ejeren sendte så en anden af sine folk af sted, men han blev mødt med hån og blev slået i hovedet. <verse number="5" style="v"/>Den næste, der blev sendt, slog de ihjel, og de efterfølgende blev enten slået eller dræbt. <verse number="6" style="v"/>Ejeren havde nu kun én tilbage, han kunne sende. Det var hans egen elskede søn. Da han endelig sendte ham af sted, var det med den tanke: ‚Min søn må de da respektere!’ <verse number="7" style="v"/>Men nej, tværtimod. Forpagterne sagde nu til hinanden: ‚Der har vi ham, der skal arve det hele. Kom, lad os gøre det af med ham, så vi kan få arven.’ <verse number="8" style="v"/>De fik fat i ham, slog ham ihjel og smed hans lig uden for muren.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Hvad mon ejeren nu vil gøre? Jo, han vil komme og gøre det af med de onde forpagtere og leje sin vinmark ud til andre. <verse number="10" style="v"/>Har I aldrig læst følgende skriftord:</para>
+  <para style="q1">‚Den sten, bygmestrene kasserede,</para>
+  <para style="q2">er blevet selve hjørnestenen.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Det er Herren, der har gjort det,</para>
+  <para style="q2">og det er forunderligt at se.’<note caller="+" style="f"><char style="fr" closed="false">12,11 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 118:22-23">Sl. 118,22-23</ref></char>.</char></note>”</para>
+  <para style="p">
+    <verse number="12" style="v"/>De jødiske ledere ville gerne have arresteret Jesus på stedet, for de var godt klar over, hvem han hentydede til, når han talte om forpagtere. Men de lod ham være og gik deres vej, fordi de var bange for folkemængden.</para>
+  <para style="s1">De jødiske ledere søger at fange Jesus i ord</para>
+  <para style="r">
+    <ref loc="MAT 22:15-22">Matt. 22,15-22</ref>; <ref loc="LUK 20:20-26">Luk. 20,20-26</ref></para>
+  <para style="p">
+    <verse number="13" style="v"/>Senere sendte de jødiske ledere nogle af farisæerne og herodianerne hen til Jesus for at provokere ham til at sige et eller andet, som han kunne arresteres for.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Da udsendingene kom til Jesus, sagde de: „Mester! Vi ved, at du ikke er bange for at sige sandheden, og du snakker ikke folk efter munden. Du lader dig ikke påvirke af menneskers meninger, men underviser sandfærdigt om Guds vilje. Sig os derfor: Skal vi betale skat til den romerske kejser eller ej?”</para>
+  <para style="p">
+    <verse number="15" style="v"/>Jesus gennemskuede deres hykleri. „Hvorfor sætter I fælder for mig?” sagde han. „Ræk mig en mønt!” <verse number="16" style="v"/>De rakte en mønt frem. „Hvem er der billede af på mønten?” spurgte han. „Og hvad er det for et navn, der er indridset i den?”</para>
+  <para style="p">„Det er kejserens navn og billede,” svarede de.</para>
+  <para style="p">
+    <verse number="17" style="v"/>„Så giv kejseren det, der er hans, og giv Gud det, der er hans.”<note caller="+" style="f"><char style="fr" closed="false">12,17 </char><char style="ft" closed="false">Da jøderne vidste, at Gud havde skabt mennesket i sit billede, og at Guds væsen er præget ind i enhver af hans skabninger, forstod de, at Jesus dermed sagde, at de skulle overgive deres liv til Gud.</char></note> De var målløse over hans svar.</para>
+  <para style="s1">Saddukæernes spørgsmål om genopstandelsen fra de døde</para>
+  <para style="r">
+    <ref loc="MAT 22:23-33">Matt. 22,23-33</ref>; <ref loc="LUK 20:27-40">Luk. 20,27-40</ref></para>
+  <para style="p">
+    <verse number="18" style="v"/>Derefter kom der nogle saddukæere, som jo påstår, at ingen kan genopstå fra de døde. De stillede Jesus følgende spørgsmål: <verse number="19" style="v"/>„Mester, Moses gav os jo den forordning, at hvis en mand dør barnløs, skal hans bror gifte sig med enken, så hun kan få en søn, der kan føre den dødes slægt videre. <verse number="20" style="v"/>Nu var der syv brødre, og den ældste giftede sig, men døde uden at have fået nogle børn. <verse number="21" style="v"/>Derfor giftede den næste af brødrene sig med enken, men også han døde barnløs. Så giftede den tredje sig med hende, men døde også uden at have fået børn. <verse number="22" style="v"/>Sådan blev det ved, indtil alle de syv brødre var døde. Til sidst døde også enken. <verse number="23" style="v"/>Hvem af brødrene skal være hendes mand, når de genopstår fra de døde? Alle syv har jo været gift med hende.”</para>
+  <para style="p">
+    <verse number="24" style="v"/>Jesus svarede: „I tager fejl, fordi I hverken forstår Skriftens ord eller Guds kraft. <verse number="25" style="v"/>Når mennesker genopstår fra de døde, vil de ikke længere gifte sig. På det område bliver de ligesom englene i Himlen. <verse number="26" style="v"/>Og hvad angår det at genopstå fra de døde, har I så aldrig læst det sted i Toraen, hvor Moses står foran den brændende tornebusk? Der nævner Gud hans afdøde forfædre, idet han siger: ‚Jeg er Abrahams Gud, Isaks Gud og Jakobs Gud!’<note caller="+" style="f"><char style="fr" closed="false">12,26 </char><char style="ft" closed="false"><char style="xt"><ref loc="EXO 3:6">2.Mos. 3,6</ref></char>.</char></note> <verse number="27" style="v"/>Men Gud er ikke de dødes Gud. Han er Gud for dem, der lever. I er helt på vildspor.”</para>
+  <para style="s1">Det vigtigste bud i Toraen</para>
+  <para style="r">
+    <ref loc="MAT 22:34-40">Matt. 22,34-40</ref></para>
+  <para style="p">
+    <verse number="28" style="v"/>En af de skriftlærde, der stod og lyttede, syntes, at Jesus havde givet et godt svar. Derfor kom også han frem med sit spørgsmål: „Hvilket bud er det vigtigste?”</para>
+  <para style="p">
+    <verse number="29" style="v"/>Jesus svarede: „Det vigtigste bud lyder således:</para>
+  <para style="p">‚Israels folk, hør efter! Herren er vores Gud—Herren alene. <verse number="30" style="v"/>Du skal elske Herren, din Gud, af hele dit hjerte, med liv og sjæl, med alle dine tanker og al din styrke!’<note caller="+" style="f"><char style="fr" closed="false">12,30 </char><char style="ft" closed="false"><char style="xt"><ref loc="DEU 6:4-5">5.Mos. 6,4-5</ref></char>.</char></note></para>
+  <para style="p">
+    <verse number="31" style="v"/>Et andet bud lyder således:</para>
+  <para style="p">‚Du skal elske din næste som dig selv.’<note caller="+" style="f"><char style="fr" closed="false">12,31 </char><char style="ft" closed="false"><char style="xt"><ref loc="LEV 19:18">3.Mos. 19,18</ref></char>.</char></note></para>
+  <para style="p">Det er de to vigtigste bud.”</para>
+  <para style="p">
+    <verse number="32" style="v"/>„Ja, Mester,” svarede den skriftlærde. „Det er rigtigt, når du siger, at Herren alene er Gud, og der er ingen anden Gud. <verse number="33" style="v"/>Og det med at elske ham af hele sit hjerte, med alle sine tanker og al sin styrke og så det med at elske sin næste som sig selv—det er større og vigtigere end alle brændofre og slagtofre.”</para>
+  <para style="p">
+    <verse number="34" style="v"/>Da Jesus hørte mandens svar, udbrød han: „Du er ikke langt fra Guds rige!” Derefter var der ingen, der havde mod på at stille Jesus flere spørgsmål.</para>
+  <para style="s1">Messias som Davids søn</para>
+  <para style="r">
+    <ref loc="MAT 22:41-46">Matt. 22,41-46</ref>; <ref loc="LUK 20:41-44">Luk. 20,41-44</ref></para>
+  <para style="p">
+    <verse number="35" style="v"/>Mens Jesus underviste folk inde på templets område, spurgte han: „Hvorfor siger de skriftlærde, at Messias skal være en søn<note caller="+" style="f"><char style="fr" closed="false">12,35 </char><char style="ft" closed="false">På hebraisk bruges „søn” også om en efterkommer.</char></note> af David? <verse number="36-37" style="v"/>David kalder jo Messias for sin herre—og han var inspireret af Helligånden, da han sagde det:</para>
+  <para style="q1">‚Herren sagde til min herre:</para>
+  <para style="q1">Sæt dig ved min højre side,</para>
+  <para style="q2">imens jeg overvinder dine fjender.’<note caller="+" style="f"><char style="fr" closed="false">12,36-37 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 110:1">Sl. 110,1</ref></char>.</char></note></para>
+  <para style="p">Når David her kalder ham sin herre, hvordan kan han så samtidig være hans søn?”</para>
+  <para style="p">Den store skare lyttede til ham med begejstring.</para>
+  <para style="s1">Jesus advarer imod de skriftlærdes hykleri</para>
+  <para style="r">
+    <ref loc="MAT 23:1-12">Matt. 23,1-12</ref>; <ref loc="LUK 20:45-47">Luk. 20,45-47</ref></para>
+  <para style="p">
+    <verse number="38" style="v"/>Jesus fortsatte: „Tag jer i agt for de skriftlærde! De elsker at gå klædt som fornemme og lærde mænd, og de nyder, at man hilser ærbødigt på dem, når de går gennem byens gader. <verse number="39" style="v"/>De kappes om de bedste pladser i synagogen, og de elsker at være æresgæster ved de fine middage. <verse number="40" style="v"/>Men samtidig svindler de sig til enkers ejendom, og de fremsiger lange bønner for at se fromme ud. De vil få en hård dom.”</para>
+  <para style="s1">Forskellen mellem at give og at ofre</para>
+  <para style="r">
+    <ref loc="LUK 21:1-4">Luk. 21,1-4</ref></para>
+  <para style="p">
+    <verse number="41" style="v"/>Så satte Jesus sig lige over for templets indsamlingsbøsse og iagttog de folk, der lagde penge i den. Mange rige gav store beløb, <verse number="42" style="v"/>men der kom også en fattig enke, som lagde to småmønter deri. <verse number="43" style="v"/>Jesus kaldte på disciplene. „Så I den fattige enke der?” spurgte han. „Det siger jeg jer: Hun gav mere end alle de andre. <verse number="44" style="v"/>De gav af deres overflod, men hun gav simpelthen alt, hvad hun ejede og havde.”</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">Jesus forudsiger templets ødelæggelse</para>
+  <para style="r">
+    <ref loc="MAT 24:1-2">Matt. 24,1-2</ref>; <ref loc="LUK 21:5-6">Luk. 21,5-6</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Da Jesus var på vej væk fra templet, udbrød en af hans disciple: „Mester, se engang på de smukke bygninger! Er det ikke nogle flotte sten?”</para>
+  <para style="p">
+    <verse number="2" style="v"/>„Jo, det ser smukt ud,” svarede Jesus. „Men det hele vil blive jævnet med jorden.”</para>
+  <para style="s1">Jesus advarer om krige, katastrofer og forfølgelser</para>
+  <para style="r">
+    <ref loc="MAT 24:3-14">Matt. 24,3-14</ref>; <ref loc="LUK 21:7-19">Luk. 21,7-19</ref></para>
+  <para style="p">
+    <verse number="3" style="v"/>Lidt senere, da Jesus sad alene med disciplene på Olivenbjergets skråning lige over for templet, spurgte Peter, Jakob, Johannes og Andreas ham: <verse number="4" style="v"/>„Hvornår vil det med templet ske? Hvad er tegnet på, at alt er tæt ved afslutningen?”</para>
+  <para style="p">
+    <verse number="5" style="v"/>Jesus svarede: „Lad ikke nogen vildlede jer. <verse number="6" style="v"/>Mange vil komme og påstå, at de er Messias, og de vil føre mange på vildspor. <verse number="7" style="v"/>Når I hører om uro og krigshandlinger rundt omkring, så lad jer ikke skræmme. Den slags er uundgåeligt, men det er endnu ikke afslutningen. <verse number="8" style="v"/>Folk og nationer vil bekrige hinanden, og mange steder bliver der jordskælv og hungersnød. Men det er kun som de første veer inden en fødsel.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Jesus fortsatte: „Vær på vagt! Man vil slæbe jer for retten og piske jer i synagogerne. I vil blive anklaget og stillet for konger og guvernører, fordi I tjener mig, men det vil give jer anledning til at fortælle dem budskabet om mig, <verse number="10" style="v"/>ja, det gode budskab skal forkyndes for alle folkeslagene, før afslutningen kommer.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Når I bliver arresteret og slæbt for retten, skal I ikke bekymre jer om, hvad I skal sige til jeres forsvar. Sig bare det, som I får fra Gud, når øjeblikket er inde. Så er det nemlig ikke jer, der taler, men Helligånden.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Søskende vil forråde hinanden til døden og fædre angive deres børn. Børn vil gøre oprør mod deres forældre og vil endda få dem slået ihjel. <verse number="13" style="v"/>Ja, I vil blive hadet af mange, fordi I hører mig til. Men de, der holder ud indtil det sidste, skal blive frelst.</para>
+  <para style="s1">Jerusalems ødelæggelse</para>
+  <para style="r">
+    <ref loc="MAT 24:15-22">Matt. 24,15-22</ref>; <ref loc="LUK 21:20-24">Luk. 21,20-24</ref></para>
+  <para style="p">
+    <verse number="14" style="v"/>Når I ser ‚den afskyelige ødelægger’<note caller="+" style="f"><char style="fr" closed="false">13,14 </char><char style="ft" closed="false">En hentydning til Daniels profetiske syn i <char style="xt"><ref loc="DAN 9:27">Dan. 9,27</ref>;</char> 11,31f, 12,11 jf. <char style="xt"><ref loc="MAT 24:15">Matt. 24,15</ref></char>.</char></note> stå på det sted, hvor han ikke burde stå,” (må de, der læser det, forstå alvoren i det), „da skal de, der er i Judæa, flygte op i bjergene. <verse number="15" style="v"/>De, der opholder sig uden for deres hus, skal ikke løbe ind for at pakke deres ting, <verse number="16" style="v"/>og de, der arbejder i marken, skal ikke løbe hjem for at hente deres overtøj. <verse number="17" style="v"/>Ve de kvinder, der på det tidspunkt er gravide, og ve de mødre, der har små børn, som skal ammes. <verse number="18" style="v"/>Bed om, at jeres flugt ikke kommer til at ske om vinteren. <verse number="19" style="v"/>For det bliver så forfærdeligt, som det ikke har været siden jordens skabelse og heller aldrig vil blive igen. <verse number="20" style="v"/>Hvis ikke Gud afkortede den periode, ville intet menneske overleve. Men nu bliver den afkortet af hensyn til dem, han har udvalgt.</para>
+  <para style="s1">Falske profeter</para>
+  <para style="r">
+    <ref loc="MAT 24:23-28">Matt. 24,23-28</ref>; <ref loc="LUK 17:23-24">Luk. 17,23-24</ref></para>
+  <para style="p">
+    <verse number="21" style="v"/>Hvis der kommer nogen og fortæller jer, at Messias er kommet og befinder sig her eller der—så tro ikke på det. <verse number="22" style="v"/>Der vil komme falske profeter og folk, der hævder at være Messias, og de vil gøre forbavsende mirakler for—om muligt—at vildlede endog Guds udvalgte. <verse number="23" style="v"/>Pas på! Nu har jeg advaret jer!</para>
+  <para style="s1">Tegnene på, at Jesus snart kommer igen</para>
+  <para style="r">
+    <ref loc="MAT 24:29-35">Matt. 24,29-35</ref>; <ref loc="LUK 21:25-33">Luk. 21,25-33</ref></para>
+  <para style="p">
+    <verse number="24" style="v"/>Efter den tids frygtelige trængsler vil solen blive formørket og månen holde op med at skinne. <verse number="25" style="v"/>Stjernerne vil falde ned, og himlens kræfter komme ud af balance.<note caller="+" style="f"><char style="fr" closed="false">13,25 </char><char style="ft" closed="false">Jf. <char style="xt"><ref loc="ISA 13:10">Es. 13,10</ref></char> og 34,4.</char></note> <verse number="26" style="v"/>Da vil man se Menneskesønnen komme til syne i skyerne med kraft og megen herlighed,<note caller="+" style="f"><char style="fr" closed="false">13,26 </char><char style="ft" closed="false">Jf. <char style="xt"><ref loc="DAN 7:13">Dan. 7,13</ref></char>.</char></note> <verse number="27" style="v"/>og da vil jeg sende mine engle ud, for at de kan samle mine udvalgte fra alle fire verdenshjørner, fra jordens og himlens yderste grænser.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Lad mig bruge figentræet som billede. Når de nye skud bryder frem, og bladene folder sig ud, så ved I, at sommeren er på vej. <verse number="29" style="v"/>På samme måde kan I vide, at jeg er lige på trapperne, når I ser disse ting ske. <verse number="30" style="v"/>Det siger jeg jer: Mit udvalgte folk skal ikke forgå, selv om alt det her vil ske.<note caller="+" style="f"><char style="fr" closed="false">13,30 </char><char style="ft" closed="false">Ordret siger teksten: „Denne gruppe mennesker skal ikke forgå, imens alle disse ting foregår”. Ud fra sammenhængen må det formodes, at den gruppe mennesker, der er tale om, er dem, der holder fast ved Jesu ord, jf. næste vers.</char></note> <verse number="31" style="v"/>Himlen og jorden skal forgå, men mine ord skal aldrig forgå.</para>
+  <para style="s1">Vær altid parat</para>
+  <para style="r">
+    <ref loc="MAT 24:36-51">Matt. 24,36-51</ref>; <ref loc="LUK 12:35-40">Luk. 12,35-40</ref>; <ref loc="LUK 21:34-36">21,34-36</ref></para>
+  <para style="p">
+    <verse number="32" style="v"/>Ingen kender dagen eller tidspunktet, hvor det vil ske, ikke engang Guds engle, end ikke jeg selv. Kun Faderen ved det. <verse number="33" style="v"/>Vær på vagt! Vær altid parat, for I ved ikke, hvornår det sker. <verse number="34" style="v"/>Det er som med en mand, der skulle ud på en lang rejse og overlod huset til sine tjenere. De fik hver deres ansvarsområde, og dørvogteren fik besked på at holde vagt. <verse number="35" style="v"/>Sådan skal I også være på vagt. For I ved ikke, hvornår husets herre vender tilbage, om det bliver om aftenen, ved midnat, før daggry eller om morgenen. <verse number="36" style="v"/>Lad ham ikke finde jer sovende, når han pludselig kommer. <verse number="37" style="v"/>Hvad jeg siger til jer, det siger jeg til alle: Hold jer parate!”</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">De jødiske ledere søger en anledning til at få Jesus ryddet af vejen</para>
+  <para style="r">
+    <ref loc="MAT 26:1-5">Matt. 26,1-5</ref>; <ref loc="LUK 22:1-2">Luk. 22,1-2</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Der var nu kun to dage til påskehøjtiden og den efterfølgende „usyrnede brøds fest”.<note caller="+" style="f"><char style="fr" closed="false">14,1 </char><char style="ft" closed="false">Kronologien over ugens begivenheder er omdiskuteret. Det her er sandsynligvis om tirsdagen, hvor Jesus underviste i templet hele dagen og var sammen med disciplene på Olivenbjerget om aftenen.</char></note> Ypperstepræsterne og de skriftlærde lurede stadig på en anledning til i al hemmelighed at få Jesus arresteret og dræbt. <verse number="2" style="v"/>„Men ikke under højtiden,” sagde de til hinanden, „for så bliver der uroligheder.”</para>
+  <para style="s1">En kvinde salver Jesu hoved som forberedelse til hans død</para>
+  <para style="r">
+    <ref loc="MAT 26:6-13">Matt. 26,6-13</ref></para>
+  <para style="p">
+    <verse number="3" style="v"/>Jesus og disciplene var inviteret til spisning i Simon den Spedalskes hus i Betania.<note caller="+" style="f"><char style="fr" closed="false">14,3 </char><char style="ft" closed="false">Jesus var indbudt af en velstående mand i Betania, som tidligere havde været spedalsk, men nu var helbredt. I de finere huse lå man under måltidet rundt omkring et lavt bord, hvilende på siden og støttet af puder, således at fødderne vendte udad, bort fra bordet. Det her skete sandsynligvis om onsdagen, dagen før påsken begyndte.</char></note> Mens de lå omkring bordet og spiste, kom en kvinde ind med en alabastkrukke fyldt med kostbar, aromatisk nardusolie. Hun knækkede krukkens hals og hældte olien ud over Jesu hoved. <verse number="4" style="v"/>Nogle af gæsterne blev vrede og sagde til hinanden: „Sikken et spild af kostbar olie. <verse number="5" style="v"/>Den kunne være solgt for en formue, og pengene kunne være givet til de fattige!” De skældte hende huden fuld, <verse number="6" style="v"/>men Jesus afbrød dem: „Lad hende være i fred! Hvorfor gør I livet surt for hende? Hun fortjener ros for det, hun har gjort for mig. <verse number="7" style="v"/>De fattige har I jo altid iblandt jer, og dem kan I gøre godt imod, så tit I vil, men mig har I ikke altid. <verse number="8" style="v"/>Hun har gjort sit til at forberede mig til begravelsen. <verse number="9" style="v"/>Det siger jeg jer: Hvor som helst i hele verden budskabet om mig bliver forkyndt, vil denne fine handling også blive omtalt. Hun vil aldrig blive glemt.”</para>
+  <para style="s1">Judas beslutter at forråde Jesus</para>
+  <para style="r">
+    <ref loc="MAT 26:14-16">Matt. 26,14-16</ref>; <ref loc="LUK 22:3-6">Luk. 22,3-6</ref></para>
+  <para style="p">
+    <verse number="10" style="v"/>Derpå gik Judas Iskariot, en af de Tolv, hen til ypperstepræsterne for at forråde Jesus til dem. <verse number="11" style="v"/>De blev glade, da de hørte det, og de lovede ham en belønning. Judas søgte derefter en passende lejlighed til at forråde ham.</para>
+  <para style="s1">Forberedelsen til påskemåltidet</para>
+  <para style="r">
+    <ref loc="MAT 26:17-19">Matt. 26,17-19</ref>; <ref loc="LUK 22:7-13">Luk. 22,7-13</ref></para>
+  <para style="p">
+    <verse number="12" style="v"/>På den første af påskefestens<note caller="+" style="f"><char style="fr" closed="false">14,12 </char><char style="ft" closed="false">Teksten siger egentlig „de usyrnede brøds fest”, men dette navn bruges her samlet for de to fester: Selve påskedagen, som falder på den 14. nisan, hvor lammet slagtes, og den efterfølgende, ugelange usyrnede brøds fest.</char></note> dage—den dag, hvor man slagtede lammene til påskemåltidet—spurgte disciplene Jesus: „Hvor ønsker du, at vi skal forberede påskemåltidet for dig?”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Jesus sagde da til to af sine disciple. „Gå ind i byen. Der vil I møde en mand, som bærer på en vandkrukke. Følg efter ham, <verse number="14" style="v"/>og sig til ejeren af det hus, hvor han går ind: ‚Mesteren spørger: Hvor er det rum, hvor jeg kan spise påskemåltidet sammen med mine disciple?’ <verse number="15" style="v"/>Han vil så føre jer ovenpå, og der vil I finde et stort rum, hvor der er gjort klar med borde og hynder på gulvet. Der skal I gøre måltidet parat.”</para>
+  <para style="p">
+    <verse number="16" style="v"/>De to disciple gik ind til byen og fandt det hele, som Jesus havde sagt, og de gjorde alt klar til påskemåltidet.</para>
+  <para style="s1">Jesus forudsiger Judas’ forræderi</para>
+  <para style="r">
+    <ref loc="MAT 26:20-25">Matt. 26,20-25</ref>; <ref loc="LUK 22:21-23">Luk. 22,21-23</ref>; <ref loc="JHN 13:21-30">Joh. 13,21-30</ref></para>
+  <para style="p">
+    <verse number="17" style="v"/>Efter mørkets frembrud gik Jesus derhen sammen med de Tolv. <verse number="18" style="v"/>Mens de lå ved bordet og spiste, udbrød han: „Det siger jeg jer: En af jer vil forråde mig—en af jer, der spiser sammen med mig!” <verse number="19" style="v"/>Disciplene blev meget bedrøvede, og den ene efter den anden spurgte ham: „Det er vel ikke mig?”</para>
+  <para style="p">
+    <verse number="20" style="v"/>„Det er en af jer Tolv,” svarede Jesus. „Han dypper et stykke brød i skålen sammen med mig. <verse number="21" style="v"/>Selv om Menneskesønnen nødvendigvis må dø, som Skrifterne har sagt, så må jeg sige: Ve det menneske, som forråder mig! Det havde været bedre for ham, om han aldrig havde levet.”</para>
+  <para style="s1">Jesus indstifter den nye pagt</para>
+  <para style="r">
+    <ref loc="MAT 26:26-29">Matt. 26,26-29</ref>; <ref loc="LUK 22:19-20">Luk. 22,19-20</ref>; <ref loc="1CO 11:23-25">1.Kor. 11,23-25</ref></para>
+  <para style="p">
+    <verse number="22" style="v"/>Under måltidet tog Jesus et brød, takkede Gud, brækkede det i stykker og delte det ud til dem, idet han sagde: „Tag imod dette brød. Det er mit legeme.” <verse number="23" style="v"/>Så tog han et bæger med vin, takkede Gud og sendte det rundt, og de drak alle deraf. <verse number="24" style="v"/>Han sagde: „Det er mit blod, som udgydes for mange, og som besegler den nye<note caller="+" style="f"><char style="fr" closed="false">14,24 </char><char style="ft" closed="false">Flere af de ældste og mindre pålidelige håndskrifter mangler ordet „nye”. Den nye pagt blev omtalt blandt andet i <char style="xt"><ref loc="JER 31:31-34">Jer. 31,31-34</ref></char>.</char></note> pagt. <verse number="25" style="v"/>Det siger jeg jer: Jeg skal ikke drikke vin mere før den dag, da jeg drikker den ny vin i Guds rige.”</para>
+  <para style="s1">Jesus forudser, at disciplene vil tage afstand fra ham</para>
+  <para style="r">
+    <ref loc="MAT 26:30-35">Matt. 26,30-35</ref>; <ref loc="LUK 22:31-34">Luk. 22,31-34</ref>; <ref loc="JHN 13:36-38">Joh. 13,36-38</ref></para>
+  <para style="p">
+    <verse number="26" style="v"/>Da Jesus og hans disciple havde sunget lovsangen,<note caller="+" style="f"><char style="fr" closed="false">14,26 </char><char style="ft" closed="false">Der var faste traditioner for påskeritualet, inklusive den afsluttende lovsang, som er fra <char style="xt"><ref loc="PSA 115-118">Sl. 115–118</ref></char>.</char></note> gik de ud mod Olivenbjerget.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Mens de gik op ad stien, sagde Jesus til dem: „I vil alle tage afstand fra mig, men så bliver det skriftord opfyldt, som siger: ‚Jeg vil slå hyrden ned, og fårene vil blive spredt.’<note caller="+" style="f"><char style="fr" closed="false">14,27 </char><char style="ft" closed="false"><char style="xt"><ref loc="ZEC 13:7">Zak. 13,7</ref></char>.</char></note> <verse number="28" style="v"/>Men efter at jeg er genopstået fra de døde, vil jeg gå i forvejen til Galilæa, så vi kan mødes dér.”</para>
+  <para style="p">
+    <verse number="29" style="v"/>„Selv om alle de andre tager afstand fra dig, så gør <char style="em">jeg</char> det ikke!” forsikrede Peter. <verse number="30" style="v"/>Jesus svarede ham: „Det siger jeg dig: Inden natten er forbi, og hanen galer for anden gang, har du tre gange nægtet at kendes ved mig.”</para>
+  <para style="p">
+    <verse number="31" style="v"/>„Aldrig i livet!” forsikrede Peter. „Så vil jeg hellere dø sammen med dig!” Nøjagtig det samme sagde alle de andre.</para>
+  <para style="s1">Jesus kæmper i bøn i Getsemane</para>
+  <para style="r">
+    <ref loc="MAT 26:36-46">Matt. 26,36-46</ref>; <ref loc="LUK 22:39-46">Luk. 22,39-46</ref></para>
+  <para style="p">
+    <verse number="32" style="v"/>De kom nu til et sted, der hedder Getsemane. „Sæt jer her, mens jeg går hen og beder,” sagde Jesus. <verse number="33" style="v"/>Dog tog han Peter, Jakob og Johannes med sig lidt længere frem. Hans ansigt afspejlede smerte og uro. <verse number="34" style="v"/>„Jeg er dybt bedrøvet her op til min død,” udbrød han. „Bliv her og hold jer vågne, mens jeg beder.”</para>
+  <para style="p">
+    <verse number="35" style="v"/>Han gik lidt længere frem, faldt på knæ med ansigtet mod jorden og bad om—hvis det var muligt—at blive fri for det frygtelige, der ventede ham. <verse number="36" style="v"/>„Far,” bad han, „alt er muligt for dig. Kan du ikke tage det her lidelsens bæger fra mig? Dog ikke som jeg vil, men som du vil.”</para>
+  <para style="p">
+    <verse number="37" style="v"/>Så gik han tilbage til de tre disciple og så, at de var faldet i søvn. „Simon, sover du?” sagde han. „Kunne du ikke holde dig vågen bare én time for min skyld? <verse number="38" style="v"/>Viljen er god nok, men i egen kraft kan I ikke. Hvis I ikke skal bukke under for fristelsen, må I være vågne og bede.”</para>
+  <para style="p">
+    <verse number="39" style="v"/>Jesus gik igen lidt væk fra dem og bad på samme måde som før. <verse number="40" style="v"/>Noget efter vendte han tilbage og så, at de tre disciple var faldet i søvn igen. Deres øjenlåg føltes tunge som bly, og de havde intet at sige til deres forsvar.</para>
+  <para style="p">
+    <verse number="41" style="v"/>Da Jesus for tredje gang gik hen for at bede og derefter kom tilbage, udbrød han: „Nå, I sover stadig og hviler jer! Men nok om det. Tiden er kommet, hvor Menneskesønnen skal overgives i onde menneskers vold. <verse number="42" style="v"/>Rejs jer og lad os gå! Forræderen er på vej.”</para>
+  <para style="s1">Jesus pågribes og afslår at forsvare sig</para>
+  <para style="r">
+    <ref loc="MAT 26:47-56">Matt. 26,47-56</ref>; <ref loc="LUK 22:47-53">Luk. 22,47-53</ref>; <ref loc="JHN 18:3-11">Joh. 18,3-11</ref></para>
+  <para style="p">
+    <verse number="43" style="v"/>Ordene hang endnu i luften, da Judas pludselig dukkede frem af mørket—han, som var en af de Tolv. Han kom med en flok mænd, der var bevæbnet med sværd og knipler. De var udsendt af ypperstepræsterne, de skriftlærde og de øvrige ledere. <verse number="44" style="v"/>Forræderen havde i forvejen sagt til dem: „Den mand, jeg hilser med et kys på kinden, ham er det. Grib ham, og hold ham godt bevogtet, når I fører ham bort.”</para>
+  <para style="p">
+    <verse number="45" style="v"/>Da de var nået frem, gik Judas straks hen til Jesus. „Mester,” sagde han, idet han gav ham et kys på kinden. <verse number="46" style="v"/>I samme øjeblik greb mændene Jesus og holdt ham fast. <verse number="47" style="v"/>En af de nærmeste disciple trak sit sværd, slog efter ypperstepræstens tjener og huggede hans ene øre af. <verse number="48" style="v"/>„Man skulle tro, det var en farlig forbryder, I var ude efter, sådan som I er bevæbnede,” sagde Jesus. <verse number="49" style="v"/>„Hvorfor arresterede I mig ikke i templet? Dag efter dag underviste jeg i templet, uden at I pågreb mig. Men det, der sker her, er blot en opfyldelse af Skriftens ord.”</para>
+  <para style="p">
+    <verse number="50" style="v"/>Derefter flygtede alle disciplene. <verse number="51" style="v"/>Dog var der en ung mand, der fulgte efter Jesus, da han blev ført bort.<note caller="+" style="f"><char style="fr" closed="false">14,51 </char><char style="ft" closed="false">Da denne unge mand kun nævnes i Markusevangeliet, formoder man, at det faktisk var Johannes Markus. Hans familie havde et stort hus i Jerusalem, og muligvis var det der, Jesus spiste påskemåltidet. Hvis Judas først havde ført de bevæbnede mænd derhen i den formodning, at Jesus var der, kan Markus have fulgt efter dem.</char></note> Den unge mand havde kun et klæde over sig, og da mændene prøvede at gribe fat i ham, <verse number="52" style="v"/>viklede han sig ud af det og flygtede nøgen.</para>
+  <para style="s1">Jesus i forhør hos de jødiske ledere</para>
+  <para style="r">
+    <ref loc="MAT 26:57-68">Matt. 26,57-68</ref>; <ref loc="LUK 22:54-55">Luk. 22,54-55</ref>.<ref loc="LUK 22:63-71">63-71</ref>; <ref loc="JHN 18:13-14">Joh. 18,13-14</ref>.<ref loc="JHN 18:19-24">19-24</ref></para>
+  <para style="p">
+    <verse number="53" style="v"/>Jesus blev nu ført til ypperstepræstens hus, hvor ypperstepræsterne, de skriftlærde og de øvrige jødiske ledere efterhånden samledes. <verse number="54" style="v"/>Peter fulgte efter på afstand og vovede sig indenfor i ypperstepræstens gård. Her satte han sig og varmede sig ved ilden sammen med vagtmandskabet.</para>
+  <para style="p">
+    <verse number="55" style="v"/>Inde i huset prøvede det øverste jødiske råd, anført af ypperstepræsterne, at finde noget, de kunne anklage Jesus for. De ville have ham dømt til døden, men manglede beviser. <verse number="56" style="v"/>Adskillige falske vidner blev ført frem, men de modsagde hinanden.</para>
+  <para style="p">
+    <verse number="57" style="v"/>Til sidst stod nogle mænd frem med følgende falske vidnesbyrd: <verse number="58" style="v"/>„Vi har selv hørt ham sige: ‚Jeg vil ødelægge det tempel her, som er bygget af mennesker, og inden der er gået tre dage, vil jeg rejse et nyt, der ikke er bygget af mennesker.’ ” <verse number="59" style="v"/>Men heller ikke på det punkt stemte deres udsagn overens.</para>
+  <para style="p">
+    <verse number="60" style="v"/>Nu rejste ypperstepræsten sig og sagde til Jesus: „Du har hørt anklagerne imod dig. Hvad har du at sige til dit forsvar?” <verse number="61" style="v"/>Men Jesus svarede ham ikke et ord. Så spurgte ypperstepræsten: „Er du Messias, Guds Søn?”</para>
+  <para style="p">
+    <verse number="62" style="v"/>„Ja, det er jeg,” svarede Jesus, „og I skal se Menneskesønnen sidde ved Den almægtige Guds højre side, og I skal se ham komme igen med himlens skyer.” <verse number="63" style="v"/>Da rev ypperstepræsten sin kjortel i stykker og råbte: „Hvad skal vi med flere vidner! <verse number="64" style="v"/>Nu har I selv hørt, hvordan han håner Gud. Hvad er jeres dom?”</para>
+  <para style="p">De var alle enige om, at han fortjente dødsstraf.</para>
+  <para style="p">
+    <verse number="65" style="v"/>Nogle af de omkringstående begyndte at spytte på Jesus. De lagde noget over hans ansigt, så han ikke kunne se, og slog ham med knytnæver, idet de sagde: „Hvis du er en profet, så sig os, hvem der slog dig!” Selv retsbetjentene slog ham med stokke, da de førte ham væk.</para>
+  <para style="s1">Peter nægter at kendes ved Jesus</para>
+  <para style="r">
+    <ref loc="MAT 26:69-75">Matt. 26,69-75</ref>; <ref loc="LUK 22:56-62">Luk. 22,56-62</ref>; <ref loc="JHN 18:15-18">Joh. 18,15-18</ref>.<ref loc="JHN 18:25-27">25-27</ref></para>
+  <para style="p">
+    <verse number="66" style="v"/>Mens det her foregik inde i huset, sad Peter nede i gården. Da en af ypperstepræstens tjenestepiger kom forbi, <verse number="67" style="v"/>fik hun øje på ham, mens han sad og varmede sig ved ilden. Hun stirrede et øjeblik på ham og sagde så: „Du var også sammen med ham Jesus fra Nazaret!”</para>
+  <para style="p">
+    <verse number="68" style="v"/>Peter benægtede det med det samme. „Jeg aner ikke, hvad du snakker om,” sagde han og forsvandt derefter ud i portrummet. Netop da galede en hane.</para>
+  <para style="p">
+    <verse number="69" style="v"/>Da pigen lidt efter så ham dér, råbte hun til de omkringstående: „Ham dér er en af dem.” <verse number="70" style="v"/>Atter benægtede Peter det.</para>
+  <para style="p">Lidt senere sagde de, der stod omkring ham: „Du er bestemt en af dem, for man kan høre på dig, at du er fra Galilæa!”</para>
+  <para style="p">
+    <verse number="71" style="v"/>Peter benægtede det igen og sagde: „Jeg sværger på, at jeg overhovedet ikke kender den mand, I taler om!”</para>
+  <para style="p">
+    <verse number="72" style="v"/>I det samme hørtes endnu et hanegal, og Peter huskede pludselig, hvad Jesus havde sagt: „Inden hanen galer anden gang, har du tre gange nægtet at kendes ved mig.” Og han brød sammen i gråd.</para>
+  <chapter number="15" style="c"/>
+  <para style="s1">Dommen afsiges, og Jesus føres til Pilatus</para>
+  <para style="r">
+    <ref loc="MAT 27:1-2">Matt. 27,1-2</ref>.<ref loc="MAT 27:11-14">11-14</ref>; <ref loc="LUK 23:1-5">Luk. 23,1-5</ref>; <ref loc="JHN 18:28-38">Joh. 18,28-38</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Så snart det blev lyst, afsagde det jødiske råd den officielle dom. Rådet bestod af ypperstepræsterne, de skriftlærde og en række andre ledere. Det blev besluttet, at Jesus skulle bindes og føres til den romerske guvernør, der hed Pilatus.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Da de ankom til den romerske garnisons hovedkvarter, spurgte Pilatus: „Er du jødernes konge?”</para>
+  <para style="p">„Det kan man godt sige,” svarede Jesus.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Nu kom ypperstepræsterne frem med deres anklager. <verse number="4" style="v"/>Pilatus vendte sig mod Jesus: „Hvorfor siger du ingenting? Du hører jo alt det, de anklager dig for.” <verse number="5" style="v"/>Men Jesus svarede stadig ikke et ord, og det undrede Pilatus sig meget over.</para>
+  <para style="s1">Pilatus bliver presset til at lade Jesus korsfæste</para>
+  <para style="r">
+    <ref loc="MAT 27:15-26">Matt. 27,15-26</ref>; <ref loc="LUK 23:13-25">Luk. 23,13-25</ref>; <ref loc="JHN 18:39-19:16">Joh. 18,39–19,16</ref></para>
+  <para style="p">
+    <verse number="6" style="v"/>Der var tradition for, at Pilatus hvert år i anledning af påsken løslod en jødisk fange. Folket måtte selv vælge, hvem det skulle være. <verse number="7" style="v"/>På det tidspunkt var der en mand ved navn Barabbas, som sad fængslet sammen med andre oprørere. De havde under opstanden begået mord.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Mængden begyndte nu at trænge ind på Pilatus. De ville have en fange frigivet, som de plejede. <verse number="9" style="v"/>„Vil I have, at jeg skal frigive jødernes konge?” spurgte Pilatus. <verse number="10" style="v"/>Han var nemlig godt klar over, at det var af ren og skær misundelse, at ypperstepræsterne havde slæbt Jesus for retten.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Men ypperstepræsterne fik folkemængden overtalt til at bede om at få Barabbas sat fri.</para>
+  <para style="p">
+    <verse number="12" style="v"/>„Hvad vil I så have, jeg skal gøre med den mand, som I kalder jødernes konge?” spurgte Pilatus. <verse number="13" style="v"/>„Korsfæst ham!” råbte de tilbage.</para>
+  <para style="p">
+    <verse number="14" style="v"/>„Hvorfor det?” sagde Pilatus. „Hvad ondt har han gjort?”</para>
+  <para style="p">Men de råbte blot endnu højere: „Korsfæst ham!”</para>
+  <para style="p">
+    <verse number="15" style="v"/>Pilatus besluttede, at det var bedst at bøje sig for mængden, så han løslod Barabbas og gav ordre til, at Jesus skulle piskes og derefter korsfæstes.</para>
+  <para style="s1">De romerske soldater gør nar af jødernes konge</para>
+  <para style="r">
+    <ref loc="MAT 27:27-31">Matt. 27,27-31</ref>; <ref loc="JHN 19:2-3">Joh. 19,2-3</ref></para>
+  <para style="p">
+    <verse number="16" style="v"/>Soldaterne førte Jesus ind i kasernen og kaldte hele garnisonen sammen. <verse number="17" style="v"/>De klædte ham ud som konge med en purpurrød kappe og en krone flettet af tornede grene på hovedet. <verse number="18" style="v"/>Så begyndte de at råbe: „Længe leve jødernes konge!” <verse number="19" style="v"/>Derefter slog de ham i hovedet med en kæp, spyttede på ham og kastede sig på knæ foran ham. <verse number="20" style="v"/>Da de til sidst blev trætte af at gøre nar af ham, trak de den røde kappe af ham og gav ham hans eget tøj på. Derefter førte de ham af sted for at korsfæste ham.</para>
+  <para style="s1">Jesus bliver korsfæstet og derefter hånet af de jødiske ledere</para>
+  <para style="r">
+    <ref loc="MAT 27:32-44">Matt. 27,32-44</ref>; <ref loc="LUK 23:26-43">Luk. 23,26-43</ref>; <ref loc="JHN 19:17-27">Joh. 19,17-27</ref></para>
+  <para style="p">
+    <verse number="21" style="v"/>En forbipasserende, Simon fra Kyrene, som var far til Alexander og Rufus, var netop på vej ind i byen. Ham tvang soldaterne til at bære Jesu kors.</para>
+  <para style="p">
+    <verse number="22" style="v"/>De førte Jesus ud til det sted, som kaldes Golgata (det betyder „Hovedskalsstedet”). <verse number="23" style="v"/>Her ville soldaterne give ham vin med et bedøvelsesmiddel i, men han ville ikke have det. <verse number="24" style="v"/>Så naglede de ham til korset, og derefter gav de sig til at rafle om hans tøj.<note caller="+" style="f"><char style="fr" closed="false">15,24 </char><char style="ft" closed="false">Som en opfyldelse af profetien i <char style="xt"><ref loc="PSA 22:19">Sl. 22,19</ref></char>.</char></note></para>
+  <para style="p">
+    <verse number="25" style="v"/>Klokken var omkring ni om formiddagen, da korsfæstelsen fandt sted. <verse number="26" style="v"/>På korset over Jesu hoved blev anbragt et skilt, der viste anklagen mod ham. Der stod: „Jødernes konge”.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Samme morgen blev også to forbrydere korsfæstet, og deres kors blev rejst på hver sin side af Jesus.<note caller="+" style="f"><char style="fr" closed="false">15,27 </char><char style="ft" closed="false">Nogle håndskrifter har et vers 28: Således blev skriftordet opfyldt: „Han blev regnet blandt forbrydere.” Muligvis indføjet fra <char style="xt"><ref loc="LUK 22:37">Luk. 22,37</ref></char>.</char></note></para>
+  <para style="p">
+    <verse number="29" style="v"/>Folk, der kom forbi, rystede på hovedet og hånede ham: „Nå, så det var dig, der ville rive templet ned og bygge det op igen inden tre dage! <verse number="30" style="v"/>Kom dog ned fra det kors og red dig selv!”</para>
+  <para style="p">
+    <verse number="31" style="v"/>Også ypperstepræsterne og de skriftlærde hånede Jesus. „Den er god med ham,” sagde de til hinanden. „Andre har han reddet, men sig selv kan han ikke redde. <verse number="32" style="v"/>Og han skulle være ‚Messias, Israels konge’? Lad ham nu stige ned fra korset, så skal vi nok tro på ham!”</para>
+  <para style="p">Også de to korsfæstede forbrydere hånede ham.</para>
+  <para style="s1">Jesus dør</para>
+  <para style="r">
+    <ref loc="MAT 27:45-56">Matt. 27,45-56</ref>; <ref loc="LUK 23:44-49">Luk. 23,44-49</ref>; <ref loc="JHN 19:28-30">Joh. 19,28-30</ref></para>
+  <para style="p">
+    <verse number="33" style="v"/>Ved tolvtiden blev der mørkt over hele landet, og mørket varede til klokken tre. <verse number="34" style="v"/>Klokken tre råbte Jesus højt: „Eloi, Eloi! Lema sabaktani?” Det betyder: „Min Gud! Min Gud! Hvorfor har du forladt mig?”<note caller="+" style="f"><char style="fr" closed="false">15,34 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 22:2">Sl. 22,2</ref></char>.</char></note></para>
+  <para style="p">
+    <verse number="35" style="v"/>Soldaterne, som stod vagt, forstod ikke, hvad han sagde, men nogle mente, han kaldte på Elias. <verse number="36" style="v"/>En af dem løb hen og hældte billig, sur vin på en svamp. Derefter anbragte han den på en stang og rakte den op til Jesus, for at han kunne drikke. „Lad os vente og se,” sagde han. „Måske kommer Elias og tager ham ned.”</para>
+  <para style="p">
+    <verse number="37" style="v"/>Da udstødte Jesus et højt råb og udåndede.</para>
+  <para style="p">
+    <verse number="38" style="v"/>I samme øjeblik blev forhænget foran indgangen til det allerhelligste rum i templet flænget i to dele fra øverst til nederst.</para>
+  <para style="p">
+    <verse number="39" style="v"/>Da den romerske officer, der stod ved siden af korset, så alt det, der skete i forbindelse med Jesu død, udbrød han: „Den mand var virkelig en gudesøn!”<note caller="+" style="f"><char style="fr" closed="false">15,39 </char><char style="ft" closed="false">Eller: „en søn af Gud” eller „Guds søn”.</char></note></para>
+  <para style="p">
+    <verse number="40" style="v"/>Nogle kvinder stod på afstand og iagttog det hele. Blandt dem var Maria Magdalene, Salome, og den Maria, som var mor til Jakob den Lille og Joses. <verse number="41" style="v"/>De havde fulgt Jesus og sørget for mad til ham, da han gik rundt i Galilæa. Desuden var der en del andre kvinder fra Galilæa, som var fulgt med til Jerusalem.</para>
+  <para style="s1">Jesus lægges i graven</para>
+  <para style="r">
+    <ref loc="MAT 27:57-61">Matt. 27,57-61</ref>; <ref loc="LUK 23:50-56">Luk. 23,50-56</ref>; <ref loc="JHN 19:38-42">Joh. 19,38-42</ref></para>
+  <para style="p">
+    <verse number="42-43" style="v"/>Alt det her skete om fredagen, dagen før sabbatten. Sent om eftermiddagen tog Josef fra Arimatæa mod til sig, opsøgte Pilatus og bad om at få Jesu lig udleveret. Josef var et anset medlem af det jødiske råd og en mand, som ventede, at Guds rige skulle komme. <verse number="44" style="v"/>Pilatus undrede sig over, at Jesus allerede skulle være død. Han tilkaldte den officer, som havde haft ansvar for korsfæstelsen, og spurgte ham, om det var rigtigt. <verse number="45" style="v"/>Da officeren bekræftede det, fik Josef lov til at få Jesu lig udleveret. <verse number="46" style="v"/>Først gik han hen og købte et hvidt lagen, hvorefter han fik taget Jesus ned fra korset og svøbt ind i lagenet. Derpå blev liget lagt i en gravhule, som var hugget ud i en klippe, og der blev rullet en stor sten for indgangen. <verse number="47" style="v"/>Maria Magdalene og Maria, Joses’ mor, stod og så, hvor Jesus blev lagt.</para>
+  <chapter number="16" style="c"/>
+  <para style="s1">Jesus genopstår</para>
+  <para style="r">
+    <ref loc="MAT 28:1-8">Matt. 28,1-8</ref>; <ref loc="LUK 24:1-12">Luk. 24,1-12</ref>; <ref loc="JHN 20:1">Joh. 20,1</ref></para>
+  <para style="p">
+    <verse number="1" style="v"/>Næste dags aften, da sabbatten var forbi, købte Maria Magdalene og Salome og Maria, Jakobs mor, vellugtende salver til at salve den døde med. <verse number="2" style="v"/>Tidligt søndag morgen, mens solen var ved at stå op, gik de ud til gravhulen. <verse number="3-4" style="v"/>„Hvem mon vi kan få til at rulle den store sten væk fra indgangen?” sagde de til hinanden,<note caller="+" style="f"><char style="fr" closed="false">16,3-4 </char><char style="ft" closed="false">Eller: „til sig selv”.</char></note> for stenen var meget tung. Men da de nåede frem, så de, at stenen allerede var rullet væk. Graven var åben. <verse number="5" style="v"/>De gik indenfor og så en engel i skikkelse af en ung mand sidde i højre side af gravhulen. Han var iført en lang, hvid klædning. Da kvinderne så englen, blev de forskrækkede, <verse number="6" style="v"/>men han sagde til dem: „Vær ikke bange! Er det ikke Jesus af Nazaret, den korsfæstede, I leder efter? Han er ikke her! Han er genopstået. Se selv: Det var her, han blev lagt. <verse number="7" style="v"/>Men gå nu hen og sig til Peter og de andre disciple: ‚Jesus tager til Galilæa for at mødes med jer dér, sådan som han har sagt jer.’ ”</para>
+  <para style="p">
+    <verse number="8" style="v"/>Så snart kvinderne var kommet ud fra gravhulen, gav de sig til at løbe alt, hvad de kunne. De var ude af sig selv og rystede af sindsbevægelse. De turde ikke fortælle nogen, hvad de havde oplevet.</para>
+  <para style="s1">Jesus viser sig for Maria Magdalene<note caller="+" style="f"><char style="fr" closed="false">16,9-20 </char><char style="ft" closed="false">Dette sidste afsnit—versene 9 til 20—hørte sandsynligvis ikke oprindeligt med til Markusevangeliet, men blev tilføjet som en efterskrift meget tidligt. Det er et kort resume af, hvad der ellers skete, efter at Jesus var genopstået.</char></note></para>
+  <para style="r">
+    <ref loc="MAT 28:9-10">Matt. 28,9-10</ref>; <ref loc="JHN 20:11-18">Joh. 20,11-18</ref></para>
+  <para style="p">
+    <verse number="9" style="v"/>Det var tidligt søndag morgen, Jesus opstod fra de døde, og den første, der fik ham at se, var Maria Magdalene, som han havde befriet for syv onde ånder. <verse number="10-11" style="v"/>Hun gik straks hen til de grædende og sørgende disciple og sagde: „Jesus lever! Jeg har selv set ham!” Men de troede ikke på det.</para>
+  <para style="s1">Jesus viser sig for to disciple</para>
+  <para style="r">
+    <ref loc="LUK 24:13-35">Luk. 24,13-35</ref></para>
+  <para style="p">
+    <verse number="12" style="v"/>Senere samme dag viste Jesus sig i sin nye skikkelse for to mænd, der var på vej ud på landet—bort fra Jerusalem. <verse number="13" style="v"/>De skyndte sig så tilbage til byen for at fortælle de øvrige disciple, at de havde været sammen med Jesus. Men heller ikke deres beretning troede disciplene på.</para>
+  <para style="s1">Jesus viser sig for de 11 disciple</para>
+  <para style="r">
+    <ref loc="LUK 24:36-46">Luk. 24,36-46</ref>; <ref loc="JHN 20:24-30">Joh. 20,24-30</ref></para>
+  <para style="p">
+    <verse number="14" style="v"/>Derefter viste Jesus sig for de elleve disciple, mens de var ved at spise. Han bebrejdede dem, at de så stædigt havde nægtet at tro på dem, der havde set ham i live.</para>
+  <para style="s1">Jesu sidste ord til disciplene</para>
+  <para style="r">
+    <ref loc="MAT 28:16-20">Matt. 28,16-20</ref></para>
+  <para style="p">
+    <verse number="15" style="v"/>Senere gav Jesus sine disciple følgende befaling: „Gå ud i hele verden og forkynd det gode budskab for alle mennesker. <verse number="16" style="v"/>Den, der tror og bliver døbt, vil blive frelst. Men den, som ikke tror, vil blive dømt. <verse number="17" style="v"/>Og disse tegn skal følge dem, der tror: med fuldmagt fra mig skal de drive dæmoner ud, de skal tale med nye tunger, <verse number="18" style="v"/>og hvis de kommer til at tage på slanger, vil der ikke ske dem noget. Skulle de drikke gift, vil det heller ikke skade dem. Og de skal lægge hænderne på de syge, så de bliver helbredt.”</para>
+  <para style="s1">Jesus tages op til Himlen</para>
+  <para style="r">
+    <ref loc="LUK 24:50-51">Luk. 24,50-51</ref>; <ref loc="ACT 1:9-11">ApG. 1,9-11</ref></para>
+  <para style="p">
+    <verse number="19" style="v"/>Efter at Herren Jesus havde sagt alt, hvad han ville sige til sine disciple, blev han taget op til Himlen, hvor han satte sig ved Guds højre side.</para>
+  <para style="s1">Disciplene begynder at forkynde budskabet om Jesus</para>
+  <para style="p">
+    <verse number="20" style="v"/>Og disciplene gik ud alle vegne og forkyndte budskabet om Jesus, og Gud gav dem magt til at udføre tegn og undere, som bekræftede, at budskabet var sandt.</para>
+</usx>

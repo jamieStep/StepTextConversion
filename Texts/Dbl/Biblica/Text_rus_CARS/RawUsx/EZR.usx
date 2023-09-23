@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="EZR" style="id">- Central Asian Russian Scriptures (CARS)</book>
+  <para style="rem">Copyright © 2003, 2009, 2013 by IMB-ERTP and Biblica, Inc.®</para>
+  <para style="h">Узайр</para>
+  <para style="toc1">Узайр</para>
+  <para style="toc2">Узайр</para>
+  <para style="toc3">Узайр</para>
+  <para style="mt1">Узайр</para>
+  <para style="imt">– введение</para>
+  <para style="ip">Книга Узайра служит продолжением Летописей и изначально была объединена с книгой Неемии в один свиток. Даты в этой книге можно сопоставить с датами сохранившихся древних персидских записей и точно соотнести с современным календарём. В 586 г. до н. э. вавилоняне сровняли Иерусалим с землёй и увели в плен большинство исраильтян. В первой части книги (<char style="xt">гл. <ref loc="EZR 1-6">1–6</ref></char>) в основном рассказывается о возвращении первых иудейских пленников во время персидского царя Кира в 538 г. до н. э., об их усилиях и трудностях при восстановлении храма и о завершении его строительства в 515 г. до н. э. Вторая часть книги (<char style="xt">гл. <ref loc="EZR 7-10">7–10</ref></char>) говорит о событиях, произошедших после прибытия Узайра в Иерусалим в 458 г. до н. э. во время правления персидского царя Артаксеркса I.</para>
+  <para style="ip">Узайр, происходивший из семьи священнослужителей, пришёл в Исраил с целью научить Закону Всевышнего бывших пленников (<char style="xt"><ref loc="EZR 7:10">7:10</ref></char>). Прибыв туда, он обнаружил, что многие иудеи женились на чужеземках (<char style="xt"><ref loc="EZR 9:1-4">9:1-4</ref></char>). Это глубоко расстроило его, и он призвал народ к общему покаянию (<char style="xt"><ref loc="EZR 9:5-15">9:5-15</ref></char>), после чего он предпринял активные шаги для решения проблемы смешанных браков (<char style="xt"><ref loc="EZR 10:1-17">10:1-17</ref></char>). Он усердно трудился, чтобы освятить исраильское общество и вернуть их к истинной вере в Вечного.</para>
+  <para style="ip">В книге Узайра можно особенно ясно наблюдать, как Всевышний действует через записанное слово. Здесь цитируются выдержки из персидских документов и писем, которые относятся к восстановлению храма и рассказывают о помощи или препятствиях со стороны разных лиц (<char style="xt"><ref loc="EZR 1:2-4">1:2-4</ref>; <ref loc="EZR 4:11-22">4:11-22</ref>; <ref loc="EZR 5:7-17">5:7-17</ref>; <ref loc="EZR 6:2-12">6:2-12</ref>; <ref loc="EZR 7:12-26">7:12-26</ref></char>). Часть книги – личные воспоминания Узайра о его служении в Исраиле (<char style="xt">гл. <ref loc="EZR 7-9">7–9</ref></char>). Даны также списки людей и городов (<char style="xt">гл. <ref loc="EZR 2">2</ref>; <ref loc="EZR 8:1-14">8:1-14</ref></char>), что подчёркивает преемственность исраильской истории и связь вернувшихся пленников с прежними поколениями.</para>
+  <para style="ip">Главная тема книги Узайра – восстановление священного соглашения между Всевышним и Исраилом. Хотя постпленный Исраил оставался под иноземным игом, и его независимость и монархия не были восстановлены, всё же возродилось маленькое общество, которое верно держалось обещаний и обязанностей священного соглашения.</para>
+  <para style="iot">Содержание</para>
+  <para style="io1">Возвращение первой группы иудеев из Вавилонского плена (<char style="ior"><ref loc="EZR 1:1-11">1:1-11</ref></char>)</para>
+  <para style="io1">Список возвратившихся из плена (<char style="ior"><ref loc="EZR 2:1-70">2:1-70</ref></char>)</para>
+  <para style="io1">Восстановление храма (<char style="ior"><ref loc="EZR 3:1-6:22">3:1–6:22</ref></char>)</para>
+  <para style="io1">Возвращение Узайра в Иерусалим (<char style="ior"><ref loc="EZR 7:1-8:36">7:1–8:36</ref></char>)</para>
+  <para style="io1">Осуждение смешанных браков и решение проблемы (<char style="ior"><ref loc="EZR 9:1-10:44">9:1–10:44</ref></char>)</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="s1">Указ Кира о возвращении пленников</para>
+  <para style="r">(<ref loc="2CH 36:22-23">2 Лет. 36:22-23</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>В первый год правления Кира<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">Кир II Великий, основатель Персидского государства Ахменидов, правил с 558 по 530 гг. до н. э. В 539 г. покорил Вавилон и Месопотамию. Кир погиб во время похода в Центральную Азию от руки сакской царицы Томирис.</char></note>, царя Персии (<char style="add">в 538 г. до н. э.</char>), чтобы исполнилось слово Вечного<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="fk" closed="false">Вечный </char><char style="ft" closed="false">– на языке оригинала: «Яхве». Под этим именем Всевышний открылся Мусе и народу Исраила (см. <char style="xt"><ref loc="EXO 3:13-15">Исх. 3:13-15</ref></char>). См. пояснительный словарь.</char></note>, которое возвестил Иеремия<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="JER 29:10-14">Иер. 29:10-14</ref></char>.</char></note>, Вечный побудил Кира, царя Персии, объявить по всему своему царству и записать такой указ:</para>
+  <para style="b"/>
+  <para style="pi">
+    <verse number="2" style="v"/>«Так говорит Кир, царь Персии: Вечный, Бог небес, отдал мне все царства земли и поручил мне построить Ему храм в Иерусалиме, в Иудее. <verse number="3" style="v"/>Всякий из вас, кто принадлежит к Его народу, – да будет с ним его Бог! – может отправляться в Иерусалим, в Иудею, и строить храм Вечного, Бога Исраила, Бога, Который в Иерусалиме. <verse number="4" style="v"/>И пусть жители тех мест, где сейчас живут уцелевшие иудеи, снабдят их серебром и золотом, имуществом и скотом и добровольными пожертвованиями для храма Всевышнего в Иерусалиме».</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="5" style="v"/>И главы семейств из родов Иуды и Вениамина со священнослужителями и левитами – всякий, кого побудил Всевышний, – стали собираться, чтобы пойти и отстроить дом Вечного в Иерусалиме. <verse number="6" style="v"/>Все их соседи помогли им серебряными и золотыми вещами, имуществом и скотом и дорогими дарами, не считая всех добровольных пожертвований. <verse number="7" style="v"/>Сам царь Кир вынес утварь храма Вечного, которую Навуходоносор<note caller="+" style="f"><char style="fr" closed="false">1:7 </char><char style="ft" closed="false">Царь Навуходоносор II, самый великий царь Нововавилонской империи, правил с 605 по 562 гг. до н. э.</char></note> забрал из Иерусалима и положил в храме своего бога<note caller="+" style="f"><char style="fr" closed="false">1:7 </char><char style="ft" closed="false">Или: «своих богов».</char></note>. <verse number="8" style="v"/>Кир, царь Персии, вверил их хранителю сокровищницы Митредату, который по счёту выдал их Шешбацару, вождю Иудеи.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Вот их опись:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">золотых блюд </cell>
+      <cell style="tcr2" align="end">30</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">серебряных блюд </cell>
+      <cell style="tcr2" align="end">1 000</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">ножей </cell>
+      <cell style="tcr2" align="end">29</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="10" style="v"/>золотых чаш </cell>
+      <cell style="tcr2" align="end">30</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">одинаковых серебряных чаш </cell>
+      <cell style="tcr2" align="end">410</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">других предметов </cell>
+      <cell style="tcr2" align="end">1 000</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="p">
+    <verse number="11" style="v"/>Всего золотых и серебряных предметов было пять тысяч четыреста. Когда переселенцы отправлялись из Вавилона в Иерусалим, Шешбацар взял всё это с собой.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Список возвратившихся из плена</para>
+  <para style="r">(<ref loc="NEH 7:6-73">Неем. 7:6-73</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Вот те вернувшиеся из плена жители провинции, которых увёл в Вавилон Навуходоносор, царь вавилонский (они вернулись в Иерусалим и Иудею, каждый в свой город, <verse number="2" style="v"/>вместе с Зоровавелем, Иешуа, Неемией, Сераей, Реелаей, Мардохеем, Билшаном, Миспаром, Бигваем, Рехумом и Бааной).</para>
+  <para style="b"/>
+  <para style="p">Список людей народа Исраила:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="3" style="v"/>потомков Пароша </cell>
+      <cell style="tc2" align="start"/>
+      <cell style="tcr3" align="end">2 172</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="4" style="v"/>Шефатии </cell>
+      <cell style="tcr3" align="end">372</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="5" style="v"/>Араха </cell>
+      <cell style="tcr3" align="end">775</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="6" style="v"/>Пахат-Моава (по линии Иешуа и Иоава) </cell>
+      <cell style="tcr3" align="end">2 812</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="7" style="v"/>Елама </cell>
+      <cell style="tcr3" align="end">1 254</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="8" style="v"/>Затту </cell>
+      <cell style="tcr3" align="end">945</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="9" style="v"/>Заккая </cell>
+      <cell style="tcr3" align="end">760</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="10" style="v"/>Бани </cell>
+      <cell style="tcr3" align="end">642</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="11" style="v"/>Бевая </cell>
+      <cell style="tcr3" align="end">623</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="12" style="v"/>Азгада </cell>
+      <cell style="tcr3" align="end">1 222</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="13" style="v"/>Адоникама </cell>
+      <cell style="tcr3" align="end">666</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="14" style="v"/>Бигвая </cell>
+      <cell style="tcr3" align="end">2 056</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="15" style="v"/>Адина </cell>
+      <cell style="tcr3" align="end">454</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="16" style="v"/>Атера (через Езекию) </cell>
+      <cell style="tcr3" align="end">98</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="17" style="v"/>Бецая </cell>
+      <cell style="tcr3" align="end">323</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="18" style="v"/>Иоры </cell>
+      <cell style="tcr3" align="end">112</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="19" style="v"/>Хашума </cell>
+      <cell style="tcr3" align="end">223</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="20" style="v"/>Гиббара </cell>
+      <cell style="tcr3" align="end">95</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="21" style="v"/>Жителей Вифлеема </cell>
+      <cell style="tc2" align="start"/>
+      <cell style="tcr3" align="end">123</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="22" style="v"/>Нетофы </cell>
+      <cell style="tcr3" align="end">56</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="23" style="v"/>Анатота </cell>
+      <cell style="tcr3" align="end">128</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="24" style="v"/>Азмавета </cell>
+      <cell style="tcr3" align="end">42</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="25" style="v"/>Кириат-Иеарима, Кефиры и Беэрота </cell>
+      <cell style="tcr3" align="end">743</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="26" style="v"/>Рамы и Гевы </cell>
+      <cell style="tcr3" align="end">621</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="27" style="v"/>Михмаса </cell>
+      <cell style="tcr3" align="end">122</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="28" style="v"/>Вефиля и Гая </cell>
+      <cell style="tcr3" align="end">223</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="29" style="v"/>Нево </cell>
+      <cell style="tcr3" align="end">52</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="30" style="v"/>Магбиша </cell>
+      <cell style="tcr3" align="end">156</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="31" style="v"/>другого Елама </cell>
+      <cell style="tcr3" align="end">1 254</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="32" style="v"/>Харима </cell>
+      <cell style="tcr3" align="end">320</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="33" style="v"/>Лода, Хадида и Оно </cell>
+      <cell style="tcr3" align="end">725</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="34" style="v"/>Иерихона </cell>
+      <cell style="tcr3" align="end">345</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="35" style="v"/>Сенаа </cell>
+      <cell style="tcr3" align="end">3 630</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="p">
+    <verse number="36" style="v"/>Священнослужителей:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">потомков Иедаи (через семью Иешуа) </cell>
+      <cell style="tc2" align="start"/>
+      <cell style="tcr3" align="end">973</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="37" style="v"/>Иммера </cell>
+      <cell style="tcr3" align="end">1 052</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="38" style="v"/>Пашхура </cell>
+      <cell style="tcr3" align="end">1 247</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start"/>
+      <cell style="tc2" align="start">
+        <verse number="39" style="v"/>Харима </cell>
+      <cell style="tcr3" align="end">1 017</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="p">
+    <verse number="40" style="v"/>Левитов:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">потомков Иешуа и Кадмиила (по линии Годавии) </cell>
+      <cell style="tcr2" align="end">74</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="p">
+    <verse number="41" style="v"/>Певцов:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">потомков Асафа </cell>
+      <cell style="tcr2" align="end">128</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="p">
+    <verse number="42" style="v"/>Привратников:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">потомков Шаллума, Атера, Талмона, Аккува, Хатиты и Шовая </cell>
+      <cell style="tcr2" align="end">139</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="43" style="v"/>Храмовых слуг:</para>
+  <para style="b"/>
+  <para style="li1">потомков Цихи, Хасуфы, Таббаота,</para>
+  <para style="li2">
+    <verse number="44" style="v"/>Кероса, Сии, Падона,</para>
+  <para style="li2">
+    <verse number="45" style="v"/>Леваны, Хагавы, Аккува,</para>
+  <para style="li2">
+    <verse number="46" style="v"/>Хагава, Шалмая, Ханана,</para>
+  <para style="li2">
+    <verse number="47" style="v"/>Гиддела, Гахара, Реаи,</para>
+  <para style="li2">
+    <verse number="48" style="v"/>Рецина, Некоды, Газзама,</para>
+  <para style="li2">
+    <verse number="49" style="v"/>Уззы, Пасеаха, Бесая,</para>
+  <para style="li2">
+    <verse number="50" style="v"/>Асны, Меунима, Нефисима,</para>
+  <para style="li2">
+    <verse number="51" style="v"/>Бакбука, Хакуфы, Хархура,</para>
+  <para style="li2">
+    <verse number="52" style="v"/>Бацлута, Мехиды, Харши,</para>
+  <para style="li2">
+    <verse number="53" style="v"/>Баркоса, Сисары, Темаха,</para>
+  <para style="li2">
+    <verse number="54" style="v"/>Нециаха и Хатифы.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="55" style="v"/>Потомков слуг Сулеймана:</para>
+  <para style="b"/>
+  <para style="li1">потомков Сотая, Соферета, Перуды,</para>
+  <para style="li2">
+    <verse number="56" style="v"/>Иаалы, Даркона, Гиддела,</para>
+  <para style="li2">
+    <verse number="57" style="v"/>Шефатии, Хаттила, Похерет-Цеваима и Ами.</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="58" style="v"/>Всех храмовых слуг и потомков слуг Сулеймана </cell>
+      <cell style="tcr2" align="end">392</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="pi">
+    <verse number="59" style="v"/>Вот те, кто пришёл из городов Тель-Мелаха, Тель-Харши, Керува, Аддана и Иммера, но не смог доказать, что их семьи ведут свой род от Исраила:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="60" style="v"/>потомки Делаи, Товии и Некоды </cell>
+      <cell style="tcr2" align="end">652</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="61" style="v"/>А из священнослужителей:</para>
+  <para style="b"/>
+  <para style="li1">потомки Хобаи, Аккоца и Барзиллая (человека, который женился на дочери галаадитянина Барзиллая и стал называться этим именем).</para>
+  <para style="pi">
+    <verse number="62" style="v"/>Они искали свои родословия, но не смогли их найти и поэтому были исключены из священства, как ритуально нечистые. <verse number="63" style="v"/>Наместник приказал им не есть от великой святыни<note caller="+" style="f"><char style="fr" closed="false">2:63 </char><char style="fq" closed="false">Великая святыня </char><char style="ft" closed="false">– жертва, принесённая для Всевышнего, и только священнослужитель и члены его семьи имели право употреблять в пищу мясо жертвенного животного (см. <char style="xt"><ref loc="LEV 22:10">Лев. 22:10</ref></char>).</char></note>, пока не появится священнослужитель, который сможет воспользоваться священным жребием<note caller="+" style="f"><char style="fr" closed="false">2:63 </char><char style="ft" closed="false">Букв.: «урим («свет») и туммим («совершенство»)». С помощью этих предметов определяли волю Всевышнего, но как именно, сегодня не известно.</char></note>.</para>
+  <para style="b"/>
+  <para style="pi">
+    <verse number="64" style="v"/>Всё собрание насчитывало 42 360 человек, <verse number="65" style="v"/>помимо 7 337 их слуг и служанок; при них были также 200 певцов и певиц. <verse number="66" style="v"/>У них было 736 лошадей, 245 мулов, <verse number="67" style="v"/>435 верблюдов и 6 720 ослов.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="68" style="v"/>Когда они прибыли к дому Вечного, что в Иерусалиме, некоторые из глав семейств стали добровольно жертвовать на дом Всевышнего, чтобы отстроить его на прежнем месте. <verse number="69" style="v"/>По своим возможностям они дали на это дело в сокровищницу 61 000 золотых монет, 3 000 килограммов<note caller="+" style="f"><char style="fr" closed="false">2:69 </char><char style="ft" closed="false">Букв.: «61 000 золотых драхм, 5 000 мин».</char></note> серебра и 100 одеяний священнослужителей.</para>
+  <para style="p">
+    <verse number="70" style="v"/>Священнослужители, левиты, часть народа, певцы, привратники и храмовые слуги поселились в своих городах близ Иерусалима, и весь остальной народ Исраила поселился в своих городах.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Восстановление жертвенника</para>
+  <para style="p">
+    <verse number="1" style="v"/>Когда наступил седьмой месяц (<char style="add">в начале осени</char>) и исраильтяне уже поселились в своих городах, народ, как один человек, собрался в Иерусалиме. <verse number="2" style="v"/>И Иешуа, сын Иехоцадака, вместе со своими собратьями-священнослужителями, Зоровавелем, сыном Шеалтиила, и его собратьями начал строить жертвенник Бога Исраила, чтобы приносить на нём всесожжения, как предписано в Законе пророка Мусы. <verse number="3" style="v"/>Несмотря на то что<note caller="+" style="f"><char style="fr" closed="false">3:3 </char><char style="ft" closed="false">Или: «Так как».</char></note> они боялись народов, которые были вокруг них, они построили жертвенник на прежнем основании и приносили на нём всесожжения Вечному – и утренние, и вечерние жертвы. <verse number="4" style="v"/>Затем они отпраздновали, как предписано, праздник Шалашей<note caller="+" style="f"><char style="fr" closed="false">3:4 </char><char style="fk" closed="false">Праздник Шалашей </char><char style="ft" closed="false">– иудейский праздник в память о попечении Всевышнего во время скитаний в пустыне (см. <char style="xt"><ref loc="LEV 23:33-43">Лев. 23:33-43</ref>; <ref loc="NUM 29:12-39">Чис. 29:12-39</ref>; <ref loc="DEU 16:13-17">Втор. 16:13-17</ref></char>).</char></note> с указанным количеством всесожжений, установленных для каждого дня. <verse number="5" style="v"/>После этого они принесли ежедневные всесожжения, жертвы на Новолуние, и жертвы на все праздники, посвящённые Вечному, и пожертвования от каждого, кто добровольно жертвовал Вечному<note caller="+" style="f"><char style="fr" closed="false">3:5 </char><char style="ft" closed="false">См. таблицы: «Праздники в Исраиле» и «Жертвоприношения в Исраиле».</char></note>. <verse number="6" style="v"/>В первый день седьмого месяца они начали приносить Вечному всесожжения, хотя основания храма Вечного ещё не были заложены.</para>
+  <para style="s1">Закладка основания для храма</para>
+  <para style="p">
+    <verse number="7" style="v"/>Они начали давать деньги каменщикам и плотникам и еду, питьё и масло жителям Сидона и Тира, чтобы те морем привозили кедровые брёвна с Ливана в Иоппию с разрешения Кира, царя Персии.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Во второй месяц второго года после того, как они пришли к дому Всевышнего в Иерусалиме (<char style="add">в середине весны 536 г. до н. э.</char>), Зоровавель, сын Шеалтиила, Иешуа, сын Иехоцадака, и все остальные их соплеменники (священнослужители, левиты и все, кто вернулся в Иерусалим из плена) приступили к работе, назначив левитов от двадцати лет и старше следить за строительством дома Вечного. <verse number="9" style="v"/>Иешуа со своими сыновьями и братьями, и Кадмиил со своими сыновьями (потомками Годавии<note caller="+" style="f"><char style="fr" closed="false">3:9 </char><char style="ft" closed="false">Букв.: «Иуды». Иуда – вариант имени Годавия (см. <char style="xt"><ref loc="EZR 2:40">2:40</ref>; <ref loc="NEH 7:43">Неем. 7:43</ref></char>).</char></note>), и сыновья Хенадада со своими сыновьями и братьями – все левиты – вместе начали следить за строительством дома Всевышнего.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Когда строители заложили основание храма Вечного, священнослужители в своих облачениях и с трубами и левиты (сыновья Асафа) с тарелками заняли свои места, чтобы восславить Вечного по наставлениям Давуда, царя Исраила. <verse number="11" style="v"/>Они пели попеременно, возвеличивая и благодаря Вечного:</para>
+  <para style="b"/>
+  <para style="q1">– Он благ;</para>
+  <para style="q2">милость Его к Исраилу – навеки!</para>
+  <para style="b"/>
+  <para style="p">А весь народ отвечал громким криком хвалы Вечному, потому что основание дома Его было заложено. <verse number="12" style="v"/>Но многие из старых священнослужителей, левитов и глав семейств, видевших прежний храм, глядя, как закладывается основание этого храма, громко плакали, а многие кричали от радости. <verse number="13" style="v"/>Крики радости нельзя было отличить от плача – так шумел народ. И шум был слышен далеко.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Противодействие восстановлению храма</para>
+  <para style="p">
+    <verse number="1" style="v"/>Когда враги Иуды и Вениамина услышали, что вчерашние пленники строят храм Вечному, Богу Исраила, <verse number="2" style="v"/>они пришли к Зоровавелю и главам семейств и сказали:</para>
+  <para style="p">– Позвольте нам строить вместе с вами. Ведь мы, как и вы, обращаемся за помощью к вашему Богу и приносим Ему жертвы со времён Асархаддона<note caller="+" style="f"><char style="fr" closed="false">4:2 </char><char style="ft" closed="false">Асархаддон, сын Синаххериба, правил Ассирийской империей с 681 по 669 гг. до н. э.</char></note>, царя Ассирии, который нас сюда поселил.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Но Зоровавель, Иешуа и остальные главы семейств Исраила ответили:</para>
+  <para style="p">– Не строить вам вместе с нами храм нашему Богу. Мы одни будем строить его Вечному, Богу Исраила, как повелел нам персидский царь Кир.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Тогда народы, бывшие вокруг них, начали отговаривать народ Иудеи от строительства и пугать его, чтобы они не строили дальше<note caller="+" style="f"><char style="fr" closed="false">4:4 </char><char style="ft" closed="false">Или: «препятствовать ему в строительстве».</char></note>. <verse number="5" style="v"/>Враги подкупали советников, чтобы расстраивать планы народа Иудеи во всё время правления Кира, царя Персии, и до правления Дария<note caller="+" style="f"><char style="fr" closed="false">4:5 </char><char style="ft" closed="false">Дарий I Великий (Гистасп) правил Персидской империей с 522 по 486 гг. до н. э.</char></note>, царя Персии<note caller="+" style="f"><char style="fr" closed="false">4:5 </char><char style="ft" closed="false">Это повествование продолжается с 24-го стиха. Стихи с 6 по 23 – вставка, рассказывающая о более позднем противодействии врагов при строительстве стен города (см. ст. 13).</char></note>.</para>
+  <para style="s1">Позднейшее противодействие при возведении иерусалимской стены</para>
+  <para style="p">
+    <verse number="6" style="v"/>В начале правления Ксеркса<note caller="+" style="f"><char style="fr" closed="false">4:6 </char><char style="ft" closed="false">Букв.: «Ахашвероша» – еврейский вариант персидского имени Ксеркс. Ксеркс I, сын Дария I Великого, правил Персидской империей с 486 по 465 гг. до н. э.</char></note> враги написали обвинение на жителей Иудеи и Иерусалима.</para>
+  <para style="p">
+    <verse number="7" style="v"/>И в дни Артаксеркса<note caller="+" style="f"><char style="fr" closed="false">4:7 </char><char style="ft" closed="false">Артаксеркс I Лонгиман (Долгорукий), сын Ксеркса I, внук Дария I Великого, правил Персидской империей с 464 по 424 гг. до н. э.</char></note>, царя Персии, Бишлам, Митредат, Тавеил и другие их сподвижники написали Артаксерксу письмо. Письмо было написано на арамейском языке, а затем переведено.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Царский наместник Рехум и писарь Шимшай написали царю Артаксерксу против Иерусалима такое письмо:</para>
+  <para style="b"/>
+  <para style="pi">
+    <verse number="9" style="v"/>Рехум, царский наместник, и Шимшай, писарь, вместе с прочими своими друзьями – судьями, сановниками, наместниками, чиновниками, теми, кто родом из Эреха, Вавилона и Суз, а также дагами, еламитами<note caller="+" style="f"><char style="fr" closed="false">4:9 </char><char style="ft" closed="false">Или: «родом из Эреха и Вавилона, еламитами из Суз».</char></note> <verse number="10" style="v"/>и прочими народами, которых могущественный и досточтимый Ашшурбанипал<note caller="+" style="f"><char style="fr" closed="false">4:10 </char><char style="ft" closed="false">Букв.: «Оснаппар» – арамейский вариант ассирийского имени Ашшурбанипал. Ашшурбанипал, сын Асархаддона и последний из великих царей Ассирийской империи, правил с 669 по 633 гг. до н. э.</char></note> пленил и переселил в города Самарии и в другие места за Евфратом.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="11" style="v"/>(Это копия письма, которое они ему послали.)</para>
+  <para style="b"/>
+  <para style="pi">Царю Артаксерксу, от твоих рабов, жителей провинции за Евфратом:</para>
+  <para style="b"/>
+  <para style="pi">
+    <verse number="12" style="v"/>Да будет известно царю, что иудеи, которые пришли к нам от тебя, пошли в Иерусалим и отстраивают этот мятежный и злой город. Они восстанавливают стены и укрепляют основания. <verse number="13" style="v"/>Да будет известно царю и то, что если этот город будет отстроен и стены его будут укреплены, то ни налог, ни дань, ни пошлина платиться не будут, и царские доходы сократятся. <verse number="14" style="v"/>Так как мы в долгу перед дворцом<note caller="+" style="f"><char style="fr" closed="false">4:14 </char><char style="ft" closed="false">Букв.: «мы едим соль от дворца». В те времена люди ели соль для закрепления договоров.</char></note> и не можем смотреть, как царю наносится бесчестие, мы и посылаем известить царя, <verse number="15" style="v"/>чтобы поискали в летописях твоих предшественников. В них ты найдёшь, что город этот – мятежный город, пагубный для царей и провинций, и с древности – очаг мятежа. Поэтому-то он и был разрушен. <verse number="16" style="v"/>Мы извещаем царя, что если этот город будет отстроен и стены его будут восстановлены, то в провинции за Евфратом у тебя ничего не останется.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="17" style="v"/>Царь прислал такой ответ:</para>
+  <para style="b"/>
+  <para style="pi">Рехуму, царскому наместнику, Шимшаю, писарю, и прочим их друзьям, живущим в Самарии и в других местах провинции за Евфратом, – мир.</para>
+  <para style="b"/>
+  <para style="pi">
+    <verse number="18" style="v"/>Письмо, что вы послали нам, было прочитано и переведено предо мной. <verse number="19" style="v"/>По моему повелению был проведён поиск, и открылось, что этот город издревле восставал против царей и был очагом мятежей и волнений. <verse number="20" style="v"/>В Иерусалиме были могучие цари, правившие всей провинцией, что находится за Евфратом, и им платились налоги, дань и пошлины. <verse number="21" style="v"/>Итак, отдайте приказ этим людям прекратить работу, чтобы они не отстраивали этот город, пока я не прикажу. <verse number="22" style="v"/>Смотрите, не оставляйте этого дела без внимания. Зачем позволять этой угрозе расти до такой степени, чтобы царю был нанесён ущерб?</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="23" style="v"/>Как только копия письма царя Артаксеркса была прочитана Рехуму, писарю Шимшаю и их друзьям, они немедленно отправились к иудеям в Иерусалим и силой заставили их прекратить работу.</para>
+  <para style="s1">Возобновление работ по строительству храма</para>
+  <para style="p">
+    <verse number="24" style="v"/>Так работа над домом Всевышнего<note caller="+" style="f"><char style="fr" closed="false">4:24 </char><char style="fk" closed="false">Всевышний </char><char style="ft" closed="false">– на языке оригинала: «Элах» – слово, родственное арабскому «Аллах». Это имя Всевышнего часто встречается в этой книге. См. приложение V.</char></note> в Иерусалиме остановилась и не возобновлялась до второго года правления Дария, царя Персии (<char style="add">520 г. до н. э.</char>).</para>
+  <chapter number="5" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Пророк Аггей и пророк Закария, потомок Иддо, пророчествовали иудеям в Иудее и в Иерусалиме во имя Бога Исраила, Который был над ними. <verse number="2" style="v"/>И Зоровавель, сын Шеалтиила, и Иешуа, сын Иехоцадака, принялись отстраивать дом Всевышнего в Иерусалиме. Пророки Всевышнего были с ними, помогая им.</para>
+  <para style="p">
+    <verse number="3" style="v"/>В то время Таттенай, наместник провинции за Евфратом, Шетар-Бознай и их сподвижники пришли к ним и спросили:</para>
+  <para style="p">– Кто разрешил вам отстраивать этот храм и восстанавливать его стены?</para>
+  <para style="p">
+    <verse number="4" style="v"/>Ещё они спросили:</para>
+  <para style="p">– Как зовут тех людей, которые возводят эти стены?<note caller="+" style="f"><char style="fr" closed="false">5:4 </char><char style="ft" closed="false">Или: «И мы сказали им имена тех людей, которые возводят эти стены».</char></note></para>
+  <para style="p">
+    <verse number="5" style="v"/>Но око их Бога было над старейшинами иудеев, и их не останавливали, пока донесение не достигло Дария и пока от него не пришёл письменный ответ.</para>
+  <para style="s1">Письмо Таттеная царю Дарию</para>
+  <para style="p">
+    <verse number="6" style="v"/>Вот копия письма, которое Таттенай, наместник провинции за Евфратом, Шетар-Бознай и их друзья, чиновники провинции за Евфратом, послали царю Дарию. <verse number="7" style="v"/>В донесении, которое они ему послали, было написано:</para>
+  <para style="b"/>
+  <para style="pi">Царю Дарию – мир!</para>
+  <para style="b"/>
+  <para style="pi">
+    <verse number="8" style="v"/>Да будет известно царю о том, что мы ходили в провинцию Иудея, к храму великого Бога. Народ строит храм из больших камней и вкладывает в стены деревянные балки. Работа исполняется прилежно и спорится у них в руках.</para>
+  <para style="pi">
+    <verse number="9" style="v"/>Мы говорили со старейшинами и спросили их: «Кто разрешил вам отстраивать этот храм и восстанавливать его стены?» <verse number="10" style="v"/>(Ещё мы узнали как их зовут, чтобы сообщить тебе имена руководителей.) <verse number="11" style="v"/>Вот что они нам ответили:</para>
+  <para style="b"/>
+  <para style="pi">«Мы рабы Бога неба и земли и отстраиваем храм, который был построен много лет назад, тот самый, который строил и завершил великий исраильский царь. <verse number="12" style="v"/>Наши предки прогневали Бога небесного, и Он отдал их в руки халдея Навуходоносора, царя Вавилона, который разрушил этот храм и увёл народ в плен в Вавилон.</para>
+  <para style="pi">
+    <verse number="13" style="v"/>Но в первый год своего правления Кир, царь Вавилона<note caller="+" style="f"><char style="fr" closed="false">5:13 </char><char style="ft" closed="false">Персидский царь Кир назван здесь царём Вавилона потому, что Персия завоевала Вавилонскую империю.</char></note>, повелел отстроить этот дом Всевышнего. <verse number="14" style="v"/>Он даже вынес из вавилонского храма золотые и серебряные вещи дома Всевышнего, которые Навуходоносор забрал из храма в Иерусалиме и принёс в храм в Вавилоне.</para>
+  <para style="pi">Царь Кир отдал их Шешбацару, которого он назначил наместником, <verse number="15" style="v"/>и сказал ему: „Возьми эти вещи, иди и положи их в Иерусалимском храме. И пусть дом Всевышнего будет отстроен на своём прежнем месте“. <verse number="16" style="v"/>Тогда Шешбацар пришёл и заложил основания дома Всевышнего в Иерусалиме. С того дня до нынешнего он строится, но всё ещё не завершён».</para>
+  <para style="b"/>
+  <para style="pi">
+    <verse number="17" style="v"/>Итак, если это угодно царю, пусть поищут в царских архивах, что в Вавилоне: правда ли царь Кир повелел отстроить этот дом Всевышнего в Иерусалиме. И пусть царь пошлёт нам своё решение по этому делу.</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Указ царя Дария</para>
+  <para style="p">
+    <verse number="1" style="v"/>Царь Дарий дал повеление, и в архивах, что хранились в сокровищнице в Вавилоне, устроили поиск. <verse number="2" style="v"/>Но нашёлся свиток в крепости Екбатаны, что в провинции Мидия, и в нём было написано:</para>
+  <para style="b"/>
+  <para style="pi">Памятная запись:</para>
+  <para style="b"/>
+  <para style="pi">
+    <verse number="3" style="v"/>В первый год правления царя Кира, царь отдал повеление о храме Всевышнего в Иерусалиме:</para>
+  <para style="b"/>
+  <para style="pi">Пусть храм – место, где приносятся жертвы и сжигаются всесожжения, – будет отстроен, и пусть будут заложены его основания. Пусть он будет тридцать метров в высоту и тридцать метров<note caller="+" style="f"><char style="fr" closed="false">6:3 </char><char style="ft" closed="false">Букв.: «шестьдесят локтей».</char></note> в ширину, <verse number="4" style="v"/>с тремя рядами из больших камней и одним – из дерева. Расходы пусть будут оплачены из царской казны. <verse number="5" style="v"/>А ещё, пусть золотые и серебряные вещи дома Всевышнего, которые Навуходоносор забрал из Иерусалимского храма и принёс в Вавилон, вернутся на своё место в Иерусалимский храм и пусть их поместят в доме Всевышнего.</para>
+  <para style="b"/>
+  <para style="pi">
+    <verse number="6" style="v"/>Итак, Таттенай, наместник провинции за Евфратом, Шетар-Бознай и вы, их сподвижники, чиновники этой провинции, держитесь подальше. <verse number="7" style="v"/>Не вмешивайтесь в работу над этим храмом Всевышнего. Пусть иудейский наместник и старейшины иудеев отстраивают этот дом Всевышнего на его прежнем месте.</para>
+  <para style="pi">
+    <verse number="8" style="v"/>Более того, я даю повеление о том, чем вы должны помогать этим старейшинам иудеев в постройке этого дома Всевышнего: расходы этих людей следует полностью оплатить из царской казны, из доходов провинции за Евфратом, чтобы работа не останавливалась. <verse number="9" style="v"/>Всё, что бы ни потребовалось: тельцы, бараны, ягнята для всесожжений Богу небесному, пшеница, соль, вино и масло, как скажут священнослужители из Иерусалима, должно выдаваться им ежедневно без промедления, <verse number="10" style="v"/>чтобы они могли приносить жертвы, угодные Богу небесному, и молиться о благополучии царя и его сыновей.</para>
+  <para style="pi">
+    <verse number="11" style="v"/>Я даю и такое повеление, что если кто-нибудь изменит этот указ, то пусть из его дома вынут кол и посадят его на него. Пусть его дом за это преступление будет превращён в груду развалин. <verse number="12" style="v"/>Пусть Бог, Которого там почитают, низложит всякого царя или народ, которые поднимут руку, чтобы изменить этот указ или разрушить этот Иерусалимский храм.</para>
+  <para style="pi">Так повелел я, Дарий. Да будет исполнено это со всем усердием.</para>
+  <para style="s1">Завершение строительства храма и его освящение</para>
+  <para style="p">
+    <verse number="13" style="v"/>И наместник провинции за Евфратом Таттенай, Шетар-Бознай и их сподвижники со всем старанием исполнили то, что повелел царь Дарий. <verse number="14" style="v"/>И старейшины иудеев продолжали строить и преуспевали в то самое время, когда пророчествовали пророки Аггей и Закария, внук Иддо. Они завершили строительство храма по повелению Бога Исраила и указам Кира, Дария и Артаксеркса, царей Персии. <verse number="15" style="v"/>Строительство храма было завершено на третий день месяца адара, в шестой год правления царя Дария (<char style="add">12 марта 515 г. до н. э.</char>).</para>
+  <para style="p">
+    <verse number="16" style="v"/>И весь народ Исраила – священнослужители, левиты и все остальные, возвратившиеся из плена, – радостно отпраздновали освящение дома Всевышнего. <verse number="17" style="v"/>Для освящения этого дома Всевышнего они принесли в жертву сто быков, двести баранов, четыреста ягнят и в жертву за грех всего Исраила – двенадцать козлов, по одному за каждый исраильский род. <verse number="18" style="v"/>Затем они назначили для служения Всевышнему в Иерусалиме священнослужителей по их отделениям и левитов по их группам, как предписано в Таурате, книге Мусы.</para>
+  <para style="s1">Праздник Освобождения</para>
+  <para style="p">
+    <verse number="19" style="v"/>В четырнадцатый день первого месяца (<char style="add">21 апреля 515 г. до н. э.</char>) возвратившиеся из плена отметили праздник Освобождения<note caller="+" style="f"><char style="fr" closed="false">6:19 </char><char style="fk" closed="false">Праздник Освобождения </char><char style="ft" closed="false">– этот праздник отмечался в память об избавлении иудейского народа под руководством пророка Мусы из Египетского рабства (см. <char style="xt"><ref loc="EXO 12">Исх. 12</ref>; <ref loc="EXO 13:17-22">13:17-22</ref>; <ref loc="EXO 14">14</ref>; <ref loc="DEU 16:1-8">Втор. 16:1-8</ref></char>).</char></note>. <verse number="20" style="v"/>Священнослужители и левиты очистились, и все были ритуально чисты. Левиты закололи ягнёнка, предназначенного в жертву на праздник Освобождения для всех возвратившихся из плена, для своих собратьев-священнослужителей и для самих себя. <verse number="21" style="v"/>И исраильтяне, вернувшиеся из плена, ели вместе со всеми теми, кто удалился от нечистых обычаев своих соседей-язычников, чтобы прибегать к помощи Вечного, Бога Исраила. <verse number="22" style="v"/>Семь дней они радостно отмечали праздник Пресных хлебов<note caller="+" style="f"><char style="fr" closed="false">6:22 </char><char style="fq" closed="false">Праздник Пресных хлебов </char><char style="ft" closed="false">– этот праздник шёл сразу же за праздником Освобождения и длился семь дней. В эти дни предписывалось есть только пресный хлеб (см. <char style="xt"><ref loc="EXO 12:15-20">Исх. 12:15-20</ref>; <ref loc="EXO 13:3-10">13:3-10</ref>; <ref loc="LEV 23:6-8">Лев. 23:6-8</ref>; <ref loc="NUM 28:17-25">Чис. 28:17-25</ref></char>).</char></note>, потому что Вечный наполнил их радостью, расположив к ним царя Ассирии<note caller="+" style="f"><char style="fr" closed="false">6:22 </char><char style="ft" closed="false">Персидский царь Дарий назван здесь царём Ассирии потому, что Персия завоевала Вавилонскую империю, которая, в свою очередь, завоевала Ассирию.</char></note> так, что тот стал помогать им в работе над домом Всевышнего, Бога Исраила.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Узайр прибывает в Иерусалим</para>
+  <para style="p">
+    <verse number="1" style="v"/>После этих событий, в правление царя Персии Артаксеркса, Узайр, сын Сераи, сына Азарии, сына Хилкии, <verse number="2" style="v"/>сына Шаллума, сына Цадока, сына Ахитува, <verse number="3" style="v"/>сына Амарии, сына Азарии, сына Мерайота, <verse number="4" style="v"/>сына Зерахии, сына Уззия, сына Буккия, <verse number="5" style="v"/>сына Авишуя, сына Пинхаса, сына Элеазара, сына главного священнослужителя Харуна, – <verse number="6" style="v"/>этот Узайр пришёл из Вавилона. Он был учителем, сведущим в Законе Мусы, который дал Вечный, Бог Исраила. Царь дал ему всё, о чём он просил, потому что на нём была рука Вечного, его Бога. <verse number="7" style="v"/>Некоторые из исраильтян и некоторые из священнослужителей, левитов, певцов, привратников и храмовых слуг также пришли в Иерусалим в седьмом году правления царя Артаксеркса.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Узайр прибыл в Иерусалим в пятый месяц того же года (<char style="add">в августе 458 г. до н. э.</char>). <verse number="9" style="v"/>Он отправился в путь из Вавилона в первый день первого месяца (<char style="add">8 апреля 458 г. до н. э.</char>) и прибыл в Иерусалим в пятый день пятого месяца (<char style="add">4 августа 458 г. до н. э.</char>), потому что на нём была милостивая рука его Бога. <verse number="10" style="v"/>Ведь Узайр посвятил себя изучению и исполнению Закона Вечного и обучению Исраила его установлениям и правилам.</para>
+  <para style="s1">Письмо царя Артаксеркса Узайру</para>
+  <para style="p">
+    <verse number="11" style="v"/>Вот копия письма, которое царь Артаксеркс дал Узайру, священнослужителю и учителю, человеку сведущему в повелениях и установлениях Вечного Исраилу:</para>
+  <para style="b"/>
+  <para style="pi">
+    <verse number="12" style="v"/>От Артаксеркса, царя царей, приветствие Узайру, священнослужителю, учителю Закона Бога небесного.</para>
+  <para style="b"/>
+  <para style="pi">
+    <verse number="13" style="v"/>Я повелеваю: всякий из исраильтян в моём царстве, включая священнослужителей и левитов, кто желает идти в Иерусалим вместе с тобой, может идти. <verse number="14" style="v"/>Я и семь моих советников посылаем тебя разузнать об Иудее и Иерусалиме по Закону твоего Бога, который в твоей руке. <verse number="15" style="v"/>Более того, возьми с собой серебро и золото, которое царь и его советники пожертвовали Богу Исраила, чьё жилище в Иерусалиме, <verse number="16" style="v"/>а также всё серебро и золото, какие найдёшь во всей провинции Вавилония, и пожертвования народа и священнослужителей на храм их Бога в Иерусалиме. <verse number="17" style="v"/>Немедленно купи на эти деньги быков, баранов и ягнят, вместе с их хлебными приношениями и жертвенными возлияниями, и принеси их на жертвенник храма вашего Бога в Иерусалиме.</para>
+  <para style="pi">
+    <verse number="18" style="v"/>Ты и твои собратья можете распорядиться остатком серебра и золота по своему усмотрению, как будет на то воля вашего Бога. <verse number="19" style="v"/>Доставь Богу Иерусалима все вещи, вверенные тебе для служения в храме твоего Бога. <verse number="20" style="v"/>И если ещё будут расходы на храм твоего Бога, ты можешь покрыть их из царской сокровищницы.</para>
+  <para style="pi">
+    <verse number="21" style="v"/>Итак, я, царь Артаксеркс, приказываю всем казначеям провинции за Евфратом выдавать всё, что бы ни попросил у вас священнослужитель Узайр, учитель Закона Бога небесного. <verse number="22" style="v"/>Выдавайте до 3 600 килограммов серебра, 18 000 килограммов зерна, 2 200 литров вина, 2 200 литров<note caller="+" style="f"><char style="fr" closed="false">7:22 </char><char style="ft" closed="false">Букв.: «100 талантов… 100 ко́ров… 100… 100 батов».</char></note> оливкового масла и соли без меры. <verse number="23" style="v"/>Что бы ни повелел Бог небесный, пусть с усердием делается для храма Бога небесного, чтобы не было гнева на державу царя и его сыновей. <verse number="24" style="v"/>Знайте также, что у вас нет власти взимать налоги, дань или пошлины ни с кого из священнослужителей, левитов, певцов, привратников, храмовых слуг или других работников в этом доме Всевышнего.</para>
+  <para style="pi">
+    <verse number="25" style="v"/>А ты, Узайр, по мудрости твоего Бога, которой обладаешь, назначь правителей и судей, чтобы вершить правосудие всему народу провинции за Евфратом – всем, кто знает законы твоего Бога. А всех, кто не знает их, ты учи. <verse number="26" style="v"/>Всякий, кто не будет слушаться Закона твоего Бога и закона царя, непременно должен быть наказан смертью, или изгнанием, или конфискацией имущества, или заключением в темницу.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="27" style="v"/>Хвала Вечному, Богу наших предков, Который вложил в сердце царя желание воздать этим честь дому Вечного в Иерусалиме <verse number="28" style="v"/>и простёр ко мне Свою милость перед царём, и его советниками, и всеми могущественными царскими приближёнными! Так как рука Вечного, моего Бога, была на мне, я отважился и собрал вождей из Исраила, чтобы им идти со мной.</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Список глав семей вернувшихся с Узайром</para>
+  <para style="p">
+    <verse number="1" style="v"/>Вот главы семейств и родословия тех, кто вышел со мной из Вавилона во время правления царя Артаксеркса:</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="2" style="v"/>из потомков Пинхаса – Гершом;</para>
+  <para style="li1">из потомков Итамара – Даниял;</para>
+  <para style="li1">из потомков Давуда – Хаттуш, <verse number="3" style="v"/>сын Шехании;</para>
+  <para style="li1">из потомков Пароша – Закария, и с ним по родословному списку было 150 мужчин;</para>
+  <para style="li1">
+    <verse number="4" style="v"/>из потомков Пахат-Моава – Элиегоенай, сын Зерахии, и с ним 200 мужчин;</para>
+  <para style="li1">
+    <verse number="5" style="v"/>из потомков Затту – Шехания, сын Иахазиила, и с ним 300 мужчин;</para>
+  <para style="li1">
+    <verse number="6" style="v"/>из потомков Адина – Эвед, сын Ионафана, и с ним 50 мужчин;</para>
+  <para style="li1">
+    <verse number="7" style="v"/>из потомков Елама – Иешая, сын Аталии, и с ним 70 мужчин;</para>
+  <para style="li1">
+    <verse number="8" style="v"/>из потомков Шефатии – Зевадия, сын Микаила, и с ним 80 мужчин;</para>
+  <para style="li1">
+    <verse number="9" style="v"/>из потомков Иоава – Авдий, сын Иехиила, и с ним 218 мужчин;</para>
+  <para style="li1">
+    <verse number="10" style="v"/>из потомков Бани – Шеломит, сын Иосифия, и с ним 160 мужчин;</para>
+  <para style="li1">
+    <verse number="11" style="v"/>из потомков Бевая – Закария, сын Бевая, и с ним 28 мужчин;</para>
+  <para style="li1">
+    <verse number="12" style="v"/>из потомков Азгада – Иоханан, сын Аккатана, и с ним 110 мужчин;</para>
+  <para style="li1">
+    <verse number="13" style="v"/>из потомков Адоникама – последние, чьи имена Элифелет, Иеуил и Шемая, и с ними 60 мужчин;</para>
+  <para style="li1">
+    <verse number="14" style="v"/>из потомков Бигвая – Утай и Заккур, и с ними 70 мужчин.</para>
+  <para style="s1">Узайр призывает левитов и храмовых слуг к возвращению</para>
+  <para style="p">
+    <verse number="15" style="v"/>Я собрал их у реки, которая течёт в сторону Ахавы, где мы разбили лагерь и провели там три дня. Когда я осмотрел народ и священнослужителей, то не нашёл среди них ни одного левита. <verse number="16" style="v"/>Тогда я позвал Элиезера, Ариила, Шемаю, Элнафана, Иарива, Элнафана, Нафана, Закарию и Мешуллама, которые были вождями, и учёных – Иоярива и Элнафана, <verse number="17" style="v"/>и отправил их к Иддо, вождю в Касифии. Я велел им передать Иддо и его родственникам, храмовым слугам в Касифии, чтобы они привели к нам служителей для дома нашего Бога. <verse number="18" style="v"/>Так как милостивая рука нашего Бога была над нами, они привели к нам Шеревию, способного человека из потомков Махли, сына Леви, сына Исраила, и сыновей и братьев Шеревии – восемнадцать мужчин; <verse number="19" style="v"/>и Хашавию вместе с Иешаей из потомков Мерари, и его братьев и племянников – двадцать мужчин. <verse number="20" style="v"/>Они также привели двести двадцать храмовых слуг – группу служителей, которых Давуд и чиновники отдали в помощь левитам. Все они были записаны поимённо.</para>
+  <para style="s1">Подготовка к пути</para>
+  <para style="p">
+    <verse number="21" style="v"/>Там, у реки Ахавы, я объявил пост, чтобы мы могли смирить себя перед нашим Богом и попросить Его о безопасном путешествии для нас и наших детей со всем нашим имуществом. <verse number="22" style="v"/>Мне было стыдно просить у царя войска и всадников для нашей защиты от врагов в пути, потому что мы уже сказали царю: «Милостивая рука нашего Бога на каждом, кто ищет Его, но Его великий гнев на всех, кто покидает Его». <verse number="23" style="v"/>Итак, мы постились и просили нашего Бога об этом, и Он ответил на нашу молитву.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Затем я отделил двенадцать главных священнослужителей: Шеревию вместе с Хашавией и десять других из их братьев, <verse number="25" style="v"/>и, взвесив, я отдал им пожертвованное серебро, и золото, и предметы, которые царь, его советники, его чиновники и все находившиеся там исраильтяне отдали для дома нашего Бога. <verse number="26" style="v"/>Взвесив, я отдал им 23 400 килограммов серебра, серебряных предметов весом в 3 600 килограммов, золота – 3 600 килограммов<note caller="+" style="f"><char style="fr" closed="false">8:26 </char><char style="ft" closed="false">Букв.: «650… 100… 100 талантов».</char></note>, <verse number="27" style="v"/>20 золотых чаш стоимостью в 1 000 золотых монет<note caller="+" style="f"><char style="fr" closed="false">8:27 </char><char style="ft" closed="false">Букв.: «1 000 дариков». Золотые чаши весили 8,5 кг.</char></note> и два сосуда из лучшей блестящей латуни, ценимой как золото.</para>
+  <para style="p">
+    <verse number="28" style="v"/>И я сказал им:</para>
+  <para style="p">– Вы, так же как и все эти предметы, посвящены Вечному. Серебро и золото – добровольные пожертвования Вечному, Богу ваших предков. <verse number="29" style="v"/>Бережно храните всё это до тех пор, пока не передадите в хранилище дома Вечного в Иерусалиме, взвесив всё на глазах у главных священнослужителей, левитов и глав семейств Исраила.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Затем священнослужители и левиты приняли серебро, золото и священные предметы, которые были отданы для того, чтобы их отвезли в дом нашего Бога в Иерусалиме.</para>
+  <para style="s1">Возвращение в Иерусалим</para>
+  <para style="p">
+    <verse number="31" style="v"/>В двенадцатый день первого месяца (<char style="add">19 апреля 458 г. до н. э.</char>) мы отправились в путь от реки Ахавы, чтобы дойти до Иерусалима. Рука нашего Бога была над нами, и Он защитил нас от врагов и разбойников в пути. <verse number="32" style="v"/>Итак, мы пришли в Иерусалим, где отдыхали три дня.</para>
+  <para style="p">
+    <verse number="33" style="v"/>На четвёртый день в доме нашего Бога мы, взвесив серебро, золото и священные предметы, передали их в руки священнослужителя Меремота, сына Урии. С ним был Элеазар, сын Пинхаса, а также левиты – Иозавад, сын Иешуа, и Ноадия, сын Биннуи. <verse number="34" style="v"/>Всё было сосчитано по количеству и весу, и в то же время был записан общий вес.</para>
+  <para style="p">
+    <verse number="35" style="v"/>Затем пришедшие из плена переселенцы принесли жертвы всесожжения Богу Исраила – двенадцать быков за весь Исраил, девяносто шесть баранов, семьдесят семь ягнят мужского пола и двенадцать козлов в жертву за грех. Всё это было принесено в жертву всесожжения Вечному. <verse number="36" style="v"/>Они также отдали царские приказы царским сатрапам<note caller="+" style="f"><char style="fr" closed="false">8:36 </char><char style="ft" closed="false">Персидская империя была поделена на административные области (сатрапии), которыми управляли сатрапы – самый высокий ранг чиновников в империи. Сатрапии, в свою очередь, состояли из отдельных провинций.</char></note> и наместникам провинции за Евфратом, которые потом оказали поддержку народу и дому Всевышнего.</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Осуждение смешанных браков</para>
+  <para style="p">
+    <verse number="1" style="v"/>После того как всё это было сделано, вожди пришли ко мне и сказали:</para>
+  <para style="p">– Народ Исраила, священнослужители и левиты не отделились от иноплеменных народов: хананеев, хеттов, перизеев, иевусеев, аммонитян, моавитян, египтян и аморреев с их отвратительными обычаями. <verse number="2" style="v"/>Они брали их дочерей в жёны для себя и своих сыновей, и святой народ смешался с иноплеменными народами. А вожди и начальники первыми подавали пример этого злодеяния.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Услышав это, я разорвал на себе одежду и накидку, стал рвать свои волосы и бороду и сел, поражённый ужасом. <verse number="4" style="v"/>И все, кто благоговел пред словами Бога Исраила, собрались вокруг меня из-за этого злодеяния переселенцев. А я сидел там, поражённый ужасом, до вечерней жертвы<note caller="+" style="f"><char style="fr" closed="false">9:4 </char><char style="ft" closed="false">То есть примерно до трёх часов пополудни (см. <char style="xt"><ref loc="EXO 29:38-41">Исх. 29:38-41</ref>; <ref loc="NUM 28:3-8">Чис. 28:3-8</ref></char>).</char></note>.</para>
+  <para style="s1">Молитва Узайра</para>
+  <para style="p">
+    <verse number="5" style="v"/>Во время вечерней жертвы я поднялся с места своего самоуничижения в разорванной одежде и накидке, и пал на колени, простирая руки к Вечному, моему Богу, <verse number="6" style="v"/>и стал молиться:</para>
+  <para style="p">– Бог мой, мне так стыдно, так совестно, что я даже не могу поднять к Тебе лица, ведь наши грехи выше наших голов, а вина наша достигла небес. <verse number="7" style="v"/>Со времён наших предков и до этого дня наша вина велика. Из-за наших грехов нас, и наших царей, и наших священнослужителей постигли меч и плен, грабёж и унижения от рук иноземных царей, как это есть и по сегодняшний день.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Но сегодня – на миг – Вечный, наш Бог, смилостивился над нами. Он оставил в живых некоторых из нас и дал нам утвердиться в Своём святилище. Он просветил наши глаза и облегчил наше рабство. <verse number="9" style="v"/>Мы рабы, но наш Бог не оставил нас и в нашем рабстве. Он проявил к нам милость перед царями Персии: Он даровал нам новую жизнь, чтобы мы отстроили дом нашего Бога и восстановили его из руин, и дал нам защитную стену в Иудее и в Иерусалиме.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Но ныне! Бог наш, что нам сказать после этого? Ведь мы пренебрегли повелениями, <verse number="11" style="v"/>которые Ты дал через Своих рабов пророков, когда сказал: «Земля, в которую вы входите, чтобы завладеть ею, это земля, осквернённая мерзостями её народов. Своими отвратительными обычаями они наполнили её нечистотой от края до края. <verse number="12" style="v"/>Поэтому не отдавайте своих дочерей замуж за их сыновей и не берите их дочерей своим сыновьям. Никогда не ищите с ними мирного договора, чтобы вам быть сильными, и есть блага земли, и оставить её вашим детям как вечное наследие».</para>
+  <para style="p">
+    <verse number="13" style="v"/>После всего, что случилось с нами за наши злые дела и великую вину, Ты, Бог наш, наказал нас мягче, чем заслуживали наши грехи, и оставил в живых некоторых из нас. <verse number="14" style="v"/>Неужели мы опять нарушим Твои повеления и будем вступать в родство с народами, которые преданы этим отвратительным обычаям? Разве Ты не прогневаешься на нас так, чтобы истребить нас, не оставив ни одного уцелевшего? <verse number="15" style="v"/>Вечный, Бог Исраила, Ты праведен! Сегодня остались мы – уцелевшие. Вот мы пред Тобой в нашей вине, хотя из-за неё ни один из нас не может устоять в Твоём присутствии.</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">Покаяние народа и расторжение смешанных браков</para>
+  <para style="p">
+    <verse number="1" style="v"/>Пока Узайр молился, признаваясь в грехах, плача и падая на землю перед домом Всевышнего, вокруг него собралась большая толпа исраильтян: мужчин, женщин и детей. Они тоже горько плакали. <verse number="2" style="v"/>И Шехания, сын Иехиила, один из потомков Елама, обратился к Узайру, сказав:</para>
+  <para style="p">– Мы нарушили верность нашему Богу, женившись на чужеземках из народов, что вокруг нас. Но даже теперь у Исраила ещё есть надежда. <verse number="3" style="v"/>Итак, давайте заключим с нашим Богом священное соглашение, чтобы удалить от себя всех этих женщин и их детей, по совету моего господина и тех, кто благоговеет перед повелениями нашего Бога. Пусть всё будет по Закону. <verse number="4" style="v"/>Поднимись, это дело в твоих руках. Мы поддержим тебя, соберись с духом и действуй.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Узайр поднялся и заставил главных священнослужителей, левитов и весь Исраил поклясться сделать так, как было предложено. И они поклялись.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Узайр удалился от дома Всевышнего и пошёл в комнату Иоханана, сына Элиашива. Пока он был там, он не ел хлеба и не пил воды, потому что скорбел о неверности переселенцев.</para>
+  <para style="p">
+    <verse number="7" style="v"/>И в Иудее, и в Иерусалиме объявили, что все переселенцы должны собраться в Иерусалиме, <verse number="8" style="v"/>а если кто-нибудь не придёт в течение трёх дней, у того – по решению вождей и старейшин – будет отобрано всё его имущество, а сам он будет изгнан из общины переселенцев.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="9" style="v"/>В течение трёх дней все мужчины Иуды и Вениамина собрались в Иерусалиме. И на двадцатый день девятого месяца (<char style="add">19 декабря 458 г. до н. э.</char>) весь народ сидел на площади перед домом Всевышнего, дрожа из-за этого дела и из-за ливня. <verse number="10" style="v"/>Священнослужитель Узайр встал и сказал им:</para>
+  <para style="p">– Вы совершили предательство: вы женились на чужеземках, увеличив вину Исраила. <verse number="11" style="v"/>Итак, открыто признайтесь Вечному, Богу ваших предков, в своих грехах и исполните Его волю. Отделитесь от народов, что вокруг вас, и от ваших иноплеменных жён.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Всё собрание ответило громким криком:</para>
+  <para style="p">– Ты прав! Мы должны сделать, как ты сказал. <verse number="13" style="v"/>Но здесь много людей и сейчас время дождей, так что мы не можем стоять на улице. Да и дело это не на день и не два, потому что мы в этом сильно согрешили. <verse number="14" style="v"/>Пусть наши вожди представляют всё собрание. И пусть все в наших городах, кто женился на иноземках, приходят в установленное время вместе со старейшинами и судьями каждого города, пока от нас не отвратится пылающий гнев нашего Бога за это дело.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Только Ионафан, сын Асаила, и Иахзея, сын Тиквы, а с ними Мешуллам и левит Шаббетай, воспротивились этому. <verse number="16" style="v"/>Переселенцы сделали, как было предложено. Священнослужитель Узайр выбрал людей, которые были главами семейств, по одному из каждого семейства; все они были названы поимённо. В первый день десятого месяца (<char style="add">29 декабря 458 г. до н. э.</char>) они сели, чтобы разбирать это дело, <verse number="17" style="v"/>и к первому дню первого месяца следующего года (<char style="add">27 марта 457 г. до н. э.</char>) закончили расследование относительно всех, кто женился на чужеземках.</para>
+  <para style="s1">Список женатых на чужеземках</para>
+  <para style="p">
+    <verse number="18" style="v"/>Среди потомков священнослужителей на чужеземках женились:</para>
+  <para style="b"/>
+  <para style="li1">Из потомков Иешуа, сына Иехоцадака, и его братьев:</para>
+  <para style="li2">Маасея, Элиезер, Иарив и Гедалия. <verse number="19" style="v"/>(Они обещали развестись со своими жёнами, и за свою вину каждый принёс барана из своей отары в жертву повинности.)</para>
+  <para style="li1">
+    <verse number="20" style="v"/>Из потомков Иммера:</para>
+  <para style="li2">Ханани и Зевадия.</para>
+  <para style="li1">
+    <verse number="21" style="v"/>Из потомков Харима:</para>
+  <para style="li2">Маасея, Ильяс, Шемая, Иехиил и Уззия.</para>
+  <para style="li1">
+    <verse number="22" style="v"/>Из потомков Пашхура:</para>
+  <para style="li2">Элиоенай, Маасея, Исмаил, Нетанил, Иозавад и Эласа.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="23" style="v"/>Среди левитов:</para>
+  <para style="li2">Иозавад, Шимей, Келая (он же Келита), Петахия, Иуда и Элиезер.</para>
+  <para style="li1">
+    <verse number="24" style="v"/>Из певцов:</para>
+  <para style="li2">Элиашив.</para>
+  <para style="li1">Из привратников:</para>
+  <para style="li2">Шаллум, Телем и Ури.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="25" style="v"/>А среди прочих исраильтян:</para>
+  <para style="b"/>
+  <para style="li1">Из потомков Пароша:</para>
+  <para style="li2">Рамия, Иззия, Малхия, Миямин, Элеазар, Малхия и Беная.</para>
+  <para style="li1">
+    <verse number="26" style="v"/>Из потомков Елама:</para>
+  <para style="li2">Маттания, Закария, Иехиил, Авди, Иеремот и Ильяс.</para>
+  <para style="li1">
+    <verse number="27" style="v"/>Из потомков Затту:</para>
+  <para style="li2">Элиоенай, Элиашив, Маттания, Иеремот, Завад и Азиза.</para>
+  <para style="li1">
+    <verse number="28" style="v"/>Из потомков Бевая:</para>
+  <para style="li2">Иоханан, Ханания, Заббай и Атлай.</para>
+  <para style="li1">
+    <verse number="29" style="v"/>Из потомков Бани:</para>
+  <para style="li2">Мешуллам, Маллух, Адая, Иашув, Шеал и Иеремот.</para>
+  <para style="li1">
+    <verse number="30" style="v"/>Из потомков Пахат-Моава:</para>
+  <para style="li2">Адна, Келал, Беная, Маасея, Маттания, Бецалил, Биннуи и Манасса.</para>
+  <para style="li1">
+    <verse number="31" style="v"/>Из потомков Харима:</para>
+  <para style="li2">Элиезер, Ишшия, Малхия, Шемая, Шимеон, <verse number="32" style="v"/>Вениамин, Маллух и Шемария.</para>
+  <para style="li1">
+    <verse number="33" style="v"/>Из потомков Хашума:</para>
+  <para style="li2">Маттенай, Маттата, Завад, Элифелет, Иеремай, Манасса и Шимей.</para>
+  <para style="li1">
+    <verse number="34" style="v"/>Из потомков Бани:</para>
+  <para style="li2">Маадай, Амрам, Уил, <verse number="35" style="v"/>Беная, Бедея, Келухи, <verse number="36" style="v"/>Ванея, Меремот, Элиашив, <verse number="37" style="v"/>Маттания, Маттенай и Иаасу.</para>
+  <para style="li1">
+    <verse number="38" style="v"/>Из потомков Биннуи<note caller="+" style="f"><char style="fr" closed="false">10:37-38 </char><char style="ft" closed="false">Или: «Иаасу, </char><char style="fv" closed="false">38 </char><char style="ft" closed="false">Бани, Биннуи».</char></note>:</para>
+  <para style="li2">Шимей, <verse number="39" style="v"/>Шелемия, Нафан, Адая, <verse number="40" style="v"/>Махнадевай, Шашай, Шарай, <verse number="41" style="v"/>Азарил, Шелемия, Шемария, <verse number="42" style="v"/>Шаллум, Амария и Юсуф.</para>
+  <para style="li1">
+    <verse number="43" style="v"/>Из потомков Нево:</para>
+  <para style="li2">Иеил, Маттафия, Завад, Зевина, Иаддай, Иоиль и Беная.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="44" style="v"/>Все они женились на чужеземках, и некоторые из их жён родили им детей<note caller="+" style="f"><char style="fr" closed="false">10:44 </char><char style="ft" closed="false">Или: «и все они отослали своих жён вместе с детьми».</char></note>.</para>
+</usx>

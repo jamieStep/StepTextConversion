@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="ZEP" style="id">- Kiswahili Contemporary Version (Neno), updated 2018</book>
+  <para style="rem">Copyright © 1984, 1989, 2009, 2015 by Biblica, Inc.</para>
+  <para style="h">Sefania</para>
+  <para style="toc1">Sefania</para>
+  <para style="toc2">Sefania</para>
+  <para style="toc3">Sef</para>
+  <para style="mt1">Sefania</para>
+  <para style="imt">Utangulizi</para>
+  <para style="im">Maana ya Sefania ni “Aliyefichwa na Yehova.” Alikuwa wa ukoo wa Hezekia, mfalme wa Yuda. Nabii Sefania alihudumu wakati wa utawala wa Mfalme Yosia. Sefania alionya kwamba siku ya Bwana ingeleta hukumu kwa Yuda pamoja na Yerusalemu, hivyo akawashauri Wayahudi kumrudia Mungu. Uvamizi wa kuteka Yuda ulikuwa unakuja kutoka kaskazini, nao ungekumba pia mataifa yaliyowazunguka. Ingawa hukumu ya Yuda imeainishwa, ahadi ya kufanywa upya ni yakini. Mataifa yatahukumiwa na kutiishwa na mfalme wa Israeli, atakayetawala kutoka Sayuni.</para>
+  <para style="is1">Mwandishi</para>
+  <para style="im">Sefania.</para>
+  <para style="is1">Kusudi</para>
+  <para style="im">Kuwaonya watu wa Yuda waepukane na kuabudu sanamu na wamrudie Mungu wao.</para>
+  <para style="is1">Mahali</para>
+  <para style="im">Yerusalemu.</para>
+  <para style="is1">Tarehe</para>
+  <para style="im">Kati ya 640–621 K.K.</para>
+  <para style="is1">Wahusika Wakuu</para>
+  <para style="im">Sefania, na watu wa Yuda.</para>
+  <para style="is1">Wazo Kuu</para>
+  <para style="im">Sefania aliwapa watu matumaini kwamba Mungu angewarudisha watu wake nyumbani.</para>
+  <para style="is1">Mambo Muhimu</para>
+  <para style="im">Hukumu juu ya Yuda na mataifa ya Wafilisti, Amoni na Moabu. Yerusalemu pia inatajwa kwa siku zijazo.</para>
+  <para style="iot">Mgawanyo</para>
+  <para style="io1">Kutangazwa kwa hukumu ya Mungu (<char style="ior"><ref loc="ZEP 1:1-2:3">1:1–2:3</ref></char>)</para>
+  <para style="io1">Hukumu dhidi ya mataifa (<char style="ior"><ref loc="ZEP 2:4-15">2:4-15</ref></char>)</para>
+  <para style="io1">Maisha ya baadaye ya Yerusalemu (<char style="ior"><ref loc="ZEP 3:1-20">3:1-20</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="ZEP 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ZEP 1:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 22:1">2Fal 22:1</ref>; <ref loc="2TI 3:16">2Tim 3:16</ref>; <ref loc="2PE 1:21">2Pet 1:21</ref>; <ref loc="1CH 3:14">1Nya 3:14</ref></char>
+    </note>Neno la <char style="nd">Bwana</char> lililomjia Sefania mwana wa Kushi, mwana wa Gedalia, mwana wa Amaria, mwana wa Hezekia, wakati wa utawala wa Yosia mwana wa Amoni mfalme wa Yuda:<verse eid="ZEP 1:1"/></para>
+  <para style="b"/>
+  <para style="s1">Onyo La Maangamizi Yanayokuja</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ZEP 1:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 6:7">Mwa 6:7</ref>
+      </char>
+    </note>
+    <char style="nd">Bwana</char> asema,</para>
+  <para style="q2" vid="ZEP 1:2">“Nitafagia kila kitu</para>
+  <para style="q2" vid="ZEP 1:2">kutoka kwenye uso wa dunia.”<verse eid="ZEP 1:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="ZEP 1:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 4:25">Yer 4:25</ref>; <ref loc="JER 50:3">50:3</ref>; <ref loc="HOS 4:3">Hos 4:3</ref>; <ref loc="EZK 14:17">Eze 14:17</ref></char>
+    </note>“Nitafagilia mbali watu na wanyama;</para>
+  <para style="q2" vid="ZEP 1:3">nitafagilia mbali ndege wa angani</para>
+  <para style="q2" vid="ZEP 1:3">na samaki wa baharini.</para>
+  <para style="q1" vid="ZEP 1:3">Wafanyao maovu watapata tu kokoto,</para>
+  <para style="q2" vid="ZEP 1:3">nami nitamkatilia mbali mwanadamu atoke katika dunia,”</para>
+  <para style="q4" vid="ZEP 1:3">asema <char style="nd">Bwana</char>.<verse eid="ZEP 1:3"/></para>
+  <para style="s1">Dhidi Ya Yuda</para>
+  <para style="q1">
+    <verse number="4" style="v" sid="ZEP 1:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 6:12">Yer 6:12</ref>; <ref loc="JER 15:6">15:6</ref>; <ref loc="MIC 5:13">Mik 5:13</ref>; <ref loc="ZEP 2:11">Sef 2:11</ref>; <ref loc="HOS 10:5">Hos 10:5</ref></char>
+    </note>“Nitaiadhibu Yuda</para>
+  <para style="q2" vid="ZEP 1:4">na wote wakaao Yerusalemu.</para>
+  <para style="q1" vid="ZEP 1:4">Kutoka mahali hapa nitakatilia mbali</para>
+  <para style="q2" vid="ZEP 1:4">kila mabaki ya Baali,</para>
+  <para style="q1" vid="ZEP 1:4">majina ya wapagani na makuhani</para>
+  <para style="q2" vid="ZEP 1:4">waabuduo sanamu:<verse eid="ZEP 1:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="ZEP 1:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 5:7">Yer 5:7</ref>; <ref loc="JER 8:2">8:2</ref>; <ref loc="1KI 11:33">1Fal 11:33</ref>; <ref loc="LEV 18:21">Law 18:21</ref></char>
+    </note>wale ambao husujudu juu ya mapaa</para>
+  <para style="q2" vid="ZEP 1:5">kuabudu jeshi la vitu vya angani,</para>
+  <para style="q1" vid="ZEP 1:5">wale ambao husujudu na kuapa kwa <char style="nd">Bwana</char></para>
+  <para style="q2" vid="ZEP 1:5">na ambao pia huapa kwa Malkamu,<verse eid="ZEP 1:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="ZEP 1:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:13">Yer 2:13</ref>; <ref loc="ISA 9:13">Isa 9:13</ref>; <ref loc="HOS 7:7">Hos 7:7</ref></char>
+    </note>wale wanaoacha kumfuata <char style="nd">Bwana</char>,</para>
+  <para style="q2" vid="ZEP 1:6">wala hawamtafuti <char style="nd">Bwana</char></para>
+  <para style="q2" vid="ZEP 1:6">wala kutaka shauri lake.<verse eid="ZEP 1:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="ZEP 1:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 13:6">Isa 13:6</ref>; <ref loc="ISA 41:1">41:1</ref>; <ref loc="EZK 7:19">Eze 7:19</ref>; <ref loc="JOL 3:14">Yoe 3:14</ref>; <ref loc="AMO 5:18-20">Amo 5:18-20</ref>; <ref loc="JER 46:10">Yer 46:10</ref></char>
+    </note>Nyamazeni mbele za <char style="nd">Bwana</char> Mwenyezi,</para>
+  <para style="q2" vid="ZEP 1:7">kwa maana siku ya <char style="nd">Bwana</char> iko karibu.</para>
+  <para style="q1" vid="ZEP 1:7">
+    <char style="nd">Bwana</char> ameandaa dhabihu,</para>
+  <para style="q2" vid="ZEP 1:7">amewaweka wakfu wale aliowaalika.<verse eid="ZEP 1:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="ZEP 1:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 24:21">Isa 24:21</ref>; <ref loc="JER 39:6">Yer 39:6</ref></char>
+    </note>Katika siku ya dhabihu ya <char style="nd">Bwana</char></para>
+  <para style="q2" vid="ZEP 1:8">nitawaadhibu wakuu</para>
+  <para style="q2" vid="ZEP 1:8">na wana wa mfalme</para>
+  <para style="q1" vid="ZEP 1:8">na wale wote wanaovaa</para>
+  <para style="q2" vid="ZEP 1:8">nguo za kigeni.<verse eid="ZEP 1:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="ZEP 1:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="1SA 5:5">1Sam 5:5</ref>; <ref loc="AMO 3:10">Amo 3:10</ref></char>
+    </note>Katika siku hiyo nitaadhibu wote ambao</para>
+  <para style="q2" vid="ZEP 1:9">hukwepa kukanyaga kizingiti,</para>
+  <para style="q1" vid="ZEP 1:9">ambao hujaza hekalu la miungu yao</para>
+  <para style="q2" vid="ZEP 1:9">kwa dhuluma na udanganyifu.”<verse eid="ZEP 1:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="ZEP 1:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 22:5">Isa 22:5</ref>; <ref loc="NEH 3:13">Neh 3:13</ref>; <ref loc="2CH 33:14">2Nya 33:14</ref>; <ref loc="AMO 5:16">Amo 5:16</ref></char>
+    </note>
+    <char style="nd">Bwana</char> asema, “Katika siku hiyo</para>
+  <para style="q2" vid="ZEP 1:10">kilio kitapanda juu kutoka lango la Samaki,</para>
+  <para style="q2" vid="ZEP 1:10">maombolezo kutoka mtaa wa pili,</para>
+  <para style="q2" vid="ZEP 1:10">na mshindo mkubwa kutoka vilimani.<verse eid="ZEP 1:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="ZEP 1:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="JAS 5:1">Yak 5:1</ref>; <ref loc="HOS 9:6">Hos 9:6</ref>; <ref loc="REV 18:11">Ufu 18:11</ref>, <ref loc="REV 18:12">12</ref></char>
+    </note>Ombolezeni, ninyi mnaoishi katika eneo la sokoni;</para>
+  <para style="q2" vid="ZEP 1:11">wafanyabiashara wenu wote wameangamizwa,</para>
+  <para style="q1" vid="ZEP 1:11">wote ambao wanafanya biashara ya fedha</para>
+  <para style="q2" vid="ZEP 1:11">wataangamizwa.<verse eid="ZEP 1:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="ZEP 1:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="AMO 6:1">Amo 6:1</ref>; <ref loc="JOB 21:15">Ay 21:15</ref>; <ref loc="PSA 10:11-13">Za 10:11-13</ref>; <ref loc="JER 48:11">Yer 48:11</ref>; <ref loc="EZK 8:12">Eze 8:12</ref>; <ref loc="2KI 21:16">2Fal 21:16</ref>; <ref loc="JOB 22:13">Ay 22:13</ref></char>
+    </note>Wakati huo nitasaka mji wa Yerusalemu kwa taa,</para>
+  <para style="q2" vid="ZEP 1:12">na kuwaadhibu wale ambao</para>
+  <para style="q2" vid="ZEP 1:12">wanakaa katika hali ya kuridhika,</para>
+  <para style="q1" vid="ZEP 1:12">ambao ni kama divai</para>
+  <para style="q2" vid="ZEP 1:12">iliyobaki kwenye machicha,</para>
+  <para style="q1" vid="ZEP 1:12">ambao hudhani, ‘<char style="nd">Bwana</char> hatafanya lolote,</para>
+  <para style="q2" vid="ZEP 1:12">jema au baya.’<verse eid="ZEP 1:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="ZEP 1:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 24:13">2Fal 24:13</ref>; <ref loc="JER 15:13">Yer 15:13</ref>; <ref loc="MIC 6:15">Mik 6:15</ref>; <ref loc="DEU 28:30-39">Kum 28:30-39</ref>; <ref loc="LAM 5:2">Mao 5:2</ref>; <ref loc="AMO 5:11">Amo 5:11</ref></char>
+    </note>Utajiri wao utatekwa nyara,</para>
+  <para style="q2" vid="ZEP 1:13">nyumba zao zitabomolewa.</para>
+  <para style="q1" vid="ZEP 1:13">Watajenga nyumba,</para>
+  <para style="q2" vid="ZEP 1:13">lakini hawataishi ndani yake;</para>
+  <para style="q1" vid="ZEP 1:13">watapanda mizabibu</para>
+  <para style="q2" vid="ZEP 1:13">lakini hawatakunywa divai yake.<verse eid="ZEP 1:13"/></para>
+  <para style="s1">Siku Kubwa Ya <char style="nd">Bwana</char></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="ZEP 1:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 30:7">Yer 30:7</ref>; <ref loc="REV 6:17">Ufu 6:17</ref>; <ref loc="JOL 1:15">Yoe 1:15</ref>; <ref loc="JOL 2:1">2:1</ref>; <ref loc="MAL 4:5">Mal 4:5</ref>; <ref loc="EZK 7:7">Eze 7:7</ref>; <ref loc="DAN 7:13">Dan 7:13</ref></char>
+    </note>“Siku kubwa ya <char style="nd">Bwana</char> iko karibu:</para>
+  <para style="q2" vid="ZEP 1:14">iko karibu na inakuja haraka.</para>
+  <para style="q1" vid="ZEP 1:14">Sikilizeni! Kilio katika siku ya <char style="nd">Bwana</char></para>
+  <para style="q2" vid="ZEP 1:14">kitakuwa kichungu,</para>
+  <para style="q2" vid="ZEP 1:14">hata shujaa atapiga kelele.<verse eid="ZEP 1:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="ZEP 1:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="1SA 2:9">1Sam 2:9</ref>; <ref loc="MRK 13:24-25">Mk 13:24-25</ref>; <ref loc="JOL 2:2">Yoe 2:2</ref></char>
+    </note>Siku ile ni siku ya ghadhabu,</para>
+  <para style="q2" vid="ZEP 1:15">siku ya fadhaa na dhiki,</para>
+  <para style="q1" vid="ZEP 1:15">siku ya uharibifu na ukiwa,</para>
+  <para style="q2" vid="ZEP 1:15">siku ya giza na utusitusi,</para>
+  <para style="q2" vid="ZEP 1:15">siku ya mawingu na giza nene,<verse eid="ZEP 1:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="ZEP 1:16"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 4:19">Yer 4:19</ref>; <ref loc="JER 8:16">8:16</ref>; <ref loc="HOS 5:8">Hos 5:8</ref>; <ref loc="AMO 3:6">Amo 3:6</ref>; <ref loc="DEU 28:52">Kum 28:52</ref>; <ref loc="ISA 2:15">Isa 2:15</ref></char>
+    </note>siku ya tarumbeta na mlio wa vita</para>
+  <para style="q2" vid="ZEP 1:16">dhidi ya miji yenye ngome</para>
+  <para style="q2" vid="ZEP 1:16">na dhidi ya minara mirefu.<verse eid="ZEP 1:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="ZEP 1:17"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 28:52">Kum 28:52</ref>; <ref loc="ISA 59:10">Isa 59:10</ref>; <ref loc="JER 9:22">Yer 9:22</ref>; <ref loc="PSA 79:3">Za 79:3</ref>; <ref loc="PSA 83:10">83:10</ref></char>
+    </note>Nitawaletea watu dhiki,</para>
+  <para style="q2" vid="ZEP 1:17">nao watatembea kama vipofu,</para>
+  <para style="q1" vid="ZEP 1:17">kwa sababu wametenda dhambi</para>
+  <para style="q2" vid="ZEP 1:17">dhidi ya <char style="nd">Bwana</char>.</para>
+  <para style="q1" vid="ZEP 1:17">Damu yao itamwagwa kama vumbi</para>
+  <para style="q2" vid="ZEP 1:17">na matumbo yao kama taka.<verse eid="ZEP 1:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="ZEP 1:18"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 20:20">Ay 20:20</ref>; <ref loc="JOB 40:11">40:11</ref>; <ref loc="EZK 7:11">Eze 7:11</ref>; <ref loc="EZK 7:19">7:19</ref>; <ref loc="DEU 29:20">Kum 29:20</ref>; <ref loc="ZEP 3:8">Sef 3:8</ref>; <ref loc="GEN 6:7">Mwa 6:7</ref></char>
+    </note>Fedha yao wala dhahabu yao</para>
+  <para style="q2" vid="ZEP 1:18">hazitaweza kuwaokoa</para>
+  <para style="q2" vid="ZEP 1:18">katika siku hiyo ya ghadhabu ya <char style="nd">Bwana</char>.</para>
+  <para style="q1" vid="ZEP 1:18">Katika moto wa wivu wake</para>
+  <para style="q2" vid="ZEP 1:18">dunia yote itateketezwa,</para>
+  <para style="q1" vid="ZEP 1:18">kwa maana ataleta mwisho</para>
+  <para style="q2" vid="ZEP 1:18">wa wote wanaoishi katika dunia ghafula.”<verse eid="ZEP 1:18"/></para>
+  <chapter eid="ZEP 1"/>
+  <chapter number="2" style="c" sid="ZEP 2"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="ZEP 2:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 20:4">2Nya 20:4</ref>; <ref loc="JOL 1:14">Yoe 1:14</ref>; <ref loc="JOL 2:16">2:16</ref>; <ref loc="JER 3:3">Yer 3:3</ref>; <ref loc="JER 6:15">6:15</ref></char>
+    </note>Kusanyikeni pamoja, kusanyikeni pamoja,</para>
+  <para style="q2" vid="ZEP 2:1">enyi taifa lisilo na aibu,<verse eid="ZEP 2:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ZEP 2:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 17:13">Isa 17:13</ref>; <ref loc="HOS 13:3">Hos 13:3</ref>; <ref loc="2KI 23:26">2Fal 23:26</ref>; <ref loc="JER 4:4">Yer 4:4</ref>; <ref loc="JER 10:25">10:25</ref>; <ref loc="EZK 7:19">Eze 7:19</ref>; <ref loc="LAM 4:11">Mao 4:11</ref></char>
+    </note>kabla ya wakati ulioamriwa haujafika</para>
+  <para style="q2" vid="ZEP 2:2">na siku ile inayopeperusha kama makapi,</para>
+  <para style="q1" vid="ZEP 2:2">kabla hasira kali ya <char style="nd">Bwana</char> haijaja juu yenu,</para>
+  <para style="q2" vid="ZEP 2:2">kabla siku ya ghadhabu ya <char style="nd">Bwana</char></para>
+  <para style="q2" vid="ZEP 2:2">haijaja juu yenu.<verse eid="ZEP 2:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="ZEP 2:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="AMO 5:6">Amo 5:6</ref>; <ref loc="JOL 2:4">Yoe 2:4</ref>; <ref loc="ISA 1:17">Isa 1:17</ref>; <ref loc="PSA 45:4">Za 45:4</ref>; <ref loc="PSA 57:1">57:1</ref>; <ref loc="PSA 76:9">76:9</ref></char>
+    </note>Mtafuteni <char style="nd">Bwana</char>, enyi nyote wanyenyekevu wa nchi,</para>
+  <para style="q2" vid="ZEP 2:3">ninyi ambao hufanya lile analoamuru.</para>
+  <para style="q1" vid="ZEP 2:3">Tafuteni haki, tafuteni unyenyekevu;</para>
+  <para style="q2" vid="ZEP 2:3">labda mtahifadhiwa</para>
+  <para style="q2" vid="ZEP 2:3">siku ya hasira ya <char style="nd">Bwana</char>.<verse eid="ZEP 2:3"/></para>
+  <para style="s1">Dhidi Ya Ufilisti</para>
+  <para style="q1">
+    <verse number="4" style="v" sid="ZEP 2:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 10:19">Mwa 10:19</ref>; <ref loc="AMO 1:6-8">Amo 1:6-8</ref>; <ref loc="ZEC 9:5-7">Zek 9:5-7</ref>; <ref loc="JER 6:4">Yer 6:4</ref>; <ref loc="JER 47:5">47:5</ref></char>
+    </note>Gaza utaachwa</para>
+  <para style="q2" vid="ZEP 2:4">na Ashkeloni utaachwa magofu.</para>
+  <para style="q1" vid="ZEP 2:4">Wakati wa adhuhuri Ashdodi utaachwa mtupu</para>
+  <para style="q2" vid="ZEP 2:4">na Ekroni utangʼolewa.<verse eid="ZEP 2:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="ZEP 2:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="1SA 30:14">1Sam 30:14</ref>; <ref loc="LEV 26:31">Law 26:31</ref>; <ref loc="EZK 25:16">Eze 25:16</ref>; <ref loc="JOS 13:3">Yos 13:3</ref>; <ref loc="ISA 14:30">Isa 14:30</ref></char>
+    </note>Ole wenu ninyi ambao mnaishi kando ya bahari,</para>
+  <para style="q2" vid="ZEP 2:5">enyi Wakerethi;</para>
+  <para style="q1" vid="ZEP 2:5">neno la <char style="nd">Bwana</char> liko dhidi yenu,</para>
+  <para style="q2" vid="ZEP 2:5">ee Kanaani, nchi ya Wafilisti.</para>
+  <para style="b" vid="ZEP 2:5"/>
+  <para style="q1" vid="ZEP 2:5">“Mimi nitawaangamiza,</para>
+  <para style="q2" vid="ZEP 2:5">na hakuna atakayebaki.”<verse eid="ZEP 2:5"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v" sid="ZEP 2:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 5:17">Isa 5:17</ref>; <ref loc="ISA 17:2">17:2</ref></char>
+    </note>Nchi kando ya bahari, mahali ambapo wanaishi Wakerethi,</para>
+  <para style="q2" vid="ZEP 2:6">patakuwa mahali pa wachungaji</para>
+  <para style="q2" vid="ZEP 2:6">na mazizi ya kondoo.<verse eid="ZEP 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="ZEP 2:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 11:11">Isa 11:11</ref>; <ref loc="HAG 1:12">Hag 1:12</ref>; <ref loc="MIC 5:7">Mik 5:7</ref>; <ref loc="MIC 4:10">4:10</ref>; <ref loc="EXO 4:31">Kut 4:31</ref>; <ref loc="LUK 1:68">Lk 1:68</ref>; <ref loc="GEN 45:7">Mwa 45:7</ref>; <ref loc="DEU 30:3">Kum 30:3</ref>; <ref loc="PSA 126:4">Za 126:4</ref>; <ref loc="JER 23:3">Yer 23:3</ref>; <ref loc="JER 32:44">32:44</ref>; <ref loc="HOS 6:11">Hos 6:11</ref>; <ref loc="EZK 39:25">Eze 39:25</ref>; <ref loc="JOL 3:1">Yoe 3:1</ref>; <ref loc="AMO 1:6-8">Amo 1:6-8</ref></char>
+    </note>Itakuwa mali ya mabaki ya nyumba ya Yuda,</para>
+  <para style="q2" vid="ZEP 2:7">hapo watapata malisho.</para>
+  <para style="q1" vid="ZEP 2:7">Wakati wa jioni watajilaza chini</para>
+  <para style="q2" vid="ZEP 2:7">katika nyumba za Ashkeloni.</para>
+  <para style="q1" vid="ZEP 2:7">
+    <char style="nd">Bwana</char> Mungu wao atawatunza,</para>
+  <para style="q2" vid="ZEP 2:7">naye atawarudishia wafungwa wao.<verse eid="ZEP 2:7"/></para>
+  <para style="s1">Dhidi Ya Moabu Na Amoni</para>
+  <para style="q1">
+    <verse number="8" style="v" sid="ZEP 2:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 19:37">Mwa 19:37</ref>; <ref loc="JER 48:27">Yer 48:27</ref>; <ref loc="JER 49:1">49:1</ref>; <ref loc="EZK 25:3">Eze 25:3</ref>, <ref loc="EZK 25:8">8</ref>; <ref loc="EZK 21:28">21:28</ref>; <ref loc="LAM 3:61">Mao 3:61</ref>; <ref loc="ISA 16:6">Isa 16:6</ref></char>
+    </note>“Nimeyasikia matukano ya Moabu</para>
+  <para style="q2" vid="ZEP 2:8">nazo dhihaka za Waamoni,</para>
+  <para style="q1" vid="ZEP 2:8">ambao waliwatukana watu wangu</para>
+  <para style="q2" vid="ZEP 2:8">na kutoa vitisho dhidi ya nchi yao.<verse eid="ZEP 2:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="ZEP 2:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 23:6">Kum 23:6</ref>; <ref loc="DEU 29:23">29:23</ref>; <ref loc="ISA 11:14">Isa 11:14</ref>; <ref loc="JER 48:1-47">Yer 48:1-47</ref>; <ref loc="JER 49:1-6">49:1-6</ref>; <ref loc="EZK 25:1-11">Eze 25:1-11</ref>; <ref loc="2KI 19:31">2Fal 19:31</ref>; <ref loc="AMO 1:13">Amo 1:13</ref>; <ref loc="AMO 2:1-3">2:1-3</ref></char>
+    </note>Hakika, kama niishivyo,”</para>
+  <para style="q2" vid="ZEP 2:9">asema <char style="nd">Bwana</char> Mwenye Nguvu Zote,</para>
+  <para style="q2" vid="ZEP 2:9">Mungu wa Israeli,</para>
+  <para style="q1" vid="ZEP 2:9">“hakika Moabu itakuwa kama Sodoma,</para>
+  <para style="q2" vid="ZEP 2:9">Waamoni kama Gomora:</para>
+  <para style="q1" vid="ZEP 2:9">mahali pa magugu na mashimo ya chumvi,</para>
+  <para style="q2" vid="ZEP 2:9">nchi ya ukiwa milele.</para>
+  <para style="q1" vid="ZEP 2:9">Mabaki ya watu wangu watawateka nyara;</para>
+  <para style="q2" vid="ZEP 2:9">mabaki ya taifa langu watarithi nchi yao.”<verse eid="ZEP 2:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="ZEP 2:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 40:12">Ay 40:12</ref>; <ref loc="ISA 16:6">Isa 16:6</ref>; <ref loc="JER 48:27">Yer 48:27</ref>; <ref loc="PSA 9:6">Za 9:6</ref></char>
+    </note>Hiki ndicho watarudishiwa kwa ajili ya kiburi chao,</para>
+  <para style="q2" vid="ZEP 2:10">kwa kutukana na kudhihaki</para>
+  <para style="q2" vid="ZEP 2:10">watu wa <char style="nd">Bwana</char> Mwenye Nguvu Zote.<verse eid="ZEP 2:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="ZEP 2:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 49:10">Mwa 49:10</ref>; <ref loc="GEN 10:5">10:5</ref>; <ref loc="PSA 2:8">Za 2:8</ref>; <ref loc="PSA 22:27">22:27</ref>; <ref loc="ISA 2:2">Isa 2:2</ref>, <ref loc="ISA 2:3">3</ref>; <ref loc="MAL 1:11">Mal 1:11</ref>; <ref loc="JHN 4:21">Yn 4:21</ref>; <ref loc="1TI 2:8">1Tim 2:8</ref>; <ref loc="JOL 2:11">Yoe 2:11</ref>; <ref loc="1CH 19:1">1Nya 19:1</ref>; <ref loc="EZK 25:6-7">Eze 25:6-7</ref>; <ref loc="ISA 12:4">Isa 12:4</ref>; <ref loc="PSA 86:9">Za 86:9</ref>; <ref loc="ZEP 3:9">Sef 3:9</ref></char>
+    </note>
+    <char style="nd">Bwana</char> atakuwa wa kuhofisha kwao</para>
+  <para style="q2" vid="ZEP 2:11">atakapoangamiza miungu yote ya nchi.</para>
+  <para style="q1" vid="ZEP 2:11">Mataifa katika kila pwani yatamwabudu,</para>
+  <para style="q2" vid="ZEP 2:11">kila moja katika nchi yake.<verse eid="ZEP 2:11"/></para>
+  <para style="s1">Dhidi Ya Kushi</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="ZEP 2:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 10:6">Mwa 10:6</ref>; <ref loc="ISA 18:1">Isa 18:1</ref>; <ref loc="ISA 20:4">20:4</ref>; <ref loc="JER 46:10">Yer 46:10</ref></char>
+    </note>“Ninyi pia, ee Wakushi,</para>
+  <para style="q2" vid="ZEP 2:12">mtauawa kwa upanga wangu.”<verse eid="ZEP 2:12"/></para>
+  <para style="s1">Dhidi Ya Ashuru</para>
+  <para style="q1">
+    <verse number="13" style="v" sid="ZEP 2:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 10:5-11">Mwa 10:5-11</ref>; <ref loc="ZEC 10:11">Zek 10:11</ref>; <ref loc="MIC 5:6">Mik 5:6</ref></char>
+    </note>Mungu atanyoosha mkono wake dhidi ya kaskazini</para>
+  <para style="q2" vid="ZEP 2:13">na kuangamiza Waashuru,</para>
+  <para style="q1" vid="ZEP 2:13">akiiacha Ninawi ukiwa</para>
+  <para style="q2" vid="ZEP 2:13">na pakame kama jangwa.<verse eid="ZEP 2:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="ZEP 2:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 5:17">Isa 5:17</ref>; <ref loc="ISA 13:21">13:21</ref>; <ref loc="ISA 14:23">14:23</ref>; <ref loc="REV 18:2">Ufu 18:2</ref>; <ref loc="PSA 102:6">Za 102:6</ref></char>
+    </note>Makundi ya kondoo na ngʼombe yatajilaza pale,</para>
+  <para style="q2" vid="ZEP 2:14">viumbe vya kila aina.</para>
+  <para style="q1" vid="ZEP 2:14">Bundi wa jangwani na bundi waliao kwa sauti nyembamba</para>
+  <para style="q2" vid="ZEP 2:14">wataishi juu ya nguzo zake.</para>
+  <para style="q1" vid="ZEP 2:14">Mwangwi wa kuita kwao utapita madirishani,</para>
+  <para style="q2" vid="ZEP 2:14">kifusi kitakuwa milangoni,</para>
+  <para style="q2" vid="ZEP 2:14">boriti za mierezi zitaachwa wazi.<verse eid="ZEP 2:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="ZEP 2:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 32:9">Isa 32:9</ref>; <ref loc="ISA 47:8">47:8</ref>; <ref loc="EZK 27:36">Eze 27:36</ref>; <ref loc="EZK 28:2">28:2</ref>; <ref loc="REV 18:7">Ufu 18:7</ref>; <ref loc="JER 49:33">Yer 49:33</ref>; <ref loc="NAM 3:19">Nah 3:19</ref></char>
+    </note>Huu ndio mji uliotukuka na kuishi kwa furaha</para>
+  <para style="q2" vid="ZEP 2:15">wakijisikia salama.</para>
+  <para style="q1" vid="ZEP 2:15">Ulisema moyoni mwako,</para>
+  <para style="q2" vid="ZEP 2:15">“Mimi ndimi, na wala hapana mwingine ila mimi.”</para>
+  <para style="q1" vid="ZEP 2:15">Jinsi gani umekuwa gofu,</para>
+  <para style="q2" vid="ZEP 2:15">mahali pa kulala wanyama pori!</para>
+  <para style="q1" vid="ZEP 2:15">Wote wanaopita kando yake wanauzomea</para>
+  <para style="q2" vid="ZEP 2:15">na kutikisa mkono kwa dharau.<verse eid="ZEP 2:15"/></para>
+  <chapter eid="ZEP 2"/>
+  <chapter number="3" style="c" sid="ZEP 3"/>
+  <para style="s1">Hatima Ya Yerusalemu</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="ZEP 3:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 6:6">Yer 6:6</ref>; <ref loc="DEU 21:18">Kum 21:18</ref>; <ref loc="EZK 23:30">Eze 23:30</ref></char>
+    </note>Ole mji wa wadhalimu,</para>
+  <para style="q2" vid="ZEP 3:1">waasi na waliotiwa unajisi!<verse eid="ZEP 3:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ZEP 3:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 5:3">Yer 5:3</ref>; <ref loc="JER 7:28">7:28</ref>; <ref loc="JER 22:21">22:21</ref>; <ref loc="DEU 1:32">Kum 1:32</ref>; <ref loc="LEV 26:33">Law 26:33</ref>; <ref loc="PSA 78:23">Za 78:23</ref></char>
+    </note>Hautii mtu yeyote,</para>
+  <para style="q2" vid="ZEP 3:2">haukubali maonyo.</para>
+  <para style="q1" vid="ZEP 3:2">Haumtumaini <char style="nd">Bwana</char>,</para>
+  <para style="q2" vid="ZEP 3:2">haukaribii karibu na Mungu wake.<verse eid="ZEP 3:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="ZEP 3:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 22:13">Za 22:13</ref>; <ref loc="GEN 49:27">Mwa 49:27</ref>; <ref loc="MIC 3:3">Mik 3:3</ref></char>
+    </note>Maafisa wake ni simba wangurumao,</para>
+  <para style="q2" vid="ZEP 3:3">watawala wake ni mbwa mwitu wa jioni,</para>
+  <para style="q1" vid="ZEP 3:3">ambao hawabakizi chochote</para>
+  <para style="q2" vid="ZEP 3:3">kwa ajili ya asubuhi.<verse eid="ZEP 3:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="ZEP 3:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 25:3">Za 25:3</ref>; <ref loc="ISA 48:8">Isa 48:8</ref>; <ref loc="JER 3:20">Yer 3:20</ref>; <ref loc="JER 9:4">9:4</ref>; <ref loc="JER 23:11">23:11</ref>; <ref loc="MAL 2:10">Mal 2:10</ref>; <ref loc="EZK 22:26">Eze 22:26</ref></char>
+    </note>Manabii wake ni wenye kiburi,</para>
+  <para style="q2" vid="ZEP 3:4">ni wadanganyifu.</para>
+  <para style="q1" vid="ZEP 3:4">Makuhani wake hunajisi patakatifu</para>
+  <para style="q2" vid="ZEP 3:4">na kuihalifu sheria.<verse eid="ZEP 3:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="ZEP 3:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 9:15">Ezr 9:15</ref>; <ref loc="DEU 32:4">Kum 32:4</ref>; <ref loc="PSA 5:3">Za 5:3</ref>; <ref loc="PSA 99:3">99:3</ref>, <ref loc="PSA 99:4">4</ref>; <ref loc="LAM 3:23">Mao 3:23</ref>; <ref loc="JER 3:3">Yer 3:3</ref>; <ref loc="EZK 18:25">Eze 18:25</ref></char>
+    </note>
+    <char style="nd">Bwana</char> aliye ndani yake ni mwenye haki,</para>
+  <para style="q2" vid="ZEP 3:5">hafanyi kosa.</para>
+  <para style="q1" vid="ZEP 3:5">Asubuhi kwa asubuhi hutoa haki yake,</para>
+  <para style="q2" vid="ZEP 3:5">kila kukipambazuka huitimiza,</para>
+  <para style="q2" vid="ZEP 3:5">bali mtu dhalimu hana aibu.<verse eid="ZEP 3:5"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v" sid="ZEP 3:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 26:31">Law 26:31</ref>
+      </char>
+    </note>“Nimeyafutilia mbali mataifa,</para>
+  <para style="q2" vid="ZEP 3:6">ngome zao zimebomolewa.</para>
+  <para style="q1" vid="ZEP 3:6">Nimeziacha barabara ukiwa,</para>
+  <para style="q2" vid="ZEP 3:6">hakuna anayepita humo.</para>
+  <para style="q1" vid="ZEP 3:6">Miji yao imeharibiwa;</para>
+  <para style="q2" vid="ZEP 3:6">hakuna mmoja atakayeachwa:</para>
+  <para style="q2" vid="ZEP 3:6">hakuna hata mmoja.<verse eid="ZEP 3:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="ZEP 3:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 7:28">Yer 7:28</ref>; <ref loc="GEN 6:12">Mwa 6:12</ref>; <ref loc="HOS 9:9">Hos 9:9</ref></char>
+    </note>Niliuambia huo mji,</para>
+  <para style="q2" vid="ZEP 3:7">‘Hakika utaniogopa na kukubali maonyo!’</para>
+  <para style="q1" vid="ZEP 3:7">Ndipo makao yake hayatafutiliwa mbali,</para>
+  <para style="q2" vid="ZEP 3:7">wala adhabu zangu zote hazitakuja juu yake.</para>
+  <para style="q1" vid="ZEP 3:7">Lakini walikuwa bado na shauku</para>
+  <para style="q2" vid="ZEP 3:7">kutenda kwa upotovu katika yote waliyofanya.”<verse eid="ZEP 3:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="ZEP 3:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 27:14">Za 27:14</ref>; <ref loc="PSA 79:6">79:6</ref>; <ref loc="JOL 3:2">Yoe 3:2</ref>; <ref loc="JOL 3:11">3:11</ref>; <ref loc="ISA 2:3">Isa 2:3</ref>; <ref loc="PRO 20:22">Mit 20:22</ref>; <ref loc="REV 16:1">Ufu 16:1</ref>; <ref loc="JER 10:25">Yer 10:25</ref>; <ref loc="LAM 4:11">Mao 4:11</ref>; <ref loc="ZEP 1:18">Sef 1:18</ref></char>
+    </note>
+    <char style="nd">Bwana</char> anasema,</para>
+  <para style="q2" vid="ZEP 3:8">“Kwa hiyo ningojee mimi,</para>
+  <para style="q2" vid="ZEP 3:8">siku nitakayosimama kuteka nyara.</para>
+  <para style="q1" vid="ZEP 3:8">Nimeamua kukusanya mataifa,</para>
+  <para style="q2" vid="ZEP 3:8">kukusanya falme</para>
+  <para style="q1" vid="ZEP 3:8">na kumimina ghadhabu yangu juu yao,</para>
+  <para style="q2" vid="ZEP 3:8">hasira yangu kali yote.</para>
+  <para style="q1" vid="ZEP 3:8">Dunia yote itateketezwa</para>
+  <para style="q2" vid="ZEP 3:8">kwa moto wa wivu wa hasira yangu.<verse eid="ZEP 3:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="ZEP 3:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="ZEP 2:11">Sef 2:11</ref>; <ref loc="GEN 4:26">Mwa 4:26</ref>; <ref loc="ISA 19:18">Isa 19:18</ref></char>
+    </note>“Ndipo nitatakasa midomo ya mataifa,</para>
+  <para style="q2" vid="ZEP 3:9">kwamba wote waweze kuliitia jina la <char style="nd">Bwana</char></para>
+  <para style="q2" vid="ZEP 3:9">na kumtumikia kwa pamoja.<verse eid="ZEP 3:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="ZEP 3:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 10:6">Mwa 10:6</ref>; <ref loc="PSA 68:31">Za 68:31</ref>; <ref loc="MAL 1:11">Mal 1:11</ref>; <ref loc="ISA 60:7">Isa 60:7</ref>; <ref loc="ACT 8:27">Mdo 8:27</ref>; <ref loc="2CH 32:23">2Nya 32:23</ref></char>
+    </note>Kutoka ngʼambo ya mito ya Kushi</para>
+  <para style="q2" vid="ZEP 3:10">watu wangu wanaoniabudu,</para>
+  <para style="q1" vid="ZEP 3:10">watu wangu waliotawanyika,</para>
+  <para style="q2" vid="ZEP 3:10">wataniletea sadaka.<verse eid="ZEP 3:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="ZEP 3:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 29:22">Isa 29:22</ref>; <ref loc="JOL 2:26-27">Yoe 2:26-27</ref>; <ref loc="GEN 50:15">Mwa 50:15</ref>; <ref loc="EXO 15:17">Kut 15:17</ref>; <ref loc="PSA 59:12">Za 59:12</ref>; <ref loc="MAT 3:9">Mt 3:9</ref>; <ref loc="LEV 26:19">Law 26:19</ref></char>
+    </note>Siku hiyo hutaaibishwa</para>
+  <para style="q2" vid="ZEP 3:11">kwa ajili ya makosa yote ulionitendea,</para>
+  <para style="q1" vid="ZEP 3:11">kwa sababu nitawaondoa kutoka mji huu</para>
+  <para style="q2" vid="ZEP 3:11">wale wote wanaoshangilia</para>
+  <para style="q2" vid="ZEP 3:11">katika kiburi chao.</para>
+  <para style="q1" vid="ZEP 3:11">Kamwe hutajivuna tena</para>
+  <para style="q2" vid="ZEP 3:11">katika kilima changu kitakatifu.<verse eid="ZEP 3:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="ZEP 3:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 14:32">Isa 14:32</ref>; <ref loc="MAT 5:3">Mt 5:3</ref>; <ref loc="LUK 6:20">Lk 6:20</ref>; <ref loc="ISA 57:15">Isa 57:15</ref>; <ref loc="JER 29:12">Yer 29:12</ref>; <ref loc="NAM 1:7">Nah 1:7</ref></char>
+    </note>Lakini nitakuachia ndani yako</para>
+  <para style="q2" vid="ZEP 3:12">wapole na wanyenyekevu,</para>
+  <para style="q2" vid="ZEP 3:12">ambao wanatumaini jina la <char style="nd">Bwana</char>.<verse eid="ZEP 3:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="ZEP 3:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 4:3">Isa 4:3</ref>; <ref loc="ISA 10:21">10:21</ref>; <ref loc="PSA 119:3">Za 119:3</ref>; <ref loc="JER 33:16">Yer 33:16</ref>; <ref loc="REV 14:5">Ufu 14:5</ref>; <ref loc="JOB 16:17">Ay 16:17</ref>; <ref loc="EZK 34:25-28">Eze 34:25-28</ref></char>
+    </note>Mabaki ya Israeli hayatafanya kosa;</para>
+  <para style="q2" vid="ZEP 3:13">hawatasema uongo,</para>
+  <para style="q1" vid="ZEP 3:13">wala udanganyifu hautakuwa</para>
+  <para style="q2" vid="ZEP 3:13">katika vinywa vyao.</para>
+  <para style="q1" vid="ZEP 3:13">Watakula na kulala</para>
+  <para style="q2" vid="ZEP 3:13">wala hakuna yeyote</para>
+  <para style="q2" vid="ZEP 3:13">atakayewaogopesha.”<verse eid="ZEP 3:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="ZEP 3:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 9:14">Za 9:14</ref>; <ref loc="PSA 14:7">14:7</ref>; <ref loc="ZEC 2:10">Zek 2:10</ref>; <ref loc="ISA 12:6">Isa 12:6</ref>; <ref loc="ISA 51:11">51:11</ref></char>
+    </note>Imba, ee Binti Sayuni;</para>
+  <para style="q2" vid="ZEP 3:14">paza sauti, ee Israeli!</para>
+  <para style="q1" vid="ZEP 3:14">Furahi na kushangilia kwa moyo wako wote,</para>
+  <para style="q2" vid="ZEP 3:14">ee Binti Yerusalemu!<verse eid="ZEP 3:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="ZEP 3:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="JHN 1:49">Yn 1:49</ref>; <ref loc="EZK 37:26-28">Eze 37:26-28</ref>; <ref loc="EZK 48:35">48:35</ref>; <ref loc="REV 21:3">Ufu 21:3</ref>; <ref loc="ISA 54:14">Isa 54:14</ref>; <ref loc="ZEC 9:9">Zek 9:9</ref></char>
+    </note>
+    <char style="nd">Bwana</char> amekuondolea adhabu yako,</para>
+  <para style="q2" vid="ZEP 3:15">amewarudisha nyuma adui zako.</para>
+  <para style="q1" vid="ZEP 3:15">
+    <char style="nd">Bwana</char>, Mfalme wa Israeli, yu pamoja nawe;</para>
+  <para style="q2" vid="ZEP 3:15">kamwe hutaogopa tena madhara yoyote.<verse eid="ZEP 3:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="ZEP 3:16"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 19:26">2Fal 19:26</ref>; <ref loc="HEB 12:12">Ebr 12:12</ref>; <ref loc="JOB 4:3">Ay 4:3</ref>; <ref loc="ISA 35:3-4">Isa 35:3-4</ref></char>
+    </note>Katika siku hiyo watauambia Yerusalemu,</para>
+  <para style="q2" vid="ZEP 3:16">“Usiogope, ee Sayuni;</para>
+  <para style="q2" vid="ZEP 3:16">usiiache mikono yako ilegee.<verse eid="ZEP 3:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="ZEP 3:17"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 40:1">Isa 40:1</ref>; <ref loc="ISA 62:4">62:4</ref>; <ref loc="ISA 63:1">63:1</ref>; <ref loc="JOL 2:21">Yoe 2:21</ref>; <ref loc="DEU 28:63">Kum 28:63</ref>; <ref loc="HOS 14:4">Hos 14:4</ref></char>
+    </note>
+    <char style="nd">Bwana</char> Mungu wako yu pamoja nawe,</para>
+  <para style="q2" vid="ZEP 3:17">yeye ni mwenye nguvu kuokoa.</para>
+  <para style="q1" vid="ZEP 3:17">Atakufurahia kwa furaha kubwa,</para>
+  <para style="q2" vid="ZEP 3:17">atakutuliza kwa pendo lake,</para>
+  <para style="q2" vid="ZEP 3:17">atakufurahia kwa kuimba.”<verse eid="ZEP 3:17"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v" sid="ZEP 3:18"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="LAM 2:6">Mao 2:6</ref>
+      </char>
+    </note>“Huzuni katika sikukuu zilizoamriwa</para>
+  <para style="q2" vid="ZEP 3:18">nitaziondoa kwenu;</para>
+  <para style="q2" vid="ZEP 3:18">hizo ni mzigo na fedheha kwenu.<verse eid="ZEP 3:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="ZEP 3:19"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:19 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 14:2">Isa 14:2</ref>; <ref loc="ISA 60:18">60:18</ref>; <ref loc="EZK 34:16">Eze 34:16</ref>; <ref loc="MIC 4:6">Mik 4:6</ref></char>
+    </note>Wakati huo nitawashughulikia</para>
+  <para style="q2" vid="ZEP 3:19">wote waliokudhulumu;</para>
+  <para style="q1" vid="ZEP 3:19">nitaokoa vilema na kukusanya</para>
+  <para style="q2" vid="ZEP 3:19">wale ambao wametawanywa.</para>
+  <para style="q1" vid="ZEP 3:19">Nitawapa sifa na heshima</para>
+  <para style="q2" vid="ZEP 3:19">katika kila nchi ambayo waliaibishwa.<verse eid="ZEP 3:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="ZEP 3:20"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:20 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 29:14">Yer 29:14</ref>; <ref loc="EZK 37:12">Eze 37:12</ref>; <ref loc="PSA 22:27">Za 22:27</ref>; <ref loc="ISA 56:5">Isa 56:5</ref>; <ref loc="ISA 60:18">60:18</ref>; <ref loc="ISA 66:22">66:22</ref>; <ref loc="DEU 26:19">Kum 26:19</ref></char>
+    </note>Wakati huo nitawakusanya;</para>
+  <para style="q2" vid="ZEP 3:20">wakati huo nitawaleta nyumbani.</para>
+  <para style="q1" vid="ZEP 3:20">Nitawapa sifa na heshima</para>
+  <para style="q2" vid="ZEP 3:20">miongoni mwa mataifa yote ya dunia</para>
+  <para style="q1" vid="ZEP 3:20">wakati nitakapowarudishia mateka yenu</para>
+  <para style="q2" vid="ZEP 3:20">mbele ya macho yenu hasa,”</para>
+  <para style="q4" vid="ZEP 3:20">asema <char style="nd">Bwana</char>.<verse eid="ZEP 3:20"/></para>
+  <chapter eid="ZEP 3"/>
+</usx>

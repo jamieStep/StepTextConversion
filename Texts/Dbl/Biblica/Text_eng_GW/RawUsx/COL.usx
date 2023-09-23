@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<usx version="3.0">
+  <book code="COL" style="id">- God’s Word Bible</book>
+  <para style="ide">UTF-8</para>
+  <para style="rem">© 1995, 2003, 2013, 2014, 2019, 2020 by God’s Word to the Nations Mission Society. All rights reserved.</para>
+  <para style="rem">Converted from InDesign files to USFM-3 by Elbert Boot (Digital Bible Library Customer Service Team, Miami [USA])</para>
+  <para style="rem">Language: English</para>
+  <para style="rem">This project has 9 poetry levels, and Paratext only supports up to 4 levels. To upload the text to DBL, we have created a dblChanges file and added q5 to q9 to a custom.sty to obtain the desired design in Paratext.</para>
+  <para style="h">COLOSSIANS</para>
+  <para style="toc1">Colossians</para>
+  <para style="toc2">Colossians</para>
+  <para style="toc3">Colossians</para>
+  <para style="mt1">Colossians</para>
+  <chapter number="1" style="c" sid="COL 1" />
+  <para style="s1">Greeting</para>
+  <para style="m">
+    <verse number="1" style="v" sid="COL 1:1" />From Paul, an apostle of Christ Jesus by God’s will, and from our brother Timothy.<verse eid="COL 1:1" /></para>
+  <para style="p">
+    <verse number="2" style="v" sid="COL 1:2" />To God’s holy and faithful people, our brothers and sisters who are united with Christ in the city of Colossae.</para>
+  <para style="p" vid="COL 1:2">Good will <note caller="+" style="f"><char style="fr" closed="false">1:2 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“Grace.”</char></note> and peace from God our Father are yours!<verse eid="COL 1:2" /></para>
+  <para style="s1">Paul’s Prayer for the Colossians</para>
+  <para style="m">
+    <verse number="3" style="v" sid="COL 1:3" />We always thank God, the Father of our Lord Jesus Christ, in our prayers for you. <verse eid="COL 1:3" /><verse number="4" style="v" sid="COL 1:4" />We thank God because we have heard about your faith in Christ Jesus and your love for all of God’s people. <verse eid="COL 1:4" /><verse number="5" style="v" sid="COL 1:5" />You have these because of the hope which is kept safe for you in heaven. Some time ago you heard about this hope in the Good News which is the message of truth. <verse eid="COL 1:5" /><verse number="6" style="v" sid="COL 1:6" />This Good News is present with you now. It is producing results and spreading all over the world as it did among you from the first day you heard it. At that time you came to know what God’s kindness <note caller="+" style="f"><char style="fr" closed="false">1:6 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“grace.”</char></note> truly means. <verse eid="COL 1:6" /><verse number="7" style="v" sid="COL 1:7" />You learned about this Good News from Epaphras, our dear fellow servant. He is taking your place here as a trustworthy deacon for Christ <verse eid="COL 1:7" /><verse number="8" style="v" sid="COL 1:8" />and has told us about the love that the Spirit has given you.<verse eid="COL 1:8" /></para>
+  <para style="p">
+    <verse number="9" style="v" sid="COL 1:9" />For this reason we have not stopped praying for you since the day we heard about you. We ask <char style="add">⌞God⌟</char> to fill you with the knowledge of his will through every kind of spiritual wisdom and insight. <verse eid="COL 1:9" /><verse number="10" style="v" sid="COL 1:10" />We ask this so that you will live the kind of lives that prove you belong to the Lord. Then you will want to please him in every way as you grow in producing every kind of good work by this knowledge about God. <verse eid="COL 1:10" /><verse number="11" style="v" sid="COL 1:11" />We ask him to strengthen you by his glorious might with all the power you need to patiently endure everything with joy. <verse eid="COL 1:11" /><verse number="12" style="v" sid="COL 1:12" />You will also thank the Father, who has made you able to share the light, which is what God’s people inherit.<verse eid="COL 1:12" /></para>
+  <para style="s1">What God Has Done Through Christ</para>
+  <para style="m">
+    <verse number="13" style="v" sid="COL 1:13" />God has rescued us from the power of darkness and has brought us into the kingdom of his Son, whom he loves. <verse eid="COL 1:13" /><verse number="14" style="v" sid="COL 1:14" />His Son paid the price to free us, which means that our sins are forgiven.<verse eid="COL 1:14" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="15" style="v" sid="COL 1:15" />He is the image of the invisible God,</para>
+  <para style="q1" vid="COL 1:15">the firstborn of all creation.<verse eid="COL 1:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="COL 1:16" />He created all things in heaven and on earth,</para>
+  <para style="q1" vid="COL 1:16">visible and invisible.</para>
+  <para style="q1" vid="COL 1:16">Whether they are kings or lords,</para>
+  <para style="q1" vid="COL 1:16">rulers or powers—</para>
+  <para style="q1" vid="COL 1:16">everything has been created through him and for him.<verse eid="COL 1:16" /></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="COL 1:17" />He existed before everything</para>
+  <para style="q1" vid="COL 1:17">and holds everything together.<verse eid="COL 1:17" /></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="COL 1:18" />He is also the head of the church, which is his body.</para>
+  <para style="q1" vid="COL 1:18">He is the beginning,</para>
+  <para style="q1" vid="COL 1:18">the first to come back to life</para>
+  <para style="q1" vid="COL 1:18">so that he would have first place in everything.<verse eid="COL 1:18" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="19" style="v" sid="COL 1:19" />God was pleased to have all of himself live in Christ. <verse eid="COL 1:19" /><verse number="20" style="v" sid="COL 1:20" />God was also pleased to bring everything on earth and in heaven back to himself through Christ. He did this by making peace through Christ’s blood sacrificed on the cross.<verse eid="COL 1:20" /></para>
+  <para style="p">
+    <verse number="21" style="v" sid="COL 1:21" />Once you were separated from God. The evil things you did showed your hostile attitude. <verse eid="COL 1:21" /><verse number="22" style="v" sid="COL 1:22" />But now Christ has brought you back to God by dying in his physical body. He did this so that you could come into God’s presence without sin, fault, or blame. <verse eid="COL 1:22" /><verse number="23" style="v" sid="COL 1:23" />This is on the condition that you continue in faith without being moved from the solid foundation of the hope that the Good News contains. You’ve heard this Good News of which I, Paul, became a servant. It has been spread throughout all creation under heaven.<verse eid="COL 1:23" /></para>
+  <para style="s1">Paul Describes His Work</para>
+  <para style="m">
+    <verse number="24" style="v" sid="COL 1:24" />I am happy to suffer for you now. In my body I am completing whatever remains of Christ’s sufferings. I am doing this on behalf of his body, the church. <verse eid="COL 1:24" /><verse number="25" style="v" sid="COL 1:25" />I became a servant of the church when God gave me the work of telling you his entire message. <verse eid="COL 1:25" /><verse number="26" style="v" sid="COL 1:26" />In the past God hid this mystery, but now he has revealed it to his people. <verse eid="COL 1:26" /><verse number="27" style="v" sid="COL 1:27" />God wanted his people throughout the world to know the glorious riches of this mystery—which is Christ living in you, giving you the hope of glory.<verse eid="COL 1:27" /></para>
+  <para style="p">
+    <verse number="28" style="v" sid="COL 1:28" />We spread the message about Christ as we instruct and teach everyone with all the wisdom there is. We want to present everyone as mature Christian people. <verse eid="COL 1:28" /><verse number="29" style="v" sid="COL 1:29" />I work hard and struggle to do this while his mighty power works in me.<verse eid="COL 1:29" /></para>
+  <chapter eid="COL 1" />
+  <chapter number="2" style="c" sid="COL 2" />
+  <para style="m">
+    <verse number="1" style="v" sid="COL 2:1" />I want you to know how hard I work for you, for the people of Laodicea, and for people I have never met. <verse eid="COL 2:1" /><verse number="2" style="v" sid="COL 2:2" />Because they are united in love, I work so that they may be encouraged by all the riches that come from a complete understanding of Christ. He is the mystery of God. <verse eid="COL 2:2" /><verse number="3" style="v" sid="COL 2:3" />God has hidden all the treasures of wisdom and knowledge in Christ. <verse eid="COL 2:3" /><verse number="4" style="v" sid="COL 2:4" />I say this so that no one will mislead you with arguments that merely sound good. <verse eid="COL 2:4" /><verse number="5" style="v" sid="COL 2:5" />Although I’m absent from you physically, I’m with you in spirit. I’m happy to see how orderly you are and how firm your faith in Christ is.<verse eid="COL 2:5" /></para>
+  <para style="p">
+    <verse number="6" style="v" sid="COL 2:6" />You received Christ Jesus the Lord, so continue to live as Christ’s people. <verse eid="COL 2:6" /><verse number="7" style="v" sid="COL 2:7" />Sink your roots in him and build on him. Be strengthened by the faith that you were taught, and overflow with thanksgiving.<verse eid="COL 2:7" /></para>
+  <para style="s1">Beware of Requirements Invented by Humans</para>
+  <para style="m">
+    <verse number="8" style="v" sid="COL 2:8" />Be careful not to let anyone rob you <char style="add">⌞of this faith⌟</char> through a shallow and misleading philosophy. Such a person follows human traditions and the world’s way of doing things rather than following Christ.<verse eid="COL 2:8" /></para>
+  <para style="p">
+    <verse number="9" style="v" sid="COL 2:9" />All of God lives in Christ’s body, <verse eid="COL 2:9" /><verse number="10" style="v" sid="COL 2:10" />and God has made you complete in Christ. Christ is in charge of every ruler and authority. <verse eid="COL 2:10" /><verse number="11" style="v" sid="COL 2:11" />In him you were also circumcised. It was not a circumcision performed by human hands. But it was a removal of the corrupt nature in the circumcision performed by Christ. <verse eid="COL 2:11" /><verse number="12" style="v" sid="COL 2:12" />This happened when you were placed in the tomb with Christ through baptism. In baptism you were also brought back to life with Christ through faith in the power of God,<note caller="+" style="f"><char style="fr" closed="false">2:12 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“through faith produced by God.”</char></note> who brought him back to life.<verse eid="COL 2:12" /></para>
+  <para style="p">
+    <verse number="13" style="v" sid="COL 2:13" />You were once dead because of your failures and your uncircumcised corrupt nature. But God made you alive with Christ when he forgave all our failures. <verse eid="COL 2:13" /><verse number="14" style="v" sid="COL 2:14" />He did this by erasing the charges that were brought against us by the written laws God had established. He took the charges away by nailing them to the cross. <verse eid="COL 2:14" /><verse number="15" style="v" sid="COL 2:15" />He stripped the rulers and authorities <char style="add">⌞of their power⌟</char> and made a public spectacle of them as he celebrated his victory in Christ.<verse eid="COL 2:15" /></para>
+  <para style="p">
+    <verse number="16" style="v" sid="COL 2:16" />Therefore, let no one judge you because of what you eat or drink or about the observance of annual holy days, New Moon Festivals, or weekly days of rest—holy days. <verse eid="COL 2:16" /><verse number="17" style="v" sid="COL 2:17" />These are a shadow of the things to come, but the body <char style="add">⌞that casts the shadow⌟</char> belongs to Christ.<verse eid="COL 2:17" /></para>
+  <para style="p">
+    <verse number="18" style="v" sid="COL 2:18" />Let no one who delights in <char style="add">⌞false⌟</char> humility and the worship of angels tell you that you don’t deserve a prize. Such a person, whose sinful mind fills him with arrogance, gives endless details of the visions he has seen. <verse eid="COL 2:18" /><verse number="19" style="v" sid="COL 2:19" />He doesn’t hold on to <char style="add">⌞Christ,⌟</char> the head. Christ makes the whole body grow as God wants it to, through support and unity given by the joints and ligaments.<verse eid="COL 2:19" /></para>
+  <para style="p">
+    <verse number="20" style="v" sid="COL 2:20" />If you have died with Christ to the world’s way of doing things, why do you let others tell you how to live? It’s as though you were still under the world’s influence. <verse eid="COL 2:20" /><verse number="21" style="v" sid="COL 2:21" />People will tell you, “Don’t handle this! Don’t taste or touch that!” <verse eid="COL 2:21" /><verse number="22" style="v" sid="COL 2:22" />All of these things deal with objects that are only used up anyway. <verse eid="COL 2:22" /><verse number="23" style="v" sid="COL 2:23" />These things look like wisdom with their self-imposed worship, <char style="add">⌞false⌟</char> humility, and harsh treatment of the body. But they have no value for holding back the constant desires of your corrupt nature.<verse eid="COL 2:23" /></para>
+  <chapter eid="COL 2" />
+  <chapter number="3" style="c" sid="COL 3" />
+  <para style="s1">Live as God’s People</para>
+  <para style="m">
+    <verse number="1" style="v" sid="COL 3:1" />Since you were brought back to life with Christ, focus on the things that are above—where Christ holds the honored position—the one next to God the Father on the heavenly throne. <verse eid="COL 3:1" /><verse number="2" style="v" sid="COL 3:2" />Keep your mind on things above, not on worldly things. <verse eid="COL 3:2" /><verse number="3" style="v" sid="COL 3:3" />You have died, and your life is hidden with Christ in God. <verse eid="COL 3:3" /><verse number="4" style="v" sid="COL 3:4" />Christ is your life. When he appears, then you, too, will appear with him in glory.<verse eid="COL 3:4" /></para>
+  <para style="p">
+    <verse number="5" style="v" sid="COL 3:5" />Therefore, put to death whatever is worldly in you: your sexual sin, perversion, passion, lust, and greed (which is the same thing as worshiping wealth). <verse eid="COL 3:5" /><verse number="6" style="v" sid="COL 3:6" />It is because of these sins that God’s anger comes on those who refuse to obey him.<note caller="+" style="f"><char style="fr" closed="false">3:6 </char><char style="ft" closed="false">Some manuscripts and translations omit “</char><char style="fq">on those who refuse to obey him</char>.”</note> <verse eid="COL 3:6" /><verse number="7" style="v" sid="COL 3:7" />You used to live that kind of sinful life. <verse eid="COL 3:7" /><verse number="8" style="v" sid="COL 3:8" />Also get rid of your anger, hot tempers, hatred, cursing, obscene language, and all similar sins. <verse eid="COL 3:8" /><verse number="9" style="v" sid="COL 3:9" />Don’t lie to each other. You’ve gotten rid of the person you used to be and the life you used to live, <verse eid="COL 3:9" /><verse number="10" style="v" sid="COL 3:10" />and you’ve become a new person. This new person is continually renewed in knowledge to be like its Creator. <verse eid="COL 3:10" /><verse number="11" style="v" sid="COL 3:11" />Where this happens, there is no Greek or Jew, circumcised or uncircumcised, barbarian, uncivilized person, slave, or free person. Instead, Christ is everything and in everything.<verse eid="COL 3:11" /></para>
+  <para style="p">
+    <verse number="12" style="v" sid="COL 3:12" />As holy people whom God has chosen and loved, be sympathetic, kind, humble, gentle, and patient. <verse eid="COL 3:12" /><verse number="13" style="v" sid="COL 3:13" />Put up with each other, and forgive each other if anyone has a complaint. Forgive as the Lord forgave you. <verse eid="COL 3:13" /><verse number="14" style="v" sid="COL 3:14" />Above all, be loving. This ties everything together perfectly. <verse eid="COL 3:14" /><verse number="15" style="v" sid="COL 3:15" />Also, let Christ’s peace control you. God has called you into this peace by bringing you into one body. Be thankful. <verse eid="COL 3:15" /><verse number="16" style="v" sid="COL 3:16" />Let Christ’s word with all its wisdom and richness live in you. Use psalms, hymns, and spiritual songs to teach and instruct yourselves about <char style="add">⌞God’s⌟</char> kindness.<note caller="+" style="f"><char style="fr" closed="false">3:16 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“grace.”</char></note> Sing to God in your hearts. <verse eid="COL 3:16" /><verse number="17" style="v" sid="COL 3:17" />Everything you say or do should be done in the name of the Lord Jesus, giving thanks to God the Father through him.<verse eid="COL 3:17" /></para>
+  <para style="s1">Advice for Wives and Husbands, Parents and Children, Slaves and Masters</para>
+  <para style="m">
+    <verse number="18" style="v" sid="COL 3:18" />Wives, place yourselves under your husbands’ authority. This is appropriate behavior for the Lord’s people. <verse eid="COL 3:18" /><verse number="19" style="v" sid="COL 3:19" />Husbands, love your wives, and don’t be harsh with them.<verse eid="COL 3:19" /></para>
+  <para style="p">
+    <verse number="20" style="v" sid="COL 3:20" />Children, always obey your parents. This is pleasing to the Lord. <verse eid="COL 3:20" /><verse number="21" style="v" sid="COL 3:21" />Fathers, don’t make your children resentful, or they will become discouraged.<verse eid="COL 3:21" /></para>
+  <para style="p">
+    <verse number="22" style="v" sid="COL 3:22" />Slaves, always obey your earthly masters. Don’t obey them only while you’re being watched, as if you merely wanted to please people. Be sincere in your motives out of respect for your real master. <verse eid="COL 3:22" /><verse number="23" style="v" sid="COL 3:23" />Whatever you do, do it wholeheartedly as though you were working for your real master and not merely for humans. <verse eid="COL 3:23" /><verse number="24" style="v" sid="COL 3:24" />You know that your real master will give you an inheritance as your reward. It is Christ, your real master, whom you are serving. <verse eid="COL 3:24" /><verse number="25" style="v" sid="COL 3:25" />The person who does wrong will be paid back for the wrong he has done. God does not play favorites.<verse eid="COL 3:25" /></para>
+  <chapter eid="COL 3" />
+  <chapter number="4" style="c" sid="COL 4" />
+  <para style="m">
+    <verse number="1" style="v" sid="COL 4:1" />Masters, be just and fair to your slaves because you know that you also have a master in heaven.<verse eid="COL 4:1" /></para>
+  <para style="s1">Advice for All Christians</para>
+  <para style="m">
+    <verse number="2" style="v" sid="COL 4:2" />Keep praying. Pay attention when you offer prayers of thanksgiving. <verse eid="COL 4:2" /><verse number="3" style="v" sid="COL 4:3" />At the same time also pray for us. Pray that God will give us an opportunity to speak the word so that we may tell the mystery about Christ. It is because of this mystery that I am a prisoner. <verse eid="COL 4:3" /><verse number="4" style="v" sid="COL 4:4" />Pray that I may make this mystery as clear as possible. This is what I have to do.<verse eid="COL 4:4" /></para>
+  <para style="p">
+    <verse number="5" style="v" sid="COL 4:5" />Be wise in the way you act toward those who are outside <char style="add">⌞the Christian faith⌟</char>. Make the most of your opportunities.<verse eid="COL 4:5" /></para>
+  <para style="p">
+    <verse number="6" style="v" sid="COL 4:6" />Everything you say should be kind and well thought out so that you know how to answer everyone.<verse eid="COL 4:6" /></para>
+  <para style="s1">Greetings from Paul and His Coworkers</para>
+  <para style="m">
+    <verse number="7" style="v" sid="COL 4:7" />I’m sending Tychicus to you. He is our dear brother, trustworthy deacon, and partner in the Lord’s work. He will tell you everything that is happening to me. <verse eid="COL 4:7" /><verse number="8" style="v" sid="COL 4:8" />I’m sending him to you so that you may know how we are doing and so that he may encourage you. <verse eid="COL 4:8" /><verse number="9" style="v" sid="COL 4:9" />I’m sending Onesimus with him. Onesimus is from your city and is our faithful and dear brother. They will tell you about everything that’s happening here.<verse eid="COL 4:9" /></para>
+  <para style="p">
+    <verse number="10" style="v" sid="COL 4:10" />Aristarchus, who is a prisoner like me, sends greetings. So does Mark, the cousin of Barnabas. You have received instructions about Mark. If he comes to you, welcome him. <verse eid="COL 4:10" /><verse number="11" style="v" sid="COL 4:11" />Jesus, called Justus, also greets you. They are the only converts from the Jewish religion who are working with me for God’s kingdom. They have provided me with comfort. <verse eid="COL 4:11" /><verse number="12" style="v" sid="COL 4:12" />Epaphras, a servant of Christ Jesus from your city, greets you. He always prays intensely for you. He prays that you will continue to be mature and completely convinced of everything that God wants. <verse eid="COL 4:12" /><verse number="13" style="v" sid="COL 4:13" />I assure you that he works hard for you and the people in Laodicea and Hierapolis. <verse eid="COL 4:13" /><verse number="14" style="v" sid="COL 4:14" />My dear friend Luke, the physician, and Demas greet you. <verse eid="COL 4:14" /><verse number="15" style="v" sid="COL 4:15" />Greet our brothers and sisters in Laodicea, especially Nympha and the church that meets in her house.<verse eid="COL 4:15" /></para>
+  <para style="p">
+    <verse number="16" style="v" sid="COL 4:16" />After you have read this letter, read it in the church at Laodicea. Make sure that you also read the letter from Laodicea.<verse eid="COL 4:16" /></para>
+  <para style="p">
+    <verse number="17" style="v" sid="COL 4:17" />Tell Archippus to complete all the work that he started as the Lord’s servant.<verse eid="COL 4:17" /></para>
+  <para style="p">
+    <verse number="18" style="v" sid="COL 4:18" />I, Paul, am writing this greeting with my own hand. Remember that I’m a prisoner. God’s good will <note caller="+" style="f"><char style="fr" closed="false">4:18 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“grace.”</char></note> be with you.<verse eid="COL 4:18" /></para>
+  <chapter eid="COL 4" />
+</usx>

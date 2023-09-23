@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="ROM" style="id">- Chinese Contemporary Bible - Simplified Script 2011</book>
+  <para style="rem">Copyright © 1979, 2005, 2007, 2011 by Biblica, Inc.®</para>
+  <para style="h">罗马书</para>
+  <para style="toc1">罗马书</para>
+  <para style="toc2">罗马书</para>
+  <para style="toc3">罗</para>
+  <para style="mt1">罗马书</para>
+  <para style="imt">概述</para>
+  <para style="im">保罗写给罗马信徒的书信很可能是历来内容最丰富的宣教士筹资信。他向直接活在凯撒阴影下的耶稣跟随者求助，以便把福音带到罗马帝国的西部。保罗作为使徒已被分别出来，要发出君尊的宣告：耶稣是主。上帝为世界所存的计划已借着大卫王的一个后裔——耶稣弥赛亚显明出来。这个信息证明上帝一直持守跟以色列所立的约。</para>
+  <para style="ip">信中的脉络沿袭了古代犹太人的受奴役和得释放的故事模式。因为罪与死亡进入世界，人类处于流亡中。就连犹太律法也无法战胜死亡、带来生命。但上帝借着耶稣的死与复活来拯救犹太人和外族人。一个新的普世大家庭正被创立。受洗归入耶稣可破除邪恶的权势并带来自由。圣灵引导人进入这个新生命，这个生命将在一个新产业中——一个蒙救赎的受造物中得以纯全。</para>
+  <para style="ip">虽然以色列有许多人没有相信弥赛亚，但这却把生命带给世界其他地方的人。然而，每一个人都可以借着耶稣得到生命，最终上帝的怜悯将胜过审判。信末强调的是得救之人在实际层面活出新的生活。</para>
+  <para style="rem">TBOTB book introduction</para>
+  <para style="imt1">罗马书简介</para>
+  <para style="im">保罗写给罗马信徒的书信很可能是历来内容最丰富的宣教士筹资信。他向直接活在凯撒阴影下的耶稣跟随者求助，以便把福音带到罗马帝国的西部。保罗作为使徒已被分别出来，要发出君尊的宣告：耶稣是主。上帝为世界所存的计划已借着大卫王的一个后裔——耶稣弥赛亚显明出来。这个信息证明上帝一直持守跟以色列所立的约。</para>
+  <para style="ip">信中的脉络沿袭了古代犹太人的受奴役和得释放的故事模式。因为罪与死亡进入世界，人类处于流亡中。就连犹太律法也无法战胜死亡、带来生命。但上帝借着耶稣的死与复活来拯救犹太人和外族人。一个新的普世大家庭正被创立。受洗归入耶稣可破除邪恶的权势并带来自由。圣灵引导人进入这个新生命，这个生命将在一个新产业中——一个蒙救赎的受造物中得以纯全。</para>
+  <para style="ip">虽然以色列有许多人没有相信弥赛亚，但这却把生命带给世界其他地方的人。然而，每一个人都可以借着耶稣得到生命，最终上帝的怜悯将胜过审判。信末强调的是得救之人在实际层面活出新的生活。</para>
+  <para style="imte1">罗马书</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="s1">问候</para>
+  <para style="p">
+    <verse number="1" style="v"/>我是基督耶稣的奴仆<char style="pn">保罗</char>，蒙召做使徒，奉命传上帝的福音。 <verse number="2" style="v"/>这福音是上帝从前借着众先知在圣经中应许的， <verse number="3" style="v"/>讲的是上帝的儿子——我们的主耶稣基督的事。从肉身来说，祂是<char style="pn">大卫</char>的后裔； <verse number="4" style="v"/>从圣洁的灵来看，祂从死里复活，用大能显明自己是上帝的儿子。 <verse number="5" style="v"/>我们从祂领受了恩典并成为使徒，要带领万民信从祂，使祂的名得荣耀。 <verse number="6" style="v"/>你们也是其中蒙召信从耶稣基督的人。 <verse number="7" style="v"/>我问候所有住在<char style="pn">罗马</char>、上帝所爱、蒙召做圣徒的人。愿我们的父上帝和主耶稣基督赐给你们恩典和平安！</para>
+  <para style="s1">保罗渴望去罗马</para>
+  <para style="p">
+    <verse number="8" style="v"/>首先，我借着耶稣基督为各位感谢我的上帝，因为你们的信心正在传遍天下。 <verse number="9-10" style="v"/>我在祂儿子的福音事工上全心事奉的上帝可以为我做见证：我如何在祷告中常常想到你们，并求上帝让我照祂的旨意最终能去你们那里。 <verse number="11" style="v"/>因为我实在想见你们，好将一些属灵的恩赐分给你们，使你们坚固， <verse number="12" style="v"/>也可以说是借着我们彼此的信心互相激励。</para>
+  <para style="p">
+    <verse number="13" style="v"/>弟兄姊妹，我希望你们知道，我曾多次计划去你们那里，要在你们中间收获一些福音的果子，像在其他外族人中一样，只是至今仍有拦阻。 <verse number="14" style="v"/>不论是<char style="pn">希腊</char>人、非<char style="pn">希腊</char>人<note caller="+" style="f"><char style="fr" closed="false">1:14 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">非希腊人</char><char style="ft" closed="false">”希腊文是“未开化的人”，指在希腊、罗马文化影响之外的人。</char></note>、智者、愚人，我对他们都有义务。 <verse number="15" style="v"/>所以，我也切望能将福音传给你们在<char style="pn">罗马</char>的人。</para>
+  <para style="p">
+    <verse number="16" style="v"/>我不以福音为耻，因为这福音是上帝的大能，要拯救一切相信的人，先是<char style="pn">犹太</char>人，然后是<char style="pn">希腊</char>人。 <verse number="17" style="v"/>这福音显明了上帝的义，这义始于信，终于信，正如圣经上说：“义人必靠信心而活。”</para>
+  <para style="s1">人类的罪恶</para>
+  <para style="p">
+    <verse number="18" style="v"/>上帝的烈怒从天上降下，要惩罚一切心中无神、行为不义、压制真理的人。 <verse number="19" style="v"/>有关上帝的事情，可以让人类知道的都已经显而易见，因为上帝已经向人类显明了。 <verse number="20" style="v"/>自从创造天地以来，上帝永恒的大能和神性是明明可知的，虽然肉眼看不见，但透过受造之物就可以领悟，因而人类毫无借口推说不知。 <verse number="21" style="v"/>他们虽然明知有上帝，却不把祂当作上帝，既不将荣耀归给祂，也不感谢祂。他们的思想因此变得荒谬无用，无知的心也变得昏暗不明。 <verse number="22" style="v"/>他们自以为聪明，其实愚不可及， <verse number="23" style="v"/>以必朽的人、飞禽、走兽和爬虫的形象来取代永恒上帝的荣耀。</para>
+  <para style="p">
+    <verse number="24" style="v"/>因此，上帝任凭他们随从内心的情欲行污秽的事，玷污彼此的身体。 <verse number="25" style="v"/>他们把上帝的真理当作谎言，祭拜、供奉受造之物，却不敬拜、事奉造物主。主是永远值得称颂的。阿们！</para>
+  <para style="p">
+    <verse number="26" style="v"/>因此，上帝任凭他们放纵可耻的情欲。女人放弃正常的两性关系，做出变态反常的事。 <verse number="27" style="v"/>男人也背弃了和女人正常的两性关系，欲火焚烧，同性之间彼此贪恋，男人和男人做出羞耻不堪的事。他们必在自己的身体上遭受应得的报应。</para>
+  <para style="p">
+    <verse number="28" style="v"/>既然他们故意不认识上帝，上帝就任凭他们心思败坏，做不当做的事。 <verse number="29" style="v"/>他们心里塞满了各种不义、邪恶、贪婪、阴险、嫉妒、凶杀、纷争、诡诈、恶毒；说长道短、 <verse number="30" style="v"/>背后批评、怨恨上帝、欺侮别人、心骄气傲、自高自大、自我吹捧、无恶不作、违背父母、 <verse number="31" style="v"/>愚钝无知、不守信用、无情无义、毫无怜悯。 <verse number="32" style="v"/>他们明知，按上帝公义的法则，做这些事的人该死，不但执迷不悟，还喜欢别人跟他们同流合污。</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">上帝公义的审判</para>
+  <para style="p">
+    <verse number="1" style="v"/>因此，你这论断人的啊，不管你是谁，都难逃罪责。你在什么事上论断别人，就在什么事上定了自己的罪，因为你论断别人的事，自己也在做。 <verse number="2" style="v"/>我们都知道，上帝必按真理审判做这些事的人。 <verse number="3" style="v"/>你这人啊，你论断别人，自己却做同样的事，你以为自己能逃脱上帝的审判吗？ <verse number="4" style="v"/>还是你藐视祂深厚的慈爱、宽容和忍耐，不知道祂的慈爱是要引导你悔改吗？ <verse number="5" style="v"/>你这样硬着心不肯悔改等于是为自己积蓄烈怒，上帝的烈怒在祂施行公义审判的那天必临到你。 <verse number="6" style="v"/>上帝必照各人的行为施行赏罚。 <verse number="7" style="v"/>凡是恒心行善、寻求荣耀、尊贵和永恒福分的人，祂要把永生赐给他们； <verse number="8" style="v"/>至于那些自私自利、违背真理、行为不义的人，祂的烈怒和怒气要降在他们身上。 <verse number="9" style="v"/>一切作恶之人必受患难和痛苦，先是<char style="pn">犹太</char>人，然后是<char style="pn">希腊</char>人。 <verse number="10" style="v"/>祂要将荣耀、尊贵和平安赐给一切行善的人，先是<char style="pn">犹太</char>人，然后是<char style="pn">希腊</char>人。 <verse number="11" style="v"/>因为上帝不偏待人。</para>
+  <para style="p">
+    <verse number="12" style="v"/>没有上帝律法的人若犯罪，虽然不按律法受审判，仍要灭亡；有上帝律法的人若犯罪，必按律法受审判。 <verse number="13" style="v"/>因为上帝眼中的义人不是听到律法的人，而是遵行律法的人。 <verse number="14" style="v"/>没有律法的外族人若顺着天性做合乎律法的事，他们虽然没有律法，自己就是自己的律法。 <verse number="15" style="v"/>这表明律法的要求刻在他们心里，他们的良心也可以证明，因为他们的思想有时指控他们，有时为他们辩护。 <verse number="16" style="v"/>按照我所传的福音，到了审判之日，上帝要借着耶稣基督审判人一切隐秘的事。</para>
+  <para style="s1">犹太人与律法</para>
+  <para style="p">
+    <verse number="17" style="v"/>你自称是<char style="pn">犹太</char>人，倚仗上帝所赐的律法，自夸与上帝有特别的关系； <verse number="18" style="v"/>你受过律法的教导，知道上帝的旨意，能明辨是非； <verse number="19" style="v"/>你自信可以做盲人的向导、黑暗中的人的光、 <verse number="20" style="v"/>愚昧人的师傅、小孩子的老师，因为你从律法中得到了知识和真理。 <verse number="21" style="v"/>那么，你这教导别人的，为什么不教导自己呢？你教导人不可偷盗，自己却偷盗吗？ <verse number="22" style="v"/>你告诉他人不可通奸，自己却通奸吗？你憎恶偶像，自己却去偷庙里的东西吗？ <verse number="23" style="v"/>你以律法自夸，自己却违犯律法羞辱上帝吗？ <verse number="24" style="v"/>正如圣经上说：“因你们的缘故，上帝的名在外族人中受到亵渎！”</para>
+  <para style="p">
+    <verse number="25" style="v"/>如果你遵行律法，割礼才有价值；如果你违犯律法，受了割礼也如同未受割礼。 <verse number="26" style="v"/>如果未受割礼的人遵行律法的教导，他岂不算是受了割礼吗？ <verse number="27" style="v"/>身体未受割礼却遵行律法的人，必审判你这有律法条文、受了割礼却违犯律法的人。 <verse number="28" style="v"/>因为徒具外表的<char style="pn">犹太</char>人不是真正的<char style="pn">犹太</char>人，身体上的割礼也不是真正的割礼。 <verse number="29" style="v"/>唯有从心里做<char style="pn">犹太</char>人的才是真<char style="pn">犹太</char>人，真割礼是借着圣灵在心里受的割礼，不在于律法条文。这样的人得到的称赞不是从人来的，而是从上帝来的。</para>
+  <chapter number="3" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>那么，<char style="pn">犹太</char>人有什么长处呢？割礼有什么价值呢？ <verse number="2" style="v"/>其实益处非常多！首先，上帝的圣言托付给了<char style="pn">犹太</char>人。 <verse number="3" style="v"/>虽然有些人不相信，但那有什么关系呢？难道上帝的信实可靠会因他们的不信而化为无有吗？ <verse number="4" style="v"/>当然不会！纵然人人都撒谎，上帝仍然真实可靠。正如圣经上说：</para>
+  <para style="q1">“你的判语证明你是公义的；</para>
+  <para style="q1">你虽被人控告，却终必得胜。”</para>
+  <para style="p">
+    <verse number="5" style="v"/>我姑且用人的观点说：“如果我们的不义可以反衬出上帝的公义，我们该做何论？上帝向我们发怒是祂不公正吗？” <verse number="6" style="v"/>当然不是！若是这样，上帝怎么能审判这世界呢？ <verse number="7" style="v"/>你们又说：“如果我们的虚谎凸显出上帝的真实，增加祂的荣耀，为什么祂还要把我们当作罪人审判呢？” <verse number="8" style="v"/>为什么你们不干脆说：“我们作恶吧，好成就善事”？有人毁谤我们，说我们传这种道理。这些人受审判是罪有应得！</para>
+  <para style="s1">没有义人</para>
+  <para style="p">
+    <verse number="9" style="v"/>那么，我们<char style="pn">犹太</char>人比别人优越吗？绝对不是！我们已经说过，无论是<char style="pn">犹太</char>人还是<char style="pn">希腊</char>人，所有的人都身陷罪中。 <verse number="10" style="v"/>正如圣经上说：</para>
+  <para style="q1">“没有义人，一个也没有，</para>
+  <para style="q1">
+    <verse number="11" style="v"/>没有人明白，没有人寻求上帝。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>人人偏离正路，变得毫无价值。</para>
+  <para style="q1">没有人行善，一个也没有。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>他们的喉咙是敞开的坟墓，</para>
+  <para style="q1">舌头上尽是诡诈，</para>
+  <para style="q1">嘴唇有蛇的毒液，</para>
+  <para style="q1">
+    <verse number="14" style="v"/>满口咒诅，言语恶毒；</para>
+  <para style="q1">
+    <verse number="15" style="v"/>杀人流血，脚步飞快；</para>
+  <para style="q1">
+    <verse number="16" style="v"/>所到之处，大肆毁灭；</para>
+  <para style="q1">
+    <verse number="17" style="v"/>平安之路，他们未曾知道；</para>
+  <para style="q1">
+    <verse number="18" style="v"/>他们眼中毫无对上帝的畏惧。”</para>
+  <para style="p">
+    <verse number="19" style="v"/>我们知道律法所讲的都是针对律法之下的人，好叫所有的人都无话可说，使全世界都伏在上帝的审判之下。 <verse number="20" style="v"/>因为无人能够靠遵行律法而被上帝视为义人，律法的本意是要使人知罪。</para>
+  <para style="s1">因信称义</para>
+  <para style="p">
+    <verse number="21" style="v"/>但如今，上帝的义在律法以外显明出来，有律法和众先知做见证。 <verse number="22" style="v"/>人只要信耶稣基督，就可以被上帝称为义人，没有一个人例外。 <verse number="23" style="v"/>因为世人都犯了罪，亏欠上帝的荣耀， <verse number="24" style="v"/>但蒙上帝的恩典，靠着基督耶稣的救赎，世人被无条件地称为义人。 <verse number="25" style="v"/>上帝使基督耶稣成为赎罪祭，以便人借着相信耶稣的宝血可以得到赦免。这是为了显明上帝的义，因为祂用忍耐的心宽容人过去的罪， <verse number="26" style="v"/>好在现今显明祂的义，使人知道祂是公义的，祂也称信耶稣的为义人。</para>
+  <para style="p">
+    <verse number="27" style="v"/>既然如此，我们哪里能夸口呢？当然没有可夸的。靠什么方法让人不能夸口呢？靠遵行律法吗？不是！是靠信主的方法。 <verse number="28" style="v"/>因为我们坚信人被称为义人是借着信，不是靠遵行律法。 <verse number="29" style="v"/>难道上帝只是<char style="pn">犹太</char>人的上帝吗？祂不也是外族人的上帝吗？祂当然也是外族人的上帝。 <verse number="30" style="v"/>因为上帝只有一位，祂本着信称受割礼的人为义人，也本着信称未受割礼的人为义人。 <verse number="31" style="v"/>这么说来，我们是借着信心废掉上帝的律法吗？当然不是！我们反倒是巩固律法。</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">亚伯拉罕的榜样</para>
+  <para style="p">
+    <verse number="1" style="v"/>那么，从我们的先祖<char style="pn">亚伯拉罕</char>身上，我们学到什么呢？ <verse number="2" style="v"/>如果<char style="pn">亚伯拉罕</char>是因为有好行为而被称为义人，他就可以夸口了，但他在上帝面前没有可夸的。 <verse number="3" style="v"/>圣经上不是说<char style="pn">“亚伯拉罕</char>信上帝，就被算为义人”吗？ <verse number="4" style="v"/>人工作得来的工钱不算是恩典，是应得的。 <verse number="5" style="v"/>但对于只信赦免罪人的上帝、不靠功劳的人，他的信就被算为义。</para>
+  <para style="p">
+    <verse number="6" style="v"/>
+    <char style="pn">大卫</char>也说不靠行为而被上帝算为义的人是有福的，他说： <verse number="7" style="v"/>“过犯得到赦免、罪恶被遮盖的人有福了。 <verse number="8" style="v"/>不被主定罪的人有福了。”</para>
+  <para style="p">
+    <verse number="9" style="v"/>那么，这种福分只给受割礼的人吗？还是也给没有受割礼的人呢？因为我们说，<char style="pn">亚伯拉罕</char>信上帝，就被算为义人。 <verse number="10" style="v"/>他究竟是怎么被算为义人的呢？是他受割礼以前呢？还是以后呢？不是以后，而是以前。 <verse number="11" style="v"/>他后来受割礼只不过是一个记号，表明他在受割礼前已经因信而被称为义人了。他因此成为一切未受割礼的信徒之父，使这些人也可以被算为义人。 <verse number="12" style="v"/>他也做了受割礼之人的父。这些人不只是受了割礼，还跟随我们先祖<char style="pn">亚伯拉罕</char>的脚步，效法他在未受割礼时的信心。</para>
+  <para style="p">
+    <verse number="13" style="v"/>上帝应许将世界赐给<char style="pn">亚伯拉罕</char>和他的后裔，不是因为<char style="pn">亚伯拉罕</char>遵行了律法，而是因为他因信而成了义人。 <verse number="14" style="v"/>如果只有遵行律法的人才可以承受应许，信心就没有价值，上帝的应许也就落了空。 <verse number="15" style="v"/>因为有律法，就有刑罚；哪里没有律法，哪里就没有违法的事。 <verse number="16" style="v"/>所以，上帝的应许是借着人的信心赐下的，好叫这一切都是出于上帝的恩典，确保应许归给所有<char style="pn">亚伯拉罕</char>的子孙，不单是守律法的人，也包括一切效法<char style="pn">亚伯拉罕</char>信心的人。 <verse number="17" style="v"/><char style="pn">亚伯拉罕</char>在上帝面前是我们所有人的父，正如圣经上说：“我已经立你为万族之父。”他所信的上帝是能够使死人复活、使无变有的上帝。</para>
+  <para style="p">
+    <verse number="18" style="v"/>他在毫无指望的情况下仍然满怀盼望地相信上帝的应许，因而成为“万族之父”，正如上帝的应许：“你的后裔必这么多”。 <verse number="19" style="v"/>那时他将近百岁，知道自己身体如同已死，<char style="pn">撒拉</char>也过了生育的岁数，但他的信心仍然没有动摇。 <verse number="20" style="v"/>他没有因不信而怀疑上帝的应许，反倒信心更加坚定，将荣耀归给上帝。 <verse number="21" style="v"/>他完全相信上帝必能实现祂的应许。 <verse number="22" style="v"/>因此，他被算为义人。 <verse number="23" style="v"/>“他被算为义人”这句话不单单是为他写的， <verse number="24" style="v"/>也是为将来要被算为义人的我们写的，就是相信上帝使主耶稣从死里复活的人。 <verse number="25" style="v"/>耶稣受害而死是为了我们的过犯，祂复活是为了使我们成为义人。</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">与上帝和好</para>
+  <para style="p">
+    <verse number="1" style="v"/>我们既然因信而被称为义人，就借着我们的主耶稣基督与上帝和好了。 <verse number="2" style="v"/>我们又靠着祂，借着信进入现在所站的这恩典中，欢欢喜喜地盼望分享上帝的荣耀。 <verse number="3" style="v"/>不但如此，我们在苦难中也欢喜，因为知道苦难使人生忍耐， <verse number="4" style="v"/>忍耐生品格，品格生盼望。 <verse number="5" style="v"/>这种盼望不会落空，因为上帝的爱借着所赐给我们的圣灵已倾注在我们心中。</para>
+  <para style="p">
+    <verse number="6" style="v"/>当我们还软弱无助的时候，基督就在所定的日期为罪人死了。 <verse number="7" style="v"/>为义人死，是罕见的；为好人死，也许有敢做的； <verse number="8" style="v"/>但基督却在我们还做罪人的时候为我们死！上帝的爱就这样显明了。</para>
+  <para style="p">
+    <verse number="9" style="v"/>现在，我们既然因祂所流的血而被称为义人，岂不更要靠着祂免受上帝的烈怒吗？ <verse number="10" style="v"/>如果我们还与上帝为敌的时候，尚且可以借着上帝儿子的死亡与上帝和好，和好后的我们岂不更要借着祂儿子的生命得到拯救吗？ <verse number="11" style="v"/>不但如此，我们借着主耶稣基督与上帝和好之后，还要借着祂在上帝面前欢喜。</para>
+  <para style="s1">亚当与基督</para>
+  <para style="p">
+    <verse number="12" style="v"/>因此，罪怎样从一个人进入世界并带来了死亡，死亡也怎样临到了全人类，因为全人类都犯了罪。 <verse number="13" style="v"/>没有律法之前，罪已经在世上了；但没有律法，罪也不算为罪。 <verse number="14" style="v"/>事实上，从<char style="pn">亚当</char>到<char style="pn">摩西</char>的时代，死亡一直辖制着人类，甚至连那些不与<char style="pn">亚当</char>犯同样罪的人也不能幸免。<char style="pn">亚当</char>是将要来的那位的预表。</para>
+  <para style="p">
+    <verse number="15" style="v"/>然而，上帝的洪恩远超过<char style="pn">亚当</char>的过犯。若因一人的过犯，众人都要死亡，那么上帝的恩典，也就是通过耶稣基督一人所赐的恩典，岂不要更丰富地临到众人吗？ <verse number="16" style="v"/>再者，上帝的恩赐不同于一人犯罪的后果。一人犯罪便带来审判和定罪，恩赐却使众人罪恶得赦、被称为义人。 <verse number="17" style="v"/>如果因一人的过犯，死亡就借着那人做了王，那么接受上帝洪恩又得到祂所赐之义的人，岂不更要借着耶稣基督一人在生命中做王吗？</para>
+  <para style="p">
+    <verse number="18" style="v"/>如此说来，因为一人的过犯，众人都被定罪；照样，因为一人的义行，众人都被称为义人，得到生命。 <verse number="19" style="v"/>因为一人的悖逆，众人成为罪人；照样，因为一人的顺服，众人将被称为义人。 <verse number="20" style="v"/>律法是后来颁布的，使过犯更多地显出来，只是哪里的罪越多，哪里的恩典就显得越丰富。 <verse number="21" style="v"/>罪怎样掌权带来死亡<note caller="+" style="f"><char style="fr" closed="false">5:21 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">罪怎样掌权带来死亡</char><char style="ft" closed="false">”或译“罪怎样借着死亡掌权”。</char></note>，恩典也照样借着义掌权，为要借着我们主耶稣基督带来永生。</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">与基督同死同活</para>
+  <para style="p">
+    <verse number="1" style="v"/>那么，我们该怎么说呢？我们可以继续犯罪，使恩典显得更丰富吗？ <verse number="2" style="v"/>绝不可以！我们既然向罪死了，岂可继续活在罪中？ <verse number="3" style="v"/>难道你们不知道，我们受洗归属基督耶稣是和祂一同死吗？ <verse number="4" style="v"/>我们借着洗礼和祂一同死了，埋葬了，这样我们的一举一动可以有新生命的样式，正如基督借着父的荣耀从死里复活一样。</para>
+  <para style="p">
+    <verse number="5" style="v"/>如果我们和基督一同死了，也必和祂一同复活。 <verse number="6" style="v"/>我们知道，我们的旧人已经和祂一同钉在十字架上，使辖制我们身体的罪失去力量，使我们不再做罪的奴隶。 <verse number="7" style="v"/>因为人一旦死了，便脱离了罪。</para>
+  <para style="p">
+    <verse number="8" style="v"/>如果我们与基督同死，相信也必与祂同活。 <verse number="9" style="v"/>因为我们知道，基督既然从死里复活了，就不会再死，死亡也不能再控制祂。 <verse number="10" style="v"/>祂死，是向罪死，只死一次；祂活，却是向上帝永远活着。 <verse number="11" style="v"/>这样，你们应当看自己是向罪死了，但向上帝则看自己是活在基督耶稣里。</para>
+  <para style="p">
+    <verse number="12" style="v"/>所以，不要让罪辖制你们必死的身体，使你们顺从身体的私欲； <verse number="13" style="v"/>也不要将你们的身体献给罪作不义的工具，而是要像一个从死里复活的人将自己奉献给上帝，把身体献给上帝作义的工具。 <verse number="14" style="v"/>罪不能再主宰你们，因为你们已经不在律法之下，而是在恩典之中。</para>
+  <para style="s1">做义的奴仆</para>
+  <para style="p">
+    <verse number="15" style="v"/>那么，我们在恩典之中，不在律法之下，就可以任意犯罪吗？绝不可以！ <verse number="16" style="v"/>你们难道不明白吗？你们献身给谁、服从谁，就是谁的奴隶。做罪的奴隶，结局是死亡；做上帝的奴仆，就被称为义人。 <verse number="17" style="v"/>感谢上帝！你们从前虽然做过罪的奴隶，现在却衷心服从了所传给你们的教导， <verse number="18" style="v"/>从罪中得到释放，成为义的奴仆。</para>
+  <para style="p">
+    <verse number="19" style="v"/>因为你们有人性的软弱，我就从人的立场向你们解释。以前你们将身体献给肮脏不法的事，任其奴役，助长不法。现在你们要将身体奉献给义，为义效劳，成为圣洁的人。 <verse number="20" style="v"/>你们做罪的奴隶时，不受义的约束， <verse number="21" style="v"/>做了现在想起来也觉得羞耻的事，得到了什么益处呢？那些事只能导致死亡！ <verse number="22" style="v"/>但现在你们已从罪中得到释放，做了上帝的奴仆，这样会使你们圣洁，最终得到永生。 <verse number="23" style="v"/>因为罪的代价就是死亡，而上帝借着主基督耶稣赐下的礼物则是永生。</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">婚姻关系的例子</para>
+  <para style="p">
+    <verse number="1" style="v"/>弟兄姊妹，我现在对那些熟悉律法的人说：你们难道不知道律法只在人活着的时候管辖人吗？ <verse number="2" style="v"/>比方说，一个妇人结了婚，只要丈夫还在世，她就受律法的约束要与丈夫在一起。如果丈夫死了，她就脱离了与丈夫的婚姻关系。 <verse number="3" style="v"/>丈夫还活着的时候，她若与别的男人发生性关系，便算淫妇。丈夫若死了，她就脱离了与丈夫的婚姻关系，即使改嫁，也不是淫妇。</para>
+  <para style="p">
+    <verse number="4" style="v"/>我的弟兄姊妹，同样，你们借着基督的身体向着律法也死了，使你们可以归于那位从死里复活的基督，好为上帝结果子。 <verse number="5" style="v"/>从前我们受自己罪恶本性<note caller="+" style="f"><char style="fr" closed="false">7:5 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">罪恶本性</char><char style="ft" closed="false">”希腊文是“肉体”，以下皆用相同译法。</char></note>的控制，因律法而激发的罪恶欲望在我们身上发作，以致结出死亡的果子。 <verse number="6" style="v"/>但现在，我们既然向着一度捆绑我们的律法死了，就脱离了律法的控制，能够以圣灵所赐的新样式，而不是以拘守教条的旧样式事奉上帝。</para>
+  <para style="s1">律法使人知罪</para>
+  <para style="p">
+    <verse number="7" style="v"/>那么，我们可以说律法本身是罪吗？当然不是！没有律法，我们就不知道什么是罪。律法若不说“不可贪心”，我就不知道什么是贪心。 <verse number="8" style="v"/>然而，罪却趁机利用诫命在我里面生出各种贪念，因为没有律法，罪是死的。 <verse number="9" style="v"/>我没认识律法之前是活的，但律法来了之后，罪就活了，而我却死了。 <verse number="10" style="v"/>我发现那本来要使人活的诫命反而叫我死， <verse number="11" style="v"/>因为罪利用诫命趁机引诱我，而且借着诫命杀了我。</para>
+  <para style="p">
+    <verse number="12" style="v"/>其实律法是圣洁的，诫命也是圣洁、公义、良善的。 <verse number="13" style="v"/>既然如此，难道是良善的诫命叫我死吗？当然不是！是罪借着良善的诫命叫我死。这样，罪借着诫命叫我死就显出它实在是邪恶至极！</para>
+  <para style="s1">善恶相争</para>
+  <para style="p">
+    <verse number="14" style="v"/>我们知道律法是属灵的，我却属乎肉体，已经卖给罪做奴隶了。 <verse number="15" style="v"/>我不明白自己的所作所为，因为我想做的，我做不到；而我憎恨的恶事，我偏偏去做！ <verse number="16" style="v"/>既然我不想做的，我反倒去做，我就得承认律法是好的。 <verse number="17" style="v"/>其实那并不是我做的，而是住在我里面的罪做的。 <verse number="18" style="v"/>我也知道，在我的罪恶本性里面毫无良善，我有行善的心愿，却没有行善的力量。 <verse number="19" style="v"/>我想行善，却不能行；我不想作恶，反倒去作。 <verse number="20" style="v"/>如果我不想做的，我反倒去做，这就不是我自己做的，而是住在我里面的罪做的。</para>
+  <para style="p">
+    <verse number="21" style="v"/>因此，我发现一个律：我想行善的时候，恶就不放过我。 <verse number="22" style="v"/>按着我里面的意思<note caller="+" style="f"><char style="fr" closed="false">7:22 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">里面的意思</char><char style="ft" closed="false">”希腊文是“里面的人”。</char></note>，我喜爱上帝的律。 <verse number="23" style="v"/>然而，我发觉在我身体内另有一个律和我心中的律作战，将我俘虏，使我服从身体内犯罪的律。 <verse number="24" style="v"/>我真是苦啊！谁能救我脱离这个被死亡控制的身体呢？ <verse number="25" style="v"/>感谢上帝，祂借着我们的主耶稣基督救了我！这样看来，我的内心服从上帝的律法，但我罪恶的本性却服从犯罪的律。</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">随从圣灵而活</para>
+  <para style="p">
+    <verse number="1" style="v"/>因此，如今那些在基督耶稣里的人不被定罪， <verse number="2" style="v"/>因为赐人生命之圣灵的律已经在基督耶稣里使我获得自由，脱离了罪与死的律。 <verse number="3" style="v"/>律法因为人性软弱而无法成就的事，上帝亲自成就了。祂差遣自己的儿子成为和罪人一样有血有肉的人，作了赎罪祭，废掉了罪的权势， <verse number="4" style="v"/>使律法公义的要求实现在我们这些不随从罪恶本性，只随从圣灵而活的人身上。</para>
+  <para style="p">
+    <verse number="5" style="v"/>随从罪恶本性的人顾念罪恶本性的事，但随从圣灵的人顾念圣灵的事。 <verse number="6" style="v"/>顾念罪恶本性的人结局是死亡，但顾念圣灵的人却有生命和平安。 <verse number="7" style="v"/>因为顾念罪恶本性的人与上帝为敌，不服从上帝的律法，也无力服从。 <verse number="8" style="v"/>所以受罪恶本性控制的人无法令上帝喜悦。</para>
+  <para style="p">
+    <verse number="9" style="v"/>但如果上帝的灵住在你们里面，你们就不再受制于罪恶的本性，而是受圣灵管理。人若没有基督的灵，就不属于基督。 <verse number="10" style="v"/>如果基督在你们里面，你们的身体虽然因罪恶而死亡，灵魂却因上帝所赐的义而活着。 <verse number="11" style="v"/>如果使耶稣复活之上帝的灵住在你们里面，叫基督耶稣从死里复活的上帝，必借着住在你们里面的圣灵，使你们终有一死的身体活过来。</para>
+  <para style="p">
+    <verse number="12" style="v"/>弟兄姊妹，这样看来，我们不必随从罪恶本性活着。 <verse number="13" style="v"/>你们若随从罪恶本性活着，必定死亡；但若靠着圣灵除去身体的恶行，就必活着。</para>
+  <para style="p">
+    <verse number="14" style="v"/>因为凡有上帝的圣灵引导的人都是上帝的儿女。 <verse number="15" style="v"/>你们接受的圣灵不是使你们做奴隶，仍旧害怕，而是使你们做儿子，可以称上帝为“阿爸，父亲”。 <verse number="16" style="v"/>圣灵亲自与我们的心一同见证我们是上帝的儿女。 <verse number="17" style="v"/>既然我们是儿女，就是继承人，是上帝的后嗣，并且与基督同做后嗣。所以，如果现在我们和基督一同受苦，将来也必和祂一同得荣耀。</para>
+  <para style="s1">将来的荣耀</para>
+  <para style="p">
+    <verse number="18" style="v"/>我认为现在所受的痛苦与将来要显给我们的荣耀相比，简直微不足道。 <verse number="19" style="v"/>受造之物正热切等候上帝众子的显现， <verse number="20" style="v"/>因为受造之物处在虚空之下并非出于情愿，而是出于上帝的旨意。 <verse number="21" style="v"/>不过，受造之物仍然盼望脱离衰亡之律的奴役，享受上帝儿女荣耀的自由。 <verse number="22" style="v"/>我们知道一切受造之物至今都在呻吟，如同经历分娩之痛。 <verse number="23" style="v"/>不但如此，就是我们这些首先得到圣灵的人也在心里叹息，热切等候得到儿子的名分<note caller="+" style="f"><char style="fr" closed="false">8:23 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">儿子的名分</char><char style="ft" closed="false">”指被收养为义子，可以享受和亲生儿子一样的权利。</char></note>，就是我们的身体得到救赎。 <verse number="24" style="v"/>我们得救的人有这个盼望。不过，看得见的盼望根本不算盼望，因为谁会盼望已经看见的呢？ <verse number="25" style="v"/>但我们若盼望那尚未看见的，就会忍耐等候。</para>
+  <para style="p">
+    <verse number="26" style="v"/>况且，我们软弱的时候，有圣灵帮助我们。我们本来不知道怎样祷告，但圣灵亲自用说不出来的叹息替我们祈祷。 <verse number="27" style="v"/>洞悉人心的上帝知道圣灵的意思，因为圣灵是照着上帝的旨意替圣徒祈祷。</para>
+  <para style="p">
+    <verse number="28" style="v"/>我们知道，上帝使万事互相效力<note caller="+" style="f"><char style="fr" closed="false">8:28 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">上帝使万事互相效力</char><char style="ft" closed="false">”或译“万事都互相效力”。</char></note>，使那些爱上帝，就是上帝按自己的旨意呼召的人得益处。 <verse number="29" style="v"/>因为上帝预先知道谁是属祂的人，并预定这些人要被塑造成祂儿子的形象，使祂的儿子在许多弟兄中成为长子。 <verse number="30" style="v"/>祂所预定的人，祂也呼召他们；祂所呼召的人，祂也称他们为义人；祂称为义人的，祂也使他们得荣耀。</para>
+  <para style="s1">上帝的爱</para>
+  <para style="p">
+    <verse number="31" style="v"/>对于这些事，我们还可以说什么呢？上帝若帮助我们，谁能与我们对抗？ <verse number="32" style="v"/>上帝既然连自己的儿子也不顾惜，让祂为我们牺牲，岂不也把万物和祂一同白白地赐给我们吗？ <verse number="33" style="v"/>谁能指控上帝拣选的人呢？上帝已经称他们为义人了。 <verse number="34" style="v"/>谁能定他们有罪呢？基督耶稣已经替他们死了，而且祂还从死里复活了，如今在上帝的右边替我们祈祷。 <verse number="35" style="v"/>谁能使我们与基督的爱分离呢？难道是患难吗？困苦吗？迫害吗？饥饿吗？赤身露体吗？危险吗？刀剑吗？ <verse number="36" style="v"/>正如圣经上说：“为了你，我们终日出生入死，被视为待宰的羊。”</para>
+  <para style="p">
+    <verse number="37" style="v"/>然而，靠着爱我们的主，我们在这一切事上已经得胜有余了。 <verse number="38" style="v"/>因为我深信无论是死、是生，是天使、是鬼魔，是现在的事、是将来的事， <verse number="39" style="v"/>是高天之上的、是大地深处的或是其他受造之物，都不能使我们与上帝在主基督耶稣里赐下的爱分离。</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">上帝的选民</para>
+  <para style="p">
+    <verse number="1" style="v"/>我在基督里说真话，绝无谎言。我被圣灵感动的良心可以作证， <verse number="2" style="v"/>我心里极为忧愁，痛苦不止！ <verse number="3" style="v"/>为了我的弟兄——我的同胞<char style="pn">以色列</char>人，即使我自己被咒诅、与基督隔绝，我也愿意！ <verse number="4" style="v"/>身为<char style="pn">以色列</char>人，他们拥有上帝儿子的名分、上帝的荣耀、诸约、律法、圣殿敬拜和各种应许。 <verse number="5" style="v"/>蒙拣选的族长是他们的先祖，基督降世为人也是做<char style="pn">以色列</char>人。祂是至大至尊，永远当受称颂的上帝。阿们！</para>
+  <para style="p">
+    <verse number="6" style="v"/>当然，这并不表示上帝的话落了空，因为从<char style="pn">以色列</char>生的，不一定都是<char style="pn">以色列</char>人， <verse number="7" style="v"/><char style="pn">亚伯拉罕</char>的后裔不一定都是<char style="pn">亚伯拉罕</char>的儿女，圣经上说：“<char style="pn">以撒</char>生的才可算为你的后裔。” <verse number="8" style="v"/>这话的意思是：<char style="pn">亚伯拉罕</char>凭血气所生的儿女并不是上帝的儿女，只有凭应许所生的才算是他的后裔。 <verse number="9" style="v"/>因为上帝曾这样应许他：“明年这时候，我会再来，<char style="pn">撒拉</char>必生一个儿子。”</para>
+  <para style="p">
+    <verse number="10" style="v"/>后来，<char style="pn">利百加</char>和我们的先祖以撒结婚，怀了双胞胎。 <verse number="11" style="v"/>在这对孩子还未出生，还没有显出谁善谁恶之前，上帝为了显明自己拣选人并不是按人的行为，而是按祂自己的旨意， <verse number="12" style="v"/>便对<char style="pn">利百加</char>说：“将来大的要服侍小的。” <verse number="13" style="v"/>正如圣经上说：“我爱<char style="pn">雅各</char>，厌恶<char style="pn">以扫</char>。”</para>
+  <para style="p">
+    <verse number="14" style="v"/>这样看来，我们该怎么下结论呢？难道上帝不公平吗？当然不是！ <verse number="15" style="v"/>祂曾对<char style="pn">摩西</char>说：</para>
+  <para style="q1">“我要怜悯谁就怜悯谁，</para>
+  <para style="q1">要恩待谁就恩待谁。”</para>
+  <para style="m">
+    <verse number="16" style="v"/>可见这并不在于人的意志和努力，而在于祂的怜悯。 <verse number="17" style="v"/>圣经记载着上帝对法老说的话：“我使你兴起是为了在你身上彰显我的权能，使我的名传遍天下。” <verse number="18" style="v"/>总之，上帝要怜悯谁，就怜悯谁；要叫谁顽固，就叫谁顽固。</para>
+  <para style="s1">上帝的烈怒和怜悯</para>
+  <para style="p">
+    <verse number="19" style="v"/>这样，你肯定会对我说：“为什么上帝还指责人呢？谁能抗拒祂的旨意呢？” <verse number="20" style="v"/>你这个人啊！你是谁啊？竟敢顶撞上帝！受造之物怎能对造物主说：“你为什么把我造成这样？” <verse number="21" style="v"/>陶匠难道不可以从一团泥中拿一部分造贵重的器皿，又拿一部分造平凡的器皿吗？</para>
+  <para style="p">
+    <verse number="22" style="v"/>倘若上帝要显示祂的烈怒和权能，就尽量容忍那些祂预备要毁灭的器皿， <verse number="23" style="v"/>以便在那些祂怜悯并预备赐予荣耀的器皿上彰显祂丰盛的荣耀，这难道不可以吗？ <verse number="24" style="v"/>那些蒙怜悯的器皿就是我们这些从<char style="pn">犹太</char>人和外族人中被上帝呼召的人。 <verse number="25" style="v"/>正如上帝在《何西阿书》上说：</para>
+  <para style="q1">“本来不是我子民的，</para>
+  <para style="q1">我要称他们为‘我的子民’；</para>
+  <para style="q1">本来不是我所爱的，</para>
+  <para style="q1">我要称他们为‘我所爱的’。</para>
+  <para style="q1">
+    <verse number="26" style="v"/>从前我在什么地方对他们说，</para>
+  <para style="q1">‘你们不是我的子民。’</para>
+  <para style="q1">将来也要在那里对他们说，</para>
+  <para style="q1">‘你们是永活上帝的儿女。’”</para>
+  <para style="m">
+    <verse number="27" style="v"/>关于<char style="pn">以色列</char>人，<char style="pn">以赛亚</char>先知曾疾呼：</para>
+  <para style="q1">“<char style="pn">以色列</char>人虽多如海沙，</para>
+  <para style="q1">但得救的只是剩余的人，</para>
+  <para style="q1">
+    <verse number="28" style="v"/>因为上帝要在世上迅速、</para>
+  <para style="q1">彻底地执行祂的判决。”</para>
+  <para style="m">
+    <verse number="29" style="v"/>以赛亚又说：</para>
+  <para style="q1">“若不是万军之主给我们存留后裔，</para>
+  <para style="q1">我们早就像<char style="pn">所多玛</char>和<char style="pn">蛾摩拉</char>一样灭亡了。”</para>
+  <para style="s1">以色列人和福音</para>
+  <para style="p">
+    <verse number="30" style="v"/>这样看来，我们该说什么呢？本来不追求义的外族人却因信而得到了义。 <verse number="31" style="v"/><char style="pn">以色列</char>人靠遵行律法追求义，却徒劳无功。 <verse number="32" style="v"/>为什么会这样呢？因为他们不凭信心，只靠自己的行为去追求义，结果就在那块“绊脚石”上跌倒了。 <verse number="33" style="v"/>正如圣经上说：</para>
+  <para style="q1">“看啊！我在<char style="pn">锡安</char>放了一块绊脚石，</para>
+  <para style="q1">一块使人跌倒的磐石。</para>
+  <para style="q1">但信靠祂的人必不致蒙羞。”</para>
+  <chapter number="10" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>弟兄姊妹，我心里切望并向上帝祈求的，就是<char style="pn">以色列</char>人能够得救。 <verse number="2" style="v"/>我可以证明，他们对上帝有热心，但不是基于真知。 <verse number="3" style="v"/>他们不知道上帝所赐的义，想努力建立自己的义，不肯服从上帝的义。 <verse number="4" style="v"/>其实基督是律法的终极目的，使所有信靠祂的人都可以得到义。</para>
+  <para style="s1">求告主名的都必得救</para>
+  <para style="p">
+    <verse number="5" style="v"/>关于律法的义，<char style="pn">摩西</char>写道：“人若遵行律法的诫命，就必活着。” <verse number="6" style="v"/>但是论到以信心为基础的义，圣经上说：“不要心里说，‘谁要升到天上去呢？’意思是谁要把基督领下来， <verse number="7" style="v"/>或说，‘谁要下到阴间去呢？’意思是谁要把基督从死人中领上来。” <verse number="8" style="v"/>其实这里是说：“这道近在咫尺，就在你口里，在你心中。”这道就是我们所传的信主之道。 <verse number="9" style="v"/>你若口里承认耶稣是主，心里相信上帝使祂从死里复活，就必得救。 <verse number="10" style="v"/>因为人心里相信，就可以被称为义人，口里承认，就可以得救。 <verse number="11" style="v"/>正如圣经上说：“信靠祂的人必不致蒙羞。” <verse number="12" style="v"/><char style="pn">犹太</char>人和<char style="pn">希腊</char>人并没有分别，因为主是所有人的主，祂厚待所有求告祂的人， <verse number="13" style="v"/>因为“凡求告主名的都必得救。”</para>
+  <para style="p">
+    <verse number="14" style="v"/>可是，人还没信祂，怎能求告祂呢？还没听说过祂，怎能信祂呢？没有人传道，怎能听说过祂呢？ <verse number="15" style="v"/>人没有受差遣，怎能传道呢？正如圣经上说：“那传福音之人的脚踪是何等佳美！” <verse number="16" style="v"/>只是并非人人都信福音，就像<char style="pn">以赛亚</char>先知所说的：“主啊！谁相信我们所传的呢？”</para>
+  <para style="p">
+    <verse number="17" style="v"/>由此可见，听了道，才会信道；有了基督的话，才有道可听。 <verse number="18" style="v"/>但我要问，<char style="pn">以色列</char>人没有听过吗？当然听过。因为</para>
+  <para style="q1">“他们的声音传遍天下，</para>
+  <para style="q1">他们的话语传到地极。”</para>
+  <para style="m">
+    <verse number="19" style="v"/>我再问，难道<char style="pn">以色列</char>人不知道吗？首先，<char style="pn">摩西</char>说：</para>
+  <para style="q1">“我要借无名之民挑起你们的嫉妒，</para>
+  <para style="q1">用愚昧的国民激起你们的怒气。”</para>
+  <para style="m">
+    <verse number="20" style="v"/>后来，<char style="pn">以赛亚</char>先知又放胆地说：</para>
+  <para style="q1">“我让没有寻找我的人寻见，</para>
+  <para style="q1">我向没有求问我的人显现。”</para>
+  <para style="m">
+    <verse number="21" style="v"/>至于<char style="pn">以色列</char>人，他说：</para>
+  <para style="q1">“我整天伸出双手招呼那悖逆顽固的百姓。”</para>
+  <chapter number="11" style="c"/>
+  <para style="s1">上帝不放弃以色列人</para>
+  <para style="p">
+    <verse number="1" style="v"/>这样，难道上帝放弃了祂的子民吗？当然没有！因我自己也是<char style="pn">以色列</char>人，是<char style="pn">亚伯拉罕</char>的后裔，属于<char style="pn">便雅悯</char>支派。 <verse number="2" style="v"/>上帝并没有放弃祂预先拣选的子民。你们不知道圣经上有关<char style="pn">以利亚</char>先知的记载吗？他在上帝面前控告<char style="pn">以色列</char>人，说： <verse number="3" style="v"/>“主啊！他们残杀你的先知，拆毁你的祭坛，只剩下我一个人，他们还要杀我。” <verse number="4" style="v"/>上帝怎样回答呢？祂说：“我为自己留下七千人，他们未曾跪拜<char style="pn">巴力</char>。”</para>
+  <para style="p">
+    <verse number="5" style="v"/>现在的情况也是一样，上帝按照拣选的恩典留下了少数人。 <verse number="6" style="v"/>既然说是出于恩典，就不再基于行为，不然恩典就不再是恩典了。 <verse number="7" style="v"/>这该怎么说呢？<char style="pn">以色列</char>人努力追求，却一无所得，只有蒙拣选的人得到了，其他的人都变得顽固不化。 <verse number="8" style="v"/>正如圣经上说：</para>
+  <para style="q1">“上帝使他们至今心智昏迷，</para>
+  <para style="q1">眼睛看不见，耳朵听不到。”</para>
+  <para style="m">
+    <verse number="9" style="v"/>
+    <char style="pn">大卫</char>也说：</para>
+  <para style="q1">“愿他们的宴席成为网罗、</para>
+  <para style="q1">陷阱、绊脚石，</para>
+  <para style="q1">给他们带来报应；</para>
+  <para style="q1">
+    <verse number="10" style="v"/>愿他们眼目昏暗，</para>
+  <para style="q1">无法看见，</para>
+  <para style="q1">永远弯腰驼背。”</para>
+  <para style="p">
+    <verse number="11" style="v"/>那么，<char style="pn">以色列</char>人一失足就再也爬不起来了吗？当然不是！恰好相反，因他们的过犯，救恩临到了外族人，使他们心生嫉妒。 <verse number="12" style="v"/>如果他们的过犯给世界带来了富足，他们的失败给外族人带来了富足，那么，他们发愤回头的时候岂不要带来更大的祝福吗？</para>
+  <para style="s1">外族人得救</para>
+  <para style="p">
+    <verse number="13" style="v"/>我有话要对你们外族人说，因为我是外族人的使徒，我尊重自己的职分， <verse number="14" style="v"/>希望使我的骨肉同胞心生嫉妒，好使他们当中的一些人得救。 <verse number="15" style="v"/>如果他们被抛弃，人类便有机会与上帝和好，那么，当他们被接纳的时候，又将怎样呢？岂不是要死而复生吗？ <verse number="16" style="v"/>献祭时所献的那部分面团如果圣洁，整团面也圣洁；树根如果圣洁，树枝也圣洁。</para>
+  <para style="p">
+    <verse number="17" style="v"/>如果橄榄树上有几条枝子被折了下来，你这野橄榄枝被接了上去，得以汲取橄榄树根供应的汁浆，你就不可向折下来的枝子夸口。 <verse number="18" style="v"/>你怎能夸口呢？要知道：不是你托住树根，而是树根托住你。 <verse number="19" style="v"/>你也许会说：“原来的枝子被折下来，是为了把我接上去。” <verse number="20" style="v"/>不错，他们因为不信被折了下来，而你因为信被接了上去，然而不要自高，要敬畏上帝。 <verse number="21" style="v"/>上帝既然没有留下原来的枝子，也可以不留下你。 <verse number="22" style="v"/>可见，上帝既慈爱又严厉。祂对堕落的人是严厉的，对你却是慈爱的。你要常常活在祂的爱中，不然你也会被砍下来。 <verse number="23" style="v"/>当然，如果<char style="pn">以色列</char>人不再顽固不信，必会重新被接上去，因为上帝能把他们重新接上。 <verse number="24" style="v"/>你这从野生的橄榄树上砍下来的枝子，尚且可以违反自然，被接到好橄榄树上，何况原来的枝子被接回到原来的树上呢？</para>
+  <para style="s1">全以色列都要得救</para>
+  <para style="p">
+    <verse number="25" style="v"/>弟兄姊妹，我不愿意你们对以下这奥秘一无所知，还自以为聪明。这奥秘就是：虽然有些<char style="pn">以色列</char>人的心刚硬，但等到外族人得救的数目满了以后， <verse number="26" style="v"/>全<char style="pn">以色列</char>都要得救。正如圣经上说：“救主必从<char style="pn">锡安</char>出来，祂将除去<char style="pn">雅各</char>子孙的罪恶。 <verse number="27" style="v"/>那时我要除去他们的罪，这是我与他们所立的约。”</para>
+  <para style="p">
+    <verse number="28" style="v"/>就福音而论，他们成为上帝的仇敌是为了使你们得到福音；就上帝的拣选而论，因为他们祖先的缘故，他们仍是上帝所爱的。 <verse number="29" style="v"/>因为上帝绝不会收回祂的恩赐和呼召。 <verse number="30" style="v"/>你们从前不顺服上帝，然而因为他们的不顺服，你们现在反蒙了怜悯。 <verse number="31" style="v"/>同样，他们现在不顺服是为了使你们蒙怜悯，好使他们也蒙怜悯。 <verse number="32" style="v"/>因为上帝把世人都归在不顺服之列，是为了要怜悯世人。</para>
+  <para style="s1">颂赞上帝</para>
+  <para style="q1">
+    <verse number="33" style="v"/>啊，上帝的智慧和知识多么博大精深！</para>
+  <para style="q1">祂的判断多么难测！</para>
+  <para style="q1">祂的踪迹多么难寻！</para>
+  <para style="q1">
+    <verse number="34" style="v"/>谁曾知道主的心意？</para>
+  <para style="q1">谁曾做过祂的谋士？</para>
+  <para style="q1">
+    <verse number="35" style="v"/>谁曾给过祂，</para>
+  <para style="q1">等祂偿还呢？</para>
+  <para style="q1">
+    <verse number="36" style="v"/>因为万物都源于祂，</para>
+  <para style="q1">倚靠祂，归于祂。</para>
+  <para style="q1">愿荣耀归给祂，</para>
+  <para style="q1">直到永远。阿们！</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">为事奉上帝而活</para>
+  <para style="p">
+    <verse number="1" style="v"/>所以，弟兄姊妹，我凭上帝的怜悯劝你们献上自己的身体，作圣洁、蒙上帝悦纳的活祭。你们理当这样事奉。 <verse number="2" style="v"/>你们不可追随世界的潮流，要随着思想的不断更新而改变，这样就能明辨上帝的旨意，知道什么是良善、纯全、蒙祂悦纳的。</para>
+  <para style="p">
+    <verse number="3" style="v"/>我凭上帝赐给我的恩典劝告各位，不要自视过高，要照着上帝赐给各人的信心中肯地看待自己。 <verse number="4" style="v"/>就像我们身体的各部分有不同的功能， <verse number="5" style="v"/>我们众人在基督里组成一个身体，彼此联结，息息相关。 <verse number="6" style="v"/>我们照所得的恩典各有不同的恩赐。说预言的，要按着信心的程度说预言； <verse number="7" style="v"/>服侍的，要忠心服侍；教导的，要专一教导； <verse number="8" style="v"/>劝勉的，要诚心劝勉；施舍的，要慷慨施舍；治理的，要殷勤治理；怜悯的，要甘心怜悯。</para>
+  <para style="s1">相爱相顾</para>
+  <para style="p">
+    <verse number="9" style="v"/>不可虚情假意地爱人。要疾恶如仇，一心向善。 <verse number="10" style="v"/>要彼此相爱如同手足，互相尊重，彼此谦让。 <verse number="11" style="v"/>要殷勤，不可懒惰，要常常火热地事奉主。 <verse number="12" style="v"/>盼望中要有喜乐，患难中要坚忍，祷告要恒切。 <verse number="13" style="v"/>信徒有缺乏，要慷慨帮助；客人来访，要热诚款待。 <verse number="14" style="v"/>迫害你们的，要为他们祝福；要祝福，不可咒诅。 <verse number="15" style="v"/>要与喜乐的人同乐，与哀哭的人同哭。 <verse number="16" style="v"/>要彼此和睦，不可心高气傲，反要俯就卑微的人，不可自以为聪明。</para>
+  <para style="p">
+    <verse number="17" style="v"/>不要以恶报恶。要尊重别人，众人都认为好的事，应该竭力去做。 <verse number="18" style="v"/>如果可能，总要尽力与人和睦相处。 <verse number="19" style="v"/>亲爱的弟兄姊妹，不要私自报复，要让上帝来审判，因为圣经上说：</para>
+  <para style="q1">“主说，‘申冤在我，我必报应。’”</para>
+  <para style="m">
+    <verse number="20" style="v"/>所以，</para>
+  <para style="q1">“你的仇敌若饿了，就给他吃的；</para>
+  <para style="q1">若渴了，就给他喝的；</para>
+  <para style="q1">你这样做是把炭火堆在他头上。”</para>
+  <para style="m">
+    <verse number="21" style="v"/>你不可被恶所胜，反要以善胜恶。</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">服从政府的权柄</para>
+  <para style="p">
+    <verse number="1" style="v"/>人人都要服从政府的权柄，因为所有的权柄都是出于上帝。现存的政权都是上帝设立的。 <verse number="2" style="v"/>所以，抗拒权柄，就是抗拒上帝的命令，抗拒的人必自招惩罚。 <verse number="3" style="v"/>掌权者不是叫行善的惧怕，而是叫作恶的惧怕。你想不怕掌权的吗？就要行得正，这样你会得到称赞。 <verse number="4" style="v"/>要知道掌权者是上帝差遣的，对行得正的人有益处。然而，你若作恶，就该惧怕，因为他必将你绳之以法<note caller="+" style="f"><char style="fr" closed="false">13:4 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">他必将你绳之以法</char><char style="ft" closed="false">”希腊文是“他配剑，不只是作作样子的”。</char></note>。他是上帝的仆人，代表上帝秉公行义，惩奸罚恶。 <verse number="5" style="v"/>所以，你们必须服从，不单是为了避免受到惩罚，也是为了良心无愧。</para>
+  <para style="p">
+    <verse number="6" style="v"/>你们纳税也是为了同样的缘故，因为官长是上帝的仆人，负责管理这类事务。 <verse number="7" style="v"/>凡是别人该得的，都要给他。该得米粮的，就纳粮给他；该得税款的，就缴税给他；该惧怕的，就惧怕他；该尊敬的，就尊敬他。</para>
+  <para style="s1">爱邻如己</para>
+  <para style="p">
+    <verse number="8" style="v"/>凡事都不可亏欠人，但在彼此相爱方面要常常觉得做得不够。一个人爱别人，就成全了律法。 <verse number="9" style="v"/>因为“不可通奸、不可杀人、不可偷窃、不可贪婪”以及其他诫命，都可以总结成一句话——“爱邻如己”。 <verse number="10" style="v"/>人若有爱心，就不会作恶害人，所以爱成全了律法。</para>
+  <para style="p">
+    <verse number="11" style="v"/>还有，要知道现今是你们该醒过来的时候了！因为与初信的时候相比，我们得救的日子更近了。 <verse number="12" style="v"/>黑夜已深，天将破晓，我们要除掉黑暗的行为，穿上光明的盔甲<note caller="+" style="f"><char style="fr" closed="false">13:12 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">穿上光明的盔甲</char><char style="ft" closed="false">”或译“带上光明的兵器”。</char></note>。 <verse number="13" style="v"/>我们要为人端正，光明磊落，不可荒宴醉酒、好色邪荡、嫉妒纷争。 <verse number="14" style="v"/>你们要活出主耶稣基督的荣美<note caller="+" style="f"><char style="fr" closed="false">13:14 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">活出主耶稣基督的荣美</char><char style="ft" closed="false">”希腊文是“穿上主耶稣基督”。</char></note>，不要只顾放纵罪恶本性的私欲。</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">体恤弱者</para>
+  <para style="p">
+    <verse number="1" style="v"/>你们要接纳信心软弱的弟兄姊妹，不要因为看法不同便彼此批评。 <verse number="2" style="v"/>有人相信什么都可以吃，但信心软弱的人只吃素菜。 <verse number="3" style="v"/>吃的人不可轻看不吃的人，不吃的人也不可批评吃的人，因为两者都蒙上帝接纳。 <verse number="4" style="v"/>你是谁，竟然批评别人的仆人？他做得是否合宜，自然有他的主人负责。他必能做得合宜，因为主能使他做得合宜。</para>
+  <para style="p">
+    <verse number="5" style="v"/>有人认为这日比那日好，有人认为天天都一样，各人应该照着自己的信念拿定主意。 <verse number="6" style="v"/>守日子的人是为主而守，吃的人是为主而吃，因为他感谢上帝；不吃的人是为主不吃，他也同样感谢上帝。 <verse number="7" style="v"/>因为我们没有人为自己活，也没有人为自己死。 <verse number="8" style="v"/>我们活是为主而活，死是为主而死。因此，我们无论生死都是属主的人。 <verse number="9" style="v"/>正是为这个缘故，基督死了，又复活了，好做死人和活人的主。</para>
+  <para style="p">
+    <verse number="10" style="v"/>那么，你为什么论断弟兄姊妹呢？为什么轻视弟兄姊妹呢？将来我们都要一同站在上帝的审判台前。 <verse number="11" style="v"/>圣经上说：“主说，‘我凭我的永恒起誓，万膝必向我跪拜，万口必称颂上帝。’” <verse number="12" style="v"/>这样看来，我们各人都要在上帝面前陈明自己一切的事。</para>
+  <para style="s1">不要使人犯罪</para>
+  <para style="p">
+    <verse number="13" style="v"/>所以，我们不可再互相论断，要留心自己的言行，不要绊倒弟兄姊妹。 <verse number="14" style="v"/>我知道并靠着主耶稣深信，没有什么是不洁净的，但若有人以为某物不洁净，那物对他来说就不洁净。 <verse number="15" style="v"/>如果你吃的东西令弟兄姊妹不安，你就不是凭爱心行事。你不可因为一点食物而损害基督舍命救赎的人。 <verse number="16" style="v"/>所以，不要让你们认为好的事被别人诟病。 <verse number="17" style="v"/>因为上帝的国不是关乎吃什么喝什么，而是关乎公义、平安和圣灵所赐的喜乐。 <verse number="18" style="v"/>以这样的态度事奉基督的人才会得到上帝的喜悦和大家的称赞。</para>
+  <para style="p">
+    <verse number="19" style="v"/>所以，我们要努力追求和睦，彼此造就。 <verse number="20" style="v"/>不可因食物的问题而破坏上帝的工作。所有的食物固然都是洁净的，但人若因所吃的食物绊倒别人，就有罪了。 <verse number="21" style="v"/>无论是吃肉、喝酒还是做任何别的事，如果会绊倒别人，就应该一概不做。 <verse number="22" style="v"/>你有信心认为可以做的，只要你和上帝知道就可以了。人如果在自己认为可以做的事上问心无愧，就有福了。 <verse number="23" style="v"/>人如果心里疑惑，却仍然吃，就有罪了，因为他不是凭信心吃。凡不凭信心去做的，就是犯罪。</para>
+  <chapter number="15" style="c"/>
+  <para style="s1">我为人人</para>
+  <para style="p">
+    <verse number="1" style="v"/>我们坚强的人要扶助软弱的人，分担他们的重担，不该只顾自己的喜好。 <verse number="2" style="v"/>我们每个人都应该为他人着想，建造他人的生命。 <verse number="3" style="v"/>因为基督并没有专顾自己，正如圣经上说：“辱骂你之人的辱骂都落在我身上。” <verse number="4" style="v"/>从前写在圣经上的话都是为了教导我们，使我们靠着忍耐和圣经的鼓励而有盼望。 <verse number="5" style="v"/>但愿赐忍耐和鼓励的上帝给你们合一的心去效法基督耶稣的榜样， <verse number="6" style="v"/>使你们一起同声颂赞上帝——我们主耶稣基督的父。</para>
+  <para style="p">
+    <verse number="7" style="v"/>所以，你们应该像基督接纳你们一样彼此接纳，使上帝得荣耀。 <verse number="8" style="v"/>你们要知道，基督为了上帝的真理成为<char style="pn">犹太</char>人<note caller="+" style="f"><char style="fr" closed="false">15:8 </char><char style="ft" closed="false">“</char><char style="fq" closed="false"><char style="pn">犹太</char>人</char><char style="ft" closed="false">”希腊文是“受割礼之人”。</char></note>的仆人，好实现上帝对犹太人祖先们的应许， <verse number="9" style="v"/>使外族人也因祂的怜悯而将荣耀归给上帝。正如圣经上说：</para>
+  <para style="q1">“因此，我要在列邦中赞美你，</para>
+  <para style="q1">歌颂你的名。”</para>
+  <para style="m">
+    <verse number="10" style="v"/>又说：</para>
+  <para style="q1">“外族人啊，</para>
+  <para style="q1">你们当与主的子民一同欢乐。”</para>
+  <para style="m">
+    <verse number="11" style="v"/>又说：</para>
+  <para style="q1">“万邦啊，你们当赞美主！</para>
+  <para style="q1">万民啊，你们当颂赞祂！”</para>
+  <para style="m">
+    <verse number="12" style="v"/>
+    <char style="pn">以赛亚</char>先知也说：</para>
+  <para style="q1">“将来<char style="pn">耶西</char>的根要兴起，</para>
+  <para style="q1">祂要统治外族，</para>
+  <para style="q1">外族人都要仰望祂。”</para>
+  <para style="m">
+    <verse number="13" style="v"/>愿使人有盼望的上帝，因为你们信祂，将诸般的喜乐和平安充满你们的心，使你们借着圣灵的能力充满盼望！</para>
+  <para style="s1">福音特使</para>
+  <para style="p">
+    <verse number="14" style="v"/>弟兄姊妹，我知道你们充满良善，知识全备，能彼此劝导。 <verse number="15" style="v"/>但我仍放胆写信提醒你们几件事，因为我蒙上帝赐恩， <verse number="16" style="v"/>在外族人中做基督耶稣的仆人和上帝福音的祭司，好叫外族人借着圣灵得以圣洁，可以作上帝喜悦的祭物。 <verse number="17" style="v"/>因此，我在基督耶稣里以事奉上帝为荣。 <verse number="18-19" style="v"/>别的事我不敢提，只有一件是我津津乐道的，就是基督借着我的言语行为，用神迹奇事和圣灵的大能叫外族人顺服，使我把基督的福音从耶路撒冷一路传到了以利哩古。 <verse number="20" style="v"/>我立志只去从未听过基督之名的地方传福音，免得我建造在别人的根基上。 <verse number="21" style="v"/>正如圣经上说：“对祂毫无所闻的，将要看见；未曾听过的，将要明白。”</para>
+  <para style="s1">保罗计划去罗马</para>
+  <para style="p">
+    <verse number="22" style="v"/>因此，我一直受到拦阻，不能到你们那里。 <verse number="23" style="v"/>但如今福音传遍了这一带，况且我几年来一直盼望去你们那里， <verse number="24" style="v"/>所以我想去西班牙的途中路过你们那里，稍作停留，享受与你们的相聚之乐，然后由你们资助我上路。 <verse number="25" style="v"/>但现在我要去<char style="pn">耶路撒冷</char>服侍当地的圣徒， <verse number="26" style="v"/>因为<char style="pn">马其顿</char>和<char style="pn">亚该亚</char>的教会欣然捐出了财物给<char style="pn">耶路撒冷</char>的穷困圣徒。 <verse number="27" style="v"/>这固然是他们慷慨解囊，但也可以说是他们该还的债。外族人既然分享了<char style="pn">犹太</char>圣徒属灵的福分，现在以物质报答他们也是应该的。 <verse number="28" style="v"/>等我办完这件事，将捐款交付他们之后，我就会途经你们那里去<char style="pn">西班牙</char>。 <verse number="29" style="v"/>我知道我去的时候，必会把基督丰盛的祝福带给你们。</para>
+  <para style="p">
+    <verse number="30" style="v"/>弟兄姊妹，我借着我们主耶稣基督和圣灵所赐的爱心，恳求你们与我一同竭力祷告，为我祈求上帝， <verse number="31" style="v"/>使我脱离<char style="pn">犹太</char>地区不信之人的迫害，叫<char style="pn">耶路撒冷</char>的圣徒乐意接受我带去的捐款， <verse number="32" style="v"/>并使我按照上帝的旨意欢然去与你们相聚，一同重新得力。</para>
+  <para style="p">
+    <verse number="33" style="v"/>愿赐平安的上帝常与你们同在。阿们！</para>
+  <chapter number="16" style="c"/>
+  <para style="s1">介绍菲比</para>
+  <para style="p">
+    <verse number="1" style="v"/>现在我给你们推荐我们的姊妹<char style="pn">菲比</char>，她是<char style="pn">坚革哩</char>教会的女执事。 <verse number="2" style="v"/>请你们因为在主里的关系，照着做圣徒的本分接待她。无论她有什么需要，请你们帮助她，因为她帮助过许多人，也帮助过我。</para>
+  <para style="s1">问候圣徒</para>
+  <para style="p">
+    <verse number="3" style="v"/>请代我问候<char style="pn">百基拉</char>和<char style="pn">亚居拉</char>夫妇，他们是我在基督耶稣里的同工， <verse number="4" style="v"/>为了救我将生死置之度外。不但我感谢他们，就是外族人的教会也感谢他们。 <verse number="5" style="v"/>请问候在他们家中聚会的教会。请问候我所爱的<char style="pn">以拜尼土</char>，他在<char style="pn">亚细亚</char>最先信主。 <verse number="6" style="v"/>请问候<char style="pn">玛丽亚</char>。她为你们受尽了劳苦。 <verse number="7" style="v"/>请问候<char style="pn">安多尼古</char>和<char style="pn">犹尼亚</char>，他们是我的亲人，曾与我一同坐牢，同受患难，在使徒中很有名望，比我先信基督。 <verse number="8" style="v"/>请问候我在主里所爱的<char style="pn">暗伯利</char>。 <verse number="9" style="v"/>请问候在基督里与我同工的<char style="pn">耳巴奴</char>和我所爱的<char style="pn">士大古</char>。 <verse number="10" style="v"/>请问候<char style="pn">亚比利</char>，他在基督里曾受过考验。请问候<char style="pn">亚利多布</char>全家。 <verse number="11" style="v"/>请问候我的亲戚<char style="pn">希罗天</char>。请问候<char style="pn">拿其数</char>家中的信徒。 <verse number="12" style="v"/>请问候<char style="pn">土非娜</char>和<char style="pn">土富撒</char>，她们都为主劳苦。请问候我所爱的<char style="pn">彼息</char>，她为主多受劳苦。 <verse number="13" style="v"/>请问候主所拣选的<char style="pn">鲁孚</char>，也问候他的母亲，他的母亲就是我的母亲。 <verse number="14" style="v"/>请问候<char style="pn">亚逊其土</char>、<char style="pn">弗勒干</char>、<char style="pn">黑米</char>、<char style="pn">八罗巴</char>、<char style="pn">黑马</char>和他们当中的其他弟兄姊妹。 <verse number="15" style="v"/>请问候<char style="pn">非罗罗古</char>、<char style="pn">犹利亚</char>、<char style="pn">尼利亚</char>和他的妹妹、<char style="pn">阿林巴</char>和他们那里的众圣徒。 <verse number="16" style="v"/>你们要以圣洁的吻彼此问候。基督的众教会都问候你们。</para>
+  <para style="s1">提防悖逆者</para>
+  <para style="p">
+    <verse number="17" style="v"/>弟兄姊妹，我劝你们要留意那些制造分裂、设置障碍、背离你们所学之道的人，你们要避开他们。 <verse number="18" style="v"/>他们并不是在事奉我们的主基督，只是为了满足自己的欲望，用花言巧语欺骗单纯善良的人。 <verse number="19" style="v"/>你们对主的顺服已人人皆知，我为你们高兴，我希望你们在好事上聪明，在坏事上无知。 <verse number="20" style="v"/>赐平安的上帝快要把撒旦践踏在你们脚下了。愿我们主耶稣的恩典常与你们同在！</para>
+  <para style="s1">其他人的问候</para>
+  <para style="p">
+    <verse number="21" style="v"/>我的同工<char style="pn">提摩太</char>和我的亲属<char style="pn">路求</char>、<char style="pn">耶孙</char>和<char style="pn">所西巴德</char>问候你们。 <verse number="22" style="v"/>我这为<char style="pn">保罗</char>代笔写信的<char style="pn">德特</char>在主里问候你们。 <verse number="23" style="v"/>接待我也接待全教会的<char style="pn">该犹</char>问候你们。 <verse number="24" style="v"/>主管本城财政的<char style="pn">以拉都</char>问候你们，<char style="pn">括土</char>弟兄也问候你们。</para>
+  <para style="p">
+    <verse number="25" style="v"/>感谢上帝！祂能使你们刚强，正如我所传讲的福音和耶稣基督的教导。这福音是自古隐藏、从未显明的奥秘， <verse number="26" style="v"/>如今按着永恒上帝的命令，借着先知们所写的经书公诸于世，让世人都信从耶稣基督。 <verse number="27" style="v"/>愿荣耀借着耶稣基督归于独一全智的上帝，直到永远。阿们！</para>
+</usx>

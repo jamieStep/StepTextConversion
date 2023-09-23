@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="JOL" style="id">- Central Asian Russian Scriptures (uses "Allah")</book>
+  <para style="rem">Copyright © 2003, 2009, 2013 by IMB-ERTP and Biblica, Inc.®</para>
+  <para style="h">Иоиль</para>
+  <para style="toc1">Пророк Иоиль</para>
+  <para style="toc2">Иоиль</para>
+  <para style="toc3">Иоиль</para>
+  <para style="mt1">Пророк Иоиль</para>
+  <para style="imt">– введение</para>
+  <para style="ip">Датировка книги Иоиля весьма сложна. Вот три наиболее правдоподобных мнения: 1) Иоиль служил во время царствования царя Иоаша, правившего в 835–796 гг. до н. э.; 2) накануне плена – между 597 и 587 гг. до н. э.; 3) после возвращения из плена и восстановления храма в 515 г. до н. э.</para>
+  <para style="ip">Послание Иоиля было адресовано жителям Иудеи и Иерусалима. Он возвещал о дне Вечного, когда Аллах придёт, чтобы судить землю и править ею. Иоиль сравнивает этот день с нашествием саранчи, с наступлением засухи (<char style="xt"><ref loc="JOL 1:2-14">1:2-14</ref></char>) и с атакой вражеской армии (<char style="xt"><ref loc="JOL 2:1-11">2:1-11</ref></char>); он говорит о суде над всеми народами (<char style="xt"><ref loc="JOL 3:1-16">3:1-16</ref></char>). Но этот день также принесёт излияние Духа Аллаха (<char style="xt"><ref loc="JOL 2:28-32">2:28-32</ref></char>) и спасение для верного остатка в Иерусалиме (<char style="xt"><ref loc="JOL 3:17-21">3:17-21</ref></char>). Иоиль призывает всех покаяться и приготовиться к этому дню (<char style="xt"><ref loc="JOL 1:2-14">1:2-14</ref>; <ref loc="JOL 2:12-18">2:12-18</ref></char>).</para>
+  <para style="ip">Частичное исполнение пророчества о Духе Аллаха описано в Инджиле (см. <char style="xt"><ref loc="ACT 2:1-21">Деян. 2:1-21</ref></char>), где также уточняется, что спасённый остаток – все верующие в Ису аль-Масиха (см. <char style="xt"><ref loc="ROM 10:9-13">Рим. 10:9-13</ref></char>).</para>
+  <para style="iot">Содержание</para>
+  <para style="io1">Наказание Иудеи через нашествие саранчи (<char style="ior"><ref loc="JOL 1:1-2:17">1:1–2:17</ref></char>)</para>
+  <para style="io2">Призыв к плачу и молитве (<char style="ior"><ref loc="JOL 1:1-14">1:1-14</ref></char>)</para>
+  <para style="io2">Страшный суд в день Вечного (<char style="ior"><ref loc="JOL 1:15-2:11">1:15–2:11</ref></char>)</para>
+  <para style="io2">Призыв к покаянию (<char style="ior"><ref loc="JOL 2:12-17">2:12-17</ref></char>)</para>
+  <para style="io1">Спасение Иудеи в день Вечного (<char style="ior"><ref loc="JOL 2:18-3:21">2:18–3:21</ref></char>)</para>
+  <para style="io2">Обновление земли (<char style="ior"><ref loc="JOL 2:18-27">2:18-27</ref></char>)</para>
+  <para style="io2">Обновление народа Вечного (<char style="ior"><ref loc="JOL 2:28-32">2:28-32</ref></char>)</para>
+  <para style="io2">Суд над народами и благословение народа Аллаха (<char style="ior"><ref loc="JOL 3:1-21">3:1-21</ref></char>)</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Слово Вечного<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="fk" closed="false">Вечный </char><char style="ft" closed="false">– на языке оригинала: «Яхве». Под этим именем Всевышний открылся Мусе и народу Исраила (см. <char style="xt"><ref loc="EXO 3:13-15">Исх. 3:13-15</ref></char>). См. пояснительный словарь.</char></note>, которое было к Иоилю, сыну Петуила.</para>
+  <para style="s1">Нашествие саранчи</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Слушайте, старцы,</para>
+  <para style="q2">внимайте, все жители этой страны!</para>
+  <para style="q1">Случалось ли что-либо подобное в ваши дни</para>
+  <para style="q2">или в дни ваших отцов?</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Расскажите об этом вашим детям,</para>
+  <para style="q2">они же пусть перескажут это своим,</para>
+  <para style="q2">а те пусть передадут следующему поколению.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Стая за стаей налетела саранча,</para>
+  <para style="q2">пожрала всё на своём пути.</para>
+  <para style="q1">Что оставалось после одной стаи,</para>
+  <para style="q2">уничтожала следующая<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="ft" closed="false">В этом стихе на языке оригинала для обозначения саранчи использованы четыре слова. Эти слова могут быть либо просто синонимами, либо терминами, которые отражают четыре стадии развития саранчи. То же в <char style="xt"><ref loc="JOL 2:25">2:25</ref></char>.</char></note>.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>Пробудитесь, пьяницы, и плачьте,</para>
+  <para style="q2">причитайте, пьющие вино,</para>
+  <para style="q1">оплакивайте молодое вино,</para>
+  <para style="q2">потому что оно отнято от уст ваших!</para>
+  <para style="q1">
+    <verse number="6" style="v"/>На мою землю вступил народ,</para>
+  <para style="q2">сильный и бесчисленный.</para>
+  <para style="q1">Его зубы – зубы льва,</para>
+  <para style="q2">а клыки – как у львицы.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Он разорил мою виноградную лозу,</para>
+  <para style="q2">обломал мой инжир.</para>
+  <para style="q1">Обнажил, ободрав его кору, и бросил;</para>
+  <para style="q2">белыми стали его ветви.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Плачьте, как девушка, что облачилась в рубище</para>
+  <para style="q2">и оплакивает своего возлюбленного.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Хлебные приношения и жертвенные возлияния</para>
+  <para style="q2">прекратились в доме Вечного;</para>
+  <para style="q2">скорбят священнослужители Вечного.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Опустошено поле,</para>
+  <para style="q2">и высохла земля;</para>
+  <para style="q1">уничтожено зерно,</para>
+  <para style="q2">засох молодой виноград,</para>
+  <para style="q2">и увяла маслина.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Сокрушайтесь, земледельцы,</para>
+  <para style="q2">о пшенице и ячмене,</para>
+  <para style="q2">потому что погиб урожай на полях.</para>
+  <para style="q1">Рыдайте, виноградари,</para>
+  <para style="q2">
+    <verse number="12" style="v"/>потому что засохла виноградная лоза</para>
+  <para style="q2">и завял инжир;</para>
+  <para style="q1">гранат, пальма и яблоня –</para>
+  <para style="q2">все деревья на поле засохли;</para>
+  <para style="q1">потому и прекратилось веселье</para>
+  <para style="q2">у всего народа.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>Облекитесь в рубище, священнослужители, и плачьте,</para>
+  <para style="q2">рыдайте, служащие перед жертвенником.</para>
+  <para style="q1">Придите, служители моего Бога,</para>
+  <para style="q2">и проведите ночь в рубищах,</para>
+  <para style="q1">потому что хлебные приношения и жертвенные возлияния</para>
+  <para style="q2">прекратились в доме вашего Бога.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Объявите священный пост,</para>
+  <para style="q2">созовите собрание,</para>
+  <para style="q1">пригласите старцев</para>
+  <para style="q2">и всех жителей страны</para>
+  <para style="q1">в дом Вечного, вашего Бога,</para>
+  <para style="q2">и взывайте к Нему.</para>
+  <para style="s1">День Вечного</para>
+  <para style="q1">
+    <verse number="15" style="v"/>О, этот день!</para>
+  <para style="q2">Близок день Вечного,</para>
+  <para style="q2">несёт он разрушение от Всемогущего.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v"/>Не на наших ли глазах</para>
+  <para style="q2">отнимается пища,</para>
+  <para style="q1">а радость и веселье уходят</para>
+  <para style="q2">из дома нашего Бога?</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Истлели зёрна под глыбами земли,</para>
+  <para style="q2">разрушены кладовые,</para>
+  <para style="q1">опустели амбары,</para>
+  <para style="q2">потому что нет больше зерна.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>О, как стонет скот!</para>
+  <para style="q2">Уныло бродят стада,</para>
+  <para style="q1">потому что нет для них пищи;</para>
+  <para style="q2">даже отары овец несут наказание.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>Я взываю к Тебе, о Вечный,</para>
+  <para style="q2">потому что огонь спалил степные пастбища</para>
+  <para style="q2">и пламя пожрало все деревья в поле.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Даже дикие животные взывают к Тебе,</para>
+  <para style="q2">потому что высохли источники воды</para>
+  <para style="q2">и огонь спалил степные пастбища.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Нашествие армий</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Трубите в рог на Сионе,</para>
+  <para style="q2">бейте тревогу на Моей святой горе.</para>
+  <para style="q1">Пусть трепещут все жители земли,</para>
+  <para style="q2">потому что наступает день Вечного.</para>
+  <para style="q1">Этот день уже близок –</para>
+  <para style="q2">
+    <verse number="2" style="v"/>день тьмы и мрака,</para>
+  <para style="q2">день туч и мглы:</para>
+  <para style="q1">подобно утренней заре распространяется по горам</para>
+  <para style="q2">многочисленный и сильный народ.</para>
+  <para style="q1">Такого народа не бывало с древних времён</para>
+  <para style="q2">и не будет в грядущих поколениях.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>Перед ними – пожирающее пламя,</para>
+  <para style="q2">а позади – опаляющий огонь.</para>
+  <para style="q1">До них земля – как Эдемский сад,</para>
+  <para style="q2">а после них – как выжженная пустыня,</para>
+  <para style="q2">и никому не будет спасения от этого народа.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Они похожи на лошадей,</para>
+  <para style="q2">и несутся они, словно конница.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Скачут они по вершинам гор</para>
+  <para style="q2">с шумом, как от колесниц,</para>
+  <para style="q1">с треском, как от пожирающего солому пламени.</para>
+  <para style="q2">Они как могучий народ, готовящийся к битве.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>При виде воинов этой армии затрепещут народы,</para>
+  <para style="q2">и у всех побледнеют лица.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Они нападают, подобно бойцам,</para>
+  <para style="q2">взбираются на стены, подобно воинам.</para>
+  <para style="q1">Все они выступают ровно,</para>
+  <para style="q2">не отклоняясь от выбранного направления.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Они не толкают друг друга,</para>
+  <para style="q2">и каждый идёт своей дорогой;</para>
+  <para style="q1">прорываются сквозь оборону,</para>
+  <para style="q2">не нарушая строя.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Они врываются в город,</para>
+  <para style="q2">пробегают вдоль стен,</para>
+  <para style="q1">забираются в дома</para>
+  <para style="q2">через окна, как воры.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Перед ними трепещет земля</para>
+  <para style="q2">и колеблется небо,</para>
+  <para style="q1">меркнут солнце и луна</para>
+  <para style="q2">и не сияют звёзды.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Подобно грому, прозвучит голос Вечного</para>
+  <para style="q2">перед Его войском.</para>
+  <para style="q1">Его армия бесчисленна,</para>
+  <para style="q2">и сильны исполнители Его воли.</para>
+  <para style="q1">Велик и очень страшен день Вечного!</para>
+  <para style="q2">Кто выдержит его?</para>
+  <para style="s1">Призыв к покаянию</para>
+  <para style="q1">
+    <verse number="12" style="v"/>– Даже сейчас, – возвещает Вечный, –</para>
+  <para style="q2">обратитесь ко Мне всем сердцем</para>
+  <para style="q2">в посте, плаче и рыдании.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>Разорвите ваши сердца,</para>
+  <para style="q2">а не одежды,</para>
+  <para style="q1">и вернитесь к Вечному, вашему Богу,</para>
+  <para style="q2">потому что Он милостив и милосерден<note caller="+" style="f"><char style="fr" closed="false">2:13 </char><char style="fq" closed="false">Бог милостив и милосерден </char><char style="ft" closed="false">– это выражение основано на словах Таурата (см. <char style="xt"><ref loc="EXO 34:6">Исх. 34:6</ref></char>) и является родственным арабскому выражению «бисмиллях-ир-рахман-ир-рахим», которое переводится как: «Во имя Аллаха милостивого и милосердного». В доисламской Аравии христиане государства Набатея использовали похожее выражение, переняв его из иудейской традиции.</char></note>,</para>
+  <para style="q1">долготерпелив и богат любовью,</para>
+  <para style="q2">и не хочет насылать бедствие.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Кто знает, не сжалится ли Он</para>
+  <para style="q2">и не оставит ли вам благословения –</para>
+  <para style="q1">и будут в достатке у вас хлебное приношение</para>
+  <para style="q2">и жертвенное возлияние Вечному, вашему Богу.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>Трубите в рог на Сионе,</para>
+  <para style="q2">объявите священный пост,</para>
+  <para style="q2">созовите собрание.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Соберите народ</para>
+  <para style="q2">и освятите собравшихся,</para>
+  <para style="q1">созовите старцев,</para>
+  <para style="q2">позовите детей и младенцев.</para>
+  <para style="q1">Пусть даже жених и невеста</para>
+  <para style="q2">выйдут из брачных покоев.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Пусть священнослужители Вечного</para>
+  <para style="q2">плачут между притвором храма и жертвенником.</para>
+  <para style="q1">Пусть взывают: «Вечный, пощади Свой народ!</para>
+  <para style="q2">Не дай насмехаться над Своим наследием,</para>
+  <para style="q2">не дай чужим народам править нами<note caller="+" style="f"><char style="fr" closed="false">2:17 </char><char style="ft" closed="false">Или: «не дай нам быть посмешищем среди чужих народов».</char></note>.</para>
+  <para style="q1">Зачем им говорить:</para>
+  <para style="q2">„Где их Бог?“»</para>
+  <para style="s1">Ответ Вечного</para>
+  <para style="q1">
+    <verse number="18" style="v"/>И тогда Вечный возревнует о Своей земле</para>
+  <para style="q2">и сжалится над Своим народом.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="19" style="v"/>И отвечая Своему народу, Вечный скажет:</para>
+  <para style="b"/>
+  <para style="q1">– Я посылаю вам хлеб, молодое вино и масло</para>
+  <para style="q2">для того, чтобы вы насытились,</para>
+  <para style="q1">и больше Я не позволю другим народам</para>
+  <para style="q2">насмехаться над вами.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>Я удалю от вас северное войско<note caller="+" style="f"><char style="fr" closed="false">2:20 </char><char style="ft" closed="false">Это может быть ассирийская (см. <char style="xt"><ref loc="ZEP 2:13">Соф. 2:13</ref></char>) или вавилонская (см. <char style="xt"><ref loc="JER 25:9">Иер. 25:9</ref></char>) армия, или же армия Гога и Магога (см. <char style="xt"><ref loc="EZK 38:2">Езек. 38:2</ref>, <ref loc="EZK 38:14-15">14-15</ref>; <ref loc="REV 20:7">Отк. 20:7</ref></char>).</char></note></para>
+  <para style="q2">и изгоню его в сухие и бесплодные земли.</para>
+  <para style="q1">Его передние ряды Я сброшу в Мёртвое море,</para>
+  <para style="q2">а задние – в Средиземное море<note caller="+" style="f"><char style="fr" closed="false">2:20 </char><char style="ft" closed="false">Букв.: «в восточное море… в западное море».</char></note>.</para>
+  <para style="q1">И пойдёт от них зловоние,</para>
+  <para style="q2">и поднимется от них смрад,</para>
+  <para style="q2">потому что они сделали много зла.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>Не бойся, земля,</para>
+  <para style="q2">радуйся и веселись,</para>
+  <para style="q2">потому что Вечный совершил великие дела!</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Не бойтесь, дикие животные,</para>
+  <para style="q2">потому что зеленеют степные пастбища,</para>
+  <para style="q1">деревья приносят свои плоды,</para>
+  <para style="q2">инжир и виноградная лоза одаривают обильными плодами.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Радуйся, народ Иерусалима<note caller="+" style="f"><char style="fr" closed="false">2:23 </char><char style="ft" closed="false">Букв.: «дети Сиона».</char></note>,</para>
+  <para style="q2">веселись о Вечном, твоём Боге!</para>
+  <para style="q1">Он даст тебе осенний дождь по Своей праведности;</para>
+  <para style="q2">Он пошлёт тебе обильные дожди,</para>
+  <para style="q2">осенние и весенние, как бывало прежде.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>И наполнятся гумна зерном,</para>
+  <para style="q2">и переполнятся давильни молодым вином и маслом.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="25" style="v"/>– Я воздам вам за те годы,</para>
+  <para style="q2">в которые пожрали урожай налетевшие стаи саранчи.</para>
+  <para style="q1">Это было Моё великое воинство,</para>
+  <para style="q2">которое Я послал на вас.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Досыта будете есть, и насыщаться,</para>
+  <para style="q2">и славить имя Вечного, вашего Бога,</para>
+  <para style="q2">Который совершил чудеса для вас.</para>
+  <para style="q1">И Мой народ больше не испытает позора!</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Тогда вы узнаете, что Я среди Моего народа Исраила,</para>
+  <para style="q2">и что Я – Вечный, ваш Бог,</para>
+  <para style="q2">и нет другого.</para>
+  <para style="q1">И Мой народ больше не испытает позора!</para>
+  <para style="s1">Излияние Духа в день Вечного</para>
+  <para style="q1">
+    <verse number="28" style="v"/>– И после этого</para>
+  <para style="q2">Я изолью Духа Моего на всех людей.</para>
+  <para style="q1">Ваши сыновья и дочери будут пророчествовать,</para>
+  <para style="q2">вашим старцам будут сниться пророческие сны,</para>
+  <para style="q2">и ваши юноши будут видеть видения.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Даже на рабов и рабынь</para>
+  <para style="q2">Я изолью в те дни Моего Духа.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Я покажу чудеса на небесах и на земле:</para>
+  <para style="q2">кровь, огонь и клубы дыма.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>Солнце превратится во тьму,</para>
+  <para style="q2">а луна – в кровь</para>
+  <para style="q2">перед тем, как наступит великий и страшный день Вечного.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>И каждый, кто призовёт имя Вечного,</para>
+  <para style="q2">будет спасён.</para>
+  <para style="q1">На горе Сионе и в Иерусалиме будет спасение,</para>
+  <para style="q2">как сказал Вечный, –</para>
+  <para style="q1">спасение для уцелевших,</para>
+  <para style="q2">кого Вечный призовёт.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Суд над народами</para>
+  <para style="q1">
+    <verse number="1" style="v"/>– В те дни, в то самое время,</para>
+  <para style="q2">когда Я восстановлю Иудею и Иерусалим,</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Я соберу все народы</para>
+  <para style="q2">и приведу их в долину Суда<note caller="+" style="f"><char style="fr" closed="false">3:2 </char><char style="ft" closed="false">Букв.: «долина Иосафата» – название, которое переводится как: «Вечный судит», то же в ст. 12.</char></note>.</para>
+  <para style="q1">Я буду судить их там</para>
+  <para style="q2">за Мой народ и за Моё наследие – Исраил,</para>
+  <para style="q1">который они рассеяли между народами,</para>
+  <para style="q2">и за Мою землю, которую они разделили.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Они бросали жребий о Моём народе,</para>
+  <para style="q2">отдавали мальчиков за блудниц</para>
+  <para style="q1">и продавали девочек за вино,</para>
+  <para style="q2">чтобы напиться.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="4" style="v"/>– Итак, что вы имеете против Меня, народы Тира и Сидона и все жители филистимских округов? Хотите ли воздать Мне возмездие? Если и воздадите Мне, то Я легко и быстро верну возмездие ваше на ваши же головы. <verse number="5" style="v"/>Вы забрали Моё серебро и золото и внесли лучшие драгоценности в свои капища. <verse number="6" style="v"/>Вы продавали людей Иудеи и Иерусалима грекам<note caller="+" style="f"><char style="fr" closed="false">3:6 </char><char style="ft" closed="false">Букв.: «сыновьям Иавана».</char></note> для того, чтобы отдалить их от родины.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Смотрите, Я верну их из тех мест, куда вы продали их, и обращу содеянное вами на ваши же головы. <verse number="8" style="v"/>Я продам ваших сыновей и дочерей людям из Иудеи, а они продадут их севеянам, отдалённому народу, – так сказал Вечный.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>Провозгласите это между народами:</para>
+  <para style="q1">«Приготовьтесь к войне!</para>
+  <para style="q2">Поднимайте лучших бойцов!</para>
+  <para style="q1">Пусть выступят все воины,</para>
+  <para style="q2">пусть они идут в атаку.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Перекуйте ваши плуги на мечи</para>
+  <para style="q2">и ваши серпы на копья.</para>
+  <para style="q1">Пусть слабый говорит:</para>
+  <para style="q2">„Я сильный воин!“</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Спешите, все народы, со всех сторон</para>
+  <para style="q2">и собирайтесь в долине».</para>
+  <para style="b"/>
+  <para style="q1">О Вечный, веди туда Своё воинство!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>– Пусть воспрянут народы,</para>
+  <para style="q2">пусть пойдут в долину Суда,</para>
+  <para style="q1">потому что там Я воссяду,</para>
+  <para style="q2">чтобы судить их всех.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Взмахните серпами,</para>
+  <para style="q2">потому что созрела жатва,</para>
+  <para style="q1">давите виноград,</para>
+  <para style="q2">потому что давильня наполнена,</para>
+  <para style="q1">и как переливается из сосудов вино,</para>
+  <para style="q2">так велика и злоба их!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>Огромные массы людей толпятся</para>
+  <para style="q2">в долине Приговора,</para>
+  <para style="q1">потому что близок день Вечного</para>
+  <para style="q2">в долине Приговора!</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Померкнут солнце и луна,</para>
+  <para style="q2">и потеряют звёзды свой блеск.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Прогремит Вечный с Сиона,</para>
+  <para style="q2">воскликнет Он громким голосом из Иерусалима,</para>
+  <para style="q2">и поколеблются земля и небо.</para>
+  <para style="q1">Но Вечный будет убежищем для Своего народа,</para>
+  <para style="q2">крепостью – для народа Исраила.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>– И тогда вы узнаете, что Я – Вечный, ваш Бог,</para>
+  <para style="q2">живущий на Сионе, Моей святой горе.</para>
+  <para style="q1">Иерусалим будет святыней,</para>
+  <para style="q2">и никогда более в него не вступит чужеземцев рать.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v"/>В тот день с гор будет капать молодое вино,</para>
+  <para style="q2">и с холмов потечёт молоко,</para>
+  <para style="q2">и все русла Иудеи наполнятся водою.</para>
+  <para style="q1">В доме Вечного забьёт источник</para>
+  <para style="q2">и напоит безводную долину акаций<note caller="+" style="f"><char style="fr" closed="false">3:18 </char><char style="ft" closed="false">Букв.: «долина Шиттим». Акация любит сухую почву и поэтому растёт только в засушливых регионах.</char></note>.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Египет будет опустошён,</para>
+  <para style="q2">а Эдом станет безлюдной пустыней –</para>
+  <para style="q1">за насилие, которое они причинили народу Иудеи,</para>
+  <para style="q2">и за невинную кровь, пролитую в их земле.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Иудея будет жить вечно,</para>
+  <para style="q2">и Иерусалим – из поколения в поколение.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Я отомщу за их кровь,</para>
+  <para style="q2">не оставлю без наказания<note caller="+" style="f"><char style="fr" closed="false">3:21 </char><char style="ft" closed="false">Или: «Я смою их кровь, которую ещё не смыл».</char></note>.</para>
+  <para style="b"/>
+  <para style="q1">Вечный будет жить на Сионе!</para>
+</usx>

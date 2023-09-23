@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="JUD" style="id">- New Russian Translation (Новый русский перевод)</book>
+  <para style="rem">Copyright © 1988, 1991, 1998, 2006, 2010, 2014 by Biblica, Inc.</para>
+  <para style="h">ИУДЫ</para>
+  <para style="toc1">Послание Иуды</para>
+  <para style="toc2">Иуды</para>
+  <para style="toc3">Иуда</para>
+  <para style="mt1">Послание Иуды</para>
+  <para style="ili1">Автор: Иуда, брат Иакова и Иисуса Христа</para>
+  <para style="ili1">Место написания: неизвестно</para>
+  <para style="ili1">Время написания: вероятно, до 65 г.</para>
+  <para style="ip">В своем послании Иуда называет себя братом Иакова, единоутробного брата Иисуса (см. <char style="xt"><ref loc="GAL 1:19">Гал. 1:19</ref></char>). Это несомненно делает Иуду также братом Иисуса, как мы и читаем в <char style="xt"><ref loc="MRK 6:3">Мк. 6:3</ref></char>. Иуда адресует свое послание верующим, но подчеркивает, что оно – для истинных верующих, возлюбленных и призванных Богом и хранимых Иисусом Христом (<char style="xt"><ref loc="JUD 1:1">1:1</ref></char>). Причиной этого может быть появление множества лжеучителей в церквах, которые искажали благодать Бога (<char style="xt"><ref loc="JUD 1:4">1:4</ref></char>). Сложно определить точное время и место написания этого послания. Но в случае, если Петр, как считают многие, использовал его в своем втором послании, то оно не могло быть написано позднее смерти Петра в 67 г.</para>
+  <para style="ip">В начале Иуда объясняет, что он надеялся писать о спасении, но вместо этого был вынужден предупредить о появлении в церквах лжеучителей (<char style="xt"><ref loc="JUD 1:3-4">1:3-4</ref></char>). Используя примеры из Писания, где вершится Суд Божий над грешниками, Иуда говорит об ужасном наказании, ожидающем этих лжеучителей (<char style="xt"><ref loc="JUD 1:5-7">1:5-7</ref></char>). Он подробно описывает этих людей, чтобы истинные верующие могли узнавать их и противостоять им (<char style="xt"><ref loc="JUD 1:8-16">1:8-16</ref></char>). В завершении он призывает верующих твердо стоять в истине (<char style="xt"><ref loc="JUD 1:17-23">1:17-23</ref></char>) и славит Бога, Который в силе сохранить их от падения и поставить перед Ним во всей Его славе (<char style="xt"><ref loc="JUD 1:24-25">1:24-25</ref></char>).</para>
+  <para style="iot">Содержание</para>
+  <para style="io1">Приветствие (<char style="ior"><ref loc="JUD 1:1-2">1:1-2</ref></char>).</para>
+  <para style="io1">Всех лжеучителей ожидает суд (<char style="ior"><ref loc="JUD 1:3-16">1:3-16</ref></char>).</para>
+  <para style="io1">Предостережение и наставления (<char style="ior"><ref loc="JUD 1:17-23">1:17-23</ref></char>).</para>
+  <para style="io1">Заключение (<char style="ior"><ref loc="JUD 1:24-25">1:24-25</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="JUD 1"/>
+  <para style="s1">Приветствие</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JUD 1:1"/>От Иуды, слуги Иисуса Христа и брата Иакова.</para>
+  <para style="b" vid="JUD 1:1"/>
+  <para style="p" vid="JUD 1:1">Всем призванным и любимым Богом Отцом и хранимым Иисусом Христом<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">Или: «для Иисуса Христа».</char></note>.<verse eid="JUD 1:1"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="2" style="v" sid="JUD 1:2"/>Пусть умножатся для вас милость, мир и любовь.<verse eid="JUD 1:2"/></para>
+  <para style="s1">Всех лжеучителей ожидает суд</para>
+  <para style="p">
+    <verse number="3" style="v" sid="JUD 1:3"/>Возлюбленные, при всем моем желании написать вам о нашем общем спасении, я счел нужным напомнить вам о необходимости отстаивать веру, раз и навсегда доверенную святым. <verse eid="JUD 1:3"/><verse number="4" style="v" sid="JUD 1:4"/>Потому что в вашу среду проникли люди, которые уже давно определены на осуждение. Эти безбожные люди превратили благодать нашего Бога в повод продолжать заниматься развратом. Они отвергают нашего единственного Владыку и Господа Иисуса Христа.<verse eid="JUD 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="JUD 1:5"/>Хотя вы уже и знаете обо всем этом, я все же хочу напомнить еще раз, что Господь спас народ из Египта, но тех, кто Ему не поверил, Он погубил<note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="EXO 12:31-41">Исх. 12:31-41</ref>; <ref loc="EXO 13:17-22">13:17-22</ref></char>; 14; <char style="xt"><ref loc="NUM 14:20-38">Чис. 14:20-38</ref>; <ref loc="1CO 10:1-5">1 Кор. 10:1-5</ref></char>.</char></note>. <verse eid="JUD 1:5"/><verse number="6" style="v" sid="JUD 1:6"/>И ангелов, которые не сохранили своего положения и оставили свое жилище, Он содержит в вечных цепях, во тьме, на Суд великого дня. <verse eid="JUD 1:6"/><verse number="7" style="v" sid="JUD 1:7"/>Также и жители Содома, Гоморры и окружавших их городов, подобно им предававшиеся разврату и половым извращениям, служат примером, подвергшись наказанию вечным огнем<note caller="+" style="f"><char style="fr" closed="false">1:7 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="GEN 19:1-29">Быт. 19:1-29</ref></char>.</char></note>.<verse eid="JUD 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JUD 1:8"/>Так и эти мечтатели оскверняют свои тела, отвергают власть<note caller="+" style="f"><char style="fr" closed="false">1:8 </char><char style="ft" closed="false">Или: «отвергают власть Бога».</char></note> и злословят славных<note caller="+" style="f"><char style="fr" closed="false">1:8 </char><char style="ft" closed="false">Славные – возможно, имеются в виду сверхъестественные духовные существа. Но, возможно, это определение включает в себя и любые авторитетные личности.</char></note>. <verse eid="JUD 1:8"/><verse number="9" style="v" sid="JUD 1:9"/>Но даже когда архангел<note caller="+" style="f"><char style="fr" closed="false">1:9 </char><char style="ft" closed="false">Архангел – один из высших ангельских чинов.</char></note> Михаил спорил с дьяволом о теле Моисея, он не позволил себе осудить его с оскорблениями. Он лишь сказал: «Пусть Господь запретит тебе». <verse eid="JUD 1:9"/><verse number="10" style="v" sid="JUD 1:10"/>Эти же люди клевещут на то, чего не знают, а что они знают от природы, как неразумные животные, тем они себя и разрушают.<verse eid="JUD 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="JUD 1:11"/>Горе им! Они пошли по пути Каина<note caller="+" style="f"><char style="fr" closed="false">1:11 </char><char style="ft" closed="false">Каин – старший сын Адама и Евы. См. <char style="xt"><ref loc="GEN 4:1-16">Быт. 4:1-16</ref></char>.</char></note>, и, гонимые жаждой наживы, повторяют заблуждение Валаама, и в восстании погибают, как Корах<note caller="+" style="f"><char style="fr" closed="false">1:11 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="NUM 16">Чис. 16</ref></char>.</char></note>.<verse eid="JUD 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="JUD 1:12"/>Такие люди – как подводные рифы<note caller="+" style="f"><char style="fr" closed="false">1:12 </char><char style="ft" closed="false">Или: «как темные пятна».</char></note> на ваших ужинах любви<note caller="+" style="f"><char style="fr" closed="false">1:12 </char><char style="ft" closed="false">Ужин любви – верующие часто собирались для совместного приема пищи и общения. Обычно это заканчивалось «хлебопреломлением» (см. <char style="xt"><ref loc="LUK 22:19-20">Лк. 22:19-20</ref>; <ref loc="1CO 11:23-26">1 Кор. 11:23-26</ref></char>).</char></note>. Пиршествуя с вами, они бесстыдно заботятся лишь о себе. Это тучи без дождя, носимые ветром, деревья, бесплодные <char style="add">даже</char> осенью, дважды мертвые, вырванные с корнем. <verse eid="JUD 1:12"/><verse number="13" style="v" sid="JUD 1:13"/>Они как свирепые морские волны, пенящиеся своим позором, как блуждающие звезды, обреченные на вечную беспросветную тьму.<verse eid="JUD 1:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="JUD 1:14"/>Енох, потомок Адама в седьмом поколении, пророчествовал о них:</para>
+  <para style="q1" vid="JUD 1:14">«Вот пришел Господь с многими тысячами святых<note caller="+" style="f"><char style="fr" closed="false">1:14 </char><char style="ft" closed="false">Святых – включает в себя ангелов Бога и, возможно, последователей Иисуса Христа, которые к тому времени уже будут с Ним на небесах.</char></note> Своих,<verse eid="JUD 1:14"/></para>
+  <para style="q2">
+    <verse number="15" style="v" sid="JUD 1:15"/>чтобы судить всех и обличить всех нечестивых</para>
+  <para style="q1" vid="JUD 1:15">во всех их нечестивых делах,</para>
+  <para style="q2" vid="JUD 1:15">которые они нечестиво совершили,</para>
+  <para style="q1" vid="JUD 1:15">и во всех ужасных словах,</para>
+  <para style="q2" vid="JUD 1:15">которые сказали против Него безбожные грешники»<note caller="+" style="f"><char style="fr" closed="false">1:14-15 </char><char style="ft" closed="false">Цитата взята из 1-й книги Еноха 1:9, которая была широко известна среди иудеев в I веке.</char></note>.<verse eid="JUD 1:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JUD 1:16"/>Эти люди всегда жалуются и недовольны жизнью. Они идут на поводу у своих низменных желаний, они произносят напыщенные речи и льстят ради выгоды.<verse eid="JUD 1:16"/></para>
+  <para style="s1">Слова наставления</para>
+  <para style="p">
+    <verse number="17" style="v" sid="JUD 1:17"/>Но вы, возлюбленные, помните о том, что предсказывали апостолы нашего Господа Иисуса Христа. <verse eid="JUD 1:17"/><verse number="18" style="v" sid="JUD 1:18"/>Они говорили вам: «В последнее время появятся наглые люди, идущие на поводу у своих низменных желаний». <verse eid="JUD 1:18"/><verse number="19" style="v" sid="JUD 1:19"/>Эти люди производят разделения; они следуют только своим природным инстинктам, а Духа не имеют.<verse eid="JUD 1:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="JUD 1:20"/>Но вы, возлюбленные, созидайте себя на своей святейшей вере, молясь в Святом Духе. <verse eid="JUD 1:20"/><verse number="21" style="v" sid="JUD 1:21"/>Оставайтесь в Божьей любви, ожидая милости Господа нашего Иисуса Христа, дающей вечную жизнь.<verse eid="JUD 1:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="JUD 1:22"/>Будьте милостивы к тем, кто сомневается. <verse eid="JUD 1:22"/><verse number="23" style="v" sid="JUD 1:23"/>Других спасайте, выхватывая их из огня; к третьим проявляйте милосердие, но будьте осторожны, гнушаясь даже одеждой, оскверненной греховной плотью.<verse eid="JUD 1:23"/></para>
+  <para style="s1">Заключение</para>
+  <para style="p">
+    <verse number="24" style="v" sid="JUD 1:24"/>Тому, Кто в силе сохранить вас от падения и ввести в Свою славу радостными и беспорочными, <verse eid="JUD 1:24"/><verse number="25" style="v" sid="JUD 1:25"/>единому Богу, Спасителю нашему через Иисуса Христа, нашего Господа, слава, величие, сила и власть и до начала времени, и сейчас, и во все века! Аминь.<verse eid="JUD 1:25"/></para>
+  <chapter eid="JUD 1"/>
+</usx>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="JOL" style="id">- New Amharic Standard Version, 2020 Update</book>
+  <para style="rem">Copyright © 2001 by Biblica, Inc.</para>
+  <para style="h">ኢዩኤል</para>
+  <para style="toc1">ትንቢተ ኢዩኤል</para>
+  <para style="toc2">ኢዩኤል</para>
+  <para style="toc3">ኢዩ</para>
+  <para style="mt1">ትንቢተ ኢዩኤል</para>
+  <chapter number="1" style="c" sid="JOL 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="JOL 1:1"/>ወደ ባቱኤል ልጅ ወደ ኢዩኤል የመጣው <char style="nd">የእግዚአብሔር</char> ቃል ይህ ነው፤<verse eid="JOL 1:1"/></para>
+  <para style="b"/>
+  <para style="s1">የአንበጣ ወረራ</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="JOL 1:2"/>እናንት ሽማግሌዎች፣ ይህን ስሙ፤</para>
+  <para style="q2" vid="JOL 1:2">በምድሪቱም የምትኖሩ ሁላችሁ፣ አድምጡ፤</para>
+  <para style="q1" vid="JOL 1:2">በእናንተ ዘመንም ሆነ በአባቶቻችሁ ዘመን፣</para>
+  <para style="q2" vid="JOL 1:2">እንዲህ ዐይነት ነገር ሆኖ ያውቃልን?<verse eid="JOL 1:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="JOL 1:3"/>ይህን ለልጆቻችሁ ተናገሩ፤</para>
+  <para style="q2" vid="JOL 1:3">ልጆቻችሁ ለልጆቻቸው ይንገሩ፤</para>
+  <para style="q2" vid="JOL 1:3">ልጆቻቸውም ለሚቀጥለው ትውልድ ይንገሩ።<verse eid="JOL 1:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="JOL 1:4"/>ከአንበጣ መንጋ<note caller="+" style="f"><char style="fr" closed="false">1፥4 </char><char style="ft" closed="false">በዚህ ክፍል፣ ስለ አንበጦች የሚገልጹት አራት የዕብራይስጥ ቃላት፣ ትክክለኛ ትርጕም አይታወቅም።</char></note> የተረፈውን፣</para>
+  <para style="q2" vid="JOL 1:4">ትልልቁ አንበጣ በላው፤</para>
+  <para style="q1" vid="JOL 1:4">ከትልልቁ አንበጣ የተረፈውን፣</para>
+  <para style="q2" vid="JOL 1:4">ኵብኵባ በላው፤</para>
+  <para style="q1" vid="JOL 1:4">ከኵብኵባ የተረፈውን፣</para>
+  <para style="q2" vid="JOL 1:4">ሌሎች አንበጦች በሉት።<verse eid="JOL 1:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="JOL 1:5"/>እናንት ሰካራሞች፤ ተነሡ፤ አልቅሱ፤</para>
+  <para style="q2" vid="JOL 1:5">እናንት የወይን ጠጅ ጠጪዎች ሁሉ፤ ዋይ በሉ፤</para>
+  <para style="q1" vid="JOL 1:5">ስለ አዲሱ የወይን ጠጅ ዋይ ብላችሁ አልቅሱ፤</para>
+  <para style="q2" vid="JOL 1:5">አፋችሁ ላይ እንዳለ ተነጥቃችኋልና።<verse eid="JOL 1:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="JOL 1:6"/>ኀያልና ቍጥር ስፍር የሌለው ሕዝብ፣</para>
+  <para style="q2" vid="JOL 1:6">ምድሬን ወሯታልና፤</para>
+  <para style="q1" vid="JOL 1:6">ጥርሱ እንደ አንበሳ ጥርስ፣</para>
+  <para style="q2" vid="JOL 1:6">መንጋጋውም እንደ እንስት አንበሳ መንጋጋ ነው።<verse eid="JOL 1:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="JOL 1:7"/>የወይን ቦታዬን ባድማ አደረገው፤</para>
+  <para style="q2" vid="JOL 1:7">የበለስ ዛፎቼንም ቈራረጠ፤</para>
+  <para style="q1" vid="JOL 1:7">ቅርንጫፎቻቸው ነጭ ሆነው እስኪታዩ ድረስ፣</para>
+  <para style="q2" vid="JOL 1:7">ቅርፊታቸውን ልጦ፣</para>
+  <para style="q2" vid="JOL 1:7">ወዲያ ጣላቸው።<verse eid="JOL 1:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="JOL 1:8"/>የልጅነት ዕጮኛዋን<note caller="+" style="f"><char style="fr" closed="false">1፥8 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">የልጅነት ባሏ</char></note> እንዳጣች ድንግል<note caller="+" style="f"><char style="fr" closed="false">1፥8 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">ወጣት ሴት</char></note>፣</para>
+  <para style="q2" vid="JOL 1:8">ማቅ ለብሳችሁ አልቅሱ።<verse eid="JOL 1:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="JOL 1:9"/>የእህል ቍርባንና የመጠጥ ቍርባን፣</para>
+  <para style="q2" vid="JOL 1:9">
+    <char style="nd">ከእግዚአብሔር</char> ቤት ተቋርጧል፤</para>
+  <para style="q1" vid="JOL 1:9">
+    <char style="nd">በእግዚአብሔርም</char> ፊት የሚያገለግሉ፣</para>
+  <para style="q2" vid="JOL 1:9">ካህናት ያለቅሳሉ።<verse eid="JOL 1:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="JOL 1:10"/>ዕርሻዎች ባዷቸውን ቀርተዋል፤</para>
+  <para style="q2" vid="JOL 1:10">ምድሩም ደርቋል<note caller="+" style="f"><char style="fr" closed="false">1፥10 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">መሬቱ ያዝናል</char></note>፤</para>
+  <para style="q1" vid="JOL 1:10">እህሉ ጠፍቷል፤</para>
+  <para style="q2" vid="JOL 1:10">አዲሱ የወይን ጠጅ ዐልቋል፤</para>
+  <para style="q2" vid="JOL 1:10">ዘይቱም ተሟጧል።<verse eid="JOL 1:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="JOL 1:11"/>እናንት ገበሬዎች፣ ዕዘኑ፤</para>
+  <para style="q2" vid="JOL 1:11">እናንት የወይን ገበሬዎች፣ ዋይ በሉ፤</para>
+  <para style="q1" vid="JOL 1:11">ስለ ገብሱና ስለ ስንዴው አልቅሱ፤</para>
+  <para style="q2" vid="JOL 1:11">የዕርሻው መከር ጠፍቷልና።<verse eid="JOL 1:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="JOL 1:12"/>ወይኑ ደርቋል፤</para>
+  <para style="q2" vid="JOL 1:12">የበለስ ዛፉም ጠውልጓል፤</para>
+  <para style="q1" vid="JOL 1:12">ሮማኑ፣ ተምሩና እንኮዩ፣</para>
+  <para style="q2" vid="JOL 1:12">የዕርሻው ዛፎች ሁሉ ደርቀዋል፤</para>
+  <para style="q1" vid="JOL 1:12">ስለዚህ ደስታ፣</para>
+  <para style="q2" vid="JOL 1:12">ከሰው ልጆች ርቋል።<verse eid="JOL 1:12"/></para>
+  <para style="s1">የንስሓ ጥሪ</para>
+  <para style="q1">
+    <verse number="13" style="v" sid="JOL 1:13"/>ካህናት ሆይ፤ ማቅ ለብሳችሁ አልቅሱ፤</para>
+  <para style="q2" vid="JOL 1:13">እናንተ በመሠዊያው ፊት የምታገለግሉ፣ ዋይ በሉ፤</para>
+  <para style="q1" vid="JOL 1:13">እናንት በአምላኬ ፊት የምታገለግሉ፣</para>
+  <para style="q2" vid="JOL 1:13">ኑ፤ ማቅ ለብሳችሁ ዕደሩ፤</para>
+  <para style="q1" vid="JOL 1:13">የእህል ቍርባኑና የመጠጥ ቍርባኑ፣</para>
+  <para style="q2" vid="JOL 1:13">ከአምላካችሁ ቤት ተቋርጧልና።<verse eid="JOL 1:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="JOL 1:14"/>ቅዱስ ጾምን ዐውጁ፤</para>
+  <para style="q2" vid="JOL 1:14">የተቀደሰንም ጉባኤ ጥሩ፤</para>
+  <para style="q1" vid="JOL 1:14">ሽማግሌዎችን ሰብስቡ፤</para>
+  <para style="q2" vid="JOL 1:14">በምድሪቱ የሚኖሩትን ሁሉ፣</para>
+  <para style="q1" vid="JOL 1:14">ወደ አምላካችሁ ወደ <char style="nd">እግዚአብሔር</char> ቤት ጥሩ፤</para>
+  <para style="q2" vid="JOL 1:14">ወደ <char style="nd">እግዚአብሔርም</char> ጩኹ።<verse eid="JOL 1:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="JOL 1:15"/>ወዮ ለዚያ ቀን፤</para>
+  <para style="q2" vid="JOL 1:15">
+    <char style="nd">የእግዚአብሔር</char> ቀን ቀርቧልና፤</para>
+  <para style="q2" vid="JOL 1:15">ሁሉን ከሚችል<note caller="+" style="f"><char style="fr" closed="false">1፥15 </char><char style="ft" closed="false">ዕብራይስጡ </char><char style="fqa" closed="false">ሻደይ </char><char style="ft" closed="false">ይለዋል።</char></note> አምላክ እንደ ጥፋት ይመጣል።<verse eid="JOL 1:15"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v" sid="JOL 1:16"/>የሚበላ ምግብ፣</para>
+  <para style="q2" vid="JOL 1:16">ከዐይናችን ፊት፣</para>
+  <para style="q1" vid="JOL 1:16">ደስታና ተድላ፣</para>
+  <para style="q2" vid="JOL 1:16">ከአምላካችን ቤት አልተቋረጠብንምን?<verse eid="JOL 1:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="JOL 1:17"/>ዘሩ በዐፈር ውስጥ<note caller="+" style="f"><char style="fr" closed="false">1፥17 </char><char style="ft" closed="false">ለዚህ የገባው የዕብራይስጡ ቃል ትርጕም አይታወቅም።</char></note>፣</para>
+  <para style="q2" vid="JOL 1:17">በስብሶ ቀርቷል፤</para>
+  <para style="q1" vid="JOL 1:17">ግምጃ ቤቶቹ ፈራርሰዋል፤</para>
+  <para style="q2" vid="JOL 1:17">ጐተራዎቹም ተሰባብረዋል፤</para>
+  <para style="q2" vid="JOL 1:17">እህሉ ደርቋልና።<verse eid="JOL 1:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="JOL 1:18"/>መንጎች እንደ ምን ጮኹ፣</para>
+  <para style="q2" vid="JOL 1:18">ከብቶቹ ተደናግጠዋል፤</para>
+  <para style="q1" vid="JOL 1:18">መሰማሪያ የላቸውምና፤</para>
+  <para style="q2" vid="JOL 1:18">የበግ መንጎች እንኳ ተቸግረዋል።<verse eid="JOL 1:18"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v" sid="JOL 1:19"/>አቤቱ <char style="nd">እግዚአብሔር</char> ሆይ፤ ወደ አንተ እጣራለሁ፤</para>
+  <para style="q2" vid="JOL 1:19">ያልተነካውን መሰማሪያ እሳት በልቶታልና፤</para>
+  <para style="q2" vid="JOL 1:19">የዱሩን ዛፍ ሁሉ ነበልባል አቃጥሎታል።<verse eid="JOL 1:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="JOL 1:20"/>የዱር አራዊት እንኳ ወደ አንተ አለኸለኹ፤</para>
+  <para style="q2" vid="JOL 1:20">ወራጁ ውሃ ደርቋል፤</para>
+  <para style="q2" vid="JOL 1:20">ያልተነካውንም መሰማሪያ እሳት በልቶታል።<verse eid="JOL 1:20"/></para>
+  <chapter eid="JOL 1"/>
+  <chapter number="2" style="c" sid="JOL 2"/>
+  <para style="s1">የአንበጣ ሰራዊት</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="JOL 2:1"/>በጽዮን መለከትን ንፉ፤</para>
+  <para style="q2" vid="JOL 2:1">በቅዱሱ ተራራዬም የማስጠንቀቂያውን ድምፅ አሰሙ።</para>
+  <para style="b" vid="JOL 2:1"/>
+  <para style="q1" vid="JOL 2:1">በምድሪቱ የሚኖሩ ሁሉ ይንቀጥቀጡ፤</para>
+  <para style="q2" vid="JOL 2:1">
+    <char style="nd">የእግዚአብሔር</char> ቀን ቀርቧልና፤</para>
+  <para style="q1" vid="JOL 2:1">እርሱም በደጅ ነው።<verse eid="JOL 2:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="JOL 2:2"/>ይህም የጨለማና የጭጋግ ቀን፣</para>
+  <para style="q2" vid="JOL 2:2">የደመናና የድቅድቅ ጨለማ ቀን ነው።</para>
+  <para style="q1" vid="JOL 2:2">የንጋት ብርሃን በተራሮች ላይ እንደሚወጣ፣</para>
+  <para style="q2" vid="JOL 2:2">ኀያልና ብዙ ሰራዊት ይመጣል፤</para>
+  <para style="q1" vid="JOL 2:2">ከጥንት እንዲህ ዐይነት ከቶ አልነበረም፤</para>
+  <para style="q2" vid="JOL 2:2">በሚመጡትም ዘመናት እንዲህ ዐይነት ከቶ አይሆንም።<verse eid="JOL 2:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="JOL 2:3"/>በፊታቸው፣ እሳት ይባላል፤</para>
+  <para style="q2" vid="JOL 2:3">በኋላቸውም ነበልባል ይለበልባል፤</para>
+  <para style="q1" vid="JOL 2:3">በፊታቸው ምድሪቱ እንደ ዔድን ገነት ናት፤</para>
+  <para style="q2" vid="JOL 2:3">በኋላቸውም የሚቀረው ባዶ ምድረ በዳ ነው፤</para>
+  <para style="q2" vid="JOL 2:3">ምንም አያመልጣቸውም።<verse eid="JOL 2:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="JOL 2:4"/>መልካቸው እንደ ፈረስ መልክ ነው፤</para>
+  <para style="q2" vid="JOL 2:4">እንደ ጦር ፈረስም ይጋልባሉ።<verse eid="JOL 2:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="JOL 2:5"/>ገለባ እንደሚበላ እንደሚንጣጣ እሳት፣</para>
+  <para style="q2" vid="JOL 2:5">ለጦርነት እንደ ተዘጋጀ ኀያል ሰራዊት፣</para>
+  <para style="q1" vid="JOL 2:5">የሠረገሎችን ድምፅ የሚመስል ድምፅ እያሰሙ፣</para>
+  <para style="q2" vid="JOL 2:5">በተራሮች ጫፍ ላይ ይዘልላሉ።<verse eid="JOL 2:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="JOL 2:6"/>በእነርሱ ፊት ሕዝቦች ይርዳሉ፤</para>
+  <para style="q2" vid="JOL 2:6">የሁሉም ፊት ይገረጣል።<verse eid="JOL 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="JOL 2:7"/>እንደ ተዋጊዎች ድንገት አደጋ ይጥላሉ፤</para>
+  <para style="q2" vid="JOL 2:7">እንደ ወታደሮችም ቅጥርን ይዘልላሉ፤</para>
+  <para style="q1" vid="JOL 2:7">ከመንገዳቸውም ሳይወጡ፣</para>
+  <para style="q2" vid="JOL 2:7">አቅጣጫ ይዘው ይጓዛሉ።<verse eid="JOL 2:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="JOL 2:8"/>እርስ በርሳቸው አይገፋፉም፤</para>
+  <para style="q2" vid="JOL 2:8">እያንዳንዱ መሥመሩን ጠብቆ ይሄዳል፤</para>
+  <para style="q1" vid="JOL 2:8">መሥመራቸውን ሳይለቁ፣</para>
+  <para style="q2" vid="JOL 2:8">መከላከያውን ሰብረው ያልፋሉ።<verse eid="JOL 2:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="JOL 2:9"/>ከተማዪቱን ይወርራሉ፤</para>
+  <para style="q2" vid="JOL 2:9">በቅጥሩም ላይ ይዘልላሉ፤</para>
+  <para style="q1" vid="JOL 2:9">በቤቶች ላይ ዘልለው ይወጣሉ፤</para>
+  <para style="q2" vid="JOL 2:9">እንደ ሌባም በመስኮት ይገባሉ።<verse eid="JOL 2:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="JOL 2:10"/>ምድር በፊታቸው ትንቀጠቀጣለች፤</para>
+  <para style="q2" vid="JOL 2:10">ሰማይም ይናወጣል፤</para>
+  <para style="q1" vid="JOL 2:10">ፀሓይና ጨረቃ ይጨልማሉ፤</para>
+  <para style="q2" vid="JOL 2:10">ከዋክብትም ከእንግዲህ ወዲያ አያበሩም።<verse eid="JOL 2:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="JOL 2:11"/>በሰራዊቱ ፊት፣</para>
+  <para style="q2" vid="JOL 2:11">
+    <char style="nd">እግዚአብሔር</char> ያንጐደጕዳል፤</para>
+  <para style="q1" vid="JOL 2:11">የሰራዊቱ ብዛት ስፍር ቍጥር የለውም፤</para>
+  <para style="q2" vid="JOL 2:11">ትእዛዙንም የሚያደርግ እርሱ ኀያል ነው፤</para>
+  <para style="q1" vid="JOL 2:11">
+    <char style="nd">የእግዚአብሔር</char> ቀን ታላቅ፣</para>
+  <para style="q2" vid="JOL 2:11">እጅግም የሚያስፈራ ነው፤</para>
+  <para style="q2" vid="JOL 2:11">ማንስ ሊቋቋመው ይችላል?<verse eid="JOL 2:11"/></para>
+  <para style="s1">ልባችሁን ቅደዱ</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="JOL 2:12"/>“አሁንም ቢሆን፣</para>
+  <para style="q2" vid="JOL 2:12">በጾም፣ በልቅሶና በሐዘን፣</para>
+  <para style="q1" vid="JOL 2:12">በፍጹም ልባችሁ ወደ እኔ ተመለሱ” ይላል <char style="nd">እግዚአብሔር</char>።<verse eid="JOL 2:12"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v" sid="JOL 2:13"/>ልባችሁን እንጂ፣</para>
+  <para style="q2" vid="JOL 2:13">ልብሳችሁን አትቅደዱ፤</para>
+  <para style="q1" vid="JOL 2:13">ወደ አምላካችሁ ወደ <char style="nd">እግዚአብሔር</char> ተመለሱ፤</para>
+  <para style="q2" vid="JOL 2:13">እርሱ መሓሪና ርኅሩኅ፣</para>
+  <para style="q1" vid="JOL 2:13">ቍጣው የዘገየና ፍቅሩ የበዛ፣</para>
+  <para style="q2" vid="JOL 2:13">ክፉ ነገር ከማምጣትም የሚታገሥ ነውና።<verse eid="JOL 2:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="JOL 2:14"/>በምሕረቱ ተመልሶ፣</para>
+  <para style="q2" vid="JOL 2:14">ለአምላካችሁ <char style="nd">ለእግዚአብሔር</char> የሚሆነውን፣</para>
+  <para style="q1" vid="JOL 2:14">የእህል ቍርባንና የመጠጥ ቍርባን እንዲተርፋችሁ፣</para>
+  <para style="q2" vid="JOL 2:14">በረከቱን ይሰጣችሁ እንደ ሆነ ማን ያውቃል?<verse eid="JOL 2:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="JOL 2:15"/>በጽዮን መለከትን ንፉ፤</para>
+  <para style="q2" vid="JOL 2:15">ቅዱስ ጾምን ዐውጁ፤</para>
+  <para style="q2" vid="JOL 2:15">የተቀደሰን ጉባኤ ጥሩ።<verse eid="JOL 2:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="JOL 2:16"/>ሕዝቡን ሰብስቡ፤</para>
+  <para style="q2" vid="JOL 2:16">ጉባኤውን ቀድሱ፤</para>
+  <para style="q1" vid="JOL 2:16">ሽማግሌዎችን በአንድነት አቅርቡ፤</para>
+  <para style="q2" vid="JOL 2:16">ሕፃናትን ሰብስቡ፤</para>
+  <para style="q2" vid="JOL 2:16">ጡት የሚጠቡትንም አታስቀሩ፤</para>
+  <para style="q1" vid="JOL 2:16">ሙሽራው እልፍኙን ይተው፣</para>
+  <para style="q2" vid="JOL 2:16">ሙሽሪትም የጫጕላ ቤቷን ትተው።<verse eid="JOL 2:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="JOL 2:17"/>
+    <char style="nd">በእግዚአብሔር</char> ፊት የሚያገለግሉ ካህናት፣</para>
+  <para style="q2" vid="JOL 2:17">በመሠዊያውና በቤተ መቅደሱ አደባባይ መካከል ሆነው ያልቅሱ፤</para>
+  <para style="q1" vid="JOL 2:17">እንዲህም ይበሉ፤ “<char style="nd">እግዚአብሔር</char> ሆይ፤ ሕዝብህን አድን፤</para>
+  <para style="q2" vid="JOL 2:17">ርስትህን በአሕዛብ መካከል መተረቻ፣</para>
+  <para style="q2" vid="JOL 2:17">መሣቂያና መሣለቂያም አታድርግ፤</para>
+  <para style="q1" vid="JOL 2:17">ለምንስ በሕዝቦች መካከል፣</para>
+  <para style="q2" vid="JOL 2:17">‘አምላካቸው ወዴት ነው?’ ይበሉን።”<verse eid="JOL 2:17"/></para>
+  <para style="s1">የእግዚአብሔር መልስ</para>
+  <para style="q1">
+    <verse number="18" style="v" sid="JOL 2:18"/>እነሆ፤ <char style="nd">እግዚአብሔር</char> ስለ ምድሩ ይቀናል<note caller="+" style="f"><char style="fr" closed="false">2፥18 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">ጌታ ቀንቷል ራርቷል</char></note>፤</para>
+  <para style="q2" vid="JOL 2:18">ስለ ሕዝቡም ይራራል።<verse eid="JOL 2:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="JOL 2:19"/>
+    <char style="nd">እግዚአብሔርም</char> እንዲህ ሲል ይመልስላቸዋል<note caller="+" style="f"><char style="fr" closed="false">2፥19 </char><char style="fqa" closed="false">ጌታ መለሰለት</char></note>፤</para>
+  <para style="q1" vid="JOL 2:19">“እህል፣ አዲስ የወይን ጠጅና ዘይት፣</para>
+  <para style="q2" vid="JOL 2:19">እስክትጠግቡ ድረስ እሰጣችኋለሁ፤</para>
+  <para style="q1" vid="JOL 2:19">የሕዝቦች መዘባበቻ አላደርጋችሁም።<verse eid="JOL 2:19"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v" sid="JOL 2:20"/>“የሰሜንን ሰራዊት ከእናንተ አርቃለሁ፤</para>
+  <para style="q2" vid="JOL 2:20">ፊቱን ወደ ምሥራቁ ባሕር<note caller="+" style="f"><char style="fr" closed="false">2፥20 </char><char style="ft" closed="false">የሙት ባሕር ለማለት ነው።</char></note>፣</para>
+  <para style="q1" vid="JOL 2:20">ጀርባውንም ወደ ምዕራቡ ባሕር<note caller="+" style="f"><char style="fr" closed="false">2፥20 </char><char style="ft" closed="false">የሜዲትራንያን ባሕር ለማለት ነው።</char></note> በማድረግ፣</para>
+  <para style="q2" vid="JOL 2:20">ወደ ደረቀውና ወደ ባድማው ምድር እገፋዋለሁ፤</para>
+  <para style="q1" vid="JOL 2:20">ግማቱ ይወጣል፤</para>
+  <para style="q2" vid="JOL 2:20">ክርፋቱም ይነሣል።”</para>
+  <para style="b" vid="JOL 2:20"/>
+  <para style="q1" vid="JOL 2:20">በርግጥ እርሱ ታላቅ ነገር አድርጓል።<verse eid="JOL 2:20"/></para>
+  <para style="q2">
+    <verse number="21" style="v" sid="JOL 2:21"/>ምድር ሆይ፤ አትፍሪ፤</para>
+  <para style="q2" vid="JOL 2:21">ደስ ይበልሽ፤ ሐሤትም አድርጊ፤</para>
+  <para style="q1" vid="JOL 2:21">በርግጥ <char style="nd">እግዚአብሔር</char> ታላቅ ነገር አድርጓል።<verse eid="JOL 2:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="JOL 2:22"/>የዱር እንስሳት ሆይ፤ አትፍሩ፤</para>
+  <para style="q2" vid="JOL 2:22">መሰማሪያ መስኮቹ ለምልመዋልና፤</para>
+  <para style="q1" vid="JOL 2:22">ዛፎቹ ፍሬያቸውን አፍርተዋል፤</para>
+  <para style="q2" vid="JOL 2:22">የበለሱ ዛፍና የወይኑ ተክልም እጅግ አፍርተዋል።<verse eid="JOL 2:22"/></para>
+  <para style="q1">
+    <verse number="23" style="v" sid="JOL 2:23"/>የጽዮን ሰዎች ሆይ፤ ደስ ይበላችሁ፤</para>
+  <para style="q2" vid="JOL 2:23">በአምላካችሁ <char style="nd">በእግዚአብሔር</char> ሐሤት አድርጉ፤</para>
+  <para style="q1" vid="JOL 2:23">የበልግን ዝናብ፣</para>
+  <para style="q2" vid="JOL 2:23">በጽድቅ ሰጥቷችኋልና<note caller="+" style="f"><char style="fr" closed="false">2፥23 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">ለጽድቅ መምህር</char></note>፤</para>
+  <para style="q1" vid="JOL 2:23">እንደ ቀድሞውም፣</para>
+  <para style="q2" vid="JOL 2:23">የበልግንና የጸደይን ዝናብ በብዛት ልኮላችኋል።<verse eid="JOL 2:23"/></para>
+  <para style="q1">
+    <verse number="24" style="v" sid="JOL 2:24"/>ዐውድማዎቹ በእህል ይሞላሉ፤</para>
+  <para style="q2" vid="JOL 2:24">መጥመቂያ ጕድጓዶችም በአዲስ የወይን ጠጅና በዘይት ተሞልተው ያፈስሳሉ።<verse eid="JOL 2:24"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="25" style="v" sid="JOL 2:25"/>“በመካከላችሁ የሰደድሁት ታላቁ ሰራዊት፣</para>
+  <para style="q2" vid="JOL 2:25">ትልልቁ አንበጣና ትንንሹ አንበጣ፣</para>
+  <para style="q2" vid="JOL 2:25">ሌሎች አንበጦችና የአንበጣው መንጋ<note caller="+" style="f"><char style="fr" closed="false">2፥25 </char><char style="ft" closed="false">በዚህ ክፍል ስለ አንበጦች የሚገልጹት አራት የዕብራይስጥ ቃላት ትክክለኛ ትርጕም አይታወቅም።</char></note> የበላውን፣</para>
+  <para style="q1" vid="JOL 2:25">እነዚህ ሁሉ የበሏቸውን ዓመታት ዋጋ እመልስላችኋለሁ።<verse eid="JOL 2:25"/></para>
+  <para style="q1">
+    <verse number="26" style="v" sid="JOL 2:26"/>እስክትጠግቡ የምትበሉት ብዙ ምግብ ይኖራችኋል፤</para>
+  <para style="q2" vid="JOL 2:26">ድንቅ ነገሮችን ለእናንተ የሠራውን፣</para>
+  <para style="q2" vid="JOL 2:26">የአምላካችሁን <char style="nd">የእግዚአብሔርን</char> ስም ታመሰግናላችሁ፤</para>
+  <para style="q1" vid="JOL 2:26">ሕዝቤም ከእንግዲህ ወዲያ አያፍርም።<verse eid="JOL 2:26"/></para>
+  <para style="q1">
+    <verse number="27" style="v" sid="JOL 2:27"/>ከዚያም እኔ በእስራኤል መካከል እንዳለሁ፣</para>
+  <para style="q2" vid="JOL 2:27">እኔ አምላካችሁ <char style="nd">እግዚአብሔር</char> እንደ ሆንሁ፣</para>
+  <para style="q2" vid="JOL 2:27">እንደ እኔም ያለ፣ ሌላ እንደሌለ ታውቃላችሁ፤</para>
+  <para style="q1" vid="JOL 2:27">ሕዝቤም ከእንግዲህ ወዲያ አያፍርም።<verse eid="JOL 2:27"/></para>
+  <para style="s1">የእግዚአብሔር ቀን</para>
+  <para style="q1">
+    <verse number="28" style="v" sid="JOL 2:28"/>“ከዚህም በኋላ፣</para>
+  <para style="q2" vid="JOL 2:28">መንፈሴን በሥጋ ለባሽ ሁሉ ላይ አፈስሳለሁ፤</para>
+  <para style="q1" vid="JOL 2:28">ወንዶችና ሴቶች ልጆቻችሁ ትንቢት ይናገራሉ፤</para>
+  <para style="q2" vid="JOL 2:28">ሽማግሌዎቻችሁ ሕልም ያልማሉ፤</para>
+  <para style="q2" vid="JOL 2:28">ጕልማሶቻችሁም ራእይ ያያሉ።<verse eid="JOL 2:28"/></para>
+  <para style="q1">
+    <verse number="29" style="v" sid="JOL 2:29"/>በእነዚያ ቀናት በወንዶችና በሴቶች ባሪያዎች ላይ እንኳ፣</para>
+  <para style="q2" vid="JOL 2:29">መንፈሴን አፈስሳለሁ።<verse eid="JOL 2:29"/></para>
+  <para style="q1">
+    <verse number="30" style="v" sid="JOL 2:30"/>ድንቆችን በሰማያት፣</para>
+  <para style="q2" vid="JOL 2:30">እንዲሁም በምድር፣</para>
+  <para style="q2" vid="JOL 2:30">ደምና እሳት፣ የጢስም ዐምድ አሳያለሁ።<verse eid="JOL 2:30"/></para>
+  <para style="q1">
+    <verse number="31" style="v" sid="JOL 2:31"/>ታላቁና የሚያስፈራው <char style="nd">የእግዚአብሔር</char> ቀን ከመምጣቱ በፊት፣</para>
+  <para style="q2" vid="JOL 2:31">ፀሓይ ትጨልማለች፤</para>
+  <para style="q2" vid="JOL 2:31">ጨረቃም ወደ ደም ትለወጣለች።<verse eid="JOL 2:31"/></para>
+  <para style="q1">
+    <verse number="32" style="v" sid="JOL 2:32"/>
+    <char style="nd">የእግዚአብሔርን</char> ስም የሚጠራ ሁሉ፣</para>
+  <para style="q2" vid="JOL 2:32">እርሱ ይድናል፤</para>
+  <para style="q1" vid="JOL 2:32">
+    <char style="nd">እግዚአብሔርም</char> እንዳለው፣</para>
+  <para style="q2" vid="JOL 2:32">በጽዮን ተራራና በኢየሩሳሌም፣</para>
+  <para style="q2" vid="JOL 2:32">መድኀኒት ይገኛል፤</para>
+  <para style="q1" vid="JOL 2:32">ከትሩፋኑም መካከል</para>
+  <para style="q2" vid="JOL 2:32">
+    <char style="nd">እግዚአብሔር</char> የጠራቸው በዚያ ይገኛሉ።”<verse eid="JOL 2:32"/></para>
+  <chapter eid="JOL 2"/>
+  <chapter number="3" style="c" sid="JOL 3"/>
+  <para style="s1">የተፈረደባቸው ሕዝቦች</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="JOL 3:1"/>“በዚያ ዘመን፣ በዚያ ጊዜ፣</para>
+  <para style="q2" vid="JOL 3:1">የይሁዳንና የኢየሩሳሌምን ምርኮ ስመልስ፣<verse eid="JOL 3:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="JOL 3:2"/>አሕዛብን ሁሉ እሰበስባለሁ፤</para>
+  <para style="q2" vid="JOL 3:2">ወደ ኢዮሣፍጥም<note caller="+" style="f"><char style="fr" closed="false">3፥2 </char><char style="fqa" closed="false">ኢዮሣፍጥ፣ </char><char style="ft" closed="false">የስሙ ትርጕም </char><char style="fqa" closed="false">እግዚአብሔር ይፈርዳል </char><char style="ft" closed="false">ማለት ነው፤ 12 ላይም እንዲሁ፤</char></note> ሸለቆ አወርዳቸዋለሁ፤</para>
+  <para style="q1" vid="JOL 3:2">ስለ ርስቴ፣ ስለ ሕዝቤ፣ ስለ እስራኤል፣</para>
+  <para style="q2" vid="JOL 3:2">በዚያ ልፈርድባቸው እገባለሁ፤</para>
+  <para style="q1" vid="JOL 3:2">ምድሬን ከፋፍለዋል፤</para>
+  <para style="q2" vid="JOL 3:2">ሕዝቤንም በሕዝቦች መካከል በታትነዋልና።<verse eid="JOL 3:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="JOL 3:3"/>በሕዝቤ ላይ ዕጣ ተጣጣሉ፤</para>
+  <para style="q2" vid="JOL 3:3">ወንዶች ልጆችን በዝሙት ዐዳሪዎች ለወጡ፤</para>
+  <para style="q2" vid="JOL 3:3">ወይን ጠጅ ለመጠጣትም፣</para>
+  <para style="q2" vid="JOL 3:3">ሴቶች ልጆችን ሸጡ።<verse eid="JOL 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JOL 3:4"/>“ጢሮስና ሲዶና እንዲሁም እናንተ የፍልስጥኤም ግዛቶች ሁሉ ሆይ፤ እንግዲህ በእኔ ላይ ምን አላችሁ? ስላደረግሁት ነገር ብድር ልትመልሱልኝ ነውን? የምትመልሱልኝ ከሆነ፣ በፍጥነትና በችኰላ እናንተ ያደረጋችሁትን በራሳችሁ ላይ መልሼ አደርግባችኋለሁ። <verse eid="JOL 3:4"/><verse number="5" style="v" sid="JOL 3:5"/>ብሬንና ወርቄን ወስዳችኋል፤ የተመረጠውንም ንብረቴን ተሸክማችሁ ወደ ቤተ መቅደሳችሁ አስገብታችኋልና። <verse eid="JOL 3:5"/><verse number="6" style="v" sid="JOL 3:6"/>ከገዛ ምድራቸው ልታርቋቸው፣ የይሁዳንና የኢየሩሳሌምን ሰዎች ለግሪኮች ሸጣችኋቸው።<verse eid="JOL 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="JOL 3:7"/>“እነሆ፤ እነርሱን ከሸጣችሁባቸው ቦታዎች አነሣሣቸዋለሁ፤ እናንተም ያደረጋችሁትን በገዛ ራሳችሁ ላይ እመልስባችኋለሁ። <verse eid="JOL 3:7"/><verse number="8" style="v" sid="JOL 3:8"/>ወንዶችንና ሴቶች ልጆቻችሁን ለይሁዳ ሰዎች ሸጣለሁ፤ እነርሱም መልሰው በሩቅ ላሉት ለሳባ ሰዎች ይሸጧቸዋል፤” <char style="nd">እግዚአብሔር</char> ይህን ተናግሯልና።<verse eid="JOL 3:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="JOL 3:9"/>በሕዝቦች መካከል ይህን ዐውጁ፤</para>
+  <para style="q2" vid="JOL 3:9">ለጦርነት ተዘጋጁ፤</para>
+  <para style="q1" vid="JOL 3:9">ተዋጊዎችን አነሣሡ፤</para>
+  <para style="q2" vid="JOL 3:9">ጦረኞችም ሁሉ ቀርበው ያጥቁ።<verse eid="JOL 3:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="JOL 3:10"/>ማረሻችሁ ሰይፍ፣</para>
+  <para style="q2" vid="JOL 3:10">ማጭዳችሁም ጦር እንዲሆን ቀጥቅጡት፤</para>
+  <para style="q1" vid="JOL 3:10">ደካማውም ሰው፣</para>
+  <para style="q2" vid="JOL 3:10">“እኔ ብርቱ ነኝ” ይበል።<verse eid="JOL 3:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="JOL 3:11"/>እናንት በዙሪያ ያላችሁ ሕዝቦች ሁላችሁ፤</para>
+  <para style="q2" vid="JOL 3:11">ፈጥናችሁ ኑ፤ በዚያም ተሰብሰቡ።</para>
+  <para style="b" vid="JOL 3:11"/>
+  <para style="q1" vid="JOL 3:11">
+    <char style="nd">እግዚአብሔር</char> ሆይ፤ ተዋጊዎችህን ወደዚያ አውርድ!<verse eid="JOL 3:11"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v" sid="JOL 3:12"/>“ሕዝቦች ይነሡ፤</para>
+  <para style="q2" vid="JOL 3:12">ወደ ኢዮሣፍጥም ሸለቆ ፈጥነው ይውረዱ፤</para>
+  <para style="q1" vid="JOL 3:12">ዙሪያውን ባሉት ሕዝቦች ሁሉ ላይ ልፈርድ፣</para>
+  <para style="q2" vid="JOL 3:12">በዚያ እቀመጣለሁና።<verse eid="JOL 3:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="JOL 3:13"/>ማጭዱን ስደዱ፤</para>
+  <para style="q2" vid="JOL 3:13">መከሩ ደርሷልና፤</para>
+  <para style="q1" vid="JOL 3:13">ኑ ወይኑን ርገጡ፤</para>
+  <para style="q2" vid="JOL 3:13">የወይን መጭመቂያው ሞልቶ፣</para>
+  <para style="q2" vid="JOL 3:13">ከጕድጓዶቹም ተርፎ ፈስሷልና፤</para>
+  <para style="q1" vid="JOL 3:13">ክፋታቸው እንደዚህ ታላቅ ነው።”<verse eid="JOL 3:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="JOL 3:14"/>ብዙ ሕዝብ፣ በጣም ብዙ ሕዝብ፣</para>
+  <para style="q2" vid="JOL 3:14">ፍርድ በሚሰጥበት ሸለቆ ተሰብስቧል፤</para>
+  <para style="q1" vid="JOL 3:14">ፍርድ በሚሰጥበት ሸለቆ፣</para>
+  <para style="q2" vid="JOL 3:14">
+    <char style="nd">የእግዚአብሔር</char> ቀን ቀርቧልና።<verse eid="JOL 3:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="JOL 3:15"/>ፀሓይና ጨረቃ ይጨልማሉ፤</para>
+  <para style="q2" vid="JOL 3:15">ከዋክብትም ከእንግዲህ አያበሩም።<verse eid="JOL 3:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="JOL 3:16"/>
+    <char style="nd">እግዚአብሔር</char> ከጽዮን ጮኾ ይናገራል፤</para>
+  <para style="q2" vid="JOL 3:16">ከኢየሩሳሌም ያንጐደጕዳል፤</para>
+  <para style="q2" vid="JOL 3:16">ሰማይና ምድርም ይናወጣሉ፤</para>
+  <para style="q1" vid="JOL 3:16">
+    <char style="nd">እግዚአብሔር</char> ግን ለሕዝቡ መሸሸጊያ፣</para>
+  <para style="q2" vid="JOL 3:16">ለእስራኤልም ልጆች መጠጊያ ይሆናል።<verse eid="JOL 3:16"/></para>
+  <para style="s1">በረከት ለእግዚአብሔር ሕዝብ</para>
+  <para style="q1">
+    <verse number="17" style="v" sid="JOL 3:17"/>“ከዚያም እኔ አምላካችሁ <char style="nd">እግዚአብሔር</char>፣</para>
+  <para style="q2" vid="JOL 3:17">በቅዱሱ ተራራዬ በጽዮን እንደምኖር ታውቃላችሁ፤</para>
+  <para style="q1" vid="JOL 3:17">ኢየሩሳሌም የተቀደሰች ትሆናለች፤</para>
+  <para style="q2" vid="JOL 3:17">ከእንግዲህም ወዲያ ባዕዳን አይወርሯትም።<verse eid="JOL 3:17"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v" sid="JOL 3:18"/>“በዚያ ጊዜ ተራሮች፣ አዲስ የወይን ጠጅ ያንጠባጥባሉ፤</para>
+  <para style="q2" vid="JOL 3:18">ኰረብቶችም ወተት ያፈስሳሉ፤</para>
+  <para style="q2" vid="JOL 3:18">በይሁዳ ያሉ ሸለቆዎች<note caller="+" style="f"><char style="fr" closed="false">3፥18 </char><char style="ft" closed="false">ወይም </char><char style="fqa" closed="false">የሸጢም ሸለቆ</char></note> ሁሉ ውሃ ያጐርፋሉ፤</para>
+  <para style="q1" vid="JOL 3:18">
+    <char style="nd">ከእግዚአብሔር</char> ቤት ምንጭ ይፈልቃል፤</para>
+  <para style="q2" vid="JOL 3:18">የሰጢምን ሸለቆ ያጠጣል።<verse eid="JOL 3:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="JOL 3:19"/>ግብፅ ባድማ፣</para>
+  <para style="q2" vid="JOL 3:19">ኤዶምም ምድረ በዳ ትሆናለች፤</para>
+  <para style="q1" vid="JOL 3:19">በምድራቸው ንጹሕ ደም በማፍሰስ፣</para>
+  <para style="q2" vid="JOL 3:19">በይሁዳ ሕዝብ ላይ ግፍ ፈጽመዋልና።<verse eid="JOL 3:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="JOL 3:20"/>ይሁዳ ለዘላለም፣</para>
+  <para style="q2" vid="JOL 3:20">ኢየሩሳሌምም ለትውልድ ሁሉ መኖሪያ ትሆናለች፤<verse eid="JOL 3:20"/></para>
+  <para style="q1">
+    <verse number="21" style="v" sid="JOL 3:21"/>ደማቸውን እበቀላለሁ፤</para>
+  <para style="q2" vid="JOL 3:21">በደለኛውንም ንጹሕ አላደርግም።”</para>
+  <para style="b" vid="JOL 3:21"/>
+  <para style="qc" vid="JOL 3:21">
+    <char style="nd">እግዚአብሔር</char> በጽዮን ይኖራል!<verse eid="JOL 3:21"/></para>
+  <chapter eid="JOL 3"/>
+</usx>

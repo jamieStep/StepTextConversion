@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="SNG" style="id">- Bibelen på hverdagsdansk (The Bible in Everyday Danish)</book>
+  <para style="rem">Copyright © 1985, 1992, 2005, 2013, 2015 by Biblica, Inc.®</para>
+  <para style="h">HØJSANGEN</para>
+  <para style="toc1">Højsangen</para>
+  <para style="toc2">Højsangen</para>
+  <para style="toc3">Højs.</para>
+  <para style="mt1">Højsangen</para>
+  <para style="imt">Indledning</para>
+  <para style="ip">
+    <char style="bd">Forfatter og datering:</char> Højsangen er formodentlig skrevet af kong Salomon i det 10. årh. f.Kr.</para>
+  <para style="ip">
+    <char style="bd">Indhold og budskab:</char> Bogen indeholder en række elskovsdigte, hvor en kvinde og en mand beskriver og erklærer deres kærlighed til hinanden. Somme tider henvender de sig til hinanden, andre gange til vennerne eller til sig selv. Af og til mindes de fortiden. Oversættelsen har klargjort, hvem der taler, selv om der er nogle steder, hvor det ikke kan afgøres med sikkerhed. Ingen anden bog i Bibelen har været genstand for så mange forskellige fortolkninger som Højsangen. Frem til midten af det 19. årh. var den <char style="em">allegoriske</char> fortolkning fremherskende, dvs. bogen blev opfattet som en billedtale, der beskriver en åndelig virkelighed. Visse jødiske fortolkere opfattede bogen som en fremstilling af det jødiske folks historie fra overgangen over Det Røde Hav til Messias’ komme. Luther mente, at der var tale om det ideelle forhold mellem en hersker og hans undersåtter. Middelalderens lærde så i bogen en beskrivelse af forholdet mellem Kristus og Jomfru Maria. Den mest udbredte, kristne, allegoriske fortolkning, den <char style="em">mystiske</char>, som har overlevet op til vor tid, tolker bogen som kærlighedsforholdet mellem Kristus og kirken. Den <char style="em">realistiske</char> opfattelse, at bogen skal opfattes bogstaveligt som beskrivelsen af et kærlighedsforhold mellem to mennesker, er nu ved at vinde frem, men det udelukker ikke, at den stadig også kan fortolkes allegorisk.</para>
+  <para style="ip">Kap. 8,6-7 anses for at være et af bogens højdepunkter.</para>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Det følgende er Salomons bedste sangskat.</para>
+  <para style="s1">Første sang: Gensidig kærlighed</para>
+  <para style="sp">Den unge pige til den unge mand:</para>
+  <para style="q1">
+    <verse number="2" style="v"/>„Kys mig! Kys mig!</para>
+  <para style="q2">Din kærlighed er bedre end vin.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Hvor du dufter skønt.</para>
+  <para style="q2">Bare jeg hører dit navn, bliver jeg fuld af forventning.</para>
+  <para style="q3">Ikke underligt, at de unge piger falder for dig.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Kom, tag min hånd og lad os løbe!</para>
+  <para style="q2">Før mig til dit kongelige sovekammer!”</para>
+  <para style="sp">Jerusalems unge piger til den unge mand:<note caller="+" style="f"><char style="fr" closed="false">1,4 </char><char style="ft" closed="false">Teksten gør det ikke helt klart, hvem der her taler til hvem.</char></note></para>
+  <para style="q1">„Også vi fryder os over dig.</para>
+  <para style="q2">Din kærlighed er bedre end vin.”</para>
+  <para style="sp">Den unge pige til den unge mand:</para>
+  <para style="q2">„Tænk, de er alle forelskede i dig!”</para>
+  <para style="sp">Den unge pige til de andre piger:</para>
+  <para style="q1">
+    <verse number="5-6" style="v"/>„Hør her, I lyshudede piger fra Jerusalem,</para>
+  <para style="q2">lad være med at stirre sådan på mig,</para>
+  <para style="q3">bare fordi jeg er mørkere end jer.</para>
+  <para style="q1">Jeg er mørk og smuk,</para>
+  <para style="q2">mørk som teltene i Kedars ørken,</para>
+  <para style="q3">smuk som Salomons telte.</para>
+  <para style="q1">Min hud blev brændt i den bagende sol,</para>
+  <para style="q2">fordi mine brødre var skrappe imod mig.</para>
+  <para style="q1">De sendte mig ud for at passe vinmarkerne</para>
+  <para style="q2">i stedet for at passe min egen ‚vingård’.”</para>
+  <para style="sp">Den unge pige til den unge mand:</para>
+  <para style="q1">
+    <verse number="7" style="v"/>„Sig mig, min elskede: Hvor græsser du din hjord i dag?</para>
+  <para style="q2">Hvor lader du dem hvile sig i middagsheden?</para>
+  <para style="q1">Fortæl mig, hvor du er, så jeg ikke behøver at forklæde mig</para>
+  <para style="q2">og gå rundt og lede efter dig blandt hyrderne.”</para>
+  <para style="sp">Den unge mand:</para>
+  <para style="q1">
+    <verse number="8" style="v"/>„Hvis du ikke kender vejen, du dejligste af alle kvinder,</para>
+  <para style="q2">så følg blot dyrenes spor til hyrdernes telte</para>
+  <para style="q3">og lad dine gedekid græsse der.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Min elskede, du er vildt bedårende</para>
+  <para style="q2">som et prægtigt hoppeføl fra Faraos stalde.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Dine kinder er yndige i glansen fra dine øreringe,</para>
+  <para style="q2">din hals er fortryllende med kæden af ædelsten.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Jeg vil få lavet dig en guldsnor med perler af sølv.”</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="12" style="v"/>„Min parfumes vellugt omgiver kongen,</para>
+  <para style="q2">når han ligger ved det festdækkede bord.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Min elskede er som en pose med myrra,</para>
+  <para style="q2">der hviler imellem mine bryster.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Min elskede er som hennablomster</para>
+  <para style="q2">fra de frodige vinmarker ved En-Gedi.”</para>
+  <para style="sp">Den unge mand:</para>
+  <para style="q1">
+    <verse number="15" style="v"/>„Du er så smuk, min elskede, så yndig.</para>
+  <para style="q2">Dine øjne er blide som duer.”</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="16" style="v"/>„Hvor ser du dejlig ud, min elskede,</para>
+  <para style="q2">som vi ligger her i det grønne græs</para>
+  <para style="q3">
+    <verse number="17" style="v"/>i skyggen af cedertræ og cypres.”</para>
+  <chapter number="2" style="c"/>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>„Jeg er som en rose fra Saronsletten,</para>
+  <para style="q2">som en lilje fra den frodige dal.”</para>
+  <para style="sp">Den unge mand:</para>
+  <para style="q1">
+    <verse number="2" style="v"/>„Du er som en lilje blandt torne, min elskede,</para>
+  <para style="q2">langt smukkere end de andre piger.”</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="3" style="v"/>„Og du, min elskede, er som et æbletræ<note caller="+" style="f"><char style="fr" closed="false">2,3 </char><char style="ft" closed="false">Det vides ikke med sikkerhed, om det hebraiske ord henviser til æbler, ferskener eller abrikoser. Det mest sandsynlige er nok abrikos.</char></note> i en fyrreskov,</para>
+  <para style="q2">langt ædlere end de andre mænd.</para>
+  <para style="q1">Jeg nyder at sidde i din skygge</para>
+  <para style="q2">og smage dine søde kys.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Du fører mig til bords med kærlige blikke.</para>
+  <para style="q2">
+    <verse number="5" style="v"/>Åh, styrk mig med rosinkager og æbler,</para>
+  <para style="q3">for jeg er syg af kærlighed.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Din venstre arm er under mit hoved,</para>
+  <para style="q2">med din højre omfavner du mig.”</para>
+  <para style="sp">Den unge pige til de andre piger:</para>
+  <para style="q1">
+    <verse number="7" style="v"/>„Jerusalems unge piger,</para>
+  <para style="q2">lov mig ved gazeller og markens dådyr,</para>
+  <para style="q3">at I ikke vækker kærligheden, før tiden er inde.”</para>
+  <para style="s1">Anden sang: De elskende finder sammen</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="8-9" style="v"/>„Jeg kan høre min elskedes stemme.</para>
+  <para style="q2">Han er på vej hen til mig!</para>
+  <para style="q1">Se, dér kommer han løbende over bjergene,</para>
+  <para style="q2">springende ned ad bakkerne som en gazelle.</para>
+  <para style="q1">Se, nu står han uden for muren,</para>
+  <para style="q2">han kigger ind gennem vinduesgitteret.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Min elskede siger til mig:</para>
+  <para style="q2">‚Stå op, min smukke! Kom med!</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Se, vinteren er forbi, nu er det forår.</para>
+  <para style="q2">
+    <verse number="12" style="v"/>Blomster skyder op af jorden,</para>
+  <para style="q1">fuglene synger af glæde,</para>
+  <para style="q2">turtelduerne kurrer overalt i landet.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>De første figner er kommet,</para>
+  <para style="q2">vinrankens blomster spreder deres duft.</para>
+  <para style="q1">Stå op, min elskede!</para>
+  <para style="q2">Kom, du skønne, kom med mig!’ ”</para>
+  <para style="sp">Den unge mand:</para>
+  <para style="q1">
+    <verse number="14" style="v"/>„Min due, hvorfor gemmer du dig bag klippen?</para>
+  <para style="q2">Lad mig se dit ansigt og høre din stemme,</para>
+  <para style="q3">for din stemme er bedårende, og dit ansigt er yndigt.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Lad os fange alle de små ræve,</para>
+  <para style="q2">som vil ødelægge vores kærligheds blomstrende vingård.”</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="16" style="v"/>„Min elskede, du er min, og jeg er din.</para>
+  <para style="q1">Du græsser din flok mellem liljerne,</para>
+  <para style="q2">
+    <verse number="17" style="v"/>til dagen bliver sval og skyggerne lange.</para>
+  <para style="q1">Kom springende tilbage som en gazelle</para>
+  <para style="q2">hen over de ujævne bakkeskråninger.”</para>
+  <chapter number="3" style="c"/>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>„En nat lå jeg i min seng og drømte om min elskede.</para>
+  <para style="q2">Jeg længtes efter ham.</para>
+  <para style="q3">Jeg lå og ventede på ham, men han kom ikke.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Så besluttede jeg at gå ud i byen</para>
+  <para style="q2">og lede efter ham på gader og stræder,</para>
+  <para style="q3">men jeg kunne ikke finde ham.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Jeg mødte vægterne på deres runde og spurgte:</para>
+  <para style="q2">‚Har I mon set ham, jeg elsker?’</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Kort efter fandt jeg min elskede.</para>
+  <para style="q2">Jeg klyngede mig til ham og slap ham ikke,</para>
+  <para style="q1">før jeg havde ført ham til min mors hus,</para>
+  <para style="q2">ind i det værelse, hvor jeg selv engang blev undfanget.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Jerusalems unge piger, lov mig ved gazeller og markens dådyr,</para>
+  <para style="q2">at I ikke vækker kærligheden, før tiden er inde!”</para>
+  <para style="s1">Tredje sang: Bryllupsfesten</para>
+  <para style="sp">Jerusalems unge piger:</para>
+  <para style="q1">
+    <verse number="6" style="v"/>„Hvad er det, der nærmer sig fra ørkenen</para>
+  <para style="q2">omgivet af noget, der ligner røgsøjler?</para>
+  <para style="q1">Det dufter af røgelse og myrra,</para>
+  <para style="q2">de dyreste parfumer, der kan købes for penge.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Se, det er Salomons bærestol,</para>
+  <para style="q2">eskorteret af tres af Israels mægtigste mænd.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>De er alle bevæbnet med sværd, alle er de erfarne krigere,</para>
+  <para style="q2">alle har sværd ved siden til beskyttelse mod natlige farer.</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Salomons kongelige bærestol er bygget af udsøgt træ fra Libanon.</para>
+  <para style="q2">
+    <verse number="10" style="v"/>Bærestængerne er belagt med sølv,</para>
+  <para style="q3">og baldakinen er broderet med guld.</para>
+  <para style="q1">Sædet er polstret med kostbart, purpurfarvet uld</para>
+  <para style="q2">og betrukket med læder af Jerusalems unge piger.<note caller="+" style="f"><char style="fr" closed="false">3,10 </char><char style="ft" closed="false">Eller: „Dekoreret med ædelsten.” Teksten er uklar.</char></note></para>
+  <para style="q1">
+    <verse number="11" style="v"/>Kom og se, I Zions døtre:</para>
+  <para style="q1">Kong Salomon bærer en krans,</para>
+  <para style="q2">som hans mor har sat på hans hoved.</para>
+  <para style="q1">Det er hans bryllupsdag,</para>
+  <para style="q2">en stor og festlig dag.”</para>
+  <chapter number="4" style="c"/>
+  <para style="sp">Den unge mand:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>„Hvor er du yndig, min elskede, hvor er du smuk.</para>
+  <para style="q2">Dine øjne bag sløret er blide som duer.</para>
+  <para style="q1">Dit hår bølger ned som en flok sorte geder</para>
+  <para style="q2">på en bakkeskråning i Gilead.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Dine tænder er hvide som klippede, nyvaskede får;</para>
+  <para style="q2">hver har sin tvilling, ingen står alene.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Dine læber er som purpurbånd.</para>
+  <para style="q2">Hvor er din mund dog smuk.</para>
+  <para style="q1">Dine kinder bag sløret er røde</para>
+  <para style="q2">som to halve granatæbler,</para>
+  <para style="q1">
+    <verse number="4" style="v"/>din hals er rank som Davidstårnet,</para>
+  <para style="q2">smykket med tusinde helteskjolde.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Dine bryster er som to gazelletvillinger,</para>
+  <para style="q2">der græsser mellem liljer.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Når dagen bliver sval og skyggerne lange,</para>
+  <para style="q2">vil jeg gå til myrrabjerget, til højen med den krydrede duft.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Hvor er du smuk, min elskede,</para>
+  <para style="q2">aldeles perfekt fra top til tå.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Forlad dit hjem i Libanon, min brud,</para>
+  <para style="q2">stig ned fra Amanabjergets tinde.</para>
+  <para style="q1">Sig farvel til Hermons<note caller="+" style="f"><char style="fr" closed="false">4,8 </char><char style="ft" closed="false">Hermon kaldes også „Senir”, jf. <char style="xt"><ref loc="DEU 3:9">5.Mos. 3,9</ref></char>.</char></note> højdedrag,</para>
+  <para style="q2">hvor løver huserer, og leoparder ligger på lur.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Du har stjålet mit hjerte, min elskede, min brud,</para>
+  <para style="q2">indfanget mig med dit fortryllende blik,</para>
+  <para style="q3">der stråler om kap med perlerne om din hals.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Hvor er din kærlighed fortryllende, min elskede, min brud,</para>
+  <para style="q2">langt bedre end vin.</para>
+  <para style="q3">Du dufter dejligere end alverdens aromatiske olier.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Dine kys er som honning, min brud,</para>
+  <para style="q2">fra din tunge flyder mælk og honning.</para>
+  <para style="q3">Duften fra dit tøj er som duften af Libanons cedertræer.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Min elskede, min brud, du er som en hemmelig have</para>
+  <para style="q2">med en brønd, som kun jeg har lov at drikke af.</para>
+  <para style="q1">
+    <verse number="13-14" style="v"/>Du er som en frugthave med de mest udsøgte frugter</para>
+  <para style="q2">og duftende krydderurter,</para>
+  <para style="q1">med et væld af buske og træer,</para>
+  <para style="q2">med myrra og alverdens aromatiske dufte.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Brønden i min have er som en kilde med rindende vand,</para>
+  <para style="q2">det klare og friske bjergvand fra Libanon.”</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="16" style="v"/>„Vågn op til dåd, du nordenvind!</para>
+  <para style="q2">Kom, søndenvind, og blæs gennem min have,</para>
+  <para style="q1">så dens vellugt fortryller min elskede,</para>
+  <para style="q2">så han kommer ind i sin have og smager dens udsøgte frugt.”</para>
+  <chapter number="5" style="c"/>
+  <para style="sp">Den unge mand:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>„Jeg er kommet til min have, min elskede, min brud.</para>
+  <para style="q2">Jeg nyder din myrra og balsam,</para>
+  <para style="q1">jeg spiser din honning og nektar,</para>
+  <para style="q2">jeg drikker vin og mælk fra din mund.”</para>
+  <para style="sp">Jerusalems unge piger:</para>
+  <para style="q1">„Ja, I der elsker hinanden,</para>
+  <para style="q2">spis og drik så meget kærlighed, I vil.”</para>
+  <para style="s1">Fjerde sang: Frygten for at miste sin elskede</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="2" style="v"/>„En nat jeg lå og sov, havde jeg en drøm.</para>
+  <para style="q2">Jeg hørte min elskede banke på døren.</para>
+  <para style="q1">‚Luk op, min elskede, min skat, min due!’ hviskede han.</para>
+  <para style="q2">‚Mit hår og ansigt er vådt af nattens fugtighed.’</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Men jeg svarede: ‚Jeg har allerede taget tøjet af.</para>
+  <para style="q2">Skal jeg nu tage det på igen?</para>
+  <para style="q1">Jeg har vasket mine fødder.</para>
+  <para style="q2">Skal jeg snavse dem til igen?’</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Min elskede stak hånden ind ad hullet i døren</para>
+  <para style="q2">og forsøgte at låse den op.</para>
+  <para style="q1">Mit hjerte bankede af længsel,</para>
+  <para style="q2">
+    <verse number="5" style="v"/>og jeg sprang op for at åbne døren for ham.</para>
+  <para style="q1">Mine hænder dryppede af myrra,</para>
+  <para style="q2">da jeg rørte ved håndtaget.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Jeg åbnede for min elskede—</para>
+  <para style="q2">men han var der ikke!</para>
+  <para style="q1">Jeg var ude af mig selv, fordi han var forsvundet.</para>
+  <para style="q2">Jeg løb ud for at lede efter ham, men fandt ham ikke.</para>
+  <para style="q1">Jeg kaldte på ham,</para>
+  <para style="q2">men der var intet svar.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Vægterne fandt mig i den forfatning på deres runde i byen.</para>
+  <para style="q2">De slog mig og rev kappen af mig.”<note caller="+" style="f"><char style="fr" closed="false">5,7 </char><char style="ft" closed="false">Det er ikke klart ud fra teksten, hvornår eller om drømmen går over i virkelighed. </char></note></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>„Jerusalems unge piger, lov mig, at hvis I ser min elskede,</para>
+  <para style="q2">så fortæl ham, at jeg er syg af kærlighed!”</para>
+  <para style="sp">Jerusalems unge piger:</para>
+  <para style="q1">
+    <verse number="9" style="v"/>„Du smukkeste af alle kvinder, sig os,</para>
+  <para style="q2">hvad fortrin har din elskede frem for andre mænd?</para>
+  <para style="q1">Hvad er der særligt ved ham,</para>
+  <para style="q2">siden du beder os fortælle ham om din kærlighed?”</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="10" style="v"/>„Min elskede er rødmosset</para>
+  <para style="q2">og har en stærkere udstråling end tusind andre mænd!</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Hans ansigt stråler som det pureste guld,</para>
+  <para style="q2">hans hårlokker er sorte som ravnen.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Hans øjne er som duer, der bader i en sø af mælk,</para>
+  <para style="q2">omkranset af juveler.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Hans kinder er som bede med aromatiske planter.</para>
+  <para style="q2">Hans læber er som liljer, der drypper af myrra.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Hans arme er som guldstænger, oversået med rubiner.</para>
+  <para style="q2">Hans overkrop er som skinnende elfenben, besat med safirer.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Hans ben er som marmorsøjler med fødder af guld.</para>
+  <para style="q1">Hans fremtoning er majestætisk som Libanons bjerge,</para>
+  <para style="q2">fyrstelig som et cedertræ.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Hans mund er fuld af sødme,</para>
+  <para style="q2">han er helt igennem vidunderlig.</para>
+  <para style="q3">Sådan er min ven, min elskede.”</para>
+  <chapter number="6" style="c"/>
+  <para style="sp">Jerusalems unge piger:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>„Du smukkeste blandt kvinder, sig os,</para>
+  <para style="q2">hvor din elskede er gået hen,</para>
+  <para style="q3">så vi kan hjælpe dig med at finde ham!”</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="2" style="v"/>„Min elskede er gået ned i sin have til bedene med krydderurter.</para>
+  <para style="q2">Der græsser han sin flok og plukker liljer.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Min elskede er min, og jeg er hans.</para>
+  <para style="q2">Han græsser sin flok mellem liljerne.”</para>
+  <para style="s1">Femte sang: De nygiftes glæde over hinanden</para>
+  <para style="sp">Den unge mand:</para>
+  <para style="q1">
+    <verse number="4" style="v"/>„Min elskede, du er yndig som kongebyen Tirtza,</para>
+  <para style="q2">bedårende som Jerusalem,</para>
+  <para style="q3">ærefrygtindgydende som en række bannere.<note caller="+" style="f"><char style="fr" closed="false">6,4 </char><char style="ft" closed="false">Eller „som en marcherende hær.”</char></note></para>
+  <para style="q1">
+    <verse number="5" style="v"/>Se ikke så direkte på mig,</para>
+  <para style="q2">for dine øjnes skønhed overvælder mig.</para>
+  <para style="q1">Dit hår bølger nedad som en flok sorte geder</para>
+  <para style="q2">på en bakkeskråning i Gilead.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Dine tænder er hvide som en nyvasket fåreflok;</para>
+  <para style="q2">hver har sin tvilling, ingen står alene.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Dine kinder bag sløret er røde</para>
+  <para style="q2">som to halve granatæbler.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Om jeg så havde tres dronninger og firs medhustruer</para>
+  <para style="q2">foruden utallige tjenestepiger,</para>
+  <para style="q1">
+    <verse number="9" style="v"/>ville du overgå dem alle i skønhed, min due—</para>
+  <para style="q2">du er fuldkommen!</para>
+  <para style="q1">Du er din mors eneste datter,</para>
+  <para style="q2">du er hendes yndling,</para>
+  <para style="q3">og hun har kun godt at sige om dig.</para>
+  <para style="q1">Byens piger priser din skønhed, når de ser dig,</para>
+  <para style="q2">dronninger og medhustruer lovpriser din charme og ynde.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>‚Hvem er skøn som morgenrøden,’ spørger de,</para>
+  <para style="q2">‚smuk som månen, strålende som solen,</para>
+  <para style="q3">og ærefrygtindgydende som en række bannere?’<note caller="+" style="f"><char style="fr" closed="false">6,10 </char><char style="ft" closed="false">Eller „en hær under banner”.</char></note></para>
+  <para style="q1">
+    <verse number="11" style="v"/>Jeg gik ned gennem nøddehegnet for at finde blomster i dalen,</para>
+  <para style="q2">for at se, om der var nye skud på vinrankerne</para>
+  <para style="q3">og blomsterknopper på granatæbletræerne.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Jeg var ude af mig selv af kærlighed.</para>
+  <para style="q2">Giv mig dér din dejlige ‚myrra’, du fyrstedatter.”<note caller="+" style="f"><char style="fr" closed="false">6,12 </char><char style="ft" closed="false">Teksten er uklar. Jf. 7,11-13.</char></note></para>
+  <chapter number="7" style="c"/>
+  <para style="sp">Jerusalems unge piger:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>„Drej dig, Shulamit,<note caller="+" style="f"><char style="fr" closed="false">7,1 </char><char style="ft" closed="false">Eller „pigen fra Shunem” (måske Abishag?). Der er mindst otte forskellige fortolkninger af, hvad ordet kan betyde.</char></note> drej dig,</para>
+  <para style="q2">så vi kan se dig danse endnu engang.”</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">„Hvorfor vil I have mig til at danse rundt</para>
+  <para style="q2">mellem de to rækker af dansere?”</para>
+  <para style="sp">Den unge mand:</para>
+  <para style="q1">
+    <verse number="2" style="v"/>„Dine dansetrin i sandalerne er så yndefulde,</para>
+  <para style="q2">oh, fyrstedatter!</para>
+  <para style="q1">Dine hofters kurver er et mesterværk af rang.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Din navle er så besnærende som en skål</para>
+  <para style="q2">fyldt med den fornemste vin.</para>
+  <para style="q1">Din mave er som en dynge hvede,</para>
+  <para style="q2">smukt omgærdet af liljer.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Dine bryster er som to gazelletvillinger.</para>
+  <para style="q2">
+    <verse number="5" style="v"/>Din hals er som et elfenbenstårn.</para>
+  <para style="q1">Dine øjne er klare og dybe</para>
+  <para style="q2">som Heshbons damme ved Bat-Rabbim-porten.</para>
+  <para style="q1">Din næse er fornem som Libanons tårn,</para>
+  <para style="q2">der kan ses helt ovre i Damaskus.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Dit hoved rejser sig majestætisk som Karmels bjerg,</para>
+  <para style="q2">dit hår skinner som det kostbare purpurstof.</para>
+  <para style="q1">Du har fortryllet en konge,</para>
+  <para style="q2">ja, fanget ham med en af dine hårlokker.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Hvor er du vidunderlig smuk, min elskede!</para>
+  <para style="q2">Hvor jeg nyder at se på dig!</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Du er slank som et palmetræ,</para>
+  <para style="q2">dine bryster er som daddelklaser nær palmens top.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Jeg vil bestige palmen</para>
+  <para style="q2">og gribe fat om dens frugt.</para>
+  <para style="q1">Dine bryster er som vindrueklaser,</para>
+  <para style="q2">din ånde som duften af abrikoser,<note caller="+" style="f"><char style="fr" closed="false">7,9 </char><char style="ft" closed="false">Eller æbler.</char></note></para>
+  <para style="q1">
+    <verse number="10" style="v"/>din mund giver mig udsøgt vin,</para>
+  <para style="q2">der flyder over mine læber og tænder.”</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="11" style="v"/>„Jeg er din, min elskede,</para>
+  <para style="q2">hende du begærer.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Kom min elskede, lad os tage ud på landet</para>
+  <para style="q2">og tilbringe natten under hennabuskene.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Lad os stå tidligt op og gå ud i vinmarkerne.</para>
+  <para style="q2">Lad os se, om der er nye skud på vinrankerne,</para>
+  <para style="q3">og om granatæbletræerne blomstrer.</para>
+  <para style="q1">Dér vil jeg give dig min kærlighed.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Kærlighedsplanten<note caller="+" style="f"><char style="fr" closed="false">7,14 </char><char style="ft" closed="false">Også kaldet „alrune” eller „mandragora”. Plantens frugter og rødder mentes at være et afrodisiakum og skulle desuden øge chancen for at blive gravid. Se <char style="xt"><ref loc="GEN 30:14-16">1.Mos. 30,14-16</ref></char>.</char></note> dufter,</para>
+  <para style="q2">og alle de dejligste frugter er lige for hånden,</para>
+  <para style="q1">både de grønne og de modne,</para>
+  <para style="q2">for jeg har gemt dem til dig, min elskede.</para>
+  <chapter number="8" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Hvis du havde været min bror,</para>
+  <para style="q2">som havde diet ved min mors bryst,</para>
+  <para style="q1">så kunne jeg have kysset dig i alles påsyn,</para>
+  <para style="q2">uden at nogen ville blive forarget.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Så ville jeg have taget dig med til min mors hus,</para>
+  <para style="q2">hende som oplærte mig,</para>
+  <para style="q1">og have givet dig krydret vin og granatæblemost.”</para>
+  <para style="sp">Den unge pige til de andre piger:</para>
+  <para style="q1">
+    <verse number="3" style="v"/>„Han lagde sin venstre hånd under mit hoved</para>
+  <para style="q2">og omfavnede mig med sin højre.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Jerusalems unge piger,</para>
+  <para style="q2">lov mig, at I ikke vækker kærligheden, før tiden er inde.”</para>
+  <para style="sp">Jerusalems unge piger til hinanden:</para>
+  <para style="q1">
+    <verse number="5" style="v"/>„Hvem er den pige, der kommer gående fra ødemarken,</para>
+  <para style="q2">lænet til sin elskede?”</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">„Under det æbletræ, hvor du selv blev undfanget,</para>
+  <para style="q2">og din mor fødte dig med smerte—</para>
+  <para style="q3">dér vækkede jeg din lidenskab.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Lad mig være så tæt på dig,</para>
+  <para style="q2">som var jeg stemplet på dit hjerte,</para>
+  <para style="q3">eller sad som en ring på din arm.</para>
+  <para style="q1">For kærligheden er stærk som døden,</para>
+  <para style="q2">lidenskaben er uimodståelig som dødsriget selv:</para>
+  <para style="q3">den brænder med voldsomme flammer, som ikke kan slukkes.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Vand i mængde kan ikke slukke kærligheden,</para>
+  <para style="q2">floder kan ikke skylle den bort.</para>
+  <para style="q1">Kærlighed kan ikke købes for penge,</para>
+  <para style="q2">den, der forsøger det, får kun foragt.”</para>
+  <para style="s1">Sjette sang: Pigen, som ventede, til tiden var inde</para>
+  <para style="sp">Den unge piges brødre:</para>
+  <para style="q1">
+    <verse number="8" style="v"/>„Vi havde en lillesøster, som endnu ikke havde bryster.</para>
+  <para style="q2">Hvad skulle vi gøre, hvis der kom en frier til hende?</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Stod hun imod fristelsen som en mur,</para>
+  <para style="q2">ville vi ære hende med sølvsmykker.</para>
+  <para style="q1">Men åbnede hun sig som en dør,</para>
+  <para style="q2">ville vi spærre hende af med cedertræsplanker.”</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="10" style="v"/>„Jeg stod imod som en mur,</para>
+  <para style="q2">og mine bryster er nu som tårne.</para>
+  <para style="q3">Derfor vidste han, at jeg ville bringe ham glæde og fred.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Salomon havde en vingård i Ba’al-Hamon,</para>
+  <para style="q2">som han overlod til forpagtere.</para>
+  <para style="q1">De måtte hver betale tusind stykker sølv</para>
+  <para style="q2">for at kunne få høsten af vindruer.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Min ‚vingård’ tilhører mig,</para>
+  <para style="q2">den bestemmer jeg selv over.</para>
+  <para style="q1">Men jeg har givet den til dig, Salomon,</para>
+  <para style="q2">og du kan godt beholde dine tusind sølvstykker,</para>
+  <para style="q1">men de, der har passet på den<note caller="+" style="f"><char style="fr" closed="false">8,12 </char><char style="ft" closed="false">Sandsynligvis den unge piges brødre, som har passet godt på hende.</char></note> indtil nu,</para>
+  <para style="q2">bør have tohundrede.”</para>
+  <para style="sp">Den unge mand:</para>
+  <para style="q1">
+    <verse number="13" style="v"/>„Oh, du, der vandrer rundt i den dejlige have,</para>
+  <para style="q2">mine venner vil gerne høre din stemme.</para>
+  <para style="q3">Men lad <char style="em">mig</char> være den, der får lov til det!”</para>
+  <para style="sp">Den unge pige:</para>
+  <para style="q1">
+    <verse number="14" style="v"/>„Kom, min elskede,</para>
+  <para style="q2">lad os springe af fryd som gazellen</para>
+  <para style="q3">på de duftende bakkeskråninger.”</para>
+</usx>

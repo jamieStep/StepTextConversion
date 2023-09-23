@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="1PE" style="id">- Kiswahili Contemporary Version (Neno), updated 2018</book>
+  <para style="rem">Copyright © 1984, 1989, 2009, 2015 by Biblica, Inc.</para>
+  <para style="h">1 Petro</para>
+  <para style="toc1">1 Petro</para>
+  <para style="toc2">1 Petro</para>
+  <para style="toc3">1Pet</para>
+  <para style="mt1">1 Petro</para>
+  <para style="imt">Utangulizi</para>
+  <para style="im">Petro ni mmoja wa wale wanafunzi kumi na wawili wa Yesu. Aliandikia waraka huu kwa Wakristo wa Kiyahudi wa Utawanyiko waliokuwa Asia Ndogo. Waraka huu unaonyesha kwamba waumini walikuwa wanakabiliwa na dhiki na mateso. Lengo lake lilikuwa kuwafariji waumini waliokuwa wakiishi Asia, kwani katika kipindi hiki cha miaka ya sitini ya karne ya kwanza, utawala wa Rumi chini ya Nero ulianza kuwatesa Wakristo.</para>
+  <para style="ip">Kwa wale waliokuwa wakifikiria kurudia imani yao ya Kiyahudi ili kuepuka mateso, anawaambia kuwa sasa kanisa ndilo ukuhani wa kifalme, taifa takatifu, watu walio milki yake Mungu. Hivyo mawazo ya kurejea imani ya Kiyahudi hayana faida yoyote. Kisha Petro anatoa mfano wa Kristo na jinsi alivyopata mateso, na anawakumbusha waumini kuwa wao pia hawana budi kupata mateso. Mwishowe, Petro anatoa maagizo kwa vikundi mbalimbali vya Wakristo.</para>
+  <para style="is1">Mwandishi</para>
+  <para style="im">Mtume Petro.</para>
+  <para style="is1">Kusudi</para>
+  <para style="im">Kuwatia moyo Wakristo kusimama dhabiti katika mateso yote, na kuwa imara katika neema ya Mungu.</para>
+  <para style="is1">Mahali</para>
+  <para style="im">Rumi.</para>
+  <para style="is1">Tarehe</para>
+  <para style="im">Kama 63 B.K.</para>
+  <para style="is1">Wahusika Wakuu</para>
+  <para style="im">Petro, Silvano, na Marko.</para>
+  <para style="is1">Wazo Kuu</para>
+  <para style="im">Hata kama tutauawa kwa ajili ya imani, tushikilie imani yetu. Mungu anafahamu yote yanayotendeka, na katika mpango wake wa milele, hatimaye mambo yote yatakamilika kwa utukufu wake.</para>
+  <para style="is1">Mambo Muhimu</para>
+  <para style="im">Petro anaonyesha kwamba mateso ni sehemu ya maisha ya Kikristo, na kwamba Mungu ameandaa thawabu zisizoharibika kwa wote wanaomwamini. Pia anaonyesha tumaini la wakati wa mwisho kuwa jambo la kumtia moyo muumini katika mateso.</para>
+  <para style="iot">Mgawanyo</para>
+  <para style="io1">Utukufu wa wokovu wa Kristo (<char style="ior"><ref loc="1PE 1:1-25">1:1-25</ref></char>)</para>
+  <para style="io1">Utiifu wa Mkristo (<char style="ior"><ref loc="1PE 2:1-10">2:1-10</ref></char>)</para>
+  <para style="io1">Mfano wa mateso ya Kristo (<char style="ior"><ref loc="1PE 2:11-25">2:11-25</ref></char>)</para>
+  <para style="io1">Maisha yampasayo Mkristo (<char style="ior"><ref loc="1PE 3:1-17">3:1-17</ref></char>)</para>
+  <para style="io1">Mateso na mfano wa Kristo (<char style="ior"><ref loc="1PE 3:18-4:19">3:18–4:19</ref></char>)</para>
+  <para style="io1">Huduma ya Kikristo, na mawaidha ya mwisho (<char style="ior"><ref loc="1PE 5:1-14">5:1-14</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="1PE 1"/>
+  <para style="s1">Salamu</para>
+  <para style="p">
+    <verse number="1" style="v" sid="1PE 1:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="2PE 1:1">2Pet 1:1</ref>; <ref loc="MAT 24:22">Mt 24:22</ref>; <ref loc="ACT 16:7">Mdo 16:7</ref></char>
+    </note>Petro, mtume wa Yesu Kristo:</para>
+  <para style="p" vid="1PE 1:1">Kwa wateule wa Mungu, wageni katika ulimwengu, waliotawanyika kote katika Ponto, Galatia, Kapadokia, Asia na Bithinia. <verse eid="1PE 1:1"/><verse number="2" style="v" sid="1PE 1:2"/><note caller="-" style="x"><char style="xo" closed="false">1:2 </char><char style="xt" closed="false"><ref loc="ROM 8:29">Rum 8:29</ref>; <ref loc="2TH 2:13">2The 2:13</ref>; <ref loc="HEB 10:22">Ebr 10:22</ref>; <ref loc="HEB 12:24">12:24</ref></char></note>Ni ninyi ambao mlichaguliwa tangu mwanzo na Mungu Baba kulingana na alivyotangulia kuwajua, kupitia kwa kazi ya utakaso wa Roho, katika utiifu kwa Yesu Kristo na kunyunyiziwa damu yake:</para>
+  <para style="p" vid="1PE 1:2">Neema na amani ziwe kwenu kwa wingi.<verse eid="1PE 1:2"/></para>
+  <para style="s1">Tumaini Lenye Uzima</para>
+  <para style="p">
+    <verse number="3" style="v" sid="1PE 1:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 1:3">1Kor 1:3</ref>; <ref loc="EPH 1:3">Efe 1:3</ref>; <ref loc="TIT 3:5">Tit 3:5</ref>; <ref loc="JAS 1:18">Yak 1:18</ref>; <ref loc="1PE 3:21">1Pet 3:21</ref></char>
+    </note>Ahimidiwe Mungu, Baba wa Bwana wetu Yesu Kristo! Kwa rehema zake kuu ametuzaa sisi mara ya pili katika tumaini lenye uzima kupitia kwa kufufuka kwa Yesu Kristo kutoka kwa wafu, <verse eid="1PE 1:3"/><verse number="4" style="v" sid="1PE 1:4"/><note caller="-" style="x"><char style="xo" closed="false">1:4 </char><char style="xt" closed="false"><ref loc="1TI 4:8">1Tim 4:8</ref>; <ref loc="ACT 20:32">Mdo 20:32</ref>; <ref loc="ROM 8:17">Rum 8:17</ref>; <ref loc="1PE 5:4">1Pet 5:4</ref>; <ref loc="COL 1:5">Kol 1:5</ref></char></note>ili tuupate urithi usioharibika, usio na uchafu, ule usionyauka: uliotunzwa mbinguni kwa ajili yenu, <verse eid="1PE 1:4"/><verse number="5" style="v" sid="1PE 1:5"/><note caller="-" style="x"><char style="xo" closed="false">1:5 </char><char style="xt" closed="false"><ref loc="1SA 2:9">1Sam 2:9</ref>; <ref loc="JHN 10:28">Yn 10:28</ref>; <ref loc="ROM 11:14">Rum 11:14</ref>; <ref loc="ROM 8:18">8:18</ref></char></note>ninyi ambao mnalindwa na nguvu za Mungu kwa njia ya imani, hadi uje ule wokovu ulio tayari kufunuliwa nyakati za mwisho. <verse eid="1PE 1:5"/><verse number="6" style="v" sid="1PE 1:6"/><note caller="-" style="x"><char style="xo" closed="false">1:6 </char><char style="xt" closed="false"><ref loc="ROM 5:2">Rum 5:2</ref>; <ref loc="1PE 5:10">1Pet 5:10</ref>; <ref loc="1PE 4:12">4:12</ref></char></note>Katika hili mnafurahi sana, ingawa sasa kwa kitambo kidogo mmehuzunishwa kwa majaribu ya namna nyingi. <verse eid="1PE 1:6"/><verse number="7" style="v" sid="1PE 1:7"/><note caller="-" style="x"><char style="xo" closed="false">1:7 </char><char style="xt" closed="false"><ref loc="PRO 17:3">Mit 17:3</ref>; <ref loc="ISA 48:10">Isa 48:10</ref>; <ref loc="1TH 2:19">1The 2:19</ref></char></note>Haya yamewajia ili kwamba imani yenu, iliyo ya thamani kuliko dhahabu ipoteayo, ingawa hujaribiwa kwa moto, ionekane kuwa halisi na imalizie katika sifa, utukufu na heshima wakati Yesu Kristo atadhihirishwa. <verse eid="1PE 1:7"/><verse number="8" style="v" sid="1PE 1:8"/><note caller="-" style="x"><char style="xo" closed="false">1:8 </char><char style="xt" closed="false"><ref loc="JHN 20:29">Yn 20:29</ref>; <ref loc="1JN 4:10">1Yn 4:10</ref>; <ref loc="2CO 5:7">2Kor 5:7</ref>; <ref loc="HEB 11:1">Ebr 11:1</ref>, <ref loc="HEB 11:27">27</ref></char></note>Ingawa hamjamwona, mnampenda; tena ingawa sasa hammwoni, mnamwamini na kujawa na furaha isiyoneneka yenye utukufu usioelezeka. <verse eid="1PE 1:8"/><verse number="9" style="v" sid="1PE 1:9"/><note caller="-" style="x"><char style="xo" closed="false">1:9 </char><char style="xt" closed="false"><ref loc="ROM 6:22">Rum 6:22</ref></char></note>Maana mnaupokea wokovu wa roho zenu, ambao ndio lengo la imani yenu.<verse eid="1PE 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1PE 1:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 22:24">Mt 22:24</ref>; <ref loc="MAT 3:17">3:17</ref></char>
+    </note>Kwa habari ya wokovu huu, wale manabii waliosema kuhusu neema ambayo ingewajia ninyi, walitafuta kwa bidii na kwa uangalifu mkubwa, <verse eid="1PE 1:10"/><verse number="11" style="v" sid="1PE 1:11"/><note caller="-" style="x"><char style="xo" closed="false">1:11 </char><char style="xt" closed="false"><ref loc="ACT 16:7">Mdo 16:7</ref>; <ref loc="PSA 22:1">Za 22:1</ref>; <ref loc="ISA 52:13">Isa 52:13</ref>; <ref loc="ISA 53:12">53:12</ref>; <ref loc="LUK 24:26">Lk 24:26</ref></char></note>wakijaribu kujua ni wakati upi na katika mazingira gani ambayo Roho wa Kristo aliyekuwa ndani yao alionyesha, alipotabiri kuhusu mateso ya Kristo na utukufu ule ambao ungefuata. <verse eid="1PE 1:11"/><verse number="12" style="v" sid="1PE 1:12"/><note caller="-" style="x"><char style="xo" closed="false">1:12 </char><char style="xt" closed="false"><ref loc="EPH 3:10">Efe 3:10</ref>; <ref loc="LUK 2:13">Lk 2:13</ref></char></note>Walidhihirishiwa kwamba walikuwa hawajihudumii wao wenyewe, bali waliwahudumia ninyi, waliponena kuhusu mambo hayo, ambayo sasa yamehubiriwa kwenu na wale waliowahubiria ninyi Injili kwa Roho Mtakatifu aliyetumwa kutoka mbinguni. Hata malaika wanatamani kuyafahamu mambo haya.<verse eid="1PE 1:12"/></para>
+  <para style="s1">Mwito Wa Kuishi Maisha Matakatifu</para>
+  <para style="p">
+    <verse number="13" style="v" sid="1PE 1:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 24:25">Mdo 24:25</ref>; <ref loc="1PE 1:3">1Pet 1:3</ref>, <ref loc="1PE 1:21">21</ref>; <ref loc="HEB 3:6">Ebr 3:6</ref>; <ref loc="1PE 1:7">1Pet 1:7</ref>, <ref loc="1PE 1:10">10</ref>; <ref loc="1CO 1:7">1Kor 1:7</ref>; <ref loc="EPH 5:19">Efe 5:19</ref>; <ref loc="COL 3:16">Kol 3:16</ref></char>
+    </note>Kwa hiyo, tayarisheni nia zenu kwa kazi; mwe na kiasi, mkitumainia kikamilifu ile neema mtakayopewa Yesu Kristo atakapodhihirishwa. <verse eid="1PE 1:13"/><verse number="14" style="v" sid="1PE 1:14"/><note caller="-" style="x"><char style="xo" closed="false">1:14 </char><char style="xt" closed="false"><ref loc="ROM 12:2">Rum 12:2</ref>; <ref loc="EPH 4:18">Efe 4:18</ref></char></note>Kama watoto watiifu, msifuate tamaa zenu mbaya wakati mlipoishi kwa ujinga. <verse eid="1PE 1:14"/><verse number="15" style="v" sid="1PE 1:15"/><note caller="-" style="x"><char style="xo" closed="false">1:15 </char><char style="xt" closed="false"><ref loc="ISA 35:8">Isa 35:8</ref>; <ref loc="1TH 4:7">1The 4:7</ref>; <ref loc="1JN 3:3">1Yn 3:3</ref></char></note>Bali kama yeye aliyewaita alivyo mtakatifu, nanyi kuweni watakatifu katika mwenendo wenu wote. <verse eid="1PE 1:15"/><verse number="16" style="v" sid="1PE 1:16"/><note caller="-" style="x"><char style="xo" closed="false">1:16 </char><char style="xt" closed="false"><ref loc="LEV 19:2">Law 19:2</ref>; <ref loc="LEV 20:7">20:7</ref></char></note>Kwa maana imeandikwa: “Kuweni watakatifu, kwa kuwa mimi ni mtakatifu.”<verse eid="1PE 1:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1PE 1:17"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 10:34">Mdo 10:34</ref>; <ref loc="HEB 12:28">Ebr 12:28</ref></char>
+    </note>Kwa sababu mnamwita Baba ahukumuye kila mtu kulingana na matendo yake pasipo upendeleo, enendeni kwa hofu ya kumcha Mungu wakati wenu wa kukaa hapa duniani kama wageni. <verse eid="1PE 1:17"/><verse number="18" style="v" sid="1PE 1:18"/><note caller="-" style="x"><char style="xo" closed="false">1:18 </char><char style="xt" closed="false"><ref loc="MAT 20:28">Mt 20:28</ref>; <ref loc="1CO 6:20">1Kor 6:20</ref></char></note>Kwa maana mnafahamu kwamba mlikombolewa kutoka mwenendo wenu usiofaa ambao mliurithi kutoka kwa baba zenu, si kwa vitu viharibikavyo kama fedha na dhahabu, <verse eid="1PE 1:18"/><verse number="19" style="v" sid="1PE 1:19"/><note caller="-" style="x"><char style="xo" closed="false">1:19 </char><char style="xt" closed="false"><ref loc="JHN 1:29">Yn 1:29</ref>; <ref loc="EXO 12:5">Kut 12:5</ref></char></note>bali kwa damu ya thamani ya Kristo, yule Mwana-Kondoo asiye na dosari wala doa. <verse eid="1PE 1:19"/><verse number="20" style="v" sid="1PE 1:20"/><note caller="-" style="x"><char style="xo" closed="false">1:20 </char><char style="xt" closed="false"><ref loc="MAT 25:34">Mt 25:34</ref>; <ref loc="HEB 9:26">Ebr 9:26</ref></char></note>Yeye alichaguliwa kabla ya kuwekwa kwa misingi ya ulimwengu, lakini akadhihirishwa katika siku hizi za mwisho kwa ajili yenu. <verse eid="1PE 1:20"/><verse number="21" style="v" sid="1PE 1:21"/><note caller="-" style="x"><char style="xo" closed="false">1:21 </char><char style="xt" closed="false"><ref loc="ROM 10:9">Rum 10:9</ref></char></note>Kupitia kwake mmemwamini Mungu, aliyemfufua kutoka kwa wafu na akampa utukufu, ili imani yenu na tumaini lenu ziwe kwa Mungu.<verse eid="1PE 1:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="1PE 1:22"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="JAS 4:8">Yak 4:8</ref>; <ref loc="ROM 12:10">Rum 12:10</ref>; <ref loc="HEB 13:1">Ebr 13:1</ref></char>
+    </note>Basi kwa kuwa mmejitakasa nafsi zenu kwa kuitii ile kweli hata mkawa na upendo wa ndugu usio na unafiki, basi pendaneni kwa dhati kutoka moyoni. <verse eid="1PE 1:22"/><verse number="23" style="v" sid="1PE 1:23"/><note caller="-" style="x"><char style="xo" closed="false">1:23 </char><char style="xt" closed="false"><ref loc="JHN 1:13">Yn 1:13</ref>; <ref loc="HEB 4:12">Ebr 4:12</ref></char></note>Kwa maana mmezaliwa upya, si kwa mbegu ile iharibikayo, bali kwa ile isiyoharibika, kupitia kwa neno la Mungu lililo hai na linalodumu milele. <verse eid="1PE 1:23"/><verse number="24" style="v" sid="1PE 1:24"/><note caller="-" style="x"><char style="xo" closed="false">1:24 </char><char style="xt" closed="false"><ref loc="PSA 103:15">Za 103:15</ref>; <ref loc="ISA 40:6">Isa 40:6</ref></char></note>Maana,</para>
+  <para style="q1" vid="1PE 1:24">“Wanadamu wote ni kama majani,</para>
+  <para style="q2" vid="1PE 1:24">nao utukufu wao ni kama maua ya kondeni;</para>
+  <para style="q1" vid="1PE 1:24">majani hunyauka na maua huanguka,<verse eid="1PE 1:24"/></para>
+  <para style="q2">
+    <verse number="25" style="v" sid="1PE 1:25"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:25 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 40:6-8">Isa 40:6-8</ref>; <ref loc="JAS 1:10-11">Yak 1:10-11</ref></char>
+    </note>lakini neno la Bwana ladumu milele.”</para>
+  <para style="m" vid="1PE 1:25">Hili ndilo neno lililohubiriwa kwenu.<verse eid="1PE 1:25"/></para>
+  <chapter eid="1PE 1"/>
+  <chapter number="2" style="c" sid="1PE 2"/>
+  <para style="s1">Jiwe Lililo Hai Na Watu Waliochaguliwa</para>
+  <para style="p">
+    <verse number="1" style="v" sid="1PE 2:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 4:22">Efe 4:22</ref>; <ref loc="JAS 4:11">Yak 4:11</ref></char>
+    </note>Kwa hiyo, wekeni mbali nanyi uovu wote na udanganyifu wote, unafiki, wivu na masingizio ya kila namna. <verse eid="1PE 2:1"/><verse number="2" style="v" sid="1PE 2:2"/><note caller="-" style="x"><char style="xo" closed="false">2:2 </char><char style="xt" closed="false"><ref loc="1CO 3:2">1Kor 3:2</ref>; <ref loc="HEB 5:12-13">Ebr 5:12-13</ref>; <ref loc="EPH 4:15-16">Efe 4:15-16</ref></char></note>Kama watoto wachanga, waliozaliwa sasa, yatamanini maziwa ya kiroho yasiyochanganywa na kitu kingine chochote, ili kwa hayo mpate kukua katika wokovu, <verse eid="1PE 2:2"/><verse number="3" style="v" sid="1PE 2:3"/><note caller="-" style="x"><char style="xo" closed="false">2:3 </char><char style="xt" closed="false"><ref loc="PSA 34:8">Za 34:8</ref>; <ref loc="HEB 6:5">Ebr 6:5</ref></char></note>ikiwa kweli mmeonja ya kwamba Bwana ni mwema.<verse eid="1PE 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="1PE 2:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 118:22">Za 118:22</ref>; <ref loc="MAT 21:42">Mt 21:42</ref>; <ref loc="ACT 4:11">Mdo 4:11</ref></char>
+    </note>Mnapokuja kwake, yeye aliye Jiwe lililo hai, lililokataliwa na wanadamu bali kwa Mungu ni teule na la thamani kwake, <verse eid="1PE 2:4"/><verse number="5" style="v" sid="1PE 2:5"/><note caller="-" style="x"><char style="xo" closed="false">2:5 </char><char style="xt" closed="false"><ref loc="PRO 9:1">Mit 9:1</ref>; <ref loc="EPH 2:20-22">Efe 2:20-22</ref>; <ref loc="1TI 3:15">1Tim 3:15</ref>; <ref loc="EXO 19:6">Kut 19:6</ref>; <ref loc="REV 5:10">Ufu 5:10</ref>; <ref loc="HEB 13:15">Ebr 13:15</ref></char></note>ninyi nanyi, kama mawe yaliyo hai, mnajengwa kuwa nyumba ya kiroho, ili mpate kuwa ukuhani mtakatifu, mkitoa dhabihu za kiroho zinazokubaliwa na Mungu kwa njia ya Yesu Kristo. <verse eid="1PE 2:5"/><verse number="6" style="v" sid="1PE 2:6"/><note caller="-" style="x"><char style="xo" closed="false">2:6 </char><char style="xt" closed="false"><ref loc="EPH 2:20">Efe 2:20</ref>; <ref loc="ROM 10:11">Rum 10:11</ref></char></note>Kwa maana imeandikwa katika Maandiko:</para>
+  <para style="q1" vid="1PE 2:6">“Tazama, naweka katika Sayuni,</para>
+  <para style="q2" vid="1PE 2:6">jiwe la pembeni teule lenye thamani,</para>
+  <para style="q1" vid="1PE 2:6">na yeyote atakayemwamini</para>
+  <para style="q2" vid="1PE 2:6">hataaibika kamwe.”<verse eid="1PE 2:6"/></para>
+  <para style="m">
+    <verse number="7" style="v" sid="1PE 2:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 2:16">2Kor 2:16</ref>; <ref loc="ACT 4:11">Mdo 4:11</ref></char>
+    </note>Kwenu ninyi mnaoamini, jiwe hili ni la thamani. Lakini kwao wasioamini,</para>
+  <para style="q1" vid="1PE 2:7">“Jiwe walilolikataa waashi</para>
+  <para style="q2" vid="1PE 2:7">limekuwa jiwe kuu la pembeni,”<verse eid="1PE 2:7"/></para>
+  <para style="m">
+    <verse number="8" style="v" sid="1PE 2:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 8:14">Isa 8:14</ref>; <ref loc="1CO 1:23">1Kor 1:23</ref>; <ref loc="ROM 9:22">Rum 9:22</ref></char>
+    </note>tena,</para>
+  <para style="q1" vid="1PE 2:8">“Jiwe lenye kuwafanya watu wajikwae,</para>
+  <para style="q2" vid="1PE 2:8">na mwamba wa kuwaangusha.”</para>
+  <para style="m" vid="1PE 2:8">Wanajikwaa kwa sababu hawakulitii lile neno, kama walivyowekewa tangu zamani.<verse eid="1PE 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="1PE 2:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="1SA 12:22">1Sam 12:22</ref>; <ref loc="EXO 19:6">Kut 19:6</ref>; <ref loc="ACT 26:18">Mdo 26:18</ref></char>
+    </note>Lakini ninyi ni taifa teule, ukuhani wa kifalme, taifa takatifu, watu walio milki ya Mungu, mlioitwa ili kutangaza sifa zake yeye aliyewaita kutoka gizani mkaingie katika nuru yake ya ajabu. <verse eid="1PE 2:9"/><verse number="10" style="v" sid="1PE 2:10"/><note caller="-" style="x"><char style="xo" closed="false">2:10 </char><char style="xt" closed="false"><ref loc="ROM 9:25-26">Rum 9:25-26</ref>; <ref loc="HOS 1:9">Hos 1:9</ref>, <ref loc="HOS 1:10">10</ref>; <ref loc="HOS 2:23">2:23</ref></char></note>Mwanzo ninyi mlikuwa si taifa, lakini sasa ninyi ni taifa la Mungu. Mwanzo mlikuwa hamjapata rehema, lakini sasa mmepata rehema.<verse eid="1PE 2:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="1PE 2:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 13:14">Rum 13:14</ref>; <ref loc="JAS 4:1">Yak 4:1</ref></char>
+    </note>Wapenzi, ninawasihi, mkiwa kama wageni na wapitaji hapa ulimwenguni, epukeni tamaa mbaya za mwili ambazo hupigana vita na roho zenu. <verse eid="1PE 2:11"/><verse number="12" style="v" sid="1PE 2:12"/><note caller="-" style="x"><char style="xo" closed="false">2:12 </char><char style="xt" closed="false"><ref loc="TIT 2:8">Tit 2:8</ref>, <ref loc="TIT 2:14">14</ref>; <ref loc="MAT 5:16">Mt 5:16</ref>; <ref loc="MAT 9:8">9:8</ref></char></note>Kuweni na mwenendo mzuri mbele ya watu wasiomjua Mungu, ili kama wanawasingizia kuwa watenda mabaya, wayaone matendo yenu mema nao wamtukuze Mungu siku atakapokuja kwetu.<verse eid="1PE 2:12"/></para>
+  <para style="s1">Kuwatii Wenye Mamlaka</para>
+  <para style="p">
+    <verse number="13" style="v" sid="1PE 2:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="TIT 3:1">Tit 3:1</ref>; <ref loc="ROM 13:1">Rum 13:1</ref>; <ref loc="MAT 22:21">Mt 22:21</ref></char>
+    </note>Kwa ajili ya Bwana, tiini kila mamlaka iliyowekwa na wanadamu: Kwa mfalme kwani ndiye aliye na mamlaka ya juu zaidi, <verse eid="1PE 2:13"/><verse number="14" style="v" sid="1PE 2:14"/><note caller="-" style="x"><char style="xo" closed="false">2:14 </char><char style="xt" closed="false"><ref loc="ROM 13:3-4">Rum 13:3-4</ref></char></note>au kwa maafisa aliowaweka, kwa kuwa mfalme amewatuma ili kuwaadhibu wale wanaokosa, na kuwapongeza wale watendao mema. <verse eid="1PE 2:14"/><verse number="15" style="v" sid="1PE 2:15"/><note caller="-" style="x"><char style="xo" closed="false">2:15 </char><char style="xt" closed="false"><ref loc="1PE 3:17">1Pet 3:17</ref>; <ref loc="1PE 4:19">4:19</ref></char></note>Kwa maana ni mapenzi ya Mungu kwamba kwa kutenda mema mnyamazishe maneno ya kijinga ya watu wapumbavu. <verse eid="1PE 2:15"/><verse number="16" style="v" sid="1PE 2:16"/><note caller="-" style="x"><char style="xo" closed="false">2:16 </char><char style="xt" closed="false"><ref loc="JHN 8:32">Yn 8:32</ref>; <ref loc="ROM 6:22">Rum 6:22</ref></char></note>Ishini kama watu huru, lakini msitumie uhuru wenu kama kisingizio cha kutenda uovu, bali ishini kama watumishi wa Mungu. <verse eid="1PE 2:16"/><verse number="17" style="v" sid="1PE 2:17"/><note caller="-" style="x"><char style="xo" closed="false">2:17 </char><char style="xt" closed="false"><ref loc="ROM 12:10">Rum 12:10</ref>; <ref loc="PRO 24:21">Mit 24:21</ref>; <ref loc="1PE 2:18">1Pet 2:18</ref>; <ref loc="EPH 6:5">Efe 6:5</ref>; <ref loc="JAS 3:17">Yak 3:17</ref></char></note>Mheshimuni kila mtu ipasavyo: Wapendeni jamaa ya ndugu waumini, mcheni Mungu, mpeni heshima mfalme.<verse eid="1PE 2:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="1PE 2:18"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 6:20">1Kor 6:20</ref>; <ref loc="1CO 7:23">7:23</ref>; <ref loc="EZK 20:18">Eze 20:18</ref>; <ref loc="1PE 4:3">1Pet 4:3</ref></char>
+    </note>Ninyi watumwa, watiini mabwana zenu kwa heshima yote, si wale mabwana walio wema na wapole peke yao, bali pia wale walio wakali. <verse eid="1PE 2:18"/><verse number="19" style="v" sid="1PE 2:19"/><note caller="-" style="x"><char style="xo" closed="false">2:19 </char><char style="xt" closed="false"><ref loc="1PE 3:14-17">1Pet 3:14-17</ref>; <ref loc="MAT 5:10">Mt 5:10</ref>; <ref loc="ROM 13:5">Rum 13:5</ref>; <ref loc="1PE 3:14">1Pet 3:14</ref></char></note>Kwa maana ni jambo la sifa kama mtu akivumilia anapoteswa kwa uonevu kwa ajili ya Mungu. <verse eid="1PE 2:19"/><verse number="20" style="v" sid="1PE 2:20"/><note caller="-" style="x"><char style="xo" closed="false">2:20 </char><char style="xt" closed="false"><ref loc="1PE 3:14">1Pet 3:14</ref>; <ref loc="1PE 4:14">4:14</ref>, <ref loc="1PE 4:15">15</ref></char></note>Kwani ni faida gani kwa mtu kustahimili anapopigwa kwa sababu ya makosa yake? Lakini kama mkiteswa kwa sababu ya kutenda mema, nanyi mkastahimili, hili ni jambo la kusifiwa mbele za Mungu.<verse eid="1PE 2:20"/></para>
+  <para style="s1">Mfano Wa Mateso Ya Kristo</para>
+  <para style="p">
+    <verse number="21" style="v" sid="1PE 2:21"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:21 </char>
+      <char style="xt" closed="false">
+        <ref loc="PHP 1:29">Flp 1:29</ref>; <ref loc="MAT 11:29">Mt 11:29</ref></char>
+    </note>Ninyi mliitwa kwa ajili ya haya, kwa sababu Kristo naye aliteswa kwa ajili yenu, akiwaachia kielelezo, ili mzifuate nyayo zake.<verse eid="1PE 2:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="1PE 2:22"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 53:7-9">Isa 53:7-9</ref>
+      </char>
+    </note>“Yeye hakutenda dhambi,</para>
+  <para style="q2" vid="1PE 2:22">wala hila haikuonekana kinywani mwake.”<verse eid="1PE 2:22"/></para>
+  <para style="m">
+    <verse number="23" style="v" sid="1PE 2:23"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:23 </char>
+      <char style="xt" closed="false">
+        <ref loc="LUK 23:46">Lk 23:46</ref>
+      </char>
+    </note>Yeye alipotukanwa, hakurudisha matukano; alipoteswa, hakutishia, bali alijikabidhi kwa yeye ahukumuye kwa haki. <verse eid="1PE 2:23"/><verse number="24" style="v" sid="1PE 2:24"/><note caller="-" style="x"><char style="xo" closed="false">2:24 </char><char style="xt" closed="false"><ref loc="ISA 53:4-11">Isa 53:4-11</ref>; <ref loc="ROM 6:2">Rum 6:2</ref>; <ref loc="PSA 103:3">Za 103:3</ref>; <ref loc="HEB 12:13">Ebr 12:13</ref></char></note>Yeye mwenyewe alizichukua dhambi zetu katika mwili wake juu ya mti, ili tufe kwa mambo ya dhambi, bali tupate kuishi katika haki. Kwa kupigwa kwake, ninyi mmeponywa. <verse eid="1PE 2:24"/><verse number="25" style="v" sid="1PE 2:25"/><note caller="-" style="x"><char style="xo" closed="false">2:25 </char><char style="xt" closed="false"><ref loc="ISA 53:6">Isa 53:6</ref>; <ref loc="JHN 10:11">Yn 10:11</ref></char></note>Kwa maana mlikuwa mmepotea kama kondoo, lakini sasa mmerudi kwa Mchungaji na Mwangalizi wa roho zenu.<verse eid="1PE 2:25"/></para>
+  <chapter eid="1PE 2"/>
+  <chapter number="3" style="c" sid="1PE 3"/>
+  <para style="s1">Mafundisho Kwa Wake Na Waume</para>
+  <para style="p">
+    <verse number="1" style="v" sid="1PE 3:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="1PE 2:18">1Pet 2:18</ref>; <ref loc="EPH 5:22">Efe 5:22</ref>; <ref loc="1CO 7:16">1Kor 7:16</ref></char>
+    </note>Kadhalika enyi wake, watiini waume zenu, ili kama kunao wasioamini lile neno, wapate kuvutwa na mwenendo wa wake zao pasipo neno, <verse eid="1PE 3:1"/><verse number="2" style="v" sid="1PE 3:2"/><note caller="-" style="x"><char style="xo" closed="false">3:2 </char><char style="xt" closed="false"><ref loc="1PE 2:12">1Pet 2:12</ref></char></note>kwa kuuona utakatifu na uchaji wa Mungu katika maisha yenu. <verse eid="1PE 3:2"/><verse number="3" style="v" sid="1PE 3:3"/><note caller="-" style="x"><char style="xo" closed="false">3:3 </char><char style="xt" closed="false"><ref loc="ISA 3:18-23">Isa 3:18-23</ref>; <ref loc="1TI 2:9">1Tim 2:9</ref>; <ref loc="1PE 3:4">1Pet 3:4</ref>; <ref loc="ROM 7:22">Rum 7:22</ref>; <ref loc="EPH 3:16">Efe 3:16</ref></char></note>Kujipamba kwenu kusiwe kwa nje tu, kama vile kusuka nywele, kuvalia vitu vilivyofanyizwa kwa dhahabu na kwa mavazi. <verse eid="1PE 3:3"/><verse number="4" style="v" sid="1PE 3:4"/><note caller="-" style="x"><char style="xo" closed="false">3:4 </char><char style="xt" closed="false"><ref loc="PSA 45:13">Za 45:13</ref>; <ref loc="ROM 2:29">Rum 2:29</ref>; <ref loc="ROM 7:22">7:22</ref>; <ref loc="2CO 4:16">2Kor 4:16</ref></char></note>Badala yake, kujipamba kwenu kuwe katika utu wenu wa moyoni, yaani uzuri usioharibika wa roho ya upole na utulivu, ambayo ni ya thamani sana machoni pa Mungu. <verse eid="1PE 3:4"/><verse number="5" style="v" sid="1PE 3:5"/><note caller="-" style="x"><char style="xo" closed="false">3:5 </char><char style="xt" closed="false"><ref loc="1TI 5:5">1Tim 5:5</ref></char></note>Kwa kuwa hivi ndivyo walivyokuwa wakijipamba wanawake watakatifu wa zamani, waliomtumaini Mungu. Wao walikuwa ni watiifu kwa waume zao, <verse eid="1PE 3:5"/><verse number="6" style="v" sid="1PE 3:6"/><note caller="-" style="x"><char style="xo" closed="false">3:6 </char><char style="xt" closed="false"><ref loc="GEN 18:12">Mwa 18:12</ref></char></note>kama Sara alivyomtii mumewe Abrahamu, hata akamwita bwana. Ninyi ni watoto wa Sara kama mkitenda yaliyo mema, bila kuogopa jambo lolote.<verse eid="1PE 3:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1PE 3:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="COL 3:19">Kol 3:19</ref>; <ref loc="1CO 7:3">1Kor 7:3</ref>; <ref loc="EPH 5:25">Efe 5:25</ref>; <ref loc="COL 3:10">Kol 3:10</ref>; <ref loc="1CO 12:23">1Kor 12:23</ref>; <ref loc="1TH 4:14">1The 4:14</ref></char>
+    </note>Vivyo hivyo ninyi waume, kaeni na wake zenu kwa akili, nanyi wapeni heshima mkitambua ya kuwa wao ni wenzi walio dhaifu, na kama warithi pamoja nanyi wa kipawa cha neema cha uzima, ili kusiwepo na chochote cha kuzuia maombi yenu.<verse eid="1PE 3:7"/></para>
+  <para style="s1">Kuteseka Kwa Kutenda Mema</para>
+  <para style="p">
+    <verse number="8" style="v" sid="1PE 3:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 12:10">Rum 12:10</ref>; <ref loc="EPH 4:2">Efe 4:2</ref></char>
+    </note>Hatimaye, ninyi nyote kuweni na nia moja, wenye kuhurumiana, mkipendana kama ndugu, na mwe wasikitivu na wanyenyekevu. <verse eid="1PE 3:8"/><verse number="9" style="v" sid="1PE 3:9"/><note caller="-" style="x"><char style="xo" closed="false">3:9 </char><char style="xt" closed="false"><ref loc="ROM 12:17">Rum 12:17</ref>; <ref loc="1TH 5:15">1The 5:15</ref>; <ref loc="1PE 2:21-23">1Pet 2:21-23</ref>; <ref loc="HEB 6:14">Ebr 6:14</ref></char></note>Msilipe ovu kwa ovu, au jeuri kwa jeuri, bali barikini, kwa maana hili ndilo mliloitiwa ili mpate kurithi baraka. <verse eid="1PE 3:9"/><verse number="10" style="v" sid="1PE 3:10"/><note caller="-" style="x"><char style="xo" closed="false">3:10 </char><char style="xt" closed="false"><ref loc="PSA 34:12">Za 34:12</ref>; <ref loc="JAS 1:26">Yak 1:26</ref>; <ref loc="1PE 2:1">1Pet 2:1</ref>, <ref loc="1PE 2:22">22</ref>; <ref loc="REV 14:5">Ufu 14:5</ref></char></note>Kwa maana,</para>
+  <para style="q1" vid="1PE 3:10">“Yeyote apendaye uzima</para>
+  <para style="q2" vid="1PE 3:10">na kuona siku njema,</para>
+  <para style="q1" vid="1PE 3:10">basi auzuie ulimi wake usinene mabaya,</para>
+  <para style="q2" vid="1PE 3:10">na midomo yake isiseme hila.<verse eid="1PE 3:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="1PE 3:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 37:27">Za 37:27</ref>; <ref loc="ISA 1:16">Isa 1:16</ref>, <ref loc="ISA 1:17">17</ref>; <ref loc="3JN 1:11">3Yn 11</ref>; <ref loc="ROM 12:8">Rum 12:8</ref>; <ref loc="ROM 14:19">14:19</ref></char>
+    </note>Mtu huyo lazima aache uovu, akatende mema;</para>
+  <para style="q2" vid="1PE 3:11">lazima aitafute amani na kuifuatilia sana.<verse eid="1PE 3:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="1PE 3:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 34:12-16">Za 34:12-16</ref>; <ref loc="JHN 9:31">Yn 9:31</ref>; <ref loc="JAS 5:16">Yak 5:16</ref></char>
+    </note>Kwa maana macho ya Bwana</para>
+  <para style="q2" vid="1PE 3:12">huwaelekea wenye haki,</para>
+  <para style="q1" vid="1PE 3:12">na masikio yake yako makini</para>
+  <para style="q2" vid="1PE 3:12">kusikiliza maombi yao.</para>
+  <para style="q1" vid="1PE 3:12">Bali uso wa Bwana uko kinyume</para>
+  <para style="q2" vid="1PE 3:12">na watendao maovu.”<verse eid="1PE 3:12"/></para>
+  <para style="s1">Kuvumilia Mateso</para>
+  <para style="p">
+    <verse number="13" style="v" sid="1PE 3:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 16:7">Mit 16:7</ref>; <ref loc="TIT 2:14">Tit 2:14</ref></char>
+    </note>Basi, ni nani atakayewadhuru mkiwa wenye juhudi katika kutenda mema? <verse eid="1PE 3:13"/><verse number="14" style="v" sid="1PE 3:14"/><note caller="-" style="x"><char style="xo" closed="false">3:14 </char><char style="xt" closed="false"><ref loc="1PE 4:15-16">1Pet 4:15-16</ref>; <ref loc="ISA 8:12-14">Isa 8:12-14</ref></char></note>Lakini mmebarikiwa hata kama ikiwalazimu kuteseka kwa ajili ya haki. “Msiogope vitisho vyao, wala msiwe na wasiwasi.” <verse eid="1PE 3:14"/><verse number="15" style="v" sid="1PE 3:15"/><note caller="-" style="x"><char style="xo" closed="false">3:15 </char><char style="xt" closed="false"><ref loc="COL 4:6">Kol 4:6</ref></char></note>Bali mtakaseni Kristo kuwa Bwana mioyoni mwenu. Siku zote mwe tayari kumjibu mtu yeyote atakayewauliza kuhusu sababu ya tumaini lililomo ndani yenu. Lakini fanyeni hivyo kwa upole na kwa heshima, <verse eid="1PE 3:15"/><verse number="16" style="v" sid="1PE 3:16"/><note caller="-" style="x"><char style="xo" closed="false">3:16 </char><char style="xt" closed="false"><ref loc="ACT 23:1">Mdo 23:1</ref>; <ref loc="HEB 13:18">Ebr 13:18</ref>; <ref loc="1PE 2:12-15">1Pet 2:12-15</ref></char></note>mkizitunza dhamiri zenu ziwe safi, ili wale wasemao mabaya dhidi ya mwenendo wenu mzuri katika Kristo waaibike kwa ajili ya masingizio yao.<verse eid="1PE 3:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="1PE 3:17"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="1PE 4:19">1Pet 4:19</ref>; <ref loc="1PE 2:20">2:20</ref>; <ref loc="1PE 4:15-16">4:15-16</ref></char>
+    </note>Kwa maana ni afadhali kupata mateso kwa ajili ya kutenda mema, kama kuteseka huko ndiyo mapenzi ya Mungu, kuliko kuteseka kwa kutenda maovu. <verse eid="1PE 3:17"/><verse number="18" style="v" sid="1PE 3:18"/><note caller="-" style="x"><char style="xo" closed="false">3:18 </char><char style="xt" closed="false"><ref loc="1PE 2:21">1Pet 2:21</ref>; <ref loc="COL 1:22">Kol 1:22</ref>; <ref loc="1PE 4:1-6">1Pet 4:1-6</ref></char></note>Kwa kuwa Kristo naye aliteswa mara moja tu kwa ajili ya dhambi, mwenye haki kwa ajili ya wasio haki, ili awalete ninyi kwa Mungu. Mwili wake ukauawa, lakini akafanywa hai katika Roho. <verse eid="1PE 3:18"/><verse number="19" style="v" sid="1PE 3:19"/><note caller="-" style="x"><char style="xo" closed="false">3:19 </char><char style="xt" closed="false"><ref loc="1PE 1:12">1Pet 1:12</ref>; <ref loc="1PE 4:6">4:6</ref>; <ref loc="ISA 42:7">Isa 42:7</ref>; <ref loc="ISA 49:9">49:9</ref>; <ref loc="ISA 61:1">61:1</ref></char></note>Baada ya kufanywa hai, alikwenda na kuzihubiria roho zilizokuwa kifungoni: <verse eid="1PE 3:19"/><verse number="20" style="v" sid="1PE 3:20"/><note caller="-" style="x"><char style="xo" closed="false">3:20 </char><char style="xt" closed="false"><ref loc="GEN 6:3">Mwa 6:3</ref>; <ref loc="HEB 11:7">Ebr 11:7</ref></char></note>roho hizo ambazo zamani hazikutii, wakati ule uvumilivu wa Mungu ulipokuwa ukingoja katika siku za Noa, wakati wa kujenga safina, ambamo watu wachache tu, yaani watu wanane, waliokolewa ili wasiangamie kwa gharika. <verse eid="1PE 3:20"/><verse number="21" style="v" sid="1PE 3:21"/><note caller="-" style="x"><char style="xo" closed="false">3:21 </char><char style="xt" closed="false"><ref loc="ACT 22:16">Mdo 22:16</ref>; <ref loc="TIT 3:5">Tit 3:5</ref></char></note>Nayo maji hayo ni kielelezo cha ubatizo ambao sasa unawaokoa ninyi pia: si kwa kuondoa uchafu kwenye mwili, bali kama ahadi ya dhamiri safi kwa Mungu, kwa njia ya ufufuo wa Yesu Kristo. <verse eid="1PE 3:21"/><verse number="22" style="v" sid="1PE 3:22"/><note caller="-" style="x"><char style="xo" closed="false">3:22 </char><char style="xt" closed="false"><ref loc="MRK 16:19">Mk 16:19</ref>; <ref loc="MAT 28:18">Mt 28:18</ref>; <ref loc="ROM 8:38">Rum 8:38</ref></char></note>Yeye ameingia mbinguni na amekaa mkono wa kuume wa Mungu; nao malaika, mamlaka na nguvu zote wametiishwa chini yake.<verse eid="1PE 3:22"/></para>
+  <chapter eid="1PE 3"/>
+  <chapter number="4" style="c" sid="1PE 4"/>
+  <para style="s1">Kuishi Kwa Ajili Ya Mungu</para>
+  <para style="p">
+    <verse number="1" style="v" sid="1PE 4:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="1PE 3:18">1Pet 3:18</ref>; <ref loc="ROM 6:2">Rum 6:2</ref>, <ref loc="ROM 6:7">7</ref>; <ref loc="GAL 5:24">Gal 5:24</ref>; <ref loc="COL 3:3">Kol 3:3</ref>, <ref loc="COL 3:5">5</ref></char>
+    </note>Kwa hiyo, kwa kuwa Kristo aliteswa katika mwili wake, ninyi nanyi jivikeni nia iyo hiyo kwa maana mtu aliyekwisha kuteswa katika mwili ameachana na dhambi. <verse eid="1PE 4:1"/><verse number="2" style="v" sid="1PE 4:2"/><note caller="-" style="x"><char style="xo" closed="false">4:2 </char><char style="xt" closed="false"><ref loc="ROM 6:2">Rum 6:2</ref>; <ref loc="1PE 1:14">1Pet 1:14</ref></char></note>Kwa hivyo, haishi maisha yake yaliyobaki ya kuishi hapa duniani kwa tamaa mbaya za wanadamu, bali anaishi kwa mapenzi ya Mungu. <verse eid="1PE 4:2"/><verse number="3" style="v" sid="1PE 4:3"/><note caller="-" style="x"><char style="xo" closed="false">4:3 </char><char style="xt" closed="false"><ref loc="EPH 2:2">Efe 2:2</ref>; <ref loc="EZK 44:6">Eze 44:6</ref>; <ref loc="EZK 45:9">45:9</ref>; <ref loc="ACT 17:30">Mdo 17:30</ref>; <ref loc="EPH 4:17">Efe 4:17</ref>; <ref loc="1TH 4:15">1The 4:15</ref></char></note>Maana wakati uliopita mmekwisha kutumia muda wa kutosha katika maisha yenu mkifanya yale ambayo wapagani hupenda kutenda: wakiishi katika uasherati, tamaa mbaya, ulevi, karamu za ulafi, vileo, ngoma mbaya, na ibada chukizo za sanamu. <verse eid="1PE 4:3"/><verse number="4" style="v" sid="1PE 4:4"/><note caller="-" style="x"><char style="xo" closed="false">4:4 </char><char style="xt" closed="false"><ref loc="1PE 3:16">1Pet 3:16</ref>; <ref loc="ACT 13:45">Mdo 13:45</ref>; <ref loc="ACT 18:6">18:6</ref>; <ref loc="1PE 3:16">1Pet 3:16</ref></char></note>Wao hushangaa kwamba ninyi hamjiingizi pamoja nao katika huo wingi wa maisha ya ufisadi, nao huwatukana ninyi. <verse eid="1PE 4:4"/><verse number="5" style="v" sid="1PE 4:5"/><note caller="-" style="x"><char style="xo" closed="false">4:5 </char><char style="xt" closed="false"><ref loc="ACT 10:42">Mdo 10:42</ref>; <ref loc="2TI 4:1">2Tim 4:1</ref></char></note>Lakini itawapasa wao kutoa hesabu mbele zake yeye aliye tayari kuwahukumu walio hai na waliokufa. <verse eid="1PE 4:5"/><verse number="6" style="v" sid="1PE 4:6"/><note caller="-" style="x"><char style="xo" closed="false">4:6 </char><char style="xt" closed="false"><ref loc="1PE 3:19">1Pet 3:19</ref></char></note>Kwa kuwa hii ndiyo sababu Injili ilihubiriwa hata kwa wale waliokufa, ili wahukumiwe sawasawa na wanadamu wengine katika mwili, lakini katika roho waishi kulingana na Mungu aishivyo.<verse eid="1PE 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="1PE 4:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 13:11">Rum 13:11</ref>; <ref loc="1PE 4:8">1Pet 4:8</ref></char>
+    </note>Mwisho wa mambo yote umekaribia. Kwa hiyo kuweni na akili tulivu na kiasi, mkikesha katika kuomba. <verse eid="1PE 4:7"/><verse number="8" style="v" sid="1PE 4:8"/><note caller="-" style="x"><char style="xo" closed="false">4:8 </char><char style="xt" closed="false"><ref loc="HEB 13:1">Ebr 13:1</ref>; <ref loc="COL 3:14">Kol 3:14</ref>; <ref loc="PRO 10:12">Mit 10:12</ref>; <ref loc="1CO 13:7">1Kor 13:7</ref>; <ref loc="JAS 5:20">Yak 5:20</ref></char></note>Zaidi ya yote, dumuni katika upendo kwa maana upendo husitiri wingi wa dhambi. <verse eid="1PE 4:8"/><verse number="9" style="v" sid="1PE 4:9"/><note caller="-" style="x"><char style="xo" closed="false">4:9 </char><char style="xt" closed="false"><ref loc="PHP 2:14">Flp 2:14</ref>; <ref loc="1PE 4:10">1Pet 4:10</ref>; <ref loc="ROM 12:6-7">Rum 12:6-7</ref>; <ref loc="1CO 4:2">1Kor 4:2</ref></char></note>Kuweni wakarimu kila mtu na mwenzake pasipo manungʼuniko. <verse eid="1PE 4:9"/><verse number="10" style="v" sid="1PE 4:10"/><note caller="-" style="x"><char style="xo" closed="false">4:10 </char><char style="xt" closed="false"><ref loc="ROM 12:6">Rum 12:6</ref>; <ref loc="1CO 4:7">1Kor 4:7</ref>; <ref loc="MAT 24:45">Mt 24:45</ref>; <ref loc="LUK 12:42">Lk 12:42</ref>; <ref loc="1CO 4:1">1Kor 4:1</ref>, <ref loc="1CO 4:2">2</ref></char></note>Kila mmoja na atumie kipawa chochote alichopewa kuwahudumia wengine, kama mawakili waaminifu wa neema mbalimbali za Mungu. <verse eid="1PE 4:10"/><verse number="11" style="v" sid="1PE 4:11"/><note caller="-" style="x"><char style="xo" closed="false">4:11 </char><char style="xt" closed="false"><ref loc="EPH 6:10">Efe 6:10</ref>; <ref loc="1CO 10:31">1Kor 10:31</ref></char></note>Yeyote asemaye hana budi kusema kama mtu asemaye maneno ya Mungu mwenyewe. Yeyote ahudumuye hana budi kuhudumu kwa nguvu zile anazopewa na Mungu, ili Mungu apate kutukuzwa katika mambo yote kwa njia ya Yesu Kristo. Utukufu na uweza una yeye milele na milele. Amen.<verse eid="1PE 4:11"/></para>
+  <para style="s1">Kuteseka Kwa Kuwa Mkristo</para>
+  <para style="p">
+    <verse number="12" style="v" sid="1PE 4:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="1PE 1:6-7">1Pet 1:6-7</ref>; <ref loc="1CO 3:13">1Kor 3:13</ref></char>
+    </note>Wapenzi, msione ajabu kwa yale mateso yanayotukia miongoni mwenu, kana kwamba ni kitu kigeni kinachowapata. <verse eid="1PE 4:12"/><verse number="13" style="v" sid="1PE 4:13"/><note caller="-" style="x"><char style="xo" closed="false">4:13 </char><char style="xt" closed="false"><ref loc="ROM 8:17">Rum 8:17</ref>; <ref loc="1PE 4:14">1Pet 4:14</ref>; <ref loc="MAT 5:11">Mt 5:11</ref></char></note>Bali furahini kuwa mnashiriki katika mateso ya Kristo, ili mpate kufurahi zaidi wakati utukufu wake utakapofunuliwa. <verse eid="1PE 4:13"/><verse number="14" style="v" sid="1PE 4:14"/><note caller="-" style="x"><char style="xo" closed="false">4:14 </char><char style="xt" closed="false"><ref loc="MAT 5:11">Mt 5:11</ref>; <ref loc="2CO 12:10">2Kor 12:10</ref>; <ref loc="JAS 1:12">Yak 1:12</ref>; <ref loc="1PE 2:19">1Pet 2:19</ref>, <ref loc="1PE 2:20">20</ref></char></note>Kama mkitukanwa kwa ajili ya jina la Kristo, mmebarikiwa, kwa sababu Roho wa utukufu na wa Mungu anakaa juu yenu. <verse eid="1PE 4:14"/><verse number="15" style="v" sid="1PE 4:15"/><note caller="-" style="x"><char style="xo" closed="false">4:15 </char><char style="xt" closed="false"><ref loc="ACT 5:41">Mdo 5:41</ref>; <ref loc="1PE 2:20">1Pet 2:20</ref>; <ref loc="1TH 4:11">1The 4:11</ref>; <ref loc="1TI 5:13">1Tim 5:13</ref></char></note>Lakini asiwepo mtu yeyote miongoni mwenu anayeteswa kwa kuwa ni muuaji, au mwizi, au mhalifu wa aina yoyote, au anayejishughulisha na mambo ya watu wengine. <verse eid="1PE 4:15"/><verse number="16" style="v" sid="1PE 4:16"/><note caller="-" style="x"><char style="xo" closed="false">4:16 </char><char style="xt" closed="false"><ref loc="ACT 5:41">Mdo 5:41</ref></char></note>Lakini kama ukiteseka kwa kuwa Mkristo, usihesabu jambo hilo kuwa ni aibu, bali mtukuze Mungu kwa sababu umeitwa kwa jina hilo. <verse eid="1PE 4:16"/><verse number="17" style="v" sid="1PE 4:17"/><note caller="-" style="x"><char style="xo" closed="false">4:17 </char><char style="xt" closed="false"><ref loc="EZK 9:6">Eze 9:6</ref>; <ref loc="1TI 3:15">1Tim 3:15</ref>; <ref loc="2TH 1:8">2The 1:8</ref></char></note>Kwa maana wakati umewadia wa hukumu kuanzia katika nyumba ya Mungu. Basi kama ikianzia kwetu sisi, mwisho wa hao wasiotii Injili ya Mungu utakuwaje? <verse eid="1PE 4:17"/><verse number="18" style="v" sid="1PE 4:18"/><note caller="-" style="x"><char style="xo" closed="false">4:18 </char><char style="xt" closed="false"><ref loc="PRO 11:31">Mit 11:31</ref>; <ref loc="LUK 23:31">Lk 23:31</ref></char></note>Basi,</para>
+  <para style="q1" vid="1PE 4:18">“Ikiwa ni vigumu kwa mwenye haki kuokoka,</para>
+  <para style="q2" vid="1PE 4:18">itakuwaje kwa mtu asiyemcha Mungu na mwenye dhambi?”<verse eid="1PE 4:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="1PE 4:19"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:19 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 31:5">Za 31:5</ref>; <ref loc="LUK 23:46">Lk 23:46</ref>; <ref loc="2TI 1:12">2Tim 1:12</ref></char>
+    </note>Kwa hiyo, wale wanaoteswa kulingana na mapenzi ya Mungu, wajikabidhi kwa Muumba wao aliye mwaminifu, huku wakizidi kutenda mema.<verse eid="1PE 4:19"/></para>
+  <chapter eid="1PE 4"/>
+  <chapter number="5" style="c" sid="1PE 5"/>
+  <para style="s1">Kulichunga Kundi La Mungu</para>
+  <para style="p">
+    <verse number="1" style="v" sid="1PE 5:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 11:30">Mdo 11:30</ref>; <ref loc="LUK 24:48">Lk 24:48</ref>; <ref loc="1PE 4:13">1Pet 4:13</ref>; <ref loc="REV 1:9">Ufu 1:9</ref></char>
+    </note>Kwa wazee waliomo miongoni mwenu, nawasihi mimi nikiwa mzee mwenzenu, shahidi wa mateso ya Kristo, na mshiriki katika utukufu utakaofunuliwa: <verse eid="1PE 5:1"/><verse number="2" style="v" sid="1PE 5:2"/><note caller="-" style="x"><char style="xo" closed="false">5:2 </char><char style="xt" closed="false"><ref loc="JHN 21:6">Yn 21:6</ref>; <ref loc="1TI 3:3">1Tim 3:3</ref></char></note>lichungeni kundi la Mungu mlilokabidhiwa, mkitumika kama waangalizi, si kwa kulazimishwa bali kwa hiari, kama Mungu anavyowataka mwe; si kwa tamaa ya fedha, bali mlio na bidii katika kutumika. <verse eid="1PE 5:2"/><verse number="3" style="v" sid="1PE 5:3"/><note caller="-" style="x"><char style="xo" closed="false">5:3 </char><char style="xt" closed="false"><ref loc="EZK 34:4">Eze 34:4</ref>; <ref loc="MAT 20:25-28">Mt 20:25-28</ref>; <ref loc="PHP 3:17">Flp 3:17</ref>; <ref loc="1TI 4:12">1Tim 4:12</ref></char></note>Msijifanye mabwana juu ya wale walio chini ya uangalizi wenu, bali kuweni vielelezo kwa hilo kundi. <verse eid="1PE 5:3"/><verse number="4" style="v" sid="1PE 5:4"/><note caller="-" style="x"><char style="xo" closed="false">5:4 </char><char style="xt" closed="false"><ref loc="1CO 9:25">1Kor 9:25</ref>; <ref loc="HEB 13:20">Ebr 13:20</ref>; <ref loc="1CO 9:25">1Kor 9:25</ref>; <ref loc="2TI 4:8">2Tim 4:8</ref>; <ref loc="JAS 1:12">Yak 1:12</ref>; <ref loc="1PE 1:4">1Pet 1:4</ref></char></note>Naye Mchungaji Mkuu atakapodhihirishwa, mtapokea taji ya utukufu isiyoharibika.<verse eid="1PE 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="1PE 5:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 5:21">Efe 5:21</ref>; <ref loc="PRO 3:34">Mit 3:34</ref>; <ref loc="JAS 4:6">Yak 4:6</ref></char>
+    </note>Vivyo hivyo, ninyi mlio vijana watiini wazee. Nanyi nyote imewapasa kujivika unyenyekevu kila mtu kwa mwenzake, kwa kuwa,</para>
+  <para style="q1" vid="1PE 5:5">“Mungu huwapinga wenye kiburi,</para>
+  <para style="q2" vid="1PE 5:5">lakini huwapa wanyenyekevu neema.”<verse eid="1PE 5:5"/></para>
+  <para style="m">
+    <verse number="6" style="v" sid="1PE 5:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="JAS 4:10">Yak 4:10</ref>
+      </char>
+    </note>Basi, nyenyekeeni chini ya mkono wa Mungu ulio hodari, ili awakweze kwa wakati wake. <verse eid="1PE 5:6"/><verse number="7" style="v" sid="1PE 5:7"/><note caller="-" style="x"><char style="xo" closed="false">5:7 </char><char style="xt" closed="false"><ref loc="PRO 27:5">Mit 27:5</ref>; <ref loc="MAT 6:25">Mt 6:25</ref>; <ref loc="HEB 13:5">Ebr 13:5</ref></char></note>Mtwikeni yeye fadhaa zenu zote, kwa maana yeye hujishughulisha sana na mambo yenu.<verse eid="1PE 5:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="1PE 5:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 1:7">Ay 1:7</ref>; <ref loc="LUK 21:34">Lk 21:34</ref>, <ref loc="LUK 21:36">36</ref>; <ref loc="1TH 5:6">1The 5:6</ref>; <ref loc="1PE 4:7">1Pet 4:7</ref>; <ref loc="REV 12:12">Ufu 12:12</ref></char>
+    </note>Mwe na kiasi na kukesha, maana adui yenu ibilisi huzungukazunguka kama simba angurumaye akitafuta mtu ili apate kummeza. <verse eid="1PE 5:8"/><verse number="9" style="v" sid="1PE 5:9"/><note caller="-" style="x"><char style="xo" closed="false">5:9 </char><char style="xt" closed="false"><ref loc="JAS 4:7">Yak 4:7</ref>; <ref loc="COL 2:5">Kol 2:5</ref>; <ref loc="ACT 14:22">Mdo 14:22</ref></char></note>Mpingeni, mkiwa thabiti katika imani, mkijua ya kwamba mateso kama hayo yanawapata ndugu zenu pote duniani.<verse eid="1PE 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="1PE 5:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 4:17">2Kor 4:17</ref>; <ref loc="2TH 2:17">2The 2:17</ref></char>
+    </note>Nanyi mkiisha kuteswa kwa kitambo kidogo, Mungu wa neema yote, aliyewaita kuingia katika utukufu wake wa milele ndani ya Kristo, yeye mwenyewe atawarejesha na kuwatia nguvu, akiwaimarisha na kuwathibitisha. <verse eid="1PE 5:10"/><verse number="11" style="v" sid="1PE 5:11"/><note caller="-" style="x"><char style="xo" closed="false">5:11 </char><char style="xt" closed="false"><ref loc="ROM 11:36">Rum 11:36</ref>; <ref loc="1PE 4:11">1Pet 4:11</ref>; <ref loc="REV 1:6">Ufu 1:6</ref></char></note>Uweza una yeye milele na milele. Amen.<verse eid="1PE 5:11"/></para>
+  <para style="s1">Salamu Za Mwisho</para>
+  <para style="p">
+    <verse number="12" style="v" sid="1PE 5:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 1:19">2Kor 1:19</ref>; <ref loc="HEB 13:22">Ebr 13:22</ref></char>
+    </note>Kwa msaada wa Silvano,<note caller="+" style="f"><char style="fr" closed="false">5:12 </char><char style="ft" closed="false">Yaani Sila.</char></note> ambaye ninamhesabu kuwa ndugu mwaminifu, nimewaandikia waraka huu mfupi ili kuwatia moyo, na kushuhudia kwamba hii ni neema halisi ya Mungu. Simameni imara katika neema hiyo.<verse eid="1PE 5:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="1PE 5:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 12:12">Mdo 12:12</ref>
+      </char>
+    </note>Kanisa lililoko Babeli, lililochaguliwa pamoja nanyi, wanawasalimu; vivyo hivyo mwanangu Marko anawasalimu. <verse eid="1PE 5:13"/><verse number="14" style="v" sid="1PE 5:14"/><note caller="-" style="x"><char style="xo" closed="false">5:14 </char><char style="xt" closed="false"><ref loc="ROM 16:16">Rum 16:16</ref>; <ref loc="EPH 6:23">Efe 6:23</ref></char></note>Salimianeni kwa busu la upendo.</para>
+  <para style="p" vid="1PE 5:14">Amani iwe nanyi nyote mlio katika Kristo.<verse eid="1PE 5:14"/></para>
+  <chapter eid="1PE 5"/>
+</usx>

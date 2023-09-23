@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<usx version="3.0">
+  <book code="MIC" style="id">- God’s Word Bible</book>
+  <para style="ide">UTF-8</para>
+  <para style="rem">© 1995, 2003, 2013, 2014, 2019, 2020 by God’s Word to the Nations Mission Society. All rights reserved.</para>
+  <para style="rem">Converted from InDesign files to USFM-3 by Elbert Boot (Digital Bible Library Customer Service Team, Miami [USA])</para>
+  <para style="rem">Language: English</para>
+  <para style="rem">This project has 9 poetry levels, and Paratext only supports up to 4 levels. To upload the text to DBL, we have created a dblChanges file and added q5 to q9 to a custom.sty to obtain the desired design in Paratext.</para>
+  <para style="h">MICAH</para>
+  <para style="toc1">Micah</para>
+  <para style="toc2">Micah</para>
+  <para style="toc3">Micah</para>
+  <para style="mt1">Micah</para>
+  <chapter number="1" style="c" sid="MIC 1" />
+  <para style="s1">The Prophet Micah</para>
+  <para style="m">
+    <verse number="1" style="v" sid="MIC 1:1" />The <char style="nd">Lord</char> spoke his word to Micah, who was from Moresheth, when Jotham, Ahaz, and Hezekiah were kings of Judah. This is the vision that Micah saw about Samaria and Jerusalem.<verse eid="MIC 1:1" /></para>
+  <para style="s1">The Capital Cities of Israel and Judah Destroyed</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="MIC 1:2" />Listen, all you people!</para>
+  <para style="q1" vid="MIC 1:2">Pay attention, earth and all who are on it.</para>
+  <para style="q1" vid="MIC 1:2">The Almighty <char style="nd">Lord</char> will be a witness against you.</para>
+  <para style="q1" vid="MIC 1:2">The Lord will be a witness from his holy temple.<verse eid="MIC 1:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="MIC 1:3" />The <char style="nd">Lord</char> is going to come from his place.</para>
+  <para style="q1" vid="MIC 1:3">He is going to come down and step on the worship places of the earth.<verse eid="MIC 1:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="MIC 1:4" />Mountains will melt under him like wax near a fire.</para>
+  <para style="q1" vid="MIC 1:4">Valleys will split apart like water pouring down a steep hill.<verse eid="MIC 1:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="MIC 1:5" />All this is because of Jacob’s crime and Israel’s sin.</para>
+  <para style="q1" vid="MIC 1:5">What is Jacob’s crime? Isn’t it Samaria?</para>
+  <para style="q1" vid="MIC 1:5">What is Judah’s worship place? Isn’t it Jerusalem?<verse eid="MIC 1:5" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="6" style="v" sid="MIC 1:6" />So I will turn Samaria into a pile of rubble,</para>
+  <para style="q1" vid="MIC 1:6">a place for planting vineyards.</para>
+  <para style="q1" vid="MIC 1:6">I will roll its stones down into a valley and expose its foundations.<verse eid="MIC 1:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="MIC 1:7" />All its idols will be smashed to pieces.</para>
+  <para style="q1" vid="MIC 1:7">All its wages for being a prostitute will be burned.</para>
+  <para style="q1" vid="MIC 1:7">All its statues will be turned into a pile of rubble.</para>
+  <para style="q1" vid="MIC 1:7">Samaria collected its wages for being a prostitute.</para>
+  <para style="q1" vid="MIC 1:7">That money will again pay for prostitutes.<verse eid="MIC 1:7" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="8" style="v" sid="MIC 1:8" />I will mourn and cry because of this.</para>
+  <para style="q1" vid="MIC 1:8">I will walk around barefoot and naked.</para>
+  <para style="q1" vid="MIC 1:8">I will cry like a jackal and mourn like an ostrich.<verse eid="MIC 1:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="MIC 1:9" />Samaria’s wounds are incurable.</para>
+  <para style="q1" vid="MIC 1:9">
+    <char style="add">⌞The news about Samaria⌟</char> will come to Judah.</para>
+  <para style="q1" vid="MIC 1:9">It will reach the gates of my people in Jerusalem.<verse eid="MIC 1:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="MIC 1:10" />Don’t report it in Gath. Don’t cry there.</para>
+  <para style="q1" vid="MIC 1:10">Roll in the dust of Beth Leaphrah.<note caller="+" style="f"><char style="fr" closed="false">1:10 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“I rolled in the dust of Beth Leaphrah.”</char></note><verse eid="MIC 1:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="MIC 1:11" />Pass by, naked and ashamed, inhabitants of Shaphir.</para>
+  <para style="q1" vid="MIC 1:11">Don’t come out, inhabitants of Zaanan.</para>
+  <para style="q1" vid="MIC 1:11">Beth Ezel is in mourning.</para>
+  <para style="q1" vid="MIC 1:11">It will take its support away from you.<verse eid="MIC 1:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="MIC 1:12" />Wait anxiously for good, inhabitants of Maroth.</para>
+  <para style="q1" vid="MIC 1:12">From the <char style="nd">Lord</char> disaster will come on the gates of Jerusalem.<verse eid="MIC 1:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="MIC 1:13" />Harness the horses to the chariots, inhabitants of Lachish.</para>
+  <para style="q1" vid="MIC 1:13">You were the first to lead the people of Zion into sin.</para>
+  <para style="q1" vid="MIC 1:13">The rebellious acts of Israel are found in you.<verse eid="MIC 1:13" /></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="MIC 1:14" />That is why you will give farewell gifts to Moresheth Gath.</para>
+  <para style="q1" vid="MIC 1:14">The town of Achzib will betray the kings of Israel.<verse eid="MIC 1:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="MIC 1:15" />I will again bring a conqueror against the inhabitants of Mareshah.</para>
+  <para style="q1" vid="MIC 1:15">The glory of Israel will come to Adullam.<verse eid="MIC 1:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="MIC 1:16" />Shave your head in mourning for the children you love.</para>
+  <para style="q1" vid="MIC 1:16">Make yourselves as bald as vultures</para>
+  <para style="q1" vid="MIC 1:16">because your children will be taken from you into exile.<verse eid="MIC 1:16" /></para>
+  <chapter eid="MIC 1" />
+  <chapter number="2" style="c" sid="MIC 2" />
+  <para style="s1">Israel’s Sins Are Condemned</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="MIC 2:1" />How horrible it will be for those who invent trouble</para>
+  <para style="q1" vid="MIC 2:1">and work out plans for disaster while in bed.</para>
+  <para style="q1" vid="MIC 2:1">When the morning dawns, they carry out their plans</para>
+  <para style="q1" vid="MIC 2:1">because they are able to.<verse eid="MIC 2:1" /></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="MIC 2:2" />They desire <char style="add">⌞other people’s⌟</char> fields, so they seize them.</para>
+  <para style="q1" vid="MIC 2:2">They desire <char style="add">⌞people’s⌟</char> houses, so they take them.</para>
+  <para style="q1" vid="MIC 2:2">They cheat a man and his family,</para>
+  <para style="q1" vid="MIC 2:2">a man and his inheritance.<verse eid="MIC 2:2" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="3" style="v" sid="MIC 2:3" />So this is what the <char style="nd">Lord</char> says:</para>
+  <para style="b" vid="MIC 2:3" />
+  <para style="q1" vid="MIC 2:3">I’m planning a disaster to punish your family.</para>
+  <para style="q1" vid="MIC 2:3">You won’t be able to rescue yourselves.</para>
+  <para style="q1" vid="MIC 2:3">You will no longer be able to walk proudly.</para>
+  <para style="q1" vid="MIC 2:3">This will be a time of disaster.<verse eid="MIC 2:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="MIC 2:4" />When that day comes, people will make fun of you.</para>
+  <para style="q1" vid="MIC 2:4">They will sing this sad song about you:</para>
+  <para style="q1" vid="MIC 2:4">“We are completely ruined.</para>
+  <para style="q1" vid="MIC 2:4">The <char style="nd">Lord</char> gives our people’s possessions <char style="add">⌞to others⌟</char>.</para>
+  <para style="q1" vid="MIC 2:4">He takes them from us.</para>
+  <para style="q1" vid="MIC 2:4">He divides our fields among our captors.”<verse eid="MIC 2:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="MIC 2:5" />That is why none of you in the <char style="nd">Lord</char>’s assembly will draw lots</para>
+  <para style="q1" vid="MIC 2:5">to divide your property.<verse eid="MIC 2:5" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="6" style="v" sid="MIC 2:6" />Your prophets say, “Don’t prophesy!</para>
+  <para style="q1" vid="MIC 2:6">Don’t prophesy such things!</para>
+  <para style="q1" vid="MIC 2:6">Disgrace will never overtake us.”<verse eid="MIC 2:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="MIC 2:7" />Should the descendants of Jacob be asked:</para>
+  <para style="q1" vid="MIC 2:7">Has the Spirit of the <char style="nd">Lord</char> become impatient with you?</para>
+  <para style="q1" vid="MIC 2:7">Has he done these things?</para>
+  <para style="q1" vid="MIC 2:7">Are his words good for those who live honestly?<verse eid="MIC 2:7" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="8" style="v" sid="MIC 2:8" />Recently, my people have turned into enemies.</para>
+  <para style="q1" vid="MIC 2:8">You take coats from those who pass by without a care</para>
+  <para style="q1" vid="MIC 2:8">as they return from war.<verse eid="MIC 2:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="MIC 2:9" />You force the women among my people out of their pleasant homes</para>
+  <para style="q1" vid="MIC 2:9">and take my glory away from their children forever.<verse eid="MIC 2:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="MIC 2:10" />Get up, and go away!</para>
+  <para style="q1" vid="MIC 2:10">This is not a place to rest!</para>
+  <para style="q1" vid="MIC 2:10">It will be destroyed, completely destroyed,</para>
+  <para style="q1" vid="MIC 2:10">because it offends me.<verse eid="MIC 2:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="MIC 2:11" />Liars and frauds may go around and say,</para>
+  <para style="q1" vid="MIC 2:11">“We will preach to you about wine and liquor.”</para>
+  <para style="q1" vid="MIC 2:11">They would be just the type of preacher you want.<verse eid="MIC 2:11" /></para>
+  <para style="s1">Israel Will Be Gathered Again by the <char style="nd">LORD</char></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="MIC 2:12" />I will surely gather all of you, Jacob.</para>
+  <para style="q1" vid="MIC 2:12">I will surely bring together the few people left in Israel.</para>
+  <para style="q1" vid="MIC 2:12">I will gather them together like sheep in a pen,</para>
+  <para style="q1" vid="MIC 2:12">like a flock in its pasture.</para>
+  <para style="q1" vid="MIC 2:12">They will make a lot of noise</para>
+  <para style="q1" vid="MIC 2:12">because there will be so many people.<verse eid="MIC 2:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="MIC 2:13" />
+    <char style="add">⌞The <char style="nd">Lord</char>⌟</char> will open the way and lead them.</para>
+  <para style="q1" vid="MIC 2:13">They will break out, go through the gate, and leave.</para>
+  <para style="q1" vid="MIC 2:13">Their king will travel in front of them.</para>
+  <para style="q1" vid="MIC 2:13">The <char style="nd">Lord</char> will lead the people.<verse eid="MIC 2:13" /></para>
+  <chapter eid="MIC 2" />
+  <chapter number="3" style="c" sid="MIC 3" />
+  <para style="s1">Israel’s Sinful Leaders—Rulers, Prophets, and Priests</para>
+  <para style="m">
+    <verse number="1" style="v" sid="MIC 3:1" />Then I said:</para>
+  <para style="b" vid="MIC 3:1" />
+  <para style="q1" vid="MIC 3:1">Listen, you leaders of Jacob, you rulers of the nation of Israel.</para>
+  <para style="q1" vid="MIC 3:1">You should know justice.<verse eid="MIC 3:1" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="2" style="v" sid="MIC 3:2" />You hate good and love evil.</para>
+  <para style="q1" vid="MIC 3:2">You strip the skin off my people and the flesh off their bones.<verse eid="MIC 3:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="MIC 3:3" />You eat my people’s flesh.</para>
+  <para style="q1" vid="MIC 3:3">You strip off their skin.</para>
+  <para style="q1" vid="MIC 3:3">You break their bones to pieces.</para>
+  <para style="q1" vid="MIC 3:3">You chop them up like meat for a pot, like stew meat for a kettle.<verse eid="MIC 3:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="MIC 3:4" />Then you will cry to the <char style="nd">Lord</char>,</para>
+  <para style="q1" vid="MIC 3:4">but he will not answer you.</para>
+  <para style="q1" vid="MIC 3:4">He will hide his face from you at that time</para>
+  <para style="q1" vid="MIC 3:4">because you have done evil things.<verse eid="MIC 3:4" /></para>
+  <para style="p">
+    <verse number="5" style="v" sid="MIC 3:5" />This is what the <char style="nd">Lord</char> says about the prophets who mislead my people:</para>
+  <para style="b" vid="MIC 3:5" />
+  <para style="q1" vid="MIC 3:5">When they have something to eat, they say, “All is well!”</para>
+  <para style="q1" vid="MIC 3:5">But they declare a holy war against those who don’t feed them.<verse eid="MIC 3:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="MIC 3:6" />That is why you will have nights without visions.</para>
+  <para style="q1" vid="MIC 3:6">You will have darkness without revelations.</para>
+  <para style="q1" vid="MIC 3:6">The sun will set on the prophets,</para>
+  <para style="q1" vid="MIC 3:6">and the day will turn dark for them.<verse eid="MIC 3:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="MIC 3:7" />Seers <note caller="+" style="f"><char style="fr" closed="false">3:7 </char><char style="ft" closed="false">A </char><char style="fk" closed="false">seer </char><char style="ft" closed="false">is a prophet.</char></note> will be put to shame.</para>
+  <para style="q1" vid="MIC 3:7">Those who practice witchcraft will be disgraced.</para>
+  <para style="q1" vid="MIC 3:7">All of them will cover their faces, because God won’t answer them.<verse eid="MIC 3:7" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="8" style="v" sid="MIC 3:8" />But I am filled with the power of the <char style="nd">Lord</char>’s Spirit,</para>
+  <para style="q1" vid="MIC 3:8">with justice, and with strength.</para>
+  <para style="q1" vid="MIC 3:8">So I will tell <char style="add">⌞the descendants of⌟</char> Jacob about their crimes</para>
+  <para style="q1" vid="MIC 3:8">and <char style="add">⌞the nation of⌟</char> Israel about its sins.<verse eid="MIC 3:8" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="9" style="v" sid="MIC 3:9" />Listen to this, you leaders of the descendants of Jacob,</para>
+  <para style="q1" vid="MIC 3:9">you rulers of the nation of Israel.</para>
+  <para style="q1" vid="MIC 3:9">You despise justice and pervert everything that is right.<verse eid="MIC 3:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="MIC 3:10" />You build Zion on bloodshed and Jerusalem on wickedness.<verse eid="MIC 3:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="MIC 3:11" />Your leaders exchange justice for bribes.</para>
+  <para style="q1" vid="MIC 3:11">Your priests teach for a price.</para>
+  <para style="q1" vid="MIC 3:11">Your prophets tell the future for money.</para>
+  <para style="q1" vid="MIC 3:11">But they rely on the <char style="nd">Lord</char> when they say,</para>
+  <para style="q1" vid="MIC 3:11">“After all, the <char style="nd">Lord</char> is with us.</para>
+  <para style="q1" vid="MIC 3:11">Nothing bad will happen to us.”<verse eid="MIC 3:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="MIC 3:12" />Because of you,</para>
+  <para style="q1" vid="MIC 3:12">Zion will be plowed like a field,</para>
+  <para style="q1" vid="MIC 3:12">Jerusalem will become a pile of rubble,</para>
+  <para style="q1" vid="MIC 3:12">and the temple mountain will become a worship site</para>
+  <para style="q1" vid="MIC 3:12">covered with trees.<verse eid="MIC 3:12" /></para>
+  <chapter eid="MIC 3" />
+  <chapter number="4" style="c" sid="MIC 4" />
+  <para style="s1">The <char style="nd">LORD</char> Will Teach the Nations</para>
+  <para style="r">(<ref loc="ISA 2:2-4">Isaiah 2:2–4</ref>)</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="MIC 4:1" />In the last days the mountain of the <char style="nd">Lord</char>’s house</para>
+  <para style="q1" vid="MIC 4:1">will be established as the highest of the mountains</para>
+  <para style="q1" vid="MIC 4:1">and raised above the hills.</para>
+  <para style="q1" vid="MIC 4:1">People will stream to it.<verse eid="MIC 4:1" /></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="MIC 4:2" />Then many nations will come and say,</para>
+  <para style="q1" vid="MIC 4:2">“Let’s go to the mountain of the <char style="nd">Lord</char>,</para>
+  <para style="q1" vid="MIC 4:2">to the house of the God of Jacob.</para>
+  <para style="q1" vid="MIC 4:2">He will teach us his ways so that we may live by them.”</para>
+  <para style="q1" vid="MIC 4:2">The teachings will go out from Zion.</para>
+  <para style="q1" vid="MIC 4:2">The <char style="nd">Lord</char>’s word will go out from Jerusalem.<verse eid="MIC 4:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="MIC 4:3" />Then he will judge disputes between many people</para>
+  <para style="q1" vid="MIC 4:3">and settle arguments between many nations far and wide.</para>
+  <para style="q1" vid="MIC 4:3">They will hammer their swords into plowblades</para>
+  <para style="q1" vid="MIC 4:3">and their spears into pruning shears.</para>
+  <para style="q1" vid="MIC 4:3">Nations will never fight against each other,</para>
+  <para style="q1" vid="MIC 4:3">and they will never train for war again.<verse eid="MIC 4:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="MIC 4:4" />They will sit under their grapevines and their fig trees,</para>
+  <para style="q1" vid="MIC 4:4">and no one will make them afraid.</para>
+  <para style="q1" vid="MIC 4:4">The <char style="nd">Lord</char> of Armies has spoken.<verse eid="MIC 4:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="MIC 4:5" />All the nations live by the names of their gods,</para>
+  <para style="q1" vid="MIC 4:5">but we will live by the name of the <char style="nd">Lord</char> our God forever.<verse eid="MIC 4:5" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="6" style="v" sid="MIC 4:6" />“When that day comes,” declares the <char style="nd">Lord</char>,</para>
+  <para style="q1" vid="MIC 4:6">“I will gather those who are lame.</para>
+  <para style="q1" vid="MIC 4:6">I will bring together those who are scattered</para>
+  <para style="q1" vid="MIC 4:6">and those whom I have injured.<verse eid="MIC 4:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="MIC 4:7" />I will change those who are lame into a faithful people.</para>
+  <para style="q1" vid="MIC 4:7">I will change those who are forced away into a strong nation.”</para>
+  <para style="q1" vid="MIC 4:7">The <char style="nd">Lord</char> will rule them on Mount Zion now and forever.<verse eid="MIC 4:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="MIC 4:8" />You, Jerusalem, watchtower of the flock,</para>
+  <para style="q1" vid="MIC 4:8">stronghold of the people of Zion,</para>
+  <para style="q1" vid="MIC 4:8">your former government will come back to you.</para>
+  <para style="q1" vid="MIC 4:8">The kingdom will return to the people of Jerusalem.<verse eid="MIC 4:8" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="9" style="v" sid="MIC 4:9" />Now why are you crying so loudly?</para>
+  <para style="q1" vid="MIC 4:9">Don’t you have a king?</para>
+  <para style="q1" vid="MIC 4:9">Has your counselor died?</para>
+  <para style="q1" vid="MIC 4:9">Pain grips you like a woman in labor.<verse eid="MIC 4:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="MIC 4:10" />Daughter of Zion, writhe in pain and groan like a woman in labor.</para>
+  <para style="q1" vid="MIC 4:10">Now you will leave the city,</para>
+  <para style="q1" vid="MIC 4:10">live in the open fields,</para>
+  <para style="q1" vid="MIC 4:10">and go to Babylon.</para>
+  <para style="q1" vid="MIC 4:10">There you will be rescued.</para>
+  <para style="q1" vid="MIC 4:10">There the <char style="nd">Lord</char> will reclaim you from your enemies.<verse eid="MIC 4:10" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="11" style="v" sid="MIC 4:11" />But now many nations gather against you.</para>
+  <para style="q1" vid="MIC 4:11">They say, “Let’s dishonor Zion and gloat over it.”<verse eid="MIC 4:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="MIC 4:12" />They don’t know the thoughts of the <char style="nd">Lord</char> or understand his plan.</para>
+  <para style="q1" vid="MIC 4:12">He will bring them together</para>
+  <para style="q1" vid="MIC 4:12">like cut grain on the threshing floor.<note caller="+" style="f"><char style="fr" closed="false">4:12 </char><char style="ft" closed="false">A </char><char style="fq" closed="false">threshing floor </char><char style="ft" closed="false">is an outdoor area where grain is separated from its husks.</char></note><verse eid="MIC 4:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="MIC 4:13" />Get up and thresh,<note caller="+" style="f"><char style="fr" closed="false">4:13 </char><char style="fqa" closed="false">Threshing </char><char style="ft" closed="false">is the process of beating stalks to separate them from the grain.</char></note> people of Zion.</para>
+  <para style="q1" vid="MIC 4:13">I will make your horns as hard as iron</para>
+  <para style="q1" vid="MIC 4:13">and your hoofs as hard as bronze.</para>
+  <para style="q1" vid="MIC 4:13">You will smash many nations into small pieces.</para>
+  <para style="q1" vid="MIC 4:13">You will claim their loot for the <char style="nd">Lord</char>,</para>
+  <para style="q1" vid="MIC 4:13">their wealth for the Lord of the whole earth.<verse eid="MIC 4:13" /></para>
+  <chapter eid="MIC 4" />
+  <chapter number="5" style="c" sid="MIC 5" />
+  <para style="q1">
+    <verse number="1" style="v" sid="MIC 5:1" />
+    <note caller="+" style="f">
+      <char style="fr" closed="false">5:1 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="MIC 5:1-15">Micah 5:1–15</ref>
+        </char> in English Bibles is Micah 4:14–5:14 in the Hebrew Bible.</char>
+    </note>Now, gather your troops, you city of troops.</para>
+  <para style="q1" vid="MIC 5:1">We are under attack.</para>
+  <para style="q1" vid="MIC 5:1">Enemies will strike the judge of Israel on the cheek with a stick.<verse eid="MIC 5:1" /></para>
+  <para style="s1">The LORD’s Leader for Israel</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="MIC 5:2" />You, Bethlehem Ephrathah,</para>
+  <para style="q1" vid="MIC 5:2">are too small to be included among Judah’s cities.</para>
+  <para style="q1" vid="MIC 5:2">Yet, from you Israel’s future ruler will come for me.</para>
+  <para style="q1" vid="MIC 5:2">His origins go back to the distant past, to days long ago.<verse eid="MIC 5:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="MIC 5:3" />That is why the <char style="nd">Lord</char> will abandon Israel</para>
+  <para style="q1" vid="MIC 5:3">until the time a mother has a child.</para>
+  <para style="q1" vid="MIC 5:3">Then the rest of the <char style="nd">Lord</char>’s people will return to the people of Israel.<verse eid="MIC 5:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="MIC 5:4" />The child will become the shepherd of his flock.</para>
+  <para style="q1" vid="MIC 5:4">
+    <char style="add">⌞He will lead them⌟</char> with the strength of the <char style="nd">Lord</char>,</para>
+  <para style="q1" vid="MIC 5:4">with the majestic name of the <char style="nd">Lord</char> his God.</para>
+  <para style="q1" vid="MIC 5:4">They will live in safety</para>
+  <para style="q1" vid="MIC 5:4">because his greatness will reach the ends of the earth.<verse eid="MIC 5:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="MIC 5:5" />This man will be their peace.</para>
+  <para style="b" vid="MIC 5:5" />
+  <para style="q1" vid="MIC 5:5">When the Assyrians invade our land and trample our palaces,</para>
+  <para style="q1" vid="MIC 5:5">we will attack them with seven shepherds and eight leaders.<verse eid="MIC 5:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="MIC 5:6" />They will rule Assyria with their swords</para>
+  <para style="q1" vid="MIC 5:6">and the country of Nimrod with drawn swords.</para>
+  <para style="q1" vid="MIC 5:6">They will rescue us from the Assyrians</para>
+  <para style="q1" vid="MIC 5:6">when they come into our land</para>
+  <para style="q1" vid="MIC 5:6">and walk within our territory.<verse eid="MIC 5:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="MIC 5:7" />Then the few people left from Jacob will be among many people</para>
+  <para style="q1" vid="MIC 5:7">like dew from the <char style="nd">Lord</char>, like showers on the grass.</para>
+  <para style="q1" vid="MIC 5:7">They do not put their hope in humans or wait for mortals.<verse eid="MIC 5:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="MIC 5:8" />The few people left from Jacob will be among the nations,</para>
+  <para style="q1" vid="MIC 5:8">among many people.</para>
+  <para style="q1" vid="MIC 5:8">They will be like a lion among animals in the forest,</para>
+  <para style="q1" vid="MIC 5:8">like a young lion among flocks of sheep.</para>
+  <para style="q1" vid="MIC 5:8">When a lion hunts,</para>
+  <para style="q1" vid="MIC 5:8">it tramples <char style="add">⌞its victims⌟</char> and tears <char style="add">⌞them⌟</char> to pieces,</para>
+  <para style="q1" vid="MIC 5:8">and there is no one to rescue them.<verse eid="MIC 5:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="MIC 5:9" />You will use your power against your opponents,</para>
+  <para style="q1" vid="MIC 5:9">and all your enemies will be destroyed.<verse eid="MIC 5:9" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="10" style="v" sid="MIC 5:10" />“When that day comes,” declares the <char style="nd">Lord</char>,</para>
+  <para style="q1" vid="MIC 5:10">“I will destroy your horses</para>
+  <para style="q1" vid="MIC 5:10">and demolish your chariots.<verse eid="MIC 5:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="MIC 5:11" />I will destroy the cities in your land</para>
+  <para style="q1" vid="MIC 5:11">and tear down all your fortresses.<verse eid="MIC 5:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="MIC 5:12" />I will destroy your sorcerers,</para>
+  <para style="q1" vid="MIC 5:12">and you will have no more fortunetellers.<verse eid="MIC 5:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="MIC 5:13" />I will destroy your idols and your sacred monuments.</para>
+  <para style="q1" vid="MIC 5:13">You will no longer worship what your hands have made.<verse eid="MIC 5:13" /></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="MIC 5:14" />I will pull out your poles dedicated to the goddess Asherah.</para>
+  <para style="q1" vid="MIC 5:14">I will wipe out your cities.<verse eid="MIC 5:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="MIC 5:15" />I will take revenge with great anger</para>
+  <para style="q1" vid="MIC 5:15">on the nations that do not obey me.”<verse eid="MIC 5:15" /></para>
+  <chapter eid="MIC 5" />
+  <chapter number="6" style="c" sid="MIC 6" />
+  <para style="s1">The LORD’s Lawsuit against His People</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="MIC 6:1" />Now listen to what the <char style="nd">Lord</char> is saying,</para>
+  <para style="q1" vid="MIC 6:1">“Stand up! Plead your case in front of the mountains,</para>
+  <para style="q1" vid="MIC 6:1">and let the hills listen to your request.<verse eid="MIC 6:1" /></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="MIC 6:2" />Listen to the <char style="nd">Lord</char>’s lawsuit, you mountains.</para>
+  <para style="q1" vid="MIC 6:2">Listen, you strong foundations of the earth.</para>
+  <para style="q1" vid="MIC 6:2">The <char style="nd">Lord</char> has filed a lawsuit against his people.</para>
+  <para style="q1" vid="MIC 6:2">He is arguing his case against Israel.<verse eid="MIC 6:2" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="3" style="v" sid="MIC 6:3" />“My people, what have I done to you?</para>
+  <para style="q1" vid="MIC 6:3">How have I tried your patience? Answer me!<verse eid="MIC 6:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="MIC 6:4" />I brought you out of Egypt and freed you from slavery.</para>
+  <para style="q1" vid="MIC 6:4">I sent Moses, Aaron, and Miriam to lead you.<verse eid="MIC 6:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="MIC 6:5" />My people, remember what King Balak of Moab planned <char style="add">⌞to do to you⌟</char></para>
+  <para style="q1" vid="MIC 6:5">and how Balaam, son of Beor, responded to him.</para>
+  <para style="q1" vid="MIC 6:5">Remember <char style="add">⌞your journey⌟</char> from Shittim to Gilgal</para>
+  <para style="q1" vid="MIC 6:5">so that you may know the victories of the <char style="nd">Lord</char>.”<verse eid="MIC 6:5" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="6" style="v" sid="MIC 6:6" />What should I bring when I come into the <char style="nd">Lord</char>’s presence,</para>
+  <para style="q1" vid="MIC 6:6">when I bow in front of the God of heaven?</para>
+  <para style="q1" vid="MIC 6:6">Should I bring him year-old calves as burnt offerings?<verse eid="MIC 6:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="MIC 6:7" />Will the <char style="nd">Lord</char> be pleased with thousands of rams</para>
+  <para style="q1" vid="MIC 6:7">or with endless streams of olive oil?</para>
+  <para style="q1" vid="MIC 6:7">Should I give him my firstborn child because of my rebellious acts?</para>
+  <para style="q1" vid="MIC 6:7">Should I give him my young child for my sin?<verse eid="MIC 6:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="MIC 6:8" />You mortals, the <char style="nd">Lord</char> has told you what is good.</para>
+  <para style="q1" vid="MIC 6:8">This is what the <char style="nd">Lord</char> requires from you:</para>
+  <para style="q1" vid="MIC 6:8">to do what is right,</para>
+  <para style="q1" vid="MIC 6:8">to love mercy,</para>
+  <para style="q1" vid="MIC 6:8">and to live humbly with your God.<verse eid="MIC 6:8" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="9" style="v" sid="MIC 6:9" />The voice of the <char style="nd">Lord</char> calls out to the city.</para>
+  <para style="q1" vid="MIC 6:9">(The fear of your name is wisdom.)</para>
+  <para style="q1" vid="MIC 6:9">“Listen, you tribe assembled in the city.<note caller="+" style="f"><char style="fr" closed="false">6:9 </char><char style="ft" closed="false">Greek; Masoretic Text </char><char style="fqa" closed="false">“Listen to the stick and the one who appointed it.”</char></note><verse eid="MIC 6:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="MIC 6:10" />I have cursed all the wicked people who use their money for evil</para>
+  <para style="q1" vid="MIC 6:10">and use inaccurate weights and measures.<verse eid="MIC 6:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="MIC 6:11" />I cannot tolerate dishonest scales</para>
+  <para style="q1" vid="MIC 6:11">and bags filled with inaccurate weights.<verse eid="MIC 6:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="MIC 6:12" />The rich people in the city are violent.</para>
+  <para style="q1" vid="MIC 6:12">Those who live in the city speak lies,</para>
+  <para style="q1" vid="MIC 6:12">and their tongues speak deceitfully.<verse eid="MIC 6:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="MIC 6:13" />I have begun to strike you with heavy blows</para>
+  <para style="q1" vid="MIC 6:13">and to ruin you because of your sins.<verse eid="MIC 6:13" /></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="MIC 6:14" />You will eat, but you won’t be full.</para>
+  <para style="q1" vid="MIC 6:14">So you will always be hungry.</para>
+  <para style="q1" vid="MIC 6:14">You will put things away, but you won’t save them.</para>
+  <para style="q1" vid="MIC 6:14">Anything you save I will destroy.<verse eid="MIC 6:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="MIC 6:15" />You will plant, but you won’t harvest.</para>
+  <para style="q1" vid="MIC 6:15">You will crush olives, but you won’t rub the oil on your skin.</para>
+  <para style="q1" vid="MIC 6:15">You will make new wine, but you won’t drink it.<verse eid="MIC 6:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="MIC 6:16" />You have kept Omri’s laws</para>
+  <para style="q1" vid="MIC 6:16">and all the practices of the descendants of Ahab,</para>
+  <para style="q1" vid="MIC 6:16">and you have followed their advice.</para>
+  <para style="q1" vid="MIC 6:16">That is why I will ruin you.</para>
+  <para style="q1" vid="MIC 6:16">Your people will be ridiculed.</para>
+  <para style="q1" vid="MIC 6:16">You will bear the disgrace of my people.”<verse eid="MIC 6:16" /></para>
+  <chapter eid="MIC 6" />
+  <chapter number="7" style="c" sid="MIC 7" />
+  <para style="s1">The LORD’s People Confess Their Sin</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="MIC 7:1" />Poor me!</para>
+  <para style="q1" vid="MIC 7:1">I am like those gathering summer fruit,</para>
+  <para style="q1" vid="MIC 7:1">like those picking grapes.</para>
+  <para style="q1" vid="MIC 7:1">But there aren’t any grapes to eat</para>
+  <para style="q1" vid="MIC 7:1">or any ripened figs that I crave.<verse eid="MIC 7:1" /></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="MIC 7:2" />Faithful people are gone from the earth,</para>
+  <para style="q1" vid="MIC 7:2">and no one is decent.</para>
+  <para style="q1" vid="MIC 7:2">All people lie in ambush to commit murder.</para>
+  <para style="q1" vid="MIC 7:2">They trap each other with nets.<verse eid="MIC 7:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="MIC 7:3" />Their hands are skilled in doing evil.</para>
+  <para style="q1" vid="MIC 7:3">Officials ask for gifts.</para>
+  <para style="q1" vid="MIC 7:3">Judges accept bribes.</para>
+  <para style="q1" vid="MIC 7:3">Powerful people dictate what they want.</para>
+  <para style="q1" vid="MIC 7:3">So they scheme together.<verse eid="MIC 7:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="MIC 7:4" />The best of them is like a briar.</para>
+  <para style="q1" vid="MIC 7:4">The most decent person is sharper than thornbushes.</para>
+  <para style="q1" vid="MIC 7:4">The day you thought you would be punished has come.</para>
+  <para style="q1" vid="MIC 7:4">Now is the time you will be confused.<verse eid="MIC 7:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="MIC 7:5" />Don’t trust your neighbors.</para>
+  <para style="q1" vid="MIC 7:5">Don’t have confidence in <char style="add">⌞your⌟</char> friends.</para>
+  <para style="q1" vid="MIC 7:5">Keep your mouth shut even when a woman is lying in your arms.<verse eid="MIC 7:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="MIC 7:6" />A son treats his father with contempt.</para>
+  <para style="q1" vid="MIC 7:6">A daughter rebels against her mother.</para>
+  <para style="q1" vid="MIC 7:6">A daughter-in-law rebels against her mother-in-law.</para>
+  <para style="q1" vid="MIC 7:6">People’s enemies are the members of their own families.<verse eid="MIC 7:6" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="7" style="v" sid="MIC 7:7" />I will look to the <char style="nd">Lord</char>.</para>
+  <para style="q1" vid="MIC 7:7">I will wait for God to save me.</para>
+  <para style="q1" vid="MIC 7:7">I will wait for my God to listen to me.<verse eid="MIC 7:7" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="8" style="v" sid="MIC 7:8" />Don’t laugh at me, my enemies.</para>
+  <para style="q1" vid="MIC 7:8">Although I’ve fallen, I will get up.</para>
+  <para style="q1" vid="MIC 7:8">Although I sit in the dark, the <char style="nd">Lord</char> is my light.<verse eid="MIC 7:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="MIC 7:9" />I have sinned against the <char style="nd">Lord</char>.</para>
+  <para style="q1" vid="MIC 7:9">So I will endure his fury</para>
+  <para style="q1" vid="MIC 7:9">until he takes up my cause and wins my case.</para>
+  <para style="q1" vid="MIC 7:9">He will bring me into the light,</para>
+  <para style="q1" vid="MIC 7:9">and I will see his victory.<verse eid="MIC 7:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="MIC 7:10" />Then my enemies will see this, and they will be covered with shame,</para>
+  <para style="q1" vid="MIC 7:10">because they asked me, “Where is the <char style="nd">Lord</char> your God?”</para>
+  <para style="q1" vid="MIC 7:10">Now I look at them.</para>
+  <para style="q1" vid="MIC 7:10">They are trampled like mud in the streets.<verse eid="MIC 7:10" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="11" style="v" sid="MIC 7:11" />The day for rebuilding your walls</para>
+  <para style="q1" vid="MIC 7:11">and extending your borders is coming.<verse eid="MIC 7:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="MIC 7:12" />When that day comes, your people will come to you</para>
+  <para style="q1" vid="MIC 7:12">from Assyria and the cities of Egypt,</para>
+  <para style="q1" vid="MIC 7:12">from Egypt to the Euphrates River,</para>
+  <para style="q1" vid="MIC 7:12">from sea to sea, and from mountain to mountain.<verse eid="MIC 7:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="MIC 7:13" />The earth will become a wasteland for those who live on it</para>
+  <para style="q1" vid="MIC 7:13">because of what the people living there have done.<verse eid="MIC 7:13" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="14" style="v" sid="MIC 7:14" />With your shepherd’s staff, take care of your people,</para>
+  <para style="q1" vid="MIC 7:14">the sheep that belong to you.</para>
+  <para style="q1" vid="MIC 7:14">They live alone in the woods, in fertile pastures.</para>
+  <para style="q1" vid="MIC 7:14">Let them feed in Bashan and Gilead like before.<verse eid="MIC 7:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="MIC 7:15" />Let us see miracles</para>
+  <para style="q1" vid="MIC 7:15">like the time you came out of Egypt.<verse eid="MIC 7:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="MIC 7:16" />Nations will see this and be ashamed in spite of all their strength.</para>
+  <para style="q1" vid="MIC 7:16">They will put their hands over their mouths.</para>
+  <para style="q1" vid="MIC 7:16">Their ears will become deaf.<verse eid="MIC 7:16" /></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="MIC 7:17" />They will lick dust like snakes,</para>
+  <para style="q1" vid="MIC 7:17">like animals that crawl on the ground.</para>
+  <para style="q1" vid="MIC 7:17">They will come out of their hiding places trembling.</para>
+  <para style="q1" vid="MIC 7:17">They will turn away from your presence in fear, O <char style="nd">Lord</char> our God.</para>
+  <para style="q1" vid="MIC 7:17">They will be afraid of you.<verse eid="MIC 7:17" /></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="MIC 7:18" />Who is a God like you?</para>
+  <para style="q1" vid="MIC 7:18">You forgive sin</para>
+  <para style="q1" vid="MIC 7:18">and overlook the rebellion of your faithful people.</para>
+  <para style="q1" vid="MIC 7:18">You will not be angry forever,</para>
+  <para style="q1" vid="MIC 7:18">because you would rather show mercy.<verse eid="MIC 7:18" /></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="MIC 7:19" />You will again have compassion on us.</para>
+  <para style="q1" vid="MIC 7:19">You will overcome our wrongdoing.</para>
+  <para style="q1" vid="MIC 7:19">You will throw all our sins into the deep sea.<verse eid="MIC 7:19" /></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="MIC 7:20" />You will be faithful to Jacob.</para>
+  <para style="q1" vid="MIC 7:20">You will have mercy on Abraham</para>
+  <para style="q1" vid="MIC 7:20">as you swore by an oath to our ancestors long ago.<verse eid="MIC 7:20" /></para>
+  <chapter eid="MIC 7" />
+</usx>

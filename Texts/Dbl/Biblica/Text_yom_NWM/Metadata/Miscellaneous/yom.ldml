@@ -1,0 +1,25 @@
+﻿<ldml><identity><version number="" /><generation date="2018-04-20T18:53:38Z" /><language type="yom" /></identity><characters><exemplarCharacters>[A-IK-PR-Za-ik-pr-z\uA78B\uA78C]</exemplarCharacters><exemplarCharacters type="punctuation">[!'-*,-.\:-?\[\]~\u00A9\u00AB\u00AD\u00AE\u00B7\u00BB\u200C\u200D\u2011\u2013\u2014\u2018\u2019\u201C\u201D\u2026{!)}{!\u2019}{!\u2019\u201D}{!\u201D}{!\u201D(}{!\u201D)}{!\u201D).}{!\u201D\u2019}{!\u201D\u2019\u201D}{(~)}{(\u201C}{(\u201C\u2018}{)(}{),}{),\u201C}{).}{).\u2019\u201D}{).\u201D(}{)\:}{)~\:}{)~;}{)~;\u201C}{)~\u00BB.}{)\u201C}{)\u201D.}{,(}{,\[}{,\]}{,\u2018}{,\u2019}{,\u2019\u201D}{,\u201C}{,\u201C\u2018}{,\u201D}{.(}{.)}{.)\u201D}{...}{.\[}{.\]}{.\u00AE}{.\u2018}{.\u2019}{.\u2019\u201D}{.\u2019\u201D(}{.\u201C}{.\u201D}{.\u201D(}{.\u201D)}{.\u201D\]}{.\u201D\u2019}{.\u201D\u2019\u201D}{\:\u2018}{\:\u201C}{?(}{?)}{?\u2019}{?\u2019\u201D}{?\u2019\u201D(}{?\u201C}{?\u201D}{?\u201D(}{?\u201D)}{?\u201D\u2019}{?\u201D\u2019\u201D}{\[\]}{~!}{~!\u2019}{~!\u201D}{~!\u201D,}{~\:}{~\:(\u201C}{~\:\u00AB~}{~\:\u2013}{~\:\u2014}{~\:\u2018}{~\:\u201C}{~\:\u201D}{~;}{~;\u201C}{~?}{~?\u201C}{~?\u201D}{~?\u201D,}{~\u00BB}{~\u00BB(}{~\u00BB.}{\u00AB~}{\u2013\u201C}{\u2014\u201C}{\u2019(}{\u2019,}{\u2019.}{\u2019.\u2018}{\u2019.\u201D}{\u2019.\u201D(}{\u2019\:}{\u2019;}{\u2019?}{\u2019?\u201D}{\u2019~;}{\u2019\u2026.\u201D(}{\u201C\u2018}{\u201C\u2018\u201C}{\u201C\u2026}{\u201D(}{\u201D),}{\u201D).}{\u201D,}{\u201D.}{\u201D.\u2019}{\u201D\:}{\u201D?}{\u201D~;}{\u201D~?}{\u201D\u2026}{\u2026(}{\u2026,}{\u2026.}{\u2026.\u201D}{\u2026~!}{\u2026~?}{\u2026\u201D}{\u2026\u201D(}]</exemplarCharacters><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:exemplarCharacters type="wordFormingPunctuation">[\-]</sil:exemplarCharacters><sil:exemplarCharacters type="footnotes">[]</sil:exemplarCharacters><sil:exemplarCharacters type="crossrefs">[]</sil:exemplarCharacters><sil:exemplarCharacters type="verseSegments">[a b c d e f g h i j k l m n o p q r s t u v w x y z {aa} {bb} {cc} {dd} {ee} {ff} {gg} {hh} {ii} {jj} {kk} {ll} {mm} {nn} {oo} {pp} {qq} {rr} {ss} {tt} {uu} {vv} {ww} {xx} {yy} {zz}]</sil:exemplarCharacters><sil:exemplarCharacters type="diacritics">[]</sil:exemplarCharacters><sil:exemplarCharacters type="wordBreaks">[]</sil:exemplarCharacters></special></characters><delimiters><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:matched-pairs><sil:matched-pair open="(" close=")" paraClose="false" /><sil:matched-pair open="[" close="]" paraClose="false" /><sil:matched-pair open="{" close="}" paraClose="false" /></sil:matched-pairs><sil:quotation-marks paraContinueType="all"><sil:quotationContinue></sil:quotationContinue><sil:quotation open="“" close="”" level="3" /></sil:quotation-marks></special><quotationStart>“</quotationStart><quotationEnd>”</quotationEnd><alternateQuotationStart>‘</alternateQuotationStart><alternateQuotationEnd>’</alternateQuotationEnd></delimiters><layout><orientation><characterOrder>left-to-right</characterOrder></orientation></layout><collations><defaultCollation>standard</defaultCollation><collation type="standard"><cr><![CDATA[&[before 1] [first regular] < a\/A < b\/B < c\/C < d\/D < e\/E < f\/F < g\/G < h\/H < i\/I < k\/K < l\/L < m\/M < n\/N < o\/O < p\/P < r\/R < s\/S < t\/T < u\/U < v\/V < w\/W < x\/X < y\/Y < z\/Z < ꞌ\/Ꞌ]]></cr><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:simple><![CDATA[a/A
+b/B
+c/C
+d/D
+e/E
+f/F
+g/G
+h/H
+i/I
+k/K
+l/L
+m/M
+n/N
+o/O
+p/P
+r/R
+s/S
+t/T
+u/U
+v/V
+w/W
+x/X
+y/Y
+z/Z
+ꞌ/Ꞌ]]></sil:simple></special></collation></collations><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:external-resources><sil:font name="Arial" /></sil:external-resources></special></ldml>

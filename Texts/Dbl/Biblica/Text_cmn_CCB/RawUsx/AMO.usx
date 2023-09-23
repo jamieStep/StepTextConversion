@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="AMO" style="id">- Chinese Contemporary Bible - Simplified Script 2011</book>
+  <para style="rem">Copyright © 1979, 2005, 2007, 2011 by Biblica, Inc.®</para>
+  <para style="h">阿摩司书</para>
+  <para style="toc1">阿摩司书</para>
+  <para style="toc2">阿摩司书</para>
+  <para style="toc3">摩</para>
+  <para style="mt1">阿摩司书</para>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">犹大</char>王<char style="pn">乌西雅</char>、<char style="pn">约阿施</char>的儿子<char style="pn">以色列</char>王<char style="pn">耶罗波安</char>执政期间，大地震前两年，<char style="pn">提哥亚</char>的牧人<char style="pn">阿摩司</char>看到了关于<char style="pn">以色列</char>的异象。以下是<char style="pn">阿摩司</char>的话。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v"/>他说：</para>
+  <para style="q1">“耶和华在<char style="pn">锡安</char><note caller="+" style="f"><char style="fr" closed="false">1:2 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">锡安</char><char style="ft" closed="false">”位于<char style="pn">耶路撒冷</char>北部，即大卫城，有时用来指耶路撒冷。</char></note>怒吼，</para>
+  <para style="q1">在耶路撒冷呼喊。</para>
+  <para style="q1">牧人的草场枯干，</para>
+  <para style="q1">
+    <char style="pn">迦密</char>山顶枯黄。”</para>
+  <para style="s1">对亚兰的审判</para>
+  <para style="q1">
+    <verse number="3" style="v"/>耶和华说：</para>
+  <para style="q1">“<char style="pn">大马士革</char>人三番四次地犯罪，</para>
+  <para style="q1">我必不收回对他们的惩罚，</para>
+  <para style="q1">因为他们用打粮食的铁器蹂躏<char style="pn">基列</char>。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>所以我要降火在<char style="pn">哈薛</char>王家，</para>
+  <para style="q1">烧毁<char style="pn">便·哈达</char>王的城堡。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>我要折断<char style="pn">大马士革</char>城的门闩，</para>
+  <para style="q1">铲除<char style="pn">亚文</char>平原<note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">亚文平原</char><char style="ft" closed="false">”希伯来文是“邪恶谷”。亚文平原和<char style="pn">伯·伊甸</char>皆属于<char style="pn">亚兰</char>人。</char></note>的居民和伯·伊甸的掌权者，</para>
+  <para style="q1">使亚兰人被掳到<char style="pn">吉珥</char><note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="ft" closed="false">吉珥的位置不详，亚兰人原来自吉珥。</char></note>。</para>
+  <para style="q1">这是耶和华说的。”</para>
+  <para style="s1">对非利士的审判</para>
+  <para style="q1">
+    <verse number="6" style="v"/>耶和华说：</para>
+  <para style="q1">“<char style="pn">迦萨</char>人三番四次地犯罪，</para>
+  <para style="q1">我必不收回对他们的惩罚，</para>
+  <para style="q1">因为他们把被掳之人全都带走，</para>
+  <para style="q1">卖到<char style="pn">以东</char>做奴隶。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>所以，我要降火在<char style="pn">迦萨</char>的城墙上，</para>
+  <para style="q1">烧毁它的城堡。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>我要铲除<char style="pn">亚实突</char>的居民和<char style="pn">亚实基伦</char>的掌权者，</para>
+  <para style="q1">伸手攻击<char style="pn">以革伦</char>，</para>
+  <para style="q1">剩下的<char style="pn">非利士</char>人都要灭亡。</para>
+  <para style="q1">这是主耶和华说的。”</para>
+  <para style="s1">对泰尔的审判</para>
+  <para style="q1">
+    <verse number="9" style="v"/>耶和华说：</para>
+  <para style="q1">“<char style="pn">泰尔</char>人三番四次地犯罪，</para>
+  <para style="q1">我必不收回对他们的惩罚，</para>
+  <para style="q1">因为他们背弃弟兄之盟，</para>
+  <para style="q1">把被掳之人都卖到<char style="pn">以东</char>。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>所以，我要降火在<char style="pn">泰尔</char>的城墙上，</para>
+  <para style="q1">烧毁它的城堡。”</para>
+  <para style="s1">对以东的审判</para>
+  <para style="q1">
+    <verse number="11" style="v"/>耶和华说：</para>
+  <para style="q1">“<char style="pn">以东</char>人三番四次地犯罪，</para>
+  <para style="q1">我必不收回对他们的惩罚，</para>
+  <para style="q1">因为他们拔刀追赶自己的弟兄，</para>
+  <para style="q1">没有半点怜悯之心；</para>
+  <para style="q1">他们怒气不息，永怀愤怒。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>所以，我要降火在<char style="pn">提幔</char>，</para>
+  <para style="q1">烧毁<char style="pn">波斯拉</char>的城堡。”</para>
+  <para style="s1">对亚扪的审判</para>
+  <para style="q1">
+    <verse number="13" style="v"/>耶和华说：</para>
+  <para style="q1">“<char style="pn">亚扪</char>人三番四次地犯罪，</para>
+  <para style="q1">我必不收回对他们的惩罚，</para>
+  <para style="q1">因为他们为了扩张领土，</para>
+  <para style="q1">竟剖开<char style="pn">基列</char>孕妇的肚腹。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>所以，我要在战争的吶喊声中，</para>
+  <para style="q1">在暴风雨吹袭的时候，</para>
+  <para style="q1">降火在<char style="pn">拉巴</char>的城墙上，</para>
+  <para style="q1">烧毁它的城堡。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>他们的君王和首领都要被掳。</para>
+  <para style="q1">这是耶和华说的。”</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">对摩押的审判</para>
+  <para style="q1">
+    <verse number="1" style="v"/>耶和华说：</para>
+  <para style="q1">“<char style="pn">摩押</char>人三番四次地犯罪，</para>
+  <para style="q1">我必不收回对他们的惩罚，</para>
+  <para style="q1">因为他们把<char style="pn">以东</char>王的骸骨焚烧成灰。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>所以我要降火在<char style="pn">摩押</char>，</para>
+  <para style="q1">烧毁<char style="pn">加略</char>的城堡。</para>
+  <para style="q1">
+    <char style="pn">摩押</char>要在战争的喧嚣、吶喊和号角声中灭亡。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>我要铲除<char style="pn">摩押</char>的君王，</para>
+  <para style="q1">杀死那里所有的首领。</para>
+  <para style="q1">这是耶和华说的。”</para>
+  <para style="s1">对犹大的审判</para>
+  <para style="q1">
+    <verse number="4" style="v"/>耶和华说：</para>
+  <para style="q1">“<char style="pn">犹大</char>人三番四次地犯罪，</para>
+  <para style="q1">我必不收回对他们的惩罚，</para>
+  <para style="q1">因为他们厌弃耶和华的训诲，</para>
+  <para style="q1">不遵守我的律例。</para>
+  <para style="q1">他们祖先祭拜的偶像使他们走入歧途。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>所以我要降火在<char style="pn">犹大</char>，</para>
+  <para style="q1">烧毁<char style="pn">耶路撒冷</char>的城堡。”</para>
+  <para style="s1">对以色列的审判</para>
+  <para style="q1">
+    <verse number="6" style="v"/>耶和华说：</para>
+  <para style="q1">“<char style="pn">以色列</char>人三番四次地犯罪，</para>
+  <para style="q1">我必不收回对他们的惩罚，</para>
+  <para style="q1">因为他们为了银子卖掉义人，</para>
+  <para style="q1">为了一双鞋子卖掉穷人。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>他们践踏穷人如同践踏地上的尘土，</para>
+  <para style="q1">使卑微的人无处申冤；</para>
+  <para style="q1">父子同淫一女，亵渎我的圣名。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>在每座祭坛旁边，</para>
+  <para style="q1">他们把穷人典当的衣服铺开，躺在上面，</para>
+  <para style="q1">又在上帝的殿里喝剥削来的酒。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>“<char style="pn">以色列</char>人啊，</para>
+  <para style="q1">我在你们面前消灭了<char style="pn">亚摩利</char>人。</para>
+  <para style="q1">虽然他们像香柏树那样高大，</para>
+  <para style="q1">如橡树那样强壮，</para>
+  <para style="q1">但我灭尽了他们的果子，</para>
+  <para style="q1">砍断了他们的根。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>我带领你们离开<char style="pn">埃及</char>，</para>
+  <para style="q1">在旷野引导你们四十年，</para>
+  <para style="q1">使你们得到<char style="pn">亚摩利</char>人的土地。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>我从你们的子孙中拣选先知，</para>
+  <para style="q1">从你们的青年中拣选<char style="pn">拿细耳</char>人<note caller="+" style="f"><char style="fr" closed="false">2:11 </char><char style="ft" closed="false">拿细耳人的详情参见</char><char style="xt"><ref loc="NUM 6:1-8">民数记6:1-8</ref></char>。</note>。</para>
+  <para style="q1">
+    <char style="pn">以色列</char>人啊，难道不是这样吗？</para>
+  <para style="q1">这是耶和华说的。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>可是，你们迫使<char style="pn">拿细耳</char>人喝酒，</para>
+  <para style="q1">禁止先知传达我的话。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>看啊，我要压碎你们，</para>
+  <para style="q1">如满载谷物的车轧过一样。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>快捷的无法逃遁，</para>
+  <para style="q1">强壮的无力可施，</para>
+  <para style="q1">勇猛的救不了自己，</para>
+  <para style="q1">
+    <verse number="15" style="v"/>拉弓的站立不住，</para>
+  <para style="q1">腿快的无法逃脱，</para>
+  <para style="q1">骑马的救不了自己。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>到那日，</para>
+  <para style="q1">最勇猛的战士也要丢盔弃甲，仓皇逃命。</para>
+  <para style="q1">这是耶和华说的。</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">责备以色列人</para>
+  <para style="q1">
+    <verse number="1" style="v"/>“<char style="pn">以色列</char>人啊，</para>
+  <para style="q1">要听耶和华责备你们的话，</para>
+  <para style="q1">责备我从<char style="pn">埃及</char>领出来的整个民族的话，</para>
+  <para style="q1">
+    <verse number="2" style="v"/>‘世上万族之中，我只拣选了你们，</para>
+  <para style="q1">所以我要因你们的罪恶而惩罚你们。’”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>若非相约，</para>
+  <para style="q1">二人怎会同行呢？</para>
+  <para style="q1">
+    <verse number="4" style="v"/>若非捕到猎物，</para>
+  <para style="q1">狮子怎会在林中咆哮呢？</para>
+  <para style="q1">若非猎获食物，</para>
+  <para style="q1">猛狮怎会在洞中吼叫呢？</para>
+  <para style="q1">
+    <verse number="5" style="v"/>若非设下诱饵，</para>
+  <para style="q1">鸟儿怎会陷入网罗呢？</para>
+  <para style="q1">若非有什么陷进去，</para>
+  <para style="q1">网罗怎会收起来呢？</para>
+  <para style="q1">
+    <verse number="6" style="v"/>若城中响起号角，</para>
+  <para style="q1">居民岂不恐惧颤抖？</para>
+  <para style="q1">若灾祸降临城中，</para>
+  <para style="q1">岂不是耶和华的作为？</para>
+  <para style="q1">
+    <verse number="7" style="v"/>的确，主耶和华不向祂的仆人——众先知显明祂的计划，</para>
+  <para style="q1">就不会采取任何行动。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>狮子吼叫，谁不惧怕呢？</para>
+  <para style="q1">主耶和华已发言，谁能不传讲呢？</para>
+  <para style="q1">
+    <verse number="9" style="v"/>要向<char style="pn">亚实突</char>和<char style="pn">埃及</char>的城堡宣告：</para>
+  <para style="q1">“你们要聚集到<char style="pn">撒玛利亚</char>的山上，</para>
+  <para style="q1">看看城中的混乱和暴虐之事。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>他们不知正道，强取豪夺，</para>
+  <para style="q1">在他们的堡垒中积敛钱财。</para>
+  <para style="q1">这是耶和华说的。”</para>
+  <para style="q1">
+    <verse number="11" style="v"/>所以，主耶和华说：</para>
+  <para style="q1">“敌人要围攻此地，</para>
+  <para style="q1">攻破他们的防守，</para>
+  <para style="q1">抢掠他们的城堡。”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>耶和华说：</para>
+  <para style="q1">“牧人从狮口中救羊，</para>
+  <para style="q1">只能夺回两条腿和一块耳朵。</para>
+  <para style="q1">同样，住在<char style="pn">撒玛利亚</char>的<char style="pn">以色列</char>人被救回的时候，</para>
+  <para style="q1">也仅剩一片床榻和一角卧椅。”</para>
+  <para style="q1">
+    <verse number="13" style="v"/>主——万军之上帝耶和华说：</para>
+  <para style="q1">“你们要听这话，去警告<char style="pn">雅各</char>家。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>我追讨<char style="pn">以色列</char>人的罪时，</para>
+  <para style="q1">要摧毁<char style="pn">伯特利</char>的祭坛，</para>
+  <para style="q1">将祭坛的角砍落在地。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>我要拆毁过冬和避暑的房屋，</para>
+  <para style="q1">捣毁象牙装饰的宫殿，</para>
+  <para style="q1">推倒许多宏伟的楼宇。</para>
+  <para style="q1">这是耶和华说的。”</para>
+  <para style="b"/>
+  <chapter number="4" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>住在<char style="pn">撒玛利亚</char>山上的<char style="pn">巴珊</char>肥母牛啊，</para>
+  <para style="q1">你们要听！</para>
+  <para style="q1">你们压榨贫寒人，欺凌穷苦人，</para>
+  <para style="q1">又使唤丈夫倒酒畅饮。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>因此，主耶和华凭祂的圣洁起誓：</para>
+  <para style="q1">“时候快到了，</para>
+  <para style="q1">有人要用鱼钩钩走你们，一个也不留。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>你们都要从城墙缺口走出来，</para>
+  <para style="q1">被丢到<char style="pn">哈门</char>。</para>
+  <para style="q1">这是耶和华说的。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>“<char style="pn">以色列</char>人啊，</para>
+  <para style="q1">你们去<char style="pn">伯特利</char>犯罪吧，</para>
+  <para style="q1">去<char style="pn">吉甲</char>增添罪恶吧！</para>
+  <para style="q1">要每天早晨献上祭物，</para>
+  <para style="q1">每三天奉上你们的十分之一。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>你们献上带酵的饼作感恩祭，</para>
+  <para style="q1">并且到处夸耀你们自愿献的祭。</para>
+  <para style="q1">
+    <char style="pn">以色列</char>人啊，这就是你们爱做的事。</para>
+  <para style="q1">这是主耶和华说的。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>“我在各城降下饥荒，</para>
+  <para style="q1">使你们遍地缺粮。</para>
+  <para style="q1">尽管如此，你们仍不归向我。</para>
+  <para style="q1">这是耶和华说的。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>“我在收割前三个月停止降雨。</para>
+  <para style="q1">我在一座城降雨，</para>
+  <para style="q1">在另一座城不降雨；</para>
+  <para style="q1">我使一块田有雨水的滋润，</para>
+  <para style="q1">另一块田因无雨而干裂。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>两三座城的人都踉踉跄跄地涌到一座城找水喝，</para>
+  <para style="q1">水却不够喝。</para>
+  <para style="q1">尽管如此，你们仍不归向我。</para>
+  <para style="q1">这是耶和华说的。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>“我用热风和霉灾击打你们，</para>
+  <para style="q1">叫蝗虫吞噬你们田园中的菜蔬、葡萄树、无花果树和橄榄树。</para>
+  <para style="q1">尽管如此，你们仍不归向我。</para>
+  <para style="q1">这是耶和华说的。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>“我在你们中间降下瘟疫，</para>
+  <para style="q1">如从前降在<char style="pn">埃及</char>一样。</para>
+  <para style="q1">我杀戮你们的青年，</para>
+  <para style="q1">掳掠你们的战马，</para>
+  <para style="q1">使你们军营中的死尸臭味扑鼻。</para>
+  <para style="q1">尽管如此，你们仍不归向我。</para>
+  <para style="q1">这是耶和华说的。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>“我在你们中间施行毁灭，</para>
+  <para style="q1">如从前毁灭<char style="pn">所多玛</char>和<char style="pn">蛾摩拉</char>一样，</para>
+  <para style="q1">使你们像从火里抽出的一根柴。</para>
+  <para style="q1">尽管如此，你们仍不归向我。</para>
+  <para style="q1">这是耶和华说的。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>“<char style="pn">以色列</char>人啊，</para>
+  <para style="q1">我要这样惩罚你们。</para>
+  <para style="q1">
+    <char style="pn">以色列</char>人啊，</para>
+  <para style="q1">准备迎见你们的上帝吧！</para>
+  <para style="q1">因为我要这样惩罚你们。”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>看啊，那位造山又造风，</para>
+  <para style="q1">向人显明祂的心意，</para>
+  <para style="q1">将黎明变为黑暗，</para>
+  <para style="q1">将群山踩在脚下的——</para>
+  <para style="q1">祂的名字是万军之上帝耶和华。</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">劝以色列人悔改</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <char style="pn">以色列</char>家啊，</para>
+  <para style="q1">听我为你们唱哀歌：</para>
+  <para style="q1">
+    <verse number="2" style="v"/>“处女<char style="pn">以色列</char>跌倒了，</para>
+  <para style="q1">再也站不起来；</para>
+  <para style="q1">她被遗弃在自己的土地上，</para>
+  <para style="q1">无人扶她起来。”</para>
+  <para style="q1">
+    <verse number="3" style="v"/>因为主耶和华说：</para>
+  <para style="q1">“<char style="pn">以色列</char>家的城邑中，</para>
+  <para style="q1">出兵一千的，只有百人生还；</para>
+  <para style="q1">出兵一百的，只有十人生还。”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>耶和华对<char style="pn">以色列</char>家说：</para>
+  <para style="q1">“你们要寻求我，才能存活。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>不要去<char style="pn">伯特利</char>求问，</para>
+  <para style="q1">不要进入<char style="pn">吉甲</char>，</para>
+  <para style="q1">也不要前往<char style="pn">别示巴</char>，</para>
+  <para style="q1">因为<char style="pn">吉甲</char>人必被掳去，</para>
+  <para style="q1">
+    <char style="pn">伯特利</char>也必化为乌有。”</para>
+  <para style="q1">
+    <verse number="6" style="v"/>你们要寻求耶和华，才能存活。</para>
+  <para style="q1">否则，祂要在<char style="pn">约瑟</char>家<note caller="+" style="f"><char style="fr" closed="false">5:6 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">约瑟家</char><char style="ft" closed="false">”此处指约瑟的子孙以法莲和玛拿西两个支派，圣经中有时用约瑟家代指北国以色列。</char></note>如烈火爆发，</para>
+  <para style="q1">吞噬<char style="pn">伯特利</char>，无人能扑灭。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>你们这些使正义变为苦艾、将公义丢弃在地的人啊，</para>
+  <para style="q1">
+    <verse number="8" style="v"/>那位造昴星和参星，</para>
+  <para style="q1">使幽暗变为黎明，</para>
+  <para style="q1">使白昼变为黑夜，</para>
+  <para style="q1">召来海水浇在大地上的——</para>
+  <para style="q1">祂的名字是耶和华。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>祂使毁灭如闪电临到强者，</para>
+  <para style="q1">摧毁他们的坚城。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>你们憎恨在城门口主持公道的人，</para>
+  <para style="q1">厌恶正直的人。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>你们践踏穷人，</para>
+  <para style="q1">对他们横征暴敛。</para>
+  <para style="q1">因此，你们用凿过的石头建房，</para>
+  <para style="q1">却不得居住在里面；</para>
+  <para style="q1">你们种植佳美的葡萄园，</para>
+  <para style="q1">却喝不到葡萄酒。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>我知道你们的过犯众多、罪恶无数。</para>
+  <para style="q1">你们迫害义人，收受贿赂，</para>
+  <para style="q1">在城门口冤枉穷人。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>这是邪恶的时代，</para>
+  <para style="q1">所以明智者静默不言。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>你们要弃恶从善，才能存活。</para>
+  <para style="q1">这样，万军之上帝耶和华必与你们同在，</para>
+  <para style="q1">正如你们所说的。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>你们要恨恶邪恶，喜爱良善，</para>
+  <para style="q1">在城门口伸张正义，</para>
+  <para style="q1">也许万军之上帝耶和华会恩待<char style="pn">约瑟</char>的余民。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v"/>因此，主——万军之上帝耶和华说：</para>
+  <para style="q1">“哀号之声要响遍各广场，</para>
+  <para style="q1">哭喊之声将充满大街小巷。</para>
+  <para style="q1">农夫被叫来哭泣，</para>
+  <para style="q1">哭丧者被召来哀号。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>每个葡萄园都传出哀恸的声音，</para>
+  <para style="q1">因为我要从你们中间经过，惩罚你们。</para>
+  <para style="q1">这是耶和华说的。”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v"/>盼望耶和华的日子到来的人有祸了！</para>
+  <para style="q1">你们为什么盼望耶和华的日子呢？</para>
+  <para style="q1">那日将带来黑暗，而非光明。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>你们的光景将好像人逃避狮子，</para>
+  <para style="q1">却遇上了熊，</para>
+  <para style="q1">逃回家里，手扶墙壁，</para>
+  <para style="q1">又被蛇咬。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>耶和华的日子将充满黑暗，毫无光明，</para>
+  <para style="q1">一片漆黑，</para>
+  <para style="q1">毫无亮光。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>“我憎恶、鄙弃你们的节期，</para>
+  <para style="q1">厌恶你们的圣会。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>即使你们献上燔祭和素祭，</para>
+  <para style="q1">我也不悦纳；</para>
+  <para style="q1">即使你们用肥美的牲畜献上平安祭，</para>
+  <para style="q1">我也不屑一顾。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>撤去你们嘈杂的歌声吧，</para>
+  <para style="q1">我不想听到你们的琴音。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>惟愿公正如江河滔滔不尽，</para>
+  <para style="q1">公义如溪流绵绵不绝。</para>
+  <para style="q1">
+    <verse number="25" style="v"/>
+    <char style="pn">以色列</char>家啊，</para>
+  <para style="q1">在旷野的四十年间，</para>
+  <para style="q1">你们向我献过祭物和供品吗？</para>
+  <para style="q1">
+    <verse number="26" style="v"/>你们抬着为自己造的神像——</para>
+  <para style="q1">你们的王<char style="pn">撒固</char>和星神<char style="pn">迦温</char>。</para>
+  <para style="q1">
+    <verse number="27" style="v"/>所以，我要使你们被掳到<char style="pn">大马士革</char>以外的地方。”</para>
+  <para style="q1">这是耶和华说的，祂的名字是万军之上帝。</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">预言以色列的毁灭</para>
+  <para style="q1">
+    <verse number="1" style="v"/>在<char style="pn">锡安</char>生活安逸舒适的人啊，</para>
+  <para style="q1">你们有祸了！</para>
+  <para style="q1">在<char style="pn">撒玛利亚</char>山上自觉无忧的人啊，</para>
+  <para style="q1">你们有祸了！</para>
+  <para style="q1">你们是列国之首<char style="pn">以色列</char>的显要，</para>
+  <para style="q1">
+    <char style="pn">以色列</char>人都仰望你们。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>你们去<char style="pn">甲尼</char>看看，</para>
+  <para style="q1">然后从那里到<char style="pn">哈玛</char>大城，</para>
+  <para style="q1">再到<char style="pn">非利士</char>人的<char style="pn">迦特</char>看看。</para>
+  <para style="q1">你们比这些国家更好吗？</para>
+  <para style="q1">他们的领土不比你们的更广阔吗？</para>
+  <para style="q1">
+    <verse number="3" style="v"/>你们以为灾难的日子离得还远，</para>
+  <para style="q1">就大肆施行暴政。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>你们躺在象牙床上，靠在卧榻上，</para>
+  <para style="q1">你们吃养在圈里的肥嫩牛羊。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>你们伴着琴声唱慵懒的歌，</para>
+  <para style="q1">像<char style="pn">大卫</char>一样为自己制造乐器。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>你们以大碗狂饮，</para>
+  <para style="q1">用上等膏油抹身，</para>
+  <para style="q1">却漠不关心<char style="pn">约瑟</char>家的衰亡。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>所以，你们要首先被掳，</para>
+  <para style="q1">你们的宴乐将从此消逝！</para>
+  <para style="q1">
+    <verse number="8" style="v"/>万军之上帝——主耶和华凭自己起誓：</para>
+  <para style="q1">“我憎恶<char style="pn">雅各</char>的骄傲，</para>
+  <para style="q1">厌弃他的城堡。</para>
+  <para style="q1">我要把城和城中的一切都交给敌人。”</para>
+  <para style="p">
+    <verse number="9" style="v"/>那时，如果一栋房子里剩下十人，这十人也要死亡。 <verse number="10" style="v"/>亲属抬出尸体焚烧时，必问内屋的人：“你那里还有别人吗？”那人必回答：“没有。”问的人必说：“不要作声，我们不可提耶和华的名。”</para>
+  <para style="q1">
+    <verse number="11" style="v"/>看啊，耶和华一声令下，</para>
+  <para style="q1">大屋顿成瓦砾，小房化为碎片。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>马能在悬崖上奔驰吗？</para>
+  <para style="q1">牛能在海中耕作吗？</para>
+  <para style="q1">你们却使公正沦为毒药，</para>
+  <para style="q1">使公义之果变成苦艾。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>你们炫耀自己征服了<char style="pn">罗底巴</char>，</para>
+  <para style="q1">吹嘘凭自己的能力夺取了<char style="pn">加宁</char>。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>万军之上帝耶和华说：</para>
+  <para style="q1">“<char style="pn">以色列</char>家啊，</para>
+  <para style="q1">我要使一个国家兴起攻击你们，</para>
+  <para style="q1">他们要从<char style="pn">哈马</char>口直至<char style="pn">亚拉巴</char>河，</para>
+  <para style="q1">到处欺压你们。”</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">各种灾祸的异象</para>
+  <para style="p">
+    <verse number="1" style="v"/>以下是主耶和华让我看见的异象：看啊，祂造了一大群蝗虫。那时，王室的作物已经收割，第二季作物刚开始发苗。 <verse number="2" style="v"/>蝗虫吃尽地上的青苗时，我说：“主耶和华啊，求你赦免！<char style="pn">雅各</char>那么弱小，他怎么受得了呢？” <verse number="3" style="v"/>于是，耶和华心生怜悯，说：“我不降这灾了。”</para>
+  <para style="p">
+    <verse number="4" style="v"/>以下是主耶和华让我看见的异象：看啊，主耶和华降下审判的大火。大火烧干了深海，正在吞噬土地。 <verse number="5" style="v"/>那时，我说：“主耶和华啊，求你停止吧！<char style="pn">雅各</char>那么弱小，他怎么受得了呢？” <verse number="6" style="v"/>于是，耶和华心生怜悯，说：“我也不降这灾了。”</para>
+  <para style="p">
+    <verse number="7" style="v"/>以下是祂让我看见的异象：看啊，主站在一道按照准绳建造的墙边，手里拿着准绳。 <verse number="8" style="v"/>耶和华对我说：“<char style="pn">阿摩司</char>，你看见什么？”我答道：“一条准绳。”主说：“我要在我的<char style="pn">以色列</char>子民中吊起准绳，量度他们，我不会再饶恕他们。 <verse number="9" style="v"/><char style="pn">以撒</char>子孙的丘坛必遭毁坏，<char style="pn">以色列</char>的庙宇必成废墟，我要用刀攻击<char style="pn">耶罗波安</char>王朝。”</para>
+  <para style="s1">阿摩司被逐</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <char style="pn">伯特利</char>的祭司<char style="pn">亚玛谢</char>派人告诉<char style="pn">以色列</char>王<char style="pn">耶罗波安</char>：“<char style="pn">阿摩司</char>在<char style="pn">以色列</char>家图谋背叛你，我们国家无法容忍他的言论。 <verse number="11" style="v"/>因为<char style="pn">阿摩司</char>这样说，‘<char style="pn">耶罗波安</char>将丧身刀下，<char style="pn">以色列</char>人必被掳去，远离家乡。’”</para>
+  <para style="p">
+    <verse number="12" style="v"/>
+    <char style="pn">亚玛谢</char>对我说：“先见啊，走吧！逃回<char style="pn">犹大</char>去吧！你要在那里挣吃的，在那里说预言。 <verse number="13" style="v"/>不可再在<char style="pn">伯特利</char>说预言，这里是王的圣所，是国庙。”</para>
+  <para style="p">
+    <verse number="14" style="v"/>我答道：“我本不是先知，也不是先知的门徒。我只是一个牧人，也替人看护桑树。 <verse number="15" style="v"/>但耶和华不再让我看守羊群，祂对我说，‘去！向我的<char style="pn">以色列</char>子民说预言。’ <verse number="16" style="v"/><char style="pn">亚玛谢</char>啊，你说，‘不要说攻击<char style="pn">以色列</char>的预言，不要传讲攻击<char style="pn">以撒</char>子孙的信息。’现在你要听耶和华对你说的话。 <verse number="17" style="v"/>耶和华说，‘你的妻子必在这城里沦为妓女，你的儿女必丧身刀下，你的田地必被人丈量、瓜分，你自己必死在异乡<note caller="+" style="f"><char style="fr" closed="false">7:17 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">异乡</char><char style="ft" closed="false">”希伯来文是“不洁之地”，指不信上帝的国家。</char></note>。<char style="pn">以色列</char>人必被掳去，远离家乡。’”</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">审判之日将临</para>
+  <para style="p">
+    <verse number="1" style="v"/>主耶和华让我看见了异象，我看到一篮夏天的果子。 <verse number="2" style="v"/>耶和华问我：“<char style="pn">阿摩司</char>，你看见什么？”我说：“我看见一篮夏天的果子。”祂说：“我<char style="pn">以色列</char>子民的结局<note caller="+" style="f"><char style="fr" closed="false">8:2 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">结局</char><char style="ft" closed="false">”希伯来文中与“夏天的果子”发音相近。</char></note>到了，我不会再饶恕他们。 <verse number="3" style="v"/>到那日，殿里的歌声要变成哀号；尸横遍地，一片死寂。这是主耶和华说的。”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>践踏贫民、灭绝穷人的人啊，</para>
+  <para style="q1">你们要听！</para>
+  <para style="q1">
+    <verse number="5" style="v"/>你们盼望朔日<note caller="+" style="f"><char style="fr" closed="false">8:5 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">朔日</char><char style="ft" closed="false">”即每月初一。</char></note>和安息日快点过去，</para>
+  <para style="q1">你们好售卖谷物。</para>
+  <para style="q1">你们用小升斗卖粮，</para>
+  <para style="q1">用加重的砝码收银子，</para>
+  <para style="q1">用假秤骗人。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>你们用银子买贫民，</para>
+  <para style="q1">以一双鞋买穷人为奴，</para>
+  <para style="q1">售卖掺了糠秕的麦子。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>耶和华凭<char style="pn">以色列</char>的荣耀起誓：</para>
+  <para style="q1">“我决不会忘记你们的所作所为。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>这片土地要因此而震动，</para>
+  <para style="q1">那里的人都要悲哀。</para>
+  <para style="q1">大地要像<char style="pn">尼罗</char>河一样涨起，如<char style="pn">埃及</char>的河流翻腾退落。”</para>
+  <para style="q1">
+    <verse number="9" style="v"/>主耶和华说：</para>
+  <para style="q1">“到那日，我要使太阳中午落下，</para>
+  <para style="q1">使白昼变为黑暗。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>我要使你们的节期变为丧礼，</para>
+  <para style="q1">叫你们的欢歌变为哀歌。</para>
+  <para style="q1">我要使你们都腰束麻布，剃光头发；</para>
+  <para style="q1">我要使你们伤心欲绝，如丧独生子；</para>
+  <para style="q1">我要使那日成为痛苦的日子。”</para>
+  <para style="q1">
+    <verse number="11" style="v"/>主耶和华说：</para>
+  <para style="q1">“日子将到，我要使饥荒降在地上。</para>
+  <para style="q1">人饥饿非因无饼，干渴非因无水，</para>
+  <para style="q1">而是因为听不到耶和华的话。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>人们从南到北，从东到西<note caller="+" style="f"><char style="fr" closed="false">8:12 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">从南到北，从东到西</char><char style="ft" closed="false">”希伯来文是“从这海到那海，从北到东”。海指西面的地中海和南面的死海。</char></note>，</para>
+  <para style="q1">在境内四处流荡，</para>
+  <para style="q1">要寻找耶和华的话却找不到。</para>
+  <para style="p">
+    <verse number="13" style="v"/>“到那日，</para>
+  <para style="q1">“美丽少女和青春少男都要因干渴而昏倒；</para>
+  <para style="q1">
+    <verse number="14" style="v"/>那些凭<char style="pn">撒玛利亚</char>、<char style="pn">但</char>和<char style="pn">别示巴</char>的神明起誓的，</para>
+  <para style="q1">都要跌倒，永不再起来。”</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">耶和华的审判</para>
+  <para style="q1">
+    <verse number="1" style="v"/>我看见主站在祭坛旁，祂说：</para>
+  <para style="q1">“要击打柱顶，使殿的根基震动；</para>
+  <para style="q1">要打碎柱顶，使殿宇坍塌压死众人。</para>
+  <para style="q1">侥幸生还的，我要用刀剑杀掉，</para>
+  <para style="q1">没有一个能逃脱，没有一个能幸免。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>即使他们挖洞钻进阴间，</para>
+  <para style="q1">我也要把他们揪出来；</para>
+  <para style="q1">即使他们爬上高天，</para>
+  <para style="q1">我也要把他们拉下来；</para>
+  <para style="q1">
+    <verse number="3" style="v"/>即使他们藏在<char style="pn">迦密</char>山的峰顶，</para>
+  <para style="q1">我也要去搜寻，捉住他们；</para>
+  <para style="q1">即使他们潜到海底，</para>
+  <para style="q1">我也要派海蛇去吞咬他们；</para>
+  <para style="q1">
+    <verse number="4" style="v"/>即使他们被敌人掳去，</para>
+  <para style="q1">我也要命刀剑追杀他们。</para>
+  <para style="q1">我要定睛在他们身上，</para>
+  <para style="q1">不是要赐福而是要降祸。”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>主——万军之耶和华触摸大地，</para>
+  <para style="q1">大地就消融，地上的人都要哀号；</para>
+  <para style="q1">大地如<char style="pn">埃及</char>的<char style="pn">尼罗</char>河涨起退落。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>那位在天上建造楼阁，</para>
+  <para style="q1">在大地之上立定穹苍，</para>
+  <para style="q1">召来海水浇在大地上的——</para>
+  <para style="q1">祂的名字是耶和华。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>耶和华说：</para>
+  <para style="q1">“<char style="pn">以色列</char>人啊，</para>
+  <para style="q1">在我眼中，你们不是和<char style="pn">古实</char>人一样吗？</para>
+  <para style="q1">我不是领你们出<char style="pn">埃及</char>，</para>
+  <para style="q1">也领<char style="pn">非利士</char>人出<char style="pn">迦斐托</char><note caller="+" style="f"><char style="fr" closed="false">9:7 </char><char style="ft" closed="false">“</char><char style="fq" closed="false">迦斐托</char><char style="ft" closed="false">”即克里特岛。</char></note>，</para>
+  <para style="q1">领<char style="pn">亚兰</char>人出<char style="pn">吉珥</char>吗？</para>
+  <para style="q1">
+    <verse number="8" style="v"/>主耶和华的眼目察看这罪恶的国家，</para>
+  <para style="q1">我要从地上除灭它，</para>
+  <para style="q1">但不会完全毁灭<char style="pn">雅各</char>家。</para>
+  <para style="q1">这是耶和华说的。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>“因为我要下令在列国中筛<char style="pn">以色列</char>家，</para>
+  <para style="q1">就像人筛谷物，一粒石子也不会落在地上。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>在我的子民中，</para>
+  <para style="q1">所有夸口说‘灾祸不会追上我们，也不会迎面而来’的罪人，</para>
+  <para style="q1">都要死在刀下。</para>
+  <para style="s1">以色列的复兴</para>
+  <para style="q1">
+    <verse number="11" style="v"/>“到那日，</para>
+  <para style="q1">我要重建已倾覆的<char style="pn">大卫</char>王朝，</para>
+  <para style="q1">修补它城墙的缺口。</para>
+  <para style="q1">我要从废墟中重建它，</para>
+  <para style="q1">恢复它往日的荣耀。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>这样，<char style="pn">以色列</char>人必拥有<char style="pn">以东</char>所剩的和所有属于我名下的国家。</para>
+  <para style="q1">这是要成就这事的耶和华说的。”</para>
+  <para style="q1">
+    <verse number="13" style="v"/>耶和华说：</para>
+  <para style="q1">“时候将到，</para>
+  <para style="q1">五谷还未收完又该耕种了，</para>
+  <para style="q1">葡萄还未踩完又该栽种了。</para>
+  <para style="q1">甜酒从群山上滴下，在丘岭间流淌。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>我要使我被掳的<char style="pn">以色列</char>子民返回故乡，</para>
+  <para style="q1">他们要重建废城并住在城中，</para>
+  <para style="q1">栽种葡萄园，喝园中酿出的美酒，</para>
+  <para style="q1">整理园圃，吃园中出产的佳果。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>我要将<char style="pn">以色列</char>人栽种在他们自己的土地上，</para>
+  <para style="q1">永不再从我赐给他们的土地上拔除他们。”</para>
+  <para style="b"/>
+  <para style="q1">这是你们的上帝耶和华说的。</para>
+</usx>

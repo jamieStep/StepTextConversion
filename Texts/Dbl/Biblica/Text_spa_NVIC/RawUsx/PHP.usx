@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="PHP" style="id">- Spanish (Castellano): Nueva Versión Internacional</book>
+  <para style="rem">Copyright © 1999, 2005, 2017 by Biblica, Inc.®</para>
+  <para style="h">FILIPENSES</para>
+  <para style="toc1">Carta a los Filipenses</para>
+  <para style="toc2">Filipenses</para>
+  <para style="toc3">Fil</para>
+  <para style="mt2">Carta a los</para>
+  <para style="mt1">Filipenses</para>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Pablo y Timoteo, <char style="w" lemma="siervo">siervos</char> de <char style="w">Cristo</char> Jesús,</para>
+  <para style="b"/>
+  <para style="p">a todos los <char style="w" lemma="santo">santos</char> en Cristo Jesús que están en Filipos, junto con los <char style="w" lemma="obispo">obispos</char> y diáconos:</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="2" style="v"/>Que Dios nuestro Padre y el Señor Jesucristo os concedan gracia y paz.</para>
+  <para style="s1">Acción de gracias e intercesión</para>
+  <para style="p">
+    <verse number="3" style="v"/>Doy gracias a mi Dios cada vez que me acuerdo de vosotros. <verse number="4" style="v"/>En todas mis oraciones por todos vosotros, siempre oro con alegría, <verse number="5" style="v"/>porque habéis participado en el <char style="w">evangelio</char> desde el primer día hasta ahora. <verse number="6" style="v"/>Estoy convencido de esto: el que comenzó tan buena obra en vosotros la irá <char style="w" lemma="perfección">perfeccionando</char> hasta el día de Cristo Jesús. <verse number="7" style="v"/>Es justo que yo piense así de todos vosotros porque os llevo<note caller="+" style="f"><char style="fr" closed="false">1:7 </char><char style="fq" closed="false">os llevo</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">me lleváis.</char></note> en el corazón; pues, ya sea que me encuentre preso o defendiendo y confirmando el evangelio, todos vosotros participáis conmigo de la gracia que Dios me ha dado. <verse number="8" style="v"/>Dios es testigo de cuánto os quiero a todos con el entrañable amor de Cristo Jesús.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Esto es lo que pido en oración: que vuestro amor abunde cada vez más en conocimiento y en buen juicio, <verse number="10" style="v"/>para que discernáis lo que es mejor, y seáis puros e irreprochables para el día de Cristo, <verse number="11" style="v"/>llenos del fruto de justicia que se produce por medio de Jesucristo, para gloria y alabanza de Dios.</para>
+  <para style="s1">El vivir es Cristo</para>
+  <para style="p">
+    <verse number="12" style="v"/>Hermanos, quiero que sepáis que, en realidad, lo que me ha pasado ha contribuido al avance del <char style="w">evangelio</char>. <verse number="13" style="v"/>Es más, se ha hecho evidente a toda la guardia del palacio<note caller="+" style="f"><char style="fr" closed="false">1:13 </char><char style="fq" closed="false">a toda la guardia del palacio</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">en todo el palacio.</char></note> y a todos los demás que estoy encadenado por causa de Cristo. <verse number="14" style="v"/>Gracias a mis cadenas, ahora más que nunca la mayoría de los hermanos, confiados en el Señor, se han atrevido a anunciar sin temor la palabra de Dios.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Es cierto que algunos predican a Cristo por envidia y rivalidad, pero otros lo hacen con buenas intenciones. <verse number="16" style="v"/>Estos últimos lo hacen por amor, pues saben que he sido puesto para la defensa del evangelio. <verse number="17" style="v"/>Aquellos predican a Cristo por ambición personal y no por motivos puros, creyendo que así van a aumentar las angustias que sufro en mi prisión.<note caller="+" style="f"><char style="fr" closed="false">1:16-17 </char><char style="ft" closed="false">Var. invierte el orden de vv. 16 y 17.</char></note></para>
+  <para style="p">
+    <verse number="18" style="v"/>¿Qué importa? Al fin y al cabo, y sea como sea, con motivos falsos o con sinceridad, se predica a Cristo. Por eso me alegro; es más, seguiré alegrándome <verse number="19" style="v"/>porque sé que, gracias a vuestras oraciones y a la ayuda que me da el Espíritu de Jesucristo, todo esto resultará en mi liberación.<note caller="+" style="f"><char style="fr" closed="false">1:19 </char><char style="fq" closed="false">liberación</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">salvación.</char></note> <verse number="20" style="v"/>Mi ardiente anhelo y esperanza es que en nada seré avergonzado, sino que con toda libertad, ya sea que yo viva o muera, ahora como siempre, Cristo será exaltado en mi cuerpo. <verse number="21" style="v"/>Porque para mí el vivir es Cristo y el morir es ganancia. <verse number="22" style="v"/>Ahora bien, si seguir viviendo en este mundo<note caller="+" style="f"><char style="fr" closed="false">1:22 </char><char style="fq" closed="false">este mundo</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">la <char style="w">carne</char></char><char style="ft" closed="false">; también en v. 24.</char></note> representa para mí un trabajo fructífero, ¿qué escogeré? ¡No lo sé! <verse number="23" style="v"/>Me siento presionado por dos posibilidades: deseo partir y estar con Cristo, que es muchísimo mejor, <verse number="24" style="v"/>pero por vuestro bien es preferible que yo permanezca en este mundo. <verse number="25" style="v"/>Convencido de esto, sé que permaneceré y continuaré con todos vosotros para contribuir a vuestro jubiloso avance en la fe. <verse number="26" style="v"/>Así, cuando yo vuelva, vuestra <char style="w">satisfacción</char> en Cristo Jesús abundará por causa mía.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Pase lo que pase, comportaos de una manera digna del evangelio de Cristo. De este modo, ya sea que vaya a veros o que, estando ausente, solo tenga noticias vuestras, sabré que seguís firmes en un mismo propósito, luchando unánimes por la fe del evangelio <verse number="28" style="v"/>y sin temor alguno a vuestros adversarios, lo cual es para ellos señal de destrucción. Para vosotros, en cambio, es señal de salvación, y esto proviene de Dios. <verse number="29" style="v"/>Porque a vosotros se os ha concedido, no solo creer en Cristo, sino también sufrir por él, <verse number="30" style="v"/>pues sostenéis la misma lucha que antes me visteis sostener, y que ahora sabéis que sigo sosteniendo.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Humillación y exaltación de Cristo</para>
+  <para style="p">
+    <verse number="1" style="v"/>Por tanto, si sentís algún estímulo en vuestra unión con Cristo, algún consuelo en su amor, algún compañerismo en el Espíritu, algún afecto entrañable, <verse number="2" style="v"/>llenadme de alegría teniendo un mismo parecer, un mismo amor, unidos en alma y pensamiento. <verse number="3" style="v"/>No hagáis nada por egoísmo o vanidad; más bien, con humildad considerad a los demás como superiores a vosotros mismos. <verse number="4" style="v"/>Cada uno debe velar no solo por sus propios intereses, sino también por los intereses de los demás.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Vuestra actitud debe ser como la de Cristo Jesús,</para>
+  <para style="q1">
+    <verse number="6" style="v"/>quien, siendo por naturaleza<note caller="+" style="f"><char style="fr" closed="false">2:6 </char><char style="fq" closed="false">por naturaleza</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">en forma de.</char></note> Dios,</para>
+  <para style="q2">no consideró el ser igual a Dios como algo a qué aferrarse.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Por el contrario, se rebajó voluntariamente,</para>
+  <para style="q2">tomando la naturaleza<note caller="+" style="f"><char style="fr" closed="false">2:7 </char><char style="fq" closed="false">la naturaleza</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">la forma.</char></note> de <char style="w">siervo</char></para>
+  <para style="q2">y haciéndose semejante a los seres <char style="w" lemma="humano">humanos</char>.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Y, al manifestarse como hombre,</para>
+  <para style="q2">se humilló a sí mismo</para>
+  <para style="q1">y se hizo obediente hasta la muerte,</para>
+  <para style="q2">¡y muerte de cruz!</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Por eso Dios lo exaltó hasta lo sumo</para>
+  <para style="q2">y le otorgó el nombre</para>
+  <para style="q2">que está sobre todo nombre,</para>
+  <para style="q1">
+    <verse number="10" style="v"/>para que ante el nombre de Jesús</para>
+  <para style="q2">se doble toda rodilla</para>
+  <para style="q1">en el cielo y en la tierra</para>
+  <para style="q2">y debajo de la tierra,</para>
+  <para style="q1">
+    <verse number="11" style="v"/>y toda lengua confiese que Jesucristo es el Señor,</para>
+  <para style="q2">para gloria de Dios Padre.</para>
+  <para style="s1">Testimonio de luz</para>
+  <para style="p">
+    <verse number="12" style="v"/>Así que, mis queridos hermanos, como habéis obedecido siempre —no solo en mi presencia, sino mucho más ahora en mi ausencia— llevad a cabo vuestra salvación con temor y temblor, <verse number="13" style="v"/>pues Dios es quien produce en vosotros tanto el querer como el hacer para que se cumpla su buena voluntad.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Hacedlo todo sin quejas ni contiendas, <verse number="15" style="v"/>para que seáis intachables y puros, hijos de Dios sin culpa en medio de una generación torcida y depravada. En ella brilláis como estrellas en el firmamento, <verse number="16" style="v"/>manteniendo en alto<note caller="+" style="f"><char style="fr" closed="false">2:16 </char><char style="fq" closed="false">manteniendo en alto</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">ya que se aferran a.</char></note> la palabra de vida. Así en el día de Cristo me sentiré <char style="w" lemma="satisfacción">satisfecho</char> de no haber corrido ni trabajado en vano. <verse number="17" style="v"/>Y, aunque mi vida fuera derramada<note caller="+" style="f"><char style="fr" closed="false">2:17 </char><char style="fq" closed="false">derramada</char><char style="ft" closed="false">. Es decir, como libación.</char></note> sobre el sacrificio y servicio que proceden de vuestra fe, me alegro y comparto con todos vosotros mi alegría. <verse number="18" style="v"/>Así también, alegraos y compartid vuestra alegría conmigo.</para>
+  <para style="s1">Dos colaboradores ejemplares</para>
+  <para style="p">
+    <verse number="19" style="v"/>Espero en el Señor Jesús enviaros pronto a Timoteo, para que también yo cobre ánimo al recibir noticias vuestras. <verse number="20" style="v"/>Nadie como él se preocupa de veras por vuestro bienestar, <verse number="21" style="v"/>pues todos los demás buscan sus propios intereses y no los de Jesucristo. <verse number="22" style="v"/>Pero vosotros conocéis bien la entereza de carácter de Timoteo, que ha servido conmigo en la obra del <char style="w">evangelio</char>, como un hijo junto a su padre. <verse number="23" style="v"/>Así que espero enviároslo tan pronto como se aclaren mis asuntos. <verse number="24" style="v"/>Y confío en el Señor que yo mismo iré pronto.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Ahora bien, creo que es necesario enviaros de vuelta a Epafrodito, mi hermano, colaborador y compañero de lucha, a quien vosotros habéis enviado para atenderme en mis necesidades. <verse number="26" style="v"/>Él os echa mucho de menos a todos y está afligido porque os enterasteis de que estaba enfermo. <verse number="27" style="v"/>En efecto, estuvo enfermo y al borde de la muerte; pero Dios se compadeció de él, y no solo de él, sino también de mí, para no añadir tristeza a mi tristeza. <verse number="28" style="v"/>Así que lo envío urgentemente para que, al verlo de nuevo, os alegréis y yo esté menos preocupado. <verse number="29" style="v"/>Recibidle en el Señor con toda alegría y honrad a los que son como él, <verse number="30" style="v"/>porque estuvo a punto de morir por la obra de Cristo, arriesgando la <char style="w">vida</char> para suplir el servicio que vosotros no podíais prestarme.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Plena confianza en Cristo</para>
+  <para style="p">
+    <verse number="1" style="v"/>Por lo demás, hermanos míos, alegraos en el Señor. Para mí no es molestia volver a escribiros lo mismo, y a vosotros os da seguridad.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Cuidaos de esos <char style="w" lemma="perro">perros</char>, cuidaos de esos que hacen el mal, cuidaos de esos que mutilan el cuerpo. <verse number="3" style="v"/>Porque la <char style="w">circuncisión</char> somos nosotros, los que por medio del Espíritu de Dios adoramos, nos <char style="w" lemma="enorgullecerse">enorgullecemos</char> en Cristo Jesús y no ponemos nuestra confianza en esfuerzos <char style="w" lemma="humano">humanos</char>. <verse number="4" style="v"/>Yo mismo tengo motivos para tal confianza. Si cualquier otro cree tener motivos para confiar en esfuerzos humanos, yo más: <verse number="5" style="v"/>circuncidado al octavo día, del pueblo de Israel, de la tribu de Benjamín, hebreo de pura cepa; en cuanto a la interpretación de la ley, <char style="w">fariseo</char>; <verse number="6" style="v"/>en cuanto al celo, perseguidor de la iglesia; en cuanto a la justicia que la ley exige, intachable.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Sin embargo, todo aquello que para mí era ganancia, ahora lo considero pérdida por causa de Cristo. <verse number="8" style="v"/>Es más, todo lo considero pérdida por razón del incomparable valor de conocer a Cristo Jesús, mi Señor. Por él lo he perdido todo, y lo tengo por estiércol, a fin de ganar a Cristo <verse number="9" style="v"/>y encontrarme unido a él. No quiero mi propia justicia que procede de la ley, sino la que se obtiene mediante la <char style="w" lemma="fidelidad">fe</char> en Cristo, la justicia que procede de Dios, basada en la fe. <verse number="10" style="v"/>Lo he perdido todo a fin de conocer a Cristo, experimentar el poder que se manifestó en su resurrección, participar en sus sufrimientos y llegar a ser semejante a él en su muerte. <verse number="11" style="v"/>Así espero alcanzar la resurrección de entre los muertos.</para>
+  <para style="s1">Ciudadanos del cielo</para>
+  <para style="p">
+    <verse number="12" style="v"/>No es que ya lo haya conseguido todo, o que ya sea <char style="w">perfecto</char>. Sin embargo, sigo adelante esperando alcanzar aquello para lo cual Cristo Jesús me alcanzó a mí. <verse number="13" style="v"/>Hermanos, no pienso que yo mismo lo haya logrado ya. Más bien, una cosa hago: olvidando lo que queda atrás y esforzándome por alcanzar lo que está delante, <verse number="14" style="v"/>sigo avanzando hacia la meta para ganar el premio que Dios ofrece mediante su llamamiento celestial en Cristo Jesús.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Así que, ¡escuchad los perfectos! Todos debemos<note caller="+" style="f"><char style="fr" closed="false">3:15 </char><char style="fq" closed="false">Así … debemos</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">Así que los que somos perfectos debemos.</char></note> tener este modo de pensar. Y, si en algo pensáis de forma diferente, Dios os hará ver esto también. <verse number="16" style="v"/>En todo caso, vivamos de acuerdo con lo que ya hemos alcanzado.<note caller="+" style="f"><char style="fr" closed="false">3:16 </char><char style="fq" closed="false">alcanzado</char><char style="ft" closed="false">. Var. </char><char style="fqa" closed="false">alcanzado, una misma regla, un mismo modo de pensar.</char></note></para>
+  <para style="p">
+    <verse number="17" style="v"/>Hermanos, seguid todos mi ejemplo, y fijaos en los que se comportan conforme al modelo que os hemos dado. <verse number="18" style="v"/>Como os he dicho a menudo, y ahora lo repito hasta con lágrimas, muchos se comportan como enemigos de la cruz de Cristo. <verse number="19" style="v"/>Su destino es la destrucción, adoran al dios de sus propios deseos<note caller="+" style="f"><char style="fr" closed="false">3:19 </char><char style="fq" closed="false">adoran … deseos</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">su dios es el estómago.</char></note> y se enorgullecen de lo que es su vergüenza. Solo piensan en lo terrenal. <verse number="20" style="v"/>En cambio, nosotros somos ciudadanos del cielo, de donde anhelamos recibir al Salvador, el Señor Jesucristo. <verse number="21" style="v"/>Él transformará nuestro cuerpo miserable para que sea como su cuerpo glorioso, mediante el poder con que somete a sí mismo todas las cosas.</para>
+  <chapter number="4" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Por lo tanto, queridos hermanos míos, a quienes amo y tanto añoro, vosotros que sois mi alegría y mi corona, manteneos así, firmes en el Señor.</para>
+  <para style="s1">Exhortaciones</para>
+  <para style="p">
+    <verse number="2" style="v"/>Ruego a Evodia y también a Síntique que se pongan de acuerdo en el Señor. <verse number="3" style="v"/>Y a ti, mi fiel compañero,<note caller="+" style="f"><char style="fr" closed="false">4:3 </char><char style="fq" closed="false">mi fiel compañero</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">fiel Sícigo.</char></note> te pido que ayudes a estas mujeres que han luchado a mi lado en la obra del <char style="w">evangelio</char>, junto con Clemente y los demás colaboradores míos, cuyos nombres están en el libro de la vida.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Alegraos siempre en el Señor. Insisto: ¡Alegraos! <verse number="5" style="v"/>Que vuestra amabilidad sea evidente a todos. El Señor está cerca. <verse number="6" style="v"/>No os inquietéis por nada; más bien, en toda ocasión, con oración y ruego, presentad vuestras peticiones a Dios y dadle gracias. <verse number="7" style="v"/>Y la paz de Dios, que sobrepasa todo entendimiento, cuidará vuestros corazones y vuestros pensamientos en Cristo Jesús.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Por último, hermanos, considerad bien todo lo verdadero, todo lo respetable, todo lo justo, todo lo puro, todo lo amable, todo lo digno de admiración, en fin, todo lo que sea excelente o merezca elogio. <verse number="9" style="v"/>Poned en práctica lo que de mí habéis aprendido, recibido y oído, y lo que habéis visto en mí, y el Dios de paz estará con vosotros.</para>
+  <para style="s1">Gratitud por la ayuda recibida</para>
+  <para style="p">
+    <verse number="10" style="v"/>Me alegro muchísimo en el Señor de que al fin hayáis vuelto a interesaros en mí. Claro está que teníais interés, solo que no habíais tenido la oportunidad de demostrarlo. <verse number="11" style="v"/>No digo esto porque esté necesitado, pues he aprendido a estar satisfecho en cualquier situación en que me encuentre. <verse number="12" style="v"/>Sé lo que es vivir en la pobreza, y lo que es vivir en la abundancia. He aprendido a vivir en todas y cada una de las circunstancias, tanto a quedar saciado como a pasar hambre, a tener de sobra como a sufrir escasez. <verse number="13" style="v"/>Todo lo puedo en Cristo que me fortalece.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Sin embargo, habéis hecho bien en participar conmigo en mi angustia. <verse number="15" style="v"/>Y vosotros mismos, filipenses, sabéis que en el principio de la obra del <char style="w">evangelio</char>, cuando salí de Macedonia, ninguna iglesia participó conmigo en mis ingresos y gastos, excepto vosotros. <verse number="16" style="v"/>Incluso a Tesalónica me enviasteis ayuda una y otra vez para suplir mis necesidades. <verse number="17" style="v"/>No digo esto porque esté tratando de conseguir más ofrendas, sino que trato de aumentar el crédito en vuestra cuenta. <verse number="18" style="v"/>Ya he recibido todo lo que necesito y aún más; tengo hasta de sobra ahora que he recibido de Epafrodito lo que me enviasteis. Es una ofrenda fragante, un sacrificio que Dios acepta con agrado. <verse number="19" style="v"/>Así que mi Dios os proveerá de todo lo que necesitéis, conforme a las gloriosas riquezas que tiene en Cristo Jesús.</para>
+  <para style="p">
+    <verse number="20" style="v"/>A nuestro Dios y Padre sea la gloria por los siglos de los siglos. Amén.</para>
+  <para style="s1">Saludos finales</para>
+  <para style="p">
+    <verse number="21" style="v"/>Saludad a todos los <char style="w" lemma="santo">santos</char> en Cristo Jesús. Los hermanos que están conmigo os mandan saludos. <verse number="22" style="v"/>Saludos de parte de todos los santos, especialmente los de la casa del <char style="w">emperador</char>.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Que la gracia del Señor Jesucristo esté con vuestro espíritu. Amén.<note caller="+" style="f"><char style="fr" closed="false">4:23 </char><char style="ft" closed="false">Var. no incluye: </char><char style="fq" closed="false">Amén</char><char style="ft" closed="false">.</char></note></para>
+</usx>

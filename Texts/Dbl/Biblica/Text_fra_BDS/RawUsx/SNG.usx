@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="SNG" style="id">La Bible du Semeur (The Bible of the Sower)</book>
+  <para style="rem">Copyright © 1992, 1999, 2015 by Biblica, Inc.®</para>
+  <para style="h">CANTIQUES</para>
+  <para style="toc1">Le Cantique des Cantiques</para>
+  <para style="toc2">Cantiques</para>
+  <para style="toc3">Ct</para>
+  <para style="mt1">Le Cantique des Cantiques</para>
+  <para style="imt">Introduction</para>
+  <para style="ip">Le titre du livre est une forme de superlatif qui signifie « le plus beau de tous les cantiques ». En fait, il ne s’agit pas d’un cantique dans le sens courant du mot – d’un chant religieux – mais d’un chant d’amour.</para>
+  <para style="ip">Selon la traduction proposée pour l’en-tête du livre, ce chant a été « composé par Salomon » (<char style="xt"><ref loc="SNG 1:1">1.1</ref></char>). Cependant, l’hébreu permet aussi de comprendre que Salomon est le destinataire du poème ou encore le sujet du chant, l’un de ses personnages principaux : n’y est-il pas mentionné à six reprises (<char style="xt">1.5 ; 3.7, 9, 11 ; 8.11-12</char>) ? Il n’est donc pas possible de dater le chant de manière certaine.</para>
+  <para style="ip">Le Cantique est rythmé par son refrain qui apparaît à trois reprises : « N’éveillez pas, non, ne réveillez pas l’amour avant qu’il ne le veuille » (<char style="xt">2.7 ; 3.5 ; 8.4</char>). En plus de ces divisions naturelles, certains délimitent d’autres sections dans le poème, en particulier entre <char style="xt"><ref loc="SNG 3:6">3.6</ref> et <ref loc="SNG 8:4">8.4</ref></char>.</para>
+  <para style="ip">La compréhension du Cantique des Cantiques a donné lieu à des interprétations fort divergentes. On peut en relever trois types principaux.</para>
+  <para style="ip">L’interprétation allégorique est riche d’une longue tradition. Elle prend essentiellement deux formes. Compris de manière collective, le chant décrirait l’amour de l’Eternel et de son peuple, du Christ et de l’Eglise. Certains, individualisant la relation, y ont discerné une description de l’amour mystique qui unit le croyant ou l’âme au Seigneur. La caractéristique de cette approche est de gommer le caractère très humain des données du texte pour leur attribuer une signification spirituelle.</para>
+  <para style="ip">La majorité des spécialistes modernes se rallient, sous une forme ou une autre, à l’interprétation littérale. A leurs yeux, tel un écho au récit de la Genèse (<char style="xt"><ref loc="GEN 2:22-25">Gn 2.22-25</ref></char>), le livre magnifie l’amour, dans ses dimensions effectives et physiques que scelle le mariage (<char style="xt">voir <ref loc="SNG 4:8">4.8</ref></char> et note). Il développe ainsi l’enseignement des écrits de sagesse sur le couple (<char style="xt">Pr 2.17 ; 5.15-19</char>) dans une juste conception de la parfaite « bonté » de tout ce que Dieu a créé (<char style="xt"><ref loc="GEN 1:31">Gn 1.31</ref></char>). Parmi les diverses approches littérales, deux interprétations doivent être mentionnées. L’interprétation historique voit dans le chant un récit soit à deux personnages – Salomon et la Sulamite, dont le livre retrace l’histoire de l’amour – soit à trois : Salomon, le roi au harem impressionnant (<char style="xt"><ref loc="1KI 11:3">1 R 11.3</ref></char>), cherche à séduire la Sulamite qui résiste à ses avances pour rester fidèle à son bien-aimé, le berger (<char style="xt">voir 1.4 ; 6.11-12 ; 8.11-14</char>). Selon l’interprétation lyrique, le Cantique chante l’amour entre la Sulamite et le berger, son « roi » et son « Salomon ».</para>
+  <para style="ip">Parmi les partisans de l’approche littérale, certains optent encore pour une interprétation « typologique » ou parabolique. Contrairement à l’interprétation allégorique qui confère un sens spirituel à chaque détail du texte, cette compréhension laisse à la réalité humaine toute sa consistance. Mais à la manière de l’apôtre Paul (<char style="xt"><ref loc="EPH 5:22-23">Ep 5.22-23</ref></char>), elle en souligne la fonction de reflet : l’amour humain est image de l’amour de Dieu pour les siens.</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="SNG 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="SNG 1:1"/>Le plus beau des chants, composé par Salomon<note caller="+" style="f"><char style="fr" closed="false">1.1 </char><char style="ft" closed="false">Voir l’introduction. Le roi est encore mentionné en <char style="xt">1.5 ; 3.7, 9, 11 ; 8.11-12</char>.</char></note>.<verse eid="SNG 1:1"/></para>
+  <para style="s1">Célébrons l’amour</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 1:2"/>« Ah ! que ta bouche ╵me couvre de baisers,</para>
+  <para style="q1" vid="SNG 1:2">car ton amour ╵est plus exaltant que le vin.<verse eid="SNG 1:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 1:3"/>Combien suaves ╵sont tes parfums,</para>
+  <para style="q1" vid="SNG 1:3">ton nom est comparable<note caller="+" style="f"><char style="fr" closed="false">1.3 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">et ta renommée est comparable.</char></note> ╵à une huile odorante ╵qui se répand.</para>
+  <para style="q1" vid="SNG 1:3">Voilà pourquoi ╵les jeunes filles ╵sont éprises de toi.<verse eid="SNG 1:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 1:4"/>Entraîne-moi derrière toi ! ╵Courons ensemble ! »</para>
+  <para style="b" vid="SNG 1:4"/>
+  <para style="q1" vid="SNG 1:4">« Le roi m’a fait entrer ╵dans ses appartements. »</para>
+  <para style="s1" vid="SNG 1:4">Le chœur</para>
+  <para style="q1" vid="SNG 1:4">« Réjouissons-nous, ╵soyons dans l’allégresse ╵à ton sujet !</para>
+  <para style="q1" vid="SNG 1:4">Célébrons ton amour ╵plus exaltant que le bon vin !</para>
+  <para style="q1" vid="SNG 1:4">C’est bien avec raison ╵qu’on est épris de toi. »<verse eid="SNG 1:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 1:5"/>« O filles de Jérusalem<note caller="+" style="f"><char style="fr" closed="false">1.5 </char><char style="ft" closed="false">Voir v. 3.</char></note>, ╵je suis noiraude, ╵et pourtant, je suis belle,</para>
+  <para style="q1" vid="SNG 1:5">pareille aux tentes de Qédar<note caller="+" style="f"><char style="fr" closed="false">1.5 </char><char style="fq" closed="false">Qédar</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">tribu arabe fixée au sud-est d’Edom et habitant sous des tentes (<char style="xt"><ref loc="JER 49:29">Jr 49.29</ref></char>) faites du poil des chèvres noires de ces régions. Le mot </char><char style="fqa" closed="false">Qédar </char><char style="ft" closed="false">vient d’une racine hébraïque signifiant : être noir.</char></note>, ╵aux tentures de Salomon.<verse eid="SNG 1:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 1:6"/>Ne vous étonnez pas ╵si je suis bien brunie :</para>
+  <para style="q1" vid="SNG 1:6">le soleil m’a hâlée,</para>
+  <para style="q1" vid="SNG 1:6">car les fils de ma mère, ╵irrités contre moi,</para>
+  <para style="q1" vid="SNG 1:6">m’ont fait garder les vignes,</para>
+  <para style="q1" vid="SNG 1:6">oui, mais ma vigne à moi, ╵je ne l’ai pas gardée.<verse eid="SNG 1:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 1:7"/>O toi que mon cœur aime,</para>
+  <para style="q1" vid="SNG 1:7">dis-moi où tu fais paître ╵ton troupeau de brebis,</para>
+  <para style="q1" vid="SNG 1:7">où tu le feras reposer ╵à l’heure de midi,</para>
+  <para style="q1" vid="SNG 1:7">pour que je ne sois pas ╵comme une femme errante<note caller="+" style="f"><char style="fr" closed="false">1.7 </char><char style="fq" closed="false">errante</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">comme une vagabonde, une coureuse qui cherche l’aventure ; ou : une </char><char style="fqa" closed="false">voilée, </char><char style="ft" closed="false">c’est-à-dire une prostituée (<char style="xt"><ref loc="GEN 38:14-15">Gn 38.14-15</ref></char>).</char></note>,</para>
+  <para style="q1" vid="SNG 1:7">rôdant près des troupeaux ╵que gardent tes compagnons. »<verse eid="SNG 1:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 1:8"/>« Si tu ne le sais pas, ╵ô toi, la plus belle des femmes,</para>
+  <para style="q1" vid="SNG 1:8">va donc suivre les traces ╵du troupeau de brebis,</para>
+  <para style="q1" vid="SNG 1:8">fais paître tes chevrettes ╵près des huttes des pâtres. »<verse eid="SNG 1:8"/></para>
+  <para style="s1">Avec les yeux de l’amour</para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 1:9"/>« O mon amie, ╵je te trouve pareille</para>
+  <para style="q1" vid="SNG 1:9">à une jument d’attelage ╵du pharaon<note caller="+" style="f"><char style="fr" closed="false">1.9 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="1KI 10:29">1 R 10.29</ref></char>.</char></note>.<verse eid="SNG 1:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 1:10"/>Tes joues sont belles ╵entre les perles,</para>
+  <para style="q1" vid="SNG 1:10">ton cou est beau ╵dans tes colliers ;<verse eid="SNG 1:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 1:11"/>nous te ferons ╵des perles d’or</para>
+  <para style="q1" vid="SNG 1:11">tout incrustées ╵de points d’argent. »<verse eid="SNG 1:11"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 1:12"/>« Jusqu’à ce que le roi ╵parvienne à son enclos<note caller="+" style="f"><char style="fr" closed="false">1.12 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">pendant que le roi mangeait à sa table.</char></note>,</para>
+  <para style="q1" vid="SNG 1:12">mon nard<note caller="+" style="f"><char style="fr" closed="false">1.12 </char><char style="ft" closed="false">Plante aromatique originaire de l’Inde.</char></note> exhale son parfum.<verse eid="SNG 1:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 1:13"/>Car mon bien-aimé est pour moi ╵comme un sachet de myrrhe<note caller="+" style="f"><char style="fr" closed="false">1.13 </char><char style="ft" closed="false">La </char><char style="fqa" closed="false">myrrhe </char><char style="ft" closed="false">était une gomme aromatique extraite du balsamier qui pousse en Arabie, en Ethiopie et aux Indes. Elle était utilisée comme parfum (<char style="xt">Est 2.12 ; Pr 7.17 ; Ps 45.9</char> ; comparer <char style="xt"><ref loc="MAT 2:2">Mt 2.2</ref>, <ref loc="MAT 2:11">11</ref></char>) ; elle entrait aussi dans la composition de l’huile sainte (<char style="xt"><ref loc="EXO 30:23">Ex 30.23</ref></char>).</char></note>,</para>
+  <para style="q1" vid="SNG 1:13">entre mes seins ╵il passera la nuit.<verse eid="SNG 1:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="SNG 1:14"/>Oui, mon bien-aimé est pour moi ╵un bouquet de henné<note caller="+" style="f"><char style="fr" closed="false">1.14 </char><char style="ft" closed="false">Plante aromatique utilisée comme parfum.</char></note></para>
+  <para style="q1" vid="SNG 1:14">des vignes d’Eyn-Guédi<note caller="+" style="f"><char style="fr" closed="false">1.14 </char><char style="ft" closed="false">Oasis alimentée par une source, à l’ouest de la mer Morte, où poussent beaucoup de plantes aromatiques.</char></note>. »<verse eid="SNG 1:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="SNG 1:15"/>« Que tu es belle, ╵ma bien-aimée, ╵que tu es belle !</para>
+  <para style="q1" vid="SNG 1:15">Tes yeux ressemblent ╵à des colombes. »<verse eid="SNG 1:15"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v" sid="SNG 1:16"/>« Que tu es beau, mon bien-aimé, ╵tu es superbe !</para>
+  <para style="q1" vid="SNG 1:16">Dans la verdure est notre lit.<verse eid="SNG 1:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="SNG 1:17"/>Les solives de nos maisons, ╵ce sont les cèdres,</para>
+  <para style="q1" vid="SNG 1:17">et les cyprès sont nos lambris. »<verse eid="SNG 1:17"/></para>
+  <chapter eid="SNG 1"/>
+  <chapter number="2" style="c" sid="SNG 2"/>
+  <para style="s1">Malade d’amour</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 2:1"/>« Moi, je suis une fleur ╵qui pousse dans la plaine du Saron<note caller="+" style="f"><char style="fr" closed="false">2.1 </char><char style="ft" closed="false">Le narcisse du </char><char style="fqa" closed="false">Saron, </char><char style="ft" closed="false">une sorte de crocus poussant dans la plaine côtière au sud du Carmel (entre Haïfa et Jaffa).</char></note>,</para>
+  <para style="q1" vid="SNG 2:1">un lis de la vallée. »<verse eid="SNG 2:1"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 2:2"/>« Oui, comme un lis ╵parmi des ronces</para>
+  <para style="q1" vid="SNG 2:2">est mon amie ╵parmi les filles. »<verse eid="SNG 2:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 2:3"/>« Comme un pommier ╵parmi les arbres ╵de la forêt</para>
+  <para style="q1" vid="SNG 2:3">tel est mon bien-aimé ╵parmi les jeunes gens,</para>
+  <para style="q1" vid="SNG 2:3">j’ai grand plaisir ╵à m’asseoir à son ombre.</para>
+  <para style="q1" vid="SNG 2:3">Combien son fruit est doux ╵à mon palais.<verse eid="SNG 2:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 2:4"/>Il m’a conduite ╵dans la maison du vin<note caller="+" style="f"><char style="fr" closed="false">2.4 </char><char style="ft" closed="false">Selon certains, un lieu de banquet et de réjouissances, selon d’autres, non un débit de boisson, mais, au sens figuré, le « lieu » où le bien-aimé et sa bien-aimée s’enivrent l’un de l’autre (<char style="xt">voir <ref loc="SNG 5:1">5.1</ref></char>).</char></note></para>
+  <para style="q1" vid="SNG 2:4">et il a déployé sur moi, ╵l’étendard<note caller="+" style="f"><char style="fr" closed="false">2.4 </char><char style="ft" closed="false">Signe de ralliement (<char style="xt">Es 5.26 ; 11.10</char>) ; selon d’autres, enseigne du « lieu » de l’enivrement mutuel.</char></note> de l’amour.<verse eid="SNG 2:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 2:5"/>Restaurez-moi ╵avec des gâteaux de raisins,</para>
+  <para style="q1" vid="SNG 2:5">soutenez-moi ╵avec des pommes,</para>
+  <para style="q1" vid="SNG 2:5">car je suis malade d’amour.<verse eid="SNG 2:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 2:6"/>Son bras gauche soutient ma tête,</para>
+  <para style="q1" vid="SNG 2:6">et son bras droit m’enlace.<verse eid="SNG 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 2:7"/>O filles de Jérusalem, ╵oh, je vous en conjure</para>
+  <para style="q1" vid="SNG 2:7">par les gazelles ╵ou par les biches ╵de la campagne :</para>
+  <para style="q1" vid="SNG 2:7">n’éveillez pas, ╵non, ne réveillez pas l’amour</para>
+  <para style="q1" vid="SNG 2:7">avant qu’il ne le veuille<note caller="+" style="f"><char style="fr" closed="false">2.7 </char><char style="ft" closed="false">Voir <char style="xt">3.5 ; 8.4</char>. Autre traduction : </char><char style="fqa" closed="false">n’éveillez pas, non, n’éveillez pas ma bien-aimée avant qu’elle ne le veuille.</char></note>.<verse eid="SNG 2:7"/></para>
+  <para style="s1">Le voici, il vient</para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 2:8"/>J’entends mon bien-aimé,</para>
+  <para style="q1" vid="SNG 2:8">oui, le voici, il vient,</para>
+  <para style="q1" vid="SNG 2:8">sautant sur les montagnes</para>
+  <para style="q1" vid="SNG 2:8">et bondissant sur les collines.<verse eid="SNG 2:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 2:9"/>Mon bien-aimé ressemble ╵à la gazelle</para>
+  <para style="q1" vid="SNG 2:9">ou à un jeune cerf.</para>
+  <para style="q1" vid="SNG 2:9">Le voici : il est là, ╵derrière notre mur,</para>
+  <para style="q1" vid="SNG 2:9">guettant par les fenêtres</para>
+  <para style="q1" vid="SNG 2:9">et lançant des regards ╵à travers les treillis.<verse eid="SNG 2:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 2:10"/>Mon bien-aimé me parle,</para>
+  <para style="q1" vid="SNG 2:10">et il me dit :</para>
+  <para style="q1" vid="SNG 2:10">“Lève-toi, mon amie, ╵viens donc, ma belle,<verse eid="SNG 2:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 2:11"/>car l’hiver est passé</para>
+  <para style="q1" vid="SNG 2:11">et les pluies ont cessé, ╵leur saison est finie.<verse eid="SNG 2:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 2:12"/>On voit des fleurs éclore ╵à travers le pays,</para>
+  <para style="q1" vid="SNG 2:12">et le temps de chanter ╵est revenu.</para>
+  <para style="q1" vid="SNG 2:12">La voix des tourterelles ╵retentit dans nos champs.<verse eid="SNG 2:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 2:13"/>Sur les figuiers, ╵les premiers fruits mûrissent<note caller="+" style="f"><char style="fr" closed="false">2.13 </char><char style="ft" closed="false">Le figuier d’Israël porte deux récoltes de figues par année : les précoces, qui ont passé l’hiver sur l’arbre, au printemps, les tardives en été (<char style="xt"><ref loc="MRK 11:13">Mc 11.13</ref></char>). C’est des premières dont il est question.</char></note>.</para>
+  <para style="q1" vid="SNG 2:13">La vigne en fleur ╵exhale son parfum<note caller="+" style="f"><char style="fr" closed="false">2.13 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">les ceps de Semadar exhalent leur parfum. </char><char style="ft" closed="false">Il est question d’un lieu appelé Semadar dans les tablettes d’Ebla, site situé en Syrie où l’on a découvert plusieurs milliers de tablettes datant du III<char style="ord">e</char> millénaire av. J.-C. ; il se peut qu’on y produisait un vin réputé.</char></note>.</para>
+  <para style="q1" vid="SNG 2:13">Lève-toi, mon amie, ╵et viens, ╵oui, viens, ma belle.”<verse eid="SNG 2:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="SNG 2:14"/>Ma colombe nichée ╵aux fentes du rocher,</para>
+  <para style="q1" vid="SNG 2:14">cachée au plus secret ╵des parois escarpées,</para>
+  <para style="q1" vid="SNG 2:14">fais-moi voir ton visage</para>
+  <para style="q1" vid="SNG 2:14">et entendre ta voix,</para>
+  <para style="q1" vid="SNG 2:14">car ta voix est bien douce ╵et ton visage est beau.<verse eid="SNG 2:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="SNG 2:15"/>Prenez-nous les renards<note caller="+" style="f"><char style="fr" closed="false">2.15 </char><char style="ft" closed="false">Les renards abondaient en Judée et y causaient beaucoup de dommages dans les vignes et les jardins. Cette parole énigmatique peut être une demande que l’on écarte tout ce qui pourrait endommager </char><char style="fqa" closed="false">les vignes en fleur, </char><char style="ft" closed="false">l’amour du bien-aimé et de sa bien-aimée. Ce pourrait encore être un prétexte pour repousser l’invitation, ou pour se faire prier, par coquetterie.</char></note>,</para>
+  <para style="q1" vid="SNG 2:15">oui, les petits renards ╵qui ravagent nos vignes</para>
+  <para style="q1" vid="SNG 2:15">quand elles sont en fleur.<verse eid="SNG 2:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="SNG 2:16"/>Mon bien-aimé, il est à moi, ╵et moi, je suis à lui,</para>
+  <para style="q1" vid="SNG 2:16">il paît parmi les lis<note caller="+" style="f"><char style="fr" closed="false">2.16 </char><char style="ft" closed="false">Voir <char style="xt">6.3 ; 7.11</char>.</char></note>.<verse eid="SNG 2:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="SNG 2:17"/>Et quand viendra la brise</para>
+  <para style="q1" vid="SNG 2:17">à la tombée du jour,</para>
+  <para style="q1" vid="SNG 2:17">et quand s’estomperont les ombres,</para>
+  <para style="q1" vid="SNG 2:17">reviens, ô toi mon bien-aimé,</para>
+  <para style="q1" vid="SNG 2:17">pareil à la gazelle ╵ou à un jeune faon</para>
+  <para style="q1" vid="SNG 2:17">sur les monts escarpés<note caller="+" style="f"><char style="fr" closed="false">2.17 </char><char style="ft" closed="false">Autres traductions : </char><char style="fqa" closed="false">sur les monts de Béther, </char><char style="ft" closed="false">lieu non identifié, ou </char><char style="fqa" closed="false">sur les monts qui nous séparent. </char><char style="ft" closed="false">Il pourrait encore s’agir d’une image pour les seins de la bien-aimée.</char></note>.<verse eid="SNG 2:17"/></para>
+  <chapter eid="SNG 2"/>
+  <chapter number="3" style="c" sid="SNG 3"/>
+  <para style="s1">Pensées nocturnes</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 3:1"/>Sur mon lit, au long de la nuit,</para>
+  <para style="q1" vid="SNG 3:1">j’ai recherché ╵celui que mon cœur aime.</para>
+  <para style="q1" vid="SNG 3:1">Je l’ai cherché, ╵mais ne l’ai pas trouvé.<verse eid="SNG 3:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 3:2"/>Je me suis dit alors : ╵Il faut que je me lève,</para>
+  <para style="q1" vid="SNG 3:2">je ferai le tour de la ville ╵par les rues et les places,</para>
+  <para style="q1" vid="SNG 3:2">je chercherai partout ╵celui que mon cœur aime.</para>
+  <para style="q1" vid="SNG 3:2">Je l’ai cherché, ╵mais ne l’ai pas trouvé.<verse eid="SNG 3:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 3:3"/>Les gardes m’ont trouvée, ╵ceux qui font le tour de la ville<note caller="+" style="f"><char style="fr" closed="false">3.3 </char><char style="ft" closed="false">Les gardes se tenaient la nuit près de la porte (<char style="xt">Né 3.29 ; 11.19 ; 13.22</char>) ou sur les remparts (<char style="xt">5.7 ; 2 S 13.34 ; 18.24-27 ; 2 R 9.17-20 ; Ps 127.1 ; Es 52.8 ; 62.6</char>). Sans doute patrouillaient-ils aussi dans la ville (<char style="xt"><ref loc="SNG 5:7">5.7</ref></char>).</char></note>.</para>
+  <para style="q1" vid="SNG 3:3">Je leur ai demandé : ╵Celui que mon cœur aime, ╵ne l’avez-vous pas vu ?<verse eid="SNG 3:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 3:4"/>Les ayant dépassés,</para>
+  <para style="q1" vid="SNG 3:4">peu après, j’ai trouvé ╵celui que mon cœur aime.</para>
+  <para style="q1" vid="SNG 3:4">Je l’ai saisi bien fort, ╵et ne l’ai plus lâché</para>
+  <para style="q1" vid="SNG 3:4">jusqu’à l’avoir conduit ╵au logis de ma mère,</para>
+  <para style="q1" vid="SNG 3:4">dans la chambre de celle ╵qui m’a conçue.<verse eid="SNG 3:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 3:5"/>O filles de Jérusalem, ╵oh, je vous en conjure</para>
+  <para style="q1" vid="SNG 3:5">par les gazelles ╵ou par les biches ╵de la campagne :</para>
+  <para style="q1" vid="SNG 3:5">n’éveillez pas, ╵non, ne réveillez pas l’amour</para>
+  <para style="q1" vid="SNG 3:5">avant qu’il ne le veuille<note caller="+" style="f"><char style="fr" closed="false">3.5 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="SNG 2:7">2.7</ref></char> et note ; <char style="xt"><ref loc="SNG 8:4">8.4</ref></char>.</char></note>. »<verse eid="SNG 3:5"/></para>
+  <para style="s1">Cortège royal</para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 3:6"/>« Qui donc est celle-ci ╵qui monte du désert<note caller="+" style="f"><char style="fr" closed="false">3.6 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="SNG 8:5">8.5</ref></char>. Le </char><char style="fqa" closed="false">désert </char><char style="ft" closed="false">est celui de Judée, c’est-à-dire les collines incultes entourant Jérusalem.</char></note></para>
+  <para style="q1" vid="SNG 3:6">comme un nuage de fumée,</para>
+  <para style="q1" vid="SNG 3:6">aux senteurs de myrrhe et d’encens</para>
+  <para style="q1" vid="SNG 3:6">et de tous parfums exotiques ?<verse eid="SNG 3:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 3:7"/>Voici la litière de Salomon</para>
+  <para style="q1" vid="SNG 3:7">escortée de ses soixante guerriers,</para>
+  <para style="q1" vid="SNG 3:7">l’élite des guerriers en Israël.<verse eid="SNG 3:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 3:8"/>Tous armés de l’épée,</para>
+  <para style="q1" vid="SNG 3:8">exercés au combat,</para>
+  <para style="q1" vid="SNG 3:8">ils ont leur épée au côté</para>
+  <para style="q1" vid="SNG 3:8">pour parer aux terreurs nocturnes.<verse eid="SNG 3:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 3:9"/>Le palanquin<note caller="+" style="f"><char style="fr" closed="false">3.9 </char><char style="ft" closed="false">Sans doute la litière mentionnée au v. 7 et qui devait être richement ornée.</char></note> royal ╵fait sur ordre de Salomon</para>
+  <para style="q1" vid="SNG 3:9">est en bois du Liban.<verse eid="SNG 3:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 3:10"/>Ses colonnes sont en argent,</para>
+  <para style="q1" vid="SNG 3:10">son dossier<note caller="+" style="f"><char style="fr" closed="false">3.10 </char><char style="ft" closed="false">Terme de sens incertain. Autres traductions : </char><char style="fqa" closed="false">lit, siège, base, support, trône.</char></note> est en or,</para>
+  <para style="q1" vid="SNG 3:10">son siège est fait en pourpre.</para>
+  <para style="q1" vid="SNG 3:10">Les filles de Jérusalem</para>
+  <para style="q1" vid="SNG 3:10">ont tapissé avec amour ╵tout l’intérieur du palanquin.<verse eid="SNG 3:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 3:11"/>O filles de Sion, sortez, ╵contemplez le roi Salomon</para>
+  <para style="q1" vid="SNG 3:11">portant le diadème ╵dont le ceignit sa mère</para>
+  <para style="q1" vid="SNG 3:11">au jour de son mariage,</para>
+  <para style="q1" vid="SNG 3:11">au jour où tout son cœur ╵était rempli de joie. »<verse eid="SNG 3:11"/></para>
+  <chapter eid="SNG 3"/>
+  <chapter number="4" style="c" sid="SNG 4"/>
+  <para style="s1">Que tu es belle, ô mon amie</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 4:1"/>« Que tu es belle, ╵ô mon amie, ╵que tu es belle !</para>
+  <para style="q1" vid="SNG 4:1">Tes yeux ressemblent ╵à des colombes</para>
+  <para style="q1" vid="SNG 4:1">dessous ton voile,</para>
+  <para style="q1" vid="SNG 4:1">ta chevelure ╵est comme un troupeau de chèvres</para>
+  <para style="q1" vid="SNG 4:1">dévalant le mont Galaad<note caller="+" style="f"><char style="fr" closed="false">4.1 </char><char style="ft" closed="false">Noires comme les chèvres de ce pays.</char></note>.<verse eid="SNG 4:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 4:2"/>Tes dents ressemblent ╵à un troupeau de brebis ╵passé aux mains des tondeurs</para>
+  <para style="q1" vid="SNG 4:2">qui reviendrait du lavoir.</para>
+  <para style="q1" vid="SNG 4:2">Chacune d’elles ╵a sa jumelle,</para>
+  <para style="q1" vid="SNG 4:2">aucune n’est solitaire.<verse eid="SNG 4:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 4:3"/>Voici tes lèvres ╵comme un ruban écarlate ;</para>
+  <para style="q1" vid="SNG 4:3">combien ta bouche est charmante !</para>
+  <para style="q1" vid="SNG 4:3">Et tes tempes ressemblent ╵à des moitiés de grenades<note caller="+" style="f"><char style="fr" closed="false">4.3 </char><char style="ft" closed="false">A cause de leur couleur rougeâtre (<char style="xt">voir <ref loc="SNG 6:7">6.7</ref></char>).</char></note></para>
+  <para style="q1" vid="SNG 4:3">dessous ton voile.<verse eid="SNG 4:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 4:4"/>Ton cou ressemble ╵à la tour du roi David,</para>
+  <para style="q1" vid="SNG 4:4">bâtie comme un arsenal :</para>
+  <para style="q1" vid="SNG 4:4">mille rondaches ╵y sont pendues<note caller="+" style="f"><char style="fr" closed="false">4.4 </char><char style="ft" closed="false">Allusion au collier formé de pièces de monnaie entourant le cou comme les boucliers ronds suspendus autour des tours (<char style="xt"><ref loc="EZK 27:10-11">Ez 27.10-11</ref></char>).</char></note>,</para>
+  <para style="q1" vid="SNG 4:4">tous les pavois des héros.<verse eid="SNG 4:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 4:5"/>Comme deux faons, ╵jumeaux d’une gazelle,</para>
+  <para style="q1" vid="SNG 4:5">paissant parmi les lis, ╵sont tes deux seins. »<verse eid="SNG 4:5"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 4:6"/>« Et quand viendra la brise</para>
+  <para style="q1" vid="SNG 4:6">à la tombée du jour,</para>
+  <para style="q1" vid="SNG 4:6">et quand s’estomperont les ombres,</para>
+  <para style="q1" vid="SNG 4:6">je m’en irai ╵vers la montagne de la myrrhe,</para>
+  <para style="q1" vid="SNG 4:6">vers la colline de l’encens. »<verse eid="SNG 4:6"/></para>
+  <para style="s1">La beauté de l’amour</para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 4:7"/>« Tu es toute jolie, ╵ô mon amie,</para>
+  <para style="q1" vid="SNG 4:7">et sans aucun défaut.<verse eid="SNG 4:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 4:8"/>Oh, viens du Liban avec moi, ╵ma mariée<note caller="+" style="f"><char style="fr" closed="false">4.8 </char><char style="ft" closed="false">Le mot hébreu, qui se retrouve aux v. 9, 10, 11, 12 et en <char style="xt"><ref loc="SNG 5:1">5.1</ref></char>, désigne l’</char><char style="fqa" closed="false">épousée, </char><char style="ft" closed="false">juste avant ou juste après le mariage, comme en <char style="xt"><ref loc="HOS 4:13">Os 4.13</ref>ss</char></char></note>,</para>
+  <para style="q1" vid="SNG 4:8">oui, viens du Liban avec moi.</para>
+  <para style="q1" vid="SNG 4:8">Veuille descendre<note caller="+" style="f"><char style="fr" closed="false">4.8 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">tu contempleras.</char></note> du sommet ╵de l’Amana,</para>
+  <para style="q1" vid="SNG 4:8">du sommet du Senir, et de l’Hermon<note caller="+" style="f"><char style="fr" closed="false">4.8 </char><char style="ft" closed="false">Différents sommets du nord d’Israël.</char></note>,</para>
+  <para style="q1" vid="SNG 4:8">là où les lions ╵ont leur retraite,</para>
+  <para style="q1" vid="SNG 4:8">et les panthères ╵dans les montagnes.<verse eid="SNG 4:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 4:9"/>Tu chamboules mon cœur, ╵ô toi, ma sœur<note caller="+" style="f"><char style="fr" closed="false">4.9 </char><char style="fq" closed="false">ma sœur</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">terme d’affection du langage amoureux, courant dans la poésie du Proche-Orient ancien (voir v. 10, 12 ; <char style="xt"><ref loc="SNG 5:1">5.1</ref></char>).</char></note>, ╵ma mariée,</para>
+  <para style="q1" vid="SNG 4:9">tu chamboules mon cœur ╵par un seul regard jeté par tes yeux,</para>
+  <para style="q1" vid="SNG 4:9">par un seul des joyaux ╵de tes colliers.<verse eid="SNG 4:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 4:10"/>Ton amour est bien délicieux, ╵ô toi, ma sœur, ╵ma mariée,</para>
+  <para style="q1" vid="SNG 4:10">oui, ton amour ╵est plus exaltant que le vin</para>
+  <para style="q1" vid="SNG 4:10">et la senteur de tes parfums ╵plus que tous les arômes.<verse eid="SNG 4:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 4:11"/>Tes lèvres, distillent du miel, ╵ma mariée,</para>
+  <para style="q1" vid="SNG 4:11">du miel, du lait ╵sont sous ta langue,</para>
+  <para style="q1" vid="SNG 4:11">et le parfum ╵de tes habits ╵est tout pareil ╵aux senteurs du Liban.<verse eid="SNG 4:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 4:12"/>Tu es un jardin clos, ╵ô toi, ma sœur, ╵ma mariée,</para>
+  <para style="q1" vid="SNG 4:12">un jardin clos<note caller="+" style="f"><char style="fr" closed="false">4.12 </char><char style="ft" closed="false">D’après divers manuscrits hébreux et les versions anciennes. Le texte hébreu traditionnel porte un terme de sens incertain souvent rendu par </char><char style="fqa" closed="false">source </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">fontaine. </char><char style="ft" closed="false">Les deux types de textes hébreux ne diffèrent que par une seule lettre.</char></note> ╵et une fontaine scellée<note caller="+" style="f"><char style="fr" closed="false">4.12 </char><char style="ft" closed="false">On avait l’habitude de fermer les puits (<char style="xt"><ref loc="GEN 29:2-3">Gn 29.2-3</ref></char>).</char></note>.<verse eid="SNG 4:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 4:13"/>Tes rameaux<note caller="+" style="f"><char style="fr" closed="false">4.13 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">Tes ruisseaux arrosent un verger.</char></note> forment un verger ╵de grenadiers aux fruits exquis,</para>
+  <para style="q1" vid="SNG 4:13">henné et nard l’embaument,<verse eid="SNG 4:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="SNG 4:14"/>le nard et le safran ╵et la canne odorante, ╵le cinnamome<note caller="+" style="f"><char style="fr" closed="false">4.14 </char><char style="ft" closed="false">Diverses plantes aromatiques précieuses.</char></note>,</para>
+  <para style="q1" vid="SNG 4:14">et toutes sortes ╵de plantes donnant de l’encens,</para>
+  <para style="q1" vid="SNG 4:14">l’aloès ╵et la myrrhe,</para>
+  <para style="q1" vid="SNG 4:14">avec les plus fins aromates.<verse eid="SNG 4:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="SNG 4:15"/>Tu es la source des jardins,</para>
+  <para style="q1" vid="SNG 4:15">un puits d’eaux vives,</para>
+  <para style="q1" vid="SNG 4:15">et d’eaux ruisselant du Liban<note caller="+" style="f"><char style="fr" closed="false">4.15 </char><char style="ft" closed="false">Dont les neiges éternelles alimentent des cours d’eau frais et intarissables.</char></note>.<verse eid="SNG 4:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="SNG 4:16"/>Eveille-toi, brise légère,</para>
+  <para style="q1" vid="SNG 4:16">viens, doux zéphyr,</para>
+  <para style="q1" vid="SNG 4:16">que mon jardin, ╵exhale ses parfums. »</para>
+  <para style="s1" vid="SNG 4:16">Le jardin de l’amour</para>
+  <para style="q1" vid="SNG 4:16">« Que mon bien-aimé entre ╵dans son jardin</para>
+  <para style="q1" vid="SNG 4:16">et qu’il en goûte ╵les fruits exquis. »<verse eid="SNG 4:16"/></para>
+  <para style="b"/>
+  <chapter eid="SNG 4"/>
+  <chapter number="5" style="c" sid="SNG 5"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 5:1"/>« Je viens dans mon jardin, ╵ma sœur, ma mariée,</para>
+  <para style="q1" vid="SNG 5:1">je récolte ma myrrhe, ╵avec mes aromates,</para>
+  <para style="q1" vid="SNG 5:1">je mange mon rayon de miel ╵avec mon miel,</para>
+  <para style="q1" vid="SNG 5:1">je bois mon vin ╵avec mon lait.</para>
+  <para style="q1" vid="SNG 5:1">Mangez, amis, buvez !</para>
+  <para style="q1" vid="SNG 5:1">Jusqu’à l’ivresse, ╵les amoureux ! »<verse eid="SNG 5:1"/></para>
+  <para style="s1">Rendez-vous manqué<note caller="+" style="f"><char style="fr" closed="false">5.2 </char><char style="ft" closed="false">De <char style="xt"><ref loc="SNG 5:2">5.2</ref></char> à <char style="xt"><ref loc="SNG 6:3">6.3</ref></char>, le rythme de la traduction accentue de nouveau les syllabes paires.</char></note></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 5:2"/>« Je m’étais endormie, ╵pourtant mon cœur veillait.</para>
+  <para style="q1" vid="SNG 5:2">J’entends mon bien-aimé frapper :</para>
+  <para style="q1" vid="SNG 5:2">“Ma sœur, mon amie, ouvre-moi,</para>
+  <para style="q1" vid="SNG 5:2">toi, ma colombe, ╵toi, ma parfaite,</para>
+  <para style="q1" vid="SNG 5:2">car j’ai la tête ╵couverte de rosée.</para>
+  <para style="q1" vid="SNG 5:2">Mes boucles sont trempées ╵des gouttes de la nuit.”<verse eid="SNG 5:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 5:3"/>J’ai ôté ma tunique, ╵comment la remettrais-je ?</para>
+  <para style="q1" vid="SNG 5:3">Et j’ai lavé mes pieds : ╵comment les salirais-je ?<verse eid="SNG 5:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 5:4"/>Mon bien-aimé avance ╵sa main par l’ouverture,</para>
+  <para style="q1" vid="SNG 5:4">mon ventre en a frémi<verse eid="SNG 5:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 5:5"/>et je me suis levée ╵pour ouvrir à mon bien-aimé.</para>
+  <para style="q1" vid="SNG 5:5">De mes mains, goutte à goutte, ╵de la myrrhe a coulé,</para>
+  <para style="q1" vid="SNG 5:5">de la myrrhe onctueuse ╵a goutté de mes doigts</para>
+  <para style="q1" vid="SNG 5:5">jusque sur la poignée ╵du verrou de la porte.<verse eid="SNG 5:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 5:6"/>J’ouvre à mon bien-aimé.</para>
+  <para style="q1" vid="SNG 5:6">Hélas, mon bien-aimé ╵était déjà parti : ╵il s’en était allé,</para>
+  <para style="q1" vid="SNG 5:6">et son départ<note caller="+" style="f"><char style="fr" closed="false">5.6 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">et ses paroles me rendaient éperdue.</char></note> ╵me rendait éperdue.</para>
+  <para style="q1" vid="SNG 5:6">Je l’ai cherché, ╵mais ne l’ai pas trouvé.</para>
+  <para style="q1" vid="SNG 5:6">Et je l’ai appelé, ╵mais il ne m’a pas répondu.<verse eid="SNG 5:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 5:7"/>Les gardes m’ont trouvée ╵ceux qui font le tour de la ville,</para>
+  <para style="q1" vid="SNG 5:7">ils m’ont frappée ╵et ils m’ont maltraitée.</para>
+  <para style="q1" vid="SNG 5:7">Ils m’ont arraché ma mantille, ╵les gardes des remparts.<verse eid="SNG 5:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 5:8"/>O filles de Jérusalem, ╵oh, je vous en conjure :</para>
+  <para style="q1" vid="SNG 5:8">si vous le rencontrez, ╵mon bien-aimé,</para>
+  <para style="q1" vid="SNG 5:8">qu’allez-vous donc lui dire ?</para>
+  <para style="q1" vid="SNG 5:8">Que je suis malade d’amour ! »<verse eid="SNG 5:8"/></para>
+  <para style="s1">Le chœur</para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 5:9"/>« Qu’a donc ton bien-aimé ╵de plus qu’un autre ?</para>
+  <para style="q1" vid="SNG 5:9">Dis-le-nous donc, ╵toi la plus belle ╵parmi les femmes,</para>
+  <para style="q1" vid="SNG 5:9">oui, qu’a-t-il donc ton bien-aimé ╵de plus qu’un autre</para>
+  <para style="q1" vid="SNG 5:9">pour que tu nous conjures, ╵de façon si pressante ? »<verse eid="SNG 5:9"/></para>
+  <para style="s1">Que tu es beau, mon bien-aimé</para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 5:10"/>« Mon bien-aimé ╵a le teint clair et rose,</para>
+  <para style="q1" vid="SNG 5:10">on le distinguerait ╵au milieu de dix mille.<verse eid="SNG 5:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 5:11"/>Sa tête est comme de l’or pur.</para>
+  <para style="q1" vid="SNG 5:11">Ses boucles sont flottantes</para>
+  <para style="q1" vid="SNG 5:11">et d’un noir de corbeau.<verse eid="SNG 5:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 5:12"/>Ses yeux sont des colombes</para>
+  <para style="q1" vid="SNG 5:12">sur le bord des cours d’eau,</para>
+  <para style="q1" vid="SNG 5:12">ils baignent dans du lait</para>
+  <para style="q1" vid="SNG 5:12">reposant sur des coupes pleines ╵dans un chaton de bague.<verse eid="SNG 5:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 5:13"/>Ses joues ressemblent ╵à un parterre d’aromates</para>
+  <para style="q1" vid="SNG 5:13">exhalant<note caller="+" style="f"><char style="fr" closed="false">5.13 </char><char style="ft" closed="false">Texte hébreu traditionnel : </char><char style="fqa" closed="false">des tours (de parfum) ; </char><char style="ft" closed="false">la traduction retenue suppose une modification de la vocalisation du mot hébreu, avec l’appui de l’ancienne version grecque.</char></note> leurs parfums.</para>
+  <para style="q1" vid="SNG 5:13">Ses lèvres sont des lis</para>
+  <para style="q1" vid="SNG 5:13">distillant de la myrrhe, ╵de la myrrhe onctueuse,<verse eid="SNG 5:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="SNG 5:14"/>et ses mains, des bracelets d’or</para>
+  <para style="q1" vid="SNG 5:14">incrustés de topazes<note caller="+" style="f"><char style="fr" closed="false">5.14 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">chrysolithe.</char></note>.</para>
+  <para style="q1" vid="SNG 5:14">Son corps est d’ivoire poli</para>
+  <para style="q1" vid="SNG 5:14">émaillé de saphirs.<verse eid="SNG 5:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="SNG 5:15"/>Ses jambes sont semblables ╵à des piliers de marbre</para>
+  <para style="q1" vid="SNG 5:15">sur des socles d’or pur.</para>
+  <para style="q1" vid="SNG 5:15">Son aspect est pareil ╵à celui du Liban<note caller="+" style="f"><char style="fr" closed="false">5.15 </char><char style="ft" closed="false">Aussi majestueux que cette chaîne de montagnes qui se dresse au nord d’Israël.</char></note></para>
+  <para style="q1" vid="SNG 5:15">et d’une beauté sans égale, ╵comme les cèdres.<verse eid="SNG 5:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="SNG 5:16"/>Son palais est plein de douceurs</para>
+  <para style="q1" vid="SNG 5:16">et toute sa personne ╵est empreinte de charme.</para>
+  <para style="q1" vid="SNG 5:16">Tel est mon bien-aimé, ╵oui, tel est mon ami,</para>
+  <para style="q1" vid="SNG 5:16">ô filles de Jérusalem. »<verse eid="SNG 5:16"/></para>
+  <chapter eid="SNG 5"/>
+  <chapter number="6" style="c" sid="SNG 6"/>
+  <para style="s1">Le chœur</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 6:1"/>« Où est allé ton bien-aimé,</para>
+  <para style="q1" vid="SNG 6:1">ô toi la plus belle des femmes ?</para>
+  <para style="q1" vid="SNG 6:1">De quel côté s’est-il tourné, ╵ton bien-aimé ?</para>
+  <para style="q1" vid="SNG 6:1">Nous t’aiderons à le chercher. »<verse eid="SNG 6:1"/></para>
+  <para style="s1">Le lien de l’amour</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 6:2"/>« Mon bien-aimé ╵est descendu dans son jardin,</para>
+  <para style="q1" vid="SNG 6:2">vers ses parterres d’aromates,</para>
+  <para style="q1" vid="SNG 6:2">afin de paître ╵dans les jardins</para>
+  <para style="q1" vid="SNG 6:2">et d’y cueillir des lis.<verse eid="SNG 6:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 6:3"/>Moi, je suis à mon bien-aimé ╵et mon bien-aimé est à moi,</para>
+  <para style="q1" vid="SNG 6:3">il paît parmi les lis<note caller="+" style="f"><char style="fr" closed="false">6.3 </char><char style="ft" closed="false">Voir <char style="xt">2.16 ; 7.11</char>.</char></note>. »<verse eid="SNG 6:3"/></para>
+  <para style="s1">La plus belle de toutes<note caller="+" style="f"><char style="fr" closed="false">6.4 </char><char style="ft" closed="false">Dans <char style="xt"><ref loc="SNG 6:4-10">6.4-10</ref></char>, le rythme de la traduction accentue les 1<char style="ord">re</char>, 4<char style="ord">e</char> et 7<char style="ord">e</char> syllabes.</char></note></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 6:4"/>« Que tu es belle, ╵ô mon amie, ╵comme Tirtsa<note caller="+" style="f"><char style="fr" closed="false">6.4 </char><char style="fq" closed="false">Tirtsa</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">ancienne ville cananéenne du centre du pays (<char style="xt"><ref loc="JOS 12:24">Jos 12.24</ref></char>), choisie par Jéroboam I<char style="ord">er</char> (930 à 909 av. J.-C.) comme la première capitale du royaume du Nord (<char style="xt"><ref loc="1KI 14:17">1 R 14.17</ref></char>). Son nom signifie « plaisir, beauté ».</char></note>.</para>
+  <para style="q1" vid="SNG 6:4">Tu es superbe ╵comme Jérusalem,</para>
+  <para style="q1" vid="SNG 6:4">et redoutable comme des soldats</para>
+  <para style="q1" vid="SNG 6:4">rangés sous leur bannière.<verse eid="SNG 6:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 6:5"/>Détourne de moi tes yeux, ╵car ils me troublent,</para>
+  <para style="q1" vid="SNG 6:5">ta chevelure ╵est comme un troupeau de chèvres</para>
+  <para style="q1" vid="SNG 6:5">dévalant le mont Galaad.<verse eid="SNG 6:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 6:6"/>Tes dents ressemblent ╵à un troupeau de brebis</para>
+  <para style="q1" vid="SNG 6:6">qui reviendrait du lavoir.</para>
+  <para style="q1" vid="SNG 6:6">Chacune d’elles ╵a sa jumelle,</para>
+  <para style="q1" vid="SNG 6:6">aucune n’est solitaire.<verse eid="SNG 6:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 6:7"/>Et tes tempes ressemblent ╵à des moitiés de grenades</para>
+  <para style="q1" vid="SNG 6:7">dessous ton voile.<verse eid="SNG 6:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 6:8"/>Les reines sont soixante</para>
+  <para style="q1" vid="SNG 6:8">et quatre-vingts ╵les épouses de second rang,</para>
+  <para style="q1" vid="SNG 6:8">les jeunes filles sont sans nombre.<verse eid="SNG 6:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 6:9"/>Mais elle, ma colombe, ╵ma parfaite est unique.</para>
+  <para style="q1" vid="SNG 6:9">Elle est unique pour sa mère, la préférée ╵de celle qui l’a enfantée.</para>
+  <para style="q1" vid="SNG 6:9">Les jeunes filles, ╵en la voyant, ╵la disent bienheureuse.</para>
+  <para style="q1" vid="SNG 6:9">Toutes les reines, ╵et les épouses ╵de second rang ╵font son éloge. »<verse eid="SNG 6:9"/></para>
+  <para style="s1">Le chœur</para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 6:10"/>« Qui donc est celle ╵qui apparaît ╵comme l’aurore</para>
+  <para style="q1" vid="SNG 6:10">et qui est belle ╵comme la lune, ╵brillante comme le soleil</para>
+  <para style="q1" vid="SNG 6:10">et redoutable comme des soldats</para>
+  <para style="q1" vid="SNG 6:10">rangés sous leur bannière<note caller="+" style="f"><char style="fr" closed="false">6.10 </char><char style="ft" closed="false">D’autres comprennent : </char><char style="fqa" closed="false">comme ces astres admirables.</char></note> ? »<verse eid="SNG 6:10"/></para>
+  <para style="s1">Poussée par le désir</para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 6:11"/>« Je venais de descendre ╵au jardin des noyers</para>
+  <para style="q1" vid="SNG 6:11">pour regarder les pousses ╵dans le vallon</para>
+  <para style="q1" vid="SNG 6:11">et pour voir si la vigne ╵avait déjà fleuri,</para>
+  <para style="q1" vid="SNG 6:11">et si les grenadiers ╵étaient déjà en fleurs.<verse eid="SNG 6:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 6:12"/>Je ne sais pas comment ╵je me suis retrouvée, ╵poussée par mon désir,</para>
+  <para style="q1" vid="SNG 6:12">au beau milieu des chars ╵des hommes de mon prince<note caller="+" style="f"><char style="fr" closed="false">6.12 </char><char style="ft" closed="false">La traduction de ce verset est difficile. En adoptant un autre découpage et une autre vocalisation de certains mots hébreux que ceux du texte hébreu traditionnel, on obtient : </char><char style="fqa" closed="false">mais je ne me reconnais plus ! Il m’intimide bien que je sois la fille de nobles gens </char><char style="ft" closed="false">(voir <char style="xt"><ref loc="SNG 7:2">7.2</ref></char> où se retrouve la même expression, traduite : </char><char style="fqa" closed="false">fille de prince</char><char style="ft" closed="false">).</char></note>. »<verse eid="SNG 6:12"/></para>
+  <chapter eid="SNG 6"/>
+  <chapter number="7" style="c" sid="SNG 7"/>
+  <para style="s1">Le chœur</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 7:1"/>« Reviens, reviens, ╵ô Sulamite<note caller="+" style="f"><char style="fr" closed="false">7.1 </char><char style="fq" closed="false">Sulamite</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">la bien-aimée. Selon certains, ce mot serait une variante du nom Sunamite, c’est-à-dire « femme originaire de Sunem » (<char style="xt"><ref loc="JOS 19:18">Jos 19.18</ref></char>). Abishag la Sunamite était réputée pour sa beauté (<char style="xt"><ref loc="1KI 1:3-4">1 R 1.3-4</ref></char>). Selon d’autres, ce mot serait une forme féminine du nom de Salomon.</char></note> !</para>
+  <para style="q1" vid="SNG 7:1">Reviens, reviens, ╵que nous puissions te contempler. »</para>
+  <para style="s1" vid="SNG 7:1">Une danse enivrante</para>
+  <para style="q1" vid="SNG 7:1">« Pourquoi regardez-vous ╵la Sulamite</para>
+  <para style="q1" vid="SNG 7:1">comme on regarde ╵la danse des deux camps ? »<verse eid="SNG 7:1"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 7:2"/>« Que tes pas sont gracieux ╵dans tes sandales, ╵fille de prince !</para>
+  <para style="q1" vid="SNG 7:2">Le contour de tes hanches ╵ressemble à un collier,</para>
+  <para style="q1" vid="SNG 7:2">œuvre de mains d’artiste.<verse eid="SNG 7:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 7:3"/>Ton nombril est comme une coupe ╵bien arrondie</para>
+  <para style="q1" vid="SNG 7:3">où le vin parfumé ╵ne manque pas.</para>
+  <para style="q1" vid="SNG 7:3">Ton ventre ╵est comme une meule de blé</para>
+  <para style="q1" vid="SNG 7:3">bordée de lis.<verse eid="SNG 7:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 7:4"/>Comme deux faons, ╵jumeaux d’une gazelle<note caller="+" style="f"><char style="fr" closed="false">7.4 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="SNG 4:5">4.5</ref></char>.</char></note>,</para>
+  <para style="q1" vid="SNG 7:4">paissant parmi les lis, ╵sont tes deux seins.<verse eid="SNG 7:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 7:5"/>Ton cou est une tour d’ivoire</para>
+  <para style="q1" vid="SNG 7:5">et tes yeux sont les étangs de Heshbôn<note caller="+" style="f"><char style="fr" closed="false">7.5 </char><char style="fq" closed="false">Heshbôn</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">ancienne capitale du royaume amoréen situé à l’est du Jourdain où Sihôn avait été vaincu par Moïse (<char style="xt"><ref loc="NUM 21:26">Nb 21.26</ref></char>).</char></note></para>
+  <para style="q1" vid="SNG 7:5">près de la porte Populeuse<note caller="+" style="f"><char style="fr" closed="false">7.5 </char><char style="ft" closed="false">Littéralement : </char><char style="fqa" closed="false">près de la porte de Bath-Rabbim </char><char style="ft" closed="false">(= fille d’une multitude), probablement un nom poétique de Heshbôn.</char></note>,</para>
+  <para style="q1" vid="SNG 7:5">et ton nez est semblable ╵à la tour du Liban</para>
+  <para style="q1" vid="SNG 7:5">postée en sentinelle ╵en face de Damas<note caller="+" style="f"><char style="fr" closed="false">7.5 </char><char style="ft" closed="false">Soit une tour de garde sur la frontière nord du royaume de Salomon, vers la Syrie, soit les monts du Liban.</char></note>.<verse eid="SNG 7:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 7:6"/>Ta tête, sur ton corps, ╵est comme le Carmel</para>
+  <para style="q1" vid="SNG 7:6">et tes cheveux ╵ont des reflets de pourpre.</para>
+  <para style="q1" vid="SNG 7:6">Un roi est enchaîné ╵dans leurs ondulations. »<verse eid="SNG 7:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 7:7"/>« Que tu es belle ╵et que tu es gracieuse,</para>
+  <para style="q1" vid="SNG 7:7">toi, mon amour ╵et mes délices.<verse eid="SNG 7:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 7:8"/>Par ta taille élancée ╵tu es comme un palmier.</para>
+  <para style="q1" vid="SNG 7:8">Tes seins en sont les grappes.<verse eid="SNG 7:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 7:9"/>Alors j’ai dit : ╵“Ah, je vais monter au palmier,</para>
+  <para style="q1" vid="SNG 7:9">j’en saisirai les fruits.”</para>
+  <para style="q1" vid="SNG 7:9">Que tes seins soient pour moi ╵des grappes de raisin !</para>
+  <para style="q1" vid="SNG 7:9">Le parfum de ton souffle ╵comme celui des pommes,<verse eid="SNG 7:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 7:10"/>et ton palais distille ╵le vin le plus exquis… »</para>
+  <para style="b" vid="SNG 7:10"/>
+  <para style="q1" vid="SNG 7:10">« Oui, un bon vin ╵qui va droit à mon bien-aimé,</para>
+  <para style="q1" vid="SNG 7:10">et glisse<note caller="+" style="f"><char style="fr" closed="false">7.10 </char><char style="fq" closed="false">glisse</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">sens incertain.</char></note> sur les lèvres ╵de ceux qui s’assoupissent<note caller="+" style="f"><char style="fr" closed="false">7.10 </char><char style="ft" closed="false">En modifiant légèrement le texte hébreu, on peut lire, avec l’ancienne version grecque : </char><char style="fqa" closed="false">et les dents.</char></note>. »<verse eid="SNG 7:10"/></para>
+  <para style="s1">Viens donc, mon bien-aimé !</para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 7:11"/>« Moi, je suis à mon bien-aimé</para>
+  <para style="q1" vid="SNG 7:11">et c’est moi qu’il désire<note caller="+" style="f"><char style="fr" closed="false">7.11 </char><char style="ft" closed="false">Voir <char style="xt">2.16 ; 6.3</char>.</char></note>.<verse eid="SNG 7:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 7:12"/>Viens donc, mon bien-aimé, ╵sortons dans la campagne.</para>
+  <para style="q1" vid="SNG 7:12">Nous passerons la nuit ╵au milieu des hameaux,<verse eid="SNG 7:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 7:13"/>et nous nous lèverons ╵au matin, de bonne heure,</para>
+  <para style="q1" vid="SNG 7:13">pour aller dans les vignes,</para>
+  <para style="q1" vid="SNG 7:13">pour voir si elles sont en fleur ╵et si leurs bourgeons sont ouverts,</para>
+  <para style="q1" vid="SNG 7:13">si déjà sont sorties ╵les fleurs des grenadiers.</para>
+  <para style="q1" vid="SNG 7:13">Là-bas, je te ferai ╵le don de mon amour.<verse eid="SNG 7:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="SNG 7:14"/>Les mandragores<note caller="+" style="f"><char style="fr" closed="false">7.14 </char><char style="ft" closed="false">Fruits auxquels certains attribuent encore aujourd’hui le pouvoir de favoriser la fécondité (voir <char style="xt"><ref loc="GEN 30:14-16">Gn 30.14-16</ref></char>).</char></note> ╵exhalent leur parfum.</para>
+  <para style="q1" vid="SNG 7:14">Nous avons, à nos portes, ╵des fruits exquis de toutes sortes,</para>
+  <para style="q1" vid="SNG 7:14">des nouveaux comme des anciens.</para>
+  <para style="q1" vid="SNG 7:14">Pour toi, mon bien-aimé, ╵je les ai réservés.<verse eid="SNG 7:14"/></para>
+  <para style="b"/>
+  <chapter eid="SNG 7"/>
+  <chapter number="8" style="c" sid="SNG 8"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 8:1"/>Ah, que n’es-tu mon frère</para>
+  <para style="q1" vid="SNG 8:1">allaité par ma mère !</para>
+  <para style="q1" vid="SNG 8:1">Te rencontrant dehors, ╵je pourrais t’embrasser</para>
+  <para style="q1" vid="SNG 8:1">sans que l’on me méprise,<verse eid="SNG 8:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 8:2"/>je pourrais t’emmener, ╵je te ferais entrer ╵au foyer de ma mère,</para>
+  <para style="q1" vid="SNG 8:2">de celle qui m’a enseignée<note caller="+" style="f"><char style="fr" closed="false">8.2 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">là, tu m’enseignerais.</char></note></para>
+  <para style="q1" vid="SNG 8:2">et je te ferais boire ╵du bon vin parfumé</para>
+  <para style="q1" vid="SNG 8:2">de mon jus de grenades.<verse eid="SNG 8:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 8:3"/>Son bras gauche soutient ma tête,</para>
+  <para style="q1" vid="SNG 8:3">et son bras droit m’enlace.<verse eid="SNG 8:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 8:4"/>O filles de Jérusalem, ╵oh, je vous en conjure,</para>
+  <para style="q1" vid="SNG 8:4">n’éveillez pas, ╵non, ne réveillez pas l’amour</para>
+  <para style="q1" vid="SNG 8:4">avant qu’il ne le veuille<note caller="+" style="f"><char style="fr" closed="false">8.4 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="SNG 2:7">2.7</ref></char> et note ; <char style="xt"><ref loc="SNG 3:5">3.5</ref></char>.</char></note>. »<verse eid="SNG 8:4"/></para>
+  <para style="s1">Le chœur</para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 8:5"/>« Qui donc est celle-ci ╵qui monte du désert</para>
+  <para style="q1" vid="SNG 8:5">s’appuyant sur son bien-aimé ? »</para>
+  <para style="s1" vid="SNG 8:5">L’amour : fort comme la mort</para>
+  <para style="q1" vid="SNG 8:5">« C’est dessous le pommier ╵que je t’ai réveillé,</para>
+  <para style="q1" vid="SNG 8:5">à l’endroit où ta mère ╵t’avait conçu,</para>
+  <para style="q1" vid="SNG 8:5">oui, au lieu même où te conçut ╵celle qui devait t’enfanter.<verse eid="SNG 8:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 8:6"/>Mets-moi comme un sceau<note caller="+" style="f"><char style="fr" closed="false">8.6 </char><char style="ft" closed="false">Le </char><char style="fqa" closed="false">sceau </char><char style="ft" closed="false">imprimait le signe d’authenticité sur les actes officiels (il remplaçait notre signature). On le portait toujours avec soi, attaché à un cordon autour du cou (</char><char style="fqa" closed="false">sur ton cœur</char><char style="ft" closed="false">) ou porté au doigt (</char><char style="fqa" closed="false">sur ton bras</char><char style="ft" closed="false">).</char></note> sur ton cœur,</para>
+  <para style="q1" vid="SNG 8:6">comme un sceau sur ton bras.</para>
+  <para style="q1" vid="SNG 8:6">L’amour est fort ╵comme la mort,</para>
+  <para style="q1" vid="SNG 8:6">et la passion ╵est inflexible ╵comme le séjour des défunts.</para>
+  <para style="q1" vid="SNG 8:6">Les flammes de l’amour ╵sont des flammes ardentes,</para>
+  <para style="q1" vid="SNG 8:6">une flamme venant de l’Eternel<note caller="+" style="f"><char style="fr" closed="false">8.6 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">une flamme intense à l’extrême.</char></note>.<verse eid="SNG 8:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 8:7"/>Même de grosses eaux ╵ne peuvent éteindre l’amour,</para>
+  <para style="q1" vid="SNG 8:7">et des fleuves puissants ╵ne l’emporteront pas.</para>
+  <para style="q1" vid="SNG 8:7">L’homme qui offrirait ╵tous les biens qu’il possède ╵pour acheter l’amour</para>
+  <para style="q1" vid="SNG 8:7">n’obtiendrait que mépris. »<verse eid="SNG 8:7"/></para>
+  <para style="s1">La petite sœur</para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 8:8"/>« Nous avons une sœur,</para>
+  <para style="q1" vid="SNG 8:8">elle est petite encore, ╵sa poitrine n’est pas formée,</para>
+  <para style="q1" vid="SNG 8:8">que ferons-nous pour notre sœur</para>
+  <para style="q1" vid="SNG 8:8">lorsqu’il sera question ╵de la marier ? »<verse eid="SNG 8:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 8:9"/>« Si elle est un rempart,</para>
+  <para style="q1" vid="SNG 8:9">nous bâtirons sur elle ╵des créneaux en argent.</para>
+  <para style="q1" vid="SNG 8:9">Si elle est une porte,</para>
+  <para style="q1" vid="SNG 8:9">nous, nous la bloquerons ╵d’un madrier de cèdre.<verse eid="SNG 8:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 8:10"/>Moi, je suis un rempart,</para>
+  <para style="q1" vid="SNG 8:10">mes seins en sont les tours.</para>
+  <para style="q1" vid="SNG 8:10">Aussi ai-je trouvé la paix, ╵auprès de lui. »<verse eid="SNG 8:10"/></para>
+  <para style="s1">La vigne de Salomon</para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 8:11"/>« Salomon avait une vigne ╵à Baal-Hamôn<note caller="+" style="f"><char style="fr" closed="false">8.11 </char><char style="fq" closed="false">Baal-Hamôn</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">lieu non identifié ; il s’agit peut-être d’un nom symbolique, signifiant : </char><char style="fqa" closed="false">maître d’une multitude, </char><char style="ft" closed="false">et faisant allusion au harem de Salomon.</char></note>,</para>
+  <para style="q1" vid="SNG 8:11">il la remit à des gardiens.</para>
+  <para style="q1" vid="SNG 8:11">Pour en payer le fruit, ╵chacun d’eux lui donnait ╵un millier de pièces d’argent.<verse eid="SNG 8:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 8:12"/>Ma vigne à moi est devant moi.</para>
+  <para style="q1" vid="SNG 8:12">Toi, Salomon, tu peux avoir ╵ton millier de pièces d’argent,</para>
+  <para style="q1" vid="SNG 8:12">puis, deux cents pièces ╵seront données à ceux ╵qui ont gardé ses fruits. »<verse eid="SNG 8:12"/></para>
+  <para style="s1">Fais-moi entendre ta voix</para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 8:13"/>« Toi qui habites les jardins,</para>
+  <para style="q1" vid="SNG 8:13">des compagnons prêtent l’oreille,</para>
+  <para style="q1" vid="SNG 8:13">oh ! fais-moi entendre ta voix ! »<verse eid="SNG 8:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="SNG 8:14"/>« Enfuis-toi vite, toi mon bien-aimé,</para>
+  <para style="q1" vid="SNG 8:14">et sois pareil à la gazelle ╵ou à un jeune faon,</para>
+  <para style="q1" vid="SNG 8:14">sur les monts embaumés. »<verse eid="SNG 8:14"/></para>
+  <chapter eid="SNG 8"/>
+</usx>

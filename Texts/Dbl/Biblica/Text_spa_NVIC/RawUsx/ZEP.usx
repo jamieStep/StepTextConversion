@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="ZEP" style="id">- Spanish (Castellano): Nueva Versión Internacional</book>
+  <para style="rem">Copyright © 1999, 2005, 2017 by Biblica, Inc.®</para>
+  <para style="h">SOFONÍAS</para>
+  <para style="toc1">Sofonías</para>
+  <para style="toc2">Sofonías</para>
+  <para style="toc3">Sof</para>
+  <para style="mt1">Sofonías</para>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Esta es la palabra del <char style="nd">Señor</char>, que vino a Sofonías hijo de Cusí, hijo de Guedalías, hijo de Amarías, hijo de Ezequías, durante el reinado de Josías hijo de Amón, rey de Judá:</para>
+  <para style="s1">Advertencia sobre la destrucción venidera</para>
+  <para style="q1">
+    <verse number="2" style="v"/>«Arrasaré por completo</para>
+  <para style="q2">cuanto hay sobre la faz de la tierra</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Arrasaré con <char style="w" lemma="hombre">hombres</char> y animales,</para>
+  <para style="q2">con las aves del cielo,</para>
+  <para style="q2">con los peces del mar,</para>
+  <para style="q2">con ídolos e impíos por igual.<note caller="+" style="f"><char style="fr" closed="false">1:3 </char><char style="fq" closed="false">con ídolos e impíos por igual</char><char style="ft" closed="false">. Texto de difícil traducción.</char></note></para>
+  <para style="b"/>
+  <para style="q1">»Exterminaré al hombre</para>
+  <para style="q2">de sobre la faz de la tierra</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—.</para>
+  <para style="s1">Juicio contra Judá</para>
+  <para style="q1">
+    <verse number="4" style="v"/>»Extenderé mi mano contra Judá</para>
+  <para style="q2">y contra todos los habitantes de Jerusalén.</para>
+  <para style="q1">Exterminaré de este lugar todo rastro de <char style="w">Baal</char>,</para>
+  <para style="q2">y hasta el nombre de sus sacerdotes;<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="fq" closed="false">de sus sacerdotes </char><char style="ft" closed="false">(LXX); </char><char style="fqa" closed="false">de los sacerdotes paganos con los sacerdotes </char><char style="ft" closed="false">(TM).</char></note></para>
+  <para style="q1">
+    <verse number="5" style="v"/>a los que en las azoteas se postran en adoración</para>
+  <para style="q2">ante las estrellas del cielo,</para>
+  <para style="q1">a los que, postrados en adoración,</para>
+  <para style="q2">juran lealtad al <char style="nd">Señor</char>,</para>
+  <para style="q2">y al mismo tiempo a Moloc,<note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="fq" closed="false">Moloc</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">Malcán</char><char style="ft" closed="false">; es decir, Milcón.</char></note></para>
+  <para style="q1">
+    <verse number="6" style="v"/>a los que se apartan del <char style="nd">Señor</char>,</para>
+  <para style="q2">y no lo buscan ni lo consultan.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>¡Silencio ante el <char style="nd">Señor</char> omnipotente,</para>
+  <para style="q2">porque cercano está el día del <char style="nd">Señor</char>;</para>
+  <para style="q1">ha preparado el <char style="nd">Señor</char> un sacrificio</para>
+  <para style="q2">y ha <char style="w" lemma="purificar">purificado</char> a sus invitados!</para>
+  <para style="q1">
+    <verse number="8" style="v"/>En el día del sacrificio del <char style="nd">Señor</char></para>
+  <para style="q2">castigaré a los funcionarios y oficiales del rey,</para>
+  <para style="q2">y a cuantos se visten según modas extrañas.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>En aquel día castigaré</para>
+  <para style="q2">a cuantos evitan pisar el umbral,<note caller="+" style="f"><char style="fr" closed="false">1:9 </char><char style="fq" closed="false">evitan pisar el umbral</char><char style="ft" closed="false">. Alusión a una práctica supersticiosa; véase 1S 5:5.</char></note></para>
+  <para style="q1">a los que llenan de violencia y engaño</para>
+  <para style="q2">la casa de sus dioses.<note caller="+" style="f"><char style="fr" closed="false">1:9 </char><char style="fq" closed="false">la casa de sus dioses</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">el palacio de su señor.</char></note></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>»Aquel día se oirán gritos de auxilio,</para>
+  <para style="q2">desde la puerta del Pescado,</para>
+  <para style="q2">gemidos desde el Barrio Nuevo,</para>
+  <para style="q2">y gran quebranto desde las colinas</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>»¡Gemid, habitantes del Barrio del Mercado!<note caller="+" style="f"><char style="fr" closed="false">1:11 </char><char style="fq" closed="false">Mercado</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">Mortero.</char></note></para>
+  <para style="q2">Aniquilados serán todos los mercaderes,</para>
+  <para style="q2">exterminados cuantos comercian con plata.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>En aquel tiempo registraré Jerusalén con lámparas</para>
+  <para style="q2">para castigar a los que reposan tranquilos</para>
+  <para style="q2">como vino en su sedimento,</para>
+  <para style="q1">a los que piensan: “El <char style="nd">Señor</char> no va a hacer nada,</para>
+  <para style="q2">ni para bien ni para mal”.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>En botín se convertirán sus riquezas,</para>
+  <para style="q2">sus casas, en desolación:</para>
+  <para style="q1">“Edificarán casas,</para>
+  <para style="q2">pero no las habitarán;</para>
+  <para style="q1">plantarán viñas,</para>
+  <para style="q2">pero del vino no beberán”.</para>
+  <para style="s1">El gran día del <char style="nd">Señor</char></para>
+  <para style="q1">
+    <verse number="14" style="v"/>»Ya se acerca el gran día del <char style="nd">Señor</char>;</para>
+  <para style="q2">a toda prisa se acerca.</para>
+  <para style="q1">El estruendo del día del <char style="nd">Señor</char> será amargo,</para>
+  <para style="q2">y aun el más valiente gritará.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Día de ira será aquel día,</para>
+  <para style="q2">día de acoso y angustia,</para>
+  <para style="q1">día de devastación y ruina,</para>
+  <para style="q2">día de tinieblas y penumbra,</para>
+  <para style="q1">día de niebla y densos nubarrones,</para>
+  <para style="q2">
+    <verse number="16" style="v"/>día de trompeta y grito de batalla</para>
+  <para style="q1">contra las ciudades fortificadas,</para>
+  <para style="q2">contra los altos bastiones.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>De tal manera acosaré a los <char style="w" lemma="hombre">hombres</char></para>
+  <para style="q2">que andarán como ciegos,</para>
+  <para style="q2">porque pecaron contra el <char style="nd">Señor</char>.</para>
+  <para style="q1">Su sangre será derramada como polvo</para>
+  <para style="q2">y sus entrañas, como estiércol.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>No los podrán librar</para>
+  <para style="q2">ni su plata ni su oro</para>
+  <para style="q2">en el día de la ira del <char style="nd">Señor</char>.</para>
+  <para style="q1">En el fuego de su celo</para>
+  <para style="q2">será toda la tierra consumida;</para>
+  <para style="q1">en un instante reducirá a la nada</para>
+  <para style="q2">a todos los habitantes de la tierra».</para>
+  <para style="b"/>
+  <chapter number="2" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Humíllate hasta el polvo,<note caller="+" style="f"><char style="fr" closed="false">2:1 </char><char style="fq" closed="false">Humíllate hasta el polvo</char><char style="ft" closed="false">. Texto de difícil traducción.</char></note></para>
+  <para style="q2">nación desvergonzada;</para>
+  <para style="q1">
+    <verse number="2" style="v"/>hazlo antes que se cumpla lo que he determinado</para>
+  <para style="q2">y ese día se desvanezca como la brizna,</para>
+  <para style="q1">antes que caiga sobre ti la ira ardiente del <char style="nd">Señor</char>,</para>
+  <para style="q2">antes que venga sobre ti el día de la ira del <char style="nd">Señor</char>.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Buscad al <char style="nd">Señor</char>, todos los humildes de la tierra,</para>
+  <para style="q2">los que habéis puesto en práctica sus normas.</para>
+  <para style="q1">Buscad la justicia, buscad la humildad;</para>
+  <para style="q2">tal vez encontraréis refugio</para>
+  <para style="q2">en el día de la ira del <char style="nd">Señor</char>.</para>
+  <para style="s1">Juicio contra los filisteos</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Gaza quedará abandonada</para>
+  <para style="q2">y Ascalón acabará en desolación.</para>
+  <para style="q1">Asdod será expulsada a plena luz del día</para>
+  <para style="q2">y Ecrón será desarraigada.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>¡Ay de la nación queretea</para>
+  <para style="q2">que habita a la orilla del mar!</para>
+  <para style="q1">La palabra del <char style="nd">Señor</char> es contra ti,</para>
+  <para style="q2">Canaán, tierra de los filisteos:</para>
+  <para style="b"/>
+  <para style="q1">«Te aniquilaré</para>
+  <para style="q2">hasta no dejar en ti habitante».</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>El litoral se convertirá en praderas,</para>
+  <para style="q2">en campos<note caller="+" style="f"><char style="fr" closed="false">2:6 </char><char style="fq" closed="false">campos</char><char style="ft" closed="false">. Palabra de difícil traducción.</char></note> de pastoreo y corrales de ovejas.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Y allí pastarán las ovejas</para>
+  <para style="q2">del remanente de la tribu de Judá.</para>
+  <para style="q1">Al atardecer se echarán a descansar</para>
+  <para style="q2">en las casas de Ascalón;</para>
+  <para style="q1">el <char style="nd">Señor</char> su Dios vendrá en su ayuda</para>
+  <para style="q2">para restaurarlos.<note caller="+" style="f"><char style="fr" closed="false">2:7 </char><char style="fq" closed="false">para restaurarlos</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">y hará volver a sus cautivos.</char></note></para>
+  <para style="s1">Juicio contra Moab y Amón</para>
+  <para style="q1">
+    <verse number="8" style="v"/>«He oído los insultos de Moab</para>
+  <para style="q2">y las burlas de los amonitas,</para>
+  <para style="q1">que injuriaron a mi pueblo</para>
+  <para style="q2">y se mostraron arrogantes contra su territorio.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Tan cierto como que yo vivo</para>
+  <para style="q2">—afirma el <char style="nd">Señor</char> <char style="w">Todopoderoso</char>, el Dios de Israel—,</para>
+  <para style="q1">que Moab vendrá a ser como Sodoma</para>
+  <para style="q2">y los amonitas, como Gomorra:</para>
+  <para style="q1">se volverán campos de espinos y minas de sal,</para>
+  <para style="q2">desolación perpetua.</para>
+  <para style="q1">El remanente de mi pueblo los saqueará;</para>
+  <para style="q2">los sobrevivientes de mi nación heredarán su tierra».</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Este será el pago por su soberbia</para>
+  <para style="q2">y por injuriar y despreciar al pueblo del <char style="nd">Señor</char> Todopoderoso.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>El <char style="nd">Señor</char> los aterrará</para>
+  <para style="q2">cuando destruya a todos los dioses de la tierra;</para>
+  <para style="q1">y así hasta las naciones más remotas</para>
+  <para style="q2">se postrarán en adoración ante él,</para>
+  <para style="q2">cada cual en su propia tierra.</para>
+  <para style="s1">Juicio contra Cus</para>
+  <para style="q1">
+    <verse number="12" style="v"/>«También vosotros, <char style="w" lemma="cusita">cusitas</char>,</para>
+  <para style="q2">seréis atravesados por mi espada».</para>
+  <para style="s1">Juicio contra Asiria</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Él extenderá su mano contra el norte;</para>
+  <para style="q2">aniquilará a Asiria</para>
+  <para style="q1">y convertirá a Nínive en desolación,</para>
+  <para style="q2">árida como un desierto.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Se tenderán en medio de ella los rebaños,</para>
+  <para style="q2">todos los animales del campo.</para>
+  <para style="q1">Pasarán la noche sobre sus columnas</para>
+  <para style="q2">tanto el pelícano como la garza.</para>
+  <para style="q1">Resonarán por las ventanas sus graznidos,</para>
+  <para style="q2">habrá asolamiento en los umbrales,</para>
+  <para style="q2">las vigas de cedro quedarán al descubierto.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Esta es la ciudad alegre</para>
+  <para style="q2">que habitaba segura,</para>
+  <para style="q1">la que se decía a sí misma:</para>
+  <para style="q2">«Yo y nadie más».</para>
+  <para style="q1">¡Cómo ha quedado convertida en espanto,</para>
+  <para style="q2">en guarida de fieras!</para>
+  <para style="q1">Todo el que pasa junto a ella</para>
+  <para style="q2">se mofa y le hace gestos con las manos.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">El futuro de Jerusalén</para>
+  <para style="q1">
+    <verse number="1" style="v"/>¡Ay de la ciudad opresora,</para>
+  <para style="q2">rebelde y contaminada!</para>
+  <para style="q1">
+    <verse number="2" style="v"/>No atiende a consejos,</para>
+  <para style="q2">ni acepta <char style="w">corrección</char>.</para>
+  <para style="q1">No confía en el <char style="nd">Señor</char>,</para>
+  <para style="q2">ni se acerca a su Dios.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Las autoridades que están en ella</para>
+  <para style="q2">son leones rugientes,</para>
+  <para style="q1">sus gobernantes son lobos nocturnos</para>
+  <para style="q2">que no dejan nada para la mañana.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Sus profetas son impertinentes,</para>
+  <para style="q2">hombres traicioneros.</para>
+  <para style="q1">Sus sacerdotes profanan las cosas <char style="w" lemma="santo">santas</char></para>
+  <para style="q2">y violentan la ley.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Pero el <char style="nd">Señor</char> que está en ella es justo;</para>
+  <para style="q2">no comete iniquidad.</para>
+  <para style="q1">Cada mañana imparte su justicia,</para>
+  <para style="q2">y no deja de hacerlo cada nuevo día,</para>
+  <para style="q2">pero el inicuo no conoce la vergüenza.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>«Exterminé naciones;</para>
+  <para style="q2">quedaron desolados sus bastiones.</para>
+  <para style="q1">Dejé sus calles desiertas,</para>
+  <para style="q2">y nadie pasa por ellas.</para>
+  <para style="q1">Quedaron arrasadas sus ciudades,</para>
+  <para style="q2">sin ningún habitante.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Dije a la ciudad:</para>
+  <para style="q2">“¡Ciertamente me temerás;</para>
+  <para style="q2">aceptarás corrección!”</para>
+  <para style="q1">Entonces no sería destruida su morada,</para>
+  <para style="q2">según todo lo que decreté contra ella.</para>
+  <para style="q1">A pesar de todo, se empeñaron</para>
+  <para style="q2">en corromper todas sus obras.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Esperadme, por tanto,</para>
+  <para style="q2">hasta el día en que me levante a buscar el botín</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—,</para>
+  <para style="q1">porque he decidido reunir a las naciones</para>
+  <para style="q2">y juntar a los reinos</para>
+  <para style="q1">para derramar sobre ellos mi indignación,</para>
+  <para style="q2">toda mi ardiente ira.</para>
+  <para style="q1">En el fuego de mi celo</para>
+  <para style="q2">será toda la tierra consumida.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>»<char style="w" lemma="purificar">Purificaré</char> los labios de los pueblos</para>
+  <para style="q2">para que todos invoquen el <char style="w">nombre</char> del <char style="nd">Señor</char></para>
+  <para style="q2">y le sirvan de común acuerdo.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Desde más allá de los ríos de <char style="w">Cus</char></para>
+  <para style="q2">me traerán ofrendas</para>
+  <para style="q2">mis adoradores, mi pueblo disperso.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Aquel día no tendrás que avergonzarte más</para>
+  <para style="q2">de todas tus rebeliones contra mí.</para>
+  <para style="q1">Quitaré de en medio de ti</para>
+  <para style="q2">a esa gente altanera y jactanciosa,</para>
+  <para style="q1">y así nunca más volverás a ser arrogante</para>
+  <para style="q2">en mi santo monte.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Dejaré un remanente en medio de ti,</para>
+  <para style="q2">un pueblo pobre y humilde.</para>
+  <para style="q1">En el nombre del <char style="nd">Señor</char>,</para>
+  <para style="q2">se cobijará <verse number="13" style="v"/>el remanente de Israel;</para>
+  <para style="q1">no cometerá iniquidad,</para>
+  <para style="q2">no dirá mentiras,</para>
+  <para style="q2">ni se hallará engaño en su boca.</para>
+  <para style="q1">Pastarán y se echarán a descansar</para>
+  <para style="q2">sin que nadie los espante».</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>¡Lanza gritos de alegría, hija de <char style="w">Sión</char>!</para>
+  <para style="q2">¡da gritos de victoria, Israel!</para>
+  <para style="q1">¡Regocíjate y alégrate de todo corazón,</para>
+  <para style="q2">hija de Jerusalén!</para>
+  <para style="q1">
+    <verse number="15" style="v"/>El <char style="nd">Señor</char> te ha levantado el castigo,</para>
+  <para style="q2">ha puesto en retirada a tus enemigos.</para>
+  <para style="q1">El <char style="nd">Señor</char>, rey de Israel, está en medio de ti:</para>
+  <para style="q2">nunca más temerás mal alguno.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Aquel día le dirán a Jerusalén:</para>
+  <para style="q2">«No temas, Sión, ni te desanimes,</para>
+  <para style="q1">
+    <verse number="17" style="v"/>porque el <char style="nd">Señor</char> tu Dios está en medio de ti</para>
+  <para style="q2">como guerrero victorioso.</para>
+  <para style="q1">Se deleitará en ti con gozo,</para>
+  <para style="q2">te renovará con su amor,</para>
+  <para style="q1">se alegrará por ti con cantos</para>
+  <para style="q2">
+    <verse number="18" style="v"/>como en los días de fiesta».</para>
+  <para style="b"/>
+  <para style="q1">«Yo te libraré de las tristezas,</para>
+  <para style="q2">que son para ti una carga deshonrosa.<note caller="+" style="f"><char style="fr" closed="false">3:18 </char><char style="ft" closed="false">Versículo de difícil traducción.</char></note></para>
+  <para style="q1">
+    <verse number="19" style="v"/>En aquel tiempo yo mismo me ocuparé</para>
+  <para style="q2">de todos los que te oprimen;</para>
+  <para style="q1">salvaré a la oveja que cojea</para>
+  <para style="q2">y juntaré a la descarriada.</para>
+  <para style="q1">Os daré a vosotros fama y renombre</para>
+  <para style="q2">en los países donde fueron avergonzados.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>En aquel tiempo yo os traeré,</para>
+  <para style="q2">en aquel tiempo os reuniré.</para>
+  <para style="q1">Os daré a vosotros fama y renombre</para>
+  <para style="q2">entre todos los pueblos de la tierra</para>
+  <para style="q1">cuando yo os restaure<note caller="+" style="f"><char style="fr" closed="false">3:20 </char><char style="fq" closed="false">os restaure</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">haga volver a vuestros cautivos.</char></note></para>
+  <para style="q1">ante vuestros mismos ojos».</para>
+  <para style="q4">Así lo ha dicho el <char style="nd">Señor</char>.</para>
+</usx>

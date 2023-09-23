@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="JDG" style="id">- New Russian Translation (Новый русский перевод)</book>
+  <para style="rem">Copyright © 1988, 1991, 1998, 2006, 2010, 2014 by Biblica, Inc.</para>
+  <para style="h">СУДЕЙ</para>
+  <para style="toc1">Книга Судей Израилевых</para>
+  <para style="toc2">Судей</para>
+  <para style="toc3">Суд.</para>
+  <para style="mt1">Книга Судей Израилевых</para>
+  <para style="ip">Книга Судей описывает период времени от смерти Иисуса Навина и до установления монархии, когда жизнь в Израиле характеризовалась междоусобицей, войнами с соседями и постоянной угрозой растворения в своем языческом окружении. Бог сдержал все Свои обещания и привел Свой народ в хорошую землю, чтобы они теперь могли наслаждаться ее плодами и жить в мире и покое (см. <char style="xt"><ref loc="JOS 21:43-45">Нав. 21:43-45</ref></char>). Его замыслом было сделать Израиль царством Бога на земле, которое свидетельствовало бы о Нем всем народам. Однако Израиль не уничтожил, как повелел им Господь, все окружавшие их языческие народы, наоборот, поселившись среди них, стал перенимать их богов, их веру и обычаи (<char style="xt"><ref loc="JDG 3:1-6">3:1-6</ref></char>). Поступая так, они фактически отвергли царствование Бога (ср. <char style="xt"><ref loc="JDG 8:23">8:23</ref></char>).</para>
+  <para style="ip">Эта книга показывает череду отступничеств и наказаний, покаяний и спасений. В беде израильтяне взывали к Богу, и Он назначал так называемых судей, чтобы те руководили народом и поражали его врагов (<char style="xt"><ref loc="JDG 2:10-19">2:10-19</ref></char>). Многие судьи были далеко не совершенными людьми (напр., <char style="xt"><ref loc="JDG 8:22-27">8:22-27</ref>; <ref loc="JDG 11:34-39">11:34-39</ref>; <ref loc="JDG 14:2-3">14:2-3</ref>; <ref loc="JDG 16:1">16:1</ref></char>), но Бог в Своей милости использовал их для сохранения Израиля. Оказывается, недостаточно помнить о великих делах Бога, которые Он совершил в прошлых поколениях, но каждое поколение нуждается в Его помощи.</para>
+  <para style="ip">Анархия была характерна для периода судей: «В те дни у Израиля не было царя, и каждый делал то, что считал правильным» (<char style="xt"><ref loc="JDG 21:25">21:25</ref></char>). В последних главах (17–21) дан ужасный пример грешного состояния Израиля, следствием которого чуть не стало уничтожение целого рода (<char style="xt"><ref loc="JDG 21:3">21:3</ref></char>). Хаос в стране показал необходимость сильной, централизованной власти.</para>
+  <para style="ip">Итак, книга предвосхищает лучшие по сравнению с периодом судей времена монархии. В историях книги можно увидеть особую роль рода Иуды (<char style="xt"><ref loc="JDG 1:1-2">1:1-2</ref>; <ref loc="JDG 20:18">20:18</ref></char>). Древние пророчества предсказали, что этот род будет править (см. <char style="xt"><ref loc="GEN 49:10">Быт. 49:10</ref></char>), и именно из него Бог позже выбрал и утвердил дом Давида, который должен был царствовать над Его людьми вечно (см. <char style="xt"><ref loc="2SA 7:12-16">2 Цар. 7:12-16</ref></char>). Величайшим потомком Давида был Иисус Христос, Который стал истинным Судьей, Царем и Спасителем не только Израиля, но и всего мира (см. <char style="xt"><ref loc="2TI 4:8">2 Тим. 4:8</ref>; <ref loc="JHN 1:49">Ин. 1:49</ref>; <ref loc="JHN 4:42">4:42</ref></char>).</para>
+  <para style="ip">События, описанные в книге Судей, охватывают период времени с 1406 или 1250 гг. до н. э. (в зависимости от того, когда произошел исход) до рождения пророка Самуила, приблизительно в 1080 г. до н. э. Вполне возможно, что несколько судей одновременно правили в разных регионах Израиля.</para>
+  <para style="iot">Содержание</para>
+  <para style="io1">Завоевание земли Ханаана (<char style="ior"><ref loc="JDG 1:1-2:5">1:1–2:5</ref></char>).</para>
+  <para style="io1">Период судей (<char style="ior"><ref loc="JDG 2:6-16:31">2:6–16:31</ref></char>).</para>
+  <para style="io2">Заблуждение Израиля и гнев Господа (<char style="ior"><ref loc="JDG 2:6-3:6">2:6–3:6</ref></char>).</para>
+  <para style="io2">Отниил (<char style="ior"><ref loc="JDG 3:7-11">3:7-11</ref></char>).</para>
+  <para style="io2">Ехуд (<char style="ior"><ref loc="JDG 3:12-30">3:12-30</ref></char>).</para>
+  <para style="io2">Шамгар (<char style="ior"><ref loc="JDG 3:31">3:31</ref></char>).</para>
+  <para style="io2">Пророчица Девора и Варак (<char style="ior"><ref loc="JDG 4:1-5:31">4:1–5:31</ref></char>).</para>
+  <para style="io2">Гедеон (<char style="ior"><ref loc="JDG 6:1-8:35">6:1–8:35</ref></char>).</para>
+  <para style="io2">Царствование Авимелеха (<char style="ior"><ref loc="JDG 9:1-57">9:1-57</ref></char>).</para>
+  <para style="io2">Тола (<char style="ior"><ref loc="JDG 10:1-2">10:1-2</ref></char>).</para>
+  <para style="io2">Иаир (<char style="ior"><ref loc="JDG 10:3-5">10:3-5</ref></char>).</para>
+  <para style="io2">Иеффай (<char style="ior"><ref loc="JDG 10:6-12:8">10:6–12:8</ref></char>).</para>
+  <para style="io2">Ивцан, Елон и Авдон (<char style="ior"><ref loc="JDG 12:8-15">12:8-15</ref></char>).</para>
+  <para style="io2">Самсон (<char style="ior"><ref loc="JDG 13:1-16:31">13:1–16:31</ref></char>).</para>
+  <para style="io1">Два ужасных греха (<char style="ior"><ref loc="JDG 17:1-21:25">17:1–21:25</ref></char>).</para>
+  <para style="io2">Поклонение рода Дана идолу Михи (<char style="ior"><ref loc="JDG 17:1-18:31">17:1–18:31</ref></char>). Левит и его наложница. Гражданская война против рода Вениамина (<char style="ior"><ref loc="JDG 19:1-21:25">19:1–21:25</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="JDG 1"/>
+  <para style="s1">Израиль ведет войну с оставшимися хананеями</para>
+  <para style="r">(<ref loc="JOS 15:15-19">Нав. 15:15-19</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 1:1"/>После смерти Иисуса израильтяне спросили Господа:</para>
+  <para style="p" vid="JDG 1:1">– Кому из нас первым идти воевать с хананеями?<verse eid="JDG 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="JDG 1:2"/>Господь ответил:</para>
+  <para style="p" vid="JDG 1:2">– Первым пусть идет Иуда; Я отдаю землю в его руки.<verse eid="JDG 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="JDG 1:3"/>Тогда воины Иуды сказали своим братьям симеонитам:</para>
+  <para style="p" vid="JDG 1:3">– Идите с нами в землю, которая нам досталась, воевать с хананеями. А потом мы, в свой черед, пойдем с вами в вашу землю.</para>
+  <para style="p" vid="JDG 1:3">И симеониты пошли с ними. <verse eid="JDG 1:3"/><verse number="4" style="v" sid="JDG 1:4"/>Когда Иуда со своими людьми вышел на бой, Господь отдал хананеев и ферезеев в их руки, и они сразили в Везеке десять тысяч человек. <verse eid="JDG 1:4"/><verse number="5" style="v" sid="JDG 1:5"/>Там они и нашли Адони-Везека, сразились с ним и разбили хананеев и ферезеев. <verse eid="JDG 1:5"/><verse number="6" style="v" sid="JDG 1:6"/>Адони-Везек бежал, но они погнались за ним, схватили его и отрубили ему большие пальцы на руках и на ногах.<verse eid="JDG 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="JDG 1:7"/>Адони-Везек сказал:</para>
+  <para style="p" vid="JDG 1:7">– Семьдесят царей с отрубленными большими пальцами на руках и на ногах собирали крохи под моим столом. Теперь Бог воздал мне за то, что я сделал.</para>
+  <para style="p" vid="JDG 1:7">Его отвели в Иерусалим, где он и умер.<verse eid="JDG 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 1:8"/>Воины Иуды напали на Иерусалим и взяли его. Они предали город мечу и огню.<verse eid="JDG 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="JDG 1:9"/>После этого воины Иуды отправились на битву с хананеями, которые жили в нагорьях, в Негеве и в западных предгорьях. <verse eid="JDG 1:9"/><verse number="10" style="v" sid="JDG 1:10"/>Они выступили против хананеев Хеврона (прежде он назывался Кирьят-Арба) и разбили Шешая, Ахимана и Талмая<note caller="+" style="f"><char style="fr" closed="false">1:10 </char><char style="ft" closed="false">Это были потомки Анака (см. ст. 20), род которого был известен своим высоким ростом и наводил страх на израильтян (см. <char style="xt"><ref loc="NUM 13:22">Чис. 13:22</ref>; <ref loc="JOS 15:14">Нав. 15:14</ref></char>).</char></note>. <verse eid="JDG 1:10"/><verse number="11" style="v" sid="JDG 1:11"/>Оттуда они пошли на жителей Давира (который прежде назывался Кирьят-Сефер).<verse eid="JDG 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="JDG 1:12"/>Халев сказал:</para>
+  <para style="p" vid="JDG 1:12">– Я отдам свою дочь Ахсу в жены тому, кто нападет на Кирьят-Сефер и возьмет его.<verse eid="JDG 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="JDG 1:13"/>Отниил, сын младшего брата Халева Кеназа<note caller="+" style="f"><char style="fr" closed="false">1:13 </char><char style="ft" closed="false">Или: «Отниил, потомок Кеназа, младший брат Халева».</char></note>, взял его, и Халев отдал ему в жены свою дочь Ахсу.<verse eid="JDG 1:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="JDG 1:14"/>В день, когда была назначена свадьба, она говорила с Отниилом, чтобы просить у ее отца поле. Когда она слезла со своего осла, Халев спросил ее:</para>
+  <para style="p" vid="JDG 1:14">– Чего ты хочешь?<verse eid="JDG 1:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="JDG 1:15"/>Она ответила:</para>
+  <para style="p" vid="JDG 1:15">– Окажи мне особую милость. Ты дал мне землю в Негеве – так дай мне и источники воды.</para>
+  <para style="p" vid="JDG 1:15">И Халев дал ей верхние и нижние источники.<verse eid="JDG 1:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JDG 1:16"/>Потомки тестя Моисея, кенея, пошли с народом Иуды из города Пальм<note caller="+" style="f"><char style="fr" closed="false">1:16 </char><char style="ft" closed="false">То есть Иерихона.</char></note> в пустыню Иуды, что в Негеве рядом с городом Арадом, и поселились среди народа.<verse eid="JDG 1:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="JDG 1:17"/>Воины Иуды пошли со своими братьями симеонитами, напали на хананеев, которые жили в Цефате, и полностью уничтожили<note caller="+" style="f"><char style="fr" closed="false">1:17 </char><char style="ft" closed="false">На языке оригинала стоит слово, которое говорит о полном посвящении предметов или людей Господу, часто осуществлявшемся через их уничтожение.</char></note> город. Поэтому он получил название Хорма<note caller="+" style="f"><char style="fr" closed="false">1:17 </char><char style="ft" closed="false">По-еврейски это название означает «уничтожение».</char></note>. <verse eid="JDG 1:17"/><verse number="18" style="v" sid="JDG 1:18"/>Еще воины Иуды взяли Газу, Ашкелон и Экрон с их окрестностями.<verse eid="JDG 1:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="JDG 1:19"/>Господь был с воинами Иуды. Они овладели нагорьями, но не смогли прогнать жителей долин, потому что у тех были железные колесницы. <verse eid="JDG 1:19"/><verse number="20" style="v" sid="JDG 1:20"/>Как и обещал Моисей, Хеврон был отдан Халеву, который прогнал оттуда троих сыновей Анака.<verse eid="JDG 1:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="JDG 1:21"/>Вениамитяне не смогли выселить иевусеев, которые жили в Иерусалиме; иевусеи живут там с вениамитянами до сегодняшнего дня.<verse eid="JDG 1:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="JDG 1:22"/>Дом Иосифа напал на Вефиль, и Господь был с ними. <verse eid="JDG 1:22"/><verse number="23" style="v" sid="JDG 1:23"/>Когда они послали лазутчиков разведать Вефиль (прежде он назывался Луз), <verse eid="JDG 1:23"/><verse number="24" style="v" sid="JDG 1:24"/>лазутчики увидели мужчину, выходящего из города, и сказали ему:</para>
+  <para style="p" vid="JDG 1:24">– Покажи нам, как попасть в город, и мы обойдемся с тобой хорошо.<verse eid="JDG 1:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="JDG 1:25"/>Он показал им, и они предали город мечу, но пощадили того человека и всю его семью. <verse eid="JDG 1:25"/><verse number="26" style="v" sid="JDG 1:26"/>Этот человек пошел в землю хеттов, где построил город, который назвал Луз – так он называется и до сегодняшнего дня.<verse eid="JDG 1:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="JDG 1:27"/>Но Манассия не прогнал жителей Бет-Шеана, Таанаха, Дора, Ивлеама и Мегиддо и окрестных деревень, и в этой земле продолжали жить хананеи. <verse eid="JDG 1:27"/><verse number="28" style="v" sid="JDG 1:28"/>Когда Израиль окреп, они сделали хананеев подневольными, но не изгнали их полностью. <verse eid="JDG 1:28"/><verse number="29" style="v" sid="JDG 1:29"/>И Ефрем не прогнал хананеев, которые жили в <char style="add">городе</char> Гезере, и хананеи продолжали жить там среди них. <verse eid="JDG 1:29"/><verse number="30" style="v" sid="JDG 1:30"/>И Завулон не прогнал хананеев, живших в Китроне и в Нагалоле, которые остались среди них, но сделались подневольными. <verse eid="JDG 1:30"/><verse number="31" style="v" sid="JDG 1:31"/>И Асир не изгнал жителей Акко, Сидона, Ахлава, Ахзива, Хелвы, Афека и Рехова; <verse eid="JDG 1:31"/><verse number="32" style="v" sid="JDG 1:32"/>и поэтому народ Асира жил среди хананеев, обитателей той земли. <verse eid="JDG 1:32"/><verse number="33" style="v" sid="JDG 1:33"/>И Неффалим не прогнал жителей Бет-Шемеша и Бет-Анафа: неффалимиты жили среди хананеев, обитателей той земли, а жителей Бет-Шемеша и Бет-Анафа сделали подневольными. <verse eid="JDG 1:33"/><verse number="34" style="v" sid="JDG 1:34"/>Данитянам аморреи отрезали путь с нагорий в долину. <verse eid="JDG 1:34"/><verse number="35" style="v" sid="JDG 1:35"/>Аморреи продолжали жить на горе Херес, в городе Айялоне и поселении Шаалвиме, но когда сила дома Иосифа возросла, они тоже стали подневольными. <verse eid="JDG 1:35"/><verse number="36" style="v" sid="JDG 1:36"/>Граница аморреев шла от Скорпионовой возвышенности<note caller="+" style="f"><char style="fr" closed="false">1:36 </char><char style="ft" closed="false">Или: «возвышенности Акраббим».</char></note>, от Селы и далее.<verse eid="JDG 1:36"/></para>
+  <chapter eid="JDG 1"/>
+  <chapter number="2" style="c" sid="JDG 2"/>
+  <para style="s1">Ангел Господень приходит в Бохим</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 2:1"/>Ангел Господень<note caller="+" style="f"><char style="fr" closed="false">2:1 </char><char style="ft" closed="false">Ангел Господень – этот особенный ангел отождествляется с Самим Господом. Многие толкователи видят в Нем явления Иисуса Христа до Его воплощения. То же в <char style="xt"><ref loc="JDG 6:11-23">6:11-23</ref>; <ref loc="JDG 13:2-23">13:2-23</ref></char>.</char></note> пришел из Гилгала<note caller="+" style="f"><char style="fr" closed="false">2:1 </char><char style="ft" closed="false">В Гилгале находился ковчег завета (см. <char style="xt"><ref loc="EXO 25:10-22">Исх. 25:10-22</ref></char>).</char></note> в Бохим и сказал:</para>
+  <para style="p" vid="JDG 2:1">– Я вывел вас из Египта и привел в землю, о которой клялся вашим отцам. Я сказал: «Я никогда не нарушу Мой завет с вами, <verse eid="JDG 2:1"/><verse number="2" style="v" sid="JDG 2:2"/>а вы не заключайте союз с жителями этой земли, но сокрушите их жертвенники». Но вы не послушались Меня. Почему? <verse eid="JDG 2:2"/><verse number="3" style="v" sid="JDG 2:3"/>Теперь Я говорю вам, что не стану прогонять их от вас; они будут вам жалом в теле, а их боги будут для вас западней.<verse eid="JDG 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 2:4"/>Когда Ангел Господень сказал эти слова всем израильтянам, народ громко заплакал, <verse eid="JDG 2:4"/><verse number="5" style="v" sid="JDG 2:5"/>и они назвали то место Бохим<note caller="+" style="f"><char style="fr" closed="false">2:5 </char><char style="ft" closed="false">По-еврейски это название означает «плачущие».</char></note>. Там они совершили жертвоприношение Господу.<verse eid="JDG 2:5"/></para>
+  <para style="s1">Непослушание и поражение</para>
+  <para style="p">
+    <verse number="6" style="v" sid="JDG 2:6"/>После того как Иисус отпустил народ, они пошли каждый в свой удел, чтобы овладеть землей. <verse eid="JDG 2:6"/><verse number="7" style="v" sid="JDG 2:7"/>Народ служил Господу во время жизни Иисуса и старейшин, переживших его, которые видели все великие дела, совершенные Господом для Израиля.<verse eid="JDG 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 2:8"/>Иисус, сын Навин, слуга Господа, умер в возрасте ста десяти лет. <verse eid="JDG 2:8"/><verse number="9" style="v" sid="JDG 2:9"/>Его похоронили в его собственном наделе, в городе Тимнат-Хересе<note caller="+" style="f"><char style="fr" closed="false">2:9 </char><char style="ft" closed="false">См. Иис. <char style="xt"><ref loc="JOS 19:50">Нав. 19:50</ref>; <ref loc="JOS 24:30">24:30</ref></char> – «Тимнат-Серах»</char></note>, в нагорьях Ефрема к северу от горы Гааш.<verse eid="JDG 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="JDG 2:10"/>Когда все то поколение отошло к своим отцам и выросло другое поколение, которое не знало ни Господа, ни того, что Он совершил для Израиля, <verse eid="JDG 2:10"/><verse number="11" style="v" sid="JDG 2:11"/>израильтяне стали творить зло в глазах Господа и служить Баалам<note caller="+" style="f"><char style="fr" closed="false">2:11 </char><char style="ft" closed="false">Баал – ханаанский бог плодородия и бог-громовержец.</char></note>. <verse eid="JDG 2:11"/><verse number="12" style="v" sid="JDG 2:12"/>Они оставили Господа, Бога своих отцов, Который вывел их из Египта, последовали за богами народов, которые были вокруг них, и стали поклоняться им. Они гневили Господа, <verse eid="JDG 2:12"/><verse number="13" style="v" sid="JDG 2:13"/>потому что оставили Его и служили Баалу и Астартам<note caller="+" style="f"><char style="fr" closed="false">2:13 </char><char style="ft" closed="false">Астарта – ханаанская богиня любви и плодородия, богиня-воительница.</char></note>. <verse eid="JDG 2:13"/><verse number="14" style="v" sid="JDG 2:14"/>Гнев Господа вспыхнул на Израиль, и Он отдал их в руки разбойников, которые стали грабить их. Он отдал их во власть врагов, окружавших их со всех сторон, и они уже не могли им противостоять. <verse eid="JDG 2:14"/><verse number="15" style="v" sid="JDG 2:15"/>Всякий раз, когда Израиль шел <char style="add">воевать</char>, рука Господа была против них, и они терпели поражение, как Господь предупреждал и клялся им. Они терпели великое бедствие.<verse eid="JDG 2:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JDG 2:16"/>Господь ставил им судей<note caller="+" style="f"><char style="fr" closed="false">2:16 </char><char style="ft" closed="false">Или: «вождей»; также в ст. 17-49.</char></note>, которые спасали их от рук грабителей. <verse eid="JDG 2:16"/><verse number="17" style="v" sid="JDG 2:17"/>Но они не слушали судей, а распутничали с другими богами и поклонялись им. Они быстро уклонились от пути, которым ходили их отцы, – пути послушания повелениям Господа; они не следовали их примеру. <verse eid="JDG 2:17"/><verse number="18" style="v" sid="JDG 2:18"/>Всякий раз, когда Господь ставил над ними судью, Он Сам был с ним и берег их от врагов, пока судья был жив: Господь жалел их, стонавших под гнетом мучителей. <verse eid="JDG 2:18"/><verse number="19" style="v" sid="JDG 2:19"/>Но когда судья умирал, они принимались за старое и поступали еще хуже, чем их отцы, следуя другим богам, служа и поклоняясь им. Они не хотели оставить свои злые дела и упрямство. <verse eid="JDG 2:19"/><verse number="20" style="v" sid="JDG 2:20"/>Поэтому Господь сильно разгневался на Израиль и сказал:</para>
+  <para style="p" vid="JDG 2:20">– Раз этот народ нарушил завет, который Я заключил с их отцами, и не послушался Меня, <verse eid="JDG 2:20"/><verse number="21" style="v" sid="JDG 2:21"/>Я больше не стану прогонять от них ни одного из народов, которые остались в этой стране после смерти Иисуса.<verse eid="JDG 2:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="JDG 2:22"/>Чтобы испытать Израиль – станут ли израильтяне стараться ходить по пути Господа, как делали их отцы, – <verse eid="JDG 2:22"/><verse number="23" style="v" sid="JDG 2:23"/>оставил Господь эти народы, не прогнав их сразу и не отдав в руки Иисуса.<verse eid="JDG 2:23"/></para>
+  <chapter eid="JDG 2"/>
+  <chapter number="3" style="c" sid="JDG 3"/>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 3:1"/>Вот народы, которые Господь оставил, чтобы испытывать израильтян, не знавших ни одной из войн в Ханаане <verse eid="JDG 3:1"/><verse number="2" style="v" sid="JDG 3:2"/>(Он сделал это лишь для того, чтобы научить потомков израильтян, которые прежде не знали сражений): <verse eid="JDG 3:2"/><verse number="3" style="v" sid="JDG 3:3"/>пять правителей филистимлян, все хананеи, сидоняне и хиввеи, жившие в горах Ливана от горы Баал-Хермон до Лево-Хамата<note caller="+" style="f"><char style="fr" closed="false">3:3 </char><char style="ft" closed="false">Или: «до перевала в Хамат».</char></note>. <verse eid="JDG 3:3"/><verse number="4" style="v" sid="JDG 3:4"/>Они были оставлены, чтобы испытать израильтян и проверить, станут ли они слушаться повелений Господа, которые Он дал их отцам через Моисея.<verse eid="JDG 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="JDG 3:5"/>Израильтяне жили среди хананеев, хеттов, аморреев, ферезеев, хиввеев и иевусеев. <verse eid="JDG 3:5"/><verse number="6" style="v" sid="JDG 3:6"/>Они брали в жены их дочерей, отдавали своих дочерей за их сыновей и служили их богам.<verse eid="JDG 3:6"/></para>
+  <para style="s1">Отниил</para>
+  <para style="p">
+    <verse number="7" style="v" sid="JDG 3:7"/>Израильтяне совершили зло в глазах Господа: они забыли Господа, своего Бога, и служили Баалам и Ашерам<note caller="+" style="f"><char style="fr" closed="false">3:7 </char><char style="ft" closed="false">Ашера – вавилонско-ханаанская богиня, считалась матерью богов и людей, владычицей моря и всего сущего. Также считалась супругой бога Баала.</char></note>. <verse eid="JDG 3:7"/><verse number="8" style="v" sid="JDG 3:8"/>Гнев Господа вспыхнул на Израиль, и Он отдал их в руки Кушан-Ришатаима, царя Арам-Нахараима<note caller="+" style="f"><char style="fr" closed="false">3:8 </char><char style="ft" closed="false">То есть северо-западной Месопотамии.</char></note>, и служили ему израильтяне восемь лет. <verse eid="JDG 3:8"/><verse number="9" style="v" sid="JDG 3:9"/>Но когда они воззвали к Господу, Он дал им избавителя, Отниила, сына Кеназа, младшего брата Халева<note caller="+" style="f"><char style="fr" closed="false">3:9 </char><char style="ft" closed="false">Или: «Отниила, что был потомком Кеназа и младшим братом Халева».</char></note>, который спас их. <verse eid="JDG 3:9"/><verse number="10" style="v" sid="JDG 3:10"/>Дух Господа сошел на него, он стал судьей<note caller="+" style="f"><char style="fr" closed="false">3:10 </char><char style="ft" closed="false">Или: «вождем».</char></note> Израиля и отправился воевать. Господь отдал Кушан-Ришатаима, царя Арама, в руки Отниила, который одержал над ним победу. <verse eid="JDG 3:10"/><verse number="11" style="v" sid="JDG 3:11"/>И земля покоилась в мире сорок лет, пока Отниил, сын Кеназа<note caller="+" style="f"><char style="fr" closed="false">3:11 </char><char style="ft" closed="false">Или: «потомок Кеназа».</char></note>, не умер.<verse eid="JDG 3:11"/></para>
+  <para style="s1">Ехуд</para>
+  <para style="p">
+    <verse number="12" style="v" sid="JDG 3:12"/>Израильтяне вновь совершили зло в глазах Господа, и из-за этого Господь сделал Эглона, царя Моава, сильнее Израиля. <verse eid="JDG 3:12"/><verse number="13" style="v" sid="JDG 3:13"/>В союзе с аммонитянами и амаликитянами Эглон нанес Израилю поражение и завладел городом Пальм<note caller="+" style="f"><char style="fr" closed="false">3:13 </char><char style="ft" closed="false">То есть Иерихоном.</char></note>. <verse eid="JDG 3:13"/><verse number="14" style="v" sid="JDG 3:14"/>Израильтяне служили Эглону, царю Моава, восемнадцать лет.<verse eid="JDG 3:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="JDG 3:15"/>Израильтяне вновь воззвали к Господу, и Он дал им избавителя – Ехуда, левшу, сына вениамитянина Геры. Израильтяне послали его с данью к Эглону, царю Моава. <verse eid="JDG 3:15"/><verse number="16" style="v" sid="JDG 3:16"/>Ехуд сделал обоюдоострый меч, длиной в локоть<note caller="+" style="f"><char style="fr" closed="false">3:16 </char><char style="ft" closed="false">Около 50 см.</char></note>, и укрепил его под одеждой у правого бедра. <verse eid="JDG 3:16"/><verse number="17" style="v" sid="JDG 3:17"/>Затем он принес дань Эглону, царю Моава, который был очень тучен. <verse eid="JDG 3:17"/><verse number="18" style="v" sid="JDG 3:18"/>После того как Ехуд поднес дань, он отпустил людей, которые ее несли. <verse eid="JDG 3:18"/><verse number="19" style="v" sid="JDG 3:19"/>Но сам он повернул назад у идолов, что близ Гилгала, и сказал:</para>
+  <para style="p" vid="JDG 3:19">– О царь, у меня есть для тебя тайная весть.</para>
+  <para style="p" vid="JDG 3:19">Царь сказал<note caller="+" style="f"><char style="fr" closed="false">3:19 </char><char style="ft" closed="false">Букв.: «Он сказал».</char></note>:</para>
+  <para style="p" vid="JDG 3:19">– Тише! – и все его слуги удалились.<verse eid="JDG 3:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="JDG 3:20"/>Ехуд приблизился к нему (а тот сидел один в верхней комнате своего летнего дворца) и сказал:</para>
+  <para style="p" vid="JDG 3:20">– У меня для тебя весть от Бога.</para>
+  <para style="p" vid="JDG 3:20">Когда царь поднялся, <verse eid="JDG 3:20"/><verse number="21" style="v" sid="JDG 3:21"/>Ехуд протянул левую руку, выхватил меч, который был у него на правом бедре, и вонзил царю в живот. <verse eid="JDG 3:21"/><verse number="22" style="v" sid="JDG 3:22"/>Даже рукоять ушла вслед за лезвием, и жир закрыл весь меч. Ехуд не вытащил меча, и нечистоты вышли из тела царя<note caller="+" style="f"><char style="fr" closed="false">3:22 </char><char style="ft" closed="false">Или: «и покинул комнату». Смысл данного места в еврейском тексте неясен.</char></note>. <verse eid="JDG 3:22"/><verse number="23" style="v" sid="JDG 3:23"/>Выйдя в переднюю<note caller="+" style="f"><char style="fr" closed="false">3:23 </char><char style="ft" closed="false">Смысл данного слова в еврейском тексте неясен.</char></note>, Ехуд закрыл за собой двери верхней комнаты и запер их.<verse eid="JDG 3:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="JDG 3:24"/>Когда он ушел, слуги обнаружили двери верхней комнаты запертыми. Они сказали:</para>
+  <para style="p" vid="JDG 3:24">– Должно быть, он справляет нужду<note caller="+" style="f"><char style="fr" closed="false">3:24 </char><char style="ft" closed="false">Букв.: «покрывает свои ноги».</char></note> во внутренней комнате дома.<verse eid="JDG 3:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="JDG 3:25"/>Они ждали, пока не начали беспокоиться, и, видя, что никто не отпирает дверей комнаты, взяли ключ и отперли их. Там они увидели, что их господин лежит на полу мертвый.<verse eid="JDG 3:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="JDG 3:26"/>Пока они медлили, Ехуд скрылся. Он прошел мимо идолов и спасся в Сеире. <verse eid="JDG 3:26"/><verse number="27" style="v" sid="JDG 3:27"/>Придя туда, он затрубил в рог в нагорьях Ефрема, и израильтяне спустились вместе с ним с нагорий; он возглавлял их.<verse eid="JDG 3:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="JDG 3:28"/>– Идите за мной, – приказал он, – потому что Господь отдал моавитян, ваших врагов, в ваши руки.</para>
+  <para style="p" vid="JDG 3:28">И они пошли за ним, захватили броды у Иордана, которые вели к Моаву, и не позволяли никому переправляться. <verse eid="JDG 3:28"/><verse number="29" style="v" sid="JDG 3:29"/>Они сразили около десяти тысяч моавитян, всех сильных, крепких воинов; скрыться не удалось никому. <verse eid="JDG 3:29"/><verse number="30" style="v" sid="JDG 3:30"/>В тот день Моав стал служить Израилю, и земля покоилась в мире восемьдесят лет.<verse eid="JDG 3:30"/></para>
+  <para style="s1">Шамгар</para>
+  <para style="p">
+    <verse number="31" style="v" sid="JDG 3:31"/>После Ехуда пришел Шамгар, сын Анафа, который сразил шестьсот филистимлян воловьим рожном, пастушьей тростью. Он также спас Израиль.<verse eid="JDG 3:31"/></para>
+  <chapter eid="JDG 3"/>
+  <chapter number="4" style="c" sid="JDG 4"/>
+  <para style="s1">Пророчица Девора</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 4:1"/>После того как Ехуд умер, израильтяне снова стали творить зло в глазах Господа. <verse eid="JDG 4:1"/><verse number="2" style="v" sid="JDG 4:2"/>И Господь отдал их в руки Иавина, царя Ханаана, который правил в городе Хацоре. Начальником его войска был Сисара, который жил в Харошет-Гоиме. <verse eid="JDG 4:2"/><verse number="3" style="v" sid="JDG 4:3"/>У него было девятьсот железных колесниц, и он жестоко притеснял израильтян в течение двадцати лет. Поэтому они воззвали к Господу о помощи.<verse eid="JDG 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 4:4"/>В то время судьей в Израиле была пророчица Девора, жена Лаппидота. <verse eid="JDG 4:4"/><verse number="5" style="v" sid="JDG 4:5"/>Она сидела под пальмой Деворы, между Рамой и Вефилем в нагорьях Ефрема, и израильтяне приходили к ней решать свои тяжбы. <verse eid="JDG 4:5"/><verse number="6" style="v" sid="JDG 4:6"/>Она послала за Вараком, сыном Авиноама, из Кедеша, что в земле Неффалима, и сказала ему:</para>
+  <para style="p" vid="JDG 4:6">– Господь, Бог Израиля, повелевает тебе: «Иди, возьми с собой десять тысяч человек из родов Неффалима и Завулона, и веди их на гору Фавор. <verse eid="JDG 4:6"/><verse number="7" style="v" sid="JDG 4:7"/>Я приведу Сисару, начальника войска Иавина, с его колесницами и воинами к реке Кишону и отдам его в твои руки».<verse eid="JDG 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 4:8"/>Варак сказал ей:</para>
+  <para style="p" vid="JDG 4:8">– Если ты пойдешь со мной, то пойду и я, а если ты со мной не пойдешь, то и я не пойду.<verse eid="JDG 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="JDG 4:9"/>– Хорошо, – сказала Девора, – я пойду с тобой. Но этот путь не приведет тебя к славе, потому что Господь отдаст Сисару в руки женщины.</para>
+  <para style="p" vid="JDG 4:9">И Девора пошла с Вараком в Кедеш, <verse eid="JDG 4:9"/><verse number="10" style="v" sid="JDG 4:10"/>где он призвал Завулона и Неффалима. За ним последовало десять тысяч человек, и Девора также пошла с ним.<verse eid="JDG 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="JDG 4:11"/>Кеней Хевер отделился от остальных кенеев, потомков Ховава, шурина<note caller="+" style="f"><char style="fr" closed="false">4:11 </char><char style="ft" closed="false">Или: «зятя».</char></note> Моисея, и разбил свой шатер у дуба, что в Цаананниме, рядом с Кедешем.<verse eid="JDG 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="JDG 4:12"/>Когда Сисаре донесли, что Варак, сын Авиноама, поднялся на гору Фавор, <verse eid="JDG 4:12"/><verse number="13" style="v" sid="JDG 4:13"/>Сисара собрал свои девятьсот железных колесниц и всех своих людей из Харошет-Гоима возле реки Кишона.<verse eid="JDG 4:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="JDG 4:14"/>Тогда Девора сказала Вараку:</para>
+  <para style="p" vid="JDG 4:14">– Иди! Это день, когда Господь отдал Сисару в твои руки. Разве Сам Господь не идет перед тобой?</para>
+  <para style="p" vid="JDG 4:14">И Варак спустился с горы Фавор, а вслед за ним десять тысяч человек. <verse eid="JDG 4:14"/><verse number="15" style="v" sid="JDG 4:15"/>Господь привел Сисару и все его колесницы и войско в замешательство перед мечом Варака, и Сисара, сойдя с колесницы, бежал пешим. <verse eid="JDG 4:15"/><verse number="16" style="v" sid="JDG 4:16"/>Варак преследовал его колесницы и войско до самого Харошет-Гоима. Все воины Сисары пали от меча; в живых не осталось никого.<verse eid="JDG 4:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="JDG 4:17"/>Но Сисара побежал к шатру Иаили, жены кенея Хевера, потому что между Иавином, царем Хацора, и кланом кенея Хевера был мир.<verse eid="JDG 4:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="JDG 4:18"/>Иаиль вышла навстречу Сисаре и сказала ему:</para>
+  <para style="p" vid="JDG 4:18">– Заходи, мой господин, заходи ко мне. Не бойся.</para>
+  <para style="p" vid="JDG 4:18">Он вошел в ее шатер, и она укрыла его ковром.<verse eid="JDG 4:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="JDG 4:19"/>– Я хочу пить, – сказал он. – Пожалуйста, дай мне воды.</para>
+  <para style="p" vid="JDG 4:19">Она открыла бурдюк с молоком, дала ему напиться и укрыла его.<verse eid="JDG 4:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="JDG 4:20"/>– Встань у входа в шатер, – сказал он ей. – Если кто-нибудь придет и спросит у тебя: «Есть ли кто здесь?» – скажи: «Нет».<verse eid="JDG 4:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="JDG 4:21"/>Но Иаиль, жена Хевера, взяла колышек от шатра и молоток и тихо подошла к нему, когда он, утомившись, уснул. Она пронзила ему висок так, что приколола его к земле, и он умер.<verse eid="JDG 4:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="JDG 4:22"/>Когда появился Варак, который гнался за Сисарой, Иаиль вышла к нему навстречу.</para>
+  <para style="p" vid="JDG 4:22">– Идем, – сказала она, – я покажу тебе человека, которого ты ищешь.</para>
+  <para style="p" vid="JDG 4:22">Он вошел в ее шатер – там лежал мертвый Сисара, и висок его был пронзен колом.<verse eid="JDG 4:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="JDG 4:23"/>В тот день Бог даровал израильтянам победу над ханаанским царем Иавином. <verse eid="JDG 4:23"/><verse number="24" style="v" sid="JDG 4:24"/>Рука израильтян над ним становилась все сильнее и сильнее, пока они не уничтожили его.<verse eid="JDG 4:24"/></para>
+  <chapter eid="JDG 4"/>
+  <chapter number="5" style="c" sid="JDG 5"/>
+  <para style="s1">Песнь Деворы и Варака</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 5:1"/>В тот день Девора и Варак, сын Авиноама, спели такую песнь:<verse eid="JDG 5:1"/></para>
+  <para style="qm1">
+    <verse number="2" style="v" sid="JDG 5:2"/>«Вожди повели Израиль,</para>
+  <para style="qm2" vid="JDG 5:2">народ пошел добровольно –</para>
+  <para style="qm1" vid="JDG 5:2">славьте Господа!<verse eid="JDG 5:2"/></para>
+  <para style="b"/>
+  <para style="qm1">
+    <verse number="3" style="v" sid="JDG 5:3"/>Слушайте, цари! Внимайте, правители!</para>
+  <para style="qm2" vid="JDG 5:3">Господу буду петь,</para>
+  <para style="qm1" vid="JDG 5:3">буду играть пред Господом, Богом Израиля.<verse eid="JDG 5:3"/></para>
+  <para style="b"/>
+  <para style="qm1">
+    <verse number="4" style="v" sid="JDG 5:4"/>Когда вышел Ты, Господи, из Сеира<note caller="+" style="f"><char style="fr" closed="false">5:4 </char><char style="ft" closed="false">Сеир – другое название страны Эдом, земли потомков Исава, брата Иакова.</char></note>,</para>
+  <para style="qm2" vid="JDG 5:4">когда выступил Ты из земли Эдома,</para>
+  <para style="qm1" vid="JDG 5:4">дрожала земля, и с неба лило –</para>
+  <para style="qm2" vid="JDG 5:4">облака изливали воду.<verse eid="JDG 5:4"/></para>
+  <para style="qm1">
+    <verse number="5" style="v" sid="JDG 5:5"/>Горы дрожали пред Господом,</para>
+  <para style="qm2" vid="JDG 5:5">перед Тем, Кто с Синая,</para>
+  <para style="qm1" vid="JDG 5:5">пред Господом, Богом Израиля<note caller="+" style="f"><char style="fr" closed="false">5:4-5 </char><char style="ft" closed="false">Сеир и Синай – места, которые ассоциируются с заключением завета израильского народа с Богом и получением Закона (см. <char style="xt"><ref loc="EXO 19:18">Исх. 19:18</ref>; <ref loc="DEU 33:2">Втор. 33:2</ref></char>).</char></note>.<verse eid="JDG 5:5"/></para>
+  <para style="b"/>
+  <para style="qm1">
+    <verse number="6" style="v" sid="JDG 5:6"/>В дни Шамгара, сына Анафа,</para>
+  <para style="qm2" vid="JDG 5:6">в дни Иаили пути опустели,</para>
+  <para style="qm1" vid="JDG 5:6">и ходившие прежде дорогой прямой</para>
+  <para style="qm2" vid="JDG 5:6">пускались в обход.<verse eid="JDG 5:6"/></para>
+  <para style="qm1">
+    <verse number="7" style="v" sid="JDG 5:7"/>Обезлюдели в Израиле села,</para>
+  <para style="qm2" vid="JDG 5:7">обезлюдели, пока не явилась, не восстала я<note caller="+" style="f"><char style="fr" closed="false">5:7 </char><char style="ft" closed="false">Или: «ты».</char></note>,</para>
+  <para style="qm1" vid="JDG 5:7">Девора, мать в Израиле.<verse eid="JDG 5:7"/></para>
+  <para style="qm2">
+    <verse number="8" style="v" sid="JDG 5:8"/>Избрали новых богов –</para>
+  <para style="qm1" vid="JDG 5:8">вот и война у ворот,</para>
+  <para style="qm2" vid="JDG 5:8">и ни щита, ни копья</para>
+  <para style="qm1" vid="JDG 5:8">не видно у сорока тысяч в Израиле.<verse eid="JDG 5:8"/></para>
+  <para style="qm2">
+    <verse number="9" style="v" sid="JDG 5:9"/>Сердце мое с вождями Израиля,</para>
+  <para style="qm1" vid="JDG 5:9">с добровольцами из народа.</para>
+  <para style="qm2" vid="JDG 5:9">Славьте Господа!<verse eid="JDG 5:9"/></para>
+  <para style="b"/>
+  <para style="qm1">
+    <verse number="10" style="v" sid="JDG 5:10"/>Вы, кто ездит на белых ослицах,</para>
+  <para style="qm2" vid="JDG 5:10">кто сидит на коврах<note caller="+" style="f"><char style="fr" closed="false">5:10 </char><char style="ft" closed="false">Смысл этого места в еврейском тексте неясен.</char></note>,</para>
+  <para style="qm1" vid="JDG 5:10">кто ходит по дороге,</para>
+  <para style="qm2" vid="JDG 5:10">пойте песнь!<note caller="+" style="f"><char style="fr" closed="false">5:10 </char><char style="ft" closed="false">Или: «подумайте»; или: «говорите об этом»</char></note><verse eid="JDG 5:10"/></para>
+  <para style="qm1">
+    <verse number="11" style="v" sid="JDG 5:11"/>И под голос лучников<note caller="+" style="f"><char style="fr" closed="false">5:11 </char><char style="ft" closed="false">Лучников – или: «певцов». Смысл этого места в еврейском тексте неясен.</char></note> у колодцев</para>
+  <para style="qm2" vid="JDG 5:11">идет разговор о Господних победах,</para>
+  <para style="qm1" vid="JDG 5:11">о победах в Израиле Его народа<note caller="+" style="f"><char style="fr" closed="false">5:11 </char><char style="ft" closed="false">Или: «крестьян».</char></note>.</para>
+  <para style="b" vid="JDG 5:11"/>
+  <para style="qm1" vid="JDG 5:11">И тогда Господень народ устремился к воротам.<verse eid="JDG 5:11"/></para>
+  <para style="qm2">
+    <verse number="12" style="v" sid="JDG 5:12"/>„Вставай, вставай, Девора!</para>
+  <para style="qm1" vid="JDG 5:12">Вставай, вставай, песню пой!</para>
+  <para style="qm2" vid="JDG 5:12">Поднимайся, Варак,</para>
+  <para style="qm1" vid="JDG 5:12">уводи своих пленных, сын Авиноама!“<verse eid="JDG 5:12"/></para>
+  <para style="b"/>
+  <para style="qm1">
+    <verse number="13" style="v" sid="JDG 5:13"/>И тогда уцелевшие собрались к вельможам;</para>
+  <para style="qm2" vid="JDG 5:13">Господень народ собрался ко мне против сильных.<verse eid="JDG 5:13"/></para>
+  <para style="qm1">
+    <verse number="14" style="v" sid="JDG 5:14"/>От Ефрема пришли укоренившиеся в земле Амалика,</para>
+  <para style="qm2" vid="JDG 5:14">и следом за тобой, Вениамин, с твоим народом.</para>
+  <para style="qm1" vid="JDG 5:14">От Махира пришли вожди,</para>
+  <para style="qm2" vid="JDG 5:14">от Завулона – держащие жезл полководца.<verse eid="JDG 5:14"/></para>
+  <para style="qm1">
+    <verse number="15" style="v" sid="JDG 5:15"/>С Деворою шли князья Иссахара –</para>
+  <para style="qm2" vid="JDG 5:15">да, остался Иссахар Вараку верен,</para>
+  <para style="qm1" vid="JDG 5:15">и за ним они ринулись в долину.</para>
+  <para style="qm2" vid="JDG 5:15">А в кланах Рувима большое колебание.<verse eid="JDG 5:15"/></para>
+  <para style="qm1">
+    <verse number="16" style="v" sid="JDG 5:16"/>Что же мешкал ты среди овчарен,</para>
+  <para style="qm2" vid="JDG 5:16">как стада собирают свистом, слушал?</para>
+  <para style="qm1" vid="JDG 5:16">Да, Рувима кланы в большом колебании.<verse eid="JDG 5:16"/></para>
+  <para style="qm2">
+    <verse number="17" style="v" sid="JDG 5:17"/>Галаад прижился за Иорданом.</para>
+  <para style="qm1" vid="JDG 5:17">Дан – зачем у кораблей он засиделся?</para>
+  <para style="qm2" vid="JDG 5:17">Асир остался на побережье</para>
+  <para style="qm1" vid="JDG 5:17">и живет у своих пристаней.<verse eid="JDG 5:17"/></para>
+  <para style="qm2">
+    <verse number="18" style="v" sid="JDG 5:18"/>А народ Завулона рисковал жизнью,</para>
+  <para style="qm1" vid="JDG 5:18">и с ним Неффалим на высотах поля.<verse eid="JDG 5:18"/></para>
+  <para style="b"/>
+  <para style="qm1">
+    <verse number="19" style="v" sid="JDG 5:19"/>Явились цари, сразились.</para>
+  <para style="qm2" vid="JDG 5:19">Сразились цари Ханаана</para>
+  <para style="qm1" vid="JDG 5:19">в Таанахе, у вод близ Мегиддо,</para>
+  <para style="qm2" vid="JDG 5:19">да не взяли серебряных трофеев.<verse eid="JDG 5:19"/></para>
+  <para style="qm1">
+    <verse number="20" style="v" sid="JDG 5:20"/>Звезды с небес сражались,</para>
+  <para style="qm2" vid="JDG 5:20">с путей своих сражались с Сисарой.<verse eid="JDG 5:20"/></para>
+  <para style="qm1">
+    <verse number="21" style="v" sid="JDG 5:21"/>Река Кишон прочь их унесла,</para>
+  <para style="qm2" vid="JDG 5:21">древняя река, река Кишон.</para>
+  <para style="qm1" vid="JDG 5:21">Вперед, душа! Будь сильна!<verse eid="JDG 5:21"/></para>
+  <para style="qm2">
+    <verse number="22" style="v" sid="JDG 5:22"/>И грохотали коней копыта</para>
+  <para style="qm1" vid="JDG 5:22">в галопе, в галопе его жеребцов.<verse eid="JDG 5:22"/></para>
+  <para style="qm2">
+    <verse number="23" style="v" sid="JDG 5:23"/>„Прокляните Мероз, – сказал Ангел Господень. –</para>
+  <para style="qm1" vid="JDG 5:23">Жителей его прокляните страшно,</para>
+  <para style="qm2" vid="JDG 5:23">ведь они не пришли на помощь Господу,</para>
+  <para style="qm1" vid="JDG 5:23">на помощь Господу против сильных“.<verse eid="JDG 5:23"/></para>
+  <para style="b"/>
+  <para style="qm1">
+    <verse number="24" style="v" sid="JDG 5:24"/>Благословенна средь женщин будь, Иаиль,</para>
+  <para style="qm2" vid="JDG 5:24">кенея Хевера жена,</para>
+  <para style="qm1" vid="JDG 5:24">благословенна средь женщин, живущих в шатрах.<verse eid="JDG 5:24"/></para>
+  <para style="qm2">
+    <verse number="25" style="v" sid="JDG 5:25"/>Просил он воды – подала молока,</para>
+  <para style="qm1" vid="JDG 5:25">в величественной чаше, вельможи достойной,</para>
+  <para style="qm2" vid="JDG 5:25">принесла ему сливки.<verse eid="JDG 5:25"/></para>
+  <para style="qm1">
+    <verse number="26" style="v" sid="JDG 5:26"/>Руку свою протянула за колышком,</para>
+  <para style="qm2" vid="JDG 5:26">правую – за молотком ремесленника.</para>
+  <para style="qm1" vid="JDG 5:26">Поразила Сисару, голову ему разбила,</para>
+  <para style="qm2" vid="JDG 5:26">раздробила, пронзила висок.<verse eid="JDG 5:26"/></para>
+  <para style="qm1">
+    <verse number="27" style="v" sid="JDG 5:27"/>К ногам ее он склонился, упал, лежал.</para>
+  <para style="qm2" vid="JDG 5:27">К ногам ее он склонился, упал,</para>
+  <para style="qm1" vid="JDG 5:27">да, где склонился, там и упал – мертвым.<verse eid="JDG 5:27"/></para>
+  <para style="b"/>
+  <para style="qm1">
+    <verse number="28" style="v" sid="JDG 5:28"/>Мать Сисары из окна глядит,</para>
+  <para style="qm2" vid="JDG 5:28">причитает из-за решетки оконной:</para>
+  <para style="qm1" vid="JDG 5:28">„Что ж его колесницы так долго нет?</para>
+  <para style="qm2" vid="JDG 5:28">Что же стук колесниц его медлит?“<verse eid="JDG 5:28"/></para>
+  <para style="qm1">
+    <verse number="29" style="v" sid="JDG 5:29"/>А мудрейшие из женщин придворных</para>
+  <para style="qm2" vid="JDG 5:29">отвечают ей – да и сама все время</para>
+  <para style="qm1" vid="JDG 5:29">твердит она себе:<verse eid="JDG 5:29"/></para>
+  <para style="qm2">
+    <verse number="30" style="v" sid="JDG 5:30"/>„Не добычу ли берут они и делят:</para>
+  <para style="qm1" vid="JDG 5:30">по девице на воина иль по две,</para>
+  <para style="qm2" vid="JDG 5:30">пеструю одежду для Сисары,</para>
+  <para style="qm1" vid="JDG 5:30">пеструю, расшитую одежду,</para>
+  <para style="qm2" vid="JDG 5:30">богато расшитую одежду мне на плечи – всю эту добычу?“<verse eid="JDG 5:30"/></para>
+  <para style="b"/>
+  <para style="qm1">
+    <verse number="31" style="v" sid="JDG 5:31"/>Так да погибнут все враги Твои, Господи!</para>
+  <para style="qm2" vid="JDG 5:31">А те, кто любит Тебя, да будут как солнце,</para>
+  <para style="qm1" vid="JDG 5:31">когда оно поднимается во всей своей силе».</para>
+  <para style="p" vid="JDG 5:31">И земля покоилась в мире сорок лет.<verse eid="JDG 5:31"/></para>
+  <chapter eid="JDG 5"/>
+  <chapter number="6" style="c" sid="JDG 6"/>
+  <para style="s1">Израиль в руках мадианитян</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 6:1"/>Израильтяне вновь стали творить зло в глазах Господа, и Он на семь лет отдал их в руки мадианитян. <verse eid="JDG 6:1"/><verse number="2" style="v" sid="JDG 6:2"/>Мадианитяне так угнетали их, что израильтяне стали делать себе укрытия в горных расселинах и укрепления в пещерах. <verse eid="JDG 6:2"/><verse number="3" style="v" sid="JDG 6:3"/>Всякий раз, когда израильтяне сеяли, мадианитяне, амаликитяне и другие восточные народы вторгались в страну. <verse eid="JDG 6:3"/><verse number="4" style="v" sid="JDG 6:4"/>Они разбивали у них на земле свои лагеря, губили урожай до самой Газы и не оставляли Израилю никакого пропитания – ни овец, ни волов, ни ослов. <verse eid="JDG 6:4"/><verse number="5" style="v" sid="JDG 6:5"/>Они являлись со своим скотом и шатрами, словно рои саранчи. Людей и верблюдов было без счета; они вторгались в страну, чтобы опустошать ее. <verse eid="JDG 6:5"/><verse number="6" style="v" sid="JDG 6:6"/>Израильтяне так обнищали из-за мадианитян, что воззвали к Господу о помощи.<verse eid="JDG 6:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="JDG 6:7"/>Когда израильтяне воззвали к Господу из-за мадианитян, <verse eid="JDG 6:7"/><verse number="8" style="v" sid="JDG 6:8"/>Он послал им пророка, который сказал:</para>
+  <para style="p" vid="JDG 6:8">– Так говорит Господь, Бог Израиля: «Я вывел вас из Египта, из земли рабства. <verse eid="JDG 6:8"/><verse number="9" style="v" sid="JDG 6:9"/>Я избавил вас от власти Египта и от руки всех ваших притеснителей. Я прогнал их от вас и отдал вам их землю. <verse eid="JDG 6:9"/><verse number="10" style="v" sid="JDG 6:10"/>Я сказал вам: „Я Господь, ваш Бог; не чтите богов аморреев, в земле которых вы живете“. Но вы не послушались Меня».<verse eid="JDG 6:10"/></para>
+  <para style="s1">Ангел Господень приходит к Гедеону</para>
+  <para style="p">
+    <verse number="11" style="v" sid="JDG 6:11"/>Ангел Господень пришел и сел в Офре под дубом, который принадлежал авиезериту Иоашу. Его сын Гедеон молотил тогда пшеницу в давильне, чтобы укрыть ее от мадианитян. <verse eid="JDG 6:11"/><verse number="12" style="v" sid="JDG 6:12"/>Когда Ангел Господень явился ему, Он сказал:</para>
+  <para style="p" vid="JDG 6:12">– Господь с тобой, могучий воин.<verse eid="JDG 6:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="JDG 6:13"/>– Но Господин мой<note caller="+" style="f"><char style="fr" closed="false">6:13 </char><char style="ft" closed="false">Евр.: «Адони».</char></note>, – ответил Гедеон, – если Господь с нами, то почему же все это случилось? Где же все Его чудеса, о которых нам рассказывали наши отцы, когда говорили: «Разве Господь не вывел нас из Египта?» Нет, теперь Господь оставил нас и отдал в руки мадианитян.<verse eid="JDG 6:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="JDG 6:14"/>Тогда Господь повернулся к нему и сказал:</para>
+  <para style="p" vid="JDG 6:14">– Иди и спаси своей силой Израиль от руки Мадиана. Я Сам посылаю тебя.<verse eid="JDG 6:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="JDG 6:15"/>– Но, Владыка<note caller="+" style="f"><char style="fr" closed="false">6:15 </char><char style="ft" closed="false">Евр.: «Адонай».</char></note>, – спросил Гедеон, – как мне спасти Израиль? Мой клан самый слабый в роде Манассии, а я самый незначительный в семье.<verse eid="JDG 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JDG 6:16"/>Господь ответил:</para>
+  <para style="p" vid="JDG 6:16">– Я буду с тобой, и ты сразишь всех мадианитян, как одного человека.<verse eid="JDG 6:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="JDG 6:17"/>Гедеон ответил:</para>
+  <para style="p" vid="JDG 6:17">– Если я нашел у Тебя расположение, то дай мне знак, что это действительно Ты говоришь со мной. <verse eid="JDG 6:17"/><verse number="18" style="v" sid="JDG 6:18"/>Пожалуйста, не уходи отсюда, пока я не вернусь и не принесу свой дар, и не предложу его Тебе.</para>
+  <para style="p" vid="JDG 6:18">
+    <char style="add">Господь</char> сказал:</para>
+  <para style="p" vid="JDG 6:18">– Я буду ждать, пока ты не вернешься.<verse eid="JDG 6:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="JDG 6:19"/>Гедеон пошел домой, приготовил козленка и сделал из ефы<note caller="+" style="f"><char style="fr" closed="false">6:19 </char><char style="ft" closed="false">Вероятно, около 22 кг.</char></note> муки пресного хлеба. Положив мясо в корзину и налив похлебку в горшок, он принес это к Нему под дуб и положил там.<verse eid="JDG 6:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="JDG 6:20"/>Ангел Господень сказал ему:</para>
+  <para style="p" vid="JDG 6:20">– Возьми мясо и пресный хлеб, положи их на эту скалу и вылей похлебку.</para>
+  <para style="p" vid="JDG 6:20">Гедеон сделал это. <verse eid="JDG 6:20"/><verse number="21" style="v" sid="JDG 6:21"/>Концом посоха, который был у Него в руке, Ангел Господень прикоснулся к мясу и пресному хлебу. Из скалы вырвалось пламя, которое пожрало мясо и хлеб. И Ангел Господень исчез. <verse eid="JDG 6:21"/><verse number="22" style="v" sid="JDG 6:22"/>Когда Гедеон понял, что это был Ангел Господень, он воскликнул:</para>
+  <para style="p" vid="JDG 6:22">– О Владыка Господи! Я видел Ангела Господнего лицом к лицу!<verse eid="JDG 6:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="JDG 6:23"/>Но Господь сказал ему:</para>
+  <para style="p" vid="JDG 6:23">– Мир тебе. Не бойся, ты не умрешь<note caller="+" style="f"><char style="fr" closed="false">6:22-23 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="EXO 33:20">Исх. 33:20</ref></char>.</char></note>.<verse eid="JDG 6:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="JDG 6:24"/>Гедеон соорудил там жертвенник Господу, назвав его «Господь – это мир». Он и по сегодняшний день стоит в Офре, в земле клана авиезеритов.<verse eid="JDG 6:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="JDG 6:25"/>В ту же ночь Господь сказал ему:</para>
+  <para style="p" vid="JDG 6:25">– Возьми из стада своего отца второго, семилетнего быка<note caller="+" style="f"><char style="fr" closed="false">6:25 </char><char style="ft" closed="false">Существует два толкования о том, почему Гедеон должен был взять именно второго быка: 1) потому что перворожденный бык уже был принесен в жертву по Закону (см. <char style="xt"><ref loc="EXO 13:11-15">Исх. 13:11-15</ref></char>); 2) Бог проявил милость, сохранив роду главного быка-производителя.</char></note>. Разрушь жертвенник Баала, который принадлежит твоему отцу, и сруби столб Ашеры<note caller="+" style="f"><char style="fr" closed="false">6:25 </char><char style="ft" closed="false">Это культовый символ языческой богини Ашеры; также в остальных местах книги.</char></note>, что рядом с ним. <verse eid="JDG 6:25"/><verse number="26" style="v" sid="JDG 6:26"/>Сооруди, как должно, жертвенник Господу, твоему Богу, на вершине этой скалы, и на дровах из столба Ашеры, который ты срубишь, принеси во всесожжение второго быка.<verse eid="JDG 6:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="JDG 6:27"/>Гедеон взял десять человек из своих слуг и сделал, как сказал ему Господь. Но из страха перед семьей и жителями своего города, он сделал это не днем, а ночью.<verse eid="JDG 6:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="JDG 6:28"/>Утром, когда жители города встали, жертвенник Баала был разрушен, вместе с ним срублен и столб Ашеры, а второй бык принесен в жертву на новом жертвеннике!<verse eid="JDG 6:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="JDG 6:29"/>– Кто это сделал? – спрашивали они друг друга.</para>
+  <para style="p" vid="JDG 6:29">Они стали доискиваться, и им сказали:</para>
+  <para style="p" vid="JDG 6:29">– Это сделал Гедеон, сын Иоаша.<verse eid="JDG 6:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="JDG 6:30"/>– Выведи своего сына, – потребовали у Иоаша горожане. – Он должен умереть, потому что разрушил жертвенник Баала и срубил столб Ашеры, что рядом с ним.<verse eid="JDG 6:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="JDG 6:31"/>Но Иоаш ответил окружившей его враждебной толпе:</para>
+  <para style="p" vid="JDG 6:31">– Вы собираетесь вступиться за Баала? Вы хотите его спасти? Всякий, кто вступится за него, к утру будет предан смерти! Если Баал и вправду бог, он и сам может защитить себя, если кто-то разрушает его жертвенник.<verse eid="JDG 6:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="JDG 6:32"/>С того дня Гедеон стал зваться Еруббаалом<note caller="+" style="f"><char style="fr" closed="false">6:32 </char><char style="ft" closed="false">По-еврейски это имя означает «пусть Баал борется».</char></note>, потому что говорили: «Пусть Баал сам борется с ним», так как он разрушил Баалов жертвенник.<verse eid="JDG 6:32"/></para>
+  <para style="s1">Гедеон разбивает мадианитян</para>
+  <para style="p">
+    <verse number="33" style="v" sid="JDG 6:33"/>Все мадианитяне, амаликитяне и другие восточные народы объединили силы, переправились через Иордан и встали лагерем в долине Изреель. <verse eid="JDG 6:33"/><verse number="34" style="v" sid="JDG 6:34"/>Дух Господа сошел на Гедеона, он затрубил в рог, и авиезериты собрались, чтобы идти за ним. <verse eid="JDG 6:34"/><verse number="35" style="v" sid="JDG 6:35"/>Он послал вестников по всей земле рода Манассии, призывая их к оружию, а также послал к Асиру, Завулону и Неффалиму, и они пришли к нему навстречу.<verse eid="JDG 6:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="JDG 6:36"/>Гедеон сказал Богу:</para>
+  <para style="p" vid="JDG 6:36">– Если Ты собираешься спасти Израиль моей рукой, как обещал, <verse eid="JDG 6:36"/><verse number="37" style="v" sid="JDG 6:37"/>то вот, я разложу на гумне настриженную шерсть. Если роса выпадет только на шерсть, а земля будет сухой, то я буду знать, что Ты спасешь Израиль моей рукой, как говорил.<verse eid="JDG 6:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="JDG 6:38"/>Так и произошло. На следующий день Гедеон встал рано. Он стал выжимать шерсть и выжал из нее столько росы, что ее хватило бы на целую чашу.<verse eid="JDG 6:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="JDG 6:39"/>Тогда Гедеон сказал Богу:</para>
+  <para style="p" vid="JDG 6:39">– Не гневайся на меня. Позволь мне просить еще лишь раз. Дай мне устроить еще одно испытание с шерстью. На этот раз пусть шерсть останется сухой, а земля вокруг будет покрыта росой.<verse eid="JDG 6:39"/></para>
+  <para style="p">
+    <verse number="40" style="v" sid="JDG 6:40"/>В ту ночь Бог сделал это. Сухой осталась только шерсть; вся земля была покрыта росой.<verse eid="JDG 6:40"/></para>
+  <chapter eid="JDG 6"/>
+  <chapter number="7" style="c" sid="JDG 7"/>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 7:1"/>Еруббаал (он же Гедеон) и все его люди встали рано утром и расположились лагерем у источника Харод. Лагерь мадианитян находился к северу от них, в долине, рядом с холмом Море. <verse eid="JDG 7:1"/><verse number="2" style="v" sid="JDG 7:2"/>Господь сказал Гедеону:</para>
+  <para style="p" vid="JDG 7:2">– Воинов с тобой слишком много. Я не стану отдавать мадианитян в их руки. Чтобы Израиль не мог гордиться предо Мной, будто его спасла его собственная сила, <verse eid="JDG 7:2"/><verse number="3" style="v" sid="JDG 7:3"/>объяви воинам: «Всякий, кто боится и трепещет, пусть уходит домой и оставит гору Галаад».</para>
+  <para style="p" vid="JDG 7:3">Двадцать две тысячи человек ушло, а десять тысяч осталось.<verse eid="JDG 7:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 7:4"/>Господь сказал Гедеону:</para>
+  <para style="p" vid="JDG 7:4">– Воинов все еще слишком много. Отведи их к воде, и там Я испытаю их для тебя. О ком Я скажу тебе: «Этот пойдет с тобой», тот пойдет; а о ком скажу: «Этот с тобой не пойдет», тот не пойдет.<verse eid="JDG 7:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="JDG 7:5"/>Гедеон отвел воинов к воде. Там Господь сказал ему:</para>
+  <para style="p" vid="JDG 7:5">– Отдели тех, кто лакает воду языком, как собака, от тех, кто встал на колени, чтобы пить.<verse eid="JDG 7:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="JDG 7:6"/>Триста воинов лакали воду языком, поднося воду ко рту руками, а все остальные, чтобы напиться, встали на колени.<verse eid="JDG 7:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="JDG 7:7"/>Господь сказал Гедеону:</para>
+  <para style="p" vid="JDG 7:7">– Тремя сотнями воинов, которые лакали, Я спасу вас и отдам мадианитян в ваши руки. Все остальные пусть идут домой.<verse eid="JDG 7:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 7:8"/>Гедеон отпустил всех остальных израильтян по шатрам, но оставил триста воинов, которым достались запасы пищи и боевые рога ушедших.</para>
+  <para style="p" vid="JDG 7:8">А лагерь мадианитян находился внизу, в долине. <verse eid="JDG 7:8"/><verse number="9" style="v" sid="JDG 7:9"/>В ту же ночь Господь сказал Гедеону:</para>
+  <para style="p" vid="JDG 7:9">– Встань, напади на лагерь, потому что Я отдам его в твои руки. <verse eid="JDG 7:9"/><verse number="10" style="v" sid="JDG 7:10"/>Если ты боишься напасть, спустись к лагерю вместе со своим слугою Фурой <verse eid="JDG 7:10"/><verse number="11" style="v" sid="JDG 7:11"/>и послушай, что они говорят. Это придаст тебе смелости.</para>
+  <para style="p" vid="JDG 7:11">Тогда он и его слуга Фура спустились к сторожевым заставам лагеря. <verse eid="JDG 7:11"/><verse number="12" style="v" sid="JDG 7:12"/>Мадианитяне, амаликитяне и другие восточные народы наводнили долину, словно саранча. Их верблюдов было так много, как песчинок на морском берегу.<verse eid="JDG 7:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="JDG 7:13"/>Когда Гедеон пришел, один человек рассказывал другу свой сон:</para>
+  <para style="p" vid="JDG 7:13">– Мне снился, – говорил он, – круглый ячменный хлеб, который катился в мадианский лагерь. Прикатившись к шатру, он ударил в него так, что шатер опрокинулся и рухнул.<verse eid="JDG 7:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="JDG 7:14"/>Его друг ответил:</para>
+  <para style="p" vid="JDG 7:14">– Это не что иное, как меч израильтянина Гедеона, сына Иоаша. Бог отдал мадианитян и весь лагерь в его руки.<verse eid="JDG 7:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="JDG 7:15"/>Когда Гедеон услышал сон и его толкование, он поклонился Богу. Он возвратился в израильский лагерь и сказал:</para>
+  <para style="p" vid="JDG 7:15">– Вставайте! Господь отдал в наши руки лагерь мадианитян.<verse eid="JDG 7:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JDG 7:16"/>Разделив триста воинов на три отряда, он дал всем им в руки рога и пустые сосуды с факелами внутри.<verse eid="JDG 7:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="JDG 7:17"/>– Смотрите на меня, – сказал он им, – и делайте, как я. Когда я доберусь до края лагеря, делайте то же, что и я. <verse eid="JDG 7:17"/><verse number="18" style="v" sid="JDG 7:18"/>Когда я и все, кто со мною, затрубим в наши рога, тогда и вы со всех сторон лагеря трубите в свои и кричите: «За Господа и за Гедеона!».<verse eid="JDG 7:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="JDG 7:19"/>Гедеон и с ним сто воинов добрались до края лагеря в начале средней стражи<note caller="+" style="f"><char style="fr" closed="false">7:19 </char><char style="ft" closed="false">В ветхозаветный период ночь, согласно военному обычаю, делилась на три отрезка времени, называемых стражами. Первая, вечерняя стража, длилась примерно с 18 до 22 часов; средняя, или ночная стража, – с 22 до 2 часов; и третья, утренняя, – с 2 до 6 часов утра. В эпоху Нового Завета было принято греко-римское деление ночи на четыре стражи: вечер (с 18 до 21 час.), полночь (с 21 до 24 час.), пение петухов (с 24 до 3 час.) и утро (с 3 до 6 час.).</char></note>, сразу же после того, как сменили часовых. Они затрубили в рога и разбили кувшины, которые были у них в руках. <verse eid="JDG 7:19"/><verse number="20" style="v" sid="JDG 7:20"/>Тогда все три отряда затрубили в рога и разбили кувшины. Держа в левой руке факелы, а в правой рога, в которые они трубили, они закричали:</para>
+  <para style="p" vid="JDG 7:20">– Меч за Господа и за Гедеона!<verse eid="JDG 7:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="JDG 7:21"/>Каждый человек стоял на своем месте вокруг лагеря, а все мадианитяне метались, крича на бегу.<verse eid="JDG 7:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="JDG 7:22"/>Когда затрубили триста рогов, Господь сделал так, что все, кто был в лагере, обратили свои мечи друг на друга. Войско бежало до самой Бет-Шитты к Церере, до самой границы Авел-Мехолы близ Таббата. <verse eid="JDG 7:22"/><verse number="23" style="v" sid="JDG 7:23"/>Израильтяне из родов Неффалима, Асира и из всего рода Манассии погнались за мадианитянами. <verse eid="JDG 7:23"/><verse number="24" style="v" sid="JDG 7:24"/>Гедеон послал вестников по всем нагорьям Ефрема:</para>
+  <para style="p" vid="JDG 7:24">– Спускайтесь с гор навстречу мадианитянам и захватите прежде них переправы через реки до самой Бет-Вары, а также через Иордан.</para>
+  <para style="p" vid="JDG 7:24">Все ефремиты собрались и захватили переправы через Иордан и через реки до самой Бет-Вары. <verse eid="JDG 7:24"/><verse number="25" style="v" sid="JDG 7:25"/>Еще они пленили двух мадианских вождей, Орива и Зива. Они убили Орива у скалы Орива, а Зива в давильне Зива, когда преследовали мадианитян. Головы Орива и Зива они принесли Гедеону, который находился у Иордана.<verse eid="JDG 7:25"/></para>
+  <chapter eid="JDG 7"/>
+  <chapter number="8" style="c" sid="JDG 8"/>
+  <para style="s1">Зевах и Салман</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 8:1"/>Ефремиты сказали Гедеону:</para>
+  <para style="p" vid="JDG 8:1">– Почему ты так обошелся с нами? Почему ты не позвал нас, когда шел сражаться с мадианитянами?</para>
+  <para style="p" vid="JDG 8:1">Они сильно бранили его. <verse eid="JDG 8:1"/><verse number="2" style="v" sid="JDG 8:2"/>Но он ответил им:</para>
+  <para style="p" vid="JDG 8:2">– Что такого я совершил по сравнению с вами? Разве виноград, который добирал Ефрем не лучше, чем весь урожай <char style="add">моего клана, клана</char> Авиезера? <verse eid="JDG 8:2"/><verse number="3" style="v" sid="JDG 8:3"/>Бог отдал в ваши руки мадианских вождей Орива и Зива. Что же такого я мог сделать, чтобы сравниться с вами?</para>
+  <para style="p" vid="JDG 8:3">Когда он сказал им это, их негодование утихло.<verse eid="JDG 8:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 8:4"/>Гедеон и триста воинов, которые были с ним, утомились, но, продолжали погоню. Они пришли к Иордану и переправились через него. <verse eid="JDG 8:4"/><verse number="5" style="v" sid="JDG 8:5"/>Он сказал жителям Суккота:</para>
+  <para style="p" vid="JDG 8:5">– Дайте моим воинам хлеба; они утомлены, а я все еще преследую мадианских царей Зеваха и Салмана.<verse eid="JDG 8:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="JDG 8:6"/>Но правители Суккота ответили:</para>
+  <para style="p" vid="JDG 8:6">– Разве Зевах и Салман уже в твоих руках, чтобы нам давать хлеба твоим воинам?<verse eid="JDG 8:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="JDG 8:7"/>Гедеон ответил:</para>
+  <para style="p" vid="JDG 8:7">– За это, когда Господь отдаст в мои руки Зеваха и Салмана, я растерзаю вашу плоть пустынным терновником и шиповником.<verse eid="JDG 8:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 8:8"/>Оттуда он поднялся к Пениэлу и просил того же, но жители Пениэла ответили так же, как и жители Суккота. <verse eid="JDG 8:8"/><verse number="9" style="v" sid="JDG 8:9"/>И он сказал жителям Пениэла:</para>
+  <para style="p" vid="JDG 8:9">– Когда я вернусь с победой, я разрушу эту башню.<verse eid="JDG 8:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="JDG 8:10"/>Зевах и Салман были в Каркоре с войском примерно в пятнадцать тысяч воинов – все, что осталось от войск восточных народов, всего пало сто двадцать тысяч человек, носящих оружие. <verse eid="JDG 8:10"/><verse number="11" style="v" sid="JDG 8:11"/>Гедеон поднялся по караванному пути восточнее Новаха и Иогбеги и напал на войско врасплох. <verse eid="JDG 8:11"/><verse number="12" style="v" sid="JDG 8:12"/>Зевах и Салман, два мадианских царя, бежали, но он погнался за ними, захватил их и поразил ужасом все их войско.<verse eid="JDG 8:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="JDG 8:13"/>Когда Гедеон, сын Иоаша, вернулся с битвы при возвышенности Херес, <verse eid="JDG 8:13"/><verse number="14" style="v" sid="JDG 8:14"/>он захватил юношу из Суккота, допросил его, и юноша написал ему имена семидесяти семи правителей и старейшин Суккота. <verse eid="JDG 8:14"/><verse number="15" style="v" sid="JDG 8:15"/>Тогда Гедеон пришел и сказал жителям Суккота:</para>
+  <para style="p" vid="JDG 8:15">– Вот Зевах и Салман, из-за которых вы издевались надо мной, говоря: «Разве Зевах и Салман уже в твоих руках, чтобы нам давать хлеба твоим утомленным воинам?»<verse eid="JDG 8:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JDG 8:16"/>Он взял старейшин города и преподал жителям Суккота урок, наказав их пустынным терновником и шиповником. <verse eid="JDG 8:16"/><verse number="17" style="v" sid="JDG 8:17"/>Еще он разрушил башню Пениэла и перебил жителей этого города.<verse eid="JDG 8:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="JDG 8:18"/>После этого он спросил Зеваха и Салмана:</para>
+  <para style="p" vid="JDG 8:18">– Каковы были те, кого вы убили на Фаворе?</para>
+  <para style="p" vid="JDG 8:18">– Они были, как ты, – ответили они, – каждый из них выглядел, как царский сын.<verse eid="JDG 8:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="JDG 8:19"/>Гедеон сказал:</para>
+  <para style="p" vid="JDG 8:19">– Это были мои братья, сыновья моей матери. Верно, как и то, что Господь жив, если бы вы пощадили их, я сохранил бы вам жизнь.<verse eid="JDG 8:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="JDG 8:20"/>Повернувшись к Иеферу, своему старшему сыну, он сказал:</para>
+  <para style="p" vid="JDG 8:20">– Подойди и убей их!</para>
+  <para style="p" vid="JDG 8:20">Но Иефер не вытащил меча, потому что он был еще мальчик и боялся.<verse eid="JDG 8:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="JDG 8:21"/>Зевах и Салман сказали:</para>
+  <para style="p" vid="JDG 8:21">– Подойди и убей нас сам. Каков человек, такова и его сила.</para>
+  <para style="p" vid="JDG 8:21">Гедеон подошел и убил Зеваха и Салмана, и забрал украшения<note caller="+" style="f"><char style="fr" closed="false">8:21 </char><char style="ft" closed="false">Археологи нашли на Ближнем Востоке древние украшения в форме полумесяца. Их носили женщины (см. <char style="xt"><ref loc="ISA 3:18">Ис. 3:18</ref></char>) и цари (см. ст. 26), ими наряжали верблюдов. Для многих древних женщин эти изделия служили не только украшением, но и, как они верили под влиянием язычества, приносили им плодовитость. Кроме того, люди носили их как оберег от сглаза, что указывает на недостаток их веры в защиту Бога, и поэтому они запрещаются Священным Писанием (см. <char style="xt"><ref loc="GEN 35:4">Быт. 35:4</ref> со сноской</char>).</char></note>, которые были на шеях их верблюдов.<verse eid="JDG 8:21"/></para>
+  <para style="s1">Гедеонов эфод</para>
+  <para style="p">
+    <verse number="22" style="v" sid="JDG 8:22"/>Израильтяне сказали Гедеону:</para>
+  <para style="p" vid="JDG 8:22">– Правь нами – ты, и твой сын, и твой внук, – ведь ты спас нас от руки мадианитян.<verse eid="JDG 8:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="JDG 8:23"/>Но Гедеон сказал им:</para>
+  <para style="p" vid="JDG 8:23">– Я не буду править вами, и мой сын не будет править вами. Править вами будет Господь.<verse eid="JDG 8:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="JDG 8:24"/>Затем Гедеон сказал им:</para>
+  <para style="p" vid="JDG 8:24">– Я прошу у вас одного: пусть каждый из вас даст мне по серьге из своей доли добычи.</para>
+  <para style="p" vid="JDG 8:24">(У врагов<note caller="+" style="f"><char style="fr" closed="false">8:24 </char><char style="ft" closed="false">Букв.: «У них».</char></note> были золотые серьги, потому что они были измаильтянами.)<verse eid="JDG 8:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="JDG 8:25"/>Они ответили:</para>
+  <para style="p" vid="JDG 8:25">– Охотно.</para>
+  <para style="p" vid="JDG 8:25">Расстелив одежду, каждый бросил в нее по серьге из своей добычи. <verse eid="JDG 8:25"/><verse number="26" style="v" sid="JDG 8:26"/>Золотые серьги, которых он попросил, весили тысячу семьсот шекелей<note caller="+" style="f"><char style="fr" closed="false">8:26 </char><char style="ft" closed="false">Около 19,5 кг.</char></note>, (это не считая украшений, подвесок и пурпурных одежд, которые носили мадианские цари, и цепочек, которые были на шеях у их верблюдов). <verse eid="JDG 8:26"/><verse number="27" style="v" sid="JDG 8:27"/>Гедеон сделал из золота эфод<note caller="+" style="f"><char style="fr" closed="false">8:27 </char><char style="ft" closed="false">Эфод – иногда это своего рода передник, бывший частью облачения священника при исполнении им его обязанностей (см. <char style="xt"><ref loc="EXO 28:6-30">Исх. 28:6-30</ref></char>), а иногда, объект языческого культа, связанный с идолами (см. также <char style="xt"><ref loc="JDG 17:5">17:5</ref>; <ref loc="JDG 18:14">18:14</ref>, <ref loc="JDG 18:17">17</ref></char>).</char></note>, который оставил в Офре, своем городе. Все израильтяне начали распутничать, поклоняясь эфоду, и так он стал западней для Гедеона и его семьи.<verse eid="JDG 8:27"/></para>
+  <para style="s1">Смерть Гедеона</para>
+  <para style="p">
+    <verse number="28" style="v" sid="JDG 8:28"/>Мадиан смирился перед израильтянами и больше уже не поднимал головы. Пока был жив Гедеон, земля покоилась в мире сорок лет.<verse eid="JDG 8:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="JDG 8:29"/>Еруббаал, сын Иоаша, вернулся домой. <verse eid="JDG 8:29"/><verse number="30" style="v" sid="JDG 8:30"/>У него было семьдесят сыновей потому, что у него было много жен. <verse eid="JDG 8:30"/><verse number="31" style="v" sid="JDG 8:31"/>Его наложница, которая жила в городе Шехеме, также родила ему сына, которого он назвал Авимелехом. <verse eid="JDG 8:31"/><verse number="32" style="v" sid="JDG 8:32"/>Гедеон, сын Иоаша, умер в глубокой старости и был похоронен в гробнице своего отца в Офре, в земле клана авиезеритов.<verse eid="JDG 8:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="JDG 8:33"/>Как только Гедеон умер, израильтяне опять начали распутничать, поклоняясь Баалам. Они поставили своим богом Баал-Берита и <verse eid="JDG 8:33"/><verse number="34" style="v" sid="JDG 8:34"/>не помнили о Господе, своем Боге, Который избавил их от рук окружавших их врагов. <verse eid="JDG 8:34"/><verse number="35" style="v" sid="JDG 8:35"/>Они забыли и о верности семье Еруббаала (он же Гедеон), и о всех благодеяниях, которые он сделал Израилю.<verse eid="JDG 8:35"/></para>
+  <chapter eid="JDG 8"/>
+  <chapter number="9" style="c" sid="JDG 9"/>
+  <para style="s1">Авимелех</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 9:1"/>Авимелех, сын Еруббаала, пришел к братьям своей матери в Шехем и сказал им и всему клану своей матери:<verse eid="JDG 9:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="JDG 9:2"/>– Спросите всех жителей Шехема: «Что для вас лучше, чтобы вами правили все семьдесят сыновей Еруббаала или всего лишь один?» Помните, что я – ваша плоть и кровь.<verse eid="JDG 9:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="JDG 9:3"/>Когда братья его матери пересказали все это жителям Шехема, они склонились на сторону Авимелеха, потому что говорили: «Он наш брат». <verse eid="JDG 9:3"/><verse number="4" style="v" sid="JDG 9:4"/>Они дали ему семьдесят шекелей<note caller="+" style="f"><char style="fr" closed="false">9:4 </char><char style="ft" closed="false">Около 0,8 кг.</char></note> серебра из храма Баал-Берита, и Авимелех нанял на них праздных и безрассудных людей, которые пошли за ним. <verse eid="JDG 9:4"/><verse number="5" style="v" sid="JDG 9:5"/>Он пришел в дом своего отца в Офре и убил семьдесят своих братьев, сыновей Еруббаала, на одном камне. Но Иотам, самый младший сын Еруббаала, спрятался и спасся. <verse eid="JDG 9:5"/><verse number="6" style="v" sid="JDG 9:6"/>Все жители Шехема и Бет-Милло собрались у дуба в Шехеме и провозгласили Авимелеха царем.<verse eid="JDG 9:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="JDG 9:7"/>Когда об этом рассказали Иотаму, он поднялся на вершину горы Гаризим и закричал им:</para>
+  <para style="p" vid="JDG 9:7">– Послушайте меня, жители Шехема, чтобы и Бог послушал вас! <verse eid="JDG 9:7"/><verse number="8" style="v" sid="JDG 9:8"/>Пошли однажды деревья помазать над собою царя. Они сказали оливе: «Царствуй над нами». <verse eid="JDG 9:8"/><verse number="9" style="v" sid="JDG 9:9"/>Но олива сказала: «Бросить ли мне свое масло – богов и людей им славят, – чтобы править деревьями?» <verse eid="JDG 9:9"/><verse number="10" style="v" sid="JDG 9:10"/>Инжиру сказали деревья: «Ты приди, царствуй над нами». <verse eid="JDG 9:10"/><verse number="11" style="v" sid="JDG 9:11"/>Но сказал им инжир: «Бросить ли мне свой плод, такой хороший и вкусный, чтобы править деревьями?» <verse eid="JDG 9:11"/><verse number="12" style="v" sid="JDG 9:12"/>Сказали деревья лозе виноградной: «Ты приди, царствуй над нами». <verse eid="JDG 9:12"/><verse number="13" style="v" sid="JDG 9:13"/>Но лоза им сказала: «Бросить ли мне свой сок – богов и людей веселит он, – чтобы править деревьями?» <verse eid="JDG 9:13"/><verse number="14" style="v" sid="JDG 9:14"/>Тогда терновнику сказали деревья: «Ты приди, царствуй над нами». <verse eid="JDG 9:14"/><verse number="15" style="v" sid="JDG 9:15"/>И терновник ответил деревьям: «Если вы и вправду хотите помазать меня над собою царем, то приходите, в тени моей покойтесь; но если нет, то пусть выйдет из терновника пламя и пожрет ливанские кедры».<verse eid="JDG 9:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JDG 9:16"/>Итак, честно ли и достойно ли вы поступили, провозгласив Авимелеха царем? По совести ли вы поступили с Еруббаалом и его семьей, так ли обошлись с ним, как он того заслуживает? <verse eid="JDG 9:16"/><verse number="17" style="v" sid="JDG 9:17"/>Мой отец сражался за вас, рисковал жизнью, чтобы избавить вас от руки Мадиана <verse eid="JDG 9:17"/><verse number="18" style="v" sid="JDG 9:18"/>(но сегодня вы восстали против семьи моего отца, убили семьдесят его сыновей на одном камне и сделали Авимелеха, сына его рабыни, царем над жителями Шехема, потому что он ваш брат). <verse eid="JDG 9:18"/><verse number="19" style="v" sid="JDG 9:19"/>Если сегодня вы поступили с Еруббаалом и его семьей честно и достойно, то радуйтесь за Авимелеха, и пусть он радуется за вас! <verse eid="JDG 9:19"/><verse number="20" style="v" sid="JDG 9:20"/>Но если нет, то пусть из Авимелеха выйдет пламя и пожрет вас, жители Шехема и Бет-Милло, и пусть из вас, жители Шехема и Бет-Милло, выйдет пламя и пожрет Авимелеха!<verse eid="JDG 9:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="JDG 9:21"/>Иотам бежал и поселился в городе Беэре, потому что боялся своего брата Авимелеха.<verse eid="JDG 9:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="JDG 9:22"/>Авимелех был судьей в Израиле три года. <verse eid="JDG 9:22"/><verse number="23" style="v" sid="JDG 9:23"/>Бог послал злой дух между Авимелехом и жителями Шехема, и жители Шехема стали поступать с Авимелехом вероломно. <verse eid="JDG 9:23"/><verse number="24" style="v" sid="JDG 9:24"/>Это произошло, чтобы жестокость с семьюдесятью сыновьями Еруббаала была наказана<note caller="+" style="f"><char style="fr" closed="false">9:24 </char><char style="ft" closed="false">Букв.: «пришла».</char></note>, и кровь их легла на их брата Авимелеха и на жителей Шехема, которые помогли ему убить своих братьев. <verse eid="JDG 9:24"/><verse number="25" style="v" sid="JDG 9:25"/>Жители Шехема из вражды к нему устраивали засады на горных вершинах, чтобы грабить каждого проходящего мимо, и об этом было донесено Авимелеху.<verse eid="JDG 9:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="JDG 9:26"/>В Шехем пришел Гаал, сын Эведа, вместе со своими братьями, и жители Шехема поверили ему. <verse eid="JDG 9:26"/><verse number="27" style="v" sid="JDG 9:27"/>Они вышли в поле, собрали виноград, давили его и праздновали. Они пошли в храм своего бога, ели и пили и проклинали Авимелеха.<verse eid="JDG 9:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="JDG 9:28"/>Гаал, сын Эведа, сказал:</para>
+  <para style="p" vid="JDG 9:28">– Кто такой Авимелех и кто такие мы <char style="add">в</char> Шехеме, чтобы подчиняться ему? Разве он не сын Еруббаала, и разве не Зевул его наместник? Служите людям Хамора, отца Шехема! Зачем нам служить Авимелеху? <verse eid="JDG 9:28"/><verse number="29" style="v" sid="JDG 9:29"/>Если бы только эти люди были у меня под началом! Тогда я избавился бы от Авимелеха. Я бы сказал<note caller="+" style="f"><char style="fr" closed="false">9:29 </char><char style="ft" closed="false">Так в одном из древних переводов; в нормативном еврейском тексте: «И он сказал».</char></note> ему: «Собери свое войско и выходи!»<verse eid="JDG 9:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="JDG 9:30"/>Когда Зевул, правитель города, услышал слова Гаала, сына Эведа, он очень разгневался. <verse eid="JDG 9:30"/><verse number="31" style="v" sid="JDG 9:31"/>Он тайно послал вестников к Авимелеху, чтобы сказать ему:</para>
+  <para style="p" vid="JDG 9:31">– Гаал, сын Эведа, и его братья пришли в Шехем и возмущают город против тебя. <verse eid="JDG 9:31"/><verse number="32" style="v" sid="JDG 9:32"/>Итак, приходи ночью со своими воинами и устрой в поле засаду. <verse eid="JDG 9:32"/><verse number="33" style="v" sid="JDG 9:33"/>А утром, на рассвете, напади на город. Когда Гаал и его воины выйдут против тебя, делай с ними все, что можешь.<verse eid="JDG 9:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="JDG 9:34"/>Авимелех вместе со всеми своими воинами отправился в путь, и они залегли в засаду у Шехема четырьмя отрядами. <verse eid="JDG 9:34"/><verse number="35" style="v" sid="JDG 9:35"/>А Гаал, сын Эведа, вышел и стоял у входа в городские ворота как раз тогда, когда Авимелех и его воины выходили из засады.<verse eid="JDG 9:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="JDG 9:36"/>Увидев их, Гаал сказал Зевулу:</para>
+  <para style="p" vid="JDG 9:36">– Гляди, с горных вершин спускаются люди!</para>
+  <para style="p" vid="JDG 9:36">Зевул ответил:</para>
+  <para style="p" vid="JDG 9:36">– Тени от гор кажутся тебе людьми.<verse eid="JDG 9:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="JDG 9:37"/>Но Гаал вновь сказал:</para>
+  <para style="p" vid="JDG 9:37">– Гляди, с возвышенности<note caller="+" style="f"><char style="fr" closed="false">9:37 </char><char style="ft" closed="false">Евр.: «табур-эрец», что переводится как «пуп земли». Возможно, это была гора Гаризим; смысл этого места в еврейском тексте неясен.</char></note> спускаются люди, и один отряд идет со стороны дуба Колдунов<note caller="+" style="f"><char style="fr" closed="false">9:37 </char><char style="ft" closed="false">Евр.: «элон-меоненим».</char></note>.<verse eid="JDG 9:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="JDG 9:38"/>Зевул сказал ему:</para>
+  <para style="p" vid="JDG 9:38">– Где твоя похвальба<note caller="+" style="f"><char style="fr" closed="false">9:38 </char><char style="ft" closed="false">Букв.: «твой рот».</char></note>, ты, говоривший: «Кто такой Авимелех, чтобы нам ему подчиняться?» Разве не этих людей ты высмеивал? Выходи же теперь и сразись с ними!<verse eid="JDG 9:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="JDG 9:39"/>Гаал пошел во главе жителей Шехема и сразился с Авимелехом. <verse eid="JDG 9:39"/><verse number="40" style="v" sid="JDG 9:40"/>Авимелех погнался за ним, и он побежал от него. Многие пали ранеными у самого входа в ворота. <verse eid="JDG 9:40"/><verse number="41" style="v" sid="JDG 9:41"/>Авимелех расположился в Аруме, а Зевул выгнал Гаала и его братьев из Шехема.<verse eid="JDG 9:41"/></para>
+  <para style="p">
+    <verse number="42" style="v" sid="JDG 9:42"/>На следующий день жители Шехема вышли в поле, и об этом донесли Авимелеху. <verse eid="JDG 9:42"/><verse number="43" style="v" sid="JDG 9:43"/>Он взял своих воинов, разделил их на три отряда и устроил в поле засаду. Увидев людей, которые выходили из города, он поднялся и напал на них. <verse eid="JDG 9:43"/><verse number="44" style="v" sid="JDG 9:44"/>Авимелех и отряды, которые были с ним, поспешили занять место у входа в городские ворота, а два отряда ринулись на тех, кто был в поле, и стали убивать их. <verse eid="JDG 9:44"/><verse number="45" style="v" sid="JDG 9:45"/>Весь день Авимелех воевал с городом, пока не взял его и не перебил его жителей. После этого он сровнял город с землей и засыпал это место солью.<verse eid="JDG 9:45"/></para>
+  <para style="p">
+    <verse number="46" style="v" sid="JDG 9:46"/>Услышав об этом, все жители Шехемской башни вошли в убежище храма Эл-Берита<note caller="+" style="f"><char style="fr" closed="false">9:46 </char><char style="ft" closed="false">То есть «завет бога» – другое название Баал-Берит (см. ст. 4).</char></note>. <verse eid="JDG 9:46"/><verse number="47" style="v" sid="JDG 9:47"/>Когда Авимелеху донесли, что они собрались там, <verse eid="JDG 9:47"/><verse number="48" style="v" sid="JDG 9:48"/>он вместе со всеми своими воинами поднялся на гору Цалмон. Он взял топор, срубил несколько веток и положил их на плечи. Затем он приказал воинам, которые были с ним:</para>
+  <para style="p" vid="JDG 9:48">– Быстро делайте то же, что и я.<verse eid="JDG 9:48"/></para>
+  <para style="p">
+    <verse number="49" style="v" sid="JDG 9:49"/>И все его воины нарубили веток и пошли за Авимелехом. Они сложили их у убежища и подожгли его вместе с теми, кто в нем был. И все, кто был в Шехемской башне, около тысячи мужчин и женщин, погибли.<verse eid="JDG 9:49"/></para>
+  <para style="p">
+    <verse number="50" style="v" sid="JDG 9:50"/>Затем Авимелех пошел к Тевецу, осадил его и захватил. <verse eid="JDG 9:50"/><verse number="51" style="v" sid="JDG 9:51"/>Но в городе была крепкая башня, и туда бежали все мужчины и женщины – все жители города. Они заперлись изнутри и поднялись на крышу башни. <verse eid="JDG 9:51"/><verse number="52" style="v" sid="JDG 9:52"/>Авимелех пришел к башне и напал на нее, но когда он приблизился к входу, чтобы поджечь ее, <verse eid="JDG 9:52"/><verse number="53" style="v" sid="JDG 9:53"/>одна женщина сбросила ему на голову обломок жернова и проломила ему череп.<verse eid="JDG 9:53"/></para>
+  <para style="p">
+    <verse number="54" style="v" sid="JDG 9:54"/>Он тотчас же подозвал своего оруженосца и сказал ему:</para>
+  <para style="p" vid="JDG 9:54">– Вытащи меч и убей меня, чтобы не говорили обо мне: «Его убила женщина».</para>
+  <para style="p" vid="JDG 9:54">Слуга пронзил его, и он умер. <verse eid="JDG 9:54"/><verse number="55" style="v" sid="JDG 9:55"/>Увидев, что Авимелех умер, израильтяне разошлись по домам.<verse eid="JDG 9:55"/></para>
+  <para style="p">
+    <verse number="56" style="v" sid="JDG 9:56"/>Так Бог воздал за зло, которое Авимелех сделал своему отцу, убив семьдесят своих братьев. <verse eid="JDG 9:56"/><verse number="57" style="v" sid="JDG 9:57"/>Еще Бог воздал за все их зло жителям Шехема. Их постигло проклятие Иотама, сына Еруббаала.<verse eid="JDG 9:57"/></para>
+  <chapter eid="JDG 9"/>
+  <chapter number="10" style="c" sid="JDG 10"/>
+  <para style="s1">Тола</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 10:1"/>После Авимелеха спасать Израиль поднялся Тола, сын Фуи, сына Додо, из рода Иссахара. Он жил в Шамире, в нагорьях Ефрема. <verse eid="JDG 10:1"/><verse number="2" style="v" sid="JDG 10:2"/>Он был судьей в Израиле двадцать три года; после этого он умер и был похоронен в Шамире.<verse eid="JDG 10:2"/></para>
+  <para style="s1">Иаир</para>
+  <para style="p">
+    <verse number="3" style="v" sid="JDG 10:3"/>После него поднялся Иаир из Галаада, который был судьей в Израиле двадцать два года. <verse eid="JDG 10:3"/><verse number="4" style="v" sid="JDG 10:4"/>У него было тридцать сыновей, которые ездили на тридцати ослах. У них было тридцать городов в Галааде, которые и по сегодняшний день называются селениями Иаира<note caller="+" style="f"><char style="fr" closed="false">10:4 </char><char style="ft" closed="false">Евр.: «хаввот-иаир».</char></note>. <verse eid="JDG 10:4"/><verse number="5" style="v" sid="JDG 10:5"/>Когда Иаир умер, его похоронили в Камоне.<verse eid="JDG 10:5"/></para>
+  <para style="s1">Идолопоклонство израильтян</para>
+  <para style="p">
+    <verse number="6" style="v" sid="JDG 10:6"/>Израильтяне вновь стали творить зло в глазах Господа. Они служили Баалам и Астартам, богам Арама, богам Сидона, богам Моава, богам аммонитян и богам филистимлян, а Господа оставили и не служили Ему. <verse eid="JDG 10:6"/><verse number="7" style="v" sid="JDG 10:7"/>Господь разгневался на Израиль и отдал их в руки филистимлян и аммонитян, <verse eid="JDG 10:7"/><verse number="8" style="v" sid="JDG 10:8"/>которые в тот год притесняли и угнетали израильтян. Восемнадцать лет они угнетали израильтян на восточной стороне Иордана в Галааде, в земле аморреев. <verse eid="JDG 10:8"/><verse number="9" style="v" sid="JDG 10:9"/>Аммонитяне тоже переправились через Иордан, чтобы воевать с Иудой, Вениамином и домом Ефрема; израильтяне были в большой беде. <verse eid="JDG 10:9"/><verse number="10" style="v" sid="JDG 10:10"/>И израильтяне воззвали к Господу:</para>
+  <para style="p" vid="JDG 10:10">– Мы согрешили против Тебя, оставив нашего Бога и служа Баалам.<verse eid="JDG 10:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="JDG 10:11"/>Господь ответил им:</para>
+  <para style="p" vid="JDG 10:11">– Когда египтяне, аморреи, аммонитяне, филистимляне, <verse eid="JDG 10:11"/><verse number="12" style="v" sid="JDG 10:12"/>сидоняне, амаликитяне и маонитяне<note caller="+" style="f"><char style="fr" closed="false">10:12 </char><char style="ft" closed="false">Или: «мадианитяне».</char></note> угнетали вас и вы взывали ко Мне о помощи, то разве Я не спасал вас от их рук? <verse eid="JDG 10:12"/><verse number="13" style="v" sid="JDG 10:13"/>Но вы оставили Меня и служили другим богам, и Я не стану больше спасать вас. <verse eid="JDG 10:13"/><verse number="14" style="v" sid="JDG 10:14"/>Идите и взывайте к другим богам, которых вы избрали. Пусть они спасают вас в беде!<verse eid="JDG 10:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="JDG 10:15"/>Но израильтяне сказали Господу:</para>
+  <para style="p" vid="JDG 10:15">– Мы согрешили. Сделай с нами все, что Тебе угодно, но сегодня спаси нас.<verse eid="JDG 10:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JDG 10:16"/>Они избавились от чужеземных богов и стали служить Господу. И Он не мог больше видеть, как Израиль страдает.<verse eid="JDG 10:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="JDG 10:17"/>Когда аммонитяне приготовились к войне и поставили лагерь в Галааде, израильтяне собрались и поставили лагерь в Мицпе. <verse eid="JDG 10:17"/><verse number="18" style="v" sid="JDG 10:18"/>А вожди жителей Галаада говорили друг другу:</para>
+  <para style="p" vid="JDG 10:18">– Всякий, кто начнет войну с аммонитянами, будет главой всех жителей Галаада.<verse eid="JDG 10:18"/></para>
+  <chapter eid="JDG 10"/>
+  <chapter number="11" style="c" sid="JDG 11"/>
+  <para style="s1">Иеффай покоряет аммонитян</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 11:1"/>Галаадитянин Иеффай был могучим воином. Его отцом был Галаад, а матерью – блудница. <verse eid="JDG 11:1"/><verse number="2" style="v" sid="JDG 11:2"/>Жена Галаада тоже родила ему сыновей, и когда они выросли, они выгнали Иеффая.</para>
+  <para style="p" vid="JDG 11:2">– Ты не будешь наследовать в нашей семье ничего, – сказали они ему, – потому что ты сын другой женщины.<verse eid="JDG 11:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="JDG 11:3"/>Иеффай убежал от своих братьев и поселился в земле Тов, где вокруг него собрались изгои, которые вместе с ним совершали набеги.<verse eid="JDG 11:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 11:4"/>Некоторое время спустя, когда аммонитяне пошли войной на Израиль, <verse eid="JDG 11:4"/><verse number="5" style="v" sid="JDG 11:5"/>старейшины Галаада пошли, чтобы привести Иеффая из земли Тов.<verse eid="JDG 11:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="JDG 11:6"/>– Приходи, – сказали они, – и будь нашим воеводой, чтобы нам воевать с аммонитянами.<verse eid="JDG 11:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="JDG 11:7"/>Иеффай сказал им:</para>
+  <para style="p" vid="JDG 11:7">– Разве не вы возненавидели и выгнали меня из дома моего отца? Зачем же вы приходите ко мне сейчас, когда вы в беде?<verse eid="JDG 11:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 11:8"/>Старейшины Галаада сказали ему:</para>
+  <para style="p" vid="JDG 11:8">– И все же мы обращаемся сейчас к тебе; пойдем с нами, чтобы воевать с аммонитянами, и ты будешь главой всех жителей Галаада.<verse eid="JDG 11:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="JDG 11:9"/>Иеффай ответил:</para>
+  <para style="p" vid="JDG 11:9">– Допустим, вы вернете меня, чтобы воевать с аммонитянами, и Господь отдаст их мне, – стану ли я и вправду вашим главой?<verse eid="JDG 11:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="JDG 11:10"/>Старейшины Галаада ответили:</para>
+  <para style="p" vid="JDG 11:10">– Господь свидетель между нами! Мы непременно сделаем, как ты говоришь.<verse eid="JDG 11:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="JDG 11:11"/>Иеффай пошел со старейшинами Галаада, и народ поставил его над собой вождем и воеводой. Иеффай повторил все свои слова перед Господом в Мицпе.<verse eid="JDG 11:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="JDG 11:12"/>Затем он отправил послов к царю аммонитян с вопросом:</para>
+  <para style="p" vid="JDG 11:12">– Что ты имеешь против меня, что напал на мою страну?<verse eid="JDG 11:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="JDG 11:13"/>Царь аммонитян ответил послам Иеффая:</para>
+  <para style="p" vid="JDG 11:13">– Когда Израиль шел из Египта, он захватил мою землю от реки Арнона до реки Яббока и до Иордана. Итак, верни ее добровольно.<verse eid="JDG 11:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="JDG 11:14"/>Иеффай еще раз отправил послов к царю аммонитян <verse eid="JDG 11:14"/><verse number="15" style="v" sid="JDG 11:15"/>сказать ему:</para>
+  <para style="pm" vid="JDG 11:15">– Вот что говорит Иеффай: Израиль не захватывал ни земель Моава, ни земель аммонитян. <verse eid="JDG 11:15"/><verse number="16" style="v" sid="JDG 11:16"/>Когда они шли из Египта, Израиль прошел через пустыню до Красного моря и пришел к городу Кадеш. <verse eid="JDG 11:16"/><verse number="17" style="v" sid="JDG 11:17"/>Израиль отправил послов к царю Эдома, говоря: «Позволь мне пройти через твою страну», но царь Эдома не стал слушать. Он посылал и к царю Моава, но и тот отказал. И Израиль оставался в Кадеше.<verse eid="JDG 11:17"/></para>
+  <para style="pm">
+    <verse number="18" style="v" sid="JDG 11:18"/>Затем он странствовал по пустыне, обошел земли Эдома и Моава, пришел к восточной стороне земель Моава и поставил лагерь на другой стороне Арнона. Он не вошел в землю Моава – Арнон и был границей моавитян.<verse eid="JDG 11:18"/></para>
+  <para style="pm">
+    <verse number="19" style="v" sid="JDG 11:19"/>Израиль отправил послов к Сигону, царю аморреев, который правил в Хешбоне, и сказал ему: «Позволь нам пройти через твою страну к себе». <verse eid="JDG 11:19"/><verse number="20" style="v" sid="JDG 11:20"/>Но Сигон не доверял Израилю и не дал пройти через свою землю. Он собрал всех своих воинов, разбил лагерь в Иахаце и напал на Израиль.<verse eid="JDG 11:20"/></para>
+  <para style="pm">
+    <verse number="21" style="v" sid="JDG 11:21"/>Тогда Господь, Бог Израиля, отдал Сигона и всех его воинов в руки израильтян, и они разбили их. Израиль овладел землей аморреев, которые жили в той стране, <verse eid="JDG 11:21"/><verse number="22" style="v" sid="JDG 11:22"/>захватив ее целиком, от Арнона до Яббока и от пустыни до Иордана<note caller="+" style="f"><char style="fr" closed="false">11:16-22 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="NUM 20:14-21">Чис. 20:14-21</ref>; <ref loc="NUM 21:21-32">21:21-32</ref></char>.</char></note>.<verse eid="JDG 11:22"/></para>
+  <para style="pm">
+    <verse number="23" style="v" sid="JDG 11:23"/>Итак, раз Господь, Бог Израиля, прогнал аморреев от Своего народа, Израиля, какое у тебя право владеть ею? <verse eid="JDG 11:23"/><verse number="24" style="v" sid="JDG 11:24"/>Разве тебе не довольно владеть тем, что дал тебе твой бог Кемош?<note caller="+" style="f"><char style="fr" closed="false">11:24 </char><char style="ft" closed="false">Кемош – божество из пантеона моавитян и аммонитян, в жертвы которому приносились люди.</char></note> А мы будем владеть всем, что дал нам Господь, наш Бог. <verse eid="JDG 11:24"/><verse number="25" style="v" sid="JDG 11:25"/>Чем ты лучше Валака, сына Циппора, царя Моава? Разве он когда-нибудь ссорился с Израилем или воевал с ним? <verse eid="JDG 11:25"/><verse number="26" style="v" sid="JDG 11:26"/>Израиль жил в Хешбоне, Ароере, прилегающих к ним поселениях и во всех городах по Арнону триста лет. Что же ты не захватил их за это время? <verse eid="JDG 11:26"/><verse number="27" style="v" sid="JDG 11:27"/>Я не провинился перед тобой, а ты причиняешь мне зло, идя на меня войной. Господь – судья. Пусть Он решит сегодня тяжбу между израильтянами и аммонитянами.<verse eid="JDG 11:27"/></para>
+  <para style="m">
+    <verse number="28" style="v" sid="JDG 11:28"/>Но царь аммонитян не послушал слов Иеффая.<verse eid="JDG 11:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="JDG 11:29"/>И Дух Господа сошел на Иеффая. Иеффай прошел через Галаад и Манассию, через Мицпу, что в Галааде, и оттуда двинулся на аммонитян. <verse eid="JDG 11:29"/><verse number="30" style="v" sid="JDG 11:30"/>Иеффай поклялся перед Господом:</para>
+  <para style="p" vid="JDG 11:30">– Если Ты отдашь аммонитян в мои руки, <verse eid="JDG 11:30"/><verse number="31" style="v" sid="JDG 11:31"/>то все, что выйдет из дверей моего дома мне навстречу, когда я вернусь с победой, будет принадлежать Господу, и я принесу это в жертву всесожжения.<verse eid="JDG 11:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="JDG 11:32"/>Иеффай переправился, чтобы сразиться с аммонитянами, и Господь отдал их в его руки. <verse eid="JDG 11:32"/><verse number="33" style="v" sid="JDG 11:33"/>Он опустошил двадцать городов от Ароера до предместий Миннита и до самого Авел-Керамима. Так Израиль покорил аммонитян.<verse eid="JDG 11:33"/></para>
+  <para style="p">
+    <verse number="34" style="v" sid="JDG 11:34"/>Когда Иеффай вернулся к себе домой в Мицпу, то кому же и было выйти ему навстречу, как не его дочери, танцующей под звуки бубнов! Она была его единственным ребенком. Кроме нее, у него не было больше ни сына, ни дочери. <verse eid="JDG 11:34"/><verse number="35" style="v" sid="JDG 11:35"/>Увидев ее, он разорвал на себе одежду и закричал:</para>
+  <para style="p" vid="JDG 11:35">– О! Моя дочь! Ты сразила меня! Ты стала причиной моего несчастья, ведь я дал Господу клятву, которую не могу нарушить.<verse eid="JDG 11:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="JDG 11:36"/>– Мой отец, – ответила она, – ты дал Господу слово. Сделай со мной то, что ты обещал, ведь Господь дал тебе отомстить твоим врагам, аммонитянам. <verse eid="JDG 11:36"/><verse number="37" style="v" sid="JDG 11:37"/>Но исполни одну мою просьбу, – сказала она. – Дай мне два месяца срока, чтобы мне пойти и погулять в горах, поплакать с моими подругами о том, что мне уже никогда не суждено выйти замуж.<verse eid="JDG 11:37"/></para>
+  <para style="p">
+    <verse number="38" style="v" sid="JDG 11:38"/>– Иди, – сказал он и отпустил ее на два месяца.</para>
+  <para style="p" vid="JDG 11:38">Она вместе с девушками пошла в горы и плакала о том, что ей уже никогда не суждено выйти замуж. <verse eid="JDG 11:38"/><verse number="39" style="v" sid="JDG 11:39"/>Когда же два месяца прошли, она вернулась к своему отцу, и он сделал с ней то, о чем поклялся. А она была девственницей.</para>
+  <para style="p" vid="JDG 11:39">Отсюда и происходит израильский обычай, <verse eid="JDG 11:39"/><verse number="40" style="v" sid="JDG 11:40"/>что каждый год молодые женщины Израиля выходят на четыре дня оплакивать дочь галаадитянина Иеффая.<verse eid="JDG 11:40"/></para>
+  <chapter eid="JDG 11"/>
+  <chapter number="12" style="c" sid="JDG 12"/>
+  <para style="s1">Иеффай и Ефрем</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 12:1"/>Ефремиты приготовились к битве, переправились к Цафону и сказали Иеффаю:</para>
+  <para style="p" vid="JDG 12:1">– Почему ты ходил воевать с аммонитянами, а нас с собой не позвал? Мы сожжем твой дом над тобой.<verse eid="JDG 12:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="JDG 12:2"/>Иеффай ответил:</para>
+  <para style="p" vid="JDG 12:2">– Я и мой народ были в сильной ссоре с аммонитянами, и хотя я звал вас, вы не спасли меня от их рук. <verse eid="JDG 12:2"/><verse number="3" style="v" sid="JDG 12:3"/>Когда я увидел, что вы не поможете, я рискнул жизнью и переправился, чтобы сразиться с аммонитянами, и Господь позволил мне одержать над ними победу. Что же вы пришли сегодня биться со мной?<verse eid="JDG 12:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 12:4"/>Иеффай собрал всех галаадитян и сразился с ефремитами. Галаадитяне разбили их, потому что ефремиты говорили:</para>
+  <para style="p" vid="JDG 12:4">– Вы, галаадитяне, отступники от Ефрема и Манассии.<verse eid="JDG 12:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="JDG 12:5"/>Галаадитяне перехватили на Иордане броды к Ефрему, и всякий раз, когда уцелевший ефремит говорил:</para>
+  <para style="p" vid="JDG 12:5">«Дайте мне переправиться», галаадитяне спрашивали его: «Ты ефремит?». Если он отвечал: «Нет», <verse eid="JDG 12:5"/><verse number="6" style="v" sid="JDG 12:6"/>они говорили: «Скажи „шибболет“». Если он говорил: «сибболет», – а ефремиты не могли произнести это слово правильно, – они хватали и убивали его у бродов на Иордане. В то время было убито сорок две тысячи ефремитов.<verse eid="JDG 12:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="JDG 12:7"/>Иеффай был судьей в Израиле шесть лет. Потом галаадитянин Иеффай умер и был похоронен в своем городе, что в Галааде<note caller="+" style="f"><char style="fr" closed="false">12:7 </char><char style="ft" closed="false">Так в одном из древних переводов; в нормативном еврейском тексте: «в городах Галаада».</char></note>.<verse eid="JDG 12:7"/></para>
+  <para style="s1">Ивцан, Елон и Авдон</para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 12:8"/>После него судьей в Израиле был Ивцан из Вифлеема. <verse eid="JDG 12:8"/><verse number="9" style="v" sid="JDG 12:9"/>У него было тридцать сыновей и тридцать дочерей. Он выдал дочерей замуж не в своем клане, и сыновьям нашел в жены тридцать девушек не из своего клана. Он был судьей в Израиле семь лет. <verse eid="JDG 12:9"/><verse number="10" style="v" sid="JDG 12:10"/>Потом Ивцан умер и был похоронен в Вифлееме.<verse eid="JDG 12:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="JDG 12:11"/>После него десять лет в Израиле был судьей завулонитянин Елон. <verse eid="JDG 12:11"/><verse number="12" style="v" sid="JDG 12:12"/>Потом Елон умер и был похоронен в Айялоне, что в земле Завулона.<verse eid="JDG 12:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="JDG 12:13"/>После него судей в Израиле был Авдон, сын Гиллела, из Пирафона. <verse eid="JDG 12:13"/><verse number="14" style="v" sid="JDG 12:14"/>У него было сорок сыновей и тридцать внуков, которые ездили на семидесяти ослах. Он был судьей в Израиле восемь лет. <verse eid="JDG 12:14"/><verse number="15" style="v" sid="JDG 12:15"/>Потом Авдон, сын Гиллела, умер и был похоронен в Пирафоне, что в Ефреме, в амаликитских нагорьях.<verse eid="JDG 12:15"/></para>
+  <chapter eid="JDG 12"/>
+  <chapter number="13" style="c" sid="JDG 13"/>
+  <para style="s1">Рождение Самсона</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 13:1"/>Израильтяне вновь стали творить зло в глазах Господа, и Господь отдал их в руки филистимлян на сорок лет.<verse eid="JDG 13:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="JDG 13:2"/>У одного человека из поселения Цоры по имени Маноах из клана данитян жена была бесплодна и не имела детей. <verse eid="JDG 13:2"/><verse number="3" style="v" sid="JDG 13:3"/>Ангел Господень явился ей и сказал:</para>
+  <para style="p" vid="JDG 13:3">– Ты бесплодна и не имеешь детей, но забеременеешь и родишь сына. <verse eid="JDG 13:3"/><verse number="4" style="v" sid="JDG 13:4"/>Итак, смотри, не пей ни вина, ни другого алкогольного напитка, и не ешь ничего <char style="add">ритуально</char> нечистого, <verse eid="JDG 13:4"/><verse number="5" style="v" sid="JDG 13:5"/>потому что ты забеременеешь и родишь сына. Его головы не коснется бритва, потому что мальчик с самого рождения будет назореем<note caller="+" style="f"><char style="fr" closed="false">13:5 </char><char style="ft" closed="false">Назорей – это слово означает «отделенный», «посвященный». Об обете назорейства см. <char style="xt"><ref loc="NUM 6:1-21">Чис. 6:1-21</ref></char>.</char></note> Богу. Именно он начнет спасать Израиль от рук филистимлян.<verse eid="JDG 13:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="JDG 13:6"/>Женщина пошла к своему мужу и сказала ему:</para>
+  <para style="p" vid="JDG 13:6">– Ко мне приходил Божий человек. Он был похож на Божьего Ангела, Его<note caller="+" style="f"><char style="fr" closed="false">13:6-20 </char><char style="ft" closed="false">«Его … Он … Я … и т. д.»; см. главу 6 и ст. <char style="xt"><ref loc="JDG 13:22">13:22</ref></char></char></note> вид внушал благоговейный ужас. Я не спросила Его, откуда Он, а Он не сказал мне Своего имени. <verse eid="JDG 13:6"/><verse number="7" style="v" sid="JDG 13:7"/>Но Он сказал мне: «Ты забеременеешь и родишь сына. Поэтому не пей ни вина, ни другого алкогольного напитка и не ешь ничего <char style="add">ритуально</char> нечистого, потому что мальчик будет назореем Богу с рождения до самой смерти».<verse eid="JDG 13:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 13:8"/>И Маноах молился Господу:</para>
+  <para style="p" vid="JDG 13:8">– Владыка, прошу Тебя, пусть Божий человек, Которого Ты посылал к нам, придет опять и научит нас, что нам делать с мальчиком, который должен родиться.<verse eid="JDG 13:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="JDG 13:9"/>Бог услышал Маноаха, и Божий Ангел вновь пришел к той женщине, когда она была в поле; но ее мужа Маноаха с ней не было. <verse eid="JDG 13:9"/><verse number="10" style="v" sid="JDG 13:10"/>Женщина тут же побежала и сказала своему мужу:</para>
+  <para style="p" vid="JDG 13:10">– Он здесь! Тот человек, Который приходил ко мне тогда!<verse eid="JDG 13:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="JDG 13:11"/>Маноах встал и пошел за своей женой. Он пришел к тому человеку и спросил:</para>
+  <para style="p" vid="JDG 13:11">– Это Ты говорил с моей женой?</para>
+  <para style="p" vid="JDG 13:11">– Я, – ответил Он.<verse eid="JDG 13:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="JDG 13:12"/>И Маноах спросил Его:</para>
+  <para style="p" vid="JDG 13:12">– Когда Твои слова исполнятся, как жить мальчику, и что ему делать?<verse eid="JDG 13:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="JDG 13:13"/>Ангел Господень ответил:</para>
+  <para style="p" vid="JDG 13:13">– Твоя жена должна исполнять все, что Я ей сказал. <verse eid="JDG 13:13"/><verse number="14" style="v" sid="JDG 13:14"/>Она не должна есть ничего, что дает виноградная лоза, пить вина и никакого другого алкогольного напитка, а также есть что-либо <char style="add">ритуально</char> нечистое. Она должна делать все, что Я ей велел.<verse eid="JDG 13:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="JDG 13:15"/>Маноах сказал Ангелу Господнему:</para>
+  <para style="p" vid="JDG 13:15">– Мы хотели бы, чтобы Ты остался, пока мы не приготовим для Тебя козленка.<verse eid="JDG 13:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JDG 13:16"/>Ангел Господень ответил Маноаху:</para>
+  <para style="p" vid="JDG 13:16">– Хоть ты удерживаешь Меня, Я не буду есть твоего угощения. Но если ты приготовишь всесожжение, принеси его Господу.</para>
+  <para style="p" vid="JDG 13:16">(Маноах не знал, что это был Ангел Господень.)<verse eid="JDG 13:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="JDG 13:17"/>Маноах спросил Ангела Господнего:</para>
+  <para style="p" vid="JDG 13:17">– Как Твое имя, чтобы нам отблагодарить Тебя, когда Твои слова исполнятся?<verse eid="JDG 13:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="JDG 13:18"/>Ангел Господень ответил:</para>
+  <para style="p" vid="JDG 13:18">– Зачем ты спрашиваешь Мое имя? Оно чудно.<verse eid="JDG 13:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="JDG 13:19"/>Тогда Маноах взял козленка и хлебное приношение и принес на скале в жертву Господу, Который сотворил чудо, пока Маноах и его жена глядели. <verse eid="JDG 13:19"/><verse number="20" style="v" sid="JDG 13:20"/>Когда пламя с жертвенника поднялось к небу, Ангел Господень вознесся в пламени жертвенника, пока Маноах и его жена глядели; увидев это, они бросились лицом вниз на землю. <verse eid="JDG 13:20"/><verse number="21" style="v" sid="JDG 13:21"/>Когда Ангел Господень стал невидим Маноаху и его жене, Маноах понял, что это был Ангел Господень.<verse eid="JDG 13:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="JDG 13:22"/>– Теперь мы наверняка умрем! – сказал Маноах своей жене. – Ведь мы видели Бога!<note caller="+" style="f"><char style="fr" closed="false">13:22 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="EXO 33:20">Исх. 33:20</ref></char>.</char></note><verse eid="JDG 13:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="JDG 13:23"/>Но его жена ответила:</para>
+  <para style="p" vid="JDG 13:23">– Если бы Господь хотел нам смерти, Он не принял бы из наших рук всесожжения и хлебного приношения и не возвестил бы нам сейчас всего этого.<verse eid="JDG 13:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="JDG 13:24"/>Женщина родила сына и назвала его Самсоном. Мальчик рос, и Господь благословлял его, <verse eid="JDG 13:24"/><verse number="25" style="v" sid="JDG 13:25"/>и Дух Господа начал действовать в нем, когда он был в Махане-Дане<note caller="+" style="f"><char style="fr" closed="false">13:25 </char><char style="ft" closed="false">То есть «в лагере Дана»</char></note>, между Цорой и Эштаолом.<verse eid="JDG 13:25"/></para>
+  <chapter eid="JDG 13"/>
+  <chapter number="14" style="c" sid="JDG 14"/>
+  <para style="s1">Женитьба Самсона</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 14:1"/>Самсон пошел в Тимну и встретил там молодую филистимлянку. <verse eid="JDG 14:1"/><verse number="2" style="v" sid="JDG 14:2"/>Вернувшись, он сказал отцу и матери:</para>
+  <para style="p" vid="JDG 14:2">– Я видел в Тимне одну филистимлянку; возьмите мне ее в жены.<verse eid="JDG 14:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="JDG 14:3"/>Отец и мать ответили ему:</para>
+  <para style="p" vid="JDG 14:3">– Разве нет женщин среди твоих родичей или всего моего народа? Неужели ты пойдешь за женой к необрезанным филистимлянам?</para>
+  <para style="p" vid="JDG 14:3">Но Самсон сказал отцу:</para>
+  <para style="p" vid="JDG 14:3">– Возьми мне ее. Она мне понравилась.<verse eid="JDG 14:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 14:4"/>(Его родители не знали, что это было от Господа, Который искал случая, чтобы отомстить филистимлянам; так как в то время они правили Израилем.) <verse eid="JDG 14:4"/><verse number="5" style="v" sid="JDG 14:5"/>Самсон пошел в Тимну вместе со своими родителями. Когда они подходили к виноградникам Тимны, внезапно ему навстречу, рыча, выскочил молодой лев. <verse eid="JDG 14:5"/><verse number="6" style="v" sid="JDG 14:6"/>На Самсона стремительно сошел Дух Господа, и Самсон разорвал льва голыми руками, точно козленка. Но ни отцу, ни матери о сделанном он не рассказал. <verse eid="JDG 14:6"/><verse number="7" style="v" sid="JDG 14:7"/>Затем он пришел и поговорил с той женщиной, и она ему понравилась.<verse eid="JDG 14:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 14:8"/>Когда некоторое время спустя он возвращался, чтобы жениться на ней, он свернул посмотреть на львиный труп. В нем оказался пчелиный рой и мед. <verse eid="JDG 14:8"/><verse number="9" style="v" sid="JDG 14:9"/>Он выскреб мед руками и ел по дороге. Придя к своим родителям, он дал меда и им, и они тоже ели. Но он не сказал им о том, что взял мед из львиного трупа<note caller="+" style="f"><char style="fr" closed="false">14:9 </char><char style="ft" closed="false">Самсон как назорей не имел права прикасаться к мертвому телу (см. <char style="xt"><ref loc="NUM 6:6">Чис. 6:6</ref></char>).</char></note>.<verse eid="JDG 14:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="JDG 14:10"/>Его отец пришел к женщине, и Самсон устроил там пир, как делают по обычаю женихи. <verse eid="JDG 14:10"/><verse number="11" style="v" sid="JDG 14:11"/>Когда он показался там, ему выбрали тридцать <char style="add">брачных</char> друзей, чтобы они были с ним. <verse eid="JDG 14:11"/><verse number="12" style="v" sid="JDG 14:12"/>Самсон сказал им:</para>
+  <para style="p" vid="JDG 14:12">– Загадаю-ка я вам загадку. Если вы сможете разгадать ее за семь дней пира, я дам вам тридцать одеяний из тонкого полотна и тридцать смен одежды. <verse eid="JDG 14:12"/><verse number="13" style="v" sid="JDG 14:13"/>А если не сможете разгадать, вы сами дадите мне тридцать одеяний из тонкого полотна и тридцать смен одежды.</para>
+  <para style="p" vid="JDG 14:13">– Загадывай свою загадку, – сказали они, – послушаем.<verse eid="JDG 14:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="JDG 14:14"/>Он сказал:</para>
+  <para style="q1" vid="JDG 14:14">– Из едока получилась еда,</para>
+  <para style="q2" vid="JDG 14:14">из силача получилось сладкое.</para>
+  <para style="m" vid="JDG 14:14">И три дня они не могли разгадать эту загадку.<verse eid="JDG 14:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="JDG 14:15"/>На четвертый<note caller="+" style="f"><char style="fr" closed="false">14:15 </char><char style="ft" closed="false">Так в некоторых древних переводах; в нормативном еврейском тексте: «седьмой». См. ст. 14.</char></note> день они сказали жене Самсона:</para>
+  <para style="p" vid="JDG 14:15">– Выведай разгадку у своего мужа, а не то мы сожжем тебя и дом твоего отца. Вы что, приглашали нас, чтобы обобрать?<verse eid="JDG 14:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JDG 14:16"/>Жена Самсона стала плакать перед ним:</para>
+  <para style="p" vid="JDG 14:16">– Ты ненавидишь меня! Ты не любишь меня по-настоящему. Ты загадал моему народу загадку, а мне ответа не сказал.</para>
+  <para style="p" vid="JDG 14:16">– Я не открыл его даже отцу и матери, – ответил он. – Почему же я должен открывать его тебе?<verse eid="JDG 14:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="JDG 14:17"/>Она плакала перед ним все семь дней, пока у них продолжался пир. На седьмой день он наконец открыл ей, потому что она извела его. А она сказала ответ своему народу.<verse eid="JDG 14:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="JDG 14:18"/>В седьмой день, перед заходом солнца, жители города сказали ему:</para>
+  <para style="q1" vid="JDG 14:18">– Что слаще меда?</para>
+  <para style="q2" vid="JDG 14:18">Что сильнее льва?</para>
+  <para style="p" vid="JDG 14:18">Самсон сказал им:</para>
+  <para style="q1" vid="JDG 14:18">– Не пахали бы вы на моей телке –</para>
+  <para style="q2" vid="JDG 14:18">не разгадали бы и моей загадки.<verse eid="JDG 14:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="JDG 14:19"/>Дух Господа стремительно сошел на него, и он пошел в Ашкелон, убил тридцать жителей города, забрал их пожитки и отдал их одежды тем, кто разгадал загадку. Кипя гневом, он ушел в дом своего отца. <verse eid="JDG 14:19"/><verse number="20" style="v" sid="JDG 14:20"/>А жену Самсона отдали его свадебному дружке, который был его лучшим другом.<verse eid="JDG 14:20"/></para>
+  <chapter eid="JDG 14"/>
+  <chapter number="15" style="c" sid="JDG 15"/>
+  <para style="s1">Месть Самсона филистимлянам</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 15:1"/>Некоторое время спустя, во время жатвы пшеницы, Самсон взял козленка и пошел навестить свою жену. Он сказал:</para>
+  <para style="p" vid="JDG 15:1">– Я хочу войти в комнату моей жены.</para>
+  <para style="p" vid="JDG 15:1">Но ее отец не дал ему войти.<verse eid="JDG 15:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="JDG 15:2"/>– Я был уверен, что ты отверг ее, – сказал он, – и отдал ее твоему другу. Разве ее младшая сестра не красивее ее? Возьми же ее вместо той.<verse eid="JDG 15:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="JDG 15:3"/>Самсон сказал ему<note caller="+" style="f"><char style="fr" closed="false">15:3 </char><char style="ft" closed="false">Букв.: «им».</char></note>:</para>
+  <para style="p" vid="JDG 15:3">– На этот раз я имею право причинить филистимлянам зло.<verse eid="JDG 15:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 15:4"/>Он пошел, поймал триста лисиц и связал их хвостами по парам. Затем он привязал по факелу между хвостами каждой пары, <verse eid="JDG 15:4"/><verse number="5" style="v" sid="JDG 15:5"/>поджег их и выпустил лисиц на несжатые поля филистимлян. Он спалил скирды и несжатый хлеб, виноградники и оливковые рощи.<verse eid="JDG 15:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="JDG 15:6"/>Когда филистимляне спросили:</para>
+  <para style="p" vid="JDG 15:6">– Кто это сделал?</para>
+  <para style="p" vid="JDG 15:6">Им сказали:</para>
+  <para style="p" vid="JDG 15:6">– Самсон, зять тимнатянина, потому что его жену отдали его другу.</para>
+  <para style="p" vid="JDG 15:6">И филистимляне пошли и сожгли ее и ее отца. <verse eid="JDG 15:6"/><verse number="7" style="v" sid="JDG 15:7"/>Самсон сказал им:</para>
+  <para style="p" vid="JDG 15:7">– Раз так, я не остановлюсь, пока не отомщу вам.<verse eid="JDG 15:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 15:8"/>Он бросился на них и безжалостно перебил многих. Потом он ушел и укрылся в расселине Етамской скалы.<verse eid="JDG 15:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="JDG 15:9"/>А филистимляне разбили лагерь в Иудее и совершили набег на Лехи. <verse eid="JDG 15:9"/><verse number="10" style="v" sid="JDG 15:10"/>Жители Иудеи спросили их:</para>
+  <para style="p" vid="JDG 15:10">– Почему вы пришли воевать с нами?</para>
+  <para style="p" vid="JDG 15:10">– Мы пришли, чтобы связать Самсона и отомстить ему, – ответили они.<verse eid="JDG 15:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="JDG 15:11"/>Три тысячи человек из Иудеи пошли к расселине Етамской скалы и сказали Самсону:</para>
+  <para style="p" vid="JDG 15:11">– Разве ты не понимаешь, что филистимляне правят нами? Что ты с нами сделал?</para>
+  <para style="p" vid="JDG 15:11">Он ответил:</para>
+  <para style="p" vid="JDG 15:11">– Я всего лишь отплатил им по заслугам.<verse eid="JDG 15:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="JDG 15:12"/>Они сказали ему:</para>
+  <para style="p" vid="JDG 15:12">– Мы пришли связать тебя и выдать филистимлянам.</para>
+  <para style="p" vid="JDG 15:12">Самсон сказал:</para>
+  <para style="p" vid="JDG 15:12">– Поклянитесь, что не убьете меня сами.<verse eid="JDG 15:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="JDG 15:13"/>– Хорошо, – сказали они. – Мы только свяжем тебя и выдадим им. Мы не убьем тебя.</para>
+  <para style="p" vid="JDG 15:13">И, связав его двумя новыми веревками, они вывели его из скалы. <verse eid="JDG 15:13"/><verse number="14" style="v" sid="JDG 15:14"/>Когда он подходил к Лехи, филистимляне с криками вышли ему навстречу. Дух Господа стремительно сошел на него, и веревки на его руках стали словно сгоревший лен и сами свалились у него с рук. <verse eid="JDG 15:14"/><verse number="15" style="v" sid="JDG 15:15"/>Он нашел свежую ослиную челюсть, схватил ее и перебил тысячу человек.<verse eid="JDG 15:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JDG 15:16"/>Самсон сказал:</para>
+  <para style="q1" vid="JDG 15:16">– Ослиной челюстью я положил груду на груду<note caller="+" style="f"><char style="fr" closed="false">15:16 </char><char style="ft" closed="false">В оригинале стоит слово, которое можно перевести и как «груда», и как «осел». Поэтому эту строку можно перевести и следующим образом: «Ослиной челюстью я убил ослов».</char></note>;</para>
+  <para style="q1" vid="JDG 15:16">ослиной челюстью – тысячу перебил.<verse eid="JDG 15:16"/></para>
+  <para style="m">
+    <verse number="17" style="v" sid="JDG 15:17"/>Сказав это, он отшвырнул челюсть; поэтому то место было названо «Рамат-Лехи»<note caller="+" style="f"><char style="fr" closed="false">15:17 </char><char style="ft" closed="false">То есть «холм челюсти».</char></note>.<verse eid="JDG 15:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="JDG 15:18"/>Ему очень хотелось пить, и он воззвал к Господу:</para>
+  <para style="p" vid="JDG 15:18">– Ты дал Твоему слуге эту великую победу. Неужели теперь я должен умереть от жажды и попасть в руки необрезанных?<verse eid="JDG 15:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="JDG 15:19"/>Бог раскрыл впадину в Лехи, и оттуда хлынула вода. Когда Самсон утолил жажду, силы вернулись к нему, и он пришел в себя. Поэтому источник был назван «Источник зовущего»<note caller="+" style="f"><char style="fr" closed="false">15:19 </char><char style="ft" closed="false">Евр.: «эн-гаккоре».</char></note>; он и до сегодняшнего дня находится в Лехи.<verse eid="JDG 15:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="JDG 15:20"/>Самсон был судьей в Израиле двадцать лет в дни филистимлян.<verse eid="JDG 15:20"/></para>
+  <chapter eid="JDG 15"/>
+  <chapter number="16" style="c" sid="JDG 16"/>
+  <para style="s1">Самсон и Далила</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 16:1"/>Однажды Самсон пошел в Газу и, увидев там блудницу, зашел к ней. <verse eid="JDG 16:1"/><verse number="2" style="v" sid="JDG 16:2"/>Жителям Газы сказали:</para>
+  <para style="p" vid="JDG 16:2">– Самсон здесь! – И они, окружив то место, устроили на него засаду у городских ворот.</para>
+  <para style="p" vid="JDG 16:2">Они не трогались с места всю ночь, говоря:</para>
+  <para style="p" vid="JDG 16:2">– На рассвете мы его убьем.<verse eid="JDG 16:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="JDG 16:3"/>Но Самсон лежал только до полуночи. В полночь он встал, схватил двери городских ворот вместе с обоими косяками и вырвал их вместе с засовом. Он поднял их на плечи и отнес на вершину горы, что напротив Хеврона.<verse eid="JDG 16:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 16:4"/>Прошло время, и он полюбил женщину из долины Сорек, которую звали Далила. <verse eid="JDG 16:4"/><verse number="5" style="v" sid="JDG 16:5"/>Правители филистимлян пришли к ней и сказали:</para>
+  <para style="p" vid="JDG 16:5">– Разговори его и выведай, в чем тайна его великой силы и как нам одолеть его, чтобы связать и усмирить. Каждый из нас даст тебе по тысяче сто шекелей<note caller="+" style="f"><char style="fr" closed="false">16:5 </char><char style="ft" closed="false">Около 13 кг.</char></note> серебра.<verse eid="JDG 16:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="JDG 16:6"/>Далила сказала Самсону:</para>
+  <para style="p" vid="JDG 16:6">– Расскажи мне, откуда у тебя такая великая сила и чем тебя можно связать и усмирить?<verse eid="JDG 16:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="JDG 16:7"/>Самсон ответил ей:</para>
+  <para style="p" vid="JDG 16:7">– Если меня связать семью сырыми тетивами, которые еще не высохли, я ослабею и стану таким же, как любой другой человек.<verse eid="JDG 16:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 16:8"/>Тогда правители филистимлян принесли ей семь сырых тетив, которые еще не высохли, и она связала его. <verse eid="JDG 16:8"/><verse number="9" style="v" sid="JDG 16:9"/>Во внутренней комнате у нее спряталась засада, и она сказала Самсону:</para>
+  <para style="p" vid="JDG 16:9">– Самсон, на тебя идут филистимляне!</para>
+  <para style="p" vid="JDG 16:9">Но он разорвал тетивы, как рвется нитка из пакли, когда касается огня. И тайна его силы осталась нераскрытой.<verse eid="JDG 16:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="JDG 16:10"/>Тогда Далила сказала Самсону:</para>
+  <para style="p" vid="JDG 16:10">– Ты смеялся надо мной и лгал мне. Прошу тебя, скажи мне, чем тебя можно связать?<verse eid="JDG 16:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="JDG 16:11"/>Он сказал:</para>
+  <para style="p" vid="JDG 16:11">– Если меня крепко связать новыми веревками, которыми никто еще не пользовался, я ослабею и стану таким же, как любой другой человек.<verse eid="JDG 16:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="JDG 16:12"/>Далила взяла новые веревки, связала его и сказала ему:</para>
+  <para style="p" vid="JDG 16:12">– Самсон, на тебя идут филистимляне!</para>
+  <para style="p" vid="JDG 16:12">(А засада пряталась у нее во внутренней комнате.) Но он разорвал веревки на руках, как нитки.<verse eid="JDG 16:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="JDG 16:13"/>Тогда Далила сказала Самсону:</para>
+  <para style="p" vid="JDG 16:13">– Ты все смеешься надо мной и лжешь мне. Ну скажи же мне, чем тебя можно связать?</para>
+  <para style="p" vid="JDG 16:13">Он ответил:</para>
+  <para style="p" vid="JDG 16:13">– Если ты вплетешь семь моих кос в ткань на ткацком станке и закрепишь ее гвоздем, я ослабею и стану таким же, как любой другой человек.</para>
+  <para style="p" vid="JDG 16:13">Когда он спал, Далила взяла семь его кос, вплела их в ткань <verse eid="JDG 16:13"/><verse number="14" style="v" sid="JDG 16:14"/>и<note caller="+" style="f"><char style="fr" closed="false">16:13-14 </char><char style="ft" closed="false">Так в некоторых рукописях одного из древних переводов; в нормативном еврейском тексте слова «на ткацком станке и закрепишь ее гвоздем, я ослабею и стану таким же, как любой другой человек. Когда он спал, Далила взяла семь кос его головы, воткала их в ткань </char><char style="fv" closed="false">14 </char><char style="ft" closed="false">и» отсутствуют.</char></note> закрепила ее гвоздем.</para>
+  <para style="p" vid="JDG 16:14">После этого она позвала его:</para>
+  <para style="p" vid="JDG 16:14">– Самсон, на тебя идут филистимляне!</para>
+  <para style="p" vid="JDG 16:14">Он проснулся, выдернул гвоздь и вывернул с места ткацкий станок с тканью.<verse eid="JDG 16:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="JDG 16:15"/>Тогда она сказала ему:</para>
+  <para style="p" vid="JDG 16:15">– Как ты можешь говорить: «Я люблю тебя», если ты мне не доверяешь? Вот уже третий раз ты издеваешься надо мной и не говоришь, откуда у тебя такая великая сила.<verse eid="JDG 16:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JDG 16:16"/>Так она изводила его день за днем, пока не надоела ему до смерти. <verse eid="JDG 16:16"/><verse number="17" style="v" sid="JDG 16:17"/>И он рассказал ей все.</para>
+  <para style="p" vid="JDG 16:17">– Моей головы никогда не касалась бритва, – сказал он ей, – потому что я – назорей<note caller="+" style="f"><char style="fr" closed="false">16:17 </char><char style="ft" closed="false">Или: «отделенный», «посвященный». См. сноску на ст. <char style="xt"><ref loc="JDG 13:5">13:5</ref></char>.</char></note> Богу с самого рождения. Если бы мне остригли голову, моя сила покинула бы меня и я, ослабев, стал бы таким же, как любой другой человек.<verse eid="JDG 16:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="JDG 16:18"/>Поняв, что он рассказал ей все, Далила послала сказать правителям филистимлян:</para>
+  <para style="p" vid="JDG 16:18">– Приходите еще раз: он рассказал мне все.</para>
+  <para style="p" vid="JDG 16:18">Правители филистимлян вернулись с серебром в руках. <verse eid="JDG 16:18"/><verse number="19" style="v" sid="JDG 16:19"/>Усыпив его у себя на коленях, она позвала человека и велела ему остричь<note caller="+" style="f"><char style="fr" closed="false">16:19 </char><char style="ft" closed="false">Или: «и остригла».</char></note> семь кос чтобы он ослаб, и сила покинула его.<verse eid="JDG 16:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="JDG 16:20"/>Она крикнула:</para>
+  <para style="p" vid="JDG 16:20">– Самсон, на тебя идут филистимляне!</para>
+  <para style="p" vid="JDG 16:20">Он проснулся и подумал:</para>
+  <para style="p" vid="JDG 16:20">– Выберусь, как и прежде, и освобожусь.</para>
+  <para style="p" vid="JDG 16:20">Он не знал, что Господь покинул его.<verse eid="JDG 16:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="JDG 16:21"/>Филистимляне схватили его, выкололи ему глаза, отвели его в Газу и заковали в бронзовые кандалы. Там, в темнице, они заставили его молоть зерно. <verse eid="JDG 16:21"/><verse number="22" style="v" sid="JDG 16:22"/>Но волосы у него стали отрастать заново.<verse eid="JDG 16:22"/></para>
+  <para style="s1">Смерть Самсона</para>
+  <para style="p">
+    <verse number="23" style="v" sid="JDG 16:23"/>Филистимские правители собрались, чтобы принести великую жертву своему богу Дагону<note caller="+" style="f"><char style="fr" closed="false">16:23 </char><char style="ft" closed="false">Дагон – главный бог филистимлян, возможно, бог грозы или растительности.</char></note> и повеселиться; они говорили:</para>
+  <para style="p" vid="JDG 16:23">– Наш бог отдал Самсона, нашего врага, в наши руки.<verse eid="JDG 16:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="JDG 16:24"/>Видя его, народ славил своего бога:</para>
+  <para style="q1" vid="JDG 16:24">– Отдал наш бог в наши руки врага,</para>
+  <para style="q2" vid="JDG 16:24">опустошителя нашей земли,</para>
+  <para style="q1" vid="JDG 16:24">который многих из нас убил.<verse eid="JDG 16:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="JDG 16:25"/>Развеселившись, они начали кричать:</para>
+  <para style="p" vid="JDG 16:25">– Позовите Самсона, пусть он нас развлечет.</para>
+  <para style="p" vid="JDG 16:25">Они позвали Самсона, чтобы он забавлял их. Когда они поставили его между столбами, <verse eid="JDG 16:25"/><verse number="26" style="v" sid="JDG 16:26"/>Самсон сказал слуге, который держал его за руку:</para>
+  <para style="p" vid="JDG 16:26">– Поставь меня там, где я смогу нащупать столбы, которые поддерживают храм, чтобы мне на них опереться.<verse eid="JDG 16:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="JDG 16:27"/>А храм был полон мужчин и женщин; там были все правители филистимлян, а на крыше около трех тысяч мужчин и женщин смотрели на Самсона. <verse eid="JDG 16:27"/><verse number="28" style="v" sid="JDG 16:28"/>И Самсон взмолился к Господу:</para>
+  <para style="p" vid="JDG 16:28">– Владыка Господи, вспомни меня. Боже, прошу Тебя, укрепи меня еще лишь раз и дай мне одним ударом отомстить филистимлянам за оба моих глаза.<verse eid="JDG 16:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="JDG 16:29"/>Самсон схватился за два главных столба, на которых стоял храм. Уперевшись в один из них правой, а в другой – левой рукой, <verse eid="JDG 16:29"/><verse number="30" style="v" sid="JDG 16:30"/>Самсон сказал:</para>
+  <para style="p" vid="JDG 16:30">– Пусть я погибну вместе с филистимлянами!</para>
+  <para style="p" vid="JDG 16:30">Он надавил изо всех своих сил, и храм рухнул на правителей и на народ, который в нем был. И при своей смерти он убил гораздо больше филистимлян, чем при жизни.<verse eid="JDG 16:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="JDG 16:31"/>Его братья и вся семья его отца пришли забрать его. Они унесли и похоронили его между Цорой и Эштаолом, в гробнице Маноаха, его отца. Самсон был судьей в Израиле двадцать лет.<verse eid="JDG 16:31"/></para>
+  <chapter eid="JDG 16"/>
+  <chapter number="17" style="c" sid="JDG 17"/>
+  <para style="s1">Идол Михи</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 17:1"/>Один человек по имени Миха из нагорий Ефрема <verse eid="JDG 17:1"/><verse number="2" style="v" sid="JDG 17:2"/>сказал своей матери:</para>
+  <para style="p" vid="JDG 17:2">– Тысяча сто шекелей<note caller="+" style="f"><char style="fr" closed="false">17:2 </char><char style="ft" closed="false">Около 13 кг.</char></note> серебра, которые пропали у тебя и за которые ты при мне прокляла вора, – они у меня; это я его взял.</para>
+  <para style="p" vid="JDG 17:2">Тогда его мать сказала:</para>
+  <para style="p" vid="JDG 17:2">– Да благословит Господь моего сына!<verse eid="JDG 17:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="JDG 17:3"/>Он вернул тысячу сто шекелей серебра своей матери, и она сказала:</para>
+  <para style="p" vid="JDG 17:3">– Я посвящаю это серебро Господу за моего сына, чтобы сделать из него истукан и литого идола. Я отдаю его тебе.<verse eid="JDG 17:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 17:4"/>И когда он вернул серебро своей матери, она взяла из него двести шекелей<note caller="+" style="f"><char style="fr" closed="false">17:4 </char><char style="ft" closed="false">Около 2,3 кг.</char></note> и отдала плавильщику, который сделал из них истукан и литого идола. Их поставили в доме Михи.<verse eid="JDG 17:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="JDG 17:5"/>У этого человека, Михи, было святилище<note caller="+" style="f"><char style="fr" closed="false">17:5 </char><char style="ft" closed="false">Букв.: «дом Бога (богов, бога)».</char></note>. Он сделал эфод<note caller="+" style="f"><char style="fr" closed="false">17:5 </char><char style="ft" closed="false">См. сноску на <char style="xt"><ref loc="JDG 8:27">8:27</ref></char>.</char></note> и домашних богов<note caller="+" style="f"><char style="fr" closed="false">17:5 </char><char style="ft" closed="false">Евр.: «терафим». Также в других местах книги.</char></note> и посвятил одного из своих сыновей, чтобы он был у него священником. <verse eid="JDG 17:5"/><verse number="6" style="v" sid="JDG 17:6"/>В те дни у Израиля не было царя, и каждый делал то, что считал правильным.<verse eid="JDG 17:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="JDG 17:7"/>Один молодой левит из Вифлеема в Иудее, живший среди клана Иуды, <verse eid="JDG 17:7"/><verse number="8" style="v" sid="JDG 17:8"/>оставил свой дом и пошел искать, где бы ему поселиться. Странствуя<note caller="+" style="f"><char style="fr" closed="false">17:8 </char><char style="ft" closed="false">Или: «Чтобы исполнять свою работу».</char></note>, он пришел в дом Михи в нагорьях Ефрема.<verse eid="JDG 17:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="JDG 17:9"/>Миха спросил его:</para>
+  <para style="p" vid="JDG 17:9">– Откуда ты?</para>
+  <para style="p" vid="JDG 17:9">– Я левит из Вифлеема в Иудее, – ответил он. – Я ищу, где мне поселиться.<verse eid="JDG 17:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="JDG 17:10"/>Миха сказал ему:</para>
+  <para style="p" vid="JDG 17:10">– Живи у меня и будь мне отцом<note caller="+" style="f"><char style="fr" closed="false">17:10 </char><char style="ft" closed="false">Или: «советником».</char></note> и священником, а я буду давать тебе десять шекелей<note caller="+" style="f"><char style="fr" closed="false">17:10 </char><char style="ft" closed="false">Около 110 гр.</char></note> серебра в год, одежду и пропитание.<verse eid="JDG 17:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="JDG 17:11"/>Левит согласился остаться у него и стал ему как один из его сыновей. <verse eid="JDG 17:11"/><verse number="12" style="v" sid="JDG 17:12"/>Миха посвятил левита, и юноша стал у него священником и жил в его доме. <verse eid="JDG 17:12"/><verse number="13" style="v" sid="JDG 17:13"/>Миха сказал:</para>
+  <para style="p" vid="JDG 17:13">– Теперь я знаю, что Господь благоволит ко мне, раз этот левит стал моим священником.<verse eid="JDG 17:13"/></para>
+  <chapter eid="JDG 17"/>
+  <chapter number="18" style="c" sid="JDG 18"/>
+  <para style="s1">Данитяне селятся в Лаише</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 18:1"/>В те дни у Израиля не было царя.</para>
+  <para style="p" vid="JDG 18:1">Род данитян искал себе землю, чтобы поселиться там, потому что до этого времени земля между родами Израиля еще не была ему отведена. <verse eid="JDG 18:1"/><verse number="2" style="v" sid="JDG 18:2"/>И данитяне послали пятерых храбрецов из Цоры и Эштаола, чтобы разведать землю и исследовать ее. Эти люди представляли все их кланы. Им сказали:</para>
+  <para style="p" vid="JDG 18:2">– Идите, исследуйте землю.</para>
+  <para style="p" vid="JDG 18:2">Когда они пришли в нагорья Ефрема, к дому Михи, они заночевали там <verse eid="JDG 18:2"/><verse number="3" style="v" sid="JDG 18:3"/>и, будучи поблизости, узнали голос молодого левита. Тогда они свернули туда и спросили его:</para>
+  <para style="p" vid="JDG 18:3">– Кто привел тебя сюда? Что ты здесь делаешь? Почему ты здесь?<verse eid="JDG 18:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 18:4"/>Он рассказал им о том, что сделал для него Миха, и сказал:</para>
+  <para style="p" vid="JDG 18:4">– Он нанял меня, и я его священник.<verse eid="JDG 18:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="JDG 18:5"/>Тогда они сказали ему:</para>
+  <para style="p" vid="JDG 18:5">– Пожалуйста, спроси у Бога, чтобы нам знать, будет ли наше путешествие успешным.<verse eid="JDG 18:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="JDG 18:6"/>Священник ответил им:</para>
+  <para style="p" vid="JDG 18:6">– Идите с миром. Господь позаботится о вас во время вашего путешествия.<verse eid="JDG 18:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="JDG 18:7"/>Эти пятеро ушли и пришли в Лаиш. Там они увидели, что народ живет спокойно, по обычаю сидонян, тихо и беспечно, не нуждаясь<note caller="+" style="f"><char style="fr" closed="false">18:7 </char><char style="ft" closed="false">Возможный текст (ср. <char style="xt"><ref loc="JDG 18:10">18:10</ref></char>); смысл данного места в еврейском тексте неясен.</char></note> ни в чем на земле и обладая богатством<note caller="+" style="f"><char style="fr" closed="false">18:7 </char><char style="ft" closed="false">Смысл данного места в еврейском тексте неясен.</char></note>. Они жили далеко от сидонян и ни с кем<note caller="+" style="f"><char style="fr" closed="false">18:7 </char><char style="ft" closed="false">В одном из древних переводов: «с Арамом»; – также в ст. 28.</char></note> не были в союзе.<verse eid="JDG 18:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 18:8"/>Когда они вернулись в Цору и Эштаол, их сородичи стали спрашивать:</para>
+  <para style="p" vid="JDG 18:8">– Ну, что?<verse eid="JDG 18:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="JDG 18:9"/>Они ответили:</para>
+  <para style="p" vid="JDG 18:9">– Пойдемте, нападем на них! Мы увидели, что эта земля очень хороша. Вы что же, не собираетесь ничего делать? Не медлите взять себе эту землю. <verse eid="JDG 18:9"/><verse number="10" style="v" sid="JDG 18:10"/>Придя туда, вы найдете беспечный народ и обширную землю, которую Бог дает вам в руки, землю, где нет недостатка ни в чем.<verse eid="JDG 18:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="JDG 18:11"/>И шестьсот человек из клана данитян, вооружившись для битвы, отправились в путь из Цоры и Эштаола. <verse eid="JDG 18:11"/><verse number="12" style="v" sid="JDG 18:12"/>По дороге они поставили лагерь рядом с Кирьят-Иеаримом в Иудее. Вот почему место к западу от Кирьят-Иеарима и по сегодняшний день называется Махане-Дан<note caller="+" style="f"><char style="fr" closed="false">18:12 </char><char style="ft" closed="false">То есть «лагерь Дана».</char></note>. <verse eid="JDG 18:12"/><verse number="13" style="v" sid="JDG 18:13"/>Оттуда они двинулись в нагорья Ефрема и пришли к дому Михи.<verse eid="JDG 18:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="JDG 18:14"/>Те пятеро, которые разведывали землю Лаиша, сказали своим сородичам:</para>
+  <para style="p" vid="JDG 18:14">– Знаете ли вы, что в одном из этих домов есть эфод, домашние боги и литой идол? Подумайте, что вам сделать.<verse eid="JDG 18:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="JDG 18:15"/>Они свернули туда, вошли в дом молодого левита, в дом Михи, и приветствовали его. <verse eid="JDG 18:15"/><verse number="16" style="v" sid="JDG 18:16"/>А шестьсот данитян, вооруженных для битвы, стояли у входа в ворота. <verse eid="JDG 18:16"/><verse number="17" style="v" sid="JDG 18:17"/>Пять человек, которые разведывали землю, прошли внутрь, взяли истукан, и эфод, и домашних богов, и литого идола, пока священник и шестьсот вооруженных воинов стояли у входа в ворота.<verse eid="JDG 18:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="JDG 18:18"/>Когда эти люди вошли в дом Михи и взяли истукан, эфод, домашних богов и литого идола, священник сказал им:</para>
+  <para style="p" vid="JDG 18:18">– Что вы делаете?<verse eid="JDG 18:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="JDG 18:19"/>Они ответили ему:</para>
+  <para style="p" vid="JDG 18:19">– Молчи! Ни слова больше. Иди с нами и будь у нас отцом и священником. Разве не лучше тебе быть священником у рода и клана в Израиле, чем у семьи одного лишь человека?<verse eid="JDG 18:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="JDG 18:20"/>Священник обрадовался. Он взял эфод, домашних богов и истукан и пошел с народом. <verse eid="JDG 18:20"/><verse number="21" style="v" sid="JDG 18:21"/>Отправив своих маленьких детей, скот и пожитки впереди себя, они снова тронулись в путь.<verse eid="JDG 18:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="JDG 18:22"/>Когда они отошли от дома Михи, тот собрал соседей и погнался за данитянами. <verse eid="JDG 18:22"/><verse number="23" style="v" sid="JDG 18:23"/>Они кричали вслед данитянам, и те, повернувшись, сказали Михе:</para>
+  <para style="p" vid="JDG 18:23">– Чего ты хочешь? Зачем ты собрал такую толпу?<verse eid="JDG 18:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="JDG 18:24"/>Он ответил:</para>
+  <para style="p" vid="JDG 18:24">– Вы взяли моих богов, которых я сделал, и моего священника и ушли. А что осталось у меня? Как же вы спрашиваете: «Что тебе?».<verse eid="JDG 18:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="JDG 18:25"/>Данитяне ответили:</para>
+  <para style="p" vid="JDG 18:25">– Лучше не спорь с нами, а не то наши разъяренные воины нападут на вас, и ты погубишь и себя, и свою семью.<verse eid="JDG 18:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="JDG 18:26"/>И данитяне пошли своим путем, а Миха, видя, что они сильнее его, повернул домой.<verse eid="JDG 18:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="JDG 18:27"/>А они, взяв то, что сделал Миха, а также его священника, пришли к Лаишу, к мирному и беспечному народу. Они предали их мечу и сожгли их город. <verse eid="JDG 18:27"/><verse number="28" style="v" sid="JDG 18:28"/>Некому было избавить их, потому что они жили далеко от Сидона и ни с кем не были в союзе. Этот город находился в долине рядом с Бет-Реховом.</para>
+  <para style="p" vid="JDG 18:28">Данитяне отстроили город и поселились в нем. <verse eid="JDG 18:28"/><verse number="29" style="v" sid="JDG 18:29"/>Они назвали его Дан – в честь своего предка Дана, который родился у Израиля, хотя прежде город назывался Лаиш. <verse eid="JDG 18:29"/><verse number="30" style="v" sid="JDG 18:30"/>Там данитяне поставили себе истукан, а Ионафан, сын Гершома, внук Моисея<note caller="+" style="f"><char style="fr" closed="false">18:30 </char><char style="ft" closed="false">В некоторых рукописях: «Манассии», но это имя было записано таким образом, чтобы читатель мог понять: имя Моисей здесь специально исправили на имя Манассия (безнравственный царь из <char style="xt"><ref loc="2KI 21">4 Цар. 21</ref></char>). Это было сделано для того, чтобы отделить Моисея от идолопоклонства его потомков, чтобы не бросать тень на его имя.</char></note>, и его сыновья были священниками рода Дана до самого плена. <verse eid="JDG 18:30"/><verse number="31" style="v" sid="JDG 18:31"/>Они хранили у себя истукан, сделанный Михой, пока дом Божий находился в Шило.<verse eid="JDG 18:31"/></para>
+  <chapter eid="JDG 18"/>
+  <chapter number="19" style="c" sid="JDG 19"/>
+  <para style="s1">Левит и его наложница</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 19:1"/>В те дни у Израиля не было царя.</para>
+  <para style="p" vid="JDG 19:1">Однажды левит, который жил в нагорьях Ефрема, взял себе наложницу из Вифлеема в Иудее. <verse eid="JDG 19:1"/><verse number="2" style="v" sid="JDG 19:2"/>Но она поссорилась с ним<note caller="+" style="f"><char style="fr" closed="false">19:2 </char><char style="ft" closed="false">Или: «стала ему изменять».</char></note> и ушла в дом своего отца в Вифлееме. Она пробыла там четыре месяца, <verse eid="JDG 19:2"/><verse number="3" style="v" sid="JDG 19:3"/>и муж отправился к ней, чтобы убедить ее вернуться. С ним был слуга и два осла. Она ввела его в дом своего отца, и тот, увидев его, принял с радостью. <verse eid="JDG 19:3"/><verse number="4" style="v" sid="JDG 19:4"/>Тесть, отец молодой женщины, убедил его остаться, и он остался у него на три дня, ел, пил и спал там.<verse eid="JDG 19:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="JDG 19:5"/>На четвертый день они встали ранним утром, и он собрался уходить, но отец молодой женщины сказал зятю:</para>
+  <para style="p" vid="JDG 19:5">– Сначала подкрепись, а потом пойдете.<verse eid="JDG 19:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="JDG 19:6"/>И они вместе сели за еду и питье. После этого отец молодой женщины сказал:</para>
+  <para style="p" vid="JDG 19:6">– Прошу тебя, останься еще на ночь и приятно проведи время.<verse eid="JDG 19:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="JDG 19:7"/>И хотя тот человек встал, чтобы идти, тесть убедил его, и он остался там еще на ночь. <verse eid="JDG 19:7"/><verse number="8" style="v" sid="JDG 19:8"/>Утром пятого дня, когда он собрался уходить, отец молодой женщины сказал:</para>
+  <para style="p" vid="JDG 19:8">– Подкрепись. Подождите до полудня!</para>
+  <para style="p" vid="JDG 19:8">И они вместе ели. <verse eid="JDG 19:8"/><verse number="9" style="v" sid="JDG 19:9"/>А когда этот человек вместе со своей наложницей и слугой встал, чтобы уйти, отец молодой женщины сказал ему:</para>
+  <para style="p" vid="JDG 19:9">– Смотри, уже почти вечер. Переночуйте здесь, ведь день уже на исходе. Останься и приятно проведи время. А завтра рано утром соберетесь в дорогу, и ты пойдешь домой.<verse eid="JDG 19:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="JDG 19:10"/>Но не желая оставаться еще на ночь, этот человек ушел и направился к Иевусу (то есть Иерусалиму) с двумя навьюченными ослами и наложницей.<verse eid="JDG 19:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="JDG 19:11"/>Когда они были рядом с Иевусом и день уже почти прошел, слуга сказал своему господину:</para>
+  <para style="p" vid="JDG 19:11">– Свернем-ка в этот город иевусеев и заночуем там.<verse eid="JDG 19:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="JDG 19:12"/>Его господин ответил:</para>
+  <para style="p" vid="JDG 19:12">– Нет. Мы не свернем в город чужаков, которые не принадлежат к народу Израиля. Мы пойдем дальше к городу Гиве.<verse eid="JDG 19:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="JDG 19:13"/>И добавил:</para>
+  <para style="p" vid="JDG 19:13">– Идем, постараемся добраться до Гивы или Рамы и заночевать в одном из этих мест.<verse eid="JDG 19:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="JDG 19:14"/>Они пошли дальше, и когда подошли к Гиве, что в земле Вениамина, солнце уже село. <verse eid="JDG 19:14"/><verse number="15" style="v" sid="JDG 19:15"/>Они завернули туда на ночлег, вошли в город и сели на городской площади, но никто не позвал их в дом переночевать.<verse eid="JDG 19:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="JDG 19:16"/>В тот вечер один старик, который был родом из нагорий Ефрема, но жил в Гиве (а жители этого места были вениамитянами), возвращался с поля после работы. <verse eid="JDG 19:16"/><verse number="17" style="v" sid="JDG 19:17"/>Увидев странника на городской площади, старик спросил:</para>
+  <para style="p" vid="JDG 19:17">– Куда ты идешь и откуда?<verse eid="JDG 19:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="JDG 19:18"/>Он ответил:</para>
+  <para style="p" vid="JDG 19:18">– Мы идем из Вифлеема, что в Иудее, в далекие места нагорий Ефрема, где я живу. Я ходил в Вифлеем, что в Иудее, и теперь возвращаюсь в дом Господа<note caller="+" style="f"><char style="fr" closed="false">19:18 </char><char style="ft" closed="false">В одном из древних переводов: «к себе домой» (ср. <char style="xt"><ref loc="JDG 19:29">19:29</ref></char>).</char></note>. Но никто не позвал меня в свой дом. <verse eid="JDG 19:18"/><verse number="19" style="v" sid="JDG 19:19"/>А у нас есть и солома, и корм для наших ослов, и хлеб с вином для нас самих, твоих слуг, – для меня, твоей служанки и юноши, который с нами. Больше нам ничего не нужно.<verse eid="JDG 19:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="JDG 19:20"/>– Пойдемте ко мне домой, – сказал старик. – Я сам позабочусь о ваших нуждах. Только не ночуй на площади.<verse eid="JDG 19:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="JDG 19:21"/>Он привел его к себе домой и накормил его ослов. А сами они, вымыв ноги, стали есть и пить.<verse eid="JDG 19:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="JDG 19:22"/>Пока они приятно проводили время, жители города, порочные люди, окружили дом. Колотя в дверь, они кричали старику, хозяину дома:</para>
+  <para style="p" vid="JDG 19:22">– Выведи того человека, который к тебе пришел, чтобы нам с ним поразвлечься<note caller="+" style="f"><char style="fr" closed="false">19:22 </char><char style="ft" closed="false">Букв.: «чтобы мы их познали».</char></note>.<verse eid="JDG 19:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="JDG 19:23"/>Хозяин дома вышел к ним и сказал:</para>
+  <para style="p" vid="JDG 19:23">– Нет, друзья мои, не поступайте так низко. Ведь этот человек – мой гость, не делайте такой подлости. <verse eid="JDG 19:23"/><verse number="24" style="v" sid="JDG 19:24"/>Смотрите, вот моя девственница-дочь и его наложница. Сейчас я выведу их к вам. Смирите<note caller="+" style="f"><char style="fr" closed="false">19:24 </char><char style="ft" closed="false">Или: «Насилуйте».</char></note> их и делайте с ними, что хотите. Но с этим человеком не делайте такой подлости.<verse eid="JDG 19:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="JDG 19:25"/>Но люди не хотели его слушать. Тогда гость вывел к ним свою наложницу. Они насиловали<note caller="+" style="f"><char style="fr" closed="false">19:25 </char><char style="ft" closed="false">Букв.: «познали ее».</char></note> и бесчестили ее всю ночь, а когда начало светать, отпустили. <verse eid="JDG 19:25"/><verse number="26" style="v" sid="JDG 19:26"/>На рассвете женщина вернулась к дому, где был ее господин, упала у двери и лежала там, пока не рассвело.<verse eid="JDG 19:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="JDG 19:27"/>Когда утром ее господин встал, открыл дверь и собрался идти дальше, он увидел свою наложницу, лежавшую у двери, держась за порог. <verse eid="JDG 19:27"/><verse number="28" style="v" sid="JDG 19:28"/>Он сказал ей:</para>
+  <para style="p" vid="JDG 19:28">– Вставай, пойдем.</para>
+  <para style="p" vid="JDG 19:28">Но ответа не было<note caller="+" style="f"><char style="fr" closed="false">19:28 </char><char style="ft" closed="false">В древнем переводе присутствуют слова: « … потому что она умерла».</char></note>. Тогда тот человек положил ее на осла и отправился домой.<verse eid="JDG 19:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="JDG 19:29"/>Добравшись до дома, он взял нож, разрезал свою наложницу на двенадцать частей и разослал их по всем областям Израиля. <verse eid="JDG 19:29"/><verse number="30" style="v" sid="JDG 19:30"/>Всякий, кто видел это, говорил:</para>
+  <para style="p" vid="JDG 19:30">– Такого никогда не видели и не делали со дня выхода израильтян из Египта до сегодняшнего дня. Подумайте об этом! Посоветуйтесь и скажите, как тут быть!<verse eid="JDG 19:30"/></para>
+  <chapter eid="JDG 19"/>
+  <chapter number="20" style="c" sid="JDG 20"/>
+  <para style="s1">Израильтяне воюют с вениамитянами</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 20:1"/>Все израильтяне от Дана на севере до Вирсавии на юге и из земли Галаад вышли, как один, и собрались перед Господом в Мицпе. <verse eid="JDG 20:1"/><verse number="2" style="v" sid="JDG 20:2"/>Вожди всего народа, всех родов Израиля заняли свои места в обществе Божьего народа – четыреста тысяч пеших воинов, вооруженных мечами. <verse eid="JDG 20:2"/><verse number="3" style="v" sid="JDG 20:3"/>(А вениамитяне услышали о том, что израильтяне пошли в Мицпу.) И тогда израильтяне сказали:</para>
+  <para style="p" vid="JDG 20:3">– Расскажите нам, как случилось это страшное дело.<verse eid="JDG 20:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 20:4"/>Левит, муж убитой женщины, сказал:</para>
+  <para style="p" vid="JDG 20:4">– Я и моя наложница пришли в Гиву, что в земле Вениамина, чтобы заночевать там. <verse eid="JDG 20:4"/><verse number="5" style="v" sid="JDG 20:5"/>Ночью жители Гивы пришли за мной и окружили дом, намереваясь меня убить. Они изнасиловали мою наложницу, и она умерла. <verse eid="JDG 20:5"/><verse number="6" style="v" sid="JDG 20:6"/>Я взял ее, разрезал на части и послал в каждую область наследия Израиля, потому что они сделали это постыдное и подлое дело в Израиле. <verse eid="JDG 20:6"/><verse number="7" style="v" sid="JDG 20:7"/>Итак, все вы, израильтяне, выскажитесь и дайте свой совет.<verse eid="JDG 20:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 20:8"/>Весь народ поднялся, как один человек, говоря:</para>
+  <para style="p" vid="JDG 20:8">– Никто из нас не пойдет домой. Нет, никто из нас не возвратится в свой дом. <verse eid="JDG 20:8"/><verse number="9" style="v" sid="JDG 20:9"/>Но вот что мы сделаем с Гивой: мы <char style="add">пойдем</char> на нее, как укажет жребий. <verse eid="JDG 20:9"/><verse number="10" style="v" sid="JDG 20:10"/>Мы возьмем по десять человек из каждой сотни всех родов Израиля, сотню из тысячи и тысячу из десяти тысяч, чтобы достать для войска съестных припасов. И когда войско придет в Гиву, что в земле Вениамина, оно воздаст им по заслугам за эту подлость, совершенную ими в Израиле.<verse eid="JDG 20:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="JDG 20:11"/>Все воины Израиля собрались вместе и объединились, как один человек, против этого города.<verse eid="JDG 20:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="JDG 20:12"/>Роды Израиля послали людей по всему роду Вениамина, говоря:</para>
+  <para style="p" vid="JDG 20:12">– Что за страшное дело вы совершили в Израиле? <verse eid="JDG 20:12"/><verse number="13" style="v" sid="JDG 20:13"/>Выдайте этих порочных людей из Гивы, чтобы мы могли предать их смерти и искоренить в Израиле зло.</para>
+  <para style="p" vid="JDG 20:13">Но вениамитяне не хотели слушать своих соплеменников-израильтян. <verse eid="JDG 20:13"/><verse number="14" style="v" sid="JDG 20:14"/>Из своих городов они собрались в Гиве, чтобы воевать с израильтянами. <verse eid="JDG 20:14"/><verse number="15" style="v" sid="JDG 20:15"/>Вениамитяне тотчас же выставили двадцать шесть тысяч воинов, вооруженных мечами, от своих городов, не считая семисот отборных воинов из числа жителей Гивы. <verse eid="JDG 20:15"/><verse number="16" style="v" sid="JDG 20:16"/>Среди этого войска было семьсот отборных воинов, которые были левшами, каждый из них без промаха попадал из пращи камнем в волос.<verse eid="JDG 20:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="JDG 20:17"/>Израиль, не считая Вениамина, выставил четыреста тысяч человек, вооруженных мечами; все они были воинами.<verse eid="JDG 20:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="JDG 20:18"/>Израильтяне пришли в Вефиль<note caller="+" style="f"><char style="fr" closed="false">20:18 </char><char style="ft" closed="false">Или: «в дом Божий»; также в ст. 26 и <char style="xt"><ref loc="JDG 21:2">21:2</ref></char>.</char></note> и вопросили Бога. Они сказали:</para>
+  <para style="p" vid="JDG 20:18">– Кто из нас должен идти воевать с вениамитянами первым?</para>
+  <para style="p" vid="JDG 20:18">Господь ответил:</para>
+  <para style="p" vid="JDG 20:18">– Первым пойдет Иуда.<verse eid="JDG 20:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="JDG 20:19"/>На следующее утро израильтяне встали и разбили лагерь неподалеку от Гивы. <verse eid="JDG 20:19"/><verse number="20" style="v" sid="JDG 20:20"/>Израильтяне вышли, чтобы сразиться с вениамитянами, и выстроились в боевой порядок напротив Гивы. <verse eid="JDG 20:20"/><verse number="21" style="v" sid="JDG 20:21"/>Вениамитяне вышли из Гивы и сразили в тот день на поле боя двадцать две тысячи израильтян. <verse eid="JDG 20:21"/><verse number="22" style="v" sid="JDG 20:22"/>Но израильтяне, ободряя друг друга, вновь выстроились в боевой порядок там же, где и в первый день. <verse eid="JDG 20:22"/><verse number="23" style="v" sid="JDG 20:23"/>Израильтяне пошли, плакали перед Господом до самого вечера и спрашивали Господа. Они сказали:</para>
+  <para style="p" vid="JDG 20:23">– Идти ли нам опять сражаться с нашими братьями вениамитянами?</para>
+  <para style="p" vid="JDG 20:23">Господь ответил:</para>
+  <para style="p" vid="JDG 20:23">– Идите против них.<verse eid="JDG 20:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="JDG 20:24"/>Тогда израильтяне приблизились к Вениамину во второй день. <verse eid="JDG 20:24"/><verse number="25" style="v" sid="JDG 20:25"/>На этот раз вениамитяне, выйдя из Гивы им навстречу, сразили еще восемнадцать тысяч израильтян, вооруженных мечами.<verse eid="JDG 20:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="JDG 20:26"/>Израильтяне, весь народ, пришли в Вефиль и плакали там, сидя перед Господом. Они постились в тот день до вечера и принесли Господу жертвы всесожжения и жертвы примирения. <verse eid="JDG 20:26"/><verse number="27" style="v" sid="JDG 20:27"/>Затем они спросили Господа. (В те дни ковчег Божьего завета был там, <verse eid="JDG 20:27"/><verse number="28" style="v" sid="JDG 20:28"/>а Пинехас, сын Элеазара, сына Аарона, служил перед ним.) Они спросили:</para>
+  <para style="p" vid="JDG 20:28">– Идти ли нам опять сражаться с нашими братьями вениамитянами или нет?</para>
+  <para style="p" vid="JDG 20:28">Господь ответил:</para>
+  <para style="p" vid="JDG 20:28">– Идите. Завтра Я отдам их в ваши руки.<verse eid="JDG 20:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="JDG 20:29"/>Израиль поставил вокруг Гивы засаду. <verse eid="JDG 20:29"/><verse number="30" style="v" sid="JDG 20:30"/>Они пошли на вениамитян в третий день и встали в боевой порядок напротив Гивы, как и прежде. <verse eid="JDG 20:30"/><verse number="31" style="v" sid="JDG 20:31"/>Вениамитяне вышли им навстречу, и их увели от города. Они начали, как и прежде, наносить израильтянам потери, так что около тридцати человек пало убитыми в поле и на дорогах, одна из которых ведет к Вефилю, а другая к Гиве.<verse eid="JDG 20:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="JDG 20:32"/>Пока вениамитяне говорили: «Мы бьем их, как и прежде», израильтяне говорили: «Будем отступать и уведем их от города на дороги».<verse eid="JDG 20:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="JDG 20:33"/>Основные силы израильтян перенесли свой боевой порядок к Баал-Тамару, а те, кто был в засаде, ринулись со своего места к западу от<note caller="+" style="f"><char style="fr" closed="false">20:33 </char><char style="ft" closed="false">Так в некоторых древних переводах; смысл данного места в еврейском тексте неясен.</char></note> Гивы. <verse eid="JDG 20:33"/><verse number="34" style="v" sid="JDG 20:34"/>На Гиву устремилось десять тысяч отборных израильских воинов, и началась такая жестокая битва, что вениамитяне даже не понимали, как близка беда. <verse eid="JDG 20:34"/><verse number="35" style="v" sid="JDG 20:35"/>Господь разбил Вениамина перед Израилем, и в тот день израильтяне сразили двадцать пять тысяч сто вениамитян, вооруженных мечами. <verse eid="JDG 20:35"/><verse number="36" style="v" sid="JDG 20:36"/>И вениамитяне увидели, что они разбиты.</para>
+  <para style="p" vid="JDG 20:36">Израильтяне отступили перед вениамитянами, потому что надеялись на засаду, которую поставили неподалеку от Гивы. <verse eid="JDG 20:36"/><verse number="37" style="v" sid="JDG 20:37"/>Воины, которые были в засаде, стремительно бросились на Гиву, вступили в город и предали его мечу. <verse eid="JDG 20:37"/><verse number="38" style="v" sid="JDG 20:38"/>А израильтяне договорились с воинами из засады об условном знаке: когда над городом начнет подниматься дым, <verse eid="JDG 20:38"/><verse number="39" style="v" sid="JDG 20:39"/>основные силы израильтян должны будут перейти в наступление.</para>
+  <para style="p" vid="JDG 20:39">Вениамитяне уже начали наносить израильтянам потери, убив около тридцати из них; они думали: «Конечно, мы бьем их, как и в первой битве». <verse eid="JDG 20:39"/><verse number="40" style="v" sid="JDG 20:40"/>Но когда из города начал подниматься столб дыма, вениамитяне повернулись и увидели, как от всего города к небу поднимается дым. <verse eid="JDG 20:40"/><verse number="41" style="v" sid="JDG 20:41"/>А израильтяне перешли в наступление, и вениамитяне испугались, потому что поняли, что пришла беда. <verse eid="JDG 20:41"/><verse number="42" style="v" sid="JDG 20:42"/>И они побежали перед израильтянами к пустыне, но битва настигла их, и те, кто уже выходили из города, разили их, зажав посередине. <verse eid="JDG 20:42"/><verse number="43" style="v" sid="JDG 20:43"/>Окружив вениамитян, они без отдыха преследовали и разили их до восточной стороны<note caller="+" style="f"><char style="fr" closed="false">20:43 </char><char style="ft" closed="false">Смысл этого слова в еврейском тексте неясен.</char></note> Гивы. <verse eid="JDG 20:43"/><verse number="44" style="v" sid="JDG 20:44"/>Из вениамитян пало восемнадцать тысяч человек, все они были храбрыми воинами. <verse eid="JDG 20:44"/><verse number="45" style="v" sid="JDG 20:45"/>Когда они повернулись и побежали к пустыне, к скале Риммон, израильтяне перебили пять тысяч человек на дорогах. Они гнались за ними до самого Гидома и сразили еще две тысячи.<verse eid="JDG 20:45"/></para>
+  <para style="p">
+    <verse number="46" style="v" sid="JDG 20:46"/>В тот день пало двадцать пять тысяч вениамитян, носивших меч; все они были храбрыми воинами. <verse eid="JDG 20:46"/><verse number="47" style="v" sid="JDG 20:47"/>Но шестьсот человек повернулись и бежали в пустыню к скале Риммон, и там оставались четыре месяца. <verse eid="JDG 20:47"/><verse number="48" style="v" sid="JDG 20:48"/>Израильтяне вернулись к вениамитянам и предали их мечу – людей, животных и все, что нашли. И все города на их пути они подожгли.<verse eid="JDG 20:48"/></para>
+  <chapter eid="JDG 20"/>
+  <chapter number="21" style="c" sid="JDG 21"/>
+  <para style="s1">Жены для вениамитян</para>
+  <para style="p">
+    <verse number="1" style="v" sid="JDG 21:1"/>Израильтяне поклялись в Мицпе:</para>
+  <para style="p" vid="JDG 21:1">– Никто из нас не отдаст свою дочь замуж за вениамитянина.<verse eid="JDG 21:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="JDG 21:2"/>Народ пошел в Вефиль, где и сидели перед Богом до вечера, громко и горько плача.<verse eid="JDG 21:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="JDG 21:3"/>– О Господь, Бог Израиля, – говорили они, – почему это случилось с Израилем? Почему сегодня у Израиля недостает одного рода?<verse eid="JDG 21:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="JDG 21:4"/>На следующее утро, встав рано, народ построил там жертвенник и принес на нем всесожжения и жертвы примирения.<verse eid="JDG 21:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="JDG 21:5"/>И израильтяне спросили:</para>
+  <para style="p" vid="JDG 21:5">– Какой из всех родов Израиля не пришел на собрание перед Господом?</para>
+  <para style="p" vid="JDG 21:5">Они дали великую клятву, что всякий, кто не придет на собрание перед Господом в Мицпу, непременно будет предан смерти.<verse eid="JDG 21:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="JDG 21:6"/>Израильтяне горевали о своих братьях вениамитянах.</para>
+  <para style="p" vid="JDG 21:6">– Сегодня от Израиля отсечен один род, – говорили они. – <verse eid="JDG 21:6"/><verse number="7" style="v" sid="JDG 21:7"/>Где нам взять жен для тех, кто уцелел, раз мы поклялись Господом не отдавать им в жены наших дочерей?<verse eid="JDG 21:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="JDG 21:8"/>Затем они спросили:</para>
+  <para style="p" vid="JDG 21:8">– Какой из израильских родов не пришел на собрание перед Господом в Мицпу?</para>
+  <para style="p" vid="JDG 21:8">Выяснилось, что в лагерь на собрание не пришел никто из Иавеша, что в Галааде; <verse eid="JDG 21:8"/><verse number="9" style="v" sid="JDG 21:9"/>и когда они пересчитали народ, там не оказалось ни одного из жителей Иавеша, что в Галааде.<verse eid="JDG 21:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="JDG 21:10"/>И тогда общество отправило туда двенадцать тысяч воинов, велев им:</para>
+  <para style="p" vid="JDG 21:10">– Идите, предайте мечу всех жителей Иавеша, что в Галааде, вместе с женщинами и детьми. <verse eid="JDG 21:10"/><verse number="11" style="v" sid="JDG 21:11"/>Сделайте вот что: полностью истребите<note caller="+" style="f"><char style="fr" closed="false">21:11 </char><char style="ft" closed="false">На языке оригинала стоит слово, которое говорит о полном посвящении предметов или людей Господу, часто осуществлявшемся через их уничтожение.</char></note> всех мужчин и всех женщин, кроме девственниц.<verse eid="JDG 21:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="JDG 21:12"/>Среди жителей Иавеша Галаадского они нашли четыреста девушек, которые еще не спали с мужчиной, и увели их в лагерь в Шило, что в земле Ханаана.<verse eid="JDG 21:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="JDG 21:13"/>Все общество послало вениамитянам к скале Риммон предложение заключить мир. <verse eid="JDG 21:13"/><verse number="14" style="v" sid="JDG 21:14"/>Тогда вениамитяне вернулись, и им дали женщин Иавеша, что в Галааде, которых оставили в живых. Но на всех не хватило.<verse eid="JDG 21:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="JDG 21:15"/>Народ горевал о Вениамине, потому что Господь не сохранил целостности родов Израиля. <verse eid="JDG 21:15"/><verse number="16" style="v" sid="JDG 21:16"/>И старейшины общества сказали:</para>
+  <para style="p" vid="JDG 21:16">– Женщины Вениамина истреблены. Как нам добыть жен для мужчин, которые уцелели? <verse eid="JDG 21:16"/><verse number="17" style="v" sid="JDG 21:17"/>У уцелевших вениамитян должны быть наследники, – сказали они, – чтобы Израиль не потерял один из своих родов. <verse eid="JDG 21:17"/><verse number="18" style="v" sid="JDG 21:18"/>Мы не можем дать им в жены своих дочерей, ведь мы, израильтяне, поклялись: «Проклят всякий, кто даст жену вениамитянину». <verse eid="JDG 21:18"/><verse number="19" style="v" sid="JDG 21:19"/>Но смотрите, праздник Господу<note caller="+" style="f"><char style="fr" closed="false">21:19 </char><char style="ft" closed="false">Возможно, здесь говорится об одном из праздников, установленных в Законе (см. <char style="xt"><ref loc="EXO 23:14-17">Исх. 23:14-17</ref></char>), или же о каком-то местном празднике урожая винограда.</char></note> ежегодно празднуется в Шило, что на севере от Вефиля и на востоке от дороги, что ведет от Вефиля в Шехем и на юг от Левоны.<verse eid="JDG 21:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="JDG 21:20"/>И они научили вениамитян, говоря:</para>
+  <para style="p" vid="JDG 21:20">– Идите, спрячьтесь в виноградниках <verse eid="JDG 21:20"/><verse number="21" style="v" sid="JDG 21:21"/>и наблюдайте. Когда девушки Шило выйдут, чтобы кружиться в плясках, выбегайте из виноградников, хватайте каждый себе в жены одну из девушек Шило и ступайте в землю Вениамина. <verse eid="JDG 21:21"/><verse number="22" style="v" sid="JDG 21:22"/>Когда их отцы или братья станут жаловаться нам, мы им скажем: «Будьте великодушны и оставьте их нам, потому что мы не взяли для них жен на войне, а раз не вы сами отдали их нам, то и вы не виновны».<verse eid="JDG 21:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="JDG 21:23"/>Так вениамитяне и поступили. Когда девушки плясали, каждый мужчина схватил по одной и унес, чтобы она стала его женой. После этого они вернулись в свой удел, отстроили города и поселились в них.<verse eid="JDG 21:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="JDG 21:24"/>А израильтяне тогда же покинули то место и пошли домой к своим родам и кланам, каждый – в свой удел.<verse eid="JDG 21:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="JDG 21:25"/>В те дни у Израиля не было царя, и каждый делал то, что считал правильным.<verse eid="JDG 21:25"/></para>
+  <chapter eid="JDG 21"/>
+</usx>

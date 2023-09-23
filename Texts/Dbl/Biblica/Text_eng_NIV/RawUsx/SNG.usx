@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="SNG" style="id">- English-UK: New International Version® (Anglicised) NIV® 2011 (Revised format)</book>
+  <para style="rem">Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.®</para>
+  <para style="h">Song of Songs</para>
+  <para style="toc1">Song of Songs</para>
+  <para style="toc2">Song of Songs</para>
+  <para style="toc3">SS</para>
+  <para style="mt1">Song of Songs</para>
+  <para style="imt">Introduction</para>
+  <para style="im">Traditional wedding celebrations in the Middle East cast the bride and groom in the roles of a king and his queen. The festivities include love songs and also special songs that praise the physical beauty of the bride or the handsomeness of the groom. The custom has a long history and is reflected in the anthology of wedding songs we know as the Song of Songs. The individual songs may have been used repeatedly in marriage celebrations and eventually gathered together, just as the psalms were collected after years of use in worship. The title Solomon’s Song of Songs can be taken to mean that King Solomon, a renowned composer (see <char style="xt"><ref loc="1KI 4:29-34">1 Kings 4:29-34</ref></char>), was the author of its songs. However, it could also be a reference to Solomon as the kind of glorious king the groom represents.</para>
+  <para style="ip">The songs are arranged to tell the courtship story of a man and woman, of their marriage (described as a royal wedding) and its consummation, and of the beginning of their new life together. After a short introduction the book presents six episodes, each typically ending with a reference to the friends of the man and woman. This may refer to others attending the wedding to join in the celebration. Together the songs celebrate the delights of married love and the beauty of the human body, using vivid imagery from the natural world to show that these things are part of the creation that God declared very good.</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="SNG 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="SNG 1:1"/>Solomon’s Song of Songs.<verse eid="SNG 1:1"/></para>
+  <para style="b"/>
+  <para style="sp">She<note caller="+" style="f"><char style="ft" closed="false">The main male and female speakers (identified primarily on the basis of the gender of the relevant Hebrew forms) are indicated by the captions </char><char style="fqa" closed="false">He </char><char style="ft" closed="false">and </char><char style="fqa" closed="false">She </char><char style="ft" closed="false">respectively. The words of others are marked </char><char style="fqa" closed="false">Friends. </char><char style="ft" closed="false">In some instances the divisions and their captions are debatable.</char></note></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 1:2"/>Let him kiss me with the kisses of his mouth –</para>
+  <para style="q2" vid="SNG 1:2">for your love is more delightful than wine.<verse eid="SNG 1:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 1:3"/>Pleasing is the fragrance of your perfumes;</para>
+  <para style="q2" vid="SNG 1:3">your name is like perfume poured out.</para>
+  <para style="q2" vid="SNG 1:3">No wonder the young women love you!<verse eid="SNG 1:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 1:4"/>Take me away with you – let us hurry!</para>
+  <para style="q2" vid="SNG 1:4">Let the king bring me into his chambers.</para>
+  <para style="sp" vid="SNG 1:4">Friends</para>
+  <para style="q1" vid="SNG 1:4">We rejoice and delight in you<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="ft" closed="false">The Hebrew is masculine singular.</char></note>;</para>
+  <para style="q2" vid="SNG 1:4">we will praise your love more than wine.</para>
+  <para style="sp" vid="SNG 1:4">She</para>
+  <para style="q1" vid="SNG 1:4">How right they are to adore you!<verse eid="SNG 1:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 1:5"/>Dark am I, yet lovely,</para>
+  <para style="q2" vid="SNG 1:5">daughters of Jerusalem,</para>
+  <para style="q1" vid="SNG 1:5">dark like the tents of Kedar,</para>
+  <para style="q2" vid="SNG 1:5">like the tent curtains of Solomon.<note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">Salma</char></note><verse eid="SNG 1:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 1:6"/>Do not stare at me because I am dark,</para>
+  <para style="q2" vid="SNG 1:6">because I am darkened by the sun.</para>
+  <para style="q1" vid="SNG 1:6">My mother’s sons were angry with me</para>
+  <para style="q2" vid="SNG 1:6">and made me take care of the vineyards;</para>
+  <para style="q2" vid="SNG 1:6">my own vineyard I had to neglect.<verse eid="SNG 1:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 1:7"/>Tell me, you whom I love,</para>
+  <para style="q2" vid="SNG 1:7">where you graze your flock</para>
+  <para style="q2" vid="SNG 1:7">and where you rest your sheep at midday.</para>
+  <para style="q1" vid="SNG 1:7">Why should I be like a veiled woman</para>
+  <para style="q2" vid="SNG 1:7">beside the flocks of your friends?<verse eid="SNG 1:7"/></para>
+  <para style="sp">Friends</para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 1:8"/>If you do not know, most beautiful of women,</para>
+  <para style="q2" vid="SNG 1:8">follow the tracks of the sheep</para>
+  <para style="q1" vid="SNG 1:8">and graze your young goats</para>
+  <para style="q2" vid="SNG 1:8">by the tents of the shepherds.<verse eid="SNG 1:8"/></para>
+  <para style="sp">He</para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 1:9"/>I liken you, my darling, to a mare</para>
+  <para style="q2" vid="SNG 1:9">among Pharaoh’s chariot horses.<verse eid="SNG 1:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 1:10"/>Your cheeks are beautiful with earrings,</para>
+  <para style="q2" vid="SNG 1:10">your neck with strings of jewels.<verse eid="SNG 1:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 1:11"/>We will make you earrings of gold,</para>
+  <para style="q2" vid="SNG 1:11">studded with silver.<verse eid="SNG 1:11"/></para>
+  <para style="sp">She</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 1:12"/>While the king was at his table,</para>
+  <para style="q2" vid="SNG 1:12">my perfume spread its fragrance.<verse eid="SNG 1:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 1:13"/>My beloved is to me a sachet of myrrh</para>
+  <para style="q2" vid="SNG 1:13">resting between my breasts.<verse eid="SNG 1:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="SNG 1:14"/>My beloved is to me a cluster of henna blossoms</para>
+  <para style="q2" vid="SNG 1:14">from the vineyards of En Gedi.<verse eid="SNG 1:14"/></para>
+  <para style="sp">He</para>
+  <para style="q1">
+    <verse number="15" style="v" sid="SNG 1:15"/>How beautiful you are, my darling!</para>
+  <para style="q2" vid="SNG 1:15">Oh, how beautiful!</para>
+  <para style="q2" vid="SNG 1:15">Your eyes are doves.<verse eid="SNG 1:15"/></para>
+  <para style="sp">She</para>
+  <para style="q1">
+    <verse number="16" style="v" sid="SNG 1:16"/>How handsome you are, my beloved!</para>
+  <para style="q2" vid="SNG 1:16">Oh, how charming!</para>
+  <para style="q2" vid="SNG 1:16">And our bed is verdant.<verse eid="SNG 1:16"/></para>
+  <para style="sp">He</para>
+  <para style="q1">
+    <verse number="17" style="v" sid="SNG 1:17"/>The beams of our house are cedars;</para>
+  <para style="q2" vid="SNG 1:17">our rafters are firs.<verse eid="SNG 1:17"/></para>
+  <chapter eid="SNG 1"/>
+  <chapter number="2" style="c" sid="SNG 2"/>
+  <para style="sp">She<note caller="+" style="f"><char style="ft" closed="false">Or </char><char style="fqa" closed="false">He</char></note></para>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 2:1"/>I am a rose<note caller="+" style="f"><char style="fr" closed="false">2:1 </char><char style="ft" closed="false">Probably a member of the crocus family</char></note> of Sharon,</para>
+  <para style="q2" vid="SNG 2:1">a lily of the valleys.<verse eid="SNG 2:1"/></para>
+  <para style="sp">He</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 2:2"/>Like a lily among thorns</para>
+  <para style="q2" vid="SNG 2:2">is my darling among the young women.<verse eid="SNG 2:2"/></para>
+  <para style="sp">She</para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 2:3"/>Like an apple<note caller="+" style="f"><char style="fr" closed="false">2:3 </char><char style="ft" closed="false">Or possibly </char><char style="fqa" closed="false">apricot</char><char style="ft" closed="false">; here and elsewhere in Song of Songs</char></note> tree among the trees of the forest</para>
+  <para style="q2" vid="SNG 2:3">is my beloved among the young men.</para>
+  <para style="q1" vid="SNG 2:3">I delight to sit in his shade,</para>
+  <para style="q2" vid="SNG 2:3">and his fruit is sweet to my taste.<verse eid="SNG 2:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 2:4"/>Let him lead me to the banquet hall,</para>
+  <para style="q2" vid="SNG 2:4">and let his banner over me be love.<verse eid="SNG 2:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 2:5"/>Strengthen me with raisins,</para>
+  <para style="q2" vid="SNG 2:5">refresh me with apples,</para>
+  <para style="q2" vid="SNG 2:5">for I am faint with love.<verse eid="SNG 2:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 2:6"/>His left arm is under my head,</para>
+  <para style="q2" vid="SNG 2:6">and his right arm embraces me.<verse eid="SNG 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 2:7"/>Daughters of Jerusalem, I charge you</para>
+  <para style="q2" vid="SNG 2:7">by the gazelles and by the does of the field:</para>
+  <para style="q1" vid="SNG 2:7">Do not arouse or awaken love</para>
+  <para style="q2" vid="SNG 2:7">until it so desires.<verse eid="SNG 2:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 2:8"/>Listen! My beloved!</para>
+  <para style="q2" vid="SNG 2:8">Look! Here he comes,</para>
+  <para style="q1" vid="SNG 2:8">leaping across the mountains,</para>
+  <para style="q2" vid="SNG 2:8">bounding over the hills.<verse eid="SNG 2:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 2:9"/>My beloved is like a gazelle or a young stag.</para>
+  <para style="q2" vid="SNG 2:9">Look! There he stands behind our wall,</para>
+  <para style="q1" vid="SNG 2:9">gazing through the windows,</para>
+  <para style="q2" vid="SNG 2:9">peering through the lattice.<verse eid="SNG 2:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 2:10"/>My beloved spoke and said to me,</para>
+  <para style="q2" vid="SNG 2:10">‘Arise, my darling,</para>
+  <para style="q2" vid="SNG 2:10">my beautiful one, come with me.<verse eid="SNG 2:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 2:11"/>See! The winter is past;</para>
+  <para style="q2" vid="SNG 2:11">the rains are over and gone.<verse eid="SNG 2:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 2:12"/>Flowers appear on the earth;</para>
+  <para style="q2" vid="SNG 2:12">the season of singing has come,</para>
+  <para style="q1" vid="SNG 2:12">the cooing of doves</para>
+  <para style="q2" vid="SNG 2:12">is heard in our land.<verse eid="SNG 2:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 2:13"/>The fig-tree forms its early fruit;</para>
+  <para style="q2" vid="SNG 2:13">the blossoming vines spread their fragrance.</para>
+  <para style="q1" vid="SNG 2:13">Arise, come, my darling;</para>
+  <para style="q2" vid="SNG 2:13">my beautiful one, come with me.’<verse eid="SNG 2:13"/></para>
+  <para style="sp">He</para>
+  <para style="q1">
+    <verse number="14" style="v" sid="SNG 2:14"/>My dove in the clefts of the rock,</para>
+  <para style="q2" vid="SNG 2:14">in the hiding-places on the mountainside,</para>
+  <para style="q1" vid="SNG 2:14">show me your face,</para>
+  <para style="q2" vid="SNG 2:14">let me hear your voice;</para>
+  <para style="q1" vid="SNG 2:14">for your voice is sweet,</para>
+  <para style="q2" vid="SNG 2:14">and your face is lovely.<verse eid="SNG 2:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="SNG 2:15"/>Catch for us the foxes,</para>
+  <para style="q2" vid="SNG 2:15">the little foxes</para>
+  <para style="q1" vid="SNG 2:15">that ruin the vineyards,</para>
+  <para style="q2" vid="SNG 2:15">our vineyards that are in bloom.<verse eid="SNG 2:15"/></para>
+  <para style="sp">She</para>
+  <para style="q1">
+    <verse number="16" style="v" sid="SNG 2:16"/>My beloved is mine and I am his;</para>
+  <para style="q2" vid="SNG 2:16">he browses among the lilies.<verse eid="SNG 2:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="SNG 2:17"/>Until the day breaks</para>
+  <para style="q2" vid="SNG 2:17">and the shadows flee,</para>
+  <para style="q1" vid="SNG 2:17">turn, my beloved,</para>
+  <para style="q2" vid="SNG 2:17">and be like a gazelle</para>
+  <para style="q1" vid="SNG 2:17">or like a young stag</para>
+  <para style="q2" vid="SNG 2:17">on the rugged hills.<note caller="+" style="f"><char style="fr" closed="false">2:17 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">the hills of Bether</char></note><verse eid="SNG 2:17"/></para>
+  <para style="b"/>
+  <chapter eid="SNG 2"/>
+  <chapter number="3" style="c" sid="SNG 3"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 3:1"/>All night long on my bed</para>
+  <para style="q2" vid="SNG 3:1">I looked for the one my heart loves;</para>
+  <para style="q2" vid="SNG 3:1">I looked for him but did not find him.<verse eid="SNG 3:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 3:2"/>I will get up now and go about the city,</para>
+  <para style="q2" vid="SNG 3:2">through its streets and squares;</para>
+  <para style="q1" vid="SNG 3:2">I will search for the one my heart loves.</para>
+  <para style="q2" vid="SNG 3:2">So I looked for him but did not find him.<verse eid="SNG 3:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 3:3"/>The watchmen found me</para>
+  <para style="q2" vid="SNG 3:3">as they made their rounds in the city.</para>
+  <para style="q2" vid="SNG 3:3">‘Have you seen the one my heart loves?’<verse eid="SNG 3:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 3:4"/>Scarcely had I passed them</para>
+  <para style="q2" vid="SNG 3:4">when I found the one my heart loves.</para>
+  <para style="q1" vid="SNG 3:4">I held him and would not let him go</para>
+  <para style="q2" vid="SNG 3:4">till I had brought him to my mother’s house,</para>
+  <para style="q2" vid="SNG 3:4">to the room of the one who conceived me.<verse eid="SNG 3:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 3:5"/>Daughters of Jerusalem, I charge you</para>
+  <para style="q2" vid="SNG 3:5">by the gazelles and by the does of the field:</para>
+  <para style="q1" vid="SNG 3:5">do not arouse or awaken love</para>
+  <para style="q2" vid="SNG 3:5">until it so desires.<verse eid="SNG 3:5"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 3:6"/>Who is this coming up from the wilderness</para>
+  <para style="q2" vid="SNG 3:6">like a column of smoke,</para>
+  <para style="q1" vid="SNG 3:6">perfumed with myrrh and incense</para>
+  <para style="q2" vid="SNG 3:6">made from all the spices of the merchant?<verse eid="SNG 3:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 3:7"/>Look! It is Solomon’s carriage,</para>
+  <para style="q2" vid="SNG 3:7">escorted by sixty warriors,</para>
+  <para style="q2" vid="SNG 3:7">the noblest of Israel,<verse eid="SNG 3:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 3:8"/>all of them wearing the sword,</para>
+  <para style="q2" vid="SNG 3:8">all experienced in battle,</para>
+  <para style="q1" vid="SNG 3:8">each with his sword at his side,</para>
+  <para style="q2" vid="SNG 3:8">prepared for the terrors of the night.<verse eid="SNG 3:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 3:9"/>King Solomon made for himself the carriage;</para>
+  <para style="q2" vid="SNG 3:9">he made it of wood from Lebanon.<verse eid="SNG 3:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 3:10"/>Its posts he made of silver,</para>
+  <para style="q2" vid="SNG 3:10">its base of gold.</para>
+  <para style="q1" vid="SNG 3:10">Its seat was upholstered with purple,</para>
+  <para style="q2" vid="SNG 3:10">its interior inlaid with love.</para>
+  <para style="q1" vid="SNG 3:10">Daughters of Jerusalem, <verse eid="SNG 3:10"/><verse number="11" style="v" sid="SNG 3:11"/>come out,</para>
+  <para style="q2" vid="SNG 3:11">and look, you daughters of Zion.</para>
+  <para style="q1" vid="SNG 3:11">Look<note caller="+" style="f"><char style="fr" closed="false">3:10,11 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">interior lovingly inlaid / by the daughters of Jerusalem. / </char><char style="fv" closed="false">11 </char><char style="fqa" closed="false">Come out, you daughters of Zion, / and look</char></note> on King Solomon wearing a crown,</para>
+  <para style="q2" vid="SNG 3:11">the crown with which his mother crowned him</para>
+  <para style="q1" vid="SNG 3:11">on the day of his wedding,</para>
+  <para style="q2" vid="SNG 3:11">the day his heart rejoiced.<verse eid="SNG 3:11"/></para>
+  <chapter eid="SNG 3"/>
+  <chapter number="4" style="c" sid="SNG 4"/>
+  <para style="sp">He</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 4:1"/>How beautiful you are, my darling!</para>
+  <para style="q2" vid="SNG 4:1">Oh, how beautiful!</para>
+  <para style="q2" vid="SNG 4:1">Your eyes behind your veil are doves.</para>
+  <para style="q1" vid="SNG 4:1">Your hair is like a flock of goats</para>
+  <para style="q2" vid="SNG 4:1">descending from the hills of Gilead.<verse eid="SNG 4:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 4:2"/>Your teeth are like a flock of sheep just shorn,</para>
+  <para style="q2" vid="SNG 4:2">coming up from the washing.</para>
+  <para style="q1" vid="SNG 4:2">Each has its twin;</para>
+  <para style="q2" vid="SNG 4:2">not one of them is alone.<verse eid="SNG 4:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 4:3"/>Your lips are like a scarlet ribbon;</para>
+  <para style="q2" vid="SNG 4:3">your mouth is lovely.</para>
+  <para style="q1" vid="SNG 4:3">Your temples behind your veil</para>
+  <para style="q2" vid="SNG 4:3">are like the halves of a pomegranate.<verse eid="SNG 4:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 4:4"/>Your neck is like the tower of David,</para>
+  <para style="q2" vid="SNG 4:4">built with courses of stone<note caller="+" style="f"><char style="fr" closed="false">4:4 </char><char style="ft" closed="false">The meaning of the Hebrew for this phrase is uncertain.</char></note>;</para>
+  <para style="q1" vid="SNG 4:4">on it hang a thousand shields,</para>
+  <para style="q2" vid="SNG 4:4">all of them shields of warriors.<verse eid="SNG 4:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 4:5"/>Your breasts are like two fawns,</para>
+  <para style="q2" vid="SNG 4:5">like twin fawns of a gazelle</para>
+  <para style="q2" vid="SNG 4:5">that browse among the lilies.<verse eid="SNG 4:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 4:6"/>Until the day breaks</para>
+  <para style="q2" vid="SNG 4:6">and the shadows flee,</para>
+  <para style="q1" vid="SNG 4:6">I will go to the mountain of myrrh</para>
+  <para style="q2" vid="SNG 4:6">and to the hill of incense.<verse eid="SNG 4:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 4:7"/>You are altogether beautiful, my darling;</para>
+  <para style="q2" vid="SNG 4:7">there is no flaw in you.<verse eid="SNG 4:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 4:8"/>Come with me from Lebanon, my bride,</para>
+  <para style="q2" vid="SNG 4:8">come with me from Lebanon.</para>
+  <para style="q1" vid="SNG 4:8">Descend from the crest of Amana,</para>
+  <para style="q2" vid="SNG 4:8">from the top of Senir, the summit of Hermon,</para>
+  <para style="q1" vid="SNG 4:8">from the lions’ dens</para>
+  <para style="q2" vid="SNG 4:8">and the mountain haunts of leopards.<verse eid="SNG 4:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 4:9"/>You have stolen my heart, my sister, my bride;</para>
+  <para style="q2" vid="SNG 4:9">you have stolen my heart</para>
+  <para style="q1" vid="SNG 4:9">with one glance of your eyes,</para>
+  <para style="q2" vid="SNG 4:9">with one jewel of your necklace.<verse eid="SNG 4:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 4:10"/>How delightful is your love, my sister, my bride!</para>
+  <para style="q2" vid="SNG 4:10">How much more pleasing is your love than wine,</para>
+  <para style="q1" vid="SNG 4:10">and the fragrance of your perfume</para>
+  <para style="q2" vid="SNG 4:10">more than any spice!<verse eid="SNG 4:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 4:11"/>Your lips drop sweetness as the honeycomb, my bride;</para>
+  <para style="q2" vid="SNG 4:11">milk and honey are under your tongue.</para>
+  <para style="q1" vid="SNG 4:11">The fragrance of your garments</para>
+  <para style="q2" vid="SNG 4:11">is like the fragrance of Lebanon.<verse eid="SNG 4:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 4:12"/>You are a garden locked up, my sister, my bride;</para>
+  <para style="q2" vid="SNG 4:12">you are a spring enclosed, a sealed fountain.<verse eid="SNG 4:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 4:13"/>Your plants are an orchard of pomegranates</para>
+  <para style="q2" vid="SNG 4:13">with choice fruits,</para>
+  <para style="q2" vid="SNG 4:13">with henna and nard,<verse eid="SNG 4:13"/></para>
+  <para style="q2">
+    <verse number="14" style="v" sid="SNG 4:14"/>nard and saffron,</para>
+  <para style="q2" vid="SNG 4:14">calamus and cinnamon,</para>
+  <para style="q2" vid="SNG 4:14">with every kind of incense tree,</para>
+  <para style="q2" vid="SNG 4:14">with myrrh and aloes</para>
+  <para style="q2" vid="SNG 4:14">and all the finest spices.<verse eid="SNG 4:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="SNG 4:15"/>You are<note caller="+" style="f"><char style="fr" closed="false">4:15 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">I am </char><char style="ft" closed="false">(spoken by </char><char style="fqa" closed="false">She</char><char style="ft" closed="false">)</char></note> a garden fountain,</para>
+  <para style="q2" vid="SNG 4:15">a well of flowing water</para>
+  <para style="q2" vid="SNG 4:15">streaming down from Lebanon.<verse eid="SNG 4:15"/></para>
+  <para style="sp">She</para>
+  <para style="q1">
+    <verse number="16" style="v" sid="SNG 4:16"/>Awake, north wind,</para>
+  <para style="q2" vid="SNG 4:16">and come, south wind!</para>
+  <para style="q1" vid="SNG 4:16">Blow on my garden,</para>
+  <para style="q2" vid="SNG 4:16">that its fragrance may spread everywhere.</para>
+  <para style="q1" vid="SNG 4:16">Let my beloved come into his garden</para>
+  <para style="q2" vid="SNG 4:16">and taste its choice fruits.<verse eid="SNG 4:16"/></para>
+  <chapter eid="SNG 4"/>
+  <chapter number="5" style="c" sid="SNG 5"/>
+  <para style="sp">He</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 5:1"/>I have come into my garden, my sister, my bride;</para>
+  <para style="q2" vid="SNG 5:1">I have gathered my myrrh with my spice.</para>
+  <para style="q1" vid="SNG 5:1">I have eaten my honeycomb and my honey;</para>
+  <para style="q2" vid="SNG 5:1">I have drunk my wine and my milk.</para>
+  <para style="sp" vid="SNG 5:1">Friends</para>
+  <para style="q1" vid="SNG 5:1">Eat, friends, and drink;</para>
+  <para style="q2" vid="SNG 5:1">drink your fill of love.<verse eid="SNG 5:1"/></para>
+  <para style="sp">She</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 5:2"/>I slept but my heart was awake.</para>
+  <para style="q2" vid="SNG 5:2">Listen! My beloved is knocking:</para>
+  <para style="q1" vid="SNG 5:2">‘Open to me, my sister, my darling,</para>
+  <para style="q2" vid="SNG 5:2">my dove, my flawless one.</para>
+  <para style="q1" vid="SNG 5:2">My head is drenched with dew,</para>
+  <para style="q2" vid="SNG 5:2">my hair with the dampness of the night.’<verse eid="SNG 5:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 5:3"/>I have taken off my robe –</para>
+  <para style="q2" vid="SNG 5:3">must I put it on again?</para>
+  <para style="q1" vid="SNG 5:3">I have washed my feet –</para>
+  <para style="q2" vid="SNG 5:3">must I soil them again?<verse eid="SNG 5:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 5:4"/>My beloved thrust his hand through the latch-opening;</para>
+  <para style="q2" vid="SNG 5:4">my heart began to pound for him.<verse eid="SNG 5:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 5:5"/>I arose to open for my beloved,</para>
+  <para style="q2" vid="SNG 5:5">and my hands dripped with myrrh,</para>
+  <para style="q1" vid="SNG 5:5">my fingers with flowing myrrh,</para>
+  <para style="q2" vid="SNG 5:5">on the handles of the bolt.<verse eid="SNG 5:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 5:6"/>I opened for my beloved,</para>
+  <para style="q2" vid="SNG 5:6">but my beloved had left; he was gone.</para>
+  <para style="q2" vid="SNG 5:6">My heart sank at his departure.<note caller="+" style="f"><char style="fr" closed="false">5:6 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">heart had gone out to him when he spoke</char></note></para>
+  <para style="q1" vid="SNG 5:6">I looked for him but did not find him.</para>
+  <para style="q2" vid="SNG 5:6">I called him but he did not answer.<verse eid="SNG 5:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 5:7"/>The watchmen found me</para>
+  <para style="q2" vid="SNG 5:7">as they made their rounds in the city.</para>
+  <para style="q1" vid="SNG 5:7">They beat me, they bruised me;</para>
+  <para style="q2" vid="SNG 5:7">they took away my cloak,</para>
+  <para style="q2" vid="SNG 5:7">those watchmen of the walls!<verse eid="SNG 5:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 5:8"/>Daughters of Jerusalem, I charge you –</para>
+  <para style="q2" vid="SNG 5:8">if you find my beloved,</para>
+  <para style="q1" vid="SNG 5:8">what will you tell him?</para>
+  <para style="q2" vid="SNG 5:8">Tell him I am faint with love.<verse eid="SNG 5:8"/></para>
+  <para style="sp">Friends</para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 5:9"/>How is your beloved better than others,</para>
+  <para style="q2" vid="SNG 5:9">most beautiful of women?</para>
+  <para style="q1" vid="SNG 5:9">How is your beloved better than others,</para>
+  <para style="q2" vid="SNG 5:9">that you so charge us?<verse eid="SNG 5:9"/></para>
+  <para style="sp">She</para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 5:10"/>My beloved is radiant and ruddy,</para>
+  <para style="q2" vid="SNG 5:10">outstanding among ten thousand.<verse eid="SNG 5:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 5:11"/>His head is purest gold;</para>
+  <para style="q2" vid="SNG 5:11">his hair is wavy</para>
+  <para style="q2" vid="SNG 5:11">and black as a raven.<verse eid="SNG 5:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 5:12"/>His eyes are like doves</para>
+  <para style="q2" vid="SNG 5:12">by the water streams,</para>
+  <para style="q1" vid="SNG 5:12">washed in milk,</para>
+  <para style="q2" vid="SNG 5:12">mounted like jewels.<verse eid="SNG 5:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 5:13"/>His cheeks are like beds of spice</para>
+  <para style="q2" vid="SNG 5:13">yielding perfume.</para>
+  <para style="q1" vid="SNG 5:13">His lips are like lilies</para>
+  <para style="q2" vid="SNG 5:13">dripping with myrrh.<verse eid="SNG 5:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="SNG 5:14"/>His arms are rods of gold</para>
+  <para style="q2" vid="SNG 5:14">set with topaz.</para>
+  <para style="q1" vid="SNG 5:14">His body is like polished ivory</para>
+  <para style="q2" vid="SNG 5:14">decorated with lapis lazuli.<verse eid="SNG 5:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="SNG 5:15"/>His legs are pillars of marble</para>
+  <para style="q2" vid="SNG 5:15">set on bases of pure gold.</para>
+  <para style="q1" vid="SNG 5:15">His appearance is like Lebanon,</para>
+  <para style="q2" vid="SNG 5:15">choice as its cedars.<verse eid="SNG 5:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="SNG 5:16"/>His mouth is sweetness itself;</para>
+  <para style="q2" vid="SNG 5:16">he is altogether lovely.</para>
+  <para style="q1" vid="SNG 5:16">This is my beloved, this is my friend,</para>
+  <para style="q2" vid="SNG 5:16">daughters of Jerusalem.<verse eid="SNG 5:16"/></para>
+  <chapter eid="SNG 5"/>
+  <chapter number="6" style="c" sid="SNG 6"/>
+  <para style="sp">Friends</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 6:1"/>Where has your beloved gone,</para>
+  <para style="q2" vid="SNG 6:1">most beautiful of women?</para>
+  <para style="q1" vid="SNG 6:1">Which way did your beloved turn,</para>
+  <para style="q2" vid="SNG 6:1">that we may look for him with you?<verse eid="SNG 6:1"/></para>
+  <para style="sp">She</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 6:2"/>My beloved has gone down to his garden,</para>
+  <para style="q2" vid="SNG 6:2">to the beds of spices,</para>
+  <para style="q1" vid="SNG 6:2">to browse in the gardens</para>
+  <para style="q2" vid="SNG 6:2">and to gather lilies.<verse eid="SNG 6:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 6:3"/>I am my beloved’s and my beloved is mine;</para>
+  <para style="q2" vid="SNG 6:3">he browses among the lilies.<verse eid="SNG 6:3"/></para>
+  <para style="sp">He</para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 6:4"/>You are as beautiful as Tirzah, my darling,</para>
+  <para style="q2" vid="SNG 6:4">as lovely as Jerusalem,</para>
+  <para style="q2" vid="SNG 6:4">as majestic as troops with banners.<verse eid="SNG 6:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 6:5"/>Turn your eyes from me;</para>
+  <para style="q2" vid="SNG 6:5">they overwhelm me.</para>
+  <para style="q1" vid="SNG 6:5">Your hair is like a flock of goats</para>
+  <para style="q2" vid="SNG 6:5">descending from Gilead.<verse eid="SNG 6:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 6:6"/>Your teeth are like a flock of sheep</para>
+  <para style="q2" vid="SNG 6:6">coming up from the washing.</para>
+  <para style="q1" vid="SNG 6:6">Each has its twin,</para>
+  <para style="q2" vid="SNG 6:6">not one of them is missing.<verse eid="SNG 6:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 6:7"/>Your temples behind your veil</para>
+  <para style="q2" vid="SNG 6:7">are like the halves of a pomegranate.<verse eid="SNG 6:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 6:8"/>Sixty queens there may be,</para>
+  <para style="q2" vid="SNG 6:8">and eighty concubines,</para>
+  <para style="q2" vid="SNG 6:8">and virgins beyond number;<verse eid="SNG 6:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 6:9"/>but my dove, my perfect one, is unique,</para>
+  <para style="q2" vid="SNG 6:9">the only daughter of her mother,</para>
+  <para style="q2" vid="SNG 6:9">the favourite of the one who bore her.</para>
+  <para style="q1" vid="SNG 6:9">The young women saw her and called her blessed;</para>
+  <para style="q2" vid="SNG 6:9">the queens and concubines praised her.<verse eid="SNG 6:9"/></para>
+  <para style="sp">Friends</para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 6:10"/>Who is this that appears like the dawn,</para>
+  <para style="q2" vid="SNG 6:10">fair as the moon, bright as the sun,</para>
+  <para style="q2" vid="SNG 6:10">majestic as the stars in procession?<verse eid="SNG 6:10"/></para>
+  <para style="sp">He</para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 6:11"/>I went down to the grove of nut trees</para>
+  <para style="q2" vid="SNG 6:11">to look at the new growth in the valley,</para>
+  <para style="q1" vid="SNG 6:11">to see if the vines had budded</para>
+  <para style="q2" vid="SNG 6:11">or the pomegranates were in bloom.<verse eid="SNG 6:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 6:12"/>Before I realised it,</para>
+  <para style="q2" vid="SNG 6:12">my desire set me among the royal chariots of my people.<note caller="+" style="f"><char style="fr" closed="false">6:12 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">among the chariots of Amminadab</char><char style="ft" closed="false">; or </char><char style="fqa" closed="false">among the chariots of the people of the prince</char></note><verse eid="SNG 6:12"/></para>
+  <para style="sp">Friends</para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 6:13"/>Come back, come back, O Shulammite;</para>
+  <para style="q2" vid="SNG 6:13">come back, come back, that we may gaze on you!</para>
+  <para style="sp" vid="SNG 6:13">He</para>
+  <para style="q1" vid="SNG 6:13">Why would you gaze on the Shulammite</para>
+  <para style="q2" vid="SNG 6:13">as on the dance of Mahanaim?<note caller="+" style="f"><char style="fr" closed="false">6:13 </char><char style="ft" closed="false">In Hebrew texts this verse (6:13) is numbered 7:1.</char></note><verse eid="SNG 6:13"/></para>
+  <para style="b"/>
+  <chapter eid="SNG 6"/>
+  <chapter number="7" style="c" sid="SNG 7"/>
+  <para style="q1">
+    <note caller="+" style="f">
+      <char style="ft" closed="false">In Hebrew texts 7:1-13 is numbered 7:2-14.</char>
+    </note> <verse number="1" style="v" sid="SNG 7:1"/>How beautiful your sandalled feet,</para>
+  <para style="q2" vid="SNG 7:1">O prince’s daughter!</para>
+  <para style="q1" vid="SNG 7:1">Your graceful legs are like jewels,</para>
+  <para style="q2" vid="SNG 7:1">the work of an artist’s hands.<verse eid="SNG 7:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 7:2"/>Your navel is a rounded goblet</para>
+  <para style="q2" vid="SNG 7:2">that never lacks blended wine.</para>
+  <para style="q1" vid="SNG 7:2">Your waist is a mound of wheat</para>
+  <para style="q2" vid="SNG 7:2">encircled by lilies.<verse eid="SNG 7:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 7:3"/>Your breasts are like two fawns,</para>
+  <para style="q2" vid="SNG 7:3">like twin fawns of a gazelle.<verse eid="SNG 7:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 7:4"/>Your neck is like an ivory tower.</para>
+  <para style="q1" vid="SNG 7:4">Your eyes are the pools of Heshbon</para>
+  <para style="q2" vid="SNG 7:4">by the gate of Bath Rabbim.</para>
+  <para style="q1" vid="SNG 7:4">Your nose is like the tower of Lebanon</para>
+  <para style="q2" vid="SNG 7:4">looking towards Damascus.<verse eid="SNG 7:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 7:5"/>Your head crowns you like Mount Carmel.</para>
+  <para style="q2" vid="SNG 7:5">Your hair is like royal tapestry;</para>
+  <para style="q2" vid="SNG 7:5">the king is held captive by its tresses.<verse eid="SNG 7:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 7:6"/>How beautiful you are and how pleasing,</para>
+  <para style="q2" vid="SNG 7:6">my love, with your delights!<verse eid="SNG 7:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 7:7"/>Your stature is like that of the palm,</para>
+  <para style="q2" vid="SNG 7:7">and your breasts like clusters of fruit.<verse eid="SNG 7:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 7:8"/>I said, ‘I will climb the palm tree;</para>
+  <para style="q2" vid="SNG 7:8">I will take hold of its fruit.’</para>
+  <para style="q1" vid="SNG 7:8">May your breasts be like clusters of grapes on the vine,</para>
+  <para style="q2" vid="SNG 7:8">the fragrance of your breath like apples,<verse eid="SNG 7:8"/></para>
+  <para style="q2">
+    <verse number="9" style="v" sid="SNG 7:9"/>and your mouth like the best wine.</para>
+  <para style="sp" vid="SNG 7:9">She</para>
+  <para style="q1" vid="SNG 7:9">May the wine go straight to my beloved,</para>
+  <para style="q2" vid="SNG 7:9">flowing gently over lips and teeth.<note caller="+" style="f"><char style="fr" closed="false">7:9 </char><char style="ft" closed="false">Septuagint, Aquila, Vulgate and Syriac; Hebrew </char><char style="fqa" closed="false">lips of sleepers</char></note><verse eid="SNG 7:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 7:10"/>I belong to my beloved,</para>
+  <para style="q2" vid="SNG 7:10">and his desire is for me.<verse eid="SNG 7:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 7:11"/>Come, my beloved, let us go to the countryside,</para>
+  <para style="q2" vid="SNG 7:11">let us spend the night in the villages.<note caller="+" style="f"><char style="fr" closed="false">7:11 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">the henna bushes</char></note><verse eid="SNG 7:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 7:12"/>Let us go early to the vineyards</para>
+  <para style="q2" vid="SNG 7:12">to see if the vines have budded,</para>
+  <para style="q1" vid="SNG 7:12">if their blossoms have opened,</para>
+  <para style="q2" vid="SNG 7:12">and if the pomegranates are in bloom –</para>
+  <para style="q2" vid="SNG 7:12">there I will give you my love.<verse eid="SNG 7:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 7:13"/>The mandrakes send out their fragrance,</para>
+  <para style="q2" vid="SNG 7:13">and at our door is every delicacy,</para>
+  <para style="q1" vid="SNG 7:13">both new and old,</para>
+  <para style="q2" vid="SNG 7:13">that I have stored up for you, my beloved.<verse eid="SNG 7:13"/></para>
+  <para style="b"/>
+  <chapter eid="SNG 7"/>
+  <chapter number="8" style="c" sid="SNG 8"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="SNG 8:1"/>If only you were to me like a brother,</para>
+  <para style="q2" vid="SNG 8:1">who was nursed at my mother’s breasts!</para>
+  <para style="q1" vid="SNG 8:1">Then, if I found you outside,</para>
+  <para style="q2" vid="SNG 8:1">I would kiss you,</para>
+  <para style="q2" vid="SNG 8:1">and no-one would despise me.<verse eid="SNG 8:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="SNG 8:2"/>I would lead you</para>
+  <para style="q2" vid="SNG 8:2">and bring you to my mother’s house –</para>
+  <para style="q2" vid="SNG 8:2">she who has taught me.</para>
+  <para style="q1" vid="SNG 8:2">I would give you spiced wine to drink,</para>
+  <para style="q2" vid="SNG 8:2">the nectar of my pomegranates.<verse eid="SNG 8:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="SNG 8:3"/>His left arm is under my head</para>
+  <para style="q2" vid="SNG 8:3">and his right arm embraces me.<verse eid="SNG 8:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="SNG 8:4"/>Daughters of Jerusalem, I charge you:</para>
+  <para style="q2" vid="SNG 8:4">do not arouse or awaken love</para>
+  <para style="q2" vid="SNG 8:4">until it so desires.<verse eid="SNG 8:4"/></para>
+  <para style="sp">Friends</para>
+  <para style="q1">
+    <verse number="5" style="v" sid="SNG 8:5"/>Who is this coming up from the wilderness</para>
+  <para style="q2" vid="SNG 8:5">leaning on her beloved?</para>
+  <para style="sp" vid="SNG 8:5">She</para>
+  <para style="q1" vid="SNG 8:5">Under the apple tree I roused you;</para>
+  <para style="q2" vid="SNG 8:5">there your mother conceived you,</para>
+  <para style="q2" vid="SNG 8:5">there she who was in labour gave you birth.<verse eid="SNG 8:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="SNG 8:6"/>Place me like a seal over your heart,</para>
+  <para style="q2" vid="SNG 8:6">like a seal on your arm;</para>
+  <para style="q1" vid="SNG 8:6">for love is as strong as death,</para>
+  <para style="q2" vid="SNG 8:6">its jealousy<note caller="+" style="f"><char style="fr" closed="false">8:6 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">ardour</char></note> unyielding as the grave.</para>
+  <para style="q1" vid="SNG 8:6">It burns like blazing fire,</para>
+  <para style="q2" vid="SNG 8:6">like a mighty flame.<note caller="+" style="f"><char style="fr" closed="false">8:6 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">fire, / like the very flame of the <char style="sc">Lord</char></char></note><verse eid="SNG 8:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="SNG 8:7"/>Many waters cannot quench love;</para>
+  <para style="q2" vid="SNG 8:7">rivers cannot sweep it away.</para>
+  <para style="q1" vid="SNG 8:7">If one were to give</para>
+  <para style="q2" vid="SNG 8:7">all the wealth of one’s house for love,</para>
+  <para style="q2" vid="SNG 8:7">it<note caller="+" style="f"><char style="fr" closed="false">8:7 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">he</char></note> would be utterly scorned.<verse eid="SNG 8:7"/></para>
+  <para style="sp">Friends</para>
+  <para style="q1">
+    <verse number="8" style="v" sid="SNG 8:8"/>We have a little sister,</para>
+  <para style="q2" vid="SNG 8:8">and her breasts are not yet grown.</para>
+  <para style="q1" vid="SNG 8:8">What shall we do for our sister</para>
+  <para style="q2" vid="SNG 8:8">on the day she is spoken for?<verse eid="SNG 8:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="SNG 8:9"/>If she is a wall,</para>
+  <para style="q2" vid="SNG 8:9">we will build towers of silver on her.</para>
+  <para style="q1" vid="SNG 8:9">If she is a door,</para>
+  <para style="q2" vid="SNG 8:9">we will enclose her with panels of cedar.<verse eid="SNG 8:9"/></para>
+  <para style="sp">She</para>
+  <para style="q1">
+    <verse number="10" style="v" sid="SNG 8:10"/>I am a wall,</para>
+  <para style="q2" vid="SNG 8:10">and my breasts are like towers.</para>
+  <para style="q1" vid="SNG 8:10">Thus I have become in his eyes</para>
+  <para style="q2" vid="SNG 8:10">like one bringing contentment.<verse eid="SNG 8:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="SNG 8:11"/>Solomon had a vineyard in Baal Hamon;</para>
+  <para style="q2" vid="SNG 8:11">he let out his vineyard to tenants.</para>
+  <para style="q1" vid="SNG 8:11">Each was to bring for its fruit</para>
+  <para style="q2" vid="SNG 8:11">a thousand shekels<note caller="+" style="f"><char style="fr" closed="false">8:11 </char><char style="ft" closed="false">That is, about 12 kilograms; also in verse 12</char></note> of silver.<verse eid="SNG 8:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="SNG 8:12"/>But my own vineyard is mine to give;</para>
+  <para style="q2" vid="SNG 8:12">the thousand shekels are for you, Solomon,</para>
+  <para style="q2" vid="SNG 8:12">and two hundred<note caller="+" style="f"><char style="fr" closed="false">8:12 </char><char style="ft" closed="false">That is, about 2.3 kilograms</char></note> are for those who tend its fruit.<verse eid="SNG 8:12"/></para>
+  <para style="sp">He</para>
+  <para style="q1">
+    <verse number="13" style="v" sid="SNG 8:13"/>You who dwell in the gardens</para>
+  <para style="q2" vid="SNG 8:13">with friends in attendance,</para>
+  <para style="q2" vid="SNG 8:13">let me hear your voice!<verse eid="SNG 8:13"/></para>
+  <para style="sp">She</para>
+  <para style="q1">
+    <verse number="14" style="v" sid="SNG 8:14"/>Come away, my beloved,</para>
+  <para style="q2" vid="SNG 8:14">and be like a gazelle</para>
+  <para style="q1" vid="SNG 8:14">or like a young stag</para>
+  <para style="q2" vid="SNG 8:14">on the spice-laden mountains.<verse eid="SNG 8:14"/></para>
+  <chapter eid="SNG 8"/>
+</usx>

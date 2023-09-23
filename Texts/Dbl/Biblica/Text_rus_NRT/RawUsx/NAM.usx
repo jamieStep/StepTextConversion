@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="NAM" style="id">- New Russian Translation (Новый русский перевод)</book>
+  <para style="rem">Copyright © 1988, 1991, 1998, 2006, 2010, 2014 by Biblica, Inc.</para>
+  <para style="h">НАУМ</para>
+  <para style="toc1">Наум</para>
+  <para style="toc2">Наум</para>
+  <para style="toc3">Наум</para>
+  <para style="mt1">Наум</para>
+  <para style="ip">Наум пророчествовал о разрушении Ниневии, столицы Ассирии, где-то между 663 г. до н. э. (когда египетский город Фивы пал, о чем Наум говорит в прошедшем времени, см. <char style="xt"><ref loc="NAM 3:8">3:8</ref></char>) и 612 г. до н. э. (когда пала Ниневия, как он и предсказал). Он был современником пророка Иеремии и, возможно, пророков Аввакума и Софонии.</para>
+  <para style="ip">Во времена служения Наума Иудея была подчинена Ассирии, которая доминировала на Ближнем Востоке более столетия. Она уже уничтожила северное царство Израиль (в 722 г. до н. э.) и теперь представляла серьезную угрозу для Иудеи. Ассирийское войско было известно своей жестокостью к противникам (<char style="xt"><ref loc="NAM 3:1">3:1</ref>, <ref loc="NAM 3:19">19</ref></char>). Несмотря на могущественную власть Ассирии, пророк Наум возвещал о гибели этой империи за ее грехи, надменность и жестокость. Его послание должно было утешить народ Бога в столкновении с ужасной несправедливостью (<char style="xt"><ref loc="NAM 1:7-8">1:7-8</ref>, <ref loc="NAM 1:12-13">12-13</ref></char>). Пророчество Наума исполнилось в 612 г. до н. э., когда Мидия и Вавилон вместе со скифами завоевали Ниневию.</para>
+  <para style="ip">Главная тема этой книги – суд Бога над злом. Наум говорил о том, что Господь не оставит нечестивых без наказания, но в конце концов установит справедливость (<char style="xt"><ref loc="NAM 1:2-6">1:2-6</ref></char>). Он – убежище для всех, кто доверяет Ему (<char style="xt"><ref loc="NAM 1:7">1:7</ref></char>); Он контролирует судьбы всех народов, и не только тех, которые поклоняются Ему.</para>
+  <para style="iot">Содержание</para>
+  <para style="io1">Суд над Ниневией и милость Бога к Своему народу (<char style="ior"><ref loc="NAM 1:1-15">1:1-15</ref></char>).</para>
+  <para style="io1">Видение о падении Ниневии (<char style="ior"><ref loc="NAM 2:1-13">2:1-13</ref></char>).</para>
+  <para style="io1">Грехи Ниневии и неизбежность суда (<char style="ior"><ref loc="NAM 3:1-19">3:1-19</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="NAM 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="NAM 1:1"/>Пророчество о Ниневии. Книга видений Наума из Элкоша.<verse eid="NAM 1:1"/></para>
+  <para style="s1">Гнев Господень против Ниневии</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="NAM 1:2"/>Господь – ревнивый и мстительный Бог;</para>
+  <para style="q2" vid="NAM 1:2">Господь мстительный и гневливый.</para>
+  <para style="q1" vid="NAM 1:2">Господь мстит Своим врагам</para>
+  <para style="q2" vid="NAM 1:2">и хранит гнев против Своих врагов.<verse eid="NAM 1:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="NAM 1:3"/>Господь долготерпелив и велик в Своем могуществе;</para>
+  <para style="q2" vid="NAM 1:3">Господь не оставит виновных без наказания.</para>
+  <para style="q1" vid="NAM 1:3">Его шествие – в буре и вихре,</para>
+  <para style="q2" vid="NAM 1:3">облака – пыль от Его ног.<verse eid="NAM 1:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="NAM 1:4"/>Он приказывает морю, и оно высыхает,</para>
+  <para style="q2" vid="NAM 1:4">рекам – и они иссякают.</para>
+  <para style="q1" vid="NAM 1:4">Башан и Кармил увядают,</para>
+  <para style="q2" vid="NAM 1:4">и блекнут цветы на Ливане.<verse eid="NAM 1:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="NAM 1:5"/>Сотрясаются перед Ним горы и тают холмы.</para>
+  <para style="q2" vid="NAM 1:5">Земля трепещет перед Его лицом,</para>
+  <para style="q1" vid="NAM 1:5">трепещет мир и все живущее в нем.<verse eid="NAM 1:5"/></para>
+  <para style="q2">
+    <verse number="6" style="v" sid="NAM 1:6"/>Кто устоит перед Его негодованием?</para>
+  <para style="q1" vid="NAM 1:6">Кто сможет выдержать Его пылающий гнев?</para>
+  <para style="q2" vid="NAM 1:6">Подобно огню разливается Его гнев,</para>
+  <para style="q1" vid="NAM 1:6">скалы рассыпаются перед Ним.<verse eid="NAM 1:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="NAM 1:7"/>Господь благ, Он – убежище в дни бедствий.</para>
+  <para style="q2" vid="NAM 1:7">Он заботится о тех, кто в Нем ищет прибежища,<verse eid="NAM 1:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="NAM 1:8"/>но всепотопляющим наводнением</para>
+  <para style="q2" vid="NAM 1:8">Он разрушит <char style="add">Ниневию</char> до основания;</para>
+  <para style="q1" vid="NAM 1:8">мрак настигнет Его врагов.<verse eid="NAM 1:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="NAM 1:9"/>Что бы вы ни замышляли против Господа,</para>
+  <para style="q2" vid="NAM 1:9">Он истребит <char style="add">вас</char> до конца,</para>
+  <para style="q1" vid="NAM 1:9">и бедствие уже не повторится.<verse eid="NAM 1:9"/></para>
+  <para style="q2">
+    <verse number="10" style="v" sid="NAM 1:10"/>Они запутаются в терновнике</para>
+  <para style="q1" vid="NAM 1:10">и будут пьяны от вина,</para>
+  <para style="q2" vid="NAM 1:10">они будут уничтожены, как сухое жнивье.<verse eid="NAM 1:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="NAM 1:11"/>Из тебя, <char style="add">Ниневия</char>, вышел тот,</para>
+  <para style="q2" vid="NAM 1:11">кто замышляет злое против Господа,</para>
+  <para style="q1" vid="NAM 1:11">кто советует беззаконное.<verse eid="NAM 1:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="NAM 1:12"/>Так говорит Господь:</para>
+  <para style="q1" vid="NAM 1:12">– Хотя у них есть союзники и их великое множество,</para>
+  <para style="q2" vid="NAM 1:12">они будут уничтожены и исчезнут,</para>
+  <para style="q1" vid="NAM 1:12">а тебя, <char style="add">Иудея</char>, раньше Я отягощал,</para>
+  <para style="q2" vid="NAM 1:12">но впредь уже не стану.<verse eid="NAM 1:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="NAM 1:13"/>И теперь Я сокрушу их ярмо, что на твоей шее,</para>
+  <para style="q2" vid="NAM 1:13">и разорву твои оковы.<verse eid="NAM 1:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="NAM 1:14"/>Господь дал следующее повеление о тебе, <char style="add">Ниневия</char>:</para>
+  <para style="q2" vid="NAM 1:14">– Не станет у тебя потомков,</para>
+  <para style="q1" vid="NAM 1:14">носящих твое имя.</para>
+  <para style="q2" vid="NAM 1:14">Я разрушу твоих идолов и уничтожу истуканы,</para>
+  <para style="q1" vid="NAM 1:14">что находятся в храмах твоих богов.</para>
+  <para style="q2" vid="NAM 1:14">Я приготовлю тебе могилу,</para>
+  <para style="q1" vid="NAM 1:14">потому что ты презираема.<verse eid="NAM 1:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="NAM 1:15"/>Смотри, идет по горам гонец,</para>
+  <para style="q2" vid="NAM 1:15">несущий радостную весть,</para>
+  <para style="q1" vid="NAM 1:15">провозглашающий мир!</para>
+  <para style="q2" vid="NAM 1:15">Отмечай свои праздники, Иудея,</para>
+  <para style="q1" vid="NAM 1:15">исполняй свои обещания.</para>
+  <para style="q2" vid="NAM 1:15">Не вторгнется больше беззаконный в твои владения,</para>
+  <para style="q1" vid="NAM 1:15">потому что будет полностью уничтожен.<verse eid="NAM 1:15"/></para>
+  <chapter eid="NAM 1"/>
+  <chapter number="2" style="c" sid="NAM 2"/>
+  <para style="s1">Падение Ниневии</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="NAM 2:1"/>
+    <char style="add">Ниневия</char>, против тебя поднимается разрушитель.</para>
+  <para style="q2" vid="NAM 2:1">Охраняй крепости,</para>
+  <para style="q2" vid="NAM 2:1">стереги дорогу,</para>
+  <para style="q2" vid="NAM 2:1">укрепляй себя,</para>
+  <para style="q2" vid="NAM 2:1">собери все свои силы.<verse eid="NAM 2:1"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v" sid="NAM 2:2"/>Господь восстановит величие Иакова,</para>
+  <para style="q2" vid="NAM 2:2">подобно величию Израиля,</para>
+  <para style="q1" vid="NAM 2:2">хотя разрушители опустошили их</para>
+  <para style="q2" vid="NAM 2:2">и погубили их виноградные лозы.<verse eid="NAM 2:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="NAM 2:3"/>Щиты бойцов его – красны,</para>
+  <para style="q2" vid="NAM 2:3">его воины в багряных одеждах.</para>
+  <para style="q1" vid="NAM 2:3">Сверкает металл колесниц</para>
+  <para style="q2" vid="NAM 2:3">в день, когда они приготовлены к бою,</para>
+  <para style="q2" vid="NAM 2:3">колышется лес копий.<verse eid="NAM 2:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="NAM 2:4"/>Проносятся по улицам колесницы,</para>
+  <para style="q2" vid="NAM 2:4">мечутся по площадям.</para>
+  <para style="q1" vid="NAM 2:4">Они подобны пылающим факелам,</para>
+  <para style="q2" vid="NAM 2:4">как сверкающие молнии.<verse eid="NAM 2:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="NAM 2:5"/>Царь <char style="add">Ассирии</char> созывает своих лучших воинов,</para>
+  <para style="q2" vid="NAM 2:5">но они спотыкаются на ходу.</para>
+  <para style="q1" vid="NAM 2:5">Они устремляются к городским стенам,</para>
+  <para style="q2" vid="NAM 2:5">но против них уже возведены осадные сооружения.<verse eid="NAM 2:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="NAM 2:6"/>Речные ворота распахнуты,</para>
+  <para style="q2" vid="NAM 2:6">и враг разрушает царский дворец.<verse eid="NAM 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="NAM 2:7"/>Решено: <char style="add">Ниневия</char> будет обнажена и уведена в плен.</para>
+  <para style="q2" vid="NAM 2:7">Рабыни ее стонут, как голубки, и бьют себя в грудь.<verse eid="NAM 2:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="NAM 2:8"/>Ниневия – как убывающий водоем:</para>
+  <para style="q2" vid="NAM 2:8">
+    <char style="add">словно прорвавшаяся вода, бегут из нее люди</char>.</para>
+  <para style="q1" vid="NAM 2:8">«Стойте! Стойте!» – кричат им,</para>
+  <para style="q2" vid="NAM 2:8">но никто не возвращается.<verse eid="NAM 2:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="NAM 2:9"/>Расхищайте серебро!</para>
+  <para style="q2" vid="NAM 2:9">Расхищайте золото!</para>
+  <para style="q1" vid="NAM 2:9">Нет конца их запасам</para>
+  <para style="q2" vid="NAM 2:9">и богатствам из сокровищниц.<verse eid="NAM 2:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="NAM 2:10"/>Разграблен, опустошен и разорен город.</para>
+  <para style="q2" vid="NAM 2:10">Сердца людей замирают от страха,</para>
+  <para style="q1" vid="NAM 2:10">колени трясутся, дрожат тела,</para>
+  <para style="q2" vid="NAM 2:10">и у всех бледнеют лица.<verse eid="NAM 2:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="NAM 2:11"/>Где же теперь <char style="add">Ниневия</char>, что была как логово львов,</para>
+  <para style="q2" vid="NAM 2:11">как место, где выкармливают своих львят,</para>
+  <para style="q1" vid="NAM 2:11">по которому бродили лев, львица и львенок,</para>
+  <para style="q2" vid="NAM 2:11">и ничто их не пугало?<verse eid="NAM 2:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="NAM 2:12"/>Лев растерзал достаточно добычи для своих детенышей</para>
+  <para style="q2" vid="NAM 2:12">и удавил жертву для своей львицы,</para>
+  <para style="q1" vid="NAM 2:12">наполнил добычею свои пещеры</para>
+  <para style="q2" vid="NAM 2:12">и жертвами – свое логово.<verse eid="NAM 2:12"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v" sid="NAM 2:13"/>– Я против тебя! –</para>
+  <para style="q2" vid="NAM 2:13">возвещает Господь Сил. –</para>
+  <para style="q1" vid="NAM 2:13">Я сожгу в дыму твои колесницы,</para>
+  <para style="q2" vid="NAM 2:13">и меч истребит твоих молодых львов.</para>
+  <para style="q1" vid="NAM 2:13">Я не оставлю на земле добычи для тебя.</para>
+  <para style="q2" vid="NAM 2:13">И не будет больше слышен</para>
+  <para style="q1" vid="NAM 2:13">голос твоих посланников.<verse eid="NAM 2:13"/></para>
+  <chapter eid="NAM 2"/>
+  <chapter number="3" style="c" sid="NAM 3"/>
+  <para style="s1">Горе Ниневии</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="NAM 3:1"/>Горе кровавому городу, полному лжи,</para>
+  <para style="q2" vid="NAM 3:1">в котором не прекращаются воровство и грабеж!<verse eid="NAM 3:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="NAM 3:2"/>Слышны щелканье кнута, стук колес,</para>
+  <para style="q2" vid="NAM 3:2">топот скачущих лошадей и грохот колесниц.<verse eid="NAM 3:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="NAM 3:3"/>Несется конница, сверкают мечи, блестят копья!</para>
+  <para style="q2" vid="NAM 3:3">Множество пораженных, целые груды трупов,</para>
+  <para style="q1" vid="NAM 3:3">мертвым телам нет числа,</para>
+  <para style="q2" vid="NAM 3:3">люди спотыкаются об эти тела.<verse eid="NAM 3:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="NAM 3:4"/>И все это – за великое распутство блудницы,</para>
+  <para style="q2" vid="NAM 3:4">пленительной и искусной в чарах,</para>
+  <para style="q1" vid="NAM 3:4">покоряющей народы своим распутством</para>
+  <para style="q2" vid="NAM 3:4">и племена – своим колдовством.<verse eid="NAM 3:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="NAM 3:5"/>– Я против тебя, – возвещает Господь Сил, –</para>
+  <para style="q2" vid="NAM 3:5">Я задеру твой подол тебе на лицо,</para>
+  <para style="q1" vid="NAM 3:5">Я покажу народам твою наготу</para>
+  <para style="q2" vid="NAM 3:5">и царствам – твой срам.<verse eid="NAM 3:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="NAM 3:6"/>Я забросаю тебя грязью,</para>
+  <para style="q2" vid="NAM 3:6">буду относиться к тебе с презрением</para>
+  <para style="q2" vid="NAM 3:6">и выставлю тебя на всеобщее обозрение.<verse eid="NAM 3:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="NAM 3:7"/>И будет так, что каждый, кто увидит тебя,</para>
+  <para style="q2" vid="NAM 3:7">побежит от тебя и скажет:</para>
+  <para style="q1" vid="NAM 3:7">«Ниневия в руинах, кто будет ее оплакивать?»</para>
+  <para style="q2" vid="NAM 3:7">Где найду Я того, кто утешит ее?<verse eid="NAM 3:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="NAM 3:8"/>Разве ты лучше города Фивы<note caller="+" style="f"><char style="fr" closed="false">3:8 </char><char style="ft" closed="false">Букв.: «Но-Амон». Ассирия завоевала Фивы в 663 г. до н. э.</char></note>,</para>
+  <para style="q2" vid="NAM 3:8">расположенного между реками</para>
+  <para style="q1" vid="NAM 3:8">и окруженного водой?</para>
+  <para style="q2" vid="NAM 3:8">Река была его защитою, и вода – его стеною.<verse eid="NAM 3:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="NAM 3:9"/>Куш и Египет были его безграничной силой,</para>
+  <para style="q2" vid="NAM 3:9">Пут и Ливия были в числе его союзников.<verse eid="NAM 3:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="NAM 3:10"/>Но он все же был взят в плен</para>
+  <para style="q2" vid="NAM 3:10">и отправлен в изгнание.</para>
+  <para style="q1" vid="NAM 3:10">Его младенцы разбиты на перекрестках всех улиц.</para>
+  <para style="q2" vid="NAM 3:10">О его знатных людях бросали жребий,</para>
+  <para style="q2" vid="NAM 3:10">и всех их заковали в цепи.<verse eid="NAM 3:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="NAM 3:11"/>Так и ты – опьянеешь, скроешься</para>
+  <para style="q2" vid="NAM 3:11">и будешь искать защиты от врага.<verse eid="NAM 3:11"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v" sid="NAM 3:12"/>Твои крепости подобны инжиру</para>
+  <para style="q2" vid="NAM 3:12">со спелыми плодами: если тряхнуть их,</para>
+  <para style="q2" vid="NAM 3:12">то они упадут прямо в рот тому, кто ест.<verse eid="NAM 3:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="NAM 3:13"/>Взгляни на свои войска –</para>
+  <para style="q2" vid="NAM 3:13">они трусливы, как женщины!</para>
+  <para style="q1" vid="NAM 3:13">Ворота твоей земли</para>
+  <para style="q2" vid="NAM 3:13">распахнуты настежь для твоих врагов,</para>
+  <para style="q1" vid="NAM 3:13">а их засовы пожрал огонь.<verse eid="NAM 3:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="NAM 3:14"/>Начерпай воды и запасись ею на время осады,</para>
+  <para style="q2" vid="NAM 3:14">укрепи свою оборону.</para>
+  <para style="q1" vid="NAM 3:14">Иди, намеси глины и сделай кирпичи,</para>
+  <para style="q2" vid="NAM 3:14">чтобы укрепить ими свои стены.<verse eid="NAM 3:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="NAM 3:15"/>Огонь поглотит тебя,</para>
+  <para style="q2" vid="NAM 3:15">меч сразит тебя</para>
+  <para style="q1" vid="NAM 3:15">и, как саранча, пожрет тебя.</para>
+  <para style="q2" vid="NAM 3:15">Размножайся, как кузнечик,</para>
+  <para style="q2" vid="NAM 3:15">размножайся, как саранча!<verse eid="NAM 3:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="NAM 3:16"/>Торговцев у тебя стало больше,</para>
+  <para style="q2" vid="NAM 3:16">чем звезд на небе, но, подобно саранче,</para>
+  <para style="q2" vid="NAM 3:16">они опустошат землю и улетят.<verse eid="NAM 3:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="NAM 3:17"/>Твоя охрана, как саранча,</para>
+  <para style="q2" vid="NAM 3:17">твои военачальники, как полчища саранчи,</para>
+  <para style="q1" vid="NAM 3:17">которые располагаются на стенах в холодные дни,</para>
+  <para style="q2" vid="NAM 3:17">но как пригреет солнце, разлетаются,</para>
+  <para style="q1" vid="NAM 3:17">а куда, никто не знает.<verse eid="NAM 3:17"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v" sid="NAM 3:18"/>Царь Ассирии, спят твои пастухи<note caller="+" style="f"><char style="fr" closed="false">3:18 </char><char style="ft" closed="false">То есть правители.</char></note>,</para>
+  <para style="q2" vid="NAM 3:18">отдыхают твои приближенные.</para>
+  <para style="q1" vid="NAM 3:18">Твои люди рассеяны по горам,</para>
+  <para style="q2" vid="NAM 3:18">и некому их собрать.<verse eid="NAM 3:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="NAM 3:19"/>Твоя рана неизлечима,</para>
+  <para style="q2" vid="NAM 3:19">твое ранение смертельно.</para>
+  <para style="q1" vid="NAM 3:19">Все, кто услышит новость о твоем падении,</para>
+  <para style="q2" vid="NAM 3:19">будут ей рукоплескать,</para>
+  <para style="q2" vid="NAM 3:19">ведь кто не испытал на себе</para>
+  <para style="q1" vid="NAM 3:19">твою бесконечную жестокость?<verse eid="NAM 3:19"/></para>
+  <chapter eid="NAM 3"/>
+</usx>

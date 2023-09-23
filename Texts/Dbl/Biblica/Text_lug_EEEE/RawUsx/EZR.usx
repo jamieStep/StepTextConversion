@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="EZR" style="id">- Luganda Contemporary Bible</book>
+  <para style="rem">Copyright © 2014 by Biblica, Inc.®</para>
+  <para style="h">Ezera</para>
+  <para style="toc1">Ekitabo Ekiyitibwa Ezera</para>
+  <para style="toc2">Ezera</para>
+  <para style="toc3">Ezr</para>
+  <para style="mt2">Ekitabo Ekiyitibwa</para>
+  <para style="mt1">Ezera</para>
+  <para style="imt">Ennyanjula</para>
+  <para style="ip">Ekitabo kya Ezera n’ekya Nekkemiya byali ekitabo kimu. Kirowoozebwa nti eyawandiika ebitabo Ebyomumirembe ye yawandiika n’ekitabo ekya Ezera n’ekya Nekkemiya. Ekitabo kya Ezera kyawandiikibwa nga ku nkomerero y’ekyasa ekyokuna (4) <char style="sc">bc</char>. Ekitabo kino kyogera ku kudda kw’Abayudaaya mu Yerusaalemi okuva mu buwaŋŋanguse e Babulooni mu mwaka 538 <char style="sc">bc</char>. Kyogera ne ku kuddaabirizibwa kwa yeekaalu. Ezera yayigiriza abantu amateeka n’obulombolombo bw’eddiini. Kyawulibwamu ebitundu bino: okudda mu nsi ya Yuda okw’abaali bawaŋŋangusibbwa (<char style="xt">Essuula <ref loc="EZR 1-2">1–2</ref></char>); yeekaalu nga bwe yaddaabirizibwa n’okuweebwayo n’eweebwayo eri <char style="nd">Mukama</char> (<char style="xt">Essuula <ref loc="EZR 3-6">3–6</ref></char>); n’okudda kwa Ezera mu Yerusaalemi n’obuweereza bwe (<char style="xt">Essuula <ref loc="EZR 7-10">7–10</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="s1">Kuulo Ayamba Abawaŋŋanguse okuddayo</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 25:11-12">Yer 25:11-12</ref>; <ref loc="JER 29:10-14">29:10-14</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 36:22">2By 36:22</ref>, <ref loc="2CH 36:23">23</ref></char>
+    </note>Awo mu mwaka ogw’olubereberye ogw’obufuzi bwa Kuulo kabaka wa Buperusi, ekigambo <char style="nd">Mukama</char> kye yayogerera mu Yeremiya ne kituukirira, <char style="nd">Mukama</char> n’akoma ku mutima gwa Kuulo kabaka w’e Buperusi okulangirira mu bwakabaka bwe bwonna, n’okukiteeka mu buwandiike nti,</para>
+  <para style="pmo">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:2 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 44:28">Is 44:28</ref>; <ref loc="ISA 45:13">45:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 5:13">Ezr 5:13</ref>
+      </char>
+    </note>“Bw’ati bw’ayogera Kuulo<note caller="+" style="f"><char style="fr" closed="false">1:2 </char><char style="fq" closed="false">Kuulo </char><char style="ft" closed="false">Obwakabaka bwa Kuulo bwavanga mu Buyindi ne butuuka ku Misiri, n’okuva ku Nnyanja Emyufu mu guyanja gw’e Buperusi okutuuka mu Esiyopya.</char></note> kabaka w’e Buperusi nti,</para>
+  <para style="pm">“ ‘Obwakabaka bwonna obw’omu nsi <char style="nd">Mukama</char> Katonda w’eggulu abumpadde, era annonze okumuzimbira yeekaalu e Yerusaalemi mu Yuda. <verse number="3" style="v"/>Omuntu yenna mu mmwe abantu be, Katonda we abeere naye, agende e Yerusaalemi mu Yuda addaabirize yeekaalu ya <char style="nd">Mukama</char>, Katonda wa Isirayiri, Katonda ali mu Yerusaalemi. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:4 a </char><char style="xt" closed="false"><ref loc="ISA 10:20-22">Is 10:20-22</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="NUM 15:3">Kbl 15:3</ref>; <ref loc="PSA 50:14">Zab 50:14</ref>; <ref loc="PSA 54:6">54:6</ref>; <ref loc="PSA 116:17">116:17</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="EZR 4:3">Ezr 4:3</ref>; <ref loc="EZR 5:13">5:13</ref>; <ref loc="EZR 6:3">6:3</ref>, <ref loc="EZR 6:14">14</ref></char></note>Na buli Muyisirayiri eyasigalawo gy’ali, abantu abo baabeeramu, banaamuwa ffeeza ne zaabu, n’ebintu n’ebisolo ebirundibwa, obutasaako ebiweebwayo bye bawaayo ku bwabwe ebya yeekaalu ya Katonda eri mu Yerusaalemi.’ ”</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:5 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 4:1">Ezr 4:1</ref>; <ref loc="NEH 11:4">Nek 11:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">nny 1; <ref loc="EXO 35:20-22">Kuv 35:20-22</ref>; <ref loc="2CH 36:22">2By 36:22</ref>; <ref loc="HAG 1:14">Kag 1:14</ref>; <ref loc="PHP 2:13">Baf 2:13</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 127:1">Zab 127:1</ref>
+      </char>
+    </note>Awo abakulu b’ennyumba za Yuda ne Benyamini, ne bakabona, n’Abaleevi, na buli muntu Katonda gwe yakubiriza, ne beeteekateeka okwambuka okugenda okuddaabiriza yeekaalu ya <char style="nd">Mukama</char> eri mu Yerusaalemi<note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="ft" closed="false">Olugendo lwali wakati wa kilomita 900 ne kilomita 1,000, nga lwa myezi ebiri oba esatu</char></note>. <verse number="6" style="v"/>Baliraanwa baabwe bonna ne babawa ebintu ebya ffeeza ne zaabu, n’ebintu ebirala n’ebisolo ebirundibwa, n’ebirabo eby’omuwendo omungi, okwo nga kwe kuli ebiweebwayo bye baawaayo nga beeyagalidde. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:7 </char><char style="xt" closed="false"><ref loc="2KI 24:13">2Bk 24:13</ref>; <ref loc="2CH 36:7">2By 36:7</ref>, <ref loc="2CH 36:10">10</ref>; <ref loc="EZR 5:14">Ezr 5:14</ref>; <ref loc="EZR 6:5">6:5</ref></char></note>Ebintu ebyali mu yeekaalu ya <char style="nd">Mukama</char>, Nebukadduneeza bye yanyaga mu Yerusaalemi n’abiteeka mu ssabo lya bakatonda be, Kabaka Kuulo, n’abiggyayo. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:8 </char><char style="xt" closed="false"><ref loc="EZR 5:14">Ezr 5:14</ref></char></note>Kuulo kabaka w’e Buperusi n’abikwasa Misuledasi omuwanika, eyabikwasa Sesubazzali omulangira wa Yuda.</para>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="9" style="v"/>Guno gwe gwali omuwendo gwabyo:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">Esowaani eza zaabu amakumi asatu </cell>
+      <cell style="tc2" align="start">30,</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Esowaani eza ffeeza lukumi </cell>
+      <cell style="tc2" align="start">1,000,</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Ebiso ebya ffeeza amakumi abiri mu mwenda </cell>
+      <cell style="tc2" align="start">29,</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">
+        <verse number="10" style="v"/>Ebibya ebya zaabu amakumi asatu </cell>
+      <cell style="tc2" align="start">30,</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">n’ebibya ebya ffeeza ebigenderako ebikumi bina mu kumi </cell>
+      <cell style="tc2" align="start">410,</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">n’ebintu ebirala lukumi </cell>
+      <cell style="tc2" align="start">1,000.</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="11" style="v"/>Byonna awamu ebintu ebya zaabu ne ffeeza byali enkumi ttaano mu ebikumi bina (5,400).</para>
+  <para style="b"/>
+  <para style="p">Sesubazzali n’agenda nabyo byonna e Yerusaalemi okuva e Babulooni mu buwaŋŋanguse.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Olukalala olw’Abawaŋŋangusibwa Abaddayo</para>
+  <para style="li4">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 36:20">2By 36:20</ref>; <ref loc="NEH 7:6">Nek 7:6</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 24:16">2Bk 24:16</ref>; <ref loc="2KI 25:12">25:12</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 7:73">Nek 7:73</ref>
+      </char>
+    </note>Bano be bantu ab’omu ssaza, abanyagibwa Kabaka Nebukadduneeza ow’e Babulooni ne batwalibwa e Babulooni, abaddayo e Yerusaalemi ne Yuda buli muntu mu kibuga ky’ewaabwe. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:2 a </char><char style="xt" closed="false"><ref loc="1CH 3:19">1By 3:19</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EZR 3:2">Ezr 3:2</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="NEH 10:2">Nek 10:2</ref></char></note>Abaabakulembera baali Zerubbaberi, ne Yesuwa, ne Nekkemiya<note caller="+" style="f"><char style="fr" closed="false">2:2 </char><char style="fq" closed="false">Nekkemiya </char><char style="ft" closed="false">ono, si ye oli eyawandiika ekitabo kya Nekkemiya.</char></note>, ne Seraya, ne Leeraya, ne Moluddekaayi, ne Birusani, ne Misupaali, ne Biguvaayi, ne Lekumu, ne Baana.</para>
+  <para style="b"/>
+  <para style="li4">Omuwendo gw’abantu ba Isirayiri gwali:</para>
+  <para style="li1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 8:3">Ezr 8:3</ref>
+      </char>
+    </note>bazzukulu ba Palosi enkumi bbiri mu kikumi mu nsavu mu babiri (2,172),</para>
+  <para style="li1">
+    <verse number="4" style="v"/>bazzukulu ba Sefatiya bisatu mu nsavu mu babiri (372),</para>
+  <para style="li1">
+    <verse number="5" style="v"/>bazzukulu ba Ala lusanvu mu nsavu mu bataano (775),</para>
+  <para style="li1">
+    <verse number="6" style="v"/>bazzukulu ba Pakasumowaabu ab’olunnyiriri olwa Yesuwa ne Yowaabu enkumi bbiri mu lunaana mu kkumi na babiri (2,812),</para>
+  <para style="li1">
+    <verse number="7" style="v"/>bazzukulu ba Eramu lukumi mu bibiri mu ataano mu bana (1,254),</para>
+  <para style="li1">
+    <verse number="8" style="v"/>bazzukulu ba Zattu lwenda mu ana mu bataano (945),</para>
+  <para style="li1">
+    <verse number="9" style="v"/>bazzukulu ba Zakkayi lusanvu mu nkaaga (760),</para>
+  <para style="li1">
+    <verse number="10" style="v"/>bazzukulu ba Bani lukaaga mu ana mu babiri (642),</para>
+  <para style="li1">
+    <verse number="11" style="v"/>bazzukulu ba Bebayi lukaaga mu abiri mu basatu (623),</para>
+  <para style="li1">
+    <verse number="12" style="v"/>bazzukulu ba Azugaadi lukumi mu bibiri mu abiri mu babiri (1,222),</para>
+  <para style="li1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 8:13">Ezr 8:13</ref>
+      </char>
+    </note>bazzukulu ba Adonikamu lukaaga mu nkaaga mu mukaaga (666),</para>
+  <para style="li1">
+    <verse number="14" style="v"/>bazzukulu ba Biguvaayi enkumi bbiri mu amakumi ataano mu mukaaga (2,056),</para>
+  <para style="li1">
+    <verse number="15" style="v"/>bazzukulu ba Adini ebikumi bina mu ataano mu bana (454),</para>
+  <para style="li1">
+    <verse number="16" style="v"/>bazzukulu ba Ateri ow’olunnyiriri lwa Keezeekiya kyenda mu munaana (98),</para>
+  <para style="li1">
+    <verse number="17" style="v"/>bazzukulu ba Bezayi ebikumi bisatu mu amakumi abiri mu basatu (323),</para>
+  <para style="li1">
+    <verse number="18" style="v"/>bazzukulu ba Yola kikumi mu kumi na babiri (112),</para>
+  <para style="li1">
+    <verse number="19" style="v"/>bazzukulu ba Kasumu ebikumi bibiri mu abiri mu basatu (223),</para>
+  <para style="li1">
+    <verse number="20" style="v"/>bazzukulu ba Gibbali kyenda mu bataano (95).</para>
+  <para style="li4">
+    <verse number="21" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:21 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 5:2">Mi 5:2</ref>
+      </char>
+    </note>Abazzukulu ab’e Besirekemu kikumi mu abiri mu basatu (123),</para>
+  <para style="li1">
+    <verse number="22" style="v"/>abazzukulu ab’e Netofa amakumi ataano mu mukaaga (56),</para>
+  <para style="li1">
+    <verse number="23" style="v"/>abazzukulu ab’e Anasosi kikumi abiri mu munaana (128),</para>
+  <para style="li1">
+    <verse number="24" style="v"/>abazzukulu ab’e Azumavesi amakumi ana mu babiri (42),</para>
+  <para style="li1">
+    <verse number="25" style="v"/>abazzukulu ab’e Kiriaswalimu, n’e Kefira n’e Beerosi lusanvu mu ana mu basatu (743),</para>
+  <para style="li1">
+    <verse number="26" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:26 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 18:25">Yos 18:25</ref>
+      </char>
+    </note>abazzukulu ab’e Laama n’e Geba lukaaga mu abiri mu omu (621),</para>
+  <para style="li1">
+    <verse number="27" style="v"/>abazzukulu ab’e Mikumasi kikumi mu abiri mu babiri (122),</para>
+  <para style="li1">
+    <verse number="28" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:28 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 12:8">Lub 12:8</ref>
+      </char>
+    </note>abazzukulu ab’e Beseri n’e Ayi ebikumi bibiri mu abiri mu basatu (223),</para>
+  <para style="li1">
+    <verse number="29" style="v"/>abazzukulu ab’e Nebo amakumi ataano mu babiri (52),</para>
+  <para style="li1">
+    <verse number="30" style="v"/>abazzukulu ab’e Magubisi kikumi ataano mu mukaaga (156),</para>
+  <para style="li1">
+    <verse number="31" style="v"/>abazzukulu ab’e Eramu omulala lukumi mu bibiri mu ataano mu bana (1,254),</para>
+  <para style="li1">
+    <verse number="32" style="v"/>abazzukulu ab’e Kalimu ebikumi bisatu mu amakumi abiri (320),</para>
+  <para style="li1">
+    <verse number="33" style="v"/>abazzukulu ab’e Loodi, n’e Kadidi, n’e Ono lusanvu mu abiri mu bataano (725),</para>
+  <para style="li1">
+    <verse number="34" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:34 </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 16:34">1Bk 16:34</ref>; <ref loc="2CH 28:15">2By 28:15</ref></char>
+    </note>abazzukulu ab’e Yeriko ebikumi bisatu mu amakumi ana mu bataano (345),</para>
+  <para style="li1">
+    <verse number="35" style="v"/>n’abazzukulu ab’e Sena enkumi ssatu mu lukaaga mu amakumi asatu (3,630).</para>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="36" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:36 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 24:7">1By 24:7</ref>
+      </char>
+    </note>Bano be bakabona:</para>
+  <para style="li1">bazzukulu ba Yedaya ab’ennyumba ya Yesuwa lwenda mu nsavu mu basatu (973),</para>
+  <para style="li1">
+    <verse number="37" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:37 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 24:14">1By 24:14</ref>
+      </char>
+    </note>bazzukulu ba Immeri lukumi mu amakumi ataano mu babiri (1,052),</para>
+  <para style="li1">
+    <verse number="38" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:38 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 9:12">1By 9:12</ref>
+      </char>
+    </note>bazzukulu ba Pasukuli lukumi mu bibiri mu amakumi ana mu musanvu (1,247),</para>
+  <para style="li1">
+    <verse number="39" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:39 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 24:8">1By 24:8</ref>
+      </char>
+    </note>bazzukulu ba Kalimu lukumi mu kumi na musanvu (1,017).</para>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="40" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:40 a </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 29:34">Lub 29:34</ref>; <ref loc="NUM 3:9">Kbl 3:9</ref>; <ref loc="DEU 18:6-7">Ma 18:6-7</ref>; <ref loc="1CH 16:4">1By 16:4</ref>; <ref loc="EZR 7:7">Ezr 7:7</ref>; <ref loc="EZR 8:15">8:15</ref>; <ref loc="NEH 12:24">Nek 12:24</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 3:9">Ezr 3:9</ref>
+      </char>
+    </note>Ne bano be Baleevi:</para>
+  <para style="li1">bazzukulu ba Yesuwa ne Kadumyeri ab’olunnyiriri olwa Kadaviya nsavu mu bana (74).</para>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="41" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:41 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 15:16">1By 15:16</ref>
+      </char>
+    </note>Bano be bayimbi:</para>
+  <para style="li1">bazzukulu ba Asafu<note caller="+" style="f"><char style="fr" closed="false">2:41 </char><char style="fq" closed="false">Asafu </char><char style="ft" closed="false">y’omu ku Baleevi, Dawudi be yalonda okuvunaanyizibwanga eby’okuyimba</char></note> kikumi mu amakumi abiri mu munaana (128).</para>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="42" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:42 </char>
+      <char style="xt" closed="false">
+        <ref loc="1SA 3:15">1Sa 3:15</ref>; <ref loc="1CH 9:17">1By 9:17</ref></char>
+    </note>Bano be baakuumanga<note caller="+" style="f"><char style="fr" closed="false">2:42 </char><char style="ft" closed="false">Abaakuumanga baali Baleevi abaavunaanyizibwanga okukuuma omulyango gwa Yeekaalu.</char></note> enzigi za yeekaalu:</para>
+  <para style="li1">bazzukulu ba Sallumu, bazzukulu ba Ateri, bazzukulu ba Talumoni, bazzukulu ba Akkubu, bazzukulu ba Katita, ne bazzukulu ba Sobayi kikumi mu amakumi asatu mu mwenda (139).</para>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="43" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:43 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 9:2">1By 9:2</ref>; <ref loc="NEH 11:21">Nek 11:21</ref></char>
+    </note>Abaaweerezanga mu yeekaalu be bano:</para>
+  <para style="li1">bazzukulu ba Zika, bazzukulu ba Kasufa, bazzukulu ba Tabbawoosi,</para>
+  <para style="li1">
+    <verse number="44" style="v"/>bazzukulu ba Kerosi, bazzukulu ba Siyaka, bazzukulu ba Padoni,</para>
+  <para style="li1">
+    <verse number="45" style="v"/>bazzukulu ba Lebana, bazzukulu ba Kagaba, bazzukulu ba Akkubu,</para>
+  <para style="li1">
+    <verse number="46" style="v"/>bazzukulu ba Kagabu, bazzukulu ba Samulaayi, bazzukulu ba Kanani,</para>
+  <para style="li1">
+    <verse number="47" style="v"/>bazzukulu ba Gidderi, bazzukulu ba Gakali, bazzukulu ba Leyaya,</para>
+  <para style="li1">
+    <verse number="48" style="v"/>bazzukulu ba Lezini, bazzukulu ba Nekoda, bazzukulu ba Gazzamu,</para>
+  <para style="li1">
+    <verse number="49" style="v"/>bazzukulu ba Uzza, bazzukulu ba Paseya, bazzukulu ba Besayi,</para>
+  <para style="li1">
+    <verse number="50" style="v"/>bazzukulu ba Asuna, bazzukulu ba Meyunimu, bazzukulu ba Nefisimu,</para>
+  <para style="li1">
+    <verse number="51" style="v"/>bazzukulu ba Bakubuki, bazzukulu ba Kakufa, bazzukulu ba Kalukuli,</para>
+  <para style="li1">
+    <verse number="52" style="v"/>bazzukulu ba Bazulusi, bazzukulu ba Mekida, bazzukulu ba Kalusa,</para>
+  <para style="li1">
+    <verse number="53" style="v"/>bazzukulu ba Balukosi, bazzukulu ba Sisera, bazzukulu ba Tema,</para>
+  <para style="li1">
+    <verse number="54" style="v"/>bazzukulu ba Neziya, ne bazzukulu ba Katifa.</para>
+  <para style="li4">
+    <verse number="55" style="v"/>Bazzukulu b’abaweereza ba Sulemaani baali:</para>
+  <para style="li1">bazzukulu ba Sotayi, bazzukulu ba Kassoferesi, bazzukulu ba Peruda,</para>
+  <para style="li1">
+    <verse number="56" style="v"/>bazzukulu ba Yaala, bazzukulu ba Dalukoni, bazzukulu ba Gidderi,</para>
+  <para style="li1">
+    <verse number="57" style="v"/>bazzukulu ba Sefatiya, bazzukulu ba Kattiri, bazzukulu ba Pokeresukazzebayimu, ne bazzukulu ba Ami.</para>
+  <para style="li4">
+    <verse number="58" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:58 </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 9:21">1Bk 9:21</ref>; <ref loc="1CH 9:2">1By 9:2</ref></char>
+    </note>Omuwendo ogw’abaaweerezanga mu yeekaalu ne bazzukulu b’abaweereza ba Sulemaani bonna awamu, gwali ebikumi bisatu mu kyenda mu babiri (392).</para>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="59" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:59 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 1:18">Kbl 1:18</ref>
+      </char>
+    </note>Ne bano be baava mu bibuga eby’e Terumeera, n’e Terukalusa, n’e Kerubu, n’e Yaddani, n’e Immeri, naye tebaalina bukakafu bulaga nti bava mu nnyumba ya Isirayiri.</para>
+  <para style="li1">
+    <verse number="60" style="v"/>Baali bazzukulu ba Deraya, bazzukulu ba Tobiya, ne bazzukulu ba Nekoda n’omuwendo gwabwe gwali lukaaga mu amakumi ataano mu babiri (652).</para>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="61" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:61 </char>
+      <char style="xt" closed="false">
+        <ref loc="2SA 17:27">2Sa 17:27</ref>
+      </char>
+    </note>Ne ku bakabona kwaliko bazzukulu ba Kobaya,</para>
+  <para style="li1">ne bazzukulu ba Kakkozi, ne bazzukulu ba Baluzirayi eyawasa muwala wa Baluzirayi Omugireyaadi, n’atuumibwa erinnya eryo.</para>
+  <para style="li4">
+    <verse number="62" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:62 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 3:10">Kbl 3:10</ref>; <ref loc="NUM 16:39-40">16:39-40</ref></char>
+    </note>Ate waaliwo abalala abaanoonya amannya gaabwe mu abo abaabalibwa naye ne batagalaba, era ne batabalibwa mu bakabona kubanga kyagambibwa nti si balongoofu. <verse number="63" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:63 a </char><char style="xt" closed="false"><ref loc="LEV 2:3">Lv 2:3</ref>, <ref loc="LEV 2:10">10</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EXO 28:30">Kuv 28:30</ref>; <ref loc="NUM 27:21">Kbl 27:21</ref></char></note>Omukulembeze n’abalagira baleme okulya ku bintu ebitukuvu ennyo, okuggyako nga waliwo kabona alina Ulimu ne Sumimu.</para>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="64" style="v"/>Bonna awamu baali emitwalo ena mu enkumi bbiri mu bisatu mu nkaga (42,360), <verse number="65" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:65 </char><char style="xt" closed="false"><ref loc="2SA 19:35">2Sa 19:35</ref></char></note>okwo nga kw’otadde abaddu n’abaddu abakazi abaali kasanvu mu bisatu mu amakumi asatu mu musanvu (7,337), n’abayimbi<note caller="+" style="f"><char style="fr" closed="false">2:65 </char><char style="ft" closed="false">Okugatta ku bayimbi Abaleevi, waabangawo n’abayimbi abalala abaayimbanga mu mbaga ez’enjawulo ne mu nnyimbe</char></note> abasajja n’abakazi abaali ebikumi bibiri (200). <verse number="66" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:66 </char><char style="xt" closed="false"><ref loc="ISA 66:20">Is 66:20</ref></char></note>Baalina embalaasi lusanvu mu asatu mu mukaaga (736), n’ennyumbu ebikumi bibiri mu amakumi ana mu ttaano (245), <verse number="67" style="v"/>n’eŋŋamira ebikumi bina mu amakumi asatu mu ttaano (435), n’endogoyi kakaaga mu lusanvu mu abiri (6,720).</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="68" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:68 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 25:2">Kuv 25:2</ref>
+      </char>
+    </note>Awo abakulu b’ennyumba z’abajjajjaabwe bwe baatuuka ku kifo ennyumba ya <char style="nd">Mukama</char> we yali mu Yerusaalemi, ne bawaayo ebiweebwayo nga beeyagalidde, olw’okuddaabiriza ennyumba ya Katonda. <verse number="69" style="v"/>Ne bawaayo mu ggwanika ng’obusobozi bwabwe bwe bwali; ne bawaayo kilo bitaano eza zaabu (500), ne tani ssatu (3), n’ebyambalo bya bakabona kikumi (100) mu ggwanika.</para>
+  <para style="p">
+    <verse number="70" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:70 </char>
+      <char style="xt" closed="false">nny 1; <ref loc="1CH 9:2">1By 9:2</ref>; <ref loc="NEH 11:3-4">Nek 11:3-4</ref></char>
+    </note>Awo bakabona, n’Abaleevi, n’abayimbi, n’abaakuumanga enzigi za yeekaalu, n’abakozi ba yeekaalu ne baddayo mu bibuga byabwe, awamu n’abamu ku bantu abalala, n’Abayisirayiri abalala bonna ne baddayo mu bibuga byabwe.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Okuddaabiriza Ekyoto</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 7:73">Nek 7:73</ref>; <ref loc="NEH 8:1">8:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 23:24">Lv 23:24</ref>
+      </char>
+    </note>Omwezi ogw’omusanvu bwe gwatuuka, Abayisirayiri ne bava mu bibuga gye baali, ne bakuŋŋaanira e Yerusaalemi nga bali bumu. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:2 a </char><char style="xt" closed="false"><ref loc="EZR 2:2">Ezr 2:2</ref>; <ref loc="NEH 12:1">Nek 12:1</ref>, <ref loc="NEH 12:8">8</ref>; <ref loc="HAG 2:2">Kag 2:2</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="HAG 1:1">Kag 1:1</ref>; <ref loc="ZEC 6:11">Zek 6:11</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="1CH 3:17">1By 3:17</ref> </char><char style="xo" closed="false">d </char><char style="xt" closed="false"><ref loc="EXO 20:24">Kuv 20:24</ref>; <ref loc="DEU 12:5-6">Ma 12:5-6</ref></char></note>Awo Yesuwa mutabani wa Yozadaki ne bakabona banne, ne Zerubbaberi mutabani wa Seyalutyeri n’ab’ennyumba ye ne batandika okuzimba ekyoto kya Katonda wa Isirayiri, okuweerangako ebiweebwayo ebyokebwa nga bwe kyawandiikibwa, mu Mateeka ga Musa omusajja wa Katonda. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:3 a </char><char style="xt" closed="false"><ref loc="EZR 4:4">Ezr 4:4</ref>; <ref loc="DAN 9:25">Dan 9:25</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EXO 29:39">Kuv 29:39</ref>; <ref loc="NUM 28:1-8">Kbl 28:1-8</ref></char></note>Newaakubadde nga baalina entiisa ey’abamawanga agaali gabeetoolodde, basooka okuzimba ekyoto ku musingi gwakyo ne bawaayo ebiweebwayo ebyokebwa eri <char style="nd">Mukama</char>, nga bawaayo eby’enkya n’eby’akawungeezi. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:4 </char><char style="xt" closed="false"><ref loc="EXO 23:16">Kuv 23:16</ref>; <ref loc="NUM 29:12-38">Kbl 29:12-38</ref>; <ref loc="NEH 8:14-18">Nek 8:14-18</ref>; <ref loc="ZEC 14:16-19">Zek 14:16-19</ref></char></note>Era ng’etteeka bwe liri, ne bakwata embaga ey’ensiisira ne bawaayo ebiweebwayo ebyokebwa ebya buli lunaku ng’omuwendo ogwetaagibwa buli lunaku bwe gwali. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:5 a </char><char style="xt" closed="false"><ref loc="NUM 28:3">Kbl 28:3</ref>, <ref loc="NUM 28:11">11</ref>, <ref loc="NUM 28:14">14</ref>; <ref loc="COL 2:16">Bak 2:16</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="LEV 23:1-44">Lv 23:1-44</ref>; <ref loc="NUM 29:39">Kbl 29:39</ref></char></note>N’oluvannyuma baawaayo ebiweebwayo ebyokebwa ebya buli kiseera, omwezi nga gwa kaboneka ne ku buli mbaga zonna ezaatukuzibwa eza <char style="nd">Mukama</char> ezaalagirwa, ate n’ekiweebwayo ekya buli muntu eyawaayo eri <char style="nd">Mukama</char> ekiweebwayo awatali kuwalirizibwa. <verse number="6" style="v"/>Okuva ku lunaku olw’olubereberye olw’omwezi ogw’omusanvu ne batandika okuwaayo ebiweebwayo ebyokebwa eri <char style="nd">Mukama</char>, newaakubadde ng’omusingi gwa yeekaalu ya <char style="nd">Mukama</char> gwali tegunnazimbibwa.</para>
+  <para style="s1">Okuddaabiriza Yeekaalu</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:7 a </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 14:1">1By 14:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 35:2">Is 35:2</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 1:2-4">Ezr 1:2-4</ref>; <ref loc="EZR 6:3">6:3</ref></char>
+    </note>Ne bawa abazimbi n’ababazzi ensimbi, ne bawa n’ab’e Sidoni n’ab’e Tuulo ebyokulya n’ebyokunywa n’amafuta, okuleeta emivule okuva mu Lebanooni okugituusa ku nnyanja e Yopa, ng’ekiragiro kya Kuulo kabaka w’e Buperusi bwe kyali.</para>
+  <para style="p">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:8 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ZEC 4:9">Zek 4:9</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 23:24">1By 23:24</ref>
+      </char>
+    </note>Awo mu mwezi ogwokubiri mu mwaka ogwokubiri nga batuuse awali yeekaalu ya Katonda mu Yerusaalemi, Zerubbaberi mutabani wa Seyalutyeri, ne Yesuwa mutabani wa Yozadaki ne baganda baabwe bakabona n’Abaleevi ne bonna abajja e Yerusaalemi okuva mu buwaŋŋanguse ne batandika omulimu ogw’okuzimba, era ne beerondamu abaali ab’emyaka amakumi abiri egy’obukulu, n’okusingawo, okulabirira omulimu ogw’okuddaabiriza yeekaalu ya <char style="nd">Mukama</char>. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:9 </char><char style="xt" closed="false"><ref loc="EZR 2:40">Ezr 2:40</ref></char></note>Awo Yesuwa ne batabani be ne baganda be, ne Kadumyeri ne batabani be, ne bazzukulu ba Yuda, nga bayambibwako ne batabani ba Kenedadi n’Abaleevi bonna ne bavunaanyizibwa okulabirira omulimu ogw’okuddaabiriza ennyumba ya <char style="nd">Mukama</char>.</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:10 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 5:16">Ezr 5:16</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 10:2">Kbl 10:2</ref>; <ref loc="1CH 16:6">1By 16:6</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 25:1">1By 25:1</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 6:31">1By 6:31</ref> </char>
+      <char style="xo" closed="false">e </char>
+      <char style="xt" closed="false">
+        <ref loc="ZEC 6:12">Zek 6:12</ref>
+      </char>
+    </note>Awo abazimbi bwe baamala okuzimba omusingi gwa yeekaalu ya <char style="nd">Mukama</char>, bakabona nga bambadde ebyambalo byabwe ne bavaayo nga bakutte amakondeere, n’abaleevi, bazzukulu ba Asafu, nga bakutte ebitaasa, ne bayimirira mu bifo byabwe okutendereza <char style="nd">Mukama</char>, nga Dawudi kabaka wa Isirayiri bwe yateekateeka. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:11 a </char><char style="xt" closed="false"><ref loc="1CH 16:34">1By 16:34</ref>, <ref loc="1CH 16:41">41</ref>; <ref loc="2CH 7:3">2By 7:3</ref>; <ref loc="PSA 107:1">Zab 107:1</ref>; <ref loc="PSA 118:1">118:1</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="NEH 12:24">Nek 12:24</ref></char></note>Ne bayimba ennyimba ez’okwebaza n’okutendereza <char style="nd">Mukama</char> nga boogera nti,</para>
+  <para style="q1">“Mulungi,</para>
+  <para style="q2">n’okwagala kwe eri Isirayiri kubeerera emirembe gyonna.”</para>
+  <para style="m">Abantu bonna ne bayimusa amaloboozi gaabwe nga batendereza <char style="nd">Mukama</char>, kubanga omusingi gw’ennyumba ya <char style="nd">Mukama</char> gwali guzimbiddwa. <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:12 </char><char style="xt" closed="false"><ref loc="HAG 2:3">Kag 2:3</ref>, <ref loc="HAG 2:9">9</ref></char></note>Naye bangi ku bakabona n’Abaleevi abakadde, n’Abakulu b’ebika, abaalaba yeekaalu eyasooka, ne bakaaba nnyo ng’amaloboozi gaabwe gawulikika bwe baalaba ng’omusingi gwa yeekaalu empya guzimbiddwa, newaakubadde ng’abalala bangi baasanyuka nnyo nga bwe baleekaana; <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:13 </char><char style="xt" closed="false"><ref loc="JOB 8:21">Yob 8:21</ref>; <ref loc="PSA 27:6">Zab 27:6</ref>; <ref loc="ISA 16:9">Is 16:9</ref></char></note>nga si kyangu okwawula amaloboozi g’abo abaali bakaaba n’abaali basanyuka, kubanga abantu bonna baawowogana mu ddoboozi ery’omwanguka, era n’amaloboozi gaabwe ne gawulirwa wala.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Abalabe ba Yuda</para>
+  <para style="p">
+    <verse number="1" style="v"/>Awo abalabe ba Yuda ne Benyamini<note caller="+" style="f"><char style="fr" closed="false">4:1 </char><char style="ft" closed="false">Ababenyamini baali Basamaliya</char></note> bwe baawulira ng’abaana ba Isirayiri abaali mu buwaŋŋanguse batandise okuddaabiriza yeekaalu ya <char style="nd">Mukama</char>, Katonda wa Isirayiri, <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:2 a </char><char style="xt" closed="false"><ref loc="2KI 17:24">2Bk 17:24</ref>; <ref loc="2KI 19:37">19:37</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="2KI 17:41">2Bk 17:41</ref></char></note>ne bagenda eri Zerubbaberi n’abakulu b’ebika ne boogera nti, “Mutukkirize tubayambeko okuzimba, kubanga tuli nga mmwe, era tusinza Katonda wammwe, era okuva ku mirembe gya Esaludaddoni kabaka w’e Bwasuli, eyatuleeta wano tuwaayo ssaddaaka eri Katonda wammwe.”</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 1:1-4">Ezr 1:1-4</ref>; <ref loc="NEH 2:20">Nek 2:20</ref></char>
+    </note>Naye Zerubbaberi ne Yesuwa n’abakulu b’ebika bya Isirayiri abalala ne babaddamu nti, “Temulina mugabo naffe mu kuddaabiriza yeekaalu ya Katonda waffe. Tuligizimbira <char style="nd">Mukama</char> Katonda wa Isirayiri ffekka, nga kabaka Kuulo kabaka w’e Buperusi bwe yatulagira.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 3:3">Ezr 3:3</ref>
+      </char>
+    </note>Awo abantu be baalimu ne bamalirira okulemesa abantu ba Yuda, ne babatiisatiisa okuzimba. <verse number="5" style="v"/>Ne bagulirira abantu okubawakanya n’okulemesa enteekateeka yaabwe, ebbanga lyonna Kuulo kabaka w’e Buperusi lye yafuga, okutuusa Daliyo kabaka w’e Buperusi lwe yalya obwakabaka. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:6 a </char><char style="xt" closed="false"><ref loc="EST 1:1">Es 1:1</ref>; <ref loc="DAN 9:1">Dan 9:1</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EST 3:13">Es 3:13</ref>; <ref loc="EST 9:5">9:5</ref></char></note>Awo ku mirembe gya Akaswero<note caller="+" style="f"><char style="fr" closed="false">4:6 </char><char style="fq" closed="false">Akaswero </char><char style="ft" closed="false">ye Alutagizerugizi</char></note> nga ky’ajje alye obwakabaka, abalabe baabwe ne baawandiika ebintu eby’obulimba ne baloopa abantu ba Yuda ne Yerusaalemi. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:7 a </char><char style="xt" closed="false"><ref loc="EZR 7:1">Ezr 7:1</ref>; <ref loc="NEH 2:1">Nek 2:1</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="2KI 18:26">2Bk 18:26</ref>; <ref loc="ISA 36:11">Is 36:11</ref>; <ref loc="DAN 2:4">Dan 2:4</ref></char></note>Awo mu biro bya Alutagizerugizi, Bisulamu ne Misuledasi ne Tabeeri ne bannaabwe abalala ne bawandiikira Alutagizerugizi ebbaluwa mu nnukuta ez’Aramayika ne mu lulimi Olwaramayika. <verse number="8" style="v"/>Lekumu ow’essaza, ne Simusaayi omuwandiisi ne bawandiikira Alutagizerugizi ebbaluwa ekwata ku Yerusaalemi.</para>
+  <para style="pmo">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 5:6">Ezr 5:6</ref>; <ref loc="EZR 6:6">6:6</ref>, <ref loc="EZR 6:13">13</ref></char>
+    </note>Lekumu ow’essaza ne Simusaayi omuwandiisi awamu ne bannaabwe abalala, abalamuzi n’abakungu, n’Abaperusi, n’Abalukevi, n’Abababulooni, n’Abasusanuki, n’Abaweramu, <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:10 </char><char style="xt" closed="false">nny 17; <ref loc="NEH 4:2">Nek 4:2</ref></char></note>n’amawanga amalala, omukungu Osunappali be yakomyawo, n’abateeka mu bibuga bya Samaliya ne mu bitundu ebirala ebiri emitala w’omugga Fulaati ne bawandiika nti:</para>
+  <para style="p">
+    <verse number="11" style="v"/>Ebbaluwa gye baawandiikira kabaka yali egamba nti,</para>
+  <para style="pmo">Eri kabaka Alutagizerugizi,</para>
+  <para style="pmo">Okuva eri abaddu bo abasajja ab’omu ssaza eriri emitala w’omugga Fulaati.</para>
+  <para style="pm">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 5:3">Ezr 5:3</ref>, <ref loc="EZR 5:9">9</ref></char>
+    </note>Kabaka asaanye ategeere nti Abayudaaya abaava gy’oli ne bajja gye tuli bagenze e Yerusaalemi okuddaabiriza ekibuga ekyo ekijeemu eky’abantu abakozi b’ebibi. Batandise okuddaabiriza emisingi n’okuzaawo bbugwe.</para>
+  <para style="pm">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 7:24">Ezr 7:24</ref>; <ref loc="NEH 5:4">Nek 5:4</ref></char>
+    </note>Ne nsonga endala, kabaka asaanye akimanye ng’ekibuga ekyo bwe kirizimbibwa ne bbugwe bw’aliggwa okukola, tebalisasula misolo nate, newaakubadde okuwa empooza, era ekiriva mu ekyo bwe bwakabaka okufiirwa. <verse number="14" style="v"/>Kale nno, olw’okuba nga tulina obuvunaanyizibwa eri obwakabaka, ate nga tetwandiyagadde kulaba nga kabaka aswazibwa, kyetuvudde tuweereza obubaka buno eri kabaka, <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:15 a </char><char style="xt" closed="false"><ref loc="EZR 5:17">Ezr 5:17</ref>; <ref loc="EZR 6:1">6:1</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EST 3:8">Es 3:8</ref></char></note>banoonye mu bitabo eby’okujjukiza ebya bajjajjaabo. Mu bitabo ebyo ojja kuzuula ng’ekibuga ekyo kibuga kijeemu, ekyalumya emitwe gya bakabaka n’abaamasaza, era nga kifo ekimanyiddwa ng’ekijeemu okuva mu biro eby’edda. Era kyekyava kizikirizibwa. <verse number="16" style="v"/>Tukakasa kabaka nti ekibuga kino bwe kirizimbibwa ne bbugwe waakyo n’azzibwawo, tolibaako ne ky’osigaza emitala w’omugga Fulaati.</para>
+  <para style="p">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:17 </char>
+      <char style="xt" closed="false">nny 10</char>
+    </note>Awo kabaka n’abaddamu bw’ati nti:</para>
+  <para style="pmo">Eri Lekumu ow’essaza, ne Simusaayi omuwandiisi ne bannaabwe abalala abaabeeranga mu Samaliya, ne mu bifo ebirala ebiri mu ssaza eriri emitala w’omugga Fulaati,</para>
+  <para style="pmo">Mbalamusizza.</para>
+  <para style="pm">
+    <verse number="18" style="v"/>Ebbaluwa gye mwatuweereza esomeddwa mu maaso gange ne ngitegeera. <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:19 </char><char style="xt" closed="false"><ref loc="2KI 18:7">2Bk 18:7</ref></char></note>Nalagira, okunoonyereza ne kukolebwa, era ne kizuulibwa ng’ekibuga ekyo, okuva edda kijeemera bakabaka<note caller="+" style="f"><char style="fr" closed="false">4:19 </char><char style="ft" closed="false">Ekyo kyogera ku bujeemu bwa Keezeekiya ne Yekoyakimu, ne Zeddekiya</char></note>, era ng’obujeemu n’ekyejo byakolebwanga omwo. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:20 </char><char style="xt" closed="false"><ref loc="GEN 15:18-21">Lub 15:18-21</ref>; <ref loc="EXO 23:31">Kuv 23:31</ref>; <ref loc="JOS 1:4">Yos 1:4</ref>; <ref loc="1KI 4:21">1Bk 4:21</ref>; <ref loc="1CH 18:3">1By 18:3</ref>; <ref loc="PSA 72:8-11">Zab 72:8-11</ref></char></note>Yerusaalemi kyalina bakabaka ab’amaanyi abaafuganga essaza lyonna eriri emitala w’omugga Fulaati, era baaweebwanga emisolo, n’empooza okuva mu kitundu ekyo. <verse number="21" style="v"/>Kaakano muweereze ekiragiro eri abasajja abo bakomye omulimu ogw’okuddaabiriza ekibuga ekyo okutuusa ate bwe ndibalagira. <verse number="22" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:22 </char><char style="xt" closed="false"><ref loc="DAN 6:2">Dan 6:2</ref></char></note>Musseeyo nnyo omwoyo okulaba nga temutenguwa mu nsonga eyo. Lwaki tukkiriza ensonga eyo okugenda mu maaso, okuleeta okufiirwa eri obwakabaka?</para>
+  <para style="p">
+    <verse number="23" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:23 </char>
+      <char style="xt" closed="false">nny 9</char>
+    </note>Amangwago ebbaluwa eyava ewa kabaka Alutagizerugizi bwe yasomerwa Lekumu ne Simusaayi omuwandiisi ne bannaabwe, ne bayanguwa okugenda eri Abayudaaya e Yerusaalemi, ne babalekesaayo n’amaanyi okugenda mu maaso.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="24" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:24 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 2:1-8">Nek 2:1-8</ref>; <ref loc="DAN 9:25">Dan 9:25</ref>; <ref loc="HAG 1:1">Kag 1:1</ref>, <ref loc="HAG 1:15">15</ref>; <ref loc="ZEC 1:1">Zek 1:1</ref></char>
+    </note>Awo omulimu ku nnyumba ya Katonda mu Yerusaalemi ne guyimirira okutuusa omwaka ogwokubiri ogw’omulembe gwa Daliyo kabaka w’e Buperusi.</para>
+  <chapter number="5" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 6:14">Ezr 6:14</ref>; <ref loc="HAG 1:1">Kag 1:1</ref>, <ref loc="HAG 1:3">3</ref>, <ref loc="HAG 1:12">12</ref>; <ref loc="HAG 2:1">2:1</ref>, <ref loc="HAG 2:10">10</ref>, <ref loc="HAG 2:20">20</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ZEC 1:1">Zek 1:1</ref>; <ref loc="ZEC 7:1">7:1</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HAG 1:1-2:9">Kag 1:1–2:9</ref>; <ref loc="ZEC 4:9-10">Zek 4:9-10</ref>; <ref loc="ZEC 8:9">8:9</ref></char>
+    </note>Awo bannabbi Kaggayi ne Zekkaliya muzzukulu wa Iddo ne bategeeza Abayudaaya abaabeeranga mu Yuda ne Yerusaalemi obubaka obuva eri Katonda wa Isirayiri, Katonda waabwe. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:2 a </char><char style="xt" closed="false"><ref loc="1CH 3:19">1By 3:19</ref>; <ref loc="HAG 1:14">Kag 1:14</ref>; <ref loc="HAG 2:21">2:21</ref>; <ref loc="ZEC 4:6-10">Zek 4:6-10</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EZR 2:2">Ezr 2:2</ref>; <ref loc="EZR 3:2">3:2</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false">nny 8; <ref loc="HAG 2:2-5">Kag 2:2-5</ref></char></note>Zerubbaberi mutabani wa Seyalutyeri ne Yesuwa mutabani wa Yozadaki ne bagolokoka ne bagenda mu maaso n’omulimu gw’okuddaabiriza ennyumba ya Katonda mu Yerusaalemi, era ne bannabbi ba Katonda nga babayambako.</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:3 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 6:6">Ezr 6:6</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 6:6">Ezr 6:6</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">nny 9; <ref loc="EZR 1:3">Ezr 1:3</ref>; <ref loc="EZR 4:12">4:12</ref></char>
+    </note>Mu kiseera kyekimu Tattenayi ow’essaza ly’emitala w’omugga Fulaati, ne Sesalubozenayi ne bagenda gye bali ne bababuuza nti, “Ani eyabawa obuyinza okuddaabiriza yeekaalu eyo n’okuzaawo bbugwe oyo?” <verse number="4" style="v"/>Ate era ne bababuuza n’amannya g’abasajja abaakolanga ku kizimbe ekyo. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:5 </char><char style="xt" closed="false"><ref loc="2KI 25:28">2Bk 25:28</ref>; <ref loc="EZR 7:6">Ezr 7:6</ref>, <ref loc="EZR 7:9">9</ref>, <ref loc="EZR 7:28">28</ref>; <ref loc="EZR 8:18">8:18</ref>, <ref loc="EZR 8:22">22</ref>, <ref loc="EZR 8:31">31</ref>; <ref loc="NEH 2:8">Nek 2:8</ref>, <ref loc="NEH 2:18">18</ref>; <ref loc="PSA 33:18">Zab 33:18</ref>; <ref loc="ISA 66:14">Is 66:14</ref></char></note>Naye Katonda waabwe n’abeeranga wamu n’abakulu b’Abayudaaya, ne bataziyizibwa kugenda mu maaso n’omulimu okutuusa ekigambo nga kivudde eri Daliyo, n’okuddamu kwe nga kuli mu buwandiike.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Kopi ey’ebbaluwa Tattenayi ow’essaza ly’emitala w’omugga Fulaati, ne Sesalubozenayi ne bannaabwe abakungu ab’emitala w’omugga Fulaati gye baaweereza Kabaka Daliyo, <verse number="7" style="v"/>yalimu ebigambo bino wansi.</para>
+  <para style="pmo">Eri Kabaka Daliyo,</para>
+  <para style="pmo">Mirembe myereere.</para>
+  <para style="pm">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:8 </char>
+      <char style="xt" closed="false">nny 2</char>
+    </note>Kitugwanidde okumanyisa kabaka nga bwe twagenze mu ssaza lya Yuda ku yeekaalu ya Katonda omukulu. Abantu bagizimba n’amayinja amanene era bateeka n’embaawo mu bbugwe, era n’omulimu gukolebwa n’obunyiikivu n’okugenda gugenda mu maaso olw’okufuba kwabwe.</para>
+  <para style="pm">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 4:12">Ezr 4:12</ref>
+      </char>
+    </note>Twabuuza abakulu nti, “Ani eyabawa obuyinza okuddaabiriza yeekaalu eyo n’okuzzaawo bbugwe oyo?” <verse number="10" style="v"/>Era twababuuza n’amannya gaabwe, tusobole okukuweereza amannya g’abakulembeze baabwe.</para>
+  <para style="pm">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 6:1">1Bk 6:1</ref>; <ref loc="2CH 3:1-2">2By 3:1-2</ref></char>
+    </note>Baatuddamu nti:</para>
+  <para style="b"/>
+  <para style="pm">“Tuli baddu ba Katonda w’eggulu n’ensi, era tuddaabiriza yeekaalu eyazimbibwa emyaka egy’edda omu ku bakabaka abakulu aba Isirayiri, n’agimala. <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:12 a </char><char style="xt" closed="false"><ref loc="2CH 36:16">2By 36:16</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="DEU 21:10">Ma 21:10</ref>; <ref loc="DEU 28:36">28:36</ref>; <ref loc="2KI 24:1">2Bk 24:1</ref>; <ref loc="2KI 25:8">25:8</ref>, <ref loc="2KI 25:9">9</ref>, <ref loc="2KI 25:11">11</ref>; <ref loc="JER 1:3">Yer 1:3</ref></char></note>Naye olw’okuba nga bajjajjaffe baasunguwaza Katonda w’eggulu, yabawaayo mu mukono gwa Nebukadduneeza Omukaludaaya, kabaka w’e Babulooni, eyazikiriza yeekaalu eno n’atwala abantu e Babulooni.</para>
+  <para style="pm">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 1:1">Ezr 1:1</ref>
+      </char>
+    </note>“Naye mu mwaka ogw’olubereberye ogw’obufuzi bwa Kuulo kabaka w’e Babulooni, kabaka Kuulo oyo n’awa ekiragiro okuddaabiriza ennyumba ya Katonda eno. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:14 a </char><char style="xt" closed="false"><ref loc="EZR 1:7">Ezr 1:7</ref>; <ref loc="EZR 6:5">6:5</ref>; <ref loc="DAN 5:2">Dan 5:2</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CH 3:18">1By 3:18</ref></char></note>Ebintu ebya zaabu n’ebya ffeeza eby’omu nnyumba ya Katonda, Nebukadduneeza bye yanyaga mu yeekaalu eyali mu Yerusaalemi n’abitwala mu ssabo ly’e Babulooni, Kabaka Kuulo n’abiggyayo. Kabaka Kuulo n’abikwasa omusajja erinnya lye Sesubazaali, gwe yalonda okuba owessaza, <verse number="15" style="v"/>era n’amugamba nti, ‘Twala ebintu ebyo, ogende obiteeke mu yeekaalu eri mu Yerusaalemi, era olabe ng’ennyumba ya Katonda edda mu kifo kyayo.’</para>
+  <para style="pm">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 3:10">Ezr 3:10</ref>; <ref loc="EZR 6:15">6:15</ref></char>
+    </note>“Sesubazaali oyo n’ajja n’azimba omusingi gw’ennyumba ya Katonda mu Yerusaalemi, era okuva mu kiseera ekyo n’okutuusa kaakano omulimu gukyagenda mu maaso, tegunnagwa.”</para>
+  <para style="b"/>
+  <para style="pm">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 4:15">Ezr 4:15</ref>; <ref loc="EZR 6:1">6:1</ref>, <ref loc="EZR 6:2">2</ref></char>
+    </note>Noolwekyo kabaka bw’aba ng’asiimye, wabeewo okunoonyereza mu bitabo mu ggwanika lya kabaka eyo e Babulooni obanga ddala Kabaka Kuulo yawa ekiragiro okuddaabiriza ennyumba ya Katonda mu Yerusaalemi. N’oluvannyuma kabaka atutumire okututegeeza ky’asazeewo ku nsonga eyo.</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Ekiragiro kya Daliyo</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 4:15">Ezr 4:15</ref>; <ref loc="EZR 5:17">5:17</ref></char>
+    </note>Awo kabaka Daliyo n’awa ekiragiro okunoonyereza mu bitabo ebyabeeranga mu ggwanika e Babulooni. <verse number="2" style="v"/>Awo omuzingo gw’ekitabo ogwawandiikibwamu ekijjukizo ne guzuulibwa mu kibuga ekikulu Yakumesa eky’essaza ly’e Bumeedi nga kigamba nti:</para>
+  <para style="pmo">Ekiwandiiko:</para>
+  <para style="pm">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 3:10">Ezr 3:10</ref>; <ref loc="HAG 2:3">Kag 2:3</ref></char>
+    </note>Mu mwaka ogw’olubereberye ogw’obufuzi bwa kabaka Kuulo, kabaka yateeka etteeka erikwata ku yeekaalu ya Katonda mu Yerusaalemi, nga ligamba nti:</para>
+  <para style="b"/>
+  <para style="pm">Yeekaalu eddaabirizibwe ebeere ekifo eky’okuweerangayo ssaddaaka, n’emisingi gyayo giteekebwewo ginywezebwe. Eriba mita amakumi abiri mu musanvu obugulumivu (27), ne mita amakumi abiri mu musanvu obugazi (27), <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:4 a </char><char style="xt" closed="false"><ref loc="1KI 6:36">1Bk 6:36</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false">nny 8; <ref loc="EZR 7:20">Ezr 7:20</ref></char></note>ng’erina embu ssatu ez’amayinja amanene, n’olubu olulala nga lwa mbaawo. Omuwendo gwonna gwakusasulibwa okuva mu gwanika lya kabaka. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:5 a </char><char style="xt" closed="false"><ref loc="1CH 29:2">1By 29:2</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EZR 1:7">Ezr 1:7</ref>; <ref loc="EZR 5:14">5:14</ref></char></note>Ate era n’ebintu ebya zaabu n’ebya ffeeza eby’omu nnyumba ya Katonda, Nebukadduneeza bye yaggya mu yeekaalu e Yerusaalemi n’abireeta e Babulooni, bizibweyo mu bifo byabyo mu yeekaalu e Yerusaalemi; mulibiteeka mu nnyumba ya Katonda.</para>
+  <para style="b"/>
+  <para style="pm">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:6 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 5:3">Ezr 5:3</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 5:3">Ezr 5:3</ref>
+      </char>
+    </note>Kale nno, Tattenayi ow’essaza ery’emitala w’omugga Fulaati, ne Sesalubozenayi, n’abakungu abeeyo mwewale okutabulatabula. <verse number="7" style="v"/>Temuyingirira mulimu ogukolebwa ku yeekaalu ya Katonda eyo. Muleke ow’essaza ly’Abayudaaya n’abakulu b’Abayudaaya bazzeewo ennyumba ya Katonda mu kifo kyayo.</para>
+  <para style="pm">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:8 a </char>
+      <char style="xt" closed="false">nny 4 </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1SA 9:20">1Sa 9:20</ref>
+      </char>
+    </note>Ate era nteeka etteeka erikwata ku bye muteekwa okukolera abakulu abo ab’Abayudaaya nga bazimba yeekaalu ya Katonda:</para>
+  <para style="pm">Ebirikozesebwa abasajja abo byonna, bya kusasulibwa okuva mu ggwanika lya Kabaka, ku misolo egiva emitala w’omugga Fulaati, omulimu guleme okuyimirira. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:9 </char><char style="xt" closed="false"><ref loc="LEV 1:3">Lv 1:3</ref>, <ref loc="LEV 1:10">10</ref></char></note>Bwe baliba beetaaze okuwaayo ebiweebwayo ebyokebwa eri Katonda w’eggulu, oba nte nnume ento, oba ndiga nnume, oba ndiga nnume ento, oba ŋŋaano, oba munnyo, oba nvinnyo, oba mafuta, muteekwa okuwa bakabona ab’omu Yerusaalemi byonna nga bwe baliba basabye buli lunaku obutayosa, <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:10 </char><char style="xt" closed="false"><ref loc="EZR 7:23">Ezr 7:23</ref>; <ref loc="1TI 2:1-2">1Ti 2:1-2</ref></char></note>basobole okuwaayo ssaddaaka ezisiimibwa Katonda w’eggulu, era basabire kabaka ne batabani be.</para>
+  <para style="pm">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:11 a </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 21:22-23">Ma 21:22-23</ref>; <ref loc="EST 2:23">Es 2:23</ref>; <ref loc="EST 5:14">5:14</ref>; <ref loc="EST 9:14">9:14</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 7:26">Ezr 7:26</ref>; <ref loc="DAN 2:5">Dan 2:5</ref>; <ref loc="DAN 3:29">3:29</ref></char>
+    </note>Era nteeka etteeka, omuntu yenna bwalikyusa ekiragiro ekyo, empagi eyazimba ennyumba ye eriggyibwa ku nnyumba ye, era n’awanikibwa ku mpagi eyo. N’ennyumba ye erifuulibwa olubungo olw’ekikolwa ekyo. <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:12 a </char><char style="xt" closed="false"><ref loc="EXO 20:24">Kuv 20:24</ref>; <ref loc="DEU 12:5">Ma 12:5</ref>; <ref loc="1KI 9:3">1Bk 9:3</ref>; <ref loc="2CH 6:2">2By 6:2</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false">nny 14</char></note>Katonda eyaleetera Erinnya lye okubeera mu kifo ekyo, aggyewo kabaka yenna n’eggwanga eririyimusa omukono gwalyo okukyusa etteeka eryo oba n’okuzikiriza eyeekaalu eyo mu Yerusaalemi.</para>
+  <para style="pm">Nze Daliyo ntaddewo etteeka eryo. Likwatibwe butiribiri.</para>
+  <para style="s1">Yeekaalu eggwa okuzimbibwa</para>
+  <para style="p">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 4:9">Ezr 4:9</ref>
+      </char>
+    </note>Olw’ekiragiro kabaka Daliyo kye yaweereza, Tattenayi ow’essaza ly’emitala w’omugga Fulaati, ne Sesalubozenayi ne bannaabwe ne bakola bye baalagibwa n’obunyiikivu bwonna. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:14 a </char><char style="xt" closed="false"><ref loc="EZR 5:1">Ezr 5:1</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EZR 1:1-4">Ezr 1:1-4</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false">nny 12 </char><char style="xo" closed="false">d </char><char style="xt" closed="false"><ref loc="EZR 7:1">Ezr 7:1</ref>; <ref loc="NEH 2:1">Nek 2:1</ref></char></note>Abakadde b’Abayudaaya ne bagenda mu maaso n’okuzimba era ne balaba omukisa ng’okutegeeza kwa nnabbi Kaggayi n’okwa nnabbi Zekkaliya muzzukulu wa Ido bwe kwali. Ne bamaliriza okuzimba yeekaalu, ng’ekiragiro kya Katonda wa Isirayiri bwe kyali, era ng’amateeka ga Kuulo, ne Daliyo ne Alutagizerugizi bakabaka b’e Buperusi bwe gaali. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:15 </char><char style="xt" closed="false"><ref loc="ZEC 1:1">Zek 1:1</ref>; <ref loc="ZEC 4:9">4:9</ref></char></note>Awo yeekaalu eyo n’emalirizibwa ku lunaku olwokusatu olw’omwezi Adali, mu mwaka ogw’omukaaga ogw’obufuzi bwa kabaka Daliyo.</para>
+  <para style="s1">Okutukuza Yeekaalu</para>
+  <para style="p">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 8:63">1Bk 8:63</ref>; <ref loc="2CH 7:5">2By 7:5</ref></char>
+    </note>Awo abantu ba Isirayiri, bakabona n’Abaleevi n’abalala abaali mu buwaŋŋanguse ne bakomawo mu ssanyu ne bakola embaga ey’okutukuza ennyumba ya Katonda nga balina essanyu. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:17 </char><char style="xt" closed="false"><ref loc="2SA 6:13">2Sa 6:13</ref>; <ref loc="2CH 29:21">2By 29:21</ref>; <ref loc="2CH 30:24">30:24</ref>; <ref loc="EZR 8:35">Ezr 8:35</ref></char></note>Olw’okutukuza ennyumba eyo eya Katonda, baawaayo ente ennume kikumi, n’endiga ennume ebikumi bibiri, n’endiga ennume ento ebikumi bina, ate n’ekiweebwayo olw’ekibi ku lwa Isirayiri yenna, embuzi ennume kkumi na bbiri, ng’omuwendo bwe gwali ogw’ebika bya Isirayiri. <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:18 a </char><char style="xt" closed="false"><ref loc="1CH 23:6">1By 23:6</ref>; <ref loc="2CH 35:4">2By 35:4</ref>; <ref loc="LUK 1:5">Luk 1:5</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CH 24:1">1By 24:1</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="NUM 3:6-9">Kbl 3:6-9</ref>; <ref loc="NUM 8:9-11">8:9-11</ref>; <ref loc="NUM 18:1-32">18:1-32</ref></char></note>Ne bateeka bakabona mu bibinja byabwe n’Abaleevi mu biti byabwe olw’okuweereza Katonda e Yerusaalemi, nga bwe kyawandiikibwa mu kitabo kya Musa.</para>
+  <para style="s1">Embaga ey’Okuyitako</para>
+  <para style="p">
+    <verse number="19" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:19 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 12:11">Kuv 12:11</ref>; <ref loc="NUM 28:16">Kbl 28:16</ref></char>
+    </note>Ku lunaku olw’ekkumi n’ennya olw’omwezi ogw’olubereberye, abawaŋŋaangusibwa baafumba embaga ey’Okuyitako. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:20 </char><char style="xt" closed="false"><ref loc="2CH 30:15">2By 30:15</ref>, <ref loc="2CH 30:17">17</ref>; <ref loc="2CH 35:11">35:11</ref></char></note>Bakabona n’Abaleevi baali beetukuzizza era bonna nga balongoofu okukola emikolo. Abaleevi ne batta omwana gw’endiga ogw’Okuyitako, ku lwa baganda baabwe bakabona, nabo bennyini. <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:21 a </char><char style="xt" closed="false"><ref loc="EZR 9:1">Ezr 9:1</ref>; <ref loc="NEH 9:2">Nek 9:2</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="DEU 18:9">Ma 18:9</ref>; <ref loc="EZR 9:11">Ezr 9:11</ref>; <ref loc="EZK 36:25">Ez 36:25</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="1CH 22:19">1By 22:19</ref>; <ref loc="PSA 14:2">Zab 14:2</ref></char></note>Awo Abayisirayiri abaava mu buwaŋŋanguse ne bagirya wamu n’abo bonna abaali beeyawudde, nga basinza <char style="nd">Mukama</char> Katonda wa Isirayiri. <verse number="22" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:22 a </char><char style="xt" closed="false"><ref loc="EXO 12:17">Kuv 12:17</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EZR 1:1">Ezr 1:1</ref></char></note>Ne bamala ennaku musanvu nga balya n’essanyu Embaga ey’Emigaati Egitazimbulukuswa, kubanga <char style="nd">Mukama</char> yabajjuza essanyu bwe yakyusa omutima gwa kabaka w’e Bwasuli, n’abayamba mu mulimu ogw’ennyumba ya Katonda wa Isirayiri.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Ezera Akomawo e Yerusaalemi</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 4:7">Ezr 4:7</ref>; <ref loc="EZR 6:14">6:14</ref>; <ref loc="NEH 2:1">Nek 2:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 22:4">2Bk 22:4</ref>
+      </char>
+    </note>Awo oluvannyuma lw’ebyo, mu biro eby’obufuzi bwa Alutagizerugizi kabaka w’e Buperusi, Ezera mutabani wa Seraya, muzzukulu wa Azaliya, muzzukulu wa Kirukiya, <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:2 a </char><char style="xt" closed="false"><ref loc="1KI 1:8">1Bk 1:8</ref>; <ref loc="1CH 6:8">1By 6:8</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="NEH 11:11">Nek 11:11</ref></char></note>muzzukulu wa Sallumu, muzzukulu wa Zadooki, muzzukulu wa Akitubu, <verse number="3" style="v"/>muzzukulu wa Amaliya, muzzukulu wa Azaliya, muzzukulu wa Merayoosi, <verse number="4" style="v"/>muzzukulu wa Zerakiya, muzzukulu wa Uzzi, muzzukulu wa Bukki, <verse number="5" style="v"/>muzzukulu wa Abisuwa, muzzukulu wa Finekaasi, muzzukulu wa Eriyazaali, muzzukulu wa Alooni kabona asinga obukulu, <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:6 a </char><char style="xt" closed="false"><ref loc="NEH 12:36">Nek 12:36</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EZR 5:5">Ezr 5:5</ref>; <ref loc="ISA 41:20">Is 41:20</ref></char></note>n’ava e Babulooni. Yali munnyonnyozi w’amateeka mukugu mu mateeka, <char style="nd">Mukama</char> Katonda wa Isirayiri ge yawa Musa. Kabaka n’amuwa buli kintu kye yasaba kubanga omukono gwa <char style="nd">Mukama</char> Katonda we gwali wamu naye. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:7 </char><char style="xt" closed="false"><ref loc="EZR 8:1">Ezr 8:1</ref></char></note>Abamu ku bantu ba Isirayiri, omwo nga mwe muli bakabona, n’Abaleevi, n’abayimbi, n’abaakuumanga wankaaki, n’abaaweerezanga mu yeekaalu, ne bagenda wamu naye e Yerusaalemi mu mwaka ogw’omusanvu ogw’obufuzi bwa kabaka Alutagizerugizi.</para>
+  <para style="p">
+    <verse number="8" style="v"/>N’atuuka mu Yerusaalemi mu mwezi ogwokutaano ogw’omwaka ogw’omusanvu ogw’obufuzi bwa kabaka oyo. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:9 </char><char style="xt" closed="false">nny 6</char></note>Yasitula okuva e Babulooni ku lunaku olw’olubereberye olw’omwezi ogw’olubereberye, n’atuuka e Yerusaalemi ku lunaku olw’olubereberye olw’omwezi ogwokutaano, kubanga omukono gwa Katonda we omulungi gwali wamu naye. <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:10 </char><char style="xt" closed="false">nny 25; <ref loc="DEU 33:10">Ma 33:10</ref>; <ref loc="NEH 8:1-8">Nek 8:1-8</ref></char></note>Ezera yali amaliridde mu mutima gwe okusoma n’okukuuma Etteeka lya <char style="nd">Mukama</char>, era n’okuyigirizanga amateeka n’ebiragiro byalyo mu Isirayiri.</para>
+  <para style="s1">Ebbaluwa Kabaka Alutagizerugizi gye yawandiikira Ezera</para>
+  <para style="p">
+    <verse number="11" style="v"/>Eno ye kopi ey’ebbaluwa kabaka Alutagizerugizi gye yawa Ezera kabona era omusomesa, omusajja eyali omukugu mu nsonga ez’amateeka n’ebiragiro bya <char style="nd">Mukama</char> eri Isirayiri.</para>
+  <para style="pmo">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 26:7">Ez 26:7</ref>; <ref loc="DAN 2:37">Dan 2:37</ref></char>
+    </note>Alutagizerugizi, kabaka wa bakabaka,</para>
+  <para style="pmo">Eri Ezera kabona era omunnyonnyozi w’amateeka ga Katonda w’eggulu:</para>
+  <para style="pmo">Nkulamusizza.</para>
+  <para style="pm">
+    <verse number="13" style="v"/>Nteeka etteeka nga buli muntu ow’omu ggwanga lya Isirayiri, omwo nga mwe muli bakabona n’Abaleevi, awulira okugenda e Yerusaalemi naawe, ayinza okugenda. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:14 </char><char style="xt" closed="false"><ref loc="EST 1:14">Es 1:14</ref></char></note>Otumiddwa kabaka n’abakungu be omusanvu ab’oku ntikko okugenda okunoonyereza ku bikwata ku Yuda ne Yerusaalemi nga mugoberera etteeka lya Katonda wammwe, lye mumanyi obulungi. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:15 a </char><char style="xt" closed="false"><ref loc="1CH 29:6">1By 29:6</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CH 29:6">1By 29:6</ref>, <ref loc="1CH 29:9">9</ref>; <ref loc="2CH 6:2">2By 6:2</ref></char></note>Bwe muba nga mugenda mutwale effeeza ne zaabu kabaka n’abakungu be bye bawaddeyo ku bwabwe eri Katonda wa Isirayiri, atuula mu Yerusaalemi, <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:16 a </char><char style="xt" closed="false"><ref loc="EZR 8:25">Ezr 8:25</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ZEC 6:10">Zek 6:10</ref></char></note>awamu n’effeeza ne zaabu yonna gye muliggya mu ssaza lya Babulooni, n’ebiweebwayo eby’obuwa abantu ne bakabona bye baliwaayo ku lwa yeekaalu ya Katonda waabwe mu Yerusaalemi. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:17 a </char><char style="xt" closed="false"><ref loc="2KI 3:4">2Bk 3:4</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="NUM 15:5-12">Kbl 15:5-12</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="DEU 12:5-11">Ma 12:5-11</ref></char></note>Ensimbi ezo mulizikozesa okugula ente ennume, n’endiga ennume, n’abaana b’endiga, n’ebiweebwayo byako eby’obutta, n’ebiweebwayo byako ebyokunywa era munaabiweerangayo ku kyoto eky’omu yeekaalu ya Katonda wammwe mu Yerusaalemi.</para>
+  <para style="pm">
+    <verse number="18" style="v"/>Ggwe ne baganda bo Abayudaaya, kye mulisiima okukolamu effeeza ne zaabu erifikkawo kiriva gye muli ng’okusiima kwa Katonda wammwe bwe kuli. <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:19 </char><char style="xt" closed="false"><ref loc="EZR 5:14">Ezr 5:14</ref>; <ref loc="JER 27:22">Yer 27:22</ref></char></note>Ebintu byonna ebibaweereddwa okukozesa mu yeekaalu ya Katonda wammwe mubiwangayo olw’okusinza Katonda wa Yerusaalemi. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:20 </char><char style="xt" closed="false"><ref loc="EZR 6:4">Ezr 6:4</ref></char></note>N’ekintu ekirala kyonna kye muliba mwetaaze okukozesa mu yeekaalu ya Katonda wammwe, kinaggyibwanga mu ggwanika lya kabaka.</para>
+  <para style="pm">
+    <verse number="21" style="v"/>Kaakano, nze kabaka Alutagizerugizi nteeka etteeka nga ndagira abawanika bonna abali mu ssaza eriri emitala w’omugga Fulaati okuwanga Ezera kabona era omunnyonnyozi w’amateeka ga Katonda w’eggulu, by’anaabasabanga <verse number="22" style="v"/>n’okutuusa ku ttani ssatu n’ekitundu eza ffeeza, oba kilo enkumi bbiri mu bibiri ez’eŋŋaano, oba lita enkumi bbiri mu bibiri ez’envinnyo, oba lita enkumi bbiri mu bibiri ez’amafuta, oba n’omunnyo gwe baliba baagala gwonna. <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:23 </char><char style="xt" closed="false"><ref loc="EZR 6:10">Ezr 6:10</ref></char></note>Ekintu kyonna ekyalagirwa Katonda w’eggulu, kiribaweebwa mu bungi, ku lwa yeekaalu ya Katonda w’eggulu. Kale kiki ekirimuleetera okusunguwalira kabaka ne batabani be? <verse number="24" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:24 a </char><char style="xt" closed="false"><ref loc="EZR 4:13">Ezr 4:13</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EZR 8:36">Ezr 8:36</ref></char></note>Ate era mutegeere nga temusaana kuwooza musolo, oba empooza ey’engeri yonna ku kabona yenna newaakubadde Abaleevi newaakubadde abayimbi newaakubadde abakuumi ab’oku nzigi newaakubadde abaweereza ab’omu yeekaalu newaakubadde abaddu abalala ab’omu nnyumba ya Katonda eyo.</para>
+  <para style="pm">
+    <verse number="25" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:25 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 18:21">Kuv 18:21</ref>, <ref loc="EXO 18:26">26</ref>; <ref loc="DEU 16:18">Ma 16:18</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">nny 10; <ref loc="LEV 10:11">Lv 10:11</ref></char>
+    </note>“Naawe, ggwe Ezera, ng’okozesa amagezi Katonda ge yakuwa, londa abaami n’abalamuzi, abanaalamulanga abantu bonna ab’omu ssaza eriri emitala w’omugga Fulaati, abamanyi amateeka ga Katonda wo, era oyigirize n’abo abatagamanyi. <verse number="26" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:26 </char><char style="xt" closed="false"><ref loc="EZR 6:11">Ezr 6:11</ref></char></note>Omuntu yenna ataligondera tteeka lya Katonda wo, n’etteeka lya Kabaka aliweebwa ekibonerezo kya kuttibwa, oba okugobebwa mu bantu, oba okuggyibwako ebibye, oba okusibibwa mu kkomera.”</para>
+  <para style="p">
+    <verse number="27" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:27 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 1:1">Ezr 1:1</ref>; <ref loc="EZR 6:22">6:22</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 29:12">1By 29:12</ref>
+      </char>
+    </note>
+    <char style="nd">Mukama</char> Katonda w’abajjajjaffe atenderezebwe ayolesezza kabaka okuwa ennyumba ya <char style="nd">Mukama</char> mu Yerusaalemi ekitiibwa, <verse number="28" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:28 a </char><char style="xt" closed="false"><ref loc="2KI 25:28">2Bk 25:28</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EZR 5:5">Ezr 5:5</ref>; <ref loc="EZR 9:9">9:9</ref></char></note>era ansobozesezza okulaba omukisa mu maaso ga kabaka ne mu maaso g’abawi b’amagezi be ab’oku ntikko, n’abakungu ba kabaka bonna, n’olw’omukono gwa <char style="nd">Mukama</char> Katonda wange ogubadde awamu nange, nsobole okukuŋŋaanya abakulembeze ba Isirayiri okugenda nange.</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Amannya g’Abaddayo ne Ezera</para>
+  <para style="li4">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 7:7">Ezr 7:7</ref>
+      </char>
+    </note>Bano be bakulu b’ennyumba, n’abo abeewandiisa n’abo abaayambuka nange okuva e Babulooni mu mulembe gwa kabaka Alutagizerugizi:</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="2" style="v"/>okuva mu bazzukulu ba Finekaasi,</para>
+  <para style="li2">Gerusomu;</para>
+  <para style="li1">n’okuva mu bazzukulu ba Isamaali,</para>
+  <para style="li2">Danyeri;</para>
+  <para style="li1">n’okuva mu bazzukulu ba Dawudi,</para>
+  <para style="li2">Kattusi <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:3 a </char><char style="xt" closed="false"><ref loc="1CH 3:22">1By 3:22</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EZR 2:3">Ezr 2:3</ref></char></note>muzzukulu wa Sekaniya,</para>
+  <para style="li1">n’okuva mu bazzukulu ba Palosi,</para>
+  <para style="li2">Zekkaliya, era wamu naye abasajja abeewandiisa kikumi mu ataano (150);</para>
+  <para style="li1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 2:6">Ezr 2:6</ref>
+      </char>
+    </note>n’okuva mu bazzukulu ba Pakasumowaabu,</para>
+  <para style="li2">Eriwenayi mutabani wa Zekkaliya, era wamu naye abasajja ebikumi bibiri (200);</para>
+  <para style="li1">
+    <verse number="5" style="v"/>n’okuva mu bazzukulu ba Sekaniya,</para>
+  <para style="li2">mutabani wa Yakazyeri, era wamu naye abasajja ebikumi bisatu (300);</para>
+  <para style="li1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 2:15">Ezr 2:15</ref>; <ref loc="NEH 7:20">Nek 7:20</ref>; <ref loc="NEH 10:16">10:16</ref></char>
+    </note>n’okuva mu bazzukulu ba Adini,</para>
+  <para style="li2">Ebedi mutabani wa Yonasaani, era wamu naye abasajja amakumi ataano (50);</para>
+  <para style="li1">
+    <verse number="7" style="v"/>n’okuva mu bazzukulu ba Eramu,</para>
+  <para style="li2">Yesaya mutabani wa Asaliya, era wamu naye abasajja nsanvu (70);</para>
+  <para style="li1">
+    <verse number="8" style="v"/>n’okuva mu bazzukulu ba Sefatiya,</para>
+  <para style="li2">Zebadiya mutabani wa Mikayiri, era wamu naye abasajja kinaana (80);</para>
+  <para style="li1">
+    <verse number="9" style="v"/>n’okuva mu bazzukulu ba Yowaabu,</para>
+  <para style="li2">Obadiya mutabani wa Yekyeri, era wamu naye abasajja ebikumi bibiri mu kkumi na munaana (218);</para>
+  <para style="li1">
+    <verse number="10" style="v"/>n’okuva mu bazzukulu ba Seromisi,</para>
+  <para style="li2">mutabani wa Yosifiya, era wamu naye abasajja kikumi mu nkaaga (160);</para>
+  <para style="li1">
+    <verse number="11" style="v"/>n’okuva mu bazzukulu ba Bebayi,</para>
+  <para style="li2">Zekkaliya mutabani wa Bebayi, era wamu naye abasajja amakumi abiri mu munaana (28);</para>
+  <para style="li1">
+    <verse number="12" style="v"/>n’okuva mu bazzukulu ba Azugadi,</para>
+  <para style="li2">Yokanaani mutabani wa Kakkatani, era wamu naye abasajja kikumi mu kkumi (110);</para>
+  <para style="li1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 2:13">Ezr 2:13</ref>
+      </char>
+    </note>n’okuva mu bazzukulu ba Adonikamu,</para>
+  <para style="li2">abajja oluvannyuma, Erifereti, ne Yeyeri, ne Semaaya, era wamu nabo abasajja nkaaga (60);</para>
+  <para style="li1">
+    <verse number="14" style="v"/>n’okuva mu bazzukulu ba Biguvaayi,</para>
+  <para style="li2">Usayi ne Zabudi, era wamu nabo abasajja nsanvu (70).</para>
+  <para style="s1">Okuddayo e Yerusaalemi</para>
+  <para style="p">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:15 a </char>
+      <char style="xt" closed="false">nny 21, 31 </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 2:40">Ezr 2:40</ref>; <ref loc="EZR 7:7">7:7</ref></char>
+    </note>Ne mbakuŋŋaanyiza ku mugga ogukulukutira e Yakava, ne tusiisira eyo okumala ennaku ssatu. Awo bwe nnali nga nneekebejja abantu ne bakabona, ne sirabamu Baleevi. <verse number="16" style="v"/>Kyennava ntumya Eryeza ne Alyeri ne Semaaya ne Erunasani ne Yalibu ne Erunasani ne Nasani ne Zekkaliya ne Mesullamu, abaali abakulembeze ne Yoyalibu ne Erunasani, abaali abategeevu, <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:17 </char><char style="xt" closed="false"><ref loc="EZR 2:43">Ezr 2:43</ref></char></note>ne mbatuma eri Iddo omukulu w’ekifo eky’e Kasifiya, ne mbategeeza bye baba bagamba Iddo ne baganda be, abaaweerezanga mu yeekaalu mu kifo ekyo eky’e Kasifiya, batuuweereze abaweereza abaliyamba mu nnyumba ya Katonda waffe. <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:18 </char><char style="xt" closed="false"><ref loc="EZR 5:5">Ezr 5:5</ref></char></note>Olw’omukono gwa Katonda ogwali awamu naffe, ne batuleetera omusajja omutegeevu, omu ku bazzukulu ba Makuli, mutabani wa Leevi, mutabani wa Isirayiri, erinnya lye Serebiya, wamu ne baganda be ne batabani baabwe, abasajja kkumi na munaana; <verse number="19" style="v"/>ne Kasabiya, wamu naye Yesaya omu ku bazzukulu ba Merali, ne baganda be ne batabani baabwe, abasajja amakumi abiri. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:20 </char><char style="xt" closed="false"><ref loc="1CH 9:2">1By 9:2</ref>; <ref loc="EZR 2:43">Ezr 2:43</ref></char></note>Ate era ne baleeta n’abaweereza ba yeekaalu Dawudi n’abakungu be baalonda okubeeranga Abaleevi ebikumi bibiri mu abiri. Bonna baali beewandiisizza.</para>
+  <para style="p">
+    <verse number="21" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:21 a </char>
+      <char style="xt" closed="false">nny 15; <ref loc="2CH 20:3">2By 20:3</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 5:8">Zab 5:8</ref>; <ref loc="PSA 107:7">107:7</ref></char>
+    </note>Awo ku mugga Akava, ne nangirira okusiiba, twetoowaze mu maaso ga Katonda waffe, nga tumwegayirira okubeera awamu naffe n’abaana baffe n’ebintu byaffe byonna mu lugendo lwaffe. <verse number="22" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:22 a </char><char style="xt" closed="false"><ref loc="NEH 2:9">Nek 2:9</ref>; <ref loc="EZR 7:6">Ezr 7:6</ref>, <ref loc="EZR 7:9">9</ref>, <ref loc="EZR 7:28">28</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EZR 5:5">Ezr 5:5</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="DEU 31:17">Ma 31:17</ref>; <ref loc="2CH 15:2">2By 15:2</ref></char></note>Nakwatibwa ensonyi okusaba kabaka abaserikale abakuumi ab’ebigere n’abeebagala embalaasi okutukuuma eri abalabe, kubanga twali tumutegeezeza nti, “Omukono omulungi ogwa Katonda waffe gubeera ku buli muntu amunoonya, naye obusungu bwe bubeera ku abo abamujeemera.” <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:23 </char><char style="xt" closed="false"><ref loc="2CH 20:3">2By 20:3</ref>; <ref loc="2CH 33:13">33:13</ref></char></note>Kyetwava tusiiba ne twegayirira Katonda waffe ku nsonga eyo, era n’addamu okusaba kwaffe.</para>
+  <para style="p">
+    <verse number="24" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:24 </char>
+      <char style="xt" closed="false">nny 18</char>
+    </note>Awo ne nonda Serebiya ne Kasabiya ne baganda baabwe abalala kkumi, be bantu kkumi na babiri okuva mu bakabona abakulu, <verse number="25" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:25 </char><char style="xt" closed="false">nny 33; <ref loc="EZR 7:15">Ezr 7:15</ref>, <ref loc="EZR 7:16">16</ref></char></note>ne mbapimira ffeeza ne zaabu n’ebintu kabaka, n’abaami be, n’abakungu be, ne Isirayiri yenna, bye baawaayo ku lw’ennyumba ya Katonda waffe. <verse number="26" style="v"/>Ne mbagererera ttani amakumi abiri mu ttaano eza ffeeza, n’ebintu ebya ffeeza obuzito bwabyo ttani ssatu n’ebitundu bisatu byakuna, ne zaabu ttani ssatu n’ebitundu bisatu byakuna, <verse number="27" style="v"/>ne kilo munaana n’ekitundu eza zaabu, n’ebitundu bibiri eby’ekikomo ebirungi ebizigule, eby’omuwendo nga zaabu.</para>
+  <para style="p">
+    <verse number="28" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:28 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 21:6">Lv 21:6</ref>; <ref loc="LEV 22:2-3">22:2-3</ref></char>
+    </note>Ne mbategeeza nti, “Muli batukuvu eri <char style="nd">Mukama</char>, n’ebintu bino bitukuvu eri <char style="nd">Mukama</char>. Effeeza ne zaabu biweebwayo kyeyagalire eri <char style="nd">Mukama</char> Katonda wa bajjajjammwe. <verse number="29" style="v"/>Mubikuume bulungi era mubituuse bulungi eri bakabona abakulu n’Abaleevi, n’abakulu b’ennyumba za Isirayiri.” <verse number="30" style="v"/>Awo bakabona n’Abaleevi ne baweebwa effeeza ne zaabu, n’ebintu ebyawongebwa, ebyali bipimiddwa, okubitwala mu nnyumba ya Katonda waffe e Yerusaalemi.</para>
+  <para style="p">
+    <verse number="31" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:31 </char>
+      <char style="xt" closed="false">nny 15</char>
+    </note>Ku lunaku olw’ekkumi n’ebbiri olw’omwezi ogw’olubereberye ne tusitula okuva ku mugga Akava okugenda e Yerusaalemi. Omukono gwa Katonda waffe ne gubeera wamu naffe, n’atukuuma eri abalabe n’abanyazi mu kkubo. <verse number="32" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:32 </char><char style="xt" closed="false"><ref loc="GEN 40:13">Lub 40:13</ref>; <ref loc="NEH 2:11">Nek 2:11</ref></char></note>Ne tutuuka e Yerusaalemi gye twawumulira okumala ennaku ssatu. <verse number="33" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:33 a </char><char style="xt" closed="false"><ref loc="NEH 3:4">Nek 3:4</ref>, <ref loc="NEH 3:21">21</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="NEH 3:24">Nek 3:24</ref></char></note>Awo ku lunaku olwokuna, nga tuli mu nnyumba ya Katonda waffe, ne tupima ffeeza ne zaabu n’ebintu ebyawongebwa ne tubikwasa Meremoosi kabona, mutabani wa Uliya, ne Eriyazaali mutabani wa Finekaasi eyali awamu naye, ne Yozabadi mutabani wa Yeswa, ne Nowadiya mutabani wa Binnuyi, Abaleevi. <verse number="34" style="v"/>Byonna ne bibalibwa ng’omuwendo gwabyo bwe gwali n’obuzito bwabyo bwe bwali era ne biwandiikibwa.</para>
+  <para style="p">
+    <verse number="35" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:35 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 29:21">2By 29:21</ref>; <ref loc="EZR 6:17">Ezr 6:17</ref></char>
+    </note>Mu kiseera ekyo abaawaŋŋangusibwa, abakomawo okuva mu busibe, ne bawaayo ebiweebwayo ebyokebwa eri Katonda wa Isirayiri: ente ennume kkumi na bbiri ku lwa Isirayiri yenna, n’endiga ennume kyenda mu mukaaga, n’obuliga obuto nga bulume nsanvu mu musanvu, n’embuzi ennume kkumi na bbiri okuba ekiweebwayo olw’ekibi, ebyo byonna ne biba ebiweebwayo ebyokebwa eri <char style="nd">Mukama</char>. <verse number="36" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:36 a </char><char style="xt" closed="false"><ref loc="EZR 7:21-24">Ezr 7:21-24</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EST 9:3">Es 9:3</ref></char></note>Ate era ne batuusa n’ebiragiro bya kabaka eri bagavana<note caller="+" style="f"><char style="fr" closed="false">8:36 </char><char style="ft" closed="false">bagavana be baakulirwanga abaamasaza.</char></note> n’abaamasaza abaali emitala w’omugga Fulaati, abafuzi abo ne bayamba abantu ne bawaayo n’obuyambi eri ennyumba ya Katonda.</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Okusaba kwa Ezera ku Nsonga ey’Okufumbiriganwa mu mawanga</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 6:21">Ezr 6:21</ref>; <ref loc="NEH 9:2">Nek 9:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 19:38">Lub 19:38</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 13:5">Kuv 13:5</ref>
+      </char>
+    </note>Oluvannyuma lw’ebintu ebyo okukolebwa,<note caller="+" style="f"><char style="fr" closed="false">9:1 </char><char style="ft" closed="false">Bino byabaawo oluvannyuma lw’emyezi mwenda, Ezra ng’akomyewo mu Yerusaalemi.</char></note> abakulembeze ne bajja gye ndi ne boogera nti, “Abantu ba Isirayiri, omwo nga mwe muli bakabona n’Abaleevi, tebeeyawudde ku mawanga agabaliraanye n’ebikolwa byabwe eby’emizizo. Tebeeyawudde ku Bakanani, ne ku Bakiiti ne ku Baperizi ne ku Bayebusi ne ku Bamoni ne ku Bamowaabu ne ku Bamisiri ne ku Bamoli. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:2 a </char><char style="xt" closed="false"><ref loc="EXO 34:16">Kuv 34:16</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EXO 22:31">Kuv 22:31</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="EZR 10:2">Ezr 10:2</ref></char></note>Bawasizza abamu ku bawala baabwe, n’abawala ne bafumbirwa abamu ku batabani baabwe, bwe kityo eggwanga ettukuvu ne lyetabula n’amawanga agabeetoolodde. Ku nsonga eyo abakulembeze n’abakungu, be basinze okwonoona.”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Awo bwe nawulira ebigambo ebyo, ne njuza ekkanzu yange n’omunagiro gwange,<note caller="+" style="f"><char style="fr" closed="false">9:3 </char><char style="ft" closed="false">Okuyuza ebyambalo kaali kabonero akalaga okukungubaga.</char></note> ne nkunyuula enviiri ku mutwe gwange ne mu kirevu kyange ne ntuula wansi nga nnakuwadde. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:4 </char><char style="xt" closed="false"><ref loc="EZR 10:3">Ezr 10:3</ref></char></note>Bonna abatya ebigambo bya Katonda wa Isirayiri ne bakuŋŋaanira we ndi, olw’obutali bwesigwa obw’abaawaŋŋangusibwa. Ne ntuula wansi nga nnakuwadde okutuusa ekiseera eky’ekiweebwayo eky’akawungeezi bwe kyatuuka.</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 29:41">Kuv 29:41</ref>
+      </char>
+    </note>Awo mu kiseera eky’ekiweebwayo eky’akawungeezi ne ngolokoka okuva we nnali ntudde, n’ekkanzu yange enjulifu n’omunagiro gwange omuyulifu, ne nfukamira ne ngolola emikono gyange eri <char style="nd">Mukama</char> Katonda wange, <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:6 </char><char style="xt" closed="false"><ref loc="2CH 28:9">2By 28:9</ref>; <ref loc="JOB 42:6">Yob 42:6</ref>; <ref loc="PSA 38:4">Zab 38:4</ref>; <ref loc="REV 18:5">Kub 18:5</ref></char></note>ne nsaba nti:</para>
+  <para style="pm">“Ayi Katonda wange, nkwatiddwa ensonyi, era sisobola kuyimusa maaso gange eri gwe Katonda wange, kubanga obutali butuukirivu bwaffe busukiridde emitwe gyaffe, n’omusango gwaffe gutuuse mu ggulu. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:7 a </char><char style="xt" closed="false"><ref loc="2CH 29:6">2By 29:6</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EZK 21:1-32">Ez 21:1-32</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="DEU 28:64">Ma 28:64</ref> </char><char style="xo" closed="false">d </char><char style="xt" closed="false"><ref loc="DEU 28:37">Ma 28:37</ref></char></note>Okuva mu biro bya bajjajjaffe n’okutuusa leero, omusango gugenze gweyongera; era olw’obutali butuukirivu bwaffe, bakabaka baffe, ne bakabona baffe baweereddwayo mu mukono gwa bakabaka ab’ensi, n’eri ekitala, n’eri obusibe, n’eri obunyazi, n’eri obuswavu obungi, nga bwe kiri mu nnaku zino.</para>
+  <para style="pm">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:8 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 25:16">Zab 25:16</ref>; <ref loc="ISA 33:2">Is 33:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 45:7">Lub 45:7</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="ECC 12:11">Mub 12:11</ref>; <ref loc="ISA 22:23">Is 22:23</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 13:3">Zab 13:3</ref>
+      </char>
+    </note>“Naye kaakano, akaseera katono, <char style="nd">Mukama</char> Katonda waffe atulaze ekisa n’atulekawo ffe abatono, n’atuwa ekifo ekisooka era ekinywevu mu watukuvu we, Katonda waffe n’amulisa amaaso gaffe, n’atuwa okuweeraweerako akatono mu busibe bwaffe. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:9 a </char><char style="xt" closed="false"><ref loc="EXO 1:14">Kuv 1:14</ref>; <ref loc="NEH 9:36">Nek 9:36</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EZR 7:28">Ezr 7:28</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="PSA 69:35">Zab 69:35</ref>; <ref loc="ISA 43:1">Is 43:1</ref>; <ref loc="JER 32:44">Yer 32:44</ref></char></note>Newaakubadde nga tuli baddu,<note caller="+" style="f"><char style="fr" closed="false">9:9 </char><char style="ft" closed="false">Abayudaaya baali bakyafugibwa.</char></note> Katonda waffe tatulekulidde mu busibe bwaffe, naye atulaze okusaasirwa mu maaso ga bakabaka b’e Buperusi. Atuwadde obulamu obuggya okuzimba ennyumba ya Katonda waffe, n’okuddaabiriza ebyo ebyayonooneka, era atutaddeko Bbugwe okutwetooloola okutukuuma mu Yuda ne mu Yerusaalemi.</para>
+  <para style="pm">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 11:8">Ma 11:8</ref>; <ref loc="ISA 1:19-20">Is 1:19-20</ref></char>
+    </note>“Kaakano Katonda waffe tunaayogera ki oluvannyuma lw’ebyo? Twaleka amateeka go <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:11 a </char><char style="xt" closed="false"><ref loc="LEV 18:25-28">Lv 18:25-28</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="DEU 9:4">Ma 9:4</ref></char></note>ge watuwa ng’oyita mu baddu bo bannabbi, bwe wayogera nti, ‘Ensi gye mugenda okulya, nsi ejjudde obutali bulongoofu olw’abantu baamu, era bagijjuzizza ebikolwa eby’obugwagwa enjuuyi zonna. <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:12 </char><char style="xt" closed="false"><ref loc="EXO 34:15">Kuv 34:15</ref>; <ref loc="DEU 7:3">Ma 7:3</ref>; <ref loc="DEU 23:6">23:6</ref></char></note>Noolwekyo temuwaayo bawala bammwe kufumbirwa batabani baabwe newaakubadde batabani bammwe okuwasa bawala baabwe. Temwongeranga ku bulungi bwabwe newaakubadde obugagga bwabwe, mulyoke mube n’amaanyi mulye ebirungi by’ensi, ate era mubirekere n’abaana bammwe okuba omugabo ogw’emirembe n’emirembe.’ </para>
+  <para style="pm">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 11:6">Yob 11:6</ref>; <ref loc="PSA 103:10">Zab 103:10</ref></char>
+    </note>“Bino byonna bitutuuseeko olw’ebikolwa byaffe ebitali bya butuukirivu n’olw’omusango omunene gwe tulina, ate nga Katonda waffe totubonerezza ng’ebikolwa byaffe bwe biri, naye otuleseewo nga bwe tuli kaakano. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:14 a </char><char style="xt" closed="false"><ref loc="NEH 13:27">Nek 13:27</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="DEU 9:8">Ma 9:8</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="DEU 9:14">Ma 9:14</ref></char></note>Tunaayinza nate okumenya ebiragiro byo ne tuwasa mu mawanga ago agakola ebitasaana? Tolitunyiigira nnyo n’okusingawo n’otuzikiriza obutalekaawo muntu yenna? <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:15 a </char><char style="xt" closed="false"><ref loc="GEN 18:25">Lub 18:25</ref>; <ref loc="PSA 51:4">Zab 51:4</ref>; <ref loc="JER 12:1">Yer 12:1</ref>; <ref loc="DAN 9:7">Dan 9:7</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="NEH 9:33">Nek 9:33</ref>; <ref loc="PSA 130:3">Zab 130:3</ref>; <ref loc="MAL 3:2">Mal 3:2</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="1KI 8:47">1Bk 8:47</ref></char></note>Ayi <char style="nd">Mukama</char> Katonda wa Isirayiri oli mutuukirivu, era otuleseewo ffe ekitundu kino leero. Laba tuli mu maaso go nga tuzzizza omusango, newaakubadde nga tewali eyandisobodde okuyimirira mu maaso go.”</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">Abantu Baatula Ekibi Kyabwe</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 20:9">2By 20:9</ref>; <ref loc="DAN 9:20">Dan 9:20</ref></char>
+    </note>Awo Ezera bwe yali ng’asaba, ng’ayatula ebibi mu lwatu, ng’akaaba, era ng’avunnamye mu maaso g’ennyumba ya Katonda, ekibiina ekinene eky’Abayisirayiri, abasajja, n’abakyala, n’abaana ne bakuŋŋaana gy’ali, nabo nga bakaaba nnyo nnyini. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:2 a </char><char style="xt" closed="false"><ref loc="EZR 9:2">Ezr 9:2</ref>; <ref loc="NEH 13:27">Nek 13:27</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="DEU 30:8-10">Ma 30:8-10</ref></char></note>Awo Sekaniya mutabani wa Yekyeri, omu ku bazzukulu ba Eramu n’agamba Ezera nti, “Tetubadde beesigwa eri Katonda waffe, kubanga twawasa abakazi bannaggwanga ab’oku mawanga agatwetoolodde. Naye newaakubadde nga twakola bwe tutyo, wakyaliwo essuubi eri Isirayiri. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:3 a </char><char style="xt" closed="false"><ref loc="2CH 34:31">2By 34:31</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EXO 34:16">Kuv 34:16</ref>; <ref loc="DEU 7:2-3">Ma 7:2-3</ref>; <ref loc="EZR 9:4">Ezr 9:4</ref></char></note>Noolwekyo tukole endagaano ne Katonda waffe tuve ku bakazi abo bonna n’abaana be twabazaalamu, ng’okuteesa kwa mukama wange n’abo abatya ebiragiro bya Katonda waffe bwe kuli, era kikolebwe ng’etteeka bwe litulagira. <verse number="4" style="v"/>Golokoka kubanga obuvunaanyizibwa obwo buli mu mukono gwo era tuli beeteefuteefu okukuwagira, noolwekyo guma omwoyo okikole.”</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 5:12">Nek 5:12</ref>; <ref loc="NEH 13:25">13:25</ref></char>
+    </note>Awo Ezera n’agolokoka n’alayiza bakabona abakulu n’Abaleevi ne Isirayiri yenna okukola nga bwe kyateesebwa. Ne balayira. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:6 </char><char style="xt" closed="false"><ref loc="EXO 34:28">Kuv 34:28</ref>; <ref loc="DEU 9:18">Ma 9:18</ref></char></note>Ezera n’agolokoka n’ava mu maaso g’ennyumba ya Katonda n’agenda mu kisenge kya Yekokanani mutabani wa Eriyasibu, naye n’atalya mmere newaakubadde okunywa amazzi ng’akyanakuwalidde obutali bwesigwa bw’abaawaŋŋangusibwa.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Awo ekirango ne kiyisibwa mu Yuda yonna ne mu Yerusaalemi nti abawaŋŋangusibwa abaakomawo bakuŋŋaanire mu Yerusaalemi. <verse number="8" style="v"/>Era ne kigambibwa nti omuntu yenna aliba tazze mu nnaku ssatu, alifiirwa ebintu bye byonna, ate n’agobebwa ne mu kuŋŋaaniro lya baawaŋŋangusibwa.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 1:5">Ezr 1:5</ref>
+      </char>
+    </note>Mu nnaku ssatu, abasajja bonna aba Yuda ne Benyamini ne bakuŋŋaanira e Yerusaalemi. Awo ku lunaku olw’amakumi abiri olw’omwezi ogw’omwenda abantu bonna ne batuula mu luggya olugazi mu maaso g’ennyumba ya Katonda nga banakuwavu olw’ensonga eyo ate era n’olw’enkuba eyatonnya. <verse number="10" style="v"/>Awo Ezera kabona n’ayimirira n’abagamba nti, “Mwayonoona bwe mwawasa abakazi bannamawanga ne mwongera ku musango gwa Isirayiri. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:11 </char><char style="xt" closed="false">nny 3; <ref loc="DEU 24:1">Ma 24:1</ref>; <ref loc="NEH 9:2">Nek 9:2</ref>; <ref loc="MAL 2:10-16">Mal 2:10-16</ref></char></note>Kaakano mwatule ebibi byammwe eri <char style="nd">Mukama</char> Katonda wa bajjajjammwe, mukole ebyo by’asiima. Mweyawule ku mawanga agabeetoolodde era muleke n’abakazi bannamawanga.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 6:5">Yos 6:5</ref>
+      </char>
+    </note>Awo ekibiina kyonna ne kiddamu n’eddoboozi ery’omwanguka nti, “Oli mutuufu, tuteekwa okukola nga bw’ogambye. <verse number="13" style="v"/>Naye abantu bangi, era n’ekiseera kya nkuba, tetuyinza kuyimirira bweru. N’ensonga eyookubiri, omulimu guno teguyinza kukolebwa mu lunaku lumu oba mu nnaku bbiri, kubanga twonoonye nnyo nnyini mu kigambo ekyo. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:14 a </char><char style="xt" closed="false"><ref loc="DEU 16:18">Ma 16:18</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="NUM 25:4">Kbl 25:4</ref>; <ref loc="2CH 29:10">2By 29:10</ref>; <ref loc="2CH 30:8">30:8</ref></char></note>Abakulu baffe beeyimirire olukuŋŋaana lwonna, na buli muntu awamu n’abakadde n’abalamuzi aba buli kibuga mu bibuga byaffe eyawasa omukazi omunnaggwanga, ajje mu kiseera ekiragaane alongoose ensonga eyo, okutuusa obusungu bwa Katonda waffe lwe bulituvaako olw’ekigambo ekyo.” <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:15 </char><char style="xt" closed="false"><ref loc="NEH 11:16">Nek 11:16</ref></char></note>Yonasaani mutabani wa Asakeri ne Yozeya mutabani wa Tikuva, nga bawagirwa Mesullamu ne Sabbesayi Omuleevi be bokka abawakanya ekiteeso ekyo.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Awo abaava mu buwaŋŋanguse ne bakola ng’ekiteeso bwe kyali. Ezera kabona n’abaalondebwa ku bakulu b’ennyumba, omu mu buli nnyumba ne baawulibwa mu mannya gaabwe. Ku lunaku olw’olubereberye olw’omwezi ogw’ekkumi ne batuula okunoonyereza ku bigambo ebyo; <verse number="17" style="v"/>ku lunaku olw’olubereberye olw’omwezi ogw’olubereberye ne bamaliriza ensonga eyo ey’abasajja bonna abaali bawasizza abakazi abannamawanga.</para>
+  <para style="s1">Abaasingibwa Omusango</para>
+  <para style="li4">
+    <verse number="18" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:18 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JDG 3:6">Bal 3:6</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 2:2">Ezr 2:2</ref>
+      </char>
+    </note>Mu lulyo olwa bakabona, abaali bawasizza abakazi bannamawanga baali:</para>
+  <para style="li1">Maaseya, ne Eryeza ne Yalibu ne Gedaliya bazzukulu ba Yesuwa mutabani wa Yozadaki ne baganda be. <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:19 a </char><char style="xt" closed="false"><ref loc="2KI 10:15">2Bk 10:15</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="LEV 5:15">Lv 5:15</ref>; <ref loc="LEV 6:6">6:6</ref></char></note>Ne bamalirira okulekayo bakazi baabwe abo, n’omutango gwe baawaayo olw’omusango gwali ndiga nnume.</para>
+  <para style="li1">
+    <verse number="20" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:20 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 24:14">1By 24:14</ref>
+      </char>
+    </note>Ku bazzukulu ba Immeri:</para>
+  <para style="li2">Kanani ne Zebadiya.</para>
+  <para style="li1">
+    <verse number="21" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:21 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 24:8">1By 24:8</ref>
+      </char>
+    </note>Ku bazzukulu ba Kalimu:</para>
+  <para style="li2">Maaseya, ne Eriya, ne Semaaya, ne Yekyeri ne Uzziya.</para>
+  <para style="li1">
+    <verse number="22" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 9:12">1By 9:12</ref>
+      </char>
+    </note>Ku bazzukulu ba Pasukuli:</para>
+  <para style="li2">Eriwenayi, ne Maaseya, ne Isimayiri, ne Nesaneri, ne Yozabadi ne Erasa.</para>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="23" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:23 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 8:7">Nek 8:7</ref>; <ref loc="NEH 9:4">9:4</ref></char>
+    </note>Ku Baleevi:</para>
+  <para style="li2">Yozabadi, ne Simeeyi, ne Keraya (era ye Kerita), ne Pesakiya, ne Yuda ne Eryeza.</para>
+  <para style="li1">
+    <verse number="24" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:24 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 3:1">Nek 3:1</ref>; <ref loc="NEH 12:10">12:10</ref>; <ref loc="NEH 13:7">13:7</ref>, <ref loc="NEH 13:28">28</ref></char>
+    </note>Ku bayimbi:</para>
+  <para style="li2">Eriyasibu,</para>
+  <para style="li1">ne ku baakuumanga wankaaki:</para>
+  <para style="li2">Sallumu, ne Teremu ne Uli.</para>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="25" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:25 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 2:3">Ezr 2:3</ref>
+      </char>
+    </note>Mu Bayisirayiri abalala:</para>
+  <para style="li1">Ku bazzukulu ba Palosi:</para>
+  <para style="li2">Lamiya, ne Izziya, ne Malukiya, ne Miyamini, ne Eriyazaali, ne Malukiya ne Benaya.</para>
+  <para style="li1">
+    <verse number="26" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:26 </char>
+      <char style="xt" closed="false">nny 2</char>
+    </note>Ku bazzukulu ba Eramu:</para>
+  <para style="li2">Mattaniya, ne Zekkaliya, ne Yekyeri, ne Abudi, ne Yeremoosi ne Eriya.</para>
+  <para style="li1">
+    <verse number="27" style="v"/>Ku bazzukulu ba Zattu:</para>
+  <para style="li2">Eriwenayi, ne Eriyasibu, ne Mattaniya, ne Yeremoosi, ne Zabadi, ne Aziza.</para>
+  <para style="li1">
+    <verse number="28" style="v"/>Ku bazzukulu ba Bebayi:</para>
+  <para style="li2">Yekokanani, ne Kananiya, ne Zabbayi ne Asulaayi.</para>
+  <para style="li1">
+    <verse number="29" style="v"/>Ku bazzukulu ba Bani:</para>
+  <para style="li2">Mesullamu, ne Malluki, ne Adaya, ne Yasubu, ne Seyaali ne Yeremoosi.</para>
+  <para style="li1">
+    <verse number="30" style="v"/>Ku bazzukulu ba Pakasumowaabu:</para>
+  <para style="li2">Aduna, ne Kerali, ne Benaya, ne Maaseya, ne Mattaniya, ne Bezaleeri, ne Binnuyi ne Manase.</para>
+  <para style="li1">
+    <verse number="31" style="v"/>Ku bazzukulu ba Kalimu: Eryeza, ne Isusiya, ne Malukiya,</para>
+  <para style="li2">ne Semaaya, ne Simyoni, <verse number="32" style="v"/>ne Benyamini, ne Malluki, ne Semaliya.</para>
+  <para style="li1">
+    <verse number="33" style="v"/>Ku bazzukulu ba Kasumu:</para>
+  <para style="li2">Mattenayi, ne Mattata, ne Zabadi, ne Erifereti, ne Yeremayi, ne Manase, ne Simeeyi.</para>
+  <para style="li1">
+    <verse number="34" style="v"/>Ku bazzukulu ba Baani:</para>
+  <para style="li2">Maadayi, ne Amulaamu, ne Uweri, <verse number="35" style="v"/>ne Benaya, ne Bedeya, ne Keruki, <verse number="36" style="v"/>ne Vaniya, ne Meremoosi, ne Eriyasibu, <verse number="37" style="v"/>ne Mattaniya, ne Mattenayi, ne Yaasu,</para>
+  <para style="li1">
+    <verse number="38" style="v"/>ne Bani, ne Binnuyi,</para>
+  <para style="li2">ne Simeeyi, <verse number="39" style="v"/>ne Seremiya, ne Nasani, ne Adaya, <verse number="40" style="v"/>ne Makunadebayi, ne Sasayi, ne Salaayi, <verse number="41" style="v"/>ne Azaleri, ne Seremiya, ne Semaliya, <verse number="42" style="v"/>ne Sallumu, ne Amaliya ne Yusufu.</para>
+  <para style="li1">
+    <verse number="43" style="v"/>Ku bazzukulu ba Nebo:</para>
+  <para style="li2">Yeyeri, ne Mattisiya, ne Zabadi, ne Zebina, ne Iddo, ne Yoweeri ne Benaya.</para>
+  <para style="b"/>
+  <para style="li4">
+    <verse number="44" style="v"/>Abo bonna baali bawasizza abakazi bannamawanga, n’abamu ku bo nga babazaddemu abaana.</para>
+</usx>

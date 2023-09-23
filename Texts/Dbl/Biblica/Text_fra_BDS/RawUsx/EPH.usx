@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="EPH" style="id">La Bible du Semeur (The Bible of the Sower)</book>
+  <para style="rem">Copyright © 1992, 1999, 2015 by Biblica, Inc.®</para>
+  <para style="h">EPHÉSIENS</para>
+  <para style="toc1">Lettre aux Ephésiens</para>
+  <para style="toc2">Ephésiens</para>
+  <para style="toc3">Ep</para>
+  <para style="mt1">Lettre aux Ephésiens</para>
+  <para style="imt">Introduction</para>
+  <para style="ip">La lettre de Paul dite « aux Ephésiens » n’est probablement pas adressée aux seuls chrétiens de la ville d’Ephèse. En effet, les meilleurs manuscrits ont un blanc à l’endroit de l’adresse : « ceux qui… font partie du peuple saint et croient en Jésus-Christ » (<char style="xt"><ref loc="EPH 1:1">1.1</ref></char>). Par ailleurs, Paul connaissait bien l’Eglise d’Ephèse où il avait passé près de trois ans (<char style="xt"><ref loc="ACT 19">Ac 19</ref> et <ref loc="ACT 20">20</ref></char>). Or cette lettre est une des moins personnelles de l’apôtre. La plupart des spécialistes voient donc en elle une lettre circulaire adressée à un groupe d’Eglises d’Asie Mineure, que l’on identifie parfois à la lettre à laquelle Colossiens <char style="xt"><ref loc="EPH 4:16">4.16</ref></char> fait allusion.</para>
+  <para style="ip">Ecrite de prison, à Rome, vers l’été 62, elle fut portée dans la province romaine d’Asie par Tychique.</para>
+  <para style="ip">La lettre est célèbre pour sa bénédiction introductive (<char style="xt"><ref loc="EPH 1:3-14">1.3-14</ref></char>) dans laquelle Paul, en une longue phrase dans l’original, expose le plan du salut en Jésus-Christ. Ce « secret » (<char style="xt"><ref loc="EPH 1:9">1.9</ref></char>), Dieu l’avait conçu en lui-même « bien avant de poser les fondations du monde » (<char style="xt"><ref loc="EPH 1:4">1.4</ref></char>) mais il l’a révélé en Jésus-Christ et Paul en est le messager.</para>
+  <para style="ip">Le thème majeur que développe l’apôtre est celui de l’unité et de la diversité de l’Eglise :</para>
+  <para style="ili1">– unité et diversité d’origine (<char style="xt"><ref loc="EPH 2:1-3:20">2.1 à 3.20</ref></char>), Juifs et non-Juifs sauvés, les uns comme les autres, par grâce pour former « un seul corps » ;</para>
+  <para style="ili1">– unité de l’Eglise et diversité de services (<char style="xt"><ref loc="EPH 4:1-16">4.1-16</ref></char>) ;</para>
+  <para style="ili1">– unité et diversité sociale (<char style="xt"><ref loc="EPH 5:21-6:9">5.21 à 6.9</ref></char>).</para>
+  <para style="ip">Ces développements sont émaillés de recommandations pratiques sur le comportement du chrétien rempli de l’Esprit Saint, que Paul oppose, par un violent contraste, à celui de ceux qui ne connaissent pas Dieu (<char style="xt"><ref loc="EPH 4:17-5:20">4.17 à 5.20</ref></char>). Le développement final décrit les armes du chrétien dont celui-ci devra user dans le combat spirituel (<char style="xt"><ref loc="EPH 6:10-17">6.10-17</ref></char>).</para>
+  <para style="ip">Ainsi les destinataires de Paul seront-ils armés pour résister aux faux docteurs qui essaient de séduire les Eglises voisines de Colosses.</para>
+  <chapter number="1" style="c" sid="EPH 1"/>
+  <para style="s1">Salutation</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EPH 1:1"/>Paul, apôtre de Jésus-Christ par la volonté de Dieu, salue ceux qui [à Ephèse<note caller="+" style="f"><char style="fr" closed="false">1.1 </char><char style="ft" closed="false">Les mots : </char><char style="fq" closed="false">à Ephèse </char><char style="ft" closed="false">sont absents de plusieurs manuscrits.</char></note>] font partie du peuple saint, et croient en Jésus-Christ.<verse eid="EPH 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EPH 1:2"/>Que la grâce et la paix vous soient accordées par Dieu notre Père et par le Seigneur Jésus-Christ.<verse eid="EPH 1:2"/></para>
+  <para style="ms1">Le salut en Christ</para>
+  <para style="s1">La grâce de Dieu en Christ</para>
+  <para style="q1">
+    <verse number="3" style="v" sid="EPH 1:3"/>Béni soit Dieu,</para>
+  <para style="q1" vid="EPH 1:3">le Père de notre Seigneur</para>
+  <para style="q1" vid="EPH 1:3">Jésus-Christ,</para>
+  <para style="q1" vid="EPH 1:3">car il nous a comblés</para>
+  <para style="q1" vid="EPH 1:3">de toute bénédiction de l’Esprit</para>
+  <para style="q1" vid="EPH 1:3">dans le monde céleste</para>
+  <para style="q1" vid="EPH 1:3">en raison de notre union avec Christ.<verse eid="EPH 1:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="EPH 1:4"/>En lui,</para>
+  <para style="q1" vid="EPH 1:4">bien avant de poser</para>
+  <para style="q1" vid="EPH 1:4">les fondations du monde,</para>
+  <para style="q1" vid="EPH 1:4">il nous avait choisis</para>
+  <para style="q1" vid="EPH 1:4">pour que nous soyons saints</para>
+  <para style="q1" vid="EPH 1:4">et sans reproche devant lui.</para>
+  <para style="q1" vid="EPH 1:4">Puisqu’il nous a aimés,<verse eid="EPH 1:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="EPH 1:5"/>il nous a destinés d’avance</para>
+  <para style="q1" vid="EPH 1:5">à être ses enfants</para>
+  <para style="q1" vid="EPH 1:5">qu’il voulait adopter</para>
+  <para style="q1" vid="EPH 1:5">par Jésus-Christ.</para>
+  <para style="q1" vid="EPH 1:5">Voilà ce que, dans sa bonté,</para>
+  <para style="q1" vid="EPH 1:5">il a voulu pour nous<verse eid="EPH 1:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="EPH 1:6"/>afin que nous célébrions</para>
+  <para style="q1" vid="EPH 1:6">la gloire de sa grâce</para>
+  <para style="q1" vid="EPH 1:6">qu’il nous a accordée</para>
+  <para style="q1" vid="EPH 1:6">en son Fils bien-aimé.<verse eid="EPH 1:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="EPH 1:7"/>En Christ,</para>
+  <para style="q1" vid="EPH 1:7">parce qu’il s’est offert en sacrifice,</para>
+  <para style="q1" vid="EPH 1:7">nous avons obtenu la délivrance,</para>
+  <para style="q1" vid="EPH 1:7">le pardon de nos fautes.</para>
+  <para style="q1" vid="EPH 1:7">Dieu a ainsi manifesté sa grâce</para>
+  <para style="q1" vid="EPH 1:7">dans toute sa richesse,<verse eid="EPH 1:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="EPH 1:8"/>et il l’a répandue sur nous</para>
+  <para style="q1" vid="EPH 1:8">avec surabondance,</para>
+  <para style="q1" vid="EPH 1:8">en nous donnant pleine sagesse</para>
+  <para style="q1" vid="EPH 1:8">et pleine intelligence,<verse eid="EPH 1:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="EPH 1:9"/>nous ayant fait connaître</para>
+  <para style="q1" vid="EPH 1:9">le secret de son plan.</para>
+  <para style="q1" vid="EPH 1:9">Ce plan, il l’a fixé d’avance,</para>
+  <para style="q1" vid="EPH 1:9">dans sa bonté,</para>
+  <para style="q1" vid="EPH 1:9">en Christ,<verse eid="EPH 1:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="EPH 1:10"/>pour conduire les temps</para>
+  <para style="q1" vid="EPH 1:10">vers l’accomplissement.</para>
+  <para style="q1" vid="EPH 1:10">Selon ce plan,</para>
+  <para style="q1" vid="EPH 1:10">tout ce qui est au ciel</para>
+  <para style="q1" vid="EPH 1:10">et tout ce qui est sur la terre</para>
+  <para style="q1" vid="EPH 1:10">doit être harmonieusement réuni<note caller="+" style="f"><char style="fr" closed="false">1.10 </char><char style="ft" closed="false">Paul emploie ici un verbe qui signifie </char><char style="fqa" closed="false">résumer, récapituler. </char><char style="ft" closed="false">Il est difficile de savoir ce qu’il voulait dire exactement. Certains traduisent : </char><char style="fqa" closed="false">doit être restauré. </char><char style="ft" closed="false">D’autres comprennent : </char><char style="fqa" closed="false">doit être réuni sous le gouvernement de Christ.</char></note></para>
+  <para style="q1" vid="EPH 1:10">en Christ.<verse eid="EPH 1:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="EPH 1:11"/>Et c’est aussi en Christ</para>
+  <para style="q1" vid="EPH 1:11">qu’il nous a accordé</para>
+  <para style="q1" vid="EPH 1:11">notre part d’héritage<note caller="+" style="f"><char style="fr" closed="false">1.11 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">que nous sommes devenus sa possession.</char></note></para>
+  <para style="q1" vid="EPH 1:11">conformément à ce qu’avait fixé</para>
+  <para style="q1" vid="EPH 1:11">celui qui met en œuvre toutes choses,</para>
+  <para style="q1" vid="EPH 1:11">selon l’intention qui inspire</para>
+  <para style="q1" vid="EPH 1:11">sa décision.</para>
+  <para style="q1" vid="EPH 1:11">Ainsi, nous avons été destinés d’avance<verse eid="EPH 1:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="EPH 1:12"/>à célébrer sa gloire</para>
+  <para style="q1" vid="EPH 1:12">nous qui, les tout premiers,</para>
+  <para style="q1" vid="EPH 1:12">avons placé notre espérance</para>
+  <para style="q1" vid="EPH 1:12">dans le Messie.<verse eid="EPH 1:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="EPH 1:13"/>Et en Christ, vous aussi,</para>
+  <para style="q1" vid="EPH 1:13">vous avez entendu</para>
+  <para style="q1" vid="EPH 1:13">le message de vérité,</para>
+  <para style="q1" vid="EPH 1:13">cet Evangile</para>
+  <para style="q1" vid="EPH 1:13">qui vous apportait le salut ;</para>
+  <para style="q1" vid="EPH 1:13">oui, c’est aussi en Christ</para>
+  <para style="q1" vid="EPH 1:13">que vous qui avez cru,</para>
+  <para style="q1" vid="EPH 1:13">vous avez obtenu de Dieu</para>
+  <para style="q1" vid="EPH 1:13">l’Esprit Saint qu’il avait promis</para>
+  <para style="q1" vid="EPH 1:13">et par lequel</para>
+  <para style="q1" vid="EPH 1:13">il vous a marqués de son sceau<note caller="+" style="f"><char style="fr" closed="false">1.13 </char><char style="ft" closed="false">Le </char><char style="fqa" closed="false">sceau </char><char style="ft" closed="false">apposé sur une marchandise marquait le changement de propriétaire.</char></note></para>
+  <para style="q1" vid="EPH 1:13">en signe que vous lui appartenez.<verse eid="EPH 1:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="EPH 1:14"/>Cet Esprit constitue</para>
+  <para style="q1" vid="EPH 1:14">l’acompte de notre héritage</para>
+  <para style="q1" vid="EPH 1:14">en attendant la délivrance</para>
+  <para style="q1" vid="EPH 1:14">du peuple que Dieu s’est acquis<note caller="+" style="f"><char style="fr" closed="false">1.14 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">la délivrance par laquelle nous entrerons en possession de notre héritage.</char></note>.</para>
+  <para style="q1" vid="EPH 1:14">Ainsi tout aboutit</para>
+  <para style="q1" vid="EPH 1:14">à célébrer sa gloire.<verse eid="EPH 1:14"/></para>
+  <para style="s1">Prière de Paul pour les Ephésiens</para>
+  <para style="p">
+    <verse number="15" style="v" sid="EPH 1:15"/>Pour toutes ces raisons, moi aussi, après avoir entendu parler de votre foi au Seigneur Jésus et de votre amour pour tous les membres du peuple saint, <verse eid="EPH 1:15"/><verse number="16" style="v" sid="EPH 1:16"/>je ne cesse de dire ma reconnaissance à Dieu à votre sujet quand je fais mention de vous dans mes prières.<verse eid="EPH 1:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EPH 1:17"/>Je demande que le Dieu de notre Seigneur Jésus-Christ, le Père qui possède la gloire, vous donne, par son Esprit, sagesse et révélation, pour que vous le connaissiez ; <verse eid="EPH 1:17"/><verse number="18" style="v" sid="EPH 1:18"/>qu’il illumine ainsi votre intelligence afin que vous compreniez en quoi consiste l’espérance à laquelle vous avez été appelés, quelle est la glorieuse richesse de l’héritage que Dieu vous fera partager avec les membres du peuple saint, <verse eid="EPH 1:18"/><verse number="19" style="v" sid="EPH 1:19"/>et quelle est l’extraordinaire grandeur de la puissance qu’il met en œuvre en notre faveur, à nous qui plaçons notre confiance en lui. Cette puissance, en effet, il l’a déployée dans toute sa force <verse eid="EPH 1:19"/><verse number="20" style="v" sid="EPH 1:20"/>en la faisant agir en Christ lorsqu’il l’a ressuscité et <char style="qt">l’a fait siéger à sa droite</char><note caller="+" style="f"><char style="fr" closed="false">1.20 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 110:1">Ps 110.1</ref></char>.</char></note><char style="qt">,</char> dans le monde céleste. <verse eid="EPH 1:20"/><verse number="21" style="v" sid="EPH 1:21"/>Là, Christ est placé bien au-dessus de toute Autorité, de toute Puissance, de toute Domination et de toute Souveraineté<note caller="+" style="f"><char style="fr" closed="false">1.21 </char><char style="ft" closed="false">Ces expressions se rapportent à des êtres surnaturels (angéliques ou démoniaques) auxquels les erreurs que certains répandaient dans les Eglises d’Asie Mineure donnaient une grande importance (voir <char style="xt">3.10 ; Col 1.16 ; 2.15</char>).</char></note> : au-dessus de tout nom qui puisse être cité, non seulement dans le monde présent, mais aussi dans le monde à venir. <verse eid="EPH 1:21"/><verse number="22" style="v" sid="EPH 1:22"/><char style="qt">Dieu a tout placé sous ses pieds</char><note caller="+" style="f"><char style="fr" closed="false">1.22 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="PSA 8:7">Ps 8.7</ref></char>.</char></note>, et Christ qui domine toutes choses, il l’a donné pour chef à l’Eglise <verse eid="EPH 1:22"/><verse number="23" style="v" sid="EPH 1:23"/>qui est son corps, lui en qui habite la plénitude du Dieu qui remplit tout en tous<note caller="+" style="f"><char style="fr" closed="false">1.23 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">à l’Eglise </char><char style="fv" closed="false">23 </char><char style="fqa" closed="false">qui est son corps, où se manifeste pleinement celui qui remplit tout en tous </char><char style="ft" closed="false">(<char style="xt">cf. <ref loc="EPH 3:19">3.19</ref></char>)</char><char style="fqa" closed="false">.</char></note>.<verse eid="EPH 1:23"/></para>
+  <chapter eid="EPH 1"/>
+  <chapter number="2" style="c" sid="EPH 2"/>
+  <para style="s1">De la mort à la vie</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EPH 2:1"/>Autrefois, vous étiez morts à cause de vos fautes et de vos péchés. <verse eid="EPH 2:1"/><verse number="2" style="v" sid="EPH 2:2"/>Par ces actes, vous conformiez alors votre manière de vivre à celle de ce monde et vous suiviez le chef des puissances spirituelles mauvaises, cet esprit qui agit maintenant dans les hommes rebelles à Dieu.<verse eid="EPH 2:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EPH 2:3"/>Nous aussi, nous faisions autrefois tous partie de ces hommes. Nous vivions selon nos mauvais désirs d’hommes livrés à eux-mêmes et nous accomplissions tout ce que notre corps et notre esprit nous poussaient à faire. Aussi étions-nous, par nature, voués à la colère de Dieu comme le reste des hommes.<verse eid="EPH 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EPH 2:4"/>Mais Dieu est riche en bonté. Aussi, à cause du grand amour dont il nous a aimés, <verse eid="EPH 2:4"/><verse number="5" style="v" sid="EPH 2:5"/>alors que nous étions morts<note caller="+" style="f"><char style="fr" closed="false">2.5 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">sous le coup d’une condamnation à mort.</char></note> à cause de nos fautes, il nous a fait revivre les uns et les autres avec Christ. – C’est par la grâce que vous êtes sauvés. – <verse eid="EPH 2:5"/><verse number="6" style="v" sid="EPH 2:6"/>Par notre union avec Jésus-Christ, Dieu nous a ressuscités les uns et les autres<note caller="+" style="f"><char style="fr" closed="false">2.6 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">avec lui. </char><char style="ft" closed="false">De même dans la suite du verset.</char></note> et nous a fait siéger les uns et les autres dans le monde céleste. <verse eid="EPH 2:6"/><verse number="7" style="v" sid="EPH 2:7"/>Il l’a fait afin de démontrer pour tous les âges à venir, l’extraordinaire richesse de sa grâce qu’il a manifestée en Jésus-Christ par sa bonté envers nous.<verse eid="EPH 2:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EPH 2:8"/>Car c’est par grâce que vous êtes sauvés, par le moyen de la foi. Cela ne vient pas de vous, c’est un don de Dieu ; <verse eid="EPH 2:8"/><verse number="9" style="v" sid="EPH 2:9"/>ce n’est pas le fruit d’œuvres que vous auriez accomplies. Personne n’a donc de raison de se vanter. <verse eid="EPH 2:9"/><verse number="10" style="v" sid="EPH 2:10"/>Ce que nous sommes, nous le devons à Dieu ; car par notre union avec Jésus-Christ, Dieu nous a créés pour une vie riche d’œuvres bonnes qu’il a préparées à l’avance afin que nous les accomplissions.<verse eid="EPH 2:10"/></para>
+  <para style="s1">Juifs et non-Juifs réconciliés par Jésus-Christ</para>
+  <para style="p">
+    <verse number="11" style="v" sid="EPH 2:11"/>C’est pourquoi, vous qui portez, dans votre corps, la preuve que vous n’êtes pas des Juifs et qui donc êtes traités d’« incirconcis » par ceux qui se disent « les circoncis » à cause d’un rite accompli sur leur corps et par des hommes, rappelez-vous quelle était votre situation autrefois. <verse eid="EPH 2:11"/><verse number="12" style="v" sid="EPH 2:12"/>En ce temps-là, vous étiez sans Messie, vous n’aviez pas le droit de faire partie du peuple d’Israël, vous étiez étrangers aux alliances conclues par Dieu pour garantir sa promesse, sans espérance et sans Dieu dans le monde.<verse eid="EPH 2:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EPH 2:13"/>Mais maintenant, par votre union avec Jésus-Christ, vous qui, autrefois, étiez <char style="qt">loin,</char> vous êtes devenus <char style="qt">proches</char> grâce au sacrifice de Christ<note caller="+" style="f"><char style="fr" closed="false">2.13 </char><char style="ft" closed="false">Voir la citation au v. 17.</char></note>.<verse eid="EPH 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="EPH 2:14"/>
+    <char style="qt">Car nous lui devons notre paix</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">2.14 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="MIC 5:4">Mi 5.4</ref>
+        </char>.</char>
+    </note>. Il a, en effet, instauré l’unité entre les Juifs et les non-Juifs et abattu le mur<note caller="+" style="f"><char style="fr" closed="false">2.14 </char><char style="ft" closed="false">Allusion probable à la haute muraille qui, dans le temple de Jérusalem, séparait le parvis des non-Juifs de celui où les Juifs seuls avaient accès.</char></note> qui les séparait : en livrant son corps à la mort, il a annulé les effets de ce qui faisait d’eux des ennemis, <verse eid="EPH 2:14"/><verse number="15" style="v" sid="EPH 2:15"/>c’est-à-dire de la Loi de Moïse, dans ses commandements et ses règles. Il voulait ainsi créer une seule et nouvelle humanité à partir des Juifs et des non-Juifs qu’il a unis à lui-même, en établissant la paix. <verse eid="EPH 2:15"/><verse number="16" style="v" sid="EPH 2:16"/>Il voulait aussi les réconcilier les uns et les autres avec Dieu et les unir en un seul corps, en supprimant, par sa mort sur la croix, ce qui faisait d’eux des ennemis.<verse eid="EPH 2:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EPH 2:17"/>Ainsi <char style="qt">il est venu annoncer la paix à vous qui étiez loin et la paix à ceux qui étaient proches</char><note caller="+" style="f"><char style="fr" closed="false">2.17 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 57:19">Es 57.19</ref></char> (voir <char style="xt"><ref loc="ZEC 6:15">Za 6.15</ref></char>).</char></note><char style="qt">.</char> <verse eid="EPH 2:17"/><verse number="18" style="v" sid="EPH 2:18"/>Car, grâce à lui, nous avons accès, les uns comme les autres, auprès du Père, par le même Esprit.<verse eid="EPH 2:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="EPH 2:19"/>Voilà pourquoi vous n’êtes plus des étrangers ou des résidents temporaires<note caller="+" style="f"><char style="fr" closed="false">2.19 </char><char style="ft" closed="false">Le terme grec désignait les étrangers autorisés à résider comme émigrés en Israël, sans y jouir du droit de cité.</char></note>, vous êtes concitoyens des membres du peuple saint, vous faites partie de la famille de Dieu. <verse eid="EPH 2:19"/><verse number="20" style="v" sid="EPH 2:20"/>Dieu vous a intégrés à l’édifice qu’il construit sur le fondement que sont les apôtres, ses prophètes<note caller="+" style="f"><char style="fr" closed="false">2.20 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="REV 21:14">Ap 21.14</ref></char>. Autre traduction : </char><char style="fqa" closed="false">sur le fondement posé par les apôtres, ses prophètes. </char><char style="ft" closed="false">Certains traduisent la fin du verset : </char><char style="fqa" closed="false">les apôtres et les prophètes.</char></note>, et dont Jésus-Christ lui-même est la pierre principale.<verse eid="EPH 2:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="EPH 2:21"/>En lui toute la construction s’élève, bien coordonnée, afin d’être un temple saint dans le Seigneur, <verse eid="EPH 2:21"/><verse number="22" style="v" sid="EPH 2:22"/>et, unis à Christ, vous avez été intégrés ensemble à cette construction pour former une demeure où Dieu habite par l’Esprit.<verse eid="EPH 2:22"/></para>
+  <chapter eid="EPH 2"/>
+  <chapter number="3" style="c" sid="EPH 3"/>
+  <para style="s1">La mission de Paul</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EPH 3:1"/>C’est pourquoi moi Paul, le prisonnier de Jésus-Christ pour vous, les non-Juifs…<note caller="+" style="f"><char style="fr" closed="false">3.1 </char><char style="ft" closed="false">Paul interrompt ici sa phrase pour ouvrir jusqu’au v. 14 une parenthèse dans laquelle il explique quelle est sa mission et la nature du secret qu’il a été chargé d’annoncer.</char></note><verse eid="EPH 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EPH 3:2"/>Vous avez très certainement appris quelle responsabilité Dieu, dans sa grâce, m’a confiée à votre égard<note caller="+" style="f"><char style="fr" closed="false">3.2 </char><char style="ft" closed="false">Ces paroles prouvent que la lettre ne s’adressait pas à la seule Eglise d’Ephèse. Paul, en effet, avait séjourné pendant trois ans à Ephèse (<char style="xt"><ref loc="ACT 20:31">Ac 20.31</ref></char>). Les Ephésiens n’ignoraient donc pas la responsabilité que Dieu avait confiée à Paul.</char></note>. <verse eid="EPH 3:2"/><verse number="3" style="v" sid="EPH 3:3"/>Par révélation, il m’a fait connaître le secret de son plan que je viens de résumer en quelques mots. <verse eid="EPH 3:3"/><verse number="4" style="v" sid="EPH 3:4"/>En me lisant, vous pouvez vous rendre compte de la compréhension que j’ai de ce secret, qui concerne Christ. <verse eid="EPH 3:4"/><verse number="5" style="v" sid="EPH 3:5"/>En effet, Dieu ne l’a pas fait connaître aux hommes des générations passées comme il l’a révélé maintenant, par le Saint-Esprit, à ses apôtres, ses prophètes qu’il a consacrés à son service.<verse eid="EPH 3:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EPH 3:6"/>Et ce secret c’est que, par leur union avec Jésus-Christ, les non-Juifs reçoivent le même héritage que nous, les Juifs, ils font partie du même corps et ont part à la même promesse, par le moyen de l’Evangile. <verse eid="EPH 3:6"/><verse number="7" style="v" sid="EPH 3:7"/>C’est de cet Evangile que je suis devenu le serviteur : tel est le don que Dieu m’a accordé dans sa grâce, par l’action de sa puissance. <verse eid="EPH 3:7"/><verse number="8" style="v" sid="EPH 3:8"/>Oui, c’est à moi, le plus petit de tous les membres du peuple saint, que Dieu a fait cette grâce d’annoncer aux non-Juifs les richesses insondables de Christ <verse eid="EPH 3:8"/><verse number="9" style="v" sid="EPH 3:9"/>et de mettre en pleine lumière, pour tout homme, la façon dont Dieu mène ce plan à sa complète réalisation. Ce plan, le Dieu qui a créé toutes choses l’avait tenu caché en lui-même de toute éternité. <verse eid="EPH 3:9"/><verse number="10" style="v" sid="EPH 3:10"/>Par cette mise en lumière, les Autorités et les Puissances dans le monde céleste peuvent connaître, par le moyen de l’Eglise, les aspects infiniment variés de sa sagesse.<verse eid="EPH 3:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EPH 3:11"/>Cela s’accomplit conformément à ce qui a été fixé de toute éternité et qui s’est réalisé par Jésus-Christ notre Seigneur. <verse eid="EPH 3:11"/><verse number="12" style="v" sid="EPH 3:12"/>Etant unis à lui, nous avons, par la foi en lui, la liberté de nous approcher de Dieu<note caller="+" style="f"><char style="fr" closed="false">3.12 </char><char style="ft" closed="false">Le mot grec traduit par </char><char style="fqa" closed="false">approcher </char><char style="ft" closed="false">était utilisé pour le droit de venir dans la présence d’un souverain ou d’un dieu (voir <char style="xt">2.18 ; Rm 5.2 ; Hé 4.16 ; 10.19 ; 1 P 3.18</char>).</char></note> avec assurance. <verse eid="EPH 3:12"/><verse number="13" style="v" sid="EPH 3:13"/>Aussi je vous demande de ne pas perdre courage en pensant aux détresses que je connais dans mon service pour vous : elles contribuent à la gloire qui vous est destinée.<verse eid="EPH 3:13"/></para>
+  <para style="s1">Connaître l’amour de Dieu</para>
+  <para style="p">
+    <verse number="14" style="v" sid="EPH 3:14"/>C’est pourquoi je me mets à genoux devant le Père, <verse eid="EPH 3:14"/><verse number="15" style="v" sid="EPH 3:15"/>de qui dépendent, comme d’un modèle, toutes les familles des cieux et de la terre. <verse eid="EPH 3:15"/><verse number="16" style="v" sid="EPH 3:16"/>Je lui demande qu’il vous accorde, à la mesure de ses glorieuses richesses, d’être fortifiés avec puissance par son Esprit dans votre être intérieur. <verse eid="EPH 3:16"/><verse number="17" style="v" sid="EPH 3:17"/>Que Christ habite dans votre cœur par la foi. Enracinés et solidement fondés dans l’amour, <verse eid="EPH 3:17"/><verse number="18" style="v" sid="EPH 3:18"/>vous serez ainsi à même de comprendre, avec tous ceux qui font partie du peuple saint, combien l’amour de Christ est large, long, élevé et profond. <verse eid="EPH 3:18"/><verse number="19" style="v" sid="EPH 3:19"/>Oui, vous serez à même de connaître cet amour qui surpasse tout ce qu’on peut en connaître, et vous serez ainsi remplis de toute la plénitude de Dieu.<verse eid="EPH 3:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EPH 3:20"/>A celui qui, par la puissance qui agit en nous, peut réaliser bien au-delà de tout ce que nous demandons ou même pensons, <verse eid="EPH 3:20"/><verse number="21" style="v" sid="EPH 3:21"/>à lui soit la gloire dans l’Eglise et en Jésus-Christ pour toutes les générations et pour l’éternité. Amen !<verse eid="EPH 3:21"/></para>
+  <chapter eid="EPH 3"/>
+  <chapter number="4" style="c" sid="EPH 4"/>
+  <para style="ms1">La vie de la nouvelle communauté</para>
+  <para style="s1">L’unité : la conserver</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EPH 4:1"/>Moi qui suis prisonnier à cause du Seigneur, je vous demande donc instamment de vous conduire d’une manière digne de l’appel qui vous a été adressé : <verse eid="EPH 4:1"/><verse number="2" style="v" sid="EPH 4:2"/>soyez toujours humbles, empreints de douceur et patients, supportez-vous les uns les autres avec amour. <verse eid="EPH 4:2"/><verse number="3" style="v" sid="EPH 4:3"/>Efforcez-vous de conserver l’unité que donne l’Esprit, dans la paix qui vous lie les uns aux autres. <verse eid="EPH 4:3"/><verse number="4" style="v" sid="EPH 4:4"/>Il y a un seul corps et un seul Esprit ; de même, Dieu vous a fait venir à lui en vous donnant une seule espérance : celle à laquelle vous avez été appelés.<verse eid="EPH 4:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EPH 4:5"/>Il y a un seul Seigneur, une seule foi, un seul baptême, <verse eid="EPH 4:5"/><verse number="6" style="v" sid="EPH 4:6"/>un seul Dieu et Père de tous qui règne sur tous, qui agit par tous et qui est en tous<note caller="+" style="f"><char style="fr" closed="false">4.6 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">qui règne sur tout, qui agit par tout et qui est en tout.</char></note>.<verse eid="EPH 4:6"/></para>
+  <para style="s1">L’unité : l’acquérir</para>
+  <para style="p">
+    <verse number="7" style="v" sid="EPH 4:7"/>Cependant, chacun de nous a reçu la grâce de Dieu selon la part que Christ lui donne dans son œuvre.<verse eid="EPH 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EPH 4:8"/>C’est bien ce que déclare l’Ecriture :</para>
+  <para style="q1" vid="EPH 4:8">
+    <char style="qt">Il est monté sur les hauteurs,</char></para>
+  <para style="q1" vid="EPH 4:8">
+    <char style="qt">il a emmené des captifs</char></para>
+  <para style="q1" vid="EPH 4:8">
+    <char style="qt">et il a fait des dons aux hommes</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">4.8 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 68:19">Ps 68.19</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="EPH 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EPH 4:9"/>Or, que signifie : <char style="qt">Il est monté ?</char> Cela implique qu’auparavant, il est descendu jusqu’en bas, c’est-à-dire sur la terre<note caller="+" style="f"><char style="fr" closed="false">4.9 </char><char style="ft" closed="false">Certains comprennent : </char><char style="fqa" closed="false">dans les régions les plus profondes de la terre.</char></note>. <verse eid="EPH 4:9"/><verse number="10" style="v" sid="EPH 4:10"/>Celui qui est descendu, c’est aussi celui qui est <char style="qt">monté</char> au-dessus de tous les cieux afin de remplir l’univers entier.<verse eid="EPH 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EPH 4:11"/>C’est lui qui <char style="qt">a fait don</char> de certains comme apôtres, d’autres comme prophètes, d’autres comme prédicateurs de l’Evangile, et d’autres encore, comparables à des bergers<note caller="+" style="f"><char style="fr" closed="false">4.11 </char><char style="ft" closed="false">Paul fait peut-être allusion ici aux </char><char style="fqa" closed="false">bergers </char><char style="ft" closed="false">que Dieu avait promis de donner à son peuple selon <char style="xt"><ref loc="JER 3:15">Jr 3.15</ref></char>. L’image du berger est fréquente dans l’Ancien Testament pour des dirigeants politiques (<char style="xt"><ref loc="EZK 34">Ez 34</ref></char>), mais Jérémie se compare aussi lui-même à un berger en tant que prophète (<char style="xt"><ref loc="JER 17:16">Jr 17.16</ref></char> ; voir aussi <char style="xt"><ref loc="ISA 56:10-11">Es 56.10-11</ref></char>). Ici, ce sont les enseignants de l’Eglise qui sont comparés à des bergers.</char></note>, comme enseignants. <verse eid="EPH 4:11"/><verse number="12" style="v" sid="EPH 4:12"/>Il a fait don de ces hommes pour que les membres du peuple saint soient rendus aptes à accomplir leur service<note caller="+" style="f"><char style="fr" closed="false">4.12 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">il a fait don de ces hommes pour que ceux-ci œuvrent par leur ministère au perfectionnement des membres du peuple saint.</char></note> en vue de la construction du corps de Christ.<verse eid="EPH 4:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EPH 4:13"/>Ainsi nous parviendrons tous ensemble à l’unité dans la foi et dans la connaissance du Fils de Dieu, à l’état d’adultes, à un stade de maturité où se manifeste la plénitude qui nous vient de Christ. <verse eid="EPH 4:13"/><verse number="14" style="v" sid="EPH 4:14"/>De cette manière, nous ne serons plus de petits enfants ballottés comme des barques par les vagues et emportés çà et là par le vent de toutes sortes d’enseignements, à la merci d’hommes habiles à entraîner les autres dans l’erreur.<verse eid="EPH 4:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EPH 4:15"/>Au contraire, en exprimant la vérité dans l’amour, nous grandirons à tous égards vers celui qui est la tête : Christ.<verse eid="EPH 4:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EPH 4:16"/>C’est de lui que le corps tout entier tire sa croissance pour s’affermir dans l’amour, sa cohésion et sa forte unité lui venant de toutes les articulations dont il est pourvu, pour assurer l’activité attribuée à chacune de ses parties<note caller="+" style="f"><char style="fr" closed="false">4.16 </char><char style="fq" closed="false">pour assurer… parties. </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">avec la mesure de force que chacune de ses parties a reçue.</char></note>.<verse eid="EPH 4:16"/></para>
+  <para style="s1">La vie en Christ</para>
+  <para style="p">
+    <verse number="17" style="v" sid="EPH 4:17"/>Voici donc ce que je vous dis, ce que je vous déclare au nom du Seigneur : vous ne devez plus vivre comme les païens, qui suivent leurs pensées vides de sens. <verse eid="EPH 4:17"/><verse number="18" style="v" sid="EPH 4:18"/>Ils ont, en effet, l’intelligence obscurcie et sont étrangers à la vie que Dieu donne, à cause de l’ignorance qui est en eux et qui provient de l’endurcissement de leur cœur. <verse eid="EPH 4:18"/><verse number="19" style="v" sid="EPH 4:19"/>Ayant perdu tout sens moral, ils se sont livrés à l’inconduite pour se jeter avec frénésie dans toutes sortes de vices.<verse eid="EPH 4:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="EPH 4:20"/>Mais vous, ce n’est pas ainsi que vous avez appris Christ, <verse eid="EPH 4:20"/><verse number="21" style="v" sid="EPH 4:21"/>puisqu’on vous a fait savoir ce qu’il est et qu’on vous a enseigné, dans le cadre de votre union avec lui, ce qui est conforme à la vérité qui est en Jésus<note caller="+" style="f"><char style="fr" closed="false">4.21 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">et qu’on vous a enseigné dans le cadre de votre union avec lui, puisque la vérité est en Jésus.</char></note>. <verse eid="EPH 4:21"/><verse number="22" style="v" sid="EPH 4:22"/>Cela consiste à vous débarrasser de votre ancienne manière de vivre, celle de l’homme que vous étiez autrefois et qui se corrompait en suivant ses désirs trompeurs, <verse eid="EPH 4:22"/><verse number="23" style="v" sid="EPH 4:23"/>à être renouvelés quant à votre esprit et votre intelligence, <verse eid="EPH 4:23"/><verse number="24" style="v" sid="EPH 4:24"/>et à vous revêtir de l’homme nouveau, créé conformément à la pensée de Dieu, pour être juste et saint conformément à la vérité.<verse eid="EPH 4:24"/></para>
+  <para style="s1">La vie dans l’amour</para>
+  <para style="p">
+    <verse number="25" style="v" sid="EPH 4:25"/>C’est pourquoi, débarrassés du mensonge, <char style="qt">que chacun de vous dise la vérité à son prochain</char><note caller="+" style="f"><char style="fr" closed="false">4.25 </char><char style="ft" closed="false"><char style="xt"><ref loc="ZEC 8:16">Za 8.16</ref></char>.</char></note>. Ne sommes-nous pas membres les uns des autres ?<verse eid="EPH 4:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="EPH 4:26"/>
+    <char style="qt">Mettez-vous en colère</char> ╵<char style="qt">mais n’allez pas jusqu’à pécher</char><note caller="+" style="f"><char style="fr" closed="false">4.26 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 4:5">Ps 4.5</ref></char> cité selon l’ancienne version grecque. D’autres traduisent : </char><char style="fqa" closed="false">Si vous vous mettez en colère, ne commettez pas de péché.</char></note><char style="qt">;</char> que votre colère s’apaise avant le coucher du soleil. <verse eid="EPH 4:26"/><verse number="27" style="v" sid="EPH 4:27"/>Ne donnez aucune prise au diable.<verse eid="EPH 4:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="EPH 4:28"/>Que le voleur cesse de dérober ; qu’il se donne plutôt de la peine et travaille honnêtement de ses mains pour qu’il ait de quoi donner à ceux qui sont dans le besoin.<verse eid="EPH 4:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="EPH 4:29"/>Ne laissez aucune mauvaise parole franchir vos lèvres ; ayez au contraire des paroles empreintes de bonté, qui aident les autres à grandir dans la foi selon les besoins. Ainsi elles feront du bien à ceux qui vous entendent.<verse eid="EPH 4:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="EPH 4:30"/>N’attristez<note caller="+" style="f"><char style="fr" closed="false">4.30 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">N’entravez pas l’action de l’Esprit.</char></note> pas le Saint-Esprit de Dieu car, par cet Esprit, Dieu vous a marqués de son sceau comme sa propriété pour le jour de la délivrance finale.<verse eid="EPH 4:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="EPH 4:31"/>Amertume, irritation, colère, éclats de voix, insultes : faites disparaître tout cela du milieu de vous, ainsi que toute forme de méchanceté. <verse eid="EPH 4:31"/><verse number="32" style="v" sid="EPH 4:32"/>Soyez bons et compréhensifs les uns envers les autres. Pardonnez-vous réciproquement comme Dieu vous<note caller="+" style="f"><char style="fr" closed="false">4.32 </char><char style="ft" closed="false">Certains manuscrits ont : </char><char style="fqa" closed="false">nous.</char></note> a pardonné en Christ.<verse eid="EPH 4:32"/></para>
+  <chapter eid="EPH 4"/>
+  <chapter number="5" style="c" sid="EPH 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EPH 5:1"/>Puisque vous êtes les enfants bien-aimés de Dieu, suivez l’exemple de votre Père.<verse eid="EPH 5:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="EPH 5:2"/>Que votre vie soit dirigée par l’amour, de même que Christ nous<note caller="+" style="f"><char style="fr" closed="false">5.2 </char><char style="ft" closed="false">Certains manuscrits ont : </char><char style="fqa" closed="false">vous.</char></note> a aimés et a livré lui-même sa vie à Dieu pour nous comme une offrande et un sacrifice dont le parfum plaît à Dieu.<verse eid="EPH 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EPH 5:3"/>Quant à l’immoralité et aux pratiques dégradantes sous toutes leurs formes, et à la soif de posséder, qu’il n’en soit pas même question entre vous : ce ne sont pas des sujets de conversation qui conviennent aux membres du peuple saint, <verse eid="EPH 5:3"/><verse number="4" style="v" sid="EPH 5:4"/>pas plus que les propos grossiers ou stupides, et les plaisanteries équivoques. C’est inconvenant ! Exprimez plutôt votre reconnaissance envers Dieu. <verse eid="EPH 5:4"/><verse number="5" style="v" sid="EPH 5:5"/>Car, sachez-le bien : aucun homme qui se livre à l’immoralité, à des pratiques dégradantes ou à la soif de posséder – qui est une idolâtrie – n’a d’héritage dans le royaume de Christ et de Dieu<note caller="+" style="f"><char style="fr" closed="false">5.5 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">le royaume de celui qui est Christ et Dieu.</char></note>.<verse eid="EPH 5:5"/></para>
+  <para style="s1">La vie dans la lumière</para>
+  <para style="p">
+    <verse number="6" style="v" sid="EPH 5:6"/>Que personne ne vous trompe par des discours sans valeur : ce sont ces désordres qui attirent la colère de Dieu sur ceux qui refusent de lui obéir.<verse eid="EPH 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EPH 5:7"/>Ne vous associez pas à ces gens-là. <verse eid="EPH 5:7"/><verse number="8" style="v" sid="EPH 5:8"/>Autrefois, certes, vous apparteniez aux ténèbres, mais à présent, par votre union avec le Seigneur, vous appartenez à la lumière. Comportez-vous donc comme des enfants de la lumière – <verse eid="EPH 5:8"/><verse number="9" style="v" sid="EPH 5:9"/>car le fruit produit par la lumière c’est tout ce qui est bon, juste et vrai. <verse eid="EPH 5:9"/><verse number="10" style="v" sid="EPH 5:10"/>Efforcez-vous de discerner ce qui plaît au Seigneur.<verse eid="EPH 5:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EPH 5:11"/>Ne participez pas aux pratiques stériles que favorisent les ténèbres, mais démasquez-les plutôt. <verse eid="EPH 5:11"/><verse number="12" style="v" sid="EPH 5:12"/>Car tout ce que ces gens-là font en cachette est si honteux qu’on n’ose même pas en parler. <verse eid="EPH 5:12"/><verse number="13" style="v" sid="EPH 5:13"/>Mais quand ces choses sont démasquées, leur véritable nature paraît à la lumière. <verse eid="EPH 5:13"/><verse number="14" style="v" sid="EPH 5:14"/>Or ce qui paraît à la lumière est lumière. De là viennent ces paroles :</para>
+  <para style="q1" vid="EPH 5:14">Réveille-toi,</para>
+  <para style="q1" vid="EPH 5:14">ô toi qui dors,</para>
+  <para style="q1" vid="EPH 5:14">relève-toi</para>
+  <para style="q1" vid="EPH 5:14">d’entre les morts</para>
+  <para style="q1" vid="EPH 5:14">et Christ fera lever</para>
+  <para style="q1" vid="EPH 5:14">sa lumière sur toi<note caller="+" style="f"><char style="fr" closed="false">5.14 </char><char style="ft" closed="false">L’apôtre cite peut-être un cantique de l’Eglise primitive inspiré par <char style="xt">Es 26.19 ; 51.17 ; 52.1 ; 60.1</char>.</char></note>.<verse eid="EPH 5:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EPH 5:15"/>Veillez donc avec soin à votre manière de vivre. Ne vous comportez pas comme des insensés, mais comme des gens sensés. <verse eid="EPH 5:15"/><verse number="16" style="v" sid="EPH 5:16"/>Mettez à profit les occasions qui se présentent à vous<note caller="+" style="f"><char style="fr" closed="false">5.16 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">Gérez bien votre temps.</char></note>, car nous vivons des jours mauvais.<verse eid="EPH 5:16"/></para>
+  <para style="s1">La vie par l’Esprit</para>
+  <para style="p">
+    <verse number="17" style="v" sid="EPH 5:17"/>C’est pourquoi ne soyez pas déraisonnables, mais comprenez ce que le Seigneur attend de vous.<verse eid="EPH 5:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="EPH 5:18"/>Ne vous enivrez pas de vin – cela vous conduirait à une vie de désordre – mais soyez remplis de l’Esprit : <verse eid="EPH 5:18"/><verse number="19" style="v" sid="EPH 5:19"/>ainsi vous vous entretiendrez par le chant de psaumes, d’hymnes et de cantiques inspirés par l’Esprit<note caller="+" style="f"><char style="fr" closed="false">5.19 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">conformes à la pensée de l’Esprit, </char><char style="ft" closed="false">ce qui revient à dire que leur contenu doit être en accord avec l’Ecriture.</char></note>, vous louerez le Seigneur de tout votre cœur par vos chants et vos psaumes ; <verse eid="EPH 5:19"/><verse number="20" style="v" sid="EPH 5:20"/>à tout moment et pour toute chose, vous remercierez Dieu le Père au nom de notre Seigneur Jésus-Christ, <verse eid="EPH 5:20"/><verse number="21" style="v" sid="EPH 5:21"/>et parce que vous avez la crainte de Christ, vous vous soumettrez les uns aux autres, <verse eid="EPH 5:21"/><verse number="22" style="v" sid="EPH 5:22"/>vous femmes, en particulier, chacune à son mari, et cela par égard pour le Seigneur. <verse eid="EPH 5:22"/><verse number="23" style="v" sid="EPH 5:23"/>Le mari, en effet, est le chef de sa femme comme Christ est la tête, le chef<note caller="+" style="f"><char style="fr" closed="false">5.23 </char><char style="ft" closed="false">Le même mot grec désigne </char><char style="fqa" closed="false">la tête </char><char style="ft" closed="false">et </char><char style="fqa" closed="false">le chef.</char></note> de l’Eglise qui est son corps et dont il est le Sauveur. <verse eid="EPH 5:23"/><verse number="24" style="v" sid="EPH 5:24"/>Mais comme l’Eglise se soumet à Christ, qu’ainsi aussi la femme se soumette en toute circonstance à son mari.<verse eid="EPH 5:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="EPH 5:25"/>Quant à vous, maris, que chacun de vous aime sa femme comme Christ a aimé l’Eglise : il a donné sa vie pour elle <verse eid="EPH 5:25"/><verse number="26" style="v" sid="EPH 5:26"/>afin de la rendre digne de se tenir devant Dieu après l’avoir purifiée par sa Parole, comme par le bain nuptial<note caller="+" style="f"><char style="fr" closed="false">5.26 </char><char style="ft" closed="false">En Orient, la fiancée était baignée et parée avant le mariage (comparer <char style="xt"><ref loc="EZK 16:9">Ez 16.9</ref></char>). Autre traduction : </char><char style="fqa" closed="false">après l’avoir purifiée par l’eau et par la Parole.</char></note>. <verse eid="EPH 5:26"/><verse number="27" style="v" sid="EPH 5:27"/>Il a ainsi voulu se présenter cette Eglise à lui-même, rayonnante de beauté, sans tache, ni ride, ni aucun défaut, mais digne de se tenir devant Dieu et irréprochable.<verse eid="EPH 5:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="EPH 5:28"/>Voilà comment chaque mari doit aimer sa femme comme si elle était son propre corps : ainsi celui qui aime sa femme s’aime lui-même. <verse eid="EPH 5:28"/><verse number="29" style="v" sid="EPH 5:29"/>Car personne n’a jamais haï sa propre chair ; au contraire, chacun la nourrit et l’entoure de soins, comme Christ le fait pour l’Eglise, <verse eid="EPH 5:29"/><verse number="30" style="v" sid="EPH 5:30"/>parce que nous sommes les membres de son corps.<verse eid="EPH 5:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="EPH 5:31"/>
+    <char style="qt">C’est pourquoi l’homme laissera son père et sa mère pour s’attacher à sa femme et les deux ne feront plus qu’un</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">5.31 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="GEN 2:24">Gn 2.24</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="EPH 5:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="EPH 5:32"/>Il y a là un grand mystère : je parle de ce que je viens de dire au sujet de Christ et de l’Eglise. <verse eid="EPH 5:32"/><verse number="33" style="v" sid="EPH 5:33"/>Quant à vous, que chaque mari aime sa femme comme lui-même, et que chaque femme témoigne un profond respect à son mari.<verse eid="EPH 5:33"/></para>
+  <chapter eid="EPH 5"/>
+  <chapter number="6" style="c" sid="EPH 6"/>
+  <para style="s1">Parents et enfants</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EPH 6:1"/>Vous, enfants, obéissez à vos parents à cause du Seigneur<note caller="+" style="f"><char style="fr" closed="false">6.1 </char><char style="ft" closed="false">L’expression : </char><char style="fqa" closed="false">à cause du Seigneur </char><char style="ft" closed="false">est absente de certains manuscrits.</char></note>, car c’est là ce qui est juste. <verse eid="EPH 6:1"/><verse number="2" style="v" sid="EPH 6:2"/><char style="qt">Honore ton père et ta mère :</char> c’est le premier commandement auquel une promesse est rattachée : <verse eid="EPH 6:2"/><verse number="3" style="v" sid="EPH 6:3"/><char style="qt">pour que tu sois heureux et que tu jouisses d’une longue vie sur la terre</char><note caller="+" style="f"><char style="fr" closed="false">6.3 </char><char style="ft" closed="false"><char style="xt">Ex 20.12 ; Dt 5.16</char>.</char></note><char style="qt">.</char><verse eid="EPH 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EPH 6:4"/>Vous, pères, n’exaspérez pas vos enfants, mais élevez-les en les éduquant et en les conseillant d’une manière conforme à la volonté du Seigneur.<verse eid="EPH 6:4"/></para>
+  <para style="s1">Maîtres et esclaves</para>
+  <para style="p">
+    <verse number="5" style="v" sid="EPH 6:5"/>Vous, esclaves<note caller="+" style="f"><char style="fr" closed="false">6.5 </char><char style="ft" closed="false">La population des villes antiques était composée d’une proportion élevée d’esclaves.</char></note>, obéissez à votre maître terrestre avec toute la crainte qui s’impose, avec droiture de cœur, et cela par égard pour Christ. <verse eid="EPH 6:5"/><verse number="6" style="v" sid="EPH 6:6"/>N’accomplissez pas votre tâche seulement quand on vous surveille, comme s’il s’agissait de plaire à des hommes, mais agissez comme des esclaves de Christ, qui accomplissent la volonté de Dieu de tout leur cœur. <verse eid="EPH 6:6"/><verse number="7" style="v" sid="EPH 6:7"/>Accomplissez votre service de bon gré, comme pour le Seigneur et non pour des hommes. <verse eid="EPH 6:7"/><verse number="8" style="v" sid="EPH 6:8"/>Car vous savez que chacun, qu’il soit esclave ou libre, recevra du Seigneur ce qui lui revient selon le bien qu’il aura fait.<verse eid="EPH 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EPH 6:9"/>Quant à vous, maîtres, agissez suivant les mêmes principes envers vos esclaves, sans user de menaces. Car vous savez que le Seigneur qui est au ciel est votre Maître tout autant que le leur ; et il n’agit jamais par favoritisme.<verse eid="EPH 6:9"/></para>
+  <para style="ms1">Le combat chrétien</para>
+  <para style="s1">Revêtir l’armure qui vient de Dieu</para>
+  <para style="p">
+    <verse number="10" style="v" sid="EPH 6:10"/>Pour conclure : puisez votre force dans le Seigneur et dans sa grande puissance.<verse eid="EPH 6:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EPH 6:11"/>Revêtez-vous de l’armure de Dieu afin de pouvoir tenir ferme contre toutes les ruses du diable. <verse eid="EPH 6:11"/><verse number="12" style="v" sid="EPH 6:12"/>Car nous n’avons pas à lutter contre des êtres de chair et de sang, mais contre les Puissances, contre les Autorités, contre les Pouvoirs de ce monde des ténèbres, et contre les esprits du mal dans le monde céleste.<verse eid="EPH 6:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="EPH 6:13"/>C’est pourquoi, endossez l’armure que Dieu donne afin de pouvoir résister au mauvais jour et tenir jusqu’au bout après avoir fait tout ce qui était possible<note caller="+" style="f"><char style="fr" closed="false">6.13 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">après avoir été victorieux en tout.</char></note>. <verse eid="EPH 6:13"/><verse number="14" style="v" sid="EPH 6:14"/>Tenez donc ferme : ayez autour de la taille la vérité pour ceinture, et revêtez-vous de la droiture en guise de cuirasse. <verse eid="EPH 6:14"/><verse number="15" style="v" sid="EPH 6:15"/>Ayez pour chaussures à vos pieds la disponibilité à servir l’Evangile de la paix. <verse eid="EPH 6:15"/><verse number="16" style="v" sid="EPH 6:16"/>En toute circonstance, saisissez-vous de la foi comme d’un bouclier avec lequel vous pourrez éteindre toutes les flèches enflammées du diable<note caller="+" style="f"><char style="fr" closed="false">6.16 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">du mal. </char><char style="ft" closed="false">Dans les guerres antiques, on se servait, surtout lors des sièges, de flèches enduites de poix et de résine que l’on enflammait au moment de les lancer. Les légionnaires romains s’en protégeaient avec leurs grands boucliers.</char></note>. <verse eid="EPH 6:16"/><verse number="17" style="v" sid="EPH 6:17"/>Prenez le salut pour casque et l’épée de l’Esprit, c’est-à-dire la Parole de Dieu.<verse eid="EPH 6:17"/></para>
+  <para style="s1">L’appel à la prière</para>
+  <para style="p">
+    <verse number="18" style="v" sid="EPH 6:18"/>En toutes circonstances, faites toutes sortes de prières et de requêtes sous la conduite de l’Esprit. Faites-le avec vigilance et constance, et intercédez pour tous les membres du peuple saint, <verse eid="EPH 6:18"/><verse number="19" style="v" sid="EPH 6:19"/>en particulier pour moi. Demandez à Dieu de me donner, quand je parle, les mots que je dois dire pour annoncer avec assurance le secret que révèle l’Evangile. <verse eid="EPH 6:19"/><verse number="20" style="v" sid="EPH 6:20"/>C’est de cet Evangile que je suis l’ambassadeur, un ambassadeur enchaîné. Priez donc pour que je l’annonce avec assurance comme je dois en parler.<verse eid="EPH 6:20"/></para>
+  <para style="s1">Salutation finale</para>
+  <para style="p">
+    <verse number="21" style="v" sid="EPH 6:21"/>Pour que vous connaissiez vous aussi ma situation et que vous sachiez ce que je fais, Tychique<note caller="+" style="f"><char style="fr" closed="false">6.21 </char><char style="fq" closed="false">Tychique </char><char style="ft" closed="false">(<char style="xt">Ac 20.4 ; Col 4.7</char>) a dû porter la lettre circulaire à Ephèse, puis dans les autres villes de la province d’Asie, et donner oralement des nouvelles de l’apôtre.</char></note>, notre cher frère, qui est un serviteur fidèle dans la communion avec Christ, vous mettra au courant de tout ce qui me concerne.<verse eid="EPH 6:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="EPH 6:22"/>Je l’envoie exprès chez vous pour qu’il vous donne de mes nouvelles et vous encourage ainsi.<verse eid="EPH 6:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="EPH 6:23"/>Que Dieu le Père et le Seigneur Jésus-Christ accordent à tous les frères et sœurs la paix et l’amour, avec la foi. <verse eid="EPH 6:23"/><verse number="24" style="v" sid="EPH 6:24"/>Que Dieu donne sa grâce à tous ceux qui aiment notre Seigneur Jésus-Christ d’un amour inaltérable.<verse eid="EPH 6:24"/></para>
+  <chapter eid="EPH 6"/>
+</usx>

@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="AMO" style="id">- Japanese Contemporary Bible (リビングバイブル)</book>
+  <para style="rem">Copyright © 1978, 2011, 2016 by Biblica, Inc.®</para>
+  <para style="h">アモス書</para>
+  <para style="toc1">アモス書(しょ)</para>
+  <para style="toc2">アモス書</para>
+  <para style="toc3">アモス</para>
+  <para style="mt1">アモス書</para>
+  <para style="mt3">（アモスの預言）</para>
+  <para style="imt">の紹介</para>
+  <para style="ip">アモスは、ホセア、イザヤ、ミカと同時代の人で、ホセアと同じく南王国の出身でした。しかし彼は、北王国イスラエルに対して語りました。アモスは、まず周辺諸国へのさばきを述べ、次にイスラエルに集中してさばきを宣告します。さらに、イスラエルの罪を痛烈に非難する箇所が続き、特に当時の社会的罪、すなわち不正、役人の腐敗、貪欲、偽りの礼拝などを指摘します。きびしい調子の警告のあとに一連の幻が述べられ、イスラエルがやがては主に耳を傾けるという、かすかな望みを記して終わります。</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="cl">1</para>
+  <para style="p">
+    <verse number="1" style="v"/>アモスはテコアの村に住む羊飼いでした。一日中、丘の中腹にいて、羊が迷い出ないように見張っていたのです。</para>
+  <para style="s1">イスラエルの隣人へのさばき</para>
+  <para style="p">
+    <verse number="2" style="v"/>ある日、神はアモスに、イスラエルに起ころうとしていることを幻の中で語りました。この幻をアモスが見たのは、ウジヤがユダの王、ヨアシュの子ヤロブアムがイスラエルの王であった時で、地震が起こる二年前のことでした。</para>
+  <para style="p">アモスは見聞きしたことを、次のように報告しています。</para>
+  <para style="q1">主は、ねぐらからほえるどう猛なライオンのように、</para>
+  <para style="q1">シオンの山にある神殿から、大声で叫びました。</para>
+  <para style="q1">すると突然、カルメル山のみずみずしい牧草地が</para>
+  <para style="q1">しおれて枯れ、羊飼いはみな、声を上げて泣きました。</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="3" style="v"/>主はこう言います。</para>
+  <para style="q1">「ダマスコの民は何度もくり返して罪を犯し、</para>
+  <para style="q1">わたしはそのことを忘れない。</para>
+  <para style="q1">もうこれ以上、処罰を猶予しない。</para>
+  <para style="q1">彼らは穀物を鉄の打穀棒で打つように、</para>
+  <para style="q1">ギルアデでわたしの民を打った。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>だから、ハザエル王の宮殿に火を放ち、</para>
+  <para style="q1">ベン・ハダデの堅固なとりでを破壊する。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>ダマスコの町の門のかんぬきを折り、</para>
+  <para style="q1">アベンの平野に住む者や、</para>
+  <para style="q1">ベテ・エデンで王位についている者を殺す。</para>
+  <para style="q1">シリヤの民は奴隷としてキルに戻る。」</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="6" style="v"/>主はこう言います。</para>
+  <para style="q1">「ガザは何度もくり返して罪を犯し、</para>
+  <para style="q1">わたしはそのことを忘れない。</para>
+  <para style="q1">もうこれ以上、処罰を猶予しない。</para>
+  <para style="q1">ガザはわたしの民を追い出し、</para>
+  <para style="q1">エドムで奴隷として売った。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>だから、ガザの城壁に火を放ち、</para>
+  <para style="q1">とりではすべて破壊される。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>アシュドデの民を殺し、</para>
+  <para style="q1">エクロンと、アシュケロンの王を滅ぼそう。</para>
+  <para style="q1">残ったペリシテ人は滅びる。」</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="9" style="v"/>主はこう言います。</para>
+  <para style="q1">「ツロの民は何度もくり返して罪を犯し、</para>
+  <para style="q1">わたしはそのことを忘れない。</para>
+  <para style="q1">もうこれ以上、処罰を猶予しない。</para>
+  <para style="q1">彼らは兄弟であるイスラエルとの協定を破り、</para>
+  <para style="q1">攻撃をしかけて征服し、奴隷としてエドムに渡した。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>だから、ツロの城壁に火を放ち、</para>
+  <para style="q1">とりでも宮殿も灰にする。」</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="11" style="v"/>主はこう言います。</para>
+  <para style="q1">「エドムは何度もくり返して罪を犯し、</para>
+  <para style="q1">わたしはそのことを忘れない。</para>
+  <para style="q1">もうこれ以上、処罰を猶予しない。</para>
+  <para style="q1">彼らは兄弟であるイスラエルを剣で追いかけ、</para>
+  <para style="q1">怒りにまかせて冷酷にふるまった。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>だから、テマンに火をかけ、</para>
+  <para style="q1">ボツラのとりでをすべて灰にする。」</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="13" style="v"/>主はこう言います。</para>
+  <para style="q1">「アモンの民は何度もくり返して罪を犯し、</para>
+  <para style="q1">わたしはそのことを忘れない。</para>
+  <para style="q1">もうこれ以上、処罰を猶予しない。</para>
+  <para style="q1">彼らはギルアデの戦いで、領土を広げるために</para>
+  <para style="q1">残虐なことを行い、剣で妊婦を切り裂いた。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>だから、ラバの城壁に火を放ち、</para>
+  <para style="q1">とりでと宮殿は灰となる。</para>
+  <para style="q1">嵐の時のつむじ風のように、</para>
+  <para style="q1">戦いのものすごい叫び声が上がる。</para>
+  <para style="p">
+    <verse number="15" style="v"/>王も君主たちも捕囚として連れ去られる。」</para>
+  <chapter number="2" style="c"/>
+  <para style="cl">2</para>
+  <para style="p">
+    <verse number="1" style="v"/>主はこう言います。</para>
+  <para style="q1">「モアブの住民は何度もくり返して罪を犯し、</para>
+  <para style="q1">わたしはそのことを忘れない。</para>
+  <para style="q1">もうこれ以上、処罰を猶予しない。</para>
+  <para style="q1">彼らはエドムの王たちの墓を汚し、</para>
+  <para style="q1">死者を丁重に取り扱わなかったからだ。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>今、その報いとしてモアブに火を放ち、</para>
+  <para style="q1">その火はケリヨテの宮殿をすべて破壊する。</para>
+  <para style="q1">勇士が叫び、角笛が鳴り響くうちに、</para>
+  <para style="q1">モアブは混乱の中で倒れる。</para>
+  <para style="p">
+    <verse number="3" style="v"/>わたしは彼らの王を滅ぼし、その臣下をみな殺す。」</para>
+  <para style="p">
+    <verse number="4" style="v"/>主はこう言います。</para>
+  <para style="q1">「ユダの民は何度もくり返して罪を犯し、</para>
+  <para style="q1">わたしはそのことを忘れない。</para>
+  <para style="q1">もうこれ以上、処罰を猶予しない。</para>
+  <para style="q1">彼らは神の教えを受け入れず、従うことを拒んだからだ。</para>
+  <para style="q1">先祖がそうであったように、</para>
+  <para style="q1">心をかたくなにして罪を犯した。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>だから、ユダを火で滅ぼし、</para>
+  <para style="q1">エルサレムの宮殿もとりでもすべて灰にする。」</para>
+  <para style="s1">イスラエルへのさばき</para>
+  <para style="p">
+    <verse number="6" style="v"/>主はこう言います。</para>
+  <para style="q1">「イスラエルの民は何度もくり返して罪を犯し、</para>
+  <para style="q1">わたしはそのことを忘れない。</para>
+  <para style="q1">もうこれ以上、処罰を猶予しない。</para>
+  <para style="q1">彼らはわいろを取って公正な裁判を曲げ、</para>
+  <para style="q1">借金を返せない貧しい者を奴隷に売ったからだ。</para>
+  <para style="q1">それも、たったのくつ一足分の代金のために。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>彼らは貧しい者を踏みつけ、</para>
+  <para style="q1">おとなしい者を足蹴にする。</para>
+  <para style="q1">父と息子とが同じ巫女を犯し、</para>
+  <para style="q1">わたしの聖なる名を傷つけている。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>祭りの日には、</para>
+  <para style="q1">借金のかたに取った着物の上で横になり、</para>
+  <para style="q1">わたしの神殿に、</para>
+  <para style="q1">取り立てた金で買ったぶどう酒を携えて来る。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>わたしが彼らにしてやったことを、よく考えてみよ。</para>
+  <para style="q1">目の前のエモリ人をこの地から追い払ったのは、</para>
+  <para style="q1">このわたしだ。</para>
+  <para style="q1">彼らは杉のように背が高く、樫の木のように強かった。</para>
+  <para style="q1">だが、わたしはその実を切り落とし、根を切った。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>あなたがたをエジプトから連れ出し、</para>
+  <para style="q1">荒野の中を四十年間導き、</para>
+  <para style="q1">エモリ人の地を所有させたのだ。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>また、あなたがたの息子の中から</para>
+  <para style="q1">ナジル人や預言者を選んだ。</para>
+  <para style="q1">イスラエルよ、そうではなかったか」と主は尋ねます。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>「ところがあなたがたは、</para>
+  <para style="q1">ナジル人にむりやりぶどう酒を飲ませて罪を犯させ、</para>
+  <para style="q1">『うるさい、黙れ！』と言って預言者を沈黙させた。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>だから、穀物を満載した荷車がきしむように、</para>
+  <para style="q1">あなたがたをうめかせよう。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>あなたがたの中で一番すばやい戦士が逃げてつまずき、</para>
+  <para style="q1">強い者はみな弱くなり、</para>
+  <para style="q1">勇士ももはや自分のいのちを救えない。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>射かける矢は、みなはずれ、</para>
+  <para style="q1">足の速い者も逃げのびれず、</para>
+  <para style="q1">熟達した騎手も危険地帯を逃げ切ることができない。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>その日には、どんなに勇敢で力のある者も、</para>
+  <para style="q1">武器を捨てて、いのちからがら逃げる。」</para>
+  <para style="q1">神、主がこのように語ったのです。</para>
+  <chapter number="3" style="c"/>
+  <para style="cl">3</para>
+  <para style="s1">イスラエルのさばきの証人</para>
+  <para style="p">
+    <verse number="1" style="v"/>聞きなさい。これがあなたがたの運命です。エジプトから連れ出したイスラエルとユダの全家族に、主はこう言います。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>「地上のすべての民の中から、あなたがただけを選んだ。</para>
+  <para style="q1">それだけに、その罪を罰しないわけにはいかない。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>罪がわたしたちの間にあるのに、</para>
+  <para style="q1">どうして肩を並べて歩けるだろうか。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>わたしは理由もなく、</para>
+  <para style="q1">ライオンのようにほえているのではない。</para>
+  <para style="q1">実は、あなたがたを滅ぼす準備をしている。</para>
+  <para style="q1">幼いライオンでも、うなり声を上げるのは、</para>
+  <para style="q1">えさに飛びかかる前だ。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>罠は、踏みつけなければパチンと閉じたりしない。</para>
+  <para style="q1">あなたがたは当然の刑罰を受ける。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>警告の角笛が鳴っている。</para>
+  <para style="q1">聞け。そして恐れよ。</para>
+  <para style="q1">主であるわたしが</para>
+  <para style="q1">あなたがたの地に災いを下そうとしているからだ。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>わたしはいつも、</para>
+  <para style="q1">事が起こる前に預言者をとおして警告する。</para>
+  <para style="q1">今もそうしている。」</para>
+  <para style="q1">
+    <verse number="8" style="v"/>ライオンがうなり声を上げました。</para>
+  <para style="q1">恐れ、わななきなさい。</para>
+  <para style="q1">神である主の宣告が聞こえます。</para>
+  <para style="q1">それを宣言することをことわろうとは思いません。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>「アシュドデとエジプトの指導者たちを</para>
+  <para style="q1">共に呼び寄せて、こう言え。</para>
+  <para style="q1">『さあ、サマリヤの山々に陣取って、</para>
+  <para style="q1">イスラエルの恥ずべき罪悪の現状を見届けよ。』</para>
+  <para style="q1">
+    <verse number="10" style="v"/>わたしの民は、正しいことを行うとはどういうことか</para>
+  <para style="q1">忘れてしまった」</para>
+  <para style="q1">と主は言います。</para>
+  <para style="q1">「彼らの宮殿は、</para>
+  <para style="q1">盗んだり奪い取ったりした物でいっぱいだ。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>それゆえ、敵が来て、彼らは取り囲まれ、</para>
+  <para style="q1">とりでを破壊され、宮殿も略奪される。」</para>
+  <para style="q1">
+    <verse number="12" style="v"/>主は言います。</para>
+  <para style="q1">「羊飼いは羊をライオンから救い出そうとしたが、</para>
+  <para style="q1">間に合わなかった。</para>
+  <para style="q1">ライオンの口から、</para>
+  <para style="q1">二本の足と耳の一部をもぎ取っただけだった。</para>
+  <para style="q1">サマリヤのイスラエル人が</para>
+  <para style="q1">最後に助け出されるときもそうなる。</para>
+  <para style="q1">彼らに残っているのは、</para>
+  <para style="q1">壊れかかった椅子とぼろぼろの枕だけだ。」</para>
+  <para style="q1">
+    <verse number="13" style="v"/>全能の神である主は言います。</para>
+  <para style="q1">「これから言うことをよく聞き、</para>
+  <para style="q1">イスラエルにくまなく告げよ。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>罪を犯したイスラエルを罰するその同じ日に、</para>
+  <para style="q1">ベテルの偶像の祭壇も取り壊す。</para>
+  <para style="q1">祭壇の角は切り取られ、地に落ちる。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>金持ちの美しい家、冬の家と夏の家を破壊し、</para>
+  <para style="q1">象牙の宮殿も破壊する。」</para>
+  <chapter number="4" style="c"/>
+  <para style="cl">4</para>
+  <para style="s1">神に立ち返らないイスラエル</para>
+  <para style="q1">
+    <verse number="1" style="v"/>私の言うことを聞きなさい、</para>
+  <para style="q1">サマリヤに住むバシャンの太った雌牛たち。</para>
+  <para style="q1">夫をけしかけて貧しい人から取り上げ、</para>
+  <para style="q1">困っている者からしぼり取っている女たち。</para>
+  <para style="q1">いくら飲んでも十分でない者たちよ。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>あなたがたの鼻に鼻輪をつけて、</para>
+  <para style="q1">牛のように引いて行く時がくると</para>
+  <para style="q1">神である主は、ご自分のきよさにかけて誓いました。</para>
+  <para style="q1">最後の一人まで、</para>
+  <para style="q1">釣り鉤にかけられて引かれて行きます。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>美しい家から引きずり出され、</para>
+  <para style="q1">城壁の破れ口から放り出されます。</para>
+  <para style="q1">主がそう言ったのです。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>ベテルとギルガルの偶像に</para>
+  <para style="q1">もっといけにえをささげなさい。</para>
+  <para style="q1">いつまでも逆らい続けなさい。</para>
+  <para style="q1">あなたがたの罪は山のように積まれていきます。</para>
+  <para style="q1">いけにえは毎朝、</para>
+  <para style="q1">十分の一のささげ物は週に二回持ってきなさい。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>すべて適切な方法で行い、特別のささげ物もしなさい。</para>
+  <para style="q1">あなたがたは、そうすることを得意がり、</para>
+  <para style="q1">どこでもそれを自慢しています。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>主はこう言います。</para>
+  <para style="q1">「あなたがたを飢えさせたが、何にもならなかった。</para>
+  <para style="q1">それでも、わたしのもとに帰ろうとはしなかった。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>収穫の前に三か月間雨を降らせないで</para>
+  <para style="q1">作物をだめにした。</para>
+  <para style="q1">ある町には雨を降らせたが、</para>
+  <para style="q1">他の町には降らせなかった。</para>
+  <para style="q1">ある畑には雨が降っているのに、</para>
+  <para style="q1">他の畑は乾ききっていた。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>二、三の町の住民が飲み水を求めて、</para>
+  <para style="q1">雨の降った町へ疲れきった体で出かけて行った。</para>
+  <para style="q1">それでも満ち足りることはなかった。</para>
+  <para style="q1">そんなことがあっても、</para>
+  <para style="q1">あなたがたはわたしのもとへ帰ろうとしなかった」</para>
+  <para style="q1">と主は言います。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>主はこう告げます。</para>
+  <para style="q1">「立ち枯れ病と黒穂病を、農場やぶどう畑ではやらせた。</para>
+  <para style="q1">いなごがいちじくとオリーブの木を食った。</para>
+  <para style="q1">それでもあなたがたは、</para>
+  <para style="q1">わたしのもとへ帰ろうとしなかった。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>昔のエジプトのように、わたしは疫病を送った。</para>
+  <para style="q1">戦争で若者を殺し、馬を追い払った。</para>
+  <para style="q1">死体からの悪臭が鼻をついた。</para>
+  <para style="q1">それでもあなたがたは、帰ることを拒んだ。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>わたしはソドムとゴモラにしたように、</para>
+  <para style="q1">あなたがたの町の幾つかを破壊した。</para>
+  <para style="q1">生き残った者たちは、</para>
+  <para style="q1">火の中から取り出された燃えさしのようだ。</para>
+  <para style="q1">それでも、わたしのもとへ帰ろうとしない。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>それゆえ、話しておいたとおり、</para>
+  <para style="q1">あなたがたをもっとひどい災いに会わせる。</para>
+  <para style="q1">イスラエルよ、</para>
+  <para style="q1">さばきの中で神に会う備えをせよ。」</para>
+  <para style="q1">
+    <verse number="13" style="v"/>山々を造り、風を造り、あなたがたの思いを</para>
+  <para style="q1">全部知っている方と向かい合うことになるからだ。</para>
+  <para style="q1">その方は、朝を暗闇に変え、山を踏み砕く。</para>
+  <para style="q1">その名は、全能の神、主である。</para>
+  <chapter number="5" style="c"/>
+  <para style="cl">5</para>
+  <para style="s1">悲しみの歌と悔い改めへの招き</para>
+  <para style="p">
+    <verse number="1" style="v"/>イスラエルよ。私は悲痛な思いで、あなたがたのためにこの悲しみの歌を歌います。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>「美しいおとめイスラエルは砕かれて倒れ、</para>
+  <para style="q1">地に押しつぶされて、起き上がることができない。</para>
+  <para style="q1">助けてくれる者もなく、孤独のうちに死んでいく。」</para>
+  <para style="q1">
+    <verse number="3" style="v"/>神である主がこう言うからです。</para>
+  <para style="q1">「戦場に千人を送り出した町には百人が帰り、</para>
+  <para style="q1">百人を送り出した町には十人だけ帰って来る。」</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="4" style="v"/>主はイスラエルの民に告げます。</para>
+  <para style="q1">「わたしを求めよ。そして生きよ。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>ベテルやギルガルやベエル・シェバの偶像を求めるな。</para>
+  <para style="q1">ギルガルの民は連れ去られ、</para>
+  <para style="q1">ベテルの民には必ず悲しみが襲いかかる。」</para>
+  <para style="q1">
+    <verse number="6" style="v"/>主を求めて、生きなさい。</para>
+  <para style="q1">さもないと、主は炎のように</para>
+  <para style="q1">イスラエルを通り過ぎて焼き尽くします。</para>
+  <para style="q1">ベテルの偶像はどれも、その火を消すことができません。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>邪悪な者たち。</para>
+  <para style="q1">あなたがたは正義の名のもとに</para>
+  <para style="q1">貧しい人を虐げています。</para>
+  <para style="q1">正義も公正も、あなたがたには無意味な絵空事です。</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>すばる座やオリオン座を造った方を求めなさい。</para>
+  <para style="q1">その方は、闇を朝に、昼を夜に変え、</para>
+  <para style="q1">海から水を呼んで地上に雨として降らせます。</para>
+  <para style="q1">その名は主。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>目にもとまらぬ速さと力で、強い者を打ちのめし、</para>
+  <para style="q1">すべての要塞をつぶします。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>あなたがたは公平な裁判官を憎んでいます。</para>
+  <para style="q1">真実を告げる者をさげすんでいます。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>貧しい者たちを踏みつけ、税や罰金や利子と言っては、</para>
+  <para style="q1">わずかしかない持ち物を取り上げています。</para>
+  <para style="q1">それゆえ、今建てている石造りの美しい家に、</para>
+  <para style="q1">あなたがたは決して住めません。</para>
+  <para style="q1">今植えている見事なぶどう園から作る</para>
+  <para style="q1">ぶどう酒も飲めません。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>あなたがたの罪が極悪で、</para>
+  <para style="q1">いかに数多いかを知っています。</para>
+  <para style="q1">あなたがたは、良いことすべてに反対しています。</para>
+  <para style="q1">わいろを取り、</para>
+  <para style="q1">貧しい人の益になることは何もしません。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>それゆえ賢い者たちは、</para>
+  <para style="q1">あなたがたが罰せられる恐ろしい日には、</para>
+  <para style="q1">主に口出しをしようとはしません。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>正しいことをし、悪から逃げなさい。</para>
+  <para style="q1">そのように生きなさい。</para>
+  <para style="q1">そうすれば、願いどおり、</para>
+  <para style="q1">全能の主が助けてくれます。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>悪を憎み、善を愛して、正しい裁判を行いなさい。</para>
+  <para style="q1">あるいは、天の軍勢の神である主が、</para>
+  <para style="q1">残っているご自身の民を</para>
+  <para style="q1">あわれんでくださるかもしれない。</para>
+  <para style="q1">
+    <verse number="16" style="v"/>それゆえ、神である主は言います。</para>
+  <para style="q1">「あちらの通りでもこちらの道でも、叫ぶ声が起こる。</para>
+  <para style="q1">農夫を呼んで、いっしょに泣いてくれるように頼め。</para>
+  <para style="q1">泣き男や泣き女を呼んで、大いに嘆かせよ。</para>
+  <para style="q1">
+    <verse number="17" style="v"/>わたしが通り過ぎて破壊するので、</para>
+  <para style="q1">どのぶどう畑にも悲しみと叫びがある。</para>
+  <para style="s1">主の日</para>
+  <para style="q1">
+    <verse number="18" style="v"/>あなたがたは、『早く主の日がきてくれたら、</para>
+  <para style="q1">神が敵の手から救い出してくださるのに』と言う。</para>
+  <para style="q1">だが自分たちが何を願っているのか、わかっていない。</para>
+  <para style="q1">その日は、光でも希望でもない。</para>
+  <para style="q1">暗闇と絶滅の日だ。</para>
+  <para style="q1">それはなんと恐ろしい闇であろう。</para>
+  <para style="q1">喜びや希望の光などかけらもない。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>その日あなたがたは、ライオンに追いかけられていて</para>
+  <para style="q1">熊に出会った者のようだ。</para>
+  <para style="q1">あるいは、真っ暗な部屋で壁に寄りかかると、</para>
+  <para style="q1">手が蛇に触れた者のよだ。</para>
+  <para style="p">
+    <verse number="20" style="v"/>まさに、あなたがたにとって暗闇と絶望の日だ。</para>
+  <para style="p">
+    <verse number="21" style="v"/>あなたがたが祭りと聖なる集会を開いて、</para>
+  <para style="q1">わたしをあがめているふりをするのは、</para>
+  <para style="q1">もうごめんだ。</para>
+  <para style="q1">
+    <verse number="22" style="v"/>焼き尽くすいけにえも穀物のささげ物も受けたくない。</para>
+  <para style="q1">和解のいけにえも見たくない。</para>
+  <para style="q1">
+    <verse number="23" style="v"/>賛美歌も歌うな。</para>
+  <para style="q1">わたしの耳には騒音にしか聞こえない。</para>
+  <para style="q1">どんなに甘い響きを奏でても、</para>
+  <para style="q1">あなたがたの音楽は聞きたくない。</para>
+  <para style="q1">
+    <verse number="24" style="v"/>わたしは、正義が貫かれ、</para>
+  <para style="q1">正しい行いが堂々と通じるのを見たい。</para>
+  <para style="q1">
+    <verse number="25-27" style="v"/>イスラエルよ。</para>
+  <para style="q1">あなたがたは四十年、荒野にいる間</para>
+  <para style="q1">わたしにいけにえをささげた。</para>
+  <para style="q1">だが、ほんとうの関心はいつも異教の神々にあった。</para>
+  <para style="q1">あなたがたの王サクテや星の神キウン、</para>
+  <para style="q1">自分たちが造った神々の像に。</para>
+  <para style="q1">それゆえ、あなたがたといっしょに、</para>
+  <para style="q1">それらの神々も、ダマスコのはるか東へ捕らえ移そう。」</para>
+  <para style="q1">全能の主が、こう言うのです。</para>
+  <chapter number="6" style="c"/>
+  <para style="cl">6</para>
+  <para style="s1">安逸をむさぼる者への警告</para>
+  <para style="q1">
+    <verse number="1" style="v"/>イスラエルの民の間で有名なエルサレムとサマリヤで、</para>
+  <para style="q1">ぜいたくにのんびり暮らしている者たちは、災いだ。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>カルネへ行って、そこで起こったことを見なさい。</para>
+  <para style="q1">それから大ハマテへ行き、</para>
+  <para style="q1">ペリシテ人の地にあるガテへも下って行きなさい。</para>
+  <para style="q1">かつてそこは、あなたがたより栄えていました。</para>
+  <para style="q1">しかし、今はどうなっているかを見なさい。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>あなたがたは、</para>
+  <para style="q1">迫っている罰のことを考えようとしません。</para>
+  <para style="q1">しかし、その行いによって、</para>
+  <para style="q1">さばきの日は近くなっているのです。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>あなたがたはぜいを尽くした</para>
+  <para style="q1">象牙のベッドに横になって、</para>
+  <para style="q1">柔らかい子羊の肉や最上の子牛の肉を食べています。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>堅琴に合わせて、むなしい歌を歌い、</para>
+  <para style="q1">ダビデ王のような</para>
+  <para style="q1">偉大な音楽家のつもりになっています。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>浴びるほどぶどう酒を飲み、</para>
+  <para style="q1">香油を体に塗っても、</para>
+  <para style="q1">助けを求める兄弟たちのことは全く気にしません。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>そのため、あなたがたが真っ先に</para>
+  <para style="q1">奴隷となって引いて行かれます。</para>
+  <para style="q1">酒盛りは突然終わるのです。</para>
+  <para style="s1">イスラエルの思い上がりに対する主の嫌悪</para>
+  <para style="q1">
+    <verse number="8" style="v"/>全能の主は、</para>
+  <para style="q1">ご自分の名にかけて誓います。</para>
+  <para style="q1">「わたしはイスラエルの思い上がりと</para>
+  <para style="q1">偽りの栄光をきらい、彼らの美しい宮殿を憎む。</para>
+  <para style="q1">この町とそこにあるすべての物を敵の手に渡す。」</para>
+  <para style="q1">
+    <verse number="9" style="v"/>一つの氏族で十人が残ったとしても、</para>
+  <para style="q1">彼らもまた死にます。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>親戚の者が葬ることになり、</para>
+  <para style="q1">死体を家から運び出す時、</para>
+  <para style="q1">家の中に一人だけ生き残っている者に</para>
+  <para style="q1">「ほかに残っている者がいるか」と聞くと、</para>
+  <para style="q1">「いない」という答えが返ってきます。</para>
+  <para style="q1">すると、「しーっ、声を出すな。主の名を口にするな。</para>
+  <para style="q1">おまえの言うことを聞いているかもしれないから」</para>
+  <para style="q1">と言うのです。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>主がこのように命じたからです。</para>
+  <para style="q1">大きな氏族も小さな氏族も、木っ端みじんになれと。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>馬は岩の上を走れるでしょうか。</para>
+  <para style="q1">牛は海を耕せるでしょうか。</para>
+  <para style="q1">これは聞くだけ愚かなことだが、</para>
+  <para style="q1">あなたがたのやっていることより</para>
+  <para style="q1">愚かなことはありません。</para>
+  <para style="q1">正義をあざけり、良いこと、正しいことを腐敗させ、</para>
+  <para style="q1">堕落させているではありませんか。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>また、無に等しい者なのに、</para>
+  <para style="q1">愚かにも、偉い者であるかのように喜びます。</para>
+  <para style="q1">ちっぽけな力を、たいそう自慢しています。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>全能の主は言います。</para>
+  <para style="q1">「イスラエルよ。</para>
+  <para style="q1">わたしは一つの民を起こして、</para>
+  <para style="q1">あなたがたを攻めさせる。</para>
+  <para style="q1">北の国境から南の端まで、</para>
+  <para style="q1">レボ・ハマテからアラバの川筋までの全域で、</para>
+  <para style="q1">彼らはあなたがたを虐げる。」</para>
+  <chapter number="7" style="c"/>
+  <para style="cl">7</para>
+  <para style="s1">いなご、火、重りをつけた糸</para>
+  <para style="p">
+    <verse number="1" style="v"/>これは、神である主が私に示した幻です。主は、最初の刈り取りのあとに生えた、王に納める主要な穀物をすべて滅ぼすいなごの大群を用意していました。 <verse number="2" style="v"/>いなごが目の前にあるすべてを食い尽くそうとした時、私は言いました。</para>
+  <para style="q1">「神、主よ。</para>
+  <para style="q1">どうか、あなたの民をお赦しください。</para>
+  <para style="q1">このような災いに会わせないでください。</para>
+  <para style="q1">神がイスラエルに立ち向かわれたら、</para>
+  <para style="q1">ひとたまりもありません。</para>
+  <para style="q1">イスラエルはこんなに小さいのです。」</para>
+  <para style="q1">
+    <verse number="3" style="v"/>そこで主は思い直して、その幻を実行に移さず、</para>
+  <para style="q1">「やめよう」と言いました。</para>
+  <para style="p">
+    <verse number="4" style="v"/>それからは、人々を罰するために用意された、勢いよく燃え上がる火を示しました。その火は水の流れを蒸発させ、全地を焼き尽くそうとしていました。</para>
+  <para style="p">
+    <verse number="5" style="v"/>それで私は言いました。</para>
+  <para style="q1">「神、主よ。</para>
+  <para style="q1">どうかやめてください。</para>
+  <para style="q1">神が立ち向かわれたら、ひとたまりもありません。</para>
+  <para style="q1">イスラエルはこんなに小さいのです。」</para>
+  <para style="q1">
+    <verse number="6" style="v"/>それで主は、この計画も思い直し、</para>
+  <para style="q1">「これもやめよう」と言いました。</para>
+  <para style="p">
+    <verse number="7" style="v"/>それから、次のことを示しました。主は築き上げた城壁のそばに立って、重りをつけた糸で、それがまっすぐかどうか調べていました。 <verse number="8" style="v"/>そして主は、「アモス、何を見ているのか」と私に言いました。「重りをつけた糸です。」そう答えると、主は続けて語りました。</para>
+  <para style="q1">「重りをつけた糸で、</para>
+  <para style="q1">わたしの民がまっすぐかどうか調べてみよう。</para>
+  <para style="q1">もう罰することを控えたりしない。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>イスラエルにある偶像の祭壇と神殿は破壊される。</para>
+  <para style="q1">また、剣でヤロブアム王家を滅ぼそう。」</para>
+  <para style="s1">アモスとアマツヤ</para>
+  <para style="p">
+    <verse number="10" style="v"/>ところが、ベテルの祭司アマツヤは、アモスが語ったことを聞くと、すぐにヤロブアム王に伝えました。「アモスは反逆者で、あなたの死をたくらんでいます。これは許しがたいことです。放っておいたら、国に反乱が起こります。 <verse number="11" style="v"/>あの男は、あなたが殺され、イスラエルは奴隷として遠い地に連れて行かれると言っております。」</para>
+  <para style="p">
+    <verse number="12" style="v"/>そして、アモスにこう命じました。「ここから出て行け、預言者め。ユダの地へ逃げて行って、好きなだけ預言するがいい。 <verse number="13" style="v"/>この首都でわれわれを幻で煩わすのは、いいかげんにしてくれ。ここは王の礼拝堂がある所なのだ。」</para>
+  <para style="p">
+    <verse number="14" style="v"/>しかしアモスは答えました。「私は預言者などではありません。預言者の家の者でもありません。ただの羊飼いで、果樹を栽培しています。 <verse number="15" style="v"/>ところが主は、羊の群れの世話をしている私に、『さあ、わたしの民イスラエルに預言せよ』とお命じになったのです。 <verse number="16" style="v"/>ですから今、主からのお告げを聞きなさい。『イスラエルに反対する預言はするな』とのことですが、</para>
+  <para style="p">
+    <verse number="17" style="v"/>主のお答えはこうです。</para>
+  <para style="q1">『わたしにじゃまだてしたので、</para>
+  <para style="q1">あなたの妻はこの町で娼婦となり、</para>
+  <para style="q1">息子と娘は殺され、あなたの土地は分割されてしまう。</para>
+  <para style="q1">あなた自身も異教の地で死に、イスラエルの民も、</para>
+  <para style="q1">祖国から遠く離れた地へ引いて行かれ、</para>
+  <para style="q1">そこで奴隷となる。』」。</para>
+  <chapter number="8" style="c"/>
+  <para style="cl">8</para>
+  <para style="s1">熟した果物のかご</para>
+  <para style="p">
+    <verse number="1" style="v"/>それから神である主は、熟した果物がいっぱい入ったかごを、幻のうちに私に示しました。 <verse number="2" style="v"/>「アモス、何を見ているのか。」「熟した果物がいっぱい入ったかごです。」すると主は言いました。</para>
+  <para style="q1">「この果物は、わたしの民イスラエルを表している。</para>
+  <para style="q1">彼らが罰を受ける時は熟したのだ。</para>
+  <para style="q1">もう二度と見過ごしにしない。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>その時、神殿から聞こえる騒々しい歌声は、</para>
+  <para style="q1">すすり泣きに変わる。</para>
+  <para style="q1">そこら中に死体が散らばる。</para>
+  <para style="q1">無言のうちに、それは町の外へ運び出される。」</para>
+  <para style="q1">主がこう言ったのです。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>貧しい人から取り上げ、</para>
+  <para style="q1">困っている人を踏みつける商人たち。</para>
+  <para style="q1">聞きなさい。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>あなたがたは、安息日や新月の祭りが</para>
+  <para style="q1">早く終わることをひたすら願っています。</para>
+  <para style="q1">そうすれば、重くした量りと短くした物差しで、</para>
+  <para style="q1">ごまかして儲けることができるから。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>わずかな借金、たった一足のくつの代償に</para>
+  <para style="q1">貧しい人を奴隷とし、かびた小麦を売りつけています。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>イスラエルの誇りである主は誓います。</para>
+  <para style="q1">「おまえたちの行いは忘れない。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>この地は、滅びを目前にして震えおののき、</para>
+  <para style="q1">だれもが嘆き悲しむ。</para>
+  <para style="q1">この地は、増水したナイル川のように盛り上がり、</para>
+  <para style="q1">激しく揺れ動き、再び沈む。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>その時、わたしは真昼に太陽を沈ませ、</para>
+  <para style="q1">日中に地上を暗闇にする。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>宴会を嘆きの時に変え、</para>
+  <para style="q1">喜びの歌を絶望の叫びに変える。</para>
+  <para style="q1">おまえたちは喪服を着、頭をそり、</para>
+  <para style="q1">まるでひとり息子が死んだように悲しむ。</para>
+  <para style="q1">その日には、悲惨、ただ悲惨があるのみだ。」</para>
+  <para style="q1">
+    <verse number="11" style="v"/>主はこう言います。</para>
+  <para style="q1">「時は近づいている。</para>
+  <para style="q1">その時には、この地にききんを送る。</para>
+  <para style="q1">パンや水のききんではない。</para>
+  <para style="q1">主のことばを聞くことのききんだ。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>人々は海から海へと至る所を歩き回り、</para>
+  <para style="q1">主のことばを探し求める。</para>
+  <para style="q1">だが、あちこち探し回っても見つからない。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>美しい娘も、りっぱな若者も、</para>
+  <para style="q1">神のことばを渇き求めて弱り、疲れはてる。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>サマリヤ、ダン、ベエル・シェバの偶像を拝む者は</para>
+  <para style="q1">倒れて、二度と起き上がらない。」</para>
+  <chapter number="9" style="c"/>
+  <para style="cl">9</para>
+  <para style="s1">滅ぼされるイスラエル</para>
+  <para style="q1">
+    <verse number="1" style="v"/>私は、主が祭壇のそばに立っているのを見ました。</para>
+  <para style="q1">主はこう言いました。</para>
+  <para style="q1">「柱の頭を打って神殿を揺り動かし、</para>
+  <para style="q1">柱が崩れて屋根が下にいる人々の上に</para>
+  <para style="q1">落ちかかるようにせよ。</para>
+  <para style="q1">彼らは逃げようにも逃げられず、一人残らず死ぬ。</para>
+  <para style="q1">
+    <verse number="2" style="v"/>彼らが地獄まで下っていっても</para>
+  <para style="q1">わたしは引っ張り上げ、天に上っても、引き降ろす。</para>
+  <para style="q1">
+    <verse number="3" style="v"/>たとえカルメル山の頂の岩間に隠れても、</para>
+  <para style="q1">見つけ出して捕まえる。</para>
+  <para style="q1">深海に身を潜めても、海蛇を送ってかみ殺させる。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>自ら進んで国外へ捕らえ移されても、</para>
+  <para style="q1">剣に命じて、そこで殺させる。</para>
+  <para style="q1">彼らが善ではなく悪を受け取るのを、</para>
+  <para style="q1">しっかりと見届ける。」</para>
+  <para style="q1">
+    <verse number="5" style="v"/>全能の主が地に触れると、</para>
+  <para style="q1">地は溶け、そこに住む人々はみな嘆き悲しみます。</para>
+  <para style="q1">地はエジプトのナイル川のように盛り上がり、</para>
+  <para style="q1">また沈みます。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>その住まいの階上は天にあり、</para>
+  <para style="q1">一階は地の上にあります。</para>
+  <para style="q1">その方は海から蒸気を呼んで、</para>
+  <para style="q1">地に雨として降らせます。その名は主です。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>「イスラエルの民よ。わたしにとって、</para>
+  <para style="q1">あなたがたはエチオピヤ人より大切であろうか。</para>
+  <para style="q1">確かにあなたがたをエジプトから連れ出したが、</para>
+  <para style="q1">ほかの民も同じようにしたのだ。</para>
+  <para style="q1">ペリシテ人をカフトルから、</para>
+  <para style="q1">シリヤ人をキルから連れ出した。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>わたしの目は、罪深い国イスラエルに向けられている。</para>
+  <para style="q1">わたしはイスラエルを根元から抜いて、</para>
+  <para style="q1">世界にまき散らす。</para>
+  <para style="q1">しかし、永久に根こそぎにはしないと約束した。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>わたしが命じたとおり、穀物をふるいにかけるように、</para>
+  <para style="q1">本物の穀粒はなくさないように、</para>
+  <para style="q1">イスラエルを他の国々にふるわせる。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>しかし、『神は私たちに手を下さない』</para>
+  <para style="q1">と言っている罪人は、みな剣によって死ぬ。</para>
+  <para style="s1">イスラエルの回復</para>
+  <para style="q1">
+    <verse number="11" style="v"/>その時には、今は荒れ果てたままになっている</para>
+  <para style="q1">ダビデの町を再建し、以前のように栄えた町にする。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>イスラエルは、エドムの残りの者と、</para>
+  <para style="q1">私に属するすべての国の残りの者とを所有する。」</para>
+  <para style="q1">このすべてを計画した主が、このように言うのです。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>「大豊作で、やっと収穫が終わると思ったら、</para>
+  <para style="q1">息つく暇もなく別の種をまく有様で、</para>
+  <para style="q1">イスラエルの丘のぶどう畑は</para>
+  <para style="q1">甘いぶどう酒をしたたらせる時がくる。</para>
+  <para style="q1">
+    <verse number="14" style="v"/>わたしは、わたしの民イスラエルの繁栄を回復する。</para>
+  <para style="q1">彼らは荒れた町々を建て直し、</para>
+  <para style="q1">再びそこに住んで、ぶどうや果樹を栽培する。</para>
+  <para style="q1">自分たちの収穫した物を食べ、ぶどう酒を飲む。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>わたしは彼らを、</para>
+  <para style="q1">わたしが与えた地にしっかり植えつける。</para>
+  <para style="q1">彼らは、再び引き抜かれることがない。」</para>
+  <para style="q1">あなたの神、主がこう言うのです。</para>
+</usx>

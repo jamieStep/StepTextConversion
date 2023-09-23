@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<usx version="3.0">
+  <book code="NAM" style="id">- God’s Word Bible</book>
+  <para style="ide">UTF-8</para>
+  <para style="rem">© 1995, 2003, 2013, 2014, 2019, 2020 by God’s Word to the Nations Mission Society. All rights reserved.</para>
+  <para style="rem">Converted from InDesign files to USFM-3 by Elbert Boot (Digital Bible Library Customer Service Team, Miami [USA])</para>
+  <para style="rem">Language: English</para>
+  <para style="rem">This project has 9 poetry levels, and Paratext only supports up to 4 levels. To upload the text to DBL, we have created a dblChanges file and added q5 to q9 to a custom.sty to obtain the desired design in Paratext.</para>
+  <para style="h">NAHUM</para>
+  <para style="toc1">Nahum</para>
+  <para style="toc2">Nahum</para>
+  <para style="toc3">Nahum</para>
+  <para style="mt1">Nahum</para>
+  <chapter number="1" style="c" sid="NAM 1" />
+  <para style="s1">Nahum’s Vision</para>
+  <para style="m">
+    <verse number="1" style="v" sid="NAM 1:1" />This is a revelation from the <char style="nd">Lord</char> about Nineveh. This book contains the vision of Nahum from Elkosh.<verse eid="NAM 1:1" /></para>
+  <para style="s1">Who Can Withstand the <char style="nd">LORD</char>’s Anger?</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="NAM 1:2" />God does not tolerate rivals. The <char style="nd">Lord</char> takes revenge.</para>
+  <para style="q1" vid="NAM 1:2">The <char style="nd">Lord</char> takes revenge and is full of anger.</para>
+  <para style="q1" vid="NAM 1:2">The <char style="nd">Lord</char> takes revenge against his enemies</para>
+  <para style="q1" vid="NAM 1:2">and holds a grudge against his foes.<verse eid="NAM 1:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="NAM 1:3" />The <char style="nd">Lord</char> is patient and has great strength.</para>
+  <para style="q1" vid="NAM 1:3">The <char style="nd">Lord</char> will never let the guilty go unpunished.</para>
+  <para style="q1" vid="NAM 1:3">Raging winds and storms mark his path,</para>
+  <para style="q1" vid="NAM 1:3">and clouds are the dust from his feet.<verse eid="NAM 1:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="NAM 1:4" />He yells at the sea and makes it dry.</para>
+  <para style="q1" vid="NAM 1:4">He dries up all the rivers.</para>
+  <para style="q1" vid="NAM 1:4">Bashan and Carmel wither.</para>
+  <para style="q1" vid="NAM 1:4">The flowers of Lebanon wither.<verse eid="NAM 1:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="NAM 1:5" />The mountains quake because of him.</para>
+  <para style="q1" vid="NAM 1:5">The hills melt.</para>
+  <para style="q1" vid="NAM 1:5">The earth draws back in his presence.</para>
+  <para style="q1" vid="NAM 1:5">The world and all who live in it draw back as well.<verse eid="NAM 1:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="NAM 1:6" />Who can stand in the presence of his rage?</para>
+  <para style="q1" vid="NAM 1:6">Who can oppose his burning anger?</para>
+  <para style="q1" vid="NAM 1:6">He pours out his rage like fire</para>
+  <para style="q1" vid="NAM 1:6">and smashes the rocky cliffs.<verse eid="NAM 1:6" /></para>
+  <para style="s1">Why Does Nineveh Oppose the <char style="nd">LORD</char>?</para>
+  <para style="q1">
+    <verse number="7" style="v" sid="NAM 1:7" />The <char style="nd">Lord</char> is good.</para>
+  <para style="q1" vid="NAM 1:7">
+    <char style="add">⌞He is⌟</char> a fortress in the day of trouble.</para>
+  <para style="q1" vid="NAM 1:7">He knows those who seek shelter in him.<verse eid="NAM 1:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="NAM 1:8" />He will put an end to Nineveh</para>
+  <para style="q1" vid="NAM 1:8">with a devastating flood.</para>
+  <para style="q1" vid="NAM 1:8">He will pursue his enemies with darkness.<verse eid="NAM 1:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="NAM 1:9" />What do you think about the <char style="nd">Lord</char>?</para>
+  <para style="q1" vid="NAM 1:9">He is the one who will bring Nineveh to an end.</para>
+  <para style="q1" vid="NAM 1:9">This trouble will never happen again.<verse eid="NAM 1:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="NAM 1:10" />
+    <char style="add">⌞The people of Nineveh will be⌟</char> like tangled thorns</para>
+  <para style="q1" vid="NAM 1:10">and like people drunk on their own drink.</para>
+  <para style="q1" vid="NAM 1:10">They will be completely burned up like very dry straw.<verse eid="NAM 1:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="NAM 1:11" />From you, Nineveh, a person who plans evil against the <char style="nd">Lord</char> sets out.</para>
+  <para style="q1" vid="NAM 1:11">His advice is wicked.<verse eid="NAM 1:11" /></para>
+  <para style="s1">Nineveh Will Fall</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="NAM 1:12" />This is what the <char style="nd">Lord</char> says:</para>
+  <para style="q1" vid="NAM 1:12">Though the people of Nineveh are physically fit and many in number,</para>
+  <para style="q1" vid="NAM 1:12">they will be cut down and die.</para>
+  <para style="q1" vid="NAM 1:12">Though I have humbled you, Judah,</para>
+  <para style="q1" vid="NAM 1:12">I will not humble you again.<verse eid="NAM 1:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="NAM 1:13" />But now I will break Nineveh’s yoke <note caller="+" style="f"><char style="fr" closed="false">1:13 </char><char style="ft" closed="false">A </char><char style="fk" closed="false">yoke </char><char style="ft" closed="false">is a wooden bar placed over the necks of work animals so that they can pull plows or carts.</char></note> off of you</para>
+  <para style="q1" vid="NAM 1:13">and tear its chains from you.<verse eid="NAM 1:13" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="14" style="v" sid="NAM 1:14" />The <char style="nd">Lord</char> has given this command about you, Nineveh:</para>
+  <para style="q1" vid="NAM 1:14">You will no longer have descendants to carry on your name.</para>
+  <para style="q1" vid="NAM 1:14">I will remove the wooden and metal idols from the temple of your gods.</para>
+  <para style="q1" vid="NAM 1:14">I will prepare your grave because you are worthless.<note caller="+" style="f"><char style="fr" closed="false">1:14 </char><char style="ft" closed="false"><char style="xt"><ref loc="NAM 1:15">Nahum 1:15</ref></char> in English Bibles is Nahum 2:1 in the Hebrew Bible.</char></note><verse eid="NAM 1:14" /></para>
+  <para style="s1">An Army Will Conquer Nineveh</para>
+  <para style="q1">
+    <verse number="15" style="v" sid="NAM 1:15" />There on the mountains are the feet of a messenger</para>
+  <para style="q1" vid="NAM 1:15">who announces the good news: “All is well!”</para>
+  <para style="q1" vid="NAM 1:15">Celebrate your festivals, Judah! Keep your vows!</para>
+  <para style="q1" vid="NAM 1:15">This wickedness will never pass your way again.</para>
+  <para style="q1" vid="NAM 1:15">It will be completely removed.<verse eid="NAM 1:15" /></para>
+  <chapter eid="NAM 1" />
+  <chapter number="2" style="c" sid="NAM 2" />
+  <para style="q1">
+    <verse number="1" style="v" sid="NAM 2:1" />
+    <note caller="+" style="f">
+      <char style="fr" closed="false">2:1 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="NAM 2:1-13">Nahum 2:1–13</ref>
+        </char> in English Bibles is Nahum 2:2–14 in the Hebrew Bible.</char>
+    </note>The one who will scatter you is coming to attack you.</para>
+  <para style="q1" vid="NAM 2:1">Guard your fortress!</para>
+  <para style="q1" vid="NAM 2:1">Keep a lookout on the road!</para>
+  <para style="q1" vid="NAM 2:1">Prepare for battle!</para>
+  <para style="q1" vid="NAM 2:1">Be very courageous!<verse eid="NAM 2:1" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="2" style="v" sid="NAM 2:2" />The <char style="nd">Lord</char> will restore Jacob’s glory like Israel’s glory,</para>
+  <para style="q1" vid="NAM 2:2">although enemies have looted it</para>
+  <para style="q1" vid="NAM 2:2">and have destroyed its vines.<verse eid="NAM 2:2" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="3" style="v" sid="NAM 2:3" />The shields of his warriors are painted red.</para>
+  <para style="q1" vid="NAM 2:3">His soldiers have red uniforms.</para>
+  <para style="q1" vid="NAM 2:3">The metal on his chariots flashes fiery red,</para>
+  <para style="q1" vid="NAM 2:3">so do the spears when they are waved</para>
+  <para style="q1" vid="NAM 2:3">on the day he prepares for battle.<verse eid="NAM 2:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="NAM 2:4" />Chariots are racing madly through the streets,</para>
+  <para style="q1" vid="NAM 2:4">rushing this way and that in the city squares.</para>
+  <para style="q1" vid="NAM 2:4">They look like torches, like lightning, as they dart about.<verse eid="NAM 2:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="NAM 2:5" />He remembers his best fighting men.</para>
+  <para style="q1" vid="NAM 2:5">They stumble over themselves as they march.</para>
+  <para style="q1" vid="NAM 2:5">They hurry to Nineveh’s wall.</para>
+  <para style="q1" vid="NAM 2:5">The shield has been set up for the battering ram.<verse eid="NAM 2:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="NAM 2:6" />The gates of the rivers are opened, and the palace melts away.<verse eid="NAM 2:6" /></para>
+  <para style="s1">Nineveh’s Treasures Will Be Taken</para>
+  <para style="q1">
+    <verse number="7" style="v" sid="NAM 2:7" />The <char style="nd">Lord</char> has determined:</para>
+  <para style="q1" vid="NAM 2:7">“It will be stripped.</para>
+  <para style="q1" vid="NAM 2:7">It will be carried away.</para>
+  <para style="q1" vid="NAM 2:7">Its young women will be mourning like doves</para>
+  <para style="q1" vid="NAM 2:7">as they beat their breasts.”<verse eid="NAM 2:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="NAM 2:8" />Nineveh was like a pool of water from its first day on.</para>
+  <para style="q1" vid="NAM 2:8">But now its people are fleeing.</para>
+  <para style="q1" vid="NAM 2:8">“Stop! Stop!”</para>
+  <para style="q1" vid="NAM 2:8">But no one turns around.<verse eid="NAM 2:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="NAM 2:9" />Steal the silver! Steal the gold!</para>
+  <para style="q1" vid="NAM 2:9">There is no end to what is stored here—</para>
+  <para style="q1" vid="NAM 2:9">everything a person could ever want.<verse eid="NAM 2:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="NAM 2:10" />Nineveh is destroyed, deserted, demolished.</para>
+  <para style="q1" vid="NAM 2:10">Hearts are melting.</para>
+  <para style="q1" vid="NAM 2:10">Knees are knocking.</para>
+  <para style="q1" vid="NAM 2:10">Every stomach becomes upset.</para>
+  <para style="q1" vid="NAM 2:10">Every face turns pale.<verse eid="NAM 2:10" /></para>
+  <para style="s1">Nineveh Will Be Destroyed</para>
+  <para style="q1">
+    <verse number="11" style="v" sid="NAM 2:11" />Where is the lions’ den,</para>
+  <para style="q1" vid="NAM 2:11">that feeding place for young lions?</para>
+  <para style="q1" vid="NAM 2:11">Where are the lion, the lioness, and the lion cub who moved about</para>
+  <para style="q1" vid="NAM 2:11">with no one to terrify them?<verse eid="NAM 2:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="NAM 2:12" />The lion tore its prey to pieces to feed its cubs.</para>
+  <para style="q1" vid="NAM 2:12">It strangled <char style="add">⌞the prey⌟</char> for its mates.</para>
+  <para style="q1" vid="NAM 2:12">It used to fill its caves with torn carcasses</para>
+  <para style="q1" vid="NAM 2:12">and its dens with torn flesh.<verse eid="NAM 2:12" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="13" style="v" sid="NAM 2:13" />“I am against you, Nineveh,” declares the <char style="nd">Lord</char> of Armies.</para>
+  <para style="q1" vid="NAM 2:13">“I will send your chariots up in smoke,</para>
+  <para style="q1" vid="NAM 2:13">and a sword will kill your young lions.</para>
+  <para style="q1" vid="NAM 2:13">I will remove your prey from the earth,</para>
+  <para style="q1" vid="NAM 2:13">and no one will ever hear the voice of your messengers again.”<verse eid="NAM 2:13" /></para>
+  <chapter eid="NAM 2" />
+  <chapter number="3" style="c" sid="NAM 3" />
+  <para style="s1">Nineveh’s Punishment for Sin</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="NAM 3:1" />How horrible it will be for that city of bloody violence!</para>
+  <para style="q1" vid="NAM 3:1">It is completely full of lies and stolen goods—never without victims.<verse eid="NAM 3:1" /></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="NAM 3:2" />The sound of the whip!</para>
+  <para style="q1" vid="NAM 3:2">The sound of rattling wheels!</para>
+  <para style="q1" vid="NAM 3:2">Horses gallop!</para>
+  <para style="q1" vid="NAM 3:2">Chariots bounce along!<verse eid="NAM 3:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="NAM 3:3" />Horses charge!</para>
+  <para style="q1" vid="NAM 3:3">Swords flash!</para>
+  <para style="q1" vid="NAM 3:3">Spears glitter!</para>
+  <para style="q1" vid="NAM 3:3">Many are killed!</para>
+  <para style="q1" vid="NAM 3:3">Dead bodies pile up!</para>
+  <para style="q1" vid="NAM 3:3">There is no end to the corpses!</para>
+  <para style="q1" vid="NAM 3:3">People trip over corpses<verse eid="NAM 3:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="NAM 3:4" />because of Nineveh’s constant prostitution,</para>
+  <para style="q1" vid="NAM 3:4">this very charming mistress of evil magic.</para>
+  <para style="q1" vid="NAM 3:4">She used to sell</para>
+  <para style="q1" vid="NAM 3:4">nations her prostitution</para>
+  <para style="q1" vid="NAM 3:4">and people her evil magic.<verse eid="NAM 3:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="NAM 3:5" />“I am against you, Nineveh,” declares the <char style="nd">Lord</char> of Armies.</para>
+  <para style="q1" vid="NAM 3:5">“I will lift up your dress over your face.</para>
+  <para style="q1" vid="NAM 3:5">I will show nations your naked body and kingdoms your disgrace.<verse eid="NAM 3:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="NAM 3:6" />I will throw filth on you.</para>
+  <para style="q1" vid="NAM 3:6">I will make you look like a fool.</para>
+  <para style="q1" vid="NAM 3:6">I will make you a sight to be seen.<verse eid="NAM 3:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="NAM 3:7" />Everyone who sees you will run from you, saying,</para>
+  <para style="q1" vid="NAM 3:7">‘Nineveh has been violently destroyed!</para>
+  <para style="q1" vid="NAM 3:7">Who will feel sorry for her?’</para>
+  <para style="q1" vid="NAM 3:7">Where can I find anyone to comfort you?”<verse eid="NAM 3:7" /></para>
+  <para style="s1">Nineveh Will Not Escape Punishment</para>
+  <para style="q1">
+    <verse number="8" style="v" sid="NAM 3:8" />Are you better than No-amon,<note caller="+" style="f"><char style="fr" closed="false">3:8 </char><char style="ft" closed="false">The city </char><char style="fk" closed="false">No-amon</char><char style="ft" closed="false">, also called Thebes, was the capital of southern Egypt.</char></note> which sits by the streams of the Nile</para>
+  <para style="q1" vid="NAM 3:8">with water surrounding her?</para>
+  <para style="q1" vid="NAM 3:8">The sea was <char style="add">⌞her⌟</char> defense.</para>
+  <para style="q1" vid="NAM 3:8">The water was her wall.<verse eid="NAM 3:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="NAM 3:9" />Sudan and Egypt were her endless strength.</para>
+  <para style="q1" vid="NAM 3:9">Put and the Lybians were her help.<verse eid="NAM 3:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="NAM 3:10" />Even she went into captivity and was exiled.</para>
+  <para style="q1" vid="NAM 3:10">Even her little children were smashed to death at every street corner.</para>
+  <para style="q1" vid="NAM 3:10">Soldiers tossed dice for her important men,</para>
+  <para style="q1" vid="NAM 3:10">and all her best men were bound in chains.<verse eid="NAM 3:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="NAM 3:11" />Even you, Nineveh, will stagger like a drunk.</para>
+  <para style="q1" vid="NAM 3:11">You will disappear.</para>
+  <para style="q1" vid="NAM 3:11">Even you will look for a fortress <char style="add">⌞to escape⌟</char> from the enemy.<verse eid="NAM 3:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="NAM 3:12" />All your defenses will be like fig trees with the earliest figs.</para>
+  <para style="q1" vid="NAM 3:12">When shaken, the figs fall into the mouth of the eater.<verse eid="NAM 3:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="NAM 3:13" />Look at your soldiers; they’re women!</para>
+  <para style="q1" vid="NAM 3:13">The gates of your country are wide open to your enemies.</para>
+  <para style="q1" vid="NAM 3:13">Fire has destroyed the bars of your gates.<verse eid="NAM 3:13" /></para>
+  <para style="s1">Nineveh’s Strength Will Not Save Her</para>
+  <para style="q1">
+    <verse number="14" style="v" sid="NAM 3:14" />Store water for the siege!</para>
+  <para style="q1" vid="NAM 3:14">Strengthen your defenses!</para>
+  <para style="q1" vid="NAM 3:14">Step into the claypits and trample the clay!</para>
+  <para style="q1" vid="NAM 3:14">Grab the brick mold!<verse eid="NAM 3:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="NAM 3:15" />Fire will consume you there.</para>
+  <para style="q1" vid="NAM 3:15">A sword will cut you down.</para>
+  <para style="q1" vid="NAM 3:15">It will consume you like locusts.</para>
+  <para style="q1" vid="NAM 3:15">Multiply like locusts!</para>
+  <para style="q1" vid="NAM 3:15">Multiply like hungry locusts!<verse eid="NAM 3:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="NAM 3:16" />You have produced more businessmen than there are stars in the sky.</para>
+  <para style="q1" vid="NAM 3:16">
+    <char style="add">⌞They are⌟</char> like locusts that attack and then fly away.<verse eid="NAM 3:16" /></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="NAM 3:17" />Your officers are like locusts,</para>
+  <para style="q1" vid="NAM 3:17">and your scribes are like swarms of locusts</para>
+  <para style="q1" vid="NAM 3:17">that settle on the fences when it is cold.</para>
+  <para style="q1" vid="NAM 3:17">The sun rises, and they scatter in every direction.</para>
+  <para style="q1" vid="NAM 3:17">No one knows where they’ve gone.<verse eid="NAM 3:17" /></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="NAM 3:18" />Your shepherds, king of Assyria, have fallen into a deep sleep.</para>
+  <para style="q1" vid="NAM 3:18">Your best fighting men are at rest.</para>
+  <para style="q1" vid="NAM 3:18">Your people are scattered on the mountains,</para>
+  <para style="q1" vid="NAM 3:18">and there is no one to gather them.<verse eid="NAM 3:18" /></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="NAM 3:19" />There is no relief for your collapse.</para>
+  <para style="q1" vid="NAM 3:19">Your wound is fatal.</para>
+  <para style="q1" vid="NAM 3:19">All who hear the news about you will clap their hands.</para>
+  <para style="q1" vid="NAM 3:19">Who hasn’t suffered from your endless evil?<verse eid="NAM 3:19" /></para>
+  <chapter eid="NAM 3" />
+</usx>

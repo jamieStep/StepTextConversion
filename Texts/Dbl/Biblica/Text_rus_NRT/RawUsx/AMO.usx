@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="AMO" style="id">- New Russian Translation (Новый русский перевод)</book>
+  <para style="rem">Copyright © 1988, 1991, 1998, 2006, 2010, 2014 by Biblica, Inc.</para>
+  <para style="h">АМОС</para>
+  <para style="toc1">Амос</para>
+  <para style="toc2">Амос</para>
+  <para style="toc3">Ам.</para>
+  <para style="mt1">Амос</para>
+  <para style="ip">Будучи пастухом из южного царства Иудея, Амос пророчествовал в северном царстве Израиль во время правления Иеровоама II, приблизительно в 762–750 гг. до н. э. Он нес свое служение спустя около 40 лет после смерти пророка Елисея и был современником пророков Осии и Ионы. Его послание было в основном адресовано Израилю, но также касалось и Иудеи (<char style="xt"><ref loc="AMO 2:4-5">2:4-5</ref>; <ref loc="AMO 6:1">6:1</ref></char>), и других окружавших их народов (<char style="xt"><ref loc="AMO 1:3-2:3">1:3–2:3</ref></char>).</para>
+  <para style="ip">В то время оба царства наслаждались миром и процветанием (см. <char style="xt"><ref loc="2KI 14:25-28">4 Цар. 14:25-28</ref>; <ref loc="2KI 15:3">15:3</ref></char>). Однако в духовном плане израильтяне отошли от истинного поклонения Господу. Вефиль, Гилгал и другие святилища стали языческими капищами, и поэтому Амос резко осуждает поклонение там (<char style="xt"><ref loc="AMO 4:4">4:4</ref>; <ref loc="AMO 5:4-5">5:4-5</ref></char>). Он обличал тех, кто внешне исполнял правила завета Бога с Израилем, а на самом деле поклонялся идолам и поступал нечестиво (<char style="xt"><ref loc="AMO 5:21-24">5:21-24</ref></char>). Амос говорил против широко распространенной безнравственности (<char style="xt"><ref loc="AMO 2:6-8">2:6-8</ref></char>), расточительности (<char style="xt"><ref loc="AMO 6:1-7">6:1-7</ref></char>), эксплуатации бедных (<char style="xt"><ref loc="AMO 5:11-12">5:11-12</ref>; <ref loc="AMO 8:4-6">8:4-6</ref></char>) и несправедливого судопроизводства (<char style="xt"><ref loc="AMO 5:12-15">5:12-15</ref>; <ref loc="AMO 6:12">6:12</ref></char>). Амос первым предсказал разрушение и пленение Израиля, что и исполнилось в 722 г. до н. э.</para>
+  <para style="ip">Речи пророка Амоса вызывали гнев царя Иеровоама II и священника Амасии, ответственного за поклонение идолу в Вефиле. Амосу приказали вернуться в Иудею, но он мужественно продолжал возвещать слово Бога (<char style="xt"><ref loc="AMO 7:10-17">7:10-17</ref></char>).</para>
+  <para style="ip">Хотя главной темой этой книги является справедливость и праведный гнев Бога, Амос также предвидел восстановление Израиля (<char style="xt"><ref loc="AMO 9:13-15">9:13-15</ref></char>). Он обещал, что разделенный царский дом Давида (вскоре пришедший в упадок) будет восстановлен, и через это все народы будут принадлежать Господу (<char style="xt"><ref loc="AMO 9:11-12">9:11-12</ref></char>). Это обещание исполнилось через Иисуса Христа (см. <char style="xt"><ref loc="ACT 15:14-18">Деян. 15:14-18</ref></char>).</para>
+  <para style="iot">Содержание</para>
+  <para style="io1">Суд над народами, включая Иудею и Израиль (<char style="ior"><ref loc="AMO 1:1-2:16">1:1–2:16</ref></char>).</para>
+  <para style="io1">Пророчество о непослушном и неправедном Израиле (<char style="ior"><ref loc="AMO 3:1-6:14">3:1–6:14</ref></char>).</para>
+  <para style="io1">Видения о наказаниях Бога (<char style="ior"><ref loc="AMO 7:1-9:10">7:1–9:10</ref></char>).</para>
+  <para style="io2">Суд предотвращен (<char style="ior"><ref loc="AMO 7:1-6">7:1-6</ref></char>).</para>
+  <para style="io2">Суд неизбежен (<char style="ior"><ref loc="AMO 7:7-9:10">7:7–9:10</ref></char>).</para>
+  <para style="io1">Возрождение Израиля (<char style="ior"><ref loc="AMO 9:11-15">9:11-15</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="AMO 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="AMO 1:1"/>Слова Амоса, одного из пастухов Текоа<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">Текоа – небольшое селение приблизительно в 10–15 км южнее Иерусалима и в 10 км от Вифлеема.</char></note>, – то, что он видел об Израиле за два года до землетрясения, когда Уззия был царем Иудеи, а Иеровоам, сын Иоаша, царем Израиля<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">Уззия правил Иудеей в период с 791 г. по 739 г. до н. э., в то время как Иеровоам II правил Израилем в 793–753 гг. до н. э. Упомянутое землетрясение произошло в 760 г. до н. э.</char></note>.<verse eid="AMO 1:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="AMO 1:2"/>Он сказал:</para>
+  <para style="q1" vid="AMO 1:2">– Прогремит Господь с Сиона</para>
+  <para style="q2" vid="AMO 1:2">воскликнет Он громким голосом из Иерусалима,</para>
+  <para style="q1" vid="AMO 1:2">и засохнут пастбища пастухов<note caller="+" style="f"><char style="fr" closed="false">1:2 </char><char style="ft" closed="false">Или: «заплачут пастухи».</char></note>,</para>
+  <para style="q2" vid="AMO 1:2">и завянет вершина Кармила.<verse eid="AMO 1:2"/></para>
+  <para style="s1">Суд над соседями Израиля</para>
+  <para style="p">
+    <verse number="3" style="v" sid="AMO 1:3"/>Так говорит Господь:</para>
+  <para style="q1" vid="AMO 1:3">– За три греха Дамаска</para>
+  <para style="q2" vid="AMO 1:3">и за четыре<note caller="+" style="f"><char style="fr" closed="false">1:3 </char><char style="ft" closed="false">Повторяющаяся конструкция «за три греха … и за четыре» является особым литературным приемом. По-видимому, она означает «преступление за преступлением», «народ грешит вновь и вновь».</char></note> не отвращу Мой гнев.</para>
+  <para style="q1" vid="AMO 1:3">За то, что он молотил Галаад молотильными досками</para>
+  <para style="q2" vid="AMO 1:3">с железными зубьями,<verse eid="AMO 1:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="AMO 1:4"/>Я пошлю огонь на дом Хазаила<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="ft" closed="false">Хазаил – царь Дамаска (ок. 842–796 гг. до н. э.). Основал династию в Араме, как это предсказывал Елисей (см. <char style="xt"><ref loc="2KI 8:7-15">4 Цар. 8:7-15</ref></char>).</char></note>,</para>
+  <para style="q2" vid="AMO 1:4">и он пожрет крепости Венадада<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="ft" closed="false">По крайней мере два царя Арама носили имя Венадад.</char></note>.<verse eid="AMO 1:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="AMO 1:5"/>Я сокрушу ворота Дамаска;</para>
+  <para style="q2" vid="AMO 1:5">погублю обитателей<note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="ft" closed="false">Или: «царя».</char></note> из долины Авен<note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="ft" closed="false">Авен – это название означает «долина зла».</char></note></para>
+  <para style="q1" vid="AMO 1:5">и того, кто держит скипетр в Бет-Эдене<note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="ft" closed="false">Бет-Эден значит «дом удовольствия».</char></note>.</para>
+  <para style="q2" vid="AMO 1:5">Народ Арама пойдет в плен в Кир, –</para>
+  <para style="q4" vid="AMO 1:5">говорит Господь.<verse eid="AMO 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="AMO 1:6"/>Так говорит Господь:</para>
+  <para style="q1" vid="AMO 1:6">– За три греха Газы</para>
+  <para style="q2" vid="AMO 1:6">и за четыре не отвращу Мой гнев.</para>
+  <para style="q1" vid="AMO 1:6">Потому что она брала в плен целые народы</para>
+  <para style="q2" vid="AMO 1:6">и продавала их в Эдом<note caller="+" style="f"><char style="fr" closed="false">1:6 </char><char style="ft" closed="false">Эдом – потомки брата Иакова (см. <char style="xt"><ref loc="GEN 25:25">Быт. 25:25</ref>, <ref loc="GEN 25:30">30</ref></char>), тем не менее они получали из филистимской земли израильтян в качестве рабов. За участие в этом преступлении Газе, представляющей в данном случае всю филистимскую землю, выносится приговор.</char></note>.<verse eid="AMO 1:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="AMO 1:7"/>Я пошлю огонь на стены Газы,</para>
+  <para style="q2" vid="AMO 1:7">и он пожрет ее крепости.<verse eid="AMO 1:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="AMO 1:8"/>Я погублю горожан Ашдода</para>
+  <para style="q2" vid="AMO 1:8">и того, кто держит скипетр в Ашкелоне.</para>
+  <para style="q1" vid="AMO 1:8">Я обращу Свою руку против Экрона,</para>
+  <para style="q2" vid="AMO 1:8">пока не умрет последний из филистимлян, –</para>
+  <para style="q4" vid="AMO 1:8">говорит Владыка Господь.<verse eid="AMO 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="AMO 1:9"/>Так говорит Господь:</para>
+  <para style="q1" vid="AMO 1:9">– За три греха Тира</para>
+  <para style="q2" vid="AMO 1:9">и за четыре не отвращу Мой гнев.</para>
+  <para style="q1" vid="AMO 1:9">За то, что он продавал в рабство Эдому</para>
+  <para style="q2" vid="AMO 1:9">жителей целых поселений,</para>
+  <para style="q2" vid="AMO 1:9">пренебрегая братским союзом<note caller="+" style="f"><char style="fr" closed="false">1:9 </char><char style="ft" closed="false">Царь Соломон и царь Тира Хирам в свое время заключили дружеское соглашение и установили прочные торговые связи (см. <char style="xt"><ref loc="1KI 5:1-12">3 Цар. 5:1-12</ref></char>).</char></note>.<verse eid="AMO 1:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="AMO 1:10"/>Я пошлю огонь на стены Тира,</para>
+  <para style="q2" vid="AMO 1:10">и он пожрет его крепости.<verse eid="AMO 1:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="AMO 1:11"/>Так говорит Господь:</para>
+  <para style="q1" vid="AMO 1:11">– За три греха Эдома</para>
+  <para style="q2" vid="AMO 1:11">и за четыре не отвращу Мой гнев.</para>
+  <para style="q1" vid="AMO 1:11">За то, что он преследовал своего брата<note caller="+" style="f"><char style="fr" closed="false">1:11 </char><char style="ft" closed="false">Эдомитяне были потомками Исава, а израильтяне потомками Иакова, которые были братьями друг другу (см. <char style="xt"><ref loc="GEN 35:22-26">Быт. 35:22-26</ref>; <ref loc="GEN 36:9-19">36:9-19</ref></char>). Об атаках Эдома на Израиль и Иудею см. <char style="xt"><ref loc="NUM 20:14-21">Чис. 20:14-21</ref>; <ref loc="2CH 28:17">2 Пар. 28:17</ref>; <ref loc="OBA 1:10-14">Авд. 10-14</ref></char>.</char></note> мечом,</para>
+  <para style="q2" vid="AMO 1:11">подавляя всякое сострадание<note caller="+" style="f"><char style="fr" closed="false">1:11 </char><char style="ft" closed="false">Или: « … мечом и союзников его уничтожил».</char></note>,</para>
+  <para style="q1" vid="AMO 1:11">что гнев его горел непрестанно,</para>
+  <para style="q2" vid="AMO 1:11">и ярость его всегда пылала –<verse eid="AMO 1:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="AMO 1:12"/>Я пошлю огонь на Теман,</para>
+  <para style="q2" vid="AMO 1:12">и он пожрет крепости Боцры.<verse eid="AMO 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="AMO 1:13"/>Так говорит Господь:</para>
+  <para style="q1" vid="AMO 1:13">– За три греха Аммона</para>
+  <para style="q2" vid="AMO 1:13">и за четыре не отвращу Мой гнев.</para>
+  <para style="q1" vid="AMO 1:13">За то, что он вспарывал животы беременным женщинам в Галааде,</para>
+  <para style="q2" vid="AMO 1:13">когда расширял свои границы<note caller="+" style="f"><char style="fr" closed="false">1:13 </char><char style="ft" closed="false">Целью таких преступлений, по-видимому, было уничтожение потомков этих народов, которые могли попытаться вернуть себе свою страну.</char></note>,<verse eid="AMO 1:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="AMO 1:14"/>Я зажгу огонь на стенах Раввы,</para>
+  <para style="q2" vid="AMO 1:14">он пожрет ее крепости</para>
+  <para style="q1" vid="AMO 1:14">среди криков войны в день брани,</para>
+  <para style="q2" vid="AMO 1:14">среди вихрей свирепых в день бури.<verse eid="AMO 1:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="AMO 1:15"/>Царь ее пойдет в плен</para>
+  <para style="q2" vid="AMO 1:15">вместе со своими приближенными, –</para>
+  <para style="q4" vid="AMO 1:15">говорит Господь.<verse eid="AMO 1:15"/></para>
+  <chapter eid="AMO 1"/>
+  <chapter number="2" style="c" sid="AMO 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="AMO 2:1"/>Так говорит Господь:</para>
+  <para style="q1" vid="AMO 2:1">– За три греха Моава</para>
+  <para style="q2" vid="AMO 2:1">и за четыре не отвращу Мой гнев.</para>
+  <para style="q1" vid="AMO 2:1">За то, что он пережег в известь</para>
+  <para style="q2" vid="AMO 2:1">кости царя Эдома<note caller="+" style="f"><char style="fr" closed="false">2:1 </char><char style="ft" closed="false">Святотатственное нарушение покоя умершего считалось на Древнем Ближнем Востоке страшным преступлением.</char></note>.<verse eid="AMO 2:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="AMO 2:2"/>Я пошлю огонь на Моав,</para>
+  <para style="q2" vid="AMO 2:2">он пожрет крепости Кериота<note caller="+" style="f"><char style="fr" closed="false">2:2 </char><char style="ft" closed="false">Или: «его городов».</char></note>.</para>
+  <para style="q1" vid="AMO 2:2">И погибнет Моав среди смуты,</para>
+  <para style="q2" vid="AMO 2:2">среди криков боевых,</para>
+  <para style="q1" vid="AMO 2:2">при звуке рога.<verse eid="AMO 2:2"/></para>
+  <para style="q2">
+    <verse number="3" style="v" sid="AMO 2:3"/>Я правителя его погублю,</para>
+  <para style="q1" vid="AMO 2:3">а с ним убью и его приближенных, –</para>
+  <para style="q4" vid="AMO 2:3">говорит Господь.<verse eid="AMO 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="AMO 2:4"/>Так говорит Господь:</para>
+  <para style="q1" vid="AMO 2:4">– За три греха Иудеи</para>
+  <para style="q2" vid="AMO 2:4">и за четыре не отвращу Мой гнев.</para>
+  <para style="q1" vid="AMO 2:4">За то, что они отвергли Закон Господа</para>
+  <para style="q2" vid="AMO 2:4">и установлений Его не сохранили,</para>
+  <para style="q1" vid="AMO 2:4">что лжебоги<note caller="+" style="f"><char style="fr" closed="false">2:4 </char><char style="ft" closed="false">Или: «обманы».</char></note>, за которыми ходили их предки,</para>
+  <para style="q2" vid="AMO 2:4">сбили их с пути –<verse eid="AMO 2:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="AMO 2:5"/>Я пошлю огонь на Иудею,</para>
+  <para style="q2" vid="AMO 2:5">и он пожрет крепости Иерусалима.<verse eid="AMO 2:5"/></para>
+  <para style="s1">Суд над Израилем</para>
+  <para style="p">
+    <verse number="6" style="v" sid="AMO 2:6"/>Так говорит Господь:</para>
+  <para style="q1" vid="AMO 2:6">– За три греха Израиля</para>
+  <para style="q2" vid="AMO 2:6">и за четыре не отвращу Мой гнев.</para>
+  <para style="q1" vid="AMO 2:6">Они продают праведного за серебро</para>
+  <para style="q2" vid="AMO 2:6">и нуждающегося – за пару сандалий.<verse eid="AMO 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="AMO 2:7"/>Они попирают головы бедных,</para>
+  <para style="q2" vid="AMO 2:7">как земную пыль,</para>
+  <para style="q1" vid="AMO 2:7">и отталкивают кротких<note caller="+" style="f"><char style="fr" closed="false">2:7 </char><char style="ft" closed="false">Или: «отказывают в справедливости угнетенным».</char></note>.</para>
+  <para style="q2" vid="AMO 2:7">Отец и сын спят с одной и той же девицей,</para>
+  <para style="q2" vid="AMO 2:7">оскверняя Мое святое имя.<verse eid="AMO 2:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="AMO 2:8"/>На одежде, взятой в залог,</para>
+  <para style="q2" vid="AMO 2:8">они возлежат у каждого жертвенника<note caller="+" style="f"><char style="fr" closed="false">2:8 </char><char style="ft" closed="false">Одежда, взятая в залог, должна была быть возвращена ее владельцу к ночи (см. <char style="xt"><ref loc="EXO 22:26-27">Исх. 22:26-27</ref></char>). Также Израилю было дано повеление поклоняться Богу только в том месте, которое Он избрал, и не иметь жертвенники ни Богу, ни любым иным божествам в других местах (см. <char style="xt"><ref loc="DEU 12:13-14">Втор. 12:13-14</ref></char>).</char></note>.</para>
+  <para style="q1" vid="AMO 2:8">Они пьют вино, взятое с обвиненных,</para>
+  <para style="q2" vid="AMO 2:8">в доме их бога<note caller="+" style="f"><char style="fr" closed="false">2:8 </char><char style="ft" closed="false">Или: «богов»; или «Бога».</char></note>.<verse eid="AMO 2:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="AMO 2:9"/>Я погубил перед ними аморрея<note caller="+" style="f"><char style="fr" closed="false">2:9 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="NUM 21:21-31">Чис. 21:21-31</ref></char>.</char></note>,</para>
+  <para style="q2" vid="AMO 2:9">хотя он был высок, как кедр,</para>
+  <para style="q1" vid="AMO 2:9">и крепок, как дуб.</para>
+  <para style="q2" vid="AMO 2:9">Я погубил плод его вверху</para>
+  <para style="q1" vid="AMO 2:9">и корни его внизу.<verse eid="AMO 2:9"/></para>
+  <para style="q2">
+    <verse number="10" style="v" sid="AMO 2:10"/>Я вывел вас из Египта</para>
+  <para style="q1" vid="AMO 2:10">и водил вас сорок лет по пустыне,</para>
+  <para style="q2" vid="AMO 2:10">чтобы дать вам землю аморреев.<verse eid="AMO 2:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="AMO 2:11"/>Еще Я воздвигал пророков из ваших сыновей</para>
+  <para style="q2" vid="AMO 2:11">и назореев<note caller="+" style="f"><char style="fr" closed="false">2:11 </char><char style="ft" closed="false">Назореи – израильтяне, которые целиком посвящали себя Богу, принеся клятву не пить хмельных напитков, не стричь волос и не прикасаться к мертвому телу (см. <char style="xt"><ref loc="NUM 6:1-8">Чис. 6:1-8</ref></char>).</char></note> из ваших юношей.</para>
+  <para style="q1" vid="AMO 2:11">Разве это не так, народ Израиля? –</para>
+  <para style="q4" vid="AMO 2:11">возвещает Господь. –<verse eid="AMO 2:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="AMO 2:12"/>Но вы заставляли назореев пить вино</para>
+  <para style="q2" vid="AMO 2:12">и приказывали пророкам,</para>
+  <para style="q1" vid="AMO 2:12">говоря: «Не пророчествуйте».<verse eid="AMO 2:12"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v" sid="AMO 2:13"/>И вот, Я раздавлю вас,</para>
+  <para style="q2" vid="AMO 2:13">как давит повозка, нагруженная снопами, –<verse eid="AMO 2:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="AMO 2:14"/>быстрый не ускользнет,</para>
+  <para style="q2" vid="AMO 2:14">сильный не соберется с силами</para>
+  <para style="q1" vid="AMO 2:14">и воин не спасет свою жизнь.<verse eid="AMO 2:14"/></para>
+  <para style="q2">
+    <verse number="15" style="v" sid="AMO 2:15"/>Лучник не устоит,</para>
+  <para style="q1" vid="AMO 2:15">быстроногий воин не скроется</para>
+  <para style="q2" vid="AMO 2:15">и всадник не спасет свою жизнь.<verse eid="AMO 2:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="AMO 2:16"/>Даже храбрейшие воины</para>
+  <para style="q2" vid="AMO 2:16">убегут нагими в тот день, –</para>
+  <para style="q4" vid="AMO 2:16">возвещает Господь.<verse eid="AMO 2:16"/></para>
+  <chapter eid="AMO 2"/>
+  <chapter number="3" style="c" sid="AMO 3"/>
+  <para style="s1">Свидетельства против Израиля</para>
+  <para style="p">
+    <verse number="1" style="v" sid="AMO 3:1"/>– Слушай это слово, которое Господь изрек против тебя, о народ Израиля, против всех родов, которые Я вывел из Египта:<verse eid="AMO 3:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="AMO 3:2"/>Вы единственные, кого Я признал</para>
+  <para style="q2" vid="AMO 3:2">из всех народов земли;</para>
+  <para style="q1" vid="AMO 3:2">поэтому Я накажу вас</para>
+  <para style="q2" vid="AMO 3:2">за все ваши грехи.<verse eid="AMO 3:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="AMO 3:3"/>Разве пойдут двое вместе,</para>
+  <para style="q2" vid="AMO 3:3">если не сговорятся заранее?<verse eid="AMO 3:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="AMO 3:4"/>Разве ревет в чаще лев,</para>
+  <para style="q2" vid="AMO 3:4">когда нет у него добычи?</para>
+  <para style="q1" vid="AMO 3:4">Разве рычит львенок в своем логове,</para>
+  <para style="q2" vid="AMO 3:4">когда он ничего не поймал?<verse eid="AMO 3:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="AMO 3:5"/>Разве птица попадется в петлю на земле,</para>
+  <para style="q2" vid="AMO 3:5">если для нее не положили приманку?</para>
+  <para style="q1" vid="AMO 3:5">Разве поднимется с земли петля,</para>
+  <para style="q2" vid="AMO 3:5">когда ничего в нее не попало?<verse eid="AMO 3:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="AMO 3:6"/>Когда в городе звучит рог,</para>
+  <para style="q2" vid="AMO 3:6">разве народ не трепещет?</para>
+  <para style="q1" vid="AMO 3:6">Когда в город приходит беда,</para>
+  <para style="q2" vid="AMO 3:6">разве не Господь наслал ее?<verse eid="AMO 3:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="AMO 3:7"/>Также Владыка Господь не делает ничего,</para>
+  <para style="q2" vid="AMO 3:7">не открыв Своего замысла</para>
+  <para style="q1" vid="AMO 3:7">слугам Своим, пророкам.<verse eid="AMO 3:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="AMO 3:8"/>Лев заревел –</para>
+  <para style="q2" vid="AMO 3:8">кто не испугается?</para>
+  <para style="q1" vid="AMO 3:8">Владыка Господь сказал –</para>
+  <para style="q2" vid="AMO 3:8">кто не станет пророчествовать?<verse eid="AMO 3:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="AMO 3:9"/>Объявите крепостям Ашдода</para>
+  <para style="q2" vid="AMO 3:9">и крепостям Египта:</para>
+  <para style="q1" vid="AMO 3:9">– Соберитесь на горах Самарии;</para>
+  <para style="q2" vid="AMO 3:9">посмотрите на великие бесчинства в ней,</para>
+  <para style="q1" vid="AMO 3:9">на притеснения среди ее народа.<verse eid="AMO 3:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="AMO 3:10"/>– Они не знают, как поступать праведно, –</para>
+  <para style="q2" vid="AMO 3:10">возвещает Господь, –</para>
+  <para style="q1" vid="AMO 3:10">те, кто копит в своих крепостях добро,</para>
+  <para style="q2" vid="AMO 3:10">собранное насилием и грабежом.<verse eid="AMO 3:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="AMO 3:11"/>Поэтому так говорит Владыка Господь:</para>
+  <para style="q1" vid="AMO 3:11">– Враг заполонит землю;</para>
+  <para style="q2" vid="AMO 3:11">Он разрушит твои твердыни</para>
+  <para style="q1" vid="AMO 3:11">и разграбит твои крепости.<verse eid="AMO 3:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="AMO 3:12"/>Так говорит Господь:</para>
+  <para style="q1" vid="AMO 3:12">– Как пастух вырывает из пасти льва</para>
+  <para style="q2" vid="AMO 3:12">две голени или часть уха,</para>
+  <para style="q1" vid="AMO 3:12">так спасены будут израильтяне,</para>
+  <para style="q2" vid="AMO 3:12">те, кто сидит<note caller="+" style="f"><char style="fr" closed="false">3:12 </char><char style="ft" closed="false">Или: «живут».</char></note> в Самарии</para>
+  <para style="q1" vid="AMO 3:12">на краю своих постелей</para>
+  <para style="q2" vid="AMO 3:12">и в Дамаске на ложах своих<note caller="+" style="f"><char style="fr" closed="false">3:12 </char><char style="ft" closed="false">Смысл этого места в еврейском тексте неясен.</char></note>.<verse eid="AMO 3:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="AMO 3:13"/>– Слушайте это и свидетельствуйте против дома Иакова, – возвещает Владыка Господь, Бог Сил.<verse eid="AMO 3:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="AMO 3:14"/>– В день, когда Я накажу Израиль за его грехи,</para>
+  <para style="q2" vid="AMO 3:14">Я разрушу и жертвенники Вефиля<note caller="+" style="f"><char style="fr" closed="false">3:14 </char><char style="ft" closed="false">Иеровоам I основал в городах Дане и Вефиле поклонение золотым идолам-тельцам в качестве национальной религии Израиля после его отделения от Иудеи (см. <char style="xt"><ref loc="1KI 12:25-33">3 Цар. 12:25-33</ref></char>).</char></note>;</para>
+  <para style="q1" vid="AMO 3:14">рога жертвенника будут отсечены<note caller="+" style="f"><char style="fr" closed="false">3:14 </char><char style="ft" closed="false">Человек, которому грозит смерть, мог просить о пощаде, взявшись за рога жертвенника, которые возвышались с каждого из его четырех углов. И значит, этот стих говорит о том, что Израилю негде будет искать защиты (см. <char style="xt"><ref loc="1KI 1:50">3 Цар. 1:50</ref>; <ref loc="1KI 2:28">2:28</ref></char>).</char></note></para>
+  <para style="q2" vid="AMO 3:14">и упадут на землю.<verse eid="AMO 3:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="AMO 3:15"/>Я разорю зимний дом</para>
+  <para style="q2" vid="AMO 3:15">вместе с летним домом;</para>
+  <para style="q1" vid="AMO 3:15">украшенные слоновой костью дома</para>
+  <para style="q2" vid="AMO 3:15">будут уничтожены</para>
+  <para style="q1" vid="AMO 3:15">и особняки будут снесены, –</para>
+  <para style="q4" vid="AMO 3:15">возвещает Господь.<verse eid="AMO 3:15"/></para>
+  <chapter eid="AMO 3"/>
+  <chapter number="4" style="c" sid="AMO 4"/>
+  <para style="s1">Израиль не обратился к Богу</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="AMO 4:1"/>Слушайте это слово, вы, коровы башанские,</para>
+  <para style="q2" vid="AMO 4:1">на горе самарийской,</para>
+  <para style="q1" vid="AMO 4:1">вы, женщины, притесняющие бедных,</para>
+  <para style="q2" vid="AMO 4:1">угнетающие нуждающихся</para>
+  <para style="q1" vid="AMO 4:1">и говорящие своим мужьям:</para>
+  <para style="q2" vid="AMO 4:1">«Принеси нам выпить!»<verse eid="AMO 4:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="AMO 4:2"/>Владыка Господь поклялся Своей святостью:</para>
+  <para style="q2" vid="AMO 4:2">– Непременно настанет срок,</para>
+  <para style="q1" vid="AMO 4:2">когда крюками вас потащат,</para>
+  <para style="q2" vid="AMO 4:2">а тех, кто останется, – крючками рыболовными<note caller="+" style="f"><char style="fr" closed="false">4:2 </char><char style="ft" closed="false">Крючками рыболовными – ассирийцы вели пленных на веревках, привязанных к кольцам или крюкам, продетым через нос или нижнюю губу.</char></note>.<verse eid="AMO 4:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="AMO 4:3"/>Каждая из вас выйдет прямиком</para>
+  <para style="q2" vid="AMO 4:3">через проломы в стене,</para>
+  <para style="q1" vid="AMO 4:3">и будете выброшены к Хармону<note caller="+" style="f"><char style="fr" closed="false">4:3 </char><char style="ft" closed="false">Смысл этого места в еврейском тексте неясен.</char></note>, –</para>
+  <para style="q4" vid="AMO 4:3">возвещает Господь. –<verse eid="AMO 4:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="AMO 4:4"/>Идите в Вефиль и грешите;</para>
+  <para style="q2" vid="AMO 4:4">идите в Гилгал и грешите еще больше<note caller="+" style="f"><char style="fr" closed="false">4:4 </char><char style="ft" closed="false">Гилгал, вероятнее всего, стал центром идолопоклонства (см. <char style="xt"><ref loc="AMO 5:5">5:5</ref></char>).</char></note>.</para>
+  <para style="q1" vid="AMO 4:4">Приносите ваши жертвы каждое утро,</para>
+  <para style="q2" vid="AMO 4:4">ваши десятины каждые три дня.<verse eid="AMO 4:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="AMO 4:5"/>Сжигайте дрожжевой хлеб как жертву благодарения</para>
+  <para style="q2" vid="AMO 4:5">и кичитесь своими добровольными приношениями –</para>
+  <para style="q1" vid="AMO 4:5">хвастайтесь ими, израильтяне,</para>
+  <para style="q2" vid="AMO 4:5">вам же нравится это делать, –</para>
+  <para style="q4" vid="AMO 4:5">возвещает Владыка Господь.<verse eid="AMO 4:5"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v" sid="AMO 4:6"/>Я посылал голод<note caller="+" style="f"><char style="fr" closed="false">4:6 </char><char style="ft" closed="false">Букв.: «голые зубы».</char></note> во все ваши города</para>
+  <para style="q2" vid="AMO 4:6">и недостаток хлеба во все ваши селения,</para>
+  <para style="q1" vid="AMO 4:6">и все-таки вы не обратились ко Мне, –</para>
+  <para style="q2" vid="AMO 4:6">возвещает Господь. –<verse eid="AMO 4:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="AMO 4:7"/>Я удерживал от вас дождь,</para>
+  <para style="q2" vid="AMO 4:7">когда до жатвы оставалось всего три месяца.</para>
+  <para style="q1" vid="AMO 4:7">Я посылал дождь на один город,</para>
+  <para style="q2" vid="AMO 4:7">но удерживал его в другом.</para>
+  <para style="q1" vid="AMO 4:7">Одно поле увлажнялось дождем,</para>
+  <para style="q2" vid="AMO 4:7">а другое, над которым не было дождя, высыхало.<verse eid="AMO 4:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="AMO 4:8"/>Люди скитались из города в город,</para>
+  <para style="q2" vid="AMO 4:8">чтобы напиться воды,</para>
+  <para style="q1" vid="AMO 4:8">но не напивались,</para>
+  <para style="q2" vid="AMO 4:8">и все-таки вы не обратились ко Мне, –</para>
+  <para style="q1" vid="AMO 4:8">возвещает Господь. –<verse eid="AMO 4:8"/></para>
+  <para style="q2">
+    <verse number="9" style="v" sid="AMO 4:9"/>Много раз Я поражал ваши посевы</para>
+  <para style="q1" vid="AMO 4:9">знойным ветром и плесенью.</para>
+  <para style="q2" vid="AMO 4:9">Саранча пожирала ваш инжир и оливковые деревья,</para>
+  <para style="q1" vid="AMO 4:9">и все-таки вы не обратились ко Мне, –</para>
+  <para style="q4" vid="AMO 4:9">возвещает Господь. –<verse eid="AMO 4:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="AMO 4:10"/>Я посылал на вас мор,</para>
+  <para style="q2" vid="AMO 4:10">как Я делал в Египте<note caller="+" style="f"><char style="fr" closed="false">4:10 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="EXO 7:14-12:30">Исх. 7:14–12:30</ref></char>.</char></note>.</para>
+  <para style="q1" vid="AMO 4:10">Я убивал ваших юношей мечом</para>
+  <para style="q2" vid="AMO 4:10">и уводил ваших лошадей.</para>
+  <para style="q1" vid="AMO 4:10">Я наполнял ваши ноздри</para>
+  <para style="q2" vid="AMO 4:10">смрадом ваших станов,</para>
+  <para style="q1" vid="AMO 4:10">и все-таки вы не обратились ко Мне, –</para>
+  <para style="q4" vid="AMO 4:10">возвещает Господь. –<verse eid="AMO 4:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="AMO 4:11"/>Я производил среди вас разрушения,</para>
+  <para style="q2" vid="AMO 4:11">как Я<note caller="+" style="f"><char style="fr" closed="false">4:11 </char><char style="ft" closed="false">Букв.: «Бог».</char></note> уничтожил Содом и Гоморру.</para>
+  <para style="q1" vid="AMO 4:11">Вы были как горящая головня,</para>
+  <para style="q2" vid="AMO 4:11">выхваченная из огня,</para>
+  <para style="q1" vid="AMO 4:11">и все-таки вы не обратились ко Мне, –</para>
+  <para style="q4" vid="AMO 4:11">возвещает Господь. –<verse eid="AMO 4:11"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v" sid="AMO 4:12"/>Поэтому вот что Я сделаю с тобой, Израиль,</para>
+  <para style="q2" vid="AMO 4:12">и так как Я сделаю это с тобой,</para>
+  <para style="q1" vid="AMO 4:12">то приготовься встретить своего Бога, Израиль.<verse eid="AMO 4:12"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v" sid="AMO 4:13"/>Вот Он, образующий горы,</para>
+  <para style="q2" vid="AMO 4:13">творящий ветер</para>
+  <para style="q1" vid="AMO 4:13">и открывающий мысли Свои человеку,</para>
+  <para style="q2" vid="AMO 4:13">превращающий зарю во тьму</para>
+  <para style="q1" vid="AMO 4:13">и ступающий по высотам земли;</para>
+  <para style="q2" vid="AMO 4:13">Господь, Бог Сил – Его имя.<verse eid="AMO 4:13"/></para>
+  <chapter eid="AMO 4"/>
+  <chapter number="5" style="c" sid="AMO 5"/>
+  <para style="s1">Плач и призыв к покаянию</para>
+  <para style="p">
+    <verse number="1" style="v" sid="AMO 5:1"/>Слушай это слово, о дом Израиля, этот траурный плач, который я поднимаю о тебе:<verse eid="AMO 5:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="AMO 5:2"/>– Пала дева Израиль,</para>
+  <para style="q2" vid="AMO 5:2">не встать ей больше;</para>
+  <para style="q1" vid="AMO 5:2">брошена в своей же земле,</para>
+  <para style="q2" vid="AMO 5:2">и некому ее поднять.<verse eid="AMO 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="AMO 5:3"/>Так говорит Владыка Господь:</para>
+  <para style="q1" vid="AMO 5:3">– У израильского города,</para>
+  <para style="q2" vid="AMO 5:3">выступающего на войну с тысячей воинов,</para>
+  <para style="q1" vid="AMO 5:3">останется только сотня;</para>
+  <para style="q2" vid="AMO 5:3">у города, выступающего с сотней,</para>
+  <para style="q1" vid="AMO 5:3">останется лишь десяток.<verse eid="AMO 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="AMO 5:4"/>Так Господь говорит дому Израиля:</para>
+  <para style="q1" vid="AMO 5:4">– Взыщите Меня и живите;<verse eid="AMO 5:4"/></para>
+  <para style="q2">
+    <verse number="5" style="v" sid="AMO 5:5"/>не ищите Вефиля,</para>
+  <para style="q1" vid="AMO 5:5">не ходите в Гилгал</para>
+  <para style="q2" vid="AMO 5:5">и не отправляйтесь в Вирсавию.</para>
+  <para style="q1" vid="AMO 5:5">Ведь Гилгал непременно пойдет в плен<note caller="+" style="f"><char style="fr" closed="false">5:5 </char><char style="ft" closed="false">Амос иронически отмечает то, что жители Гилгала, ближайшего города к местности, где израильтяне пересекли реку Иордан при входе в землю Ханаана, отправятся в плен, таким образом покидая Обещанную землю (см. <char style="xt"><ref loc="JOS 4:19-24">Нав. 4:19-24</ref></char>).</char></note>,</para>
+  <para style="q2" vid="AMO 5:5">а Вефиль обратится во зло<note caller="+" style="f"><char style="fr" closed="false">5:5 </char><char style="ft" closed="false">Вефиль означает «Дом Бога», но Амос говорит, что он станет «Домом Зла».</char></note>.<verse eid="AMO 5:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="AMO 5:6"/>Взыщите Господа и живите</para>
+  <para style="q2" vid="AMO 5:6">иначе Он пронесется через дом Иосифа<note caller="+" style="f"><char style="fr" closed="false">5:6 </char><char style="ft" closed="false">Дом Иосифа – Северное царство, Израиль, где наиболее влиятельным был род Ефрема, сына Иосифа.</char></note> как огонь;</para>
+  <para style="q1" vid="AMO 5:6">огонь будет все пожирать</para>
+  <para style="q2" vid="AMO 5:6">и в Вефиле некому будет его погасить.<verse eid="AMO 5:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="AMO 5:7"/>Вы, превращающие суд в горечь</para>
+  <para style="q2" vid="AMO 5:7">и швыряющие праведность на землю.<verse eid="AMO 5:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="AMO 5:8"/>(Он создал Плеяды и <char style="add">созвездие</char> Орион,</para>
+  <para style="q2" vid="AMO 5:8">Он обращает глубокую тьму в зарю</para>
+  <para style="q1" vid="AMO 5:8">и делает день черным, как ночь,</para>
+  <para style="q2" vid="AMO 5:8">призывает воды морские</para>
+  <para style="q1" vid="AMO 5:8">и разливает их по лицу земли;</para>
+  <para style="q2" vid="AMO 5:8">Господь Его имя;<verse eid="AMO 5:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="AMO 5:9"/>гибель внезапно наводит Он на твердыню</para>
+  <para style="q2" vid="AMO 5:9">и разрушает укрепленный город),<verse eid="AMO 5:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="AMO 5:10"/>вы ненавидите обличающего в суде<note caller="+" style="f"><char style="fr" closed="false">5:10 </char><char style="ft" closed="false">Букв.: «в воротах». В древних ближневосточных городах ворота были центром всей общественной жизни города, в них проходили и судебные разбирательства.</char></note></para>
+  <para style="q2" vid="AMO 5:10">и презираете говорящего истину.<verse eid="AMO 5:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="AMO 5:11"/>За то, что вы топчете бедного</para>
+  <para style="q2" vid="AMO 5:11">и вынуждаете его отдавать вам зерно,</para>
+  <para style="q1" vid="AMO 5:11">вы выстроите дома из тесаных камней –</para>
+  <para style="q2" vid="AMO 5:11">но вам в них не жить;</para>
+  <para style="q1" vid="AMO 5:11">вы насадите пышные виноградники –</para>
+  <para style="q2" vid="AMO 5:11">но вам не пить их вина.<verse eid="AMO 5:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="AMO 5:12"/>Ведь Я знаю, как многочисленны ваши преступления</para>
+  <para style="q2" vid="AMO 5:12">и как велики ваши грехи.</para>
+  <para style="b" vid="AMO 5:12"/>
+  <para style="q1" vid="AMO 5:12">Вы притесняете праведного, берете взятки</para>
+  <para style="q2" vid="AMO 5:12">и лишаете бедных справедливости в судах.<verse eid="AMO 5:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="AMO 5:13"/>Поэтому благоразумный в такие времена молчит,</para>
+  <para style="q2" vid="AMO 5:13">ведь эти времена злые.<verse eid="AMO 5:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="AMO 5:14"/>Ищите добро, а не зло,</para>
+  <para style="q2" vid="AMO 5:14">чтобы вам жить.</para>
+  <para style="q1" vid="AMO 5:14">Тогда Господь, Бог Сил, будет с вами</para>
+  <para style="q2" vid="AMO 5:14">как вы и говорите.<verse eid="AMO 5:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="AMO 5:15"/>Ненавидьте зло, любите добро,</para>
+  <para style="q2" vid="AMO 5:15">утверждайте в судах правосудие.</para>
+  <para style="q1" vid="AMO 5:15">Может быть, Господь, Бог Сил,</para>
+  <para style="q2" vid="AMO 5:15">смилуется над уцелевшими потомками Иосифа.<verse eid="AMO 5:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="AMO 5:16"/>Поэтому так говорит Владыка Господь, Бог Сил:</para>
+  <para style="q1" vid="AMO 5:16">– На всех улицах будет плач</para>
+  <para style="q2" vid="AMO 5:16">и на каждой площади – вопли.</para>
+  <para style="q1" vid="AMO 5:16">Земледельцев позовут плакать</para>
+  <para style="q2" vid="AMO 5:16">и плакальщиков – рыдать.<verse eid="AMO 5:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="AMO 5:17"/>Во всех виноградниках будет плач,</para>
+  <para style="q2" vid="AMO 5:17">потому что Я пройду среди вас, –</para>
+  <para style="q4" vid="AMO 5:17">говорит Господь.<verse eid="AMO 5:17"/></para>
+  <para style="s1">День Господа</para>
+  <para style="q1">
+    <verse number="18" style="v" sid="AMO 5:18"/>Горе вам, желающим дня Господа!</para>
+  <para style="q2" vid="AMO 5:18">Зачем вам этот день Господа?</para>
+  <para style="q1" vid="AMO 5:18">День тот не светом будет, а тьмой.<verse eid="AMO 5:18"/></para>
+  <para style="q2">
+    <verse number="19" style="v" sid="AMO 5:19"/>Это будет, как если бы кто, едва убежав от льва,</para>
+  <para style="q1" vid="AMO 5:19">попался в лапы к медведю,</para>
+  <para style="q2" vid="AMO 5:19">или как если бы кто, укрывшись в своем доме</para>
+  <para style="q1" vid="AMO 5:19">и оперевшись рукой о стену,</para>
+  <para style="q2" vid="AMO 5:19">был ужален змеей.<verse eid="AMO 5:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="AMO 5:20"/>Разве не будет день Господа тьмой, а не светом, –</para>
+  <para style="q2" vid="AMO 5:20">мраком, без проблеска света?<verse eid="AMO 5:20"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v" sid="AMO 5:21"/>– Ненавижу, презираю ваши праздники;</para>
+  <para style="q2" vid="AMO 5:21">собраний ваших не выношу.<verse eid="AMO 5:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="AMO 5:22"/>Пусть вы и приносите Мне всесожжения</para>
+  <para style="q2" vid="AMO 5:22">и хлебные приношения –</para>
+  <para style="q1" vid="AMO 5:22">Я не приму их.</para>
+  <para style="q2" vid="AMO 5:22">Пусть вы приносите лучших животных в жертву примирения –</para>
+  <para style="q3" vid="AMO 5:22">Я их не одобрю.<verse eid="AMO 5:22"/></para>
+  <para style="q1">
+    <verse number="23" style="v" sid="AMO 5:23"/>Удали от Меня шум песен своих!</para>
+  <para style="q2" vid="AMO 5:23">Я не стану слушать мелодию твоих арф.<verse eid="AMO 5:23"/></para>
+  <para style="q1">
+    <verse number="24" style="v" sid="AMO 5:24"/>Но пусть правосудие течет как река,</para>
+  <para style="q2" vid="AMO 5:24">праведность – как непересыхающий поток!<verse eid="AMO 5:24"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="25" style="v" sid="AMO 5:25"/>Приносили ли вы Мне заклания и жертвы</para>
+  <para style="q2" vid="AMO 5:25">в течение сорока лет в пустыне, дом Израиля?<verse eid="AMO 5:25"/></para>
+  <para style="q1">
+    <verse number="26" style="v" sid="AMO 5:26"/>Вы взяли с собой вашего царя,</para>
+  <para style="q2" vid="AMO 5:26">идола Сиккута, и Кийуна, вашего звездного бога<note caller="+" style="f"><char style="fr" closed="false">5:26 </char><char style="ft" closed="false">Или: «взяли собой Сиккута, вашего царя, и Кийуна – ваших идолов, ваших звездных богов»; в одном из древних переводов: «взяли собой святилище Молоха и звезду вашего бога Рефана, их идолов».</char></note>,</para>
+  <para style="q1" vid="AMO 5:26">которых вы сделали для себя.<verse eid="AMO 5:26"/></para>
+  <para style="q2">
+    <verse number="27" style="v" sid="AMO 5:27"/>Поэтому Я пошлю вас в плен дальше Дамаска, –</para>
+  <para style="q1" vid="AMO 5:27">говорит Господь, Чье имя Бог Сил.<verse eid="AMO 5:27"/></para>
+  <chapter eid="AMO 5"/>
+  <chapter number="6" style="c" sid="AMO 6"/>
+  <para style="s1">Горе беззаботным</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="AMO 6:1"/>Горе вам, беззаботным на Сионе,</para>
+  <para style="q2" vid="AMO 6:1">и вам, кто на горе самарийской чувствует себя в безопасности,</para>
+  <para style="q1" vid="AMO 6:1">вам, знати первого из народов,</para>
+  <para style="q2" vid="AMO 6:1">к которым приходят израильтяне!<verse eid="AMO 6:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="AMO 6:2"/>Пойдите в Халне и посмотрите на него;</para>
+  <para style="q2" vid="AMO 6:2">оттуда пойдите в великий Хамат,</para>
+  <para style="q1" vid="AMO 6:2">потом сойдите в Гат филистимский.</para>
+  <para style="q2" vid="AMO 6:2">Лучше ли они двух ваших царств?<note caller="+" style="f"><char style="fr" closed="false">6:2 </char><char style="ft" closed="false">Букв.: «этих царств» – то есть Израиля и Иудеи.</char></note></para>
+  <para style="q1" vid="AMO 6:2">Больше ли их земля, чем ваша?<verse eid="AMO 6:2"/></para>
+  <para style="q2">
+    <verse number="3" style="v" sid="AMO 6:3"/>Вы пытаетесь отдалить день бедствия</para>
+  <para style="q1" vid="AMO 6:3">и приближаете торжество насилия.<verse eid="AMO 6:3"/></para>
+  <para style="q2">
+    <verse number="4" style="v" sid="AMO 6:4"/>Вы лежите на кроватях, украшенных слоновой костью,</para>
+  <para style="q1" vid="AMO 6:4">нежитесь на своих ложах.</para>
+  <para style="q2" vid="AMO 6:4">Вы питаетесь лучшими ягнятами</para>
+  <para style="q1" vid="AMO 6:4">и упитанными телятами.<verse eid="AMO 6:4"/></para>
+  <para style="q2">
+    <verse number="5" style="v" sid="AMO 6:5"/>Вы горланите под звуки арфы</para>
+  <para style="q1" vid="AMO 6:5">и думаете, что сочиняете песни, как Давид.<verse eid="AMO 6:5"/></para>
+  <para style="q2">
+    <verse number="6" style="v" sid="AMO 6:6"/>Вы пьете вино чашами,</para>
+  <para style="q1" vid="AMO 6:6">мажетесь лучшими благовониями,</para>
+  <para style="q2" vid="AMO 6:6">но не горюете о крушении Иосифа.<verse eid="AMO 6:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="AMO 6:7"/>Поэтому вы среди первых пойдете в плен,</para>
+  <para style="q2" vid="AMO 6:7">и кончится ликование изнеженных.<verse eid="AMO 6:7"/></para>
+  <para style="s1">Господь гнушается гордостью Израиля</para>
+  <para style="p">
+    <verse number="8" style="v" sid="AMO 6:8"/>Собой поклялся Владыка Господь, и вот что возвещает Господь, Бог Сил:</para>
+  <para style="q1" vid="AMO 6:8">– Я гнушаюсь гордостью Иакова,</para>
+  <para style="q2" vid="AMO 6:8">крепости его Мне ненавистны;</para>
+  <para style="q1" vid="AMO 6:8">Я отдам город врагам</para>
+  <para style="q2" vid="AMO 6:8">со всем, что есть в нем.<verse eid="AMO 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="AMO 6:9"/>Даже если десять человек останутся в одном доме, то умрут и они. <verse eid="AMO 6:9"/><verse number="10" style="v" sid="AMO 6:10"/>И если кто-то еще скроется в доме, и придет родственник или тот, кто должен вынести и сжечь тела, и спросит его: «Есть ли кто еще с тобой?» – а тот ответит: «Нет», то он скажет: «Тихо! Мы не должны упоминать имени Господа».<verse eid="AMO 6:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="AMO 6:11"/>Вот, Господь дал повеление</para>
+  <para style="q2" vid="AMO 6:11">и разобьет большие дома на части,</para>
+  <para style="q2" vid="AMO 6:11">а маленькие на куски.<verse eid="AMO 6:11"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v" sid="AMO 6:12"/>Скачут ли лошади по скале?</para>
+  <para style="q2" vid="AMO 6:12">Пашут ли там на волах?</para>
+  <para style="q1" vid="AMO 6:12">Вы же превратили правосудие в яд</para>
+  <para style="q2" vid="AMO 6:12">и плод праведности – в горечь;<verse eid="AMO 6:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="AMO 6:13"/>вы, ликующие о завоевании Ло-Девара<note caller="+" style="f"><char style="fr" closed="false">6:13 </char><char style="ft" closed="false">«Ло-девар» означает «ничто».</char></note></para>
+  <para style="q2" vid="AMO 6:13">и говорящие: «Разве не собственными силами</para>
+  <para style="q1" vid="AMO 6:13">взяли мы Карнаим?»<note caller="+" style="f"><char style="fr" closed="false">6:13 </char><char style="ft" closed="false">«Карнаим» означает «двурогий»; рог – олицетворение могущества, власти и силы.</char></note><verse eid="AMO 6:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="AMO 6:14"/>Господь, Бог Сил, возвещает:</para>
+  <para style="q2" vid="AMO 6:14">– Я подниму против вас народ, о дом Израиля,</para>
+  <para style="q1" vid="AMO 6:14">который будет угнетать вас</para>
+  <para style="q2" vid="AMO 6:14">от Лево-Хамата<note caller="+" style="f"><char style="fr" closed="false">6:14 </char><char style="ft" closed="false">Или: «от перевала в Хамат».</char></note> до Иорданской долины.<verse eid="AMO 6:14"/></para>
+  <chapter eid="AMO 6"/>
+  <chapter number="7" style="c" sid="AMO 7"/>
+  <para style="s1">Саранча, огонь и свинцовый отвес</para>
+  <para style="p">
+    <verse number="1" style="v" sid="AMO 7:1"/>Вот что Владыка Господь, показал мне: Он готовил рои саранчи, когда царская доля была пожата, а поздняя трава начинала подниматься<note caller="+" style="f"><char style="fr" closed="false">7:1 </char><char style="ft" closed="false">По-видимому, царь имел право на сбор первой травы, вероятно, на нужды армии (см. <char style="xt"><ref loc="1KI 18:5">3 Цар. 18:5</ref></char>). А поздняя трава – это зелень, выросшая вторично, после весенних дождей. После нее начиналась летняя засуха, и ничего вырасти не могло. Ее уничтожение саранчой могло значить только одно: повальный голод.</char></note>. <verse eid="AMO 7:1"/><verse number="2" style="v" sid="AMO 7:2"/>Когда они дочиста объели землю, я вскричал:</para>
+  <para style="p" vid="AMO 7:2">– Владыка Господи, молю Тебя, прости! Как выжить Иакову? Он так мал!<verse eid="AMO 7:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="AMO 7:3"/>И Господь смягчился.</para>
+  <para style="p" vid="AMO 7:3">– Не будет этого, – сказал Господь.<verse eid="AMO 7:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="AMO 7:4"/>Вот что Владыка Господь показал мне: Владыка Господь призвал огонь для суда, и тот иссушил великую пучину и пожрал землю<note caller="+" style="f"><char style="fr" closed="false">7:4 </char><char style="ft" closed="false">Здесь говорится о том, что Бог навел испепеляющую жару, иссушившую подземные воды, которые по представлениям древних были источником всех вод, тем самым вызвав великую засуху на земле.</char></note>. <verse eid="AMO 7:4"/><verse number="5" style="v" sid="AMO 7:5"/>И я вскричал:</para>
+  <para style="p" vid="AMO 7:5">– О Владыка Господи, молю Тебя, остановись! Как выжить Иакову? Он ведь так мал!<verse eid="AMO 7:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="AMO 7:6"/>И Господь смягчился.</para>
+  <para style="p" vid="AMO 7:6">– Не будет и этого, – сказал Владыка Господь.<verse eid="AMO 7:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="AMO 7:7"/>Вот что Он показал мне: Владыка стоял у стены, построенной по отвесу, со свинцовым отвесом в руке. <verse eid="AMO 7:7"/><verse number="8" style="v" sid="AMO 7:8"/>Господь спросил меня:</para>
+  <para style="p" vid="AMO 7:8">– Что ты видишь, Амос?</para>
+  <para style="p" vid="AMO 7:8">– Свинцовый отвес, – ответил я.</para>
+  <para style="p" vid="AMO 7:8">Владыка сказал:</para>
+  <para style="p" vid="AMO 7:8">– Вот, Я кладу отвес среди Моего народа, Израиля; Я больше не буду щадить их.<verse eid="AMO 7:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="AMO 7:9"/>– Возвышенности Исаака будут опустошены,</para>
+  <para style="q2" vid="AMO 7:9">и святилища Израиля лягут руинами;</para>
+  <para style="q2" vid="AMO 7:9">Я поднимусь с мечом против дома Иеровоама.<verse eid="AMO 7:9"/></para>
+  <para style="s1">Амос и Амасия</para>
+  <para style="p">
+    <verse number="10" style="v" sid="AMO 7:10"/>Амасия, священник из Вефиля, послал Иеровоаму, царю Израиля, весть: «Амос замышляет против тебя заговор в самом сердце Израиля. Земля не в силах терпеть всех его слов. <verse eid="AMO 7:10"/><verse number="11" style="v" sid="AMO 7:11"/>Вот что говорит Амос:</para>
+  <para style="q1" vid="AMO 7:11">„Иеровоам умрет от меча,</para>
+  <para style="q2" vid="AMO 7:11">а Израиль непременно отправится в плен</para>
+  <para style="q2" vid="AMO 7:11">со своей земли“».<verse eid="AMO 7:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="AMO 7:12"/>Амасия сказал Амосу:</para>
+  <para style="p" vid="AMO 7:12">– Уходи, провидец! Возвращайся в иудейскую землю. Там зарабатывай на хлеб, там и пророчествуй. <verse eid="AMO 7:12"/><verse number="13" style="v" sid="AMO 7:13"/>Не пророчествуй больше в Вефиле – это капище царя и храм царства.<verse eid="AMO 7:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="AMO 7:14"/>Амос ответил Амасии:</para>
+  <para style="p" vid="AMO 7:14">– Я не пророк и не сын пророка. Я был пастухом и ухаживал за тутовыми деревьями. <verse eid="AMO 7:14"/><verse number="15" style="v" sid="AMO 7:15"/>Но Господь забрал меня от овец и сказал мне: «Иди, пророчествуй Моему народу, Израилю». <verse eid="AMO 7:15"/><verse number="16" style="v" sid="AMO 7:16"/>Итак, выслушай слово Господа. Ты говоришь:</para>
+  <para style="q1" vid="AMO 7:16">«Не пророчествуй против Израиля,</para>
+  <para style="q2" vid="AMO 7:16">перестань проповедовать против дома Исаака».<verse eid="AMO 7:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="AMO 7:17"/>Поэтому вот что говорит Господь:</para>
+  <para style="q1" vid="AMO 7:17">«Городской блудницей станет твоя жена,</para>
+  <para style="q2" vid="AMO 7:17">твои сыновья и дочери падут от меча.</para>
+  <para style="q1" vid="AMO 7:17">Землю твою измерят и разделят,</para>
+  <para style="q2" vid="AMO 7:17">а сам ты умрешь в нечистой земле.</para>
+  <para style="q1" vid="AMO 7:17">Израиль же непременно пойдет в плен</para>
+  <para style="q2" vid="AMO 7:17">со своей земли».<verse eid="AMO 7:17"/></para>
+  <chapter eid="AMO 7"/>
+  <chapter number="8" style="c" sid="AMO 8"/>
+  <para style="s1">Корзина со спелыми плодами</para>
+  <para style="p">
+    <verse number="1" style="v" sid="AMO 8:1"/>Вот что показал мне Владыка Господь: корзину со спелыми плодами.<verse eid="AMO 8:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="AMO 8:2"/>– Что ты видишь, Амос? – спросил Он.</para>
+  <para style="p" vid="AMO 8:2">– Корзину со спелыми плодами, – ответил я.</para>
+  <para style="p" vid="AMO 8:2">Тогда сказал мне Господь:</para>
+  <para style="p" vid="AMO 8:2">– Пришел конец<note caller="+" style="f"><char style="fr" closed="false">8:2 </char><char style="ft" closed="false">На языке оригинала наблюдается игра слов: «спелые плоды» (кайиц) и «конец» (кец).</char></note> Моему народу, Израилю; Я больше не буду их щадить. <verse eid="AMO 8:2"/><verse number="3" style="v" sid="AMO 8:3"/>Храмовые песни в тот день станут воплем, – возвещает Владыка Господь. – Повсюду разбросано множество трупов! Молчи!<verse eid="AMO 8:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="AMO 8:4"/>Слушайте это, топчущие бедных,</para>
+  <para style="q2" vid="AMO 8:4">уничтожающие нищих страны,<verse eid="AMO 8:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="AMO 8:5"/>говоря: «Когда же пройдет <char style="add">праздник</char> Новолуния<note caller="+" style="f"><char style="fr" closed="false">8:5 </char><char style="ft" closed="false">Новолуние – израильтяне, пользовавшиеся лунным календарем, праздновали начало каждого месяца, которое совпадало с новолунием.</char></note>,</para>
+  <para style="q2" vid="AMO 8:5">чтобы нам продавать зерно,</para>
+  <para style="q1" vid="AMO 8:5">и суббота закончится,</para>
+  <para style="q2" vid="AMO 8:5">чтобы нам торговать пшеницей?» –</para>
+  <para style="q1" vid="AMO 8:5">урезая меру,</para>
+  <para style="q2" vid="AMO 8:5">завышая цену</para>
+  <para style="q1" vid="AMO 8:5">и обманывая неточными весами,<verse eid="AMO 8:5"/></para>
+  <para style="q2">
+    <verse number="6" style="v" sid="AMO 8:6"/>покупая нищего за серебро</para>
+  <para style="q1" vid="AMO 8:6">и бедного за пару сандалий,</para>
+  <para style="q2" vid="AMO 8:6">продавая даже шелуху от зерна.<verse eid="AMO 8:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="AMO 8:7"/>Гордостью Иакова поклялся Господь:</para>
+  <para style="p" vid="AMO 8:7">– Никогда не забуду ничего из их дел.<verse eid="AMO 8:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="AMO 8:8"/>– Разве не содрогнется от этого земля,</para>
+  <para style="q2" vid="AMO 8:8">и не заплачет всякий живущий на ней?</para>
+  <para style="q1" vid="AMO 8:8">Вся земля поднимется, как Нил,</para>
+  <para style="q2" vid="AMO 8:8">будет вздыматься и убывать, как река Египта.<verse eid="AMO 8:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="AMO 8:9"/>В тот день, – возвещает Владыка Господь, –</para>
+  <para style="q1" vid="AMO 8:9">Я сделаю так, что солнце закатится в полдень</para>
+  <para style="q2" vid="AMO 8:9">и накрою землю мраком средь ясного дня.<verse eid="AMO 8:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="AMO 8:10"/>Праздники ваши обращу в скорбь</para>
+  <para style="q2" vid="AMO 8:10">и все ваши песни – в плач.</para>
+  <para style="q1" vid="AMO 8:10">Я заставлю всех вас одеться в рубище</para>
+  <para style="q2" vid="AMO 8:10">и обрить свои головы.</para>
+  <para style="q1" vid="AMO 8:10">Произведу в то время плач, как о единственном сыне,</para>
+  <para style="q2" vid="AMO 8:10">и горьким будет день, когда наступит конец.<verse eid="AMO 8:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="AMO 8:11"/>Близятся дни, – возвещает Владыка Господь, –</para>
+  <para style="q2" vid="AMO 8:11">когда Я пошлю на землю голод –</para>
+  <para style="q1" vid="AMO 8:11">не пищи голод, не жажду воды,</para>
+  <para style="q2" vid="AMO 8:11">а голод и жажду услышать слова Господа.<verse eid="AMO 8:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="AMO 8:12"/>Будут скитаться от моря до моря</para>
+  <para style="q2" vid="AMO 8:12">и от севера метаться к востоку</para>
+  <para style="q1" vid="AMO 8:12">в поисках слова Господня,</para>
+  <para style="q2" vid="AMO 8:12">но не найдут его.<verse eid="AMO 8:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="AMO 8:13"/>В тот день</para>
+  <para style="q1" vid="AMO 8:13">красивые девушки и юноши</para>
+  <para style="q2" vid="AMO 8:13">ослабеют от жажды.<verse eid="AMO 8:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="AMO 8:14"/>Те, кто клянется виной Самарии<note caller="+" style="f"><char style="fr" closed="false">8:14 </char><char style="ft" closed="false">Или: «Ашимой, богиней самарийской»; или: «идолом Самарии».</char></note>,</para>
+  <para style="q2" vid="AMO 8:14">и говорит: «Верно, как и то, что бог твой жив, о Дан» –</para>
+  <para style="q2" vid="AMO 8:14">или: «Верно, как и то, что живо паломничество в Вирсавию»<note caller="+" style="f"><char style="fr" closed="false">8:14 </char><char style="ft" closed="false">Жив путь в Вирсавию – смысл этого места в еврейском тексте неясен.</char></note>,</para>
+  <para style="q2" vid="AMO 8:14">падут и больше не встанут.<verse eid="AMO 8:14"/></para>
+  <chapter eid="AMO 8"/>
+  <chapter number="9" style="c" sid="AMO 9"/>
+  <para style="s1">Гибель Израиля</para>
+  <para style="p">
+    <verse number="1" style="v" sid="AMO 9:1"/>Я видел Владыку, стоящим у жертвенника<note caller="+" style="f"><char style="fr" closed="false">9:1 </char><char style="ft" closed="false">Или: «на жертвеннике».</char></note>. Он сказал:</para>
+  <para style="q1" vid="AMO 9:1">– Бей по верхушкам колонн,</para>
+  <para style="q2" vid="AMO 9:1">пусть задрожит порог.</para>
+  <para style="q1" vid="AMO 9:1">Обрушь их на головы им всем,</para>
+  <para style="q2" vid="AMO 9:1">а уцелевших Я перебью мечом.</para>
+  <para style="q1" vid="AMO 9:1">Ни один не укроется,</para>
+  <para style="q2" vid="AMO 9:1">никто не спасется.<verse eid="AMO 9:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="AMO 9:2"/>Пусть зароются хоть в мир мертвых<note caller="+" style="f"><char style="fr" closed="false">9:2 </char><char style="ft" closed="false">Евр.: «шеол».</char></note> –</para>
+  <para style="q2" vid="AMO 9:2">и оттуда достанет их Моя рука.</para>
+  <para style="q1" vid="AMO 9:2">Пусть взберутся на небеса –</para>
+  <para style="q2" vid="AMO 9:2">и оттуда Я свергну их.<verse eid="AMO 9:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="AMO 9:3"/>Пусть укроются на вершине Кармила –</para>
+  <para style="q2" vid="AMO 9:3">Я и там отыщу и схвачу их.</para>
+  <para style="q1" vid="AMO 9:3">Пусть на дне морском спрячутся от Меня –</para>
+  <para style="q2" vid="AMO 9:3">Я велю там змею, и он ужалит их.<verse eid="AMO 9:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="AMO 9:4"/>Пусть враги уведут их в плен –</para>
+  <para style="q2" vid="AMO 9:4">прикажу там мечу, и он убьет их.</para>
+  <para style="b" vid="AMO 9:4"/>
+  <para style="q1" vid="AMO 9:4">Обращу на них свои глаза –</para>
+  <para style="q2" vid="AMO 9:4">им на беду, а не во благо.<verse eid="AMO 9:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="AMO 9:5"/>Владыка, Господь Сил,</para>
+  <para style="q2" vid="AMO 9:5">касается земли – и она тает,</para>
+  <para style="q1" vid="AMO 9:5">а все живущие на ней плачут.</para>
+  <para style="q2" vid="AMO 9:5">Вся земля поднимается, словно Нил,</para>
+  <para style="q1" vid="AMO 9:5">и опускается, словно река Египта.<verse eid="AMO 9:5"/></para>
+  <para style="q2">
+    <verse number="6" style="v" sid="AMO 9:6"/>Он воздвиг Свой величественный дворец на небесах</para>
+  <para style="q1" vid="AMO 9:6">и основания его<note caller="+" style="f"><char style="fr" closed="false">9:6 </char><char style="ft" closed="false">Смысл этого места в еврейском тексте неясен.</char></note> утвердил на земле,</para>
+  <para style="q2" vid="AMO 9:6">призвал воды морские</para>
+  <para style="q1" vid="AMO 9:6">и разлил их по лицу земли;</para>
+  <para style="q2" vid="AMO 9:6">Господь Его имя.<verse eid="AMO 9:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="AMO 9:7"/>– Разве вы, израильтяне,</para>
+  <para style="q2" vid="AMO 9:7">для Меня не то же, что и кушиты?<note caller="+" style="f"><char style="fr" closed="false">9:7 </char><char style="ft" closed="false">Обитатели земель в верхнем течении Нила.</char></note> –</para>
+  <para style="q4" vid="AMO 9:7">возвещает Господь.</para>
+  <para style="q1" vid="AMO 9:7">Да, Я вывел Израиль из Египта,</para>
+  <para style="q2" vid="AMO 9:7">но Я вывел и филистимлян из Кафтора<note caller="+" style="f"><char style="fr" closed="false">9:7 </char><char style="ft" closed="false">То есть из Крита.</char></note></para>
+  <para style="q1" vid="AMO 9:7">и арамеев – из Кира.<verse eid="AMO 9:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="AMO 9:8"/>Несомненно, очи Владыки Господа</para>
+  <para style="q2" vid="AMO 9:8">обращены на грешное царство.</para>
+  <para style="q1" vid="AMO 9:8">– Я сотру его с лица земли,</para>
+  <para style="q2" vid="AMO 9:8">но не истреблю до конца дом Иакова, –</para>
+  <para style="q4" vid="AMO 9:8">возвещает Господь. –<verse eid="AMO 9:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="AMO 9:9"/>Я дам повеление просеять дом Израиля</para>
+  <para style="q2" vid="AMO 9:9">среди всех народов,</para>
+  <para style="q2" vid="AMO 9:9">как просеивают зерно<note caller="+" style="f"><char style="fr" closed="false">9:9 </char><char style="ft" closed="false">Или: «просеивают песок».</char></note> решетом,</para>
+  <para style="q1" vid="AMO 9:9">и ни один камушек не достигнет земли.<verse eid="AMO 9:9"/></para>
+  <para style="q2">
+    <verse number="10" style="v" sid="AMO 9:10"/>Все грешники среди Моего народа</para>
+  <para style="q1" vid="AMO 9:10">умрут от меча,</para>
+  <para style="q2" vid="AMO 9:10">все те, кто говорит:</para>
+  <para style="q1" vid="AMO 9:10">«Беда нас не постигнет, нас не коснется».<verse eid="AMO 9:10"/></para>
+  <para style="s1">Возрождение Израиля</para>
+  <para style="p">
+    <verse number="11" style="v" sid="AMO 9:11"/>– В тот день</para>
+  <para style="q1" vid="AMO 9:11">Я восстановлю павшую скинию Давида.</para>
+  <para style="q2" vid="AMO 9:11">Заделаю в ней бреши,</para>
+  <para style="q2" vid="AMO 9:11">восстановлю руины,</para>
+  <para style="q2" vid="AMO 9:11">отстрою, как в дни древние,<verse eid="AMO 9:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="AMO 9:12"/>чтобы им обладать остатком Эдома</para>
+  <para style="q2" vid="AMO 9:12">и всеми народами, которые были названы Моим именем, –</para>
+  <para style="q4" vid="AMO 9:12">говорит Господь, Который сделает это.<verse eid="AMO 9:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="AMO 9:13"/>Близятся дни, – возвещает Господь, –</para>
+  <para style="q1" vid="AMO 9:13">когда жнеца будет сменять пахарь,</para>
+  <para style="q2" vid="AMO 9:13">а сажающего виноградник – топчущий ягоды.</para>
+  <para style="q2" vid="AMO 9:13">Молодое вино будет сочиться из гор</para>
+  <para style="q2" vid="AMO 9:13">и течь со всех холмов.<verse eid="AMO 9:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="AMO 9:14"/>Я возвращу из плена народ Мой, Израиль<note caller="+" style="f"><char style="fr" closed="false">9:14 </char><char style="ft" closed="false">Или: «верну благополучие Моему народу, Израилю».</char></note>;</para>
+  <para style="q2" vid="AMO 9:14">они отстроят разрушенные города</para>
+  <para style="q1" vid="AMO 9:14">и будут в них жить.</para>
+  <para style="q2" vid="AMO 9:14">Они посадят виноградники и будут пить их вино;</para>
+  <para style="q2" vid="AMO 9:14">разведут сады и будут есть их плоды.<verse eid="AMO 9:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="AMO 9:15"/>Насажу Мой народ на его земле,</para>
+  <para style="q2" vid="AMO 9:15">и никогда впредь он не будет исторгнут</para>
+  <para style="q1" vid="AMO 9:15">из земли, что Я дал ему, –</para>
+  <para style="q4" vid="AMO 9:15">говорит Господь, твой Бог.<verse eid="AMO 9:15"/></para>
+  <chapter eid="AMO 9"/>
+</usx>

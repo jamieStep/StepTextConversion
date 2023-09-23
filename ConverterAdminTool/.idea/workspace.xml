@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f55a1e09-381f-460f-a920-c2d2286988d4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/ChangeHistoryHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/CompileTimeConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/CrossReferenceProcessor.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/EmptyVerseHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/ReversificationData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/ReversificationRuleEvaluator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TestController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TextConverterController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TextConverterFeatureSummaryGenerator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TextConverterProcessorBase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TextConverterProcessorEnhancedUsxToOsis.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TextConverterProcessorEvaluateVersificationSchemes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TextConverterProcessorOsisToSword.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TextConverterProcessorReversification.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TextConverterProcessorVLToRawUsx.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TextConverterVersificationHealthCheck.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/XXXOsis2ModInterface.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleAnatomy.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleBookAndFileMapper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleBookAndFileMapperEnhancedUsx.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleBookAndFileMapperRawUsx.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleBookNames.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleBookNamesOsis.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleBookNamesTextAsSupplied.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleBookNamesUsx.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleStructure.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleStructureNrsvx.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleStructureSupportedByOsis2modIndividual.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleStructureTextUnderConstruction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/BibleStructuresSupportedByOsis2modAll.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/bibledetails/_READ_ME_.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/commandlineprocessor/CommandLineProcessor.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/configdata/ConfigData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/configdata/ConfigDataExternalFileInterface.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/configdata/ConfigDataSupport.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/configdata/StandardFileLocations.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/configdata/_READ_ME_.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/debug/Dbg.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/debug/Logger.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/iso/IsoLanguageCodes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/iso/JavaLocales.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/iso/Unicode.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/miscellaneous/Dom.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/miscellaneous/DomExtensionFunctions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/miscellaneous/LocaleHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/miscellaneous/MarkerHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/miscellaneous/MiscellaneousUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/miscellaneous/StepFileUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/miscellaneous/StepStringFormatter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/miscellaneous/StepStringUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/miscellaneous/Translations.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/miscellaneous/Zip.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/miscellaneous/_READ_ME_.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/ref/Ref.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/ref/RefBase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/ref/RefCollection.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/ref/RefCollectionPart.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/ref/RefFormatHandlerReaderVernacular.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/ref/RefFormatHandlerWriterBase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/ref/RefFormatHandlerWriterOsis.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/ref/RefFormatHandlerWriterUsx.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/ref/RefFormatHandlerWriterVernacular.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/ref/RefRange.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/ref/_READ_ME_.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/shared/Constants.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/shared/FeatureIdentifier.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/shared/SharedData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/stepexception/StepException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/support/usx/Usx.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminDataExtractor/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminDataExtractor/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminDataExtractor/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminDataExtractor/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminDataExtractor/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminDataExtractor/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminDataExtractor/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminDataExtractor/src/main/kotlin/Dom.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminDataExtractor/src/main/kotlin/StepException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Support/converterUserGuide.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Support/converterUserGuide.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TextConverter/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TextConverter/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../TextConverter/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../TextConverter/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../TextConverter/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/ChangeHistoryHandler.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/CompileTimeConfig.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/CrossReferenceProcessor.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/DataSummary.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/EmptyVerseHandler.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/EnhancedUsxValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/TextConverterEnhancedUsxValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/ReversificationData.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/ReversificationRuleEvaluator.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/TestController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/TextConverterController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/TextConverterProcessorBase.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/TextConverterProcessorEnhancedUsxToOsis.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/TextConverterProcessorEvaluateVersificationSchemes.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/TextConverterProcessorOsisToSword.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/TextConverterProcessorReversification.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/TextConverterProcessorUsxToEnhancedUsx1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/TextConverterProcessorUsxToEnhancedUsx2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/TextConverterProcessorVLToRawUsx.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/TextConverterVersificationHealthCheck.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/XXXOsis2ModInterface.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleAnatomy.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookAndFileMapper.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookAndFileMapperEnhancedUsx.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookAndFileMapperRawUsx.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookNames.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookNamesOsis.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookNamesTextAsSupplied.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookNamesUsx.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleStructure.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleStructureNrsvx.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleStructureSupportedByOsis2modIndividual.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleStructureTextUnderConstruction.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleStructuresSupportedByOsis2modAll.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/_READ_ME_.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/commandlineprocessor/CommandLineProcessor.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigDataExternalFileInterface.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigDataSupport.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/configdata/StandardFileLocations.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/configdata/_READ_ME_.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/debug/Dbg.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/debug/Logger.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/iso/IsoLanguageCodes.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/iso/JavaLocales.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/iso/Unicode.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Dom.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/DomExtensionFunctions.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/LocaleHandler.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/MarkerHandler.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/MiscellaneousUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/StepFileUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/StepStringFormatter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/StepStringUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Translations.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Zip.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/_READ_ME_.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/ref/Ref.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/ref/RefBase.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/ref/RefCollection.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/ref/RefCollectionPart.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/ref/RefFormatHandlerReaderVernacular.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/ref/RefFormatHandlerWriterBase.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/ref/RefFormatHandlerWriterOsis.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/ref/RefFormatHandlerWriterUsx.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/ref/RefFormatHandlerWriterVernacular.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/ref/RefRange.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/ref/_READ_ME_.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/shared/Constants.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/shared/FeatureIdentifier.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/shared/SharedData.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/stepexception/StepException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/kotlin/org/stepbible/textconverter/support/usx/Usx.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/PerOwnerOrganisation/Biblica.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/PerTextRepositoryOrganisation/Dbl.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/ReferenceFormats/referenceFormatVernacularDefaults.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/TextTranslations/vernacularTextTranslations_deu.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/TextTranslations/vernacularTextTranslations_eng.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/_readMeFirst_.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/basicDefinitions.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/commonRoot.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/historyTemplate.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/osis2modVersification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/overrides.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/standardBookNames.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/swordTemplateConfigFile.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TextConverter/src/main/resources/usxToOsisTagConversionsEtc.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/1CH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/1ES.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/1KI.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/1MA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/1SA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/2CH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/2KI.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/2MA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/2SA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/3MA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/4MA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/AMO.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/BAR.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/BEL.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/DAN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/DEU.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/ECC.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/EST.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/EXO.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/EZK.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/EZR.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/GEN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/HAB.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/HAG.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/HOS.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/ISA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/JDG.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/JDT.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/JER.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/JOB.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/JOL.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/JON.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/JOS.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/LAM.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/LEV.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/LJE.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/MAL.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/MAN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/en_NETSLXX/RawUsx/MIC.usx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2Vn6vgKUVeOiyWNuHZcQyApN5BP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/ConverterAdminTool/src/main/kotlin&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\ConverterAdminTool\src\main\kotlin" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="JetRunConfigurationType" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="ConverterAdminTool.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f55a1e09-381f-460f-a920-c2d2286988d4" name="Changes" comment="" />
+      <created>1695459731038</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695459731038</updated>
+    </task>
+    <servers />
+  </component>
+</project>

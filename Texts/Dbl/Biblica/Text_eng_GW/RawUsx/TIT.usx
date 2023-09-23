@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<usx version="3.0">
+  <book code="TIT" style="id">- God’s Word Bible</book>
+  <para style="ide">UTF-8</para>
+  <para style="rem">© 1995, 2003, 2013, 2014, 2019, 2020 by God’s Word to the Nations Mission Society. All rights reserved.</para>
+  <para style="rem">Converted from InDesign files to USFM-3 by Elbert Boot (Digital Bible Library Customer Service Team, Miami [USA])</para>
+  <para style="rem">Language: English</para>
+  <para style="rem">This project has 9 poetry levels, and Paratext only supports up to 4 levels. To upload the text to DBL, we have created a dblChanges file and added q5 to q9 to a custom.sty to obtain the desired design in Paratext.</para>
+  <para style="h">TITUS</para>
+  <para style="toc1">Titus</para>
+  <para style="toc2">Titus</para>
+  <para style="toc3">Titus</para>
+  <para style="mt1">Titus</para>
+  <chapter number="1" style="c" sid="TIT 1" />
+  <para style="s1">Greeting</para>
+  <para style="m">
+    <verse number="1" style="v" sid="TIT 1:1" />From Paul, a servant of God and an apostle of Jesus Christ. I was sent to lead God’s chosen people to faith and to the knowledge of the truth that leads to a godly life. <verse eid="TIT 1:1" /><verse number="2" style="v" sid="TIT 1:2" />My message is based on the confidence of eternal life. God, who never lies, promised this eternal life before the world began. <verse eid="TIT 1:2" /><verse number="3" style="v" sid="TIT 1:3" />God has revealed this in every era by spreading his word. I was entrusted with this word by the command of God our Savior.<verse eid="TIT 1:3" /></para>
+  <para style="p">
+    <verse number="4" style="v" sid="TIT 1:4" />To Titus, a genuine child in the faith we share.</para>
+  <para style="p" vid="TIT 1:4">Good will <note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“Grace.”</char></note> and peace from God the Father and from Christ Jesus our Savior are yours!<verse eid="TIT 1:4" /></para>
+  <para style="s1">Guidelines for Leaders in the Church</para>
+  <para style="m">
+    <verse number="5" style="v" sid="TIT 1:5" />I left you in Crete to do what still needed to be done—appointing spiritual leaders <note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“pastors,” or “elders.”</char></note> in every city as I directed you. <verse eid="TIT 1:5" /><verse number="6" style="v" sid="TIT 1:6" />A spiritual leader must have a good reputation. He must have only one wife and have children who are believers. His children shouldn’t be known for having wild lifestyles or being rebellious. <verse eid="TIT 1:6" /><verse number="7" style="v" sid="TIT 1:7" />Because a bishop is a supervisor appointed by God, he must have a good reputation. He must not be a stubborn or irritable person. He must not drink too much or be a violent person. He must not use shameful ways to make money. <verse eid="TIT 1:7" /><verse number="8" style="v" sid="TIT 1:8" />Instead, he must be hospitable, love what is good, use good judgment, be fair and moral, and have self-control. <verse eid="TIT 1:8" /><verse number="9" style="v" sid="TIT 1:9" />He must be devoted to the trustworthy message we teach. Then he can use these accurate teachings to encourage people and correct those who oppose the word.<verse eid="TIT 1:9" /></para>
+  <para style="s1">Correct Whoever Teaches What Is Wrong</para>
+  <para style="m">
+    <verse number="10" style="v" sid="TIT 1:10" />There are many believers, especially converts from Judaism, who are rebellious. They speak nonsense and deceive people. <verse eid="TIT 1:10" /><verse number="11" style="v" sid="TIT 1:11" />They must be silenced because they are ruining whole families by teaching what they shouldn’t teach. This is the shameful way they make money.<verse eid="TIT 1:11" /></para>
+  <para style="p">
+    <verse number="12" style="v" sid="TIT 1:12" />Even one of their own prophets said, “Cretans are always liars, savage animals, and lazy gluttons.” <verse eid="TIT 1:12" /><verse number="13" style="v" sid="TIT 1:13" />That statement is true. For this reason, sharply correct believers so that they continue to have faith that is alive and well. <verse eid="TIT 1:13" /><verse number="14" style="v" sid="TIT 1:14" />They shouldn’t pay attention to Jewish myths or commands given by people who are always rejecting the truth. <verse eid="TIT 1:14" /><verse number="15" style="v" sid="TIT 1:15" />Everything is clean <note caller="+" style="f"><char style="fr" closed="false">1:15 </char><char style="ft" closed="false">“</char><char style="fk" closed="false">Clean</char><char style="ft" closed="false">” refers to anything that Moses’ Teachings say is presentable to God.</char></note> to those who are clean. But nothing is clean to corrupt unbelievers. Indeed, their minds and their consciences are corrupted. <verse eid="TIT 1:15" /><verse number="16" style="v" sid="TIT 1:16" />They claim to know God, but they deny him by what they do. They are detestable, disobedient, and unfit to do anything good.<verse eid="TIT 1:16" /></para>
+  <chapter eid="TIT 1" />
+  <chapter number="2" style="c" sid="TIT 2" />
+  <para style="s1">Guidelines for Christian Living</para>
+  <para style="m">
+    <verse number="1" style="v" sid="TIT 2:1" />Tell believers to live the kind of life that goes along with accurate teachings. <verse eid="TIT 2:1" /><verse number="2" style="v" sid="TIT 2:2" />Tell older men to be sober. Tell them to be men of good character, to use good judgment, and to be well-grounded in faith, love, and endurance.<verse eid="TIT 2:2" /></para>
+  <para style="p">
+    <verse number="3" style="v" sid="TIT 2:3" />Tell older women to live their lives in a way that shows they are dedicated to God. Tell them not to be gossips or addicted to alcohol, but to be examples of virtue. <verse eid="TIT 2:3" /><verse number="4" style="v" sid="TIT 2:4" />In this way they will teach young women to show love to their husbands and children, <verse eid="TIT 2:4" /><verse number="5" style="v" sid="TIT 2:5" />to use good judgment, and to be morally pure. Also, tell them to teach young women to be homemakers, to be kind, and to place themselves under their husbands’ authority. Then no one can speak evil of God’s word.<verse eid="TIT 2:5" /></para>
+  <para style="p">
+    <verse number="6" style="v" sid="TIT 2:6" />Encourage young men to use good judgment. <verse eid="TIT 2:6" /><verse number="7" style="v" sid="TIT 2:7" />Always set an example by doing good things. When you teach, be an example of moral purity and dignity. <verse eid="TIT 2:7" /><verse number="8" style="v" sid="TIT 2:8" />Speak an accurate message that cannot be condemned. Then those who oppose us will be ashamed because they cannot say anything bad about us.<verse eid="TIT 2:8" /></para>
+  <para style="p">
+    <verse number="9" style="v" sid="TIT 2:9" />Tell slaves who are believers to place themselves under their masters’ authority in everything they do. Tell them to please their masters, not to argue with them <verse eid="TIT 2:9" /><verse number="10" style="v" sid="TIT 2:10" />or steal from them. Instead, tell slaves to show their masters how good and completely loyal they can be. Then they will show the beauty of the teachings about God our Savior in everything they do.<verse eid="TIT 2:10" /></para>
+  <para style="p">
+    <verse number="11" style="v" sid="TIT 2:11" />After all, God’s saving kindness <note caller="+" style="f"><char style="fr" closed="false">2:11 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“grace.”</char></note> has appeared for the benefit of all people. <verse eid="TIT 2:11" /><verse number="12" style="v" sid="TIT 2:12" />It trains us to avoid ungodly lives filled with worldly desires so that we can live self-controlled, moral, and godly lives in this present world. <verse eid="TIT 2:12" /><verse number="13" style="v" sid="TIT 2:13" />At the same time we can expect what we hope for—the appearance of the glory of our great God and Savior, Jesus Christ. <verse eid="TIT 2:13" /><verse number="14" style="v" sid="TIT 2:14" />He gave himself for us to set us free from every sin and to cleanse us so that we can be his special people who are enthusiastic about doing good things.<verse eid="TIT 2:14" /></para>
+  <para style="p">
+    <verse number="15" style="v" sid="TIT 2:15" />Tell these things to the believers. Encourage and correct them, using your full authority. Don’t let anyone ignore you.<verse eid="TIT 2:15" /></para>
+  <chapter eid="TIT 2" />
+  <chapter number="3" style="c" sid="TIT 3" />
+  <para style="m">
+    <verse number="1" style="v" sid="TIT 3:1" />Remind believers to willingly place themselves under the authority of government officials. Believers should obey them and be ready to help them with every good thing they do. <verse eid="TIT 3:1" /><verse number="2" style="v" sid="TIT 3:2" />Believers shouldn’t curse anyone or be quarrelsome, but they should be gentle and show courtesy to everyone.<verse eid="TIT 3:2" /></para>
+  <para style="s1">What God Did for Us</para>
+  <para style="m">
+    <verse number="3" style="v" sid="TIT 3:3" />Indeed, we, too, were once stupid, disobedient, and misled. We were slaves to many kinds of lusts and pleasures. We were mean and jealous. We were hated, and we hated each other.<verse eid="TIT 3:3" /></para>
+  <para style="p">
+    <verse number="4" style="v" sid="TIT 3:4" />However, when God our Savior made his kindness and love for humanity appear, <verse eid="TIT 3:4" /><verse number="5" style="v" sid="TIT 3:5" />he saved us, but not because of anything we had done to gain his approval. Instead, because of his mercy he saved us through the washing in which the Holy Spirit gives us new birth and renewal. <verse eid="TIT 3:5" /><verse number="6" style="v" sid="TIT 3:6" />God poured a generous amount of the Spirit on us through Jesus Christ our Savior. <verse eid="TIT 3:6" /><verse number="7" style="v" sid="TIT 3:7" />As a result, God in his kindness <note caller="+" style="f"><char style="fr" closed="false">3:7 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“grace.”</char></note> has given us his approval and we have become heirs who have the confidence that we have everlasting life. <verse eid="TIT 3:7" /><verse number="8" style="v" sid="TIT 3:8" />This is a statement that can be trusted. I want you to insist on these things so that those who believe in God can concentrate on setting an example by doing good things. This is good and helps other people.<verse eid="TIT 3:8" /></para>
+  <para style="s1">Advice for Titus</para>
+  <para style="m">
+    <verse number="9" style="v" sid="TIT 3:9" />Avoid foolish controversies, arguments about genealogies, quarrels, and fights about Moses’ Teachings. This is useless and worthless. <verse eid="TIT 3:9" /><verse number="10" style="v" sid="TIT 3:10" />Have nothing to do with people who continue to teach false doctrine after you have warned them once or twice. <verse eid="TIT 3:10" /><verse number="11" style="v" sid="TIT 3:11" />You know that people like this are corrupt. They are sinners condemned by their own actions.<verse eid="TIT 3:11" /></para>
+  <para style="s1">Farewell</para>
+  <para style="m">
+    <verse number="12" style="v" sid="TIT 3:12" />When I send Artemas or Tychicus to you, hurry to visit me in the city of Nicopolis. I have decided to spend the winter there. <verse eid="TIT 3:12" /><verse number="13" style="v" sid="TIT 3:13" />Give Zenas the lawyer and Apollos your best support for their trip so that they will have everything they need.<verse eid="TIT 3:13" /></para>
+  <para style="p">
+    <verse number="14" style="v" sid="TIT 3:14" />Our people should also learn how to set an example by doing good things when urgent needs arise so that they can live productive lives.<verse eid="TIT 3:14" /></para>
+  <para style="p">
+    <verse number="15" style="v" sid="TIT 3:15" />Everyone with me sends you greetings. Greet our faithful friends.</para>
+  <para style="p" vid="TIT 3:15">
+    <char style="add">⌞God’s⌟</char> good will <note caller="+" style="f"><char style="fr" closed="false">3:15 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“grace.”</char></note> be with all of you.<verse eid="TIT 3:15" /></para>
+  <chapter eid="TIT 3" />
+</usx>

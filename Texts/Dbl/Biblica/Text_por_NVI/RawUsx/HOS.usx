@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="HOS" style="id">- Nova Versão Internacional 2011 (Brazilian Portuguese) - 2018 Update</book>
+  <para style="rem">Copyright ©1993, 2000, 2011 Biblica, Inc.</para>
+  <para style="h">Oseias</para>
+  <para style="toc1">Oseias</para>
+  <para style="toc2">Oseias</para>
+  <para style="toc3">Os</para>
+  <para style="mt1">Oseias</para>
+  <chapter number="1" style="c" sid="HOS 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 1:1"/>Palavra do <char style="nd">Senhor</char> que veio a Oseias, filho de Beeri, durante os reinados de Uzias, Jotão, Acaz e Ezequias, reis de Judá, e de Jeroboão, filho de Jeoás, rei de Israel.<verse eid="HOS 1:1"/></para>
+  <para style="s1">A Mulher e os Filhos de Oseias</para>
+  <para style="p">
+    <verse number="2" style="v" sid="HOS 1:2"/>Quando o <char style="nd">Senhor</char> começou a falar por meio de Oseias, disse-lhe: “Vá, tome uma mulher adúltera e filhos da infidelidade, porque a nação é culpada do mais vergonhoso adultério por afastar-se do <char style="nd">Senhor</char>”. <verse eid="HOS 1:2"/><verse number="3" style="v" sid="HOS 1:3"/>Por isso ele se casou com Gômer, filha de Diblaim; ela engravidou e lhe deu um filho.<verse eid="HOS 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HOS 1:4"/>Então o <char style="nd">Senhor</char> disse a Oseias: “Dê-lhe o nome de Jezreel, porque logo castigarei a dinastia de Jeú por causa do massacre ocorrido em Jezreel, e darei fim ao reino de Israel. <verse eid="HOS 1:4"/><verse number="5" style="v" sid="HOS 1:5"/>Naquele dia, quebrarei o arco de Israel no vale de Jezreel”.<verse eid="HOS 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HOS 1:6"/>Gômer engravidou novamente e deu à luz uma filha. Então o <char style="nd">Senhor</char> disse a Oseias: “Dê-lhe o nome de Lo-Ruama<note caller="+" style="f"><char style="fr" closed="false">1.6 </char><char style="fq" closed="false">Lo-Ruama </char><char style="ft" closed="false">significa </char><char style="fqa" closed="false">não amada.</char></note>, pois não mais mostrarei amor para com a nação de Israel, não ao ponto de perdoá-la. <verse eid="HOS 1:6"/><verse number="7" style="v" sid="HOS 1:7"/>Contudo, tratarei com amor a nação de Judá; e eu lhe concederei vitória, não pelo arco, pela espada ou por combate, nem por cavalos e cavaleiros, mas pelo <char style="nd">Senhor</char>, o seu Deus”.<verse eid="HOS 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HOS 1:8"/>Depois de desmamar Lo-Ruama, Gômer teve outro filho. <verse eid="HOS 1:8"/><verse number="9" style="v" sid="HOS 1:9"/>Então o <char style="nd">Senhor</char> disse: “Dê-lhe o nome de Lo-Ami<note caller="+" style="f"><char style="fr" closed="false">1.9 </char><char style="fq" closed="false">Lo-Ami </char><char style="ft" closed="false">significa </char><char style="fqa" closed="false">não meu povo.</char></note>, pois vocês não são meu povo, e eu não sou seu Deus.<verse eid="HOS 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HOS 1:10"/>“Contudo os israelitas ainda serão como a areia da praia, que não se pode medir nem contar. No lugar onde se dizia a eles: ‘Vocês não são meu povo’, eles serão chamados ‘filhos do Deus vivo’. <verse eid="HOS 1:10"/><verse number="11" style="v" sid="HOS 1:11"/>O povo de Judá e o povo de Israel serão reunidos, e eles designarão para si um só líder e se levantarão da terra, pois será grande o dia de Jezreel.<verse eid="HOS 1:11"/></para>
+  <chapter eid="HOS 1"/>
+  <chapter number="2" style="c" sid="HOS 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 2:1"/>“Chamem a seus irmãos ‘meu povo’, e a suas irmãs ‘minhas amadas’.<verse eid="HOS 2:1"/></para>
+  <para style="s1">Castigo e Restauração de Israel</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 2:2"/>“Repreendam sua mãe, repreendam-na,</para>
+  <para style="q2" vid="HOS 2:2">pois ela não é minha mulher,</para>
+  <para style="q2" vid="HOS 2:2">e eu não sou seu marido.</para>
+  <para style="q1" vid="HOS 2:2">Que ela retire do rosto o sinal de adúltera</para>
+  <para style="q2" vid="HOS 2:2">e do meio dos seios a infidelidade.<verse eid="HOS 2:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 2:3"/>Do contrário, eu a deixarei nua</para>
+  <para style="q2" vid="HOS 2:3">como no dia em que nasceu;</para>
+  <para style="q1" vid="HOS 2:3">farei dela um deserto,</para>
+  <para style="q2" vid="HOS 2:3">uma terra ressequida,</para>
+  <para style="q2" vid="HOS 2:3">e a matarei de sede.<verse eid="HOS 2:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 2:4"/>Não tratarei com amor os seus filhos,</para>
+  <para style="q2" vid="HOS 2:4">porque são filhos de adultério.<verse eid="HOS 2:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 2:5"/>A mãe deles foi infiel,</para>
+  <para style="q2" vid="HOS 2:5">engravidou deles e está coberta de vergonha.</para>
+  <para style="q1" vid="HOS 2:5">Pois ela disse: ‘Irei atrás dos meus amantes,</para>
+  <para style="q2" vid="HOS 2:5">que me dão comida, água,</para>
+  <para style="q2" vid="HOS 2:5">lã, linho, azeite e bebida’.<verse eid="HOS 2:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 2:6"/>Por isso bloquearei o seu caminho com espinheiros;</para>
+  <para style="q2" vid="HOS 2:6">eu a cercarei de tal modo</para>
+  <para style="q2" vid="HOS 2:6">que ela não poderá encontrar o seu caminho.<verse eid="HOS 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 2:7"/>Ela correrá atrás dos seus amantes,</para>
+  <para style="q2" vid="HOS 2:7">mas não os alcançará;</para>
+  <para style="q1" vid="HOS 2:7">procurará por eles,</para>
+  <para style="q2" vid="HOS 2:7">mas não os encontrará.</para>
+  <para style="q1" vid="HOS 2:7">Então ela dirá:</para>
+  <para style="q2" vid="HOS 2:7">‘Voltarei a estar com o meu marido</para>
+  <para style="q2" vid="HOS 2:7">como no início,</para>
+  <para style="q1" vid="HOS 2:7">pois eu estava bem melhor</para>
+  <para style="q2" vid="HOS 2:7">do que agora’.<verse eid="HOS 2:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 2:8"/>Ela não reconheceu que fui eu</para>
+  <para style="q2" vid="HOS 2:8">quem lhe deu o trigo, o vinho e o azeite,</para>
+  <para style="q1" vid="HOS 2:8">quem a cobriu de ouro e de prata,</para>
+  <para style="q2" vid="HOS 2:8">que depois usaram para Baal.<verse eid="HOS 2:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 2:9"/>“Por isso levarei o meu trigo quando ele amadurecer,</para>
+  <para style="q2" vid="HOS 2:9">e o meu vinho quando ficar pronto.</para>
+  <para style="q1" vid="HOS 2:9">Arrancarei dela minha lã e meu linho,</para>
+  <para style="q2" vid="HOS 2:9">que serviam para cobrir a sua nudez.<verse eid="HOS 2:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 2:10"/>Pois agora vou expor a sua lascívia</para>
+  <para style="q2" vid="HOS 2:10">diante dos olhos dos seus amantes;</para>
+  <para style="q2" vid="HOS 2:10">ninguém a livrará das minhas mãos.<verse eid="HOS 2:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 2:11"/>Acabarei com a sua alegria:</para>
+  <para style="q2" vid="HOS 2:11">suas festas anuais,</para>
+  <para style="q1" vid="HOS 2:11">suas luas novas,</para>
+  <para style="q2" vid="HOS 2:11">seus dias de sábado</para>
+  <para style="q2" vid="HOS 2:11">e todas as suas festas fixas.<verse eid="HOS 2:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 2:12"/>Arruinarei suas videiras e suas figueiras,</para>
+  <para style="q2" vid="HOS 2:12">que, segundo ela, foram pagamento recebido de seus amantes;</para>
+  <para style="q1" vid="HOS 2:12">farei delas um matagal,</para>
+  <para style="q2" vid="HOS 2:12">e os animais selvagens as devorarão.<verse eid="HOS 2:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 2:13"/>Eu a castigarei pelos dias</para>
+  <para style="q2" vid="HOS 2:13">em que queimou incenso aos baalins;</para>
+  <para style="q1" vid="HOS 2:13">ela se enfeitou com anéis e joias</para>
+  <para style="q2" vid="HOS 2:13">e foi atrás dos seus amantes,</para>
+  <para style="q1" vid="HOS 2:13">mas de mim, ela se esqueceu”,</para>
+  <para style="q2" vid="HOS 2:13">declara o <char style="nd">Senhor</char>.<verse eid="HOS 2:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 2:14"/>“Portanto, agora vou atraí-la;</para>
+  <para style="q2" vid="HOS 2:14">vou levá-la para o deserto e falar-lhe com carinho.<verse eid="HOS 2:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 2:15"/>Ali devolverei a ela as suas vinhas</para>
+  <para style="q2" vid="HOS 2:15">e farei do vale de Acor<note caller="+" style="f"><char style="fr" closed="false">2.15 </char><char style="fq" closed="false">Acor </char><char style="ft" closed="false">significa </char><char style="fqa" closed="false">problemas.</char></note> uma porta de esperança.</para>
+  <para style="q1" vid="HOS 2:15">Ali ela me responderá como nos dias de sua infância,</para>
+  <para style="q2" vid="HOS 2:15">como no dia em que saiu do Egito.<verse eid="HOS 2:15"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 2:16"/>“Naquele dia”, declara o <char style="nd">Senhor</char>,</para>
+  <para style="q2" vid="HOS 2:16">“você me chamará ‘meu marido’;</para>
+  <para style="q2" vid="HOS 2:16">não me chamará mais ‘meu senhor<note caller="+" style="f"><char style="fr" closed="false">2.16 </char><char style="ft" closed="false">Hebraico: </char><char style="fqa" closed="false">Baal.</char></note>’.<verse eid="HOS 2:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="HOS 2:17"/>Tirarei dos seus lábios os nomes dos baalins;</para>
+  <para style="q2" vid="HOS 2:17">seus nomes não serão mais invocados.<verse eid="HOS 2:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="HOS 2:18"/>Naquele dia, em favor deles farei um acordo</para>
+  <para style="q2" vid="HOS 2:18">com os animais do campo, com as aves do céu</para>
+  <para style="q1" vid="HOS 2:18">e com os animais que rastejam pelo chão.</para>
+  <para style="q1" vid="HOS 2:18">Arco, espada e guerra,</para>
+  <para style="q2" vid="HOS 2:18">eu os abolirei da terra,</para>
+  <para style="q2" vid="HOS 2:18">para que todos possam viver em paz.<verse eid="HOS 2:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="HOS 2:19"/>Eu me casarei com você para sempre;</para>
+  <para style="q1" vid="HOS 2:19">eu me casarei com você</para>
+  <para style="q2" vid="HOS 2:19">com justiça e retidão,</para>
+  <para style="q1" vid="HOS 2:19">com amor e compaixão.<verse eid="HOS 2:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="HOS 2:20"/>Eu me casarei com você com fidelidade,</para>
+  <para style="q2" vid="HOS 2:20">e você reconhecerá o <char style="nd">Senhor</char>.<verse eid="HOS 2:20"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v" sid="HOS 2:21"/>“Naquele dia, eu responderei”,</para>
+  <para style="q2" vid="HOS 2:21">declara o <char style="nd">Senhor</char>.</para>
+  <para style="q1" vid="HOS 2:21">“Responderei aos céus,</para>
+  <para style="q2" vid="HOS 2:21">e eles responderão à terra;<verse eid="HOS 2:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="HOS 2:22"/>e a terra responderá ao cereal,</para>
+  <para style="q2" vid="HOS 2:22">ao vinho e ao azeite,</para>
+  <para style="q2" vid="HOS 2:22">e eles responderão a Jezreel<note caller="+" style="f"><char style="fr" closed="false">2.22 </char><char style="fq" closed="false">Jezreel </char><char style="ft" closed="false">significa </char><char style="fqa" closed="false">Deus planta.</char></note>.<verse eid="HOS 2:22"/></para>
+  <para style="q1">
+    <verse number="23" style="v" sid="HOS 2:23"/>Eu a plantarei para mim mesmo na terra;</para>
+  <para style="q2" vid="HOS 2:23">tratarei com amor aquela que chamei Não amada<note caller="+" style="f"><char style="fr" closed="false">2.23 </char><char style="ft" closed="false">Hebraico: </char><char style="fqa" closed="false">Lo-Ruama.</char></note>.</para>
+  <para style="q1" vid="HOS 2:23">Direi àquele chamado Não meu povo<note caller="+" style="f"><char style="fr" closed="false">2.23 </char><char style="ft" closed="false">Hebraico: </char><char style="fqa" closed="false">Lo-Ami.</char></note>: Você é meu povo;</para>
+  <para style="q2" vid="HOS 2:23">e ele dirá: ‘Tu és o meu Deus’.”<verse eid="HOS 2:23"/></para>
+  <chapter eid="HOS 2"/>
+  <chapter number="3" style="c" sid="HOS 3"/>
+  <para style="s1">A Reconciliação de Oseias com sua Mulher</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 3:1"/>O <char style="nd">Senhor</char> me disse: “Vá, trate novamente com amor sua mulher, apesar de ela ser amada por outro e ser adúltera. Ame-a como o <char style="nd">Senhor</char> ama os israelitas, apesar de eles se voltarem para outros deuses e de amarem os bolos sagrados de uvas passas”.<verse eid="HOS 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HOS 3:2"/>Por isso eu a comprei por cento e oitenta gramas<note caller="+" style="f"><char style="fr" closed="false">3.2 </char><char style="ft" closed="false">Hebraico: </char><char style="fqa" closed="false">15 siclos. </char><char style="ft" closed="false">Um siclo equivalia a 12 gramas.</char></note> de prata e um barril e meio<note caller="+" style="f"><char style="fr" closed="false">3.2 </char><char style="ft" closed="false">Hebraico: </char><char style="fqa" closed="false">1 hômer e meio. </char><char style="ft" closed="false">O hômer era uma medida de capacidade para secos. As estimativas variam entre 200 e 400 litros.</char></note> de cevada. <verse eid="HOS 3:2"/><verse number="3" style="v" sid="HOS 3:3"/>E eu lhe disse: Você viverá comigo<note caller="+" style="f"><char style="fr" closed="false">3.3 </char><char style="ft" closed="false">Ou </char><char style="fqa" closed="false">esperará por mim</char></note> por muitos dias; não será mais prostituta nem pertencerá a nenhum outro homem, e eu viverei com<note caller="+" style="f"><char style="fr" closed="false">3.3 </char><char style="ft" closed="false">Ou </char><char style="fqa" closed="false">eu esperarei por</char></note> você.<verse eid="HOS 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HOS 3:4"/>Pois os israelitas viverão muitos dias sem rei e sem líder, sem sacrifício e sem colunas sagradas, sem colete sacerdotal e sem ídolos de família. <verse eid="HOS 3:4"/><verse number="5" style="v" sid="HOS 3:5"/>Depois disso os israelitas voltarão e buscarão o <char style="nd">Senhor</char>, o seu Deus, e Davi, seu rei. Virão tremendo atrás do <char style="nd">Senhor</char> e das suas bênçãos, nos últimos dias.<verse eid="HOS 3:5"/></para>
+  <chapter eid="HOS 3"/>
+  <chapter number="4" style="c" sid="HOS 4"/>
+  <para style="s1">A Acusação contra Israel</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 4:1"/>Israelitas, ouçam a palavra do <char style="nd">Senhor</char>,</para>
+  <para style="q2" vid="HOS 4:1">porque o <char style="nd">Senhor</char> tem uma acusação</para>
+  <para style="q2" vid="HOS 4:1">contra vocês que vivem nesta terra:</para>
+  <para style="q1" vid="HOS 4:1">“A fidelidade e o amor desapareceram desta terra,</para>
+  <para style="q2" vid="HOS 4:1">como também o conhecimento de Deus.<verse eid="HOS 4:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 4:2"/>Só se veem maldição, mentira e assassinatos,</para>
+  <para style="q2" vid="HOS 4:2">roubo e mais roubo,</para>
+  <para style="q1" vid="HOS 4:2">adultério e mais adultério;</para>
+  <para style="q2" vid="HOS 4:2">ultrapassam todos os limites!</para>
+  <para style="q2" vid="HOS 4:2">E o derramamento de sangue é constante.<verse eid="HOS 4:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 4:3"/>Por isso a terra pranteia<note caller="+" style="f"><char style="fr" closed="false">4.3 </char><char style="ft" closed="false">Ou </char><char style="fqa" closed="false">está seca</char></note>,</para>
+  <para style="q2" vid="HOS 4:3">e todos os seus habitantes desfalecem;</para>
+  <para style="q1" vid="HOS 4:3">os animais do campo, as aves do céu</para>
+  <para style="q2" vid="HOS 4:3">e os peixes do mar estão morrendo.<verse eid="HOS 4:3"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 4:4"/>“Mas que ninguém discuta,</para>
+  <para style="q2" vid="HOS 4:4">que ninguém faça acusação,</para>
+  <para style="q2" vid="HOS 4:4">pois sou eu quem acusa os sacerdotes.<verse eid="HOS 4:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 4:5"/>Vocês tropeçam dia e noite,</para>
+  <para style="q2" vid="HOS 4:5">e os profetas tropeçam com vocês.</para>
+  <para style="q2" vid="HOS 4:5">Por isso destruirei sua mãe.<verse eid="HOS 4:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 4:6"/>Meu povo foi destruído</para>
+  <para style="q2" vid="HOS 4:6">por falta de conhecimento.</para>
+  <para style="b" vid="HOS 4:6"/>
+  <para style="q1" vid="HOS 4:6">“Uma vez que vocês rejeitaram o conhecimento,</para>
+  <para style="q2" vid="HOS 4:6">eu também os rejeito como meus sacerdotes;</para>
+  <para style="q1" vid="HOS 4:6">uma vez que vocês ignoraram a lei do seu Deus,</para>
+  <para style="q2" vid="HOS 4:6">eu também ignorarei seus filhos.<verse eid="HOS 4:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 4:7"/>Quanto mais aumentaram os sacerdotes,</para>
+  <para style="q2" vid="HOS 4:7">mais eles pecaram contra mim;</para>
+  <para style="q2" vid="HOS 4:7">trocaram a Glória deles<note caller="+" style="f"><char style="fr" closed="false">4.7 </char><char style="ft" closed="false">Conforme a Versão Siríaca e uma antiga tradição dos escribas hebreus. O Texto Massorético diz </char><char style="fqa" closed="false">trocarei a minha glória.</char></note> por algo vergonhoso.<verse eid="HOS 4:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 4:8"/>Eles se alimentam dos pecados do meu povo</para>
+  <para style="q2" vid="HOS 4:8">e têm prazer em sua iniquidade.<verse eid="HOS 4:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 4:9"/>Portanto, castigarei tanto o povo quanto os sacerdotes</para>
+  <para style="q2" vid="HOS 4:9">por causa dos seus caminhos,</para>
+  <para style="q2" vid="HOS 4:9">e lhes retribuirei seus atos.<verse eid="HOS 4:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 4:10"/>“Eles comerão, mas não terão o suficiente;</para>
+  <para style="q2" vid="HOS 4:10">eles se prostituirão, mas não aumentarão a prole,</para>
+  <para style="q1" vid="HOS 4:10">porque abandonaram o <char style="nd">Senhor</char></para>
+  <para style="q2" vid="HOS 4:10">para se entregarem <verse eid="HOS 4:10"/><verse number="11" style="v" sid="HOS 4:11"/>à prostituição,</para>
+  <para style="q1" vid="HOS 4:11">ao vinho velho e ao novo,</para>
+  <para style="q2" vid="HOS 4:11">prejudicando o discernimento do meu povo.<verse eid="HOS 4:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 4:12"/>Eles pedem conselhos a um ídolo de madeira,</para>
+  <para style="q2" vid="HOS 4:12">e de um pedaço de pau recebem resposta.</para>
+  <para style="q1" vid="HOS 4:12">Um espírito de prostituição os leva a desviar-se;</para>
+  <para style="q2" vid="HOS 4:12">eles são infiéis ao seu Deus.<verse eid="HOS 4:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 4:13"/>Sacrificam no alto dos montes</para>
+  <para style="q2" vid="HOS 4:13">e queimam incenso nas colinas,</para>
+  <para style="q1" vid="HOS 4:13">debaixo de um carvalho,</para>
+  <para style="q2" vid="HOS 4:13">de um estoraque<note caller="+" style="f"><char style="fr" closed="false">4.13 </char><char style="ft" closed="false">Ou </char><char style="fqa" closed="false">benjoim</char><char style="ft" closed="false">, um arbusto ornamental, de origem asiática, da família das estiracáceas.</char></note> ou de um terebinto<note caller="+" style="f"><char style="fr" closed="false">4.13 </char><char style="ft" closed="false">Árvore que, com incisão, produz goma aromática.</char></note>,</para>
+  <para style="q2" vid="HOS 4:13">onde a sombra é agradável.</para>
+  <para style="q1" vid="HOS 4:13">Por isso as suas filhas se prostituem</para>
+  <para style="q2" vid="HOS 4:13">e as suas noras adulteram.<verse eid="HOS 4:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 4:14"/>“Não castigarei suas filhas por se prostituírem,</para>
+  <para style="q2" vid="HOS 4:14">nem suas noras por adulterarem,</para>
+  <para style="q1" vid="HOS 4:14">porque os próprios homens se associam a meretrizes</para>
+  <para style="q2" vid="HOS 4:14">e participam dos sacrifícios oferecidos</para>
+  <para style="q1" vid="HOS 4:14">pelas prostitutas cultuais—</para>
+  <para style="q2" vid="HOS 4:14">um povo sem entendimento precipita-se à ruína!<verse eid="HOS 4:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 4:15"/>“Embora você adultere, ó Israel,</para>
+  <para style="q2" vid="HOS 4:15">que Judá não se torne culpada!</para>
+  <para style="b" vid="HOS 4:15"/>
+  <para style="q1" vid="HOS 4:15">“Deixem de ir a Gilgal; não subam a Bete-Áven<note caller="+" style="f"><char style="fr" closed="false">4.15 </char><char style="fq" closed="false">Bete-Áven </char><char style="ft" closed="false">significa </char><char style="fqa" closed="false">casa da impiedade </char><char style="ft" closed="false">(um nome para </char><char style="fqa" closed="false">Betel</char><char style="ft" closed="false">, que significa </char><char style="fqa" closed="false">casa de Deus</char><char style="ft" closed="false">).</char></note>.</para>
+  <para style="q2" vid="HOS 4:15">E não digam: ‘Juro pelo nome do <char style="nd">Senhor</char>!’<verse eid="HOS 4:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 4:16"/>Os israelitas são rebeldes</para>
+  <para style="q2" vid="HOS 4:16">como bezerra indomável.</para>
+  <para style="q1" vid="HOS 4:16">Como pode o <char style="nd">Senhor</char> apascentá-los</para>
+  <para style="q2" vid="HOS 4:16">como cordeiros na campina?<verse eid="HOS 4:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="HOS 4:17"/>Efraim aliou-se a ídolos;</para>
+  <para style="q2" vid="HOS 4:17">deixem-no só!<verse eid="HOS 4:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="HOS 4:18"/>Mesmo quando acaba a bebida,</para>
+  <para style="q2" vid="HOS 4:18">eles continuam em sua prostituição;</para>
+  <para style="q1" vid="HOS 4:18">seus governantes amam profundamente</para>
+  <para style="q2" vid="HOS 4:18">os caminhos vergonhosos.<verse eid="HOS 4:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="HOS 4:19"/>Um redemoinho os varrerá para longe,</para>
+  <para style="q2" vid="HOS 4:19">e os seus altares lhes trarão vergonha.<verse eid="HOS 4:19"/></para>
+  <chapter eid="HOS 4"/>
+  <chapter number="5" style="c" sid="HOS 5"/>
+  <para style="s1">Julgamento contra Israel</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 5:1"/>“Ouçam isto, sacerdotes!</para>
+  <para style="q2" vid="HOS 5:1">Atenção, israelitas!</para>
+  <para style="q1" vid="HOS 5:1">Escute, ó família real!</para>
+  <para style="q2" vid="HOS 5:1">Esta sentença é contra vocês:</para>
+  <para style="q1" vid="HOS 5:1">Vocês têm sido uma armadilha em Mispá,</para>
+  <para style="q2" vid="HOS 5:1">uma rede estendida sobre o monte Tabor.<verse eid="HOS 5:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 5:2"/>Os rebeldes estão envolvidos em matança.</para>
+  <para style="q2" vid="HOS 5:2">Eu disciplinarei todos eles.<verse eid="HOS 5:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 5:3"/>Conheço Efraim;</para>
+  <para style="q2" vid="HOS 5:3">Israel não pode se esconder de mim.</para>
+  <para style="q1" vid="HOS 5:3">Efraim, agora você se lançou à prostituição;</para>
+  <para style="q2" vid="HOS 5:3">Israel se corrompeu.<verse eid="HOS 5:3"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 5:4"/>“Suas ações não lhes permitem</para>
+  <para style="q2" vid="HOS 5:4">voltar para o seu Deus.</para>
+  <para style="q1" vid="HOS 5:4">Um espírito de prostituição está no coração deles;</para>
+  <para style="q2" vid="HOS 5:4">não reconhecem o <char style="nd">Senhor</char>.<verse eid="HOS 5:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 5:5"/>A arrogância de Israel testifica contra eles;</para>
+  <para style="q2" vid="HOS 5:5">Israel e Efraim tropeçam em seu pecado;</para>
+  <para style="q2" vid="HOS 5:5">Judá também tropeça com eles.<verse eid="HOS 5:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 5:6"/>Quando eles forem buscar o <char style="nd">Senhor</char></para>
+  <para style="q2" vid="HOS 5:6">com todos os seus rebanhos</para>
+  <para style="q1" vid="HOS 5:6">e com todo o seu gado, não o encontrarão;</para>
+  <para style="q2" vid="HOS 5:6">ele se afastou deles.<verse eid="HOS 5:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 5:7"/>Traíram o <char style="nd">Senhor</char>;</para>
+  <para style="q2" vid="HOS 5:7">geraram filhos ilegítimos.</para>
+  <para style="q1" vid="HOS 5:7">Agora suas festas de lua nova os devorarão, tanto a eles</para>
+  <para style="q2" vid="HOS 5:7">como as suas plantações.<verse eid="HOS 5:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 5:8"/>“Toquem a trombeta em Gibeá</para>
+  <para style="q2" vid="HOS 5:8">e a corneta em Ramá.</para>
+  <para style="q1" vid="HOS 5:8">Deem o grito de guerra em Bete-Áven;</para>
+  <para style="q2" vid="HOS 5:8">esteja na vanguarda, ó Benjamim.<verse eid="HOS 5:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 5:9"/>Efraim será arrasado no dia do castigo.</para>
+  <para style="q2" vid="HOS 5:9">Entre as tribos de Israel,</para>
+  <para style="q2" vid="HOS 5:9">eu proclamo o que acontecerá.<verse eid="HOS 5:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 5:10"/>Os líderes de Judá são como os que</para>
+  <para style="q2" vid="HOS 5:10">mudam os marcos dos limites.</para>
+  <para style="q1" vid="HOS 5:10">Derramarei sobre eles a minha ira</para>
+  <para style="q2" vid="HOS 5:10">como uma inundação.<verse eid="HOS 5:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 5:11"/>Efraim está oprimido,</para>
+  <para style="q2" vid="HOS 5:11">esmagado pelo juízo,</para>
+  <para style="q2" vid="HOS 5:11">porque decidiu ir atrás de ídolos.<verse eid="HOS 5:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 5:12"/>Sou como uma traça para Efraim,</para>
+  <para style="q2" vid="HOS 5:12">como podridão para o povo de Judá.<verse eid="HOS 5:12"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 5:13"/>“Quando Efraim viu a sua enfermidade</para>
+  <para style="q2" vid="HOS 5:13">e Judá os seus tumores,</para>
+  <para style="q1" vid="HOS 5:13">Efraim se voltou para a Assíria</para>
+  <para style="q2" vid="HOS 5:13">e mandou buscar a ajuda do grande rei.</para>
+  <para style="q1" vid="HOS 5:13">Mas ele não tem condições de curar vocês,</para>
+  <para style="q2" vid="HOS 5:13">nem pode sarar os seus tumores.<verse eid="HOS 5:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 5:14"/>Pois serei como um leão para Efraim</para>
+  <para style="q2" vid="HOS 5:14">e como um leão grande para Judá.</para>
+  <para style="q1" vid="HOS 5:14">Eu os despedaçarei e irei embora;</para>
+  <para style="q2" vid="HOS 5:14">eu os levarei sem que ninguém possa livrá-los.<verse eid="HOS 5:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 5:15"/>Então voltarei ao meu lugar</para>
+  <para style="q2" vid="HOS 5:15">até que eles admitam sua culpa.</para>
+  <para style="q1" vid="HOS 5:15">Eles buscarão a minha face;</para>
+  <para style="q2" vid="HOS 5:15">em sua necessidade eles me buscarão ansiosamente”.<verse eid="HOS 5:15"/></para>
+  <chapter eid="HOS 5"/>
+  <chapter number="6" style="c" sid="HOS 6"/>
+  <para style="s1">Israel Obstinado</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 6:1"/>“Venham, voltemos para o <char style="nd">Senhor</char>.</para>
+  <para style="q1" vid="HOS 6:1">Ele nos despedaçou,</para>
+  <para style="q2" vid="HOS 6:1">mas nos trará cura;</para>
+  <para style="q1" vid="HOS 6:1">ele nos feriu,</para>
+  <para style="q2" vid="HOS 6:1">mas sarará nossas feridas.<verse eid="HOS 6:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 6:2"/>Depois de dois dias ele nos dará vida novamente;</para>
+  <para style="q2" vid="HOS 6:2">ao terceiro dia, ele nos restaurará,</para>
+  <para style="q2" vid="HOS 6:2">para que vivamos em sua presença.<verse eid="HOS 6:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 6:3"/>Conheçamos o <char style="nd">Senhor</char>;</para>
+  <para style="q2" vid="HOS 6:3">esforcemo-nos por conhecê-lo.</para>
+  <para style="q1" vid="HOS 6:3">Tão certo como nasce o sol,</para>
+  <para style="q2" vid="HOS 6:3">ele aparecerá;</para>
+  <para style="q1" vid="HOS 6:3">virá para nós como as chuvas de inverno,</para>
+  <para style="q2" vid="HOS 6:3">como as chuvas de primavera que regam a terra.”<verse eid="HOS 6:3"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 6:4"/>“Que posso fazer com você, Efraim?</para>
+  <para style="q2" vid="HOS 6:4">Que posso fazer com você, Judá?</para>
+  <para style="q1" vid="HOS 6:4">Seu amor é como a neblina da manhã,</para>
+  <para style="q2" vid="HOS 6:4">como o primeiro orvalho que logo evapora.<verse eid="HOS 6:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 6:5"/>Por isso eu os despedacei por meio dos meus profetas,</para>
+  <para style="q2" vid="HOS 6:5">eu os matei com as palavras da minha boca;</para>
+  <para style="q2" vid="HOS 6:5">os meus juízos reluziram como relâmpagos sobre vocês.<verse eid="HOS 6:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 6:6"/>Pois desejo misericórdia e não sacrifícios;</para>
+  <para style="q2" vid="HOS 6:6">conhecimento de Deus em vez de holocaustos<note caller="+" style="f"><char style="fr" closed="false">6.6 </char><char style="ft" closed="false">Isto é, sacrifícios totalmente queimados.</char></note>.<verse eid="HOS 6:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 6:7"/>Na cidade de Adão<note caller="+" style="f"><char style="fr" closed="false">6.7 </char><char style="ft" closed="false">Ou </char><char style="fqa" closed="false">Como em Adão</char><char style="ft" closed="false">; ou ainda </char><char style="fqa" closed="false">Como homens</char></note>,</para>
+  <para style="q2" vid="HOS 6:7">eles quebraram a aliança e me foram infiéis.<verse eid="HOS 6:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 6:8"/>Gileade é uma cidade de ímpios,</para>
+  <para style="q2" vid="HOS 6:8">maculada de sangue.<verse eid="HOS 6:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 6:9"/>Assim como os assaltantes ficam de emboscada</para>
+  <para style="q2" vid="HOS 6:9">à espera de um homem,</para>
+  <para style="q1" vid="HOS 6:9">assim fazem também os bandos de sacerdotes;</para>
+  <para style="q2" vid="HOS 6:9">eles assassinam na estrada de Siquém</para>
+  <para style="q2" vid="HOS 6:9">e cometem outros crimes vergonhosos.<verse eid="HOS 6:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 6:10"/>Vi uma coisa terrível na terra de Israel.</para>
+  <para style="q2" vid="HOS 6:10">Ali Efraim se prostitui,</para>
+  <para style="q2" vid="HOS 6:10">e Israel está contaminado.<verse eid="HOS 6:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 6:11"/>“Também para você, Judá, foi determinada uma colheita</para>
+  <para style="q2" vid="HOS 6:11">para quando eu trouxer de volta o meu povo.<verse eid="HOS 6:11"/></para>
+  <para style="b"/>
+  <chapter eid="HOS 6"/>
+  <chapter number="7" style="c" sid="HOS 7"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 7:1"/>“Quando eu tento curar Israel,</para>
+  <para style="q2" vid="HOS 7:1">o mal de Efraim fica exposto</para>
+  <para style="q2" vid="HOS 7:1">e os crimes de Samaria são revelados.</para>
+  <para style="q1" vid="HOS 7:1">Pois praticam o engano,</para>
+  <para style="q2" vid="HOS 7:1">ladrões entram nas casas,</para>
+  <para style="q2" vid="HOS 7:1">bandidos roubam nas ruas;<verse eid="HOS 7:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 7:2"/>mas eles não percebem</para>
+  <para style="q2" vid="HOS 7:2">que eu me lembro de todas as suas más obras.</para>
+  <para style="q1" vid="HOS 7:2">Seus pecados os envolvem;</para>
+  <para style="q2" vid="HOS 7:2">eu os vejo constantemente.<verse eid="HOS 7:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 7:3"/>“Eles alegram o rei com as suas impiedades,</para>
+  <para style="q2" vid="HOS 7:3">os líderes, com as suas mentiras.<verse eid="HOS 7:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 7:4"/>São todos adúlteros,</para>
+  <para style="q2" vid="HOS 7:4">queimando como um forno</para>
+  <para style="q1" vid="HOS 7:4">cujo fogo o padeiro não precisa atiçar,</para>
+  <para style="q2" vid="HOS 7:4">desde quando sova a massa até quando a faz crescer.<verse eid="HOS 7:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 7:5"/>No dia da festa de nosso rei</para>
+  <para style="q2" vid="HOS 7:5">os líderes são inflamados pelo vinho,</para>
+  <para style="q2" vid="HOS 7:5">e o rei dá as mãos aos zombadores.<verse eid="HOS 7:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 7:6"/>Quando se aproximam com suas intrigas,</para>
+  <para style="q2" vid="HOS 7:6">seus corações ardem como um forno.</para>
+  <para style="q1" vid="HOS 7:6">A fúria deles arde lentamente a noite toda;</para>
+  <para style="q2" vid="HOS 7:6">pela manhã queima como chama abrasadora.<verse eid="HOS 7:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 7:7"/>Todos eles se esquentam como um forno</para>
+  <para style="q2" vid="HOS 7:7">e devoram os seus governantes.</para>
+  <para style="q1" vid="HOS 7:7">Todos os seus reis caem,</para>
+  <para style="q2" vid="HOS 7:7">e ninguém clama a mim.<verse eid="HOS 7:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 7:8"/>“Efraim mistura-se com as nações;</para>
+  <para style="q2" vid="HOS 7:8">Efraim é um bolo que não foi virado.<verse eid="HOS 7:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 7:9"/>Estrangeiros sugam sua força,</para>
+  <para style="q2" vid="HOS 7:9">mas ele não o percebe.</para>
+  <para style="q1" vid="HOS 7:9">Seu cabelo vai ficando grisalho,<note caller="+" style="f"><char style="fr" closed="false">7.9 </char><char style="ft" closed="false">Hebraico: </char><char style="fqa" closed="false">A cinza espalha-se pelo seu cabelo.</char></note></para>
+  <para style="q2" vid="HOS 7:9">mas ele nem repara nisso.<verse eid="HOS 7:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 7:10"/>A arrogância de Israel testifica contra ele,</para>
+  <para style="q2" vid="HOS 7:10">mas, apesar de tudo isso,</para>
+  <para style="q1" vid="HOS 7:10">ele não se volta para o <char style="nd">Senhor</char>, para o seu Deus,</para>
+  <para style="q2" vid="HOS 7:10">e não o busca.<verse eid="HOS 7:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 7:11"/>“Efraim é como uma pomba</para>
+  <para style="q2" vid="HOS 7:11">facilmente enganada e sem entendimento;</para>
+  <para style="q1" vid="HOS 7:11">ora apela para o Egito,</para>
+  <para style="q2" vid="HOS 7:11">ora volta-se para a Assíria.<verse eid="HOS 7:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 7:12"/>Quando se forem,</para>
+  <para style="q2" vid="HOS 7:12">atirarei sobre eles a minha rede;</para>
+  <para style="q1" vid="HOS 7:12">eu os farei descer como as aves dos céus.</para>
+  <para style="q2" vid="HOS 7:12">Quando os ouvir em sua reunião, eu os apanharei.<verse eid="HOS 7:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 7:13"/>Ai deles,</para>
+  <para style="q2" vid="HOS 7:13">porque se afastaram de mim!</para>
+  <para style="q1" vid="HOS 7:13">Destruição venha sobre eles,</para>
+  <para style="q2" vid="HOS 7:13">porque se rebelaram contra mim!</para>
+  <para style="q1" vid="HOS 7:13">Eu desejo redimi-los,</para>
+  <para style="q2" vid="HOS 7:13">mas eles falam mentiras a meu respeito.<verse eid="HOS 7:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 7:14"/>Eles não clamam a mim do fundo do coração</para>
+  <para style="q2" vid="HOS 7:14">quando gemem orando em suas camas.</para>
+  <para style="q1" vid="HOS 7:14">Ajuntam-se<note caller="+" style="f"><char style="fr" closed="false">7.14 </char><char style="ft" closed="false">Conforme a maioria dos manuscritos do Texto Massorético. Alguns manuscritos do Texto Massorético e a Septuaginta dizem </char><char style="fqa" closed="false">Eles se cortam.</char></note> por causa do trigo e do vinho,</para>
+  <para style="q2" vid="HOS 7:14">mas se afastam de mim.<verse eid="HOS 7:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 7:15"/>Eu os ensinei e os fortaleci,</para>
+  <para style="q2" vid="HOS 7:15">mas eles tramam o mal contra mim.<verse eid="HOS 7:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 7:16"/>Eles não se voltam para o Altíssimo;</para>
+  <para style="q2" vid="HOS 7:16">são como um arco defeituoso.</para>
+  <para style="q1" vid="HOS 7:16">Seus líderes serão mortos à espada</para>
+  <para style="q2" vid="HOS 7:16">por causa de suas palavras insolentes.</para>
+  <para style="q1" vid="HOS 7:16">E por isso serão ridicularizados no Egito.<verse eid="HOS 7:16"/></para>
+  <chapter eid="HOS 7"/>
+  <chapter number="8" style="c" sid="HOS 8"/>
+  <para style="s1">O Castigo de Israel</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 8:1"/>“Coloquem a trombeta em seus lábios!</para>
+  <para style="q2" vid="HOS 8:1">Ele vem ameaçador como uma águia</para>
+  <para style="q1" vid="HOS 8:1">sobre o templo do <char style="nd">Senhor</char>,</para>
+  <para style="q2" vid="HOS 8:1">porquanto quebraram a minha aliança</para>
+  <para style="q2" vid="HOS 8:1">e se rebelaram contra a minha Lei.<verse eid="HOS 8:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 8:2"/>Israel clama a mim:</para>
+  <para style="q2" vid="HOS 8:2">‘Ó nosso Deus, nós te reconhecemos!’<verse eid="HOS 8:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 8:3"/>Mas Israel rejeitou o que é bom;</para>
+  <para style="q2" vid="HOS 8:3">um inimigo o perseguirá.<verse eid="HOS 8:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 8:4"/>Eles instituíram reis sem o meu consentimento;</para>
+  <para style="q2" vid="HOS 8:4">escolheram líderes sem a minha aprovação.</para>
+  <para style="q1" vid="HOS 8:4">Com prata e ouro fizeram ídolos para si,</para>
+  <para style="q2" vid="HOS 8:4">para a sua própria destruição.<verse eid="HOS 8:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 8:5"/>Lance fora o seu ídolo em forma de bezerro, ó Samaria!</para>
+  <para style="q2" vid="HOS 8:5">A minha ira se acende contra eles.</para>
+  <para style="q2" vid="HOS 8:5">Até quando serão incapazes de pureza?<verse eid="HOS 8:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 8:6"/>Este bezerro procede de Israel! Um escultor o fez.</para>
+  <para style="q2" vid="HOS 8:6">Ele não é Deus.</para>
+  <para style="q1" vid="HOS 8:6">Será partido em pedaços</para>
+  <para style="q2" vid="HOS 8:6">o bezerro de Samaria.<verse eid="HOS 8:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 8:7"/>“Eles semeiam vento</para>
+  <para style="q2" vid="HOS 8:7">e colhem tempestade.</para>
+  <para style="q1" vid="HOS 8:7">Talo sem espiga;</para>
+  <para style="q2" vid="HOS 8:7">que não produz farinha.</para>
+  <para style="q1" vid="HOS 8:7">Ainda que produzisse trigo,</para>
+  <para style="q2" vid="HOS 8:7">estrangeiros o devorariam.<verse eid="HOS 8:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 8:8"/>Israel é devorado;</para>
+  <para style="q2" vid="HOS 8:8">agora está entre as nações</para>
+  <para style="q2" vid="HOS 8:8">como algo sem valor;<verse eid="HOS 8:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 8:9"/>foi para a Assíria.</para>
+  <para style="q1" vid="HOS 8:9">O jumento selvagem mantém-se livre,</para>
+  <para style="q2" vid="HOS 8:9">mas Efraim vendeu-se para os seus amantes.<verse eid="HOS 8:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 8:10"/>Embora tenham se vendido às nações,</para>
+  <para style="q2" vid="HOS 8:10">agora os ajuntarei,</para>
+  <para style="q1" vid="HOS 8:10">e logo começarão a definhar</para>
+  <para style="q2" vid="HOS 8:10">sob a opressão do poderoso rei.<verse eid="HOS 8:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 8:11"/>“Embora Efraim tenha construído</para>
+  <para style="q2" vid="HOS 8:11">muitos altares para ofertas pelo pecado,</para>
+  <para style="q2" vid="HOS 8:11">eles se tornaram altares para o pecado.<verse eid="HOS 8:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 8:12"/>Eu lhes escrevi todos os ensinos da minha Lei,</para>
+  <para style="q2" vid="HOS 8:12">mas eles os consideraram algo estranho.<verse eid="HOS 8:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 8:13"/>Eles oferecem sacrifícios e comem a carne,</para>
+  <para style="q2" vid="HOS 8:13">mas o <char style="nd">Senhor</char> não se agrada deles.</para>
+  <para style="q1" vid="HOS 8:13">Doravante, ele se lembrará da impiedade deles</para>
+  <para style="q2" vid="HOS 8:13">e castigará os seus pecados:</para>
+  <para style="q2" vid="HOS 8:13">eles voltarão para o Egito.<verse eid="HOS 8:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 8:14"/>Israel esqueceu o seu Criador</para>
+  <para style="q2" vid="HOS 8:14">e construiu palácios;</para>
+  <para style="q1" vid="HOS 8:14">Judá fortificou muitas cidades.</para>
+  <para style="q2" vid="HOS 8:14">Mas sobre as suas cidades enviarei fogo</para>
+  <para style="q2" vid="HOS 8:14">que consumirá suas fortalezas.”<verse eid="HOS 8:14"/></para>
+  <chapter eid="HOS 8"/>
+  <chapter number="9" style="c" sid="HOS 9"/>
+  <para style="s1">O Castigo de Israel</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 9:1"/>Não se regozije, ó Israel;</para>
+  <para style="q2" vid="HOS 9:1">não se alegre como as outras nações.</para>
+  <para style="q1" vid="HOS 9:1">Pois você se prostituiu,</para>
+  <para style="q2" vid="HOS 9:1">abandonando o seu Deus;</para>
+  <para style="q1" vid="HOS 9:1">você ama o salário da prostituição</para>
+  <para style="q2" vid="HOS 9:1">em cada eira de trigo.<verse eid="HOS 9:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 9:2"/>Os produtos da eira e do lagar não alimentarão o povo;</para>
+  <para style="q2" vid="HOS 9:2">o vinho novo lhes faltará.<verse eid="HOS 9:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 9:3"/>Eles não permanecerão na terra do <char style="nd">Senhor</char>;</para>
+  <para style="q2" vid="HOS 9:3">Efraim voltará para o Egito,</para>
+  <para style="q2" vid="HOS 9:3">e na Assíria comerá comida impura.<verse eid="HOS 9:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 9:4"/>Eles não derramarão ofertas de vinho para o <char style="nd">Senhor</char>,</para>
+  <para style="q2" vid="HOS 9:4">nem os seus sacrifícios lhe agradarão.</para>
+  <para style="q1" vid="HOS 9:4">Tais sacrifícios serão para eles</para>
+  <para style="q2" vid="HOS 9:4">como o pão dos pranteadores,</para>
+  <para style="q2" vid="HOS 9:4">que torna impuro quem o come.</para>
+  <para style="q1" vid="HOS 9:4">Essa comida será para eles mesmos;</para>
+  <para style="q2" vid="HOS 9:4">não entrará no templo do <char style="nd">Senhor</char>.<verse eid="HOS 9:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 9:5"/>O que farão vocês no dia de suas festas fixas,</para>
+  <para style="q2" vid="HOS 9:5">nos dias de festa do <char style="nd">Senhor</char>?<verse eid="HOS 9:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 9:6"/>Vejam! Fogem da destruição,</para>
+  <para style="q2" vid="HOS 9:6">mas o Egito os ajuntará,</para>
+  <para style="q2" vid="HOS 9:6">e Mênfis os sepultará.</para>
+  <para style="q1" vid="HOS 9:6">Os seus tesouros de prata as urtigas vão herdar;</para>
+  <para style="q2" vid="HOS 9:6">os cardos cobrirão totalmente as suas tendas.<verse eid="HOS 9:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 9:7"/>Os dias de castigo vêm,</para>
+  <para style="q2" vid="HOS 9:7">os dias de punição estão chegando.</para>
+  <para style="q1" vid="HOS 9:7">Que Israel o saiba.</para>
+  <para style="q1" vid="HOS 9:7">Por serem tantos os pecados,</para>
+  <para style="q2" vid="HOS 9:7">e tão grande a hostilidade de vocês,</para>
+  <para style="q1" vid="HOS 9:7">o profeta é considerado um tolo,</para>
+  <para style="q2" vid="HOS 9:7">e o homem inspirado, um louco violento.<verse eid="HOS 9:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 9:8"/>O profeta, junto ao meu Deus,</para>
+  <para style="q2" vid="HOS 9:8">é a sentinela que vigia Efraim;<note caller="+" style="f"><char style="fr" closed="false">9.8 </char><char style="ft" closed="false">Ou </char><char style="fqa" closed="false">O profeta é a sentinela que vigia Efraim, o povo do meu Deus;</char></note></para>
+  <para style="q1" vid="HOS 9:8">contudo, laços o aguardam em todas as suas veredas,</para>
+  <para style="q2" vid="HOS 9:8">e a hostilidade, no templo do seu Deus.<verse eid="HOS 9:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 9:9"/>Eles mergulharam na corrupção,</para>
+  <para style="q2" vid="HOS 9:9">como nos dias de Gibeá.</para>
+  <para style="q1" vid="HOS 9:9">Deus se lembrará de sua iniquidade</para>
+  <para style="q2" vid="HOS 9:9">e os castigará por seus pecados.<verse eid="HOS 9:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 9:10"/>“Quando encontrei Israel,</para>
+  <para style="q2" vid="HOS 9:10">foi como encontrar uvas no deserto;</para>
+  <para style="q1" vid="HOS 9:10">quando vi os antepassados de vocês,</para>
+  <para style="q2" vid="HOS 9:10">foi como ver os primeiros frutos de uma figueira.</para>
+  <para style="q1" vid="HOS 9:10">Mas, quando eles vieram a Baal-Peor,</para>
+  <para style="q2" vid="HOS 9:10">consagraram-se àquele ídolo vergonhoso</para>
+  <para style="q1" vid="HOS 9:10">e se tornaram tão repugnantes</para>
+  <para style="q2" vid="HOS 9:10">quanto aquilo que amaram.<verse eid="HOS 9:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 9:11"/>A glória de Efraim lhe fugirá como pássaro:</para>
+  <para style="q2" vid="HOS 9:11">nenhum nascimento, nenhuma gravidez, nenhuma concepção.<verse eid="HOS 9:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 9:12"/>Mesmo que criem filhos,</para>
+  <para style="q2" vid="HOS 9:12">porei de luto cada um deles.</para>
+  <para style="q1" vid="HOS 9:12">Ai deles</para>
+  <para style="q2" vid="HOS 9:12">quando eu me afastar!<verse eid="HOS 9:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 9:13"/>Vi Efraim, plantado num lugar agradável, como Tiro.</para>
+  <para style="q2" vid="HOS 9:13">Mas Efraim entregará seus filhos ao matador.”<verse eid="HOS 9:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 9:14"/>Ó <char style="nd">Senhor</char>, que darás a eles?</para>
+  <para style="q2" vid="HOS 9:14">Dá-lhes ventres que abortem e seios ressecados.<verse eid="HOS 9:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 9:15"/>“Toda a sua impiedade começou em Gilgal;</para>
+  <para style="q2" vid="HOS 9:15">de fato, ali os odiei.</para>
+  <para style="q1" vid="HOS 9:15">Por causa dos seus pecados</para>
+  <para style="q2" vid="HOS 9:15">eu os expulsarei da minha terra.</para>
+  <para style="q1" vid="HOS 9:15">Não os amarei mais;</para>
+  <para style="q2" vid="HOS 9:15">todos os seus líderes são rebeldes.<verse eid="HOS 9:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 9:16"/>Efraim está ferido,</para>
+  <para style="q2" vid="HOS 9:16">sua raiz está seca,</para>
+  <para style="q2" vid="HOS 9:16">eles não produzem frutos.</para>
+  <para style="q1" vid="HOS 9:16">Mesmo que criem filhos,</para>
+  <para style="q2" vid="HOS 9:16">eu matarei sua prole querida.”<verse eid="HOS 9:16"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v" sid="HOS 9:17"/>Meu Deus os rejeitará</para>
+  <para style="q2" vid="HOS 9:17">porque não lhe deram ouvidos;</para>
+  <para style="q2" vid="HOS 9:17">serão peregrinos entre as nações.<verse eid="HOS 9:17"/></para>
+  <para style="b"/>
+  <chapter eid="HOS 9"/>
+  <chapter number="10" style="c" sid="HOS 10"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 10:1"/>Israel era como videira viçosa;</para>
+  <para style="q2" vid="HOS 10:1">cobria-se de frutos.</para>
+  <para style="q1" vid="HOS 10:1">Quanto mais produzia,</para>
+  <para style="q2" vid="HOS 10:1">mais altares construía;</para>
+  <para style="q1" vid="HOS 10:1">Quanto mais sua terra prosperava,</para>
+  <para style="q2" vid="HOS 10:1">mais enfeitava suas colunas sagradas.<verse eid="HOS 10:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 10:2"/>O coração deles é enganoso,</para>
+  <para style="q2" vid="HOS 10:2">e agora devem carregar sua culpa.</para>
+  <para style="q1" vid="HOS 10:2">O <char style="nd">Senhor</char> demolirá os seus altares</para>
+  <para style="q2" vid="HOS 10:2">e destruirá suas colunas sagradas.<verse eid="HOS 10:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 10:3"/>Então eles dirão: “Não temos nenhum rei</para>
+  <para style="q2" vid="HOS 10:3">porque não reverenciamos o <char style="nd">Senhor</char>.</para>
+  <para style="q1" vid="HOS 10:3">Mas, mesmo que tivéssemos um rei,</para>
+  <para style="q2" vid="HOS 10:3">o que ele poderia fazer por nós?”<verse eid="HOS 10:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 10:4"/>Eles fazem muitas promessas,</para>
+  <para style="q2" vid="HOS 10:4">fazem juramentos e acordos falsos;</para>
+  <para style="q1" vid="HOS 10:4">por isso brotam as demandas</para>
+  <para style="q2" vid="HOS 10:4">como ervas venenosas num campo arado.<verse eid="HOS 10:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 10:5"/>O povo que mora em Samaria</para>
+  <para style="q2" vid="HOS 10:5">teme pelo ídolo em forma de bezerro de Bete-Áven<note caller="+" style="f"><char style="fr" closed="false">10.5 </char><char style="fq" closed="false">Bete-Áven </char><char style="ft" closed="false">significa </char><char style="fqa" closed="false">casa da impiedade </char><char style="ft" closed="false">(referência a </char><char style="fqa" closed="false">Betel</char><char style="ft" closed="false">, que significa </char><char style="fqa" closed="false">casa de Deus</char><char style="ft" closed="false">).</char></note>.</para>
+  <para style="q1" vid="HOS 10:5">Seu povo pranteará por ele,</para>
+  <para style="q2" vid="HOS 10:5">como também os seus sacerdotes idólatras,</para>
+  <para style="q1" vid="HOS 10:5">que se regozijavam por seu esplendor;</para>
+  <para style="q2" vid="HOS 10:5">porque foi tirado deles e levado para o exílio.<verse eid="HOS 10:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 10:6"/>Sim, até ele será levado para a Assíria</para>
+  <para style="q2" vid="HOS 10:6">como tributo para o grande rei.</para>
+  <para style="q1" vid="HOS 10:6">Efraim sofrerá humilhação;</para>
+  <para style="q2" vid="HOS 10:6">e Israel será envergonhado por causa do seu ídolo de madeira.<verse eid="HOS 10:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 10:7"/>Samaria e seu rei serão arrastados</para>
+  <para style="q2" vid="HOS 10:7">como um graveto nas águas.<verse eid="HOS 10:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 10:8"/>Os altares da impiedade<note caller="+" style="f"><char style="fr" closed="false">10.8 </char><char style="ft" closed="false">Hebraico: </char><char style="fqa" closed="false">Áven</char><char style="ft" closed="false">, uma referência a </char><char style="fqa" closed="false">Bete-Áven </char><char style="ft" closed="false">(referência depreciativa a </char><char style="fqa" closed="false">Betel</char><char style="ft" closed="false">).</char></note>,</para>
+  <para style="q2" vid="HOS 10:8">que foram os pecados de Israel,</para>
+  <para style="q2" vid="HOS 10:8">serão destruídos.</para>
+  <para style="q1" vid="HOS 10:8">Espinhos e ervas daninhas crescerão</para>
+  <para style="q2" vid="HOS 10:8">e cobrirão os seus altares.</para>
+  <para style="q1" vid="HOS 10:8">Então eles dirão aos montes:</para>
+  <para style="q2" vid="HOS 10:8">“Cubram-nos!”,</para>
+  <para style="q1" vid="HOS 10:8">e às colinas:</para>
+  <para style="q2" vid="HOS 10:8">“Caiam sobre nós!”<verse eid="HOS 10:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 10:9"/>“Desde os dias de Gibeá, você pecou, ó Israel,</para>
+  <para style="q2" vid="HOS 10:9">e permaneceu assim.</para>
+  <para style="q1" vid="HOS 10:9">Acaso a guerra não os alcançou em Gibeá</para>
+  <para style="q2" vid="HOS 10:9">por causa dos malfeitores?<verse eid="HOS 10:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 10:10"/>Quando eu quiser, eu os castigarei;</para>
+  <para style="q2" vid="HOS 10:10">nações serão reunidas contra eles para prendê-los</para>
+  <para style="q2" vid="HOS 10:10">por causa do seu duplo pecado.<verse eid="HOS 10:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 10:11"/>Efraim era bezerra treinada,</para>
+  <para style="q2" vid="HOS 10:11">gostava muito de trilhar;</para>
+  <para style="q1" vid="HOS 10:11">por isso colocarei o jugo sobre o seu belo pescoço.</para>
+  <para style="q2" vid="HOS 10:11">Conduzirei Efraim,</para>
+  <para style="q1" vid="HOS 10:11">Judá terá que arar,</para>
+  <para style="q2" vid="HOS 10:11">e Jacó fará sulcos no solo.<verse eid="HOS 10:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 10:12"/>Semeiem a retidão para si,</para>
+  <para style="q2" vid="HOS 10:12">colham o fruto da lealdade</para>
+  <para style="q1" vid="HOS 10:12">e façam sulcos no seu solo não arado;</para>
+  <para style="q2" vid="HOS 10:12">pois é hora de buscar o <char style="nd">Senhor</char>,</para>
+  <para style="q1" vid="HOS 10:12">até que ele venha</para>
+  <para style="q2" vid="HOS 10:12">e faça chover justiça sobre vocês.<verse eid="HOS 10:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 10:13"/>Mas vocês plantaram a impiedade,</para>
+  <para style="q2" vid="HOS 10:13">colheram o mal</para>
+  <para style="q2" vid="HOS 10:13">e comeram o fruto do engano.</para>
+  <para style="q1" vid="HOS 10:13">Visto que vocês têm confiado na sua própria força</para>
+  <para style="q2" vid="HOS 10:13">e nos seus muitos guerreiros,<verse eid="HOS 10:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 10:14"/>o fragor da batalha se levantará contra vocês,</para>
+  <para style="q2" vid="HOS 10:14">de maneira que todas as suas fortalezas serão devastadas,</para>
+  <para style="q1" vid="HOS 10:14">como Salmã devastou Bete-Arbel no dia da batalha,</para>
+  <para style="q2" vid="HOS 10:14">quando mães foram pisadas e estraçalhadas</para>
+  <para style="q2" vid="HOS 10:14">junto com seus filhos.<verse eid="HOS 10:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 10:15"/>Assim acontecerá com você, ó Betel,</para>
+  <para style="q2" vid="HOS 10:15">porque a sua impiedade é grande.</para>
+  <para style="q1" vid="HOS 10:15">Quando amanhecer aquele dia,</para>
+  <para style="q2" vid="HOS 10:15">o rei de Israel será completamente destruído.<verse eid="HOS 10:15"/></para>
+  <chapter eid="HOS 10"/>
+  <chapter number="11" style="c" sid="HOS 11"/>
+  <para style="s1">O Amor de Deus por Israel</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 11:1"/>“Quando Israel era menino, eu o amei,</para>
+  <para style="q2" vid="HOS 11:1">e do Egito chamei o meu filho.<verse eid="HOS 11:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 11:2"/>Mas, quanto mais eu o chamava<note caller="+" style="f"><char style="fr" closed="false">11.2 </char><char style="ft" closed="false">Conforme alguns manuscritos da Septuaginta. O Texto Massorético diz </char><char style="fqa" closed="false">eles chamavam.</char></note>,</para>
+  <para style="q2" vid="HOS 11:2">mais eles se afastavam de mim<note caller="+" style="f"><char style="fr" closed="false">11.2 </char><char style="ft" closed="false">Conforme a Septuaginta. O Texto Massorético diz </char><char style="fqa" closed="false">afastavam deles.</char></note>.</para>
+  <para style="q1" vid="HOS 11:2">Eles ofereceram sacrifícios aos baalins</para>
+  <para style="q2" vid="HOS 11:2">e queimaram incenso para os ídolos esculpidos.<verse eid="HOS 11:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 11:3"/>Mas fui eu quem ensinou Efraim a andar,</para>
+  <para style="q2" vid="HOS 11:3">tomando-o nos braços;</para>
+  <para style="q1" vid="HOS 11:3">mas eles não perceberam</para>
+  <para style="q2" vid="HOS 11:3">que fui eu quem os curou.<verse eid="HOS 11:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 11:4"/>Eu os conduzi com laços de bondade humana e de amor;</para>
+  <para style="q2" vid="HOS 11:4">tirei do seu pescoço o jugo e me inclinei para alimentá-los.<verse eid="HOS 11:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 11:5"/>“Acaso não voltarão ao Egito</para>
+  <para style="q2" vid="HOS 11:5">e a Assíria não os dominará</para>
+  <para style="q2" vid="HOS 11:5">porque eles se recusam a arrepender-se?<verse eid="HOS 11:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 11:6"/>A espada reluzirá em suas cidades,</para>
+  <para style="q2" vid="HOS 11:6">destruirá as trancas de suas portas</para>
+  <para style="q2" vid="HOS 11:6">e dará fim aos seus planos.<verse eid="HOS 11:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 11:7"/>O meu povo está decidido a desviar-se de mim.</para>
+  <para style="q2" vid="HOS 11:7">Embora sejam conclamados a servir ao Altíssimo,</para>
+  <para style="q2" vid="HOS 11:7">de modo algum o exaltam.<verse eid="HOS 11:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 11:8"/>“Como posso desistir de você, Efraim?</para>
+  <para style="q2" vid="HOS 11:8">Como posso entregá-lo nas mãos de outros, Israel?</para>
+  <para style="q1" vid="HOS 11:8">Como posso tratá-lo como tratei Admá?</para>
+  <para style="q2" vid="HOS 11:8">Como posso fazer com você o que fiz com Zeboim?</para>
+  <para style="q1" vid="HOS 11:8">O meu coração está enternecido,</para>
+  <para style="q2" vid="HOS 11:8">despertou-se toda a minha compaixão.<verse eid="HOS 11:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 11:9"/>Não executarei a minha ira impetuosa,</para>
+  <para style="q2" vid="HOS 11:9">não tornarei a destruir Efraim.</para>
+  <para style="q1" vid="HOS 11:9">Pois sou Deus e não homem,</para>
+  <para style="q2" vid="HOS 11:9">o Santo no meio de vocês.</para>
+  <para style="q2" vid="HOS 11:9">Não virei com ira.<verse eid="HOS 11:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 11:10"/>Eles seguirão o <char style="nd">Senhor</char>;</para>
+  <para style="q2" vid="HOS 11:10">ele rugirá como leão.</para>
+  <para style="q1" vid="HOS 11:10">Quando ele rugir,</para>
+  <para style="q2" vid="HOS 11:10">os seus filhos virão tremendo desde o ocidente.<verse eid="HOS 11:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 11:11"/>Virão voando do Egito como aves,</para>
+  <para style="q2" vid="HOS 11:11">da Assíria como pombas.</para>
+  <para style="q1" vid="HOS 11:11">Eu os estabelecerei em seus lares”;</para>
+  <para style="q2" vid="HOS 11:11">palavra do <char style="nd">Senhor</char>.<verse eid="HOS 11:11"/></para>
+  <para style="s1">O Pecado de Israel</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 11:12"/>Efraim me cercou de mentiras,</para>
+  <para style="q2" vid="HOS 11:12">a casa de Israel, de enganos,</para>
+  <para style="q1" vid="HOS 11:12">e Judá é rebelde contra Deus,</para>
+  <para style="q2" vid="HOS 11:12">a saber, contra o Santo fiel.<verse eid="HOS 11:12"/></para>
+  <chapter eid="HOS 11"/>
+  <chapter number="12" style="c" sid="HOS 12"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 12:1"/>Efraim alimenta-se de vento;</para>
+  <para style="q2" vid="HOS 12:1">corre atrás do vento oriental o dia inteiro</para>
+  <para style="q2" vid="HOS 12:1">e multiplica mentiras e violência.</para>
+  <para style="q1" vid="HOS 12:1">Faz tratados com a Assíria</para>
+  <para style="q2" vid="HOS 12:1">e manda azeite para o Egito.<verse eid="HOS 12:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 12:2"/>O <char style="nd">Senhor</char> tem uma acusação contra Judá,</para>
+  <para style="q2" vid="HOS 12:2">e vai castigar Jacó<note caller="+" style="f"><char style="fr" closed="false">12.2 </char><char style="fq" closed="false">Jacó </char><char style="ft" closed="false">significa </char><char style="fqa" closed="false">ele segura o calcanhar </char><char style="ft" closed="false">(figuradamente, </char><char style="fqa" closed="false">ele engana</char><char style="ft" closed="false">).</char></note></para>
+  <para style="q1" vid="HOS 12:2">de acordo com os seus caminhos;</para>
+  <para style="q2" vid="HOS 12:2">de acordo com suas ações lhe retribuirá.<verse eid="HOS 12:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 12:3"/>No ventre da mãe segurou o calcanhar de seu irmão;</para>
+  <para style="q2" vid="HOS 12:3">como homem lutou com Deus.<verse eid="HOS 12:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 12:4"/>Ele lutou com o anjo e saiu vencedor;</para>
+  <para style="q2" vid="HOS 12:4">chorou e implorou o seu favor.</para>
+  <para style="q1" vid="HOS 12:4">Em Betel teve encontro com Deus,</para>
+  <para style="q2" vid="HOS 12:4">que ali conversou com ele.<verse eid="HOS 12:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 12:5"/>Sim, o próprio <char style="nd">Senhor</char>, o Deus dos Exércitos!</para>
+  <para style="q2" vid="HOS 12:5">
+    <char style="nd">Senhor</char> é o nome pelo qual ficou famoso.<verse eid="HOS 12:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 12:6"/>Portanto, volte para o seu Deus,</para>
+  <para style="q2" vid="HOS 12:6">e pratique a lealdade e a justiça;</para>
+  <para style="q2" vid="HOS 12:6">confie sempre no seu Deus.<verse eid="HOS 12:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 12:7"/>Como os descendentes de Canaã,</para>
+  <para style="q2" vid="HOS 12:7">comerciantes que usam balança desonesta</para>
+  <para style="q2" vid="HOS 12:7">e gostam muito de extorquir,<verse eid="HOS 12:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 12:8"/>Efraim orgulha-se e exclama:</para>
+  <para style="q2" vid="HOS 12:8">“Como fiquei rico e abastado!</para>
+  <para style="q1" vid="HOS 12:8">Em todos os trabalhos que realizei</para>
+  <para style="q2" vid="HOS 12:8">não encontrarão em mim nenhum crime ou pecado”.<verse eid="HOS 12:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 12:9"/>“Mas eu sou o <char style="nd">Senhor</char>, o seu Deus,</para>
+  <para style="q2" vid="HOS 12:9">desde a terra do Egito;</para>
+  <para style="q1" vid="HOS 12:9">farei vocês voltarem a morar em tendas,</para>
+  <para style="q2" vid="HOS 12:9">como no dia de suas festas fixas.<verse eid="HOS 12:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 12:10"/>Eu mesmo falava aos profetas,</para>
+  <para style="q2" vid="HOS 12:10">dava-lhes muitas visões</para>
+  <para style="q2" vid="HOS 12:10">e por meio deles falava em parábolas.”<verse eid="HOS 12:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 12:11"/>Como Gileade é ímpia!</para>
+  <para style="q2" vid="HOS 12:11">Seu povo não vale nada!</para>
+  <para style="q1" vid="HOS 12:11">Eles sacrificam bois em Gilgal,</para>
+  <para style="q2" vid="HOS 12:11">mas os seus altares são como montes de pedras</para>
+  <para style="q2" vid="HOS 12:11">num campo arado.<verse eid="HOS 12:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 12:12"/>Jacó fugiu para a terra de Arã;</para>
+  <para style="q2" vid="HOS 12:12">Israel trabalhou para obter uma mulher;</para>
+  <para style="q2" vid="HOS 12:12">por ela cuidou de ovelhas.<verse eid="HOS 12:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 12:13"/>O <char style="nd">Senhor</char> usou um profeta para tirar Israel do Egito</para>
+  <para style="q2" vid="HOS 12:13">e por meio de um profeta cuidou dele.<verse eid="HOS 12:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 12:14"/>Efraim amargamente o provocou à ira;</para>
+  <para style="q2" vid="HOS 12:14">seu Senhor fará cair sobre ele a culpa do sangue que derramou</para>
+  <para style="q2" vid="HOS 12:14">e lhe devolverá o seu desprezo.<verse eid="HOS 12:14"/></para>
+  <chapter eid="HOS 12"/>
+  <chapter number="13" style="c" sid="HOS 13"/>
+  <para style="s1">A Ira do Senhor contra Israel</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 13:1"/>Quando Efraim falava, os homens tremiam;</para>
+  <para style="q2" vid="HOS 13:1">ele era exaltado em Israel.</para>
+  <para style="q1" vid="HOS 13:1">Mas tornou-se culpado da adoração a Baal</para>
+  <para style="q2" vid="HOS 13:1">e começou a morrer.<verse eid="HOS 13:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 13:2"/>Agora eles pecam cada vez mais;</para>
+  <para style="q2" vid="HOS 13:2">com sua prata fazem ídolos de metal para si,</para>
+  <para style="q1" vid="HOS 13:2">imagens modeladas com muita inteligência,</para>
+  <para style="q2" vid="HOS 13:2">todas elas obras de artesãos.</para>
+  <para style="q1" vid="HOS 13:2">Dizem desse povo:</para>
+  <para style="q2" vid="HOS 13:2">“Eles oferecem sacrifício humano</para>
+  <para style="q2" vid="HOS 13:2">e beijam<note caller="+" style="f"><char style="fr" closed="false">13.2 </char><char style="ft" closed="false">Ou </char><char style="fqa" closed="false">“Homens que sacrificam beijam</char></note> os ídolos feitos em forma de bezerro”.<verse eid="HOS 13:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 13:3"/>Por isso serão como a neblina da manhã,</para>
+  <para style="q2" vid="HOS 13:3">como o orvalho que bem cedo evapora,</para>
+  <para style="q2" vid="HOS 13:3">como palha que num redemoinho vai-se de uma eira,</para>
+  <para style="q2" vid="HOS 13:3">como a fumaça que sai pela chaminé.<verse eid="HOS 13:3"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 13:4"/>“Mas eu sou o <char style="nd">Senhor</char>, o seu Deus,</para>
+  <para style="q2" vid="HOS 13:4">desde a terra do Egito.</para>
+  <para style="q1" vid="HOS 13:4">Vocês não reconhecerão nenhum outro Deus além de mim,</para>
+  <para style="q2" vid="HOS 13:4">nenhum outro Salvador.<verse eid="HOS 13:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 13:5"/>Eu cuidei de vocês no deserto,</para>
+  <para style="q2" vid="HOS 13:5">naquela terra de calor ardente.<verse eid="HOS 13:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 13:6"/>Quando eu os alimentava,</para>
+  <para style="q2" vid="HOS 13:6">ficavam satisfeitos;</para>
+  <para style="q1" vid="HOS 13:6">quando ficavam satisfeitos,</para>
+  <para style="q2" vid="HOS 13:6">eles se orgulhavam,</para>
+  <para style="q2" vid="HOS 13:6">e então me esqueciam.<verse eid="HOS 13:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 13:7"/>Por isso virei sobre eles como leão,</para>
+  <para style="q2" vid="HOS 13:7">como leopardo, ficarei à espreita junto ao caminho.<verse eid="HOS 13:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 13:8"/>Como uma ursa de quem roubaram os filhotes,</para>
+  <para style="q2" vid="HOS 13:8">eu os atacarei e os rasgarei.</para>
+  <para style="q1" vid="HOS 13:8">Como leão eu os devorarei;</para>
+  <para style="q2" vid="HOS 13:8">um animal selvagem os despedaçará.<verse eid="HOS 13:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 13:9"/>“Você foi destruído, ó Israel,</para>
+  <para style="q2" vid="HOS 13:9">porque está contra mim, contra o seu ajudador.<verse eid="HOS 13:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 13:10"/>E agora? Onde está o seu rei</para>
+  <para style="q2" vid="HOS 13:10">que havia de salvá-lo em todas as suas cidades?</para>
+  <para style="q1" vid="HOS 13:10">E os oficiais que você pediu, dizendo:</para>
+  <para style="q2" vid="HOS 13:10">‘Dá-me um rei e líderes’?<verse eid="HOS 13:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 13:11"/>Dei a você um rei na minha ira,</para>
+  <para style="q2" vid="HOS 13:11">e o tirei na minha indignação.<verse eid="HOS 13:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 13:12"/>A culpa de Efraim foi anotada;</para>
+  <para style="q2" vid="HOS 13:12">seus pecados são mantidos em registro.<verse eid="HOS 13:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 13:13"/>Chegam-lhe dores como as da mulher em trabalho de parto,</para>
+  <para style="q2" vid="HOS 13:13">mas é uma criança insensata;</para>
+  <para style="q1" vid="HOS 13:13">quando chega a hora,</para>
+  <para style="q2" vid="HOS 13:13">não sai do ventre que a abrigou.<verse eid="HOS 13:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 13:14"/>“Eu os redimirei do poder da sepultura<note caller="+" style="f"><char style="fr" closed="false">13.14 </char><char style="ft" closed="false">Hebraico: </char><char style="fqa" closed="false">Sheol. </char><char style="ft" closed="false">Essa palavra também pode ser traduzida por </char><char style="fqa" closed="false">profundezas</char><char style="ft" closed="false">, </char><char style="fqa" closed="false">pó </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">morte.</char></note>;</para>
+  <para style="q2" vid="HOS 13:14">eu os resgatarei da morte.</para>
+  <para style="q1" vid="HOS 13:14">Onde estão, ó morte, as suas pragas?</para>
+  <para style="q2" vid="HOS 13:14">Onde está, ó sepultura, a sua destruição?</para>
+  <para style="b" vid="HOS 13:14"/>
+  <para style="q1" vid="HOS 13:14">“Não terei compaixão alguma,<verse eid="HOS 13:14"/></para>
+  <para style="q2">
+    <verse number="15" style="v" sid="HOS 13:15"/>embora Efraim floresça entre os seus irmãos.</para>
+  <para style="q1" vid="HOS 13:15">Um vento oriental virá da parte do <char style="nd">Senhor</char>,</para>
+  <para style="q2" vid="HOS 13:15">soprando desde o deserto;</para>
+  <para style="q1" vid="HOS 13:15">sua fonte falhará, e seu poço secará.</para>
+  <para style="q2" vid="HOS 13:15">Todos os seus tesouros serão saqueados dos seus depósitos.<verse eid="HOS 13:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 13:16"/>O povo de Samaria carregará sua culpa,</para>
+  <para style="q2" vid="HOS 13:16">porque se rebelou contra o seu Deus.</para>
+  <para style="q1" vid="HOS 13:16">Eles serão mortos à espada;</para>
+  <para style="q2" vid="HOS 13:16">seus pequeninos serão pisados e despedaçados,</para>
+  <para style="q1" vid="HOS 13:16">suas mulheres grávidas</para>
+  <para style="q2" vid="HOS 13:16">terão rasgados os seus ventres.”<verse eid="HOS 13:16"/></para>
+  <chapter eid="HOS 13"/>
+  <chapter number="14" style="c" sid="HOS 14"/>
+  <para style="s1">As Bênçãos do Arrependimento</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 14:1"/>Volte, ó Israel, para o <char style="nd">Senhor</char>, o seu Deus.</para>
+  <para style="q2" vid="HOS 14:1">Seus pecados causaram sua queda!<verse eid="HOS 14:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 14:2"/>Preparem o que vão dizer</para>
+  <para style="q2" vid="HOS 14:2">e voltem para o <char style="nd">Senhor</char>.</para>
+  <para style="q1" vid="HOS 14:2">Peçam-lhe:</para>
+  <para style="q2" vid="HOS 14:2">“Perdoa todos os nossos pecados</para>
+  <para style="q1" vid="HOS 14:2">e, por misericórdia, recebe-nos,</para>
+  <para style="q2" vid="HOS 14:2">para que te ofereçamos o fruto dos nossos lábios.<note caller="+" style="f"><char style="fr" closed="false">14.2 </char><char style="ft" closed="false">Ou </char><char style="fqa" closed="false">ofereçamos nossos lábios como sacrifícios de novilhos.</char></note><verse eid="HOS 14:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 14:3"/>A Assíria não nos pode salvar;</para>
+  <para style="q2" vid="HOS 14:3">não montaremos cavalos de guerra.</para>
+  <para style="q1" vid="HOS 14:3">Nunca mais diremos: ‘Nossos deuses</para>
+  <para style="q2" vid="HOS 14:3">àquilo que as nossas próprias mãos fizeram’,</para>
+  <para style="q2" vid="HOS 14:3">porque tu amas o órfão”.<verse eid="HOS 14:3"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 14:4"/>“Eu curarei a infidelidade deles</para>
+  <para style="q2" vid="HOS 14:4">e os amarei de todo o meu coração,</para>
+  <para style="q2" vid="HOS 14:4">pois a minha ira desviou-se deles.<verse eid="HOS 14:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 14:5"/>Serei como orvalho para Israel;</para>
+  <para style="q2" vid="HOS 14:5">ele florescerá como o lírio.</para>
+  <para style="q1" vid="HOS 14:5">Como o cedro do Líbano</para>
+  <para style="q2" vid="HOS 14:5">aprofundará suas raízes;<verse eid="HOS 14:5"/></para>
+  <para style="q2">
+    <verse number="6" style="v" sid="HOS 14:6"/>seus brotos crescerão.</para>
+  <para style="q1" vid="HOS 14:6">Seu esplendor será como o da oliveira,</para>
+  <para style="q2" vid="HOS 14:6">sua fragrância como a do cedro do Líbano.<verse eid="HOS 14:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 14:7"/>Os que habitavam à sua sombra voltarão.</para>
+  <para style="q2" vid="HOS 14:7">Reviverão como o trigo.</para>
+  <para style="q1" vid="HOS 14:7">Florescerão como a videira,</para>
+  <para style="q2" vid="HOS 14:7">e a fama de Israel</para>
+  <para style="q2" vid="HOS 14:7">será como a do vinho do Líbano.<verse eid="HOS 14:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 14:8"/>O que Efraim ainda tem com ídolos?</para>
+  <para style="q2" vid="HOS 14:8">Sou eu que lhe respondo e dele cuidarei.</para>
+  <para style="q1" vid="HOS 14:8">Sou como um pinheiro verde;</para>
+  <para style="q2" vid="HOS 14:8">o fruto que você produz de mim procede.”<verse eid="HOS 14:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 14:9"/>Quem é sábio? Aquele que considerar essas coisas.</para>
+  <para style="q2" vid="HOS 14:9">Quem tem discernimento? Aquele que as compreender.</para>
+  <para style="q1" vid="HOS 14:9">Os caminhos do <char style="nd">Senhor</char> são justos;</para>
+  <para style="q2" vid="HOS 14:9">os justos andam neles,</para>
+  <para style="q2" vid="HOS 14:9">mas os rebeldes neles tropeçam.<verse eid="HOS 14:9"/></para>
+  <chapter eid="HOS 14"/>
+</usx>

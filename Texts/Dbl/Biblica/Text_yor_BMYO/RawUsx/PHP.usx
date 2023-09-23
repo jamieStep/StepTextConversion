@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="PHP" style="id">- Yoruba Contemporary Bible (Bíbélì Mímọ́ Yorùbá Òde-Òní)</book>
+  <para style="rem">Copyright © 2009, 2017 by Biblica, Inc.®</para>
+  <para style="h">Filipi</para>
+  <para style="toc1">Ìwé sí àwọn ará Filipi</para>
+  <para style="toc2">Filipi</para>
+  <para style="toc3">Fp</para>
+  <para style="mt1">Ìwé sí àwọn ará Filipi</para>
+  <para style="mt4">(Ọdún 64 lẹ́yìn tí a bí Jesu Kristi)</para>
+  <para style="imt">Ìfáàrà</para>
+  <para style="ip">Paulu kọ lẹ́tà yìí láti inú ẹ̀wọ̀n ní Romu sí àwọn ọ̀rẹ́ rẹ̀ ọ̀wọ́n ní ìlú Filipi, fún ẹ̀bùn owó tí wọ́n fi ránṣẹ́ sí i láti fi gbọ́ ohun tó ń jẹ ẹ́ ní yà. Ó bẹ̀rẹ̀ nípa ṣíṣe àlàyé bí òun ṣe gba ẹ̀rí wọn jẹ́, lẹ́yìn náà ni ó wá ṣàpèjúwe àwọn ìṣòro tó dojúkọ ní Romu. Kò mọ̀ bóyá òun yóò kú tàbí òun kò ní kú, ṣùgbọ́n bí ikú bá dé, yóò láyọ̀ ní iwájú Kristi. Bí òun bá sì wà láààyè, òun yóò fi gbogbo agbára ṣiṣẹ́ fún Ọlọ́run. Ó fi Kristi ṣe àpẹẹrẹ ìwà ìrẹ̀lẹ̀ tí ó yẹ ní àwòkọ́ṣe fún àwọn ará Filipi, ìkọ́ni ẹ̀tàn gbọdọ̀ di ìkọ̀sílẹ̀. Gbogbo àwọn onígbàgbọ́ ni a bá wí láti ní èrò gíga fún ara wọn nítorí pé Ọlọ́run yóò pèsè gbogbo ohun tí ènìyàn ń fẹ́ ní ayé.</para>
+  <para style="ip">Nínú lẹ́tà tí Paulu kọ sí àwọn ènìyàn rẹ̀ yìí ni a ti rí ọ̀rọ̀ inú dídùn láti ìbẹ̀rẹ̀ dé òpin. Bí ènìyàn bá wà láààyè yóò ní inú dídùn nítorí Ọlọ́run fẹ́ràn rẹ̀, Kristi kú fún un, àti pé ohun gbogbo ni Ọlọ́run fi tẹ́ ẹ lọ́rùn nínú ayé. Bí ènìyàn bá sì kú, yóò ní inú dídùn pé òun yóò wà ní iwájú ìtẹ́ Ọlọ́run títí ayérayé. Èyí kò sọ pé onígbàgbọ́ kò ní ní ìṣòro. Ní ìwọ̀n ìgbà tí Jesu ti lè fi ara rẹ̀ da ìyà orí àgbélébùú, ó yẹ kí a lè tẹ̀lé ìlànà yìí, kí a fi ara wa fún Ọlọ́run. Ṣùgbọ́n ọmọ ìjọba Ọlọ́run ni a jẹ́, ó sì yẹ kí èrò yìí wà ní iwájú wa ni ìgbà gbogbo.</para>
+  <para style="iot">Kókó-ọ̀rọ̀</para>
+  <para style="io1">i. Ìkíni <char style="ior"><ref loc="PHP 1:1-2">1.1-2</ref></char>.</para>
+  <para style="io1">ii. Ìdúpẹ́ àti àdúrà fún àwọn ará Filipi <char style="ior"><ref loc="PHP 1:3-11">1.3-11</ref></char>.</para>
+  <para style="io1">iii. Paulu àti àwọn ìṣòro rẹ̀ ní Romu <char style="ior"><ref loc="PHP 1:2-26">1.2-26</ref></char>.</para>
+  <para style="io1">iv. Ọ̀rọ̀ ìyànjú <char style="ior"><ref loc="PHP 1:27-2:18">1.27–2.18</ref></char>.</para>
+  <para style="io1">v. Àwọn alábáṣiṣẹ́ Paulu nínú iṣẹ́ ìránṣẹ́ <char style="ior"><ref loc="PHP 2:19-20">2.19-20</ref></char>.</para>
+  <para style="io1">vi. Ìkìlọ̀ nípa àwọn ẹlẹ́kọ̀ọ́ òdì <char style="ior"><ref loc="PHP 3:1-4:1">3.1–4.1</ref></char>.</para>
+  <para style="io1">vii. Ìdúpẹ́ àti ìdágbére <char style="ior"><ref loc="PHP 4:2-23">4.2-23</ref></char>.</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1.1: </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 16:1">Ap 16.1</ref>,<ref loc="ACT 16:12-40">12-40</ref>; <ref loc="ROM 1:1">Ro 1.1</ref>; <ref loc="2CO 1:1">2Kọ 1.1</ref>; <ref loc="GAL 1:10">Ga 1.10</ref>; <ref loc="COL 1:1">Kl 1.1</ref>; <ref loc="1TH 1:1">1Tẹ 1.1</ref>; <ref loc="2TH 1:1">2Tẹ 1.1</ref>; <ref loc="PHM 1:1">Fm 1</ref>.</char>
+    </note>Paulu àti Timotiu, àwọn ìránṣẹ́ Jesu Kristi.</para>
+  <para style="b"/>
+  <para style="p">Sí gbogbo àwọn ènìyàn mímọ́ nínú Kristi Jesu tí ó wà ní Filipi, pẹ̀lú àwọn alábojútó àti àwọn díákónì.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1.2: </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:7">Ro 1.7</ref>.</char>
+    </note>Oore-ọ̀fẹ́ sí yín, àti àlàáfíà láti ọ̀dọ̀ Ọlọ́run Baba wa, àti Olúwa wa Jesu Kristi.</para>
+  <para style="b"/>
+  <para style="s1">Àdúrà àti Ọpẹ́</para>
+  <para style="p">
+    <verse number="3" style="v"/>Mo ń dúpẹ́ lọ́wọ́ Ọlọ́run mi ní gbogbo ìgbà tí mo bá rántí yín: <verse number="4" style="v"/>Nínú gbogbo àdúrà mi fún un yín, èmi ń fi ayọ̀ gbàdúrà, <verse number="5" style="v"/>nítorí ìdàpọ̀ yín nínú ìhìnrere láti ọjọ́ kìn-ín-ní wá títí di ìsinsin yìí. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1.6,10: </char><char style="xt" closed="false"><ref loc="1CO 1:8">1Kọ 1.8</ref>.</char></note>Ohun kan yìí sá à dá mi lójú pé, ẹni tí ó ti bẹ̀rẹ̀ iṣẹ́ rere nínú yín, yóò ṣe àṣepé rẹ̀ títí di ọjọ́ náà tí Jesu Kristi yóò dé:</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1.7: </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 21:33">Ap 21.33</ref>; <ref loc="2CO 7:3">2Kọ 7.3</ref>; <ref loc="EPH 6:20">Ef 6.20</ref>.</char>
+    </note>Gẹ́gẹ́ bí ó ti tọ́ fún mi láti ro èyí nípa gbogbo yín, nítorí tí mo fi yín sọ́kàn, bí mo tilẹ̀ wà nínú ìdè tàbí ìdáhùn ẹjọ́, àti ìfẹsẹ̀múlẹ̀ ìhìnrere, gbogbo yín jẹ́ alábápín oore-ọ̀fẹ́ Ọlọ́run pẹ̀lú mi. <verse number="8" style="v"/>Nítorí Ọlọ́run ni ẹlẹ́rìí mi, bí mo ti ń ṣàfẹ́rí yín gidigidi nínú ìfẹ́ Jesu Kristi.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Èyí sì ni àdúrà mi: pé kí ìfẹ́ yín lè máa pọ̀ síwájú àti síwájú sí i nínú ìfẹ́ àti ìmọ̀ ìjìnlẹ̀, <verse number="10" style="v"/>kí ẹ̀yin kí ó lè ní òye ohun tí ó dára jùlọ; kí ó sì jásí òdodo àti aláìjẹ́ ohun ìkọ̀sẹ̀ títí di ọjọ́ dídé Jesu Kristi: <verse number="11" style="v"/>Lẹ́yìn ìgbà ti ẹ ti kún fún àwọn ìwà òdodo láti ọ̀dọ̀ Jesu Kristi, fún ògo àti ìyìn Ọlọ́run.</para>
+  <para style="s1">Ìrírí Paulu nínú iṣẹ́ ìránṣẹ́</para>
+  <para style="p">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1.12: </char>
+      <char style="xt" closed="false">
+        <ref loc="LUK 21:13">Lk 21.13</ref>.</char>
+    </note>Ǹjẹ́ èmi fẹ́ kí ẹ̀yin kí ó mọ̀, ará, pé ohun tí ó ṣẹlẹ̀ sí mi jásí àtẹ̀gùn sí ìlọsíwájú ìhìnrere. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1.13: </char><char style="xt" closed="false"><ref loc="ACT 28:30">Ap 28.30</ref>; <ref loc="2TI 2:9">2Tm 2.9</ref>.</char></note>Nítorí ìdí èyí, ó ti hàn gbangba sí gbogbo àwọn ẹ̀ṣọ́ ààfin àti sí àwọn ẹlòmíràn wí pé mo wà nínú ìdè fún Kristi. <verse number="14" style="v"/>Nítorí ìdè mi, ọ̀pọ̀lọpọ̀ àwọn ará nínú Olúwa ni a ti mú lọ́kàn le láti sọ̀rọ̀ Ọlọ́run sí i pẹ̀lú ìgboyà àti láìbẹ̀rù.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Òtítọ́ ni pé àwọn ẹlòmíràn tilẹ̀ ń fi ìjà àti ìlara wàásù Kristi, ṣùgbọ́n àwọn ẹlòmíràn sì ń fi inú rere ṣe é. <verse number="16" style="v"/>Àwọn kan ń fi ìjà wàásù Kristi, kì í ṣe pẹ̀lú òtítọ́ inú, wọ́n ń gbèrò láti fi ìpọ́njú kún ìdè mi: <verse number="17" style="v"/>Àwọn kan ẹ̀wẹ̀ si ń fi ìfẹ́ ṣe é, nítorí tí wọ́n mọ̀ pé a gbé mi dìde láti dá ààbò bo iṣẹ́ ìhìnrere. <verse number="18" style="v"/>Kí ló tún kù? Kìkì í pé níbi gbogbo, ìbá à ní ìfẹ̀tànṣe tàbí ni ti òtítọ́ a sá à n wàásù Kristi, èmi sì ń yọ̀ nítorí èyí.</para>
+  <para style="p">Nítòótọ́, èmi ó sì máa yọ̀, <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1.19: </char><char style="xt" closed="false"><ref loc="ACT 16:7">Ap 16.7</ref>; <ref loc="2CO 1:11">2Kọ 1.11</ref>.</char></note>nítorí tí mo mọ̀ pé èyí ni yóò yọrí sí ìgbàlà fún mi láti inú àdúrà yín wá, àti ìfikún ẹ̀mí Jesu Kristi, <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1.20: </char><char style="xt" closed="false"><ref loc="ROM 14:8">Ro 14.8</ref>.</char></note> Gẹ́gẹ́ bí ìfẹ́ ọkàn àti ìrètí mi pé kí ojú kí ó má ṣe ti mi ní ohunkóhun, ṣùgbọ́n kí èmi kí ó le máa ni ìgboyà ní ìgbà gbogbo àti nísinsin yìí, kí a lè ti ipasẹ̀ mi gbé Kristi ga lára mi, ìbá à ṣe pé mo wà láààyè, tàbí mo kú. <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1.21: </char><char style="xt" closed="false"><ref loc="GAL 2:20">Ga 2.20</ref>.</char></note>Nítorí, ní ti èmi, láti wa láààyè jẹ́ Kristi, láti kú pẹ̀lú sì jẹ́ èrè fún mi. <verse number="22" style="v"/>Ṣùgbọ́n bí èmi bá le è ṣe iṣẹ́ ti ó ni àpẹẹrẹ nípa wíwà láààyè nínú ara, ṣùgbọ́n ohun ti èmi ó yàn, èmi kò mọ̀. <verse number="23" style="v"/>Ṣùgbọ́n èmi n ṣiyèméjì, nítorí ti èmi fẹ́ láti lọ kúrò nínú ayé yìí, láti wà lọ́dọ̀ Kristi; nítorí ó dára púpọ̀ jù: <verse number="24" style="v"/>Síbẹ̀ láti wà láààyè jẹ́ àǹfààní nítorí tiyín. <verse number="25" style="v"/>Bí èyí sì ti dá mi lójú, mo mọ̀ pé èmi ó dúró, èmi ó sì máa wà pẹ̀lú yín fún ìtẹ̀síwájú àti ayọ̀ yín nínú ìgbàgbọ́, <verse number="26" style="v"/>kí ìṣògo yín kí ó lè di púpọ̀ gidigidi nínú Jesu Kristi, àti nínú mi nípa ìpadà wá mi sọ́dọ̀ yín.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Ohun yówù kó ṣẹlẹ̀, ẹ jẹ́ kí ìgbé ayé yín ri gẹ́gẹ́ bí ìhìnrere Kristi: pé yálà bi mo tilẹ̀ wá wò yín, tàbí bí èmi kò wá, kí èmi kí ó lè máa gbúròó bí ẹ ti ń ṣe, pé ẹ̀yin dúró ṣinṣin nínú Ẹ̀mí kan, ẹ̀yin jùmọ̀ jìjàkadì nítorí ìgbàgbọ́ ìhìnrere, pẹ̀lú ọkàn kan; <verse number="28" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1.28: </char><char style="xt" closed="false"><ref loc="2TH 1:5">2Tẹ 1.5</ref>.</char></note>Kí ẹ má sì jẹ́ ki àwọn ọ̀tá dẹ́rùbà yin ni ohunkóhun: èyí tí í ṣe ààmì tí ó dájú pé a ó pa wọ́n run, ṣùgbọ́n Ọlọ́run tìkára rẹ̀ ni yóò gbà yin là. <verse number="29" style="v"/>Nítorí tí a ti fún yin ni àǹfààní, kì í ṣe láti gba Kristi gbọ́ nìkan, ṣùgbọ́n láti jìyà nítorí rẹ̀ pẹ̀lú: <verse number="30" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1.30: </char><char style="xt" closed="false"><ref loc="ACT 16:19-40">Ap 16.19-40</ref>; <ref loc="1TH 2:2">1Tẹ 2.2</ref>.</char></note>Ẹ sì máa ja ìjà kan náà, èyí ti ẹ̀yin ti ri, ti ẹ sì ti gbọ́ pé èmi n jà pẹ̀lú.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Kọ́ ìwà ìrẹ̀lẹ̀ Kristi</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2.1: </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 13:14">2Kọ 13.14</ref>.</char>
+    </note>Bí ìwọ bá ní ìmúlọ́kànle nítorí pé ìwọ wà ní ìṣọ̀kan pẹ̀lú Kristi, bi ìtùnú kan bá wà nínú ìfẹ́ rẹ̀, bí ìdàpọ̀ Ẹ̀mí kan bá wà, bí ìyọ́nú àti ìṣeun bá wà, <verse number="2" style="v"/>síbẹ̀ ẹ mú ayọ̀ mi kún nínú ìṣọ̀kan yín, nípa ìfẹ́ kan náà, wíwà ní ẹ̀mí kan náà àti ète kan náà. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2.3-4: </char><char style="xt" closed="false"><ref loc="ROM 12:10">Ro 12.10</ref>; <ref loc="ROM 15:1-2">15.1-2</ref>.</char></note>Ẹ má ṣe ohunkóhun nínú ìlépa ara tàbí ògo asán, ṣùgbọ́n ní ìrẹ̀lẹ̀ ọkàn kí olúkúlùkù ro àwọn ẹlòmíràn sí ẹni ti ó sàn ju òun lọ. <verse number="4" style="v"/>Kí olúkúlùkù yín má ṣe ro ohun ti ara rẹ̀ nìkan, ṣùgbọ́n ti ẹlòmíràn pẹ̀lú.</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2.5-8: </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 11:29">Mt 11.29</ref>; <ref loc="MAT 20:28">20.28</ref>; <ref loc="JHN 1:1">Jh 1.1</ref>; <ref loc="2CO 8:9">2Kọ 8.9</ref>; <ref loc="HEB 5:8">Hb 5.8</ref>.</char>
+    </note>Nínú ìbáṣepọ̀ yin pẹ̀lú àwọn ẹlòmíràn, ẹ ni irú ìlépa ọkàn náà bí ti Kristi Jesu.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Ẹni tí, bí o tilẹ̀ jẹ́ ìrísí Ọlọ́run,</para>
+  <para style="q2">kò kà á sí ohun tí ìbá fi ìwọra gbámú láti bá Ọlọ́run dọ́gba.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Ṣùgbọ́n ó bọ́ ògo rẹ̀ sílẹ̀,</para>
+  <para style="q2">ó sì mú àwọ̀ ìránṣẹ́,</para>
+  <para style="q2">a sì ṣe é ni àwòrán ènìyàn.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Ó sì wà ní àwòrán ènìyàn,</para>
+  <para style="q2">ó rẹ ara rẹ̀ sílẹ̀,</para>
+  <para style="q2">o sì tẹríba títí de ojú ikú,</para>
+  <para style="q3">àní ikú lórí àgbélébùú.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2.9-11: </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 10:9">Ro 10.9</ref>; <ref loc="ROM 14:9">14.9</ref>; <ref loc="EPH 1:20-21">Ef 1.20-21</ref>.</char>
+    </note>Nítorí náà, Ọlọ́run</para>
+  <para style="q2">ti gbé e ga sí ipele tí ó ga jùlọ,</para>
+  <para style="q2">ó sì ti fi orúkọ kan ti ó borí gbogbo orúkọ fún un</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Pé ni orúkọ Jesu ni kí gbogbo eékún máa wólẹ̀,</para>
+  <para style="q2">ní ọ̀run, àti ní orí ilẹ̀ ayé àti ní ìsàlẹ̀ ilẹ̀ ayé,</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Àti pé kí gbogbo ahọ́n jẹ́wọ́ pé, Jesu Kristi ni Olúwa,</para>
+  <para style="q2">fún ògo Ọlọ́run Baba.</para>
+  <para style="s1">Títàn gẹ́gẹ́ bí àwọn ìràwọ̀</para>
+  <para style="p">
+    <verse number="12" style="v"/>Nítorí náà ẹ̀yin ará mi, gẹ́gẹ́ bí ẹ̀yin ti ń gbọ́rọ̀ nígbà gbogbo, kì í ṣe nígbà ti mo wà lọ́dọ̀ yín nìkan, ṣùgbọ́n pàápàá nísinsin yìí tí èmi kò sí ni àárín yín, ẹ máa ṣiṣẹ́ ìgbàlà yín yọrí pẹ̀lú ìbẹ̀rù àti ìwárìrì, <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2.13: </char><char style="xt" closed="false"><ref loc="1CO 15:10">1Kọ 15.10</ref>.</char></note>Nítorí pé Ọlọ́run ni ó n ṣiṣẹ́ nínú yín, láti fẹ́ àti láti ṣiṣẹ́ fún ète rere rẹ̀.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Ẹ máa ṣe ohun gbogbo láìsí ìkùnsínú àti ìjiyàn. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2.15: </char><char style="xt" closed="false"><ref loc="MAT 5:45">Mt 5.45</ref>,<ref loc="MAT 5:48">48</ref>.</char></note>Kí ẹ̀yin lè jẹ́ aláìlẹ́gàn àti oníwà mímọ́, ọmọ Ọlọ́run, aláìlábàwọ́n, láàrín oníwà wíwọ́ àti alárékérekè orílẹ̀-èdè láàrín àwọn ẹni tí a ń rí yín bí ìmọ́lẹ̀ ní ayé. <verse number="16" style="v"/>Bí ẹ sì ṣe di ọ̀rọ̀ ìyè mú gírígírí, kí èmi lè ṣògo ni ọjọ́ Kristi pé èmi kò sáré lásán, bẹ́ẹ̀ ni èmi kò sì ṣe làálàá lásán. <verse number="17" style="v"/>Ṣùgbọ́n, bí a tilẹ̀ ń dà mí bí ọtí-ìrúbọ sórí ẹbọ iṣẹ́ ìsìn ìgbàgbọ́ yín, inú mi dùn, mo sì ń bá gbogbo yín yọ̀ pẹ̀lú. <verse number="18" style="v"/>Bákan náà ni kí ẹ̀yin máa yọ̀, kí ẹ sì máa bá mi yọ̀ pẹ̀lú.</para>
+  <para style="s1">Timotiu àti Epafiroditu</para>
+  <para style="p">
+    <verse number="19" style="v"/>Mo ni ìrètí nínú Jesu Olúwa, láti rán Timotiu sí yín ni àìpẹ́ yìí, kí èmi pẹ̀lú lè ni ìfọ̀kànbalẹ̀ nígbà tí mo bá gbúròó yín. <verse number="20" style="v"/>Nítorí èmi kò ni ẹlòmíràn tí ó dàbí rẹ̀, tí yóò máa fi tinútinú ṣe àníyàn yín. <verse number="21" style="v"/>Nítorí gbogbo wọn ni ó tọ́jú nǹkan ti ara wọn, kì í ṣe àwọn nǹkan ti Jesu Kristi. <verse number="22" style="v"/>Ṣùgbọ́n ẹ̀yin mọ̀ pé Timotiu pegedé, gẹ́gẹ́ bí ọmọ lọ́dọ̀ baba rẹ̀, bẹ́ẹ̀ ni ó sì ti ń bá mi ṣiṣẹ́ pọ̀, nínú iṣẹ́ ìhìnrere. <verse number="23" style="v"/>Nítorí náà, mo ní ìrètí láti rán sí yín ní àìpẹ́ tí mo bá wòye bí yóò ti rí fún mi. <verse number="24" style="v"/>Ṣùgbọ́n mo ní gbẹ́kẹ̀lé nínú Olúwa, pé èmi tìkára mi pẹ̀lú yóò wá ní àìpẹ́.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Mo kà á sí pé n kò lè ṣàìrán Epafiroditu arákùnrin mi sí yín, àti olùbáṣiṣẹ́ pọ̀ mi, àti ọmọ-ogun ẹlẹgbẹ́ mi, ìránṣẹ́ yín pẹ̀lú, tí ẹ rán láti ṣè ránṣẹ́ fún mi nínú àìní mi. <verse number="26" style="v"/>Nítorí tí ọkàn rẹ̀ fà sí gbogbo yín, ó sì kún fún ìbànújẹ́, nítorí tí ẹ̀yin gbọ́ pé ó ṣe àìsàn. <verse number="27" style="v"/>Nítòótọ́ ni ó ti ṣe àìsàn títí dé ojú ikú, ṣùgbọ́n Ọlọ́run ti ṣàánú fún un; kì í sì í ṣe fún òun nìkan, ṣùgbọ́n fún èmi pẹ̀lú kí èmi má ṣe ni ìbànújẹ́ lórí ìbànújẹ́. <verse number="28" style="v"/>Nítorí náà ni mo ṣe ní ìtara láti rán an, pé nígbà tí ẹ̀yin bá sì tún rí i, kí ẹ̀yin lè yọ̀ àti kí ìkáyà sókè mi lè dínkù. <verse number="29" style="v"/>Nítorí náà, ẹ fi ayọ̀ púpọ̀ gbà á nínú Olúwa; kí ẹ sì máa bu ọlá fún irú àwọn ẹni bẹ́ẹ̀. <verse number="30" style="v"/>Nítorí iṣẹ́ Kristi ni ó ṣe súnmọ́ ẹnu-ọ̀nà ikú, tí ó sì fi ẹ̀mí ara rẹ̀ wéwu, láti mu àìtó iṣẹ́ ìsìn yín sí mi kún.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Kò sí ìgbẹ́kẹ̀lé ẹlẹ́ran ara</para>
+  <para style="p">
+    <verse number="1" style="v"/>Ní àkótán ará, ẹ máa yọ̀ nínú Olúwa wa. Kì í ṣe ìnira fún mi láti kọ̀wé ohun kan náà sí yín, ṣùgbọ́n fún yín ó jẹ́ ohun ààbò. <verse number="2" style="v"/>Ẹ kíyèsára lọ́dọ̀ àwọn ajá, ẹ kíyèsára lọ́dọ̀ àwọn oníṣẹ́ búburú, ẹ sì kíyèsára lọ́dọ̀ àwọn onílà. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3.3: </char><char style="xt" closed="false"><ref loc="ROM 2:28-29">Ro 2.28-29</ref>; <ref loc="GAL 6:14-15">Ga 6.14-15</ref>.</char></note>Nítorí àwa ni onílà, tí ń sin Ọlọ́run nípa ti Ẹ̀mí, àwa sì ń ṣògo nínú Kristi Jesu, àwa kò sí ní ìgbẹ́kẹ̀lé nínú ẹran-ara. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3.4-7: </char><char style="xt" closed="false"><ref loc="ACT 8:3">Ap 8.3</ref>; <ref loc="ACT 22:3-21">22.3-21</ref>; <ref loc="ACT 23:6">23.6</ref>; <ref loc="ACT 26:4-23">26.4-23</ref>; <ref loc="ROM 11:1">Ro 11.1</ref>; <ref loc="2CO 11:18-31">2Kọ 11.18-31</ref>.</char></note>Bí èmi tìkára mi pẹ̀lú ti ní ìgbẹ́kẹ̀lé nínú ara.</para>
+  <para style="p">Bí ẹnikẹ́ni bá rò pé òun ni ìgbẹ́kẹ̀lé nínú ara, tèmi tilẹ̀ pọ̀: <verse number="5" style="v"/>Ẹni tí a kọ nílà ní ọjọ́ kẹjọ, láti inú kùkùté Israẹli wá, láti inú ẹ̀yà Benjamini, Heberu láti inú Heberu wá; nítorí, ní ti òfin Farisi ni èmi; <verse number="6" style="v"/>Ní ti ìtara, èmi ń ṣe inúnibíni sí ìjọ; ní ti òdodo tí ó wà nínú òfin, mo jẹ́ aláìlẹ́gàn.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Ṣùgbọ́n ohunkóhun tí ó ti jásí èrè fún mi, àwọn ni mo ti kà sí òfo nítorí Kristi. <verse number="8" style="v"/>Nítòótọ́ láìṣe àní àní mo sì ka ohun gbogbo sí òfo nítorí ìtayọ ìmọ̀ Kristi Jesu Olúwa mi; nítorí ẹni ti mo ti ṣòfò ohun gbogbo, mo si kà wọn sí ohun tí kò ní èrè, kí èmi lè jèrè Kristi, <verse number="9" style="v"/>Kí a sì lè bá mi nínú rẹ̀, láìní òdodo tí èmi tìkára mi, tí ó ti inú òfin wá, ṣùgbọ́n èyí tí ó ti inú ìgbàgbọ́ wá nínú Kristi, òdodo láti ọ̀dọ̀ Ọlọ́run nípasẹ̀ ìgbàgbọ́; <verse number="10" style="v"/>Èmi mọ̀ ọ́n, àti agbára àjíǹde rẹ̀, àti láti jẹ́ alábápín nínú ìyà rẹ̀ nígbà tí mo bá fi ara mọ́ ọn nínú ikú rẹ̀; <verse number="11" style="v"/>nípasẹ̀ bẹ́ẹ̀ kí èmi lè ní àjíǹde kúrò nínú òkú.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Kì í ṣe pé ọwọ́ mi ti tẹ̀ ẹ́ ná, tàbí mo ti di pípé: ṣùgbọ́n èmi ń lépa sí i, bí ọwọ́ mi yóò lè tẹ èrè náà nítorí èyí tí a ti dì mímú pẹ̀lú, láti ọ̀dọ̀ Kristi Jesu wá. <verse number="13" style="v"/>Ará, èmi kò kara mi sí ẹni ti ọwọ́ rẹ̀ ti tẹ̀ ẹ́ ná: Ṣùgbọ́n ohun kan yìí ni èmi ń ṣe, èmi ń gbàgbé àwọn nǹkan tí ó ti kọjá. Lẹ́yìn náà mo ń nàgà wo àwọn nǹkan tí ó wà níwájú. <verse number="14" style="v"/>Èmi ń lépa láti dé òpin eré ìje náà fún èrè ìpè gíga Ọlọ́run nínú Kristi Jesu.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Nítorí náà, ẹ jẹ́ kí àwa tí a dàgbà nípa ti ẹ̀mí ni èrò yìí; bí ẹ̀yin bá sì ní èrò mìíràn nínú ohunkóhun, èyí náà pẹ̀lú ni Ọlọ́run yóò fihàn yín. <verse number="16" style="v"/>Kìkì pé, ki a ma gbe ìgbé ayé gẹ́gẹ́ bi èyí ti a ri gba.</para>
+  <para style="p">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3.17: </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 4:15-17">1Kọ 4.15-17</ref>.</char>
+    </note>Ará, ẹ jùmọ̀ ṣe àfarawé mi, ẹ ṣe àkíyèsí àwọn tí ń rìn bẹ́ẹ̀, àní bí ẹ ti ní wa fún àpẹẹrẹ. <verse number="18" style="v"/>Nítorí ọ̀pọ̀lọpọ̀ ní ń rìn, nípasẹ̀ àwọn ẹni tí mo ti ń wí fún yín nígbàkúgbà, àní, tí mo sì ń sọkún bí mo ti ń wí fún yín nísinsin yìí, pé, ọ̀tá àgbélébùú Kristi ni wọ́n: <verse number="19" style="v"/>Ìgbẹ̀yìn wọn ni ìparun, ikùn wọn sì ni Ọlọ́run wọn, wọ́n sì ń ṣògo nínú ìtìjú wọn, àwọn ẹni tí ń tọ́jú ohun ti ayé. <verse number="20" style="v"/>Nítorí ìlú ìbílẹ̀ wá ń bẹ̀ ní ọ̀run: láti ibi ti àwa pẹ̀lú gbé ń fojúsọ́nà fún Olùgbàlà, Jesu Kristi Olúwa. <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3.21: </char><char style="xt" closed="false"><ref loc="1CO 15:35-58">1Kọ 15.35-58</ref>; <ref loc="COL 3:4">Kl 3.4</ref>.</char></note>Ẹni tí yóò sọ ara ìrẹ̀lẹ̀ wa di ọ̀tún kí ó lè bá ara ògo rẹ̀ mu, nípa agbára tí ó mú kí ó ṣe é ṣe fún un láti tẹ orí ohun gbogbo bá fún ara rẹ̀.</para>
+  <chapter number="4" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Nítorí náà ẹ̀yin ará mi olùfẹ́, ti mo sì ń ṣàfẹ́rí gidigidi, ayọ̀ àti adé mi, ẹ dúró ṣinṣin bẹ́ẹ̀ nínú Olúwa, ẹ̀yin olùfẹ́ mi.</para>
+  <para style="s1">Àwọn ọ̀rọ̀ ìyànjú</para>
+  <para style="p">
+    <verse number="2" style="v"/>Èmi ń bẹ̀ Euodia, mo sì ń bẹ Sintike, kí wọn ní inú kan náà nínú Olúwa. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4.3: </char><char style="xt" closed="false"><ref loc="LUK 10:20">Lk 10.20</ref>.</char></note>Mo sì bẹ̀ yin pẹ̀lú bí alájọru àjàgà mi tòótọ́, ran àwọn obìnrin wọ̀nyí lọ́wọ́, nítorí wọn bá mi ṣiṣẹ́ pọ̀ ní ìfẹ̀gbẹ́-kẹ̀gbẹ́ nínú ìhìnrere, àti Klementi pẹ̀lú, àti àwọn olùbáṣiṣẹ́ mi yòókù pẹ̀lú, orúkọ àwọn tí ń bẹ nínú ìwé ìyè.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Ẹ máa yọ̀ nínú Olúwa nígbà gbogbo: mo sì tún wí pé. Ẹ máa yọ̀. <verse number="5" style="v"/>Ẹ jẹ́ ki ìpamọ́ra yín di mímọ́ fún gbogbo ènìyàn, Olúwa ń bẹ nítòsí. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4.6: </char><char style="xt" closed="false"><ref loc="MAT 6:25-34">Mt 6.25-34</ref>.</char></note>Ẹ má ṣe ṣe àníyàn ohunkóhun; ṣùgbọ́n nínú ohun gbogbo, nípa àdúrà àti ẹ̀bẹ̀ pẹ̀lú ìdúpẹ́, ẹ máa fi ìbéèrè yín hàn fún Ọlọ́run. <verse number="7" style="v"/>Àti àlàáfíà Ọlọ́run, tí ó ju ìmòye gbogbo lọ, yóò pa ọkàn àti èrò yín mọ nínú Kristi Jesu.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Ní àkótán, ará, ohunkóhun tí í ṣe òtítọ́, ohunkóhun tí í ṣe ọ̀wọ̀, ohunkóhun tí í ṣe títọ́ ohunkóhun tí í ṣe mímọ́, ohunkóhun tí í ṣe fífẹ́, ohunkóhun tí ó ni ìròyìn rere, bí ìwà títọ́ kan bá wà, bí ìyìn kan bá sì wà, ẹ máa gba nǹkan wọ̀nyí rò. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4.9: </char><char style="xt" closed="false"><ref loc="ROM 15:33">Ro 15.33</ref>.</char></note>Àwọn nǹkan tí ẹ̀yin ti kọ́, tí ẹ̀yin sì ti gbà, tí ẹ̀yin sì ti gbọ́, tí ẹ̀yin sì ti rí lọ́wọ́ mi, ẹ máa ṣe wọ́n: Ọlọ́run àlàáfíà yóò sì wà pẹ̀lú yín.</para>
+  <para style="s1">Àwọn ọpẹ́ fún àwọn ẹ̀bùn wọn</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4.10: </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 11:9">2Kọ 11.9</ref>.</char>
+    </note>Èmi yọ̀ gidigidi nínú Olúwa pé, nísinsin yìí, ẹ̀yin tún ti sọjí nínú àníyàn ọkàn yín sí mi, nítòótọ́ ọkàn yín ń fàmọ́ mi ṣùgbọ́n ẹ kò ní àǹfààní tó. <verse number="11" style="v"/>Kì í ṣe pé èmi ń sọ nítorí àìní: nítorí pé ni ipòkípò tí mo bá wà, mo tí kọ́ láti ní ìtẹ́lọ́rùn nínú rẹ̀. <verse number="12" style="v"/>Mo mọ̀ ohun tí o jẹ láti wa nínú àìní, mo sì mọ ohun tí ó jẹ láti ni lọ́pọ̀lọpọ̀. Nínú ohunkóhun àti nínú ohun gbogbo mo ti kọ́ àṣírí láti máa jẹ́ àjẹyó tàbí láti wà ni àìjẹun, láti máa ni ànító àti láti ṣe aláìní. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4.13: </char><char style="xt" closed="false"><ref loc="2CO 12:9">2Kọ 12.9</ref>.</char></note>Èmi le ṣe ohun gbogbo nínú Kristi ẹni ti ń fi agbára fún mi.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Ṣùgbọ́n ẹ̀yin ṣeun gidigidi ní ti pé ẹ̀yin ṣe alábápín nínú ìpọ́njú mi. <verse number="15" style="v"/>Ẹ̀yin pàápàá sì mọ̀ pẹ̀lú, ẹ̀yin ará Filipi, pé ni ìbẹ̀rẹ̀ ìhìnrere, nígbà tí mo kúrò ni Makedonia, kò sí ìjọ kan ti ó bá mi ń ṣe alábápín ní ti gbígbà àti fífún ni, bí kò ṣe ẹ̀yin nìkan ṣoṣo. <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4.16: </char><char style="xt" closed="false"><ref loc="ACT 17:1-9">Ap 17.1-9</ref>; <ref loc="1TH 2:9">1Tẹ 2.9</ref>.</char></note>Nítorí ní Tẹsalonika ẹ̀yin fi nǹkan ránṣẹ́, lẹ́ẹ̀kan fún àìní mi. <verse number="17" style="v"/>Kì í ṣe nítorí ti èmi ń fẹ́ ẹ̀bùn náà: ṣùgbọ́n èmi ń fẹ́ èso ti yóò máa di púpọ̀ nítorí yín <verse number="18" style="v"/>Ṣùgbọ́n mo ní ohun gbogbo, mo sì ti di púpọ̀: mo sì tún ni lọ́pọ̀lọpọ̀ nígbà ti mo tí gba nǹkan wọ̀nyí lọ́wọ́ Epafiroditu tí a ti rán wá láti lọ́dọ̀ yín, ọrẹ olóòórùn dídùn, ẹbọ ìtẹ́wọ́gbà, tì í ṣe inú dídùn gidigidi sí Ọlọ́run. <verse number="19" style="v"/>Ṣùgbọ́n Ọlọ́run mi yóò pèsè ní kíkún fún gbogbo àìní yín, gẹ́gẹ́ bí ọ̀rọ̀ rẹ̀ nínú ògo nínú Kristi Jesu.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Ṣùgbọ́n ògo ni fún Ọlọ́run àti Baba wa láé àti láéláé. Àmín.</para>
+  <para style="b"/>
+  <para style="s1">Ọ̀rọ̀ ìkíni ìkẹyìn</para>
+  <para style="p">
+    <verse number="21" style="v"/>Ẹ kí olúkúlùkù ènìyàn mímọ́ nínú Kristi Jesu.</para>
+  <para style="p">Àwọn ará tí ó wà pẹ̀lú mi kí yín.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Gbogbo àwọn ènìyàn mímọ́ kí yín, pàápàá àwọn tí ń ṣe ti agbo ilé Kesari.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="23" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4.23: </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 6:18">Ga 6.18</ref>; <ref loc="PHM 1:25">Fm 25</ref>.</char>
+    </note>Oore-ọ̀fẹ́ Jesu Kristi Olúwa wa, kí ó wà pẹ̀lú ẹ̀mí yín. Àmín.</para>
+</usx>

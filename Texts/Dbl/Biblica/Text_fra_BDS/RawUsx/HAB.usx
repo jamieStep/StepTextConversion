@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="HAB" style="id">La Bible du Semeur (The Bible of the Sower)</book>
+  <para style="rem">Copyright © 1992, 1999, 2015 by Biblica, Inc.®</para>
+  <para style="h">HABAQUQ</para>
+  <para style="toc1">Habaquq</para>
+  <para style="toc2">Habaquq</para>
+  <para style="toc3">Ha</para>
+  <para style="mt1">Habaquq</para>
+  <para style="imt">Introduction</para>
+  <para style="ip">Bien que le livre d’Habaquq ne fournisse aucun renseignement sur l’identité du prophète, il est possible, grâce aux indications historiques qu’il contient – en particulier la mention des Babyloniens (<char style="xt"><ref loc="HAB 1:6">1.6</ref></char>) – de préciser l’époque à laquelle Habaquq a exercé son ministère.</para>
+  <para style="ip">En effet, à partir de 630 avant Jésus-Christ, les Babyloniens se sont peu à peu rendus maîtres de toute la Mésopotamie, après s’être libérés de la domination assyrienne. En 626, ils fondent leur nouvel empire et en 612, alliés aux Mèdes, ils s’emparent de Ninive, la capitale de l’Assyrie. L’Egypte tente alors de venir au secours de ce qui reste de l’Assyrie. En 609, les armées égyptiennes pénètrent en Juda pour se rendre sur l’Euphrate. Josias, roi de Juda, qui veut les empêcher de traverser son territoire, trouve la mort au combat, à Meguiddo. Les troupes du pharaon livrent bataille à celles du Babylonien Nabopolassar : l’issue n’est pas décisive. Sur le chemin du retour, le pharaon repasse par Jérusalem où il dépose le nouveau roi de Juda, Yoahaz, pour le remplacer par Yehoyaqim, pro-égyptien (<char style="xt"><ref loc="2KI 23:29-35">2 R 23.29-35</ref></char>). En 605 a lieu un nouvel affrontement entre les deux puissances. Nabopolassar succombe à la maladie et son fils, Nabuchodonosor, remporte à Karkemish une victoire décisive sur l’Egypte désormais très affaiblie. Les armées babyloniennes poursuivent leurs ennemis en fuite au moins jusqu’à Jérusalem. Nabuchodonosor assiège la ville et Yehoyaqim fait acte de soumission (<char style="xt"><ref loc="2KI 24:1">2 R 24.1</ref></char>). Nabuchodonosor emporte avec lui un grand butin et emmène un premier convoi de captifs, peu nombreux, mais choisis parmi l’aristocratie judéenne (<char style="xt"><ref loc="DAN 1:1">Dn 1.1</ref></char>). Il inaugure ainsi un règne long et prospère.</para>
+  <para style="ip">Habaquq connaît les Babyloniens et sait avec quelle violence ils agissent (<char style="xt"><ref loc="HAB 1:6-11">1.6-11</ref></char>). Mais à son époque, ceux-ci ne semblent pas encore être intervenus en Juda (<char style="xt"><ref loc="HAB 1:5">1.5</ref></char>). La prophétie daterait donc d’avant la bataille de Karkemish. Par ailleurs, Habaquq dénonce l’injustice sociale et l’oppression qui se pratiquent en Juda (<char style="xt"><ref loc="HAB 1:2-4">1.2-4</ref></char>), ce qui correspond plutôt au règne de Yehoyaqim qu’à celui de Josias. On peut ainsi situer son ministère au début du règne de Yehoyaqim, entre 609 et 605. Habaquq est donc un contemporain de Jérémie.</para>
+  <para style="ip">La prophétie se compose en grande partie d’un dialogue entre le prophète et l’Eternel, qui porte sur la manière dont Dieu dirige l’histoire : comment lui qui est juste peut-il tolérer l’injustice (<char style="xt"><ref loc="HAB 1:2-4">1.2-4</ref></char>) ou punir le méchant par plus méchant que lui (<char style="xt"><ref loc="HAB 1:12-2:1">1.12 à 2.1</ref></char>) ? Dans ses réponses, l’Eternel souligne que les méchants seront jugés (<char style="xt">1.5-11 ; 2.5-20</char>) et la justice établie sur terre (<char style="xt"><ref loc="HAB 2:13-14">2.13-14</ref></char>). Mais ces réalités viendront en leur temps (<char style="xt">2.3 ; 3.3 ; voir Hé 10.37</char>). Ainsi, dans l’attente de la « venue » de Dieu (<char style="xt">2.3 ; 3.3</char>), le prophète est-il appelé à vivre par la foi, en croyant que le Seigneur accomplira ce qu’il a promis (<char style="xt"><ref loc="HAB 2:3-4">2.3-4</ref></char>). L’apôtre Paul discernera dans cet appel le principe qui gouverne la relation du fidèle à Dieu (<char style="xt">Rm 1.17 ; Ga 3.11</char>). Habaquq, quant à lui, y répond par la prière de la foi (<char style="xt">chap. <ref loc="HAB 3">3</ref></char>), nourrie des promesses de l’Eternel (<char style="xt"><ref loc="HAB 3:2">3.2</ref>ss</char>) et de l’attente du salut de Dieu (<char style="xt"><ref loc="HAB 3:16-19">3.16-19</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="HAB 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HAB 1:1"/>Proclamation dont Habaquq, le prophète, a reçu la révélation.<verse eid="HAB 1:1"/></para>
+  <para style="s1">Plaintes et questions</para>
+  <para style="s2">Le prophète discute avec Dieu</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HAB 1:2"/>Jusques à quand, ô Eternel,</para>
+  <para style="q1" vid="HAB 1:2">appellerai-je à l’aide</para>
+  <para style="q1" vid="HAB 1:2">sans que tu ne m’entendes ?</para>
+  <para style="q1" vid="HAB 1:2">Jusques à quand devrai-je ╵crier vers toi ╵au sujet de la violence</para>
+  <para style="q1" vid="HAB 1:2">sans que tu sauves ?<verse eid="HAB 1:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HAB 1:3"/>Pourquoi me fais-tu voir ╵de telles injustices ?</para>
+  <para style="q1" vid="HAB 1:3">Comment peux-tu te contenter ╵d’observer les méfaits ╵qui se commettent ?</para>
+  <para style="q1" vid="HAB 1:3">Je ne vois devant moi ╵que ravage et violence,</para>
+  <para style="q1" vid="HAB 1:3">il y a des querelles,</para>
+  <para style="q1" vid="HAB 1:3">et des conflits surgissent.<verse eid="HAB 1:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HAB 1:4"/>A cause de cela, ╵on ne respecte plus la loi,</para>
+  <para style="q1" vid="HAB 1:4">et le droit ne triomphe pas.</para>
+  <para style="q1" vid="HAB 1:4">Car les méchants ╵empêchent les justes d’agir<note caller="+" style="f"><char style="fr" closed="false">1.4 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">l’emportent sur les justes </char><char style="ft" closed="false">(dans les tribunaux).</char></note>,</para>
+  <para style="q1" vid="HAB 1:4">les jugements qui sont rendus ╵sont corrompus.<verse eid="HAB 1:4"/></para>
+  <para style="s2">La réponse inattendue de Dieu</para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HAB 1:5"/>– Regardez, traîtres<note caller="+" style="f"><char style="fr" closed="false">1.5 </char><char style="fq" closed="false">traîtres</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">d’après un texte hébreu retrouvé à Qumrân et l’ancienne version grecque (voir <char style="xt"><ref loc="ACT 13:41">Ac 13.41</ref></char>). Le texte hébreu traditionnel a : </char><char style="fqa" closed="false">les nations.</char></note>, ╵et observez !</para>
+  <para style="q1" vid="HAB 1:5">Vous serez stupéfaits, ╵vous serez ébahis,</para>
+  <para style="q1" vid="HAB 1:5">car je vais accomplir ╵en votre temps une œuvre ;</para>
+  <para style="q1" vid="HAB 1:5">vous ne le croiriez pas ╵si on vous en parlait.<verse eid="HAB 1:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HAB 1:6"/>Je vais faire venir ╵les Chaldéens<note caller="+" style="f"><char style="fr" closed="false">1.6 </char><char style="ft" closed="false">Le nom </char><char style="fqa" closed="false">Chaldéens </char><char style="ft" closed="false">désigne ici les Babyloniens, qui ont reconquis leur indépendance de l’Assyrie vers 630 av. J.-C. et fondé un empire néo-babylonien en 626, pour dominer tout le Proche-Orient de 605 à 539, en particulier durant le règne de Nabuchodonosor (605 à 562 av. J.-C.).</char></note>,</para>
+  <para style="q1" vid="HAB 1:6">peuple féroce ╵et déchaîné,</para>
+  <para style="q1" vid="HAB 1:6">qui parcourt les étendues de la terre</para>
+  <para style="q1" vid="HAB 1:6">pour prendre possession ╵des demeures d’autrui.<verse eid="HAB 1:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HAB 1:7"/>Il est terrible et redoutable,</para>
+  <para style="q1" vid="HAB 1:7">il impose lui-même ╵son droit et son pouvoir.<verse eid="HAB 1:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HAB 1:8"/>Ses chevaux sont agiles, ╵plus que des léopards,</para>
+  <para style="q1" vid="HAB 1:8">et ils ont du mordant, ╵plus que les loups du soir.</para>
+  <para style="q1" vid="HAB 1:8">Ses coursiers se déploient,</para>
+  <para style="q1" vid="HAB 1:8">ils arrivent de loin,</para>
+  <para style="q1" vid="HAB 1:8">ils volent comme l’aigle</para>
+  <para style="q1" vid="HAB 1:8">lorsqu’il fond sur sa proie.<verse eid="HAB 1:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HAB 1:9"/>Oui, les voilà qui viennent ╵tous adonnés à la violence ;</para>
+  <para style="q1" vid="HAB 1:9">le visage tendu, ╵ils foncent en avant.</para>
+  <para style="q1" vid="HAB 1:9">Voilà les prisonniers ╵rassemblés, innombrables ╵comme les grains de sable.<verse eid="HAB 1:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HAB 1:10"/>Partout, ce peuple traite ╵les rois avec mépris,</para>
+  <para style="q1" vid="HAB 1:10">et il se rit des princes,</para>
+  <para style="q1" vid="HAB 1:10">il se rit de toutes leurs forteresses ;</para>
+  <para style="q1" vid="HAB 1:10">il élève contre elles ╵des terrasses de siège</para>
+  <para style="q1" vid="HAB 1:10">et s’en empare.<verse eid="HAB 1:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HAB 1:11"/>Puis il change d’avis ╵et il passe plus loin<note caller="+" style="f"><char style="fr" closed="false">1.11 </char><char style="ft" closed="false">Verset difficile. Autres traductions : </char><char style="fqa" closed="false">il est passé comme le vent et s’en est allé </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">le vent est passé et s’en est allé.</char></note>.</para>
+  <para style="q1" vid="HAB 1:11">Il se charge de crimes,</para>
+  <para style="q1" vid="HAB 1:11">lui qui voue sa force à son dieu<note caller="+" style="f"><char style="fr" closed="false">1.11 </char><char style="fqa" closed="false">Il se charge de crimes, lui… à son dieu. </char><char style="ft" closed="false">L’ancienne version grecque a : </char><char style="fqa" closed="false">alors j’exposerai ma remontrance à mon Dieu. </char><char style="ft" closed="false">La fin du verset a été traduite diversement : </char><char style="fqa" closed="false">lui qui attribue sa force à son Dieu </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">lui dont la force est le dieu.</char></note>.<verse eid="HAB 1:11"/></para>
+  <para style="s2">Pourquoi, ô Dieu ?</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HAB 1:12"/>– N’es-tu pas depuis l’origine, ╵ô Eternel ?</para>
+  <para style="q1" vid="HAB 1:12">Tu es mon Dieu, mon Saint,</para>
+  <para style="q1" vid="HAB 1:12">tu ne meurs pas<note caller="+" style="f"><char style="fr" closed="false">1.12 </char><char style="ft" closed="false">Selon une tradition de copistes juifs. Ce texte, jugé offensant pour Dieu, semble avoir été modifié en : </char><char style="fqa" closed="false">nous ne mourrons pas, </char><char style="ft" closed="false">que l’on a actuellement dans le texte hébreu traditionnel.</char></note>.</para>
+  <para style="q1" vid="HAB 1:12">O Eternel, ╵toi le rocher, ╵c’est pour exécuter ╵le jugement ╵que tu as suscité ce peuple,</para>
+  <para style="q1" vid="HAB 1:12">et tu l’as rendu fort<note caller="+" style="f"><char style="fr" closed="false">1.12 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">formé.</char></note> ╵pour qu’il soit l’instrument ╵du châtiment.<verse eid="HAB 1:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HAB 1:13"/>Tes yeux sont bien trop purs ╵pour supporter la vue du mal,</para>
+  <para style="q1" vid="HAB 1:13">tu ne peux accepter ╵de voir des méfaits se commettre.</para>
+  <para style="q1" vid="HAB 1:13">Pourquoi supportes-tu ╵la vue des traîtres ?</para>
+  <para style="q1" vid="HAB 1:13">Pourquoi gardes-tu le silence ╵quand l’impie engloutit ╵un plus juste que lui ?<verse eid="HAB 1:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HAB 1:14"/>Tu traites les humains ╵tout comme des poissons</para>
+  <para style="q1" vid="HAB 1:14">ou comme des bestioles ╵qui sont sans maître.<verse eid="HAB 1:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HAB 1:15"/>Car le Chaldéen les prend tous ╵à l’hameçon,</para>
+  <para style="q1" vid="HAB 1:15">il les drague dans son filet</para>
+  <para style="q1" vid="HAB 1:15">et les entasse dans sa nasse.</para>
+  <para style="q1" vid="HAB 1:15">Alors il se réjouit ╵et il exulte.<verse eid="HAB 1:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HAB 1:16"/>Alors il offre ╵à son filet des sacrifices,</para>
+  <para style="q1" vid="HAB 1:16">il brûle de l’encens ╵en l’honneur de sa nasse,</para>
+  <para style="q1" vid="HAB 1:16">car il obtient, par eux, ╵une pêche abondante,</para>
+  <para style="q1" vid="HAB 1:16">des repas plantureux.<verse eid="HAB 1:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="HAB 1:17"/>Continuera-t-il donc toujours ╵à dégainer son glaive<note caller="+" style="f"><char style="fr" closed="false">1.17 </char><char style="ft" closed="false">D’après le commentaire d’Habaquq retrouvé à Qumrân. Le texte hébreu traditionnel a : </char><char style="fqa" closed="false">à vider son filet.</char></note></para>
+  <para style="q1" vid="HAB 1:17">pour égorger les autres peuples ╵sans aucune pitié ?<verse eid="HAB 1:17"/></para>
+  <chapter eid="HAB 1"/>
+  <chapter number="2" style="c" sid="HAB 2"/>
+  <para style="s2">Le juste vivra grâce à sa foi</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HAB 2:1"/>Je me tiendrai ╵à mon poste de garde,</para>
+  <para style="q1" vid="HAB 2:1">je resterai debout ╵sur le fort du guetteur</para>
+  <para style="q1" vid="HAB 2:1">et je guetterai pour savoir ╵ce que Dieu me dira,</para>
+  <para style="q1" vid="HAB 2:1">ce que je répondrai ╵à ma protestation.<verse eid="HAB 2:1"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v" sid="HAB 2:2"/>Et l’Eternel me répondit :</para>
+  <para style="q1" vid="HAB 2:2">Ecris cette révélation,</para>
+  <para style="q1" vid="HAB 2:2">et grave-la sur les tablettes,</para>
+  <para style="q1" vid="HAB 2:2">de sorte que chaque lecteur ╵la lise couramment.<verse eid="HAB 2:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HAB 2:3"/>Car c’est une révélation ╵qui porte sur un temps fixé,</para>
+  <para style="q1" vid="HAB 2:3">qui parle de la fin<note caller="+" style="f"><char style="fr" closed="false">2.3 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">qui aspire à sa fin.</char></note></para>
+  <para style="q1" vid="HAB 2:3">et n’est pas mensongère.</para>
+  <para style="q1" vid="HAB 2:3">Si l’Eternel paraît tarder<note caller="+" style="f"><char style="fr" closed="false">2.3 </char><char style="ft" closed="false">Selon la traduction proposée, c’est l’Eternel qu’il faut attendre et qui viendra (voir <char style="xt">3.3 ; Hé 10.37</char>). Pour d’autres, c’est l’accomplissement de la vision. Cité en <char style="xt"><ref loc="HEB 10:37">Hé 10.37</ref></char>.</char></note>, ╵attends-le patiemment,</para>
+  <para style="q1" vid="HAB 2:3">car il vient sûrement,</para>
+  <para style="q1" vid="HAB 2:3">il ne tardera pas.<verse eid="HAB 2:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HAB 2:4"/>Si quelqu’un flanche,</para>
+  <para style="q1" vid="HAB 2:4">il<note caller="+" style="f"><char style="fr" closed="false">2.4 </char><char style="ft" closed="false">D’après l’ancienne version grecque. Le texte hébreu traditionnel a : </char><char style="fqa" closed="false">celui qui est orgueilleux, qui… </char><char style="ft" closed="false">La différence ne tient qu’à l’inversion de deux lettres en hébreu.</char></note> n’est pas droit de cœur<note caller="+" style="f"><char style="fr" closed="false">2.4 </char><char style="ft" closed="false">L’ancienne version grecque a : </char><char style="fqa" closed="false">je ne prends pas plaisir en lui </char><char style="ft" closed="false">(voir <char style="xt"><ref loc="HEB 10:38">Hé 10.38</ref></char>).</char></note></para>
+  <para style="q1" vid="HAB 2:4">mais le juste vivra ╵grâce à sa foi<note caller="+" style="f"><char style="fr" closed="false">2.4 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">par sa fidélité. </char><char style="ft" closed="false">Il est clair cependant que cette fidélité englobe la foi et en découle (<char style="xt">2.3 ; 3.2, 16-18</char>). Cité en <char style="xt">Rm 1.17 ; Ga 3.11 ; Hé 10.38</char>.</char></note>.<verse eid="HAB 2:4"/></para>
+  <para style="s1">Les cinq malheurs</para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HAB 2:5"/>En effet, la richesse décevra<note caller="+" style="f"><char style="fr" closed="false">2.5 </char><char style="ft" closed="false">D’après un texte hébreu retrouvé à Qumrân. Le texte hébreu traditionnel a : </char><char style="fqa" closed="false">le vin est traître.</char></note></para>
+  <para style="q1" vid="HAB 2:5">le guerrier orgueilleux, ╵et il ne subsistera pas,</para>
+  <para style="q1" vid="HAB 2:5">lui qui, tel le séjour des morts, ╵ouvre une large bouche</para>
+  <para style="q1" vid="HAB 2:5">et qui, comme la mort, ╵n’est jamais rassasié.</para>
+  <para style="q1" vid="HAB 2:5">Car il ajoute à ses conquêtes ╵nation après nation,</para>
+  <para style="q1" vid="HAB 2:5">et il rassemble tous les peuples ╵sous sa domination.<verse eid="HAB 2:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HAB 2:6"/>Mais, un jour, tous ces peuples ╵lanceront contre lui ╵des proverbes moqueurs</para>
+  <para style="q1" vid="HAB 2:6">et des paroles ironiques.</para>
+  <para style="s2" vid="HAB 2:6">Malheur aux accapareurs</para>
+  <para style="q1" vid="HAB 2:6">Et l’on dira :</para>
+  <para style="q1" vid="HAB 2:6">« Malheur à lui ╵car il amasse des richesses ╵qui ne sont pas à lui.</para>
+  <para style="q1" vid="HAB 2:6">Jusques à quand ╵cela va-t-il durer ?</para>
+  <para style="q1" vid="HAB 2:6">Il accumule ╵un lourd fardeau de dettes. »<verse eid="HAB 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HAB 2:7"/>Tes créanciers<note caller="+" style="f"><char style="fr" closed="false">2.7 </char><char style="ft" closed="false">Jeu sur le double sens du terme hébreu qui peut aussi signifier : </char><char style="fqa" closed="false">ceux qui te mordent.</char></note> ╵ne surgiront-ils pas soudain ?</para>
+  <para style="q1" vid="HAB 2:7">Ils se réveilleront ╵pour te faire trembler</para>
+  <para style="q1" vid="HAB 2:7">et ils feront de toi leur proie.<verse eid="HAB 2:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HAB 2:8"/>Toi qui as dépouillé ╵des peuples innombrables,</para>
+  <para style="q1" vid="HAB 2:8">tu seras dépouillé ╵par le reste de tous les peuples.</para>
+  <para style="q1" vid="HAB 2:8">Pour avoir répandu ╵le sang humain,</para>
+  <para style="q1" vid="HAB 2:8">et pour avoir commis ╵des actes de violence</para>
+  <para style="q1" vid="HAB 2:8">contre le pays de Juda, ╵sa ville et tous ses habitants<note caller="+" style="f"><char style="fr" closed="false">2.8 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">contre bien des pays, des villes et tous leurs habitants.</char></note>.<verse eid="HAB 2:8"/></para>
+  <para style="s2">Malheur aux malhonnêtes</para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HAB 2:9"/>Malheur à qui amasse ╵un profit malhonnête ╵pour toute sa famille,</para>
+  <para style="q1" vid="HAB 2:9">et cherche ainsi à établir ╵son nid sur les hauteurs</para>
+  <para style="q1" vid="HAB 2:9">pour le mettre à l’abri ╵de tout malheur.<verse eid="HAB 2:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HAB 2:10"/>Oui, c’est le déshonneur ╵de ton propre royaume ╵que tu as préparé.</para>
+  <para style="q1" vid="HAB 2:10">En détruisant de nombreux peuples,</para>
+  <para style="q1" vid="HAB 2:10">tu t’es fait du tort à toi-même.<verse eid="HAB 2:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HAB 2:11"/>Car, du sein des murailles, ╵les pierres vont crier ;</para>
+  <para style="q1" vid="HAB 2:11">de la charpente, ╵les poutres leur feront écho.<verse eid="HAB 2:11"/></para>
+  <para style="s2">Malheur aux violents</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HAB 2:12"/>Malheur à qui bâtit la ville ╵en répandant le sang,</para>
+  <para style="q1" vid="HAB 2:12">à qui fonde la cité sur le crime !<verse eid="HAB 2:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HAB 2:13"/>Quand les peuples travaillent ╵pour ce qui périt par le feu,</para>
+  <para style="q1" vid="HAB 2:13">et quand les nations s’éreintent pour rien<note caller="+" style="f"><char style="fr" closed="false">2.13 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="JER 51:58">Jr 51.58</ref></char>.</char></note>,</para>
+  <para style="q1" vid="HAB 2:13">cela ne vient-il pas de l’Eternel, ╵du Seigneur des armées célestes ?<verse eid="HAB 2:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HAB 2:14"/>Car la terre sera remplie</para>
+  <para style="q1" vid="HAB 2:14">de connaissance ╵de la gloire de l’Eternel</para>
+  <para style="q1" vid="HAB 2:14">comme les eaux recouvrent ╵le fond des mers<note caller="+" style="f"><char style="fr" closed="false">2.14 </char><char style="ft" closed="false">Reprise de <char style="xt"><ref loc="ISA 11:9">Es 11.9</ref></char>.</char></note>.<verse eid="HAB 2:14"/></para>
+  <para style="s2">Malheur à celui qui enivre son prochain</para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HAB 2:15"/>Malheur à toi ╵qui forces ton prochain à boire</para>
+  <para style="q1" vid="HAB 2:15">et qui vides ton outre ╵jusqu’à l’ivresse<note caller="+" style="f"><char style="fr" closed="false">2.15 </char><char style="fq" closed="false">et qui vides… l’ivresse. </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">en mêlant ton poison jusqu’à l’ivresse.</char></note>,</para>
+  <para style="q1" vid="HAB 2:15">pour pouvoir contempler ╵sa nudité.<verse eid="HAB 2:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HAB 2:16"/>Toi aussi, tu seras ╵rassasié d’infamie ╵au lieu de gloire.</para>
+  <para style="q1" vid="HAB 2:16">Toi aussi, tu boiras ╵et puis l’on te mettra à nu<note caller="+" style="f"><char style="fr" closed="false">2.16 </char><char style="fq" closed="false">l’on te mettra à nu</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">selon le texte hébreu traditionnel. Le texte hébreu retrouvé à Qumrân, la version syriaque, la Vulgate et la version grecque d’Aquila ont : </char><char style="fqa" closed="false">tu tituberas.</char></note> ╵pour découvrir ╵ton incirconcision ;</para>
+  <para style="q1" vid="HAB 2:16">ton tour viendra de boire ╵la coupe de colère<note caller="+" style="f"><char style="fr" closed="false">2.16 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="JER 25:15-29">Jr 25.15-29</ref></char>.</char></note> ╵que l’Eternel ╵te tendra de sa droite.</para>
+  <para style="q1" vid="HAB 2:16">Le déshonneur ╵recouvrira ta gloire.<verse eid="HAB 2:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="HAB 2:17"/>Tu seras submergé ╵par la violence ╵que tu as exercée ╵contre la forêt du Liban<note caller="+" style="f"><char style="fr" closed="false">2.17 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="ISA 14:8">Es 14.8</ref></char>. Autre traduction : </char><char style="fqa" closed="false">contre le palais de la Forêt-du-Liban </char><char style="ft" closed="false">(voir <char style="xt"><ref loc="1KI 7:2">1 R 7.2</ref>, <ref loc="1KI 7:7">7</ref></char>).</char></note>.</para>
+  <para style="q1" vid="HAB 2:17">Le massacre des animaux ╵retombera sur toi</para>
+  <para style="q1" vid="HAB 2:17">pour t’écraser ;</para>
+  <para style="q1" vid="HAB 2:17">car tu as répandu ╵le sang humain,</para>
+  <para style="q1" vid="HAB 2:17">tu as commis ╵des actes de violence ╵contre le pays de Juda,</para>
+  <para style="q1" vid="HAB 2:17">sa ville et tous ses habitants<note caller="+" style="f"><char style="fr" closed="false">2.17 </char><char style="ft" closed="false">Voir v. 8 et note.</char></note>.<verse eid="HAB 2:17"/></para>
+  <para style="s2">Malheur aux idolâtres</para>
+  <para style="q1">
+    <verse number="18" style="v" sid="HAB 2:18"/>A quoi sert une idole</para>
+  <para style="q1" vid="HAB 2:18">sculptée par l’artisan ?</para>
+  <para style="q1" vid="HAB 2:18">Ou une statue de métal fondu,</para>
+  <para style="q1" vid="HAB 2:18">qui n’enseigne que le mensonge ?</para>
+  <para style="q1" vid="HAB 2:18">Car celui qui l’a faite ╵se confie en son œuvre</para>
+  <para style="q1" vid="HAB 2:18">pour fabriquer ╵une idole muette :<verse eid="HAB 2:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="HAB 2:19"/>oui, malheur à qui dit ╵à un morceau de bois : ╵« Réveille-toi ! »,</para>
+  <para style="q1" vid="HAB 2:19">à la pierre muette : ╵« Allons, sors du sommeil ! »</para>
+  <para style="q1" vid="HAB 2:19">Peuvent-ils enseigner ?</para>
+  <para style="q1" vid="HAB 2:19">Voici, ils sont plaqués ╵d’or et d’argent,</para>
+  <para style="q1" vid="HAB 2:19">mais il n’y a en eux ╵aucun souffle de vie.<verse eid="HAB 2:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="HAB 2:20"/>L’Eternel, lui, ╵se tient dans son saint Temple.</para>
+  <para style="q1" vid="HAB 2:20">Que le monde entier fasse ╵silence devant lui !<verse eid="HAB 2:20"/></para>
+  <chapter eid="HAB 2"/>
+  <chapter number="3" style="c" sid="HAB 3"/>
+  <para style="s1">Psaume</para>
+  <para style="s2">Dieu interviendra</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HAB 3:1"/>Prière d’Habaquq le prophète, sur le mode des complaintes<note caller="+" style="f"><char style="fr" closed="false">3.1 </char><char style="ft" closed="false">Terme hébreu de sens inconnu.</char></note>.<verse eid="HAB 3:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HAB 3:2"/>O Eternel, j’ai entendu ╵ce que tu viens de proclamer,</para>
+  <para style="q1" vid="HAB 3:2">et je suis effrayé ╵devant ton œuvre, ô Eternel.</para>
+  <para style="q1" vid="HAB 3:2">Dans le cours des années, ╵accomplis-la<note caller="+" style="f"><char style="fr" closed="false">3.2 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HAB 2:3">2.3</ref></char>.</char></note> !</para>
+  <para style="q1" vid="HAB 3:2">Dans le cours des années, ╵fais-la connaître !</para>
+  <para style="q1" vid="HAB 3:2">Dans ta colère cependant, ╵pense à être clément !<verse eid="HAB 3:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HAB 3:3"/>Dieu viendra de Témân,</para>
+  <para style="q1" vid="HAB 3:3">le Saint viendra du mont Parân.</para>
+  <para style="q4" vid="HAB 3:3">Pause</para>
+  <para style="b" vid="HAB 3:3"/>
+  <para style="q1" vid="HAB 3:3">Sa majesté ╵couvre le ciel,</para>
+  <para style="q1" vid="HAB 3:3">et sa louange ╵remplit la terre.<verse eid="HAB 3:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HAB 3:4"/>Il a l’éclat de la lumière,</para>
+  <para style="q1" vid="HAB 3:4">et, de sa main, ╵jaillissent deux rayons ;</para>
+  <para style="q1" vid="HAB 3:4">c’est là qu’est le réservoir de sa force.<verse eid="HAB 3:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HAB 3:5"/>La peste meurtrière ╵chemine devant lui,</para>
+  <para style="q1" vid="HAB 3:5">et la fièvre brûlante ╵marche à sa suite.<verse eid="HAB 3:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HAB 3:6"/>S’il vient à s’arrêter, ╵il fait vibrer<note caller="+" style="f"><char style="fr" closed="false">3.6 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">il mesure.</char></note> la terre.</para>
+  <para style="q1" vid="HAB 3:6">Quand il regarde, ╵il ébranle les peuples,</para>
+  <para style="q1" vid="HAB 3:6">les montagnes antiques ╵sont disloquées,</para>
+  <para style="q1" vid="HAB 3:6">et les collines ╵des anciens temps s’effondrent.</para>
+  <para style="q1" vid="HAB 3:6">Il parcourt à nouveau ╵les antiques sentiers.<verse eid="HAB 3:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HAB 3:7"/>J’ai vu les tentes de Koushân<note caller="+" style="f"><char style="fr" closed="false">3.7 </char><char style="ft" closed="false">Probablement une peuplade nomade du désert du Sinaï.</char></note> ╵réduites à néant ;</para>
+  <para style="q1" vid="HAB 3:7">les abris de Madian ╵tremblaient, épouvantés.<verse eid="HAB 3:7"/></para>
+  <para style="s2">L’Eternel sort pour délivrer son peuple</para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HAB 3:8"/>Est-ce contre les fleuves ╵que l’Eternel s’irrite,</para>
+  <para style="q1" vid="HAB 3:8">est-ce contre les fleuves ╵que ton courroux s’enflamme ?</para>
+  <para style="q1" vid="HAB 3:8">Est-ce contre la mer ╵que ta fureur s’exerce,</para>
+  <para style="q1" vid="HAB 3:8">pour que tu viennes ainsi ╵monté sur tes chevaux,</para>
+  <para style="q1" vid="HAB 3:8">sur tes chars victorieux ?<verse eid="HAB 3:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HAB 3:9"/>Ton arc est mis à nu,</para>
+  <para style="q1" vid="HAB 3:9">tes traits sont les serments ╵que tu as prononcés<note caller="+" style="f"><char style="fr" closed="false">3.9 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">tes traits sont ceux que tu as juré d’utiliser.</char></note>.</para>
+  <para style="q4" vid="HAB 3:9">Pause</para>
+  <para style="b" vid="HAB 3:9"/>
+  <para style="q1" vid="HAB 3:9">Tu crevasses la terre, ╵livrant passage aux fleuves.<verse eid="HAB 3:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HAB 3:10"/>Les montagnes t’ont vu, ╵et elles tremblent.</para>
+  <para style="q1" vid="HAB 3:10">Des trombes d’eau s’abattent,</para>
+  <para style="q1" vid="HAB 3:10">l’abîme se met à mugir,</para>
+  <para style="q1" vid="HAB 3:10">lançant bien haut ses vagues.<verse eid="HAB 3:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HAB 3:11"/>Le soleil et la lune ╵restent dans leur demeure</para>
+  <para style="q1" vid="HAB 3:11">devant l’éclat ╵de tes flèches qui partent</para>
+  <para style="q1" vid="HAB 3:11">et la clarté ╵des éclairs de ta lance.<verse eid="HAB 3:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HAB 3:12"/>Avec colère, tu parcours la terre,</para>
+  <para style="q1" vid="HAB 3:12">tu foules les peuples aux pieds ╵dans ton indignation.<verse eid="HAB 3:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HAB 3:13"/>Oui, tu t’es mis en route ╵pour délivrer ton peuple,</para>
+  <para style="q1" vid="HAB 3:13">et pour sauver ton roi ╵qui a reçu l’onction.</para>
+  <para style="q1" vid="HAB 3:13">Tu as décapité ╵la maison du méchant,</para>
+  <para style="q1" vid="HAB 3:13">et tu l’as démolie ╵de fond en comble.</para>
+  <para style="q4" vid="HAB 3:13">Pause<verse eid="HAB 3:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="HAB 3:14"/>Tu transperces la tête ╵de l’ennemi ╵avec ses propres flèches,</para>
+  <para style="q1" vid="HAB 3:14">alors qu’il arrivait ╵comme un vent d’ouragan ╵dans le but de nous disperser.</para>
+  <para style="q1" vid="HAB 3:14">Déjà nos ennemis ╵se réjouissaient,</para>
+  <para style="q1" vid="HAB 3:14">comptant bien dévorer ╵l’opprimé en secret<note caller="+" style="f"><char style="fr" closed="false">3.14 </char><char style="ft" closed="false">Sens incertain. Autre traduction : </char><char style="fqa" closed="false">dans sa cachette.</char></note>.<verse eid="HAB 3:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HAB 3:15"/>Tu as lancé ╵tes chevaux dans la mer,</para>
+  <para style="q1" vid="HAB 3:15">dans le bouillonnement ╵des eaux puissantes.<verse eid="HAB 3:15"/></para>
+  <para style="s2">L’Eternel est ma force</para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HAB 3:16"/>J’ai entendu cette nouvelle :</para>
+  <para style="q1" vid="HAB 3:16">j’en suis tout bouleversé.</para>
+  <para style="q1" vid="HAB 3:16">Mes lèvres balbutient</para>
+  <para style="q1" vid="HAB 3:16">et mes os se dissolvent,</para>
+  <para style="q1" vid="HAB 3:16">je reste là, tremblant.</para>
+  <para style="q1" vid="HAB 3:16">Puisqu’il me faut attendre sans bouger, ╵le jour où la détresse</para>
+  <para style="q1" vid="HAB 3:16">fondra sur l’ennemi ╵qui doit nous assaillir.<verse eid="HAB 3:16"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v" sid="HAB 3:17"/>Car le figuier ╵ne bourgeonnera plus,</para>
+  <para style="q1" vid="HAB 3:17">et il n’y aura plus ╵de raisins dans les vignes,</para>
+  <para style="q1" vid="HAB 3:17">le fruit de l’olivier ╵trompera les espoirs,</para>
+  <para style="q1" vid="HAB 3:17">les champs ne produiront ╵plus de pain à manger.</para>
+  <para style="q1" vid="HAB 3:17">Les moutons et les chèvres ╵disparaîtront de leurs enclos,</para>
+  <para style="q1" vid="HAB 3:17">et les bovins de leurs étables.<verse eid="HAB 3:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="HAB 3:18"/>Mais moi, c’est à cause de l’Eternel ╵que je veux me réjouir,</para>
+  <para style="q1" vid="HAB 3:18">j’exulterai de joie ╵à cause du Dieu qui me sauve.<verse eid="HAB 3:18"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v" sid="HAB 3:19"/>L’Eternel, le Seigneur, ╵c’est lui ma force :</para>
+  <para style="q1" vid="HAB 3:19">il rend mes pieds pareils ╵à ceux des biches,</para>
+  <para style="q1" vid="HAB 3:19">il me fait cheminer ╵sur les lieux élevés.</para>
+  <para style="p" vid="HAB 3:19">Pour le chef des musiciens. A chanter avec accompagnement d’instruments à cordes.<verse eid="HAB 3:19"/></para>
+  <chapter eid="HAB 3"/>
+</usx>

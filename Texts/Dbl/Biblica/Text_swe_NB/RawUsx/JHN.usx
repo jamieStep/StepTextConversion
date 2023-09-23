@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="JHN" style="id">- nuBibeln (Swedish Contemporary Bible)</book>
+  <para style="rem">Copyright © 2015 by Biblica, Inc.®</para>
+  <para style="h">Evangeliet enligt Johannes</para>
+  <para style="toc1">Evangeliet enligt Johannes</para>
+  <para style="toc2">Johannes</para>
+  <para style="toc2">Johannes</para>
+  <para style="toc3">Joh</para>
+  <para style="mt1">Evangeliet enligt Johannes</para>
+  <chapter number="1" style="c"/>
+  <para style="s1">Gud blev människa</para>
+  <para style="p">
+    <verse number="1" style="v"/>I början fanns Ordet<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="fq" closed="false">Ordet</char><char style="ft" closed="false">, <char style="tl">logos</char> på grekiska, varifrån t.ex. vårt ord ”logik” kommer, kunde för grekerna betyda ”tanken, den princip som styr universum”. I modernt språkbruk skulle man också kunna förknippa det med ”information”. I Nya testamentet syftar det på Kristus som Guds verksamma ord alltifrån skapelsen.</char></note>. Ordet fanns hos Gud, och Ordet var Gud. <verse number="2" style="v"/>Han fanns hos Gud i början. <verse number="3" style="v"/>Genom honom blev allting till, och utan honom blev ingenting till av det som finns till. <verse number="4" style="v"/>I honom fanns livet, och livet var människornas ljus. <verse number="5" style="v"/>Ljuset lyser i mörkret, och mörkret har inte övervunnit<note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="ft" closed="false">Det grekiska ordet betyder också </char><char style="fqa" closed="false">förstå, inse.</char></note> det.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Det kom en man, sänd av Gud, som hette Johannes, <verse number="7" style="v"/>för att vittna om ljuset, så att alla skulle kunna komma till tro genom honom. <verse number="8" style="v"/>Själv var han inte ljuset. Han var bara den som skulle vittna om ljuset. <verse number="9" style="v"/>Det sanna ljuset, han som är hela mänsklighetens ljus, skulle nu komma in i världen.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Han var i världen, och genom honom hade världen blivit till, men världen kände inte igen honom. <verse number="11" style="v"/>Han kom till det som var hans eget, och hans egna tog inte emot honom. <verse number="12" style="v"/>Men åt alla som tog emot honom gav han rätten att bli Guds barn, åt alla som tror på hans namn <verse number="13" style="v"/>och som inte är födda genom blod, eller köttets vilja, eller av någon mans vilja, utan av Gud.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Och Ordet blev människa och levde bland oss. Vi såg hans härlighet, den härlighet som den ende Sonen har fått av sin Fader. Han var full av nåd och sanning.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Johannes vittnar om honom och ropar: ”Det var om honom jag sa: ’Han som kommer efter mig är före mig, för han fanns till före mig.<note caller="+" style="f"><char style="fr" closed="false">1:15 </char><char style="ft" closed="false">Mänskligt sett var Johannes 6 månader äldre än Jesus. <char style="xt">Jfr <ref loc="LUK 1:26">Luk 1:26</ref></char>.</char></note>’ ”</para>
+  <para style="p">
+    <verse number="16" style="v"/>Av hans fullhet har vi alla fått ta emot nåd och åter nåd. <verse number="17" style="v"/>Lagen gavs genom Mose, men genom Jesus Kristus kom nåden och sanningen. <verse number="18" style="v"/>Ingen har någonsin sett Gud, men hans ende Son, som själv är Gud<note caller="+" style="f"><char style="fr" closed="false">1:18 </char><char style="ft" closed="false">Det finns små skillnader i tidiga handskrifter: </char><char style="fqa" closed="false">den ende/enfödde Sonen / den ende Gud(s) Son</char><char style="ft" closed="false">.</char></note> och är vid Faderns sida, han har gjort honom känd.</para>
+  <para style="s1">Johannes döparen talar om Jesus</para>
+  <para style="r">(<ref loc="MAT 3:1-12">Matt 3:1-12</ref>; <ref loc="MRK 1:2-8">Mark 1:2-8</ref>; <ref loc="LUK 3:1-18">Luk 3:1-18</ref>)</para>
+  <para style="p">
+    <verse number="19" style="v"/>Detta var Johannes vittnesbörd när judarna hade skickat präster och leviter från Jerusalem, för att fråga honom vem han var. <verse number="20" style="v"/>Johannes döparen bekände, utan att förneka bekände han: ”Jag är inte Messias.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>”Vem är du då?” frågade de. ”Är du Elia<note caller="+" style="f"><char style="fr" closed="false">1:21 </char><char style="ft" closed="false"><char style="xt">Jfr <ref loc="2KI 2:1-11">2 Kung 2:1-11</ref></char>.</char></note>?”</para>
+  <para style="p">”Nej”, svarade han, ”det är jag inte.”</para>
+  <para style="p">”Är du profeten<note caller="+" style="f"><char style="fr" closed="false">1:21 </char><char style="ft" closed="false"><char style="xt">Jfr <ref loc="DEU 18:15">5 Mos 18:15</ref>,<ref loc="DEU 18:18">18</ref></char>, där Mose säger att en profet lik honom skulle komma.</char></note>?”</para>
+  <para style="p">”Nej”, svarade han.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Då sa de: ”Vem är du då? Något svar måste vi ha att ge till dem som har sänt oss. Vad säger du om dig själv?”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Han svarade: ”Jag är en röst som ropar i ödemarken: ’Bana väg för Herren!<note caller="+" style="f"><char style="fr" closed="false">1:23 </char><char style="ft" closed="false"><char style="xt">Se <ref loc="ISA 40:3">Jes 40:3</ref></char>.</char></note>’ som profeten Jesaja har sagt.”</para>
+  <para style="p">
+    <verse number="24" style="v"/>De som hade sänts ut av fariseerna <verse number="25" style="v"/>frågade honom nu: ”Varför döper du om du varken är Messias eller Elia eller profeten?”</para>
+  <para style="p">
+    <verse number="26" style="v"/>Johannes svarade dem: ”Jag döper i vatten, men mitt ibland er står en som ni inte känner. <verse number="27" style="v"/>Han är den som kommer efter mig, och jag är inte ens värdig att knyta upp hans sandalremmar.<note caller="+" style="f"><char style="fr" closed="false">1:27 </char><char style="ft" closed="false">Detta var en slavs uppgift.</char></note>”</para>
+  <para style="p">
+    <verse number="28" style="v"/>Detta hände i Betania, på andra sidan Jordanfloden, där Johannes döpte.</para>
+  <para style="s1">Jesus är Guds lamm</para>
+  <para style="p">
+    <verse number="29" style="v"/>Nästa dag såg han Jesus komma emot honom och sa: ”Där är Guds lamm, som tar bort världens synd. <verse number="30" style="v"/>Det var honom jag talade om när jag sa: ’Han som kommer efter mig är före mig, för han fanns till före mig.’ <verse number="31" style="v"/>Jag kände honom inte, men för att han ska uppenbaras för Israel har jag kommit för att döpa i vatten.”</para>
+  <para style="p">
+    <verse number="32" style="v"/>Johannes vittnade: ”Jag såg Anden komma ner från himlen som en duva och stanna kvar över honom. <verse number="33" style="v"/>Jag kände honom inte, men han som sände mig för att döpa i vatten sa till mig: ’Den du ser Anden komma ner och stanna kvar över är den som döper i den heliga Anden.’ <verse number="34" style="v"/>Jag har sett det och vittnat att han är Guds Son<note caller="+" style="f"><char style="fr" closed="false">1:34 </char><char style="ft" closed="false">Enligt en del handskrifter: </char><char style="fqa" closed="false">Guds utvalde.</char></note>.”</para>
+  <para style="s1">De första lärjungarna</para>
+  <para style="p">
+    <verse number="35" style="v"/>Dagen efter stod Johannes döparen där igen med två av sina lärjungar, <verse number="36" style="v"/>och när Jesus kom gående förbi såg Johannes på honom och sa: ”Där är Guds lamm!”</para>
+  <para style="p">
+    <verse number="37" style="v"/>De båda lärjungarna hörde detta och började följa Jesus. <verse number="38" style="v"/>När Jesus då vände sig om och såg att de följde efter honom, frågade han dem: ”Är det något ni vill?”</para>
+  <para style="p">De svarade: ”Rabbi (det betyder mästare), var bor du?”</para>
+  <para style="p">
+    <verse number="39" style="v"/>Då sa Jesus: ”Kom med mig och se.” Och så gick de med honom till den plats där han bodde. Det var runt fyra-tiden på eftermiddagen, och de stannade sedan hos honom den dagen. <verse number="40" style="v"/>Den ene av de två som hade hört vad Johannes sa och sedan följt efter Jesus var Andreas, Simon Petrus bror.</para>
+  <para style="p">
+    <verse number="41" style="v"/>Denne letade först reda på sin bror Simon och sa till honom: ”Vi har funnit Messias” (Messias betyder Kristus).<note caller="+" style="f"><char style="fr" closed="false">1:41 </char><char style="ft" closed="false"><char style="xt">Se not till <ref loc="MAT 1:1">Matt 1:1</ref></char>.</char></note> <verse number="42" style="v"/>Och han tog med sig honom till Jesus. Jesus såg då på honom och sa: ”Du är Simon, Johannes son. Men du ska kallas Kefas (det betyder Petrus).<note caller="+" style="f"><char style="fr" closed="false">1:42 </char><char style="fq" closed="false">Kefas </char><char style="ft" closed="false">(arameiska) och </char><char style="fq" closed="false">Petrus </char><char style="ft" closed="false">(grekiska) betyder båda </char><char style="fqa" closed="false">klippa.</char></note>”</para>
+  <para style="p">
+    <verse number="43" style="v"/>Dagen därpå tänkte Jesus gå till Galileen. Då träffade han Filippos och sa till honom: ”Följ mig.” <verse number="44" style="v"/>Filippos var från Betsaida, Andreas och Petrus hemstad.</para>
+  <para style="p">
+    <verse number="45" style="v"/>Filippos fann Natanael och sa till honom: ”Vi har funnit honom som Moses lag och profeterna talar om, Jesus, Son till Josef, från Nasaret.”</para>
+  <para style="p">
+    <verse number="46" style="v"/>”Nasaret!” sa Natanael. ”Kan något gott komma därifrån?”</para>
+  <para style="p">”Kom och se själv”, svarade Filippos.</para>
+  <para style="p">
+    <verse number="47" style="v"/>När Jesus såg Natanael närma sig, sa han: ”Här kommer en sann israelit<note caller="+" style="f"><char style="fr" closed="false">1:47 </char><char style="ft" closed="false">Israelit betyder efterkommande till Israel, som också hette Jakob. <char style="xt">Jfr <ref loc="GEN 32:27-28">1 Mos 32:27-28</ref></char>.</char></note>. Det finns inget svek i honom.”</para>
+  <para style="p">
+    <verse number="48" style="v"/>”Hur kan du känna mig?” undrade Natanael.</para>
+  <para style="p">Jesus svarade: ”Jag såg dig under fikonträdet innan Filippos kallade på dig.”</para>
+  <para style="p">
+    <verse number="49" style="v"/>Då sa Natanael: ”Rabbi, du är Guds Son, Israels kung!”</para>
+  <para style="p">
+    <verse number="50" style="v"/>Men Jesus sa till honom: ”Tror du detta för att jag sa att jag såg dig under fikonträdet? Du kommer att få se större ting än så.” <verse number="51" style="v"/>Han sa vidare: ”Ja, sannerligen<note caller="+" style="f"><char style="fr" closed="false">1:51 </char><char style="ft" closed="false">Typiskt för detta evangelium är det dubbla användandet av <char style="tl">amen</char>, dvs. </char><char style="fq" closed="false">sannerligen.</char></note> säger jag er: ni ska få se himlen öppen och Guds änglar stiga upp och stiga ner över Människosonen.”<note caller="+" style="f"><char style="fr" closed="false">1:51 </char><char style="ft" closed="false">För </char><char style="fq" closed="false">Människosonen</char><char style="ft" closed="false">, <char style="xt">se not till <ref loc="MAT 8:20">Matt 8:20</ref></char>. Jfr f.ö. med berättelsen om Jakobs stege i <char style="xt"><ref loc="GEN 28:10-17">1 Mos 28:10-17</ref></char>.</char></note></para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Jesus förvandlar vatten till vin</para>
+  <para style="p">
+    <verse number="1" style="v"/>På tredje dagen<note caller="+" style="f"><char style="fr" closed="false">2:1 </char><char style="ft" closed="false">Dvs. </char><char style="fqa" closed="false">Två dagar senare</char></note> hölls ett bröllop i Kana i Galileen, och Jesus mor var där. <verse number="2" style="v"/>Jesus och hans lärjungar var också inbjudna dit. <verse number="3" style="v"/>Vinet tog slut, och Jesus mor sa då till honom: ”De har inget vin.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>”Lämna mig ifred, kvinna”, svarade han. ”Min stund har inte kommit än.”</para>
+  <para style="p">
+    <verse number="5" style="v"/>Men hans mor sa till tjänarna: ”Gör precis som han säger.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Där fanns sex stora stenkrukor för de judiska reningsceremonierna. Krukorna rymde omkring hundra liter var. <verse number="7" style="v"/>Jesus sa nu till dem: ”Fyll krukorna med vatten”, och när alla krukorna var helt fulla, <verse number="8" style="v"/>sa han: ”Ös upp och ge det till bröllopsvärden.” Och de gjorde så.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Värden smakade på vattnet, som nu hade förvandlats till vin. Men eftersom han inte visste varifrån det kom – bara tjänarna som hade öst upp vattnet kände till det – kallade han på brudgummen och sa: <verse number="10" style="v"/>”Alla bjuder ju först på det utsökta vinet och på sämre vin när gästerna börjar bli berusade. Men du har sparat det bästa till sist!”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Genom detta sitt första tecken i Kana i Galileen visade Jesus sin härlighet, och hans lärjungar trodde på honom.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Därefter gick Jesus ner till Kafarnaum tillsammans med sin mor, sina bröder och sina lärjungar, och de stannade där under några dagar.</para>
+  <para style="s1">Jesus rensar templet</para>
+  <para style="r">(<ref loc="MAT 21:12-13">Matt 21:12-13</ref>; <ref loc="MRK 11:15-17">Mark 11:15-17</ref>; <ref loc="LUK 19:45-46">Luk 19:45-46</ref>)</para>
+  <para style="p">
+    <verse number="13" style="v"/>När påskhögtiden<note caller="+" style="f"><char style="fr" closed="false">2:13 </char><char style="ft" closed="false"><char style="xt">Se not till <ref loc="MAT 26:59">Matt 26:59</ref></char>.</char></note> närmade sig gick Jesus till Jerusalem. <verse number="14" style="v"/>I templet fann han dem som sålde oxar, får och duvor, och dem som satt och växlade pengar.<note caller="+" style="f"><char style="fr" closed="false">2:14 </char><char style="ft" closed="false">Djuren skulle användas till offer i templet.</char></note> <verse number="15" style="v"/>Jesus gjorde sig en piska av några repstumpar och drev ut allihop från tempelområdet tillsammans med fåren och oxarna. Han slog ut myntväxlarnas pengar och välte deras bord, <verse number="16" style="v"/>och till dem som sålde duvor sa han: ”Ta bort allt detta härifrån! Gör inte min Faders hus till en marknadsplats!”</para>
+  <para style="p">
+    <verse number="17" style="v"/>Då kom hans lärjungar ihåg att det stod skrivet: ”Min iver för ditt tempel förtär mig.”<note caller="+" style="f"><char style="fr" closed="false">2:17 </char><char style="ft" closed="false"><char style="xt">Se <ref loc="PSA 69:10">Ps 69:10</ref></char>.</char></note></para>
+  <para style="p">
+    <verse number="18" style="v"/>Men judarna sa till honom: ”Vad kan du visa oss för tecken, när du nu gör så här?”</para>
+  <para style="p">
+    <verse number="19" style="v"/>Jesus svarade: ”Riv ner det här templet, så ska jag resa upp det igen på tre dagar.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Judarna sa: ”Detta tempelbygge har pågått i fyrtiosex år, och du menar att du kan resa upp det på tre dagar!” <verse number="21" style="v"/>Men det tempel Jesus talade om var hans egen kropp. <verse number="22" style="v"/>När han sedan uppstod från de döda kom hans lärjungar ihåg att han hade sagt detta, och de trodde på Skriften och på det ord Jesus själv hade talat.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Tack vare de tecken han gjorde i Jerusalem under påskhögtiden började många tro på hans namn. <verse number="24" style="v"/>Men Jesus litade inte på någon, för han kände alla. <verse number="25" style="v"/>Han behövde inte någons vittnesbörd om människan, för han visste vad som fanns i människan.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Nikodemos besöker Jesus om natten</para>
+  <para style="p">
+    <verse number="1" style="v"/>Där fanns en farisé<note caller="+" style="f"><char style="fr" closed="false">3:1 </char><char style="ft" closed="false"><char style="xt">Se not till <ref loc="MAT 5:20">Matt 5:20</ref></char>.</char></note> som hette Nikodemos och som var medlem i det judiska rådet<note caller="+" style="f"><char style="fr" closed="false">3:1 </char><char style="ft" closed="false"><char style="xt">Se not till <ref loc="MAT 26:59">Matt 26:59</ref></char>.</char></note>. <verse number="2" style="v"/>Han kom till Jesus en natt och sa: ”Rabbi, vi vet att du är en lärare som har kommit från Gud. Ingen kan göra sådana tecken som du gör om inte Gud är med honom.”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Men Jesus svarade: ”Ja, sannerligen säger jag dig: den som inte föds på nytt<note caller="+" style="f"><char style="fr" closed="false">3:3 </char><char style="ft" closed="false">Eller </char><char style="fqa" closed="false">från ovan.</char></note> får aldrig se Guds rike.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>”Hur kan någon födas på nytt när man är gammal?” undrade Nikodemos. ”Man kan väl inte komma in i sin moders liv och födas igen?”</para>
+  <para style="p">
+    <verse number="5" style="v"/>Jesus svarade: ”Ja, sannerligen säger jag dig: den som inte blir född av vatten och Ande får överhuvudtaget inte komma in i Guds rike. <verse number="6" style="v"/>Det som föds på mänskligt sätt är mänskligt, men det som föds av Anden är andligt. <verse number="7" style="v"/>Förvåna dig därför inte över att jag säger att ni måste födas på nytt<note caller="+" style="f"><char style="fr" closed="false">3:7 </char><char style="ft" closed="false">Se not till v. 3.</char></note>. <verse number="8" style="v"/>Vinden<note caller="+" style="f"><char style="fr" closed="false">3:8 </char><char style="ft" closed="false">Både det hebreiska och det grekiska ordet för </char><char style="fqa" closed="false">ande </char><char style="ft" closed="false">kan också översättas med </char><char style="fqa" closed="false">vind.</char></note> blåser vart den vill. Du hör den blåsa men kan inte säga varifrån den kommer eller vart den tar vägen. Så är det också med var och en som är född av Anden.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>”Men hur är detta möjligt?” frågade Nikodemos.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Jesus svarade: ”Du är en Israels lärare och förstår inte det här? <verse number="11" style="v"/>Ja, sannerligen säger jag dig: det vi talar om är sådant vi vet, och vi vittnar om det vi har sett, och ändå tar ni inte emot vårt vittnesbörd. <verse number="12" style="v"/>Om ni inte tror när jag talar till er om det jordiska, hur ska ni då kunna tro när jag talar om det himmelska? <verse number="13" style="v"/>Ingen har ju stigit upp till himlen, utom Människosonen, som har kommit ner därifrån. <verse number="14" style="v"/>På samma sätt som Mose hängde upp kopparormen i öknen måste Människosonen lyftas upp<note caller="+" style="f"><char style="fr" closed="false">3:14 </char><char style="ft" closed="false">Uttrycket syftar både på att Jesus skulle hängas upp på ett kors och på att han skulle lyftas upp till himlen.</char></note>, <verse number="15" style="v"/>för att alla som tror på honom ska ha evigt liv.”<note caller="+" style="f"><char style="fr" closed="false">3:15 </char><char style="ft" closed="false">Somliga kommentatorer anser att citatet fortsätter t.o.m. vers 21.</char></note></para>
+  <para style="p">
+    <verse number="16" style="v"/>Så älskade Gud världen att han gav den sin ende Son, för att de som tror på honom inte ska gå förlorade utan ha evigt liv. <verse number="17" style="v"/>Det var inte för att döma världen som Gud sände sin Son, utan för att världen skulle räddas genom honom. <verse number="18" style="v"/>Den som tror på honom blir inte dömd. Men den som inte tror är redan dömd, eftersom han inte tror på Guds ende Sons namn. <verse number="19" style="v"/>Och detta är domen, att när ljuset kom ner till världen, älskade människorna mörkret mer än ljuset, eftersom deras handlingar var onda. <verse number="20" style="v"/>Den som gör det som är ont, hatar ljuset. Han håller sig borta från ljuset, så att hans gärningar inte ska avslöjas. <verse number="21" style="v"/>Men den som gör det som är sanningsenligt dras till ljuset, för att det ska synas att han gör det som Gud vill.</para>
+  <para style="s1">Johannes döparen berättar vem Jesus är</para>
+  <para style="p">
+    <verse number="22" style="v"/>Sedan gick Jesus tillsammans med sina lärjungar till Judeen där de stannade en tid och döpte. <verse number="23" style="v"/>Samtidigt höll Johannes på att döpa vid Ainon, nära Salim, där det fanns gott om vatten, och folk kom dit för att döpas. <verse number="24" style="v"/>Det var innan Johannes hade satts i fängelse. <verse number="25" style="v"/>En gång kom några av Johannes lärjungar att diskutera olika reningsceremonier<note caller="+" style="f"><char style="fr" closed="false">3:25 </char><char style="ft" closed="false">Genom en reningsceremoni blev man enligt judarna ren, värdig att komma inför Gud.</char></note> med en jude. <verse number="26" style="v"/>De gick då till Johannes och sa: ”Rabbi, mannen som var tillsammans med dig på andra sidan Jordanfloden, han som du vittnade om, han döper också, och nu går alla till honom.”</para>
+  <para style="p">
+    <verse number="27" style="v"/>Men Johannes svarade: ”Ingen kan ta emot något som inte ges honom från himlen.” <verse number="28" style="v"/>Ni kan själva vittna om att jag har sagt att jag inte är Messias. Jag är utsänd för att gå framför honom. <verse number="29" style="v"/>Bruden tillhör sin brudgum. Och brudgummens vän gläds åt att få stå och lyssna till brudgummen. Den glädjen är nu fullständigt min. <verse number="30" style="v"/>Han ska bli större och jag mindre.</para>
+  <para style="p">
+    <verse number="31" style="v"/>”Han som har kommit från ovan är över alla andra. Den som kommer från jorden är av jorden och talar det jordiska. Den som kommer från himlen är över alla. <verse number="32" style="v"/>Han vittnar om det han har sett och hört, och ingen tar emot hans vittnesbörd. <verse number="33" style="v"/>Men den som tar emot hans vittnesbörd, bekräftar att Gud talar sanning, <verse number="34" style="v"/>för den som är sänd av Gud talar Guds ord. Gud ger Anden utan mått. <verse number="35" style="v"/>Fadern älskar Sonen och har gett honom makt över allting. <verse number="36" style="v"/>Den som tror på Sonen har evigt liv. Men den som vägrar att lyda Sonen ska inte se livet, utan blir kvar under Guds dom.”</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Jesus och den samariska kvinnan</para>
+  <para style="p">
+    <verse number="1" style="v"/>Jesus insåg att fariseerna hade fått höra att han hade fler lärjungar än Johannes och döpte fler – <verse number="2" style="v"/>fast det var inte Jesus själv som döpte utan hans lärjungar. <verse number="3" style="v"/>Jesus lämnade därför Judeen och återvände till Galileen.</para>
+  <para style="p">
+    <verse number="4" style="v"/>På vägen dit var han tvungen att gå genom Samarien<note caller="+" style="f"><char style="fr" closed="false">4:4 </char><char style="ft" closed="false">Samarien låg mellan Galileen och Judeen. Invånarna var judar som uppblandats med andra folk. Det rådde fiendskap mellan dem och judarna.</char></note> <verse number="5" style="v"/>och så kom han till en stad i Samarien som heter Sykar och som ligger nära den mark som Jakob gav sin son Josef. <verse number="6" style="v"/>Där ligger också Jakobs brunn och eftersom det var mitt på dagen och Jesus var trött av vandringen, satte han sig vid brunnen.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Då kom en samarisk kvinna för att hämta vatten och Jesus bad henne: ”Ge mig lite att dricka!” <verse number="8" style="v"/>Hans lärjungar hade gått in till staden för att köpa mat. <verse number="9" style="v"/>Den samariska kvinnan sa: ”Du som är jude, hur kan du be mig, en samarisk kvinna, om vatten?” Judarna brukade nämligen inte ha något gemensamt med samarierna.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Jesus svarade: ”Om du kände till Guds gåva och vem det är som ber dig om något att dricka, så skulle du ha bett honom och han skulle ha gett dig levande vatten.”</para>
+  <para style="p">
+    <verse number="11" style="v"/>”Men, Herre, du har ju varken rep eller kruka”, sa hon, ”och brunnen är djup. Varifrån ska du få levande vatten? <verse number="12" style="v"/>Du är väl inte större än vår förfader Jakob som gav oss den här brunnen och som han själv och hans söner och boskap drack av?”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Jesus svarade: ”Den som dricker av det här vattnet blir snart törstig igen. <verse number="14" style="v"/>Men den som dricker av det vatten jag ger blir aldrig i evighet törstig igen för mitt vatten blir en källa inom honom som porlar fram och ger evigt liv.”</para>
+  <para style="p">
+    <verse number="15" style="v"/>”Herre”, sa kvinnan, ”ge mig av det vattnet, så att jag aldrig mer blir törstig och slipper gå ut hit och hämta vatten!”</para>
+  <para style="p">
+    <verse number="16" style="v"/>Men Jesus sa: ”Gå och hämta din man!”</para>
+  <para style="p">
+    <verse number="17" style="v"/>”Jag har ingen man”, svarade kvinnan.</para>
+  <para style="p">”Du har rätt när du säger att du inte har någon man”, sa Jesus. <verse number="18" style="v"/>”Du har haft fem män och den du har nu är inte din man. Där höll du dig till sanningen.”</para>
+  <para style="p">
+    <verse number="19" style="v"/>”Herre”, sa kvinnan, ”jag ser att du är en profet. <verse number="20" style="v"/>Våra förfäder har tillbett på det här berget<note caller="+" style="f"><char style="fr" closed="false">4:20 </char><char style="ft" closed="false">Samarierna hade ett eget tempel på berget Gerissim.</char></note>, men ni säger att den plats där man ska tillbe finns i Jerusalem.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>Jesus sa till henne: ”Tro mig, kvinna det kommer en tid då det varken är på det här berget eller i Jerusalem som ni ska tillbe Fadern. <verse number="22" style="v"/>Ni tillber vad ni inte känner. Vi tillber vad vi känner eftersom räddningen kommer från judarna. <verse number="23" style="v"/>Men den tid kommer, ja, den har redan kommit, då sanna tillbedjare tillber Fadern i ande och sanning, för det är sådana tillbedjare Fadern söker. <verse number="24" style="v"/>Gud är Ande och de som tillber honom måste tillbe i ande och sanning.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>Kvinnan sa: ”Ja, jag vet att Messias ska komma, han som kallas Kristus, och när han kommer ska han förklara allt för oss.”</para>
+  <para style="p">
+    <verse number="26" style="v"/>Då sa Jesus till henne: ”Det är jag, den som talar till dig.”</para>
+  <para style="p">
+    <verse number="27" style="v"/>Just då kom hans lärjungar tillbaka. De blev mycket förvånade över att han talade med en kvinna, men ingen av dem frågade honom varför han talade med henne eller vad de talade om.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Men kvinnan lämnade sin vattenkruka vid brunnen och gick tillbaka till staden och sa till alla: <verse number="29" style="v"/>”Kom så får ni träffa en man som kunde säga mig allt vad jag har gjort! Kan han vara Messias?” <verse number="30" style="v"/>Och folket strömmade ut från staden för att träffa Jesus.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Under tiden ville lärjungarna ge sin Mästare något att äta <verse number="32" style="v"/>men han sa: ”Jag har mat som ni inte känner till.”</para>
+  <para style="p">
+    <verse number="33" style="v"/>Hans lärjungar sa då till varandra: ”Kan någon ha kommit hit och gett honom mat?”</para>
+  <para style="p">
+    <verse number="34" style="v"/>Då sa Jesus: ”Min mat är att göra hans vilja som har sänt mig och att slutföra det uppdrag han har gett mig. <verse number="35" style="v"/>Ni säger att om fyra månader är det dags att skörda. Men jag säger: Se er omkring! Fälten har redan ljusnat och är mogna för skörd. <verse number="36" style="v"/>Redan nu får skördearbetaren sin lön. Han skördar frukt till evigt liv så att både den som sår och den som skördar får glädjas tillsammans. <verse number="37" style="v"/>För här gäller ordspråket: en sår och en annan skördar. <verse number="38" style="v"/>Jag har sänt ut er för att skörda där ni inte har arbetat. Andra har utfört arbetet och ni ska få lön för deras möda.”</para>
+  <para style="s1">Många samarier kommer till tro</para>
+  <para style="p">
+    <verse number="39" style="v"/>Många samarier från den staden kom till tro på honom när de hörde kvinnan vittna: ”Han kunde säga mig allt vad jag har gjort.” <verse number="40" style="v"/>Så när samarierna kom ut till honom bad de honom att stanna hos dem och han stannade där i två dagar. <verse number="41" style="v"/>När de då fick höra honom själv tala, var det ännu fler som började tro på honom <verse number="42" style="v"/>och de sa till kvinnan: ”Nu är det inte längre det som du berättade för oss som får oss att tro. Nej, nu har vi själva hört honom och förstått att han verkligen är den som ska rädda världen.”</para>
+  <para style="s1">Jesus botar en kunglig tjänstemans son</para>
+  <para style="p">
+    <verse number="43" style="v"/>Efter de två dagarna fortsatte Jesus till Galileen. <verse number="44" style="v"/>Han hade själv vittnat om att en profet inte blir respekterad i sin egen hemstad. <verse number="45" style="v"/>Men när han nu kom till Galileen, tog galileerna emot honom med öppna armar eftersom de hade varit i Jerusalem under påskhögtiden och sett vad han gjort där.</para>
+  <para style="p">
+    <verse number="46" style="v"/>I Galileen kom han också tillbaka till Kana där han en gång hade förvandlat vatten till vin. En man i kunglig<note caller="+" style="f"><char style="fr" closed="false">4:46 </char><char style="ft" closed="false">Mannen arbetade för kung Herodes, som styrde över Galileen och Pereen och var son till den Herodes som regerade då Jesus föddes.</char></note> tjänst hade en son som låg sjuk i Kafarnaum. <verse number="47" style="v"/>När mannen därför fick höra att Jesus hade kommit från Judeen och var i Galileen, gick han till honom och bad honom att följa med till Kafarnaum för att bota hans son som låg döende.</para>
+  <para style="p">
+    <verse number="48" style="v"/>Jesus sa: ”Ni tror inte, om ni inte får se tecken och under!”</para>
+  <para style="p">
+    <verse number="49" style="v"/>Mannen bad: ”Herre, kom innan mitt barn dör!”</para>
+  <para style="p">
+    <verse number="50" style="v"/>Då sa Jesus till honom: ”Gå hem igen! Din son lever.” Mannen trodde på vad Jesus sa och gick. <verse number="51" style="v"/>Medan han fortfarande var på väg, möttes han av sina tjänare som meddelade att pojken levde. <verse number="52" style="v"/>Han frågade dem då vid vilken tid på dagen pojken hade börjat bli bättre och de svarade: ”Igår eftermiddag vid ettiden försvann febern.” <verse number="53" style="v"/>Då förstod fadern att det hade hänt i samma stund som Jesus hade sagt till honom: ”Din son lever.” Och tjänstemannen och alla i hans hus började tro på Jesus.</para>
+  <para style="p">
+    <verse number="54" style="v"/>Detta var det andra tecknet Jesus gjorde och han gjorde det när han hade kommit från Judeen till Galileen.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Jesus botar en förlamad man vid Betesda</para>
+  <para style="p">
+    <verse number="1" style="v"/>Lite senare gick Jesus till Jerusalem under en av de judiska högtiderna. <verse number="2" style="v"/>I Jerusalem, nära Fårporten, finns en damm som på hebreiska kallas Betesda<note caller="+" style="f"><char style="fr" closed="false">5:2 </char><char style="ft" closed="false">Andra läsarter: Betsaida och Betsata.</char></note>, och den har fem pelargångar. <verse number="3" style="v"/>Många sjuka, blinda, förlamade och andra handikappade låg i dessa pelargångar [och väntade på att vattnet skulle komma i rörelse. <verse number="4" style="v"/>En Herrens ängel steg nämligen ner då och då i dammen och rörde om vattnet, och den förste som steg ner i vattnet sedan det blivit omrört blev frisk, vilken sjukdom han än hade.]<note caller="+" style="f"><char style="fr" closed="false">5:4 </char><char style="ft" closed="false">De tidigaste och bästa handskrifterna saknar orden inom klammer. De ger dock en bakgrund till v. 7, varför de tagits med i texten här, trots att de bara finns i senare läsarter.</char></note></para>
+  <para style="p">
+    <verse number="5" style="v"/>En av dem som låg där var en man som hade varit förlamad i trettioåtta år. <verse number="6" style="v"/>När Jesus såg honom ligga där och fick veta att han hade varit sjuk så länge, frågade han honom: ”Vill du bli frisk?”</para>
+  <para style="p">
+    <verse number="7" style="v"/>”Herre”, svarade mannen, ”jag har ingen som hjälper mig ner i dammen när vattnet kommer i rörelse. Medan jag fortfarande är på väg, hinner någon annan dit före mig.”</para>
+  <para style="p">
+    <verse number="8" style="v"/>Då sa Jesus till honom: ”Res dig upp, ta din bädd och gå!” <verse number="9" style="v"/>Genast blev mannen frisk, och han tog sin bädd och gick iväg.</para>
+  <para style="p">Men detta hände på sabbaten<note caller="+" style="f"><char style="fr" closed="false">5:9 </char><char style="ft" closed="false">På vilodagen, som var instiftad redan i skapelsen, <char style="xt">se <ref loc="GEN 2:3">1 Mos 2:3</ref></char>, fick inget onödigt arbete utföras, vilket man nu menade att både den botade och Jesus (v. 16) gjorde.</char></note>, <verse number="10" style="v"/>och judarna sa till mannen som hade blivit botad: ”Det är sabbat. Du får inte bära din bädd!”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Men mannen svarade: ”Han som gjorde mig frisk sa till mig att ta min bädd och gå.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Då frågade de honom: ”Vem sa till dig att du skulle ta den och gå?”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Men mannen visste inte det, för Jesus hade försvunnit därifrån eftersom det var så mycket folk. <verse number="14" style="v"/>Senare fann Jesus mannen i templet och sa till honom: ”Nu är du frisk. Synda inte mer, så att det inte händer dig något värre.”</para>
+  <para style="p">
+    <verse number="15" style="v"/>Då gick mannen och talade om för judarna att det var Jesus som hade gjort honom frisk.</para>
+  <para style="s1">Jesus förklarar att han är Guds Son</para>
+  <para style="p">
+    <verse number="16" style="v"/>Från och med nu började judarna förfölja Jesus, eftersom han hade gjort detta på sabbaten. <verse number="17" style="v"/>Men Jesus sa till dem: ”Min Fader är ständigt i arbete, och även jag arbetar.”</para>
+  <para style="p">
+    <verse number="18" style="v"/>Då blev judarna ännu mer ivriga att döda honom, eftersom han inte bara bröt mot sabbatsbudet, utan dessutom talade om Gud som sin Fader och därmed jämställde sig själv med Gud.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Men Jesus svarade dem: ”Ja, sannerligen säger jag er: Sonen kan inte göra något av sig själv. Han gör bara det som han ser sin Fader göra. Det Fadern gör, det gör också Sonen. <verse number="20" style="v"/>Fadern älskar Sonen och visar honom allt vad han gör. Och han ska visa honom ännu större ting, så att ni häpnar. <verse number="21" style="v"/>Så som Fadern uppväcker de döda och ger dem liv, så ger också Sonen liv åt dem han vill. <verse number="22" style="v"/>Fadern dömer ingen utan har överlåtit all dom åt Sonen, <verse number="23" style="v"/>för att alla ska ära Sonen på samma sätt som de ärar Fadern. Men den som inte ärar Sonen, ärar inte heller Fadern, som har sänt honom.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Ja, sannerligen säger jag er: den som hör mitt ord och tror på honom som har sänt mig, han har evigt liv. Han kommer inte att dömas, utan har gått över från döden till livet. <verse number="25" style="v"/>Ja, sannerligen säger jag er: det kommer en stund, ja, den är faktiskt redan här, då de döda ska höra Guds Sons röst. Och de som hör den ska få liv. <verse number="26" style="v"/>Fadern har liv i sig själv, och han har också gett Sonen liv i sig själv. <verse number="27" style="v"/>Han har gett honom makten att döma, eftersom han är Människosonen. <verse number="28" style="v"/>Bli inte förvånade. Det kommer en stund då alla som ligger i sina gravar ska höra hans röst <verse number="29" style="v"/>och komma ut ur dem. De som har gjort det goda ska uppstå till livet, och de som har gjort det onda ska uppstå till dom.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Men jag kan inte göra något av mig själv. Jag dömer utifrån vad jag hör, och min dom är rättvis, eftersom jag inte söker min egen vilja utan hans vilja som har sänt mig.</para>
+  <para style="s1">Vittnesbörd om Jesus</para>
+  <para style="p">
+    <verse number="31" style="v"/>Om jag vittnar om mig själv, är inte mitt vittnesbörd trovärdigt. <verse number="32" style="v"/>Men det finns en annan som vittnar om mig, och jag vet att det han vittnar om mig är trovärdigt. <verse number="33" style="v"/>Ni har ju själva skickat några till Johannes, och han har vittnat för sanningen. <verse number="34" style="v"/>Jag har inget behov av någon människas vittnesbörd om mig, men jag berättar detta för att ni ska bli räddade. <verse number="35" style="v"/>Johannes var en brinnande lampa som lyste, och ni kunde glädjas åt hans ljus. <verse number="36" style="v"/>Jag har ett starkare vittnesbörd än Johannes. För de verk min Fader har gett mig att slutföra och som jag gör, de vittnar om att han har sänt mig. <verse number="37" style="v"/>Fadern själv, han som har sänt mig, har också vittnat om mig, men ni har inte hört hans röst eller sett hans gestalt, <verse number="38" style="v"/>och hans ord blir inte heller kvar i er, för ni tror inte på honom som han har sänt.</para>
+  <para style="p">
+    <verse number="39" style="v"/>Ni forskar i Skrifterna, eftersom ni tror att de ger er evigt liv. Det är just de som vittnar om mig, <verse number="40" style="v"/>men ni vill inte komma till mig för att få liv.</para>
+  <para style="p">
+    <verse number="41" style="v"/>Jag strävar inte efter att bli ärad av människor, <verse number="42" style="v"/>men jag vet att ni inte har Guds kärlek inom er. <verse number="43" style="v"/>Jag har kommit i min Faders namn, och ni vägrar att ta emot mig. Men om någon kommer i sitt eget namn, då tar ni emot honom. <verse number="44" style="v"/>Hur skulle ni kunna tro, ni som vill bli ärade av varandra, ni som inte söker ära av honom som ensam är Gud? <verse number="45" style="v"/>Tänk inte att jag ska anklaga er inför min Fader. Nej, er anklagare är Mose, som ni sätter ert hopp till. <verse number="46" style="v"/>Om ni trodde på Mose, skulle ni tro på mig, för det är mig han har skrivit om. <verse number="47" style="v"/>Men eftersom ni inte tror på det han har skrivit, så tror ni väl inte heller på det jag säger?”</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Jesus ger mat åt mer än 5 000 personer</para>
+  <para style="r">(<ref loc="MAT 14:13-21">Matt 14:13-21</ref>; <ref loc="MRK 6:32-44">Mark 6:32-44</ref>; <ref loc="LUK 9:10-17">Luk 9:10-17</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Sedan for Jesus över till andra sidan av Galileiska sjön, som också kallas Tiberiassjön. <verse number="2" style="v"/>En stor folkmassa följde efter honom, för de hade sett de tecken han gjorde i och med att han botade de sjuka. <verse number="3" style="v"/>Jesus gick upp på ett berg och satte sig där med sina lärjungar. <verse number="4" style="v"/>Det var dagarna före påsk, judarnas stora högtid.</para>
+  <para style="p">
+    <verse number="5" style="v"/>När Jesus såg sig omkring och märkte att så mycket folk kom till honom, sa han till Filippos: ”Var kan vi köpa bröd så att alla dessa människor får något att äta?” <verse number="6" style="v"/>Detta sa han för att testa Filippos, för själv visste han vad han skulle göra.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Filippos svarade: ”Det skulle kosta tvåhundra denarer<note caller="+" style="f"><char style="fr" closed="false">6:7 </char><char style="ft" closed="false">En denar motsvarade en dagslön.</char></note> för att var och en skulle få åtminstone lite!”</para>
+  <para style="p">
+    <verse number="8" style="v"/>En annan av hans lärjungar, Andreas, bror till Simon Petrus, sa då: <verse number="9" style="v"/>”Det finns en pojke här som har fem kornbröd och två fiskar. Men det räcker ju inte åt så många människor.”</para>
+  <para style="p">
+    <verse number="10" style="v"/>Då sa Jesus: ”Säg åt alla att sätta sig ner.” Det växte mycket gräs där, och de slog sig ner. Antalet män var omkring 5 000. <verse number="11" style="v"/>Sedan tog Jesus bröden och tackade Gud och delade ut dem till folket som låg där, och han gav dem av fiskarna så mycket som de ville ha.</para>
+  <para style="p">
+    <verse number="12" style="v"/>När alla hade ätit sig mätta, sa han till sina lärjungar: ”Samla nu ihop det som har blivit över, så att inget förstörs.” <verse number="13" style="v"/>Det fanns fem kornbröd från början, men när de samlade ihop alla bitar som var över efter måltiden, blev det tolv fulla korgar.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Då det gick upp för folket vilket stort tecken som han hade gjort sa de: ”Han måste vara profeten<note caller="+" style="f"><char style="fr" closed="false">6:14 </char><char style="ft" closed="false"><char style="xt">Jfr <ref loc="DEU 18:15">5 Mos 18:15</ref>,<ref loc="DEU 18:18">18</ref></char>.</char></note> som skulle komma till världen!” <verse number="15" style="v"/>Men när Jesus förstod att de tänkte tvinga honom att följa med, så att de kunde göra honom till kung, drog han sig undan i ensamhet högre upp bland bergen.</para>
+  <para style="s1">Jesus går på vattnet</para>
+  <para style="r">(<ref loc="MAT 14:22-33">Matt 14:22-33</ref>; <ref loc="MRK 6:45-51">Mark 6:45-51</ref>)</para>
+  <para style="p">
+    <verse number="16" style="v"/>På kvällen gick hans lärjungar ner till sjön. <verse number="17" style="v"/>De steg i en båt för att åka över till Kafarnaum på andra sidan sjön. Det var nu helt mörkt och Jesus hade fortfarande inte kommit tillbaka. <verse number="18" style="v"/>Det började blåsa kraftigt, och vågorna blev allt högre. <verse number="19" style="v"/>När de hade rott ungefär en halvmil<note caller="+" style="f"><char style="fr" closed="false">6:19 </char><char style="ft" closed="false">Ordagrant: </char><char style="fqa" closed="false">25 eller 30 stadier. </char><char style="ft" closed="false">En stadie motsvarar cirka 190 meter.</char></note>, fick de plötsligt se Jesus komma gående på vattnet och närma sig båten. De blev fruktansvärt rädda, <verse number="20" style="v"/>men Jesus sa till dem: ”Det är jag.<note caller="+" style="f"><char style="fr" closed="false">6:20 </char><char style="ft" closed="false">Jesus använde många gånger, som exempelvis här, samma ord om sig själv som Gud gjorde i <char style="xt"><ref loc="EXO 3:14">2 Mos 3:14</ref></char>, det heliga gudsnamnet. Han är den evige </char><char style="fqa" closed="false">Jag är.</char></note> Var inte rädda.” <verse number="21" style="v"/>Då lät de honom komma upp i båten, och strax var båten framme vid den plats dit de var på väg.</para>
+  <para style="s1">Jesus är brödet som ger evigt liv</para>
+  <para style="p">
+    <verse number="22" style="v"/>Nästa dag upptäckte folket, som var kvar på andra sidan sjön, att det bara hade funnits en enda båt och att Jesus inte hade följt med sina lärjungar när de for därifrån; de hade åkt iväg ensamma. <verse number="23" style="v"/>Men snart kom flera småbåtar från Tiberias och lade till i närheten av den plats där Herren hade tackat Gud för brödet och alla hade ätit. <verse number="24" style="v"/>Och eftersom folket såg att varken Jesus eller hans lärjungar var där, steg de i båtarna och for över sjön till Kafarnaum för att leta efter honom.</para>
+  <para style="p">
+    <verse number="25" style="v"/>När de hittade honom på andra sidan sjön, frågade de: ”Rabbi, när kom du hit?”</para>
+  <para style="p">
+    <verse number="26" style="v"/>Jesus svarade: ”Ja, sannerligen säger jag er: ni söker inte efter mig därför att ni har fått se tecken, utan därför att ni fick bröd så att ni kunde äta er mätta. <verse number="27" style="v"/>Men arbeta inte för den mat som förgås, utan för den som kan ge er evigt liv, den som Människosonen ska ge er. För Gud Fadern har satt sitt sigill på honom.”</para>
+  <para style="p">
+    <verse number="28" style="v"/>Då frågade de: ”Vad ska vi då göra för att det ska vara Guds verk?”</para>
+  <para style="p">
+    <verse number="29" style="v"/>Jesus svarade dem: ”Det är Guds verk att ni tror på honom som han har sänt.”</para>
+  <para style="p">
+    <verse number="30" style="v"/>De svarade: ”Vad kan du göra för tecken som vi kan se, så att vi kan tro på dig? Vad kan du göra för tecken? <verse number="31" style="v"/>Våra förfäder åt manna i öknen. Det står ju skrivet: ’Han gav dem bröd från himlen att äta.<note caller="+" style="f"><char style="fr" closed="false">6:31 </char><char style="ft" closed="false"><char style="xt">Se <ref loc="EXO 16:4">2 Mos 16:4</ref></char> och <char style="xt"><ref loc="PSA 78:24">Ps 78:24</ref></char>.</char></note>’ ”</para>
+  <para style="p">
+    <verse number="32" style="v"/>Men Jesus svarade: ”Ja, sannerligen säger jag er: det var inte Mose som gav er brödet från himlen, utan min Fader ger er sant bröd från himlen. <verse number="33" style="v"/>Brödet från Gud är det som kommer ner från himlen och ger världen liv.”</para>
+  <para style="p">
+    <verse number="34" style="v"/>”Herre”, sa de, ”ge oss alltid det brödet!”</para>
+  <para style="p">
+    <verse number="35" style="v"/>Då svarade Jesus: ”Jag är livets bröd. Den som kommer till mig ska aldrig mer bli hungrig. Och den som tror på mig ska aldrig mer bli törstig. <verse number="36" style="v"/>Men som jag redan har sagt er, så tror ni inte trots att ni har sett mig. <verse number="37" style="v"/>Alla de som min Fader ger mig kommer till mig, och den som kommer till mig ska jag aldrig visa bort. <verse number="38" style="v"/>Jag har ju inte kommit ner från himlen för att göra min egen vilja utan för att göra hans vilja som har sänt mig. <verse number="39" style="v"/>Och detta är hans vilja som har sänt mig, att jag inte ska förlora en enda av dem som han har gett mig, utan att jag ska låta dem uppstå på den sista dagen. <verse number="40" style="v"/>Detta är min Faders vilja, att alla som ser Sonen och tror på honom ska ha evigt liv. Och jag ska låta dem uppstå på den sista dagen.”</para>
+  <para style="s1">Folket retar sig på vad Jesus säger</para>
+  <para style="p">
+    <verse number="41" style="v"/>Judarna retade sig på att Jesus hade sagt: ”Jag är brödet som har kommit ner från himlen.” <verse number="42" style="v"/>De sa: ”Det är ju bara Jesus, Josefs son. Vi känner hans föräldrar. Hur kan han då påstå att han har kommit ner från himlen?” <verse number="43" style="v"/>Men Jesus svarade: ”Det är ingen idé att ni retar er på detta. <verse number="44" style="v"/>Ingen kan komma till mig om inte min Fader som har sänt mig drar honom, och jag ska låta honom uppstå på den sista dagen. <verse number="45" style="v"/>Det står skrivet hos profeterna: ’De ska alla bli undervisade av Gud.’<note caller="+" style="f"><char style="fr" closed="false">6:45 </char><char style="ft" closed="false"><char style="xt">Se <ref loc="ISA 54:13">Jes 54:13</ref></char>.</char></note> Och den som lyssnar till min Fader och lär av honom, han kommer till mig. <verse number="46" style="v"/>Men ingen har någonsin sett Fadern, förutom den som är av Gud; han har sett Fadern.</para>
+  <para style="p">
+    <verse number="47" style="v"/>Ja, sannerligen säger jag er: den som tror har evigt liv. <verse number="48" style="v"/>Jag är livets bröd. <verse number="49" style="v"/>Era förfäder åt manna i öknen, och de dog. <verse number="50" style="v"/>Men brödet som kommer ner från himlen gör så att den som äter av det inte dör. <verse number="51" style="v"/>Jag är det levande brödet, som har kommit ner från himlen. Om någon äter av det brödet kommer han att leva i evighet. Och brödet jag ska ge er är min kropp. Jag ger den för att världen ska få leva.”</para>
+  <para style="p">
+    <verse number="52" style="v"/>Folket började då diskutera med varandra och säga: ”Hur ska han kunna ge oss sin kropp att äta?”</para>
+  <para style="p">
+    <verse number="53" style="v"/>Men Jesus sa till dem: ”Ja, sannerligen säger jag er: om ni inte äter av Människosonens kropp och dricker av hans blod, så kan ni inte äga liv. <verse number="54" style="v"/>Den som äter av min kropp och dricker av mitt blod har evigt liv, och jag kommer att låta honom uppstå på den sista dagen. <verse number="55" style="v"/>För min kropp är verklig mat, och mitt blod är verklig dryck. <verse number="56" style="v"/>Den som äter av min kropp och dricker av mitt blod förblir i mig och jag i honom. <verse number="57" style="v"/>Den levande Fadern har sänt mig, och jag lever genom honom. Så ska också den som äter av mig leva genom mig. <verse number="58" style="v"/>Jag är brödet som har kommit ner från himlen. Det är inte likt det bröd som förfäderna åt och dog. Men den som äter av detta bröd ska leva i evighet.” <verse number="59" style="v"/>Detta sa Jesus när han undervisade i synagogan i Kafarnaum.</para>
+  <para style="s1">Många av Jesus lärjungar lämnar honom</para>
+  <para style="p">
+    <verse number="60" style="v"/>Många av hans lärjungar som hörde honom, sa: ”Det här är ett hårt tal! Vem kan stå ut med att höra på honom?”</para>
+  <para style="p">
+    <verse number="61" style="v"/>Men Jesus var väl medveten om att hans lärjungar retade sig på detta, och därför sa han till dem: ”Får det här er att ta anstöt? <verse number="62" style="v"/>Vad ska ni då tänka när ni får se Människosonen återvända dit upp där han var tidigare? <verse number="63" style="v"/>Det är bara Anden som kan ge liv, det fysiska<note caller="+" style="f"><char style="fr" closed="false">6:63 </char><char style="ft" closed="false">Ordagrant: </char><char style="fqa" closed="false">köttet</char></note> är inte till någon nytta. Vad jag har talat till er är Ande och liv. <verse number="64" style="v"/>Men det är några av er som inte tror.” Jesus visste ju från början vilka som inte trodde och vem det var som skulle förråda honom.</para>
+  <para style="p">
+    <verse number="65" style="v"/>Han fortsatte: ”Det var därför jag sa att ingen kan komma till mig om inte min Fader ger honom det.”</para>
+  <para style="p">
+    <verse number="66" style="v"/>När han hade sagt detta, drog sig många lärjungar bort från honom och ville inte längre fortsätta med honom.</para>
+  <para style="p">
+    <verse number="67" style="v"/>Då frågade Jesus de tolv: ”Tänker ni också ge er iväg?”</para>
+  <para style="p">
+    <verse number="68" style="v"/>Men Simon Petrus svarade: ”Herre, till vem skulle vi gå? Du har det eviga livets ord, <verse number="69" style="v"/>och vi tror och vet att du är Guds helige.”</para>
+  <para style="p">
+    <verse number="70" style="v"/>Då sa Jesus: ”Jag har väl själv valt ut er tolv, och ändå är en av er en djävul.” <verse number="71" style="v"/>Den han syftade på var Judas, Simon Iskariots son, en av de tolv, som senare skulle förråda honom.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Jesus blir hånad av sina bröder</para>
+  <para style="p">
+    <verse number="1" style="v"/>Efter detta vandrade Jesus omkring i Galileen. Han ville hålla sig borta från Judeen, eftersom judarna var ute efter att döda honom. <verse number="2" style="v"/>Men snart var det dags för lövhyddefesten<note caller="+" style="f"><char style="fr" closed="false">7:2 </char><char style="ft" closed="false">Lövhyddefesten var en åtta dagar lång fest som firades på hösten. Det var dels en skördefest, dels en minnesfest över att Gud hade bevarat Israels folk under vandringen från Egypten. <char style="xt">Jfr <ref loc="LEV 23:34-43">3 Mos 23:34-43</ref></char>.</char></note>, <verse number="3" style="v"/>och Jesus bröder sa till honom: ”Du borde gå härifrån till Judeen, så att också dina lärjungar får se vad du gör. <verse number="4" style="v"/>Ingen som vill bli känd håller sin verksamhet hemlig. När du nu gör allt detta, så visa dig för världen.” <verse number="5" style="v"/>Inte ens hans bröder trodde nämligen på honom.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Men Jesus svarade: ”Tiden har inte kommit för mig än, men för er är det rätt tid när som helst. <verse number="7" style="v"/>Världen kan inte hata er. Men mig hatar den, eftersom jag vittnar om att dess gärningar är onda. <verse number="8" style="v"/>Gå ni iväg till högtiden. Jag går ännu inte till den här högtiden, för min tid har inte helt och fullt kommit.” <verse number="9" style="v"/>Och så stannade han kvar i Galileen.</para>
+  <para style="s1">Jesus undervisar i templet</para>
+  <para style="p">
+    <verse number="10" style="v"/>När bröderna hade gett sig iväg till högtiden gick Jesus sedan dit i hemlighet, inte offentligt. <verse number="11" style="v"/>Judarna försökte få tag i honom under högtiden och frågade om någon visste var han var. <verse number="12" style="v"/>Folket pratade mycket om honom i smyg. Några sa: ”Han är en god människa”, medan andra sa: ”Nej, han bedrar folket.” <verse number="13" style="v"/>Ingen hade mod nog att prata öppet om honom, för alla var rädda för judarna.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Men när halva högtiden redan var över, gick Jesus upp till templet och började undervisa, <verse number="15" style="v"/>och judarna blev förvånade när de hörde honom. De sa: ”Hur kan han veta så mycket om Skrifterna trots att han saknar utbildning?”</para>
+  <para style="p">
+    <verse number="16" style="v"/>Då svarade Jesus dem: ”Min lära är inte min utan hans som har sänt mig. <verse number="17" style="v"/>Om någon vill göra hans vilja, så kommer han att förstå om min undervisning är från Gud eller om jag bara talar av mig själv. <verse number="18" style="v"/>Den som talar av sig själv söker sin egen ära, men den som söker hans ära som har sänt honom talar sanning. Hos honom finns ingen orättfärdighet. <verse number="19" style="v"/>Har inte Mose gett er lagen? Men ingen av er följer lagen. Varför försöker ni döda mig?”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Folket svarade: ”Du är besatt av en ond ande! Det är väl ingen som försöker döda dig.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>Jesus svarade: ”Jag gjorde något som förvånade er mycket. <verse number="22" style="v"/>Mose har gett er omskärelsen, fastän den inte kommer från Mose utan från förfäderna, och ni utför omskärelse även på en sabbat. <verse number="23" style="v"/>Om man nu omskär en människa på en sabbat för att inte bryta mot Moses lag, varför retar ni upp er för att jag gjorde någon helt och hållet frisk på sabbaten? <verse number="24" style="v"/>Döm inte efter hur saker och ting ser ut, utan fäll en rättvis dom.”</para>
+  <para style="s1">Olika åsikter om vem Jesus är</para>
+  <para style="p">
+    <verse number="25" style="v"/>En del av dem som bodde i Jerusalem sa: ”Är det inte den här mannen som de vill döda? <verse number="26" style="v"/>Här står han ju helt öppet och undervisar, och ingen säger något till honom. Har rådsmedlemmarna kanske blivit övertygade om att han är Messias? <verse number="27" style="v"/>Ändå vet vi varifrån den här mannen är. När Messias kommer ska ingen veta varifrån han är.”</para>
+  <para style="p">
+    <verse number="28" style="v"/>Då ropade Jesus där han stod och undervisade i templet: ”Så ni känner mig och vet varifrån jag kommer! Ändå har jag inte kommit av mig själv, utan det finns en som har sänt mig, en som är trovärdig, en som ni inte känner. <verse number="29" style="v"/>Men jag känner honom, för jag kommer från honom, och han har sänt mig.”</para>
+  <para style="p">
+    <verse number="30" style="v"/>De ville då gripa Jesus genast, men ingen rörde honom, eftersom hans stund ännu inte hade kommit. <verse number="31" style="v"/>Men många bland folket började tro på honom, och de sa: ”När Messias än kommer kan han väl inte göra fler tecken än denne man har gjort.”</para>
+  <para style="p">
+    <verse number="32" style="v"/>När fariseerna fick veta att folket pratade om Jesus i smyg, skickade de och översteprästerna ut några män ur tempelvakten för att gripa honom. <verse number="33" style="v"/>Jesus sa: ”Jag kommer bara att stanna hos er en kort tid till. Sedan ska jag återvända till honom som har sänt mig. <verse number="34" style="v"/>Ni ska söka efter mig men inte hitta mig, för där jag är, dit kan ni inte komma.”</para>
+  <para style="p">
+    <verse number="35" style="v"/>Då sa judarna till varandra: ”Vart tänker han ta vägen, eftersom vi inte ska kunna hitta honom? Tänker han gå till dem som bor kringspridda bland greker? Ska han undervisa greker? <verse number="36" style="v"/>Vad menar han när han säger: ’Ni ska söka efter mig, men inte hitta mig, för där jag är, dit kan ni inte komma’?”</para>
+  <para style="p">
+    <verse number="37" style="v"/>På sista dagen, som var lövhyddefestens höjdpunkt, stod Jesus upp och ropade: ”Om någon är törstig så kom till mig och drick! <verse number="38" style="v"/>Den som tror på mig, ur hans inre ska strömmar av levande vatten flyta fram såsom det står skrivet<note caller="+" style="f"><char style="fr" closed="false">7:38 </char><char style="ft" closed="false"><char style="xt"><ref loc="EZK 36:25-27">Hes 36:25-27</ref>; <ref loc="EZK 47:1">47:1</ref></char>ff; <char style="xt"><ref loc="JOL 3:18">Joel 3:18</ref>; </char> <char style="xt"><ref loc="NEH 9:15">Neh 9:15</ref></char>.</char></note>.” <verse number="39" style="v"/>Med detta menade han Anden, som de som trodde på honom skulle få. Men Anden hade inte kommit än, eftersom Jesus ännu inte hade förhärligats.</para>
+  <para style="p">
+    <verse number="40" style="v"/>När folket hörde honom säga detta, sa några av dem: ”Han måste vara profeten.<note caller="+" style="f"><char style="fr" closed="false">7:40 </char><char style="ft" closed="false"><char style="xt">Jfr <ref loc="DEU 18:15">5 Mos 18:15</ref>,<ref loc="DEU 18:18">18</ref></char>, där Mose säger att en profet lik honom ska komma.</char></note>” <verse number="41" style="v"/>Andra sa: ”Han är Messias.” Ytterligare några: ”Nej. Messias ska väl inte komma från Galileen! <verse number="42" style="v"/>Står det inte i Skriften att Messias ska vara av Davids släkt och komma från Betlehem, småstaden där David bodde?”<note caller="+" style="f"><char style="fr" closed="false">7:42 </char><char style="ft" closed="false"><char style="xt">Jfr <ref loc="MIC 5:2">Mika 5:2</ref></char>.</char></note> <verse number="43" style="v"/>Människorna hade alltså delade meningar om honom. <verse number="44" style="v"/>Några ville också arrestera honom, men ingen rörde honom.</para>
+  <para style="p">
+    <verse number="45" style="v"/>Tempelvakterna, som hade skickats ut för att gripa honom, återvände nu till översteprästerna och fariseerna, som frågade dem: ”Varför tog ni inte med honom hit?”</para>
+  <para style="p">
+    <verse number="46" style="v"/>Men vakterna svarade: ”Aldrig har någon människa talat som han!”</para>
+  <para style="p">
+    <verse number="47" style="v"/>”Har ni också blivit vilseledda?” frågade fariseerna. <verse number="48" style="v"/>”Finns det någon i rådet eller någon farisé som tror på honom? <verse number="49" style="v"/>Men folkhopen här vet inget om lagen<note caller="+" style="f"><char style="fr" closed="false">7:49 </char><char style="ft" closed="false">Med lagen menas här hela Skriften, dvs. Gamla testamentet.</char></note>, och de är förbannade.”</para>
+  <para style="p">
+    <verse number="50" style="v"/>Då sa Nikodemos, den medlem i rådet som tidigare hade sökt upp Jesus: <verse number="51" style="v"/>”Är det förenligt med vår lag att förklara någon skyldig innan man har hållit rättegång och hört vad han gör?”</para>
+  <para style="p">
+    <verse number="52" style="v"/>De svarade: ”Är du också från Galileen? Läs i Skriften så får du se att ingen profet kommer från Galileen.”</para>
+  <para style="s1">Kvinnan som varit otrogen</para>
+  <para style="p">[<verse number="53" style="v"/>Sedan gick alla hem var och en till sitt.</para>
+  <chapter number="8" style="c"/>
+  <para style="nb">
+    <verse number="1" style="v"/>Men Jesus gick ut till Olivberget. <verse number="2" style="v"/>Tidigt nästa morgon var han tillbaka i templet, och snart samlades allt folket omkring honom. Han satte sig då ner för att undervisa dem. <verse number="3" style="v"/>Men då kom de skriftlärda och fariseerna med en kvinna som hade tagits på bar gärning när hon var otrogen mot sin man. De ställde henne framför honom, <verse number="4" style="v"/>och sa: ”Mästare, den här kvinnan togs på bar gärning när hon var otrogen mot sin man. <verse number="5" style="v"/>Moses lag säger att sådana ska stenas. Vad anser du?”</para>
+  <para style="p">
+    <verse number="6" style="v"/>De sa så, då de egentligen var ute efter att få honom att säga något som de kunde anklaga honom för, men Jesus böjde sig bara ner och skrev<note caller="+" style="f"><char style="fr" closed="false">8:6 </char><char style="ft" closed="false">Det grekiska verbet kan också översättas </char><char style="fqa" closed="false">ritade </char><char style="ft" closed="false">eller </char><char style="fqa" closed="false">tecknade.</char></note> på marken med fingret. <verse number="7" style="v"/>När de fortsatte att kräva ett svar, såg han till slut upp och sa: ”Den av er som är utan synd ska kasta den första stenen på henne.” <verse number="8" style="v"/>Sedan böjde han sig ner igen och fortsatte att skriva på marken. <verse number="9" style="v"/>När de hörde det gick de bort, en efter en, de äldsta först. Till sist var det bara kvinnan som stod kvar framför Jesus.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Då såg Jesus upp och sa till henne: ”Kvinna, vart tog de vägen? Var det ingen som dömde dig?”</para>
+  <para style="p">
+    <verse number="11" style="v"/>”Nej, Herre”, svarade hon. Då sa Jesus: ”Jag tänker inte heller döma dig. Gå nu, men synda inte mer.”]<note caller="+" style="f"><char style="fr" closed="false">8:11 </char><char style="fl" closed="false">7:53—8:11 </char><char style="ft" closed="false">Detta avsnitt saknas i de äldsta handskrifterna.</char></note></para>
+  <para style="s1">Jesus är världens ljus</para>
+  <para style="p">
+    <verse number="12" style="v"/>Sedan talade Jesus till dem och sa: ”Jag är världens ljus. Den som följer mig behöver inte vandra i mörkret utan har livets ljus.”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Fariseerna sa då: ”Nu vittnar du om dig själv. Ditt vittnesbörd är inte trovärdigt.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>Men Jesus svarade dem: ”Även om jag vittnar om mig själv, är mitt vittnesbörd trovärdigt, för jag vet varifrån jag kommer och vart jag är på väg. Men ni vet inte varifrån jag kommer och vart jag är på väg. <verse number="15" style="v"/>Ni dömer på människors vis, men jag dömer ingen. <verse number="16" style="v"/>Men om jag dömer, så är min dom rätt, eftersom jag inte är ensam. Han som har sänt mig är med mig. <verse number="17" style="v"/>I er egen lag står det ju att två personers vittnesbörd är trovärdigt. <verse number="18" style="v"/>Jag vittnar om mig själv, och också min Fader som har sänt mig vittnar om mig.”</para>
+  <para style="p">
+    <verse number="19" style="v"/>”Var är din fader?” frågade de då.</para>
+  <para style="p">Jesus svarade: ”Ni känner varken mig eller min Fader. Om ni kände mig skulle ni känna honom också.”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Detta sa Jesus, när han undervisade i templet. Det hände vid kammaren, där offerkistorna stod. Men ingen grep honom, eftersom hans stund ännu inte hade kommit.</para>
+  <para style="s1">Jesus varnar judarna</para>
+  <para style="p">
+    <verse number="21" style="v"/>Sedan sa Jesus till dem: ”Jag går bort, och ni kommer att söka efter mig, men ni ska dö i er synd. Dit jag går, kan ni inte komma.”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Judarna sa då: ”Tänker han begå självmord, eftersom han säger: ’Dit jag går, kan ni inte komma’?”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Men Jesus sa till dem: ”Ni kommer nerifrån, och jag kommer uppifrån. Ni tillhör den här världen, men jag tillhör den inte. <verse number="24" style="v"/>Det var därför jag sa att ni ska dö i era synder, för om ni inte tror att jag är den jag är,<note caller="+" style="f"><char style="fr" closed="false">8:24 </char><char style="ft" closed="false"><char style="xt">Se not till <ref loc="JHN 6:20">6:20</ref></char>.</char></note> då dör ni i era synder.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>”Vem är du då?”, frågade de.</para>
+  <para style="p">Han svarade: ”Jag är den som jag från början har sagt. <verse number="26" style="v"/>Jag har mycket att säga om er och mycket att döma er för. Han som har sänt mig är trovärdig, och vad jag har hört av honom talar jag till världen.” <verse number="27" style="v"/>Men de förstod fortfarande inte att han talade med dem om sin Fader.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Då sa Jesus: ”När ni har lyft upp<note caller="+" style="f"><char style="fr" closed="false">8:28 </char><char style="ft" closed="false">Uttrycket syftar här på att Jesus skulle hängas upp på ett kors. Samma uttryck används i <char style="xt"><ref loc="JHN 3:14">3:14</ref></char> och <char style="xt"><ref loc="JHN 12:32">12:32</ref></char>, där det också syftar på att Jesus skulle lyftas upp till himlen.</char></note> Människosonen, kommer ni att förstå att jag är den jag är<note caller="+" style="f"><char style="fr" closed="false">8:28 </char><char style="ft" closed="false"><char style="xt">Se not till <ref loc="JHN 6:20">6:20</ref></char>.</char></note> och att jag aldrig gör något av mig själv utan bara talar det som min Fader har lärt mig. <verse number="29" style="v"/>Och han som har sänt mig är med mig. Han lämnar mig inte ensam, för jag gör alltid det som han vill.” <verse number="30" style="v"/>När Jesus sa detta, var det många som började tro på honom.</para>
+  <para style="s1">Abrahams barn eller djävulens?</para>
+  <para style="p">
+    <verse number="31" style="v"/>Jesus sa då till de judar som trodde på honom: ”Om ni håller er till mina ord, är ni verkligen mina lärjungar. <verse number="32" style="v"/>Ni ska lära känna sanningen och sanningen ska göra er fria.”</para>
+  <para style="p">
+    <verse number="33" style="v"/>Men de sa: ”Vi härstammar från Abraham och har aldrig varit slavar under någon. Hur kan du då säga att vi ska bli fria?”</para>
+  <para style="p">
+    <verse number="34" style="v"/>Jesus svarade: ”Ja, sannerligen säger jag er: var och en som syndar är slav under synden. <verse number="35" style="v"/>En slav stannar inte i huset för alltid, men en son stannar för alltid. <verse number="36" style="v"/>Så om Sonen gör er fria, då blir ni verkligen fria. <verse number="37" style="v"/>Jag vet att ni härstammar från Abraham. Men ändå försöker ni döda mig, eftersom mitt ord inte har nått in i er. <verse number="38" style="v"/>Jag berättar för er vad jag har sett hos min Fader, och ni gör vad ni har hört från er far.”</para>
+  <para style="p">
+    <verse number="39" style="v"/>”Vi har Abraham till far”, svarade de då.</para>
+  <para style="p">Jesus sa: ”Om ni var Abrahams barn skulle ni göra vad Abraham gjorde.<note caller="+" style="f"><char style="fr" closed="false">8:39 </char><char style="ft" closed="false">Andra handskrifter har: </char><char style="fqa" closed="false">Om ni är Abrahams barn, gör då….</char></note> <verse number="40" style="v"/>Men nu försöker ni istället döda mig, mannen som har talat till er sanningen som jag har hört från Gud. Så gjorde inte Abraham. <verse number="41" style="v"/>Ni gör vad er far gjorde.”</para>
+  <para style="p">De svarade: ”Vi är inte födda utom äktenskapet. Vår far är Gud själv.”</para>
+  <para style="p">
+    <verse number="42" style="v"/>Men Jesus sa till dem: ”Om Gud var er far, skulle ni älska mig, för jag har utgått och kommit från Gud. Jag har inte kommit av mig själv, utan han har sänt mig. <verse number="43" style="v"/>Varför förstår ni inte vad jag säger? Jo, därför att ni inte kan lyssna till mitt ord. <verse number="44" style="v"/>Ni är barn till djävulen, och ni vill göra det som er far vill. Han var en mördare från början och har aldrig hållit sig till något som är sant, för i honom finns inget sant. När han ljuger talar han sitt eget språk, för han är en lögnare och far till alla lögner. <verse number="45" style="v"/>Men jag talar sanning, och därför tror ni inte på mig. <verse number="46" style="v"/>Finns det någon av er som kan bevisa att jag har syndat? Varför tror ni inte på mig, trots att jag talar sanning? <verse number="47" style="v"/>Men den som är av Gud lyssnar till Guds ord. Ni lyssnar inte, därför att ni inte är av Gud.”</para>
+  <para style="s1">Jesus och Abraham</para>
+  <para style="p">
+    <verse number="48" style="v"/>Judarna svarade: ”Du är inget annat än en samarier<note caller="+" style="f"><char style="fr" closed="false">8:48 </char><char style="ft" closed="false"><char style="xt">Se not till <ref loc="JHN 4:4">4:4</ref></char>.</char></note> som är besatt av en ond ande!”</para>
+  <para style="p">
+    <verse number="49" style="v"/>Men Jesus svarade: ”Nej, jag är inte besatt. Jag ärar min Fader, men ni hånar mig. <verse number="50" style="v"/>Jag söker inte min egen ära, men det finns en som söker, och det är han som dömer. <verse number="51" style="v"/>Ja, sannerligen säger jag er: den som håller mitt ord ska aldrig i evighet dö.”</para>
+  <para style="p">
+    <verse number="52" style="v"/>Då sa judarna: ”Nu vet vi att du är besatt av en ond ande. Abraham dog, så också profeterna. Och så säger du att den som håller ditt ord aldrig i evighet ska dö! <verse number="53" style="v"/>Du menar alltså att du är större än vår förfader Abraham? Han dog, så också profeterna. Vem tror du att du är?” <verse number="54" style="v"/>Då svarade Jesus: ”Om jag förhärligar mig själv, så betyder min härlighet ingenting. Men det är min Fader som förhärligar mig, han som ni påstår är er Gud. <verse number="55" style="v"/>Ändå känner ni honom inte, men jag känner honom. Om jag sa att jag inte känner honom, skulle jag vara en lögnare som ni. Men jag känner honom och håller hans ord. <verse number="56" style="v"/>Er far Abraham gladde sig åt att få se min dag. Och han fick se den och blev glad.”</para>
+  <para style="p">
+    <verse number="57" style="v"/>Judarna sa: ”Du är inte ens femtio år, hur skulle du ha kunnat se Abraham?”</para>
+  <para style="p">
+    <verse number="58" style="v"/>Jesus svarade: ”Ja, sannerligen säger jag er: jag är<note caller="+" style="f"><char style="fr" closed="false">8:58 </char><char style="ft" closed="false"><char style="xt">Se not till <ref loc="JHN 6:20">6:20</ref></char>. Judarnas reaktion i följande vers visar att de var bestörta över att Jesus tog det heliga gudsnamnet på sig; de betraktade det som hädelse, som enligt lagen förutsatte stening till döds.</char></note> – redan innan Abraham ens var född.”</para>
+  <para style="p">
+    <verse number="59" style="v"/>Då tog de upp stenar för att kasta på honom, men Jesus försvann därifrån och lämnade templet.</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Jesus botar en man som föddes blind</para>
+  <para style="p">
+    <verse number="1" style="v"/>När Jesus gick vidare fick han se en man som hade varit blind sedan födseln.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Då frågade hans lärjungar: ”Rabbi, för vems synd föddes den här mannen blind, hans egen eller hans föräldrars?”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Jesus svarade dem: ”Det var varken för att han själv eller hans föräldrar syndade. Men Guds gärningar skulle uppenbaras på honom. <verse number="4" style="v"/>Vi måste, så länge det är dag, göra hans gärningar som har sänt mig. Snart blir det natt, och då kan ingen arbeta. <verse number="5" style="v"/>Så länge jag är i världen, är jag världens ljus.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Sedan spottade han på marken och gjorde en deg av lera som han strök på mannens ögon, <verse number="7" style="v"/>och han sa till honom: ”Gå och tvätta dig i Siloadammen” (Siloa betyder utsänd). Mannen gick då iväg till dammen och tvättade sig, och när han kom tillbaka kunde han se.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Hans grannar och andra som hade sett honom som tiggare, frågade varandra: ”Är det inte han som satt och tiggde förut?”</para>
+  <para style="p">
+    <verse number="9" style="v"/>”Jo, det är det”, sa en del, medan andra sa: ”Nej, han är bara lik honom.”</para>
+  <para style="p">Men själv sa han: ”Visst är det jag.”</para>
+  <para style="p">
+    <verse number="10" style="v"/>Då frågade de honom: ”Hur kan det komma sig att du ser?”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Mannen svarade: ”Han som heter Jesus gjorde en deg och strök den på mina ögon, och sedan sa han åt mig att gå till Siloadammen och tvätta mig. Och när jag hade gjort det så kunde jag se.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>De frågade honom: ”Var finns han nu?”</para>
+  <para style="p">Men mannen svarade: ”Det vet jag inte.”</para>
+  <para style="s1">Fariseerna förhör mannen som föddes blind</para>
+  <para style="p">
+    <verse number="13" style="v"/>Då tog de med sig mannen som hade varit blind till fariseerna. <verse number="14" style="v"/>Det var på en sabbat som Jesus hade gjort degen och gett mannen hans syn. <verse number="15" style="v"/>När fariseerna frågade hur det kom sig att han kunde se, berättade han än en gång: ”Han strök en deg på mina ögon, och när jag hade tvättat mig, kunde jag se.”</para>
+  <para style="p">
+    <verse number="16" style="v"/>En del av fariseerna sa då: ”Den mannen kan inte vara sänd av Gud eftersom han inte håller sabbaten.” Men andra sa: ”En syndare kan väl inte göra sådana tecken?” Så var deras meningar delade.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Och igen frågade de mannen som hade varit blind: ”Vad säger du själv om honom? Det var ju du som fick din syn.” Mannen svarade då: ”Han är en profet.”</para>
+  <para style="p">
+    <verse number="18" style="v"/>Men judarna tvivlade på att den botade mannen överhuvudtaget hade varit blind, så de kallade på hans föräldrar <verse number="19" style="v"/>och frågade dem: ”Är det här er son? Föddes han blind som ni säger? Och hur kan det då komma sig att han ser nu?”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Föräldrarna svarade: ”Vi vet att det är vår son och att han föddes blind. <verse number="21" style="v"/>Men hur han kan se nu det vet vi inte, och inte heller vem som har botat honom. Fråga honom själv. Han är gammal nog att svara själv.”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Detta sa de för att de var rädda för judarna, som redan då hade bestämt att den som erkände Jesus som Messias skulle utstötas ur synagogan. <verse number="23" style="v"/>Därför sa hans föräldrar: ”Han är gammal nog, fråga honom själv.”</para>
+  <para style="p">
+    <verse number="24" style="v"/>För andra gången kallade de därför till sig mannen som hade varit blind och sa till honom: ”Ge Gud äran.<note caller="+" style="f"><char style="fr" closed="false">9:24 </char><char style="ft" closed="false">Detta var en ed man svor inför domstolen.</char></note> Vi vet att den där mannen är en syndare.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>Men mannen svarade: ”Om han är en syndare eller ej, det vet jag inte. Det enda jag vet är att förut var jag blind, men nu kan jag se.”</para>
+  <para style="p">
+    <verse number="26" style="v"/>Då frågade de honom än en gång: ”Vad gjorde han med dig? Hur gjorde han när du fick din syn?”</para>
+  <para style="p">
+    <verse number="27" style="v"/>Mannen svarade: ”Det har jag ju redan berättat, men ni lyssnar inte. Varför vill ni höra det igen? Vill ni också bli hans lärjungar?”</para>
+  <para style="p">
+    <verse number="28" style="v"/>Då hånade de honom och sa: ”Det är du som är hans lärjunge. Vi är lärjungar till Mose. <verse number="29" style="v"/>Vi vet att Gud har talat till Mose, men varifrån den här mannen kommer, det vet vi inte.”</para>
+  <para style="p">
+    <verse number="30" style="v"/>”Det var underligt”, svarade mannen. ”Han gav mig min syn, och ändå vet ni inte varifrån han kommer. <verse number="31" style="v"/>Men att Gud inte lyssnar till syndare, det vet vi. Han lyssnar till den som fruktar honom och gör hans vilja. <verse number="32" style="v"/>Aldrig någonsin har man hört talas om någon som har botat en som föddes blind. <verse number="33" style="v"/>Om den här mannen inte var sänd av Gud, så skulle han inte kunna göra något sådant.”</para>
+  <para style="p">
+    <verse number="34" style="v"/>”Du är helt och hållet född i synd!”, sa de till honom. ”Försöker du undervisa oss?” Och så drev de bort honom.</para>
+  <para style="s1">Jesus talar om andlig blindhet</para>
+  <para style="p">
+    <verse number="35" style="v"/>Jesus fick snart höra att de hade drivit bort honom, och när han fann honom igen frågade han: ”Tror du på Människosonen?”</para>
+  <para style="p">
+    <verse number="36" style="v"/>Mannen svarade: ”Herre, säg mig vem han är, så att jag kan tro på honom.”</para>
+  <para style="p">
+    <verse number="37" style="v"/>Jesus sa: ”Du har sett honom. Det är han som talar med dig.”</para>
+  <para style="p">
+    <verse number="38" style="v"/>Då föll mannen ner framför Jesus och sa: ”Jag tror, Herre.”</para>
+  <para style="p">
+    <verse number="39" style="v"/>Sedan sa Jesus: ”Till en dom har jag kommit hit till världen, för att de som inte ser ska börja se, och de som ser ska bli blinda.”</para>
+  <para style="p">
+    <verse number="40" style="v"/>Några fariseer som var där med honom hörde det och frågade: ”Menar du att vi skulle vara blinda?”</para>
+  <para style="p">
+    <verse number="41" style="v"/>Då svarade Jesus: ”Om ni var blinda skulle ni vara utan synd. Men nu menar ni att ni kan se, och därför finns er synd kvar.</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">Liknelsen om fåren och den gode herden</para>
+  <para style="p">
+    <verse number="1" style="v"/>Ja, sannerligen säger jag er: den som inte går in genom grinden till fårfållan utan istället tar sig in en annan väg, han är en tjuv och en brottsling. <verse number="2" style="v"/>Herden går in genom grinden. <verse number="3" style="v"/>Grindvakten öppnar grinden för honom, och fåren lyssnar till hans röst. Han kallar på sina får med deras namn och leder dem ut. <verse number="4" style="v"/>När han har släppt ut fåren går han framför dem, och de följer honom, för de känner igen hans röst. <verse number="5" style="v"/>De följer aldrig en främling, utan springer bort från honom, eftersom de inte känner igen hans röst.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Jesus berättade den här bilden för dem, men de förstod inte vad han menade. <verse number="7" style="v"/>Jesus sa: ”Ja, sannerligen säger jag er: jag är grinden in till fåren. <verse number="8" style="v"/>Alla som har kommit före mig är tjuvar och brottslingar, men fåren lyssnade inte till dem. <verse number="9" style="v"/>Jag är grinden. Den som går in genom mig ska bli räddad. Han ska gå in och ut och hitta bete. <verse number="10" style="v"/>Tjuven kommer bara för att stjäla, slakta och döda. Men jag har kommit för att de ska ha liv, och liv i överflöd.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Jag är den gode herden. Den gode herden ger sitt liv för fåren. <verse number="12" style="v"/>Den som är anställd och inte är en herde och fårens ägare överger fåren och springer sin väg när han ser vargen komma. Och så angriper vargen fåren och skingrar flocken. <verse number="13" style="v"/>Den anställde har ingen omsorg om fåren.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Jag är den gode herden, och jag känner mina får, och de känner mig <verse number="15" style="v"/>på samma sätt som Fadern känner mig och jag känner honom. Jag ger mitt liv för fåren. <verse number="16" style="v"/>Jag har också andra får, som inte hör till den här fållan. Också dem måste jag leda, och de ska lyssna till min röst. Så ska det bli en fårhjord och en herde. <verse number="17" style="v"/>Fadern älskar mig, därför att jag ger mitt liv för att sedan ta det tillbaka. <verse number="18" style="v"/>Ingen tar mitt liv ifrån mig, utan jag ger det frivilligt. Jag har makt att ge det, och jag har makt att ta det tillbaka. Det är det bud jag har fått av min Fader.”</para>
+  <para style="p">
+    <verse number="19" style="v"/>Dessa ord gav nytt upphov till oenighet bland judarna. <verse number="20" style="v"/>Många sa: ”Han är besatt av en ond ande och helt galen. Vad tjänar det till att lyssna på honom?” <verse number="21" style="v"/>Men andra sa: ”Nej, så talar inte den som är besatt av en ond ande. Kan en ond ande bota dem som är blinda?”</para>
+  <para style="s1">Judarna vägrar att tro på Jesus</para>
+  <para style="p">
+    <verse number="22" style="v"/>Nu inföll tempelinvigningsfesten<note caller="+" style="f"><char style="fr" closed="false">10:22 </char><char style="ft" closed="false">Tempelinvigningsfesten firades till minnet av templets återinvigning under Judas Mackabaios i december 165 f.Kr. Jerusalems tempel hade invigts av Antiochos IV Epifanes 168 f.Kr. åt den grekiske högguden Zeus.</char></note> i Jerusalem. Det var vinter, <verse number="23" style="v"/>och Jesus gick omkring i templet i Salomos pelarhall. <verse number="24" style="v"/>Då omringade judarna honom och frågade: ”Hur länge till ska du hålla oss i spänning? Om du är Messias, så säg det öppet.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>Jesus svarade dem: ”Jag har redan talat om det för er, men ni vill inte tro det. De gärningar jag gör i min Faders namn vittnar om mig. <verse number="26" style="v"/>Men ni tror inte, eftersom ni inte hör till mina får. <verse number="27" style="v"/>Mina får lyssnar till min röst, och jag känner dem, och de följer mig. <verse number="28" style="v"/>Jag ger dem evigt liv, och de ska aldrig i evighet gå förlorade. Ingen ska ta dem ifrån mig. <verse number="29" style="v"/>Min Fader har gett dem till mig, och han är större än någon annan. Därför kan ingen ta dem ifrån min Faders hand. <verse number="30" style="v"/>Jag och Fadern är ett.”</para>
+  <para style="p">
+    <verse number="31" style="v"/>Då tog judarna än en gång upp stenar för att kasta på honom. <verse number="32" style="v"/>Men Jesus sa till dem: ”Jag har låtit er se många goda gärningar från Fadern. För vilken av dem tänker ni stena mig?”</para>
+  <para style="p">
+    <verse number="33" style="v"/>Judarna svarade: ”Det är inte för någon god gärning vi vill stena dig, utan för att du hädar. Du, som är en människa, gör dig själv till Gud.”</para>
+  <para style="p">
+    <verse number="34" style="v"/>Då sa Jesus: ”Står det inte i er egen lag att Gud sa: ’Jag säger att ni är gudar<note caller="+" style="f"><char style="fr" closed="false">10:34 </char><char style="ft" closed="false">Det ord som både på grekiska och svenska är översatt med ”gudar” är det hebreiska <char style="tl">elohim</char>. Det kan betyda </char><char style="fqa" closed="false">Gud, </char><char style="ft" closed="false">men också </char><char style="fqa" closed="false">gudar, gudalik, ängel, ledare, Guds ägodel </char><char style="ft" closed="false">etc. Bland Israels folk kunde man förr i tiden kalla en kung eller en ledare för ”gud” eller ”Guds son”, eftersom han tjänade Gud. <char style="xt">Se <ref loc="PSA 82:6">Ps 82:6</ref></char>.</char></note>’? <verse number="35" style="v"/>Man kallar alltså dem som fick ta emot Guds ord för gudar, och Skriften kan inte göras om intet. <verse number="36" style="v"/>Hur kan ni säga om honom som Fadern har helgat och sänt till världen att det är hädelse när jag säger: ’Jag är Guds Son’? <verse number="37" style="v"/>Om jag inte gör min Faders gärningar, då behöver ni inte tro på mig. <verse number="38" style="v"/>Men om jag gör dem, så tro åtminstone på dem, även om ni inte kan tro på mig. Då ska ni veta och inse att Fadern är i mig och jag i honom.”</para>
+  <para style="p">
+    <verse number="39" style="v"/>De försökte då gripa honom igen, men han kom undan. <verse number="40" style="v"/>Sedan gick Jesus än en gång iväg till den plats på andra sidan Jordan där Johannes döparen först hade döpt, och han stannade där. <verse number="41" style="v"/>Det var många som kom till honom. Och de sa: ”Johannes gjorde inga tecken, men allt han sa om Jesus var sant.” <verse number="42" style="v"/>Många började där tro på honom.</para>
+  <chapter number="11" style="c"/>
+  <para style="s1">Lasaros uppväcks från de döda</para>
+  <para style="p">
+    <verse number="1" style="v"/>En man som hette Lasaros låg sjuk. Han bodde i byn Betania tillsammans med sina systrar Maria och Marta <verse number="2" style="v"/>(Det var samma Maria, vars bror Lasaros nu låg sjuk, som smorde Herren med välluktande olja och torkade hans fötter med sitt hår). <verse number="3" style="v"/>De två systrarna skickade nu ett meddelande till Jesus: ”Herre, din vän är sjuk.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Men när Jesus hörde det sa han: ”Hans sjukdom ska inte sluta med döden utan visar Guds härlighet, så att Guds Son blir förhärligad genom detta.” <verse number="5" style="v"/>Jesus älskade Marta, hennes syster och Lasaros. <verse number="6" style="v"/>När han hörde att Lasaros var sjuk, stannade han kvar där han var i ytterligare två dagar. <verse number="7" style="v"/>Sedan sa han till lärjungarna: ”Låt oss gå tillbaka till Judeen.”</para>
+  <para style="p">
+    <verse number="8" style="v"/>Men hans lärjungar sa till honom: ”Rabbi, judarna försökte just stena dig. Ska du verkligen gå dit igen?”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Då svarade Jesus: ”Har inte dagen tolv timmar? Om man går under dagen snubblar man inte, för då ser man denna världens ljus. <verse number="10" style="v"/>Men om man går om natten, då snubblar man, eftersom man inte har ljus.” <verse number="11" style="v"/>Sedan sa han: ”Vår vän Lasaros sover, men nu ska jag gå och väcka honom.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Hans lärjungar sa: ”Herre, om han sover så blir han snart frisk.” <verse number="13" style="v"/>Jesus menade att Lasaros hade dött, men de trodde att han talade om vanlig sömn. <verse number="14" style="v"/>Därför sa Jesus rent ut till dem: ”Lasaros är död. <verse number="15" style="v"/>Och för er skull är jag glad att jag inte var där, för att ni ska tro. Men nu måste vi gå till honom.” <verse number="16" style="v"/>Tomas, som kallades Tvillingen, sa då till de andra lärjungarna: ”Kom, låt oss gå med, så att vi kan dö tillsammans med honom.”</para>
+  <para style="p">
+    <verse number="17" style="v"/>När Jesus kom fram till Betania fann han att Lasaros redan hade legat i graven i fyra dagar. <verse number="18" style="v"/>Betania låg bara ungefär tre kilometer från Jerusalem, <verse number="19" style="v"/>och många judar hade kommit därifrån för att trösta Marta och Maria i deras sorg över deras bror. <verse number="20" style="v"/>Men när Marta nu hörde att Jesus var på väg gick hon ut för att möta honom, medan Maria stannade hemma.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Marta sa till Jesus: ”Herre, om du hade varit här, så hade min bror inte dött. <verse number="22" style="v"/>Men jag vet ändå att Gud ska ge dig vad du än ber honom om.”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Jesus svarade: ”Din bror ska uppstå.”</para>
+  <para style="p">
+    <verse number="24" style="v"/>Då sa Marta: ”Ja, jag vet att han ska uppstå vid uppståndelsen på den sista dagen.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>Men Jesus sa till henne: ”Jag är uppståndelsen och livet. Den som tror på mig ska leva, även om han dör. <verse number="26" style="v"/>Och var och en som lever och tror på mig ska aldrig i evighet dö. Tror du det?”</para>
+  <para style="p">
+    <verse number="27" style="v"/>”Ja, Herre”, svarade hon. ”Jag tror att du är Messias, Guds Son, som skulle komma hit till världen.”</para>
+  <para style="p">
+    <verse number="28" style="v"/>Efter att ha sagt detta gick hon därifrån, kallade på sin syster Maria och viskade till henne: ”Mästaren är här och vill träffa dig.” <verse number="29" style="v"/>När Maria hörde det, reste hon sig genast upp och gick ut för att möta honom.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Jesus hade stannat utanför byn på den plats där Marta hade mött honom. <verse number="31" style="v"/>Så när judarna, som var i huset för att trösta Maria, såg henne skynda sig ut trodde de att hon skulle gå till graven för att gråta, och de följde efter henne. <verse number="32" style="v"/>När Maria kom fram till Jesus och såg honom, föll hon ner vid hans fötter och sa: ”Herre, om du hade varit här, så hade min bror inte dött.” <verse number="33" style="v"/>När Jesus såg hur hon grät och hur judarna som följt med henne också grät, blev han djupt upprörd och skakad, <verse number="34" style="v"/>och han frågade: ”Var har ni lagt honom?”</para>
+  <para style="p">De sa: ”Kom och se, Herre!” <verse number="35" style="v"/>Jesus grät.</para>
+  <para style="p">
+    <verse number="36" style="v"/>Då sa de som stod runt omkring: ”Se hur mycket han älskade honom.”</para>
+  <para style="p">
+    <verse number="37" style="v"/>Men några av dem sa: ”Om han kunde bota en blind, då kunde han väl ha hindrat dennes död?” <verse number="38" style="v"/>Än en gång blev Jesus upprörd, och han gick till graven, som var en grotta med en sten framför öppningen.</para>
+  <para style="p">
+    <verse number="39" style="v"/>Jesus sa nu: ”Ta bort stenen.” Men Marta, den döda mannens syster, sa: ”Herre, han luktar ju redan, för han har varit död i fyra dagar.”</para>
+  <para style="p">
+    <verse number="40" style="v"/>Då sa Jesus till henne: ”Sade jag dig inte att om du tror, så ska du få se Guds härlighet?” <verse number="41" style="v"/>Då tog de bort stenen. Sedan såg Jesus upp mot himlen och sa: ”Fader, jag tackar dig för att du har hört mig. <verse number="42" style="v"/>Själv visste jag att du alltid hör mig, men för alla de människors skull som står här säger jag det ändå, så att de ska tro att du har sänt mig.” <verse number="43" style="v"/>Sedan ropade han med hög röst: ”Lasaros, kom ut!” <verse number="44" style="v"/>Och den döde kom ut med både armar och ben inlindade i liksvepningen och med ansiktet täckt av en duk. Jesus sa då till dem: ”Gör honom fri och låt honom gå.”</para>
+  <para style="s1">Det judiska rådet planerar att döda Jesus</para>
+  <para style="p">
+    <verse number="45" style="v"/>Många av judarna som kommit ut till Maria och sett vad Jesus gjorde, började nu tro på honom. <verse number="46" style="v"/>Men några av dem gick bort till fariseerna och rapporterade vad Jesus hade gjort.</para>
+  <para style="p">
+    <verse number="47" style="v"/>Då kallade översteprästerna och fariseerna samman hela det judiska rådet. De sa: ”Vad ska vi göra? Den här mannen gör ju många tecken. <verse number="48" style="v"/>Om vi låter honom fortsätta börjar snart hela folket att tro på honom, och då kommer romarna att förstöra vårt tempel och vårt folk.”</para>
+  <para style="p">
+    <verse number="49" style="v"/>En av dem, Kajafas, som var överstepräst det året, sa då till dem: ”Nu förstår ni nog ingenting! <verse number="50" style="v"/>Ni bör ju inse att det är bättre för er om en enda människa dör än att hela folket går under.”</para>
+  <para style="p">
+    <verse number="51" style="v"/>Detta sa han inte av sig själv. Nej, eftersom han var överstepräst det året talade han profetiskt att Jesus skulle dö för folket, <verse number="52" style="v"/>och inte bara för dem, utan också för alla kringspridda Guds barn, för att samla och förena dem. <verse number="53" style="v"/>Från den stunden var de fast beslutna att döda Jesus.</para>
+  <para style="p">
+    <verse number="54" style="v"/>Jesus vandrade därför inte längre öppet omkring bland judarna utan drog sig bort till utkanten av öknen, till Efraim, där han stannade med sina lärjungar.</para>
+  <para style="p">
+    <verse number="55" style="v"/>Den judiska påskhögtiden närmade sig nu, och många från landet kom till Jerusalem i förväg för att gå igenom reningsceremonierna före påsken. <verse number="56" style="v"/>De sökte efter Jesus, och medan de stod i templet frågade de varandra: ”Vad tror ni? Har han inte tänkt komma till högtiden?” <verse number="57" style="v"/>Men översteprästerna och fariseerna hade befallt att den som visste var Jesus höll hus genast måste rapportera om detta, så att de kunde arrestera honom.</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">Maria i Betania smörjer Jesus fötter med dyrbar olja</para>
+  <para style="r">(<ref loc="MAT 26:6-13">Matt 26:6-13</ref>; <ref loc="MRK 14:3-9">Mark 14:3-9</ref>; <ref loc="LUK 7:37-39">Luk 7:37-39</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Sex dagar före påsken kom Jesus till Betania, där Lasaros bodde, han som Jesus hade uppväckt från de döda. <verse number="2" style="v"/>Man ordnade där en festmåltid för honom. Marta serverade, och Lasaros var en av dem som åt tillsammans med Jesus vid bordet.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Då tog Maria en flaska<note caller="+" style="f"><char style="fr" closed="false">12:3 </char><char style="ft" closed="false">Ett romerskt pund, dvs. 375,45 gr. eller cirka 0,5 liter.</char></note> välluktande, dyrbar äkta nardusolja och smorde Jesus fötter och torkade dem med sitt hår. Och hela huset fylldes av doften från oljan.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Men Judas Iskariot, den av lärjungarna som senare skulle förråda honom, sa då: <verse number="5" style="v"/>”Varför sålde man inte den här oljan för trehundra denarer och gav pengarna till de fattiga?”<note caller="+" style="f"><char style="fr" closed="false">12:5 </char><char style="ft" closed="false">En denar motsvarade en dagslön.</char></note> <verse number="6" style="v"/>Detta sa han inte för att han brydde sig om de fattiga, utan därför att han var en tjuv. Han skötte om kassan och brukade ta pengar därifrån.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Men Jesus svarade: ”Lämna henne ifred! Hon sparade den här oljan för min begravning. <verse number="8" style="v"/>De fattiga kommer ni alltid att ha ibland er, men mig har ni inte alltid.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>När en stor mängd judar fick höra att Jesus var där, kom de dit för att träffa honom och också för att se Lasaros, som han hade uppväckt från de döda. <verse number="10" style="v"/>Översteprästerna bestämde sig då för att döda Lasaros också, <verse number="11" style="v"/>eftersom fler och fler judar lämnade dem och istället började tro på Jesus.</para>
+  <para style="s1">Jesus rider in i Jerusalem på en åsna</para>
+  <para style="r">(<ref loc="MAT 21:4-9">Matt 21:4-9</ref>; <ref loc="MRK 11:7-10">Mark 11:7-10</ref>; <ref loc="LUK 19:35-38">Luk 19:35-38</ref>)</para>
+  <para style="p">
+    <verse number="12" style="v"/>Nästa dag fick en stor folkmassa som kommit till högtiden höra att Jesus var på väg till Jerusalem, <verse number="13" style="v"/>och de tog palmkvistar och gick ut för att möta honom. De ropade:</para>
+  <para style="b"/>
+  <para style="q1">”Hosianna!<note caller="+" style="f"><char style="fr" closed="false">12:13 </char><char style="fq" closed="false">Hosianna </char><char style="ft" closed="false">är ett hebreiskt hyllningsord som betyder </char><char style="fqa" closed="false">Herre, fräls! </char><char style="ft" closed="false">Se även not till <char style="xt"><ref loc="MAT 21:9">Matt 21:9</ref></char>.</char></note>”</para>
+  <para style="b"/>
+  <para style="q1">”Välsignad är han som kommer i Herrens namn!<note caller="+" style="f"><char style="fr" closed="false">12:13 </char><char style="ft" closed="false"><char style="xt">Se <ref loc="PSA 118:25-26">Ps 118:25-26</ref></char>.</char></note>”</para>
+  <para style="b"/>
+  <para style="q1">”Israels kung!”</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="14" style="v"/>Jesus fick tag på en ung åsna och satte sig på den, som det står skrivet:</para>
+  <para style="q1">
+    <verse number="15" style="v"/>”Var inte rädd, dotter Sion<note caller="+" style="f"><char style="fr" closed="false">12:15 </char><char style="fq" closed="false">dotter Sion </char><char style="ft" closed="false">, Jerusalems invånare.</char></note>.</para>
+  <para style="q2">Se, din kung kommer,</para>
+  <para style="q2">ridande på ett åsneföl.”<note caller="+" style="f"><char style="fr" closed="false">12:15 </char><char style="ft" closed="false"><char style="xt">Se <ref loc="ZEC 9:9">Sak 9:9</ref></char>.</char></note></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="16" style="v"/>Lärjungarna förstod först inte detta. Men när Jesus hade förhärligats, kom de ihåg att så som det stod skrivet om honom, så hade det gjorts med honom.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Alla de som hade varit med när Jesus kallade ut Lasaros ur graven och uppväckte honom från de döda vittnade om detta. <verse number="18" style="v"/>Därför var det så många som gick ut för att möta honom, när de hörde att han hade gjort detta tecken.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Men fariseerna sa till varandra: ”Ni ser att ingenting hjälper! Hela världen följer ju efter honom!”</para>
+  <para style="s1">Jesus förklarar varför han måste dö</para>
+  <para style="p">
+    <verse number="20" style="v"/>Bland dem som hade kommit till högtiden för att tillbe fanns det också några greker. <verse number="21" style="v"/>De kom till Filippos, han som var från Betsaida i Galileen, och sa: ”Herre, vi skulle vilja träffa Jesus.” <verse number="22" style="v"/>Filippos gick då och talade om detta för Andreas, och tillsammans gick de och berättade det för Jesus.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Men Jesus svarade dem: ”Den stund har nu kommit då Människosonen ska förhärligas. <verse number="24" style="v"/>Ja, sannerligen säger jag er: om ett vetekorn inte faller i jorden och dör, förblir det ett ensamt korn, men om det dör ger det en stor skörd. <verse number="25" style="v"/>Den som älskar sitt liv ska förlora det, men den som hatar sitt liv här i världen, han ska bevara det och få evigt liv.</para>
+  <para style="p">
+    <verse number="26" style="v"/>Om någon vill tjäna mig, ska han följa mig, och där jag är, där ska också min tjänare vara. Om någon tjänar mig, ska han bli ärad av min Fader. <verse number="27" style="v"/>Just nu är jag fylld av ångest. Ska jag be: ’Fader, rädda mig från denna stund’? Ändå är det för den stunden jag har kommit. <verse number="28" style="v"/>Fader, förhärliga ditt namn!”</para>
+  <para style="p">Då hördes en röst från himlen: ”Jag har redan förhärligat det och ska förhärliga det igen.” <verse number="29" style="v"/>När folket som stod där hörde det sa de att det var åskan, medan andra sa att en ängel hade talat till honom.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Men Jesus sa: ”Rösten hördes för er skull, inte för min. <verse number="31" style="v"/>Domen faller nu över den här världen, nu ska den här världens härskare kastas ut. <verse number="32" style="v"/>Och när jag har lyfts upp<note caller="+" style="f"><char style="fr" closed="false">12:32 </char><char style="ft" closed="false">Uttrycket syftar både på att Jesus skulle hängas upp på ett kors och på att han skulle lyftas upp till himlen.</char></note> från jorden ska jag dra alla till mig.” <verse number="33" style="v"/>Detta sa han för att göra klart för dem hur han skulle dö.</para>
+  <para style="p">
+    <verse number="34" style="v"/>Då sa folket till honom: ”Vi har fått lära oss i lagen<note caller="+" style="f"><char style="fr" closed="false">12:34 </char><char style="ft" closed="false">Med lagen menas här hela Skriften, dvs. Gamla testamentet.</char></note> att Messias ska stanna för evigt. Hur kan du nu säga att Messias ska lyftas upp? Vem är Människosonen?”</para>
+  <para style="p">
+    <verse number="35" style="v"/>Jesus svarade: ”Ljuset ska finnas hos er bara en kort tid till. Vandra medan ni har ljuset, så att inte mörkret får makt över er. Den som vandrar i mörker vet inte vart han går. <verse number="36" style="v"/>Tro på ljuset, medan ni fortfarande har ljuset, så ska ni bli ljusets barn.” Sedan Jesus hade sagt detta gick han bort och gömde sig för dem.</para>
+  <para style="s1">Folket vill inte tro på Jesus</para>
+  <para style="p">
+    <verse number="37" style="v"/>Trots alla tecken Jesus hade gjort inför dem, trodde de inte på honom. <verse number="38" style="v"/>Så gick det i uppfyllelse som profeten Jesaja sagt:</para>
+  <para style="b"/>
+  <para style="q1">”Herre, vem trodde på vårt budskap,</para>
+  <para style="q2">och för vem har Herren uppenbarat sin makt?”<note caller="+" style="f"><char style="fr" closed="false">12:38 </char><char style="ft" closed="false">Ordagrant: </char><char style="fqa" closed="false">sin arm.</char><char style="ft" closed="false"><char style="xt">Se <ref loc="ISA 53:1">Jes 53:1</ref></char>.</char></note></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="39" style="v"/>De kunde helt enkelt inte tro, för Jesaja säger också:</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="40" style="v"/>”Han har förblindat deras ögon</para>
+  <para style="q2">och gjort deras hjärtan hårda,</para>
+  <para style="q1">så att de inte kan se med sina ögon</para>
+  <para style="q2">och förstå i sitt hjärta och inte vända om</para>
+  <para style="q2">och bli botade av mig.”<note caller="+" style="f"><char style="fr" closed="false">12:40 </char><char style="ft" closed="false"><char style="xt">Se <ref loc="ISA 6:9-10">Jes 6:9-10</ref></char>.</char></note></para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="41" style="v"/>Detta sa Jesaja eftersom han såg hans härlighet<note caller="+" style="f"><char style="fr" closed="false">12:41 </char><char style="ft" closed="false"><char style="xt">Se <ref loc="ISA 6:1-5">Jes 6:1-5</ref></char>.</char></note>, och det var om honom han talade.</para>
+  <para style="p">
+    <verse number="42" style="v"/>Ändå fanns det många, till och med i det judiska rådet, som trodde på Jesus, men med tanke på fariseerna vågade de inte erkänna det öppet, för att inte bli uteslutna ur synagogan. <verse number="43" style="v"/>De ville hellre bli ärade av människor än av Gud.</para>
+  <para style="p">
+    <verse number="44" style="v"/>Jesus ropade: ”Den som tror på mig, tror inte på mig utan på honom som har sänt mig, <verse number="45" style="v"/>och den som ser mig, ser honom som har sänt mig. <verse number="46" style="v"/>Jag har kommit som ett ljus hit till världen, för att ingen som tror på mig ska bli kvar i mörker. <verse number="47" style="v"/>Om någon hör mina ord men inte håller dem, så dömer inte jag honom, för jag har inte kommit för att döma världen, utan för att rädda den. <verse number="48" style="v"/>Den som förkastar mig och inte tar emot mina ord, han har en domare: han ska på den sista dagen dömas av det ord jag har talat. <verse number="49" style="v"/>Jag har inte talat av mig själv, utan Fadern som har sänt mig har befallt mig vad jag ska säga och tala. <verse number="50" style="v"/>Jag vet att hans befallning ger evigt liv. Därför talar jag som Fadern har sagt mig.”</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">Jesus tvättar sina lärjungars fötter</para>
+  <para style="p">
+    <verse number="1" style="v"/>Påskhögtiden skulle snart börja och Jesus visste att hans stund nu hade kommit då han skulle lämna världen och återvända till sin Fader. Han hade älskat sina egna som var i världen och älskade dem in i det sista.</para>
+  <para style="p">
+    <verse number="2" style="v"/>De hade samlats för att äta tillsammans och djävulen hade redan ingett Judas, Simon Iskariots son i hjärtat att förråda Jesus. <verse number="3" style="v"/>Jesus visste att Fadern hade gett honom makt över allting och att han hade kommit från Gud och skulle återvända till Gud. <verse number="4" style="v"/>Så han reste sig nu från bordet, tog av sig manteln och virade en handduk om sig. <verse number="5" style="v"/>Sedan hällde han vatten i ett handfat och började tvätta sina lärjungars fötter och torka dem med handduken som han hade virat om sig.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Men när han kom till Simon Petrus, sa Simon till honom: ”Herre, ska du tvätta mina fötter?”</para>
+  <para style="p">
+    <verse number="7" style="v"/>Då svarade Jesus: ”Du förstår inte just nu vad jag gör men en dag ska du förstå det.”</para>
+  <para style="p">
+    <verse number="8" style="v"/>Petrus sa: ”Aldrig i evighet får du tvätta mina fötter!”</para>
+  <para style="p">Men Jesus sa till honom: ”Om jag inte tvättar dig, har du ingen del i mig.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Då sa Simon Petrus: ”Herre, tvätta mina händer och mitt huvud också då och inte bara fötterna!”</para>
+  <para style="p">
+    <verse number="10" style="v"/>Men Jesus sa till honom: ”Den som har badat behöver bara få sina fötter tvättade för att vara helt och hållet ren. Och ni är rena men inte alla.” <verse number="11" style="v"/>Jesus visste nämligen vem som skulle förråda honom. Det var därför han sa att inte alla var rena.</para>
+  <para style="p">
+    <verse number="12" style="v"/>När Jesus hade tvättat deras fötter, tog han på sig manteln igen och slog sig ner vid bordet. Sedan frågade han dem: ”Förstår ni vad jag har gjort med er? <verse number="13" style="v"/>Ni kallar mig Mästare och Herre och det är rätt att ni gör det för det är vad jag är. <verse number="14" style="v"/>Men om nu jag som är er Herre och Mästare har tvättat era fötter, då är också ni skyldiga att tvätta varandras fötter. <verse number="15" style="v"/>Jag har gett er ett exempel att följa: gör som jag har gjort mot er. <verse number="16" style="v"/>Ja, sannerligen säger jag er: en tjänare står inte över sin herre och en budbärare står inte över den som har sänt honom. <verse number="17" style="v"/>När ni nu vet detta är ni lyckliga om ni också praktiserar det.</para>
+  <para style="s1">Jesus förutsäger att han ska bli förrådd</para>
+  <para style="r">(<ref loc="MAT 26:20-25">Matt 26:20-25</ref>; <ref loc="MRK 14:17-21">Mark 14:17-21</ref>; <ref loc="LUK 22:21-23">Luk 22:21-23</ref>)</para>
+  <para style="p">
+    <verse number="18" style="v"/>Jag talar inte om er alla. Jag känner er som jag har valt ut men Skriftens ord måste gå i uppfyllelse: ’Den som åt mitt bröd har lyft sin häl mot mig.’<note caller="+" style="f"><char style="fr" closed="false">13:18 </char><char style="ft" closed="false"><char style="xt">Jfr <ref loc="PSA 41:10">Ps 41:10</ref></char>. ”Äta någons bröd” syftar på en nära gemenskap (måltidsgemenskap), </char><char style="fqa" closed="false">lyfta sin häl </char><char style="ft" closed="false">mot någon: att vända sig mot denne, bli en aktiv motståndare.</char></note> <verse number="19" style="v"/>Jag säger det redan nu innan det händer så att ni när det har hänt, ska tro att jag är den jag är<note caller="+" style="f"><char style="fr" closed="false">13:19 </char><char style="ft" closed="false"><char style="xt">Se not till <ref loc="JHN 6:20">6:20</ref></char>.</char></note>. <verse number="20" style="v"/>Ja, sannerligen säger jag er: den som tar emot någon som jag sänder, han tar emot mig. Och den som tar emot mig, han tar emot honom som har sänt mig.”</para>
+  <para style="p">
+    <verse number="21" style="v"/>När Jesus hade sagt detta blev han upprörd i sitt innersta och vittnade: ”Ja, sannerligen säger jag er: en av er kommer att förråda mig!”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Hans lärjungar såg då på varandra och undrade vem han kunde mena. <verse number="23" style="v"/>En av hans lärjungar, den som han älskade,<note caller="+" style="f"><char style="fr" closed="false">13:23 </char><char style="ft" closed="false">Vilken lärjunge Johannes syftade på avslöjas först i <char style="xt"><ref loc="JHN 21:20-24">21:20-24</ref></char>.</char></note> var närmast intill Jesus sida vid bordet <verse number="24" style="v"/>och Simon Petrus gjorde därför tecken åt honom att fråga Jesus vem han talade om. <verse number="25" style="v"/>Lärjungen lutade sig då mot Jesus och frågade: ”Herre, vem är det?”</para>
+  <para style="p">
+    <verse number="26" style="v"/>Jesus svarade: ”Det är han som får brödstycket som jag nu doppar i fatet.” Sedan doppade han brödstycket och gav det till Judas, Simon Iskariots son. <verse number="27" style="v"/>Och i samma ögonblick som Judas fick brödet, for Satan in i honom. Jesus sa då till honom: ”Skynda dig, gör det du ska!”</para>
+  <para style="p">
+    <verse number="28" style="v"/>Ingen av de andra vid bordet förstod varför Jesus sa så till honom. <verse number="29" style="v"/>Eftersom Judas skötte om kassan trodde några att han bad honom gå ut och köpa det man behövde till högtiden eller ge något till de fattiga. <verse number="30" style="v"/>Men när Judas hade fått brödet, gick han genast ut. Det var natt.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Så snart han hade gått, sa Jesus: ”Människosonen är nu förhärligad, och Gud är förhärligad i honom. <verse number="32" style="v"/>Om nu Gud är förhärligad i honom,<note caller="+" style="f"><char style="fr" closed="false">13:32 </char><char style="ft" closed="false">En del handskrifter saknar: </char><char style="fq" closed="false">Om nu Gud är förhärligad i honom.</char></note> ska Gud också förhärliga honom i sig själv. Han ska snart förhärliga honom. <verse number="33" style="v"/>Mina barn, ännu en kort tid ska jag vara kvar hos er. Sedan ska ni förgäves söka efter mig, och så som jag sa till judarna säger jag nu till er: Dit jag går kan ni inte komma. <verse number="34" style="v"/>Nu ger jag er ett nytt bud: att ni ska älska varandra. Så som jag har älskat er, ska ni också älska varandra! <verse number="35" style="v"/>Genom att ni älskar varandra ska människorna förstå att ni är mina lärjungar.”</para>
+  <para style="s1">Jesus förutsäger Petrus förnekelse</para>
+  <para style="r">(<ref loc="MAT 26:33-35">Matt 26:33-35</ref>; <ref loc="MRK 14:29-31">Mark 14:29-31</ref>; <ref loc="LUK 22:33-34">Luk 22:33-34</ref>)</para>
+  <para style="p">
+    <verse number="36" style="v"/>Simon Petrus frågade då Jesus: ”Herre, vart går du?”</para>
+  <para style="p">Jesus svarade: ”Dit jag går nu kan du inte följa med men senare ska du följa mig.”</para>
+  <para style="p">
+    <verse number="37" style="v"/>Men Petrus undrade: ”Varför kan jag inte följa med nu? Jag är beredd att dö för dig.”</para>
+  <para style="p">
+    <verse number="38" style="v"/>Då svarade Jesus: ”Dö för mig, säger du? Ja, sannerligen säger jag dig: innan tuppen hinner gala, ska du tre gånger ha förnekat mig.</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">Jesus är vägen till Gud</para>
+  <para style="p">
+    <verse number="1" style="v"/>Låt inte era hjärtan oroas! Tro på Gud och tro på mig! <verse number="2" style="v"/>I min Faders hus finns det många rum och om det inte vore så, skulle jag ju inte ha sagt att jag går för att göra i ordning en plats åt er. <verse number="3" style="v"/>Om jag nu går bort för att göra i ordning en plats åt er, ska jag komma tillbaka och hämta er så att också ni kan vara där jag är. <verse number="4" style="v"/>Nu vet ni vart jag går och ni känner till vägen dit.”</para>
+  <para style="p">
+    <verse number="5" style="v"/>Men Tomas sa: ”Herre, vi vet inte vart du går. Hur ska vi då kunna känna till vägen?”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Jesus svarade: ”Jag är vägen, sanningen och livet. Ingen kan komma till Fadern utom genom mig. <verse number="7" style="v"/>Om ni har lärt känna mig, ska ni också lära känna min Fader. Och ni känner honom redan och har sett honom.”</para>
+  <para style="p">
+    <verse number="8" style="v"/>Filippos sa: ”Herre, visa oss Fadern, så blir vi nöjda!”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Jesus svarade: ”Vet du inte vem jag är, Filippos, trots att jag har varit hos er så länge? Den som har sett mig har sett Fadern. Varför ber du då att få se honom? <verse number="10" style="v"/>Tror du inte att jag är i Fadern och att Fadern är i mig? När jag talar till er, talar jag inte av mig själv. Fadern är i mig och utför sina gärningar. <verse number="11" style="v"/>Tro på mig när jag säger att jag är i Fadern och Fadern i mig, eller tro åtminstone på grund av gärningarna.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Ja, sannerligen säger jag er: den som tror på mig ska göra samma gärningar som jag har gjort och till och med ännu större, för jag går till Fadern. <verse number="13" style="v"/>Vad ni än ber om i mitt namn ska jag göra det, så att Fadern blir förhärligad genom Sonen. <verse number="14" style="v"/>Om ni ber om något i mitt namn, ska jag göra det.</para>
+  <para style="s1">Löftet om den heliga Anden</para>
+  <para style="p">
+    <verse number="15" style="v"/>Om ni älskar mig, så håller ni mina bud. <verse number="16" style="v"/>Jag ska be Fadern att han sänder er en annan Hjälpare<note caller="+" style="f"><char style="fr" closed="false">14:16 </char><char style="ft" closed="false">Det grekiska ordet, bokstavligen </char><char style="fqa" closed="false">tillkallad (för att hjälpa)</char><char style="ft" closed="false">, har många betydelser och nyanser: </char><char style="fqa" closed="false">hjälpare, tröstare, förmanare, advokat, förespråkare, försvarsvittne.</char></note> som för evigt ska vara hos er, <verse number="17" style="v"/>sanningens Ande, som världen inte kan ta emot, för världen ser honom inte och känner honom inte. Men ni känner honom, eftersom han är hos er nu och kommer att vara i er. <verse number="18" style="v"/>Jag ska inte lämna er föräldralösa utan jag ska komma till er. <verse number="19" style="v"/>Mycket snart ska världen inte se mig längre, men ni ska se mig för jag lever och ni kommer att leva. <verse number="20" style="v"/>Då ska ni förstå att jag är i min Fader och ni i mig och jag i er. <verse number="21" style="v"/>Den som har mina bud och lyder dem han älskar mig och den som älskar mig, ska bli älskad av min Fader och jag ska älska honom och visa mig för honom.”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Judas (inte Judas Iskariot) sa då till honom: ”Herre, varför ska du visa dig för oss och inte för världen?”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Jesus svarade: ”Om någon älskar mig, så håller han sig till mina ord och då ska min Fader älska honom och vi ska komma till honom och stanna hos honom. <verse number="24" style="v"/>Den som inte älskar mig, håller sig inte till mina ord. Och ordet ni har fått höra kommer inte från mig utan från Fadern som har sänt mig. <verse number="25" style="v"/>Jag säger er detta medan jag fortfarande är hos er. <verse number="26" style="v"/>Men Hjälparen, den heliga Anden som Fadern ska sända i mitt namn, han ska lära er allt och påminna er om allt som jag har sagt er.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Jag lämnar frid efter mig, min frid ger jag åt er. Jag ger er inte det som världen ger. Låt inte era hjärtan oroas och var inte ängsliga! <verse number="28" style="v"/>Ni hörde mig säga till er: Jag går bort, men jag ska komma tillbaka till er. Om ni älskade mig, skulle ni vara glada över att jag går till Fadern för Fadern är större än jag. <verse number="29" style="v"/>Detta säger jag till er innan det händer, så att ni ska tro när det sedan händer. <verse number="30" style="v"/>Jag kan inte säga mycket mer till er för den här världens härskare närmar sig. Han har ingen makt över mig <verse number="31" style="v"/>men världen ska veta att jag älskar min Fader och gör vad Fadern har befallt mig.</para>
+  <para style="p">Kom, så går vi härifrån!</para>
+  <chapter number="15" style="c"/>
+  <para style="s1">Liknelsen om vinstocken och grenarna</para>
+  <para style="p">
+    <verse number="1" style="v"/>Jag är den sanna vinstocken och min Fader är trädgårdsmästaren. <verse number="2" style="v"/>Han skär bort varje gren i mig som inte bär frukt. Och han beskär de grenar som bär frukt så att de kan bära ännu mer frukt. <verse number="3" style="v"/>Ni har redan blivit beskurna genom det ord jag har förkunnat för er. <verse number="4" style="v"/>Bli kvar i mig så blir jag kvar i er! En gren kan inte bära frukt av sig själv om den inte sitter kvar på vinstocken. På samma sätt kan inte heller ni bära frukt om ni inte är kvar i mig.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Jag är vinstocken och ni är grenarna. Om någon är kvar i mig och jag i honom bär han mycket frukt, men utan mig kan ni inget göra. <verse number="6" style="v"/>Den som inte är kvar i mig blir bortkastad som en gren och vissnar. De ska samlas ihop och kastas i elden och brännas upp. <verse number="7" style="v"/>Men om ni är kvar i mig och mitt ord är kvar i er, så be om vad ni vill och ni ska få det. <verse number="8" style="v"/>Därigenom blir min Fader förhärligad att ni bär mycket frukt och blir mina lärjungar.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Så som Fadern har älskat mig har jag älskat er. Bli kvar i min kärlek! <verse number="10" style="v"/>Om ni lyder mina bud är ni kvar i min kärlek, på samma sätt som jag har hållit min Faders bud och är kvar i hans kärlek. <verse number="11" style="v"/>Detta har jag sagt till er för att min glädje ska vara i er så att er glädje blir fullkomlig. <verse number="12" style="v"/>Och detta är mitt bud: att ni ska älska varandra på samma sätt som jag har älskat er. <verse number="13" style="v"/>Det finns ingen större kärlek än att man offrar sitt liv för sina vänner. <verse number="14" style="v"/>Ni är mina vänner om ni gör det jag befaller er. <verse number="15" style="v"/>Jag kallar er inte längre tjänare för en tjänare vet inte vad hans herre gör. Jag kallar er vänner för jag har låtit er veta allt som jag har hört av min Fader. <verse number="16" style="v"/>Ni valde inte mig utan jag har valt ut er till att gå ut och bära frukt som består. Då ska Fadern ge er vad ni än ber om i mitt namn. <verse number="17" style="v"/>Detta är vad jag befaller er: att ni ska älska varandra!</para>
+  <para style="s1">Jesus varnar för hat och förföljelse</para>
+  <para style="p">
+    <verse number="18" style="v"/>När världen hatar er, kom då ihåg att den hatade mig före er. <verse number="19" style="v"/>Om ni tillhörde världen skulle världen älska er som sina egna. Men nu tillhör ni inte världen utan jag har valt ut er ur världen och därför hatar världen er. <verse number="20" style="v"/>Kom ihåg vad jag sa till er: En tjänare står inte över sin herre. Om de har förföljt mig, kommer de också att förfölja er. Men har de hållit sig till mitt ord, kommer de också att hålla sig till det ni säger. <verse number="21" style="v"/>De behandlar er så för mitt namns skull därför att de inte känner honom som har sänt mig.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Om jag aldrig hade kommit och talat till dem, skulle de ha varit utan synd. Men nu har de ingen ursäkt för sin synd. <verse number="23" style="v"/>Den som hatar mig hatar också min Fader. <verse number="24" style="v"/>Om jag inte hade utfört sådana gärningar ibland dem som ingen annan har gjort, skulle de ha varit utan synd. Men nu har de sett dem och hatat både mig och min Fader. <verse number="25" style="v"/>Och genom detta går det i uppfyllelse som står skrivet i deras lag<note caller="+" style="f"><char style="fr" closed="false">15:25 </char><char style="ft" closed="false">Jesus syftade här på hela Skriften, dvs. Gamla testamentet.</char></note>: ’De har hatat mig utan anledning.’<note caller="+" style="f"><char style="fr" closed="false">15:25 </char><char style="ft" closed="false"><char style="xt">Se <ref loc="PSA 35:19">Ps 35:19</ref>; <ref loc="PSA 69:5">69:5</ref></char>.</char></note></para>
+  <para style="p">
+    <verse number="26" style="v"/>Men när Hjälparen kommer som jag ska sända er från Fadern, sanningens Ande, som kommer från Fadern, ska han vittna om mig. <verse number="27" style="v"/>Också ni ska vittna för ni har varit med mig från början.</para>
+  <chapter number="16" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Detta har jag sagt er för att ni inte ska komma på fall. <verse number="2" style="v"/>De kommer att utesluta er ur synagogorna, ja, det ska gå så långt att de som dödar er tror sig så tjäna Gud och offra åt honom. <verse number="3" style="v"/>Så gör de därför att de aldrig har lärt känna min Fader och inte heller mig. <verse number="4" style="v"/>Jag har sagt er detta nu så att ni, när den tiden kommer, ska komma ihåg att jag sa det till er. Jag sa det inte till er från början eftersom jag var hos er.</para>
+  <para style="s1">Jesus undervisar om Anden</para>
+  <para style="p">
+    <verse number="5" style="v"/>Nu går jag bort till honom som har sänt mig och ingen av er frågar vart jag går. <verse number="6" style="v"/>Det jag har sagt fyller era hjärtan med sorg. <verse number="7" style="v"/>Men jag säger er sanningen: det är bäst för er att jag går bort för om jag inte gör det, kommer inte Hjälparen till er. När jag har gått bort, ska jag sända honom till er. <verse number="8" style="v"/>Och när han kommer ska han visa världen vad synd, rättfärdighet och dom är; <verse number="9" style="v"/>synd: de tror inte på mig, <verse number="10" style="v"/>rättfärdighet: jag går till Fadern och ni ser mig inte längre, <verse number="11" style="v"/>och dom: den här världens härskare är dömd.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Det är så mycket jag vill säga er men ni kan inte ta emot det nu. <verse number="13" style="v"/>Men när han kommer, sanningens Ande, ska han vägleda er i hela sanningen. Han ska inte tala av sig själv utan bara berätta det han hör och låta er veta vad som kommer att hända i framtiden. <verse number="14" style="v"/>Han ska förhärliga mig för han låter er veta vad han har fått från mig. <verse number="15" style="v"/>Allt som min Fader har, det tillhör mig. Därför kan jag säga att han får det av mig som han låter er veta. <verse number="16" style="v"/>Snart ser ni mig inte längre. Men sedan ska ni snart få se mig igen.”</para>
+  <para style="s1">Sorgen ska vändas i glädje</para>
+  <para style="p">
+    <verse number="17" style="v"/>Några av lärjungarna frågade då varandra: ”Vad menar han när han säger att vi snart inte ser honom längre men att vi sedan snart ska få se honom igen och när han säger att han går till sin Fader?” <verse number="18" style="v"/>De undrade: ”Vad menar han med ’snart’? Vi fattar inte vad han säger!”</para>
+  <para style="p">
+    <verse number="19" style="v"/>Jesus visste att de ville fråga honom, så han sa till dem: ”Ni undrar vad jag menade när jag sa att ni snart inte ser mig längre men att ni snart ska få se mig igen? <verse number="20" style="v"/>Ja, sannerligen säger jag er: ni kommer att gråta och klaga, men världen ska glädja sig. Ni ska sörja men er sorg ska vändas i glädje. <verse number="21" style="v"/>När en kvinna föder barn har hon det smärtsamt då hennes stund har kommit. Men när hon har fött sitt barn, glömmer hon smärtan och gläder sig bara över att en människa har fötts till världen. <verse number="22" style="v"/>Ni har det också svårt just nu, men jag ska träffa er igen och då ska era hjärtan bli glada och ingen ska ta er glädje ifrån er. <verse number="23" style="v"/>Den dagen behöver ni inte fråga mig om någonting. Ja, sannerligen säger jag er: Fadern ska ge er vad ni än ber om i mitt namn. <verse number="24" style="v"/>Ni har ännu inte bett om något i mitt namn. Be nu, så ska ni få och er glädje ska bli fullkomlig!</para>
+  <para style="p">
+    <verse number="25" style="v"/>Allt detta har jag talat till er i bilder, men det kommer en tid då jag kan tala till er öppet och utan bilder om min Fader. <verse number="26" style="v"/>Den dagen ska ni be i mitt namn och jag säger inte att jag ska be till Fadern för er, <verse number="27" style="v"/>för Fadern själv älskar er därför att ni har älskat mig och trott att jag kommer från Gud. <verse number="28" style="v"/>Jag kom från Fadern och steg in i världen och jag ska lämna världen och gå till Fadern.”</para>
+  <para style="p">
+    <verse number="29" style="v"/>Då sa hans lärjungar: ”Nu talar du i klartext och inte i bilder. <verse number="30" style="v"/>Nu förstår vi att du vet allt och inte behöver någon som frågar dig. Därför tror vi att du kommer från Gud.”</para>
+  <para style="p">
+    <verse number="31" style="v"/>Jesus svarade: ”Nu tror ni? <verse number="32" style="v"/>Se, den stund kommer, ja, den är redan här, då ni ska skingras och återvända var och en till sitt och lämna mig ensam. Men jag är inte ensam, för Fadern är med mig. <verse number="33" style="v"/>Detta har jag talat till er för att ni ska ha frid i mig. Här i världen kommer ni att möta bedrövelser men var vid gott mod, jag har besegrat världen.”</para>
+  <chapter number="17" style="c"/>
+  <para style="s1">Jesus ber om förhärligande</para>
+  <para style="p">
+    <verse number="1" style="v"/>När Jesus hade sagt detta, såg han upp mot himlen och sa:</para>
+  <para style="b"/>
+  <para style="pm">”Fader, stunden har nu kommit. Förhärliga din Son för att Sonen ska förhärliga dig! <verse number="2" style="v"/>Du har gett honom makt över alla människor så att han kan ge evigt liv åt alla dem som du har gett honom. <verse number="3" style="v"/>Och evigt liv är att de känner dig, den enda sanna Guden, och Jesus Kristus som du har sänt. <verse number="4" style="v"/>Jag har förhärligat dig här på jorden genom att slutföra det uppdrag du har gett mig. <verse number="5" style="v"/>Förhärliga nu mig, Fader, med den härlighet jag hade hos dig innan världen blev till!</para>
+  <para style="s1">Jesus ber för sina lärjungar</para>
+  <para style="pm">
+    <verse number="6" style="v"/>Jag har uppenbarat ditt namn för dem som du gav mig från världen. De var dina, du gav dem till mig och de har hållit sig till ditt ord. <verse number="7" style="v"/>Nu vet de att allt som du har gett mig kommer från dig. <verse number="8" style="v"/>Det ord jag fick från dig har jag fört vidare till dem och de har tagit emot ordet och faktiskt förstått att jag kommer från dig. De har trott att du har sänt mig.</para>
+  <para style="pm">
+    <verse number="9" style="v"/>Jag ber för dem. Jag ber inte för världen utan för dem som du har gett mig eftersom de tillhör dig. <verse number="10" style="v"/>Allt mitt är ditt och allt ditt är mitt. Jag har förhärligats i dem. <verse number="11" style="v"/>Jag är inte mer kvar i världen men de blir kvar här i världen. Jag kommer till dig. Helige Fader, bevara dem i ditt namn som du har gett mig, så att de blir ett så som vi är ett! <verse number="12" style="v"/>Medan jag var hos dem, bevarade jag dem i ditt namn som du har gett mig. Jag skyddade dem så att ingen av dem gick förlorad utom den som skulle gå förlorad, så att Skriften skulle gå i uppfyllelse.</para>
+  <para style="pm">
+    <verse number="13" style="v"/>Nu kommer jag till dig men detta säger jag medan jag är kvar i världen, så att de ska bli helt fyllda av min glädje. <verse number="14" style="v"/>Jag har fört ditt ord vidare till dem. Och världen har hatat dem därför att de inte tillhör den här världen liksom jag inte heller tillhör den. <verse number="15" style="v"/>Jag ber inte att du ska ta bort dem från världen utan att du ska bevara dem från den Onde<note caller="+" style="f"><char style="fr" closed="false">17:15 </char><char style="ft" closed="false">Eller </char><char style="fqa" closed="false">det onda.</char></note>. <verse number="16" style="v"/>De tillhör inte den här världen liksom jag inte tillhör den. <verse number="17" style="v"/>Helga dem i sanningen! Ditt ord är sanning. <verse number="18" style="v"/>Så som du sände mig till världen, sänder jag ut dem i världen. <verse number="19" style="v"/>Och för deras skull helgar jag mig för att de ska vara helgade i sanningen.</para>
+  <para style="s1">Jesus ber för alla troende</para>
+  <para style="pm">
+    <verse number="20" style="v"/>Men jag ber inte bara för dem utan också för alla som börjar tro på mig genom deras ord. <verse number="21" style="v"/>Jag ber att de alla ska bli ett så som du, Fader, är i mig och jag i dig. Låt dem vara i oss så att världen kan tro att du har sänt mig. <verse number="22" style="v"/>Den härlighet du gav mig, den har jag gett till dem för att de ska bli ett så som vi är ett, <verse number="23" style="v"/>jag i dem och du i mig, så att deras enhet blir fullkomlig. Då ska världen förstå att du har sänt mig och att du älskar dem så som du har älskat mig. <verse number="24" style="v"/>Fader, jag vill att de som du har gett mig ska vara med mig där jag är, så att de kan se den härlighet du gav mig eftersom du älskade mig redan innan världen skapades.</para>
+  <para style="pm">
+    <verse number="25" style="v"/>Rättfärdige Fader, världen känner dig inte men jag gör det och de vet att du har sänt mig. <verse number="26" style="v"/>Jag har låtit dem lära känna dig och jag ska fortsätta att göra det, så att den kärlek som du har älskat mig med ska vara i dem och jag i dem.”</para>
+  <chapter number="18" style="c"/>
+  <para style="s1">Jesus blir förrådd och arresterad</para>
+  <para style="r">(<ref loc="MAT 26:47-56">Matt 26:47-56</ref>; <ref loc="MRK 14:43-50">Mark 14:43-50</ref>; <ref loc="LUK 22:47-53">Luk 22:47-53</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Sedan Jesus hade slutat be, gick han tillsammans med sina lärjungar ut till andra sidan av Kidrondalen. Där fanns det en trädgård som de gick in i. <verse number="2" style="v"/>Men också Judas, han som förrådde honom kände till platsen eftersom Jesus ofta hade varit där med sina lärjungar.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Judas tog nu med sig en grupp romerska soldater och en del av översteprästernas och fariseernas män och med brinnande facklor, lyktor och vapen kom de dit.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Jesus visste vad som skulle hända med honom och därför gick han fram till dem och frågade: ”Vem söker ni?” <verse number="5" style="v"/>De svarade: ”Jesus från Nasaret.” Då sa Jesus: ”Det är jag.”<note caller="+" style="f"><char style="fr" closed="false">18:5 </char><char style="ft" closed="false"><char style="xt">Se not till <ref loc="JHN 6:20">6:20</ref></char>.</char></note></para>
+  <para style="p">Också Judas, han som förrådde honom stod där tillsammans med dem. <verse number="6" style="v"/>Men när Jesus sa: ”Det är jag”, ryggade de tillbaka och föll till marken.</para>
+  <para style="p">
+    <verse number="7" style="v"/>En gång till frågade han dem: ”Vem söker ni?” Och de svarade: ”Jesus från Nasaret.” <verse number="8" style="v"/>Då sa Jesus: ”Jag har ju redan sagt er att det är jag. Om det är mig ni söker så låt de andra gå.” <verse number="9" style="v"/>Så gick det i uppfyllelse som Jesus sagt: ”Jag har inte förlorat en enda av dem som du har gett mig.”<note caller="+" style="f"><char style="fr" closed="false">18:9 </char><char style="ft" closed="false"><char style="xt">Jfr <ref loc="JHN 6:39">6:39</ref></char> och <char style="xt"><ref loc="JHN 17:12">17:12</ref></char>.</char></note></para>
+  <para style="p">
+    <verse number="10" style="v"/>Men Simon Petrus drog det svärd han tagit med sig och högg av högra örat på översteprästens tjänare som hette Malkos. <verse number="11" style="v"/>Då sa Jesus till Petrus: ”Stick svärdet i skidan! Skulle jag inte dricka den bägare som Fadern har räckt mig?”</para>
+  <para style="s1">Jesus förhörs av översteprästen Hannas</para>
+  <para style="r">(<ref loc="MAT 26:57">Matt 26:57</ref>; <ref loc="MRK 14:53-54">Mark 14:53-54</ref>; <ref loc="LUK 22:54">Luk 22:54</ref>)</para>
+  <para style="p">
+    <verse number="12" style="v"/>Officeren med sina soldater och de judiska tempelvakterna grep nu Jesus och band honom. <verse number="13" style="v"/>Först tog de med honom till Hannas<note caller="+" style="f"><char style="fr" closed="false">18:13 </char><char style="ft" closed="false">Hannas hade varit överstepräst tidigare och räknades fortfarande som sådan.</char></note>, svärfar till Kajafas, som var överstepräst det året. <verse number="14" style="v"/>Det var Kajafas som hade sagt till judarna att det var bäst om en enda människa dog för folket.</para>
+  <para style="s1">Petrus förnekar att han känner Jesus</para>
+  <para style="r">(<ref loc="MAT 26:69-75">Matt 26:69-75</ref>; <ref loc="MRK 14:66-72">Mark 14:66-72</ref>; <ref loc="LUK 22:54-62">Luk 22:54-62</ref>)</para>
+  <para style="p">
+    <verse number="15" style="v"/>Simon Petrus och en annan lärjunge följde efter Jesus. Den lärjungen kände översteprästen och fick därför komma in med Jesus på översteprästens gård. <verse number="16" style="v"/>Petrus däremot stod kvar utanför porten. Men den lärjunge som kände översteprästen gick sedan ut och talade med tjänsteflickan som stod vakt vid porten så att Petrus kunde följa med honom in. <verse number="17" style="v"/>Flickan i porten frågade då Petrus: ”Är inte du också en lärjunge till den där mannen?” Men Petrus svarade: ”Nej, det är jag inte.”</para>
+  <para style="p">
+    <verse number="18" style="v"/>Tjänstefolket och tempelvakterna stod runt en koleld som de hade gjort upp eftersom det var kallt. Petrus ställde sig också där tillsammans med dem och värmde sig.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Översteprästen ställde nu frågor till Jesus om hans lärjungar och hans undervisning. <verse number="20" style="v"/>Jesus svarade: ”Jag har talat öppet till världen. Jag har hela tiden undervisat i synagogorna och i templet där alla judar samlas. Jag har inte sagt något i hemlighet. <verse number="21" style="v"/>Varför frågar du mig då? Fråga dem som har hört vad jag har talat! De vet vad jag har sagt.”</para>
+  <para style="p">
+    <verse number="22" style="v"/>När Jesus sa detta, gav en man ur tempelvakten som stod där honom en örfil och sa: ”Ska du svara översteprästen på det sättet?” <verse number="23" style="v"/>Men Jesus sa: ”Har jag sagt något fel, så säg vad det var för du slår väl inte en människa för att hon säger något som är rätt?”</para>
+  <para style="p">
+    <verse number="24" style="v"/>Hannas skickade sedan Jesus bunden till översteprästen Kajafas.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Petrus stod fortfarande vid elden och värmde sig. Och där frågade man honom: ”Är inte du också en av hans lärjungar?” Men Petrus nekade: ”Nej, det är jag inte.”</para>
+  <para style="p">
+    <verse number="26" style="v"/>Då sa en av översteprästens tjänare, en släkting till den man som Petrus hade huggit örat av: ”Visst såg jag dig därute i trädgården tillsammans med Jesus?”</para>
+  <para style="p">
+    <verse number="27" style="v"/>Men Petrus nekade än en gång. Och i samma stund gol tuppen.</para>
+  <para style="s1">Jesus förhörs av Pilatus</para>
+  <para style="r">(<ref loc="MAT 27:11-14">Matt 27:11-14</ref>; <ref loc="MRK 15:2-5">Mark 15:2-5</ref>; <ref loc="LUK 23:2-5">Luk 23:2-5</ref>)</para>
+  <para style="p">
+    <verse number="28" style="v"/>Tidigt på morgonen fördes Jesus från översteprästen Kajafas till den romerska landshövdingens residens. Men själva stannade de utanför för de ville inte bli orena<note caller="+" style="f"><char style="fr" closed="false">18:28 </char><char style="ft" closed="false"><char style="xt">Jfr not till <ref loc="MAT 8:8">Matt 8:8</ref></char>.</char></note> utan kunna äta påskmåltiden. <verse number="29" style="v"/>Pilatus gick därför ut till dem och frågade: ”Vad är det ni anklagar den här mannen för?”</para>
+  <para style="p">
+    <verse number="30" style="v"/>De svarade: ”Vi skulle inte ha överlämnat honom till dig om han inte hade varit en brottsling.”</para>
+  <para style="p">
+    <verse number="31" style="v"/>Då sa Pilatus: ”Då kan ni döma honom efter er egen lag<note caller="+" style="f"><char style="fr" closed="false">18:31 </char><char style="ft" closed="false">Pilatus syftar på Moses lag.</char></note>.”</para>
+  <para style="p">Men judarna sa: ”Vi har ingen rätt att avrätta någon.” <verse number="32" style="v"/>Genom detta gick det i uppfyllelse som Jesus sagt när han avslöjade på vilket sätt han skulle dö.<note caller="+" style="f"><char style="fr" closed="false">18:32 </char><char style="ft" closed="false"><char style="xt">Jfr <ref loc="JHN 12:32-33">12:32-33</ref></char>.</char></note></para>
+  <para style="p">
+    <verse number="33" style="v"/>Pilatus gick då tillbaka in i residenset och kallade till sig Jesus och frågade: ”Är du judarnas kung?”</para>
+  <para style="p">
+    <verse number="34" style="v"/>Jesus svarade: ”Är det du själv som vill veta eller har andra berättat för dig om mig?”</para>
+  <para style="p">
+    <verse number="35" style="v"/>Men Pilatus sa: ”Jag är väl ingen jude! Ditt eget folk och översteprästerna har fört dig hit. Vad har du gjort?”</para>
+  <para style="p">
+    <verse number="36" style="v"/>Då svarade Jesus: ”Mitt rike är inte av den här världen. Om det hade varit det, hade mina följeslagare kämpat för att jag inte skulle tas till fånga av judarna. Men nu är inte mitt rike härifrån.”</para>
+  <para style="p">
+    <verse number="37" style="v"/>Pilatus frågade igen: ”Så du är alltså en kung?”</para>
+  <para style="p">Jesus svarade: ”Det är du själv som kallar mig kung. Men jag har fötts och kommit hit till världen för att endast vittna om sanningen. Alla som är av sanningen lyssnar till vad jag säger.”</para>
+  <para style="p">
+    <verse number="38" style="v"/>Då sa Pilatus: ”Vad är sanning?” Sedan gick han ut till judarna igen och sa: ”Jag finner honom inte skyldig till något.</para>
+  <para style="s1">Jesus skymfas – Pilatus villrådighet</para>
+  <para style="r">(<ref loc="MAT 27:15-31">Matt 27:15-31</ref>; <ref loc="MRK 15:6-20">Mark 15:6-20</ref>; <ref loc="LUK 23:13-25">Luk 23:13-25</ref>)</para>
+  <para style="p">
+    <verse number="39" style="v"/>Men det är sed att jag varje påsk friger en fånge åt er. Vill ni att jag ska släppa judarnas kung?”</para>
+  <para style="p">
+    <verse number="40" style="v"/>Men de ropade tillbaka: ”Nej! Inte honom, utan Barabbas!” Men Barabbas var en upprorsmakare<note caller="+" style="f"><char style="fr" closed="false">18:40 </char><char style="ft" closed="false">Det grekiska ordet <char style="tl">lestes</char> kan också betyda rövare, men i <char style="xt"><ref loc="MRK 15:7">Mark 15:7</ref></char> och i <char style="xt"><ref loc="LUK 23:19">Luk 23:19</ref></char> står att han deltagit i ett uppror. Samma ord används bl.a. av historikern Josefus om upprorsmakare och gerillasoldater.</char></note>.</para>
+  <chapter number="19" style="c"/>
+  <para style="s1">Pilatus dömer Jesus till döden</para>
+  <para style="p">
+    <verse number="1" style="v"/>Pilatus gav då order om att Jesus skulle piskas. <verse number="2" style="v"/>Soldaterna vred till en krona av törnen och satte den på hans huvud och klädde på honom en purpurröd<note caller="+" style="f"><char style="fr" closed="false">19:2 </char><char style="ft" closed="false">Färgen var en symbol för kunglig makt.</char></note> mantel. <verse number="3" style="v"/>Sedan gick de fram till honom och sa: ”Leve judarnas kung!” och slog honom i ansiktet.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Efteråt gick Pilatus ut igen och sa till folket: ”Nu för jag ut honom till er, så att ni ska förstå att jag inte finner honom skyldig till något.” <verse number="5" style="v"/>Så kom Jesus ut med törnekronan och den purpurröda manteln på sig, och Pilatus sa: ”Här är mannen!”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Men när översteprästerna och deras tempelvakter fick se honom, började de ropa: ”Korsfäst honom!”</para>
+  <para style="p">Då sa Pilatus: ”Ni får ta honom och korsfästa honom själva. Jag finner honom inte skyldig till något.” <verse number="7" style="v"/>Men judarna svarade: ”Enligt vår lag<note caller="+" style="f"><char style="fr" closed="false">19:7 </char><char style="ft" closed="false">De syftar på Moses lag.</char></note> måste han dö, för han har gjort sig till Guds Son.”</para>
+  <para style="p">
+    <verse number="8" style="v"/>När Pilatus hörde detta blev han ännu mer rädd. <verse number="9" style="v"/>Han gick in i residenset igen och frågade Jesus: ”Varifrån kommer du?” Men Jesus svarade honom inte.</para>
+  <para style="p">
+    <verse number="10" style="v"/>”Tänker du inte svara mig?” frågade Pilatus. ”Vet du inte att jag har makt både att ge dig fri och att låta dig korsfästas?”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Men Jesus sa: ”Du skulle inte ha någon makt över mig alls om du inte hade fått den från ovan. Därför har den som överlämnade mig åt dig gjort sig skyldig till en större synd.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Då försökte Pilatus hitta ett sätt att kunna frige Jesus men judarna ropade: ”Om du friger honom är du inte kejsarens vän! Den som gör sig till kung sätter sig upp mot kejsaren.”</para>
+  <para style="p">
+    <verse number="13" style="v"/>När Pilatus hörde vad de sa, förde han ut Jesus till dem igen och satte sig på domstolen på den plats som kallas Stengården (på hebreiska<note caller="+" style="f"><char style="fr" closed="false">19:13 </char><char style="ft" closed="false">Jfr också v. 17 och 20.</char></note> ”Gabbata”). <verse number="14" style="v"/>Det var nu mitt på dagen<note caller="+" style="f"><char style="fr" closed="false">19:14 </char><char style="ft" closed="false">På grekiska </char><char style="fqa" closed="false">sjätte timmen. </char><char style="ft" closed="false">Tidsangivelserna är ungefärliga och evangelisterna tycks skilja sig något från varandra (<char style="xt">jfr <ref loc="MRK 15:25">Mark 15:25</ref></char>). Troligen avses sen förmiddag-tidigt mitt på dagen.</char></note>, förberedelsedagen innan påskhögtiden. Pilatus sa till judarna: ”Här har ni er kung!”</para>
+  <para style="p">
+    <verse number="15" style="v"/>Men de skrek: ”Bort med honom! Korsfäst honom!”</para>
+  <para style="p">Då frågade Pilatus: ”Ska jag korsfästa er kung?”</para>
+  <para style="p">Men översteprästerna svarade: ”Vi har ingen annan kung än kejsaren.”</para>
+  <para style="p">
+    <verse number="16" style="v"/>Då gav Pilatus efter och överlämnade Jesus till att korsfästas.</para>
+  <para style="s1">Jesus korsfästs</para>
+  <para style="r">(<ref loc="MAT 27:33-44">Matt 27:33-44</ref>; <ref loc="MRK 15:24-32">Mark 15:24-32</ref>; <ref loc="LUK 23:33-43">Luk 23:33-43</ref>)</para>
+  <para style="p">Soldaterna tog honom alltså med sig <verse number="17" style="v"/>och Jesus bar själv sitt kors till den plats som kallas Skalleplatsen (på hebreiska Golgota).</para>
+  <para style="p">
+    <verse number="18" style="v"/>Där korsfäste de honom och två andra män på var sitt kors med Jesus i mitten. <verse number="19" style="v"/>Pilatus hade låtit skriva en skylt som sattes upp på korset och där stod det: <char style="sc">Jesus från Nasaret, judarnas kung</char>. <verse number="20" style="v"/>Texten var skriven på hebreiska, latin och grekiska och eftersom platsen där Jesus korsfästes låg nära staden var det många judar som läste den.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Judarnas överstepräster gick då till Pilatus och krävde: ”Ändra texten från ’Judarnas kung’ till vad han själv har sagt: ’Jag är judarnas kung.’ ”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Men Pilatus svarade: ”Vad jag har skrivit, det har jag skrivit.”</para>
+  <para style="p">
+    <verse number="23" style="v"/>När soldaterna hade korsfäst Jesus, tog de hans kläder och delade upp dem i fyra delar, en för var och en av dem. Men när de kom till skjortan som var vävd i ett enda stycke utan söm, <verse number="24" style="v"/>sa de: ”Vi bör inte skära sönder den. Vi kastar lott om vem som ska få den.” Så gick det i uppfyllelse som står skrivet:</para>
+  <para style="b"/>
+  <para style="q1">”De delade mina kläder mellan sig</para>
+  <para style="q2">och kastade lott om min klädnad.”<note caller="+" style="f"><char style="fr" closed="false">19:24 </char><char style="ft" closed="false"><char style="xt">Se <ref loc="PSA 22:19">Ps 22:19</ref></char>.</char></note></para>
+  <para style="b"/>
+  <para style="p">Det var vad soldaterna gjorde.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Intill Jesus kors stod hans mor, hans moster, Klopas hustru Maria och Maria från Magdala. <verse number="26" style="v"/>När Jesus såg sin mor och bredvid henne den lärjunge som han älskade,<note caller="+" style="f"><char style="fr" closed="false">19:26 </char><char style="ft" closed="false">Vilken lärjunge Johannes syftade på avslöjas först i <char style="xt"><ref loc="JHN 21:20-24">21:20-24</ref></char>.</char></note> sa han till henne: ”Kvinna, låt honom vara din son!” <verse number="27" style="v"/>Sedan sa han till sin lärjunge: ”Låt henne vara din mor!” Från den stunden lät lärjungen henne bo hemma hos sig.</para>
+  <para style="s1">Jesus dör på korset</para>
+  <para style="r">(<ref loc="MAT 27:48-50">Matt 27:48-50</ref>; <ref loc="MRK 15:36-37">Mark 15:36-37</ref>; <ref loc="LUK 23:36">Luk 23:36</ref>)</para>
+  <para style="p">
+    <verse number="28" style="v"/>Jesus visste nu att allt var fullbordat och för att det som står skrivet skulle uppfyllas, sa han: ”Jag är törstig!”<note caller="+" style="f"><char style="fr" closed="false">19:28 </char><char style="ft" closed="false"><char style="xt">Jfr <ref loc="PSA 22:16">Ps 22:16</ref>; <ref loc="PSA 69:22">69:22</ref></char>.</char></note> <verse number="29" style="v"/>Någon doppade då en svamp i en kruka fylld med surt vin som stod där och fäste den på en isopstjälk<note caller="+" style="f"><char style="fr" closed="false">19:29 </char><char style="ft" closed="false">I <char style="xt"><ref loc="EXO 12:22">2 Mos 12:22</ref></char> används isopstjälkar för att doppa i påsklammets blod. Det användes också i olika reningsceremonier. Att Jesus är det lamm som renar oss från synd, kan vi läsa i <char style="xt"><ref loc="JHN 1:29">1:29</ref></char>.</char></note> och förde den till hans mun.<note caller="+" style="f"><char style="fr" closed="false">19:29 </char><char style="ft" closed="false"><char style="xt">Jfr <ref loc="PSA 22:16">Ps 22:16</ref>; <ref loc="PSA 69:22">69:22</ref></char>.</char></note> <verse number="30" style="v"/>Och när Jesus hade fått vinet, sa han: ”Det är fullbordat!” Sedan böjde han ner huvudet och gav upp andan.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Judarna ville inte att kropparna skulle hänga kvar på korsen till nästa dag som var en sabbat och dessutom en speciell sådan. De bad därför Pilatus ge order om att man skulle slå sönder benen på de korsfästa och ta ner kropparna.<note caller="+" style="f"><char style="fr" closed="false">19:31 </char><char style="ft" closed="false">När benpiporna slogs sönder, dog de korsfästa snabbare eftersom kroppstyngden då tryckte ihop lungorna. Enligt <char style="xt"><ref loc="DEU 21:23">5 Mos 21:23</ref></char> skulle de döda sedan begravas samma dag.</char></note> <verse number="32" style="v"/>Soldaterna kom då och slog sönder benen på de båda män som hade korsfästs samtidigt som Jesus, först den ena mannens ben och sedan den andres. <verse number="33" style="v"/>Men när de kom fram till Jesus, såg de att han redan var död och därför slog de inte sönder hans ben. <verse number="34" style="v"/>En av soldaterna stack upp ett spjut i hans sida och då rann det ut blod och vatten. <verse number="35" style="v"/>Det finns en som kan vittna om detta<note caller="+" style="f"><char style="fr" closed="false">19:35 </char><char style="ft" closed="false">Johannes talade om sig själv.</char></note> och hans vittnesbörd är sant. Han vet att det han säger är sant och han vittnar för att ni ska tro.</para>
+  <para style="p">
+    <verse number="36" style="v"/>Detta hände för att Skriften skulle gå i uppfyllelse: ”Inget av hans ben ska krossas.”<note caller="+" style="f"><char style="fr" closed="false">19:36 </char><char style="ft" closed="false"><char style="xt">Se <ref loc="EXO 12:46">2 Mos 12:46</ref>; <ref loc="NUM 9:12">4 Mos 9:12</ref></char> och <char style="xt"><ref loc="PSA 34:21">Ps 34:21</ref></char>.</char></note> <verse number="37" style="v"/>På ett annat ställe står det: ”De ska se upp till honom som de har genomborrat”<note caller="+" style="f"><char style="fr" closed="false">19:37 </char><char style="ft" closed="false"><char style="xt">Se <ref loc="ZEC 12:10">Sak 12:10</ref></char>.</char></note>.</para>
+  <para style="s1">Jesus begravs</para>
+  <para style="r">(<ref loc="MAT 27:57-61">Matt 27:57-61</ref>; <ref loc="MRK 15:42-47">Mark 15:42-47</ref>; <ref loc="LUK 23:50-56">Luk 23:50-56</ref>)</para>
+  <para style="p">
+    <verse number="38" style="v"/>Josef från Arimataia som av rädsla för judarna var en hemlig lärjunge till Jesus, bad sedan Pilatus att få ta Jesus kropp. Pilatus lät honom få det och Josef gick då och tog kroppen. <verse number="39" style="v"/>Nikodemos, mannen som först hade kommit till Jesus på natten var också med. Han hade med sig en blandning av myrra och aloe som vägde omkring trettio kilo. <verse number="40" style="v"/>De båda männen lindade sedan in Jesus kropp i en svepning av linne tillsammans med de välluktande oljorna så som man brukade göra vid judiska begravningar. <verse number="41" style="v"/>Platsen där Jesus korsfästes låg nära en trädgård där det fanns en ny grav där ännu ingen hade blivit lagd. <verse number="42" style="v"/>Eftersom det var förberedelsedag<note caller="+" style="f"><char style="fr" closed="false">19:42 </char><char style="ft" closed="false">Sabbaten skulle snart börja; den börjar vid solnedgången kl. 18.00 på fredagskvällen och slutar kl. 18.00 på lördagskvällen.</char></note> och graven låg nära, lade man Jesus i den.</para>
+  <chapter number="20" style="c"/>
+  <para style="s1">Jesus uppstår från de döda</para>
+  <para style="r">(<ref loc="MAT 28:1-8">Matt 28:1-8</ref>; <ref loc="MRK 16:1-8">Mark 16:1-8</ref>; <ref loc="LUK 24:1-12">Luk 24:1-12</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Tidigt på morgonen efter sabbaten medan det fortfarande var mörkt, kom Maria från Magdala till graven och upptäckte att stenen var borta från ingången. <verse number="2" style="v"/>Hon sprang då genast därifrån och sa till Simon Petrus och den lärjunge som Jesus älskade<note caller="+" style="f"><char style="fr" closed="false">20:2 </char><char style="ft" closed="false">Vilken lärjunge Johannes syftade på avslöjas först i <char style="xt"><ref loc="JHN 21:20-24">21:20-24</ref></char>.</char></note>: ”De har flyttat bort Herren från graven och vi vet inte var de har lagt honom!”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Petrus och den andre lärjungen gav sig då iväg till graven. <verse number="4" style="v"/>Båda sprang men den andre lärjungen sprang fortare än Petrus och kom dit först. <verse number="5" style="v"/>Han böjde sig ner och tittade in och såg linnesvepningen ligga där men han gick inte in. <verse number="6" style="v"/>Sedan kom Simon Petrus och han gick in i graven. Han såg också linnesvepningen som låg där <verse number="7" style="v"/>och dessutom den duk som hade täckt Jesus huvud. Den låg inte tillsammans med svepningen utan var hoprullad och låg för sig. <verse number="8" style="v"/>Då gick också den andre lärjungen in, han som hade kommit först till graven. Och han såg och trodde <verse number="9" style="v"/>för ännu hade de inte förstått av Skriften att Jesus måste uppstå från de döda.</para>
+  <para style="s1">Jesus visar sig för Maria från Magdala</para>
+  <para style="r">(<ref loc="MAT 28:9-10">Matt 28:9-10</ref>; <ref loc="MRK 16:9-11">Mark 16:9-11</ref>)</para>
+  <para style="p">
+    <verse number="10" style="v"/>Lärjungarna gick sedan hem till sig. <verse number="11" style="v"/>Men Maria stod och grät utanför graven och medan hon grät, lutade hon sig in. <verse number="12" style="v"/>Då fick hon se två vitklädda änglar sitta där Jesus kropp hade legat, en vid huvudändan och en vid fotändan.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Änglarna frågade henne: ”Varför gråter du, kvinna?”</para>
+  <para style="p">Hon svarade: ”De har flyttat bort min Herre och nu vet jag inte var de har lagt honom.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>När hon hade sagt detta, vände hon sig om och fick se Jesus stå där men förstod inte att det var han.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Jesus frågade henne: ”Varför gråter du, kvinna? Vem letar du efter?” Men hon trodde att det var trädgårdsmästaren och därför svarade hon: ”Om det är du som har burit bort honom, så tala om för mig var du har lagt honom så att jag kan hämta honom!”</para>
+  <para style="p">
+    <verse number="16" style="v"/>Då sa Jesus till henne: ”Maria!” Och genast vände hon sig mot honom och sa: ”Rabbouni!” (det är hebreiska och betyder ”Mästare”)<note caller="+" style="f"><char style="fr" closed="false">20:16 </char><char style="ft" closed="false">Kan också vara arameiska. Termen användes dock nästan aldrig om människor utan huvudsakligen i direkt bön till Gud.</char></note>.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Men Jesus sa: ”Håll inte fast mig<note caller="+" style="f"><char style="fr" closed="false">20:17 </char><char style="ft" closed="false">Eller: </char><char style="fqa" closed="false">rör inte vid mig!</char></note>, för jag har ännu inte återvänt till min Fader! Men gå till mina bröder och säg till dem att jag ska återvända till min Fader och er Fader, min Gud och er Gud!”</para>
+  <para style="p">
+    <verse number="18" style="v"/>Maria från Magdala gick då till lärjungarna och talade om för dem att hon hade sett Herren och hon berättade vad han hade sagt.</para>
+  <para style="s1">Jesus visar sig för sina lärjungar</para>
+  <para style="r">(<ref loc="MAT 28:16-20">Matt 28:16-20</ref>; <ref loc="MRK 16:14-18">Mark 16:14-18</ref>; <ref loc="LUK 24:36-49">Luk 24:36-49</ref>)</para>
+  <para style="p">
+    <verse number="19" style="v"/>Samma dag, den första dagen i veckan, samlades lärjungarna på kvällen bakom låsta dörrar av rädsla för judarna. Då stod plötsligt Jesus mitt ibland dem och sa till dem: ”Frid åt er alla!” <verse number="20" style="v"/>Sedan visade han dem sina händer och sin sida. Lärjungarna gladde sig när de fick se Herren.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Jesus sa till dem igen: ”Frid åt er alla! Så som Fadern har sänt mig, sänder jag nu er.” <verse number="22" style="v"/>Sedan andades han på dem och sa: ”Ta emot den heliga Anden!<note caller="+" style="f"><char style="fr" closed="false">20:22 </char><char style="ft" closed="false">Ande, andedräkt och vind är samma ord på grekiska. Jesus andedräkt fick därför symbolisera Guds Ande.</char></note> <verse number="23" style="v"/>Om ni förlåter någon hans synder så är de förlåtna, men om ni binder någon i hans synder så är han bunden.<note caller="+" style="f"><char style="fr" closed="false">20:23 </char><char style="ft" closed="false"><char style="xt">Jfr <ref loc="MAT 16:19">Matt 16:19</ref></char> med not.</char></note>”</para>
+  <para style="s1">Jesus visar sig för Tomas</para>
+  <para style="p">
+    <verse number="24" style="v"/>En av de tolv, Tomas som kallades Tvillingen, hade inte varit med de andra när Jesus kom. <verse number="25" style="v"/>De andra lärjungarna sa till honom: ”Vi har sett Herren!” Men Tomas svarade: ”Om jag inte får se hålen efter spikarna i hans händer och får ta på såren med mina fingrar och om jag inte får röra vid såret i hans sida med mina händer så kan jag inte tro.”</para>
+  <para style="p">
+    <verse number="26" style="v"/>En vecka senare<note caller="+" style="f"><char style="fr" closed="false">20:26 </char><char style="ft" closed="false">På grekiska: </char><char style="fqa" closed="false">åtta dagar senare.</char></note> var hans lärjungar samlade igen och då var Tomas tillsammans med dem. Och trots att dörrarna var låsta, stod då Jesus plötsligt mitt ibland dem och sa: ”Frid åt er alla!” <verse number="27" style="v"/>Sedan sa han till Tomas: ”Ta på mina händer här med ditt finger! Rör vid min sida med din hand! Tvivla inte utan tro!”</para>
+  <para style="p">
+    <verse number="28" style="v"/>Tomas sa till honom: ”Min Herre och min Gud!”</para>
+  <para style="p">
+    <verse number="29" style="v"/>Men Jesus sa till honom: ”Du tror därför att du har sett mig. Lyckliga är de som inte har sett men ändå tror.”</para>
+  <para style="s1">Bokens syfte</para>
+  <para style="p">
+    <verse number="30" style="v"/>Jesus lärjungar såg honom göra många andra tecken förutom dem som är nedtecknade i den här boken. <verse number="31" style="v"/>Men dessa är nedskrivna för att ni ska tro att Jesus är Messias, Guds Son och för att ni ska få liv i hans namn genom att tro på honom.</para>
+  <chapter number="21" style="c"/>
+  <para style="s1">Jesus visar sig för sina lärjungar när de fiskar</para>
+  <para style="p">
+    <verse number="1" style="v"/>Senare visade sig Jesus för sina lärjungar igen vid Tiberiassjön<note caller="+" style="f"><char style="fr" closed="false">21:1 </char><char style="ft" closed="false">Galileiska sjön kallas också Tiberiassjön.</char></note> och så här gick det till:</para>
+  <para style="p">
+    <verse number="2" style="v"/>Simon Petrus, Tomas som kallades Tvillingen, Natanael från Kana i Galileen, Sebedaios söner och två andra lärjungar var där tillsammans. <verse number="3" style="v"/>Då sa Simon Petrus till de andra: ”Jag ger mig ut och fiskar” och de andra svarade: ”Vi följer också med!” Så steg de i båten och for ut på sjön men de fick ingenting på hela natten.</para>
+  <para style="p">
+    <verse number="4" style="v"/>När det sedan blev morgon, stod Jesus på stranden men lärjungarna förstod inte att det var han.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Jesus sa till dem: ”Mina barn, har ni inte fått någon fisk?”</para>
+  <para style="p">”Nej”, svarade de.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Då sa han: ”Kasta ut nätet på höger sida om båten, så får ni.” De gjorde så och nu fick de så mycket fisk att de inte orkade dra in nätet.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Den lärjunge som Jesus älskade,<note caller="+" style="f"><char style="fr" closed="false">21:7 </char><char style="ft" closed="false">Vilken lärjunge Johannes syftade på avslöjas först i v. 20-24.</char></note> sa då till Petrus: ”Det är Herren!” När Simon Petrus hörde att det var Herren, knöt han om sig sitt ytterplagg för han hade nästan inget på sig och hoppade i vattnet. <verse number="8" style="v"/>De andra lärjungarna kom efter med båten och släpade nätet med fiskarna. De hade bara ungefär hundra meter kvar till stranden. <verse number="9" style="v"/>När de kom i land, såg de en glödhög och fisk som låg där och bröd.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Jesus sa nu till dem: ”Hämta några av fiskarna som ni just fick!” <verse number="11" style="v"/>Då steg Simon Petrus upp och drog det fulla nätet iland. Det fanns 153 stora fiskar där men trots att det var så fullt, gick det inte sönder.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Jesus sa sedan till dem: ”Kom hit och ät!” Ingen av dem vågade fråga vem han var men alla förstod att det var Herren. <verse number="13" style="v"/>Och Jesus gick fram och gav dem av brödet och fisken.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Detta var tredje gången som Jesus visade sig för sina lärjungar sedan han uppstått från de döda.</para>
+  <para style="s1">Jesus och Petrus</para>
+  <para style="p">
+    <verse number="15" style="v"/>När de hade ätit, sa Jesus till Simon Petrus: ”Simon, Johannes son älskar<note caller="+" style="f"><char style="fr" closed="false">21:15 </char><char style="ft" closed="false">I den grekiska texten används två olika ord för ”älska” som saknar exakt motsvarighet i svenskan. De två första gångerna frågar Jesus: </char><char style="fqa" closed="false">agapas me</char><char style="ft" closed="false">; här översatt </char><char style="fq" closed="false">älskar du mig</char><char style="ft" closed="false">? Tredje gången frågar Jesus </char><char style="fqa" closed="false">fileis me</char><char style="ft" closed="false">; här översatt </char><char style="fqa" closed="false">har du mig kär</char><char style="ft" closed="false">? Petrus svar är varje gång </char><char style="fqa" closed="false">filo se</char><char style="ft" closed="false">, </char><char style="fqa" closed="false">jag har dig kär</char><char style="ft" closed="false">. F.ö. kan de två verben i grekiskan användas ganska synonymt. Att Petrus nu tre gånger får förklara sin kärlek till Jesus kan ha sin bakgrund i hans trefaldiga förnekelse när Jesus tillfångatogs.</char></note> du mig mer än de andra gör?”</para>
+  <para style="p">”Ja, Herre”, svarade Petrus, ”du vet att jag har dig kär.”</para>
+  <para style="p">”Ge då mat till mina lamm”, sa Jesus till honom.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Jesus frågade sedan en andra gång: ”Simon, Johannes son, älskar du mig?”</para>
+  <para style="p">”Ja Herre”, sa Petrus, ”du vet att jag har dig kär.”</para>
+  <para style="p">”Var då en herde för mina får”, sa Jesus.</para>
+  <para style="p">
+    <verse number="17" style="v"/>För tredje gången frågade nu Jesus honom: ”Simon, Johannes son, har du mig kär?”</para>
+  <para style="p">Petrus blev mycket ledsen över att Jesus än en gång frågade om han hade honom kär och han svarade: ”Herre, du vet allt! Du vet att jag har dig kär!”</para>
+  <para style="p">Då sa Jesus till honom: ”Ge då mat till mina får! <verse number="18" style="v"/>Ja, sannerligen säger jag dig: När du var ung kunde du göra dig i ordning och gå vart du ville. Men när du blir gammal, ska du sträcka ut händerna och andra ska göra dig i ordning och föra dig dit du inte vill.<note caller="+" style="f"><char style="fr" closed="false">21:18 </char><char style="ft" closed="false">Jesus förutsäger att Petrus skulle avrättas genom korsfästelse.</char></note>” <verse number="19" style="v"/>Detta sa Jesus för att visa med vilket slags död Petrus skulle förhärliga Gud. Sedan sa Jesus till honom: ”Följ mig!”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Petrus vände sig nu om och fick se att den lärjunge som Jesus älskade<note caller="+" style="f"><char style="fr" closed="false">21:20 </char><char style="ft" closed="false">I v. 24 avslöjas att lärjungen är Johannes.</char></note> kom efter honom, han som under måltiden hade lutat sig mot Jesus och frågat vem som skulle förråda honom. <verse number="21" style="v"/>När Petrus fick se honom, frågade han Jesus: ”Vad kommer att hända med honom?”</para>
+  <para style="p">
+    <verse number="22" style="v"/>Men Jesus svarade: ”Om jag vill att han ska bli kvar tills jag kommer så rör det väl inte dig? Du ska bara följa mig!”</para>
+  <para style="p">
+    <verse number="23" style="v"/>På grund av detta spreds ryktet bland de troende att den lärjungen inte skulle dö. Men Jesus sa aldrig till Petrus att den lärjungen inte skulle dö. Han sa bara: ”Om jag vill att han ska bli kvar tills jag kommer så rör det väl inte dig?”</para>
+  <para style="s1">Slutord</para>
+  <para style="p">
+    <verse number="24" style="v"/>Det är den lärjungen som vittnar om allt detta och har skrivit ner det. Vi vet att hans vittnesbörd är sant.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Jesus gjorde också mycket annat och om man skulle skriva ner alla dessa händelser, tror jag inte att hela världen skulle rymma alla de böcker man då måste skriva.</para>
+</usx>

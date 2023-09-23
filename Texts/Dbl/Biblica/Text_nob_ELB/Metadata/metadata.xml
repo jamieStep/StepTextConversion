@@ -1,0 +1,362 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata id="1acb90cd67653967" revision="8" version="2.1">
+  <identification>
+    <name>Norwegian Living Bible</name>
+    <nameLocal>En Levende Bok</nameLocal>
+    <description>Norwegian Bokmål: En Levende Bok (New Testament)</description>
+    <abbreviation>NLB</abbreviation>
+    <abbreviationLocal>ELB</abbreviationLocal>
+    <scope>New Testament</scope>
+    <dateCompleted>2005-07-01</dateCompleted>
+    <bundleProducer>Paratext/8.0.100.83</bundleProducer>
+    <systemId type="paratext">
+      <id>bc01fca91e96e0f742b2199377aa1a4d700e7705</id>
+      <csetId>612e8ee69780ba12e21ef6064938061694576672</csetId>
+      <name>noNLB05</name>
+      <fullName>Norwegian Living Bible, New Testament</fullName>
+    </systemId>
+    <systemId type="ptreg">
+      <id>y7qXhTdC53aHBLc5A</id>
+    </systemId>
+  </identification>
+  <type>
+    <medium>text</medium>
+    <isConfidential>false</isConfidential>
+    <hasCharacters>true</hasCharacters>
+    <isTranslation>true</isTranslation>
+    <isExpression>true</isExpression>
+    <translationType>Revision</translationType>
+    <audience>Common</audience>
+  </type>
+  <relationships />
+  <agencies>
+    <rightsHolder>
+      <abbr>Biblica</abbr>
+      <url>http://www.Biblica.com</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsHolder>
+    <rightsAdmin>
+      <url>http://www.Biblica.com</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsAdmin>
+    <contributor>
+      <content>true</content>
+      <publication>true</publication>
+      <management>true</management>
+      <finance>true</finance>
+      <qa>true</qa>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </contributor>
+  </agencies>
+  <language>
+    <iso>nob</iso>
+    <name>Norwegian Bokmål</name>
+    <nameLocal>Norsk: Bokmål</nameLocal>
+    <script>Latin</script>
+    <scriptCode>Latn</scriptCode>
+    <scriptDirection>LTR</scriptDirection>
+    <ldml>nb</ldml>
+    <numerals>Arabic</numerals>
+  </language>
+  <countries>
+    <country>
+      <iso>NO</iso>
+      <name>Norway</name>
+    </country>
+  </countries>
+  <format>
+    <versedParagraphs>false</versedParagraphs>
+  </format>
+  <names>
+    <name id="book-mat">
+      <abbr>Matt</abbr>
+      <short>Matteus</short>
+      <long>Evangeliet etter Matteus</long>
+    </name>
+    <name id="book-mrk">
+      <abbr>Mark</abbr>
+      <short>Markus</short>
+      <long>Evangeliet etter Markus</long>
+    </name>
+    <name id="book-luk">
+      <abbr>Luk</abbr>
+      <short>Lukas</short>
+      <long>Evangeliet etter Lukas</long>
+    </name>
+    <name id="book-jhn">
+      <abbr>Joh</abbr>
+      <short>Johannes</short>
+      <long>Evangeliet etter Johannes</long>
+    </name>
+    <name id="book-act">
+      <abbr>Apg</abbr>
+      <short>Apostlenes gjerninger</short>
+      <long>Apostlenes gjerninger</long>
+    </name>
+    <name id="book-rom">
+      <abbr>Rom</abbr>
+      <short>Romerne</short>
+      <long>Paulusʼ brev til romerne</long>
+    </name>
+    <name id="book-1co">
+      <abbr>1 Kor</abbr>
+      <short>1. Korinter</short>
+      <long>Paulusʼ første brev til korinterne</long>
+    </name>
+    <name id="book-2co">
+      <abbr>2 Kor</abbr>
+      <short>2. Korinter</short>
+      <long>Paulusʼ andre brev til korinterne</long>
+    </name>
+    <name id="book-gal">
+      <abbr>Gal</abbr>
+      <short>Galaterne</short>
+      <long>Paulusʼ brev til galaterne</long>
+    </name>
+    <name id="book-eph">
+      <abbr>Ef</abbr>
+      <short>Efeserne</short>
+      <long>Paulusʼ brev til efeserne</long>
+    </name>
+    <name id="book-php">
+      <abbr>Fil</abbr>
+      <short>Filipperne</short>
+      <long>Paulusʼ brev til filipperne</long>
+    </name>
+    <name id="book-col">
+      <abbr>Kol</abbr>
+      <short>Kolosserne</short>
+      <long>Paulusʼ brev til kolosserne</long>
+    </name>
+    <name id="book-1th">
+      <abbr>1 Tess</abbr>
+      <short>1. Tessaloniker</short>
+      <long>Paulusʼ første brev til tessalonikerne</long>
+    </name>
+    <name id="book-2th">
+      <abbr>2 Tess</abbr>
+      <short>2. Tessaloniker</short>
+      <long>Paulusʼ andre brev til tessalonikerne</long>
+    </name>
+    <name id="book-1ti">
+      <abbr>1 Tim</abbr>
+      <short>1. Timoteus</short>
+      <long>Paulusʼ første brev til Timoteus</long>
+    </name>
+    <name id="book-2ti">
+      <abbr>2 Tim</abbr>
+      <short>2. Timoteus</short>
+      <long>Paulusʼ andre brev til Timoteus</long>
+    </name>
+    <name id="book-tit">
+      <abbr>Tit</abbr>
+      <short>Titus</short>
+      <long>Paulusʼ brev til Titus</long>
+    </name>
+    <name id="book-phm">
+      <abbr>Filem</abbr>
+      <short>Filemon</short>
+      <long>Paulusʼ brev til Filemon</long>
+    </name>
+    <name id="book-heb">
+      <abbr>Hebr</abbr>
+      <short>Hebreerne</short>
+      <long>Brevet til hebreerne</long>
+    </name>
+    <name id="book-jas">
+      <abbr>Jak</abbr>
+      <short>Jakob</short>
+      <long>Jakobs brev</long>
+    </name>
+    <name id="book-1pe">
+      <abbr>1 Pet</abbr>
+      <short>1. Peter</short>
+      <long>Peters første brev</long>
+    </name>
+    <name id="book-2pe">
+      <abbr>2 Pet</abbr>
+      <short>2. Peter</short>
+      <long>Peters andre brev</long>
+    </name>
+    <name id="book-1jn">
+      <abbr>1 Joh</abbr>
+      <short>1. Johannes</short>
+      <long>Johannesʼ første brev</long>
+    </name>
+    <name id="book-2jn">
+      <abbr>2 Joh</abbr>
+      <short>2. Johannes</short>
+      <long>Johannesʼ andre brev</long>
+    </name>
+    <name id="book-3jn">
+      <abbr>3 Joh</abbr>
+      <short>3. Johannes</short>
+      <long>Johannesʼ tredje brev</long>
+    </name>
+    <name id="book-jud">
+      <abbr>Jud</abbr>
+      <short>Judas</short>
+      <long>Judasʼ brev</long>
+    </name>
+    <name id="book-rev">
+      <abbr>Åp</abbr>
+      <short>Johannesʼ åpenbaring</short>
+      <long>Johannesʼ åpenbaring</long>
+    </name>
+  </names>
+  <manifest>
+    <container uri="release">
+      <container uri="USX_1">
+        <resource checksum="5db6d3b6d0c0b461a49cacfe1ea5425c" mimeType="application/xml" size="102717" uri="1CO.usx" />
+        <resource checksum="f7cdd3a12d9aaf52a1a3dc8c9a7a9422" mimeType="application/xml" size="23892" uri="1JN.usx" />
+        <resource checksum="d642e0b3f62f6e9bdf61812e2641f99d" mimeType="application/xml" size="31635" uri="1PE.usx" />
+        <resource checksum="ae10d2138693df18bc48d4e32bba53ff" mimeType="application/xml" size="18651" uri="1TH.usx" />
+        <resource checksum="4134f520f2388b1d563adcf9f2cb526e" mimeType="application/xml" size="28167" uri="1TI.usx" />
+        <resource checksum="cc394f65b91efce1168b8dc814302e09" mimeType="application/xml" size="64069" uri="2CO.usx" />
+        <resource checksum="87f54a881c5caed2463b7a2baeebfeb5" mimeType="application/xml" size="4659" uri="2JN.usx" />
+        <resource checksum="b02b5ac5f5b6e305603cad911af44ebe" mimeType="application/xml" size="19819" uri="2PE.usx" />
+        <resource checksum="23423e474a3eca95337e39970e521721" mimeType="application/xml" size="11113" uri="2TH.usx" />
+        <resource checksum="8760ce79581a92a777af71ee6b0b206a" mimeType="application/xml" size="19577" uri="2TI.usx" />
+        <resource checksum="7222742d062c86d4c24f44e13bc27cca" mimeType="application/xml" size="3703" uri="3JN.usx" />
+        <resource checksum="73ae2374acd6a20d318adfba4e40325f" mimeType="application/xml" size="242850" uri="ACT.usx" />
+        <resource checksum="8aefab87f737144b6902623513e4b12e" mimeType="application/xml" size="27919" uri="COL.usx" />
+        <resource checksum="9dd1c1c56157e9ab0c076ba5677a3fc4" mimeType="application/xml" size="37480" uri="EPH.usx" />
+        <resource checksum="69e35152848a4f8af4efa09e104991c7" mimeType="application/xml" size="39457" uri="GAL.usx" />
+        <resource checksum="6440bdfbdb80ac1010df9d4cf06a7f1c" mimeType="application/xml" size="91051" uri="HEB.usx" />
+        <resource checksum="6ffe3881008edac0eb25743fff73f4e1" mimeType="application/xml" size="28334" uri="JAS.usx" />
+        <resource checksum="bf2440ef0b127c59cd7b84516d6c21fc" mimeType="application/xml" size="196074" uri="JHN.usx" />
+        <resource checksum="9a0043f56eb4db149697151105fe1dd2" mimeType="application/xml" size="10318" uri="JUD.usx" />
+        <resource checksum="445cde6420a916d6e267f50d093d9f60" mimeType="application/xml" size="276773" uri="LUK.usx" />
+        <resource checksum="3893cb82ab18a85346e2adbc3142625b" mimeType="application/xml" size="276998" uri="MAT.usx" />
+        <resource checksum="f33ce8212621cae55106c66df81af122" mimeType="application/xml" size="176308" uri="MRK.usx" />
+        <resource checksum="614930280c8b2401842215ebb13aa9a7" mimeType="application/xml" size="5879" uri="PHM.usx" />
+        <resource checksum="fb780334d3bccaed371342ea11fdd06f" mimeType="application/xml" size="23891" uri="PHP.usx" />
+        <resource checksum="fa665e8974882ee51f63cee4c8d3d6ed" mimeType="application/xml" size="118223" uri="REV.usx" />
+        <resource checksum="e820a22f824e16ad4ab4f85ab443d5cb" mimeType="application/xml" size="116548" uri="ROM.usx" />
+        <resource checksum="c13552c90fa106fcd3b3d8b05051a28a" mimeType="application/xml" size="11622" uri="TIT.usx" />
+      </container>
+      <resource checksum="d2df8a326ae322d2ed4d9fc975f99a96" mimeType="application/xml" size="2886" uri="nob_nb.ldml" />
+      <resource checksum="138e2f8679bcb4547fa6602c1abd8ef4" mimeType="application/xml" size="89541" uri="styles.xml" />
+      <resource checksum="d2c26f876156433e996200edd3a4c6cc" mimeType="text/plain" size="15626" uri="versification.vrs" />
+    </container>
+    <container uri="source">
+      <resource checksum="dbd14baba7e3046a2ca737231e0d21c5" mimeType="application/zip" size="3385612" uri="source.zip" />
+    </container>
+  </manifest>
+  <source>
+    <canonicalContent>
+      <book code="1CO" />
+      <book code="1JN" />
+      <book code="1PE" />
+      <book code="1TH" />
+      <book code="1TI" />
+      <book code="2CO" />
+      <book code="2JN" />
+      <book code="2PE" />
+      <book code="2TH" />
+      <book code="2TI" />
+      <book code="3JN" />
+      <book code="ACT" />
+      <book code="COL" />
+      <book code="EPH" />
+      <book code="GAL" />
+      <book code="HEB" />
+      <book code="JAS" />
+      <book code="JHN" />
+      <book code="JUD" />
+      <book code="LUK" />
+      <book code="MAT" />
+      <book code="MRK" />
+      <book code="PHM" />
+      <book code="PHP" />
+      <book code="REV" />
+      <book code="ROM" />
+      <book code="TIT" />
+    </canonicalContent>
+    <structure>
+      <content role="sourceZip" src="source/source.zip" />
+    </structure>
+  </source>
+  <publications>
+    <publication default="true" id="p1">
+      <description>New Testament</description>
+      <descriptionLocal>Det Nye Testamentet</descriptionLocal>
+      <canonicalContent>
+        <book code="1CO" />
+        <book code="1JN" />
+        <book code="1PE" />
+        <book code="1TH" />
+        <book code="1TI" />
+        <book code="2CO" />
+        <book code="2JN" />
+        <book code="2PE" />
+        <book code="2TH" />
+        <book code="2TI" />
+        <book code="3JN" />
+        <book code="ACT" />
+        <book code="COL" />
+        <book code="EPH" />
+        <book code="GAL" />
+        <book code="HEB" />
+        <book code="JAS" />
+        <book code="JHN" />
+        <book code="JUD" />
+        <book code="LUK" />
+        <book code="MAT" />
+        <book code="MRK" />
+        <book code="PHM" />
+        <book code="PHP" />
+        <book code="REV" />
+        <book code="ROM" />
+        <book code="TIT" />
+      </canonicalContent>
+      <structure>
+        <content name="book-mat" role="MAT" src="release/USX_1/MAT.usx" />
+        <content name="book-mrk" role="MRK" src="release/USX_1/MRK.usx" />
+        <content name="book-luk" role="LUK" src="release/USX_1/LUK.usx" />
+        <content name="book-jhn" role="JHN" src="release/USX_1/JHN.usx" />
+        <content name="book-act" role="ACT" src="release/USX_1/ACT.usx" />
+        <content name="book-rom" role="ROM" src="release/USX_1/ROM.usx" />
+        <content name="book-1co" role="1CO" src="release/USX_1/1CO.usx" />
+        <content name="book-2co" role="2CO" src="release/USX_1/2CO.usx" />
+        <content name="book-gal" role="GAL" src="release/USX_1/GAL.usx" />
+        <content name="book-eph" role="EPH" src="release/USX_1/EPH.usx" />
+        <content name="book-php" role="PHP" src="release/USX_1/PHP.usx" />
+        <content name="book-col" role="COL" src="release/USX_1/COL.usx" />
+        <content name="book-1th" role="1TH" src="release/USX_1/1TH.usx" />
+        <content name="book-2th" role="2TH" src="release/USX_1/2TH.usx" />
+        <content name="book-1ti" role="1TI" src="release/USX_1/1TI.usx" />
+        <content name="book-2ti" role="2TI" src="release/USX_1/2TI.usx" />
+        <content name="book-tit" role="TIT" src="release/USX_1/TIT.usx" />
+        <content name="book-phm" role="PHM" src="release/USX_1/PHM.usx" />
+        <content name="book-heb" role="HEB" src="release/USX_1/HEB.usx" />
+        <content name="book-jas" role="JAS" src="release/USX_1/JAS.usx" />
+        <content name="book-1pe" role="1PE" src="release/USX_1/1PE.usx" />
+        <content name="book-2pe" role="2PE" src="release/USX_1/2PE.usx" />
+        <content name="book-1jn" role="1JN" src="release/USX_1/1JN.usx" />
+        <content name="book-2jn" role="2JN" src="release/USX_1/2JN.usx" />
+        <content name="book-3jn" role="3JN" src="release/USX_1/3JN.usx" />
+        <content name="book-jud" role="JUD" src="release/USX_1/JUD.usx" />
+        <content name="book-rev" role="REV" src="release/USX_1/REV.usx" />
+      </structure>
+    </publication>
+  </publications>
+  <copyright>
+    <fullStatement>
+      <statementContent type="xhtml">
+        <p>En Levende Bok: Det Nye Testamentet</p>
+        <p>Copyright © 1978, 1988, 2005 by Biblica, Inc.®</p>
+        <p>Used by permission. All rights reserved worldwide.</p>
+      </statementContent>
+    </fullStatement>
+  </copyright>
+  <promotion />
+  <archiveStatus>
+    <archivistName>Kent Spielmann</archivistName>
+    <dateArchived>2012-03-20T22:03:59.2404823+00:00</dateArchived>
+    <dateUpdated>2019-08-19T23:34:02.631548</dateUpdated>
+    <comments>Metadata and metatext update</comments>
+  </archiveStatus>
+</DBLMetadata>

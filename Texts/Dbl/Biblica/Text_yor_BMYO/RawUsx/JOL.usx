@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="JOL" style="id">- Yoruba Contemporary Bible (Bíbélì Mímọ́ Yorùbá Òde-Òní)</book>
+  <para style="rem">Copyright © 2009, 2017 by Biblica, Inc.®</para>
+  <para style="h">Joẹli</para>
+  <para style="toc1">Ìwé Wòlíì Joẹli</para>
+  <para style="toc2">Joẹli</para>
+  <para style="toc3">Jl</para>
+  <para style="mt1">Ìwé Wòlíì Joẹli</para>
+  <para style="mt4">(Ọdún 800 ká tó bí Jesu)</para>
+  <para style="imt">Ìfáàrà</para>
+  <para style="ip">Joẹli ọmọ Petueli ti fi ìgbà kan wà ní àárín àwọn ènìyàn Israẹli. Ó mọ àìṣedéédéé wọn, ó sì mọ àìdọ́gba wọn pẹ̀lú Ọlọ́run. Juda ṣẹ̀ nípa sí sin òrìṣà. Ó pè wọ́n kí wọ́n padà tọ Ọlọ́run lọ, kí wọn má ba à ní ìpín nínú ìjìyà ìdájọ́ tí ń bọ̀, kí wọn kí ó sì lè gbà ìbùkún tó ń bọ̀ lẹ́yìn ìdájọ́.</para>
+  <para style="ip">Joẹli rí ogunlọ́gọ̀ eṣú tí ó bo ilẹ̀ àti àìrọ̀ òjò tó sọ Juda di ahoro. Eṣú tí Joẹli ń sọ̀rọ̀ rẹ̀ yìí jẹ́ eṣú gidi kì í ṣe ìṣígun àti ìgbógunti àwọn Babeli, Medo-Pasia, Giriki àti Romu bí àwọn kan ṣe túmọ̀ rẹ̀. Nínú ìdojúkọ yìí ni ó ti pè fún ìrònúpìwàdà gbogbo ènìyàn: ọmọdé àti àgbàlagbà (<char style="xt"><ref loc="JOL 1:2-3">1.2-3</ref></char>) ọ̀mùtí (<char style="xt"><ref loc="JOL 1:5">1.5</ref></char>), àgbẹ̀ (<char style="xt"><ref loc="JOL 1:11">1.11</ref></char>), àti àwọn àlùfáà (<char style="xt"><ref loc="JOL 1:13">1.13</ref></char>). Ó ṣàpèjúwe eṣú yìí bí ọmọ-ogun <char style="nd">Olúwa</char>, ó sì sọ nípa bíbọ̀ wọn bí ohun tó ń rán ni létí pé ọjọ́ <char style="nd">Olúwa</char> súnmọ́ etílé. Ọjọ́ <char style="nd">Olúwa</char> yóò jẹ́ ọjọ́ ìtúsílẹ̀ àti ìbùkún fún Israẹli lẹ́yìn ìdájọ́ àti ìrònúpìwàdà.</para>
+  <para style="iot">Kókó-ọ̀rọ̀</para>
+  <para style="io1">i. Ìpè fún ìṣọ̀fọ̀ àti àdúrà <char style="ior"><ref loc="JOL 1:1-2:11">1.1–2.11</ref></char>.</para>
+  <para style="io1">ii. Ìpè fún ìrònúpìwàdà àti àdúrà <char style="ior"><ref loc="JOL 2:12-17">2.12-17</ref></char>.</para>
+  <para style="io1">iv. <char style="nd">Olúwa</char> ra Juda padà <char style="ior"><ref loc="JOL 2:18-27">2.18-27</ref></char>.</para>
+  <para style="io1">v. <char style="nd">Olúwa</char> sọ àwọn ènìyàn rẹ̀ di ọ̀tun <char style="ior"><ref loc="JOL 2:28-32">2.28-32</ref></char>.</para>
+  <para style="io1">vi. Ìdájọ́ orílẹ̀-èdè àti ìbùkún àwọn ènìyàn Ọlọ́run <char style="ior"><ref loc="JOL 3:1-21">3.1–3.21</ref></char>.</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Ọ̀rọ̀ <char style="nd">Olúwa</char> tí ó tọ Joẹli ọmọ Petueli wá.</para>
+  <para style="b"/>
+  <para style="s1">Ìṣígun Eṣú</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Ẹ gbọ́ èyí ẹ̀yin àgbàgbà;</para>
+  <para style="q2">ẹ fi etí sílẹ̀ gbogbo ẹ̀yin ènìyàn ará ilẹ̀ náà.</para>
+  <para style="q1">Ǹjẹ́ irú èyí ha wà ní ọjọ́ yín,</para>
+  <para style="q2">tàbí ní ọjọ́ àwọn baba yín?</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Ẹ sọ ọ́ fún àwọn ọmọ yín,</para>
+  <para style="q2">ki àwọn ọmọ yín sọ fún àwọn ọmọ wọn,</para>
+  <para style="q2">ki àwọn ọmọ wọn sọ fún àwọn ìran mìíràn.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Èyí tí eṣú tí agénijẹ jẹ kù</para>
+  <para style="q2">ní ọ̀wọ́ eṣú ńláńlá ti jẹ,</para>
+  <para style="q1">èyí tí ọ̀wọ́ eṣú ńláńlá jẹ kù</para>
+  <para style="q2">ní eṣú kéékèèkéé jẹ</para>
+  <para style="q1">Èyí tí eṣú kéékèèkéé jẹ kù</para>
+  <para style="q2">ni eṣú apanirun mìíràn jẹ.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>Ẹ jí gbogbo ẹ̀yin ọ̀mùtí kí ẹ sì sọkún</para>
+  <para style="q2">ẹ hu gbogbo ẹ̀yin ọ̀mu-wáìnì;</para>
+  <para style="q1">ẹ hu nítorí wáìnì tuntun</para>
+  <para style="q2">nítorí a gbà á kúrò lẹ́nu yín.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1.6: </char>
+      <char style="xt" closed="false">
+        <ref loc="REV 9:8">If 9.8</ref>.</char>
+    </note>Nítorí orílẹ̀-èdè kan ti ṣígun sí ilẹ̀ mìíràn</para>
+  <para style="q2">ó ní agbára púpọ̀, kò sì ní òǹkà;</para>
+  <para style="q1">ó ní eyín kìnnìún</para>
+  <para style="q2">ó sì ní èrìgì abo kìnnìún.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Ó ti pa àjàrà mi run,</para>
+  <para style="q2">ó sì ti ya ẹ̀ka igi ọ̀pọ̀tọ́ mi kúrò,</para>
+  <para style="q1">ó ti bò èèpo rẹ̀ jálẹ̀, ó sì sọ ọ́ nù;</para>
+  <para style="q2">àwọn ẹ̀ka rẹ̀ ni a sì sọ di funfun.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Ẹ pohùnréré ẹkún bí wúńdíá</para>
+  <para style="q2">tí a fi aṣọ ọ̀fọ̀ dí ni àmùrè, nítorí ọkọ ìgbà èwe rẹ̀.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>A ké ọrẹ jíjẹ́ àti ọrẹ mímu kúrò</para>
+  <para style="q2">ní ilé <char style="nd">Olúwa</char>;</para>
+  <para style="q1">àwọn àlùfáà ń ṣọ̀fọ̀, àwọn</para>
+  <para style="q2">ìránṣẹ́ <char style="nd">Olúwa</char>,</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Oko di ìgboro, ilẹ̀ ń ṣọ̀fọ̀,</para>
+  <para style="q2">nítorí a fi ọkà ṣòfò:</para>
+  <para style="q2">ọtí wáìnì tuntun gbẹ, òróró ń bùṣe.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>Kí ojú kí ó tì yín, ẹ̀yin àgbẹ̀;</para>
+  <para style="q2">ẹ pohùnréré ẹkún ẹ̀yin olùtọ́jú àjàrà,</para>
+  <para style="q1">nítorí alikama àti nítorí ọkà barle;</para>
+  <para style="q2">nítorí ìkórè oko ṣègbé.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Àjàrà gbẹ, igi ọ̀pọ̀tọ́ sì rọ̀ dànù;</para>
+  <para style="q2">igi pomegiranate, igi ọ̀pẹ pẹ̀lú,</para>
+  <para style="q1">àti igi apiili, gbogbo igi igbó ni o rọ:</para>
+  <para style="q2">Nítorí náà ayọ̀ ọmọ ènìyàn gbẹ kúrò lọ́dọ̀ wọn.</para>
+  <para style="s1">Ìpè fún ìrònúpìwàdà</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Ẹ di ara yín ni àmùrè,</para>
+  <para style="q2">sí pohùnréré ẹkún ẹ̀yin àlùfáà:</para>
+  <para style="q1">ẹ pohùnréré ẹkún, ẹ̀yin ìránṣẹ́ pẹpẹ:</para>
+  <para style="q2">ẹ wá, fi gbogbo òru dùbúlẹ̀ nínú aṣọ ọ̀fọ̀,</para>
+  <para style="q1">ẹ̀yin ìránṣẹ́ Ọlọ́run mi: nítorí tí a dá ọrẹ-jíjẹ àti ọrẹ</para>
+  <para style="q2">mímu dúró ní ilé Ọlọ́run yín.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Ẹ yà àwẹ̀ kan sí mímọ́,</para>
+  <para style="q2">ẹ pe àjọ kan tí o ní ìrònú,</para>
+  <para style="q1">ẹ pe àwọn àgbàgbà,</para>
+  <para style="q2">àti gbogbo àwọn ará ilẹ̀ náà</para>
+  <para style="q1">jọ sí ilé <char style="nd">Olúwa</char> Ọlọ́run yín,</para>
+  <para style="q2">kí ẹ sí ké pe <char style="nd">Olúwa</char>.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>A! Fún ọjọ́ náà,</para>
+  <para style="q2">nítorí ọjọ́ <char style="nd">Olúwa</char> kù sí dẹ̀dẹ̀,</para>
+  <para style="q2">yóò de bí ìparun láti ọwọ́ Olódùmarè.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v"/>A kò ha ké oúnjẹ kúrò níwájú</para>
+  <para style="q2">ojú wá yìí,</para>
+  <para style="q1">ayọ̀ àti inú dídùn kúrò nínú ilé</para>
+  <para style="q2">Ọlọ́run wá?</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Irúgbìn bàjẹ́ nínú ebè wọn,</para>
+  <para style="q2">a sọ àká di ahoro, a wó àká palẹ̀;</para>
+  <para style="q2">nítorí tí a mú ọkà rọ.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Àwọn ẹranko tí ń kérora tó!</para>
+  <para style="q2">Àwọn agbo ẹran dààmú,</para>
+  <para style="q1">nítorí tí wọ́n kò ni pápá oko;</para>
+  <para style="q2">nítòótọ́, àwọn agbo àgùntàn jìyà.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>
+    <char style="nd">Olúwa</char>, sí ọ ni èmi o ké pè,</para>
+  <para style="q2">nítorí iná tí run pápá oko tútù aginjù,</para>
+  <para style="q2">ọwọ́ iná sí ti jó gbogbo igi igbó.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Àwọn ẹranko igbó gbé ojú sókè sí ọ pẹ̀lú:</para>
+  <para style="q2">nítorí tí àwọn ìṣàn omi gbẹ,</para>
+  <para style="q2">iná sí ti jó àwọn pápá oko aginjù run.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Àwọn jagunjagun eṣú</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Ẹ fun ìpè ní Sioni,</para>
+  <para style="q2">ẹ sì fún ìpè ìdágìrì ní òkè mímọ́ mi.</para>
+  <para style="b"/>
+  <para style="q1">Jẹ́ kí àwọn ará ilẹ̀ náà wárìrì,</para>
+  <para style="q2">nítorí tí ọjọ́ <char style="nd">Olúwa</char> ń bọ̀ wá,</para>
+  <para style="q1">nítorí ó kù sí dẹ̀dẹ̀.</para>
+  <para style="q2">
+    <verse number="2" style="v"/>Ọjọ́ òkùnkùn àti ìrọ́kẹ̀kẹ̀,</para>
+  <para style="q2">ọjọ́ ìkùùkuu àti òkùnkùn biribiri,</para>
+  <para style="q1">Bí ọyẹ́ òwúrọ̀ ti í la bo orí àwọn òkè ńlá:</para>
+  <para style="q2">àwọn ènìyàn ńlá àti alágbára; ya dé,</para>
+  <para style="q1">ti kó ti ì sí irú rẹ̀ rí,</para>
+  <para style="q2">bẹ́ẹ̀ ni irú rẹ̀ kì yóò sí mọ́ lẹ́yìn rẹ̀, títí dé ọdún ìran dé ìran.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>Iná ń jó níwájú wọ́n;</para>
+  <para style="q2">ọwọ́ iná sì ń jó lẹ́yìn wọn:</para>
+  <para style="q1">Ilẹ̀ náà dàbí ọgbà Edeni níwájú wọn,</para>
+  <para style="q2">àti lẹ́yìn wọn bí ahoro ijù;</para>
+  <para style="q2">nítòótọ́, kò sì sí ohun tí yóò bọ́ lọ́wọ́ wọn.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2.4-5: </char>
+      <char style="xt" closed="false">
+        <ref loc="REV 9:7">If 9.7</ref>,<ref loc="REV 9:9">9</ref>.</char>
+    </note>Ìrí wọn dàbí ìrí àwọn ẹṣin;</para>
+  <para style="q2">wọ́n ń sáré lọ bí àwọn ẹlẹ́ṣin ogun</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Bí ariwo kẹ̀kẹ́ ogun ni</para>
+  <para style="q2">wọn ń fo ní orí òkè</para>
+  <para style="q1">bí ariwo ọ̀wọ́-iná tí ń jó koríko gbígbẹ,</para>
+  <para style="q2">bí akọni ènìyàn tí a kójọ fún ogun.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>Ní ojú wọn, àwọn ènìyàn yóò jẹ ìrora púpọ̀:</para>
+  <para style="q2">gbogbo ojú ní yóò ṣú dudu.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Wọn yóò sáré bi àwọn alágbára;</para>
+  <para style="q2">wọn yóò gùn odi bí ọkùnrin ológun;</para>
+  <para style="q1">olúkúlùkù wọn yóò sì rìn lọ ní ọ̀nà rẹ̀,</para>
+  <para style="q2">wọn kì yóò sì yà kúrò ni ọ̀nà wọn.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Bẹ́ẹ̀ ni ẹnìkan kì yóò kọlu ẹnìkejì rẹ̀;</para>
+  <para style="q2">olúkúlùkù wọn yóò rìn ní ọ̀nà rẹ̀:</para>
+  <para style="q1">nígbà tí wọn bá sì ṣubú lù idà</para>
+  <para style="q2">wọn kì yóò gbọgbẹ́.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Wọn yóò sáré síwá sẹ́yìn ní ìlú;</para>
+  <para style="q2">wọn yóò súré lórí odi,</para>
+  <para style="q1">wọn yóò gùn orí ilé;</para>
+  <para style="q2">wọn yóò gbà ojú fèrèsé wọ̀ inú ilé bí olè.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2.10: </char>
+      <char style="xt" closed="false">
+        <ref loc="REV 9:2">If 9.2</ref>.</char>
+    </note>Ayé yóò mì níwájú wọn;</para>
+  <para style="q2">àwọn ọ̀run yóò wárìrì;</para>
+  <para style="q1">oòrùn àti òṣùpá yóò ṣókùnkùn,</para>
+  <para style="q2">àwọn ìràwọ̀ yóò sì fà ìmọ́lẹ̀ wọn sẹ́yìn.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2.11: </char>
+      <char style="xt" closed="false">
+        <ref loc="REV 6:17">If 6.17</ref>.</char>
+    </note>
+    <char style="nd">Olúwa</char> yóò sì bú ramúramù</para>
+  <para style="q2">jáde níwájú ogun rẹ̀:</para>
+  <para style="q1">nítorí ibùdó rẹ̀ tóbi gidigidi;</para>
+  <para style="q2">nítorí alágbára ní òun, tí n mú ọ̀rọ̀ rẹ̀ ṣẹ;</para>
+  <para style="q1">nítorí ọjọ́ <char style="nd">Olúwa</char> tóbi ó sì ní ẹ̀rù gidigidi;</para>
+  <para style="q2">ara ta ni ó lè gbà á?</para>
+  <para style="s1">Fa ọkàn rẹ ya</para>
+  <para style="q1">
+    <verse number="12" style="v"/>“Ǹjẹ́ nítorí náà nísinsin yìí,” ni <char style="nd">Olúwa</char> wí,</para>
+  <para style="q2">“Ẹ fi gbogbo ọkàn yín yípadà sí mi,</para>
+  <para style="q2">àti pẹ̀lú àwẹ̀, àti pẹ̀lú ẹkún, àti pẹ̀lú ọ̀fọ̀.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>Ẹ sì fa ọkàn yín ya,</para>
+  <para style="q2">kì í sì í ṣe aṣọ yín,</para>
+  <para style="q1">ẹ sì yípadà sí <char style="nd">Olúwa</char> Ọlọ́run yín,</para>
+  <para style="q2">nítorí tí o pọ̀ ní oore-ọ̀fẹ́,</para>
+  <para style="q1">ó sì kún fun àánú, ó lọ́ra láti bínú,</para>
+  <para style="q2">ó sì ṣeun púpọ̀, ó sì ronúpìwàdà láti ṣe búburú.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Ta ni ó mọ̀ bí òun yóò yípadà, kí o sì ronúpìwàdà,</para>
+  <para style="q2">kí ó sì fi ìbùkún sílẹ̀ lẹ́yìn rẹ̀—</para>
+  <para style="q1">àní ọrẹ-jíjẹ àti ọrẹ mímu</para>
+  <para style="q2">fún <char style="nd">Olúwa</char> Ọlọ́run yín?</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>Ẹ fún ìpè ní Sioni,</para>
+  <para style="q2">ẹ ya àwẹ̀ kan sí mímọ́,</para>
+  <para style="q2">ẹ pe àjọ tí ó ni ìrònú.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Ẹ kó àwọn ènìyàn jọ,</para>
+  <para style="q2">ẹ ya ìjọ sí mímọ́;</para>
+  <para style="q1">ẹ pe àwọn àgbàgbà jọ,</para>
+  <para style="q2">ẹ kó àwọn ọmọdé jọ,</para>
+  <para style="q2">àti àwọn tí ń mú ọmú:</para>
+  <para style="q1">jẹ kí ọkọ ìyàwó kúrò nínú ìyẹ̀wù rẹ̀.</para>
+  <para style="q2">Kí ìyàwó sì kúrò nínú iyàrá rẹ̀</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Jẹ́ kí àwọn àlùfáà, àwọn ìránṣẹ́ <char style="nd">Olúwa</char>,</para>
+  <para style="q2">sọkún láàrín ìloro àti pẹpẹ.</para>
+  <para style="q1">Sí jẹ́ kí wọn wí pé, “Dá àwọn ènìyàn rẹ sí, <char style="nd">Olúwa</char>.</para>
+  <para style="q2">Má sì ṣe fi ìní rẹ fun ẹ̀gàn,</para>
+  <para style="q2">tí yóò sì di òwe ní àárín àwọn kèfèrí.</para>
+  <para style="q1">Èéṣe tí wọn yóò fi wí láàrín àwọn ènìyàn pé,</para>
+  <para style="q2">‘Ọlọ́run wọn ha da?’ ”</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Nígbà náà ní <char style="nd">Olúwa</char> yóò jowú fún ilẹ̀ rẹ̀,</para>
+  <para style="q2">yóò sì káàánú fún ènìyàn rẹ̀.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Nítòótọ́, <char style="nd">Olúwa</char> yóò dá wọn lóhùn:</para>
+  <para style="q1">“Yóò sì wí fun àwọn ènìyàn rẹ̀ pé,</para>
+  <para style="q2">Wò ó èmi yóò rán ọkà, àti ọtí wáìnì tuntun,</para>
+  <para style="q1">àti òróró sí i yín, a ó sì fi wọn tẹ́ yín lọ́rùn:</para>
+  <para style="q2">èmi kì yóò sì fi yín ṣe ẹ̀gàn mọ́ láàrín àwọn aláìkọlà.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>“Ṣùgbọ́n èmi yóò lé ogun àríwá jìnnà réré kúrò lọ́dọ̀ yín,</para>
+  <para style="q2">èmi yóò sì lé e lọ sí ilẹ̀ tí ó ṣá, tí ó sì di ahoro,</para>
+  <para style="q1">pẹ̀lú ojú rẹ̀ sí Òkun ìlà-oòrùn,</para>
+  <para style="q2">àti ẹ̀yìn rẹ̀ sí ìwọ̀-oòrùn Òkun.</para>
+  <para style="q1">Òórùn rẹ̀ yóò sì gòkè,</para>
+  <para style="q2">òórùn búburú rẹ̀ yóò sì gòkè.”</para>
+  <para style="b"/>
+  <para style="q1">Nítòótọ́ ó ti ṣe ohun ńlá.</para>
+  <para style="q2">
+    <verse number="21" style="v"/>Má bẹ̀rù, ìwọ ilẹ̀;</para>
+  <para style="q2">jẹ́ kí inú rẹ̀ dùn kí o sì yọ̀,</para>
+  <para style="q1">nítorí <char style="nd">Olúwa</char> ti ṣe ohun ńlá,</para>
+  <para style="q2">
+    <verse number="22" style="v"/>Ẹ má bẹ̀rù, ẹranko igbó,</para>
+  <para style="q2">nítorí pápá oko aginjù ń rú,</para>
+  <para style="q1">nítorí igi ń so èso rẹ̀, igi ọ̀pọ̀tọ́</para>
+  <para style="q2">àti àjàrà ń so èso ọ̀rọ̀ wọn.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Ẹ jẹ́ kí inú yín dùn, ẹ̀yin ọmọ Sioni,</para>
+  <para style="q2">ẹ sì yọ̀ nínú <char style="nd">Olúwa</char> Ọlọ́run yín,</para>
+  <para style="q1">nítorí ó ti fi àkọ́rọ̀ òjò fún yín bí ó ti tọ́,</para>
+  <para style="q2">Òun ti mú kí òjò rọ̀ sílẹ̀ fún un yín,</para>
+  <para style="q1">àkọ́rọ̀ àti àrọ̀kúrò òjò ní oṣù kìn-ín-ní.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Àwọn ilẹ̀ ìpakà yóò kún fún ọkà;</para>
+  <para style="q2">àti ọpọ́n wọn nì yóò sàn jáde</para>
+  <para style="q2">pẹ̀lú ọtí wáìnì tuntun àti òróró.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="25" style="v"/>“Èmi yóò sì mú ọdún wọ̀nyí ti eṣú jẹ run padà fún un yín.</para>
+  <para style="q2">Èyí tí eṣú agénijẹ àti eṣú jewéjewé</para>
+  <para style="q2">ọwọ́ eṣú agénijẹ àti kòkòrò ajẹnirun mìíràn ti fi jẹ</para>
+  <para style="q1">àwọn ogun ńlá mi tí mo rán sí àárín yín.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Ẹ̀yin yóò ni ọ̀pọ̀lọpọ̀ láti jẹ, títí ẹ̀yin yóò fi yó</para>
+  <para style="q2">ẹ ó sì yín orúkọ <char style="nd">Olúwa</char> Ọlọ́run yín,</para>
+  <para style="q1">ẹni tí ó fi ìyanu bá yín lò;</para>
+  <para style="q2">ojú kì yóò sì ti àwọn ènìyàn mi láéláé.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Ẹ̀yin yóò sì mọ̀ pé, èmi wà láàrín Israẹli,</para>
+  <para style="q2">àti pé; Èmi ni <char style="nd">Olúwa</char> Ọlọ́run yín,</para>
+  <para style="q2">àti pé kò sí ẹlòmíràn:</para>
+  <para style="q1">Ojú kì yóò sì ti àwọn ènìyàn mí láéláé.</para>
+  <para style="s1">Ọjọ́ <char style="nd">Olúwa</char></para>
+  <para style="q1">
+    <verse number="28" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2.28-32: </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 2:17-21">Ap 2.17-21</ref>.</char>
+    </note>“Yóò sì ṣe níkẹyìn ọjọ́,</para>
+  <para style="q2">èmi yóò tú nínú Ẹ̀mí mí sí ara ènìyàn gbogbo;</para>
+  <para style="q1">àwọn ọmọ yín ọkùnrin àti àwọn ọmọ yín obìnrin yóò máa sọtẹ́lẹ̀,</para>
+  <para style="q2">àwọn arúgbó yín yóò máa lá àlá,</para>
+  <para style="q1">àwọn ọ̀dọ́mọkùnrin yín yóò máa ríran.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Àti pẹ̀lú sí ara àwọn ọmọ ọ̀dọ̀ ọkùnrin,</para>
+  <para style="q2">àti sí ara àwọn ọmọ ọ̀dọ̀ obìnrin,</para>
+  <para style="q2">ní èmi yóò tú ẹ̀mí mí jáde ní ọjọ́ wọ̀n-ọn-nì.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Èmi yóò sì fi iṣẹ́ ìyanu hàn ní ọrun</para>
+  <para style="q2">àti ní ayé,</para>
+  <para style="q2">ẹ̀jẹ̀ àti iná, àti ọ̀wọ́n èéfín.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2.31: </char>
+      <char style="xt" closed="false">
+        <ref loc="REV 6:12">If 6.12</ref>.</char>
+    </note>A á sọ oòrùn di òkùnkùn,</para>
+  <para style="q2">àti òṣùpá di ẹ̀jẹ̀,</para>
+  <para style="q2">kí ọjọ́ ńlá àti ọjọ́ ẹ̀rù <char style="nd">Olúwa</char> tó dé.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2.32: </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 10:13">Ro 10.13</ref>.</char>
+    </note>Yóò sí ṣe, ẹnikẹ́ni tí ó ba ké pè</para>
+  <para style="q2">orúkọ <char style="nd">Olúwa</char> ní a ó gbàlà:</para>
+  <para style="q1">nítorí ní òkè Sioni àti ní Jerusalẹmu</para>
+  <para style="q2">ní ìgbàlà yóò gbé wà,</para>
+  <para style="q2">bí <char style="nd">Olúwa</char> ti wí,</para>
+  <para style="q1">àti nínú àwọn</para>
+  <para style="q2">ìyókù tí <char style="nd">Olúwa</char> yóò pè.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">A dá orílẹ̀-èdè lẹ́jọ́</para>
+  <para style="q1">
+    <verse number="1" style="v"/>“Ní ọjọ́ wọ̀n-ọn-nì, àti ní àkókò náà,</para>
+  <para style="q2">nígbà tí èmi tún mú ìgbèkùn Juda àti Jerusalẹmu padà bọ̀.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Èmi yóò kó gbogbo orílẹ̀-èdè jọ</para>
+  <para style="q2">pẹ̀lú èmi yóò sì mú wọn wá sí Àfonífojì Jehoṣafati.</para>
+  <para style="q1">Èmi yóò sì bá wọn wíjọ́ níbẹ̀ nítorí àwọn ènìyàn mi,</para>
+  <para style="q2">àti nítorí Israẹli ìní mi,</para>
+  <para style="q1">tí wọ́n fọ́nká sí àárín àwọn orílẹ̀-èdè,</para>
+  <para style="q2">wọ́n sì pín ilẹ̀ mi.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Wọ́n si ti di ìbò fún àwọn ènìyàn mi;</para>
+  <para style="q2">wọ́n sì ti fi ọmọdékùnrin kan fún panṣágà obìnrin kan,</para>
+  <para style="q1">wọ́n sì ta ọmọdébìnrin kan fún</para>
+  <para style="q2">ọtí wáìnì, kí wọ́n kí ó lè mu.</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3.4-8: </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 23">Isa 23</ref>; <ref loc="EZK 26:1-28:19">El 26.1–28.19</ref>; <ref loc="AMO 1:9-10">Am 1.9-10</ref>; <ref loc="ZEC 9:3-4">Sk 9.3-4</ref>; <ref loc="EZK 28:20-26">El 28.20-26</ref>; <ref loc="ZEC 9:2">Sk 9.2</ref>; <ref loc="ISA 14:29-31">Isa 14.29-31</ref>; <ref loc="JER 47">Jr 47</ref>; <ref loc="EZK 25:15-17">El 25.15-17</ref>; <ref loc="AMO 1:6-8">Am 1.6-8</ref>; <ref loc="ZEP 2:4-7">Sf 2.4-7</ref>; <ref loc="ZEC 9:5-7">Sk 9.5-7</ref>.</char>
+    </note>“Nísinsin yìí, kí ni ẹ̀yin ní fi mí ṣe Tire àti Sidoni, àti gbogbo ẹ̀yin ẹkún Filistia? Ẹ̀yin yóò ha sàn ẹ̀san fún mi? Bí ẹ̀yin bá sì san ẹ̀san fún mi, ní kánkán àti ní kíákíá ní èmi yóò san ẹ̀san ohun ti ẹ̀yin ṣe padà sórí ara yín. <verse number="5" style="v"/>Nítorí tí ẹ̀yin tí mú fàdákà mi àti wúrà mi, ẹ̀yin si tí mú ohun rere dáradára mi lọ sínú tẹmpili yín. <verse number="6" style="v"/>Àti àwọn ọmọ Juda, àti àwọn ọmọ Jerusalẹmu ní ẹ̀yin ti tà fún àwọn ará Giriki, kí ẹ̀yin bá à lè sí wọn jìnnà kúrò ní agbègbè ilẹ̀ ìní wọn.</para>
+  <para style="p">
+    <verse number="7" style="v"/>“Kíyèsi í, èmi yóò gbé wọ́n dìde kúrò níbi tì ẹ̀yin ti tà wọ́n sí, èmi yóò sì san ẹ̀san ohun ti ẹ ṣe padà sórí ara yín. <verse number="8" style="v"/>Èmi yóò si tà àwọn ọmọkùnrin yín àti àwọn ọmọbìnrin yín sí ọwọ́ àwọn ọmọ Juda, wọ́n yóò sì tà wọ́n fún àwọn ara Sabeani, fún orílẹ̀-èdè kan tí ó jìnnà réré.” Nítorí <char style="nd">Olúwa</char> ní o ti sọ ọ.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Ẹ kéde èyí ní àárín àwọn kèfèrí;</para>
+  <para style="q2">Ẹ dira ogun,</para>
+  <para style="q1">ẹ jí àwọn alágbára,</para>
+  <para style="q2">Jẹ kí àwọn ajagun kí wọn bẹ̀rẹ̀ ogun,</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3.10: </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 2:4">Isa 2.4</ref>; <ref loc="MAT 4:3">Mt 4.3</ref>.</char>
+    </note>Ẹ fi irin ìtulẹ̀ yín rọ idà,</para>
+  <para style="q2">àti dòjé yín rọ ọ̀kọ̀.</para>
+  <para style="q1">Jẹ́ kí aláìlera wí pé,</para>
+  <para style="q2">“Ara mi le koko.”</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Ẹ wá kánkán, gbogbo ẹ̀yin kèfèrí láti gbogbo àyíká,</para>
+  <para style="q2">kí ẹ sì gbá ara yín jọ yí káàkiri.</para>
+  <para style="b"/>
+  <para style="q1">Níbẹ̀ ní kí o mú àwọn alágbára rẹ sọ̀kalẹ̀, <char style="nd">Olúwa</char>.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>“Ẹ jí, ẹ sì gòkè wá sí Àfonífojì</para>
+  <para style="q2">Jehoṣafati ẹ̀yin kèfèrí:</para>
+  <para style="q1">nítorí níbẹ̀ ní èmi yóò jókòó láti ṣe</para>
+  <para style="q2">ìdájọ́ àwọn kèfèrí yí káàkiri.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Ẹ tẹ dòjé bọ̀ ọ́,</para>
+  <para style="q2">nítorí ìkórè pọ́n:</para>
+  <para style="q1">ẹ wá, ẹ sọ̀kalẹ̀;</para>
+  <para style="q2">nítorí ìfúntí kún, nítorí àwọn</para>
+  <para style="q2">ọpọ́n kún àkúnwọ́sílẹ̀</para>
+  <para style="q1">nítorí ìwà búburú wọn pọ̀!”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>Ọ̀pọ̀lọpọ̀, ọ̀pọ̀lọpọ̀</para>
+  <para style="q2">ní àfonífojì ìpinnu,</para>
+  <para style="q1">nítorí ọjọ́ <char style="nd">Olúwa</char> kù si dẹ̀dẹ̀</para>
+  <para style="q2">ní àfonífojì ìdájọ́.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Oòrùn àti òṣùpá yóò ṣú òkùnkùn,</para>
+  <para style="q2">àti àwọn ìràwọ̀ kí yóò tan ìmọ́lẹ̀ wọn mọ́.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>
+    <char style="nd">Olúwa</char> yóò sí ké ramúramù láti Sioni wá,</para>
+  <para style="q2">yóò sì fọ ohùn rẹ̀ jáde láti Jerusalẹmu wá;</para>
+  <para style="q2">àwọn ọ̀run àti ayé yóò sì mì tìtì</para>
+  <para style="q1">Ṣùgbọ́n <char style="nd">Olúwa</char> yóò ṣe ààbò àwọn ènìyàn rẹ̀,</para>
+  <para style="q2">àti agbára àwọn ọmọ Israẹli.</para>
+  <para style="s1">Ìbùkún fún àwọn ènìyàn Ọlọ́run</para>
+  <para style="q1">
+    <verse number="17" style="v"/>“Nígbà náà ni ẹ̀yin yóò mọ̀ pé, èmi ni <char style="nd">Olúwa</char> Ọlọ́run yín,</para>
+  <para style="q2">tí ń gbé Sioni òkè mímọ́ mi.</para>
+  <para style="q1">Ìgbà náà ni Jerusalẹmu yóò jẹ́ mímọ́;</para>
+  <para style="q2">àwọn àjèjì kì yóò sì kó o mọ́.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v"/>“Ní ọjọ́ náà, àwọn òkè ńlá yóò máa kán ọtí wáìnì tuntun sílẹ̀,</para>
+  <para style="q2">àwọn òkè kéékèèkéé yóò máa sàn fún wàrà;</para>
+  <para style="q2">gbogbo odò Juda tí ó gbẹ́ yóò máa sàn fún omi.</para>
+  <para style="q1">Orísun kan yóò sì ṣàn jáde láti inú ilé <char style="nd">Olúwa</char> wá,</para>
+  <para style="q2">yóò sì rin omi sí àfonífojì Ṣittimu.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Ṣùgbọ́n Ejibiti yóò di ahoro,</para>
+  <para style="q2">Edomu yóò sì di aṣálẹ̀ ahoro,</para>
+  <para style="q1">nítorí ìwà ipá tí a hù sì àwọn ọmọ Juda,</para>
+  <para style="q2">ní ilẹ̀ ẹni tí wọ́n ti ta ẹ̀jẹ̀ aláìṣẹ̀ sílẹ̀.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Ṣùgbọ́n Juda yóò jẹ́ ibùgbé títí láé,</para>
+  <para style="q2">àti Jerusalẹmu láti ìran dé ìran.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Nítorí èmi yóò wẹ ẹ̀bi ẹ̀jẹ̀ wọn nù, tí èmi kò tí ì wẹ̀nù.</para>
+  <para style="b"/>
+  <para style="qc">Nítorí <char style="nd">Olúwa</char> ń gbé Sioni.”</para>
+</usx>

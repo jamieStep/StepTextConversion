@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<usx version="3.0">
+  <book code="PHM" style="id">- God’s Word Bible</book>
+  <para style="ide">UTF-8</para>
+  <para style="rem">© 1995, 2003, 2013, 2014, 2019, 2020 by God’s Word to the Nations Mission Society. All rights reserved.</para>
+  <para style="rem">Converted from InDesign files to USFM-3 by Elbert Boot (Digital Bible Library Customer Service Team, Miami [USA])</para>
+  <para style="rem">Language: English</para>
+  <para style="rem">This project has 9 poetry levels, and Paratext only supports up to 4 levels. To upload the text to DBL, we have created a dblChanges file and added q5 to q9 to a custom.sty to obtain the desired design in Paratext.</para>
+  <para style="h">PHILEMON</para>
+  <para style="toc1">Philemon</para>
+  <para style="toc2">Philemon</para>
+  <para style="toc3">Philemon</para>
+  <para style="mt1">Philemon</para>
+  <chapter number="1" style="c" sid="PHM 1" />
+  <para style="s1">Greeting</para>
+  <para style="m">
+    <verse number="1" style="v" sid="PHM 1:1" />From Paul, who is a prisoner for Christ Jesus, and our brother Timothy.</para>
+  <para style="p" vid="PHM 1:1">To our dear coworker Philemon, <verse eid="PHM 1:1" /><verse number="2" style="v" sid="PHM 1:2" />our sister Apphia, our fellow soldier Archippus, and the church that meets in your house.<verse eid="PHM 1:2" /></para>
+  <para style="p">
+    <verse number="3" style="v" sid="PHM 1:3" />Good will <note caller="+" style="f"><char style="fr" closed="false">3 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“Grace.”</char></note> and peace from God our Father and the Lord Jesus Christ are yours!<verse eid="PHM 1:3" /></para>
+  <para style="s1">Paul’s Prayer for Philemon</para>
+  <para style="m">
+    <verse number="4" style="v" sid="PHM 1:4" />
+    <char style="add">⌞Philemon,⌟</char> I always thank my God when I mention you in my prayers because <verse eid="PHM 1:4" /><verse number="5" style="v" sid="PHM 1:5" />I hear about your faithfulness to the Lord Jesus and your love for all of God’s people. <verse eid="PHM 1:5" /><verse number="6" style="v" sid="PHM 1:6" />As you share the faith you have in common with others, I pray that you may come to have a complete knowledge of every blessing we have in Christ. <verse eid="PHM 1:6" /><verse number="7" style="v" sid="PHM 1:7" />Your love <char style="add">⌞for God’s people⌟</char> gives me a lot of joy and encouragement. You, brother, have comforted God’s people.<verse eid="PHM 1:7" /></para>
+  <para style="s1">Paul’s Advice about Onesimus</para>
+  <para style="m">
+    <verse number="8" style="v" sid="PHM 1:8" />Christ makes me bold enough to order you to do the right thing. <verse eid="PHM 1:8" /><verse number="9" style="v" sid="PHM 1:9" />However, I would prefer to make an appeal on the basis of love. I, Paul, as an old man and now a prisoner for Christ Jesus, <verse eid="PHM 1:9" /><verse number="10" style="v" sid="PHM 1:10" />appeal to you for my child Onesimus [Useful]. I became his spiritual father here in prison. <verse eid="PHM 1:10" /><verse number="11" style="v" sid="PHM 1:11" />Once he was useless to you, but now he is very useful to both of us.<verse eid="PHM 1:11" /></para>
+  <para style="p">
+    <verse number="12" style="v" sid="PHM 1:12" />I am sending him back to you. This is like sending you a part of myself. <verse eid="PHM 1:12" /><verse number="13" style="v" sid="PHM 1:13" />I wanted to keep him here with me. Then he could have served me in your place while I am in prison for spreading the Good News. <verse eid="PHM 1:13" /><verse number="14" style="v" sid="PHM 1:14" />Yet, I didn’t want to do anything without your consent. I want you to do this favor for me out of your own free will without feeling forced to do it.<verse eid="PHM 1:14" /></para>
+  <para style="p">
+    <verse number="15" style="v" sid="PHM 1:15" />Maybe Onesimus was gone for a while so that you could have him back forever— <verse eid="PHM 1:15" /><verse number="16" style="v" sid="PHM 1:16" />no longer as a slave but better than a slave—as a dear brother. He is especially dear to me, but even more so to you, both as a person and as a Christian.<verse eid="PHM 1:16" /></para>
+  <para style="p">
+    <verse number="17" style="v" sid="PHM 1:17" />If you think of me as your partner, welcome him as you would welcome me. <verse eid="PHM 1:17" /><verse number="18" style="v" sid="PHM 1:18" />If he wronged you in any way or owes you anything, charge it to me. <verse eid="PHM 1:18" /><verse number="19" style="v" sid="PHM 1:19" />I, Paul, promise to pay it back. I’m writing this with my own hand. I won’t even mention that you owe me your life. <verse eid="PHM 1:19" /><verse number="20" style="v" sid="PHM 1:20" />So, because we’re brothers in the Lord, do something for me. Give me some comfort because of Christ. <verse eid="PHM 1:20" /><verse number="21" style="v" sid="PHM 1:21" />I am confident as I write to you that you will do this. And I know that you will do even more than I ask.<verse eid="PHM 1:21" /></para>
+  <para style="p">
+    <verse number="22" style="v" sid="PHM 1:22" />One more thing—have a guest room ready for me. I hope that, because of your prayers, God will give me back to you.<verse eid="PHM 1:22" /></para>
+  <para style="s1">Greetings from Paul’s Coworkers</para>
+  <para style="m">
+    <verse number="23" style="v" sid="PHM 1:23" />Epaphras, who is a prisoner because of Christ Jesus like I am, <verse eid="PHM 1:23" /><verse number="24" style="v" sid="PHM 1:24" />and my coworkers Mark, Aristarchus, Demas, and Luke send you greetings.<verse eid="PHM 1:24" /></para>
+  <para style="p">
+    <verse number="25" style="v" sid="PHM 1:25" />The good will of our Lord Jesus Christ be yours.<verse eid="PHM 1:25" /></para>
+  <chapter eid="PHM 1" />
+</usx>

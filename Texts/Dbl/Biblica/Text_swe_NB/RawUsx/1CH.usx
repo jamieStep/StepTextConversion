@@ -1,0 +1,1537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="1CH" style="id">- nuBibeln (Swedish Contemporary Bible)</book>
+  <para style="rem">Copyright © 2015 by Biblica, Inc.®</para>
+  <para style="h">1 Krönikeboken</para>
+  <para style="toc1">Första Krönikeboken</para>
+  <para style="toc2">1 Krönikeboken</para>
+  <para style="toc3">1 Krön</para>
+  <para style="mt1">Första Krönikeboken</para>
+  <chapter number="1" style="c"/>
+  <para style="ms2">Släkttavla</para>
+  <para style="mr">(<ref loc="1CH 1:1-9:44">1:1—9:44</ref>)</para>
+  <para style="s1">Från Adam till Israel</para>
+  <para style="r">(<ref loc="GEN 5:1-32">1 Mos 5:1-32</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Adam, Set, Enosh, <verse number="2" style="v"/>Kenan, Mahalalel, Jered, <verse number="3" style="v"/>Henok, Metushelach, Lemek <verse number="4" style="v"/>och Noa. Noas söner var<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="fq" closed="false">Noas söner var </char><char style="ft" closed="false">enligt Septuaginta; orden saknas i den masoretiska texten.</char></note> Sem, Ham och Jafet.</para>
+  <para style="s2">Jafet</para>
+  <para style="r">(<ref loc="GEN 10:2-4">1 Mos 10:2-4</ref>)</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Jafets söner var Gomer, Magog, Madaj, Javan, Tuval, Meshek och Tiras.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Gomers söner var Ashkenas, Rifat och Togarma.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Javans söner var Elisha och Tarshish, kittéerna och rodanéerna.</para>
+  <para style="s2">Ham</para>
+  <para style="r">(<ref loc="GEN 10:6-20">1 Mos 10:6-20</ref>)</para>
+  <para style="li1">
+    <verse number="8" style="v"/>Hams söner var Kush, Misrajim, Put och Kanaan.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Kushs söner var Seba, Havila, Savta, Ragma och Savteka.</para>
+  <para style="li1">Ragmas söner var Saba och Dedan.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Från Kush härstammade också Nimrod, den förste härskaren på jorden.</para>
+  <para style="li1">
+    <verse number="11" style="v"/>Misrajim var stamfar till ludéerna, anaméerna, lehavéerna, naftuchéerna, <verse number="12" style="v"/>patruséerna, kasluchéerna, som filistéerna härstammar från, och kaftoréerna.</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Kanaan var far till Sidon, som var hans förstfödde. Han var också stamfar till Het, <verse number="14" style="v"/>till jevuséerna, amoréerna, girgashéerna, <verse number="15" style="v"/>hivéerna, arkéerna, sinéerna, <verse number="16" style="v"/>arvadéerna, semaréerna och hamatéerna.</para>
+  <para style="s2">Sem</para>
+  <para style="r">(<ref loc="GEN 10:21-29">1 Mos 10:21-29</ref>; <ref loc="GEN 11:10-26">11:10-26</ref>)</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Sems söner var Elam, Assur, Arpakshad, Lud och Aram.</para>
+  <para style="li1">Arams söner var Us, Hul, Geter och Mash.</para>
+  <para style="li1">
+    <verse number="18" style="v"/>Arpakshad var far till Shelach, och Shelach var far till Ever.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Ever fick två söner, den ene hette Peleg<note caller="+" style="f"><char style="fr" closed="false">1:19 </char><char style="ft" closed="false">Namnet </char><char style="fq" closed="false">Peleg </char><char style="ft" closed="false">kommer från verbet </char><char style="fqa" closed="false">dela.</char></note> och den andre Joktan. På Pelegs tid delades jorden. Hans bror hette Joktan.</para>
+  <para style="li1">
+    <verse number="20" style="v"/>Joktan var far till Almodad, Shelef, Hasarmavet, Jerach, <verse number="21" style="v"/>Hadoram, Usal, Dikla, <verse number="22" style="v"/>Eval, Avimael, Saba, <verse number="23" style="v"/>Ofir, Havila och Jovav. Alla dessa var Joktans söner.</para>
+  <para style="li1">
+    <verse number="24" style="v"/>Sem, Arpakshad och Shelach,</para>
+  <para style="li1">
+    <verse number="25" style="v"/>Ever, Peleg, Regu,</para>
+  <para style="li1">
+    <verse number="26" style="v"/>Serug, Nachor, Terach,</para>
+  <para style="li1">
+    <verse number="27" style="v"/>Abram, dvs. Abraham.</para>
+  <para style="s1">Abraham</para>
+  <para style="li1">
+    <verse number="28" style="v"/>Abrahams söner var Isak och Ismael.</para>
+  <para style="s2">Ismael</para>
+  <para style="r">(<ref loc="GEN 25:12-16">1 Mos 25:12-16</ref>)</para>
+  <para style="li1">
+    <verse number="29" style="v"/>Detta är deras släkttavla:</para>
+  <para style="li1">Ismaels förstfödde var Nevajot, sedan Kedar, Adbeel, Mivsam,</para>
+  <para style="li1">
+    <verse number="30" style="v"/>Mishma, Duma, Massa, Hadad, Tema,</para>
+  <para style="li1">
+    <verse number="31" style="v"/>Jetur, Nafish och Kedma. Dessa var Ismaels söner.</para>
+  <para style="s2">Sönerna av Abrahams bihustru Ketura</para>
+  <para style="r">(<ref loc="GEN 25:1-4">1 Mos 25:1-4</ref>)</para>
+  <para style="li1">
+    <verse number="32" style="v"/>Sönerna som Abrahams bihustru Ketura födde var Simran, Jokshan, Medan, Midjan, Jishbak och Shuach.</para>
+  <para style="li1">Jokshans söner var Saba och Dedan.</para>
+  <para style="li1">
+    <verse number="33" style="v"/>Midjans söner var Efa, Efer, Henok, Avida och Eldaga.</para>
+  <para style="li1">Dessa var alltså ättlingar till Ketura.</para>
+  <para style="s1">Isak</para>
+  <para style="li1">
+    <verse number="34" style="v"/>Abraham var far till Isak.</para>
+  <para style="li1">Isaks söner var Esau och Israel.</para>
+  <para style="s2">Esau</para>
+  <para style="r">(<ref loc="GEN 36:10-14">1 Mos 36:10-14</ref>)</para>
+  <para style="li1">
+    <verse number="35" style="v"/>Esaus söner var Elifas, Reguel, Jeush, Jalam och Korach.</para>
+  <para style="li1">
+    <verse number="36" style="v"/>Elifas söner var Teman, Omar, Sefi, Gatam, Kenas, Timna och Amalek.</para>
+  <para style="li1">
+    <verse number="37" style="v"/>Reguels söner var Nachat, Serach, Shamma och Missa.</para>
+  <para style="s2">Seirs söner</para>
+  <para style="r">(<ref loc="GEN 36:20-28">1 Mos 36:20-28</ref>)</para>
+  <para style="li1">
+    <verse number="38" style="v"/>Seirs söner var Lotan, Shoval, Sivon, Ana, Dishon, Eser och Dishan.</para>
+  <para style="li1">
+    <verse number="39" style="v"/>Lotans söner var Hori och Homam. Timna var syster till Lotan.</para>
+  <para style="li1">
+    <verse number="40" style="v"/>Shovals söner var Aljan, Manachat, Eval, Shefi och Onam.</para>
+  <para style="li1">Sivons söner var Aja och Ana.</para>
+  <para style="li1">
+    <verse number="41" style="v"/>Ana hade en son, Dishon.</para>
+  <para style="li1">Dishons söner var Hamran, Eshban, Jitran och Keran.</para>
+  <para style="li1">
+    <verse number="42" style="v"/>Esers söner var Bilhan, Saavan och Jakan.</para>
+  <para style="li1">Dishons söner var Us och Aran.</para>
+  <para style="li1">
+    <verse number="43" style="v"/>Detta är de kungar, som härskade i Edom innan Israel hade någon kung:</para>
+  <para style="li1">Bela, Beors son, och namnet på hans stad var Dinhava.</para>
+  <para style="li1">
+    <verse number="44" style="v"/>När Bela dog blev Jovav, Serachs son, från Bosra, kung efter honom.</para>
+  <para style="li1">
+    <verse number="45" style="v"/>När Jovav dog blev Husham från temanéernas land kung efter honom.</para>
+  <para style="li1">
+    <verse number="46" style="v"/>När Husham dog blev Bedads son Hadad kung. Han besegrade midjaniterna i Moab, och han regerade från Avit.</para>
+  <para style="li1">
+    <verse number="47" style="v"/>När Hadad dog besteg Samla från Masreka tronen.</para>
+  <para style="li1">
+    <verse number="48" style="v"/>När sedan Samla dog, blev Saul från Rechovot vid floden kung efter honom.</para>
+  <para style="li1">
+    <verse number="49" style="v"/>När Saul dog, blev Akbors son Baal Hanan kung.</para>
+  <para style="li1">
+    <verse number="50" style="v"/>När Baal Hanan dog, blev Hadad kung efter honom. Han regerade från Pagi. Hans hustru hette Mehetavel och var dotter till Matred, som var dotter till Me Sahav.</para>
+  <para style="li1">
+    <verse number="51" style="v"/>Efter Hadads död var dessa män Edoms stamfurstar:</para>
+  <para style="li1">Furstarna Timna, Alva, Jetet, <verse number="52" style="v"/>Oholivama, Ela, Pinon, <verse number="53" style="v"/>Kenas, Teman, Mivsar, <verse number="54" style="v"/>Magdiel och Iram. Dessa var Edoms stamfurstar.</para>
+  <chapter number="2" style="c"/>
+  <para style="ms2">Jakobs (Israels) ättlingar</para>
+  <para style="mr">(<ref loc="1CH 2:1-9:44">2:1—9:44</ref>)</para>
+  <para style="r">(<ref loc="GEN 35:22-26">1 Mos 35:22-26</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Israels söner var</para>
+  <para style="li1">Ruben, Simon, Levi, Juda, Isaskar, Sebulon, <verse number="2" style="v"/>Dan, Josef, Benjamin, Naftali, Gad och Asher.</para>
+  <para style="s1">Judas ättlingar</para>
+  <para style="r">(<ref loc="RUT 4:18-19">Rut 4:18-19</ref>)</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Judas söner var Er, Onan och Shela.</para>
+  <para style="li2">Dessa tre fick han med Bat-Shua<note caller="+" style="f"><char style="fr" closed="false">2:3 </char><char style="ft" closed="false">Eller </char><char style="fqa" closed="false">Shuas dotter. </char><char style="fq" closed="false">Bat </char><char style="ft" closed="false">betyder </char><char style="fqa" closed="false">dotter.</char></note>, kanaaneiskan. Men Judas förstfödde son, Er, var ond i <char style="nd">Herrens</char> ögon och han dödade honom. <verse number="4" style="v"/>Tamar, Judas sonhustru, födde honom Peres och Serach. Juda hade alltså fem söner.</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Peres söner var Hesron och Hamul.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Serachs söner var Simri, Etan, Heman, Kalkol och Darda, alltså sammanlagt fem.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Karmis son, Akar<note caller="+" style="f"><char style="fr" closed="false">2:7 </char><char style="ft" closed="false">Se Jos. 7 där han kallas </char><char style="fqa" closed="false">Akan. </char><char style="ft" closed="false">Namnet är förknippat med olycka, <char style="xt">se <ref loc="JOS 7:24">Jos 7:24</ref></char>.</char></note>, var den som drog olycka över Israel när han förgrep sig på det som hade vigts åt förintelse.</para>
+  <para style="li1">
+    <verse number="8" style="v"/>Etan hade en son, Asarja.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Hesrons söner, som föddes åt honom, var Jerachmeel, Ram och Kalev<note caller="+" style="f"><char style="fr" closed="false">2:9 </char><char style="ft" closed="false">Mer exakt <char style="tl">Keluvaj</char>, som är en variant av namnet </char><char style="fq" closed="false">Kalev</char><char style="ft" closed="false">.</char></note>.</para>
+  <para style="s2">Ram</para>
+  <para style="r">(<ref loc="RUT 4:19-22">Rut 4:19-22</ref>)</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Ram var far till Amminadav och Amminadav var far till Nachshon, judéernas furste. <verse number="11" style="v"/>Nachshon var far till Salma och Salma var far till Boas. <verse number="12" style="v"/>Boas var far till Oved och Oved var far till Jishaj.</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Jishaj var far till Eliav, som var hans förstfödde, och sedan följde Avinadav, den andre, Shima, den tredje, <verse number="14" style="v"/>Netanel, den fjärde, Raddaj, den femte <verse number="15" style="v"/>Osem, den sjätte, och David, den sjunde. <verse number="16" style="v"/>Deras systrar var Seruja och Avigajil. Serujas tre söner var Avishaj, Joav och Asael. <verse number="17" style="v"/>Avigajil födde sonen Amasa, vars far var ismaeliten Jeter.</para>
+  <para style="s2">Kalev</para>
+  <para style="li1">
+    <verse number="18" style="v"/>Kalev, Hesrons son, fick barn med sin hustru Asuva och Jeriot<note caller="+" style="f"><char style="fr" closed="false">2:18 </char><char style="fq" closed="false">Jeriot </char><char style="ft" closed="false">kan också ha varit dotter till Kalev och Asuva; grundtexten är svårförståelig.</char></note>. Hennes söner var Jesher, Shovav och Ardon. <verse number="19" style="v"/>När Asuva dog, gifte sig Kalev med Efrat, som födde honom Hur. <verse number="20" style="v"/>Hur var far till Uri och Uri var far till Besalel.</para>
+  <para style="li1">
+    <verse number="21" style="v"/>Hesron gifte sig med dottern till Makir, Gileads far, när han var 60 år gammal och hon födde Seguv åt honom. <verse number="22" style="v"/>Seguv var far till Jair, som hade 23 städer i Gileads land. <verse number="23" style="v"/>Men Geshur och Aram erövrade av dessa Havvot Jair och även Kenat, med dess sextio kringliggande byar. Alla dessa var ättlingar till Makir, Gileads far.</para>
+  <para style="li1">
+    <verse number="24" style="v"/>Efter Hesrons död i Kalev-Efrata födde hans hustru Avia honom Ashchur, som sedan blev Tekoas far.<note caller="+" style="f"><char style="fr" closed="false">2:24 </char><char style="ft" closed="false">Grundtextens innebörd är osäker.</char></note></para>
+  <para style="s2">Jerachmeel</para>
+  <para style="li1">
+    <verse number="25" style="v"/>Jerachmeels, Hesrons förstfödde sons, söner var Ram, den förstfödde, Buna, Oren, Osem och Achia. <verse number="26" style="v"/>Jerachmeel hade också en annan hustru som hette Atara. Hon födde Onam.</para>
+  <para style="li1">
+    <verse number="27" style="v"/>Rams, Jerachmeels förstföddes, söner var Maas, Jamin och Eker.</para>
+  <para style="li1">
+    <verse number="28" style="v"/>Onams söner var Shammaj och Jada.</para>
+  <para style="li1">Shammajs söner var Nadav och Avishur.</para>
+  <para style="li1">
+    <verse number="29" style="v"/>Avishurs hustru, som hette Avihajil, födde honom sönerna Achban och Molid.</para>
+  <para style="li1">
+    <verse number="30" style="v"/>Nadavs söner var Seled och Appajim. Seled dog barnlös, <verse number="31" style="v"/>men Appajim fick sonen Jishi. Jishi fick sonen Sheshan och Sheshan fick Achlaj.</para>
+  <para style="li1">
+    <verse number="32" style="v"/>Jada, Shammajs bror, fick sönerna Jeter och Jonatan. Jeter dog utan barn, <verse number="33" style="v"/>men Jonatan fick sönerna Pelet och Sasa. Dessa var Jerachmeels ättlingar.</para>
+  <para style="li1">
+    <verse number="34" style="v"/>Sheshan hade inga söner utan bara döttrar. Han hade en egyptisk tjänare vid namn Jarcha. <verse number="35" style="v"/>Åt honom gav Sheshan sin dotter till hustru och hon födde Attaj åt honom.</para>
+  <para style="li1">
+    <verse number="36" style="v"/>Attaj var far till Natan och Natan till Savad. <verse number="37" style="v"/>Savad var far till Eflal och Eflal till Oved. <verse number="38" style="v"/>Oved var far till Jehu och Jehu till Asarja. <verse number="39" style="v"/>Asarja var far till Heles och Heles till Elasa. <verse number="40" style="v"/>Elasa var far till Sismaj och Sismaj till Shallum. <verse number="41" style="v"/>Shallum var far till Jekamja och Jekamja till Elishama.</para>
+  <para style="s2">Kalev</para>
+  <para style="li1">
+    <verse number="42" style="v"/>Kalevs, Jerachmeels brors, förstfödde son var Mesha. Han var far till Sif, som var far till Maresha, som var far till Hebron.</para>
+  <para style="li1">
+    <verse number="43" style="v"/>Hebrons söner hette Korach, Tappuach, Rekem och Shema. <verse number="44" style="v"/>Shema var far till Racham, som var far till Jorkoam. Rekem var far till Shammaj. <verse number="45" style="v"/>Shammaj fick sonen Maon, som var far till Bet-Sur.</para>
+  <para style="li1">
+    <verse number="46" style="v"/>Kalevs bihustru Efa födde honom Harran, Mosa och Gases. Harran var far till Gases.</para>
+  <para style="li1">
+    <verse number="47" style="v"/>Johdajs söner var Regem, Jotam, Geshan, Pelet, Efa och Shaaf.</para>
+  <para style="li1">
+    <verse number="48" style="v"/>Kalevs bihustru Maaka födde honom Shever och Tirchana. <verse number="49" style="v"/>Hon födde också Shaaf, far till Madmanna, och Sheva, far till Makbena och Giva. Kalev hade också en dotter som hette Aksa.</para>
+  <para style="li1">
+    <verse number="50" style="v"/>Dessa var ättlingar till Kalev.</para>
+  <para style="li1">Hur, Efratas förstfödde son, fick sönerna Shoval, far till Kirjat-Jearim, <verse number="51" style="v"/>Salma, far till Betlehem, och Haref, far till Bet-Gader.</para>
+  <para style="li1">
+    <verse number="52" style="v"/>Ättlingar till Kirjat-Jearims far Shoval var Reaja och hälften av manachtéerna. <verse number="53" style="v"/>Kirjat-Jearims släkter var jitréerna, putéerna, shumatéerna och mishraéerna. Från dessa kom soratéerna och eshtauléerna.</para>
+  <para style="li1">
+    <verse number="54" style="v"/>Salmas ättlingar var Betlehem, netofatéerna, Atrot Bet Joav, den andra hälften av manachtéerna, soratéerna. <verse number="55" style="v"/>Från honom härstammar också de skriftlärdas familjer som bodde i Jabes, nämligen tiratéerna, shimatéerna och sukatéerna. Alla dessa var keniter som härstammade från Hammat, stamfadern i Rekavs släkt.</para>
+  <chapter number="3" style="c"/>
+  <para style="s2">David</para>
+  <para style="r">(<ref loc="2SA 3:2-5">2 Sam 3:2-5</ref>; <ref loc="2SA 5:13-16">5:13-16</ref>; <ref loc="1CH 14:4-7">1 Krön 14:4-7</ref>)</para>
+  <para style="li1">
+    <verse number="1" style="v"/>Davids söner, födda i Hebron var: Amnon, den förstfödde, född av Achinoam från Jisreel, den andre sonen Daniel, född av Avigajil från Karmel,</para>
+  <para style="li1">
+    <verse number="2" style="v"/>den tredje Absalom, son till Maaka, dotter till kung Talmaj i Geshur,</para>
+  <para style="li1">den fjärde Adonia, född av Haggit,</para>
+  <para style="li1">
+    <verse number="3" style="v"/>den femte Shefatja, född av Avital,</para>
+  <para style="li1">den sjätte Jitream, född av hustrun Egla.</para>
+  <para style="li1">
+    <verse number="4" style="v"/>Dessa sex söner föddes i Hebron, där David regerade i sju och ett halvt år.</para>
+  <para style="li1">Sedan regerade han från Jerusalem i ytterligare trettiotre år. <verse number="5" style="v"/>Dessa söner föddes åt honom i Jerusalem: Shima, Shovav, Natan och Salomo, dessa fyra som Batseba<note caller="+" style="f"><char style="fr" closed="false">3:5 </char><char style="ft" closed="false">I den masoretiska texten <char style="tl">Bat-Shua</char>, en variant av namnet </char><char style="fq" closed="false">Batseba</char><char style="ft" closed="false">.</char></note>, Ammiels dotter, födde.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>David fick också Jivchar, Elishua, Elifelet, <verse number="7" style="v"/>Nogah, Nefeg, Jafia, <verse number="8" style="v"/>Elishama, Eljada och Elifelet, sammanlagt nio. <verse number="9" style="v"/>Alla dessa var Davids söner, förutom sönerna med hans bihustrur, och deras syster var Tamar.</para>
+  <para style="s2">Salomo</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Salomos son var Rehabeam,</para>
+  <para style="li2">vars son var Avia,</para>
+  <para style="li2">vars son var Asa,</para>
+  <para style="li2">vars son var Joshafat,</para>
+  <para style="li2">
+    <verse number="11" style="v"/>vars son var Joram,</para>
+  <para style="li2">vars son var Achasja,</para>
+  <para style="li2">vars son var Joash,</para>
+  <para style="li2">
+    <verse number="12" style="v"/>vars son var Amasja,</para>
+  <para style="li2">vars son var Asarja,</para>
+  <para style="li2">vars son var Jotam,</para>
+  <para style="li2">
+    <verse number="13" style="v"/>vars son var Achas,</para>
+  <para style="li2">vars son var Hiskia,</para>
+  <para style="li2">vars son var Manasse,</para>
+  <para style="li2">
+    <verse number="14" style="v"/>vars son var Amon</para>
+  <para style="li2">och vars son var Josia.</para>
+  <para style="li1">
+    <verse number="15" style="v"/>Josias söner var</para>
+  <para style="li2">Jochanan, den förstfödde,</para>
+  <para style="li2">Jojakim, den andre,</para>
+  <para style="li2">Sidkia, den tredje,</para>
+  <para style="li2">och Shallum, den fjärde.</para>
+  <para style="li1">
+    <verse number="16" style="v"/>Jojakim hade sonen</para>
+  <para style="li2">Jekonja</para>
+  <para style="li2">och sonen Sidkia.</para>
+  <para style="s2">Jekonja</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Jekonja, som var tillfångatagen, hade söner som var Shealtiel, <verse number="18" style="v"/>Malkiram, Pedaja, Shenassar, Jekamja, Hoshama och Nedavja.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Pedajas söner var Serubbabel och Shimi.</para>
+  <para style="li1">Serubbabels söner var Meshullam och Hananja. De hade en syster som hette Shelomit. <verse number="20" style="v"/>Dessutom hade han sönerna Hashuva, Ohel, Berekja, Hasadja och Jushav Hesed, alltså fem.</para>
+  <para style="li1">
+    <verse number="21" style="v"/>Hananjas ättlingar var Pelatja och Jesaja, samt Refajas, Arnans, Obadjas och Shekanjas söner.</para>
+  <para style="li1">
+    <verse number="22" style="v"/>Shekanjas ättlingar var Shemaja och Shemajas söner, Hattush, Jigal, Bariach, Nearja och Shafat, sammanlagt sex.</para>
+  <para style="li1">
+    <verse number="23" style="v"/>Nearjas tre söner var Eljoenaj, Hiskia och Asrikam.</para>
+  <para style="li1">
+    <verse number="24" style="v"/>Eljoenajs sju söner var Hodavja, Eljashiv, Pelaja, Ackuv, Jochanan, Delaja och Anani.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Judas ättlingar</para>
+  <para style="li1">
+    <verse number="1" style="v"/>Judas ättlingar var Peres, Hesron, Karmi, Hur och Shoval.</para>
+  <para style="li1">
+    <verse number="2" style="v"/>Reaja, Shovals son, var far till Jachat, som var far till Achumaj och Lahad. Dessa var soratéernas släkter.</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Etams söner var Jisreel, Jishma och Jidbash. De hade en syster som hette Haslelponi. <verse number="4" style="v"/>Vidare Penuel, som var far till Gedor, och Eser som var far till Husha.</para>
+  <para style="li1">Dessa var ättlingar till Hur, Efratas förstfödde, Betlehems far.</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Ashchur, Tekoas far, hade två hustrur, Hela och Naara.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Naara födde åt honom Achussam, Hefer, Temni och achashtaréerna. De var Naaras söner.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Hela födde Seret, Sochar, Etnan, och <verse number="8" style="v"/>Kos, som var far till Anuv och Hassoveva och stamfar till släkter som härstammade från Acharchel, Harums son.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Jabes hade större anseende än någon av sina bröder. Hans mor gav honom namnet Jabes, ”för”, sa hon, ”jag födde honom med smärta<note caller="+" style="f"><char style="fr" closed="false">4:9 </char><char style="fq" closed="false">Jabes </char><char style="ft" closed="false">är hebreiska för </char><char style="fqa" closed="false">smärta.</char></note>.”</para>
+  <para style="p">
+    <verse number="10" style="v"/>Jabes ropade och bad till Israels Gud: ”Välsigna mig och utvidga mitt område! Var med mig i allt jag gör och bevara mig från olycka och smärta!” Gud hörde hans bön och gav honom vad han begärde.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="11" style="v"/>Keluv, Shuchas bror, var far till Mechir, som var far till Eshton. <verse number="12" style="v"/>Eshton var far till Bet Rafa, Paseach och Techinna. Techinna var far till Ir Nachash. Dessa var männen från Reka.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="13" style="v"/>Kenas söner var Otniel och Seraja.</para>
+  <para style="li1">Otniels söner var Hatat och Meonotaj. <verse number="14" style="v"/>Meonotaj var far till Ofra.</para>
+  <para style="li1">Seraja var far till Joav, stamfar till Timmermansdalens släkt, för de var timmermän.</para>
+  <para style="li1">
+    <verse number="15" style="v"/>Kalevs, Jefunnes sons söner, var Ir, Ela och Naam. Elas son hette Kenas.</para>
+  <para style="li1">
+    <verse number="16" style="v"/>Jehallelels söner var Sif, Sifa, Tirja och Asarel.</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Esras söner var Jeter, Mered, Efer och Jalon. Mereds hustru Bitja<note caller="+" style="f"><char style="fr" closed="false">4:17 </char><char style="ft" closed="false">I grundtexten endast </char><char style="fqa" closed="false">hon. </char><char style="fq" closed="false">Bitja </char><char style="ft" closed="false">är en tolkning utifrån följande vers.</char></note> födde Mirjam, Shammaj och Jishbach, Eshtemoas far. <verse number="18" style="v"/>Hans judeiska hustru födde Jered, Gedors far, Hever, Sokos far och Jekutiel, Sanoachs far. Dessa var söner till faraos dotter Bitja som Mered hade gift sig med.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Söner till Hodias hustru, Nachams syster, var far till garmén Keila och maakatén Eshtemoa.<note caller="+" style="f"><char style="fr" closed="false">4:19 </char><char style="ft" closed="false">Grundtexten är svårförståelig och översättningen osäker. Möjligen kan </char><char style="fq" closed="false">Hodia </char><char style="ft" closed="false">betyda </char><char style="fqa" closed="false">judeiska, hans judeiska hustru.</char></note></para>
+  <para style="li1">
+    <verse number="20" style="v"/>Shimons söner var Amnon, Rinna, Ben-Hanan och Tilon.</para>
+  <para style="li1">Jishis söner var Sochet och Ben-Sochet<note caller="+" style="f"><char style="fr" closed="false">4:20 </char><char style="ft" closed="false">Eller </char><char style="fqa" closed="false">Sochets son.</char></note>.</para>
+  <para style="li1">
+    <verse number="21" style="v"/>Shelas, Judas sons, söner var Er, som var far till Leka, Lada, som var far till Maresha och stamfar till släkterna som var linnearbetare i Bet Ashbea, <verse number="22" style="v"/>Jokim, männen i Koseva och Joash och Saraf, som hade härskat i Moab och sedan återvänt till Betlehem, enligt gamla uppteckningar. <verse number="23" style="v"/>Dessa var krukmakare i Netaim och Gedera och stod i kungens tjänst.</para>
+  <para style="s1">Simons ättlingar</para>
+  <para style="r">(<ref loc="JOS 19:2-9">Jos 19:2-9</ref>)</para>
+  <para style="li1">
+    <verse number="24" style="v"/>Simons söner var Nemuel, Jamin, Jariv, Serach och Saul.</para>
+  <para style="li1">
+    <verse number="25" style="v"/>Shallum var hans son. Shallums son var Mivsam och dennes son Mishma.</para>
+  <para style="li1">
+    <verse number="26" style="v"/>Mishmas söner var Hammuel, hans son Sackur och sonen Shimi.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Shimi hade sexton söner och sex döttrar, men ingen av hans bröder hade många barn. Deras släkt blev inte lika stor som Judas. <verse number="28" style="v"/>De bodde i Beer Sheva, Molada och Hasar Shual, <verse number="29" style="v"/>Bilha, Esem, Tolad, <verse number="30" style="v"/>Betuel, Horma, Siklag, <verse number="31" style="v"/>Bet Markavot, Hasar Susim, Bet Biri och Shaarajim. Dessa var deras städer ända fram till Davids regeringstid, <verse number="32" style="v"/>liksom deras fem byar, Etam, Ajin, Rimmon, Token och Ashan <verse number="33" style="v"/>och andra byar ända bort till Baal. Det var där de bodde och de förde ett eget släktregister.</para>
+  <para style="p">
+    <verse number="34" style="v"/>Vidare: Meshovav, Jamlek, Josha, Amasjas son, <verse number="35" style="v"/>Joel, Jehu, Joshivjas son, som var son till Seraja och sonson till Asiel, <verse number="36" style="v"/>Eljoenaj, Jaakova, Jeshochaja, Asaja, Adiel, Jesimiel, Benaja <verse number="37" style="v"/>och Sisa, son till Shifi, son till Allon, son till Jedaja, son till Shimri och son till Shemaja.</para>
+  <para style="p">
+    <verse number="38" style="v"/>Dessa uppräknade var namn på hövdingar för sina släkter. Deras familjer förökade sig mycket <verse number="39" style="v"/>och drog fram mot Gedor, till östra sidan av dalen för att söka betesmarker för sin småboskap.</para>
+  <para style="p">
+    <verse number="40" style="v"/>De upptäckte rika, goda betesmarker i ett vidsträckt och fridfullt land där hamiter hade bott. <verse number="41" style="v"/>De som här uppräknats vid namn kom under Hiskias regeringstid i Juda. De rev ner hamiternas tält och boplatser som fanns där. De förintade dem, så att de inte mer finns till, och tog området i besittning därför att där fanns betesmark för deras hjordar.</para>
+  <para style="p">
+    <verse number="42" style="v"/>Senare begav sig 500 av dessa män från Simons stam till berget Seir. Deras ledare var Pelatja, Nearja, Refaja och Ussiel, söner till Jishi. <verse number="43" style="v"/>Där dödade de alla som fortfarande fanns kvar av amalekiterna. Sedan bosatte de sig där och har bott där sedan dess.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Rubens ättlingar</para>
+  <para style="p">
+    <verse number="1" style="v"/>Israels förstfödde var Ruben. (Han var den förstfödde, men eftersom han vanhelgade sin fars bädd, gavs hans förstfödslorätt i stället till Josefs, Israels sons, söner. I släktregistret nämns han därför inte som den förstfödde.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Trots att Judas<note caller="+" style="f"><char style="fr" closed="false">5:2 </char><char style="ft" closed="false">Juda var näst äldst och borde ha stått i tur, men förstfödslorätten gick över till Josefs söner, trots att Josef var näst yngst av de tolv bröderna.</char></note> stam var den starkaste bland bröderna och en furste kom från den, var det Josef som fick förstfödslorätten.)</para>
+  <para style="p">
+    <verse number="3" style="v"/>Rubens, Israels förstföddes, söner var Henok, Pallu, Hesron och Karmi.</para>
+  <para style="li1">
+    <verse number="4" style="v"/>Joels ättlingar var hans son Shemaja, vars son var Gog, vars son var Shimi, <verse number="5" style="v"/>vars son var Mika, vars son var Reaja, vars son var Baal, <verse number="6" style="v"/>vars son var Beera, som fördes bort i fångenskap av den assyriske kungen Tiglat Pileser. Han var en hövding för Rubens stam.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Hans släktingar skrevs upp efter sina släkter i släktregistret och var: stamledaren Jeiel, Sakarja <verse number="8" style="v"/>och Bela, son till Asas, son till Shema, son till Joel.</para>
+  <para style="li1">De bosatte sig från Aroer och ända bort till Nebo och Baal Meon. <verse number="9" style="v"/>Österut tog de allt land i besittning ända bort till öknen vid Eufrat, därför att deras boskap i Gilead hade förökats.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Under Sauls regering förde de krig med hagaréerna, besegrade dem och intog deras bosättningar i hela området öster om Gilead.</para>
+  <para style="s1">Gads ättlingar</para>
+  <para style="li1">
+    <verse number="11" style="v"/>Gads ättlingar behärskade det område i Bashan som gränsade till rubeniternas, ända bort till Salka.</para>
+  <para style="li1">
+    <verse number="12" style="v"/>Joel var deras ledare och sedan följde Shafam, Janaj och Shafat i Bashan.</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Deras släkter var, familj för familj, Mikael, Meshullam, Sheva, Joraj, Jakan, Sia och Ever, alltså sju.</para>
+  <para style="li1">
+    <verse number="14" style="v"/>Dessa var söner till Avichajil, som var son till Huri, son till Jaroach, son till Gilead, son till Mikael, son till Jeshishaj, son till Jachdo, son till Bus.</para>
+  <para style="li1">
+    <verse number="15" style="v"/>Achi, som var son till Avdiel och sonson till Guni, var överhuvud för deras familjer. <verse number="16" style="v"/>Gaditerna bodde i Gilead i Bashan, med dess kringliggande byar, och på Sharons ängar så långt de sträckte sig.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Alla dessa skrevs upp i släktregister under Juda kung Jotams och Israels kung Jerobeams tid.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Rubens stam och gaditerna och den ena halvan av Manasses stam var vapenföra män, som kunde hantera sköld och svärd och båge, 44 760 män tränade för strid. <verse number="19" style="v"/>De förde krig mot hagaréerna, Jetur, Nafish och Nodav. <verse number="20" style="v"/>De fick hjälp mot dem, och hagaréerna och alla deras allierade överlämnades åt dem, eftersom de bad till Gud och han besvarade deras bön, därför att de litade på honom. <verse number="21" style="v"/>De tog deras boskap, 50 000 kameler, 250 000 får och 2 000 åsnor och 100 000 människor. <verse number="22" style="v"/>Många hade stupat i slaget, för Gud hade stridit mot dem. Sedan bodde de i detta område ända fram till tiden för exilen.</para>
+  <para style="s1">Manasses ättlingar</para>
+  <para style="p">
+    <verse number="23" style="v"/>Halva Manasses stam bosatte sig från Bashan till Baal Hermon, Senir och berget Hermon, och de var talrika.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Dessa var deras familjeöverhuvuden: Efer, Jishi, Eliel, Asriel, Jeremia, Hodavja och Jachdiel. Alla dessa var modiga krigare och ansedda familjeöverhuvuden, <verse number="25" style="v"/>men de var inte trogna mot sina förfäders Gud. I stället var de otrogna med de gudar som landets olika folk tillbad, de som Gud förintade åt dem. <verse number="26" style="v"/>Därför ingav Gud kung Pul från Assyrien, också känd som Tiglat Pileser, att föra bort Rubens och Gads stammar och den ena hälften av Manasses stam. De fördes till Halach, Havor, Hara och Gosans flod, där de fortfarande finns kvar.</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Levis ättlingar</para>
+  <para style="li1">
+    <verse number="1" style="v"/>Levis söner var</para>
+  <para style="li2">Gershom, Kehat och Merari.</para>
+  <para style="li1">
+    <verse number="2" style="v"/>Kehats söner var</para>
+  <para style="li2">Amram, Jishar, Hebron och Ussiel.</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Amrams barn var</para>
+  <para style="li2">Aron, Mose och Mirjam.</para>
+  <para style="li1">Arons söner var Nadav,</para>
+  <para style="li2">Avihu, Elasar och Itamar.</para>
+  <para style="li2">
+    <verse number="4" style="v"/>Elasar var far till Pinechas,</para>
+  <para style="li2">och Pinechas till Avishua.</para>
+  <para style="li2">
+    <verse number="5" style="v"/>Avishua var far till Bucki</para>
+  <para style="li2">och Bucki till Ussi.</para>
+  <para style="li2">
+    <verse number="6" style="v"/>Ussi var far till Serachja</para>
+  <para style="li2">och Serachja till Merajot.</para>
+  <para style="li2">
+    <verse number="7" style="v"/>Merajot var far till Amarja</para>
+  <para style="li2">och Amarja till Achituv.</para>
+  <para style="li2">
+    <verse number="8" style="v"/>Achituv var far till Sadok</para>
+  <para style="li2">och Sadok till Achimaas.</para>
+  <para style="li2">
+    <verse number="9" style="v"/>Achimaas var far till Asarja</para>
+  <para style="li2">och Asarja till Jochanan.</para>
+  <para style="li2">
+    <verse number="10" style="v"/>Jochanan var far till Asarja, som tjänstgjorde som präst i templet som Salomo byggde i Jerusalem.</para>
+  <para style="li2">
+    <verse number="11" style="v"/>Asarja var far till Amarja</para>
+  <para style="li2">och Amarja till Achituv.</para>
+  <para style="li2">
+    <verse number="12" style="v"/>Achituv var far till Sadok</para>
+  <para style="li2">och Sadok till Shallum.</para>
+  <para style="li2">
+    <verse number="13" style="v"/>Shallum var far till Hilkia</para>
+  <para style="li2">och Hilkia till Asarja.</para>
+  <para style="li2">
+    <verse number="14" style="v"/>Asarja var far till Seraja</para>
+  <para style="li2">och Seraja till Josadak.</para>
+  <para style="li1">
+    <verse number="15" style="v"/>Josadak blev bortförd med folket i Juda och Jerusalem när <char style="nd">Herren</char> lät Nebukadnessar föra dem i fångenskap.</para>
+  <para style="li1">
+    <verse number="16" style="v"/>Levis söner var</para>
+  <para style="li2">Gershom, Kehat och Merari.</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Gershoms söner hette Livni och Shimi.</para>
+  <para style="li1">
+    <verse number="18" style="v"/>Kehats söner var Amram, Jishar, Hebron och Ussiel.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Meraris söner var Machli och Mushi.</para>
+  <para style="li1">Leviternas släkter, efter deras stamfäder, var:</para>
+  <para style="li1">
+    <verse number="20" style="v"/>Gershoms son var</para>
+  <para style="li2">Livni, vars son var Jachat,</para>
+  <para style="li2">vars son var Simma, <verse number="21" style="v"/>vars son var Joach,</para>
+  <para style="li2">vars son var Iddo, vars son var Serach, vars son var Jeotraj.</para>
+  <para style="li1">
+    <verse number="22" style="v"/>Kehats ättlingar:</para>
+  <para style="li2">hans son Amminadav, vars son var Korach,</para>
+  <para style="li2">vars son var Assir, <verse number="23" style="v"/>vars son var Elkana,</para>
+  <para style="li2">vars son var Evjasaf, vars son var Assir,</para>
+  <para style="li2">
+    <verse number="24" style="v"/>vars son var Tachat, vars son var Uriel,</para>
+  <para style="li2">vars son var Ussia, vars son var Saul.</para>
+  <para style="li1">
+    <verse number="25" style="v"/>Elkanas ättlingar: Amasaj och Achimot,</para>
+  <para style="li2">
+    <verse number="26" style="v"/>vars son var Elkana, vars son var Sofaj,</para>
+  <para style="li2">vars son var Nachat,</para>
+  <para style="li2">
+    <verse number="27" style="v"/>vars son var Eliav, vars son var Jerocham,</para>
+  <para style="li2">vars son var Elkana och vars son var Samuel.</para>
+  <para style="li1">
+    <verse number="28" style="v"/>Samuels söner</para>
+  <para style="li2">var Joel, den förstfödde, och Avia, den näst äldste.</para>
+  <para style="li1">
+    <verse number="29" style="v"/>Meraris ättlingar</para>
+  <para style="li2">var Machli, vars son var Livni,</para>
+  <para style="li2">vars son var Shimi, vars son var Ussa,</para>
+  <para style="li2">
+    <verse number="30" style="v"/>vars son var Shima, vars son var Haggia</para>
+  <para style="li2">och vars son var Asaja.</para>
+  <para style="s2">Tempelmusiker</para>
+  <para style="p">
+    <verse number="31" style="v"/>Dessa är de män som David hade gett ansvaret för musiken i <char style="nd">Herrens</char> hus, efter det att arken fått sin viloplats där. <verse number="32" style="v"/>Fram till dess att Salomo hade byggt <char style="nd">Herrens</char> hus i Jerusalem, fortsatte de sin uppgift med musiken framför uppenbarelsetältet, boningen, i enlighet med givna föreskrifter.</para>
+  <para style="p">
+    <verse number="33" style="v"/>Dessa var de som med sina söner gjorde tjänst:</para>
+  <para style="li1">Av Kehats släkt Heman, musikern, son till Joel, son till Samuel,</para>
+  <para style="li2">
+    <verse number="34" style="v"/>son till Elkana, son till Jerocham, son till Eliel, son till Toach,</para>
+  <para style="li2">
+    <verse number="35" style="v"/>son till Suf, son till Elkana, son till Machat, son till Amasaj,</para>
+  <para style="li2">
+    <verse number="36" style="v"/>son till Elkana, son till Joel, son till Asarja, son till Sefanja,</para>
+  <para style="li2">
+    <verse number="37" style="v"/>son till Tachat, son till Assir, son till Evjasaf, son till Korach,</para>
+  <para style="li2">
+    <verse number="38" style="v"/>son till Jishar, son till Kehat, son till Levi, son till Israel.</para>
+  <para style="li1">
+    <verse number="39" style="v"/>Asaf var Hemans närmaste medhjälpare och hade sin plats till höger om Heman.</para>
+  <para style="li2">Han var son till Berekja, son till Shima,</para>
+  <para style="li2">
+    <verse number="40" style="v"/>son till Mikael, son till Maaseja, son till Malkia,</para>
+  <para style="li2">
+    <verse number="41" style="v"/>son till Etni, son till Serach, son till Adaja,</para>
+  <para style="li2">
+    <verse number="42" style="v"/>son till Etan, son till Simma, son till Shimi,</para>
+  <para style="li2">
+    <verse number="43" style="v"/>son till Jachat, son till Gershom, son till Levi.</para>
+  <para style="li1">
+    <verse number="44" style="v"/>Meraris ättlingar, som var deras medhjälpare, stod på den vänstra sidan:</para>
+  <para style="li2">Etan, son till Kishi, son till Avdi, son till Malluk,</para>
+  <para style="li2">
+    <verse number="45" style="v"/>son till Hashavja, son till Amasja, son till Hilkia,</para>
+  <para style="li2">
+    <verse number="46" style="v"/>son till Amsi, son till Bani, son till Semer,</para>
+  <para style="li2">
+    <verse number="47" style="v"/>son till Machli, son till Mushi, son till Merari, son till Levi.</para>
+  <para style="p">
+    <verse number="48" style="v"/>Andra leviter utsågs till att sköta olika uppgifter i boningen, Guds hus. <verse number="49" style="v"/>Men Aron och hans ättlingar tjänstgjorde vid offren på brännofferaltaret och rökelsealtaret och hade hand om alla uppgifterna i det allra heligaste och bringade försoning för Israel, i enlighet med det som Guds tjänare Mose hade befallt.</para>
+  <para style="li1">
+    <verse number="50" style="v"/>Arons ättlingar var hans son Elasar, vars son var Pinechas, vars son var Avishua,</para>
+  <para style="li1">
+    <verse number="51" style="v"/>vars son var Bucki, vars son var Ussi, vars son var Serachja,</para>
+  <para style="li1">
+    <verse number="52" style="v"/>vars son var Merajot, vars son var Amarja, vars son var Achituv,</para>
+  <para style="li1">
+    <verse number="53" style="v"/>vars son var Sadok, vars son var Achimaas.</para>
+  <para style="s2">Leviternas boplatser</para>
+  <para style="r">(<ref loc="JOS 21:4-39">Jos 21:4-39</ref>)</para>
+  <para style="p">
+    <verse number="54" style="v"/>Detta var leviternas boplatser, deras tältläger inom deras områden, som tilldelades Arons ättlingar av Kehats släkt, som lotten först föll på:</para>
+  <para style="pm">
+    <verse number="55" style="v"/>Dem gav man Hebron i Juda, med tillhörande betesmarker. <verse number="56" style="v"/>Åkerjorden och de omgivande byarna gavs dock åt Kalev, Jefunnes son. <verse number="57" style="v"/>Arons ättlingar fick fristäderna Hebron, Livna, Jattir, Eshtemoa, alla med tillhörande betesmarker, <verse number="58" style="v"/>Hilen och Devir, med deras betesmarker, <verse number="59" style="v"/>och Ashan och Bet Shemesh, med deras betesmarker.</para>
+  <para style="pm">
+    <verse number="60" style="v"/>Av Benjamins stam fick de Geva, Alemet och Anatot, alla med tillhörande betesmarker. Allt som allt hade de tretton städer med tillhörande betesmarker.</para>
+  <para style="p">
+    <verse number="61" style="v"/>Genom lottkastning bestämdes sedan landområden åt Kehats övriga ättlingar, och de fick tio städer från den ena halvan av Manasses stam.</para>
+  <para style="p">
+    <verse number="62" style="v"/>Gershoms ättlingar tilldelades genom lottning, släkt för släkt, tretton städer från Isaskars, Ashers, Naftalis stammar och Manasses stam i Bashan.</para>
+  <para style="p">
+    <verse number="63" style="v"/>Meraris ättlingar fick genom lottkastning, släkt för släkt, tolv städer från Rubens, Gads och Sebulons stammar.</para>
+  <para style="p">
+    <verse number="64" style="v"/>Israeliterna gav alltså leviterna dessa städer med tillhörande betesmarker. <verse number="65" style="v"/>Genom lottkastning gav man dem av Judas, Simons och Benjamins stammar de tidigare nämnda städerna.</para>
+  <para style="p">
+    <verse number="66" style="v"/>Några bland Kehats släkter fick städer av Efraims stam som sitt område.</para>
+  <para style="pm">
+    <verse number="67" style="v"/>Man gav dem fristaden Shekem med betesmarker i Efraims bergsbygd, Geser med betesmarker, <verse number="68" style="v"/>Jokmeam, Bet Horon, båda med betesmarker, <verse number="69" style="v"/>likaså Ajalon och Gat-Rimmon med betesmarker.</para>
+  <para style="pm">
+    <verse number="70" style="v"/>Resten av Kehats släkter fick Aner och Bileam med tillhörande betesmarker av ena halvan av Manasses stam.</para>
+  <para style="p">
+    <verse number="71" style="v"/>Gershoms ättlingar fick, släkt för släkt, av ena halvan av Manasses stam Golan i Bashan och Ashtarot, med tillhörande betesmarker.</para>
+  <para style="li1">
+    <verse number="72" style="v"/>Från Isaskars stam fick de Kedesh, Daverat, båda med betesmarker, <verse number="73" style="v"/>likaså Ramot och Anem, med betesmarker.</para>
+  <para style="li2">
+    <verse number="74" style="v"/>Från Ashers stam fick de Mashal och Avdon, båda med betesmarker, <verse number="75" style="v"/>likaså Hukok och Rechov, med betesmarker.</para>
+  <para style="li1">
+    <verse number="76" style="v"/>Från Naftalis stam fick de Kedesh i Galileen, Hammon och Kirjatajim, alla med betesmarker.</para>
+  <para style="li1">
+    <verse number="77" style="v"/>Meraris övriga ättlingar fick av Sebulons stam Rimmono och Tabor, med betesmarker.</para>
+  <para style="li1">
+    <verse number="78" style="v"/>På andra sidan Jordan, öster om Jeriko, fick de av Rubens stam Beser i öknen, Jahas med betesmarker, <verse number="79" style="v"/>Kedemot och Mefaat, båda med betesmarker,</para>
+  <para style="li1">
+    <verse number="80" style="v"/>samt av Gads stam Ramot i Gilead, Machanajim, <verse number="81" style="v"/>Heshbon och Jaser, alla med betesmarker.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Isaskars ättlingar</para>
+  <para style="li1">
+    <verse number="1" style="v"/>Isaskars söner var Tola, Pua, Jashuv och Shimron, alltså fyra.</para>
+  <para style="li1">
+    <verse number="2" style="v"/>Tolas söner var Ussi, Refaja, Jeriel, Jachmaj, Jivsam och Samuel, familjeöverhuvuden för dem som härstammade från Tola, tappra krigare, uppskrivna i släktregister. På kung Davids tid var deras antal 22 600.</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Ussis söner var Jisrachja, Mikael, Obadja, Joel och Jishia, som var överhuvuden. <verse number="4" style="v"/>Enligt deras släktregister tillhörde deras familjer en skara av 36 000 krigsberedda män, för de hade många hustrur och många barn.</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Deras släktingar i Isaskars alla släkter var tappra krigare. Deras totala antal uppgick till 87 000, upptecknade i deras släktregister.</para>
+  <para style="s1">Benjamins ättlingar</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Benjamins söner var Bela, Beker och Jediael, alltså tre.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Belas söner var Esbon, Ussi, Ussiel, Jerimot och Iri, alltså fem, familjeöverhuvuden och tappra krigare. De var sammanlagt 22 034, upptecknade i släktregistret.</para>
+  <para style="li1">
+    <verse number="8" style="v"/>Bekers söner var Semira, Joash, Elieser, Eljoenaj, Omri, Jeremot, Avia, Anatot och Alemet. Alla dessa var Bekers söner. <verse number="9" style="v"/>I deras släktregister var det 20 200 upptecknade familjeöverhuvuden, stridsdugliga män.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Jediaels son var Bilhan. Bilhans söner var Jeush, Benjamin, Ehud, Kenaana, Setan, Tarshish och Achishachar. <verse number="11" style="v"/>Alla dessa var ättlingar till Jediael och överhuvuden för sina familjer, tappra krigare, 17 200 vapenföra män.</para>
+  <para style="li1">
+    <verse number="12" style="v"/>Shufam och Hufam var söner till Ir, och Hushim till Acher.</para>
+  <para style="s1">Naftalis ättlingar</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Naftalis söner, ättlingar till Bilha, var Jachasiel, Guni, Jeser och Shallum.</para>
+  <para style="s1">Manasses ättlingar</para>
+  <para style="li1">
+    <verse number="14" style="v"/>Manasses söner var Asriel, genom hans arameiska bihustru, som också födde Makir, Gileads far. <verse number="15" style="v"/>Makir tog en hustru åt Hufam och Shufam. Han hade en syster som hette Maaka. En annan ättling var Selofchad, som bara hade döttrar.</para>
+  <para style="li1">
+    <verse number="16" style="v"/>Makirs hustru Maaka födde en son och gav honom namnet Peresh. Hans brors namn var Sheresh, och dennes söner var Ulam och Rekem.</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Ulams son var Bedan. Dessa var alltså söner till Gilead, son till Makir, som var son till Manasse. <verse number="18" style="v"/>Hammoleket, hans syster, födde Ishhod, Avieser och Machla.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Shemidas söner var Achjan, Shekem, Likchi och Aniam.</para>
+  <para style="s1">Efraims ättlingar</para>
+  <para style="li1">
+    <verse number="20" style="v"/>Efraims ättlingar var Shutelach, vars son var Bered, vars son var Tachat, vars son var Elada, vars son var Tachat, <verse number="21" style="v"/>vars son var Savad, och vars son var Shutelach, samt Eser och Elad.</para>
+  <para style="li1">De dödades av några män i Gat, som var födda i landet, när de försökte ta deras boskapshjordar. <verse number="22" style="v"/>Deras far Efraim sörjde dem en lång tid, och hans bröder kom för att trösta honom. <verse number="23" style="v"/>Han låg igen med sin hustru, som blev gravid och födde honom en son. Han gav honom namnet Beria<note caller="+" style="f"><char style="fr" closed="false">7:23 </char><char style="fq" closed="false">Beria </char><char style="ft" closed="false">är hebreiska för </char><char style="fqa" closed="false">olycka.</char></note>, för det hade skett under en olyckstid för hans familj. <verse number="24" style="v"/>Efraims dotter var Sheera, som byggde Nedre och Övre Bet Horon och Ussen Sheera.</para>
+  <para style="li1">
+    <verse number="25" style="v"/>Hans son var Refach, vars son var Reshef, vars son var Telach, vars son var Tachan, <verse number="26" style="v"/>vars son var Ladan, vars son var Ammihud, vars son var Elishama, <verse number="27" style="v"/>vars son Nun och vars son var Josua.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Deras områden och boplatser var Betel med kringliggande byar, Naaran österut, Geser och dess byar västerut och Shekem och dess byar ända bort till Aja och dess byar. <verse number="29" style="v"/>Längs gränsen till Manasse låg Bet-Shean med dess byar, Tanak med dess byar, Megiddo med dess byar och Dor med dess byar. Där bodde ättlingarna till Israels son Josef.</para>
+  <para style="s1">Ashers ättlingar</para>
+  <para style="li1">
+    <verse number="30" style="v"/>Ashers söner var Jimna, Jishva, Jishvi och Beria. Serach var deras syster.</para>
+  <para style="li1">
+    <verse number="31" style="v"/>Berias söner var Hever och Malkiel, Birsajits far.</para>
+  <para style="li1">
+    <verse number="32" style="v"/>Hever var far till Jaflet, Shomer<note caller="+" style="f"><char style="fr" closed="false">7:32 </char><char style="ft" closed="false">Namnet kan stavas och vokaliseras olika, t.ex. <char style="tl">Somer</char>, <char style="tl">Semer</char>.</char></note> och Hotam. Shua var deras syster.</para>
+  <para style="li1">
+    <verse number="33" style="v"/>Jaflets söner var Pasak, Bimhal och Ashvat. Dessa var Jaflets söner.</para>
+  <para style="li1">
+    <verse number="34" style="v"/>Shomers söner var Ahi<note caller="+" style="f"><char style="fr" closed="false">7:34 </char><char style="ft" closed="false">För </char><char style="fqa" closed="false">Shomer </char><char style="ft" closed="false">se not till v. 32. </char><char style="fq" closed="false">Ahi </char><char style="ft" closed="false">kan också översättas som </char><char style="fqa" closed="false">hans bror: Hans brors, Shomers, söner…</char></note>, Rohga, Hubba och Aram.</para>
+  <para style="li1">
+    <verse number="35" style="v"/>Hans bror Hotams<note caller="+" style="f"><char style="fr" closed="false">7:35 </char><char style="ft" closed="false">I grundtexten <char style="tl">Helem</char>, men av allt att döma densamme som </char><char style="fq" closed="false">Hotam </char><char style="ft" closed="false">i v. 32.</char></note> söner var Sofach, Jimna, Shelesh och Amal.</para>
+  <para style="li1">
+    <verse number="36" style="v"/>Sofachs söner var Suach, Harnefer, Shual, Beri, Jimra, <verse number="37" style="v"/>Beser, Hod, Shamma, Shilsha, Jitran och Beera.</para>
+  <para style="li1">
+    <verse number="38" style="v"/>Jeters söner var Jefunne, Pispa och Ara.</para>
+  <para style="li1">
+    <verse number="39" style="v"/>Ullas söner var Arach, Hanniel och Risja.</para>
+  <para style="p">
+    <verse number="40" style="v"/>Alla dessa var ättlingar till Asher, familjeöverhuvuden, utvalda, skickliga krigare och utmärkta ledare. I släktregistret fanns 26 000 krigsdugliga män noterade.</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Benjamins ättlingar</para>
+  <para style="r">(<ref loc="1CH 9:34-44">1 Krön 9:34-44</ref>)</para>
+  <para style="li1">
+    <verse number="1" style="v"/>Benjamin var far till Bela, sin förstfödde, Ashbel, den andre, Achrach, den tredje, <verse number="2" style="v"/>Nocha, den fjärde och Rafa, den femte.</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Belas söner var Addar och Gera, Ehuds far, <verse number="4" style="v"/>Avishua, Naaman, Achoa<note caller="+" style="f"><char style="fr" closed="false">8:4 </char><char style="ft" closed="false">Enligt Septuaginta <char style="tl">Achia</char>.</char></note>, <verse number="5" style="v"/>Gera, Shefufan och Huram.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Dessa var Ehuds söner. De var familjeöverhuvuden för dem som bodde i Geva och deporterades till Manachat. <verse number="7" style="v"/>De var Naaman, Achia och Gera. Det var han som deporterade dem och var far till Ussa och Achichud.</para>
+  <para style="li1">
+    <verse number="8" style="v"/>Shacharajim fick söner i Moab efter att han skilt sig från sina hustrur Hushim och Baara. <verse number="9" style="v"/>Med sin hustru Hodesh fick han Jovav, Sivja, Mesha, Malkam, <verse number="10" style="v"/>Jeus, Sakeja och Mirma. De var hans söner och överhuvuden för sina familjer. <verse number="11" style="v"/>Hushim födde Avituv och Elpaal åt honom.</para>
+  <para style="li1">
+    <verse number="12" style="v"/>Elpaals söner var Ever, Misham och Shemed som byggde Ono och Lod med omgivande byar, och <verse number="13" style="v"/>Beria och Shema, familjeöverhuvuden för dem som bodde i Ajalon. De hade jagat bort Gats invånare.</para>
+  <para style="li1">
+    <verse number="14" style="v"/>Achjo<note caller="+" style="f"><char style="fr" closed="false">8:14 </char><char style="ft" closed="false">Kan också betyda </char><char style="fqa" closed="false">deras bröder: Deras bröder var…</char></note>, Shashak, Jeremot<note caller="+" style="f"><char style="fr" closed="false">8:14 </char><char style="ft" closed="false">Ev. <char style="tl">Jerocham</char>.</char></note>, <verse number="15" style="v"/>Sevadja, Arad, Eder, <verse number="16" style="v"/>Mikael, Jishpa och Jocha var Berias söner.</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Sevadja, Meshullam, Hiski, Hever, <verse number="18" style="v"/>Jishmeraj, Jislia och Jovav var Elpaals söner.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Jakim, Sikri, Savdi, <verse number="20" style="v"/>Elienaj<note caller="+" style="f"><char style="fr" closed="false">8:20 </char><char style="ft" closed="false">Ev. <char style="tl">Eljoenaj</char>.</char></note>, Silletaj, Eliel, <verse number="21" style="v"/>Adaja, Beraja och Shimrat var Shimis<note caller="+" style="f"><char style="fr" closed="false">8:21 </char><char style="ft" closed="false">Eller <char style="tl">Shimeis</char>, eller ev. <char style="tl">Shemas</char>.</char></note> söner.</para>
+  <para style="li1">
+    <verse number="22" style="v"/>Jishpan, Ever, Eliel, <verse number="23" style="v"/>Avdon, Sikri, Hanan, <verse number="24" style="v"/>Hananja, Elam, Antotia, <verse number="25" style="v"/>Jifdeja och Penuel var Shashaks söner.</para>
+  <para style="li1">
+    <verse number="26" style="v"/>Shamsheraj, Shecharja, Atalja, <verse number="27" style="v"/>Jaareshja, Elia och Sikri var Jerochams söner.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Alla dessa var familjeöverhuvuden och ledare, upptecknade i släktregister, och de bodde i Jerusalem.</para>
+  <para style="li1">
+    <verse number="29" style="v"/>I Givon bodde Jeiel<note caller="+" style="f"><char style="fr" closed="false">8:29 </char><char style="fq" closed="false">Jeiel </char><char style="ft" closed="false">saknas i grundtexten här men finns i <char style="xt"><ref loc="1CH 9:35">9:35</ref></char>.</char></note>, Givons far. Hans hustru hette Maaka. <verse number="30" style="v"/>Hans förstfödde son var Avdon. Han följdes av Sur, Kish, Baal, Ner<note caller="+" style="f"><char style="fr" closed="false">8:30 </char><char style="fq" closed="false">Ner </char><char style="ft" closed="false">saknas i grundtexten här men finns i <char style="xt"><ref loc="1CH 9:36">9:36</ref></char>, likaså i Septuaginta.</char></note>, Nadav, <verse number="31" style="v"/>Gedor, Achjo, Seker<note caller="+" style="f"><char style="fr" closed="false">8:31 </char><char style="ft" closed="false"><char style="tl">Sakarja</char> i <char style="xt"><ref loc="1CH 9:37">9:37</ref></char></char></note> och Miklot, <verse number="32" style="v"/>som var far till Shima<note caller="+" style="f"><char style="fr" closed="false">8:32 </char><char style="ft" closed="false"><char style="tl">Shimam</char> i <char style="xt"><ref loc="1CH 9:38">9:38</ref></char></char></note>. Alla dessa bodde tillsammans med sina släktingar i Jerusalem.</para>
+  <para style="li1">
+    <verse number="33" style="v"/>Ner var far till Kish, Kish till Saul, och Saul till Jonatan, Malki-Shua, Avinadav och Eshbaal.</para>
+  <para style="li1">
+    <verse number="34" style="v"/>Jonatans son var Meriv-Baal, som var far till Mika.</para>
+  <para style="li1">
+    <verse number="35" style="v"/>Mikas söner var Piton, Melek, Tarea<note caller="+" style="f"><char style="fr" closed="false">8:35 </char><char style="ft" closed="false"><char style="tl">Tachrea</char> i <char style="xt"><ref loc="1CH 9:41">9:41</ref></char></char></note> och Achas.</para>
+  <para style="li1">
+    <verse number="36" style="v"/>Achas var far till Joadda<note caller="+" style="f"><char style="fr" closed="false">8:36 </char><char style="ft" closed="false"><char style="tl">Jada</char> i <char style="xt"><ref loc="1CH 9:42">9:42</ref></char></char></note>, som var far till Alemet, Asmavet och Simri. Simri var far till Mosa. <verse number="37" style="v"/>Mosa var far till Bina, vars son var Rafa<note caller="+" style="f"><char style="fr" closed="false">8:37 </char><char style="ft" closed="false"><char style="tl">Refaja</char> i <char style="xt"><ref loc="1CH 9:43">9:43</ref></char></char></note>, vars son var Elasa, vars son var Asel.</para>
+  <para style="li1">
+    <verse number="38" style="v"/>Asel hade sex söner: Asrikam, den förstfödde<note caller="+" style="f"><char style="fr" closed="false">8:38 </char><char style="ft" closed="false">På hebreiska <char style="tl">bokeru</char>, vilket också kan vara ett namn. Men eftersom antalet söner är sex, <char style="xt">jfr <ref loc="1CH 9:44">9:44</ref></char>, verkar det mer troligt att det ska översättas </char><char style="fqa" closed="false">hans förstfödde, </char><char style="ft" closed="false">som då syftar på föregående namn.</char></note>, Ismael, Shearja, Asarja, Obadja och Hanan. Alla dessa var Asels söner.</para>
+  <para style="li1">
+    <verse number="39" style="v"/>Asels bror Esheks söner var Ulam, den förstfödde, Jeush, den andre och Elifelet, den tredje. <verse number="40" style="v"/>Ulams söner var tappra krigare och skickliga bågskyttar. De hade många söner och sonsöner, sammanlagt 150.</para>
+  <para style="p">Alla dessa var ättlingar till Benjamin.</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Återkomsten från Babylon</para>
+  <para style="s2">De återvändande från Babylon</para>
+  <para style="r">(<ref loc="NEH 11:3-19">Neh 11:3-19</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Hela Israel var upptecknat i släktregister och uppskrivet i Israels kungars krönikor.</para>
+  <para style="p">Juda fördes bort i fångenskap till Babylon på grund av sin trolöshet.</para>
+  <para style="p">
+    <verse number="2" style="v"/>De första som kom tillbaka till sina gamla hemstäder och egendomar var israeliter, präster, leviter och tempeltjänare.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Från Judas, Benjamins, Efraims och Manasses stammar återvände några till Jerusalem:</para>
+  <para style="li1">
+    <verse number="4" style="v"/>Utaj, son till Ammihud, som var son till Omri, son till Imri, son till Bani, som tillhörde Peres, Judas sons, släkt.</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Vidare: av Shelas efterkommande Asaja, den förstfödde, och dennes söner.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Av Serachs ättlingar Jeguel. Allt som allt var det 690 personer från Juda.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Av Benjamins ättlingar: Sallu, son till Meshullam, son till Hodavja, son till Hassenua, <verse number="8" style="v"/>Jivneja, son till Jerocham, Ela, son till Ussi, son till Mikri, och Meshullam, son till Shefatja, son till Reguel, son till Jivnia.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Dessa från Benjamin, som upptecknats i deras släktregister, var 956 män, alla familjeöverhuvuden.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Av präster: Jedaja, Jojariv, Jakin, <verse number="11" style="v"/>Asarja, son till Hilkia, son till Meshullam, son till Sadok, son till Merajot, son till Achituv, fursten i Guds hus,</para>
+  <para style="li1">
+    <verse number="12" style="v"/>Adaja, son till Jerocham, son till Pashchur, son till Malkia, och Masaj, son till Adiel, son till Jachsera, son till Meshullam, son till Meshillemit<note caller="+" style="f"><char style="fr" closed="false">9:12 </char><char style="ft" closed="false">Eller <char style="tl">Meshillemot</char>.</char></note> son till Immer.</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Dessa ättlingar var 1 760 till antalet. De var alla familjeöverhuvuden, dugliga män för tjänsten i Guds hus.</para>
+  <para style="li1">
+    <verse number="14" style="v"/>Av leviterna: Shemaja, son till Hashuv, son till Asrikam, son till Hashavja, av Meraris släkt. <verse number="15" style="v"/>Vidare: Bakbackar, Heresh, Galal och Mattanja, son till Mika, son till Sikri, son till Asaf, <verse number="16" style="v"/>Obadja, son till Shemaja, son till Galal, son till Jedutun, och Berekja, son till Asa, son till Elkana, som bodde i netofatéernas byar.</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Dörrvaktare: Shallum, Ackuv, Talmon och Achiman, med Shallum som deras ledare. <verse number="18" style="v"/>De var fortfarande ansvariga för Kungsporten i öster. Dessa var dörrvakter i leviternas läger. <verse number="19" style="v"/>Shallum, son till Kore, son till Evjasaf, son till Korach, och hans närmaste släktingar bland korachiterna hade ansvaret för vakthållningen vid tältets<note caller="+" style="f"><char style="fr" closed="false">9:19 </char><char style="ft" closed="false">Syftar uppenbarligen på templet, jfr v. 21 och 23; i v. 23 kombineras orden </char><char style="fqa" closed="false">tält </char><char style="ft" closed="false">och </char><char style="fqa" closed="false">hus.</char></note> ingångar, precis som deras förfäder hade haft vid ingången till <char style="nd">Herrens</char> läger. <verse number="20" style="v"/>Pinechas, Elasars son, hade tidigare varit furste över dem. <char style="nd">Herren</char> hade varit med honom. <verse number="21" style="v"/>Sakarja, Meshelemjas son, var dörrvaktare vid uppenbarelsetältets ingång.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Allt som allt fanns det 212 utvalda dörrvaktare. De var registrerade i sin bys släktregister. David och siaren Samuel hade utsett dem till deras förtroendeuppdrag. <verse number="23" style="v"/>De och deras ättlingar ansvarade för vakthållningen vid portarna i <char style="nd">Herrens</char> hus, tältet. <verse number="24" style="v"/>De fanns på alla fyra sidorna, den östra, västra, norra och södra sidan. <verse number="25" style="v"/>Deras släktingar, som bodde i byarna, kom och deltog i deras uppgifter regelbundet i perioder om sju dagar.</para>
+  <para style="p">
+    <verse number="26" style="v"/>De fyra främsta dörrvaktarna, samtliga leviter, var ansvariga för förrummen och skattkammaren i Guds hus. <verse number="27" style="v"/>De tillbringade natten runt omkring Guds hus och hade ansvaret att öppna portarna varje morgon.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Några av dem hade som sin uppgift att ansvara för de kärl som användes vid gudstjänster. De räknade kärlen, både när de tog in dem och när de tog ut dem. <verse number="29" style="v"/>Andra var ansvariga för de övriga tillbehören, det som fanns inne i helgedomen, som mjöl, vin, rökelse, olja och kryddor.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Vissa präster blandade kryddorna.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Mattitja, en av leviterna och den förstfödde sonen till korachiten Shallum, hade ansvaret för bakningen av bröden.</para>
+  <para style="p">
+    <verse number="32" style="v"/>Några av deras släktingar i Kehats släkt hade ansvar för det bröd som skulle förberedas till varje sabbat och läggas fram.</para>
+  <para style="p">
+    <verse number="33" style="v"/>De som var musiker, överhuvuden för levitiska familjer, bodde i särskilda rum. De var i tjänst dag och natt och befriade från andra uppgifter. <verse number="34" style="v"/>Dessa var de levitiska familjernas överhuvuden, uppräknade i deras släktregister, och de bodde i Jerusalem.</para>
+  <para style="ms1">Det förenade kungariket</para>
+  <para style="mr">(<ref loc="1CH 9:35-31">1 Krön 9:35—2 Krön 9:31</ref>)</para>
+  <para style="s1">Sauls släkt</para>
+  <para style="r">(<ref loc="1CH 8:29-38">1 Krön 8:29-38</ref>)</para>
+  <para style="li1">
+    <verse number="35" style="v"/>I Givon bodde Jeiel, Givons far. Hans hustru hette Maaka. <verse number="36" style="v"/>Hans förstfödde son var Avdon. Han följdes av Sur, Kish, Baal, Ner, Nadav, <verse number="37" style="v"/>Gedor, Achjo, Sakarja och Miklot, <verse number="38" style="v"/>som var far till Shimam. Alla dessa bodde tillsammans med sina släktingar i Jerusalem.</para>
+  <para style="li1">
+    <verse number="39" style="v"/>Ner var far till Kish, Kish till Saul, och Saul till Jonatan, Malki-Shua, Avinadav och Eshbaal<note caller="+" style="f"><char style="fr" closed="false">9:39 </char><char style="ft" closed="false">Även känd som <char style="tl">Ish-Boshet</char>.</char></note></para>
+  <para style="li1">
+    <verse number="40" style="v"/>Jonatans son var Meriv-Baal<note caller="+" style="f"><char style="fr" closed="false">9:40 </char><char style="ft" closed="false">Även känd som <char style="tl">Mefivoshet</char>.</char></note> som var far till Mika.</para>
+  <para style="li1">
+    <verse number="41" style="v"/>Mikas söner var Piton, Melek, Tachrea och Achas.</para>
+  <para style="li1">
+    <verse number="42" style="v"/>Achas var far till Jada, som var far till Alemet, Asmavet och Simri. Simri var far till Mosa. <verse number="43" style="v"/>Mosa var far till Bina, vars son var Refaja, vars son var Elasa, vars son var Asel.</para>
+  <para style="li1">
+    <verse number="44" style="v"/>Asel hade sex söner: Asrikam, den förstfödde, Ismael, Shearja, Asarja, Obadja och Hanan. Dessa var Asels söner.</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">Saul och hans tre söner dör</para>
+  <para style="r">(<ref loc="1SA 31:1-13">1 Sam 31:1-13</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Filistéerna anföll Israel, som flydde för dem, och många stupade på Gilboaberget. <verse number="2" style="v"/>Filistéerna förföljde Saul och hans söner och dödade Jonatan, Avinadav och Malki-Shua, Sauls söner. <verse number="3" style="v"/>Saul blev hårt pressad och anfölls från alla sidor, och bågskyttarna fann honom och sårade honom.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Saul sa då till sin väpnare: ”Dra ut ditt svärd och stöt ner mig, så inte dessa oomskurna hedningar kommer och kränker mig!” Men väpnaren var skräckslagen och vågade inte, så Saul tog själv sitt svärd och kastade sig mot det. <verse number="5" style="v"/>När hans väpnare såg att Saul var död, kastade han sig också på sitt svärd och dog. <verse number="6" style="v"/>Saul och hans tre söner dog, och hela hans familj blev utplånad på en och samma gång.</para>
+  <para style="p">
+    <verse number="7" style="v"/>När israeliterna i dalen nedanför såg att deras trupper flydde och att Saul och hans söner var döda, övergav de sina städer och flydde. Sedan kom filistéerna och intog dem.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Nästa dag, när filistéerna gick ut för att plundra de döda, hittade de Saul och hans söner där de låg slagna på berget Gilboa. <verse number="9" style="v"/>De tog då alla Sauls tillhörigheter, hans huvud och hans vapen, och skickade runt dem i landet för att alla, både deras gudar och folk, skulle få del av de goda nyheterna. <verse number="10" style="v"/>Sauls vapen lade de sedan i sina gudars tempel och hängde upp hans huvud i Dagons tempel.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Men när alla i Javesh i Gilead hörde vad filistéerna hade gjort med Saul, <verse number="12" style="v"/>drog alla deras vapenföra män ut och hämtade Sauls och hans söners kroppar till Javesh. De begravde benen under det stora trädet i Javesh och fastade i sju dagar.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Saul dog på grund av sin trolöshet mot <char style="nd">Herren</char> och därför att han inte följt <char style="nd">Herrens</char> befallning utan hade rådfrågat en ande från en död <verse number="14" style="v"/>i stället för att vända sig till <char style="nd">Herren</char>. Därför dödade han honom och gav kungariket till David, Jishajs son.</para>
+  <chapter number="11" style="c"/>
+  <para style="ms2">Davids regering</para>
+  <para style="mr">(<ref loc="1CH 11:1-29:30">11:1—29:30</ref>)</para>
+  <para style="s1">David blir kung över hela Israel</para>
+  <para style="r">(<ref loc="2SA 5:1-3">2 Sam 5:1-3</ref>; <ref loc="2SA 5:6-10">5:6-10</ref>)</para>
+  <para style="s2">David intar Jerusalem</para>
+  <para style="p">
+    <verse number="1" style="v"/>Hela Israel samlades hos David i Hebron och sa: ”Vi är ditt eget kött och blod, <verse number="2" style="v"/>och redan när Saul var kung var det du som anförde Israel i strid. <char style="nd">Herren</char>, din Gud, har sagt till dig: ’Du ska vara herde för mitt folk Israel, du ska vara furste över Israel!’ ”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Alla de äldste i Israel kom alltså till kung David i Hebron. David slöt ett förbund med dem inför <char style="nd">Herren</char>, och de smorde honom till kung över Israel, precis som <char style="nd">Herren</char> hade talat genom Samuel.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Sedan tågade David och hela Israel mot Jerusalem, alltså Jevus, där jevuséerna bodde. <verse number="5" style="v"/>Men jevuséerna sa till David: ”Här kommer du inte in!” David intog då Sions borg, Davids stad, <verse number="6" style="v"/>och sa: ”Den som anfaller jevuséerna blir överbefälhavare!” Joav, Serujas son, gick upp först och blev så överbefälhavare. <verse number="7" style="v"/>David bosatte sig i borgen, och därför kallades den Davids stad. <verse number="8" style="v"/>Han byggde staden runt borgen, från Millo och vidare runt omkring, medan Joav restaurerade återstoden av staden. <verse number="9" style="v"/>David blev allt mäktigare, för härskarornas <char style="nd">Herre</char> var med honom.</para>
+  <para style="s2">Davids hjältar</para>
+  <para style="r">(<ref loc="2SA 23:8-39">2 Sam 23:8-39</ref>)</para>
+  <para style="p">
+    <verse number="10" style="v"/>Dessa är de förnämsta bland Davids hjältar, som tillsammans med hela Israel gav hans kungadöme starkt stöd och gjorde honom till kung över hela landet, som <char style="nd">Herren</char> hade talat till Israel.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Detta är förteckningen över Davids hjältar: Jishbaal, son till en man av Hakmonis släkt, den förnämste bland de trettio<note caller="+" style="f"><char style="fr" closed="false">11:11 </char><char style="ft" closed="false">Enligt vissa Septuaginta-handskrifter tre. Jfr v. 12 och <char style="xt"><ref loc="2SA 23:11">2 Sam 23:11</ref></char>. Det är också möjligt att </char><char style="fq" closed="false">de trettio </char><char style="ft" closed="false">bara ska tolkas som </char><char style="fqa" closed="false">hjältarna. </char><char style="ft" closed="false">Även senare i texten råder det en viss osäkerhet huruvida det är </char><char style="fqa" closed="false">de tre </char><char style="ft" closed="false">eller </char><char style="fqa" closed="false">de trettio </char><char style="ft" closed="false">som avses.</char></note>, som vid ett tillfälle dödade 300 man med sitt spjut.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Närmast honom i rang var Elasar, son till Dodo av Achoachs släkt. Han var en av de tre hjältarna. <verse number="13" style="v"/>Han var med David vid Pas Dammim, när filistéerna hade samlats till strid. Där fanns en åker full med korn. Israeliterna flydde för filistéerna. <verse number="14" style="v"/>De ställde sig mitt på åkern, försvarade den, slog filistéerna, och genom honom utförde <char style="nd">Herren</char> en stor räddning.</para>
+  <para style="p">
+    <verse number="15" style="v"/>En annan gång gick tre av de trettio förnämsta kämparna ner för klippan till David i Adullams grotta, medan filistéerna hade slagit läger i Refaimdalen, <verse number="16" style="v"/>David befann sig i borgen och en filisteisk utpost fanns i Betlehem.</para>
+  <para style="p">
+    <verse number="17" style="v"/>David sa längtansfullt: ”Ack om någon kunde hämta lite vatten från källan vid porten till Betlehem!” <verse number="18" style="v"/>De tre bröt sig då igenom filistéernas läger och hämtade upp vatten ur brunnen vid Betlehems stadsport och förde det med sig tillbaka till David. Men David vägrade att dricka det och hällde ut det som ett dryckesoffer till <char style="nd">Herren</char> <verse number="19" style="v"/>och sa: ”Nej, Gud förbjude att jag skulle göra något sådant! Skulle jag dricka blodet av dessa män som riskerat sina liv för att hämta det?” Eftersom de riskerat sina liv för att hämta vattnet, ville han inte dricka det. Sådana var de tre hjältarnas bedrifter.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Avishaj, Joavs bror, var befälhavare för de trettio<note caller="+" style="f"><char style="fr" closed="false">11:20 </char><char style="ft" closed="false">Se not till v. 11.</char></note>. En gång dödade han 300 man med sitt spjut, och han blev lika berömd som de tre. <verse number="21" style="v"/>Hans anseende blev större än någon bland de tre och han blev deras befälhavare, men han räknades inte som en av dem.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Benaja var son till Jojada och en tapper soldat från Kavseel. Han gjorde många stordåd och dödade två av Moabs bästa män<note caller="+" style="f"><char style="fr" closed="false">11:22 </char><char style="fq" closed="false">två av Moabs bästa män </char><char style="ft" closed="false">kan också översättas </char><char style="fqa" closed="false">de två sönerna till Ariel från Moab.</char></note>. Han gick också ner och slog ihjäl ett lejon i en brunn en snöig dag. <verse number="23" style="v"/>En annan gång dödade han en storväxt egypter som var 2,5 meter lång och hade ett spjut tjockt som en vävbom. Benaja gick fram till honom beväpnad med en stav. Han ryckte spjutet från egypterns hand och dödade honom med det. <verse number="24" style="v"/>Sådana var Benajas, Jojadas sons, bedrifter, och han fick stort anseende bland de tre<note caller="+" style="f"><char style="fr" closed="false">11:24 </char><char style="ft" closed="false">Se not till v. 11.</char></note> hjältarna. <verse number="25" style="v"/>Han var mer berömd än de trettio, men han räknades inte med bland de tre. David gav honom befälet över sin livvakt.</para>
+  <para style="li1">
+    <verse number="26" style="v"/>De tappra hjältarna var:</para>
+  <para style="li2">Asael, Joavs bror,</para>
+  <para style="li2">Elchanan, Dodos son, från Betlehem,</para>
+  <para style="li2">
+    <verse number="27" style="v"/>Shammot från Harod, Heles från Pelet,</para>
+  <para style="li2">
+    <verse number="28" style="v"/>Ira, Ickeshs son från Tekoa, Avieser från Anatot,</para>
+  <para style="li2">
+    <verse number="29" style="v"/>Sibbekaj av Hushas släkt, Ilaj av Achoachs släkt,</para>
+  <para style="li2">
+    <verse number="30" style="v"/>Mahraj från Netofa, Heled, Baanas son, från Netofa,</para>
+  <para style="li2">
+    <verse number="31" style="v"/>Ittaj, Rivajs son, från Giva i Benjamin, Benaja från Piraton,</para>
+  <para style="li2">
+    <verse number="32" style="v"/>Huraj från Nachale Gaash, Aviel från Arava,</para>
+  <para style="li2">
+    <verse number="33" style="v"/>Asmavet från Bachurim, Eljachba från Shaalvon,</para>
+  <para style="li2">
+    <verse number="34" style="v"/>Hashem från Gison, Jonatan, Shages son, från Harar,</para>
+  <para style="li2">
+    <verse number="35" style="v"/>Achiam, Sakars<note caller="+" style="f"><char style="fr" closed="false">11:35 </char><char style="ft" closed="false"><char style="tl">Sharar</char> i <char style="xt"><ref loc="2SA 23:33">2 Sam 23:33</ref></char>.</char></note> son, från Harar<note caller="+" style="f"><char style="fr" closed="false">11:35 </char><char style="fq" closed="false">Arar </char><char style="ft" closed="false">i <char style="xt"><ref loc="2SA 23:33">2 Sam 23:33</ref></char>.</char></note>, Elifal, Urs son,</para>
+  <para style="li2">
+    <verse number="36" style="v"/>Hefer från Mekera, Achia från Gilo,</para>
+  <para style="li2">
+    <verse number="37" style="v"/>Hesro från Karmel, Naaraj, Esbajs son,</para>
+  <para style="li2">
+    <verse number="38" style="v"/>Joel, bror till Natan, Mivchar, Hagris son,</para>
+  <para style="li2">
+    <verse number="39" style="v"/>Selek från Ammon, Nachraj från Beerot, Joavs, Serujas sons, väpnare,</para>
+  <para style="li2">
+    <verse number="40" style="v"/>Ira av Jeters släkt, Garev av Jeters släkt,</para>
+  <para style="li2">
+    <verse number="41" style="v"/>hettiten Uria, Savad, Achlajs son,</para>
+  <para style="li2">
+    <verse number="42" style="v"/>Adina, Shisas son, av Rubens släkt, Shisas son, som var överhuvud för Rubens stam, tillsammans med trettio andra,</para>
+  <para style="li2">
+    <verse number="43" style="v"/>Hanan, Maakas son, Joshafat från Meten,</para>
+  <para style="li2">
+    <verse number="44" style="v"/>Ussia från Ashtarot, Shama och Jeiel, söner till Hotam från Aroer,</para>
+  <para style="li2">
+    <verse number="45" style="v"/>Jediael, Shimris son, och hans bror Jocha från Tis,</para>
+  <para style="li2">
+    <verse number="46" style="v"/>Eliel från Machanajim, Jerivaj och Joshavja, Elnaams söner, Jitma från Moab,</para>
+  <para style="li2">
+    <verse number="47" style="v"/>och Eliel, Oved och Jaasiel från Sova.</para>
+  <chapter number="12" style="c"/>
+  <para style="s2">Fler ansluter sig till David</para>
+  <para style="p">
+    <verse number="1" style="v"/>Dessa är de som förenade sig med David i Siklag, medan han fortfarande gömde sig för Saul, Kishs son. De var bland de kämpar som bistod honom i striden. <verse number="2" style="v"/>De var beväpnade med bågar och kunde använda stenslunga med både vänster och höger hand. De var benjaminiter, liksom Saul.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Ledaren var Achieser och därefter Joash, söner till Shemaa från Giva, Jesiel och Pelet, söner till Asmavet, Berekja, Jehu från Anatot, <verse number="4" style="v"/>Jishmaja från Givon, en av de trettio och deras ledare, Jeremia, Jachasiel, Jochanan, Josavad från Gedera, <verse number="5" style="v"/>Elusaj, Jerimot, Bealja, Shemarja, Shefatja från Haruf, <verse number="6" style="v"/>Elkana, Jishia, Asarel, Joeser och Jashovam, alla från Korachs släkt, <verse number="7" style="v"/>och Joela och Sevadja, söner till Jerocham från Gedor.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Några gaditer gick också över till David i bergfästet i öknen. De var alla tappra män, skickliga krigare, som kunde hantera sköld och spjut, med en uppsyn som lejon och snabba som gaseller i bergen.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Eser var den främste,</para>
+  <para style="li1">Obadja den andre, Eliav den tredje,</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Mishmanna den fjärde, Jeremia den femte,</para>
+  <para style="li1">
+    <verse number="11" style="v"/>Attaj den sjätte, Eliel den sjunde,</para>
+  <para style="li1">
+    <verse number="12" style="v"/>Jochanan den åttonde, Elsavad den nionde,</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Jeremia den tionde och Makbannaj den elfte.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Dessa män tillhörde Gads stam och var de främsta i hären. Den svagaste av dem kunde jämföras med hundra andra, och den starkaste med tusen. <verse number="15" style="v"/>De gick över Jordan i den första månaden, när den svämmade över sina bräddar, och de jagade bort alla dem som bodde i dalarna, både i öster och väster.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Andra av Benjamins män och några från Juda kom också till David i bergfästet. <verse number="17" style="v"/>Han gick ut och mötte dem och sa till dem: ”Om ni har kommit i fredliga avsikter för att hjälpa mig, är jag villig att förena mig med er. Men om ni har kommit för att förråda mig till mina fiender, fastän jag inte gjort något orätt, då ska våra förfäders Gud se det och döma er.”</para>
+  <para style="p">
+    <verse number="18" style="v"/>Då kom Anden över Amasaj, den främste bland de trettio, och han svarade:</para>
+  <para style="q1">”Vi tillhör dig, David,</para>
+  <para style="q2">vi är med dig, Jishajs son!</para>
+  <para style="q1">Välgång och framgång för dig</para>
+  <para style="q2">och för alla som står upp för dig,</para>
+  <para style="q3">för din Gud är din hjälp!”</para>
+  <para style="p">David tog alltså emot dem och lät dem bli ledare för sin trupp.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Några från Manasse gick över till David, när han skulle strida med filistéerna mot Saul. Men de gav dem aldrig någon hjälp, eftersom de filisteiska befälhavarna rådgjorde med varandra och skickade bort honom och sa: ”Det kan kosta oss huvudet, om han går över till sin herre Saul.” <verse number="20" style="v"/>När David gick till Siklag, gick dessa män från Manasse över till honom: Adnach, Josavad, Jediael, Mikael, Josavad, Elihu och Silletaj. Alla dessa hade befälet över enheter på tusen man i Manasse. <verse number="21" style="v"/>De hjälpte David när han stred mot rövarband. De var tappra och blev befälhavare i hären. <verse number="22" style="v"/>Dagligen slöt sig män till David, så att han till slut hade en stor armé, som Guds.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Detta är en förteckning över de antal väpnade män som slöt sig till David i Hebron för att kungariket skulle övergå till honom från Saul, så som <char style="nd">Herren</char> hade sagt.</para>
+  <para style="li1">
+    <verse number="24" style="v"/>Från Juda: 6 800 man, krigsrustade med sköld och spjut.</para>
+  <para style="li1">
+    <verse number="25" style="v"/>Från Simon: 7 100 krigsrustade man.</para>
+  <para style="li1">
+    <verse number="26" style="v"/>Från Levi: 4 600 man, <verse number="27" style="v"/>med Jojada, fursten inom Arons släkt, med 3 700, <verse number="28" style="v"/>och Sadok, en modig ung krigare med 22 officerare från sin familj.</para>
+  <para style="li1">
+    <verse number="29" style="v"/>Från Benjamin, Sauls stam, kom 3 000 man, varav de flesta varit lojala mot Sauls ätt.</para>
+  <para style="li1">
+    <verse number="30" style="v"/>Från Efraim: 20 800 tappra krigare, alla framstående i sina familjer.</para>
+  <para style="li1">
+    <verse number="31" style="v"/>Från ena hälften av Manasse: 18 000 man, utsedda för att göra David till kung.</para>
+  <para style="li1">
+    <verse number="32" style="v"/>Från Isaskar: män som förstod sin tid och visste vad Israel skulle göra, 200 ledare med sina släktingar under sig.</para>
+  <para style="li1">
+    <verse number="33" style="v"/>Från Sebulon: 50 000 vapenföra män, utrustade med alla slags vapen och fullständigt lojala mot David.</para>
+  <para style="li1">
+    <verse number="34" style="v"/>Från Naftali: 1 000 officerare och 37 000 man utrustade med sköld och spjut.</para>
+  <para style="li1">
+    <verse number="35" style="v"/>Från Dan: 28 600 stridsrustade soldater.</para>
+  <para style="li1">
+    <verse number="36" style="v"/>Från Asher: 40 000 vapenföra och stridsrustade soldater.</para>
+  <para style="li1">
+    <verse number="37" style="v"/>Från andra sidan Jordan, från Rubens och Gads stammar och den andra hälften av Manasses stam, 120 000 soldater, utrustade med alla slags vapen.</para>
+  <para style="p">
+    <verse number="38" style="v"/>Alla dessa stridsmän kom till Hebron frivilligt, beredda att kämpa i leden för att göra David till hela Israels kung. Också de övriga i Israel var enhälligt inställda på att göra David till kung. <verse number="39" style="v"/>Männen åt och drack tillsammans med David i tre dagar, för deras familjer försåg dem med proviant, <verse number="40" style="v"/>och dessutom förde folk från grannskapet och ända bortifrån Isaskar, Sebulon och Naftali dit mat på åsnor, kameler, mulor och oxar. Mängder av mjöl, fikonkakor, russinkakor, vin, olja, boskap och får fördes dit, och Israel gladde sig.</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">David för arken till Jerusalem</para>
+  <para style="s2">Ussa vidrör arken och dör</para>
+  <para style="r">(<ref loc="2SA 6:1-11">2 Sam 6:1-11</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Sedan David hade rådgjort med alla befälhavarna, med sina officerare med befäl över tusen och hundra, <verse number="2" style="v"/>talade han till hela Israel som hade samlats:</para>
+  <para style="p">”Om det är er önskan och <char style="nd">Herrens</char>, vår Guds vilja, så låt oss meddela våra bröder i hela Israels land, även präster och leviter i deras städer och omgivningar, och inbjuda dem att ansluta sig till oss. <verse number="3" style="v"/>Och låt oss hämta tillbaka Guds ark hit till oss, för vi har försummat den under Sauls tid.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Alla de närvarande samtyckte till att göra så, eftersom de ansåg att detta var rätt. <verse number="5" style="v"/>David samlade alltså hela Israel, ända från Shichor i Egypten upp till Levo-Hamat, för att föra Guds ark från Kirjat-Jearim. <verse number="6" style="v"/>David och hela Israel begav sig till Baala, dvs. Kirjat-Jearim i Juda, för att föra tillbaka <char style="nd">Herren</char> Guds ark, han som tronar mellan keruberna och efter vilken arken hade fått sitt namn. <verse number="7" style="v"/>De placerade Guds ark på en nygjord vagn, och Ussa och Achjo körde vagnen. <verse number="8" style="v"/>David och hela Israel gladde sig av hela sin kraft inför Gud med sång och med musik av lyror, harpor, tamburiner, cymbaler och trumpeter.</para>
+  <para style="p">
+    <verse number="9" style="v"/>När de kom fram till Kidons tröskplats, snavade oxarna och Ussa räckte ut sin hand för att stödja arken. <verse number="10" style="v"/>Då blev <char style="nd">Herren</char> vred på Ussa och slog ner honom, därför att han hade rört vid arken. Ussa dog där inför Gud. <verse number="11" style="v"/>Men David blev upprörd över att <char style="nd">Herren</char> så brutit ner Ussa och kallade platsen Peres Ussa<note caller="+" style="f"><char style="fr" closed="false">13:11 </char><char style="fq" closed="false">Peres </char><char style="ft" closed="false">är en anspelning på det hebreiska verbet för </char><char style="fqa" closed="false">bryta ner, bröt ner Ussa. </char><char style="ft" closed="false"><char style="xt">Jfr <ref loc="2SA 6:8">2 Sam 6:8</ref></char>.</char></note>, och så heter den fortfarande.</para>
+  <para style="p">
+    <verse number="12" style="v"/>David greps nu av fruktan för Gud. Han frågade: ”Hur ska jag kunna föra Guds ark till mig?”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Han förde den inte till sig i Davids stad, utan ställde in den hos gatiten Oved-Edom. <verse number="14" style="v"/>Guds ark blev kvar i Oved-Edoms hus i tre månader, och <char style="nd">Herren</char> välsignade Oved-Edom och hans familj och allt han hade.</para>
+  <chapter number="14" style="c"/>
+  <para style="s2">David i Jerusalem</para>
+  <para style="r">(<ref loc="2SA 5:11-16">2 Sam 5:11-16</ref>; <ref loc="1CH 3:5-8">1 Krön 3:5-8</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Kung Hiram i Tyros skickade budbärare till David med stockar av cederträ och murare och snickare för att bygga Davids palats. <verse number="2" style="v"/>Nu förstod David att <char style="nd">Herren</char> hade befäst hans kungadöme och upphöjt det för hans folk Israels skull.</para>
+  <para style="p">
+    <verse number="3" style="v"/>David tog sig fler hustrur i Jerusalem och blev far till fler söner och döttrar. <verse number="4" style="v"/>De söner som föddes i Jerusalem hette Shammua<note caller="+" style="f"><char style="fr" closed="false">14:4 </char><char style="ft" closed="false"><char style="tl">Shima</char> i <char style="xt"><ref loc="1CH 3:5">3:5</ref></char>.</char></note>, Shovav, Natan, Salomo, <verse number="5" style="v"/>Jivchar, Elishua, Elpelet, <verse number="6" style="v"/>Nogah, Nefeg, Jafia, <verse number="7" style="v"/>Elishama, Beeljada och Elifelet.</para>
+  <para style="s2">David besegrar filistéerna</para>
+  <para style="r">(<ref loc="2SA 5:17-25">2 Sam 5:17-25</ref>)</para>
+  <para style="p">
+    <verse number="8" style="v"/>Filistéerna fick höra att David var smord till kung över hela Israel, och de gav sig ut efter honom. Men David fick höra om det och drog ut mot dem. <verse number="9" style="v"/>Filistéerna for fram och plundrade i Refaimdalen. <verse number="10" style="v"/>Då frågade David Gud: ”Ska jag dra ut mot filistéerna? Kommer du att överlämna dem åt mig?” <char style="nd">Herren</char> svarade: ”Ja, gå! Jag ska överlämna dem åt dig!”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Då gick David till anfall vid Baal-Perasim och slog filistéerna där. David sa: ”Gud har brutit ner mina fiender genom min hand, liksom vatten som bryter fram.” Det är därför platsen kallas Baal-Perasim<note caller="+" style="f"><char style="fr" closed="false">14:11 </char><char style="ft" closed="false">En anspelning på det hebreiska ordet för </char><char style="fqa" closed="false">genombrott, Gud bryter fram.</char></note>.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Filistéerna hade övergett sina gudar på platsen, och David gav order om att de skulle brännas upp.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Men filistéerna återkom och plundrade dalen igen, <verse number="14" style="v"/>och David frågade Gud även denna gång.</para>
+  <para style="p">”Du ska inte gå efter dem, utan ta en omväg runt bakaträden”, svarade Gud, ”och anfall dem sedan från det hållet. <verse number="15" style="v"/>Gå till attack när du hör ljudet som av en här på marsch i trädtopparna. Då har Gud gått före dig för att slå filistéernas armé.” <verse number="16" style="v"/>David gjorde som Gud hade befallt honom, och han slog filistéernas armé och förföljde den från Givon ända till Geser.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Davids ryktbarhet spred sig till alla länder, och <char style="nd">Herren</char> lät alla folk bäva för honom.</para>
+  <chapter number="15" style="c"/>
+  <para style="s2">Leviterna för arken till Jerusalem</para>
+  <para style="p">
+    <verse number="1" style="v"/>David byggde flera hus åt sig i Davids stad, och han gjorde också i ordning en plats åt Guds ark och reste ett tält för den. <verse number="2" style="v"/>Sedan sa David: ”Inga andra än leviter får bära Guds ark, för <char style="nd">Herren</char> har utvalt dem till att bära <char style="nd">Herrens</char> ark och göra tjänst inför honom för alltid.”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Sedan samlade David hela Israel i Jerusalem för att föra upp <char style="nd">Herrens</char> ark till den plats han hade gjort i ordning för den. <verse number="4" style="v"/>Han kallade samman Arons ättlingar och leviter:</para>
+  <para style="li1">
+    <verse number="5" style="v"/>från Kehats släkt,</para>
+  <para style="li2">med Uriel som ledare och hans släktingar, 120</para>
+  <para style="li1">
+    <verse number="6" style="v"/>från Meraris släkt,</para>
+  <para style="li2">med Asaja som ledare och hans släktingar, 220</para>
+  <para style="li1">
+    <verse number="7" style="v"/>från Gershoms släkt,</para>
+  <para style="li2">med Joel som ledare och hans släktingar, 130</para>
+  <para style="li1">
+    <verse number="8" style="v"/>från Elisafans släkt,</para>
+  <para style="li2">med Shemaja som ledare och hans släktingar, 200</para>
+  <para style="li1">
+    <verse number="9" style="v"/>från Hebrons släkt,</para>
+  <para style="li2">med Eliel som ledare och hans släktingar, 80</para>
+  <para style="li1">
+    <verse number="10" style="v"/>från Ussiels släkt,</para>
+  <para style="li2">med Amminadav som ledare och hans släktingar, 112.</para>
+  <para style="p">
+    <verse number="11" style="v"/>David kallade också till sig prästerna Sadok och Evjatar, och leviterna Uriel, Asaja, Joel, Shemaja, Eliel och Amminadav.</para>
+  <para style="p">
+    <verse number="12" style="v"/>”Ni är överhuvuden för leviternas familjer”, sa han till dem. ”Rena er nu tillsammans med alla era bröder, så att ni kan föra <char style="nd">Herrens</char>, Israels Guds, ark, till den plats som jag har gjort i ordning. <verse number="13" style="v"/>Eftersom ni inte var med oss förra gången, bröt <char style="nd">Herren</char>, vår Gud, ner en av oss. Vi hade inte rådfrågat honom som vi borde.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>Prästerna och leviterna renade sig då för att föra upp <char style="nd">Herrens</char>, Israels Guds ark. <verse number="15" style="v"/>Sedan bar leviterna Guds ark på sina axlar med bärstänger, precis som Mose hade befallt i enlighet med <char style="nd">Herrens</char> ord.</para>
+  <para style="p">
+    <verse number="16" style="v"/>David gav också leviternas ledare order att utse sångare och sjunga lovsång till musik av lyra, harpa och cymbal. <verse number="17" style="v"/>Leviterna valde Heman, Joels son, och av hans bröder Asaf, Berekjas son, och av deras bröder Etan, Kushajas son, från Meraris släkt.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Vidare deras bröder i andra ordningen:</para>
+  <para style="p">Sakarja, Ben<note caller="+" style="f"><char style="fr" closed="false">15:18 </char><char style="fq" closed="false">Ben </char><char style="ft" closed="false">betyder </char><char style="fqa" closed="false">son </char><char style="ft" closed="false">och brukar översättas. Här är dock dess ev. samhörighet med föregående namn oklar.</char></note>, Jaasiel, Shemiramot, Jechiel, Unni, Eliav, Benaja, Maaseja, Mattitja, Eliflehu, Mikneja, Oved-Edom och Jeiel, dörrvaktarna. <verse number="19" style="v"/>Heman, Asaf och Etan utsågs att spela på kopparcymbalerna. <verse number="20" style="v"/>Sakarja, Jaasiel, Shemiramot, Jechiel, Unni, Eliav, Maaseja och Benaja spelade lyra till alamót<note caller="+" style="f"><char style="fr" closed="false">15:20 </char><char style="ft" closed="false">Betyder </char><char style="fqa" closed="false">till unga kvinnor. </char><char style="ft" closed="false">Kanske en musikalisk term eller benämning på en känd sång. Samma uttryck förekommer i överskrifter till Ps 46.</char></note>. <verse number="21" style="v"/>Mattitja, Eliflehu, Mikneja, Oved-Edom, Jeiel och Asasja spelade harpa och ledde sången till sheminit<note caller="+" style="f"><char style="fr" closed="false">15:21 </char><char style="ft" closed="false">Även här, som i föregående vers, finns en, troligen musikalisk term, </char><char style="fq" closed="false">sheminit</char><char style="ft" closed="false">, vars betydelse är okänd.</char></note>. <verse number="22" style="v"/>Kenanja, leviternas sångledare, ledde sången<note caller="+" style="f"><char style="fr" closed="false">15:22 </char><char style="ft" closed="false">Eller: </char><char style="fq" closed="false">Kenanja</char><char style="ft" closed="false">, ledare for leviterna som skulle bära arken, ledde flyttningen.</char></note>. Det var han skicklig i.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Berekja och Elkana var dörrvaktare vid arken. <verse number="24" style="v"/>Prästerna Shevanja, Joshafat, Netanel, Amasaj, Sakarja, Benaja och Elieser blåste trumpet framför Guds ark. Oved-Edom och Jechia var dörrvaktare för arken.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Sedan begav sig David och de äldste i Israel tillsammans med de högre officerarna till Oved-Edoms hus för att föra upp <char style="nd">Herrens</char> förbundsark under jubel. <verse number="26" style="v"/>Eftersom Gud hjälpte leviterna, som bar <char style="nd">Herrens</char> förbundsark, offrade de sju tjurar och sju baggar. <verse number="27" style="v"/>David och leviterna, som bar arken, sångarna och Kenanja, som ledde sången, var alla klädda i mantlar av fint linne. David bar även en linne-efod. <verse number="28" style="v"/>Hela Israel förde upp <char style="nd">Herrens</char> förbundsark under jubelrop, hornmusik, klang av trumpeter och horn, cymbaler och lyror och harpor.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Men när <char style="nd">Herrens</char> förbundsark kom fram till Davids stad, såg Mikal, Sauls dotter, ut genom fönstret. Hon såg kung David hoppa och dansa av glädje, och hon föraktade honom.</para>
+  <chapter number="16" style="c"/>
+  <para style="s2">David prisar Herren</para>
+  <para style="p">
+    <verse number="1" style="v"/>Guds ark fördes in i tältet som David hade rest, och de bar fram brännoffer och gemenskapsoffer till Gud.</para>
+  <para style="p">
+    <verse number="2" style="v"/>När David avslutat brännoffren, välsignade han folket i <char style="nd">Herrens</char> namn, <verse number="3" style="v"/>och sedan gav han var och en av israeliterna, både män och kvinnor, en kaka bröd, en dadelkaka och en druvkaka.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Han utsåg några leviter att tjänstgöra framför <char style="nd">Herrens</char> ark; de skulle åkalla, prisa och lova <char style="nd">Herren</char>, Israels Gud.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Asaf blev ledare, Sakarja den andre, och sedan Jeiel<note caller="+" style="f"><char style="fr" closed="false">16:5 </char><char style="ft" closed="false">Enligt <char style="xt"><ref loc="1CH 15:18">15:18</ref></char> <char style="tl">Jaasiel</char>.</char></note>, Shemiramot, Jechiel, Mattitja, Eliav, Benaja, Oved-Edom och Jeiel. De spelade lyra och harpa, Asaf slog på cymbalerna <verse number="6" style="v"/>och prästerna Benaja och Jachasiel blåste ständigt på sina trumpeter framför Guds förbundsark.</para>
+  <para style="s1">David lovprisar Herren</para>
+  <para style="r">(<ref loc="PSA 105:1-15">Ps 105:1-15</ref>; <ref loc="PSA 96:1-13">96:1-13</ref>; <ref loc="PSA 106:1">106:1</ref>; <ref loc="PSA 106:47-48">106:47-48</ref>)</para>
+  <para style="p">
+    <verse number="7" style="v"/>Den dagen uppdrog David för första gången Asaf och hans bröder att lovsjunga <char style="nd">Herren</char>:</para>
+  <para style="q1">
+    <verse number="8" style="v"/>”Prisa <char style="nd">Herren</char>, åkalla honom!</para>
+  <para style="q2">Gör hans verk kända för alla folk!</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Sjung och spela till hans ära,</para>
+  <para style="q2">berätta om alla hans under!</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Lovprisa hans heliga namn,</para>
+  <para style="q2">låt dem som söker <char style="nd">Herren</char> få en innerlig glädje!</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Vänd er till <char style="nd">Herren</char> och hans kraft,</para>
+  <para style="q2">sök honom ständigt!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>Tänk på de mäktiga gärningar han har gjort,</para>
+  <para style="q2">hans under och den dom som han uttalat,</para>
+  <para style="q1">
+    <verse number="13" style="v"/>ni som är ättlingar till hans tjänare Israel,</para>
+  <para style="q2">till Jakob<note caller="+" style="f"><char style="fr" closed="false">16:13 </char><char style="ft" closed="false">Jakob, Israel, <char style="xt">se <ref loc="GEN 32:28">1 Mos 32:28</ref></char>. Upprepningen är en ofta förekommande poetisk form, parallellism.</char></note>, hans utvalde.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Han är <char style="nd">Herren</char>, vår Gud.</para>
+  <para style="q2">Över hela jorden sträcker sig hans domar.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>Han minns för evigt sitt förbund<note caller="+" style="f"><char style="fr" closed="false">16:15 </char><char style="ft" closed="false">Enligt den masoretiska texten: </char><char style="fqa" closed="false">Kom för alltid ihåg hans förbund. </char><char style="ft" closed="false">Jfr även <char style="xt"><ref loc="PSA 105:8">Ps 105:8</ref></char>.</char></note>,</para>
+  <para style="q2">sina befallningar för tusen generationer,</para>
+  <para style="q1">
+    <verse number="16" style="v"/>det förbund som han slöt med Abraham,</para>
+  <para style="q2">och sin ed till Isak.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Han bekräftade det till Jakob som en stadga,</para>
+  <para style="q2">till Israel som ett evigt förbund.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Han sa: ’Jag ska ge dig Kanaans land</para>
+  <para style="q2">till arv och egendom.’</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>Fastän de<note caller="+" style="f"><char style="fr" closed="false">16:19 </char><char style="ft" closed="false">Enligt Septuaginta; se även <char style="xt"><ref loc="PSA 105:12">Ps 105:12</ref></char>. Enligt den masoretiska texten </char><char style="fqa" closed="false">ni.</char></note> var få till antalet,</para>
+  <para style="q2">en liten skara främlingar,</para>
+  <para style="q1">
+    <verse number="20" style="v"/>och vandrade från folk till folk,</para>
+  <para style="q2">från rike till rike,</para>
+  <para style="q1">
+    <verse number="21" style="v"/>lät han ingen förtrycka dem,</para>
+  <para style="q2">och han straffade kungar för deras skull.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>’Rör inte mina smorda,</para>
+  <para style="q2">skada inte mina profeter!’</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="23" style="v"/>Sjung till <char style="nd">Herrens</char> ära, hela jorden!</para>
+  <para style="q2">Ropa ut hans räddning varje dag!</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Förkunna hans härlighet bland folken,</para>
+  <para style="q2">berätta för alla människor om hans under!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="25" style="v"/>För <char style="nd">Herren</char> är stor och högt prisad,</para>
+  <para style="q2">värd att frukta, mer än alla gudar.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Folkens alla gudar är avgudar,</para>
+  <para style="q2">men <char style="nd">Herren</char> har gjort himlen.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Majestät och prakt omger honom,</para>
+  <para style="q2">kraft och glädje finns i hans boning.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="28" style="v"/>Ge <char style="nd">Herren</char> ära, alla folkslag,</para>
+  <para style="q2">erkänn hans majestät och kraft!</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Ge <char style="nd">Herrens</char> höga namn ära,</para>
+  <para style="q2">kom med era offer till honom,</para>
+  <para style="q1">tillbe <char style="nd">Herren</char> i helig skrud!<note caller="+" style="f"><char style="fr" closed="false">16:29 </char><char style="fq" closed="false">I helig skrud </char><char style="ft" closed="false">kan syfta på Herrens härlighet, eller på den dräkt prästerna använde.</char></note></para>
+  <para style="q2">
+    <verse number="30" style="v"/>Darra inför honom, hela jorden!</para>
+  <para style="q1">Världen står fast, den kan inte rubbas.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="31" style="v"/>Låt himlen vara glad och jorden jubla!</para>
+  <para style="q2">Låt dem förkunna bland folken att <char style="nd">Herren</char> regerar!</para>
+  <para style="q1">
+    <verse number="32" style="v"/>Låt havet brusa och allt som finns i det!</para>
+  <para style="q2">Låt fälten glädjas och allt som växer på dem!</para>
+  <para style="q1">
+    <verse number="33" style="v"/>Skogens alla träd ska susa av lovsånger,</para>
+  <para style="q2">ja, de ska jubla inför <char style="nd">Herren</char>,</para>
+  <para style="q1">ty han kommer för att döma jorden.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="34" style="v"/>Prisa <char style="nd">Herren</char>, för han är god.</para>
+  <para style="q2">Hans nåd varar i evighet.</para>
+  <para style="q1">
+    <verse number="35" style="v"/>Säg: Rädda oss, Gud, du vår räddare!</para>
+  <para style="q2">Samla oss igen och befria oss från dessa folk,</para>
+  <para style="q1">så att vi får prisa ditt heliga namn</para>
+  <para style="q2">och tacka och lova dig.</para>
+  <para style="q1">
+    <verse number="36" style="v"/>Lovad vare <char style="nd">Herren</char>, Israels Gud,</para>
+  <para style="q2">från evighet till evighet!”</para>
+  <para style="p">Och allt folket sa: ”Amen!” och prisade <char style="nd">Herren</char>.</para>
+  <para style="p">
+    <verse number="37" style="v"/>David lämnade Asaf och hans bröder i ständig tjänst inför <char style="nd">Herrens</char> förbundsark, enligt föreskrifterna för varje dag, <verse number="38" style="v"/>liksom Oved-Edom och hans 68 medhjälpare. Oved-Edom, Jedutuns son, var dörrvaktare tillsammans med Hosa.</para>
+  <para style="p">
+    <verse number="39" style="v"/>Prästen Sadok och hans bröder, prästerna, lämnade David kvar vid <char style="nd">Herrens</char> boning på offerhöjden i Givon, <verse number="40" style="v"/>för att de alltid skulle bära fram brännoffer inför <char style="nd">Herren</char> på brännofferaltaret varje morgon och kväll, i enlighet med den lag som <char style="nd">Herren</char> hade gett Israel. <verse number="41" style="v"/>Med dem var också Heman, Jedutun och andra utvalda, som var utsedda att prisa <char style="nd">Herren</char>, för hans nåd varar för evigt. <verse number="42" style="v"/>Heman och Jedutun var ansvariga för musiken med trumpet och cymbal och andra instrument till gudstjänstssången. Jedutuns söner var dörrvaktare.</para>
+  <para style="p">
+    <verse number="43" style="v"/>Sedan återvände folket hem, var och en till sitt, och David återvände för att välsigna sin familj.</para>
+  <chapter number="17" style="c"/>
+  <para style="s1">Guds löften till David</para>
+  <para style="r">(<ref loc="2SA 7:1-17">2 Sam 7:1-17</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>När David hade bott en tid i sitt nya palats, sa han till profeten Natan: ”Här bor jag i ett hus med väggar av cederträ, medan <char style="nd">Herrens</char> förbundsark får stå i ett tält!” <verse number="2" style="v"/>”Gör vad du har i sinnet”, svarade Natan, ”för Gud är med dig.”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Men samma natt kom Guds ord till Natan:</para>
+  <para style="pm">
+    <verse number="4" style="v"/>”Gå och säg till min tjänare David: ’Så säger <char style="nd">Herren</char>: ”Du är inte den som ska bygga mig ett hus att bo i. <verse number="5" style="v"/>Jag har aldrig bott i hus, utan har ständigt bott i tält och flyttat från det ena stället till det andra, ända sedan jag förde Israel ut ur Egypten. <verse number="6" style="v"/>Under hela denna tid som jag förflyttat mig med israeliterna har jag väl aldrig frågat någon av Israels ledare<note caller="+" style="f"><char style="fr" closed="false">17:6 </char><char style="ft" closed="false">Ordagrant: </char><char style="fqa" closed="false">domare.</char></note>, de som jag utsåg till herdar för mitt folk, varför de inte byggt mig ett hus av cederträ?” ’</para>
+  <para style="pm">
+    <verse number="7" style="v"/>Säg så här till min tjänare David: ’Så säger härskarornas <char style="nd">Herre</char>: ”Jag tog dig från betesmarken och fåren, när du var en herde, och har gjort dig till furste över mitt folk Israel. <verse number="8" style="v"/>Jag har varit med dig vart du än gått. Jag har utrotat dina fiender framför dig. Jag ska göra ditt namn lika ryktbart som de största på hela jorden. <verse number="9" style="v"/>Jag ska bereda en plats åt mitt folk Israel i ett land där de kan få ett hem utan att bli störda. Ogudaktiga folk ska inte längre kunna hota dem som de gjorde tidigare <verse number="10" style="v"/>på den tiden när jag tillsatte domare över mitt folk Israel. Jag ska kuva alla dina fiender.</para>
+  <para style="pm">Jag förkunnar nu att <char style="nd">Herren</char> ska bygga ett hus åt dig. <verse number="11" style="v"/>När dina dagar är till ända och du har gått till dina förfäder, ska jag upphöja din avkomling<note caller="+" style="f"><char style="fr" closed="false">17:11 </char><char style="ft" closed="false">Bokstavligen </char><char style="fqa" closed="false">din säd. </char><char style="ft" closed="false"><char style="xt">Se not till <ref loc="GEN 12:7">1 Mos 12:7</ref></char></char></note>, en av dina söner, på din tron, och jag ska befästa hans kungarike. <verse number="12" style="v"/>Han är den som ska bygga ett hus åt mig, och jag ska befästa hans tron för evigt. <verse number="13" style="v"/>Jag ska vara hans Far, och han ska vara min son, och jag ska aldrig låta min nåd vika från honom, som jag lät den vika från din företrädare. <verse number="14" style="v"/>Jag ska sätta honom över mitt hus och över mitt rike för evigt, och hans tron ska bestå i evighet.” ’ ”</para>
+  <para style="p">
+    <verse number="15" style="v"/>Natan berättade för David allt det som Herren hade sagt och uppenbarat.</para>
+  <para style="s2">David böjer sig för Herrens vilja</para>
+  <para style="r">(<ref loc="2SA 7:18-29">2 Sam 7:18-29</ref>)</para>
+  <para style="p">
+    <verse number="16" style="v"/>Då gick kung David in och satte sig inför <char style="nd">Herren</char> och sa:</para>
+  <para style="pm">”<char style="nd">Herre</char> Gud, vem är jag och vad är min familj, eftersom du har fört mig ända hit? <verse number="17" style="v"/>Skulle inte det du redan har gjort vara nog i dina ögon, o Gud? Nu har du också berättat om framtiden för din tjänares ätt, och du har sett mig som den mest upphöjde bland människor, o <char style="nd">Herre</char>, Gud<note caller="+" style="f"><char style="fr" closed="false">17:17 </char><char style="ft" closed="false">Innebörden i den sista delen av versen är oklar och översättningen därför osäker.</char></note>!</para>
+  <para style="pm">
+    <verse number="18" style="v"/>Vad ska David mera säga till dig inför denna ära du visat din tjänare? Du känner din tjänare. <verse number="19" style="v"/><char style="nd">Herre</char>, för din tjänares skull och enligt din vilja, har du gjort allt detta stora och låtit mig få veta alla dessa stora ting.</para>
+  <para style="pm">
+    <verse number="20" style="v"/>
+    <char style="nd">Herre</char>, det finns ingen som du och det finns ingen annan Gud än du! Det har vi hört med våra egna öron. <verse number="21" style="v"/>Vilket folk på jorden är som ditt folk Israel, den enda nation på jorden med en Gud som har lett och räddat den åt sig, för att göra sitt namn känt genom stora och mäktiga under och genom att fördriva andra folk för ditt folk, som du har räddat ut ur Egypten? <verse number="22" style="v"/>Du har gjort ditt folk Israel till ditt eget för evigt, och du, <char style="nd">Herre</char>, har blivit deras Gud.</para>
+  <para style="pm">
+    <verse number="23" style="v"/>
+    <char style="nd">Herre</char>, låt nu det ord stå fast som du har talat om mig, din tjänare, och om min ätt, och gör vad du lovat. <verse number="24" style="v"/>Låt det stå fast, och ditt namn kommer att bli ärat i evighet. Människor kommer att säga: ’Härskarornas <char style="nd">Herre</char> är verkligen Israels Gud!’ Och din tjänare Davids hus kommer att bestå inför dig.</para>
+  <para style="pm">
+    <verse number="25" style="v"/>Min Gud, du har uppenbarat för mig, din tjänare, att du vill bygga ett hus åt mig. Därför har jag, din tjänare, frimodighet att be till dig. <verse number="26" style="v"/>För du, <char style="nd">Herre</char>, är Gud, som har lovat mig, din tjänare, allt detta underbara. <verse number="27" style="v"/>Nu har du velat välsigna din tjänares hus, så att det för evigt får bestå inför dig, för du, <char style="nd">Herre</char>, har välsignat det, och det är för alltid välsignat.”</para>
+  <chapter number="18" style="c"/>
+  <para style="s1">Davids erövringar</para>
+  <para style="r">(<ref loc="2SA 8:1-14">2 Sam 8:1-14</ref>)</para>
+  <para style="s2">David besegrar många fiender</para>
+  <para style="p">
+    <verse number="1" style="v"/>Efter en tid besegrade David filistéerna, underkuvade dem och intog Gat med dess kringliggande städer från dem.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Han besegrade också moabiterna och tvingade folket att underordna sig och betala skatt.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Han besegrade också kung Hadadeser i Sova ända bort till Hamat, när Hadadeser stod i begrepp att stärka sin kontroll över floden Eufrat. <verse number="4" style="v"/>David tillfångatog 1 000 av hans vagnar med 7 000 soldater i vagnar och 20 000 fotsoldater. Han skar av hälsenorna på alla hästar utom på ett hundratal.</para>
+  <para style="p">
+    <verse number="5" style="v"/>När araméerna kom från Damaskus till kung Hadadesers hjälp, slog David ner och dödade 22 000 av dem. <verse number="6" style="v"/>Han förlade garnisoner bland araméerna i Damaskus och tvingade dem att underordna sig och betala skatt. <char style="nd">Herren</char> lät David vinna seger vart han än drog ut.</para>
+  <para style="p">
+    <verse number="7" style="v"/>De guldsköldar som tillhörde kung Hadadesers officerare tog David med sig till Jerusalem. <verse number="8" style="v"/>Han tog också stora mängder koppar från Hadadesers städer Tivchat och Kun. Salomo använde den sedan till att göra kopparhavet, pelarna och kopparkärlen.</para>
+  <para style="p">
+    <verse number="9" style="v"/>När kung Tou från Hamat hörde att David hade besegrat Sovas kung Hadadesers armé, <verse number="10" style="v"/>skickade han sin son Hadoram för att hälsa på och gratulera David till segern över Hadadeser, som hade fört krig mot Tou. Hadoram förde med sig gåvor av guld, silver och koppar.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Kung David helgade dem åt <char style="nd">Herren</char>, precis som det silver och guld han tagit från de besegrade folken: araméerna, moabiterna, ammoniterna, filistéerna och amalekiterna.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Avishaj, Serujas son, dödade 18 000 edoméer i Saltdalen. <verse number="13" style="v"/>Han förlade trupper i Edom, och edoméerna blev underordnade David. <char style="nd">Herren</char> gav David seger var han än drog fram.</para>
+  <para style="p">
+    <verse number="14" style="v"/>David regerade över hela Israel och sörjde för lag och rätt för hela sitt folk. <verse number="15" style="v"/>Joav, Serujas son, var överbefälhavare för hären. Joshafat, Achiluds son, var kansler. <verse number="16" style="v"/>Sadok, Achituvs son, och Achimelek, Evjatars son, var präster, och Shavsha var kungens sekreterare. <verse number="17" style="v"/>Benaja, Jojadas son, var chef för keretéerna och peletéerna, och Davids söner var de främsta männen vid kungens sida.</para>
+  <chapter number="19" style="c"/>
+  <para style="s2">Davids armé möter ammoniterna</para>
+  <para style="r">(<ref loc="2SA 10:1-19">2 Sam 10:1-19</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>En tid därefter dog Ammons kung Nachash och hans son efterträdde honom. <verse number="2" style="v"/>”Jag vill visa min vänskap mot Nachashs son Hanun, eftersom hans far visade mig vänskap”, tänkte David och sände budbärare för att beklaga hans fars död.</para>
+  <para style="p">Men när Davids sändebud kom till Hanun i ammoniternas land för att trösta honom, <verse number="3" style="v"/>sa de ammonitiska furstarna till honom: ”Låt inte lura dig att David har skickat hit de där männen med tröst för din fars skull! De har kommit hit för att spionera och spana, för att de ska kunna inta landet.” <verse number="4" style="v"/>Hanun grep då Davids sändebud, lät raka av dem skägget och klippa av nedre hälften av deras kläder, innan han skickade iväg dem.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Man gick till David och berättade vad som hänt, och David skickade män att möta dem, eftersom de hade blivit så kränkta. Han uppmanade dem att stanna kvar i Jeriko tills skägget hade vuxit ut och sedan komma tillbaka.</para>
+  <para style="p">
+    <verse number="6" style="v"/>När ammoniterna förstod att de hade gjort sig förhatliga för David, sände Hanun och ammoniterna tusen talenter<note caller="+" style="f"><char style="fr" closed="false">19:6 </char><char style="ft" closed="false">En talent var ungefär 34 kilo; här är det alltså frågan om ca 35 ton silver.</char></note> silver för att leja vagnar och ryttare från de arameiska rikena Naharajim, Maaka och Sova. <verse number="7" style="v"/>De lejde 32 000 vagnar, och kungen av Maaka själv och hela hans armé ställde upp. De slog läger vid Medeva, och ammoniterna mobiliserades från sina städer för att strida.</para>
+  <para style="p">
+    <verse number="8" style="v"/>När David fick höra detta, skickade han ut Joav med hela hären, elittrupperna. <verse number="9" style="v"/>Ammoniterna ställde upp utanför stadsporten, medan de kungar som kommit dit fanns för sig ute på det öppna fältet.</para>
+  <para style="p">
+    <verse number="10" style="v"/>När Joav insåg att han hade fientliga styrkor både framför och bakom sig, valde han ut de bästa krigarna i Israel och ställde upp dem mot araméerna. <verse number="11" style="v"/>Resten av armén överlämnade han åt sin bror Avishaj, och de ställde upp sig mot ammoniterna.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Joav sa: ”Om araméerna är för starka för mig, får du komma och rädda mig. Och om ammoniterna är för starka för dig, kommer jag och räddar dig. <verse number="13" style="v"/>Var stark och modig, och låt oss kämpa tappert för vårt folk och för vår Guds städer! Sedan gör <char style="nd">Herren</char> vad han finner vara bäst.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>När Joav och hans soldater anföll araméerna, flydde de för honom. <verse number="15" style="v"/>När ammoniterna såg att araméerna flydde, flydde de för hans bror Avishaj in i staden. Då återvände Joav till Jerusalem.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Men när araméerna insåg att de hade blivit besegrade av Israel, skickade de efter förstärkning från araméer på andra sidan floden Eufrat, och de kom anförda av Shofak, överbefälhavaren över Hadadesers här. <verse number="17" style="v"/>Då David fick höra detta, samlade han hela Israels armé och tågade över Jordan. När han kom fram, gick han i ställning mot dem. Där ställde araméerna upp och gav sig i strid med David. <verse number="18" style="v"/>De flydde för Israel och David dödade 7 000 stridsvagnssoldater och 40 000 fotsoldater. Han dödade också Shofak, araméernas överbefälhavare.</para>
+  <para style="p">
+    <verse number="19" style="v"/>När Hadadesers män insåg att de blivit slagna av Israel, slöt de fred med David och blev hans undersåtar. Araméerna vågade sedan inte längre hjälpa ammoniterna.</para>
+  <chapter number="20" style="c"/>
+  <para style="s2">Davids armé besegrar ammoniterna</para>
+  <para style="r">(<ref loc="2SA 11:1">2 Sam 11:1</ref>; <ref loc="2SA 12:26-31">12:26-31</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Vid årsskiftet, den tid då kungarna brukade dra ut i fält, ledde Joav krigshären, skövlade ammoniternas land och belägrade Rabba. David stannade i Jerusalem. Joav intog Rabba och förstörde det. <verse number="2" style="v"/>David tog kronan från Milkoms<note caller="+" style="f"><char style="fr" closed="false">20:2 </char><char style="ft" closed="false">Eller </char><char style="fqa" closed="false">deras kung, </char><char style="ft" closed="false">enligt den masoretiska texten. Att uppfatta ordet som ett namn, </char><char style="fq" closed="false">Milkom</char><char style="ft" closed="false">, är dock mer troligt (så även i Septuaginta).</char></note> huvud. Den var gjord av guld, prydd med infattade dyrbara stenar och vägde över 30 kilo. Den sattes på Davids huvud. Han tog också en stor mängd krigsbyte från staden. <verse number="3" style="v"/>Befolkningen där inne förde han ut och satte i arbete med sågar, järnhackor och yxor, som han brukade göra med alla ammonitiska städer. Sedan återvände David och armén till Jerusalem.</para>
+  <para style="s2">David i strid med filistéerna</para>
+  <para style="r">(<ref loc="2SA 21:18-22">2 Sam 21:18-22</ref>)</para>
+  <para style="p">
+    <verse number="4" style="v"/>Därefter uppstod en strid igen mot filistéerna vid Geser. Sibbekaj av Hushas släkt dödade så Sippaj, en ättling till Rafa, och filistéerna kapitulerade. <verse number="5" style="v"/>Under ett annat krig med filistéerna dödade Elchanan, Jairs son, Lachmi, bror till Goljat från Gat, som hade ett spjut med ett skaft som var som en vävbom.</para>
+  <para style="p">
+    <verse number="6" style="v"/>I en annan strid vid Gat deltog en jätte från Rafas ätt med sex fingrar på varje hand och sex tår på varje fot, sammanlagt tjugofyra. <verse number="7" style="v"/>Han hånade Israel och dödades av Jonatan, som var son till Davids bror Shima. <verse number="8" style="v"/>Alla dessa som dödades av David och hans män var ättlingar till Rafa i Gat.</para>
+  <chapter number="21" style="c"/>
+  <para style="ms2">Förberedelser för templet</para>
+  <para style="mr">(<ref loc="1CH 21:1-29:20">21:1—29:20</ref>)</para>
+  <para style="s1">Folkräkning och upptäckten av tempelplatsen</para>
+  <para style="r">(<ref loc="2SA 24:1-17">2 Sam 24:1-17</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Men så reste sig Satan mot Israel och fick David att börja en folkräkning i Israel.</para>
+  <para style="p">
+    <verse number="2" style="v"/>David sa till Joav och folkets överbefälhavare: ”Gå och räkna israeliterna från Beer Sheva till Dan och meddela mig resultatet, så att jag får veta deras antal!” <verse number="3" style="v"/>Men Joav svarade: ”Må <char style="nd">Herren</char> föröka sitt folk hundra gånger! Är de inte alla dina undersåtar, min herre kung? Varför begär du, min herre, detta? Varför dra skuld över Israel?”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Joav fick dock böja sig för kungens ord, så Joav gick och besökte hela Israel och återvände sedan till Jerusalem. <verse number="5" style="v"/>Han rapporterade resultatet av mönstringen till David: i hela Israel fanns det 1 100 000 svärdbeväpnade män och 470 000 svärdbeväpnade män i Juda, <verse number="6" style="v"/>men han räknade inte med Levis och Benjamins stammar, för han fann kungens befallning avskyvärd. <verse number="7" style="v"/>Denna befallning misshagade också Gud, och han straffade därför Israel.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Då sa David till Gud: ”Jag har begått en svår synd när jag gjort detta. Förlåt mig, din tjänare, min skuld! Jag har gjort något mycket dåraktigt.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Då sa <char style="nd">Herren</char> till Gad, Davids siare: <verse number="10" style="v"/>”Gå och säg till David: ’Så säger <char style="nd">Herren</char>: ”Tre ting lägger jag fram för dig. Välj ett av dem, så låter jag det drabba dig.” ’ ”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Gad gick till David och sa till honom: ”Så säger <char style="nd">Herren</char>: ’Gör ditt val: <verse number="12" style="v"/>tre års hungersnöd, tre månaders flykt för dina fiender utan att undkomma deras svärd, eller tre dagar av <char style="nd">Herrens</char> svärd, en dödlig pest som <char style="nd">Herrens</char> ängel ska låta komma över varje del av landet.’ Tänk över vilket svar jag ska ge honom som har sänt mig.”</para>
+  <para style="p">
+    <verse number="13" style="v"/>”Jag är i stor vånda”, sa David till Gad. ”Låt mig falla i <char style="nd">Herrens</char> händer, för <char style="nd">Herrens</char> barmhärtighet är stor. I människors händer vill jag inte falla.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>
+    <char style="nd">Herren</char> sände då en pest över Israel och 70 000 män dog av den. <verse number="15" style="v"/>Gud sände en ängel för att förstöra Jerusalem, men när han skulle förstöra staden, såg <char style="nd">Herren</char> det och ångrade det onda och sa till ängeln som dödade folket: ”Det är nog! Dra tillbaka din hand!” <char style="nd">Herrens</char> ängel stod just då vid jevusén Ornans<note caller="+" style="f"><char style="fr" closed="false">21:15 </char><char style="ft" closed="false">Detta är en annan variant av samma namn, </char><char style="fqa" closed="false">Aravna, </char><char style="ft" closed="false">i <char style="xt"><ref loc="2SA 24:18">2 Sam 24:18</ref></char>.</char></note> tröskplats.</para>
+  <para style="p">
+    <verse number="16" style="v"/>David fick se <char style="nd">Herrens</char> ängel stå där mellan himmel och jord och peka mot Jerusalem med sitt dragna svärd. Då föll han och de äldste ner på sina ansikten, klädda i säcktyg.</para>
+  <para style="p">
+    <verse number="17" style="v"/>David sa till Gud: ”Jag var väl den som gav befallning om folkräkningen! Jag är den som har syndat och gjort det onda. Men vad har denna min hjord gjort? <char style="nd">Herre</char>, min Gud, låt ditt straff drabba mig och min familj, men låt inte ditt eget folk plågas!”</para>
+  <para style="p">
+    <verse number="18" style="v"/>
+    <char style="nd">Herrens</char> ängel befallde då Gad att säga till David att gå upp och bygga ett altare åt <char style="nd">Herren</char> på jevusén Ornans tröskplats. <verse number="19" style="v"/>Då gick David, som Gad hade talat i <char style="nd">Herrens</char> namn. <verse number="20" style="v"/>Ornan, som höll på att tröska vete, vände sig om och såg ängeln. Hans fyra söner som var med honom gömde sig. <verse number="21" style="v"/>När David kom till Ornan och han såg honom, lämnade han tröskplatsen och bugade sig till marken för David.</para>
+  <para style="p">
+    <verse number="22" style="v"/>”Ge mig tröskplatsen”, sa David till Ornan. ”Jag ska bygga ett altare där åt <char style="nd">Herren</char>, så att folkets plåga upphör. Låt mig få den för full betalning.” <verse number="23" style="v"/>”Ta den, min herre och kung, och använd den som du vill”, sa Ornan till David. ”Här är boskap till brännoffret och tröskverktygen till ved och vete till matoffret. Jag ger dig alltsammans.” <verse number="24" style="v"/>Kung David svarade Ornan: ”Nej, jag vill köpa det till fullt pris. Jag kan inte ta det som är ditt och ge det till <char style="nd">Herren</char> eller bära fram ett brännoffer som inte kostat mig någonting.” <verse number="25" style="v"/>David betalade 600 siklar<note caller="+" style="f"><char style="fr" closed="false">21:25 </char><char style="ft" closed="false">Motsvarar 7 kilo.</char></note> i guld för platsen. <verse number="26" style="v"/>Där byggde David ett altare åt <char style="nd">Herren</char> och offrade brännoffer och gemenskapsoffer på det och ropade till <char style="nd">Herren</char>. Och <char style="nd">Herren</char> svarade med eld från himlen på brännofferaltaret. <verse number="27" style="v"/>Då befallde <char style="nd">Herren</char> ängeln att sticka svärdet i skidan.</para>
+  <para style="p">
+    <verse number="28" style="v"/>När David såg att <char style="nd">Herren</char> hade svarat på hans bön på jevusén Ornans tröskplats, offrade han där. <verse number="29" style="v"/><char style="nd">Herrens</char> boning, som Mose hade gjort i öknen, och brännofferaltaret fanns på offerplatsen i Givon vid den här tiden, <verse number="30" style="v"/>men David hade inte vågat gå dit och tillbe, av fruktan för <char style="nd">Herrens</char> ängels svärd.</para>
+  <chapter number="22" style="c"/>
+  <para style="s1">David förbereder tempelbygget</para>
+  <para style="p">
+    <verse number="1" style="v"/>Sedan sa David: ”Här ska <char style="nd">Herren</char> Guds hus och altaret för Israels brännoffer stå!”</para>
+  <para style="p">
+    <verse number="2" style="v"/>David gav befallning om att alla främlingar som bodde i Israel skulle sammankallas. Han utsåg bland dem stenarbetare för att hugga ut stenblock till bygget av Guds hus. <verse number="3" style="v"/>David skaffade fram stora mängder av järn för att tillverka spikarna för dörrarna i portarna och till deras förstärkningar och så mycket koppar att man inte ens kunde väga den. <verse number="4" style="v"/>Och männen från Tyros och Sidon förde med sig ett oräkneligt antal cederstockar till David.</para>
+  <para style="p">
+    <verse number="5" style="v"/>”Min son Salomo är ung och oerfaren”, sa David, ”och <char style="nd">Herrens</char> hus måste få en enastående utformning, så att det blir berömt och ryktbart över hela världen. Därför ska jag redan nu börja med planeringen.”</para>
+  <para style="p">David gjorde omfattande förberedelser före sin död. <verse number="6" style="v"/>Han kallade till sig sin son Salomo och gav honom i uppdrag att bygga ett tempel åt <char style="nd">Herren</char>, Israels Gud.</para>
+  <para style="p">
+    <verse number="7" style="v"/>David talade till Salomo: ”Min son, jag ville bygga ett tempel åt <char style="nd">Herrens</char>, min Guds namn, <verse number="8" style="v"/>men <char style="nd">Herrens</char> ord kom till mig: ’Du har utgjutit mycket blod och fört många krig. Du ska inte bygga något tempel för mitt namn, eftersom du har utgjutit så mycket blod på jorden inför mig. <verse number="9" style="v"/>Men du ska få en son, och han ska vara en fridens man, och jag ska låta honom få fred med sina fiender runt omkring. Hans namn ska vara Salomo<note caller="+" style="f"><char style="fr" closed="false">22:9 </char><char style="ft" closed="false">En anspelning på det hebreiska ordet för </char><char style="fqa" closed="false">frid/fred.</char></note>, och jag ska ge Israel frid och ro under hans regering. <verse number="10" style="v"/>Han ska bygga ett hus åt mitt namn, han ska vara min son och jag hans far, och jag ska befästa hans kungatron för Israel för alltid.’</para>
+  <para style="p">
+    <verse number="11" style="v"/>Min son, må nu <char style="nd">Herren</char> vara med dig och göra dig framgångsrik, så att du kan bygga ett hus åt <char style="nd">Herren</char>, din Gud, så som han har sagt om dig. <verse number="12" style="v"/>Må <char style="nd">Herren</char> ge dig vishet och förstånd, så att du, när han sätter dig som härskare över Israel, kan hålla <char style="nd">Herrens</char>, din Guds lag. <verse number="13" style="v"/>Du kommer att lyckas, om du noga följer alla de bud och förordningar som <char style="nd">Herren</char> gav Israel genom Mose. Var frimodig och stark, frukta inte och var inte modlös!</para>
+  <para style="p">
+    <verse number="14" style="v"/>Med stor möda har jag samlat in till <char style="nd">Herrens</char> hus 3 500 ton guld och 35 000 ton silver<note caller="+" style="f"><char style="fr" closed="false">22:14 </char><char style="ft" closed="false">På hebreiska: </char><char style="fqa" closed="false">100 000 talenter guld och en miljon talenter silver.</char></note>, så mycket järn och koppar att de inte kunnat vägas, och dessutom trävirke och sten. Mer kan du själv lägga till. <verse number="15" style="v"/>Det finns gott om stenhuggare, murare, snickare och alla slags hantverkare <verse number="16" style="v"/>i guld och silver, koppar och järn. Sätt nu igång arbetet, och må <char style="nd">Herren</char> vara med dig!”</para>
+  <para style="p">
+    <verse number="17" style="v"/>Sedan gav David alla Israels ledare order om att bistå Salomo i arbetet: <verse number="18" style="v"/>”<char style="nd">Herren</char>, er Gud, är med er. Han har låtit er få fred på alla sidor. Han har överlämnat landets invånare åt mig och lagt landet under <char style="nd">Herren</char> och hans folk. <verse number="19" style="v"/>Sök nu <char style="nd">Herren</char>, er Gud, av hela ert hjärta och med hela er själ. Börja med att bygga <char style="nd">Herren</char> Guds helgedom, så kan ni föra in <char style="nd">Herrens</char> förbundsark och de heliga kärlen för gudstjänsten i det hus som byggs åt <char style="nd">Herrens</char> namn.”</para>
+  <chapter number="23" style="c"/>
+  <para style="s1">Leviterna tilldelas uppgifter</para>
+  <para style="p">
+    <verse number="1" style="v"/>När David blev gammal och mätt av år, gjorde han sin son Salomo till kung över Israel. <verse number="2" style="v"/>Han sammankallade alla Israels ledare, präster och leviter. <verse number="3" style="v"/>Alla leviterna från trettio års ålder och uppåt räknades och de manliga var sammanlagt 38 000.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Av dem skulle 24 000 leda arbetet vid <char style="nd">Herrens</char> hus och 6 000 vara tjänstemän och domare, <verse number="5" style="v"/>4 000 dörrvaktare, och 4 000 lovsjunga <char style="nd">Herren</char> med de instrument som David<note caller="+" style="f"><char style="fr" closed="false">23:5 </char><char style="ft" closed="false">I grundtexten </char><char style="fqa" closed="false">jag. </char><char style="ft" closed="false">Versen kan vara ett citat av David, även om det inte framkommer på annat sätt.</char></note> låtit tillverka för lovsången.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Sedan delade David upp dem i avdelningar efter Levis söner Gershom, Kehat och Merari.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Till Gershoms släkt hörde Ladan och Shimi.</para>
+  <para style="li1">
+    <verse number="8" style="v"/>Ladans söner var Jechiel, den förste, Setam och Joel, alltså tre.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Shimis<note caller="+" style="f"><char style="fr" closed="false">23:9 </char><char style="ft" closed="false">Enligt föreslagen rättelse <char style="tl">Jechiels</char>, vilket sammanhanget tycks tala för.</char></note> söner Shelomot, Hasiel och Haran, alltså tre. Dessa var Ladans familjeöverhuvuden.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Shimis söner var Jachat, Sisa, Jeush och Beria. Dessa var alltså Shimis fyra söner.</para>
+  <para style="li1">
+    <verse number="11" style="v"/>Jachat var överhuvudet och Sisa den andre, men Jeush och Beria hade inte många söner och räknades därför som en enda familj, en avdelning.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="12" style="v"/>Kehats söner var Amram, Jishar, Hebron och Ussiel, alltså fyra.</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Amrams söner var Aron och Mose. Aron och hans söner avskildes för all framtid till uppgiften att inviga det högheliga, offra åt <char style="nd">Herren</char>, tjäna honom och att välsigna i hans namn för all framtid.</para>
+  <para style="li1">
+    <verse number="14" style="v"/>Gudsmannen Moses söner räknades till Levis stam. <verse number="15" style="v"/>Moses söner var Gershom och Elieser. <verse number="16" style="v"/>Gershom hade sonen Shuvael, som var överhuvud, <verse number="17" style="v"/>Elieser hade en son, Rechavja, som var överhuvud, Elieser hade inga andra söner, men Rechavja hade många.</para>
+  <para style="li1">
+    <verse number="18" style="v"/>Jishar hade sonen Shelomot, som var överhuvud.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Hebrons söner var Jeria, överhuvud, Amarja den andre, Jachasiel, den tredje och Jekamam, den fjärde.</para>
+  <para style="li1">
+    <verse number="20" style="v"/>Ussiels söner var Mika, överhuvudet, och Jishia, den andre.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="21" style="v"/>Meraris söner var Machli och Mushi. Machlis söner var Elasar och Kish.</para>
+  <para style="li1">
+    <verse number="22" style="v"/>Elasar dog utan att ha fått några söner, endast döttrar, och de gifte sig med sina kusiner, Kishs söner.</para>
+  <para style="li1">
+    <verse number="23" style="v"/>Mushis söner var Machli, Eder och Jeremot, alltså tre.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Dessa var Levis ättlingar, efter deras familjer, med deras familjeöverhuvuden, så som de registrerades, varje person och namn för sig, de som var tjugo år gamla eller äldre och som gjorde tjänst i <char style="nd">Herrens</char> hus. <verse number="25" style="v"/>David hade sagt: ”<char style="nd">Herren</char>, Israels Gud, har låtit sitt folk komma till ro, och han kommer alltid att bo i Jerusalem. <verse number="26" style="v"/>Nu behöver inte längre leviterna bära boningen och dess tillbehör från plats till plats.” <verse number="27" style="v"/>Enligt Davids sista anvisningar skulle de leviter räknas som var minst tjugo år gamla.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Leviternas uppgift var att assistera Arons ättlingar i tjänsten i <char style="nd">Herrens</char> hus. De skötte om förgårdarna och kamrarna, reningen av alla heliga föremål och tjänstgjorde i Guds hus. <verse number="29" style="v"/>De svarade för skådebröden, mjölet till matoffren och det osyrade brödet och bakning och tillredning samt alla vikter och mått. <verse number="30" style="v"/>Varje morgon och kväll stod de och prisade och lovade <char style="nd">Herren</char>. <verse number="31" style="v"/>De assisterade vid alla brännoffren åt <char style="nd">Herren</char>, på sabbaten, vid nymånadsfester och högtider, och tjänade inför <char style="nd">Herren</char> i det antal och som det var föreskrivet att de alltid skulle tjäna inför <char style="nd">Herren</char>. <verse number="32" style="v"/>Leviterna skötte på detta sätt sina uppgifter i uppenbarelsetältet och i templet och hjälpte prästerna, Arons ättlingar, i tjänsten i <char style="nd">Herrens</char> hus.</para>
+  <chapter number="24" style="c"/>
+  <para style="s2">Prästerna delas i grupper</para>
+  <para style="p">
+    <verse number="1" style="v"/>Arons ättlingar delades in i följande avdelningar: Arons söner Nadav och Avihu, Elasar och Itamar.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Nadav och Avihu dog före sin far och efterlämnade inte några barn, så Elasar och Itamar tjänstgjorde som präster. <verse number="3" style="v"/>David indelade, tillsammans med Sadok, av Elasars släkt, och Achimelek, av Itamars släkt, Arons ättlingar i olika avdelningar för den tjänstgöring de skulle utföra. <verse number="4" style="v"/>Det fanns fler överhuvuden bland Elasars ättlingar än Itamars, så de delades upp i sexton familjeöverhuvuden och Itamars i åtta.</para>
+  <para style="p">
+    <verse number="5" style="v"/>De indelades genom lottdragning för de båda släkterna, eftersom det fanns heliga ledare och ledare för tjänsten åt Gud både bland Elasars och Itamars ättlingar.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Leviten Shemaja, Netanels son, tjänstgjorde som sekreterare och skrev ner dem i närvaro av kungen, prästen Sadok, Achimelek, Evjatars son, och överhuvudena för prästernas och leviternas familjer. Lotterna drogs varannan gång för en familj från Elasars släkt och varannan för en familj från Itamars.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Den första lotten föll på Jojariv,</para>
+  <para style="li1">den andra på Jedaja,</para>
+  <para style="li1">
+    <verse number="8" style="v"/>den tredje på Harim,</para>
+  <para style="li1">den fjärde på Seorim,</para>
+  <para style="li1">
+    <verse number="9" style="v"/>den femte på Malkia,</para>
+  <para style="li1">den sjätte på Mijamin,</para>
+  <para style="li1">
+    <verse number="10" style="v"/>den sjunde på Hackos,</para>
+  <para style="li1">den åttonde på Avia,</para>
+  <para style="li1">
+    <verse number="11" style="v"/>den nionde på Jeshua,</para>
+  <para style="li1">den tionde på Shekanja,</para>
+  <para style="li1">
+    <verse number="12" style="v"/>den elfte på Eljashiv,</para>
+  <para style="li1">den tolfte på Jakim,</para>
+  <para style="li1">
+    <verse number="13" style="v"/>den trettonde på Huppa,</para>
+  <para style="li1">den fjortonde på Jeshevav,</para>
+  <para style="li1">
+    <verse number="14" style="v"/>den femtonde på Bilga,</para>
+  <para style="li1">den sextonde på Immer,</para>
+  <para style="li1">
+    <verse number="15" style="v"/>den sjuttonde på Hesir,</para>
+  <para style="li1">den artonde på Happisses,</para>
+  <para style="li1">
+    <verse number="16" style="v"/>den nittonde på Petachja,</para>
+  <para style="li1">den tjugonde på Hesekiel,</para>
+  <para style="li1">
+    <verse number="17" style="v"/>den tjugoförsta på Jakin,</para>
+  <para style="li1">den tjugoandra på Gamul,</para>
+  <para style="li1">
+    <verse number="18" style="v"/>den tjugotredje på Delaja</para>
+  <para style="li1">och den tjugofjärde på Maasja.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Detta var hur de skulle vara indelade när de inträdde för tjänst i <char style="nd">Herrens</char> hus, som det var dem föreskrivet genom deras förfader Aron, efter den befallning <char style="nd">Herren</char>, Israels Gud, hade gett honom.</para>
+  <para style="s2">Andra ättlingar till Levi</para>
+  <para style="p">
+    <verse number="20" style="v"/>Andra ättlingar till Levi var:</para>
+  <para style="li1">av Amrams ättlingar Shuvael, av Shuvaels ättlingar Jechdeja,</para>
+  <para style="li1">
+    <verse number="21" style="v"/>av Rechavja, dvs. av hans ättlingar, var Jishia den förste,</para>
+  <para style="li1">
+    <verse number="22" style="v"/>av Jishars släkt Shelomot, och av Shelomots ättlingar Jachat,</para>
+  <para style="li1">
+    <verse number="23" style="v"/>Hebrons ättlingar var Jeria, sedan Amarja, den andre, Jachasiel, den tredje, och Jekamam, den fjärde.</para>
+  <para style="li1">
+    <verse number="24" style="v"/>Ussiels son var Mika, och bland Mikas ättlingar var Shamir,</para>
+  <para style="li1">
+    <verse number="25" style="v"/>Mikas bror Jishia, och bland Jishias ättlingar Sakarja.</para>
+  <para style="li1">
+    <verse number="26" style="v"/>Meraris ättlingar var Machli och Mushi. Jaasias son var Beno.</para>
+  <para style="li1">
+    <verse number="27" style="v"/>Meraris söner genom Jaasia var Shoham, Sackur och Ivri.</para>
+  <para style="li1">
+    <verse number="28" style="v"/>Machlis ättling var Elasar, som inte hade några söner.</para>
+  <para style="li1">
+    <verse number="29" style="v"/>Kishs son var Jerachmeel.</para>
+  <para style="li1">
+    <verse number="30" style="v"/>Mushis söner Machli, Eder och Jerimot.</para>
+  <para style="p">Alla dessa var ättlingar till Levi, efter deras familjer. <verse number="31" style="v"/>Även dessa kastade lott, precis som deras släktingar av Arons ätt, i närvaro av kung David, Sadok, Achimelek samt överhuvudena för prästernas och leviternas familjer, de äldsta likväl som de yngsta.</para>
+  <chapter number="25" style="c"/>
+  <para style="s2">Musikanternas uppgifter</para>
+  <para style="p">
+    <verse number="1" style="v"/>David och hans befälhavare i hären utsåg män från Asafs, Hemans och Jedutuns familjer till profetisk tjänst med musik på harpa, lyra och cymbal. Detta är förteckningen över dem och deras tjänst:</para>
+  <para style="li1">
+    <verse number="2" style="v"/>Asafs söner:</para>
+  <para style="li2">Sackur, Josef, Netanja och Asarela, Asafs söner, under hans ledning, som profeterade på kungens uppdrag.</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Av Jedutun hans söner:</para>
+  <para style="li2">Gedalja, Jisri, Jesaja, Shimi, Hashavja och Mattitja, alltså sex, under ledning av sin far Jedutun, som profeterade och spelade på harpa till <char style="nd">Herrens</char> lov och pris.</para>
+  <para style="li1">
+    <verse number="4" style="v"/>Av Heman hans söner:</para>
+  <para style="li2">Buckia, Mattanja, Ussiel, Shuvael, Jerimot, Hananja, Hanani, Eliata, Giddalti, Romamti Eser, Joshbekasha, Malloti, Hotir och Machasiot. <verse number="5" style="v"/>Alla dessa var söner till kungens siare Heman. De hade getts till honom genom Guds löfte att upphöja hans horn<note caller="+" style="f"><char style="fr" closed="false">25:5 </char><char style="ft" closed="false">Dvs. ge honom ära och makt. Jfr med kommentarer till <char style="xt"><ref loc="1SA 2:1">1 Sam 2:1</ref>,<ref loc="1SA 2:7">7</ref>,<ref loc="1SA 2:10">10</ref></char>.</char></note>. Heman fick så fjorton söner och tre döttrar.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Alla dessa män stod under sin fars ledning när de utförde sin tjänst i <char style="nd">Herrens</char> hus med sång och spel på cymbal, lyra och harpa. Asaf, Jedutun och Heman följde kungens instruktioner.</para>
+  <para style="p">
+    <verse number="7" style="v"/>De och deras familjer, tillsammans 288 personer, var alla begåvade musiker och utbildade för sin uppgift att sjunga lovsång till <char style="nd">Herren</char>. <verse number="8" style="v"/>Gammal eller ung, lärare eller elev, alla kastade de lott om sin plats i tjänstgöringen.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Den första lotten föll på Asaf, på Josef<note caller="+" style="f"><char style="fr" closed="false">25:9 </char><char style="ft" closed="false">I Septuaginta finns tillägget </char><char style="fqa" closed="false">hans söner och släktingar.</char></note>, och den andra på Gedalja och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="10" style="v"/>den tredje på Sackur och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="11" style="v"/>den fjärde på Jisri och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="12" style="v"/>den femte på Netanja och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="13" style="v"/>den sjätte på Buckia och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="14" style="v"/>den sjunde på Asarela och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="15" style="v"/>den åttonde på Jesaja och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="16" style="v"/>den nionde på Mattanja och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="17" style="v"/>den tionde på Shimi och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="18" style="v"/>den elfte på Ussiel och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="19" style="v"/>den tolfte på Hashavja och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="20" style="v"/>den trettonde på Shuvael och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="21" style="v"/>den fjortonde på Mattitja och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="22" style="v"/>den femtonde på Jerimot och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="23" style="v"/>den sextonde på Hananja och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="24" style="v"/>den sjuttonde på Joshbekasha och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="25" style="v"/>den artonde på Hanani och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="26" style="v"/>den nittonde på Malloti och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="27" style="v"/>den tjugonde på Eliata och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="28" style="v"/>den tjugoförsta på Hotir och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="29" style="v"/>den tjugoandra på Giddalti och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="30" style="v"/>den tjugotredje på Machasiot och hans söner och släktingar, sammanlagt tolv,</para>
+  <para style="li1">
+    <verse number="31" style="v"/>och den tjugofjärde på Romamti Eser och hans söner och släktingar, sammanlagt tolv.</para>
+  <chapter number="26" style="c"/>
+  <para style="s2">Tempelvakternas uppgifter</para>
+  <para style="p">
+    <verse number="1" style="v"/>Avdelningarna för dörrvaktarna var:</para>
+  <para style="li1">Meshelemja från korachiternas släkt, son till Kore, som var en av Asafs söner.</para>
+  <para style="li1">
+    <verse number="2" style="v"/>Meshelemjas söner var:</para>
+  <para style="li2">Sakarja, den förstfödde,</para>
+  <para style="li2">Jediael, den andre,</para>
+  <para style="li2">Sevadja, den tredje,</para>
+  <para style="li2">Jatniel, den fjärde,</para>
+  <para style="li2">
+    <verse number="3" style="v"/>Elam, den femte,</para>
+  <para style="li2">Jochanan, den sjätte</para>
+  <para style="li2">och Eljoenai, den sjunde.</para>
+  <para style="li1">
+    <verse number="4" style="v"/>Oved-Edoms söner var:</para>
+  <para style="li2">Shemaja, den förstfödde,</para>
+  <para style="li2">Josavad, den andre,</para>
+  <para style="li2">Joach, den tredje,</para>
+  <para style="li2">Sakar, den fjärde,</para>
+  <para style="li2">Netanel, den femte,</para>
+  <para style="li2">
+    <verse number="5" style="v"/>Ammiel, den sjätte,</para>
+  <para style="li2">Isaskar, den sjunde</para>
+  <para style="li2">och Peulletaj, den åttonde.</para>
+  <para style="li2">Gud hade välsignat Oved-Edom.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Oved-Edoms son Shemaja hade också söner, som blev ledare för sina familjer eftersom de var dugliga män. <verse number="7" style="v"/>Shemajas söner var Otni, Refael, Oved och Elsavad. Hans släktingar Elihu och Semakja var också dugliga män. <verse number="8" style="v"/>Alla dessa var avkomlingar till Oved-Edom. De och deras söner var dugliga och starka män i tjänsten. Oved-Edoms avkomlingar var sammanlagt 62.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Meshelemja hade söner och ättlingar, dugliga män, sammanlagt 18.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Hosa, av Meraris släkt, hade söner, av vilka Shimri var överhuvud, fastän han inte var den förstfödde, men hans far hade gjort honom till överhuvud. <verse number="11" style="v"/>Hilkia var den andre, Tevalja den tredje och Sakarja den fjärde. Hosas söner och släktingar var sammanlagt 13.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Avdelningarna för dörrvaktarna, uppdelade efter deras huvudmän, hade, liksom deras släktingar, i uppgift att tjänstgöra i <char style="nd">Herrens</char> hus. <verse number="13" style="v"/>De kastade lott om varje port, ung som gammal, familj för familj.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Lotten för den östra porten föll på Shelemja. De kastade sedan lott för hans son Sakarja, en vis rådgivare, och lotten gav honom den norra porten.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Oved-Edom fick den södra porten, och hans söner fick ansvaret för förrådsrummen. <verse number="16" style="v"/>Den västra porten och Shalleketporten<note caller="+" style="f"><char style="fr" closed="false">26:16 </char><char style="ft" closed="false">Denna port står inte omtalad någon annanstans, och det hebreiska ordets betydelse är okänd.</char></note> vid övre vägen fick Shuppim och Hosa.</para>
+  <para style="p">Vaktposter fanns på alla sidor: <verse number="17" style="v"/>Dagligen sex leviter i öster, fyra i norr, fyra i söder och två vid förråden, <verse number="18" style="v"/>vid tillbyggnaden<note caller="+" style="f"><char style="fr" closed="false">26:18 </char><char style="ft" closed="false">Det hebreiska ordet <char style="tl">Parbar</char> kan kanske också tolkas som ett namn. Det förekommer endast här och betydelsen är osäker.</char></note> i väster fyra på vägen och två vid själva tillbyggnaden.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Detta var dörrvaktarnas avdelningar, av Korachs och Meraris släkter.</para>
+  <para style="s2">Andra uppgifter</para>
+  <para style="p">
+    <verse number="20" style="v"/>Leviterna, deras bröder<note caller="+" style="f"><char style="fr" closed="false">26:20 </char><char style="ft" closed="false">Översättningen här är gjord med hjälp av Septuaginta. Den masoretiska texten är svårförståelig: </char><char style="fqa" closed="false">leviterna, Achia…</char><char style="ft" closed="false">, men även där kan <char style="tl">Achia</char> härledas från ett ord som betyder </char><char style="fqa" closed="false">bror.</char></note>, ansvarade för skattkammaren i Guds hus och förråden för det som blivit helgat. <verse number="21" style="v"/>Ladans ättlingar, Gershons släkt genom Ladan, som var familjeöverhuvuden för gersoniten Ladan, var Jechiel, <verse number="22" style="v"/>dvs. Jechiels ättlingar, Setam och hans bror Joel. De hade ansvaret för skatterna i <char style="nd">Herrens</char> hus.</para>
+  <para style="li1">
+    <verse number="23" style="v"/>Från Amrams, Jishars, Hebrons och Ussiels släkter <verse number="24" style="v"/>var Shuvael, son till Gersom och sonson till Mose, överuppsyningsman över skatterna. <verse number="25" style="v"/>Hans släktingar genom Elieser var dennes son Rechavja, hans son Jesaja, hans son Joram, hans son Sikri och hans son Shelomot. <verse number="26" style="v"/>Denne Shelomot och hans bröder ansvarade för förråden för det som helgats av kung David, av familjeöverhuvudena, av de högre och lägre officerarna och befälhavarna över hären. <verse number="27" style="v"/>En del av krigsbytet helgade de till underhåll av <char style="nd">Herrens</char> hus. <verse number="28" style="v"/>Shelomot och hans bröder var också ansvariga för allt det som helgats av siaren Samuel, av Saul, Kishs son, av Avner, Ners son, och av Joav, Serujas son. Alla de heliga gåvorna var överlämnade åt Shelomots och hans släktingars omsorg.</para>
+  <para style="li1">
+    <verse number="29" style="v"/>Kenanja av Jishars släkt och hans söner tilldelades uppgifter utanför templet som tjänstemän och domare.</para>
+  <para style="li1">
+    <verse number="30" style="v"/>Av Hebrons släkt utsågs Hashavja och 1 700 av hans släktingar från Hebron, alla dugliga män, att förvalta Israel på västra sidan av Jordan, till allt arbete åt <char style="nd">Herren</char> och till kungens tjänst. <verse number="31" style="v"/>Enligt hebroniternas släktregister var Jeria deras överhuvud. I Davids fyrtionde regeringsår gjordes en genomgång av registren, och man fann dugliga män bland dem i Jaser i Gilead. <verse number="32" style="v"/>Jeria hade 2 700 släktingar, dugliga män och familjeöverhuvuden, som kung David satte över Rubens och Gads stammar och den ena halvan av Manasses stam, för att sköta alla Guds och kungens angelägenheter.</para>
+  <chapter number="27" style="c"/>
+  <para style="s1">Befälhavare i armén</para>
+  <para style="p">
+    <verse number="1" style="v"/>Förteckning över israeliterna, familjeöverhuvuden, högre och lägre befälhavare, deras officerare, som tjänade kungen i allt som hade med avdelningarna att göra, och som var i tjänst en månad var under årets alla månader. Varje avdelning bestod av 24 000 man:</para>
+  <para style="li1">
+    <verse number="2" style="v"/>Befälhavare över första avdelningen, som tjänstgjorde under första månaden, var Jishbaal, Savdiels son. Hans avdelning bestod av 24 000 man. <verse number="3" style="v"/>Jishbaal hörde till Peres släkt och hade högsta befälet över alla officerare i hären som tjänstgjorde under första månaden.</para>
+  <para style="li1">
+    <verse number="4" style="v"/>Befälhavare över andra månadens avdelning var Dodaj av Achoachs släkt, fursten Miklot var befälhavare över sin avdelning som bestod av 24 000 man.</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Den tredje befälhavaren, för tredje månaden, var Benaja, översteprästen Jojadas son. Hans avdelning bestod av 24 000 man. <verse number="6" style="v"/>Denne Benaja var en hjälte bland de trettio och hade befälet över de trettio. Hans son Ammisavad hade befälet över hans avdelning.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Den fjärde, för fjärde månaden, var Asael, Joavs bror, och senare hans son Sevadja. Hans avdelning bestod av 24 000 man.</para>
+  <para style="li1">
+    <verse number="8" style="v"/>Den femte, för femte månaden, var befälhavaren Shamhut av Serachs ätt. Hans avdelning bestod av 24 000 man.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Den sjätte, för sjätte månaden, var Ira, Ickeshs son, från Tekoa. Hans avdelning bestod av 24 000 man.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Den sjunde, för sjunde månaden, var Heles från Pelet av Efraims stam. Hans avdelning bestod av 24 000 man.</para>
+  <para style="li1">
+    <verse number="11" style="v"/>Den åttonde, för åttonde månaden, var Sibbekaj av Hushas släkt, som hörde till Serachs ätt. Hans avdelning bestod av 24 000 man.</para>
+  <para style="li1">
+    <verse number="12" style="v"/>Den nionde, för nionde månaden, var Avieser från Anatot i Benjamins stam. Hans avdelning bestod av 24 000 man.</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Den tionde, för tionde månaden, var Mahraj från Netofa av Serachs ätt. Hans avdelning bestod av 24 000 man.</para>
+  <para style="li1">
+    <verse number="14" style="v"/>Den elfte, för elfte månaden, var Benaja från Piraton av Efraims stam. Hans avdelning bestod av 24 000 man.</para>
+  <para style="li1">
+    <verse number="15" style="v"/>Den tolfte, för tolfte månaden, var Heldaj från Netofa, som hörde till Otniels släkt. Hans avdelning bestod av 24 000 man.</para>
+  <para style="s1">Stamledare</para>
+  <para style="p">
+    <verse number="16" style="v"/>Furstarna för Israels stammar var:</para>
+  <para style="li1">Elieser, Sikris son, för Rubens stam,</para>
+  <para style="li1">Shefatja, Maakas son, för Simons stam,</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Hashavja, Kemuels son, för Levis stam, och Sadok för Aron,</para>
+  <para style="li1">
+    <verse number="18" style="v"/>Elihu, en av Davids bröder, för Judas stam,</para>
+  <para style="li1">Omri, Mikaels son, för Isaskars stam,</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Jishmaja, Obadjas son, för Sebulons stam,</para>
+  <para style="li1">Jerimot, Asriels son, för Naftalis stam,</para>
+  <para style="li1">
+    <verse number="20" style="v"/>Hosea, Asasjas son, för efraimiterna,</para>
+  <para style="li1">Joel, Pedajas son, för ena hälften av Manasses stam,</para>
+  <para style="li1">
+    <verse number="21" style="v"/>Jiddo, Sakarjas son, för andra hälften av Manasses stam, den som var i Gilead,</para>
+  <para style="li1">Jaasiel, Avners son, för Benjamins stam,</para>
+  <para style="li1">
+    <verse number="22" style="v"/>Asarel, Jerochams son, för Dans stam.</para>
+  <para style="p">Dessa var ledarna för Israels stammar.</para>
+  <para style="p">
+    <verse number="23" style="v"/>David tog inte med i folkräkningen dem som var tjugo år eller yngre, för <char style="nd">Herren</char> hade lovat att israeliterna skulle bli lika oräkneliga som himlens stjärnor. <verse number="24" style="v"/>Joav, Serujas son, påbörjade folkräkningen men avslutade den aldrig, för Guds vrede kom över Israel, och slutsumman blev aldrig införd i kung Davids krönika.</para>
+  <para style="s2">Tjänstemän i riket</para>
+  <para style="p">
+    <verse number="25" style="v"/>Asmavet, Adiels son, hade ansvaret för de kungliga förråden.</para>
+  <para style="p">Jonatan, Ussias son, ansvarade för förråden på landsbygden, i städer, byar och vakttorn.</para>
+  <para style="p">
+    <verse number="26" style="v"/>Esri, Keluvs son, hade ansvaret för alla som arbetade med jordbruk ute på fälten.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Shimi från Rama hade ansvaret för vingårdarna och Savdi från Shefam för vinförråden i vingårdarna.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Baal Hanan från Geder hade ansvaret för kungens olivplanteringar och för mullbärsfikonträden på låglandet i väster.</para>
+  <para style="p">Joash var ansvarig för oljeförråden.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Shitraj från Sharon var ansvarig för boskapen som betade i Sharon och Shafat, Adlajs son, för boskapen i dalarna.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Ovil, ismaeliten, var ansvarig för kamelerna, Jechdeja från Meronot för åsnorna <verse number="31" style="v"/>och hagarén Jasis för småboskapen.</para>
+  <para style="p">Dessa män var uppsyningsmän över kung Davids egendom.</para>
+  <para style="p">
+    <verse number="32" style="v"/>Davids farbror, Jonatan, var rådgivare. Han var en vis och skriftlärd man<note caller="+" style="f"><char style="fr" closed="false">27:32 </char><char style="ft" closed="false">Eller: </char><char style="fqa" closed="false">vis man och kungens sekreterare</char></note>. Jechiel, Hakmonis son, tjänstgjorde för kungens söner.</para>
+  <para style="p">
+    <verse number="33" style="v"/>Achitofel var också rådgivare till kungen. Hushaj från Erek var kungens vän. <verse number="34" style="v"/>Achitofel efterträddes av Jojada, Benajas son, och av Evjatar.</para>
+  <para style="p">Joav var överbefälhavare för kungens här.</para>
+  <chapter number="28" style="c"/>
+  <para style="s1">David ger Salomo instruktioner inför tempelbygget</para>
+  <para style="p">
+    <verse number="1" style="v"/>David kallade nu samman alla Israels ledare till Jerusalem, ledarna över Israels stammar, ledarna för de olika avdelningar som var i kungens tjänst, de högre och lägre officerarna, uppsyningsmännen över kungens och hans söners egendom och boskap samt tjänstemännen i palatset, hjältarna och andra inflytelserika personer. <verse number="2" style="v"/>David reste sig och talade till dem:</para>
+  <para style="p">”Hör, mina bröder och mitt folk! Det har varit min önskan att bygga ett hus till viloplats för <char style="nd">Herrens</char> förbundsark, vår Guds fotpall. Jag har gjort planer för det, <verse number="3" style="v"/>men Gud har sagt till mig: ’Du ska inte bygga något hus för mitt namn, för du är en krigare och har utgjutit mycket blod.’</para>
+  <para style="p">
+    <verse number="4" style="v"/>Ändå har <char style="nd">Herren</char>, Israels Gud, valt mig bland alla i min fars familj till att för alltid vara kung över Israel. Han har utvalt Juda som furste och i Judas stam min fars familj. Bland min fars söner fann han behag i mig och gjorde mig till kung över hela Israel. <verse number="5" style="v"/>Bland mina söner – och <char style="nd">Herren</char> har gett mig många – har han utvalt Salomo att sitta på <char style="nd">Herrens</char> kungatron och regera över Israel. <verse number="6" style="v"/>Han sa till mig: ’Din son Salomo ska bygga mitt tempel och mina förgårdar, för jag har utvalt honom till min son, och jag ska vara hans far. <verse number="7" style="v"/>Jag ska befästa hans kungadöme för alltid, om han alltid följer mina bud och föreskrifter, som han gjort hittills.’</para>
+  <para style="p">
+    <verse number="8" style="v"/>Här inför Israel, <char style="nd">Herrens</char> församling, och inför Gud själv som hör detta, uppmanar jag er att hålla alla <char style="nd">Herrens</char>, er Guds bud, så att ni får äga detta goda land och sedan överlämna det till era efterkommande för evig tid.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Salomo, min son, lär känna din fars Gud! Tjäna honom helhjärtat och villigt, för <char style="nd">Herren</char> granskar allas innersta och förstår varje motiv och tanke. Om du söker honom ska du finna honom, men om du överger honom ska han förkasta dig för alltid.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Tänk på att <char style="nd">Herren</char> har utsett dig till att bygga hans heliga tempel. Var frimodig och gå till verket!”</para>
+  <para style="p">
+    <verse number="11" style="v"/>David gav sedan sin son Salomo ritningen till förhuset och templet med dess byggnader, dess förrådshus, de övre salarna, de inre rummen och rummet för försoningsplatsen. <verse number="12" style="v"/>Han delgav honom också sina planer som Anden ingett honom beträffande förgårdarna till <char style="nd">Herrens</char> hus och rummen runt omkring, tempelförråden i Guds hus och förvaringsrummen för det som hade helgats, <verse number="13" style="v"/>samt instruktioner om fördelningen av prästernas och leviternas tjänst och om alla tillbehörens användning i <char style="nd">Herrens</char> hus.</para>
+  <para style="p">
+    <verse number="14" style="v"/>David bestämde även mängden av guld för tillverkningen av alla guldföremål för olika tjänster, liksom vikten av silver för silverföremålen för olika tjänster, <verse number="15" style="v"/>vikten av guld till lampställen och guldlamporna, vikten av varje lampställ med dess lampor, och vikten av silver till varje silverlampställ med dess lampor, alltefter dess användning, <verse number="16" style="v"/>vikten av guld till bordet för skådebröden och vikten av silver till silverborden, <verse number="17" style="v"/>vikten av guld till gafflar, skålar och av rent guld, vikten av varje guld- och silverbägare, <verse number="18" style="v"/>slutligen vikten av guld till rökelsealtaret av rent guld. Han gav honom också en beskrivning av vagnen, keruberna av guld, som med sina vingar övertäckte <char style="nd">Herrens</char> förbundsark. <verse number="19" style="v"/>Allt detta skrevs ner under <char style="nd">Herrens</char> ledning, för det var han som gav David varje detalj av beskrivningen.</para>
+  <para style="p">
+    <verse number="20" style="v"/>”Var nu stark och frimodig”, sa David till sin son Salomo. ”Sätt genast i gång med arbetet! Var inte rädd eller missmodig, för <char style="nd">Herren</char>, min Gud, är med dig, och han kommer inte att lämna eller överge dig, tills du har fullföljt allt arbete för tjänsten i <char style="nd">Herrens</char> hus. <verse number="21" style="v"/>Här är prästernas och leviternas avdelningar, som är redo för allt arbete i Guds hus, och många andra med olika begåvningar som både vill och kan utföra allt slags arbete. Ledarna och folket kommer att lyda varje befallning som du ger.”</para>
+  <chapter number="29" style="c"/>
+  <para style="s1">Folket bär fram gåvor till tempelbygget</para>
+  <para style="p">
+    <verse number="1" style="v"/>Kung David talade sedan till hela församlingen: ”Min son Salomo, som Gud har utvalt, är fortfarande ung och oerfaren, och uppgiften är enorm, för denna är inte en byggnad för människor utan för <char style="nd">Herren</char> Gud. <verse number="2" style="v"/>Jag har gjort allt jag kan för att till min Guds hus skaffa guld till det som ska vara av guld, silver till det som ska vara av silver, koppar till det som ska vara av koppar, järn till det som ska vara av järn och trä till det som ska vara av trä samt onyx, andra infattningsstenar, svartglänsande<note caller="+" style="f"><char style="fr" closed="false">29:2 </char><char style="ft" closed="false">Det hebreiska ordets betydelse är osäker.</char></note> och brokiga stenar, alla slags dyrbara stenar och marmor i stor mängd. <verse number="3" style="v"/>Eftersom jag älskar Guds hus, ger jag också hela min privata förmögenhet av guld och silver, utöver allt det jag redan skaffat till helgedomen: <verse number="4" style="v"/>3 000 talenter<note caller="+" style="f"><char style="fr" closed="false">29:4 </char><char style="ft" closed="false">En talent=ca 34 kilo.</char></note> guld från Ofir och 7 000 talenter silver till att överdra byggnadernas väggar med, <verse number="5" style="v"/>guld till det som ska tillverkas av guld och silver till det som ska tillverkas av silver, till det som hantverkarna ska göra. Vem vill idag komma med en frivillig gåva till <char style="nd">Herren</char>?”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Då kom huvudmännen för familjerna och stammarna i Israel, de högre och lägre arméofficerarna och kungens främsta tjänstemän med sina gåvor. <verse number="7" style="v"/>De gav till arbetet med Guds hus 5 000 talenter guld, 10 000 dareiker<note caller="+" style="f"><char style="fr" closed="false">29:7 </char><char style="ft" closed="false">En </char><char style="fq" closed="false">dareik </char><char style="ft" closed="false">var ett persiskt guldstycke som vägde drygt 8 gram.</char></note>, 10 000 talenter silver, 18 000 talenter koppar och 100 000 talenter järn. <verse number="8" style="v"/>De som hade ädelstenar gav dem till skattkammaren i <char style="nd">Herrens</char> hus, i gershoniten Jechiels vård. <verse number="9" style="v"/>Folket gladde sig över att de så helhjärtat gav de frivilliga gåvorna till <char style="nd">Herren</char>, och David själv gladde sig mycket.</para>
+  <para style="s1">David tackar Herren</para>
+  <para style="p">
+    <verse number="10" style="v"/>David prisade <char style="nd">Herren</char> inför hela församlingen och sa:</para>
+  <para style="q1">”<char style="nd">Herre</char>, vår far Israels Gud,</para>
+  <para style="q2">du ska prisas i all evighet!</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Din, o <char style="nd">Herre</char>, är storhet och makt,</para>
+  <para style="q2">ära, majestät och härlighet.</para>
+  <para style="q1">Allt i himmel och på jord och riket tillhör dig, <char style="nd">Herre</char>,</para>
+  <para style="q2">och du är den upphöjde härskaren över allt som finns.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Rikedom och ära kommer från dig,</para>
+  <para style="q2">och du är den som råder över allt.</para>
+  <para style="q1">Du har all styrka och all makt i din hand,</para>
+  <para style="q2">och det är du som ger makt och upphöjelse.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Vi tackar dig, vår Gud,</para>
+  <para style="q2">och prisar ditt härliga namn.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Vem är jag och vad är mitt folk, att vi skulle kunna ge dig allt detta?</para>
+  <para style="p">Allt kommer ju från dig, och vi har bara gett det som vi fått ur din hand.</para>
+  <para style="p">
+    <verse number="15" style="v"/>För vi är främlingar och gäster inför dig, precis som våra förfäder.</para>
+  <para style="p">Våra dagar på jorden är som en skugga, vi har inget att hoppas på.</para>
+  <para style="p">
+    <verse number="16" style="v"/>
+    <char style="nd">Herre</char>, vår Gud, all denna rikedom vi har samlat för att kunna bygga ett tempel till ditt heliga namn, kommer från dig. Det tillhör dig alltsammans.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Jag vet, min Gud, att du prövar människohjärtan och vill se integritet. Jag har gett allt det här med ärliga och uppriktiga avsikter, och jag har sett hur ditt folk villigt har kommit med sina gåvor.</para>
+  <para style="p">
+    <verse number="18" style="v"/>
+    <char style="nd">Herre</char>, våra förfäders Gud, Abrahams, Isaks och Jakobs Gud, låt denna längtan att tjäna och lyda dig få vara kvar hos ditt folk för all framtid, och bevara deras hjärtan lojala mot dig!</para>
+  <para style="p">
+    <verse number="19" style="v"/>Gör min son Salomo helhjärtat överlåten till dig, så att han håller dina bud, förordningar och föreskrifter och följer dem i allting och bygger det tempel som jag har förberett!”</para>
+  <para style="p">
+    <verse number="20" style="v"/>Sedan sa David till hela församlingen: ”Prisa <char style="nd">Herren</char>, er Gud!” Då prisade de alla <char style="nd">Herren</char>, sina förfäders Gud, bugade sig och föll ner på marken inför <char style="nd">Herren</char> och inför kungen.</para>
+  <para style="ms2">Salomos regering</para>
+  <para style="mr">(<ref loc="1CH 29:21-9:31">1 Krön 29:21—2 Krön 9:31</ref>)</para>
+  <para style="p">
+    <verse number="21" style="v"/>Nästa dag bar man fram slaktoffer och brännoffer till <char style="nd">Herren</char>: 1 000 tjurar, 1 000 baggar och 1 000 lamm med tillhörande dryckesoffer och mängder av slaktoffer för hela Israel. <verse number="22" style="v"/>De åt och drack inför <char style="nd">Herren</char> med stor glädje.</para>
+  <para style="p">Sedan bekräftade de en andra gång Salomo, Davids son, som kung. De smorde honom inför <char style="nd">Herren</char> till furste och Sadok till präst.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Salomo besteg <char style="nd">Herrens</char> tron efter sin far David, och han hade framgång. Hela Israel lydde honom, <verse number="24" style="v"/>och alla hövdingarna och officerarna och alla kung Davids söner underordnade sig kung Salomo. <verse number="25" style="v"/><char style="nd">Herren</char> upphöjde Salomo inför hela Israel och gav honom kunglig glans på ett sätt som ingen kung i Israel tidigare hade haft.</para>
+  <para style="s2">David dör vid hög ålder</para>
+  <para style="p">
+    <verse number="26" style="v"/>David, Jishajs son, hade varit kung över hela Israel. <verse number="27" style="v"/>Han hade regerat över Israel i fyrtio år, sju år i Hebron och trettiotre i Jerusalem. <verse number="28" style="v"/>Han dog i hög ålder, nöjd med sina år, rik och ärad, och han efterträddes alltså av sin son Salomo.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Kung Davids historia, från början till slut, finns nedtecknad i siaren Samuels krönika, i profeten Natans krönika och i siaren Gads krönika. <verse number="30" style="v"/>Där berättas om hans regering, hans makt och allt som hände honom och Israel och alla andra riken och länder.</para>
+</usx>

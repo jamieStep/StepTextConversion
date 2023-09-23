@@ -1,0 +1,399 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata version="2.2.1" id="27a979e345ebfdb3" revision="5">
+    <identification>
+      <name>Hausa Contemporary New Testament 2009</name>
+      <nameLocal>Sabon Rai Don Kowa</nameLocal>
+      <description>Hausa: Sabon Rai Don Kowa (Bible)</description>
+      <descriptionLocal>Sabon Alkawari</descriptionLocal>
+      <abbreviation>HCB</abbreviation>
+      <abbreviationLocal>SRK</abbreviationLocal>
+      <scope>Bible</scope>
+      <dateCompleted>2009-12-01</dateCompleted>
+      <bundleProducer>Paratext/9.0.100.74</bundleProducer>
+      <systemId type="paratext">
+        <id>f259d83d3f161a1139ac8e974a991a346b21e6b5</id>
+        <csetId>391ce1d539f0d313a7a3e0831ef3078b51bc95a6</csetId>
+        <name>hauSRK09</name>
+        <fullName>Hausa Contemporary New Testament 2009</fullName>
+      </systemId>
+      <systemId type="ptreg">
+        <id>2hrRsRh3M5gSpsTrS</id>
+      </systemId>
+    </identification>
+    <type>
+      <medium>text</medium>
+      <isConfidential>false</isConfidential>
+      <hasCharacters>true</hasCharacters>
+      <isTranslation>true</isTranslation>
+      <isExpression>true</isExpression>
+      <translationType>New</translationType>
+      <audience>Basic</audience>
+      <projectType>Standard</projectType>
+    </type>
+    <relationships/>
+    <agencies>
+      <rightsHolder>
+        <abbr>Biblica</abbr>
+        <url>http://www.Biblica.com</url>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </rightsHolder>
+      <rightsAdmin>
+        <url>http://www.Biblica.com</url>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </rightsAdmin>
+      <contributor>
+        <content>true</content>
+        <publication>true</publication>
+        <management>true</management>
+        <finance>true</finance>
+        <qa>true</qa>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </contributor>
+    </agencies>
+    <language>
+      <iso>hau</iso>
+      <name>Hausa</name>
+      <nameLocal>Hausa</nameLocal>
+      <script>Latin</script>
+      <scriptCode>Latn</scriptCode>
+      <scriptDirection>LTR</scriptDirection>
+      <ldml>ha</ldml>
+      <rod>01068</rod>
+      <numerals>Arabic</numerals>
+    </language>
+    <countries>
+      <country>
+        <iso>NG</iso>
+        <name>Nigeria</name>
+      </country>
+    </countries>
+    <format>
+      <usxVersion>3.0</usxVersion>
+      <versedParagraphs>false</versedParagraphs>
+    </format>
+    <names>
+      <name id="book-mat">
+        <abbr>Mat</abbr>
+        <short>Mattiyu</short>
+        <long>Mattiyu</long>
+      </name>
+      <name id="book-mrk">
+        <abbr>Mar</abbr>
+        <short>Markus</short>
+        <long>Markus</long>
+      </name>
+      <name id="book-luk">
+        <abbr>Luk</abbr>
+        <short>Luka</short>
+        <long>Luka</long>
+      </name>
+      <name id="book-jhn">
+        <abbr>Yoh</abbr>
+        <short>Yohanna</short>
+        <long>Yohanna</long>
+      </name>
+      <name id="book-act">
+        <abbr>Ayy Man</abbr>
+        <short>Ayyukan Manzanni</short>
+        <long>Ayyukan Manzanni</long>
+      </name>
+      <name id="book-rom">
+        <abbr>Rom</abbr>
+        <short>Romawa</short>
+        <long>Romawa</long>
+      </name>
+      <name id="book-1co">
+        <abbr>1Kor</abbr>
+        <short>1 Korintiyawa</short>
+        <long>1 Korintiyawa</long>
+      </name>
+      <name id="book-2co">
+        <abbr>2Kor</abbr>
+        <short>2 Korintiyawa</short>
+        <long>2 Korintiyawa</long>
+      </name>
+      <name id="book-gal">
+        <abbr>Gal</abbr>
+        <short>Galatiyawa</short>
+        <long>Galatiyawa</long>
+      </name>
+      <name id="book-eph">
+        <abbr>Afi</abbr>
+        <short>Afisawa</short>
+        <long>Afisawa</long>
+      </name>
+      <name id="book-php">
+        <abbr>Fil</abbr>
+        <short>Filibbiyawa</short>
+        <long>Filibbiyawa</long>
+      </name>
+      <name id="book-col">
+        <abbr>Kol</abbr>
+        <short>Kolossiyawa</short>
+        <long>Kolossiyawa</long>
+      </name>
+      <name id="book-1th">
+        <abbr>1Tes</abbr>
+        <short>1 Tessalonikawa</short>
+        <long>1 Tessalonikawa</long>
+      </name>
+      <name id="book-2th">
+        <abbr>2Tes</abbr>
+        <short>2 Tessalonikawa</short>
+        <long>2 Tessalonikawa</long>
+      </name>
+      <name id="book-1ti">
+        <abbr>1Tim</abbr>
+        <short>1 Timoti</short>
+        <long>1 Timoti</long>
+      </name>
+      <name id="book-2ti">
+        <abbr>2Tim</abbr>
+        <short>2 Timoti</short>
+        <long>2 Timoti</long>
+      </name>
+      <name id="book-tit">
+        <abbr>Tit</abbr>
+        <short>Titus</short>
+        <long>Titus</long>
+      </name>
+      <name id="book-phm">
+        <abbr>Flm</abbr>
+        <short>Filemon</short>
+        <long>Filemon</long>
+      </name>
+      <name id="book-heb">
+        <abbr>Ibr</abbr>
+        <short>Ibraniyawa</short>
+        <long>Ibraniyawa</long>
+      </name>
+      <name id="book-jas">
+        <abbr>Yaƙ</abbr>
+        <short>Yaƙub</short>
+        <long>Yaƙub</long>
+      </name>
+      <name id="book-1pe">
+        <abbr>1Bit</abbr>
+        <short>1 Bitrus</short>
+        <long>1 Bitrus</long>
+      </name>
+      <name id="book-2pe">
+        <abbr>2Bit</abbr>
+        <short>2 Bitrus</short>
+        <long>2 Bitrus</long>
+      </name>
+      <name id="book-1jn">
+        <abbr>1Yoh</abbr>
+        <short>1 Yohanna</short>
+        <long>1 Yohanna</long>
+      </name>
+      <name id="book-2jn">
+        <abbr>2Yoh</abbr>
+        <short>2 Yohanna</short>
+        <long>2 Yohanna</long>
+      </name>
+      <name id="book-3jn">
+        <abbr>3Yoh</abbr>
+        <short>3 Yohanna</short>
+        <long>3 Yohanna</long>
+      </name>
+      <name id="book-jud">
+        <abbr>Yah</abbr>
+        <short>Yahuda</short>
+        <long>Yahuda</long>
+      </name>
+      <name id="book-rev">
+        <abbr>R Yoh</abbr>
+        <short>Ruʼuya ta Yohanna</short>
+        <long>Ruʼuya ta Yohanna</long>
+      </name>
+    </names>
+    <manifest>
+      <resource checksum="af306a7ab6835069234ffa6b599d0ada" mimeType="application/xml" size="96999" uri="release/USX_1/1CO.usx"/>
+      <resource checksum="00f8c78658b657c09038e45c6ae49177" mimeType="application/xml" size="25041" uri="release/USX_1/1JN.usx"/>
+      <resource checksum="fb523a669c172d0599c3e27de41dd876" mimeType="application/xml" size="27283" uri="release/USX_1/1PE.usx"/>
+      <resource checksum="56a5fe5a5405f63fe7ff11a7d605da55" mimeType="application/xml" size="20073" uri="release/USX_1/1TH.usx"/>
+      <resource checksum="2beefeb21ec19c7b08e1c6c82976b02c" mimeType="application/xml" size="27290" uri="release/USX_1/1TI.usx"/>
+      <resource checksum="b42533aa0c243a15baa6d9a657afcaf8" mimeType="application/xml" size="59647" uri="release/USX_1/2CO.usx"/>
+      <resource checksum="a69d3fc527cffe5114df6d34a62053a6" mimeType="application/xml" size="3782" uri="release/USX_1/2JN.usx"/>
+      <resource checksum="3b16b7017cf84a4fa3440641959cc845" mimeType="application/xml" size="15958" uri="release/USX_1/2PE.usx"/>
+      <resource checksum="91125b4475becf922c61cb12a98ff7fe" mimeType="application/xml" size="11850" uri="release/USX_1/2TH.usx"/>
+      <resource checksum="26a1115dde4cac37814a73b864e319df" mimeType="application/xml" size="19860" uri="release/USX_1/2TI.usx"/>
+      <resource checksum="924cd19611994fd8f366623a4f6b3b11" mimeType="application/xml" size="4411" uri="release/USX_1/3JN.usx"/>
+      <resource checksum="0dafb1658824657abc07101b9e300335" mimeType="application/xml" size="228978" uri="release/USX_1/ACT.usx"/>
+      <resource checksum="e9a4b7dc4fba25faf82028272e7736cf" mimeType="application/xml" size="22648" uri="release/USX_1/COL.usx"/>
+      <resource checksum="c8575350eea5605eb102843cb8f68433" mimeType="application/xml" size="33291" uri="release/USX_1/EPH.usx"/>
+      <resource checksum="063f67a6655d8d038db1485bb65831e5" mimeType="application/xml" size="34483" uri="release/USX_1/GAL.usx"/>
+      <resource checksum="8a3f47fc7d9a92032f4904a9d3e12824" mimeType="application/xml" size="78421" uri="release/USX_1/HEB.usx"/>
+      <resource checksum="02cfd665aac0218be51351a845294cfb" mimeType="application/xml" size="25088" uri="release/USX_1/JAS.usx"/>
+      <resource checksum="42b185091f2a33b3dec00858012b1a4d" mimeType="application/xml" size="186603" uri="release/USX_1/JHN.usx"/>
+      <resource checksum="7ca8aa96d2b2e6496db6202562502371" mimeType="application/xml" size="7632" uri="release/USX_1/JUD.usx"/>
+      <resource checksum="79bcd324e61923453a37596652ce0723" mimeType="application/xml" size="247321" uri="release/USX_1/LUK.usx"/>
+      <resource checksum="209cd72943a26a66c5e43c462f52b328" mimeType="application/xml" size="243532" uri="release/USX_1/MAT.usx"/>
+      <resource checksum="e297f7e87fba8d14a26e9ec3695b7927" mimeType="application/xml" size="150881" uri="release/USX_1/MRK.usx"/>
+      <resource checksum="dc78b2ebe8ae013e7d567aa4b4e7339e" mimeType="application/xml" size="6564" uri="release/USX_1/PHM.usx"/>
+      <resource checksum="ac71d7fd2a9ac33a6bce43e05bbade93" mimeType="application/xml" size="23941" uri="release/USX_1/PHP.usx"/>
+      <resource checksum="92efa3d1ca92648fb2a88f40822cd74f" mimeType="application/xml" size="110848" uri="release/USX_1/REV.usx"/>
+      <resource checksum="a9d19d447213624ec38191f3434cf417" mimeType="application/xml" size="106246" uri="release/USX_1/ROM.usx"/>
+      <resource checksum="7d69ea871e148a0c70040ab40d00a806" mimeType="application/xml" size="12059" uri="release/USX_1/TIT.usx"/>
+      <resource checksum="d1141d978be0e024e999c49e391a3da0" mimeType="application/xml" size="4161" uri="release/hau_ha.ldml"/>
+      <resource checksum="fdb4c323354dcdb33d6e2300b71c9535" mimeType="application/xml" size="96423" uri="release/styles.xml"/>
+      <resource checksum="7fa315f02620cba2b6c545c8299f3e0a" mimeType="text/plain" size="15641" uri="release/versification.vrs"/>
+      <resource checksum="951de9d7947a0d0a68381052691f3ea4" mimeType="application/zip" size="506129" uri="source/source.zip"/>
+    </manifest>
+    <source>
+      <canonicalContent>
+        <book code="1CO"/>
+        <book code="1JN"/>
+        <book code="1PE"/>
+        <book code="1TH"/>
+        <book code="1TI"/>
+        <book code="2CO"/>
+        <book code="2JN"/>
+        <book code="2PE"/>
+        <book code="2TH"/>
+        <book code="2TI"/>
+        <book code="3JN"/>
+        <book code="ACT"/>
+        <book code="COL"/>
+        <book code="EPH"/>
+        <book code="GAL"/>
+        <book code="HEB"/>
+        <book code="JAS"/>
+        <book code="JHN"/>
+        <book code="JUD"/>
+        <book code="LUK"/>
+        <book code="MAT"/>
+        <book code="MRK"/>
+        <book code="PHM"/>
+        <book code="PHP"/>
+        <book code="REV"/>
+        <book code="ROM"/>
+        <book code="TIT"/>
+      </canonicalContent>
+      <structure>
+        <content src="source/source.zip" role="sourceZip"/>
+      </structure>
+    </source>
+    <publications>
+      <publication id="p1" default="true">
+        <name>Hausa Contemporary New Testament</name>
+        <nameLocal>Sabon Rai Don Kowa</nameLocal>
+        <description>New Testament</description>
+        <descriptionLocal>Sabon Alkawari</descriptionLocal>
+        <abbreviation>HCB</abbreviation>
+        <abbreviationLocal>SRK</abbreviationLocal>
+        <canonicalContent>
+          <book code="1CO"/>
+          <book code="1JN"/>
+          <book code="1PE"/>
+          <book code="1TH"/>
+          <book code="1TI"/>
+          <book code="2CO"/>
+          <book code="2JN"/>
+          <book code="2PE"/>
+          <book code="2TH"/>
+          <book code="2TI"/>
+          <book code="3JN"/>
+          <book code="ACT"/>
+          <book code="COL"/>
+          <book code="EPH"/>
+          <book code="GAL"/>
+          <book code="HEB"/>
+          <book code="JAS"/>
+          <book code="JHN"/>
+          <book code="JUD"/>
+          <book code="LUK"/>
+          <book code="MAT"/>
+          <book code="MRK"/>
+          <book code="PHM"/>
+          <book code="PHP"/>
+          <book code="REV"/>
+          <book code="ROM"/>
+          <book code="TIT"/>
+        </canonicalContent>
+        <structure>
+          <content name="book-mat" src="release/USX_1/MAT.usx" role="MAT"/>
+          <content name="book-mrk" src="release/USX_1/MRK.usx" role="MRK"/>
+          <content name="book-luk" src="release/USX_1/LUK.usx" role="LUK"/>
+          <content name="book-jhn" src="release/USX_1/JHN.usx" role="JHN"/>
+          <content name="book-act" src="release/USX_1/ACT.usx" role="ACT"/>
+          <content name="book-rom" src="release/USX_1/ROM.usx" role="ROM"/>
+          <content name="book-1co" src="release/USX_1/1CO.usx" role="1CO"/>
+          <content name="book-2co" src="release/USX_1/2CO.usx" role="2CO"/>
+          <content name="book-gal" src="release/USX_1/GAL.usx" role="GAL"/>
+          <content name="book-eph" src="release/USX_1/EPH.usx" role="EPH"/>
+          <content name="book-php" src="release/USX_1/PHP.usx" role="PHP"/>
+          <content name="book-col" src="release/USX_1/COL.usx" role="COL"/>
+          <content name="book-1th" src="release/USX_1/1TH.usx" role="1TH"/>
+          <content name="book-2th" src="release/USX_1/2TH.usx" role="2TH"/>
+          <content name="book-1ti" src="release/USX_1/1TI.usx" role="1TI"/>
+          <content name="book-2ti" src="release/USX_1/2TI.usx" role="2TI"/>
+          <content name="book-tit" src="release/USX_1/TIT.usx" role="TIT"/>
+          <content name="book-phm" src="release/USX_1/PHM.usx" role="PHM"/>
+          <content name="book-heb" src="release/USX_1/HEB.usx" role="HEB"/>
+          <content name="book-jas" src="release/USX_1/JAS.usx" role="JAS"/>
+          <content name="book-1pe" src="release/USX_1/1PE.usx" role="1PE"/>
+          <content name="book-2pe" src="release/USX_1/2PE.usx" role="2PE"/>
+          <content name="book-1jn" src="release/USX_1/1JN.usx" role="1JN"/>
+          <content name="book-2jn" src="release/USX_1/2JN.usx" role="2JN"/>
+          <content name="book-3jn" src="release/USX_1/3JN.usx" role="3JN"/>
+          <content name="book-jud" src="release/USX_1/JUD.usx" role="JUD"/>
+          <content name="book-rev" src="release/USX_1/REV.usx" role="REV"/>
+        </structure>
+      </publication>
+    </publications>
+    <copyright>
+      <fullStatement>
+        <statementContent type="xhtml">
+          <p>Sabon Rai Don Kowa™, Sabon Alkawari</p>
+          <p>Hausa Contemporary Bible™, New Testament</p>
+          <p>Copyright © 2009 by Biblica, Inc.</p>
+          <p>Used with permission. All rights reserved worldwide.</p>
+        </statementContent>
+        <statementContent type="plain">© 2009 Biblica</statementContent>
+      </fullStatement>
+    </copyright>
+    <promotion>
+      <promoVersionInfo contentType="xhtml">
+        <p>Biblica, <em>The International Bible Society,</em> tana tadana maganar Allah ga mutane ta wurin fassara, wallafawa da sadarwa ta Littafi Mai Tsarki a Afirka, Asiya Fasifik, Turai, Latin Amurka, Gabas ta Tsakiya, da kuma Amurka ta Arewa. Ta wurin sadarwarta ta gama duniya, Biblica tana haɗa mutane da maganar Allah domin sabuntawar rayuwarsu ta wurin dangantaka da Yesu Kiristi.</p>
+      </promoVersionInfo>
+    </promotion>
+    <progress>
+      <book code="MAT" stage="4"/>
+      <book code="MRK" stage="4"/>
+      <book code="LUK" stage="4"/>
+      <book code="JHN" stage="4"/>
+      <book code="ACT" stage="4"/>
+      <book code="ROM" stage="4"/>
+      <book code="1CO" stage="4"/>
+      <book code="2CO" stage="4"/>
+      <book code="GAL" stage="4"/>
+      <book code="EPH" stage="4"/>
+      <book code="PHP" stage="4"/>
+      <book code="COL" stage="4"/>
+      <book code="1TH" stage="4"/>
+      <book code="2TH" stage="4"/>
+      <book code="1TI" stage="4"/>
+      <book code="2TI" stage="4"/>
+      <book code="TIT" stage="4"/>
+      <book code="PHM" stage="4"/>
+      <book code="HEB" stage="4"/>
+      <book code="JAS" stage="4"/>
+      <book code="1PE" stage="4"/>
+      <book code="2PE" stage="4"/>
+      <book code="1JN" stage="4"/>
+      <book code="2JN" stage="4"/>
+      <book code="3JN" stage="4"/>
+      <book code="JUD" stage="4"/>
+      <book code="REV" stage="4"/>
+    </progress>
+    <archiveStatus>
+      <archivistName>Kent Spielmann</archivistName>
+      <dateArchived>2018-12-21T03:55:18.072127</dateArchived>
+      <dateUpdated>2020-04-29T18:05:43.745314</dateUpdated>
+      <comments>Updated metadata and copyright</comments>
+    </archiveStatus>
+  </DBLMetadata>

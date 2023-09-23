@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="ECC" style="id">- English-UK: New International Version® (Anglicised) NIV® 2011 (Revised format)</book>
+  <para style="rem">Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.®</para>
+  <para style="h">Ecclesiastes</para>
+  <para style="toc1">Ecclesiastes</para>
+  <para style="toc2">Eccles.</para>
+  <para style="toc3">Ecc</para>
+  <para style="mt1">Ecclesiastes</para>
+  <para style="imt">Introduction</para>
+  <para style="im">Ecclesiastes is the collected words of a ‘teacher’ or ‘preacher’. The Teacher is described as having been king over Israel in Jerusalem, and as the son of David. Both of these mean that he was in the royal line of Judah. He is not further identified, and while tradition identifies him with Solomon, it is appropriate to leave this cloak of anonymity in place.</para>
+  <para style="ip">The repeated phrase <char style="qt">Meaningless! Meaningless! Everything is meaningless!</char> warns us that life’s rewards are uncertain and ultimately unsatisfying. The Teacher pursues this insight in a long discourse that shifts between prose and poetry, and between autobiography and straightforward teaching. The book makes observations and poses questions, returning to themes like the wind – <char style="qt">round and round it goes, ever returning on its course.</char></para>
+  <para style="ip">When the Teacher says <char style="qt">What is crooked cannot be straightened,</char> he reminds us that something wrong has intruded into our world. This fits the larger Jewish story told in the rest of the Scriptures. Setting things right again is what this bigger drama is about. The Teacher, however, does not tell us about God’s attempts at straightening the world. He is content to say that God is sovereign over all things and it is our duty to follow his ways for living, since <char style="qt">God will bring every deed into judgment.</char></para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="ECC 1"/>
+  <para style="s1">Everything is meaningless</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ECC 1:1"/>The words of the Teacher,<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">the leader of the assembly</char><char style="ft" closed="false">; also in verses 2 and 12</char></note> son of David, king of Jerusalem:<verse eid="ECC 1:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ECC 1:2"/>‘Meaningless! Meaningless!’</para>
+  <para style="q2" vid="ECC 1:2">says the Teacher.</para>
+  <para style="q1" vid="ECC 1:2">‘Utterly meaningless!</para>
+  <para style="q2" vid="ECC 1:2">Everything is meaningless.’<verse eid="ECC 1:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="ECC 1:3"/>What do people gain from all their labours</para>
+  <para style="q2" vid="ECC 1:3">at which they toil under the sun?<verse eid="ECC 1:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="ECC 1:4"/>Generations come and generations go,</para>
+  <para style="q2" vid="ECC 1:4">but the earth remains for ever.<verse eid="ECC 1:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="ECC 1:5"/>The sun rises and the sun sets,</para>
+  <para style="q2" vid="ECC 1:5">and hurries back to where it rises.<verse eid="ECC 1:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="ECC 1:6"/>The wind blows to the south</para>
+  <para style="q2" vid="ECC 1:6">and turns to the north;</para>
+  <para style="q1" vid="ECC 1:6">round and round it goes,</para>
+  <para style="q2" vid="ECC 1:6">ever returning on its course.<verse eid="ECC 1:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="ECC 1:7"/>All streams flow into the sea,</para>
+  <para style="q2" vid="ECC 1:7">yet the sea is never full.</para>
+  <para style="q1" vid="ECC 1:7">To the place the streams come from,</para>
+  <para style="q2" vid="ECC 1:7">there they return again.<verse eid="ECC 1:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="ECC 1:8"/>All things are wearisome,</para>
+  <para style="q2" vid="ECC 1:8">more than one can say.</para>
+  <para style="q1" vid="ECC 1:8">The eye never has enough of seeing,</para>
+  <para style="q2" vid="ECC 1:8">nor the ear its fill of hearing.<verse eid="ECC 1:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="ECC 1:9"/>What has been will be again,</para>
+  <para style="q2" vid="ECC 1:9">what has been done will be done again;</para>
+  <para style="q2" vid="ECC 1:9">there is nothing new under the sun.<verse eid="ECC 1:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="ECC 1:10"/>Is there anything of which one can say,</para>
+  <para style="q2" vid="ECC 1:10">‘Look! This is something new’?</para>
+  <para style="q1" vid="ECC 1:10">It was here already, long ago;</para>
+  <para style="q2" vid="ECC 1:10">it was here before our time.<verse eid="ECC 1:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="ECC 1:11"/>No-one remembers the former generations,</para>
+  <para style="q2" vid="ECC 1:11">and even those yet to come</para>
+  <para style="q1" vid="ECC 1:11">will not be remembered</para>
+  <para style="q2" vid="ECC 1:11">by those who follow them.<verse eid="ECC 1:11"/></para>
+  <para style="s1">Wisdom is meaningless</para>
+  <para style="p">
+    <verse number="12" style="v" sid="ECC 1:12"/>I, the Teacher, was king over Israel in Jerusalem. <verse eid="ECC 1:12"/><verse number="13" style="v" sid="ECC 1:13"/>I applied my mind to study and to explore by wisdom all that is done under the heavens. What a heavy burden God has laid on mankind! <verse eid="ECC 1:13"/><verse number="14" style="v" sid="ECC 1:14"/>I have seen all the things that are done under the sun; all of them are meaningless, a chasing after the wind.<verse eid="ECC 1:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="ECC 1:15"/>What is crooked cannot be straightened;</para>
+  <para style="q2" vid="ECC 1:15">what is lacking cannot be counted.<verse eid="ECC 1:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ECC 1:16"/>I said to myself, ‘Look, I have increased in wisdom more than anyone who has ruled over Jerusalem before me; I have experienced much of wisdom and knowledge.’ <verse eid="ECC 1:16"/><verse number="17" style="v" sid="ECC 1:17"/>Then I applied myself to the understanding of wisdom, and also of madness and folly, but I learned that this, too, is a chasing after the wind.<verse eid="ECC 1:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="ECC 1:18"/>For with much wisdom comes much sorrow;</para>
+  <para style="q2" vid="ECC 1:18">the more knowledge, the more grief.<verse eid="ECC 1:18"/></para>
+  <chapter eid="ECC 1"/>
+  <chapter number="2" style="c" sid="ECC 2"/>
+  <para style="s1">Pleasures are meaningless</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ECC 2:1"/>I said to myself, ‘Come now, I will test you with pleasure to find out what is good.’ But that also proved to be meaningless. <verse eid="ECC 2:1"/><verse number="2" style="v" sid="ECC 2:2"/>‘Laughter,’ I said, ‘is madness. And what does pleasure accomplish?’ <verse eid="ECC 2:2"/><verse number="3" style="v" sid="ECC 2:3"/>I tried cheering myself with wine, and embracing folly – my mind still guiding me with wisdom. I wanted to see what was good for people to do under the heavens during the few days of their lives.<verse eid="ECC 2:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ECC 2:4"/>I undertook great projects: I built houses for myself and planted vineyards. <verse eid="ECC 2:4"/><verse number="5" style="v" sid="ECC 2:5"/>I made gardens and parks and planted all kinds of fruit trees in them. <verse eid="ECC 2:5"/><verse number="6" style="v" sid="ECC 2:6"/>I made reservoirs to water groves of flourishing trees. <verse eid="ECC 2:6"/><verse number="7" style="v" sid="ECC 2:7"/>I bought male and female slaves and had other slaves who were born in my house. I also owned more herds and flocks than anyone in Jerusalem before me. <verse eid="ECC 2:7"/><verse number="8" style="v" sid="ECC 2:8"/>I amassed silver and gold for myself, and the treasure of kings and provinces. I acquired male and female singers, and a harem<note caller="+" style="f"><char style="fr" closed="false">2:8 </char><char style="ft" closed="false">The meaning of the Hebrew for this phrase is uncertain.</char></note> as well – the delights of a man’s heart. <verse eid="ECC 2:8"/><verse number="9" style="v" sid="ECC 2:9"/>I became greater by far than anyone in Jerusalem before me. In all this my wisdom stayed with me.<verse eid="ECC 2:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="ECC 2:10"/>I denied myself nothing my eyes desired;</para>
+  <para style="q2" vid="ECC 2:10">I refused my heart no pleasure.</para>
+  <para style="q1" vid="ECC 2:10">My heart took delight in all my labour,</para>
+  <para style="q2" vid="ECC 2:10">and this was the reward for all my toil.<verse eid="ECC 2:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="ECC 2:11"/>Yet when I surveyed all that my hands had done</para>
+  <para style="q2" vid="ECC 2:11">and what I had toiled to achieve,</para>
+  <para style="q1" vid="ECC 2:11">everything was meaningless, a chasing after the wind;</para>
+  <para style="q2" vid="ECC 2:11">nothing was gained under the sun.<verse eid="ECC 2:11"/></para>
+  <para style="s1">Wisdom and folly are meaningless</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="ECC 2:12"/>Then I turned my thoughts to consider wisdom,</para>
+  <para style="q2" vid="ECC 2:12">and also madness and folly.</para>
+  <para style="q1" vid="ECC 2:12">What more can the king’s successor do</para>
+  <para style="q2" vid="ECC 2:12">than what has already been done?<verse eid="ECC 2:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="ECC 2:13"/>I saw that wisdom is better than folly,</para>
+  <para style="q2" vid="ECC 2:13">just as light is better than darkness.<verse eid="ECC 2:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="ECC 2:14"/>The wise have eyes in their heads,</para>
+  <para style="q2" vid="ECC 2:14">while the fool walks in the darkness;</para>
+  <para style="q1" vid="ECC 2:14">but I came to realise</para>
+  <para style="q2" vid="ECC 2:14">that the same fate overtakes them both.<verse eid="ECC 2:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ECC 2:15"/>Then I said to myself,</para>
+  <para style="q1" vid="ECC 2:15">‘The fate of the fool will overtake me also.</para>
+  <para style="q2" vid="ECC 2:15">What then do I gain by being wise?’</para>
+  <para style="q1" vid="ECC 2:15">I said to myself,</para>
+  <para style="q2" vid="ECC 2:15">‘This too is meaningless.’<verse eid="ECC 2:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="ECC 2:16"/>For the wise, like the fool, will not be long remembered;</para>
+  <para style="q2" vid="ECC 2:16">the days have already come when both have been forgotten.</para>
+  <para style="q1" vid="ECC 2:16">Like the fool, the wise too must die!<verse eid="ECC 2:16"/></para>
+  <para style="s1">Toil is meaningless</para>
+  <para style="p">
+    <verse number="17" style="v" sid="ECC 2:17"/>So I hated life, because the work that is done under the sun was grievous to me. All of it is meaningless, a chasing after the wind. <verse eid="ECC 2:17"/><verse number="18" style="v" sid="ECC 2:18"/>I hated all the things I had toiled for under the sun, because I must leave them to the one who comes after me. <verse eid="ECC 2:18"/><verse number="19" style="v" sid="ECC 2:19"/>And who knows whether that person will be wise or foolish? Yet they will have control over all the fruit of my toil into which I have poured my effort and skill under the sun. This too is meaningless. <verse eid="ECC 2:19"/><verse number="20" style="v" sid="ECC 2:20"/>So my heart began to despair over all my toilsome labour under the sun. <verse eid="ECC 2:20"/><verse number="21" style="v" sid="ECC 2:21"/>For a person may labour with wisdom, knowledge and skill, and then they must leave all they own to another who has not toiled for it. This too is meaningless and a great misfortune. <verse eid="ECC 2:21"/><verse number="22" style="v" sid="ECC 2:22"/>What do people get for all the toil and anxious striving with which they labour under the sun? <verse eid="ECC 2:22"/><verse number="23" style="v" sid="ECC 2:23"/>All their days their work is grief and pain; even at night their minds do not rest. This too is meaningless.<verse eid="ECC 2:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="ECC 2:24"/>A person can do nothing better than to eat and drink and find satisfaction in their own toil. This too, I see, is from the hand of God, <verse eid="ECC 2:24"/><verse number="25" style="v" sid="ECC 2:25"/>for without him, who can eat or find enjoyment? <verse eid="ECC 2:25"/><verse number="26" style="v" sid="ECC 2:26"/>To the person who pleases him, God gives wisdom, knowledge and happiness, but to the sinner he gives the task of gathering and storing up wealth to hand it over to the one who pleases God. This too is meaningless, a chasing after the wind.<verse eid="ECC 2:26"/></para>
+  <chapter eid="ECC 2"/>
+  <chapter number="3" style="c" sid="ECC 3"/>
+  <para style="s1">A time for everything</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="ECC 3:1"/>There is a time for everything,</para>
+  <para style="q2" vid="ECC 3:1">and a season for every activity under the heavens:<verse eid="ECC 3:1"/></para>
+  <para style="b"/>
+  <para style="q2">
+    <verse number="2" style="v" sid="ECC 3:2"/>a time to be born and a time to die,</para>
+  <para style="q2" vid="ECC 3:2">a time to plant and a time to uproot,<verse eid="ECC 3:2"/></para>
+  <para style="q2">
+    <verse number="3" style="v" sid="ECC 3:3"/>a time to kill and a time to heal,</para>
+  <para style="q2" vid="ECC 3:3">a time to tear down and a time to build,<verse eid="ECC 3:3"/></para>
+  <para style="q2">
+    <verse number="4" style="v" sid="ECC 3:4"/>a time to weep and a time to laugh,</para>
+  <para style="q2" vid="ECC 3:4">a time to mourn and a time to dance,<verse eid="ECC 3:4"/></para>
+  <para style="q2">
+    <verse number="5" style="v" sid="ECC 3:5"/>a time to scatter stones and a time to gather them,</para>
+  <para style="q2" vid="ECC 3:5">a time to embrace and a time to refrain from embracing,<verse eid="ECC 3:5"/></para>
+  <para style="q2">
+    <verse number="6" style="v" sid="ECC 3:6"/>a time to search and a time to give up,</para>
+  <para style="q2" vid="ECC 3:6">a time to keep and a time to throw away,<verse eid="ECC 3:6"/></para>
+  <para style="q2">
+    <verse number="7" style="v" sid="ECC 3:7"/>a time to tear and a time to mend,</para>
+  <para style="q2" vid="ECC 3:7">a time to be silent and a time to speak,<verse eid="ECC 3:7"/></para>
+  <para style="q2">
+    <verse number="8" style="v" sid="ECC 3:8"/>a time to love and a time to hate,</para>
+  <para style="q2" vid="ECC 3:8">a time for war and a time for peace.<verse eid="ECC 3:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ECC 3:9"/>What do workers gain from their toil? <verse eid="ECC 3:9"/><verse number="10" style="v" sid="ECC 3:10"/>I have seen the burden God has laid on the human race. <verse eid="ECC 3:10"/><verse number="11" style="v" sid="ECC 3:11"/>He has made everything beautiful in its time. He has also set eternity in the human heart; yet<note caller="+" style="f"><char style="fr" closed="false">3:11 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">also placed ignorance in the human heart, so that</char></note> no-one can fathom what God has done from beginning to end. <verse eid="ECC 3:11"/><verse number="12" style="v" sid="ECC 3:12"/>I know that there is nothing better for people than to be happy and to do good while they live. <verse eid="ECC 3:12"/><verse number="13" style="v" sid="ECC 3:13"/>That each of them may eat and drink, and find satisfaction in all their toil – this is the gift of God. <verse eid="ECC 3:13"/><verse number="14" style="v" sid="ECC 3:14"/>I know that everything God does will endure for ever; nothing can be added to it and nothing taken from it. God does it so that people will fear him.<verse eid="ECC 3:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="ECC 3:15"/>Whatever is has already been,</para>
+  <para style="q2" vid="ECC 3:15">and what will be has been before;</para>
+  <para style="q2" vid="ECC 3:15">and God will call the past to account.<note caller="+" style="f"><char style="fr" closed="false">3:15 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">God calls back the past</char></note><verse eid="ECC 3:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ECC 3:16"/>And I saw something else under the sun:</para>
+  <para style="q1" vid="ECC 3:16">in the place of judgment – wickedness was there,</para>
+  <para style="q2" vid="ECC 3:16">in the place of justice – wickedness was there.<verse eid="ECC 3:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ECC 3:17"/>I said to myself,</para>
+  <para style="q1" vid="ECC 3:17">‘God will bring into judgment</para>
+  <para style="q2" vid="ECC 3:17">both the righteous and the wicked,</para>
+  <para style="q1" vid="ECC 3:17">for there will be a time for every activity,</para>
+  <para style="q2" vid="ECC 3:17">a time to judge every deed.’<verse eid="ECC 3:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ECC 3:18"/>I also said to myself, ‘As for humans, God tests them so that they may see that they are like the animals. <verse eid="ECC 3:18"/><verse number="19" style="v" sid="ECC 3:19"/>Surely the fate of human beings is like that of the animals; the same fate awaits them both: as one dies, so dies the other. All have the same breath<note caller="+" style="f"><char style="fr" closed="false">3:19 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">spirit</char></note>; humans have no advantage over animals. Everything is meaningless. <verse eid="ECC 3:19"/><verse number="20" style="v" sid="ECC 3:20"/>All go to the same place; all come from dust, and to dust all return. <verse eid="ECC 3:20"/><verse number="21" style="v" sid="ECC 3:21"/>Who knows if the human spirit rises upward and if the spirit of the animal goes down into the earth?’<verse eid="ECC 3:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ECC 3:22"/>So I saw that there is nothing better for a person than to enjoy their work, because that is their lot. For who can bring them to see what will happen after them?<verse eid="ECC 3:22"/></para>
+  <chapter eid="ECC 3"/>
+  <chapter number="4" style="c" sid="ECC 4"/>
+  <para style="s1">Oppression, toil, friendlessness</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ECC 4:1"/>Again I looked and saw all the oppression that was taking place under the sun:</para>
+  <para style="q1" vid="ECC 4:1">I saw the tears of the oppressed –</para>
+  <para style="q2" vid="ECC 4:1">and they have no comforter;</para>
+  <para style="q1" vid="ECC 4:1">power was on the side of their oppressors –</para>
+  <para style="q2" vid="ECC 4:1">and they have no comforter.<verse eid="ECC 4:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ECC 4:2"/>And I declared that the dead,</para>
+  <para style="q2" vid="ECC 4:2">who had already died,</para>
+  <para style="q1" vid="ECC 4:2">are happier than the living,</para>
+  <para style="q2" vid="ECC 4:2">who are still alive.<verse eid="ECC 4:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="ECC 4:3"/>But better than both</para>
+  <para style="q2" vid="ECC 4:3">is the one who has never been born,</para>
+  <para style="q1" vid="ECC 4:3">who has not seen the evil</para>
+  <para style="q2" vid="ECC 4:3">that is done under the sun.<verse eid="ECC 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ECC 4:4"/>And I saw that all toil and all achievement spring from one person’s envy of another. This too is meaningless, a chasing after the wind.<verse eid="ECC 4:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="ECC 4:5"/>Fools fold their hands</para>
+  <para style="q2" vid="ECC 4:5">and ruin themselves.<verse eid="ECC 4:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="ECC 4:6"/>Better one handful with tranquillity</para>
+  <para style="q2" vid="ECC 4:6">than two handfuls with toil</para>
+  <para style="q2" vid="ECC 4:6">and chasing after the wind.<verse eid="ECC 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ECC 4:7"/>Again I saw something meaningless under the sun:<verse eid="ECC 4:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="ECC 4:8"/>there was a man all alone;</para>
+  <para style="q2" vid="ECC 4:8">he had neither son nor brother.</para>
+  <para style="q1" vid="ECC 4:8">There was no end to his toil,</para>
+  <para style="q2" vid="ECC 4:8">yet his eyes were not content with his wealth.</para>
+  <para style="q1" vid="ECC 4:8">‘For whom am I toiling,’ he asked,</para>
+  <para style="q2" vid="ECC 4:8">‘and why am I depriving myself of enjoyment?’</para>
+  <para style="q1" vid="ECC 4:8">This too is meaningless –</para>
+  <para style="q2" vid="ECC 4:8">a miserable business!<verse eid="ECC 4:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="ECC 4:9"/>Two are better than one,</para>
+  <para style="q2" vid="ECC 4:9">because they have a good return for their labour:<verse eid="ECC 4:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="ECC 4:10"/>if either of them falls down,</para>
+  <para style="q2" vid="ECC 4:10">one can help the other up.</para>
+  <para style="q1" vid="ECC 4:10">But pity anyone who falls</para>
+  <para style="q2" vid="ECC 4:10">and has no-one to help them up.<verse eid="ECC 4:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="ECC 4:11"/>Also, if two lie down together, they will keep warm.</para>
+  <para style="q2" vid="ECC 4:11">But how can one keep warm alone?<verse eid="ECC 4:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="ECC 4:12"/>Though one may be overpowered,</para>
+  <para style="q2" vid="ECC 4:12">two can defend themselves.</para>
+  <para style="q1" vid="ECC 4:12">A cord of three strands is not quickly broken.<verse eid="ECC 4:12"/></para>
+  <para style="s1">Advancement is meaningless</para>
+  <para style="p">
+    <verse number="13" style="v" sid="ECC 4:13"/>Better a poor but wise youth than an old but foolish king who no longer knows how to heed a warning. <verse eid="ECC 4:13"/><verse number="14" style="v" sid="ECC 4:14"/>The youth may have come from prison to the kingship, or he may have been born in poverty within his kingdom. <verse eid="ECC 4:14"/><verse number="15" style="v" sid="ECC 4:15"/>I saw that all who lived and walked under the sun followed the youth, the king’s successor. <verse eid="ECC 4:15"/><verse number="16" style="v" sid="ECC 4:16"/>There was no end to all the people who were before them. But those who came later were not pleased with the successor. This too is meaningless, a chasing after the wind.<verse eid="ECC 4:16"/></para>
+  <chapter eid="ECC 4"/>
+  <chapter number="5" style="c" sid="ECC 5"/>
+  <para style="s1">Fulfil your vow to God</para>
+  <para style="p">
+    <note caller="+" style="f">
+      <char style="ft" closed="false">In Hebrew texts 5:1 is numbered 4:17, and 5:2-20 is numbered 5:1-19.</char>
+    </note> <verse number="1" style="v" sid="ECC 5:1"/>Guard your steps when you go to the house of God. Go near to listen rather than to offer the sacrifice of fools, who do not know that they do wrong.<verse eid="ECC 5:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ECC 5:2"/>Do not be quick with your mouth,</para>
+  <para style="q2" vid="ECC 5:2">do not be hasty in your heart</para>
+  <para style="q2" vid="ECC 5:2">to utter anything before God.</para>
+  <para style="q1" vid="ECC 5:2">God is in heaven</para>
+  <para style="q2" vid="ECC 5:2">and you are on earth,</para>
+  <para style="q2" vid="ECC 5:2">so let your words be few.<verse eid="ECC 5:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="ECC 5:3"/>A dream comes when there are many cares,</para>
+  <para style="q2" vid="ECC 5:3">and many words mark the speech of a fool.<verse eid="ECC 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ECC 5:4"/>When you make a vow to God, do not delay to fulfil it. He has no pleasure in fools; fulfil your vow. <verse eid="ECC 5:4"/><verse number="5" style="v" sid="ECC 5:5"/>It is better not to make a vow than to make one and not fulfil it. <verse eid="ECC 5:5"/><verse number="6" style="v" sid="ECC 5:6"/>Do not let your mouth lead you into sin. And do not protest to the temple messenger, ‘My vow was a mistake.’ Why should God be angry at what you say and destroy the work of your hands? <verse eid="ECC 5:6"/><verse number="7" style="v" sid="ECC 5:7"/>Much dreaming and many words are meaningless. Therefore fear God.<verse eid="ECC 5:7"/></para>
+  <para style="s1">Riches are meaningless</para>
+  <para style="p">
+    <verse number="8" style="v" sid="ECC 5:8"/>If you see the poor oppressed in a district, and justice and rights denied, do not be surprised at such things; for one official is eyed by a higher one, and over them both are others higher still. <verse eid="ECC 5:8"/><verse number="9" style="v" sid="ECC 5:9"/>The increase from the land is taken by all; the king himself profits from the fields.<verse eid="ECC 5:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="ECC 5:10"/>Whoever loves money never has enough;</para>
+  <para style="q2" vid="ECC 5:10">whoever loves wealth is never satisfied with their income.</para>
+  <para style="q2" vid="ECC 5:10">This too is meaningless.<verse eid="ECC 5:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="ECC 5:11"/>As goods increase,</para>
+  <para style="q2" vid="ECC 5:11">so do those who consume them.</para>
+  <para style="q1" vid="ECC 5:11">And what benefit are they to the owners</para>
+  <para style="q2" vid="ECC 5:11">except to feast their eyes on them?<verse eid="ECC 5:11"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v" sid="ECC 5:12"/>The sleep of a labourer is sweet,</para>
+  <para style="q2" vid="ECC 5:12">whether they eat little or much,</para>
+  <para style="q1" vid="ECC 5:12">but as for the rich, their abundance</para>
+  <para style="q2" vid="ECC 5:12">permits them no sleep.<verse eid="ECC 5:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ECC 5:13"/>I have seen a grievous evil under the sun:</para>
+  <para style="q1" vid="ECC 5:13">wealth hoarded to the harm of its owners,<verse eid="ECC 5:13"/></para>
+  <para style="q2">
+    <verse number="14" style="v" sid="ECC 5:14"/>or wealth lost through some misfortune,</para>
+  <para style="q1" vid="ECC 5:14">so that when they have children</para>
+  <para style="q2" vid="ECC 5:14">there is nothing left for them to inherit.<verse eid="ECC 5:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="ECC 5:15"/>Everyone comes naked from their mother’s womb,</para>
+  <para style="q2" vid="ECC 5:15">and as everyone comes, so they depart.</para>
+  <para style="q1" vid="ECC 5:15">They take nothing from their toil</para>
+  <para style="q2" vid="ECC 5:15">that they can carry in their hands.<verse eid="ECC 5:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ECC 5:16"/>This too is a grievous evil:</para>
+  <para style="q1" vid="ECC 5:16">as everyone comes, so they depart,</para>
+  <para style="q2" vid="ECC 5:16">and what do they gain,</para>
+  <para style="q2" vid="ECC 5:16">since they toil for the wind?<verse eid="ECC 5:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="ECC 5:17"/>All their days they eat in darkness,</para>
+  <para style="q2" vid="ECC 5:17">with great frustration, affliction and anger.<verse eid="ECC 5:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ECC 5:18"/>This is what I have observed to be good: that it is appropriate for a person to eat, to drink and to find satisfaction in their toilsome labour under the sun during the few days of life God has given them – for this is their lot. <verse eid="ECC 5:18"/><verse number="19" style="v" sid="ECC 5:19"/>Moreover, when God gives someone wealth and possessions, and the ability to enjoy them, to accept their lot and be happy in their toil – this is a gift of God. <verse eid="ECC 5:19"/><verse number="20" style="v" sid="ECC 5:20"/>They seldom reflect on the days of their life, because God keeps them occupied with gladness of heart.<verse eid="ECC 5:20"/></para>
+  <chapter eid="ECC 5"/>
+  <chapter number="6" style="c" sid="ECC 6"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ECC 6:1"/>I have seen another evil under the sun, and it weighs heavily on mankind: <verse eid="ECC 6:1"/><verse number="2" style="v" sid="ECC 6:2"/>God gives some people wealth, possessions and honour, so that they lack nothing their hearts desire, but God does not grant them the ability to enjoy them, and strangers enjoy them instead. This is meaningless, a grievous evil.<verse eid="ECC 6:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ECC 6:3"/>A man may have a hundred children and live many years; yet no matter how long he lives, if he cannot enjoy his prosperity and does not receive proper burial, I say that a stillborn child is better off than he. <verse eid="ECC 6:3"/><verse number="4" style="v" sid="ECC 6:4"/>It comes without meaning, it departs in darkness, and in darkness its name is shrouded. <verse eid="ECC 6:4"/><verse number="5" style="v" sid="ECC 6:5"/>Though it never saw the sun or knew anything, it has more rest than does that man – <verse eid="ECC 6:5"/><verse number="6" style="v" sid="ECC 6:6"/>even if he lives a thousand years twice over but fails to enjoy his prosperity. Do not all go to the same place?<verse eid="ECC 6:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="ECC 6:7"/>Everyone’s toil is for their mouth,</para>
+  <para style="q2" vid="ECC 6:7">yet their appetite is never satisfied.<verse eid="ECC 6:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="ECC 6:8"/>What advantage have the wise over fools?</para>
+  <para style="q1" vid="ECC 6:8">What do the poor gain</para>
+  <para style="q2" vid="ECC 6:8">by knowing how to conduct themselves before others?<verse eid="ECC 6:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="ECC 6:9"/>Better what the eye sees</para>
+  <para style="q2" vid="ECC 6:9">than the roving of the appetite.</para>
+  <para style="q1" vid="ECC 6:9">This too is meaningless,</para>
+  <para style="q2" vid="ECC 6:9">a chasing after the wind.<verse eid="ECC 6:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="ECC 6:10"/>Whatever exists has already been named,</para>
+  <para style="q2" vid="ECC 6:10">and what humanity is has been known;</para>
+  <para style="q1" vid="ECC 6:10">no-one can contend</para>
+  <para style="q2" vid="ECC 6:10">with someone who is stronger.<verse eid="ECC 6:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="ECC 6:11"/>The more the words,</para>
+  <para style="q2" vid="ECC 6:11">the less the meaning,</para>
+  <para style="q2" vid="ECC 6:11">and how does that profit anyone?<verse eid="ECC 6:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ECC 6:12"/>For who knows what is good for a person in life, during the few and meaningless days they pass through like a shadow? Who can tell them what will happen under the sun after they are gone?<verse eid="ECC 6:12"/></para>
+  <chapter eid="ECC 6"/>
+  <chapter number="7" style="c" sid="ECC 7"/>
+  <para style="s1">Wisdom</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="ECC 7:1"/>A good name is better than fine perfume,</para>
+  <para style="q2" vid="ECC 7:1">and the day of death better than the day of birth.<verse eid="ECC 7:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ECC 7:2"/>It is better to go to a house of mourning</para>
+  <para style="q2" vid="ECC 7:2">than to go to a house of feasting,</para>
+  <para style="q1" vid="ECC 7:2">for death is the destiny of everyone;</para>
+  <para style="q2" vid="ECC 7:2">the living should take this to heart.<verse eid="ECC 7:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="ECC 7:3"/>Frustration is better than laughter,</para>
+  <para style="q2" vid="ECC 7:3">because a sad face is good for the heart.<verse eid="ECC 7:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="ECC 7:4"/>The heart of the wise is in the house of mourning,</para>
+  <para style="q2" vid="ECC 7:4">but the heart of fools is in the house of pleasure.<verse eid="ECC 7:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="ECC 7:5"/>It is better to heed the rebuke of a wise person</para>
+  <para style="q2" vid="ECC 7:5">than to listen to the song of fools.<verse eid="ECC 7:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="ECC 7:6"/>Like the crackling of thorns under the pot,</para>
+  <para style="q2" vid="ECC 7:6">so is the laughter of fools.</para>
+  <para style="q2" vid="ECC 7:6">This too is meaningless.<verse eid="ECC 7:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="ECC 7:7"/>Extortion turns a wise person into a fool,</para>
+  <para style="q2" vid="ECC 7:7">and a bribe corrupts the heart.<verse eid="ECC 7:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="ECC 7:8"/>The end of a matter is better than its beginning,</para>
+  <para style="q2" vid="ECC 7:8">and patience is better than pride.<verse eid="ECC 7:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="ECC 7:9"/>Do not be quickly provoked in your spirit,</para>
+  <para style="q2" vid="ECC 7:9">for anger resides in the lap of fools.<verse eid="ECC 7:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="ECC 7:10"/>Do not say, ‘Why were the old days better than these?’</para>
+  <para style="q2" vid="ECC 7:10">For it is not wise to ask such questions.<verse eid="ECC 7:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="ECC 7:11"/>Wisdom, like an inheritance, is a good thing</para>
+  <para style="q2" vid="ECC 7:11">and benefits those who see the sun.<verse eid="ECC 7:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="ECC 7:12"/>Wisdom is a shelter</para>
+  <para style="q2" vid="ECC 7:12">as money is a shelter,</para>
+  <para style="q1" vid="ECC 7:12">but the advantage of knowledge is this:</para>
+  <para style="q2" vid="ECC 7:12">wisdom preserves those who have it.<verse eid="ECC 7:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ECC 7:13"/>Consider what God has done:</para>
+  <para style="q1" vid="ECC 7:13">who can straighten</para>
+  <para style="q2" vid="ECC 7:13">what he has made crooked?<verse eid="ECC 7:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="ECC 7:14"/>When times are good, be happy;</para>
+  <para style="q2" vid="ECC 7:14">but when times are bad, consider this:</para>
+  <para style="q1" vid="ECC 7:14">God has made the one</para>
+  <para style="q2" vid="ECC 7:14">as well as the other.</para>
+  <para style="q1" vid="ECC 7:14">Therefore, no-one can discover</para>
+  <para style="q2" vid="ECC 7:14">anything about their future.<verse eid="ECC 7:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ECC 7:15"/>In this meaningless life of mine I have seen both of these:</para>
+  <para style="q1" vid="ECC 7:15">the righteous perishing in their righteousness,</para>
+  <para style="q2" vid="ECC 7:15">and the wicked living long in their wickedness.<verse eid="ECC 7:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="ECC 7:16"/>Do not be over-righteous,</para>
+  <para style="q2" vid="ECC 7:16">neither be overwise –</para>
+  <para style="q2" vid="ECC 7:16">why destroy yourself?<verse eid="ECC 7:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="ECC 7:17"/>Do not be overwicked,</para>
+  <para style="q2" vid="ECC 7:17">and do not be a fool –</para>
+  <para style="q2" vid="ECC 7:17">why die before your time?<verse eid="ECC 7:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="ECC 7:18"/>It is good to grasp the one</para>
+  <para style="q2" vid="ECC 7:18">and not let go of the other.</para>
+  <para style="q2" vid="ECC 7:18">Whoever fears God will avoid all extremes.<note caller="+" style="f"><char style="fr" closed="false">7:18 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">will follow them both</char></note><verse eid="ECC 7:18"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v" sid="ECC 7:19"/>Wisdom makes one wise person more powerful</para>
+  <para style="q2" vid="ECC 7:19">than ten rulers in a city.<verse eid="ECC 7:19"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v" sid="ECC 7:20"/>Indeed, there is no-one on earth who is righteous,</para>
+  <para style="q2" vid="ECC 7:20">no-one who does what is right and never sins.<verse eid="ECC 7:20"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v" sid="ECC 7:21"/>Do not pay attention to every word people say,</para>
+  <para style="q2" vid="ECC 7:21">or you may hear your servant cursing you –<verse eid="ECC 7:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="ECC 7:22"/>for you know in your heart</para>
+  <para style="q2" vid="ECC 7:22">that many times you yourself have cursed others.<verse eid="ECC 7:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ECC 7:23"/>All this I tested by wisdom and I said,</para>
+  <para style="q1" vid="ECC 7:23">‘I am determined to be wise’ –</para>
+  <para style="q2" vid="ECC 7:23">but this was beyond me.<verse eid="ECC 7:23"/></para>
+  <para style="q1">
+    <verse number="24" style="v" sid="ECC 7:24"/>Whatever exists is far off and most profound –</para>
+  <para style="q2" vid="ECC 7:24">who can discover it?<verse eid="ECC 7:24"/></para>
+  <para style="q1">
+    <verse number="25" style="v" sid="ECC 7:25"/>So I turned my mind to understand,</para>
+  <para style="q2" vid="ECC 7:25">to investigate and to search out wisdom and the scheme of things</para>
+  <para style="q1" vid="ECC 7:25">and to understand the stupidity of wickedness</para>
+  <para style="q2" vid="ECC 7:25">and the madness of folly.<verse eid="ECC 7:25"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="26" style="v" sid="ECC 7:26"/>I find more bitter than death</para>
+  <para style="q2" vid="ECC 7:26">the woman who is a snare,</para>
+  <para style="q1" vid="ECC 7:26">whose heart is a trap</para>
+  <para style="q2" vid="ECC 7:26">and whose hands are chains.</para>
+  <para style="q1" vid="ECC 7:26">The man who pleases God will escape her,</para>
+  <para style="q2" vid="ECC 7:26">but the sinner she will ensnare.<verse eid="ECC 7:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ECC 7:27"/>‘Look,’ says the Teacher,<note caller="+" style="f"><char style="fr" closed="false">7:27 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">the leader of the assembly</char></note> ‘this is what I have discovered:</para>
+  <para style="q1" vid="ECC 7:27">‘Adding one thing to another to discover the scheme of things –<verse eid="ECC 7:27"/></para>
+  <para style="q2">
+    <verse number="28" style="v" sid="ECC 7:28"/>while I was still searching</para>
+  <para style="q2" vid="ECC 7:28">but not finding –</para>
+  <para style="q1" vid="ECC 7:28">I found one upright man among a thousand,</para>
+  <para style="q2" vid="ECC 7:28">but not one upright woman among them all.<verse eid="ECC 7:28"/></para>
+  <para style="q1">
+    <verse number="29" style="v" sid="ECC 7:29"/>This only have I found:</para>
+  <para style="q2" vid="ECC 7:29">God created mankind upright,</para>
+  <para style="q2" vid="ECC 7:29">but they have gone in search of many schemes.’<verse eid="ECC 7:29"/></para>
+  <para style="b"/>
+  <chapter eid="ECC 7"/>
+  <chapter number="8" style="c" sid="ECC 8"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="ECC 8:1"/>Who is like the wise?</para>
+  <para style="q2" vid="ECC 8:1">Who knows the explanation of things?</para>
+  <para style="q1" vid="ECC 8:1">A person’s wisdom brightens their face</para>
+  <para style="q2" vid="ECC 8:1">and changes its hard appearance.<verse eid="ECC 8:1"/></para>
+  <para style="s1">Obey the king</para>
+  <para style="p">
+    <verse number="2" style="v" sid="ECC 8:2"/>Obey the king’s command, I say, because you took an oath before God. <verse eid="ECC 8:2"/><verse number="3" style="v" sid="ECC 8:3"/>Do not be in a hurry to leave the king’s presence. Do not stand up for a bad cause, for he will do whatever he pleases. <verse eid="ECC 8:3"/><verse number="4" style="v" sid="ECC 8:4"/>Since a king’s word is supreme, who can say to him, ‘What are you doing?’<verse eid="ECC 8:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="ECC 8:5"/>Whoever obeys his command will come to no harm,</para>
+  <para style="q2" vid="ECC 8:5">and the wise heart will know the proper time and procedure.<verse eid="ECC 8:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="ECC 8:6"/>For there is a proper time and procedure for every matter,</para>
+  <para style="q2" vid="ECC 8:6">though a person may be weighed down by misery.<verse eid="ECC 8:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="ECC 8:7"/>Since no-one knows the future,</para>
+  <para style="q2" vid="ECC 8:7">who can tell someone else what is to come?<verse eid="ECC 8:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="ECC 8:8"/>As no-one has power over the wind to contain it,</para>
+  <para style="q2" vid="ECC 8:8">so<note caller="+" style="f"><char style="fr" closed="false">8:8 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">over the human spirit to retain it, / and so</char></note> no-one has power over the time of their death.</para>
+  <para style="q1" vid="ECC 8:8">As no-one is discharged in time of war,</para>
+  <para style="q2" vid="ECC 8:8">so wickedness will not release those who practise it.<verse eid="ECC 8:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ECC 8:9"/>All this I saw, as I applied my mind to everything done under the sun. There is a time when a man lords it over others to his own<note caller="+" style="f"><char style="fr" closed="false">8:9 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">to their</char></note> hurt. <verse eid="ECC 8:9"/><verse number="10" style="v" sid="ECC 8:10"/>Then too, I saw the wicked buried – those who used to come and go from the holy place and receive praise<note caller="+" style="f"><char style="fr" closed="false">8:10 </char><char style="ft" closed="false">Some Hebrew manuscripts and Septuagint (Aquila); most Hebrew manuscripts </char><char style="fqa" closed="false">and are forgotten</char></note> in the city where they did this. This too is meaningless.<verse eid="ECC 8:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ECC 8:11"/>When the sentence for a crime is not quickly carried out, people’s hearts are filled with schemes to do wrong. <verse eid="ECC 8:11"/><verse number="12" style="v" sid="ECC 8:12"/>Although a wicked person who commits a hundred crimes may live a long time, I know that it will go better with those who fear God, who are reverent before him. <verse eid="ECC 8:12"/><verse number="13" style="v" sid="ECC 8:13"/>Yet because the wicked do not fear God, it will not go well with them, and their days will not lengthen like a shadow.<verse eid="ECC 8:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ECC 8:14"/>There is something else meaningless that occurs on earth: the righteous who get what the wicked deserve, and the wicked who get what the righteous deserve. This too, I say, is meaningless. <verse eid="ECC 8:14"/><verse number="15" style="v" sid="ECC 8:15"/>So I commend the enjoyment of life, because there is nothing better for a person under the sun than to eat and drink and be glad. Then joy will accompany them in their toil all the days of the life God has given them under the sun.<verse eid="ECC 8:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ECC 8:16"/>When I applied my mind to know wisdom and to observe the labour that is done on earth – people getting no sleep day or night – <verse eid="ECC 8:16"/><verse number="17" style="v" sid="ECC 8:17"/>then I saw all that God has done. No-one can comprehend what goes on under the sun. Despite all their efforts to search it out, no-one can discover its meaning. Even if the wise claim they know, they cannot really comprehend it.<verse eid="ECC 8:17"/></para>
+  <chapter eid="ECC 8"/>
+  <chapter number="9" style="c" sid="ECC 9"/>
+  <para style="s1">A common destiny for all</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ECC 9:1"/>So I reflected on all this and concluded that the righteous and the wise and what they do are in God’s hands, but no-one knows whether love or hate awaits them. <verse eid="ECC 9:1"/><verse number="2" style="v" sid="ECC 9:2"/>All share a common destiny – the righteous and the wicked, the good and the bad,<note caller="+" style="f"><char style="fr" closed="false">9:2 </char><char style="ft" closed="false">Septuagint (Aquila), Vulgate and Syriac; Hebrew does not have </char><char style="fq" closed="false">and the bad</char><char style="fqa" closed="false">.</char></note> the clean and the unclean, those who offer sacrifices and those who do not.</para>
+  <para style="q1" vid="ECC 9:2">As it is with the good,</para>
+  <para style="q2" vid="ECC 9:2">so with the sinful;</para>
+  <para style="q1" vid="ECC 9:2">as it is with those who take oaths,</para>
+  <para style="q2" vid="ECC 9:2">so with those who are afraid to take them.<verse eid="ECC 9:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ECC 9:3"/>This is the evil in everything that happens under the sun: The same destiny overtakes all. The hearts of people, moreover, are full of evil and there is madness in their hearts while they live, and afterwards they join the dead. <verse eid="ECC 9:3"/><verse number="4" style="v" sid="ECC 9:4"/>Anyone who is among the living has hope<note caller="+" style="f"><char style="fr" closed="false">9:4 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">What then is to be chosen? With all who live, there is hope</char></note> – even a live dog is better off than a dead lion!<verse eid="ECC 9:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="ECC 9:5"/>For the living know that they will die,</para>
+  <para style="q2" vid="ECC 9:5">but the dead know nothing;</para>
+  <para style="q1" vid="ECC 9:5">they have no further reward,</para>
+  <para style="q2" vid="ECC 9:5">and even their name is forgotten.<verse eid="ECC 9:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="ECC 9:6"/>Their love, their hate</para>
+  <para style="q2" vid="ECC 9:6">and their jealousy have long since vanished;</para>
+  <para style="q1" vid="ECC 9:6">never again will they have a part</para>
+  <para style="q2" vid="ECC 9:6">in anything that happens under the sun.<verse eid="ECC 9:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ECC 9:7"/>Go, eat your food with gladness, and drink your wine with a joyful heart, for God has already approved what you do. <verse eid="ECC 9:7"/><verse number="8" style="v" sid="ECC 9:8"/>Always be clothed in white, and always anoint your head with oil. <verse eid="ECC 9:8"/><verse number="9" style="v" sid="ECC 9:9"/>Enjoy life with your wife, whom you love, all the days of this meaningless life that God has given you under the sun – all your meaningless days. For this is your lot in life and in your toilsome labour under the sun. <verse eid="ECC 9:9"/><verse number="10" style="v" sid="ECC 9:10"/>Whatever your hand finds to do, do it with all your might, for in the realm of the dead, where you are going, there is neither working nor planning nor knowledge nor wisdom.<verse eid="ECC 9:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ECC 9:11"/>I have seen something else under the sun:</para>
+  <para style="q1" vid="ECC 9:11">The race is not to the swift</para>
+  <para style="q2" vid="ECC 9:11">or the battle to the strong,</para>
+  <para style="q1" vid="ECC 9:11">nor does food come to the wise</para>
+  <para style="q2" vid="ECC 9:11">or wealth to the brilliant</para>
+  <para style="q2" vid="ECC 9:11">or favour to the learned;</para>
+  <para style="q1" vid="ECC 9:11">but time and chance happen to them all.<verse eid="ECC 9:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ECC 9:12"/>Moreover, no-one knows when their hour will come:</para>
+  <para style="q1" vid="ECC 9:12">As fish are caught in a cruel net,</para>
+  <para style="q2" vid="ECC 9:12">or birds are taken in a snare,</para>
+  <para style="q1" vid="ECC 9:12">so people are trapped by evil times</para>
+  <para style="q2" vid="ECC 9:12">that fall unexpectedly upon them.<verse eid="ECC 9:12"/></para>
+  <para style="s1">Wisdom better than folly</para>
+  <para style="p">
+    <verse number="13" style="v" sid="ECC 9:13"/>I also saw under the sun this example of wisdom that greatly impressed me: <verse eid="ECC 9:13"/><verse number="14" style="v" sid="ECC 9:14"/>there was once a small city with only a few people in it. And a powerful king came against it, surrounded it and built huge siege works against it. <verse eid="ECC 9:14"/><verse number="15" style="v" sid="ECC 9:15"/>Now there lived in that city a man poor but wise, and he saved the city by his wisdom. But nobody remembered that poor man. <verse eid="ECC 9:15"/><verse number="16" style="v" sid="ECC 9:16"/>So I said, ‘Wisdom is better than strength.’ But the poor man’s wisdom is despised, and his words are no longer heeded.<verse eid="ECC 9:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="ECC 9:17"/>The quiet words of the wise are more to be heeded</para>
+  <para style="q2" vid="ECC 9:17">than the shouts of a ruler of fools.<verse eid="ECC 9:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="ECC 9:18"/>Wisdom is better than weapons of war,</para>
+  <para style="q2" vid="ECC 9:18">but one sinner destroys much good.<verse eid="ECC 9:18"/></para>
+  <para style="b"/>
+  <chapter eid="ECC 9"/>
+  <chapter number="10" style="c" sid="ECC 10"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="ECC 10:1"/>As dead flies give perfume a bad smell,</para>
+  <para style="q2" vid="ECC 10:1">so a little folly outweighs wisdom and honour.<verse eid="ECC 10:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ECC 10:2"/>The heart of the wise inclines to the right,</para>
+  <para style="q2" vid="ECC 10:2">but the heart of the fool to the left.<verse eid="ECC 10:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="ECC 10:3"/>Even as fools walk along the road,</para>
+  <para style="q2" vid="ECC 10:3">they lack sense</para>
+  <para style="q2" vid="ECC 10:3">and show everyone how stupid they are.<verse eid="ECC 10:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="ECC 10:4"/>If a ruler’s anger rises against you,</para>
+  <para style="q2" vid="ECC 10:4">do not leave your post;</para>
+  <para style="q2" vid="ECC 10:4">calmness can lay great offences to rest.<verse eid="ECC 10:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="ECC 10:5"/>There is an evil I have seen under the sun,</para>
+  <para style="q2" vid="ECC 10:5">the sort of error that arises from a ruler:<verse eid="ECC 10:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="ECC 10:6"/>fools are put in many high positions,</para>
+  <para style="q2" vid="ECC 10:6">while the rich occupy the low ones.<verse eid="ECC 10:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="ECC 10:7"/>I have seen slaves on horseback,</para>
+  <para style="q2" vid="ECC 10:7">while princes go on foot like slaves.<verse eid="ECC 10:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="ECC 10:8"/>Whoever digs a pit may fall into it;</para>
+  <para style="q2" vid="ECC 10:8">whoever breaks through a wall may be bitten by a snake.<verse eid="ECC 10:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="ECC 10:9"/>Whoever quarries stones may be injured by them;</para>
+  <para style="q2" vid="ECC 10:9">whoever splits logs may be endangered by them.<verse eid="ECC 10:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="ECC 10:10"/>If the axe is dull</para>
+  <para style="q2" vid="ECC 10:10">and its edge unsharpened,</para>
+  <para style="q1" vid="ECC 10:10">more strength is needed,</para>
+  <para style="q2" vid="ECC 10:10">but skill will bring success.<verse eid="ECC 10:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="ECC 10:11"/>If a snake bites before it is charmed,</para>
+  <para style="q2" vid="ECC 10:11">the charmer receives no fee.<verse eid="ECC 10:11"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v" sid="ECC 10:12"/>Words from the mouth of the wise are gracious,</para>
+  <para style="q2" vid="ECC 10:12">but fools are consumed by their own lips.<verse eid="ECC 10:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="ECC 10:13"/>At the beginning their words are folly;</para>
+  <para style="q2" vid="ECC 10:13">at the end they are wicked madness –<verse eid="ECC 10:13"/></para>
+  <para style="q2">
+    <verse number="14" style="v" sid="ECC 10:14"/>and fools multiply words.</para>
+  <para style="b" vid="ECC 10:14"/>
+  <para style="q1" vid="ECC 10:14">No-one knows what is coming –</para>
+  <para style="q2" vid="ECC 10:14">who can tell someone else what will happen after them?<verse eid="ECC 10:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="ECC 10:15"/>The toil of fools wearies them;</para>
+  <para style="q2" vid="ECC 10:15">they do not know the way to town.<verse eid="ECC 10:15"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v" sid="ECC 10:16"/>Woe to the land whose king was a servant<note caller="+" style="f"><char style="fr" closed="false">10:16 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">king is a child</char></note></para>
+  <para style="q2" vid="ECC 10:16">and whose princes feast in the morning.<verse eid="ECC 10:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="ECC 10:17"/>Blessed is the land whose king is of noble birth</para>
+  <para style="q2" vid="ECC 10:17">and whose princes eat at a proper time –</para>
+  <para style="q2" vid="ECC 10:17">for strength and not for drunkenness.<verse eid="ECC 10:17"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v" sid="ECC 10:18"/>Through laziness, the rafters sag;</para>
+  <para style="q2" vid="ECC 10:18">because of idle hands, the house leaks.<verse eid="ECC 10:18"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v" sid="ECC 10:19"/>A feast is made for laughter,</para>
+  <para style="q2" vid="ECC 10:19">wine makes life merry,</para>
+  <para style="q2" vid="ECC 10:19">and money is the answer for everything.<verse eid="ECC 10:19"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v" sid="ECC 10:20"/>Do not revile the king even in your thoughts,</para>
+  <para style="q2" vid="ECC 10:20">or curse the rich in your bedroom,</para>
+  <para style="q1" vid="ECC 10:20">because a bird in the sky may carry your words,</para>
+  <para style="q2" vid="ECC 10:20">and a bird on the wing may report what you say.<verse eid="ECC 10:20"/></para>
+  <chapter eid="ECC 10"/>
+  <chapter number="11" style="c" sid="ECC 11"/>
+  <para style="s1">Invest in many ventures</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="ECC 11:1"/>Ship your grain across the sea;</para>
+  <para style="q2" vid="ECC 11:1">after many days you may receive a return.<verse eid="ECC 11:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ECC 11:2"/>Invest in seven ventures, yes, in eight;</para>
+  <para style="q2" vid="ECC 11:2">you do not know what disaster may come upon the land.<verse eid="ECC 11:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="ECC 11:3"/>If clouds are full of water,</para>
+  <para style="q2" vid="ECC 11:3">they pour rain on the earth.</para>
+  <para style="q1" vid="ECC 11:3">Whether a tree falls to the south or to the north,</para>
+  <para style="q2" vid="ECC 11:3">in the place where it falls, there it will lie.<verse eid="ECC 11:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="ECC 11:4"/>Whoever watches the wind will not plant;</para>
+  <para style="q2" vid="ECC 11:4">whoever looks at the clouds will not reap.<verse eid="ECC 11:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="ECC 11:5"/>As you do not know the path of the wind,</para>
+  <para style="q2" vid="ECC 11:5">or how the body is formed<note caller="+" style="f"><char style="fr" closed="false">11:5 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">know how life </char><char style="ft" closed="false">(or </char><char style="fqa" closed="false">the spirit</char><char style="ft" closed="false">) / </char><char style="fqa" closed="false">enters the body being formed</char></note> in a mother’s womb,</para>
+  <para style="q1" vid="ECC 11:5">so you cannot understand the work of God,</para>
+  <para style="q2" vid="ECC 11:5">the Maker of all things.<verse eid="ECC 11:5"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v" sid="ECC 11:6"/>Sow your seed in the morning,</para>
+  <para style="q2" vid="ECC 11:6">and at evening let your hands not be idle,</para>
+  <para style="q1" vid="ECC 11:6">for you do not know which will succeed,</para>
+  <para style="q2" vid="ECC 11:6">whether this or that,</para>
+  <para style="q2" vid="ECC 11:6">or whether both will do equally well.<verse eid="ECC 11:6"/></para>
+  <para style="s1">Remember your Creator while young</para>
+  <para style="q1">
+    <verse number="7" style="v" sid="ECC 11:7"/>Light is sweet,</para>
+  <para style="q2" vid="ECC 11:7">and it pleases the eyes to see the sun.<verse eid="ECC 11:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="ECC 11:8"/>However many years anyone may live,</para>
+  <para style="q2" vid="ECC 11:8">let them enjoy them all.</para>
+  <para style="q1" vid="ECC 11:8">But let them remember the days of darkness,</para>
+  <para style="q2" vid="ECC 11:8">for there will be many.</para>
+  <para style="q2" vid="ECC 11:8">Everything to come is meaningless.<verse eid="ECC 11:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="ECC 11:9"/>You who are young, be happy while you are young,</para>
+  <para style="q2" vid="ECC 11:9">and let your heart give you joy in the days of your youth.</para>
+  <para style="q1" vid="ECC 11:9">Follow the ways of your heart</para>
+  <para style="q2" vid="ECC 11:9">and whatever your eyes see,</para>
+  <para style="q1" vid="ECC 11:9">but know that for all these things</para>
+  <para style="q2" vid="ECC 11:9">God will bring you into judgment.<verse eid="ECC 11:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="ECC 11:10"/>So then, banish anxiety from your heart</para>
+  <para style="q2" vid="ECC 11:10">and cast off the troubles of your body,</para>
+  <para style="q2" vid="ECC 11:10">for youth and vigour are meaningless.<verse eid="ECC 11:10"/></para>
+  <para style="b"/>
+  <chapter eid="ECC 11"/>
+  <chapter number="12" style="c" sid="ECC 12"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="ECC 12:1"/>Remember your Creator</para>
+  <para style="q2" vid="ECC 12:1">in the days of your youth,</para>
+  <para style="q1" vid="ECC 12:1">before the days of trouble come</para>
+  <para style="q2" vid="ECC 12:1">and the years approach when you will say,</para>
+  <para style="q2" vid="ECC 12:1">‘I find no pleasure in them’ –<verse eid="ECC 12:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ECC 12:2"/>before the sun and the light</para>
+  <para style="q2" vid="ECC 12:2">and the moon and the stars grow dark,</para>
+  <para style="q2" vid="ECC 12:2">and the clouds return after the rain;<verse eid="ECC 12:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="ECC 12:3"/>when the keepers of the house tremble,</para>
+  <para style="q2" vid="ECC 12:3">and the strong men stoop,</para>
+  <para style="q1" vid="ECC 12:3">when the grinders cease because they are few,</para>
+  <para style="q2" vid="ECC 12:3">and those looking through the windows grow dim;<verse eid="ECC 12:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="ECC 12:4"/>when the doors to the street are closed</para>
+  <para style="q2" vid="ECC 12:4">and the sound of grinding fades;</para>
+  <para style="q1" vid="ECC 12:4">when people rise up at the sound of birds,</para>
+  <para style="q2" vid="ECC 12:4">but all their songs grow faint;<verse eid="ECC 12:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="ECC 12:5"/>when people are afraid of heights</para>
+  <para style="q2" vid="ECC 12:5">and of dangers in the streets;</para>
+  <para style="q1" vid="ECC 12:5">when the almond tree blossoms</para>
+  <para style="q2" vid="ECC 12:5">and the grasshopper drags itself along</para>
+  <para style="q2" vid="ECC 12:5">and desire no longer is stirred.</para>
+  <para style="q1" vid="ECC 12:5">Then people go to their eternal home</para>
+  <para style="q2" vid="ECC 12:5">and mourners go about the streets.<verse eid="ECC 12:5"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v" sid="ECC 12:6"/>Remember him – before the silver cord is severed,</para>
+  <para style="q2" vid="ECC 12:6">and the golden bowl is broken;</para>
+  <para style="q1" vid="ECC 12:6">before the pitcher is shattered at the spring,</para>
+  <para style="q2" vid="ECC 12:6">and the wheel broken at the well,<verse eid="ECC 12:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="ECC 12:7"/>and the dust returns to the ground it came from,</para>
+  <para style="q2" vid="ECC 12:7">and the spirit returns to God who gave it.<verse eid="ECC 12:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="ECC 12:8"/>‘Meaningless! Meaningless!’ says the Teacher.<note caller="+" style="f"><char style="fr" closed="false">12:8 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">the leader of the assembly</char><char style="ft" closed="false">; also in verses 9 and 10</char></note></para>
+  <para style="q2" vid="ECC 12:8">‘Everything is meaningless!’<verse eid="ECC 12:8"/></para>
+  <para style="s1">The conclusion of the matter</para>
+  <para style="p">
+    <verse number="9" style="v" sid="ECC 12:9"/>Not only was the Teacher wise, but also he imparted knowledge to the people. He pondered and searched out and set in order many proverbs. <verse eid="ECC 12:9"/><verse number="10" style="v" sid="ECC 12:10"/>The Teacher searched to find just the right words, and what he wrote was upright and true.<verse eid="ECC 12:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ECC 12:11"/>The words of the wise are like goads, their collected sayings like firmly embedded nails – given by one shepherd.<note caller="+" style="f"><char style="fr" closed="false">12:11 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">Shepherd</char></note> <verse eid="ECC 12:11"/><verse number="12" style="v" sid="ECC 12:12"/>Be warned, my son, of anything in addition to them.</para>
+  <para style="p" vid="ECC 12:12">Of making many books there is no end, and much study wearies the body.<verse eid="ECC 12:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="ECC 12:13"/>Now all has been heard;</para>
+  <para style="q2" vid="ECC 12:13">here is the conclusion of the matter:</para>
+  <para style="q1" vid="ECC 12:13">fear God and keep his commandments,</para>
+  <para style="q2" vid="ECC 12:13">for this is the duty of all mankind.<verse eid="ECC 12:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="ECC 12:14"/>For God will bring every deed into judgment,</para>
+  <para style="q2" vid="ECC 12:14">including every hidden thing,</para>
+  <para style="q2" vid="ECC 12:14">whether it is good or evil.<verse eid="ECC 12:14"/></para>
+  <chapter eid="ECC 12"/>
+</usx>

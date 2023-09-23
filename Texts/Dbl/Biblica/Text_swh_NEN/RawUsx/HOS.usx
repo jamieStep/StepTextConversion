@@ -1,0 +1,2047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="HOS" style="id">- Kiswahili Contemporary Version (Neno), updated 2018</book>
+  <para style="rem">Copyright © 1984, 1989, 2009, 2015 by Biblica, Inc.</para>
+  <para style="h">Hosea</para>
+  <para style="toc1">Hosea</para>
+  <para style="toc2">Hosea</para>
+  <para style="toc3">Hos</para>
+  <para style="mt1">Hosea</para>
+  <para style="imt">Utangulizi</para>
+  <para style="im">Hosea mwana wa Beeri alikuwa mzaliwa wa Ufalme wa Kaskazini, yaani, Israeli, ambao pia anauita Efraimu. Maana ya jina lake ni “Wokovu.” Inawezekana alianza huduma yake kabla ya kifo cha Mfalme Yeroboamu wa Pili mwaka wa 753 K.K. Huduma ya Hosea kwa Ufalme wa Kaskazini ilikaribiana sana na ile ya Amosi. Hawa wawili ndio manabii pekee wa Agano la Kale ambao vitabu vyao vilihusu Ufalme wa Kaskazini na maangamizi yake.</para>
+  <para style="ip">Hosea alipoanza huduma yake katika miaka ya baadaye ya utawala wa Yeroboamu wa Pili, Israeli ilikuwa inafurahia ustawi mkubwa wa kiuchumi na amani ya kisiasa iliyosababisha kuwepo kwa usalama pande zote. Mara baada ya kufa kwa Yeroboamu wa Pili mwaka 753 K.K., taifa lilianza kuharibika kwa haraka, na hatimaye likaangamia, nao Waisraeli wakapelekwa utumwani na Waashuru mwaka 722 K.K.</para>
+  <para style="is1">Mwandishi</para>
+  <para style="im">Hosea mwana wa Beeri.</para>
+  <para style="is1">Kusudi</para>
+  <para style="im">Kiini cha ujumbe wa Hosea ni kuonyesha upendo wa Mungu kwa watu wa Israeli waliogeuka na kumwacha Bwana.</para>
+  <para style="is1">Mahali</para>
+  <para style="im">Ufalme wa Kaskazini (Israeli), ambao nabii anauita Efraimu.</para>
+  <para style="is1">Tarehe</para>
+  <para style="im">715 K.K.</para>
+  <para style="is1">Wahusika Wakuu</para>
+  <para style="im">Hosea, Gomeri, na watoto wao.</para>
+  <para style="is1">Wazo Kuu</para>
+  <para style="im">Uhusiano wa Mungu na Israeli uliokuwa umefifia.</para>
+  <para style="is1">Mambo Muhimu</para>
+  <para style="im">Hosea anaelezea hali ya taifa la Israeli akitumia hali iliyojitokeza katika maisha ya kila siku. Mungu anafananishwa na: mume, baba, simba, chui, dubu, umande, mvua, nondo, n.k. Israeli inafananishwa na: mke aliyekosa uaminifu kwa mumewe, mtu mgonjwa, mzabibu, mzeituni, mwanamke anayejifungua, jiko la kuokea, ukungu wa asubuhi, makapi, moshi, n.k.</para>
+  <para style="iot">Mgawanyo</para>
+  <para style="io1">Maisha ya Hosea katika familia (<char style="ior"><ref loc="HOS 1:1-3:5">1:1–3:5</ref></char>)</para>
+  <para style="io1">Hali ya dhambi ya Israeli (<char style="ior"><ref loc="HOS 4:1-6:3">4:1–6:3</ref></char>)</para>
+  <para style="io1">Adhabu kwa ajili ya Israeli (<char style="ior"><ref loc="HOS 6:4-10:15">6:4–10:15</ref></char>)</para>
+  <para style="io1">Hukumu ya Mungu na rehema zake (<char style="ior"><ref loc="HOS 11:1-14:9">11:1–14:9</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="HOS 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 1:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 1:1">Mik 1:1</ref>; <ref loc="ISA 1:1">Isa 1:1</ref>; <ref loc="2KI 13:13">2Fal 13:13</ref>; <ref loc="2KI 14:12">14:12</ref>; <ref loc="1CH 3:12-13">1Nya 3:12-13</ref>; <ref loc="JER 1:2">Yer 1:2</ref>; <ref loc="2KI 14:21">2Fal 14:21</ref></char>
+    </note>Neno la <char style="nd">Bwana</char> lililomjia Hosea mwana wa Beeri wakati wa utawala wa Uzia, Yothamu, Ahazi na Hezekia, wafalme wa Yuda, na wakati wa utawala wa Yeroboamu mwana wa Yehoashi, mfalme wa Israeli.<verse eid="HOS 1:1"/></para>
+  <para style="b"/>
+  <para style="s1">Mke Wa Hosea Na Watoto</para>
+  <para style="p">
+    <verse number="2" style="v" sid="HOS 1:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="JDG 2:17">Amu 2:17</ref>; <ref loc="JER 3:14">Yer 3:14</ref>; <ref loc="HOS 2:5">Hos 2:5</ref>; <ref loc="HOS 3:1">3:1</ref>; <ref loc="JER 3:1">Yer 3:1</ref>; <ref loc="DEU 31:16">Kum 31:16</ref></char>
+    </note>Wakati <char style="nd">Bwana</char> alipoanza kuzungumza kupitia Hosea, <char style="nd">Bwana</char> alimwambia, “Nenda ukajitwalie mwanamke wa uzinzi na watoto wa uzinzi, kwa sababu nchi ina hatia ya uzinzi wa kupindukia kwa kumwacha <char style="nd">Bwana</char>.” <verse eid="HOS 1:2"/><verse number="3" style="v" sid="HOS 1:3"/><note caller="-" style="x"><char style="xo" closed="false">1:3 </char><char style="xt" closed="false"><ref loc="HOS 1:6">Hos 1:6</ref></char></note>Kwa hiyo alimwoa Gomeri binti Diblaimu, naye akachukua mimba na kumzalia Hosea mwana.<verse eid="HOS 1:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HOS 1:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="1SA 29:1">1Sam 29:1</ref>; <ref loc="1KI 18:45">1Fal 18:45</ref>; <ref loc="2KI 10:1-14">2Fal 10:1-14</ref>; <ref loc="HOS 2:22">Hos 2:22</ref></char>
+    </note>Kisha <char style="nd">Bwana</char> akamwambia Hosea, “Mwite Yezreeli,<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="ft" closed="false">Yezreeli maana yake Mungu hupanda.</char></note> kwa kuwa kitambo kidogo nitaiadhibu nyumba ya Yehu kwa ajili ya mauaji ya kule Yezreeli, nami nitaukomesha ufalme wa Israeli. <verse eid="HOS 1:4"/><verse number="5" style="v" sid="HOS 1:5"/><note caller="-" style="x"><char style="xo" closed="false">1:5 </char><char style="xt" closed="false"><ref loc="JOS 15:56">Yos 15:56</ref>; <ref loc="1SA 29:1">1Sam 29:1</ref>; <ref loc="2KI 15:29">2Fal 15:29</ref></char></note>Katika siku ile nitavunja upinde wa Israeli katika Bonde la Yezreeli.”<verse eid="HOS 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HOS 1:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:4">Hos 2:4</ref>, <ref loc="HOS 2:23">23</ref>; <ref loc="HOS 1:6">1:6</ref></char>
+    </note>Gomeri akachukua tena mimba akamzaa binti. Kisha <char style="nd">Bwana</char> akamwambia Hosea, “Mwite Lo-Ruhama,<note caller="+" style="f"><char style="fr" closed="false">1:6 </char><char style="ft" closed="false">Lo-Ruhama maana yake Sio mpenzi wangu.</char></note> kwa maana sitaonyesha tena upendo kwa nyumba ya Israeli, kwamba nisije kabisa nikawasamehe. <verse eid="HOS 1:6"/><verse number="7" style="v" sid="HOS 1:7"/><note caller="-" style="x"><char style="xo" closed="false">1:7 </char><char style="xt" closed="false"><ref loc="PSA 44:6">Za 44:6</ref>; <ref loc="ZEC 2:6">Zek 2:6</ref></char></note>Hata hivyo nitaonyesha upendo kwa nyumba ya Yuda, nami nitawaokoa si kwa upinde, upanga au vita, wala kwa farasi na wapanda farasi, bali kwa njia ya <char style="nd">Bwana</char> Mungu wao.”<verse eid="HOS 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HOS 1:8"/>Baada ya Gomeri kumwachisha Lo-Ruhama kunyonya, Gomeri alipata mwana mwingine. <verse eid="HOS 1:8"/><verse number="9" style="v" sid="HOS 1:9"/><note caller="-" style="x"><char style="xo" closed="false">1:9 </char><char style="xt" closed="false"><ref loc="EZK 11:19-20">Eze 11:19-20</ref>; <ref loc="1PE 2:10">1Pet 2:10</ref></char></note>Kisha <char style="nd">Bwana</char> akasema, “Mwite Lo-Ami<note caller="+" style="f"><char style="fr" closed="false">1:9 </char><char style="ft" closed="false">Lo-Ami maana yake Sio watu wangu.</char></note> kwa maana ninyi si watu wangu, nami si Mungu wenu.<verse eid="HOS 1:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HOS 1:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 22:17">Mwa 22:17</ref>; <ref loc="JER 33:22">Yer 33:22</ref>; <ref loc="ROM 9:26">Rum 9:26</ref>; <ref loc="HOS 2:23">Hos 2:23</ref>; <ref loc="NUM 23:10">Hes 23:10</ref>; <ref loc="JOS 3:10">Yos 3:10</ref></char>
+    </note>“Hata hivyo Waisraeli watakuwa kama mchanga kando ya bahari, ambao hauwezi kupimika wala kuhesabiwa. Mahali pale walipoambiwa, ‘Ninyi si watu wangu,’ wao wataitwa ‘wana wa Mungu aliye hai.’ <verse eid="HOS 1:10"/><verse number="11" style="v" sid="HOS 1:11"/><note caller="-" style="x"><char style="xo" closed="false">1:11 </char><char style="xt" closed="false"><ref loc="ISA 11:12-13">Isa 11:12-13</ref>; <ref loc="JER 23:5-8">Yer 23:5-8</ref>; <ref loc="JER 30:9">30:9</ref>; <ref loc="EZK 37:15-28">Eze 37:15-28</ref></char></note>Watu wa Yuda na watu wa Israeli wataunganishwa tena, nao watamchagua kiongozi mmoja nao watakwea watoke katika nchi, kwa kuwa siku ya Yezreeli itakuwa kuu sana.<verse eid="HOS 1:11"/></para>
+  <chapter eid="HOS 1"/>
+  <chapter number="2" style="c" sid="HOS 2"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 2:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="1PE 2:10">1Pet 2:10</ref>; <ref loc="HOS 2:5">Hos 2:5</ref></char>
+    </note>“Waambie ndugu zako, ‘Watu wangu,’ na pia waambie dada zako, ‘Wapendwa wangu.’<verse eid="HOS 2:1"/></para>
+  <para style="s1">Israeli Aadhibiwa Na Kurudishwa</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 2:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:21">Isa 1:21</ref>; <ref loc="ISA 50:1">50:1</ref>; <ref loc="EZK 16:25">Eze 16:25</ref>; <ref loc="EZK 23:45">23:45</ref>; <ref loc="HOS 4:5">Hos 4:5</ref></char>
+    </note>“Mkemeeni mama yenu, mkemeeni,</para>
+  <para style="q2" vid="HOS 2:2">kwa maana yeye si mke wangu,</para>
+  <para style="q2" vid="HOS 2:2">nami si mume wake.</para>
+  <para style="q1" vid="HOS 2:2">Aondoe sura ya uzinzi katika uso wake</para>
+  <para style="q2" vid="HOS 2:2">na uzinzi kati ya matiti yake.<verse eid="HOS 2:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 2:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 16:4">Eze 16:4</ref>, <ref loc="EZK 16:37">37</ref>; <ref loc="EZK 19:13">19:13</ref>; <ref loc="ISA 32:13-14">Isa 32:13-14</ref></char>
+    </note>Kama sivyo nitamvua nguo zake awe uchi</para>
+  <para style="q2" vid="HOS 2:3">na kumwacha uchi kama siku ile aliyozaliwa.</para>
+  <para style="q1" vid="HOS 2:3">Nitamfanya kama jangwa,</para>
+  <para style="q2" vid="HOS 2:3">nitamgeuza awe nchi ya kiu,</para>
+  <para style="q2" vid="HOS 2:3">nami nitamuua kwa kiu.<verse eid="HOS 2:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 2:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 8:18">Eze 8:18</ref>; <ref loc="HOS 1:6">Hos 1:6</ref>; <ref loc="HOS 5:7">5:7</ref></char>
+    </note>Sitaonyesha upendo wangu kwa watoto wake,</para>
+  <para style="q2" vid="HOS 2:4">kwa sababu ni watoto wa uzinzi.<verse eid="HOS 2:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 2:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 3:6">Yer 3:6</ref>; <ref loc="JER 44:17-18">44:17-18</ref>; <ref loc="HOS 1:2">Hos 1:2</ref></char>
+    </note>Mama yao amekosa uaminifu</para>
+  <para style="q2" vid="HOS 2:5">na amewachukua mimba katika aibu.</para>
+  <para style="q1" vid="HOS 2:5">Gomeri alisema, ‘Nitawaendea wapenzi wangu,</para>
+  <para style="q2" vid="HOS 2:5">ambao hunipa chakula changu</para>
+  <para style="q2" vid="HOS 2:5">na maji yangu,</para>
+  <para style="q1" vid="HOS 2:5">sufu yangu na kitani yangu, mafuta yangu</para>
+  <para style="q2" vid="HOS 2:5">na kinywaji changu.’<verse eid="HOS 2:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 2:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 3:23">Ay 3:23</ref>; <ref loc="JOB 19:8">19:8</ref>; <ref loc="LAM 3:9">Mao 3:9</ref></char>
+    </note>Kwa hiyo mimi Mungu nitaizuia njia yake</para>
+  <para style="q2" vid="HOS 2:6">kwa vichaka vya miiba,</para>
+  <para style="q1" vid="HOS 2:6">nitamjengea ukuta ili kwamba</para>
+  <para style="q2" vid="HOS 2:6">asiweze kutoka.<verse eid="HOS 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 2:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:13">Hos 5:13</ref>; <ref loc="JER 3:1">Yer 3:1</ref>; <ref loc="EZK 16:8">Eze 16:8</ref>; <ref loc="ISA 54:5">Isa 54:5</ref></char>
+    </note>Gomeri atawafuatia wapenzi wake lakini hatawapata;</para>
+  <para style="q2" vid="HOS 2:7">atawatafuta lakini hatawapata.</para>
+  <para style="q1" vid="HOS 2:7">Kisha atasema,</para>
+  <para style="q2" vid="HOS 2:7">‘Nitarudi kwa mume wangu kama kwanza,</para>
+  <para style="q1" vid="HOS 2:7">kwa maana nilikuwa na hali njema zaidi</para>
+  <para style="q2" vid="HOS 2:7">kuliko sasa.’<verse eid="HOS 2:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 2:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 16:15-19">Eze 16:15-19</ref>; <ref loc="NUM 18:12">Hes 18:12</ref>; <ref loc="DEU 8:18">Kum 8:18</ref>; <ref loc="HOS 8:4">Hos 8:4</ref></char>
+    </note>Gomeri hajakubali kuwa mimi ndiye</para>
+  <para style="q2" vid="HOS 2:8">niliyempa nafaka, divai mpya na mafuta,</para>
+  <para style="q1" vid="HOS 2:8">niliyemwongezea fedha na dhahabu waliyoitumia</para>
+  <para style="q2" vid="HOS 2:8">kwa kumtumikia Baali.<verse eid="HOS 2:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 2:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:7">Hos 8:7</ref>; <ref loc="HOS 9:2">9:2</ref></char>
+    </note>“Kwa hiyo nitachukua nafaka yangu wakati itakapokomaa</para>
+  <para style="q2" vid="HOS 2:9">na divai yangu mpya wakati itakapokuwa tayari.</para>
+  <para style="q1" vid="HOS 2:9">Nitamnyangʼanya sufu yangu na kitani yangu</para>
+  <para style="q2" vid="HOS 2:9">iliyokusudiwa kufunika uchi wake.<verse eid="HOS 2:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 2:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 16:37">Eze 16:37</ref>; <ref loc="EZK 23:10">23:10</ref>; <ref loc="JER 13:26">Yer 13:26</ref></char>
+    </note>Basi sasa nitaufunua ufisadi wake</para>
+  <para style="q2" vid="HOS 2:10">mbele ya wapenzi wake;</para>
+  <para style="q1" vid="HOS 2:10">hakuna yeyote atakayemtoa</para>
+  <para style="q2" vid="HOS 2:10">mikononi mwangu.<verse eid="HOS 2:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 2:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:14">Isa 1:14</ref>; <ref loc="ISA 24:8">24:8</ref>; <ref loc="AMO 5:21">Amo 5:21</ref>; <ref loc="AMO 8:10">8:10</ref>; <ref loc="JER 7:34">Yer 7:34</ref>; <ref loc="JER 16:9">16:9</ref>; <ref loc="HOS 9:5">Hos 9:5</ref></char>
+    </note>Nitakomesha furaha na macheko yake yote:</para>
+  <para style="q2" vid="HOS 2:11">sikukuu zake za mwaka,</para>
+  <para style="q2" vid="HOS 2:11">sikukuu za Miandamo ya Mwezi,</para>
+  <para style="q2" vid="HOS 2:11">siku zake za Sabato,</para>
+  <para style="q2" vid="HOS 2:11">sikukuu zake zote zilizoamriwa.<verse eid="HOS 2:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 2:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 5:6">Isa 5:6</ref>; <ref loc="ISA 7:23">7:23</ref>; <ref loc="JER 8:13">Yer 8:13</ref>; <ref loc="HOS 5:7">Hos 5:7</ref>; <ref loc="HOS 13:8">13:8</ref></char>
+    </note>Nitaiharibu mizabibu yake na mitini yake,</para>
+  <para style="q2" vid="HOS 2:12">ambayo alisema yalikuwa malipo yake</para>
+  <para style="q2" vid="HOS 2:12">kutoka kwa wapenzi wake;</para>
+  <para style="q1" vid="HOS 2:12">nitaifanya kuwa kichaka,</para>
+  <para style="q2" vid="HOS 2:12">nao wanyama pori wataila.<verse eid="HOS 2:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 2:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 7:9">Yer 7:9</ref>; <ref loc="HOS 4:13">Hos 4:13</ref>; <ref loc="HOS 8:14">8:14</ref>; <ref loc="HOS 11:2">11:2</ref>; <ref loc="HOS 13:6">13:6</ref>; <ref loc="EZK 16:17">Eze 16:17</ref>; <ref loc="EZK 23:40">23:40</ref>; <ref loc="ISA 65:7">Isa 65:7</ref></char>
+    </note>Nitamwadhibu kwa ajili ya siku</para>
+  <para style="q2" vid="HOS 2:13">alizowafukizia uvumba Mabaali;</para>
+  <para style="q1" vid="HOS 2:13">alipojipamba kwa pete</para>
+  <para style="q2" vid="HOS 2:13">na kwa vito vya thamani,</para>
+  <para style="q1" vid="HOS 2:13">na kuwaendea wapenzi wake,</para>
+  <para style="q2" vid="HOS 2:13">lakini mimi alinisahau,”</para>
+  <para style="q4" vid="HOS 2:13">asema <char style="nd">Bwana</char>.<verse eid="HOS 2:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 2:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 19:14">Eze 19:14</ref>
+      </char>
+    </note>“Kwa hiyo sasa nitamshawishi;</para>
+  <para style="q2" vid="HOS 2:14">nitamwongoza hadi jangwani</para>
+  <para style="q2" vid="HOS 2:14">na kuzungumza naye kwa upole.<verse eid="HOS 2:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 2:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 7:24-26">Yos 7:24-26</ref>; <ref loc="EXO 15:1-18">Kut 15:1-18</ref>; <ref loc="EZK 16:22">Eze 16:22</ref>; <ref loc="EZK 28:26">28:26</ref>; <ref loc="HOS 12:9">Hos 12:9</ref>; <ref loc="1CO 13:13">1Kor 13:13</ref></char>
+    </note>Huko nitamrudishia mashamba yake ya mizabibu,</para>
+  <para style="q2" vid="HOS 2:15">nami nitalifanya Bonde la Akori<note caller="+" style="f"><char style="fr" closed="false">2:15 </char><char style="ft" closed="false">Akori maana yake ni Taabu.</char></note></para>
+  <para style="q2" vid="HOS 2:15">mlango wa matumaini.</para>
+  <para style="q1" vid="HOS 2:15">Huko ataimba kama alivyofanya katika siku za ujana wake,</para>
+  <para style="q2" vid="HOS 2:15">kama siku zile alizotoka Misri.<verse eid="HOS 2:15"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 2:16"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 54:5">Isa 54:5</ref>
+      </char>
+    </note>“Katika siku ile,” asema <char style="nd">Bwana</char>,</para>
+  <para style="q2" vid="HOS 2:16">“utaniita mimi ‘Mume wangu’;</para>
+  <para style="q2" vid="HOS 2:16">hutaniita tena mimi ‘Bwana wangu.’<verse eid="HOS 2:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="HOS 2:17"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 23:13">Kut 23:13</ref>; <ref loc="PSA 16:4">Za 16:4</ref>; <ref loc="JER 23:7">Yer 23:7</ref>; <ref loc="ZEC 13:2">Zek 13:2</ref></char>
+    </note>Nitaondoa majina ya Mabaali kutoka midomoni mwake,</para>
+  <para style="q2" vid="HOS 2:17">wala hataomba tena kwa majina yao.<verse eid="HOS 2:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="HOS 2:18"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 5:22-23">Ay 5:22-23</ref>; <ref loc="PSA 49:6">Za 49:6</ref>; <ref loc="ZEC 9:10">Zek 9:10</ref>; <ref loc="EZK 34:25">Eze 34:25</ref>; <ref loc="JER 23:6">Yer 23:6</ref></char>
+    </note>Katika siku ile nitafanya Agano kwa ajili yao</para>
+  <para style="q2" vid="HOS 2:18">na wanyama wa kondeni, na ndege wa angani,</para>
+  <para style="q2" vid="HOS 2:18">na viumbe vile vitambaavyo ardhini.</para>
+  <para style="q1" vid="HOS 2:18">Upinde, upanga na vita,</para>
+  <para style="q2" vid="HOS 2:18">nitaondolea mbali katika nchi,</para>
+  <para style="q2" vid="HOS 2:18">ili kwamba wote waweze kukaa salama.<verse eid="HOS 2:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="HOS 2:19"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:19 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:27">Isa 1:27</ref>; <ref loc="ISA 62:4">62:4</ref>; <ref loc="ISA 54:8">54:8</ref>; <ref loc="2CO 11:2">2Kor 11:2</ref></char>
+    </note>Nitakuposa uwe wangu milele;</para>
+  <para style="q2" vid="HOS 2:19">nitakuposa kwa uadilifu na haki,</para>
+  <para style="q2" vid="HOS 2:19">kwa upendo na huruma.<verse eid="HOS 2:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="HOS 2:20"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:20 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:34">Yer 31:34</ref>; <ref loc="HOS 4:1">Hos 4:1</ref>; <ref loc="HOS 6:6">6:6</ref>; <ref loc="HOS 13:4">13:4</ref>; <ref loc="EZK 16:8">Eze 16:8</ref></char>
+    </note>Nitakuposa kwa uaminifu,</para>
+  <para style="q2" vid="HOS 2:20">nawe utamkubali <char style="nd">Bwana</char>.<verse eid="HOS 2:20"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v" sid="HOS 2:21"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:21 </char>
+      <char style="xt" closed="false">
+        <ref loc="ZEC 8:12">Zek 8:12</ref>; <ref loc="MAL 3:10-11">Mal 3:10-11</ref>; <ref loc="ISA 55:10">Isa 55:10</ref></char>
+    </note>“Katika siku ile nitajibu,”</para>
+  <para style="q2" vid="HOS 2:21">asema <char style="nd">Bwana</char>,</para>
+  <para style="q1" vid="HOS 2:21">“nitajibu kwa anga,</para>
+  <para style="q2" vid="HOS 2:21">nazo anga zitajibu kwa nchi;<verse eid="HOS 2:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="HOS 2:22"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:12">Yer 31:12</ref>; <ref loc="JOL 2:19">Yoe 2:19</ref>; <ref loc="HOS 14:7">Hos 14:7</ref>; <ref loc="EZK 36:29-30">Eze 36:29-30</ref></char>
+    </note>nayo nchi itajibu kwa nafaka,</para>
+  <para style="q2" vid="HOS 2:22">divai mpya na mafuta,</para>
+  <para style="q2" vid="HOS 2:22">navyo vitajibu kwa Yezreeli.<verse eid="HOS 2:22"/></para>
+  <para style="q1">
+    <verse number="23" style="v" sid="HOS 2:23"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:23 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 29:12">Yer 29:12</ref>; <ref loc="JER 31:27">31:27</ref>; <ref loc="ISA 19:25">Isa 19:25</ref>; <ref loc="HOS 1:10">Hos 1:10</ref>; <ref loc="ROM 9:25">Rum 9:25</ref>; <ref loc="ZEC 13:9">Zek 13:9</ref>; <ref loc="1PE 2:10">1Pet 2:10</ref></char>
+    </note>Nitampanda katika nchi kwa ajili yangu mwenyewe;</para>
+  <para style="q2" vid="HOS 2:23">nami nitaonyesha pendo langu kwake</para>
+  <para style="q2" vid="HOS 2:23">yule ambaye nilimwita, ‘Si mpenzi wangu.<note caller="+" style="f"><char style="fr" closed="false">2:23 </char><char style="ft" closed="false">Kiebrania ni Lo-Ruhama.</char></note>’</para>
+  <para style="q1" vid="HOS 2:23">Nitawaambia wale walioitwa, ‘Sio watu wangu,’<note caller="+" style="f"><char style="fr" closed="false">2:23 </char><char style="ft" closed="false">Kiebrania ni Lo-Ami.</char></note></para>
+  <para style="q2" vid="HOS 2:23">‘Ninyi ni watu wangu’;</para>
+  <para style="q2" vid="HOS 2:23">nao watasema, ‘Wewe ndiwe Mungu wangu.’ ”<verse eid="HOS 2:23"/></para>
+  <chapter eid="HOS 2"/>
+  <chapter number="3" style="c" sid="HOS 3"/>
+  <para style="s1">Upatanisho Wa Hosea Na Mkewe</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 3:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 1:2">Hos 1:2</ref>; <ref loc="2SA 6:19">2Sam 6:19</ref></char>
+    </note>
+    <char style="nd">Bwana</char> akaniambia, “Nenda, ukaonyeshe upendo wako kwa mke wako tena, ingawa amependwa na mwingine naye ni mzinzi. Mpende kama <char style="nd">Bwana</char> apendavyo Waisraeli, ingawa wanageukia miungu mingine na kupenda mikate mitamu ya zabibu kavu iliyowekwa wakfu.”<verse eid="HOS 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HOS 3:2"/>Basi nilimnunua huyo mwanamke kwa shekeli kumi na tano<note caller="+" style="f"><char style="fr" closed="false">3:2 </char><char style="ft" closed="false">Shekeli 15 za fedha ni sawa na gramu 170.</char></note> za fedha, pia kwa kiasi kama cha homeri moja na nusu<note caller="+" style="f"><char style="fr" closed="false">3:2 </char><char style="ft" closed="false">Homeri moja na nusu ni kama lita 330.</char></note> ya shayiri. <verse eid="HOS 3:2"/><verse number="3" style="v" sid="HOS 3:3"/><note caller="-" style="x"><char style="xo" closed="false">3:3 </char><char style="xt" closed="false"><ref loc="DEU 21:23">Kum 21:23</ref></char></note>Kisha nilimwambia, “Utaishi nami kwa siku nyingi, hupaswi kuwa kahaba au kuwa na uhusiano wa karibu na mtu yeyote, nami nitaishi na wewe.”<verse eid="HOS 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HOS 3:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:11">Hos 2:11</ref>; <ref loc="HOS 13:11">13:11</ref>; <ref loc="DAN 11:31">Dan 11:31</ref>; <ref loc="JDG 18:14-17">Amu 18:14-17</ref>, <ref loc="JDG 18:23-24">23-24</ref>; <ref loc="LAM 2:9">Mao 2:9</ref>; <ref loc="DEU 28:6">Kum 28:6</ref>; <ref loc="ZEC 10:2">Zek 10:2</ref>; <ref loc="EXO 25:7">Kut 25:7</ref></char>
+    </note>Kwa maana Waisraeli wataishi siku nyingi bila kuwa na mfalme wala mkuu, bila kuwa na dhabihu wala mawe matakatifu, bila kisibau wala sanamu. <verse eid="HOS 3:4"/><verse number="5" style="v" sid="HOS 3:5"/><note caller="-" style="x"><char style="xo" closed="false">3:5 </char><char style="xt" closed="false"><ref loc="1SA 13:14">1Sam 13:14</ref>; <ref loc="EZK 34:23-24">Eze 34:23-24</ref>; <ref loc="DEU 4:30">Kum 4:30</ref>; <ref loc="JER 50:4-5">Yer 50:4-5</ref>; <ref loc="ISA 9:13">Isa 9:13</ref>; <ref loc="ISA 10:20">10:20</ref>; <ref loc="HOS 5:15">Hos 5:15</ref>; <ref loc="MIC 4:1-2">Mik 4:1-2</ref>; <ref loc="PSA 18:45">Za 18:45</ref></char></note>Baadaye Waisraeli watarudi na kumtafuta <char style="nd">Bwana</char> Mungu wao na Daudi mfalme wao. Watakuja wakitetemeka kwa <char style="nd">Bwana</char> na kwa baraka zake katika siku za mwisho.<verse eid="HOS 3:5"/></para>
+  <chapter eid="HOS 3"/>
+  <chapter number="4" style="c" sid="HOS 4"/>
+  <para style="s1">Shtaka Dhidi Ya Israeli</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 4:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 10:21">Mit 10:21</ref>; <ref loc="PRO 24:2">24:2</ref>; <ref loc="MIC 6:2">Mik 6:2</ref>; <ref loc="ISA 1:3">Isa 1:3</ref>; <ref loc="JOB 10:2">Ay 10:2</ref>; <ref loc="JER 2:9">Yer 2:9</ref>; <ref loc="JER 7:28">7:28</ref>; <ref loc="JER 51:5">51:5</ref>; <ref loc="HOS 2:20">Hos 2:20</ref></char>
+    </note>Sikieni neno la <char style="nd">Bwana</char>, enyi Waisraeli,</para>
+  <para style="q2" vid="HOS 4:1">kwa sababu <char style="nd">Bwana</char> analo shtaka</para>
+  <para style="q2" vid="HOS 4:1">dhidi yenu ninyi mnaoishi katika nchi:</para>
+  <para style="q1" vid="HOS 4:1">“Hakuna uaminifu, hakuna upendo,</para>
+  <para style="q2" vid="HOS 4:1">hakuna kumjua Mungu katika nchi.<verse eid="HOS 4:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 4:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 59:3">Isa 59:3</ref>; <ref loc="HOS 5:2">Hos 5:2</ref>; <ref loc="HOS 6:2">6:2</ref>; <ref loc="HOS 7:1">7:1</ref>; <ref loc="HOS 11:12">11:12</ref>; <ref loc="EZK 22:2-9">Eze 22:2-9</ref>; <ref loc="1KI 21:16">1Fal 21:16</ref></char>
+    </note>Kuna kulaani tu, uongo na uuaji,</para>
+  <para style="q2" vid="HOS 4:2">wizi na uzinzi,</para>
+  <para style="q1" vid="HOS 4:2">bila kuwa na mipaka,</para>
+  <para style="q2" vid="HOS 4:2">nao umwagaji damu mmoja</para>
+  <para style="q2" vid="HOS 4:2">baada ya mwingine.<verse eid="HOS 4:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 4:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 4:25">Yer 4:25</ref>, <ref loc="JER 4:28">28</ref>; <ref loc="JER 9:10">9:10</ref>; <ref loc="AMO 8:8">Amo 8:8</ref>; <ref loc="ISA 15:6">Isa 15:6</ref>; <ref loc="ISA 33:9">33:9</ref>; <ref loc="ZEP 1:3">Sef 1:3</ref></char>
+    </note>Kwa sababu hii nchi huomboleza,</para>
+  <para style="q2" vid="HOS 4:3">wote waishio ndani mwake wanadhoofika,</para>
+  <para style="q1" vid="HOS 4:3">wanyama wa kondeni, ndege wa angani</para>
+  <para style="q2" vid="HOS 4:3">na samaki wa baharini wanakufa.<verse eid="HOS 4:3"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 4:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 17:12">Kum 17:12</ref>; <ref loc="EZK 3:26">Eze 3:26</ref></char>
+    </note>“Lakini mtu awaye yote na asilete shtaka,</para>
+  <para style="q2" vid="HOS 4:4">mtu yeyote na asimlaumu mwenzake,</para>
+  <para style="q1" vid="HOS 4:4">kwa maana watu wako ni kama wale</para>
+  <para style="q2" vid="HOS 4:4">waletao mashtaka dhidi ya kuhani.<verse eid="HOS 4:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 4:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 7:19">Eze 7:19</ref>; <ref loc="EZK 14:7">14:7</ref>; <ref loc="HOS 2:2">Hos 2:2</ref></char>
+    </note>Unajikwaa usiku na mchana,</para>
+  <para style="q2" vid="HOS 4:5">nao manabii hujikwaa pamoja nawe.</para>
+  <para style="q1" vid="HOS 4:5">Kwa hiyo nitamwangamiza mama yako:<verse eid="HOS 4:5"/></para>
+  <para style="q2">
+    <verse number="6" style="v" sid="HOS 4:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 10:21">Mit 10:21</ref>; <ref loc="HOS 2:13">Hos 2:13</ref>; <ref loc="HOS 8:1-12">8:1-12</ref>; <ref loc="MAL 2:7-8">Mal 2:7-8</ref></char>
+    </note>watu wangu wanaangamizwa</para>
+  <para style="q2" vid="HOS 4:6">kwa kukosa maarifa,</para>
+  <para style="b" vid="HOS 4:6"/>
+  <para style="q1" vid="HOS 4:6">“Kwa kuwa wewe umeyakataa maarifa,</para>
+  <para style="q2" vid="HOS 4:6">mimi nami nitakukataa wewe</para>
+  <para style="q2" vid="HOS 4:6">usiwe kuhani kwangu mimi;</para>
+  <para style="q1" vid="HOS 4:6">kwa kuwa umeacha kuijali sheria ya Mungu wako</para>
+  <para style="q2" vid="HOS 4:6">mimi nami sitawajali watoto wako.<verse eid="HOS 4:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 4:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="HAB 2:16">Hab 2:16</ref>; <ref loc="HOS 9:11">Hos 9:11</ref>; <ref loc="HOS 13:6">13:6</ref></char>
+    </note>Kadiri makuhani walivyoongezeka,</para>
+  <para style="q2" vid="HOS 4:7">ndivyo walivyozidi kutenda dhambi dhidi yangu,</para>
+  <para style="q2" vid="HOS 4:7">walibadilisha utukufu wao kwa kitu cha aibu.<verse eid="HOS 4:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 4:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 56:11">Isa 56:11</ref>; <ref loc="MIC 3:11">Mik 3:11</ref>; <ref loc="HOS 14:1">Hos 14:1</ref></char>
+    </note>Hujilisha dhambi za watu wangu</para>
+  <para style="q2" vid="HOS 4:8">na kupendezwa na uovu wao.<verse eid="HOS 4:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 4:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 24:2">Isa 24:2</ref>; <ref loc="JER 5:31">Yer 5:31</ref>; <ref loc="HOS 8:13">Hos 8:13</ref>; <ref loc="HOS 10:10">10:10</ref>; <ref loc="HOS 12:2">12:2</ref></char>
+    </note>Hata itakuwa: Kama walivyo watu,</para>
+  <para style="q2" vid="HOS 4:9">ndivyo walivyo makuhani.</para>
+  <para style="q1" vid="HOS 4:9">Nitawaadhibu wote wawili kwa ajili ya njia zao</para>
+  <para style="q2" vid="HOS 4:9">na kuwalipa kwa matendo yao.<verse eid="HOS 4:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 4:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 6:14">Mik 6:14</ref>; <ref loc="ISA 55:2">Isa 55:2</ref>; <ref loc="HOS 7:14">Hos 7:14</ref>; <ref loc="HOS 9:17">9:17</ref>; <ref loc="EZK 22:9">Eze 22:9</ref>; <ref loc="LEV 26:26">Law 26:26</ref></char>
+    </note>“Watakula lakini hawatashiba;</para>
+  <para style="q2" vid="HOS 4:10">watajiingiza katika ukahaba</para>
+  <para style="q2" vid="HOS 4:10">lakini hawataongezeka,</para>
+  <para style="q1" vid="HOS 4:10">kwa sababu wamemwacha <char style="nd">Bwana</char></para>
+  <para style="q2" vid="HOS 4:10">na kujiingiza wenyewe<verse eid="HOS 4:10"/></para>
+  <para style="q2">
+    <verse number="11" style="v" sid="HOS 4:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 28:7">Isa 28:7</ref>; <ref loc="HOS 5:4">Hos 5:4</ref>; <ref loc="PRO 20:1">Mit 20:1</ref>; <ref loc="LEV 10:9">Law 10:9</ref>; <ref loc="1SA 25:36">1Sam 25:36</ref></char>
+    </note>katika ukahaba,</para>
+  <para style="q1" vid="HOS 4:11">divai ya zamani na divai mpya,</para>
+  <para style="q2" vid="HOS 4:11">ambavyo huondoa ufahamu<verse eid="HOS 4:11"/></para>
+  <para style="q2">
+    <verse number="12" style="v" sid="HOS 4:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:27">Yer 2:27</ref>; <ref loc="REV 17:2">Ufu 17:2</ref>; <ref loc="HAB 2:19">Hab 2:19</ref>; <ref loc="ISA 44:20">Isa 44:20</ref>; <ref loc="NUM 15:39">Hes 15:39</ref>; <ref loc="PSA 73:27">Za 73:27</ref></char>
+    </note>wa watu wangu.</para>
+  <para style="q1" vid="HOS 4:12">Hutaka shauri kutoka kwa sanamu ya mti</para>
+  <para style="q2" vid="HOS 4:12">nao hujibiwa na fimbo ya mti.</para>
+  <para style="q1" vid="HOS 4:12">Roho ya ukahaba imewapotosha,</para>
+  <para style="q2" vid="HOS 4:12">hawana uaminifu kwa Mungu wao.<verse eid="HOS 4:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 4:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:28">Isa 1:28</ref>; <ref loc="HOS 2:13">Hos 2:13</ref>; <ref loc="HOS 10:9">10:9</ref>; <ref loc="JER 2:20">Yer 2:20</ref>; <ref loc="AMO 7:17">Amo 7:17</ref>; <ref loc="ROM 1:28">Rum 1:28</ref></char>
+    </note>Wanatoa dhabihu juu ya vilele vya milima</para>
+  <para style="q2" vid="HOS 4:13">na sadaka za kuteketezwa juu ya vilima,</para>
+  <para style="q1" vid="HOS 4:13">chini ya mialoni, milibua na miela,</para>
+  <para style="q2" vid="HOS 4:13">ambako kuna vivuli vizuri.</para>
+  <para style="q1" vid="HOS 4:13">Kwa hiyo binti zenu wamegeukia ukahaba</para>
+  <para style="q2" vid="HOS 4:13">na wake za wana wenu uzinzi.<verse eid="HOS 4:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 4:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 38:21">Mwa 38:21</ref>; <ref loc="HOS 9:10">Hos 9:10</ref>; <ref loc="PRO 10:21">Mit 10:21</ref></char>
+    </note>“Sitawaadhibu binti zenu wakati</para>
+  <para style="q2" vid="HOS 4:14">wanapogeukia ukahaba,</para>
+  <para style="q1" vid="HOS 4:14">wala wake za wana wenu</para>
+  <para style="q2" vid="HOS 4:14">wanapofanya uzinzi,</para>
+  <para style="q1" vid="HOS 4:14">kwa sababu wanaume wenyewe huandamana na malaya</para>
+  <para style="q2" vid="HOS 4:14">na kutambikia pamoja na makahaba</para>
+  <para style="q2" vid="HOS 4:14">wa mahali pa kuabudia miungu:</para>
+  <para style="q1" vid="HOS 4:14">watu wasiokuwa na ufahamu</para>
+  <para style="q2" vid="HOS 4:14">wataangamia!<verse eid="HOS 4:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 4:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 9:15">Hos 9:15</ref>; <ref loc="HOS 12:11">12:11</ref>; <ref loc="AMO 4:4">Amo 4:4</ref>; <ref loc="JOS 7:2">Yos 7:2</ref></char>
+    </note>“Ingawa umefanya uzinzi, ee Israeli,</para>
+  <para style="q2" vid="HOS 4:15">Yuda naye asije akawa na hatia.</para>
+  <para style="b" vid="HOS 4:15"/>
+  <para style="q1" vid="HOS 4:15">“Usiende Gilgali,</para>
+  <para style="q2" vid="HOS 4:15">usipande kwenda Beth-Aveni<note caller="+" style="f"><char style="fr" closed="false">4:15 </char><char style="ft" closed="false">Beth-Aveni maana yake Nyumba ya Ubatili (au Uovu), jina lingine la Betheli kwa dhihaka.</char></note></para>
+  <para style="q1" vid="HOS 4:15">Wala usiape,</para>
+  <para style="q2" vid="HOS 4:15">‘Hakika kama <char style="nd">Bwana</char> aishivyo!’<verse eid="HOS 4:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 4:16"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 5:17">Isa 5:17</ref>; <ref loc="ISA 7:25">7:25</ref>; <ref loc="EXO 32:9">Kut 32:9</ref>; <ref loc="JER 31:18">Yer 31:18</ref></char>
+    </note>Waisraeli ni wakaidi,</para>
+  <para style="q2" vid="HOS 4:16">kama mtamba wa ngʼombe ambaye ni mkaidi.</para>
+  <para style="q1" vid="HOS 4:16">Ni jinsi gani basi <char style="nd">Bwana</char> anaweza kuwachunga</para>
+  <para style="q2" vid="HOS 4:16">kama wana-kondoo</para>
+  <para style="q2" vid="HOS 4:16">katika shamba la majani?<verse eid="HOS 4:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="HOS 4:17"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 15:14">Mt 15:14</ref>
+      </char>
+    </note>Efraimu amejiunga na sanamu,</para>
+  <para style="q2" vid="HOS 4:17">ondokana naye!<verse eid="HOS 4:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="HOS 4:18"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 3:11">Mik 3:11</ref>; <ref loc="MIC 7:3">7:3</ref></char>
+    </note>Hata wakati wamemaliza vileo vyao</para>
+  <para style="q2" vid="HOS 4:18">wanaendelea na ukahaba wao,</para>
+  <para style="q1" vid="HOS 4:18">watawala wao hupenda sana</para>
+  <para style="q2" vid="HOS 4:18">njia za aibu.<verse eid="HOS 4:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="HOS 4:19"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:19 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 12:11">Hos 12:11</ref>; <ref loc="HOS 13:15">13:15</ref>; <ref loc="ISA 1:29">Isa 1:29</ref></char>
+    </note>Kisulisuli kitawafagilia mbali</para>
+  <para style="q2" vid="HOS 4:19">na dhabihu zao zitawaletea aibu.<verse eid="HOS 4:19"/></para>
+  <chapter eid="HOS 4"/>
+  <chapter number="5" style="c" sid="HOS 5"/>
+  <para style="s1">Hukumu Dhidi Ya Israeli</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 5:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:9">Hos 6:9</ref>; <ref loc="HOS 9:8">9:8</ref>; <ref loc="JOB 10:12">Ay 10:12</ref>; <ref loc="JER 5:26">Yer 5:26</ref></char>
+    </note>“Sikieni hili, enyi makuhani!</para>
+  <para style="q2" vid="HOS 5:1">Kuweni wasikivu, enyi Waisraeli!</para>
+  <para style="q1" vid="HOS 5:1">Sikieni, ee nyumba ya mfalme!</para>
+  <para style="q2" vid="HOS 5:1">Hukumu hii ni dhidi yenu:</para>
+  <para style="q1" vid="HOS 5:1">Mmekuwa mtego huko Mispa,</para>
+  <para style="q2" vid="HOS 5:1">wavu uliotandwa juu ya Tabori.<verse eid="HOS 5:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 5:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:2">Hos 4:2</ref>; <ref loc="HOS 9:15">9:15</ref></char>
+    </note>Waasi wamezidisha sana mauaji.</para>
+  <para style="q2" vid="HOS 5:2">Mimi nitawatiisha wote.<verse eid="HOS 5:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 5:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 23:7">Eze 23:7</ref>; <ref loc="PSA 90:8">Za 90:8</ref>; <ref loc="HOS 1:2">Hos 1:2</ref>; <ref loc="HOS 6:10">6:10</ref>; <ref loc="AMO 5:12">Amo 5:12</ref></char>
+    </note>Ninajua yote kuhusu Efraimu,</para>
+  <para style="q2" vid="HOS 5:3">Israeli hukufichika kwangu.</para>
+  <para style="q1" vid="HOS 5:3">Efraimu, sasa umegeukia ukahaba,</para>
+  <para style="q2" vid="HOS 5:3">Israeli amenajisika.<verse eid="HOS 5:3"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 5:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:6">Hos 4:6</ref>, <ref loc="HOS 4:11">11</ref>; <ref loc="HOS 7:10">7:10</ref>; <ref loc="JER 4:22">Yer 4:22</ref></char>
+    </note>“Matendo yao hayawaachii</para>
+  <para style="q2" vid="HOS 5:4">kurudi kwa Mungu wao.</para>
+  <para style="q1" vid="HOS 5:4">Roho ya ukahaba imo ndani ya mioyo yao,</para>
+  <para style="q2" vid="HOS 5:4">hawamkubali <char style="nd">Bwana</char>.<verse eid="HOS 5:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 5:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 3:9">Isa 3:9</ref>; <ref loc="JER 2:19">Yer 2:19</ref>; <ref loc="HOS 7:10">Hos 7:10</ref></char>
+    </note>Kiburi cha Israeli kinashuhudia dhidi yao;</para>
+  <para style="q2" vid="HOS 5:5">Waisraeli, hata Efraimu,</para>
+  <para style="q1" vid="HOS 5:5">wanajikwaa katika dhambi zao;</para>
+  <para style="q2" vid="HOS 5:5">pia Yuda atajikwaa pamoja nao.<verse eid="HOS 5:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 5:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 6:6-7">Mik 6:6-7</ref>; <ref loc="PRO 1:28">Mit 1:28</ref>; <ref loc="MAL 1:10">Mal 1:10</ref>; <ref loc="EZK 8:6">Eze 8:6</ref>; <ref loc="ISA 1:26">Isa 1:26</ref></char>
+    </note>Wakati wanapokwenda na makundi yao</para>
+  <para style="q2" vid="HOS 5:6">ya kondoo na ngʼombe</para>
+  <para style="q2" vid="HOS 5:6">kumtafuta <char style="nd">Bwana</char>,</para>
+  <para style="q1" vid="HOS 5:6">hawatampata;</para>
+  <para style="q2" vid="HOS 5:6">yeye amejiondoa kutoka kwao.<verse eid="HOS 5:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 5:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:14">Isa 1:14</ref>; <ref loc="ISA 24:16">24:16</ref>; <ref loc="HOS 2:4">Hos 2:4</ref>, <ref loc="HOS 2:11-12">11-12</ref>; <ref loc="HOS 6:7">6:7</ref>; <ref loc="EZK 12:28">Eze 12:28</ref></char>
+    </note>Wao si waaminifu kwa <char style="nd">Bwana</char>;</para>
+  <para style="q2" vid="HOS 5:7">wamezaa watoto haramu.</para>
+  <para style="q1" vid="HOS 5:7">Sasa sikukuu zao za Mwandamo wa Mwezi</para>
+  <para style="q2" vid="HOS 5:7">zitawaangamiza wao</para>
+  <para style="q2" vid="HOS 5:7">pamoja na mashamba yao.<verse eid="HOS 5:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 5:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="JDG 19:12">Amu 19:12</ref>; <ref loc="HOS 4:15">Hos 4:15</ref>; <ref loc="HOS 10:9">10:9</ref>; <ref loc="ISA 10:29">Isa 10:29</ref>; <ref loc="JOS 7:2">Yos 7:2</ref>; <ref loc="NUM 10:2">Hes 10:2</ref>; <ref loc="JER 4:21">Yer 4:21</ref></char>
+    </note>“Pigeni tarumbeta huko Gibea,</para>
+  <para style="q2" vid="HOS 5:8">baragumu huko Rama.</para>
+  <para style="q1" vid="HOS 5:8">Paza kilio cha vita huko Beth-Aveni,<note caller="+" style="f"><char style="fr" closed="false">5:8 </char><char style="ft" closed="false">Beth-Aveni maana yake Nyumba ya Ubatili (au Uovu), jina lingine la Betheli kwa dhihaka.</char></note></para>
+  <para style="q2" vid="HOS 5:8">ongoza, ee Benyamini.<verse eid="HOS 5:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 5:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 37:3">Isa 37:3</ref>; <ref loc="HOS 9:11-17">Hos 9:11-17</ref>; <ref loc="ISA 46:10">Isa 46:10</ref>; <ref loc="ISA 7:16">7:16</ref>; <ref loc="ZEC 1:6">Zek 1:6</ref></char>
+    </note>Efraimu ataachwa ukiwa</para>
+  <para style="q2" vid="HOS 5:9">katika siku ya kuadhibiwa.</para>
+  <para style="q1" vid="HOS 5:9">Miongoni mwa makabila ya Israeli</para>
+  <para style="q2" vid="HOS 5:9">ninatangaza lile ambalo halina budi kutukia.<verse eid="HOS 5:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 5:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 19:14">Kum 19:14</ref>; <ref loc="EZK 7:8">Eze 7:8</ref></char>
+    </note>Viongozi wa Yuda ni kama wale</para>
+  <para style="q2" vid="HOS 5:10">wanaosogeza mawe ya mpaka.</para>
+  <para style="q1" vid="HOS 5:10">Nitamwaga ghadhabu yangu juu yao</para>
+  <para style="q2" vid="HOS 5:10">kama mafuriko ya maji.<verse eid="HOS 5:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 5:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 9:16">Hos 9:16</ref>; <ref loc="MIC 6:16">Mik 6:16</ref></char>
+    </note>Efraimu ameonewa,</para>
+  <para style="q2" vid="HOS 5:11">amekanyagwa katika hukumu</para>
+  <para style="q2" vid="HOS 5:11">kwa kuwa amekusudia kufuatia sanamu.<verse eid="HOS 5:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 5:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 13:28">Ay 13:28</ref>; <ref loc="ISA 51:8">Isa 51:8</ref>; <ref loc="JOB 18:16">Ay 18:16</ref></char>
+    </note>Mimi ni kama nondo kwa Efraimu,</para>
+  <para style="q2" vid="HOS 5:12">na kama uozo kwa watu wa Yuda.<verse eid="HOS 5:12"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 5:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 12:1">Hes 12:1</ref>; <ref loc="EZK 23:5">Eze 23:5</ref>; <ref loc="LAM 5:6">Mao 5:6</ref>; <ref loc="HOS 2:7">Hos 2:7</ref>; <ref loc="JER 30:12">Yer 30:12</ref>; <ref loc="ISA 7:16">Isa 7:16</ref>; <ref loc="ISA 3:7">3:7</ref></char>
+    </note>“Wakati Efraimu alipoona ugonjwa wake,</para>
+  <para style="q2" vid="HOS 5:13">naye Yuda vidonda vyake,</para>
+  <para style="q1" vid="HOS 5:13">ndipo Efraimu alipogeukia Ashuru,</para>
+  <para style="q2" vid="HOS 5:13">na kuomba msaada kwa mfalme mkuu.</para>
+  <para style="q1" vid="HOS 5:13">Lakini hawezi kukuponya,</para>
+  <para style="q2" vid="HOS 5:13">wala hawezi kukuponya vidonda vyako.<verse eid="HOS 5:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 5:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 10:16">Ay 10:16</ref>; <ref loc="JER 4:7">Yer 4:7</ref>; <ref loc="DEU 32:39">Kum 32:39</ref>; <ref loc="MIC 5:8">Mik 5:8</ref>; <ref loc="AMO 3:4">Amo 3:4</ref></char>
+    </note>Kwa maana nitakuwa kama simba kwa Efraimu,</para>
+  <para style="q2" vid="HOS 5:14">kama simba mkubwa kwa Yuda.</para>
+  <para style="q1" vid="HOS 5:14">Nitawararua vipande vipande na kuondoka;</para>
+  <para style="q2" vid="HOS 5:14">nitawachukua mbali,</para>
+  <para style="q2" vid="HOS 5:14">na hakuna wa kuwaokoa.<verse eid="HOS 5:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 5:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 21:7">Hes 21:7</ref>; <ref loc="PSA 24:6">Za 24:6</ref>; <ref loc="PSA 50:15">50:15</ref>; <ref loc="JER 2:27">Yer 2:27</ref>; <ref loc="EZK 20:43">Eze 20:43</ref>; <ref loc="ISA 18:4">Isa 18:4</ref>; <ref loc="ISA 64:9">64:9</ref></char>
+    </note>Kisha nitarudi mahali pangu</para>
+  <para style="q2" vid="HOS 5:15">mpaka watakapokubali kosa lao.</para>
+  <para style="q1" vid="HOS 5:15">Nao watautafuta uso wangu;</para>
+  <para style="q2" vid="HOS 5:15">katika taabu yao watanitafuta kwa bidii.”<verse eid="HOS 5:15"/></para>
+  <chapter eid="HOS 5"/>
+  <chapter number="6" style="c" sid="HOS 6"/>
+  <para style="s1">Israeli Asiye Na Toba</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 6:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 16:9">Ay 16:9</ref>; <ref loc="DEU 32:39">Kum 32:39</ref>; <ref loc="LAM 3:11">Mao 3:11</ref>; <ref loc="JOB 5:18">Ay 5:18</ref>; <ref loc="ISA 10:20">Isa 10:20</ref>; <ref loc="ISA 19:22">19:22</ref>; <ref loc="NUM 12:13">Hes 12:13</ref>; <ref loc="JER 3:22">Yer 3:22</ref>; <ref loc="JER 30:17">30:17</ref>; <ref loc="HOS 14:4">Hos 14:4</ref></char>
+    </note>“Njooni, tumrudie <char style="nd">Bwana</char>.</para>
+  <para style="q1" vid="HOS 6:1">Ameturarua vipande vipande</para>
+  <para style="q2" vid="HOS 6:1">lakini atatuponya;</para>
+  <para style="q1" vid="HOS 6:1">ametujeruhi lakini</para>
+  <para style="q2" vid="HOS 6:1">atatufunga majeraha yetu.<verse eid="HOS 6:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 6:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 2:1-9">Mit 2:1-9</ref>; <ref loc="PSA 80:18">Za 80:18</ref>; <ref loc="PSA 30:5">30:5</ref>; <ref loc="MAT 16:21">Mt 16:21</ref></char>
+    </note>Baada ya siku mbili atatufufua;</para>
+  <para style="q2" vid="HOS 6:2">katika siku ya tatu atatuinua,</para>
+  <para style="q2" vid="HOS 6:2">ili tuweze kuishi mbele zake.<verse eid="HOS 6:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 6:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 4:3">Ay 4:3</ref>; <ref loc="JOB 29:23">29:23</ref>; <ref loc="JOL 2:23">Yoe 2:23</ref>; <ref loc="HOS 12:6">Hos 12:6</ref>; <ref loc="PSA 72:6">Za 72:6</ref>; <ref loc="HOS 11:10">Hos 11:10</ref></char>
+    </note>Tumkubali <char style="nd">Bwana</char>,</para>
+  <para style="q2" vid="HOS 6:3">tukaze kumkubali yeye.</para>
+  <para style="q1" vid="HOS 6:3">Kutokea kwake ni hakika kama vile</para>
+  <para style="q2" vid="HOS 6:3">kuchomoza kwa jua;</para>
+  <para style="q1" vid="HOS 6:3">atatujia kama mvua za masika,</para>
+  <para style="q2" vid="HOS 6:3">kama vile mvua za vuli</para>
+  <para style="q2" vid="HOS 6:3">ziinyweshavyo nchi.”<verse eid="HOS 6:3"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 6:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 11:8">Hos 11:8</ref>; <ref loc="HOS 7:1">7:1</ref>; <ref loc="HOS 13:3">13:3</ref></char>
+    </note>“Nifanye nini nawe, Efraimu?</para>
+  <para style="q2" vid="HOS 6:4">Nifanye nini nawe, Yuda?</para>
+  <para style="q1" vid="HOS 6:4">Upendo wako ni kama ukungu wa asubuhi,</para>
+  <para style="q2" vid="HOS 6:4">kama umande wa alfajiri utowekao.<verse eid="HOS 6:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 6:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 5:14">Yer 5:14</ref>; <ref loc="JER 23:29">23:29</ref>; <ref loc="HEB 4:12">Ebr 4:12</ref>; <ref loc="JER 1:9-10">Yer 1:9-10</ref></char>
+    </note>Kwa hiyo ninawakata ninyi vipande vipande</para>
+  <para style="q2" vid="HOS 6:5">kwa kutumia manabii wangu;</para>
+  <para style="q1" vid="HOS 6:5">nimewaua ninyi kwa maneno ya kinywa changu,</para>
+  <para style="q2" vid="HOS 6:5">hukumu zangu zinawaka</para>
+  <para style="q2" vid="HOS 6:5">kama umeme juu yenu.<verse eid="HOS 6:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 6:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="1SA 15:22">1Sam 15:22</ref>; <ref loc="MRK 12:33">Mk 12:33</ref>; <ref loc="JER 4:22">Yer 4:22</ref>; <ref loc="HOS 2:20">Hos 2:20</ref>; <ref loc="PRO 21:3">Mit 21:3</ref>; <ref loc="MAT 12:7">Mt 12:7</ref>; <ref loc="PSA 40:6">Za 40:6</ref></char>
+    </note>Kwa maana nataka rehema, wala si dhabihu,</para>
+  <para style="q2" vid="HOS 6:6">kumkubali Mungu zaidi</para>
+  <para style="q2" vid="HOS 6:6">kuliko sadaka za kuteketezwa.<verse eid="HOS 6:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 6:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 9:11">Mwa 9:11</ref>; <ref loc="JER 11:10">Yer 11:10</ref>; <ref loc="HOS 5:7">Hos 5:7</ref>; <ref loc="HOS 8:1">8:1</ref></char>
+    </note>Wamevunja Agano kama Adamu:</para>
+  <para style="q2" vid="HOS 6:7">huko hawakuwa waaminifu kwangu.<verse eid="HOS 6:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 6:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 12:11">Hos 12:11</ref>
+      </char>
+    </note>Gileadi ni mji wenye watu waovu,</para>
+  <para style="q2" vid="HOS 6:8">umetiwa madoa kwa nyayo za damu.<verse eid="HOS 6:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 6:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 5:30-31">Yer 5:30-31</ref>; <ref loc="EZK 22:9">Eze 22:9</ref>; <ref loc="PSA 10:8">Za 10:8</ref>; <ref loc="HOS 4:2">Hos 4:2</ref>; <ref loc="JER 7:9-10">Yer 7:9-10</ref></char>
+    </note>Kama wanyangʼanyi wamviziavyo mtu,</para>
+  <para style="q2" vid="HOS 6:9">ndivyo magenge ya makuhani wafanyavyo;</para>
+  <para style="q1" vid="HOS 6:9">wanaulia watu kwenye njia iendayo Shekemu,</para>
+  <para style="q2" vid="HOS 6:9">wakifanya uhalifu wa aibu.<verse eid="HOS 6:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 6:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 5:31">Yer 5:31</ref>; <ref loc="EZK 23:7">Eze 23:7</ref>; <ref loc="JER 23:14">Yer 23:14</ref>; <ref loc="HOS 5:3">Hos 5:3</ref></char>
+    </note>Nimeona jambo la kutisha</para>
+  <para style="q2" vid="HOS 6:10">katika nyumba ya Israeli.</para>
+  <para style="q1" vid="HOS 6:10">Huko Efraimu amejitolea kwa ukahaba</para>
+  <para style="q2" vid="HOS 6:10">na Israeli amenajisika.<verse eid="HOS 6:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 6:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOL 3:12-13">Yoe 3:12-13</ref>; <ref loc="JER 51:33">Yer 51:33</ref></char>
+    </note>“Pia kwa ajili yako, Yuda,</para>
+  <para style="q2" vid="HOS 6:11">mavuno yameamriwa.</para>
+  <para style="b" vid="HOS 6:11"/>
+  <para style="q1" vid="HOS 6:11">“Wakati wowote ningerejesha neema ya watu wangu,<verse eid="HOS 6:11"/></para>
+  <chapter eid="HOS 6"/>
+  <chapter number="7" style="c" sid="HOS 7"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 7:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 24:13">Eze 24:13</ref>; <ref loc="HOS 4:2">Hos 4:2</ref>; <ref loc="HOS 6:4">6:4</ref>; <ref loc="EXO 22:2">Kut 22:2</ref>; <ref loc="ZEP 2:7">Sef 2:7</ref>; <ref loc="PSA 126:1">Za 126:1</ref></char>
+    </note>kila mara nilipotaka kumponya Israeli,</para>
+  <para style="q2" vid="HOS 7:1">dhambi za Efraimu zinafichuliwa</para>
+  <para style="q2" vid="HOS 7:1">na maovu ya Samaria yanafunuliwa.</para>
+  <para style="q1" vid="HOS 7:1">Wanafanya udanganyifu,</para>
+  <para style="q2" vid="HOS 7:1">wevi huvunja nyumba,</para>
+  <para style="q2" vid="HOS 7:1">maharamia hunyangʼanya barabarani,<verse eid="HOS 7:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 7:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 14:10">Yer 14:10</ref>; <ref loc="JER 44:21">44:21</ref>; <ref loc="PRO 5:22">Mit 5:22</ref>; <ref loc="JER 2:19">Yer 2:19</ref>; <ref loc="JER 4:18">4:18</ref>; <ref loc="HOS 8:13">Hos 8:13</ref>; <ref loc="JOB 35:15">Ay 35:15</ref></char>
+    </note>lakini hawafahamu kwamba</para>
+  <para style="q2" vid="HOS 7:2">ninakumbuka matendo yao yote mabaya.</para>
+  <para style="q1" vid="HOS 7:2">Dhambi zao zimewameza,</para>
+  <para style="q2" vid="HOS 7:2">ziko mbele zangu siku zote.<verse eid="HOS 7:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 7:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:32">Rum 1:32</ref>; <ref loc="JER 28:1-4">Yer 28:1-4</ref>; <ref loc="MIC 7:3">Mik 7:3</ref>; <ref loc="HOS 4:2">Hos 4:2</ref>; <ref loc="HOS 10:13">10:13</ref></char>
+    </note>“Wanamfurahisha sana mfalme kwa maovu yao,</para>
+  <para style="q2" vid="HOS 7:3">wakuu wao kwa uongo wao.<verse eid="HOS 7:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 7:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 9:2">Yer 9:2</ref>
+      </char>
+    </note>Wote ni wazinzi,</para>
+  <para style="q2" vid="HOS 7:4">wanawaka kama tanuru</para>
+  <para style="q1" vid="HOS 7:4">ambayo moto wake mwokaji hana haja ya kuuchochea</para>
+  <para style="q2" vid="HOS 7:4">kuanzia kukanda unga</para>
+  <para style="q2" vid="HOS 7:4">hadi umekwisha kuumuka.<verse eid="HOS 7:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 7:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 28:1">Isa 28:1</ref>, <ref loc="ISA 28:7">7</ref>; <ref loc="PSA 1:1">Za 1:1</ref></char>
+    </note>Katika sikukuu ya mfalme wetu</para>
+  <para style="q2" vid="HOS 7:5">wakuu wanawaka kwa mvinyo,</para>
+  <para style="q2" vid="HOS 7:5">naye anawaunga mkono wenye mizaha.<verse eid="HOS 7:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 7:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 21:9">Za 21:9</ref>
+      </char>
+    </note>Mioyo yao ni kama tanuru,</para>
+  <para style="q2" vid="HOS 7:6">wanamwendea kwa hila.</para>
+  <para style="q1" vid="HOS 7:6">Hasira yao inafoka moshi usiku kucha,</para>
+  <para style="q2" vid="HOS 7:6">wakati wa asubuhi inalipuka</para>
+  <para style="q2" vid="HOS 7:6">kama miali ya moto.<verse eid="HOS 7:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 7:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 14:4">Za 14:4</ref>; <ref loc="ZEP 1:6">Sef 1:6</ref>; <ref loc="ISA 9:13">Isa 9:13</ref>; <ref loc="HOS 13:10">Hos 13:10</ref></char>
+    </note>Wote ni moto kama tanuru;</para>
+  <para style="q2" vid="HOS 7:7">wanawaangamiza watawala wao.</para>
+  <para style="q1" vid="HOS 7:7">Wafalme wake wote wanaanguka,</para>
+  <para style="q2" vid="HOS 7:7">wala hakuna yeyote kati yao aniitaye mimi.<verse eid="HOS 7:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 7:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 106:35">Za 106:35</ref>; <ref loc="HOS 5:13">Hos 5:13</ref>; <ref loc="HOS 7:11">7:11</ref></char>
+    </note>“Efraimu anajichanganya na mataifa;</para>
+  <para style="q2" vid="HOS 7:8">Efraimu ni mkate ambao haukuiva.<verse eid="HOS 7:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 7:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:7">Isa 1:7</ref>; <ref loc="HOS 8:7">Hos 8:7</ref></char>
+    </note>Wageni wananyonya nguvu zake,</para>
+  <para style="q2" vid="HOS 7:9">lakini hafahamu hilo.</para>
+  <para style="q1" vid="HOS 7:9">Nywele zake zina mvi hapa na pale,</para>
+  <para style="q2" vid="HOS 7:9">lakini hana habari.<verse eid="HOS 7:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 7:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:5">Hos 5:5</ref>; <ref loc="ISA 9:13">Isa 9:13</ref></char>
+    </note>Kiburi cha Israeli kinashuhudia dhidi yake,</para>
+  <para style="q2" vid="HOS 7:10">lakini pamoja na haya yote</para>
+  <para style="q1" vid="HOS 7:10">harudi kwa <char style="nd">Bwana</char> Mungu wake</para>
+  <para style="q2" vid="HOS 7:10">wala kumtafuta.<verse eid="HOS 7:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 7:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 8:8">Mwa 8:8</ref>; <ref loc="HOS 9:3">Hos 9:3</ref>; <ref loc="HOS 11:11">11:11</ref>; <ref loc="LAM 5:6">Mao 5:6</ref>; <ref loc="JER 2:18">Yer 2:18</ref></char>
+    </note>“Efraimu ni kama hua,</para>
+  <para style="q2" vid="HOS 7:11">hudanganywa kwa urahisi na hana akili:</para>
+  <para style="q1" vid="HOS 7:11">mara anaita Misri,</para>
+  <para style="q2" vid="HOS 7:11">mara anageukia Ashuru.<verse eid="HOS 7:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 7:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 12:13">Eze 12:13</ref>; <ref loc="EZK 32:3">32:3</ref>; <ref loc="LEV 26:14">Law 26:14</ref></char>
+    </note>Wakati watakapokwenda,</para>
+  <para style="q2" vid="HOS 7:12">nitatupa wavu wangu juu yao;</para>
+  <para style="q1" vid="HOS 7:12">nitawavuta chini waanguke</para>
+  <para style="q2" vid="HOS 7:12">kama ndege wa angani.</para>
+  <para style="q1" vid="HOS 7:12">Nitakaposikia wakikusanyika pamoja,</para>
+  <para style="q2" vid="HOS 7:12">nitawanasa.<verse eid="HOS 7:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 7:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 9:12">Hos 9:12</ref>, <ref loc="HOS 9:17">17</ref>; <ref loc="JER 14:10">Yer 14:10</ref>; <ref loc="JER 51:9">51:9</ref>; <ref loc="EZK 34:4-6">Eze 34:4-6</ref>; <ref loc="MAT 23:37">Mt 23:37</ref>; <ref loc="PSA 116:11">Za 116:11</ref></char>
+    </note>Ole wao, kwa sababu</para>
+  <para style="q2" vid="HOS 7:13">wamepotoka kutoka kwangu!</para>
+  <para style="q1" vid="HOS 7:13">Maangamizi ni yao</para>
+  <para style="q2" vid="HOS 7:13">kwa sababu wameniasi!</para>
+  <para style="q1" vid="HOS 7:13">Ninatamani kuwakomboa,</para>
+  <para style="q2" vid="HOS 7:13">lakini wanasema uongo dhidi yangu.<verse eid="HOS 7:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 7:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 35:9">Ay 35:9</ref>; <ref loc="JER 3:10">Yer 3:10</ref>; <ref loc="HOS 4:10">Hos 4:10</ref>; <ref loc="HOS 13:16">13:16</ref>; <ref loc="PSA 78:34-37">Za 78:34-37</ref>; <ref loc="AMO 2:8">Amo 2:8</ref></char>
+    </note>Hawanililii mimi kutoka mioyoni mwao,</para>
+  <para style="q2" vid="HOS 7:14">bali wanaomboleza vitandani mwao.</para>
+  <para style="q1" vid="HOS 7:14">Hukusanyika pamoja kwa ajili ya nafaka na divai mpya,</para>
+  <para style="q2" vid="HOS 7:14">lakini hugeukia mbali nami.<verse eid="HOS 7:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 7:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 2:1">Za 2:1</ref>; <ref loc="PSA 140:2">140:2</ref>; <ref loc="NAM 1:9">Nah 1:9</ref>; <ref loc="HOS 11:3">Hos 11:3</ref></char>
+    </note>Niliwafundisha na kuwatia nguvu,</para>
+  <para style="q2" vid="HOS 7:15">lakini wanapanga mabaya dhidi yangu.<verse eid="HOS 7:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 7:16"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 78:57">Za 78:57</ref>; <ref loc="EZK 23:32">Eze 23:32</ref>; <ref loc="HOS 9:3">Hos 9:3</ref>; <ref loc="HOS 11:5">11:5</ref>; <ref loc="MAL 3:14">Mal 3:14</ref></char>
+    </note>Hawamgeukii Yeye Aliye Juu Sana,</para>
+  <para style="q2" vid="HOS 7:16">wako kama upinde wenye kasoro.</para>
+  <para style="q1" vid="HOS 7:16">Viongozi wao wataanguka kwa upanga</para>
+  <para style="q2" vid="HOS 7:16">kwa sababu ya maneno yao ya jeuri.</para>
+  <para style="q1" vid="HOS 7:16">Kwa ajili ya hili watadhihakiwa</para>
+  <para style="q2" vid="HOS 7:16">katika nchi ya Misri.<verse eid="HOS 7:16"/></para>
+  <chapter eid="HOS 7"/>
+  <chapter number="8" style="c" sid="HOS 8"/>
+  <para style="s1">Israeli Kuvuna Kisulisuli</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 8:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 28:49">Kum 28:49</ref>; <ref loc="JER 4:13">Yer 4:13</ref>; <ref loc="JER 11:10">11:10</ref>; <ref loc="HOS 4:6">Hos 4:6</ref>; <ref loc="HOS 6:7">6:7</ref>; <ref loc="NUM 10:2">Hes 10:2</ref>; <ref loc="EZK 33:3">Eze 33:3</ref></char>
+    </note>“Wekeni tarumbeta midomoni mwenu!</para>
+  <para style="q2" vid="HOS 8:1">Tai yuko juu ya nyumba ya <char style="nd">Bwana</char></para>
+  <para style="q1" vid="HOS 8:1">kwa sababu watu wamevunja Agano langu,</para>
+  <para style="q2" vid="HOS 8:1">wameasi dhidi ya sheria yangu.<verse eid="HOS 8:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 8:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 78:34">Za 78:34</ref>; <ref loc="MAT 7:21">Mt 7:21</ref></char>
+    </note>Israeli ananililia,</para>
+  <para style="q2" vid="HOS 8:2">‘Ee Mungu wetu, tunakukubali!’<verse eid="HOS 8:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 8:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 7:23">Mt 7:23</ref>; <ref loc="TIT 1:16">Tit 1:16</ref></char>
+    </note>Lakini Israeli amekataa lile lililo jema,</para>
+  <para style="q2" vid="HOS 8:3">adui atamfuatia.<verse eid="HOS 8:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 8:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:8">Hos 2:8</ref>; <ref loc="HOS 13:1-2">13:1-2</ref>, <ref loc="HOS 13:10">10</ref>; <ref loc="MAT 7:21">Mt 7:21</ref>; <ref loc="1KI 12:16-20">1Fal 12:16-20</ref>; <ref loc="2KI 15:13">2Fal 15:13</ref>, <ref loc="2KI 15:17">17</ref>, <ref loc="2KI 15:25">25</ref></char>
+    </note>Wanaweka wafalme bila idhini yangu,</para>
+  <para style="q2" vid="HOS 8:4">wamechagua wakuu bila kibali changu.</para>
+  <para style="q1" vid="HOS 8:4">Kwa fedha zao na dhahabu</para>
+  <para style="q2" vid="HOS 8:4">wamejitengenezea sanamu kwa ajili</para>
+  <para style="q2" vid="HOS 8:4">ya maangamizi yao wenyewe.<verse eid="HOS 8:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 8:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 10:5">Hos 10:5</ref>; <ref loc="JER 13:27">Yer 13:27</ref>; <ref loc="HOS 8:6">Hos 8:6</ref></char>
+    </note>Ee Samaria, tupilieni mbali sanamu yenu ya ndama!</para>
+  <para style="q2" vid="HOS 8:5">Hasira yangu inawaka dhidi yao.</para>
+  <para style="q1" vid="HOS 8:5">Watakuwa najisi mpaka lini?<verse eid="HOS 8:5"/></para>
+  <para style="q2">
+    <verse number="6" style="v" sid="HOS 8:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 16:20">Yer 16:20</ref>; <ref loc="HOS 14:3">Hos 14:3</ref>; <ref loc="EXO 32:4">Kut 32:4</ref></char>
+    </note>Zimetoka katika Israeli!</para>
+  <para style="q1" vid="HOS 8:6">Ndama huyu: ametengenezwa na fundi, si Mungu.</para>
+  <para style="q2" vid="HOS 8:6">Atavunjwa vipande vipande,</para>
+  <para style="q2" vid="HOS 8:6">yule ndama wa Samaria.<verse eid="HOS 8:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 8:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 4:8">Ay 4:8</ref>; <ref loc="GAL 6:8">Gal 6:8</ref>; <ref loc="HOS 2:9">Hos 2:9</ref>; <ref loc="HOS 7:9">7:9</ref>; <ref loc="HOS 10:11-12">10:11-12</ref>; <ref loc="PRO 22:8">Mit 22:8</ref>; <ref loc="ISA 17:11">Isa 17:11</ref>; <ref loc="ISA 66:15">66:15</ref></char>
+    </note>“Wanapanda upepo</para>
+  <para style="q2" vid="HOS 8:7">na kuvuna upepo wa kisulisuli.</para>
+  <para style="q1" vid="HOS 8:7">Bua halina suke,</para>
+  <para style="q2" vid="HOS 8:7">halitatoa unga.</para>
+  <para style="q1" vid="HOS 8:7">Kama lingetoa nafaka,</para>
+  <para style="q2" vid="HOS 8:7">wageni wangeila yote.<verse eid="HOS 8:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 8:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 22:28">Yer 22:28</ref>; <ref loc="JER 51:34">51:34</ref>; <ref loc="2KI 17:6">2Fal 17:6</ref>; <ref loc="JER 22:28">Yer 22:28</ref>; <ref loc="JER 48:38">48:38</ref></char>
+    </note>Israeli amemezwa;</para>
+  <para style="q2" vid="HOS 8:8">sasa yupo miongoni mwa mataifa</para>
+  <para style="q2" vid="HOS 8:8">kama kitu kisicho na thamani.<verse eid="HOS 8:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 8:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:18">Yer 2:18</ref>; <ref loc="JER 22:20">22:20</ref>; <ref loc="GEN 16:12">Mwa 16:12</ref>; <ref loc="EZK 23:5">Eze 23:5</ref>; <ref loc="HOS 5:13">Hos 5:13</ref></char>
+    </note>Kwa kuwa wamepanda kwenda Ashuru</para>
+  <para style="q2" vid="HOS 8:9">kama punda-mwitu anayetangatanga peke yake.</para>
+  <para style="q1" vid="HOS 8:9">Efraimu amejiuza mwenyewe</para>
+  <para style="q2" vid="HOS 8:9">kwa wapenzi.<verse eid="HOS 8:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 8:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 16:37">Eze 16:37</ref>; <ref loc="EZK 22:20">22:20</ref>; <ref loc="JER 42:2">Yer 42:2</ref>; <ref loc="DAN 2:34">Dan 2:34</ref></char>
+    </note>Ingawa wamejiuza wenyewe miongoni mwa mataifa,</para>
+  <para style="q2" vid="HOS 8:10">sasa nitawakusanya pamoja.</para>
+  <para style="q1" vid="HOS 8:10">Wataanza kudhoofika chini ya uonevu</para>
+  <para style="q2" vid="HOS 8:10">wa mfalme mwenye nguvu.<verse eid="HOS 8:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 8:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 10:1">Hos 10:1</ref>; <ref loc="HOS 12:11">12:11</ref></char>
+    </note>“Ingawa Efraimu alijenga madhabahu nyingi</para>
+  <para style="q2" vid="HOS 8:11">kwa ajili ya sadaka za dhambi,</para>
+  <para style="q1" vid="HOS 8:11">hizi zimekuwa madhabahu</para>
+  <para style="q2" vid="HOS 8:11">za kufanyia dhambi.<verse eid="HOS 8:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 8:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:1">Hos 8:1</ref>; <ref loc="DEU 4:6">Kum 4:6</ref>; <ref loc="PSA 119:18">Za 119:18</ref>; <ref loc="PSA 147:19-20">147:19-20</ref></char>
+    </note>Nimeandika kwa ajili yao mambo mengi</para>
+  <para style="q2" vid="HOS 8:12">kuhusu sheria yangu,</para>
+  <para style="q1" vid="HOS 8:12">lakini wameziangalia</para>
+  <para style="q2" vid="HOS 8:12">kama kitu cha kigeni.<verse eid="HOS 8:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 8:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 6:20">Yer 6:20</ref>; <ref loc="JER 7:21">7:21</ref>; <ref loc="NEH 9:13-14">Neh 9:13-14</ref>; <ref loc="HOS 4:9">Hos 4:9</ref>; <ref loc="HOS 9:3-9">9:3-9</ref>; <ref loc="JOB 21:14">Ay 21:14</ref></char>
+    </note>Wanatoa dhabihu nilizopewa mimi</para>
+  <para style="q2" vid="HOS 8:13">nao wanakula hiyo nyama,</para>
+  <para style="q2" vid="HOS 8:13">lakini <char style="nd">Bwana</char> hapendezwi nao.</para>
+  <para style="q1" vid="HOS 8:13">Sasa ataukumbuka uovu wao</para>
+  <para style="q2" vid="HOS 8:13">na kuadhibu dhambi zao:</para>
+  <para style="q2" vid="HOS 8:13">Watarudi Misri.<verse eid="HOS 8:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 8:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:18">Kum 32:18</ref>; <ref loc="ISA 17:10">Isa 17:10</ref>; <ref loc="JER 5:17">Yer 5:17</ref>; <ref loc="AMO 2:5">Amo 2:5</ref>; <ref loc="1KI 12:31">1Fal 12:31</ref>; <ref loc="HOS 2:13">Hos 2:13</ref>; <ref loc="PSA 95:6">Za 95:6</ref></char>
+    </note>Israeli amemsahau Muumba wake</para>
+  <para style="q2" vid="HOS 8:14">na kujenga majumba ya kifalme,</para>
+  <para style="q2" vid="HOS 8:14">Yuda amejengea miji mingi ngome.</para>
+  <para style="q1" vid="HOS 8:14">Lakini nitatuma moto kwenye miji yao</para>
+  <para style="q2" vid="HOS 8:14">utakaoteketeza ngome zao.”<verse eid="HOS 8:14"/></para>
+  <chapter eid="HOS 8"/>
+  <chapter number="9" style="c" sid="HOS 9"/>
+  <para style="s1">Adhabu Kwa Israeli</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 9:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 22:12-13">Isa 22:12-13</ref>; <ref loc="ISA 24:16">24:16</ref>; <ref loc="PSA 73:27">Za 73:27</ref>; <ref loc="HOS 7:14">Hos 7:14</ref>; <ref loc="HOS 10:5">10:5</ref>; <ref loc="GEN 30:15">Mwa 30:15</ref></char>
+    </note>Usifurahie, ee Israeli;</para>
+  <para style="q2" vid="HOS 9:1">usishangilie kama mataifa mengine.</para>
+  <para style="q1" vid="HOS 9:1">Kwa kuwa hukuwa</para>
+  <para style="q2" vid="HOS 9:1">mwaminifu kwa Mungu wako;</para>
+  <para style="q1" vid="HOS 9:1">umependa ujira wa kahaba kwenye kila sakafu</para>
+  <para style="q2" vid="HOS 9:1">ya kupuria nafaka.<verse eid="HOS 9:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 9:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 24:7">Isa 24:7</ref>; <ref loc="JOL 1:10">Yoe 1:10</ref>; <ref loc="HOS 2:9">Hos 2:9</ref></char>
+    </note>Sakafu za kupuria nafaka na mashinikizo ya kukamulia divai</para>
+  <para style="q2" vid="HOS 9:2">havitalisha watu,</para>
+  <para style="q2" vid="HOS 9:2">divai mpya itawapungukia.<verse eid="HOS 9:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 9:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 4:26-27">Kum 4:26-27</ref>; <ref loc="AMO 7:17">Amo 7:17</ref>; <ref loc="EZK 4:13">Eze 4:13</ref>; <ref loc="HOS 7:16">Hos 7:16</ref>; <ref loc="HOS 8:13">8:13</ref>; <ref loc="HOS 10:5">10:5</ref>; <ref loc="LEV 25:23">Law 25:23</ref></char>
+    </note>Hawataishi katika nchi ya <char style="nd">Bwana</char>,</para>
+  <para style="q2" vid="HOS 9:3">Efraimu atarudi Misri</para>
+  <para style="q1" vid="HOS 9:3">na atakula chakula</para>
+  <para style="q2" vid="HOS 9:3">kilicho najisi huko Ashuru.<verse eid="HOS 9:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 9:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 6:20">Yer 6:20</ref>; <ref loc="JER 16:7">16:7</ref>; <ref loc="DEU 26:14">Kum 26:14</ref>; <ref loc="HOS 8:13">Hos 8:13</ref>; <ref loc="HAG 2:13-14">Hag 2:13-14</ref>; <ref loc="JOL 2:14">Yoe 2:14</ref>; <ref loc="EZK 4:13-14">Eze 4:13-14</ref></char>
+    </note>Hawatammiminia <char style="nd">Bwana</char> sadaka ya divai</para>
+  <para style="q2" vid="HOS 9:4">wala dhabihu zao hazitampendeza.</para>
+  <para style="q1" vid="HOS 9:4">Dhabihu kama hizo zitakuwa kwao</para>
+  <para style="q2" vid="HOS 9:4">kama mkate wa waombolezaji;</para>
+  <para style="q2" vid="HOS 9:4">nao wote wazilao watakuwa najisi.</para>
+  <para style="q1" vid="HOS 9:4">Chakula hiki kitakuwa kwa ajili yao wenyewe;</para>
+  <para style="q2" vid="HOS 9:4">kisije katika Hekalu la <char style="nd">Bwana</char>.<verse eid="HOS 9:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 9:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 10:3">Isa 10:3</ref>; <ref loc="JER 5:31">Yer 5:31</ref>; <ref loc="HOS 2:11">Hos 2:11</ref></char>
+    </note>Mtafanya nini katika siku ya sikukuu zenu zilizoamriwa,</para>
+  <para style="q2" vid="HOS 9:5">katika siku za sikukuu za <char style="nd">Bwana</char>?<verse eid="HOS 9:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 9:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 5:6">Isa 5:6</ref>; <ref loc="ISA 19:13">19:13</ref>; <ref loc="HOS 7:11">Hos 7:11</ref>; <ref loc="HOS 8:13">8:13</ref>; <ref loc="HOS 10:8">10:8</ref>; <ref loc="JER 42:22">Yer 42:22</ref>; <ref loc="ISA 32:13">Isa 32:13</ref>; <ref loc="ISA 34:13">34:13</ref></char>
+    </note>Hata ikiwa wataokoka maangamizi,</para>
+  <para style="q2" vid="HOS 9:6">Misri atawakusanya,</para>
+  <para style="q2" vid="HOS 9:6">nayo Memfisi<note caller="+" style="f"><char style="fr" closed="false">9:6 </char><char style="ft" closed="false">Memfisi kwa Kiebrania ni Nofu.</char></note> itawazika.</para>
+  <para style="q1" vid="HOS 9:6">Hazina zao za fedha zitasongwa na michongoma,</para>
+  <para style="q2" vid="HOS 9:6">nayo miiba itafunika mahema yao.<verse eid="HOS 9:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 9:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 7:4">Mik 7:4</ref>; <ref loc="LUK 21:22">Lk 21:22</ref>; <ref loc="JER 10:15">Yer 10:15</ref>; <ref loc="JER 16:18">16:18</ref>; <ref loc="1SA 10:11">1Sam 10:11</ref>; <ref loc="LAM 2:14">Mao 2:14</ref>; <ref loc="ISA 34:8">Isa 34:8</ref>; <ref loc="ISA 44:25">44:25</ref>; <ref loc="JOB 31:14">Ay 31:14</ref>; <ref loc="EZK 14:9-10">Eze 14:9-10</ref></char>
+    </note>Siku za adhabu zinakuja,</para>
+  <para style="q2" vid="HOS 9:7">siku za malipo zimewadia.</para>
+  <para style="q2" vid="HOS 9:7">Israeli na afahamu hili.</para>
+  <para style="q1" vid="HOS 9:7">Kwa sababu dhambi zenu ni nyingi sana</para>
+  <para style="q2" vid="HOS 9:7">na uadui wenu ni mkubwa sana,</para>
+  <para style="q1" vid="HOS 9:7">nabii anadhaniwa ni mpumbavu,</para>
+  <para style="q2" vid="HOS 9:7">mtu aliyeongozwa na Mungu</para>
+  <para style="q2" vid="HOS 9:7">anaonekana mwendawazimu.<verse eid="HOS 9:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 9:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:1">Hos 5:1</ref>; <ref loc="EZK 22:26">Eze 22:26</ref>; <ref loc="JER 6:17">Yer 6:17</ref>; <ref loc="JER 31:6">31:6</ref>; <ref loc="EZK 3:17">Eze 3:17</ref>; <ref loc="EZK 35:7">35:7</ref></char>
+    </note>Nabii, pamoja na Mungu wangu,</para>
+  <para style="q2" vid="HOS 9:8">ndiye mlinzi juu ya Efraimu,</para>
+  <para style="q1" vid="HOS 9:8">hata hivyo mitego inamngojea</para>
+  <para style="q2" vid="HOS 9:8">katika mapito yake yote,</para>
+  <para style="q2" vid="HOS 9:8">na uadui katika nyumba ya Mungu wake.<verse eid="HOS 9:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 9:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="JDG 19:16-30">Amu 19:16-30</ref>; <ref loc="HOS 4:9">Hos 4:9</ref>; <ref loc="HOS 8:13">8:13</ref>; <ref loc="HOS 10:9">10:9</ref>; <ref loc="ZEP 3:7">Sef 3:7</ref></char>
+    </note>Wamezama sana katika rushwa,</para>
+  <para style="q2" vid="HOS 9:9">kama katika siku za Gibea.</para>
+  <para style="q1" vid="HOS 9:9">Mungu atakumbuka uovu wao</para>
+  <para style="q2" vid="HOS 9:9">na kuwaadhibu kwa ajili ya dhambi zao.<verse eid="HOS 9:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 9:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 25:1-5">Hes 25:1-5</ref>; <ref loc="PSA 106:28-29">Za 106:28-29</ref>; <ref loc="JER 11:13">Yer 11:13</ref>; <ref loc="HOS 4:14">Hos 4:14</ref>; <ref loc="SNG 2:13">Wim 2:13</ref></char>
+    </note>“Nilipompata Israeli, ilikuwa kama</para>
+  <para style="q2" vid="HOS 9:10">kupata zabibu jangwani;</para>
+  <para style="q1" vid="HOS 9:10">nilipowaona baba zenu, ilikuwa kama kuona</para>
+  <para style="q2" vid="HOS 9:10">matunda ya kwanza katika mtini.</para>
+  <para style="q1" vid="HOS 9:10">Lakini walipofika Baal-Peori, walijiweka wakfu</para>
+  <para style="q2" vid="HOS 9:10">kwa ile sanamu ya aibu,</para>
+  <para style="q1" vid="HOS 9:10">nao wakawa najisi</para>
+  <para style="q2" vid="HOS 9:10">kama kitu kile walichokipenda.<verse eid="HOS 9:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 9:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:7">Hos 4:7</ref>; <ref loc="HOS 10:5">10:5</ref>; <ref loc="ISA 17:3">Isa 17:3</ref></char>
+    </note>Utukufu wa Efraimu utaruka kama ndege:</para>
+  <para style="q2" vid="HOS 9:11">hakuna kuzaa, hakuna kuchukua mimba,</para>
+  <para style="q2" vid="HOS 9:11">hakuna kutunga mimba.<verse eid="HOS 9:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 9:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:13">Hos 7:13</ref>; <ref loc="DEU 31:17">Kum 31:17</ref>; <ref loc="EZK 24:21">Eze 24:21</ref></char>
+    </note>Hata wakilea watoto,</para>
+  <para style="q2" vid="HOS 9:12">nitamuua kila mmoja.</para>
+  <para style="q1" vid="HOS 9:12">Ole wao</para>
+  <para style="q2" vid="HOS 9:12">nitakapowapiga kisogo!<verse eid="HOS 9:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 9:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 27:3">Eze 27:3</ref>; <ref loc="PSA 78:67">Za 78:67</ref>; <ref loc="JOB 15:22">Ay 15:22</ref>; <ref loc="LAM 2:22">Mao 2:22</ref></char>
+    </note>Nimemwona Efraimu, kama Tiro,</para>
+  <para style="q2" vid="HOS 9:13">aliyeoteshwa mahali pazuri.</para>
+  <para style="q1" vid="HOS 9:13">Lakini Efraimu wataleta</para>
+  <para style="q2" vid="HOS 9:13">watoto wao kwa mchinjaji.”<verse eid="HOS 9:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 9:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="LUK 23:29">Lk 23:29</ref>; <ref loc="HOS 9:11">Hos 9:11</ref>; <ref loc="LUK 23:29">Lk 23:29</ref></char>
+    </note>Wape, Ee <char style="nd">Bwana</char>,</para>
+  <para style="q2" vid="HOS 9:14">je, utawapa nini?</para>
+  <para style="q1" vid="HOS 9:14">Wape matumbo ya kuharibu mimba</para>
+  <para style="q2" vid="HOS 9:14">na matiti yaliyokauka.<verse eid="HOS 9:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 9:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:9">Hos 4:9</ref>, <ref loc="HOS 4:15">15</ref>; <ref loc="HOS 5:2">5:2</ref>; <ref loc="HOS 7:2">7:2</ref>; <ref loc="ISA 1:23">Isa 1:23</ref>; <ref loc="JER 12:8">Yer 12:8</ref></char>
+    </note>“Kwa sababu ya uovu wao wote huko Gilgali,</para>
+  <para style="q2" vid="HOS 9:15">niliwachukia huko.</para>
+  <para style="q1" vid="HOS 9:15">Kwa sababu ya matendo yao ya dhambi,</para>
+  <para style="q2" vid="HOS 9:15">nitawafukuza katika nyumba yangu.</para>
+  <para style="q1" vid="HOS 9:15">Sitawapenda tena,</para>
+  <para style="q2" vid="HOS 9:15">viongozi wao wote ni waasi.<verse eid="HOS 9:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 9:16"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:11">Hos 5:11</ref>; <ref loc="HOS 8:7">8:7</ref>; <ref loc="JOB 15:32">Ay 15:32</ref></char>
+    </note>Efraimu ameharibiwa,</para>
+  <para style="q2" vid="HOS 9:16">mzizi wao umenyauka,</para>
+  <para style="q2" vid="HOS 9:16">hawazai tunda.</para>
+  <para style="q1" vid="HOS 9:16">Hata kama watazaa watoto,</para>
+  <para style="q2" vid="HOS 9:16">nitawachinja watoto wao</para>
+  <para style="q2" vid="HOS 9:16">waliotunzwa vizuri.”<verse eid="HOS 9:16"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v" sid="HOS 9:17"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:10">Hos 4:10</ref>; <ref loc="HOS 7:13">7:13</ref>; <ref loc="DEU 28:65">Kum 28:65</ref>; <ref loc="JER 6:30">Yer 6:30</ref></char>
+    </note>Mungu wangu atawakataa</para>
+  <para style="q2" vid="HOS 9:17">kwa sababu hawakumtii;</para>
+  <para style="q1" vid="HOS 9:17">watakuwa watu wa kutangatanga</para>
+  <para style="q2" vid="HOS 9:17">miongoni mwa mataifa.<verse eid="HOS 9:17"/></para>
+  <chapter eid="HOS 9"/>
+  <chapter number="10" style="c" sid="HOS 10"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 10:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 15:2">Eze 15:2</ref>; <ref loc="1KI 14:23">1Fal 14:23</ref>; <ref loc="HOS 4:7">Hos 4:7</ref>; <ref loc="HOS 8:11">8:11</ref>; <ref loc="HOS 12:11">12:11</ref>; <ref loc="HOS 13:15">13:15</ref></char>
+    </note>Israeli alikuwa mzabibu uliostawi sana,</para>
+  <para style="q2" vid="HOS 10:1">alijizalia matunda mwenyewe.</para>
+  <para style="q1" vid="HOS 10:1">Kadiri matunda yake yalivyoongezeka,</para>
+  <para style="q2" vid="HOS 10:1">alijenga madhabahu zaidi;</para>
+  <para style="q1" vid="HOS 10:1">kadiri nchi yake ilivyostawi,</para>
+  <para style="q2" vid="HOS 10:1">alipamba mawe yake ya ibada.<verse eid="HOS 10:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 10:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 18:21">1Fal 18:21</ref>; <ref loc="HOS 13:16">Hos 13:16</ref>; <ref loc="MIC 5:13">Mik 5:13</ref></char>
+    </note>Moyo wao ni mdanganyifu,</para>
+  <para style="q2" vid="HOS 10:2">nao sasa lazima wachukue hatia yao.</para>
+  <para style="q1" vid="HOS 10:2">
+    <char style="nd">Bwana</char> atabomoa madhabahu zao</para>
+  <para style="q2" vid="HOS 10:2">na kuharibu mawe yao ya ibada.<verse eid="HOS 10:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 10:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 4:9">Mik 4:9</ref>
+      </char>
+    </note>Kisha watasema, “Hatuna mfalme</para>
+  <para style="q2" vid="HOS 10:3">kwa sababu hatukumheshimu <char style="nd">Bwana</char>.</para>
+  <para style="q1" vid="HOS 10:3">Lakini hata kama tungelikuwa na mfalme,</para>
+  <para style="q2" vid="HOS 10:3">angeweza kutufanyia nini?”<verse eid="HOS 10:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 10:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:2">Hos 4:2</ref>; <ref loc="EZK 17:19">Eze 17:19</ref>; <ref loc="AMO 5:7">Amo 5:7</ref>; <ref loc="AMO 6:12">6:12</ref>; <ref loc="HOS 4:2">Hos 4:2</ref>; <ref loc="EZK 17:19">Eze 17:19</ref>; <ref loc="AMO 5:7">Amo 5:7</ref>; <ref loc="AMO 6:12">6:12</ref></char>
+    </note>Wanaweka ahadi nyingi,</para>
+  <para style="q2" vid="HOS 10:4">huapa viapo vya uongo</para>
+  <para style="q2" vid="HOS 10:4">wanapofanya mapatano;</para>
+  <para style="q1" vid="HOS 10:4">kwa hiyo mashtaka huchipuka</para>
+  <para style="q2" vid="HOS 10:4">kama magugu ya sumu</para>
+  <para style="q2" vid="HOS 10:4">katika shamba lililolimwa.<verse eid="HOS 10:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 10:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:8">Hos 5:8</ref>; <ref loc="HOS 8:5-6">8:5-6</ref>; <ref loc="2KI 23:5">2Fal 23:5</ref>; <ref loc="ZEP 1:4">Sef 1:4</ref>; <ref loc="JDG 18:17-18">Amu 18:17-18</ref>; <ref loc="1KI 12:28">1Fal 12:28</ref>; <ref loc="EXO 32:4">Kut 32:4</ref>; <ref loc="ISA 44:17-20">Isa 44:17-20</ref></char>
+    </note>Watu wanaoishi Samaria huogopa</para>
+  <para style="q2" vid="HOS 10:5">kwa ajili ya sanamu ya ndama ya Beth-Aveni.<note caller="+" style="f"><char style="fr" closed="false">10:5 </char><char style="ft" closed="false">Beth-Aveni maana yake Nyumba ya Ubatili (au Uovu), jina lingine la Betheli kwa dhihaka.</char></note></para>
+  <para style="q1" vid="HOS 10:5">Watu wake wataiombolezea,</para>
+  <para style="q2" vid="HOS 10:5">vivyo hivyo kuhani wake wa kuabudu sanamu,</para>
+  <para style="q1" vid="HOS 10:5">wale waliokuwa wamefurahia fahari yake,</para>
+  <para style="q2" vid="HOS 10:5">kwa sababu itaondolewa kutoka kwao</para>
+  <para style="q2" vid="HOS 10:5">kwenda uhamishoni.<verse eid="HOS 10:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 10:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 16:7">2Fal 16:7</ref>; <ref loc="HOS 4:7">Hos 4:7</ref>; <ref loc="HOS 5:13">5:13</ref>; <ref loc="HOS 11:5">11:5</ref>; <ref loc="ISA 30:3">Isa 30:3</ref>; <ref loc="JDG 3:15">Amu 3:15</ref>; <ref loc="JER 48:13">Yer 48:13</ref></char>
+    </note>Itachukuliwa kwenda Ashuru</para>
+  <para style="q2" vid="HOS 10:6">kama ushuru kwa mfalme mkuu.</para>
+  <para style="q1" vid="HOS 10:6">Efraimu atafedheheshwa;</para>
+  <para style="q2" vid="HOS 10:6">Israeli ataaibika kwa ajili ya sanamu zake za mti.<verse eid="HOS 10:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 10:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 13:11">Hos 13:11</ref>; <ref loc="HOS 10:15">10:15</ref></char>
+    </note>Samaria na mfalme wake wataelea</para>
+  <para style="q2" vid="HOS 10:7">kama kijiti juu ya uso wa maji.<verse eid="HOS 10:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 10:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 12:28-30">1Fal 12:28-30</ref>; <ref loc="HOS 9:6">Hos 9:6</ref>; <ref loc="DEU 9:21">Kum 9:21</ref>; <ref loc="REV 6:16">Ufu 6:16</ref>; <ref loc="ISA 32:13">Isa 32:13</ref>; <ref loc="AMO 3:14-15">Amo 3:14-15</ref>; <ref loc="AMO 7:9">7:9</ref>; <ref loc="JOB 30:6">Ay 30:6</ref>; <ref loc="EZK 6:6">Eze 6:6</ref>; <ref loc="LUK 23:30">Lk 23:30</ref></char>
+    </note>Mahali pa kuabudia sanamu pa uovu<note caller="+" style="f"><char style="fr" closed="false">10:8 </char><char style="ft" closed="false">Yaani </char><char style="fqa" closed="false">Aveni </char><char style="ft" closed="false">kwa Kiebrania, kumaanisha </char><char style="fqa" closed="false">Beth-Aveni</char><char style="ft" closed="false">, jina lingine la Betheli kwa dhihaka.</char></note> pataharibiwa:</para>
+  <para style="q2" vid="HOS 10:8">ndiyo dhambi ya Israeli.</para>
+  <para style="q1" vid="HOS 10:8">Miiba na mibaruti itaota</para>
+  <para style="q2" vid="HOS 10:8">na kufunika madhabahu zao.</para>
+  <para style="q1" vid="HOS 10:8">Kisha wataiambia milima, “Tufunikeni!”</para>
+  <para style="q2" vid="HOS 10:8">na vilima, “Tuangukieni!”<verse eid="HOS 10:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 10:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:8">Hos 5:8</ref>; <ref loc="JOB 7:11">Ay 7:11</ref></char>
+    </note>“Tangu siku za Gibea, mmetenda dhambi, ee Israeli,</para>
+  <para style="q2" vid="HOS 10:9">huko ndiko mlikobaki.</para>
+  <para style="q1" vid="HOS 10:9">Je, vita havikuwapata</para>
+  <para style="q2" vid="HOS 10:9">watenda mabaya huko Gibea?<verse eid="HOS 10:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 10:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 5:13">Eze 5:13</ref>; <ref loc="HOS 4:9">Hos 4:9</ref>; <ref loc="AMO 8:14">Amo 8:14</ref></char>
+    </note>Wakati nitakapopenda, nitawaadhibu;</para>
+  <para style="q2" vid="HOS 10:10">mataifa yatakusanywa dhidi yao</para>
+  <para style="q1" vid="HOS 10:10">ili kuwaweka katika vifungo</para>
+  <para style="q2" vid="HOS 10:10">kwa ajili ya dhambi zao mbili.<verse eid="HOS 10:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 10:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 15:12">Yer 15:12</ref>; <ref loc="JER 31:18">31:18</ref></char>
+    </note>Efraimu ni mtamba wa ngʼombe aliyefundishwa</para>
+  <para style="q2" vid="HOS 10:11">ambaye hupenda kupura,</para>
+  <para style="q1" vid="HOS 10:11">hivyo nitamfunga nira</para>
+  <para style="q2" vid="HOS 10:11">juu ya shingo yake nzuri.</para>
+  <para style="q1" vid="HOS 10:11">Nitamwendesha Efraimu,</para>
+  <para style="q2" vid="HOS 10:11">Yuda lazima alime,</para>
+  <para style="q1" vid="HOS 10:11">naye Yakobo lazima avunjavunje</para>
+  <para style="q2" vid="HOS 10:11">mabonge ya udongo.<verse eid="HOS 10:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 10:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 11:18">Mit 11:18</ref>; <ref loc="JAS 3:18">Yak 3:18</ref>; <ref loc="HOS 12:6">Hos 12:6</ref>; <ref loc="ISA 19:22">Isa 19:22</ref>; <ref loc="ISA 45:8">45:8</ref>; <ref loc="ECC 11:1">Mhu 11:1</ref>; <ref loc="JER 4:3">Yer 4:3</ref></char>
+    </note>Jipandieni wenyewe haki,</para>
+  <para style="q2" vid="HOS 10:12">vuneni matunda ya upendo usio na kikomo,</para>
+  <para style="q1" vid="HOS 10:12">vunjeni ardhi yenu isiyolimwa;</para>
+  <para style="q2" vid="HOS 10:12">kwa kuwa ni wakati wa kumtafuta <char style="nd">Bwana</char>,</para>
+  <para style="q1" vid="HOS 10:12">mpaka atakapokuja</para>
+  <para style="q2" vid="HOS 10:12">na kuwanyeshea juu yenu haki.<verse eid="HOS 10:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 10:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 4:8">Ay 4:8</ref>; <ref loc="GAL 6:7-8">Gal 6:7-8</ref>; <ref loc="PSA 33:16">Za 33:16</ref>; <ref loc="PRO 22:8">Mit 22:8</ref>; <ref loc="HOS 7:3">Hos 7:3</ref>; <ref loc="HOS 8:7">8:7</ref>; <ref loc="HOS 11:12">11:12</ref></char>
+    </note>Lakini mmepanda uovu,</para>
+  <para style="q2" vid="HOS 10:13">mkavuna ubaya,</para>
+  <para style="q2" vid="HOS 10:13">mmekula tunda la udanganyifu.</para>
+  <para style="q1" vid="HOS 10:13">Kwa sababu mmetegemea nguvu zenu wenyewe</para>
+  <para style="q2" vid="HOS 10:13">na wingi wa mashujaa wenu,<verse eid="HOS 10:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 10:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 13:16">Isa 13:16</ref>; <ref loc="ISA 17:3">17:3</ref>; <ref loc="MIC 5:11">Mik 5:11</ref>; <ref loc="HOS 13:16">Hos 13:16</ref>; <ref loc="2KI 17:3">2Fal 17:3</ref></char>
+    </note>mngurumo wa vita utainuka dhidi ya watu wako,</para>
+  <para style="q2" vid="HOS 10:14">ili kwamba ngome zako zote zitaharibiwa:</para>
+  <para style="q1" vid="HOS 10:14">kama Shalmani alivyoharibu Beth-Arbeli katika siku ile ya vita,</para>
+  <para style="q2" vid="HOS 10:14">wakati mama pamoja na watoto wao</para>
+  <para style="q2" vid="HOS 10:14">walipotupwa kwa nguvu ardhini.<verse eid="HOS 10:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 10:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 10:7">Hos 10:7</ref>
+      </char>
+    </note>Ndivyo itakavyotokea kwako, ee Betheli,</para>
+  <para style="q2" vid="HOS 10:15">kwa sababu uovu wako ni mkuu.</para>
+  <para style="q1" vid="HOS 10:15">Siku ile itakapopambazuka,</para>
+  <para style="q2" vid="HOS 10:15">mfalme wa Israeli ataharibiwa kabisa.<verse eid="HOS 10:15"/></para>
+  <chapter eid="HOS 10"/>
+  <chapter number="11" style="c" sid="HOS 11"/>
+  <para style="s1">Upendo Wa Mungu Kwa Israeli</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 11:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 4:22">Kut 4:22</ref>; <ref loc="MAT 2:15">Mt 2:15</ref>; <ref loc="JER 2:2">Yer 2:2</ref>; <ref loc="EZK 16:22">Eze 16:22</ref>; <ref loc="HOS 12:9">Hos 12:9</ref>; <ref loc="HOS 13:4">13:4</ref></char>
+    </note>“Wakati Israeli alipokuwa mtoto, nilimpenda,</para>
+  <para style="q2" vid="HOS 11:1">nilimwita mwanangu kutoka Misri.<verse eid="HOS 11:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 11:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:13">Hos 2:13</ref>; <ref loc="HOS 4:13">4:13</ref>; <ref loc="2KI 17:15">2Fal 17:15</ref>; <ref loc="ISA 65:7">Isa 65:7</ref>; <ref loc="JER 18:15">Yer 18:15</ref></char>
+    </note>Lakini kadiri nilivyomwita Israeli,</para>
+  <para style="q2" vid="HOS 11:2">ndivyo walivyokwenda mbali nami.</para>
+  <para style="q1" vid="HOS 11:2">Walitoa dhabihu kwa Mabaali</para>
+  <para style="q2" vid="HOS 11:2">na kufukiza uvumba kwa vinyago.<verse eid="HOS 11:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 11:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 1:31">Kum 1:31</ref>; <ref loc="DEU 32:11">32:11</ref>; <ref loc="EXO 15:26">Kut 15:26</ref>; <ref loc="JER 30:17">Yer 30:17</ref></char>
+    </note>Mimi ndiye niliyemfundisha Efraimu kutembea,</para>
+  <para style="q2" vid="HOS 11:3">nikiwashika mikono;</para>
+  <para style="q1" vid="HOS 11:3">lakini hawakutambua</para>
+  <para style="q2" vid="HOS 11:3">kuwa ni mimi niliyewaponya.<verse eid="HOS 11:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 11:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:2-3">Yer 31:2-3</ref>, <ref loc="JER 31:20">20</ref>; <ref loc="LEV 26:13">Law 26:13</ref>; <ref loc="EXO 16:32">Kut 16:32</ref>; <ref loc="PSA 78:25">Za 78:25</ref></char>
+    </note>Niliwaongoza kwa kamba za huruma ya kibinadamu,</para>
+  <para style="q2" vid="HOS 11:4">kwa vifungo vya upendo;</para>
+  <para style="q1" vid="HOS 11:4">niliondoa nira shingoni mwao</para>
+  <para style="q2" vid="HOS 11:4">nami nikainama kuwalisha.<verse eid="HOS 11:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 11:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 8:4-6">Yer 8:4-6</ref>; <ref loc="HOS 7:16">Hos 7:16</ref>; <ref loc="HOS 10:6">10:6</ref>; <ref loc="EXO 13:17">Kut 13:17</ref></char>
+    </note>“Je, hawatarudi Misri,</para>
+  <para style="q2" vid="HOS 11:5">nayo Ashuru haitawatawala</para>
+  <para style="q2" vid="HOS 11:5">kwa sababu wamekataa kutubu?<verse eid="HOS 11:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 11:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 13:16">Hos 13:16</ref>; <ref loc="LAM 2:9">Mao 2:9</ref></char>
+    </note>Panga zitametameta katika miji yao,</para>
+  <para style="q2" vid="HOS 11:6">zitaharibu makomeo ya malango yao</para>
+  <para style="q2" vid="HOS 11:6">na kukomesha mipango yao.<verse eid="HOS 11:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 11:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 3:6-7">Yer 3:6-7</ref>; <ref loc="JER 8:5">8:5</ref>; <ref loc="ISA 26:10">Isa 26:10</ref></char>
+    </note>Watu wangu wamedhamiria kuniacha.</para>
+  <para style="q2" vid="HOS 11:7">Hata kama wakimwita Yeye Aliye Juu Sana,</para>
+  <para style="q2" vid="HOS 11:7">kwa vyovyote hatawainua.<verse eid="HOS 11:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 11:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 14:8">Mwa 14:8</ref>; <ref loc="GEN 19:25">19:25</ref>; <ref loc="HOS 6:4">Hos 6:4</ref>; <ref loc="LAM 3:32">Mao 3:32</ref>; <ref loc="JER 7:29">Yer 7:29</ref>; <ref loc="PSA 25:6">Za 25:6</ref>; <ref loc="1KI 3:26">1Fal 3:26</ref></char>
+    </note>“Efraimu, ninawezaje kukuacha?</para>
+  <para style="q2" vid="HOS 11:8">Ee Israeli, ninawezaje kukutoa?</para>
+  <para style="q1" vid="HOS 11:8">Nitawezaje kukutendea kama Adma?</para>
+  <para style="q2" vid="HOS 11:8">Nitawezaje kukufanya kama Seboimu?</para>
+  <para style="q1" vid="HOS 11:8">Moyo wangu umegeuka ndani yangu,</para>
+  <para style="q2" vid="HOS 11:8">huruma zangu zote zimeamshwa.<verse eid="HOS 11:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 11:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 13:17">Kum 13:17</ref>
+      </char>
+    </note>Sitatimiza hasira yangu kali,</para>
+  <para style="q2" vid="HOS 11:9">wala sitageuka na kumharibu Efraimu.</para>
+  <para style="q1" vid="HOS 11:9">Kwa kuwa mimi ndimi Mungu,</para>
+  <para style="q2" vid="HOS 11:9">wala si mwanadamu,</para>
+  <para style="q1" vid="HOS 11:9">Aliye Mtakatifu miongoni mwenu.</para>
+  <para style="q2" vid="HOS 11:9">Sitakuja kwa ghadhabu.<verse eid="HOS 11:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 11:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 3:5">Hos 3:5</ref>; <ref loc="HOS 6:1-3">6:1-3</ref>; <ref loc="ISA 31:4">Isa 31:4</ref>; <ref loc="ISA 42:13">42:13</ref>; <ref loc="PSA 18:45">Za 18:45</ref></char>
+    </note>Watamfuata <char style="nd">Bwana</char>;</para>
+  <para style="q2" vid="HOS 11:10">atanguruma kama simba.</para>
+  <para style="q1" vid="HOS 11:10">Wakati angurumapo,</para>
+  <para style="q2" vid="HOS 11:10">watoto wake watakuja wakitetemeka</para>
+  <para style="q2" vid="HOS 11:10">kutoka magharibi.<verse eid="HOS 11:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 11:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 11:11">Isa 11:11</ref>; <ref loc="GEN 8:8">Mwa 8:8</ref>; <ref loc="EZK 28:26">Eze 28:26</ref>; <ref loc="EZK 34:25-28">34:25-28</ref></char>
+    </note>Watakuja wakitetemeka</para>
+  <para style="q2" vid="HOS 11:11">kama ndege wakitoka Misri,</para>
+  <para style="q2" vid="HOS 11:11">kama hua wakitoka Ashuru.</para>
+  <para style="q1" vid="HOS 11:11">Nitawakalisha katika nyumba zao,”</para>
+  <para style="q2" vid="HOS 11:11">asema <char style="nd">Bwana</char>.<verse eid="HOS 11:11"/></para>
+  <para style="s1">Dhambi Ya Israeli</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 11:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:2">Hos 4:2</ref>; <ref loc="HOS 10:13">10:13</ref>; <ref loc="DEU 7:9">Kum 7:9</ref></char>
+    </note>Efraimu amenizunguka kwa uongo,</para>
+  <para style="q2" vid="HOS 11:12">nyumba ya Israeli kwa udanganyifu.</para>
+  <para style="q1" vid="HOS 11:12">Naye Yuda ni mkaidi dhidi ya Mungu,</para>
+  <para style="q2" vid="HOS 11:12">hata kinyume cha yule mwaminifu Aliye Mtakatifu.<verse eid="HOS 11:12"/></para>
+  <chapter eid="HOS 11"/>
+  <chapter number="12" style="c" sid="HOS 12"/>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 12:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 41:6">Mwa 41:6</ref>; <ref loc="EZK 17:10">Eze 17:10</ref>; <ref loc="2KI 17:4">2Fal 17:4</ref>; <ref loc="PSA 78:67">Za 78:67</ref>; <ref loc="HOS 4:19">Hos 4:19</ref>; <ref loc="HOS 5:13">5:13</ref></char>
+    </note>Efraimu anajilisha upepo;</para>
+  <para style="q2" vid="HOS 12:1">hufukuzia upepo wa mashariki kutwa nzima</para>
+  <para style="q2" vid="HOS 12:1">na kuzidisha uongo na jeuri.</para>
+  <para style="q1" vid="HOS 12:1">Anafanya mkataba na Ashuru</para>
+  <para style="q2" vid="HOS 12:1">na kutuma mafuta ya zeituni Misri.<verse eid="HOS 12:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 12:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 10:2">Ay 10:2</ref>
+      </char>
+    </note>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 6:2">Mik 6:2</ref>; <ref loc="HOS 4:9">Hos 4:9</ref>; <ref loc="HOS 9:15">9:15</ref>; <ref loc="EXO 32:34">Kut 32:34</ref>; <ref loc="AMO 2:4">Amo 2:4</ref></char>
+    </note>
+    <char style="nd">Bwana</char> analo shtaka dhidi ya Yuda,</para>
+  <para style="q2" vid="HOS 12:2">atamwadhibu Yakobo kwa kadiri ya njia zake</para>
+  <para style="q2" vid="HOS 12:2">na kumlipa kwa kadiri ya matendo yake.<verse eid="HOS 12:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 12:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 25:26">Mwa 25:26</ref>; <ref loc="GEN 32:24-29">32:24-29</ref></char>
+    </note>Yakobo akiwa tumboni alishika kisigino cha kaka yake;</para>
+  <para style="q2" vid="HOS 12:3">kama mwanadamu, alishindana na Mungu.<verse eid="HOS 12:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 12:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 12:8">Mwa 12:8</ref>; <ref loc="GEN 28:12-15">28:12-15</ref>; <ref loc="GEN 35:15">35:15</ref></char>
+    </note>Alishindana na malaika na kumshinda;</para>
+  <para style="q2" vid="HOS 12:4">alilia na kuomba upendeleo wake.</para>
+  <para style="q1" vid="HOS 12:4">Alimkuta huko Betheli</para>
+  <para style="q2" vid="HOS 12:4">na kuzungumza naye huko:<verse eid="HOS 12:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 12:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 3:15">Kut 3:15</ref>
+      </char>
+    </note>
+    <char style="nd">Bwana</char> Mungu Mwenye Nguvu Zote,</para>
+  <para style="q2" vid="HOS 12:5">
+    <char style="nd">Bwana</char> ndilo jina lake!<verse eid="HOS 12:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 12:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 6:8">Mik 6:8</ref>; <ref loc="MIC 7:7">7:7</ref>; <ref loc="PSA 106:13">Za 106:13</ref>; <ref loc="EZK 18:30">Eze 18:30</ref>; <ref loc="ISA 19:22">Isa 19:22</ref>; <ref loc="JOL 2:12">Yoe 2:12</ref>; <ref loc="JER 22:3">Yer 22:3</ref></char>
+    </note>Lakini ni lazima urudi kwa Mungu wako;</para>
+  <para style="q2" vid="HOS 12:6">dumisha upendo na haki,</para>
+  <para style="q2" vid="HOS 12:6">nawe umngojee Mungu wako siku zote.<verse eid="HOS 12:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 12:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 19:26">Law 19:26</ref>; <ref loc="AMO 8:5">Amo 8:5</ref></char>
+    </note>Mfanyabiashara hutumia vipimo vya udanganyifu;</para>
+  <para style="q2" vid="HOS 12:7">hupenda kupunja.<verse eid="HOS 12:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 12:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 62:10">Za 62:10</ref>; <ref loc="REV 3:17">Ufu 3:17</ref>; <ref loc="EZK 28:5">Eze 28:5</ref></char>
+    </note>Efraimu hujisifu akisema,</para>
+  <para style="q2" vid="HOS 12:8">“Mimi ni tajiri sana; nimetajirika.</para>
+  <para style="q1" vid="HOS 12:8">Pamoja na utajiri wangu wote hawatakuta ndani yangu</para>
+  <para style="q2" vid="HOS 12:8">uovu wowote au dhambi.”<verse eid="HOS 12:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 12:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 23:43">Law 23:43</ref>; <ref loc="HOS 2:15">Hos 2:15</ref>; <ref loc="NEH 8:17">Neh 8:17</ref></char>
+    </note>“Mimi ndimi <char style="nd">Bwana</char> Mungu wenu</para>
+  <para style="q2" vid="HOS 12:9">niliyewaleta kutoka Misri;</para>
+  <para style="q1" vid="HOS 12:9">nitawafanya mkae tena kwenye mahema,</para>
+  <para style="q2" vid="HOS 12:9">kama vile katika siku</para>
+  <para style="q2" vid="HOS 12:9">za sikukuu zenu zilizoamriwa.<verse eid="HOS 12:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 12:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="JDG 14:12">Amu 14:12</ref>; <ref loc="EZK 20:49">Eze 20:49</ref>; <ref loc="2KI 17:13">2Fal 17:13</ref>; <ref loc="JER 7:25">Yer 7:25</ref></char>
+    </note>Niliongea na manabii, nikawapa maono mengi</para>
+  <para style="q2" vid="HOS 12:10">na kusema mifano kupitia wao.”<verse eid="HOS 12:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 12:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="AMO 4:4">Amo 4:4</ref>; <ref loc="HOS 4:15">Hos 4:15</ref>; <ref loc="HOS 6:8">6:8</ref>; <ref loc="HOS 8:11">8:11</ref></char>
+    </note>Je, Gileadi si mwovu?</para>
+  <para style="q2" vid="HOS 12:11">Watu wake hawafai kitu!</para>
+  <para style="q1" vid="HOS 12:11">Je, hawatoi dhabihu za mafahali huko Gilgali?</para>
+  <para style="q2" vid="HOS 12:11">Madhabahu zao zitakuwa</para>
+  <para style="q2" vid="HOS 12:11">kama malundo ya mawe</para>
+  <para style="q2" vid="HOS 12:11">katika shamba lililolimwa.<verse eid="HOS 12:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 12:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 28:5">Mwa 28:5</ref>; <ref loc="GEN 29:18">29:18</ref></char>
+    </note>Yakobo alikimbilia katika nchi ya Aramu;</para>
+  <para style="q2" vid="HOS 12:12">Israeli alitumika ili apate mke,</para>
+  <para style="q2" vid="HOS 12:12">ili aweze kulipa kwa ajili yake alichunga kondoo.<verse eid="HOS 12:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 12:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 14:19-22">Kut 14:19-22</ref>; <ref loc="ISA 63:11-14">Isa 63:11-14</ref>; <ref loc="EXO 13:3">Kut 13:3</ref>; <ref loc="HOS 11:1">Hos 11:1</ref></char>
+    </note>
+    <char style="nd">Bwana</char> alimtumia nabii</para>
+  <para style="q2" vid="HOS 12:13">kumpandisha Israeli kutoka Misri,</para>
+  <para style="q2" vid="HOS 12:13">kwa njia ya nabii alimtunza.<verse eid="HOS 12:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 12:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 18:13">Eze 18:13</ref>; <ref loc="DAN 11:18">Dan 11:18</ref></char>
+    </note>Lakini Efraimu amemchochea sana hasira;</para>
+  <para style="q2" vid="HOS 12:14">Bwana wake ataleta juu yake</para>
+  <para style="q1" vid="HOS 12:14">hatia yake ya kumwaga damu naye atamlipiza</para>
+  <para style="q2" vid="HOS 12:14">kwa ajili ya dharau yake.<verse eid="HOS 12:14"/></para>
+  <chapter eid="HOS 12"/>
+  <chapter number="13" style="c" sid="HOS 13"/>
+  <para style="s1">Hasira Ya <char style="nd">Bwana</char> Dhidi Ya Israeli</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 13:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 18:12">Mit 18:12</ref>; <ref loc="JDG 8:1">Amu 8:1</ref>; <ref loc="JDG 12:1">12:1</ref>; <ref loc="HOS 11:2">Hos 11:2</ref></char>
+    </note>Wakati Efraimu alipozungumza, watu walitetemeka,</para>
+  <para style="q2" vid="HOS 13:1">alikuwa ametukuzwa katika Israeli.</para>
+  <para style="q1" vid="HOS 13:1">Lakini alikuwa na hatia ya kumwabudu Baali</para>
+  <para style="q2" vid="HOS 13:1">naye akafa.<verse eid="HOS 13:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 13:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 46:6">Isa 46:6</ref>; <ref loc="JER 10:4">Yer 10:4</ref>; <ref loc="JER 44:8">44:8</ref>; <ref loc="ISA 44:17-20">Isa 44:17-20</ref>; <ref loc="HOS 8:4">Hos 8:4</ref>; <ref loc="1KI 19:18">1Fal 19:18</ref></char>
+    </note>Sasa wanatenda dhambi zaidi na zaidi;</para>
+  <para style="q2" vid="HOS 13:2">wanajitengenezea sanamu</para>
+  <para style="q2" vid="HOS 13:2">kutokana na fedha yao,</para>
+  <para style="q1" vid="HOS 13:2">vinyago vilivyotengenezwa kwa uhodari,</para>
+  <para style="q2" vid="HOS 13:2">vyote kazi ya fundi stadi.</para>
+  <para style="q1" vid="HOS 13:2">Inasemekana kuhusu hawa watu,</para>
+  <para style="q2" vid="HOS 13:2">“Hutoa dhabihu za binadamu</para>
+  <para style="q2" vid="HOS 13:2">na kubusu sanamu za ndama.”<verse eid="HOS 13:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 13:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:4">Hos 6:4</ref>; <ref loc="JOB 13:25">Ay 13:25</ref>; <ref loc="DAN 2:35">Dan 2:35</ref>; <ref loc="PSA 68:2">Za 68:2</ref></char>
+    </note>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 17:13">Isa 17:13</ref>
+      </char>
+    </note>Kwa hiyo watakuwa kama ukungu wa asubuhi,</para>
+  <para style="q2" vid="HOS 13:3">kama umande wa alfajiri utowekao,</para>
+  <para style="q1" vid="HOS 13:3">kama makapi yapeperushwayo</para>
+  <para style="q2" vid="HOS 13:3">kutoka sakafu ya kupuria nafaka,</para>
+  <para style="q2" vid="HOS 13:3">kama moshi utorokao kupitia dirishani.<verse eid="HOS 13:3"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 13:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:6">Yer 2:6</ref>; <ref loc="ISA 43:10">Isa 43:10</ref>; <ref loc="ISA 45:21-22">45:21-22</ref>; <ref loc="HOS 2:20">Hos 2:20</ref>; <ref loc="HOS 12:9">12:9</ref>; <ref loc="EXO 20:3">Kut 20:3</ref>; <ref loc="PSA 18:46">Za 18:46</ref></char>
+    </note>“Bali mimi ndimi <char style="nd">Bwana</char> Mungu wenu,</para>
+  <para style="q2" vid="HOS 13:4">niliyewaleta ninyi toka Misri.</para>
+  <para style="q1" vid="HOS 13:4">Msimkubali Mungu mwingine ila mimi,</para>
+  <para style="q2" vid="HOS 13:4">hakuna Mwokozi isipokuwa mimi.<verse eid="HOS 13:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 13:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 1:19">Kum 1:19</ref>; <ref loc="DEU 2:7">2:7</ref>; <ref loc="DEU 32:10">32:10</ref>; <ref loc="DEU 8:15">8:15</ref>; <ref loc="DEU 32:10">32:10</ref></char>
+    </note>Niliwatunza huko jangwani,</para>
+  <para style="q2" vid="HOS 13:5">katika nchi yenye joto liunguzalo.<verse eid="HOS 13:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 13:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 30:7-9">Mit 30:7-9</ref>; <ref loc="JER 7:5">Yer 7:5</ref>; <ref loc="EZK 28:5">Eze 28:5</ref>; <ref loc="DEU 32:18">Kum 32:18</ref>; <ref loc="ISA 17:10">Isa 17:10</ref>; <ref loc="HOS 2:13">Hos 2:13</ref>; <ref loc="HOS 4:7">4:7</ref></char>
+    </note>Nilipowalisha, walishiba,</para>
+  <para style="q2" vid="HOS 13:6">waliposhiba, wakajivuna,</para>
+  <para style="q2" vid="HOS 13:6">kisha wakanisahau mimi.<verse eid="HOS 13:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 13:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 10:16">Ay 10:16</ref>; <ref loc="JER 4:7">Yer 4:7</ref>; <ref loc="LAM 3:10">Mao 3:10</ref></char>
+    </note>Kwa hiyo nitakuja juu yao kama simba,</para>
+  <para style="q2" vid="HOS 13:7">kama chui nitawavizia kando ya njia.<verse eid="HOS 13:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 13:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="2SA 17:8">2Sam 17:8</ref>; <ref loc="PSA 17:12">Za 17:12</ref>; <ref loc="PSA 50:22">50:22</ref>; <ref loc="LAM 3:10">Mao 3:10</ref>; <ref loc="HOS 2:12">Hos 2:12</ref></char>
+    </note>Kama dubu aliyenyangʼanywa watoto wake,</para>
+  <para style="q2" vid="HOS 13:8">nitawashambulia na kurarua vifua vyenu.</para>
+  <para style="q1" vid="HOS 13:8">Kama simba nitawala;</para>
+  <para style="q2" vid="HOS 13:8">mnyama pori atawararua vipande vipande.<verse eid="HOS 13:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 13:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:17-19">Yer 2:17-19</ref>; <ref loc="DEU 33:29">Kum 33:29</ref></char>
+    </note>“Ee Israeli, umeangamizwa,</para>
+  <para style="q2" vid="HOS 13:9">kwa sababu wewe u kinyume nami,</para>
+  <para style="q2" vid="HOS 13:9">kinyume na msaidizi wako.<verse eid="HOS 13:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 13:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 17:4">2Fal 17:4</ref>; <ref loc="1SA 8:6">1Sam 8:6</ref>; <ref loc="HOS 7:7">Hos 7:7</ref>; <ref loc="HOS 8:4">8:4</ref></char>
+    </note>Yuko wapi mfalme wako,</para>
+  <para style="q2" vid="HOS 13:10">ili apate kukuokoa?</para>
+  <para style="q1" vid="HOS 13:10">Wako wapi watawala wako katika miji yako yote</para>
+  <para style="q2" vid="HOS 13:10">ambao ulisema kuwahusu,</para>
+  <para style="q2" vid="HOS 13:10">‘Nipe mfalme na wakuu’?<verse eid="HOS 13:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 13:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 24:20">Yos 24:20</ref>; <ref loc="1SA 13:14">1Sam 13:14</ref>; <ref loc="NUM 11:20">Hes 11:20</ref>; <ref loc="1KI 14:10">1Fal 14:10</ref>; <ref loc="HOS 10:7">Hos 10:7</ref></char>
+    </note>Hivyo katika hasira yangu nilikupa mfalme</para>
+  <para style="q2" vid="HOS 13:11">na katika ghadhabu yangu nilimwondoa.<verse eid="HOS 13:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 13:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:34">Kum 32:34</ref>; <ref loc="JOB 14:7">Ay 14:7</ref></char>
+    </note>Kosa la Efraimu limehifadhiwa,</para>
+  <para style="q2" vid="HOS 13:12">dhambi zake zimewekwa katika kumbukumbu.<verse eid="HOS 13:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 13:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 13:8">Isa 13:8</ref>; <ref loc="MIC 4:9-10">Mik 4:9-10</ref>; <ref loc="ISA 66:9">Isa 66:9</ref>; <ref loc="2KI 19:3">2Fal 19:3</ref></char>
+    </note>Utungu kama wa mwanamke anayejifungua mtoto humjia,</para>
+  <para style="q2" vid="HOS 13:13">lakini yeye ni mtoto asiyekuwa na hekima;</para>
+  <para style="q1" vid="HOS 13:13">wakati utakapowadia hatatoka</para>
+  <para style="q2" vid="HOS 13:13">katika tumbo la mama yake.<verse eid="HOS 13:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 13:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="1TH 4:14-17">1The 4:14-17</ref>; <ref loc="PSA 16:10">Za 16:10</ref>; <ref loc="PSA 49:15">49:15</ref>; <ref loc="EZK 37:12-13">Eze 37:12-13</ref>; <ref loc="1CO 15:54-55">1Kor 15:54-55</ref>; <ref loc="REV 21:4">Ufu 21:4</ref></char>
+    </note>“Nitawakomboa watu hawa kutoka nguvu za kaburi,</para>
+  <para style="q2" vid="HOS 13:14">nitawakomboa kutoka mautini.</para>
+  <para style="q1" vid="HOS 13:14">Yako wapi, ee mauti, mateso yako?</para>
+  <para style="q1" vid="HOS 13:14">Uko wapi, ee kuzimu, uharibifu wako?</para>
+  <para style="b" vid="HOS 13:14"/>
+  <para style="q1" vid="HOS 13:14">“Sitakuwa na huruma,<verse eid="HOS 13:14"/></para>
+  <para style="q2">
+    <verse number="15" style="v" sid="HOS 13:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 1:19">Ay 1:19</ref>; <ref loc="EZK 19:12">Eze 19:12</ref>; <ref loc="JER 20:5">Yer 20:5</ref>; <ref loc="JER 51:36">51:36</ref>; <ref loc="HOS 4:19">Hos 4:19</ref></char>
+    </note>hata ingawa Efraimu atastawi</para>
+  <para style="q2" vid="HOS 13:15">miongoni mwa ndugu zake.</para>
+  <para style="q1" vid="HOS 13:15">Upepo wa mashariki kutoka kwa <char style="nd">Bwana</char> utakuja,</para>
+  <para style="q2" vid="HOS 13:15">ukivuma kutoka jangwani,</para>
+  <para style="q1" vid="HOS 13:15">chemchemi yake haitatoa maji</para>
+  <para style="q2" vid="HOS 13:15">na kisima chake kitakauka.</para>
+  <para style="q1" vid="HOS 13:15">Ghala lake litatekwa</para>
+  <para style="q2" vid="HOS 13:15">hazina zake zote.<verse eid="HOS 13:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 13:16"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 8:12">2Fal 8:12</ref>; <ref loc="2KI 15:16">15:16</ref>; <ref loc="2KI 17:5">17:5</ref>; <ref loc="HOS 7:14">Hos 7:14</ref>; <ref loc="HOS 10:2">10:2</ref>, <ref loc="HOS 10:14">14</ref>; <ref loc="ISA 13:16">Isa 13:16</ref>; <ref loc="AMO 1:13">Amo 1:13</ref></char>
+    </note>Watu wa Samaria ni lazima wabebe hatia yao,</para>
+  <para style="q2" vid="HOS 13:16">kwa sababu wameasi dhidi ya Mungu wao.</para>
+  <para style="q1" vid="HOS 13:16">Wataanguka kwa upanga;</para>
+  <para style="q2" vid="HOS 13:16">watoto wao wadogo watatupwa kwa nguvu ardhini,</para>
+  <para style="q2" vid="HOS 13:16">wanawake wao walio na mimba watatumbuliwa.”<verse eid="HOS 13:16"/></para>
+  <chapter eid="HOS 13"/>
+  <chapter number="14" style="c" sid="HOS 14"/>
+  <para style="s1">Toba Iletayo Baraka</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="HOS 14:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:5">Hos 5:5</ref>; <ref loc="HOS 9:7">9:7</ref>; <ref loc="HOS 12:6">12:6</ref>; <ref loc="JER 3:12">Yer 3:12</ref>; <ref loc="ISA 19:22">Isa 19:22</ref></char>
+    </note>Rudi, ee Israeli, kwa <char style="nd">Bwana</char> Mungu wako.</para>
+  <para style="q2" vid="HOS 14:1">Dhambi zako zimekuwa</para>
+  <para style="q2" vid="HOS 14:1">ndilo anguko lako!<verse eid="HOS 14:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 14:2"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 8:26">Rum 8:26</ref>; <ref loc="PSA 51:16-17">Za 51:16-17</ref>; <ref loc="MIC 7:18-19">Mik 7:18-19</ref>; <ref loc="HEB 13:15">Ebr 13:15</ref>; <ref loc="EXO 34:9">Kut 34:9</ref></char>
+    </note>Chukueni maneno pamoja nanyi,</para>
+  <para style="q2" vid="HOS 14:2">mkamrudie <char style="nd">Bwana</char>.</para>
+  <para style="q1" vid="HOS 14:2">Mwambieni:</para>
+  <para style="q2" vid="HOS 14:2">“Samehe dhambi zetu zote</para>
+  <para style="q1" vid="HOS 14:2">na utupokee kwa neema,</para>
+  <para style="q2" vid="HOS 14:2">ili tuweze kutoa matunda yetu</para>
+  <para style="q2" vid="HOS 14:2">kama sadaka za mafahali.<verse eid="HOS 14:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 14:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 5:10">Mik 5:10</ref>; <ref loc="ISA 31:1">Isa 31:1</ref>; <ref loc="HOS 5:13">Hos 5:13</ref>; <ref loc="HOS 8:6">8:6</ref>; <ref loc="JER 49:11">Yer 49:11</ref>; <ref loc="PSA 10:14">Za 10:14</ref>; <ref loc="PSA 33:17">33:17</ref></char>
+    </note>Ashuru hawezi kutuokoa,</para>
+  <para style="q2" vid="HOS 14:3">hatutapanda farasi wa vita.</para>
+  <para style="q1" vid="HOS 14:3">Kamwe hatutasema tena ‘Miungu yetu’</para>
+  <para style="q2" vid="HOS 14:3">kwa kile ambacho mikono yetu wenyewe imetengeneza,</para>
+  <para style="q2" vid="HOS 14:3">kwa kuwa kwako wewe yatima hupata huruma.”<verse eid="HOS 14:3"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 14:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 30:26">Isa 30:26</ref>; <ref loc="ISA 55:1">55:1</ref>; <ref loc="HOS 6:1">Hos 6:1</ref>; <ref loc="JER 2:19">Yer 2:19</ref>; <ref loc="JER 31:20">31:20</ref>; <ref loc="ZEP 3:17">Sef 3:17</ref>; <ref loc="JOB 13:16">Ay 13:16</ref></char>
+    </note>“Nitaponya ukaidi wao</para>
+  <para style="q2" vid="HOS 14:4">na kuwapenda kwa hiari yangu,</para>
+  <para style="q2" vid="HOS 14:4">kwa kuwa hasira yangu imeondoka kwao.<verse eid="HOS 14:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 14:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="SNG 2:1">Wim 2:1</ref>; <ref loc="ISA 18:4">Isa 18:4</ref>; <ref loc="ISA 35:2">35:2</ref>; <ref loc="JOB 29:19">Ay 29:19</ref>; <ref loc="GEN 27:28">Mwa 27:28</ref></char>
+    </note>Nitakuwa kama umande kwa Israeli;</para>
+  <para style="q2" vid="HOS 14:5">atachanua kama yungiyungi.</para>
+  <para style="q1" vid="HOS 14:5">Kama mwerezi wa Lebanoni</para>
+  <para style="q2" vid="HOS 14:5">atashusha mizizi yake chini;<verse eid="HOS 14:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 14:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 52:8">Za 52:8</ref>; <ref loc="PSA 92:12">92:12</ref>; <ref loc="JER 11:16">Yer 11:16</ref>; <ref loc="SNG 4:11">Wim 4:11</ref></char>
+    </note>matawi yake yatatanda.</para>
+  <para style="q1" vid="HOS 14:6">Fahari yake itakuwa kama mti wa mzeituni,</para>
+  <para style="q2" vid="HOS 14:6">harufu yake nzuri kama mwerezi wa Lebanoni.<verse eid="HOS 14:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 14:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 91:1-4">Za 91:1-4</ref>; <ref loc="HOS 2:22">Hos 2:22</ref>; <ref loc="EZK 17:23">Eze 17:23</ref>; <ref loc="GEN 40:10">Mwa 40:10</ref></char>
+    </note>Watu wataishi tena kwenye kivuli chake.</para>
+  <para style="q2" vid="HOS 14:7">Atastawi kama nafaka.</para>
+  <para style="q1" vid="HOS 14:7">Atachanua kama mzabibu,</para>
+  <para style="q2" vid="HOS 14:7">nao umaarufu wake utakuwa</para>
+  <para style="q2" vid="HOS 14:7">kama divai itokayo Lebanoni.<verse eid="HOS 14:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 14:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:18">Yer 31:18</ref>; <ref loc="JAS 1:17">Yak 1:17</ref>; <ref loc="ISA 37:24">Isa 37:24</ref></char>
+    </note>Ee Efraimu, nina shughuli gani tena na sanamu?</para>
+  <para style="q2" vid="HOS 14:8">Nitamjibu na kumtunza.</para>
+  <para style="q1" vid="HOS 14:8">Mimi ni kama msunobari wenye majani mabichi;</para>
+  <para style="q2" vid="HOS 14:8">kuzaa kwako matunda kunatoka kwangu.”<verse eid="HOS 14:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 14:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 107:43">Za 107:43</ref>; <ref loc="PRO 10:29">Mit 10:29</ref>; <ref loc="DAN 12:10">Dan 12:10</ref>; <ref loc="ZEP 3:5">Sef 3:5</ref>; <ref loc="ACT 13:10">Mdo 13:10</ref>; <ref loc="ISA 1:28">Isa 1:28</ref>; <ref loc="ISA 26:7">26:7</ref></char>
+    </note>Ni nani mwenye hekima? Atayatambua mambo haya.</para>
+  <para style="q2" vid="HOS 14:9">Ni nani mwenye ufahamu? Huyu atayaelewa.</para>
+  <para style="q1" vid="HOS 14:9">Njia za <char style="nd">Bwana</char> ni adili;</para>
+  <para style="q2" vid="HOS 14:9">wenye haki huenda katika njia hizo,</para>
+  <para style="q2" vid="HOS 14:9">lakini waasi watajikwaa ndani yake.<verse eid="HOS 14:9"/></para>
+  <chapter eid="HOS 14"/>
+</usx>

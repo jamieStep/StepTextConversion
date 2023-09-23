@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="HOS" style="id">La Bible du Semeur (The Bible of the Sower)</book>
+  <para style="rem">Copyright © 1992, 1999, 2015 by Biblica, Inc.®</para>
+  <para style="h">OSÉE</para>
+  <para style="toc1">Osée</para>
+  <para style="toc2">Osée</para>
+  <para style="toc3">Os</para>
+  <para style="mt1">Osée</para>
+  <para style="imt">Introduction</para>
+  <para style="ip">Osée, vraisemblablement originaire du royaume du Nord, y a été porte-parole de l’Eternel peu après le prophète Amos, dont il connaît les proclamations. Il a exercé son ministère pendant près de quarante ans, lors de la période finale de l’histoire du royaume d’Israël, à partir de la fin du règne de Jéroboam II (793 à 753) et durant l’époque d’anarchie qui s’ensuivit (<char style="xt"><ref loc="2KI 15:8-17:41">2 R 15.8 à 17.41</ref></char>). Esaïe est son contemporain en Juda.</para>
+  <para style="ip">C’est pendant ces années que Tiglath Piléser III (745 à 727) réussit à faire de l’Assyrie la première puissance régionale. L’Egypte, affaiblie, encourage des soulèvements dans les pays progressivement assujettis à l’Empire assyrien. La politique israélite oscille entre la soumission à l’Assyrie (<char style="xt"><ref loc="2KI 15:19-20">2 R 15.19-20</ref></char>) et la recherche de l’appui égyptien (<char style="xt">Os 7.11 ; 12.2</char>). Mais cet appui est trompeur : en représailles, le royaume du Nord se voit privé par les Assyriens d’une partie de son territoire (<char style="xt"><ref loc="2KI 15:29">2 R 15.29</ref></char>). La guerre entreprise en alliance avec la Syrie contre le royaume de Juda fournira à Tiglath Piléser une nouvelle occasion de s’en prendre à Israël (<char style="xt"><ref loc="2KI 16">2 R 16</ref></char>). Finalement, suite à une révolte du roi Osée, les Assyriens détruiront la capitale, Samarie, en 722, et déporteront la majeure partie de sa population (<char style="xt"><ref loc="2KI 17">2 R 17</ref></char>).</para>
+  <para style="ip">Comme Amos, son prédécesseur, Osée dénonce la corruption morale, sociale et politique (<char style="xt">4.1-2 ; 6.7-10 ; 7.1-16</char>), mais l’accent de sa prédication tombe sur l’infidélité religieuse du peuple qu’incarne en particulier le sanctuaire de Béthel (<char style="xt">4.15 ; 5.8 ; 10.8</char>) édifié par Jéroboam I<char style="ord">er</char> (<char style="xt"><ref loc="1KI 12:29">1 R 12.29</ref></char>). Ainsi, à la condamnation de l’idolâtrie s’ajoute celle des pratiques cananéennes comme la prostitution sacrée, qui se sont frayé un chemin jusque dans le culte rendu à l’Eternel (<char style="xt">4.10-19 ; 9.1</char> ; etc.).</para>
+  <para style="ip">Pour dénoncer l’infidélité du peuple, Osée se sert du symbolisme conjugal car, comme pour les époux dans le mariage, la relation entre Dieu et son peuple est régie par une alliance (<char style="xt">chap. <ref loc="HOS 1-3">1 à 3</ref></char>). Selon certains, ce symbolisme s’appuierait sur la vie maritale du prophète qui aurait épousé Gomer, une prostituée (<char style="xt">1.2-9 ; 3.1-3</char>). Selon d’autres, ce mariage constituerait un « mime » ou une « action » prophétique à l’exemple des mimes produits par Jérémie (<char style="xt"><ref loc="JER 13:1-7">Jr 13.1-7</ref></char>) ou Ezéchiel (<char style="xt"><ref loc="EZK 3:22-5:17">Ez 3.22 à 5.17</ref></char>). Au symbolisme conjugal se rattache le thème du procès : l’Eternel intente un procès (<char style="xt">2.4ss ; chap. 12</char>) à son peuple infidèle comme un mari à son épouse adultère, et lui signifie son rejet : Israël perd sa qualité de peuple de Dieu (<char style="xt">1.6-8 ; 2.4</char>). Comme les paroles pieuses et les rites cultuels des Israélites ne sont pas accompagnés d’une véritable humiliation et d’un amour durable pour l’Eternel (<char style="xt">chap. <ref loc="HOS 6">6</ref></char>), le châtiment est imminent ; ce sera la guerre et l’exil (<char style="xt">5.8ss ; chap. 8 à 10 ; 13</char>).</para>
+  <para style="ip">Pourtant, dans son amour, l’Eternel rappelle le peuple infidèle. L’exil sera comme un retour au désert où l’Eternel se fera connaître à son peuple comme au Sinaï. Il lui accordera le pardon, le reprendra pour son peuple, en le transformant pour qu’il aime fidèlement l’Eternel et vive selon le droit (<char style="xt">2.1-3, 18ss ; chap. 14</char>). Car cet amour qui caractérise l’Eternel doit aussi caractériser ceux qui lui appartiennent dans leur relation avec Dieu et avec leur prochain (<char style="xt">6.6 ; 12.7</char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="HOS 1"/>
+  <para style="ms1">Les actes symboliques</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 1:1"/>L’Eternel adressa la parole à Osée, fils de Beéri, sous les règnes d’Ozias, de Yotam, d’Ahaz et d’Ezéchias, rois de Juda, et sous le règne de Jéroboam, fils de Joas, roi d’Israël<note caller="+" style="f"><char style="fr" closed="false">1.1 </char><char style="ft" closed="false">Sur cette période, voir <char style="xt">2 R 15 à 20 ; 2 Ch 27 à 32</char>. </char><char style="fq" closed="false">roi d’Israël</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">Jéroboam (793 à 753 av. J.-C.). </char><char style="fqa" closed="false">rois de Juda, </char><char style="ft" closed="false">en tenant compte des co-régences : </char><char style="fqa" closed="false">Ozias </char><char style="ft" closed="false">(792 à 740 av. J.-C.), </char><char style="fqa" closed="false">Yotam </char><char style="ft" closed="false">(750 à 732 av. J.-C.), </char><char style="fqa" closed="false">Ahaz </char><char style="ft" closed="false">(735 à 715 av. J.-C.) et </char><char style="fqa" closed="false">Ezéchias </char><char style="ft" closed="false">(727 à 698 ou 686 av. J.-C.).</char></note>.<verse eid="HOS 1:1"/></para>
+  <para style="s1">Le mariage de Dieu avec Israël</para>
+  <para style="p">
+    <verse number="2" style="v" sid="HOS 1:2"/>Première partie des paroles que l’Eternel prononça par Osée :</para>
+  <para style="p" vid="HOS 1:2">L’Eternel dit à Osée : Va, prends une femme qui se livre à la prostitution, et des enfants nés de la prostitution, car le pays se vautre dans la prostitution en se détournant de l’Eternel<note caller="+" style="f"><char style="fr" closed="false">1.2 </char><char style="ft" closed="false">Le culte de Baal et d’Astarté, avec leurs rites de fécondité, s’accompagnait de la </char><char style="fqa" closed="false">prostitution </char><char style="ft" closed="false">sacrée (voir v. 10 et note).</char></note>.<verse eid="HOS 1:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HOS 1:3"/>Alors Osée alla prendre Gomer, de Diblaïm. Elle devint enceinte et lui donna un fils. <verse eid="HOS 1:3"/><verse number="4" style="v" sid="HOS 1:4"/>L’Eternel lui dit : Appelle-le Jizréel, car d’ici peu de temps, je ferai rendre compte à la dynastie de Jéhu des meurtres commis à Jizréel<note caller="+" style="f"><char style="fr" closed="false">1.4 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 2:2">2.2</ref></char> et note ; <char style="xt"><ref loc="2KI 9">2 R 9</ref> et <ref loc="2KI 10">10</ref></char>.</char></note> et je mettrai fin à la royauté d’Israël. <verse eid="HOS 1:4"/><verse number="5" style="v" sid="HOS 1:5"/>En ce jour-là, je briserai l’arc d’Israël dans la vallée de Jizréel.<verse eid="HOS 1:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HOS 1:6"/>Gomer fut de nouveau enceinte et mit au monde une fille. L’Eternel dit à Osée : Appelle-la Lo-Rouhama (la Non-Aimée), car, à l’avenir, je ne manifesterai plus d’amour à la communauté d’Israël, et je ne lui accorderai plus mon pardon.<verse eid="HOS 1:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HOS 1:7"/>Cependant, je manifesterai de l’amour à la communauté de Juda, et moi, l’Eternel son Dieu, je la sauverai. Je la sauverai moi-même – et non pas par l’arc, par l’épée ou la guerre, par les chevaux et les équipages de chars.<verse eid="HOS 1:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HOS 1:8"/>Après avoir sevré Lo-Rouhama, Gomer fut encore enceinte et elle donna naissance à un fils.<verse eid="HOS 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HOS 1:9"/>L’Eternel dit à Osée : Appelle-le Lo-Ammi (Pas mon peuple) car vous n’êtes pas mon peuple, et moi, Je suis, je ne suis rien pour vous<note caller="+" style="f"><char style="fr" closed="false">1.9 </char><char style="ft" closed="false">Reprise du verbe d’<char style="xt"><ref loc="EXO 3:14">Ex 3.14</ref></char> où Dieu révèle son nom : </char><char style="fqa" closed="false">Je suis.</char></note>.<verse eid="HOS 1:9"/></para>
+  <chapter eid="HOS 1"/>
+  <chapter number="2" style="c" sid="HOS 2"/>
+  <para style="s1">Dieu sème</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 2:1"/>Mais, un jour, les Israélites ╵seront nombreux</para>
+  <para style="q1" vid="HOS 2:1">comme les grains de sable ╵sur le bord de la mer,</para>
+  <para style="q1" vid="HOS 2:1">que nul ne peut compter ╵ni mesurer.</para>
+  <para style="q1" vid="HOS 2:1">Et, au lieu même ╵où on leur avait dit :</para>
+  <para style="q1" vid="HOS 2:1">« Vous n’êtes pas mon peuple »,</para>
+  <para style="q1" vid="HOS 2:1">on leur dira :</para>
+  <para style="q1" vid="HOS 2:1">« Vous êtes les enfants ╵du Dieu vivant<note caller="+" style="f"><char style="fr" closed="false">2.1 </char><char style="ft" closed="false">Cité en <char style="xt">Rm 9.26 ; 1 P 2.10</char>.</char></note>. »<verse eid="HOS 2:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 2:2"/>Alors, les Judéens ╵et les Israélites ╵du royaume du Nord</para>
+  <para style="q1" vid="HOS 2:2">seront unis</para>
+  <para style="q1" vid="HOS 2:2">et ils établiront sur eux ╵un chef unique,</para>
+  <para style="q1" vid="HOS 2:2">ils sortiront ╵du pays de l’exil,</para>
+  <para style="q1" vid="HOS 2:2">car il sera très grand, ╵le jour de Jizréel<note caller="+" style="f"><char style="fr" closed="false">2.2 </char><char style="ft" closed="false">Voir <char style="xt">1.3-4 ; 2.24</char> et note.</char></note>.<verse eid="HOS 2:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 2:3"/>Vous direz à vos frères ╵qu’ils seront appelés : « Mon peuple »,</para>
+  <para style="q1" vid="HOS 2:3">et à vos sœurs : « les Bien-Aimées ».<verse eid="HOS 2:3"/></para>
+  <para style="s1">La répudiation de l’épouse infidèle</para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 2:4"/>Intentez un procès ╵à votre mère<note caller="+" style="f"><char style="fr" closed="false">2.4 </char><char style="ft" closed="false">Personnification de la nation d’Israël dont le prophète rappelle l’idolâtrie sous l’image classique de la prostitution.</char></note>, ╵faites-lui un procès,</para>
+  <para style="q1" vid="HOS 2:4">car elle n’est pas mon épouse</para>
+  <para style="q1" vid="HOS 2:4">et je ne suis pas son mari.</para>
+  <para style="q1" vid="HOS 2:4">Qu’elle ôte de sa face ╵les marques des prostitutions ╵qu’elle a commises,</para>
+  <para style="q1" vid="HOS 2:4">d’entre ses seins ╵les signes de ses adultères.<verse eid="HOS 2:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 2:5"/>Sinon, je la dévêtirai, ╵et je la mettrai toute nue,</para>
+  <para style="q1" vid="HOS 2:5">comme elle était au jour de sa naissance<note caller="+" style="f"><char style="fr" closed="false">2.5 </char><char style="ft" closed="false">Voir <char style="xt">Ez 16.4-8 ; Na 3.5</char>.</char></note> ;</para>
+  <para style="q1" vid="HOS 2:5">je la transformerai en un désert,</para>
+  <para style="q1" vid="HOS 2:5">je ferai d’elle un pays desséché,</para>
+  <para style="q1" vid="HOS 2:5">je la ferai mourir de soif.<verse eid="HOS 2:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 2:6"/>Et quant à ses enfants, ╵je n’aurai plus d’amour pour eux,</para>
+  <para style="q1" vid="HOS 2:6">car ce sont des enfants ╵prostitués<note caller="+" style="f"><char style="fr" closed="false">2.6 </char><char style="ft" closed="false">Littéralement, </char><char style="fqa" closed="false">enfants de prostitution, </char><char style="ft" closed="false">comme en <char style="xt"><ref loc="HOS 1:2">1.2</ref></char>. Le prophète joue sur un double sens : les enfants de Gomer sont issus de la prostitution de celle-ci, tandis que les Israélites se prostituent avec les idoles.</char></note>.<verse eid="HOS 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 2:7"/>Oui, leur mère s’est adonnée ╵à la prostitution,</para>
+  <para style="q1" vid="HOS 2:7">la femme qui les a conçus ╵s’est couverte de honte,</para>
+  <para style="q1" vid="HOS 2:7">puisqu’elle a affirmé : ╵« Moi, j’irai après mes amants</para>
+  <para style="q1" vid="HOS 2:7">qui me fournissent ╵mon pain, mon eau,</para>
+  <para style="q1" vid="HOS 2:7">mon lin, ma laine,</para>
+  <para style="q1" vid="HOS 2:7">mon huile et mes boissons. »<verse eid="HOS 2:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 2:8"/>Voilà pourquoi</para>
+  <para style="q1" vid="HOS 2:8">je vais barrer ╵son chemin avec des épines,</para>
+  <para style="q1" vid="HOS 2:8">je l’obstrue par un mur,</para>
+  <para style="q1" vid="HOS 2:8">et elle ne trouvera plus sa route.<verse eid="HOS 2:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 2:9"/>Elle poursuivra ses amants</para>
+  <para style="q1" vid="HOS 2:9">sans pouvoir les atteindre,</para>
+  <para style="q1" vid="HOS 2:9">elle les cherchera ╵sans pouvoir les trouver.</para>
+  <para style="q1" vid="HOS 2:9">Puis elle se dira :</para>
+  <para style="q1" vid="HOS 2:9">« Je vais m’en retourner ╵chez mon premier mari,</para>
+  <para style="q1" vid="HOS 2:9">car j’étais alors plus heureuse ╵que maintenant. »<verse eid="HOS 2:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 2:10"/>Or, elle n’avait pas compris ╵que c’était moi qui lui donnais</para>
+  <para style="q1" vid="HOS 2:10">le blé, le vin nouveau et l’huile,</para>
+  <para style="q1" vid="HOS 2:10">et de l’argent en abondance, ╵ainsi que l’or</para>
+  <para style="q1" vid="HOS 2:10">dont ils ont fait ╵une offrande à Baal<note caller="+" style="f"><char style="fr" closed="false">2.10 </char><char style="ft" closed="false">Dieu cananéen auquel on attribuait la souveraineté sur la pluie et la fertilité des champs, du bétail comme de l’homme (voir <char style="xt"><ref loc="JDG 2:13">Jg 2.13</ref></char>).</char></note>.<verse eid="HOS 2:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 2:11"/>C’est pourquoi je viendrai reprendre</para>
+  <para style="q1" vid="HOS 2:11">mon blé au temps de la moisson,</para>
+  <para style="q1" vid="HOS 2:11">mon vin au temps de la vendange,</para>
+  <para style="q1" vid="HOS 2:11">je leur retirerai ╵ma laine avec mon lin</para>
+  <para style="q1" vid="HOS 2:11">dont elle s’habillait.<verse eid="HOS 2:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 2:12"/>Mais maintenant, ╵je vais mettre au grand jour ╵son infamie</para>
+  <para style="q1" vid="HOS 2:12">aux yeux de ses amants.</para>
+  <para style="q1" vid="HOS 2:12">Et nul ne la délivrera ╵de mon emprise.<verse eid="HOS 2:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 2:13"/>Et je ferai cesser ╵toutes ses réjouissances :</para>
+  <para style="q1" vid="HOS 2:13">ses fêtes, ses nouvelles lunes ╵et ses sabbats,</para>
+  <para style="q1" vid="HOS 2:13">oui, tous ses jours ╵de fête cultuelle.<verse eid="HOS 2:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 2:14"/>Et je dévasterai ╵sa vigne et son figuier</para>
+  <para style="q1" vid="HOS 2:14">dont elle a dit :</para>
+  <para style="q1" vid="HOS 2:14">« Voyez, c’est le salaire ╵donné par mes amants. »</para>
+  <para style="q1" vid="HOS 2:14">Je les réduirai en broussailles</para>
+  <para style="q1" vid="HOS 2:14">et les bêtes sauvages ╵en feront leur pâture.<verse eid="HOS 2:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 2:15"/>Je lui ferai payer</para>
+  <para style="q1" vid="HOS 2:15">tout le temps qu’elle a consacré ╵au culte des Baals ╵lorsqu’elle leur offrait ╵du parfum en hommage,</para>
+  <para style="q1" vid="HOS 2:15">parée d’anneaux et de bijoux</para>
+  <para style="q1" vid="HOS 2:15">pour courir après ses amants,</para>
+  <para style="q1" vid="HOS 2:15">et quant à moi, ╵elle m’a oublié,</para>
+  <para style="q1" vid="HOS 2:15">l’Eternel le déclare.<verse eid="HOS 2:15"/></para>
+  <para style="s1">La fidélité de Dieu triomphe de l’infidélité d’Israël</para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 2:16"/>C’est pourquoi, je vais la reconquérir,</para>
+  <para style="q1" vid="HOS 2:16">la mener au désert,</para>
+  <para style="q1" vid="HOS 2:16">et parler à son cœur.<verse eid="HOS 2:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="HOS 2:17"/>C’est là que je lui donnerai ╵ses vignobles d’antan</para>
+  <para style="q1" vid="HOS 2:17">et la vallée d’Akor<note caller="+" style="f"><char style="fr" closed="false">2.17 </char><char style="ft" closed="false">Vallée où le péché d’Akân a été jugé (voir <char style="xt"><ref loc="JOS 7:24-26">Jos 7.24-26</ref></char>).</char></note></para>
+  <para style="q1" vid="HOS 2:17">deviendra une porte d’espérance ;</para>
+  <para style="q1" vid="HOS 2:17">là, elle répondra ╵tout comme au temps de sa jeunesse,</para>
+  <para style="q1" vid="HOS 2:17">au temps de sa sortie d’Egypte.<verse eid="HOS 2:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="HOS 2:18"/>Et il arrivera en ce temps-là,</para>
+  <para style="q1" vid="HOS 2:18">l’Eternel le déclare,</para>
+  <para style="q1" vid="HOS 2:18">que tu me diras : « Mon époux »</para>
+  <para style="q1" vid="HOS 2:18">et tu ne m’appelleras plus : ╵« Mon maître<note caller="+" style="f"><char style="fr" closed="false">2.18 </char><char style="fq" closed="false">maître</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">en hébreu se dit </char><char style="fqa" closed="false">baal, </char><char style="ft" closed="false">comme le nom du dieu mentionné au verset suivant.</char></note> ».<verse eid="HOS 2:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="HOS 2:19"/>J’ôterai de sa bouche ╵les noms des Baals,</para>
+  <para style="q1" vid="HOS 2:19">et le souvenir même ╵de ces noms se perdra.<verse eid="HOS 2:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="HOS 2:20"/>Je conclurai, en ce temps-là, ╵une alliance pour eux</para>
+  <para style="q1" vid="HOS 2:20">avec les animaux sauvages</para>
+  <para style="q1" vid="HOS 2:20">et les oiseaux du ciel,</para>
+  <para style="q1" vid="HOS 2:20">et les animaux qui se meuvent ╵au ras du sol.</para>
+  <para style="q1" vid="HOS 2:20">Je briserai l’arc et l’épée, ╵et je mettrai fin à la guerre : ╵ils disparaîtront du pays.</para>
+  <para style="q1" vid="HOS 2:20">Et je les ferai reposer ╵dans la sécurité.<verse eid="HOS 2:20"/></para>
+  <para style="q1">
+    <verse number="21" style="v" sid="HOS 2:21"/>Puis, pour toujours, ╵je te fiancerai à moi.</para>
+  <para style="q1" vid="HOS 2:21">Je te fiancerai à moi ╵en donnant comme dot<note caller="+" style="f"><char style="fr" closed="false">2.21 </char><char style="fq" closed="false">en donnant comme dot</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">la même construction hébraïque se retrouve en <char style="xt"><ref loc="2SA 3:14">2 S 3.14</ref></char>.</char></note> ╵et la justice et la droiture,</para>
+  <para style="q1" vid="HOS 2:21">l’amour et la tendresse ╵que je mettrai en toi.<verse eid="HOS 2:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="HOS 2:22"/>Je te fiancerai à moi ╵en mettant en toi la fidélité,</para>
+  <para style="q1" vid="HOS 2:22">et tu connaîtras l’Eternel.<verse eid="HOS 2:22"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="23" style="v" sid="HOS 2:23"/>En ce temps-là, ╵je répondrai,</para>
+  <para style="q1" vid="HOS 2:23">l’Eternel le déclare,</para>
+  <para style="q1" vid="HOS 2:23">je répondrai à l’attente du ciel,</para>
+  <para style="q1" vid="HOS 2:23">et le ciel répondra ╵à ce qu’attend la terre.<verse eid="HOS 2:23"/></para>
+  <para style="q1">
+    <verse number="24" style="v" sid="HOS 2:24"/>La terre répondra au blé,</para>
+  <para style="q1" vid="HOS 2:24">au vin nouveau ╵ainsi qu’à l’huile fraîche,</para>
+  <para style="q1" vid="HOS 2:24">et ceux-ci répondront ╵à l’attente de Jizréel<note caller="+" style="f"><char style="fr" closed="false">2.24 </char><char style="ft" closed="false">Le nom de </char><char style="fqa" closed="false">Jizréel </char><char style="ft" closed="false">signifie : </char><char style="fqa" closed="false">Dieu sème </char><char style="ft" closed="false">et fait assonance avec l’expression du v. 25 : </char><char style="fqa" closed="false">je les répandrai comme de la semence </char><char style="ft" closed="false">(<char style="xt">voir 1.4 ; 2.2</char>).</char></note>.<verse eid="HOS 2:24"/></para>
+  <para style="q1">
+    <verse number="25" style="v" sid="HOS 2:25"/>Et je les répandrai ╵comme de la semence ╵pour moi dans le pays,</para>
+  <para style="q1" vid="HOS 2:25">je prodiguerai mon amour ╵à celle qu’on nommait ╵Lo-Rouhama,</para>
+  <para style="q1" vid="HOS 2:25">et je dirai à Lo-Ammi : ╵« Tu es mon peuple »,</para>
+  <para style="q1" vid="HOS 2:25">et il dira : « Tu es mon Dieu<note caller="+" style="f"><char style="fr" closed="false">2.25 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 1:6">1.6</ref>, <ref loc="HOS 1:9">9</ref></char>. Cité en <char style="xt"><ref loc="ROM 9:25">Rm 9.25</ref></char> ; voir <char style="xt"><ref loc="1PE 2:10">1 P 2.10</ref></char>.</char></note>. »<verse eid="HOS 2:25"/></para>
+  <chapter eid="HOS 2"/>
+  <chapter number="3" style="c" sid="HOS 3"/>
+  <para style="s1">Le prix de la réconciliation</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 3:1"/>Et l’Eternel me dit : Va encore aimer une femme adultère aimant le mal<note caller="+" style="f"><char style="fr" closed="false">3.1 </char><char style="fq" closed="false">aimant le mal</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">d’après l’ancienne version grecque qui adopte une autre vocalisation des consonnes que le texte hébreu traditionnel. Cette leçon est favorisée par le parallélisme à l’intérieur du verset. Tel qu’il est vocalisé, le texte hébreu traditionnel a : </char><char style="fqa" closed="false">aimée d’un compagnon.</char></note>, aime-la comme l’Eternel aime les Israélites, alors que ceux-ci se tournent vers d’autres dieux et se délectent de gâteaux de raisins consacrés<note caller="+" style="f"><char style="fr" closed="false">3.1 </char><char style="fqa" closed="false">Gâteaux consacrés </char><char style="ft" closed="false">à des dieux païens (voir <char style="xt"><ref loc="ISA 16:7">Es 16.7</ref></char>).</char></note>.<verse eid="HOS 3:1"/></para>
+  <para style="p">
+    <verse number="2" style="v" sid="HOS 3:2"/>Je rachetai donc une femme au prix de quinze pièces d’argent, et quatre cent cinquante kilogrammes d’orge. <verse eid="HOS 3:2"/><verse number="3" style="v" sid="HOS 3:3"/>Et je lui dis : Tu resteras pendant longtemps pour moi, sans te prostituer et sans te donner à aucun homme, et moi, j’agirai de même pour toi.<verse eid="HOS 3:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HOS 3:4"/>En effet, les Israélites resteront pendant longtemps sans roi et sans chef, sans sacrifice et sans stèle, sans éphod et sans divinités domestiques<note caller="+" style="f"><char style="fr" closed="false">3.4 </char><char style="ft" closed="false">Ce sera la condition des Israélites durant l’exil, ce qui correspond à la période chasteté du v. 3.</char></note>. <verse eid="HOS 3:4"/><verse number="5" style="v" sid="HOS 3:5"/>Après cela, ils reviendront à l’Eternel leur Dieu et se tourneront vers lui, ainsi que vers David leur roi. Dans la suite des temps, ils viendront tout tremblants à l’Eternel pour bénéficier de sa bonté.<verse eid="HOS 3:5"/></para>
+  <chapter eid="HOS 3"/>
+  <chapter number="4" style="c" sid="HOS 4"/>
+  <para style="ms1">La corruption engendre la ruine</para>
+  <para style="s1">Le procès des crimes du peuple</para>
+  <para style="s2">Les crimes religieux</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 4:1"/>Vous, les Israélites, ╵écoutez la parole ╵que vous adresse l’Eternel,</para>
+  <para style="q1" vid="HOS 4:1">car l’Eternel est en procès ╵avec les habitants de ce pays :</para>
+  <para style="q1" vid="HOS 4:1">« La vérité a disparu ╵dans le pays,</para>
+  <para style="q1" vid="HOS 4:1">il n’y a plus d’amour</para>
+  <para style="q1" vid="HOS 4:1">on n’y connaît pas Dieu.<verse eid="HOS 4:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 4:2"/>On n’y voit que parjure, ╵et tromperies.</para>
+  <para style="q1" vid="HOS 4:2">Le crime, le vol et l’adultère ╵se multiplient.</para>
+  <para style="q1" vid="HOS 4:2">La violence s’étend,</para>
+  <para style="q1" vid="HOS 4:2">les meurtres s’ajoutent aux meurtres.<verse eid="HOS 4:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 4:3"/>C’est pourquoi le pays ╵passera par le deuil,</para>
+  <para style="q1" vid="HOS 4:3">et tous ses habitants dépériront,</para>
+  <para style="q1" vid="HOS 4:3">jusqu’aux bêtes sauvages ╵et aux oiseaux du ciel ;</para>
+  <para style="q1" vid="HOS 4:3">les poissons de la mer ╵disparaîtront aussi.<verse eid="HOS 4:3"/></para>
+  <para style="s2">La trahison des prêtres</para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 4:4"/>Mais que nul ne conteste,</para>
+  <para style="q1" vid="HOS 4:4">que nul ne fasse de reproche,</para>
+  <para style="q1" vid="HOS 4:4">car c’est contre vous, prêtres, ╵que je suis en procès<note caller="+" style="f"><char style="fr" closed="false">4.4 </char><char style="fq" closed="false">car c’est contre vous… procès</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">traduction obtenue par un changement de la vocalisation de l’hébreu. Le texte hébreu traditionnel a : </char><char style="fqa" closed="false">les membres de ton peuple sont pareils à ceux qui contestent avec les prêtres.</char></note>.<verse eid="HOS 4:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 4:5"/>En plein jour, vous trébucherez,</para>
+  <para style="q1" vid="HOS 4:5">les prophètes eux-mêmes ╵trébucheront de nuit ╵en votre compagnie,</para>
+  <para style="q1" vid="HOS 4:5">et je réduirai au silence ╵Israël, votre mère<note caller="+" style="f"><char style="fr" closed="false">4.5 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 2:4">2.4</ref>, <ref loc="HOS 2:7">7</ref></char>.</char></note>.<verse eid="HOS 4:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 4:6"/>Oui, mon peuple périt</para>
+  <para style="q1" vid="HOS 4:6">faute de connaissance</para>
+  <para style="q1" vid="HOS 4:6">parce que vous, les prêtres, ╵vous avez rejeté ╵la connaissance.</para>
+  <para style="q1" vid="HOS 4:6">Je vous rejetterai ╵et vous ne serez plus mes prêtres.</para>
+  <para style="q1" vid="HOS 4:6">Vous avez oublié ╵la Loi de votre Dieu ;</para>
+  <para style="q1" vid="HOS 4:6">moi aussi, à mon tour, ╵j’oublierai vos enfants.<verse eid="HOS 4:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 4:7"/>Tous, tant qu’ils sont,</para>
+  <para style="q1" vid="HOS 4:7">ils ont commis des fautes contre moi.</para>
+  <para style="q1" vid="HOS 4:7">Je transformerai donc ╵leur gloire en infamie<note caller="+" style="f"><char style="fr" closed="false">4.7 </char><char style="fq" closed="false">Je transformerai donc </char><char style="fq" closed="false">leur gloire…</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">selon le texte hébreu traditionnel. Une ancienne tradition de copistes et la version syriaque ont : </char><char style="fqa" closed="false">ils m’ont échangé, moi qui suis leur gloire, pour une idole infâme.</char></note>.<verse eid="HOS 4:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 4:8"/>Les prêtres se repaissent ╵du péché de mon peuple,</para>
+  <para style="q1" vid="HOS 4:8">et leurs désirs se portent ╵vers ses iniquités.<verse eid="HOS 4:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 4:9"/>Aussi il en sera des prêtres ╵comme des gens du peuple,</para>
+  <para style="q1" vid="HOS 4:9">je les ferai payer</para>
+  <para style="q1" vid="HOS 4:9">pour leur conduite,</para>
+  <para style="q1" vid="HOS 4:9">je rendrai à chacun ╵selon ce qu’il a fait.<verse eid="HOS 4:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 4:10"/>Ils mangeront ╵sans être rassasiés,</para>
+  <para style="q1" vid="HOS 4:10">ils se prostitueront<note caller="+" style="f"><char style="fr" closed="false">4.10 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 1:2">1.2</ref></char> et note.</char></note> ╵mais n’auront pas d’enfants,</para>
+  <para style="q1" vid="HOS 4:10">car ils ont abandonné l’Eternel<verse eid="HOS 4:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 4:11"/>pour s’adonner ╵à la prostitution ╵ainsi qu’au vin.</para>
+  <para style="q1" vid="HOS 4:11">Alors le vin nouveau ╵leur a fait perdre la raison.<verse eid="HOS 4:11"/></para>
+  <para style="s2">Idolâtrie et débauche</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 4:12"/>Ce sont ses dieux de bois ╵que mon peuple consulte,</para>
+  <para style="q1" vid="HOS 4:12">et voilà que c’est son bâton<note caller="+" style="f"><char style="fr" closed="false">4.12 </char><char style="ft" closed="false">Idoles en bois (<char style="xt">Jr 2.27 ; 10.8 ; Ha 2.19</char>) ou bâton pour la divination (<char style="xt"><ref loc="EZK 21:21">Ez 21.21</ref></char>).</char></note> ╵qui lui répond.</para>
+  <para style="q1" vid="HOS 4:12">Car un vent de prostitution ╵les fait errer,</para>
+  <para style="q1" vid="HOS 4:12">ils s’égarent loin de leur Dieu ╵en se prostituant<note caller="+" style="f"><char style="fr" closed="false">4.12 </char><char style="fq" closed="false">ils s’égarent… </char><char style="fq" closed="false">en se prostituant. </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">ils se prostituent sous leurs dieux.</char></note>.<verse eid="HOS 4:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 4:13"/>Ils vont offrir des sacrifices ╵au sommet des montagnes</para>
+  <para style="q1" vid="HOS 4:13">et brûler des parfums ╵sur les collines,</para>
+  <para style="q1" vid="HOS 4:13">sous le chêne et le peuplier ╵et sous le térébinthe</para>
+  <para style="q1" vid="HOS 4:13">dont l’ombrage est si doux.</para>
+  <para style="b" vid="HOS 4:13"/>
+  <para style="q1" vid="HOS 4:13">Voilà pourquoi vos filles ╵vont se prostituer,</para>
+  <para style="q1" vid="HOS 4:13">pourquoi vos belles-filles ╵commettent l’adultère.<verse eid="HOS 4:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 4:14"/>Je ne punirai pas vos filles ╵pour leurs prostitutions,</para>
+  <para style="q1" vid="HOS 4:14">vos belles-filles</para>
+  <para style="q1" vid="HOS 4:14">à cause de leurs adultères,</para>
+  <para style="q1" vid="HOS 4:14">car les prêtres eux-mêmes ╵vont à l’écart ╵avec des courtisanes,</para>
+  <para style="q1" vid="HOS 4:14">et, avec des prostituées sacrées, ╵les voilà qui offrent leurs sacrifices.</para>
+  <para style="q1" vid="HOS 4:14">Ainsi court à sa ruine ╵un peuple sans intelligence.<verse eid="HOS 4:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 4:15"/>Si tu te prostitues, ╵ô Israël,</para>
+  <para style="q1" vid="HOS 4:15">que Juda ne se rende pas coupable !</para>
+  <para style="q1" vid="HOS 4:15">N’allez pas à Guilgal<note caller="+" style="f"><char style="fr" closed="false">4.15 </char><char style="ft" closed="false">Localité située près de Jéricho (<char style="xt"><ref loc="JOS 4:19-20">Jos 4.19-20</ref></char>) où les Israélites avaient édifié un sanctuaire (<char style="xt">9.15 ; 12.12 ; 1 S 11.13-15 ; Am 4.4 ; 5.5</char>).</char></note>,</para>
+  <para style="q1" vid="HOS 4:15">ne montez pas à Beth-Aven<note caller="+" style="f"><char style="fr" closed="false">4.15 </char><char style="ft" closed="false">Jéroboam I<char style="ord">er</char> avait fait construire à Béthel un sanctuaire idolâtre (v. 17 et note ; <char style="xt"><ref loc="1KI 12:29">1 R 12.29</ref></char>). A cette ville dont le nom signifie : « sanctuaire de Dieu », Osée donne, après Amos (<char style="xt"><ref loc="HOS 5:5">5.5</ref></char>), le nom </char><char style="fqa" closed="false">Beth-Aven </char><char style="ft" closed="false">qui signifie : « maison du mal » (<char style="xt">voir 5.8 ; 10.5, 8</char>).</char></note>,</para>
+  <para style="q1" vid="HOS 4:15">et ne jurez pas en disant :</para>
+  <para style="q1" vid="HOS 4:15">“L’Eternel est vivant.”<verse eid="HOS 4:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 4:16"/>Car comme une vache rétive, ╵Israël est rétif.</para>
+  <para style="q1" vid="HOS 4:16">Croyez-vous maintenant ╵que l’Eternel les fera paître</para>
+  <para style="q1" vid="HOS 4:16">comme un troupeau d’agneaux ╵dans de vastes prairies ?<verse eid="HOS 4:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="HOS 4:17"/>Le peuple d’Ephraïm<note caller="+" style="f"><char style="fr" closed="false">4.17 </char><char style="ft" closed="false">C’est-à-dire Israël, le royaume du Nord.</char></note> ╵s’est lié aux idoles<note caller="+" style="f"><char style="fr" closed="false">4.17 </char><char style="ft" closed="false">Le veau d’or de Béthel (<char style="xt">8.5 ; 13.2 ; 1 R 12.28</char>) et les idoles de Baal (<char style="xt"><ref loc="HOS 2:10-15">2.10-15</ref></char>).</char></note>.</para>
+  <para style="q1" vid="HOS 4:17">Qu’il aille son chemin !<verse eid="HOS 4:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="HOS 4:18"/>A-t-il cuvé son vin,</para>
+  <para style="q1" vid="HOS 4:18">le voilà qui se vautre ╵dans la prostitution,</para>
+  <para style="q1" vid="HOS 4:18">et ses chefs sont épris ╵de ce qui fait leur honte.<verse eid="HOS 4:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="HOS 4:19"/>Un ouragan ╵les emportera tous,</para>
+  <para style="q1" vid="HOS 4:19">ils connaîtront la honte ╵à cause de leurs sacrifices<note caller="+" style="f"><char style="fr" closed="false">4.19 </char><char style="fq" closed="false">sacrifices</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">selon le texte hébreu traditionnel. L’ancienne version grecque a : </char><char style="fqa" closed="false">autels, </char><char style="ft" closed="false">ce qui correspond à une autre vocalisation de l’hébreu.</char></note>.<verse eid="HOS 4:19"/></para>
+  <chapter eid="HOS 4"/>
+  <chapter number="5" style="c" sid="HOS 5"/>
+  <para style="s2">La faute des responsables</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 5:1"/>Ecoutez ceci, prêtres,</para>
+  <para style="q1" vid="HOS 5:1">et soyez attentifs, ╵gens d’Israël !</para>
+  <para style="q1" vid="HOS 5:1">Ecoutez, vous aussi, ╵gens de la cour du roi !</para>
+  <para style="q1" vid="HOS 5:1">Car il vous incombait ╵de rendre la justice<note caller="+" style="f"><char style="fr" closed="false">5.1 </char><char style="fq" closed="false">Car il vous… justice</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">voir <char style="xt"><ref loc="MIC 3:1">Mi 3.1</ref></char>. Autre traduction : </char><char style="fqa" closed="false">c’est sur vous que tombe la sentence.</char></note>,</para>
+  <para style="q1" vid="HOS 5:1">mais vous avez été ╵à Mitspa comme un piège,</para>
+  <para style="q1" vid="HOS 5:1">sur le Thabor ╵comme un filet tendu<note caller="+" style="f"><char style="fr" closed="false">5.1 </char><char style="fq" closed="false">Mitspa</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">soit Mitspa en Galaad, à l’est du Jourdain (<char style="xt"><ref loc="GEN 31:43-49">Gn 31.43-49</ref></char>), soit Mitspa à 13 kilomètres au nord de Jérusalem, important lieu de culte de la déesse de la fécondité, Astarté, à l’époque d’Osée (<char style="xt"><ref loc="1SA 7:5-6">1 S 7.5-6</ref></char>). </char><char style="fq" closed="false">Thabor</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">montagne dominant la vallée de Jizréel, haut lieu de la religion cananéenne.</char></note>.<verse eid="HOS 5:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 5:2"/>A Shittim, vous avez creusé ╵une fosse profonde<note caller="+" style="f"><char style="fr" closed="false">5.2 </char><char style="fq" closed="false">Shittim</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">peut-être une allusion à l’épisode de Baal-Peor (voir <char style="xt">9.10 ; Nb 25</char>). </char><char style="fqa" closed="false">A Shittim… profonde. </char><char style="ft" closed="false">Autres traductions : </char><char style="fqa" closed="false">des infidèles sont enfoncés dans leurs pratiques meurtrières </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">des infidèles ont creusé une fosse profonde.</char></note>,</para>
+  <para style="q1" vid="HOS 5:2">mais je vais préparer ╵une correction pour eux tous.<verse eid="HOS 5:2"/></para>
+  <para style="s2">Le châtiment est inéluctable</para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 5:3"/>Je te connais bien, Ephraïm,</para>
+  <para style="q1" vid="HOS 5:3">Israël ne m’est pas caché.</para>
+  <para style="q1" vid="HOS 5:3">Or, Ephraïm,</para>
+  <para style="q1" vid="HOS 5:3">tu t’es prostitué,</para>
+  <para style="q1" vid="HOS 5:3">et Israël en est souillé.<verse eid="HOS 5:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 5:4"/>Leurs actes les empêchent ╵de revenir à moi, leur Dieu,</para>
+  <para style="q1" vid="HOS 5:4">car un vent de prostitution ╵souffle chez eux,</para>
+  <para style="q1" vid="HOS 5:4">et ils ne connaissent pas l’Eternel.<verse eid="HOS 5:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 5:5"/>Mais l’orgueil d’Israël ╵témoigne contre lui,</para>
+  <para style="q1" vid="HOS 5:5">or, Israël et Ephraïm ╵tomberont par leur faute,</para>
+  <para style="q1" vid="HOS 5:5">même Juda ╵va tomber avec eux.<verse eid="HOS 5:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 5:6"/>Avec leurs moutons et leurs bœufs, ╵ils viennent chercher l’Eternel,</para>
+  <para style="q1" vid="HOS 5:6">mais ils ne le trouveront pas :</para>
+  <para style="q1" vid="HOS 5:6">il est parti loin d’eux.<verse eid="HOS 5:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 5:7"/>Car ils ont trahi l’Eternel,</para>
+  <para style="q1" vid="HOS 5:7">ils ont enfanté des bâtards<note caller="+" style="f"><char style="fr" closed="false">5.7 </char><char style="fqa" closed="false">Bâtards, </char><char style="ft" closed="false">car demandés et attribués à Baal et aux rites de fertilité accomplis dans les temples païens (<char style="xt">voir <ref loc="HOS 1:2">1.2</ref></char>).</char></note>.</para>
+  <para style="q1" vid="HOS 5:7">Le jour de la nouvelle lune ╵va maintenant les consumer, ╵eux et leur patrimoine.<verse eid="HOS 5:7"/></para>
+  <para style="s2">Le châtiment : la guerre fratricide</para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 5:8"/>Sonnez du cor à Guibéa,</para>
+  <para style="q1" vid="HOS 5:8">et de la trompette à Rama !</para>
+  <para style="q1" vid="HOS 5:8">Donnez l’alarme à Beth-Aven<note caller="+" style="f"><char style="fr" closed="false">5.8 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 4:15">4.15</ref></char> et note ; <char style="xt"><ref loc="HOS 10:5">10.5</ref>, <ref loc="HOS 10:8">8</ref></char>.</char></note> !</para>
+  <para style="q1" vid="HOS 5:8">Benjamin, gare à tes arrières<note caller="+" style="f"><char style="fr" closed="false">5.8 </char><char style="ft" closed="false">Selon certains, la guerre de Juda contre Israël et la Syrie (<char style="xt">2 R 16.5-9 ; Es 7.1-9</char>) constituerait l’arrière-plan de cette prophétie (vers 734 av. J.-C.). </char><char style="fq" closed="false">Guibéa</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">à 3 kilomètres au nord de Jérusalem. </char><char style="fq" closed="false">Rama</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">au nord de Guibéa.</char></note> !<verse eid="HOS 5:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 5:9"/>Ephraïm sera dévasté ╵au jour du châtiment.</para>
+  <para style="q1" vid="HOS 5:9">J’en fais l’annonce ╵aux tribus d’Israël, ╵et cela est certain.<verse eid="HOS 5:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 5:10"/>Les princes de Juda ╵sont devenus pareils</para>
+  <para style="q1" vid="HOS 5:10">à ceux qui déplacent les bornes<note caller="+" style="f"><char style="fr" closed="false">5.10 </char><char style="ft" closed="false">Voir <char style="xt">Dt 19.14 ; 27.17</char>.</char></note>.</para>
+  <para style="q1" vid="HOS 5:10">Aussi, comme un torrent,</para>
+  <para style="q1" vid="HOS 5:10">je répandrai sur eux ╵les flots de ma colère.<verse eid="HOS 5:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 5:11"/>Ephraïm sera écrasé</para>
+  <para style="q1" vid="HOS 5:11">et brisé par le jugement,</para>
+  <para style="q1" vid="HOS 5:11">car il veut se conduire ╵d’après ses propres règles<note caller="+" style="f"><char style="fr" closed="false">5.11 </char><char style="ft" closed="false">L’ancienne version grecque porte : </char><char style="fqa" closed="false">il a persisté à courir après le néant des idoles.</char></note>.<verse eid="HOS 5:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 5:12"/>C’est pourquoi je serai, ╵pour Ephraïm, comme la teigne,</para>
+  <para style="q1" vid="HOS 5:12">et pour Juda ╵comme la vermoulure.<verse eid="HOS 5:12"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 5:13"/>Quand Ephraïm a vu son mal</para>
+  <para style="q1" vid="HOS 5:13">et Juda son ulcère,</para>
+  <para style="q1" vid="HOS 5:13">Ephraïm est allé ╵chercher de l’aide en Assyrie</para>
+  <para style="q1" vid="HOS 5:13">et il a envoyé ╵un message au roi batailleur<note caller="+" style="f"><char style="fr" closed="false">5.13 </char><char style="fq" closed="false">roi batailleur. </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">roi Yareb. </char><char style="ft" closed="false">Certains modifient le texte hébreu traditionnel et lisent : </char><char style="fqa" closed="false">le grand roi, </char><char style="ft" closed="false">mais il n’est pas sûr que l’expression puisse prendre ce sens. Des tablettes assyriennes parlent des tributs payés à Tiglath-Piléser III par les rois d’Israël Menahem et Osée (voir <char style="xt">2 R 15.19-20 ; 17.3</char>).</char></note>.</para>
+  <para style="q1" vid="HOS 5:13">Mais le roi assyrien ╵ne pourra vous guérir</para>
+  <para style="q1" vid="HOS 5:13">ni soigner votre ulcère.<verse eid="HOS 5:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 5:14"/>Car moi, je serai comme un lion</para>
+  <para style="q1" vid="HOS 5:14">pour les Ephraïmites</para>
+  <para style="q1" vid="HOS 5:14">et comme un jeune lion ╵pour les gens de Juda.</para>
+  <para style="q1" vid="HOS 5:14">Moi, oui, moi, je déchirerai ╵et puis je m’en irai,</para>
+  <para style="q1" vid="HOS 5:14">j’emporterai ma proie ╵et nul ne les délivrera.<verse eid="HOS 5:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 5:15"/>Alors je m’en irai, ╵je rentrerai chez moi</para>
+  <para style="q1" vid="HOS 5:15">jusqu’à ce qu’ils se reconnaissent ╵coupables</para>
+  <para style="q1" vid="HOS 5:15">et cherchent ma faveur.</para>
+  <para style="q1" vid="HOS 5:15">Alors, dans leur détresse, ╵ils vont avoir recours à moi.<verse eid="HOS 5:15"/></para>
+  <chapter eid="HOS 5"/>
+  <chapter number="6" style="c" sid="HOS 6"/>
+  <para style="s2">Vrai et faux repentir</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 6:1"/>– Venez, et retournons à l’Eternel,</para>
+  <para style="q1" vid="HOS 6:1">car il a déchiré, ╵mais il nous guérira.</para>
+  <para style="q1" vid="HOS 6:1">Il a frappé, ╵mais il pansera nos blessures.<verse eid="HOS 6:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 6:2"/>Après deux jours, ╵il nous aura rendu la vie,</para>
+  <para style="q1" vid="HOS 6:2">et le troisième jour, ╵il nous relèvera,</para>
+  <para style="q1" vid="HOS 6:2">et nous vivrons sous son regard.<verse eid="HOS 6:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 6:3"/>Oui, cherchons à connaître l’Eternel, ╵efforçons-nous de le connaître.</para>
+  <para style="q1" vid="HOS 6:3">Sa venue est aussi certaine ╵que celle de l’aurore,</para>
+  <para style="q1" vid="HOS 6:3">et il viendra vers nous ╵comme la pluie,</para>
+  <para style="q1" vid="HOS 6:3">comme les ondées du printemps ╵qui arrosent la terre.<verse eid="HOS 6:3"/></para>
+  <para style="s2">La réponse de Dieu</para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 6:4"/>– Comment te traiterai-je, ╵toi, Ephraïm,</para>
+  <para style="q1" vid="HOS 6:4">et toi, Juda, ╵comment te traiterai-je ?</para>
+  <para style="q1" vid="HOS 6:4">Votre amour pour moi est semblable ╵aux nuées matinales,</para>
+  <para style="q1" vid="HOS 6:4">à la rosée de l’aube ╵qui se dissipe vite.<verse eid="HOS 6:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 6:5"/>C’est pourquoi, je vous frappe ╵par les prophètes,</para>
+  <para style="q1" vid="HOS 6:5">je vous massacre ╵par mes paroles</para>
+  <para style="q1" vid="HOS 6:5">et le jugement fond sur vous ╵comme l’éclair.<verse eid="HOS 6:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 6:6"/>Car je prends plaisir à l’amour ╵bien plus qu’aux sacrifices<note caller="+" style="f"><char style="fr" closed="false">6.6 </char><char style="ft" closed="false">Cité en <char style="xt">Mt 9.13 ; 12.7</char>.</char></note>,</para>
+  <para style="q1" vid="HOS 6:6">à la connaissance de Dieu ╵bien plus qu’aux holocaustes.<verse eid="HOS 6:6"/></para>
+  <para style="s2">L’état moral réel</para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 6:7"/>Mais vous, tout comme Adam<note caller="+" style="f"><char style="fr" closed="false">6.7 </char><char style="fq" closed="false">tout comme Adam. </char><char style="ft" closed="false">D’autres comprennent : </char><char style="fqa" closed="false">tout comme un homme </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">à Adam, </char><char style="ft" closed="false">nom d’une localité située près du Jourdain (voir <char style="xt"><ref loc="JOS 3:16">Jos 3.16</ref></char>).</char></note>, ╵vous avez transgressé l’alliance,</para>
+  <para style="q1" vid="HOS 6:7">là, vous m’avez trahi.<verse eid="HOS 6:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 6:8"/>Galaad est une cité ╵de malfaiteurs</para>
+  <para style="q1" vid="HOS 6:8">maculée de traces de sang<note caller="+" style="f"><char style="fr" closed="false">6.8 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">avides de sang.</char></note>.<verse eid="HOS 6:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 6:9"/>Comme une bande de brigands ╵postés en embuscade,</para>
+  <para style="q1" vid="HOS 6:9">la confrérie des prêtres</para>
+  <para style="q1" vid="HOS 6:9">s’en va assassiner ╵les passants sur la route ╵qui mène vers Sichem<note caller="+" style="f"><char style="fr" closed="false">6.9 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="JOS 24:1">Jos 24.1</ref></char>.</char></note>.</para>
+  <para style="q1" vid="HOS 6:9">Leur conduite est infâme !<verse eid="HOS 6:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 6:10"/>J’ai vu d’horribles choses</para>
+  <para style="q1" vid="HOS 6:10">en Israël,</para>
+  <para style="q1" vid="HOS 6:10">car la prostitution ╵d’Ephraïm s’y étale,</para>
+  <para style="q1" vid="HOS 6:10">et Israël s’en est souillé.<verse eid="HOS 6:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 6:11"/>Pour toi aussi, Juda, ╵une moisson est préparée.</para>
+  <para style="q1" vid="HOS 6:11">Au moment même ╵où je veux changer le sort de mon peuple<note caller="+" style="f"><char style="fr" closed="false">6.11 </char><char style="ft" closed="false">On pourrait aussi traduire : </char><char style="fqa" closed="false">où j’ai voulu opérer la restauration. </char><char style="ft" closed="false">Certains rattachent la fin du verset 11 à ce qui précède, au lieu d’en faire le début de la partie suivante. Il faut alors traduire : </char><char style="fqa" closed="false">lorsque je produirai la restauration de mon peuple </char><char style="ft" closed="false">ou bien : </char><char style="fqa" closed="false">quand je ramènerai les captifs de mon peuple.</char></note>,<verse eid="HOS 6:11"/></para>
+  <chapter eid="HOS 6"/>
+  <chapter number="7" style="c" sid="HOS 7"/>
+  <para style="nb">
+    <verse number="1" style="v" sid="HOS 7:1"/>et guérir Israël,</para>
+  <para style="q1" vid="HOS 7:1">les péchés d’Ephraïm ╵et les actes mauvais ╵commis par Samarie ╵ont été révélés.</para>
+  <para style="q1" vid="HOS 7:1">Car ils ont pratiqué ╵la tromperie.</para>
+  <para style="q1" vid="HOS 7:1">Le voleur s’introduit ╵jusque dans les maisons,</para>
+  <para style="q1" vid="HOS 7:1">et, dans les rues, ╵des bandes de brigands ╵dépouillent les passants.<verse eid="HOS 7:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 7:2"/>Ils ne se disent pas</para>
+  <para style="q1" vid="HOS 7:2">que moi je tiens des comptes ╵de tout le mal qu’ils font.</para>
+  <para style="q1" vid="HOS 7:2">Maintenant, leurs méfaits, ╵de partout, les enserrent,</para>
+  <para style="q1" vid="HOS 7:2">et je les garde présents à l’esprit.<verse eid="HOS 7:2"/></para>
+  <para style="s2">Les crimes politiques</para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 7:3"/>Par leur méchanceté, ╵ils amusent le roi</para>
+  <para style="q1" vid="HOS 7:3">et, par leurs tromperies, les princes.<verse eid="HOS 7:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 7:4"/>Tous, ils sont adultères,</para>
+  <para style="q1" vid="HOS 7:4">brûlant comme le four ╵du boulanger</para>
+  <para style="q1" vid="HOS 7:4">qu’il n’a nul besoin d’attiser</para>
+  <para style="q1" vid="HOS 7:4">depuis qu’il a pétri la pâte</para>
+  <para style="q1" vid="HOS 7:4">jusqu’à ce qu’elle soit ╵entièrement levée<note caller="+" style="f"><char style="fr" closed="false">7.4 </char><char style="ft" closed="false">C’est-à-dire qu’on trame des complots, puis on attend que les choses se précisent pour les mettre à exécution.</char></note>.<verse eid="HOS 7:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 7:5"/>Au jour où on fête leur roi,</para>
+  <para style="q1" vid="HOS 7:5">les princes se rendent malades,</para>
+  <para style="q1" vid="HOS 7:5">échauffés par le vin,</para>
+  <para style="q1" vid="HOS 7:5">et le roi tend la main ╵à ces moqueurs.<verse eid="HOS 7:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 7:6"/>Ils s’approchent de lui, ╵le cœur embrasé comme un four, ╵brûlant pour leur complot.</para>
+  <para style="q1" vid="HOS 7:6">Toute la nuit, ╵leur fureur sommeillait.</para>
+  <para style="q1" vid="HOS 7:6">Mais au matin, elle s’embrase ╵comme une flamme ardente<note caller="+" style="f"><char style="fr" closed="false">7.6 </char><char style="fq" closed="false">leur fureur sommeillait… flamme ardente. </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">leur boulanger dormait, et au matin, leur four est embrasé comme un feu plein d’ardeur.</char></note>.<verse eid="HOS 7:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 7:7"/>Tous, ils sont échauffés, ╵tout comme un four,</para>
+  <para style="q1" vid="HOS 7:7">ils consument leurs chefs.</para>
+  <para style="q1" vid="HOS 7:7">Et tous leurs rois sont renversés<note caller="+" style="f"><char style="fr" closed="false">7.7 </char><char style="ft" closed="false">Quatre rois furent </char><char style="fqa" closed="false">renversés </char><char style="ft" closed="false">en une vingtaine d’années, Zacharie et Shalloum en l’espace de sept mois (voir <char style="xt"><ref loc="2KI 15:10">2 R 15.10</ref>, <ref loc="2KI 15:14">14</ref>, <ref loc="2KI 15:25">25</ref>, <ref loc="2KI 15:30">30</ref></char>).</char></note></para>
+  <para style="q1" vid="HOS 7:7">sans qu’aucun, parmi eux, ╵ne fasse appel à moi.<verse eid="HOS 7:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 7:8"/>Ephraïm se confond ╵avec les autres peuples,</para>
+  <para style="q1" vid="HOS 7:8">Ephraïm est pareil ╵à la galette ╵qu’on n’a pas retournée au four.<verse eid="HOS 7:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 7:9"/>Des étrangers ╵ont épuisé sa force<note caller="+" style="f"><char style="fr" closed="false">7.9 </char><char style="ft" closed="false">Les tributs payés à Tiglath-Piléser (15, 19-20, 29) et à l’Egypte ont sapé la vie économique du pays.</char></note></para>
+  <para style="q1" vid="HOS 7:9">sans qu’il s’en aperçoive.</para>
+  <para style="q1" vid="HOS 7:9">Déjà, les cheveux blancs ╵lui garnissent la tête</para>
+  <para style="q1" vid="HOS 7:9">sans qu’il s’en aperçoive.<verse eid="HOS 7:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 7:10"/>Mais l’orgueil d’Israël ╵témoigne contre lui :</para>
+  <para style="q1" vid="HOS 7:10">malgré tous ces malheurs, ╵eux, ils ne sont pas revenus ╵à l’Eternel leur Dieu,</para>
+  <para style="q1" vid="HOS 7:10">et ils ne se sont pas tournés vers lui.<verse eid="HOS 7:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 7:11"/>Ephraïm est semblable ╵à un pigeon naïf ╵qui n’a pas de cervelle :</para>
+  <para style="q1" vid="HOS 7:11">il appelle l’Egypte à l’aide,</para>
+  <para style="q1" vid="HOS 7:11">il va en Assyrie<note caller="+" style="f"><char style="fr" closed="false">7.11 </char><char style="ft" closed="false">Menahem s’était tourné vers l’</char><char style="fqa" closed="false">Assyrie </char><char style="ft" closed="false">(<char style="xt"><ref loc="2KI 15:19-20">2 R 15.19-20</ref></char>), Péqah vers l’Egypte, le roi Osée tantôt vers l’un, tantôt vers l’autre de ces pays pour solliciter leur aide (<char style="xt"><ref loc="2KI 17:4">2 R 17.4</ref></char>).</char></note>.<verse eid="HOS 7:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 7:12"/>Mais pendant qu’il y va,</para>
+  <para style="q1" vid="HOS 7:12">je lance mon filet sur lui</para>
+  <para style="q1" vid="HOS 7:12">et je le fais tomber ╵comme un oiseau.</para>
+  <para style="q1" vid="HOS 7:12">Je le corrigerai ╵lorsque je l’entendrai ╵se rassembler.<verse eid="HOS 7:12"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 7:13"/>Malheur à eux, ╵car ils m’ont fui !</para>
+  <para style="q1" vid="HOS 7:13">Ruine sur eux ╵car ils se sont rebellés contre moi !</para>
+  <para style="q1" vid="HOS 7:13">Moi, je les délivrerais bien,</para>
+  <para style="q1" vid="HOS 7:13">mais eux ils tiennent ╵à mon sujet ╵des propos mensongers.<verse eid="HOS 7:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 7:14"/>Ils ne crient pas vers moi du fond du cœur,</para>
+  <para style="q1" vid="HOS 7:14">mais ils gémissent sur leur couche.</para>
+  <para style="q1" vid="HOS 7:14">Quand ils se font des incisions ╵pour du blé et du vin,</para>
+  <para style="q1" vid="HOS 7:14">de moi, ils se détournent.<verse eid="HOS 7:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 7:15"/>Moi, je les instruisais,</para>
+  <para style="q1" vid="HOS 7:15">je fortifiais leurs bras,</para>
+  <para style="q1" vid="HOS 7:15">mais ils n’ont, envers moi, ╵que de mauvais desseins.<verse eid="HOS 7:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 7:16"/>Ils ne reviennent pas vers le Très-Haut<note caller="+" style="f"><char style="fr" closed="false">7.16 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">vers en haut. </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 11:7">11.7</ref></char>.</char></note>,</para>
+  <para style="q1" vid="HOS 7:16">ils sont tous devenus ╵comme un arc qui serait faussé ;</para>
+  <para style="q1" vid="HOS 7:16">aussi leurs chefs ╵tomberont par l’épée</para>
+  <para style="q1" vid="HOS 7:16">à cause de leurs propos insolents.</para>
+  <para style="q1" vid="HOS 7:16">Et l’on rira d’eux en Egypte.<verse eid="HOS 7:16"/></para>
+  <chapter eid="HOS 7"/>
+  <chapter number="8" style="c" sid="HOS 8"/>
+  <para style="s1">Le châtiment</para>
+  <para style="s2">La colère de Dieu</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 8:1"/>Embouche donc le cor !</para>
+  <para style="q1" vid="HOS 8:1">C’est comme un aigle</para>
+  <para style="q1" vid="HOS 8:1">fondant sur le pays ╵de l’Eternel,</para>
+  <para style="q1" vid="HOS 8:1">car ils ont violé mon alliance,</para>
+  <para style="q1" vid="HOS 8:1">et se sont révoltés ╵contre ma Loi.<verse eid="HOS 8:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 8:2"/>Ils crient vers moi :</para>
+  <para style="q1" vid="HOS 8:2">“O toi, notre Dieu, nous te connaissons, nous, Israël !”<verse eid="HOS 8:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 8:3"/>Mais Israël a rejeté le bien,</para>
+  <para style="q1" vid="HOS 8:3">c’est pourquoi l’ennemi ╵le poursuivra.<verse eid="HOS 8:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 8:4"/>Ils se sont établis des rois, ╵sans mon accord,</para>
+  <para style="q1" vid="HOS 8:4">se sont donné des chefs ╵sans mon approbation<note caller="+" style="f"><char style="fr" closed="false">8.4 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 7:7">7.7</ref></char> et note.</char></note>.</para>
+  <para style="q1" vid="HOS 8:4">Ils ont utilisé ╵leur or et leur argent</para>
+  <para style="q1" vid="HOS 8:4">pour se fabriquer des idoles</para>
+  <para style="q1" vid="HOS 8:4">et cela causera leur perte<note caller="+" style="f"><char style="fr" closed="false">8.4 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">pour que leur argent et leur or leur soient ôtés.</char></note>.<verse eid="HOS 8:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 8:5"/>Ton veau<note caller="+" style="f"><char style="fr" closed="false">8.5 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 4:15">4.15</ref></char> et note ; <char style="xt">10.5 ; 1 R 12.28-29</char>.</char></note>, ô Samarie, ╵je le rejette.</para>
+  <para style="q1" vid="HOS 8:5">Oui, contre toi, ╵ma colère s’est enflammée.</para>
+  <para style="q1" vid="HOS 8:5">Combien de temps encore ╵seras-tu incapable ╵de pureté ?<verse eid="HOS 8:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 8:6"/>Car ton veau, il vient d’Israël,</para>
+  <para style="q1" vid="HOS 8:6">un artisan l’a fait,</para>
+  <para style="q1" vid="HOS 8:6">il n’est pas Dieu.</para>
+  <para style="q1" vid="HOS 8:6">Il sera mis en pièces, ╵le veau de Samarie.<verse eid="HOS 8:6"/></para>
+  <para style="s2">Le vent et la tempête</para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 8:7"/>Ils ont semé le vent,</para>
+  <para style="q1" vid="HOS 8:7">ils moissonneront la tempête :</para>
+  <para style="q1" vid="HOS 8:7">“Blé sans épi ╵ne produira pas de farine.”</para>
+  <para style="q1" vid="HOS 8:7">Et même s’il en produisait,</para>
+  <para style="q1" vid="HOS 8:7">ce sont des étrangers ╵qui la dévoreraient.<verse eid="HOS 8:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 8:8"/>Oui, Israël ╵est dévoré.</para>
+  <para style="q1" vid="HOS 8:8">Le voici, désormais, ╵parmi les autres peuples,</para>
+  <para style="q1" vid="HOS 8:8">comme un objet indésirable.<verse eid="HOS 8:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 8:9"/>Car lui, il est allé ╵s’adresser à Assur.</para>
+  <para style="q1" vid="HOS 8:9">Un onagre sauvage ╵garde sa liberté<note caller="+" style="f"><char style="fr" closed="false">8.9 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">Ephraïm est comme un onagre qui se tient à l’écart.</char></note>,</para>
+  <para style="q1" vid="HOS 8:9">mais les gens d’Ephraïm ╵se sont acheté des amants<note caller="+" style="f"><char style="fr" closed="false">8.9 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">ont payé des amants. </char><char style="ft" closed="false">Osée, dernier roi d’Israël, a acheté l’alliance du roi d’Assyrie (voir <char style="xt"><ref loc="2KI 17:3">2 R 17.3</ref></char>).</char></note>.<verse eid="HOS 8:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 8:10"/>Mais ils auront beau faire ╵des présents à des peuples étrangers,</para>
+  <para style="q1" vid="HOS 8:10">je vais les rassembler,</para>
+  <para style="q1" vid="HOS 8:10">et ils dépériront</para>
+  <para style="q1" vid="HOS 8:10">très bientôt sous le joug</para>
+  <para style="q1" vid="HOS 8:10">du roi des princes<note caller="+" style="f"><char style="fr" closed="false">8.10 </char><char style="ft" closed="false">C’est-à-dire du roi d’Assyrie.</char></note>.<verse eid="HOS 8:10"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 8:11"/>Le peuple d’Ephraïm ╵multiplie les autels ╵pour y offrir des sacrifices ╵pour le péché.</para>
+  <para style="q1" vid="HOS 8:11">Ils ne lui ont servi ╵qu’à pécher davantage.<verse eid="HOS 8:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 8:12"/>Et si j’écris pour lui ╵de nombreux articles de loi,</para>
+  <para style="q1" vid="HOS 8:12">il les regarde ╵comme si cette loi ╵lui était étrangère.<verse eid="HOS 8:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 8:13"/>Pour me faire une offrande ╵ils sacrifient des bêtes,</para>
+  <para style="q1" vid="HOS 8:13">et la viande, ils la mangent ;</para>
+  <para style="q1" vid="HOS 8:13">l’Eternel ne les agrée pas.</para>
+  <para style="q1" vid="HOS 8:13">Désormais, il prendra ╵en considération leurs fautes</para>
+  <para style="q1" vid="HOS 8:13">et il les châtiera ╵pour leurs péchés,</para>
+  <para style="q1" vid="HOS 8:13">ils retourneront en Egypte.<verse eid="HOS 8:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 8:14"/>Oui, Israël a oublié ╵celui qui l’a créé,</para>
+  <para style="q1" vid="HOS 8:14">et il s’est construit des palais,</para>
+  <para style="q1" vid="HOS 8:14">Juda a fortifié ╵des quantités de villes,</para>
+  <para style="q1" vid="HOS 8:14">mais j’y mettrai le feu</para>
+  <para style="q1" vid="HOS 8:14">qui consumera leurs palais. »<verse eid="HOS 8:14"/></para>
+  <chapter eid="HOS 8"/>
+  <chapter number="9" style="c" sid="HOS 9"/>
+  <para style="s2">La tristesse de l’exil</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 9:1"/>Ne te réjouis pas, Israël,</para>
+  <para style="q1" vid="HOS 9:1">n’exulte pas de joie ╵comme les autres peuples,</para>
+  <para style="q1" vid="HOS 9:1">car tu as délaissé ton Dieu ╵pour te prostituer,</para>
+  <para style="q1" vid="HOS 9:1">et, sur toutes les aires ╵où l’on procède ╵au battage du blé,</para>
+  <para style="q1" vid="HOS 9:1">tu as aimé ╵le salaire de la débauche.<verse eid="HOS 9:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 9:2"/>Mais l’aire et le pressoir ╵ne les nourriront pas,</para>
+  <para style="q1" vid="HOS 9:2">la récolte de vin ╵sera bien décevante.<verse eid="HOS 9:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 9:3"/>Ils n’habiteront plus ╵dans le pays de l’Eternel.</para>
+  <para style="q1" vid="HOS 9:3">Ephraïm<note caller="+" style="f"><char style="fr" closed="false">9.3 </char><char style="ft" closed="false">C’est-à-dire Israël, le royaume du Nord.</char></note> reprendra ╵le chemin de l’Egypte</para>
+  <para style="q1" vid="HOS 9:3">et ils devront manger ╵des aliments impurs<note caller="+" style="f"><char style="fr" closed="false">9.3 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="LEV 11">Lv 11</ref></char>.</char></note> ╵en Assyrie.<verse eid="HOS 9:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 9:4"/>Ils ne verseront plus ╵de vin en libation ╵pour l’Eternel,</para>
+  <para style="q1" vid="HOS 9:4">leurs sacrifices ╵ne lui seront pas agréables,</para>
+  <para style="q1" vid="HOS 9:4">leur nourriture ╵sera comme un repas de deuil<note caller="+" style="f"><char style="fr" closed="false">9.4 </char><char style="ft" closed="false">A cause du châtiment qui fondra sur eux. Ceux qui participaient à un repas dans une maison où il y avait un mort se rendaient rituellement impurs (<char style="xt">Nb 19.14 ; Dt 26.14 ; Jr 16.7</char>).</char></note>.</para>
+  <para style="q1" vid="HOS 9:4">Ceux qui en mangeront ╵se rendront tous impurs.</para>
+  <para style="q1" vid="HOS 9:4">Leur pain ne servira ╵que pour leur subsistance</para>
+  <para style="q1" vid="HOS 9:4">mais il n’entrera pas ╵dans le temple de l’Eternel.<verse eid="HOS 9:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 9:5"/>Que ferez-vous alors ╵aux jours d’assemblées cultuelles</para>
+  <para style="q1" vid="HOS 9:5">et pour les fêtes ╵de l’Eternel ?<verse eid="HOS 9:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 9:6"/>Car, les voilà qui partent ╵à cause de la destruction :</para>
+  <para style="q1" vid="HOS 9:6">l’Egypte les recueillera,</para>
+  <para style="q1" vid="HOS 9:6">Memphis les ensevelira.</para>
+  <para style="q1" vid="HOS 9:6">Les orties prendront possession ╵de leurs trésors précieux<note caller="+" style="f"><char style="fr" closed="false">9.6 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 8:4">8.4</ref></char>.</char></note></para>
+  <para style="q1" vid="HOS 9:6">et les ronces croîtront ╵dans leurs habitations.<verse eid="HOS 9:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 9:7"/>Le voilà arrivé, ╵le temps du châtiment.</para>
+  <para style="q1" vid="HOS 9:7">Ils sont venus, les jours ╵du règlement des comptes,</para>
+  <para style="q1" vid="HOS 9:7">sache-le Israël !</para>
+  <para style="q1" vid="HOS 9:7">Il est fou, le prophète !</para>
+  <para style="q1" vid="HOS 9:7">L’homme qui a l’Esprit divague !</para>
+  <para style="q1" vid="HOS 9:7">Tes fautes abondantes ╵en sont la cause</para>
+  <para style="q1" vid="HOS 9:7">ainsi que cette hostilité ╵qui vous anime<note caller="+" style="f"><char style="fr" closed="false">9.7 </char><char style="ft" closed="false">C’est-à-dire </char><char style="fqa" closed="false">qui vous anime </char><char style="ft" closed="false">contre l’Eternel et son prophète. Autre traduction : </char><char style="fqa" closed="false">ainsi que l’hostilité de Dieu que vous allez subir.</char></note>.<verse eid="HOS 9:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 9:8"/>La sentinelle d’Ephraïm ╵c’est le prophète qui se tient ╵avec mon Dieu.</para>
+  <para style="q1" vid="HOS 9:8">Pourtant des pièges sont tendus ╵partout sur son chemin,</para>
+  <para style="q1" vid="HOS 9:8">il rencontre l’hostilité ╵dans le pays<note caller="+" style="f"><char style="fr" closed="false">9.8 </char><char style="fq" closed="false">dans le pays</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">autre traduction : </char><char style="fqa" closed="false">dans le temple.</char></note> de son Dieu même.<verse eid="HOS 9:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 9:9"/>Ils sont profondément ╵enfoncés dans la corruption</para>
+  <para style="q1" vid="HOS 9:9">comme ils l’étaient jadis ╵aux jours de Guibéa<note caller="+" style="f"><char style="fr" closed="false">9.9 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="JDG 19-21">Jg 19 à 21</ref></char>.</char></note>.</para>
+  <para style="q1" vid="HOS 9:9">Mais Dieu prendra ╵en considération leurs fautes,</para>
+  <para style="q1" vid="HOS 9:9">et il les châtiera ╵pour leurs péchés.<verse eid="HOS 9:9"/></para>
+  <para style="s2">Déchéance finale</para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 9:10"/>« J’ai trouvé Israël</para>
+  <para style="q1" vid="HOS 9:10">comme une grappe de raisins ╵au milieu du désert,</para>
+  <para style="q1" vid="HOS 9:10">et j’ai vu vos ancêtres</para>
+  <para style="q1" vid="HOS 9:10">comme les premiers fruits ╵sur un jeune figuier.</para>
+  <para style="q1" vid="HOS 9:10">Mais eux, lorsqu’ils sont arrivés ╵à Baal-Peor<note caller="+" style="f"><char style="fr" closed="false">9.10 </char><char style="ft" closed="false">Voir <char style="xt">5.2 ; Nb 25</char>.</char></note>,</para>
+  <para style="q1" vid="HOS 9:10">ils se sont consacrés ╵à cette idole infâme</para>
+  <para style="q1" vid="HOS 9:10">et ils sont devenus abominables ╵comme l’objet de leur adoration.<verse eid="HOS 9:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 9:11"/>La gloire d’Ephraïm ╵fuira à tire-d’aile ╵comme un oiseau.</para>
+  <para style="q1" vid="HOS 9:11">Il n’y aura plus de naissances,</para>
+  <para style="q1" vid="HOS 9:11">plus de grossesses</para>
+  <para style="q1" vid="HOS 9:11">et plus de conceptions.<verse eid="HOS 9:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 9:12"/>Et même s’ils élevaient des enfants,</para>
+  <para style="q1" vid="HOS 9:12">je les en priverais ╵avant que ceux-ci soient adultes.</para>
+  <para style="q1" vid="HOS 9:12">Oui, quel malheur pour eux ╵quand je me détournerai d’eux !<verse eid="HOS 9:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 9:13"/>Je voyais Ephraïm ╵tout comme une autre Tyr,</para>
+  <para style="q1" vid="HOS 9:13">plantée en un lieu verdoyant<note caller="+" style="f"><char style="fr" closed="false">9.13 </char><char style="fqa" closed="false">Je voyais Ephraïm… verdoyant. </char><char style="ft" closed="false">L’ancienne version grecque a : </char><char style="fqa" closed="false">Ephraïm, je le vois, a fait de ses fils un gibier.</char></note>,</para>
+  <para style="q1" vid="HOS 9:13">Ephraïm va devoir ╵envoyer ses enfants ╵vers celui qui massacre. »<verse eid="HOS 9:13"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 9:14"/>Donne-leur, Eternel…</para>
+  <para style="q1" vid="HOS 9:14">Que leur donneras-tu ?</para>
+  <para style="q1" vid="HOS 9:14">Un ventre qui avorte</para>
+  <para style="q1" vid="HOS 9:14">et des seins desséchés.<verse eid="HOS 9:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 9:15"/>« Or, toute leur méchanceté ╵s’est montrée à Guilgal<note caller="+" style="f"><char style="fr" closed="false">9.15 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 4:15">4.15</ref></char> et note.</char></note></para>
+  <para style="q1" vid="HOS 9:15">et c’est là que j’ai pris ╵ce peuple en aversion.</para>
+  <para style="q1" vid="HOS 9:15">Leurs actions sont mauvaises,</para>
+  <para style="q1" vid="HOS 9:15">c’est pourquoi je les chasserai ╵de mon pays.</para>
+  <para style="q1" vid="HOS 9:15">Je cesserai de les aimer,</para>
+  <para style="q1" vid="HOS 9:15">car tous leurs chefs ╵sont des rebelles.<verse eid="HOS 9:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HOS 9:16"/>Ephraïm est frappé</para>
+  <para style="q1" vid="HOS 9:16">et sa racine est desséchée,</para>
+  <para style="q1" vid="HOS 9:16">ils ne produiront plus de fruit,</para>
+  <para style="q1" vid="HOS 9:16">et même si leurs femmes ╵ont des enfants,</para>
+  <para style="q1" vid="HOS 9:16">j’enverrai à la mort ╵les enfants qu’ils chérissent. »<verse eid="HOS 9:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="HOS 9:17"/>Oui, mon Dieu les rejettera,</para>
+  <para style="q1" vid="HOS 9:17">car ils ne l’ont pas écouté,</para>
+  <para style="q1" vid="HOS 9:17">et ils seront errants ╵parmi les peuples étrangers.<verse eid="HOS 9:17"/></para>
+  <chapter eid="HOS 9"/>
+  <chapter number="10" style="c" sid="HOS 10"/>
+  <para style="s2">Le peuple au cœur partagé</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 10:1"/>Israël est semblable ╵à une vigne ╵qui dégénère<note caller="+" style="f"><char style="fr" closed="false">10.1 </char><char style="fq" closed="false">qui dégénère</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">d’autres comprennent : </char><char style="fqa" closed="false">luxuriante.</char></note>,</para>
+  <para style="q1" vid="HOS 10:1">il ne produit du fruit ╵que pour lui-même.</para>
+  <para style="q1" vid="HOS 10:1">Plus il a eu de fruit,</para>
+  <para style="q1" vid="HOS 10:1">plus il a édifié d’autels.</para>
+  <para style="q1" vid="HOS 10:1">Plus sa terre était belle,</para>
+  <para style="q1" vid="HOS 10:1">plus il embellissait les stèles ╵pour ses divinités.<verse eid="HOS 10:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 10:2"/>Leur cœur est faux,</para>
+  <para style="q1" vid="HOS 10:2">mais ils vont maintenant ╵devoir payer leurs fautes.</para>
+  <para style="q1" vid="HOS 10:2">Lui, l’Eternel, ╵brisera leurs autels</para>
+  <para style="q1" vid="HOS 10:2">et il renversera leurs stèles.<verse eid="HOS 10:2"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 10:3"/>Et alors ils diront :</para>
+  <para style="q1" vid="HOS 10:3">« Nous n’avons pas de roi !</para>
+  <para style="q1" vid="HOS 10:3">C’est parce que nous n’avons pas ╵craint l’Eternel.</para>
+  <para style="q1" vid="HOS 10:3">Et puis si nous avions un roi, ╵que ferait-il pour nous ? »<verse eid="HOS 10:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 10:4"/>Ils donnent leur parole,</para>
+  <para style="q1" vid="HOS 10:4">ils font de faux serments,</para>
+  <para style="q1" vid="HOS 10:4">ils concluent des alliances,</para>
+  <para style="q1" vid="HOS 10:4">et les procès se multiplient<note caller="+" style="f"><char style="fr" closed="false">10.4 </char><char style="fq" closed="false">et les procès se multiplient. </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">et le droit prospère comme une plante vénéneuse dans les sillons des champs, </char><char style="ft" closed="false">ce qui serait une dénonciation de la perversion du droit.</char></note></para>
+  <para style="q1" vid="HOS 10:4">comme une plante vénéneuse</para>
+  <para style="q1" vid="HOS 10:4">dans les sillons des champs.<verse eid="HOS 10:4"/></para>
+  <para style="s2">La fin de l’idolâtrie</para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 10:5"/>Ils ont peur pour le veau ╵de Beth-Aven<note caller="+" style="f"><char style="fr" closed="false">10.5 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 4:15">4.15</ref></char> et note.</char></note>, ╵les habitants de Samarie.</para>
+  <para style="q1" vid="HOS 10:5">Et à cause de lui, ╵ses prêtres et son peuple</para>
+  <para style="q1" vid="HOS 10:5">prendront le deuil.</para>
+  <para style="q1" vid="HOS 10:5">Qu’ils se réjouissent donc ╵maintenant de sa gloire ╵qui s’en va loin d’eux en exil !<verse eid="HOS 10:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 10:6"/>Lui aussi sera emporté ╵bientôt en Assyrie</para>
+  <para style="q1" vid="HOS 10:6">et sera offert au roi batailleur<note caller="+" style="f"><char style="fr" closed="false">10.6 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 5:13">5.13</ref></char> et note.</char></note></para>
+  <para style="q1" vid="HOS 10:6">et Ephraïm ╵récoltera la honte,</para>
+  <para style="q1" vid="HOS 10:6">Israël rougira ╵de ses desseins.<verse eid="HOS 10:6"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 10:7"/>Samarie est détruite,</para>
+  <para style="q1" vid="HOS 10:7">et son roi est comme<note caller="+" style="f"><char style="fr" closed="false">10.7 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">Samarie et son roi sont semblables à.</char></note> une écorce<note caller="+" style="f"><char style="fr" closed="false">10.7 </char><char style="fq" closed="false">écorce</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">autre traduction : </char><char style="fqa" closed="false">de l’écume.</char></note> ╵emportée par les eaux.<verse eid="HOS 10:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 10:8"/>Les hauts lieux criminels<note caller="+" style="f"><char style="fr" closed="false">10.8 </char><char style="ft" closed="false">Voir v. 5.</char></note> ╵où péchait Israël ╵seront détruits.</para>
+  <para style="q1" vid="HOS 10:8">Les chardons et les ronces ╵croîtront sur leurs autels.</para>
+  <para style="q1" vid="HOS 10:8">Alors ils diront aux montagnes : ╵« Recouvrez-nous ! »</para>
+  <para style="q1" vid="HOS 10:8">Et aux collines : ╵« Tombez sur nous<note caller="+" style="f"><char style="fr" closed="false">10.8 </char><char style="ft" closed="false">Repris en <char style="xt">Lc 23.30 ; Ap 6.16</char>.</char></note> ! »<verse eid="HOS 10:8"/></para>
+  <para style="s2">Menace et appel</para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 10:9"/>« Depuis le temps de Guibéa<note caller="+" style="f"><char style="fr" closed="false">10.9 </char><char style="ft" closed="false">Voir <char style="xt">9.9 ; Jg 19 à 21</char>.</char></note>,</para>
+  <para style="q1" vid="HOS 10:9">tu as péché, ô Israël,</para>
+  <para style="q1" vid="HOS 10:9">et tu n’as pas changé.</para>
+  <para style="q1" vid="HOS 10:9">La guerre est déclarée ╵aux gens injustes. ╵Ne les atteindra-t-elle pas ╵précisément à Guibéa ?<verse eid="HOS 10:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 10:10"/>Je les corrigerai ╵quand je voudrai.</para>
+  <para style="q1" vid="HOS 10:10">Les armées d’autres peuples ╵se ligueront contre eux,</para>
+  <para style="q1" vid="HOS 10:10">ils seront enchaînés ╵pour leurs deux crimes.<verse eid="HOS 10:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 10:11"/>Or, Ephraïm était ╵une génisse bien dressée.</para>
+  <para style="q1" vid="HOS 10:11">Elle aimait à fouler le grain,</para>
+  <para style="q1" vid="HOS 10:11">mais je ferai passer ╵son beau cou sous le joug.</para>
+  <para style="q1" vid="HOS 10:11">Je vais atteler Ephraïm,</para>
+  <para style="q1" vid="HOS 10:11">Juda labourera,</para>
+  <para style="q1" vid="HOS 10:11">et Jacob traînera la herse<note caller="+" style="f"><char style="fr" closed="false">10.11 </char><char style="ft" closed="false">Pour certains, l’image évoque le passage d’une vie libre, où Ephraïm jouit du fruit de son labeur, à une vie d’esclave où Israël travaille sans pouvoir jouir du fruit de son travail. Pour d’autres, l’image soulignerait plutôt la légèreté d’Israël semblable à une génisse n’acceptant que le travail facile et rechignant devant un travail plus difficile.</char></note>.<verse eid="HOS 10:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 10:12"/>Semez pour la justice</para>
+  <para style="q1" vid="HOS 10:12">et vous moissonnerez ╵le fruit de la bonté.</para>
+  <para style="q1" vid="HOS 10:12">Défrichez-vous un champ nouveau<note caller="+" style="f"><char style="fr" closed="false">10.12 </char><char style="ft" closed="false">Repris en <char style="xt"><ref loc="JER 4:3">Jr 4.3</ref></char>.</char></note></para>
+  <para style="q1" vid="HOS 10:12">car voici qu’il est temps ╵de se tourner vers l’Eternel</para>
+  <para style="q1" vid="HOS 10:12">en attendant qu’il vienne</para>
+  <para style="q1" vid="HOS 10:12">et qu’il fasse pleuvoir ╵la justice pour vous.<verse eid="HOS 10:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 10:13"/>Vous avez labouré, ╵préparé le terrain ╵pour la méchanceté.</para>
+  <para style="q1" vid="HOS 10:13">Vous avez moissonné ╵de l’injustice</para>
+  <para style="q1" vid="HOS 10:13">et du mensonge, ╵vous en avez mangé le fruit,</para>
+  <para style="q1" vid="HOS 10:13">car vous avez placé</para>
+  <para style="q1" vid="HOS 10:13">votre confiance ╵dans votre politique<note caller="+" style="f"><char style="fr" closed="false">10.13 </char><char style="fq" closed="false">politique. </char><char style="ft" closed="false">Autre traduction possible, d’après l’ougaritique : </char><char style="fqa" closed="false">puissance.</char></note></para>
+  <para style="q1" vid="HOS 10:13">et dans la multitude ╵de vos guerriers.<verse eid="HOS 10:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 10:14"/>C’est pourquoi, chez ton peuple, ╵on entendra ╵un bruit tumultueux.</para>
+  <para style="q1" vid="HOS 10:14">Toutes vos forteresses ╵seront détruites</para>
+  <para style="q1" vid="HOS 10:14">tout comme Beth-Arbel ╵l’a été par Salman<note caller="+" style="f"><char style="fr" closed="false">10.14 </char><char style="ft" closed="false">Allusion à un événement inconnu par ailleurs. Selon certains, </char><char style="fq" closed="false">Beth-Arbel </char><char style="ft" closed="false">serait une ville de Transjordanie et </char><char style="fq" closed="false">Salman </char><char style="ft" closed="false">le roi moabite nommé Salamana, mentionné sur les tablettes du roi assyrien Tiglath-Piléser III (747 à 727 av. J.-C.). D’autres l’identifient au roi assyrien Salmanasar III (859-824), ou à Salmanasar V (727-722).</char></note></para>
+  <para style="q1" vid="HOS 10:14">en ce jour de combat</para>
+  <para style="q1" vid="HOS 10:14">où l’on a renversé la ville ╵sur sa population<note caller="+" style="f"><char style="fr" closed="false">10.14 </char><char style="fq" closed="false">la ville </char><char style="fq" closed="false">sur sa population. </char><char style="ft" closed="false">Autres traductions : </char><char style="fqa" closed="false">la ville, les villages qui en dépendent </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">les mères, leurs enfants.</char></note>.<verse eid="HOS 10:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 10:15"/>Voilà le triste sort ╵que vous vaudra Béthel</para>
+  <para style="q1" vid="HOS 10:15">à cause de l’excès ╵de la méchanceté ╵qui est la vôtre.</para>
+  <para style="q1" vid="HOS 10:15">Le roi d’Israël, dès l’aurore,</para>
+  <para style="q1" vid="HOS 10:15">ne sera plus.<verse eid="HOS 10:15"/></para>
+  <chapter eid="HOS 10"/>
+  <chapter number="11" style="c" sid="HOS 11"/>
+  <para style="s1">L’amour de l’Eternel</para>
+  <para style="s2">L’amour d’autrefois</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 11:1"/>Quand Israël était enfant, ╵je l’ai aimé,</para>
+  <para style="q1" vid="HOS 11:1">alors j’ai appelé mon fils ╵à sortir de l’Egypte<note caller="+" style="f"><char style="fr" closed="false">11.1 </char><char style="ft" closed="false">Cité en <char style="xt"><ref loc="MAT 2:15">Mt 2.15</ref></char>.</char></note>.<verse eid="HOS 11:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 11:2"/>Plus on l’a appelé, ╵plus il s’est éloigné<note caller="+" style="f"><char style="fr" closed="false">11.2 </char><char style="ft" closed="false">Il s’agit peut-être des prophètes qui ont appelé Israël à la repentance au cours de son histoire. L’ancienne version grecque porte : Plus je l’ai appelé, plus ils se sont éloignés de moi.</char></note> ╵de ceux qui l’appelaient.</para>
+  <para style="q1" vid="HOS 11:2">C’est aux Baals qu’il sacrifie,</para>
+  <para style="q1" vid="HOS 11:2">aux idoles taillées ╵qu’il offre de l’encens.<verse eid="HOS 11:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 11:3"/>Pourtant, c’est moi ╵qui, pour ses premiers pas, ╵ai guidé Ephraïm,</para>
+  <para style="q1" vid="HOS 11:3">en le soutenant par les bras<note caller="+" style="f"><char style="fr" closed="false">11.3 </char><char style="ft" closed="false">L’ancienne version grecque a : </char><char style="fqa" closed="false">et qui l’ai porté dans mes bras.</char></note>,</para>
+  <para style="q1" vid="HOS 11:3">mais il n’a pas voulu savoir ╵que moi, je prenais soin de lui.<verse eid="HOS 11:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 11:4"/>C’est par des liens ╵d’une tendresse tout humaine</para>
+  <para style="q1" vid="HOS 11:4">et des cordes d’amour ╵que je le conduisais,</para>
+  <para style="q1" vid="HOS 11:4">et j’ai été pour lui ╵comme quelqu’un qui porte ╵un nourrisson</para>
+  <para style="q1" vid="HOS 11:4">contre ses joues ╵pour lui tendre à manger<note caller="+" style="f"><char style="fr" closed="false">11.4 </char><char style="fqa" closed="false">et j’ai été pour lui… à manger. </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">j’ai comme soulevé pour eux le mors du joug au-dessus des mâchoires pour leur tendre à manger.</char></note>.<verse eid="HOS 11:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 11:5"/>Puisqu’ils ont refusé ╵de revenir à moi,</para>
+  <para style="q1" vid="HOS 11:5">ils ne retourneront pas en Egypte,</para>
+  <para style="q1" vid="HOS 11:5">ce sera l’Assyrie ╵qui régnera sur eux.<verse eid="HOS 11:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 11:6"/>Le glaive va s’abattre ╵sur leurs cités,</para>
+  <para style="q1" vid="HOS 11:6">où il mettra en pièces ╵les barres de leurs portes</para>
+  <para style="q1" vid="HOS 11:6">et il dévorera leurs habitants</para>
+  <para style="q1" vid="HOS 11:6">à cause de leurs stratagèmes.<verse eid="HOS 11:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 11:7"/>Mon peuple est décidé ╵à me tourner le dos.</para>
+  <para style="q1" vid="HOS 11:7">On les appelle ╵à se tourner vers le Très-Haut<note caller="+" style="f"><char style="fr" closed="false">11.7 </char><char style="fq" closed="false">vers le Très-Haut</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">autre traduction : </char><char style="fqa" closed="false">vers en haut.</char></note>,</para>
+  <para style="q1" vid="HOS 11:7">mais jamais aucun d’eux ╵ne daigne élever le regard.<verse eid="HOS 11:7"/></para>
+  <para style="s2">L’amour vaincra</para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 11:8"/>Comment pourrais-je ╵t’abandonner, ô Ephraïm ?</para>
+  <para style="q1" vid="HOS 11:8">Comment pourrais-je te livrer, ╵ô Israël,</para>
+  <para style="q1" vid="HOS 11:8">te traiter comme Adma,</para>
+  <para style="q1" vid="HOS 11:8">ou te rendre semblable ╵à Tseboïm ?</para>
+  <para style="q1" vid="HOS 11:8">Mon cœur est tout bouleversé,</para>
+  <para style="q1" vid="HOS 11:8">je suis tout ému de pitié<note caller="+" style="f"><char style="fr" closed="false">11.8 </char><char style="fqa" closed="false">Adma </char><char style="ft" closed="false">et </char><char style="fq" closed="false">Tseboïm</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">deux villes voisines de Sodome et Gomorrhe et qui furent détruites avec elles (<char style="xt"><ref loc="DEU 29:22">Dt 29.22</ref></char>).</char></note>.<verse eid="HOS 11:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 11:9"/>Non, je n’agirai pas ╵selon mon ardente colère,</para>
+  <para style="q1" vid="HOS 11:9">je ne détruirai pas ╵de nouveau Ephraïm ;</para>
+  <para style="q1" vid="HOS 11:9">parce que moi, ╵moi, je suis Dieu,</para>
+  <para style="q1" vid="HOS 11:9">je ne suis pas un homme,</para>
+  <para style="q1" vid="HOS 11:9">et je suis saint, ╵moi qui suis au milieu de vous ;</para>
+  <para style="q1" vid="HOS 11:9">et je ne viendrai pas ╵animé de colère<note caller="+" style="f"><char style="fr" closed="false">11.9 </char><char style="fq" closed="false">pas </char><char style="fq" closed="false">animé de colère</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">autre traduction : </char><char style="fqa" closed="false">plus contre ses villes.</char></note>.<verse eid="HOS 11:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 11:10"/>Ils suivront l’Eternel :</para>
+  <para style="q1" vid="HOS 11:10">comme un lion, il rugira.</para>
+  <para style="q1" vid="HOS 11:10">A ses rugissements,</para>
+  <para style="q1" vid="HOS 11:10">ses fils accourront en tremblant ╵de l’Occident.<verse eid="HOS 11:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 11:11"/>Tremblants, ils reviendront d’Egypte, ╵tout comme des oiseaux.</para>
+  <para style="q1" vid="HOS 11:11">Et comme des colombes, ╵ils reviendront de l’Assyrie.</para>
+  <para style="q1" vid="HOS 11:11">Je les rétablirai ╵dans leurs maisons,</para>
+  <para style="q1" vid="HOS 11:11">l’Eternel le déclare. »<verse eid="HOS 11:11"/></para>
+  <chapter eid="HOS 11"/>
+  <chapter number="12" style="c" sid="HOS 12"/>
+  <para style="ms1">Le salut par le retour à l’Éternel</para>
+  <para style="s1">Le procès</para>
+  <para style="s2">Les fautes d’Israël</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 12:1"/>Le peuple d’Ephraïm ╵me cerne de mensonges,</para>
+  <para style="q1" vid="HOS 12:1">la communauté d’Israël ╵de tromperie.</para>
+  <para style="q1" vid="HOS 12:1">Juda marche encore avec Dieu,</para>
+  <para style="q1" vid="HOS 12:1">il est fidèle ╵parmi les saints<note caller="+" style="f"><char style="fr" closed="false">12.1 </char><char style="fq" closed="false">Juda… les saints</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">sens incertain. Autres traductions : </char><char style="fqa" closed="false">Juda est fidèle au Dieu saint </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">Juda erre avec le dieu El, et il est fidèle aux saints </char><char style="ft" closed="false">(où l’expression </char><char style="fqa" closed="false">les saints </char><char style="ft" closed="false">désignerait les dieux du panthéon cananéen) ou bien : </char><char style="fqa" closed="false">Juda est en révolte contre Dieu et contre les saints fidèles.</char></note>.<verse eid="HOS 12:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 12:2"/>Ephraïm se repaît de vent</para>
+  <para style="q1" vid="HOS 12:2">et, à longueur de jour, ╵il court après le vent d’orient.</para>
+  <para style="q1" vid="HOS 12:2">Il multiplie la fraude ╵et la violence.</para>
+  <para style="q1" vid="HOS 12:2">Il fait alliance avec Assur</para>
+  <para style="q1" vid="HOS 12:2">et porte de l’huile<note caller="+" style="f"><char style="fr" closed="false">12.2 </char><char style="ft" closed="false">On utilisait de l’</char><char style="fqa" closed="false">huile </char><char style="ft" closed="false">dans certaines cérémonies de conclusion d’alliance.</char></note> en Egypte.<verse eid="HOS 12:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 12:3"/>Contre Juda<note caller="+" style="f"><char style="fr" closed="false">12.3 </char><char style="ft" closed="false">Plusieurs indices font penser qu’il peut y avoir ici une erreur de scribe et que l’original portait </char><char style="fqa" closed="false">Israël </char><char style="ft" closed="false">au lieu de </char><char style="fqa" closed="false">Juda.</char></note> ╵l’Eternel intente un procès.</para>
+  <para style="q1" vid="HOS 12:3">Il va châtier Jacob ╵pour sa conduite,</para>
+  <para style="q1" vid="HOS 12:3">il le rétribuera ╵selon ses actes.<verse eid="HOS 12:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 12:4"/>Dans le sein de sa mère,</para>
+  <para style="q1" vid="HOS 12:4">il supplanta<note caller="+" style="f"><char style="fr" closed="false">12.4 </char><char style="ft" closed="false">Ce verbe fait assonance avec le nom </char><char style="fqa" closed="false">Jacob </char><char style="ft" closed="false">(voir <char style="xt"><ref loc="GEN 27:36">Gn 27.36</ref></char>).</char></note> son frère</para>
+  <para style="q1" vid="HOS 12:4">et dans son âge mûr, ╵il lutta avec Dieu<note caller="+" style="f"><char style="fr" closed="false">12.4 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="GEN 32:23-33">Gn 32.23-33</ref></char>.</char></note>.<verse eid="HOS 12:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 12:5"/>Il lutta avec l’ange ╵et il sortit vainqueur,</para>
+  <para style="q1" vid="HOS 12:5">il pleura et le supplia.</para>
+  <para style="q1" vid="HOS 12:5">Il rencontra Dieu à Béthel,</para>
+  <para style="q1" vid="HOS 12:5">et là, Dieu nous parla<note caller="+" style="f"><char style="fr" closed="false">12.5 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="GEN 35:1-15">Gn 35.1-15</ref></char>.</char></note>.<verse eid="HOS 12:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 12:6"/>C’est l’Eternel, ╵Dieu des armées célestes,</para>
+  <para style="q1" vid="HOS 12:6">oui, l’Eternel. ╵C’est ainsi qu’on parle de lui.<verse eid="HOS 12:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 12:7"/>Maintenant, ô Jacob, ╵reviens donc à ton Dieu.</para>
+  <para style="q1" vid="HOS 12:7">Pratique l’amour et le droit</para>
+  <para style="q1" vid="HOS 12:7">et compte en tout temps sur ton Dieu.<verse eid="HOS 12:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 12:8"/>Tout comme des Cananéens<note caller="+" style="f"><char style="fr" closed="false">12.8 </char><char style="ft" closed="false">Jeu sur les deux sens du terme hébreu traduit par </char><char style="fqa" closed="false">Cananéens, </char><char style="ft" closed="false">qui signifie aussi </char><char style="fqa" closed="false">marchands.</char></note>, ╵ces gens tiennent en main ╵des balances truquées</para>
+  <para style="q1" vid="HOS 12:8">et ils se plaisent à frauder.<verse eid="HOS 12:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 12:9"/>Ephraïm dit :</para>
+  <para style="q1" vid="HOS 12:9">« Ah, je me suis bien enrichi !</para>
+  <para style="q1" vid="HOS 12:9">j’ai acquis de grands biens.</para>
+  <para style="q1" vid="HOS 12:9">Dans toutes mes affaires<note caller="+" style="f"><char style="fr" closed="false">12.9 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">Tout cela n’est que le produit de mon travail.</char></note>,</para>
+  <para style="q1" vid="HOS 12:9">on ne pourra trouver de faute ╵qui serait un péché. »<verse eid="HOS 12:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 12:10"/>« Moi, je suis l’Eternel ton Dieu,</para>
+  <para style="q1" vid="HOS 12:10">depuis l’Egypte,</para>
+  <para style="q1" vid="HOS 12:10">et je te ferai de nouveau ╵habiter sous des tentes</para>
+  <para style="q1" vid="HOS 12:10">tout comme aux jours où l’on célèbre ╵la fête des Cabanes<note caller="+" style="f"><char style="fr" closed="false">12.10 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="LEV 23:42-43">Lv 23.42-43</ref></char>.</char></note>.<verse eid="HOS 12:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 12:11"/>J’ai parlé aux prophètes</para>
+  <para style="q1" vid="HOS 12:11">et je leur ai donné ╵des révélations en grand nombre,</para>
+  <para style="q1" vid="HOS 12:11">je parlerai encore ╵en paraboles</para>
+  <para style="q1" vid="HOS 12:11">par des prophètes. »<verse eid="HOS 12:11"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 12:12"/>Puisque Galaad<note caller="+" style="f"><char style="fr" closed="false">12.12 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 6:8">6.8</ref></char>.</char></note> est inique ╵il ne vaut plus grand-chose<note caller="+" style="f"><char style="fr" closed="false">12.12 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">il n’est plus que fausseté.</char></note>,</para>
+  <para style="q1" vid="HOS 12:12">car ils offrent en sacrifice ╵des taureaux à Guilgal<note caller="+" style="f"><char style="fr" closed="false">12.12 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="HOS 4:15">4.15</ref></char> et note.</char></note> ;</para>
+  <para style="q1" vid="HOS 12:12">aussi leurs autels seront-ils ╵réduits en des tas de décombres</para>
+  <para style="q1" vid="HOS 12:12">dans les sillons des champs.<verse eid="HOS 12:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 12:13"/>Or, Jacob s’est enfui ╵dans la plaine d’Aram,</para>
+  <para style="q1" vid="HOS 12:13">Israël a servi ╵pour une femme ;</para>
+  <para style="q1" vid="HOS 12:13">pour une femme, ╵il s’est fait gardien de troupeaux<note caller="+" style="f"><char style="fr" closed="false">12.13 </char><char style="ft" closed="false">Jacob a fui à Paddân-Aram (<char style="xt"><ref loc="GEN 28:2-5">Gn 28.2-5</ref></char>) où il a servi Laban durant sept ans pour chacune de ses deux femmes (<char style="xt"><ref loc="GEN 29:20-28">Gn 29.20-28</ref></char>) puis a continué à garder les troupeaux de son beau-père (<char style="xt">Gn 30.31 ; 31.41</char>).</char></note>.<verse eid="HOS 12:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 12:14"/>Or l’Eternel a fait sortir ╵Israël de l’Egypte</para>
+  <para style="q1" vid="HOS 12:14">par un prophète<note caller="+" style="f"><char style="fr" closed="false">12.14 </char><char style="ft" closed="false">Moïse (voir <char style="xt">Nb 12.6-8 ; Dt 18.15 ; 34.10</char>).</char></note>.</para>
+  <para style="q1" vid="HOS 12:14">Par un prophète, ╵Israël a été gardé.<verse eid="HOS 12:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 12:15"/>Ephraïm a irrité Dieu ╵amèrement,</para>
+  <para style="q1" vid="HOS 12:15">c’est pourquoi son Seigneur ╵ne lui pardonne pas ╵le sang qu’il a versé,</para>
+  <para style="q1" vid="HOS 12:15">et il lui revaudra</para>
+  <para style="q1" vid="HOS 12:15">le mépris dont il a fait preuve.<verse eid="HOS 12:15"/></para>
+  <chapter eid="HOS 12"/>
+  <chapter number="13" style="c" sid="HOS 13"/>
+  <para style="s2">Le prix de la révolte</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 13:1"/>Dès qu’Ephraïm parlait,</para>
+  <para style="q1" vid="HOS 13:1">tous étaient terrifiés,</para>
+  <para style="q1" vid="HOS 13:1">il portait la terreur ╵en Israël,</para>
+  <para style="q1" vid="HOS 13:1">il s’est rendu coupable ╵en adorant Baal.</para>
+  <para style="q1" vid="HOS 13:1">C’est pourquoi il est mort.<verse eid="HOS 13:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 13:2"/>Et maintenant, ╵voilà ces gens ╵qui pèchent davantage,</para>
+  <para style="q1" vid="HOS 13:2">faisant de leur argent ╵des idoles fondues,</para>
+  <para style="q1" vid="HOS 13:2">des statues façonnées ╵avec habileté :</para>
+  <para style="q1" vid="HOS 13:2">ouvrages d’artisans ╵que tout cela !</para>
+  <para style="q1" vid="HOS 13:2">On dit à leur propos :</para>
+  <para style="q1" vid="HOS 13:2">ils offrent des humains ╵en sacrifice<note caller="+" style="f"><char style="fr" closed="false">13.2 </char><char style="ft" closed="false">Les sacrifices humains sont mentionnés, entre autres, en <char style="xt">2 R 17.17 ; 23.10 ; Ez 20.26</char> : <char style="xt"><ref loc="MIC 6:7">Mi 6.7</ref></char>.</char></note></para>
+  <para style="q1" vid="HOS 13:2">et ils font des baisers aux veaux<note caller="+" style="f"><char style="fr" closed="false">13.2 </char><char style="ft" closed="false">Geste d’hommage à une divinité (<char style="xt">1 R 19.18 ; Jb 31.27</char>), adressé aux veaux d’or dressés par Jéroboam (voir <char style="xt"><ref loc="HOS 4:15">4.15</ref></char> et note ; <char style="xt">8.5 ; 10.5 ; 1 R 12.28-29</char>).</char></note> !<verse eid="HOS 13:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 13:3"/>C’est pourquoi ils seront semblables ╵aux nuées matinales,</para>
+  <para style="q1" vid="HOS 13:3">à la rosée de l’aube ╵qui bientôt se dissipe,</para>
+  <para style="q1" vid="HOS 13:3">à un fétu de paille ╵emporté loin de l’aire ╵en tourbillon,</para>
+  <para style="q1" vid="HOS 13:3">et à de la fumée ╵sortant d’une ouverture.<verse eid="HOS 13:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 13:4"/>« Pourtant moi, l’Eternel, ╵je suis ton Dieu</para>
+  <para style="q1" vid="HOS 13:4">depuis l’Egypte</para>
+  <para style="q1" vid="HOS 13:4">et, en dehors de moi, ╵tu ne connais pas d’autre Dieu,</para>
+  <para style="q1" vid="HOS 13:4">il n’y a pas d’autre Sauveur que moi.<verse eid="HOS 13:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 13:5"/>C’est moi qui suis entré ╵en union avec toi<note caller="+" style="f"><char style="fr" closed="false">13.5 </char><char style="ft" closed="false">Selon le texte hébreu traditionnel. L’ancienne version grecque et la version syriaque ont : </char><char style="fqa" closed="false">j’ai été ton berger.</char></note> ╵dans le désert,</para>
+  <para style="q1" vid="HOS 13:5">dans une terre aride.<verse eid="HOS 13:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 13:6"/>Lorsqu’ils sont arrivés ╵dans de gras pâturages,</para>
+  <para style="q1" vid="HOS 13:6">ils se sont rassasiés ;</para>
+  <para style="q1" vid="HOS 13:6">quand ils furent repus,</para>
+  <para style="q1" vid="HOS 13:6">l’orgueil les a saisis</para>
+  <para style="q1" vid="HOS 13:6">là-dessus, ils m’ont oublié.<verse eid="HOS 13:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 13:7"/>Mais je serai pour eux ╵semblable à un lion</para>
+  <para style="q1" vid="HOS 13:7">et, comme un léopard ╵sur leur chemin,</para>
+  <para style="q1" vid="HOS 13:7">je serai aux aguets.<verse eid="HOS 13:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 13:8"/>Et comme une ourse ╵privée de ses petits, ╵je les attaquerai</para>
+  <para style="q1" vid="HOS 13:8">et leur déchirerai ╵l’enveloppe du cœur.</para>
+  <para style="q1" vid="HOS 13:8">Je les dévorerai ╵là, comme une lionne ;</para>
+  <para style="q1" vid="HOS 13:8">ils seront mis en pièces ╵par les bêtes sauvages.<verse eid="HOS 13:8"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 13:9"/>Israël, te voilà détruit.</para>
+  <para style="q1" vid="HOS 13:9">Qui te viendrait en aide<note caller="+" style="f"><char style="fr" closed="false">13.9 </char><char style="ft" closed="false">Selon l’ancienne version grecque et la syriaque. Texte hébreu traditionnel : </char><char style="fqa" closed="false">parce que tu t’opposes à moi, moi qui pourrais te secourir. </char><char style="ft" closed="false">La différence tient à une seule lettre en hébreu.</char></note> ?<verse eid="HOS 13:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 13:10"/>Où est-il à présent, ╵votre roi, où est-il ?</para>
+  <para style="q1" vid="HOS 13:10">Qu’il vienne vous sauver ╵dans toutes vos cités !</para>
+  <para style="q1" vid="HOS 13:10">Où sont-ils à présent, ╵vos chefs ╵auxquels vous demandiez :</para>
+  <para style="q1" vid="HOS 13:10">“Donnez-nous donc un roi ╵et des ministres” ?<verse eid="HOS 13:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HOS 13:11"/>Oui, je te donnerai ╵un roi dans ma colère,</para>
+  <para style="q1" vid="HOS 13:11">je te le reprendrai ╵dans mon indignation.<verse eid="HOS 13:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HOS 13:12"/>Le crime d’Ephraïm ╵est bien enregistré,</para>
+  <para style="q1" vid="HOS 13:12">et son péché ╵est bien noté.<verse eid="HOS 13:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="HOS 13:13"/>Les douleurs de l’enfantement ╵vont survenir pour lui,</para>
+  <para style="q1" vid="HOS 13:13">mais l’enfant est stupide :</para>
+  <para style="q1" vid="HOS 13:13">le terme est arrivé, ╵et il ne quitte pas ╵le sein qui l’a porté.<verse eid="HOS 13:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="HOS 13:14"/>Devrais-je donc les affranchir ╵du pouvoir du sépulcre ?</para>
+  <para style="q1" vid="HOS 13:14">Et, de la mort, ╵devrais-je les sauver ?</para>
+  <para style="q1" vid="HOS 13:14">O mort, où est ta force ?</para>
+  <para style="q1" vid="HOS 13:14">Sépulcre, où est ╵ton pouvoir destructeur<note caller="+" style="f"><char style="fr" closed="false">13.14 </char><char style="ft" closed="false">Les mots </char><char style="fqa" closed="false">ta force </char><char style="ft" closed="false">rend l’hébreu : </char><char style="fqa" closed="false">tes pestes. </char><char style="ft" closed="false">Cité en <char style="xt"><ref loc="1CO 15:55">1 Co 15.55</ref></char>.</char></note> ?</para>
+  <para style="q1" vid="HOS 13:14">Je ne peux plus les avoir en pitié.<verse eid="HOS 13:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="HOS 13:15"/>Ephraïm a beau prospérer<note caller="+" style="f"><char style="fr" closed="false">13.15 </char><char style="ft" closed="false">Jeu de mots avec </char><char style="fqa" closed="false">Ephraïm </char><char style="ft" closed="false">qui signifie : </char><char style="fqa" closed="false">fécond. </char><char style="ft" closed="false">Le </char><char style="fqa" closed="false">vent d’orient </char><char style="ft" closed="false">(<char style="xt">Jb 1.19 ; Es 27.8 ; Jr 4.11 ; 13.24 ; 18.17</char>) est une image de l’Assyrie, instrument de Dieu (<char style="xt"><ref loc="ISA 10:5">Es 10.5</ref>, <ref loc="ISA 10:15">15</ref></char>) qui envahira le royaume du Nord en 734 et y mettra fin en 722-721 av. J.-C.</char></note> ╵au milieu de l’herbage<note caller="+" style="f"><char style="fr" closed="false">13.15 </char><char style="fq" closed="false">au milieu de l’herbage</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">traduction incertaine. Le texte hébreu traditionnel porte : « fils de frères ». Certains corrigent, en ajoutant une lettre, pour obtenir : </char><char style="fqa" closed="false">parmi des frères. </char><char style="ft" closed="false">Certains pensent que « fils de frères » pourrait se référer au fait qu’Ephraïm a été adopté par Jacob comme son fils et a reçu une part d’héritage avec ses oncles.</char></note>,</para>
+  <para style="q1" vid="HOS 13:15">le vent d’orient viendra,</para>
+  <para style="q1" vid="HOS 13:15">un vent de l’Eternel ╵montera du désert</para>
+  <para style="q1" vid="HOS 13:15">et il desséchera ╵la source d’Ephraïm,</para>
+  <para style="q1" vid="HOS 13:15">il fera tarir sa fontaine.</para>
+  <para style="q1" vid="HOS 13:15">L’ennemi pillera ╵tout son trésor<note caller="+" style="f"><char style="fr" closed="false">13.15 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">le grenier.</char></note>, ╵tous les objets précieux.<verse eid="HOS 13:15"/></para>
+  <para style="b"/>
+  <chapter eid="HOS 13"/>
+  <chapter number="14" style="c" sid="HOS 14"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HOS 14:1"/>Samarie paiera pour ses fautes</para>
+  <para style="q1" vid="HOS 14:1">parce qu’elle s’est révoltée ╵contre son Dieu,</para>
+  <para style="q1" vid="HOS 14:1">ses habitants mourront ╵sous les coups de l’épée,</para>
+  <para style="q1" vid="HOS 14:1">ses bébés seront écrasés,</para>
+  <para style="q1" vid="HOS 14:1">et l’on fendra le ventre ╵de ses femmes enceintes. »<verse eid="HOS 14:1"/></para>
+  <para style="s1">Appel et promesse</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="HOS 14:2"/>Reviens donc, Israël, ╵à l’Eternel, ton Dieu,</para>
+  <para style="q1" vid="HOS 14:2">car ce sont tes péchés ╵qui ont causé ta chute.<verse eid="HOS 14:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="HOS 14:3"/>Préparez vos paroles</para>
+  <para style="q1" vid="HOS 14:3">et revenez à l’Eternel,</para>
+  <para style="q1" vid="HOS 14:3">et dites-lui : ╵« Pardonne toute faute,</para>
+  <para style="q1" vid="HOS 14:3">et prends en bonne part ╵que nous t’offrions en retour, ╵en sacrifice, l’hommage de nos lèvres, ╵en guise de taureaux.<verse eid="HOS 14:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="HOS 14:4"/>Ce n’est pas l’Assyrie, ╵qui pourra nous sauver,</para>
+  <para style="q1" vid="HOS 14:4">nous ne monterons pas ╵sur des chevaux de guerre</para>
+  <para style="q1" vid="HOS 14:4">et nous ne dirons plus ╵à l’œuvre de nos mains : ╵“Toi, tu es notre Dieu”,</para>
+  <para style="q1" vid="HOS 14:4">car c’est toi qui as compassion ╵de l’orphelin. »<verse eid="HOS 14:4"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v" sid="HOS 14:5"/>« Moi, je les guérirai ╵de leur apostasie,</para>
+  <para style="q1" vid="HOS 14:5">je leur témoignerai ╵librement mon amour</para>
+  <para style="q1" vid="HOS 14:5">parce que ma colère ╵se détournera d’eux.<verse eid="HOS 14:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HOS 14:6"/>Oui, je serai pour Israël ╵semblable à la rosée,</para>
+  <para style="q1" vid="HOS 14:6">il fleurira comme le lis,</para>
+  <para style="q1" vid="HOS 14:6">et s’enracinera ╵comme les cèdres du Liban.<verse eid="HOS 14:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HOS 14:7"/>Ses rameaux s’étendront au loin</para>
+  <para style="q1" vid="HOS 14:7">et il aura la majesté ╵de l’olivier,</para>
+  <para style="q1" vid="HOS 14:7">et son parfum sera semblable ╵à celui du Liban.<verse eid="HOS 14:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HOS 14:8"/>Ils reviendront</para>
+  <para style="q1" vid="HOS 14:8">habiter à son ombre,</para>
+  <para style="q1" vid="HOS 14:8">ils revivront comme le blé</para>
+  <para style="q1" vid="HOS 14:8">et fleuriront comme la vigne,</para>
+  <para style="q1" vid="HOS 14:8">et ils auront la renommée ╵des grands vins du Liban.<verse eid="HOS 14:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HOS 14:9"/>O Ephraïm… ╵qu’as-tu à faire<note caller="+" style="f"><char style="fr" closed="false">14.9 </char><char style="fq" closed="false">qu’as-tu à faire</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">d’après l’ancienne version grecque. Le texte hébreu traditionnel a : </char><char style="fqa" closed="false">qu’ai-je à faire.</char></note> ╵encore des idoles ?</para>
+  <para style="q1" vid="HOS 14:9">Moi, je l’exaucerai, ╵je veillerai<note caller="+" style="f"><char style="fr" closed="false">14.9 </char><char style="ft" closed="false">Le verbe </char><char style="fqa" closed="false">exaucer </char><char style="ft" closed="false">fait assonance, en hébreu, avec le nom de la déesse Anat, et le verbe </char><char style="fqa" closed="false">veiller </char><char style="ft" closed="false">avec celui de la déesse Ashéra.</char></note> sur lui.</para>
+  <para style="q1" vid="HOS 14:9">Je suis comme un cyprès ╵qui reste toujours vert,</para>
+  <para style="q1" vid="HOS 14:9">tu porteras du fruit ╵et c’est moi qui l’aurai produit. »<verse eid="HOS 14:9"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v" sid="HOS 14:10"/>Qui donc est assez sage</para>
+  <para style="q1" vid="HOS 14:10">pour comprendre ces choses,</para>
+  <para style="q1" vid="HOS 14:10">assez intelligent ╵pour les connaître ?</para>
+  <para style="q1" vid="HOS 14:10">Les voies que l’Eternel prescrit sont droites,</para>
+  <para style="q1" vid="HOS 14:10">les justes les suivront,</para>
+  <para style="q1" vid="HOS 14:10">tandis que les rebelles ╵trébucheront sur elles.<verse eid="HOS 14:10"/></para>
+  <chapter eid="HOS 14"/>
+</usx>

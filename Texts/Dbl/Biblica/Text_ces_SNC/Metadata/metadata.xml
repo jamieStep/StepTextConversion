@@ -1,0 +1,368 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata version="2.2.1" id="d26ef201ef9cf3f2" revision="5">
+    <identification>
+      <name>Slovo na cestu (Czech Living New Testament) 2012</name>
+      <nameLocal>Slovo na cestu</nameLocal>
+      <description>Czech: Slovo na cestu (New Testament)</description>
+      <descriptionLocal>Nového zákona</descriptionLocal>
+      <abbreviation>SNC</abbreviation>
+      <abbreviationLocal>SNC</abbreviationLocal>
+      <scope>New Testament</scope>
+      <dateCompleted>2006-12-01</dateCompleted>
+      <bundleProducer>Paratext/9.2.102.8</bundleProducer>
+      <systemId type="paratext">
+        <id>d26ef201ef9cf3f267cf4fc887db1bce3d3c2a09</id>
+        <csetId>8c9f28ec92af67cb36d8ac0447615910aedefd51</csetId>
+        <name>cesSNC12</name>
+        <fullName>Slovo na cestu (Czech Living New Testament) 2012</fullName>
+      </systemId>
+      <systemId type="ptreg">
+        <id>3bgFBjZtZoBHb6RFw</id>
+      </systemId>
+    </identification>
+    <type>
+      <medium>text</medium>
+      <isConfidential>false</isConfidential>
+      <hasCharacters>true</hasCharacters>
+      <isTranslation>true</isTranslation>
+      <isExpression>true</isExpression>
+      <translationType>Revision</translationType>
+      <audience>Basic</audience>
+      <projectType>Standard</projectType>
+    </type>
+    <relationships/>
+    <agencies>
+      <rightsHolder>
+        <abbr>Biblica</abbr>
+        <url>http://www.Biblica.com</url>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </rightsHolder>
+      <rightsAdmin>
+        <url>http://www.Biblica.com</url>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </rightsAdmin>
+      <contributor>
+        <content>true</content>
+        <publication>true</publication>
+        <management>true</management>
+        <finance>true</finance>
+        <qa>true</qa>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </contributor>
+    </agencies>
+    <language>
+      <iso>ces</iso>
+      <name>Czech</name>
+      <nameLocal>Čeština</nameLocal>
+      <script>Latin</script>
+      <scriptCode>Latn</scriptCode>
+      <scriptDirection>LTR</scriptDirection>
+      <ldml>cs</ldml>
+      <numerals>Arabic</numerals>
+    </language>
+    <countries>
+      <country>
+        <iso>CZ</iso>
+        <name>Czechia</name>
+      </country>
+    </countries>
+    <format>
+      <usxVersion>3.0</usxVersion>
+      <versedParagraphs>false</versedParagraphs>
+    </format>
+    <names>
+      <name id="book-mat">
+        <abbr>Mt</abbr>
+        <short>Matouš</short>
+        <long>Evangelium podle Matouše</long>
+      </name>
+      <name id="book-mrk">
+        <abbr>Mk</abbr>
+        <short>Marek</short>
+        <long>Evangelium podle Marka</long>
+      </name>
+      <name id="book-luk">
+        <abbr>L</abbr>
+        <short>Lukáš</short>
+        <long>Evangelium podle Lukáše</long>
+      </name>
+      <name id="book-jhn">
+        <abbr>J</abbr>
+        <short>Jan</short>
+        <long>Evangelium podle Jana</long>
+      </name>
+      <name id="book-act">
+        <abbr>Sk</abbr>
+        <short>Skutky</short>
+        <long>Skutky apoštolü</long>
+      </name>
+      <name id="book-rom">
+        <abbr>Ř</abbr>
+        <short>Římanům</short>
+        <long>List Římanům</long>
+      </name>
+      <name id="book-1co">
+        <abbr>1K</abbr>
+        <short>1. Korintským</short>
+        <long>První list Korintským</long>
+      </name>
+      <name id="book-2co">
+        <abbr>2K</abbr>
+        <short>2. Korintským</short>
+        <long>Druhý list Korintským</long>
+      </name>
+      <name id="book-gal">
+        <abbr>Ga</abbr>
+        <short>Galatským</short>
+        <long>List Galatským</long>
+      </name>
+      <name id="book-eph">
+        <abbr>Ef</abbr>
+        <short>Efezským</short>
+        <long>List Efezským</long>
+      </name>
+      <name id="book-php">
+        <abbr>Fp</abbr>
+        <short>Filipským</short>
+        <long>List Filipským</long>
+      </name>
+      <name id="book-col">
+        <abbr>Ko</abbr>
+        <short>Koloským</short>
+        <long>List Koloským</long>
+      </name>
+      <name id="book-1th">
+        <abbr>1Te</abbr>
+        <short>1. Tesalonickým</short>
+        <long>První list Tesalonickým</long>
+      </name>
+      <name id="book-2th">
+        <abbr>2Te</abbr>
+        <short>2. Tesalonickým</short>
+        <long>Druhý list Tesalonickým</long>
+      </name>
+      <name id="book-1ti">
+        <abbr>1Tm</abbr>
+        <short>1. Timotejovi</short>
+        <long>První list Timotejovi</long>
+      </name>
+      <name id="book-2ti">
+        <abbr>2Tm</abbr>
+        <short>2. Timotejovi</short>
+        <long>Druhý list Timotejovi</long>
+      </name>
+      <name id="book-tit">
+        <abbr>Tt</abbr>
+        <short>Titovi</short>
+        <long>List Titovi</long>
+      </name>
+      <name id="book-phm">
+        <abbr>Fm</abbr>
+        <short>Filemonovi</short>
+        <long>List Filemonovi</long>
+      </name>
+      <name id="book-heb">
+        <abbr>Žd</abbr>
+        <short>Židům</short>
+        <long>List Židům</long>
+      </name>
+      <name id="book-jas">
+        <abbr>Jk</abbr>
+        <short>Jakubův</short>
+        <long>List Jakubův</long>
+      </name>
+      <name id="book-1pe">
+        <abbr>1Pt</abbr>
+        <short>1. Petrův</short>
+        <long>První list Petrův</long>
+      </name>
+      <name id="book-2pe">
+        <abbr>2Pt</abbr>
+        <short>2. Petrův</short>
+        <long>Druhý list Petrův</long>
+      </name>
+      <name id="book-1jn">
+        <abbr>1J</abbr>
+        <short>1. Janův</short>
+        <long>První list Janův</long>
+      </name>
+      <name id="book-2jn">
+        <abbr>2J</abbr>
+        <short>2. Janův</short>
+        <long>Druhý list Janův</long>
+      </name>
+      <name id="book-3jn">
+        <abbr>3J</abbr>
+        <short>3. Janův</short>
+        <long>Třetí list Janův</long>
+      </name>
+      <name id="book-jud">
+        <abbr>Ju</abbr>
+        <short>Judův</short>
+        <long>List Judův</long>
+      </name>
+      <name id="book-rev">
+        <abbr>Zj</abbr>
+        <short>Zjevení</short>
+        <long>Zjevení Janovo</long>
+      </name>
+    </names>
+    <manifest>
+      <resource checksum="78200f164fb64f392413e086c8d289b0" mimeType="application/xml" size="87345" uri="release/USX_1/1CO.usx"/>
+      <resource checksum="0a3ee5a1a00132339b058d845d033dff" mimeType="application/xml" size="19546" uri="release/USX_1/1JN.usx"/>
+      <resource checksum="f92b347cf61ad8a4d1019c6313160620" mimeType="application/xml" size="25360" uri="release/USX_1/1PE.usx"/>
+      <resource checksum="3abf804c73f8e14403ffefb452cfdd1f" mimeType="application/xml" size="17708" uri="release/USX_1/1TH.usx"/>
+      <resource checksum="7cfc37804be30c1fc2ba39aa016ec56c" mimeType="application/xml" size="22863" uri="release/USX_1/1TI.usx"/>
+      <resource checksum="ad25d81525888faefea561e56ed6f68f" mimeType="application/xml" size="56250" uri="release/USX_1/2CO.usx"/>
+      <resource checksum="17a0f298342b38233a4ecb169509c9d3" mimeType="application/xml" size="2772" uri="release/USX_1/2JN.usx"/>
+      <resource checksum="f837e1319821bd34ce1a4a042ce8e0fc" mimeType="application/xml" size="13574" uri="release/USX_1/2PE.usx"/>
+      <resource checksum="35cf7802a85e362736c15d3c5282fa9e" mimeType="application/xml" size="9182" uri="release/USX_1/2TH.usx"/>
+      <resource checksum="4a3da854f864aae61aaccf26ae206c50" mimeType="application/xml" size="17369" uri="release/USX_1/2TI.usx"/>
+      <resource checksum="effae6d23484a8636f7c0051777af3a2" mimeType="application/xml" size="3444" uri="release/USX_1/3JN.usx"/>
+      <resource checksum="a898b07a340bba5b33389cd76b112d36" mimeType="application/xml" size="209608" uri="release/USX_1/ACT.usx"/>
+      <resource checksum="1f972adde9382cda485bbf94a8da59bd" mimeType="application/xml" size="20104" uri="release/USX_1/COL.usx"/>
+      <resource checksum="e7c14212ecc70fcd6656147242088971" mimeType="application/xml" size="29068" uri="release/USX_1/EPH.usx"/>
+      <resource checksum="be98afd73c7e9ca8c68658411e682b3b" mimeType="application/xml" size="31402" uri="release/USX_1/GAL.usx"/>
+      <resource checksum="2cfd9af3d01c4b37bbf4e94e8b943922" mimeType="application/xml" size="64493" uri="release/USX_1/HEB.usx"/>
+      <resource checksum="d49f4ba41c1e3a86fc84f78f74c189ce" mimeType="application/xml" size="22085" uri="release/USX_1/JAS.usx"/>
+      <resource checksum="c9a80aea4de2b0d7a48cf6b73f19b443" mimeType="application/xml" size="166507" uri="release/USX_1/JHN.usx"/>
+      <resource checksum="94aaa5ae5c1e7292a7fcbc4ae55174b7" mimeType="application/xml" size="6387" uri="release/USX_1/JUD.usx"/>
+      <resource checksum="8924a1a336457c75e9780bca65d2ca83" mimeType="application/xml" size="224076" uri="release/USX_1/LUK.usx"/>
+      <resource checksum="c3a1272ce6354d90ce403b9f1959913b" mimeType="application/xml" size="214488" uri="release/USX_1/MAT.usx"/>
+      <resource checksum="484c1af23f3bd64a632d6aa5916911da" mimeType="application/xml" size="144559" uri="release/USX_1/MRK.usx"/>
+      <resource checksum="cd8adea7822abe8f59009ef58f036438" mimeType="application/xml" size="4606" uri="release/USX_1/PHM.usx"/>
+      <resource checksum="e083953900d4dd6255659d07cf77af3f" mimeType="application/xml" size="21230" uri="release/USX_1/PHP.usx"/>
+      <resource checksum="a1073b6e283eff33f7fe88d0d033a7f7" mimeType="application/xml" size="93349" uri="release/USX_1/REV.usx"/>
+      <resource checksum="bd0fe198f6e463490e8c68d054536c03" mimeType="application/xml" size="83754" uri="release/USX_1/ROM.usx"/>
+      <resource checksum="77308f0b237d44a35448d4f0ef8c2952" mimeType="application/xml" size="10169" uri="release/USX_1/TIT.usx"/>
+      <resource checksum="76ef5c356d44507282348177b0b8a036" mimeType="application/xml" size="3316" uri="release/ces_cs.ldml"/>
+      <resource checksum="a5f7f3768c4a5651db1c29d803e5e542" mimeType="application/xml" size="94831" uri="release/styles.xml"/>
+      <resource checksum="9e9a9f53243dc8153660d6f05fd9ce84" mimeType="text/plain" size="15417" uri="release/versification.vrs"/>
+      <resource checksum="bd220fb6e798753528ddabf9dddcd4bb" mimeType="application/zip" size="444236" uri="source/source.zip"/>
+    </manifest>
+    <source>
+      <canonicalContent>
+        <book code="1CO"/>
+        <book code="1JN"/>
+        <book code="1PE"/>
+        <book code="1TH"/>
+        <book code="1TI"/>
+        <book code="2CO"/>
+        <book code="2JN"/>
+        <book code="2PE"/>
+        <book code="2TH"/>
+        <book code="2TI"/>
+        <book code="3JN"/>
+        <book code="ACT"/>
+        <book code="COL"/>
+        <book code="EPH"/>
+        <book code="GAL"/>
+        <book code="HEB"/>
+        <book code="JAS"/>
+        <book code="JHN"/>
+        <book code="JUD"/>
+        <book code="LUK"/>
+        <book code="MAT"/>
+        <book code="MRK"/>
+        <book code="PHM"/>
+        <book code="PHP"/>
+        <book code="REV"/>
+        <book code="ROM"/>
+        <book code="TIT"/>
+      </canonicalContent>
+      <structure>
+        <content src="source/source.zip" role="sourceZip"/>
+      </structure>
+    </source>
+    <publications>
+      <publication id="p1" default="true">
+        <name>Czech Living New Testament 2012</name>
+        <nameLocal>Slovo na cestu</nameLocal>
+        <description>New Testament</description>
+        <descriptionLocal>Nového zákona</descriptionLocal>
+        <abbreviation>SNC</abbreviation>
+        <abbreviationLocal>SNC</abbreviationLocal>
+        <canonicalContent>
+          <book code="1CO"/>
+          <book code="1JN"/>
+          <book code="1PE"/>
+          <book code="1TH"/>
+          <book code="1TI"/>
+          <book code="2CO"/>
+          <book code="2JN"/>
+          <book code="2PE"/>
+          <book code="2TH"/>
+          <book code="2TI"/>
+          <book code="3JN"/>
+          <book code="ACT"/>
+          <book code="COL"/>
+          <book code="EPH"/>
+          <book code="GAL"/>
+          <book code="HEB"/>
+          <book code="JAS"/>
+          <book code="JHN"/>
+          <book code="JUD"/>
+          <book code="LUK"/>
+          <book code="MAT"/>
+          <book code="MRK"/>
+          <book code="PHM"/>
+          <book code="PHP"/>
+          <book code="REV"/>
+          <book code="ROM"/>
+          <book code="TIT"/>
+        </canonicalContent>
+        <structure>
+          <content name="book-mat" src="release/USX_1/MAT.usx" role="MAT"/>
+          <content name="book-mrk" src="release/USX_1/MRK.usx" role="MRK"/>
+          <content name="book-luk" src="release/USX_1/LUK.usx" role="LUK"/>
+          <content name="book-jhn" src="release/USX_1/JHN.usx" role="JHN"/>
+          <content name="book-act" src="release/USX_1/ACT.usx" role="ACT"/>
+          <content name="book-rom" src="release/USX_1/ROM.usx" role="ROM"/>
+          <content name="book-1co" src="release/USX_1/1CO.usx" role="1CO"/>
+          <content name="book-2co" src="release/USX_1/2CO.usx" role="2CO"/>
+          <content name="book-gal" src="release/USX_1/GAL.usx" role="GAL"/>
+          <content name="book-eph" src="release/USX_1/EPH.usx" role="EPH"/>
+          <content name="book-php" src="release/USX_1/PHP.usx" role="PHP"/>
+          <content name="book-col" src="release/USX_1/COL.usx" role="COL"/>
+          <content name="book-1th" src="release/USX_1/1TH.usx" role="1TH"/>
+          <content name="book-2th" src="release/USX_1/2TH.usx" role="2TH"/>
+          <content name="book-1ti" src="release/USX_1/1TI.usx" role="1TI"/>
+          <content name="book-2ti" src="release/USX_1/2TI.usx" role="2TI"/>
+          <content name="book-tit" src="release/USX_1/TIT.usx" role="TIT"/>
+          <content name="book-phm" src="release/USX_1/PHM.usx" role="PHM"/>
+          <content name="book-heb" src="release/USX_1/HEB.usx" role="HEB"/>
+          <content name="book-jas" src="release/USX_1/JAS.usx" role="JAS"/>
+          <content name="book-1pe" src="release/USX_1/1PE.usx" role="1PE"/>
+          <content name="book-2pe" src="release/USX_1/2PE.usx" role="2PE"/>
+          <content name="book-1jn" src="release/USX_1/1JN.usx" role="1JN"/>
+          <content name="book-2jn" src="release/USX_1/2JN.usx" role="2JN"/>
+          <content name="book-3jn" src="release/USX_1/3JN.usx" role="3JN"/>
+          <content name="book-jud" src="release/USX_1/JUD.usx" role="JUD"/>
+          <content name="book-rev" src="release/USX_1/REV.usx" role="REV"/>
+        </structure>
+      </publication>
+    </publications>
+    <copyright>
+      <fullStatement>
+        <statementContent type="xhtml">
+          <p>Slovo na cestu™ SNC™</p>
+          <p>(Czech Living New Testament™)</p>
+          <p>Copyright © 1988, 2000, 2012 by Biblica, Inc.</p>
+          <p>Used with permission. All rights reserved worldwide.</p>
+        </statementContent>
+      </fullStatement>
+    </copyright>
+    <promotion>
+      <promoVersionInfo contentType="xhtml">
+        <p>Biblica, <em>The International Bible Society,</em> provides God's Word to people through Bible translation and Bible publishing, and Bible engagement in Africa, Asia Pacific, Europe, Latin America, Middle East, North America, and South Asia. Through its worldwide reach, Biblica engages people with God's Word so that their lives are transformed through a relationship with Jesus Christ. </p>
+      </promoVersionInfo>
+    </promotion>
+    <archiveStatus>
+      <archivistName>Peggy Connett</archivistName>
+      <dateArchived>2022-03-03T21:54:30.396986</dateArchived>
+      <dateUpdated>2022-03-30T23:27:22.859406</dateUpdated>
+      <comments>Metatext update</comments>
+    </archiveStatus>
+  </DBLMetadata>

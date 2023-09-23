@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="OBA" style="id">- Nueva Versión Internacional (NVI)</book>
+  <para style="rem">Copyright © 1999, 2015, 2022 by Biblica, Inc.</para>
+  <para style="h">Abdías</para>
+  <para style="toc1">Abdías</para>
+  <para style="toc2">Abdías</para>
+  <para style="toc3">Abd</para>
+  <para style="mt1">Abdías</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="OBA 1"/>
+  <para style="p">
+    <verse number="1" style="v" sid="OBA 1:1"/>Visión de Abdías.</para>
+  <para style="s1" vid="OBA 1:1">Orgullo y caída de Edom</para>
+  <para style="sr" vid="OBA 1:1">
+    <ref loc="OBA 1:1-4">1-4</ref> – <char style="xt"><ref loc="JER 49:14-16">Jer 49:14-16</ref></char></para>
+  <para style="sr" vid="OBA 1:1">
+    <ref loc="OBA 1:5-6">5-6</ref> – <char style="xt"><ref loc="JER 49:9-10">Jer 49:9-10</ref></char></para>
+  <para style="p" vid="OBA 1:1">Esto es lo que dice el <char style="nd">Señor</char> y Dios acerca de Edom.</para>
+  <para style="q1" vid="OBA 1:1">Hemos oído un mensaje de parte del <char style="nd">Señor</char>.</para>
+  <para style="q2" vid="OBA 1:1">Un heraldo ha sido enviado a las naciones, diciendo:</para>
+  <para style="q1" vid="OBA 1:1">«¡Vamos, marchemos a la guerra contra ella!».<verse eid="OBA 1:1"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v" sid="OBA 1:2"/>«Te haré pequeño entre las naciones,</para>
+  <para style="q2" vid="OBA 1:2">totalmente menospreciado.<verse eid="OBA 1:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="OBA 1:3"/>La soberbia de tu corazón te ha engañado.</para>
+  <para style="q2" vid="OBA 1:3">Como habitas en las hendiduras de las rocas,<note caller="+" style="f"><char style="fr" closed="false">1:3 </char><char style="fq" closed="false">de las rocas</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">de Selá</char><char style="ft" closed="false">, que era la capital de Edom. Véanse <char style="xt"><ref loc="JDG 1:36">Jue 1:36</ref>; <ref loc="2KI 14:7">2R 14:7</ref></char>.</char></note></para>
+  <para style="q2" vid="OBA 1:3">en la altura de tu morada,</para>
+  <para style="q1" vid="OBA 1:3">te engañas a ti mismo, diciendo:</para>
+  <para style="q2" vid="OBA 1:3">¿Quién podrá arrojarme a tierra?<verse eid="OBA 1:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="OBA 1:4"/>Aunque vueles a lo alto como águila,</para>
+  <para style="q2" vid="OBA 1:4">y tu nido esté puesto en las estrellas,</para>
+  <para style="q2" vid="OBA 1:4">desde allí te haré caer»,</para>
+  <para style="q2" vid="OBA 1:4">afirma el <char style="nd">Señor</char>.<verse eid="OBA 1:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="OBA 1:5"/>«Si vinieran a ti ladrones</para>
+  <para style="q2" vid="OBA 1:5">o saqueadores nocturnos,</para>
+  <para style="q1" vid="OBA 1:5">¿no robarían solo lo que crean suficiente?</para>
+  <para style="q2" vid="OBA 1:5">¡Pero a ti te espera gran destrucción!</para>
+  <para style="q1" vid="OBA 1:5">Si vinieran a ti los vendimiadores,</para>
+  <para style="q2" vid="OBA 1:5">¿no dejarían algunas uvas?<verse eid="OBA 1:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="OBA 1:6"/>¡Pero a ti, Esaú, te saquearán!</para>
+  <para style="q2" vid="OBA 1:6">¡Te despojarán de tus tesoros más escondidos!<verse eid="OBA 1:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="OBA 1:7"/>Hasta la frontera te expulsarán</para>
+  <para style="q2" vid="OBA 1:7">tus propios aliados,</para>
+  <para style="q1" vid="OBA 1:7">te engañarán y dominarán</para>
+  <para style="q2" vid="OBA 1:7">tus propios amigos.</para>
+  <para style="q1" vid="OBA 1:7">Los que se sientan a tu mesa</para>
+  <para style="q2" vid="OBA 1:7">te pondrán una trampa.</para>
+  <para style="q1" vid="OBA 1:7">Es que Edom no tiene entendimiento.<verse eid="OBA 1:7"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v" sid="OBA 1:8"/>»¿Acaso no destruiré yo en aquel día</para>
+  <para style="q2" vid="OBA 1:8">a los sabios de Edom,</para>
+  <para style="q2" vid="OBA 1:8">a la inteligencia del monte de Esaú?»,</para>
+  <para style="q2" vid="OBA 1:8">afirma el <char style="nd">Señor</char>.<verse eid="OBA 1:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="OBA 1:9"/>«Ciudad de Temán, tus guerreros temblarán de miedo,</para>
+  <para style="q2" vid="OBA 1:9">de que todo hombre sea exterminado</para>
+  <para style="q2" vid="OBA 1:9">del monte de Esaú por la masacre.<verse eid="OBA 1:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="OBA 1:10"/>Por la violencia hecha contra tu hermano Jacob,</para>
+  <para style="q2" vid="OBA 1:10">te cubrirá la vergüenza</para>
+  <para style="q2" vid="OBA 1:10">y serás exterminado para siempre.<verse eid="OBA 1:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="OBA 1:11"/>En el día que te mantuviste al margen,</para>
+  <para style="q2" vid="OBA 1:11">en el día que extranjeros se llevaron sus riquezas,</para>
+  <para style="q1" vid="OBA 1:11">cuando extraños entraron por su puerta</para>
+  <para style="q2" vid="OBA 1:11">y sobre Jerusalén echaron suerte,</para>
+  <para style="q2" vid="OBA 1:11">tú eras como uno de ellos.<verse eid="OBA 1:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="OBA 1:12"/>No debiste reírte de tu hermano en su mal día,</para>
+  <para style="q2" vid="OBA 1:12">en el día de su desgracia.</para>
+  <para style="q1" vid="OBA 1:12">No debiste alegrarte a costa del pueblo de Judá</para>
+  <para style="q2" vid="OBA 1:12">en el día de su ruina.</para>
+  <para style="q1" vid="OBA 1:12">No debiste hablar con arrogancia</para>
+  <para style="q2" vid="OBA 1:12">en el día de su angustia.<verse eid="OBA 1:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="OBA 1:13"/>No debiste entrar por la puerta de mi pueblo</para>
+  <para style="q2" vid="OBA 1:13">en el día de su calamidad.</para>
+  <para style="q1" vid="OBA 1:13">No debiste disfrutar con su desgracia</para>
+  <para style="q2" vid="OBA 1:13">en el día de su calamidad.</para>
+  <para style="q1" vid="OBA 1:13">No debiste echar mano a sus riquezas</para>
+  <para style="q2" vid="OBA 1:13">en el día de su calamidad.<verse eid="OBA 1:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="OBA 1:14"/>No debiste aguardar en los cruces de caminos</para>
+  <para style="q2" vid="OBA 1:14">para matar a los que huían.</para>
+  <para style="q1" vid="OBA 1:14">No debiste entregar a los sobrevivientes</para>
+  <para style="q2" vid="OBA 1:14">en el día de su angustia.<verse eid="OBA 1:14"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v" sid="OBA 1:15"/>»Porque cercano está el día del <char style="nd">Señor</char></para>
+  <para style="q2" vid="OBA 1:15">contra todas las naciones.</para>
+  <para style="q1" vid="OBA 1:15">¡Como hiciste se te hará!</para>
+  <para style="q2" vid="OBA 1:15">¡Sobre tu cabeza recaerá tu merecido!<verse eid="OBA 1:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="OBA 1:16"/>Pues sin duda que, así como ustedes</para>
+  <para style="q2" vid="OBA 1:16">bebieron de mi copa en mi santo monte,</para>
+  <para style="q1" vid="OBA 1:16">así también la beberán sin cesar todas las naciones;</para>
+  <para style="q2" vid="OBA 1:16">beberán y beberán,</para>
+  <para style="q2" vid="OBA 1:16">entonces serán como si nunca hubieran existido.<verse eid="OBA 1:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="OBA 1:17"/>Pero en el monte Sión habrá liberación</para>
+  <para style="q2" vid="OBA 1:17">y será sagrado.</para>
+  <para style="q2" vid="OBA 1:17">El pueblo de Jacob recuperará sus posesiones.<verse eid="OBA 1:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="OBA 1:18"/>Los descendientes de Jacob serán fuego</para>
+  <para style="q2" vid="OBA 1:18">y los de José, llama;</para>
+  <para style="q1" vid="OBA 1:18">pero la casa real de Esaú será paja:</para>
+  <para style="q2" vid="OBA 1:18">le pondrán fuego y la consumirán</para>
+  <para style="q1" vid="OBA 1:18">de tal forma que no quedará sobreviviente</para>
+  <para style="q2" vid="OBA 1:18">entre los descendientes de Esaú».</para>
+  <para style="q1" vid="OBA 1:18">El <char style="nd">Señor</char> lo ha dicho.<verse eid="OBA 1:18"/></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v" sid="OBA 1:19"/>Los del Néguev poseerán</para>
+  <para style="q2" vid="OBA 1:19">el monte de Esaú;</para>
+  <para style="q1" vid="OBA 1:19">los de la región de Sefalá</para>
+  <para style="q2" vid="OBA 1:19">poseerán Filistea;</para>
+  <para style="q1" vid="OBA 1:19">también poseerán los campos de Efraín y de Samaria;</para>
+  <para style="q2" vid="OBA 1:19">y los de Benjamín poseerán Galaad.<verse eid="OBA 1:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="OBA 1:20"/>Los exiliados, este ejército de israelitas</para>
+  <para style="q2" vid="OBA 1:20">que viven entre los cananeos,</para>
+  <para style="q2" vid="OBA 1:20">poseerán la tierra hasta Sarepta.</para>
+  <para style="q1" vid="OBA 1:20">Los desterrados de Jerusalén,</para>
+  <para style="q2" vid="OBA 1:20">que viven en Sefarad,</para>
+  <para style="q2" vid="OBA 1:20">poseerán las ciudades del Néguev.<verse eid="OBA 1:20"/></para>
+  <para style="q1">
+    <verse number="21" style="v" sid="OBA 1:21"/>Los libertadores subirán al monte Sión</para>
+  <para style="q2" vid="OBA 1:21">para gobernar la región montañosa de Esaú.</para>
+  <para style="q2" vid="OBA 1:21">Y el reino será del <char style="nd">Señor</char>.<verse eid="OBA 1:21"/></para>
+  <chapter eid="OBA 1"/>
+</usx>

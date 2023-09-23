@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<usx version="3.0">
+  <book code="JOL" style="id">- God’s Word Bible</book>
+  <para style="ide">UTF-8</para>
+  <para style="rem">© 1995, 2003, 2013, 2014, 2019, 2020 by God’s Word to the Nations Mission Society. All rights reserved.</para>
+  <para style="rem">Converted from InDesign files to USFM-3 by Elbert Boot (Digital Bible Library Customer Service Team, Miami [USA])</para>
+  <para style="rem">Language: English</para>
+  <para style="rem">This project has 9 poetry levels, and Paratext only supports up to 4 levels. To upload the text to DBL, we have created a dblChanges file and added q5 to q9 to a custom.sty to obtain the desired design in Paratext.</para>
+  <para style="h">JOEL</para>
+  <para style="toc1">Joel</para>
+  <para style="toc2">Joel</para>
+  <para style="toc3">Joel</para>
+  <para style="mt1">Joel</para>
+  <chapter number="1" style="c" sid="JOL 1" />
+  <para style="s1">The Prophet Joel</para>
+  <para style="m">
+    <verse number="1" style="v" sid="JOL 1:1" />This is what the <char style="nd">Lord</char> said to Joel, son of Pethuel.<verse eid="JOL 1:1" /></para>
+  <para style="s1">Judah Is Plagued with Locusts and Famine</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="JOL 1:2" />Listen to this, you leaders!</para>
+  <para style="q1" vid="JOL 1:2">Open your ears, all inhabitants of this land!</para>
+  <para style="q1" vid="JOL 1:2">Nothing like this has ever happened in your lifetime</para>
+  <para style="q1" vid="JOL 1:2">or in your ancestors’ lifetime.<verse eid="JOL 1:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="JOL 1:3" />Tell your children about it.</para>
+  <para style="q1" vid="JOL 1:3">Have your children tell their children.</para>
+  <para style="q1" vid="JOL 1:3">Have your grandchildren tell their children.<verse eid="JOL 1:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="JOL 1:4" />What young locusts leave, mature locusts will eat.</para>
+  <para style="q1" vid="JOL 1:4">What mature locusts leave, adult locusts will eat.</para>
+  <para style="q1" vid="JOL 1:4">What adult locusts leave, grasshoppers will eat.<verse eid="JOL 1:4" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="5" style="v" sid="JOL 1:5" />Wake up and cry, you drunks!</para>
+  <para style="q1" vid="JOL 1:5">Cry loudly, you wine drinkers!</para>
+  <para style="q1" vid="JOL 1:5">New wine has been taken away from you.<verse eid="JOL 1:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="JOL 1:6" />A strong nation attacked my land.</para>
+  <para style="q1" vid="JOL 1:6">It has too many soldiers to count.</para>
+  <para style="q1" vid="JOL 1:6">They have teeth like lions.</para>
+  <para style="q1" vid="JOL 1:6">They have fangs like grown lions.<verse eid="JOL 1:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="JOL 1:7" />They destroyed my grapevines.</para>
+  <para style="q1" vid="JOL 1:7">They ruined my fig trees.</para>
+  <para style="q1" vid="JOL 1:7">They stripped off what they could eat,</para>
+  <para style="q1" vid="JOL 1:7">threw the rest away, and left the branches bare.<verse eid="JOL 1:7" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="8" style="v" sid="JOL 1:8" />Cry loudly like a young woman who is dressed in sackcloth,</para>
+  <para style="q1" vid="JOL 1:8">mourning for the man she was going to marry.<verse eid="JOL 1:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="JOL 1:9" />Grain offerings and wine offerings</para>
+  <para style="q1" vid="JOL 1:9">are no longer brought to the <char style="nd">Lord</char>’s temple.</para>
+  <para style="q1" vid="JOL 1:9">The priests, the <char style="nd">Lord</char>’s servants, mourn.<verse eid="JOL 1:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="JOL 1:10" />Israel’s fields are ruined, and the ground is dried up.</para>
+  <para style="q1" vid="JOL 1:10">The grain has been destroyed.</para>
+  <para style="q1" vid="JOL 1:10">The new wine has dried up.</para>
+  <para style="q1" vid="JOL 1:10">The olive oil has run out.<verse eid="JOL 1:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="JOL 1:11" />Be sad, you farmers!</para>
+  <para style="q1" vid="JOL 1:11">Cry loudly, you grape growers!</para>
+  <para style="q1" vid="JOL 1:11">Mourn for the wheat and the barley.</para>
+  <para style="q1" vid="JOL 1:11">The harvest is destroyed in the field.<verse eid="JOL 1:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="JOL 1:12" />The grapevines are dried up.</para>
+  <para style="q1" vid="JOL 1:12">The fig trees are withered.</para>
+  <para style="q1" vid="JOL 1:12">The pomegranate, palm, and apricot trees,</para>
+  <para style="q1" vid="JOL 1:12">as well as all the trees in the orchards, have died.</para>
+  <para style="q1" vid="JOL 1:12">Yes, the joy of these people has died too.<verse eid="JOL 1:12" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="13" style="v" sid="JOL 1:13" />Put on your sackcloth and mourn, you priests.</para>
+  <para style="q1" vid="JOL 1:13">Cry loudly, you servants of the altar.</para>
+  <para style="q1" vid="JOL 1:13">Spend the night in sackcloth, you servants of my God.</para>
+  <para style="q1" vid="JOL 1:13">Grain offerings and wine offerings</para>
+  <para style="q1" vid="JOL 1:13">are withheld from your God’s temple.<verse eid="JOL 1:13" /></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="JOL 1:14" />Schedule a time to fast!</para>
+  <para style="q1" vid="JOL 1:14">Call for an assembly!</para>
+  <para style="q1" vid="JOL 1:14">Gather the leaders and everyone who lives in the land.</para>
+  <para style="q1" vid="JOL 1:14">Bring them to the temple of the <char style="nd">Lord</char> your God,</para>
+  <para style="q1" vid="JOL 1:14">and cry to the <char style="nd">Lord</char> for help.<verse eid="JOL 1:14" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="15" style="v" sid="JOL 1:15" />This will be a terrible day!</para>
+  <para style="q1" vid="JOL 1:15">The day of the <char style="nd">Lord</char> is near,</para>
+  <para style="q1" vid="JOL 1:15">and it will come like destruction from the Almighty.<verse eid="JOL 1:15" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="16" style="v" sid="JOL 1:16" />Food disappears right before our eyes.</para>
+  <para style="q1" vid="JOL 1:16">Happiness and rejoicing disappear from our God’s temple.<verse eid="JOL 1:16" /></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="JOL 1:17" />Seeds shrivel up in their shells.</para>
+  <para style="q1" vid="JOL 1:17">Storehouses are destroyed.</para>
+  <para style="q1" vid="JOL 1:17">Barns are ruined.</para>
+  <para style="q1" vid="JOL 1:17">The grain has dried up.<verse eid="JOL 1:17" /></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="JOL 1:18" />The animals groan.</para>
+  <para style="q1" vid="JOL 1:18">Herds of cattle wander around confused.</para>
+  <para style="q1" vid="JOL 1:18">There’s no pasture for them.</para>
+  <para style="q1" vid="JOL 1:18">Even flocks of sheep are suffering.<verse eid="JOL 1:18" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="19" style="v" sid="JOL 1:19" />O <char style="nd">Lord</char>, I cry to you for help!</para>
+  <para style="q1" vid="JOL 1:19">Fire has burned up the open pastures.</para>
+  <para style="q1" vid="JOL 1:19">Flames have burned up all the trees in the orchards.<verse eid="JOL 1:19" /></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="JOL 1:20" />Even wild animals long for you.</para>
+  <para style="q1" vid="JOL 1:20">Streams run dry.</para>
+  <para style="q1" vid="JOL 1:20">Fire has burned up the open pastures.<verse eid="JOL 1:20" /></para>
+  <chapter eid="JOL 1" />
+  <chapter number="2" style="c" sid="JOL 2" />
+  <para style="s1">The Day of the <char style="nd">LORD</char></para>
+  <para style="q1">
+    <verse number="1" style="v" sid="JOL 2:1" />Blow the ram’s horn in Zion.</para>
+  <para style="q1" vid="JOL 2:1">Sound the alarm on my holy mountain.</para>
+  <para style="q1" vid="JOL 2:1">Everyone who lives in the land should tremble,</para>
+  <para style="q1" vid="JOL 2:1">because the day of the <char style="nd">Lord</char> is coming.</para>
+  <para style="q1" vid="JOL 2:1">Certainly, it is near.<verse eid="JOL 2:1" /></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="JOL 2:2" />It is a day of darkness and gloom,</para>
+  <para style="q1" vid="JOL 2:2">a day of clouds and overcast skies.</para>
+  <para style="q1" vid="JOL 2:2">A large and mighty army</para>
+  <para style="q1" vid="JOL 2:2">will spread over the mountains like the dawn.<note caller="+" style="f"><char style="fr" closed="false">2:2 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“like darkness.”</char></note></para>
+  <para style="q1" vid="JOL 2:2">Nothing like this has ever happened.</para>
+  <para style="q1" vid="JOL 2:2">Nothing like this will ever happen again.<verse eid="JOL 2:2" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="3" style="v" sid="JOL 2:3" />In front of this army a fire burns.</para>
+  <para style="q1" vid="JOL 2:3">Behind it flames are blazing.</para>
+  <para style="q1" vid="JOL 2:3">In front of it the land is like the garden of Eden.</para>
+  <para style="q1" vid="JOL 2:3">Behind it the land is like a barren desert.</para>
+  <para style="q1" vid="JOL 2:3">Nothing escapes it!<verse eid="JOL 2:3" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="4" style="v" sid="JOL 2:4" />The soldiers look like horses.</para>
+  <para style="q1" vid="JOL 2:4">They run like war horses.<verse eid="JOL 2:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="JOL 2:5" />As they leap on mountaintops,</para>
+  <para style="q1" vid="JOL 2:5">they sound like rattling chariots,</para>
+  <para style="q1" vid="JOL 2:5">like crackling fire burning up straw,</para>
+  <para style="q1" vid="JOL 2:5">and like a mighty army prepared for battle.<verse eid="JOL 2:5" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="6" style="v" sid="JOL 2:6" />People are terrified in their presence.</para>
+  <para style="q1" vid="JOL 2:6">Every face turns pale.<verse eid="JOL 2:6" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="7" style="v" sid="JOL 2:7" />They run like warriors.</para>
+  <para style="q1" vid="JOL 2:7">They climb walls like soldiers.</para>
+  <para style="q1" vid="JOL 2:7">They march straight ahead.</para>
+  <para style="q1" vid="JOL 2:7">They do not leave their places.<verse eid="JOL 2:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="JOL 2:8" />They do not crowd one another.</para>
+  <para style="q1" vid="JOL 2:8">They keep in their own lines.</para>
+  <para style="q1" vid="JOL 2:8">Even when they break through the defenses,</para>
+  <para style="q1" vid="JOL 2:8">they do not break their ranks.<verse eid="JOL 2:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="JOL 2:9" />They rush into the city.</para>
+  <para style="q1" vid="JOL 2:9">They run along the wall.</para>
+  <para style="q1" vid="JOL 2:9">They climb into houses.</para>
+  <para style="q1" vid="JOL 2:9">They enter through windows like thieves.<verse eid="JOL 2:9" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="10" style="v" sid="JOL 2:10" />The earth quakes in their presence,</para>
+  <para style="q1" vid="JOL 2:10">and the sky shakes.</para>
+  <para style="q1" vid="JOL 2:10">The sun and the moon turn dark,</para>
+  <para style="q1" vid="JOL 2:10">and the stars no longer shine.<verse eid="JOL 2:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="JOL 2:11" />The <char style="nd">Lord</char> shouts out orders to his army.</para>
+  <para style="q1" vid="JOL 2:11">His forces are very large.</para>
+  <para style="q1" vid="JOL 2:11">The troops that carry out his commands are mighty.</para>
+  <para style="q1" vid="JOL 2:11">The day of the <char style="nd">Lord</char> is extremely terrifying.</para>
+  <para style="q1" vid="JOL 2:11">Who can endure it?<verse eid="JOL 2:11" /></para>
+  <para style="s1">The <char style="nd">LORD</char> Invites the People to Return to Him</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="JOL 2:12" />“But even now,” declares the <char style="nd">Lord</char>,</para>
+  <para style="q1" vid="JOL 2:12">“return to me with all your heart—</para>
+  <para style="q1" vid="JOL 2:12">with fasting, crying, and mourning.”<verse eid="JOL 2:12" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="13" style="v" sid="JOL 2:13" />Tear your hearts, not your clothes.</para>
+  <para style="q1" vid="JOL 2:13">Return to the <char style="nd">Lord</char> your God.</para>
+  <para style="q1" vid="JOL 2:13">He is merciful and compassionate,</para>
+  <para style="q1" vid="JOL 2:13">patient, and always ready to forgive</para>
+  <para style="q1" vid="JOL 2:13">and to change his plans about disaster.<verse eid="JOL 2:13" /></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="JOL 2:14" />Who knows?</para>
+  <para style="q1" vid="JOL 2:14">He may reconsider and change his plan</para>
+  <para style="q1" vid="JOL 2:14">and leave a blessing for you.</para>
+  <para style="q1" vid="JOL 2:14">Then you could give grain offerings and wine offerings</para>
+  <para style="q1" vid="JOL 2:14">to the <char style="nd">Lord</char> your God.<verse eid="JOL 2:14" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="15" style="v" sid="JOL 2:15" />Blow the ram’s horn in Zion.</para>
+  <para style="q1" vid="JOL 2:15">Schedule a time to fast.</para>
+  <para style="q1" vid="JOL 2:15">Call for an assembly.<verse eid="JOL 2:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="JOL 2:16" />Gather the people.</para>
+  <para style="q1" vid="JOL 2:16">Prepare them for a holy meeting.</para>
+  <para style="q1" vid="JOL 2:16">Assemble the leaders.</para>
+  <para style="q1" vid="JOL 2:16">Gather the children, even the nursing infants.</para>
+  <para style="b" vid="JOL 2:16" />
+  <para style="q1" vid="JOL 2:16">Grooms leave their rooms.</para>
+  <para style="q1" vid="JOL 2:16">Brides leave their chambers.<verse eid="JOL 2:16" /></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="JOL 2:17" />The priests who serve the <char style="nd">Lord</char> cry</para>
+  <para style="q1" vid="JOL 2:17">between the altar and the entrance to the temple.</para>
+  <para style="q1" vid="JOL 2:17">They say,</para>
+  <para style="q1" vid="JOL 2:17">“Spare your people, O <char style="nd">Lord</char>.</para>
+  <para style="q1" vid="JOL 2:17">Don’t let the people who belong to you become a disgrace.</para>
+  <para style="q1" vid="JOL 2:17">Don’t let the nations ridicule them.</para>
+  <para style="q1" vid="JOL 2:17">Why should people ask, ‘Where is their God?’ ”<verse eid="JOL 2:17" /></para>
+  <para style="s1">The <char style="nd">LORD</char> Will Give Earthly Blessings to His People</para>
+  <para style="q1">
+    <verse number="18" style="v" sid="JOL 2:18" />Then the <char style="nd">Lord</char> became concerned about his land,</para>
+  <para style="q1" vid="JOL 2:18">and he had pity on his people.<verse eid="JOL 2:18" /></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="JOL 2:19" />The <char style="nd">Lord</char> said to his people,</para>
+  <para style="q1" vid="JOL 2:19">“I am going to send grain, new wine, and olive oil to you.</para>
+  <para style="q1" vid="JOL 2:19">You will be satisfied with them.</para>
+  <para style="q1" vid="JOL 2:19">I will no longer make you a disgrace among the nations.<verse eid="JOL 2:19" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="20" style="v" sid="JOL 2:20" />“I will keep the northern <char style="add">⌞army⌟</char> far from you,</para>
+  <para style="q1" vid="JOL 2:20">and I will force it into a dry and barren land.</para>
+  <para style="q1" vid="JOL 2:20">The soldiers in front will be forced into the eastern sea.</para>
+  <para style="q1" vid="JOL 2:20">The soldiers in back will be forced into the western sea.</para>
+  <para style="q1" vid="JOL 2:20">A foul odor will rise from the dead bodies.</para>
+  <para style="q1" vid="JOL 2:20">They will stink.”</para>
+  <para style="b" vid="JOL 2:20" />
+  <para style="q1" vid="JOL 2:20">He has done great things!<verse eid="JOL 2:20" /></para>
+  <para style="q1">
+    <verse number="21" style="v" sid="JOL 2:21" />Land, do not be afraid.</para>
+  <para style="q1" vid="JOL 2:21">Be glad and rejoice.</para>
+  <para style="q1" vid="JOL 2:21">The <char style="nd">Lord</char> has done great things!<verse eid="JOL 2:21" /></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="JOL 2:22" />Wild animals, do not be afraid.</para>
+  <para style="q1" vid="JOL 2:22">The pastures in the wilderness have turned green.</para>
+  <para style="q1" vid="JOL 2:22">The trees have produced their fruit.</para>
+  <para style="q1" vid="JOL 2:22">There are plenty of figs and grapes.<verse eid="JOL 2:22" /></para>
+  <para style="q1">
+    <verse number="23" style="v" sid="JOL 2:23" />People of Zion, be glad and find joy in the <char style="nd">Lord</char> your God.</para>
+  <para style="q1" vid="JOL 2:23">The <char style="nd">Lord</char> has given you the Teacher of Righteousness.<note caller="+" style="f"><char style="fr" closed="false">2:23 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“The <char style="nd">LORD</char> has given you plenty of autumn rain.”</char></note></para>
+  <para style="q1" vid="JOL 2:23">He has sent the autumn rain and the spring rain as before.<verse eid="JOL 2:23" /></para>
+  <para style="q1">
+    <verse number="24" style="v" sid="JOL 2:24" />The threshing floors <note caller="+" style="f"><char style="fr" closed="false">2:24 </char><char style="ft" closed="false">A </char><char style="fq" closed="false">threshing floor </char><char style="ft" closed="false">is an outdoor area where grain is separated from its husks.</char></note> will be filled with grain.</para>
+  <para style="q1" vid="JOL 2:24">The vats will overflow with new wine and olive oil.<verse eid="JOL 2:24" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="25" style="v" sid="JOL 2:25" />“Then I will repay you for the years</para>
+  <para style="q1" vid="JOL 2:25">that the mature locusts, the adult locusts,</para>
+  <para style="q1" vid="JOL 2:25">the grasshoppers, and the young locusts ate your crops.</para>
+  <para style="q1" vid="JOL 2:25">(They are the large army that I sent against you.)<verse eid="JOL 2:25" /></para>
+  <para style="q1">
+    <verse number="26" style="v" sid="JOL 2:26" />You will have plenty to eat, and you will be full.</para>
+  <para style="q1" vid="JOL 2:26">You will praise the name of the <char style="nd">Lord</char> your God,</para>
+  <para style="q1" vid="JOL 2:26">who has performed miracles for you.</para>
+  <para style="q1" vid="JOL 2:26">My people will never be ashamed again.<verse eid="JOL 2:26" /></para>
+  <para style="q1">
+    <verse number="27" style="v" sid="JOL 2:27" />You will know that I am in Israel.</para>
+  <para style="q1" vid="JOL 2:27">I am the <char style="nd">Lord</char> your God, and there is no other.</para>
+  <para style="q1" vid="JOL 2:27">My people will never be ashamed again.<note caller="+" style="f"><char style="fr" closed="false">2:27 </char><char style="ft" closed="false"><char style="xt"><ref loc="JOL 2:28-32">Joel 2:28–32</ref></char> in English Bibles is Joel 3:1–5 in the Hebrew Bible.</char></note><verse eid="JOL 2:27" /></para>
+  <para style="s1">The <char style="nd">LORD</char> Will Pour His Spirit on All People</para>
+  <para style="q1">
+    <verse number="28" style="v" sid="JOL 2:28" />“After this, I will pour my Spirit on everyone.</para>
+  <para style="q1" vid="JOL 2:28">Your sons and daughters will prophesy.</para>
+  <para style="q1" vid="JOL 2:28">Your old men will dream dreams.</para>
+  <para style="q1" vid="JOL 2:28">Your young men will see visions.<verse eid="JOL 2:28" /></para>
+  <para style="q1">
+    <verse number="29" style="v" sid="JOL 2:29" />In those days I will pour my Spirit on servants,</para>
+  <para style="q1" vid="JOL 2:29">on both men and women.<verse eid="JOL 2:29" /></para>
+  <para style="q1">
+    <verse number="30" style="v" sid="JOL 2:30" />I will work miracles in the sky and on the earth:</para>
+  <para style="q1" vid="JOL 2:30">blood, fire, and clouds of smoke.<verse eid="JOL 2:30" /></para>
+  <para style="q1">
+    <verse number="31" style="v" sid="JOL 2:31" />The sun will become dark,</para>
+  <para style="q1" vid="JOL 2:31">and the moon will become as red as blood before the terrifying day of the <char style="nd">Lord</char> comes.”<verse eid="JOL 2:31" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="32" style="v" sid="JOL 2:32" />Then whoever calls on the name of the <char style="nd">Lord</char> will be saved.</para>
+  <para style="q1" vid="JOL 2:32">Those who escape will be on Mount Zion and in Jerusalem.</para>
+  <para style="q1" vid="JOL 2:32">Among the survivors will be those whom the <char style="nd">Lord</char> calls,</para>
+  <para style="q1" vid="JOL 2:32">as the <char style="nd">Lord</char> has promised.<verse eid="JOL 2:32" /></para>
+  <chapter eid="JOL 2" />
+  <chapter number="3" style="c" sid="JOL 3" />
+  <para style="s1">The <char style="nd">LORD</char> Will Rescue His People</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="JOL 3:1" />
+    <note caller="+" style="f">
+      <char style="fr" closed="false">3:1 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="JOL 3:1-21">Joel 3:1–21</ref>
+        </char> in English Bibles is Joel 4:1–21 in the Hebrew Bible.</char>
+    </note>“In those days and at that time,</para>
+  <para style="q1" vid="JOL 3:1">I will bring back the captives of Judah and Jerusalem.<verse eid="JOL 3:1" /></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="JOL 3:2" />I will gather all the nations.</para>
+  <para style="q1" vid="JOL 3:2">I will bring them down to the valley of Jehoshaphat.<note caller="+" style="f"><char style="fr" closed="false">3:2 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“the valley where the <char style="nd">LORD</char> judges.”</char></note></para>
+  <para style="q1" vid="JOL 3:2">I will judge them there.</para>
+  <para style="q1" vid="JOL 3:2">They scattered the Israelites, the people who belong to me,</para>
+  <para style="q1" vid="JOL 3:2">among the nations.</para>
+  <para style="q1" vid="JOL 3:2">They divided my land.<verse eid="JOL 3:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="JOL 3:3" />They threw dice for my people.</para>
+  <para style="q1" vid="JOL 3:3">They traded boys for prostitutes.</para>
+  <para style="q1" vid="JOL 3:3">They sold girls so that they could buy wine to drink.<verse eid="JOL 3:3" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="4" style="v" sid="JOL 3:4" />“Now what do you have against me, Tyre and Sidon</para>
+  <para style="q1" vid="JOL 3:4">and all the regions of Philistia?</para>
+  <para style="q1" vid="JOL 3:4">Are you paying me back for something I have done?</para>
+  <para style="q1" vid="JOL 3:4">If you are paying me back,</para>
+  <para style="q1" vid="JOL 3:4">I will quickly pay you back for what you have done.<verse eid="JOL 3:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="JOL 3:5" />You took my silver and my gold.</para>
+  <para style="q1" vid="JOL 3:5">You brought my finest treasures to your temples.<verse eid="JOL 3:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="JOL 3:6" />You sold the people of Judah and Jerusalem to the Greeks.</para>
+  <para style="q1" vid="JOL 3:6">That way you could send them far away from their land.<verse eid="JOL 3:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="JOL 3:7" />I am going to make them leave the place where you sold them.</para>
+  <para style="q1" vid="JOL 3:7">I will pay you back for what you have done.<verse eid="JOL 3:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="JOL 3:8" />I will sell your sons and daughters to the people of Judah.</para>
+  <para style="q1" vid="JOL 3:8">They will sell them to the people of Sheba,</para>
+  <para style="q1" vid="JOL 3:8">a nation that is far away.”</para>
+  <para style="q1" vid="JOL 3:8">The <char style="nd">Lord</char> has spoken.<verse eid="JOL 3:8" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="9" style="v" sid="JOL 3:9" />Announce this among the nations:</para>
+  <para style="q1" vid="JOL 3:9">Prepare yourselves for war.</para>
+  <para style="q1" vid="JOL 3:9">Wake up the warriors.</para>
+  <para style="q1" vid="JOL 3:9">Have all the warriors come near and attack.<verse eid="JOL 3:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="JOL 3:10" />Hammer your plowblades into swords</para>
+  <para style="q1" vid="JOL 3:10">and your pruning shears into spears.</para>
+  <para style="q1" vid="JOL 3:10">Weaklings should say that they are warriors.<verse eid="JOL 3:10" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="11" style="v" sid="JOL 3:11" />Hurry from every direction, and gather there, all you nations.</para>
+  <para style="q1" vid="JOL 3:11">O <char style="nd">Lord</char>, bring your soldiers.<verse eid="JOL 3:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="JOL 3:12" />Wake up, you nations.</para>
+  <para style="q1" vid="JOL 3:12">Come to the valley of Jehoshaphat.</para>
+  <para style="q1" vid="JOL 3:12">There I will sit to judge all the surrounding nations.<verse eid="JOL 3:12" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="13" style="v" sid="JOL 3:13" />Cut them down like grain.</para>
+  <para style="q1" vid="JOL 3:13">The harvest is ripe.</para>
+  <para style="q1" vid="JOL 3:13">Stomp on them as you would stomp on grapes.</para>
+  <para style="q1" vid="JOL 3:13">The winepress is full.</para>
+  <para style="q1" vid="JOL 3:13">The vats overflow.</para>
+  <para style="q1" vid="JOL 3:13">The nations are very wicked.<verse eid="JOL 3:13" /></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="JOL 3:14" />There are many, many people in the valley of decision.</para>
+  <para style="q1" vid="JOL 3:14">The day of the <char style="nd">Lord</char> is near in the valley of decision.<verse eid="JOL 3:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="JOL 3:15" />The sun and the moon will turn dark.</para>
+  <para style="q1" vid="JOL 3:15">The stars will no longer shine.<verse eid="JOL 3:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="JOL 3:16" />The <char style="nd">Lord</char> will roar from Zion,</para>
+  <para style="q1" vid="JOL 3:16">and his voice will thunder from Jerusalem.</para>
+  <para style="q1" vid="JOL 3:16">The sky and the earth will shake.</para>
+  <para style="q1" vid="JOL 3:16">The <char style="nd">Lord</char> will be a refuge for his people.</para>
+  <para style="q1" vid="JOL 3:16">He will be a stronghold for the people of Israel.<verse eid="JOL 3:16" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="17" style="v" sid="JOL 3:17" />“You will know that I am the <char style="nd">Lord</char> your God.</para>
+  <para style="q1" vid="JOL 3:17">I live on my holy mountain, Zion.</para>
+  <para style="q1" vid="JOL 3:17">Jerusalem will be holy.</para>
+  <para style="q1" vid="JOL 3:17">Foreigners will never invade it again.<verse eid="JOL 3:17" /></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="JOL 3:18" />On that day new wine will cover the mountains.</para>
+  <para style="q1" vid="JOL 3:18">Milk will flow on the hills.</para>
+  <para style="q1" vid="JOL 3:18">Water will flow in all the brooks of Judah.</para>
+  <para style="q1" vid="JOL 3:18">A spring will flow from the <char style="nd">Lord</char>’s temple.</para>
+  <para style="q1" vid="JOL 3:18">It will water the valley of Shittim.<verse eid="JOL 3:18" /></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="JOL 3:19" />Egypt will become a wasteland.</para>
+  <para style="q1" vid="JOL 3:19">Edom will become a barren desert.</para>
+  <para style="q1" vid="JOL 3:19">This is because the nations were cruel to Judah.</para>
+  <para style="q1" vid="JOL 3:19">They murdered innocent people in their land.<verse eid="JOL 3:19" /></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="JOL 3:20" />People will always live in Judah.</para>
+  <para style="q1" vid="JOL 3:20">People will live in Jerusalem from now on.<verse eid="JOL 3:20" /></para>
+  <para style="q1">
+    <verse number="21" style="v" sid="JOL 3:21" />I will punish those who murder.”</para>
+  <para style="q1" vid="JOL 3:21">The <char style="nd">Lord</char> lives in Zion!<verse eid="JOL 3:21" /></para>
+  <chapter eid="JOL 3" />
+</usx>

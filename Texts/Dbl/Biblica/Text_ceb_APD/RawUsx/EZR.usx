@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="EZR" style="id">- Cebuano Contemporary Bible (Ang Pulong sa Dios)</book>
+  <para style="rem">Copyright © 2009, 2010, 2014 by Biblica, Inc.®</para>
+  <para style="h">Ezra</para>
+  <para style="toc1">Ezra</para>
+  <para style="toc2">Ezra</para>
+  <para style="toc3">Ezra</para>
+  <para style="mt1">Ezra</para>
+  <chapter number="1" style="c"/>
+  <para style="s1">Gipabalik ni Haring Cyrus ang mga Judio sa Ilang Dapit</para>
+  <para style="r">(<ref loc="2CH 36:22-23">2 Cro. 36:22-23</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Sa unang tuig sa paghari ni Cyrus sa Persia, gituman sa <char style="nd">Ginoo</char> ang iyang gisaad pinaagi kang Jeremias.<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="fq" closed="false">iyang gisaad pinaagi kang Jeremias </char><char style="ft" closed="false">nga maluwas ang mga Israelinhon sa pagkabihag gikan sa Babilonia pagkahuman sa 70 ka tuig. (Tan-awa ang <char style="xt"><ref loc="JER 25:11">Jer. 25:11</ref>; <ref loc="JER 29:10">29:10</ref></char>.)</char></note> Gitandog sa <char style="nd">Ginoo</char> ang kasingkasing ni Cyrus sa pagbuhat ug pahibalo aron imantala sa tibuok gingharian.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Mao kini ang pahibalo ni Cyrus nga hari sa Persia: “Ang <char style="nd">Ginoo</char>, ang Dios sa langit<note caller="+" style="f"><char style="fr" closed="false">1:2 </char><char style="fq" closed="false">Dios sa langit</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">Dios nga anaa sa langit; </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">Dios nga naghimo sa langit; </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">Dios nga labaw sa tanan.</char></note> naghatag kanako sa tanang gingharian dinhi sa kalibotan, ug gihatagan niya ako sa responsibilidad sa pagpatukod ug templo alang kaniya didto sa Jerusalem nga sakop sa Juda. <verse number="3" style="v"/>Kamong tanang katawhan sa Dios, hinaut nga ubanan niya kamo. Balik kamo sa Jerusalem ug tukora ninyo pag-usab didto ang templo sa <char style="nd">Ginoo</char>, ang Dios sa Israel, nga anaa niana nga siyudad. <verse number="4" style="v"/>Ang mga katawhan<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="fq" closed="false">Ang mga katawhan</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">Tingali ang buot ipasabot, </char><char style="fqa" closed="false">ang mga dili Israelinhon, </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">ang mga Israelinhon nga buot magpabilin.</char></note> sa mga dapit nga gipuy-an ninyo kinahanglan motabang kaninyo sa inyong paglakaw pinaagi sa paghatag ug pilak ug bulawan, mga kagamitan, mga hayop, ug kinabubut-on nga halad alang sa templo sa Dios sa Jerusalem.”</para>
+  <para style="p">
+    <verse number="5" style="v"/>Busa ang mga pangulo sa pamilya sa tribo ni Juda ug ni Benjamin, ang mga pari, mga Levita, ug ang mga Israelinhon kang kinsang kasingkasing gitandog sa Ginoo nangandam pag-adto sa Jerusalem aron pagtukod pag-usab sa templo sa <char style="nd">Ginoo</char>. <verse number="6" style="v"/>Ang uban nga mga katawhan<note caller="+" style="f"><char style="fr" closed="false">1:6 </char><char style="ft" closed="false">Tan-awa usab ang 1:4.</char></note> mitabang kanila pinaagi sa paghatag sa mga sudlanan nga hinimo sa pilak, mga bulawan, mga kagamitan, mga hayop, mga mahalon nga mga gasa, wala pay labot sa mga kinabubut-on nga halad <char style="add">alang sa templo</char>.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Giuli usab ni Haring Cyrus ang mga galamiton sa templo sa <char style="nd">Ginoo</char> nga gipanguha ni Haring Nebucadnezar gikan sa Jerusalem ug gidala ngadto sa templo sa iyang mga dios. <verse number="8" style="v"/>Gitugyan kini ni Haring Cyrus kang Mitredat nga tresurero sa iyang gingharian. Giihap kini ni Mitredat ug gihatag ang lista kang Sheshbazar, ang gobernador sa Juda. <verse number="9-10" style="v"/>Mao kini ang mga galamiton nga gihatag ni Haring Cyrus:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">bulawan nga mga sudlanan </cell>
+      <cell style="tcr2" align="end">30</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">pilak nga mga sudlanan </cell>
+      <cell style="tcr2" align="end">1,000</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">mga kutsilyo </cell>
+      <cell style="tcr2" align="end">29</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">bulawan nga mga yahong </cell>
+      <cell style="tcr2" align="end">30</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">pilak nga mga yahong </cell>
+      <cell style="tcr2" align="end">410</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">uban pang mga galamiton </cell>
+      <cell style="tcr2" align="end">1,000</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="p">
+    <verse number="11" style="v"/>Sa kinatibuk-an, may 5,400 ka mga galamiton nga bulawan ug pilak, ug gidala kini tanan ni Sheshbazar sa dihang mibalik siya sa Jerusalem kauban sa uban nga mga binihag gikan sa Babilonia.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Ang Lista sa mga Binihag nga Namalik sa Jerusalem</para>
+  <para style="r">(<ref loc="NEH 7:4-73">Neh. 7:4-73</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>May mga Israelinhon sa probinsya sa Juda nga gibihag kaniadto ni Haring Nebucadnezar ug gidala sa Babilonia. Karon, mihawa na kini sila sa Babilonia ug namalik sa Jerusalem ug sa ilang kaugalingong mga lungsod sa Juda. <verse number="2" style="v"/>Ang nangulo kanila sa pagbalik mao sila si Zerubabel, Jeshua, Nehemias, Seraya, Reelaya, Mordecai, Bilshan, Mispar, Bigvai, Rehum, ug Baana.</para>
+  <para style="p">Mao kini ang lista sa katawhan sa Israel <char style="add">nga namalik gikan sa pagkabihag</char>:</para>
+  <para style="p">
+    <verse number="3-20" style="v"/>Mga kaliwat ni:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">Parosh </cell>
+      <cell style="tcr2" align="end">2,172</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Shefatia </cell>
+      <cell style="tcr2" align="end">372</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Ara </cell>
+      <cell style="tcr2" align="end">775</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Pahat Moab (gikan kang Jeshua ug kang Joab) </cell>
+      <cell style="tcr2" align="end">2,812</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Elam </cell>
+      <cell style="tcr2" align="end">1,254</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Zatu </cell>
+      <cell style="tcr2" align="end">945</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Zacai </cell>
+      <cell style="tcr2" align="end">760</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Bani </cell>
+      <cell style="tcr2" align="end">642</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Bebai </cell>
+      <cell style="tcr2" align="end">623</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Azgad </cell>
+      <cell style="tcr2" align="end">1,222</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Adonikam </cell>
+      <cell style="tcr2" align="end">666</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Bigvai </cell>
+      <cell style="tcr2" align="end">2,056</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Adin </cell>
+      <cell style="tcr2" align="end">454</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Ater (nga <char style="add">gitawag usab ug</char> Hezekia)<note caller="+" style="f"><char style="fr" closed="false">2:3-20 </char><char style="fq" closed="false">nga gitawag usab ug Hezekia</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">mga kaliwat ni Hezekia.</char></note> </cell>
+      <cell style="tcr2" align="end">98</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Bezai </cell>
+      <cell style="tcr2" align="end">323</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Jora </cell>
+      <cell style="tcr2" align="end">112</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Hashum </cell>
+      <cell style="tcr2" align="end">223</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Gibar </cell>
+      <cell style="tcr2" align="end">95</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="p">
+    <verse number="21-35" style="v"/>
+    <char style="add">Mao kini ang gidaghanon sa mga tawo kang kinsang mga katigulangan nagpuyo niining mosunod nga mga lungsod:</char></para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">Betlehem </cell>
+      <cell style="tcr2" align="end">123</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Netofa </cell>
+      <cell style="tcr2" align="end">56</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Anatot </cell>
+      <cell style="tcr2" align="end">128</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Azmavet </cell>
+      <cell style="tcr2" align="end">42</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Kiriat Jearim, Kefira, ug Beerot </cell>
+      <cell style="tcr2" align="end">743</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Rama ug Geba </cell>
+      <cell style="tcr2" align="end">621</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Mikmas </cell>
+      <cell style="tcr2" align="end">122</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Betel ug Ai </cell>
+      <cell style="tcr2" align="end">223</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Nebo </cell>
+      <cell style="tcr2" align="end">52</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Magbis </cell>
+      <cell style="tcr2" align="end">156</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">ang usa pa ka Elam </cell>
+      <cell style="tcr2" align="end">1,254</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Harim </cell>
+      <cell style="tcr2" align="end">320</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Lod, Hadid ug Ono </cell>
+      <cell style="tcr2" align="end">725</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Jerico </cell>
+      <cell style="tcr2" align="end">345</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Senaa </cell>
+      <cell style="tcr2" align="end">3,630</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="p">
+    <verse number="36-39" style="v"/>
+    <char style="add">Mao kini ang mga kaliwat sa</char> mga pari <char style="add">nga namalik gikan sa pagkabihag</char>:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">Mga kaliwat ni Jedaya (sa pamilya ni Jeshua) </cell>
+      <cell style="tcr2" align="end">973</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Imer </cell>
+      <cell style="tcr2" align="end">1,052</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Pashur </cell>
+      <cell style="tcr2" align="end">1,247</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Harim </cell>
+      <cell style="tcr2" align="end">1,017</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="p">
+    <verse number="40-42" style="v"/>
+    <char style="add">Mao kini ang mga kaliwat sa</char> mga Levita <char style="add">nga namalik usab gikan sa pagkabihag</char>:</para>
+  <para style="b"/>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">Mga kaliwat ni Jeshua ug Kadmiel (nga mga kaliwat ni Hodavia) </cell>
+      <cell style="tcr2" align="end">74</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Mga mag-aawit sa templo nga mga kaliwat ni Asaf </cell>
+      <cell style="tcr2" align="end">128</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Mga guwardya sa templo nga mga kaliwat nila ni Shalum, Ater, Talmon, Akub, Hatita, ug Shobai </cell>
+      <cell style="tcr2" align="end">139</cell>
+    </row>
+  </table>
+  <para style="b"/>
+  <para style="p">
+    <verse number="43-54" style="v"/>
+    <char style="add">Mao kini ang mga kaliwat sa</char> mga sulugoon sa templo <char style="add">nga namalik usab gikan sa pagkabihag</char>:</para>
+  <para style="p">Mga kaliwat ni Ziha, Hasufa, Tabaot, Keros, Siaha, Padon, Lebana, Hagaba, Akub, Hagab, Shamlai, Hanan, Gidel, Gahar, Reaya, Rezin, Nekoda, Gazam, Uza, Pasea, Besai, Ashna, Meunim, Nefusim, Bakbuk, Hakufa, Harhur, Bazlut, Mehida, Harsha, Barkos, Sisera, Tema, Nezia, ug Hatifa.</para>
+  <para style="p">
+    <verse number="55-57" style="v"/>
+    <char style="add">Namalik usab gikan sa pagkabihag</char> ang mga kaliwat sa mga sulugoon ni Solomon:</para>
+  <para style="p">Ang mga kaliwat ni Sotai, Hasoferet, Peruda, Jaala, Darkon, Gidel, Shefatia, Hatil, Pokeret Hazebaim, ug Ami.</para>
+  <para style="p">
+    <verse number="58" style="v"/>Ang gidaghanon sa <char style="add">mga kaliwat sa</char> mga sulugoon sa templo ug mga kaliwat sa mga sulugoon ni Solomon, 392.</para>
+  <para style="p">
+    <verse number="59-60" style="v"/>May 652 usab nga namalik <char style="add">sa Juda</char> gikan <char style="add">sa mga lungsod</char> sa Tel Mela, Tel Harsha, Kerub, Adon, ug Imer. Kini sila mga kaliwat nila ni Delaya, Tobia ug Nekoda, apan dili nila mapamatud-an nga mga Israelinhon sila.</para>
+  <para style="p">
+    <verse number="61-62" style="v"/>Dili usab mapamatud-an sa mga kaliwat ni Hobaya, Hakoz, ug Barzilai nga mga pari sila. (Kini si Barzilai <char style="add">nga pari kuno</char>, nangasawa sa anak ni Barzilai nga taga-Gilead, ug sukad niadto gidala na niya ang ngalan sa iyang ugangan.) Tungod kay dili nila makita ang lista sa ilang mga katigulangan, giisip sila nga mahugaw ug wala dawata ingon nga mga pari. <verse number="63" style="v"/>Giingnan sila sa gobernador <char style="add">sa Juda</char> nga dili sila mahimong mokaon sa mga pagkaon nga gihalad ngadto sa Dios hangtod nga adunay pari nga makapangutana <char style="add">sa Dios mahitungod sa ilang pagkapari pinaagi</char> sa Urim ug Thumim.<note caller="+" style="f"><char style="fr" closed="false">2:63 </char><char style="fq" closed="false">Urim ug Thumim</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">Duha ka butang nga ginagamit sa paghibalo sa kabubut-on sa Dios.</char></note></para>
+  <para style="p">
+    <verse number="64-67" style="v"/>Ang kinatibuk-ang gidaghanon sa mga namalik gikan sa pagkabihag 42,360, walay labot sa 7,337 nila ka mga sulugoon nga mga lalaki ug babaye, 200 ka mga mag-aawit nga babaye ug lalaki, 736 ka kabayo, 245 ka mula, 435 ka kamelyo, ug 6,720 ka asno.</para>
+  <para style="p">
+    <verse number="68" style="v"/>Sa pag-abot nila sa templo sa <char style="nd">Ginoo</char> sa Jerusalem, ang ubang mga pangulo sa mga pamilya mihatag sa ilang kinabubut-ong mga halad sa pagpatukod pag-usab sa templo sa gitukoran niini kaniadto. <verse number="69" style="v"/>Mihatag sila sumala sa ilang makaya alang niining buluhaton, ug nakatigom sila ug 500 ka kilo nga bulawan, 3,000 ka kilo nga pilak, ug 100 ka buok nga bisti alang sa mga pari. <verse number="70" style="v"/>Ang matag usa kanila namalik sa mga lungsod nga gigikanan sa ilang mga pamilya, apil na ang mga pari, ang mga Levita, ang mga mag-aawit, ang mga guwardya sa mga pultahan <char style="add">sa templo</char>, ug ang mga sulugoon sa templo.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Ang Pagtukod sa Bag-ong Halaran</para>
+  <para style="p">
+    <verse number="1" style="v"/>Sa pag-abot sa ikapito ka bulan, sa dihang nahimutang na ang mga Israelinhon sa ilang mga lungsod, silang tanan naghiusa pagtigom sa Jerusalem. <verse number="2" style="v"/>Unya gipatukod pag-usab ang halaran sa Dios sa Israel aron mahalaran kini sa mga halad nga sinunog, sumala sa nahisulat sa Kasugoan ni Moises nga iyang alagad.<note caller="+" style="f"><char style="fr" closed="false">3:2 </char><char style="fq" closed="false">alagad</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">propeta. </char><char style="ft" closed="false">Sa literal, </char><char style="fqa" closed="false">tawo sa Dios.</char></note> Ang nagtukod niini mao sila si Jeshua<note caller="+" style="f"><char style="fr" closed="false">3:2 </char><char style="fq" closed="false">Jeshua</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">Siya mao usab si Josue sa <char style="xt"><ref loc="HAG 1:1">Hag. 1:1</ref></char>.</char></note> nga anak ni Jozadak ug ang iyang mga kauban nga sama niyang pari, ug si Zerubabel nga anak ni Shealtiel ug ang iyang mga paryente. <verse number="3" style="v"/>Bisan ug<note caller="+" style="f"><char style="fr" closed="false">3:3 </char><char style="fq" closed="false">Bisan ug</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">Tungod kay.</char></note> nahadlok sila sa mga lumulupyo niadtong yutaa,<note caller="+" style="f"><char style="fr" closed="false">3:3 </char><char style="fq" closed="false">mga lumulupyo niadtong yutaa</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">mga tawo nga nagapuyo sa palibot nga mga dapit.</char></note> gitukod nila ang halaran sa gitukoran niini kaniadto. Unya naghalad sila ug mga halad nga sinunog ngadto sa <char style="nd">Ginoo</char>—buntag ug gabii.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Gisaulog usab nila ang Pista sa Pagpatindog sa mga Payag sumala sa nahisulat <char style="add">sa Kasugoan ni Moises</char>, ug naghalad sila sa mga halad nga sinunog nga gitakda nga ihalad matag adlaw. <verse number="5" style="v"/>Human niini, naghalad sila sa naandang mga halad nga sinunog ug halad alang sa Pista sa Pagsugod sa Bulan, ug sa uban pang mga pista sa pagsimba sa <char style="nd">Ginoo</char>. Naghalad usab sila sa kinabubut-on nga mga halad alang sa <char style="nd">Ginoo</char>. <verse number="6" style="v"/>Bisan wala pa masugdi ang pagtukod pag-usab sa templo sa <char style="nd">Ginoo</char>, nagsugod na ang mga Israelinhon sa paghalad sa mga halad nga sinunog ngadto sa <char style="nd">Ginoo</char>, sa nahaunang adlaw sa ikapito nga bulan <char style="add">niadtong tuiga</char>.</para>
+  <para style="s1">Gitukod Pag-usab ang Templo</para>
+  <para style="p">
+    <verse number="7" style="v"/>Naghatag ang mga Israelinhon ug kuwarta nga ibayad sa mga mason ug sa mga panday. Naghatag usab sila ug mga pagkaon, ilimnon, ug lana nga ibayad sa mga taga-Sidon ug taga-Tyre alang sa mga kahoyng sedro nga gikan sa Lebanon. Kining mga kahoya ikarga sa mga barko ug dad-on sa Jopa. Gitugotan kini ni Cyrus nga hari sa Persia.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Nagsugod ang pagtukod sa templo sa ikaduhang bulan sa ikaduhang tuig human mahibalik ang mga Israelinhon sa Jerusalem. Nagtinabangay sa pagtrabaho ang tanang namalik sa Jerusalem gikan sa pagkabihag, apil na dinhi sila si Zerubabel nga anak ni Shealtiel, si Jeshua nga anak ni Jozadak ug ang iyang mga kauban nga sama niyang mga pari, ug ang mga Levita. Ang gitugyanan sa pagdumala sa pagtukod sa templo sa <char style="nd">Ginoo</char> mao ang mga Levita nga nagaedad ug 20 ka tuig pataas. <verse number="9" style="v"/>Sila mao si Jeshua,<note caller="+" style="f"><char style="fr" closed="false">3:9 </char><char style="fq" closed="false">Jeshua</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">Tingali lahi kini nga Jeshua sa bersikulo 8. Tan-awa ang 2:36 ug 2:40.</char></note> ang iyang mga anak ug mga paryente, si Kadmiel ug ang iyang mga anak. Silang tanan mga kaliwat ni Juda. Mitabang usab kanila ang mga kaliwat ug mga paryente ni Henadad nga mga Levita usab.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Sa dihang napahimutang na sa mga trabahante ang pundasyon sa templo sa <char style="nd">Ginoo</char>, miplastar ang mga pari aron pagtukar sa mga trumpeta. Kini sila nagsul-ob ug bisti sa pari. Miplastar usab ang mga Levita nga mga kaliwat ni Asaf aron pagtukar sa mga simbal aron sa pagdayeg sa <char style="nd">Ginoo</char> sumala sa pamaagi nga gitudlo kaniadto ni David nga hari sa Israel. <verse number="11" style="v"/>Unya nagtubag-tubag sila sa pag-awit ug mga pagdayeg ug pagpasalamat sa <char style="nd">Ginoo</char> nga nagaingon, “Maayo gayod ang <char style="nd">Ginoo</char>; kay ang iyang gugma sa Israel walay kataposan.” Unya misinggit ug kusog ang tanang mga tawo sa pagdayeg sa <char style="nd">Ginoo</char> tungod kay napahimutang na ang pundasyon sa templo. <verse number="12" style="v"/>Daghan sa tigulang nga mga pari, mga Levita, ug mga pangulo sa mga panimalay didto ang nakakita sa unang templo. Ug nanghilak silag kusog sa dihang nakita nila nga napahimutang na ang pundasyon sa bag-o nga templo. Apan daghan usab ang mga tawo didto nga naninggit sa kalipay. <verse number="13" style="v"/>Dili na mahibaloan ang singgit sa kalipay ug ang singgit sa paghilak tungod kay labihan gayod kakusog ang tingog sa mga tawo, ug madunggan kini sa halayo.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Gibabagan ang Pagpatukod Pag-usab sa Templo</para>
+  <para style="p">
+    <verse number="1" style="v"/>Nabalitaan sa mga kaaway sa tribo ni Juda ug ni Benjamin nga gitukod pag-usab sa mga namalik gikan sa pagkabihag ang templo sa <char style="nd">Ginoo</char>, ang Dios sa Israel. <verse number="2" style="v"/>Busa miadto sila kang Zerubabel ug sa mga pangulo sa mga pamilya, ug miingon, “Tabangan namo kamo sa pagtukod sa templo tungod kay gisimba usab namo ang inyong Dios sama sa inyong gihimo. Nagahalad na kami kaniya, sukad pa sa panahon ni Esarhadon nga hari sa Asiria nga mao ang nagdala kanamo dinhi.” <verse number="3" style="v"/>Apan mao kini ang tubag nila ni Zerubabel, Jeshua, ug sa mga pangulo sa mga pamilya: “Gisugo kami ni Cyrus nga hari sa Persia nga pagatukoron pag-usab ang templo. Apan wala kamoy labot sa pagpatukod niini alang sa among Dios. Kami lang ang magapatukod niini para sa <char style="nd">Ginoo</char>, ang Dios sa Israel.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Busa gipaningkamotan gayod sa mga lumulupyo niadtong dapita<note caller="+" style="f"><char style="fr" closed="false">4:4 </char><char style="fq" closed="false">lumulupyo niadtong dapita</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">Tan-awa usab ang 3:3b.</char></note> nga mawad-an sa kadasig ang katawhan sa Juda, ug gihadlok nila kini aron dili makapadayon sa pagtrabaho <char style="add">sa templo</char>. <verse number="5" style="v"/>Nagsuhol sila ug mga magtatambag aron babagan ang mga plano sa katawhan sa Juda. Gihimo kini sukad sa panahon nga si Cyrus pa ang hari sa Persia hangtod sa panahon nga si Darius na ang naghari.</para>
+  <para style="s1">Ang Pagbabag sa Pagpatukod sa Templo sa Panahon ni Haring Artaxerxes</para>
+  <para style="p">
+    <verse number="6" style="v"/>Sa pagsugod sa paghari ni Ahasuerus, ang mga kaaway sa mga lumulupyo sa Juda ug sa Jerusalem nagsulat ug mga sumbong batok kanila. <verse number="7" style="v"/>Ug sa dihang si Artaxerxes na ang hari sa Persia, nagsulat usab kaniya sila si Bishlam, Mitredat, Tabeel, ug ang uban pa nilang mga kauban. Gisulat nila kini sa pinulongan nga Aramico ug gihubad <char style="add">kini sa pinulongan sa taga-Persia</char>.</para>
+  <para style="p">
+    <verse number="8-11" style="v"/>Nagsulat usab si Rehum nga gobernador ug si Shimshai nga sekretaryo kang Haring Artaxerxes batok sa mga taga-Jerusalem. Mao kini ang ilang sulat:</para>
+  <para style="p">“Mahal nga Haring Artaxerxes:</para>
+  <para style="p">“<char style="add">Una sa tanan</char> nagapangumusta kami kanimo, kami nga imong mga alagad dinhi sa <char style="add">probinsya sa</char> kasadpan sa Eufrates. Apil sa mga nagapangumusta mao ang among mga kauban nga mga pangulo ug mga opisyal, ang mga katawhan sa Tripolis, Persia, Erek, Babilonia, ug ang katawhan sa Susa sa yuta sa Elam. Nagapangumusta usab ang mga katawhan nga gipapahawa sa ilang mga dapit ni Osnapar, ang bantogan ug gamhanan <char style="add">nga hari sa Asiria</char>, ug gipapuyo niya sa siyudad sa Samaria ug sa ubang mga dapit sa kasadpan sa Eufrates.</para>
+  <para style="p">
+    <verse number="12" style="v"/>“Mahal nga Hari, buot namong mahibaloan mo nga ang mga Judio nga gikan sa imong nasod namalik dinhi sa among dapit ug gitukod pag-usab ang daotan ug rebelde nga siyudad sa Jerusalem. Hapit na gani nila mahuman ug ayo ang mga paril ug ang mga pundasyon niini. <verse number="13" style="v"/>Mahal nga Hari, angay ka usab masayod nga kon matukod pag-usab kining siyudad ug mahuman na ang mga paril niini, dili na mobayad sa mga buhis ug sa uban pang mga bayranan ang mga tawo, ug makaapekto kini sa panudlanan sa gingharian.</para>
+  <para style="p">
+    <verse number="14" style="v"/>“Tungod kay may katungdanan kami kanimo, Mahal nga Hari, ug dili namo buot nga ikaw maulawan, gipahibalo namo kini kanimo <verse number="15" style="v"/>aron masusi mo ang mga kasulatan nga gitipigan sa imong mga katigulangan. Pinaagi niini, mahibaloan mo nga ang mga lumulupyo sa siyudad sa Jerusalem rebelde sukad pa kaniadto. Mao gani nga gilaglag kining siyudara tungod kay nahimo kining problema sa mga hari ug sa mga nasod. <verse number="16" style="v"/>Buot lang namo ipahibalo kanimo, Mahal nga Hari, nga kon matukod pag-usab kining siyudara ug mahuman ang mga paril niini, mawala kanimo ang probinsya nga anaa sa kasadpan sa Eufrates.”</para>
+  <para style="p">
+    <verse number="17" style="v"/>Mao kini ang tubag nga gipadala sa hari:</para>
+  <para style="p">“<char style="add">Nangumusta ako kaninyo</char> Gobernador Rehum ug Sekretaryo Shimshai, ug sa inyong mga kauban nga nagpuyo sa Samaria ug sa ubang mga dapit sa kasadpan sa Eufrates.</para>
+  <para style="p">“Hinaut nga maayo ang inyong kahimtang.</para>
+  <para style="p">
+    <verse number="18" style="v"/>“Ang sulat nga inyong gipadala gihubad sa among pinulongan ug gibasa kanako. <verse number="19" style="v"/>Nagmando ako nga susihon ang mga kasulatan, ug napamatud-an nga tinuod gayod nga sukad pa kaniadto ang mga lumulupyo sa Jerusalem kanunay nga nagasupak sa mga hari. Naandan na niining dapita ang pagrebelde batok sa gobyerno. <verse number="20" style="v"/><char style="add">Nahibaloan ko usab nga</char> ang Jerusalem, ingon man ang tibuok probinsya sa kasadpan sa Eufrates, gidumalahan sa mga gamhanan nga mga hari ug nangolekta kanila ug mga buhis ug uban pang mga bayranan.</para>
+  <para style="p">
+    <verse number="21" style="v"/>“Karon, pagpagawas kamo ug mando nga undangon na nianang mga tawhana ang pagtukod pag-usab sa siyudad hangtod nga dili ako momando nga tukoron kana. <verse number="22" style="v"/>Himoa dayon ninyo kini aron dili madaot ang akong gingharian.”</para>
+  <para style="p">
+    <verse number="23" style="v"/>Human mabasa ngadto kanila ni Rehum, Shimshai, ug sa ilang mga kauban ang sulat ni Haring Artaxerxes, miadto dayon sila sa Jerusalem ug gipugos ang mga Judio sa pag-undang sa pagtukod pag-usab sa siyudad.</para>
+  <para style="s1">Gipadayon ang Pagtukod sa Templo</para>
+  <para style="p">
+    <verse number="24" style="v"/>Naundang ang pagtukod sa templo sa Dios sa Jerusalem hangtod sa ikaduhang tuig sa paghari ni Darius sa Persia.</para>
+  <chapter number="5" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Karon, gisugo sa Dios sa Israel ang mga propeta nga si Haggai ug si Zacarias nga apo ni Iddo sa pagsulti sa iyang mensahe sa mga Judio sa Juda ug sa Jerusalem. <verse number="2" style="v"/>Sa pagkadungog ni Zerubabel nga anak ni Shealtiel ug ni Jeshua nga anak ni Jozadak sa maong mensahe, gipadayon nila pagtukod ang templo sa Dios sa Jerusalem ug gipaluyohan sila niadtong duha ka propeta sa Dios.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Sa wala madugay, miabot sa Jerusalem si Tatenai nga gobernador sa <char style="add">probinsya sa</char> kasadpan sa Eufrates, si Shetar Bozenai, ug ang ilang mga kauban. Nangutana sila<note caller="+" style="f"><char style="fr" closed="false">5:3 </char><char style="fq" closed="false">sila</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">Mao kini sa Septuagint ug sa Syriac; apan sa Aramico, </char><char style="fqa" closed="false">kami.</char></note> sa mga Judio, “Kinsa ang nagsugo kaninyo sa pagtukod pag-usab niining templo?” <verse number="4" style="v"/>Nangutana pa gayod sila, “Kinsa ang mga tawo nga nagtrabaho niini?” <verse number="5-7" style="v"/>Apan gibantayan sa Dios ang mga pangulo sa mga Judio, busa nakahukom si Tatenai, si Shetar Bozenai, ug ang ilang mga kauban nga mga opisyal sa <char style="add">probinsya sa</char> kasadpan sa Eufrates, nga dili na lang una nila paundangon ang pagtukod sa templo, hangtod nga ikabalita nila kini kang Haring Darius, ug makadawat sila sa iyang tubag.</para>
+  <para style="p">Mao kini ang sulat nga gipadala nila kang Haring Darius:</para>
+  <para style="p">“Mahal nga Haring Darius:</para>
+  <para style="p">“Hinaut nga maayo ang imong kahimtang.</para>
+  <para style="p">
+    <verse number="8" style="v"/>“Gipahibalo ka namo, Mahal nga Hari, nga miadto kami sa probinsya sa Juda, didto sa gitukoran sa templo sa gamhanang Dios. Dagko ang mga bato nga gigamit sa pagtukod sa templo, ug ang mga paril niini gibutangan ug mga tablon. Gitrabaho nila kini nga may kakugi, busa paspas ang pag-uswag niini. <verse number="9" style="v"/>Gipangutana namo ang ilang mga pangulo kon kinsa ang nagsugo kanila sa pagtukod pag-usab sa templo. <verse number="10" style="v"/>Ug gipangutana usab namo ang ilang mga ngalan aron ikapahibalo namo kanimo kon kinsa ang mga nangulo sa pagtukod sa templo.</para>
+  <para style="p">
+    <verse number="11" style="v"/>“Mao kini ang ilang tubag kanamo: ‘Mga alagad kami sa Dios sa langit ug sa kalibotan, ug ginatukod namo pag-usab ang templo nga gitukod kaniadto sa usa ka gamhanan nga hari sa Israel. <verse number="12" style="v"/>Apan tungod kay gipalagot sa among mga katigulangan ang Dios sa langit, gitugyan niya sila sa mga kamot ni Nebucadnezar nga hari sa Babilonia. Giguba ni Nebucadnezar kining templo ug gibihag niya ang among mga katigulangan ngadto sa Babilonia. <verse number="13" style="v"/>Apan sa nahaunang tuig sa paghari ni Cyrus sa Babilonia, nagmando siya nga tukoron pag-usab ang templo sa Dios. <verse number="14" style="v"/>Giuli usab niya ang mga bulawan ug pilak nga mga galamiton sa templo sa Dios. Kini nga mga galamiton gikuha kaniadto ni Nebucadnezar sa templo sa Jerusalem ug gibutang niya sa templo sa Babilonia. Gitugyan ni Haring Cyrus kining mga galamiton kang Sheshbazar nga gipili niya nga gobernador <char style="add">sa Juda</char>. <verse number="15" style="v"/>Giingnan sa hari si Sheshbazar nga tukoron pag-usab ang templo sa Dios sa Jerusalem sa dapit nga gitukoran niini kaniadto, ug ibutang didto ang mga galamiton niini. <verse number="16" style="v"/>Busa miadto si Sheshbazar sa Jerusalem ug gipahimutang ang mga pundasyon sa templo sa Dios. Hangtod karon padayon pa nga gitukod <char style="add">ang templo</char>.’</para>
+  <para style="p">
+    <verse number="17" style="v"/>“Karon, kon mahimo, Mahal nga Hari, ipasusi ang mga kasulatan nga gitipigan sa mga hari sa Babilonia kon tinuod ba gayod nga nagmando si Haring Cyrus nga tukoron pag-usab ang templo sa Dios sa Jerusalem. Ug unya pahibaloa kami kon unsay imong desisyon mahitungod niini.”</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Gitugotan ni Haring Darius ang Pagpatukod Pag-usab sa Templo</para>
+  <para style="p">
+    <verse number="1" style="v"/>Busa nagmando si Haring Darius sa pagsusi sa mga kasulatan nga atua sa tipiganan niini didto sa Babilonia. <verse number="2" style="v"/>Ug didto sa palasyo sa siyudad sa Ecbatana, nga sakop sa probinsya sa Media, nakita ang usa ka linukot nga kasulatan diin nasulat ang mosunod:</para>
+  <para style="p">
+    <verse number="3-4" style="v"/>“Sa unang tuig sa paghari ni Cyrus, nagmando siya nga tukoron pag-usab ang templo sa Dios sa Jerusalem diin ihalad ang mga halad. Kinahanglan 90 ka piye ang iyang kahabugon ug 90 ka piye usab ang iyang gilapdon, ug ang matag tulo ka patong sa bato niini sapawan ug usa ka patong sa tablon. Kinahanglan nga lig-on ang pundasyon niini. Ang tanang gasto kuhaon gikan sa panudlanan sa gingharian. <verse number="5" style="v"/>Ug ang bulawan ug pilak nga mga galamiton sa templo sa Dios nga gidala ni Nebucadnezar nga hari sa Babilonia kinahanglan ibalik sa butanganan niini didto sa templo sa Jerusalem.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Busa <char style="add">mao kini ang mensahe ni Haring Darius</char> kang Tatenai, nga gobernador sa probinsya sa kasadpan sa Eufrates, kang Shetar Bozenai, ug sa kauban nilang mga opisyal niana nga probinsya:</para>
+  <para style="p">“Palayo kamo diha sa templo sa Dios. <verse number="7" style="v"/>Ayaw kamo panghilabot sa pagpatukod niini. Pasagdi lang ninyo ang gobernador ug ang uban pang mga kadagkoan sa mga Judio sa pagpatukod niini pag-usab sa dapit nga gitukoran niini kaniadto.</para>
+  <para style="p">
+    <verse number="8" style="v"/>“Nagamando usab ako nga tabangan ninyo ang mga kadagkoan sa mga Judio pinaagi sa pagbayad dayon sa tanang galastohan aron dili malangan ang pagtrabaho. Ang bayad kuhaon ninyo gikan sa panudlanan sa gingharian nga naggikan sa mga buhis sa inyong probinsya. <verse number="9" style="v"/>Adlaw-adlaw, kinahanglan hatagan ninyo ang mga pari sa Jerusalem sa ilang kinahanglanon sama sa nati nga mga baka, laki nga mga karnero, ug nati nga mga karnero alang sa halad nga sinunog ngadto sa Dios sa langit,<note caller="+" style="f"><char style="fr" closed="false">6:9 </char><char style="fq" closed="false">Dios sa langit</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">Dios nga anaa sa langit; </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">Dios nga naghimo sa langit; </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">Dios nga labaw sa tanan.</char></note> apil usab sa trigo, asin, bino, ug lana. Kinahanglan dili gayod kamo mopakyas sa paghatag, <verse number="10" style="v"/>aron nga makahalad sila sa mga halad nga makapalipay sa Dios sa langit, ug makaampo sila alang kanako ug sa akong mga anak.</para>
+  <para style="p">
+    <verse number="11" style="v"/>“Nagamando pa gayod ako nga si bisan kinsa nga mosupak niini tuhogon sa kahoy nga kinuha gikan sa iyang balay, ug ang iyang balay gubaon hangtod nga wala nay mapuslan niini.<note caller="+" style="f"><char style="fr" closed="false">6:11 </char><char style="fq" closed="false">wala nay mapuslan niini</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">mahimong basura.</char></note> <verse number="12" style="v"/>Hinaut pa nga ang Dios nga nagpili sa Jerusalem ingon nga dapit nga pagasimbahan kaniya magalaglag ni bisan kinsa nga hari o nasod nga mosupak niining mando ug moguba niining templo sa Jerusalem.</para>
+  <para style="p">“Ako, si Darius, ang nagmando niini. Kinahanglan tumanon gayod kini.”</para>
+  <para style="s1">Gidedikar ang Templo</para>
+  <para style="p">
+    <verse number="13" style="v"/>Gituman gayod nila ni Tatenai nga gobernador, Shetar Bozenai, ug sa ilang mga kauban ang mando ni Haring Darius. <verse number="14" style="v"/>Busa padayon nga nagtrabaho ang mga kadagkoan sa mga Judio samtang gidasig sila sa mga mensahe sa mga propeta nga sila si Haggai ug Zacarias nga apo ni Iddo. Nahuman nilag trabaho ang templo sumala sa sugo sa Dios sa Israel nga gipatuman ni Cyrus, Darius, ug Artaxerxes, nga mga hari sa Persia. <verse number="15" style="v"/>Nahuman ang templo sa ikatulo nga adlaw sa <char style="add">ika-12 nga bulan, nga mao ang</char> bulan sa Adar, niadtong ikaunom nga tuig sa paghari ni Darius.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Malipayong nagsaulog sa pagdedikar sa templo sa Dios ang mga katawhan sa Israel—ang mga pari, ang mga Levita, ug ang uban pang namalik gikan sa pagkabihag. <verse number="17" style="v"/>Niining pagdedikar sa templo sa Dios, naghalad sila ug 100 ka torong baka, 200 ka laking karnero, ug 400 ka nating karnero. Naghalad usab sila ug 12 ka laking kanding isip halad sa paghinlo<note caller="+" style="f"><char style="fr" closed="false">6:17 </char><char style="fq" closed="false">halad sa paghinlo</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">Sa uban nga paghubad, </char><char style="fqa" closed="false">halad tungod sa sala </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">halad tungod sa mga sala nga dili tinuyo. </char><char style="ft" closed="false">Ang katuyoan niini nga halad mao nga aron mahinloan ang tawo sa sala nga iyang nahimo.</char></note> sa matag tribo sa Israel. <verse number="18" style="v"/>Gipahimutang nila ang mga pari ug ang mga Levita sa ilang tagsa-tagsa ka katungdanan sa templo sa Jerusalem sumala sa nahisulat sa Libro ni Moises.</para>
+  <para style="s1">Ang Pista sa Paglabay sa Anghel</para>
+  <para style="p">
+    <verse number="19" style="v"/>Sa ika-14 nga adlaw sa unang bulan, <char style="add">sa pagkasunod nga tuig,</char> gisaulog sa mga <char style="add">Israelinhon nga</char> namalik gikan sa pagkabihag ang Pista sa Paglabay sa Anghel. <verse number="20" style="v"/>Nanghinlo ang mga pari ug ang mga Levita sa ilang kaugalingon aron mahimo silang takos sa pagpangulo sa mga seremonya. Unya giihaw sa mga Levita ang mga karnero nga mga halad alang sa pagsaulog sa Pista sa Paglabay sa Anghel. <char style="add">Gihimo nila kini</char> alang sa tanan nga namalik gikan sa pagkabihag, alang sa mga pari nga ilang mga paryente, ug alang sa ilang kaugalingon. <verse number="21" style="v"/>Kini nga mga halad gikaon sa tanang mga Israelinhon nga namalik gikan sa pagkabihag, ug sa mga tawo nga nagpuyo didto nga mibiya na sa daotang mga binuhatan aron pagsimba sa <char style="nd">Ginoo</char>, ang Dios sa Israel. <verse number="22" style="v"/>Sulod sa pito ka adlaw gisaulog nila nga malipayon ang Pista sa Pan nga Walay Patubo, kay gilipay sila sa <char style="nd">Ginoo</char> pinaagi sa pagtandog sa kasingkasing sa hari sa Asiria,<note caller="+" style="f"><char style="fr" closed="false">6:22 </char><char style="fq" closed="false">hari sa Asiria</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">Ang buot ipasabot, </char><char style="fqa" closed="false">hari sa Persia, </char><char style="ft" closed="false">kay ang Asiria sakop sa Persia niadto nga panahon.</char></note> aron tabangan sila sa pagtrabaho sa templo sa Dios, ang Dios sa Israel.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Miabot si Ezra sa Jerusalem</para>
+  <para style="p">
+    <verse number="1-6" style="v"/>Paglabay sa daghang katuigan, sa dihang si Artaxerxes na ang hari sa Persia, miabot si Ezra sa <char style="add">Jerusalem gikan sa</char> Babilonia. Kini si Ezra anak ni Seraya. Si Seraya anak ni Azaria. Si Azaria anak ni Hilkia. Si Hilkia anak ni Shalum. Si Shalum anak ni Zadok. Si Zadok anak ni Ahitub. Si Ahitub anak ni Amaria. Si Amaria anak ni Azaria. Si Azaria anak ni Merayot. Si Merayot anak ni Zerahia. Si Zerahia anak ni Uzi. Si Uzi anak ni Buki. Si Buki anak ni Abishua. Si Abishua anak ni Finehas. Si Finehas anak ni Eleazar. Si Eleazar anak ni Aaron, ang pangulong pari.</para>
+  <para style="p">Si Ezra usa ka magtutudlo nga hanas sa Kasugoan ni Moises nga gihatag sa <char style="nd">Ginoo</char>, ang Dios sa Israel. Gihatag sa hari ang tanan niyang gipangayo tungod kay gitabangan siya sa <char style="nd">Ginoo</char> nga iyang Dios. <verse number="7" style="v"/>May nanguban kaniya nga mga Israelinhon sa iyang pagbalik sa Jerusalem niadtong ikapito nga tuig sa paghari ni Artaxerxes. Apil sa mga nanguban mao ang mga pari, mga Levita, mga mag-aawit, mga guwardya sa mga pultahan <char style="add">sa templo</char>, ug mga sulugoon sa templo. <verse number="8-9" style="v"/>Mibiya si Ezra sa Babilonia sa unang adlaw sa unang bulan. Ug sa tabang sa Dios, nakaabot siya sa Jerusalem sa unang adlaw sa ikalimang bulan, niadtong ikapitong tuig sa paghari ni Artaxerxes. <verse number="10" style="v"/><char style="add">Gitabangan siya sa Dios</char> tungod kay hugot gayod ang iyang tinguha sa pagtuon ug sa pagtuman sa Kasugoan sa <char style="nd">Ginoo</char>, ug sa pagtudlo sa mga tulumanon ug mga lagda niini sa mga Israelinhon.</para>
+  <para style="s1">Ang Sulat ni Artaxerxes kang Ezra</para>
+  <para style="p">
+    <verse number="11" style="v"/>Mao kini ang sulat nga gihatag ni Haring Artaxerxes kang Ezra nga pari ug magtutudlo, nga hanas sa mga sugo ug mga tulumanon nga gihatag sa <char style="nd">Ginoo</char> sa mga Israelinhon:</para>
+  <para style="p">
+    <verse number="12" style="v"/>“Gikan kang Haring Artaxerxes nga hari sa mga hari. Alang kang Ezra, nga pari ug magtutudlo sa Kasugoan sa Dios sa langit.<note caller="+" style="f"><char style="fr" closed="false">7:12 </char><char style="fq" closed="false">Dios sa langit</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">Dios nga anaa sa langit; </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">Dios nga naghimo sa langit; </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">Dios nga labaw sa tanan.</char></note></para>
+  <para style="p">
+    <verse number="13" style="v"/>“Nagpakanaog ako ug mando nga si bisan kinsa sa mga Israelinhon dinhi sa akong gingharian, apil mga pari ug mga Levita nga gustong mouban kanimo sa pagbalik sa Jerusalem, mahimong mouban. <verse number="14" style="v"/>Ako ug ang akong pito ka magtatambag nagkauyon nga paadtoon ka sa Juda ug sa Jerusalem aron sa pagsusi kon gituman ba nila ang Kasugoan nga gitugyan kanimo sa imong Dios. <verse number="15" style="v"/>Dad-a usab ang mga bulawan ug mga pilak nga kinasingkasing namong ihatag sa Dios sa Israel nga nagpuyo<note caller="+" style="f"><char style="fr" closed="false">7:15 </char><char style="fq" closed="false">nga nagpuyo</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">kansang pinuy-anan anaa sa Jerusalem.</char></note> sa Jerusalem. <verse number="16" style="v"/>Dad-a usab ang tanang pilak ug bulawan nga madawat mo gikan <char style="add">sa mga katawhan</char> sa probinsya sa Babilonia, apil ang kinabubut-on nga tabang sa mga katawhan <char style="add">sa Israel</char> ug sa ilang mga pari alang sa templo sa ilang Dios sa Jerusalem. <verse number="17" style="v"/>Siguroha nga kining kuwartaha gamiton sa pagpalit ug mga torong baka, mga laking karnero, mga nating karnero, mga kalan-on,<note caller="+" style="f"><char style="fr" closed="false">7:17 </char><char style="fq" closed="false">kalan-on</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">Ang gipasabot diri mga tipasi o lugas.</char></note> ug bino nga ihalad sa halaran sa templo sa inyong Dios nga anaa sa Jerusalem. <verse number="18" style="v"/>Ang mahibilin nga bulawan ug pilak mahimong gamiton sa bisan unsa nga butang nga gituohan nimo ug sa imong mga katagilungsod nga nahisubay sa kabubut-on sa inyong Dios. <verse number="19" style="v"/>Apan ang tanang mga galamiton nga gitugyan kanimo alang sa pag-alagad sa templo sa imong Dios kinahanglang ihatag mo sa Dios sa Jerusalem. <verse number="20" style="v"/>Kon may uban ka pang kinahanglanon alang sa templo, pagkuha lang gikan sa panudlanan sa gingharian.</para>
+  <para style="p">
+    <verse number="21" style="v"/>“Ako, si Haring Artaxerxes, nagamando sa tanang tresurero sa <char style="add">probinsya sa</char> kasadpang Eufrates sa paghatag gayod dayon sa bisan unsa nga pangayoon kaninyo ni Ezra, ang pari ug magtutudlo sa Kasugoan sa Dios sa langit. <verse number="22" style="v"/>Hatagi ninyo siya hangtod sa 3,500 ka kilong plata, 300 ka sakong trigo, 550 ka galon nga bino, 550 ka galon nga lana sa olibo, ug bisan unsa kadaghan sa asin nga kinahanglanon. <verse number="23" style="v"/>Ihatag gayod ninyo ang tanang kinahanglanon sa templo sumala sa gimando sa Dios sa langit kay basin ug masuko siya sa akong gingharian ug sa akong mga anak. <verse number="24" style="v"/>Gipahibalo usab namo kamo nga dili ninyo pabayron ug buhis ug uban pang bayranan ang mga pari, mga Levita, mga musikero, mga guwardya sa mga pultahan <char style="add">sa templo</char>, mga sulugoon sa templo, ug uban pa nga nagatrabaho niining templo sa Dios.</para>
+  <para style="p">
+    <verse number="25" style="v"/>“Ug ikaw, Ezra, sumala sa kaalam nga gihatag sa Dios kanimo, pagpili ug mga tigdumala ug mga maghuhukom nga modumala sa tanang mga tawo sa <char style="add">probinsya sa</char> kasadpang Eufrates nga nahibalo sa Kasugoan sa imong Dios. Ug tudloi ninyo ang mga tawo nga wala nahibalo sa Kasugoan. <verse number="26" style="v"/>Si bisan kinsa nga dili motuman sa balaod sa imong Dios ug sa balaod sa hari pagasilotan gayod. Mahimo siyang patyon, abugon gikan sa iyang dapit, kuhaan sa iyang kabtangan o prisohon.”</para>
+  <para style="s1">Gidayeg ni Ezra ang Dios</para>
+  <para style="p">
+    <verse number="27" style="v"/>
+    <char style="add">Miingon si Ezra,</char> “Dayegon ang <char style="nd">Ginoo</char>, ang Dios sa atong mga katigulangan, nga nagtandog sa kasingkasing sa hari sa paghatag ug dungog sa templo sa <char style="nd">Ginoo</char> sa Jerusalem. <verse number="28" style="v"/>Tungod sa kaayo sa <char style="nd">Ginoo</char> kanako, gitagad ako pag-ayo sa hari ug sa iyang mga magtatambag, apil ang tanan niyang gamhanang mga opisyal. Ug tungod kay gitabangan ako sa <char style="nd">Ginoo</char> nga akong Dios, nakaangkon ako sa kaisog sa pagtigom ug mga pangulo sa Israel nga mouban kanako sa Jerusalem.”</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Ang mga Pangulo sa Pamilya nga Namalik sa Jerusalem Uban ni Ezra</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="add">Miingon si Ezra,</char> “Mao kini ang mga pangulo sa mga pamilya gikan sa Babilonia nga miuban kanako balik sa Jerusalem niadtong paghari ni Artaxerxes:</para>
+  <para style="li1">
+    <verse number="2" style="v"/>Gikan sa pamilya ni Finehas: si Gershom. Gikan sa pamilya ni Itamar: si Daniel.</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Gikan sa pamilya ni David: si Hatush nga anak ni Shecania.</para>
+  <para style="li1">Gikan sa pamilya ni Parosh: si Zacarias, nga may 150 ka kaubang lalaki kansang kagikan nalista.</para>
+  <para style="li1">
+    <verse number="4" style="v"/>Gikan sa pamilya ni Pahat Moab: si Eliehoenai nga anak ni Zerahia nga may kaubang 200 ka lalaki.</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Gikan sa pamilya ni Zatu: si Shecania nga anak ni Jahaziel nga may kaubang 300 ka lalaki.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Gikan sa pamilya ni Adin: si Ebed nga anak ni Jonatan nga may kaubang 50 ka lalaki.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Gikan sa pamilya ni Elam: si Jeshaya nga anak ni Atalia nga may kaubang 70 ka lalaki.</para>
+  <para style="li1">
+    <verse number="8" style="v"/>Gikan sa pamilya ni Shefatia: si Zebadia nga anak ni Micael nga may kaubang 80 ka lalaki.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Gikan sa pamilya ni Joab: si Obadia nga anak ni Jehiel nga may kaubang 218 ka lalaki.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Gikan sa pamilya ni Bani: si Shelomit nga anak ni Josifia nga may kaubang 160 ka lalaki.</para>
+  <para style="li1">
+    <verse number="11" style="v"/>Gikan sa pamilya ni Bebai: si Zacarias nga anak ni Bebai nga may kaubang 28 ka lalaki.</para>
+  <para style="li1">
+    <verse number="12" style="v"/>Gikan sa pamilya ni Azgad: si Johanan nga anak ni Hakatan nga may kaubang 110 ka lalaki.</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Gikan sa pamilya ni Adonikam: si Elifelet, si Jeuel, ug si Shemaya ug ang mga kauban nila nga 60 ka lalaki.</para>
+  <para style="li1">
+    <verse number="14" style="v"/>Gikan sa pamilya ni Bigvai: si Utai ug si Zacur nga may kaubang 70 ka lalaki.”</para>
+  <para style="s1">Nangita si Ezra ug mga Levita alang sa Templo</para>
+  <para style="p">
+    <verse number="15" style="v"/>
+    <char style="add">Miingon pa si Ezra,</char> “Gitigom ko ang mga tawo nga mouban kanako sa Jerusalem, didto sa suba nga nagadagayday paingon sa Ahava. Nagkampo kami didto sulod sa tulo ka adlaw. Sa dihang gitan-aw ko ang lista sa mga tawo nga mouban kanako, apil na ang mga pari, nadiskobrehan ko nga wala gayod didtoy mga Levita. <verse number="16" style="v"/>Busa gipatawag ko ang mga pangulo sa grupo nga sila si Eliezer, Ariel, Shemaya, Elnatan, Jarib, Elnatan, Natan, Zacarias ug Meshulam, ug ang duha ka maalamon nga tawo nga sila si Joyarib ug si Elnatan. <verse number="17" style="v"/>Gipaadto ko sila kang Iddo nga pangulo didto sa Casifia aron hangyoon siya ug ang iyang paryente nga mga sulugoon sa templo nga magpadala ug mga tawo nga moalagad sa templo sa Dios. <verse number="18" style="v"/>Tungod sa kaayo sa Dios kanamo, gipadala nila kanamo si Sherebia, kauban ang iyang mga anak ug mga paryente nga mga lalaki—18 silang tanan. Si Sherebia maabilidad nga tawo ug kaliwat ni Mali nga kaliwat ni Levi, nga anak ni Israel.<note caller="+" style="f"><char style="fr" closed="false">8:18 </char><char style="fq" closed="false">Israel</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">Jacob.</char></note> <verse number="19" style="v"/>Gipadala usab nila si Hashabia, kauban si Jeshaya nga gikan sa pamilya ni Merari, ug ang iyang mga igsoon ug mga pag-umangkon nga mga lalaki—20 silang tanan. <verse number="20" style="v"/>Gipadala pa gayod nila ang 220 ka sulugoon sa templo. Ang mga sulugoon sa templo gipili kaniadto ni Haring David ug sa iyang mga opisyal aron pagtabang sa mga Levita. Nalista tanan ang ilang mga ngalan.”</para>
+  <para style="s1">Nagpuasa ug Nagaampo Sila si Ezra</para>
+  <para style="p">
+    <verse number="21" style="v"/>Didto sa kilid sa Suba sa Ahava, miingon ako sa grupo nga magpuasa kami ug magpaubos sa among kaugalingon atubangan sa among Dios aron hangyoon siya nga bantayan kami ug ang among mga kabataan ug mga kabtangan sa among lakaw. <verse number="22" style="v"/>Kay naulaw akong mangayo sa hari ug mga sundalo ug mga tigkabayo nga mobantay kanamo batok sa mga kaaway samtang naglakaw kami, tungod kay miingon man kami sa hari nga tabangan sa among Dios ang tanang nagasalig kaniya, apan masuko pag-ayo ang Dios sa mga nagasalikway kaniya. <verse number="23" style="v"/>Busa nagpuasa kami ug nagaampo sa atong Dios nga bantayan niya kami, ug gitubag niya ang among pag-ampo.</para>
+  <para style="s1">Ang mga Halad alang sa Templo</para>
+  <para style="p">
+    <verse number="24" style="v"/>Nagpili akog 12 gikan sa mga nangulo nga mga pari, walay labot kang Sherebia, Hashabia, ug sa napulo nila ka paryente. <verse number="25" style="v"/>Pagkahuman, gitugyan ko kanila nga walay kulang<note caller="+" style="f"><char style="fr" closed="false">8:25 </char><char style="fq" closed="false">gitugyan ko kanila nga walay kulang</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">sa literal, </char><char style="fqa" closed="false">gitimbang ko ug gitugyan kanila.</char></note> ang mga plata, bulawan, ug mga galamiton nga gihatag sa hari, sa iyang mga magtatambag, sa iyang mga opisyal, ug sa mga Israelinhon, alang sa templo sa atong Dios. <verse number="26-27" style="v"/>Mao kini ang akong gitugyan kanila:</para>
+  <para style="li1">22 ka toneladang pilak</para>
+  <para style="li1">3 ka toneladang plata nga kagamitan</para>
+  <para style="li1">3 ka toneladang bulawan</para>
+  <para style="li1">20 ka yahong nga bulawan nga mga walo ug tunga ka kilo ang gibug-aton</para>
+  <para style="li1">2 ka yahong nga bronsi nga sama ka bililhon sa bulawan.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Miingon ako sa mga pari, “Kamo ug kining mga galamiton gilain alang sa <char style="nd">Ginoo</char>. Ang mga pilak ug mga bulawan kinabubut-on nga halad alang sa <char style="nd">Ginoo</char>, ang Dios sa inyong mga katigulangan. <verse number="29" style="v"/>Ampingi ninyo kini pag-ayo hangtod nga madala ninyo kini sa mga bodega sa templo sa <char style="nd">Ginoo</char> sa Jerusalem nga walay kulang,<note caller="+" style="f"><char style="fr" closed="false">8:29 </char><char style="fq" closed="false">nga walay kulang</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">sa literal, </char><char style="fqa" closed="false">nga natimbang. </char><char style="ft" closed="false">Mao usab sa bersikulo 30 ug 33.</char></note> atubangan sa mga pangulong pari, mga Levita, ug sa mga pangulo sa mga pamilya sa mga Israelinhon.”</para>
+  <para style="p">
+    <verse number="30" style="v"/>Busa gikuha sa mga pari ug sa mga Levita ang mga pilak, bulawan, ug mga galamiton nga walay kulang, aron dad-on sa templo sa atong Dios sa Jerusalem.</para>
+  <para style="s1">Ang Pagbalik sa Jerusalem</para>
+  <para style="p">
+    <verse number="31" style="v"/>Mibiya kami sa Suba sa Ahava alang sa among lakaw paingon sa Jerusalem sa ika-12 nga adlaw sa unang bulan. Gitabangan kami sa among Dios ug gipanalipdan niya kami batok sa mga kaaway ug mga tulisan nga mangatang sa dalan. <verse number="32" style="v"/>Pag-abot namo sa Jerusalem, mipahulay kami ug tulo ka adlaw.</para>
+  <para style="p">
+    <verse number="33" style="v"/>Sa ikaupat nga adlaw, miadto kami sa templo sa among Dios ug gitugyan namo nga walay kulang ang mga pilak, bulawan, ug mga galamiton ngadto kang Meremot nga pari nga anak ni Uria. Kauban niya si Eleazar nga anak ni Finehas ug ang duha ka Levita nga sila si Jozabad nga anak ni Jeshua ug si Noadia nga anak ni Binui. <verse number="34" style="v"/>Giihap ug gitimbang kadtong tanan, ug gilista.</para>
+  <para style="p">
+    <verse number="35" style="v"/>Unya ang tanang namalik gikan sa pagkabihag naghalad sa Dios sa Israel ug mga halad nga sinunog: 12 ka torong baka alang sa tibuok Israel, 96 ka laking karnero, 77 ka nating karnero. Naghalad usab silag 12 ka kanding nga laki, isip halad sa paghinlo. Kining tanan mga halad nga sinunog alang sa <char style="nd">Ginoo</char>. <verse number="36" style="v"/>Gihatag usab nila sa mga gobernador ug mga opisyal sa <char style="add">probinsya sa</char> kasadpang Eufrates ang dokumento diin nahisulat ang mando sa hari. Ug kini sila mitabang sa katawhan <char style="add">sa Israel</char> ug sa templo sa Dios.</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Nakigminyo ang mga Israelinhon sa mga Dili Israelinhon</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="add">Miingon pa si Ezra,</char> Pagkahuman niini nga hitabo, miadto kanako ang mga pangulo <char style="add">sa mga Judio</char> ug miingon, “Daghan sa katawhan sa Israel, apil na mga pari ug mga Levita, ang nagkinabuhi sama sa mga katawhan sa ilang palibot. Gihimo nila ang mga malaw-ay nga mga buluhaton sa mga Canaanhon, Hitihanon, Perisihanon, Jebusihanon, Amonihanon, Moabihanon, Ehiptohanon, ug Amorihanon. <verse number="2" style="v"/>Sila ug ang ilang mga anak nangasawa pa gani sa mga babaye nga gikan niini nga mga katawhan. Busa ang katawhan nga pinili sa Dios nasagolan na sa ubang mga katawhan. Ug ang <char style="add">atong</char> mga pangulo ug mga opisyal mao pa ang unang naghimo niini.”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Sa dihang nadungog ko kini, gigisi ko ang akong bisti ug kupo, gilabnot ko ang akong buhok ug balbas, ug milingkod ako nga gikulbaan. <verse number="4" style="v"/>Nagtigom didto kanako ang mga tawo nga may kahadlok sa pulong sa Dios sa Israel tungod sa pagluib sa ilang isigka-Israelinhon nga namalik gikan sa pagkabihag. Naglingkod ako didto nga gikulbaan, hangtod nga miabot ang oras sa paghalad sa gabii. <verse number="5" style="v"/>Pag-abot niadtong orasa, miundang ako sa akong pagsubo. Miluhod ako, nga gisi ang akong bisti ug kupo, ug nagaampo nga nagabayaw sa akong mga kamot sa <char style="nd">Ginoo</char> nga akong Dios. <verse number="6" style="v"/>Miingon ako, “Dios ko, naulaw ako pag-ayo. Dili ako makaatubang kanimo sa kaulaw tungod kay labihan na gayod ang among mga sala; daw molapaw na kini sa among mga ulo ug mosangko na sa langit. <verse number="7" style="v"/>Sukad pa sa panahon sa among mga katigulangan, nagpakasala na kami sa hilabihan. Tungod niini, kami, ang among mga hari, ug mga pari kanunayng nailalom sa mga hari sa ubang nasod. Gipamatay nila ang uban kanamo, ug ang uban gibihag, gikawatan ug gipakaulawan, sama sa nahitabo kanamo karon.</para>
+  <para style="p">
+    <verse number="8" style="v"/>“Ug karon, niining hamubo nga panahon, gikaloy-an mo kami, <char style="nd">Ginoo</char> nga among Dios. Gitugotan mo nga may mahibilin kanamo, ug gipapuyo mo kami nga may kasigurohan niining dapit nga imong gigahin. Gihatagan mo kami ug paglaom ug gipagaan-gaanan mo ang among kahimtang sa pagkaulipon. <verse number="9" style="v"/>Bisan mga ulipon kami, wala mo kami pasagdi sa among pagkaulipon, hinuon gipakita mo ang imong gugma kanamo pinaagi sa maayo nga pagtagad nga gipakita sa mga hari sa Persia kanamo. Gihimo mo kini aron mahatagan mo kami ug bag-o nga kinabuhi, ug aron matukod namo pag-usab ang imong templo nga naguba ug mahatagan mo kami ug proteksyon sa Juda ug sa Jerusalem.</para>
+  <para style="p">
+    <verse number="10" style="v"/>“Apan karon nga nakasala kami, O Dios, unsa pa may among ikasulti? Kay gisalikway man namo ang imong mga sugo <verse number="11" style="v"/>nga gihatag mo kanamo pinaagi sa imong mga alagad nga mga propeta. Miingon sila kanamo nga ang dapit nga among adtoan aron panag-iyahan hugaw nga dapit tungod sa kadaotan sa mga lumulupyo niini. Gihugawan nila ang tibuok kayutaan pinaagi sa ilang mga law-ay nga binuhatan. <verse number="12" style="v"/><char style="add">Nagaingon usab ang mga propeta kanamo nga</char> dili gayod namo tugotan nga maminyo ang among mga anak sa ilang mga anak; ug dili gayod namo sila tabangan nga mouswag, aron kami molig-on ug makapahimulos sa maayong abot sa yuta, ug ikabilin namo kini sa among mga kaliwat ingon nga panulondon hangtod sa kahangtoran. <verse number="13" style="v"/>Gisilotan mo kami, O among Dios, tungod sa among mga sala. Apan gaan ra ang silot nga gipahamtang mo kanamo kon itandi sa sala nga among nahimo, ug gitugotan mo pa nga may mahibiling buhi kanamo. <verse number="14" style="v"/>Apan bisan pa niini, gisupak namo pag-usab ang imong mga sugo, ug nakigminyo sa mga tawo nga law-ay ug binuhatan. Sigurado gayod nga masuko ka kanamo ug laglagon mo kami hangtod nga wala nay mahibilin kanamo. <verse number="15" style="v"/>O <char style="nd">Ginoo</char>, Dios sa Israel, matarong ka! Kay gitugotan mo nga may mahibilin kanamo nga buhi hangtod karon. Nakasala kami, ug tungod niini, dili kami makabarog sa imong atubangan tungod niining among mga sala.”</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">Misulti ang mga Israelinhon sa Ilang mga Sala</para>
+  <para style="p">
+    <verse number="1" style="v"/>Samtang nagluhod si Ezra didto sa atubangan sa templo sa Dios nga naghilak ug samtang nagaampo siya ug nagsulti <char style="add">sa mga sala sa katawhan sa Israel</char>, daghang mga Israelinhon nga mga lalaki, babaye, ug mga kabataan ang nagtigom libot kaniya. Nanghilak usab silag kusog. <verse number="2" style="v"/>Unya miingon kaniya si Shecania nga anak ni Jehiel, nga kaliwat ni Elam, “Nakasala kami sa atong Dios tungod kay nakigminyo kami sa mga babaye nga dili Israelinhon nga nagapuyo uban kanato. Apan bisan pa niini may paglaom pa gihapon ang <char style="add">katawhan sa</char> Israel. <verse number="3" style="v"/>Busa karon, sundon namo ang imong tambag ug ang tambag sa uban pang nagatahod sa mga sugo sa atong Dios. Maghimo kamig kasabotan sa atong Dios nga papahawaon kining mga babaye apil ang ilang mga kabataan. Tumanon namo ang giingon sa Kasugoan. <verse number="4" style="v"/>Tindog! Kay imong responsibilidad ang paggiya kanamo niining mga butanga. Lig-ona ang imong kaugalingon ug himoa ang angayng buhaton kay motabang kami kanimo.”</para>
+  <para style="p">
+    <verse number="5" style="v"/>Busa mitindog si Ezra ug gipapanumpa niya ang mga pangulo nga mga pari, ang mga Levita, ug ang tanang mga Israelinhon, nga himuon nila ang giingon ni Shecania, ug nanumpa sila. <verse number="6" style="v"/>Unya mibiya si Ezra sa templo sa Dios ug miadto sa kuwarto ni Jehohanan nga anak ni Eliashib. Ug didto, wala siya mokaon ug moinom, kay nagsubo siya tungod sa pagpakasala sa mga Israelinhon nga namalik gikan sa pagkabihag.</para>
+  <para style="p">
+    <verse number="7-8" style="v"/>Nagpadalag pahibalo ang mga opisyales ug mga tigdumala sa mga Israelinhon sa tibuok Juda ug sa Jerusalem nga ang tanang namalik gikan sa pagkabihag magtigom sa Jerusalem. Ug si bisan kinsa nga dili moadto sulod sa tulo ka adlaw kuhaan sa tanan niyang mga kabtangan, ug dili na ilhon nga sakop sa mga katawhan nga namalik gikan sa pagkabihag.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Busa sulod sa tulo ka adlaw nagtigom ang tanang katawhan sa Juda ug Benjamin, ug nanglingkod sila didto sa may plasa sa templo sa Dios sa Jerusalem. Nahitabo kini sa ika-20 nga adlaw sa ikasiyam nga bulan. Nangurog ang mga tawo tungod sa ilang ginahisgotan ug tungod sa makusog nga ulan.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Unya mitindog si Ezra nga pari ug miingon kanila, “Nakalapas kamo kay nakigminyo kamo sa mga dili Israelinhon. Busa nadugangan pa gayod ang sala sa Israel. <verse number="11" style="v"/>Karon, isulti ninyo ang inyong mga sala sa <char style="nd">Ginoo</char>, ang Dios sa inyong mga katigulangan, ug buhata ninyo ang iyang kabubut-on. Ilain ninyo ang inyong kaugalingon gikan sa mga katawhan sa palibot ninyo, ug bulagi ninyo ang inyong mga asawa nga dili Israelinhon.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Mitubag sa makusog ang tibuok katilingban, “Husto ka gayod! Buhaton namo ang imong gisulti. <verse number="13" style="v"/>Apan kini nga butang dili mahuman sa usa o duha lang ka adlaw, kay daghan kanamo ang nakahimo niining salaa. Ting-ulan pa karon, ug dili kami makaagwanta nga magpaulan dinhi sa gawas. <verse number="14" style="v"/>Ang mga opisyales na lang nato ang mag-atiman niini alang sa tibuok katilingban. Unya paanhion lang dinhi ang mga naminyo ug dili Israelinhon sa gitakda nga panahon uban ang mga tigdumala ug mga hukom sa ilang mga lungsod. Himuon ta kini aron mawala na ang labihan nga kasuko sa Dios kanato tungod sa butang nga atong gihimo.” <verse number="15" style="v"/>Walay misupak niini nga plano gawas kanila ni Jonatan nga anak ni Asahel ug si Jahaz nga anak ni Tikva. Gipaluyohan sila ni Meshulam ug ni Shabetai nga mga Levita.</para>
+  <para style="p">
+    <verse number="16-17" style="v"/>Kadto nga mga plano gituman sa mga namalik gikan sa pagkabihag. Busa nagpili si Ezra nga pari ug mga lalaki nga mga pangulo sa mga pamilya, ug gilista ang ilang ngalan. Ug sa unang adlaw sa ikanapulo nga bulan, nanglingkod sila ug gisugdan nila ang pag-imbistigar sa mga Israelinhon nga naminyo ug mga babaye nga dili Israelinhon. Nahuman nila ang pag-imbistigar sa tanang mga kaso sa unang adlaw sa unang bulan, <char style="add">sa pagkasunod nga tuig.</char></para>
+  <para style="s1">Ang mga Lalaki nga Naminyo ug mga Dili Israelinhon</para>
+  <para style="p">
+    <verse number="18-19" style="v"/>Mao kini ang mga lalaki nga naminyo ug mga dili Israelinhon, ug misaad sila nga bulagan nila kining ilang mga asawa: (Naghalad ang kada usa kanila ug laking karnero isip bayad sa ilang sala.)</para>
+  <para style="p">Gikan sa mga pari:</para>
+  <para style="li1">si Maasea, Eliezer, Jarib, ug Gedalia, nga gikan sa pamilya ni Josue nga anak ni Jozadak ug sa iyang mga igsoon;</para>
+  <para style="li1">
+    <verse number="20" style="v"/>si Hanani ug si Zebadia, nga gikan sa pamilya ni Imer;</para>
+  <para style="li1">
+    <verse number="21" style="v"/>si Maasea, Elias, Shemaya, Jehiel, ug Uzia, nga gikan sa pamilya ni Harim;</para>
+  <para style="li1">
+    <verse number="22" style="v"/>si Elyoenai, Maasea, Ishmael, Netanel, Jozabad, ug Elasa, nga gikan sa pamilya ni Pashur.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="23" style="v"/>Gikan sa mga Levita:</para>
+  <para style="li1">si Jozabad, Shimei, Kelaya (nga <char style="add">gitawag usab ug</char> Kelita), Petahia, Juda, ug si Eliezer.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Gikan sa mga mag-aawit:</para>
+  <para style="li1">si Eliashib.</para>
+  <para style="p">Gikan sa mga guwardya sa mga pultahan <char style="add">sa templo</char>:</para>
+  <para style="li1">si Shalum, Telem, ug si Uri.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="25" style="v"/>Gikan sa uban pa nga mga Israelinhon:</para>
+  <para style="li1">si Ramia, Izia, Malkia, Miamin, Eleazar, Malkia, ug Benaya, nga gikan sa pamilya ni Parosh;</para>
+  <para style="li1">
+    <verse number="26" style="v"/>si Matania, Zacarias, Jehiel, Abdi, Jeremot, ug Elias, nga gikan sa pamilya ni Elam;</para>
+  <para style="li1">
+    <verse number="27" style="v"/>si Elioenai, Eliashib, Matania, Jeremot, Zabad, ug Aziza, nga gikan sa pamilya ni Zatu;</para>
+  <para style="li1">
+    <verse number="28" style="v"/>si Johanan, Hanania, Zabai, ug Atlai, nga gikan sa pamilya ni Bebai;</para>
+  <para style="li1">
+    <verse number="29" style="v"/>si Meshulam, Maluc, Adaya, Jashub, Sheal, ug Jeremot, nga gikan sa pamilya ni Bani;</para>
+  <para style="li1">
+    <verse number="30" style="v"/>si Adna, Kelal, Benaya, Maasea, Matania, Bezalel, Binui, ug Manase, nga gikan sa pamilya ni Pahat Moab;</para>
+  <para style="li1">
+    <verse number="31-32" style="v"/>si Eliezer, Ishia, Malkia, Shemaya, Simeon, Benjamin, Maluc, ug Shemaria, nga gikan sa pamilya ni Harim;</para>
+  <para style="li1">
+    <verse number="33" style="v"/>si Matenai, Matata, Zabad, Elifelet, Jeremai, Manase, ug Shemei, nga gikan sa pamilya ni Hashum;</para>
+  <para style="li1">
+    <verse number="34-37" style="v"/>si Maadai, Amram, Uel, Benaya, Bedia, Keluhi, Vania, Meremot, Eliashib, Matania, Matenai, Jaasu, nga gikan sa pamilya ni Bani;</para>
+  <para style="li1">
+    <verse number="38-42" style="v"/>si Shimei, Shelemia, Natan, Adaya, Macnadebai, Shashai, Sharai, Azarel, Shelemia, Shemaria, Shalum, Amaria, ug si Jose, nga gikan sa pamilya ni Binui;</para>
+  <para style="li1">
+    <verse number="43" style="v"/>si Jeil, Matitia, Zabad, Zebina, Jadai, Joel, ug Benaya, nga gikan sa pamilya ni Nebo.</para>
+  <para style="p">
+    <verse number="44" style="v"/>Kini silang tanan ang naminyo ug mga babaye nga dili Israelinhon, ug ang uban kanila may mga anak niining mga babayhana.<note caller="+" style="f"><char style="fr" closed="false">10:44 </char><char style="fq" closed="false">ug… babayhana</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">o, </char><char style="fqa" closed="false">ug gipapahawa nila kining ilang mga asawa apil ang ilang mga anak.</char></note></para>
+</usx>

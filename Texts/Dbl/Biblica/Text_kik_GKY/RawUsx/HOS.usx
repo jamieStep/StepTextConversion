@@ -1,0 +1,1592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="HOS" style="id">- The Holy Word of God</book>
+  <para style="rem">Copyright © 2013 by Biblica, Inc.®</para>
+  <para style="h">Hosea</para>
+  <para style="toc1">Hosea</para>
+  <para style="toc2">Hosea</para>
+  <para style="toc3">Hos</para>
+  <para style="mt1">HOSEA</para>
+  <para style="imt1">Ũhoro wa Ibuku Rĩĩrĩ</para>
+  <para style="ip">Hosea aarĩ mũnabii mĩaka-inĩ ya mũthia ya Ũthamaki wa Gathigathini. Ibuku rĩĩrĩ rĩambĩrĩirie na kũheana ũhoro wa nyũmba ya Hosea ĩrĩa yatuĩkire mũhano wa ndũmĩrĩri ĩrĩa aahunjagĩria bũrũri wake. Ngai nĩerire Hosea ahikie mũtumia mũmaraya arĩ njĩra ya kuonania ũrĩa andũ a Isiraeli mataarĩ ehokeku. Ningĩ Ngai akĩĩra Hosea marĩĩtwa marĩa agaatua ciana ciake, ũrĩ ũndũ wa kũririkania andũ a Isiraeli atĩ nĩ maarĩ maherithio.</para>
+  <para style="ip">Ngai nĩerire Hosea ende mũtumia wake o na gũtuĩka ndaarĩ mwĩhokeku. Ũndũ ũcio warĩ wa kuonania wendo wa Ngai kũrĩ andũ a Isiraeli acio mataarĩ ehokeku. Andũ a Isiraeli nĩmehokete hinya wa mbũtũ ciao cia ita, o na makehoka mabũrũri mangĩ handũ ha kwĩhoka Ngai nĩguo agitĩre bũrũri wao. Andũ acio nĩmehokaga atĩ ngai cia mĩhianano nĩingĩamaheire imera, na imaingĩhĩrie ndũũru na mahiũ mao.</para>
+  <para style="ip">Ibuku rĩĩrĩ rĩheanĩte ũhoro wa ũrĩa Ngai aaciirithirie andũ a Isiraeli na a Juda tondũ wa gũthũkia kĩrĩkanĩro kĩrĩa aarĩkanĩire nao. O na gũtuĩka andũ a Isiraeli nĩmekĩte Ngai maũndũ mooru, Ngai no aamendete na akameera atĩ nĩakamarekera na amarathime mangĩgatuĩka ehokeku (14:4).</para>
+  <para style="iot">Mwandĩki</para>
+  <para style="im">Mwandĩki wa ibuku rĩĩrĩ nĩ Hosea mũrũ wa Beeri.</para>
+  <para style="iot">Ũrĩa Ibuku Rĩĩrĩ Rĩgayanĩtio</para>
+  <para style="io1">· Mũtũũrĩre wa Hosea na mũciĩ wake <char style="ior"><ref loc="HOS 1:1-3:5">1:1–3:5</ref></char></para>
+  <para style="io1">· Ũhoro wa mehia ma Isiraeli <char style="ior"><ref loc="HOS 4:1-6:3">4:1–6:3</ref></char></para>
+  <para style="io1">· Iherithia nĩ ũndũ wa Isiraeli <char style="ior"><ref loc="HOS 6:4-10:15">6:4–10:15</ref></char></para>
+  <para style="io1">· Ituĩro rĩa Ngai na tha ciake <char style="ior"><ref loc="HOS 11:1-14:9">11:1–14:9</ref></char>.</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 1:2">Jer 1:2</ref>; <ref loc="ISA 1:1">Isa 1:1</ref>; <ref loc="MIC 1:1">Mik 1:1</ref></char>
+    </note>Ĩno nĩyo ndũmĩrĩri ya Jehova ĩrĩa yakinyĩrĩire Hosea mũrũ wa Beeri hĩndĩ ya wathani wa Uzia, na wa Jothamu, na wa Ahazu, na wa Hezekia athamaki a Juda, na hĩndĩ ya wathani wa Jeroboamu mũrũ wa Joashu mũthamaki wa Isiraeli:</para>
+  <para style="s1">Mũtumia wa Hosea na Ciana Ciao</para>
+  <para style="p">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 3:1">Jer 3:1</ref>; <ref loc="HOS 3:1">Hos 3:1</ref></char>
+    </note>Rĩrĩa Jehova aambĩrĩirie kwaria na kanua ka Hosea, Jehova aamwĩrire atĩrĩ, “Thiĩ, ũkahikie mũtumia mũmaraya na ũgĩe na ciana cia ũmaraya, tondũ andũ a bũrũri nĩmehĩtie, na ũndũ wa ũtharia mũũru mũno wa gũtirika Jehova.” <verse number="3" style="v"/>Nĩ ũndũ ũcio Hosea akĩhikia Gomeri mwarĩ wa Dibilaimu, nake akĩgĩa nda na akĩmũciarĩra mwana wa kahĩĩ.</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="1SA 29:1">1Sam 29:1</ref>; <ref loc="1KI 18:45">1Ath 18:45</ref></char>
+    </note>Nake Jehova akĩĩra Hosea atĩrĩ, “Gatue Jezireeli, tondũ nĩngũherithia nyũmba ya Jehu o narua nĩ ũndũ wa ũragani mũnene ooraganire kũu Jezireeli,<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="ft" closed="false">Jezireeli nĩ kuuga “Ngai nĩaharaganagia”.</char></note> na niine ũthamaki wa Isiraeli. <verse number="5" style="v"/>Mũthenya ũcio-rĩ, nĩngoinanga ũta wa Isiraeli Gĩtuamba-inĩ kĩa Jezireeli.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Gomeri akĩgĩa nda rĩngĩ na agĩciara mwana wa kairĩtu. Nake Jehova akĩĩra Hosea atĩrĩ, “Gatue Lo-Ruhama, nĩgũkorwo ndigacooka kuonania wendo rĩngĩ kũrĩ nyũmba ya Isiraeli, atĩ ndĩmarekere o na atĩa.<note caller="+" style="f"><char style="fr" closed="false">1:6 </char><char style="ft" closed="false">Lo-Ruhama nĩ kuuga “arĩa mataiguĩrĩirwo tha” kana “andũ matarĩ ende”.</char></note> <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:7 </char><char style="xt" closed="false"><ref loc="ZEC 4:6">Zek 4:6</ref></char></note>No nĩngonania wendo kũrĩ nyũmba ya Juda; na nĩngamahonokia, na ti na ũndũ wa ũta, kana rũhiũ rwa njora kana mbaara, kana na mbarathi na ahaici acio, no nĩ ũndũ wa Jehova Ngai wao.”</para>
+  <para style="p">
+    <verse number="8" style="v"/>Thuutha wa gũtigithia Lo-Ruhama kuonga-rĩ, Gomeri agĩciara kahĩĩ kangĩ. <verse number="9" style="v"/>Nake Jehova akĩmwĩra atĩrĩ, “Gatue Lo-Ammi, nĩ ũndũ inyuĩ mũtirĩ andũ akwa, na niĩ ndirĩ Ngai wanyu.<note caller="+" style="f"><char style="fr" closed="false">1:9 </char><char style="ft" closed="false">Lo-Ammi nĩ kuuga “arĩa matarĩ andũ akwa”.</char></note></para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 22:17">Kĩam 22:17</ref>; <ref loc="ROM 9:26">Arom 9:26</ref></char>
+    </note>“No rĩrĩ, andũ a Isiraeli magaatuĩka ta mũthanga wa hũgũrũrũ-inĩ cia iria, ũrĩa ũtangĩthimĩka kana ũtarĩke. O handũ harĩa merĩirwo atĩrĩ, ‘Inyuĩ mũtirĩ andũ akwa’, no ho mageetwo ‘ariũ a Ngai ũrĩa ũrĩ muoyo’. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:11 </char><char style="xt" closed="false"><ref loc="ISA 11:12">Isa 11:12</ref>; <ref loc="EZK 37:15-28">Ezek 37:15-28</ref></char></note>Nao andũ a Juda na andũ a Isiraeli nĩmagacookanĩrĩra rĩngĩ, na nĩmagathuura mũndũ ũmwe amatongorie, nao nĩmakoima bũrũri ũcio, nĩgũkorwo mũthenya wa Jezireeli nĩũgaatuĩka mũthenya mũnene.</para>
+  <chapter number="2" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>“Ha ũhoro wa ariũ a thoguo, meere atĩrĩ, ‘Inyuĩ mũrĩ andũ akwa’, na ha ũhoro wa aarĩ a thoguo, ũmeere atĩrĩ, ‘Inyuĩ mũrĩ endwa akwa’.<note caller="+" style="f"><char style="fr" closed="false">2:1 </char><char style="ft" closed="false">Ruhama nĩ kuuga “arĩa maiguĩrĩirwo tha”, naguo Ammi nĩ kuuga “andũ akwa”.</char></note></para>
+  <para style="s1">Isiraeli Kũherithio na Gũcookererio</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 50:1">Isa 50:1</ref>; <ref loc="EZK 23:45">Ezek 23:45</ref></char>
+    </note>“Thaithai nyina wanyu, mũthaithei,</para>
+  <para style="q2">nĩgũkorwo we ti mũtumia wakwa,</para>
+  <para style="q2">na niĩ ndirĩ mũthuuriwe.</para>
+  <para style="q1">Nĩeherie maũndũ ma ũtharia ũthiũ-inĩ wake,</para>
+  <para style="q2">na athengie ũmaraya gatagatĩ-inĩ ka nyondo ciake.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 16:37">Ezek 16:37</ref>
+      </char>
+    </note>Akorwo ti ũguo ndĩmũrute nguo aikare arĩ njaga,</para>
+  <para style="q2">na ndũme aikare njaga o ta mũthenya ũrĩa aaciarirwo;</para>
+  <para style="q1">ngaamũtua ta werũ,</para>
+  <para style="q2">na ndĩmũgarũre atuĩke bũrũri mũngʼaru,</para>
+  <para style="q2">na ndĩmũũrage na nyoota.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Ndikaiguĩra ciana ciake tha,</para>
+  <para style="q2">tondũ nĩ ciana cia ũtharia.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 3:6">Jer 3:6</ref>; <ref loc="JER 44:17-18">44:17-18</ref></char>
+    </note>Nyina wao akoretwo akĩhũũra ũmaraya,</para>
+  <para style="q2">na aagĩire nda ciao na njĩra cia ũũra-thoni.</para>
+  <para style="q1">Nĩ ũndũ oigĩte atĩrĩ, ‘Nĩngũrũmĩrĩra endwa akwa,</para>
+  <para style="q2">arĩa maaheaga irio ciakwa na maaĩ makwa,</para>
+  <para style="q1">na guoya wakwa wa ngʼondu o na gatani yakwa,</para>
+  <para style="q2">maguta makwa o na kĩrĩa nyuuaga.’</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 3:23">Ayub 3:23</ref>; <ref loc="LAM 3:9">Maca 3:9</ref></char>
+    </note>Nĩ ũndũ wa ũguo nĩngũhinga njĩra yake na mĩigua,</para>
+  <para style="q2">ndĩmũirigĩre thĩinĩ, aage njĩra ya kuumĩra.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Nĩagatengʼeria endwa ake na ndakamakinyĩra.</para>
+  <para style="q2">Akaamacaria na ndakamona.</para>
+  <para style="q1">Hĩndĩ ĩyo nĩagacooka oige atĩrĩ,</para>
+  <para style="q2">‘Nĩngũcooka kũrĩ mũthuuri wakwa wa mbere,</para>
+  <para style="q2">nĩgũkorwo hĩndĩ ĩyo nĩndaikarĩte wega gũkĩra rĩu.’</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 18:12">Ndar 18:12</ref>; <ref loc="EZK 16:15-19">Ezek 16:15-19</ref></char>
+    </note>Mũtumia ũcio nĩagire kũmenya atĩ nĩ niĩ</para>
+  <para style="q2">ndaamũheaga ngano, na ndibei ya mũhihano, o na maguta,</para>
+  <para style="q1">na ngamũingĩhĩria betha na thahabu,</para>
+  <para style="q2">iria maahũthagĩra gũthondeka ngai ĩrĩa ĩĩtagwo Baali.<note caller="+" style="f"><char style="fr" closed="false">2:8 </char><char style="ft" closed="false">Andũ a Kaanani meetĩkĩtie atĩ Baali nĩyo yamaheaga ngano, na ndibei, na maguta.</char></note></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:7">Hos 8:7</ref>; <ref loc="HOS 9:2">Hos 9:2</ref></char>
+    </note>“Tondũ ũcio nĩngoya ngano yakwa yakũra,</para>
+  <para style="q2">na ndibei yakwa ya mũhihano yagĩrĩra,</para>
+  <para style="q1">na ndĩmũtunye guoya wakwa wa ngʼondu na gatani yakwa,</para>
+  <para style="q2">o iria ciarĩ cia kũmũhumbĩra njaga yake.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 13:26">Jer 13:26</ref>; <ref loc="EZK 16:37">Ezek 16:37</ref></char>
+    </note>Nĩ ũndũ ũcio, nĩngaguũria maũndũ make ma waganu</para>
+  <para style="q2">endwa ake mamwĩroreire;</para>
+  <para style="q2">gũtirĩ mũndũ ũkaamũteithũra moko-inĩ makwa.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 24:8">Isa 24:8</ref>; <ref loc="JER 7:34">Jer 7:34</ref></char>
+    </note>Nĩnganiina ikeno ciake ciothe, arĩ cio:</para>
+  <para style="q2">ciathĩ ciake cia mwaka o mwaka, na Tũrũgamo twake twa mweri,</para>
+  <para style="q2">na mĩthenya yake ya Thabatũ, na ciathĩ ciake ciothe iria nyamũre.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 7:23">Isa 7:23</ref>; <ref loc="JER 8:13">Jer 8:13</ref></char>
+    </note>Nĩngathũkangia mĩthabibũ yake na mĩkũyũ yake,</para>
+  <para style="q2">ĩrĩa oigire nĩ irĩhi rĩake kuuma kũrĩ endwa ake;</para>
+  <para style="q1">nĩngamĩtua ihinga,</para>
+  <para style="q2">na nyamũ cia gĩthaka nĩikamĩrĩa.”</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 65:7">Isa 65:7</ref>; <ref loc="EZK 16:17">Ezek 16:17</ref></char>
+    </note>Jehova ekuuga atĩrĩ,</para>
+  <para style="q1">“Nĩngamũherithia nĩ ũndũ wa mĩthenya ĩrĩa acinĩire Baali ũbumba;</para>
+  <para style="q2">rĩrĩa eegemagia na icũhĩ, na mathaga ma goro,</para>
+  <para style="q2">na akĩrũmĩrĩra endwa ake, no akĩriganĩrwo nĩ niĩ.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>“Nĩ ũndũ wa ũguo nĩngũmũguucĩrĩria na waara;</para>
+  <para style="q2">ngũmũtongoria nginya werũ-inĩ,</para>
+  <para style="q2">na ndĩmwarĩrie na ciugo cia wendo.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:2">Jer 2:2</ref>; <ref loc="HOS 12:9">Hos 12:9</ref></char>
+    </note>Kũu nĩkuo ngaamũcookeria mĩgũnda yake ya mĩthabibũ,</para>
+  <para style="q2">na ndue Kĩanda kĩa Akori mũrango wa mwĩhoko.<note caller="+" style="f"><char style="fr" closed="false">2:15 </char><char style="ft" closed="false">Kĩanda kĩa Akori nĩ kuuga “thĩĩna” kana “gũthĩĩnio”.</char></note></para>
+  <para style="q1">Kũu nĩkuo akaina o ta ũrĩa ainaga matukũ-inĩ ma ũnini wake,</para>
+  <para style="q2">aine ta ũrĩa ainire mũthenya ũrĩa aambatire kuuma bũrũri wa Misiri.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v"/>Jehova ekuuga atĩrĩ, “Mũthenya ũcio-rĩ,</para>
+  <para style="q2">nĩũkanjĩta ‘Mũthuuri wakwa’;</para>
+  <para style="q2">ndũkanjĩta rĩngĩ ‘Mwathi wakwa’.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 23:13">Thaam 23:13</ref>; <ref loc="PSA 16:4">Thab 16:4</ref></char>
+    </note>Nĩngeheria marĩĩtwa ma Baali kuuma mĩromo-inĩ yake;</para>
+  <para style="q2">marĩĩtwa macio matikagwetwo rĩngĩ.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Mũthenya ũcio nĩngathondeka kĩrĩkanĩro</para>
+  <para style="q2">na nyamũ cia gĩthaka, o na nyoni cia rĩera-inĩ,</para>
+  <para style="q2">na ciũmbe iria ithiiagĩra gũkũ thĩ nĩ ũndũ wao.</para>
+  <para style="q1">Ũta, na rũhiũ rwa njora, na mbaara nĩngaciniina bũrũri-inĩ,</para>
+  <para style="q2">nĩgeetha othe makomage marĩ na thayũ.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Nĩngakũũria ũtuĩke mũtumia wakwa nginya tene;</para>
+  <para style="q2">ngaakũũria ũtuĩke wakwa ũhoro-inĩ wa ũthingu na wa kĩhooto,</para>
+  <para style="q2">ngũũrie ndĩ na wendo na tha.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:20 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:34">Jer 31:34</ref>; <ref loc="HOS 4:1">Hos 4:1</ref></char>
+    </note>Nĩngakũũria ũtuĩke wakwa na wĩhokeku,</para>
+  <para style="q2">nawe nĩũgetĩkĩra Jehova.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:21 </char>
+      <char style="xt" closed="false">
+        <ref loc="ZEC 8:12">Zek 8:12</ref>; <ref loc="MAL 3:10-11">Mal 3:10-11</ref></char>
+    </note>Jehova ekuuga atĩrĩ,</para>
+  <para style="q2">“Mũthenya ũcio-rĩ, nĩngacookia ũhoro;</para>
+  <para style="q1">nĩngacookeria matu ũhoro,</para>
+  <para style="q2">namo matu macookerie thĩ ũhoro;</para>
+  <para style="q1">
+    <verse number="22" style="v"/>nayo thĩ ĩcookerie ngano,</para>
+  <para style="q2">na ndibei ya mũhihano, na maguta ũhoro,</para>
+  <para style="q2">nacio nĩigacookeria Jezireeli ũhoro.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:23 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 1:6">Hos 1:6</ref>; <ref loc="ROM 9:25">Arom 9:25</ref></char>
+    </note>Nĩngamũhaanda bũrũri-inĩ nĩ ũndũ wakwa mwene;</para>
+  <para style="q2">nĩngonania wendo wakwa harĩ ũrĩa nderĩte atĩrĩ,</para>
+  <para style="qc">‘Niĩ ndikwendete’.</para>
+  <para style="q1">Arĩa nderĩte atĩrĩ, ‘Inyuĩ mũtirĩ andũ akwa’,</para>
+  <para style="q2">nĩngameera atĩrĩ,</para>
+  <para style="qc">‘Inyuĩ mũrĩ andũ akwa’;</para>
+  <para style="q2">na mũndũ o mũndũ oige atĩrĩ, ‘Wee nĩwe Ngai wakwa.’ ”</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Hosea na Mũtumia Wake Kũiguana Rĩngĩ</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 1:2">Hos 1:2</ref>; <ref loc="2SA 6:19">2Sam 6:19</ref></char>
+    </note>Ningĩ Jehova akĩnjĩĩra atĩrĩ, “Thiĩ, wonie mũtumia waku wendo rĩngĩ, o na gũtuĩka nĩendetwo nĩ mũndũ ũngĩ na nĩ mũtharia. Mwende o ta ũrĩa Jehova endete andũ a Isiraeli, o na gũtuĩka nĩmagarũrũkagĩra ngai ingĩ na makenda keki iria nyamũre cia thabibũ nyũmũ.”</para>
+  <para style="p">
+    <verse number="2" style="v"/>Nĩ ũndũ ũcio ngĩmũgũra na thogora wa cekeri ikũmi na ithano<note caller="+" style="f"><char style="fr" closed="false">3:2 </char><char style="ft" closed="false">nĩ ta giramu 170</char></note> cia betha, na ta homeri na letheku ĩmwe<note caller="+" style="f"><char style="fr" closed="false">3:2 </char><char style="ft" closed="false">nĩ ta kilo 330</char></note> ya cairi. <verse number="3" style="v"/>Ngĩcooka ngĩmwĩra atĩrĩ, “Nĩũgũtũũrania na niĩ matukũ maingĩ, na no nginya ũtige ũmaraya na ndũkendane na mũndũ ũngĩ, na niĩ nĩngũtũũrania nawe.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="DAN 11:31">Dan 11:31</ref>; <ref loc="HOS 2:11">Hos 2:11</ref></char>
+    </note>Nĩgũkorwo andũ a Isiraeli nĩmegũtũũra matukũ maingĩ matarĩ na mũthamaki kana mũnene, na matarĩ na igongona kana mahiga maamũre, na matarĩ na ebodi kana mũhianano. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:5 </char><char style="xt" closed="false"><ref loc="DEU 4:29">Gũcook 4:29</ref>; <ref loc="JER 50:4-5">Jer 50:4-5</ref></char></note>Thuutha ũcio andũ a Isiraeli nĩmagacooka na marongorie Jehova Ngai wao na Daudi mũthamaki wao. Nĩmagooka makĩinainaga kũrĩ Jehova na kũrĩ irathimo ciake matukũ-inĩ ma mũthia.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Thitango ya Gũũkĩrĩra Isiraeli</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Iguai ũhoro wa Jehova, inyuĩ andũ a Isiraeli,</para>
+  <para style="q2">tondũ Jehova nĩekũmũthitanga,</para>
+  <para style="q2">inyuĩ mũtũũraga thĩinĩ wa bũrũri ũyũ:</para>
+  <para style="q1">“Nĩ ũndũ-rĩ, gũtirĩ na wĩhokeku kana wendo,</para>
+  <para style="q2">kana kũmenya Ngai thĩinĩ wa bũrũri ũyũ.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 59:3">Isa 59:3</ref>; <ref loc="HOS 7:1">Hos 7:1</ref>; <ref loc="2KI 21:6">2Ath 21:6</ref></char>
+    </note>Kĩrĩa kũrĩ no kũrumana, na kũheenania, na ũragani,</para>
+  <para style="q2">na ũici, na ũtharia;</para>
+  <para style="q1">maũndũ macio makaingĩha mũno,</para>
+  <para style="q2">na ũiti wa thakame ũkarũmĩrĩra ũiti wa thakame.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 4:28">Jer 4:28</ref>; <ref loc="EZK 38:20">Ezek 38:20</ref>; <ref loc="ZEP 1:3">Zef 1:3</ref></char>
+    </note>Nĩ ũndũ wa gĩtũmi kĩu bũrũri nĩũracakaya,</para>
+  <para style="q2">na arĩa othe matũũraga thĩinĩ waguo makahinyara;</para>
+  <para style="q1">nyamũ cia gĩthaka, na nyoni cia rĩera-inĩ,</para>
+  <para style="q2">na thamaki cia iria-inĩ nĩgũkua irakua.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>“No rĩrĩ, ndũkareke mũndũ arehe thitango,</para>
+  <para style="q2">mũndũ ndagathitange ũrĩa ũngĩ,</para>
+  <para style="q1">nĩgũkorwo andũ anyu mahaana andũ arĩa</para>
+  <para style="q2">mathitangaga mũthĩnjĩri-Ngai.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 7:19">Ezek 7:19</ref>; <ref loc="HOS 2:2">Hos 2:2</ref></char>
+    </note>Mũhĩngagwo mũthenya na ũtukũ,</para>
+  <para style="q2">na anabii makahĩngwo hamwe na inyuĩ.</para>
+  <para style="q1">Nĩ ũndũ ũcio nĩnganiina maitũguo.</para>
+  <para style="q2">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 10:21">Thim 10:21</ref>; <ref loc="MAL 2:7-8">Mal 2:7-8</ref></char>
+    </note>Andũ akwa maniinagwo nĩ ũndũ wa kwaga ũmenyo.</para>
+  <para style="b"/>
+  <para style="q1">“Tondũ nĩmũregete ũmenyo,</para>
+  <para style="q2">o na niĩ nĩndĩmũregete mũtuĩke athĩnjĩri-Ngai akwa;</para>
+  <para style="q1">tondũ nĩmũtiganĩirie watho wa Ngai wanyu,</para>
+  <para style="q2">o na niĩ nĩngatiganĩria ciana cianyu.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="HAB 2:16">Hab 2:16</ref>; <ref loc="HOS 10:1">Hos 10:1</ref>, <ref loc="HOS 10:6">6</ref></char>
+    </note>O ũrĩa athĩnjĩri-Ngai maingĩhaga,</para>
+  <para style="q2">noguo maakĩragĩrĩria kũnjĩhĩria;</para>
+  <para style="q2">nao magĩkũũrania riiri wao na kĩndũ gĩa thoni.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Mehũũnagia na mehia ma andũ akwa,</para>
+  <para style="q2">na magakenera waganu wao.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 24:2">Isa 24:2</ref>; <ref loc="HOS 9:9">Hos 9:9</ref></char>
+    </note>Na nĩgũgatuĩka atĩrĩ: O ta ũrĩa andũ makaahaana,</para>
+  <para style="q2">no taguo athĩnjĩri-Ngai makaahaana.</para>
+  <para style="q1">Nĩngamaherithia othe nĩ ũndũ wa mĩthiĩre yao,</para>
+  <para style="q2">na ndĩmarĩhe kũringana na ciĩko ciao.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 26:26">Alaw 26:26</ref>; <ref loc="MIC 6:14">Mik 6:14</ref></char>
+    </note>“Makaarĩĩaga no matikahũũna,</para>
+  <para style="q2">makaahũũraga ũmaraya no matikaingĩha,</para>
+  <para style="q1">tondũ nĩmatiganĩirie Jehova</para>
+  <para style="q2">nĩguo meheane <verse number="11" style="v"/>kũrĩ ũmaraya,</para>
+  <para style="q1">na kũnyua ndibei ĩrĩa ngũrũ na ya mũhihano,</para>
+  <para style="q2">iria cieheragia ũmenyo <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:12 </char><char style="xt" closed="false"><ref loc="JER 2:27">Jer 2:27</ref>; <ref loc="NUM 15:39">Ndar 15:39</ref>; <ref loc="PSA 73:27">Thab 73:27</ref></char></note>wa andũ akwa.</para>
+  <para style="q1">Mahooyaga kĩrĩra kuuma kũrĩ mũhianano mũicũhie,</para>
+  <para style="q2">naruo rũthanju rwa ũragũri rũkamacookeria ũhoro.</para>
+  <para style="q1">Roho wa ũmaraya nĩũmahĩtithagia njĩra;</para>
+  <para style="q2">makaaga kwĩhokeka kũrĩ Ngai wao.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:29">Isa 1:29</ref>; <ref loc="HOS 2:13">Hos 2:13</ref></char>
+    </note>Marutagĩra igongona irĩma igũrũ,</para>
+  <para style="q2">na magacinĩra maruta ma njino tũrĩma-inĩ,</para>
+  <para style="q1">na rungu rwa mũtĩ wa mũgandi, na wa mũribina, o na mũceceni,</para>
+  <para style="q2">tondũ kĩĩruru kĩayo nĩ kĩega.</para>
+  <para style="q1">Nĩkĩo airĩtu anyu mahũũraga ũmaraya,</para>
+  <para style="q2">na atumia a ariũ anyu magatharia.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>“Ndikaherithia airĩtu anyu maahũũra ũmaraya,</para>
+  <para style="q2">kana herithie atumia a ariũ anyu maatharia,</para>
+  <para style="q1">tondũ arũme o ene mathiiaga thiritũ na maraya,</para>
+  <para style="q2">na makarutaga igongona hamwe na maraya ma mahooero-inĩ:</para>
+  <para style="q2">nĩ ũndũ ũcio andũ matarĩ ũmenyo nĩmakanangĩka!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>“Atĩrĩ wee Isiraeli, o na gũtuĩka nĩũtharagia-rĩ,</para>
+  <para style="q2">Juda nĩagĩtige kwĩhia.</para>
+  <para style="b"/>
+  <para style="q1">“Ndũgathiĩ Giligali;</para>
+  <para style="q2">o na ndũkambate Bethi-Aveni.<note caller="+" style="f"><char style="fr" closed="false">4:15 </char><char style="ft" closed="false">Bethi-Aveni rĩarĩ rĩĩtwa rĩa kũnyũrũria Betheli, tondũ Bethi-Aveni nĩ kuuga “Nyũmba ya waganu”, naguo Betheli nĩ kuuga “Nyũmba ya Ngai”.</char></note></para>
+  <para style="q2">Na ndũkehĩte uuge atĩrĩ, ‘Ti-itherũ o ta ũrĩa Jehova atũũraga muoyo!’</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Andũ a Isiraeli mangʼathĩtie</para>
+  <para style="q2">o ta moori ngʼathia.</para>
+  <para style="q1">Kũngĩhoteka atĩa Jehova amarĩithie</para>
+  <para style="q2">ta tũgondu tũrĩ nyeki-inĩ nduru?</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Efiraimu nĩegwatanĩtie na mĩhianano;</para>
+  <para style="q2">tiganai nake!</para>
+  <para style="q1">
+    <verse number="18" style="v"/>O na rĩrĩa kĩndũ kĩao gĩa kũnyua gĩthirĩte-rĩ,</para>
+  <para style="q2">no mathiiaga na mbere na ũmaraya wao;</para>
+  <para style="q2">aathani ao nĩmendete mũno njĩra cia thoni.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:19 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 12:1">Hos 12:1</ref>; <ref loc="ISA 1:29">Isa 1:29</ref></char>
+    </note>Kĩhuhũkanio kĩnene gĩkaamahaata kĩmombũkie,</para>
+  <para style="q2">na magongona mao nĩmakamaconorithia.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Isiraeli Gũtuĩrwo Ciira</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 10:2">Ayub 10:2</ref>; <ref loc="HOS 6:9">Hos 6:9</ref></char>
+    </note>“Iguai ũhoro ũyũ, inyuĩ athĩnjĩri-Ngai!</para>
+  <para style="q2">Tegai matũ, inyuĩ andũ a Isiraeli!</para>
+  <para style="q1">Thikĩrĩria, wee nyũmba ya ũthamaki!</para>
+  <para style="q2">Nĩ inyuĩ mũgũtuĩrwo ciira ũyũ:</para>
+  <para style="q1">Mũkoretwo mũrĩ mũtego kũu Mizipa,</para>
+  <para style="q2">na mũrĩ wabu ya gũtegana yarĩtwo kũu Taboru.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Aregi a watho nĩmarikĩire ũragani-inĩ.</para>
+  <para style="q2">Niĩ nĩngamaherithia othe.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Niĩ nĩnjũũĩ maũndũ mothe ma Efiraimu;</para>
+  <para style="q2">Isiraeli ndahithĩtwo kuuma kũrĩ niĩ.</para>
+  <para style="q1">Wee Efiraimu, rĩu nĩũhũrĩte ũmaraya;</para>
+  <para style="q2">Isiraeli nake nĩathũkĩte.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:11">Hos 4:11</ref>; <ref loc="JER 4:28">Jer 4:28</ref></char>
+    </note>“Ciĩko ciao itingĩmetĩkĩria</para>
+  <para style="q2">gũcookerera Ngai wao.</para>
+  <para style="q1">Roho wa ũmaraya ũrĩ ngoro-inĩ ciao,</para>
+  <para style="q2">nao makaaga kũmenya Jehova.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Mwĩtĩĩo wa Isiraeli nĩũrutaga ũira wa kũmookĩrĩra;</para>
+  <para style="q2">andũ a Isiraeli na Efiraimu mahĩngagwo nĩ mehia mao;</para>
+  <para style="q2">Juda o nake akahĩngwo hamwe nao.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 6:6-7">Mik 6:6-7</ref>; <ref loc="PRO 1:28">Thim 1:28</ref></char>
+    </note>Hĩndĩ ĩrĩa magaathiĩ na ndũũru ciao cia mbũri na cia ngʼombe</para>
+  <para style="q2">kũrongooria Jehova-rĩ,</para>
+  <para style="q2">matikamuona; we nĩamehereire.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 24:16">Isa 24:16</ref>; <ref loc="HOS 2:11-12">Hos 2:11-12</ref></char>
+    </note>Nĩmagĩte kwĩhokeka harĩ Jehova;</para>
+  <para style="q2">nao magaciara ciana itarĩ na ũngai.</para>
+  <para style="q1">Na rĩrĩ, ciathĩ ciao cia Karũgamo ka Mweri</para>
+  <para style="q2">nĩikaamameria, o hamwe na mĩgũnda yao.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 10:2">Ndar 10:2</ref>; <ref loc="JDG 19:12">Atiir 19:12</ref>; <ref loc="ISA 10:29">Isa 10:29</ref></char>
+    </note>“Huhai karumbeta kũu Gibea,</para>
+  <para style="q2">na mũhuhe coro kũu Rama.</para>
+  <para style="q1">Muuge mbu ya gwĩtana mbaara kũu Bethi-Aveni;</para>
+  <para style="q2">wee Benjamini, wĩhũũge.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Efiraimu nĩgũgakira ihooru</para>
+  <para style="q2">mũthenya ũcio wa ituĩro.</para>
+  <para style="q1">Gatagatĩ-inĩ ka mĩhĩrĩga ya Isiraeli-rĩ,</para>
+  <para style="q2">niĩ ngwanĩrĩra ũrĩa kũrĩ.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 19:14">Gũcook 19:14</ref>; <ref loc="EZK 7:8">Ezek 7:8</ref></char>
+    </note>Atongoria a Juda mahaana</para>
+  <para style="q2">andũ arĩa meheragia mahiga ma mĩhaka.</para>
+  <para style="q1">Nĩngamaitĩrĩria mangʼũrĩ makwa,</para>
+  <para style="q2">taarĩ kĩguũ kĩa maaĩ.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 6:16">Mik 6:16</ref>
+      </char>
+    </note>Efiraimu nĩmũhinyĩrĩrie,</para>
+  <para style="q2">akarangĩrĩrio ituĩro-inĩ rĩa ciira,</para>
+  <para style="q2">nĩ ũndũ wa kwenda kũrũmĩrĩra mĩhianano.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Niĩ haana memenyi kũrĩ Efiraimu,</para>
+  <para style="q2">na ngahaana ta ũbuthu kũrĩ andũ a Juda.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 7:16">Isa 7:16</ref>; <ref loc="HOS 7:11">Hos 7:11</ref></char>
+    </note>“Rĩrĩa Efiraimu oonire ndwari yake,</para>
+  <para style="q2">nake Juda akĩona ironda ciake-rĩ,</para>
+  <para style="q1">hĩndĩ ĩyo Efiraimu agĩthiĩ kũrĩ Ashuri,</para>
+  <para style="q2">na agĩtũmana kũrĩ mũthamaki ũcio mũnene nĩguo amũteithie.</para>
+  <para style="q1">Nowe ndangĩhota gũkũhonia,</para>
+  <para style="q2">o na kana ahonie ironda ciaku.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 10:16">Ayub 10:16</ref>; <ref loc="AMO 3:4">Amos 3:4</ref>; <ref loc="MIC 5:8">Mik 5:8</ref></char>
+    </note>Niĩ ngaatuĩka ta mũrũũthi kũrĩ Efiraimu,</para>
+  <para style="q2">nduĩke ta mũrũũthi ũrĩ hinya kũrĩ Juda.</para>
+  <para style="q1">Ngaamatambuuranga, njooke ndĩthiĩre;</para>
+  <para style="q2">ngaamataha, na gũtirĩ mũndũ ũkaamahonokia.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 26:40">Alaw 26:40</ref>; <ref loc="PSA 24:6">Thab 24:6</ref>; <ref loc="JER 2:27">Jer 2:27</ref></char>
+    </note>Ningĩ niĩ nĩngacooka gwakwa,</para>
+  <para style="q2">nginya rĩrĩa magetĩkĩra mahĩtia mao.</para>
+  <para style="q1">Nao nĩmakarongooria ũthiũ wakwa;</para>
+  <para style="q2">nao mona mathĩĩna nĩmakanongoria na kĩo.”</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Isiraeli Kwaga Kwĩrira</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 10:20">Isa 10:20</ref>; <ref loc="MAL 3:11">Mal 3:11</ref>; <ref loc="DEU 32:39">Gũcook 32:39</ref></char>
+    </note>“Ũkai, rekei tũcookerere Jehova.</para>
+  <para style="q1">Nĩatũtambuurangĩte,</para>
+  <para style="q2">no nĩegũtũhonia;</para>
+  <para style="q1">nĩatũtihangĩtie,</para>
+  <para style="q2">no nĩegũtuoha ironda ciitũ.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Thuutha wa matukũ meerĩ, nĩagatwarahũra;</para>
+  <para style="q2">mũthenya wa ĩtatũ nĩagatũcookereria</para>
+  <para style="q2">nĩguo tũtũũre muoyo mbere yake.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOL 2:23">Joel 2:23</ref>; <ref loc="PSA 72:6">Thab 72:6</ref></char>
+    </note>Nĩtũmenyei Jehova,</para>
+  <para style="q2">na tũkĩrĩrĩrie kũmũmenya.</para>
+  <para style="q1">Ti-itherũ o ta ũrĩa riũa rĩrathaga-rĩ,</para>
+  <para style="q2">noguo o nake akooneka;</para>
+  <para style="q1">agooka kũrĩ ithuĩ ta mbura ya hĩndĩ ya heho,</para>
+  <para style="q2">kana ta mbura ya gũkũria irio ĩrĩa yuraga thĩ.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>“Wee Efiraimu-rĩ, ingĩgwĩka atĩa?</para>
+  <para style="q2">Na wee Juda-rĩ, ngũgwĩka atĩa?</para>
+  <para style="q1">Wendo waku ũhaana ta kĩbii kĩa rũciinĩ,</para>
+  <para style="q2">ũkahaana ta ime rĩa rũciinĩ rĩrĩa rĩcookaga rĩgathira.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Nĩkĩo ndaagũtinangirie icunjĩ na tũnua twa anabii akwa,</para>
+  <para style="q2">ngĩkũũraga na ciugo cia kanua gakwa;</para>
+  <para style="q2">matuĩro makwa magĩkĩhenũka ta rũheni igũrũ rĩaku.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:11">Isa 1:11</ref>; <ref loc="MAT 9:13">Math 9:13</ref>; <ref loc="JER 4:22">Jer 4:22</ref></char>
+    </note>Nĩgũkorwo nyendaga tha no ti igongona,</para>
+  <para style="q2">na kũmenya Ngai gũkĩra maruta ma njino.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 9:11">Kĩam 9:11</ref>; <ref loc="HOS 5:7">Hos 5:7</ref></char>
+    </note>O ta ũrĩa Adamu aathũkirie kĩrĩkanĩro gĩakwa,</para>
+  <para style="q2">noguo maagire kwĩhokeka ũndũ-inĩ ũcio.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Gileadi nĩ itũũra inene rĩa andũ aaganu,</para>
+  <para style="q2">rĩhakĩtwo imeni nĩ makinya marĩ na thakame.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>O ta ũrĩa ikundi cia atunyani ciĩhithagĩra mũndũ,</para>
+  <para style="q2">no taguo ikundi cia athĩnjĩri-Ngai ciĩkaga;</para>
+  <para style="q1">moraganagĩra njĩra-inĩ ya gũthiĩ Shekemu,</para>
+  <para style="q2">makagera ngero cia thoni.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 5:30">Jer 5:30</ref>; <ref loc="EZK 23:7">Ezek 23:7</ref></char>
+    </note>Niĩ nĩnyonete ũndũ mũũru mũno</para>
+  <para style="q2">nyũmba-inĩ ya Isiraeli.</para>
+  <para style="q1">Kũu nĩkuo Efiraimu eheanĩte ahũũre ũmaraya,</para>
+  <para style="q2">nake Isiraeli nĩakanyiitwo nĩ thaahu.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 51:33">Jer 51:33</ref>; <ref loc="JOL 3:13">Joel 3:13</ref></char>
+    </note>“O na kũrĩ we, wee Juda,</para>
+  <para style="q2">nĩwathĩrĩirio ihinda rĩa magetha.</para>
+  <para style="b"/>
+  <para style="q1">“O hĩndĩ ĩrĩa ndaacookeria andũ akwa maũndũ ma kũmaguna,</para>
+  <chapter number="7" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 126:1">Thab 126:1</ref>; <ref loc="EZK 24:13">Ezek 24:13</ref>; <ref loc="HOS 4:2">Hos 4:2</ref></char>
+    </note>o rĩrĩa ndenda kũhonia Isiraeli-rĩ,</para>
+  <para style="q1">mehia ma Efiraimu makonanio,</para>
+  <para style="q2">nacio ngero cia Samaria ikaguũrio.</para>
+  <para style="q1">Maaragia maũndũ ma maheeni,</para>
+  <para style="q2">na aici magatua nyũmba, magatoonya,</para>
+  <para style="q2">nacio njangiri igatunyana indo njĩra-inĩ;</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 14:10">Jer 14:10</ref>; <ref loc="JOB 35:15">Ayub 35:15</ref></char>
+    </note>no rĩrĩ, matimenyaga</para>
+  <para style="q2">atĩ nĩndirikanaga ciĩko icio ciao njũru ciothe.</para>
+  <para style="q1">Mehia mao nĩmamarigiicĩirie;</para>
+  <para style="q2">makoragwo mbere yakwa hĩndĩ ciothe.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 7:3">Mik 7:3</ref>
+      </char>
+    </note>“Makenagia mũthamaki na waganu wao,</para>
+  <para style="q2">magakenia anene na maheeni mao.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 9:2">Jer 9:2</ref>
+      </char>
+    </note>Othe nĩ itharia,</para>
+  <para style="q2">maakanaga ta riiko rĩa kũrugĩra mĩgate,</para>
+  <para style="q1">rĩrĩa mũrugi wa mĩgate atabataragio nĩ gwakĩrĩria</para>
+  <para style="q2">kuuma gũkanda mũtu nginya ũimbe.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 28:1">Isa 28:1</ref>, <ref loc="ISA 28:7">7</ref>; <ref loc="PSA 1:1">Thab 1:1</ref></char>
+    </note>Mũthenya wa gĩathĩ kĩa mũthamaki witũ-rĩ,</para>
+  <para style="q2">we na anene ake manyuuaga ndibei makarĩĩo,</para>
+  <para style="q2">nake akanyiitana moko na arĩa manyũrũranagia.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Ngoro ciao nĩ ta riiko rĩa kũrugĩra mĩgate;</para>
+  <para style="q2">mathiiaga harĩ we marĩ na waara.</para>
+  <para style="q1">Thuti ciao ciakanaga kahora ũtukũ wothe;</para>
+  <para style="q2">nakuo gwakĩa rũciinĩ igaakana ta mwaki wa rũrĩrĩmbĩ.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Othe mahiũhĩte ta riiko rĩa kũrugĩra mĩgate;</para>
+  <para style="q2">moragaga aathani ao.</para>
+  <para style="q1">Athamaki ao othe maniinagwo,</para>
+  <para style="q2">na gũtirĩ o na ũmwe wao ũngayagĩra.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:13">Hos 5:13</ref>; <ref loc="PSA 106:35">Thab 106:35</ref></char>
+    </note>“Efiraimu nĩetukanĩtie na ndũrĩrĩ;</para>
+  <para style="q2">Efiraimu nĩ mũgate ũtarĩ mũgarũre.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:7">Isa 1:7</ref>; <ref loc="HOS 8:7">Hos 8:7</ref></char>
+    </note>Andũ a kũngĩ marĩĩaga hinya wake,</para>
+  <para style="q2">nowe ndamenyaga ũguo.</para>
+  <para style="q1">Njuĩrĩ ciake irĩ na mbuĩ,</para>
+  <para style="q2">nowe ndoonaga ũguo.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:5">Hos 5:5</ref>
+      </char>
+    </note>Mwĩtĩĩo wa Isiraeli nĩũrutaga ũira wa kũmũũkĩrĩra,</para>
+  <para style="q2">no o na kũrĩ ũguo-rĩ,</para>
+  <para style="q1">we ndacookagĩrĩra Jehova Ngai wake,</para>
+  <para style="q2">kana akamũrongooria.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>“Efiraimu ahaana ta ndutura,</para>
+  <para style="q2">ĩrĩa ĩheenekaga narua, ĩtarĩ ũmenyo;</para>
+  <para style="q1">rĩmwe akayagĩra bũrũri wa Misiri</para>
+  <para style="q2">na rĩrĩa rĩngĩ agathiĩ Ashuri.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 12:13">Ezek 12:13</ref>
+      </char>
+    </note>Rĩrĩa magaathiĩ-rĩ, nĩngaikia wabu yakwa igũrũ rĩao;</para>
+  <para style="q2">nĩngamaharũrũkia ta nyoni cia rĩera-inĩ.</para>
+  <para style="q1">Rĩrĩa ngaigua nĩmaracookanĩrĩra-rĩ,</para>
+  <para style="q2">nĩngamanyiita.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Kaĩ marĩ na haaro-ĩ,</para>
+  <para style="q2">tondũ nĩmandiganĩirie!</para>
+  <para style="q1">Maroniinwo,</para>
+  <para style="q2">tondũ nĩmanemeire!</para>
+  <para style="q1">Niĩ nĩnyendaga kũmahonokia,</para>
+  <para style="q2">no-o no igenyo manjigagĩrĩra.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 3:10">Jer 3:10</ref>
+      </char>
+    </note>Matingayagĩra kuuma ngoro-inĩ ciao,</para>
+  <para style="q2">no kũgirĩka magirĩkaga marĩ marĩrĩ-inĩ mao.</para>
+  <para style="q1">Monganaga hamwe nĩ ũndũ wa ngano, na ndibei ya mũhihano,</para>
+  <para style="q2">no niĩ makaahutatĩra.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 2:1">Thab 2:1</ref>; <ref loc="NAM 1:9">Nahu 1:9</ref>, <ref loc="NAM 1:11">11</ref></char>
+    </note>Ndaamathomithirie na ngĩmekĩra hinya,</para>
+  <para style="q2">no-o mathugundaga kũnjĩka ũũru.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 23:32">Ezek 23:32</ref>; <ref loc="HOS 9:3">Hos 9:3</ref></char>
+    </note>Maticookagĩrĩra Ũrĩa-ũrĩ-Igũrũ-Mũno;</para>
+  <para style="q2">mahaana ta ũta ũrĩa ũhĩtagia wathi.</para>
+  <para style="q1">Atongoria ao makooragwo na rũhiũ rwa njora,</para>
+  <para style="q2">nĩ ũndũ wa ciugo ciao cia rũtũrĩko.</para>
+  <para style="q1">Nĩ ũndũ wa ũguo nĩmakanyũrũrio</para>
+  <para style="q2">kũu bũrũri wa Misiri.</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Isiraeli Kũgetha Kĩhuhũkanio</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 10:2">Ndar 10:2</ref>; <ref loc="JER 4:13">Jer 4:13</ref>; <ref loc="HOS 4:6">Hos 4:6</ref></char>
+    </note>“Huhai karumbeta mwĩhũge!</para>
+  <para style="q2">Thũ ĩrerete igũrũ rĩa nyũmba ya Jehova ta nderi,</para>
+  <para style="q1">tondũ andũ nĩmathũkĩtie kĩrĩkanĩro gĩakwa,</para>
+  <para style="q2">na makarega watho wakwa.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Isiraeli nĩarangaĩra, akoiga atĩrĩ,</para>
+  <para style="q2">‘Wee Ngai witũ, nĩtũkũmenyete!’</para>
+  <para style="q1">
+    <verse number="3" style="v"/>No Isiraeli nĩaregete ũndũ ũrĩa mwega;</para>
+  <para style="q2">nĩ ũndũ ũcio thũ nĩĩkamũingatithia.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Marũgamagia athamaki matarĩ na rũtha rwakwa,</para>
+  <para style="q2">magathuura anene itametĩkĩrĩtie.</para>
+  <para style="q1">Methondekagĩra mĩhianano</para>
+  <para style="q2">na betha na thahabu ciao,</para>
+  <para style="q2">nayo ĩgatuĩka ya kũmaniina.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 13:27">Jer 13:27</ref>; <ref loc="HOS 10:5">Hos 10:5</ref></char>
+    </note>Wee Samaria-rĩ, te mũhianano wa ngai ĩyo ya njaũ!</para>
+  <para style="q2">Marakara makwa nĩmakanĩte harĩ yo.</para>
+  <para style="q1">Nĩ nginya-rĩ megũtũũra maremetwo nĩgũikara marĩ atheru?</para>
+  <para style="q2">
+    <verse number="6" style="v"/>Acio moimĩte Isiraeli!</para>
+  <para style="q1">Njaũ ĩno nĩ mũturi ũmĩthondekete;</para>
+  <para style="q2">yo ti Ngai.</para>
+  <para style="q1">Njaũ ĩyo ya Samaria-rĩ,</para>
+  <para style="q2">nĩĩkoinangwo icunjĩ.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 22:8">Thim 22:8</ref>; <ref loc="DEU 28:38">Gũcook 28:38</ref></char>
+    </note>“Mahaandaga rũhuho,</para>
+  <para style="q2">makagetha kĩhuhũkanio;</para>
+  <para style="q1">ngano ndĩrĩ na magira,</para>
+  <para style="q2">ndĩngiumia mũtu;</para>
+  <para style="q1">korwo no ĩciare ngano,</para>
+  <para style="q2">andũ a kũngĩ nĩo mangĩmĩrĩa.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 51:34">Jer 51:34</ref>
+      </char>
+    </note>Isiraeli nĩameretio;</para>
+  <para style="q2">rĩu arĩ gatagatĩ ka ndũrĩrĩ</para>
+  <para style="q2">ahaana ta kĩndũ gĩtarĩ bata.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Nĩgũkorwo nĩmambatĩte, magathiĩ Ashuri,</para>
+  <para style="q2">ta ndigiri ya gĩthaka ĩkĩũrũra ĩrĩ iiki.</para>
+  <para style="q2">Efiraimu nĩeyendetie kũrĩ endwa ake.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 16:12">Kĩam 16:12</ref>; <ref loc="EZK 16:37">Ezek 16:37</ref></char>
+    </note>O na gũtuĩka nĩmeyendetie gatagatĩ-inĩ ka ndũrĩrĩ,</para>
+  <para style="q2">rĩu nĩngũmacookanĩrĩria hamwe.</para>
+  <para style="q1">Mekwambĩrĩria kũhinyara,</para>
+  <para style="q2">mahinyĩrĩirio nĩ mũthamaki ũrĩa ũrĩ hinya.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>“O na gũtuĩka Efiraimu nĩakĩte igongona nyingĩ</para>
+  <para style="q2">cia kũrutagĩrwo maruta ma kũhoroherio mehia,</para>
+  <para style="q2">icio ituĩkĩte igongona cia kwĩhagĩria.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Ndaamandĩkĩire maũndũ maingĩ watho-inĩ wakwa,</para>
+  <para style="q2">no makĩmatua taarĩ maũndũ mageni.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 7:21">Jer 7:21</ref>; <ref loc="HOS 7:2">Hos 7:2</ref></char>
+    </note>Marutaga magongona marĩa ndeheirwo,</para>
+  <para style="q2">magacooka makarĩa nyama icio,</para>
+  <para style="q2">no Jehova ndakenagio nĩmo.</para>
+  <para style="q1">Na rĩrĩ, nĩekũririkana waganu wao,</para>
+  <para style="q2">na aherithie mehia mao.</para>
+  <para style="q2">Nao nĩmagacooka bũrũri wa Misiri.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:18">Gũcook 32:18</ref>; <ref loc="PSA 95:6">Thab 95:6</ref></char>
+    </note>Isiraeli nĩariganĩirwo nĩ ũrĩa wamũmbire,</para>
+  <para style="q2">na agaaka nyũmba cia ũnene;</para>
+  <para style="q2">Juda nĩairigĩire matũũra maingĩ na thingo cia hinya.</para>
+  <para style="q1">No nĩngarehere matũũra mao manene mwaki</para>
+  <para style="q2">ũrĩa ũgaacina ciikaro ciao iria ciirigĩtwo na hinya.”</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Kũherithio kwa Isiraeli</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 22:12-13">Isa 22:12-13</ref>; <ref loc="PSA 73:27">Thab 73:27</ref></char>
+    </note>Wee Isiraeli-rĩ, tiga gũkena;</para>
+  <para style="q2">tiga gũkũngũĩra ta ndũrĩrĩ iria ingĩ.</para>
+  <para style="q1">Nĩgũkorwo ũkoretwo ũtarĩ mwĩhokeku harĩ Ngai waku;</para>
+  <para style="q2">wee nĩwendete mũcaara wa maraya,</para>
+  <para style="q2">ũkaũcaragia kũrĩa guothe kũhuhagĩrwo ngano.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:9">Hos 2:9</ref>; <ref loc="JOL 1:10">Joel 1:10</ref></char>
+    </note>Ihuhĩro cia ngano na ihihĩro cia ndibei itikahũũnia andũ,</para>
+  <para style="q2">o na gũtigakorwo na ndibei ya mũhihano.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 25:23">Alaw 25:23</ref>; <ref loc="EZK 4:13">Ezek 4:13</ref></char>
+    </note>Matigaatũũra bũrũri wa Jehova;</para>
+  <para style="q2">Efiraimu agaacooka bũrũri wa Misiri,</para>
+  <para style="q2">na arĩe irio irĩ thaahu kũu Ashuri.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOL 1:9">Joel 1:9</ref>; <ref loc="JER 16:7">Jer 16:7</ref>; <ref loc="DEU 26:14">Gũcook 26:14</ref></char>
+    </note>Matigaitĩra Jehova maruta ma ndibei,</para>
+  <para style="q2">kana magongona mao mamũkenie.</para>
+  <para style="q1">Kũrĩo magongona ta macio makaahaana ta mũgate wa andũ megũcakaya;</para>
+  <para style="q2">arĩa othe makaamarĩa nĩmakanyiitwo nĩ thaahu.</para>
+  <para style="q1">Irio icio igaakorwo irĩ ciao o ene;</para>
+  <para style="q2">itikareehwo hekarũ-inĩ ya Jehova.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 10:3">Isa 10:3</ref>; <ref loc="HOS 2:11">Hos 2:11</ref></char>
+    </note>Mũgeeka atĩa mũthenya ũrĩa mwamũre wa ciathĩ cianyu,</para>
+  <para style="q2">mĩthenya ĩyo ya gĩathĩ kĩa Jehova?</para>
+  <para style="q1">
+    <verse number="6" style="v"/>O na mangĩkaahonoka kwanangwo,</para>
+  <para style="q2">andũ a bũrũri wa Misiri nĩmakamacookereria,</para>
+  <para style="q2">nao andũ a Memufisi mamathike.</para>
+  <para style="q1">Congʼe nĩguo ũgaacooka handũ ha igĩĩna ciao cia betha,</para>
+  <para style="q2">nayo mĩigua ĩhumbĩre hema ciao.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 34:8">Isa 34:8</ref>; <ref loc="EZK 14:9-10">Ezek 14:9-10</ref></char>
+    </note>Matukũ ma kũherithio nĩmakinyu,</para>
+  <para style="q2">ĩĩ, matukũ ma kũrĩhania nĩmakinyĩte.</para>
+  <para style="q2">Isiraeli nĩamenye ũguo.</para>
+  <para style="q1">Tondũ mehia manyu nĩ maingĩ mũno,</para>
+  <para style="q2">na rũmena rwanyu rũkaneneha mũno,</para>
+  <para style="q1">mũnabii akoonagwo arĩ mũndũ mũkĩĩgu,</para>
+  <para style="q2">na mũndũ ũrĩa ũrĩ na ũrathi akonwo arĩ mũgũrũki.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Mũnabii nĩwe ũtuĩtwo mũrangĩri<note caller="+" style="f"><char style="fr" closed="false">9:8 </char><char style="ft" closed="false">Arangĩri maarĩ anabii arĩa a ma, na nĩo matendetwo nĩ andũ a Isiraeli.</char></note> wa Efiraimu nĩ Ngai wakwa;</para>
+  <para style="q1">no rĩrĩ, mĩtego ĩmwetereire njĩra-inĩ ciake ciothe,</para>
+  <para style="q2">na rũmena rũkamweterera nyũmba-inĩ ya Ngai wake.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="ZEP 3:7">Zef 3:7</ref>; <ref loc="HOS 5:8">Hos 5:8</ref></char>
+    </note>Nĩmatoonyereire, makarikĩra mũno ũũru-inĩ,</para>
+  <para style="q2">o ta ũrĩa meekire matukũ-inĩ ma Gibea.</para>
+  <para style="q1">Nake Ngai nĩakaririkana waganu wao,</para>
+  <para style="q2">na amaherithie nĩ ũndũ wa mehia mao.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 25:1-5">Ndar 25:1-5</ref>; <ref loc="JER 11:13">Jer 11:13</ref></char>
+    </note>“Rĩrĩa ndaamenyire Isiraeli,</para>
+  <para style="q2">kwarĩ ta mũndũ onete thabibũ werũ-inĩ;</para>
+  <para style="q1">rĩrĩa ndonire maithe manyu-rĩ,</para>
+  <para style="q2">kwarĩ ta mũndũ onete matunda ma mũtĩ wa mũkũyũ marĩa maambaga kwĩrua.</para>
+  <para style="q1">No rĩrĩa Isiraeli mookire Baali-Peoru,</para>
+  <para style="q2">nĩmeyamũrĩire mũhianano ũcio wa gĩconoko,</para>
+  <para style="q2">na magĩthũka, magĩtuĩka o ta kĩndũ kĩu mendete.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Riiri wa Efiraimu ũkoombũka ta nyoni ũũre:</para>
+  <para style="q2">gũtigakorwo ũhoro wa gũciara, kana gũkuua nda, o na kana kũgĩa nda.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 24:21">Ezek 24:21</ref>; <ref loc="DEU 31:17">Gũcook 31:17</ref></char>
+    </note>O na mangĩkaarera ciana-rĩ,</para>
+  <para style="q2">nĩngaciũraga ciothe.</para>
+  <para style="q1">Rĩrĩa ngaagarũrũka ndĩmatige,</para>
+  <para style="q2">kaĩ nĩmagakorwo na haaro-ĩ!</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Nĩnyonete Efiraimu,</para>
+  <para style="q2">ahaandĩtwo handũ hega, o ta Turo.</para>
+  <para style="q1">No rĩrĩ, Efiraimu akaaruta ciana ciake,</para>
+  <para style="q2">acineane kũrĩ mũũragani.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="LUK 23:29">Luk 23:29</ref>
+      </char>
+    </note>Mahe, Wee Jehova;</para>
+  <para style="q2">no nĩ kĩĩ ũkũmahe?</para>
+  <para style="q1">Mahe nda iria ihunaga,</para>
+  <para style="q2">na ũmahe nyondo iria itarĩ iria.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:2">Hos 7:2</ref>; <ref loc="ISA 1:23">Isa 1:23</ref></char>
+    </note>“Nĩ ũndũ wa waganu wao wothe marĩ kũu Giligali,</para>
+  <para style="q2">nĩkĩo ndamamenire marĩ o kũu.</para>
+  <para style="q1">Nĩ ũndũ wa ciĩko ciao cia mehia-rĩ,</para>
+  <para style="q2">nĩngamarutũrũra moime nyũmba yakwa,</para>
+  <para style="q1">na ndigacooka kũmenda rĩngĩ;</para>
+  <para style="q2">atongoria ao othe nĩ aremi.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Andũ a Efiraimu nĩacine nĩ mbaa,</para>
+  <para style="q2">naguo mũri wao nĩũhoohete,</para>
+  <para style="q2">maticiaraga maciaro.</para>
+  <para style="q1">O na mangĩciara ciana-rĩ,</para>
+  <para style="q2">nĩngooraga ciana icio ciao mendete.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:10">Hos 4:10</ref>; <ref loc="DEU 28:65">Gũcook 28:65</ref></char>
+    </note>Ngai wakwa nĩakamarega,</para>
+  <para style="q2">nĩgũkorwo matiamwathĩkĩire;</para>
+  <para style="q2">magaatuĩka andũ a kũũrũũraga ndũrĩrĩ-inĩ.</para>
+  <chapter number="10" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:11">Hos 8:11</ref>
+      </char>
+    </note>Isiraeli aarĩ ta mũthabibũ watheeremaga,</para>
+  <para style="q2">nake agĩĩciarĩra maciaro.</para>
+  <para style="q1">O ũrĩa maciaro make maingĩhaga-rĩ,</para>
+  <para style="q2">noguo nake aakaga igongona nyingĩ;</para>
+  <para style="q1">o ũrĩa bũrũri wake wagaacagĩra-rĩ,</para>
+  <para style="q2">noguo aagemagia mahiga make marĩa maamũre ma kũhooyagwo.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 18:21">1Ath 18:21</ref>; <ref loc="HOS 13:16">Hos 13:16</ref></char>
+    </note>Ngoro ciao nĩ cia maheeni,</para>
+  <para style="q2">na rĩu no nginya marĩhio wĩhia wao.</para>
+  <para style="q1">Jehova nĩakamomora igongona ciao,</para>
+  <para style="q2">na athũkangie mahiga macio mao maamũre ma kũhooyagwo.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>Ningĩ nĩmakoiga atĩrĩ, “Tũtirĩ na mũthamaki,</para>
+  <para style="q2">tondũ tũtiigana gũtĩĩa Jehova.</para>
+  <para style="q1">No o na korwo twarĩ na mũthamaki-rĩ,</para>
+  <para style="q2">nĩ atĩa angĩahotire gũtwĩkĩra?”</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 17:19">Ezek 17:19</ref>; <ref loc="AMO 5:7">Amos 5:7</ref></char>
+    </note>Meranagĩra ciĩranĩro nyingĩ,</para>
+  <para style="q2">na makehĩta mĩĩhĩtwa ya maheeni,</para>
+  <para style="q2">na magathondeka irĩkanĩro;</para>
+  <para style="q1">nĩ ũndũ ũcio maciira makunũkaga</para>
+  <para style="q2">ta mahuti marĩ ũrogi marĩa mameraga hianyũ-inĩ.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Andũ arĩa matũũraga Samaria metangaga</para>
+  <para style="q2">nĩ ũndũ wa mũhianano wa njaũ ĩrĩa ya Bethi-Aveni.</para>
+  <para style="q1">Amu andũ akuo nĩmakamĩcakaĩra,</para>
+  <para style="q2">na noguo athĩnjĩri-ngai a mĩhianano ĩyo mageeka</para>
+  <para style="q1">arĩa makenagĩra riiri wayo,</para>
+  <para style="q2">tondũ nĩyeheretio kuuma kũrĩ o, ĩgathaamĩrio kũndũ kũngĩ.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 16:7">2Ath 16:7</ref>; <ref loc="JDG 3:15">Atiir 3:15</ref>; <ref loc="JER 48:13">Jer 48:13</ref></char>
+    </note>Nayo ĩgaatwarwo Ashuri,</para>
+  <para style="q2">ĩtuĩke kĩheo kũrĩ mũthamaki ũcio mũnene.</para>
+  <para style="q1">Efiraimu nĩagaconorithio;</para>
+  <para style="q2">Isiraeli nake nĩagaconoka nĩ ũndũ wa mĩhianano ĩyo yake ya mĩtĩ.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 13:11">Hos 13:11</ref>
+      </char>
+    </note>Samaria na mũthamaki wakuo magaathererio</para>
+  <para style="q2">ta karũhonge karĩ igũrũ wa maaĩ, maniinwo.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 6:6">Ezek 6:6</ref>; <ref loc="LUK 23:30">Luk 23:30</ref></char>
+    </note>Kũndũ kũrĩa gũtũũgĩru gwĩkagĩrwo waganu nĩgũkanangwo,</para>
+  <para style="q2">na nĩkuo kwene wĩhia wa Isiraeli.</para>
+  <para style="q1">Mĩigua na mahiũ ma nyeki-inĩ nĩcio igaakũra kuo,</para>
+  <para style="q2">nacio ihumbĩre igongona ciao.</para>
+  <para style="q1">Nao andũ nĩmakeera irĩma atĩrĩ, “Tũhumbĩrei!”</para>
+  <para style="q2">na macooke meere tũrĩma atĩrĩ, “Tũgwĩrei!”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>“Wee Isiraeli-rĩ, kuuma o matukũ-inĩ ma Gibea</para>
+  <para style="q2">ũtũũrĩte wĩhagia, na ũguo noguo ũtũũraga.</para>
+  <para style="q1">Githĩ mbaara ndĩakinyĩire eeki ũũru kũu Gibea?</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 5:13">Ezek 5:13</ref>; <ref loc="HOS 4:9">Hos 4:9</ref></char>
+    </note>Rĩrĩa niĩ ngenda, nĩngamaherithia;</para>
+  <para style="q2">ndũrĩrĩ nĩigacookanĩrĩra,</para>
+  <para style="q1">imokĩrĩre nĩguo imoohe imatahe</para>
+  <para style="q2">nĩ ũndũ wa mehia mao kũingĩha.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Efiraimu nĩ moori menyerie wĩra</para>
+  <para style="q2">ĩrĩa yendete gũkonyora ngano;</para>
+  <para style="q1">nĩ ũndũ ũcio nĩngamĩoha icooki</para>
+  <para style="q2">ngingo-inĩ yayo thaka.</para>
+  <para style="q1">Nĩngatwarithia Efiraimu,</para>
+  <para style="q2">Juda no nginya agaacimba na mũraũ,</para>
+  <para style="q2">nake Jakubu no nginya agaacimba gĩtira.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Rĩu-rĩ, mwĩhaandĩrei ũhoro wa ũthingu,</para>
+  <para style="q2">nĩguo mwĩgethere maciaro ma wendo ũtathiraga,</para>
+  <para style="q1">na mũciimbe mĩgũnda yanyu ya ngamba;</para>
+  <para style="q2">nĩgũkorwo ihinda nĩ ikinyu rĩa kũrongooria Jehova,</para>
+  <para style="q1">nginya rĩrĩa agooka,</para>
+  <para style="q2">oirie mbura ya ũthingu igũrũ rĩanyu.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 4:8">Ayub 4:8</ref>; <ref loc="GAL 6:7-8">Agal 6:7-8</ref></char>
+    </note>No rĩrĩ, inyuĩ mũhaandĩte waganu,</para>
+  <para style="q2">mũkagetha ũũru;</para>
+  <para style="q2">inyuĩ mũrĩĩte maciaro ma maheeni.</para>
+  <para style="q1">Tondũ mwĩhokaga hinya wanyu inyuĩ ene,</para>
+  <para style="q2">o na wa njamba cianyu nyingĩ cia ita-rĩ,</para>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 17:3">Isa 17:3</ref>; <ref loc="2KI 17:3">2Ath 17:3</ref></char>
+    </note>mũrurumo wa mbaara nĩũgokĩrĩra andũ aku.</para>
+  <para style="q2">Nĩ ũndũ ũcio ciikaro ciaku iria nũmu nĩikaanangwo,</para>
+  <para style="q1">o ta ũrĩa Shalimani aanangire Bethi-Arabeli mũthenya ũrĩa wa mbaara,</para>
+  <para style="q2">rĩrĩa manyina ma twana maatungumanirio thĩ hamwe na twana twao.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Ũguo noguo ũgeekwo wee Betheli,</para>
+  <para style="q2">nĩ ũndũ wa waganu waku mũnene.</para>
+  <para style="q1">Rĩrĩa mũthenya ũcio ũgaakĩa-rĩ,</para>
+  <para style="q2">mũthamaki wa Isiraeli nĩakaniinwo biũ.</para>
+  <para style="b"/>
+  <chapter number="11" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:2">Jer 2:2</ref>; <ref loc="MAT 2:19">Math 2:19</ref></char>
+    </note>“Rĩrĩa Isiraeli aarĩ kaana-rĩ, nĩndamwendete,</para>
+  <para style="q2">ngĩgĩĩta mũrũ ũcio wakwa oime bũrũri wa Misiri.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>No o ũrĩa ndaakĩragĩrĩria gwĩta Isiraeli,</para>
+  <para style="q2">noguo maakĩragĩrĩria kũnjũrĩra.</para>
+  <para style="q1">Nao makĩrutĩra Baali magongona,</para>
+  <para style="q2">na magĩcinĩra mĩhianano ũbumba.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 1:31">Gũcook 1:31</ref>; <ref loc="EXO 15:26">Thaam 15:26</ref></char>
+    </note>Niĩ nĩ niĩ ndaarutire andũ a Efiraimu gwĩtwara na magũrũ,</para>
+  <para style="q2">ndĩmanyiitĩte moko;</para>
+  <para style="q1">no matiigana kũmenya</para>
+  <para style="q2">atĩ nĩ niĩ ndamahonagia.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 26:13">Alaw 26:13</ref>; <ref loc="PSA 78:15">Thab 78:15</ref></char>
+    </note>Nĩndamatongoragia na mĩkanda ya ũtugi wa ũmũndũ,</para>
+  <para style="q2">ngamaguucĩrĩria na mĩhĩndo ya wendo;</para>
+  <para style="q1">ngĩmaruta icooki ngingo,</para>
+  <para style="q2">na ngĩinamĩrĩra kũmahe irio.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:16">Hos 7:16</ref>; <ref loc="EXO 13:17">Thaam 13:17</ref></char>
+    </note>“Githĩ matigagĩcooka o kũu bũrũri wa Misiri,</para>
+  <para style="q2">o na githĩ matigaathwo nĩ Ashuri,</para>
+  <para style="q2">tondũ nĩmaregete kwĩrira, manjookerere?</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 13:16">Hos 13:16</ref>; <ref loc="LAM 2:9">Maca 2:9</ref></char>
+    </note>Hiũ cia njora ikaahenũkaga matũũra-inĩ mao manene,</para>
+  <para style="q2">ikaananga mĩgĩĩko ya ihingo ciao,</para>
+  <para style="q2">na ikinyie mĩbango yao mũthia.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Andũ akwa nĩmatuĩte itua maahuutatĩre.</para>
+  <para style="q2">O na mangĩgaakaĩra Ũrĩa-ũrĩ-Igũrũ-Mũno-rĩ,</para>
+  <para style="q2">ndakamatũgĩria o na atĩa.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 14:8">Kĩam 14:8</ref>; <ref loc="PSA 25:6">Thab 25:6</ref></char>
+    </note>“Ndahota atĩa gũgũtirika, wee Efiraimu?</para>
+  <para style="q2">Ndahota atĩa gũkũrekereria, wee Isiraeli?</para>
+  <para style="q1">Ndahota atĩa gũtũma ũtuĩke ta Adima?</para>
+  <para style="q1">Ndahota atĩa gũgũtua ta Zeboimu?</para>
+  <para style="q1">Ngoro yakwa nĩĩreganĩte na ũhoro ũcio,</para>
+  <para style="q2">nacio tha ciakwa ciothe nĩciarahũkĩte.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Ndikamũkinyĩria marakara makwa mahiũ,</para>
+  <para style="q2">o na kana hũgũkĩre Efiraimu ndĩmũniine.</para>
+  <para style="q1">Nĩgũkorwo niĩ nĩ niĩ Ngai, ndirĩ mũndũ,</para>
+  <para style="q2">Ngai Ũrĩa Mũtheru gatagatĩ-inĩ kanyu.</para>
+  <para style="q2">Ndigooka kũrĩ we ndĩ na mangʼũrĩ.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Nĩmakarũmĩrĩra Jehova;</para>
+  <para style="q2">nake nĩakararama ta mũrũũthi.</para>
+  <para style="q1">Hĩndĩ ĩrĩa akaararama-rĩ,</para>
+  <para style="q2">ciana ciake nĩigooka ikĩinainaga ciumĩte mwena wa ithũĩro.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 11:11">Isa 11:11</ref>; <ref loc="EZK 28:26">Ezek 28:26</ref></char>
+    </note>Igooka ikĩinainaga</para>
+  <para style="q2">ta nyoni ikiuma bũrũri wa Misiri,</para>
+  <para style="q2">na ta ndutura ikiuma bũrũri wa Ashuri.</para>
+  <para style="q1">Nĩngatũma matũũre mĩciĩ-inĩ yao ene,”</para>
+  <para style="q4">ũguo nĩguo Jehova ekuuga.</para>
+  <para style="s1">Mehia ma Isiraeli</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:2">Hos 4:2</ref>; <ref loc="DEU 7:9">Gũcook 7:9</ref></char>
+    </note>Efiraimu andigiicĩirie na maheeni,</para>
+  <para style="q2">nyũmba ya Isiraeli ĩkandigiicĩria na kũheenania.</para>
+  <para style="q1">Nake Juda akaremera Ngai,</para>
+  <para style="q2">o na agookĩrĩra Ũrĩa Mũtheru mwĩhokeku.</para>
+  <chapter number="12" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Efiraimu arĩĩaga rũhuho;</para>
+  <para style="q2">ahanyũkagia rũhuho rwa mwena wa irathĩro mũthenya wothe,</para>
+  <para style="q2">na akaingĩhia maheeni na haaro.</para>
+  <para style="q1">Agĩĩaga na kĩrĩkanĩro na Ashuri,</para>
+  <para style="q2">na agatũmana maguta ma mĩtamaiyũ matwarwo bũrũri wa Misiri.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 6:2">Mik 6:2</ref>; <ref loc="AMO 2:4">Amos 2:4</ref>; <ref loc="EXO 32:34">Thaam 32:34</ref></char>
+    </note>Jehova arĩ na thitango ekũrehe ya gũũkĩrĩra Juda;</para>
+  <para style="q2">nĩakaherithia Jakubu kũringana na njĩra ciake,</para>
+  <para style="q2">na amũrĩhe kũringana na ciĩko ciake.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 25:26">Kĩam 25:26</ref>; <ref loc="GEN 32:24-29">Kĩam 32:24-29</ref></char>
+    </note>Arĩ nda ya nyina nĩanyiitire ndiira ya mũrũ wa nyina;</para>
+  <para style="q2">aatuĩka mũndũ mũgima-rĩ, nĩagianire na Ngai.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Nĩagianire na mũraika, na akĩmũtooria;</para>
+  <para style="q2">akĩrĩra na akĩmũthaitha amũrathime.</para>
+  <para style="q1">Aamũkorire Betheli na makĩaranĩria nake kũu:</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 3:5">Thaam 3:5</ref>
+      </char>
+    </note>Jehova Ngai Mwene-Hinya-Wothe,</para>
+  <para style="q2">Jehova nĩrĩo rĩĩtwa rĩake rĩrĩa rĩrĩ ngumo.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>No rĩrĩ, wee no nginya ũcookerere Ngai waku,</para>
+  <para style="q2">na ũtũũrie wendo na kĩhooto,</para>
+  <para style="q2">na wetagĩrĩre Ngai waku hĩndĩ ciothe.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 19:36">Alaw 19:36</ref>; <ref loc="AMO 8:5">Amos 8:5</ref></char>
+    </note>Mwonjorithia ahũthagĩra gĩthimi gĩtarĩ kĩa ma;</para>
+  <para style="q2">endaga kũiya na wara.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="REV 3:17">Kũg 3:17</ref>; <ref loc="EZK 28:5">Ezek 28:5</ref></char>
+    </note>Efiraimu eganaga, akoiga atĩrĩ,</para>
+  <para style="q2">“Niĩ ndĩ mũtongu mũno; niĩ nĩnduĩkĩte gĩtonga.</para>
+  <para style="q1">No o na ndĩ na ũtonga ũcio wothe,</para>
+  <para style="q2">matingĩona waganu kana wĩhia o na ũrĩkũ thĩinĩ wakwa.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 23:43">Alaw 23:43</ref>; <ref loc="NEH 8:17">Neh 8:17</ref></char>
+    </note>“Nĩ niĩ Jehova Ngai wanyu,</para>
+  <para style="q2">ũrĩa wamũrutire bũrũri wa Misiri;</para>
+  <para style="q1">nĩngatũma mũtũũre hema-inĩ rĩngĩ,</para>
+  <para style="q2">o ta ũrĩa mwatũũraga matukũ-inĩ ma ciathĩ cianyu iria nyamũre.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 20:49">Ezek 20:49</ref>; <ref loc="2KI 17:13">2Ath 17:13</ref></char>
+    </note>Nĩndarĩirie anabii,</para>
+  <para style="q2">ngĩmahe cioneki nyingĩ,</para>
+  <para style="q2">na ngĩheana ngerekano na tũnua twao.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>Gileadi-rĩ, nĩ kũrĩ waganu?</para>
+  <para style="q2">Andũ akuo nĩ a tũhũ!</para>
+  <para style="q1">Nĩmarutagĩra igongona rĩa ndegwa kũu Giligali?</para>
+  <para style="q2">Igongona ciao igaatuĩka ta hĩba cia mahiga</para>
+  <para style="q2">irĩ mũgũnda-inĩ mũciimbe.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 28:5">Kĩam 28:5</ref>
+      </char>
+    </note>Jakubu nĩorĩire bũrũri wa Aramu;</para>
+  <para style="q2">Isiraeli aatungatire nĩguo egĩĩre na mũtumia,</para>
+  <para style="q2">na nĩgeetha amũgũre-rĩ, aarĩithirie ngʼondu.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Jehova aahũthĩrire mũnabii kũruta Isiraeli kuuma bũrũri wa Misiri,</para>
+  <para style="q2">na akĩmũmenyerera na guoko kwa mũnabii.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 18:13">Ezek 18:13</ref>; <ref loc="DAN 11:18">Dan 11:18</ref></char>
+    </note>No Efiraimu nĩatũmĩte Jehova arakare mũno.</para>
+  <para style="q2">Mwathani wake nĩagatũma acookererwo nĩ ihĩtia rĩake rĩa ũiti wa thakame,</para>
+  <para style="q2">na amũrĩhe nĩ ũndũ wa rũmena rwake.</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">Marakara ma Jehova ma Gũũkĩrĩra Isiraeli</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 19:22">Isa 19:22</ref>; <ref loc="JER 3:12">Jer 3:12</ref></char>
+    </note>Efiraimu-rĩ, aaragia andũ makainaina;</para>
+  <para style="q2">aarĩ mũtũgĩrie thĩinĩ wa Isiraeli.</para>
+  <para style="q1">No rĩrĩ, nĩehirie nĩ ũndũ wa kũhooya Baali, nake agĩkua.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Na rĩrĩ, rĩu no gũkĩrĩrĩria makĩragĩrĩria kwĩhia;</para>
+  <para style="q1">methondekagĩra mĩhianano yao ene na betha ciao,</para>
+  <para style="q2">mĩhianano ĩthondeketwo na ũũgĩ mũingĩ,</para>
+  <para style="q2">yothe ĩrĩ wĩra wa mabundi.</para>
+  <para style="q1">Kwĩragwo atĩrĩ, ũhoro wa andũ aya,</para>
+  <para style="q2">“Marutaga andũ magongona,</para>
+  <para style="q2">na makamumunya mĩhianano ya njaũ.”</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:4">Hos 6:4</ref>; <ref loc="JOB 13:25">Ayub 13:25</ref>; <ref loc="DAN 2:35">Dan 2:35</ref></char>
+    </note>Nĩ ũndũ ũcio makahaana ta kĩbii kĩa rũciinĩ,</para>
+  <para style="q2">na ta ime rĩa kĩrooko rĩrĩa rĩcookaga gũthira,</para>
+  <para style="q2">na ta mũũngũ ũrĩa ũmbũragwo kuuma kĩhuhĩro-inĩ kĩa ngano,</para>
+  <para style="q2">o na ta ndogo ĩgĩtoga yumĩire ndirica-inĩ.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 12:9">Hos 12:9</ref>; <ref loc="ISA 43:11">Isa 43:11</ref></char>
+    </note>“No rĩrĩ, niĩ nĩ niĩ Jehova Ngai wanyu,</para>
+  <para style="q2">ũrĩa wamũrutire bũrũri wa Misiri.</para>
+  <para style="q1">Ndũkanetĩkie atĩ nĩ kũrĩ Ngai ũngĩ tiga niĩ,</para>
+  <para style="q2">na gũtirĩ Mũhonokia ũngĩ tiga niĩ.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Nĩ niĩ ndaakũmenyagĩrĩra werũ-inĩ,</para>
+  <para style="q2">kũu bũrũri-inĩ ũrĩ ũrugarĩ mũingĩ.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 28:5">Ezek 28:5</ref>; <ref loc="DEU 32:18">Gũcook 32:18</ref></char>
+    </note>Rĩrĩa ndamaheire irio, nĩmahũũnire;</para>
+  <para style="q2">na rĩrĩa maahũũnire, magĩtĩĩa;</para>
+  <para style="q2">magĩcooka makĩriganĩrwo nĩ niĩ.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Nĩ ũndũ ũcio ngaamahithũkĩra ta mũrũũthi,</para>
+  <para style="q2">na ndĩmehithĩre njĩra-inĩ ta ngarĩ.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="2SA 17:8">2Sam 17:8</ref>; <ref loc="PSA 50:22">Thab 50:22</ref></char>
+    </note>O ta ũrĩa nduba ĩĩkaga rĩrĩa ĩtunyĩtwo twana twayo-rĩ,</para>
+  <para style="q2">ngaamatharĩkĩra na ndĩmatarũrange.</para>
+  <para style="q1">Ngaamarĩa ta mũrũũthi,</para>
+  <para style="q2">ndĩmatambuure o ta ũrĩa nyamũ ya gĩthaka ĩĩkaga.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>“Wee Isiraeli-rĩ, ũrĩ mwanange,</para>
+  <para style="q2">nĩ ũndũ nĩũnjũkĩrĩire, ũgookĩrĩra mũteithia waku.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 17:4">2Ath 17:4</ref>; <ref loc="1SA 8:6">1Sam 8:6</ref></char>
+    </note>Mũthamaki waku akĩrĩ ha, atĩ nĩguo akũhonokie?</para>
+  <para style="q2">Aathani aku a matũũra maku mothe marĩ ha,</para>
+  <para style="q1">o arĩa woigire atĩrĩ,</para>
+  <para style="q2">‘He mũthamaki, na ũhe anene’?</para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 11:20">Ndar 11:20</ref>; <ref loc="1KI 14:10">1Ath 14:10</ref></char>
+    </note>Nĩ ũndũ ũcio, ndaakũheire mũthamaki ndakarĩte,</para>
+  <para style="q2">na ngĩcooka ngĩmweheria ndĩ na mangʼũrĩ.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:34">Gũcook 32:34</ref>
+      </char>
+    </note>Wĩhia wa Efiraimu nĩmũige,</para>
+  <para style="q2">mehia make nĩmandĩkĩtwo makaigwo.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 4:9-10">Mik 4:9-10</ref>; <ref loc="ISA 66:9">Isa 66:9</ref></char>
+    </note>Ruo ta rwa mũtumia ũkũrũmwo nĩrũramũnyiita,</para>
+  <para style="q2">nowe nĩ mwana ũtarĩ na ũũgĩ;</para>
+  <para style="q1">ihinda rĩakinya-rĩ,</para>
+  <para style="q2">akarega gũikũrũka nĩguo aciarwo.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 16:10">Thab 16:10</ref>; <ref loc="1CO 15:55">1Akor 15:55</ref></char>
+    </note>“Nĩngamahonokia kuuma kũrĩ hinya wa mbĩrĩra;</para>
+  <para style="q2">nĩngamakũũra kuuma kũrĩ gĩkuũ.</para>
+  <para style="q1">Wee gĩkuũ-rĩ, mĩthiro yaku ĩrĩ ha?</para>
+  <para style="q1">Wee mbĩrĩra-rĩ, kũniinana gwaku gũkĩrĩ ha?</para>
+  <para style="b"/>
+  <para style="q1">“Ndikaiguanĩra tha,</para>
+  <para style="q1">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 1:19">Ayub 1:19</ref>; <ref loc="JER 20:5">Jer 20:5</ref></char>
+    </note>o na angĩkaagaacĩra arĩ gatagatĩ-inĩ ka ariũ a ithe.</para>
+  <para style="q1">Rũhuho rwa mwena wa irathĩro ruumĩte harĩ Jehova nĩrũgooka,</para>
+  <para style="q2">rũhurutanĩte kuuma werũ-inĩ;</para>
+  <para style="q1">narĩo itherũkĩro rĩake rĩa maaĩ rĩkooma,</para>
+  <para style="q2">nakĩo gĩthima gĩake kĩhũe.</para>
+  <para style="q1">Nyũmba yake ya mũthiithũ</para>
+  <para style="q2">nĩĩgatahwo indo ciayo ciothe cia goro.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 10:14">Hos 10:14</ref>; <ref loc="2KI 15:16">2Ath 15:16</ref></char>
+    </note>Andũ a Samaria no nginya marĩhio wĩhia wao,</para>
+  <para style="q2">nĩ tondũ nĩmaremeire Ngai wao.</para>
+  <para style="q1">Nao nĩmakooragwo na rũhiũ rwa njora;</para>
+  <para style="q2">natuo tũkenge twao tũgaatungumanio thĩ,</para>
+  <para style="q2">na atumia ao arĩa marĩ na nda itarũrwo.”</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">Kwĩrira kũrĩa Kũrehaga Kĩrathimo</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Wee Isiraeli-rĩ, cookerera Jehova Ngai waku.</para>
+  <para style="q1">Mehia maku nĩmo makũgũithĩtie!</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 7:18-19">Mik 7:18-19</ref>; <ref loc="HEB 13:15">Ahib 13:15</ref></char>
+    </note>Thiĩ na ciugo ũcookerere Jehova,</para>
+  <para style="q1">ũmwĩre atĩrĩ,</para>
+  <para style="q2">“Tũrekere mehia maitũ mothe,</para>
+  <para style="q1">na ũtwamũkĩre na wega waku,</para>
+  <para style="q2">nĩguo tũhote gũkũrutĩra igongona rĩa gũkũgooca na mĩromo iitũ.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 33:17">Thab 33:17</ref>; <ref loc="MIC 5:10">Mik 5:10</ref>; <ref loc="JER 49:11">Jer 49:11</ref></char>
+    </note>Ashuri ndangĩhota gũtũhonokia;</para>
+  <para style="q2">tũtikũhaica mbarathi cia ita.</para>
+  <para style="q1">Tũtirĩ hĩndĩ ĩngĩ tũgaacooka</para>
+  <para style="q2">gwĩta kĩrĩa tũthondekete na moko maitũ ‘ngai ciitũ,’</para>
+  <para style="q2">nĩgũkorwo thĩinĩ waku ciana cia ngoriai nĩciiguagĩrwo tha.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>“Nĩngamahonia kũrĩa maanoora njĩra,</para>
+  <para style="q2">na ndĩmende ndĩyendeire;</para>
+  <para style="q2">nĩgũkorwo marakara makwa nĩmamehereire.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 27:28">Kĩam 27:28</ref>; <ref loc="ISA 35:2">Isa 35:2</ref></char>
+    </note>Ngaatuĩka ta ime harĩ Isiraeli;</para>
+  <para style="q2">nake akaarirũka ta gĩtoka.</para>
+  <para style="q1">Agaikũrũkia mĩri yake</para>
+  <para style="q2">ehaande o ta mĩtarakwa ya Lebanoni.</para>
+  <para style="q2">
+    <verse number="6" style="v"/>Thuuna ciake nĩigakũra.</para>
+  <para style="q1">Ũthaka wake ũgaatuĩka ta wa mũtĩ wa mũtamaiyũ,</para>
+  <para style="q2">naguo mũtararĩko wake ũtuĩke ta mũtarakwa wa Lebanoni.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 91:1-4">Thab 91:1-4</ref>; <ref loc="GEN 40:10">Kĩam 40:10</ref></char>
+    </note>Andũ nĩmagatũũra rĩngĩ kĩĩruru-inĩ gĩake.</para>
+  <para style="q2">Nake akaarura ta ngano.</para>
+  <para style="q1">Akaarirũka ta mũthabibũ,</para>
+  <para style="q2">nayo ngumo yake ĩtuĩke ta ya ndibei ya kuuma Lebanoni.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Wee Efiraimu, ndĩ na ũhoro ũngĩ ũrĩkũ na mĩhianano ya kũhooywo?</para>
+  <para style="q2">Nĩngamũcookeria ũhoro na ndĩmũmenyerere.</para>
+  <para style="q1">Haana ta mũkarakaba mũruru;</para>
+  <para style="q2">gũciara gwaku kuumaga harĩ niĩ.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 107:43">Thab 107:43</ref>; <ref loc="PRO 10:29">Thim 10:29</ref>; <ref loc="ISA 26:7">Isa 26:7</ref></char>
+    </note>Nũũ mũũgĩ? Ũcio nĩakamenya maũndũ macio.</para>
+  <para style="q2">Nũũ ũkũũranaga maũndũ? Ũcio nĩakamamenya.</para>
+  <para style="q1">Njĩra cia Jehova nĩ njagĩrĩru;</para>
+  <para style="q2">arĩa athingu nĩcio mathiiagĩra,</para>
+  <para style="q2">no arĩa aremi mahĩngagwo marĩ o njĩra-inĩ icio.</para>
+</usx>

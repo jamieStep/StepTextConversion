@@ -1,0 +1,32 @@
+{
+  "v11nName": "v11n0831T1005NETSLXX",
+  "otbooks": [
+    {
+      "name": "Obadiah",
+      "osis": "Obad",
+      "prefAbbrev": "Obd",
+      "chapmax": 1
+    },
+    {
+      "name": "",
+      "osis": "",
+      "prefAbbrev": "",
+      "chapmax": 0
+    }
+  ],
+  "ntbooks": [
+    {
+      "name": "",
+      "osis": "",
+      "prefAbbrev": "",
+      "chapmax": 0
+    }
+  ],
+  "vm": [    // Obadiah
+    21
+
+    ],
+  "jsword_mappings": [
+    ""
+    ]
+}

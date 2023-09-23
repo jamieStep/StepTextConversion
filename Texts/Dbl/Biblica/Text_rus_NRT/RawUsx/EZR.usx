@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="EZR" style="id">- New Russian Translation (Новый русский перевод)</book>
+  <para style="rem">Copyright © 1988, 1991, 1998, 2006, 2010, 2014 by Biblica, Inc.</para>
+  <para style="h">ЕЗДРА</para>
+  <para style="toc1">Ездра</para>
+  <para style="toc2">Ездра</para>
+  <para style="toc3">Езд.</para>
+  <para style="mt1">Ездра</para>
+  <para style="ip">Книга Ездры служит продолжением книг паралипоменон и изначально была объединена с книгой Неемии в один свиток. Даты в этой книге можно сопоставить с датами сохранившихся древних персидских записей и точно соотнести с современным календарем. В 586 г. до н. э. вавилоняне сравняли Иерусалим с землей и увели в плен большинство израильтян. В первой части книги (<char style="xt">гл. <ref loc="EZR 1-6">1–6</ref></char>) в основном рассказывается о возвращении первых иудейских пленников во время персидского царя Кира в 538 г. до н. э., об их усилиях и трудностях при восстановлении храма и о завершении его строительства в 515 г. до н. э. Вторая часть книги (<char style="xt">гл. <ref loc="EZR 7-10">7–10</ref></char>) говорит о событиях, произошедших после прибытия Ездры в Иерусалим в 458 г. до н. э. во время правления персидского царя Артаксеркса I.</para>
+  <para style="ip">Ездра, происходивший из семьи священников, пришел в Израиль с целью научить Закону Бога бывших пленников (<char style="xt"><ref loc="EZR 7:10">7:10</ref></char>). Прибыв туда, он обнаружил, что многие иудеи женились на чужеземках (<char style="xt"><ref loc="EZR 9:1-4">9:1-4</ref></char>). Это глубоко расстроило его, и он призвал народ к общему покаянию (<char style="xt"><ref loc="EZR 9:5-15">9:5-15</ref></char>), после чего предпринял активные шаги для решения проблемы смешанных браков (<char style="xt"><ref loc="EZR 10:1-17">10:1-17</ref></char>). Он усердно трудился, чтобы освятить израильское общество и вернуть их к истинной вере в Господа.</para>
+  <para style="ip">В книге Ездры можно особенно ясно наблюдать, как Бог действует через записанное слово. Здесь цитируются выдержки из персидских документов и писем, которые относятся к восстановлению храма и рассказывают о помощи или препятствиях со стороны разных лиц (<char style="xt"><ref loc="EZR 1:2-4">1:2-4</ref>; <ref loc="EZR 4:11-22">4:11-22</ref>; <ref loc="EZR 5:7-17">5:7-17</ref>; <ref loc="EZR 6:2-12">6:2-12</ref>; <ref loc="EZR 7:12-26">7:12-26</ref></char>). Часть книги – личные воспоминания Ездры о его служении в Израиле (<char style="xt">гл. <ref loc="EZR 7-9">7–9</ref></char>). Даны также списки людей и городов (<char style="xt">гл. <ref loc="EZR 2">2</ref>; <ref loc="EZR 8:1-14">8:1-14</ref></char>), что подчеркивает преемственность израильской истории и связь вернувшихся пленников с прежними поколениями.</para>
+  <para style="ip">Главная тема книги Ездры – восстановление завета между Богом и Израилем. Хотя послепленный Израиль оставался под иноземным игом, и его независимость и монархия не были восстановлены, все же возродилось маленькое общество, которое верно держалось обещаний и обязанностей завета.</para>
+  <para style="iot">Содержание</para>
+  <para style="io1">Возвращение первой группы иудеев из Вавилонского плена (<char style="ior"><ref loc="EZR 1:1-11">1:1-11</ref></char>).</para>
+  <para style="io1">Список возвратившихся из плена (<char style="ior"><ref loc="EZR 2:1-70">2:1-70</ref></char>).</para>
+  <para style="io1">Восстановление храма (<char style="ior"><ref loc="EZR 3:1-6:22">3:1–6:22</ref></char>).</para>
+  <para style="io1">Возвращение Ездры в Иерусалим (<char style="ior"><ref loc="EZR 7:1-8:36">7:1–8:36</ref></char>).</para>
+  <para style="io1">Осуждение смешанных браков и решение проблемы (<char style="ior"><ref loc="EZR 9:1-10:44">9:1–10:44</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="EZR 1"/>
+  <para style="s1">Указ Кира о возвращении пленников</para>
+  <para style="r">(<ref loc="2CH 36:22-23">2 Пар. 36:22-23</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 1:1"/>В первый год правления Кира<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">Кир II Великий, основатель Персидского государства Ахменидов, правил с 558 по 530 гг. до н. э. В 539 г. покорил Вавилон и Месопотамию. Кир погиб во время похода в Центральную Азию от руки сакской царицы Тамирис.</char></note>, царя Персии, чтобы исполнилось слово Господа, которое возвестил Иеремия<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="JER 29:10-14">Иер. 29:10-14</ref></char>.</char></note>, Господь побудил Кира, царя Персии, объявить по всему своему царству и записать такой указ:<verse eid="EZR 1:1"/></para>
+  <para style="pmo">
+    <verse number="2" style="v" sid="EZR 1:2"/>«Так говорит Кир, царь Персии:</para>
+  <para style="pm" vid="EZR 1:2">Господь, Бог небес, отдал мне все царства земли и поручил мне построить Ему дом в Иерусалиме, в Иудее. <verse eid="EZR 1:2"/><verse number="3" style="v" sid="EZR 1:3"/>Всякий из вас, кто принадлежит к Его народу, – да будет с ним его Бог! – может отправляться в Иерусалим, в Иудею, и строить дом Господа, Бога Израиля, Бога, Который в Иерусалиме. <verse eid="EZR 1:3"/><verse number="4" style="v" sid="EZR 1:4"/>И пусть жители тех мест, где сейчас живут уцелевшие иудеи, снабдят их серебром и золотом, имуществом и скотом и добровольными пожертвованиями для Божьего дома в Иерусалиме».<verse eid="EZR 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 1:5"/>И главы семейств из родов Иуды и Вениамина со священниками и левитами – всякий, кого побудил Бог, – стали собираться, чтобы пойти и отстроить дом Господа в Иерусалиме. <verse eid="EZR 1:5"/><verse number="6" style="v" sid="EZR 1:6"/>Все их соседи помогли им серебряными и золотыми вещами, имуществом и скотом, и дорогими дарами, не считая всех добровольных пожертвований. <verse eid="EZR 1:6"/><verse number="7" style="v" sid="EZR 1:7"/>Сам царь Кир вынес утварь дома Господа, которую Навуходоносор<note caller="+" style="f"><char style="fr" closed="false">1:7 </char><char style="ft" closed="false">Царь Навуходоносор II, самый великий царь Нововавилонской империи, правил с 605 по 562 гг. до н. э.</char></note> забрал из Иерусалима и положил в доме своего бога<note caller="+" style="f"><char style="fr" closed="false">1:7 </char><char style="ft" closed="false">Или: «своих богов».</char></note>. <verse eid="EZR 1:7"/><verse number="8" style="v" sid="EZR 1:8"/>Кир, царь Персии, вверил их хранителю сокровищницы Митредату, который по счету выдал их Шешбацару, вождю Иудеи.<verse eid="EZR 1:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EZR 1:9"/>Вот их опись:</para>
+  <para style="b" vid="EZR 1:9"/>
+  <para style="li1" vid="EZR 1:9">золотых блюд 30;</para>
+  <para style="li1" vid="EZR 1:9">серебряных блюд 1 000;</para>
+  <para style="li1" vid="EZR 1:9">ножей<note caller="+" style="f"><char style="fr" closed="false">1:9 </char><char style="ft" closed="false">Так в одном из древних переводов; смысл этого места в еврейском тексте неясен.</char></note> 29;<verse eid="EZR 1:9"/></para>
+  <para style="li1">
+    <verse number="10" style="v" sid="EZR 1:10"/>золотых чаш 30;</para>
+  <para style="li1" vid="EZR 1:10">одинаковых серебряных чаш 410;</para>
+  <para style="li1" vid="EZR 1:10">других предметов 1 000.<verse eid="EZR 1:10"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 1:11"/>Всего золотых и серебряных предметов было пять тысяч четыреста. Когда переселенцы отправлялись из Вавилона в Иерусалим, Шешбацар взял все это с собой.<verse eid="EZR 1:11"/></para>
+  <chapter eid="EZR 1"/>
+  <chapter number="2" style="c" sid="EZR 2"/>
+  <para style="s1">Список возвратившихся из плена</para>
+  <para style="r">(<ref loc="NEH 7:6-73">Неем. 7:6-73</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 2:1"/>Вот те вернувшиеся из плена жители провинции, которых увел в Вавилон Навуходоносор, царь Вавилона (они вернулись в Иерусалим и Иудею, каждый в свой город, <verse eid="EZR 2:1"/><verse number="2" style="v" sid="EZR 2:2"/>вместе с Зоровавелем, Иисусом, Неемией, Сераей, Реелаей, Мардохеем, Билшаном, Миспаром, Бигваем, Рехумом и Бааной).</para>
+  <para style="b" vid="EZR 2:2"/>
+  <para style="mi" vid="EZR 2:2">Список людей народа Израиля:<verse eid="EZR 2:2"/></para>
+  <para style="li1">
+    <verse number="3" style="v" sid="EZR 2:3"/>потомков Пароша 2 172;<verse eid="EZR 2:3"/></para>
+  <para style="li2">
+    <verse number="4" style="v" sid="EZR 2:4"/>Шефатии 372;<verse eid="EZR 2:4"/></para>
+  <para style="li2">
+    <verse number="5" style="v" sid="EZR 2:5"/>Араха 775;<verse eid="EZR 2:5"/></para>
+  <para style="li2">
+    <verse number="6" style="v" sid="EZR 2:6"/>Пахат-Моава (по линии Иисуса и Иоава) 2 812;<verse eid="EZR 2:6"/></para>
+  <para style="li2">
+    <verse number="7" style="v" sid="EZR 2:7"/>Елама 1 254;<verse eid="EZR 2:7"/></para>
+  <para style="li2">
+    <verse number="8" style="v" sid="EZR 2:8"/>Затту 945;<verse eid="EZR 2:8"/></para>
+  <para style="li2">
+    <verse number="9" style="v" sid="EZR 2:9"/>Закхая 760;<verse eid="EZR 2:9"/></para>
+  <para style="li2">
+    <verse number="10" style="v" sid="EZR 2:10"/>Бани 642;<verse eid="EZR 2:10"/></para>
+  <para style="li2">
+    <verse number="11" style="v" sid="EZR 2:11"/>Бевая 623;<verse eid="EZR 2:11"/></para>
+  <para style="li2">
+    <verse number="12" style="v" sid="EZR 2:12"/>Азгада 1 222;<verse eid="EZR 2:12"/></para>
+  <para style="li2">
+    <verse number="13" style="v" sid="EZR 2:13"/>Адоникама 666;<verse eid="EZR 2:13"/></para>
+  <para style="li2">
+    <verse number="14" style="v" sid="EZR 2:14"/>Бигвая 2 056;<verse eid="EZR 2:14"/></para>
+  <para style="li2">
+    <verse number="15" style="v" sid="EZR 2:15"/>Адина 454;<verse eid="EZR 2:15"/></para>
+  <para style="li2">
+    <verse number="16" style="v" sid="EZR 2:16"/>Атера (через Езекию) 98;<verse eid="EZR 2:16"/></para>
+  <para style="li2">
+    <verse number="17" style="v" sid="EZR 2:17"/>Бецая 323;<verse eid="EZR 2:17"/></para>
+  <para style="li2">
+    <verse number="18" style="v" sid="EZR 2:18"/>Иоры 112;<verse eid="EZR 2:18"/></para>
+  <para style="li2">
+    <verse number="19" style="v" sid="EZR 2:19"/>Хашума 223;<verse eid="EZR 2:19"/></para>
+  <para style="li2">
+    <verse number="20" style="v" sid="EZR 2:20"/>Гиббара 95.<verse eid="EZR 2:20"/></para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="21" style="v" sid="EZR 2:21"/>Жителей Вифлеема 123;<verse eid="EZR 2:21"/></para>
+  <para style="li2">
+    <verse number="22" style="v" sid="EZR 2:22"/>Нетофы 56;<verse eid="EZR 2:22"/></para>
+  <para style="li2">
+    <verse number="23" style="v" sid="EZR 2:23"/>Анатота 128;<verse eid="EZR 2:23"/></para>
+  <para style="li2">
+    <verse number="24" style="v" sid="EZR 2:24"/>Азмавета 42;<verse eid="EZR 2:24"/></para>
+  <para style="li2">
+    <verse number="25" style="v" sid="EZR 2:25"/>Кирьят-Иеарима, Кефиры и Беэрота 743;<verse eid="EZR 2:25"/></para>
+  <para style="li2">
+    <verse number="26" style="v" sid="EZR 2:26"/>Рамы и Гевы 621;<verse eid="EZR 2:26"/></para>
+  <para style="li2">
+    <verse number="27" style="v" sid="EZR 2:27"/>Михмаса 122;<verse eid="EZR 2:27"/></para>
+  <para style="li2">
+    <verse number="28" style="v" sid="EZR 2:28"/>Вефиля и Гая 223;<verse eid="EZR 2:28"/></para>
+  <para style="li2">
+    <verse number="29" style="v" sid="EZR 2:29"/>Нево 52;<verse eid="EZR 2:29"/></para>
+  <para style="li2">
+    <verse number="30" style="v" sid="EZR 2:30"/>Магбиша 156;<verse eid="EZR 2:30"/></para>
+  <para style="li2">
+    <verse number="31" style="v" sid="EZR 2:31"/>другого Елама 1 254;<verse eid="EZR 2:31"/></para>
+  <para style="li2">
+    <verse number="32" style="v" sid="EZR 2:32"/>Харима 320;<verse eid="EZR 2:32"/></para>
+  <para style="li2">
+    <verse number="33" style="v" sid="EZR 2:33"/>Лода, Хадида и Оно 725;<verse eid="EZR 2:33"/></para>
+  <para style="li2">
+    <verse number="34" style="v" sid="EZR 2:34"/>Иерихона 345;<verse eid="EZR 2:34"/></para>
+  <para style="li2">
+    <verse number="35" style="v" sid="EZR 2:35"/>Сенаи 3 630.<verse eid="EZR 2:35"/></para>
+  <para style="b"/>
+  <para style="mi">
+    <verse number="36" style="v" sid="EZR 2:36"/>Священников:</para>
+  <para style="li1" vid="EZR 2:36">потомков Иедаии (через семью Иисуса) 973;<verse eid="EZR 2:36"/></para>
+  <para style="li2">
+    <verse number="37" style="v" sid="EZR 2:37"/>Иммера 1 052;<verse eid="EZR 2:37"/></para>
+  <para style="li2">
+    <verse number="38" style="v" sid="EZR 2:38"/>Пашхура 1 247;<verse eid="EZR 2:38"/></para>
+  <para style="li2">
+    <verse number="39" style="v" sid="EZR 2:39"/>Харима 1 017.<verse eid="EZR 2:39"/></para>
+  <para style="b"/>
+  <para style="mi">
+    <verse number="40" style="v" sid="EZR 2:40"/>Левитов:</para>
+  <para style="li1" vid="EZR 2:40">потомков Иисуса и Кадмиила (по линии Годавии) 74.<verse eid="EZR 2:40"/></para>
+  <para style="b"/>
+  <para style="mi">
+    <verse number="41" style="v" sid="EZR 2:41"/>Певцов:</para>
+  <para style="li1" vid="EZR 2:41">потомков Асафа 128.<verse eid="EZR 2:41"/></para>
+  <para style="b"/>
+  <para style="mi">
+    <verse number="42" style="v" sid="EZR 2:42"/>Привратников:</para>
+  <para style="li1" vid="EZR 2:42">потомков Шаллума, Атера, Талмона, Аккува, Хатиты и Шовая 139.<verse eid="EZR 2:42"/></para>
+  <para style="b"/>
+  <para style="mi">
+    <verse number="43" style="v" sid="EZR 2:43"/>Храмовых слуг:</para>
+  <para style="li1" vid="EZR 2:43">потомков Цихи, Хасуфы, Таббаофа,<verse eid="EZR 2:43"/></para>
+  <para style="li2">
+    <verse number="44" style="v" sid="EZR 2:44"/>Кероса, Сиаги, Фадона,<verse eid="EZR 2:44"/></para>
+  <para style="li2">
+    <verse number="45" style="v" sid="EZR 2:45"/>Леваны, Хагавы, Аккува,<verse eid="EZR 2:45"/></para>
+  <para style="li2">
+    <verse number="46" style="v" sid="EZR 2:46"/>Хагава, Шалмая, Ханана,<verse eid="EZR 2:46"/></para>
+  <para style="li2">
+    <verse number="47" style="v" sid="EZR 2:47"/>Гиддела, Гахара, Реаи,<verse eid="EZR 2:47"/></para>
+  <para style="li2">
+    <verse number="48" style="v" sid="EZR 2:48"/>Рецина, Некоды, Газзама,<verse eid="EZR 2:48"/></para>
+  <para style="li2">
+    <verse number="49" style="v" sid="EZR 2:49"/>Уззы, Пасеаха, Бесая,<verse eid="EZR 2:49"/></para>
+  <para style="li2">
+    <verse number="50" style="v" sid="EZR 2:50"/>Асны, Меунима, Нефисима,<verse eid="EZR 2:50"/></para>
+  <para style="li2">
+    <verse number="51" style="v" sid="EZR 2:51"/>Бакбука, Хакуфы, Хархура,<verse eid="EZR 2:51"/></para>
+  <para style="li2">
+    <verse number="52" style="v" sid="EZR 2:52"/>Бацлута, Мехиды, Харши,<verse eid="EZR 2:52"/></para>
+  <para style="li2">
+    <verse number="53" style="v" sid="EZR 2:53"/>Баркоса, Сисары, Темаха,<verse eid="EZR 2:53"/></para>
+  <para style="li2">
+    <verse number="54" style="v" sid="EZR 2:54"/>Нециаха и Хатифы.<verse eid="EZR 2:54"/></para>
+  <para style="b"/>
+  <para style="mi">
+    <verse number="55" style="v" sid="EZR 2:55"/>Потомков слуг Соломона:</para>
+  <para style="li1" vid="EZR 2:55">потомков Сотая, Соферета, Феруды,<verse eid="EZR 2:55"/></para>
+  <para style="li2">
+    <verse number="56" style="v" sid="EZR 2:56"/>Иаалы, Даркона, Гиддела,<verse eid="EZR 2:56"/></para>
+  <para style="li2">
+    <verse number="57" style="v" sid="EZR 2:57"/>Шефатии, Хаттила,</para>
+  <para style="li2" vid="EZR 2:57">Похереф-Гаццеваима и Амия.<verse eid="EZR 2:57"/></para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="58" style="v" sid="EZR 2:58"/>Всех храмовых слуг и потомков слуг Соломона 392.<verse eid="EZR 2:58"/></para>
+  <para style="b"/>
+  <para style="pi1">
+    <verse number="59" style="v" sid="EZR 2:59"/>Вот те, кто пришел из городов Тел-Мелаха, Тел-Харши, Херува, Аддона и Иммера, но не смог доказать, что их семьи ведут свой род от Израиля:<verse eid="EZR 2:59"/></para>
+  <para style="li1">
+    <verse number="60" style="v" sid="EZR 2:60"/>потомки Делаи, Товии и Некоды 652.<verse eid="EZR 2:60"/></para>
+  <para style="b"/>
+  <para style="mi">
+    <verse number="61" style="v" sid="EZR 2:61"/>А из священников:</para>
+  <para style="li1" vid="EZR 2:61">потомки Хаваии, Гаккоца и Верзеллия (человека, который женился на дочери галаадитянина Верзеллия и стал называться этим именем).<verse eid="EZR 2:61"/></para>
+  <para style="pi1">
+    <verse number="62" style="v" sid="EZR 2:62"/>Они искали свои родословия, но не смогли их найти и поэтому были исключены из священства как <char style="add">ритуально</char> нечистые. <verse eid="EZR 2:62"/><verse number="63" style="v" sid="EZR 2:63"/>Наместник приказал им не есть от великой святыни, пока не появится священник, который сможет воспользоваться Уримом и Туммимом<note caller="+" style="f"><char style="fr" closed="false">2:63 </char><char style="ft" closed="false">Урим и Туммим – это средства для определения Божьей воли, способ использования которых неизвестен.</char></note>.<verse eid="EZR 2:63"/></para>
+  <para style="b"/>
+  <para style="pi1">
+    <verse number="64" style="v" sid="EZR 2:64"/>Все собрание насчитывало 42 360 человек, <verse eid="EZR 2:64"/><verse number="65" style="v" sid="EZR 2:65"/>помимо 7 337 их слуг и служанок; при них были также 200 певцов и певиц. <verse eid="EZR 2:65"/><verse number="66" style="v" sid="EZR 2:66"/>У них было 736 лошадей, 245 мулов, <verse eid="EZR 2:66"/><verse number="67" style="v" sid="EZR 2:67"/>435 верблюдов и 6 720 ослов.<verse eid="EZR 2:67"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="68" style="v" sid="EZR 2:68"/>Когда они прибыли к дому Господа, что в Иерусалиме, некоторые из глав семейств стали добровольно жертвовать на дом Божий, чтобы отстроить его на прежнем месте. <verse eid="EZR 2:68"/><verse number="69" style="v" sid="EZR 2:69"/>По своим возможностям они дали на это дело в сокровищницу 61 000 драхм<note caller="+" style="f"><char style="fr" closed="false">2:69 </char><char style="ft" closed="false">Около 500 кг.</char></note> золота, 5 000 мин<note caller="+" style="f"><char style="fr" closed="false">2:69 </char><char style="ft" closed="false">Около 2,9 т.</char></note> серебра и 100 священнических одеяний.<verse eid="EZR 2:69"/></para>
+  <para style="p">
+    <verse number="70" style="v" sid="EZR 2:70"/>Священники, левиты, часть народа, певцы, привратники и храмовые слуги поселились в своих городах, и весь остальной народ Израиля поселился в своих городах<note caller="+" style="f"><char style="fr" closed="false">2:1-70 </char><char style="ft" closed="false">Списки возвратившихся из плена здесь и в <char style="xt"><ref loc="NEH 7">Неем. 7</ref></char> не вполне совпадают. Большая часть различий объясняется разным написанием одних и тех же имен и местностей. Различия в цифрах могут объясняться либо ошибкой переписчика, либо тем, что у авторов были на то свои, не известные нам, причины.</char></note>.<verse eid="EZR 2:70"/></para>
+  <chapter eid="EZR 2"/>
+  <chapter number="3" style="c" sid="EZR 3"/>
+  <para style="s1">Восстановление жертвенника</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 3:1"/>Когда наступил седьмой месяц и израильтяне уже поселились в своих городах, народ, как один человек, собрался в Иерусалиме. <verse eid="EZR 3:1"/><verse number="2" style="v" sid="EZR 3:2"/>Иисус, сын Иоседека, вместе со своими собратьями священниками, Зоровавелем, сыном Шеалтиила, и его собратьями начал строить жертвенник Бога Израиля, чтобы приносить на нем всесожжения, как предписано в Законе Божьего человека Моисея. <verse eid="EZR 3:2"/><verse number="3" style="v" sid="EZR 3:3"/>Несмотря на то что<note caller="+" style="f"><char style="fr" closed="false">3:3 </char><char style="ft" closed="false">Несмотря на то, что – или: «Так как».</char></note> они боялись народов, которые были вокруг них, они построили жертвенник на прежнем основании и приносили на нем всесожжения Господу – и утренние, и вечерние жертвы. <verse eid="EZR 3:3"/><verse number="4" style="v" sid="EZR 3:4"/>Затем они отпраздновали, как предписано, праздник Шалашей<note caller="+" style="f"><char style="fr" closed="false">3:4 </char><char style="ft" closed="false">Праздник Шалашей – иудейский праздник в память о попечении Бога во время скитаний в пустыне (см. <char style="xt"><ref loc="LEV 23:33-43">Лев. 23:33-43</ref>; <ref loc="NUM 29:12-39">Чис. 29:12-39</ref>; <ref loc="DEU 16:13-17">Втор. 16:13-17</ref></char>).</char></note> с указанным количеством всесожжений, установленных для каждого дня. <verse eid="EZR 3:4"/><verse number="5" style="v" sid="EZR 3:5"/>После этого они принесли постоянные всесожжения, жертвы на Новолуние<note caller="+" style="f"><char style="fr" closed="false">3:5 </char><char style="ft" closed="false">Праздник появления каждой новой луны, означавшей (в системе времяисчисления, построенной на лунном календаре) начало нового месяца.</char></note>, и жертвы на все праздники, посвященные Господу, и добровольные пожертвования от каждого, кто добровольно жертвовал Господу. <verse eid="EZR 3:5"/><verse number="6" style="v" sid="EZR 3:6"/>В первый день седьмого месяца они начали приносить Господу всесожжения, хотя основание Господнего храма еще не было заложено.<verse eid="EZR 3:6"/></para>
+  <para style="s1">Закладка основания для храма</para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 3:7"/>Они начали давать деньги каменщикам и плотникам и еду, питье и масло жителям Сидона и Тира, чтобы те привозили морем кедровые бревна с Ливана в Яффу с разрешения Кира, царя Персии.<verse eid="EZR 3:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 3:8"/>Во второй месяц второго года после того, как они пришли к Божьему дому в Иерусалиме<note caller="+" style="f"><char style="fr" closed="false">3:8 </char><char style="ft" closed="false">В середине весны 536 г. до н. э.</char></note>, Зоровавель, сын Шеалтиила, Иисус, сын Иоседека, и все остальные их соплеменники (священники, левиты и все, кто вернулся в Иерусалим из плена) приступили к работе, назначив левитов от двадцати лет и старше следить за строительством дома Господа. <verse eid="EZR 3:8"/><verse number="9" style="v" sid="EZR 3:9"/>Иисус со своими сыновьями и братьями, и Кадмиил со своими сыновьями (потомками Годавии<note caller="+" style="f"><char style="fr" closed="false">3:9 </char><char style="ft" closed="false">Букв.: «Иуды». Иуда – вариант имени Годавия (см. <char style="xt"><ref loc="EZR 2:40">2:40</ref>; <ref loc="NEH 7:43">Неем. 7:43</ref></char>).</char></note>), и сыновья Хенадада со своими сыновьями и братьями – все левиты – вместе начали следить за строительством Божьего дома.<verse eid="EZR 3:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="EZR 3:10"/>Когда строители заложили основание дома Господа, священники в своих облачениях и с трубами и левиты (сыновья Асафа) с тарелками заняли свои места, чтобы восславить Господа по наставлениям Давида, царя Израиля. <verse eid="EZR 3:10"/><verse number="11" style="v" sid="EZR 3:11"/>Они пели попеременно, возвеличивая и благодаря Господа:</para>
+  <para style="q1" vid="EZR 3:11">– Он благ;</para>
+  <para style="q2" vid="EZR 3:11">милость Его к Израилю – навеки!</para>
+  <para style="m" vid="EZR 3:11">А весь народ отвечал громким криком хвалы Господу, потому что основание дома Господа было заложено. <verse eid="EZR 3:11"/><verse number="12" style="v" sid="EZR 3:12"/>Но многие из старых священников, левитов и глав семейств, видевших прежний дом, громко плакали, глядя, как закладывается основание этого дома, а многие кричали от радости. <verse eid="EZR 3:12"/><verse number="13" style="v" sid="EZR 3:13"/>Крики радости нельзя было отличить от плача – так шумел народ. И шум был слышен далеко.<verse eid="EZR 3:13"/></para>
+  <chapter eid="EZR 3"/>
+  <chapter number="4" style="c" sid="EZR 4"/>
+  <para style="s1">Противодействие восстановлению храма</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 4:1"/>Когда враги Иуды и Вениамина услышали, что вчерашние пленники строят дом Господу, Богу Израиля, <verse eid="EZR 4:1"/><verse number="2" style="v" sid="EZR 4:2"/>они пришли к Зоровавелю и главам семейств и сказали:</para>
+  <para style="p" vid="EZR 4:2">– Позвольте нам строить вместе с вами. Ведь мы, как и вы, обращаемся за помощью к вашему Богу и приносим Ему жертвы со времен Асархаддона<note caller="+" style="f"><char style="fr" closed="false">4:2 </char><char style="ft" closed="false">Асархаддон, сын Синаххериба, правил Ассирийской империей с 681 по 669 гг. до н. э.</char></note>, царя Ассирии, который нас сюда поселил.<verse eid="EZR 4:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 4:3"/>Но Зоровавель, Иисус и остальные главы семейств Израиля ответили:</para>
+  <para style="p" vid="EZR 4:3">– Не строить вам вместе с нами дом нашему Богу. Мы одни будем строить его Господу, Богу Израиля, как повелел нам персидский царь Кир.<verse eid="EZR 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EZR 4:4"/>Тогда народы, бывшие вокруг них, начали отговаривать народ Иудеи от строительства и пугать его, чтобы они не строили дальше<note caller="+" style="f"><char style="fr" closed="false">4:4 </char><char style="ft" closed="false">Или: «препятствовать ему в строительстве».</char></note>. <verse eid="EZR 4:4"/><verse number="5" style="v" sid="EZR 4:5"/>Враги подкупали советников, чтобы расстраивать планы народа во все время правления Кира, царя Персии, и до правления Дария<note caller="+" style="f"><char style="fr" closed="false">4:5 </char><char style="ft" closed="false">Дарий I Великий (Гистасп) правил Персидской империей с 522 по 486 гг. до н. э.</char></note>, царя Персии<note caller="+" style="f"><char style="fr" closed="false">4:5 </char><char style="ft" closed="false">Это повествование продолжается с 24-го стиха. Стихи с 6 по 23 – вставка, рассказывающая о более позднем противодействии врагов при строительстве стен города (см. ст. 13).</char></note>.<verse eid="EZR 4:5"/></para>
+  <para style="s1">Позднейшее противодействие при Ксерксе и Артаксерксе</para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 4:6"/>В начале правления Ксеркса<note caller="+" style="f"><char style="fr" closed="false">4:6 </char><char style="ft" closed="false">Ксеркс – евр.: «Ахашверош». Ксеркс I, сын Дария I Великого, правил Персидской империей с 486 по 465 гг. до н. э.</char></note> они написали обвинение на жителей Иудеи и Иерусалима.<verse eid="EZR 4:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 4:7"/>И в дни Артаксеркса<note caller="+" style="f"><char style="fr" closed="false">4:7 </char><char style="ft" closed="false">Артаксеркс I Лонгиман (Долгорукий), сын Ксеркса I, внук Дария I Великого, правил Персидской империей с 464 по 424 гг. до н. э.</char></note>, царя Персии, Бишлам, Митредат, Тавеел и другие их сподвижники написали Артаксерксу письмо. Письмо было написано арамейским шрифтом и на арамейском языке<note caller="+" style="f"><char style="fr" closed="false">4:7 </char><char style="ft" closed="false">Или: «написано на арамейском языке и переведено». Текст с <char style="xt"><ref loc="EZR 4:8">4:8</ref></char> по <char style="xt"><ref loc="EZR 6:18">6:18</ref></char> включительно написан на арамейском языке.</char></note>.<verse eid="EZR 4:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 4:8"/>Царский наместник Рехум и писарь Шимшай написали царю Артаксерксу против Иерусалима такое письмо:<verse eid="EZR 4:8"/></para>
+  <para style="pm">
+    <verse number="9" style="v" sid="EZR 4:9"/>Рехум, царский наместник, и Шимшай, писарь, вместе с прочими своими друзьями – судьями, сановниками, наместниками, чиновниками, теми, кто родом из Эреха и Вавилона, еламитами из Суз <verse eid="EZR 4:9"/><verse number="10" style="v" sid="EZR 4:10"/>и прочими народами, которых могущественный и досточтимый Аснафар<note caller="+" style="f"><char style="fr" closed="false">4:10 </char><char style="ft" closed="false">Аснафар (арам.: «Оснаппар») – арамейский вариант ассирийского имени Ашшурбанипал. Ашшурбанипал, сын Асархаддона и последний из великих царей Ассирийской империи, правил с 669 по 633 гг. до н. э.</char></note> пленил и переселил в города Самарии и в другие места за Евфратом.<verse eid="EZR 4:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 4:11"/>(Это копия письма, которое они ему послали.)</para>
+  <para style="pmo" vid="EZR 4:11">Царю Артаксерксу –</para>
+  <para style="pmo" vid="EZR 4:11">от твоих рабов, жителей провинции за Евфратом:<verse eid="EZR 4:11"/></para>
+  <para style="pm">
+    <verse number="12" style="v" sid="EZR 4:12"/>Да будет известно царю, что иудеи, которые пришли к нам от тебя, пошли в Иерусалим и отстраивают этот мятежный и злой город. Они восстанавливают стены и укрепляют основания. <verse eid="EZR 4:12"/><verse number="13" style="v" sid="EZR 4:13"/>Да будет известно царю и то, что если этот город будет отстроен и стены его будут укреплены, то ни налог, ни дань, ни пошлина платиться не будут, и царские доходы сократятся. <verse eid="EZR 4:13"/><verse number="14" style="v" sid="EZR 4:14"/>Так как мы в долгу перед дворцом<note caller="+" style="f"><char style="fr" closed="false">4:14 </char><char style="ft" closed="false">Букв.: «мы едим соль от дворца». В те времена люди ели соль для закрепления договоров.</char></note> и не можем смотреть, как царю наносится бесчестие, мы и посылаем известить царя, <verse eid="EZR 4:14"/><verse number="15" style="v" sid="EZR 4:15"/>чтобы поискали в летописях твоих предшественников. В них ты найдешь, что город этот – мятежный город, пагубный для царей и провинций, и с древности – очаг мятежа. Поэтому-то он и был разрушен. <verse eid="EZR 4:15"/><verse number="16" style="v" sid="EZR 4:16"/>Мы извещаем царя, что если этот город будет отстроен и стены его будут восстановлены, то в провинции за Евфратом у тебя ничего не останется.<verse eid="EZR 4:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="EZR 4:17"/>Царь прислал такой ответ:</para>
+  <para style="pmo" vid="EZR 4:17">Рехуму, царскому наместнику, Шимшаю, писарю, и прочим их друзьям, живущим в Самарии и в других местах провинции за Евфратом, – мир.<verse eid="EZR 4:17"/></para>
+  <para style="pm">
+    <verse number="18" style="v" sid="EZR 4:18"/>Письмо, что вы послали нам, было прочитано и переведено предо мной. <verse eid="EZR 4:18"/><verse number="19" style="v" sid="EZR 4:19"/>По моему повелению был проведен поиск, и открылось, что этот город издревле восставал против царей и был очагом мятежей и волнений. <verse eid="EZR 4:19"/><verse number="20" style="v" sid="EZR 4:20"/>В Иерусалиме были могучие цари, правившие всей провинцией, что находится за Евфратом, и им платились налоги, дань и пошлины. <verse eid="EZR 4:20"/><verse number="21" style="v" sid="EZR 4:21"/>Итак, отдайте приказ этим людям прекратить работу, чтобы они не отстраивали этот город, пока я не прикажу. <verse eid="EZR 4:21"/><verse number="22" style="v" sid="EZR 4:22"/>Смотрите, не оставляйте этого дела без внимания. Зачем позволять этой угрозе расти до такой степени, чтобы царю был нанесен ущерб?<verse eid="EZR 4:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="EZR 4:23"/>Как только копия письма царя Артаксеркса была прочитана Рехуму, писарю Шимшаю и их друзьям, они немедленно отправились к иудеям в Иерусалим и силой заставили их прекратить работу.<verse eid="EZR 4:23"/></para>
+  <para style="s1">Возобновление работ по строительству храма</para>
+  <para style="p">
+    <verse number="24" style="v" sid="EZR 4:24"/>Так работа над Божьим домом в Иерусалиме остановилась и не возобновлялась до второго года правления Дария, царя Персии<note caller="+" style="f"><char style="fr" closed="false">4:24 </char><char style="ft" closed="false">520 г. до н. э.</char></note>.<verse eid="EZR 4:24"/></para>
+  <chapter eid="EZR 4"/>
+  <chapter number="5" style="c" sid="EZR 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 5:1"/>Пророк Аггей и пророк Захария, потомок Иддо, пророчествовали иудеям в Иудее и Иерусалиме во имя Бога Израиля, Который был над ними. <verse eid="EZR 5:1"/><verse number="2" style="v" sid="EZR 5:2"/>Зоровавель, сын Шеалтиила, и Иисус, сын Иоседека, принялись отстраивать дом Божий в Иерусалиме. Божьи пророки были с ними, помогая им.<verse eid="EZR 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 5:3"/>В то время Таттенай, наместник провинции за Евфратом, Шетар-Бознай и их сподвижники пришли к ним и спросили:</para>
+  <para style="p" vid="EZR 5:3">– Кто разрешил вам отстраивать этот дом и восстанавливать его стены?<note caller="+" style="f"><char style="fr" closed="false">5:3 </char><char style="ft" closed="false">Или: «И мы сказали им имена тех людей, которые возводят это строение».</char></note><verse eid="EZR 5:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="EZR 5:4"/>Еще они<note caller="+" style="f"><char style="fr" closed="false">5:4 </char><char style="ft" closed="false">Так в некоторых древних переводах; букв.: «мы».</char></note> спросили:</para>
+  <para style="p" vid="EZR 5:4">– Как зовут тех людей, которые возводят эти стены?<verse eid="EZR 5:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 5:5"/>Но око их Бога было над старейшинами иудеев, и их не останавливали, пока донесение не достигло Дария и от него не пришел письменный ответ.<verse eid="EZR 5:5"/></para>
+  <para style="s1">Письмо Фафная царю Дарию</para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 5:6"/>Вот копия письма, которое Таттенай, наместник провинции за Евфратом, Шетар-Бознай и их друзья, чиновники провинции за Евфратом, послали царю Дарию. <verse eid="EZR 5:6"/><verse number="7" style="v" sid="EZR 5:7"/>В донесении, которое они ему послали, было написано:</para>
+  <para style="pmo" vid="EZR 5:7">Царю Дарию – мир!<verse eid="EZR 5:7"/></para>
+  <para style="pm">
+    <verse number="8" style="v" sid="EZR 5:8"/>Да будет известно царю о том, что мы ходили в провинцию Иудея, к дому великого Бога. Народ строит его из больших камней и вкладывает в стены деревянные балки. Работа исполняется прилежно и спорится у них в руках.<verse eid="EZR 5:8"/></para>
+  <para style="pm">
+    <verse number="9" style="v" sid="EZR 5:9"/>Мы говорили со старейшинами и спросили их: «Кто разрешил вам отстраивать этот дом и восстанавливать его стены?» <verse eid="EZR 5:9"/><verse number="10" style="v" sid="EZR 5:10"/>(Еще мы узнали как их зовут, чтобы сообщить тебе имена руководителей.)<verse eid="EZR 5:10"/></para>
+  <para style="pm">
+    <verse number="11" style="v" sid="EZR 5:11"/>Вот что они нам ответили:</para>
+  <para style="b" vid="EZR 5:11"/>
+  <para style="pm" vid="EZR 5:11">«Мы слуги Бога небес и земли, и отстраиваем дом, который был построен много лет назад, тот самый, который строил и завершил великий израильский царь. <verse eid="EZR 5:11"/><verse number="12" style="v" sid="EZR 5:12"/>Наши предки прогневали Бога небесного, и Он отдал их в руки халдея Навуходоносора, царя Вавилона, который разрушил этот дом и увел народ в плен в Вавилон.<verse eid="EZR 5:12"/></para>
+  <para style="pm">
+    <verse number="13" style="v" sid="EZR 5:13"/>Но в первый год своего правления Кир, царь Вавилона<note caller="+" style="f"><char style="fr" closed="false">5:13 </char><char style="ft" closed="false">Персидский царь Кир назван здесь царем Вавилона потому, что Персия завоевала Вавилонскую империю.</char></note>, повелел отстроить этот дом Божий. <verse eid="EZR 5:13"/><verse number="14" style="v" sid="EZR 5:14"/>Он даже вынес из вавилонского храма золотые и серебряные вещи Божьего дома, которые Навуходоносор забрал из храма в Иерусалиме и принес в храм в Вавилоне.</para>
+  <para style="pm" vid="EZR 5:14">Царь Кир отдал их Шешбацару, которого он назначил наместником, <verse eid="EZR 5:14"/><verse number="15" style="v" sid="EZR 5:15"/>и сказал ему: „Возьми эти вещи, иди и положи их в Иерусалимском храме. И пусть Божий дом будет отстроен на своем прежнем месте“. <verse eid="EZR 5:15"/><verse number="16" style="v" sid="EZR 5:16"/>Тогда Шешбацар пришел и заложил основания Божьего дома в Иерусалиме. С того дня до нынешнего он строится, но все еще не завершен».<verse eid="EZR 5:16"/></para>
+  <para style="pm">
+    <verse number="17" style="v" sid="EZR 5:17"/>Итак, если это угодно царю, пусть поищут в царских архивах, что в Вавилоне: правда ли царь Кир повелел отстроить этот дом Божий в Иерусалиме. И пусть царь пошлет нам свое решение по этому делу.<verse eid="EZR 5:17"/></para>
+  <chapter eid="EZR 5"/>
+  <chapter number="6" style="c" sid="EZR 6"/>
+  <para style="s1">Указ царя Дария</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 6:1"/>Царь Дарий дал повеление, и в архивах, что хранились в сокровищнице в Вавилоне, устроили поиск. <verse eid="EZR 6:1"/><verse number="2" style="v" sid="EZR 6:2"/>В Екбатане, столице провинции Мидия, нашелся свиток, и в нем было написано:</para>
+  <para style="pmo" vid="EZR 6:2">Памятная запись:<verse eid="EZR 6:2"/></para>
+  <para style="pm">
+    <verse number="3" style="v" sid="EZR 6:3"/>В первый год правления царя Кира царь отдал повеление о Божьем доме в Иерусалиме:</para>
+  <para style="pm" vid="EZR 6:3">Пусть дом – место, где приносятся жертвы и сжигаются всесожжения, – будет отстроен, и пусть будут заложены его основания. Пусть он будет шестьдесят локтей<note caller="+" style="f"><char style="fr" closed="false">6:3 </char><char style="ft" closed="false">Около 30 м.</char></note> в высоту и шестьдесят локтей в ширину, <verse eid="EZR 6:3"/><verse number="4" style="v" sid="EZR 6:4"/>с тремя рядами из больших камней и одним – из дерева. Расходы пусть будут оплачены из царской казны. <verse eid="EZR 6:4"/><verse number="5" style="v" sid="EZR 6:5"/>А еще, пусть золотые и серебряные вещи Божьего дома, которые Навуходоносор забрал из Иерусалимского храма и принес в Вавилон, вернутся на свое место в Иерусалимский храм, и пусть их поместят в Божьем доме.<verse eid="EZR 6:5"/></para>
+  <para style="b"/>
+  <para style="pm">
+    <verse number="6" style="v" sid="EZR 6:6"/>Итак, Таттенай, наместник провинции за Евфратом, Шетар-Бознай и вы, их сподвижники, чиновники этой провинции, держитесь подальше. <verse eid="EZR 6:6"/><verse number="7" style="v" sid="EZR 6:7"/>Не вмешивайтесь в работу над этим Божьим домом. Пусть иудейский наместник и старейшины иудеев отстраивают этот дом Божий на его прежнем месте.<verse eid="EZR 6:7"/></para>
+  <para style="pm">
+    <verse number="8" style="v" sid="EZR 6:8"/>Более того, я даю повеление о том, чем вы должны помогать этим старейшинам иудеев в постройке этого Божьего дома: расходы этих людей следует полностью оплатить из царской казны, из доходов провинции за Евфратом, чтобы работа не останавливалась. <verse eid="EZR 6:8"/><verse number="9" style="v" sid="EZR 6:9"/>Все, что бы ни потребовалось: тельцы, бараны, ягнята для всесожжений Богу небесному, пшеница, соль, вино и масло, как скажут священники из Иерусалима, должно выдаваться им ежедневно без промедления, <verse eid="EZR 6:9"/><verse number="10" style="v" sid="EZR 6:10"/>чтобы они могли приносить жертвы, угодные Богу небесному, и молиться о благополучии царя и его сыновей.<verse eid="EZR 6:10"/></para>
+  <para style="pm">
+    <verse number="11" style="v" sid="EZR 6:11"/>Я даю и такое повеление, что если кто-нибудь изменит этот указ, то пусть из его дома вынут кол и посадят его на него. Пусть его дом за это преступление будет превращен в груду развалин. <verse eid="EZR 6:11"/><verse number="12" style="v" sid="EZR 6:12"/>Пусть Бог, Который утвердил там Свое имя, низложит всякого царя или народ, которые поднимут руку, чтобы изменить этот указ или разрушить этот дом Божий в Иерусалиме.</para>
+  <para style="pm" vid="EZR 6:12">Так повелел я, Дарий. Да будет исполнено это со всем усердием.<verse eid="EZR 6:12"/></para>
+  <para style="s1">Завершение строительства храма и его освящение</para>
+  <para style="p">
+    <verse number="13" style="v" sid="EZR 6:13"/>И наместник провинции за Евфратом Таттенай, Шетар-Бознай и их сподвижники со всем старанием исполнили то, что повелел царь Дарий. <verse eid="EZR 6:13"/><verse number="14" style="v" sid="EZR 6:14"/>И старейшины иудеев продолжали строить и преуспевали в то самое время, когда пророчествовали пророки Аггей и Захария, внук Иддо. Они завершили строительство дома по повелению Бога Израиля и указам Кира, Дария и Артаксеркса, царей Персии. <verse eid="EZR 6:14"/><verse number="15" style="v" sid="EZR 6:15"/>Строительство дома было завершено на третий день месяца адара, в шестой год правления царя Дария<note caller="+" style="f"><char style="fr" closed="false">6:15 </char><char style="ft" closed="false">12 марта 515 г. до н. э.</char></note>.<verse eid="EZR 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="EZR 6:16"/>Весь народ Израиля – священники, левиты и все остальные, возвратившиеся из плена, – радостно отпраздновали посвящение Божьего дома. <verse eid="EZR 6:16"/><verse number="17" style="v" sid="EZR 6:17"/>Для освящения этого Божьего дома они принесли в жертву сто быков, двести баранов, четыреста ягнят и в жертву за грех всего Израиля – двенадцать козлов, по одному за каждый израильский род. <verse eid="EZR 6:17"/><verse number="18" style="v" sid="EZR 6:18"/>Затем они поставили священников по их отделениям и левитов по их группам для служения Богу в Иерусалиме, как предписано в книге Моисея.<verse eid="EZR 6:18"/></para>
+  <para style="s1">Пасха</para>
+  <para style="p">
+    <verse number="19" style="v" sid="EZR 6:19"/>В четырнадцатый день первого месяца<note caller="+" style="f"><char style="fr" closed="false">6:19 </char><char style="ft" closed="false">21 апреля 515 г. до н. э.</char></note> возвратившиеся из плена отпраздновали Пасху. <verse eid="EZR 6:19"/><verse number="20" style="v" sid="EZR 6:20"/>Священники и левиты очистились, и все были <char style="add">ритуально</char> чисты. Левиты закололи пасхального ягненка для всех возвратившихся из плена, для своих собратьев-священников и для самих себя. <verse eid="EZR 6:20"/><verse number="21" style="v" sid="EZR 6:21"/>И израильтяне, вернувшиеся из плена, ели вместе со всеми теми, кто удалился от нечистых обычаев своих соседей-язычников, чтобы поклоняться Господу, Богу Израиля. <verse eid="EZR 6:21"/><verse number="22" style="v" sid="EZR 6:22"/>Семь дней они радостно отмечали праздник Пресных хлебов<note caller="+" style="f"><char style="fr" closed="false">6:22 </char><char style="ft" closed="false">Праздник Пресных хлебов – этот праздник шел сразу же за праздником Пасхи и длился 7 дней. В эти дни предписывалось есть только пресный хлеб (см. <char style="xt"><ref loc="EXO 12:15-20">Исх. 12:15-20</ref>; <ref loc="EXO 13:3-10">13:3-10</ref>; <ref loc="LEV 23:6-8">Лев. 23:6-8</ref>; <ref loc="NUM 28:17-25">Чис. 28:17-25</ref></char>).</char></note>, потому что Господь наполнил их радостью, расположив к ним царя Ассирии<note caller="+" style="f"><char style="fr" closed="false">6:22 </char><char style="ft" closed="false">Персидский царь Дарий назван здесь царем Ассирии потому, что Персия завоевала Вавилонскую империю, которая в свою очередь завоевала Ассирию.</char></note> так, что тот стал помогать им в работе над домом Господа, Бога Израиля.<verse eid="EZR 6:22"/></para>
+  <chapter eid="EZR 6"/>
+  <chapter number="7" style="c" sid="EZR 7"/>
+  <para style="s1">Ездра прибывает в Иерусалим</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 7:1"/>После этих событий, в правление царя Персии Артаксеркса, Ездра, сын Сераи, сына Азарии, сына Хелкии, <verse eid="EZR 7:1"/><verse number="2" style="v" sid="EZR 7:2"/>сына Шаллума, сына Цадока, сына Ахитува, <verse eid="EZR 7:2"/><verse number="3" style="v" sid="EZR 7:3"/>сына Амарии, сына Азарии, сына Мераиофа, <verse eid="EZR 7:3"/><verse number="4" style="v" sid="EZR 7:4"/>сына Зерахия, сына Уззия, сына Буккия, <verse eid="EZR 7:4"/><verse number="5" style="v" sid="EZR 7:5"/>сына Авишуя, сына Пинехаса, сына Элеазара, сына первосвященника Аарона, – <verse eid="EZR 7:5"/><verse number="6" style="v" sid="EZR 7:6"/>этот Ездра пришел из Вавилона. Он был учителем, сведущим в Законе Моисея, который дал Господь, Бог Израиля. Царь дал ему все, о чем он просил, потому что на нем была рука Господа, его Бога. <verse eid="EZR 7:6"/><verse number="7" style="v" sid="EZR 7:7"/>Некоторые из израильтян и некоторые из священников, левитов, певцов, привратников и храмовых слуг также пришли в Иерусалим в седьмом году правления царя Артаксеркса.<verse eid="EZR 7:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="EZR 7:8"/>Ездра прибыл в Иерусалим в пятый месяц седьмого года царя<note caller="+" style="f"><char style="fr" closed="false">7:8 </char><char style="ft" closed="false">В августе 458 г. до н. э.</char></note>. <verse eid="EZR 7:8"/><verse number="9" style="v" sid="EZR 7:9"/>Он отправился в путь из Вавилона в первый день первого месяца<note caller="+" style="f"><char style="fr" closed="false">7:9 </char><char style="ft" closed="false">8 апреля 458 г. до н. э.</char></note> и прибыл в Иерусалим в пятый день пятого месяца<note caller="+" style="f"><char style="fr" closed="false">7:9 </char><char style="ft" closed="false">4 августа 458 г. до н. э.</char></note>, потому что на нем была милостивая рука его Бога. <verse eid="EZR 7:9"/><verse number="10" style="v" sid="EZR 7:10"/>Ведь Ездра посвятил себя изучению и исполнению Господнего Закона и обучению его уставам и постановлениям Израиля.<verse eid="EZR 7:10"/></para>
+  <para style="s1">Письмо царя Артаксеркса Ездре</para>
+  <para style="p">
+    <verse number="11" style="v" sid="EZR 7:11"/>Вот копия письма, которое царь Артаксеркс дал Ездре, священнику и учителю, человеку, сведущему в повелениях и уставах Господа Израиля:<verse eid="EZR 7:11"/></para>
+  <para style="pmo">
+    <verse number="12" style="v" sid="EZR 7:12"/>От Артаксеркса, царя царей,</para>
+  <para style="pmo" vid="EZR 7:12">Ездре, священнику, учителю Закона Бога небес:</para>
+  <para style="pmo" vid="EZR 7:12">Приветствия<note caller="+" style="f"><char style="fr" closed="false">7:12 </char><char style="ft" closed="false">Смысл этого места в арамейском тексте неясен.</char></note>.<verse eid="EZR 7:12"/></para>
+  <para style="pm">
+    <verse number="13" style="v" sid="EZR 7:13"/>Я повелеваю: всякий из израильтян в моем царстве, включая священников и левитов, кто желает идти в Иерусалим вместе с тобой, может идти. <verse eid="EZR 7:13"/><verse number="14" style="v" sid="EZR 7:14"/>Ты посылаешься царем и семью его советниками, чтобы разузнать об Иудее и Иерусалиме по Закону твоего Бога, который в твоей руке. <verse eid="EZR 7:14"/><verse number="15" style="v" sid="EZR 7:15"/>Более того, возьми с собой серебро и золото, которое царь и его советники пожертвовали Богу Израиля, Чье жилище в Иерусалиме, <verse eid="EZR 7:15"/><verse number="16" style="v" sid="EZR 7:16"/>а также все серебро и золото, какие найдешь во всей провинции Вавилония, и пожертвования народа и священников на дом их Бога в Иерусалиме. <verse eid="EZR 7:16"/><verse number="17" style="v" sid="EZR 7:17"/>Немедленно купи на эти деньги быков, баранов и ягнят, вместе с их хлебными приношениями и жертвенными возлияниями и принеси их на жертвенник дома вашего Бога в Иерусалиме.<verse eid="EZR 7:17"/></para>
+  <para style="pm">
+    <verse number="18" style="v" sid="EZR 7:18"/>Ты и твои собратья можете распорядиться остатком серебра и золота по своему усмотрению, как будет на то воля вашего Бога. <verse eid="EZR 7:18"/><verse number="19" style="v" sid="EZR 7:19"/>Доставь Богу Иерусалима все вещи, вверенные тебе для служения в доме твоего Бога. <verse eid="EZR 7:19"/><verse number="20" style="v" sid="EZR 7:20"/>И если еще будут расходы на дом твоего Бога, ты можешь покрыть их из царской сокровищницы.<verse eid="EZR 7:20"/></para>
+  <para style="pm">
+    <verse number="21" style="v" sid="EZR 7:21"/>Итак я, царь Артаксеркс, приказываю всем казначеям провинции за Евфратом, немедленно выдавать все, что бы ни попросил у вас священник Ездра, учитель Закона Бога небесного – <verse eid="EZR 7:21"/><verse number="22" style="v" sid="EZR 7:22"/>до ста талантов<note caller="+" style="f"><char style="fr" closed="false">7:22 </char><char style="ft" closed="false">Около 3,4 т.</char></note> серебра, ста кор<note caller="+" style="f"><char style="fr" closed="false">7:22 </char><char style="ft" closed="false">Около 10 т.</char></note> зерна, ста батов<note caller="+" style="f"><char style="fr" closed="false">7:22 </char><char style="ft" closed="false">Около 2 200 л.</char></note> вина, ста батов оливкового масла и соли без меры. <verse eid="EZR 7:22"/><verse number="23" style="v" sid="EZR 7:23"/>Что бы ни повелел Бог небесный, пусть с усердием делается для дома Бога небес, чтобы не было гнева на державу царя и его сыновей. <verse eid="EZR 7:23"/><verse number="24" style="v" sid="EZR 7:24"/>Знайте также, что у вас нет власти взимать налоги, дань или пошлины ни с кого из священников, левитов, певцов, привратников, храмовых слуг или других работников в этом Божьем доме.<verse eid="EZR 7:24"/></para>
+  <para style="pm">
+    <verse number="25" style="v" sid="EZR 7:25"/>А ты, Ездра, по мудрости твоего Бога, которой обладаешь, назначь правителей и судей, чтобы вершить правосудие всему народу провинции за Евфратом – всем, кто знает законы твоего Бога. А всех, кто не знает их, ты учи. <verse eid="EZR 7:25"/><verse number="26" style="v" sid="EZR 7:26"/>Всякий, кто не будет слушаться Закона твоего Бога и закона царя, непременно должен быть наказан смертью, или изгнанием, или конфискацией имущества, или заключением в темницу.<verse eid="EZR 7:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="EZR 7:27"/>Слава Господу, Богу наших отцов, Который вложил в сердце царя желание воздать этим честь дому Господа в Иерусалиме <verse eid="EZR 7:27"/><verse number="28" style="v" sid="EZR 7:28"/>и простер ко мне Свою милость перед царем, и его советниками, и всеми могущественными царскими приближенными! Так как рука Господа, моего Бога, была на мне, я отважился и собрал вождей из Израиля, чтобы им идти со мной.<verse eid="EZR 7:28"/></para>
+  <chapter eid="EZR 7"/>
+  <chapter number="8" style="c" sid="EZR 8"/>
+  <para style="s1">Список глав семей, вернувшихся с Ездрой</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 8:1"/>Вот главы семейств и родословия тех, кто вышел со мной из Вавилона во время правления царя Артаксеркса:<verse eid="EZR 8:1"/></para>
+  <para style="li1">
+    <verse number="2" style="v" sid="EZR 8:2"/>из потомков Пинехаса – Гершом;</para>
+  <para style="li1" vid="EZR 8:2">из потомков Итамара – Даниил;</para>
+  <para style="li1" vid="EZR 8:2">из потомков Давида – Хаттуш, <verse eid="EZR 8:2"/><verse number="3" style="v" sid="EZR 8:3"/>сын Шекании;</para>
+  <para style="li1" vid="EZR 8:3">из потомков Пароша – Захария, и с ним по родословному списку было 150 мужчин;<verse eid="EZR 8:3"/></para>
+  <para style="li1">
+    <verse number="4" style="v" sid="EZR 8:4"/>из потомков Пахат-Моава – Элиегоэнай, сын Зерахии, и с ним 200 мужчин;<verse eid="EZR 8:4"/></para>
+  <para style="li1">
+    <verse number="5" style="v" sid="EZR 8:5"/>из потомков Затту – Шекания, сын Иахазиила, и с ним 300 мужчин;<verse eid="EZR 8:5"/></para>
+  <para style="li1">
+    <verse number="6" style="v" sid="EZR 8:6"/>из потомков Адина – Эвед, сын Ионафана, и с ним 50 мужчин;<verse eid="EZR 8:6"/></para>
+  <para style="li1">
+    <verse number="7" style="v" sid="EZR 8:7"/>из потомков Елама – Иешаия, сын Аталии, и с ним 70 мужчин;<verse eid="EZR 8:7"/></para>
+  <para style="li1">
+    <verse number="8" style="v" sid="EZR 8:8"/>из потомков Шефатии – Зевадия, сын Михаила, и с ним 80 мужчин;<verse eid="EZR 8:8"/></para>
+  <para style="li1">
+    <verse number="9" style="v" sid="EZR 8:9"/>из потомков Иоава – Авдий, сын Иехиила, и с ним 218 мужчин;<verse eid="EZR 8:9"/></para>
+  <para style="li1">
+    <verse number="10" style="v" sid="EZR 8:10"/>из потомков Вании – Шеломит, сын Иосифии, и с ним 160 мужчин;<verse eid="EZR 8:10"/></para>
+  <para style="li1">
+    <verse number="11" style="v" sid="EZR 8:11"/>из потомков Бевая – Захария, сын Бевая, и с ним 28 мужчин;<verse eid="EZR 8:11"/></para>
+  <para style="li1">
+    <verse number="12" style="v" sid="EZR 8:12"/>из потомков Азгада – Иоханан, сын Гаккатана, и с ним 110 мужчин;<verse eid="EZR 8:12"/></para>
+  <para style="li1">
+    <verse number="13" style="v" sid="EZR 8:13"/>из потомков Адоникама – последние, чьи имена Элифелет, Иеил и Шемая, и с ними 60 мужчин;<verse eid="EZR 8:13"/></para>
+  <para style="li1">
+    <verse number="14" style="v" sid="EZR 8:14"/>из потомков Бигвая – Уфай и Заккур, и с ними 70 мужчин.<verse eid="EZR 8:14"/></para>
+  <para style="s1">Ездра призывает левитов и храмовых слуг к возвращению</para>
+  <para style="p">
+    <verse number="15" style="v" sid="EZR 8:15"/>Я собрал их у реки, которая течет в сторону Агавы, где мы разбили лагерь и провели там три дня. Когда я осмотрел народ и священников, то не нашел среди них ни одного левита. <verse eid="EZR 8:15"/><verse number="16" style="v" sid="EZR 8:16"/>Тогда я позвал Элиезера, Ариила, Шемаю, Элнафана, Иарива, Элнафана, Нафана, Захарию и Мешуллама, которые были вождями, и ученых – Иоиарива и Элнафана, <verse eid="EZR 8:16"/><verse number="17" style="v" sid="EZR 8:17"/>и отправил их к Иддо, вождю в Касифии. Я велел им передать Иддо и его родственникам, храмовым слугам в Касифии, чтобы они привели к нам служителей для дома нашего Бога. <verse eid="EZR 8:17"/><verse number="18" style="v" sid="EZR 8:18"/>Так как милостивая рука нашего Бога была над нами, они привели к нам Шеревию, способного человека из потомков Махли, сына Левия, сына Израиля, и сыновей и братьев Шеревии – восемнадцать мужчин; <verse eid="EZR 8:18"/><verse number="19" style="v" sid="EZR 8:19"/>и Хашавию вместе с Иешаией из потомков Мерари, и его братьев и племянников – двадцать мужчин. <verse eid="EZR 8:19"/><verse number="20" style="v" sid="EZR 8:20"/>Они также привели двести двадцать храмовых слуг – группу служителей, которых Давид и чиновники отдали в помощь левитам. Все они были записаны поименно.<verse eid="EZR 8:20"/></para>
+  <para style="s1">Подготовка к пути</para>
+  <para style="p">
+    <verse number="21" style="v" sid="EZR 8:21"/>Там, у реки Агавы, я объявил пост, чтобы мы могли смирить себя перед нашим Богом и попросить Его о безопасном путешествии для нас и наших детей со всем нашим имуществом. <verse eid="EZR 8:21"/><verse number="22" style="v" sid="EZR 8:22"/>Мне было стыдно просить у царя войска и всадников для нашей защиты от врагов в пути, потому что мы уже сказали царю: «Милостивая рука нашего Бога на каждом, кто ищет Его, но Его великий гнев на всех, кто покидает Его». <verse eid="EZR 8:22"/><verse number="23" style="v" sid="EZR 8:23"/>Итак, мы постились и просили нашего Бога об этом, и Он ответил на нашу молитву.<verse eid="EZR 8:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="EZR 8:24"/>Затем я отделил двенадцать главных священников: Шеревию вместе с Хашавией и десять других из их братьев, <verse eid="EZR 8:24"/><verse number="25" style="v" sid="EZR 8:25"/>и, взвесив, я отдал им пожертвованное серебро, и золото, и предметы, которые царь, его советники, его чиновники и все находившиеся там израильтяне отдали для дома нашего Бога. <verse eid="EZR 8:25"/><verse number="26" style="v" sid="EZR 8:26"/>Взвесив, я отдал им шестьсот пятьдесят талантов<note caller="+" style="f"><char style="fr" closed="false">8:26 </char><char style="ft" closed="false">Около 22 т.</char></note> серебра и серебряных предметов на сто талантов<note caller="+" style="f"><char style="fr" closed="false">8:26 </char><char style="ft" closed="false">Около 3,4 т.</char></note>, золота – сто талантов<note caller="+" style="f"><char style="fr" closed="false">8:26 </char><char style="ft" closed="false">Около 3,4 т.</char></note>, <verse eid="EZR 8:26"/><verse number="27" style="v" sid="EZR 8:27"/>двадцать золотых чаш стоимостью в тысячу драхм<note caller="+" style="f"><char style="fr" closed="false">8:27 </char><char style="ft" closed="false">Золотые чаши весили около 9 кг.</char></note> и два сосуда из лучшей блестящей меди, ценимой как золото.<verse eid="EZR 8:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="EZR 8:28"/>И я сказал им:</para>
+  <para style="p" vid="EZR 8:28">– Вы, также как и все эти предметы, посвящены Господу. Серебро и золото – добровольные пожертвования Господу, Богу ваших отцов. <verse eid="EZR 8:28"/><verse number="29" style="v" sid="EZR 8:29"/>Бережно храните все это до тех пор, пока не передадите в хранилище дома Господа в Иерусалиме, взвесив все на глазах у главных священников, левитов и глав семейств Израиля.<verse eid="EZR 8:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="EZR 8:30"/>Затем священники и левиты приняли серебро, золото и священные предметы, которые были отданы для того, чтобы их отвезли в дом нашего Бога в Иерусалиме.<verse eid="EZR 8:30"/></para>
+  <para style="s1">Возвращение в Иерусалим</para>
+  <para style="p">
+    <verse number="31" style="v" sid="EZR 8:31"/>В двенадцатый день первого месяца<note caller="+" style="f"><char style="fr" closed="false">8:31 </char><char style="ft" closed="false">19 апреля 458 г. до н. э.</char></note> мы отправились в путь от реки Агавы, чтобы дойти до Иерусалима. Рука нашего Бога была над нами, и Он защитил нас от врагов и разбойников в пути. <verse eid="EZR 8:31"/><verse number="32" style="v" sid="EZR 8:32"/>Итак, мы пришли в Иерусалим, где отдыхали три дня.<verse eid="EZR 8:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="EZR 8:33"/>На четвертый день в доме нашего Бога мы, взвесив серебро, золото и священные предметы, передали их в руки священника Меремофа, сына Урии. С ним был Элеазар, сын Пинехаса, а также левиты – Иозавад, сын Иисусов, и Ноадия, сын Биннуя. <verse eid="EZR 8:33"/><verse number="34" style="v" sid="EZR 8:34"/>Все было сосчитано по количеству и весу, и в то же время был записан общий вес.<verse eid="EZR 8:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="EZR 8:35"/>Затем пришедшие из плена переселенцы принесли жертвы всесожжения Богу Израилеву – двенадцать быков за весь Израиль, девяносто шесть баранов, семьдесят семь ягнят мужского пола и двенадцать козлов в жертву за грех. Все это было принесено в жертву всесожжения Господу. <verse eid="EZR 8:35"/><verse number="36" style="v" sid="EZR 8:36"/>Они также отдали царские приказы царским сатрапам<note caller="+" style="f"><char style="fr" closed="false">8:36 </char><char style="ft" closed="false">Персидская империя была поделена на административные области (сатрапии), которыми управляли сатрапы – самый высокий ранг чиновников в империи. Сатрапии в свою очередь состояли из отдельных провинций.</char></note> и наместникам провинции за Евфратом, которые потом оказали поддержку народу и дому Божию.<verse eid="EZR 8:36"/></para>
+  <chapter eid="EZR 8"/>
+  <chapter number="9" style="c" sid="EZR 9"/>
+  <para style="s1">Осуждение смешанных браков</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 9:1"/>После того как все это было сделано, вожди пришли ко мне и сказали:</para>
+  <para style="p" vid="EZR 9:1">– Народ Израиля, священники и левиты не отделились от иноплеменных народов: хананеев, хеттов, ферезеев, иевусеев, аммонитян, моавитян, египтян и аморреев с их отвратительными обычаями. <verse eid="EZR 9:1"/><verse number="2" style="v" sid="EZR 9:2"/>Они брали их дочерей в жены для себя и своих сыновей, и святой народ смешался с иноплеменными народами. А вожди и чиновники первыми подавали пример этого предательства.<verse eid="EZR 9:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="EZR 9:3"/>Услышав это, я разорвал на себе одежду и накидку, стал рвать свои волосы и бороду и сел, пораженный ужасом. <verse eid="EZR 9:3"/><verse number="4" style="v" sid="EZR 9:4"/>Все, кто благоговел пред словами Бога Израиля, собрались вокруг меня из-за этого предательства переселенцев. А я сидел там, пораженный ужасом, до вечерней жертвы<note caller="+" style="f"><char style="fr" closed="false">9:4 </char><char style="ft" closed="false">То есть примерно до трех часов пополудни (см. <char style="xt"><ref loc="EXO 29:38-41">Исх. 29:38-41</ref>; <ref loc="NUM 28:3-8">Чис. 28:3-8</ref></char>).</char></note>.<verse eid="EZR 9:4"/></para>
+  <para style="s1">Молитва Ездры</para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 9:5"/>Во время вечерней жертвы я поднялся с места своего самоуничижения в разорванной одежде и накидке, пал на колени, простирая руки к Господу, моему Богу, <verse eid="EZR 9:5"/><verse number="6" style="v" sid="EZR 9:6"/>и стал молиться:</para>
+  <para style="pm" vid="EZR 9:6">– Боже мой, мне так стыдно, так совестно, что я даже не могу поднять к Тебе лица, ведь наши грехи выше наших голов, а вина наша достигла небес. <verse eid="EZR 9:6"/><verse number="7" style="v" sid="EZR 9:7"/>Со дней наших отцов и до этого дня наша вина велика. Из-за наших грехов нас, и наших царей, и священников постигли меч и плен, грабеж и унижения от рук иноземных царей, как это есть и по сегодняшний день.<verse eid="EZR 9:7"/></para>
+  <para style="pm">
+    <verse number="8" style="v" sid="EZR 9:8"/>Но сегодня – на миг – Господь, наш Бог, смилостивился над нами. Он оставил в живых некоторых из нас и дал нам утвердиться в Своем святилище. Он просветил наши глаза и облегчил наше рабство. <verse eid="EZR 9:8"/><verse number="9" style="v" sid="EZR 9:9"/>Мы рабы, но наш Бог не оставил нас и в нашем рабстве. Он проявил к нам милость перед царями Персии: Он даровал нам новую жизнь, чтобы мы отстроили дом нашего Бога и восстановили его из руин, и дал нам <char style="add">защитную</char> стену в Иудее и в Иерусалиме.<verse eid="EZR 9:9"/></para>
+  <para style="pm">
+    <verse number="10" style="v" sid="EZR 9:10"/>Но ныне, Боже наш, что нам сказать после этого? Ведь мы пренебрегли заповедями, <verse eid="EZR 9:10"/><verse number="11" style="v" sid="EZR 9:11"/>которые Ты дал через Твоих слуг пророков, когда сказал: «Земля, в которую вы входите, чтобы завладеть ею, это земля, оскверненная мерзостями ее народов. Своими отвратительными обычаями они наполнили ее нечистотой от края до края. <verse eid="EZR 9:11"/><verse number="12" style="v" sid="EZR 9:12"/>Поэтому не отдавайте своих дочерей замуж за их сыновей и не берите их дочерей своим сыновьям. Никогда не ищите с ними мирного договора, чтобы вам быть сильными, и есть блага земли, и оставить ее вашим детям как вечное наследие».<verse eid="EZR 9:12"/></para>
+  <para style="pm">
+    <verse number="13" style="v" sid="EZR 9:13"/>После всего, что случилось с нами за наши злые дела и великую вину, Ты, Боже наш, наказал нас мягче, чем заслуживали наши грехи, и оставил в живых некоторых из нас. <verse eid="EZR 9:13"/><verse number="14" style="v" sid="EZR 9:14"/>Неужели мы опять нарушим Твои повеления и будем вступать в родство с народами, которые преданы этим отвратительным обычаям? Разве Ты не прогневаешься на нас так, чтобы истребить нас, не оставив ни одного уцелевшего? <verse eid="EZR 9:14"/><verse number="15" style="v" sid="EZR 9:15"/>Господи, Боже Израиля, Ты праведен! Сегодня остались мы – уцелевшие. Вот мы перед Тобой в нашей вине, хотя из-за нее ни один из нас не может устоять в Твоем присутствии.<verse eid="EZR 9:15"/></para>
+  <chapter eid="EZR 9"/>
+  <chapter number="10" style="c" sid="EZR 10"/>
+  <para style="s1">Покаяние народа и расторжение смешанных браков</para>
+  <para style="p">
+    <verse number="1" style="v" sid="EZR 10:1"/>Пока Ездра молился и открыто признавался в грехах, плача и повергаясь перед Божьим домом, вокруг него собралась большая толпа израильтян: мужчин, женщин и детей. Они тоже горько плакали. <verse eid="EZR 10:1"/><verse number="2" style="v" sid="EZR 10:2"/>Шекания, сын Иехиила, один из потомков Елама, обратился к Ездре, сказав:</para>
+  <para style="p" vid="EZR 10:2">– Мы нарушили верность нашему Богу, женившись на чужеземках из народов, что вокруг нас. Но даже теперь у Израиля еще есть надежда. <verse eid="EZR 10:2"/><verse number="3" style="v" sid="EZR 10:3"/>Итак, давайте заключим с нашим Богом завет, чтобы удалить от себя всех этих женщин и их детей, по совету моего господина и тех, кто благоговеет перед повелениями нашего Бога. Пусть все будет по Закону. <verse eid="EZR 10:3"/><verse number="4" style="v" sid="EZR 10:4"/>Поднимись, это дело в твоих руках. Мы поддержим тебя, соберись с духом и действуй.<verse eid="EZR 10:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="EZR 10:5"/>Ездра поднялся и заставил главных священников, левитов и весь Израиль поклясться сделать так, как было предложено. И они поклялись.<verse eid="EZR 10:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="EZR 10:6"/>Ездра удалился от Божьего дома и пошел в комнату Иоханана, сына Элиашива. Пока он был там, он не ел хлеба и не пил воды, потому что скорбел о неверности переселенцев.<verse eid="EZR 10:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="EZR 10:7"/>И в Иудее, и Иерусалиме объявили, что все переселенцы должны собраться в Иерусалиме, <verse eid="EZR 10:7"/><verse number="8" style="v" sid="EZR 10:8"/>а если кто-нибудь не придет в течение трех дней, у того – по решению вождей и старейшин – будет отобрано<note caller="+" style="f"><char style="fr" closed="false">10:8 </char><char style="ft" closed="false">На языке оригинала стоит слово, которое говорит о полном посвящении предметов или людей Господу, часто осуществлявшемся через их уничтожение.</char></note> все его имущество, а сам он будет изгнан из общины переселенцев.<verse eid="EZR 10:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="EZR 10:9"/>В течение трех дней все мужчины Иуды и Вениамина собрались в Иерусалиме. На двадцатый день девятого месяца<note caller="+" style="f"><char style="fr" closed="false">10:9 </char><char style="ft" closed="false">19 декабря 458 г. до н. э.</char></note> весь народ сидел на площади перед Божьим домом, дрожа из-за этого дела и из-за ливня. <verse eid="EZR 10:9"/><verse number="10" style="v" sid="EZR 10:10"/>Священник Ездра встал и сказал им:</para>
+  <para style="p" vid="EZR 10:10">– Вы совершили предательство: вы женились на чужеземках, увеличив вину Израиля. <verse eid="EZR 10:10"/><verse number="11" style="v" sid="EZR 10:11"/>Итак, открыто признайтесь Господу, Богу ваших отцов, в своих грехах и исполните Его волю. Отделитесь от народов, что вокруг вас, и от ваших иноплеменных жен.<verse eid="EZR 10:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="EZR 10:12"/>Все собрание ответило громким криком:</para>
+  <para style="p" vid="EZR 10:12">– Ты прав! Мы должны сделать, как ты сказал. <verse eid="EZR 10:12"/><verse number="13" style="v" sid="EZR 10:13"/>Но здесь много людей, и сейчас время дождей, так что мы не можем стоять на улице. Да и дело это не на день и не на два, потому что мы в этом сильно согрешили. <verse eid="EZR 10:13"/><verse number="14" style="v" sid="EZR 10:14"/>Пусть наши вожди представляют все собрание. И пусть все в наших городах, кто женился на иноземках, приходят в установленное время вместе со старейшинами и судьями каждого города, пока от нас не отвратится пылающий гнев нашего Бога за это дело.<verse eid="EZR 10:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="EZR 10:15"/>Только Ионафан, сын Асаила, и Иахзея, сын Тиквы, а с ними Мешуллам и левит Шавтай, воспротивились этому. <verse eid="EZR 10:15"/><verse number="16" style="v" sid="EZR 10:16"/>Переселенцы сделали, как было предложено. Священник Ездра выбрал людей, которые были главами семейств<note caller="+" style="f"><char style="fr" closed="false">10:16 </char><char style="ft" closed="false">Так в одном из древних переводов; в нормативном еврейском тексте: «И были избраны священник Ездра, и главы семейств».</char></note>, по одному из каждого семейства; все они были названы поименно. В первый день десятого месяца<note caller="+" style="f"><char style="fr" closed="false">10:16 </char><char style="ft" closed="false">29 декабря 458 г. до н. э.</char></note> они сели, чтобы разбирать это дело, <verse eid="EZR 10:16"/><verse number="17" style="v" sid="EZR 10:17"/>и к первому дню первого месяца<note caller="+" style="f"><char style="fr" closed="false">10:17 </char><char style="ft" closed="false">27 марта 457 г. до н. э.</char></note> закончили расследование относительно всех, кто женился на чужеземках.<verse eid="EZR 10:17"/></para>
+  <para style="s1">Список женатых на чужеземках</para>
+  <para style="p">
+    <verse number="18" style="v" sid="EZR 10:18"/>Среди потомков священников на чужеземках женились:</para>
+  <para style="li1" vid="EZR 10:18">из потомков Иисуса, сына Иоседека, и его братьев:</para>
+  <para style="li2" vid="EZR 10:18">Маасея, Элиезер, Иарив и Гедалия. <verse eid="EZR 10:18"/><verse number="19" style="v" sid="EZR 10:19"/>(Они обещали развестись со своими женами, и за свою вину каждый принес барана из своей отары в жертву повинности.)<verse eid="EZR 10:19"/></para>
+  <para style="li1">
+    <verse number="20" style="v" sid="EZR 10:20"/>Из потомков Иммера:</para>
+  <para style="li2" vid="EZR 10:20">Ханани и Зевадия.<verse eid="EZR 10:20"/></para>
+  <para style="li1">
+    <verse number="21" style="v" sid="EZR 10:21"/>Из потомков Харима:</para>
+  <para style="li2" vid="EZR 10:21">Маасея, Илия, Шемая, Иехиил и Уззия.<verse eid="EZR 10:21"/></para>
+  <para style="li1">
+    <verse number="22" style="v" sid="EZR 10:22"/>Из потомков Пашхура:</para>
+  <para style="li2" vid="EZR 10:22">Элиоэнай, Маасея, Исмаил, Нафанаил, Иозавад и Эласа.<verse eid="EZR 10:22"/></para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="23" style="v" sid="EZR 10:23"/>Среди левитов:</para>
+  <para style="li2" vid="EZR 10:23">Иозавад, Шимей, Келаия (он же Клита), Петахия, Иуда и Элиезер.<verse eid="EZR 10:23"/></para>
+  <para style="li1">
+    <verse number="24" style="v" sid="EZR 10:24"/>Из певцов:</para>
+  <para style="li2" vid="EZR 10:24">Элиашив.</para>
+  <para style="li1" vid="EZR 10:24">Из привратников:</para>
+  <para style="li2" vid="EZR 10:24">Шаллум, Телем и Ури.<verse eid="EZR 10:24"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="25" style="v" sid="EZR 10:25"/>А среди прочих израильтян:</para>
+  <para style="li1" vid="EZR 10:25">из потомков Пароша:</para>
+  <para style="li2" vid="EZR 10:25">Рамия, Иззия, Малхия, Миямин, Элеазар, Малхия<note caller="+" style="f"><char style="fr" closed="false">10:25 </char><char style="ft" closed="false">В одном из древних текстов: «Хашавия».</char></note> и Бенаи.<verse eid="EZR 10:25"/></para>
+  <para style="li1">
+    <verse number="26" style="v" sid="EZR 10:26"/>Из потомков Елама:</para>
+  <para style="li2" vid="EZR 10:26">Маттания, Захария, Иехиил, Авдий, Иеримот и Илия.<verse eid="EZR 10:26"/></para>
+  <para style="li1">
+    <verse number="27" style="v" sid="EZR 10:27"/>Из потомков Затту:</para>
+  <para style="li2" vid="EZR 10:27">Элиоэнай, Элиашив, Маттания, Иеримот, Завад и Азиза.<verse eid="EZR 10:27"/></para>
+  <para style="li1">
+    <verse number="28" style="v" sid="EZR 10:28"/>Из потомков Бевая:</para>
+  <para style="li2" vid="EZR 10:28">Иоханан, Ханания, Заббай и Атлай.<verse eid="EZR 10:28"/></para>
+  <para style="li1">
+    <verse number="29" style="v" sid="EZR 10:29"/>Из потомков Бани:</para>
+  <para style="li2" vid="EZR 10:29">Мешуллам, Маллух, Адая, Иашув, Шеал и Иеремот.<verse eid="EZR 10:29"/></para>
+  <para style="li1">
+    <verse number="30" style="v" sid="EZR 10:30"/>Из потомков Пахат-Моава:</para>
+  <para style="li2" vid="EZR 10:30">Адна, Хелал, Бенаи, Маасея, Маттания, Веселеил, Биннуй и Манассия.<verse eid="EZR 10:30"/></para>
+  <para style="li1">
+    <verse number="31" style="v" sid="EZR 10:31"/>Из потомков Харима:</para>
+  <para style="li2" vid="EZR 10:31">Элиезер, Ишшия, Малхия, Шемая, Симеон, <verse eid="EZR 10:31"/><verse number="32" style="v" sid="EZR 10:32"/>Вениамин, Маллух и Шемария.<verse eid="EZR 10:32"/></para>
+  <para style="li1">
+    <verse number="33" style="v" sid="EZR 10:33"/>Из потомков Хашума:</para>
+  <para style="li2" vid="EZR 10:33">Матнай, Маттфа, Завад, Элифелет, Иеремай, Манассия и Шимей.<verse eid="EZR 10:33"/></para>
+  <para style="li1">
+    <verse number="34" style="v" sid="EZR 10:34"/>Из потомков Бани:</para>
+  <para style="li2" vid="EZR 10:34">Маадай, Амрам, Уел, <verse eid="EZR 10:34"/><verse number="35" style="v" sid="EZR 10:35"/>Бенаи, Бидья, Келуги, <verse eid="EZR 10:35"/><verse number="36" style="v" sid="EZR 10:36"/>Ваная, Меремоф, Элиашив, <verse eid="EZR 10:36"/><verse number="37" style="v" sid="EZR 10:37"/>Маттания, Матнай и Иаасай.<verse eid="EZR 10:37"/></para>
+  <para style="li1">
+    <verse number="38" style="v" sid="EZR 10:38"/>Из потомков Биннуя<note caller="+" style="f"><char style="fr" closed="false">10:37-38 </char><char style="ft" closed="false">Так в одном из древних текстов, приводящих этот же именной список, и в одном из древних переводов; в нормативном еврейском тексте: «Иаасу, 38 и Бани, и Биннуй».</char></note>:</para>
+  <para style="li2" vid="EZR 10:38">Шимей, <verse eid="EZR 10:38"/><verse number="39" style="v" sid="EZR 10:39"/>Шелемия, Нафан, Адая, <verse eid="EZR 10:39"/><verse number="40" style="v" sid="EZR 10:40"/>Махнадбай, Шашай, Шарай, <verse eid="EZR 10:40"/><verse number="41" style="v" sid="EZR 10:41"/>Азариил, Шелемия, Шемария, <verse eid="EZR 10:41"/><verse number="42" style="v" sid="EZR 10:42"/>Шаллум, Амария и Иосиф.<verse eid="EZR 10:42"/></para>
+  <para style="li1">
+    <verse number="43" style="v" sid="EZR 10:43"/>Из потомков Нево:</para>
+  <para style="li2" vid="EZR 10:43">Иеил, Маттифия, Завад, Зевина, Иаддай, Иоиль и Бенаи.<verse eid="EZR 10:43"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="44" style="v" sid="EZR 10:44"/>Все они женились на чужеземках, и некоторые из их жен родили им детей<note caller="+" style="f"><char style="fr" closed="false">10:44 </char><char style="ft" closed="false">Или: «и все они отослали своих жен вместе с их детьми».</char></note>.<verse eid="EZR 10:44"/></para>
+  <chapter eid="EZR 10"/>
+</usx>

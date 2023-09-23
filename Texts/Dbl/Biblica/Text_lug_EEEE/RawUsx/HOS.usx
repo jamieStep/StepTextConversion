@@ -1,0 +1,2421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="HOS" style="id">- Luganda Contemporary Bible</book>
+  <para style="rem">Copyright © 2014 by Biblica, Inc.®</para>
+  <para style="h">Koseya</para>
+  <para style="toc1">Koseya</para>
+  <para style="toc2">Koseya</para>
+  <para style="toc3">Kos</para>
+  <para style="mt2">Ekitabo Ekiyitibwa</para>
+  <para style="mt1">Koseya</para>
+  <para style="imt">Ennyanjula</para>
+  <para style="ip">Ekitabo kino kyawandiikibwa nnabbi Koseya mutabani wa Beeri. Obuweereza bwe obw’Obunnabbi bwatandika mu mwaka 750 <char style="sc">bc</char> mu biro ebizibu ennyo, nga Samaliya tekinnawambibwa. Omulamwa gw’ekitabo kino kwe kulaga okwagala Katonda kw’alina eri abantu be abajjudde ebibi. Nnabbi alaga ekifaananyi eky’omwami omwesigwa alina amaka ge eyawasa omukyala atali mwesigwa. Koseya yawasa Gomeri nga malaaya, era Gomeri n’asigala nga malaaya. Muno mulimu ekifaananyi ky’obwesigwa bwa <char style="nd">Mukama</char>, newaakubadde nga Isirayiri addiŋŋana mu kukola ebibi. Kyawulibwamu ebitundu bino: omwami omwesigwa ne mukyala we atali mwesigwa (<char style="xt">Essuula <ref loc="HOS 1-3">1–3</ref></char>); Katonda mwesigwa, newaakubadde ng’abantu be si beesigwa (<char style="xt">Essuula <ref loc="HOS 4-14">4–14</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:1">Is 1:1</ref>; <ref loc="MIC 1:1">Mi 1:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 13:13">2Bk 13:13</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="AMO 1:1">Am 1:1</ref>
+      </char>
+    </note>Buno bwe bubaka bwa <char style="nd">Mukama</char> bwe yawa Koseya mutabani wa Beeri mu mulembe gwa Uzziya, n’ogwa Yosamu, n’ogwa Akazi n’ogwa Keezeekiya, nga be bakabaka ba Yuda, ne mu mulembe gwa Yerobowaamu mutabani wa Yowaasi, nga ye kabaka wa Isirayiri.</para>
+  <para style="s1">Koseya Afuna Amaka</para>
+  <para style="p">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:2 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 3:1">Yer 3:1</ref>; <ref loc="HOS 2:2">Kos 2:2</ref>, <ref loc="HOS 2:5">5</ref>; <ref loc="HOS 3:1">3:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 31:16">Ma 31:16</ref>; <ref loc="JER 3:14">Yer 3:14</ref>; <ref loc="EZK 23:3-21">Ez 23:3-21</ref>; <ref loc="HOS 5:3">Kos 5:3</ref></char>
+    </note>Awo <char style="nd">Mukama</char> bwe yasooka okwogera eri Koseya, yamulagira nti, “Ggenda owase omukazi malaaya, omuzaalemu abaana, era banaayitibwanga abaana aboobwamalaaya, kubanga ensi eyitirizza okukola ekibi eky’obwenzi, n’eva ku <char style="nd">Mukama</char>.” <verse number="3" style="v"/>Awo n’awasa Gomeri muwala wa Dibulayimu, n’aba olubuto, n’amuzaalira omwana wabulenzi.</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 10:1-14">2Bk 10:1-14</ref>; <ref loc="HOS 2:22">Kos 2:22</ref></char>
+    </note>
+    <char style="nd">Mukama</char> n’agamba Koseya nti, “Mmutuume erinnya Yezuleeri, kubanga nnaatera okubonereza ennyumba ya Yeeku, olw’okuyiwa omusaayi gw’abantu ab’e Yezuleeri, era ndimalawo obwakabaka bwa Isirayiri. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:5 </char><char style="xt" closed="false"><ref loc="2KI 15:29">2Bk 15:29</ref></char></note>Ku lunaku olwo omutego gwa Isirayiri ndigumenyera mu Kiwonvu kya Yezuleeri.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:6 a </char>
+      <char style="xt" closed="false">nny 3 </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:4">Kos 2:4</ref>
+      </char>
+    </note>Gomeri n’aba olubuto olulala, n’azaala omwana wabuwala. <char style="nd">Mukama</char> n’agamba Koseya nti, “Mmutuume erinnya Lolukama, kubanga ennyumba ya Isirayiri ndiba sikyagyagala, si kulwa nga mbasonyiwa. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:7 a </char><char style="xt" closed="false"><ref loc="PSA 44:6">Zab 44:6</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ZEC 4:6">Zek 4:6</ref></char></note>Naye ab’ennyumba ya Yuda ndibaagala, era ndibalokola, si na kasaale, newaakubadde ekitala, newaakubadde entalo, newaakubadde embalaasi newaakubadde abeebagala embalaasi, wabula nze kennyini <char style="nd">Mukama</char> Katonda waabwe nze ndibaagala era ne mbalokola.”</para>
+  <para style="p">
+    <verse number="8" style="v"/>Awo Gomeri bwe yamala okuggya Lolukama ku mabeere, n’aba olubuto olulala n’azaala omwana wabulenzi. <verse number="9" style="v"/><char style="nd">Mukama</char> n’ayogera nti, “Mmutuume erinnya Lowami, kubanga temukyali bantu bange, nange sikyali Katonda wammwe.</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:10 a </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 22:17">Lub 22:17</ref>; <ref loc="JER 33:22">Yer 33:22</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">nny 9; <ref loc="ROM 9:26">Bar 9:26</ref>*</char>
+    </note>“Naye ekiseera kirituuka abantu ba Isirayiri ne baba bangi ng’omusenyu ogw’oku nnyanja, ogutayinzika kupimibwa newaakubadde okubalibwa olw’obungi bwagwo. Mu kifo ky’okuyitibwa abatali bantu bange, baliyitibwa, baana ba Katonda omulamu. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:11 a </char><char style="xt" closed="false"><ref loc="ISA 11:12">Is 11:12</ref>, <ref loc="ISA 11:13">13</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="JER 23:5-8">Yer 23:5-8</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="EZK 37:15-28">Ez 37:15-28</ref></char></note>Abantu ba Yuda baliddamu okwegatta n’abantu ba Isirayiri ne beerondamu omukulembeze, ne bava mu buwaŋŋanguse, era olunaku lwa Yezuleeri luliba lukulu.”</para>
+  <chapter number="2" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:1 </char>
+      <char style="xt" closed="false">nny 23</char>
+    </note>“Mwogere ku baganda bammwe nti, ‘bantu bange,’ mwogere ne ku bannyinammwe nti, ‘baagalwa bange.’ ”</para>
+  <para style="s1">Okubonerezebwa kwa Isirayiri, n’Okuzzibwa Obuggya kwabwe</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:2 a </char>
+      <char style="xt" closed="false">nny 5; <ref loc="ISA 50:1">Is 50:1</ref>; <ref loc="HOS 1:2">Kos 1:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 23:45">Ez 23:45</ref>
+      </char>
+    </note>Munenye nnyammwe,</para>
+  <para style="q2">mumunenye,</para>
+  <para style="q2">kubanga si mukazi wange, so nange siri bba.</para>
+  <para style="q1">Aggyewo obukaba obuli mu maaso ge,</para>
+  <para style="q2">n’obwenzi obuva wakati w’amabeere ge;</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:3 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 16:4">Ez 16:4</ref>, <ref loc="EZK 16:22">22</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 32:13-14">Is 32:13-14</ref>
+      </char>
+    </note>nneme okumwambulira ddala</para>
+  <para style="q2">ne mmulekeraawo nga bwe yali ku lunaku kwe yazaalibwa;</para>
+  <para style="q1">ne mmufuula ng’eddungu,</para>
+  <para style="q2">ne mmulekawo ng’ensi enkalu eteriiko ky’egasa,</para>
+  <para style="q2">ne mmussa ennyonta.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 8:18">Ez 8:18</ref>
+      </char>
+    </note>Sirilaga kwagala kwange eri abaana be,</para>
+  <para style="q2">kubanga baana ba bwenzi.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:5 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 3:6">Yer 3:6</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 44:17-18">Yer 44:17-18</ref>
+      </char>
+    </note>Nnyabwe yakola obwenzi,</para>
+  <para style="q2">n’abazaalira mu buwemu.</para>
+  <para style="q1">Yayogera nti, “Ndigenda eri baganzi bange abampa emmere n’amazzi,</para>
+  <para style="q2">n’ebimbugumya n’ebyokwambala,</para>
+  <para style="q2">n’amafuta n’ekyokunywa.”</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 3:23">Yob 3:23</ref>; <ref loc="JOB 19:8">19:8</ref>; <ref loc="LAM 3:9">Kgb 3:9</ref></char>
+    </note>Kyendiva nziba ekkubo lye n’amaggwa,</para>
+  <para style="q2">ne mmuzimbako bbugwe okumwetooloola, aleme okulaba ekkubo wayitira.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:7 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:13">Kos 5:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:2">Yer 2:2</ref>; <ref loc="JER 3:1">3:1</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 16:8">Ez 16:8</ref>
+      </char>
+    </note>Aligezaako okugoberera baganzi be abakwate,</para>
+  <para style="q2">naye talibatuukako, alibanoonya naye talibalaba.</para>
+  <para style="q1">Oluvannyuma alyogera nti, “Naagenda eri bba wange eyasooka,</para>
+  <para style="q2">kubanga mu biro ebyo nabanga bulungi</para>
+  <para style="q2">okusinga bwe ndi kaakano.”</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:8 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:3">Is 1:3</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 16:15-19">Ez 16:15-19</ref>; <ref loc="HOS 8:4">Kos 8:4</ref></char>
+    </note>Tajjukira nga nze namuwanga eŋŋaano,</para>
+  <para style="q2">ne wayini n’amafuta,</para>
+  <para style="q1">era eyamuwa effeeza ne zaabu</para>
+  <para style="q2">bye baakozesanga okuweerezanga Baali.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:9 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:7">Kos 8:7</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 9:2">Kos 9:2</ref>
+      </char>
+    </note>“Kyendiva neddiza emmere yange ey’empeke ng’eyengedde,</para>
+  <para style="q2">ne wayini wange ng’atuuse;</para>
+  <para style="q1">era nzija kumuggyako ebyambalo byange eby’ebbugumu n’ebyambalo byange ebya bulijjo,</para>
+  <para style="q2">bye yayambalanga.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 16:37">Ez 16:37</ref>
+      </char>
+    </note>Era kyenaava nyanika obukaba bwe</para>
+  <para style="q2">mu maaso ga baganzi be,</para>
+  <para style="q2">so tewaliba amuwonya mu mukono gwange.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:11 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 7:34">Yer 7:34</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:14">Is 1:14</ref>; <ref loc="JER 16:9">Yer 16:9</ref>; <ref loc="HOS 3:4">Kos 3:4</ref>; <ref loc="AMO 8:10">Am 8:10</ref></char>
+    </note>Ndikomya ebinyumu bye byonna, n’embaga ze eza buli mwaka,</para>
+  <para style="q2">n’embaga ze ez’emyezi egyakaboneka, ne ssabbiiti ze,</para>
+  <para style="q2">n’enkuŋŋaana ze zonna entukuvu.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:12 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 7:23">Is 7:23</ref>; <ref loc="JER 8:13">Yer 8:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 5:6">Is 5:6</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 13:8">Kos 13:8</ref>
+      </char>
+    </note>Ndizikiriza emizabbibu gye n’emitiini gye,</para>
+  <para style="q2">gye yayogerako nti, ‘Guno gwe musaala baganzi bange gwe bansasula.’</para>
+  <para style="q1">Ndibizisa,</para>
+  <para style="q2">era n’ensolo ez’omu nsiko ziribyonoona.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:13 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 11:2">Kos 11:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 16:17">Ez 16:17</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:13">Kos 4:13</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:6">Kos 4:6</ref>; <ref loc="HOS 8:14">8:14</ref>; <ref loc="HOS 13:6">13:6</ref></char>
+    </note>Ndimubonereza olw’ennaku</para>
+  <para style="q2">ze yayotereza obubaane eri Babaali,</para>
+  <para style="q1">ne yeeyambaza empeta n’ebintu eby’omuwendo ennyo,</para>
+  <para style="q2">n’agenda eri baganzi be,</para>
+  <para style="q2">naye nze n’aneerabira,”</para>
+  <para style="q2">bw’ayogera <char style="nd">Mukama</char>.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>Kale kyendiva musendasenda,</para>
+  <para style="q2">ne mmutwala mu ddungu,</para>
+  <para style="q2">ne njogera naye n’eggonjebwa.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:15 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 7:24">Yos 7:24</ref>, <ref loc="JOS 7:26">26</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 15:1-18">Kuv 15:1-18</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:2">Yer 2:2</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 12:9">Kos 12:9</ref>
+      </char>
+    </note>Era eyo ndimuddiza ennimiro ze ez’emizabbibu,</para>
+  <para style="q2">ne nfuula Ekiwonvu kya Akoli<note caller="+" style="f"><char style="fr" closed="false">2:15 </char><char style="fq" closed="false">Akoli </char><char style="ft" closed="false">kitegeeza emitawaana</char></note> oluggi olw’essuubi.</para>
+  <para style="q1">Alimpuliriza nga bwe yampulirizanga mu nnaku ez’obuvubuka bwe,</para>
+  <para style="q2">era nga mu biro bye yaviira mu nsi ya Misiri.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>“Ku lunaku olwo,” bw’ayogera <char style="nd">Mukama</char>,</para>
+  <para style="q2">“olimpita nti, ‘mwami wange;’</para>
+  <para style="q2">toliddayo nate kumpita, ‘<char style="nd">Mukama</char> wange.’ ”</para>
+  <para style="q1">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:17 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 23:13">Kuv 23:13</ref>; <ref loc="PSA 16:4">Zab 16:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 23:7">Yos 23:7</ref>
+      </char>
+    </note>Ndiggya amannya ga Babaali mu kamwa ke,</para>
+  <para style="q2">so taliddayo nate okwasanguza amannya gaabwe.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:18 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 5:22">Yob 5:22</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 2:4">Is 2:4</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 23:6">Yer 23:6</ref>; <ref loc="EZK 34:25">Ez 34:25</ref></char>
+    </note>Ku lunaku olwo ndibakolera endagaano</para>
+  <para style="q2">n’ensolo ez’omu nsiko n’ennyonyi ez’omu bbanga,</para>
+  <para style="q2">n’ebyewalula ku ttaka,</para>
+  <para style="q1">era ndiggyawo obusaale, n’ekitala, n’entalo mu nsi,</para>
+  <para style="q2">bonna ne batuula mirembe.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:19 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 62:4">Is 62:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:27">Is 1:27</ref>
+      </char>
+    </note>Era ndikwogereza ennaku zonna,</para>
+  <para style="q2">ndikwogereza mu butuukirivu, ne mu mazima,</para>
+  <para style="q2">ne mu kwagala ne mu kusaasira.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:20 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:34">Yer 31:34</ref>; <ref loc="HOS 6:6">Kos 6:6</ref>; <ref loc="HOS 13:4">13:4</ref></char>
+    </note>Ndikwogereza mu bwesigwa,</para>
+  <para style="q2">era olimanya <char style="nd">Mukama</char>.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:21 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 55:10">Is 55:10</ref>; <ref loc="ZEC 8:12">Zek 8:12</ref></char>
+    </note>“Ku lunaku olwo,</para>
+  <para style="q2">ndyanukula eggulu,</para>
+  <para style="q1">nalyo ne lyanukula ensi;</para>
+  <para style="q1">
+    <verse number="22" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:12">Yer 31:12</ref>; <ref loc="JOL 2:19">Yo 2:19</ref></char>
+    </note>ensi erimeramu emmere ey’empeke,</para>
+  <para style="q2">ne wayini n’amafuta,</para>
+  <para style="q1">nabyo ne bifunibwa Yezuleeri,<note caller="+" style="f"><char style="fr" closed="false">2:22 </char><char style="fq" closed="false">Yezuleeri </char><char style="ft" closed="false">kitegeeza Katonda asimba</char></note>”</para>
+  <para style="q2">bw’ayogera <char style="nd">Mukama</char>.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:23 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:27">Yer 31:27</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 1:6">Kos 1:6</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 1:10">Kos 1:10</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 9:25">Bar 9:25</ref>*; <ref loc="1PE 2:10">1Pe 2:10</ref></char>
+    </note>“Ndimwesimbira mu nsi,</para>
+  <para style="q2">ndisaasira oyo eyayitibwanga nti, atasaasirwa,</para>
+  <para style="q1">era ndigamba abataali bantu bange nti, ‘Bantu bange,’</para>
+  <para style="q2">era nabo balyogera nti, ‘Ggwe Katonda wange.’ ”</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Koseya addiŋŋana ne mukazi we</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 1:2">Kos 1:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2SA 6:19">2Sa 6:19</ref>
+      </char>
+    </note>
+    <char style="nd">Mukama</char> n’aŋŋamba nti, “Genda, mukyala wo oyongere okumwagala, newaakubadde nga mwenzi era yakwaniddwa omusajja omulala. Mwagale nga <char style="nd">Mukama</char> bw’ayagala Abayisirayiri newaakubadde nga bakyukira bakatonda abalala ne baagala obugaati obw’emizabbibu enkalu obuwonge eri bakatonda abalala.”</para>
+  <para style="p">
+    <verse number="2" style="v"/>Awo ne mmugula n’effeeza obuzito bwayo gulaamu kikumi mu nsavu ne lita ebikumi bisatu mu amakumi asatu eza sayiri. <verse number="3" style="v"/>Bwe ntyo ne mugamba nti, “Oteekwa okubeera nange ebbanga lyonna. Lekeraawo okukuba obwamalaaya, oba okukola obwenzi, nange bwe ntyo naabeeranga naawe.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:4 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 13:11">Kos 13:11</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="DAN 11:31">Dan 11:31</ref>; <ref loc="HOS 2:11">Kos 2:11</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="JDG 17:5-6">Bal 17:5-6</ref>; <ref loc="ZEC 10:2">Zek 10:2</ref></char>
+    </note>Era bwe batyo abaana ba Isirayiri bwe balibeera okumala ennaku ennyingi nga tebalina kabaka newaakubadde omulangira, nga tebakyawaayo ssaddaaka eri bakatonda abalala, newaakubadde okusinza amayinja amawonge oba bakatonda abalala, wadde efodi. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:5 a </char><char style="xt" closed="false"><ref loc="EZK 34:23-24">Ez 34:23-24</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="JER 50:4-5">Yer 50:4-5</ref></char></note>N’oluvannyuma abaana ba Isirayiri balidda ne banoonya <char style="nd">Mukama</char> Katonda waabwe ne Dawudi kabaka waabwe. Balijja eri <char style="nd">Mukama</char> nga bakankana nga banoonya emikisa gye mu nnaku ez’oluvannyuma.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Okulabula eri Isirayiri</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 7:28">Yer 7:28</ref>
+      </char>
+    </note>Muwulire ekigambo kya <char style="nd">Mukama</char>, mmwe abantu ba Isirayiri,</para>
+  <para style="q2">kubanga <char style="nd">Mukama</char> abalinako ensonga</para>
+  <para style="q2">mmwe abatuula mu nsi.</para>
+  <para style="q1">“Obwesigwa n’okwagala Katonda,</para>
+  <para style="q2">n’okumumanya bikendedde mu nsi.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:2 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:3">Kos 7:3</ref>; <ref loc="HOS 10:4">10:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:9">Kos 6:9</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:1">Kos 7:1</ref>
+      </char>
+    </note>Waliwo okukolima, n’okulimba, n’okutta,</para>
+  <para style="q2">n’okubba, n’okukola eby’obwenzi;</para>
+  <para style="q1">bawaguza,</para>
+  <para style="q2">era bayiwa omusaayi obutakoma.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:3 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 4:28">Yer 4:28</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 33:9">Is 33:9</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 4:25">Yer 4:25</ref>; <ref loc="ZEP 1:3">Zef 1:3</ref></char>
+    </note>Ensi kyeneeva ekaaba,</para>
+  <para style="q2">ne bonna abagibeeramu ne bafuuka ekitagasa;</para>
+  <para style="q1">n’ensolo enkambwe ez’omu nsiko zirifa, n’ennyonyi ez’omu bbanga nazo zirifa,</para>
+  <para style="q2">n’ebyennyanja ebiri mu nnyanja ne bifa.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 17:12">Ma 17:12</ref>; <ref loc="EZK 3:26">Ez 3:26</ref></char>
+    </note>“Naye temuloopagana,</para>
+  <para style="q2">so tewabaawo muntu avunaana munne,</para>
+  <para style="q1">kubanga ensonga</para>
+  <para style="q2">ngivunaana gwe kabona.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:5 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 14:7">Ez 14:7</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:2">Kos 2:2</ref>
+      </char>
+    </note>Wakola ebibi emisana n’ekiro,</para>
+  <para style="q2">ne bannabbi ne babikolera wamu naawe;</para>
+  <para style="q1">kyendiva nzikiriza maama<note caller="+" style="f"><char style="fr" closed="false">4:5 </char><char style="ft" closed="false">maama kitegeeza Obwakabaka bwa Isirayiri</char></note> wo.</para>
+  <para style="q2">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:6 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:13">Kos 2:13</ref>; <ref loc="MAL 2:7-8">Mal 2:7-8</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:1">Kos 8:1</ref>, <ref loc="HOS 8:12">12</ref></char>
+    </note>Abantu bange bazikiridde olw’obutamanya.</para>
+  <para style="b"/>
+  <para style="q1">“Kyemunaava mulema</para>
+  <para style="q2">okubeera bakabona bange;</para>
+  <para style="q1">era olw’okulagajjalira etteeka lya Katonda wo,</para>
+  <para style="q2">nange kyendiva ndagajjalira abaana bo.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:7 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HAB 2:16">Kbk 2:16</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 10:1">Kos 10:1</ref>, <ref loc="HOS 10:6">6</ref>; <ref loc="HOS 13:6">13:6</ref></char>
+    </note>Gye beeyongera okuba abangi,</para>
+  <para style="q2">gye baakoma n’okukola ebibi;</para>
+  <para style="q2">baasuula ekitiibwa kyabwe ne banswaza.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 56:11">Is 56:11</ref>; <ref loc="MIC 3:11">Mi 3:11</ref></char>
+    </note>Bagaggawalira ku bibi by’abantu bange,</para>
+  <para style="q2">era basemba okwonoona kwabwe.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:9 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 24:2">Is 24:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 5:31">Yer 5:31</ref>; <ref loc="HOS 8:13">Kos 8:13</ref>; <ref loc="HOS 9:9">9:9</ref>, <ref loc="HOS 9:15">15</ref></char>
+    </note>Era bwe kityo bwe kiriba eri abantu n’eri bakabona:</para>
+  <para style="q2">ndibabonereza olw’enneeyisa yaabwe,</para>
+  <para style="q2">era ne mbasasula ng’ebikolwa byabwe.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:10 a </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 26:26">Lv 26:26</ref>; <ref loc="MIC 6:14">Mi 6:14</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:14">Kos 7:14</ref>; <ref loc="HOS 9:17">9:17</ref></char>
+    </note>“Balirya naye tebalikkuta,</para>
+  <para style="q2">balikola ebibi eby’obwenzi kyokka tebalyeyongera bungi,</para>
+  <para style="q1">kubanga bavudde ku <char style="nd">Mukama</char> ne beewaayo <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:11 a </char><char style="xt" closed="false"><ref loc="HOS 5:4">Kos 5:4</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="PRO 20:1">Nge 20:1</ref></char></note>eri obwenzi,</para>
+  <para style="q1">wayini omukadde n’omusu,</para>
+  <para style="q2">ne bibamalamu okutegeera. <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:12 a </char><char style="xt" closed="false"><ref loc="JER 2:27">Yer 2:27</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="HAB 2:19">Kbk 2:19</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ISA 44:20">Is 44:20</ref></char></note>Abantu bange</para>
+  <para style="q1">beebuuza ku kikonge ky’omuti,</para>
+  <para style="q2">ne baddibwamu omuti.</para>
+  <para style="q1">Omwoyo ogw’obwenzi gubasendasenda</para>
+  <para style="q2">ne gubaleetera obutaba beesigwa eri Katonda waabwe.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:13 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:29">Is 1:29</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 3:6">Yer 3:6</ref>; <ref loc="HOS 11:2">Kos 11:2</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:20">Yer 2:20</ref>; <ref loc="AMO 7:17">Am 7:17</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:13">Kos 2:13</ref>
+      </char>
+    </note>Baweerayo ssaddaaka ku ntikko z’ensozi,</para>
+  <para style="q2">ne baweerayo ebiweebwayo ebyokebwa ku busozi,</para>
+  <para style="q1">wansi w’emyalooni, n’emiribine n’emyera</para>
+  <para style="q2">awali ekisiikirize ekirungi.</para>
+  <para style="q1">Bawala bammwe kyebava baba bamalaaya,</para>
+  <para style="q2">ne baka baana bammwe ne bakola obwenzi.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:14 </char>
+      <char style="xt" closed="false">nny 11</char>
+    </note>“Siribonereza bawala bammwe</para>
+  <para style="q2">olw’okubeera bamalaaya,</para>
+  <para style="q1">newaakubadde baka baana bammwe</para>
+  <para style="q2">okukola eby’obwenzi,</para>
+  <para style="q1">kubanga abasajja bennyini bassa bumu ne bamalaaya,</para>
+  <para style="q2">ne baweerayo ssaddaaka ne bamalaaya ab’omu masabo;</para>
+  <para style="q2">abantu abatategeera balizikirira.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 9:15">Kos 9:15</ref>; <ref loc="HOS 12:11">12:11</ref>; <ref loc="AMO 4:4">Am 4:4</ref></char>
+    </note>“Newaakubadde ggwe Isirayiri oyenda,</para>
+  <para style="q2">omusango guleme okuba ku Yuda.</para>
+  <para style="q1">Togenda Girugaali,</para>
+  <para style="q2">newaakubadde okwambuka e Besaveni.<note caller="+" style="f"><char style="fr" closed="false">4:15 </char><char style="fq" closed="false">Besaveni </char><char style="ft" closed="false">kitegeeza ennyumba ey’abakozi b’ebibi</char></note></para>
+  <para style="q2">Tolayiranga nti, ‘Nga Katonda bw’ali omulamu.’</para>
+  <para style="q1">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 5:17">Is 5:17</ref>; <ref loc="ISA 7:25">7:25</ref></char>
+    </note>Abayisirayiri bakakanyavu mu mitima</para>
+  <para style="q2">ng’ennyana endalu.</para>
+  <para style="q1">Olwo <char style="nd">Mukama</char> ayinza atya okubalabirira</para>
+  <para style="q2">ng’abaana b’endiga abali mu kisibo?</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Efulayimu yeegasse n’abasinza ebifaananyi,</para>
+  <para style="q2">mumuleke abeere yekka.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Ebyokunywa ne bwe bibaggwaako,</para>
+  <para style="q2">beeyongera mu bwamalaaya;</para>
+  <para style="q2">n’abakulembeze baabwe baagala nnyo eby’ensonyi:</para>
+  <para style="q1">
+    <verse number="19" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:19 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 12:1">Kos 12:1</ref>; <ref loc="HOS 13:15">13:15</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:29">Is 1:29</ref>
+      </char>
+    </note>Embuyaga kyeziriva zibatwala,</para>
+  <para style="q2">ne ssaddaaka zaabwe ne zibaswaza.”</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Isirayiri Asalirwa Omusango</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:9">Kos 6:9</ref>; <ref loc="HOS 9:8">9:8</ref></char>
+    </note>Muwulire kino mmwe bakabona!</para>
+  <para style="q2">Musseeyo omwoyo, mmwe Isirayiri!</para>
+  <para style="q1">Muwulirize, mmwe ennyumba ya Kabaka!</para>
+  <para style="q2">Omusango guli ku mmwe:</para>
+  <para style="q1">Mubadde kyambika e Mizupa,</para>
+  <para style="q2">era ekitimba ekitegeddwa ku Taboli.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:2 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:2">Kos 4:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 9:15">Kos 9:15</ref>
+      </char>
+    </note>Abajeemu bamaliridde okutta,</para>
+  <para style="q2">naye ndibabonereza bonna.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:10">Kos 6:10</ref>
+      </char>
+    </note>Mmanyi byonna ebikwata ku Efulayimu,</para>
+  <para style="q2">so ne Isirayiri tankisibwa.</para>
+  <para style="q1">Efulayimu weewaddeyo okukuba obwamalaaya,</para>
+  <para style="q2">ne Isirayiri yeeyonoonye.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:4 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:11">Kos 4:11</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:6">Kos 4:6</ref>
+      </char>
+    </note>Ebikolwa byabwe tebibaganya</para>
+  <para style="q2">kudda eri Katonda waabwe,</para>
+  <para style="q1">kubanga omwoyo ogw’obwamalaaya guli mu mitima gyabwe,</para>
+  <para style="q2">so tebamanyi <char style="nd">Mukama</char>.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:10">Kos 7:10</ref>
+      </char>
+    </note>Amalala ga Isirayiri gabalumiriza;</para>
+  <para style="q2">Abayisirayiri ne Efulayimu balyesittala olw’omusango gwabwe;</para>
+  <para style="q2">ne Yuda alyesittalira wamu nabo.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:6 a </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 6:6-7">Mi 6:6-7</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 1:28">Nge 1:28</ref>; <ref loc="ISA 1:15">Is 1:15</ref>; <ref loc="EZK 8:6">Ez 8:6</ref></char>
+    </note>Bwe baligenda n’ebisibo byabwe n’amagana gaabwe</para>
+  <para style="q2">okunoonya <char style="nd">Mukama</char>,</para>
+  <para style="q1">tebalimulaba;</para>
+  <para style="q2">abaviiridde, abeeyawuddeko.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:7 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:7">Kos 6:7</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:4">Kos 2:4</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:11-12">Kos 2:11-12</ref>
+      </char>
+    </note>Tebabadde beesigwa eri <char style="nd">Mukama</char>;</para>
+  <para style="q2">bazadde abaana aboobwenzi.</para>
+  <para style="q1">Embaga ez’omwezi ogwakaboneka</para>
+  <para style="q2">kyeziriva zibamalawo, n’ennimiro zaabwe ne ziragajjalirwa.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:8 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 9:9">Kos 9:9</ref>; <ref loc="HOS 10:9">10:9</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 10:29">Is 10:29</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:15">Kos 4:15</ref>
+      </char>
+    </note>Mufuuwe eŋŋombe mu Gibea,</para>
+  <para style="q2">n’ekkondeere mu Laama.</para>
+  <para style="q1">Muyimuse amaloboozi e Besaveni;</para>
+  <para style="q2">mutukulembere mmwe Benyamini.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:9 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 37:3">Is 37:3</ref>; <ref loc="HOS 9:11-17">Kos 9:11-17</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 46:10">Is 46:10</ref>; <ref loc="ZEC 1:6">Zek 1:6</ref></char>
+    </note>Efulayimu alifuuka matongo</para>
+  <para style="q2">ku lunaku olw’okubonerezebwa.</para>
+  <para style="q1">Nnangirira ebiribaawo</para>
+  <para style="q2">mu bika bya Isirayiri.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:10 a </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 19:14">Ma 19:14</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 7:8">Ez 7:8</ref>
+      </char>
+    </note>Abakulembeze ba Yuda bali ng’abo</para>
+  <para style="q2">abajjulula ensalo,</para>
+  <para style="q1">era ndibafukako obusungu bwange</para>
+  <para style="q2">ng’omujjuzo gw’amazzi.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 9:16">Kos 9:16</ref>; <ref loc="MIC 6:16">Mi 6:16</ref></char>
+    </note>Efulayimu anyigirizibwa,</para>
+  <para style="q2">era omusango gumumezze,</para>
+  <para style="q2">kubanga yamalirira okugoberera bakatonda abalala.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 51:8">Is 51:8</ref>
+      </char>
+    </note>Kyenvudde nfuuka ng’ennyenje eri Efulayimu,</para>
+  <para style="q2">n’eri ennyumba ya Yuda n’emba ng’ekintu ekivundu.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:13 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:11">Kos 7:11</ref>; <ref loc="HOS 8:9">8:9</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 10:6">Kos 10:6</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 14:3">Kos 14:3</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 30:12">Yer 30:12</ref>
+      </char>
+    </note>“Efulayimu bwe yalaba obulwadde bwe,</para>
+  <para style="q2">ne Yuda n’alaba ekivundu kye,</para>
+  <para style="q1">Efulayimu n’addukira mu Bwasuli,</para>
+  <para style="q2">n’atumya obuyambi okuva eri kabaka waayo omukulu.</para>
+  <para style="q1">Naye tasobola kubawonya</para>
+  <para style="q2">newaakubadde okubajjanjaba ebiwundu byabwe.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:14 a </char>
+      <char style="xt" closed="false">
+        <ref loc="AMO 3:4">Am 3:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 5:8">Mi 5:8</ref>
+      </char>
+    </note>Kyendiva mbeera ng’empologoma eri Efulayimu,</para>
+  <para style="q2">era ng’empologoma ey’amaanyi eri ennyumba ya Yuda.</para>
+  <para style="q1">Ndibataagulataagula ne ŋŋenda;</para>
+  <para style="q2">ndibeetikka ne mbatwala, ne babulwako ayinza okubawonya.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:15 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 3:5">Kos 3:5</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:27">Yer 2:27</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 64:9">Is 64:9</ref>
+      </char>
+    </note>Ndiddayo mu kifo kyange,</para>
+  <para style="q2">okutuusa lwe balikkiriza omusango gwabwe.</para>
+  <para style="q1">Balinnoonya,</para>
+  <para style="q2">mu buyinike bwabwe, balinnoonya n’omutima gwabwe gwonna.”</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Obujeemu bwa Isirayiri</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:14">Kos 5:14</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:39">Ma 32:39</ref>; <ref loc="JER 30:17">Yer 30:17</ref>; <ref loc="HOS 14:4">Kos 14:4</ref></char>
+    </note>“Mujje, tudde eri <char style="nd">Mukama</char>.</para>
+  <para style="q1">Atutaaguddetaagudde,</para>
+  <para style="q2">naye alituwonya;</para>
+  <para style="q1">atuleeseeko ebiwundu,</para>
+  <para style="q2">naye ebiwundu alibinyiga.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 30:5">Zab 30:5</ref>
+      </char>
+    </note>Oluvannyuma olw’ennaku bbiri alituzzaamu obulamu, era ku lunaku</para>
+  <para style="q2">olwokusatu alituzza buggya,</para>
+  <para style="q2">ne tubeera balamu mu maaso ge.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:3 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JOL 2:23">Yo 2:23</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 72:6">Zab 72:6</ref>
+      </char>
+    </note>Tumanye <char style="nd">Mukama</char>;</para>
+  <para style="q2">tunyiikire okumumanya.</para>
+  <para style="q1">Ng’enjuba bw’evaayo enkya,</para>
+  <para style="q2">bw’atyo bw’alirabika;</para>
+  <para style="q1">alijja gye tuli ng’enkuba ey’omu kiseera ky’omuzira,</para>
+  <para style="q2">era ng’enkuba eya ddumbi efukirira ettaka.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:4 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 11:8">Kos 11:8</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:1">Kos 7:1</ref>; <ref loc="HOS 13:3">13:3</ref></char>
+    </note>Nkukolere ki, Efulayimu?</para>
+  <para style="q2">Nkukolere ki, Yuda?</para>
+  <para style="q1">Okwagala kwo kuli ng’olufu olw’enkya,</para>
+  <para style="q2">era ng’omusulo ogw’enkya ogukala amangu.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:5 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 1:9-10">Yer 1:9-10</ref>; <ref loc="JER 23:29">23:29</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 4:12">Beb 4:12</ref>
+      </char>
+    </note>Kyenvudde nkozesa bannabbi okubasalaasala ebitundutundu,</para>
+  <para style="q2">ne mbatta n’ebigambo eby’omu kamwa kange,</para>
+  <para style="q2">era ne mbasalira emisango ng’okumyansa okw’eggulu.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:6 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:11">Is 1:11</ref>; <ref loc="MAT 9:13">Mat 9:13</ref>*; <ref loc="MAT 12:7">12:7</ref>* </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:20">Kos 2:20</ref>
+      </char>
+    </note>Kubanga njagala ekisa so si ssaddaaka,</para>
+  <para style="q2">era n’okumanya Katonda, okusinga ebiweebwayo ebyokebwa.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:7 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:1">Kos 8:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:7">Kos 5:7</ref>
+      </char>
+    </note>Okufaanana nga Adamu, bamenye endagaano,</para>
+  <para style="q2">tebaali beesigwa.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Gireyaadi kibuga ky’abakozi ba bibi,</para>
+  <para style="q2">era engalo zaabwe zijjudde omusaayi.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 7:9-10">Yer 7:9-10</ref>; <ref loc="EZK 22:9">Ez 22:9</ref>; <ref loc="HOS 7:1">Kos 7:1</ref></char>
+    </note>Ng’abatemu bwe bateegerera omuntu mu kkubo,</para>
+  <para style="q2">n’ebibiina bya bakabona</para>
+  <para style="q1">bwe bityo bwe bittira ku luguudo olugenda e Sekemu,</para>
+  <para style="q2">ne bazza emisango egy’obuswavu.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:10 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 5:30">Yer 5:30</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:3">Kos 5:3</ref>
+      </char>
+    </note>Ndabye eby’ekivve</para>
+  <para style="q2">mu nnyumba ya Isirayiri;</para>
+  <para style="q1">era eyo Efulayimu gye yeeweereddeyo mu bwamalaaya,</para>
+  <para style="q2">ne Isirayiri gy’ayonoonekedde.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 51:33">Yer 51:33</ref>; <ref loc="JOL 3:13">Yo 3:13</ref></char>
+    </note>“Naawe Yuda,</para>
+  <para style="q2">amakungula gatuuse.</para>
+  <para style="b"/>
+  <para style="q1">“Bwe ndikomyawo emikisa gy’abantu bange,</para>
+  <chapter number="7" style="c"/>
+  <para style="q2">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:4">Kos 6:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">nny 13 </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:2">Kos 4:2</ref>
+      </char>
+    </note>na buli lwe nawonyanga Isirayiri,</para>
+  <para style="q1">ebibi bya Efulayimu ne birabika,</para>
+  <para style="q2">n’ebikolwa eby’ekyejo ebya Samaliya nabyo ne birabika.</para>
+  <para style="q1">Balimba,</para>
+  <para style="q2">bamenya ne bayingira mu mayumba,</para>
+  <para style="q2">era batemu abateega abantu mu makubo.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:2 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 14:10">Yer 14:10</ref>; <ref loc="HOS 8:13">Kos 8:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:19">Yer 2:19</ref>
+      </char>
+    </note>Naye tebalowooza</para>
+  <para style="q2">nga nzijukira ebikolwa byabwe byonna ebibi.</para>
+  <para style="q1">Ebibi byabwe bibazingizza,</para>
+  <para style="q2">era mbiraba.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:2">Kos 4:2</ref>; <ref loc="MIC 7:3">Mi 7:3</ref></char>
+    </note>“Kabaka asanyukira obutali butuukirivu bwabwe,</para>
+  <para style="q2">n’abakungu basanyukira obulimba bwabwe.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 9:2">Yer 9:2</ref>
+      </char>
+    </note>Bonna benzi;</para>
+  <para style="q2">bali ng’ekyoto ekyaka omuliro,</para>
+  <para style="q1">omufumbi w’emigaati gw’ateetaaga kuseesaamu</para>
+  <para style="q2">okutuusa obutta bw’agoye, lwabuusa ku kyoto ne buzimbulukuka.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 28:1">Is 28:1</ref>, <ref loc="ISA 28:7">7</ref></char>
+    </note>Ku lunaku kabaka lw’agabula embaga,</para>
+  <para style="q2">abakungu ettamiiro lya wayini ne libalwaza,</para>
+  <para style="q2">kabaka ne yeegatta n’abanyoomi.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 21:9">Zab 21:9</ref>
+      </char>
+    </note>Emitima gyabwe gyokerera nga oveni</para>
+  <para style="q2">mu busungu bwabwe;</para>
+  <para style="q1">Obusungu bwabwe bubuguumirira ekiro kyonna;</para>
+  <para style="q2">mu makya ne bwaka ng’omuliro.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:7 </char>
+      <char style="xt" closed="false">nny 16</char>
+    </note>Bonna bookya nga oveni,</para>
+  <para style="q2">era bazikiriza abakulembeze baabwe.</para>
+  <para style="q1">Bakabaka baabwe bonna bagudde;</para>
+  <para style="q2">tewali n’omu ku bo ankowoola.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:8 </char>
+      <char style="xt" closed="false">nny 11; <ref loc="PSA 106:35">Zab 106:35</ref>; <ref loc="HOS 5:13">Kos 5:13</ref></char>
+    </note>“Efulayimu yeegattika ne bannaggwanga;</para>
+  <para style="q2">Efulayimu mugaati oguyiddeko oluuyi olumu.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:7">Is 1:7</ref>; <ref loc="HOS 8:7">Kos 8:7</ref></char>
+    </note>Bannaggwanga banyuunyunta amaanyi ge</para>
+  <para style="q2">naye takimanyi.</para>
+  <para style="q1">Mu nviiri ze mulimu envi,</para>
+  <para style="q2">naye takiraba.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:10 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:5">Kos 5:5</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 9:13">Is 9:13</ref>
+      </char>
+    </note>Okwekulumbaza kwa Isirayiri kwe kubalumiriza,</para>
+  <para style="q2">naye newaakubadde ng’ebyo byonna bimutuuseeko</para>
+  <para style="q1">tadda eri <char style="nd">Mukama</char> Katonda we</para>
+  <para style="q2">newaakubadde okumunoonya.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:11 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 11:11">Kos 11:11</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:13">Kos 5:13</ref>; <ref loc="HOS 12:1">12:1</ref></char>
+    </note>“Efulayimu ali ng’ejjiba,</para>
+  <para style="q2">alimbibwalimbibwa mangu era talina magezi;</para>
+  <para style="q1">bakaabira Misiri,</para>
+  <para style="q2">era bagenda eri Obwasuli.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 12:13">Ez 12:13</ref>
+      </char>
+    </note>Bwe baliba balaga eyo, ndibasuulako akatimba,</para>
+  <para style="q2">era ndibassa wansi ng’ennyonyi ez’omu bbanga.</para>
+  <para style="q1">Bwe ndiwulira nga bakuŋŋaana, ndibaziyiza.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:13 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 9:12">Kos 9:12</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 14:10">Yer 14:10</ref>; <ref loc="EZK 34:4-6">Ez 34:4-6</ref>; <ref loc="HOS 9:17">Kos 9:17</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">nny 1; <ref loc="MAT 23:37">Mat 23:37</ref></char>
+    </note>Zibasanze,</para>
+  <para style="q2">kubanga bawabye ne banvaako.</para>
+  <para style="q1">Baakuzikirira</para>
+  <para style="q2">kubanga banjemedde.</para>
+  <para style="q1">Njagala nnyo okubanunula,</para>
+  <para style="q2">naye banjogerako eby’obulimba.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:14 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 3:10">Yer 3:10</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="AMO 2:8">Am 2:8</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 13:16">Kos 13:16</ref>
+      </char>
+    </note>Tebankaabira n’emitima gyabwe,</para>
+  <para style="q2">wabula ebiwoobe babikubira ku bitanda byabwe.</para>
+  <para style="q1">Bakuŋŋaana awamu olw’emmere ey’empeke ne wayini,</para>
+  <para style="q2">naye ne banjeemera.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="NAM 1:9">Nak 1:9</ref>, <ref loc="NAM 1:11">11</ref></char>
+    </note>Nabayigiriza ne mbawa n’amaanyi,</para>
+  <para style="q2">naye bansalira enkwe.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:16 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 78:9">Zab 78:9</ref>, <ref loc="PSA 78:57">57</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 23:32">Ez 23:32</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 9:3">Kos 9:3</ref>
+      </char>
+    </note>Tebakyukira oyo Ali Waggulu Ennyo;</para>
+  <para style="q2">bafuuse ng’omutego gw’akasaale ogwayonooneka;</para>
+  <para style="q1">abakulembeze baabwe balifa kitala,</para>
+  <para style="q2">olw’ebigambo byabwe ebya kalebule.</para>
+  <para style="q1">Era kyebaliva babasekerera</para>
+  <para style="q2">mu nsi y’e Misiri.”</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Isirayiri Akungula Embuyaga</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 28:49">Ma 28:49</ref>; <ref loc="JER 4:13">Yer 4:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:6">Kos 4:6</ref>; <ref loc="HOS 6:7">6:7</ref></char>
+    </note>“Ffuwa ekkondeere.</para>
+  <para style="q2">Empungu eri ku nnyumba ya <char style="nd">Mukama</char></para>
+  <para style="q1">kubanga abantu bamenye endagaano yange</para>
+  <para style="q2">ne bajeemera amateeka gange.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Isirayiri bankaabira nga boogera nti,</para>
+  <para style="q2">‘Katonda waffe, tukumanyi.’</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Naye Isirayiri baleseeyo ekirungi;</para>
+  <para style="q2">omulabe kyaliva abayigganya.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:4 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 13:10">Kos 13:10</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:8">Kos 2:8</ref>
+      </char>
+    </note>Balonda bakabaka nga sikkirizza,</para>
+  <para style="q2">balonda abakulembeze be sikakasizza.</para>
+  <para style="q1">Beekolera ebifaananyi ebyole</para>
+  <para style="q2">mu ffeeza yaabwe ne mu zaabu yaabwe ebiribaleetera okuzikirira.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:5 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 10:5">Kos 10:5</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 13:27">Yer 13:27</ref>
+      </char>
+    </note>Kanyuga ebweru ekifaananyi ky’ennyana yo, ggwe Samaliya.</para>
+  <para style="q2">Obusungu bwange bubabuubuukirako.</para>
+  <para style="q1">Balituusa ddi okuba abatali batuukirivu?</para>
+  <para style="q2">
+    <verse number="6" style="v"/>Bava mu Isirayiri.</para>
+  <para style="q1">Ennyana eyo omuntu eyakuguka mu by’okuweesa, ye yagikola</para>
+  <para style="q2">so si Katonda.</para>
+  <para style="q1">Era ennyana eyo eya Samaliya</para>
+  <para style="q2">eribetentebwa.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:7 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 22:8">Nge 22:8</ref>; <ref loc="ISA 66:15">Is 66:15</ref>; <ref loc="HOS 10:12-13">Kos 10:12-13</ref>; <ref loc="NAM 1:3">Nak 1:3</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:9">Kos 2:9</ref>
+      </char>
+    </note>“Basiga empewo,</para>
+  <para style="q2">ne bakungula embuyaga.</para>
+  <para style="q1">Ekikolo olw’obutaba na mutwe,</para>
+  <para style="q2">kyekiriva kirema okubala ensigo.</para>
+  <para style="q1">Naye ne bwe kyandibaze,</para>
+  <para style="q2">bannaggwanga bandigiridde.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:8 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 51:34">Yer 51:34</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 22:28">Yer 22:28</ref>
+      </char>
+    </note>Isirayiri amaliddwawo;</para>
+  <para style="q2">ali wakati mu mawanga</para>
+  <para style="q2">ng’ekintu ekitagasa.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Bambuse ne bagenda eri Obwasuli,</para>
+  <para style="q2">ng’endogoyi ey’omu nsiko eri yokka.</para>
+  <para style="q2">Efulayimu aguliridde abaganzi.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:10 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 16:37">Ez 16:37</ref>; <ref loc="EZK 22:20">22:20</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 42:2">Yer 42:2</ref>
+      </char>
+    </note>Newaakubadde nga beetunze eri amawanga,</para>
+  <para style="q2">ndibakuŋŋaanya,</para>
+  <para style="q1">era ndibawaayo eri okubonaabona</para>
+  <para style="q2">nga banyigirizibwa kabaka ow’amaanyi.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 10:1">Kos 10:1</ref>; <ref loc="HOS 12:11">12:11</ref></char>
+    </note>“Newaakubadde nga Efulayimu baazimba ebyoto bingi eby’ebiweebwayo olw’ekibi,</para>
+  <para style="q2">bifuuse byoto bya kukolerako bibi.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Nabawandiikira ebintu bingi mu mateeka gange,</para>
+  <para style="q2">naye ne babifuula ekintu ekigwira.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:13 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 7:21">Yer 7:21</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:2">Kos 7:2</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:9">Kos 4:9</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 9:3">Kos 9:3</ref>, <ref loc="HOS 9:6">6</ref></char>
+    </note>Bawaayo ebiweebwayo gye ndi,</para>
+  <para style="q2">ne balya ennyama yaabyo,</para>
+  <para style="q2">
+    <char style="nd">Mukama</char> tabasanyukira.</para>
+  <para style="q1">Kaakano alijukira obutali butuukirivu bwabwe</para>
+  <para style="q2">n’ababonereza olw’ebibi byabwe:</para>
+  <para style="q2">Baliddayo e Misiri.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:14 a </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:18">Ma 32:18</ref>; <ref loc="HOS 2:13">Kos 2:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 17:27">Yer 17:27</ref>
+      </char>
+    </note>Isirayiri yeerabidde omutonzi we,</para>
+  <para style="q2">n’azimba embiri,</para>
+  <para style="q2">ne Yuda ne yeeyongera okuzimba ebibuga ebiriko bbugwe;</para>
+  <para style="q1">naye ndisindika omuliro ku bibuga byabwe,</para>
+  <para style="q2">ne gwokya ebigo byabwe.”</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Okubonerezebwa kwa Isirayiri</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 22:12-13">Is 22:12-13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 10:5">Kos 10:5</ref>
+      </char>
+    </note>Tosanyuka ggwe Isirayiri;</para>
+  <para style="q2">tojaguza ng’amawanga amalala,</para>
+  <para style="q1">kubanga tobadde mwesigwa eri Katonda wo,</para>
+  <para style="q2">weegomba empeera eya malaaya</para>
+  <para style="q2">ku buli gguuliro.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:9">Kos 2:9</ref>
+      </char>
+    </note>Egguuliro n’essogolero tebiribaliisa,</para>
+  <para style="q2">ne wayini omusu alibaggwaako.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:3 a </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 25:23">Lv 25:23</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:13">Kos 8:13</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 4:13">Ez 4:13</ref>; <ref loc="HOS 7:11">Kos 7:11</ref></char>
+    </note>Tebalisigala mu nsi ya <char style="nd">Mukama</char>;</para>
+  <para style="q2">Efulayimu aliddayo e Misiri</para>
+  <para style="q2">n’alya emmere etali nnongoofu mu Bwasuli.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:4 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 6:20">Yer 6:20</ref>; <ref loc="HOS 8:13">Kos 8:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HAG 2:13-14">Kag 2:13-14</ref>
+      </char>
+    </note>Tebaliwaayo biweebwayo ebya wayini eri <char style="nd">Mukama</char>,</para>
+  <para style="q2">so ne ssaddaaka zaabwe tezirimusanyusa.</para>
+  <para style="q1">Ssaddaaka zaabwe ziriba ng’emmere ey’abakungubazi,</para>
+  <para style="q2">ne bonna abaliziryako balifuuka abatali balongoofu.</para>
+  <para style="q1">Emmere eyo eriba yaabwe bo,</para>
+  <para style="q2">so teriyingizibwa mu yeekaalu ya <char style="nd">Mukama</char>.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:5 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 10:3">Is 10:3</ref>; <ref loc="JER 5:31">Yer 5:31</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:11">Kos 2:11</ref>
+      </char>
+    </note>Kiki ky’olikola ku lunaku olw’embaga ezaalondebwa,</para>
+  <para style="q2">ku lunaku olw’embaga ya <char style="nd">Mukama</char>?</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:6 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 19:13">Is 19:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 5:6">Is 5:6</ref>; <ref loc="HOS 10:8">Kos 10:8</ref></char>
+    </note>Ne bwe baliwona okuzikirira,</para>
+  <para style="q2">Misiri alibakuŋŋaanya,</para>
+  <para style="q2">ne Menfisi alibaziika.</para>
+  <para style="q1">Eby’obugagga byabwe ebya ffeeza birizika,</para>
+  <para style="q1">n’eweema zaabwe zirimeramu amaggwa.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:7 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 34:8">Is 34:8</ref>; <ref loc="JER 10:15">Yer 10:15</ref>; <ref loc="MIC 7:4">Mi 7:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 16:18">Yer 16:18</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 44:25">Is 44:25</ref>; <ref loc="LAM 2:14">Kgb 2:14</ref>; <ref loc="EZK 14:9-10">Ez 14:9-10</ref></char>
+    </note>Ennaku ez’okubonerezebwa zijja,</para>
+  <para style="q2">ennaku ez’okusasulirwamu ziri kumpi.</para>
+  <para style="q2">Ekyo Isirayiri akimanye.</para>
+  <para style="q1">Olw’ebibi byammwe okuba ebingi ennyo,</para>
+  <para style="q2">n’obukambwe bwammwe obungi,</para>
+  <para style="q1">nnabbi ayitibwa musirusiru,</para>
+  <para style="q2">n’oyo eyabikkulirwa mumuyita mugu wa ddalu.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:1">Kos 5:1</ref>
+      </char>
+    </note>Nnabbi awamu ne Katonda wange</para>
+  <para style="q2">ye mukuumi wa Efulayimu,<note caller="+" style="f"><char style="fr" closed="false">9:8 </char><char style="ft" closed="false">Efulayimu be bantu ba Katonda</char></note></para>
+  <para style="q1">newaakubadde nga waliwo emitego mu kkubo lye,</para>
+  <para style="q2">n’obukambwe mu nnyumba ya Katonda we.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:9 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JDG 19:16-30">Bal 19:16-30</ref>; <ref loc="HOS 5:8">Kos 5:8</ref>; <ref loc="HOS 10:9">10:9</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:13">Kos 8:13</ref>
+      </char>
+    </note>Boonoonye nnyo nnyini</para>
+  <para style="q2">nga mu nnaku ez’e Gibea.</para>
+  <para style="q1">Katonda alijjukira obutali butuukirivu bwabwe,</para>
+  <para style="q2">n’ababonereza olw’ebibi byabwe.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:10 a </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 25:1-5">Kbl 25:1-5</ref>; <ref loc="PSA 106:28-29">Zab 106:28-29</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 11:13">Yer 11:13</ref>; <ref loc="HOS 4:14">Kos 4:14</ref></char>
+    </note>We nasangira Isirayiri,</para>
+  <para style="q2">kyali nga kulaba zabbibu mu ddungu.</para>
+  <para style="q1">Bwe nalaba bajjajjammwe,</para>
+  <para style="q2">kyali nga kulaba ebibala ebisooka ku mutiini.</para>
+  <para style="q1">Naye bwe bajja e Baalipyoli,</para>
+  <para style="q2">beewonga eri ekifaananyi eky’ensonyi,</para>
+  <para style="q2">ne bafuuka ekyenyinnyalwa ng’ekifaananyi kye baayagala.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:11 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:7">Kos 4:7</ref>; <ref loc="HOS 10:5">10:5</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">nny 14</char>
+    </note>Ekitiibwa kya Efulayimu kiribuuka ne kigenda ng’ekinyonyi</para>
+  <para style="q2">nga tewali kuzaala, newaakubadde okuba olubuto newaakubadde okufuna olubuto.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:12 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:13">Kos 7:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 31:17">Ma 31:17</ref>
+      </char>
+    </note>Ne bwe balikuza abaana baabwe,</para>
+  <para style="q2">ndibabaggyako bonna.</para>
+  <para style="q1">Ziribasanga</para>
+  <para style="q2">bwe ndibavaako.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 27:3">Ez 27:3</ref>
+      </char>
+    </note>Nalaba Efulayimu</para>
+  <para style="q2">ng’asimbiddwa mu kifo ekirungi, nga Ttuulo bw’ali.</para>
+  <para style="q1">Naye Efulayimu alifulumya</para>
+  <para style="q2">abaana be ne battibwa.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:14 </char>
+      <char style="xt" closed="false">nny 11; <ref loc="LUK 23:29">Luk 23:29</ref></char>
+    </note>Bawe Ayi <char style="nd">Mukama</char> Katonda.</para>
+  <para style="q2">Olibawa ki?</para>
+  <para style="q1">Leetera embuto zaabwe okuvaamu</para>
+  <para style="q2">obawe n’amabeere amakalu.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:15 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:15">Kos 4:15</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:2">Kos 7:2</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:23">Is 1:23</ref>; <ref loc="HOS 4:9">Kos 4:9</ref>; <ref loc="HOS 5:2">5:2</ref></char>
+    </note>Olw’ebibi byabwe byonna mu Girugaali,</para>
+  <para style="q2">kyennava mbakyayira eyo.</para>
+  <para style="q1">Olw’ebikolwa byabwe ebitali bya butuukirivu,</para>
+  <para style="q2">kyendiva mbagoba mu nnyumba yange.</para>
+  <para style="q1">Siribaagala nate;</para>
+  <para style="q2">abakulembeze baabwe bonna bajeemu.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:16 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:11">Kos 5:11</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:7">Kos 8:7</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">nny 12</char>
+    </note>Efulayimu balwadde,</para>
+  <para style="q2">emirandira gyabwe gikaze,</para>
+  <para style="q2">tebakyabala bibala.</para>
+  <para style="q1">Ne bwe balizaala abaana baabwe,</para>
+  <para style="q2">nditta ezzadde lyabwe lye baagala ennyo.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:17 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:10">Kos 4:10</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 28:65">Ma 28:65</ref>; <ref loc="HOS 7:13">Kos 7:13</ref></char>
+    </note>Katonda wange alibavaako</para>
+  <para style="q2">kubanga tebamugondedde;</para>
+  <para style="q2">baliba momboze mu mawanga.</para>
+  <chapter number="10" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 15:2">Ez 15:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 14:23">1Bk 14:23</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:11">Kos 8:11</ref>; <ref loc="HOS 12:11">12:11</ref></char>
+    </note>Isirayiri yali muzabbibu ogwagaagadde,</para>
+  <para style="q2">ogwabala ebibala byagwo.</para>
+  <para style="q1">Ebibala bye gye byeyongera obungi,</para>
+  <para style="q2">naye gye yeeyongera okuzimba ebyoto;</para>
+  <para style="q1">n’ensi ye gye yeeyongera okuba engagga,</para>
+  <para style="q2">gye yeeyongera okulungiya empagi ze.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:2 a </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 18:21">1Bk 18:21</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 13:16">Kos 13:16</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">nny 8 </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 5:13">Mi 5:13</ref>
+      </char>
+    </note>Omutima gwabwe mulimba,</para>
+  <para style="q2">era ekiseera kituuse omusango gubasinge.</para>
+  <para style="q1">
+    <char style="nd">Mukama</char> alimenya ebyoto byabwe,</para>
+  <para style="q2">era alizikiriza empagi zaabwe.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>Olwo balyogera nti, “Tetulina kabaka</para>
+  <para style="q2">kubanga tetwatya <char style="nd">Mukama</char>.</para>
+  <para style="q1">Naye ne bwe twandibadde ne kabaka,</para>
+  <para style="q2">yanditukoleddeyo ki?”</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:4 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:2">Kos 4:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 17:19">Ez 17:19</ref>; <ref loc="AMO 5:7">Am 5:7</ref></char>
+    </note>Basuubiza bingi,</para>
+  <para style="q2">ne balayirira obwereere</para>
+  <para style="q2">nga bakola endagaano;</para>
+  <para style="q1">emisango kyegiva givaayo</para>
+  <para style="q2">ng’omuddo ogw’obutwa mu nnimiro ennime.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:5 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:8">Kos 5:8</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 23:5">2Bk 23:5</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:5">Kos 8:5</ref>; <ref loc="HOS 9:1">9:1</ref>, <ref loc="HOS 9:3">3</ref>, <ref loc="HOS 9:11">11</ref></char>
+    </note>Abatuuze b’e Samaliya bali mu ntiisa</para>
+  <para style="q2">olw’ennyana ensaanuuse ey’e Besaveni.</para>
+  <para style="q1">Abantu baayo baligikungubagira,</para>
+  <para style="q2">ne bakabona baayo abaweereza bakatonda abalala,</para>
+  <para style="q1">abaasanyukanga olw’ekitiibwa kyayo baligikungubagira,</para>
+  <para style="q2">kubanga ekitiibwa kyayo kigivuddeko.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:6 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 11:5">Kos 11:5</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:13">Kos 5:13</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 30:3">Is 30:3</ref>; <ref loc="HOS 4:7">Kos 4:7</ref></char>
+    </note>Erisutulibwa n’etwalibwa e Bwasuli</para>
+  <para style="q2">n’eweebwa kabaka omukulu ng’ekirabo.</para>
+  <para style="q1">Efulayimu aliswazibwa</para>
+  <para style="q2">ne Isirayiri alikwatibwa ensonyi olw’ekiteeso kye.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 13:11">Kos 13:11</ref>
+      </char>
+    </note>Samaliya ne kabaka we balitwalibwa</para>
+  <para style="q2">ng’ekibajjo eky’omuti ku mazzi n’azikirizibwa.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:8 a </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 12:28-30">1Bk 12:28-30</ref>; <ref loc="HOS 4:13">Kos 4:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 9:6">Kos 9:6</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">nny 2; <ref loc="ISA 32:13">Is 32:13</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="LUK 23:30">Luk 23:30</ref>*; <ref loc="REV 6:16">Kub 6:16</ref></char>
+    </note>Ebifo ebigulumivu eby’obutali butuukirivu birisaanyizibwawo,</para>
+  <para style="q2">kye kibi kya Isirayiri.</para>
+  <para style="q1">Amaggwa n’amatovu galimera ku byoto byabwe,</para>
+  <para style="q2">ne gabibikka.</para>
+  <para style="q1">Olwo ne bagamba ensozi nti, “Mutubuutikire,”</para>
+  <para style="q2">n’obusozi nti, “Mutugweko.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:8">Kos 5:8</ref>
+      </char>
+    </note>Okuva mu nnaku za Gibea, wayonoona, ggwe Isirayiri</para>
+  <para style="q2">era eyo gye wagugubira.</para>
+  <para style="q1">Entalo tezakwatira abakozi b’ebibi mu Gibea?</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 5:13">Ez 5:13</ref>; <ref loc="HOS 4:9">Kos 4:9</ref></char>
+    </note>Bwe ndiba nga njagadde, ndibabonereza;</para>
+  <para style="q2">amawanga galikuŋŋaana okulwana nabo,</para>
+  <para style="q2">ne basibibwa mu masanga olw’ebibi byabwe eby’emirundi ebiri.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Efulayimu nnyana ntendeke</para>
+  <para style="q2">eyagala okuwuula;</para>
+  <para style="q1">kyendiva nteeka ekikoligo</para>
+  <para style="q2">mu nsingo ye ennungi.</para>
+  <para style="q1">Ndigoba Efulayimu</para>
+  <para style="q2">ne Yuda ateekwa okulima</para>
+  <para style="q2">ne Yakobo ateekwa okukabala.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:12 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 11:18">Nge 11:18</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 4:3">Yer 4:3</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 12:6">Kos 12:6</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 45:8">Is 45:8</ref>
+      </char>
+    </note>Musige ensigo ez’obutuukirivu,</para>
+  <para style="q2">mukungule ebibala eby’okwagala okutaggwaawo;</para>
+  <para style="q1">mukabale ettaka lyammwe eritali ddime,</para>
+  <para style="q2">kubanga ekiseera kituuse okunoonya <char style="nd">Mukama</char>,</para>
+  <para style="q1">okutuusa lw’alidda</para>
+  <para style="q2">n’abafukako obutuukirivu.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:13 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 4:8">Yob 4:8</ref>; <ref loc="HOS 7:3">Kos 7:3</ref>; <ref loc="HOS 11:12">11:12</ref>; <ref loc="GAL 6:7-8">Bag 6:7-8</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 33:16">Zab 33:16</ref>
+      </char>
+    </note>Naye mwasimba obutali butuukirivu</para>
+  <para style="q2">ne mukungula ebibi,</para>
+  <para style="q2">era mulidde ebibala eby’obulimba.</para>
+  <para style="q1">Olw’okwesiga amaanyi go,</para>
+  <para style="q2">n’abalwanyi bo abangi,</para>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:14 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 17:3">Is 17:3</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 13:16">Kos 13:16</ref>
+      </char>
+    </note>olutalo kyeluliva lubawuumira mu matu,</para>
+  <para style="q2">n’ebigo byammwe byonna ne bizikirizibwa,</para>
+  <para style="q1">nga Sulemaani bwe yazikiriza Beswaluberi ku lunaku olw’olutalo,</para>
+  <para style="q2">abakyala ba nnakazadde lwe baggundwa ku ttaka n’abaana baabwe.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:15 </char>
+      <char style="xt" closed="false">nny 7</char>
+    </note>Bwe kityo bwe kiribeera, ggwe Besweri</para>
+  <para style="q2">kubanga ekibi kyo kinene nnyo.</para>
+  <para style="q1">Olunaku olwo bwe lulituuka,</para>
+  <para style="q2">kabaka wa Isirayiri alizikiririzibwa ddala.</para>
+  <chapter number="11" style="c"/>
+  <para style="s1">Okwagala kwa Katonda eri Isirayiri</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 4:22">Kuv 4:22</ref>; <ref loc="HOS 12:9">Kos 12:9</ref>, <ref loc="HOS 12:13">13</ref>; <ref loc="HOS 13:4">13:4</ref>; <ref loc="MAT 2:15">Mat 2:15</ref>*</char>
+    </note>“Isirayiri bwe yali omwana omuto, namwagala,</para>
+  <para style="q2">era namuyita okuva mu Misiri.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:2 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:13">Kos 2:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 17:15">2Bk 17:15</ref>; <ref loc="ISA 65:7">Is 65:7</ref>; <ref loc="JER 18:15">Yer 18:15</ref></char>
+    </note>Naye buli lwe nayongeranga okuyita Isirayiri,</para>
+  <para style="q2">nabo gye beeyongeranga okusemberayo</para>
+  <para style="q1">ne bawaayo ssaddaaka eri Babaali,</para>
+  <para style="q2">ne bootereza ebifaananyi ebyole obubaane.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:3 a </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 1:31">Ma 1:31</ref>; <ref loc="HOS 7:15">Kos 7:15</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 30:17">Yer 30:17</ref>
+      </char>
+    </note>Nze nayigiriza Efulayimu okutambula,</para>
+  <para style="q2">nga mbakwata ku mukono;</para>
+  <para style="q1">naye tebategeera</para>
+  <para style="q2">nga nze nabawonya.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:4 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:2-3">Yer 31:2-3</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 16:32">Kuv 16:32</ref>; <ref loc="PSA 78:25">Zab 78:25</ref></char>
+    </note>Nabakulembera n’emiguwa egy’okusaasira okw’obuntu,</para>
+  <para style="q2">n’ebisiba eby’okwagala.</para>
+  <para style="q1">Naggya ekikoligo mu bulago bwabwe</para>
+  <para style="q2">ne neetoowaza ne mbaliisa.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:5 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:16">Kos 7:16</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 10:6">Kos 10:6</ref>
+      </char>
+    </note>“Tebaliddayo mu nsi ya Misiri,</para>
+  <para style="q2">era Obwasuli tebulibafuga</para>
+  <para style="q2">kubanga baagaana okwenenya?</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 13:16">Kos 13:16</ref>
+      </char>
+    </note>Ekitala kirimyansiza mu bibuga byabwe</para>
+  <para style="q2">ne kizikiriza ebisiba ebya wankaaki waabwe,</para>
+  <para style="q2">ne kikomya enteekateeka zaabwe.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 3:6-7">Yer 3:6-7</ref>; <ref loc="JER 8:5">8:5</ref></char>
+    </note>Abantu bange bamaliridde okunvaako.</para>
+  <para style="q2">Ne bwe banaakoowoola oyo Ali Waggulu Ennyo,</para>
+  <para style="q2">taabagulumize.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:8 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:4">Kos 6:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 14:8">Lub 14:8</ref>
+      </char>
+    </note>“Nnyinza ntya okukuleka ggwe Efulayimu?</para>
+  <para style="q2">Nnyinza ntya okukuwaayo ggwe Isirayiri?</para>
+  <para style="q1">Nnyinza ntya okukufuula nga Aduma?</para>
+  <para style="q2">Nnyinza ntya okukukola nga Zeboyimu?</para>
+  <para style="q1">Omutima gwange gwekyusiza munda yange,</para>
+  <para style="q2">Mpulira nkukwatiddwa ekisa kingi.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:9 a </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 13:17">Ma 13:17</ref>; <ref loc="JER 30:11">Yer 30:11</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="MAL 3:6">Mal 3:6</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 23:19">Kbl 23:19</ref>
+      </char>
+    </note>Siikole ng’obusungu bwange obungi bwe buli,</para>
+  <para style="q2">so siridda kuzikiriza Efulayimu;</para>
+  <para style="q1">kubanga siri muntu wabula ndi Katonda,</para>
+  <para style="q2">Omutukuvu wakati mu mmwe:</para>
+  <para style="q2">sirijja na busungu.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:1-3">Kos 6:1-3</ref>
+      </char>
+    </note>Baligoberera <char style="nd">Mukama</char>;</para>
+  <para style="q2">era aliwuluguma ng’empologoma.</para>
+  <para style="q1">Bw’aliwuluguma,</para>
+  <para style="q2">abaana be balijja nga bakankana okuva ebugwanjuba.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:11 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 11:11">Is 11:11</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 28:26">Ez 28:26</ref>
+      </char>
+    </note>Balijja nga bakankana</para>
+  <para style="q2">ng’ebinyonyi ebiva e Misiri,</para>
+  <para style="q2">era ng’enjiibwa eziva mu Bwasuli.</para>
+  <para style="q1">Ndibafuula abatuuze mu maka gaabwe,”</para>
+  <para style="q2">bw’ayogera <char style="nd">Mukama</char>.</para>
+  <para style="s1">Ekibi kya Isirayiri</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:2">Kos 4:2</ref>
+      </char>
+    </note>Efulayimu aneebunguluzza obulimba,</para>
+  <para style="q2">n’ennyumba ya Isirayiri eneebunguluzza obukuusa,</para>
+  <para style="q1">ne Yuda ajeemedde Katonda,</para>
+  <para style="q2">ajeemedde omwesigwa Omutukuvu.</para>
+  <chapter number="12" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 17:10">Ez 17:10</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 17:4">2Bk 17:4</ref>
+      </char>
+    </note>Efulayimu alya mpewo;</para>
+  <para style="q2">agoba empewo ez’ebuvanjuba olunaku lwonna,</para>
+  <para style="q2">era bongera ku bulimba ne ku ttemu.</para>
+  <para style="q1">Bakola endagaano n’Obwasuli,</para>
+  <para style="q2">n’aweereza n’amafuta e Misiri.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:2 a </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 6:2">Mi 6:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:9">Kos 4:9</ref>
+      </char>
+    </note>
+    <char style="nd">Mukama</char> alina ensonga ne Yuda,</para>
+  <para style="q2">era alibonereza Yakobo ng’engeri ze bwe ziri.</para>
+  <para style="q2">Amusasule ng’ebikolwa bye bwe biri.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:3 a </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 25:26">Lub 25:26</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 32:24-29">Lub 32:24-29</ref>
+      </char>
+    </note>Bwe yali mu lubuto lwa nnyina yakwata muganda we ku kisinziiro,</para>
+  <para style="q2">ne mu bukulu bwe n’ameggana ne Katonda.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 28:12-15">Lub 28:12-15</ref>; <ref loc="GEN 35:15">35:15</ref></char>
+    </note>Yameggana ne malayika n’amuwangula,</para>
+  <para style="q2">n’akaaba n’amwegayirira.</para>
+  <para style="q1">Yamusisinkana e Beseri,</para>
+  <para style="q1">n’ayogera naye.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 3:15">Kuv 3:15</ref>
+      </char>
+    </note>
+    <char style="nd">Mukama</char> Katonda ow’Eggye,</para>
+  <para style="q2">
+    <char style="nd">Mukama</char> ly’erinnya lye erijjukirwa.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:6 a </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 6:8">Mi 6:8</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:1-3">Kos 6:1-3</ref>; <ref loc="HOS 10:12">10:12</ref>; <ref loc="MIC 7:7">Mi 7:7</ref></char>
+    </note>Naye oteekwa okudda eri Katonda wo;</para>
+  <para style="q2">kuuma okwagala n’obwenkanya,</para>
+  <para style="q2">olindirirenga Katonda wo ennaku zonna.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="AMO 8:5">Am 8:5</ref>
+      </char>
+    </note>Omusuubuzi akozesa ebipimo eby’obulimba,</para>
+  <para style="q2">era anyumirwa okukumpanya.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 62:10">Zab 62:10</ref>; <ref loc="REV 3:17">Kub 3:17</ref></char>
+    </note>Efulayimu yeewaana ng’ayogera nti,</para>
+  <para style="q2">“Ndi mugagga nnyo, nfunye ebintu bingi.</para>
+  <para style="q1">Mu bugagga bwange bwonna, tebayinza kundabamu kibi</para>
+  <para style="q2">wadde okwonoona kwonna.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:9 a </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 23:43">Lv 23:43</ref>; <ref loc="HOS 11:1">Kos 11:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 8:17">Nek 8:17</ref>
+      </char>
+    </note>Nze <char style="nd">Mukama</char> Katonda wo,</para>
+  <para style="q2">eyakuggya mu Misiri;</para>
+  <para style="q1">ndikuzzaayo n’obeera mu weema nate,</para>
+  <para style="q2">nga mu nnaku ez’embaga ezaalagirwa.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:10 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 20:49">Ez 20:49</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 17:13">2Bk 17:13</ref>; <ref loc="JER 7:25">Yer 7:25</ref></char>
+    </note>Nayogera eri bannabbi,</para>
+  <para style="q2">ne mbawa okwolesebwa kungi,</para>
+  <para style="q2">ne mbagerera engero nga mpita mu bo.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:11 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:8">Kos 6:8</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 4:15">Kos 4:15</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:11">Kos 8:11</ref>
+      </char>
+    </note>Gireyaadi butali butuukirivu</para>
+  <para style="q2">era n’abantu baamu butaliimu.</para>
+  <para style="q1">Mu Gireyaadi basalirayo ente ennume ne baziwaayo nga ssaddaaka,</para>
+  <para style="q2">era ebyoto byabwe binaaba ng’entuumo ey’amayinja mu nnimiro ennime.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:12 a </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 28:5">Lub 28:5</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 29:18">Lub 29:18</ref>
+      </char>
+    </note>Yakobo yaddukira mu nsi ya Alamu;<note caller="+" style="f"><char style="fr" closed="false">12:12 </char><char style="ft" closed="false">Alamu bwe bukiikakkono obw’ebugwanjuba bwa Mesopotamiya</char></note></para>
+  <para style="q2">Isirayiri yaweereza okufuna omukazi,</para>
+  <para style="q2">era okumufuna yalundanga ndiga.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 13:3">Kuv 13:3</ref>; <ref loc="ISA 63:11-14">Is 63:11-14</ref></char>
+    </note>
+    <char style="nd">Mukama</char> yakozesa nnabbi okuggya Isirayiri mu Misiri,</para>
+  <para style="q2">era n’akozesa nnabbi okumukuuma.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:14 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 18:13">Ez 18:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="DAN 11:18">Dan 11:18</ref>
+      </char>
+    </note>Naye Efulayimu amusoomoozezza era amusunguwazizza,</para>
+  <para style="q2">Mukama we kyaliva amutekako omusango olw’omusaayi gwe yayiwa,</para>
+  <para style="q2">n’amusasula olw’obunyoomi bwe.</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">
+    <char style="nd">Mukama</char> Asunguwalira Isirayiri</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JDG 12:1">Bal 12:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JDG 8:1">Bal 8:1</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 11:2">Kos 11:2</ref>
+      </char>
+    </note>Efulayimu buli lwe yayogeranga, abantu baakankananga.</para>
+  <para style="q2">Yagulumizibwanga mu Isirayiri.</para>
+  <para style="q2">Naye bwe yayonoona olw’okusinza Baali, n’afa.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:2 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 46:6">Is 46:6</ref>; <ref loc="JER 10:4">Yer 10:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 44:17-20">Is 44:17-20</ref>
+      </char>
+    </note>Ne kaakano bongera okwonoona;</para>
+  <para style="q2">ne beekolera ebifaananyi ebisaanuuse mu ffeeza yaabwe,</para>
+  <para style="q1">ng’okutegeera kwabwe bwe kuli,</para>
+  <para style="q2">nga byonna mulimu gw’abaweesi.</para>
+  <para style="q1">Kigambibwa nti,</para>
+  <para style="q2">“Bawaayo ssaddaaka ez’abantu,</para>
+  <para style="q2">ne banywegera ebifaananyi eby’ennyana.”</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:3 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:4">Kos 6:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 17:13">Is 17:13</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="DAN 2:35">Dan 2:35</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 68:2">Zab 68:2</ref>
+      </char>
+    </note>Kyebaliva babeera ng’olufu olw’oku makya,</para>
+  <para style="q2">oba ng’omusulo oguvaawo amangu,</para>
+  <para style="q2">ng’ebisusunku embuyaga ze bifumuula okubiggya mu gguuliro,</para>
+  <para style="q2">oba ng’omukka ogufulumira mu ddirisa.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:4 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 12:9">Kos 12:9</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 20:3">Kuv 20:3</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 43:11">Is 43:11</ref>; <ref loc="ISA 45:21-22">45:21-22</ref></char>
+    </note>“Nze <char style="nd">Mukama</char> Katonda wo</para>
+  <para style="q2">eyakuggya mu nsi ya Misiri;</para>
+  <para style="q1">so tolimanya Katonda mulala wabula nze,</para>
+  <para style="q2">so tewali mulokozi wabula nze.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Nakulabirira mu ddungu,</para>
+  <para style="q2">mu nsi ey’ekyeya ekingi.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:12-15">Ma 32:12-15</ref>; <ref loc="HOS 2:13">Kos 2:13</ref></char>
+    </note>Bwe nabaliisa, bakkuta;</para>
+  <para style="q2">bwe bakkuta ne beegulumiza,</para>
+  <para style="q2">bwe batyo ne banneerabira.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Kyendiva mbalumba ng’empologoma,</para>
+  <para style="q2">era ndibateegera ku kkubo ng’engo.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:8 a </char>
+      <char style="xt" closed="false">
+        <ref loc="2SA 17:8">2Sa 17:8</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 50:22">Zab 50:22</ref>
+      </char>
+    </note>Ng’eddubu erinyagiddwako abaana baalyo,</para>
+  <para style="q2">ndibalumba ne mbataagulataagula.</para>
+  <para style="q1">Era okufaananako ng’empologoma bw’ekola ndibaliira eyo,</para>
+  <para style="q2">ensolo ey’omu nsiko eribataagulataagula.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:9 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:17-19">Yer 2:17-19</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 33:29">Ma 33:29</ref>
+      </char>
+    </note>Ndibazikiriza mmwe Isirayiri,</para>
+  <para style="q2">kubanga munnwanyisa.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:10 a </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 17:4">2Bk 17:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1SA 8:6">1Sa 8:6</ref>; <ref loc="HOS 8:4">Kos 8:4</ref></char>
+    </note>Kabaka wammwe ali wa, abalokole?</para>
+  <para style="q2">Abafuzi ab’omu bibuga byo byonna bali ludda wa,</para>
+  <para style="q1">be wayogerako nti,</para>
+  <para style="q2">‘Tuwe kabaka n’abafuzi?’</para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 14:10">1Bk 14:10</ref>; <ref loc="HOS 10:7">Kos 10:7</ref></char>
+    </note>Nabawa kabaka nga nsunguwadde,</para>
+  <para style="q2">ate ne mmubaggyako nga ndiko ekiruyi.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:34">Ma 32:34</ref>
+      </char>
+    </note>Omusango gwa Efulayimu guterekeddwa,</para>
+  <para style="q2">era n’ekibi kye kimanyiddwa.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:13 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 13:8">Is 13:8</ref>; <ref loc="MIC 4:9-10">Mi 4:9-10</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 66:9">Is 66:9</ref>
+      </char>
+    </note>Obubalagaze ng’obw’omukyala alumwa okuzaala bumujjira,</para>
+  <para style="q2">naye omwana olw’obutaba n’amagezi,</para>
+  <para style="q1">ekiseera bwe kituuka,</para>
+  <para style="q2">tavaayo mu lubuto.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:14 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 49:15">Zab 49:15</ref>; <ref loc="EZK 37:12-13">Ez 37:12-13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 15:55">1Ko 15:55</ref>*</char>
+    </note>“Ndibanunulayo mu maanyi g’emagombe,</para>
+  <para style="q2">era ndibalokola mu kufa.</para>
+  <para style="q1">Ggwe kufa, endwadde zo ziri ludda wa?</para>
+  <para style="q2">Ggwe Magombe, okuzikiriza kwo kuli ludda wa?</para>
+  <para style="b"/>
+  <para style="q1">“Sirimusaasira,</para>
+  <para style="q2">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:15 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 10:1">Kos 10:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 19:12">Ez 19:12</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 51:36">Yer 51:36</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 20:5">Yer 20:5</ref>
+      </char>
+    </note>ne bw’anaakulaakulana mu baganda be.</para>
+  <para style="q1">Empewo ey’ebuvanjuba erijja okuva eri <char style="nd">Mukama</char>,</para>
+  <para style="q2">ng’eva mu ddungu,</para>
+  <para style="q1">n’ensulo ze ne zikalira,</para>
+  <para style="q2">n’oluzzi lwe ne lukalira.</para>
+  <para style="q1">Eggwanika lye lirinyagibwa,</para>
+  <para style="q2">eby’omuwendo byonna ne bitwalibwa.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:16 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 10:2">Kos 10:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 7:14">Kos 7:14</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 11:6">Kos 11:6</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 8:12">2Bk 8:12</ref>; <ref loc="HOS 10:14">Kos 10:14</ref> </char>
+      <char style="xo" closed="false">e </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 15:16">2Bk 15:16</ref>; <ref loc="ISA 13:16">Is 13:16</ref></char>
+    </note>Abantu b’e Samaliya balivunaanibwa omusango gwabwe</para>
+  <para style="q2">kubanga bajeemedde Katonda waabwe.</para>
+  <para style="q1">Balittibwa n’ekitala, n’abaana baabwe abato balibetentebwa,</para>
+  <para style="q2">n’abakyala baabwe abali embuto balibaagibwa.”</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">Okwenenya Kuleeta Omukisa</para>
+  <para style="q1">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 5:5">Kos 5:5</ref>
+      </char>
+    </note>Mudde eri <char style="nd">Mukama</char> Katonda wammwe, ggwe Isirayiri.</para>
+  <para style="q2">Ebibi byammwe bye bibaleetedde okugwa.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:2 a </char>
+      <char style="xt" closed="false">
+        <ref loc="MIC 7:18-19">Mi 7:18-19</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 13:15">Beb 13:15</ref>
+      </char>
+    </note>Mudde eri <char style="nd">Mukama</char></para>
+  <para style="q2">nga mwogera ebigambo bino nti,</para>
+  <para style="q1">“Tusonyiwe ebibi byaffe byonna,</para>
+  <para style="q2">otwanirize n’ekisa,</para>
+  <para style="q2">bwe tutyo tunaawaayo ebibala by’akamwa kaffe, ng’ebiweebwayo eby’ente ennume.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:3 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 33:17">Zab 33:17</ref>; <ref loc="ISA 31:1">Is 31:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 8:6">Kos 8:6</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 10:14">Zab 10:14</ref>; <ref loc="PSA 68:5">68:5</ref></char>
+    </note>Obwasuli tebusobola kutulokola;</para>
+  <para style="q2">Tetujja kwebagala mbalaasi ez’omu ntalo.</para>
+  <para style="q1">Tetuliddayo kwogera nate nti, ‘Bakatonda baffe,’</para>
+  <para style="q2">nga twogera ku bintu bye twekoledde n’emikono gyaffe,</para>
+  <para style="q2">kubanga mu ggwe, bamulekwa mwe bajja okusaasirwa.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:4 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 6:1">Kos 6:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ZEP 3:17">Zef 3:17</ref>
+      </char>
+    </note>Ndibalekesaayo empisa zaabwe embi,</para>
+  <para style="q2">ne mbaagala awatali kye mbasalidde kya kusasula.</para>
+  <para style="q2">Kubanga obusungu bwange butanudde okubavaako.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:5 a </char>
+      <char style="xt" closed="false">
+        <ref loc="SNG 2:1">Lu 2:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 35:2">Is 35:2</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 29:19">Yob 29:19</ref>
+      </char>
+    </note>Ndifaanana ng’omusulo eri Isirayiri:</para>
+  <para style="q2">alimulisa ng’eddanga,</para>
+  <para style="q1">era alisimba emirandira ng’emivule gy’e Lebanooni.</para>
+  <para style="q2">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:6 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 52:8">Zab 52:8</ref>; <ref loc="JER 11:16">Yer 11:16</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="SNG 4:11">Lu 4:11</ref>
+      </char>
+    </note>Amatabi ge amato galikula;</para>
+  <para style="q1">n’obulungi bwe buliba ng’omuzeyituuni,</para>
+  <para style="q2">n’akaloosa ke kaliba ng’akaloosa k’omuvule gw’e Lebanooni.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:7 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 91:1-4">Zab 91:1-4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 2:22">Kos 2:22</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="EZK 17:23">Ez 17:23</ref>
+      </char>
+    </note>Abantu balibeera nate wansi w’ekisiikirize kye,</para>
+  <para style="q2">era alibala ng’emmere ey’empeke.</para>
+  <para style="q1">Alimulisa ng’omuzabbibu,</para>
+  <para style="q2">era alyatiikirira nga wayini ow’e Lebanooni.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:8 </char>
+      <char style="xt" closed="false">nny 3</char>
+    </note>Ggwe Efulayimu mugabo ki gwe nnina mu bakatonda bo?</para>
+  <para style="q2">Ndimwanukula ne mulabirira.</para>
+  <para style="q1">Nninga omuberosi omugimu, era n’ebibala byo biva mu nze.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:9 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 107:43">Zab 107:43</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 10:29">Nge 10:29</ref>; <ref loc="ISA 1:28">Is 1:28</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 111:7-8">Zab 111:7-8</ref>; <ref loc="ZEP 3:5">Zef 3:5</ref>; <ref loc="ACT 13:10">Bik 13:10</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 26:7">Is 26:7</ref>
+      </char>
+    </note>Abalina amagezi bategeera ensonga zino,</para>
+  <para style="q2">era abakabakaba balibimanya.</para>
+  <para style="q1">Amakuba ga <char style="nd">Mukama</char> matuufu,</para>
+  <para style="q2">n’abatuukirivu bagatambuliramu,</para>
+  <para style="q2">naye abajeemu bageesittaliramu.</para>
+</usx>

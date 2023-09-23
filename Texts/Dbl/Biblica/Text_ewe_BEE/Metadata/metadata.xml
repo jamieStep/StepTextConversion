@@ -1,0 +1,374 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata id="d2cd998b3ecd4fb7" revision="5" version="2.1">
+  <identification>
+    <name>Ewé Contemporary Version</name>
+    <nameLocal>Agbenya La</nameLocal>
+    <description>Éwé: Agbenya La (Bible)</description>
+    <abbreviation>BEV</abbreviation>
+    <abbreviationLocal>EAL</abbreviationLocal>
+    <scope>Bible</scope>
+    <dateCompleted>2003-12-01</dateCompleted>
+    <bundleProducer>Paratext/8.0.100.50</bundleProducer>
+    <systemId type="paratext">
+      <id>3951049b0e0748d3992ef3eb2f3e5b529e6d282d</id>
+      <csetId>71d2580c752ca9d0508602f97060e4fca0290092</csetId>
+      <name>eweAL06</name>
+      <fullName>Ewé Contemporary Version</fullName>
+    </systemId>
+    <systemId type="ptreg">
+      <id>J7bkKHKxNTXRPKHEL</id>
+    </systemId>
+  </identification>
+  <type>
+    <medium>text</medium>
+    <isConfidential>false</isConfidential>
+    <hasCharacters>true</hasCharacters>
+    <isTranslation>true</isTranslation>
+    <isExpression>true</isExpression>
+    <translationType>Revision</translationType>
+    <audience>Basic</audience>
+  </type>
+  <relationships />
+  <agencies>
+    <rightsHolder>
+      <abbr>Biblica</abbr>
+      <url>http://www.Biblica.com</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsHolder>
+    <rightsAdmin>
+      <url>http://www.Biblica.com</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsAdmin>
+    <contributor>
+      <content>true</content>
+      <publication>true</publication>
+      <management>true</management>
+      <finance>true</finance>
+      <qa>true</qa>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </contributor>
+  </agencies>
+  <language>
+    <iso>ewe</iso>
+    <name>Ewe</name>
+    <nameLocal>eʋegbe</nameLocal>
+    <script>Latin</script>
+    <scriptCode>Latn</scriptCode>
+    <scriptDirection>LTR</scriptDirection>
+    <ldml>ee</ldml>
+    <numerals>Arabic</numerals>
+  </language>
+  <countries>
+    <country>
+      <iso>GH</iso>
+      <name>Ghana</name>
+    </country>
+  </countries>
+  <format>
+    <versedParagraphs>false</versedParagraphs>
+  </format>
+  <names>
+    <name id="book-mat">
+      <abbr>Mat</abbr>
+      <short>Mateo</short>
+      <long>Nyanyui La Abe Ale Si Mateo Ŋlɔe Ene</long>
+    </name>
+    <name id="book-mrk">
+      <abbr>Mk</abbr>
+      <short>Marko</short>
+      <long>Nyanyui La Abe Ale Si Mateo Ŋlɔe Ene</long>
+    </name>
+    <name id="book-luk">
+      <abbr>Luka</abbr>
+      <short>Luka</short>
+      <long>Nyanyui La Abe Ale Si Mateo Ŋlɔe Ene</long>
+    </name>
+    <name id="book-jhn">
+      <abbr>Yoh</abbr>
+      <short>Yohanes</short>
+      <long>Nyanyui La Abe Ale Si Mateo Ŋlɔe Ene</long>
+    </name>
+    <name id="book-act">
+      <abbr>Apd</abbr>
+      <short>Apostolowoƒe Dɔwɔwɔwo</short>
+      <long>Apostolowo Ƒe Dɔwɔwɔwo Ƒe Agbalẽa</long>
+    </name>
+    <name id="book-rom">
+      <abbr>Rom</abbr>
+      <short>Romatɔwo</short>
+      <long>Paulo Ƒe Agbalẽ Si Wòŋlɔ Na Romatɔwo</long>
+    </name>
+    <name id="book-1co">
+      <abbr>1Kor</abbr>
+      <short>1 Korintotɔwo</short>
+      <long>Paulo Ƒe Agbalẽ Gbãtɔ Si Wòŋlɔ Na Korintotɔwo</long>
+    </name>
+    <name id="book-2co">
+      <abbr>2Kor</abbr>
+      <short>2 Korintotɔwo</short>
+      <long>Paulo Ƒe Agbalẽ Evelia Si Woŋlɔ Na Korintotɔwo</long>
+    </name>
+    <name id="book-gal">
+      <abbr>Gal</abbr>
+      <short>Galatiatɔwo</short>
+      <long>Apostolo Paulo Ƒe Agbalẽ Si Wòŋlɔ Na Galatiatɔwo</long>
+    </name>
+    <name id="book-eph">
+      <abbr>Ef</abbr>
+      <short>Efesotɔwo</short>
+      <long>Apostolo Paulo Ƒe Agbalẽ Si Wòŋlɔ Na Efesotɔwo</long>
+    </name>
+    <name id="book-php">
+      <abbr>Fil</abbr>
+      <short>Filipitɔwo</short>
+      <long>Paulo Ƒe Agbalẽ Si Wòŋlɔ Na Filipitɔwo</long>
+    </name>
+    <name id="book-col">
+      <abbr>Kol</abbr>
+      <short>Kolosetɔwo</short>
+      <long>Paulo Ƒe Agbalẽ Si Wòŋlɔ Na Kolosetɔwo</long>
+    </name>
+    <name id="book-1th">
+      <abbr>1Tes</abbr>
+      <short>1 Tesalonikatɔwo</short>
+      <long>Paulo Ƒe Agbalẽ Gbãtɔ Si Woŋlɔ Na Tesalonikatɔwo</long>
+    </name>
+    <name id="book-2th">
+      <abbr>2Tes</abbr>
+      <short>2 Tesalonikatɔwo</short>
+      <long>Paulo Ƒe Agbalẽ Evelia Si Wòŋlɔ Na Tesalonikatɔwo</long>
+    </name>
+    <name id="book-1ti">
+      <abbr>1Tim</abbr>
+      <short>1 Timoteo</short>
+      <long>Paulo Ƒe Agbalẽ Gbãtɔ Si Wòŋlɔ Na Timoteo</long>
+    </name>
+    <name id="book-2ti">
+      <abbr>2Tim</abbr>
+      <short>2 Timoteo</short>
+      <long>Paulo Ƒe Agbalẽ Gbãtɔ Si Wòŋlɔ Na Timoteo</long>
+    </name>
+    <name id="book-tit">
+      <abbr>Tito</abbr>
+      <short>Tito</short>
+      <long>Paulo Ƒe Agbalẽ Si Wòŋlɔ Na Tito</long>
+    </name>
+    <name id="book-phm">
+      <abbr>Flm</abbr>
+      <short>Filemon</short>
+      <long>Paulo Ƒe Agbalẽ Si Wòŋlɔ Na Filemon</long>
+    </name>
+    <name id="book-heb">
+      <abbr>Hebr</abbr>
+      <short>Hebritɔwo</short>
+      <long>Hebritɔwo Ƒe Agbalẽ</long>
+    </name>
+    <name id="book-jas">
+      <abbr>Yak</abbr>
+      <short>Yakobo</short>
+      <long>Yakobo Ƒe Agbalẽ</long>
+    </name>
+    <name id="book-1pe">
+      <abbr>1Pet</abbr>
+      <short>1 Petro</short>
+      <long>Petro Ƒe Agbalẽ Gbãtɔ</long>
+    </name>
+    <name id="book-2pe">
+      <abbr>2Pet</abbr>
+      <short>2 Petro</short>
+      <long>Petro Ƒe Agbalẽ Evelia</long>
+    </name>
+    <name id="book-1jn">
+      <abbr>1Yoh</abbr>
+      <short>1 Yohanes</short>
+      <long>Yohanes Ƒe Agbalẽ Gbãtɔ</long>
+    </name>
+    <name id="book-2jn">
+      <abbr>2Yoh</abbr>
+      <short>2 Yohanes</short>
+      <long>Yohanes Ƒe Agbalẽ Evelia</long>
+    </name>
+    <name id="book-3jn">
+      <abbr>3Yoh</abbr>
+      <short>3 Yohanes</short>
+      <long>Yohanes Ƒe Agbalẽ Etɔ̃lia</long>
+    </name>
+    <name id="book-jud">
+      <abbr>Yud</abbr>
+      <short>Yuda</short>
+      <long>Yuda Ƒe Agbalẽ</long>
+    </name>
+    <name id="book-rev">
+      <abbr>Nyaɖ</abbr>
+      <short>Nyaɖeɖefia</short>
+      <long>Nyaɖeɖefia Ƒe Agbalẽ</long>
+    </name>
+  </names>
+  <manifest>
+    <container uri="release">
+      <container uri="USX_1">
+        <resource checksum="f59f99d50339b1337f563b3c18930152" mimeType="application/xml" size="96178" uri="1CO.usx" />
+        <resource checksum="944d62e3ab26552ba71ce6a2d522c051" mimeType="application/xml" size="20630" uri="1JN.usx" />
+        <resource checksum="cfadc8ca9fc633e5b652b8fad67c19a4" mimeType="application/xml" size="21549" uri="1PE.usx" />
+        <resource checksum="6514b932ac12637139f35c5b488ced33" mimeType="application/xml" size="19296" uri="1TH.usx" />
+        <resource checksum="d3f4a0d158b3afb8d15cc5039474c2bf" mimeType="application/xml" size="24426" uri="1TI.usx" />
+        <resource checksum="f505fa9dbda79cfc98a44c660f7d9f79" mimeType="application/xml" size="63320" uri="2CO.usx" />
+        <resource checksum="0057e37331543153e8a3ad5227afface" mimeType="application/xml" size="3515" uri="2JN.usx" />
+        <resource checksum="9b4290663340880fe0c844dc653d5519" mimeType="application/xml" size="13948" uri="2PE.usx" />
+        <resource checksum="855c424a008e87b018d032cbef8585a6" mimeType="application/xml" size="11346" uri="2TH.usx" />
+        <resource checksum="f4b829e680164bae55769b2829041464" mimeType="application/xml" size="18024" uri="2TI.usx" />
+        <resource checksum="54fa0e2c5ee827af63534ae874067dc6" mimeType="application/xml" size="4073" uri="3JN.usx" />
+        <resource checksum="115598e15d434a29728ced416ee97ded" mimeType="application/xml" size="205813" uri="ACT.usx" />
+        <resource checksum="461b1697e7fe2e6c6eecec018768fce9" mimeType="application/xml" size="21112" uri="COL.usx" />
+        <resource checksum="451cd266826c701ef7d47b0861a55f97" mimeType="application/xml" size="32584" uri="EPH.usx" />
+        <resource checksum="129091270b525044a1218b90d06262f7" mimeType="application/xml" size="32460" uri="GAL.usx" />
+        <resource checksum="d66cf7117780ad031ab46d78b6ee06f6" mimeType="application/xml" size="59700" uri="HEB.usx" />
+        <resource checksum="adfcd81d325f9d39ecfe288f7af12b41" mimeType="application/xml" size="19881" uri="JAS.usx" />
+        <resource checksum="7501caecd1b37ca68cc5068a78007fd2" mimeType="application/xml" size="163721" uri="JHN.usx" />
+        <resource checksum="327d42a2f78f4101613c4d8e1e310852" mimeType="application/xml" size="7004" uri="JUD.usx" />
+        <resource checksum="f924c46cc150dcd421cbda4c601b12b2" mimeType="application/xml" size="231167" uri="LUK.usx" />
+        <resource checksum="41c98552ab6dab88f739f49448060eac" mimeType="application/xml" size="215447" uri="MAT.usx" />
+        <resource checksum="60220f8180fd21660a9faf070f36843a" mimeType="application/xml" size="142344" uri="MRK.usx" />
+        <resource checksum="edc25ac9b638b67b42b018a355f84fa4" mimeType="application/xml" size="5331" uri="PHM.usx" />
+        <resource checksum="a3fcc2bba4122db900c58cec2f42fefa" mimeType="application/xml" size="22605" uri="PHP.usx" />
+        <resource checksum="d9876d4f00a0989df0048942a2220f72" mimeType="application/xml" size="87290" uri="REV.usx" />
+        <resource checksum="a38f245462082189edfe4f7011c3aaa9" mimeType="application/xml" size="93498" uri="ROM.usx" />
+        <resource checksum="d9460bfe9a124c6e23591816bdebd1b1" mimeType="application/xml" size="10900" uri="TIT.usx" />
+      </container>
+      <resource checksum="0dc4db83eac160b90dc139e094b797fa" mimeType="application/xml" size="3915" uri="ewe_ee.ldml" />
+      <resource checksum="7e815bdc32750c0eadfa1a08aa310e6b" mimeType="application/xml" size="81964" uri="styles.xml" />
+      <resource checksum="9e8f24de0991188d55cebfa147aaf280" mimeType="text/plain" size="15482" uri="versification.vrs" />
+    </container>
+    <container uri="source">
+      <resource checksum="1ac847646e124a056b264741cc6b669d" mimeType="application/zip" size="4066169" uri="source.zip" />
+    </container>
+  </manifest>
+  <source>
+    <canonicalContent>
+      <book code="1CO" />
+      <book code="1JN" />
+      <book code="1PE" />
+      <book code="1TH" />
+      <book code="1TI" />
+      <book code="2CO" />
+      <book code="2JN" />
+      <book code="2PE" />
+      <book code="2TH" />
+      <book code="2TI" />
+      <book code="3JN" />
+      <book code="ACT" />
+      <book code="COL" />
+      <book code="EPH" />
+      <book code="GAL" />
+      <book code="HEB" />
+      <book code="JAS" />
+      <book code="JHN" />
+      <book code="JUD" />
+      <book code="LUK" />
+      <book code="MAT" />
+      <book code="MRK" />
+      <book code="PHM" />
+      <book code="PHP" />
+      <book code="REV" />
+      <book code="ROM" />
+      <book code="TIT" />
+    </canonicalContent>
+    <structure>
+      <content role="sourceZip" src="source/source.zip" />
+    </structure>
+  </source>
+  <publications>
+    <publication default="true" id="p1">
+      <name>Biblica Éwé New Testament</name>
+      <nameLocal>Biblica Éwé New Testament</nameLocal>
+      <description>New Testament</description>
+      <descriptionLocal>New Testament</descriptionLocal>
+      <abbreviation>BEE</abbreviation>
+      <abbreviationLocal>BEE</abbreviationLocal>
+      <canonicalContent>
+        <book code="1CO" />
+        <book code="1JN" />
+        <book code="1PE" />
+        <book code="1TH" />
+        <book code="1TI" />
+        <book code="2CO" />
+        <book code="2JN" />
+        <book code="2PE" />
+        <book code="2TH" />
+        <book code="2TI" />
+        <book code="3JN" />
+        <book code="ACT" />
+        <book code="COL" />
+        <book code="EPH" />
+        <book code="GAL" />
+        <book code="HEB" />
+        <book code="JAS" />
+        <book code="JHN" />
+        <book code="JUD" />
+        <book code="LUK" />
+        <book code="MAT" />
+        <book code="MRK" />
+        <book code="PHM" />
+        <book code="PHP" />
+        <book code="REV" />
+        <book code="ROM" />
+        <book code="TIT" />
+      </canonicalContent>
+      <structure>
+        <content name="book-mat" role="MAT" src="release/USX_1/MAT.usx" />
+        <content name="book-mrk" role="MRK" src="release/USX_1/MRK.usx" />
+        <content name="book-luk" role="LUK" src="release/USX_1/LUK.usx" />
+        <content name="book-jhn" role="JHN" src="release/USX_1/JHN.usx" />
+        <content name="book-act" role="ACT" src="release/USX_1/ACT.usx" />
+        <content name="book-rom" role="ROM" src="release/USX_1/ROM.usx" />
+        <content name="book-1co" role="1CO" src="release/USX_1/1CO.usx" />
+        <content name="book-2co" role="2CO" src="release/USX_1/2CO.usx" />
+        <content name="book-gal" role="GAL" src="release/USX_1/GAL.usx" />
+        <content name="book-eph" role="EPH" src="release/USX_1/EPH.usx" />
+        <content name="book-php" role="PHP" src="release/USX_1/PHP.usx" />
+        <content name="book-col" role="COL" src="release/USX_1/COL.usx" />
+        <content name="book-1th" role="1TH" src="release/USX_1/1TH.usx" />
+        <content name="book-2th" role="2TH" src="release/USX_1/2TH.usx" />
+        <content name="book-1ti" role="1TI" src="release/USX_1/1TI.usx" />
+        <content name="book-2ti" role="2TI" src="release/USX_1/2TI.usx" />
+        <content name="book-tit" role="TIT" src="release/USX_1/TIT.usx" />
+        <content name="book-phm" role="PHM" src="release/USX_1/PHM.usx" />
+        <content name="book-heb" role="HEB" src="release/USX_1/HEB.usx" />
+        <content name="book-jas" role="JAS" src="release/USX_1/JAS.usx" />
+        <content name="book-1pe" role="1PE" src="release/USX_1/1PE.usx" />
+        <content name="book-2pe" role="2PE" src="release/USX_1/2PE.usx" />
+        <content name="book-1jn" role="1JN" src="release/USX_1/1JN.usx" />
+        <content name="book-2jn" role="2JN" src="release/USX_1/2JN.usx" />
+        <content name="book-3jn" role="3JN" src="release/USX_1/3JN.usx" />
+        <content name="book-jud" role="JUD" src="release/USX_1/JUD.usx" />
+        <content name="book-rev" role="REV" src="release/USX_1/REV.usx" />
+      </structure>
+    </publication>
+  </publications>
+  <copyright>
+    <fullStatement>
+      <statementContent type="xhtml">
+        <p>Agbenya La (Holy Bible, Ewé Contemporary Version)</p>
+        <p>Copyright © 1988, 2006 by Biblica, Inc.®</p>
+        <p>Used by permission of Biblica, Inc.® All rights reserved worldwide.</p>
+      </statementContent>
+    </fullStatement>
+  </copyright>
+  <promotion>
+    <promoVersionInfo contentType="xhtml">
+      <p>Biblica is the worldwide publisher and translation sponsor of the New International Version – one of the most widely read contemporary English versions of the Bible.</p>
+      <p> </p>
+      <p>At Biblica, we believe that with God, all things are possible. Partnering with other ministries and people like you, we are reaching the world with God’s Word, providing Bibles that are easier to understand and faster to receive. When God’s Word is put into someone’s hands, it has the power to change everything.</p>
+      <p> </p>
+      <p>To learn more, visit <a href="http://biblica.com">biblica.com</a> and <a href="http://facebook.com/Biblica">facebook.com/Biblica</a>.</p>
+    </promoVersionInfo>
+  </promotion>
+  <archiveStatus>
+    <archivistName>Kent Spielmann</archivistName>
+    <dateArchived>2013-12-31T21:17:59.312756</dateArchived>
+    <dateUpdated>2018-03-03T01:41:05.896693</dateUpdated>
+    <comments>Errata corrections. Version and Metadata update</comments>
+  </archiveStatus>
+</DBLMetadata>

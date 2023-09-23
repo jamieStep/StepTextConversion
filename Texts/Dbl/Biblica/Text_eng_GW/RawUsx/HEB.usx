@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<usx version="3.0">
+  <book code="HEB" style="id">- God’s Word Bible</book>
+  <para style="ide">UTF-8</para>
+  <para style="rem">© 1995, 2003, 2013, 2014, 2019, 2020 by God’s Word to the Nations Mission Society. All rights reserved.</para>
+  <para style="rem">Converted from InDesign files to USFM-3 by Elbert Boot (Digital Bible Library Customer Service Team, Miami [USA])</para>
+  <para style="rem">Language: English</para>
+  <para style="rem">This project has 9 poetry levels, and Paratext only supports up to 4 levels. To upload the text to DBL, we have created a dblChanges file and added q5 to q9 to a custom.sty to obtain the desired design in Paratext.</para>
+  <para style="h">HEBREWS</para>
+  <para style="toc1">Hebrews</para>
+  <para style="toc2">Hebrews</para>
+  <para style="toc3">Hebrews</para>
+  <para style="mt1">Hebrews</para>
+  <chapter number="1" style="c" sid="HEB 1" />
+  <para style="s1">God Has Spoken to Us Through His Son</para>
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 1:1" />In the past God spoke to our ancestors at many different times and in many different ways through the prophets. <verse eid="HEB 1:1" /><verse number="2" style="v" sid="HEB 1:2" />In these last days he has spoken to us through his Son. God made his Son responsible for everything. His Son is the one through whom God made the universe. <verse eid="HEB 1:2" /><verse number="3" style="v" sid="HEB 1:3" />His Son is the reflection of God’s glory and the exact likeness of God’s being. He holds everything together through his powerful words. After he had cleansed people from their sins, he now holds the honored position—the one next to the majestic God [the Father] on the heavenly throne.<verse eid="HEB 1:3" /></para>
+  <para style="s1">God’s Son Is Superior to the Angels</para>
+  <para style="m">
+    <verse number="4" style="v" sid="HEB 1:4" />The Son has become greater than the angels since he has been given a name that is superior to theirs. <verse eid="HEB 1:4" /><verse number="5" style="v" sid="HEB 1:5" />God never said to any of his angels,</para>
+  <para style="b" vid="HEB 1:5" />
+  <para style="q1" vid="HEB 1:5">“You are my Son.</para>
+  <para style="q1" vid="HEB 1:5">Today I have become your Father.”</para>
+  <para style="b" vid="HEB 1:5" />
+  <para style="m" vid="HEB 1:5">And God never said to any of his angels,</para>
+  <para style="b" vid="HEB 1:5" />
+  <para style="q1" vid="HEB 1:5">“I will be his Father,</para>
+  <para style="q1" vid="HEB 1:5">and he will be my Son.”<verse eid="HEB 1:5" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="6" style="v" sid="HEB 1:6" />When God was about to send his firstborn Son into the world, he said,</para>
+  <para style="b" vid="HEB 1:6" />
+  <para style="q1" vid="HEB 1:6">“All of God’s angels must worship him.”<verse eid="HEB 1:6" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="7" style="v" sid="HEB 1:7" />God said about the angels,</para>
+  <para style="b" vid="HEB 1:7" />
+  <para style="q1" vid="HEB 1:7">“He makes his messengers winds.</para>
+  <para style="q1" vid="HEB 1:7">He makes his servants flames of fire.”<verse eid="HEB 1:7" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="8" style="v" sid="HEB 1:8" />But God said about his Son,</para>
+  <para style="b" vid="HEB 1:8" />
+  <para style="q1" vid="HEB 1:8">“Your throne, O God, is forever and ever.</para>
+  <para style="q1" vid="HEB 1:8">The scepter in your kingdom is a scepter for justice.<verse eid="HEB 1:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HEB 1:9" />You have loved what is right and hated what is wrong.</para>
+  <para style="q1" vid="HEB 1:9">That is why God, your God,</para>
+  <para style="q1" vid="HEB 1:9">anointed you, rather than your companions, with the oil of joy.”<verse eid="HEB 1:9" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="10" style="v" sid="HEB 1:10" />God also said,</para>
+  <para style="b" vid="HEB 1:10" />
+  <para style="q1" vid="HEB 1:10">“Lord, in the beginning you laid the foundation of the earth.</para>
+  <para style="q1" vid="HEB 1:10">With your own hands you made the heavens.<verse eid="HEB 1:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HEB 1:11" />They will come to an end, but you will live forever.</para>
+  <para style="q1" vid="HEB 1:11">They will all wear out like clothes.<verse eid="HEB 1:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HEB 1:12" />They will be taken off like a coat.</para>
+  <para style="q1" vid="HEB 1:12">You will change them like clothes.</para>
+  <para style="q1" vid="HEB 1:12">But you remain the same, and your life will never end.<verse eid="HEB 1:12" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="13" style="v" sid="HEB 1:13" />But God never said to any of the angels,</para>
+  <para style="b" vid="HEB 1:13" />
+  <para style="q1" vid="HEB 1:13">“Take the honored position—the one next to me on the heavenly throne</para>
+  <para style="q1" vid="HEB 1:13">until I put your enemies under your control.”<verse eid="HEB 1:13" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="14" style="v" sid="HEB 1:14" />What are all the angels? They are spirits sent to serve those who are going to receive salvation.<verse eid="HEB 1:14" /></para>
+  <chapter eid="HEB 1" />
+  <chapter number="2" style="c" sid="HEB 2" />
+  <para style="s1">Everything Is under Jesus’ Control</para>
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 2:1" />For this reason we must pay closer attention to what we have heard. Then we won’t drift away <char style="add">⌞from the truth⌟</char>. <verse eid="HEB 2:1" /><verse number="2" style="v" sid="HEB 2:2" />After all, the message that the angels brought was reliable, and every violation and act of disobedience was properly punished. <verse eid="HEB 2:2" /><verse number="3" style="v" sid="HEB 2:3" />So how will we escape punishment if we reject the important message, the message that God saved us? First, the Lord told this saving message. Then those who heard him confirmed that message. <verse eid="HEB 2:3" /><verse number="4" style="v" sid="HEB 2:4" />God verified what they said through miraculous signs, amazing things, other powerful acts, and with other gifts from the Holy Spirit as he wanted.<verse eid="HEB 2:4" /></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 2:5" />He didn’t put the world that will come (about which we are talking) under the angels’ control. <verse eid="HEB 2:5" /><verse number="6" style="v" sid="HEB 2:6" />Instead, someone has declared this somewhere in Scripture:</para>
+  <para style="b" vid="HEB 2:6" />
+  <para style="q1" vid="HEB 2:6">“What is a mortal that you should remember him,</para>
+  <para style="q1" vid="HEB 2:6">or the Son of Man <note caller="+" style="f"><char style="fr" closed="false">2:6 </char><char style="ft" closed="false">“</char><char style="fk" closed="false">Son of Man</char><char style="ft" closed="false">” is a name for Jesus. It shows that he was not only God’s Son but also human. Some believe “son of man” here refers to humans in general.</char></note> that you take care of him?<verse eid="HEB 2:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HEB 2:7" />You made him a little lower than the angels.</para>
+  <para style="q1" vid="HEB 2:7">You crowned him with glory and honor.<verse eid="HEB 2:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HEB 2:8" />You put everything under his control.”</para>
+  <para style="b" vid="HEB 2:8" />
+  <para style="m" vid="HEB 2:8">When God put everything under his Son’s control, nothing was left out.</para>
+  <para style="p" vid="HEB 2:8">However, at the present time we still don’t see everything under his Son’s control. <verse eid="HEB 2:8" /><verse number="9" style="v" sid="HEB 2:9" />Jesus was made a little lower than the angels, but we see him crowned with glory and honor because he suffered death. Through God’s kindness <note caller="+" style="f"><char style="fr" closed="false">2:9 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“grace.”</char></note> he died on behalf of everyone. <verse eid="HEB 2:9" /><verse number="10" style="v" sid="HEB 2:10" />God is the one for whom and through whom everything exists. Therefore, while God was bringing many sons and daughters to glory, it was the right time to bring Jesus, the source of their salvation, to the end of his work through suffering.<verse eid="HEB 2:10" /></para>
+  <para style="s1">Jesus Became One of Us to Help Us</para>
+  <para style="m">
+    <verse number="11" style="v" sid="HEB 2:11" />Jesus, who makes people holy, and all those who are made holy have the same Father. That is why Jesus isn’t ashamed to call them brothers and sisters. <verse eid="HEB 2:11" /><verse number="12" style="v" sid="HEB 2:12" />He says,</para>
+  <para style="b" vid="HEB 2:12" />
+  <para style="q1" vid="HEB 2:12">“I will tell my people about your name.</para>
+  <para style="q1" vid="HEB 2:12">I will praise you within the congregation.”<verse eid="HEB 2:12" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="13" style="v" sid="HEB 2:13" />In addition, Jesus says,</para>
+  <para style="b" vid="HEB 2:13" />
+  <para style="q1" vid="HEB 2:13">“I will trust him.”</para>
+  <para style="b" vid="HEB 2:13" />
+  <para style="m" vid="HEB 2:13">And Jesus says,</para>
+  <para style="b" vid="HEB 2:13" />
+  <para style="q1" vid="HEB 2:13">“I am here with the sons and daughters God has given me.”<verse eid="HEB 2:13" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="14" style="v" sid="HEB 2:14" />Since all of these sons and daughters have flesh and blood, Jesus took on flesh and blood to be like them. He did this so that by dying he would destroy the one who had power over death (that is, the devil). <verse eid="HEB 2:14" /><verse number="15" style="v" sid="HEB 2:15" />In this way he would free those who were slaves all their lives because they were afraid of dying. <verse eid="HEB 2:15" /><verse number="16" style="v" sid="HEB 2:16" />So Jesus helps Abraham’s descendants rather than helping angels. <verse eid="HEB 2:16" /><verse number="17" style="v" sid="HEB 2:17" />Therefore, he had to become like his brothers and sisters so that he could be merciful. He became like them so that he could serve as a faithful chief priest in God’s presence and make peace with God for their sins. <verse eid="HEB 2:17" /><verse number="18" style="v" sid="HEB 2:18" />Because Jesus experienced temptation when he suffered, he is able to help others when they are tempted.<verse eid="HEB 2:18" /></para>
+  <chapter eid="HEB 2" />
+  <chapter number="3" style="c" sid="HEB 3" />
+  <para style="s1">Christ Is Superior to Moses</para>
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 3:1" />Brothers and sisters, you are holy partners in a heavenly calling. So look carefully at Jesus, the apostle and chief priest about whom we make our declaration of faith. <verse eid="HEB 3:1" /><verse number="2" style="v" sid="HEB 3:2" />Jesus is faithful to God, who appointed him, in the same way that Moses was faithful when he served in God’s house. <verse eid="HEB 3:2" /><verse number="3" style="v" sid="HEB 3:3" />Jesus deserves more praise than Moses in the same way that the builder of a house is praised more than the house. <verse eid="HEB 3:3" /><verse number="4" style="v" sid="HEB 3:4" />After all, every house has a builder, but the builder of everything is God.<verse eid="HEB 3:4" /></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 3:5" />Moses was a faithful servant in God’s household. He told <char style="add">⌞the people⌟</char> what God would say in the future. <verse eid="HEB 3:5" /><verse number="6" style="v" sid="HEB 3:6" />But Christ is a faithful son in charge of God’s household. We are his household if we continue to have courage and to be proud of the confidence we have.<verse eid="HEB 3:6" /></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 3:7" />As the Holy Spirit says,</para>
+  <para style="b" vid="HEB 3:7" />
+  <para style="q1" vid="HEB 3:7">“If you hear God speak today, don’t be stubborn.<verse eid="HEB 3:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="HEB 3:8" />Don’t be stubborn like those who rebelled</para>
+  <para style="q1" vid="HEB 3:8">and tested me in the desert.<verse eid="HEB 3:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HEB 3:9" />That is where your ancestors tested me,<verse eid="HEB 3:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HEB 3:10" />although they had seen what I had done for 40 years.</para>
+  <para style="q1" vid="HEB 3:10">That is why I was angry with those people. So I said,</para>
+  <para style="q1" vid="HEB 3:10">‘Their hearts continue to stray,</para>
+  <para style="q1" vid="HEB 3:10">and they have not learned my ways.’<verse eid="HEB 3:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HEB 3:11" />So I angrily took a solemn oath</para>
+  <para style="q1" vid="HEB 3:11">that they would never enter my place of rest.”<verse eid="HEB 3:11" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="12" style="v" sid="HEB 3:12" />Be careful, brothers and sisters, that none of you ever develop a wicked, unbelieving heart that turns away from the living God. <verse eid="HEB 3:12" /><verse number="13" style="v" sid="HEB 3:13" />Encourage each other every day while you have the opportunity. If you do this, none of you will be deceived by sin and become stubborn. <verse eid="HEB 3:13" /><verse number="14" style="v" sid="HEB 3:14" />After all, we will remain Christ’s partners only if we continue to hold on to our original confidence until the end.<verse eid="HEB 3:14" /></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 3:15" />Scripture says,</para>
+  <para style="b" vid="HEB 3:15" />
+  <para style="q1" vid="HEB 3:15">“If you hear God speak today, don’t be stubborn.</para>
+  <para style="q1" vid="HEB 3:15">Don’t be stubborn like those who rebelled.”<verse eid="HEB 3:15" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="16" style="v" sid="HEB 3:16" />Who heard God and rebelled? All those whom Moses led out of Egypt rebelled. <verse eid="HEB 3:16" /><verse number="17" style="v" sid="HEB 3:17" />With whom was God angry for 40 years? He was angry with those who sinned and died in the desert. <verse eid="HEB 3:17" /><verse number="18" style="v" sid="HEB 3:18" />Who did God swear would never enter his place of rest? He was talking about those who didn’t obey him. <verse eid="HEB 3:18" /><verse number="19" style="v" sid="HEB 3:19" />So we see that they couldn’t enter his place of rest because they didn’t believe.<verse eid="HEB 3:19" /></para>
+  <chapter eid="HEB 3" />
+  <chapter number="4" style="c" sid="HEB 4" />
+  <para style="s1">We Will Enter God’s Place of Rest</para>
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 4:1" />God’s promise that we may enter his place of rest still stands. We are afraid that some of you think you won’t enter his place of rest. <verse eid="HEB 4:1" /><verse number="2" style="v" sid="HEB 4:2" />We have heard the same Good News that your ancestors heard. But the message didn’t help those who heard it in the past because they didn’t believe.<verse eid="HEB 4:2" /></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 4:3" />We who believe are entering that place of rest. As God said, “So I angrily took a solemn oath that they would never enter my place of rest.” God said this even though he had finished his work when he created the world. <verse eid="HEB 4:3" /><verse number="4" style="v" sid="HEB 4:4" />Somewhere in Scripture God has said this about the seventh day: “On the seventh day God rested from all his work.”<verse eid="HEB 4:4" /></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 4:5" />God also said in the same passage, “They will never enter my place of rest.” <verse eid="HEB 4:5" /><verse number="6" style="v" sid="HEB 4:6" />However, some people enter that place of rest. Those who heard the Good News in the past did not enter God’s place of rest because they did not obey God. <verse eid="HEB 4:6" /><verse number="7" style="v" sid="HEB 4:7" />So God set another day. That day is today. Many years after <char style="add">⌞your ancestors failed to enter that place of rest⌟</char> God spoke about it through David in the passage already quoted: “If you hear God speak today, don’t be stubborn.” <verse eid="HEB 4:7" /><verse number="8" style="v" sid="HEB 4:8" />If Joshua had given the people rest, God would not have spoken about another day. <verse eid="HEB 4:8" /><verse number="9" style="v" sid="HEB 4:9" />Therefore, a time of eternal rest exists for God’s people. <verse eid="HEB 4:9" /><verse number="10" style="v" sid="HEB 4:10" />Those who entered his place of rest also rest from their work as God did from his.<verse eid="HEB 4:10" /></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 4:11" />So we must make every effort to enter that place of rest. Then no one will be lost by following the example of those who refused to obey.<verse eid="HEB 4:11" /></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 4:12" />God’s word is living and active. It is sharper than any two-edged sword and cuts as deep as the place where soul and spirit meet, the place where joints and marrow meet. God’s word judges a person’s thoughts and intentions. <verse eid="HEB 4:12" /><verse number="13" style="v" sid="HEB 4:13" />No creature can hide from God. Everything is uncovered and exposed for him to see. We must answer to him.<verse eid="HEB 4:13" /></para>
+  <para style="s1">Christ Is Superior to Other Chief Priests</para>
+  <para style="m">
+    <verse number="14" style="v" sid="HEB 4:14" />We need to hold on to our declaration of faith: We have a superior chief priest who has gone through the heavens. That person is Jesus, the Son of God. <verse eid="HEB 4:14" /><verse number="15" style="v" sid="HEB 4:15" />We have a chief priest who is able to sympathize with our weaknesses. He was tempted in every way that we are, but he didn’t sin. <verse eid="HEB 4:15" /><verse number="16" style="v" sid="HEB 4:16" />So we can go confidently to the throne of God’s kindness <note caller="+" style="f"><char style="fr" closed="false">4:16 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“grace.”</char></note> to receive mercy and find kindness, which will help us at the right time.<verse eid="HEB 4:16" /></para>
+  <chapter eid="HEB 4" />
+  <chapter number="5" style="c" sid="HEB 5" />
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 5:1" />Every chief priest is chosen from humans to represent them in front of God, that is, to offer gifts and sacrifices for sin. <verse eid="HEB 5:1" /><verse number="2" style="v" sid="HEB 5:2" />The chief priest can be gentle with people who are ignorant and easily deceived, because he also has weaknesses. <verse eid="HEB 5:2" /><verse number="3" style="v" sid="HEB 5:3" />Because he has weaknesses, he has to offer sacrifices for his own sins in the same way that he does for the sins of his people.<verse eid="HEB 5:3" /></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 5:4" />No one takes this honor for himself. Instead, God calls him as he called Aaron. <verse eid="HEB 5:4" /><verse number="5" style="v" sid="HEB 5:5" />So Christ did not take the glory of being a chief priest for himself. Instead, the glory was given to him by God, who said,</para>
+  <para style="b" vid="HEB 5:5" />
+  <para style="q1" vid="HEB 5:5">“You are my Son.</para>
+  <para style="q1" vid="HEB 5:5">Today I have become your Father.”<verse eid="HEB 5:5" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="6" style="v" sid="HEB 5:6" />In another place in Scripture, God said,</para>
+  <para style="b" vid="HEB 5:6" />
+  <para style="q1" vid="HEB 5:6">“You are a priest forever,</para>
+  <para style="q1" vid="HEB 5:6">in the way Melchizedek was a priest.”<verse eid="HEB 5:6" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="7" style="v" sid="HEB 5:7" />During his life on earth, Jesus prayed to God, who could save him from death. He prayed and pleaded with loud crying and tears, and he was heard because of his devotion to God. <verse eid="HEB 5:7" /><verse number="8" style="v" sid="HEB 5:8" />Although Jesus was the Son <char style="add">⌞of God⌟</char>, he learned to be obedient through his sufferings. <verse eid="HEB 5:8" /><verse number="9" style="v" sid="HEB 5:9" />After he had finished his work, he became the source of eternal salvation for everyone who obeys him. <verse eid="HEB 5:9" /><verse number="10" style="v" sid="HEB 5:10" />God appointed him chief priest in the way Melchizedek was a priest.<verse eid="HEB 5:10" /></para>
+  <para style="s1">You Need Someone to Teach You</para>
+  <para style="m">
+    <verse number="11" style="v" sid="HEB 5:11" />We have a lot to explain about this. But since you have become too lazy to pay attention, explaining it to you is hard. <verse eid="HEB 5:11" /><verse number="12" style="v" sid="HEB 5:12" />By now you should be teachers. Instead, you still need someone to teach you the elementary truths of God’s word. You need milk, not solid food. <verse eid="HEB 5:12" /><verse number="13" style="v" sid="HEB 5:13" />All those who live on milk lack the experience to talk about what is right. They are still babies. <verse eid="HEB 5:13" /><verse number="14" style="v" sid="HEB 5:14" />However, solid food is for mature people, whose minds are trained by practice to know the difference between good and evil.<verse eid="HEB 5:14" /></para>
+  <chapter eid="HEB 5" />
+  <chapter number="6" style="c" sid="HEB 6" />
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 6:1" />With this in mind, we should stop going over the elementary truths about Christ and move on to topics for more mature people. We shouldn’t repeat the basics about turning away from the useless things we did and the basics about faith in God. <verse eid="HEB 6:1" /><verse number="2" style="v" sid="HEB 6:2" />We shouldn’t repeat the basic teachings about such things as baptisms, setting people apart for holy tasks, dead people coming back to life, and eternal judgment. <verse eid="HEB 6:2" /><verse number="3" style="v" sid="HEB 6:3" />If God permits, we will do this.<verse eid="HEB 6:3" /></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 6:4" />Some people once had God’s light. They experienced the heavenly gift and shared in the Holy Spirit. <verse eid="HEB 6:4" /><verse number="5" style="v" sid="HEB 6:5" />They experienced the goodness of God’s word and the powers of the world to come. <verse eid="HEB 6:5" /><verse number="6" style="v" sid="HEB 6:6" />Yet, they have deserted <char style="add">⌞Christ⌟</char>. They are crucifying the Son of God again and publicly disgracing him. Therefore, they cannot be led a second time to God.<verse eid="HEB 6:6" /></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 6:7" />God blesses the earth. So rain often falls on it, and it produces useful crops for farmers. <verse eid="HEB 6:7" /><verse number="8" style="v" sid="HEB 6:8" />However, if the earth produces thorns and thistles, it is worthless and in danger of being cursed. In the end it will be burned.<verse eid="HEB 6:8" /></para>
+  <para style="s1">God Will Not Forget You</para>
+  <para style="m">
+    <verse number="9" style="v" sid="HEB 6:9" />Dear friends, even though we say these things, we are still convinced that better things are in store for you and that they will save you. <verse eid="HEB 6:9" /><verse number="10" style="v" sid="HEB 6:10" />God is fair. He won’t forget what you’ve done or the love you’ve shown for him. You helped his holy people, and you continue to help them. <verse eid="HEB 6:10" /><verse number="11" style="v" sid="HEB 6:11" />We want each of you to prove that you’re working hard so that you will remain confident until the end. <verse eid="HEB 6:11" /><verse number="12" style="v" sid="HEB 6:12" />Then, instead of being lazy, you will imitate those who are receiving the promises through faith and patience.<verse eid="HEB 6:12" /></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 6:13" />God made a promise to Abraham. Since he had no one greater on whom to base his oath, he based it on himself. <verse eid="HEB 6:13" /><verse number="14" style="v" sid="HEB 6:14" />He said, “I will certainly bless you and give you many descendants.” <verse eid="HEB 6:14" /><verse number="15" style="v" sid="HEB 6:15" />So Abraham received what God promised because he waited patiently for it.<verse eid="HEB 6:15" /></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 6:16" />When people take oaths, they base their oaths on someone greater than themselves. Their oaths guarantee what they say and end all arguments. <verse eid="HEB 6:16" /><verse number="17" style="v" sid="HEB 6:17" />God wouldn’t change his plan. He wanted to make this perfectly clear to those who would receive his promise, so he took an oath. <verse eid="HEB 6:17" /><verse number="18" style="v" sid="HEB 6:18" />God did this so that we would be encouraged. God cannot lie when he takes an oath or makes a promise. These two things can never be changed. Those of us who have taken refuge in him hold on to the confidence we have been given. <verse eid="HEB 6:18" /><verse number="19" style="v" sid="HEB 6:19" />We have this confidence as a sure and strong anchor for our lives. This confidence goes into the <char style="add">⌞holy⌟</char> place behind the curtain <verse eid="HEB 6:19" /><verse number="20" style="v" sid="HEB 6:20" />where Jesus went before us on our behalf. He has become the chief priest forever in the way Melchizedek was a priest.<verse eid="HEB 6:20" /></para>
+  <chapter eid="HEB 6" />
+  <chapter number="7" style="c" sid="HEB 7" />
+  <para style="s1">Christ Is Superior to Melchizedek</para>
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 7:1" />Melchizedek was king of Salem and priest of the Most High God. He met Abraham and blessed him when Abraham was returning from defeating the kings. <verse eid="HEB 7:1" /><verse number="2" style="v" sid="HEB 7:2" />Abraham gave Melchizedek a tenth of everything he had captured.</para>
+  <para style="p" vid="HEB 7:2">In the first place, Melchizedek’s name means king of God’s approval. He is also called king of Salem (which means king of peace). <verse eid="HEB 7:2" /><verse number="3" style="v" sid="HEB 7:3" />No one knows anything about Melchizedek’s father, mother, or ancestors. No one knows when he was born or when he died. Like the Son of God, Melchizedek continues to be a priest forever.<verse eid="HEB 7:3" /></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 7:4" />You can see how important Melchizedek was. Abraham gave him a tenth of what he had captured, even though Abraham was the father of the chosen people. <verse eid="HEB 7:4" /><verse number="5" style="v" sid="HEB 7:5" />Moses’ Teachings say that members of the tribe of Levi who become priests must receive a tenth of everything from the people. The priests collect it from their own people, Abraham’s descendants. <verse eid="HEB 7:5" /><verse number="6" style="v" sid="HEB 7:6" />Although Melchizedek was not from the tribe of Levi, he received a tenth of everything from Abraham. Then Melchizedek blessed Abraham, who had God’s promises. <verse eid="HEB 7:6" /><verse number="7" style="v" sid="HEB 7:7" />No one can deny that the more important person blesses the less important person.<verse eid="HEB 7:7" /></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 7:8" />Priests receive a tenth of everything, but they die. Melchizedek received a tenth of everything, but we are told that he lives. <verse eid="HEB 7:8" /><verse number="9" style="v" sid="HEB 7:9" />We could even say that when Abraham gave Melchizedek a tenth of everything, Levi was giving a tenth of everything. Levi gave, although later his descendants would receive a tenth of everything. <verse eid="HEB 7:9" /><verse number="10" style="v" sid="HEB 7:10" />Even though Levi had not yet been born, he was in the body of Abraham when Melchizedek met him.<verse eid="HEB 7:10" /></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 7:11" />The people established the Levitical priesthood based on instructions they received. If the work of the Levitical priests had been perfect, we wouldn’t need to speak about another kind of priest. However, we speak about another kind of priest, a priest like Melchizedek, not a Levitical priest like Aaron.<verse eid="HEB 7:11" /></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 7:12" />When a different kind of priesthood is established, the regulations for those priests are different. <verse eid="HEB 7:12" /><verse number="13" style="v" sid="HEB 7:13" />The priest whom we are talking about was a member of a different tribe. No one from that tribe ever served as a priest at the altar. <verse eid="HEB 7:13" /><verse number="14" style="v" sid="HEB 7:14" />Everyone knows that our Lord came from the tribe of Judah. Moses never said anything about priests coming from that tribe. <verse eid="HEB 7:14" /><verse number="15" style="v" sid="HEB 7:15" />The regulations were different. This became clear when a different priest who is like Melchizedek appeared. <verse eid="HEB 7:15" /><verse number="16" style="v" sid="HEB 7:16" />That person is a priest, not because he met human requirements, but because he has power that comes from a life that cannot be destroyed. <verse eid="HEB 7:16" /><verse number="17" style="v" sid="HEB 7:17" />The Scriptures say the following about him: “You are a priest forever, in the way Melchizedek was a priest.” <verse eid="HEB 7:17" /><verse number="18" style="v" sid="HEB 7:18" />The former requirements are rejected because they are weak and useless. <verse eid="HEB 7:18" /><verse number="19" style="v" sid="HEB 7:19" />Moses’ Teachings couldn’t accomplish everything that God required. But we have something else that gives us greater confidence and allows us to approach God.<verse eid="HEB 7:19" /></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 7:20" />None of this happened without an oath. The men from the tribe of Levi may have become priests without an oath, <verse eid="HEB 7:20" /><verse number="21" style="v" sid="HEB 7:21" />but Jesus became a priest when God took an oath. God said about him, “The Lord has taken an oath and will not change his mind. You are a priest forever.” <verse eid="HEB 7:21" /><verse number="22" style="v" sid="HEB 7:22" />In this way Jesus has become the guarantee of a better promise.<note caller="+" style="f"><char style="fr" closed="false">7:22 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“covenant.”</char></note><verse eid="HEB 7:22" /></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 7:23" />There was a long succession of priests because when a priest died he could no longer serve. <verse eid="HEB 7:23" /><verse number="24" style="v" sid="HEB 7:24" />But Jesus lives forever, so he serves as a priest forever. <verse eid="HEB 7:24" /><verse number="25" style="v" sid="HEB 7:25" />That is why he is always able to save those who come to God through him. He can do this because he always lives and intercedes for them.<verse eid="HEB 7:25" /></para>
+  <para style="p">
+    <verse number="26" style="v" sid="HEB 7:26" />We need a chief priest who is holy, innocent, pure, set apart from sinners, and who holds the honored position—the one next to God the Father on the heavenly throne. <verse eid="HEB 7:26" /><verse number="27" style="v" sid="HEB 7:27" />We need a priest who doesn’t have to bring daily sacrifices as those chief priests did. First they brought sacrifices for their own sins, and then they brought sacrifices for the sins of the people. Jesus brought the sacrifice for the sins of the people once and for all when he sacrificed himself. <verse eid="HEB 7:27" /><verse number="28" style="v" sid="HEB 7:28" />Moses’ Teachings designated mortals as chief priests even though they had weaknesses. But God’s promise, which came after Moses’ Teachings, designated the Son who forever accomplished everything that God required.<verse eid="HEB 7:28" /></para>
+  <chapter eid="HEB 7" />
+  <chapter number="8" style="c" sid="HEB 8" />
+  <para style="s1">Jesus’ Priestly Work Is Superior to Other Priests’ Work</para>
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 8:1" />The main point we want to make is this: We do have this kind of chief priest. This chief priest holds the honored position—the one next to the majestic God [the Father] on the heavenly throne. <verse eid="HEB 8:1" /><verse number="2" style="v" sid="HEB 8:2" />He serves as priest of the holy place and of the true tent set up by the Lord and not by any human.<verse eid="HEB 8:2" /></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 8:3" />Every chief priest is appointed to offer gifts and sacrifices. Therefore, this chief priest had to offer something. <verse eid="HEB 8:3" /><verse number="4" style="v" sid="HEB 8:4" />If he were on earth, he would not even be a priest. On earth <char style="add">⌞other⌟</char> priests offer gifts by following the instructions that Moses gave. <verse eid="HEB 8:4" /><verse number="5" style="v" sid="HEB 8:5" />They serve at a place that is a pattern, a shadow, of what is in heaven. When Moses was about to make the tent, God warned him, “Be sure to make everything based on the plan I showed you on the mountain.”<verse eid="HEB 8:5" /></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 8:6" />Jesus has been given a priestly work that is superior to the Levitical priests’ work. He also brings a better promise <note caller="+" style="f"><char style="fr" closed="false">8:6 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“covenant.”</char></note> from God that is based on better guarantees. <verse eid="HEB 8:6" /><verse number="7" style="v" sid="HEB 8:7" />If nothing had been wrong with the first promise, no one would look for another one. <verse eid="HEB 8:7" /><verse number="8" style="v" sid="HEB 8:8" />But God found something wrong with his people and said to them,</para>
+  <para style="b" vid="HEB 8:8" />
+  <para style="mi" vid="HEB 8:8">“The days are coming, says the Lord, when I will make a new promise to Israel and Judah. <verse eid="HEB 8:8" /><verse number="9" style="v" sid="HEB 8:9" />It will not be like the promise that I made to their ancestors when I took them by the hand and brought them out of Egypt. They rejected that promise, so I ignored them, says the Lord. <verse eid="HEB 8:9" /><verse number="10" style="v" sid="HEB 8:10" />But this is the promise that I will make to Israel after those days, says the Lord: I will put my teachings inside them, and I will write those teachings on their hearts. I will be their God, and they will be my people. <verse eid="HEB 8:10" /><verse number="11" style="v" sid="HEB 8:11" />No longer will each person teach his neighbors or his relatives by saying, ‘Know the Lord.’ All of them from the least important to the most important will all know me <verse eid="HEB 8:11" /><verse number="12" style="v" sid="HEB 8:12" />because I will forgive their wickedness and I will no longer hold their sins against them.”<verse eid="HEB 8:12" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="13" style="v" sid="HEB 8:13" />God made this new promise and showed that the first promise was outdated. What is outdated and aging will soon disappear.<verse eid="HEB 8:13" /></para>
+  <chapter eid="HEB 8" />
+  <chapter number="9" style="c" sid="HEB 9" />
+  <para style="s1">Christ Offered a Superior Sacrifice</para>
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 9:1" />The first promise had rules for the priests’ service. It also had a holy place on earth. <verse eid="HEB 9:1" /><verse number="2" style="v" sid="HEB 9:2" />A tent was set up. The first part of this tent was called the holy place. The lamp stand, the table, and the bread of the presence were in this part of the tent. <verse eid="HEB 9:2" /><verse number="3" style="v" sid="HEB 9:3" />Behind the second curtain was the part of the tent called the most holy place. <verse eid="HEB 9:3" /><verse number="4" style="v" sid="HEB 9:4" />It contained the gold incense burner and the ark of the Lord’s promise. The ark was completely covered with gold. In the ark were the gold jar filled with manna, Aaron’s staff that had blossomed, and the tablets on which the promise <note caller="+" style="f"><char style="fr" closed="false">9:4 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“covenant.”</char></note> was written. <verse eid="HEB 9:4" /><verse number="5" style="v" sid="HEB 9:5" />Above the ark were the angels <note caller="+" style="f"><char style="fr" closed="false">9:5 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“cherubim.”</char></note> of glory <char style="add">⌞with their wings⌟</char> overshadowing the throne of mercy. (Discussing these things in detail isn’t possible now.)<verse eid="HEB 9:5" /></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 9:6" />That is how these two parts of the tent were set up. The priests always went into the first part of the tent to perform their duties. <verse eid="HEB 9:6" /><verse number="7" style="v" sid="HEB 9:7" />But only the chief priest went into the second part of the tent. Once a year he entered and brought blood that he offered for himself and for the things that the people did wrong unintentionally. <verse eid="HEB 9:7" /><verse number="8" style="v" sid="HEB 9:8" />The Holy Spirit used this to show that the way into the most holy place was not open while the tent was still in use.<verse eid="HEB 9:8" /></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 9:9" />The first part of the tent is an example for the present time. The gifts and sacrifices that were brought there could not give the worshiper a clear conscience. <verse eid="HEB 9:9" /><verse number="10" style="v" sid="HEB 9:10" />These gifts and sacrifices were meant to be food, drink, and items used in various purification ceremonies. These ceremonies were required for the body until God would establish a new way of doing things.<verse eid="HEB 9:10" /></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 9:11" />But Christ came as a chief priest of the good things that are now here. Christ went through a better, more perfect tent that was not made by human hands and that is not part of this created world. <verse eid="HEB 9:11" /><verse number="12" style="v" sid="HEB 9:12" />He used his own blood, not the blood of goats and bulls, for the sacrifice. He went into the most holy place and offered this sacrifice once and for all to free us forever.<verse eid="HEB 9:12" /></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 9:13" />The blood of goats and bulls and the ashes of cows sprinkled on unclean <note caller="+" style="f"><char style="fr" closed="false">9:13 </char><char style="ft" closed="false">“</char><char style="fk" closed="false">Unclean</char><char style="ft" closed="false">” refers to anything that Moses’ Teachings say is not presentable to God.</char></note> people made their bodies holy and clean. <verse eid="HEB 9:13" /><verse number="14" style="v" sid="HEB 9:14" />The blood of Christ, who had no defect, does even more. Through the eternal Spirit he offered himself to God and cleansed our consciences from the useless things we had done. Now we can serve the living God.<verse eid="HEB 9:14" /></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 9:15" />Because Christ offered himself to God, he is able to bring a new promise from God. Through his death he paid the price to set people free from the sins they committed under the first promise. He did this so that those who are called can be guaranteed an inheritance that will last forever.<verse eid="HEB 9:15" /></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 9:16" />In order for a will to take effect, it must be shown that the one who made it has died. <verse eid="HEB 9:16" /><verse number="17" style="v" sid="HEB 9:17" />A will is used only after a person is dead because it goes into effect only when a person dies.<verse eid="HEB 9:17" /></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 9:18" />That is why even the first promise was made with blood. <verse eid="HEB 9:18" /><verse number="19" style="v" sid="HEB 9:19" />As Scripture tells us, Moses told all the people every commandment. Then he took the blood of calves and goats together with some water, red yarn, and hyssop and sprinkled the scroll and all the people. <verse eid="HEB 9:19" /><verse number="20" style="v" sid="HEB 9:20" />He said, “Here is the blood that seals the promise God has made to you.” <verse eid="HEB 9:20" /><verse number="21" style="v" sid="HEB 9:21" />In the same way, Moses sprinkled blood on the tent and on everything used in worship. <verse eid="HEB 9:21" /><verse number="22" style="v" sid="HEB 9:22" />As Moses’ Teachings tell us, blood was used to cleanse almost everything, because if no blood is shed, no sins can be forgiven.<verse eid="HEB 9:22" /></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 9:23" />The copies of the things in heaven had to be cleansed by these sacrifices. But the heavenly things themselves had to be cleansed by better sacrifices. <verse eid="HEB 9:23" /><verse number="24" style="v" sid="HEB 9:24" />Christ didn’t go into a holy place made by human hands. He didn’t go into a model of the real thing. Instead, he went into heaven to appear in God’s presence on our behalf. <verse eid="HEB 9:24" /><verse number="25" style="v" sid="HEB 9:25" />Every year the chief priest went into the holy place to make a sacrifice with blood that isn’t his own. However, Christ didn’t go into heaven to sacrifice himself again and again. <verse eid="HEB 9:25" /><verse number="26" style="v" sid="HEB 9:26" />Otherwise, he would have had to suffer many times since the world was created. But now, at the end of the ages, he has appeared once to remove sin by his sacrifice. <verse eid="HEB 9:26" /><verse number="27" style="v" sid="HEB 9:27" />People die once, and after that they are judged. <verse eid="HEB 9:27" /><verse number="28" style="v" sid="HEB 9:28" />Likewise, Christ was sacrificed once to take away the sins of humanity, and after that he will appear a second time. This time he will not deal with sin, but he will save those who eagerly wait for him.<verse eid="HEB 9:28" /></para>
+  <chapter eid="HEB 9" />
+  <chapter number="10" style="c" sid="HEB 10" />
+  <para style="s1">We Can Enter the Most Holy Place because of Christ’s Superior Work</para>
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 10:1" />Moses’ Teachings with their yearly cycle of sacrifices are only a shadow of the good things in the future. They aren’t an exact likeness of those things. They can never make those who worship perfect. <verse eid="HEB 10:1" /><verse number="2" style="v" sid="HEB 10:2" />If these sacrifices could have made the worshipers perfect, the sacrifices would have stopped long ago. Those who worship would have been cleansed once and for all. Their consciences would have been free from sin. <verse eid="HEB 10:2" /><verse number="3" style="v" sid="HEB 10:3" />Instead, this yearly cycle of sacrifices reminded people of their sins. <verse eid="HEB 10:3" /><verse number="4" style="v" sid="HEB 10:4" />(The blood of bulls and goats cannot take away sins.)<verse eid="HEB 10:4" /></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 10:5" />For this reason, when Christ came into the world, he said,</para>
+  <para style="b" vid="HEB 10:5" />
+  <para style="q1" vid="HEB 10:5">“ ‘You did not want sacrifices and offerings,</para>
+  <para style="q1" vid="HEB 10:5">but you prepared a body for me.<verse eid="HEB 10:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HEB 10:6" />You did not approve of burnt offerings and sacrifices for sin.’<verse eid="HEB 10:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HEB 10:7" />Then I said, ‘I have come!</para>
+  <para style="q1" vid="HEB 10:7">(It is written about me in the scroll of the book.)</para>
+  <para style="q1" vid="HEB 10:7">I have come to do what you want, my God.’ ”<verse eid="HEB 10:7" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="8" style="v" sid="HEB 10:8" />In this passage Christ first said, “You did not want sacrifices, offerings, burnt offerings, and sacrifices for sin. You did not approve of them.” (These are the sacrifices that Moses’ Teachings require people to offer.) <verse eid="HEB 10:8" /><verse number="9" style="v" sid="HEB 10:9" />Then Christ says, “I have come to do what you want.” He did away with sacrifices in order to establish the obedience that God wants. <verse eid="HEB 10:9" /><verse number="10" style="v" sid="HEB 10:10" />We have been set apart as holy because Jesus Christ did what God wanted him to do by sacrificing his body once and for all.<verse eid="HEB 10:10" /></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 10:11" />Every day each priest performed his religious duty. He offered the same type of sacrifice again and again. Yet, these sacrifices could never take away sins. <verse eid="HEB 10:11" /><verse number="12" style="v" sid="HEB 10:12" />However, this chief priest made one sacrifice for sins, and this sacrifice lasts forever. Now he holds the honored position—the one next to God the Father on the heavenly throne. <verse eid="HEB 10:12" /><verse number="13" style="v" sid="HEB 10:13" />Since that time, he has been waiting for his enemies to be made his footstool. <verse eid="HEB 10:13" /><verse number="14" style="v" sid="HEB 10:14" />With one sacrifice he accomplished the work of setting them apart for God forever.<verse eid="HEB 10:14" /></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 10:15" />The Holy Spirit tells us the same thing: <verse eid="HEB 10:15" /><verse number="16" style="v" sid="HEB 10:16" />“This is the promise <note caller="+" style="f"><char style="fr" closed="false">10:16 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“covenant.”</char></note> that I will make to them after those days, says the Lord: ‘I will put my teachings in their hearts and write them in their minds.’ ”<verse eid="HEB 10:16" /></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 10:17" />Then he adds, “I will no longer hold their sins and their disobedience against them.”<verse eid="HEB 10:17" /></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 10:18" />When sins are forgiven, there is no longer any need to sacrifice for sins.<verse eid="HEB 10:18" /></para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 10:19" />Brothers and sisters, because of the blood of Jesus we can now confidently go into the holy place. <verse eid="HEB 10:19" /><verse number="20" style="v" sid="HEB 10:20" />Jesus has opened a new and living way for us to go through the curtain. (The curtain is his own body.) <verse eid="HEB 10:20" /><verse number="21" style="v" sid="HEB 10:21" />We have a superior priest in charge of God’s house. <verse eid="HEB 10:21" /><verse number="22" style="v" sid="HEB 10:22" />We have been sprinkled <char style="add">⌞with his blood⌟</char> to free us from a guilty conscience, and our bodies have been washed with clean water. So we must continue to come <char style="add">⌞to him⌟</char> with a sincere heart and strong faith. <verse eid="HEB 10:22" /><verse number="23" style="v" sid="HEB 10:23" />We must continue to hold firmly to our declaration of faith. The one who made the promise is faithful.<verse eid="HEB 10:23" /></para>
+  <para style="s1">Encourage Each Other</para>
+  <para style="m">
+    <verse number="24" style="v" sid="HEB 10:24" />We must also consider how to encourage each other to show love and to do good things. <verse eid="HEB 10:24" /><verse number="25" style="v" sid="HEB 10:25" />We should not stop gathering together with other believers, as some of you are doing. Instead, we must continue to encourage each other even more as we see the day of the Lord coming.<verse eid="HEB 10:25" /></para>
+  <para style="p">
+    <verse number="26" style="v" sid="HEB 10:26" />If we go on sinning after we have learned the truth, no sacrifice can take away our sins. <verse eid="HEB 10:26" /><verse number="27" style="v" sid="HEB 10:27" />All that is left is a terrifying wait for judgment and a raging fire that will consume God’s enemies. <verse eid="HEB 10:27" /><verse number="28" style="v" sid="HEB 10:28" />If two or three witnesses accused someone of rejecting Moses’ Teachings, that person was shown no mercy as he was executed. <verse eid="HEB 10:28" /><verse number="29" style="v" sid="HEB 10:29" />What do you think a person who shows no respect for the Son of God deserves? That person looks at the blood of the promise (the blood that made him holy) as no different from other people’s blood, and he insults the Spirit that God gave us out of his kindness.<note caller="+" style="f"><char style="fr" closed="false">10:29 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“grace.”</char></note> He deserves a much worse punishment. <verse eid="HEB 10:29" /><verse number="30" style="v" sid="HEB 10:30" />We know the God who said,</para>
+  <para style="b" vid="HEB 10:30" />
+  <para style="q1" vid="HEB 10:30">“I alone have the right to take revenge.</para>
+  <para style="q1" vid="HEB 10:30">I will pay back.”</para>
+  <para style="b" vid="HEB 10:30" />
+  <para style="m" vid="HEB 10:30">God also said,</para>
+  <para style="b" vid="HEB 10:30" />
+  <para style="q1" vid="HEB 10:30">“The Lord will judge his people.”<verse eid="HEB 10:30" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="31" style="v" sid="HEB 10:31" />Falling into the hands of the living God is a terrifying thing.<verse eid="HEB 10:31" /></para>
+  <para style="p">
+    <verse number="32" style="v" sid="HEB 10:32" />Remember the past, when you first learned the truth. You endured a lot of hardship and pain. <verse eid="HEB 10:32" /><verse number="33" style="v" sid="HEB 10:33" />At times you were publicly insulted and mistreated. At times you associated with people who were treated this way. <verse eid="HEB 10:33" /><verse number="34" style="v" sid="HEB 10:34" />You suffered with prisoners. You were cheerful even though your possessions were stolen, since you know that you have a better and more permanent possession.<note caller="+" style="f"><char style="fr" closed="false">10:34 </char><char style="ft" closed="false">Some manuscripts and translations add </char><char style="fqa" closed="false">“in heaven.”</char></note><verse eid="HEB 10:34" /></para>
+  <para style="p">
+    <verse number="35" style="v" sid="HEB 10:35" />So don’t lose your confidence. It will bring you a great reward. <verse eid="HEB 10:35" /><verse number="36" style="v" sid="HEB 10:36" />You need endurance so that after you have done what God wants you to do, you can receive what he has promised.<verse eid="HEB 10:36" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="37" style="v" sid="HEB 10:37" />“Yet, the one who is coming will come soon. He will not delay.<verse eid="HEB 10:37" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="38" style="v" sid="HEB 10:38" />The person who has God’s approval will live by faith.</para>
+  <para style="q1" vid="HEB 10:38">But if he turns back, I will not be pleased with him.”<verse eid="HEB 10:38" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="39" style="v" sid="HEB 10:39" />We don’t belong with those who turn back and are destroyed. Instead, we belong with those who have faith and are saved.<verse eid="HEB 10:39" /></para>
+  <chapter eid="HEB 10" />
+  <chapter number="11" style="c" sid="HEB 11" />
+  <para style="s1">Faith Directed People’s Lives</para>
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 11:1" />Faith assures us of things we expect and convinces us of the existence of things we cannot see. <verse eid="HEB 11:1" /><verse number="2" style="v" sid="HEB 11:2" />God accepted our ancestors because of their faith.<verse eid="HEB 11:2" /></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 11:3" />Faith convinces us that God created the world through his word. This means what can be seen was made by something that could not be seen.<verse eid="HEB 11:3" /></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 11:4" />Faith led Abel to offer God a better sacrifice than Cain’s sacrifice. Through his faith Abel received God’s approval, since God accepted his sacrifices. Through his faith Abel still speaks, even though he is dead.<verse eid="HEB 11:4" /></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 11:5" />Faith enabled Enoch to be taken instead of dying. No one could find him, because God had taken him. Scripture states that before Enoch was taken, God was pleased with him. <verse eid="HEB 11:5" /><verse number="6" style="v" sid="HEB 11:6" />No one can please God without faith. Whoever goes to God must believe that God exists and that he rewards those who seek him.<verse eid="HEB 11:6" /></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 11:7" />Faith led Noah to listen when God warned him about the things in the future that he could not see. He obeyed God and built a ship to save his family. Through faith Noah condemned the world and received God’s approval that comes through faith.<verse eid="HEB 11:7" /></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 11:8" />Faith led Abraham to obey when God called him to go to a place that he would receive as an inheritance. Abraham left his own country without knowing where he was going.<verse eid="HEB 11:8" /></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 11:9" />Faith led Abraham to live as a foreigner in the country that God had promised him. He lived in tents, as did Isaac and Jacob, who received the same promise from God. <verse eid="HEB 11:9" /><verse number="10" style="v" sid="HEB 11:10" />Abraham was waiting for the city that God had designed and built, the city with permanent foundations.<verse eid="HEB 11:10" /></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 11:11" />Faith enabled Abraham to become a father, even though he was old and Sarah had never been able to have children. Abraham trusted that God would keep his promise. <verse eid="HEB 11:11" /><verse number="12" style="v" sid="HEB 11:12" />Abraham was as good as dead. Yet, from this man came descendants as numerous as the stars in the sky and as countless as the grains of sand on the seashore.<verse eid="HEB 11:12" /></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 11:13" />All these people died having faith. They didn’t receive the things that God had promised them, but they saw these things coming in the distant future and rejoiced. They acknowledged that they were living as strangers with no permanent home on earth. <verse eid="HEB 11:13" /><verse number="14" style="v" sid="HEB 11:14" />Those who say such things make it clear that they are looking for their own country. <verse eid="HEB 11:14" /><verse number="15" style="v" sid="HEB 11:15" />If they had been thinking about the country that they had left, they could have found a way to go back. <verse eid="HEB 11:15" /><verse number="16" style="v" sid="HEB 11:16" />Instead, these men were longing for a better country—a heavenly country. That is why God is not ashamed to be called their God. He has prepared a city for them.<verse eid="HEB 11:16" /></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 11:17" />When God tested Abraham, faith led him to offer his son Isaac. Abraham, the one who received the promises from God, was willing to offer his only son as a sacrifice. <verse eid="HEB 11:17" /><verse number="18" style="v" sid="HEB 11:18" />God had said to him, “Through Isaac your descendants will carry on your name.” <verse eid="HEB 11:18" /><verse number="19" style="v" sid="HEB 11:19" />Abraham believed that God could bring Isaac back from the dead. Abraham did receive Isaac back from the dead in a figurative sense.<verse eid="HEB 11:19" /></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 11:20" />Faith led Isaac to bless Jacob and Esau.<verse eid="HEB 11:20" /></para>
+  <para style="p">
+    <verse number="21" style="v" sid="HEB 11:21" />While Jacob was dying, faith led him to bless each of Joseph’s sons. He leaned on the top of his staff and worshiped God.<verse eid="HEB 11:21" /></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 11:22" />While Joseph was dying, faith led him to speak about the Israelites leaving Egypt and give them instructions about burying his bones.<verse eid="HEB 11:22" /></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 11:23" />Faith led Moses’ parents to hide him for three months after he was born. They did this because they saw that Moses was a beautiful baby and they were not afraid to disobey the king’s order.<verse eid="HEB 11:23" /></para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 11:24" />When Moses grew up, faith led him to refuse to be known as a son of Pharaoh’s daughter. <verse eid="HEB 11:24" /><verse number="25" style="v" sid="HEB 11:25" />He chose to suffer with God’s people rather than to enjoy the pleasures of sin for a little while. <verse eid="HEB 11:25" /><verse number="26" style="v" sid="HEB 11:26" />He thought that being insulted for Christ would be better than having the treasures of Egypt. He was looking ahead to his reward.<verse eid="HEB 11:26" /></para>
+  <para style="p">
+    <verse number="27" style="v" sid="HEB 11:27" />Faith led Moses to leave Egypt without being afraid of the king’s anger. Moses didn’t give up but continued as if he could actually see the invisible God.<verse eid="HEB 11:27" /></para>
+  <para style="p">
+    <verse number="28" style="v" sid="HEB 11:28" />Faith led Moses to establish the Passover and spread the blood <char style="add">⌞on the doorposts⌟</char> so that the destroying angel would not kill the firstborn sons.<verse eid="HEB 11:28" /></para>
+  <para style="p">
+    <verse number="29" style="v" sid="HEB 11:29" />Faith caused the people to go through the Red Sea as if it were dry land. The Egyptians also tried this, but they drowned.<verse eid="HEB 11:29" /></para>
+  <para style="p">
+    <verse number="30" style="v" sid="HEB 11:30" />Faith caused the walls of Jericho to fall after the Israelites marched around them for seven days.<verse eid="HEB 11:30" /></para>
+  <para style="p">
+    <verse number="31" style="v" sid="HEB 11:31" />Faith led the prostitute Rahab to welcome the spies as friends. She was not killed with those who refused to obey God.<verse eid="HEB 11:31" /></para>
+  <para style="p">
+    <verse number="32" style="v" sid="HEB 11:32" />What more should I say? I don’t have enough time to tell you about Gideon, Barak, Samson, Jephthah, David, Samuel, and the prophets. <verse eid="HEB 11:32" /><verse number="33" style="v" sid="HEB 11:33" />Through faith they conquered kingdoms, did what God approved, and received what God had promised. They shut the mouths of lions, <verse eid="HEB 11:33" /><verse number="34" style="v" sid="HEB 11:34" />put out raging fires, and escaped death. They found strength when they were weak. They were powerful in battle and defeated other armies. <verse eid="HEB 11:34" /><verse number="35" style="v" sid="HEB 11:35" />Women received their loved ones back from the dead. Other believers were brutally tortured but refused to be released so that they might gain eternal life. <verse eid="HEB 11:35" /><verse number="36" style="v" sid="HEB 11:36" />Some were made fun of and whipped, and some were chained and put in prison. <verse eid="HEB 11:36" /><verse number="37" style="v" sid="HEB 11:37" />Some were stoned to death, sawed in half, and killed with swords. Some wore the skins of sheep and goats. Some were poor, abused, and mistreated. <verse eid="HEB 11:37" /><verse number="38" style="v" sid="HEB 11:38" />The world didn’t deserve these good people. Some wandered around in deserts and mountains and lived in caves and holes in the ground.<verse eid="HEB 11:38" /></para>
+  <para style="p">
+    <verse number="39" style="v" sid="HEB 11:39" />All these people were known for their faith, but none of them received what God had promised. <verse eid="HEB 11:39" /><verse number="40" style="v" sid="HEB 11:40" />God planned to give us something very special so that we would gain eternal life with them.<verse eid="HEB 11:40" /></para>
+  <chapter eid="HEB 11" />
+  <chapter number="12" style="c" sid="HEB 12" />
+  <para style="s1">Faith Directs Our Lives</para>
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 12:1" />Since we are surrounded by so many examples <char style="add">⌞of faith⌟</char>, we must get rid of everything that slows us down, especially sin that distracts us. We must run the race that lies ahead of us and never give up. <verse eid="HEB 12:1" /><verse number="2" style="v" sid="HEB 12:2" />We must focus on Jesus, the source and goal of our faith. He saw the joy ahead of him, so he endured death on the cross and ignored the disgrace it brought him. Now he holds the honored position—the one next to God the Father on the heavenly throne. <verse eid="HEB 12:2" /><verse number="3" style="v" sid="HEB 12:3" />Think about Jesus, who endured opposition from sinners, so that you don’t become tired and give up.<verse eid="HEB 12:3" /></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 12:4" />You struggle against sin, but your struggles haven’t killed you. <verse eid="HEB 12:4" /><verse number="5" style="v" sid="HEB 12:5" />You have forgotten the encouraging words that God speaks to you as his children:</para>
+  <para style="b" vid="HEB 12:5" />
+  <para style="q1" vid="HEB 12:5">“My child, pay attention when the Lord disciplines you.</para>
+  <para style="q1" vid="HEB 12:5">Don’t give up when he corrects you.<verse eid="HEB 12:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HEB 12:6" />The Lord disciplines everyone he loves.</para>
+  <para style="q1" vid="HEB 12:6">He severely disciplines everyone he accepts as his child.”<verse eid="HEB 12:6" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="7" style="v" sid="HEB 12:7" />Endure your discipline. God corrects you as a father corrects his children. All children are disciplined by their fathers. <verse eid="HEB 12:7" /><verse number="8" style="v" sid="HEB 12:8" />If you aren’t disciplined like the other children, you aren’t part of the family. <verse eid="HEB 12:8" /><verse number="9" style="v" sid="HEB 12:9" />On earth we have fathers who disciplined us, and we respect them. Shouldn’t we place ourselves under the authority of God, the father of spirits, so that we will live? <verse eid="HEB 12:9" /><verse number="10" style="v" sid="HEB 12:10" />For a short time our fathers disciplined us as they thought best. Yet, God disciplines us for our own good so that we can become holy like him. <verse eid="HEB 12:10" /><verse number="11" style="v" sid="HEB 12:11" />We don’t enjoy being disciplined. It always seems to cause more pain than joy. But later on, those who learn from that discipline have peace that comes from doing what is right.<verse eid="HEB 12:11" /></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 12:12" />Strengthen your tired arms and weak knees. <verse eid="HEB 12:12" /><verse number="13" style="v" sid="HEB 12:13" />Keep walking along straight paths so that your injured leg won’t get worse. Instead, let it heal.<verse eid="HEB 12:13" /></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 12:14" />Try to live peacefully with everyone, and try to live holy lives, because if you don’t, you will not see the Lord. <verse eid="HEB 12:14" /><verse number="15" style="v" sid="HEB 12:15" />Make sure that everyone has kindness <note caller="+" style="f"><char style="fr" closed="false">12:15 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“grace.”</char></note> from God so that bitterness doesn’t take root and grow up to cause trouble that corrupts many of you. <verse eid="HEB 12:15" /><verse number="16" style="v" sid="HEB 12:16" />Make sure that no one commits sexual sin or is as concerned about earthly things as Esau was. He sold his rights as the firstborn son for a single meal. <verse eid="HEB 12:16" /><verse number="17" style="v" sid="HEB 12:17" />You know that afterwards, when he wanted to receive the blessing that the firstborn son was to receive, he was rejected. Even though he begged and cried for the blessing, he couldn’t do anything to change what had happened.<verse eid="HEB 12:17" /></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 12:18" />You have not come to something that you can feel, to a blazing fire, to darkness, to gloom, to a storm, <verse eid="HEB 12:18" /><verse number="19" style="v" sid="HEB 12:19" />to a trumpet’s blast, and to a voice. When your ancestors heard that voice, they begged not to hear it say another word. <verse eid="HEB 12:19" /><verse number="20" style="v" sid="HEB 12:20" />They couldn’t obey the command that was given, “If even an animal touches the mountain, it must be stoned to death.” <verse eid="HEB 12:20" /><verse number="21" style="v" sid="HEB 12:21" />The sight was so terrifying that even Moses said he was trembling and afraid.<verse eid="HEB 12:21" /></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 12:22" />Instead, you have come to Mount Zion, to the city of the living God, to the heavenly Jerusalem. You have come to tens of thousands of angels joyfully gathered together <verse eid="HEB 12:22" /><verse number="23" style="v" sid="HEB 12:23" />and to the assembly of God’s firstborn children (whose names are written in heaven). You have come to a judge (the God of all people) and to the spirits of people who have God’s approval and have gained eternal life. <verse eid="HEB 12:23" /><verse number="24" style="v" sid="HEB 12:24" />You have come to Jesus, who brings the new promise <note caller="+" style="f"><char style="fr" closed="false">12:24 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“covenant.”</char></note> from God, and to the sprinkled blood that speaks a better message than Abel’s.<verse eid="HEB 12:24" /></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 12:25" />Be careful that you do not refuse to listen when God speaks. Your ancestors didn’t escape when they refused to listen to God, who warned them on earth. We certainly won’t escape if we turn away from God, who warns us from heaven. <verse eid="HEB 12:25" /><verse number="26" style="v" sid="HEB 12:26" />When God spoke to your ancestors, his voice shook the earth. But now he has promised, “Once more I will shake not only the earth but also the sky.”<verse eid="HEB 12:26" /></para>
+  <para style="p">
+    <verse number="27" style="v" sid="HEB 12:27" />The words <char style="it">once more</char> show clearly that God will change what he has made. These are the things that can be shaken. Then only the things that cannot be shaken will remain. <verse eid="HEB 12:27" /><verse number="28" style="v" sid="HEB 12:28" />Therefore, we must be thankful that we have a kingdom that cannot be shaken. Because we are thankful, we must serve God with fear and awe in a way that pleases him. <verse eid="HEB 12:28" /><verse number="29" style="v" sid="HEB 12:29" />After all, our God is a destructive fire.<verse eid="HEB 12:29" /></para>
+  <chapter eid="HEB 12" />
+  <chapter number="13" style="c" sid="HEB 13" />
+  <para style="m">
+    <verse number="1" style="v" sid="HEB 13:1" />Continue to love each other. <verse eid="HEB 13:1" /><verse number="2" style="v" sid="HEB 13:2" />Don’t forget to show hospitality to believers you don’t know. By doing this some believers have shown hospitality to angels without being aware of it. <verse eid="HEB 13:2" /><verse number="3" style="v" sid="HEB 13:3" />Remember those in prison as if you were in prison with them. Remember those who are mistreated as if you were being mistreated.<verse eid="HEB 13:3" /></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 13:4" />Marriage is honorable in every way, so husbands and wives should be faithful to each other. God will judge those who commit sexual sins, especially those who commit adultery.<verse eid="HEB 13:4" /></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 13:5" />Don’t love money. Be happy with what you have because God has said, “I will never abandon you or leave you.” <verse eid="HEB 13:5" /><verse number="6" style="v" sid="HEB 13:6" />So we can confidently say,</para>
+  <para style="b" vid="HEB 13:6" />
+  <para style="q1" vid="HEB 13:6">“The Lord is my helper.</para>
+  <para style="q1" vid="HEB 13:6">I will not be afraid.</para>
+  <para style="q1" vid="HEB 13:6">What can mortals do to me?”<verse eid="HEB 13:6" /></para>
+  <para style="b" />
+  <para style="m">
+    <verse number="7" style="v" sid="HEB 13:7" />Remember your leaders who have spoken God’s word to you. Think about how their lives turned out, and imitate their faith.<verse eid="HEB 13:7" /></para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 13:8" />Jesus Christ is the same yesterday, today, and forever.<verse eid="HEB 13:8" /></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 13:9" />Don’t get carried away by all kinds of unfamiliar teachings. Gaining inner strength from God’s kindness <note caller="+" style="f"><char style="fr" closed="false">13:9 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“grace.”</char></note> is good for us. This strength does not come from following rules about food, rules that don’t help those who follow them. <verse eid="HEB 13:9" /><verse number="10" style="v" sid="HEB 13:10" />Those who serve at the tent have no right to eat what is sacrificed at our altar.<verse eid="HEB 13:10" /></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 13:11" />The chief priest brings the blood of animals into the holy place as an offering for sin. But the bodies of those animals were burned outside the Israelite camp. <verse eid="HEB 13:11" /><verse number="12" style="v" sid="HEB 13:12" />That is why Jesus suffered outside the gates of Jerusalem. He suffered to make the people holy with his own blood. <verse eid="HEB 13:12" /><verse number="13" style="v" sid="HEB 13:13" />So we must go to him outside the camp and endure the insults he endured. <verse eid="HEB 13:13" /><verse number="14" style="v" sid="HEB 13:14" />We don’t have a permanent city here on earth, but we are looking for the city that we will have in the future. <verse eid="HEB 13:14" /><verse number="15" style="v" sid="HEB 13:15" />Through Jesus we should always bring God a sacrifice of praise, that is, words that acknowledge him. <verse eid="HEB 13:15" /><verse number="16" style="v" sid="HEB 13:16" />Don’t forget to do good things for others and to share what you have with them. These are the kinds of sacrifices that please God.<verse eid="HEB 13:16" /></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 13:17" />Obey your leaders, and accept their authority. They take care of you because they are responsible for you. Obey them so that they may do this work joyfully and not complain about you. (Causing them to complain would not be to your advantage.)<verse eid="HEB 13:17" /></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 13:18" />Pray for us. We are sure that our consciences are clear because we want to live honorably in every way. <verse eid="HEB 13:18" /><verse number="19" style="v" sid="HEB 13:19" />I especially ask for your prayers so that I may come back to you soon.<verse eid="HEB 13:19" /></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 13:20" />The God of peace brought the great shepherd of the sheep, our Lord Jesus, back to life through the blood of an eternal promise.<note caller="+" style="f"><char style="fr" closed="false">13:20 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“covenant.”</char></note> <verse eid="HEB 13:20" /><verse number="21" style="v" sid="HEB 13:21" />May this God of peace prepare you to do every good thing he wants. May he work in us through Jesus Christ to do what is pleasing to him. Glory belongs to Jesus Christ forever. Amen.<verse eid="HEB 13:21" /></para>
+  <para style="s1">Farewell</para>
+  <para style="m">
+    <verse number="22" style="v" sid="HEB 13:22" />I urge you, brothers and sisters, to listen patiently to my encouraging words. I have written you a short letter. <verse eid="HEB 13:22" /><verse number="23" style="v" sid="HEB 13:23" />You know that Timothy, our brother, has been freed. If he comes here soon, both of us will visit you.<verse eid="HEB 13:23" /></para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 13:24" />Greet all your leaders and all God’s holy people. Those who are with us from Italy greet you.<verse eid="HEB 13:24" /></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 13:25" />May God’s good will <note caller="+" style="f"><char style="fr" closed="false">13:25 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“grace.”</char></note> be with all of you!<verse eid="HEB 13:25" /></para>
+  <chapter eid="HEB 13" />
+</usx>

@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="ROM" style="id">La Bible du Semeur (The Bible of the Sower)</book>
+  <para style="rem">Copyright © 1992, 1999, 2015 by Biblica, Inc.®</para>
+  <para style="h">ROMAINS</para>
+  <para style="toc1">Lettre aux Romains</para>
+  <para style="toc2">Romains</para>
+  <para style="toc3">Rm</para>
+  <para style="mt1">Lettre aux Romains</para>
+  <para style="imt">Introduction</para>
+  <para style="ip">Par la richesse de son contenu, la lettre de Paul aux Romains occupe une place privilégiée dans la prédication et dans l’histoire de l’Eglise.</para>
+  <para style="ip">Paul vient de terminer la collecte pour les chrétiens de Jérusalem (<char style="xt"><ref loc="ROM 15:22-26">15.22-26</ref></char>) ; il est sur le point de partir pour la Judée (<char style="xt"><ref loc="ACT 20:11">Ac 20.11</ref></char>). La rédaction se situe donc au cours de son troisième voyage missionnaire, pendant les trois mois qu’il passe à Corinthe (entre 56 et 58). Une femme, Phœbé, qui exerce un ministère dans l’Eglise voisine de Cenchrées (à quelques kilomètres de Corinthe), doit porter la lettre à Rome (<char style="xt"><ref loc="ROM 16:1">16.1</ref></char>).</para>
+  <para style="ip">Paul ne s’est encore jamais rendu dans la capitale de l’Empire : il en a toujours été empêché (<char style="xt"><ref loc="ROM 15:20-24">15.20-24</ref></char>), mais il connaît là-bas de nombreux chrétiens de l’Eglise, qu’il a rencontrés ailleurs (et qu’il salue au <char style="xt">chap. <ref loc="ROM 16">16</ref></char>).</para>
+  <para style="ip">Avant la visite qu’il prévoit de leur faire, il leur adresse un exposé ordonné de la doctrine chrétienne du salut, pour que cette Eglise soit solidement fondée dans la foi, inaccessible aux influences des judaïsants, adversaires de l’apôtre, qu’elle grandisse dans l’unité et soit capable de le soutenir par la prière. Le jour où il passera chez eux, elle pourra ainsi constituer son nouveau port d’attache en vue de l’évangélisation de l’Espagne.</para>
+  <para style="ip">Après avoir donné une définition de l’Evangile au premier chapitre : « la puissance de Dieu par laquelle il sauve tous ceux qui croient » (v. 16), Paul l’explique dans son développement.</para>
+  <para style="ip">Il commence par affirmer l’universalité du péché : les non-Juifs sont sans excuse devant Dieu (<char style="xt"><ref loc="ROM 1:18-32">1.18-32</ref></char>), mais aussi les Juifs (<char style="xt"><ref loc="ROM 2:17-29">2.17-29</ref></char>). Si tous les hommes font le mal (<char style="xt"><ref loc="ROM 3:1-20">3.1-20</ref></char>), tous peuvent être déclarés justes par la foi (<char style="xt"><ref loc="ROM 3:21-31">3.21-31</ref></char>). Ainsi le fut Abraham (<char style="xt">chap. <ref loc="ROM 4">4</ref></char>). Les hommes condamnés en Adam ne peuvent être déclarés justes qu’en Christ (<char style="xt">chap. <ref loc="ROM 5">5</ref></char>). Dans les chapitres 6 et 7, Paul répond aux objections des adversaires de l’Evangile. Il clarifie, en particulier, le rôle de la Loi : « sainte » et « bonne », elle a donné à l’homme la connaissance du péché (<char style="xt"><ref loc="ROM 7:1-12">7.1-12</ref></char>), mais c’est le péché, et non la Loi, qui lui fait faire le mal (<char style="xt"><ref loc="ROM 7:13-25">7.13-25</ref></char>). Quant à l’Esprit (<char style="xt">chap. <ref loc="ROM 8">8</ref></char>), il fait de nous des enfants de Dieu et vient à notre secours.</para>
+  <para style="ip">Les chapitres 9 à 11 sont consacrés au sort d’Israël dans le plan du salut divin : la majorité des Juifs ont rejeté l’Evangile (<char style="xt"><ref loc="ROM 9:30-10:20">9.30 à 10.20</ref></char>). Mais Dieu n’a pas rejeté son peuple (<char style="xt">chap. <ref loc="ROM 11">11</ref></char>) et il fait cette mystérieuse promesse : « Tout Israël sera sauvé » (v. 26).</para>
+  <para style="ip">Les chapitres 12 à 15 forment un tout. L’apôtre termine sa lettre par un ensemble de recommandations pratiques sur les relations dans l’Eglise (<char style="xt">12.1-16 ; 13.8 à 15.7</char>) et hors de l’Eglise (<char style="xt"><ref loc="ROM 12:17-13:7">12.17 à 13.7</ref></char>) : elles doivent porter la marque de l’amour.</para>
+  <chapter number="1" style="c" sid="ROM 1"/>
+  <para style="s1">Salutation</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 1:1"/>Cette lettre vous est adressée par Paul, serviteur de Jésus-Christ, qui a été appelé à être apôtre et choisi pour proclamer l’Evangile de Dieu, <verse eid="ROM 1:1"/><verse number="2" style="v" sid="ROM 1:2"/>la Bonne Nouvelle que Dieu avait promise par ses prophètes dans les Saintes Ecritures. <verse eid="ROM 1:2"/><verse number="3" style="v" sid="ROM 1:3"/>Elle parle de son Fils qui, dans son humanité, descend de David, <verse eid="ROM 1:3"/><verse number="4" style="v" sid="ROM 1:4"/>et qui a été institué Fils de Dieu avec puissance lorsque le Saint-Esprit l’a ressuscité<note caller="+" style="f"><char style="fr" closed="false">1.4 </char><char style="ft" closed="false">Certains comprennent : </char><char style="fqa" closed="false">et qui a été déclaré Fils de Dieu.</char></note>, Jésus-Christ, notre Seigneur. <verse eid="ROM 1:4"/><verse number="5" style="v" sid="ROM 1:5"/>Par lui, j’ai reçu la grâce d’être apôtre pour amener, en son nom, des hommes de tous les peuples à lui obéir en croyant. <verse eid="ROM 1:5"/><verse number="6" style="v" sid="ROM 1:6"/>Vous êtes de ceux-là, vous que Jésus-Christ a appelés à lui. <verse eid="ROM 1:6"/><verse number="7" style="v" sid="ROM 1:7"/>Je vous écris, à vous tous qui êtes à Rome les bien-aimés de Dieu, et qui ont été appelés à faire partie du peuple saint.</para>
+  <para style="p" vid="ROM 1:7">Que la grâce et la paix vous soient accordées par Dieu notre Père et par le Seigneur Jésus-Christ.<verse eid="ROM 1:7"/></para>
+  <para style="s1">Paul et les chrétiens de Rome</para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 1:8"/>Tout d’abord, je remercie mon Dieu par Jésus-Christ au sujet de vous tous parce qu’on parle de votre foi dans le monde entier.<verse eid="ROM 1:8"/></para>
+  <para style="p">
+    <verse number="9-10" style="v" sid="ROM 1:9-10"/>Dieu m’en est témoin, lui que je sers de tout mon être en proclamant l’Evangile qui concerne son Fils : dans toutes mes prières, je ne cesse de faire mention de vous à toute occasion et je lui demande de me donner enfin l’occasion de vous rendre visite si telle est sa volonté.<verse eid="ROM 1:9-10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 1:11"/>Car j’ai le vif désir d’aller vous voir pour vous transmettre quelque don de la grâce, par l’Esprit, en vue d’affermir votre foi, <verse eid="ROM 1:11"/><verse number="12" style="v" sid="ROM 1:12"/>ou mieux : pour que, lorsque je serai parmi vous, nous nous encouragions mutuellement, vous et moi, par la foi qui nous est commune.<verse eid="ROM 1:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 1:13"/>Je tiens à ce que vous le sachiez, frères et sœurs : j’ai souvent formé le projet de me rendre chez vous, afin de récolter quelques fruits parmi vous comme je l’ai fait parmi bien d’autres peuples ; mais j’en ai été empêché jusqu’à présent. <verse eid="ROM 1:13"/><verse number="14" style="v" sid="ROM 1:14"/>Je me dois à tous les non-Juifs, civilisés ou non, instruits ou ignorants. <verse eid="ROM 1:14"/><verse number="15" style="v" sid="ROM 1:15"/>Voilà pourquoi je désire aussi vous annoncer l’Evangile, à vous qui êtes à Rome.<verse eid="ROM 1:15"/></para>
+  <para style="s1">Le résumé de l’Evangile</para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 1:16"/>Car je n’ai pas honte de l’Evangile : c’est la puissance de Dieu par laquelle il sauve tous ceux qui croient, les Juifs en premier lieu et aussi les non-Juifs. <verse eid="ROM 1:16"/><verse number="17" style="v" sid="ROM 1:17"/>En effet, cet Evangile nous révèle en quoi consiste la justice que Dieu accorde : elle est reçue par la foi et rien que par la foi<note caller="+" style="f"><char style="fr" closed="false">1.17 </char><char style="ft" closed="false">D’autres comprennent : </char><char style="fqa" closed="false">elle est reçue par la foi et vécue dans la foi, comme il est dit…</char></note>, comme il est dit dans l’Ecriture : <char style="qt">Le juste vivra grâce à la foi</char><note caller="+" style="f"><char style="fr" closed="false">1.17 </char><char style="ft" closed="false"><char style="xt"><ref loc="HAB 2:4">Ha 2.4</ref></char>. Autre traduction : </char><char style="fqa" closed="false">celui qui est juste par la foi, vivra.</char></note><char style="qt">.</char><verse eid="ROM 1:17"/></para>
+  <para style="ms1">Tous sont coupables devant Dieu</para>
+  <para style="s1">Ceux qui rejettent Dieu et sa Loi</para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 1:18"/>En effet, du haut du ciel, Dieu révèle sa colère contre les hommes qui ne l’honorent pas et ne respectent pas sa volonté. Ils étouffent ainsi malhonnêtement la vérité<note caller="+" style="f"><char style="fr" closed="false">1.18 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">Ils étouffent la vérité au profit de leur désobéissance à la Loi de Dieu.</char></note>.<verse eid="ROM 1:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 1:19"/>En effet, ce qu’on peut connaître de Dieu est clair pour eux, Dieu lui-même le leur ayant fait connaître. <verse eid="ROM 1:19"/><verse number="20" style="v" sid="ROM 1:20"/>Car, depuis la création du monde, les perfections invisibles de Dieu, sa puissance éternelle et sa divinité se voient dans ses œuvres quand on y réfléchit. Ils n’ont donc aucune excuse, <verse eid="ROM 1:20"/><verse number="21" style="v" sid="ROM 1:21"/>car alors qu’ils connaissent Dieu, ils ne lui rendent pas l’honneur que l’on doit à Dieu et ne lui expriment pas leur reconnaissance. Ils se sont égarés dans des raisonnements absurdes et leur pensée dépourvue d’intelligence s’est trouvée obscurcie.<verse eid="ROM 1:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 1:22"/>Ils se prétendent sages, mais ils sont devenus fous. <verse eid="ROM 1:22"/><verse number="23" style="v" sid="ROM 1:23"/>Ainsi, au lieu d’adorer le Dieu immortel et glorieux, ils adorent des idoles, images d’hommes mortels, d’oiseaux, de quadrupèdes ou de reptiles. <verse eid="ROM 1:23"/><verse number="24" style="v" sid="ROM 1:24"/>C’est pourquoi Dieu les a abandonnés aux passions de leur cœur qui les portent à des pratiques dégradantes, de sorte qu’ils ont avili leur propre corps.<verse eid="ROM 1:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 1:25"/>Oui, ils ont délibérément échangé la vérité concernant Dieu contre le mensonge, ils ont adoré la créature et lui ont rendu un culte, au lieu du Créateur, lui qui est béni éternellement. Amen !<verse eid="ROM 1:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="ROM 1:26"/>Voilà pourquoi Dieu les a abandonnés à des passions avilissantes : leurs femmes ont renoncé aux relations sexuelles naturelles pour se livrer à des pratiques contre nature.<verse eid="ROM 1:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ROM 1:27"/>Les hommes, de même, délaissant les rapports naturels avec le sexe féminin, se sont enflammés de désir les uns pour les autres ; ils ont commis entre hommes des actes honteux et ont reçu en leur personne le salaire que méritaient leurs égarements. <verse eid="ROM 1:27"/><verse number="28" style="v" sid="ROM 1:28"/>Ils n’ont pas jugé bon de connaître Dieu, c’est pourquoi Dieu les a abandonnés à leur pensée faussée, si bien qu’ils font ce qu’on ne doit pas.<verse eid="ROM 1:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="ROM 1:29"/>Ils accumulent toutes sortes d’injustices et de méchancetés, d’envies et de vices ; ils sont pleins de jalousie, de meurtres, de querelles, de trahisons, de perversités. Ce sont des médisants, <verse eid="ROM 1:29"/><verse number="30" style="v" sid="ROM 1:30"/>des calomniateurs, des ennemis de Dieu, arrogants, orgueilleux, fanfarons, ingénieux à faire le mal ; ils manquent à leurs devoirs envers leurs parents ; <verse eid="ROM 1:30"/><verse number="31" style="v" sid="ROM 1:31"/>ils sont dépourvus d’intelligence et de loyauté, insensibles, impitoyables.<verse eid="ROM 1:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="ROM 1:32"/>Ils connaissent très bien la sentence de Dieu qui déclare passibles de mort ceux qui agissent ainsi. Malgré cela, non seulement ils commettent de telles actions, mais encore ils approuvent ceux qui les font.<verse eid="ROM 1:32"/></para>
+  <chapter eid="ROM 1"/>
+  <chapter number="2" style="c" sid="ROM 2"/>
+  <para style="s1">Celui qui condamne les autres se condamne lui-même</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 2:1"/>Toi donc, qui que tu sois, qui condamnes autrui, tu n’as aucune excuse, car en condamnant les autres, tu te condamnes toi-même, puisque toi qui les condamnes, tu te conduis comme eux. <verse eid="ROM 2:1"/><verse number="2" style="v" sid="ROM 2:2"/>Or, nous savons que le jugement de Dieu contre ceux qui agissent ainsi est conforme à la vérité.<verse eid="ROM 2:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 2:3"/>T’imaginerais-tu, toi qui condamnes ceux qui commettent de tels actes, et qui te comportes comme eux, que tu vas échapper à la condamnation divine ? <verse eid="ROM 2:3"/><verse number="4" style="v" sid="ROM 2:4"/>Ou alors, méprises-tu les trésors de bonté, de patience et de générosité déployés par Dieu, sans te rendre compte que sa bonté veut t’amener à changer<note caller="+" style="f"><char style="fr" closed="false">2.4 </char><char style="ft" closed="false">Autres traductions : </char><char style="fqa" closed="false">à te repentir </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">à changer d’attitude </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">à changer de comportement.</char></note> ?<verse eid="ROM 2:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 2:5"/>Par ton entêtement et ton refus de changer, tu te prépares un châtiment d’autant plus grand pour le jour où se manifesteront la colère et le juste jugement de Dieu.<verse eid="ROM 2:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 2:6"/>Ce jour-là, <char style="qt">il donnera à chacun ce que lui auront valu ses actes</char><note caller="+" style="f"><char style="fr" closed="false">2.6 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 62:13">Ps 62.13</ref></char>.</char></note><char style="qt">.</char><verse eid="ROM 2:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 2:7"/>Ceux qui, en pratiquant le bien avec persévérance, cherchent la gloire à venir, l’honneur et l’immortalité, recevront de lui la vie éternelle<note caller="+" style="f"><char style="fr" closed="false">2.7 </char><char style="ft" closed="false">Dans les v. 7-8, Paul explicite le principe de la Loi qu’il a énoncé au v. 6.</char></note>. <verse eid="ROM 2:7"/><verse number="8" style="v" sid="ROM 2:8"/>Mais, à ceux qui, par ambition personnelle<note caller="+" style="f"><char style="fr" closed="false">2.8 </char><char style="ft" closed="false">Ou : </char><char style="fqa" closed="false">par esprit de contestation, </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">de rivalité.</char></note>, repoussent la vérité et cèdent à l’injustice, Dieu réserve sa colère et sa fureur.<verse eid="ROM 2:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 2:9"/>Oui, la souffrance et l’angoisse attendent tout homme qui pratique le mal, le Juif en premier lieu et aussi le non-Juif.<verse eid="ROM 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 2:10"/>Mais la gloire à venir, l’honneur et la paix seront accordés à celui qui pratique le bien, quel qu’il soit, d’abord le Juif et aussi le non-Juif, <verse eid="ROM 2:10"/><verse number="11" style="v" sid="ROM 2:11"/>car Dieu ne fait pas de favoritisme.<verse eid="ROM 2:11"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 2:12"/>Ceux qui ont péché sans avoir eu connaissance de la Loi de Moïse périront sans qu’elle intervienne dans leur jugement. Mais ceux qui ont péché alors qu’ils étaient soumis au régime de la Loi seront jugés conformément à la Loi. <verse eid="ROM 2:12"/><verse number="13" style="v" sid="ROM 2:13"/>Car ce ne sont pas ceux qui se contentent d’écouter la lecture de la Loi qui seront justes aux yeux de Dieu. Non, seuls ceux qui appliquent la Loi sont considérés comme justes.<verse eid="ROM 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 2:14"/>En effet, lorsque les païens qui n’ont pas la Loi de Moïse accomplissent naturellement ce que demande cette Loi, ils se tiennent lieu de loi à eux-mêmes, alors qu’ils n’ont pas la Loi. <verse eid="ROM 2:14"/><verse number="15" style="v" sid="ROM 2:15"/>Ils démontrent par leur comportement que les œuvres demandées par la Loi sont inscrites dans leur cœur. Leur conscience en témoigne également, ainsi que les raisonnements par lesquels ils s’accusent ou s’excusent les uns les autres<note caller="+" style="f"><char style="fr" closed="false">2.15 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">ils s’accusent ou s’excusent eux-mêmes.</char></note>. <verse eid="ROM 2:15"/><verse number="16" style="v" sid="ROM 2:16"/>Tout cela paraîtra le jour<note caller="+" style="f"><char style="fr" closed="false">2.16 </char><char style="fq" closed="false">Tout cela paraîtra le jour. </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">Ils anticipent de la sorte sur le jour.</char></note> où, conformément à l’Evangile que j’annonce, Dieu jugera par Jésus-Christ tout ce que les hommes ont caché.<verse eid="ROM 2:16"/></para>
+  <para style="s1">Les Juifs sont coupables devant Dieu</para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 2:17"/>Eh bien, toi qui te donnes le nom de Juif, tu te reposes sur la Loi, tu fais de Dieu ton sujet de fierté<note caller="+" style="f"><char style="fr" closed="false">2.17 </char><char style="ft" closed="false">Cf. <char style="xt"><ref loc="PSA 34:3">Ps 34.3</ref></char>.</char></note>, <verse eid="ROM 2:17"/><verse number="18" style="v" sid="ROM 2:18"/>tu connais sa volonté, tu juges de ce qui est le meilleur parce que tu es instruit par la Loi. <verse eid="ROM 2:18"/><verse number="19" style="v" sid="ROM 2:19"/>Tu es certain d’être le guide des aveugles, la lumière de ceux qui errent dans les ténèbres, <verse eid="ROM 2:19"/><verse number="20" style="v" sid="ROM 2:20"/>l’éducateur des insensés, l’enseignant des ignorants, tout cela sous prétexte que tu as dans la Loi l’expression parfaite de la connaissance et de la vérité. <verse eid="ROM 2:20"/><verse number="21" style="v" sid="ROM 2:21"/>Toi donc, qui enseignes les autres, tu ne t’enseignes pas toi-même. Tu prêches aux autres de ne pas voler, et tu voles ! <verse eid="ROM 2:21"/><verse number="22" style="v" sid="ROM 2:22"/>Tu dis de ne pas commettre d’adultère, et tu commets l’adultère ! Tu as les idoles en horreur, et tu commets des sacrilèges<note caller="+" style="f"><char style="fr" closed="false">2.22 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">tu en fais le trafic. </char><char style="ft" closed="false">Certains Juifs collectionnaient ou revendaient des idoles et des objets volés dans les temples païens – contrairement aux exigences de la Loi (<char style="xt"><ref loc="DEU 7:25">Dt 7.25</ref></char>).</char></note> ! <verse eid="ROM 2:22"/><verse number="23" style="v" sid="ROM 2:23"/>Tu es fier de posséder la Loi, mais tu déshonores Dieu en y désobéissant ! <verse eid="ROM 2:23"/><verse number="24" style="v" sid="ROM 2:24"/>Et ainsi, comme le dit l’Ecriture, à cause de vous, Juifs, <char style="qt">le nom de Dieu est outragé parmi les païens</char><note caller="+" style="f"><char style="fr" closed="false">2.24 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 52:5">Es 52.5</ref></char> cité selon l’ancienne version grecque.</char></note>.<verse eid="ROM 2:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 2:25"/>Assurément, être circoncis a un sens – à condition d’appliquer la Loi. Mais, si tu désobéis à la Loi, être circoncis n’a pas plus de valeur que d’être incirconcis.<verse eid="ROM 2:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="ROM 2:26"/>Mais si l’incirconcis accomplit ce que la Loi définit comme juste, cet incirconcis ne sera-t-il pas considéré comme un circoncis ?<verse eid="ROM 2:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ROM 2:27"/>Et cet homme qui accomplit la Loi sans être physiquement circoncis ne va-t-il pas te condamner, toi qui désobéis à la Loi tout en possédant les Ecritures et la circoncision ?<verse eid="ROM 2:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="ROM 2:28"/>Car ce n’est pas ce qui est visible qui fait le Juif, ni la marque visible dans la chair qui fait la circoncision, <verse eid="ROM 2:28"/><verse number="29" style="v" sid="ROM 2:29"/>mais ce qui fait le Juif c’est ce qui est intérieur, et la vraie circoncision est celle que l’Esprit opère dans le cœur et non celle que l’on pratique en obéissant à la lettre de la Loi.</para>
+  <para style="p" vid="ROM 2:29">Tel est le Juif qui reçoit sa louange, non des hommes, mais de Dieu.<verse eid="ROM 2:29"/></para>
+  <chapter eid="ROM 2"/>
+  <chapter number="3" style="c" sid="ROM 3"/>
+  <para style="s1">Tous les hommes sont coupables devant Dieu</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 3:1"/>Dans ces conditions, quel est l’avantage du Juif<note caller="+" style="f"><char style="fr" closed="false">3.1 </char><char style="ft" closed="false">Dans <char style="xt"><ref loc="ROM 3:1-9">3.1-9</ref></char>, l’apôtre pose cinq questions que ses contradicteurs juifs devaient souvent lui poser.</char></note> ? Quelle est l’utilité de la circoncision ? <verse eid="ROM 3:1"/><verse number="2" style="v" sid="ROM 3:2"/>L’avantage est grand à divers titres. Tout d’abord, c’est aux Juifs qu’ont été confiées les paroles de Dieu. <verse eid="ROM 3:2"/><verse number="3" style="v" sid="ROM 3:3"/>Que faut-il dire alors si certains leur ont été infidèles ? Leur infidélité<note caller="+" style="f"><char style="fr" closed="false">3.3 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">Que faut-il dire alors de l’incrédulité de certains ? Leur incrédulité…</char></note> anéantira-t-elle la fidélité de Dieu ? <verse eid="ROM 3:3"/><verse number="4" style="v" sid="ROM 3:4"/>Loin de là ! Que Dieu soit reconnu comme disant la vérité et tout homme qui s’oppose à lui comme menteur, car il est écrit :</para>
+  <para style="q1" vid="ROM 3:4">
+    <char style="qt">Tu seras toujours reconnu juste dans tes sentences ;</char></para>
+  <para style="q1" vid="ROM 3:4">
+    <char style="qt">et tu seras vainqueur lorsque tu rends ton jugement</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">3.4 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 51:6">Ps 51.6</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 3:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 3:5"/>Mais si notre injustice contribue à manifester que Dieu est juste, que pouvons-nous en conclure ? Dieu n’est-il pas injuste quand il nous fait subir sa colère ? – Bien entendu, je raisonne ici d’une manière très humaine. – <verse eid="ROM 3:5"/><verse number="6" style="v" sid="ROM 3:6"/>Dieu injuste ? Loin de là ! Autrement, comment Dieu pourrait-il juger le monde ? <verse eid="ROM 3:6"/><verse number="7" style="v" sid="ROM 3:7"/>Ou, dira-t-on encore, si mon mensonge fait d’autant mieux éclater que Dieu est véridique et contribue ainsi à sa gloire, pourquoi serais-je encore condamné comme pécheur ? <verse eid="ROM 3:7"/><verse number="8" style="v" sid="ROM 3:8"/>Et pourquoi ne pas aller jusqu’à dire : Faisons le mal pour qu’en sorte le bien ? Certains, du reste, nous calomnient en prétendant que c’est là ce que nous enseignons. Ces gens-là méritent bien d’être condamnés.<verse eid="ROM 3:8"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 3:9"/>Que faut-il donc conclure ? Nous les Juifs, sommes-nous en meilleure position que les autres hommes ? Pas à tous égards. Nous avons, en effet, déjà démontré que tous les hommes, Juifs et non-Juifs, sont également coupables. <verse eid="ROM 3:9"/><verse number="10" style="v" sid="ROM 3:10"/>L’Ecriture le dit :</para>
+  <para style="q1" vid="ROM 3:10">
+    <char style="qt">Il n’y a pas de juste,</char></para>
+  <para style="q1" vid="ROM 3:10">
+    <char style="qt">pas même un seul</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">3.10 </char>
+      <char style="ft" closed="false">Cf. <char style="xt"><ref loc="ECC 7:20">Ec 7.20</ref></char>.</char>
+    </note>
+    <char style="qt">,</char><verse eid="ROM 3:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="ROM 3:11"/>
+    <char style="qt">pas d’homme capable de comprendre,</char></para>
+  <para style="q1" vid="ROM 3:11">
+    <char style="qt">pas un qui se tourne vers Dieu.</char><verse eid="ROM 3:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="ROM 3:12"/>
+    <char style="qt">Ils se sont tous égarés,</char> ╵<char style="qt">ils se sont corrompus tous ensemble.</char></para>
+  <para style="q1" vid="ROM 3:12">
+    <char style="qt">Il n’y en a aucun qui fasse le bien,</char></para>
+  <para style="q1" vid="ROM 3:12">
+    <char style="qt">même pas un seul</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">3.12 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 14:1-3">Ps 14.1-3</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 3:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="ROM 3:13"/>
+    <char style="qt">Leur gosier ressemble à une tombe ouverte,</char></para>
+  <para style="q1" vid="ROM 3:13">
+    <char style="qt">leur langue sert à tromper</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">3.13 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 5:10">Ps 5.10</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">,</char></para>
+  <para style="q1" vid="ROM 3:13">
+    <char style="qt">ils ont sur les lèvres un venin de vipère</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">3.13 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 140:4">Ps 140.4</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">,</char><verse eid="ROM 3:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="ROM 3:14"/>
+    <char style="qt">leur bouche est pleine d’aigres malédictions</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">3.14 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 10:7">Ps 10.7</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 3:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="ROM 3:15"/>
+    <char style="qt">Leurs pieds sont agiles quand il s’agit de verser le sang.</char><verse eid="ROM 3:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="ROM 3:16"/>
+    <char style="qt">La destruction et le malheur jalonnent leur parcours.</char><verse eid="ROM 3:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="ROM 3:17"/>
+    <char style="qt">Ils ne connaissent pas le chemin de la paix</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">3.17 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="ISA 59:7-8">Es 59.7-8</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 3:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="ROM 3:18"/>
+    <char style="qt">Ils n’ont même pas peur de Dieu</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">3.18 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 36:2">Ps 36.2</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 3:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 3:19"/>Or, nous le savons, ce que l’Ecriture dit dans la Loi, elle l’adresse à ceux qui vivent sous le régime de la Loi. Il en est ainsi pour que personne n’ait rien à répliquer et que le monde entier soit reconnu coupable devant Dieu.<verse eid="ROM 3:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 3:20"/>Car personne ne sera déclaré juste devant lui parce qu’il aura accompli les œuvres demandées par la Loi. En effet, la Loi produit seulement la connaissance du péché.<verse eid="ROM 3:20"/></para>
+  <para style="ms1">Déclarés justes par la foi</para>
+  <para style="s1">Justes par la foi, sans la Loi</para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 3:21"/>Mais maintenant Dieu a manifesté, sans faire intervenir la Loi, la justice qu’il nous accorde et à laquelle les livres de la Loi et des prophètes rendent témoignage.<verse eid="ROM 3:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 3:22"/>Dieu déclare les hommes justes par leur foi en Jésus-Christ, et cela s’applique à tous ceux qui croient, car il n’y a pas de différence entre les hommes. <verse eid="ROM 3:22"/><verse number="23" style="v" sid="ROM 3:23"/>Tous ont péché, en effet, et sont privés de la gloire de Dieu, <verse eid="ROM 3:23"/><verse number="24" style="v" sid="ROM 3:24"/>et ils sont déclarés justes<note caller="+" style="f"><char style="fr" closed="false">3.24 </char><char style="ft" closed="false">Paul emprunte au vocabulaire juridique ce terme de </char><char style="fqa" closed="false">justifier </char><char style="ft" closed="false">qui signifiait </char><char style="fqa" closed="false">déclarer juste </char><char style="ft" closed="false">celui dont l’innocence avait été reconnue ou dont la culpabilité n’avait pu être prouvée. Dans le cas du pécheur devant Dieu, il s’agit d’un acte immérité du Dieu souverain qui « couvre » les péchés (<char style="xt"><ref loc="ROM 4:7">4.7</ref></char>) et recouvre le pécheur de la justice parfaite de Jésus-Christ.</char></note> par sa grâce ; c’est un don que Dieu leur fait par le moyen de la délivrance<note caller="+" style="f"><char style="fr" closed="false">3.24 </char><char style="ft" closed="false">L’apôtre emploie un mot qui désigne souvent le rachat (d’un esclave ou d’un prisonnier) au moyen d’une rançon.</char></note> apportée par Jésus-Christ<note caller="+" style="f"><char style="fr" closed="false">3.24 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">dont on bénéficie dans le cadre de l’union à Jésus-Christ.</char></note>.<verse eid="ROM 3:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 3:25"/>C’est lui que Dieu a offert comme une victime destinée à expier les péchés<note caller="+" style="f"><char style="fr" closed="false">3.25 </char><char style="ft" closed="false">Selon certains, ce terme fait allusion à la cérémonie du jour des Expiations où le grand-prêtre aspergeait de sang le couvercle du coffre sacré afin de faire l’expiation des péchés du peuple. </char><char style="fq" closed="false">Expier les péchés</char><char style="fqa" closed="false">: </char><char style="ft" closed="false">autre traduction : </char><char style="fqa" closed="false">apaiser la colère de Dieu contre le mal </char><char style="ft" closed="false">(voir <char style="xt">1 Jn 2.2 ; 4.10</char>).</char></note>, pour ceux qui croient en son sacrifice<note caller="+" style="f"><char style="fr" closed="false">3.25 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">C’est lui que Dieu, dans son plan, a destiné, par sa mort, à expier les péchés pour ceux qui croient. </char><char style="ft" closed="false">Le texte grec emploie le mot </char><char style="fqa" closed="false">sang : </char><char style="ft" closed="false">le sang est le symbole de la vie offerte et de la mort subie.</char></note>. Dieu montre ainsi qu’il est juste parce qu’il avait laissé impunis les péchés commis autrefois, <verse eid="ROM 3:25"/><verse number="26" style="v" sid="ROM 3:26"/>au temps de sa patience. Il montre aussi qu’il est juste dans le temps présent : il est juste tout en déclarant juste celui qui croit en Jésus.<verse eid="ROM 3:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ROM 3:27"/>Reste-t-il encore une raison de se vanter ? Non, cela est exclu. En vertu de quel principe ? Celui de l’obéissance à la Loi ? Non, mais selon le principe de la foi.<verse eid="ROM 3:27"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="28" style="v" sid="ROM 3:28"/>Voici donc ce que nous affirmons : l’homme est déclaré juste par la foi sans qu’il ait à accomplir les œuvres qu’exige la Loi. <verse eid="ROM 3:28"/><verse number="29" style="v" sid="ROM 3:29"/>Ou alors : Dieu serait-il seulement le Dieu des Juifs ? N’est-il pas aussi le Dieu des non-Juifs ? Bien sûr, il est aussi le Dieu des non-Juifs. <verse eid="ROM 3:29"/><verse number="30" style="v" sid="ROM 3:30"/>Car il n’y a qu’un seul Dieu qui justifie les Juifs en raison de leur foi et qui justifie aussi les non-Juifs au moyen de leur foi.<verse eid="ROM 3:30"/></para>
+  <para style="s1">L’exemple d’Abraham et de David</para>
+  <para style="p">
+    <verse number="31" style="v" sid="ROM 3:31"/>Mais alors, est-ce que nous annulons la Loi au moyen de la foi ? Loin de là ! Nous confirmons la Loi.<verse eid="ROM 3:31"/></para>
+  <chapter eid="ROM 3"/>
+  <chapter number="4" style="c" sid="ROM 4"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 4:1"/>Prenons l’exemple d’Abraham, l’ancêtre de notre peuple, selon la descendance physique. Que pouvons-nous dire à son sujet ? Quelle a été son expérience ? <verse eid="ROM 4:1"/><verse number="2" style="v" sid="ROM 4:2"/>S’il a été déclaré juste en raison de ce qu’il a fait, alors certes, il peut se vanter. Mais ce n’est pas ainsi que Dieu voit la chose ! <verse eid="ROM 4:2"/><verse number="3" style="v" sid="ROM 4:3"/>En effet, que dit l’Ecriture ? <char style="qt">Abraham a eu confiance en Dieu, et Dieu a porté sa foi à son crédit</char><note caller="+" style="f"><char style="fr" closed="false">4.3 </char><char style="ft" closed="false">Paul emploie un terme du vocabulaire commercial qui signifie : </char><char style="fqa" closed="false">imputer, porter au compte de quelqu’un. </char><char style="ft" closed="false">Dieu a porté l’acte de foi d’Abraham au compte du patriarche et l’a déclaré juste.</char></note> <char style="qt">pour le déclarer juste</char><note caller="+" style="f"><char style="fr" closed="false">4.3 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 15:6">Gn 15.6</ref></char>.</char></note><char style="qt">.</char><verse eid="ROM 4:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 4:4"/>Si quelqu’un accomplit un travail, on lui compte son salaire non pas comme si on lui faisait une faveur, mais d’après ce qui lui est dû. <verse eid="ROM 4:4"/><verse number="5" style="v" sid="ROM 4:5"/>Et si quelqu’un n’accomplit pas les œuvres requises par la Loi mais place sa confiance en Dieu qui déclare justes les pécheurs, Dieu le déclare juste en portant sa foi à son crédit. <verse eid="ROM 4:5"/><verse number="6" style="v" sid="ROM 4:6"/>De même, David déclare béni l’homme que Dieu déclare juste sans qu’il ait produit les œuvres qu’exige la Loi :<verse eid="ROM 4:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="ROM 4:7"/>
+    <char style="qt">Ils sont bénis, ceux dont les fautes ont été pardonnées</char></para>
+  <para style="q1" vid="ROM 4:7">
+    <char style="qt">et dont les péchés ont été effacés !</char><verse eid="ROM 4:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="ROM 4:8"/>
+    <char style="qt">Il est béni, l’homme au compte de qui</char></para>
+  <para style="q1" vid="ROM 4:8">
+    <char style="qt">le Seigneur ne porte pas le péché</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">4.8 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 32:1-2">Ps 32.1-2</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">!</char><verse eid="ROM 4:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 4:9"/>Cette bénédiction est-elle réservée aux seuls circoncis, ou est-elle aussi accessible aux incirconcis ? Nous venons de le dire : Dieu a porté la foi d’Abraham à son crédit pour le déclarer juste. <verse eid="ROM 4:9"/><verse number="10" style="v" sid="ROM 4:10"/>A quel moment cela a-t-il eu lieu ? Quand Abraham était circoncis ou quand il était encore incirconcis ? Ce n’est pas quand il était circoncis, mais quand il ne l’était pas encore. <verse eid="ROM 4:10"/><verse number="11" style="v" sid="ROM 4:11"/>Et Dieu lui donna ensuite le signe de la circoncision comme sceau de la justice qu’il avait déjà reçue par la foi avant d’être circoncis. Il est devenu ainsi le père de tous ceux qui croient sans être circoncis pour qu’eux aussi soient déclarés justes par Dieu de la même manière. <verse eid="ROM 4:11"/><verse number="12" style="v" sid="ROM 4:12"/>Il est aussi devenu le père des circoncis qui ne se contentent pas d’avoir la circoncision, mais qui suivent l’exemple de la foi que notre père Abraham a manifestée alors qu’il était encore incirconcis.<verse eid="ROM 4:12"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 4:13"/>Car la promesse de recevoir le monde en héritage a été faite à Abraham ou à sa descendance non parce qu’il avait obéi à la Loi, mais parce que Dieu l’a déclaré juste à cause de sa foi. <verse eid="ROM 4:13"/><verse number="14" style="v" sid="ROM 4:14"/>En effet, s’il faut être sous le régime de la Loi<note caller="+" style="f"><char style="fr" closed="false">4.14 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">s’il faut obéir à la Loi.</char></note> pour avoir droit à cet héritage, alors la foi n’a plus de sens et la promesse est annulée. <verse eid="ROM 4:14"/><verse number="15" style="v" sid="ROM 4:15"/>Car la Loi produit la colère de Dieu. Or, là où il n’y a pas de Loi, il n’y a pas non plus de transgression. <verse eid="ROM 4:15"/><verse number="16" style="v" sid="ROM 4:16"/>Voilà pourquoi l’héritage se reçoit par la foi : c’est pour qu’il soit un don de la grâce. Ainsi, la promesse se trouve confirmée à toute la descendance d’Abraham, c’est-à-dire non seulement à celle qui a la Loi, mais aussi à celle qui partage la foi d’Abraham. Il est notre père à tous, <verse eid="ROM 4:16"/><verse number="17" style="v" sid="ROM 4:17"/>comme le dit l’Ecriture : <char style="qt">Je t’ai établi pour être le père d’une multitude de peuples</char><note caller="+" style="f"><char style="fr" closed="false">4.17 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 17:5">Gn 17.5</ref></char>.</char></note>. Placé en présence de Dieu<note caller="+" style="f"><char style="fr" closed="false">4.17 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">Il est notre père à tous </char><char style="fv" closed="false">17 </char><char style="fqa" closed="false">devant celui en qui il a mis sa confiance, Dieu qui donne…</char></note>, il mit sa confiance en celui qui donne la vie aux morts et appelle à l’existence ce qui n’existe pas.<verse eid="ROM 4:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 4:18"/>Alors que tout portait au contraire, il a eu confiance, plein d’espérance. Ainsi il est devenu <char style="qt">le père d’une multitude de peuples</char><note caller="+" style="f"><char style="fr" closed="false">4.18 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 17:5">Gn 17.5</ref></char>.</char></note> conformément à ce que Dieu lui avait dit : <char style="qt">Tes descendants seront nombreux</char><note caller="+" style="f"><char style="fr" closed="false">4.18 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 15:5">Gn 15.5</ref></char>.</char></note><char style="qt">.</char><verse eid="ROM 4:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 4:19"/>Bien qu’il considéra son corps, qui était comme mort – il avait presque cent ans – et celui de Sara, qui ne pouvait plus donner la vie, sa foi ne faiblit pas. <verse eid="ROM 4:19"/><verse number="20" style="v" sid="ROM 4:20"/>Au contraire : loin de mettre en doute la promesse et de refuser de croire, il trouva sa force dans la foi, en reconnaissant la grandeur de Dieu<note caller="+" style="f"><char style="fr" closed="false">4.20 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">il fut fortifié dans sa foi et fit ainsi honneur à Dieu.</char></note> <verse eid="ROM 4:20"/><verse number="21" style="v" sid="ROM 4:21"/>et en étant absolument persuadé que Dieu est capable d’accomplir ce qu’il a promis.<verse eid="ROM 4:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 4:22"/>C’est pourquoi, Dieu <char style="qt">l’a déclaré juste en portant sa foi à son crédit</char><note caller="+" style="f"><char style="fr" closed="false">4.22 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 15:6">Gn 15.6</ref></char>.</char></note><char style="qt">.</char> <verse eid="ROM 4:22"/><verse number="23" style="v" sid="ROM 4:23"/>Or si cette parole : <char style="qt">Dieu a porté sa foi à son crédit</char> a été consignée dans l’Ecriture, ce n’est pas seulement pour Abraham<note caller="+" style="f"><char style="fr" closed="false">4.23 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">elle ne concerne pas seulement Abraham.</char></note>. <verse eid="ROM 4:23"/><verse number="24" style="v" sid="ROM 4:24"/>Elle nous concerne nous aussi. Car la foi sera aussi portée à notre crédit, à nous qui plaçons notre confiance en celui qui a ressuscité Jésus notre Seigneur ; <verse eid="ROM 4:24"/><verse number="25" style="v" sid="ROM 4:25"/>il a été livré pour nos fautes, et il est ressuscité pour que nous soyons déclarés justes<note caller="+" style="f"><char style="fr" closed="false">4.25 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">ressuscité parce qu’il avait accompli l’œuvre par laquelle nous sommes déclarés justes.</char></note>.<verse eid="ROM 4:25"/></para>
+  <chapter eid="ROM 4"/>
+  <chapter number="5" style="c" sid="ROM 5"/>
+  <para style="ms1">La vie nouvelle en Christ, par l’Esprit</para>
+  <para style="s1">La paix avec Dieu</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 5:1"/>Puisque nous avons été déclarés justes en raison de notre foi, nous sommes<note caller="+" style="f"><char style="fr" closed="false">5.1 </char><char style="ft" closed="false">Certains manuscrits ont : </char><char style="fqa" closed="false">soyons… en paix.</char></note> en paix avec Dieu grâce à notre Seigneur Jésus-Christ. <verse eid="ROM 5:1"/><verse number="2" style="v" sid="ROM 5:2"/>Par lui, nous avons eu accès, au moyen de la foi<note caller="+" style="f"><char style="fr" closed="false">5.2 </char><char style="ft" closed="false">L’expression </char><char style="fqa" closed="false">au moyen de la foi </char><char style="ft" closed="false">est absente de certains manuscrits.</char></note>, à ce don gratuit de Dieu qui nous est désormais acquis ; et notre fierté se fonde sur l’espérance d’avoir part à la gloire de Dieu.<verse eid="ROM 5:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 5:3"/>Mieux encore ! Nous tirons fierté même de nos détresses, car nous savons que la détresse produit la persévérance, <verse eid="ROM 5:3"/><verse number="4" style="v" sid="ROM 5:4"/>la persévérance conduit à une fidélité éprouvée, et la fidélité éprouvée nourrit l’espérance. <verse eid="ROM 5:4"/><verse number="5" style="v" sid="ROM 5:5"/>Or, notre espérance ne risque pas de tourner à notre confusion, car Dieu a versé son amour dans notre cœur par l’Esprit Saint qu’il nous a donné.<verse eid="ROM 5:5"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 5:6"/>En effet, au moment fixé par Dieu, alors que nous étions encore sans force, Christ est mort pour des pécheurs. <verse eid="ROM 5:6"/><verse number="7" style="v" sid="ROM 5:7"/>A peine accepterait-on de mourir pour un juste ; peut-être quelqu’un irait-il jusqu’à mourir pour le bien<note caller="+" style="f"><char style="fr" closed="false">5.7 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">pour un homme de bien.</char></note>. <verse eid="ROM 5:7"/><verse number="8" style="v" sid="ROM 5:8"/>Mais voici comment Dieu nous montre l’amour qu’il a pour nous : alors que nous étions encore des pécheurs, Christ est mort pour nous.<verse eid="ROM 5:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 5:9"/>Donc, puisque nous sommes maintenant déclarés justes grâce à son sacrifice<note caller="+" style="f"><char style="fr" closed="false">5.9 </char><char style="ft" closed="false">Voir note <char style="xt"><ref loc="ROM 3:25">3.25</ref></char>.</char></note>, nous serons, à plus forte raison encore, sauvés par lui de la colère à venir.<verse eid="ROM 5:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 5:10"/>Alors que nous étions ses ennemis, Dieu nous a réconciliés avec lui par la mort de son Fils ; à plus forte raison, maintenant que nous sommes réconciliés, serons-nous sauvés par sa vie. <verse eid="ROM 5:10"/><verse number="11" style="v" sid="ROM 5:11"/>Mieux encore : nous plaçons désormais notre fierté en Dieu par notre Seigneur Jésus-Christ qui nous a obtenu la réconciliation.<verse eid="ROM 5:11"/></para>
+  <para style="s1">Condamnés en Adam, déclarés justes en Christ</para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 5:12"/>C’est pourquoi, de même que par un seul homme, le péché est entré dans le monde et par le péché, la mort, et ainsi la mort a atteint tous les hommes parce que tous ont péché<note caller="+" style="f"><char style="fr" closed="false">5.12 </char><char style="ft" closed="false">La phrase de Paul reste en suspens à la fin de ce verset. Elle sera reprise au v. 18 après la parenthèse explicative des v. 13-17.</char></note>…<verse eid="ROM 5:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 5:13"/>En effet, jusqu’à ce que Dieu donne la Loi de Moïse, le péché existait bien dans le monde ; or le péché n’est pas pris en compte quand la Loi n’existe pas. <verse eid="ROM 5:13"/><verse number="14" style="v" sid="ROM 5:14"/>Et pourtant, la mort a régné depuis Adam jusqu’à Moïse, même sur les hommes qui n’avaient pas commis une faute semblable à celle d’Adam – qui est comparable à celui qui devait venir.<verse eid="ROM 5:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 5:15"/>Mais il y a une différence entre la faute et le don de la grâce ! En effet, si la faute d’un seul a eu pour conséquence la mort de beaucoup, à bien plus forte raison la grâce de Dieu, don gratuit qui vient d’un seul homme, Jésus-Christ, a surabondé pour beaucoup.<verse eid="ROM 5:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 5:16"/>Quelle différence aussi entre les conséquences du péché d’un seul et le don ! En effet, le jugement intervenant à cause d’un seul homme a entraîné la condamnation, mais le don de grâce, intervenant à la suite de nombreuses fautes, a conduit à l’acquittement. <verse eid="ROM 5:16"/><verse number="17" style="v" sid="ROM 5:17"/>Car si, par la faute commise par un seul homme, la mort a régné à cause de ce seul homme, à bien plus forte raison ceux qui reçoivent l’abondance de la grâce qu’est le don de la justification régneront-ils dans la vie par Jésus-Christ, lui seul.<verse eid="ROM 5:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 5:18"/>Ainsi donc, comme une seule faute a entraîné la condamnation de tous les hommes, un seul acte satisfaisant à la justice a obtenu pour tous les hommes l’acquittement qui leur assure la vie. <verse eid="ROM 5:18"/><verse number="19" style="v" sid="ROM 5:19"/>Comme, par la désobéissance d’un seul, beaucoup d’hommes ont été déclarés pécheurs devant Dieu, de même, par l’obéissance d’un seul, beaucoup seront déclarés justes devant Dieu.<verse eid="ROM 5:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 5:20"/>Quant à la Loi, elle est intervenue pour que le péché prolifère. Mais là où le péché a proliféré, la grâce a surabondé <verse eid="ROM 5:20"/><verse number="21" style="v" sid="ROM 5:21"/>pour que, comme le péché a régné par la mort, de même la grâce règne par la justice que Dieu accorde et qui aboutit à la vie éternelle par Jésus-Christ notre Seigneur.<verse eid="ROM 5:21"/></para>
+  <chapter eid="ROM 5"/>
+  <chapter number="6" style="c" sid="ROM 6"/>
+  <para style="s1">La grâce : une excuse pour pécher ?</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 6:1"/>Que dire maintenant ? Persisterons-nous dans le péché pour que la grâce abonde ? <verse eid="ROM 6:1"/><verse number="2" style="v" sid="ROM 6:2"/>Loin de là ! Puisque nous sommes morts pour le péché, comment pourrions-nous vivre encore dans le péché ? <verse eid="ROM 6:2"/><verse number="3" style="v" sid="ROM 6:3"/>Ne savez-vous pas que nous, qui avons été baptisés pour Jésus-Christ<note caller="+" style="f"><char style="fr" closed="false">6.3 </char><char style="ft" closed="false">L’expression utilisée par Paul </char><char style="fqa" closed="false">baptisé pour Jésus-Christ </char><char style="ft" closed="false">exprime diverses nuances : l’engagement (<char style="xt">voir <ref loc="1PE 3:21">1 P 3.21</ref></char>), l’adhésion, l’appartenance, l’union. Autre traduction : </char><char style="fqa" closed="false">baptisés en Jésus-Christ.</char></note>, c’est en relation avec sa mort<note caller="+" style="f"><char style="fr" closed="false">6.3 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">en sa mort.</char></note> que nous avons été baptisés ? <verse eid="ROM 6:3"/><verse number="4" style="v" sid="ROM 6:4"/>Nous avons donc été ensevelis avec lui par le baptême en relation avec sa mort afin que, comme Christ a été ressuscité par la puissance glorieuse du Père, nous aussi, nous menions une vie nouvelle.<verse eid="ROM 6:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 6:5"/>Car si nous avons été unis à lui par une mort semblable à la sienne, nous le serons aussi par une résurrection semblable à la sienne. <verse eid="ROM 6:5"/><verse number="6" style="v" sid="ROM 6:6"/>Comprenons donc que l’homme que nous étions autrefois a été crucifié avec Christ afin que le péché dans ce qui fait sa force<note caller="+" style="f"><char style="fr" closed="false">6.6 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">le corps en tant qu’instrument du péché.</char></note> soit réduit à l’impuissance et que nous ne soyons plus esclaves du péché. <verse eid="ROM 6:6"/><verse number="7" style="v" sid="ROM 6:7"/>Car celui qui est mort a été déclaré juste : il n’a plus à répondre du péché.<verse eid="ROM 6:7"/></para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 6:8"/>Or, puisque nous sommes morts avec Christ, nous croyons que nous vivrons aussi avec lui. <verse eid="ROM 6:8"/><verse number="9" style="v" sid="ROM 6:9"/>Car nous savons que Christ ressuscité ne meurt plus ; la mort n’a plus de pouvoir sur lui. <verse eid="ROM 6:9"/><verse number="10" style="v" sid="ROM 6:10"/>Il est mort et c’est pour le péché qu’il est mort une fois pour toutes. Mais à présent, il est vivant et il vit pour Dieu.<verse eid="ROM 6:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 6:11"/>Ainsi, vous aussi, considérez-vous comme morts pour le péché, et comme vivants pour Dieu dans l’union avec Jésus-Christ.<verse eid="ROM 6:11"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 6:12"/>Que le péché n’exerce donc plus sa domination sur votre corps mortel pour vous soumettre à ses désirs. <verse eid="ROM 6:12"/><verse number="13" style="v" sid="ROM 6:13"/>Ne mettez pas vos membres et organes à la disposition du péché comme des armes au service du mal. Mais puisque vous étiez morts et que vous êtes maintenant vivants, offrez-vous vous-mêmes à Dieu et mettez les membres et organes de votre corps à sa disposition comme des instruments pour faire ce qui est juste.<verse eid="ROM 6:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 6:14"/>Car le péché ne sera plus votre maître puisque vous n’êtes plus sous le régime de la Loi mais sous celui de la grâce.<verse eid="ROM 6:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 6:15"/>Mais quoi ? Allons-nous encore pécher sous prétexte que nous ne sommes pas sous le régime de la Loi, mais sous celui de la grâce ? Loin de là ! <verse eid="ROM 6:15"/><verse number="16" style="v" sid="ROM 6:16"/>Ne savez-vous pas qu’en vous mettant au service de quelqu’un comme des esclaves pour lui obéir, vous êtes effectivement les esclaves du maître à qui vous obéissez : ou bien du péché qui entraîne la mort, ou bien de l’obéissance qui conduit à une vie juste ? <verse eid="ROM 6:16"/><verse number="17" style="v" sid="ROM 6:17"/>Mais Dieu soit loué ! Si, autrefois, vous étiez les esclaves du péché, vous avez maintenant obéi de tout cœur à l’enseignement fondamental auquel vous avez été soumis<note caller="+" style="f"><char style="fr" closed="false">6.17 </char><char style="ft" closed="false">Expression qui se rapporte sans doute à l’enseignement chrétien fondamental donné à tout nouveau croyant.</char></note>. <verse eid="ROM 6:17"/><verse number="18" style="v" sid="ROM 6:18"/>Et, à présent, affranchis du péché, vous êtes devenus esclaves de la justice. <verse eid="ROM 6:18"/><verse number="19" style="v" sid="ROM 6:19"/>– Je parle ici d’une manière très humaine, à cause de votre faiblesse naturelle. – De même que vous avez offert autrefois les membres et organes de votre corps en esclaves pour agir d’une manière immorale et qui ne respecte pas la Loi de Dieu, offrez-les maintenant en esclaves à la justice pour devenir saints dans votre être et votre conduite.<verse eid="ROM 6:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 6:20"/>Lorsque vous étiez encore esclaves du péché, vous étiez libres par rapport à la justice. <verse eid="ROM 6:20"/><verse number="21" style="v" sid="ROM 6:21"/>Or, quels fruits portiez-vous alors ? Des actes qui vous font rougir de honte aujourd’hui, car ils conduisent à la mort. <verse eid="ROM 6:21"/><verse number="22" style="v" sid="ROM 6:22"/>Mais maintenant, affranchis du péché et devenus esclaves de Dieu, le fruit que vous portez, c’est une vie sainte, et le résultat auquel vous aboutissez, c’est la vie éternelle. <verse eid="ROM 6:22"/><verse number="23" style="v" sid="ROM 6:23"/>Car le salaire que verse le péché, c’est la mort, mais le don de la grâce que Dieu accorde, c’est la vie éternelle dans l’union avec Jésus-Christ notre Seigneur.<verse eid="ROM 6:23"/></para>
+  <chapter eid="ROM 6"/>
+  <chapter number="7" style="c" sid="ROM 7"/>
+  <para style="s1">Libérés du régime de la Loi</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 7:1"/>Ne savez-vous pas, frères et sœurs – car je parle à des gens qui savent ce qu’est une loi – que la loi ne régit un homme que durant le temps de sa vie ? <verse eid="ROM 7:1"/><verse number="2" style="v" sid="ROM 7:2"/>Ainsi, une femme mariée est liée par la loi à son mari tant que celui-ci est en vie. Mais s’il vient à mourir, elle est libérée de la loi qui la liait à lui<note caller="+" style="f"><char style="fr" closed="false">7.2 </char><char style="ft" closed="false">Il s’agit de la loi romaine. Autre traduction : </char><char style="fqa" closed="false">la Loi, </char><char style="ft" closed="false">c’est-à-dire la Loi de Moïse.</char></note>. <verse eid="ROM 7:2"/><verse number="3" style="v" sid="ROM 7:3"/>Donc si, du vivant de son mari, elle devient la femme d’un autre homme, elle sera considérée comme adultère. Mais si son mari meurt, elle est affranchie de cette loi et peut donc appartenir à un autre, sans être adultère.<verse eid="ROM 7:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 7:4"/>Il en est de même pour vous, mes frères et sœurs : par la mort de Christ, vous êtes, vous aussi, morts par rapport à la Loi, pour appartenir à un autre, à celui qui est ressuscité, pour que nous portions des fruits pour Dieu.<verse eid="ROM 7:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 7:5"/>Lorsque nous étions encore livrés à nous-mêmes, les mauvais désirs suscités par la Loi étaient à l’œuvre dans nos membres pour nous faire porter des fruits qui mènent à la mort. <verse eid="ROM 7:5"/><verse number="6" style="v" sid="ROM 7:6"/>Mais maintenant, libérés du régime de la Loi, morts à ce qui nous gardait prisonniers, nous pouvons servir Dieu d’une manière nouvelle par l’Esprit, et non plus sous le régime périmé de la lettre de la Loi.<verse eid="ROM 7:6"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 7:7"/>Que dire maintenant ? La Loi se confond-elle avec le péché ? Loin de là ! Seulement, s’il n’y avait pas eu la Loi, je n’aurais pas connu le péché, et je n’aurais pas su ce qu’est la convoitise si la Loi n’avait pas dit : <char style="qt">Tu ne convoiteras pas</char><note caller="+" style="f"><char style="fr" closed="false">7.7 </char><char style="ft" closed="false"><char style="xt">Ex 20.17 ; Dt 5.21</char>.</char></note><char style="qt">.</char> <verse eid="ROM 7:7"/><verse number="8" style="v" sid="ROM 7:8"/>Mais alors le péché, prenant appui sur le commandement, a suscité en moi toutes sortes de désirs mauvais. Car, sans la Loi, le péché est sans vie.<verse eid="ROM 7:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 7:9"/>Pour ma part, autrefois sans la Loi, je vivais, mais quand le commandement est intervenu, le péché a pris vie, <verse eid="ROM 7:9"/><verse number="10" style="v" sid="ROM 7:10"/>et moi je suis mort. Ainsi, ce qui s’est produit pour moi, c’est que le commandement qui devait conduire à la vie m’a conduit à la mort. <verse eid="ROM 7:10"/><verse number="11" style="v" sid="ROM 7:11"/>Car le péché a pris appui sur le commandement : il m’a trompé et m’a fait mourir en se servant du commandement. <verse eid="ROM 7:11"/><verse number="12" style="v" sid="ROM 7:12"/>Ainsi, la Loi elle-même est sainte, et le commandement est saint, juste et bon.<verse eid="ROM 7:12"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 7:13"/>Ce qui est bon est-il devenu pour moi une cause de mort ? Loin de là ! C’est le péché ! En effet, il a provoqué ma mort en se servant de ce qui est bon, et a de la sorte manifesté sa nature de péché et son excessive perversité par le moyen du commandement.<verse eid="ROM 7:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 7:14"/>Nous savons que la Loi a été inspirée par l’Esprit de Dieu, mais moi, je suis comme un homme livré à lui-même, vendu comme esclave au péché. <verse eid="ROM 7:14"/><verse number="15" style="v" sid="ROM 7:15"/>En effet, je ne comprends pas<note caller="+" style="f"><char style="fr" closed="false">7.15 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">je n’approuve pas.</char></note> ce que je fais : je ne fais pas ce que je veux, et c’est ce que je déteste que je fais. <verse eid="ROM 7:15"/><verse number="16" style="v" sid="ROM 7:16"/>Et si je fais ce que je ne veux pas, je reconnais par là que la Loi est bonne.<verse eid="ROM 7:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 7:17"/>En réalité, ce n’est plus moi qui le fais, mais c’est le péché qui habite en moi. <verse eid="ROM 7:17"/><verse number="18" style="v" sid="ROM 7:18"/>Car je sais que le bien n’habite pas en moi, c’est-à-dire dans ce que je suis par nature<note caller="+" style="f"><char style="fr" closed="false">7.18 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">c’est-à-dire dans ce que je vis </char><char style="ft" closed="false">ou </char><char style="fqa" closed="false">dans toute la réalité de mon être.</char></note>. Vouloir le bien est à ma portée, mais non l’accomplir. <verse eid="ROM 7:18"/><verse number="19" style="v" sid="ROM 7:19"/>Je ne fais pas le bien que je veux, mais le mal que je ne veux pas, je le commets. <verse eid="ROM 7:19"/><verse number="20" style="v" sid="ROM 7:20"/>Si donc je fais ce que je ne veux pas, ce n’est plus moi qui le fais mais c’est le péché qui habite en moi.<verse eid="ROM 7:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 7:21"/>Je découvre ainsi cette loi : lorsque je veux faire le bien, c’est le mal qui est à ma portée. <verse eid="ROM 7:21"/><verse number="22" style="v" sid="ROM 7:22"/>Dans mon être intérieur, je prends plaisir à la Loi de Dieu. <verse eid="ROM 7:22"/><verse number="23" style="v" sid="ROM 7:23"/>Mais je vois bien qu’une autre loi est à l’œuvre dans mon corps : elle combat la Loi qu’approuve ma raison et elle fait de moi le prisonnier de la loi du péché qui agit dans mes membres<note caller="+" style="f"><char style="fr" closed="false">7.23 </char><char style="ft" closed="false">D’autres comprennent : </char><char style="fqa" closed="false">qui se trouve dans tout mon être.</char></note>. <verse eid="ROM 7:23"/><verse number="24" style="v" sid="ROM 7:24"/>Malheureux que je suis ! Qui me délivrera de ce corps voué à la mort<note caller="+" style="f"><char style="fr" closed="false">7.24 </char><char style="ft" closed="false">D’autres comprennent : </char><char style="fqa" closed="false">de cette mort qu’est ma vie ?</char></note> ? <verse eid="ROM 7:24"/><verse number="25" style="v" sid="ROM 7:25"/>Dieu soit loué : c’est par Jésus-Christ notre Seigneur<note caller="+" style="f"><char style="fr" closed="false">7.25 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="1CO 15:56-57">1 Co 15.56-57</ref></char>. Autre traduction : </char><char style="fqa" closed="false">Dieu soit loué par Jésus-Christ notre Seigneur.</char></note>. En résumé : moi-même, je suis<note caller="+" style="f"><char style="fr" closed="false">7.25 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">je suis en même temps.</char></note>, par la raison, au service de la Loi de Dieu, mais je suis, dans ce que je vis concrètement<note caller="+" style="f"><char style="fr" closed="false">7.25 </char><char style="ft" closed="false">Autres traductions : </char><char style="fqa" closed="false">et par mon corps </char><char style="ft" closed="false">(en tant qu’instrument du péché), voir v. 23 ; ou : </char><char style="fqa" closed="false">mais je suis, dans ce que je fais ; </char><char style="ft" closed="false">ou : </char><char style="fqa" closed="false">mais par nature.</char></note>, esclave de la loi du péché.<verse eid="ROM 7:25"/></para>
+  <chapter eid="ROM 7"/>
+  <chapter number="8" style="c" sid="ROM 8"/>
+  <para style="s1">Vivre conduits par l’Esprit</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 8:1"/>Maintenant donc, il n’y a plus de condamnation pour ceux qui sont unis à Jésus-Christ. <verse eid="ROM 8:1"/><verse number="2" style="v" sid="ROM 8:2"/>Car la loi de l’Esprit qui nous donne la vie dans l’union avec Jésus-Christ t’a libéré<note caller="+" style="f"><char style="fr" closed="false">8.2 </char><char style="ft" closed="false">Certains manuscrits ont : </char><char style="fqa" closed="false">m’a libéré </char><char style="ft" closed="false">et d’autres : </char><char style="fqa" closed="false">nous a libérés.</char></note> de la loi du péché et de la mort.<verse eid="ROM 8:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 8:3"/>Car ce que la Loi était incapable de faire, parce que l’état de l’homme la rendait impuissante, Dieu l’a fait : il a envoyé son propre Fils avec une nature semblable à celle des hommes pécheurs et, pour régler le problème du péché<note caller="+" style="f"><char style="fr" closed="false">8.3 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">et il l’a offert en sacrifice pour le péché.</char></note>, il a exécuté sur cet homme la sanction qu’encourt le péché<note caller="+" style="f"><char style="fr" closed="false">8.3 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">il a ainsi condamné le péché qui est dans la nature humaine.</char></note>.<verse eid="ROM 8:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 8:4"/>Il l’a fait pour que la juste exigence de la Loi soit pleinement satisfaite en ce qui nous concerne<note caller="+" style="f"><char style="fr" closed="false">8.4 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">en nous.</char></note>, nous qui vivons, non plus à la manière de l’homme livré à lui-même, mais dans la dépendance de l’Esprit.<verse eid="ROM 8:4"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 8:5"/>En effet, les hommes livrés à eux-mêmes tendent vers ce qui est conforme à l’homme livré à lui-même. Mais ceux qui ont l’Esprit tendent vers ce qui est conforme à l’Esprit.<verse eid="ROM 8:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 8:6"/>Car ce à quoi tend l’homme livré à lui-même mène à la mort, tandis que ce à quoi tend l’Esprit conduit à la vie et à la paix. <verse eid="ROM 8:6"/><verse number="7" style="v" sid="ROM 8:7"/>En effet, l’homme livré à lui-même, dans toutes ses tendances, n’est que haine de Dieu : il ne se soumet pas à la Loi de Dieu car il ne le peut même pas. <verse eid="ROM 8:7"/><verse number="8" style="v" sid="ROM 8:8"/>Les hommes livrés à eux-mêmes sont incapables de plaire à Dieu. <verse eid="ROM 8:8"/><verse number="9" style="v" sid="ROM 8:9"/>Vous, au contraire, vous n’êtes pas livrés à vous-mêmes, mais vous dépendez de l’Esprit, puisque l’Esprit de Dieu habite en vous. Si quelqu’un n’a pas l’Esprit de Christ, il ne lui appartient pas.<verse eid="ROM 8:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 8:10"/>Or, si Christ est en vous, votre corps reste mortel à cause du péché, mais l’Esprit est source de vie<note caller="+" style="f"><char style="fr" closed="false">8.10 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">mais votre esprit a reçu la vie.</char></note>, parce que vous avez été déclarés justes. <verse eid="ROM 8:10"/><verse number="11" style="v" sid="ROM 8:11"/>Et si l’Esprit de celui qui a ressuscité Jésus habite en vous, celui qui a ressuscité Christ rendra aussi la vie à votre corps mortel par son Esprit qui habite en vous.<verse eid="ROM 8:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 8:12"/>Ainsi donc, frères et sœurs, si nous avons une obligation, ce n’est pas celle de vivre à la manière de l’homme livré à lui-même. <verse eid="ROM 8:12"/><verse number="13" style="v" sid="ROM 8:13"/>Car, si vous vivez à la manière de l’homme livré à lui-même, vous mourrez, mais si, par l’Esprit, vous faites mourir les actes mauvais que vous accomplissez dans votre corps, vous vivrez. <verse eid="ROM 8:13"/><verse number="14" style="v" sid="ROM 8:14"/>Car ceux qui sont conduits par l’Esprit de Dieu sont fils de Dieu.<verse eid="ROM 8:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="ROM 8:15"/>En effet, vous n’avez pas reçu un Esprit qui fait de vous des esclaves et vous ramène à la crainte : non, vous avez reçu l’Esprit en conséquence de votre adoption<note caller="+" style="f"><char style="fr" closed="false">8.15 </char><char style="ft" closed="false">L’adoption était courante chez les Grecs et les Romains. Les enfants adoptifs avaient les mêmes droits que les autres enfants – y compris le droit d’héritage (v. 23 ; <char style="xt"><ref loc="GAL 4:5">Ga 4.5</ref></char>).</char></note> par Dieu comme ses fils et ses filles. Car c’est par cet Esprit que nous crions : <char style="qt">Abba</char><note caller="+" style="f"><char style="fr" closed="false">8.15 </char><char style="ft" closed="false">Mot araméen signifiant : </char><char style="fqa" closed="false">cher père </char><char style="ft" closed="false">(voir <char style="xt"><ref loc="GAL 4:6">Ga 4.6</ref></char>).</char></note>, c’est-à-dire Père !<verse eid="ROM 8:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 8:16"/>L’Esprit Saint lui-même témoigne à notre esprit que nous sommes enfants de Dieu. <verse eid="ROM 8:16"/><verse number="17" style="v" sid="ROM 8:17"/>Et puisque nous sommes enfants, nous sommes aussi héritiers : héritiers de Dieu, et donc cohéritiers de Christ, puisque nous souffrons avec lui pour avoir part à sa gloire.<verse eid="ROM 8:17"/></para>
+  <para style="s1">L’espérance au milieu des détresses présentes</para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 8:18"/>J’estime d’ailleurs qu’il n’y a aucune commune mesure entre les souffrances de la vie présente et la gloire qui va se révéler en nous<note caller="+" style="f"><char style="fr" closed="false">8.18 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">pour nous.</char></note>.<verse eid="ROM 8:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 8:19"/>En effet, la création attend, avec un ardent désir, la révélation des fils de Dieu. <verse eid="ROM 8:19"/><verse number="20" style="v" sid="ROM 8:20"/>Car la création tout entière a été réduite à une condition bien dérisoire<note caller="+" style="f"><char style="fr" closed="false">8.20 </char><char style="ft" closed="false">Cette expression reprend le mot-clé de l’Ecclésiaste qui est rendu dans diverses traductions par : ce qui est vain, dérisoire, futile, éphémère, précaire, etc.</char></note> ; cela ne s’est pas produit de son gré, mais à cause de celui qui l’y a soumise. Il lui a toutefois donné une espérance : <verse eid="ROM 8:20"/><verse number="21" style="v" sid="ROM 8:21"/>c’est que la création elle-même sera délivrée de l’esclavage, de la corruption pour accéder à la liberté que les enfants de Dieu connaîtront dans la gloire.<verse eid="ROM 8:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 8:22"/>Nous le savons bien, en effet : jusqu’à présent la création tout entière est unie dans un profond gémissement et dans les douleurs d’un enfantement. <verse eid="ROM 8:22"/><verse number="23" style="v" sid="ROM 8:23"/>Elle n’est pas seule à gémir ; car nous aussi, qui avons reçu l’Esprit comme avant-goût de la gloire, nous gémissons du fond du cœur, en attendant d’être pleinement établis dans notre condition de fils adoptifs de Dieu quand notre corps sera délivré<note caller="+" style="f"><char style="fr" closed="false">8.23 </char><char style="ft" closed="false">Certains manuscrits ont uniquement : </char><char style="fqa" closed="false">nous gémissons du fond du cœur en attendant la pleine libération de notre corps.</char></note>.<verse eid="ROM 8:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="ROM 8:24"/>Car nous sommes sauvés, mais c’est en espérance ; or, voir ce que l’on espère, ce n’est plus espérer ; qui, en effet, continue à espérer ce qu’il voit ? <verse eid="ROM 8:24"/><verse number="25" style="v" sid="ROM 8:25"/>Mais si nous ne voyons pas ce que nous espérons, nous l’attendons avec persévérance. <verse eid="ROM 8:25"/><verse number="26" style="v" sid="ROM 8:26"/>De même, l’Esprit vient nous aider dans notre faiblesse. En effet, nous ne savons pas prier comme il faut<note caller="+" style="f"><char style="fr" closed="false">8.26 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">nous ne savons pas ce qu’il convient de prier.</char></note>, mais l’Esprit lui-même intercède en gémissant d’une manière inexprimable.<verse eid="ROM 8:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ROM 8:27"/>Et Dieu qui scrute les cœurs sait ce vers quoi tend l’Esprit, car c’est en accord avec Dieu qu’il intercède pour les membres du peuple saint. <verse eid="ROM 8:27"/><verse number="28" style="v" sid="ROM 8:28"/>Nous savons en outre que Dieu fait concourir toutes choses au bien de ceux qui l’aiment<note caller="+" style="f"><char style="fr" closed="false">8.28 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">que toutes choses concourent ensemble au bien de ceux qui aiment Dieu. </char><char style="ft" closed="false">D’autres comprennent : </char><char style="fqa" closed="false">que l’Esprit fait concourir toutes choses au bien de ceux qui aiment Dieu.</char></note>, de ceux qui ont été appelés conformément au plan divin. <verse eid="ROM 8:28"/><verse number="29" style="v" sid="ROM 8:29"/>En effet, ceux que Dieu a connus d’avance<note caller="+" style="f"><char style="fr" closed="false">8.29 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">choisis d’avance.</char></note>, il les a aussi destinés d’avance à devenir conformes à l’image de son Fils, afin que celui-ci soit l’aîné de nombreux frères et sœurs. <verse eid="ROM 8:29"/><verse number="30" style="v" sid="ROM 8:30"/>Ceux qu’il a ainsi destinés, il les a aussi appelés à lui ; ceux qu’il a ainsi appelés, il les a aussi déclarés justes, et ceux qu’il a déclarés justes, il leur a aussi donné sa gloire.<verse eid="ROM 8:30"/></para>
+  <para style="s1">L’amour de Dieu : une assurance certaine</para>
+  <para style="p">
+    <verse number="31" style="v" sid="ROM 8:31"/>Que dire de plus ? Si Dieu est pour nous, qui se lèvera contre nous ? <verse eid="ROM 8:31"/><verse number="32" style="v" sid="ROM 8:32"/>Lui qui n’a même pas épargné son propre Fils, mais l’a livré pour nous tous, comment ne nous donnerait-il pas aussi tout avec lui ? <verse eid="ROM 8:32"/><verse number="33" style="v" sid="ROM 8:33"/>Qui accusera encore les élus de Dieu ? Dieu lui-même les déclare justes. <verse eid="ROM 8:33"/><verse number="34" style="v" sid="ROM 8:34"/>Qui les condamnera ? Christ est mort, bien plus : il est ressuscité ! Il est à la droite de Dieu et il intercède pour nous.<verse eid="ROM 8:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="ROM 8:35"/>Qu’est-ce qui pourra nous arracher à l’amour de Christ ? La détresse ou l’angoisse, la persécution, la faim, la misère, le danger ou l’épée ? <verse eid="ROM 8:35"/><verse number="36" style="v" sid="ROM 8:36"/>Car il nous arrive ce que dit l’Ecriture :</para>
+  <para style="q1" vid="ROM 8:36">
+    <char style="qt">A cause de toi,</char> ╵<char style="qt">nous sommes exposés à la mort</char> ╵<char style="qt">à longueur de jour.</char></para>
+  <para style="q1" vid="ROM 8:36">
+    <char style="qt">On nous considère</char> ╵<char style="qt">comme des moutons</char> ╵<char style="qt">destinés à l’abattoir</char><note caller="+" style="f"><char style="fr" closed="false">8.36 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 44:23">Ps 44.23</ref></char>.</char></note><char style="qt">.</char><verse eid="ROM 8:36"/></para>
+  <para style="p">
+    <verse number="37" style="v" sid="ROM 8:37"/>Mais dans tout cela nous sommes bien plus que vainqueurs par celui qui nous a aimés. <verse eid="ROM 8:37"/><verse number="38" style="v" sid="ROM 8:38"/>Oui, j’en ai l’absolue certitude : ni la mort ni la vie, ni les anges ni les dominations, ni le présent ni l’avenir, ni les puissances, <verse eid="ROM 8:38"/><verse number="39" style="v" sid="ROM 8:39"/>ni ce qui est en haut ni ce qui est en bas<note caller="+" style="f"><char style="fr" closed="false">8.39 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">ni la hauteur, ni la profondeur </char><char style="ft" closed="false">(voir <char style="xt"><ref loc="PSA 139:8">Ps 139.8</ref></char>).</char></note>, ni aucune autre créature, rien ne pourra nous arracher à l’amour que Dieu nous a témoigné en Jésus-Christ notre Seigneur.<verse eid="ROM 8:39"/></para>
+  <chapter eid="ROM 8"/>
+  <chapter number="9" style="c" sid="ROM 9"/>
+  <para style="ms1">Israël dans l’histoire du salut</para>
+  <para style="s1">Les sentiments de Paul à l’égard des Israélites</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 9:1"/>Je dis la vérité, en tant qu’homme uni à Christ, je ne mens pas ; ma conscience, en accord avec l’Esprit Saint, me rend ce témoignage : <verse eid="ROM 9:1"/><verse number="2" style="v" sid="ROM 9:2"/>j’éprouve une profonde tristesse et un chagrin continuel dans mon cœur. <verse eid="ROM 9:2"/><verse number="3" style="v" sid="ROM 9:3"/>Oui, je demanderais à Dieu d’être maudit<note caller="+" style="f"><char style="fr" closed="false">9.3 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">Je souhaiterais être maudit.</char></note> et séparé de Christ pour mes frères, nés du même peuple que moi. <verse eid="ROM 9:3"/><verse number="4" style="v" sid="ROM 9:4"/>Ce sont les Israélites. C’est à eux qu’appartiennent la condition de fils adoptifs de Dieu, la manifestation glorieuse de la présence divine, les alliances<note caller="+" style="f"><char style="fr" closed="false">9.4 </char><char style="ft" closed="false">Certains manuscrits ont : </char><char style="fqa" closed="false">l’alliance.</char></note>, le don de la Loi, le culte et les promesses ; <verse eid="ROM 9:4"/><verse number="5" style="v" sid="ROM 9:5"/>à eux les patriarches ! Et c’est d’eux qu’est issu Christ dans son humanité ; il est aussi au-dessus de tout, Dieu béni pour toujours. Amen !<verse eid="ROM 9:5"/></para>
+  <para style="s1">Le véritable Israël selon l’élection de Dieu</para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 9:6"/>Ce n’est pas que la Parole de Dieu soit restée sans effet ! Car ce ne sont pas tous ceux qui descendent du patriarche Israël<note caller="+" style="f"><char style="fr" closed="false">9.6 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">tous ceux qui font partie d’Israël.</char></note> qui constituent Israël ; <verse eid="ROM 9:6"/><verse number="7" style="v" sid="ROM 9:7"/>et ceux qui descendent d’Abraham ne sont pas tous ses enfants. Car Dieu dit à Abraham : <char style="qt">C’est par Isaac que te sera suscitée une descendance</char><note caller="+" style="f"><char style="fr" closed="false">9.7 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 21:12">Gn 21.12</ref></char>.</char></note><char style="qt">.</char> <verse eid="ROM 9:7"/><verse number="8" style="v" sid="ROM 9:8"/>Cela veut dire que tous les enfants de la descendance naturelle d’Abraham ne sont pas enfants de Dieu. Seuls les enfants nés selon la promesse sont considérés comme sa descendance. <verse eid="ROM 9:8"/><verse number="9" style="v" sid="ROM 9:9"/>Car telle est la promesse de Dieu : <char style="qt">Vers cette époque, je viendrai, et Sara aura un fils</char><note caller="+" style="f"><char style="fr" closed="false">9.9 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 18:10">Gn 18.10</ref>, <ref loc="GEN 18:14">14</ref></char>.</char></note><char style="qt">.</char><verse eid="ROM 9:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 9:10"/>Et ce n’est pas tout : Rébecca eut des jumeaux nés d’un seul et même père, de notre ancêtre Isaac. <verse eid="ROM 9:10"/><verse number="11-12" style="v" sid="ROM 9:11-12"/>Or, Dieu a un plan qui s’accomplit selon son libre choix et qui dépend, non des actions des hommes, mais uniquement de la volonté de celui qui appelle. Et pour que ce plan demeure, c’est avant même la naissance de ces enfants, et par conséquent avant qu’ils n’aient fait ni bien ni mal, que Dieu dit à Rébecca : <char style="qt">L’aîné sera assujetti au cadet</char><note caller="+" style="f"><char style="fr" closed="false">9.11-12 </char><char style="ft" closed="false"><char style="xt"><ref loc="GEN 25:23">Gn 25.23</ref></char>.</char></note><char style="qt">.</char> <verse eid="ROM 9:11-12"/><verse number="13" style="v" sid="ROM 9:13"/>Ceci s’accorde avec cet autre texte de l’Ecriture : <char style="qt">J’ai aimé Jacob, et j’ai écarté Esaü</char><note caller="+" style="f"><char style="fr" closed="false">9.13 </char><char style="ft" closed="false"><char style="xt"><ref loc="MAL 1:2-3">Ml 1.2-3</ref></char>.</char></note><char style="qt">.</char><verse eid="ROM 9:13"/></para>
+  <para style="s1">Le Dieu souverain est juste</para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 9:14"/>Mais alors, que dire ? Dieu serait-il injuste ? Loin de là ! <verse eid="ROM 9:14"/><verse number="15" style="v" sid="ROM 9:15"/>Car il a dit à Moïse :</para>
+  <para style="q1" vid="ROM 9:15">
+    <char style="qt">Je ferai grâce à qui je veux faire grâce,</char></para>
+  <para style="q1" vid="ROM 9:15">
+    <char style="qt">j’aurai compassion de qui je veux avoir compassion</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">9.15 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="EXO 33:19">Ex 33.19</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 9:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 9:16"/>Cela ne dépend donc ni de la volonté de l’homme, ni de ses efforts, mais de Dieu qui fait grâce. <verse eid="ROM 9:16"/><verse number="17" style="v" sid="ROM 9:17"/>Dans l’Ecriture, Dieu dit au pharaon :</para>
+  <para style="q1" vid="ROM 9:17">
+    <char style="qt">Voici pourquoi je t’ai fait parvenir où tu es : pour montrer en toi ma puissance et pour que ma renommée se répande par toute la terre</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">9.17 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="EXO 9:16">Ex 9.16</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 9:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 9:18"/>Ainsi donc, Dieu fait grâce à qui il veut et il endurcit qui il veut.<verse eid="ROM 9:18"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 9:19"/>Tu vas me dire : pourquoi alors fait-il encore des reproches ? Car qui a jamais pu résister à sa volonté ? <verse eid="ROM 9:19"/><verse number="20" style="v" sid="ROM 9:20"/>Mais, qui es-tu donc toi, un homme, pour critiquer Dieu ? <char style="qt">L’ouvrage demandera-t-il à l’ouvrier : « Pourquoi m’as-tu fait ains</char>i<note caller="+" style="f"><char style="fr" closed="false">9.20 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="ISA 45:9">Es 45.9</ref></char>.</char></note><char style="qt">? »</char> <verse eid="ROM 9:20"/><verse number="21" style="v" sid="ROM 9:21"/>Le potier n’a-t-il pas le droit, à partir du même bloc d’argile, de fabriquer un pot d’usage noble et un autre pour l’usage courant ?<verse eid="ROM 9:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 9:22"/>Et qu’as-tu à redire si Dieu, parce qu’il voulait montrer sa colère et faire connaître sa puissance, a supporté avec une immense patience ceux qui étaient les objets de sa colère, tout prêts<note caller="+" style="f"><char style="fr" closed="false">9.22 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">préparés pour.</char></note> pour la destruction ? <verse eid="ROM 9:22"/><verse number="23" style="v" sid="ROM 9:23"/>Oui, qu’as-tu à redire si Dieu a agi ainsi pour manifester la richesse de sa gloire en faveur de ceux qui sont les objets de sa compassion, ceux qu’il a préparés d’avance pour la gloire ?<verse eid="ROM 9:23"/></para>
+  <para style="s1">Pour les Juifs et pour les non-Juifs</para>
+  <para style="p">
+    <verse number="24" style="v" sid="ROM 9:24"/>C’est nous qui sommes les objets de sa compassion, nous qu’il a appelés non seulement d’entre les Juifs, mais aussi d’entre les non-Juifs. <verse eid="ROM 9:24"/><verse number="25" style="v" sid="ROM 9:25"/>C’est ce qu’il dit dans le livre du prophète Osée :</para>
+  <para style="q1" vid="ROM 9:25">
+    <char style="qt">Celui qui n’était pas mon peuple,</char> ╵<char style="qt">je l’appellerai « mon peuple ».</char></para>
+  <para style="q1" vid="ROM 9:25">
+    <char style="qt">Celle qui n’était pas la bien-aimée,</char> ╵<char style="qt">je la nommerai « bien-aimée »</char><note caller="+" style="f"><char style="fr" closed="false">9.25 </char><char style="ft" closed="false"><char style="xt"><ref loc="HOS 2:25">Os 2.25</ref></char>.</char></note><char style="qt">.</char><verse eid="ROM 9:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="ROM 9:26"/>
+    <char style="qt">Au lieu même où on leur avait dit : « Vous n’êtes pas mon peuple », on leur dira alors : « Vous êtes les enfants du Dieu vivant</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">9.26 </char>
+      <char style="ft" closed="false">
+        <char style="xt">Os 2.1 ; 1.9</char>.</char>
+    </note>
+    <char style="qt">. »</char><verse eid="ROM 9:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="ROM 9:27"/>Et pour ce qui concerne Israël, Esaïe déclare de son côté :</para>
+  <para style="q1" vid="ROM 9:27">
+    <char style="qt">Même si les descendants d’<char style="w">Israël</char></char> ╵<char style="qt">étaient aussi nombreux que les grains de sable au bord de la mer,</char></para>
+  <para style="q1" vid="ROM 9:27">
+    <char style="qt">seul un reste sera <char style="w" lemma="sauver">sauvé</char>.</char><verse eid="ROM 9:27"/></para>
+  <para style="q1">
+    <verse number="28" style="v" sid="ROM 9:28"/>
+    <char style="qt">Car pleinement et promptement</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">9.28 </char>
+      <char style="ft" closed="false">Autre traduction : </char>
+      <char style="fqa" closed="false">de façon décisive.</char>
+    </note>
+    <char style="qt">,</char> ╵<char style="qt">le Seigneur accomplira sa parole sur la terre</char><note caller="+" style="f"><char style="fr" closed="false">9.28 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 10:22-23">Es 10.22-23</ref></char> cité selon l’ancienne version grecque.</char></note><char style="qt">.</char><verse eid="ROM 9:28"/></para>
+  <para style="p">
+    <verse number="29" style="v" sid="ROM 9:29"/>Et comme Esaïe l’avait dit par avance :</para>
+  <para style="q1" vid="ROM 9:29">
+    <char style="qt">Si le Seigneur des armées célestes</char> ╵<char style="qt">ne nous avait laissé des descendants,</char></para>
+  <para style="q1" vid="ROM 9:29">
+    <char style="qt">nous ressemblerions à <char style="w">Sodome</char>,</char></para>
+  <para style="q1" vid="ROM 9:29">
+    <char style="qt">nous serions comme <char style="w">Gomorrhe</char></char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">9.29 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="ISA 1:9">Es 1.9</ref>
+        </char> cité selon l’ancienne version grecque. </char>
+      <char style="fq" closed="false">Sodome… Gomorrhe</char>
+      <char style="fqa" closed="false">: </char>
+      <char style="ft" closed="false">deux villes qui ont subi un terrible jugement de la part de Dieu (<char style="xt"><ref loc="GEN 19:23-28">Gn 19.23-28</ref></char>).</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 9:29"/></para>
+  <para style="s1">Etre juste : par la foi et non par la Loi</para>
+  <para style="p">
+    <verse number="30" style="v" sid="ROM 9:30"/>Que dire maintenant ? Voici ce que nous disons : les païens qui ne cherchaient pas à être déclarés justes par Dieu ont saisi cette justice, mais il s’agit de la justice qui est reçue par la foi. <verse eid="ROM 9:30"/><verse number="31" style="v" sid="ROM 9:31"/>Les Israélites, eux, qui cherchaient à être déclarés justes en obéissant à une loi, n’y sont pas parvenus<note caller="+" style="f"><char style="fr" closed="false">9.31 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">n’ont pas trouvé une Loi par laquelle ils auraient pu être déclarés justes.</char></note>. <verse eid="ROM 9:31"/><verse number="32" style="v" sid="ROM 9:32"/>Pour quelle raison ? Parce qu’ils ont cherché à être déclarés justes non pas en comptant sur la foi, mais comme si la justice pouvait provenir de la pratique de la Loi. Ils ont buté contre la pierre qui fait tomber, <verse eid="ROM 9:32"/><verse number="33" style="v" sid="ROM 9:33"/>conformément à ce que dit l’Ecriture :</para>
+  <para style="q1" vid="ROM 9:33">
+    <char style="qt">Moi, je place en Sion</char> ╵<char style="qt">une pierre qu’on heurte,</char></para>
+  <para style="q1" vid="ROM 9:33">
+    <char style="qt">un rocher qui fait trébucher.</char></para>
+  <para style="q1" vid="ROM 9:33">
+    <char style="qt">Celui qui met en lui sa <char style="w">confiance</char></char> ╵<char style="qt">ne connaîtra jamais le déshonneur</char><note caller="+" style="f"><char style="fr" closed="false">9.33 </char><char style="ft" closed="false"><char style="xt">Es 8.14 ; 28.16</char> cités selon l’ancienne version grecque.</char></note><char style="qt">.</char><verse eid="ROM 9:33"/></para>
+  <chapter eid="ROM 9"/>
+  <chapter number="10" style="c" sid="ROM 10"/>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 10:1"/>Frères et sœurs, je souhaite de tout cœur que les Israélites soient sauvés, et c’est ce que je demande instamment à Dieu dans mes prières. <verse eid="ROM 10:1"/><verse number="2" style="v" sid="ROM 10:2"/>Car je leur rends ce témoignage : ils ont un zèle ardent pour Dieu, mais il leur manque le discernement. <verse eid="ROM 10:2"/><verse number="3" style="v" sid="ROM 10:3"/>En méconnaissant la manière dont Dieu déclare les hommes justes et en cherchant à être déclarés justes par leurs propres moyens, ils ne se sont pas soumis à Dieu en acceptant le moyen par lequel il nous déclare justes. <verse eid="ROM 10:3"/><verse number="4" style="v" sid="ROM 10:4"/>Car Christ a mis fin au régime de la Loi pour que tous ceux qui croient soient déclarés justes.<verse eid="ROM 10:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 10:5"/>Voici, en effet, comment Moïse définit la justice qui procède de la Loi : <char style="qt">Celui qui appliquera ces commandements vivra grâce à cela</char><note caller="+" style="f"><char style="fr" closed="false">10.5 </char><char style="ft" closed="false"><char style="xt"><ref loc="LEV 18:5">Lv 18.5</ref></char>.</char></note><char style="qt">.</char> <verse eid="ROM 10:5"/><verse number="6" style="v" sid="ROM 10:6"/>Mais voici comment s’exprime la justice reçue par la foi : <char style="qt">Ne dis pas en toi-même</char><note caller="+" style="f"><char style="fr" closed="false">10.6 </char><char style="ft" closed="false"><char style="xt">Dt 8.17 ; 9.4</char>.</char></note> : <char style="qt">Qui montera au ciel ?</char> C’est en faire descendre Christ ? <verse eid="ROM 10:6"/><verse number="7" style="v" sid="ROM 10:7"/>Ou bien : <char style="qt">Qui descendra dans l’abîme ?</char> C’est faire remonter Christ d’entre les morts ? <verse eid="ROM 10:7"/><verse number="8" style="v" sid="ROM 10:8"/>Que dit-elle donc ?</para>
+  <para style="q1" vid="ROM 10:8">
+    <char style="qt">La parole est toute proche de toi, elle est dans ta bouche et dans ton cœur</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">10.8 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="DEU 30:12-14">Dt 30.12-14</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char></para>
+  <para style="p" vid="ROM 10:8">Cette parole est celle de la foi, et c’est celle que nous annonçons.<verse eid="ROM 10:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 10:9"/>En effet, si de <char style="qt">ta bouche</char>, tu déclares que Jésus est Seigneur et si <char style="qt">dans ton cœur</char>, tu crois que Dieu l’a ressuscité, tu seras sauvé, <verse eid="ROM 10:9"/><verse number="10" style="v" sid="ROM 10:10"/>car celui qui croit dans son cœur, Dieu le déclare juste ; celui qui affirme de sa bouche, Dieu le sauve.<verse eid="ROM 10:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 10:11"/>En effet, l’Ecriture dit :</para>
+  <para style="q1" vid="ROM 10:11">
+    <char style="qt">Celui qui met en lui sa <char style="w">confiance</char></char> ╵<char style="qt">ne connaîtra jamais le déshonneur</char><note caller="+" style="f"><char style="fr" closed="false">10.11 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 28:16">Es 28.16</ref></char> cité selon l’ancienne version grecque.</char></note><char style="qt">.</char><verse eid="ROM 10:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 10:12"/>Ainsi, il n’y a pas de différence entre Juifs et non-Juifs. Car tous ont le même Seigneur qui donne généreusement à tous ceux qui font appel à lui. En effet, il est écrit : <verse eid="ROM 10:12"/><verse number="13" style="v" sid="ROM 10:13"/><char style="qt">Tous ceux qui invoqueront le Seigneur seront sauvés</char><note caller="+" style="f"><char style="fr" closed="false">10.13 </char><char style="ft" closed="false"><char style="xt"><ref loc="JOL 3:5">Jl 3.5</ref></char>.</char></note><char style="qt">.</char><verse eid="ROM 10:13"/></para>
+  <para style="s1">Israël n’a pas eu la foi</para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 10:14"/>Mais comment feront-ils appel à lui s’ils n’ont pas cru en lui ? Et comment croiront-ils en lui s’ils ne l’ont pas entendu<note caller="+" style="f"><char style="fr" closed="false">10.14 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">s’ils ne l’entendent pas ?</char></note> ? Et comment entendront-ils s’il n’y a personne pour le leur annoncer ? <verse eid="ROM 10:14"/><verse number="15" style="v" sid="ROM 10:15"/>Et comment y aura-t-il des gens pour l’annoncer s’ils ne sont pas envoyés ? Aussi est-il dit dans l’Ecriture :</para>
+  <para style="q1" vid="ROM 10:15">
+    <char style="qt">Qu’ils sont beaux</char> ╵<char style="qt">les pas de ceux qui annoncent</char> ╵<char style="qt">de bonnes nouvelles</char><note caller="+" style="f"><char style="fr" closed="false">10.15 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 52:7">Es 52.7</ref></char>.</char></note><char style="qt">!</char><verse eid="ROM 10:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="ROM 10:16"/>Mais, malheureusement, tous n’ont pas obéi à cette Bonne Nouvelle. Esaïe déjà demandait : <char style="qt">Seigneur, qui a cru à notre message</char><note caller="+" style="f"><char style="fr" closed="false">10.16 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 53:1">Es 53.1</ref></char> cité selon l’ancienne version grecque.</char></note><char style="qt">?</char><verse eid="ROM 10:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 10:17"/>Donc, la foi naît du message que l’on entend, et ce message vient par la parole de Christ.<verse eid="ROM 10:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="ROM 10:18"/>Maintenant donc je dis : Ne l’ont-ils pas entendu ? Mais si ! N’est-il pas écrit :</para>
+  <para style="q1" vid="ROM 10:18">
+    <char style="qt">Leur voix a retenti par toute la terre.</char></para>
+  <para style="q1" vid="ROM 10:18">
+    <char style="qt">Leurs paroles sont parvenues</char> ╵<char style="qt">jusqu’aux confins du monde</char><note caller="+" style="f"><char style="fr" closed="false">10.18 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 19:5">Ps 19.5</ref></char> cité selon l’ancienne version grecque.</char></note> ?<verse eid="ROM 10:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 10:19"/>Je demande alors : Le peuple d’Israël ne l’a-t-il pas su ? Moïse a été le premier à le leur dire :</para>
+  <para style="q1" vid="ROM 10:19">
+    <char style="qt">Je vous rendrai jaloux</char> ╵<char style="qt">de ceux qui ne sont pas un peuple.</char></para>
+  <para style="q1" vid="ROM 10:19">
+    <char style="qt">Je vous irriterai</char> ╵<char style="qt">par une nation dépourvue d’intelligence</char><note caller="+" style="f"><char style="fr" closed="false">10.19 </char><char style="ft" closed="false"><char style="xt"><ref loc="DEU 32:21">Dt 32.21</ref></char>.</char></note><char style="qt">.</char><verse eid="ROM 10:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 10:20"/>Esaïe pousse même la hardiesse jusqu’à dire :</para>
+  <para style="q1" vid="ROM 10:20">
+    <char style="qt">J’ai été trouvé</char> ╵<char style="qt">par ceux qui ne me cherchaient pas,</char></para>
+  <para style="q1" vid="ROM 10:20">
+    <char style="qt">Je me suis révélé</char> ╵<char style="qt">à ceux qui ne se souciaient pas de moi</char><note caller="+" style="f"><char style="fr" closed="false">10.20 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 65:1">Es 65.1</ref></char> cité selon l’ancienne version grecque.</char></note><char style="qt">.</char><verse eid="ROM 10:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 10:21"/>Mais parlant d’Israël, il dit :</para>
+  <para style="q1" vid="ROM 10:21">
+    <char style="qt">A longueur de journée,</char> ╵<char style="qt">j’ai tendu les mains</char> ╵<char style="qt">vers un peuple désobéissant et rebelle</char><note caller="+" style="f"><char style="fr" closed="false">10.21 </char><char style="ft" closed="false"><char style="xt"><ref loc="ISA 65:2">Es 65.2</ref></char> cité selon l’ancienne version grecque.</char></note><char style="qt">.</char><verse eid="ROM 10:21"/></para>
+  <chapter eid="ROM 10"/>
+  <chapter number="11" style="c" sid="ROM 11"/>
+  <para style="s1">Le reste d’Israël</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 11:1"/>Je demande donc : Dieu aurait-il rejeté son peuple ? Assurément pas ! En effet, ne suis-je pas moi-même Israélite, descendant d’Abraham, de la tribu de Benjamin ? <verse eid="ROM 11:1"/><verse number="2" style="v" sid="ROM 11:2"/>Non, Dieu n’a pas rejeté son peuple qu’il s’est choisi d’avance. Rappelez-vous ce que dit l’Ecriture dans le passage rapportant l’histoire d’Elie dans lequel celui-ci se plaint à Dieu au sujet d’Israël : <verse eid="ROM 11:2"/><verse number="3" style="v" sid="ROM 11:3"/><char style="qt">Seigneur, ils ont tué tes prophètes, ils ont démoli tes autels. Et moi, je suis resté tout seul, et voilà qu’ils en veulent à ma vie</char><note caller="+" style="f"><char style="fr" closed="false">11.3 </char><char style="ft" closed="false"><char style="xt"><ref loc="1KI 19:10">1 R 19.10</ref></char>.</char></note><char style="qt">.</char><verse eid="ROM 11:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 11:4"/>Eh bien ! quelle a été la réponse de Dieu ? <char style="qt">J’ai gardé en réserve pour moi sept mille hommes qui ne se sont pas prosternés devant le dieu Baal</char><note caller="+" style="f"><char style="fr" closed="false">11.4 </char><char style="ft" closed="false"><char style="xt"><ref loc="1KI 19:18">1 R 19.18</ref></char>.</char></note><char style="qt">.</char><verse eid="ROM 11:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 11:5"/>Il en est de même dans le temps présent : il subsiste un reste que Dieu a librement choisi dans sa grâce. <verse eid="ROM 11:5"/><verse number="6" style="v" sid="ROM 11:6"/>Or, puisque c’est par grâce, cela ne peut pas venir des œuvres, ou alors la grâce n’est plus la grâce.<verse eid="ROM 11:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 11:7"/>Que s’est-il donc passé ? Ce que le peuple d’Israël cherchait, il ne l’a pas trouvé ; seuls ceux que Dieu a choisis l’ont obtenu. Les autres ont été rendus incapables de comprendre, conformément à ce qui est écrit :<verse eid="ROM 11:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="ROM 11:8"/>
+    <char style="qt">Dieu a frappé leur esprit de torpeur, leurs yeux de cécité et leurs oreilles de surdité,</char></para>
+  <para style="q1" vid="ROM 11:8">
+    <char style="qt">et il en est ainsi jusqu’à ce jour</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">11.8 </char>
+      <char style="ft" closed="false">
+        <char style="xt">Dt 29.3 ; Es 29.10</char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 11:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 11:9"/>De même David déclare :</para>
+  <para style="q1" vid="ROM 11:9">
+    <char style="qt">Que leurs banquets deviennent pour eux un piège, un filet,</char></para>
+  <para style="q1" vid="ROM 11:9">
+    <char style="qt">une cause de chute, et qu’ils y trouvent leur châtiment.</char><verse eid="ROM 11:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="ROM 11:10"/>
+    <char style="qt">Que leurs yeux s’obscurcissent</char> ╵<char style="qt">au point de ne plus voir,</char></para>
+  <para style="q1" vid="ROM 11:10">
+    <char style="qt">fais-leur courber le dos</char> ╵<char style="qt">continuellement</char><note caller="+" style="f"><char style="fr" closed="false">11.10 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 69:23-24">Ps 69.23-24</ref></char> cité selon l’ancienne version grecque.</char></note><char style="qt">!</char><verse eid="ROM 11:10"/></para>
+  <para style="s1">La chute d’Israël n’est pas définitive</para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 11:11"/>Je demande alors : si les Israélites ont trébuché, est-ce pour tomber définitivement ? Loin de là ! Par leur faute, le salut est devenu accessible aux païens, ce qui excitera leur jalousie. <verse eid="ROM 11:11"/><verse number="12" style="v" sid="ROM 11:12"/>Et si leur faute a fait la richesse du monde, et leur déchéance la richesse des non-Juifs, quelle richesse plus grande encore n’y aura-t-il pas dans leur complet rétablissement ?<verse eid="ROM 11:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 11:13"/>Je m’adresse particulièrement ici à vous qui êtes d’origine païenne : dans la mesure même où je suis l’apôtre des non-Juifs, je me fais une idée d’autant plus haute de mon ministère <verse eid="ROM 11:13"/><verse number="14" style="v" sid="ROM 11:14"/>que je parviendrai peut-être, en l’exerçant, à rendre jaloux ceux de mon peuple et à en conduire ainsi quelques-uns au salut. <verse eid="ROM 11:14"/><verse number="15" style="v" sid="ROM 11:15"/>Car si leur mise à l’écart a entraîné la réconciliation du monde, quel sera l’effet de leur réintégration ? Rien de moins qu’une résurrection d’entre les morts ! <verse eid="ROM 11:15"/><verse number="16" style="v" sid="ROM 11:16"/>En effet, si les prémices du pain offert à Dieu sont consacrées, toute la pâte l’est aussi. Si la racine est consacrée, les branches le sont aussi<note caller="+" style="f"><char style="fr" closed="false">11.16 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="NUM 15:19-21">Nb 15.19-21</ref></char>. Les prémices et la racine peuvent représenter les patriarches (v. 28).</char></note>.<verse eid="ROM 11:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 11:17"/>Ainsi en est-il d’Israël : quelques branches ont été coupées. Et toi qui, par ton origine païenne, étais comme un rameau d’olivier sauvage, tu as été greffé parmi les branches restantes, et voici que tu as part avec elles à la sève qui monte de la racine de l’olivier cultivé. <verse eid="ROM 11:17"/><verse number="18" style="v" sid="ROM 11:18"/>Ne te mets pas, pour autant, à te vanter aux dépens des branches coupées<note caller="+" style="f"><char style="fr" closed="false">11.18 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">les branches d’origine.</char></note>. Et si tu es tenté par un tel orgueil, souviens-toi que ce n’est pas toi qui portes la racine, c’est elle qui te porte !<verse eid="ROM 11:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 11:19"/>Peut-être vas-tu dire : si des branches ont été coupées, c’est pour que je puisse être greffé. <verse eid="ROM 11:19"/><verse number="20" style="v" sid="ROM 11:20"/>Bien ! Mais elles ont été coupées à cause de leur incrédulité ; et toi, c’est à cause de ta foi que tu tiens. Ne sois donc pas orgueilleux ! Sois plutôt sur tes gardes ! <verse eid="ROM 11:20"/><verse number="21" style="v" sid="ROM 11:21"/>Car si Dieu n’a pas épargné les branches naturelles, il ne t’épargnera pas non plus<note caller="+" style="f"><char style="fr" closed="false">11.21 </char><char style="ft" closed="false">Certains manuscrits ont : </char><char style="fqa" closed="false">prends garde, de peur qu’il ne t’épargne pas non plus.</char></note>. <verse eid="ROM 11:21"/><verse number="22" style="v" sid="ROM 11:22"/>Considère donc, à la fois, la bonté et la sévérité de Dieu : sévérité à l’égard de ceux qui sont tombés, bonté à ton égard aussi longtemps que tu t’attaches à cette bonté. Sinon, toi aussi, tu seras retranché.<verse eid="ROM 11:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 11:23"/>En ce qui concerne les Israélites, s’ils ne demeurent pas dans leur incrédulité, ils seront regreffés. Car Dieu a le pouvoir de les greffer de nouveau. <verse eid="ROM 11:23"/><verse number="24" style="v" sid="ROM 11:24"/>En effet, toi, tu as été coupé de l’olivier sauvage auquel tu appartenais par ta nature, pour être greffé, contrairement à ta nature, sur l’olivier cultivé : à combien plus forte raison les branches qui proviennent de cet olivier seront-elles greffées sur lui !<verse eid="ROM 11:24"/></para>
+  <para style="s1">« Tout Israël sera sauvé »</para>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 11:25"/>Frères et sœurs, je ne veux pas que vous restiez dans l’ignorance de ce mystère, pour que vous ne croyiez pas détenir en vous-mêmes une sagesse supérieure : l’endurcissement d’une partie d’Israël durera jusqu’à ce que l’ensemble des non-Juifs soit entré dans le peuple de Dieu, <verse eid="ROM 11:25"/><verse number="26" style="v" sid="ROM 11:26"/>et ainsi, tout Israël sera sauvé. C’est là ce que dit l’Ecriture :</para>
+  <para style="q1" vid="ROM 11:26">
+    <char style="qt">De Sion</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">11.26 </char>
+      <char style="ft" closed="false">Autre traduction : </char>
+      <char style="fqa" closed="false">A cause de Sion.</char>
+    </note>
+    <char style="qt">viendra le Libérateur ;</char></para>
+  <para style="q1" vid="ROM 11:26">
+    <char style="qt">il éloignera de <char style="w">Jacob</char> toute désobéissance.</char><verse eid="ROM 11:26"/></para>
+  <para style="q1">
+    <verse number="27" style="v" sid="ROM 11:27"/>
+    <char style="qt">Et voici en quoi consistera mon <char style="w">alliance</char> avec eux</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">11.27 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="ISA 59:20-21">Es 59.20-21</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">:</char></para>
+  <para style="q1" vid="ROM 11:27">
+    <char style="qt">c’est que j’enlèverai leurs péchés</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">11.27 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="ISA 27:9">Es 27.9</ref>
+        </char> cité selon l’ancienne version grecque. Voir <char style="xt"><ref loc="JER 31:33-34">Jr 31.33-34</ref></char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 11:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="ROM 11:28"/>Si l’on se place du point de vue de l’Evangile, ils sont devenus ennemis de Dieu pour que vous en bénéficiiez. Mais du point de vue du libre choix de Dieu, ils restent ses bien-aimés à cause de leurs ancêtres. <verse eid="ROM 11:28"/><verse number="29" style="v" sid="ROM 11:29"/>Car les dons de la grâce et l’appel de Dieu sont irrévocables. <verse eid="ROM 11:29"/><verse number="30" style="v" sid="ROM 11:30"/>Vous-mêmes, en effet, vous avez désobéi à Dieu autrefois et maintenant Dieu vous a fait grâce en se servant de leur désobéissance. <verse eid="ROM 11:30"/><verse number="31" style="v" sid="ROM 11:31"/>De la même façon<note caller="+" style="f"><char style="fr" closed="false">11.31 </char><char style="ft" closed="false">Plusieurs manuscrits ajoutent : </char><char style="fqa" closed="false">maintenant.</char></note>, si leur désobéissance actuelle a pour conséquence votre pardon, c’est pour que Dieu leur pardonne à eux aussi<note caller="+" style="f"><char style="fr" closed="false">11.31 </char><char style="ft" closed="false">Autres traductions : </char><char style="fqa" closed="false">De la même façon, eux ont maintenant désobéi afin que, par le pardon que vous avez obtenu, ils obtiennent à leur tour le pardon de Dieu, </char><char style="ft" closed="false">ou : </char><char style="fqa" closed="false">…ils obtiennent maintenant à leur tour….</char></note>. <verse eid="ROM 11:31"/><verse number="32" style="v" sid="ROM 11:32"/>Car Dieu a emprisonné tous les hommes dans la désobéissance afin de faire grâce à tous.<verse eid="ROM 11:32"/></para>
+  <para style="p">
+    <verse number="33" style="v" sid="ROM 11:33"/>Combien grandes sont les richesses de Dieu, combien profondes sa sagesse et sa science ! Nul ne peut sonder ses jugements. Nul ne peut découvrir ses plans. <verse eid="ROM 11:33"/><verse number="34" style="v" sid="ROM 11:34"/>Car,</para>
+  <para style="q1" vid="ROM 11:34">
+    <char style="qt">Qui a connu la pensée du Seigneur ?</char></para>
+  <para style="q1" vid="ROM 11:34">
+    <char style="qt">Qui a été son conseiller</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">11.34 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="ISA 40:13">Es 40.13</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">?</char><verse eid="ROM 11:34"/></para>
+  <para style="q1">
+    <verse number="35" style="v" sid="ROM 11:35"/>
+    <char style="qt">Qui lui a fait des dons</char></para>
+  <para style="q1" vid="ROM 11:35">
+    <char style="qt">pour devoir être payé de retour</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">11.35 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="JOB 41:3">Jb 41.3</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">?</char><verse eid="ROM 11:35"/></para>
+  <para style="p">
+    <verse number="36" style="v" sid="ROM 11:36"/>En effet, tout vient de lui, tout subsiste par lui et pour lui. A lui soit la gloire à jamais ! Amen.<verse eid="ROM 11:36"/></para>
+  <chapter eid="ROM 11"/>
+  <chapter number="12" style="c" sid="ROM 12"/>
+  <para style="ms1">La vie du chrétien</para>
+  <para style="s1">S’offrir à Dieu</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 12:1"/>Je vous recommande donc, frères et sœurs, à cause de cette immense bonté de Dieu, à lui offrir votre corps comme un sacrifice vivant, saint et qui plaise à Dieu. Ce sera là de votre part un culte raisonnable. <verse eid="ROM 12:1"/><verse number="2" style="v" sid="ROM 12:2"/>Ne prenez pas comme modèle le monde actuel, mais soyez transformés par le renouvellement de votre intelligence, pour pouvoir discerner la volonté de Dieu : ce qui est bon, ce qui lui plaît<note caller="+" style="f"><char style="fr" closed="false">12.2 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">ce qui est agréable.</char></note>, ce qui est parfait.<verse eid="ROM 12:2"/></para>
+  <para style="s1">Vivre dans l’amour</para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 12:3"/>En vertu de la grâce que Dieu m’a faite, voici ce que je dis à chacun d’entre vous : n’allez pas au-delà de ce à quoi vous devez prétendre, tendez au contraire à une sage appréciation de vous-mêmes, chacun selon la part que Dieu lui a confiée<note caller="+" style="f"><char style="fr" closed="false">12.3 </char><char style="ft" closed="false">Certains comprennent : </char><char style="fqa" closed="false">chacun selon la part de foi que Dieu lui a donnée.</char></note>.<verse eid="ROM 12:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="ROM 12:4"/>Chacun de nous a, dans un seul corps, de nombreux organes ; mais ces organes n’ont pas la même fonction. <verse eid="ROM 12:4"/><verse number="5" style="v" sid="ROM 12:5"/>De même, alors que nous sommes nombreux, nous formons ensemble un seul corps par notre union avec Christ, et nous sommes tous, et chacun pour sa part, membres les uns des autres. <verse eid="ROM 12:5"/><verse number="6" style="v" sid="ROM 12:6"/>Et nous avons des dons de la grâce différents, que, dans sa bonté, Dieu nous a accordés. Pour l’un, c’est la prophétie : qu’il exerce cette activité conformément à notre foi commune. <verse eid="ROM 12:6"/><verse number="7" style="v" sid="ROM 12:7"/>Pour un autre, c’est le service : qu’il se consacre à ce service. Que celui qui a reçu un ministère d’enseignement enseigne. <verse eid="ROM 12:7"/><verse number="8" style="v" sid="ROM 12:8"/>Que celui qui a reçu un ministère d’encouragement encourage. Que celui qui donne le fasse sans arrière-pensée ; que celui qui dirige le fasse avec sérieux ; que celui qui secourt les malheureux le fasse avec joie.<verse eid="ROM 12:8"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="9" style="v" sid="ROM 12:9"/>Que votre amour soit sincère<note caller="+" style="f"><char style="fr" closed="false">12.9 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">Que votre amour soit sans hypocrisie.</char></note>. Ayez donc le mal en horreur, attachez-vous de toutes vos forces au bien, notamment en ce qui concerne :<verse eid="ROM 12:9"/></para>
+  <para style="li1">
+    <verse number="10" style="v" sid="ROM 12:10"/>– l’amour fraternel : soyez pleins d’affection les uns pour les autres ;</para>
+  <para style="li1" vid="ROM 12:10">– l’estime mutuelle : soyez les premiers à la manifester ;<verse eid="ROM 12:10"/></para>
+  <para style="li1">
+    <verse number="11" style="v" sid="ROM 12:11"/>– l’ardeur : ne soyez pas nonchalants ;</para>
+  <para style="li1" vid="ROM 12:11">– l’Esprit<note caller="+" style="f"><char style="fr" closed="false">12.11 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">votre état d’esprit.</char></note> : soyez bouillants ;</para>
+  <para style="li1" vid="ROM 12:11">– le Seigneur : soyez de bons serviteurs ;<verse eid="ROM 12:11"/></para>
+  <para style="li1">
+    <verse number="12" style="v" sid="ROM 12:12"/>– l’espérance : qu’elle soit votre joie ;</para>
+  <para style="li1" vid="ROM 12:12">– l’épreuve : qu’elle vous trouve pleins d’endurance ;</para>
+  <para style="li1" vid="ROM 12:12">– la prière : priez avec persévérance ;<verse eid="ROM 12:12"/></para>
+  <para style="li1">
+    <verse number="13" style="v" sid="ROM 12:13"/>– les besoins de ceux qui font partie du peuple saint : soyez-en solidaires, toujours prêts à pratiquer l’hospitalité.<verse eid="ROM 12:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 12:14"/>Demandez à Dieu de faire du bien à ceux qui vous persécutent : oui, demandez du bien pour eux, ne demandez pas du mal ! <verse eid="ROM 12:14"/><verse number="15" style="v" sid="ROM 12:15"/>Partagez la joie de ceux qui sont dans la joie, les larmes de ceux qui pleurent. <verse eid="ROM 12:15"/><verse number="16" style="v" sid="ROM 12:16"/>Ayez les uns pour les autres une égale considération<note caller="+" style="f"><char style="fr" closed="false">12.16 </char><char style="ft" closed="false">Autres traductions : </char><char style="fqa" closed="false">soyez bien d’accord entre vous ; </char><char style="ft" closed="false">ou : </char><char style="fqa" closed="false">cultivez l’harmonie entre vous.</char></note>. Ne visez pas à ce qui est trop haut, mais laissez-vous attirer par ce qui est humble. <char style="qt">Ne vous prenez pas pour des sages</char><note caller="+" style="f"><char style="fr" closed="false">12.16 </char><char style="ft" closed="false"><char style="xt"><ref loc="PRO 3:7">Pr 3.7</ref></char>.</char></note><char style="qt">.</char><verse eid="ROM 12:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 12:17"/>Ne répondez jamais au mal par le mal. Cherchez au contraire à faire ce qui est bien devant tous les hommes. <verse eid="ROM 12:17"/><verse number="18" style="v" sid="ROM 12:18"/>Autant que possible, et dans la mesure où cela dépend de vous, vivez en paix avec tous les hommes. <verse eid="ROM 12:18"/><verse number="19" style="v" sid="ROM 12:19"/>Mes amis, ne vous vengez pas vous-mêmes, mais laissez agir la colère de Dieu, car il est écrit :</para>
+  <para style="q1" vid="ROM 12:19">
+    <char style="qt">C’est à moi qu’il appartient de faire justice ;</char></para>
+  <para style="q1" vid="ROM 12:19">
+    <char style="qt">c’est moi qui rendrai à chacun son dû</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">12.19 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="DEU 32:35">Dt 32.35</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 12:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="ROM 12:20"/>Mais voici votre part :</para>
+  <para style="q1" vid="ROM 12:20">
+    <char style="qt">Si ton ennemi a faim, donne-lui à manger.</char></para>
+  <para style="q1" vid="ROM 12:20">
+    <char style="qt">S’il a soif, donne-lui à boire.</char></para>
+  <para style="q1" vid="ROM 12:20">
+    <char style="qt">Par là, ce sera comme si tu lui mettais</char></para>
+  <para style="q1" vid="ROM 12:20">
+    <char style="qt">des charbons ardents sur la tête</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">12.20 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PRO 25:21-22">Pr 25.21-22</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 12:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 12:21"/>Ne te laisse pas vaincre par le mal. Au contraire, sois vainqueur du mal par le bien.<verse eid="ROM 12:21"/></para>
+  <chapter eid="ROM 12"/>
+  <chapter number="13" style="c" sid="ROM 13"/>
+  <para style="s1">Le chrétien et les autorités</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 13:1"/>Que tout homme se soumette aux autorités supérieures, car il n’y a pas d’autorité qui ne vienne de Dieu, et celles qui existent ont été instituées par Dieu. <verse eid="ROM 13:1"/><verse number="2" style="v" sid="ROM 13:2"/>C’est pourquoi celui qui s’oppose à l’autorité lutte contre une disposition établie par Dieu, et ceux qui sont engagés dans une telle lutte recevront le châtiment qu’ils se seront attiré. <verse eid="ROM 13:2"/><verse number="3" style="v" sid="ROM 13:3"/>Car ce sont les malfaiteurs, et non ceux qui pratiquent le bien, qui ont à redouter les magistrats. Veux-tu ne pas avoir peur de l’autorité ? Fais le bien, et l’autorité t’approuvera. <verse eid="ROM 13:3"/><verse number="4" style="v" sid="ROM 13:4"/>Car l’autorité est au service de Dieu pour ton bien. Mais si tu fais le mal, redoute-la. Car ce n’est pas pour rien qu’elle peut punir de mort<note caller="+" style="f"><char style="fr" closed="false">13.4 </char><char style="ft" closed="false">Le grec a : </char><char style="fqa" closed="false">qu’elle porte l’épée.</char></note>. Elle est, en effet, au service de Dieu pour manifester sa colère et punir celui qui fait le mal. <verse eid="ROM 13:4"/><verse number="5" style="v" sid="ROM 13:5"/>C’est pourquoi il est nécessaire de se soumettre à l’autorité, non seulement par peur de la punition, mais surtout par motif de conscience.<verse eid="ROM 13:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="ROM 13:6"/>C’est pour les mêmes raisons que vous devez payer vos impôts. Car ceux qui les perçoivent sont eux aussi au service de Dieu, dans l’exercice de leurs fonctions. <verse eid="ROM 13:6"/><verse number="7" style="v" sid="ROM 13:7"/>Rendez donc à chacun ce qui lui est dû : les impôts et les taxes à qui vous les devez, le respect et l’honneur à qui ils reviennent.<verse eid="ROM 13:7"/></para>
+  <para style="s1">Le résumé de la Loi</para>
+  <para style="p">
+    <verse number="8" style="v" sid="ROM 13:8"/>Ne restez redevables de rien à personne, sinon de vous aimer les uns les autres. Car celui qui aime l’autre a satisfait à toutes les exigences de la Loi. <verse eid="ROM 13:8"/><verse number="9" style="v" sid="ROM 13:9"/>En effet, des commandements comme : <char style="qt">Tu ne commettras pas d’adultère ; tu ne commettras pas de meurtre ; tu ne voleras pas, tu ne convoiteras pas</char><note caller="+" style="f"><char style="fr" closed="false">13.9 </char><char style="ft" closed="false"><char style="xt">Ex 20.13-15, 17 ; Dt 5.17-19, 21</char>.</char></note> ; et tous les autres, se trouvent récapitulés en cette seule parole : <char style="qt">Aime ton prochain comme toi-même</char><note caller="+" style="f"><char style="fr" closed="false">13.9 </char><char style="ft" closed="false"><char style="xt"><ref loc="LEV 19:18">Lv 19.18</ref></char>.</char></note><char style="qt">.</char> <verse eid="ROM 13:9"/><verse number="10" style="v" sid="ROM 13:10"/>Celui qui aime ne cause aucun mal à son prochain. Aimer son prochain, c’est donc accomplir toute la Loi.<verse eid="ROM 13:10"/></para>
+  <para style="s1">Le Jour est proche</para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 13:11"/>Faites ceci d’autant plus que vous savez en quel temps nous vivons. C’est désormais l’heure de sortir de votre sommeil, car le salut est plus près de nous que lorsque nous avons commencé à croire. <verse eid="ROM 13:11"/><verse number="12" style="v" sid="ROM 13:12"/>La nuit est avancée, le moment où le jour va se lever approche. Débarrassons-nous de tout ce qui se fait dans les ténèbres, et revêtons-nous de l’armure de la lumière. <verse eid="ROM 13:12"/><verse number="13" style="v" sid="ROM 13:13"/>Vivons comme il convient en plein jour, sans orgies ni beuveries, sans débauche ni immoralité, sans querelle ni jalousie. <verse eid="ROM 13:13"/><verse number="14" style="v" sid="ROM 13:14"/>Revêtez-vous du Seigneur Jésus-Christ et ne vous préoccupez pas de satisfaire les désirs de l’homme livré à lui-même.<verse eid="ROM 13:14"/></para>
+  <chapter eid="ROM 13"/>
+  <chapter number="14" style="c" sid="ROM 14"/>
+  <para style="s1">Le respect des frères et sœurs en la foi</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 14:1"/>Accueillez celui qui est mal affermi dans la foi, sans contester sans cesse ses opinions<note caller="+" style="f"><char style="fr" closed="false">14.1 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">sans discuter sans cesse de ses opinions.</char></note>. <verse eid="ROM 14:1"/><verse number="2" style="v" sid="ROM 14:2"/>Ainsi la foi de l’un le conduit à manger de tout. L’autre, qui est mal affermi dans la foi, ne mange que des légumes. <verse eid="ROM 14:2"/><verse number="3" style="v" sid="ROM 14:3"/>Que celui qui mange de tout ne méprise pas celui qui ne fait pas comme lui, et que celui qui ne mange pas de viande ne condamne pas celui qui en mange, car Dieu lui a fait bon accueil. <verse eid="ROM 14:3"/><verse number="4" style="v" sid="ROM 14:4"/>Qui es-tu, toi, pour juger le serviteur d’un autre ? Qu’il tienne bon ou qu’il tombe, c’est l’affaire de son maître. Mais il tiendra bon car le Seigneur, son maître, a le pouvoir de le faire tenir.<verse eid="ROM 14:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="ROM 14:5"/>Pour celui-ci, tel jour a plus d’importance qu’un autre<note caller="+" style="f"><char style="fr" closed="false">14.5 </char><char style="ft" closed="false">Il s’agissait sans doute de chrétiens d’origine juive qui continuaient à respecter le sabbat et les jours de fêtes cultuelles instituées par la Loi mosaïque.</char></note> ; pour celui-là, ils sont tous égaux : à chacun d’avoir une pleine conviction en lui-même. <verse eid="ROM 14:5"/><verse number="6" style="v" sid="ROM 14:6"/>Celui qui fait une distinction entre les jours le fait pour le Seigneur. Celui qui mange de tout le fait aussi pour le Seigneur, puisqu’il remercie Dieu pour sa nourriture. Et celui qui s’abstient de certains aliments le fait encore pour le Seigneur, car lui aussi remercie Dieu.<verse eid="ROM 14:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 14:7"/>Aucun de nous ne vit pour lui-même et aucun ne meurt pour lui-même. <verse eid="ROM 14:7"/><verse number="8" style="v" sid="ROM 14:8"/>Si nous vivons, nous vivons pour le Seigneur, et si nous mourons, nous mourons pour le Seigneur. Ainsi, que nous vivions ou que nous mourions, nous appartenons au Seigneur. <verse eid="ROM 14:8"/><verse number="9" style="v" sid="ROM 14:9"/>En effet, Christ est mort et il est revenu à la vie pour être le Seigneur des morts et des vivants. <verse eid="ROM 14:9"/><verse number="10" style="v" sid="ROM 14:10"/>Et toi, pourquoi condamnes-tu ton frère ? Ou toi, pourquoi méprises-tu ton frère ? Ne devons-nous pas tous comparaître devant le tribunal de Dieu ? <verse eid="ROM 14:10"/><verse number="11" style="v" sid="ROM 14:11"/>Car il est écrit :</para>
+  <para style="q1" vid="ROM 14:11">
+    <char style="qt">Aussi vrai que je vis, dit le Seigneur,</char></para>
+  <para style="q1" vid="ROM 14:11">
+    <char style="qt">tout genou ploiera devant moi</char></para>
+  <para style="q1" vid="ROM 14:11">
+    <char style="qt">et toute langue</char></para>
+  <para style="q1" vid="ROM 14:11">
+    <char style="qt">me reconnaîtra comme Dieu</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">14.11 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="ISA 45:23">Es 45.23</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 14:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 14:12"/>Ainsi chacun de nous rendra compte à Dieu pour lui-même. <verse eid="ROM 14:12"/><verse number="13" style="v" sid="ROM 14:13"/>Cessons donc de nous condamner les uns les autres.</para>
+  <para style="s1" vid="ROM 14:13">Se soucier des frères et sœurs en la foi</para>
+  <para style="p" vid="ROM 14:13">Prenez plutôt la décision de ne rien mettre en travers du chemin d’un frère qui puisse le faire trébucher ou tomber. <verse eid="ROM 14:13"/><verse number="14" style="v" sid="ROM 14:14"/>Pour moi, je sais et je suis pleinement convaincu, en accord avec la pensée du Seigneur Jésus, que rien n’est impur en soi. Cependant, si quelqu’un considère que telle chose est impure, alors elle est impure pour lui. <verse eid="ROM 14:14"/><verse number="15" style="v" sid="ROM 14:15"/>Si donc, à cause d’un aliment, tu fais du tort à ton frère, tu ne te conduis pas selon l’amour. Ne va pas, pour un aliment, causer la perte de celui pour qui Christ est mort. <verse eid="ROM 14:15"/><verse number="16" style="v" sid="ROM 14:16"/>Que ce qui est bien pour vous ne devienne pas pour d’autres une occasion de dire du mal de vous<note caller="+" style="f"><char style="fr" closed="false">14.16 </char><char style="ft" closed="false">Certains manuscrits ont : </char><char style="fqa" closed="false">nous.</char></note>. <verse eid="ROM 14:16"/><verse number="17" style="v" sid="ROM 14:17"/>Dans le royaume de Dieu, ce n’est pas le manger et le boire qui importent, mais une vie juste, la paix et la joie que produit l’Esprit Saint. <verse eid="ROM 14:17"/><verse number="18" style="v" sid="ROM 14:18"/>Celui qui sert Christ de cette manière est agréable à Dieu et estimé des hommes.<verse eid="ROM 14:18"/></para>
+  <para style="p">
+    <verse number="19" style="v" sid="ROM 14:19"/>Ainsi donc, cherchons<note caller="+" style="f"><char style="fr" closed="false">14.19 </char><char style="ft" closed="false">Certains manuscrits ont : </char><char style="fqa" closed="false">nous cherchons.</char></note> toujours ce qui contribue à favoriser la paix et à nous faire grandir les uns les autres dans la foi. <verse eid="ROM 14:19"/><verse number="20" style="v" sid="ROM 14:20"/>Ne va pas, pour un aliment, détruire l’œuvre de Dieu. Tout est pur, c’est vrai. Mais il est mal de manger tel aliment si cela risque de causer la chute d’un frère. <verse eid="ROM 14:20"/><verse number="21" style="v" sid="ROM 14:21"/>Ce qui est bien, c’est de s’abstenir de viande, de vin, bref, de tout ce qui peut entraîner la chute de ton frère. <verse eid="ROM 14:21"/><verse number="22" style="v" sid="ROM 14:22"/>Garde devant Dieu cette foi que tu as. Heureux celui qui ne se condamne pas lui-même par ce qu’il approuve. <verse eid="ROM 14:22"/><verse number="23" style="v" sid="ROM 14:23"/>Mais celui qui mange tout en ayant des doutes à ce sujet est déjà condamné, car son attitude ne découle pas de la foi. Or tout ce qui ne découle pas de la foi est péché.<verse eid="ROM 14:23"/></para>
+  <chapter eid="ROM 14"/>
+  <chapter number="15" style="c" sid="ROM 15"/>
+  <para style="s1">Le soutien des frères et sœurs en la foi</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 15:1"/>Nous qui sommes forts, nous devons porter les faiblesses de ceux qui ne le sont pas, sans chercher notre propre satisfaction. <verse eid="ROM 15:1"/><verse number="2" style="v" sid="ROM 15:2"/>Que chacun de nous recherche la satisfaction de son prochain pour le bien de celui-ci, en vue de l’aider à grandir dans la foi. <verse eid="ROM 15:2"/><verse number="3" style="v" sid="ROM 15:3"/>Car Christ n’a pas cherché sa propre satisfaction, mais il a dit, comme le déclare l’Ecriture : <char style="qt">Les insultes des hommes qui t’insultent sont retombées sur moi</char><note caller="+" style="f"><char style="fr" closed="false">15.3 </char><char style="ft" closed="false"><char style="xt"><ref loc="PSA 69:10">Ps 69.10</ref></char>.</char></note><char style="qt">.</char> <verse eid="ROM 15:3"/><verse number="4" style="v" sid="ROM 15:4"/>Or tout ce qui a été consigné autrefois dans l’Ecriture l’a été pour nous instruire, afin que la patience et l’encouragement qu’apporte l’Ecriture produisent en nous l’espérance. <verse eid="ROM 15:4"/><verse number="5" style="v" sid="ROM 15:5"/>Que Dieu, source de toute patience et de tout encouragement, vous donne de vivre en plein accord les uns avec les autres, conformément à l’enseignement de Jésus-Christ<note caller="+" style="f"><char style="fr" closed="false">15.5 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">selon ce que Jésus-Christ voudra.</char></note>. <verse eid="ROM 15:5"/><verse number="6" style="v" sid="ROM 15:6"/>Ainsi, d’un commun accord et d’une seule voix, vous célébrerez la gloire du Dieu et Père de notre Seigneur Jésus-Christ.<verse eid="ROM 15:6"/></para>
+  <para style="s1">Jésus-Christ est venu pour les Juifs et pour les non-Juifs</para>
+  <para style="p">
+    <verse number="7" style="v" sid="ROM 15:7"/>Accueillez-vous donc les uns les autres, tout comme Christ vous a accueillis, pour la gloire de Dieu. <verse eid="ROM 15:7"/><verse number="8" style="v" sid="ROM 15:8"/>Voici, en effet, ce que j’affirme : c’est, d’abord, que Christ est venu se mettre au service des Juifs pour montrer que Dieu est véridique en accomplissant les promesses faites à leurs ancêtres ; <verse eid="ROM 15:8"/><verse number="9" style="v" sid="ROM 15:9"/>c’est, ensuite, qu’il est venu pour que les non-Juifs, de leur côté, louent Dieu à cause de sa compassion, comme le dit l’Ecriture :</para>
+  <para style="q1" vid="ROM 15:9">
+    <char style="qt">Aussi je publie tes louanges parmi les peuples,</char></para>
+  <para style="q1" vid="ROM 15:9">
+    <char style="qt">je te célèbre par mes chants</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">15.9 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 18:50">Ps 18.50</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 15:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="ROM 15:10"/>Et ailleurs :</para>
+  <para style="q1" vid="ROM 15:10">
+    <char style="qt">Peuples, réjouissez-vous avec son peuple</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">15.10 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="DEU 32:43">Dt 32.43</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 15:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="ROM 15:11"/>Ou encore :</para>
+  <para style="q1" vid="ROM 15:11">
+    <char style="qt">Louez le Seigneur, vous, gens de toutes les nations,</char></para>
+  <para style="q1" vid="ROM 15:11">
+    <char style="qt">que tous les peuples disent ses louanges</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">15.11 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="PSA 117:1">Ps 117.1</ref>
+        </char>.</char>
+    </note>
+    <char style="qt">!</char><verse eid="ROM 15:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 15:12"/>Esaïe dit de son côté :</para>
+  <para style="q1" vid="ROM 15:12">
+    <char style="qt">Un rejeton naîtra d’Isaï,</char></para>
+  <para style="q1" vid="ROM 15:12">
+    <char style="qt">on le verra se lever pour gouverner tous les peuples,</char></para>
+  <para style="q1" vid="ROM 15:12">
+    <char style="qt">les peuples étrangers mettront en lui leur espérance</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">15.12 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="ISA 11:1">Es 11.1</ref>, <ref loc="ISA 11:10">10</ref></char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 15:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="ROM 15:13"/>Que le Dieu de l’espérance, vous comble de toute joie et de sa paix par votre confiance en lui. Ainsi votre cœur débordera d’espérance par la puissance du Saint-Esprit.<verse eid="ROM 15:13"/></para>
+  <para style="ms1">Projets</para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 15:14"/>Frères et sœurs, j’ai personnellement la conviction que vous êtes pleins de bonté, remplis de toute la connaissance, et tout à fait capables, par conséquent, de vous conseiller les uns les autres. <verse eid="ROM 15:14"/><verse number="15" style="v" sid="ROM 15:15"/>Cependant, je vous ai écrit avec une certaine audace sur quelques points ; car je désirais raviver vos souvenirs, à cause de la grâce que Dieu m’a accordée. <verse eid="ROM 15:15"/><verse number="16" style="v" sid="ROM 15:16"/>En effet, il a fait de moi le serviteur de Jésus-Christ pour les non-Juifs. J’accomplis ainsi la tâche d’un prêtre<note caller="+" style="f"><char style="fr" closed="false">15.16 </char><char style="ft" closed="false">Paul emploie un mot qui signifie : </char><char style="fqa" closed="false">officiant.</char></note> en annonçant l’Evangile de Dieu aux non-Juifs pour que ceux-ci deviennent une offrande agréable à Dieu<note caller="+" style="f"><char style="fr" closed="false">15.16 </char><char style="ft" closed="false">Paul voulait présenter les non-Juifs convertis à Dieu comme le prêtre juif présentait au Seigneur des offrandes qu’il agréait.</char></note>, consacrée par l’Esprit Saint. <verse eid="ROM 15:16"/><verse number="17" style="v" sid="ROM 15:17"/>Voilà pourquoi, grâce à Jésus-Christ, je suis fier de mon travail pour Dieu. <verse eid="ROM 15:17"/><verse number="18" style="v" sid="ROM 15:18"/>Car si j’ose parler, c’est seulement de ce que Christ a accompli par mon moyen pour amener les non-Juifs à obéir à Dieu. Il l’a fait par mes paroles et mes actes, <verse eid="ROM 15:18"/><verse number="19" style="v" sid="ROM 15:19"/>par sa puissance qui s’est manifestée dans les miracles et les prodiges, par la puissance de l’Esprit de Dieu. Ainsi, à partir de Jérusalem jusqu’en Illyrie<note caller="+" style="f"><char style="fr" closed="false">15.19 </char><char style="ft" closed="false">Province romaine correspondant à l’ancienne Yougoslavie.</char></note>, en rayonnant en tous sens, j’ai fait partout retentir l’Evangile de Christ. <verse eid="ROM 15:19"/><verse number="20" style="v" sid="ROM 15:20"/>Je me suis fait un point d’honneur de proclamer l’Evangile là où le nom de Christ n’était pas encore connu. Je ne voulais en aucun cas bâtir sur des fondations posées par d’autres. <verse eid="ROM 15:20"/><verse number="21" style="v" sid="ROM 15:21"/>J’ai agi selon cette parole de l’Ecriture :</para>
+  <para style="q1" vid="ROM 15:21">
+    <char style="qt">Ceux à qui l’on n’avait rien dit de lui le verront,</char></para>
+  <para style="q1" vid="ROM 15:21">
+    <char style="qt">et ceux qui n’avaient pas entendu parler de lui</char></para>
+  <para style="q1" vid="ROM 15:21">
+    <char style="qt">comprendront</char>
+    <note caller="+" style="f">
+      <char style="fr" closed="false">15.21 </char>
+      <char style="ft" closed="false">
+        <char style="xt">
+          <ref loc="ISA 52:15">Es 52.15</ref>
+        </char> cité selon l’ancienne version grecque.</char>
+    </note>
+    <char style="qt">.</char><verse eid="ROM 15:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="ROM 15:22"/>C’est aussi cette raison qui m’a empêché bien des fois d’aller chez vous.<verse eid="ROM 15:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="ROM 15:23"/>A présent, je n’ai plus de champ d’action dans ces régions. Or, depuis plusieurs années, je désire aller chez vous <verse eid="ROM 15:23"/><verse number="24" style="v" sid="ROM 15:24"/>et cela pourra se réaliser quand j’irai en Espagne. En effet, j’espère vous voir en passant, et je compte sur vous pour m’aider à me rendre dans ce pays<note caller="+" style="f"><char style="fr" closed="false">15.24 </char><char style="ft" closed="false">D’après les coutumes de l’époque, cette aide demandée par Paul comprenait des indications, des recommandations, des provisions de route et, éventuellement, des compagnons de voyage.</char></note> après avoir satisfait au moins en partie mon désir de vous rencontrer. <verse eid="ROM 15:24"/><verse number="25" style="v" sid="ROM 15:25"/>Pour l’instant, je vais à Jérusalem pour le service des membres du peuple saint. <verse eid="ROM 15:25"/><verse number="26" style="v" sid="ROM 15:26"/>En effet, les Eglises de la Macédoine et de l’Achaïe ont décidé de donner une part de leurs biens pour venir en aide aux croyants pauvres de Jérusalem. <verse eid="ROM 15:26"/><verse number="27" style="v" sid="ROM 15:27"/>C’est une décision de leur part et elles le leur devaient : car si les non-Juifs ont eu leur part des biens spirituels des Juifs, ils doivent bien, à leur tour, les assister de leurs biens matériels. <verse eid="ROM 15:27"/><verse number="28" style="v" sid="ROM 15:28"/>Lorsque je me serai acquitté de ce service et que j’aurai remis en bonne et due forme à ses destinataires le fruit de cette initiative, je prendrai le chemin de l’Espagne et passerai donc par chez vous. <verse eid="ROM 15:28"/><verse number="29" style="v" sid="ROM 15:29"/>Et je sais que lorsque je viendrai chez vous, ce sera avec la pleine bénédiction de Christ.<verse eid="ROM 15:29"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="30" style="v" sid="ROM 15:30"/>Je vous le demande, frères et sœurs, par notre Seigneur Jésus-Christ et par l’amour que donne l’Esprit : combattez avec moi, en priant Dieu pour moi. <verse eid="ROM 15:30"/><verse number="31" style="v" sid="ROM 15:31"/>Qu’il me fasse échapper aux incrédules de la Judée<note caller="+" style="f"><char style="fr" closed="false">15.31 </char><char style="ft" closed="false">C’est-à-dire aux Juifs de Jérusalem et de Judée qui étaient ses adversaires parce qu’ils ne voulaient pas croire en l’Evangile.</char></note> et permette que l’aide que j’apporte à Jérusalem puisse être reçue favorablement par les membres du peuple saint. <verse eid="ROM 15:31"/><verse number="32" style="v" sid="ROM 15:32"/>Ainsi je pourrai venir chez vous le cœur plein de joie, si Dieu le veut, et trouver quelque repos parmi vous. <verse eid="ROM 15:32"/><verse number="33" style="v" sid="ROM 15:33"/>Que le Dieu qui donne la paix soit avec vous tous. Amen.<verse eid="ROM 15:33"/></para>
+  <chapter eid="ROM 15"/>
+  <chapter number="16" style="c" sid="ROM 16"/>
+  <para style="ms1">Salutations</para>
+  <para style="p">
+    <verse number="1" style="v" sid="ROM 16:1"/>Je vous recommande notre sœur Phœbé, diaconesse<note caller="+" style="f"><char style="fr" closed="false">16.1 </char><char style="ft" closed="false">Le terme grec désigne la fonction dont il est question dans <char style="xt"><ref loc="1TI 3:11">1 Tm 3.11</ref></char>. Autres traductions : </char><char style="fqa" closed="false">qui est au service de l’Eglise qui est à Cenchrées, </char><char style="ft" closed="false">ou : </char><char style="fqa" closed="false">qui exerce un ministère au service de l’Eglise qui est à Cenchrées.</char></note> de l’Eglise qui est à Cenchrées<note caller="+" style="f"><char style="fr" closed="false">16.1 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="ACT 18:18">Ac 18.18</ref></char> et note.</char></note>. <verse eid="ROM 16:1"/><verse number="2" style="v" sid="ROM 16:2"/>Réservez-lui, en vertu de votre union commune au Seigneur, l’accueil que lui doivent des membres du peuple saint. Mettez-vous à sa disposition pour toute affaire où elle aurait besoin de vous. Car elle est intervenue en faveur de beaucoup et, en particulier, pour moi.<verse eid="ROM 16:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="ROM 16:3"/>Saluez Prisca et Aquilas<note caller="+" style="f"><char style="fr" closed="false">16.3 </char><char style="ft" closed="false">Voir <char style="xt"><ref loc="ACT 18:2">Ac 18.2</ref></char> et note.</char></note>, mes collaborateurs dans le service de Jésus-Christ. <verse eid="ROM 16:3"/><verse number="4" style="v" sid="ROM 16:4"/>Ils ont risqué leur vie pour sauver la mienne. Je ne suis pas seul à leur en devoir gratitude. C’est aussi le cas de toutes les Eglises des pays païens. <verse eid="ROM 16:4"/><verse number="5" style="v" sid="ROM 16:5"/>Saluez aussi l’Eglise qui se réunit dans leur maison<note caller="+" style="f"><char style="fr" closed="false">16.5 </char><char style="ft" closed="false">Au premier siècle, les communautés chrétiennes se réunissaient dans des maisons particulières. Ce chapitre en nomme quatre situées à Rome (v. 5, 10, 15).</char></note>.</para>
+  <para style="p" vid="ROM 16:5">Saluez mon cher Epaïnète : il est le premier à s’être tourné vers Christ dans la province d’Asie. <verse eid="ROM 16:5"/><verse number="6" style="v" sid="ROM 16:6"/>Saluez Marie, qui s’est beaucoup dépensée pour vous. <verse eid="ROM 16:6"/><verse number="7" style="v" sid="ROM 16:7"/>Saluez Andronicus et Junia<note caller="+" style="f"><char style="fr" closed="false">16.7 </char><char style="ft" closed="false">Certains manuscrits ont : </char><char style="fqa" closed="false">Julia.</char></note>, qui sont du même peuple que moi : ils ont été mes compagnons de captivité ; ils sont très estimés en tant qu’apôtres<note caller="+" style="f"><char style="fr" closed="false">16.7 </char><char style="ft" closed="false">Certains comprennent : </char><char style="fqa" closed="false">ils sont très estimés par les apôtres.</char></note>, eux qui se sont même convertis à Christ avant moi. <verse eid="ROM 16:7"/><verse number="8" style="v" sid="ROM 16:8"/>Saluez Ampliatus qui m’est très cher dans le Seigneur. <verse eid="ROM 16:8"/><verse number="9" style="v" sid="ROM 16:9"/>Saluez Urbain, notre collaborateur dans le service de Christ ainsi que mon cher Stachys. <verse eid="ROM 16:9"/><verse number="10" style="v" sid="ROM 16:10"/>Saluez Apellès, qui a prouvé son attachement à Christ. Saluez aussi les gens de la maison d’Aristobule<note caller="+" style="f"><char style="fr" closed="false">16.10 </char><char style="ft" closed="false">Neveu d’Hérode le Grand qui vivait à Rome et fréquentait la cour impériale du temps de Claude. Certains de ses esclaves étaient chrétiens.</char></note> <verse eid="ROM 16:10"/><verse number="11" style="v" sid="ROM 16:11"/>et Hérodion qui fait partie du même peuple que moi. Saluez les gens de la maison de Narcisse<note caller="+" style="f"><char style="fr" closed="false">16.11 </char><char style="ft" closed="false">Affranchi de Claude.</char></note> qui appartiennent au Seigneur.<verse eid="ROM 16:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="ROM 16:12"/>Saluez Tryphène et Tryphose qui toutes deux travaillent dur pour le Seigneur, ainsi que ma chère Perside qui a travaillé dur pour le Seigneur. <verse eid="ROM 16:12"/><verse number="13" style="v" sid="ROM 16:13"/>Saluez Rufus<note caller="+" style="f"><char style="fr" closed="false">16.13 </char><char style="ft" closed="false">Probablement le fils de Simon de Cyrène qui a porté la croix de Jésus (<char style="xt"><ref loc="MRK 15:21">Mc 15.21</ref></char>). Son frère Alexandre et lui s’étaient convertis.</char></note>, cet homme que le Seigneur a choisi, et sa mère, qui est aussi une mère pour moi.<verse eid="ROM 16:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="ROM 16:14"/>Saluez Asyncrite, Phlégon, Hermès, Patrobas, Hermas et tous les frères et sœurs qui sont avec eux. <verse eid="ROM 16:14"/><verse number="15" style="v" sid="ROM 16:15"/>Saluez Philologue et Julie, Nérée et sa sœur, Olympas et tous les membres du peuple saint qui sont avec eux. <verse eid="ROM 16:15"/><verse number="16" style="v" sid="ROM 16:16"/>Saluez-vous les uns les autres en vous donnant le baiser fraternel. Toutes les Eglises de Christ vous adressent leurs salutations.<verse eid="ROM 16:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="ROM 16:17"/>Je vous engage instamment, chers frères et sœurs, à prendre garde à ceux qui sèment la division et égarent les autres en s’opposant à l’enseignement que vous avez reçu. Eloignez-vous d’eux, <verse eid="ROM 16:17"/><verse number="18" style="v" sid="ROM 16:18"/>car les gens de cette sorte ne servent pas Christ, notre Seigneur, mais leur ventre. Avec leurs belles paroles et leurs discours flatteurs, ils séduisent ceux qui ne discernent pas le mal. <verse eid="ROM 16:18"/><verse number="19" style="v" sid="ROM 16:19"/>Votre obéissance est connue de tous et cela me remplit de joie, mais je désire que vous sachiez discerner le bien<note caller="+" style="f"><char style="fr" closed="false">16.19 </char><char style="ft" closed="false">Autre traduction : </char><char style="fqa" closed="false">que vous ayez de la sagesse pour faire le bien.</char></note> et que vous soyez incorruptibles à l’égard du mal. <verse eid="ROM 16:19"/><verse number="20" style="v" sid="ROM 16:20"/>Le Dieu qui donne la paix ne tardera pas à écraser Satan sous vos pieds. Que la grâce de notre Seigneur Jésus soit avec vous<note caller="+" style="f"><char style="fr" closed="false">16.20 </char><char style="ft" closed="false">Les mots : </char><char style="fq" closed="false">que la grâce… avec vous </char><char style="ft" closed="false">sont absents de certains manuscrits.</char></note>.<verse eid="ROM 16:20"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="21" style="v" sid="ROM 16:21"/>Timothée, mon collaborateur, ainsi que Lucius, Jason et Sosipater, qui appartiennent au même peuple que moi, vous saluent. <verse eid="ROM 16:21"/><verse number="22" style="v" sid="ROM 16:22"/>Moi, Tertius<note caller="+" style="f"><char style="fr" closed="false">16.22 </char><char style="ft" closed="false">Secrétaire de Paul.</char></note> qui écris cette lettre, j’ajoute mes salutations dans le Seigneur qui nous unit. <verse eid="ROM 16:22"/><verse number="23" style="v" sid="ROM 16:23"/>Vous saluent encore : Gaïus qui m’offre l’hospitalité et chez qui se réunit toute l’Eglise, Eraste<note caller="+" style="f"><char style="fr" closed="false">16.23 </char><char style="ft" closed="false">Dans une place pavée de Corinthe, des archéologues ont découvert un bloc de pierre portant l’inscription : </char><char style="fqa" closed="false">Eraste, chef des travaux publics, a payé les frais de ce pavage. </char><char style="ft" closed="false">Peut-être s’agit-il du même personnage qu’ici et dans <char style="xt"><ref loc="ACT 19:22">Ac 19.22</ref></char> et <char style="xt"><ref loc="2TI 4:20">2 Tm 4.20</ref></char>.</char></note>, le trésorier de la ville, ainsi que le frère Quartus<note caller="+" style="f"><char style="fr" closed="false">16.23 </char><char style="ft" closed="false">Certains manuscrits ajoutent : </char><char style="fv" closed="false">24 </char><char style="fqa" closed="false">que la grâce du Seigneur Jésus-Christ soit avec vous tous. Amen.</char></note>.<verse eid="ROM 16:23"/></para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="25" style="v" sid="ROM 16:25"/>Béni soit Dieu ! Il a le pouvoir de vous rendre forts dans la foi, conformément à l’Evangile que je prêche en annonçant Jésus-Christ, selon la révélation du plan de Dieu, tenu secret pendant les siècles passés <verse eid="ROM 16:25"/><verse number="26" style="v" sid="ROM 16:26"/>et qui s’accomplit de façon manifeste de nos jours. Comme l’a ordonné le Dieu éternel, il est porté, par les écrits des prophètes, à la connaissance de tous les peuples pour qu’ils soient amenés à lui obéir en croyant. <verse eid="ROM 16:26"/><verse number="27" style="v" sid="ROM 16:27"/>A ce Dieu qui seul possède la sagesse soit la gloire, de siècle en siècle, par Jésus-Christ. Amen<note caller="+" style="f"><char style="fr" closed="false">16.27 </char><char style="ft" closed="false">La place des v. 25-27 varie selon les manuscrits qui les insèrent parfois après <char style="xt"><ref loc="ROM 14:23">14.23</ref></char> ou <char style="xt"><ref loc="ROM 15:33">15.33</ref></char>.</char></note>.<verse eid="ROM 16:27"/></para>
+  <chapter eid="ROM 16"/>
+</usx>

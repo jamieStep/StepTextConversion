@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="HEB" style="id">- Kiswahili Contemporary Version (Neno), updated 2018</book>
+  <para style="rem">Copyright © 1984, 1989, 2009, 2015 by Biblica, Inc.</para>
+  <para style="h">Waebrania</para>
+  <para style="toc1">Waebrania</para>
+  <para style="toc2">Waebrania</para>
+  <para style="toc3">Ebr</para>
+  <para style="mt1">Waebrania</para>
+  <para style="imt">Utangulizi</para>
+  <para style="im">Waraka kwa Waebrania unajulikana kama kitabu cha mambo yaliyo bora, kwa sababu unazungumzia ukuu wa Kristo na kumdhihirisha kama ufunuo wa mwisho wa Mungu. Unabii na ahadi zilizoandikwa katika Agano la Kale zimetimizwa katika Agano Jipya, Kristo akiwa Mpatanishi. Kristo pia athibitishwa kuwa mkuu zaidi ya manabii, malaika, na Mose (ambaye alikuwa mpatanishi wa agano la hapo awali).</para>
+  <para style="ip">Msomaji ameonywa asidharau wala kukataa wokovu mkuu uliotolewa kupitia kwake Kristo. Uwezekano mkubwa ni kwamba waraka huu ulielekezwa kwa Wakristo Wayahudi huko Palestina au Rumi, waliokuwa wanajaribiwa kugeukia tena dini ya Kiyahudi, au kuifanya Injili iwe yenye mfumo wa dini ya Kiyahudi.</para>
+  <para style="is1">Mwandishi</para>
+  <para style="im">Ingawa waraka hauna jina la mwandishi, una ushahidi mwingi kwamba alikuwa mtu wa kizazi cha pili cha Wakristo aliyekuwa na ujuzi sana wa Agano la Kale.</para>
+  <para style="is1">Kusudi</para>
+  <para style="im">Mwandishi anamwonyesha Yesu kuwa ndiye ukamilifu wa ufunuo ulionenwa kwanza na Mungu, na kisha na manabii wake.</para>
+  <para style="is1">Mahali</para>
+  <para style="im">Rumi.</para>
+  <para style="is1">Tarehe</para>
+  <para style="im">Kabla ya kuharibiwa kwa Hekalu la Yerusalemu mwaka wa 70 B.K.</para>
+  <para style="is1">Wahusika Wakuu</para>
+  <para style="im">Yesu, Yoshua, Mose, Melkizedeki, Abrahamu, makuhani, malaika, na watu wenye imani wa Agano la Kale.</para>
+  <para style="is1">Wazo Kuu</para>
+  <para style="im">Kiini cha Waebrania ni mamlaka na uweza wa Yesu Kristo kama Mjumbe wa neema ya Mungu. Kitabu hiki kinatoa sifa za majina ya heshima zaidi ya ishirini yaliyomtaja Yesu Kristo katika huduma ya ukuhani na ya ufalme.</para>
+  <para style="is1">Mambo Muhimu</para>
+  <para style="im">Yesu Kristo ni mngʼao wa utukufu wa Mungu, na pia Kristo ni mkuu kuliko malaika, mkuu kuliko viongozi wote, na mkuu kuliko makuhani.</para>
+  <para style="iot">Mgawanyo</para>
+  <para style="io1">Mnenaji bora kwa ajili ya Mungu (<char style="ior"><ref loc="HEB 1:1-4:13">1:1–4:13</ref></char>)</para>
+  <para style="io1">Mwombezi au Kuhani aliye bora (<char style="ior"><ref loc="HEB 4:14-7:28">4:14–7:28</ref></char>)</para>
+  <para style="io1">Agano na Dhabihu iliyo bora (<char style="ior"><ref loc="HEB 8:1-10:18">8:1–10:18</ref></char>)</para>
+  <para style="io1">Agizo la kuitunza na kuilinda imani (<char style="ior"><ref loc="HEB 11:1-12:29">11:1–12:29</ref></char>)</para>
+  <para style="io1">Mwisho: Kanuni za maisha ya Kikristo, na maelezo ya binafsi (<char style="ior"><ref loc="HEB 13:1-25">13:1-25</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="HEB 1"/>
+  <para style="s1">Mwana Ni Mkuu Kuliko Malaika</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 1:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 3:1">Efe 3:1</ref>; <ref loc="2CO 1:1">2Kor 1:1</ref>; <ref loc="NUM 12:6">Hes 12:6</ref>, <ref loc="NUM 12:8">8</ref>; <ref loc="JHN 9:29">Yn 9:29</ref>; <ref loc="HEB 2:3">Ebr 2:3</ref>; <ref loc="HEB 4:8">4:8</ref>; <ref loc="HEB 12:25">12:25</ref>; <ref loc="LUK 1:70">Lk 1:70</ref>; <ref loc="ACT 2:30">Mdo 2:30</ref></char>
+    </note>Zamani Mungu alisema na baba zetu kwa njia ya manabii mara nyingi na kwa njia mbalimbali, <verse eid="HEB 1:1"/><verse number="2" style="v" sid="HEB 1:2"/><note caller="-" style="x"><char style="xo" closed="false">1:2 </char><char style="xt" closed="false"><ref loc="DEU 4:30">Kum 4:30</ref>; <ref loc="HEB 9:26">Ebr 9:26</ref>; <ref loc="1PE 1:20">1Pet 1:20</ref>; <ref loc="HEB 1:5">Ebr 1:5</ref>; <ref loc="MAT 3:17">Mt 3:17</ref>; <ref loc="HEB 3:6">Ebr 3:6</ref>; <ref loc="HEB 5:8">5:8</ref>; <ref loc="HEB 7:28">7:28</ref>; <ref loc="PSA 2:8">Za 2:8</ref>; <ref loc="MAT 28:18">Mt 28:18</ref>; <ref loc="JHN 1:3">Yn 1:3</ref>; <ref loc="HEB 11:3">Ebr 11:3</ref></char></note>lakini katika siku hizi za mwisho anasema nasi kwa njia ya Mwanawe, ambaye amemweka kuwa mrithi wa vitu vyote, na ambaye kupitia kwake aliuumba ulimwengu. <verse eid="HEB 1:2"/><verse number="3" style="v" sid="HEB 1:3"/><note caller="-" style="x"><char style="xo" closed="false">1:3 </char><char style="xt" closed="false"><ref loc="JHN 1:14">Yn 1:14</ref>; <ref loc="JHN 14:9">14:9</ref>; <ref loc="COL 1:17">Kol 1:17</ref>; <ref loc="TIT 2:14">Tit 2:14</ref>; <ref loc="HEB 7:27">Ebr 7:27</ref>; <ref loc="MRK 16:19">Mk 16:19</ref></char></note>Mwana ni mngʼao wa utukufu wa Mungu na mfano halisi wa nafsi yake, akivihifadhi vitu vyote kwa neno lake lenye uweza. Akiisha kufanya utakaso kwa ajili ya dhambi, aliketi mkono wa kuume wa Aliye Mkuu huko mbinguni. <verse eid="HEB 1:3"/><verse number="4" style="v" sid="HEB 1:4"/><note caller="-" style="x"><char style="xo" closed="false">1:4 </char><char style="xt" closed="false"><ref loc="EPH 1:21">Efe 1:21</ref>; <ref loc="PHP 2:9">Flp 2:9</ref>, <ref loc="PHP 2:10">10</ref>; <ref loc="HEB 8:6">Ebr 8:6</ref></char></note>Kwa hiyo alifanyika bora kuliko malaika, kama jina alilorithi lilivyo bora kuliko lao.<verse eid="HEB 1:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 1:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 2:7">Za 2:7</ref>; <ref loc="MAT 3:17">Mt 3:17</ref>; <ref loc="2SA 7:14">2Sam 7:14</ref></char>
+    </note>Kwa maana ni malaika yupi ambaye wakati wowote Mungu alipata kumwambia,</para>
+  <para style="q1" vid="HEB 1:5">“Wewe ni Mwanangu;</para>
+  <para style="q2" vid="HEB 1:5">leo mimi nimekuzaa?”</para>
+  <para style="m" vid="HEB 1:5">Au tena,</para>
+  <para style="q1" vid="HEB 1:5">“Mimi nitakuwa Baba yake,</para>
+  <para style="q2" vid="HEB 1:5">naye atakuwa Mwanangu?”<verse eid="HEB 1:5"/></para>
+  <para style="m">
+    <verse number="6" style="v" sid="HEB 1:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="JHN 3:16">Yn 3:16</ref>; <ref loc="COL 1:18">Kol 1:18</ref>; <ref loc="HEB 10:5">Ebr 10:5</ref>; <ref loc="DEU 32:43">Kum 32:43</ref>; <ref loc="PSA 97:7">Za 97:7</ref></char>
+    </note>Tena, Mungu amletapo mzaliwa wake wa kwanza ulimwenguni, anasema,</para>
+  <para style="q1" vid="HEB 1:6">“Malaika wote wa Mungu na wamsujudu.”<verse eid="HEB 1:6"/></para>
+  <para style="m">
+    <verse number="7" style="v" sid="HEB 1:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 104:4">Za 104:4</ref>
+      </char>
+    </note>Anenapo kuhusu malaika asema,</para>
+  <para style="q1" vid="HEB 1:7">“Huwafanya malaika wake kuwa pepo,</para>
+  <para style="q2" vid="HEB 1:7">watumishi wake kuwa miali ya moto.”<verse eid="HEB 1:7"/></para>
+  <para style="m">
+    <verse number="8" style="v" sid="HEB 1:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="LUK 1:33">Lk 1:33</ref>; <ref loc="PSA 45:6">Za 45:6</ref>, <ref loc="PSA 45:7">7</ref></char>
+    </note>Lakini kwa habari za Mwana asema,</para>
+  <para style="q1" vid="HEB 1:8">“Kiti chako cha enzi, Ee Mungu,</para>
+  <para style="q2" vid="HEB 1:8">kitadumu milele na milele,</para>
+  <para style="q1" vid="HEB 1:8">nayo haki itakuwa fimbo ya utawala</para>
+  <para style="q2" vid="HEB 1:8">ya ufalme wako.<verse eid="HEB 1:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HEB 1:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="PHP 2:9">Flp 2:9</ref>; <ref loc="ISA 61:1">Isa 61:1</ref>, <ref loc="ISA 61:3">3</ref>; <ref loc="PSA 45:6">Za 45:6</ref>, <ref loc="PSA 45:7">7</ref>; <ref loc="ACT 4">Mdo 4</ref>; <ref loc="ACT 27">27</ref>; <ref loc="ACT 10:38">10:38</ref></char>
+    </note>Umependa haki na kuchukia uovu;</para>
+  <para style="q2" vid="HEB 1:9">kwa hiyo Mungu, Mungu wako,</para>
+  <para style="q2" vid="HEB 1:9">amekuweka juu ya wenzako</para>
+  <para style="q2" vid="HEB 1:9">kwa kukupaka mafuta ya furaha.”<verse eid="HEB 1:9"/></para>
+  <para style="m">
+    <verse number="10" style="v" sid="HEB 1:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 8:6">Za 8:6</ref>; <ref loc="PSA 102:25">102:25</ref>; <ref loc="ZEC 12:1">Zek 12:1</ref></char>
+    </note>Pia asema,</para>
+  <para style="q1" vid="HEB 1:10">“Hapo mwanzo, Ee Bwana, uliweka misingi ya dunia,</para>
+  <para style="q2" vid="HEB 1:10">nazo mbingu ni kazi ya mikono yako.<verse eid="HEB 1:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HEB 1:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 34:4">Isa 34:4</ref>; <ref loc="ISA 51:6">51:6</ref>; <ref loc="HEB 12:27">Ebr 12:27</ref>; <ref loc="MAT 24:35">Mt 24:35</ref>; <ref loc="2PE 3:7">2Pet 3:7</ref>; <ref loc="2PE 3:10">3:10</ref>; <ref loc="REV 21:1">Ufu 21:1</ref></char>
+    </note>Hizo zitatoweka, lakini wewe utadumu;</para>
+  <para style="q2" vid="HEB 1:11">zote zitachakaa kama vazi.<verse eid="HEB 1:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HEB 1:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 13:8">Ebr 13:8</ref>; <ref loc="PSA 102:25">Za 102:25</ref>, <ref loc="PSA 102:27">27</ref></char>
+    </note>Utazikungʼutakungʼuta kama joho,</para>
+  <para style="q2" vid="HEB 1:12">nazo zitachakaa kama vazi.</para>
+  <para style="q1" vid="HEB 1:12">Lakini wewe hubadiliki,</para>
+  <para style="q2" vid="HEB 1:12">nayo miaka yako haikomi kamwe.”<verse eid="HEB 1:12"/></para>
+  <para style="m">
+    <verse number="13" style="v" sid="HEB 1:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 1:3">Ebr 1:3</ref>; <ref loc="MRK 16:19">Mk 16:19</ref>; <ref loc="JOS 10:24">Yos 10:24</ref>; <ref loc="HEB 10:13">Ebr 10:13</ref>; <ref loc="PSA 110:1">Za 110:1</ref>; <ref loc="MAT 22:44">Mt 22:44</ref></char>
+    </note>Je, ni kwa malaika yupi ambaye Mungu amepata kumwambia wakati wowote,</para>
+  <para style="q2" vid="HEB 1:13">“Keti mkono wangu wa kuume,</para>
+  <para style="q1" vid="HEB 1:13">hadi nitakapowaweka adui zako</para>
+  <para style="q2" vid="HEB 1:13">chini ya miguu yako”?<verse eid="HEB 1:13"/></para>
+  <para style="m">
+    <verse number="14" style="v" sid="HEB 1:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 91:11">Za 91:11</ref>; <ref loc="PSA 103:20">103:20</ref>; <ref loc="DAN 7:10">Dan 7:10</ref>; <ref loc="MAT 25:34">Mt 25:34</ref>; <ref loc="MRK 10:17">Mk 10:17</ref>; <ref loc="ACT 20:32">Mdo 20:32</ref>; <ref loc="ROM 11:14">Rum 11:14</ref>; <ref loc="HEB 2:3">Ebr 2:3</ref>; <ref loc="HEB 5:9">5:9</ref>; <ref loc="HEB 9:28">9:28</ref></char>
+    </note>Je, malaika wote si roho watumikao, waliotumwa kuwahudumia wale watakaourithi wokovu?<verse eid="HEB 1:14"/></para>
+  <chapter eid="HEB 1"/>
+  <chapter number="2" style="c" sid="HEB 2"/>
+  <para style="s1">Wokovu Mkuu</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 2:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 11:22">Rum 11:22</ref>
+      </char>
+    </note>Kwa hiyo, imetupasa kuwa waangalifu sana kuhusu kile tulichosikia, ili tusije tukakiacha. <verse eid="HEB 2:1"/><verse number="2" style="v" sid="HEB 2:2"/><note caller="-" style="x"><char style="xo" closed="false">2:2 </char><char style="xt" closed="false"><ref loc="HEB 1:1">Ebr 1:1</ref>; <ref loc="DEU 33:2">Kum 33:2</ref>; <ref loc="ACT 7:53">Mdo 7:53</ref>; <ref loc="GAL 3:19">Gal 3:19</ref>; <ref loc="HEB 10:28">Ebr 10:28</ref></char></note>Kwa kuwa kama ujumbe ulionenwa na malaika ulikuwa imara, na kila uasi na kutokutii kulipata adhabu ya haki, <verse eid="HEB 2:2"/><verse number="3" style="v" sid="HEB 2:3"/><note caller="-" style="x"><char style="xo" closed="false">2:3 </char><char style="xt" closed="false"><ref loc="HEB 10:29">Ebr 10:29</ref>; <ref loc="HEB 12:25">12:25</ref>; <ref loc="HEB 1:2">1:2</ref>; <ref loc="LUK 1:2">Lk 1:2</ref></char></note>je, sisi tutapaje kupona kama tusipojali wokovu mkuu namna hii? Wokovu huu, ambao mwanzo ulitangazwa na Bwana, ulithibitishwa kwetu na wale waliomsikia. <verse eid="HEB 2:3"/><verse number="4" style="v" sid="HEB 2:4"/><note caller="-" style="x"><char style="xo" closed="false">2:4 </char><char style="xt" closed="false"><ref loc="MRK 16:20">Mk 16:20</ref>; <ref loc="JHN 4:48">Yn 4:48</ref>; <ref loc="1CO 12:4">1Kor 12:4</ref>; <ref loc="EPH 1:5">Efe 1:5</ref></char></note>Pia Mungu aliushuhudia kwa ishara, maajabu na kwa miujiza mbalimbali, na karama za Roho Mtakatifu alizozigawa kulingana na mapenzi yake.<verse eid="HEB 2:4"/></para>
+  <para style="s1">Yesu Alifananishwa Na Ndugu Zake</para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 2:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 6:5">Ebr 6:5</ref>; <ref loc="2PE 3:13">2Pet 3:13</ref></char>
+    </note>Mungu hakuuweka ulimwengu ujao ambao tunanena habari zake chini ya malaika. <verse eid="HEB 2:5"/><verse number="6" style="v" sid="HEB 2:6"/><note caller="-" style="x"><char style="xo" closed="false">2:6 </char><char style="xt" closed="false"><ref loc="HEB 4:4">Ebr 4:4</ref>; <ref loc="JOB 7:17">Ay 7:17</ref>; <ref loc="PSA 144:3">Za 144:3</ref>; <ref loc="PSA 8:4-6">8:4-6</ref></char></note>Lakini kuna mahali mtu fulani ameshuhudia akisema:</para>
+  <para style="q1" vid="HEB 2:6">“Mwanadamu ni kitu gani hata unamfikiria,</para>
+  <para style="q2" vid="HEB 2:6">binadamu ni nani hata unamjali?<verse eid="HEB 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HEB 2:7"/>Umemfanya chini kidogo kuliko malaika;</para>
+  <para style="q2" vid="HEB 2:7">ukamvika taji ya utukufu na heshima,<verse eid="HEB 2:7"/></para>
+  <para style="q2">
+    <verse number="8" style="v" sid="HEB 2:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 8:4-6">Za 8:4-6</ref>; <ref loc="MAT 22:44">Mt 22:44</ref>; <ref loc="MAT 28:18">28:18</ref>; <ref loc="1CO 15:27">1Kor 15:27</ref>; <ref loc="EPH 1:22">Efe 1:22</ref>; <ref loc="HEB 1:13">Ebr 1:13</ref>; <ref loc="1CO 15:2">1Kor 15:2</ref></char>
+    </note>nawe umeweka vitu vyote chini ya miguu yake.”</para>
+  <para style="p" vid="HEB 2:8">Kwa kuweka vitu vyote chini yake, Mungu hakuacha kitu chochote ambacho hakukiweka chini ya mwanadamu. Lakini kwa sasa, hatuoni kwamba kila kitu kiko chini yake. <verse eid="HEB 2:8"/><verse number="9" style="v" sid="HEB 2:9"/><note caller="-" style="x"><char style="xo" closed="false">2:9 </char><char style="xt" closed="false"><ref loc="HEB 2:7">Ebr 2:7</ref>; <ref loc="ACT 3:13">Mdo 3:13</ref>; <ref loc="PHP 2:7-9">Flp 2:7-9</ref>; <ref loc="2CO 5:15">2Kor 5:15</ref>; <ref loc="ACT 2:33">Mdo 2:33</ref>; <ref loc="JHN 3:16">Yn 3:16</ref>; <ref loc="JHN 12:32">12:32</ref>; <ref loc="ROM 5:18">Rum 5:18</ref>; <ref loc="ROM 8:32">8:32</ref>; <ref loc="2CO 5:15">2Kor 5:15</ref>; <ref loc="1TI 2:6">1Tim 2:6</ref>; <ref loc="1JN 2:2">1Yn 2:2</ref>; <ref loc="REV 5:9">Ufu 5:9</ref></char></note>Lakini twamwona Yesu, aliyefanywa chini kidogo kuliko malaika, sasa akiwa amevikwa taji ya utukufu na heshima kwa sababu alistahimili mauti, ili kwamba kwa neema ya Mungu apate kuonja mauti kwa ajili ya kila mtu.<verse eid="HEB 2:9"/></para>
+  <para style="p">
+    <verse number="10" style="v" sid="HEB 2:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 11:36">Rum 11:36</ref>; <ref loc="LUK 24:26">Lk 24:26</ref>; <ref loc="HEB 5:8">Ebr 5:8</ref>, <ref loc="HEB 5:9">9</ref>; <ref loc="HEB 7:28">7:28</ref>; <ref loc="LUK 24:46">Lk 24:46</ref>; <ref loc="ACT 3:15">Mdo 3:15</ref>; <ref loc="ACT 5:31">5:31</ref>; <ref loc="HEB 12:2">Ebr 12:2</ref>; <ref loc="LUK 13:32">Lk 13:32</ref>; <ref loc="HEB 5:9">Ebr 5:9</ref></char>
+    </note>Ili kuwaleta wana wengi katika utukufu, ilifaa kwamba Mungu, ambaye ni kwa ajili yake na kupitia kwake kila kitu kimekuwepo, amkamilishe mwanzilishi wa wokovu wao kwa njia ya mateso. <verse eid="HEB 2:10"/><verse number="11" style="v" sid="HEB 2:11"/><note caller="-" style="x"><char style="xo" closed="false">2:11 </char><char style="xt" closed="false"><ref loc="HEB 10:10">Ebr 10:10</ref>; <ref loc="ACT 17:26">Mdo 17:26</ref>; <ref loc="MAT 28:10">Mt 28:10</ref>; <ref loc="JHN 20:17">Yn 20:17</ref>; <ref loc="ROM 8:29">Rum 8:29</ref>; <ref loc="EPH 5:26">Efe 5:26</ref>; <ref loc="HEB 13:12">Ebr 13:12</ref></char></note>Yeye awafanyaye watu kuwa watakatifu, pamoja na hao ambao hufanywa watakatifu, wote hutoka katika jamaa moja. Hivyo Yesu haoni aibu kuwaita ndugu zake. <verse eid="HEB 2:11"/><verse number="12" style="v" sid="HEB 2:12"/><note caller="-" style="x"><char style="xo" closed="false">2:12 </char><char style="xt" closed="false"><ref loc="PSA 22:22">Za 22:22</ref>, <ref loc="PSA 22:25">25</ref>; <ref loc="PSA 68:26">68:26</ref></char></note>Yeye husema,</para>
+  <para style="q1" vid="HEB 2:12">“Nitalitangaza jina lako kwa ndugu zangu;</para>
+  <para style="q2" vid="HEB 2:12">mbele ya kusanyiko nitaimba sifa zako.”<verse eid="HEB 2:12"/></para>
+  <para style="m">
+    <verse number="13" style="v" sid="HEB 2:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 8:17">Isa 8:17</ref>, <ref loc="ISA 8:18">18</ref>; <ref loc="JHN 10:29">Yn 10:29</ref>; <ref loc="PSA 18:2">Za 18:2</ref>; <ref loc="ISA 12:2">Isa 12:2</ref>; <ref loc="JHN 20:17">Yn 20:17</ref>; <ref loc="JHN 17:6">17:6</ref>, <ref loc="JHN 17:9">9</ref>, <ref loc="JHN 17:11">11</ref>, <ref loc="JHN 17:12">12</ref></char>
+    </note>Tena,</para>
+  <para style="q1" vid="HEB 2:13">“Nitaweka tumaini langu kwake.”</para>
+  <para style="m" vid="HEB 2:13">Tena anasema,</para>
+  <para style="q1" vid="HEB 2:13">“Niko hapa, pamoja na watoto ambao Mungu amenipa.”<verse eid="HEB 2:13"/></para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 2:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="JHN 1:14">Yn 1:14</ref>; <ref loc="ROM 8:3">Rum 8:3</ref></char>
+    </note>Basi kwa kuwa watoto wana nyama na damu, yeye pia alishiriki katika ubinadamu wao, ili kwa kifo chake, apate kumwangamiza huyo mwenye nguvu za mauti, yaani ibilisi, <verse eid="HEB 2:14"/><verse number="15" style="v" sid="HEB 2:15"/><note caller="-" style="x"><char style="xo" closed="false">2:15 </char><char style="xt" closed="false"><ref loc="2TI 1:7">2Tim 1:7</ref>; <ref loc="LUK 1:74">Lk 1:74</ref>; <ref loc="ROM 8:15">Rum 8:15</ref></char></note>na kuwaweka huru wale waliokuwa utumwani maisha yao yote kwa sababu ya kuogopa mauti. <verse eid="HEB 2:15"/><verse number="16" style="v" sid="HEB 2:16"/><note caller="-" style="x"><char style="xo" closed="false">2:16 </char><char style="xt" closed="false"><ref loc="ISA 41:8">Isa 41:8</ref>, <ref loc="ISA 41:9">9</ref>; <ref loc="LUK 3:8">Lk 3:8</ref></char></note>Kwa kuwa ni dhahiri kwamba hakuja kusaidia malaika, bali uzao wa Abrahamu. <verse eid="HEB 2:16"/><verse number="17" style="v" sid="HEB 2:17"/><note caller="-" style="x"><char style="xo" closed="false">2:17 </char><char style="xt" closed="false"><ref loc="HEB 2:14">Ebr 2:14</ref>; <ref loc="HEB 5:1">5:1</ref>; <ref loc="HEB 5:2">5:2</ref>; <ref loc="HEB 3:1">3:1</ref>; <ref loc="HEB 4:14">4:14</ref>, <ref loc="HEB 4:15">15</ref>; <ref loc="PHP 2:7">Flp 2:7</ref>; <ref loc="ROM 3:25">Rum 3:25</ref>; <ref loc="PSA 22:22">Za 22:22</ref></char></note>Kwa sababu hii ilibidi afanane na ndugu zake kwa kila hali, ili apate kuwa Kuhani Mkuu mwenye huruma na mwaminifu katika kumtumikia Mungu, ili pia apate kufanya upatanisho kwa ajili ya dhambi za watu. <verse eid="HEB 2:17"/><verse number="18" style="v" sid="HEB 2:18"/><note caller="-" style="x"><char style="xo" closed="false">2:18 </char><char style="xt" closed="false"><ref loc="HEB 4:15">Ebr 4:15</ref>, <ref loc="HEB 4:16">16</ref>; <ref loc="HEB 5:2">5:2</ref>; <ref loc="HEB 7:2">7:2</ref>; <ref loc="HEB 4:15">4:15</ref></char></note>Kwa kuwa yeye mwenyewe aliteswa alipojaribiwa, aweza kuwasaidia wale wanaojaribiwa.<verse eid="HEB 2:18"/></para>
+  <chapter eid="HEB 2"/>
+  <chapter number="3" style="c" sid="HEB 3"/>
+  <para style="s1">Yesu Ni Mkuu Kuliko Mose</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 3:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 2:11">Ebr 2:11</ref>; <ref loc="ROM 8:28">Rum 8:28</ref>; <ref loc="ROM 2:17">2:17</ref>; <ref loc="1TI 6:12">1Tim 6:12</ref>; <ref loc="HEB 4:14">Ebr 4:14</ref>; <ref loc="HEB 10:23">10:23</ref></char>
+    </note>Kwa hiyo ndugu watakatifu, mnaoshiriki mwito wa mbinguni, mtafakarini Yesu, mtume na Kuhani Mkuu wa ukiri wetu. <verse eid="HEB 3:1"/><verse number="2" style="v" sid="HEB 3:2"/><note caller="-" style="x"><char style="xo" closed="false">3:2 </char><char style="xt" closed="false"><ref loc="NUM 12:7">Hes 12:7</ref>; <ref loc="HEB 3:5">Ebr 3:5</ref></char></note>Alikuwa mwaminifu kwa yeye aliyemweka, kama vile Mose alivyokuwa mwaminifu katika nyumba yote ya Mungu. <verse eid="HEB 3:2"/><verse number="3" style="v" sid="HEB 3:3"/><note caller="-" style="x"><char style="xo" closed="false">3:3 </char><char style="xt" closed="false"><ref loc="DEU 34:12">Kum 34:12</ref>; <ref loc="ZEC 6:12">Zek 6:12</ref>; <ref loc="MAT 16:18">Mt 16:18</ref></char></note>Yesu ameonekana anastahili heshima kubwa kuliko Mose, kama vile mjenzi wa nyumba alivyo wa heshima kubwa kuliko nyumba yenyewe. <verse eid="HEB 3:3"/><verse number="4" style="v" sid="HEB 3:4"/><note caller="-" style="x"><char style="xo" closed="false">3:4 </char><char style="xt" closed="false"><ref loc="EPH 2:10">Efe 2:10</ref>; <ref loc="EPH 3:9">3:9</ref>; <ref loc="HEB 1:2">Ebr 1:2</ref>; <ref loc="GEN 1:1">Mwa 1:1</ref></char></note>Kwa kuwa kila nyumba hujengwa na mtu fulani, lakini Mungu ni mjenzi wa kila kitu. <verse eid="HEB 3:4"/><verse number="5" style="v" sid="HEB 3:5"/><note caller="-" style="x"><char style="xo" closed="false">3:5 </char><char style="xt" closed="false"><ref loc="EXO 14:31">Kut 14:31</ref>; <ref loc="HEB 3:2">Ebr 3:2</ref>; <ref loc="NUM 12:7">Hes 12:7</ref>; <ref loc="DEU 3:24">Kum 3:24</ref>; <ref loc="DEU 8:15">8:15</ref>; <ref loc="DEU 18:9">18:9</ref>; <ref loc="JOS 1:2">Yos 1:2</ref>; <ref loc="JOS 8:31">8:31</ref></char></note>Basi Mose kama mtumishi alikuwa mwaminifu katika nyumba yote ya Mungu, akishuhudia kwa yale ambayo yangetamkwa baadaye. <verse eid="HEB 3:5"/><verse number="6" style="v" sid="HEB 3:6"/><note caller="-" style="x"><char style="xo" closed="false">3:6 </char><char style="xt" closed="false"><ref loc="HEB 1:2">Ebr 1:2</ref>; <ref loc="HEB 6:11">6:11</ref>, <ref loc="HEB 6:18">18</ref>, <ref loc="HEB 6:19">19</ref>; <ref loc="HEB 7:19">7:19</ref>; <ref loc="HEB 11:1">11:1</ref>; <ref loc="1CO 3:16">1Kor 3:16</ref>; <ref loc="1TI 3:15">1Tim 3:15</ref>; <ref loc="ROM 11:22">Rum 11:22</ref>; <ref loc="ROM 5:2">5:2</ref>; <ref loc="NUM 4:14">Hes 4:14</ref></char></note>Lakini Kristo ni mwaminifu kama Mwana katika nyumba ya Mungu. Sisi ndio nyumba yake, kama tutashikilia sana ujasiri wetu na tumaini tunalojivunia.<verse eid="HEB 3:6"/></para>
+  <para style="s1">Onyo Dhidi Ya Kutokuamini</para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 3:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 28:25">Mdo 28:25</ref>; <ref loc="HEB 9:8">Ebr 9:8</ref>; <ref loc="HEB 10:15">10:15</ref></char>
+    </note>Kwa hiyo, kama Roho Mtakatifu asemavyo:</para>
+  <para style="q1" vid="HEB 3:7">“Leo, kama mkiisikia sauti yake,<verse eid="HEB 3:7"/></para>
+  <para style="q2">
+    <verse number="8" style="v" sid="HEB 3:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 3:15">Ebr 3:15</ref>; <ref loc="HEB 4:7">4:7</ref></char>
+    </note>msiifanye mioyo yenu migumu,</para>
+  <para style="q1" vid="HEB 3:8">kama mlivyofanya katika uasi,</para>
+  <para style="q2" vid="HEB 3:8">wakati ule wa kujaribiwa jangwani,<verse eid="HEB 3:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HEB 3:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 14:33">Hes 14:33</ref>; <ref loc="DEU 1:3">Kum 1:3</ref>; <ref loc="ACT 7:36">Mdo 7:36</ref></char>
+    </note>ambapo baba zenu walinijaribu na kunipima</para>
+  <para style="q2" vid="HEB 3:9">ingawa kwa miaka arobaini</para>
+  <para style="q2" vid="HEB 3:9">walikuwa wameyaona matendo yangu.<verse eid="HEB 3:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HEB 3:10"/>Hiyo ndiyo sababu nilikasirikia kizazi kile,</para>
+  <para style="q2" vid="HEB 3:10">nami nikasema, ‘Siku zote mioyo yao imepotoka,</para>
+  <para style="q2" vid="HEB 3:10">nao hawajazijua njia zangu.’<verse eid="HEB 3:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HEB 3:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 1:34">Kum 1:34</ref>, <ref loc="DEU 1:35">35</ref>; <ref loc="HEB 4:3">Ebr 4:3</ref>, <ref loc="HEB 4:5">5</ref>; <ref loc="PSA 95:7-11">Za 95:7-11</ref></char>
+    </note>Hivyo nikatangaza kwa kiapo katika hasira yangu,</para>
+  <para style="q2" vid="HEB 3:11">‘Kamwe hawataingia rahani mwangu.’ ”<verse eid="HEB 3:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 3:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 16:16">Mt 16:16</ref>
+      </char>
+    </note>Ndugu zangu, angalieni, asiwepo miongoni mwenu mtu mwenye moyo mwovu usioamini, unaojitenga na Mungu aliye hai. <verse eid="HEB 3:12"/><verse number="13" style="v" sid="HEB 3:13"/><note caller="-" style="x"><char style="xo" closed="false">3:13 </char><char style="xt" closed="false"><ref loc="HEB 10:24">Ebr 10:24</ref>, <ref loc="HEB 10:25">25</ref>; <ref loc="JER 17:9">Yer 17:9</ref>; <ref loc="EPH 4:22">Efe 4:22</ref></char></note>Lakini mtiane moyo mtu na mwenzake kila siku, maadamu iitwapo Leo, ili asiwepo hata mmoja wenu mwenye kufanywa mgumu kwa udanganyifu wa dhambi. <verse eid="HEB 3:13"/><verse number="14" style="v" sid="HEB 3:14"/><note caller="-" style="x"><char style="xo" closed="false">3:14 </char><char style="xt" closed="false"><ref loc="EPH 3:12">Efe 3:12</ref>; <ref loc="HEB 3:6">Ebr 3:6</ref></char></note>Kwa kuwa tumekuwa washiriki wa Kristo, kama tukishikamana tu kwa uthabiti na tumaini letu la kwanza hadi mwisho. <verse eid="HEB 3:14"/><verse number="15" style="v" sid="HEB 3:15"/><note caller="-" style="x"><char style="xo" closed="false">3:15 </char><char style="xt" closed="false"><ref loc="PSA 95:7">Za 95:7</ref>, <ref loc="PSA 95:8">8</ref>; <ref loc="HEB 4:7">Ebr 4:7</ref>; <ref loc="HEB 3:7">3:7</ref>, <ref loc="HEB 3:8">8</ref></char></note>Kama ilivyonenwa:</para>
+  <para style="q1" vid="HEB 3:15">“Leo, kama mkiisikia sauti yake,</para>
+  <para style="q2" vid="HEB 3:15">msiifanye mioyo yenu migumu</para>
+  <para style="q1" vid="HEB 3:15">kama mlivyofanya wakati wa kuasi.”<verse eid="HEB 3:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 3:16"/>Basi ni nani waliosikia lakini bado wakaasi? Je, si wale wote waliotoka Misri wakiongozwa na Mose? <verse eid="HEB 3:16"/><verse number="17" style="v" sid="HEB 3:17"/>Lakini ni nani aliowakasirikia miaka arobaini? Je, si wale waliofanya dhambi ambao miili yao ilianguka jangwani? <verse eid="HEB 3:17"/><verse number="18" style="v" sid="HEB 3:18"/>Ni nani hao ambao Mungu aliapa kuwa kamwe hawataingia rahani mwake isipokuwa ni wale waliokataa kutii? <verse eid="HEB 3:18"/><verse number="19" style="v" sid="HEB 3:19"/>Hivyo tunaona kwamba hawakuweza kuingia kwa sababu ya kutokuamini kwao.<verse eid="HEB 3:19"/></para>
+  <chapter eid="HEB 3"/>
+  <chapter number="4" style="c" sid="HEB 4"/>
+  <para style="s1">Pumziko Aliloahidi Mungu</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 4:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 12:15">Ebr 12:15</ref>
+      </char>
+    </note>Kwa hiyo, kwa kuwa bado ahadi ya kuingia rahani iko wazi, tujihadhari ili hata mmoja wenu asije akaikosa. <verse eid="HEB 4:1"/><verse number="2" style="v" sid="HEB 4:2"/><note caller="-" style="x"><char style="xo" closed="false">4:2 </char><char style="xt" closed="false"><ref loc="1TH 2:13">1The 2:13</ref></char></note>Kwa maana sisi pia tumesikia Injili iliyohubiriwa kwetu, kama nao walivyosikia; lakini ujumbe ule waliousikia haukuwa na maana kwao, kwa sababu wale waliousikia hawakuuchanganya na imani. <verse eid="HEB 4:2"/><verse number="3" style="v" sid="HEB 4:3"/><note caller="-" style="x"><char style="xo" closed="false">4:3 </char><char style="xt" closed="false"><ref loc="PSA 95:11">Za 95:11</ref>; <ref loc="DEU 1:34">Kum 1:34</ref>, <ref loc="DEU 1:35">35</ref>; <ref loc="HEB 3:11">Ebr 3:11</ref></char></note>Sasa sisi ambao tumeamini tunaingia katika ile raha, kama vile Mungu alivyosema,</para>
+  <para style="q1" vid="HEB 4:3">“Kwa hiyo nikaapa katika hasira yangu,</para>
+  <para style="q1" vid="HEB 4:3">‘Kamwe hawataingia rahani mwangu.’ ”</para>
+  <para style="m" vid="HEB 4:3">Lakini kazi yake ilikamilika tangu kuumbwa kwa ulimwengu. <verse eid="HEB 4:3"/><verse number="4" style="v" sid="HEB 4:4"/><note caller="-" style="x"><char style="xo" closed="false">4:4 </char><char style="xt" closed="false"><ref loc="GEN 2:2">Mwa 2:2</ref>, <ref loc="GEN 2:3">3</ref>; <ref loc="EXO 20:11">Kut 20:11</ref></char></note>Kwa maana mahali fulani amezungumza kuhusu siku ya saba, akisema: “Katika siku ya saba Mungu alipumzika kutoka kazi zake zote.” <verse eid="HEB 4:4"/><verse number="5" style="v" sid="HEB 4:5"/><note caller="-" style="x"><char style="xo" closed="false">4:5 </char><char style="xt" closed="false"><ref loc="PSA 95:11">Za 95:11</ref>; <ref loc="HEB 3:3">Ebr 3:3</ref></char></note>Tena hapo juu asema, “Kamwe hawataingia rahani mwangu.”<verse eid="HEB 4:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 4:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 5:1">Ebr 5:1</ref>; <ref loc="HEB 3:18">3:18</ref></char>
+    </note>Kwa hiyo inabaki kuwa wazi kwa wengine kuingia, nao wale wa kwanza waliopokea Injili walishindwa kuingia kwa sababu ya kutokutii. <verse eid="HEB 4:6"/><verse number="7" style="v" sid="HEB 4:7"/><note caller="-" style="x"><char style="xo" closed="false">4:7 </char><char style="xt" closed="false"><ref loc="PSA 95:7">Za 95:7</ref>, <ref loc="PSA 95:8">8</ref>; <ref loc="HEB 3:7">Ebr 3:7</ref></char></note>Kwa hiyo Mungu ameweka siku nyingine, akaiita Leo, akisema kwa kinywa cha Daudi baadaye sana, kwa maneno yaliyotangulia kunenwa:</para>
+  <para style="q1" vid="HEB 4:7">“Leo, kama mkiisikia sauti yake,</para>
+  <para style="q2" vid="HEB 4:7">msiifanye mioyo yenu migumu.”<verse eid="HEB 4:7"/></para>
+  <para style="m">
+    <verse number="8" style="v" sid="HEB 4:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 22:4">Yos 22:4</ref>; <ref loc="HEB 1:1">Ebr 1:1</ref></char>
+    </note>Kwa maana kama Yoshua alikuwa amewapa raha, Mungu hangesema tena baadaye kuhusu siku nyingine. <verse eid="HEB 4:8"/><verse number="9" style="v" sid="HEB 4:9"/>Kwa hiyo basi, imebaki raha ya Sabato kwa ajili ya watu wa Mungu; <verse eid="HEB 4:9"/><verse number="10" style="v" sid="HEB 4:10"/><note caller="-" style="x"><char style="xo" closed="false">4:10 </char><char style="xt" closed="false"><ref loc="LEV 23:3">Law 23:3</ref>; <ref loc="REV 14:13">Ufu 14:13</ref>; <ref loc="HEB 5:4">Ebr 5:4</ref></char></note>kwa kuwa kila mmoja aingiaye katika raha ya Mungu pia hupumzika kutoka kazi zake mwenyewe, kama vile Mungu alivyopumzika kutoka kazi zake. <verse eid="HEB 4:10"/><verse number="11" style="v" sid="HEB 4:11"/><note caller="-" style="x"><char style="xo" closed="false">4:11 </char><char style="xt" closed="false"><ref loc="HEB 5:6">Ebr 5:6</ref>; <ref loc="HEB 3:18">3:18</ref></char></note>Basi, na tufanye bidii kuingia katika raha hiyo, ili kwamba asiwepo yeyote atakayeanguka kwa kufuata mfano wao wa kutokutii.<verse eid="HEB 4:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 4:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="MRK 4:14">Mk 4:14</ref>; <ref loc="MRK 5:1">5:1</ref>; <ref loc="MRK 11:28">11:28</ref>; <ref loc="JHN 10:35">Yn 10:35</ref>; <ref loc="ACT 12:24">Mdo 12:24</ref>; <ref loc="1TH 2:13">1The 2:13</ref>; <ref loc="ISA 55:11">Isa 55:11</ref>; <ref loc="JER 23:29">Yer 23:29</ref>; <ref loc="REV 1:16">Ufu 1:16</ref>; <ref loc="1CO 14:24">1Kor 14:24</ref>, <ref loc="1CO 14:25">25</ref></char>
+    </note>Kwa maana Neno la Mungu li hai tena lina nguvu. Lina makali kuliko upanga wowote wenye makali kuwili, hivyo linachoma hata kuzigawanya nafsi na roho, viungo na mafuta yaliyo ndani yake; tena li jepesi kuyatambua mawazo na makusudi ya moyo. <verse eid="HEB 4:12"/><verse number="13" style="v" sid="HEB 4:13"/><note caller="-" style="x"><char style="xo" closed="false">4:13 </char><char style="xt" closed="false"><ref loc="PSA 33:13-15">Za 33:13-15</ref>; <ref loc="PRO 5:21">Mit 5:21</ref>; <ref loc="JER 16:17">Yer 16:17</ref>; <ref loc="JER 23:24">23:24</ref>; <ref loc="DAN 2:22">Dan 2:22</ref></char></note>Wala hakuna kiumbe chochote kilichofichika machoni pa Mungu. Kila kitu kimefunuliwa na kiko wazi machoni pake yeye ambaye kwake ni lazima tutatoa hesabu.<verse eid="HEB 4:13"/></para>
+  <para style="s1">Yesu Kristo Kuhani Mkuu Kuliko Wote</para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 4:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 2:17">Ebr 2:17</ref>; <ref loc="HEB 6:20">6:20</ref>; <ref loc="HEB 8:1">8:1</ref>; <ref loc="HEB 9:2">9:2</ref>; <ref loc="MAT 4:3">Mt 4:3</ref>; <ref loc="HEB 3:1">Ebr 3:1</ref></char>
+    </note>Kwa kuwa tunaye Kuhani Mkuu kuliko wote ambaye ameingia mbinguni, Yesu Mwana wa Mungu, basi na tushikamane sana kwa uthabiti na ule ukiri wa imani yetu. <verse eid="HEB 4:14"/><verse number="15" style="v" sid="HEB 4:15"/><note caller="-" style="x"><char style="xo" closed="false">4:15 </char><char style="xt" closed="false"><ref loc="HEB 2:17">Ebr 2:17</ref>, <ref loc="HEB 2:18">18</ref>; <ref loc="2CO 5:21">2Kor 5:21</ref>; <ref loc="ISA 53:3">Isa 53:3</ref>; <ref loc="LUK 22:28">Lk 22:28</ref>; <ref loc="1PE 2:22">1Pet 2:22</ref>; <ref loc="1JN 3:5">1Yn 3:5</ref>; <ref loc="HEB 7:26">Ebr 7:26</ref></char></note>Kwa kuwa hatuna Kuhani Mkuu asiyeweza kuchukuliana na sisi katika udhaifu wetu, lakini tunaye mmoja ambaye alijaribiwa kwa kila namna, kama vile sisi tujaribiwavyo: lakini yeye hakutenda dhambi. <verse eid="HEB 4:15"/><verse number="16" style="v" sid="HEB 4:16"/><note caller="-" style="x"><char style="xo" closed="false">4:16 </char><char style="xt" closed="false"><ref loc="HEB 7:19">Ebr 7:19</ref>; <ref loc="EPH 2:18">Efe 2:18</ref>; <ref loc="EPH 3:12">3:12</ref>; <ref loc="HEB 10:19">Ebr 10:19</ref></char></note>Basi na tukikaribie kiti cha rehema kwa ujasiri, ili tupewe rehema na kupata neema ya kutusaidia wakati wa mahitaji.<verse eid="HEB 4:16"/></para>
+  <chapter eid="HEB 4"/>
+  <chapter number="5" style="c" sid="HEB 5"/>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 5:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 2:17">Ebr 2:17</ref>; <ref loc="HEB 8:3">8:3</ref>; <ref loc="HEB 9:9-27">9:9-27</ref></char>
+    </note>Kwa maana kila kuhani mkuu anayechaguliwa miongoni mwa wanadamu anawekwa kuwawakilisha kwa mambo yanayomhusu Mungu, ili apate kutoa matoleo na dhabihu kwa ajili ya dhambi. <verse eid="HEB 5:1"/><verse number="2" style="v" sid="HEB 5:2"/><note caller="-" style="x"><char style="xo" closed="false">5:2 </char><char style="xt" closed="false"><ref loc="HEB 2:18">Ebr 2:18</ref>; <ref loc="HEB 4:15">4:15</ref>; <ref loc="HEB 7:28">7:28</ref></char></note>Kwa kuwa yeye mwenyewe ni dhaifu, aweza kuwachukulia kwa upole wale wasiojua na kupotoka. <verse eid="HEB 5:2"/><verse number="3" style="v" sid="HEB 5:3"/><note caller="-" style="x"><char style="xo" closed="false">5:3 </char><char style="xt" closed="false"><ref loc="LEV 4:3">Law 4:3</ref>; <ref loc="LEV 9:7">9:7</ref>; <ref loc="LEV 16:6">16:6</ref>; <ref loc="LEV 15:16">15:16</ref>, <ref loc="LEV 15:17">17</ref>; <ref loc="HEB 7:27">Ebr 7:27</ref>; <ref loc="HEB 9:7">9:7</ref></char></note>Hii ndiyo sababu inampasa kutoa dhabihu kwa ajili ya dhambi zake mwenyewe na vivyo hivyo kwa ajili ya dhambi za watu. <verse eid="HEB 5:3"/><verse number="4" style="v" sid="HEB 5:4"/><note caller="-" style="x"><char style="xo" closed="false">5:4 </char><char style="xt" closed="false"><ref loc="EXO 28:1">Kut 28:1</ref>; <ref loc="NUM 14:40">Hes 14:40</ref>; <ref loc="NUM 18:7">18:7</ref>; <ref loc="2CH 26:18">2Nya 26:18</ref>; <ref loc="1CH 23:13">1Nya 23:13</ref>; <ref loc="JHN 3:27">Yn 3:27</ref></char></note>Hakuna anayejitwalia heshima hii mwenyewe; ni lazima aitwe na Mungu, kama vile Aroni alivyoitwa. <verse eid="HEB 5:4"/><verse number="5" style="v" sid="HEB 5:5"/><note caller="-" style="x"><char style="xo" closed="false">5:5 </char><char style="xt" closed="false"><ref loc="JHN 8:54">Yn 8:54</ref>; <ref loc="HEB 2:17">Ebr 2:17</ref>; <ref loc="HEB 1:5">1:5</ref>; <ref loc="HEB 1:1">1:1</ref>; <ref loc="PSA 2:7">Za 2:7</ref>; <ref loc="ACT 13:33">Mdo 13:33</ref></char></note>Pia Kristo hakujitwalia utukufu yeye mwenyewe wa kuwa Kuhani Mkuu, bali Mungu alimwambia,</para>
+  <para style="q1" vid="HEB 5:5">“Wewe ni Mwanangu;</para>
+  <para style="q2" vid="HEB 5:5">leo mimi nimekuzaa.”<verse eid="HEB 5:5"/></para>
+  <para style="m">
+    <verse number="6" style="v" sid="HEB 5:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 5:10">Ebr 5:10</ref>; <ref loc="HEB 6:20">6:20</ref>; <ref loc="HEB 7:2-22">7:2-22</ref>; <ref loc="HEB 7:17">7:17</ref>, <ref loc="HEB 7:21">21</ref>; <ref loc="GEN 14:18">Mwa 14:18</ref>; <ref loc="PSA 110:4">Za 110:4</ref></char>
+    </note>Pia mahali pengine asema,</para>
+  <para style="q1" vid="HEB 5:6">“Wewe ni kuhani milele,</para>
+  <para style="q2" vid="HEB 5:6">kwa mfano wa Melkizedeki.”<verse eid="HEB 5:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 5:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="LUK 22:41-44">Lk 22:41-44</ref>; <ref loc="LUK 23:46">23:46</ref>; <ref loc="MAT 27:46">Mt 27:46</ref>; <ref loc="PSA 22:24">Za 22:24</ref>; <ref loc="MRK 14:36">Mk 14:36</ref></char>
+    </note>Katika siku za maisha ya Yesu hapa duniani, alimtolea maombi na dua pamoja na kulia sana na machozi, yeye awezaye kumwokoa na mauti, naye Mungu akamsikia kwa sababu ya kutii kwake kwa unyenyekevu. <verse eid="HEB 5:7"/><verse number="8" style="v" sid="HEB 5:8"/><note caller="-" style="x"><char style="xo" closed="false">5:8 </char><char style="xt" closed="false"><ref loc="HEB 1:2">Ebr 1:2</ref>; <ref loc="HEB 3:6">3:6</ref>; <ref loc="PHP 2:8">Flp 2:8</ref></char></note>Ingawa alikuwa Mwana, alijifunza utiifu kutokana na mateso aliyoyapata, <verse eid="HEB 5:8"/><verse number="9" style="v" sid="HEB 5:9"/><note caller="-" style="x"><char style="xo" closed="false">5:9 </char><char style="xt" closed="false"><ref loc="HEB 2:10">Ebr 2:10</ref>; <ref loc="HEB 11:40">11:40</ref>; <ref loc="ISA 45:17">Isa 45:17</ref>; <ref loc="JHN 17:1">Yn 17:1</ref>, <ref loc="JHN 17:5">5</ref></char></note>na akiisha kukamilishwa, akawa chanzo cha wokovu wa milele kwa wote wanaomtii. <verse eid="HEB 5:9"/><verse number="10" style="v" sid="HEB 5:10"/><note caller="-" style="x"><char style="xo" closed="false">5:10 </char><char style="xt" closed="false"><ref loc="HEB 5:6">Ebr 5:6</ref>; <ref loc="HEB 6:20">6:20</ref>; <ref loc="HEB 2:17">2:17</ref></char></note>Naye amewekwa na Mungu kuwa Kuhani Mkuu kwa mfano wa Melkizedeki.<verse eid="HEB 5:10"/></para>
+  <para style="s1">Wito Wa Kukua Kiroho</para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 5:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="JHN 16:12">Yn 16:12</ref>; <ref loc="2PE 3:16">2Pet 3:16</ref>; <ref loc="MAT 13:15">Mt 13:15</ref></char>
+    </note>Tunayo mengi ya kusema kuhusu habari ya ukuhani huu, lakini ni vigumu kuyaeleza, kwa sababu ninyi ni wazito wa kuelewa. <verse eid="HEB 5:11"/><verse number="12" style="v" sid="HEB 5:12"/><note caller="-" style="x"><char style="xo" closed="false">5:12 </char><char style="xt" closed="false"><ref loc="HEB 6:1">Ebr 6:1</ref>; <ref loc="1CO 3:2">1Kor 3:2</ref>; <ref loc="1PE 2:2">1Pet 2:2</ref></char></note>Kwa hakika, ingawa mpaka wakati huu ingewapasa kuwa walimu, bado mnahitaji mtu wa kuwafundisha tena hatua za awali za kweli ya Neno la Mungu. Mnahitaji maziwa, wala si chakula kigumu! <verse eid="HEB 5:12"/><verse number="13" style="v" sid="HEB 5:13"/><note caller="-" style="x"><char style="xo" closed="false">5:13 </char><char style="xt" closed="false"><ref loc="1CO 13:11">1Kor 13:11</ref>; <ref loc="1CO 14:20">14:20</ref>; <ref loc="EPH 4:14">Efe 4:14</ref>; <ref loc="1PE 2:2">1Pet 2:2</ref></char></note>Kwa maana yeyote aishiye kwa kunywa maziwa bado yeye ni mtoto mchanga, hana ujuzi katika mafundisho kuhusu neno la haki. <verse eid="HEB 5:13"/><verse number="14" style="v" sid="HEB 5:14"/><note caller="-" style="x"><char style="xo" closed="false">5:14 </char><char style="xt" closed="false"><ref loc="1CO 2:6">1Kor 2:6</ref>; <ref loc="ISA 7:15">Isa 7:15</ref>; <ref loc="1CO 2:14">1Kor 2:14</ref>, <ref loc="1CO 2:15">15</ref></char></note>Lakini chakula kigumu ni kwa ajili ya watu wazima, ambao kwa kujizoeza wamejifunza kupambanua kati ya mema na mabaya.<verse eid="HEB 5:14"/></para>
+  <chapter eid="HEB 5"/>
+  <chapter number="6" style="c" sid="HEB 6"/>
+  <para style="s1">Hatari Ya Kuanguka</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 6:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="PHP 3:12">Flp 3:12</ref>, <ref loc="PHP 3:13">13</ref>, <ref loc="PHP 3:14">14</ref>; <ref loc="HEB 5:12">Ebr 5:12</ref>; <ref loc="HEB 9:14">9:14</ref></char>
+    </note>Kwa hiyo, tukiachana na mafundisho yale ya awali kuhusu Kristo na tukisonga mbele ili tufikie utimilifu, sio kuweka tena msingi wa mafundisho ya kuzitubia kazi zisizo na uhai na imani katika Mungu, <verse eid="HEB 6:1"/><verse number="2" style="v" sid="HEB 6:2"/><note caller="-" style="x"><char style="xo" closed="false">6:2 </char><char style="xt" closed="false"><ref loc="JHN 3:25">Yn 3:25</ref>; <ref loc="ACT 6:6">Mdo 6:6</ref>; <ref loc="ACT 2:24">2:24</ref>; <ref loc="ACT 17:18">17:18</ref>, <ref loc="ACT 17:22">22</ref></char></note>mafundisho kuhusu aina za ubatizo, kuwekea watu mikono, ufufuo wa wafu, na hukumu ya milele. <verse eid="HEB 6:2"/><verse number="3" style="v" sid="HEB 6:3"/><note caller="-" style="x"><char style="xo" closed="false">6:3 </char><char style="xt" closed="false"><ref loc="ACT 18:21">Mdo 18:21</ref>; <ref loc="1CO 4:19">1Kor 4:19</ref></char></note>Mungu akitujalia tutafanya hivyo.<verse eid="HEB 6:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 6:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 10:22">Ebr 10:22</ref>; <ref loc="EPH 2:8">Efe 2:8</ref>; <ref loc="GAL 3:2">Gal 3:2</ref>; <ref loc="MAT 12:31">Mt 12:31</ref>, <ref loc="MAT 12:32">32</ref>; <ref loc="2PE 2:20">2Pet 2:20</ref>, <ref loc="2PE 2:21">21</ref>; <ref loc="1JN 5:16">1Yn 5:16</ref>; <ref loc="JHN 4:10">Yn 4:10</ref>; <ref loc="JHN 6:32">6:32</ref></char>
+    </note>Kwa kuwa ni vigumu kwa wale ambao wakati fulani walishapata nuru, ambao walishaonja kipawa cha mbinguni, ambao wamekwisha kushiriki katika Roho Mtakatifu, <verse eid="HEB 6:4"/><verse number="5" style="v" sid="HEB 6:5"/><note caller="-" style="x"><char style="xo" closed="false">6:5 </char><char style="xt" closed="false"><ref loc="HEB 2:5">Ebr 2:5</ref>; <ref loc="HEB 4:12">4:12</ref>; <ref loc="PSA 34:8">Za 34:8</ref></char></note>ambao wameonja uzuri wa Neno la Mungu na nguvu za wakati ujao, <verse eid="HEB 6:5"/><verse number="6" style="v" sid="HEB 6:6"/><note caller="-" style="x"><char style="xo" closed="false">6:6 </char><char style="xt" closed="false"><ref loc="2PE 2:21">2Pet 2:21</ref>; <ref loc="1JN 5:16">1Yn 5:16</ref>; <ref loc="MAT 4:3">Mt 4:3</ref>; <ref loc="HEB 10:29">Ebr 10:29</ref></char></note>kisha wakianguka, kuwarejesha tena katika toba. Kwa kuwa wanamsulubisha Mwana wa Mungu mara ya pili na kumdhalilisha hadharani, nayo ikawa hasara kwao.<verse eid="HEB 6:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 6:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 65:10">Za 65:10</ref>; <ref loc="GEN 1:11">Mwa 1:11</ref>, <ref loc="GEN 1:12">12</ref></char>
+    </note>Ardhi ile ipokeayo mvua inyeshayo juu yake mara kwa mara hutoa mazao yanayowanufaisha wale ambao kwa ajili yao yalimwa, nayo nchi hiyo hupokea baraka kutoka kwa Mungu. <verse eid="HEB 6:7"/><verse number="8" style="v" sid="HEB 6:8"/><note caller="-" style="x"><char style="xo" closed="false">6:8 </char><char style="xt" closed="false"><ref loc="GEN 3:17">Mwa 3:17</ref>, <ref loc="GEN 3:18">18</ref>; <ref loc="ISA 5:6">Isa 5:6</ref>; <ref loc="ISA 27:4">27:4</ref></char></note>Lakini ardhi ikizaa miiba na mibaruti, haina thamani na iko hatarini ya kulaaniwa. Mwisho wake ni kuchomwa moto.<verse eid="HEB 6:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 6:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 10:14">1Kor 10:14</ref>
+      </char>
+    </note>Ingawa tunasema hivi, ndugu zangu wapendwa, kwa upande wenu tuna hakika ya mambo mema zaidi, mambo yale yahusuyo wokovu. <verse eid="HEB 6:9"/><verse number="10" style="v" sid="HEB 6:10"/><note caller="-" style="x"><char style="xo" closed="false">6:10 </char><char style="xt" closed="false"><ref loc="MAT 10:40">Mt 10:40</ref>, <ref loc="MAT 10:42">42</ref>; <ref loc="1TH 1:3">1The 1:3</ref></char></note>Mungu si mdhalimu: yeye hataisahau kazi yenu na upendo ule mlioonyesha kwa ajili yake katika kuwahudumia watakatifu na hata sasa mnaendelea kuwahudumia. <verse eid="HEB 6:10"/><verse number="11" style="v" sid="HEB 6:11"/><note caller="-" style="x"><char style="xo" closed="false">6:11 </char><char style="xt" closed="false"><ref loc="HEB 3:6">Ebr 3:6</ref>, <ref loc="HEB 3:14">14</ref>; <ref loc="COL 2:2">Kol 2:2</ref>; <ref loc="PHP 1:6">Flp 1:6</ref></char></note>Nasi twataka kila mmoja wenu aonyeshe bidii iyo hiyo ili mpate kujua uhakika kamili wa lile tumaini mpaka mwisho, <verse eid="HEB 6:11"/><verse number="12" style="v" sid="HEB 6:12"/><note caller="-" style="x"><char style="xo" closed="false">6:12 </char><char style="xt" closed="false"><ref loc="HEB 13:7">Ebr 13:7</ref>; <ref loc="HEB 10:36">10:36</ref>; <ref loc="2TH 1:4">2The 1:4</ref>; <ref loc="JAS 1:3">Yak 1:3</ref>; <ref loc="REV 13:10">Ufu 13:10</ref>; <ref loc="REV 14:12">14:12</ref></char></note>ili msije mkawa wavivu, bali mpate kuwaiga wale ambao kwa imani na saburi hurithi zile ahadi.<verse eid="HEB 6:12"/></para>
+  <para style="s1">Uhakika Wa Ahadi Ya Mungu</para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 6:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 22:16">Mwa 22:16</ref>, <ref loc="GEN 22:17">17</ref>; <ref loc="LUK 1:73">Lk 1:73</ref>; <ref loc="PSA 105:9">Za 105:9</ref></char>
+    </note>Mungu alipompa Abrahamu ahadi yake, kwa kuwa hakuwepo mwingine aliyekuwa mkuu kuliko yeye ambaye angeweza kuapa kwa jina lake, aliapa kwa nafsi yake, <verse eid="HEB 6:13"/><verse number="14" style="v" sid="HEB 6:14"/><note caller="-" style="x"><char style="xo" closed="false">6:14 </char><char style="xt" closed="false"><ref loc="GEN 22:17">Mwa 22:17</ref></char></note>akisema, “Hakika nitakubariki na kukupa wazao wengi.” <verse eid="HEB 6:14"/><verse number="15" style="v" sid="HEB 6:15"/><note caller="-" style="x"><char style="xo" closed="false">6:15 </char><char style="xt" closed="false"><ref loc="GEN 21:5">Mwa 21:5</ref></char></note>Abrahamu naye, baada ya kungoja kwa saburi, alipokea kile kilichoahidiwa.<verse eid="HEB 6:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 6:16"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 22:10">Kut 22:10</ref>
+      </char>
+    </note>Wanadamu huapa kwa yeye aliye mkuu kuwaliko, nacho kiapo hicho huthibitisha kile kilichosemwa na hivyo humaliza mabishano yote. <verse eid="HEB 6:16"/><verse number="17" style="v" sid="HEB 6:17"/><note caller="-" style="x"><char style="xo" closed="false">6:17 </char><char style="xt" closed="false"><ref loc="HEB 6:18">Ebr 6:18</ref>; <ref loc="PSA 110:4">Za 110:4</ref>; <ref loc="ROM 4:16">Rum 4:16</ref>; <ref loc="HEB 11:9">Ebr 11:9</ref>; <ref loc="ROM 11:29">Rum 11:29</ref></char></note>Mungu alipotaka kuonyesha kwa udhahiri zaidi ile asili ya kutokubadilika kwa ahadi yake kwa warithi wa ahadi, aliithitibisha kwa kiapo. <verse eid="HEB 6:17"/><verse number="18" style="v" sid="HEB 6:18"/><note caller="-" style="x"><char style="xo" closed="false">6:18 </char><char style="xt" closed="false"><ref loc="NUM 23:19">Hes 23:19</ref>; <ref loc="TIT 1:2">Tit 1:2</ref>; <ref loc="HEB 3:6">Ebr 3:6</ref></char></note>Mungu alifanya hivyo ili kwa vitu viwili visivyobadilika, yaani ahadi yake na kiapo chake, ambavyo kwavyo Mungu hawezi kusema uongo, sisi ambao tumemkimbilia ili tulishike lile tumaini lililowekwa mbele yetu tuwe na faraja thabiti. <verse eid="HEB 6:18"/><verse number="19" style="v" sid="HEB 6:19"/><note caller="-" style="x"><char style="xo" closed="false">6:19 </char><char style="xt" closed="false"><ref loc="LEV 16:2">Law 16:2</ref>; <ref loc="HEB 9:2">Ebr 9:2</ref>, <ref loc="HEB 9:3">3</ref>, <ref loc="HEB 9:7">7</ref></char></note>Tunalo tumaini hili kama nanga ya roho iliyo imara na thabiti. Tumaini hili huingia katika sehemu takatifu iliyopo nyuma ya pazia, <verse eid="HEB 6:19"/><verse number="20" style="v" sid="HEB 6:20"/><note caller="-" style="x"><char style="xo" closed="false">6:20 </char><char style="xt" closed="false"><ref loc="HEB 4:14">Ebr 4:14</ref>; <ref loc="HEB 2:17">2:17</ref>; <ref loc="HEB 5:6">5:6</ref></char></note>mahali ambapo Yesu mtangulizi wetu aliingia kwa niaba yetu. Yeye amekuwa Kuhani Mkuu milele, kwa mfano wa Melkizedeki.<verse eid="HEB 6:20"/></para>
+  <chapter eid="HEB 6"/>
+  <chapter number="7" style="c" sid="HEB 7"/>
+  <para style="s1">Kuhani Melkizedeki</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 7:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 76:2">Za 76:2</ref>; <ref loc="MRK 5:7">Mk 5:7</ref>; <ref loc="HEB 7:6">Ebr 7:6</ref>; <ref loc="GEN 14:18-20">Mwa 14:18-20</ref></char>
+    </note>Kwa kuwa huyu Melkizedeki alikuwa mfalme wa Salemu na kuhani wa Mungu Aliye Juu Sana. Alipokutana na Abrahamu akirudi kutoka kuwashinda hao wafalme, Melkizedeki alimbariki, <verse eid="HEB 7:1"/><verse number="2" style="v" sid="HEB 7:2"/>naye Abrahamu alimpa sehemu ya kumi<note caller="+" style="f"><char style="fr" closed="false">7:2 </char><char style="ft" closed="false">Sehemu ya kumi mahali pengine huitwa fungu la kumi au zaka; sehemu ya kumi ya pato hutolewa kwa Mungu.</char></note> ya kila kitu. Kwanza, jina hilo Melkizedeki maana yake ni “mfalme wa haki.” Na pia “mfalme wa Salemu” maana yake ni “mfalme wa amani.” <verse eid="HEB 7:2"/><verse number="3" style="v" sid="HEB 7:3"/><note caller="-" style="x"><char style="xo" closed="false">7:3 </char><char style="xt" closed="false"><ref loc="HEB 7:6">Ebr 7:6</ref>; <ref loc="MAT 4:3">Mt 4:3</ref>; <ref loc="PSA 110:4">Za 110:4</ref></char></note>Hana Baba wala mama, hana ukoo, hana mwanzo wala mwisho wa siku zake. Kama Mwana wa Mungu, yeye adumu akiwa kuhani milele.<verse eid="HEB 7:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 7:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 14:20">Mwa 14:20</ref>; <ref loc="ACT 2:29">Mdo 2:29</ref></char>
+    </note>Tazama jinsi alivyokuwa mkuu: Hata Abrahamu, baba yetu mkuu, alimpa sehemu ya kumi ya nyara zake. <verse eid="HEB 7:4"/><verse number="5" style="v" sid="HEB 7:5"/><note caller="-" style="x"><char style="xo" closed="false">7:5 </char><char style="xt" closed="false"><ref loc="NUM 18:21">Hes 18:21</ref>, <ref loc="NUM 18:26">26</ref></char></note>Basi sheria inawaagiza wana wa Lawi ambao hufanyika makuhani kupokea sehemu ya kumi kutoka kwa watu ambao ni ndugu zao, ingawa ndugu zao ni wazao wa Abrahamu. <verse eid="HEB 7:5"/><verse number="6" style="v" sid="HEB 7:6"/><note caller="-" style="x"><char style="xo" closed="false">7:6 </char><char style="xt" closed="false"><ref loc="GEN 14:19">Mwa 14:19</ref>, <ref loc="GEN 14:20">20</ref>; <ref loc="ROM 4:13">Rum 4:13</ref></char></note>Huyu Melkizedeki, ingawa hakufuatia ukoo wake kutoka kwa Lawi, lakini alipokea sehemu ya kumi kutoka kwa Abrahamu na kumbariki yeye aliyekuwa na zile ahadi. <verse eid="HEB 7:6"/><verse number="7" style="v" sid="HEB 7:7"/>Wala hakuna shaka kwamba mdogo hubarikiwa na aliye mkuu kumliko yeye. <verse eid="HEB 7:7"/><verse number="8" style="v" sid="HEB 7:8"/><note caller="-" style="x"><char style="xo" closed="false">7:8 </char><char style="xt" closed="false"><ref loc="HEB 5:6">Ebr 5:6</ref>; <ref loc="HEB 6:20">6:20</ref></char></note>Kwa upande mmoja, sehemu ya kumi hupokelewa na wale ambao hupatikana na kufa; lakini kwa upande mwingine hupokelewa na yeye ambaye hushuhudiwa kuwa yu hai. <verse eid="HEB 7:8"/><verse number="9" style="v" sid="HEB 7:9"/>Mtu anaweza hata kusema kwamba Lawi, ambaye hupokea sehemu ya kumi, alitoa hiyo sehemu ya kumi kupitia kwa Abrahamu, <verse eid="HEB 7:9"/><verse number="10" style="v" sid="HEB 7:10"/>kwa sababu Melkizedeki alipokutana na Abrahamu, Lawi alikuwa bado katika viuno vya baba yake wa zamani.<note caller="+" style="f"><char style="fr" closed="false">7:10 </char><char style="ft" closed="false">Yaani, alikuwa hajazaliwa.</char></note><verse eid="HEB 7:10"/></para>
+  <para style="s1">Yesu Mfano Wa Melkizedeki</para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 7:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 7:18-19">Ebr 7:18-19</ref>; <ref loc="HEB 8:7">8:7</ref>; <ref loc="HEB 10:1">10:1</ref>; <ref loc="HEB 7:17">7:17</ref>; <ref loc="HEB 5:6">5:6</ref>; <ref loc="GAL 2:21">Gal 2:21</ref></char>
+    </note>Kama ukamilifu ungeweza kupatikana kwa njia ya ukuhani wa Walawi (kwa kuwa katika msingi huo, sheria ilitolewa kwa watu), kwa nini basi imekuwepo haja ya kuja kuhani mwingine: kuhani kwa mfano wa Melkizedeki, wala si kwa mfano wa Aroni? <verse eid="HEB 7:11"/><verse number="12" style="v" sid="HEB 7:12"/>Kwa kuwa yanapotokea mabadiliko ya ukuhani, pia lazima yawepo mabadiliko ya sheria. <verse eid="HEB 7:12"/><verse number="13" style="v" sid="HEB 7:13"/><note caller="-" style="x"><char style="xo" closed="false">7:13 </char><char style="xt" closed="false"><ref loc="HEB 7:11">Ebr 7:11</ref>, <ref loc="HEB 7:14">14</ref></char></note>Yeye ambaye mambo haya yanasemwa alikuwa wa kabila lingine, na hakuna mtu wa kabila hilo aliyewahi kuhudumu katika madhabahu. <verse eid="HEB 7:13"/><verse number="14" style="v" sid="HEB 7:14"/><note caller="-" style="x"><char style="xo" closed="false">7:14 </char><char style="xt" closed="false"><ref loc="ISA 11:1">Isa 11:1</ref>; <ref loc="MAT 1:3">Mt 1:3</ref>; <ref loc="MAT 2:6">2:6</ref>; <ref loc="LUK 3:33">Lk 3:33</ref>; <ref loc="REV 5:5">Ufu 5:5</ref></char></note>Kwa maana ni dhahiri kwamba Bwana wetu alitoka katika uzao wa Yuda, tena kuhusu kabila hilo Mose hakusema lolote kwa habari za makuhani. <verse eid="HEB 7:14"/><verse number="15" style="v" sid="HEB 7:15"/>Tena hayo tuliyosema yako wazi zaidi kama akitokea kuhani mwingine kama Melkizedeki, <verse eid="HEB 7:15"/><verse number="16" style="v" sid="HEB 7:16"/>yeye ambaye amefanyika kuhani si kwa misingi ya sheria kama ilivyokuwa kwa baba zake, bali kwa misingi ya uwezo wa uzima usioharibika. <verse eid="HEB 7:16"/><verse number="17" style="v" sid="HEB 7:17"/><note caller="-" style="x"><char style="xo" closed="false">7:17 </char><char style="xt" closed="false"><ref loc="PSA 110:4">Za 110:4</ref>; <ref loc="HEB 7:21">Ebr 7:21</ref>; <ref loc="HEB 5:6">5:6</ref>, <ref loc="HEB 5:10">10</ref>; <ref loc="HEB 6:20">6:20</ref></char></note>Kwa maana imeshuhudiwa kwamba:</para>
+  <para style="q1" vid="HEB 7:17">“Wewe ni kuhani milele,</para>
+  <para style="q2" vid="HEB 7:17">kwa mfano wa Melkizedeki.”<verse eid="HEB 7:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 7:18"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 8:3">Rum 8:3</ref>; <ref loc="GAL 4:9">Gal 4:9</ref></char>
+    </note>Kwa upande mmoja, ile amri ya mwanzo isiyofaa na dhaifu imebatilishwa <verse eid="HEB 7:18"/><verse number="19" style="v" sid="HEB 7:19"/><note caller="-" style="x"><char style="xo" closed="false">7:19 </char><char style="xt" closed="false"><ref loc="HEB 7:11">Ebr 7:11</ref>; <ref loc="HEB 9:9">9:9</ref>; <ref loc="HEB 10:1">10:1</ref>; <ref loc="ROM 3:20">Rum 3:20</ref>; <ref loc="ROM 7:7">7:7</ref>, <ref loc="ROM 7:8">8</ref>; <ref loc="GAL 3:21">Gal 3:21</ref>; <ref loc="JAS 4:8">Yak 4:8</ref></char></note>(kwa maana sheria haikufanya kitu chochote kuwa kikamilifu). Kwa upande mwingine, tumeletewa tumaini lililo bora zaidi ambalo linatuleta karibu na Mungu.<verse eid="HEB 7:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 7:20"/>Nalo tumaini hilo halikutolewa pasipo kiapo! Wengine walikuwa makuhani pasipo kiapo chochote, <verse eid="HEB 7:20"/><verse number="21" style="v" sid="HEB 7:21"/><note caller="-" style="x"><char style="xo" closed="false">7:21 </char><char style="xt" closed="false"><ref loc="PSA 110:4">Za 110:4</ref>; <ref loc="NUM 23:19">Hes 23:19</ref>; <ref loc="1SA 15:29">1Sam 15:29</ref>; <ref loc="MAL 3:6">Mal 3:6</ref>; <ref loc="ROM 1:29">Rum 1:29</ref>; <ref loc="HEB 5:6">Ebr 5:6</ref></char></note>lakini Yesu alifanywa kuhani kwa kiapo wakati Mungu alimwambia:</para>
+  <para style="q1" vid="HEB 7:21">“<char style="nd">Bwana</char> ameapa</para>
+  <para style="q2" vid="HEB 7:21">naye hatabadilisha mawazo yake:</para>
+  <para style="q1" vid="HEB 7:21">‘Wewe ni kuhani milele.’ ”<verse eid="HEB 7:21"/></para>
+  <para style="m">
+    <verse number="22" style="v" sid="HEB 7:22"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 8:6">Ebr 8:6</ref>; <ref loc="HEB 9:15">9:15</ref>; <ref loc="HEB 12:24">12:24</ref>; <ref loc="LUK 22:20">Lk 22:20</ref></char>
+    </note>Kwa ajili ya kiapo hiki, Yesu amekuwa mdhamini wa agano lililo bora zaidi.<verse eid="HEB 7:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 7:23"/>Basi pamekuwepo na makuhani wengi wa aina hiyo, kwa kuwa kifo kiliwazuia kuendelea na huduma yao ya ukuhani. <verse eid="HEB 7:23"/><verse number="24" style="v" sid="HEB 7:24"/><note caller="-" style="x"><char style="xo" closed="false">7:24 </char><char style="xt" closed="false"><ref loc="HEB 7:28">Ebr 7:28</ref></char></note>Lakini kwa sababu Yesu anaishi milele, anao ukuhani wa kudumu. <verse eid="HEB 7:24"/><verse number="25" style="v" sid="HEB 7:25"/><note caller="-" style="x"><char style="xo" closed="false">7:25 </char><char style="xt" closed="false"><ref loc="ROM 11:14">Rum 11:14</ref>; <ref loc="ROM 8:34">8:34</ref>; <ref loc="HEB 7:19">Ebr 7:19</ref>; <ref loc="1TI 2:5">1Tim 2:5</ref>; <ref loc="1JN 2:1">1Yn 2:1</ref></char></note>Kwa hiyo anaweza kuwaokoa kabisa wale wanaomjia Mungu kupitia kwake, kwa sababu yeye adumu daima kuomba kwa ajili yao.<verse eid="HEB 7:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="HEB 7:26"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:26 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 4:15">Ebr 4:15</ref>; <ref loc="HEB 8:1">8:1</ref>; <ref loc="EPH 1:20">Efe 1:20</ref>; <ref loc="EPH 4:10">4:10</ref>; <ref loc="2CO 5:21">2Kor 5:21</ref></char>
+    </note>Kwa kuwa ilitupasa tuwe na Kuhani Mkuu wa namna hii, yaani, aliye mtakatifu, asiye na lawama, asiye na dosari, aliyetengwa na wenye dhambi na kuinuliwa juu ya mbingu. <verse eid="HEB 7:26"/><verse number="27" style="v" sid="HEB 7:27"/><note caller="-" style="x"><char style="xo" closed="false">7:27 </char><char style="xt" closed="false"><ref loc="HEB 5:1">Ebr 5:1</ref>, <ref loc="HEB 5:3">3</ref>; <ref loc="ROM 6:10">Rum 6:10</ref>; <ref loc="HEB 9:12">Ebr 9:12</ref>, <ref loc="HEB 9:26">26</ref>, <ref loc="HEB 9:28">28</ref>; <ref loc="HEB 10:10">10:10</ref>; <ref loc="1PE 3:18">1Pet 3:18</ref>; <ref loc="EPH 5:2">Efe 5:2</ref></char></note>Yeye hahitaji kutoa dhabihu siku kwa siku kwa ajili ya dhambi, kwanza kwa ajili ya dhambi zake mwenyewe, kisha kwa ajili ya dhambi za watu kama wale makuhani wakuu wengine. Yeye alitoa dhabihu kwa ajili ya dhambi zao mara moja tu, alipojitoa mwenyewe. <verse eid="HEB 7:27"/><verse number="28" style="v" sid="HEB 7:28"/><note caller="-" style="x"><char style="xo" closed="false">7:28 </char><char style="xt" closed="false"><ref loc="HEB 5:2">Ebr 5:2</ref>; <ref loc="HEB 1:2">1:2</ref>; <ref loc="HEB 2:10">2:10</ref></char></note>Kwa kuwa sheria huwaweka makuhani wakuu watu ambao ni dhaifu; lakini lile neno la kiapo, lililokuja baada ya sheria, lilimweka Mwana, ambaye amefanywa kuwa mkamilifu milele.<verse eid="HEB 7:28"/></para>
+  <chapter eid="HEB 7"/>
+  <chapter number="8" style="c" sid="HEB 8"/>
+  <para style="s1">Kuhani Mkuu Wa Agano Jipya</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 8:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 2:17">Ebr 2:17</ref>; <ref loc="MRK 16:19">Mk 16:19</ref>; <ref loc="HEB 4:14">Ebr 4:14</ref>; <ref loc="EPH 1:20">Efe 1:20</ref>; <ref loc="COL 3:1">Kol 3:1</ref></char>
+    </note>Basi jambo tunalotaka kulisema ni hili: Tunaye Kuhani Mkuu ambaye ameketi mkono wa kuume wa kiti cha enzi cha Aliye Mkuu mbinguni, <verse eid="HEB 8:1"/><verse number="2" style="v" sid="HEB 8:2"/><note caller="-" style="x"><char style="xo" closed="false">8:2 </char><char style="xt" closed="false"><ref loc="HEB 9:11">Ebr 9:11</ref>, <ref loc="HEB 9:24">24</ref>; <ref loc="HEB 9:8">9:8</ref>, <ref loc="HEB 9:12">12</ref>, <ref loc="HEB 9:24">24</ref></char></note>yeye ahudumuye katika patakatifu, hema la kweli lililowekwa na Bwana, wala si na mwanadamu.<verse eid="HEB 8:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 8:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 2:17">Ebr 2:17</ref>; <ref loc="HEB 5:1">5:1</ref>; <ref loc="HEB 9:9">9:9</ref>, <ref loc="HEB 9:14">14</ref>; <ref loc="EPH 5:2">Efe 5:2</ref></char>
+    </note>Kila kuhani mkuu huwekwa ili atoe sadaka na dhabihu. Vivyo hivyo, ilikuwa jambo muhimu kwa huyu Kuhani naye awe na kitu cha kutoa. <verse eid="HEB 8:3"/><verse number="4" style="v" sid="HEB 8:4"/><note caller="-" style="x"><char style="xo" closed="false">8:4 </char><char style="xt" closed="false"><ref loc="HEB 5:1">Ebr 5:1</ref>; <ref loc="HEB 9:9">9:9</ref></char></note>Kama angekuwa duniani, hangekuwa kuhani, kwa sababu tayari wapo watu watoao sadaka kama ilivyoelekezwa na sheria. <verse eid="HEB 8:4"/><verse number="5" style="v" sid="HEB 8:5"/><note caller="-" style="x"><char style="xo" closed="false">8:5 </char><char style="xt" closed="false"><ref loc="HEB 9:23">Ebr 9:23</ref>; <ref loc="HEB 10:1">10:1</ref>; <ref loc="HEB 11:7">11:7</ref>; <ref loc="HEB 12:25">12:25</ref>; <ref loc="COL 2:17">Kol 2:17</ref>; <ref loc="EXO 25:40">Kut 25:40</ref></char></note>Wanahudumu katika patakatifu palipo mfano na kivuli cha mambo ya mbinguni. Hii ndiyo sababu Mose alionywa alipokaribia kujenga hema, akiambiwa: “Hakikisha kuwa unavitengeneza vitu vyote kwa mfano ulioonyeshwa kule mlimani.” <verse eid="HEB 8:5"/><verse number="6" style="v" sid="HEB 8:6"/><note caller="-" style="x"><char style="xo" closed="false">8:6 </char><char style="xt" closed="false"><ref loc="HEB 8:8">Ebr 8:8</ref>, <ref loc="HEB 8:13">13</ref>; <ref loc="LUK 22:20">Lk 22:20</ref>; <ref loc="GAL 3:20">Gal 3:20</ref>; <ref loc="2CO 3:6">2Kor 3:6</ref>, <ref loc="2CO 3:8">8</ref>, <ref loc="2CO 3:9">9</ref></char></note>Lakini huduma aliyopewa Yesu ni bora zaidi kuliko yao, kama vile agano ambalo yeye ni mpatanishi wake lilivyo bora zaidi kuliko lile la zamani, nalo limewekwa misingi wa ahadi zilizo bora zaidi.<verse eid="HEB 8:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 8:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 7:11">Ebr 7:11</ref>, <ref loc="HEB 7:18">18</ref>; <ref loc="HEB 10:1">10:1</ref></char>
+    </note>Kwa maana kama hapakuwa na kasoro katika lile agano la kwanza, pasingekuwa na haja ya kutafuta nafasi kwa ajili ya jingine. <verse eid="HEB 8:7"/><verse number="8" style="v" sid="HEB 8:8"/><note caller="-" style="x"><char style="xo" closed="false">8:8 </char><char style="xt" closed="false"><ref loc="JER 31:31">Yer 31:31</ref>, <ref loc="JER 31:32">32</ref>, <ref loc="JER 31:33">33</ref>, <ref loc="JER 31:34">34</ref>; <ref loc="HEB 10:16">Ebr 10:16</ref>, <ref loc="HEB 10:17">17</ref></char></note>Lakini Mungu aliona kosa kwa watu, naye akasema:</para>
+  <para style="q1" vid="HEB 8:8">“Siku zinakuja, asema Bwana,</para>
+  <para style="q2" vid="HEB 8:8">nitakapofanya agano jipya</para>
+  <para style="q1" vid="HEB 8:8">na nyumba ya Israeli</para>
+  <para style="q2" vid="HEB 8:8">na nyumba ya Yuda.<verse eid="HEB 8:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="HEB 8:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 19:5-6">Kut 19:5-6</ref>; <ref loc="EXO 20:1-17">20:1-17</ref></char>
+    </note>Agano langu halitakuwa kama lile</para>
+  <para style="q2" vid="HEB 8:9">nililofanya na baba zao</para>
+  <para style="q1" vid="HEB 8:9">nilipowashika mkono</para>
+  <para style="q2" vid="HEB 8:9">kuwaongoza watoke nchi ya Misri,</para>
+  <para style="q1" vid="HEB 8:9">kwa sababu hawakuendelea kuwa waaminifu katika agano langu,</para>
+  <para style="q2" vid="HEB 8:9">nami nikawaacha,</para>
+  <para style="q4" vid="HEB 8:9">asema Bwana.<verse eid="HEB 8:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="HEB 8:10"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 11:27">Rum 11:27</ref>; <ref loc="2CO 3:3">2Kor 3:3</ref>; <ref loc="HEB 10:16">Ebr 10:16</ref>; <ref loc="EZK 11:20">Eze 11:20</ref>; <ref loc="ZEC 8:8">Zek 8:8</ref></char>
+    </note>Hili ndilo agano nitakalofanya na nyumba ya Israeli</para>
+  <para style="q2" vid="HEB 8:10">baada ya siku zile, asema Bwana.</para>
+  <para style="q1" vid="HEB 8:10">Nitaziweka sheria zangu katika nia zao</para>
+  <para style="q2" vid="HEB 8:10">na kuziandika mioyoni mwao.</para>
+  <para style="q1" vid="HEB 8:10">Nitakuwa Mungu wao,</para>
+  <para style="q2" vid="HEB 8:10">nao watakuwa watu wangu.<verse eid="HEB 8:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="HEB 8:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 54:13">Isa 54:13</ref>; <ref loc="JHN 6:45">Yn 6:45</ref></char>
+    </note>Mtu hatamfundisha tena jirani yake,</para>
+  <para style="q2" vid="HEB 8:11">wala mtu kumfundisha ndugu yake akisema, ‘Mjue Bwana,’</para>
+  <para style="q1" vid="HEB 8:11">kwa sababu wote watanijua mimi,</para>
+  <para style="q2" vid="HEB 8:11">tangu aliye mdogo kabisa kwao, hadi aliye mkuu sana.<verse eid="HEB 8:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="HEB 8:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 10:17">Ebr 10:17</ref>; <ref loc="JER 31:31-34">Yer 31:31-34</ref></char>
+    </note>Kwa sababu nitasamehe uovu wao,</para>
+  <para style="q2" vid="HEB 8:12">wala sitazikumbuka dhambi zao tena!”<verse eid="HEB 8:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 8:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 8:6">Ebr 8:6</ref>, <ref loc="HEB 8:8">8</ref>; <ref loc="LUK 22:20">Lk 22:20</ref>; <ref loc="2CO 5:17">2Kor 5:17</ref>; <ref loc="ROM 10:4">Rum 10:4</ref></char>
+    </note>Kwa kuliita agano hili “jipya,” Mungu amefanya lile agano la kwanza kuwa kuukuu; nacho kitu kinachoanza kuchakaa na kuwa kikuukuu kiko karibu kutoweka.<verse eid="HEB 8:13"/></para>
+  <chapter eid="HEB 8"/>
+  <chapter number="9" style="c" sid="HEB 9"/>
+  <para style="s1">Ibada Katika Hema La Kidunia</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 9:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 25:8">Kut 25:8</ref>
+      </char>
+    </note>Basi agano lile la kwanza lilikuwa na kanuni zake za kuabudu na pia patakatifu pake pa kidunia. <verse eid="HEB 9:1"/><verse number="2" style="v" sid="HEB 9:2"/><note caller="-" style="x"><char style="xo" closed="false">9:2 </char><char style="xt" closed="false"><ref loc="EXO 26:1">Kut 26:1</ref>; <ref loc="EXO 26:35">26:35</ref>; <ref loc="EXO 40:4">40:4</ref>; <ref loc="EXO 25:31">25:31</ref>; <ref loc="EXO 25:23">25:23</ref>; <ref loc="LEV 24:5">Law 24:5</ref></char></note>Hema ilitengenezwa. Katika sehemu yake ya kwanza kulikuwa na kinara cha taa, meza na mikate iliyowekwa wakfu; hii sehemu iliitwa Mahali Patakatifu. <verse eid="HEB 9:2"/><verse number="3" style="v" sid="HEB 9:3"/><note caller="-" style="x"><char style="xo" closed="false">9:3 </char><char style="xt" closed="false"><ref loc="EXO 26:31">Kut 26:31</ref>, <ref loc="EXO 26:33">33</ref>; <ref loc="EXO 40:3">40:3</ref>, <ref loc="EXO 40:21">21</ref>; <ref loc="HEB 6:19">Ebr 6:19</ref></char></note>Nyuma ya pazia la pili, palikuwa na sehemu iliyoitwa Patakatifu pa Patakatifu, <verse eid="HEB 9:3"/><verse number="4" style="v" sid="HEB 9:4"/><note caller="-" style="x"><char style="xo" closed="false">9:4 </char><char style="xt" closed="false"><ref loc="EXO 30:1-5">Kut 30:1-5</ref>; <ref loc="EXO 25:10-22">25:10-22</ref>; <ref loc="EXO 16:32">16:32</ref>, <ref loc="EXO 16:33">33</ref>; <ref loc="NUM 17:10">Hes 17:10</ref>; <ref loc="EXO 31:18">Kut 31:18</ref>; <ref loc="EXO 32:15">32:15</ref></char></note>ambapo palikuwa na yale madhabahu ya dhahabu ya kufukizia uvumba, na lile Sanduku la Agano lililofunikwa kwa dhahabu. Sanduku hili lilikuwa na gudulia la dhahabu lenye mana, ile fimbo ya Aroni iliyochipuka, na vile vibao vya mawe vya Agano. <verse eid="HEB 9:4"/><verse number="5" style="v" sid="HEB 9:5"/><note caller="-" style="x"><char style="xo" closed="false">9:5 </char><char style="xt" closed="false"><ref loc="EXO 25:17-19">Kut 25:17-19</ref>; <ref loc="EXO 25:20-22">25:20-22</ref>; <ref loc="EXO 26:34">26:34</ref></char></note>Juu ya lile Sanduku kulikuwa na makerubi ya Utukufu yakitilia kivuli kile kifuniko ambacho ndicho kiti cha rehema. Lakini hatuwezi kueleza vitu hivi kwa undani sasa.<verse eid="HEB 9:5"/></para>
+  <para style="p">
+    <verse number="6" style="v" sid="HEB 9:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 28:3">Hes 28:3</ref>
+      </char>
+    </note>Basi vitu hivi vilipokuwa vimepangwa, makuhani waliingia daima katika sehemu ya kwanza ya hema ili kufanya taratibu zao za ibada. <verse eid="HEB 9:6"/><verse number="7" style="v" sid="HEB 9:7"/><note caller="-" style="x"><char style="xo" closed="false">9:7 </char><char style="xt" closed="false"><ref loc="LEV 16:11-19">Law 16:11-19</ref>; <ref loc="HEB 9:2">Ebr 9:2</ref>, <ref loc="HEB 9:3">3</ref>; <ref loc="LEV 16:34">Law 16:34</ref></char></note>Lakini ni kuhani mkuu peke yake aliyeingia ndani ya sehemu ya pili ya hema. Tena hii ilikuwa mara moja tu kwa mwaka, na hakuingia kamwe bila damu, ambayo alitoa kwa ajili yake mwenyewe na kwa ajili ya dhambi za watu walizotenda bila kukusudia. <verse eid="HEB 9:7"/><verse number="8" style="v" sid="HEB 9:8"/><note caller="-" style="x"><char style="xo" closed="false">9:8 </char><char style="xt" closed="false"><ref loc="HEB 3:7">Ebr 3:7</ref>; <ref loc="JHN 14:6">Yn 14:6</ref>; <ref loc="HEB 10:19">Ebr 10:19</ref>, <ref loc="HEB 10:20">20</ref></char></note>Kwa njia hii, Roho Mtakatifu alikuwa anaonyesha kwamba, maadamu ile hema ya kwanza ilikuwa bado imesimama, njia ya kuingia Patakatifu pa Patakafifu ilikuwa bado haijafunguliwa. <verse eid="HEB 9:8"/><verse number="9" style="v" sid="HEB 9:9"/><note caller="-" style="x"><char style="xo" closed="false">9:9 </char><char style="xt" closed="false"><ref loc="HEB 10:1">Ebr 10:1</ref>; <ref loc="HEB 5:1">5:1</ref>; <ref loc="HEB 8:3">8:3</ref>; <ref loc="HEB 7:19">7:19</ref></char></note>Huu ulikuwa mfano kwa ajili ya wakati wa sasa, kuonyesha kwamba sadaka na dhabihu zilizokuwa zikitolewa hazikuweza kusafisha dhamiri ya mtu anayeabudu. <verse eid="HEB 9:9"/><verse number="10" style="v" sid="HEB 9:10"/><note caller="-" style="x"><char style="xo" closed="false">9:10 </char><char style="xt" closed="false"><ref loc="LEV 11:2-23">Law 11:2-23</ref>; <ref loc="NUM 6:3">Hes 6:3</ref>; <ref loc="COL 2:16">Kol 2:16</ref>; <ref loc="LEV 11:25">Law 11:25</ref>, <ref loc="LEV 11:28">28</ref>, <ref loc="LEV 11:40">40</ref>; <ref loc="HEB 7:16">Ebr 7:16</ref></char></note>Lakini hizi zilishughulika tu na vyakula na vinywaji, pamoja na taratibu mbalimbali za kunawa kwa nje, kanuni kwa ajili ya mwili zilizowekwa hadi wakati utimie wa matengenezo mapya.<verse eid="HEB 9:10"/></para>
+  <para style="s1">Damu Ya Kristo</para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 9:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 2:17">Ebr 2:17</ref>; <ref loc="HEB 10:1">10:1</ref>; <ref loc="HEB 9:24">9:24</ref>; <ref loc="HEB 8:2">8:2</ref>; <ref loc="JHN 2:19">Yn 2:19</ref></char>
+    </note>Kristo alipokuja akiwa Kuhani Mkuu wa mambo mema ambayo tayari yameshawasili, alipitia kwenye hema iliyo kuu zaidi na bora zaidi, ambayo haikutengenezwa kwa mikono ya binadamu, hii ni kusema, ambayo si sehemu ya uumbaji huu. <verse eid="HEB 9:11"/><verse number="12" style="v" sid="HEB 9:12"/><note caller="-" style="x"><char style="xo" closed="false">9:12 </char><char style="xt" closed="false"><ref loc="HEB 9:19">Ebr 9:19</ref>; <ref loc="LEV 16:6">Law 16:6</ref>, <ref loc="LEV 16:15">15</ref>; <ref loc="HEB 10:4">Ebr 10:4</ref>; <ref loc="HEB 9:24">9:24</ref>, <ref loc="HEB 9:26">26</ref>, <ref loc="HEB 9:28">28</ref>; <ref loc="ROM 3:25">Rum 3:25</ref></char></note>Hakuingia kwa njia ya damu ya mbuzi na ya ndama; lakini aliingia Patakatifu pa Patakatifu mara moja tu kwa damu yake mwenyewe, akiisha kupata ukombozi wa milele. <verse eid="HEB 9:12"/><verse number="13" style="v" sid="HEB 9:13"/><note caller="-" style="x"><char style="xo" closed="false">9:13 </char><char style="xt" closed="false"><ref loc="HEB 10:4">Ebr 10:4</ref>; <ref loc="NUM 19:9">Hes 19:9</ref>, <ref loc="NUM 19:17">17</ref>, <ref loc="NUM 19:18">18</ref></char></note>Damu ya mbuzi na ya mafahali, na majivu ya mitamba walivyonyunyiziwa wale waliokuwa najisi kwa taratibu za kiibada viliwatakasa, hata kuwaondolea uchafu wa nje. <verse eid="HEB 9:13"/><verse number="14" style="v" sid="HEB 9:14"/><note caller="-" style="x"><char style="xo" closed="false">9:14 </char><char style="xt" closed="false"><ref loc="1PE 3:18">1Pet 3:18</ref>; <ref loc="EPH 5:2">Efe 5:2</ref>; <ref loc="PSA 51:2">Za 51:2</ref>; <ref loc="PSA 65:3">65:3</ref>; <ref loc="JER 33:8">Yer 33:8</ref>; <ref loc="ZEC 13:1">Zek 13:1</ref>; <ref loc="TIT 2:14">Tit 2:14</ref>; <ref loc="MAT 16:16">Mt 16:16</ref></char></note>Basi ni zaidi aje damu ya Kristo, ambaye kwa Roho wa milele alijitoa nafsi yake kwa Mungu kuwa sadaka isiyo na waa, itatusafisha dhamiri zetu kutokana na matendo yaletayo mauti, ili tupate kumtumikia Mungu aliye hai!<verse eid="HEB 9:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 9:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 3:20">Gal 3:20</ref>; <ref loc="LUK 22:20">Lk 22:20</ref>; <ref loc="ROM 8:28">Rum 8:28</ref>; <ref loc="ROM 11:29">11:29</ref>; <ref loc="HEB 6:15">Ebr 6:15</ref>; <ref loc="HEB 7:22">7:22</ref>; <ref loc="ACT 20:32">Mdo 20:32</ref></char>
+    </note>Kwa sababu hii Kristo ni mpatanishi wa agano jipya, ili kwamba wale walioitwa waweze kupokea ile ahadi ya urithi wa milele: kwa vile yeye alikufa awe ukombozi wao kutoka kwa dhambi walizozitenda chini ya agano la kwanza.<verse eid="HEB 9:15"/></para>
+  <para style="p">
+    <verse number="16" style="v" sid="HEB 9:16"/>Kwa habari ya wosia,<note caller="+" style="f"><char style="fr" closed="false">9:16 </char><char style="ft" closed="false">Wosia hapa kwa neno la Kiyunani ni agano.</char></note> ni muhimu kuthibitisha kifo cha yule aliyeutoa, <verse eid="HEB 9:16"/><verse number="17" style="v" sid="HEB 9:17"/><note caller="-" style="x"><char style="xo" closed="false">9:17 </char><char style="xt" closed="false"><ref loc="GAL 3:15">Gal 3:15</ref></char></note>kwa sababu wosia huwa na nguvu tu wakati mtu ameshakufa; kamwe hauwezi kutumika wakati yule aliyeuandika bado yuko hai. <verse eid="HEB 9:17"/><verse number="18" style="v" sid="HEB 9:18"/><note caller="-" style="x"><char style="xo" closed="false">9:18 </char><char style="xt" closed="false"><ref loc="EXO 24:6-8">Kut 24:6-8</ref></char></note>Hii ndiyo sababu hata lile agano la kwanza halikuweza kutekelezwa pasipo damu. <verse eid="HEB 9:18"/><verse number="19" style="v" sid="HEB 9:19"/><note caller="-" style="x"><char style="xo" closed="false">9:19 </char><char style="xt" closed="false"><ref loc="EXO 24:5">Kut 24:5</ref>, <ref loc="EXO 24:6">6</ref>, <ref loc="EXO 24:8">8</ref>; <ref loc="LEV 16:14">Law 16:14</ref>, <ref loc="LEV 16:15">15</ref>, <ref loc="LEV 16:18">18</ref>; <ref loc="LEV 14:4">14:4</ref>, <ref loc="LEV 14:6">6</ref>, <ref loc="LEV 14:7">7</ref>, <ref loc="LEV 14:49">49</ref>, <ref loc="LEV 14:51">51</ref>, <ref loc="LEV 14:52">52</ref></char></note>Mose alipotangaza kila amri kwa watu wote, alichukua damu ya ndama na ya mbuzi, pamoja na maji, sufu nyekundu na matawi ya mti wa hisopo, akanyunyizia kile kitabu na watu wote. <verse eid="HEB 9:19"/><verse number="20" style="v" sid="HEB 9:20"/><note caller="-" style="x"><char style="xo" closed="false">9:20 </char><char style="xt" closed="false"><ref loc="EXO 24:8">Kut 24:8</ref>; <ref loc="MAT 26">Mt 26</ref>; <ref loc="MAT 28">28</ref></char></note>Alisema, “Hii ndiyo damu ya agano, ambalo Mungu amewaamuru kulitii.” <verse eid="HEB 9:20"/><verse number="21" style="v" sid="HEB 9:21"/><note caller="-" style="x"><char style="xo" closed="false">9:21 </char><char style="xt" closed="false"><ref loc="EXO 29:12">Kut 29:12</ref>, <ref loc="EXO 29:36">36</ref>; <ref loc="LEV 8:15">Law 8:15</ref>, <ref loc="LEV 8:19">19</ref>; <ref loc="LEV 16:1">16:1</ref>, <ref loc="LEV 16:15">15</ref>, <ref loc="LEV 16:16">16</ref>, <ref loc="LEV 16:18">18</ref>, <ref loc="LEV 16:19">19</ref></char></note>Vivyo hivyo alinyunyizia damu hiyo kwenye ile hema pamoja na kila kifaa kilichotumika ndani yake kwa taratibu za ibada. <verse eid="HEB 9:21"/><verse number="22" style="v" sid="HEB 9:22"/><note caller="-" style="x"><char style="xo" closed="false">9:22 </char><char style="xt" closed="false"><ref loc="LEV 17:11">Law 17:11</ref>; <ref loc="EXO 29:21">Kut 29:21</ref>; <ref loc="LEV 8:15">Law 8:15</ref></char></note>Kwa kweli sheria hudai kwamba, karibu kila kitu kitakaswe kwa damu, wala pasipo kumwaga damu, hakuna msamaha wa dhambi.<verse eid="HEB 9:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 9:23"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:23 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 8:5">Ebr 8:5</ref>
+      </char>
+    </note>Kwa hiyo, ilikuwa muhimu kwa nakala za vitu vile vya mbinguni vitakaswe kwa dhabihu hizi, lakini vitu halisi vya mbinguni vilihitaji dhabihu bora kuliko hizi. <verse eid="HEB 9:23"/><verse number="24" style="v" sid="HEB 9:24"/><note caller="-" style="x"><char style="xo" closed="false">9:24 </char><char style="xt" closed="false"><ref loc="HEB 6:20">Ebr 6:20</ref>; <ref loc="HEB 8:2">8:2</ref>; <ref loc="ROM 8:34">Rum 8:34</ref>; <ref loc="HEB 7:25">Ebr 7:25</ref>; <ref loc="1JN 2:1">1Yn 2:1</ref></char></note>Kwa maana Kristo hakuingia kwenye patakatifu palipofanywa kwa mikono ya mwanadamu, ambao ni mfano wa kile kilicho halisi. Yeye aliingia mbinguni penyewe, ili sasa aonekane mbele za Mungu kwa ajili yetu. <verse eid="HEB 9:24"/><verse number="25" style="v" sid="HEB 9:25"/><note caller="-" style="x"><char style="xo" closed="false">9:25 </char><char style="xt" closed="false"><ref loc="HEB 9:7">Ebr 9:7</ref>; <ref loc="HEB 10:19">10:19</ref></char></note>Wala hakuingia mbinguni ili apate kujitoa mwenyewe mara kwa mara, kama vile kuhani mkuu aingiavyo Patakatifu pa Patakatifu kila mwaka kwa damu ambayo si yake mwenyewe. <verse eid="HEB 9:25"/><verse number="26" style="v" sid="HEB 9:26"/><note caller="-" style="x"><char style="xo" closed="false">9:26 </char><char style="xt" closed="false"><ref loc="HEB 9:12">Ebr 9:12</ref>; <ref loc="HEB 7:27">7:27</ref>; <ref loc="HEB 10:10">10:10</ref>; <ref loc="1PE 3:18">1Pet 3:18</ref>; <ref loc="1CO 10:11">1Kor 10:11</ref>; <ref loc="GAL 4:4">Gal 4:4</ref>; <ref loc="EPH 1:10">Efe 1:10</ref></char></note>Ingekuwa hivyo, ingempasa Kristo kuteswa mara nyingi tangu kuumbwa kwa ulimwengu. Lakini sasa ametokea mara moja tu katika mwisho wa nyakati aiondoe dhambi kwa kujitoa mwenyewe kuwa dhabihu. <verse eid="HEB 9:26"/><verse number="27" style="v" sid="HEB 9:27"/><note caller="-" style="x"><char style="xo" closed="false">9:27 </char><char style="xt" closed="false"><ref loc="GEN 3:19">Mwa 3:19</ref>; <ref loc="ECC 3:20">Mhu 3:20</ref>; <ref loc="2CO 5:10">2Kor 5:10</ref>; <ref loc="REV 20:12">Ufu 20:12</ref>, <ref loc="REV 20:13">13</ref></char></note>Kama vile mwanadamu alivyowekewa kufa mara moja tu na baada ya kufa akabili hukumu, <verse eid="HEB 9:27"/><verse number="28" style="v" sid="HEB 9:28"/><note caller="-" style="x"><char style="xo" closed="false">9:28 </char><char style="xt" closed="false"><ref loc="ROM 6:10">Rum 6:10</ref>; <ref loc="1PE 3:18">1Pet 3:18</ref>; <ref loc="1PE 2:24">2:24</ref>; <ref loc="1JN 3:5">1Yn 3:5</ref>; <ref loc="MAT 26:28">Mt 26:28</ref>; <ref loc="ROM 5:15">Rum 5:15</ref>; <ref loc="TIT 2:13">Tit 2:13</ref></char></note>vivyo hivyo Kristo alitolewa mara moja tu kuwa dhabihu ili azichukue dhambi za watu wengi. Naye atakuja mara ya pili, sio kuchukua dhambi, bali kuwaletea wokovu wale wanaomngoja kwa shauku.<verse eid="HEB 9:28"/></para>
+  <chapter eid="HEB 9"/>
+  <chapter number="10" style="c" sid="HEB 10"/>
+  <para style="s1">Dhabihu Ya Kristo Ni Mara Moja Tu</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 10:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="COL 2:17">Kol 2:17</ref>; <ref loc="HEB 8:5">Ebr 8:5</ref>; <ref loc="HEB 9:23">9:23</ref>; <ref loc="HEB 9:11">9:11</ref>; <ref loc="HEB 9:9">9:9</ref>; <ref loc="HEB 9:14">9:14</ref></char>
+    </note>Sheria ni kivuli tu cha mambo mema yajayo, wala si uhalisi wa mambo yenyewe. Kwa sababu hii, haiwezekani kamwe kwa njia ya dhabihu zitolewazo mwaka hadi mwaka kuwakamilisha wale wanaokaribia ili kuabudu. <verse eid="HEB 10:1"/><verse number="2" style="v" sid="HEB 10:2"/><note caller="-" style="x"><char style="xo" closed="false">10:2 </char><char style="xt" closed="false"><ref loc="HEB 9:9">Ebr 9:9</ref></char></note>Kama dhabihu hizo zingeweza kuwakamilisha, hazingeendelea kutolewa tena. Kwa kuwa hao waabuduo wangekuwa wametakaswa mara moja tu, wala wasingejiona tena kuwa na dhambi. <verse eid="HEB 10:2"/><verse number="3" style="v" sid="HEB 10:3"/><note caller="-" style="x"><char style="xo" closed="false">10:3 </char><char style="xt" closed="false"><ref loc="LEV 16:21">Law 16:21</ref>; <ref loc="LEV 16:34">16:34</ref>; <ref loc="HEB 9:7">Ebr 9:7</ref></char></note>Lakini zile dhabihu zilikuwa ukumbusho wa dhambi kila mwaka, <verse eid="HEB 10:3"/><verse number="4" style="v" sid="HEB 10:4"/><note caller="-" style="x"><char style="xo" closed="false">10:4 </char><char style="xt" closed="false"><ref loc="MIC 6:6">Mik 6:6</ref>, <ref loc="MIC 6:7">7</ref>; <ref loc="HEB 9:13">Ebr 9:13</ref>; <ref loc="HEB 9:11">9:11</ref></char></note>kwa sababu haiwezekani damu ya mafahali na mbuzi kuondoa dhambi.<verse eid="HEB 10:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 10:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 1:6">Ebr 1:6</ref>; <ref loc="HEB 2:14">2:14</ref>; <ref loc="1PE 2:24">1Pet 2:24</ref>; <ref loc="PSA 40:6">Za 40:6</ref>; <ref loc="PSA 50:8">50:8</ref>; <ref loc="ISA 1:11">Isa 1:11</ref>; <ref loc="JER 6:20">Yer 6:20</ref>; <ref loc="AMO 5:21">Amo 5:21</ref>, <ref loc="AMO 5:22">22</ref></char>
+    </note>Kwa hiyo, Kristo alipokuja duniani, alisema:</para>
+  <para style="q1" vid="HEB 10:5">“Dhabihu na sadaka hukuzitaka,</para>
+  <para style="q2" vid="HEB 10:5">bali mwili uliniandalia;<verse eid="HEB 10:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HEB 10:6"/>sadaka za kuteketezwa na za dhambi</para>
+  <para style="q2" vid="HEB 10:6">hukupendezwa nazo.<verse eid="HEB 10:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="HEB 10:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 6:2">Ezr 6:2</ref>; <ref loc="JER 36:2">Yer 36:2</ref>; <ref loc="PSA 40:6-8">Za 40:6-8</ref>; <ref loc="MAT 26:39">Mt 26:39</ref></char>
+    </note>Ndipo niliposema, ‘Mimi hapa, nimekuja,</para>
+  <para style="q2" vid="HEB 10:7">imeandikwa kunihusu katika kitabu:</para>
+  <para style="q1" vid="HEB 10:7">Nimekuja kuyafanya mapenzi yako, Ee Mungu.’ ”<verse eid="HEB 10:7"/></para>
+  <para style="m">
+    <verse number="8" style="v" sid="HEB 10:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 10:5">Ebr 10:5</ref>, <ref loc="HEB 10:6">6</ref>; <ref loc="MRK 12:33">Mk 12:33</ref></char>
+    </note>Kwanza alisema, “Dhabihu na sadaka, sadaka za kuteketezwa na za dhambi hukuzitaka, wala hukupendezwa nazo” (ingawa sheria iliagiza zitolewe). <verse eid="HEB 10:8"/><verse number="9" style="v" sid="HEB 10:9"/><note caller="-" style="x"><char style="xo" closed="false">10:9 </char><char style="xt" closed="false"><ref loc="HEB 10:7">Ebr 10:7</ref></char></note>Kisha akasema “Mimi hapa, nimekuja kuyafanya mapenzi yako.” Aondoa lile Agano la kwanza ili kuimarisha la pili. <verse eid="HEB 10:9"/><verse number="10" style="v" sid="HEB 10:10"/><note caller="-" style="x"><char style="xo" closed="false">10:10 </char><char style="xt" closed="false"><ref loc="HEB 10:14">Ebr 10:14</ref>; <ref loc="EPH 5:26">Efe 5:26</ref>; <ref loc="HEB 2:14">Ebr 2:14</ref>; <ref loc="HEB 7:27">7:27</ref>; <ref loc="1PE 2:24">1Pet 2:24</ref></char></note>Katika mapenzi hayo sisi tumetakaswa na kufanywa watakatifu kwa njia ya sadaka ya mwili wa Yesu Kristo alioutoa mara moja tu.<verse eid="HEB 10:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 10:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 5:1">Ebr 5:1</ref>; <ref loc="HEB 10:1">10:1</ref>, <ref loc="HEB 10:4">4</ref>; <ref loc="NUM 28:3">Hes 28:3</ref>; <ref loc="HEB 7:27">Ebr 7:27</ref></char>
+    </note>Kila kuhani husimama siku kwa siku akifanya huduma yake ya ibada, na kutoa tena na tena dhabihu zile zile ambazo haziwezi kamwe kuondoa dhambi. <verse eid="HEB 10:11"/><verse number="12" style="v" sid="HEB 10:12"/><note caller="-" style="x"><char style="xo" closed="false">10:12 </char><char style="xt" closed="false"><ref loc="HEB 5:1">Ebr 5:1</ref>; <ref loc="MRK 16:19">Mk 16:19</ref>; <ref loc="HEB 1:3">Ebr 1:3</ref>; <ref loc="COL 3:1">Kol 3:1</ref></char></note>Lakini huyu kuhani akiisha kutoa dhabihu moja kwa ajili ya dhambi kwa wakati wote, aliketi mkono wa kuume wa Mungu. <verse eid="HEB 10:12"/><verse number="13" style="v" sid="HEB 10:13"/><note caller="-" style="x"><char style="xo" closed="false">10:13 </char><char style="xt" closed="false"><ref loc="JOS 10:24">Yos 10:24</ref>; <ref loc="HEB 1:13">Ebr 1:13</ref>; <ref loc="PSA 110:1">Za 110:1</ref>; <ref loc="ACT 2:35">Mdo 2:35</ref>; <ref loc="1CO 15:25">1Kor 15:25</ref></char></note>Tangu wakati huo anangoja mpaka adui zake wawekwe chini ya miguu yake, <verse eid="HEB 10:13"/><verse number="14" style="v" sid="HEB 10:14"/><note caller="-" style="x"><char style="xo" closed="false">10:14 </char><char style="xt" closed="false"><ref loc="HEB 10:1">Ebr 10:1</ref>; <ref loc="EPH 5:26">Efe 5:26</ref></char></note>kwa sababu kwa dhabihu moja amewafanya kuwa wakamilifu milele wale wote wanaotakaswa.<verse eid="HEB 10:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 10:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 3:7">Ebr 3:7</ref>
+      </char>
+    </note>Pia Roho Mtakatifu anatushuhudia kuhusu jambo hili. Kwanza anasema:<verse eid="HEB 10:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="HEB 10:16"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:33">Yer 31:33</ref>; <ref loc="HEB 8:10">Ebr 8:10</ref></char>
+    </note>“Hili ndilo Agano nitakalofanya nao</para>
+  <para style="q2" vid="HEB 10:16">baada ya siku hizo, asema Bwana.</para>
+  <para style="q1" vid="HEB 10:16">Nitaziweka sheria zangu mioyoni mwao,</para>
+  <para style="q2" vid="HEB 10:16">na kuziandika katika nia zao.”<verse eid="HEB 10:16"/></para>
+  <para style="m">
+    <verse number="17" style="v" sid="HEB 10:17"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 31:34">Yer 31:34</ref>; <ref loc="HEB 8:12">Ebr 8:12</ref></char>
+    </note>Kisha aongeza kusema:</para>
+  <para style="q1" vid="HEB 10:17">“Dhambi zao na kutokutii kwao</para>
+  <para style="q2" vid="HEB 10:17">sitakumbuka tena.”<verse eid="HEB 10:17"/></para>
+  <para style="m">
+    <verse number="18" style="v" sid="HEB 10:18"/>Basi haya yakiisha kusamehewa, hakuna tena dhabihu yoyote inayotolewa kwa ajili ya dhambi.<verse eid="HEB 10:18"/></para>
+  <para style="s1">Wito Wa Kuvumilia</para>
+  <para style="p">
+    <verse number="19" style="v" sid="HEB 10:19"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:19 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 3:12">Efe 3:12</ref>; <ref loc="LEV 16:2">Law 16:2</ref>; <ref loc="EPH 2:18">Efe 2:18</ref>; <ref loc="HEB 9:8">Ebr 9:8</ref>, <ref loc="HEB 9:12">12</ref>, <ref loc="HEB 9:25">25</ref></char>
+    </note>Kwa hiyo, ndugu zangu, kwa kuwa tunao ujasiri wa kupaingia Patakatifu pa Patakatifu kwa damu ya Yesu, <verse eid="HEB 10:19"/><verse number="20" style="v" sid="HEB 10:20"/><note caller="-" style="x"><char style="xo" closed="false">10:20 </char><char style="xt" closed="false"><ref loc="HEB 9:8">Ebr 9:8</ref>; <ref loc="HEB 6:19">6:19</ref>; <ref loc="HEB 9:3">9:3</ref></char></note>kwa njia mpya iliyo hai tuliyofunguliwa kwa ajili yetu kupitia kwenye lile pazia, yaani, mwili wake, <verse eid="HEB 10:20"/><verse number="21" style="v" sid="HEB 10:21"/><note caller="-" style="x"><char style="xo" closed="false">10:21 </char><char style="xt" closed="false"><ref loc="HEB 2:17">Ebr 2:17</ref>; <ref loc="HEB 3:6">3:6</ref></char></note>basi kwa kuwa tunaye Kuhani Mkuu juu ya nyumba ya Mungu, <verse eid="HEB 10:21"/><verse number="22" style="v" sid="HEB 10:22"/><note caller="-" style="x"><char style="xo" closed="false">10:22 </char><char style="xt" closed="false"><ref loc="HEB 10:1">Ebr 10:1</ref>; <ref loc="HEB 7:19">7:19</ref>; <ref loc="HEB 3:12">3:12</ref>; <ref loc="JAS 1:6">Yak 1:6</ref>; <ref loc="1JN 3:21">1Yn 3:21</ref>; <ref loc="EZK 36:25">Eze 36:25</ref>; <ref loc="2CO 7:1">2Kor 7:1</ref>; <ref loc="1PE 1:2">1Pet 1:2</ref>; <ref loc="ACT 22:16">Mdo 22:16</ref></char></note>sisi na tumkaribie Mungu kwa moyo mnyofu kwa imani timilifu, mioyo yetu ikiwa imenyunyizwa damu ya Kristo na kuwa safi kutokana na dhamiri mbaya nayo miili yetu ikiwa imeoshwa kwa maji safi. <verse eid="HEB 10:22"/><verse number="23" style="v" sid="HEB 10:23"/><note caller="-" style="x"><char style="xo" closed="false">10:23 </char><char style="xt" closed="false"><ref loc="HEB 3:6">Ebr 3:6</ref>; <ref loc="HEB 3">3</ref>; <ref loc="HEB 1">1</ref>; <ref loc="1CO 1:9">1Kor 1:9</ref></char></note>Tushike kwa uthabiti lile tumaini la ukiri wetu bila kuyumbayumba, kwa maana yeye aliyeahidi ni mwaminifu. <verse eid="HEB 10:23"/><verse number="24" style="v" sid="HEB 10:24"/><note caller="-" style="x"><char style="xo" closed="false">10:24 </char><char style="xt" closed="false"><ref loc="TIT 2:14">Tit 2:14</ref></char></note>Tuangaliane na kuhimizana sisi kwa sisi katika upendo na katika kutenda mema. <verse eid="HEB 10:24"/><verse number="25" style="v" sid="HEB 10:25"/><note caller="-" style="x"><char style="xo" closed="false">10:25 </char><char style="xt" closed="false"><ref loc="ACT 2:42">Mdo 2:42</ref>; <ref loc="HEB 3:13">Ebr 3:13</ref>; <ref loc="1CO 3:13">1Kor 3:13</ref></char></note>Wala tusiache kukutana pamoja, kama wengine walivyo na desturi, bali tuhimizane sisi kwa sisi kadiri tuonavyo Siku ile inakaribia.<verse eid="HEB 10:25"/></para>
+  <para style="p">
+    <verse number="26" style="v" sid="HEB 10:26"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:26 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 21:14">Kut 21:14</ref>; <ref loc="NUM 15:30">Hes 15:30</ref>; <ref loc="HEB 5:2">Ebr 5:2</ref>; <ref loc="HEB 6:4-8">6:4-8</ref>; <ref loc="2PE 2:20">2Pet 2:20</ref>; <ref loc="1TI 2:4">1Tim 2:4</ref></char>
+    </note>Kama tukiendelea kutenda dhambi kwa makusudi baada ya kupokea ufahamu wa ile kweli, haibaki tena dhabihu kwa ajili ya dhambi. <verse eid="HEB 10:26"/><verse number="27" style="v" sid="HEB 10:27"/><note caller="-" style="x"><char style="xo" closed="false">10:27 </char><char style="xt" closed="false"><ref loc="ISA 26:11">Isa 26:11</ref>; <ref loc="2TH 1:7">2The 1:7</ref>; <ref loc="HEB 9:27">Ebr 9:27</ref>; <ref loc="HEB 12:29">12:29</ref></char></note>Lakini kinachobaki ni kungoja kwa hofu hukumu ya moto uwakao, utakaowaangamiza adui za Mungu. <verse eid="HEB 10:27"/><verse number="28" style="v" sid="HEB 10:28"/><note caller="-" style="x"><char style="xo" closed="false">10:28 </char><char style="xt" closed="false"><ref loc="DEU 17:6">Kum 17:6</ref>, <ref loc="DEU 17:7">7</ref>; <ref loc="MAT 18:16">Mt 18:16</ref>; <ref loc="HEB 2:2">Ebr 2:2</ref>; <ref loc="JHN 8:17">Yn 8:17</ref></char></note>Yeyote aliyeikataa sheria ya Mose alikufa pasipo huruma kwa ushahidi wa watu wawili au watatu. <verse eid="HEB 10:28"/><verse number="29" style="v" sid="HEB 10:29"/><note caller="-" style="x"><char style="xo" closed="false">10:29 </char><char style="xt" closed="false"><ref loc="HEB 2:3">Ebr 2:3</ref>; <ref loc="HEB 12:25">12:25</ref>; <ref loc="1CO 11:29">1Kor 11:29</ref>; <ref loc="MAT 12:32">Mt 12:32</ref>; <ref loc="EPH 4:30">Efe 4:30</ref>; <ref loc="MAT 4:3">Mt 4:3</ref>; <ref loc="REV 1:5">Ufu 1:5</ref>; <ref loc="HEB 6:6">Ebr 6:6</ref>; <ref loc="MAT 26:28">Mt 26:28</ref></char></note>Je, mnadhani ni adhabu kali kiasi gani anayostahili kupewa mtu aliyemkanyaga Mwana wa Mungu chini ya nyayo zake, yeye aliyeifanya damu ya Agano iliyomtakasa kuwa kitu najisi na kumtendea maovu Roho wa neema? <verse eid="HEB 10:29"/><verse number="30" style="v" sid="HEB 10:30"/><note caller="-" style="x"><char style="xo" closed="false">10:30 </char><char style="xt" closed="false"><ref loc="DEU 32:35">Kum 32:35</ref>; <ref loc="ROM 12:19">Rum 12:19</ref>; <ref loc="DEU 32:36">Kum 32:36</ref>; <ref loc="PSA 135:14">Za 135:14</ref></char></note>Kwa kuwa tunamjua yeye aliyesema, “Ni juu yangu kulipiza kisasi; nitalipiza.” Tena asema, “Bwana atawahukumu watu wake.” <verse eid="HEB 10:30"/><verse number="31" style="v" sid="HEB 10:31"/><note caller="-" style="x"><char style="xo" closed="false">10:31 </char><char style="xt" closed="false"><ref loc="2CO 5:11">2Kor 5:11</ref>; <ref loc="ISA 19:16">Isa 19:16</ref>; <ref loc="MAT 16:16">Mt 16:16</ref></char></note>Ni jambo la kutisha kuanguka mikononi mwa Mungu aliye hai.<verse eid="HEB 10:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="HEB 10:32"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:32 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 6:4">Ebr 6:4</ref>; <ref loc="PHP 1:9">Flp 1:9</ref>, <ref loc="PHP 1:30">30</ref>; <ref loc="GAL 3:4">Gal 3:4</ref>; <ref loc="2JN 1:8">2Yn 8</ref>; <ref loc="COL 2:1">Kol 2:1</ref></char>
+    </note>Kumbukeni siku zile za kwanza, ambazo mkiisha kutiwa nuru mlistahimili mashindano makali ya maumivu. <verse eid="HEB 10:32"/><verse number="33" style="v" sid="HEB 10:33"/>Wakati mwingine mlitukanwa na kuteswa hadharani; wakati mwingine mlikuwa radhi kuungana na wale waliofanyiwa hivyo. <verse eid="HEB 10:33"/><verse number="34" style="v" sid="HEB 10:34"/><note caller="-" style="x"><char style="xo" closed="false">10:34 </char><char style="xt" closed="false"><ref loc="HEB 13:3">Ebr 13:3</ref>; <ref loc="HEB 11:16">11:16</ref>; <ref loc="1PE 1:4">1Pet 1:4</ref>, <ref loc="1PE 1:5">5</ref></char></note>Mliwahurumia wale waliokuwa kifungoni, mkikubali kwa furaha kunyangʼanywa mali zenu kwa maana mlijua kwamba mnayo mali iliyo bora zaidi idumuyo.<verse eid="HEB 10:34"/></para>
+  <para style="p">
+    <verse number="35" style="v" sid="HEB 10:35"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:35 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 3:12">Efe 3:12</ref>; <ref loc="MAT 5:12">Mt 5:12</ref>; <ref loc="MAT 10:32">10:32</ref></char>
+    </note>Kwa hiyo msiutupe ujasiri wenu, kwa maana una thawabu kubwa mno. <verse eid="HEB 10:35"/><verse number="36" style="v" sid="HEB 10:36"/><note caller="-" style="x"><char style="xo" closed="false">10:36 </char><char style="xt" closed="false"><ref loc="ROM 5:3">Rum 5:3</ref>; <ref loc="HEB 5:11">Ebr 5:11</ref>; <ref loc="HEB 12:1">12:1</ref>; <ref loc="JAS 1:3">Yak 1:3</ref>, <ref loc="JAS 1:4">4</ref>, <ref loc="JAS 1:12">12</ref>; <ref loc="2PE 1:6">2Pet 1:6</ref>; <ref loc="HEB 6:15">Ebr 6:15</ref>; <ref loc="HEB 9:15">9:15</ref></char></note>Inawapasa kuvumilia ili mkiisha kufanya mapenzi ya Mungu mpate kile alichoahidi. <verse eid="HEB 10:36"/><verse number="37" style="v" sid="HEB 10:37"/><note caller="-" style="x"><char style="xo" closed="false">10:37 </char><char style="xt" closed="false"><ref loc="MAT 11:3">Mt 11:3</ref>; <ref loc="REV 22:20">Ufu 22:20</ref>; <ref loc="LUK 18:8">Lk 18:8</ref>; <ref loc="2PE 3:9">2Pet 3:9</ref>; <ref loc="HAB 2:3">Hab 2:3</ref>, <ref loc="HAB 2:4">4</ref></char></note>Kwa kuwa bado kitambo kidogo tu,</para>
+  <para style="q1" vid="HEB 10:37">“Yeye ajaye atakuja wala hatakawia.<verse eid="HEB 10:37"/></para>
+  <para style="q2">
+    <verse number="38" style="v" sid="HEB 10:38"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:38 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:17">Rum 1:17</ref>; <ref loc="GAL 3:11">Gal 3:11</ref>; <ref loc="HAB 2:3">Hab 2:3</ref>, <ref loc="HAB 2:4">4</ref></char>
+    </note>Lakini mwenye haki wangu</para>
+  <para style="q2" vid="HEB 10:38">ataishi kwa imani.</para>
+  <para style="q1" vid="HEB 10:38">Naye kama akisitasita,</para>
+  <para style="q2" vid="HEB 10:38">sina furaha naye.”<verse eid="HEB 10:38"/></para>
+  <para style="m">
+    <verse number="39" style="v" sid="HEB 10:39"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:39 </char>
+      <char style="xt" closed="false">
+        <ref loc="2PE 2:20">2Pet 2:20</ref>, <ref loc="2PE 2:21">21</ref>; <ref loc="ACT 16:30">Mdo 16:30</ref>, <ref loc="ACT 16:31">31</ref>; <ref loc="1TH 5:9">1The 5:9</ref>; <ref loc="2TH 2:14">2The 2:14</ref></char>
+    </note>Lakini sisi hatumo miongoni mwa hao wanaositasita na kuangamia, bali tuko miongoni mwa hao wenye imani na hivyo tunaokolewa.<verse eid="HEB 10:39"/></para>
+  <chapter eid="HEB 10"/>
+  <chapter number="11" style="c" sid="HEB 11"/>
+  <para style="s1">Maana Ya Imani</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 11:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 3:6">Ebr 3:6</ref>; <ref loc="2CO 4:18">2Kor 4:18</ref>; <ref loc="ROM 8:24">Rum 8:24</ref>, <ref loc="ROM 8:25">25</ref>; <ref loc="2CO 4:18">2Kor 4:18</ref>; <ref loc="2CO 5:7">5:7</ref></char>
+    </note>Basi imani ni kuwa na hakika ya mambo yatarajiwayo, na udhahiri wa mambo yasiyoonekana. <verse eid="HEB 11:1"/><verse number="2" style="v" sid="HEB 11:2"/><note caller="-" style="x"><char style="xo" closed="false">11:2 </char><char style="xt" closed="false"><ref loc="HEB 11:4">Ebr 11:4</ref>, <ref loc="HEB 11:39">39</ref></char></note>Maana baba zetu wa kale walipongezwa kwa haya.<verse eid="HEB 11:2"/></para>
+  <para style="p">
+    <verse number="3" style="v" sid="HEB 11:3"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 1:1">Mwa 1:1</ref>; <ref loc="JHN 1:3">Yn 1:3</ref>; <ref loc="HEB 1:2">Ebr 1:2</ref>; <ref loc="2PE 3:5">2Pet 3:5</ref></char>
+    </note>Kwa imani tunafahamu kwamba ulimwengu uliumbwa kwa neno la Mungu, vitu vyote vinavyoonekana havikuumbwa kutoka kwa vitu vinavyoonekana.<verse eid="HEB 11:3"/></para>
+  <para style="s1">Mfano Wa Abeli, Enoki Na Noa</para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 11:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 11:2">Ebr 11:2</ref>, <ref loc="HEB 11:39">39</ref>; <ref loc="GEN 4:4">Mwa 4:4</ref>; <ref loc="1JN 3:12">1Yn 3:12</ref>; <ref loc="HEB 12:24">Ebr 12:24</ref></char>
+    </note>Kwa imani Abeli alimtolea Mungu dhabihu bora zaidi kuliko Kaini. Kwa imani alishuhudiwa kuwa mwenye haki, Mungu mwenyewe akazishuhudia sadaka zake. Kwa imani bado ananena ingawa amekufa.<verse eid="HEB 11:4"/></para>
+  <para style="p">
+    <verse number="5" style="v" sid="HEB 11:5"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 5:2">Mwa 5:2</ref>, <ref loc="GEN 5:24">24</ref></char>
+    </note>Kwa imani Enoki alitwaliwa kutoka maisha haya, kiasi kwamba hakuonja mauti. Hakuonekana, kwa sababu Mungu alikuwa amemchukua. Kwa kuwa kabla hajatwaliwa alikuwa ameshuhudiwa kuwa ni mtu aliyempendeza Mungu. <verse eid="HEB 11:5"/><verse number="6" style="v" sid="HEB 11:6"/><note caller="-" style="x"><char style="xo" closed="false">11:6 </char><char style="xt" closed="false"><ref loc="HEB 7:19">Ebr 7:19</ref>, <ref loc="HEB 7:25">25</ref>; <ref loc="HEB 10:35">10:35</ref></char></note>Lakini pasipo imani haiwezekani kumpendeza Mungu, kwa maana yeyote anayemjia Mungu lazima aamini kwamba yeye yuko na ya kuwa huwapa thawabu wale wamtafutao kwa bidii.<verse eid="HEB 11:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 11:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 6:8">Mwa 6:8</ref>, <ref loc="GEN 6:9">9</ref>; <ref loc="GEN 7:1">7:1</ref>; <ref loc="ROM 3:22">Rum 3:22</ref>, <ref loc="ROM 3:24">24</ref>; <ref loc="ROM 4:20">4:20</ref></char>
+    </note>Kwa imani, Noa alipoonywa na Mungu kuhusu mambo ambayo hayajaonekana bado, kwa kumcha Mungu alitengeneza safina ili kuokoa jamaa yake. Kwa imani yake aliuhukumu ulimwengu na akawa mrithi wa haki ipatikanayo kwa imani.<verse eid="HEB 11:7"/></para>
+  <para style="s1">Imani Ya Abrahamu</para>
+  <para style="p">
+    <verse number="8" style="v" sid="HEB 11:8"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 12:7">Mwa 12:7</ref>; <ref loc="GEN 12:1-4">12:1-4</ref>; <ref loc="ACT 7:2-4">Mdo 7:2-4</ref></char>
+    </note>Kwa imani Abrahamu, alipoitwa aende mahali ambapo Mungu angempa baadaye kuwa urithi, alitii na akaenda, ingawa hakujua anakokwenda. <verse eid="HEB 11:8"/><verse number="9" style="v" sid="HEB 11:9"/><note caller="-" style="x"><char style="xo" closed="false">11:9 </char><char style="xt" closed="false"><ref loc="GEN 23:4">Mwa 23:4</ref>; <ref loc="GEN 26:3">26:3</ref>; <ref loc="GEN 35:12">35:12</ref>; <ref loc="HEB 6:17">Ebr 6:17</ref></char></note>Kwa imani alifanya maskani yake katika nchi ya ahadi kama mgeni katika nchi ya kigeni; aliishi katika mahema, kama Isaki na Yakobo walivyofanya, waliokuwa pia warithi pamoja naye wa ahadi ile ile. <verse eid="HEB 11:9"/><verse number="10" style="v" sid="HEB 11:10"/><note caller="-" style="x"><char style="xo" closed="false">11:10 </char><char style="xt" closed="false"><ref loc="HEB 12:22">Ebr 12:22</ref>; <ref loc="HEB 13:14">13:14</ref>; <ref loc="REV 21:2">Ufu 21:2</ref>, <ref loc="REV 21:14">14</ref>; <ref loc="HEB 11:16">Ebr 11:16</ref></char></note>Kwa maana alikuwa akiutazamia mji wenye misingi ya kudumu ambao mwenye kuubuni na kuujenga ni Mungu.<verse eid="HEB 11:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 11:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 17:17-19">Mwa 17:17-19</ref>; <ref loc="GEN 22:17">22:17</ref>; <ref loc="GEN 32:12">32:12</ref></char>
+    </note>Kwa imani Abrahamu, ingawa alikuwa mzee wa umri, naye Sara mwenyewe aliyekuwa tasa, alipokea uwezo wa kuwa baba kwa sababu alimhesabu Mungu aliyemwahidi kuwa mwaminifu na kwamba angetimiza ahadi yake. <verse eid="HEB 11:11"/><verse number="12" style="v" sid="HEB 11:12"/><note caller="-" style="x"><char style="xo" closed="false">11:12 </char><char style="xt" closed="false"><ref loc="ROM 4:19">Rum 4:19</ref>; <ref loc="GEN 22:17">Mwa 22:17</ref>; <ref loc="GEN 32:12">32:12</ref></char></note>Hivyo kutokana na huyu huyu ambaye alikuwa sawa na mfu, wakazaliwa wazao wengi kama nyota za mbinguni na kama mchanga wa pwani usiohesabika.<verse eid="HEB 11:12"/></para>
+  <para style="p">
+    <verse number="13" style="v" sid="HEB 11:13"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 11:39">Ebr 11:39</ref>; <ref loc="MAT 13:17">Mt 13:17</ref>; <ref loc="GEN 23:4">Mwa 23:4</ref>; <ref loc="LEV 25:23">Law 25:23</ref>; <ref loc="PHP 3:20">Flp 3:20</ref>; <ref loc="1PE 1:17">1Pet 1:17</ref></char>
+    </note>Watu hawa wote wakafa katika imani bila kuzipokea zile ahadi, lakini waliziona kwa mbali na kuzishangilia. Nao walikubali kwamba walikuwa wageni na wasiokuwa na maskani hapa duniani. <verse eid="HEB 11:13"/><verse number="14" style="v" sid="HEB 11:14"/><note caller="-" style="x"><char style="xo" closed="false">11:14 </char><char style="xt" closed="false"><ref loc="HEB 13:14">Ebr 13:14</ref></char></note>Watu wasemao mambo kama haya, wanaonyesha wazi kwamba wanatafuta nchi yao wenyewe. <verse eid="HEB 11:14"/><verse number="15" style="v" sid="HEB 11:15"/><note caller="-" style="x"><char style="xo" closed="false">11:15 </char><char style="xt" closed="false"><ref loc="GEN 24:6-8">Mwa 24:6-8</ref></char></note>Kwa kweli kama wangekuwa wanafikiri kuhusu nchi waliyoiacha, wangalipata nafasi ya kurudi huko. <verse eid="HEB 11:15"/><verse number="16" style="v" sid="HEB 11:16"/><note caller="-" style="x"><char style="xo" closed="false">11:16 </char><char style="xt" closed="false"><ref loc="2TI 4:18">2Tim 4:18</ref>; <ref loc="MRK 8:38">Mk 8:38</ref>; <ref loc="GEN 26:24">Mwa 26:24</ref>; <ref loc="GEN 28:13">28:13</ref>; <ref loc="EXO 3:6">Kut 3:6</ref>, <ref loc="EXO 3:15">15</ref>; <ref loc="HEB 11:10">Ebr 11:10</ref>; <ref loc="HEB 13:14">13:14</ref></char></note>Lakini badala yake walitamani nchi iliyo bora zaidi, yaani nchi ya mbinguni. Kwa hiyo Mungu haoni aibu kuitwa Mungu wao, kwa kuwa amekwisha kuandaa mji kwa ajili yao.<verse eid="HEB 11:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 11:17"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 22:2-10">Mwa 22:2-10</ref>; <ref loc="JAS 2:21">Yak 2:21</ref></char>
+    </note>Kwa imani Abrahamu, alipojaribiwa na Mungu, alimtoa Isaki kuwa dhabihu. Yeye aliyekuwa amezipokea ahadi za Mungu alikuwa tayari kumtoa mwanawe, aliyekuwa mwanawe pekee awe dhabihu. <verse eid="HEB 11:17"/><verse number="18" style="v" sid="HEB 11:18"/><note caller="-" style="x"><char style="xo" closed="false">11:18 </char><char style="xt" closed="false"><ref loc="GEN 21:12">Mwa 21:12</ref>; <ref loc="ROM 9:7">Rum 9:7</ref></char></note>Ingawa Mungu alikuwa amemwambia Abrahamu, “Uzao wako utahesabiwa kupitia kwa Isaki,” <verse eid="HEB 11:18"/><verse number="19" style="v" sid="HEB 11:19"/><note caller="-" style="x"><char style="xo" closed="false">11:19 </char><char style="xt" closed="false"><ref loc="ROM 4:21">Rum 4:21</ref>; <ref loc="JHN 5:21">Yn 5:21</ref></char></note>Abrahamu alihesabu kuwa Mungu angaliweza kumfufua Isaki kutoka kwa wafu. Na kwa kusema kwa mfano, alimpata tena Isaki kutoka kwa wafu.<verse eid="HEB 11:19"/></para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 11:20"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:20 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 27:27-29">Mwa 27:27-29</ref>
+      </char>
+    </note>Kwa imani Isaki alimbariki Yakobo na Esau kuhusu maisha yao ya baadaye.<verse eid="HEB 11:20"/></para>
+  <para style="p">
+    <verse number="21" style="v" sid="HEB 11:21"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:21 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 48:1">Mwa 48:1</ref>; <ref loc="GEN 8:22">8:22</ref>; <ref loc="GEN 47:31">47:31</ref></char>
+    </note>Kwa imani Yakobo alipokuwa anakufa, alimbariki kila mmoja wa mtoto wa Yosefu, akamwabudu Mungu akiwa ameegemea juu ya kichwa cha fimbo yake.<verse eid="HEB 11:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 11:22"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 50:24">Mwa 50:24</ref>, <ref loc="GEN 50:25">25</ref>; <ref loc="EXO 13:19">Kut 13:19</ref>; <ref loc="JOS 24:32">Yos 24:32</ref></char>
+    </note>Kwa imani, Yosefu alipokaribia mwisho wa maisha yake, alinena habari za kutoka kwa wana wa Israeli huko Misri na akatoa maagizo kuhusu mifupa yake.<verse eid="HEB 11:22"/></para>
+  <para style="s1">Imani Ya Mose</para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 11:23"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:23 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 2:2">Kut 2:2</ref>; <ref loc="EXO 1:16">1:16</ref>, <ref loc="EXO 1:22">22</ref>; <ref loc="ACT 7:20">Mdo 7:20</ref></char>
+    </note>Kwa imani, wazazi wa Mose walimficha kwa miezi mitatu baada ya kuzaliwa, kwa sababu waliona kuwa si mtoto wa kawaida, wala hawakuiogopa amri ya mfalme.<verse eid="HEB 11:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 11:24"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:24 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 2:10">Kut 2:10</ref>, <ref loc="EXO 2:11">11</ref></char>
+    </note>Kwa imani, Mose alipokuwa mtu mzima, alikataa kuitwa mwana wa binti Farao. <verse eid="HEB 11:24"/><verse number="25" style="v" sid="HEB 11:25"/><note caller="-" style="x"><char style="xo" closed="false">11:25 </char><char style="xt" closed="false"><ref loc="HEB 11:37">Ebr 11:37</ref>; <ref loc="PSA 84:10">Za 84:10</ref></char></note>Akachagua kupata mateso pamoja na watu wa Mungu kuliko kujifurahisha kwa anasa za dhambi kwa kitambo kidogo tu. <verse eid="HEB 11:25"/><verse number="26" style="v" sid="HEB 11:26"/><note caller="-" style="x"><char style="xo" closed="false">11:26 </char><char style="xt" closed="false"><ref loc="HEB 13:13">Ebr 13:13</ref>; <ref loc="LUK 14:33">Lk 14:33</ref>; <ref loc="HEB 10:35">Ebr 10:35</ref></char></note>Aliona kushutumiwa kwa ajili ya Kristo ni utajiri mkubwa zaidi kuliko hazina za Misri, maana alikuwa anatazamia kupata thawabu baadaye. <verse eid="HEB 11:26"/><verse number="27" style="v" sid="HEB 11:27"/><note caller="-" style="x"><char style="xo" closed="false">11:27 </char><char style="xt" closed="false"><ref loc="EXO 12:50-51">Kut 12:50-51</ref>; <ref loc="EXO 10:28-29">10:28-29</ref>; <ref loc="EXO 12:37">12:37</ref>; <ref loc="EXO 13:17">13:17</ref>; <ref loc="HEB 11:18">Ebr 11:18</ref></char></note>Kwa imani Mose aliondoka Misri bila kuogopa ghadhabu ya mfalme. Alivumilia kwa sababu alimwona yeye asiyeonekana kwa macho. <verse eid="HEB 11:27"/><verse number="28" style="v" sid="HEB 11:28"/><note caller="-" style="x"><char style="xo" closed="false">11:28 </char><char style="xt" closed="false"><ref loc="EXO 12:21">Kut 12:21</ref>; <ref loc="1CO 10:10">1Kor 10:10</ref></char></note>Kwa imani akaadhimisha Pasaka na kunyunyiza damu, ili yule mwenye kuwaangamiza wazaliwa wa kwanza asiwaguse wazaliwa wa Israeli.<verse eid="HEB 11:28"/></para>
+  <para style="s1">Imani Ya Mashujaa Wengine Wa Israeli</para>
+  <para style="p">
+    <verse number="29" style="v" sid="HEB 11:29"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:29 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 14:21-31">Kut 14:21-31</ref>; <ref loc="EXO 14:22">14:22</ref></char>
+    </note>Kwa imani, watu walivuka Bahari ya Shamu<note caller="+" style="f"><char style="fr" closed="false">11:29 </char><char style="ft" closed="false">Yaani Bahari ya Mafunjo.</char></note> kama vile juu ya nchi kavu; lakini Wamisri walipojaribu kufanya hivyo, walitoswa ndani ya maji.<verse eid="HEB 11:29"/></para>
+  <para style="p">
+    <verse number="30" style="v" sid="HEB 11:30"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:30 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 6:20">Yos 6:20</ref>; <ref loc="JOS 6:12-19">6:12-19</ref></char>
+    </note>Kwa imani kuta za Yeriko zilianguka, baada ya watu kuzizunguka kwa siku saba.<verse eid="HEB 11:30"/></para>
+  <para style="p">
+    <verse number="31" style="v" sid="HEB 11:31"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:31 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 2:1">Yos 2:1</ref>; <ref loc="JOS 9">9</ref>; <ref loc="JOS 14">14</ref>; <ref loc="JOS 6:22-25">6:22-25</ref>; <ref loc="JAS 2:25">Yak 2:25</ref></char>
+    </note>Kwa imani, Rahabu, yule kahaba, hakuangamizwa pamoja na wale waliomwasi Mungu, kwa kuwa aliwakaribisha wale wapelelezi.<verse eid="HEB 11:31"/></para>
+  <para style="p">
+    <verse number="32" style="v" sid="HEB 11:32"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:32 </char>
+      <char style="xt" closed="false">
+        <ref loc="JDG 6:8">Amu 6:8</ref>; <ref loc="JDG 4:5">4:5</ref>; <ref loc="JDG 13:16">13:16</ref>; <ref loc="1SA 16:1">1Sam 16:1</ref>, <ref loc="1SA 16:13">13</ref>; <ref loc="1SA 1:20">1:20</ref></char>
+    </note>Basi niseme nini zaidi? Sina wakati wa kusema habari za Gideoni, Baraka, Samsoni, Yeftha, Daudi, Samweli na manabii, <verse eid="HEB 11:32"/><verse number="33" style="v" sid="HEB 11:33"/><note caller="-" style="x"><char style="xo" closed="false">11:33 </char><char style="xt" closed="false"><ref loc="2SA 8:1-3">2Sam 8:1-3</ref>; <ref loc="DAN 6:22">Dan 6:22</ref></char></note>ambao kwa imani walishinda milki za wafalme, walitekeleza haki, na wakapokea ahadi za Mungu; walifunga vinywa vya simba, <verse eid="HEB 11:33"/><verse number="34" style="v" sid="HEB 11:34"/><note caller="-" style="x"><char style="xo" closed="false">11:34 </char><char style="xt" closed="false"><ref loc="DAN 3:19-27">Dan 3:19-27</ref>; <ref loc="EXO 18:4">Kut 18:4</ref>; <ref loc="2KI 20:7">2Fal 20:7</ref>; <ref loc="JDG 15:8">Amu 15:8</ref></char></note>wakazima makali ya miali ya moto, na wakaepuka kuuawa kwa upanga; udhaifu wao uligeuka kuwa nguvu; pia walikuwa hodari vitani na kuyafukuza majeshi ya wageni. <verse eid="HEB 11:34"/><verse number="35" style="v" sid="HEB 11:35"/><note caller="-" style="x"><char style="xo" closed="false">11:35 </char><char style="xt" closed="false"><ref loc="1KI 17:22">1Fal 17:22</ref>, <ref loc="1KI 17:23">23</ref>; <ref loc="2KI 4:36">2Fal 4:36</ref>, <ref loc="2KI 4:37">37</ref></char></note>Wanawake walipokea watu wao waliokuwa wamekufa, wakafufuliwa. Lakini wengine waliteswa, nao wakakataa kufunguliwa, ili wapate ufufuo ulio bora zaidi. <verse eid="HEB 11:35"/><verse number="36" style="v" sid="HEB 11:36"/>Wengine walidhihakiwa na kupigwa, hata walifungwa minyororo na kutiwa gerezani. <verse eid="HEB 11:36"/><verse number="37" style="v" sid="HEB 11:37"/><note caller="-" style="x"><char style="xo" closed="false">11:37 </char><char style="xt" closed="false"><ref loc="2CH 24:21">2Nya 24:21</ref>; <ref loc="1KI 19:10">1Fal 19:10</ref>; <ref loc="JER 26:23">Yer 26:23</ref>; <ref loc="2KI 1:8">2Fal 1:8</ref></char></note>Walipigwa kwa mawe; walipasuliwa vipande viwili kwa msumeno; waliuawa kwa upanga. Walizungukazunguka wakiwa wamevaa ngozi za kondoo na mbuzi, wakiwa maskini, wakiteswa na kutendwa mabaya, <verse eid="HEB 11:37"/><verse number="38" style="v" sid="HEB 11:38"/><note caller="-" style="x"><char style="xo" closed="false">11:38 </char><char style="xt" closed="false"><ref loc="1KI 18:4">1Fal 18:4</ref>; <ref loc="1KI 19:9">19:9</ref></char></note>watu ambao ulimwengu haukustahili kuwa nao. Walizunguka majangwani na milimani, katika mapango na katika mahandaki ardhini.<verse eid="HEB 11:38"/></para>
+  <para style="p">
+    <verse number="39" style="v" sid="HEB 11:39"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:39 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 11:2">Ebr 11:2</ref>, <ref loc="HEB 11:4">4</ref>, <ref loc="HEB 11:13">13</ref>; <ref loc="HEB 10:36">10:36</ref></char>
+    </note>Hawa wote walishuhudiwa vyema kwa sababu ya imani yao, lakini hakuna hata mmoja wao aliyepokea yale yaliyoahidiwa. <verse eid="HEB 11:39"/><verse number="40" style="v" sid="HEB 11:40"/><note caller="-" style="x"><char style="xo" closed="false">11:40 </char><char style="xt" closed="false"><ref loc="REV 6:11">Ufu 6:11</ref>; <ref loc="HEB 2:10">Ebr 2:10</ref></char></note>Kwa kuwa Mungu alikuwa ametangulia kutuwekea kitu kilicho bora zaidi ili wao wasikamilishwe pasipo sisi.<verse eid="HEB 11:40"/></para>
+  <chapter eid="HEB 11"/>
+  <chapter number="12" style="c" sid="HEB 12"/>
+  <para style="s1">Mungu Huwaadibisha Wanawe</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 12:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 9:24">1Kor 9:24</ref>; <ref loc="HEB 10:36">Ebr 10:36</ref></char>
+    </note>Kwa sababu hii, kwa kuwa tumezungukwa na wingu kubwa namna hii la mashahidi, basi na tuweke kando kila kitu kinachotuzuia na ile dhambi inayotuzinga kwa urahisi, nasi tupige mbio kwa saburi katika yale mashindano yaliyowekwa kwa ajili yetu. <verse eid="HEB 12:1"/><verse number="2" style="v" sid="HEB 12:2"/><note caller="-" style="x"><char style="xo" closed="false">12:2 </char><char style="xt" closed="false"><ref loc="PSA 25:15">Za 25:15</ref>; <ref loc="HEB 2:10">Ebr 2:10</ref>; <ref loc="PHP 2:8">Flp 2:8</ref>, <ref loc="PHP 2:9">9</ref>; <ref loc="HEB 13:13">Ebr 13:13</ref>; <ref loc="MRK 16:19">Mk 16:19</ref></char></note>Basi na tumtazame sana Yesu mwanzilishi na mkamilishaji wa imani yetu, yeye ambaye kwa ajili ya furaha iliyowekwa mbele yake alistahimili msalaba, bila kujali aibu ya huo msalaba, naye ameketi mkono wa kuume wa kiti cha enzi cha Mungu. <verse eid="HEB 12:2"/><verse number="3" style="v" sid="HEB 12:3"/><note caller="-" style="x"><char style="xo" closed="false">12:3 </char><char style="xt" closed="false"><ref loc="GAL 6:9">Gal 6:9</ref>; <ref loc="REV 2:3">Ufu 2:3</ref></char></note>Mtafakarini sana yeye aliyestahimili upinzani mkuu namna hii kutoka kwa watu wenye dhambi, ili kwamba msije mkachoka na kukata tamaa.<verse eid="HEB 12:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 12:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 10:32-34">Ebr 10:32-34</ref>; <ref loc="HEB 13:13">13:13</ref></char>
+    </note>Katika kushindana kwenu dhidi ya dhambi, bado hamjapigana kiasi cha kumwaga damu yenu. <verse eid="HEB 12:4"/><verse number="5" style="v" sid="HEB 12:5"/><note caller="-" style="x"><char style="xo" closed="false">12:5 </char><char style="xt" closed="false"><ref loc="HEB 12:3">Ebr 12:3</ref>; <ref loc="PRO 3:11">Mit 3:11</ref>, <ref loc="PRO 3:12">12</ref></char></note>Nanyi mmesahau yale maneno ya kuwaonya yanayowataja ninyi kuwa wana, yakisema:</para>
+  <para style="q1" vid="HEB 12:5">“Mwanangu, usidharau adhabu ya Bwana,</para>
+  <para style="q2" vid="HEB 12:5">wala usikate tamaa akikukemea,<verse eid="HEB 12:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="HEB 12:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 94:12">Za 94:12</ref>; <ref loc="PSA 119:75">119:75</ref>; <ref loc="REV 3:19">Ufu 3:19</ref>; <ref loc="PRO 3:11">Mit 3:11</ref>, <ref loc="PRO 3:12">12</ref></char>
+    </note>kwa sababu Bwana huwaadibisha wale awapendao,</para>
+  <para style="q2" vid="HEB 12:6">na humwadhibu kila mmoja</para>
+  <para style="q2" vid="HEB 12:6">anayemkubali kuwa mwana.”<verse eid="HEB 12:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 12:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 8:5">Kum 8:5</ref>; <ref loc="2SA 7:14">2Sam 7:14</ref>; <ref loc="PRO 13:24">Mit 13:24</ref></char>
+    </note>Vumilieni taabu kwa ajili ya kufunzwa adabu. Mungu anawatendea ninyi kama watoto wake, kwa maana ni mtoto yupi asiyeadibishwa na mzazi wake? <verse eid="HEB 12:7"/><verse number="8" style="v" sid="HEB 12:8"/><note caller="-" style="x"><char style="xo" closed="false">12:8 </char><char style="xt" closed="false"><ref loc="1PE 5:9">1Pet 5:9</ref></char></note>Kama hakuna kuadibishwa (ambalo ni fungu la watoto wote), basi ninyi ni watoto wa haramu wala si watoto halali. <verse eid="HEB 12:8"/><verse number="9" style="v" sid="HEB 12:9"/><note caller="-" style="x"><char style="xo" closed="false">12:9 </char><char style="xt" closed="false"><ref loc="NUM 16:22">Hes 16:22</ref>; <ref loc="NUM 27:16">27:16</ref>; <ref loc="REV 22:6">Ufu 22:6</ref>; <ref loc="ISA 38:16">Isa 38:16</ref></char></note>Tena, sisi sote tunao baba wa kimwili, waliotuadibisha nasi tukawaheshimu kwa ajili ya hilo. Je, si inatupasa kujinyenyekeza zaidi kwa Baba wa roho zetu ili tuishi? <verse eid="HEB 12:9"/><verse number="10" style="v" sid="HEB 12:10"/><note caller="-" style="x"><char style="xo" closed="false">12:10 </char><char style="xt" closed="false"><ref loc="2PE 1:4">2Pet 1:4</ref></char></note>Baba zetu walituadibisha kwa kitambo kidogo kama wao wenyewe walivyoona vyema, lakini Mungu hutuadibisha kwa faida yetu ili tupate kushiriki utakatifu wake. <verse eid="HEB 12:10"/><verse number="11" style="v" sid="HEB 12:11"/><note caller="-" style="x"><char style="xo" closed="false">12:11 </char><char style="xt" closed="false"><ref loc="ISA 32:17">Isa 32:17</ref>; <ref loc="JAS 3:17">Yak 3:17</ref>, <ref loc="JAS 3:18">18</ref></char></note>Kuadibishwa wakati wowote hakuonekani kuwa kitu cha kufurahisha bali chenye maumivu kinapotekelezwa. Lakini baadaye huzaa matunda ya haki na amani kwa wale waliofunzwa nayo.<verse eid="HEB 12:11"/></para>
+  <para style="p">
+    <verse number="12" style="v" sid="HEB 12:12"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 35:3">Isa 35:3</ref>
+      </char>
+    </note>Kwa hiyo, itieni nguvu mikono yenu iliyo dhaifu na magoti yenu yaliyolegea. <verse eid="HEB 12:12"/><verse number="13" style="v" sid="HEB 12:13"/><note caller="-" style="x"><char style="xo" closed="false">12:13 </char><char style="xt" closed="false"><ref loc="PRO 4:26">Mit 4:26</ref>; <ref loc="GAL 6:1">Gal 6:1</ref></char></note>Sawazisheni mapito ya miguu yenu, ili kitu kilicho kiwete kisidhoofishwe bali kiponywe.<verse eid="HEB 12:13"/></para>
+  <para style="s1">Onyo Dhidi Ya Kuikataa Neema Ya Mungu</para>
+  <para style="p">
+    <verse number="14" style="v" sid="HEB 12:14"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 14:19">Rum 14:19</ref>; <ref loc="ROM 6:22">6:22</ref>; <ref loc="MAT 5:8">Mt 5:8</ref></char>
+    </note>Tafuteni kwa bidii kuwa na amani na watu wote na huo utakatifu, ambao bila kuwa nao hakuna mtu atakayemwona Bwana. <verse eid="HEB 12:14"/><verse number="15" style="v" sid="HEB 12:15"/><note caller="-" style="x"><char style="xo" closed="false">12:15 </char><char style="xt" closed="false"><ref loc="GAL 5:4">Gal 5:4</ref>; <ref loc="HEB 3:12">Ebr 3:12</ref>; <ref loc="HEB 4:1">4:1</ref>; <ref loc="DEU 29:18">Kum 29:18</ref></char></note>Angalieni sana mtu yeyote asiikose neema ya Mungu na kwamba shina la uchungu lisije likachipuka na kuwasumbua na watu wengi wakatiwa unajisi kwa hilo. <verse eid="HEB 12:15"/><verse number="16" style="v" sid="HEB 12:16"/><note caller="-" style="x"><char style="xo" closed="false">12:16 </char><char style="xt" closed="false"><ref loc="1CO 6:18">1Kor 6:18</ref></char></note>Angalieni miongoni mwenu asiwepo mwasherati au mtu asiyemcha Mungu kama Esau, ambaye kwa ajili ya mlo mmoja aliuza haki ya uzaliwa wake wa kwanza. <verse eid="HEB 12:16"/><verse number="17" style="v" sid="HEB 12:17"/><note caller="-" style="x"><char style="xo" closed="false">12:17 </char><char style="xt" closed="false"><ref loc="GEN 27:30-40">Mwa 27:30-40</ref></char></note>Baadaye kama mnavyofahamu, alipotaka kurithi ile baraka, alikataliwa, maana hakupata nafasi ya kutubu, ingawa aliitafuta kwa machozi.<verse eid="HEB 12:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 12:18"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 19:12-22">Kut 19:12-22</ref>; <ref loc="EXO 20:18">20:18</ref>; <ref loc="DEU 4:11">Kum 4:11</ref></char>
+    </note>Hamjaufikia mlima ule uwezao kuguswa na ambao unawaka moto; wala kwenye giza, utusitusi na dhoruba; <verse eid="HEB 12:18"/><verse number="19" style="v" sid="HEB 12:19"/><note caller="-" style="x"><char style="xo" closed="false">12:19 </char><char style="xt" closed="false"><ref loc="EXO 20:18">Kut 20:18</ref>; <ref loc="DEU 4:12">Kum 4:12</ref>; <ref loc="EXO 20:19">Kut 20:19</ref>; <ref loc="DEU 5:5">Kum 5:5</ref>, <ref loc="DEU 5:25">25</ref>; <ref loc="DEU 18:16">18:16</ref></char></note>kwenye mlio wa tarumbeta, au kwenye sauti isemayo maneno ya kutisha kiasi ambacho wale walioisikia waliomba wasiambiwe neno jingine zaidi, <verse eid="HEB 12:19"/><verse number="20" style="v" sid="HEB 12:20"/><note caller="-" style="x"><char style="xo" closed="false">12:20 </char><char style="xt" closed="false"><ref loc="EXO 19:12">Kut 19:12</ref>, <ref loc="EXO 19:13">13</ref></char></note>kwa sababu hawangeweza kustahimili neno lile lililoamriwa: “Hata kama mnyama atagusa mlima huu, atapigwa mawe.” <verse eid="HEB 12:20"/><verse number="21" style="v" sid="HEB 12:21"/><note caller="-" style="x"><char style="xo" closed="false">12:21 </char><char style="xt" closed="false"><ref loc="DEU 9:19">Kum 9:19</ref></char></note>Waliyoyaona yalikuwa ya kutisha kiasi kwamba Mose alisema, “Ninatetemeka kwa hofu.”<verse eid="HEB 12:21"/></para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 12:22"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 24:23">Isa 24:23</ref>; <ref loc="ISA 60:14">60:14</ref>; <ref loc="REV 14:1">Ufu 14:1</ref>; <ref loc="GAL 4:26">Gal 4:26</ref>; <ref loc="HEB 11:10">Ebr 11:10</ref>; <ref loc="HEB 13:14">13:14</ref>; <ref loc="PRO 16:16">Mit 16:16</ref></char>
+    </note>Lakini ninyi mmekuja Mlima Sayuni, Yerusalemu ya mbinguni, mji wa Mungu aliye hai. Mmekuja penye kusanyiko kubwa la malaika maelfu kwa maelfu wasiohesabika wanaoshangilia, <verse eid="HEB 12:22"/><verse number="23" style="v" sid="HEB 12:23"/>kwenye kanisa la wazaliwa wa kwanza wa Mungu, ambao majina yao yameandikwa mbinguni. Mmekuja kwa Mungu, mhukumu wa watu wote, kwenye roho za wenye haki waliokamilishwa, <verse eid="HEB 12:23"/><verse number="24" style="v" sid="HEB 12:24"/><note caller="-" style="x"><char style="xo" closed="false">12:24 </char><char style="xt" closed="false"><ref loc="GAL 3:20">Gal 3:20</ref>; <ref loc="HEB 9:19">Ebr 9:19</ref>; <ref loc="HEB 10:22">10:22</ref>; <ref loc="1PE 1:2">1Pet 1:2</ref>; <ref loc="GEN 4:10">Mwa 4:10</ref>; <ref loc="HEB 11:4">Ebr 11:4</ref></char></note>kwa Yesu mpatanishi wa agano jipya, na kwa damu iliyonyunyizwa, ile inenayo mambo mema kuliko damu ya Abeli.<verse eid="HEB 12:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 12:25"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:25 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 3:12">Ebr 3:12</ref>; <ref loc="HEB 1:1">1:1</ref>; <ref loc="HEB 8:5">8:5</ref>; <ref loc="HEB 11:7">11:7</ref>; <ref loc="HEB 2:2">2:2</ref>, <ref loc="HEB 2:3">3</ref>; <ref loc="HEB 10:29">10:29</ref>; <ref loc="DEU 18:19">Kum 18:19</ref></char>
+    </note>Angalieni, msije mkamkataa yeye anenaye. Ikiwa wao hawakuepuka adhabu walipomkataa yeye aliyewaonya hapa duniani, sisi je, tutaokokaje tusipomsikiliza yeye anayetuonya kutoka mbinguni? <verse eid="HEB 12:25"/><verse number="26" style="v" sid="HEB 12:26"/><note caller="-" style="x"><char style="xo" closed="false">12:26 </char><char style="xt" closed="false"><ref loc="EXO 19:18">Kut 19:18</ref>; <ref loc="HAG 2:6">Hag 2:6</ref></char></note>Wakati ule sauti yake ilitetemesha dunia, lakini sasa ameahidi, “Kwa mara moja tena nitatetemesha si nchi tu bali na mbingu pia.”<verse eid="HEB 12:26"/></para>
+  <para style="p">
+    <verse number="27" style="v" sid="HEB 12:27"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:27 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 34:4">Isa 34:4</ref>; <ref loc="ISA 54:10">54:10</ref>; <ref loc="1CO 7:31">1Kor 7:31</ref>; <ref loc="HEB 1:11">Ebr 1:11</ref>; <ref loc="2PE 3:10">2Pet 3:10</ref>; <ref loc="1JN 2:17">1Yn 2:17</ref></char>
+    </note>Maneno haya “kwa mara moja tena” yanaonyesha kuondoshwa kwa vile vitu vinavyoweza kutetemeshwa, yaani vile vitu vilivyoumbwa, kwa kusudi vile tu visivyoweza kutetemeshwa vibaki.<verse eid="HEB 12:27"/></para>
+  <para style="p">
+    <verse number="28" style="v" sid="HEB 12:28"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:28 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 15:5">Za 15:5</ref>; <ref loc="DAN 2:44">Dan 2:44</ref>; <ref loc="MAL 2:5">Mal 2:5</ref>; <ref loc="MAL 4:2">4:2</ref>; <ref loc="HEB 13:15">Ebr 13:15</ref></char>
+    </note>Kwa hiyo, kwa kuwa tunapokea ufalme ambao hauwezi kutetemeshwa, basi na tuwe na shukrani, na hivyo tumwabudu Mungu kwa namna inayompendeza, kwa unyenyekevu na uchaji, <verse eid="HEB 12:28"/><verse number="29" style="v" sid="HEB 12:29"/><note caller="-" style="x"><char style="xo" closed="false">12:29 </char><char style="xt" closed="false"><ref loc="EXO 24:17">Kut 24:17</ref>; <ref loc="DEU 4:24">Kum 4:24</ref>; <ref loc="DEU 9:3">9:3</ref>; <ref loc="PSA 97:3">Za 97:3</ref>; <ref loc="ISA 33:14">Isa 33:14</ref>; <ref loc="1TH 1:7">1The 1:7</ref></char></note>kwa kuwa “Mungu wetu ni moto ulao.”<verse eid="HEB 12:29"/></para>
+  <chapter eid="HEB 12"/>
+  <chapter number="13" style="c" sid="HEB 13"/>
+  <para style="s1">Huduma Inayompendeza Mungu</para>
+  <para style="p">
+    <verse number="1" style="v" sid="HEB 13:1"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 12:10">Rum 12:10</ref>; <ref loc="1TH 4:9">1The 4:9</ref>; <ref loc="1PE 1:22">1Pet 1:22</ref>; <ref loc="1PE 2:17">2:17</ref>; <ref loc="1PE 3:8">3:8</ref>; <ref loc="1PE 4:8">4:8</ref>; <ref loc="2PE 1:7">2Pet 1:7</ref>; <ref loc="1JN 3:11">1Yn 3:11</ref>; <ref loc="1JN 4:7">4:7</ref></char>
+    </note>Endeleeni kupendana kama ndugu. <verse eid="HEB 13:1"/><verse number="2" style="v" sid="HEB 13:2"/><note caller="-" style="x"><char style="xo" closed="false">13:2 </char><char style="xt" closed="false"><ref loc="MAT 25:35">Mt 25:35</ref>; <ref loc="ROM 12:13">Rum 12:13</ref>; <ref loc="1TI 3:2">1Tim 3:2</ref>; <ref loc="1PE 4:9">1Pet 4:9</ref>; <ref loc="GEN 18:3">Mwa 18:3</ref>; <ref loc="GEN 19:2">19:2</ref></char></note>Msisahau kuwakaribisha wageni, kwa kuwa kwa kufanya hivyo, watu wengine waliwakaribisha malaika pasipo kujua. <verse eid="HEB 13:2"/><verse number="3" style="v" sid="HEB 13:3"/><note caller="-" style="x"><char style="xo" closed="false">13:3 </char><char style="xt" closed="false"><ref loc="MAT 25:36">Mt 25:36</ref>; <ref loc="COL 4:18">Kol 4:18</ref>; <ref loc="HEB 10:34">Ebr 10:34</ref>; <ref loc="ROM 12:15">Rum 12:15</ref>; <ref loc="1CO 12:26">1Kor 12:26</ref>; <ref loc="1PE 3:8">1Pet 3:8</ref></char></note>Wakumbukeni wale waliofungwa gerezani kana kwamba ninyi mmefungwa pamoja nao. Pia wakumbukeni wale wanaotendewa vibaya, kana kwamba ni ninyi wenyewe mnateswa.<verse eid="HEB 13:3"/></para>
+  <para style="p">
+    <verse number="4" style="v" sid="HEB 13:4"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAL 2:15">Mal 2:15</ref>; <ref loc="1CO 7:38">1Kor 7:38</ref>; <ref loc="1TI 4:3">1Tim 4:3</ref>; <ref loc="DEU 22:22">Kum 22:22</ref>; <ref loc="1CO 6:9">1Kor 6:9</ref>; <ref loc="EPH 5:5">Efe 5:5</ref>; <ref loc="REV 22:15">Ufu 22:15</ref></char>
+    </note>Ndoa na iheshimiwe na watu wote, nayo malazi yawe safi, kwa kuwa Mungu atawahukumu wazinzi na waasherati wote. <verse eid="HEB 13:4"/><verse number="5" style="v" sid="HEB 13:5"/><note caller="-" style="x"><char style="xo" closed="false">13:5 </char><char style="xt" closed="false"><ref loc="1TI 3:3">1Tim 3:3</ref>; <ref loc="PHP 4:11">Flp 4:11</ref>; <ref loc="DEU 31:6">Kum 31:6</ref>, <ref loc="DEU 31:8">8</ref>; <ref loc="JOS 1:5">Yos 1:5</ref>; <ref loc="GEN 28:15">Mwa 28:15</ref>; <ref loc="MAT 6:25">Mt 6:25</ref>, <ref loc="MAT 6:34">34</ref>; <ref loc="1CH 28:20">1Nya 28:20</ref>; <ref loc="PSA 37:25">Za 37:25</ref></char></note>Yalindeni maisha yenu msiwe na tabia ya kupenda fedha, bali mridhike na vile mlivyo navyo, kwa sababu Mungu amesema,</para>
+  <para style="q1" vid="HEB 13:5">“Kamwe sitakuacha,</para>
+  <para style="q2" vid="HEB 13:5">wala sitakupungukia.”<verse eid="HEB 13:5"/></para>
+  <para style="m">
+    <verse number="6" style="v" sid="HEB 13:6"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 27:1">Za 27:1</ref>; <ref loc="PSA 56:4">56:4</ref>; <ref loc="PSA 118:6">118:6</ref></char>
+    </note>Kwa hiyo tunaweza kusema kwa ujasiri,</para>
+  <para style="q1" vid="HEB 13:6">“Bwana ni msaada wangu; sitaogopa.</para>
+  <para style="q2" vid="HEB 13:6">Mwanadamu anaweza kunitenda nini?”<verse eid="HEB 13:6"/></para>
+  <para style="p">
+    <verse number="7" style="v" sid="HEB 13:7"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 13:17">Ebr 13:17</ref>, <ref loc="HEB 13:24">24</ref>; <ref loc="1CO 16:16">1Kor 16:16</ref>; <ref loc="HEB 4:12">Ebr 4:12</ref>; <ref loc="HEB 6:12">6:12</ref></char>
+    </note>Wakumbukeni viongozi wenu, wale waliowaambia neno la Mungu. Angalieni matokeo ya mwenendo wa maisha yao mkaiige imani yao. <verse eid="HEB 13:7"/><verse number="8" style="v" sid="HEB 13:8"/><note caller="-" style="x"><char style="xo" closed="false">13:8 </char><char style="xt" closed="false"><ref loc="JHN 8:58">Yn 8:58</ref>; <ref loc="HEB 1:12">Ebr 1:12</ref>; <ref loc="PSA 102:27">Za 102:27</ref>; <ref loc="REV 1:4">Ufu 1:4</ref></char></note>Yesu Kristo ni yeye yule jana, leo na hata milele.<verse eid="HEB 13:8"/></para>
+  <para style="p">
+    <verse number="9" style="v" sid="HEB 13:9"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 4:14">Efe 4:14</ref>; <ref loc="COL 2:7">Kol 2:7</ref>; <ref loc="COL 2:16">2:16</ref>; <ref loc="HEB 9:10">Ebr 9:10</ref>; <ref loc="ROM 14:17">Rum 14:17</ref>; <ref loc="1JN 4:1">1Yn 4:1</ref>; <ref loc="1TI 4:3">1Tim 4:3</ref></char>
+    </note>Msichukuliwe na kila aina ya mafundisho ya kigeni. Ni vyema mioyo yenu iimarishwe kwa neema, wala si kwa sheria kuhusu utaratibu wa vyakula, ambavyo havina faida kwa wale wanaozishika hizo sheria. <verse eid="HEB 13:9"/><verse number="10" style="v" sid="HEB 13:10"/><note caller="-" style="x"><char style="xo" closed="false">13:10 </char><char style="xt" closed="false"><ref loc="1CO 9:13">1Kor 9:13</ref>; <ref loc="1CO 10:18">10:18</ref></char></note>Sisi tunayo madhabahu ambayo wale wanaohudumu katika hema hawana haki ya kula vile vitu vilivyowekwa juu yake.<verse eid="HEB 13:10"/></para>
+  <para style="p">
+    <verse number="11" style="v" sid="HEB 13:11"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 16:15">Law 16:15</ref>; <ref loc="EXO 29:14">Kut 29:14</ref>; <ref loc="LEV 4:12">Law 4:12</ref>; <ref loc="LEV 9:11">9:11</ref>; <ref loc="LEV 16:27">16:27</ref>; <ref loc="NUM 19:3">Hes 19:3</ref></char>
+    </note>Kuhani mkuu huchukua damu ya wanyama na kuiingiza Patakatifu pa Patakatifu, kama sadaka ya dhambi, lakini miili ya hao wanyama huteketezwa nje ya kambi. <verse eid="HEB 13:11"/><verse number="12" style="v" sid="HEB 13:12"/><note caller="-" style="x"><char style="xo" closed="false">13:12 </char><char style="xt" closed="false"><ref loc="JHN 19:17">Yn 19:17</ref>, <ref loc="JHN 19:18">18</ref>; <ref loc="ACT 7:58">Mdo 7:58</ref>; <ref loc="EPH 5:26">Efe 5:26</ref>; <ref loc="ROM 3:25">Rum 3:25</ref></char></note>Vivyo hivyo, Yesu naye aliteswa nje ya lango la mji ili awatakase watu kwa damu yake mwenyewe. <verse eid="HEB 13:12"/><verse number="13" style="v" sid="HEB 13:13"/><note caller="-" style="x"><char style="xo" closed="false">13:13 </char><char style="xt" closed="false"><ref loc="LUK 9:23">Lk 9:23</ref>; <ref loc="HEB 11:26">Ebr 11:26</ref>; <ref loc="1PE 4:14">1Pet 4:14</ref></char></note>Kwa hiyo, basi na tumwendee nje ya kambi, tukiichukua aibu aliyobeba. <verse eid="HEB 13:13"/><verse number="14" style="v" sid="HEB 13:14"/><note caller="-" style="x"><char style="xo" closed="false">13:14 </char><char style="xt" closed="false"><ref loc="MIC 2:10">Mik 2:10</ref>; <ref loc="PHP 3:20">Flp 3:20</ref></char></note>Kwa kuwa hapa hatuna mji udumuo, bali tunautafuta ule ujao.<verse eid="HEB 13:14"/></para>
+  <para style="p">
+    <verse number="15" style="v" sid="HEB 13:15"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="1PE 2:5">1Pet 2:5</ref>; <ref loc="ISA 57:19">Isa 57:19</ref>; <ref loc="HOS 14:2">Hos 14:2</ref>; <ref loc="EPH 5:20">Efe 5:20</ref>; <ref loc="LEV 7:12">Law 7:12</ref>; <ref loc="PSA 50:14">Za 50:14</ref>, <ref loc="PSA 50:23">23</ref>; <ref loc="PSA 107:22">107:22</ref>; <ref loc="PSA 116:17">116:17</ref>; <ref loc="HOS 14:2">Hos 14:2</ref></char>
+    </note>Basi kwa njia ya Yesu, tuzidi kumtolea Mungu dhabihu ya sifa, yaani matunda ya midomo inayolikiri Jina lake. <verse eid="HEB 13:15"/><verse number="16" style="v" sid="HEB 13:16"/><note caller="-" style="x"><char style="xo" closed="false">13:16 </char><char style="xt" closed="false"><ref loc="ROM 12:13">Rum 12:13</ref>; <ref loc="PHP 4:18">Flp 4:18</ref>; <ref loc="1CO 9:12">1Kor 9:12</ref>; <ref loc="HEB 6:10">Ebr 6:10</ref></char></note>Na msiache kutenda mema na kushirikiana vile vitu mlivyo navyo, kwa kuwa dhabihu kama hizo ndizo zinazompendeza Mungu.<verse eid="HEB 13:16"/></para>
+  <para style="p">
+    <verse number="17" style="v" sid="HEB 13:17"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 62:6">Isa 62:6</ref>; <ref loc="ACT 20:28">Mdo 20:28</ref>; <ref loc="HEB 13:7">Ebr 13:7</ref>, <ref loc="HEB 13:24">24</ref>; <ref loc="PHP 2:29">Flp 2:29</ref>; <ref loc="1TH 5:12">1The 5:12</ref>; <ref loc="1TI 5:17">1Tim 5:17</ref>; <ref loc="EZK 3:17">Eze 3:17</ref>; <ref loc="EZK 33:2">33:2</ref>, <ref loc="EZK 33:7">7</ref>; <ref loc="ACT 20:26">Mdo 20:26</ref></char>
+    </note>Watiini viongozi wenu na kujinyenyekeza chini ya mamlaka yao. Kwa maana wao wanakesha kwa ajili yenu kama watu watakaopaswa kutoa hesabu. Watiini ili wafanye kazi yao kwa furaha, wala si kama mzigo, maana hiyo haitakuwa na faida kwenu.<verse eid="HEB 13:17"/></para>
+  <para style="p">
+    <verse number="18" style="v" sid="HEB 13:18"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="1TH 5:25">1The 5:25</ref>; <ref loc="ACT 23:1">Mdo 23:1</ref></char>
+    </note>Tuombeeni. Tuna hakika kuwa tunayo dhamiri safi na shauku ya kuishi kwa uadilifu kwa kila njia. <verse eid="HEB 13:18"/><verse number="19" style="v" sid="HEB 13:19"/>Ninawasihi zaidi mniombee ili nipate kurudishwa kwenu upesi.<verse eid="HEB 13:19"/></para>
+  <para style="s1">Maombi Ya Kuwatakia Baraka</para>
+  <para style="p">
+    <verse number="20" style="v" sid="HEB 13:20"/>Basi Mungu wa amani, ambaye kwa damu ya Agano la milele alimleta tena kutoka kwa wafu Bwana wetu Yesu, yule Mchungaji Mkuu wa kondoo, <verse eid="HEB 13:20"/><verse number="21" style="v" sid="HEB 13:21"/>awafanye ninyi wakamilifu mkiwa mmekamilishwa katika kila jambo jema ili mpate kutenda mapenzi yake, naye atende ndani yetu kile kinachompendeza machoni Pake, kwa njia ya Yesu Kristo, ambaye utukufu una yeye milele na milele. Amen.<verse eid="HEB 13:21"/></para>
+  <para style="s1">Maneno Ya Mwisho Na Salamu</para>
+  <para style="p">
+    <verse number="22" style="v" sid="HEB 13:22"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="1PE 5:12">1Pet 5:12</ref>; <ref loc="JAS 1:21">Yak 1:21</ref></char>
+    </note>Ndugu zangu, nawasihi mchukuliane na maneno yangu ya maonyo, kwa kuwa nimewaandikia waraka mfupi tu.<verse eid="HEB 13:22"/></para>
+  <para style="p">
+    <verse number="23" style="v" sid="HEB 13:23"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:23 </char>
+      <char style="xt" closed="false">
+        <ref loc="1TH 3:2">1The 3:2</ref>; <ref loc="ACT 16:1">Mdo 16:1</ref>; <ref loc="1TI 6:12">1Tim 6:12</ref></char>
+    </note>Nataka ninyi mjue kwamba ndugu yetu Timotheo amefunguliwa kutoka gerezani. Akifika mapema, nitakuja pamoja naye kuwaona.<verse eid="HEB 13:23"/></para>
+  <para style="p">
+    <verse number="24" style="v" sid="HEB 13:24"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:24 </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 13:7">Ebr 13:7</ref>, <ref loc="HEB 13:17">17</ref>; <ref loc="ACT 18:2">Mdo 18:2</ref></char>
+    </note>Wasalimuni viongozi wenu wote na watakatifu wote. Wale wa kutoka Italia wanawasalimu.<verse eid="HEB 13:24"/></para>
+  <para style="p">
+    <verse number="25" style="v" sid="HEB 13:25"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:25 </char>
+      <char style="xt" closed="false">
+        <ref loc="TIT 3:15">Tit 3:15</ref>; <ref loc="COL 4:18">Kol 4:18</ref></char>
+    </note>Neema iwe nanyi nyote. Amen.<verse eid="HEB 13:25"/></para>
+  <chapter eid="HEB 13"/>
+</usx>

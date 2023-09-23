@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="MAT" style="id">- Chinese Contemporary Bible - Traditional Script 2012</book>
+  <para style="rem">Copyright © 1979, 2005, 2007, 2012 by Biblica, Inc.®</para>
+  <para style="h">馬太福音</para>
+  <para style="toc1">馬太福音</para>
+  <para style="toc2">馬太福音</para>
+  <para style="toc3">太</para>
+  <para style="mt1">馬太福音</para>
+  <chapter number="1" style="c"/>
+  <para style="s1">耶穌基督的家譜</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶穌基督是<char style="pn">亞伯拉罕</char>的子孫、<char style="pn">大衛</char>的後裔，以下是祂的家譜：</para>
+  <para style="li1">
+    <verse number="2" style="v"/>
+    <char style="pn">亞伯拉罕</char>生<char style="pn">以撒</char>，</para>
+  <para style="li1">
+    <char style="pn">以撒</char>生<char style="pn">雅各</char>，</para>
+  <para style="li1">
+    <char style="pn">雅各</char>生<char style="pn">猶大</char>和他的兄弟，</para>
+  <para style="li1">
+    <verse number="3" style="v"/>
+    <char style="pn">猶大</char>和<char style="pn">她瑪</char>生<char style="pn">法勒斯</char>和<char style="pn">謝拉</char>，</para>
+  <para style="li1">
+    <char style="pn">法勒斯</char>生<char style="pn">希斯崙</char><note caller="+" style="f"><char style="fr" closed="false">1·3 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">蘭</char><char style="ft" closed="false">」希臘文是「亞蘭」。</char></note>，</para>
+  <para style="li1">
+    <char style="pn">希斯崙</char>生<char style="pn">蘭</char>，</para>
+  <para style="li1">
+    <verse number="4" style="v"/>
+    <char style="pn">蘭</char>生<char style="pn">亞米拿達</char>，</para>
+  <para style="li1">
+    <char style="pn">亞米拿達</char>生<char style="pn">拿順</char>，</para>
+  <para style="li1">
+    <char style="pn">拿順</char>生<char style="pn">撒門</char>，</para>
+  <para style="li1">
+    <verse number="5" style="v"/>
+    <char style="pn">撒門</char>和<char style="pn">喇合</char>生<char style="pn">波阿斯</char>，</para>
+  <para style="li1">
+    <char style="pn">波阿斯</char>和<char style="pn">路得</char>生<char style="pn">俄備得</char>，</para>
+  <para style="li1">
+    <char style="pn">俄備得</char>生<char style="pn">耶西</char>，</para>
+  <para style="li1">
+    <verse number="6" style="v"/>
+    <char style="pn">耶西</char>生<char style="pn">大衛</char>王。</para>
+  <para style="b"/>
+  <para style="li1">
+    <char style="pn">大衛</char>和<char style="pn">烏利亞</char>的妻子生<char style="pn">所羅門</char>，</para>
+  <para style="li1">
+    <verse number="7" style="v"/>
+    <char style="pn">所羅門</char>生<char style="pn">羅波安</char>，</para>
+  <para style="li1">
+    <char style="pn">羅波安</char>生<char style="pn">亞比雅</char>，</para>
+  <para style="li1">
+    <char style="pn">亞比雅</char>生<char style="pn">亞撒</char>，</para>
+  <para style="li1">
+    <verse number="8" style="v"/>
+    <char style="pn">亞撒</char>生<char style="pn">約沙法</char>，</para>
+  <para style="li1">
+    <char style="pn">約沙法</char>生<char style="pn">約蘭</char>，</para>
+  <para style="li1">
+    <char style="pn">約蘭</char>生<char style="pn">烏西雅</char>，</para>
+  <para style="li1">
+    <verse number="9" style="v"/>
+    <char style="pn">烏西雅</char>生<char style="pn">約坦</char>，</para>
+  <para style="li1">
+    <char style="pn">約坦</char>生<char style="pn">亞哈斯</char>，</para>
+  <para style="li1">
+    <char style="pn">亞哈斯</char>生<char style="pn">希西迦</char>，</para>
+  <para style="li1">
+    <verse number="10" style="v"/>
+    <char style="pn">希西迦</char>生<char style="pn">瑪拿西</char>，</para>
+  <para style="li1">
+    <char style="pn">瑪拿西</char>生<char style="pn">亞們</char>，</para>
+  <para style="li1">
+    <char style="pn">亞們</char>生<char style="pn">約西亞</char>，</para>
+  <para style="li1">
+    <verse number="11" style="v"/>
+    <char style="pn">約西亞</char>生<char style="pn">耶哥尼雅</char>和他的兄弟，</para>
+  <para style="li1">那時<char style="pn">以色列</char>人被擄往<char style="pn">巴比倫</char>。</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="12" style="v"/>被擄到<char style="pn">巴比倫</char>以後，</para>
+  <para style="li1">
+    <char style="pn">耶哥尼雅</char>生<char style="pn">撒拉鐵</char>，</para>
+  <para style="li1">
+    <char style="pn">撒拉鐵</char>生<char style="pn">所羅巴伯</char>，</para>
+  <para style="li1">
+    <verse number="13" style="v"/>
+    <char style="pn">所羅巴伯</char>生<char style="pn">亞比玉</char>，</para>
+  <para style="li1">
+    <char style="pn">亞比玉</char>生<char style="pn">以利亞敬</char>，</para>
+  <para style="li1">
+    <char style="pn">以利亞敬</char>生<char style="pn">亞所</char>，</para>
+  <para style="li1">
+    <verse number="14" style="v"/>
+    <char style="pn">亞所</char>生<char style="pn">撒督</char>，</para>
+  <para style="li1">
+    <char style="pn">撒督</char>生<char style="pn">亞金</char>，</para>
+  <para style="li1">
+    <char style="pn">亞金</char>生<char style="pn">以律</char>，</para>
+  <para style="li1">
+    <verse number="15" style="v"/>
+    <char style="pn">以律</char>生<char style="pn">以利亞撒</char>，</para>
+  <para style="li1">
+    <char style="pn">以利亞撒</char>生<char style="pn">馬但</char>，</para>
+  <para style="li1">
+    <char style="pn">馬但</char>生<char style="pn">雅各</char>，</para>
+  <para style="li1">
+    <verse number="16" style="v"/>
+    <char style="pn">雅各</char>生<char style="pn">約瑟</char>。</para>
+  <para style="li1">
+    <char style="pn">約瑟</char>就是<char style="pn">瑪麗亞</char>的丈夫，</para>
+  <para style="li1">那被稱為基督<note caller="+" style="f"><char style="fr" closed="false">1·16 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">基督</char><char style="ft" closed="false">」意思是「受膏者」。</char></note>的耶穌就是<char style="pn">瑪麗亞</char>生的。</para>
+  <para style="p">
+    <verse number="17" style="v"/>這樣，從<char style="pn">亞伯拉罕</char>到<char style="pn">大衛</char>共有十四代，從<char style="pn">大衛</char>到被擄至<char style="pn">巴比倫</char>也是十四代，從被擄至<char style="pn">巴比倫</char>到基督降生也是十四代。</para>
+  <para style="s1">耶穌的降生</para>
+  <para style="p">
+    <verse number="18" style="v"/>以下是耶穌基督降生的經過。</para>
+  <para style="p">耶穌的母親<char style="pn">瑪麗亞</char>和<char style="pn">約瑟</char>訂了婚，還沒有成親就從聖靈懷了孕。 <verse number="19" style="v"/><char style="pn">約瑟</char>是個義人，不願公開地羞辱她，便決定暗中和她解除婚約。 <verse number="20" style="v"/>他正在考慮這事的時候，主的一位天使在夢中向他顯現，說：「<char style="pn">大衛</char>的後裔<char style="pn">約瑟</char>，不要怕，把<char style="pn">瑪麗亞</char>娶過來，因為她所懷的孕是從聖靈來的。 <verse number="21" style="v"/>她將生一個兒子，你要給祂取名叫耶穌<note caller="+" style="f"><char style="fr" closed="false">1·21 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">耶穌</char><char style="ft" closed="false">」意思是「救主」。</char></note>，因為祂要把自己的子民從罪惡中救出來。」</para>
+  <para style="p">
+    <verse number="22" style="v"/>這一切應驗了主藉著先知所說的話： <verse number="23" style="v"/>「必有童貞女懷孕生子，祂的名字要叫<char style="pn">以馬內利</char>，意思是『上帝與我們同在』。」 <verse number="24" style="v"/><char style="pn">約瑟</char>醒來，就遵從主的天使的吩咐和<char style="pn">瑪麗亞</char>結婚， <verse number="25" style="v"/>只是在她生下孩子之前沒有與她同房。<char style="pn">約瑟</char>給孩子取名叫耶穌。</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">智者來朝拜</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="pn">希律</char>王執政期間，耶穌降生在<char style="pn">猶太</char>的<char style="pn">伯利恆</char>城。</para>
+  <para style="p">當時有幾位智者<note caller="+" style="f"><char style="fr" closed="false">2·1 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">智者</char><char style="ft" closed="false">」或譯「占星家」下同7節和16節。</char></note>從東方來到<char style="pn">耶路撒冷</char>， <verse number="2" style="v"/>問道：「那生來做<char style="pn">猶太</char>人之王的在哪裡呢？我們在東方看見祂的星，特來朝拜祂。」</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <char style="pn">希律</char>王聽後，心裡不安，全城的人都感到不安。 <verse number="4" style="v"/><char style="pn">希律</char>王就召來祭司長和律法教師，問他們：「基督在哪裡降生呢？」</para>
+  <para style="p">
+    <verse number="5" style="v"/>他們回答說：「在<char style="pn">猶太</char>的<char style="pn">伯利恆</char>，因為先知這樣記載，</para>
+  <para style="q1">
+    <verse number="6" style="v"/>『<char style="pn">猶大</char>地區的<char style="pn">伯利恆</char>啊！</para>
+  <para style="q1">你在<char style="pn">猶大</char>各城中並不是最小的，</para>
+  <para style="q1">因為有一位君王要從你那裡出來，</para>
+  <para style="q1">牧養我的<char style="pn">以色列</char>子民。』」</para>
+  <para style="p">
+    <verse number="7" style="v"/>於是，<char style="pn">希律</char>暗中召見那幾位智者，仔細查問那星出現的準確時間， <verse number="8" style="v"/>然後派他們去<char style="pn">伯利恆</char>，並吩咐道：「你們去仔細尋訪那個小孩，找到了，就回來報信，我也好去朝拜祂。」</para>
+  <para style="p">
+    <verse number="9" style="v"/>他們聽了王的吩咐，就去了。忽然，那顆曾在東方出現的星又出現在他們前面，引領他們來到小孩耶穌所在的地方，便停下來。 <verse number="10" style="v"/>他們看見那顆星，喜出望外。</para>
+  <para style="p">
+    <verse number="11" style="v"/>他們進了屋子，看見孩子和祂母親<char style="pn">瑪麗亞</char>，就俯伏在地上拜祂，並打開盛寶物的盒子獻上黃金、乳香和沒藥作禮物。 <verse number="12" style="v"/>他們在夢中得到指示不可回<char style="pn">希律</char>那裡，便改道返回了家鄉。</para>
+  <para style="s1">逃往埃及</para>
+  <para style="p">
+    <verse number="13" style="v"/>他們離開之後，主的天使在夢中向<char style="pn">約瑟</char>顯現，說：「起來，帶著小孩子和祂母親逃往<char style="pn">埃及</char>，住在那裡等候我的通知，因為<char style="pn">希律</char>要尋找這孩子，殺害祂。」 <verse number="14" style="v"/>於是，<char style="pn">約瑟</char>起來帶著孩子和祂母親連夜逃往<char style="pn">埃及</char>， <verse number="15" style="v"/>並在那裡一直住到<char style="pn">希律</char>死了。這就應驗了主藉著先知所說的話：「我把兒子從<char style="pn">埃及</char>召出來。」</para>
+  <para style="p">
+    <verse number="16" style="v"/>
+    <char style="pn">希律</char>見自己被智者愚弄，大為惱怒，便照著智者所說的時間推算，下令把<char style="pn">伯利恆</char>附近兩歲以下的男孩殺光。 <verse number="17" style="v"/>這正應驗了<char style="pn">耶利米</char>先知的話：</para>
+  <para style="q1">
+    <verse number="18" style="v"/>「在<char style="pn">拉瑪</char>有痛哭哀號的聲音，</para>
+  <para style="q1">是<char style="pn">拉結</char>在為兒女哀慟，</para>
+  <para style="q1">不肯接受安慰，</para>
+  <para style="q1">因為他們都死了！」</para>
+  <para style="s1">定居拿撒勒</para>
+  <para style="p">
+    <verse number="19" style="v"/>
+    <char style="pn">希律</char>死後，主的天使在夢中向在<char style="pn">埃及</char>的<char style="pn">約瑟</char>顯現，說： <verse number="20" style="v"/>「起來，帶著孩子和祂母親回<char style="pn">以色列</char>去吧！因為要殺害孩子的人已經死了。」 <verse number="21" style="v"/><char style="pn">約瑟</char>就起來，帶著孩子和祂母親返回<char style="pn">以色列</char>。</para>
+  <para style="p">
+    <verse number="22" style="v"/>但<char style="pn">約瑟</char>聽聞<char style="pn">亞基勞</char>繼承父親<char style="pn">希律</char>的王位統治<char style="pn">猶太</char>，就不敢回<char style="pn">猶太</char>。這時，他在夢中得到主的指示，便前往<char style="pn">加利利</char>地區， <verse number="23" style="v"/>定居在<char style="pn">拿撒勒</char>鎮。這應驗了先知的話：「祂將被稱為<char style="pn">拿撒勒</char>人。」</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">開路先鋒</para>
+  <para style="p">
+    <verse number="1" style="v"/>那時，施洗者<char style="pn">約翰</char>來到<char style="pn">猶太</char>的曠野傳道，說： <verse number="2" style="v"/>「悔改吧，因為天國臨近了！」 <verse number="3" style="v"/><char style="pn">約翰</char>就是<char style="pn">以賽亞</char>先知所說的那位，他說：「有人在曠野大聲呼喊，『預備主的道，修直祂的路。』」</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <char style="pn">約翰</char>身穿駱駝毛的衣服，腰束皮帶，吃的是蝗蟲、野蜜。 <verse number="5" style="v"/>那時，<char style="pn">耶路撒冷</char>、<char style="pn">猶太</char>各地和<char style="pn">約旦</char>河一帶的人都來到<char style="pn">約翰</char>那裡， <verse number="6" style="v"/>承認他們的罪，在<char style="pn">約旦</char>河裡接受他的洗禮。</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <char style="pn">約翰</char>看見很多法利賽人和撒都該人也來受洗，就對他們說：「你們這些毒蛇的後代！誰指示你們逃避那將臨的烈怒呢？ <verse number="8" style="v"/>你們要結出與悔改相稱的果子。 <verse number="9" style="v"/>不要心裡說，『我們是<char style="pn">亞伯拉罕</char>的子孫。』我告訴你們，上帝可以從這些石頭中興起<char style="pn">亞伯拉罕</char>的子孫。 <verse number="10" style="v"/>現在斧頭已經放在樹根上了，不結好果子的樹都要被砍下，丟在火裡。 <verse number="11" style="v"/>我用水為你們施洗，叫你們悔改。但在我之後，有位比我更有能力的要來，我連替祂提鞋都不配。祂要用聖靈和火為你們施洗。 <verse number="12" style="v"/>祂手拿簸箕，要把穀場清理乾淨，將麥子存入倉裡，用不滅的火把糠秕燒盡。」</para>
+  <para style="s1">耶穌受洗</para>
+  <para style="p">
+    <verse number="13" style="v"/>後來，耶穌從<char style="pn">加利利</char>來到<char style="pn">約旦</char>河要<char style="pn">約翰</char>為祂施洗。 <verse number="14" style="v"/><char style="pn">約翰</char>想要攔住祂，就說：「應該是你為我施洗才對，你反倒來找我？」</para>
+  <para style="p">
+    <verse number="15" style="v"/>耶穌回答說：「你就這樣做吧！我們理當這樣遵行上帝一切的要求。」於是<char style="pn">約翰</char>答應了。</para>
+  <para style="p">
+    <verse number="16" style="v"/>耶穌受了洗，剛從水裡上來，天就開了。祂看見上帝的聖靈像鴿子一樣降到祂身上， <verse number="17" style="v"/>又有聲音從天上傳來：「這是我的愛子，我甚喜悅祂。」</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">耶穌受試探</para>
+  <para style="p">
+    <verse number="1" style="v"/>後來，耶穌被聖靈帶到曠野，去受魔鬼的試探。 <verse number="2" style="v"/>耶穌禁食了四十晝夜後，很饑餓。 <verse number="3" style="v"/>試探者前來對祂說：「如果你是上帝的兒子，可以叫這些石頭變成食物。」</para>
+  <para style="p">
+    <verse number="4" style="v"/>耶穌回答說：「聖經上說，『人活著不是單靠食物，乃是靠上帝口中的每一句話。』」</para>
+  <para style="p">
+    <verse number="5" style="v"/>魔鬼又帶祂進聖城，讓祂站在聖殿的最高處， <verse number="6" style="v"/>說：「如果你是上帝的兒子，就跳下去吧！因為聖經上說，『上帝會差遣祂的天使用手托住你，不讓你的腳碰在石頭上。』」</para>
+  <para style="p">
+    <verse number="7" style="v"/>耶穌回答說：「聖經上也說，『不可試探主——你的上帝。』」</para>
+  <para style="p">
+    <verse number="8" style="v"/>魔鬼再帶耶穌到一座極高的山上，把世上萬國及其榮華富貴展示給祂看， <verse number="9" style="v"/>說：「如果你俯伏敬拜我，我就把這一切都給你。」</para>
+  <para style="p">
+    <verse number="10" style="v"/>耶穌說：「撒旦，走開！聖經上說，『要敬拜主——你的上帝，單單事奉祂。』」</para>
+  <para style="p">
+    <verse number="11" style="v"/>於是魔鬼離開了耶穌，這時有天使前來伺候祂。</para>
+  <para style="s1">開始傳道</para>
+  <para style="p">
+    <verse number="12" style="v"/>耶穌聽見<char style="pn">約翰</char>被捕入獄，就回到<char style="pn">加利利</char>。 <verse number="13" style="v"/>後來，祂離開<char style="pn">拿撒勒</char>去<char style="pn">迦百農</char>住。<char style="pn">迦百農</char>靠近湖邊，在<char style="pn">西布倫</char>和<char style="pn">拿弗他利</char>地區。 <verse number="14" style="v"/>這就應驗了<char style="pn">以賽亞</char>先知的話：</para>
+  <para style="q1">
+    <verse number="15" style="v"/>「<char style="pn">西布倫</char>、<char style="pn">拿弗他利</char>、</para>
+  <para style="q1">沿海一帶及<char style="pn">約旦</char>河東、外族人居住的<char style="pn">加利利</char>啊！</para>
+  <para style="q1">
+    <verse number="16" style="v"/>你們住在黑暗中的人看見了大光，</para>
+  <para style="q1">活在死亡陰影下的人被光照亮了！」</para>
+  <para style="p">
+    <verse number="17" style="v"/>從那時起，耶穌開始傳道：「悔改吧，因爲天國臨近了！」</para>
+  <para style="s1">呼召門徒</para>
+  <para style="p">
+    <verse number="18" style="v"/>耶穌沿著<char style="pn">加利利</char>湖邊行走的時候，看見被稱為<char style="pn">彼得</char>的<char style="pn">西門</char>和<char style="pn">安得烈</char>兩兄弟正在撒網打魚，他們是漁夫。 <verse number="19" style="v"/>耶穌對他們說：「來跟從我！我要使你們成為得人的漁夫。」 <verse number="20" style="v"/>他們立刻撇下漁網，跟從了耶穌。 <verse number="21" style="v"/>耶穌再往前走，又看見<char style="pn">雅各</char>和<char style="pn">約翰</char>兩兄弟正和父親<char style="pn">西庇太</char>一起在船上補漁網。耶穌呼召他們， <verse number="22" style="v"/>他們馬上離開漁船，辭別父親，跟從了耶穌。</para>
+  <para style="s1">教導和醫治</para>
+  <para style="p">
+    <verse number="23" style="v"/>耶穌走遍<char style="pn">加利利</char>，在各個會堂裡教導人，宣講天國的福音，醫治人們各樣的疾病。 <verse number="24" style="v"/>祂的名聲傳遍了整個<char style="pn">敘利亞</char>。人們把一切患病的，就是患各種疾病的、疼痛的、癲癇的、癱瘓的，以及被鬼附身的都帶到祂面前，祂都醫治了他們。 <verse number="25" style="v"/>因此，有大群的人跟從了祂，他們來自<char style="pn">加利利</char>、<char style="pn">低加坡里</char>、<char style="pn">耶路撒冷</char>、<char style="pn">猶太</char>和<char style="pn">約旦</char>河東。</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">八福</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶穌看見這些人群，就上了山，剛坐下，門徒便走到祂跟前， <verse number="2" style="v"/>祂就開口教導他們，說：</para>
+  <para style="q1">
+    <verse number="3" style="v"/>「心靈貧窮的人有福了，</para>
+  <para style="q1">因為天國是他們的。</para>
+  <para style="q1">
+    <verse number="4" style="v"/>哀慟的人有福了，</para>
+  <para style="q1">因為他們必得安慰。</para>
+  <para style="q1">
+    <verse number="5" style="v"/>謙和的人有福了，</para>
+  <para style="q1">因為他們必承受土地。</para>
+  <para style="q1">
+    <verse number="6" style="v"/>愛慕公義如饑似渴的人有福了，</para>
+  <para style="q1">因為他們必得飽足。</para>
+  <para style="q1">
+    <verse number="7" style="v"/>心存憐憫的人有福了，</para>
+  <para style="q1">因為他們必蒙上帝的憐憫。</para>
+  <para style="q1">
+    <verse number="8" style="v"/>心靈純潔的人有福了，</para>
+  <para style="q1">因為他們必看見上帝。</para>
+  <para style="q1">
+    <verse number="9" style="v"/>使人和睦的人有福了，</para>
+  <para style="q1">因為他們必被稱為上帝的兒女。</para>
+  <para style="q1">
+    <verse number="10" style="v"/>為義受迫害的人有福了，</para>
+  <para style="q1">因為天國是他們的。</para>
+  <para style="p">
+    <verse number="11" style="v"/>「人們因為我的緣故侮辱、迫害、肆意毀謗你們，你們就有福了。 <verse number="12" style="v"/>要歡喜快樂，因為你們在天上有很大的獎賞。他們也曾這樣迫害以前的先知。</para>
+  <para style="s1">鹽和光</para>
+  <para style="p">
+    <verse number="13" style="v"/>「你們是世上的鹽。如果鹽失去鹹味，怎能使它再變鹹呢？它將毫無用處，只有被丟在外面任人踐踏。 <verse number="14" style="v"/>你們是世上的光，如同建在山上的城一樣無法隱藏。 <verse number="15" style="v"/>人點亮了燈，不會把它放在斗底下，而是放在燈臺上，好照亮全家。 <verse number="16" style="v"/>同樣，你們的光也應當照在人面前，好讓他們看見你們的好行為，便讚美你們天上的父。</para>
+  <para style="s1">成全律法</para>
+  <para style="p">
+    <verse number="17" style="v"/>「不要以為我是來廢除律法和先知書，我不是來廢除，乃是來成全。 <verse number="18" style="v"/>我實在告訴你們，就是到天地都消失了，律法的一點一劃都不會廢除，全都要成就。 <verse number="19" style="v"/>所以，誰違背這些誡命中最小的一條，並教導別人違背，誰在天國將被稱為最小的。但誰遵守這些誡命，並教導別人遵守，誰在天國將被稱為大的。 <verse number="20" style="v"/>我告訴你們，除非你們的義勝過律法教師和法利賽人的義，否則斷不能進天國。</para>
+  <para style="s1">論仇恨</para>
+  <para style="p">
+    <verse number="21" style="v"/>「你們聽過吩咐古人的話，『不可殺人，殺人的要受審判。』 <verse number="22" style="v"/>但我告訴你們，凡無緣無故<note caller="+" style="f"><char style="fr" closed="false">5·22 </char><char style="ft" closed="false">有古卷無「無緣無故」。</char></note>向弟兄發怒的，要受審判；凡罵弟兄是白癡的，要受公會<note caller="+" style="f"><char style="fr" closed="false">5·22 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">公會</char><char style="ft" closed="false">」是當時猶太人的最高司法機構，處理宗教、道德和倫理等事務。</char></note>的審判；凡罵弟兄是笨蛋的，難逃地獄的火。</para>
+  <para style="p">
+    <verse number="23" style="v"/>「所以，你在祭壇前獻祭的時候，要是想起有弟兄和你有過節， <verse number="24" style="v"/>就該把祭物留在祭壇前，先去跟他和好，然後再來獻祭。</para>
+  <para style="p">
+    <verse number="25" style="v"/>「趁著你和告你的人還在去法庭的路上，你要趕緊與對方和解。不然，他會把你交給審判官，審判官會把你交給差役關進監牢。 <verse number="26" style="v"/>我實在告訴你，要是有一分錢沒有還清，你絕不能從那裡出來。</para>
+  <para style="s1">論通姦</para>
+  <para style="p">
+    <verse number="27" style="v"/>「你們聽過這樣的話，『不可通姦。』 <verse number="28" style="v"/>但我告訴你們，凡看見婦女就動淫念的，他在心裡已經犯了通姦罪。 <verse number="29" style="v"/>如果你的右眼使你犯罪，就把它剜掉！寧可失去身體的一部分，也比整個人下地獄好。 <verse number="30" style="v"/>如果你的右手使你犯罪，就把它砍掉！寧可失去身體的一部分，也比整個人下地獄好。</para>
+  <para style="s1">論休妻</para>
+  <para style="p">
+    <verse number="31" style="v"/>「還有話說，『人若休妻，必須給她休書』。 <verse number="32" style="v"/>但我告訴你們，除非是妻子不貞，否則，休妻就是使妻子犯通姦罪，娶被休女子的人也犯了通姦罪。</para>
+  <para style="s1">論起誓</para>
+  <para style="p">
+    <verse number="33" style="v"/>「你們也聽過吩咐古人的話，『不可違背誓言，總要向主遵守所起的誓。』 <verse number="34" style="v"/>但我告訴你們，不可起誓。不可指著天起誓，因為天是上帝的寶座。 <verse number="35" style="v"/>不可指著地起誓，因為地是上帝的腳凳。不可指著聖城<char style="pn">耶路撒冷</char>起誓，因為那是大君王的城。 <verse number="36" style="v"/>也不可指著自己的頭起誓，因為你不能使一根頭髮變黑或變白。 <verse number="37" style="v"/>你們說話，是就說是，不是就說不是，多說的便是來自那惡者<note caller="+" style="f"><char style="fr" closed="false">5·37 </char><char style="ft" closed="false">那惡者即魔鬼，又名撒旦。</char></note>。</para>
+  <para style="s1">論愛仇敵</para>
+  <para style="p">
+    <verse number="38" style="v"/>「你們聽過這樣的話，『以眼還眼，以牙還牙。』 <verse number="39" style="v"/>但我告訴你們，不要跟惡人作對。有人打你的右臉，連左臉也轉過來讓他打。 <verse number="40" style="v"/>有人想控告你，要奪取你的內衣，連外衣也給他。 <verse number="41" style="v"/>有人強迫你走一里路，你就跟他走二里路。 <verse number="42" style="v"/>有求你的，就給他；有向你借的，不可拒絕他。</para>
+  <para style="p">
+    <verse number="43" style="v"/>「你們聽過這樣的話，『要愛鄰居，恨仇敵。』 <verse number="44" style="v"/>但我告訴你們，要愛仇敵，為迫害你們的人禱告。 <verse number="45" style="v"/>這樣，你們才是天父的孩子。因為祂讓陽光照好人也照壞人，降雨給義人也給惡人。 <verse number="46" style="v"/>如果你們只愛那些愛你們的人，有什麼值得嘉獎的呢？就是稅吏也會這樣做。 <verse number="47" style="v"/>如果你們只問候自己的弟兄，有什麼特別呢？就是外族人也會這樣做。 <verse number="48" style="v"/>所以，你們要純全，正如你們的天父是純全的。</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">論賙濟窮人</para>
+  <para style="p">
+    <verse number="1" style="v"/>「你們要小心，行善的時候不可張揚，故意叫人看見，否則就不能得你們天父的賞賜了。</para>
+  <para style="p">
+    <verse number="2" style="v"/>「因此，賙濟窮人的時候，不要大吹大擂，像那些偽君子在會堂和街市上所行的一樣，以博取人們的讚賞。我實在告訴你們，他們得到的賞賜僅此而已。 <verse number="3" style="v"/>你們賙濟窮人的時候，右手所做的別叫左手知道， <verse number="4" style="v"/>要不聲不響地去做。這樣，鑒察隱祕事的天父必賞賜你們。</para>
+  <para style="s1">論禱告</para>
+  <para style="p">
+    <verse number="5" style="v"/>「你們禱告時，不要像偽君子那樣。他們喜歡站在會堂裡和十字路口上公開禱告，故意讓人看見。我實在告訴你們，他們得到的賞賜不過是人的讚賞。 <verse number="6" style="v"/>你們禱告的時候，要進入內室，關上門，向你們肉眼看不見的父祈禱，鑒察隱祕事的父必賞賜你們。</para>
+  <para style="p">
+    <verse number="7" style="v"/>「你們禱告時不可像外族人那樣喋喋不休，他們以為長篇大論，就必蒙上帝垂聽。 <verse number="8" style="v"/>不可像他們那樣，因為在你們禱告以前，你們的父已經知道你們的需要了。</para>
+  <para style="p">
+    <verse number="9" style="v"/>「你們應當這樣禱告，</para>
+  <para style="q1">『我們天上的父，</para>
+  <para style="q1">願人們都尊崇你的聖名，</para>
+  <para style="q1">
+    <verse number="10" style="v"/>願你的國度降臨，</para>
+  <para style="q1">願你的旨意在地上成就，就像在天上成就一樣。</para>
+  <para style="q1">
+    <verse number="11" style="v"/>求你今天賜給我們日用的飲食。</para>
+  <para style="q1">
+    <verse number="12" style="v"/>饒恕我們的罪，</para>
+  <para style="q1">就像我們饒恕了得罪我們的人。</para>
+  <para style="q1">
+    <verse number="13" style="v"/>不要讓我們遇見誘惑，</para>
+  <para style="q1">救我們脫離那惡者。</para>
+  <para style="q1">因為國度、權柄、榮耀都是你的，直到永遠。阿們！』</para>
+  <para style="p">
+    <verse number="14" style="v"/>「如果你們饒恕別人的過犯，你們的天父也必饒恕你們的過犯。 <verse number="15" style="v"/>如果你們不饒恕別人的過犯，你們的天父也不會饒恕你們的過犯。</para>
+  <para style="s1">論禁食</para>
+  <para style="p">
+    <verse number="16" style="v"/>「你們禁食的時候，不要像偽君子那樣愁眉苦臉，因為他們故意蓬頭垢面，好讓別人知道他們在禁食。我實在告訴你們，他們得到的賞賜不過是人的讚賞。 <verse number="17" style="v"/>你禁食的時候要梳頭洗臉， <verse number="18" style="v"/>不叫人們看出你在禁食，只讓你肉眼看不見的父知道，鑒察隱祕事的父必賞賜你。</para>
+  <para style="s1">論積財</para>
+  <para style="p">
+    <verse number="19" style="v"/>「不要為自己在世上積攢財寶，世上有蟲子咬，會生銹，又有賊闖進來偷。 <verse number="20" style="v"/>你們要把財寶積攢在天上，天上沒有蟲子咬，不會生銹，也沒有賊闖進來偷。 <verse number="21" style="v"/>要知道，你的財寶在哪裡，你的心也在哪裡。</para>
+  <para style="p">
+    <verse number="22" style="v"/>「眼睛是身上的燈。如果你的眼睛明亮，全身都光明； <verse number="23" style="v"/>要是你的眼睛昏花<note caller="+" style="f"><char style="fr" closed="false">6·23 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">昏花</char><char style="ft" closed="false">」或作「邪惡」。</char></note>，全身就黑暗。如果你裡面的光黑暗了，那黑暗是多麼大啊！</para>
+  <para style="p">
+    <verse number="24" style="v"/>「一個人不能服侍兩位主人，因為他不是恨這位、愛那位，就是重這位、輕那位。你們不能又事奉上帝，又崇拜金錢。</para>
+  <para style="s1">不要憂慮衣食</para>
+  <para style="p">
+    <verse number="25" style="v"/>「所以我告訴你們，不要為生活憂慮，如吃什麼、喝什麼，也不要為身體憂慮，如穿什麼。難道生命不比飲食重要嗎？身體不比穿著重要嗎？</para>
+  <para style="p">
+    <verse number="26" style="v"/>「你們看天上的飛鳥，牠們不種，不收，也不在倉裡積存糧食，你們的天父尚且養活牠們，難道你們還不如飛鳥貴重嗎？ <verse number="27" style="v"/>你們誰能用憂慮使自己多活片刻呢？</para>
+  <para style="p">
+    <verse number="28" style="v"/>「何必為穿著憂慮呢？你們看看野地的百合花是如何生長的，它們既不勞苦，也不紡織。 <verse number="29" style="v"/>但我告訴你們，就連<char style="pn">所羅門</char>王最顯赫時的穿戴還不如一朵百合花！ <verse number="30" style="v"/>你們的信心太小了！野地裡的草今天還在，明天就丟在爐中化為灰燼，上帝還這樣裝扮它們，何況你們呢？ <verse number="31" style="v"/>所以，你們不要憂慮『吃什麼？喝什麼？穿什麼？』 <verse number="32" style="v"/>因為這些都是外族人的追求，你們的天父知道你們的需要。</para>
+  <para style="p">
+    <verse number="33" style="v"/>「你們要先尋求上帝的國和祂的義，這一切都會賜給你們。 <verse number="34" style="v"/>所以，不要為明天憂慮，因為明天自有明天的憂慮，一天的難處一天擔就夠了。</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">責人先責己</para>
+  <para style="p">
+    <verse number="1" style="v"/>「不要論斷別人，免得你們被論斷。 <verse number="2" style="v"/>因為你們怎樣論斷別人，也必照樣被論斷；你們用什麼尺度衡量別人，也要用什麼尺度衡量你們。 <verse number="3" style="v"/>為什麼你只看見你弟兄眼中的小刺，卻看不見自己眼中的大樑呢？ <verse number="4" style="v"/>既然你自己眼中有大樑，又怎麼能對弟兄說『讓我除去你眼中的小刺』呢？ <verse number="5" style="v"/>你這偽君子啊！要先除掉自己眼中的大樑，才能看得清楚，好清除弟兄眼中的小刺。</para>
+  <para style="p">
+    <verse number="6" style="v"/>「不要把聖物給狗，免得狗轉過頭來咬你們，也不要把珍珠丟在豬前，免得豬踐踏了珍珠。</para>
+  <para style="s1">祈求、尋找、叩門</para>
+  <para style="p">
+    <verse number="7" style="v"/>「祈求，就會給你們；尋找，就會尋見；叩門，就會給你們開門。 <verse number="8" style="v"/>因為凡祈求的，就得到；尋找的，就尋見；叩門的，就給他開門。</para>
+  <para style="p">
+    <verse number="9" style="v"/>「你們做父親的，誰會在兒子要餅時給他石頭， <verse number="10" style="v"/>要魚時給他毒蛇呢？ <verse number="11" style="v"/>你們雖然邪惡，尚且知道把好東西給兒女，你們的天父豈不更要把好東西賜給求祂的人嗎？</para>
+  <para style="p">
+    <verse number="12" style="v"/>「所以，你們希望人怎樣待你們，就要怎樣待人，這是律法和先知的教導。</para>
+  <para style="s1">辨別與抉擇</para>
+  <para style="p">
+    <verse number="13" style="v"/>「你們要進窄門，因為通向滅亡的門大，路寬，進去的人也多； <verse number="14" style="v"/>但通向永生的門小，路窄，找到的人也少。</para>
+  <para style="p">
+    <verse number="15" style="v"/>「你們要提防假先知，他們披著羊皮到你們當中，骨子裡卻是凶殘的狼。 <verse number="16" style="v"/>你們可以憑他們結的果子認出他們。荊棘怎能結出葡萄呢？蒺藜怎能長出無花果呢？ <verse number="17" style="v"/>同樣，好樹結好果子，壞樹結壞果子； <verse number="18" style="v"/>好樹結不出壞果子，壞樹也結不出好果子。 <verse number="19" style="v"/>凡不結好果子的樹，都要被砍下來丟在火裡。 <verse number="20" style="v"/>因此，你們可以憑他們結的果子認出他們。 <verse number="21" style="v"/>並不是所有稱呼我『主啊，主啊』的人都能進天國，只有遵行我天父旨意的人才能進去。 <verse number="22" style="v"/>在審判那天，很多人會對我說，『主啊，主啊，我們不是奉你的名傳道，奉你的名趕鬼，奉你的名行了許多神蹟嗎？』 <verse number="23" style="v"/>我會清楚地告訴他們，『我從來不認識你們，你們這些作惡的人走開！』</para>
+  <para style="s1">兩種蓋房子的人</para>
+  <para style="p">
+    <verse number="24" style="v"/>「所以，凡聽了我的這些話就去行的人，就像聰明人把房子建在磐石上。 <verse number="25" style="v"/>任由風吹雨打、洪水沖擊，房子仍屹立不倒，因為它建基在磐石上。 <verse number="26" style="v"/>凡聽了我這些話不去行的，就像愚昧人把房子建在沙土上。 <verse number="27" style="v"/>遇到風吹雨打、洪水沖擊，房子就倒塌了，而且倒塌得很厲害。」</para>
+  <para style="p">
+    <verse number="28" style="v"/>大家聽完耶穌這番教導，都很驚奇， <verse number="29" style="v"/>因為祂教導他們時像位有權柄的人，不像他們的律法教師。</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">痲瘋病痊癒</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶穌下山的時候，有許多人跟著。 <verse number="2" style="v"/>有一個患痲瘋病的人跑來跪在祂跟前，說：「主啊，如果你肯，一定能使我潔淨。」</para>
+  <para style="p">
+    <verse number="3" style="v"/>耶穌伸手摸他，說：「我肯，你潔淨了吧！」那人的痲瘋病就立刻潔淨了。</para>
+  <para style="p">
+    <verse number="4" style="v"/>耶穌對他說：「不要把這事告訴別人，要去讓祭司查看你的身體，並且照<char style="pn">摩西</char>的規定獻祭，向眾人證明你已經潔淨了。」</para>
+  <para style="s1">百夫長的信心</para>
+  <para style="p">
+    <verse number="5" style="v"/>耶穌到了<char style="pn">迦百農</char>，一個百夫長前來向祂求助，說： <verse number="6" style="v"/>「主啊，我的僕人癱瘓，躺在家裡，非常痛苦。」</para>
+  <para style="p">
+    <verse number="7" style="v"/>耶穌說：「我這就去醫治他。」</para>
+  <para style="p">
+    <verse number="8" style="v"/>百夫長說：「主啊，我不配讓你親自來我家。你只要說一句話，我僕人就會痊癒。 <verse number="9" style="v"/>因為我有上司，也有部下。我命令我的部下去，他就去；要他來，他就來。我吩咐僕人做什麼事，他一定照辦。」</para>
+  <para style="p">
+    <verse number="10" style="v"/>耶穌聽了，感到驚奇，便對跟隨祂的人說：「我實在告訴你們，我在<char style="pn">以色列</char>從未見過信心這麼大的人。 <verse number="11" style="v"/>我告訴你們，將來有許多從東從西來的人會在天國與<char style="pn">亞伯拉罕</char>、<char style="pn">以撒</char>和<char style="pn">雅各</char>一同歡宴。 <verse number="12" style="v"/>但那些本應承受天國的人反會被趕出去，在黑暗裡哀哭切齒。」</para>
+  <para style="p">
+    <verse number="13" style="v"/>耶穌對百夫長說：「你回去吧！就照你所信的給你成就。」就在那時候，他的僕人便痊癒了。</para>
+  <para style="s1">治病趕鬼</para>
+  <para style="p">
+    <verse number="14" style="v"/>耶穌來到<char style="pn">彼得</char>家，看見<char style="pn">彼得</char>的岳母正在發燒，躺在床上。 <verse number="15" style="v"/>耶穌一摸她的手，燒就退了。她便起來服侍耶穌。</para>
+  <para style="p">
+    <verse number="16" style="v"/>當天晚上，有人帶著許多被鬼附身的人來見耶穌。耶穌一句話就把鬼趕出去了，並醫好了所有的病人。 <verse number="17" style="v"/>這是要應驗<char style="pn">以賽亞</char>先知的話：「祂擔當了我們的軟弱，背負了我們的疾病。」</para>
+  <para style="s1">跟從耶穌的代價</para>
+  <para style="p">
+    <verse number="18" style="v"/>耶穌看到人群圍著祂，就吩咐門徒渡到湖對岸。 <verse number="19" style="v"/>這時，有一位律法教師上前對耶穌說：「老師，無論你往哪裡去，我都要跟從你。」</para>
+  <para style="p">
+    <verse number="20" style="v"/>耶穌說：「狐狸有洞，飛鳥有窩，人子卻沒有安枕之處。」</para>
+  <para style="p">
+    <verse number="21" style="v"/>另一個門徒對耶穌說：「主啊，請讓我先回去安葬我的父親。」 <verse number="22" style="v"/>耶穌對他說：「跟從我，讓死人去埋葬他們的死人吧！」</para>
+  <para style="s1">平靜風浪</para>
+  <para style="p">
+    <verse number="23" style="v"/>耶穌上了船，門徒也跟著祂上了船。 <verse number="24" style="v"/>忽然，湖面上狂風大作，波濤洶湧，船快要被巨浪吞沒，耶穌卻在睡覺。</para>
+  <para style="p">
+    <verse number="25" style="v"/>門徒連忙叫醒耶穌，說：「主啊，救命！我們快淹死了！」</para>
+  <para style="p">
+    <verse number="26" style="v"/>耶穌答道：「你們的信心太小了，為什麼害怕呢？」於是祂起來斥責風和浪，風浪就完全平靜了。</para>
+  <para style="p">
+    <verse number="27" style="v"/>門徒很驚奇，說：「祂究竟是什麼人？連風浪都聽祂的！」</para>
+  <para style="s1">治好兩個被鬼附身的人</para>
+  <para style="p">
+    <verse number="28" style="v"/>耶穌到了對岸<char style="pn">加大拉</char><note caller="+" style="f"><char style="fr" closed="false">8·28 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">加大拉</char><char style="ft" closed="false">」即格拉森地區。</char></note>人的地方，有兩個被鬼附身的人從墳地裡出來見祂。他們非常凶惡，沒有人敢從那裡經過。 <verse number="29" style="v"/>他們喊著說：「上帝的兒子啊！我們和你有什麼關係？時候還沒有到，你就來叫我們受苦嗎？」</para>
+  <para style="p">
+    <verse number="30" style="v"/>當時，有一大群豬在附近吃食。 <verse number="31" style="v"/>鬼就哀求耶穌：「如果你要趕我們出去，就讓我們進入豬群吧！」</para>
+  <para style="p">
+    <verse number="32" style="v"/>耶穌說：「去吧！」</para>
+  <para style="p">於是，鬼從那二人身上出來，進入豬群，整群豬就一路奔下陡坡，衝進湖裡淹死了。 <verse number="33" style="v"/>放豬的人逃進城，把事情的經過以及被鬼附身者的遭遇告訴了城裡的人。 <verse number="34" style="v"/>於是，全城的人都出來見耶穌，見到後，便請求祂離開那地方。</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">醫治癱子</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶穌坐船回到湖對岸自己住的城鎮。</para>
+  <para style="p">
+    <verse number="2" style="v"/>有人用擔架把一個癱子抬到耶穌面前。耶穌看見他們的信心，就對癱子說：「孩子，放心吧！你的罪得到赦免了。」</para>
+  <para style="p">
+    <verse number="3" style="v"/>幾個律法教師聽了，心裡想：「這個人是在褻瀆上帝。」</para>
+  <para style="p">
+    <verse number="4" style="v"/>耶穌知道他們的心思，就說：「你們為什麼心懷惡念呢？ <verse number="5" style="v"/>說『你的罪得到赦免了』容易呢？還是說『你起來行走』容易呢？ <verse number="6" style="v"/>如今我要讓你們知道人子在世上有赦罪的權柄。」於是祂對癱子說：「起來！收拾你的擔架回家去吧。」</para>
+  <para style="p">
+    <verse number="7" style="v"/>那人立刻站起來，回家去了。 <verse number="8" style="v"/>看見的人都充滿了敬畏，就讚美把這樣的權柄賜給人的上帝。</para>
+  <para style="s1">呼召馬太</para>
+  <para style="p">
+    <verse number="9" style="v"/>耶穌離開那裡往前走，看見一個名叫<char style="pn">馬太</char>的人坐在收稅站裡，便對他說：「跟從我！」<char style="pn">馬太</char>就站起來跟從了耶穌。</para>
+  <para style="p">
+    <verse number="10" style="v"/>耶穌在<char style="pn">馬太</char>家裡坐席的時候，很多稅吏和罪人前來跟耶穌和祂的門徒一起坐席。 <verse number="11" style="v"/>法利賽人看見了，就質問耶穌的門徒：「你們的老師為何跟稅吏和罪人一起吃飯？」 <verse number="12" style="v"/>耶穌聽見後，答道：「健康的人不需要醫生，有病的人才需要。 <verse number="13" style="v"/>聖經上說，『我喜愛憐憫之心，而非祭物』，你們去揣摩這句話的意思吧。我來不是要召義人，乃是要召罪人。」</para>
+  <para style="s1">禁食的問題</para>
+  <para style="p">
+    <verse number="14" style="v"/>那時，<char style="pn">約翰</char>的門徒來問耶穌：「我們和法利賽人常常禁食，為什麼你的門徒不禁食呢？」</para>
+  <para style="p">
+    <verse number="15" style="v"/>耶穌對他們說：「新郎和賓客還在一起的時候，賓客怎能悲傷呢？但有一天新郎將被帶走，那時他們就要禁食了。</para>
+  <para style="p">
+    <verse number="16" style="v"/>「沒有人用新布縫補舊衣，恐怕新布會把舊衣扯破，破洞會更大。 <verse number="17" style="v"/>也沒有人用舊皮囊來盛新酒，否則皮囊會漲破，酒也漏了，皮囊也毀了。人們總是把新酒裝在新皮囊裡，以便兩樣都能保住。」</para>
+  <para style="s1">起死回生</para>
+  <para style="p">
+    <verse number="18" style="v"/>當耶穌在說話的時候，來了一個管理會堂的人跪在祂面前，說：「我的女兒剛剛死了，請你去把手按在她身上，她就會活過來。」 <verse number="19" style="v"/>耶穌和門徒就起身跟著他去了。 <verse number="20" style="v"/>途中，有一個患了十二年血漏病的女人擠到耶穌的背後，摸了一下祂衣服的穗邊， <verse number="21" style="v"/>因為她心想：「我只要摸到祂的衣服，病就會好。」 <verse number="22" style="v"/>耶穌轉過頭來，看見她，就說：「女兒，放心吧，你的信心救了你。」就在那一刻，她的頑疾痊癒了。</para>
+  <para style="p">
+    <verse number="23" style="v"/>耶穌來到管理會堂之人的家，看見殯葬的吹樂手和亂嚷嚷的人群， <verse number="24" style="v"/>就吩咐他們：「你們出去吧，這女孩並沒有死，只是睡著了。」他們都譏笑祂。</para>
+  <para style="p">
+    <verse number="25" style="v"/>耶穌讓眾人都出去，然後進去拉著女孩的手，女孩就起來了。 <verse number="26" style="v"/>這件事傳遍了整個地區。</para>
+  <para style="s1">醫治瞎子和啞巴</para>
+  <para style="p">
+    <verse number="27" style="v"/>耶穌從那裡往前走，有兩個瞎子跟著祂，高聲呼叫：「<char style="pn">大衛</char>的後裔啊，可憐我們吧！」</para>
+  <para style="p">
+    <verse number="28" style="v"/>耶穌進了房子，那兩個瞎子來到祂面前。耶穌問他們：「你們相信我能做這事嗎？」他們說：「主啊，我們相信。」</para>
+  <para style="p">
+    <verse number="29" style="v"/>於是，耶穌摸他們的眼睛，並說：「照你們的信心成全你們吧。」 <verse number="30" style="v"/>他們立刻得見光明。耶穌鄭重地叮囑他們：「不要張揚這件事。」 <verse number="31" style="v"/>但他們出去後把祂所行的事傳遍了那一帶。</para>
+  <para style="p">
+    <verse number="32" style="v"/>他們正要離去，有人帶著一個被鬼附身的啞巴來見耶穌。 <verse number="33" style="v"/>耶穌把鬼趕出去後，啞巴就能說話了。</para>
+  <para style="p">眾人都感到驚奇，說：「在<char style="pn">以色列</char>從未見過這樣的事。」</para>
+  <para style="p">
+    <verse number="34" style="v"/>法利賽人卻說：「祂只不過是靠鬼王趕鬼。」</para>
+  <para style="s1">耶穌憐憫眾人</para>
+  <para style="p">
+    <verse number="35" style="v"/>耶穌走遍了各城各鄉，在會堂裡教導人，傳講天國的福音，醫治各樣的疾病。 <verse number="36" style="v"/>祂看見眾人，心裡憐憫他們，因為他們困苦無助，好像沒有牧人的羊。 <verse number="37" style="v"/>耶穌對門徒說：「要收割的莊稼很多，工人卻很少。 <verse number="38" style="v"/>因此，你們要祈求莊稼的主人派更多的工人去收割。」</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">差遣使徒</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶穌叫了十二位門徒來，將權柄賜給他們，使他們能夠趕出污鬼、醫治各樣的疾病。 <verse number="2" style="v"/>以下是這十二位使徒的名字：</para>
+  <para style="p">首先是<char style="pn">西門</char>，又名<char style="pn">彼得</char>，還有<char style="pn">彼得</char>的兄弟<char style="pn">安得烈</char>、<char style="pn">西庇太</char>的兒子<char style="pn">雅各</char>、<char style="pn">雅各</char>的兄弟<char style="pn">約翰</char>、 <verse number="3" style="v"/><char style="pn">腓力</char>、<char style="pn">巴多羅買</char>、<char style="pn">多馬</char>、稅吏<char style="pn">馬太</char>、<char style="pn">亞勒腓</char>的兒子<char style="pn">雅各</char>、<char style="pn">達太</char>、 <verse number="4" style="v"/>激進黨人<note caller="+" style="f"><char style="fr" closed="false">10·4 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">激進黨人</char><char style="ft" closed="false">」指當時激進的猶太民族主義者，常以行動反抗統治他們的羅馬政府。</char></note><char style="pn">西門</char>和出賣耶穌的<char style="pn">加略</char>人<char style="pn">猶大</char>。</para>
+  <para style="p">
+    <verse number="5" style="v"/>耶穌差遣這十二個人出去，囑咐他們：「外族人的地方不要去，<char style="pn">撒瑪利亞</char>人的城鎮也不要進， <verse number="6" style="v"/>要到<char style="pn">以色列</char>人當中尋找迷失的羊。</para>
+  <para style="p">
+    <verse number="7" style="v"/>「你們要邊走邊傳，『天國臨近了！』 <verse number="8" style="v"/>要醫好病人，叫死人復活，使痲瘋病人痊癒，趕走邪靈。你們白白地得來，也應當白白地給人。 <verse number="9" style="v"/>出門時錢袋裡不要帶金、銀、銅幣， <verse number="10" style="v"/>不要帶行李、備用的衣服、鞋子或手杖，因為做工的理應得到供應。 <verse number="11" style="v"/>你們無論到哪座城、哪個村，要在那裡尋找願意接待你們的人，然後住在他家，一直住到離開。 <verse number="12" style="v"/>你們進他家的時候，要為他們祝福。 <verse number="13" style="v"/>如果那家配得福氣，你們的祝福必臨到他們；如果那家不配蒙福，祝福仍歸給你們。 <verse number="14" style="v"/>如果有人不接待你們，不聽你們傳的信息，你們離開那家或那城時，就把腳上的塵土跺掉作為對他們的警告。 <verse number="15" style="v"/>我實在告訴你們，在審判之日，他們所受的痛苦比<char style="pn">所多瑪</char>和<char style="pn">蛾摩拉</char>所受的還大！</para>
+  <para style="s1">將臨的迫害</para>
+  <para style="p">
+    <verse number="16" style="v"/>「聽著，我差你們出去，就好像使羊走進狼群一般。所以，你們要像蛇一樣機靈，像鴿子一樣馴良。</para>
+  <para style="p">
+    <verse number="17" style="v"/>「你們要小心謹慎，因為人們要把你們送上法庭，也要在會堂裡鞭打你們。 <verse number="18" style="v"/>你們要因我的緣故被帶到官長和君王面前，在他們和外族人面前為我做見證。 <verse number="19" style="v"/>當你們被押送公堂時，不用顧慮如何應對，或說什麼話，那時必會賜給你們當說的話。 <verse number="20" style="v"/>因為那時候說話的不是你們自己，乃是你們父的靈藉著你們說話。</para>
+  <para style="p">
+    <verse number="21" style="v"/>「那時，人必把自己的弟兄置於死地，父親必把兒子置於死地，兒女必反叛父母，置他們於死地。 <verse number="22" style="v"/>你們將為我的名而被眾人憎恨，但堅忍到底的必定得救。 <verse number="23" style="v"/>如果你們在一個地方遭迫害，就避到另一個地方。我實在告訴你們，沒等你們走遍<char style="pn">以色列</char>的城鎮，人子就來了。</para>
+  <para style="p">
+    <verse number="24" style="v"/>「學生不能高過老師，奴僕也不能大過主人。 <verse number="25" style="v"/>學生頂多和老師一樣，奴僕頂多和主人一樣。連一家之主都被罵成是別西卜<note caller="+" style="f"><char style="fr" closed="false">10·25 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">別西卜</char><char style="ft" closed="false">」是鬼王的名字。</char></note>，更何況祂的家人呢？</para>
+  <para style="p">
+    <verse number="26" style="v"/>「不要害怕那些迫害你們的人。因為掩蓋的事終會暴露出來，隱藏的秘密終會被人知道。 <verse number="27" style="v"/>你們要把我私下告訴你們的當眾講出來，你們要在屋頂上把聽到的悄悄話宣告出來。 <verse number="28" style="v"/>那些只能殺害身體，不能毀滅靈魂的人，不用怕他們。但要畏懼那位有權將身體和靈魂一同毀滅在地獄裡的上帝。 <verse number="29" style="v"/>兩隻麻雀不是只賣一個銅錢嗎？然而沒有天父的許可，一隻也不會掉在地上。 <verse number="30" style="v"/>就連你們的頭髮都被數過了。 <verse number="31" style="v"/>所以不要害怕，你們比許多麻雀更貴重！</para>
+  <para style="p">
+    <verse number="32" style="v"/>「凡公開承認我的，我在天父面前也必承認他； <verse number="33" style="v"/>凡公開不承認我的，我在天父面前也必不承認他。</para>
+  <para style="s1">跟從主的代價</para>
+  <para style="p">
+    <verse number="34" style="v"/>「不要以為我來了會讓天下太平，我並非帶來和平，乃是帶來刀劍。 <verse number="35" style="v"/>因為我來是要叫兒子與父親作對，女兒與母親作對，媳婦與婆婆作對， <verse number="36" style="v"/>家人之間反目成仇。</para>
+  <para style="p">
+    <verse number="37" style="v"/>「愛父母過於愛我的人不配作我的門徒；愛兒女過於愛我的人不配作我的門徒； <verse number="38" style="v"/>不肯背起他的十字架跟從我的人不配作我的門徒。 <verse number="39" style="v"/>試圖保全自己生命的反而會失去生命，但為我捨棄生命的反而會得到生命。</para>
+  <para style="s1">得賞賜</para>
+  <para style="p">
+    <verse number="40" style="v"/>「人接待你們就是接待我，接待我就是接待差我來的那位。 <verse number="41" style="v"/>因為某人是先知而接待他的，必得到和先知一樣的賞賜；因為某人是義人而接待他的，必得到和義人一樣的賞賜。 <verse number="42" style="v"/>人若接待我門徒中最卑微的人，並因為他是我的門徒而給他一杯涼水喝，我實在告訴你們，那人必得到賞賜。」</para>
+  <chapter number="11" style="c"/>
+  <para style="s1">耶穌和施洗者約翰</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶穌囑咐完十二個門徒，就離開那裡，到附近的城鎮傳道和教導人。</para>
+  <para style="p">
+    <verse number="2" style="v"/>
+    <char style="pn">約翰</char>在監獄中聽到基督所做的事，就差兩個門徒去問祂： <verse number="3" style="v"/>「你就是那位我們所等候的救主嗎？還是我們要等別人呢？」</para>
+  <para style="p">
+    <verse number="4" style="v"/>耶穌回答說：「你們回去把所見所聞告訴<char style="pn">約翰</char>， <verse number="5" style="v"/>就是瞎子看見，瘸子走路，痲瘋病人得潔淨，聾子聽見，死人復活，窮人聽到福音。 <verse number="6" style="v"/>凡對我沒有失去信心的人有福了！」</para>
+  <para style="p">
+    <verse number="7" style="v"/>他們離開後，耶穌對眾人談起<char style="pn">約翰</char>，說：「你們從前去曠野要看什麼呢？看隨風搖動的蘆葦嗎？ <verse number="8" style="v"/>如果不是，你們到底想看什麼？是看穿綾羅綢緞的人嗎？那些穿綾羅綢緞的人生活在王宮裡。 <verse number="9" style="v"/>你們究竟想看什麼？看先知嗎？是的，我告訴你們，他不只是先知。 <verse number="10" style="v"/>聖經上說，『看啊，我要差遣我的使者在你前面為你預備道路』，這裡所指的就是<char style="pn">約翰</char>。 <verse number="11" style="v"/>我實在告訴你們，凡婦人所生的，沒有一個興起來比施洗者<char style="pn">約翰</char>大，然而天國裡最微不足道的也比他大。</para>
+  <para style="p">
+    <verse number="12" style="v"/>「從施洗者<char style="pn">約翰</char>到現在，天國一直在強勁地擴展著，強勁的人要抓住它。 <verse number="13" style="v"/>因為到<char style="pn">約翰</char>為止，所有的先知和律法都在預言天國的事。 <verse number="14" style="v"/>如果你們願意接受，<char style="pn">約翰</char>就是那要來的<char style="pn">以利亞</char>。 <verse number="15" style="v"/>有耳可聽的都應該留心聽。</para>
+  <para style="p">
+    <verse number="16" style="v"/>「這個世代的人好像什麼呢？他們好像一群在街上玩耍的兒童對別的孩子說，</para>
+  <para style="q1">
+    <verse number="17" style="v"/>『我們吹娶親的樂曲，</para>
+  <para style="q1">你們不跳舞；</para>
+  <para style="q1">我們唱送葬的哀歌，</para>
+  <para style="q1">你們不悲傷。』</para>
+  <para style="m">
+    <verse number="18" style="v"/>
+    <char style="pn">約翰</char>來了，也不吃也不喝，他們就說他被鬼附身。 <verse number="19" style="v"/>人子來了，又吃又喝，他們就說祂是貪吃好酒之徒，與稅吏和罪人為友。然而智慧會在她的作為上得到驗證。」</para>
+  <para style="s1">不肯悔改的城</para>
+  <para style="p">
+    <verse number="20" style="v"/>那時，耶穌開始責備一些城鎮，因為祂在那裡行了許多神蹟，當地的居民仍不肯悔改。 <verse number="21" style="v"/>祂說：「<char style="pn">哥拉汛</char>啊，你大禍臨頭了！<char style="pn">伯賽大</char>啊，你大禍臨頭了！我在你們當中所行的神蹟，如果行在<char style="pn">泰爾</char>和<char style="pn">西頓</char>，那裡的人早就身披麻衣，頭蒙灰塵，悔改了。 <verse number="22" style="v"/>所以我告訴你們，在審判之日，你們將比<char style="pn">泰爾</char>和<char style="pn">西頓</char>受更重的刑罰！</para>
+  <para style="p">
+    <verse number="23" style="v"/>「<char style="pn">迦百農</char>啊，你將被提升到天上嗎？不！你將被打落到陰間。因為若把在你那裡所行的神蹟行在<char style="pn">所多瑪</char>，它肯定會存留到今天。 <verse number="24" style="v"/>所以我告訴你們，在審判之日，你們將比<char style="pn">所多瑪</char>受更重的刑罰！」</para>
+  <para style="s1">勞苦者得安息</para>
+  <para style="p">
+    <verse number="25" style="v"/>那時，耶穌說：「父啊，天地的主，我頌讚你，因為你把這些事向聰明、有學問的人隱藏起來，卻啟示給像孩童一般的人。 <verse number="26" style="v"/>父啊，是的，這正是你的美意。 <verse number="27" style="v"/>我父將一切交給了我。除了父，沒有人認識子；除了子和受子啟示的人，沒有人認識父。</para>
+  <para style="p">
+    <verse number="28" style="v"/>「所有勞苦困乏、背負重擔的人啊，到我這裡來吧！我要賜給你們安息。 <verse number="29" style="v"/>我心柔和謙卑，你們要負我的軛，向我學習，這樣你們的心靈必得享安息。 <verse number="30" style="v"/>因為我的軛容易負，我的擔子很輕省。」</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">安息日的問題</para>
+  <para style="p">
+    <verse number="1" style="v"/>那時，耶穌在安息日經過一片麥田。祂的門徒餓了，便隨手搓麥穗吃。 <verse number="2" style="v"/>法利賽人看見後，對耶穌說：「你看，你的門徒做了在安息日不准做的事！」</para>
+  <para style="p">
+    <verse number="3" style="v"/>耶穌回答說：「你們沒有讀過<char style="pn">大衛</char>的事蹟嗎？當時他和部下餓了， <verse number="4" style="v"/>進入上帝的殿，吃了獻給上帝的供餅。這餅只有祭司才可以吃，<char style="pn">大衛</char>和部下是不准吃的。 <verse number="5" style="v"/>此外律法書又記載，安息日，祭司在聖殿裡觸犯了守安息日的規條也不算有罪。你們沒有讀過嗎？ <verse number="6" style="v"/>我告訴你們，這裡有一人比聖殿更偉大， <verse number="7" style="v"/>如果你們明白『我喜愛憐憫之心，而非祭物』這句經文的意義，就不會冤枉無辜了。 <verse number="8" style="v"/>因為人子是安息日的主。」</para>
+  <para style="p">
+    <verse number="9" style="v"/>耶穌離開那裡，走進會堂， <verse number="10" style="v"/>裡面有個人，一隻手是萎縮的。法利賽人企圖找藉口控告耶穌，就問祂：「安息日可不可以醫病呢？」</para>
+  <para style="p">
+    <verse number="11" style="v"/>耶穌回答說：「如果你們有一隻羊在安息日掉進坑裡，難道你們不把牠拉上來嗎？ <verse number="12" style="v"/>人比羊要貴重多了！所以在安息日行善合情合理。」</para>
+  <para style="p">
+    <verse number="13" style="v"/>於是，耶穌轉過身來對那人說：「把手伸出來！」那人一伸手，手就復原了，跟另一隻手一樣健康。 <verse number="14" style="v"/>法利賽人卻走了出去，策劃怎樣除掉耶穌。</para>
+  <para style="s1">上帝的僕人</para>
+  <para style="p">
+    <verse number="15" style="v"/>耶穌知道了，就離開那個地方。很多人跟隨祂，耶穌醫好了其中所有患病的人， <verse number="16" style="v"/>吩咐他們不要洩露祂的身分。 <verse number="17" style="v"/>這是要應驗<char style="pn">以賽亞</char>先知的話：</para>
+  <para style="q1">
+    <verse number="18" style="v"/>「看啊！我所揀選、</para>
+  <para style="q1">所眷愛、所喜悅的僕人，</para>
+  <para style="q1">我要將我的靈賜給祂，</para>
+  <para style="q1">祂要向萬邦宣揚正義。</para>
+  <para style="q1">
+    <verse number="19" style="v"/>祂不爭競，不喧嚷，</para>
+  <para style="q1">街上也聽不見祂的聲音。</para>
+  <para style="q1">
+    <verse number="20" style="v"/>壓傷的蘆葦，祂不折斷；</para>
+  <para style="q1">將殘的燈火，祂不吹滅；</para>
+  <para style="q1">祂終必使正義得勝。</para>
+  <para style="q1">
+    <verse number="21" style="v"/>普世都要仰望祂的聖名。」</para>
+  <para style="p">
+    <verse number="22" style="v"/>有人帶一個被鬼附身、又瞎又啞的人來見耶穌，耶穌便醫好他，使他能說能看。 <verse number="23" style="v"/>眾人都很驚奇，就說：「這人會不會是<char style="pn">大衛</char>的那個後裔？」 <verse number="24" style="v"/>法利賽人聽見後卻說：「祂不過是靠鬼王<char style="pn">別西卜</char>趕鬼罷了。」</para>
+  <para style="p">
+    <verse number="25" style="v"/>耶穌知道他們的心思，就說：「一個國內部自相紛爭，必然滅亡；一座城、一個家內部自相紛爭，必然崩潰。 <verse number="26" style="v"/>若撒旦驅逐撒旦，就是自相紛爭，牠的國怎能維持呢？ <verse number="27" style="v"/>若我是靠別西卜趕鬼，你們的子弟又是靠誰趕鬼呢？為此，他們要審判你們。 <verse number="28" style="v"/>若我是靠上帝的靈趕鬼，就是上帝的國已降臨在你們中間了。</para>
+  <para style="p">
+    <verse number="29" style="v"/>「人如何進入壯漢家中搶奪他的財物呢？除非先把那壯漢捆綁起來，才有可能搶劫他的家。</para>
+  <para style="p">
+    <verse number="30" style="v"/>「不與我為友就是與我為敵；不助我召集就是故意拆散。 <verse number="31" style="v"/>所以我告訴你們，一切的罪和褻瀆的話都可以得到赦免，但褻瀆聖靈的罪必得不到赦免。 <verse number="32" style="v"/>說話得罪人子的，還可以得到赦免；但那些說話冒犯聖靈的，今生永世都得不到赦免。</para>
+  <para style="s1">樹與果</para>
+  <para style="p">
+    <verse number="33" style="v"/>「好樹結好果子，壞樹結壞果子，看果子就能知道樹的好壞。 <verse number="34" style="v"/>你們這些毒蛇的後代！你們心裡邪惡，又怎能講出好話呢？因為心裡充滿的，口裡自然會說出來。 <verse number="35" style="v"/>善人心存良善，就從他裡面發出良善；惡人心存邪惡，就從他裡面發出邪惡。 <verse number="36" style="v"/>我告訴你們，在審判之日，人將為自己所說的每一句閒話負責， <verse number="37" style="v"/>因為將來要憑你口中的話來判斷你是否有罪。」</para>
+  <para style="s1">求神蹟</para>
+  <para style="p">
+    <verse number="38" style="v"/>當時，有幾個律法教師和法利賽人對耶穌說：「老師，我們想要看你行個神蹟。」 <verse number="39" style="v"/>耶穌回答說：「一個邪惡淫亂的世代想看神蹟，可是除了<char style="pn">約拿</char>先知的神蹟以外，再沒有神蹟給他們看。 <verse number="40" style="v"/><char style="pn">約拿</char>在大魚腹中三日三夜，人子也要在地裡三日三夜。 <verse number="41" style="v"/>在審判的日子，<char style="pn">尼尼微</char>人和這世代的人都要起來<note caller="+" style="f"><char style="fr" closed="false">12·41 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">起來</char><char style="ft" closed="false">」或作「復活」。</char></note>，<char style="pn">尼尼微</char>人要定這個世代的罪，因為他們聽到<char style="pn">約拿</char>的宣告，就悔改了。看啊！這裡有一人比<char style="pn">約拿</char>更偉大。 <verse number="42" style="v"/>在審判的日子，南方的女王和這世代的人都要起來，她要定這個世代的罪，因為她曾不遠千里來聽<char style="pn">所羅門</char>王的智言慧語。看啊！這裡有一人比<char style="pn">所羅門</char>王更偉大。</para>
+  <para style="s1">乘虛而入</para>
+  <para style="p">
+    <verse number="43" style="v"/>「有一個污鬼離開了牠以前所附的人，在乾旱無水之地四處遊蕩，尋找安歇之處，卻沒有找到。 <verse number="44" style="v"/>於是牠說，『我要回到老地方。』牠回去後，看見裡面空著，打掃得又乾淨又整齊， <verse number="45" style="v"/>就去帶來了七個比自己更邪惡的鬼一起住在那裡。那人的下場比從前更慘了。這個邪惡的世代也會這樣。」</para>
+  <para style="s1">真正的親屬</para>
+  <para style="p">
+    <verse number="46" style="v"/>耶穌還在和眾人說話的時候，祂的母親和兄弟站在外面，想要跟祂說話。 <verse number="47" style="v"/>有人告訴祂：「你的母親和兄弟在外面有話要跟你說。」</para>
+  <para style="p">
+    <verse number="48" style="v"/>耶穌說：「誰是我的母親？誰是我的兄弟？」 <verse number="49" style="v"/>祂伸出手來指著門徒說：「你們看！這些人就是我的母親和我的兄弟。 <verse number="50" style="v"/>凡遵行我天父旨意的人都是我的弟兄、姊妹和母親。」</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">撒種的比喻</para>
+  <para style="p">
+    <verse number="1" style="v"/>當天，耶穌離開房子，坐在湖邊。 <verse number="2" style="v"/>有一大群人聚集到祂周圍，祂只好上船坐下，眾人都站在岸上。 <verse number="3" style="v"/>祂用比喻向他們講許多道理，說：「有一個農夫出去撒種。 <verse number="4" style="v"/>撒種的時候，有些種子落在路旁，被飛鳥吃掉了； <verse number="5" style="v"/>有些落在石頭地上，因為泥土不深，種子很快就發芽了，然而因為沒有根， <verse number="6" style="v"/>被太陽一曬，就枯萎了； <verse number="7" style="v"/>有些落在荊棘叢中，荊棘長起來便把嫩苗擠住了； <verse number="8" style="v"/>有些落在沃土裡，就結出果實，收成多達三十倍、六十倍、一百倍。 <verse number="9" style="v"/>有耳朵的，都應當聽。」</para>
+  <para style="s1">用比喻的目的</para>
+  <para style="p">
+    <verse number="10" style="v"/>門徒上前問耶穌：「你為什麼要用比喻來教導他們呢？」</para>
+  <para style="p">
+    <verse number="11" style="v"/>耶穌回答說：「天國的奧祕只讓你們知道，不讓他們知道。 <verse number="12" style="v"/>因為凡有的，還要給他更多，他就豐富有餘；凡沒有的，連他僅有的也要奪去。 <verse number="13" style="v"/>我用比喻教導他們是因為他們視而不見，聽而不聞，聞而不悟。 <verse number="14" style="v"/><char style="pn">以賽亞</char>的預言正應驗在他們身上，</para>
+  <para style="q1">『你們聽了又聽，卻不明白；</para>
+  <para style="q1">看了又看，卻不領悟。</para>
+  <para style="q1">
+    <verse number="15" style="v"/>因為這些人心靈麻木，</para>
+  <para style="q1">耳朵發背，眼睛昏花，</para>
+  <para style="q1">以致眼睛看不見，耳朵聽不見，</para>
+  <para style="q1">心裡不明白，無法回心轉意，</para>
+  <para style="q1">得不到我的醫治。』</para>
+  <para style="p">
+    <verse number="16" style="v"/>「但你們的眼睛是有福的，因為看得見；你們的耳朵也是有福的，因為聽得見。 <verse number="17" style="v"/>我實在告訴你們，以前有許多先知和義人曾渴望看見你們所看見的，聽見你們所聽見的，卻未能如願。</para>
+  <para style="s1">解釋比喻</para>
+  <para style="p">
+    <verse number="18" style="v"/>「所以，你們應當留心這撒種的比喻。 <verse number="19" style="v"/>種子落在路旁，是指人聽了天國的道理卻不明白，魔鬼乘虛而入，把撒在他心裡的奪走了； <verse number="20" style="v"/>種子落在石頭地上，是指人聽了道後，立刻歡喜地接受了， <verse number="21" style="v"/>但因為他心裡沒有根基，不過是暫時接受，一旦為道遭受患難或迫害，就立刻放棄了信仰； <verse number="22" style="v"/>種子落在荊棘叢中，是指人雖然聽過道，但生活的憂慮和錢財的迷惑把道擠住了，以致不能結出果實； <verse number="23" style="v"/>種子落在沃土裡，是指人聽了道，並明白了道，就結出果實來，有的多達一百倍，有的六十倍，有的三十倍。」</para>
+  <para style="s1">毒麥的比喻</para>
+  <para style="p">
+    <verse number="24" style="v"/>耶穌又給他們講了一個比喻，說：「天國就像一個人，將好種子撒在田裡。 <verse number="25" style="v"/>人們睡覺的時候，仇敵過來把毒麥撒在他的麥田裡，就走了。 <verse number="26" style="v"/>當麥子長苗吐穗時，毒麥也長起來了。 <verse number="27" style="v"/>奴僕看見了就來問主人，『主人啊！你不是把好種子撒在田裡了嗎？從哪裡來的毒麥呢？』</para>
+  <para style="p">
+    <verse number="28" style="v"/>「主人回答說，『這是仇敵做的。』奴僕問道，『要我們去拔掉它們嗎？』</para>
+  <para style="p">
+    <verse number="29" style="v"/>「主人說，『不用了，因為拔毒麥會連麥子一起拔掉。 <verse number="30" style="v"/>讓它們跟麥子一起生長吧，到收割的時候，我會吩咐收割的工人先把毒麥收集起來，紮成捆，留著燒，然後將麥子存入穀倉。』」</para>
+  <para style="s1">芥菜種和麵酵的比喻</para>
+  <para style="p">
+    <verse number="31" style="v"/>耶穌又給他們講了一個比喻：「天國就像一粒芥菜種，人把它種在田裡。 <verse number="32" style="v"/>它雖然是種子中最小的，卻長得比其他蔬菜都大，並且長成一棵樹，天空的飛鳥也來棲息。」</para>
+  <para style="p">
+    <verse number="33" style="v"/>祂又對他們講了個比喻：「天國就像麵酵，婦人拿來摻在三斗麵裡，使整盆麵都發起來。」</para>
+  <para style="p">
+    <verse number="34" style="v"/>耶穌總是用比喻對眾人講這些事，祂每次對他們講話時都用比喻。 <verse number="35" style="v"/>這是要應驗先知的話：「我要開口講比喻，道出創世以來隱藏的事。」</para>
+  <para style="s1">解釋毒麥的比喻</para>
+  <para style="p">
+    <verse number="36" style="v"/>後來，耶穌離開人群，進到屋裡。門徒也跟著進去，對耶穌說：「請為我們解釋毒麥的比喻。」</para>
+  <para style="p">
+    <verse number="37" style="v"/>耶穌說：「那撒下好種子的就是人子， <verse number="38" style="v"/>麥田代表整個世界，那些好種子就是天國的子民。毒麥就是那些屬於魔鬼的人， <verse number="39" style="v"/>撒毒麥的仇敵就是魔鬼。收割的日子便是世界的末日，收割的工人就是天使。</para>
+  <para style="p">
+    <verse number="40" style="v"/>「毒麥怎樣被拔出來丟在火裡燒，同樣，在世界末日的時候， <verse number="41" style="v"/>人子也將派天使把一切引人犯罪和作孽的人從祂國裡挑出來， <verse number="42" style="v"/>丟進火裡。那時，他們將在那裡哀哭切齒。 <verse number="43" style="v"/>那時，義人要在他們天父的國度像太陽一樣發出光輝。有耳朵的，都應當聽。</para>
+  <para style="s1">寶藏與珍珠的比喻</para>
+  <para style="p">
+    <verse number="44" style="v"/>「天國就像藏在地裡的寶貝，有人發現了，就把它埋好，然後歡然變賣他所有的財產去買那塊地。</para>
+  <para style="p">
+    <verse number="45" style="v"/>「天國就像一個四處搜購貴重珍珠的商人。 <verse number="46" style="v"/>他找到一顆極貴重的珍珠，就變賣了一切的產業，把它買下來。</para>
+  <para style="s1">撒網的比喻</para>
+  <para style="p">
+    <verse number="47" style="v"/>「天國就像一張漁網，撒在海裡捕到了各種魚。 <verse number="48" style="v"/>網滿了，人們把網拉上岸，然後坐下來挑選，好的就收起來，不好的就丟掉。 <verse number="49" style="v"/>世界末日的時候也是這樣。天使必把惡人從義人中揀出來， <verse number="50" style="v"/>丟在火爐裡，讓惡人在那裡哀哭切齒。 <verse number="51" style="v"/>你們明白這些事了嗎？」</para>
+  <para style="p">他們回答說：「我們明白了。」</para>
+  <para style="p">
+    <verse number="52" style="v"/>耶穌說：「律法教師成為天國的門徒後，就像一個家的主人，能從他的庫房裡拿出新的和舊的東西來。」</para>
+  <para style="s1">拿撒勒人厭棄耶穌</para>
+  <para style="p">
+    <verse number="53" style="v"/>耶穌講完了這些比喻，就離開那裡， <verse number="54" style="v"/>回到自己的家鄉<char style="pn">拿撒勒</char>，在會堂裡教導人。人們很驚奇，說：「這個人從哪裡得到如此的智慧和神奇的能力呢？ <verse number="55" style="v"/>這不是那木匠的兒子嗎？祂母親不是<char style="pn">瑪麗亞</char>嗎？祂的弟弟不是<char style="pn">雅各</char>、<char style="pn">約瑟</char>、<char style="pn">西門</char>和<char style="pn">猶大</char>嗎？ <verse number="56" style="v"/>祂的妹妹們不也是住在我們這裡嗎？祂究竟從哪裡得來這一身本領呢？」 <verse number="57" style="v"/>他們就對祂很反感。</para>
+  <para style="p">耶穌對他們說：「先知到處受人尊敬，只有在本鄉本家例外。」 <verse number="58" style="v"/>因為他們不信，耶穌就沒有在那裡多行神蹟。</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">施洗者約翰之死</para>
+  <para style="p">
+    <verse number="1" style="v"/>分封王<char style="pn">希律</char>聽見耶穌的名聲， <verse number="2" style="v"/>就對臣僕說：「這個人是施洗者<char style="pn">約翰</char>！他從死裡復活了，所以能夠行這些神蹟。」</para>
+  <para style="p">
+    <verse number="3" style="v"/>原來<char style="pn">希律</char>為他兄弟<char style="pn">腓力</char>的妻子<char style="pn">希羅底</char>的緣故，拘捕了<char style="pn">約翰</char>，把他捆綁起來關在監裡。 <verse number="4" style="v"/>因為<char style="pn">約翰</char>曾多次對他說：「你娶這個婦人是不對的。」 <verse number="5" style="v"/>他想殺掉<char style="pn">約翰</char>，但怕觸怒百姓，因為他們都認為<char style="pn">約翰</char>是先知。</para>
+  <para style="p">
+    <verse number="6" style="v"/>在<char style="pn">希律</char>的生日那天，<char style="pn">希羅底</char>的女兒出來在眾人面前跳舞。<char style="pn">希律</char>非常高興， <verse number="7" style="v"/>就起誓答應她無論要什麼都可以。 <verse number="8" style="v"/>她受了母親的指使，說：「請把施洗者<char style="pn">約翰</char>的頭放在盤子裡送給我。」 <verse number="9" style="v"/><char style="pn">希律</char>感到為難，但既然在眾賓客面前起了誓，只好下令給她。 <verse number="10" style="v"/>他派人到監裡砍了<char style="pn">約翰</char>的頭， <verse number="11" style="v"/>放在盤子裡送給她，她轉送給她母親。 <verse number="12" style="v"/><char style="pn">約翰</char>的門徒把屍體領回安葬後，就去告訴耶穌。</para>
+  <para style="p">
+    <verse number="13" style="v"/>耶穌聽見這個消息，就獨自坐船退到一處偏僻的地方。眾人得知後，就從各城步行來跟隨祂。</para>
+  <para style="s1">耶穌使五千人吃飽</para>
+  <para style="p">
+    <verse number="14" style="v"/>耶穌上了岸，看見一大群人，心裡憐憫他們，就治好了他們當中的病人。 <verse number="15" style="v"/>黃昏時，門徒過來對耶穌說：「這裡是荒郊野外，天又晚了，請遣散眾人，好讓他們到村莊去自己買些吃的。」</para>
+  <para style="p">
+    <verse number="16" style="v"/>耶穌回答說：「他們不用離開，你們給他們吃的吧。」</para>
+  <para style="p">
+    <verse number="17" style="v"/>門徒答道：「我們這裡只有五個餅和兩條魚。」</para>
+  <para style="p">
+    <verse number="18" style="v"/>耶穌說：「拿來給我。」</para>
+  <para style="p">
+    <verse number="19" style="v"/>於是，祂叫眾人坐在草地上，然後拿起那五個餅和兩條魚，舉目望著天祝謝後，就掰開餅遞給門徒，讓他們分給眾人。 <verse number="20" style="v"/>大家都吃飽了，把剩下的零碎收拾起來，竟裝滿了十二個籃子。 <verse number="21" style="v"/>當時吃飯的，除了婦女和小孩，約有五千男人。</para>
+  <para style="s1">耶穌在水上行走</para>
+  <para style="p">
+    <verse number="22" style="v"/>隨後，耶穌催門徒上船，叫他們先渡到湖對岸，祂則遣散眾人。 <verse number="23" style="v"/>待眾人都離開了，祂就獨自上山去禱告，在那裡一直待到晚上。</para>
+  <para style="p">
+    <verse number="24" style="v"/>那時，門徒的船離岸已遠，遇到逆風，船身被波浪撞擊得搖擺不定。 <verse number="25" style="v"/>天將破曉的時候，耶穌從水面上向門徒走去。 <verse number="26" style="v"/>門徒看見有人在湖面上走，都嚇壞了，說：「是幽靈！」他們害怕得又喊又叫。</para>
+  <para style="p">
+    <verse number="27" style="v"/>耶穌立刻對他們說：「放心吧！是我，不要怕。」</para>
+  <para style="p">
+    <verse number="28" style="v"/>
+    <char style="pn">彼得</char>說：「主啊！如果真的是你，就叫我從水面上走到你那裡。」</para>
+  <para style="p">
+    <verse number="29" style="v"/>耶穌說：「好，你來吧！」</para>
+  <para style="p">於是，<char style="pn">彼得</char>就從船上下去，走在湖面上，要去耶穌那裡。 <verse number="30" style="v"/>他看到風浪很大，就害怕起來，身體開始往下沉，便大喊：「主啊，救我！」</para>
+  <para style="p">
+    <verse number="31" style="v"/>耶穌馬上伸手拉住他，說：「你信心太小了！為什麼懷疑呢？」</para>
+  <para style="p">
+    <verse number="32" style="v"/>他們上了船，風浪就平靜了。 <verse number="33" style="v"/>船上的人都敬拜祂，說：「你真是上帝的兒子。」</para>
+  <para style="p">
+    <verse number="34" style="v"/>他們渡到湖對岸，來到<char style="pn">革尼撒勒</char>。 <verse number="35" style="v"/>當地的人認出是耶穌，就派人去把附近所有的病人都帶到祂面前， <verse number="36" style="v"/>求耶穌讓他們摸一摸祂衣裳的穗邊，所有摸過的病人都好了。</para>
+  <chapter number="15" style="c"/>
+  <para style="s1">傳統與誡命</para>
+  <para style="p">
+    <verse number="1" style="v"/>有幾個法利賽人和律法教師從<char style="pn">耶路撒冷</char>來質問耶穌： <verse number="2" style="v"/>「為什麼你的門徒吃飯前不行洗手禮，破壞祖先的傳統呢？」</para>
+  <para style="p">
+    <verse number="3" style="v"/>耶穌回答說：「為什麼你們拘守傳統而違背上帝的誡命呢？ <verse number="4" style="v"/>上帝說，『要孝敬父母』，又說，『咒罵父母的，必被處死。』 <verse number="5" style="v"/>你們卻說，『人如果把供養父母的錢奉獻給上帝， <verse number="6" style="v"/>他就不必供養父母。』你們這是用傳統來廢掉上帝的誡命。 <verse number="7" style="v"/>你們這些偽君子，<char style="pn">以賽亞</char>指著你們說的預言一點沒錯，</para>
+  <para style="q1">
+    <verse number="8" style="v"/>『這些人嘴上尊崇我，</para>
+  <para style="q1">心卻遠離我，</para>
+  <para style="q1">
+    <verse number="9" style="v"/>他們的教導無非是人的規條，</para>
+  <para style="q1">他們敬拜我也是枉然。』」</para>
+  <para style="p">
+    <verse number="10" style="v"/>耶穌召集了眾人，對他們說：「你們要聽，也要明白。 <verse number="11" style="v"/>入口的東西不會使人污穢，從口中出來的才會使人污穢。」</para>
+  <para style="p">
+    <verse number="12" style="v"/>門徒上前對祂說：「你知道嗎？法利賽人聽見你的話很反感。」</para>
+  <para style="p">
+    <verse number="13" style="v"/>耶穌回答說：「凡不是我天父栽種的都要被連根拔起來。 <verse number="14" style="v"/>隨便他們吧！他們是瞎眼的嚮導。瞎子給瞎子領路，二人都會掉進坑裡。」</para>
+  <para style="p">
+    <verse number="15" style="v"/>
+    <char style="pn">彼得</char>對耶穌說：「請給我們解釋一下這個比喻。」</para>
+  <para style="p">
+    <verse number="16" style="v"/>耶穌說：「你們還不明白嗎？ <verse number="17" style="v"/>豈不知入口的東西都是進到肚子裡，然後排泄到廁所裡嗎？ <verse number="18" style="v"/>可是，從口中出來的乃是發自內心，會使人污穢。 <verse number="19" style="v"/>因為從心裡出來的有惡念、謀殺、通姦、淫亂、偷盜、假見證和毀謗， <verse number="20" style="v"/>這些東西才使人污穢。不洗手吃飯並不會使人污穢。」</para>
+  <para style="s1">迦南婦人的信心</para>
+  <para style="p">
+    <verse number="21" style="v"/>耶穌從那裡退到<char style="pn">泰爾</char>和<char style="pn">西頓</char>境內。 <verse number="22" style="v"/>那地方有個<char style="pn">迦南</char>的婦人前來大聲懇求耶穌：「主啊！<char style="pn">大衛</char>的後裔啊！可憐我吧！我的女兒被鬼附身，受盡折磨！」 <verse number="23" style="v"/>耶穌卻一言不發。門徒上前求祂說：「請讓她走吧！她老是在後面喊叫。」</para>
+  <para style="p">
+    <verse number="24" style="v"/>耶穌說：「我奉差遣只是來尋找<char style="pn">以色列</char>家迷失的羊。」</para>
+  <para style="p">
+    <verse number="25" style="v"/>那婦人上前跪下，說：「主啊！求你幫幫我吧！」</para>
+  <para style="p">
+    <verse number="26" style="v"/>耶穌答道：「把兒女的食物丟給狗吃，不合適。」</para>
+  <para style="p">
+    <verse number="27" style="v"/>婦人說：「主啊，沒錯，可是狗也吃主人飯桌上掉下來的碎渣呀！」</para>
+  <para style="p">
+    <verse number="28" style="v"/>耶穌說：「婦人，你的信心真大！我答應你的要求。」就在那一刻，她女兒就好了。</para>
+  <para style="s1">耶穌使四千人吃飽</para>
+  <para style="p">
+    <verse number="29" style="v"/>耶穌離開那裡，來到<char style="pn">加利利</char>湖邊，上了山，在那裡坐下。 <verse number="30" style="v"/>大群的人把瘸子、瞎子、殘疾的、啞巴及許多別的病人帶來，放在祂腳前，祂就治好了他們。 <verse number="31" style="v"/>大家看見啞巴說話，殘疾的復原，瘸子走路，瞎子看見，都很驚奇，就讚美<char style="pn">以色列</char>的上帝。</para>
+  <para style="p">
+    <verse number="32" style="v"/>耶穌把門徒召集過來，對他們說：「我憐憫這些人，他們跟我在一起已經三天，沒有任何吃的。我不願讓他們餓著肚子回去，以免他們在路上體力不支。」</para>
+  <para style="p">
+    <verse number="33" style="v"/>門徒說：「在這荒野，我們到哪裡找足夠的食物給這麼多人吃呢？」</para>
+  <para style="p">
+    <verse number="34" style="v"/>耶穌問：「你們有多少餅？」</para>
+  <para style="p">門徒答道：「七個，還有幾條小魚。」</para>
+  <para style="p">
+    <verse number="35" style="v"/>耶穌便吩咐大家坐在地上。 <verse number="36" style="v"/>祂拿著那七個餅和幾條魚祝謝後，掰開，遞給門徒，門徒再分給大家。 <verse number="37" style="v"/>大家都吃了，並且吃飽了，剩下的零碎裝滿了七個筐子。 <verse number="38" style="v"/>當時吃飯的，除了婦女和小孩，共有四千男人。 <verse number="39" style="v"/>隨後，耶穌叫眾人散去，自己坐船去了<char style="pn">馬加丹</char>地區。</para>
+  <chapter number="16" style="c"/>
+  <para style="s1">求神蹟</para>
+  <para style="p">
+    <verse number="1" style="v"/>有幾個法利賽人和撒都該人來試探耶穌，要求祂顯個天上的神蹟給他們看。</para>
+  <para style="p">
+    <verse number="2" style="v"/>耶穌回答說：「傍晚的時候，你們看見天邊出現紅霞，就說明天一定是晴天； <verse number="3" style="v"/>早晨的時候，你們看見天色又紅又暗，就說今天必有風雨。你們懂得分辨天色，卻不能分辨時代的徵兆。 <verse number="4" style="v"/>一個邪惡淫亂的世代想看神蹟，可是除了<char style="pn">約拿</char>的神蹟以外，再沒有神蹟給他們看。」於是耶穌離開他們走了。</para>
+  <para style="s1">防備法利賽人和撒都該人的酵</para>
+  <para style="p">
+    <verse number="5" style="v"/>門徒渡到湖對岸，忘記帶餅了。 <verse number="6" style="v"/>耶穌對他們說：「你們要小心提防法利賽人和撒都該人的酵。」</para>
+  <para style="p">
+    <verse number="7" style="v"/>門徒彼此議論說：「這是因為我們沒有帶餅吧。」</para>
+  <para style="p">
+    <verse number="8" style="v"/>耶穌知道他們的心思，就說：「你們的信心太小了！為什麼議論沒有帶餅的事呢？ <verse number="9" style="v"/>你們還不明白嗎？你們不記得那五個餅讓五千人吃飽，又裝滿多少籃子嗎？ <verse number="10" style="v"/>也不記得那七個餅給四千人吃飽，又裝滿多少筐子嗎？ <verse number="11" style="v"/>我說你們要提防法利賽人和撒都該人的酵，指的不是餅，你們怎麼不明白呢？」</para>
+  <para style="p">
+    <verse number="12" style="v"/>門徒這才恍然大悟，知道耶穌不是叫他們當心什麼麵酵，而是要提防法利賽人和撒都該人的教導。</para>
+  <para style="s1">彼得宣告耶穌是基督</para>
+  <para style="p">
+    <verse number="13" style="v"/>到了<char style="pn">凱撒利亞·腓立比</char>境內，耶穌問門徒：「人們說人子是誰？」</para>
+  <para style="p">
+    <verse number="14" style="v"/>門徒回答說：「有人說是施洗者<char style="pn">約翰</char>，有人說是<char style="pn">以利亞</char>，也有人說是<char style="pn">耶利米</char>，或其他某位先知。」</para>
+  <para style="p">
+    <verse number="15" style="v"/>耶穌問：「那麼，你們說我是誰？」</para>
+  <para style="p">
+    <verse number="16" style="v"/>
+    <char style="pn">西門·彼得</char>回答說：「你是基督，是永活上帝的兒子！」</para>
+  <para style="p">
+    <verse number="17" style="v"/>耶穌對他說：「<char style="pn">約拿</char>的兒子<char style="pn">西門</char>啊，你是有福的！因為這件事不是屬血肉的人告訴你的，而是我天上的父啟示你的。 <verse number="18" style="v"/>我告訴你，你是<char style="pn">彼得</char><note caller="+" style="f"><char style="fr" closed="false">16·18 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">彼得</char><char style="ft" closed="false">」希臘文是「磐石」的意思。</char></note>，我要在這磐石上建立我的教會，陰間的勢力<note caller="+" style="f"><char style="fr" closed="false">16·18 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">勢力</char><char style="ft" closed="false">」希臘文是「門」。</char></note>不能勝過它。 <verse number="19" style="v"/>我要把天國的鑰匙交給你。凡你在地上捆綁的，在天上也要捆綁；凡你在地上釋放的，在天上也要釋放。」</para>
+  <para style="p">
+    <verse number="20" style="v"/>當下，耶穌叮囑門徒不可告訴別人祂就是基督。</para>
+  <para style="s1">耶穌預言自己的受害和復活</para>
+  <para style="p">
+    <verse number="21" style="v"/>從此以後，耶穌開始清楚地指示門徒，祂必須去<char style="pn">耶路撒冷</char>，受長老、祭司長和律法教師許多的迫害，並且被處死，但第三天必從死裡復活。 <verse number="22" style="v"/><char style="pn">彼得</char>把耶穌拉到一邊，勸阻祂說：「主啊，千萬不可！這件事絕不會發生在你身上！」</para>
+  <para style="p">
+    <verse number="23" style="v"/>耶穌立刻轉過身來責備<char style="pn">彼得</char>說：「撒旦，退到我後面去！你是我的絆腳石，因為你不考慮上帝的意思，只考慮人的意思。」</para>
+  <para style="p">
+    <verse number="24" style="v"/>於是耶穌對門徒說：「如果有人要跟從我，就應當捨己，背起他的十字架跟從我。 <verse number="25" style="v"/>因為想救自己生命的，必失去生命；但為了我而失去生命的，必得到生命。 <verse number="26" style="v"/>人若賺得全世界，卻喪失自己的生命，又有什麼益處呢？人還能拿什麼換回自己的生命呢？</para>
+  <para style="p">
+    <verse number="27" style="v"/>「因為人子要在祂父的榮耀裡與眾天使一起降臨，那時，祂將按照各人的行為報應各人。 <verse number="28" style="v"/>我實在告訴你們，有些站在這裡的人會在有生之年看見人子降臨在祂的國度裡。」</para>
+  <chapter number="17" style="c"/>
+  <para style="s1">登山變象</para>
+  <para style="p">
+    <verse number="1" style="v"/>六天後，耶穌帶著<char style="pn">彼得</char>、<char style="pn">雅各</char>和<char style="pn">雅各</char>的兄弟<char style="pn">約翰</char>暗暗地登上一座高山。 <verse number="2" style="v"/>耶穌在他們面前改變了形像，面貌如太陽一樣發光，衣服潔白如光。 <verse number="3" style="v"/>忽然，<char style="pn">摩西</char>和<char style="pn">以利亞</char>一起出現，跟耶穌談話。 <verse number="4" style="v"/><char style="pn">彼得</char>對耶穌說：「主啊，我們在這裡好極了。如果你願意，我就在這裡搭三座帳篷，一座給你，一座給<char style="pn">摩西</char>，一座給<char style="pn">以利亞</char>。」</para>
+  <para style="p">
+    <verse number="5" style="v"/>他正在說話的時候，一朵燦爛的雲彩籠罩他們。雲中傳出聲音：「這是我的愛子，我甚喜悅祂，你們要聽從祂。」</para>
+  <para style="p">
+    <verse number="6" style="v"/>門徒聽見這聲音，便俯伏在地，非常懼怕。 <verse number="7" style="v"/>耶穌就過來摸他們，說：「起來吧，別害怕。」 <verse number="8" style="v"/>他們抬起頭來，看見只剩下耶穌一個人。</para>
+  <para style="p">
+    <verse number="9" style="v"/>下山時，耶穌叮囑他們：「人子還沒有從死裡復活以前，不要把剛才看見的告訴別人。」</para>
+  <para style="p">
+    <verse number="10" style="v"/>門徒問耶穌：「律法教師為什麼說<char style="pn">以利亞</char>必須先來？」</para>
+  <para style="p">
+    <verse number="11" style="v"/>耶穌回答說：「<char style="pn">以利亞</char>的確要來，他將復興一切。 <verse number="12" style="v"/>但我告訴你們，<char style="pn">以利亞</char>已經來了，人們卻不認識他，甚至還任意對待他。人子同樣也會在他們手下受苦。」 <verse number="13" style="v"/>門徒這才明白耶穌所說的是指施洗者<char style="pn">約翰</char>。</para>
+  <para style="s1">治好被鬼附身的孩子</para>
+  <para style="p">
+    <verse number="14" style="v"/>他們回到山下眾人聚集的地方。有一個人過來跪在耶穌跟前，說： <verse number="15" style="v"/>「主啊！救救我的兒子吧！他患了癲癇症，痛苦極了，曾經幾次跌進火中，掉進水裡。 <verse number="16" style="v"/>我帶他去見你的門徒，但他們卻不能治好他。」</para>
+  <para style="p">
+    <verse number="17" style="v"/>耶穌說：「唉！這世代又不信又敗壞的人啊，我要跟你們在一起待多久？我要容忍你們多久呢？把他帶來吧。」 <verse number="18" style="v"/>耶穌斥責附在孩子身上的鬼，鬼就離開了那孩子，從此他就好了。</para>
+  <para style="p">
+    <verse number="19" style="v"/>事後，門徒私下問耶穌：「我們為什麼趕不走那鬼呢？」</para>
+  <para style="p">
+    <verse number="20" style="v"/>耶穌說：「你們的信心太小了。我實在告訴你們，你們若有像芥菜種那樣大的信心，就算叫這座山從這裡移到那裡，它也會移開，你們將沒有辦不到的事。 <verse number="21" style="v"/>至於這一類的鬼，你們必須禱告和禁食才能把牠趕走。」</para>
+  <para style="s1">耶穌第二次預言受害和復活</para>
+  <para style="p">
+    <verse number="22" style="v"/>他們聚集在<char style="pn">加利利</char>的時候，耶穌對他們說：「人子將要被出賣，交在人手裡。 <verse number="23" style="v"/>他們將殺害祂，第三天祂將復活。」門徒聽了，十分憂愁。</para>
+  <para style="s1">從魚口得稅錢</para>
+  <para style="p">
+    <verse number="24" style="v"/>他們來到<char style="pn">迦百農</char>，有幾個收聖殿稅的來問<char style="pn">彼得</char>：「你們的老師不納聖殿稅嗎？」</para>
+  <para style="p">
+    <verse number="25" style="v"/>
+    <char style="pn">彼得</char>說「納！」他進了屋，還沒開口，耶穌便問他：「<char style="pn">西門</char>，你有何看法？世上的君王向誰徵收賦稅？向自己的兒子呢，還是向外人呢？」</para>
+  <para style="p">
+    <verse number="26" style="v"/>
+    <char style="pn">彼得</char>答道：「向外人。」</para>
+  <para style="p">耶穌說：「所以兒子不用納稅。 <verse number="27" style="v"/>但為了避免得罪這些人，你就去湖邊釣魚，把釣上來的第一條魚的嘴打開，裡面有一個錢幣，拿它去繳你我的稅好了。」</para>
+  <chapter number="18" style="c"/>
+  <para style="s1">天國裡誰最偉大</para>
+  <para style="p">
+    <verse number="1" style="v"/>這時，門徒上前來，問耶穌：「在天國誰最偉大？」</para>
+  <para style="p">
+    <verse number="2" style="v"/>耶穌叫了一個小孩子來站在他們當中，然後說： <verse number="3" style="v"/>「我實在告訴你們，你們若不變得像小孩子那樣，絕不能進天國。 <verse number="4" style="v"/>所以，凡像這小孩子一樣謙卑的人，在天國才是最偉大的。</para>
+  <para style="p">
+    <verse number="5" style="v"/>「任何人為了我的名而接待這樣一個小孩子，就是接待了我。 <verse number="6" style="v"/>但不論誰使這樣一個小信徒失足犯罪，他的下場比把大磨石拴在他脖子上沉到深海裡還要慘。 <verse number="7" style="v"/>這世界有禍了！因為裡面充滿了引人犯罪的事。這樣的事是免不了的，但那些引人犯罪的人有禍了！</para>
+  <para style="p">
+    <verse number="8" style="v"/>「如果你的手或腳使你犯罪，就砍掉它！因為肢體殘缺著進入永生，總比四肢健全卻被丟進永遠不滅的火中好。 <verse number="9" style="v"/>如果你的一隻眼睛使你犯罪，就剜出來丟掉它吧！獨眼進入永生，總比雙目健全卻被丟進地獄的火中好。 <verse number="10" style="v"/>你們切不可輕視任何一位卑微的人。我告訴你們，他們的天使在天上常見我天父的面。</para>
+  <para style="s1">迷失的羊</para>
+  <para style="p">
+    <verse number="11" style="v"/>「人子到世界來，為要拯救迷失的人。 <verse number="12" style="v"/>如果一個人有一百隻羊，其中有一隻走迷了路，他會怎麼辦呢？難道不會把那九十九隻撇在山上，去找那隻迷失的羊嗎？ <verse number="13" style="v"/>我實在告訴你們，如果找到了，他會非常歡喜，甚至比有那九十九隻沒有迷失的羊還歡喜。 <verse number="14" style="v"/>同樣，你們的天父也不願任何一個卑微的人失喪。</para>
+  <para style="s1">糾正信徒的過錯</para>
+  <para style="p">
+    <verse number="15" style="v"/>「如果你的弟兄得罪了你，你要找個機會跟他單獨在一起，指出他的錯處。如果他肯接受勸告，你就得了一位弟兄。 <verse number="16" style="v"/>如果他不聽勸告，你就帶一兩位弟兄去見他，讓兩三個人為談話作證。 <verse number="17" style="v"/>如果他仍然不聽，就應當告訴教會。如果他連教會也不聽，就把他看作異教徒或稅吏<note caller="+" style="f"><char style="fr" closed="false">18·17 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">稅吏</char><char style="ft" closed="false">」即猶太人眼中的「漢奸」，幫助統治猶太人的羅馬政府收稅，常從中牟取暴利。</char></note>。 <verse number="18" style="v"/>我實在告訴你們，你們在地上捆綁的，在天上也要捆綁；你們在地上釋放的，在天上也要釋放。</para>
+  <para style="p">
+    <verse number="19" style="v"/>「我又告訴你們，如果你們當中有兩個人在地上同心合意地祈求，不論求什麼，我天上的父必為你們成就。 <verse number="20" style="v"/>因為哪裡有兩三個人奉我的名聚會，我就在哪裡與他們同在。」</para>
+  <para style="s1">七十個七次</para>
+  <para style="p">
+    <verse number="21" style="v"/>
+    <char style="pn">彼得</char>上前問耶穌：「主啊，如果我的弟兄得罪了我，我該饒恕他多少次呢？七次夠了吧？」</para>
+  <para style="p">
+    <verse number="22" style="v"/>耶穌回答說：「我告訴你，不是七次，是七十個七次。</para>
+  <para style="p">
+    <verse number="23" style="v"/>「因此，天國就像一個王，他要跟奴僕清算債務。 <verse number="24" style="v"/>正開始清算的時候，有人帶著一個欠了六千萬銀幣<note caller="+" style="f"><char style="fr" closed="false">18·24 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">六千萬銀幣</char><char style="ft" closed="false">」希腊文是「一萬他連得」，一他連得相當於當時一個普通工人20年的工錢。</char></note>的人進來。 <verse number="25" style="v"/>因為這個人無法清還債款，王就下令把他及其妻兒和所有財產全部賣掉還債。 <verse number="26" style="v"/>那奴僕跪在王面前乞求說，『請寬容我，我會把債務全部還清的。』 <verse number="27" style="v"/>王可憐他，不但釋放了他，而且免了他全部的債。</para>
+  <para style="p">
+    <verse number="28" style="v"/>「可是，那奴僕出去後，遇見一位欠他一百個銀幣<note caller="+" style="f"><char style="fr" closed="false">18·28 </char><char style="ft" closed="false">一個銀幣相當於當時普通工人一天的工錢。</char></note>的同伴，就揪住同伴，掐著他的喉嚨說，『還我錢！』 <verse number="29" style="v"/>同伴跪下哀求道，『請寬容我，我會還你的。』</para>
+  <para style="p">
+    <verse number="30" style="v"/>「那奴僕卻不肯，竟把同伴送進監獄，直到他還清債務為止。 <verse number="31" style="v"/>其他的奴僕目睹這一切，都憤憤不平，把這件事告訴了王。</para>
+  <para style="p">
+    <verse number="32" style="v"/>「於是，王把那奴僕召來，說，『你這可惡的奴才！你哀求我，我就免了你所有的債。 <verse number="33" style="v"/>難道你不應該憐憫你的同伴，就像我憐憫你一樣嗎？』 <verse number="34" style="v"/>王大怒，下令把他交給獄卒受刑，直到他還清全部的債務。 <verse number="35" style="v"/>如果你們不從心裡饒恕自己的弟兄，我的天父也要這樣對待你們。」</para>
+  <chapter number="19" style="c"/>
+  <para style="s1">論休妻</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶穌說完這番話，就離開<char style="pn">加利利</char>來到<char style="pn">約旦</char>河對岸的<char style="pn">猶太</char>地區。 <verse number="2" style="v"/>有一大群人跟著祂，祂就在那裡醫好了他們的病。</para>
+  <para style="p">
+    <verse number="3" style="v"/>有幾個法利賽人到耶穌那裡想試探祂，便問祂：「丈夫可以用任何理由休妻嗎？」</para>
+  <para style="p">
+    <verse number="4" style="v"/>耶穌回答說：「你們沒有讀過嗎？太初，造物主造了男人和女人，並且說， <verse number="5" style="v"/>『因此，人要離開父母，與妻子結合，二人成為一體。』 <verse number="6" style="v"/>這樣，夫妻不再是兩個人，而是一體了。因此，上帝配合的，人不可分開。」</para>
+  <para style="p">
+    <verse number="7" style="v"/>他們追問：「那麼，為什麼<char style="pn">摩西</char>說，只要給妻子休書，就可以休她呢？」</para>
+  <para style="p">
+    <verse number="8" style="v"/>耶穌說：「因為<char style="pn">摩西</char>知道你們鐵石心腸，所以才准你們休妻。但起初並不是這樣。 <verse number="9" style="v"/>我告訴你們，除非是妻子不貞，否則，任何人休妻另娶，就是犯通姦罪<note caller="+" style="f"><char style="fr" closed="false">19·9 </char><char style="ft" closed="false">有古卷在此處有「娶被休女子的人也犯了通姦罪」。</char></note>。」</para>
+  <para style="p">
+    <verse number="10" style="v"/>門徒對耶穌說：「如果夫妻關係是這樣，還不如不結婚。」</para>
+  <para style="p">
+    <verse number="11" style="v"/>耶穌說：「這話不是每個人都能接受的，只有那些得到這種恩賜的人才能接受。 <verse number="12" style="v"/>人不結婚的原因很多，有些是因為先天的缺陷，有些是被人閹了，也有些是為了天國而自己放棄結婚的權利。誰能接受，就讓他接受吧。」</para>
+  <para style="s1">耶穌為小孩子祝福</para>
+  <para style="p">
+    <verse number="13" style="v"/>有人帶著小孩子來見耶穌，請求耶穌為他們按手禱告，卻受到門徒的責備。</para>
+  <para style="p">
+    <verse number="14" style="v"/>耶穌說：「讓小孩子到我這裡來，不要阻止他們，因為天國屬於這樣的人。」 <verse number="15" style="v"/>於是祂為他們按手禱告，然後才離開那裡。</para>
+  <para style="s1">有錢的青年</para>
+  <para style="p">
+    <verse number="16" style="v"/>有一個人來請教耶穌：「老師，我該做什麼善事才能獲得永生呢？」</para>
+  <para style="p">
+    <verse number="17" style="v"/>耶穌說：「你為什麼問我做什麼善事？只有上帝是善的，你要得永生，就必須遵守祂的誡命。」</para>
+  <para style="p">
+    <verse number="18" style="v"/>那人問：「什麼誡命呢？」</para>
+  <para style="p">耶穌答道：「不可殺人，不可通姦，不可偷盜，不可作偽證， <verse number="19" style="v"/>要孝敬父母，並且愛鄰如己。」</para>
+  <para style="p">
+    <verse number="20" style="v"/>那青年說：「這些我早已遵守了，還缺什麼呢？」</para>
+  <para style="p">
+    <verse number="21" style="v"/>耶穌告訴他：「如果你想做到純全，就去變賣所有的產業，送給窮人，你就必有財寶存在天上，然後你來跟從我。」 <verse number="22" style="v"/>那青年聽後，便憂傷地走了，因為他有許多產業。</para>
+  <para style="p">
+    <verse number="23" style="v"/>事後，耶穌對門徒說：「我實在告訴你們，有錢人進天國很困難。 <verse number="24" style="v"/>我再告訴你們，駱駝穿過針眼比有錢人進上帝的國還容易呢！」</para>
+  <para style="p">
+    <verse number="25" style="v"/>門徒聽了，驚奇地問：「這樣，誰能得救呢？」</para>
+  <para style="p">
+    <verse number="26" style="v"/>耶穌看著他們說：「對人而言，這不可能；但對上帝而言，凡事都可能。」</para>
+  <para style="p">
+    <verse number="27" style="v"/>
+    <char style="pn">彼得</char>問道：「你看，我們已經撇下一切來跟從你了，將來會有什麼獎賞呢？」</para>
+  <para style="p">
+    <verse number="28" style="v"/>耶穌說：「我實在告訴你們，到萬物更新、人子坐在祂榮耀的寶座上時，你們這些跟從我的人也要坐在十二個寶座上，審判<char style="pn">以色列</char>的十二個支派。 <verse number="29" style="v"/>無論誰為我的名而撇下房屋、弟兄、姊妹、父母、兒女或田地，都要得到百倍的賞賜，而且承受永生。 <verse number="30" style="v"/>然而，許多為首的將要殿後，殿後的將要為首。」</para>
+  <chapter number="20" style="c"/>
+  <para style="s1">葡萄園工人的比喻</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶穌接著說：「因為天國就像一個園主清早去外面請工人到他的葡萄園做工。 <verse number="2" style="v"/>他跟工人講好一天的工錢是一個銀幣，然後派他們去葡萄園。</para>
+  <para style="p">
+    <verse number="3" style="v"/>「大約上午九點鐘，園主出去看見一些人站在街市上無所事事， <verse number="4" style="v"/>就對他們說，『你們到我的葡萄園來工作吧，我會給你們合理的工錢。』</para>
+  <para style="p">
+    <verse number="5" style="v"/>「他們便去了。正午和下午三點鐘，他又出去繼續請人到葡萄園做工。 <verse number="6" style="v"/>到了下午五點鐘的時候，他再次出去，看見還有人閒站在那裡，就問他們，『為什麼你們整天站在這裡無所事事呢？』 <verse number="7" style="v"/>他們回答說，『因為沒有人僱用我們。』園主說，『你們也到我的葡萄園來吧！』</para>
+  <para style="p">
+    <verse number="8" style="v"/>「到了傍晚，園主對工頭說，『叫工人來領工錢吧，最晚來的先領，最先來的後領。』</para>
+  <para style="p">
+    <verse number="9" style="v"/>「下午五點來的工人每人得了一個銀幣。 <verse number="10" style="v"/>最早來的工人來領的時候，以為必定可以多得一點工錢，誰知也各得一個銀幣。</para>
+  <para style="p">
+    <verse number="11" style="v"/>「他們拿著工錢滿腹牢騷地對園主說， <verse number="12" style="v"/>『那些最晚來的人只工作了一小時，而我們在烈日之下辛苦了一整天，怎麼會領同樣的工錢呢？』</para>
+  <para style="p">
+    <verse number="13" style="v"/>「園主對他們當中的一個人說，『朋友，我並沒有欠你呀！我們不是講好付你一個銀幣嗎？ <verse number="14" style="v"/>拿著你的工錢走吧。我給那後來的和你一樣的工錢，是我願意。 <verse number="15" style="v"/>難道我不可隨意使用自己的錢嗎？因為我慷慨，你就眼紅嗎？』 <verse number="16" style="v"/>因此，為首的將要殿後，殿後的將要為首。」</para>
+  <para style="s1">耶穌第三次預言自己受難</para>
+  <para style="p">
+    <verse number="17" style="v"/>在去<char style="pn">耶路撒冷</char>的途中，耶穌把十二個門徒帶到一邊，對他們說： <verse number="18" style="v"/>「你們要留意，我們現在前往<char style="pn">耶路撒冷</char>，人子將被交給祭司長和律法教師。他們要判祂死刑， <verse number="19" style="v"/>把祂交給外族人，受嘲弄、鞭打，被釘在十字架上。但第三天祂必復活。」</para>
+  <para style="s1">一個母親的請求</para>
+  <para style="p">
+    <verse number="20" style="v"/>當時，<char style="pn">西庇太</char>的妻子帶著兩個兒子上前，跪在耶穌面前，有事要求祂。</para>
+  <para style="p">
+    <verse number="21" style="v"/>耶穌問她：「你要什麼呢？」</para>
+  <para style="p">她說：「在你的國度，請讓我這兩個兒子一個坐在你右邊，一個坐在你左邊。」</para>
+  <para style="p">
+    <verse number="22" style="v"/>耶穌回答說：「你們不知道自己在求什麼。我要喝的那一杯，你們能喝嗎？」</para>
+  <para style="p">他們說：「我們能。」</para>
+  <para style="p">
+    <verse number="23" style="v"/>耶穌對他們說：「我要喝的那一杯，你們也要喝。不過誰坐在我的左右不是我來定，而是我父為誰預備的，就讓誰坐。」</para>
+  <para style="p">
+    <verse number="24" style="v"/>其他十個門徒聽見這事，都對他們兄弟二人十分惱火。 <verse number="25" style="v"/>於是，耶穌把他們叫來，說：「外族人有君王統治他們，有大臣管理他們。但你們不可這樣。 <verse number="26" style="v"/>你們中間，誰要當首領，誰就要做大家的僕人； <verse number="27" style="v"/>誰要居首位，誰就要做大家的奴僕。 <verse number="28" style="v"/>正如人子不是來受人服侍，而是來服侍人，並且犧牲性命，作許多人的贖價。」</para>
+  <para style="s1">治好兩個瞎子</para>
+  <para style="p">
+    <verse number="29" style="v"/>耶穌和祂的門徒離開<char style="pn">耶利哥</char>時，有一大群人跟著祂。 <verse number="30" style="v"/>有兩個瞎子正坐在路旁，聽說耶穌經過，就高聲喊叫：「主啊，<char style="pn">大衛</char>的後裔啊，可憐我們吧！」 <verse number="31" style="v"/>眾人責備他們，叫他們不要出聲，他們卻喊得更大聲了：「主啊，<char style="pn">大衛</char>的後裔啊，可憐我們吧！」</para>
+  <para style="p">
+    <verse number="32" style="v"/>耶穌停下腳步，叫了他們來，問他們：「你們要我為你們做什麼？」 <verse number="33" style="v"/>他們說：「主啊，我們想能夠看見。」 <verse number="34" style="v"/>耶穌就動了慈心，摸他們的眼睛，他們立刻得見光明，並跟從了耶穌。</para>
+  <chapter number="21" style="c"/>
+  <para style="s1">光榮進聖城</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶穌和門徒離<char style="pn">耶路撒冷</char>越來越近了，他們來到橄欖山旁的<char style="pn">伯法其</char>。 <verse number="2" style="v"/>耶穌派兩個門徒進村，並對他們說：「你們到前面的村莊去，就會看見一頭母驢拴在那裡，旁邊還有一頭驢駒。你們把牠們解開，牽到我這裡。 <verse number="3" style="v"/>要是有人問起，你們就說，『主要用牠們』，那人會立刻讓你們牽來。」 <verse number="4" style="v"/>這件事是要應驗先知的話：</para>
+  <para style="p">
+    <verse number="5" style="v"/>「要對<char style="pn">錫安</char>城<note caller="+" style="f"><char style="fr" closed="false">21·5 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">城</char><char style="ft" closed="false">」希伯來文是「女子」，可能是對錫安的暱稱。</char></note>說，『看啊，你的君王來了！祂謙卑地騎著驢，騎著一頭驢駒。』」</para>
+  <para style="p">
+    <verse number="6" style="v"/>兩個門徒照著耶穌的吩咐去了， <verse number="7" style="v"/>把母驢和驢駒帶了回來。他們把自己的衣服蓋在驢背上，讓耶穌騎上去。 <verse number="8" style="v"/>許多人把衣服鋪在路上，也有些人砍下樹枝鋪在路上。 <verse number="9" style="v"/>眾人前呼後擁，歡呼著說：</para>
+  <para style="q1">「和散那<note caller="+" style="f"><char style="fr" closed="false">21·9 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">和散那</char><char style="ft" closed="false">」原意是「拯救我們」，此處有「讚美」的意思。</char></note>歸於<char style="pn">大衛</char>的後裔！</para>
+  <para style="q1">奉主名來的當受稱頌！</para>
+  <para style="q1">和散那歸於至高之處的上帝！」</para>
+  <para style="p">
+    <verse number="10" style="v"/>耶穌進<char style="pn">耶路撒冷</char>時，全城轟動，說：「這是誰？」</para>
+  <para style="p">
+    <verse number="11" style="v"/>眾人說：「祂是先知耶穌，來自<char style="pn">加利利</char>的<char style="pn">拿撒勒</char>。」</para>
+  <para style="s1">潔淨聖殿</para>
+  <para style="p">
+    <verse number="12" style="v"/>耶穌進入聖殿，趕走裡面做買賣的人，又推翻兌換錢幣之人的桌子和賣鴿子之人的凳子。</para>
+  <para style="p">
+    <verse number="13" style="v"/>耶穌斥責他們說：「聖經上說，『我的殿必稱為禱告的殿。』你們竟把它變成了賊窩。」</para>
+  <para style="p">
+    <verse number="14" style="v"/>殿中的瞎子和瘸子都來到耶穌面前，祂便醫好了他們。 <verse number="15" style="v"/>祭司長和律法教師看見祂所行的奇事，又聽見小孩子在聖殿裡高聲喊著：「和散那歸於<char style="pn">大衛</char>的後裔！」便十分惱怒。 <verse number="16" style="v"/>他們責問耶穌說：「你聽見這些人說的了嗎？」</para>
+  <para style="p">耶穌說：「我聽見了。聖經上說，『你使孩童和嬰兒口中發出頌讚』，你們沒有讀過嗎？」 <verse number="17" style="v"/>然後，祂便離開他們，出城前往<char style="pn">伯大尼</char>，在那裡住宿。</para>
+  <para style="s1">咒詛無花果樹</para>
+  <para style="p">
+    <verse number="18" style="v"/>清早，耶穌在回城的途中餓了。 <verse number="19" style="v"/>祂看見路旁有一棵無花果樹，便走過去，卻發現除了葉子外什麼也沒有。</para>
+  <para style="p">祂對那棵樹說：「你將再不會結果子！」那棵樹立刻枯萎了。</para>
+  <para style="p">
+    <verse number="20" style="v"/>門徒見了就驚奇地問：「這棵樹怎麼一下子枯萎了？」</para>
+  <para style="p">
+    <verse number="21" style="v"/>耶穌回答說：「我實在告訴你們，如果你們有信心、不懷疑，不但能使無花果樹枯乾，就算對這座山說，『從這裡挪開，投進大海裡！』也照樣可以實現。 <verse number="22" style="v"/>所以，你們禱告時無論求什麼，只要有信心，就必定得到。」</para>
+  <para style="s1">質問耶穌的權柄</para>
+  <para style="p">
+    <verse number="23" style="v"/>耶穌進了聖殿，正在教導人的時候，祭司長和民間的長老來質問祂：「你憑什麼權柄做這些事？誰授權給你了？」</para>
+  <para style="p">
+    <verse number="24" style="v"/>耶穌說：「我也要問你們一個問題，你們回答了，我就告訴你們我憑什麼權柄做這些事。 <verse number="25" style="v"/><char style="pn">約翰</char>的洗禮是從哪裡來的？從天上來的，還是從人來的？」</para>
+  <para style="p">他們便彼此議論說：「如果我們說『是從天上來的』，祂一定會問我們，『那你們為什麼不信他？』 <verse number="26" style="v"/>但如果我們說『是從人來的』，又怕觸怒百姓，因為他們相信<char style="pn">約翰</char>是個先知。」 <verse number="27" style="v"/>於是，他們回答耶穌說：「我們不知道。」</para>
+  <para style="p">耶穌說：「我也不告訴你們我憑什麼權柄做這些事。」</para>
+  <para style="s1">兩個兒子的比喻</para>
+  <para style="p">
+    <verse number="28" style="v"/>耶穌又說：「你們怎樣看這件事？某人有兩個兒子。他對大兒子說，『孩子，你今天到葡萄園工作吧！』</para>
+  <para style="p">
+    <verse number="29" style="v"/>「大兒子回答說，『我不去！』但後來他改變了主意，就去了。</para>
+  <para style="p">
+    <verse number="30" style="v"/>「那父親又對小兒子說，『你今天到葡萄園工作吧！』小兒子回答說，『好的，父親。』他答應了，卻沒有去。</para>
+  <para style="p">
+    <verse number="31" style="v"/>「你們認為這兩個兒子，到底哪一個服從父親呢？」</para>
+  <para style="p">他們回答道：「大兒子。」</para>
+  <para style="p">耶穌說：「我實在告訴你們，稅吏和娼妓要比你們先進上帝的國。 <verse number="32" style="v"/>因為<char style="pn">約翰</char>來指示你們當行的正路，你們不信他，但稅吏和娼妓信了。你們親眼看見了這些事，竟然還是執迷不悟，不肯信他。</para>
+  <para style="s1">惡毒的佃戶</para>
+  <para style="p">
+    <verse number="33" style="v"/>「你們再聽一個比喻。有個園主栽種了一個葡萄園，在園子的四周建造圍牆，又在園中挖了一個榨酒池，建了一座瞭望臺，然後把葡萄園租給佃戶，就出遠門了。 <verse number="34" style="v"/>到了收穫的季節，園主派奴僕到佃戶那裡收果子。 <verse number="35" style="v"/>但那些佃戶卻抓住他的奴僕，打傷一個，殺死一個，又用石頭打死了一個。 <verse number="36" style="v"/>於是，園主又派更多的奴僕去，結果也遭到同樣的對待。 <verse number="37" style="v"/>最後，園主派了自己的兒子去，心想，『他們肯定會尊重我的兒子。』 <verse number="38" style="v"/>然而，那些佃戶看見園主的兒子來了，就商量說，『這是園主的繼承人。來吧！我們殺掉他，佔了他的產業！』 <verse number="39" style="v"/>於是，他們抓住他，把他推出園外殺了。 <verse number="40" style="v"/>那麼，當園主回來的時候，他會怎樣處置那些佃戶呢？」</para>
+  <para style="p">
+    <verse number="41" style="v"/>他們說：「他會毫不留情地除掉那些惡人，然後把葡萄園租給其他按時交果子的佃戶。」</para>
+  <para style="p">
+    <verse number="42" style="v"/>耶穌說：</para>
+  <para style="q1">「『工匠丟棄的石頭已成了房角石。</para>
+  <para style="q1">這是主的作為，在我們看來奇妙莫測。』</para>
+  <para style="m">你們難道沒有讀過這段經文嗎？ <verse number="43" style="v"/>所以，我告訴你們，將把上帝的國從你們那裡奪去，賜給結果子的人。 <verse number="44" style="v"/>凡跌在這石頭上的人，一定粉身碎骨；這石頭落在誰身上，就會把誰砸爛。」</para>
+  <para style="p">
+    <verse number="45" style="v"/>祭司長和法利賽人聽了耶穌的比喻，明白是針對他們講的。 <verse number="46" style="v"/>他們試圖逮捕耶穌，但又害怕百姓，因為百姓都認為耶穌是先知。</para>
+  <chapter number="22" style="c"/>
+  <para style="s1">王宴客的比喻</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶穌又用比喻對他們說： <verse number="2" style="v"/>「天國就像一個王為兒子籌備婚宴。 <verse number="3" style="v"/>他派奴僕去請受邀的客人，可是客人都不肯赴宴。 <verse number="4" style="v"/>王再派其他奴僕去，說，『去告訴被邀請的人，我的宴席已經備好，公牛和肥畜都宰了，一切都預備妥當，來赴婚宴吧！』 <verse number="5" style="v"/>那些人卻毫不理會地走了，一個去種田，一個去做買賣， <verse number="6" style="v"/>其餘的竟然抓住王的奴僕，把他們羞辱一番後殺了。 <verse number="7" style="v"/>王大怒，派軍隊去剿滅凶手，燒毀他們的城。</para>
+  <para style="p">
+    <verse number="8" style="v"/>「然後，他對奴僕說，『婚宴已預備好了，只是被邀請的人不配。 <verse number="9" style="v"/>所以你們到街頭巷尾，把所有見到的人都請來。』 <verse number="10" style="v"/>奴僕到街上把遇到的人都請了來，好人壞人都有，大廳裡滿了客人。</para>
+  <para style="p">
+    <verse number="11" style="v"/>「王出來會見在座的客人，發現有一個人沒有穿禮服， <verse number="12" style="v"/>就問他，『朋友，你來這裡怎麼不穿婚宴的禮服呢？』那人無言以對。 <verse number="13" style="v"/>王便吩咐侍從，『把他手腳綁起來丟到外面的黑暗裡，讓他在那裡哀哭切齒。』」</para>
+  <para style="p">
+    <verse number="14" style="v"/>耶穌又說：「被邀請的人多，選上的人少。」</para>
+  <para style="s1">以納稅問題刁難耶穌</para>
+  <para style="p">
+    <verse number="15" style="v"/>那時，法利賽人出去策劃怎樣從耶穌的話裡找把柄陷害祂。 <verse number="16" style="v"/>他們派了自己的門徒跟<char style="pn">希律</char>黨人一同去問耶穌：「老師，我們知道你誠實無偽，按真理傳上帝的道，你不徇情面，不以貌取人。 <verse number="17" style="v"/>那麼請告訴我們，納稅給凱撒對不對呢？」</para>
+  <para style="p">
+    <verse number="18" style="v"/>耶穌看出了他們的惡意，就說：「你們這些偽君子，為什麼試探我呢？ <verse number="19" style="v"/>拿一個納稅用的錢幣來給我看。」他們就拿給祂一個銀幣。</para>
+  <para style="p">
+    <verse number="20" style="v"/>耶穌問他們：「上面刻的是誰的像和名號？」</para>
+  <para style="p">
+    <verse number="21" style="v"/>他們說：「凱撒的。」</para>
+  <para style="p">耶穌說：「那麼，屬於凱撒的東西應該給凱撒，屬於上帝的東西應該給上帝。」 <verse number="22" style="v"/>他們聽了很驚奇，只好離開祂走了。</para>
+  <para style="s1">論復活</para>
+  <para style="p">
+    <verse number="23" style="v"/>同一天，不相信死人會復活的撒都該人也來問耶穌， <verse number="24" style="v"/>說：「老師，<char style="pn">摩西</char>說，『如果一個人死了，沒有兒女，只留下妻子，他的兄弟就當娶嫂嫂，替哥哥傳宗接代。』 <verse number="25" style="v"/>從前，我們這裡有弟兄七人，老大結了婚，沒有孩子就死了，把妻子留給了弟弟。 <verse number="26" style="v"/>二弟、三弟一直到七弟都相繼娶了嫂嫂，都沒留下孩子。 <verse number="27" style="v"/>最後，那女人也死了。 <verse number="28" style="v"/>那麼，到復活的時候，她將是誰的妻子呢？因為他們都娶過她。」</para>
+  <para style="p">
+    <verse number="29" style="v"/>耶穌說：「你們弄錯了。你們不明白聖經，也不知道上帝的能力。 <verse number="30" style="v"/>因為到復活的時候，人們將不娶也不嫁，就像天上的天使一樣。</para>
+  <para style="p">
+    <verse number="31" style="v"/>「關於死人復活的事，難道你們沒有讀過上帝對你們說過的話嗎？ <verse number="32" style="v"/>祂說，『我是<char style="pn">亞伯拉罕</char>的上帝，<char style="pn">以撒</char>的上帝，<char style="pn">雅各</char>的上帝。』上帝不是死人的上帝，而是活人的上帝。」 <verse number="33" style="v"/>眾人聽到祂的教導都很驚奇。</para>
+  <para style="s1">最大的誡命</para>
+  <para style="p">
+    <verse number="34" style="v"/>法利賽人聽見耶穌使撒都該人無言以對，就聚集在一起。 <verse number="35" style="v"/>其中有位律法專家試探耶穌說： <verse number="36" style="v"/>「老師，請問律法中哪一條誡命最重要呢？」</para>
+  <para style="p">
+    <verse number="37" style="v"/>耶穌回答說：「『你要全心、全情、全意愛主——你的上帝』， <verse number="38" style="v"/>這是第一條也是最重要的誡命。 <verse number="39" style="v"/>第二條也相似，就是『要愛鄰如己』。 <verse number="40" style="v"/>律法和先知的全部教導都以這兩條誡命為基礎。」</para>
+  <para style="s1">基督的身分</para>
+  <para style="p">
+    <verse number="41" style="v"/>耶穌趁著法利賽人聚在那裡，就問他們： <verse number="42" style="v"/>「你們對基督有何看法？祂是誰的後裔？」他們答道：「<char style="pn">大衛</char>的後裔。」</para>
+  <para style="p">
+    <verse number="43" style="v"/>耶穌說：「那麼，為什麼<char style="pn">大衛</char>受聖靈感動，稱祂為主呢？<char style="pn">大衛</char>曾說，</para>
+  <para style="q1">
+    <verse number="44" style="v"/>『主對我主說，</para>
+  <para style="q1">你坐在我的右邊，</para>
+  <para style="q1">等我使你的仇敵伏在你腳下。』</para>
+  <para style="m">
+    <verse number="45" style="v"/>既然<char style="pn">大衛</char>稱基督為主，基督又怎麼會是<char style="pn">大衛</char>的後裔呢？」 <verse number="46" style="v"/>沒人能回答耶穌的問題。從此再沒有人敢用問題來刁難耶穌了。</para>
+  <chapter number="23" style="c"/>
+  <para style="s1">譴責律法教師和法利賽人</para>
+  <para style="p">
+    <verse number="1" style="v"/>隨後，耶穌對百姓和門徒說： <verse number="2" style="v"/>「律法教師和法利賽人坐在<char style="pn">摩西</char>的位子上講授律法。 <verse number="3" style="v"/>你們要遵行他們的教導，但不要效法他們的行為，因為他們言行不一。 <verse number="4" style="v"/>他們捆好重擔放在別人肩上，而自己連一根指頭也不肯動！</para>
+  <para style="p">
+    <verse number="5" style="v"/>「他們的所作所為是為了給人看的，他們把額上佩戴的經文盒子加寬了，又將衣裳的穗邊加長了。 <verse number="6" style="v"/>他們喜歡宴席中的上座和會堂裡的首位。 <verse number="7" style="v"/>他們喜歡別人在街市上問候他們，稱呼他們為老師<note caller="+" style="f"><char style="fr" closed="false">23·7 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">老師</char><char style="ft" closed="false">」希臘文是「拉比」，特指猶太教的老師。</char></note>。 <verse number="8" style="v"/>但你們不要讓別人稱呼你們為老師，因為你們只有一位老師，你們彼此都是弟兄。 <verse number="9" style="v"/>不要稱呼地上的人為父親，因為你們只有一位父親，祂在天上。 <verse number="10" style="v"/>不要讓人稱你們為導師，因為你們只有一位導師——基督。 <verse number="11" style="v"/>你們當中誰最偉大，誰就要作你們的僕人。 <verse number="12" style="v"/>自高的人必遭貶抑，謙卑的人必得尊榮。</para>
+  <para style="p">
+    <verse number="13" style="v"/>「虛偽的律法教師和法利賽人啊，你們有禍了！因為你們當著人們的面關閉天國之門，自己不進去，也不讓別人進去。</para>
+  <para style="p">
+    <verse number="14" style="v"/>「虛偽的律法教師和法利賽人啊，你們有禍了！因為你們侵吞寡婦的財產，還假意做冗長的禱告。因此，你們會受到更嚴厲的刑罰。<note caller="+" style="f"><char style="fr" closed="false">23·14 </char><char style="ft" closed="false">有些古卷無：「虛偽的律法教師和法利賽人啊，你們有禍了！因為你們侵吞寡婦的財產，還假意做冗長的禱告。因此，你們會受到更嚴厲的刑罰。」</char></note></para>
+  <para style="p">
+    <verse number="15" style="v"/>「虛偽的律法教師和法利賽人啊，你們有禍了！因為你們走遍海洋和陸地去引人入教，等人入了教，卻使他淪為地獄之子，比你們還壞兩倍。</para>
+  <para style="p">
+    <verse number="16" style="v"/>「瞎眼的嚮導啊，你們有禍了！你們說，『指著聖殿發誓，不算數；但是指著聖殿裡的金子發誓，就要遵守誓言。』 <verse number="17" style="v"/>無知的瞎子啊！金子重要呢？還是使金子神聖的聖殿重要呢？ <verse number="18" style="v"/>你們又說，『指著祭壇發誓不算數，但是指著壇上的供物發誓，就要遵守誓言。』 <verse number="19" style="v"/>瞎眼的人啊！供物重要呢？還是使供物神聖的祭壇重要呢？ <verse number="20" style="v"/>其實指著祭壇發誓，就是指著祭壇和壇上的一切東西發誓。 <verse number="21" style="v"/>指著聖殿發誓，就是指著聖殿和住在裡面的上帝發誓。 <verse number="22" style="v"/>指著天發誓，就是指著上帝的寶座和坐在寶座上的那位發誓。</para>
+  <para style="p">
+    <verse number="23" style="v"/>「虛偽的律法教師和法利賽人啊，你們有禍了！你們把薄荷、茴香、芹菜獻上十分之一，卻忽略了律法中更重要的事——公正、憐憫、信實。後者是你們本該做的，前者也不可忽略。 <verse number="24" style="v"/>瞎眼的嚮導啊！你們濾出蚊蟲，卻吞下駱駝。</para>
+  <para style="p">
+    <verse number="25" style="v"/>「虛偽的律法教師和法利賽人啊，你們有禍了！你們洗淨杯盤的外面，裡頭卻盛滿了貪婪和放縱。 <verse number="26" style="v"/>瞎眼的法利賽人啊！要先洗淨杯盤的裡面，好讓外面也乾淨。<note caller="+" style="f"><char style="fr" closed="false">23·26 </char><char style="ft" closed="false">意思是：「裡面的思想先乾淨了，外在的言行才會真正乾淨。」</char></note></para>
+  <para style="p">
+    <verse number="27" style="v"/>「虛偽的律法教師和法利賽人啊，你們有禍了！你們好像粉飾的墳墓，外表好看，裡面卻裝滿了死人的骨頭和各樣污穢之物。 <verse number="28" style="v"/>你們虛有公義的外表，內心卻充滿了各種的虛偽和罪惡。</para>
+  <para style="p">
+    <verse number="29" style="v"/>「虛偽的律法教師和法利賽人啊，你們有禍了！你們為先知建墓，為義人修碑，並且說， <verse number="30" style="v"/>『如果我們活在我們祖先的時代，絕不會和他們一起去殺害先知。』 <verse number="31" style="v"/>這樣，你們自己證明自己是殺害先知之人的後代。 <verse number="32" style="v"/>去填滿你們祖先的罪惡吧！ <verse number="33" style="v"/>你們這些蛇，這些毒蛇的後代啊，你們怎能逃脫地獄的刑罰呢？</para>
+  <para style="p">
+    <verse number="34" style="v"/>「看啊，我派先知、智者和律法教師到你們當中，有的會遭到你們的殺害，被你們釘在十字架上；有的會在會堂裡被你們鞭打，被你們從這城追到那城。 <verse number="35" style="v"/>因此，所有義人在地上所流的血，就是從義人<char style="pn">亞伯</char>的血，直到你們在聖所和祭壇之間所殺的<char style="pn">巴拉加</char>的兒子<char style="pn">撒加利亞</char>的血，都要歸到你們身上。 <verse number="36" style="v"/>我實在告訴你們，這一切的罪責都要歸到這個世代。</para>
+  <para style="s1">為耶路撒冷哀歎</para>
+  <para style="p">
+    <verse number="37" style="v"/>「<char style="pn">耶路撒冷</char>啊！<char style="pn">耶路撒冷</char>啊！你常殺害先知，又用石頭打死派到你那裡的使者。我多次想要招聚你的兒女，像母雞將小雞聚集在翅膀底下，可是你們卻不肯。 <verse number="38" style="v"/>看啊！你們的家園將一片荒涼。 <verse number="39" style="v"/>我告訴你們，從現在起，直到你們說『奉主名來的當受稱頌』那天之前，你們再也見不到我了。」</para>
+  <chapter number="24" style="c"/>
+  <para style="s1">預言聖殿被毀</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶穌離開聖殿時，門徒上前把宏偉的聖殿指給祂看。 <verse number="2" style="v"/>耶穌對他們說：「你們看見這殿宇了嗎？我實在告訴你們，將來它要被完全拆毀，在這裡找不到兩塊疊在一起的石頭。」</para>
+  <para style="s1">世界末日的預兆</para>
+  <para style="p">
+    <verse number="3" style="v"/>耶穌正坐在橄欖山上，門徒私下來問祂：「請告訴我們，這事什麼時候會發生？你再來和世界末日的時候會有什麼預兆？」</para>
+  <para style="p">
+    <verse number="4" style="v"/>耶穌回答說：「你們要小心，免得被人迷惑。 <verse number="5" style="v"/>因為將來會有許多人冒我的名而來，說『我是基督』，欺騙許多人。 <verse number="6" style="v"/>你們聽見戰爭爆發、戰訊頻傳時，不要驚慌，因為這些事必然發生，只是末日還沒有到。 <verse number="7" style="v"/>民族將與民族互鬥，國家將與國家相爭，各處將有饑荒和地震。 <verse number="8" style="v"/>這些只是災難<note caller="+" style="f"><char style="fr" closed="false">24·8 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">災難</char><char style="ft" closed="false">」希臘文是「生產之痛」。</char></note>的開始。</para>
+  <para style="p">
+    <verse number="9" style="v"/>「那時，你們將遭人迫害、殺害，並因我的名而被萬民憎恨。 <verse number="10" style="v"/>那時，許多人會放棄信仰，互相出賣，彼此憎恨。 <verse number="11" style="v"/>許多假先知也會出現，迷惑許多人。 <verse number="12" style="v"/>由於罪惡氾濫，許多人的愛逐漸冷淡。 <verse number="13" style="v"/>但堅忍到底的必定得救。 <verse number="14" style="v"/>這天國的福音將傳遍天下，讓萬民都聽見，然後末日才會來臨。</para>
+  <para style="p">
+    <verse number="15" style="v"/>「當你們看見<char style="pn">但以理</char>先知所說的『那帶來毀滅的可憎之物』站立在聖地的時候（讀者須會意）， <verse number="16" style="v"/>住在<char style="pn">猶太</char>地區的人要趕快逃到山上去， <verse number="17" style="v"/>在屋頂上的人不要下來進屋收拾行李， <verse number="18" style="v"/>在田間工作的人也不要回家取外衣。 <verse number="19" style="v"/>那時，孕婦和哺育嬰兒的母親們可就遭殃了！ <verse number="20" style="v"/>你們要祈求上帝，不要讓你們在冬天或安息日逃難， <verse number="21" style="v"/>因為那時世上將有空前絕後的大災難。 <verse number="22" style="v"/>如果不縮短災期，恐怕沒有人能活命。但為了選民的緣故，災期必被縮短。</para>
+  <para style="p">
+    <verse number="23" style="v"/>「那時，如果有人對你們說，『看啊！基督在這裡』，或說，『基督在那裡』，你們不要相信。 <verse number="24" style="v"/>因為假基督和假先知將出現，行很大的神蹟奇事來迷惑人，如果可能，甚至要迷惑上帝揀選的子民。 <verse number="25" style="v"/>你們要記住，我已經預先告訴你們了。</para>
+  <para style="p">
+    <verse number="26" style="v"/>「因此，如果有人對你們說，『看啊！基督在曠野』，你們不要出去；或者說，『看啊！基督在屋裡』，你們也不要相信。 <verse number="27" style="v"/>人子降臨時的情形就像閃電從東方發出一直照到西方。 <verse number="28" style="v"/>屍體在哪裡，禿鷹就會聚集在哪裡。</para>
+  <para style="p">
+    <verse number="29" style="v"/>「當災難的日子一過，</para>
+  <para style="q1">『太陽變黑，</para>
+  <para style="q1">月亮無光，</para>
+  <para style="q1">眾星隕落，</para>
+  <para style="q1">天體震動。』</para>
+  <para style="p">
+    <verse number="30" style="v"/>「那時，天上會出現人子降臨的預兆，地上的萬族都要哀哭，他們將看見人子帶著能力和極大的榮耀駕著天上的雲降臨。 <verse number="31" style="v"/>在響亮的號聲中，祂將差遣天使從四面八方、天涯海角招聚祂揀選的人。</para>
+  <para style="s1">無花果樹的比喻</para>
+  <para style="p">
+    <verse number="32" style="v"/>「你們可以從無花果樹學個道理。當無花果樹發芽長葉的時候，你們就知道夏天快來了。 <verse number="33" style="v"/>同樣，當你們看見這一切事發生時，就知道人子快來了，就在門口。 <verse number="34" style="v"/>我實在告訴你們，這個世代還沒有過去，這一切都要發生。 <verse number="35" style="v"/>天地都要過去，但我的話永遠長存。</para>
+  <para style="s1">警醒準備</para>
+  <para style="p">
+    <verse number="36" style="v"/>「但沒有人知道那日子和時辰何時來到，連天上的天使也不知道，人子<note caller="+" style="f"><char style="fr" closed="false">24·36 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">人子</char><char style="ft" closed="false">」希臘文是「子」。</char></note>也不知道，只有天父知道。 <verse number="37" style="v"/>人子降臨時的情形就像挪亞的時代。 <verse number="38" style="v"/>洪水來臨之前，人們吃吃喝喝，男婚女嫁，一直到挪亞進方舟那天； <verse number="39" style="v"/>他們懵然不知，直到洪水來把他們全沖走了。人子降臨時的情形也是這樣。 <verse number="40" style="v"/>那時，兩個人在田裡，一個將被接去，一個將被撇下； <verse number="41" style="v"/>兩個婦人推磨，一個將被接去，一個將被撇下。 <verse number="42" style="v"/>所以，你們要警醒，因為你們不知道你們的主會在哪一天來。 <verse number="43" style="v"/>你們都知道，如果一家的主人知道賊會在半夜幾點來，就必警醒，不讓賊入屋偷竊。 <verse number="44" style="v"/>同樣，你們也要做好準備，因為在你們意想不到的時候，人子就來了。</para>
+  <para style="s1">兩種奴僕</para>
+  <para style="p">
+    <verse number="45" style="v"/>「誰是那個受主人委託管理家中大小僕役、按時分糧食給他們、又忠心又精明的奴僕呢？ <verse number="46" style="v"/>主人回家時，看見他盡忠職守，他就有福了。 <verse number="47" style="v"/>我實在告訴你們，主人一定會把所有產業都交給他管理。 <verse number="48" style="v"/>但如果奴僕邪惡，以為主人不會那麼快回來， <verse number="49" style="v"/>就毆打同伴，跟醉漢一起吃喝玩樂， <verse number="50" style="v"/>主人會在他想不到的日子、不知道的時辰回來， <verse number="51" style="v"/>嚴厲地懲罰<note caller="+" style="f"><char style="fr" closed="false">24·51 </char><char style="ft" closed="false">「</char><char style="fq" closed="false">嚴厲地懲罰</char><char style="ft" closed="false">」或作「腰斬」。</char></note>他，判他和偽君子同樣的罪。他必在那裡哀哭切齒。</para>
+  <chapter number="25" style="c"/>
+  <para style="s1">十個伴娘的比喻</para>
+  <para style="p">
+    <verse number="1" style="v"/>「那時，天國就像十個伴娘提著燈去迎接新郎， <verse number="2" style="v"/>其中五個是糊塗的，五個是聰明的。 <verse number="3" style="v"/>五個糊塗的只顧拿著燈，卻不預備油； <verse number="4" style="v"/>那些聰明的不但拿著燈，還用器皿預備了足夠的油。 <verse number="5" style="v"/>新郎遲遲未到，她們等得困倦，便打盹睡著了。</para>
+  <para style="p">
+    <verse number="6" style="v"/>「到了半夜，忽然聽見有人喊道，『新郎來了！出來迎接吧！』 <verse number="7" style="v"/>伴娘們醒來，把燈點亮。 <verse number="8" style="v"/>糊塗的伴娘對聰明的伴娘說，『請給我們一些油吧，因為我們的燈快要滅了！』</para>
+  <para style="p">
+    <verse number="9" style="v"/>「聰明的伴娘回答說，『不行，我們的油不夠大家用的，你們去油店買吧！』</para>
+  <para style="p">
+    <verse number="10" style="v"/>「當糊塗的伴娘去買油的時候，新郎來了。那些預備好的伴娘跟他一同進去參加婚宴，門就關了。 <verse number="11" style="v"/>後來，其他伴娘回來了，喊道，『主啊！主啊！請給我們開門吧！』</para>
+  <para style="p">
+    <verse number="12" style="v"/>「新郎卻說，『我實在告訴你們，我不認識你們。』</para>
+  <para style="p">
+    <verse number="13" style="v"/>「所以，你們要警醒，因為你們不知道我回來的日子和時辰。</para>
+  <para style="s1">才幹的比喻</para>
+  <para style="p">
+    <verse number="14" style="v"/>「天國就像一個人即將遠行，他召來自己的奴僕，把產業託付給他們， <verse number="15" style="v"/>按各人的才幹分別交給一個人五千銀幣，一個人兩千銀幣，一個人一千銀幣，然後便離開了。 <verse number="16" style="v"/>得到五千銀幣的立刻去做買賣，結果賺了五千； <verse number="17" style="v"/>得到兩千銀幣的也賺了兩千； <verse number="18" style="v"/>可是得到一千銀幣的卻挖了一個洞，把主人的錢藏在地裡。 <verse number="19" style="v"/>過了很久，這些奴僕的主人回來了，要跟他們結帳。 <verse number="20" style="v"/>得到五千銀幣的奴僕帶來了另外的五千，說，『主人，你交給我五千銀幣，請看，我又賺了五千。』</para>
+  <para style="p">
+    <verse number="21" style="v"/>「主人說，『做得好！你真是個又良善又忠心的奴僕。既然你在小事上忠心，我要把更大的事交給你。進來分享你主人的快樂吧！』</para>
+  <para style="p">
+    <verse number="22" style="v"/>「得到兩千銀幣的奴僕也上前說，『主人，你交給我兩千銀幣，請看，我又賺了兩千。』</para>
+  <para style="p">
+    <verse number="23" style="v"/>「主人說，『做得好！你真是個又良善又忠心的奴僕，既然你在小事上忠心，我要把更大的事交給你。進來分享你主人的快樂吧！』</para>
+  <para style="p">
+    <verse number="24" style="v"/>「得到一千銀幣的奴僕也上前說，『主人，我知道你為人苛刻，沒有播種的地方也要收割，沒有撒種的地方也要收穫。 <verse number="25" style="v"/>我很害怕，就去把你的錢藏在地裡。請看，這是你的錢。』</para>
+  <para style="p">
+    <verse number="26" style="v"/>「主人說，『你這又可惡又懶惰的奴僕！既然你知道我沒有播種的地方也要收割，沒有撒種的地方也要收穫， <verse number="27" style="v"/>就應該把錢存入錢莊，等我回來時，可以連本帶利還給我。』</para>
+  <para style="p">
+    <verse number="28" style="v"/>「主人接著說，『收回他的一千銀幣，賞給那個有一萬銀幣的奴僕。 <verse number="29" style="v"/>因為凡有的，還要給他更多，使他豐富有餘；凡沒有的，連他僅有的，也要奪去。 <verse number="30" style="v"/>把這沒用的奴僕扔進外邊的黑暗裡，他必在那裡哀哭切齒。』</para>
+  <para style="s1">末日的審判</para>
+  <para style="p">
+    <verse number="31" style="v"/>「當人子在祂的榮耀中與眾天使降臨的時候，祂要坐在榮耀的寶座上， <verse number="32" style="v"/>萬民要聚集在祂面前。祂要把他們分開，就像牧人把綿羊和山羊分開一樣。 <verse number="33" style="v"/>祂要把綿羊放在右邊，山羊放在左邊。 <verse number="34" style="v"/>那時，王會對右邊的人說，『我父所賜福的人啊，來承受創世以來為你們預備的國度吧。 <verse number="35" style="v"/>因為我饑餓時，你們給我吃的；我口渴時，你們給我喝的；我身在異鄉時，你們接待我； <verse number="36" style="v"/>我赤身露體時，你們給我穿的；我生病時，你們照顧我；我坐牢時，你們來看我。』</para>
+  <para style="p">
+    <verse number="37" style="v"/>「那些義人會回答說，『主啊！我們什麼時候見你餓了就給你吃的？見你渴了就給你喝的？ <verse number="38" style="v"/>見你身在異鄉就接待你？見你赤身露體就給你穿的呢？ <verse number="39" style="v"/>我們又什麼時候見你生病或坐牢，就去看你呢？』</para>
+  <para style="p">
+    <verse number="40" style="v"/>「王會回答說，『我實在告訴你們，你們幫助我最卑微的一個弟兄，就是幫助我了。』</para>
+  <para style="p">
+    <verse number="41" style="v"/>「王又對左邊的人說，『你們這些被咒詛的人，走開！到專為魔鬼及其使者預備的永遠不滅的火裡去吧！ <verse number="42" style="v"/>因為我饑餓時，你們不給我吃的；我口渴時，你們不給我喝的； <verse number="43" style="v"/>我身在異鄉時，你們不接待我；我赤身露體時，你們不給我衣服；我生病時，你們不照顧我；我坐牢時，你們不來看我。』</para>
+  <para style="p">
+    <verse number="44" style="v"/>「他們會問，『主啊，我們什麼時候見你餓了，或渴了，或身在異鄉，或赤身露體，或病了，或坐牢，卻沒有幫助你呢？』</para>
+  <para style="p">
+    <verse number="45" style="v"/>「王會回答說，『我實在告訴你們，你們沒有幫助我最卑微的一個弟兄，就是沒有幫助我。』 <verse number="46" style="v"/>這些人要受永遠的刑罰，但義人要得到永遠的生命。」</para>
+  <chapter number="26" style="c"/>
+  <para style="s1">謀害耶穌</para>
+  <para style="p">
+    <verse number="1" style="v"/>耶穌講完了這番話後，對門徒說： <verse number="2" style="v"/>「你們知道，兩天後就是逾越節，到時人子會被出賣，被釘在十字架上。」 <verse number="3" style="v"/>那時，祭司長和民間的長老正聚集在大祭司<char style="pn">該亞法</char>的府裡， <verse number="4" style="v"/>密謀逮捕、殺害耶穌。 <verse number="5" style="v"/>但他們認為在節日期間不宜下手，因為可能會在百姓中引起騷亂。</para>
+  <para style="s1">耶穌受膏</para>
+  <para style="p">
+    <verse number="6" style="v"/>當耶穌在<char style="pn">伯大尼</char>患過痲瘋病的<char style="pn">西門</char>家裡時， <verse number="7" style="v"/>有個女子趁著祂坐席的時候，把一瓶珍貴的香膏倒在祂頭上。</para>
+  <para style="p">
+    <verse number="8" style="v"/>門徒看見後，生氣地說：「真浪費， <verse number="9" style="v"/>這瓶香膏值不少錢，用來賙濟窮人多好！」</para>
+  <para style="p">
+    <verse number="10" style="v"/>耶穌看出他們的心思，便說：「何必為難這女子？她在我身上做的是一件美事。 <verse number="11" style="v"/>因為你們身邊總會有窮人，可是你們身邊不會總有我。 <verse number="12" style="v"/>她把香膏澆在我身上是為我的安葬做準備。 <verse number="13" style="v"/>我實在告訴你們，無論福音傳到世界哪個角落，人們都會傳揚這女人的事蹟，紀念她。」</para>
+  <para style="s1">猶大出賣耶穌</para>
+  <para style="p">
+    <verse number="14" style="v"/>後來，十二門徒中的<char style="pn">加略</char>人<char style="pn">猶大</char>去見祭司長，說： <verse number="15" style="v"/>「如果我把耶穌交給你們，你們肯出多少錢？」他們就給了他三十塊銀子。 <verse number="16" style="v"/>從那時起，<char style="pn">猶大</char>就尋找機會出賣耶穌。</para>
+  <para style="s1">最後的晚餐</para>
+  <para style="p">
+    <verse number="17" style="v"/>除酵節的第一天，門徒來問耶穌說：「我們該在什麼地方為你準備逾越節的晚餐呢？」</para>
+  <para style="p">
+    <verse number="18" style="v"/>耶穌說：「你們進城去，到某人那裡對他說，『老師說祂的時候到了，祂要與門徒在你家中過逾越節。』」 <verse number="19" style="v"/>門徒照耶穌的吩咐準備了逾越節的晚餐。</para>
+  <para style="p">
+    <verse number="20" style="v"/>傍晚，耶穌和十二個門徒吃晚餐。 <verse number="21" style="v"/>席間，耶穌說：「我實在告訴你們，你們中間有一個人要出賣我。」</para>
+  <para style="p">
+    <verse number="22" style="v"/>他們都非常憂愁，相繼追問耶穌，說：「主啊，肯定不是我吧？」</para>
+  <para style="p">
+    <verse number="23" style="v"/>祂說：「那和我一同在盤子裡蘸餅吃的就是要出賣我的人。 <verse number="24" style="v"/>人子一定會受害，正如聖經上有關祂的記載，但出賣人子的人有禍了，他還不如不生在這世上！」</para>
+  <para style="p">
+    <verse number="25" style="v"/>出賣耶穌的<char style="pn">猶大</char>問祂：「老師，是我嗎？」</para>
+  <para style="p">耶穌說：「你自己說了。」</para>
+  <para style="p">
+    <verse number="26" style="v"/>他們吃的時候，耶穌拿起餅來，祝謝後掰開分給門徒，說：「拿去吃吧，這是我的身體。」</para>
+  <para style="p">
+    <verse number="27" style="v"/>接著又拿起杯來，祝謝後遞給門徒，說：「你們都喝吧， <verse number="28" style="v"/>這是我為萬人所流的立約之血，為了使罪得到赦免。 <verse number="29" style="v"/>我告訴你們，從今天起，一直到我在我父的國與你們共飲新酒的那一天之前，我不會再喝這葡萄酒。」 <verse number="30" style="v"/>他們唱完詩歌，就出門去了橄欖山。</para>
+  <para style="s1">預言彼得不認主</para>
+  <para style="p">
+    <verse number="31" style="v"/>耶穌對門徒說：「今天晚上，你們都要離棄我。因為聖經上說，『我要擊打牧人，羊群將四散。』 <verse number="32" style="v"/>但我復活後，要先你們一步去<char style="pn">加利利</char>。」</para>
+  <para style="p">
+    <verse number="33" style="v"/>
+    <char style="pn">彼得</char>說：「即使所有的人都離棄你，我也永遠不會離棄你！」</para>
+  <para style="p">
+    <verse number="34" style="v"/>耶穌說：「我實在告訴你，今夜雞叫以前，你會三次不認我。」</para>
+  <para style="p">
+    <verse number="35" style="v"/>
+    <char style="pn">彼得</char>說：「就算要我跟你一起死，我也不會不認你！」其餘的門徒也都這樣說。</para>
+  <para style="s1">在客西馬尼禱告</para>
+  <para style="p">
+    <verse number="36" style="v"/>耶穌和門徒到了一個叫<char style="pn">客西馬尼</char>的地方，祂對門徒說：「你們坐在這裡，我到那邊去禱告。」 <verse number="37" style="v"/>祂帶了<char style="pn">彼得</char>和<char style="pn">西庇太</char>的兩個兒子一起去。祂心裡非常憂傷痛苦， <verse number="38" style="v"/>就對他們說：「我心裡非常憂傷，幾乎要死，你們留在這裡跟我一起警醒。」</para>
+  <para style="p">
+    <verse number="39" style="v"/>祂稍往前走，俯伏在地上禱告：「我父啊！如果可以，求你撤去此杯。然而，願你的旨意成就，而非我的意願。」</para>
+  <para style="p">
+    <verse number="40" style="v"/>耶穌回到三個門徒那裡，見他們都睡著了，就對<char style="pn">彼得</char>說：「難道你們不能跟我一同警醒一時嗎？ <verse number="41" style="v"/>你們要警醒禱告，免得陷入誘惑。你們的心靈雖然願意，肉體卻很軟弱。」</para>
+  <para style="p">
+    <verse number="42" style="v"/>祂第二次去禱告說：「我父啊！如果我非喝此杯不可，願你的旨意成就。」 <verse number="43" style="v"/>祂回來時見他們又睡著了，因為他們睏得眼皮發沉。 <verse number="44" style="v"/>耶穌再次離開他們，第三次去禱告，說的是同樣的話。</para>
+  <para style="p">
+    <verse number="45" style="v"/>然後，祂回到門徒那裡，對他們說：「你們還在睡覺，還在休息嗎？看啊！時候到了，人子要被出賣，交在罪人手裡了。 <verse number="46" style="v"/>起來，我們走吧。看，出賣我的人已經來了！」</para>
+  <para style="s1">耶穌被捕</para>
+  <para style="p">
+    <verse number="47" style="v"/>耶穌還在說話的時候，十二門徒中的<char style="pn">猶大</char>來了，隨行的還有祭司長和民間長老派來的一大群拿著刀棍的人。 <verse number="48" style="v"/>出賣耶穌的<char style="pn">猶大</char>預先和他們定了暗號，說：「我親吻誰，誰就是耶穌，你們把祂抓起來。」 <verse number="49" style="v"/><char style="pn">猶大</char>隨即走到耶穌跟前，說：「老師，你好。」然後親吻耶穌。</para>
+  <para style="p">
+    <verse number="50" style="v"/>耶穌對他說：「朋友，你要做的事，快動手吧。」於是那些人上前，下手捉拿耶穌。 <verse number="51" style="v"/>耶穌的跟隨者中有人伸手拔出佩刀朝大祭司的奴僕砍去，削掉了他一隻耳朵。</para>
+  <para style="p">
+    <verse number="52" style="v"/>耶穌對他說：「收刀入鞘吧！因為動刀的必死在刀下。 <verse number="53" style="v"/>難道你不知道，我可以請求我父馬上派十二營以上的天使來保護我嗎？ <verse number="54" style="v"/>我若這樣做，聖經上有關這事必如此發生的話又怎能應驗呢？」</para>
+  <para style="p">
+    <verse number="55" style="v"/>那時，耶穌對眾人說：「你們像對付強盜一樣拿著刀棍來抓我嗎？我天天在聖殿裡教導人，你們並沒有來抓我。 <verse number="56" style="v"/>不過這一切事的發生，是要應驗先知書上的話。」那時，門徒都丟下祂逃走了。</para>
+  <para style="s1">大祭司審問耶穌</para>
+  <para style="p">
+    <verse number="57" style="v"/>捉拿耶穌的人把祂押到大祭司<char style="pn">該亞法</char>那裡。律法教師和長老已聚集在那裡。 <verse number="58" style="v"/><char style="pn">彼得</char>遠遠地跟著耶穌，一直跟到大祭司的院子裡。他坐在衛兵當中，想知道事情的結果。</para>
+  <para style="p">
+    <verse number="59" style="v"/>祭司長和全公會的人正在尋找假證據來控告耶穌，好定祂死罪。 <verse number="60" style="v"/>雖然有很多假證人誣告祂，但都找不到真憑實據。最後有兩個人上前高聲說：</para>
+  <para style="p">
+    <verse number="61" style="v"/>「這個人曾經說過，『我能拆毀聖殿，三天內把它重建起來。』」</para>
+  <para style="p">
+    <verse number="62" style="v"/>大祭司站起來質問耶穌：「你不回答嗎？這些人作證控告你的是什麼呢？」 <verse number="63" style="v"/>耶穌還是沉默不語。</para>
+  <para style="p">大祭司又對祂說：「我奉永活上帝的名命令你起誓告訴我們，你是不是上帝的兒子基督？」</para>
+  <para style="p">
+    <verse number="64" style="v"/>耶穌說：「如你所言。但我告訴你們，將來你們要看見人子坐在大能者的右邊，駕著天上的雲降臨。」</para>
+  <para style="p">
+    <verse number="65" style="v"/>大祭司撕裂衣服，說：「祂褻瀆了上帝！我們還需要什麼證人呢？你們現在親耳聽見了祂說褻瀆的話， <verse number="66" style="v"/>你們看怎麼辦？」</para>
+  <para style="p">他們回應說：「祂該死！」</para>
+  <para style="p">
+    <verse number="67" style="v"/>他們就吐唾沫在祂臉上，揮拳打祂。還有人一邊打祂耳光，一邊說： <verse number="68" style="v"/>「基督啊！給我們說預言吧，是誰在打你？」</para>
+  <para style="s1">彼得三次不認主</para>
+  <para style="p">
+    <verse number="69" style="v"/>當時，<char style="pn">彼得</char>還坐在外面的院子裡，有一個婢女走過來對他說：「你也是跟那個<char style="pn">加利利</char>人耶穌一夥的。」</para>
+  <para style="p">
+    <verse number="70" style="v"/>
+    <char style="pn">彼得</char>卻當眾否認：「我不知道你在說什麼。」</para>
+  <para style="p">
+    <verse number="71" style="v"/>正當他走到門口要離開時，另一個婢女看見他，就對旁邊的人說：「這個人是跟<char style="pn">拿撒勒</char>人耶穌一夥的！」</para>
+  <para style="p">
+    <verse number="72" style="v"/>
+    <char style="pn">彼得</char>再次否認，並發誓說：「我不認識那個人。」 <verse number="73" style="v"/>過了一會兒，旁邊站著的人過來對<char style="pn">彼得</char>說：「你肯定也是他們一夥的，聽你的口音就知道了。」</para>
+  <para style="p">
+    <verse number="74" style="v"/>
+    <char style="pn">彼得</char>又賭咒又發誓，說：「我不認識那個人！」就在這時候，雞叫了。 <verse number="75" style="v"/><char style="pn">彼得</char>想起耶穌說的話：「在雞叫以前，你會三次不認我。」他就跑出去，失聲痛哭。</para>
+  <chapter number="27" style="c"/>
+  <para style="s1">猶大的下場</para>
+  <para style="p">
+    <verse number="1" style="v"/>到了清晨，眾祭司長和民間的長老商定要處死耶穌。 <verse number="2" style="v"/>他們把祂綁起來，押送到總督<char style="pn">彼拉多</char>那裡。</para>
+  <para style="p">
+    <verse number="3" style="v"/>出賣耶穌的<char style="pn">猶大</char>看見耶穌被定了罪，感到很後悔，就把那三十塊銀子還給祭司長和長老，說： <verse number="4" style="v"/>「我出賣了清白無辜的人，我犯罪了！」</para>
+  <para style="p">他們說：「那是你自己的事，跟我們有什麼關係？」</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <char style="pn">猶大</char>把錢扔在聖殿裡，出去上吊自盡了。</para>
+  <para style="p">
+    <verse number="6" style="v"/>祭司長們撿起銀子，說：「這是血錢，不可收進聖殿的庫房。」 <verse number="7" style="v"/>他們商議，決定用這些錢買下陶匠的地作為埋葬異鄉人的墳場。 <verse number="8" style="v"/>那塊地至今被稱為「血田」。 <verse number="9" style="v"/>這就應驗了<char style="pn">耶利米</char>先知的話：「他們用<char style="pn">以色列</char>人給祂估定的三十塊銀子， <verse number="10" style="v"/>買了陶匠的一塊田，正如主指示我的。」</para>
+  <para style="s1">耶穌在彼拉多面前受審</para>
+  <para style="p">
+    <verse number="11" style="v"/>耶穌站在總督面前受審。總督問：「你是<char style="pn">猶太</char>人的王嗎？」</para>
+  <para style="p">耶穌說：「如你所言。」</para>
+  <para style="p">
+    <verse number="12" style="v"/>當祭司長和長老控告祂時，祂一句話也不說。 <verse number="13" style="v"/><char style="pn">彼拉多</char>就問：「你沒聽見他們對你的諸多控告嗎？」 <verse number="14" style="v"/>耶穌仍然一言不發，<char style="pn">彼拉多</char>感到十分驚奇。</para>
+  <para style="p">
+    <verse number="15" style="v"/>每逢逾越節，總督會照慣例按民眾的選擇釋放一個犯人。 <verse number="16" style="v"/>那時，有一個惡名昭彰的囚犯名叫<char style="pn">巴拉巴</char>。 <verse number="17" style="v"/>百姓聚在一起的時候，<char style="pn">彼拉多</char>就問他們：「你們要我給你們釋放誰？<char style="pn">巴拉巴</char>還是被稱為基督的耶穌？」 <verse number="18" style="v"/>因為<char style="pn">彼拉多</char>知道他們把耶穌抓來是因為嫉妒。</para>
+  <para style="p">
+    <verse number="19" style="v"/>
+    <char style="pn">彼拉多</char>正坐堂斷案時，他夫人派人來對他說：「你不要插手這個義人的事！我今天在夢中因為這個人受了許多苦。」</para>
+  <para style="p">
+    <verse number="20" style="v"/>祭司長和長老卻慫恿百姓要求釋放<char style="pn">巴拉巴</char>，處死耶穌。 <verse number="21" style="v"/>總督再次問百姓：「這兩個人，你們要我釋放哪一個？」他們說：「<char style="pn">巴拉巴</char>！」</para>
+  <para style="p">
+    <verse number="22" style="v"/>
+    <char style="pn">彼拉多</char>問：「那麼，我怎樣處置那個被稱為基督的耶穌呢？」</para>
+  <para style="p">他們齊聲說：「把祂釘在十字架上！」</para>
+  <para style="p">
+    <verse number="23" style="v"/>
+    <char style="pn">彼拉多</char>問：「為什麼？祂犯了什麼罪？」</para>
+  <para style="p">他們卻更大聲地喊叫：「把祂釘在十字架上！」</para>
+  <para style="p">
+    <verse number="24" style="v"/>
+    <char style="pn">彼拉多</char>見再說也無濟於事，反而會引起騷亂，於是拿了一盆水來，在眾人面前洗手，說：「流這義人的血，罪不在我，你們自己負責。」</para>
+  <para style="p">
+    <verse number="25" style="v"/>眾人都說：「流祂血的責任由我們和我們的子孫承擔！」</para>
+  <para style="p">
+    <verse number="26" style="v"/>於是，<char style="pn">彼拉多</char>為他們釋放了<char style="pn">巴拉巴</char>，下令將耶穌鞭打後，帶出去釘十字架。</para>
+  <para style="s1">耶穌受辱</para>
+  <para style="p">
+    <verse number="27" style="v"/>士兵把耶穌押進總督府，叫全營的士兵都聚集在祂周圍。 <verse number="28" style="v"/>他們剝下耶穌的衣服，替祂披上一件朱紅色的長袍， <verse number="29" style="v"/>用荊棘編成冠冕，戴在祂頭上，又拿一根葦稈放在祂右手裡，跪在祂跟前戲弄祂，說：「<char style="pn">猶太</char>人的王萬歲！」 <verse number="30" style="v"/>然後向祂吐唾沫，拿過葦稈打祂的頭。 <verse number="31" style="v"/>他們戲弄完了，就脫去祂的袍子，給祂穿上原來的衣服，把祂押出去釘十字架。</para>
+  <para style="s1">釘十字架</para>
+  <para style="p">
+    <verse number="32" style="v"/>路上，他們遇見一個叫<char style="pn">西門</char>的<char style="pn">古利奈</char>人，就強迫他背耶穌的十字架。</para>
+  <para style="p">
+    <verse number="33" style="v"/>來到一個地方，名叫<char style="pn">各各他</char>——意思是「髑髏地」， <verse number="34" style="v"/>士兵給耶穌喝摻了苦膽汁的酒，祂嚐了一口，不肯喝。</para>
+  <para style="p">
+    <verse number="35" style="v"/>他們把耶穌釘在十字架上，還抽籤分了祂的衣服， <verse number="36" style="v"/>然後坐在那裡看守。 <verse number="37" style="v"/>他們在祂頭頂上掛了一個牌子，上面寫著祂的罪狀：「這是<char style="pn">猶太</char>人的王耶穌」。 <verse number="38" style="v"/>有兩個強盜也被釘在十字架上，一個在祂右邊，一個在祂左邊。 <verse number="39" style="v"/>過路的人都嘲笑祂，搖著頭說： <verse number="40" style="v"/>「你這聲稱把聖殿拆毀又在三天內重建的人啊，救救自己吧！你要是上帝的兒子，就從十字架上下來吧！」</para>
+  <para style="p">
+    <verse number="41" style="v"/>祭司長、律法教師和長老也嘲諷說： <verse number="42" style="v"/>「祂救了別人，卻救不了自己！祂要是<char style="pn">以色列</char>的王，就從十字架上跳下來吧！我們就信祂。 <verse number="43" style="v"/>祂說信靠上帝，如果上帝喜悅祂，就讓上帝來救祂吧！因為祂自稱是上帝的兒子。」 <verse number="44" style="v"/>甚至跟祂一同被釘十字架的強盜也這樣嘲笑祂。</para>
+  <para style="s1">耶穌之死</para>
+  <para style="p">
+    <verse number="45" style="v"/>從正午一直到下午三點，黑暗籠罩著整個大地。 <verse number="46" style="v"/>大約下午三點，耶穌大聲呼喊：「以利，以利，拉馬撒巴各大尼？」意思是：「我的上帝，我的上帝，你為什麼離棄我？」</para>
+  <para style="p">
+    <verse number="47" style="v"/>有些站在旁邊的人聽見了，就說：「這人在呼叫<char style="pn">以利亞</char>呢。」 <verse number="48" style="v"/>其中一人連忙跑去拿了一塊海綿，蘸滿酸酒，綁在葦稈上送給祂喝。 <verse number="49" style="v"/>其他人卻說：「等一下！我們看看<char style="pn">以利亞</char>會不會來救祂。」</para>
+  <para style="p">
+    <verse number="50" style="v"/>耶穌又大喊了一聲，就斷了氣。</para>
+  <para style="p">
+    <verse number="51" style="v"/>就在那時，聖殿裡的幔子從上到下裂成兩半，大地震動，岩石崩裂， <verse number="52" style="v"/>墳墓打開，很多死去的聖徒復活過來。 <verse number="53" style="v"/>他們在耶穌復活後離開墳墓，進聖城向許多人顯現。</para>
+  <para style="p">
+    <verse number="54" style="v"/>看守耶穌的百夫長和士兵看見地震及所發生的一切，都很害怕，說：「這人真是上帝的兒子啊！」 <verse number="55" style="v"/>有好些婦女在遠處觀看，她們從<char style="pn">加利利</char>就跟隨了耶穌，服事祂。 <verse number="56" style="v"/>其中有<char style="pn">抹大拉</char>的<char style="pn">瑪麗亞</char>、<char style="pn">雅各</char>和<char style="pn">約西</char>的母親<char style="pn">瑪麗亞</char>以及<char style="pn">西庇太</char>兩個兒子的母親。</para>
+  <para style="s1">封石守墓</para>
+  <para style="p">
+    <verse number="57" style="v"/>傍晚，從<char style="pn">亞利馬太</char>來了一位名叫<char style="pn">約瑟</char>的富人，他是耶穌的門徒。 <verse number="58" style="v"/>他去求見<char style="pn">彼拉多</char>，要求領取耶穌的遺體，<char style="pn">彼拉多</char>就下令把耶穌的遺體交給他。 <verse number="59" style="v"/><char style="pn">約瑟</char>領了遺體，用乾淨的細麻布裹好， <verse number="60" style="v"/>安放在他為自己在岩壁上鑿出的新墓穴裡，並滾來一塊大石頭封閉墓穴的入口，然後離去。 <verse number="61" style="v"/>那時，<char style="pn">抹大拉</char>的<char style="pn">瑪麗亞</char>和另一個<char style="pn">瑪麗亞</char>坐在墳墓的對面。</para>
+  <para style="p">
+    <verse number="62" style="v"/>第二天，就是預備日之後的那天，祭司長和法利賽人一起來見<char style="pn">彼拉多</char>，說： <verse number="63" style="v"/>「總督大人，我們記得那個騙子生前曾說，『三天之後，我必復活』， <verse number="64" style="v"/>所以請你命人看守墳墓三天，以防祂的門徒偷走祂的屍體，然後對百姓說祂已經從死裡復活。這樣的迷惑會比以前的更厲害！」</para>
+  <para style="p">
+    <verse number="65" style="v"/>
+    <char style="pn">彼拉多</char>說：「你們帶上衛兵，去那裡嚴加看守。」</para>
+  <para style="p">
+    <verse number="66" style="v"/>他們就帶著衛兵去了，在墓口的石頭上貼上封條，派人看守墓穴。</para>
+  <chapter number="28" style="c"/>
+  <para style="s1">耶穌復活</para>
+  <para style="p">
+    <verse number="1" style="v"/>安息日剛過，週日黎明時分，<char style="pn">抹大拉</char>的<char style="pn">瑪麗亞</char>和另一位<char style="pn">瑪麗亞</char>一同到墳墓去察看。</para>
+  <para style="p">
+    <verse number="2" style="v"/>突然，大地劇烈地震動，上帝的天使從天而降，推開堵著墓穴的石頭，坐在上面。 <verse number="3" style="v"/>他的容貌如閃電，衣裳潔白如雪。 <verse number="4" style="v"/>看守墓穴的衛兵嚇得要死，渾身發抖。</para>
+  <para style="p">
+    <verse number="5" style="v"/>天使對那兩個女人說：「不要怕，我知道你們是在找那位被釘十字架的耶穌。 <verse number="6" style="v"/>祂不在這裡，正如祂所說的，祂已經復活了。你們來看，這是安放祂的地方。 <verse number="7" style="v"/>現在你們快回去，把這消息告訴祂的門徒，祂已經從死裡復活，先你們一步去了<char style="pn">加利利</char>，你們將在那裡見到祂。記住，我已經告訴你們了。」</para>
+  <para style="p">
+    <verse number="8" style="v"/>她們聽了又驚又喜，連忙離開墳墓，跑去告訴門徒。 <verse number="9" style="v"/>忽然，耶穌迎面而來，對她們說：「願你們平安！」她們就上前抱住祂的腳敬拜祂。</para>
+  <para style="p">
+    <verse number="10" style="v"/>耶穌對她們說：「不要害怕。去告訴我的弟兄，叫他們到<char style="pn">加利利</char>去，他們將在那裡見到我。」</para>
+  <para style="s1">行賄造謠</para>
+  <para style="p">
+    <verse number="11" style="v"/>她們還在趕路的時候，有些守墓的衛兵已經進城把整件事告訴祭司長。 <verse number="12" style="v"/>祭司長和長老聚集商議，決定用重金買通守墓的衛兵，又吩咐他們： <verse number="13" style="v"/>「你們就說，『半夜裡我們熟睡的時候，耶穌的門徒把祂的屍體偷走了。』 <verse number="14" style="v"/>如果這件事傳到總督那裡，我們一定會替你們出面，保你們無事。」 <verse number="15" style="v"/>守衛收下錢，便依照吩咐去做。於是，這說法在<char style="pn">猶太</char>人中一直流傳到今天。</para>
+  <para style="s1">大使命</para>
+  <para style="p">
+    <verse number="16" style="v"/>十一個門徒趕到<char style="pn">加利利</char>，到了耶穌和他們約定的山上， <verse number="17" style="v"/>看到耶穌就敬拜祂，但有些人仍然心存疑惑。 <verse number="18" style="v"/>耶穌上前對門徒說：</para>
+  <para style="p">「天上地下所有的權柄都交給我了。 <verse number="19" style="v"/>所以，你們要去使萬民作我的門徒，奉父、子、聖靈的名給他們施洗， <verse number="20" style="v"/>教導他們遵守我吩咐你們的一切。記住，我必常與你們同在，一直到世界的末了。」</para>
+</usx>

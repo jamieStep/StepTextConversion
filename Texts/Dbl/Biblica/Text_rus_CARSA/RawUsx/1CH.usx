@@ -1,0 +1,1746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="1CH" style="id">- Central Asian Russian Scriptures (uses "Allah")</book>
+  <para style="rem">Copyright © 2003, 2009, 2013 by IMB-ERTP and Biblica, Inc.®</para>
+  <para style="h">1 Летопись</para>
+  <para style="toc1">Первая летопись</para>
+  <para style="toc2">1 Летопись</para>
+  <para style="toc3">1 Лет.</para>
+  <para style="mt1">Первая летопись</para>
+  <para style="imt">– введение</para>
+  <para style="ip">Первая и Вторая летописи изначально были написаны на одном свитке, но позже разделены на две части, как и Хроники царств. Для автора Летописей Хроники царств были источником, из которого он отчасти брал материал для своего повестования, но он также использовал и другие источники. Его целью было ободрить отчаявшихся иудеев после возвращения из Вавилонского плена, рассказав им о прошлых деяниях Аллаха и показав связь времён.</para>
+  <para style="ip">Родословия, данные в <char style="xt">гл. <ref loc="1CH 1-9">1–9</ref></char>, напоминают уцелевшим исраильтянам об их происхождении. Большая часть повествования посвящена царям Давуду и Сулейману (<char style="xt"><ref loc="1CH 11-9">1 Лет. 11–2 Лет. 9</ref></char>). Описание их правления идеализировано. Сами они, в изложении Летописей почти лишённые недостатков, становятся прообразом Исы аль-Масиха, ожидаемого праведного Царя, Который воссядет на троне Давуда навеки (см. <char style="xt"><ref loc="ISA 9:6-7">Ис. 9:6-7</ref></char>; <char style="xt"><ref loc="EZK 37:24-25">Езек. 37:24-25</ref></char>). После истории разделения царства Летописи фактически не упоминают мятежный Исраил, Северное царство. Поэтому Южное царство, Иудея, часто называется Исраилом в этих книгах, так как автор считает его граждан истинным народом Всевышнего. Однако он уделяет немало внимания тесным связям между двумя царствами (напр., <char style="xt"><ref loc="2CH 11:13-17">2 Лет. 11:13-17</ref>; <ref loc="2CH 15:9">15:9</ref>; <ref loc="2CH 30:1-27">30:1-27</ref>; <ref loc="2CH 34:9">34:9</ref></char>). Так автор подчёркивает, что постпленное общество является продолжением обоих царств, наследником единого Исраила.</para>
+  <para style="ip">Летописи были написаны в то время, когда у иудеев были только восстановленный храм и Закон, но уже не было царя и сильного государства. Поэтому храм и всё, что связано с ним, стоят в центре повествования (<char style="xt"><ref loc="1CH 22-26">1 Лет. 22–26</ref>; <ref loc="1CH 28-29">28–29</ref></char>; <char style="xt"><ref loc="2CH 2:1-7:10">2 Лет. 2:1–7:10</ref></char>); автор также постоянно подчёркивает, что нарушение Закона Аллаха влечёт за собой немедленное наказание, а послушание – благословение (напр., <char style="xt"><ref loc="2CH 12:5-8">2 Лет. 12:5-8</ref>; <ref loc="2CH 26:16-21">26:16-21</ref></char>).</para>
+  <para style="ip">События, описанные в Летописях, охватывают период времени от смерти царя Шаула, приблизительно в 1010 г. до н. э., до возвращения первых пленников из Вавилона в 538 г. до н. э.</para>
+  <para style="iot">Содержание</para>
+  <para style="is2">Первая летопись</para>
+  <para style="io1">Родословие народа Исраила (<char style="ior"><ref loc="1CH 1:1-9:1">1 Лет. 1:1–9:1</ref></char>)</para>
+  <para style="io1">Родословие вернувшихся из Вавилонского плена (<char style="ior"><ref loc="1CH 9:1-44">1 Лет. 9:1-44</ref></char>)</para>
+  <para style="io1">Смерть царя Шаула (<char style="ior"><ref loc="1CH 10:1-14">1 Лет. 10:1-14</ref></char>)</para>
+  <para style="io1">Правление царя Давуда (<char style="ior"><ref loc="1CH 11:1-22:1">1 Лет. 11:1–22:1</ref></char>)</para>
+  <para style="io1">Подготовка к строительству храма (<char style="ior"><ref loc="1CH 22:2-29:30">1 Лет. 22:2–29:30</ref></char>)</para>
+  <para style="is2">Вторая летопись</para>
+  <para style="io1">Правление царя Сулеймана. Строительство храма (<char style="ior"><ref loc="2CH 1:1-9:31">2 Лет. 1:1–9:31</ref></char>)</para>
+  <para style="io1">Восстание северных родов Исраила и разделение царства (<char style="ior"><ref loc="2CH 10:1-11:4">2 Лет. 10:1–11:4</ref></char>)</para>
+  <para style="io1">История царей Иудеи (<char style="ior"><ref loc="2CH 11:5-36:14">2 Лет. 11:5–36:14</ref></char>)</para>
+  <para style="io1">Пленение и восстановление (<char style="ior"><ref loc="2CH 36:15-23">2 Лет. 36:15-23</ref></char>)</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="s1">От Адама до Нуха</para>
+  <para style="r">(<ref loc="GEN 5:1-32">Нач. 5:1-32</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Адам, Сиф, Енос, <verse number="2" style="v"/>Каинан, Малелеил, Иаред, <verse number="3" style="v"/>Енох, Мафусал, Ламех, <verse number="4" style="v"/>Нух<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="fk" closed="false">Нух </char><char style="ft" closed="false">– также известен как Ной.</char></note> и его сыновья Сим, Хам и Иафет.</para>
+  <para style="s1">Потомки Иафета</para>
+  <para style="r">(<ref loc="GEN 10:2-4">Нач. 10:2-4</ref>)</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Сыновья<note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="ft" closed="false">Слово «сыновья» также может означать «потомки» или «народы». Многие из этих имён известны как исторические названия народов. Также в ст. 6-10, 17 и 20.</char></note> Иафета:</para>
+  <para style="li2">Гомер, Магог, Мадай, Иаван, Тувал, Мешех и Тирас.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Сыновья Гомера:</para>
+  <para style="li2">Ашкеназ<note caller="+" style="f"><char style="fr" closed="false">1:6 </char><char style="fk" closed="false">Ашкеназ </char><char style="ft" closed="false">– этим словом в ассирийском языке обозначали также и скифов, которые, возможно, были потомками Ашкеназа. Скифы – первоначально так назывался древний кочевой народ, проживавший в северо-восточном Причерноморье и говоривший на языке, принадлежавшем к иранской группе индоевропейской семьи языков. На основании культурного и языкового сходства многие специалисты считают скифов одними из предков современных осетин. Со временем скифами стали именовать все кочевые народы (включая саков), проживавшие севернее или восточнее так называемого цивилизованного мира того времени (см. <char style="xt"><ref loc="COL 3:11">Кол. 3:11</ref></char>).</char></note>, Рифат и Тогарма.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Сыновья Иавана:</para>
+  <para style="li2">Элиса, Фарсис, а также киттеи и роданеи.</para>
+  <para style="s1">Потомки Хама</para>
+  <para style="r">(<ref loc="GEN 10:6-20">Нач. 10:6-20</ref>)</para>
+  <para style="li1">
+    <verse number="8" style="v"/>Сыновья Хама:</para>
+  <para style="li2">Куш, Мицраим, Пут и Ханаан.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Сыновья Куша:</para>
+  <para style="li2">Сева, Хавила, Савта, Раама и Савтеха.</para>
+  <para style="li1">Сыновья Раамы:</para>
+  <para style="li2">Шева и Дедан.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Куш был отцом<note caller="+" style="f"><char style="fr" closed="false">1:10 </char><char style="ft" closed="false">Слово «отец» также может означать «предок», «родоначальник» или «основатель»; то же в ст. 11, 13, 18 и 20.</char></note></para>
+  <para style="li2">Нимрода, который стал первым на земле могучим воином.</para>
+  <para style="li1">
+    <verse number="11" style="v"/>Мицраим был отцом</para>
+  <para style="li2">лудеев, анамеев, лехавеев, нафтухеев, <verse number="12" style="v"/>патрусеев, каслухеев (от которых произошли филистимляне) и кафтореев.</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Ханаан был отцом</para>
+  <para style="li2">Сидона, его первенца, а также хеттов, <verse number="14" style="v"/>иевусеев, аморреев, гиргашеев, <verse number="15" style="v"/>хивеев, аркеев, синеев, <verse number="16" style="v"/>арвадеев, цемареев и хамафеев.</para>
+  <para style="s1">Потомки Сима</para>
+  <para style="r">(<ref loc="GEN 10:21-29">Нач. 10:21-29</ref>; <ref loc="GEN 11:10-26">11:10-26</ref>)</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Сыновья Сима:</para>
+  <para style="li2">Елам, Ашшур, Арфаксад, Луд и Арам.</para>
+  <para style="li1">Сыновья Арама:</para>
+  <para style="li2">Уц, Хул, Гетер и Мешех.</para>
+  <para style="li1">
+    <verse number="18" style="v"/>Арфаксад был отцом Шелаха, а Шелах – отцом Евера<note caller="+" style="f"><char style="fr" closed="false">1:18 </char><char style="ft" closed="false">Евер был одним из предков евреев, и от его имени происходит и само слово «еврей».</char></note>.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>У Евера родилось двое сыновей:</para>
+  <para style="li2">одного звали Фалек (<char style="add">«разделение»</char>), потому что в его дни земля была разделена, а его брата – Иоктан.</para>
+  <para style="li1">
+    <verse number="20" style="v"/>Иоктан был отцом</para>
+  <para style="li2">Алмодада, Шалефа, Хацармавета, Иераха, <verse number="21" style="v"/>Адорама, Узала, Диклы, <verse number="22" style="v"/>Овала, Авимаила, Шевы, <verse number="23" style="v"/>Офира, Хавилы и Иовава. Все они были сыновьями Иоктана.</para>
+  <para style="b"/>
+  <para style="li2">
+    <verse number="24" style="v"/>Сим, Арфаксад, Шелах,</para>
+  <para style="li2">
+    <verse number="25" style="v"/>Евер, Фалек, Реу,</para>
+  <para style="li2">
+    <verse number="26" style="v"/>Серуг, Нахор, Терах,</para>
+  <para style="li2">
+    <verse number="27" style="v"/>Ибрам (позже он был назван Ибрахимом).</para>
+  <para style="s1">Сыновья Ибрахима</para>
+  <para style="li1">
+    <verse number="28" style="v"/>Сыновья Ибрахима:</para>
+  <para style="li2">Исхак и Исмаил.</para>
+  <para style="s1">Потомки Ибрахима от Хаджар</para>
+  <para style="r">(<ref loc="GEN 25:12-16">Нач. 25:12-16</ref>)</para>
+  <para style="li1">
+    <verse number="29" style="v"/>Вот их родословия:</para>
+  <para style="li2">Навайот – первенец Исмаила, Кедар, Адбеил, Мивсам, <verse number="30" style="v"/>Мишма, Дума, Масса, Хадад, Тема, <verse number="31" style="v"/>Иетур, Нафиш и Кедма. Это сыновья Исмаила.</para>
+  <para style="s1">Потомки Ибрахима от Хеттуры</para>
+  <para style="r">(<ref loc="GEN 25:1-4">Нач. 25:1-4</ref>)</para>
+  <para style="li1">
+    <verse number="32" style="v"/>Сыновья, которых родила Хеттура, наложница Ибрахима:</para>
+  <para style="li2">Зимран, Иокшан, Медан, Мадиан, Ишбак и Шуах.</para>
+  <para style="li1">Сыновья Иокшана:</para>
+  <para style="li2">Шева и Дедан.</para>
+  <para style="li1">
+    <verse number="33" style="v"/>Сыновья Мадиана:</para>
+  <para style="li2">Ефа, Ефер, Ханох, Авида и Элдага.</para>
+  <para style="li1">Все они потомки Хеттуры.</para>
+  <para style="s1">Потомки Ибрахима от Сарры</para>
+  <para style="li1">
+    <verse number="34" style="v"/>Ибрахим был отцом Исхака.</para>
+  <para style="li1">Сыновья Исхака:</para>
+  <para style="li2">Есав и Исраил.</para>
+  <para style="s1">Потомки Есава</para>
+  <para style="r">(<ref loc="GEN 36:10-14">Нач. 36:10-14</ref>)</para>
+  <para style="li1">
+    <verse number="35" style="v"/>Сыновья Есава:</para>
+  <para style="li2">Елифаз, Рагуил, Иеуш, Иалам и Корах.</para>
+  <para style="li1">
+    <verse number="36" style="v"/>Сыновья Елифаза:</para>
+  <para style="li2">Теман, Омар, Цефо, Гатам, Кеназ, от Тимны – Амалик.</para>
+  <para style="li1">
+    <verse number="37" style="v"/>Сыновья Рагуила:</para>
+  <para style="li2">Нахат, Зерах, Шамма и Миза.</para>
+  <para style="s1">Исконные жители Эдома</para>
+  <para style="r">(<ref loc="GEN 36:20-28">Нач. 36:20-28</ref>)</para>
+  <para style="li1">
+    <verse number="38" style="v"/>Сыновья Сеира:</para>
+  <para style="li2">Лотан, Шовал, Цивеон, Анах, Дишон, Ецер и Дишан.</para>
+  <para style="li1">
+    <verse number="39" style="v"/>Сыновья Лотана:</para>
+  <para style="li2">Хори и Гомам. Тимна была сестрой Лотана.</para>
+  <para style="li1">
+    <verse number="40" style="v"/>Сыновья Шовала:</para>
+  <para style="li2">Алван, Манахат, Евал, Шефо и Онам.</para>
+  <para style="li1">Сыновья Цивеона:</para>
+  <para style="li2">Аях и Анах.</para>
+  <para style="li1">
+    <verse number="41" style="v"/>Сын Анаха:</para>
+  <para style="li2">Дишон.</para>
+  <para style="li1">Сыновья Дишона:</para>
+  <para style="li2">Хемдан, Эшбан, Ифран и Херан.</para>
+  <para style="li1">
+    <verse number="42" style="v"/>Сыновья Ецера:</para>
+  <para style="li2">Билган, Зааван и Акан.</para>
+  <para style="li1">Сыновья Дишана:</para>
+  <para style="li2">Уц и Аран.</para>
+  <para style="s1">Правители Эдома</para>
+  <para style="r">(<ref loc="GEN 36:31-43">Нач. 36:31-43</ref>)</para>
+  <para style="p">
+    <verse number="43" style="v"/>Вот цари, которые правили в Эдоме ещё до того, как цари появились в Исраиле:</para>
+  <para style="li1">Бела, сын Беора, чей город назывался Динхава.</para>
+  <para style="li1">
+    <verse number="44" style="v"/>После смерти Белы царём вместо него стал Иовав, сын Зераха, из Боцры.</para>
+  <para style="li1">
+    <verse number="45" style="v"/>После смерти Иовава царём вместо него стал Хушам из земли теманитян.</para>
+  <para style="li1">
+    <verse number="46" style="v"/>После смерти Хушама царём вместо него стал Хадад, сын Бедада, который разбил мадианитян в земле Моава. Его город назывался Авит.</para>
+  <para style="li1">
+    <verse number="47" style="v"/>После смерти Хадада царём вместо него стал Самла из Масреки.</para>
+  <para style="li1">
+    <verse number="48" style="v"/>После смерти Самлы царём вместо него стал Шаул из Реховота, что у реки<note caller="+" style="f"><char style="fr" closed="false">1:48 </char><char style="fk" closed="false">Река </char><char style="ft" closed="false">– по-видимому, Евфрат.</char></note>.</para>
+  <para style="li1">
+    <verse number="49" style="v"/>После смерти Шаула царём вместо него стал Баал-Ханан, сын Ахбора.</para>
+  <para style="li1">
+    <verse number="50" style="v"/>После смерти Баал-Ханана царём вместо него стал Хадад. Его город назывался Пау, а имя его жены было Мехетавиль; она была дочерью Матреды, внучкой Мезахава. <verse number="51" style="v"/>Потом умер и Хадад.</para>
+  <para style="b"/>
+  <para style="p">Вождями Эдома были:</para>
+  <para style="li2">Тимна, Алва, Иетет, <verse number="52" style="v"/>Оливема, Ела, Пинон, <verse number="53" style="v"/>Кеназ, Теман, Мивцар, <verse number="54" style="v"/>Магдиил и Ирам. Это вожди Эдома.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Сыновья Исраила (Якуба)</para>
+  <para style="r">(<ref loc="GEN 35:22-26">Нач. 35:22-26</ref>)</para>
+  <para style="li1">
+    <verse number="1" style="v"/>Вот сыновья Исраила:</para>
+  <para style="li2">Рувим, Шимон, Леви, Иуда, Иссахар, Завулон, <verse number="2" style="v"/>Дан, Юсуф, Вениамин, Неффалим, Гад и Ашир.</para>
+  <para style="s1">Потомки Иуды</para>
+  <para style="r">(<ref loc="RUT 4:18-19">Руфь 4:18-19</ref>)</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Сыновья Иуды:</para>
+  <para style="li2">Ир, Онан и Шела. Матерью этих троих была хананеянка, дочь Шуа. Ир, первенец Иуды, делал зло в глазах Вечного<note caller="+" style="f"><char style="fr" closed="false">2:3 </char><char style="fk" closed="false">Вечный </char><char style="ft" closed="false">– на языке оригинала: «Яхве». Под этим именем Всевышний открылся Мусе и народу Исраила (см. <char style="xt"><ref loc="EXO 3:13-15">Исх. 3:13-15</ref></char>). См. пояснительный словарь.</char></note>, и Вечный предал его смерти. <verse number="4" style="v"/>Фамарь, невестка Иуды, родила ему Фареца и Зераха. Всего у Иуды было пятеро сыновей.</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Сыновья Фареца:</para>
+  <para style="li2">Хецрон и Хамул.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Сыновья Зераха:</para>
+  <para style="li2">Зимри, Етан, Еман, Халкол и Дарда – всего пятеро.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Сын Харми:</para>
+  <para style="li2">Ахар (<char style="add">«беда»</char>), который навлёк на Исраил беду, нарушив запрет не брать подлежащие уничтожению вещи<note caller="+" style="f"><char style="fr" closed="false">2:7 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="JOS 7">Иеш. 7</ref>,</char> где Ахар назван Аханом.</char></note>.</para>
+  <para style="li1">
+    <verse number="8" style="v"/>Сын Етана:</para>
+  <para style="li2">Азария.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Сыновья, родившиеся у Хецрона:</para>
+  <para style="li2">Иерахмеил, Рам и Халев<note caller="+" style="f"><char style="fr" closed="false">2:9 </char><char style="ft" closed="false">Букв.: «Хелувай» – вариант имени Халев (см. <char style="xt"><ref loc="1CH 2:18">2:18</ref></char>).</char></note>.</para>
+  <para style="s1">Потомки Рама, сына Хецрона</para>
+  <para style="r">(<ref loc="RUT 4:19-22">Руфь 4:19-22</ref>)</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Рам был отцом Аминадава, а Аминадав – отцом Нахшона, вождя рода Иуды. <verse number="11" style="v"/>Нахшон был отцом Салмона, а Салмон – отцом Боаза. <verse number="12" style="v"/>Боаз был отцом Овида, а Овид – отцом Есея.</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Есей был отцом Элиава, своего первенца, Авинадава – второго сына, Шимеи – третьего, <verse number="14" style="v"/>Нетанила – четвёртого, Раддая – пятого, <verse number="15" style="v"/>Оцема – шестого, и Давуда – седьмого сына<note caller="+" style="f"><char style="fr" closed="false">2:15 </char><char style="ft" closed="false">В <char style="xt"><ref loc="1SA 16:10-11">1 Цар. 16:10-11</ref></char> говорится, что Давуд восьмой сын, но здесь ему даётся символическое, более почётное седьмое место.</char></note>. <verse number="16" style="v"/>Их сёстрами были Церуя и Авигайль. Сыновья Церуи: Авишай, Иоав и Асаил – всего трое. <verse number="17" style="v"/>Авигайль родила Амасу, отцом которого был исмаильтянин Иетер.</para>
+  <para style="s1">Потомки Халева, сына Хецрона</para>
+  <para style="li1">
+    <verse number="18" style="v"/>У Халева, сына Хецрона, от его жены Азувы (и от Иериот) были дети. Вот её сыновья: Иешер, Шовав и Ардон. <verse number="19" style="v"/>Когда Азува умерла, Халев женился на Ефрафе, которая родила ему Хура. <verse number="20" style="v"/>Хур был отцом Ури, а Ури – отцом Бецалила.</para>
+  <para style="li1">
+    <verse number="21" style="v"/>Потом Хецрон лёг с дочерью Махира, отца Галаада (он женился на ней, когда ему было шестьдесят лет), и она родила ему Сегува. <verse number="22" style="v"/>Сегув был отцом Иаира, у которого было двадцать два города в Галааде. <verse number="23" style="v"/>(Но Гешур и Сирия захватили Хаввот-Иаир (<char style="add">«селения Иаира»</char>) и Кенат с окрестными поселениями – шестьдесят городов.) Все они были потомками Махира, отца Галаада.</para>
+  <para style="li1">
+    <verse number="24" style="v"/>После того как Хецрон умер в Халев-Ефрафе, Авия, жена Хецрона, родила ему Ашхура, отца<note caller="+" style="f"><char style="fr" closed="false">2:24 </char><char style="ft" closed="false">Слово «отец» также может означать «основатель»; то же в ст. 42, 45, 49-52 и 55, и, возможно, в других местах со сходным контекстом.</char></note> Текоа.</para>
+  <para style="s1">Потомки Иерахмеила, сына Хецрона</para>
+  <para style="li1">
+    <verse number="25" style="v"/>Сыновья Иерахмеила, первенца Хецрона:</para>
+  <para style="li2">Рам – его первенец, Буна, Орен, Оцем и Ахия. <verse number="26" style="v"/>У Иерахмеила была и другая жена, которую звали Атара; она была матерью Онама.</para>
+  <para style="li1">
+    <verse number="27" style="v"/>Сыновья Рама, первенца Иерахмеила:</para>
+  <para style="li2">Маац, Иамин и Екер.</para>
+  <para style="li1">
+    <verse number="28" style="v"/>Сыновья Онама:</para>
+  <para style="li2">Шаммай и Иада.</para>
+  <para style="li1">Сыновья Шаммая:</para>
+  <para style="li2">Надав и Авишур.</para>
+  <para style="li1">
+    <verse number="29" style="v"/>Жену Авишура звали Авихаиль; она родила ему Ахбана и Молида.</para>
+  <para style="li1">
+    <verse number="30" style="v"/>Сыновья Надава:</para>
+  <para style="li2">Селед и Аппаим. Селед умер бездетным.</para>
+  <para style="li1">
+    <verse number="31" style="v"/>Сын Аппаима: Иши.</para>
+  <para style="li2">Сын Иши: Шешан.</para>
+  <para style="li2">Сын Шешана: Ахлай.</para>
+  <para style="li1">
+    <verse number="32" style="v"/>Сыновья Иады, брата Шаммая:</para>
+  <para style="li2">Иетер и Ионафан. Иетер умер бездетным.</para>
+  <para style="li1">
+    <verse number="33" style="v"/>Сыновья Ионафана:</para>
+  <para style="li2">Пелет и Заза.</para>
+  <para style="li1">Все они потомки Иерахмеила.</para>
+  <para style="li1">
+    <verse number="34" style="v"/>У Шешана не было сыновей, одни только дочери. У него был слуга египтянин по имени Иарха. <verse number="35" style="v"/>Шешан отдал свою дочь замуж за своего слугу Иарху, и она родила тому Аттая.</para>
+  <para style="li1">
+    <verse number="36" style="v"/>Аттай был отцом Нафана;</para>
+  <para style="li2">Нафан – отцом Завада;</para>
+  <para style="li2">
+    <verse number="37" style="v"/>Завад – отцом Эфлала;</para>
+  <para style="li2">Эфлал – отцом Овида;</para>
+  <para style="li2">
+    <verse number="38" style="v"/>Овид – отцом Иеву;</para>
+  <para style="li2">Иеву – отцом Азарии;</para>
+  <para style="li2">
+    <verse number="39" style="v"/>Азария – отцом Хелеца;</para>
+  <para style="li2">Хелец – отцом Элеасы;</para>
+  <para style="li2">
+    <verse number="40" style="v"/>Элеаса – отцом Сисмая;</para>
+  <para style="li2">Сисмай – отцом Шаллума;</para>
+  <para style="li2">
+    <verse number="41" style="v"/>Шаллум – отцом Иекамии;</para>
+  <para style="li2">и Иекамия – отцом Элишамы.</para>
+  <para style="s1">Другие потомки Халева</para>
+  <para style="li1">
+    <verse number="42" style="v"/>Сыновья Халева, брата Иерахмеила:</para>
+  <para style="li2">Меша, его первенец, который был отцом Зифа, и его сын Мареша, отец Хеврона.</para>
+  <para style="li1">
+    <verse number="43" style="v"/>Сыновья Хеврона:</para>
+  <para style="li2">Корах, Таппуах, Рекем и Шема. <verse number="44" style="v"/>Шема был отцом Рахама, отца Иоркеама, а Рекем – отцом Шаммая. <verse number="45" style="v"/>Сыном Шаммая был Маон, а Маон был отцом Бет-Цура.</para>
+  <para style="li1">
+    <verse number="46" style="v"/>Ефа, наложница Халева, родила Харрана, Моцу, Газеза, а Харран был отцом Газеза.</para>
+  <para style="li1">
+    <verse number="47" style="v"/>Сыновья Иадая:</para>
+  <para style="li2">Регем, Иотам, Гешан, Пелет, Ефа и Шааф.</para>
+  <para style="li1">
+    <verse number="48" style="v"/>Наложница Халева, Мааха, родила ему Шевера и Тирхану. <verse number="49" style="v"/>Ещё она родила Шаафа, отца Мадманны, и Шаву, отца Махбены и Гивеа; а дочерью Халева была Ахса.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="50" style="v"/>Вот ещё потомки Халева.</para>
+  <para style="li1">Сыновья Хура, первенца Ефрафы, жены Халева:</para>
+  <para style="li2">Шовал, отец Кириат-Иеарима, <verse number="51" style="v"/>Салма, отец Вифлеема, и Хареф, отец Бет-Гадера.</para>
+  <para style="li1">
+    <verse number="52" style="v"/>Потомки Шовала, отца Кириат-Иеарима:</para>
+  <para style="li2">Арое, половина манахатитов <verse number="53" style="v"/>и кланы Кириат-Иеарима: итриты, путиты, шуматиты и мишраиты. От них произошли цоратиты и эштаолиты.</para>
+  <para style="li1">
+    <verse number="54" style="v"/>Потомки Салмы:</para>
+  <para style="li2">Вифлеем, нетофитяне, Атарот-Бет-Иоав, половина манахатитов, цориты <verse number="55" style="v"/>и кланы писарей, которые жили в Иабеце: тиратиты, шимеатиты и сухатиты. Это кенеи, которые произошли от Хаммата, отца Бет-Рехава.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Сыновья царя Давуда</para>
+  <para style="r">(<ref loc="2SA 3:2-5">2 Цар. 3:2-5</ref>; <ref loc="2SA 5:13-16">5:13-16</ref>; <ref loc="1CH 14:4-7">1 Лет. 14:4-7</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Вот сыновья Давуда, которые родились у него в Хевроне:</para>
+  <para style="li2">первенец Амнон от изреельтянки Ахиноамь;</para>
+  <para style="li2">второй сын – Килеав<note caller="+" style="f"><char style="fr" closed="false">3:1 </char><char style="ft" closed="false">Букв.: «Даниял»; во <char style="xt"><ref loc="2SA 3:3">2 Цар. 3:3</ref></char> он назван Килеавом.</char></note> от кармилитянки Авигайль;</para>
+  <para style="li2">
+    <verse number="2" style="v"/>третий – Авессалом, сын Маахи, дочери Талмая, царя Гешура;</para>
+  <para style="li2">четвёртый – Адония, сын Хаггиты;</para>
+  <para style="li2">
+    <verse number="3" style="v"/>пятый – Шефатия от Авиталы;</para>
+  <para style="li2">шестой – Итреам от его жены Эглы.</para>
+  <para style="li2">
+    <verse number="4" style="v"/>Шестеро сыновей родилось у Давуда в Хевроне, где он правил Иудеей семь лет и шесть месяцев.</para>
+  <para style="p">В Иерусалиме он правил всем Исраилом тридцать три года. <verse number="5" style="v"/>Вот имена детей, которые родились у него в Иерусалиме:</para>
+  <para style="li2">Шаммуа<note caller="+" style="f"><char style="fr" closed="false">3:5 </char><char style="ft" closed="false">Букв.: «Шимея»; во <char style="xt"><ref loc="2SA 5:14">2 Цар. 5:14</ref></char> он назван Шаммуа.</char></note>, Шовав, Нафан и Сулейман – четверо от Вирсавии, дочери Аммиила. <verse number="6" style="v"/>Затем: Ивхар, Элишуа, Элфелет, <verse number="7" style="v"/>Ногах, Нефег, Иафия, <verse number="8" style="v"/>Элишама, Элиада и Элифелет – девять сыновей. <verse number="9" style="v"/>Всё это – сыновья Давуда, не считая сыновей от наложниц. А сестрой их была Фамарь.</para>
+  <para style="s1">Цари Иудеи после Давуда</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Сын Сулеймана Реховоам;</para>
+  <para style="li2">его сын Авия;</para>
+  <para style="li2">его сын Аса;</para>
+  <para style="li2">его сын Иосафат;</para>
+  <para style="li2">
+    <verse number="11" style="v"/>его сын Иорам;</para>
+  <para style="li2">его сын Ахазия;</para>
+  <para style="li2">его сын Иоаш;</para>
+  <para style="li2">
+    <verse number="12" style="v"/>его сын Амасия;</para>
+  <para style="li2">его сын Уззия<note caller="+" style="f"><char style="fr" closed="false">3:12 </char><char style="ft" closed="false">Букв.: «Азария» – другое имя царя Уззии (см. <char style="xt"><ref loc="2CH 26">2 Лет. 26</ref></char>).</char></note>;</para>
+  <para style="li2">его сын Иотам;</para>
+  <para style="li2">
+    <verse number="13" style="v"/>его сын Ахаз;</para>
+  <para style="li2">его сын Езекия;</para>
+  <para style="li2">его сын Манасса;</para>
+  <para style="li2">
+    <verse number="14" style="v"/>его сын Амон;</para>
+  <para style="li2">его сын Иосия.</para>
+  <para style="li1">
+    <verse number="15" style="v"/>Сыновья Иосии:</para>
+  <para style="li2">первенец Иоханан,</para>
+  <para style="li2">второй сын – Иоаким,</para>
+  <para style="li2">третий – Цедекия,</para>
+  <para style="li2">четвёртый – Иоахаз<note caller="+" style="f"><char style="fr" closed="false">3:15 </char><char style="ft" closed="false">Букв.: «Шаллум» – другое имя царя Иоахаза (см. <char style="xt"><ref loc="2KI 23:30">4 Цар. 23:30</ref></char>).</char></note>.</para>
+  <para style="li1">
+    <verse number="16" style="v"/>Потомки Иоакима:</para>
+  <para style="li2">его сын Иехония;</para>
+  <para style="li2">его сын Цедекия.</para>
+  <para style="s1">Царская линия после пленения</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Потомки Иехонии, который был пленником:</para>
+  <para style="li2">его сын Шеалтиил; <verse number="18" style="v"/>Малкирам, Педая, Шенацар, Иекамия, Гошама, Недавия.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Сыновья Педаи:</para>
+  <para style="li2">Зоровавель и Шимей.</para>
+  <para style="li1">Сыновья Зоровавеля:</para>
+  <para style="li2">Мешуллам и Ханания; сестрой их была Шеломит;</para>
+  <para style="li2">
+    <verse number="20" style="v"/>Хашува, Охел, Берехия, Хасадия и Иушав-Хесед – ещё пятеро.</para>
+  <para style="li1">
+    <verse number="21" style="v"/>Потомки Ханании:</para>
+  <para style="li2">Пелатия и Иешая; сыновья Рефаи, Арнана, Авдия и Шехании<note caller="+" style="f"><char style="fr" closed="false">3:21 </char><char style="ft" closed="false">Или: «…Иешая, сыном которого был Рефая, сыном которого был Арнан, сыном которого был Авдий, сыном которого был Шехания».</char></note>.</para>
+  <para style="li1">
+    <verse number="22" style="v"/>Сын Шехании:</para>
+  <para style="li2">Шемая; сыновья Шемаи: Хаттуш, Игал, Вариах, Неария и Шафат – всего шестеро.</para>
+  <para style="li1">
+    <verse number="23" style="v"/>Сыновья Неарии:</para>
+  <para style="li2">Элиоенай, Езекия и Азрикам – всего трое.</para>
+  <para style="li1">
+    <verse number="24" style="v"/>Сыновья Элиоеная:</para>
+  <para style="li2">Годавия, Элиашив, Пелая, Аккув, Иоханан, Делая и Анани – всего семеро.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Другие потомки Иуды</para>
+  <para style="li1">
+    <verse number="1" style="v"/>Потомки Иуды:</para>
+  <para style="li2">Фарец, Хецрон, Харми, Хур и Шовал.</para>
+  <para style="li1">
+    <verse number="2" style="v"/>Реая, сын Шовала, был отцом Иахата, а Иахат – отцом Ахумая и Лахада. Это кланы цоратитов.</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Вот сыновья Етама:</para>
+  <para style="li2">Изреель, Ишма и Идбаш. Их сестру звали Ацелелпони. <verse number="4" style="v"/>Пениил был отцом Гедора, а Езер – отцом Хуши.</para>
+  <para style="li1">Это потомки Хура, первенца Ефрафы и отца Вифлеема.</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Ашхур был отцом Текоа, и у него было две жены: Хела и Наара.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Наара родила ему Ахуззама, Хефера, Темени и Ахаштари – это сыновья Наары.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Сыновья Хелы:</para>
+  <para style="li2">Церет, Цохар, Этнан <verse number="8" style="v"/>и Коц, который был отцом Анува, Ацовевы и кланов Ахархела, сына Гарума.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="9" style="v"/>Иабец был знаменитее своих братьев. Мать назвала его Иабец (<char style="add">«мука»</char>)<note caller="+" style="f"><char style="fr" closed="false">4:9 </char><char style="ft" closed="false">О переводе имён и названий см. приложение VI.</char></note>, сказав: «Я родила его в муках».</para>
+  <para style="p">
+    <verse number="10" style="v"/>Иабец воззвал к Богу Исраила:</para>
+  <para style="p">– О, если бы Ты благословил меня и расширил мою землю! Пусть Твоя рука будет со мной, пусть убережёт меня от зла, чтобы мне не страдать!</para>
+  <para style="p">И Аллах исполнил его просьбу.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="11" style="v"/>Хелув, брат Шухи, стал отцом Мехира, который был отцом Эштона. <verse number="12" style="v"/>Эштон был отцом<note caller="+" style="f"><char style="fr" closed="false">4:12 </char><char style="ft" closed="false">Слово «отец» также может означать «основатель»; то же в ст. 17 и 18, и, возможно, в других местах со сходным контекстом.</char></note> Бет-Рафы, Пасеаха и Техинны, отца Ир-Нахаша<note caller="+" style="f"><char style="fr" closed="false">4:12 </char><char style="ft" closed="false">Или: «основателя города Нахаш».</char></note>. Это жители Рехи.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="13" style="v"/>Сыновья Кеназа:</para>
+  <para style="li2">Отниил и Серая.</para>
+  <para style="li1">Сыновья Отниила:</para>
+  <para style="li2">Хатат и Меонотай. <verse number="14" style="v"/>Меонотай был отцом Офры.</para>
+  <para style="li1">Серая был отцом Иоава, основателя Ге-Харашима (<char style="add">«долины ремесленников»</char>), названного так потому, что его жители были ремесленниками.</para>
+  <para style="li1">
+    <verse number="15" style="v"/>Сыновья Халева, сына Иефоннии:</para>
+  <para style="li2">Иру, Ела и Наам.</para>
+  <para style="li2">Сын Елы: Кеназ.</para>
+  <para style="li1">
+    <verse number="16" style="v"/>Сыновья Иехаллелила:</para>
+  <para style="li2">Зиф, Зифа, Тирия и Асарил.</para>
+  <para style="li1">
+    <verse number="17-18" style="v"/>Сыновья Езры:</para>
+  <para style="li2">Иетер, Меред, Ефер и Иалон. Меред женился на Битии, дочери фараона, которая родила ему Мериама, Шаммая и Ишбаха, отца Эштемоа. А его иудейская жена родила Иереда, отца Гедора, Хевера, отца Сохо, и Иекутиила, отца Заноаха.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Сыновья жены Ходии, сестры Нахама:</para>
+  <para style="li2">отцы гармитской Кейлы и маахитского Эштемоа.</para>
+  <para style="li1">
+    <verse number="20" style="v"/>Сыновья Шимона:</para>
+  <para style="li2">Амнон, Ринна, Бен-Ханан и Тилон.</para>
+  <para style="li1">Сыновья Иши:</para>
+  <para style="li2">Зохет и Бен-Зохет.</para>
+  <para style="li1">
+    <verse number="21" style="v"/>Сыновья Шелы, сына Иуды:</para>
+  <para style="li2">Ир, отец Лехи, Лаада, отец Мареши и кланов работников, выделывавших тонкое полотно в Бет-Ашбеа, <verse number="22" style="v"/>Иоким, жители Хозевы, а также Иоаш и Сараф, которые правили в Моаве и в Иашуви-Лахеме<note caller="+" style="f"><char style="fr" closed="false">4:22 </char><char style="ft" closed="false">Или: «которые женились в Моаве, но вернулись в Лахем».</char></note>, но это древние события. <verse number="23" style="v"/>Они были горшечниками, жившими в Нетаиме и Гедере; они проживали там и работали на царя.</para>
+  <para style="s1">Потомки Шимона</para>
+  <para style="r">(<ref loc="JOS 19:2-9">Иеш. 19:2-9</ref>)</para>
+  <para style="li1">
+    <verse number="24" style="v"/>Сыновья Шимона:</para>
+  <para style="li2">Немуил, Иамин, Иарив, Зерах и Шаул, <verse number="25" style="v"/>сыном которого был Шаллум, сыном которого был Мивсам, сыном которого был Мишма.</para>
+  <para style="li1">
+    <verse number="26" style="v"/>Сыновья Мишмы:</para>
+  <para style="li2">его сын Хаммуил, сыном которого был Заккур, сыном которого был Шимей.</para>
+  <para style="p">
+    <verse number="27" style="v"/>У Шимея было шестнадцать сыновей и шесть дочерей, но его братья не были многодетными, поэтому весь их клан не стал таким же многолюдным, как народ Иуды. <verse number="28" style="v"/>Они жили в Беэр-Шеве, Моладе, Хацар-Шуале, <verse number="29" style="v"/>Билхе, Эцеме, Толаде, <verse number="30" style="v"/>Бетуиле, Хорме, Циклаге, <verse number="31" style="v"/>Бет-Маркавоте, Хацар-Сусиме, Бет-Бири и Шаараиме. Эти города принадлежали им до царствования Давуда. <verse number="32" style="v"/>Их поселениями были Етам, Аин, Риммон, Тохен и Ашан – пять городов <verse number="33" style="v"/>вместе со всеми поселениями, окружавшими эти города, до самого Баалата. Это их поселения и их родословие.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="34" style="v"/>Мешовав, Иамлех, Иоша, сын Амасии, <verse number="35" style="v"/>Иоиль, Иеву, сын Иошивии, сына Сераи, сына Асиила, <verse number="36" style="v"/>и Элиоенай, Иаакова, Иешохая, Асая, Адиил, Иесимиил, Беная, <verse number="37" style="v"/>и Зиза, сын Шифи, сына Аллона, сына Иедаи, сына Шимри, сына Шемаи.</para>
+  <para style="p">
+    <verse number="38" style="v"/>Все выше перечисленные были вождями своих кланов. Их семьи значительно увеличивались, <verse number="39" style="v"/>и они доходили до предместий Гедора, до восточной стороны долины, в поисках пастбищ для своих отар. <verse number="40" style="v"/>Они нашли тучные, хорошие пастбища, а земля была просторна, спокойна и безопасна; её прежние обитатели были хамитянами.</para>
+  <para style="p">
+    <verse number="41" style="v"/>Все перечисленные пришли в дни Езекии, царя Иудеи. Они напали на хамитян в их жилищах и на меунитян, которые оказались там, истребив их полностью, как это видно и по сегодняшний день, и поселились на их месте, потому что там были пастбища для их отар. <verse number="42" style="v"/>А пятьсот человек из этих шимонитов под началом Пелатии, Неарии, Рефаи и Узиила, сыновей Иши, отправились в нагорья Сеира, <verse number="43" style="v"/>перебили остаток уцелевших амаликитян и живут там поныне.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Потомки Рувима</para>
+  <para style="p">
+    <verse number="1" style="v"/>Сыновья Рувима, первенца Исраила. (Он был первенцем, но когда он осквернил брачное ложе своего отца<note caller="+" style="f"><char style="fr" closed="false">5:1 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="GEN 35:22">Нач. 35:22</ref>; <ref loc="GEN 49:3-4">49:3-4</ref></char>.</char></note>, права его первородства были отданы сыновьям Юсуфа, сына Исраила, поэтому он и не упоминается в родословии по своему первородству; <verse number="2" style="v"/>и хотя Иуда был сильнейшим среди своих братьев и от него произошёл правитель, права первородства отошли к Юсуфу.) <verse number="3" style="v"/>Сыновья Рувима, первенца Якуба:</para>
+  <para style="li1">Ханох, Фаллу, Хецрон и Харми.</para>
+  <para style="li1">
+    <verse number="4" style="v"/>Сыновья Иоиля:</para>
+  <para style="li2">его сын Шемая, сыном которого был Гог, сыном которого был Шимей, <verse number="5" style="v"/>сыном которого был Миха, сыном которого был Реая, сыном которого был Баал, <verse number="6" style="v"/>сыном которого был Беэра, которого увёл в плен Тиглатпаласар, царь Ассирии. Беэра был вождём рувимитов.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Его родичи по кланам, исчисленные по их родословиям:</para>
+  <para style="li2">Иеил был главным, затем Закария <verse number="8" style="v"/>и Бела, сын Азаза, внук Шема, правнук Иоиля. Они населяли земли от Ароера до Нево и Баал-Меона. <verse number="9" style="v"/>К востоку же они занимали земли до самого края пустыни, которая тянется к реке Евфрат, потому что их стада умножились в Галааде.</para>
+  <para style="pi">
+    <verse number="10" style="v"/>Во время царствования Шаула рувимиты вели войну с агритянами, которые пали от их рук. Они поселились в жилищах агритян по всем восточным землям Галаада.</para>
+  <para style="s1">Потомки Гада</para>
+  <para style="li1">
+    <verse number="11" style="v"/>Гадиты жили рядом с ними в Башане до самой Салхи:</para>
+  <para style="li2">
+    <verse number="12" style="v"/>Иоиль был главным, Шафам – вторым после него, потом Ианай и Шафат в Башане.</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Их родичей по семьям было семеро:</para>
+  <para style="li2">Микаил, Мешуллам, Шева, Иорай, Иакан, Зия и Евер.</para>
+  <para style="li2">
+    <verse number="14" style="v"/>Это сыновья Авихаила, сына Хури, сына Иароаха, сына Галаада, сына Микаила, сына Иешишая, сына Иахдо, сына Буза.</para>
+  <para style="li2">
+    <verse number="15" style="v"/>Ахи, сын Авдиила, внук Гуни, был главой своего семейства.</para>
+  <para style="li1">
+    <verse number="16" style="v"/>Гадиты жили в Галааде, в Башане и в его городах и на всех пастбищах Шарона, до самых их пределов.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Все они были внесены в родословные записи во время царствования Иотама, царя Иуды, и Иеровоама, царя Исраила.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="18" style="v"/>У родов Рувима, Гада и половины рода Манассы было сорок четыре тысячи семьсот шестьдесят мужчин, пригодных к военной службе, – крепких мужчин, которые умели обращаться с щитом и мечом, натягивать лук и сражаться. <verse number="19" style="v"/>Они вели войну с агритянами, Иетуром, Нафишем и Нодавом. <verse number="20" style="v"/>Аллах помог им в их сражении и отдал агритян и всех их союзников в их руки, потому что они взывали к Нему во время битвы. Он ответил на их молитвы, потому что они верили Ему. <verse number="21" style="v"/>Они захватили скот агритян – пятьдесят тысяч верблюдов, двести пятьдесят тысяч овец и две тысячи ослов. В плен они взяли сто тысяч человек, <verse number="22" style="v"/>и ещё множество пало убитыми, потому что та война была по воле Аллаха. Гадиты жили в их землях до плена.</para>
+  <para style="s1">Восточная половина рода Манассы</para>
+  <para style="p">
+    <verse number="23" style="v"/>Народ половины рода Манассы был многочислен. Они населяли страну от Башана до Баал-Хермона, Сенира и горы Хермон.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Вот главы их семейств:</para>
+  <para style="p">Ефер, Иши, Элиил, Азриил, Иеремия, Годавия и Иахдиил – доблестные воины, прославленные мужи, главы своих семейств. <verse number="25" style="v"/>Но они нарушили верность Богу их предков и распутничали с богами народов страны, которых Аллах истребил перед ними. <verse number="26" style="v"/>И Бог Исраила побудил Пула (он же Тиглатпаласар)<note caller="+" style="f"><char style="fr" closed="false">5:26 </char><char style="fk" closed="false">Пул </char><char style="ft" closed="false">– другое имя Тиглатпаласара III. Он правил с 745 по 727 гг. до н. э.</char></note>, царя Ассирии, и тот взял роды Рувима, Гада и половину рода Манассы в плен. Он увёл их в Халах, Хавор, Ару и на реку Гозан, где они находятся и по сегодняшний день.</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Потомки Леви: главные священнослужители</para>
+  <para style="li1">
+    <verse number="1" style="v"/>Сыновья Леви:</para>
+  <para style="li2">Гершон, Кааф и Мерари.</para>
+  <para style="li1">
+    <verse number="2" style="v"/>Сыновья Каафа:</para>
+  <para style="li2">Амрам, Ицхар, Хеврон и Узиил.</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Дети Амрама:</para>
+  <para style="li2">Харун, Муса и Марьям.</para>
+  <para style="li1">Сыновья Харуна:</para>
+  <para style="li2">Надав, Авиуд, Элеазар и Итамар.</para>
+  <para style="li2">
+    <verse number="4" style="v"/>Элеазар был отцом Пинхаса;</para>
+  <para style="li2">Пинхас – отцом Авишуя;</para>
+  <para style="li2">
+    <verse number="5" style="v"/>Авишуй – отцом Буккия;</para>
+  <para style="li2">Буккий – отцом Уззия;</para>
+  <para style="li2">
+    <verse number="6" style="v"/>Уззий – отцом Зерахии;</para>
+  <para style="li2">Зерахия – отцом Мерайота;</para>
+  <para style="li2">
+    <verse number="7" style="v"/>Мерайот – отцом Амарии;</para>
+  <para style="li2">Амария – отцом Ахитува;</para>
+  <para style="li2">
+    <verse number="8" style="v"/>Ахитув – отцом Цадока;</para>
+  <para style="li2">Цадок – отцом Ахимааца;</para>
+  <para style="li2">
+    <verse number="9" style="v"/>Ахимаац – отцом Азарии;</para>
+  <para style="li2">Азария – отцом Иоханана;</para>
+  <para style="li2">
+    <verse number="10" style="v"/>Иоханан – отцом Азарии (Азария был священнослужителем в храме, построенном Сулейманом в Иерусалиме);</para>
+  <para style="li2">
+    <verse number="11" style="v"/>Азария был отцом Амарии;</para>
+  <para style="li2">Амария – отцом Ахитува;</para>
+  <para style="li2">
+    <verse number="12" style="v"/>Ахитув – отцом Цадока;</para>
+  <para style="li2">Цадок – отцом Шаллума;</para>
+  <para style="li2">
+    <verse number="13" style="v"/>Шаллум – отцом Хилкии;</para>
+  <para style="li2">Хилкия – отцом Азарии;</para>
+  <para style="li2">
+    <verse number="14" style="v"/>Азария – отцом Сераи;</para>
+  <para style="li2">Серая – отцом Иехоцадака;</para>
+  <para style="li2">
+    <verse number="15" style="v"/>Иехоцадак попал в плен, когда Вечный отправил в плен Иудею и Иерусалим рукою Навуходоносора.</para>
+  <para style="s1">Другие потомки Леви</para>
+  <para style="li1">
+    <verse number="16" style="v"/>Сыновья Леви:</para>
+  <para style="li2">Гершон, Кааф и Мерари.</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Вот имена сыновей Гершона:</para>
+  <para style="li2">Ливни и Шимей.</para>
+  <para style="li1">
+    <verse number="18" style="v"/>Сыновья Каафа:</para>
+  <para style="li2">Амрам, Ицхар, Хеврон и Узиил.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Сыновья Мерари:</para>
+  <para style="li2">Махли и Муши.</para>
+  <para style="b"/>
+  <para style="p">Вот кланы левитов, исчисленные по их отцам.</para>
+  <para style="li1">
+    <verse number="20" style="v"/>У Гершона:</para>
+  <para style="li2">его сын Ливни, сыном которого был Иахат, сыном которого был Зимма, <verse number="21" style="v"/>сыном которого был Иоах, сыном которого был Иддо, сыном которого был Зерах, сыном которого был Иеатрай.</para>
+  <para style="li1">
+    <verse number="22" style="v"/>Потомки Каафа:</para>
+  <para style="li2">его сын Аминадав, сыном которого был Корах, сыном которого был Асир, <verse number="23" style="v"/>сыном которого был Элкана, сыном которого был Авиасаф, сыном которого был Асир, <verse number="24" style="v"/>сыном которого был Тахат, сыном которого был Уриил, сыном которого был Уззия, сыном которого был Шаул.</para>
+  <para style="li1">
+    <verse number="25" style="v"/>Потомки Элканы:</para>
+  <para style="li2">Амасай и Ахимот; <verse number="26" style="v"/>его сын Элкана, сыном которого был Цофай, сыном которого был Нахат, <verse number="27" style="v"/>сыном которого был Элиав, сыном которого был Иерохам, сыном которого был Элкана, сыном которого был Шемуил.</para>
+  <para style="li1">
+    <verse number="28" style="v"/>Сыновья Шемуила:</para>
+  <para style="li2">Иоиль – его первенец, и Авия – второй сын.</para>
+  <para style="li1">
+    <verse number="29" style="v"/>Потомки Мерари:</para>
+  <para style="li2">Махли, сыном которого был Ливни, сыном которого был Шимей, сыном которого был Узза, <verse number="30" style="v"/>сыном которого был Шимея, сыном которого был Хаггия, сыном которого был Асая.</para>
+  <para style="s1">Обязанности левитов</para>
+  <para style="p">
+    <verse number="31" style="v"/>Вот те, кому Давуд вверил песенную службу в доме Вечного, после того как туда был перенесён сундук<note caller="+" style="f"><char style="fr" closed="false">6:31 </char><char style="fk" closed="false">Сундук </char><char style="ft" closed="false">– см. пояснительный словарь, а также <char style="xt"><ref loc="EXO 25:10-22">Исх. 25:10-22</ref></char>.</char></note>. <verse number="32" style="v"/>Они несли песенную службу перед священным шатром – шатром встречи, пока Сулейман не выстроил Вечному храм в Иерусалиме. Они исполняли свои обязанности по положенным для них установлениям.</para>
+  <para style="p">
+    <verse number="33" style="v"/>Вот имена тех, кто нёс эту службу вместе со своими сыновьями:</para>
+  <para style="li1">из каафитов – Еман певец, сын Иоиля, сына Шемуила, <verse number="34" style="v"/>сына Элканы, сына Иерохама, сына Элиила, сына Тоаха, <verse number="35" style="v"/>сына Цуфа, сына Элканы, сына Махата, сына Амасая, <verse number="36" style="v"/>сына Элканы, сына Иоила, сына Азарии, сына Софонии, <verse number="37" style="v"/>сына Тахата, сына Асира, сына Авиасафа, сына Кораха, <verse number="38" style="v"/>сына Ицхара, сына Каафа, сына Леви, сына Исраила.</para>
+  <para style="li1">
+    <verse number="39" style="v"/>Помощником Емана, совершавшим службу справа от него, был Асаф, сын Берехии, сына Шимеи, <verse number="40" style="v"/>сына Микаила, сына Баасеи, сына Малхии, <verse number="41" style="v"/>сына Этни, сына Зераха, сына Адаи, <verse number="42" style="v"/>сына Етана, сына Зиммы, сына Шимея, <verse number="43" style="v"/>сына Иахата, сына Гершона, сына Леви.</para>
+  <para style="li1">
+    <verse number="44" style="v"/>А помощником, совершавшим служение слева от него, был мерарит Етан, сын Киши, сына Авди, сына Маллуха, <verse number="45" style="v"/>сына Хашавии, сына Амасии, сына Хилкии, <verse number="46" style="v"/>сына Амци, сына Бани, сына Шемера, <verse number="47" style="v"/>сына Махли, сына Муши, сына Мерари, сына Леви.</para>
+  <para style="p">
+    <verse number="48" style="v"/>Их собратьям-левитам были поручены все прочие обязанности при священном шатре, доме Аллаха.</para>
+  <para style="p">
+    <verse number="49" style="v"/>А Харун и его потомки совершали приношения на жертвеннике для всесожжений и на жертвеннике для возжигания благовоний, неся службу в Святая Святых, чтобы очистить Исраил, по всем повелениям Мусы, раба Аллаха.</para>
+  <para style="li1">
+    <verse number="50" style="v"/>Вот потомки Харуна:</para>
+  <para style="li2">его сын Элеазар, сыном которого был Пинхас, сыном которого был Авишуй, <verse number="51" style="v"/>сыном которого был Буккий, сыном которого был Уззий, сыном которого был Зерахия, <verse number="52" style="v"/>сыном которого был Мерайот, сыном которого был Амария, сыном которого был Ахитув, <verse number="53" style="v"/>сыном которого был Цадок, сыном которого был Ахимаац.</para>
+  <para style="s1">Поселения левитов</para>
+  <para style="r">(<ref loc="JOS 21:4-39">Иеш. 21:4-39</ref>)</para>
+  <para style="p">
+    <verse number="54" style="v"/>Вот места их поселений, выделенные им в надел (они достались потомкам Харуна из клана Каафа, потому что им выпал первый жребий). <verse number="55" style="v"/>Им отдали Хеврон, что в Иудее, с его окрестными пастбищами, <verse number="56" style="v"/>но поля и поселения вокруг города были отданы Халеву, сыну Иефоннии.</para>
+  <para style="p">
+    <verse number="57" style="v"/>Итак, потомкам Харуна отдали Хеврон (город-убежище), Ливну, Иаттир, Эштемоа, <verse number="58" style="v"/>Холон, Девир, <verse number="59" style="v"/>Айн<note caller="+" style="f"><char style="fr" closed="false">6:59 </char><char style="ft" closed="false">Букв.: «Ашан»; в <char style="xt"><ref loc="JOS 21:16">Иеш. 21:16</ref></char> он назван Айном.</char></note>, Ютту и Бет-Шемеш с их пастбищами. <verse number="60" style="v"/>От рода Вениамина они получили Гаваон, Геву, Алемет и Анатот с их пастбищами. Городов, розданных каафитским кланам, было всего тринадцать.</para>
+  <para style="p">
+    <verse number="61" style="v"/>Остальные потомки Каафа по жребию получили десять городов от половины рода Манассы.</para>
+  <para style="p">
+    <verse number="62" style="v"/>Потомки Гершона – по своим кланам – получили тринадцать городов от родов Иссахара, Ашира, Неффалима и от той части рода Манассы, что в Башане.</para>
+  <para style="p">
+    <verse number="63" style="v"/>Потомки Мерари – по своим кланам – по жребию получили двенадцать городов от родов Рувима, Гада и Завулона.</para>
+  <para style="p">
+    <verse number="64" style="v"/>Так исраильтяне отдали эти города с их пастбищами левитам. <verse number="65" style="v"/>От родов Иуды, Шимона и Вениамина левиты получили по жребию те города, которые уже упомянуты.</para>
+  <para style="p">
+    <verse number="66" style="v"/>Некоторые из каафитских кланов получили в надел города от рода Ефраима.</para>
+  <para style="p">
+    <verse number="67" style="v"/>Они получили Шехем (город-убежище) в нагорьях Ефраима, Гезер, <verse number="68" style="v"/>Иокмеам, Бет-Хорон, <verse number="69" style="v"/>Аялон и Гат-Риммон с их пастбищами.</para>
+  <para style="p">
+    <verse number="70" style="v"/>А из надела половины рода Манассы исраильтяне дали Анер и Валаам с их пастбищами остальным каафитским кланам.</para>
+  <para style="li1">
+    <verse number="71" style="v"/>Гершонитам дали</para>
+  <para style="li1">от половины рода Манассы: Голан, что в Башане, и Аштарот с их пастбищами;</para>
+  <para style="li1">
+    <verse number="72" style="v"/>от рода Иссахара: Кедеш, Даверат, <verse number="73" style="v"/>Рамот и Анем с их пастбищами;</para>
+  <para style="li1">
+    <verse number="74" style="v"/>от рода Ашира: Машал, Авдон, <verse number="75" style="v"/>Хукок и Рехов с их пастбищами;</para>
+  <para style="li1">
+    <verse number="76" style="v"/>от рода Неффалима: Кедеш, что в Галилее, Хаммон и Кириатаим с их пастбищами.</para>
+  <para style="li1">
+    <verse number="77" style="v"/>Остальным мераритам дали</para>
+  <para style="li1">от рода Завулона: Риммоно и Фавор с их пастбищами;</para>
+  <para style="li1">
+    <verse number="78" style="v"/>от рода Рувима – за Иорданом, к востоку от Иерихона: Бецер, что в пустыне, Иахац, <verse number="79" style="v"/>Кедемот и Мефаат с их пастбищами;</para>
+  <para style="li1">
+    <verse number="80" style="v"/>от рода Гада: Рамот, что в Галааде, Маханаим, <verse number="81" style="v"/>Хешбон и Иазер с их пастбищами.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Потомки Иссахара</para>
+  <para style="li1">
+    <verse number="1" style="v"/>Сыновья Иссахара:</para>
+  <para style="li2">Тола, Пуа, Иашув и Шимрон – всего четверо.</para>
+  <para style="li1">
+    <verse number="2" style="v"/>Сыновья Толы:</para>
+  <para style="li2">Уззий, Рефая, Иериил, Иахмай, Ивсам и Шемуил – главы своих семейств. Во время царствования Давуда потомков Толы, исчисленных в их родословии как воинов, было двадцать две тысячи шестьсот человек.</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Сын Уззия:</para>
+  <para style="li2">Израхия.</para>
+  <para style="li1">Сыновья Израхии:</para>
+  <para style="li2">Микаил, Авдий, Иоиль и Ишшия. Все пятеро были вождями. <verse number="4" style="v"/>По их родословию у них было тридцать шесть тысяч мужчин, готовых к сражению, потому что у этих вождей было много жён и сыновей.</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Их родичей, храбрых воинов, во всех кланах Иссахара, по исчислению родословия, было всего восемьдесят семь тысяч человек.</para>
+  <para style="s1">Потомки Вениамина</para>
+  <para style="li1">
+    <verse number="6" style="v"/>У Вениамина было три сына:</para>
+  <para style="li2">Бела, Бехер и Иедиаил.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Сыновья Белы:</para>
+  <para style="li2">Эцбон, Уззий, Узиил, Иеримот и Ири – главы семейств – всего пятеро. В их родословии значатся двадцать две тысячи тридцать четыре храбрых воина.</para>
+  <para style="li1">
+    <verse number="8" style="v"/>Сыновья Бехера:</para>
+  <para style="li2">Змира, Иоаш, Элиезер, Элиоенай, Омри, Иеремот, Авия, Анатот и Алемет – все они сыновья Бехера. <verse number="9" style="v"/>В их родословии значатся главы семейств и двадцать тысяч двести храбрых воинов.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Сын Иедиаила:</para>
+  <para style="li2">Билган.</para>
+  <para style="li1">Сыновья Билгана:</para>
+  <para style="li2">Иеуш, Вениамин, Ехуд, Кенаана, Зетан, Фарсис и Ахишахар. <verse number="11" style="v"/>Все эти сыновья Иедиаила были главами семейств. Храбрых воинов, готовых идти на войну, было семнадцать тысяч двести человек.</para>
+  <para style="li1">
+    <verse number="12" style="v"/>Шуппим и Хуппим были сыновьями Ира, а Хушим – сыном Ахера.</para>
+  <para style="s1">Потомки Неффалима</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Сыновья Неффалима:</para>
+  <para style="li2">Иахцеил, Гуни, Иецер и Шиллем – потомки Билхи.</para>
+  <para style="s1">Потомки Манассы</para>
+  <para style="li1">
+    <verse number="14" style="v"/>Потомки Манассы:</para>
+  <para style="li2">Асриил был одним из его потомков от его сирийской наложницы. Она же родила Махира, отца Галаада. <verse number="15" style="v"/>Махир взял себе в жёны Мааху, сестру Хуппима и Шуппима.</para>
+  <para style="li2">Другого потомка Манассы звали Целофхад; у него были только дочери<note caller="+" style="f"><char style="fr" closed="false">7:15 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="NUM 36:1-12">Чис. 36:1-12</ref></char>.</char></note>.</para>
+  <para style="li2">
+    <verse number="16" style="v"/>Мааха, жена Махира, родила сына и назвала его Переш. Его брата назвали Шереш, а его сыновей – Улам и Ракем.</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Сын Улама:</para>
+  <para style="li2">Бедан.</para>
+  <para style="li1">Это сыновья Галаада, сына Махира, внука Манассы. <verse number="18" style="v"/>Его сестра Аммолехет родила Ишода, Авиезера и Махлу.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Сыновьями Шемиды были:</para>
+  <para style="li2">Ахиан, Шехем, Ликхи и Аниам.</para>
+  <para style="s1">Потомки Ефраима</para>
+  <para style="li1">
+    <verse number="20" style="v"/>Сыновья Ефраима:</para>
+  <para style="li2">Шутелах, сыном которого был Беред, сыном которого был Тахат, сыном которого был Элеада, сыном которого был Тахат, <verse number="21" style="v"/>сыном которого был Завад, сыном которого был Шутелах.</para>
+  <para style="pi">Езер и Элеад были убиты при попытке угнать скот у коренных жителей Гата. <verse number="22" style="v"/>Их отец Ефраим оплакивал их много дней, и его родичи приходили утешать его. <verse number="23" style="v"/>Он лёг со своей женой, и она зачала и родила сына. Он назвал его Брия (<char style="add">«несчастье»</char>), потому что несчастье пришло в его дом. <verse number="24" style="v"/>Его дочерью была Шеэра, которая построила Нижний и Верхний Бет-Хорон и Уззен-Шеэру.</para>
+  <para style="li2">
+    <verse number="25" style="v"/>Рефах был его сыном, сыном которого был Решеф, сыном которого был Телах, сыном которого был Тахан, <verse number="26" style="v"/>сыном которого был Ладан, сыном которого был Аммихуд, сыном которого был Элишама, <verse number="27" style="v"/>сыном которого был Нун, сыном которого был Иешуа.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Их земли и поселения включали Вефиль с окрестными поселениями, Нааран на востоке, Гезер с окрестными поселениями на западе и Шехем с окрестными поселениями до самого Гая и его окрестных поселений. <verse number="29" style="v"/>На границах земель манасситов находились Бет-Шеан, Таанах, Мегиддо и Дор с их окрестными поселениями. В этих городах жили потомки Юсуфа, сына Исраила.</para>
+  <para style="s1">Потомки Ашира</para>
+  <para style="li1">
+    <verse number="30" style="v"/>Сыновья Ашира:</para>
+  <para style="li2">Имна, Ишва, Ишви и Брия. Их сестрой была Серах.</para>
+  <para style="li1">
+    <verse number="31" style="v"/>Сыновья Брии:</para>
+  <para style="li2">Хевер и Малкиил, который был отцом Бирзаита.</para>
+  <para style="li1">
+    <verse number="32" style="v"/>Хевер был отцом Иафлета, Шомера, Хотама и их сестры Шуа.</para>
+  <para style="li1">
+    <verse number="33" style="v"/>Сыновья Иафлета:</para>
+  <para style="li2">Пасах, Бимгал и Ашват. Это сыновья Иафлета.</para>
+  <para style="li1">
+    <verse number="34" style="v"/>Сыновья Шомера:</para>
+  <para style="li2">Ахи, Рохга<note caller="+" style="f"><char style="fr" closed="false">7:34 </char><char style="ft" closed="false">Или: «Сыновья его брата Шемера: Рохга…»</char></note>, Иехубба и Арам.</para>
+  <para style="li1">
+    <verse number="35" style="v"/>Сыновья Хелема<note caller="+" style="f"><char style="fr" closed="false">7:35 </char><char style="fk" closed="false">Хелем </char><char style="ft" closed="false">– возможно другое имя Хотама (см. ст. 32).</char></note>, его брата:</para>
+  <para style="li2">Цофах, Имна, Шелеш и Амал.</para>
+  <para style="li1">
+    <verse number="36" style="v"/>Сыновья Цофаха:</para>
+  <para style="li2">Суах, Харнефер, Шуал, Бери, Имра, <verse number="37" style="v"/>Бецер, Год, Шамма, Шилша, Ифран<note caller="+" style="f"><char style="fr" closed="false">7:37 </char><char style="fk" closed="false">Ифран </char><char style="ft" closed="false">– возможно вариант имени Иетер (см. ст. 38).</char></note> и Беэра.</para>
+  <para style="li1">
+    <verse number="38" style="v"/>Сыновья Иетера:</para>
+  <para style="li2">Иефонния, Фиспа и Ара.</para>
+  <para style="li1">
+    <verse number="39" style="v"/>Сыновья Уллы:</para>
+  <para style="li2">Арах, Ханниил и Риция.</para>
+  <para style="p">
+    <verse number="40" style="v"/>Все они были потомками Ашира – главы семейств, избранные, храбрые воины, великие вожди. По родословным спискам у них насчитывалось двадцать шесть тысяч мужчин, готовых для битвы.</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Другие потомки Вениамина</para>
+  <para style="r">(<ref loc="1CH 9:34-44">1 Лет. 9:34-44</ref>)</para>
+  <para style="li1">
+    <verse number="1" style="v"/>У Вениамина было пятеро сыновей. Бела был его первенцем, Ашбел – его вторым сыном, Ахрах – третьим, <verse number="2" style="v"/>Ноха – четвёртым и Рафа – пятым.</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Сыновьями Белы были:</para>
+  <para style="li2">Аддар, Гера, Авихуд<note caller="+" style="f"><char style="fr" closed="false">8:3 </char><char style="ft" closed="false">Или: «Гера, отец Ехуда».</char></note>, <verse number="4" style="v"/>Авишуй, Нааман, Ахоах, <verse number="5" style="v"/>Гера, Шефуфан и Хурам.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Вот потомки Ехуда, которые были главами семейств, живших в Геве и переселённых в Манахат:</para>
+  <para style="li2">
+    <verse number="7" style="v"/>Нааман, Ахия и Гера, который и переселил их. Он был отцом Уззы и Ахиуда.</para>
+  <para style="li1">
+    <verse number="8" style="v"/>У Шахараима в Моаве родились сыновья, после того как он отослал от себя своих жён Хушим и Баару. <verse number="9" style="v"/>От жены Ходеш у него родились Иовав, Цивия, Меша, Малкам, <verse number="10" style="v"/>Иеуц, Сахия и Мирма. Это его сыновья, главы семейств. <verse number="11" style="v"/>От Хушим у него родились Авитув и Элпаал.</para>
+  <para style="li1">
+    <verse number="12" style="v"/>Сыновья Элпаала:</para>
+  <para style="li2">Евер, Мишам, Шемед (который построил Оно и Лод с окрестными селениями), <verse number="13" style="v"/>Брия и Шема, которые были главами семейств, поселившихся в Аялоне. Они изгнали обитателей Гата.</para>
+  <para style="li1">
+    <verse number="14" style="v"/>Ахио, Шашак, Иеремот, <verse number="15" style="v"/>Зевадия, Арад, Едер, <verse number="16" style="v"/>Микаил, Ишпа и Иоха – сыновья Брии.</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Зевадия, Мешуллам, Хизки, Хевер, <verse number="18" style="v"/>Ишмерай, Излия и Иовав – сыновья Элпаала.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Иаким, Зихри, Завди, <verse number="20" style="v"/>Элиенай, Циллетай, Элиил, <verse number="21" style="v"/>Адая, Берая и Шимрат – сыновья Шимея.</para>
+  <para style="li1">
+    <verse number="22" style="v"/>Ишпан, Евер, Элиил, <verse number="23" style="v"/>Авдон, Зихри, Ханан, <verse number="24" style="v"/>Ханания, Елам, Антотия, <verse number="25" style="v"/>Ифдея и Пениил – сыновья Шашака.</para>
+  <para style="li1">
+    <verse number="26" style="v"/>Шамшерай, Шехария, Аталия, <verse number="27" style="v"/>Иаарешия, Ильяс и Зихри – сыновья Иерохама.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Все они были главами семейств, вождями по своим родословиям. Они жили в Иерусалиме.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="29" style="v"/>Иеил, отец Гаваона<note caller="+" style="f"><char style="fr" closed="false">8:29 </char><char style="ft" closed="false">Или: «основатель Гаваона»; то же в <char style="xt"><ref loc="1CH 9:35">9:35</ref></char>.</char></note>, жил в Гаваоне. Его жену звали Мааха, <verse number="30" style="v"/>а первенцем его был Авдон, после которого родились Цур, Киш, Баал, Нер, Надав, <verse number="31" style="v"/>Гедор, Ахио, Закария<note caller="+" style="f"><char style="fr" closed="false">8:31 </char><char style="ft" closed="false">Букв.: «Зехер» – вариант имени Закария (см. <char style="xt"><ref loc="1CH 9:37">9:37</ref></char>).</char></note> <verse number="32" style="v"/>и Миклот, который был отцом Шимеама<note caller="+" style="f"><char style="fr" closed="false">8:32 </char><char style="ft" closed="false">Букв.: «Шимея» – вариант имени Шимеам (см. <char style="xt"><ref loc="1CH 9:38">9:38</ref></char>).</char></note>. Они тоже жили в Иерусалиме рядом со своими сородичами.</para>
+  <para style="li1">
+    <verse number="33" style="v"/>Нер был отцом Киша; Киш – отцом Шаула; Шаул – отцом Ионафана, Малик-Шуа, Авинадава и Иш-Бошета<note caller="+" style="f"><char style="fr" closed="false">8:33 </char><char style="ft" closed="false">Букв.: «Эш-Баал»; во <char style="xt"><ref loc="2SA 2:8-10">2 Цар. 2:8-10</ref></char> он назван Иш-Бошетом. Также в <char style="xt"><ref loc="1CH 9:39">9:39</ref></char>.</char></note>.</para>
+  <para style="li1">
+    <verse number="34" style="v"/>Сын Ионафана:</para>
+  <para style="li2">Мефи-Бошет<note caller="+" style="f"><char style="fr" closed="false">8:34 </char><char style="ft" closed="false">Букв.: «Мериб-Баал»; во <char style="xt"><ref loc="2SA 4:4">2 Цар. 4:4</ref></char> он назван Мефи-Бошетом. Также в <char style="xt"><ref loc="1CH 9:40">9:40</ref></char>.</char></note>, который был отцом Михи.</para>
+  <para style="li1">
+    <verse number="35" style="v"/>Сыновья Михи:</para>
+  <para style="li2">Пифон, Малик, Тареа и Ахаз.</para>
+  <para style="li2">
+    <verse number="36" style="v"/>Ахаз был отцом Иадды<note caller="+" style="f"><char style="fr" closed="false">8:36 </char><char style="ft" closed="false">Букв.: «Иехоадда» – вариант имени Иадда (см. <char style="xt"><ref loc="1CH 9:42">9:42</ref></char>).</char></note>; Иадда – отцом Алемета, Азмавета и Зимри, а Зимри – отцом Моцы. <verse number="37" style="v"/>Моца был отцом Бинеа, сыном которого был Рефая, сыном которого был Элеаса, сыном которого был Ацель.</para>
+  <para style="li1">
+    <verse number="38" style="v"/>У Ацеля было шесть сыновей. Вот их имена:</para>
+  <para style="li2">Азрикам, Бохру, Исмаил, Шеария, Авдий и Ханан. Все они сыновья Ацеля.</para>
+  <para style="li1">
+    <verse number="39" style="v"/>Сыновья Эшека, его брата:</para>
+  <para style="li2">Улам – его первенец, Иеуш – второй сын и Элифелет – третий. <verse number="40" style="v"/>Сыновья Улама были отважными воинами-лучниками. У них было много сыновей и внуков – всего сто пятьдесят человек.</para>
+  <para style="p">Все они были потомками Вениамина.</para>
+  <para style="b"/>
+  <chapter number="9" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Весь Исраил был внесён в родословия, записанные в «Книге царей Исраила».</para>
+  <para style="s1">Жители Иерусалима после Вавилонского пленения</para>
+  <para style="r">(<ref loc="NEH 11:3-19">Неем. 11:3-19</ref>)</para>
+  <para style="p">Народ Иудеи был уведён в плен в Вавилон за свою неверность. <verse number="2" style="v"/>Первыми, кто вернулся к своим владениям в своих городах, были простые исраильтяне, священнослужители, левиты и служители при храме.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Вот те из родов Иуды, Вениамина, Ефраима и Манассы, кто жил в Иерусалиме:</para>
+  <para style="li1">
+    <verse number="4" style="v"/>Утай, сын Аммихуда, сына Омри, сына Имри, сына Бани, потомка Фареца, сына Иуды.</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Из шилонитян:</para>
+  <para style="li2">первенец Асая и его сыновья.</para>
+  <para style="li1">
+    <verse number="6" style="v"/>Из потомков Зераха:</para>
+  <para style="li2">Иеуил.</para>
+  <para style="li2">От Иуды было шестьсот девяносто человек.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Из потомков Вениамина:</para>
+  <para style="li2">Саллу, сын Мешуллама, внук Годавии, правнук Ассенуа; <verse number="8" style="v"/>Ивнея, сын Иерохама; Ела, сын Уззия, внук Михри; и Мешуллам, сын Шефатии, внук Рагуила, правнук Ивнии.</para>
+  <para style="li2">
+    <verse number="9" style="v"/>От Вениамина, по их родословиям, было девятьсот пятьдесят шесть человек. Все эти люди были главами своих семейств.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Из священнослужителей:</para>
+  <para style="li2">Иедая, Иехоярив, Иахин <verse number="11" style="v"/>и Азария, сын Хилкии, сына Мешуллама, сына Цадока, сына Мерайота, сына Ахитува, главы дома Аллаха; <verse number="12" style="v"/>Адая, сын Иерохама, сына Пашхура, сына Малхии; Маасай, сын Адиила, сына Иахзера, сына Мешуллама, сына Мешиллемита, сына Иммера.</para>
+  <para style="li2">
+    <verse number="13" style="v"/>Священнослужителей, которые были главами своих семейств, было тысяча семьсот шестьдесят человек. Они были искусны в деле служения в доме Аллаха.</para>
+  <para style="li1">
+    <verse number="14" style="v"/>Из левитов:</para>
+  <para style="li2">Шемая, сын Хашува, сына Азрикама, сына Хашавии, потомка Мерари; <verse number="15" style="v"/>Бакбаккар, Хереш, Галал и Маттания, сын Михи, сына Зихри, сына Асафа; <verse number="16" style="v"/>Авдий, сын Шемаи, сына Галала, сына Иедутуна, и Берехия, сын Асы, сына Элканы, который жил в селениях нетофитян.</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Привратниками были:</para>
+  <para style="li2">Шаллум, Аккув, Талмон, Ахиман и их родичи. Шаллум был их главой. <verse number="18" style="v"/>До сих пор его род стоит на страже у Царских ворот, что с восточной стороны. Это привратники, которые были из левитов. <verse number="19" style="v"/>Шаллуму, сыну Коре, внуку Авиасафа, правнуку Кораха, и привратникам из его родства (корахитам), которые несли службу вместе с ним, было доверено охранять пороги Шатра<note caller="+" style="f"><char style="fr" closed="false">9:19 </char><char style="ft" closed="false">То есть храма; также в ст. 21 и 23.</char></note>, как их отцы охраняли вход в святилище Вечного. <verse number="20" style="v"/>В прежние времена Пинхас, сын Элеазара, был начальником над привратниками, и Вечный был с ним. <verse number="21" style="v"/>Закария, сын Мешелемии, был привратником у входа в Шатёр Встречи.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Всего в привратники было избрано двести двенадцать человек. Они были внесены в родословия по своим поселениям. На ответственные места привратников поставили Давуд и провидец Шемуил. <verse number="23" style="v"/>Им самим и их потомкам было доверено охранять ворота дома Вечного (именуемого Шатром). <verse number="24" style="v"/>Привратники стояли с четырёх сторон – на востоке, на западе, на севере и на юге. <verse number="25" style="v"/>Их сородичи в поселениях должны были время от времени приходить, чтобы делить с ними обязанности в течение семи дней. <verse number="26" style="v"/>Но четырём главным привратникам, которые были левитами, были доверены комнаты и сокровища дома Аллаха. <verse number="27" style="v"/>Они проводили ночь возле дома Аллаха, потому что должны были охранять его и каждое утро отпирать двери.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Некоторым из них были доверены вещи, которыми пользовались при храмовой службе. Левиты пересчитывали их, когда принимали их и когда выдавали. <verse number="29" style="v"/>Другие были назначены заботиться об утвари и всех прочих вещах святилища, а также о лучшей муке и вине, масле, ароматах и благовониях. <verse number="30" style="v"/>А некоторые из священнослужителей смешивали благовония. <verse number="31" style="v"/>Левиту по имени Маттафия, первенцу корахита Шаллума, было доверено печь хлеб для приношений, <verse number="32" style="v"/>а некоторым из их каафитских сородичей были вверены заботы о священном хлебе на каждую субботу.</para>
+  <para style="p">
+    <verse number="33" style="v"/>Музыканты, главы левитских семейств, жили в комнатах храма и были свободны от других обязанностей, потому что несли свою службу днём и ночью.</para>
+  <para style="p">
+    <verse number="34" style="v"/>Все они были главами левитских семейств, вождями по своим родословиям, и жили в Иерусалиме.</para>
+  <para style="s1">Родословие Шаула</para>
+  <para style="r">(<ref loc="1CH 8:29-38">1 Лет. 8:29-38</ref>)</para>
+  <para style="li1">
+    <verse number="35" style="v"/>Иеил, отец Гаваона, жил в Гаваоне. Его жену звали Мааха; <verse number="36" style="v"/>а первенцем его был Авдон, после которого родились Цур, Киш, Баал, Нер, Надав, <verse number="37" style="v"/>Гедор, Ахио, Закария и Миклот. <verse number="38" style="v"/>Миклот был отцом Шимеама. Они тоже жили в Иерусалиме рядом со своими сородичами.</para>
+  <para style="li1">
+    <verse number="39" style="v"/>Нер был отцом Киша; Киш – отцом Шаула; Шаул – отцом Ионафана, Малик-Шуа, Авинадава и Иш-Бошета.</para>
+  <para style="li1">
+    <verse number="40" style="v"/>Сын Ионафана:</para>
+  <para style="li2">Мефи-Бошет, который был отцом Михи.</para>
+  <para style="li1">
+    <verse number="41" style="v"/>Сыновья Михи:</para>
+  <para style="li2">Пифон, Малик, Тареа и Ахаз.</para>
+  <para style="li2">
+    <verse number="42" style="v"/>Ахаз был отцом Иадды; Иадда – отцом Алемета, Азмавета и Зимри, а Зимри – отцом Моцы. <verse number="43" style="v"/>Моца был отцом Бинеа, сыном которого был Рефая, сыном которого был Элеаса, сыном которого был Ацель.</para>
+  <para style="li1">
+    <verse number="44" style="v"/>У Ацеля было шесть сыновей. Вот их имена:</para>
+  <para style="li2">Азрикам, Бохру, Исмаил, Шеария, Авдий и Ханан. Это сыновья Ацеля.</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">Гибель Шаула и его сыновей</para>
+  <para style="r">(<ref loc="1SA 31:1-13">1 Цар. 31:1-13</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Филистимляне воевали с Исраилом, и исраильтяне бежали от них и падали сражёнными на горе Гильбоа. <verse number="2" style="v"/>Филистимляне нагнали Шаула и его сыновей и убили Ионафана, Авинадава и Малик-Шуа. <verse number="3" style="v"/>Вокруг Шаула разгорелась жестокая битва. Лучники нашли его и ранили.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Шаул сказал своему оруженосцу:</para>
+  <para style="p">– Обнажи свой меч и заколи меня, иначе эти необрезанные придут и станут глумиться надо мной.</para>
+  <para style="p">Но его оруженосец не решился сделать это, потому что сильно испугался. Тогда Шаул взял свой меч и бросился на него. <verse number="5" style="v"/>Когда оруженосец увидел, что Шаул мёртв, он тоже бросился на свой меч и умер. <verse number="6" style="v"/>Так погибли Шаул и его три сына, и вместе с ними погиб весь его дом.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Увидев, что войско разбежалось, а Шаул и его сыновья погибли, все исраильтяне, которые были в долине, оставили свои города и тоже бежали. А филистимляне пришли и заняли их.</para>
+  <para style="p">
+    <verse number="8" style="v"/>На следующий день, когда филистимляне пришли грабить мёртвых, они нашли Шаула и его сыновей, павших на горе Гильбоа. <verse number="9" style="v"/>Они обобрали Шаула, отрубили ему голову, сняли с него оружие и послали вестников по всей филистимской земле, чтобы возвестить об этом в капище своих идолов и народу. <verse number="10" style="v"/>Они положили его оружие в храме своих богов, а голову его повесили в храме Дагона<note caller="+" style="f"><char style="fr" closed="false">10:10 </char><char style="fk" closed="false">Дагон </char><char style="ft" closed="false">– главный бог филистимлян, возможно, бог грозы или растительности.</char></note>.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Когда весь Иавеш Галаадский услышал обо всём, что филистимляне сделали с Шаулом, <verse number="12" style="v"/>то все их храбрые воины отправились в путь, взяли тела Шаула и его сыновей и перенесли их в Иавеш. Они погребли их кости под иавешским дубом и постились семь дней.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Шаул погиб, потому что нарушил верность Вечному. Он не слушался слова Вечного, он обратился с вопросом к колдунье, <verse number="14" style="v"/>а не к Вечному. И Вечный предал его смерти и передал его царство Давуду, сыну Есея.</para>
+  <chapter number="11" style="c"/>
+  <para style="s1">Давуд становится царём Исраила</para>
+  <para style="r">(<ref loc="2SA 5:1-3">2 Цар. 5:1-3</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Все исраильтяне собрались к Давуду в Хеврон и сказали:</para>
+  <para style="p">– Мы – твоя плоть и кровь. <verse number="2" style="v"/>Даже прежде, когда нашим царём был Шаул, ты водил исраильтян в бой. И Вечный, твой Бог, сказал тебе: «Ты будешь пасти Мой народ Исраил и станешь его правителем».</para>
+  <para style="p">
+    <verse number="3" style="v"/>Когда все старейшины Исраила пришли к царю Давуду в Хеврон, он заключил с ними в Хевроне соглашение перед Вечным, и они помазали<note caller="+" style="f"><char style="fr" closed="false">11:3 </char><char style="ft" closed="false">Посредством обряда помазания человек посвящался на определённое служение. Такого помазания удостаивались пророки, цари и священнослужители.</char></note> Давуда в цари над Исраилом, как и обещал через Шемуила Вечный<note caller="+" style="f"><char style="fr" closed="false">11:3 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="1SA 16:1-13">1 Цар. 16:1-13</ref></char>.</char></note>.</para>
+  <para style="s1">Давуд захватывает Иерусалим</para>
+  <para style="r">(<ref loc="2SA 5:6-10">2 Цар. 5:6-10</ref>)</para>
+  <para style="p">
+    <verse number="4" style="v"/>Давуд и все исраильтяне пошли на Иерусалим (то есть Иевус). Иевусеи, жившие там, <verse number="5" style="v"/>сказали Давуду:</para>
+  <para style="p">– Ты не войдёшь сюда.</para>
+  <para style="p">Но Давуд захватил крепость Сион, что ныне Город Давуда. <verse number="6" style="v"/>Он сказал:</para>
+  <para style="p">– Кто ударит по иевусеям первым, станет главой войска.</para>
+  <para style="p">Первым поднялся Иоав, сын Церуи, и получил командование.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Давуд обосновался в крепости, и потому она стала называться Городом Давуда. <verse number="8" style="v"/>Он обстроил её кругом от Милло<note caller="+" style="f"><char style="fr" closed="false">11:8 </char><char style="fk" closed="false">Милло </char><char style="ft" closed="false">– с языка оригинала переводится как «насыпь». Возможно, что это были какие-то городские укрепления.</char></note> до окружной стены, а Иоав отстроил остальные части города. <verse number="9" style="v"/>Давуд становился всё сильнее и сильнее, потому что с ним был Вечный, Повелитель Сил.</para>
+  <para style="s1">Прославленные воины Давуда</para>
+  <para style="r">(<ref loc="2SA 23:8-39">2 Цар. 23:8-39</ref>)</para>
+  <para style="p">
+    <verse number="10" style="v"/>Вот вожди воинов Давуда, которые вместе со всем Исраилом своей силой поддержали Давуда в его царстве, чтобы воцарить его, как обещал Вечный. <verse number="11" style="v"/>Вот список воинов Давуда.</para>
+  <para style="p">Ахмонитянин Иашовеам был главой Тройки<note caller="+" style="f"><char style="fr" closed="false">11:11 </char><char style="ft" closed="false">Или: «Тридцатки»; или «полководцев». См. <char style="xt"><ref loc="2SA 23:8">2 Цар. 23:8</ref></char>.</char></note>. Он сражался с копьём против трёхсот человек и перебил их в одной схватке.</para>
+  <para style="p">
+    <verse number="12" style="v"/>После него в числе Тройки воинов был Элеазар, сын ахохитянина Додая. <verse number="13" style="v"/>Он был с Давудом в Пас-Даммиме, когда филистимляне собрались там для битвы. Там было поле, засеянное ячменём. Войско стало разбегаться перед филистимлянами, <verse number="14" style="v"/>но эти воины встали посреди поля, защитили его и поразили филистимлян, и Вечный даровал им великую победу.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Трое из Тридцатки вождей пришли к Давуду к скале у пещеры Адуллам, когда войско филистимлян стояло станом в долине Рефаим. <verse number="16" style="v"/>В то время Давуд находился в укреплении, а войска филистимлян были в Вифлееме. <verse number="17" style="v"/>Давуда томила жажда, и он сказал:</para>
+  <para style="p">– О, если бы кто-нибудь принёс мне попить воды из колодца, что у ворот Вифлеема!</para>
+  <para style="p">
+    <verse number="18" style="v"/>Тогда те трое воинов пробились через филистимский стан, зачерпнули воды из колодца, что у ворот Вифлеема, и принесли Давуду. Но Давуд отказался пить и вылил воду как приношение Вечному.</para>
+  <para style="p">
+    <verse number="19" style="v"/>– Сохрани меня, Аллах, сделать это! – сказал он. – Разве я стану пить кровь этих людей? Ведь они принесли воду, рискуя своей жизнью!</para>
+  <para style="p">И он не стал пить.</para>
+  <para style="p">Таковы подвиги этих трёх воинов.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Авишай, брат Иоава, был главой над Тройкой<note caller="+" style="f"><char style="fr" closed="false">11:20 </char><char style="ft" closed="false">Или: «главой Тридцатки».</char></note>. Он с копьём сражался против трёхсот человек, перебил их всех и прославился наравне с той Тройкой. <verse number="21" style="v"/>Он был знаменит среди Тройки<note caller="+" style="f"><char style="fr" closed="false">11:21 </char><char style="ft" closed="false">Или: «Он был самым знаменитым из Тридцатки».</char></note> и стал их командиром, но сам не был одним из Тройки.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Беная, сын Иодая, был доблестным воином из Кавцеила, совершившим великие подвиги. Он сразил двух сильнейших воинов<note caller="+" style="f"><char style="fr" closed="false">11:22 </char><char style="ft" closed="false">Или: «двух сыновей Ариила».</char></note> из Моава. Ещё он спустился в ров в снежный день и убил там льва. <verse number="23" style="v"/>Он также сразил египтянина, который был два с четвертью метра<note caller="+" style="f"><char style="fr" closed="false">11:23 </char><char style="ft" closed="false">Букв.: «пять локтей».</char></note> ростом. В руке у египтянина было копьё, большое, как ткацкий навой, а Беная вышел против него с палкой. Он вырвал копьё из руки египтянина и убил его этим же копьём. <verse number="24" style="v"/>Таковы были подвиги Бенаи, сына Иодая. Он прославился наравне с той Тройкой. <verse number="25" style="v"/>Он был знаменит среди Тридцатки, но сам не был среди Тройки. Давуд поставил его во главе своей стражи.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="26" style="v"/>Главными из воинов были:</para>
+  <para style="li1">Асаил, брат Иоава,</para>
+  <para style="li1">Элханан, сын Додо, из Вифлеема,</para>
+  <para style="li1">
+    <verse number="27" style="v"/>Шамма из Харода,</para>
+  <para style="li1">Хелец из Пелона,</para>
+  <para style="li1">
+    <verse number="28" style="v"/>Ира, сын Иккеша, из Текоа,</para>
+  <para style="li1">Авиезер из Анатота,</para>
+  <para style="li1">
+    <verse number="29" style="v"/>хушатянин Сиббехай,</para>
+  <para style="li1">ахохитянин Илай,</para>
+  <para style="li1">
+    <verse number="30" style="v"/>Махарай из Нетофы,</para>
+  <para style="li1">Хелед, сын Бааны, из Нетофы,</para>
+  <para style="li1">
+    <verse number="31" style="v"/>Иттай, сын Ривая, из Гивы, что в земле Вениамина,</para>
+  <para style="li1">Беная из Пирафона,</para>
+  <para style="li1">
+    <verse number="32" style="v"/>Хурай из Нахале-Гааша<note caller="+" style="f"><char style="fr" closed="false">11:32 </char><char style="ft" closed="false">Или: «с рек Гааша».</char></note>,</para>
+  <para style="li1">Авиил из Аравы,</para>
+  <para style="li1">
+    <verse number="33" style="v"/>Азмавет из Бахурима,</para>
+  <para style="li1">Элиахба из Шаалбона,</para>
+  <para style="li1">
+    <verse number="34" style="v"/>сыновья гизонитянина Хашема,</para>
+  <para style="li1">Ионафан, сын араритянина Шаге,</para>
+  <para style="li1">
+    <verse number="35" style="v"/>Ахиам, сын араритянина Сахара,</para>
+  <para style="li1">Элифал, сын Ура,</para>
+  <para style="li1">
+    <verse number="36" style="v"/>Хефер из Мехеры,</para>
+  <para style="li1">Ахия из Пелона,</para>
+  <para style="li1">
+    <verse number="37" style="v"/>Хецрай из Кармила,</para>
+  <para style="li1">Наарай, сын Эзбая,</para>
+  <para style="li1">
+    <verse number="38" style="v"/>Иоиль, брат Нафана,</para>
+  <para style="li1">Мивхар, сын Агри,</para>
+  <para style="li1">
+    <verse number="39" style="v"/>аммонитянин Целек,</para>
+  <para style="li1">Нахарай из Беэрота, оруженосец Иоава, сына Церуи,</para>
+  <para style="li1">
+    <verse number="40" style="v"/>итритянин Ира,</para>
+  <para style="li1">итритянин Гарев,</para>
+  <para style="li1">
+    <verse number="41" style="v"/>хетт Урия,</para>
+  <para style="li1">Завад, сын Ахлая,</para>
+  <para style="li1">
+    <verse number="42" style="v"/>Адина, сын Шизы, из рода Рувима (он был вождь рувимитян, и с ним было тридцать воинов),</para>
+  <para style="li1">
+    <verse number="43" style="v"/>Ханан, сын Маахи,</para>
+  <para style="li1">митнитянин Иошафат,</para>
+  <para style="li1">
+    <verse number="44" style="v"/>Уззия из Аштарота,</para>
+  <para style="li1">Шама и Иеил, сыновья Хотама, из Ароера,</para>
+  <para style="li1">
+    <verse number="45" style="v"/>Иедиаил, сын Шимри,</para>
+  <para style="li1">его брат тицитянин Иоха,</para>
+  <para style="li1">
+    <verse number="46" style="v"/>махавитянин Элиил,</para>
+  <para style="li1">Иеривай и Иошавия, сыновья Элнаама,</para>
+  <para style="li1">моавитянин Итма,</para>
+  <para style="li1">
+    <verse number="47" style="v"/>Элиил, Овид и Иасиил из Цовы<note caller="+" style="f"><char style="fr" closed="false">11:10-47 </char><char style="ft" closed="false">Списки имён здесь и во <char style="xt"><ref loc="2SA 23">2 Цар. 23</ref></char> не вполне совпадают. Большая часть различий объясняется разным написанием одних и тех же имён. В других случаях, это действительно могли быть разные люди. Вероятно, когда одни воины погибали, на их место вставали другие (что и может быть объяснением большего числа воинов в данном списке), но число 30 оставалось постоянным.</char></note>.</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">Первые сторонники Давуда</para>
+  <para style="p">
+    <verse number="1" style="v"/>Вот имена тех, кто пришёл к Давуду в Циклаг, когда он укрывался от Шаула, сына Киша<note caller="+" style="f"><char style="fr" closed="false">12:1 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="1SA 27:1-6">1 Цар. 27:1-6</ref></char>.</char></note>. (Они были среди воинов, которые помогали ему в сражениях. <verse number="2" style="v"/>Они были вооружены луками и могли стрелять из лука и метать камни из пращи как правой, так и левой рукой. Они были родственниками Шаула из рода Вениамина.)</para>
+  <para style="pi">
+    <verse number="3" style="v"/>Их вождь Ахиезер и за ним Иоаш – сыновья Шемаа из Гивы; Иезиил и Пелет – сыновья Азмавета; Бераха и Иеву из Анатота; <verse number="4" style="v"/>Ишмая из Гаваона – воин из числа Тридцатки и вождь над ней; Иеремия, Иахазиил, Иоханан и Иозавад из Гедеры; <verse number="5" style="v"/>Элузай, Иеримот, Беалия, Шемария и харуфитянин Шефатия; <verse number="6" style="v"/>корахиты Элкана, Ишшия, Азарил, Иоезер и Иашовеам; <verse number="7" style="v"/>Иоела и Зевадия – сыновья Иерохама из Гедора.</para>
+  <para style="s1">Сторонники Давуда из рода Гада</para>
+  <para style="p">
+    <verse number="8" style="v"/>Перешли к Давуду в его укрепление в пустыне и некоторые из гадитян. Это были отважные и опытные воины, умеющие обращаться со щитом и копьём. Лица их были как у львов, и быстры они были, как серны в горах.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Вождём был Езер,</para>
+  <para style="li1">вторым после него – Авдий,</para>
+  <para style="li1">третьим – Элиав,</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Мишманна – четвёртым,</para>
+  <para style="li1">Иеремия – пятым,</para>
+  <para style="li1">
+    <verse number="11" style="v"/>Аттай – шестым,</para>
+  <para style="li1">Элиил – седьмым,</para>
+  <para style="li1">
+    <verse number="12" style="v"/>Иоханан – восьмым,</para>
+  <para style="li1">Элзавад – девятым,</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Иеремия – десятым</para>
+  <para style="li1">и Махбаннай – одиннадцатым.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Эти гадитяне были военачальниками: наименьший стоял над сотней, а наибольший – над тысячей. <verse number="15" style="v"/>Это они переправились через реку Иордан в первый месяц (<char style="add">ранней весной</char>), когда она выходит из берегов, и обратили в бегство всех, кто жил в долинах к востоку и к западу.</para>
+  <para style="s1">Сторонники Давуда из родов Вениамина и Иуды</para>
+  <para style="p">
+    <verse number="16" style="v"/>Другие, вениамитяне и некоторые из рода Иуды, также пришли в укрепление к Давуду. <verse number="17" style="v"/>Давуд вышел навстречу и сказал им:</para>
+  <para style="p">– Если вы пришли с миром, чтобы помогать мне, я готов объединиться с вами. Но если вы пришли, чтобы предать меня моим врагам, когда мои руки чисты от насилия, то пусть Бог наших предков увидит и рассудит.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Тогда на Амасая, вождя Тридцатки, сошёл Дух и он сказал:</para>
+  <para style="b"/>
+  <para style="q1">– Мы твои, о Давуд!</para>
+  <para style="q2">Мы с тобою, о сын Есея!</para>
+  <para style="q1">Успеха, успеха тебе</para>
+  <para style="q2">и успеха твоим помощникам,</para>
+  <para style="q3">ведь тебе помогает твой Бог.</para>
+  <para style="b"/>
+  <para style="p">Давуд принял их и поставил их во главе своего войска.</para>
+  <para style="s1">Сторонники Давуда из рода Манассы</para>
+  <para style="p">
+    <verse number="19" style="v"/>Когда Давуд пошёл с филистимлянами воевать против Шаула, к нему перешли некоторые из рода Манассы. (Давуд и его люди не помогали филистимлянам, потому что их правители, посоветовавшись, отослали его прочь. Они сказали: «Если он перейдёт к своему господину Шаулу, то это нам будет стоить головы».)</para>
+  <para style="p">
+    <verse number="20" style="v"/>Когда Давуд возвращался в Циклаг, из рода Манассы к нему перешли: Аднах, Иозавад, Иедиаил, Микаил, Иозавад, Элиху и Циллетай – тысяченачальники манасситов. <verse number="21" style="v"/>Они помогали Давуду отражать набеги грабителей, потому что все они были отважными воинами и полководцами в его войске. <verse number="22" style="v"/>День за днём люди шли на помощь Давуду, пока войско его не стало так велико, как войско Аллаха, огромным и могучим.</para>
+  <para style="s1">Войско Давуда в Хевроне</para>
+  <para style="p">
+    <verse number="23" style="v"/>Вот количество воинов, вооружённых для битвы, которые пришли к Давуду в Хеврон, чтобы по слову Вечного передать ему царство Шаула:</para>
+  <para style="li1">
+    <verse number="24" style="v"/>людей рода Иуды, которые носили щит и копьё, – 6 800 человек, вооружённых для битвы.</para>
+  <para style="li1">
+    <verse number="25" style="v"/>Из рода Шимона, воинов, готовых к битве, – 7 100.</para>
+  <para style="li1">
+    <verse number="26" style="v"/>Из рода Леви – 4 600, <verse number="27" style="v"/>вместе с Иодаем, вождём из дома Харуна, который привёл с собой 3 700 человек, <verse number="28" style="v"/>и Цадоком, отважным молодым воином, с 22 военачальниками из его клана.</para>
+  <para style="li1">
+    <verse number="29" style="v"/>Из рода Вениамина – сородичей Шаула – 3 000 человек (большинство из них прежде хранило верность дому Шаула).</para>
+  <para style="li1">
+    <verse number="30" style="v"/>Из рода Ефраима, отважных воинов, прославленных в своих кланах, – 20 800.</para>
+  <para style="li1">
+    <verse number="31" style="v"/>Из половины рода Манассы – 18 000 человек, которые были названы поимённо, чтобы прийти и сделать Давуда царём.</para>
+  <para style="li1">
+    <verse number="32" style="v"/>Из рода Иссахара, людей разумных, которые знали, что и когда должен делать Исраил, – 200 вождей со всеми своими сородичами, следующими по их слову.</para>
+  <para style="li1">
+    <verse number="33" style="v"/>Из рода Завулона опытных воинов, вооружённых всякого вида оружием, которые единодушно пришли на помощь Давуду, – 50 000.</para>
+  <para style="li1">
+    <verse number="34" style="v"/>Из рода Неффалима – 1 000 военачальников и с ними 37 000 человек, носящих щит и копьё.</para>
+  <para style="li1">
+    <verse number="35" style="v"/>Из рода Дана, готовых к битве – 28 600.</para>
+  <para style="li1">
+    <verse number="36" style="v"/>Из рода Ашира, опытных воинов, готовых к битве, – 40 000.</para>
+  <para style="li1">
+    <verse number="37" style="v"/>А из родов Рувима, Гада и половины рода Манассы из-за Иордана – 120 000 человек, вооружённых всякого вида оружием.</para>
+  <para style="p">
+    <verse number="38" style="v"/>Все эти воины боевым строем пришли в Хеврон, исполненные воли сделать Давуда царём над всем Исраилом. И все остальные исраильтяне единодушно решили сделать Давуда царём. <verse number="39" style="v"/>Они пробыли там у Давуда три дня, ели и пили, потому что их семьи снабдили их запасами. <verse number="40" style="v"/>А также их соседи, даже такие, как роды Иссахара, Завулона и Неффалима, приходили с ослами, верблюдами, мулами и волами, нагруженными едой. Еды – муки, инжира, изюма, вина, масла, мяса крупного и мелкого скота – было в изобилии, потому что в Исраиле царила радость.</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">Перенесение сундука соглашения</para>
+  <para style="r">(<ref loc="2SA 6:1-11">2 Цар. 6:1-11</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Давуд посоветовался со всеми своими полководцами, тысячниками и сотниками, <verse number="2" style="v"/>и сказал всему собранию исраильтян:</para>
+  <para style="p">– Если это угодно вам и если есть на то воля Вечного, нашего Бога, то давайте пошлём повсюду известить остальных наших братьев во всех землях Исраила, а ещё к священнослужителям и левитам в города с окрестными пастбищами, чтобы они отправились в путь и присоединились к нам. <verse number="3" style="v"/>Перенесём к себе сундук нашего Бога, ведь пока правил Шаул мы не пользовались им, чтобы узнавать волю Аллаха.</para>
+  <para style="p">
+    <verse number="4" style="v"/>И всё собрание решило сделать так, потому что это показалось правильным всему народу. <verse number="5" style="v"/>Тогда Давуд собрал всех исраильтян от реки Шихор в Египте на юге до Лево-Хамата<note caller="+" style="f"><char style="fr" closed="false">13:5 </char><char style="ft" closed="false">Или: «до перевала в Хамат».</char></note> на севере, чтобы перенести сундук Аллаха из Кириат-Иеарима. <verse number="6" style="v"/>Давуд со всеми исраильтянами отправился в Баалу Иудейскую (то есть в Кириат-Иеарим), чтобы перенести оттуда сундук Аллаха, на котором наречено имя Вечного, восседающего на херувимах<note caller="+" style="f"><char style="fr" closed="false">13:6 </char><char style="fk" closed="false">Херувим </char><char style="ft" closed="false">– один из высших ангельских чинов. См. также пояснительный словарь.</char></note>.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Они вывезли сундук Аллаха из дома Авинадава на новой повозке, которую вели Узза и Ахио. <verse number="8" style="v"/>Давуд и все исраильтяне изо всех сил веселились перед Аллахом, пели песни и играли на арфах, лирах, бубнах, тарелках и трубах. <verse number="9" style="v"/>Когда они дошли до гумна Нахона<note caller="+" style="f"><char style="fr" closed="false">13:9 </char><char style="ft" closed="false">Букв.: «Кидон»; во <char style="xt"><ref loc="2SA 6:6">2 Цар. 6:6</ref></char> он назван Нахоном.</char></note>, Узза протянул руку, чтобы поддержать сундук, потому что волы споткнулись. <verse number="10" style="v"/>И гнев Вечного воспылал против Уззы и поразил его, потому что тот протянул руку к сундуку, и Узза умер там же перед Аллахом.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Давуд опечалился из-за того, что гнев Вечного прорвался на Уззу, и до сегодняшнего дня то место называется Фарец-Узза (<char style="add">«прорыв на Уззу»</char>).</para>
+  <para style="p">
+    <verse number="12" style="v"/>В тот день Давуд устрашился Аллаха и сказал:</para>
+  <para style="p">– Как же я перенесу к себе сундук Аллаха?</para>
+  <para style="p">
+    <verse number="13" style="v"/>Он не повёз сундук к себе, в Город Давуда. Вместо этого он отвёз его в дом гатянина Овид-Эдома. <verse number="14" style="v"/>Сундук Аллаха оставался в доме Овид-Эдома три месяца, и Вечный благословил его домашних и всё его хозяйство.</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">Давуд в Иерусалиме</para>
+  <para style="r">(<ref loc="2SA 5:11-16">2 Цар. 5:11-16</ref>; <ref loc="1CH 3:5-8">1 Лет. 3:5-8</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Хирам, царь Тира, отправил к Давуду послов, каменщиков, плотников, а также кедровые брёвна, чтобы построить ему дворец. <verse number="2" style="v"/>И Давуд понял, что Вечный утвердил его царём над Исраилом и что высоко вознесено его царство ради Его народа Исраила.</para>
+  <para style="p">
+    <verse number="3" style="v"/>В Иерусалиме Давуд взял себе ещё жён и у него родились ещё сыновья и дочери. <verse number="4" style="v"/>Вот имена детей, которые родились у него в Иерусалиме:</para>
+  <para style="p">Шаммуа, Шовав, Нафан, Сулейман, <verse number="5" style="v"/>Ивхар, Элишуа, Элфелет, <verse number="6" style="v"/>Ногах, Нефег, Иафия, <verse number="7" style="v"/>Элишама, Элиада и Элифелет.</para>
+  <para style="s1">Поражения филистимлян</para>
+  <para style="r">(<ref loc="2SA 5:17-25">2 Цар. 5:17-25</ref>)</para>
+  <para style="p">
+    <verse number="8" style="v"/>Услышав о том, что Давуд помазан в цари над всем Исраилом, все филистимляне отправились искать его, но Давуд узнал об этом и выступил против них. <verse number="9" style="v"/>Филистимляне пришли и принялись разбойничать в долине Рефаим.</para>
+  <para style="p">
+    <verse number="10" style="v"/>И Давуд спросил Аллаха:</para>
+  <para style="p">– Идти ли мне на филистимлян? Отдашь ли Ты их мне?</para>
+  <para style="p">Вечный ответил ему:</para>
+  <para style="p">– Иди, Я отдам их в твои руки.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Давуд со своими воинами пошёл к Баал-Перациму и разбил их там. Он сказал:</para>
+  <para style="p">– Как вода прорывает запруду, так и Аллах разбил моих врагов моей рукой.</para>
+  <para style="p">(Поэтому то место и было названо Баал-Перацим (<char style="add">«господин прорыва»</char>).)</para>
+  <para style="p">
+    <verse number="12" style="v"/>Филистимляне бросили там своих богов, и по приказу Давуда их сожгли.</para>
+  <para style="p">
+    <verse number="13" style="v"/>И снова филистимляне принялись разбойничать в долине. <verse number="14" style="v"/>Давуд вновь спросил Аллаха, и Аллах ответил ему:</para>
+  <para style="p">– Не нападай на них отсюда, но обойди их и напади на них со стороны бальзамовых деревьев. <verse number="15" style="v"/>Как только ты услышишь в вершинах бальзамовых деревьев шум, как от шагов, тотчас же вступай в бой, потому что Аллах пошёл перед тобой, чтобы разбить войско филистимлян.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Давуд сделал так, как повелел ему Аллах, и исраильтяне разили филистимское войско всю дорогу от Гаваона до Гезера. <verse number="17" style="v"/>Слава Давуда прошла по всем странам, и Вечный навёл страх перед ним на все народы.</para>
+  <chapter number="15" style="c"/>
+  <para style="s1">Подготовка к возвращению сундука соглашения в Иерусалим</para>
+  <para style="p">
+    <verse number="1" style="v"/>Давуд, построив себе дома в Городе Давуда, приготовил место для сундука Аллаха и разбил для него шатёр. <verse number="2" style="v"/>Давуд сказал:</para>
+  <para style="p">– Никто, кроме левитов, не может носить сундук Аллаха, потому что Вечный избрал их носить сундук и служить Ему вовеки.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Давуд собрал весь Исраил в Иерусалиме, чтобы перенести сундук Вечного на место, которое он для него приготовил. <verse number="4" style="v"/>Он созвал потомков Харуна и левитов:</para>
+  <para style="li1">
+    <verse number="5" style="v"/>из потомков Каафа – вождя Уриила и 120 его сородичей;</para>
+  <para style="li1">
+    <verse number="6" style="v"/>из потомков Мерари – вождя Асаю и 220 его сородичей;</para>
+  <para style="li1">
+    <verse number="7" style="v"/>из потомков Гершона – вождя Иоиля и 130 его сородичей;</para>
+  <para style="li1">
+    <verse number="8" style="v"/>из потомков Элицафана – вождя Шемаю и 200 его сородичей;</para>
+  <para style="li1">
+    <verse number="9" style="v"/>из потомков Хеврона – вождя Элиила и 80 его сородичей;</para>
+  <para style="li1">
+    <verse number="10" style="v"/>из потомков Узиила – вождя Аминадава и 112 его сородичей.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Затем Давуд призвал священнослужителей Цадока и Авиатара и левитов Уриила, Асаю, Иоиля, Шемаю, Элиила и Аминадава <verse number="12" style="v"/>и сказал им:</para>
+  <para style="p">– Вы – главы левитских семейств. Вы и ваши собратья-левиты должны освятиться и перенести сундук Вечного, Бога Исраила, на место, которое я для него приготовил. <verse number="13" style="v"/>Ведь именно из-за того, что не вы, левиты, несли его в первый раз, Вечный, наш Бог, обрушил на нас Свой гнев: мы не спросили Его, как исполнить это по предписанному.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Священнослужители и левиты освятились, чтобы перенести сундук Вечного, Бога Исраила. <verse number="15" style="v"/>И левиты понесли сундук Аллаха на шестах, положив их себе на плечи, как повелел по слову Вечного Муса.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Давуд сказал старейшинам левитов назначить из их собратьев певцов, чтобы петь радостные песни под музыкальные инструменты – лиры, арфы и тарелки.</para>
+  <para style="p">
+    <verse number="17" style="v"/>И левиты избрали Емана, сына Иоиля, из его братьев – Асафа, сына Берехии, а из их братьев мераритов – Етана, сына Кушаи; <verse number="18" style="v"/>а также их братьев, следующих за ними по званию: Закарию, Иазиила, Шемирамота, Иехиила, Унни, Элиава, Бенаю, Маасею, Маттафию, Элифлеу, Микнею, Овид-Эдома и Иеила – привратников.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Музыканты Еман, Асаф и Етан должны были играть на бронзовых тарелках. <verse number="20" style="v"/>Закария, Азиил, Шемирамот, Иехиил, Унни, Элиав, Маасея и Беная должны были играть на лирах под аламот<note caller="+" style="f"><char style="fr" closed="false">15:20 </char><char style="fk" closed="false">Аламот </char><char style="ft" closed="false">– неизвестный музыкальный термин, обозначающий, вероятнее всего, определённый стиль или верхний звуковой регистр.</char></note>. <verse number="21" style="v"/>Маттафия, Элифлеу, Микнея, Овид-Эдом, Иеил и Азазия должны были играть на арфах, ведя свою партию под шеминит<note caller="+" style="f"><char style="fr" closed="false">15:21 </char><char style="fk" closed="false">Шеминит </char><char style="ft" closed="false">– неизвестный музыкальный термин, обозначающий, вероятнее всего, определённый стиль или нижний звуковой регистр.</char></note>. <verse number="22" style="v"/>Хенания, начальник левитов, должен был отвечать за пение, потому что он был в нём искусен.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Берехия и Элкана охраняли сундук. <verse number="24" style="v"/>Священнослужители Шевания, Иошафат, Нетанил, Амасай, Закария, Беная и Элиезер должны были трубить перед сундуком Аллаха в трубы. Овид-Эдом и Иехия тоже охраняли сундук.</para>
+  <para style="s1">Возвращение сундука соглашения в Иерусалим</para>
+  <para style="r">(<ref loc="2SA 6:12-19">2 Цар. 6:12-19</ref>)</para>
+  <para style="p">
+    <verse number="25" style="v"/>Давуд, старейшины Исраила и тысячники пошли, чтобы с радостью перенести сундук соглашения с Вечным из дома Овид-Эдома. <verse number="26" style="v"/>Так как Аллах помог левитам, которые несли сундук соглашения с Вечным, в жертву были принесены семь быков и семь баранов. <verse number="27" style="v"/>Давуд был одет в верхнюю одежду из лучшего льна, как и все левиты, которые несли сундук, как певцы и Хенания, начальник у певцов. Ещё на Давуде был льняной ефод<note caller="+" style="f"><char style="fr" closed="false">15:27 </char><char style="ft" closed="false">Простой льняной ефод (своего рода передник) был облачением всех священнослужителей, за исключением верховного священнослужителя, который носил ефод из дорогой материи (см. <char style="xt"><ref loc="EXO 28:6-30">Исх. 28:6-30</ref></char>).</char></note>. <verse number="28" style="v"/>Так весь Исраил перенёс сундук соглашения с Вечным с радостными криками под звуки рогов, труб и тарелок, под музыку лир и арф.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Когда сундук соглашения с Вечным вносили в Город Давуда, Михаль, дочь Шаула, смотрела из окна. Увидев царя Давуда, который прыгал и плясал, она уничижила его в своём сердце.</para>
+  <chapter number="16" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Сундук Аллаха принесли и поставили в шатре, который разбил для него Давуд, и принесли Аллаху жертвы всесожжения и жертвы примирения. <verse number="2" style="v"/>Закончив приносить жертвы всесожжения и жертвы примирения, Давуд благословил народ во имя Вечного. <verse number="3" style="v"/>Затем он раздал каждому исраильтянину – и мужчинам, и женщинам – по одной лепёшке, по куску жареного мяса<note caller="+" style="f"><char style="fr" closed="false">16:3 </char><char style="ft" closed="false">Или: «немного инжира».</char></note> и по связке изюма. <verse number="4" style="v"/>Он поставил некоторых из левитов служить перед сундуком Вечного, чтобы они взывали, благодарили и прославляли Вечного, Бога Исраила: <verse number="5" style="v"/>Асаф был руководителем, Закария – вторым после него, затем Иеил, Шемирамот, Иехиил, Маттафия, Элиав, Беная и Овид-Эдом с Иеилом. Они должны были играть на лирах и арфах, Асаф на тарелках, <verse number="6" style="v"/>а священнослужители Беная и Иахазиил постоянно трубить в трубы перед сундуком соглашения с Аллахом.</para>
+  <para style="s1">Хвалебная песнь Давуда</para>
+  <para style="r">(<ref loc="PSA 104:1-15">Заб. 104:1-15</ref>; <ref loc="PSA 95:1-13">95:1-13</ref>; <ref loc="PSA 105:1">105:1</ref>, <ref loc="PSA 105:47-48">47-48</ref>)</para>
+  <para style="p">
+    <verse number="7" style="v"/>В тот день Давуд впервые дал Асафу и его сородичам песню для прославления Вечного:</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Славьте Вечного, призывайте Его имя,</para>
+  <para style="q2">возвещайте народам о Его делах.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Воспойте Ему, пойте Ему хвалу,</para>
+  <para style="q2">рассказывайте о всех Его чудесах.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Хвалитесь Его святым именем,</para>
+  <para style="q2">пусть веселятся сердца ищущих Вечного.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Ищите Вечного и силу Его,</para>
+  <para style="q2">всегда ищите Его лица.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Помните чудеса, которые Он сотворил,</para>
+  <para style="q2">знамения Его и суды, что Он произнёс,</para>
+  <para style="q1">
+    <verse number="13" style="v"/>о потомки Исраила, раба Его,</para>
+  <para style="q2">о сыны Якуба, избранные Его!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>Он – Вечный, наш Бог,</para>
+  <para style="q2">суды Его по всей земле.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Вечно помните Его соглашение –</para>
+  <para style="q2">слово, данное Им для тысяч поколений, –</para>
+  <para style="q1">
+    <verse number="16" style="v"/>соглашение, заключённое с Ибрахимом,</para>
+  <para style="q2">и клятву, данную Исхаку.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Он поставил его Якубу законом,</para>
+  <para style="q2">Исраилу – вечным соглашением,</para>
+  <para style="q1">
+    <verse number="18" style="v"/>сказав: «Я отдам тебе Ханаанскую землю</para>
+  <para style="q2">в удел твоего наследия»<note caller="+" style="f"><char style="fr" closed="false">16:15-18 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="GEN 15:18-21">Нач. 15:18-21</ref>; <ref loc="GEN 26:3-4">26:3-4</ref>; <ref loc="GEN 28:13-14">28:13-14</ref></char>.</char></note>.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>Когда они были малочисленны и незначительны</para>
+  <para style="q2">и были чужеземцами на этой земле,</para>
+  <para style="q1">
+    <verse number="20" style="v"/>то скитались от народа к народу</para>
+  <para style="q2">и из царства в царство.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Он никому не давал их притеснять</para>
+  <para style="q2">и укорял за них даже царей,</para>
+  <para style="q1">
+    <verse number="22" style="v"/>говоря: «Не трогайте помазанников Моих,</para>
+  <para style="q2">и пророкам Моим не делайте зла»<note caller="+" style="f"><char style="fr" closed="false">16:19-22 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="GEN 12:10-20">Нач. 12:10-20</ref>; <ref loc="GEN 20">20</ref></char>.</char></note>.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="23" style="v"/>Пойте Вечному, все жители земли,</para>
+  <para style="q2">говорите о Его спасении каждый день.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Возвещайте славу Его среди народов,</para>
+  <para style="q2">чудеса Его – среди всех людей,</para>
+  <para style="q1">
+    <verse number="25" style="v"/>потому что велик Вечный и достоин всякой хвалы;</para>
+  <para style="q2">Он внушает трепет более всех богов.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Все боги народов – лишь идолы,</para>
+  <para style="q2">а Вечный небеса сотворил.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Слава и величие перед Ним,</para>
+  <para style="q2">сила и радость под кровом Его.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Воздайте Вечному, все народы,</para>
+  <para style="q2">воздайте Ему славу и силу,</para>
+  <para style="q2">
+    <verse number="29" style="v"/>воздайте славу имени Вечного.</para>
+  <para style="q1">Принесите дары и предстаньте пред Ним;</para>
+  <para style="q2">прославьте Вечного в великолепии Его святости<note caller="+" style="f"><char style="fr" closed="false">16:29 </char><char style="ft" closed="false">Или: «в святом облачении прославьте Вечного»; или: «прославьте Вечного в Его великолепном святилище».</char></note>.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Трепещи перед Ним, вся земля!</para>
+  <para style="q2">Прочно мир утверждён – не поколеблется.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>Да возвеселятся небеса и возликует земля,</para>
+  <para style="q2">и да скажут народам: «Вечный правит!»</para>
+  <para style="q1">
+    <verse number="32" style="v"/>Да восшумит море и всё, что в нём,</para>
+  <para style="q2">да возрадуется поле и всё, что на нём,</para>
+  <para style="q1">
+    <verse number="33" style="v"/>и да возликуют деревья лесные,</para>
+  <para style="q2">возликуют перед Вечным,</para>
+  <para style="q2">ведь Он идёт судить землю.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="34" style="v"/>Славьте Вечного, потому что Он благ</para>
+  <para style="q2">и милость Его – навеки!</para>
+  <para style="q1">
+    <verse number="35" style="v"/>Взывайте: «Спаси нас, Аллах, Спаситель наш,</para>
+  <para style="q2">собери нас, защити нас от народов,</para>
+  <para style="q1">чтобы славить нам Твоё святое имя</para>
+  <para style="q2">и Твоей славою хвалиться».</para>
+  <para style="q1">
+    <verse number="36" style="v"/>Хвала Вечному, Богу Исраила,</para>
+  <para style="q2">от века и до века!</para>
+  <para style="b"/>
+  <para style="m">И весь народ сказал: «Аминь!»<note caller="+" style="f"><char style="fr" closed="false">16:36 </char><char style="fk" closed="false">Аминь </char><char style="ft" closed="false">– еврейское слово, которое переводится как «да, верно, воистину так» или «да будет так».</char></note> и «Хвала Вечному!»</para>
+  <para style="s1">Служение Вечному в Иерусалиме и Гаваоне</para>
+  <para style="p">
+    <verse number="37" style="v"/>Давуд оставил Асафа и его сородичей перед сундуком соглашения с Вечным, чтобы они служили там постоянно, в соответствии с нуждами каждого дня. <verse number="38" style="v"/>Ещё он оставил Овид-Эдома и шестьдесят восемь его сородичей, чтобы они служили вместе с ними. Овид-Эдом, сын Иедутуна, и Хоса были привратниками.</para>
+  <para style="p">
+    <verse number="39" style="v"/>Давуд оставил священнослужителя Цадока и его собратьев-священнослужителей перед священным шатром Вечного в Гаваоне, <verse number="40" style="v"/>чтобы они постоянно приносили Вечному всесожжения на жертвеннике для всесожжений утром и вечером, так, как написано в Законе Вечного, который Он дал Исраилу<note caller="+" style="f"><char style="fr" closed="false">16:40 </char><char style="ft" closed="false">Хотя сундук соглашения находился в Иерусалиме, Исраил продолжал совершать жертвоприношения в шатре, который находился в Гиве, до построения храма Сулейманом. См. <char style="xt"><ref loc="1CH 1:13">1:13</ref></char> и <char style="xt"><ref loc="1CH 5:5">5:5</ref></char>.</char></note>. <verse number="41" style="v"/>С ними были Еман и Иедутун с прочими избранными, которые были назначены поимённо, чтобы славить Вечного, ведь «милость Его – навеки». <verse number="42" style="v"/>Еман и Иедутун отвечали за игру на трубах и тарелках, а также на прочих музыкальных инструментах, когда пелись песни Аллаху. Сыновья Иедутуна были поставлены у ворот.</para>
+  <para style="p">
+    <verse number="43" style="v"/>Когда весь народ разошёлся по домам, вернулся к себе и Давуд, чтобы благословить своих домашних.</para>
+  <chapter number="17" style="c"/>
+  <para style="s1">Обещание Аллаха Давуду</para>
+  <para style="r">(<ref loc="2SA 7:1-17">2 Цар. 7:1-17</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>После того как Давуд поселился в своём дворце, он сказал пророку Нафану:</para>
+  <para style="p">– Смотри, я живу во дворце из кедра, а сундук соглашения с Вечным стоит в шатре.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Нафан ответил Давуду:</para>
+  <para style="p">– Иди и делай то, что у тебя на сердце, потому что Аллах с тобой.</para>
+  <para style="p">
+    <verse number="3" style="v"/>В ту ночь к Нафану было слово Аллаха:</para>
+  <para style="p">
+    <verse number="4" style="v"/>– Пойди и скажи Моему рабу Давуду: Так говорит Вечный: «Не ты построишь Мне дом для обитания. <verse number="5" style="v"/>Я не жил в доме с того дня, как вывел Исраил из Египта, и до сегодняшнего дня, но обитал в шатре и переходил с места на место. <verse number="6" style="v"/>Где бы Я ни ходил со всеми исраильтянами, разве Я когда-либо говорил кому-нибудь из их судей<note caller="+" style="f"><char style="fr" closed="false">17:6 </char><char style="ft" closed="false">В период после завоевания Ханаана и до восшествия на престол царей Аллах ставил вождей, называемых судьями, которые защищали и управляли исраильским народом. Об этом можно прочитать в книге Судей.</char></note>, которым Я повелел пасти Мой народ: „Почему вы не построили Мне дом из кедра?“»</para>
+  <para style="p">
+    <verse number="7" style="v"/>Итак, скажи Моему рабу Давуду: Так говорит Вечный, Повелитель Сил: «Я взял тебя, когда ты смотрел и ухаживал на пастбище за овцами, чтобы ты стал правителем Моего народа Исраила. <verse number="8" style="v"/>Я был с тобой, куда бы ты ни ходил, и сокрушил перед тобой всех твоих врагов. Я сделаю твоё имя великим, подобным именам великих людей земли. <verse number="9" style="v"/>Я устрою место для Своего народа Исраила и укореню его, чтобы у него был свой дом и чтобы никто его больше не тревожил. Нечестивые люди не будут больше притеснять его, как прежде, <verse number="10" style="v"/>с того времени, как Я поставил судей над Своим народом Исраилом. Я смирю всех твоих врагов.</para>
+  <para style="p">Я объявляю тебе, что Сам устрою твой дом. <verse number="11" style="v"/>Когда твои дни завершатся, и ты отойдёшь к своим предкам, Я возведу на престол твоего потомка, одного из твоих сыновей, и упрочу его царство. <verse number="12" style="v"/>Он построит Мне дом, а Я упрочу его престол навеки. <verse number="13" style="v"/>Я буду назван его Отцом, а он Мне сыном наречётся. Я не отниму от него Своей любви, как отнял её от твоего предшественника. <verse number="14" style="v"/>Я поставлю его над Своим домом и Своим царством навечно, и его престол будет установлен навеки»<note caller="+" style="f"><char style="fr" closed="false">17:13-14 </char><char style="ft" closed="false">Эти слова также являются пророчеством об Исе аль-Масихе (см. <char style="xt"><ref loc="LUK 1:32">Лк. 1:32</ref>; <ref loc="ROM 1:3-4">Рим. 1:3-4</ref>; <ref loc="HEB 1:5">Евр. 1:5</ref></char>).</char></note>.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Нафан передал Давуду все слова этого откровения.</para>
+  <para style="s1">Молитва Давуда</para>
+  <para style="r">(<ref loc="2SA 7:18-29">2 Цар. 7:18-29</ref>)</para>
+  <para style="p">
+    <verse number="16" style="v"/>Тогда царь Давуд вошёл, сел перед Вечным и сказал:</para>
+  <para style="p">– Кто я, о Вечный Бог, и что такое моя семья, что Ты так возвеличил меня? <verse number="17" style="v"/>И словно этого не было достаточно в Твоих глазах, Аллах, Ты ещё рассказал о будущем дома Твоего раба. Ты открыл мне то, что человек желает знать, о Вечный Бог. <verse number="18" style="v"/>Что ещё может сказать Тебе Давуд за прославление Твоего раба? Ведь Ты знаешь Своего раба, <verse number="19" style="v"/>о Вечный! Ради Своего раба и по Своей воле Ты совершил это великое дело и дал все эти великие обещания.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Нет подобного Тебе, Вечный, и нет Бога, кроме Тебя, как слышали мы своими ушами. <verse number="21" style="v"/>И кто подобен Исраилу, единственному народу на земле, который Всевышний выкупил Себе, чтобы сделать Своим народом? Чтобы все узнали имя Твоё, Ты совершил великие и ужасные дела, выкупив Свой народ из Египта и изгнав перед ним другие народы. <verse number="22" style="v"/>Ты сделал Исраил Своим собственным народом навеки, и Ты, о Вечный, стал его Богом.</para>
+  <para style="p">
+    <verse number="23" style="v"/>И теперь, Вечный, пусть обещание, которое Ты дал о Своём рабе и его доме, утвердится навеки, и сделай, как Ты обещал. <verse number="24" style="v"/>Пусть пребудет и возвеличится Твоё имя вовеки, чтобы люди говорили: «Вечный, Повелитель Сил, Бог Исраила, есть Бог над Исраилом!» И дом Твоего раба Давуда утвердится перед Тобой.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Так как Ты, мой Бог, открыл Своему рабу, что устроишь его дом, то раб Твой нашёл в себе смелость молиться перед Тобой. <verse number="26" style="v"/>Вечный, Ты – Бог! Ты обещал Своему рабу это благо. <verse number="27" style="v"/>Пусть же станет Тебе угодно благословлять дом Твоего раба, чтобы он был перед Тобой вечно. Ведь Ты, Вечный, благословил его, и он будет благословен навеки!</para>
+  <chapter number="18" style="c"/>
+  <para style="s1">Победы Давуда</para>
+  <para style="r">(<ref loc="2SA 8:1-14">2 Цар. 8:1-14</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Некоторое время спустя Давуд разбил филистимлян, покорил их и захватил город Гат с окрестными поселениями из рук филистимлян.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Ещё Давуд разбил моавитян. Так моавитяне покорились Давуду и стали платить ему дань.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Ещё Давуд разбил Ададезера, царя Цовы, нанося ему поражение до самого Хамата, когда тот шёл утвердить свою власть у реки Евфрат. <verse number="4" style="v"/>Давуд захватил тысячу его колесниц, семь тысяч всадников и двадцать тысяч пеших воинов. Он подрезал сухожилия всем колесничным коням, оставив из них лишь сотню.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Когда на помощь Ададезеру, царю Цовы, пришли сирийцы Дамаска, Давуд поразил из них двадцать две тысячи человек. <verse number="6" style="v"/>Он разместил войска в сирийском царстве Дамаска, и сирийцы стали его рабами и платили ему дань. Вечный давал Давуду победу, куда бы тот ни ходил.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Давуд взял золотые щиты, которые принадлежали приближённым Ададезера, и принёс их в Иерусалим. <verse number="8" style="v"/>А из Теваха и Куна, городов, принадлежавших Ададезеру, Давуд взял очень много бронзы, из которой Сулейман сделал бронзовое «море»<note caller="+" style="f"><char style="fr" closed="false">18:8 </char><char style="fk" closed="false">Море </char><char style="ft" closed="false">– большой бронзовый бассейн, находившийся во дворе храма и предназначавшийся для ритуальных омываний священнослужителей (см. <char style="xt"><ref loc="1KI 7:23-26">3 Цар. 7:23-26</ref>; <ref loc="2CH 4:6">2 Лет. 4:6</ref></char>).</char></note>, столбы и разную бронзовую утварь для храма.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Когда Тоу, царь Хамата, услышал, что Давуд разбил всё войско Ададезера, царя Цовы, <verse number="10" style="v"/>он послал к царю Давуду своего сына Иорама, чтобы приветствовать его и поздравить с победой над Ададезером, с которым тот вёл войну. Иорам привёз разные изделия из золота, серебра и бронзы.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Царь Давуд посвятил и эти изделия Вечному вместе с серебром и золотом, которые он отнял у всех этих народов: у эдомитян, моавитян, аммонитян, филистимлян и амаликитян.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Авишай, сын Церуи, перебил восемнадцать тысяч эдомитян в Соляной долине. <verse number="13" style="v"/>Он разместил свои войска в Эдоме, и все эдомитяне стали его рабами. Вечный давал Давуду победу, куда бы тот ни ходил.</para>
+  <para style="s1">Приближённые Давуда</para>
+  <para style="r">(<ref loc="2SA 8:15-18">2 Цар. 8:15-18</ref>; <ref loc="2SA 20:23-26">20:23-26</ref>)</para>
+  <para style="p">
+    <verse number="14" style="v"/>Давуд правил всем Исраилом, верша суд и правду для всего своего народа. <verse number="15" style="v"/>Иоав, сын Церуи, был начальником войска; Иосафат, сын Ахилуда, был летописцем; <verse number="16" style="v"/>Цадок, сын Ахитува, и Ахи-Малик, сын Авиатара, были священнослужителями; Серая<note caller="+" style="f"><char style="fr" closed="false">18:16 </char><char style="ft" closed="false">Букв.: «Шавша»; во <char style="xt"><ref loc="2SA 8:17">2 Цар. 8:17</ref></char> он назван Сераей.</char></note> был писарем, <verse number="17" style="v"/>Беная, сын Иодая, командовал керетитами и пелетитами<note caller="+" style="f"><char style="fr" closed="false">18:17 </char><char style="fq" closed="false">Керетиты и пелетиты </char><char style="ft" closed="false">– чужеземные наёмники, которые, возможно, были царскими телохранителями.</char></note>, а сыновья Давуда были первыми приближёнными при царе.</para>
+  <chapter number="19" style="c"/>
+  <para style="s1">Победа над аммонитянами и сирийцами</para>
+  <para style="r">(<ref loc="2SA 10:1-19">2 Цар. 10:1-19</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Некоторое время спустя Нахаш, царь аммонитян, умер, и вместо него царём стал его сын. <verse number="2" style="v"/>Давуд подумал: «Я окажу Хануну, сыну Нахаша, милость, потому что его отец оказал милость мне». И Давуд отправил к Хануну послов, чтобы выразить соболезнования о его отце.</para>
+  <para style="p">Когда люди Давуда пришли к Хануну в землю аммонитян, чтобы сказать ему слова утешения, <verse number="3" style="v"/>аммонитские вожди сказали Хануну:</para>
+  <para style="p">– Неужели ты думаешь, что Давуд прислал к тебе этих людей с соболезнованиями из уважения к твоему отцу? Разве не затем они пришли к тебе, чтобы высмотреть, разведать и разрушить эту землю?</para>
+  <para style="p">
+    <verse number="4" style="v"/>И Ханун схватил людей Давуда, обрил их, обрезал их одежды наполовину, до ягодиц, и отослал их обратно. <verse number="5" style="v"/>Когда они ещё были в пути, об этих людях рассказали Давуду, и он послал им навстречу людей, потому что они были сильно опозорены.</para>
+  <para style="p">Царь сказал:</para>
+  <para style="p">– Оставайтесь в Иерихоне, пока не отрастут ваши бороды, а потом возвращайтесь.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Когда аммонитяне поняли, что сделались ненавистными Давуду, Ханун и аммонитяне послали тридцать шесть тонн<note caller="+" style="f"><char style="fr" closed="false">19:6 </char><char style="ft" closed="false">Букв.: «тысячу талантов».</char></note> серебра, чтобы нанять колесницы и колесничих в Месопотамии<note caller="+" style="f"><char style="fr" closed="false">19:6 </char><char style="ft" closed="false">Букв.: «Арам-Нахараим» – т. е. северо-западная Месопотамия.</char></note>, в Сирийском царстве Маахе и в Цове. <verse number="7" style="v"/>Они наняли тридцать две тысячи колесниц и колесничих, а также царя Маахи с его воинами, который пришёл, расположившись станом возле города Медевы. Аммонитяне собрались из своих городов и приготовились к сражению.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Услышав об этом, Давуд послал Иоава со всем войском сразиться с ними. <verse number="9" style="v"/>Аммонитяне вышли и расположились боевым порядком у входа в свой город, а пришедшие на помощь цари стояли отдельно в открытом поле.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Когда Иоав увидел, что сражаться придётся и впереди, и сзади, он выбрал некоторых из лучших воинов Исраила и выстроил их против сирийцев. <verse number="11" style="v"/>Остальных людей он отдал под начало своего брата Авишая, и они выстроились против аммонитян.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Иоав сказал:</para>
+  <para style="p">– Если сирийцы станут одолевать меня, то ты придёшь мне на помощь, а если аммонитяне станут одолевать тебя, то я приду к тебе на помощь. <verse number="13" style="v"/>Будь мужествен! Будем храбро сражаться за наш народ и города нашего Бога, и пусть Вечный сделает так, как Ему угодно!</para>
+  <para style="p">
+    <verse number="14" style="v"/>После этого Иоав со своими воинами вступил в сражение с сирийцами, и те побежали перед ним. <verse number="15" style="v"/>Когда аммонитяне увидели, что сирийцы бегут, они тоже побежали от Авишая, брата Иоава, и отступили в город. А Иоав вернулся в Иерусалим.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Увидев, что они разбиты исраильтянами, сирийцы послали гонцов за сирийцами, жившими за рекой Евфрат, во главе которых был Шовах, начальник войска Ададезера. <verse number="17" style="v"/>Когда об этом доложили Давуду, он собрал весь Исраил и переправился через Иордан. Он пришёл к сирийцам и выстроил против них своих воинов. Когда Давуд атаковал сирийцев, <verse number="18" style="v"/>те побежали перед Исраилом, и Давуд перебил из них семь тысяч колесничих и сорок тысяч пеших воинов. Он убил и начальника их войска Шоваха. <verse number="19" style="v"/>Увидев, что они разбиты Исраилом, подданные Ададезера заключили с Давудом мир и покорились ему.</para>
+  <para style="p">И сирийцы больше не хотели помогать аммонитянам.</para>
+  <chapter number="20" style="c"/>
+  <para style="s1">Взятие города Раббы Давудом</para>
+  <para style="r">(<ref loc="2SA 11:1">2 Цар. 11:1</ref>; <ref loc="2SA 12:26-31">12:26-31</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Весной, когда цари идут на войну, Иоав отправился с войском в страну аммонитян, разорил её, а затем подошёл к их главному городу Раббе и осадил его. Давуд же оставался в Иерусалиме. Иоав напал на Раббу и разрушил её. <verse number="2" style="v"/>Давуд снял золотую корону с головы их идола Молоха<note caller="+" style="f"><char style="fr" closed="false">20:2 </char><char style="ft" closed="false">Или: «царя». </char><char style="fk" closed="false">Молох </char><char style="ft" closed="false">– аммонитский бог, в жертву которому приносились дети (см. ст. 5). По Закону за поклонение Молоху исраильтянам грозила смертная казнь (см. <char style="xt"><ref loc="LEV 18:21">Лев. 18:21</ref>; <ref loc="LEV 20:2-5">20:2-5</ref></char>).</char></note> – корона весила тридцать шесть килограммов<note caller="+" style="f"><char style="fr" closed="false">20:2 </char><char style="ft" closed="false">Букв.: «один талант».</char></note> и была украшена драгоценным камнем – и возложил её на свою голову<note caller="+" style="f"><char style="fr" closed="false">20:2 </char><char style="ft" closed="false">Или: «Давуд взял камень с этой короны и поместил его на свою». Существует также мнение, что упомянутые 36 кг золота относились не к весу короны, а к её стоимости.</char></note>. Давуд взял в городе богатую добычу. <verse number="3" style="v"/>Он вывел жителей, которые были в нём, заставив их работать пилами, железными кирками и топорами. Давуд поступил так со всеми аммонитскими городами. После этого Давуд со всем своим войском вернулся в Иерусалим.</para>
+  <para style="s1">Войны с филистимлянами</para>
+  <para style="r">(<ref loc="2SA 21:18-22">2 Цар. 21:18-22</ref>)</para>
+  <para style="p">
+    <verse number="4" style="v"/>Некоторое время спустя в Гезере началась война с филистимлянами. Тогда хушатянин Сиббехай убил Сафа<note caller="+" style="f"><char style="fr" closed="false">20:4 </char><char style="ft" closed="false">Букв.: «Сипая»; во <char style="xt"><ref loc="2CH 21:18">2 Лет. 21:18</ref></char> он назван Сафом.</char></note>, одного из потомков рефаитов (<char style="add">народа гигантов</char>), и филистимляне были усмирены.</para>
+  <para style="p">
+    <verse number="5" style="v"/>В другом сражении с филистимлянами Элханан, сын Иаира, убил Лахми, брата Голиафа из Гата, у которого древко копья было большое, как ткацкий навой.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Позже произошло сражение в Гате, где был некий человек огромного роста, у которого было по шесть пальцев на каждой руке и на каждой ноге – всего двадцать четыре. Он также был потомком рефаитов. <verse number="7" style="v"/>Когда он насмехался над Исраилом, Ионафан, сын Шимеи, брата Давуда, убил его.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Эти люди были потомками рефаитов в Гате и пали от рук Давуда и его людей.</para>
+  <chapter number="21" style="c"/>
+  <para style="s1">Вечный наказывает Давуда за перепись</para>
+  <para style="r">(<ref loc="2SA 24:1-17">2 Цар. 24:1-17</ref>)</para>
+  <para style="p">
+    <verse number="1" style="v"/>Шайтан<note caller="+" style="f"><char style="fr" closed="false">21:1 </char><char style="fk" closed="false">Шайтан </char><char style="ft" closed="false">– это имя переводится как «противник», «обвинитель».</char></note> восстал на Исраил и побудил Давуда устроить перепись населения Исраила. <verse number="2" style="v"/>Давуд сказал Иоаву и начальникам войска:</para>
+  <para style="p">– Пойдите, произведите перепись исраильтян от Беэр-Шевы на юге до Дана на севере и доложите мне, чтобы я знал, сколько их.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Но Иоав ответил:</para>
+  <para style="p">– Пусть Вечный умножит количество Своего народа стократно. Разве не все они, господин мой царь, твои рабы? Зачем мой господин хочет это сделать? Зачем ему наводить грех на Исраил?</para>
+  <para style="p">
+    <verse number="4" style="v"/>Но царское слово оказалось сильнее слова Иоава, и Иоав ушёл, прошёл по всему Исраилу и вернулся в Иерусалим. <verse number="5" style="v"/>Иоав представил Давуду результаты переписи. Во всём Исраиле было один миллион сто тысяч мужчин, способных владеть мечом, включая четыреста семьдесят тысяч в Иудее. <verse number="6" style="v"/>Но Иоав не включил в общее число роды Леви и Вениамина, потому что приказ царя ему не понравился. <verse number="7" style="v"/>Этот приказ был неугоден и Аллаху, и Он наказал Исраил.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Тогда Давуд сказал Аллаху:</para>
+  <para style="p">– Сделав это, я совершил великий грех. Теперь я молю Тебя, сними вину с Твоего раба! Я поступил крайне безрассудно.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Вечный сказал Гаду, провидцу Давуда:</para>
+  <para style="p">
+    <verse number="10" style="v"/>– Иди и скажи Давуду: Так говорит Вечный: «Я предлагаю тебе три наказания. Выбери, каким из них Мне наказать тебя».</para>
+  <para style="p">
+    <verse number="11" style="v"/>Гад пришёл к Давуду и сказал ему:</para>
+  <para style="p">– Так говорит Вечный: «Выбирай: <verse number="12" style="v"/>или три года голода, или три месяца опустошения врагами, когда их меч будет неотступно преследовать тебя, или три дня меча Вечного – это дни мора в стране, когда Ангел Вечного<note caller="+" style="f"><char style="fr" closed="false">21:12 </char><char style="fk" closed="false">Ангел Вечного </char><char style="ft" closed="false">– этот особенный ангел отождествляется с Самим Вечным. Многие толкователи видят в Нём явления Исы аль-Масиха до Его воплощения.</char></note> станет губить людей по всей земле Исраила». Итак, обдумай это и реши, что мне ответить Пославшему меня.</para>
+  <para style="p">
+    <verse number="13" style="v"/>И Давуд сказал Гаду:</para>
+  <para style="p">– Мне очень тяжело. Пусть лучше я попаду в руки Вечного, ведь Его милость очень велика, но не дай мне попасть в человеческие руки!</para>
+  <para style="p">
+    <verse number="14" style="v"/>И Вечный послал на Исраил мор, и погибло семьдесят тысяч исраильтян. <verse number="15" style="v"/>И Аллах послал Ангела, чтобы Тот погубил Иерусалим. Но когда Ангел стал истреблять город, Вечный увидел это и пожалел о бедствии и сказал Ангелу-губителю:</para>
+  <para style="p">– Довольно! Опусти Свою руку!</para>
+  <para style="p">Ангел Вечного стоял тогда над гумном иевусея Арауны<note caller="+" style="f"><char style="fr" closed="false">21:15 </char><char style="ft" closed="false">Букв.: «Орнан»; во <char style="xt"><ref loc="2SA 24:16">2 Цар. 24:16</ref></char> он назван Арауной. Также в ст. 18-28.</char></note>. <verse number="16" style="v"/>Давуд поднял взгляд и увидел Ангела Вечного, Который стоял между землёй и небом с обнажённым мечом в руке, протянутым в сторону Иерусалима. И Давуд со старейшинами, одетые в знак раскаяния в рубище, пали лицом на землю. <verse number="17" style="v"/>Давуд сказал Аллаху:</para>
+  <para style="p">– Разве не я велел пересчитать народ? Я согрешил и сделал зло, а эти овцы – что они сделали? Вечный, мой Бог, пусть же Твоя рука обратится на меня и на мою семью, но не дай Твоему народу погибнуть от мора.</para>
+  <para style="s1">Давуд сооружает жертвенник</para>
+  <para style="r">(<ref loc="2SA 24:18-25">2 Цар. 24:18-25</ref>)</para>
+  <para style="p">
+    <verse number="18" style="v"/>Тогда Ангел Вечного повелел Гаду сказать Давуду, чтобы тот пошёл и построил жертвенник Вечному на гумне иевусея Арауны. <verse number="19" style="v"/>И Давуд пошёл, как повелел через Гада Вечный.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Когда Арауна молотил пшеницу, он обернулся и увидел Ангела. Четверо сыновей Арауна, которые были с ним, попрятались. <verse number="21" style="v"/>Давуд пришёл к Арауне, и когда Арауна посмотрел и увидел Давуда, он вышел из гумна и поклонился Давуду лицом до земли. <verse number="22" style="v"/>Давуд сказал ему:</para>
+  <para style="p">– Отдай мне своё гумно, я построю на его месте жертвенник Вечному, чтобы прекратился мор среди народа. Продай его мне за полную цену.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Арауна сказал Давуду:</para>
+  <para style="p">– Бери его! Пусть господин мой царь делает то, что ему угодно. Вот я отдаю волов для всесожжения, молотильную доску на дрова и пшеницу для хлебного приношения. Я отдаю всё это.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Но царь Давуд ответил Арауне:</para>
+  <para style="p">– Нет, я заплачу тебе полную цену. Я не возьму для Вечного того, что принадлежит тебе, и не стану приносить жертву, которая мне ничего не стоила.</para>
+  <para style="p">
+    <verse number="25" style="v"/>И Давуд заплатил Арауне более семи килограммов<note caller="+" style="f"><char style="fr" closed="false">21:25 </char><char style="ft" closed="false">Букв.: «шестьсот шекелей».</char></note> золота за это место. <verse number="26" style="v"/>Давуд построил там жертвенник Вечному и принёс всесожжения и жертвы примирения. Он призвал Вечного, и Вечный ответил ему, послав огонь с небес на жертвенник для всесожжений. <verse number="27" style="v"/>После этого Вечный сказал Ангелу, и тот вложил Свой меч в ножны.</para>
+  <para style="p">
+    <verse number="28" style="v"/>В то время Давуд, увидев, что Вечный ответил ему на гумне иевусея Арауны, стал приносить Ему там жертвы. <verse number="29" style="v"/>Священный шатёр Вечного, который сделал в пустыне Муса, и жертвенник для всесожжений находились в то время в Гаваоне. <verse number="30" style="v"/>Но Давуд не мог пойти туда, чтобы говорить с Вечным, потому что боялся меча Ангела Вечного.</para>
+  <chapter number="22" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>И Давуд сказал:</para>
+  <para style="p">– Здесь будет дом Вечного Бога и жертвенник для всесожжений Исраила.</para>
+  <para style="s1">Подготовка к строительству храма</para>
+  <para style="p">
+    <verse number="2" style="v"/>Давуд приказал собрать всех живущих в Исраиле чужеземцев и назначил из них каменотёсов, чтобы они тесали камень для строительства храма Аллаха. <verse number="3" style="v"/>Он заготовил много железа, чтобы делать гвозди для дверей в воротах и скобы, и бронзы больше, чем можно было взвесить. <verse number="4" style="v"/>Ещё он заготовил столько кедровых брёвен, что их невозможно было пересчитать, ведь сидоняне и тиряне поставили их Давуду в избытке. <verse number="5" style="v"/>Давуд сказал:</para>
+  <para style="p">– Мой сын Сулейман ещё молод и неопытен, а дом, который следует построить Вечному, должен быть великолепен, славен и знаменит во всех землях. Поэтому я приготовлю для него всё необходимое.</para>
+  <para style="p">И до своей смерти Давуд успел заготовить для храма много строительного материала. <verse number="6" style="v"/>Он призвал своего сына Сулеймана и повелел ему построить дом для Вечного, Бога Исраила. <verse number="7" style="v"/>Давуд сказал Сулейману:</para>
+  <para style="p">– Сын, я думал построить дом для поклонения Вечному, моему Богу, <verse number="8" style="v"/>но ко мне было слово Вечного: «Ты пролил много крови и вёл большие войны. Ты не построишь дом для поклонения Мне, потому что ты пролил предо Мной на землю много крови. <verse number="9" style="v"/>Но у тебя родится сын, который будет мирным человеком, и Я дам ему покой от всех окружающих его врагов. Поэтому его будут звать Сулейман (<char style="add">«мир»</char>), и в дни его царствования Я дам Исраилу мир и спокойствие. <verse number="10" style="v"/>Он и построит дом для поклонения Мне. Он будет Мне сыном, а Я буду ему Отцом. Я упрочу престол его царства над Исраилом навеки».</para>
+  <para style="p">
+    <verse number="11" style="v"/>Итак, сын, пусть Вечный будет с тобой, чтобы тебе сопутствовал успех и ты построил дом Вечному, твоему Богу, как Он и говорил о тебе. <verse number="12" style="v"/>Пусть Вечный даст тебе разум и понимание, когда Он поставит тебя властвовать над Исраилом, чтобы тебе соблюдать Закон Вечного, твоего Бога. <verse number="13" style="v"/>Тебе будет сопутствовать успех, если ты будешь внимателен к тому, чтобы исполнять установления и законы, которые Вечный дал Мусе для Исраила. Будь твёрд и мужествен. Не бойся, не падай духом.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Я приложил много труда, заготовив для дома Вечного три тысячи шестьсот тонн золота и тридцать шесть тысяч тонн<note caller="+" style="f"><char style="fr" closed="false">22:14 </char><char style="ft" closed="false">Букв.: «сто тысяч… миллион талантов».</char></note> серебра, а бронзы и железа больше, чем можно взвесить, а также дерево и камень. Ты же прибавь к этому ещё. <verse number="15" style="v"/>У тебя много мастеров: каменотёсов, каменщиков и плотников, а также людей, искусных в работе <verse number="16" style="v"/>с золотом и серебром, бронзой и железом, – ремесленников без счёта. Итак, начинай работу, и пусть Вечный будет с тобой.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Давуд велел всем старейшинам Исраила помогать его сыну Сулейману. <verse number="18" style="v"/>Он сказал им:</para>
+  <para style="p">– Разве Вечный, ваш Бог, не с вами? Разве Он не даровал вам покой со всех сторон? Ведь Он отдал мне обитателей этой земли, и земля подвластна Вечному и Его народу. <verse number="19" style="v"/>Посвятите же свой разум и сердце тому, чтобы искать Вечного, вашего Бога; начните строить святилище Вечному Богу, чтобы вы могли внести сундук соглашения с Вечным и все остальные священные предметы в храм, который будет выстроен для поклонения Вечному.</para>
+  <chapter number="23" style="c"/>
+  <para style="s1">Давуд распределяет левитов</para>
+  <para style="p">
+    <verse number="1" style="v"/>Когда Давуд состарился, он сделал своего сына Сулеймана царём Исраила. <verse number="2" style="v"/>Ещё он собрал всех вождей Исраила, а также священнослужителей и левитов. <verse number="3" style="v"/>Левиты в возрасте от тридцати лет и старше были пересчитаны. Их оказалось тридцать восемь тысяч человек. <verse number="4" style="v"/>Давуд сказал:</para>
+  <para style="p">– Пусть двадцать четыре тысячи из них следят за работой в доме Вечного, а шесть тысяч будут сановниками и судьями. <verse number="5" style="v"/>Четыре тысячи пусть будут привратниками и четыре тысячи пусть славят Вечного, играя на музыкальных инструментах, которые я для этого приготовил.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Давуд разделил левитов на три группы по сыновьям Леви – Гершону, Каафе и Мерари.</para>
+  <para style="s1">Гершониты</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Из гершонитов:</para>
+  <para style="li2">Ливни<note caller="+" style="f"><char style="fr" closed="false">23:7 </char><char style="ft" closed="false">Букв.: «Ладан» – другое имя Ливни (см. <char style="xt"><ref loc="1CH 6:17">6:17</ref></char>). Также в ст. 8 и 9.</char></note> и Шимей.</para>
+  <para style="li1">
+    <verse number="8" style="v"/>Сыновья Ливни:</para>
+  <para style="li2">Иехиил – первый, Зетам и Иоиль – всего трое.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Сыновья Шимея:</para>
+  <para style="li2">Шеломот, Хазиил и Аран – всего трое.</para>
+  <para style="li2">Они были главами семейств от Ливни.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Сыновья Шимея:</para>
+  <para style="li2">Иахат, Зиза, Иеуш и Брия – всего четверо.</para>
+  <para style="li2">
+    <verse number="11" style="v"/>Иахат был первым, а Зиза – вторым, но у Иеуша и Брии было мало сыновей, и они считались одним кланом.</para>
+  <para style="s1">Каафиты</para>
+  <para style="li1">
+    <verse number="12" style="v"/>Сыновья Каафа:</para>
+  <para style="li2">Амрам, Ицхар, Хеврон и Узиил – всего четверо.</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Сыновья Амрама:</para>
+  <para style="li2">Харун и Муса.</para>
+  <para style="li2">Харун и его сыновья были навсегда избраны, чтобы освящать самую святую утварь, приносить жертвы Вечному, совершать перед Ним служение и всегда благословлять Его именем. <verse number="14" style="v"/>Сыновья пророка Мусы причислялись к роду Леви.</para>
+  <para style="li1">
+    <verse number="15" style="v"/>Сыновья Мусы:</para>
+  <para style="li2">Гершом и Элиезер.</para>
+  <para style="li1">
+    <verse number="16" style="v"/>Сыновья Гершома:</para>
+  <para style="li2">Шевуил был первым из них.</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Сыновья Элиезера:</para>
+  <para style="li2">Рехавия был первым.</para>
+  <para style="li2">У Элиезера не было других сыновей, но у Рехавии было очень много сыновей.</para>
+  <para style="li1">
+    <verse number="18" style="v"/>Сыновья Ицхара:</para>
+  <para style="li2">Шеломит был первым из них.</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Сыновья Хеврона:</para>
+  <para style="li2">первый – Иерия, второй – Амария, третий – Иахазиил и четвёртый – Иекамеам.</para>
+  <para style="li1">
+    <verse number="20" style="v"/>Сыновья Узиила:</para>
+  <para style="li2">первый – Миха, а второй – Ишшия.</para>
+  <para style="s1">Мерариты</para>
+  <para style="li1">
+    <verse number="21" style="v"/>Сыновья Мерари:</para>
+  <para style="li2">Махли и Муши.</para>
+  <para style="li1">Сыновья Махли:</para>
+  <para style="li2">Элеазар и Киш.</para>
+  <para style="li2">
+    <verse number="22" style="v"/>Элеазар умер, не родив сыновей: у него были только дочери. Их двоюродные братья, сыновья Киша, взяли их себе в жёны.</para>
+  <para style="li1">
+    <verse number="23" style="v"/>Сыновья Муши:</para>
+  <para style="li2">Махли, Едер и Иеримот – всего трое.</para>
+  <para style="s1">Служение левитов при храме</para>
+  <para style="p">
+    <verse number="24" style="v"/>Это потомки Леви по их семействам, главы семейств, которые были внесены в родословия поимённо и перечислены по отдельности – мужчины от двадцати лет и старше, которые несли службу в храме Вечного. <verse number="25" style="v"/>Ведь Давуд сказал:</para>
+  <para style="p">– Так как Вечный, Бог Исраила, даровал Своему народу покой и поселился в Иерусалиме навеки, <verse number="26" style="v"/>левитам больше нет нужды носить ни священный шатёр, ни утварь, которой пользуются во время служения в нём.</para>
+  <para style="p">
+    <verse number="27" style="v"/>По последним указаниям Давуда перечислялись те из левитов, кому было от двадцати лет и выше.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Теперь левиты должны были помогать потомкам Харуна в службах храма Вечного: следить за дворами и комнатами, очищением всей священной утвари и исполнять другие обязанности при доме Аллаха. <verse number="29" style="v"/>Они заботились о священном хлебе, о лучшей муке для хлебных приношений, о пресных коржах, о выпечке для приношения, о приношении, которое смешивается с маслом, и обо всех мерах объёма и веса. <verse number="30" style="v"/>Они должны были каждое утро благодарить и славить Вечного, и делать то же самое вечером, <verse number="31" style="v"/>и всякий раз, когда в субботы, праздники Новолуния и в установленные праздники Вечному приносилась жертва всесожжения<note caller="+" style="f"><char style="fr" closed="false">23:31 </char><char style="ft" closed="false">См. таблицы: «Праздники в Исраиле» и «Жертвоприношения в Исраиле» на странице ##.</char></note>. Они должны были служить Вечному постоянно в надлежащем количестве и так, как для них предписано.</para>
+  <para style="p">
+    <verse number="32" style="v"/>Так они исполняли свои обязанности при шатре встречи и позже при храме Вечного, помогая своим собратьям, потомкам Харуна, в их служении.</para>
+  <chapter number="24" style="c"/>
+  <para style="s1">Распределение священнослужителей</para>
+  <para style="p">
+    <verse number="1" style="v"/>Вот группы потомков Харуна.</para>
+  <para style="p">Сыновьями Харуна были Надав, Авиуд, Элеазар и Итамар. <verse number="2" style="v"/>Но Надав и Авиуд умерли раньше отца<note caller="+" style="f"><char style="fr" closed="false">24:2 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="LEV 10:1-2">Лев. 10:1-2</ref></char>.</char></note>, а сыновей у них не было, поэтому священнослужителями были только Элеазар и Итамар. <verse number="3" style="v"/>С помощью Цадока, потомка Элеазара, и Ахи-Малика, потомка Итамара, Давуд разделил их на группы по установленным в служении обязанностям. <verse number="4" style="v"/>Среди потомков Элеазара оказалось больше глав семейств, чем среди потомков Итамара, и потому они были соответственно разделены: шестнадцать глав семейств из потомков Элеазара и восемь глав семейств из потомков Итамара. <verse number="5" style="v"/>Они были разделены беспристрастно, по жребию, потому что главными в святилище и главными перед Аллахом были потомки Элеазара и потомки Итамара.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Писарь Шемая, сын Нетанила, левит, записал их имена в присутствии царя, вождей народа, священнослужителя Цадока, Ахи-Малика, сына Авиатара, и глав священнослужительских и левитских семейств – одну семью брали из потомков Элеазара, а другую – из потомков Итамара.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="7" style="v"/>Первый жребий выпал Иехояриву,</para>
+  <para style="li1">второй – Иедаи,</para>
+  <para style="li1">
+    <verse number="8" style="v"/>третий – Хариму,</para>
+  <para style="li1">четвёртый – Сеориму,</para>
+  <para style="li1">
+    <verse number="9" style="v"/>пятый – Малхии,</para>
+  <para style="li1">шестой – Миямину,</para>
+  <para style="li1">
+    <verse number="10" style="v"/>седьмой – Аккоцу,</para>
+  <para style="li1">восьмой – Авии,</para>
+  <para style="li1">
+    <verse number="11" style="v"/>девятый – Иешуа,</para>
+  <para style="li1">десятый – Шехании,</para>
+  <para style="li1">
+    <verse number="12" style="v"/>одиннадцатый – Элиашиву,</para>
+  <para style="li1">двенадцатый – Иакиму,</para>
+  <para style="li1">
+    <verse number="13" style="v"/>тринадцатый – Хуппе,</para>
+  <para style="li1">четырнадцатый – Иешеваву,</para>
+  <para style="li1">
+    <verse number="14" style="v"/>пятнадцатый – Билге,</para>
+  <para style="li1">шестнадцатый – Иммеру,</para>
+  <para style="li1">
+    <verse number="15" style="v"/>семнадцатый – Хезиру,</para>
+  <para style="li1">восемнадцатый – Апицецу,</para>
+  <para style="li1">
+    <verse number="16" style="v"/>девятнадцатый – Петахии,</para>
+  <para style="li1">двадцатый – Иехезкилу,</para>
+  <para style="li1">
+    <verse number="17" style="v"/>двадцать первый – Иахину,</para>
+  <para style="li1">двадцать второй – Гамулу,</para>
+  <para style="li1">
+    <verse number="18" style="v"/>двадцать третий – Делаи</para>
+  <para style="li1">и двадцать четвёртый – Маазии.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="19" style="v"/>Таков был установленный порядок их служения, когда они входили в храм Вечного по установлениям, которые оставил им их праотец Харун, как повелел ему Вечный, Бог Исраила.</para>
+  <para style="s1">Распределение остальных левитов</para>
+  <para style="p">
+    <verse number="20" style="v"/>Вот имена остальных потомков Леви.</para>
+  <para style="li1">Из сыновей Амрама: Шевуил;</para>
+  <para style="li2">из сыновей Шевуила: Иехдия.</para>
+  <para style="li1">
+    <verse number="21" style="v"/>Из сыновей Рехавии: Ишшия был первым.</para>
+  <para style="li1">
+    <verse number="22" style="v"/>Из ицхаритов: Шеломит;</para>
+  <para style="li2">из сыновей Шеломита: Иахат.</para>
+  <para style="li1">
+    <verse number="23" style="v"/>Сыновья Хеврона: первый – Иерия, второй – Амария, третий – Иахазиил и четвёртый – Иекамеам.</para>
+  <para style="li1">
+    <verse number="24" style="v"/>Сын Узиила: Миха;</para>
+  <para style="li2">из сыновей Михи: Шамир.</para>
+  <para style="li2">
+    <verse number="25" style="v"/>Брат Михи: Ишшия;</para>
+  <para style="li2">из сыновей Ишшии: Закария.</para>
+  <para style="li1">
+    <verse number="26" style="v"/>Сыновья Мерари: Махли и Муши.</para>
+  <para style="li2">Сын Иаазии: Бено.</para>
+  <para style="li1">
+    <verse number="27" style="v"/>Из сыновей Мерари:</para>
+  <para style="li2">у Иаазии: Бено, Шохам, Заккур и Иври;</para>
+  <para style="li2">
+    <verse number="28" style="v"/>у Махли: Элеазар, у которого не было сыновей;</para>
+  <para style="li2">
+    <verse number="29" style="v"/>у Киша: Иерахмеил;</para>
+  <para style="li2">
+    <verse number="30" style="v"/>у Муши: Махли, Едер и Иеримот.</para>
+  <para style="p">Это левиты по их кланам. <verse number="31" style="v"/>Они тоже бросали жребий, как и их братья, потомки Харуна, в присутствии царя Давуда и Цадока, Ахи-Малика и глав священнослужительских и левитских семейств. И семьи старших братьев были уравнены в правах с семьями младших.</para>
+  <chapter number="25" style="c"/>
+  <para style="s1">Распределение певцов</para>
+  <para style="p">
+    <verse number="1" style="v"/>Давуд вместе с военачальниками отделил несколько человек из сыновей Асафа, Емана и Иедутуна для пророческого служения, чтобы они пророчествовали под звуки арф, лир и тарелок. Вот имена тех, кто нёс эту службу:</para>
+  <para style="li1">
+    <verse number="2" style="v"/>из сыновей Асафа:</para>
+  <para style="li2">Заккур, Юсуф, Нетания и Ашарела. Сыновья Асафа были под началом Асафа, который пророчествовал по повелениям царя.</para>
+  <para style="li1">
+    <verse number="3" style="v"/>Из сыновей Иедутуна:</para>
+  <para style="li2">Гедалия, Цери, Иешая, Шимей, Хашавия и Маттафия – всего шестеро. Ими руководил их отец Иедутун, который пророчествовал под звуки арфы, благодаря и славя Вечного.</para>
+  <para style="li1">
+    <verse number="4" style="v"/>Из сыновей Емана:</para>
+  <para style="li2">Буккия, Маттания, Узиил, Шуваил и Иеримот; Ханания, Ханани, Элиата, Гиддалти и Ромамти-Езер; Иошбекаша, Маллоти, Готир и Махазиот. <verse number="5" style="v"/>Все они были сыновья Емана, царского провидца. Они были дарованы ему по обещанию Аллаха возвеличить его. Аллах даровал Еману четырнадцать сыновей и трёх дочерей.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="6" style="v"/>Все они были под началом у своего отца, играя во время службы в храме Вечного на тарелках, лирах и арфах. Асаф, Иедутун и Еман были под началом у царя. <verse number="7" style="v"/>Все они вместе с их сородичами были обучены играть на музыкальных инструментах для Вечного, и были в этом искусны. Их было двести восемьдесят восемь человек. <verse number="8" style="v"/>И молодой бросал жребий о своих обязанностях наравне со старым, а учитель – с учеником.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="9" style="v"/>Первый жребий выпал Юсуфу из семьи Асафа, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">второй – Гедалии, ему, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="10" style="v"/>третий – Заккуру, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="11" style="v"/>четвёртый – Цери, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="12" style="v"/>пятый – Нетании, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="13" style="v"/>шестой – Буккии, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="14" style="v"/>седьмой – Ашареле, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="15" style="v"/>восьмой – Иешаи, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="16" style="v"/>девятый – Маттании, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="17" style="v"/>десятый – Шимею, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="18" style="v"/>одиннадцатый – Узиилу, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="19" style="v"/>двенадцатый – Хашавии, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="20" style="v"/>тринадцатый – Шуваилу, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="21" style="v"/>четырнадцатый – Маттафии, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="22" style="v"/>пятнадцатый – Иеримоту, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="23" style="v"/>шестнадцатый – Ханании, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="24" style="v"/>семнадцатый – Иошбекаше, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="25" style="v"/>восемнадцатый – Ханани, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="26" style="v"/>девятнадцатый – Маллоти, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="27" style="v"/>двадцатый – Элиате, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="28" style="v"/>двадцать первый – Готиру, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="29" style="v"/>двадцать второй – Гиддалти, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="30" style="v"/>двадцать третий – Махазиоту, его сыновьям и родственникам; их было двенадцать;</para>
+  <para style="li1">
+    <verse number="31" style="v"/>двадцать четвёртый – Ромамти-Езеру, его сыновьям и родственникам; их было двенадцать.</para>
+  <chapter number="26" style="c"/>
+  <para style="s1">Распределение привратников</para>
+  <para style="p">
+    <verse number="1" style="v"/>Вот распределение привратников:</para>
+  <para style="b"/>
+  <para style="li1">из корахитов: Мешелемия, сын Коре, один из сыновей Асафа.</para>
+  <para style="li1">
+    <verse number="2" style="v"/>У Мешелемии были сыновья:</para>
+  <para style="li2">первенец Закария,</para>
+  <para style="li2">второй сын – Иедиаил,</para>
+  <para style="li2">третий – Зевадия,</para>
+  <para style="li2">четвёртый – Иатниил,</para>
+  <para style="li2">
+    <verse number="3" style="v"/>пятый – Елам,</para>
+  <para style="li2">шестой – Иоханан</para>
+  <para style="li2">и седьмой – Элиегоенай.</para>
+  <para style="li1">
+    <verse number="4" style="v"/>У Овид-Эдома тоже были сыновья:</para>
+  <para style="li2">первенец Шемая,</para>
+  <para style="li2">второй сын – Иехозавад,</para>
+  <para style="li2">третий – Иоах,</para>
+  <para style="li2">четвёртый – Сахар,</para>
+  <para style="li2">пятый – Нетанил,</para>
+  <para style="li2">
+    <verse number="5" style="v"/>шестой – Аммиил,</para>
+  <para style="li2">седьмой – Иссахар</para>
+  <para style="li2">и восьмой – Пеуллетай.</para>
+  <para style="li2">(Так Аллах благословил Овид-Эдома.)</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="6" style="v"/>У Шемаи, сына Овид-Эдома, тоже родились сыновья, которые были вождями своего клана, потому что были очень способными людьми. <verse number="7" style="v"/>Сыновья Шемаи: Отни, Рефаил, Овид и Элзавад; его родственники Элиху и Семахия тоже были очень способными людьми. <verse number="8" style="v"/>Все они были потомками Овид-Эдома. Они сами, их сыновья и родственники были очень способными людьми, прилежными в работе. Всего их было у Овид-Эдома шестьдесят два человека.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>У Мешелемии было восемнадцать сыновей и родственников, которые также были способными людьми.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="10" style="v"/>У мераритянина Хосы были сыновья: первый Шимри (хотя он и не был первенцем, его отец сделал его главным), <verse number="11" style="v"/>второй – Хилкия, третий – Тевалия и четвёртый – Закария. Сыновей и родственников Хосы было тринадцать человек.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Эти привратники через своих начальников имели обязанности в служении в храме Вечного, как и их родственники. <verse number="13" style="v"/>Они бросали жребии по своим кланам на каждые ворота – молодой наравне со старым.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Восточные ворота выпали по жребию Мешелемии. Затем был брошен жребий для его сына Закарии, мудрого советчика, и ему выпали Северные ворота. <verse number="15" style="v"/>Южные ворота выпали по жребию Овид-Эдому, а кладовые – его сыновьям. <verse number="16" style="v"/>Западные ворота и ворота Шаллехет на верхней дороге выпали по жребию Шуппиму и Хосе. Одна стража стояла напротив другой: <verse number="17" style="v"/>шестеро левитов каждый день стояли на восточной стороне, четверо на северной, четверо на южной и по двое у кладовых. <verse number="18" style="v"/>Что же до западной колоннады, то четверо стояли там у дороги и двое – внутри самой колоннады.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Так были распределены привратники, потомки Кораха и Мерари.</para>
+  <para style="s1">Распределение хранителей сокровищницы</para>
+  <para style="p">
+    <verse number="20" style="v"/>Их собратьям-левитам<note caller="+" style="f"><char style="fr" closed="false">26:20 </char><char style="ft" closed="false">Или: «Что до левитов, Ахии были вверены…»</char></note> были вверены сокровищницы дома Аллаха и сокровищницы для посвящённых вещей.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Потомки Ливни<note caller="+" style="f"><char style="fr" closed="false">26:21 </char><char style="ft" closed="false">Букв.: «Ладан» – другое имя Ливни (см. <char style="xt"><ref loc="1CH 6:17">6:17</ref></char>).</char></note>, которые были гершонитами по линии Ливни и главами семейств, происходивших от гершонита Ливни: Иехиил. <verse number="22" style="v"/>Сыновья Иехиила: Зетам и его брат Иоиль. Им были вверены сокровищницы храма Вечного.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Из амрамитов, ицхаритов, хевронитов и узиилитов:</para>
+  <para style="p">
+    <verse number="24" style="v"/>Шевуил, потомок сына Мусы Гершома, был главным смотрителем за сокровищницами. <verse number="25" style="v"/>Его родственники через Элиезера: сын Элиезера Рехавия, отец Иешаи, отца Иорама, отца Зихри, отца Шеломота. <verse number="26" style="v"/>Шеломоту и его родственникам были вверены все сокровищницы для вещей, посвящённых Вечному царём Давудом, главами семейств, которые были тысячниками, сотниками и военачальниками. <verse number="27" style="v"/>Часть добычи, взятой в сражении, они посвящали на поддержание храма Вечного. <verse number="28" style="v"/>Всё, что было посвящено провидцем Шемуилом, царём Шаулом, сыном Киша, начальником войска Шаула Авнером, сыном Нера, и начальником войска Давуда Иоавом, сыном Церуи, и все прочие посвящённые вещи были доверены Шеломоту и его родственникам.</para>
+  <para style="s1">Прочие распределения</para>
+  <para style="p">
+    <verse number="29" style="v"/>Хенании из рода ицхаритов и его сыновьям были определены обязанности за пределами храма – они были сановниками и судьями над Исраилом.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Хашавия из рода хевронитов и его родственники – тысяча семьсот способных людей – отвечали в Исраиле, к западу от Иордана, за всю работу в служении Вечному и на царской службе. <verse number="31" style="v"/>Вождём у хевронитов был Иерия. (В сороковой год правления Давуда родословные записи хевронитян были исследованы и в Иазере Галаадском нашлись очень способные люди из хевронитян.) <verse number="32" style="v"/>У Иерии было две тысячи семьсот сородичей, очень способных людей, глав семейств, и царь Давуд поставил их над родами Рувима, Гада и половиной рода Манассы во всяком деле Аллаха и во всех делах царя.</para>
+  <chapter number="27" style="c"/>
+  <para style="s1">Войсковое деление</para>
+  <para style="p">
+    <verse number="1" style="v"/>Вот перечень исраильтян – глав семейств, тысячников, и сотников, и их чиновников, которые служили царю во всём, что относилось к войсковым отделениям, нёсшим службу по месяцу в течение года. В каждом отделении было 24 000 воинов.</para>
+  <para style="li1">
+    <verse number="2" style="v"/>Во главе первого отделения для первого месяца стоял Иашовеам, сын Завдиила. В его отделении было 24 000 воинов. <verse number="3" style="v"/>Он был потомком Фареца и главой всех военачальников в первый месяц.</para>
+  <para style="li1">
+    <verse number="4" style="v"/>Во главе отделения для второго месяца стоял ахохитянин Додай, чьим помощником был Миклот. В его отделении было 24 000 воинов.</para>
+  <para style="li1">
+    <verse number="5" style="v"/>Третьим военачальником для третьего месяца был Беная, сын священнослужителя Иодая. Он был вождём и в его отделении было 24 000 воинов. <verse number="6" style="v"/>Это тот Беная, который был могучим воином среди Тридцатки и начальником над ней<note caller="+" style="f"><char style="fr" closed="false">27:6 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="1CH 11:22-25">11:22-25</ref></char>.</char></note>. Его сын Аммизавад стоял над его отделением.</para>
+  <para style="li1">
+    <verse number="7" style="v"/>Четвёртым для четвёртого месяца был Асаил, брат Иоава; его сын Зевадия был его преемником. В его отделении было 24 000 воинов.</para>
+  <para style="li1">
+    <verse number="8" style="v"/>Пятым для пятого месяца был военачальник Шамма<note caller="+" style="f"><char style="fr" closed="false">27:8 </char><char style="ft" closed="false">Букв.: «Шамхут» – вариант имени Шамма (см. <char style="xt"><ref loc="1CH 11:27">11:27</ref></char> и <char style="xt"><ref loc="2SA 23:25">2 Цар. 23:25</ref></char>).</char></note>, потомок Израхии. В его отделении было 24 000 воинов.</para>
+  <para style="li1">
+    <verse number="9" style="v"/>Шестым для шестого месяца был Ира, сын Иккеша, из Текоа. В его отделении было 24 000 воинов.</para>
+  <para style="li1">
+    <verse number="10" style="v"/>Седьмым для седьмого месяца был ефраимит Хелец из Пелона. В его отделении было 24 000 воинов.</para>
+  <para style="li1">
+    <verse number="11" style="v"/>Восьмым для восьмого месяца был хушатянин Сиббехай, потомок Зераха. В его отделении было 24 000 воинов.</para>
+  <para style="li1">
+    <verse number="12" style="v"/>Девятым для девятого месяца был вениамитянин Авиезер из Анатота. В его отделении было 24 000 воинов.</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Десятым для десятого месяца был Махарай, потомок Зераха, из Нетофы. В его отделении было 24 000 воинов.</para>
+  <para style="li1">
+    <verse number="14" style="v"/>Одиннадцатым для одиннадцатого месяца был ефраимит Беная из Пирафона. В его отделении было 24 000 воинов.</para>
+  <para style="li1">
+    <verse number="15" style="v"/>Двенадцатым для двенадцатого месяца был Хелед, потомок Отниила, из Нетофы. В его отделении было 24 000 воинов.</para>
+  <para style="s1">Вожди исраильских родов</para>
+  <para style="p">
+    <verse number="16" style="v"/>Вождями родов Исраила были:</para>
+  <para style="li1">у Рувима – Элиезер, сын Зихри;</para>
+  <para style="li1">у Шимона – Шефатия, сын Маахи;</para>
+  <para style="li1">
+    <verse number="17" style="v"/>у Леви – Хашавия, сын Кемуила;</para>
+  <para style="li1">у Харуна – Цадок;</para>
+  <para style="li1">
+    <verse number="18" style="v"/>у Иуды – Элиху, брат Давуда;</para>
+  <para style="li1">у Иссахара – Омри, сын Микаила;</para>
+  <para style="li1">
+    <verse number="19" style="v"/>у Завулона – Ишмая, сын Авдия;</para>
+  <para style="li1">у Неффалима – Иеремот, сын Азриила;</para>
+  <para style="li1">
+    <verse number="20" style="v"/>у Ефраима – Осия, сын Азазии;</para>
+  <para style="li1">у половины рода Манассы – Иоиль, сын Педаи;</para>
+  <para style="li1">
+    <verse number="21" style="v"/>у половины рода Манассы в Галааде – Иддо, сын Закарии;</para>
+  <para style="li1">у Вениамина – Иасиил, сын Авнера;</para>
+  <para style="li1">
+    <verse number="22" style="v"/>у Дана – Азарил, сын Иерохама.</para>
+  <para style="p">Это вожди родов Исраила.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="23" style="v"/>Давуд не считал тех, кому было двадцать лет или меньше, потому что Вечный обещал сделать Исраил многочисленным, как звёзды на небе. <verse number="24" style="v"/>Иоав, сын Церуи, начал пересчитывать народ, но не закончил: гнев за эту перепись постиг Исраил, и её результат не был вписан в «Летопись царя Давуда».</para>
+  <para style="s1">Царские сановники</para>
+  <para style="p">
+    <verse number="25" style="v"/>Азмавету, сыну Адиила, было поручено смотреть за царскими кладовыми.</para>
+  <para style="p">Ионафану, сыну Уззии, – за кладовыми в провинции, в городах, поселениях и сторожевых башнях.</para>
+  <para style="p">
+    <verse number="26" style="v"/>Езри, сыну Хелува, – за работниками на поле, которые возделывали землю.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Раматитянину Шимею – за виноградниками.</para>
+  <para style="p">Шифмитянину Завди – за запасами вина в винных погребах.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Гедеритянину Баал-Ханану – за маслинами и тутовыми деревьями в западных предгорьях.</para>
+  <para style="p">Иоашу – за запасами оливкового масла.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Шаронитянину Шитраю – за крупным скотом, пасущимся в районе Шарон, а Шафату, сыну Адлая, – за крупным скотом в долинах.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Исмаильтянину Овилу – за верблюдами.</para>
+  <para style="p">Меронотянину Иехдии – за ослами.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Агритянину Иазизу – за мелким скотом.</para>
+  <para style="p">Это сановники, которым было поручено смотреть за добром царя Давуда.</para>
+  <para style="s1">Советники Давуда</para>
+  <para style="p">
+    <verse number="32" style="v"/>Ионафан, дядя Давуда, проницательный человек и писарь, был советником. Иехиил, сын Ахмони, воспитывал царских сыновей. <verse number="33" style="v"/>Ахитофел был царским советником. Аркитянин Хушай был другом царя. <verse number="34" style="v"/>Преемниками Ахитофела были Иодай, сын Бенаи, и Авиатар. Иоав стоял во главе царского войска.</para>
+  <chapter number="28" style="c"/>
+  <para style="s1">Замыслы Давуда о храме</para>
+  <para style="p">
+    <verse number="1" style="v"/>Давуд собрал в Иерусалиме всех сановников Исраила: вождей родов, начальников во главе воинских отделений, которые служили царю, тысячников и сотников, сановников, надзирающих за всем добром и скотом, принадлежащим царю и его сыновьям, и придворных вместе с могучими и доблестными воинами.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Царь Давуд встал и сказал:</para>
+  <para style="p">– Послушайте меня, мои братья и мой народ! Я хотел построить дом, чтобы там покоился сундук соглашения с Вечным – подножие для ног нашего Бога, и сделал приготовления к строительству. <verse number="3" style="v"/>Но Аллах сказал мне: «Ты не построишь дома для поклонения Мне, потому что ты воин и проливал кровь». <verse number="4" style="v"/>Но Вечный, Бог Исраила, избрал меня из всей моей семьи, чтобы мои потомки были царями Исраила навеки. Он избрал Иуду вождём<note caller="+" style="f"><char style="fr" closed="false">28:4 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="GEN 49:10">Нач. 49:10</ref></char>.</char></note>, из дома Иуды избрал мою семью, а из всех сыновей моего отца Ему было угодно сделать царём всего Исраила меня<note caller="+" style="f"><char style="fr" closed="false">28:4 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="1SA 16:1-3">1 Цар. 16:1-3</ref></char>.</char></note>. <verse number="5" style="v"/>Из всех моих сыновей – а Вечный дал мне их много – Он избрал моего сына Сулеймана, чтобы он сел на престоле царства Вечного над Исраилом<note caller="+" style="f"><char style="fr" closed="false">28:5 </char><char style="ft" closed="false">См. <char style="xt"><ref loc="1CH 22:9">22:9</ref></char>, а также <char style="xt"><ref loc="2SA 7:12">2 Цар. 7:12</ref>; <ref loc="2SA 12:24-25">12:24-25</ref></char>.</char></note>. <verse number="6" style="v"/>Он сказал мне: «Сулейман, твой сын, построит Мой дом и Мои дворы, потому что Я избрал его, чтобы он был Мне сыном, а Я буду ему Отцом. <verse number="7" style="v"/>Я утвержу его царство навеки, если он будет неуклонно исполнять Мои повеления и законы, как это делается сейчас».</para>
+  <para style="p">
+    <verse number="8" style="v"/>И теперь, перед глазами всего Исраила и собрания Вечного, вслух перед нашим Богом, я поручаю вам: тщательно исполняйте все повеления Вечного, вашего Бога, чтобы вам всегда владеть этой прекрасной землёй и передать её в вечное наследие вашим потомкам.</para>
+  <para style="p">
+    <verse number="9" style="v"/>И ты, Сулейман, сын мой, знай Бога твоего отца и служи Ему всем сердцем и всей душой, ведь Вечный испытывает всякое сердце и понимает всякий замысел и всякую мысль. Если ты будешь искать Его, то найдёшь Его, но если ты оставишь Его, Он отвергнет тебя навсегда. <verse number="10" style="v"/>Смотри же, ведь Вечный избрал тебя, чтобы ты построил дом для святилища. Будь твёрд и действуй!</para>
+  <para style="p">
+    <verse number="11" style="v"/>И Давуд отдал своему сыну Сулейману план притвора храма, его зданий, кладовых, верхних помещений, внутренних комнат и места для очищения грехов. <verse number="12" style="v"/>Он отдал ему чертежи всего, что у него было на душе<note caller="+" style="f"><char style="fr" closed="false">28:12 </char><char style="ft" closed="false">Или: «что было открыто ему Духом».</char></note> относительно двора вокруг дома Вечного, всех комнат вокруг него, сокровищниц дома Аллаха и сокровищниц для посвящённых вещей. <verse number="13" style="v"/>Он дал ему наставления о священнослужителях и левитах, о всём деле служения в храме Вечного и обо всех предметах, которыми пользуются при службе. <verse number="14" style="v"/>Он установил, сколько должны весить золотые предметы для различных служений и сколько – серебряные: <verse number="15" style="v"/>сколько золота и серебра должно пойти на каждый подсвечник и светильник, в зависимости от его назначения; <verse number="16" style="v"/>сколько золота должно пойти на столы для священного хлеба и сколько серебра – на столы серебряные; <verse number="17" style="v"/>сколько чистого золота нужно на вилки, кропильные чаши и кувшины; сколько золота и серебра на блюда <verse number="18" style="v"/>и сколько очищенного золота на жертвенник для возжигания благовоний. Ещё он отдал ему план для колесницы с херувимами из золота, которые простирали свои крылья над сундуком соглашения с Вечным, укрывая его.</para>
+  <para style="p">
+    <verse number="19" style="v"/>– Всё это, – сказал Давуд, – заключено в плане, написанном по указаниям, которые Вечный Сам дал мне.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Ещё Давуд сказал своему сыну Сулейману:</para>
+  <para style="p">– Будь твёрд и мужествен и действуй! Не бойся, не падай духом, потому что Вечный Бог, мой Бог, с тобой. Он не покинет и не оставит тебя, пока не будет завершена вся работа над храмом Вечного. <verse number="21" style="v"/>Священнослужители и левиты готовы к любой работе в храме Аллаха, и всякий доброволец, искусный в каком бы то ни было ремесле, будет помогать тебе в работе, а вельможи и весь народ будут слушаться всех твоих повелений.</para>
+  <chapter number="29" style="c"/>
+  <para style="s1">Пожертвования на строительство храма</para>
+  <para style="p">
+    <verse number="1" style="v"/>Царь Давуд сказал всему собранию:</para>
+  <para style="p">– Мой сын Сулейман, единственный, кого избрал Аллах, молод и неопытен. Работа велика, ведь это не дворец для человека, а храм для Вечного Бога. <verse number="2" style="v"/>Я всё приготовил для храма моего Бога, что только смог – золото, серебро, бронзу, железо и дерево, а кроме того, много оникса и камней в оправы, бирюзы, разноцветных камней, всех видов драгоценных камней и мрамора. <verse number="3" style="v"/>Кроме того, из любви к моему Богу я отдаю собственное золото и серебро на храм моего Бога сверх всего того, что я заготовил для этого святого храма. Я отдаю: <verse number="4" style="v"/>108 тонн золота из Офира и 252 тонны<note caller="+" style="f"><char style="fr" closed="false">29:4 </char><char style="ft" closed="false">Букв.: «3 000… 7 000 талантов».</char></note> очищенного серебра для покрытия стен зданий, <verse number="5" style="v"/>для всех золотых и серебряных вещей и для всякой работы ремесленников. Кто ещё готов сделать добровольные пожертвования, посвящая себя сегодня Вечному?</para>
+  <para style="p">
+    <verse number="6" style="v"/>Тогда главы семейств, вожди родов Исраила, тысячники, сотники и сановники, надзирающие за царским добром, стали делать добровольные пожертвования. <verse number="7" style="v"/>Они пожертвовали на работу по строительству храма Аллаха 180 тонн и 84 килограмма золота, 360 тонн серебра, 648 тонн бронзы и 3 600 тонн<note caller="+" style="f"><char style="fr" closed="false">29:7 </char><char style="ft" closed="false">Букв.: «5 000 талантов и 10 000 дариков… 10 000… 18 000… 100 000 талантов».</char></note> железа. <verse number="8" style="v"/>Всякий, у кого были драгоценные камни, отдавал их в сокровищницу храма Вечного в руки гершонита Иехиила. <verse number="9" style="v"/>Народ радовался добровольному участию своих вождей, потому что они жертвовали Вечному от всего сердца. Очень радовался и царь Давуд.</para>
+  <para style="s1">Молитва Давуда</para>
+  <para style="p">
+    <verse number="10" style="v"/>Давуд благословил Вечного перед всем собранием, говоря:</para>
+  <para style="b"/>
+  <para style="q1">– Хвала Вечному,</para>
+  <para style="q2">Богу нашего отца Исраила,</para>
+  <para style="q2">от века и до века!</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Твои, о Вечный, величие и мощь,</para>
+  <para style="q2">великолепие, победа и слава,</para>
+  <para style="q2">ведь в небесах и на земле – всё Твоё.</para>
+  <para style="q1">Твоё, о Вечный, царство,</para>
+  <para style="q2">Ты над всем вознесён как Глава.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>От Тебя богатство и честь,</para>
+  <para style="q2">Ты – властитель всего.</para>
+  <para style="q1">В руках Твоих сила и власть</para>
+  <para style="q2">вознести и укрепить любого.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>И сейчас, Бог наш, мы благодарим Тебя</para>
+  <para style="q2">и хвалим Твоё славное имя.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="14" style="v"/>– Но кто я и кто мой народ, чтобы нам делать это добровольное пожертвование? Всё происходит от Тебя, и мы даём Тебе лишь то, что получили из Твоей руки. <verse number="15" style="v"/>Мы странники и чужеземцы в Твоих глазах, какими были и наши предки. Наши дни на земле – как тень, и мы не можем избежать смерти<note caller="+" style="f"><char style="fr" closed="false">29:15 </char><char style="ft" closed="false">Букв.: «и нет надежды».</char></note>. <verse number="16" style="v"/>Вечный, наш Бог, всё это изобилие, что мы приготовили для строительства храма, где Ты будешь пребывать в Своей святости, мы получили из Твоей руки, оно целиком принадлежит Тебе. <verse number="17" style="v"/>Я знаю, мой Бог, что Ты испытываешь сердца и Тебе угодна искренность. Я от чистого сердца добровольно отдал всё это и теперь с радостью вижу, что и Твой народ, который находится здесь, добровольно жертвует Тебе. <verse number="18" style="v"/>Вечный, Бог наших предков – Ибрахима, Исхака и Якуба<note caller="+" style="f"><char style="fr" closed="false">29:18 </char><char style="ft" closed="false">Букв.: «Исраила». Аллах дал Якубу новое имя – Исраил (см. <char style="xt"><ref loc="GEN 32:27-28">Нач. 32:27-28</ref></char>).</char></note>, сохрани это желание в сердцах Твоего народа навсегда и сбереги их сердца верными Тебе. <verse number="19" style="v"/>Дай моему сыну Сулейману от всего сердца соблюдать Твои повеления, заповеди и установления и сделать всё, чтобы построить храм, для которого я всё это приготовил.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Затем Давуд сказал всему собранию:</para>
+  <para style="p">– Славьте Вечного, вашего Бога!</para>
+  <para style="p">И все они восхвалили Вечного, Бога их предков. Они склонились и поклонились Вечному и царю.</para>
+  <para style="s1">Признание Сулеймана царём</para>
+  <para style="p">
+    <verse number="21" style="v"/>На следующий день народ принёс жертвы Вечному и вознёс Ему всесожжения: тысячу быков, тысячу баранов и тысячу ягнят вместе с положенными жертвенными возлияниями и многими другими жертвами за весь Исраил. <verse number="22" style="v"/>Люди ели и пили в тот день перед Вечным с великой радостью.</para>
+  <para style="p">Затем они признали Сулеймана, сына Давуда, царём во второй раз, помазав его перед Вечным в правители, а Цадока – в священнослужители. <verse number="23" style="v"/>И Сулейман сел на престол Вечного как царь вместо своего отца Давуда. Он преуспевал, и весь Исраил повиновался ему. <verse number="24" style="v"/>Все вожди и могучие воины, а также все сыновья царя Давуда признали над собой власть царя Сулеймана.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Вечный высоко вознёс Сулеймана в глазах всего Исраила и даровал ему такое царское великолепие, какого не было прежде ни у кого из исраильских царей.</para>
+  <para style="s1">Смерть Давуда</para>
+  <para style="r">(<ref loc="1KI 2:10-12">3 Цар. 2:10-12</ref>)</para>
+  <para style="p">
+    <verse number="26" style="v"/>Давуд, сын Есея, был царём всего Исраила. <verse number="27" style="v"/>Он правил Исраилом сорок лет – семь лет в Хевроне и тридцать три года в Иерусалиме. <verse number="28" style="v"/>Он умер в глубокой старости, насытившись жизнью, богатством и славой. И царём вместо него стал его сын Сулейман.</para>
+  <para style="p">
+    <verse number="29" style="v"/>События царствования царя Давуда, от первых до последних, описаны в «Записях пророка Шемуила», в «Записях пророка Нафана» и в «Записях пророка Гада». <verse number="30" style="v"/>Эти записи повествуют о деяниях Давуда во время его царствования, о его власти и событиях, которые выпали на его долю, о том, что случилось с Исраилом и всеми царствами земли.</para>
+</usx>

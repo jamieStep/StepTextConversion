@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="SNG" style="id">- Shona Contemporary Bible (Bhaibheri Dzvene MuChiShona Chanhasi)</book>
+  <para style="rem">Copyright © 2005, 2018 by Biblica, Inc.®</para>
+  <para style="h">Rwiyo Rukuru rwaSoromoni</para>
+  <para style="toc1">Rwiyo Rukuru rwaSoromoni</para>
+  <para style="toc2">Rwiyo Rukuru rwaSoromoni</para>
+  <para style="toc3">Rwiyo</para>
+  <para style="mt1">RWIYO RUKURU RWASOROMONI</para>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Rwiyo Rukuru rwaSoromoni:</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Ngaanditsvode hake nokutsvoda kwomuromo wake.</para>
+  <para style="q2">Nokuti rudo rwako runofadza kupfuura waini.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Kunhuhwirira kwamafuta enyu kunofadza;</para>
+  <para style="q2">zita renyu rakafanana namafuta anonhuwirira adururwa.</para>
+  <para style="q2">Hazvishamisi kuti mhandara dzinokudai!</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Nditorei muende neni, ngatikurumidzei.</para>
+  <para style="q2">Mambo ngaandipinze mudzimba dzake dzomukati.</para>
+  <para style="sp">Shamwari</para>
+  <para style="q1">Tinokupembererai uye tinokufarirai;</para>
+  <para style="q2">ticharumbidza rudo rwenyu kupfuura waini.</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">Regai zvenyu mhandara dzikudei!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>Kusviba ndakasviba zvangu, asi ndakanaka hangu,</para>
+  <para style="q2">vanasikana veJerusarema,</para>
+  <para style="q2">ndakasviba samatende eKedhari,</para>
+  <para style="q2">sezvidzitiro zvetende raSoromoni.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Musanditarisisa nokuda kwoutema hwangu,</para>
+  <para style="q2">nokuti ndakasvibiswa nezuva.</para>
+  <para style="q1">Vanakomana vamai vangu vakanditsamwira</para>
+  <para style="q2">vakandiita kuti ndichengete minda yemizambiringa;</para>
+  <para style="q2">munda wangu chaiwo wemizambiringa ndakaushayira nguva.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Ndiudze, iwe mudiwa wangu, kwaunofudzira makwai ako</para>
+  <para style="q2">nokwaunozorodzera makwai ako masikati.</para>
+  <para style="q1">Ko, ndichaitirei somukadzi akafukidza chiso chake</para>
+  <para style="q2">pedyo namakwai eshamwari dzako?</para>
+  <para style="sp">Shamwari</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Kana usingazivi, iwe mukadzi akanaka kukunda vamwe,</para>
+  <para style="q2">chitevera makwara amakwai</para>
+  <para style="q1">ugondofudzira mbudzana dzako</para>
+  <para style="q2">pedyo namatende avafudzi.</para>
+  <para style="sp">Murume</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Ndinokufananidza, iwe mudiwa wangu, nebhiza rakasungwa</para>
+  <para style="q2">pane imwe yengoro dzaFaro.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Matama ako akashongedzwa zvakanaka nemhete,</para>
+  <para style="q2">mutsipa wako nezvuma zvamatombo anokosha.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Tichakugadzirira mhete</para>
+  <para style="q2">dzenzeve dzegoridhe nesirivha.</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Mambo paakanga agere patafura yake,</para>
+  <para style="q2">munhuwi wamafuta andainge ndazora wakapararira.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Mudiwa wangu, kwandiri akaita sakahomwe kemura</para>
+  <para style="q2">kanogara pakati pamazamu angu.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Mudiwa wangu, kwandiri akaita sesumbu ramaruva machena</para>
+  <para style="q2">anobva mubindu remizambiringa yeEni Gedhi.</para>
+  <para style="sp">Murume</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Kunaka here kwawakaita uku, mudiwa wangu!</para>
+  <para style="q2">A-a, wakazonaka!</para>
+  <para style="q2">Meso ako injiva chaidzo!</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Wakanaka sei, mudiwa wangu!</para>
+  <para style="q2">A-a, unofadza!</para>
+  <para style="q2">Uye mubhedha wedu wakasvibira.</para>
+  <para style="sp">Murume</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Nhungo dzeimba yedu ndedzomusidhari;</para>
+  <para style="q2">mbariro dzacho ndedzomupaini.</para>
+  <chapter number="2" style="c"/>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Ndiri ruva reSharoni,</para>
+  <para style="q2">ruva romumipata.</para>
+  <para style="sp">Murume</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Seruva riri pakati peminzwa,</para>
+  <para style="q2">ndizvo zvakaita mudiwa wangu pakati pemhandara.</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Somuti womuapuro pakati pemiti yesango,</para>
+  <para style="q2">ndizvo zvawakaita mudiwa wangu pakati pamajaya.</para>
+  <para style="q1">Ndinofarira kugara mumumvuri wake,</para>
+  <para style="q2">uye muchero wake unondinakira kuudya.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Akaenda neni kuimba yamabiko,</para>
+  <para style="q2">uye mureza wake pamusoro pangu ndirwo rudo.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Ndisimbise namazambiringa akaomeswa,</para>
+  <para style="q2">ndisimbise namaapuro;</para>
+  <para style="q2">nokuti ndoziya norudo.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Ruoko rwake rworuboshwe rwuri pasi pomusoro wangu,</para>
+  <para style="q2">uye ruoko rwake rworudyi rwakandimbundikira.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Imi vanasikana veJerusarema ndinokupikirai</para>
+  <para style="q2">nemhara uye nenondo dzesango:</para>
+  <para style="q1">Musazunguza kana kumutsa rudo</para>
+  <para style="q2">kusvikira irwo rwada rwoga.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Inzwai! Inzwi romudiwa wangu!</para>
+  <para style="q2">Tarirai! Hoyo</para>
+  <para style="q1">ouya achiuruka nomumakomo,</para>
+  <para style="q2">achikwakuka nomuzvikomo.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Mudiwa wangu akafanana nemhara</para>
+  <para style="q2">kana netsvana yenondo.</para>
+  <para style="q1">Tarirai! Hoyo amira seri kworusvingo rwedu,</para>
+  <para style="q2">akatarira napamawindo achidongorera napamaburi apamawindo.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Mudiwa wangu akataura kwandiri akati,</para>
+  <para style="q2">“Simuka, mudiwa wangu,</para>
+  <para style="q2">iwe munakunaku wangu, uya tiende tose.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Tarira! Nguva yechando yapera;</para>
+  <para style="q2">mvura yapera; uye haichanayi.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Maruva oonekwa panyika;</para>
+  <para style="q2">nguva yokuimba yasvika,</para>
+  <para style="q1">kurira kwenjiva</para>
+  <para style="q2">kwonzwikwa munyika yedu.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Muonde wobereka michero yawo yokutanga;</para>
+  <para style="q2">uye mizambiringa yotunga maruva ayo anonhuhwira kwazvo.</para>
+  <para style="q1">Simuka, uya, mudiwa wangu;</para>
+  <para style="q2">munakunaku wangu, uya tiende tose.”</para>
+  <para style="sp">Murume</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Njiva yangu iri mumikaha yedombo,</para>
+  <para style="q2">munzvimbo dzokuvanda mumativi egomo,</para>
+  <para style="q1">ndiratidze chiso chako,</para>
+  <para style="q2">ndinoda kunzwa inzwi rako;</para>
+  <para style="q1">nokuti inzwi rako rinotapira,</para>
+  <para style="q2">uye chiso chako chinoyevedza.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Tibatirei makava,</para>
+  <para style="q2">ivo vana vemakava</para>
+  <para style="q1">anoparadza minda yemizambiringa,</para>
+  <para style="q2">iyo mizambiringa yedu yotunga maruva.</para>
+  <para style="sp">Mudiwa</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Mudiwa wangu ndewangu uye ndiri wake;</para>
+  <para style="q2">anofamba-famba pakati pamaruva omubani.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Kusvikira zuva rabuda</para>
+  <para style="q2">uye mimvuri yatiza,</para>
+  <para style="q1">pinduka, mudiwa,</para>
+  <para style="q2">ubve waita semhara</para>
+  <para style="q1">kana tsvana</para>
+  <para style="q2">pamusoro pezvikomo.</para>
+  <chapter number="3" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Usiku hwose ndiri pamubhedha wangu</para>
+  <para style="q2">ndakatsvaka uyo anodiwa nomwoyo wangu;</para>
+  <para style="q2">ndakamutsvaka asi handina kumuwana.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Ndichasimuka zvino ndinofamba-famba muguta,</para>
+  <para style="q2">mumigwagwa yaro nomuzvivara zvaro;</para>
+  <para style="q1">ndichatsvaka iye anodiwa nomwoyo wangu.</para>
+  <para style="q2">Saka ndakamutsvaka asi handina kumuwana.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Varindi vakandiona</para>
+  <para style="q2">pavaiva pabasa ravo rokufamba-famba vachichengetedza guta.</para>
+  <para style="q2">“Ko, mamboona here iye anodiwa nomwoyo wangu?”</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Ndichingopfuudzana navo</para>
+  <para style="q2">ndakabva ndamuwana, iye anodiwa nomwoyo wangu.</para>
+  <para style="q1">Ndakamubata ndikasamuregedza</para>
+  <para style="q2">kusvikira ndaenda naye kumba kwamai vangu,</para>
+  <para style="q2">kuimba yaavo vakandibereka.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Vanasikana veJerusarema, ndinokurayirai</para>
+  <para style="q2">nemhara kana nenondo dzesango kuti:</para>
+  <para style="q1">Musazunguza kana kumutsa rudo</para>
+  <para style="q2">kusvikira irwo rwada rwoga.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Ndianiko uyo ari kuuya achibva nokurenje</para>
+  <para style="q2">seshongwe youtsi</para>
+  <para style="q1">ine munhuwi wemura, nezvimwe zvinonhuhwira</para>
+  <para style="q2">zvakagadzirwa nezvikuyiwa zvinonhuhwira zvavashambadzi?</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Tarirai! Ndiyo ngoro yaSoromoni,</para>
+  <para style="q2">yakachengetedzwa nemhare makumi matanhatu dzamachinda,</para>
+  <para style="q2">apamusoro-soro omuIsraeri.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Mumwe nomumwe wavo akabata munondo</para>
+  <para style="q2">vose vakarwa hondo,</para>
+  <para style="q1">mumwe nomumwe ane munondo parutivi rwake,</para>
+  <para style="q2">vakagadzirira kutarisana nezvinotyisa usiku.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Mambo Soromoni akazvigadzirira ngoro;</para>
+  <para style="q2">akaigadzira nemiti yokuRebhanoni.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Mbiru dzacho akadzigadzira nesirivha,</para>
+  <para style="q2">pokuzembera musana pakagadzirwa negoridhe.</para>
+  <para style="q1">Pokugara pakashongedzwa nejira repepuru,</para>
+  <para style="q2">mukati mayo makashongedzwa norudo</para>
+  <para style="q2">navanasikana veJerusarema.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Budai imi vanasikana veZioni,</para>
+  <para style="q2">muzoona Mambo Soromoni akapfeka korona,</para>
+  <para style="q2">korona yaakapfekedzwa namai vake</para>
+  <para style="q1">musi wesvitsa,</para>
+  <para style="q2">zuva iro mwoyo wake wakafara.</para>
+  <chapter number="4" style="c"/>
+  <para style="sp">Murume</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Wakanaka sei, mudiwa wangu!</para>
+  <para style="q2">A, wakazonaka!</para>
+  <para style="q2">Meso ako uri mumumbure injiva chaidzo.</para>
+  <para style="q1">Bvudzi rako rakaita sedanga rembudzi</para>
+  <para style="q2">riri kuburuka kubva muGomo reGireadhi.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Meno ako akafanana neboka ramakwai achangobva mukuveurwa,</para>
+  <para style="q2">ari kubva kundoshambidzwa.</para>
+  <para style="q1">Rimwe nerimwe riine rarakafanana naro,</para>
+  <para style="q2">pasina rimwe riri roga zvaro.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Miromo yako yakafanana nomucheka mutsvuku;</para>
+  <para style="q2">muromo wako wakaisvonaka.</para>
+  <para style="q1">Zvavovo zvako zviri mumumbure wako</para>
+  <para style="q2">zvakaita sezvikamu zviviri zvedamba.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Mutsipa wako wakafanana neshongwe yaDhavhidhi</para>
+  <para style="q2">yakavakwa zvinoyevedza.</para>
+  <para style="q1">Mairi makaturikwa nhoo dzine chiuru,</para>
+  <para style="q2">dzose dziri nhoo dzemhare.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Mazamu ako ari maviri akafanana netsvana mbiri dzemhara,</para>
+  <para style="q2">mapatya emhara</para>
+  <para style="q2">dzinofura pamwe chete pakati pemaruva.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Kusvikira zuva rabuda</para>
+  <para style="q2">uye mimvuri yotiza,</para>
+  <para style="q1">ndichaenda kugomo remura</para>
+  <para style="q2">nokuchikomo chezvinonhuhwira.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Wakaisvonaka iwe, mudiwa wangu;</para>
+  <para style="q2">mauri hamuna kana chinongo.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Ngatibvei tose kuRebhanoni, iwe mwenga wangu,</para>
+  <para style="q2">ngatibvei tose kuRebhanoni.</para>
+  <para style="q1">Buruka kubva pamusoro-soro peAmana,</para>
+  <para style="q2">kubva pamusoro peSeniri,</para>
+  <para style="q1">pamusoro-soro peHerimoni,</para>
+  <para style="q2">kubva kumapako eshumba nokumakomo anofamba-famba mbada.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Watora mwoyo wangu hanzvadzi yangu, mwenga wangu;</para>
+  <para style="q2">wanditora mwoyo</para>
+  <para style="q1">nokungondiringa kwawaita kamwe chete,</para>
+  <para style="q2">uye nedombo rimwe rinokosha rechishongo chomutsipa wako.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Rudo rwako kwandiri runondifadza sei, hanzvadzi yangu, mwenga wangu!</para>
+  <para style="q2">Rudo rwako runofadza sei kukunda waini,</para>
+  <para style="q2">uye kunhuhwira kwamafuta ako okuzora</para>
+  <para style="q2">kunokunda zvose zvinonhuhwira.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Miromo yako inodonhesa zvinotapira sezinga rouchi, mwenga wangu;</para>
+  <para style="q2">uchi nomukaka zviri pasi porurimi rwako.</para>
+  <para style="q2">Kunhuhwira kwenguo dzako kwakafanana nokweRebhanoni.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Uri bindu rakapfigwa, hanzvadzi yangu, mwenga wangu.</para>
+  <para style="q2">Uri tsime rakakomberedzwa, nechitubu chakavakirirwa.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Miti yako ibindu ramatamba</para>
+  <para style="q2">nemimwe michero yakaisvonaka,</para>
+  <para style="q2">hena nenaridhi,</para>
+  <para style="q2">
+    <verse number="14" style="v"/>naridhi nesafuroni,</para>
+  <para style="q2">karamusi, nesinamoni,</para>
+  <para style="q2">nemiti yose inogadziriswa zvinonhuhwira</para>
+  <para style="q2">nemura negavakava,</para>
+  <para style="q2">uye nezvose zvinonhuhwira zvakanakisisa.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Uri chitubu chomubindu,</para>
+  <para style="q2">tsime remvura inoerera,</para>
+  <para style="q2">inoerera ichibva kuRebhanoni.</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Muka, iwe mhepo yokumusoro,</para>
+  <para style="q2">uye uya iwe mhepo yezasi!</para>
+  <para style="q1">Vhuvhuta napabindu rangu</para>
+  <para style="q2">kuti kunhuhwirira kwezvirimo kuparadzirwe kwose kwose.</para>
+  <para style="q1">Rega mudiwa wangu apinde mubindu rake,</para>
+  <para style="q2">agoravira michero yaro yakaisvonaka, sepaanodira.</para>
+  <chapter number="5" style="c"/>
+  <para style="sp">Murume</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Ndauya zvangu mubindu rangu, hanzvadzi yangu, iwe mwenga wangu;</para>
+  <para style="q2">ndaunganidza mura yangu pamwe chete nezvinonhuhwira zvangu.</para>
+  <para style="q1">Ndadya zinga rangu rouchi nouchi hwangu;</para>
+  <para style="q2">ndanwa waini yangu nomukaka wangu.</para>
+  <para style="sp">Shamwari</para>
+  <para style="q1">Idyai, imi shamwari, uye munwe;</para>
+  <para style="q2">inwai mugute, imi vanodanana.</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Ndakavata asi mwoyo wangu wakanga wakasvinura.</para>
+  <para style="q2">Inzwai! Mudiwa wangu ari kugogodza, achiti,</para>
+  <para style="q1">“Ndizarurire, hanzvadzi yangu, mudiwa wangu,</para>
+  <para style="q2">njiva yangu, wangu asina chinongo.</para>
+  <para style="q1">Musoro wangu wanyorova nedova,</para>
+  <para style="q2">bvudzi rangu ranyoroveswa nounyoro hweusiku.”</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Ndabvisa nguo yangu,</para>
+  <para style="q2">ndoipfekazve here?</para>
+  <para style="q1">Ndashambidza tsoka dzangu,</para>
+  <para style="q2">ndodzisvibisazve here?</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Mudiwa wangu akapinza ruoko rwake nepahwangwadza yomukova;</para>
+  <para style="q2">mwoyo wangu wakatanga kumudokwairira.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Ndakasimuka kuti ndizarurire mudiwa wangu,</para>
+  <para style="q2">maoko angu akadonha mura,</para>
+  <para style="q1">mimwe yangu ichiyerera mura,</para>
+  <para style="q2">pazvibato zvechizarira.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Ndakazarurira mudiwa wangu,</para>
+  <para style="q2">asi mudiwa wangu akanga abva; akanga atoenda.</para>
+  <para style="q1">Mwoyo wangu wakarwadziwa nokuenda kwake.</para>
+  <para style="q2">Ndakamutsvaka asi handina kumuwana.</para>
+  <para style="q2">Ndakamudana asi haana kupindura.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Varindi vakandiona</para>
+  <para style="q2">pavaiva pabasa ravo rokufamba-famba vachichengetedza guta.</para>
+  <para style="q1">Vakandirova, vakandikuvadza;</para>
+  <para style="q2">vakanditorera jasi rangu,</para>
+  <para style="q2">ivavo varindi vamasvingo!</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Imi vanasikana veJerusarema, ndinokurayirai,</para>
+  <para style="q2">kana mukaona mudiwa wangu,</para>
+  <para style="q1">muchamuudzeiko?</para>
+  <para style="q2">Mumuudze kuti ndinorwara nerudo.</para>
+  <para style="sp">Shamwari</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Mudiwa wako akanaka kukunda vamwe pakudii,</para>
+  <para style="q2">iwe zvako wakanaka kukunda vamwe vakadzi?</para>
+  <para style="q1">Mudiwa wako akanaka kukunda vamwe pakudii,</para>
+  <para style="q2">zvaunotirayira kudaro?</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Mudiwa wangu akanaka uye mutsvuku,</para>
+  <para style="q2">anokunda vanokwana zviuru gumi.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Musoro wake igoridhe chairo;</para>
+  <para style="q2">bvudzi rake rinoyevedza</para>
+  <para style="q2">uye rakasviba segunguo.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Meso ake akafanana nenjiva</para>
+  <para style="q2">dziri pahova dzemvura,</para>
+  <para style="q1">dzakashambidzwa mumukaka,</para>
+  <para style="q2">akarongwa sezvishongo.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Matama ake akaita semihomba yezvinonhuhwira</para>
+  <para style="q2">inobereka zvinonhuhwira.</para>
+  <para style="q1">Miromo yake yakaita samaruva amahapa</para>
+  <para style="q2">anodonha mura.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Maoko ake itsvimbo dzegoridhe</para>
+  <para style="q2">dzakaiswa mabwe anokosha ekrisorite.</para>
+  <para style="q1">Muviri wake wakaita senyanga dzenzou dzinobwinya</para>
+  <para style="q2">dzakashongedzwa nesafire.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Makumbo ake imbiru dzamabwe machena</para>
+  <para style="q2">akamiswa pazvigadziko zvegoridhe rakanatswa.</para>
+  <para style="q1">Chimiro chake chakaita seRebhanoni,</para>
+  <para style="q2">chakanakisisa semisidhari yayo.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Muromo wake inhapitapi pachayo;</para>
+  <para style="q2">zvirokwazvo akaisvonaka.</para>
+  <para style="q1">Uyu ndiye mudiwa wangu, ndiye shamwari yangu,</para>
+  <para style="q2">imi vanasikana veJerusarema.</para>
+  <chapter number="6" style="c"/>
+  <para style="sp">Shamwari</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Ko, mudiwa wako aendepiko,</para>
+  <para style="q2">iwe zvako wakanaka kukunda vamwe vakadzi?</para>
+  <para style="q1">Mudiwa wako aenda nokupiko,</para>
+  <para style="q2">kuti tigomutsvaka pamwe chete newe?</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Mudiwa wangu adzika kubindu rake,</para>
+  <para style="q2">kumihomba yezvinonhuwirira,</para>
+  <para style="q1">kuti andomema mumapindu</para>
+  <para style="q2">uye agotanha maruva.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Ini ndiri womudiwa wangu uye mudiwa wangu ndowangu;</para>
+  <para style="q2">anomema pakati pamaruva.</para>
+  <para style="sp">Murume</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Wakanaka iwe mudiwa wangu, seTiriza,</para>
+  <para style="q2">unoyevedza seJerusarema,</para>
+  <para style="q2">unoremekedzeka samauto ane mireza.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Bvisa meso ako pandiri;</para>
+  <para style="q2">anondikunda.</para>
+  <para style="q1">Bvudzi rako rakaita sedanga rembudzi</para>
+  <para style="q2">riri kuburuka muGireadhi.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Meno ako akafanana neboka ramakwai</para>
+  <para style="q2">achangobva mukushambidzwa.</para>
+  <para style="q1">Rimwe nerimwe rine rarakafanana naro,</para>
+  <para style="q2">pasina riri roga zvaro.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Zvavovo zvako zviri mumumbure wako</para>
+  <para style="q2">zvakaita sezvikamu zviviri zvedamba.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Kungava navanamambokadzi makumi matanhatu,</para>
+  <para style="q2">navarongo makumi masere</para>
+  <para style="q2">nemhandara dzisingaverengeki;</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Asi njiva yangu, iye akakwana wangu,</para>
+  <para style="q2">ndiwe mumwe oga, mwanasikana mumwe oga wamai vake,</para>
+  <para style="q2">iye woga anodikanwa naiye akamubereka.</para>
+  <para style="q1">Mhandara dzakamuona dzikamuti akaropafadzwa.</para>
+  <para style="q2">Vanamambokadzi navarongo vakamurumbidza.</para>
+  <para style="sp">Shamwari</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Ko, ndiani uyo anoratidzika samambakwedza,</para>
+  <para style="q2">akanaka somwedzi, anopenya sezuva,</para>
+  <para style="q2">akanaka senyeredzi dziri mumudungwe?</para>
+  <para style="sp">Murume</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Ndakadzika kusango remiti yemipfura</para>
+  <para style="q2">kundoona zvitsva zvakamera mumupata,</para>
+  <para style="q1">kundoona kana mizambiringa yainge yabukira,</para>
+  <para style="q2">kana kuti mitamba yainge yava namaruva.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Ndisati ndambodii,</para>
+  <para style="q2">mwoyo wangu wakandiisa pakati pengoro dzoumambo dzavanhu vangu.</para>
+  <para style="sp">Shamwari</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Dzoka, dzoka iwe muShurami;</para>
+  <para style="q2">dzoka, dzoka kuti timbokuona!</para>
+  <para style="sp">Mudiwa</para>
+  <para style="q1">Ko, munodirei kuona muShurami</para>
+  <para style="q2">sezvamunoita mutambo weMahanaimi?</para>
+  <chapter number="7" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Dzakanaka sei tsoka dzako dzakapfekedzwa shangu,</para>
+  <para style="q2">iwe mwanasikana womuchinda!</para>
+  <para style="q1">Makumbo ako akanakisisa akaita sezvishongo,</para>
+  <para style="q2">basa ramaoko emhizha.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Guvhu rako rakatenderera somukombe</para>
+  <para style="q2">unogara uine waini yakasanganiswa zvakanaka.</para>
+  <para style="q1">Chiuno chako murwi wegorosi</para>
+  <para style="q2">wakakomberedzwa namaruva.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Mazamu ako akaita setsvana mbiri,</para>
+  <para style="q2">mapatya emhara.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Mutsipa wakaita seshongwe yakagadzirwa nenyanga dzenzou.</para>
+  <para style="q1">Meso ako ndiwo madziva eHeshibhoni</para>
+  <para style="q2">pasuo reBhati Rabhimi.</para>
+  <para style="q1">Mhuno yako yakaita seshongwe yeRebhanoni</para>
+  <para style="q2">yakatarisa kudivi reDhamasiko.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Musoro wako unokushongedza nekorona seGomo reKarimeri.</para>
+  <para style="q2">Bvudzi rako rakaita sezvirukwa zvomumba mamambo;</para>
+  <para style="q2">mwoyo wamambo wakabatwa nokugadzirwa kwebvudzi rako.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Wakanaka uye unofadza sei,</para>
+  <para style="q2">iwe mudiwa nezvinofadza zvako!</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Chimiro chako chakaita somuti womuchindwe;</para>
+  <para style="q2">uye mazamu ako samasumbu omuchero.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Ndakati, “Ndichakwira muchindwi uyu,</para>
+  <para style="q2">ndigobata muchero wawo.”</para>
+  <para style="q1">Mazamu ako ngaaite samasumbu omuzambiringa,</para>
+  <para style="q2">munhuwi wokufema kwako uite samaapuro,</para>
+  <para style="q2">
+    <verse number="9" style="v"/>muromo wako ugoita sewaini yakanakisisa.</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">Waini ngaiendeswe kumudiwa wangu chaiko,</para>
+  <para style="q2">igoyerera zvinyoronyoro, napamiromo yake nameno ake.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Ini ndiri womudiwa wangu,</para>
+  <para style="q2">uye iye anondishuva.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Uya, mudiwa wangu, ngatiendei kumunda,</para>
+  <para style="q2">tigozopedza usiku hwose kumaruwa.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Ngatimukirei kuminda yemizambiringa</para>
+  <para style="q2">tindoona kana mizambiringa yakabukira,</para>
+  <para style="q1">uye kana maruva awo azaruka,</para>
+  <para style="q2">uye kana mitamba yatumbuka yava namaruva,</para>
+  <para style="q2">ikoko ndiko kwandichakupa rudo rwangu.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Miti yemidiwadiwa inopa kunhuhwira kwayo,</para>
+  <para style="q2">uye pamusuo pedu pane zvinonaka zvose,</para>
+  <para style="q1">zvose zvitsva nezvitsaru,</para>
+  <para style="q2">zvandakachengetera iwe, mudiwa wangu.</para>
+  <chapter number="8" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Dai chete wakanga uri sehanzvadzi kwandiri,</para>
+  <para style="q2">akanwa pamazamu amai vangu!</para>
+  <para style="q1">Ipapo kana ndaikuwana panze,</para>
+  <para style="q2">ndaikutsvoda</para>
+  <para style="q2">uye hapana aizondishora.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Ndaizokutora ndouya newe</para>
+  <para style="q2">kumba kwamai vangu,</para>
+  <para style="q2">ivo vakandidzidzisa.</para>
+  <para style="q1">Ndaikupa waini yakaiswa zvinonhuhwira kuti unwe,</para>
+  <para style="q2">nomukume wemitamba yangu.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Ruoko rwake rworuboshwe rwuri pasi pomusoro wangu,</para>
+  <para style="q2">uye ruoko rwake rworudyi rwakandimbundikira.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Imi vanasikana veJerusarema ndinokurayirai:</para>
+  <para style="q2">Musazunguza kana kumutsa rudo</para>
+  <para style="q2">kusvikira irwo rwada rwoga.</para>
+  <para style="sp">Shamwari</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Ndianiko uyo ari kuuya achibva kurenje</para>
+  <para style="q2">akazendamira pamudiwa wake?</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">Pasi pomuti womuapuro ndakakumutsa;</para>
+  <para style="q2">ipapo mai vako vakakubereka,</para>
+  <para style="q2">ipapo ivo vairwadziwa vakakubereka.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Ndiise pamwoyo pako sechisimbiso,</para>
+  <para style="q2">sechisimbiso paruoko rwako;</para>
+  <para style="q1">nokuti rudo rwakasimba sorufu,</para>
+  <para style="q2">godo rarwo seguva harishanduki.</para>
+  <para style="q1">Runopisa serimi romoto,</para>
+  <para style="q2">somurazvo mukuru kwazvo.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Mvura zhinji haigoni kudzima rudo;</para>
+  <para style="q2">nzizi hadzigoni kurukukura.</para>
+  <para style="q1">Kunyange munhu akapa</para>
+  <para style="q2">pfuma yose yemba yake kuti awane rudo,</para>
+  <para style="q2">zvingazvidzwa chose.</para>
+  <para style="sp">Shamwari</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Tine hanzvadzi yedu duku</para>
+  <para style="q2">uye mazamu ake haasati akura.</para>
+  <para style="q1">Tichaitireiko hanzvadzi yedu</para>
+  <para style="q2">pazuva rokukumbirwa kwayo kuti iwanikwe?</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Kana ari rusvingo,</para>
+  <para style="q2">tichavaka shongwe dzesirivha paari.</para>
+  <para style="q1">Kana ari musuo,</para>
+  <para style="q2">tichamukomberedza namapuranga omusidhari.</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Ndiri rusvingo,</para>
+  <para style="q2">mazamu angu akaita seshongwe.</para>
+  <para style="q1">Ndizvo zvandava pamberi pake,</para>
+  <para style="q2">somunhu anouyisa kugutsikana.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Soromoni aiva nomunda wemizambiringa muBhaari Hamoni;</para>
+  <para style="q2">akapa munda wake wemizambiringa kuvanhu vairima vachimuripira.</para>
+  <para style="q1">Mumwe nomumwe wavo pachibereko chawo</para>
+  <para style="q2">aiuya namashekeri chiuru<note caller="+" style="f"><char style="fr" closed="false">8:11 </char><char style="ft" closed="false">makirogiramu angaita 11.5 </char></note> esirivha.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Asi munda wangu wemizambiringa ndewangu kuti ndiupe;</para>
+  <para style="q2">chiuru chamashekeri esirivha ndechako, iwe Soromoni,</para>
+  <para style="q2">asi mazana maviri<note caller="+" style="f"><char style="fr" closed="false">8:12 </char><char style="ft" closed="false">makirogiramu angaita 2.3</char></note> ndeevanochengeta michero yawo.</para>
+  <para style="sp">Murume</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Iwe unogara mumapindu</para>
+  <para style="q2">unoshandirwa neshamwari,</para>
+  <para style="q2">rega ndinzwe inzwi rako!</para>
+  <para style="sp">Mukadzi</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Handei mudiwa wangu,</para>
+  <para style="q2">uite semhara kana setsvana</para>
+  <para style="q1">pamusoro pamakomo</para>
+  <para style="q2">azere zvinonhuhwira.</para>
+</usx>

@@ -1,0 +1,2984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="PRO" style="id">- Bibelen på hverdagsdansk (The Bible in Everyday Danish)</book>
+  <para style="rem">Copyright © 1985, 1992, 2005, 2013, 2015 by Biblica, Inc.®</para>
+  <para style="h">ORDSPROGENES BOG</para>
+  <para style="toc1">Ordsprogenes Bog</para>
+  <para style="toc2">Ordsprogenes Bog</para>
+  <para style="toc3">Ordsp.</para>
+  <para style="mt1">Ordsprogenes Bog</para>
+  <para style="imt">Indledning</para>
+  <para style="ip">
+    <char style="bd">Forfatter og datering:</char> Hovedparten af bogens ordsprog er formentlig samlet af kong Salomon i det 10. årh. f.Kr. Salomon forfattede 3000 ordsprog, hvoraf en del er med i denne bog. Derudover er der bidrag af flere andre vismænd helt frem til kong Hizkijas tid (begyndelsen af det 7. årh. f.Kr.). Flere steder kan der spores paralleller til mesopotamisk og egyptisk visdomslitteratur.</para>
+  <para style="ip">
+    <char style="bd">Indhold:</char> Bogen indeholder praktisk vejledning i poetisk form. Sammen med Bibelens øvrige visdomslitteratur er den et supplement til de historiske og profetiske bøger, idet den understreger behovet for både guddommelig visdom og menneskelig sund fornuft under alle livets forhold.</para>
+  <para style="ip">
+    <char style="bd">Budskab:</char> Bogens oprindelige formål var at opdrage unge mennesker til et gudfrygtigt liv (se <char style="xt">kap. <ref loc="PRO 1:4">1,4</ref> og <ref loc="PRO 4:20">4,20ff</ref>.</char>). Forudsætningen for et lykkeligt liv er gudsfrygt og ydmyghed (<char style="xt">kap. <ref loc="PRO 1:7">1,7</ref></char>). I dette perspektiv berøres en lang række konkrete områder som f.eks. forholdet til Gud, til næsten og til samfundet, børneopdragelse, ægteskab og økonomi.</para>
+  <chapter number="1" style="c"/>
+  <para style="s1">Værdien af ordsprog</para>
+  <para style="p">
+    <verse number="1" style="v"/>Det følgende er ordsprog af Davids søn og Israels konge, Salomon. <verse number="2" style="v"/>Formålet med ordsprogene er at vejlede folk og give dem visdom, at hjælpe dem til at skelne mellem rigtigt og forkert. <verse number="3" style="v"/>De skal hjælpe folk til at handle klogt, ærligt og ret. <verse number="4" style="v"/>De skal give de uerfarne kundskab og de unge indsigt og dømmekraft. <verse number="5" style="v"/>Selv de erfarne kan lære noget, og de fornuftige kan blive vejledt. <verse number="6" style="v"/>De kan lære at meditere over betydningen af ordsprog og billedtale samt de vises ordspil og gåder. <verse number="7" style="v"/>Gudsfrygt fører til visdom. Kun en tåbe foragter visdom og vejledning.</para>
+  <para style="s1">En fars formaninger</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Hør efter din fars formaning, min søn,</para>
+  <para style="q2">og husk på din mors belæring.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Værdsæt deres velmente vejledning</para>
+  <para style="q2">som et fornemt trofæ, et dyrebart smykke.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Giv ikke efter, min søn, men sig nej,</para>
+  <para style="q2">når dårlige venner vil lokke dig på afveje.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Måske siger de: „Kom, lad os finde et offer,</para>
+  <para style="q2">lægge os på lur og dræbe de uskyldige.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Før de aner uråd, er de allerede døde,</para>
+  <para style="q2">selv de stærke klarer sig ikke imod os.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Derefter plyndrer vi dem og bliver rige,</para>
+  <para style="q2">tænk på alle de ting, vi kan købe!</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Kom nu! Du skal nok få din andel.</para>
+  <para style="q2">Vi deler naturligvis byttet imellem os!”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>Gå ikke med dem, min søn!</para>
+  <para style="q2">Hold dig langt væk fra den slags venner.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>De er kun ude på at røve og plyndre</para>
+  <para style="q2">og viger ikke tilbage for mord.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Hvis en fugl ser en fælde blive sat op,</para>
+  <para style="q2">holder den sig væk og går ikke i den.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Men sådanne venner er ikke så kloge.</para>
+  <para style="q2">De sætter en fælde, men falder selv i den.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>De, der røver fra andre,</para>
+  <para style="q2">berøver sig selv et godt liv.</para>
+  <para style="s1">Visdommen kalder</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Visdommen råber til folk på gaden,</para>
+  <para style="q2">står på torvet og taler til dem,</para>
+  <para style="q1">
+    <verse number="21" style="v"/>kalder på skaren, som haster forbi,</para>
+  <para style="q2">opsøger byens øverste ledere.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>„I mennesker uden forstand!” råber den,</para>
+  <para style="q2">„Hvor længe vil I forblive i uvidenhed?</para>
+  <para style="q1">Hvor længe vil spotterne blive ved med at spotte?</para>
+  <para style="q2">Hvor længe vil tåberne nægte at blive vejledt?</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Gid I ville lytte til min vejledning.</para>
+  <para style="q2">Så ville jeg dele mine tanker med jer</para>
+  <para style="q2">og øse ud af min visdom til jer.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Men I ville ikke høre, når jeg kaldte på jer,</para>
+  <para style="q2">I afviste min udrakte, hjælpende hånd.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>I forkastede alle mine gode råd,</para>
+  <para style="q2">lyttede ikke til mine formaninger.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Derfor vil jeg le, når ulykken rammer jer,</para>
+  <para style="q2">håne jer, når I gribes af rædsel,</para>
+  <para style="q1">
+    <verse number="27" style="v"/>når I rammes som af et lyn fra en klar himmel,</para>
+  <para style="q2">når jeres mareridt bliver til virkelighed,</para>
+  <para style="q2">når angst og nød truer med at knuse jer.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Da vil I råbe om hjælp, men ikke få svar.</para>
+  <para style="q2">I vil søge efter mig, men ikke finde mig.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>I forkastede jo kundskaben</para>
+  <para style="q2">og nægtede at vise Herren respekt.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>I var ligeglade med de råd, jeg gav jer,</para>
+  <para style="q2">I valgte at ignorere min vejledning.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>Derfor må I nu bide i det sure æble,</para>
+  <para style="q2">til I får kvalme af jeres egen dumhed.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>Stædig egenrådighed bliver jeres død,</para>
+  <para style="q2">naiv sorgløshed fører jer i ulykke.</para>
+  <para style="q1">
+    <verse number="33" style="v"/>Men de, der lytter til mig, skal leve i tryghed,</para>
+  <para style="q2">de skal bo i fred og uden frygt.”</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Fordelene ved at søge visdom</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Hvis du tror på, hvad jeg siger, min søn,</para>
+  <para style="q2">og tager imod min vejledning,</para>
+  <para style="q1">
+    <verse number="2" style="v"/>hvis du adlyder visdommens ord</para>
+  <para style="q2">og ærligt søger at få indsigt,</para>
+  <para style="q1">
+    <verse number="3" style="v"/>hvis du tørster efter kundskab</para>
+  <para style="q2">og længes efter viden,</para>
+  <para style="q1">
+    <verse number="4" style="v"/>søger efter visdom som efter sølv,</para>
+  <para style="q2">graver efter den, som var den guld,</para>
+  <para style="q1">
+    <verse number="5" style="v"/>så vil du få ærefrygt for Gud</para>
+  <para style="q2">og bedre kunne forstå, hvem han er.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>For den sande visdom kommer fra Herren,</para>
+  <para style="q2">hos ham får man kundskab og indsigt.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Han giver gode råd til de oprigtige</para>
+  <para style="q2">og beskytter dem, der lever ret.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Han våger over de retsindiges vej</para>
+  <para style="q2">og tager de trofaste under sine vinger.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Hvis du lytter til ham, vil du forstå,</para>
+  <para style="q2">hvad der er godt og rigtigt.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Den visdom og kundskab, du får,</para>
+  <para style="q2">vil tilfredsstille dit hjertes længsel.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Dømmekraft vil hjælpe og beskytte dig,</para>
+  <para style="q2">omtanke vil bevare dig fra at fare vild</para>
+  <para style="q1">
+    <verse number="12" style="v"/>og værne dig mod onde mennesker,</para>
+  <para style="q2">folk, der altid lyver og bedrager,</para>
+  <para style="q1">
+    <verse number="13" style="v"/>dem, der nægter at følge Guds vej</para>
+  <para style="q2">og sniger sig frem i mørket.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>De glæder sig over ondskaben,</para>
+  <para style="q2">fryder sig over forfærdelige ting.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>De er uærlige i alt, hvad de gør,</para>
+  <para style="q2">løgnagtige i alt, hvad de foretager sig.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v"/>Visdom redder dig fra en andens utro hustru,</para>
+  <para style="q2">fra en løsagtig kvindes forførende ord,</para>
+  <para style="q1">
+    <verse number="17" style="v"/>en kvinde, som svigter sit troskabsløfte</para>
+  <para style="q2">og forlader sin ungdoms elskede.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>At gå ind i hendes hus er at gå døden i møde,</para>
+  <para style="q2">vejen fører direkte ned i dødsrigets mørke.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Ingen, som besøger hende, vender tilbage,</para>
+  <para style="q2">de har fjernet sig fra vejen til livet.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>Derfor bør du følge de rette stier</para>
+  <para style="q2">og holde dig til Guds vej.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>De, der gør det rette, bliver boende i landet,</para>
+  <para style="q2">de retsindige bliver ikke jaget bort.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Men de gudløse bliver fjernet fra landet,</para>
+  <para style="q2">de troløse rykkes op med rode.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Resultatet af lydighed og troskab</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Glem ikke, hvad jeg fortæller dig, min søn.</para>
+  <para style="q2">Tag imod min vejledning og følg den.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Så vil du få et langt og rigt liv</para>
+  <para style="q2">og opleve mange gode år.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Hold fast ved sandhed og troskab,</para>
+  <para style="q2">bær dem som et smykke om din hals,</para>
+  <para style="q3">skriv dem på dit hjertes tavle.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Gør du det, vil du møde velvilje</para>
+  <para style="q2">både fra Gud og mennesker.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Stol på Herren af hele dit hjerte,</para>
+  <para style="q2">følg ikke kun dine egne tanker.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Søg Guds vilje i alt, hvad du gør,</para>
+  <para style="q2">så vil han lade livet lykkes for dig.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Vær ikke selvklog og egenrådig,</para>
+  <para style="q2">adlyd Herren og tag afstand fra det onde,</para>
+  <para style="q1">
+    <verse number="8" style="v"/>det giver sundhed til sjæl og krop,</para>
+  <para style="q2">styrke til hele dit legeme.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Brug din rigdom til ære for Herren,</para>
+  <para style="q2">giv ham det første af hele din indtægt.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Så vil han fylde din lade med korn</para>
+  <para style="q2">og dine vinbeholdere med vin.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Mit barn, strit ikke imod, når Herren opdrager på dig,</para>
+  <para style="q2">bliv ikke bitter, når han sætter dig i rette.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Det er jo dem, han elsker, han opdrager på,</para>
+  <para style="q2">som når en far irettesætter sin elskede søn.</para>
+  <para style="s1">Visdommens værdi</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Velsignede er de, der vinder sig visdom,</para>
+  <para style="q2">lykkelige de, som opnår indsigt.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Hvad de vinder, er vigtigere end sølv,</para>
+  <para style="q2">det, de opnår, er bedre end guld.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Visdom er mere værd end juveler,</para>
+  <para style="q2">ingen skatte kan måle sig med den.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Den giver dig et langt og lykkeligt liv</para>
+  <para style="q2">og desuden både rigdom og ære.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Den leder dig ad herlige stier</para>
+  <para style="q2">og fører dig fremad i fred.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Visdom er et livets træ for dem, der tager imod den.</para>
+  <para style="q2">Velsignede er de, der klynger sig til den.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>Herren skabte jorden ved hjælp af sin visdom,</para>
+  <para style="q2">han brugte sin indsigt til at danne himlen.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>På hans kundskabs ord brød jordens kilder frem,</para>
+  <para style="q2">og skyerne begyndte at sende væde.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>Bevar din dømmekraft og omtanke,</para>
+  <para style="q2">tab dem aldrig af syne, min søn.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>De får dit liv til at lykkes</para>
+  <para style="q2">og giver dig ære og respekt.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Så kan du færdes med sikre skridt,</para>
+  <para style="q2">dine fødder vil ikke snuble.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Så kan du gå til ro uden at være bange,</para>
+  <para style="q2">lægge dig ned og nyde din søvn.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Du frygter ikke en pludselig fare,</para>
+  <para style="q2">ængstes ikke, når gudløse straffes,</para>
+  <para style="q1">
+    <verse number="26" style="v"/>for du regner med Herrens hjælp,</para>
+  <para style="q2">han bevarer dine fødder fra fælden.</para>
+  <para style="s1">Vejledning til at leve ret</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Afslå ikke at hjælpe nogen,</para>
+  <para style="q2">hvis du er i stand til det.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Sig ikke: „Kom igen i morgen, så skal jeg hjælpe dig,”</para>
+  <para style="q2">hvis du har, hvad der er brug for.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Du må ikke pønse på ondt imod dem, som har tillid til dig.</para>
+  <para style="q2">
+    <verse number="30" style="v"/>Lad være at starte et skænderi med nogen, som intet ondt har gjort dig.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="31" style="v"/>Vær aldrig misundelig på en voldsmands magt,</para>
+  <para style="q2">tag ikke ved lære af ham.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>For Herren hader uretfærdighed,</para>
+  <para style="q2">men han holder sig nær til de retskafne.</para>
+  <para style="q1">
+    <verse number="33" style="v"/>Herren forbander de gudløses huse,</para>
+  <para style="q2">men de retskafnes hjem velsigner han.</para>
+  <para style="q1">
+    <verse number="34" style="v"/>Herren modarbejder de hovmodige,</para>
+  <para style="q2">men de ydmyge viser han nåde.</para>
+  <para style="q1">
+    <verse number="35" style="v"/>Herren lønner de vise med ære,</para>
+  <para style="q2">men tåberne får kun skam som belønning.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">En fars formaninger</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Min søn, lyt til din fars formaninger,</para>
+  <para style="q2">hør godt efter, så du kan blive klogere,</para>
+  <para style="q1">
+    <verse number="2" style="v"/>for jeg giver dig mange gode råd.</para>
+  <para style="q2">Vig ikke fra mine retningslinier.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Jeg har jo selv været ung engang,</para>
+  <para style="q2">min mors øjesten og min fars stolthed.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Min far indprentede mig dengang:</para>
+  <para style="q1">„Hvis du følger de råd, jeg giver dig,</para>
+  <para style="q2">vil du få et langt og lykkeligt liv.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Stræb efter visdom og søg efter indsigt,</para>
+  <para style="q2">husk på mine ord og gør, som jeg siger.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Vig ikke fra visdommen, for den vil beskytte dig.</para>
+  <para style="q2">Elsker du visdom, vil den værne om dig.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Visdom er det vigtigste, du kan vinde.</para>
+  <para style="q2">Du skal tilegne dig dømmekraft for enhver pris.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Ærer du visdom, vil du selv blive æret.</para>
+  <para style="q2">Agter du visdom, vil du selv blive agtet.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Den vil sætte en krone på dit hoved,</para>
+  <para style="q2">belønne dig med en sejrskrans.”</para>
+  <para style="s1">Visdommens vej</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Min søn, hør på mig og gør, hvad jeg siger,</para>
+  <para style="q2">så får du et langt og lykkeligt liv.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Jeg viser dig visdommens vej</para>
+  <para style="q2">og leder dig ad de rette stier.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>På visdommens vej snubler du ikke,</para>
+  <para style="q2">på retfærdighedens vej vil du ikke falde.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Hold fast ved mit råd og slip det ikke,</para>
+  <para style="q2">for mine ord vil føre dig sikkert gennem livet.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Slå ikke følge med onde mennesker,</para>
+  <para style="q2">drej ikke ind på synderes vej.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Hold dig langt væk fra ondskabens vej.</para>
+  <para style="q2">Vend dig bort og gå forbi.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>De onde får ingen ro, før de har forbrudt sig,</para>
+  <para style="q2">sover ikke, før de har bragt nogen til fald.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>De lever af ondskab, som var det brød,</para>
+  <para style="q2">og nyder vold, som var det vin.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v"/>De, der følger Guds vej, ser hans lys,</para>
+  <para style="q2">og det vokser og vokser, som tiden går.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Men den vej, de onde følger, ligger i mørke,</para>
+  <para style="q2">de ved ikke, hvad de falder over.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>Min søn, lyt til mine ord,</para>
+  <para style="q2">hør godt efter, hvad jeg siger.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Hold godt fast ved dem,</para>
+  <para style="q2">og lad dem slå rod i dit hjerte,</para>
+  <para style="q1">
+    <verse number="22" style="v"/>for de giver liv til alle, som følger dem,</para>
+  <para style="q2">de giver sundhed til krop og sjæl.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Pas på dine tanker og motiver,</para>
+  <para style="q2">for det er dem, der former dit liv.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Hold din tunge fra falsk tale,</para>
+  <para style="q2">lad ingen løgn komme over dine læber.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Hav målet for øje, hvor du end går,</para>
+  <para style="q2">lad være med at se til siden.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Vælg den rette vej,</para>
+  <para style="q2">og du vil opleve, at alt går godt.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Bøj ikke af til højre eller venstre,</para>
+  <para style="q2">hold dig fra alt, hvad der er ondt.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Advarsel imod utroskab</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Hør på mine visdomsord, min søn,</para>
+  <para style="q2">lyt til den indsigt, jeg har,</para>
+  <para style="q1">
+    <verse number="2" style="v"/>så du kan leve dit liv i visdom</para>
+  <para style="q2">og vælge dine ord med omtanke.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>En utro kvindes ord er søde som honning,</para>
+  <para style="q2">hendes smiger glider ned som smør,</para>
+  <para style="q1">
+    <verse number="4" style="v"/>men bagefter bliver den bitter som malurt,</para>
+  <para style="q2">skarp som et tveægget sværd.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Hun haster mod døden,</para>
+  <para style="q2">hendes skridt fører lige til dødsriget.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Hun er ligeglad med livets vej,</para>
+  <para style="q2">hun er på afveje, men ved det ikke.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Hør godt efter, min søn,</para>
+  <para style="q2">læg mærke til, hvad jeg siger:</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Hold dig fra en anden mands kone,</para>
+  <para style="q2">kom ikke i nærheden af hendes hus.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Ellers spilder du din rigdom på en fremmed kvinde,</para>
+  <para style="q2">bruger dine bedste år på at føje et grusomt menneske.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Fremmede mennesker vil feste på din bekostning</para>
+  <para style="q2">og nyde frugten af dit slid og slæb.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Når det hele er forbi, vil du græmme dig,</para>
+  <para style="q2">når du ser, hvordan du ødelagde dit liv.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>„Gid jeg havde lyttet til min fars formaning!”</para>
+  <para style="q2">vil du sige til dig selv.</para>
+  <para style="q3">„Havde jeg dog bare hørt efter!</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Jeg adlød ikke mine vejledere,</para>
+  <para style="q2">rettede mig ikke efter deres råd.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Nu er mit liv ødelagt,</para>
+  <para style="q2">og min synd er offentligt kendt.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>Drik vand fra din egen beholdning,</para>
+  <para style="q2">det rene vand fra din egen brønd.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Brug ikke din livskraft på fremmede kvinder,</para>
+  <para style="q2">men lad kærligheden blomstre i dit eget hjem.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Sats på at elske din egen kone</para>
+  <para style="q2">i stedet for fremmede kvinder.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Lad Gud velsigne din egen livskilde,</para>
+  <para style="q2">glæd dig over din ungdoms hustru,</para>
+  <para style="q3">
+    <verse number="19" style="v"/>din turteldue, dine øjnes fryd.</para>
+  <para style="q1">Glæd dig ved hendes bryster</para>
+  <para style="q2">og berus dig i hendes kærlighed!</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Hvorfor vil du lade dig forføre</para>
+  <para style="q2">af en fremmed, en anden mands kone?</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Husk på, at Herren ser alle dine handlinger,</para>
+  <para style="q2">han lægger mærke til alt, hvad du gør.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Den ondes synder bliver hans skæbne,</para>
+  <para style="q2">han fanges i sine handlingers fælde.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Han dør af mangel på selvdisciplin,</para>
+  <para style="q2">hans tåbelighed styrter ham i graven.</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Flere gode råd</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Min søn, har du kautioneret for en nabo</para>
+  <para style="q2">eller stillet garanti for en fremmed,</para>
+  <para style="q1">
+    <verse number="2" style="v"/>så er du bundet af det ord, du har givet,</para>
+  <para style="q2">sidder fast i en dumdristig aftale.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Prøv at komme ud af det, min søn,</para>
+  <para style="q2">for du er jo i den anden mands magt.</para>
+  <para style="q3">Anmod ham straks om at annullere aftalen.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Udsæt det ikke til dagen efter!</para>
+  <para style="q2">Giv dig ingen ro, før det er gjort!</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Fri dig fra snaren, før løkken strammes,</para>
+  <para style="q2">flygt fra fælden, før den klapper i.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>Er du doven, så tag ved lære af myren,</para>
+  <para style="q2">få forstand af at studere dens færden.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Den arbejder uden at have pisken over nakken,</para>
+  <para style="q2">den har hverken chef eller arbejdsgiver.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Den indsamler proviant om sommeren,</para>
+  <para style="q2">opbygger sit vinterforråd i høsttiden.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Hvor længe bliver du liggende, dit dovendyr?</para>
+  <para style="q2">Hvornår har du tænkt dig at stå op?</para>
+  <para style="q1">
+    <verse number="10" style="v"/>„Årh, bare et lille hvil endnu!” siger du</para>
+  <para style="q2">og slapper af med foldede hænder.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Men pludselig overfalder fattigdommen dig,</para>
+  <para style="q2">som en væbnet røver angriber sulten dig.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>En ond og samvittighedsløs slyngel</para>
+  <para style="q2">er den, som taler bedrageriske ord,</para>
+  <para style="q1">
+    <verse number="13" style="v"/>som blinker med det ene øje,</para>
+  <para style="q2">skraber med foden og giver tegn med hænderne.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Han pønser hele tiden på ondt</para>
+  <para style="q2">og er årsag til skænderier overalt, hvor han kommer.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Men pludselig indhenter ulykken ham,</para>
+  <para style="q2">på et øjeblik bliver han slået ned uden håb om redning.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v"/>Der er mange ting, Herren hader,</para>
+  <para style="q2">især er der syv forfærdelige synder:</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Hovmodige øjne, løgnagtige tunger,</para>
+  <para style="q2">hænder, der dræber uskyldige folk,</para>
+  <para style="q1">
+    <verse number="18" style="v"/>et hoved fyldt med onde planer,</para>
+  <para style="q2">fødder, der iler med at øve vold,</para>
+  <para style="q1">
+    <verse number="19" style="v"/>et vidne, som lyver i retten,</para>
+  <para style="q2">og den, der skaber splid mellem venner.</para>
+  <para style="s1">Gentaget advarsel mod utroskab</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Husk at følge din fars råd, min søn,</para>
+  <para style="q2">glem ikke, hvad din mor har lært dig.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Gem ordene i dit hjerte og hav dem altid for øje,</para>
+  <para style="q2">
+    <verse number="22" style="v"/>lad dem vise dig vejen, du bør gå.</para>
+  <para style="q1">De giver dig ro, når du skal sove,</para>
+  <para style="q2">de vejleder dig, når du tager hul på en ny dag.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>De giver dig lys på vejen frem</para>
+  <para style="q2">og leder dig til et langt og godt liv.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>De beskytter dig mod utro kvinder,</para>
+  <para style="q2">mod gifte koners lokkende kalden.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Lad være med hemmeligt at beundre deres skønhed,</para>
+  <para style="q2">bliv ikke fanget af forførende blikke.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Det koster ikke meget at få fat i en prostitueret,</para>
+  <para style="q2">men at ligge hos en anden mands kone kan koste dit liv.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Kan man bære gløder i hænderne</para>
+  <para style="q2">uden at brænde fingrene?</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Kan man gå på gloende kul</para>
+  <para style="q2">uden at få sår på fødderne?</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Kan en mand begå ægteskabsbrud</para>
+  <para style="q2">uden at lide under konsekvenserne?</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Man kan forstå en mand, som stjæler,</para>
+  <para style="q2">hvis han er ved at dø af sult.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>Men bliver han pågrebet,</para>
+  <para style="q2">må han betale syv gange så meget tilbage.</para>
+  <para style="q1">Kan han ikke betale,</para>
+  <para style="q2">må han sælge ud af sine ejendele.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>Men begår du ægteskabsbrud, er du uden undskyldning.</para>
+  <para style="q2">Så er du dum nok til at lægge løkken om din egen hals.</para>
+  <para style="q1">
+    <verse number="33" style="v"/>Du bliver straffet og vanæret,</para>
+  <para style="q2">din forbrydelse vil altid blive husket.</para>
+  <para style="q1">
+    <verse number="34" style="v"/>En jaloux ægtemand er rasende,</para>
+  <para style="q2">og hans hævn er ubarmhjertig.</para>
+  <para style="q1">
+    <verse number="35" style="v"/>Han tager ikke imod godtgørelse,</para>
+  <para style="q2">ingen erstatning kan dæmpe hans vrede.</para>
+  <chapter number="7" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Glem ikke mine gode råd, min søn,</para>
+  <para style="q2">hav dem altid i tanke.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Lyt til mine råd, så du får et godt liv,</para>
+  <para style="q2">pas på dem som på en dyrebar skat.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Skriv dig dem bag øret,</para>
+  <para style="q2">så du aldrig glemmer dem.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Elsk visdom som en søster,</para>
+  <para style="q2">lad indsigten være din bedste ven.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Lad dem værne dig mod en andens hustru,</para>
+  <para style="q2">beskytte dig mod løsagtige kvinders smiger.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>En dag, jeg sad ved mit vindue</para>
+  <para style="q2">og kiggede ud gennem gitteret,</para>
+  <para style="q1">
+    <verse number="7" style="v"/>så jeg blandt de uforstandige unge mænd</para>
+  <para style="q2">en, der virkede utrolig naiv.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Jeg så ham gå hen ad gaden,</para>
+  <para style="q2">på vej mod en bestemt kvindes hus.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Tusmørket var faldet på,</para>
+  <para style="q2">og snart ville natten komme.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Da kom kvinden ham i møde,</para>
+  <para style="q2">smilende og udfordrende klædt.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Det er en højrøstet og trodsig kvinde,</para>
+  <para style="q2">som ikke bare kan sidde derhjemme.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Hun står altid på lur efter de unge mænd</para>
+  <para style="q2">i en døråbning eller på et gadehjørne.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Hun greb fat i den unge mand og kyssede ham,</para>
+  <para style="q2">mens hun skamløst forklarede:</para>
+  <para style="q1">
+    <verse number="14" style="v"/>„Jeg har lige bragt et takoffer til Gud,</para>
+  <para style="q2">så jeg har masser af kød i huset!</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Jeg var netop på vej for at opsøge dig,</para>
+  <para style="q2">så det var godt, at jeg mødte dig.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Min seng er redt med puder og tæpper</para>
+  <para style="q2">og det fineste spraglede linned fra Egypten.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Jeg har stænket dem med parfume</para>
+  <para style="q2">af myrra, aloe og kanel.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Kom, lad os beruse os i elskov,</para>
+  <para style="q2">lad os more os til morgenen gryr.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Min mand er ikke hjemme,</para>
+  <para style="q2">han er taget på en lang rejse.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Han tog en hel sæk penge med,</para>
+  <para style="q2">så det varer længe, før han kommer hjem.”</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Hun besnærede ham med sin talestrøm,</para>
+  <para style="q2">forførte ham med sine sukkersøde ord.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Hurtigt fulgte han efter hende,</para>
+  <para style="q2">som en tyr på vej til slagtning,</para>
+  <para style="q1">som en hjort, der går i fælden</para>
+  <para style="q2">
+    <verse number="23" style="v"/>og kun venter på at få en pil gennem hjertet,</para>
+  <para style="q1">som en fugl, der er fanget i nettet</para>
+  <para style="q2">og ikke ved hvilken skæbne, der venter den.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="24" style="v"/>Hør godt efter, min søn,</para>
+  <para style="q2">læg nøje mærke til, hvad jeg siger.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Lad dig ikke besnære af sådanne kvinder,</para>
+  <para style="q2">hold dig på lang afstand af dem.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Utallige mænd har de fået i saksen,</para>
+  <para style="q2">mange har mistet livet på grund af dem.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Døren til deres hus er indgangen til døden,</para>
+  <para style="q2">den fører direkte ned i dødsriget.</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Visdommen kalder igen</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Visdommen kalder, hvem vil høre?</para>
+  <para style="q2">Indsigten råber sit budskab ud.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Den står på højdepunkter langs vejen,</para>
+  <para style="q2">stiller sig op ved befærdede gadehjørner.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Ved byens porte og på de åbne pladser</para>
+  <para style="q2">kan dens klare stemme høres:</para>
+  <para style="q1">
+    <verse number="4" style="v"/>„Jeg kalder på alle mennesker,</para>
+  <para style="q2">lyt til mit budskab, hver og én.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Forstå dog, hvad visdom er,</para>
+  <para style="q2">tag imod lidt sund fornuft.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Jeg har vigtige ting at fortælle jer,</para>
+  <para style="q2">jeg siger, hvad der er ret og rigtigt.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Min mund taler altid sandt,</para>
+  <para style="q2">jeg hader alt, hvad der er ondt.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Alt, hvad jeg siger, er sandt og godt,</para>
+  <para style="q2">der er intet falsk eller forkert i det.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Mine ord er indlysende for de forstandige,</para>
+  <para style="q2">ligetil for dem, der har en smule indsigt.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Sæt større pris på min vejledning end på sølv,</para>
+  <para style="q2">for min undervisning er mere værd end guld.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>At eje visdom er vigtigere end at eje juveler,</para>
+  <para style="q2">intet kan sammenlignes med den.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>„Jeg, Visdom, har dømmekraft</para>
+  <para style="q2">foruden indsigt og sund fornuft.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Gudsfrygt indebærer at hade det onde.</para>
+  <para style="q2">Jeg hader hovmod og indbildskhed,</para>
+  <para style="q3">løgn og ondsindet sladder.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Følg mine gode råd og få fremgang,</para>
+  <para style="q2">indsigt og dømmekraft får du hos mig.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Jeg hjælper konger til at regere retfærdigt</para>
+  <para style="q2">og lovgivere til at udstede gode love.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Jeg hjælper guvernører til at træffe de rigtige valg,</para>
+  <para style="q2">alle jordens dommere har brug for mig.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Jeg kommer til dem, der vil tage imod mig.</para>
+  <para style="q2">De, som oprigtigt søger mig, finder mig.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Jeg giver dem rigdom og ære,</para>
+  <para style="q2">vedvarende værdier og gode normer.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Den gave, jeg giver, er bedre end det fineste guld,</para>
+  <para style="q2">den er mere værd end det fornemste sølv.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Jeg følger sandhedens stier,</para>
+  <para style="q2">vandrer på hæderlighedens veje.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>De, der følger mig, lider ingen nød,</para>
+  <para style="q2">for jeg fylder deres forrådshuse.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="22" style="v"/>Herren skabte mig i begyndelsen</para>
+  <para style="q2">før resten af hans skaberværk.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Jeg har min oprindelse i evigheden,</para>
+  <para style="q2">før verdens grundvold blev lagt.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Jeg blev dannet før havets dyb,</para>
+  <para style="q2">før kilderne og floderne var til.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Jeg var der, før bjergene blev dannet,</para>
+  <para style="q2">og højene blev skabt,</para>
+  <para style="q1">
+    <verse number="26" style="v"/>før Gud havde frembragt landjorden med dens marker,</para>
+  <para style="q2">før det første stykke jord kom til syne.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Da Gud udspændte himlens hvælving,</para>
+  <para style="q2">da han lagde jordens flade på urdybet,</para>
+  <para style="q1">
+    <verse number="28" style="v"/>da han anbragte skyerne over jorden</para>
+  <para style="q2">og åbnede kilderne under jorden,</para>
+  <para style="q1">
+    <verse number="29" style="v"/>da han med sit ord satte en grænse for havet,</para>
+  <para style="q2">da han lagde jordens grundvold fast,</para>
+  <para style="q1">
+    <verse number="30" style="v"/>da var jeg ved hans side som hans arkitekt.</para>
+  <para style="q1">Jeg glædede mig dag for dag,</para>
+  <para style="q2">frydede mig sammen med ham,</para>
+  <para style="q1">
+    <verse number="31" style="v"/>jublede ved at se den vide jord,</para>
+  <para style="q2">ved at se menneskene blive skabt.”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="32" style="v"/>Hør derfor godt efter, min søn,</para>
+  <para style="q2">for du bliver lykkelig ved at følge mit råd.</para>
+  <para style="q1">
+    <verse number="33" style="v"/>Lyt til mig, så du kan få visdom.</para>
+  <para style="q2">Ignorer ikke visdommen, når den siger:</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="34" style="v"/>„Velsignede er de, der lytter til mig,</para>
+  <para style="q2">de, der venter ved min dør dag efter dag.</para>
+  <para style="q1">
+    <verse number="35" style="v"/>De, der tager imod mig, får et godt liv,</para>
+  <para style="q2">for de opnår Guds velvilje.</para>
+  <para style="q1">
+    <verse number="36" style="v"/>De, der forkaster mig, skader sig selv.</para>
+  <para style="q2">Siger de nej til mig, siger de ja til døden.”</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Visdommen og dårskaben</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Visdommen har bygget et stort palads</para>
+  <para style="q2">med syv smukt udskårne søjler.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Bordet er dækket til fest</para>
+  <para style="q2">med lækker mad og udsøgte vine.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Tjenerne er ude at indbyde folk,</para>
+  <para style="q2">de kalder fra byens højdedrag:</para>
+  <para style="q1">
+    <verse number="4" style="v"/>„Kom, I enfoldige mennesker,</para>
+  <para style="q2">hvis I ønsker at få indsigt.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Kom med til visdommens fest</para>
+  <para style="q2">og smag den udsøgte vin.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Opgiv jeres tåbelige tanker,</para>
+  <para style="q2">lær at blive vise, så I kan leve ret.”</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Det er farligt at irettesætte de hovmodige,</para>
+  <para style="q2">at undervise dem giver kun problemer.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Hvis du prøver at belære de hovmodige, vil de hade dig,</para>
+  <para style="q2">men de vise sætter pris på en tilrettevisning.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Vejled de vise, så bliver de endnu visere.</para>
+  <para style="q2">Undervis de kloge, og deres lærdom forøges.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Ærefrygt for Herren fører til visdom,</para>
+  <para style="q2">at kende den hellige Gud giver forstand.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Visdom forlænger ens levetid,</para>
+  <para style="q2">der lægges flere år til ens liv.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Når du er vis, er det til dit eget bedste,</para>
+  <para style="q2">vrager du visdom, skader du dig selv.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>Dårskab er som en trodsig kvinde,</para>
+  <para style="q2">ganske tåbelig og uden forstand.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Hun sidder i sin gadedør og venter,</para>
+  <para style="q2">mens hun ser ud over byen.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Hun kalder på dem, der går forbi,</para>
+  <para style="q2">mens de er fordybet i egne tanker:</para>
+  <para style="q1">
+    <verse number="16" style="v"/>„Kom indenfor, I uvidende,</para>
+  <para style="q2">hvis I ønsker at lære noget.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Den forbudte frugt smager bedst,</para>
+  <para style="q2">det er herligt at have hemmeligheder!”</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Den naive ved ikke, at det fører til død,</para>
+  <para style="q2">at alle hendes gæster ender i graven.</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">Salomons ordsprog</para>
+  <para style="p">
+    <verse number="1" style="v"/>Her følger Salomons ordsprog:</para>
+  <para style="q1">En klog søn gør forældrene glade,</para>
+  <para style="q2">en tåbelig søn giver dem sorg.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Tilranede rigdomme lønner sig ikke,</para>
+  <para style="q2">hæderlighed kan redde en fra døden.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Herren stiller de retskafnes sult,</para>
+  <para style="q2">men opfylder ikke de ondes ønsker.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Dovenskab gør fattig,</para>
+  <para style="q2">flid gør rig.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>De kloge høster, når marken er moden,</para>
+  <para style="q2">de, der sover høsttiden væk, er en skændsel.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>De retsindige bliver velsignede,</para>
+  <para style="q2">de ondes ord rammer dem selv.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Et godt menneske huskes med glæde,</para>
+  <para style="q2">den gudløses navn går i glemmebogen.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Den fornuftige tager imod belæring,</para>
+  <para style="q2">en pralende tåbe går det ilde.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Den oprigtige kan leve i tryghed,</para>
+  <para style="q2">den uærlige bliver afsløret før eller siden.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Den, der afslører uretten, fremmer freden,</para>
+  <para style="q2">den, der lader uret passere, skaber problemer.<note caller="+" style="f"><char style="fr" closed="false">10,10 </char><char style="ft" closed="false">Oversat efter LXX, da den hebraiske tekst i 10b tilsyneladende ved en fejl er kopieret fra vers 8b.</char></note></para>
+  <para style="q1">
+    <verse number="11" style="v"/>Den retsindiges ord er en kilde til liv,</para>
+  <para style="q2">fra den ondes ord udspringer vold.<note caller="+" style="f"><char style="fr" closed="false">10,11 </char><char style="ft" closed="false">Ordret „Den ondes mund dækker over vold” som et brønddæksel. Når han åbner munden, kommer der vold op.</char></note></para>
+  <para style="q1">
+    <verse number="12" style="v"/>Had provokerer til strid,</para>
+  <para style="q2">men kærlighed tilgiver alt.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Den fornuftige taler med vise ord,</para>
+  <para style="q2">tåbelige ord fører til straf.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Den vise vokser i visdom,</para>
+  <para style="q2">tåben snakker sig en ulykke til.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Den riges rigdom er hans sikre borg,</para>
+  <para style="q2">den fattiges fattigdom er en ruin.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Den retskafne belønnes med et godt liv,</para>
+  <para style="q2">den onde straffes på grund af sin synd.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Den, der lader sig korrigere, får fremgang,</para>
+  <para style="q2">den, der afslår vejledning, farer vild.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Skjuler man had under venlighed, lyver man,</para>
+  <para style="q2">og den, der spreder sladder, er en tåbe.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Den, der taler for meget, fejler for tit,</para>
+  <para style="q2">men den, der er tilbageholdende, anses for vis.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Den retsindiges tale er guld værd,</para>
+  <para style="q2">den ondes tanker er værdiløse.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Den retskafnes ord er til hjælp for mange,</para>
+  <para style="q2">tåber dør af mangel på dømmekraft.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Herrens velsignelse gør rig,</para>
+  <para style="q2">egne anstrengelser<note caller="+" style="f"><char style="fr" closed="false">10,22 </char><char style="ft" closed="false">Oversættelsen usikker. Det hebraiske ord kan betyde pinefuldt hårdt arbejde (<char style="xt"><ref loc="GEN 3:17">1.Mos. 3,17</ref></char>) eller smerten forbundet med det hårde arbejde (<char style="xt"><ref loc="GEN 3:16">1.Mos. 3,16</ref></char>).</char></note> lægger ikke noget til.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Tåben finder fornøjelse i ondskabsfulde planer,</para>
+  <para style="q2">den kloge glæder sig, når visdommen sejrer.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Den ondes frygt bliver til virkelighed,</para>
+  <para style="q2">den retskafnes ønske går i opfyldelse.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Når stormen raser, går den onde til grunde,</para>
+  <para style="q2">men den retskafne står fast for evigt.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>En doven arbejder irriterer sin chef</para>
+  <para style="q2">som røg i øjnene eller eddike på tænderne.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Ærefrygt for Herren forlænger ens liv,</para>
+  <para style="q2">de gudløse dør før tiden.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Den retskafne kan forvente glæde,</para>
+  <para style="q2">den ondes forhåbninger brister.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Herren beskytter dem, der handler ret,</para>
+  <para style="q2">men han straffer dem, der handler ondt.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Onde mennesker sendes i eksil,</para>
+  <para style="q2">de retskafne bliver boende.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>Den retsindiges tale er fuld af visdom,</para>
+  <para style="q2">løgnerens ordstrøm bør standses.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>Den retsindiges ord er gode,</para>
+  <para style="q2">den onde taler kun falske ord.</para>
+  <chapter number="11" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Herren afskyr overlagt bedrag,</para>
+  <para style="q2">men glæder sig over oprigtig ærlighed.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Hovmod fører til fald,</para>
+  <para style="q2">ydmyghed fører til visdom.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Retskafnes ærlighed fører til fremgang,</para>
+  <para style="q2">de onde ødelægges af deres uærlighed.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Rigdom gavner intet på dommens dag,</para>
+  <para style="q2">retskaffen levevis redder fra døden.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>De godes retskaffenhed jævner vejen for dem,</para>
+  <para style="q2">de onde rammes af deres egen ondskab.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>De godes retsindighed bliver deres redning,</para>
+  <para style="q2">de svigefulde snubler i deres griskhed.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Når de gudløse dør, dør alle deres forhåbninger,</para>
+  <para style="q2">for alt, hvad de levede for, bliver til intet.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>De gudfrygtige reddes ud af faren,</para>
+  <para style="q2">de gudløse fanges i snaren.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Gudløses falske anklager bringer ødelæggelse,</para>
+  <para style="q2">retskafne reddes ved deres visdom.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Når retskafne har fremgang, er der fest i byen,</para>
+  <para style="q2">når onde bliver straffet, er der megen glæde.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>De gudfrygtiges bønner får byen til at blomstre,</para>
+  <para style="q2">de gudløses intriger lægger den i ruiner.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Den, der håner sin næste, er uden forstand,</para>
+  <para style="q2">den kloge har lært at holde mund.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Den, der løber med sladder, snakker over sig,</para>
+  <para style="q2">den trofaste kan holde på en hemmelighed.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Mangel på ledelse fører til lovløshed,</para>
+  <para style="q2">vise rådgivere bringer redning.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Det er farligt at kautionere for en fremmed,</para>
+  <para style="q2">den, der afslår at gøre det, undgår problemer.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>En venlig kvinde vinder respekt,</para>
+  <para style="q2">nådesløse mænd vinder kun rigdom.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Venlighed er sundt for sjælen,</para>
+  <para style="q2">ubarmhjertighed ødelægger kroppen.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>De ondes udbytte er kun blændværk,</para>
+  <para style="q2">de retskafne får den sande belønning.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>At holde fast ved retskaffenhed fører til livet,</para>
+  <para style="q2">at elske ondskab styrter en i døden.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Herren afskyr folk med falske hjerter,</para>
+  <para style="q2">men han glæder sig over ædle motiver.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>De onde slipper bestemt ikke for straf,</para>
+  <para style="q2">men de gudfrygtige går fri.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Som en guldring i en grisetryne</para>
+  <para style="q2">er en smuk kvinde uden taktfølelse.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>De gudfrygtige ønsker det, som er godt,</para>
+  <para style="q2">de gudløse kan kun vente vrede og straf.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Den gavmilde øger sin rigdom,</para>
+  <para style="q2">gnieren øger kun sin fattigdom.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Den, der giver til andre, får mere igen,</para>
+  <para style="q2">den, der afhjælper nød, bliver selv hjulpet.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>De, der nægter at hjælpe, bliver mødt med vrede,</para>
+  <para style="q2">de, der deler med andre, bliver hyldet af folk.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Den, der søger efter det gode, finder velvilje,</para>
+  <para style="q2">den, der leder efter problemer, finder dem også.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Den, der stoler på rigdom, visner som efterårets blade,</para>
+  <para style="q2">den, der stoler på Gud, grønnes som forårets løv.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Den, der bringer sin familie i ulykke, mister sin arv,</para>
+  <para style="q2">tåben ender som tjener for den kloge.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Den retskafne er som et livets træ,</para>
+  <para style="q2">den vise redder manges liv.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>Hvis retskafne mennesker får løn som forskyldt,</para>
+  <para style="q2">hvordan skal det så gå de ugudelige syndere?</para>
+  <chapter number="12" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Den, der elsker at blive vejledt, er klog,</para>
+  <para style="q2">det er tåbeligt at hade irettesættelse.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Den gode bliver accepteret af Gud,</para>
+  <para style="q2">den, der har onde bagtanker, bliver dømt.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Den onde lider altid af rodløshed,</para>
+  <para style="q2">den gudfrygtiges rødder stikker dybt.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>En dygtig kone er sin mands glæde og stolthed,</para>
+  <para style="q2">en dårlig kone tager livsmodet fra ham.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Den gudfrygtige udtænker gode planer,</para>
+  <para style="q2">den gudløse udklækker løgn.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Onde menneskers anklager bringer død med sig,</para>
+  <para style="q2">den retskafne reddes af sine kloge ord.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>De gudløse går til grunde, og deres slægt ophører,</para>
+  <para style="q2">de gudfrygtiges slægt skal bestå.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Man beundrer et klogt menneske,</para>
+  <para style="q2">men foragter en fordærvet tankegang.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Bedre at være beskeden, når man er velhavende,</para>
+  <para style="q2">end at være overlegen, når man intet ejer.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Den retskafne har omsorg endog for sine dyr,</para>
+  <para style="q2">den onde er selv i bedste fald grusom.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Den, der arbejder støt og trofast, har ressourcer nok,</para>
+  <para style="q2">den, der kun bygger luftkasteller, mangler sund fornuft.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>De onde misunder hinandens bytte,</para>
+  <para style="q2">den retskafne nyder frugten af sit arbejde.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Den uærlige fanges i et spind af løgne,</para>
+  <para style="q2">den ærlige undgår den slags problemer.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Fornuftig tale fører gode ting med sig,</para>
+  <para style="q2">et godt stykke arbejde resulterer i belønning.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Den kloge tager gerne imod kritik,</para>
+  <para style="q2">en tåbe klapper sig selv på skulderen.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>En fornuftig person tager en fornærmelse i stiv arm,</para>
+  <para style="q2">en tåbe taber hovedet med det samme.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Et ærligt menneske fortæller sandheden,</para>
+  <para style="q2">den upålidelige fylder alle med løgn.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Skarpe ord skærer som en kniv i hjertet,</para>
+  <para style="q2">kloge ord bringer lægedom til sjælen.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Ærlighed består tidens prøve,</para>
+  <para style="q2">løgn og bedrag afsløres hurtigt.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>De, der planlægger ondt, er fulde af bedrag,</para>
+  <para style="q2">de, der stifter fred, bliver fyldt med glæde.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>De retskafne rammes ikke af noget ondt,</para>
+  <para style="q2">de ondsindede har masser af problemer.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Herren afskyr dem, der lyver,</para>
+  <para style="q2">men glæder sig over dem, man kan stole på.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Den kloge praler ikke med sin viden,</para>
+  <para style="q2">en tåbe udbasunerer sin dumhed.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Den, der arbejder trofast og godt, bliver en leder,</para>
+  <para style="q2">den dovne er i lommen på andre.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Bekymring og ængstelse gør én nedtrykt,</para>
+  <para style="q2">et opmuntrende ord gør glad.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>De retskafne vælger deres venner med omhu,</para>
+  <para style="q2">de gudløses adfærd leder dem på afveje.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Den dovne ender med at sulte,</para>
+  <para style="q2">den flittige samler sig ressourcer.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Den gudfrygtiges vej fører til et godt liv,</para>
+  <para style="q2">den gudløses vej fører til død.</para>
+  <chapter number="13" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>En klog søn lytter til sin fars formaning,</para>
+  <para style="q2">den oprørske nægter at blive sat i rette.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Gode ord fører gode ting med sig,</para>
+  <para style="q2">falskhed fører kun til ufred.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>De, der tænker, før de taler, beskytter deres liv,</para>
+  <para style="q2">de, der taler uden at tænke, får problemer.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>De dovne har store planer, men opnår intet,</para>
+  <para style="q2">de flittige arbejder støt og ser resultater.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>De gudfrygtige hader al falskhed,</para>
+  <para style="q2">de gudløse handler skamløst.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>De oprigtige beskyttes af deres retskaffenhed,</para>
+  <para style="q2">de ondskabsfulde fældes af deres ondskab.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Nogle giver sig ud for at være rige, men ejer dog intet,</para>
+  <para style="q2">andre lader som om de er fattige, men ejer store rigdomme.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>De rige frygter at blive kidnappet på grund af deres penge,</para>
+  <para style="q2">den bekymring har de fattige ikke.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Den gudfrygtiges lys skinner klart,</para>
+  <para style="q2">den gudløses flamme blafrer og går ud.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Stolthed fører kun til strid,</para>
+  <para style="q2">men at søge råd er tegn på visdom.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Hvad der kommer let, går let,</para>
+  <para style="q2">men hårdt tjente penge holder man fast på.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Bristede forhåbninger giver mismod,</para>
+  <para style="q2">men ønsker, der går i opfyldelse, giver livsmod.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Den, der ikke vil vejledes, må bøde for sin dumhed,</para>
+  <para style="q2">den, der tager imod råd, får sin belønning.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>De vises råd er en livgivende kilde,</para>
+  <para style="q2">de, der tager ved lære, undgår mange fælder.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Sund fornuft vinder respekt,</para>
+  <para style="q2">falskhed fører til undergang.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Kloge folk tænker, før de taler,</para>
+  <para style="q2">tåben glimrer med sin dumhed.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>En upålidelig budbringer giver problemer,</para>
+  <para style="q2">en troværdig besked gør godt.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Den, der ikke vil vejledes, ender i fattigdom og skam,</para>
+  <para style="q2">den, der accepterer at blive irettesat, opnår hæder og ære.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>At se en drøm gå i opfyldelse er en fryd for sjælen,</para>
+  <para style="q2">en tåbe kan ikke fordrage at opgive sin ondskab.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Hvis du holder dig nær til de kloge, bliver du klog.</para>
+  <para style="q2">Hvis du holder dig til tåberne, bliver dit liv ødelagt.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>En synder overdænges med problemer,</para>
+  <para style="q2">en retsindig belønnes med succes.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Den gudfrygtige efterlader en arv til sine børn,</para>
+  <para style="q2">synderens rigdom overtages af de retskafne.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Selv om en fattig mands jord giver en god afgrøde,</para>
+  <para style="q2">mister han den, hvis der er lovløshed i landet.<note caller="+" style="f"><char style="fr" closed="false">13,23 </char><char style="ft" closed="false">Teksten er uklar. En fattig mand var magtesløs og blev ofte udnyttet af de rige.</char></note></para>
+  <para style="q1">
+    <verse number="24" style="v"/>Den, der sparer på riset, hader sin søn,</para>
+  <para style="q2">den, der elsker sin søn, tugter ham i tide.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Den gudfrygtige kan spise sig mæt,</para>
+  <para style="q2">den onde mangler mad.</para>
+  <chapter number="14" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>En klog kvinde opbygger sit hjem,</para>
+  <para style="q2">en tåbelig kone river det ned.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Den, der vandrer ret, viser ærefrygt for Herren,</para>
+  <para style="q2">den, der er i oprør, viser sin foragt.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Tåbelige ord får ubehagelige følger,<note caller="+" style="f"><char style="fr" closed="false">14,3 </char><char style="ft" closed="false">Eller: „fører til stolthed.” Den hebraiske tekst er uklar og måske kopieret forkert.</char></note></para>
+  <para style="q2">de vise tænker, før de taler.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Har man ingen okser, sparer man foderet,</para>
+  <para style="q2">men stærke trækdyr kan give en stor høst.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Et trofast vidne lyver aldrig,</para>
+  <para style="q2">et falsk vidne udspyr løgne.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Den, der arrogant søger visdom, finder den ikke,</para>
+  <para style="q2">men med ydmyg fornuft vinder man viden.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Hold dig borte fra tåben,</para>
+  <para style="q2">for dér får du ingen gode råd.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>De kloge overvejer de skridt, de tager,</para>
+  <para style="q2">tåben går rundt i blinde.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Tåber er ligeglade med, om de synder,</para>
+  <para style="q2">de retskafne ønsker at gøre Guds vilje.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Ingen kan helt forstå en andens sorg</para>
+  <para style="q2">eller fuldt ud føle en andens glæde.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Den gudløses hjem går til grunde,</para>
+  <para style="q2">den gudfrygtiges familie blomstrer.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Man kan være helt sikker på at have ret</para>
+  <para style="q2">og alligevel ende med et nederlag.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Et smil kan dække over hjertesorg,</para>
+  <para style="q2">når smilet er væk, er smerten der stadig.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Den troløse må lide for sin utroskab,</para>
+  <para style="q2">den trofaste får sin belønning.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Den naive tror på hvad som helst,</para>
+  <para style="q2">den kloge tænker sig godt om.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Den kloge er forsigtig og holder sig fra det onde,</para>
+  <para style="q2">tåben er overmodig og uden hæmninger.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Den hidsige handler uoverlagt,</para>
+  <para style="q2">den fornuftige udholder meget.<note caller="+" style="f"><char style="fr" closed="false">14,17 </char><char style="ft" closed="false">Oversat fra LXX, da den hebraiske tekst sandsynligvis ikke er original.</char></note></para>
+  <para style="q1">
+    <verse number="18" style="v"/>Den uforstandige øger sin dumhed,</para>
+  <para style="q2">den kloge vokser i visdom.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>De onde skal bukke i respekt for de gode</para>
+  <para style="q2">og stå med hatten i hånden ved deres dør.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Den fattige har ingen venner,</para>
+  <para style="q2">men alle flokkes om den rige.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>At se ned på den fattige<note caller="+" style="f"><char style="fr" closed="false">14,21 </char><char style="ft" closed="false">Efter LXX, jf. v. 31. Kan også oversættes „sin næste”.</char></note> er syndigt,</para>
+  <para style="q2">men at hjælpe en stakkel giver velsignelse.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>De, der har onde planer, ender i ulykke,</para>
+  <para style="q2">de, der har godt i sinde, oplever<note caller="+" style="f"><char style="fr" closed="false">14,22 </char><char style="ft" closed="false">Eller: „viser”.</char></note> trofast kærlighed.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Hårdt arbejde giver godt udbytte,</para>
+  <para style="q2">tom snak fører til fattigdom.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Den vises liv ender med succes,</para>
+  <para style="q2">tåbens liv ender i tåbeligheder.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Et sandfærdigt vidne redder liv,</para>
+  <para style="q2">et falsk vidne er en forræder.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>De, der har ærefrygt for Herren, opnår fred og tryghed,</para>
+  <para style="q2">og deres børn beskyttes af Gud.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Ærefrygt for Herren er kilden til liv,</para>
+  <para style="q2">for den frelser fra dødens fælde.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>En leder for et stort folk bliver æret,</para>
+  <para style="q2">men en konge uden et folk er intet værd.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Den, der er tålmodig, udviser klogskab,</para>
+  <para style="q2">den opfarende skilter med sin dumhed.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Fred i sindet giver helse til kroppen,</para>
+  <para style="q2">bitterhed<note caller="+" style="f"><char style="fr" closed="false">14,30 </char><char style="ft" closed="false">Eller: „jalousi”.</char></note> æder én op indefra.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>At udnytte de magtesløse er at håne deres Skaber,</para>
+  <para style="q2">at hjælpe de nødlidende er at ære Gud.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>Onde mennesker går til grunde i deres ondskab,</para>
+  <para style="q2">de retskafne er i sikkerhed, selv når døden banker på.<note caller="+" style="f"><char style="fr" closed="false">14,32 </char><char style="ft" closed="false">Eller ud fra LXX: „Den onde falder på grund af sin ondskab, men den retskafne reddes af sin retskaffenhed.”</char></note></para>
+  <para style="q1">
+    <verse number="33" style="v"/>Visdommen tager bolig i et forstandigt menneske,</para>
+  <para style="q2">men den finder ikke fodfæste i en tåbe.<note caller="+" style="f"><char style="fr" closed="false">14,33 </char><char style="ft" closed="false">Efter LXX. Den hebraiske tekst mangler ordet <char style="tl">ikke</char>.</char></note></para>
+  <para style="q1">
+    <verse number="34" style="v"/>Retskaffenhed ophøjer en nation,</para>
+  <para style="q2">synd er en skamplet på ethvert folk.</para>
+  <para style="q1">
+    <verse number="35" style="v"/>En klog tjener nyder velvilje hos kongen,</para>
+  <para style="q2">en skamløs tjener får hans vrede at føle.</para>
+  <chapter number="15" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Et hårdt svar vækker vrede,</para>
+  <para style="q2">forsonende ord kan afværge et skænderi.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Fra den kloges mund kommer en strøm af visdomsord,</para>
+  <para style="q2">fra tåbens mund kommer en flod af tåbeligheder.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Herren spejder ud over jorden,</para>
+  <para style="q2">han ser både de onde og de gode.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Opmuntrende ord giver mod på livet,</para>
+  <para style="q2">nedsættende ord giver sår i sjælen.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Kun en tåbe foragter sin fars formaning,</para>
+  <para style="q2">en fornuftig søn tager imod vejledning.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>De retskafne opnår succes og velstand,</para>
+  <para style="q2">de onde mister det, de har samlet.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Der kommer visdom fra den kloges mund,</para>
+  <para style="q2">det gør der ikke fra tåbens tanker.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Herren afskyr de gudløses offergaver,</para>
+  <para style="q2">men glæder sig over gudfrygtiges bønner.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Herren afskyr den ondes handlemåde,</para>
+  <para style="q2">men han elsker den, der gør det rette.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>De, der gør oprør imod Gud, bliver straffet,</para>
+  <para style="q2">og hvis de fortsætter deres oprør, skal de dø.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Herren kender underverdenens afkroge og dødsrigets dybder.</para>
+  <para style="q2">Mon et menneskes inderste væsen er ukendt for ham?</para>
+  <para style="q1">
+    <verse number="12" style="v"/>De hovmodige hader at blive sat i rette,</para>
+  <para style="q2">derfor holder de sig væk fra de vise.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Indre glæde giver et smilende ansigt,</para>
+  <para style="q2">et sorgfuldt hjerte tager livsmodet væk.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Den kloge søger altid ny indsigt,</para>
+  <para style="q2">tåben tygger drøv på sine dumheder.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>For den nedtrykte er hver dag en dårlig dag,</para>
+  <para style="q2">den glade har altid gode dage.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Et nøjsomt liv i ærefrygt for Gud</para>
+  <para style="q2">er bedre end et liv i rigdom og angst.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Hellere spise vandgrød med dem, man elsker,</para>
+  <para style="q2">end oksesteg med dem, man hader.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>En hidsig person skaber splid og ufred,</para>
+  <para style="q2">et tålmodigt menneske gyder olie på vandene.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Den dovne synes, at vejen er overgroet med tidsler,</para>
+  <para style="q2">den flittige synes, at vejen er bred og problemfri.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Et klogt barn glæder sin far,</para>
+  <para style="q2">kun en tåbe gør nar af sin mor.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Den uforstandige er godt tilfreds med sine dumheder,</para>
+  <para style="q2">den kloge har forstand til at gøre det rigtige.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Uden god rådgivning går en plan let i vasken,</para>
+  <para style="q2">men når mange tages med på råd, lykkes den.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Det er en glæde at kunne give et godt råd,</para>
+  <para style="q2">dejligt at kunne sige det forløsende ord.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Den vise vælger vejen til et godt liv</para>
+  <para style="q2">frem for vejen til en ynkelig død.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Herren nedriver den hovmodiges hus,</para>
+  <para style="q2">men beskytter enkers ejendom.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Herren afskyr de ondes tanker,</para>
+  <para style="q2">men glæder sig over gode ord.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Den pengegriske bringer sin familie i ulykke,</para>
+  <para style="q2">den, der afslår bestikkelse, klarer sig godt.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>De retskafne tænker, før de taler,</para>
+  <para style="q2">men ondskaben vælter ud af de gudløses mund.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Herren hører de gudfrygtiges bønner,</para>
+  <para style="q2">men holder sig fjernt fra onde mennesker.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Et smil varmer hjertet,</para>
+  <para style="q2">gode nyheder giver ny styrke.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>Den, der er villig til at blive vejledt,</para>
+  <para style="q2">vil føle sig hjemme blandt de vise.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>Den, der nægter at blive irettesat, modarbejder sig selv,</para>
+  <para style="q2">den, der tager godt imod kritik, vokser i visdom.</para>
+  <para style="q1">
+    <verse number="33" style="v"/>Ærefrygt for Gud er vejen til visdom,</para>
+  <para style="q2">ydmyghed går forud for ære.</para>
+  <chapter number="16" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Vi mennesker har mange tanker i hovedet,</para>
+  <para style="q2">men Herren kan lægge os ord i munden.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Vi kan mene, at vi er uskyldige,</para>
+  <para style="q2">men Herren kender de skjulte motiver.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Søg Herrens hjælp i alt, hvad du gør,</para>
+  <para style="q2">så vil det lykkes for dig.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Herren har en plan med alt,</para>
+  <para style="q2">og onde mennesker vil få deres straf.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Herren afskyr de hovmodige,</para>
+  <para style="q2">også de vil få deres straf.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Ubetinget kærlighed tilgiver synd,</para>
+  <para style="q2">gudsfrygt afværger meget ondt.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Når mennesker lever ret for Gud,</para>
+  <para style="q2">lader Gud dem leve i fred for fjender.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Bedre at være fattig og ærlig</para>
+  <para style="q2">end at være rig og uærlig.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Et menneske kan udtænke gode planer,</para>
+  <para style="q2">men Herren afgør, hvad der sker med dem.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>En konge taler på Guds vegne,</para>
+  <para style="q2">så hans domme skal være retfærdige.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Herren er med i forretningslivet,</para>
+  <para style="q2">så enhver handel skal være ærlig.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>En konge kan ikke tolerere forbrydelser,</para>
+  <para style="q2">for retfærdighed er grundlaget for hans magt.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>En konge glæder sig over ærlighed,</para>
+  <para style="q2">han sætter stor pris på at høre sandheden.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>En konges vrede er dødsens farlig,</para>
+  <para style="q2">men den kloge forstår at dæmpe den.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Når kongen smiler, er der fremgang og fred,</para>
+  <para style="q2">hans velvilje fører til vækst som regn i såtiden.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Bedre at vinde visdom end at grave efter guld,</para>
+  <para style="q2">hellere stræbe efter indsigt end lede efter sølv.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Den retskafnes vej fører væk fra det onde,</para>
+  <para style="q2">ved at se sig godt for kan man redde livet.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Hovmod står for fald,</para>
+  <para style="q2">den overmodige snubler let.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Hellere være tilfreds med det lidt, man har,</para>
+  <para style="q2">end at dele rov med de rige og stolte.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Den, der har indsigt, klarer sig godt,</para>
+  <para style="q2">velsignet er den, der sætter sin lid til Herren.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Den vise kendes på sin sunde fornuft,</para>
+  <para style="q2">velvalgte ord bliver der lyttet til.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>God dømmekraft giver den kloge et godt liv,</para>
+  <para style="q2">men den tåbelige straffes for sin dumhed.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>De vise kommer med visdomsord,</para>
+  <para style="q2">derfor lytter man gerne til dem.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Venlige ord er som honning,</para>
+  <para style="q2">en lise for sjælen og helse til kroppen.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Mange mener, de følger den rette vej,</para>
+  <para style="q2">og dog ender den med død.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Arbejderens sult er til gavn for ham,</para>
+  <para style="q2">for den hjælper ham til at arbejde hårdt.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Ondskabsfulde slyngler skaber ulykker overalt,</para>
+  <para style="q2">deres ord hærger som en steppebrand.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Folk, der er fulde af løgn, skaber altid splid,</para>
+  <para style="q2">sladder kan skille selv de bedste venner.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>En forbryder opflammer sine kammerater</para>
+  <para style="q2">og trækker dem med i kriminelle handlinger.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Den, der blinker med øjet, har ondt i sinde,</para>
+  <para style="q2">sammenpressede læber tyder på skumle planer.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>Det er en ære at blive gammel,</para>
+  <para style="q2">for så har man levet et retskaffent liv.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>Det er bedre at være tålmodig end at være stærk,</para>
+  <para style="q2">lettere at indtage en by end at overvinde sig selv.</para>
+  <para style="q1">
+    <verse number="33" style="v"/>Mennesker kaster lod for at finde Guds vilje,</para>
+  <para style="q2">men det er Herren, der bestemmer udfaldet.</para>
+  <chapter number="17" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Bedre at spise tørt brød i fred</para>
+  <para style="q2">end festmad i splid og spektakel.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>En klog slave får autoritet over sin herres uvorne unger,</para>
+  <para style="q2">og han får del i arven, som var han en søn af familien.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>En smeltning kan afgøre kvaliteten af sølv eller guld,</para>
+  <para style="q2">men kun Herren kender et menneskes hjerte.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>En ballademager tiltrækkes af destruktive planer,</para>
+  <para style="q2">og en løgner lytter gerne til svig og bedrag.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>At foragte de fattige er at håne deres Skaber,</para>
+  <para style="q2">den, der er skadefro, vil selv komme i ulykke.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Bedsteforældre er stolte af deres børnebørn,</para>
+  <para style="q2">ligesom børn er stolte af deres forældre.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>En tåbe bør holde sig fra store ord,</para>
+  <para style="q2">og den ædle bør holde sig fra løgn.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Bestikkelse virker som en trylleformular,</para>
+  <para style="q2">for den kan åbne et utal af døre.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Den, der bærer over med en forurettelse, skaber gode relationer,</para>
+  <para style="q2">men at hænge sig i andres fejl kan skille selv de bedste venner.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>En fornuftig person lærer mere af en enkelt irettesættelse,</para>
+  <para style="q2">end en tåbe lærer af 100 afstraffelser.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Onde mennesker er altid i oprør,</para>
+  <para style="q2">men de vil få en velfortjent straf.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Hellere møde en bjørn, hvis unger er taget fra den,</para>
+  <para style="q2">end en tåbe, der slår om sig med tåbeligheder.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Den, der gengælder godt med ondt,</para>
+  <para style="q2">vil blive forfulgt af uheld.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>At indlede et skænderi er som at åbne for en sluse,</para>
+  <para style="q2">du må hellere få lukket igen, før der bliver rigtig krig.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>At dømme en uskyldig og frikende en skyldig,</para>
+  <para style="q2">begge dele vækker afsky hos Herren.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Hvad skal en tåbe bruge penge til?</para>
+  <para style="q2">Kan man købe visdom, når man er uden forstand?</para>
+  <para style="q1">
+    <verse number="17" style="v"/>En ven er altid en ven,</para>
+  <para style="q2">og slægtninge har man som en hjælp i nøden.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Det er dumt at stå inde for en fremmed mands lån</para>
+  <para style="q2">og stille garanti for en andens gæld.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>De, der elsker at skændes, skaber altid problemer,</para>
+  <para style="q2">de overvurderer sig selv, og det ender galt.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Den, der har falske motiver, klarer sig skidt,</para>
+  <para style="q2">og den, der lever i bedrag, falder med et brag.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Et tåbeligt barn giver sine forældre sorg,</para>
+  <para style="q2">en oprørsk unge giver ingen glæde.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Et glad hjerte giver en sund krop,</para>
+  <para style="q2">nedtrykthed dræner ens livsmod.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Onde mennesker tager imod bestikkelse</para>
+  <para style="q2">og kæmper imod al retfærdighed.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Den fornuftige har visdom for øje,</para>
+  <para style="q2">men tåbens blik fortaber sig i det fjerne.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Et tåbeligt barn bringer sin far sorg</para>
+  <para style="q2">og gør sin mor skuffet og bitter.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Det er forkert, at give de uskyldige bøder</para>
+  <para style="q2">og straffe de mennesker, som er ærlige.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Den kloge overvejer nøje sine ord,</para>
+  <para style="q2">den forstandige holder hovedet koldt.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>En tåbe, der tier, kan gå for at være fornuftig,</para>
+  <para style="q2">den, der holder sin mund, betragtes som forstandig.</para>
+  <chapter number="18" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>De, der isolerer sig, søger deres eget,</para>
+  <para style="q2">de opponerer mod al sund fornuft.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>En tåbe prøver ikke på at forstå andre,</para>
+  <para style="q2">han har nok i at lufte sin egen mening.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Ondskab går hånd i hånd med foragt,</para>
+  <para style="q2">skam følges med vanære.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Visdom forfrisker som en rislende kilde,</para>
+  <para style="q2">styrkende ord er som koldt, frisk vand.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Det er afskyeligt at holde hånden over den skyldige</para>
+  <para style="q2">og at lade den uskyldige blive dømt i stedet.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Tåbernes ord bringer dem let i klammeri,</para>
+  <para style="q2">deres tale inviterer til slagsmål.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Tåbernes ord bringer dem til fald,</para>
+  <para style="q2">deres tale kan koste dem livet.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Sladder sluges med hud og hår</para>
+  <para style="q2">og lagrer sig dybt i sindet.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>At være doven og forsømme sit arbejde</para>
+  <para style="q2">er lige så slemt som at øve hærværk.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Herren er som et stærkt fæstningstårn,</para>
+  <para style="q2">den retskafne løber derind og er i sikkerhed.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Den riges velstand er hans falske tryghed,</para>
+  <para style="q2">han tror sig beskyttet bag en mægtig mur.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Hovmod fører til fald,</para>
+  <para style="q2">ydmyghed bringer ære.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>At give et svar uden først at lytte</para>
+  <para style="q2">er både tåbeligt og skændigt.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Et menneskes livsmod giver styrke under sygdom,</para>
+  <para style="q2">men når mismod sætter ind, er håbet ude.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Den forstandige er på jagt efter kundskab,</para>
+  <para style="q2">den kloge er på udkig efter visdom.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>At give en gave kan åbne mange døre</para>
+  <para style="q2">og bane vej til magtfulde personer.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Den, der forsvarer sin sag, synes at have ret,</para>
+  <para style="q2">i hvert fald indtil krydsforhøret begynder.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Når to stærke modstandere er kørt fast i en strid,</para>
+  <para style="q2">kan en lodkastning give en løsning.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Når slægtninge bliver uvenner,</para>
+  <para style="q2">rejses en mur imellem dem.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Gode ord giver mad i huset,</para>
+  <para style="q2">de rette ord giver fremgang i livet.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Tungen er nøglen til et godt eller dårligt liv,</para>
+  <para style="q2">man må leve med konsekvensen af sine ord.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Lykkelig den mand, som finder sig en god kone,</para>
+  <para style="q2">det er et udtryk for Herrens velsignelse.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Den fattige er nødt til at anmode høfligt,</para>
+  <para style="q2">den rige har råd til at være uforskammet.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Man kan have mange venner og alligevel blive svigtet,</para>
+  <para style="q2">og dog kan en ven være mere trofast end en slægtning.</para>
+  <chapter number="19" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Det er bedre at være ærlig og fattig</para>
+  <para style="q2">end at være en uhæderlig tåbe.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Begejstring og uvidenhed er en farlig blanding,</para>
+  <para style="q2">den, der farer hurtigt frem, begår mange fejl.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>En tåbe er selv årsag til sine problemer,</para>
+  <para style="q2">selvom han giver Gud skylden.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Rigdom tiltrækker mange venner,</para>
+  <para style="q2">det gør fattigdom ikke.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Et falsk vidne får sin straf,</para>
+  <para style="q2">en løgner undslipper ikke.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Man bukker dybt for en gavmild rigmand,</para>
+  <para style="q2">den, der giver gaver, har mange venner.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Den fattiges slægtninge undgår ham,</para>
+  <para style="q2">og hans bekendte holder afstand fra ham.</para>
+  <para style="q1">Han beder hele tiden om hjælp,</para>
+  <para style="q2">men han får dem ikke overtalt.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Man gavner sig selv ved at søge efter visdom,</para>
+  <para style="q2">den, der sætter pris på viden, får fremgang.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Et falsk vidne får sin straf,</para>
+  <para style="q2">en løgner går til grunde.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Det er upassende for en tåbe at leve i luksus</para>
+  <para style="q2">og for en slave at bestemme over en adelsmand.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Der skal meget til, før de vise bliver vrede,</para>
+  <para style="q2">at bære over med en fornærmelse vinder dem respekt.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>En konges vrede er frygtelig som løvens brøl,</para>
+  <para style="q2">hans anerkendelse forfriskende som morgenduggen.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>En tåbelig søn er sin fars ulykke,</para>
+  <para style="q2">en kones anklager som evindelige dryp fra et hul i taget.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Man kan arve sig til hus og rigdom,</para>
+  <para style="q2">men en forstående kone er en gave fra Herren.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Den sløve og slappe sover tiden væk,</para>
+  <para style="q2">den dovne kan ikke holde sulten fra døren.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Den, der adlyder Guds bud, gavner sig selv,</para>
+  <para style="q2">at lade hånt om sin handlemåde ender med død.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>At hjælpe den hjælpeløse er som at give Gud et lån,</para>
+  <para style="q2">han betaler det rigeligt tilbage.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Disciplinér dine børn, for så er der håb for fremtiden,</para>
+  <para style="q2">men pas på ikke at gøre dem fortræd.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>En ilter person må tage følgen af sine handlinger,</para>
+  <para style="q2">skåner man ham, bliver han bare værre.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Tag imod råd og vejledning,</para>
+  <para style="q2">gør du det, opnår du visdom til sidst.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Mennesker lægger et utal af planer,</para>
+  <para style="q2">men det er Herrens planer, der lykkes.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Det er en fordel at være ærlig og trofast,</para>
+  <para style="q2">hellere være en fattig mand end en bedrager.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Ærefrygt for Herren fører til et godt liv,</para>
+  <para style="q2">man er mæt og tilfreds og skærmes fra ondt.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Den dovne stikker fingrene i frugtfadet,</para>
+  <para style="q2">men gider ikke føre hånden til munden.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>En tåbe kan lære af at se en slyngel få bank,</para>
+  <para style="q2">men for den kloge er en irettesættelse nok.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Den, der jager sin far og mor på porten,</para>
+  <para style="q2">er en skændsel og vanære for sin slægt.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Min søn, holder du op med at lytte til vejledning,</para>
+  <para style="q2">glemmer du snart, hvad du allerede har lært.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Et falsk vidne blæser på retfærdighed,</para>
+  <para style="q2">onde mennesker trives med ondskab.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Spottere lærer kun, når de bliver afstraffet,</para>
+  <para style="q2">tåber lærer kun, når de får bank.</para>
+  <chapter number="20" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Vin kan føre til overmod og øl til slagsmål,</para>
+  <para style="q2">den, der drikker sig fuld, mangler visdom.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>En konges vrede er som løvens brøl,</para>
+  <para style="q2">den er livsfarlig, når den bliver vakt.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>At undgå klammeri er prisværdigt,</para>
+  <para style="q2">kun tåber insisterer på at skændes.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Den dovne gider ikke pløje i såtiden</para>
+  <para style="q2">og kigger forgæves efter korn i høsttiden.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Et menneskes motiver er som vandet i en dyb brønd,</para>
+  <para style="q2">men den kloge formår at få dem op til overfladen.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Mange siger, at man kan regne med dem,</para>
+  <para style="q2">men hvor finder man en virkelig trofast ven?</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Retskafne mennesker er ærlige og oprigtige,</para>
+  <para style="q2">og deres børn oplever velsignelsen deraf.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Før kongen afsiger sin dom,</para>
+  <para style="q2">vurderer han omhyggeligt alle vidnesbyrd.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Hvem tør sige: „Mit liv er pletfrit,</para>
+  <para style="q2">jeg har aldrig gjort noget forkert.”?</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Herren afskyr uhæderlig handel</para>
+  <para style="q2">og uærlige forretningsmetoder.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Et barns karakter afsløres i dets handlinger,</para>
+  <para style="q2">man kan se dets gode eller dårlige motiver.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Herren har givet os ører og øjne,</para>
+  <para style="q2">så lad os bruge dem til at tjene ham.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Bruger du tiden på at sove, bliver du fattig,</para>
+  <para style="q2">men står du op og arbejder, vil du få din løn.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>„Elendigt bras!” siger køberen, mens han tinger om prisen,</para>
+  <para style="q2">men bagefter praler han af det røverkøb, han har gjort.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Guld og juveler kan man altid få,</para>
+  <para style="q2">men et visdomsord er en sjælden perle.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Den, der stiller kaution for ukendte personer,</para>
+  <para style="q2">bør tage imod pant fra dem.<note caller="+" style="f"><char style="fr" closed="false">20,16 </char><char style="ft" closed="false">Teksten er uklar og oversættelsen usikker.</char></note></para>
+  <para style="q1">
+    <verse number="17" style="v"/>Et stjålet brød smager godt i begyndelsen,</para>
+  <para style="q2">men bagefter er det som grus i munden.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>God rådgivning giver et godt resultat,</para>
+  <para style="q2">en god plan kan afgøre krigens udfald.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>En sladrehank kan ikke holde sin mund,</para>
+  <para style="q2">så pas på med dem, der snakker for meget.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Den, der forbander sin far eller mor,</para>
+  <para style="q2">vil ende sit liv i det dybeste mørke.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>En arv man får, mens man er ung,</para>
+  <para style="q2">holder næppe, til man bliver gammel.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Sig ikke: „Det skal du få betalt!”</para>
+  <para style="q2">Overgiv hellere sagen til Herren.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Herren afskyr dem,</para>
+  <para style="q2">der snyder i en handel.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Intet menneske kender sin fremtid,</para>
+  <para style="q2">for det er Herren, der lægger alting til rette.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Når du aflægger et løfte til Herren,</para>
+  <para style="q2">så tænk først over, hvad du lover.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>En klog konge finder de skyldige</para>
+  <para style="q2">og giver dem den straf, de fortjener.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Herrens lys afslører et menneskes sjæl,<note caller="+" style="f"><char style="fr" closed="false">20,27 </char><char style="ft" closed="false">Eller „ånd”. Ordet oversættes normalt med „livsånde” eller „åndepust”.</char></note></para>
+  <para style="q2">dets inderste tanker og motiver.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Godhed og sandhed beskytter en konge,</para>
+  <para style="q2">handler han ret, bevarer han magten.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Man beundrer de unges styrke</para>
+  <para style="q2">og respekterer de gamles livserfaring.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Fysisk afstraffelse kan fjerne ondskab</para>
+  <para style="q2">og få et menneske på bedre tanker.</para>
+  <chapter number="21" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>En konges tanker er under Herrens kontrol,</para>
+  <para style="q2">han styrer dem som vandet i en kanal.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Vi kan mene, at vi gør det rigtige,</para>
+  <para style="q2">men Herren kender motiverne.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>At vi gør det rigtige og handler ret,</para>
+  <para style="q2">glæder Gud mere, end at vi ofrer til ham.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Nedladenhed og en hoven holdning</para>
+  <para style="q2">resulterer kun i onde handlinger.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Flid og fornuftige planer giver fremgang,</para>
+  <para style="q2">men ubetænksomt hastværk fører til fattigdom.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Rigdom, man svindler sig til, forsvinder som en tåge,</para>
+  <para style="q2">og de, der søger den, ender i dødens gab.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Fordi de onde nægter at gøre det rette,</para>
+  <para style="q2">går deres ugerninger ud over dem selv.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Den skyldige går krogveje,</para>
+  <para style="q2">den uskyldige har intet at skjule.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Hellere bo i et hummer på loftet</para>
+  <para style="q2">end dele hus med en irriterende kone.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Onde mennesker er ude på at skade andre,</para>
+  <para style="q2">de har intet tilovers for deres medmennesker.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Den vise kan lære ved at lytte til vejledning,</para>
+  <para style="q2">tåben lærer kun ved at se en skyldig blive straffet.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Gud lægger mærke til de ondes færden,</para>
+  <para style="q2">og han straffer dem, for han er retfærdig.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>De, der lukker ørerne for andres nødråb,</para>
+  <para style="q2">vil råbe forgæves, når de selv har brug for hjælp.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Vrede kan formildes med en gave i smug,</para>
+  <para style="q2">raseri kan afdæmpes med lidt bestikkelse.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Når retfærdigheden sker fyldest, glæder de retskafne sig,</para>
+  <para style="q2">men forbryderne ryster af angst.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Den, der ikke tager imod fornuft,</para>
+  <para style="q2">ender i de dødes selskab.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Den, der lever for at more sig, ender i gæld,</para>
+  <para style="q2">et liv i sus og dus fører ikke til velstand.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>De onde og troløse bliver straffet,</para>
+  <para style="q2">så de gode og trofaste kan gå fri.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Hellere bo alene i en ørken</para>
+  <para style="q2">end i hus med en sur og arrig kone.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Den kloge sparer op og bliver velstående,</para>
+  <para style="q2">tåben bruger straks alt, hvad han tjener.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Den, der stræber efter at være retfærdig og kærlig,</para>
+  <para style="q2">bliver respekteret og får et godt liv.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Den vise kan besejre et utal af krigere</para>
+  <para style="q2">og nedbryde fjendens fæstningsværker.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Den, der formår at holde sin mund,</para>
+  <para style="q2">kan undgå en masse problemer.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Den hovmodige kendes på sit overmod,</para>
+  <para style="q2">sin stolte og arrogante optræden.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Den dovnes ønsker ender med at ødelægge ham,</para>
+  <para style="q2">for han nægter at bestille noget.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Han tænker kun på at skrabe til sig,</para>
+  <para style="q2">mens den retskafne elsker at give til andre.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Den ondes offergave er en afskyelighed,</para>
+  <para style="q2">især når den bringes med bagtanke.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Det falske vidne bliver afsløret til sidst,</para>
+  <para style="q2">men den, der taler sandt, kan holde stand.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Den onde tromler fremad,</para>
+  <para style="q2">den retskafne overvejer sine skridt.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Visdom, tanker og planer er intet værd</para>
+  <para style="q2">for dem, der prøver at stå Herren imod.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>Hesten kan gøres klar til kamp,</para>
+  <para style="q2">men det er dog Herren, der giver sejr.</para>
+  <chapter number="22" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Et godt ry er bedre end rigdom,</para>
+  <para style="q2">at blive værdsat er bedre end at eje sølv og guld.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Rig og fattig har noget tilfælles:</para>
+  <para style="q2">Det er Herren, der har skabt dem begge.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Den fornuftige ser faren på forhånd og undgår den,</para>
+  <para style="q2">en tåbe vader videre og må tage konsekvensen.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Ydmyghed og ærefrygt for Herren</para>
+  <para style="q2">giver rigdom, respekt og et godt liv.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Bedragerens vej er fuld af fælder og forhindringer,</para>
+  <para style="q2">de, der har livet kært, holder sig væk.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Lær dine børn at træffe rette valg,</para>
+  <para style="q2">så vil de gøre det, så længe de lever.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Den rige har magt over den fattige,</para>
+  <para style="q2">og udlåneren bestemmer over den, der låner.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Den ondskabsfulde tyran bliver straffet,</para>
+  <para style="q2">hans terrorregime får ende.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Gavmilde mennesker velsignes,</para>
+  <para style="q2">for de deler deres mad med de fattige.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Jag spotteren bort, så får ufreden ende,</para>
+  <para style="q2">skænderier og fornærmelser hører op.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Kongen er ven med dem, der er oprigtige</para>
+  <para style="q2">og taler barmhjertige ord.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Herren værner om sandheden,</para>
+  <para style="q2">og gendriver løgnernes ord.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Den dovne siger: „Hvis jeg går ud på gaden,</para>
+  <para style="q2">bliver jeg måske ædt af en løve!”</para>
+  <para style="q1">
+    <verse number="14" style="v"/>En utro kvindes ord er besnærende,</para>
+  <para style="q2">den, som Herren vil straffe, går i fælden.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Det er naturligt for et barn at gøre tåbelige ting,</para>
+  <para style="q2">men konsekvent tilrettevisning hjælper på sagen.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>De, der udnytter de magtesløse til egen fordel</para>
+  <para style="q2">eller bestikker dem, der har magt, skal ende i fattigdom.</para>
+  <para style="s1">30 vise ordsprog</para>
+  <para style="p">
+    <verse number="17" style="v"/>Lyt til de vises ord og gem dem i dit hjerte, <verse number="18" style="v"/>så vil du glæde dig over at kunne huske dem og give dem videre til andre. <verse number="19" style="v"/>Jeg lærer dig det her i dag, for at du skal sætte din lid til Herren. <verse number="20" style="v"/>Jeg har nedskrevet 30<note caller="+" style="f"><char style="fr" closed="false">22,20 </char><char style="ft" closed="false">Tallet 30 er symbolsk for en gudgiven magt og autoritet hos mennesker.</char></note> visdomsord, som skal vejlede dig og give dig kundskab. <verse number="21" style="v"/>De vil hjælpe dig til at forstå, hvad der er sandt og ret at gøre, så du kan svare godt for dig, når du bliver spurgt.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Angrib ikke de svage, fordi de er magtesløse,</para>
+  <para style="q2">undertryk dem ikke i retssager,</para>
+  <para style="q1">
+    <verse number="23" style="v"/>for Herren selv vil forsvare dem</para>
+  <para style="q2">og straffe dem, der udnytter deres svaghed.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="24" style="v"/>Bliv ikke ven med dem, der altid er vrede,</para>
+  <para style="q2">hold dig fra hidsige mennesker,</para>
+  <para style="q1">
+    <verse number="25" style="v"/>ellers risikerer du at gøre som dem</para>
+  <para style="q2">og at ende i store problemer.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="26" style="v"/>Stil ikke kaution for en andens gæld,</para>
+  <para style="q2">lad være at love, at du nok skal betale.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Du risikerer at miste alle dine penge,</para>
+  <para style="q2">dine møbler og alt, hvad du har.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="28" style="v"/>Flyt ikke de gamle markskel,</para>
+  <para style="q2">som går tilbage til dine forfædres tid.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="29" style="v"/>De, der gør et fremragende stykke arbejde,</para>
+  <para style="q2">kan forvente at få en høj stilling.</para>
+  <chapter number="23" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Bliver du indbudt til en fest hos en magtfuld person,</para>
+  <para style="q2">så læg godt mærke til den mad, du får serveret.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Lad være med at proppe dig,</para>
+  <para style="q2">selvom du er nok så sulten.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Se ikke længselsfuldt efter de lækre retter,</para>
+  <para style="q2">for der er måske en bagtanke med det hele.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>Brug ikke al din energi på at blive rig,</para>
+  <para style="q2">men brug din fornuft og behersk dig.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Rigdom har det med at få vinger</para>
+  <para style="q2">og forsvinde som en fugl i luften.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>Spis ikke ved gnierens bord,</para>
+  <para style="q2">smag ikke på hans lækre mad.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>„Spis og drik!” siger han,</para>
+  <para style="q2">men han mener det ikke.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Til sidst får du kvalme af ham</para>
+  <para style="q2">og fortryder dine rosende ord.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>Forsøg ikke at tale et fjols til fornuft,</para>
+  <para style="q2">han vil ikke værdsætte din visdom.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Udnyt ikke de forældreløses svaghed,</para>
+  <para style="q2">flyt ikke markskellet ind på deres grund.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Herren vil selv tage sig af deres sag</para>
+  <para style="q2">og forsvare dem overfor uretten.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>Tænk over den vejledning, du får,</para>
+  <para style="q2">hør godt efter de kloge ord.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>Et barn har brug for disciplin,</para>
+  <para style="q2">og et slag med riset slår det ikke ihjel.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Det, et barn lærer ved at blive straffet,</para>
+  <para style="q2">kan senere redde dets liv.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>Min søn, når du tilegner dig visdom,</para>
+  <para style="q2">fryder jeg mig af hele mit hjerte.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Jeg bliver glad helt ind i sjælen,</para>
+  <para style="q2">når jeg hører dig sige de rette ord.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>Lad være med at misunde syndere,</para>
+  <para style="q2">men lev hver dag i ærefrygt for Herren,</para>
+  <para style="q1">
+    <verse number="18" style="v"/>så undgår du skuffede forhåbninger</para>
+  <para style="q2">og får dig en velsignet fremtid.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>Hør efter, min søn, og bliv vis,</para>
+  <para style="q2">så du kan holde den rette kurs i dit liv.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Lad være med at drikke dig fuld,</para>
+  <para style="q2">og hold dig fra alt frådseri.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Den slags gør dig bare fattig og sløv,</para>
+  <para style="q2">og du ender med at gå rundt i pjalter.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="22" style="v"/>Lyt til din far, som gav dig livet,</para>
+  <para style="q2">respekter din mor, selv når hun bliver gammel.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Søg visdom og sandhed, vejledning og indsigt,</para>
+  <para style="q2">for det er værdier, det betaler sig at holde fast ved.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Et fornuftigt barn gør sine forældre glade,</para>
+  <para style="q2">det er lykken at have et forstandigt barn.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Giv dine forældre grund til at glæde sig,</para>
+  <para style="q2">lad din mor få lov at være stolt af dig.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="26" style="v"/>Min søn, lyt til mit råd</para>
+  <para style="q2">og tag ved lære af mit eksempel.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>En løsagtig kvinde er som en faldgrube,</para>
+  <para style="q2">en luder som en løkke om halsen.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Hun ligger på lur som en røver</para>
+  <para style="q2">og forfører sine ofre til utroskab.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="29" style="v"/>Hvem får sorg, og hvem får smerte?</para>
+  <para style="q2">Hvem får skældud og masser af ballade?</para>
+  <para style="q3">Hvem får blå mærker og blodskudte øjne?</para>
+  <para style="q1">
+    <verse number="30" style="v"/>De, der drikker i tide og utide,</para>
+  <para style="q2">som altid er på udkig efter vin og øl.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>Lad dig ikke lokke af den perlende vin,</para>
+  <para style="q2">uanset hvor godt den smager,</para>
+  <para style="q1">
+    <verse number="32" style="v"/>for bagefter bider den som en slange,</para>
+  <para style="q2">den er giftig som en hugorm.</para>
+  <para style="q1">
+    <verse number="33" style="v"/>Dine øjne ser de underligste ting,</para>
+  <para style="q2">og din mund taler mystiske ord.</para>
+  <para style="q1">
+    <verse number="34" style="v"/>Du slingrer som en sømand på et skib i storm,</para>
+  <para style="q2">der klynger sig ør til en svajende mast.</para>
+  <para style="q1">
+    <verse number="35" style="v"/>Når du kommer til dig selv igen, siger du:</para>
+  <para style="q1">„De må have banket mig,</para>
+  <para style="q2">men jeg ænsede det ikke.</para>
+  <para style="q1">De må have slået mig,</para>
+  <para style="q2">men jeg husker det ikke!</para>
+  <para style="q1">Når jeg er ovre den her brandert,</para>
+  <para style="q2">må jeg se at få noget at drikke!”</para>
+  <chapter number="24" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Vær ikke misundelig på onde mennesker,</para>
+  <para style="q2">stræb ikke efter at være sammen med dem.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>De har ondt i sinde</para>
+  <para style="q2">og taler altid om ugerninger.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>Det kræver indsigt at etablere et hjem</para>
+  <para style="q2">og visdom at bygge det op.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Fyld rummene med kundskab</para>
+  <para style="q2">som kostbare og smukke skatte.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>En kriger, der også ejer visdom, er stærk,</para>
+  <para style="q2">klogskab er en fordel i kampen,</para>
+  <para style="q1">
+    <verse number="6" style="v"/>for der skal lægges planer, før man går i krig.</para>
+  <para style="q2">Jo flere rådgivere, jo større chance for at vinde.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>Visdom ligger uden for tåbernes rækkevidde,</para>
+  <para style="q2">de har intet at sige, når en sag skal afgøres.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Den, som altid planlægger ondt,</para>
+  <para style="q2">bliver kendt som en lumsk person.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Tåbens ondskabsfulde tanker er synd,</para>
+  <para style="q2">den arrogante får et dårligt ry.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Hvis du svigter under pres,</para>
+  <para style="q2">viser det, at du mangler styrke.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>Red dem, der er på vej til døden,</para>
+  <para style="q2">frels dem, inden det er for sent.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Sig ikke, at du intet vidste om det,</para>
+  <para style="q2">for Gud kender dine tanker.</para>
+  <para style="q1">Han, som vogter din sjæl, ved det hele</para>
+  <para style="q2">og han gengælder enhver efter deres gerninger.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>Spis honning, min søn, for det er godt,</para>
+  <para style="q2">det smager så herligt og sødt.</para>
+  <para style="q3">
+    <verse number="14" style="v"/>Visdom er honning for sjælen.</para>
+  <para style="q1">Får du visdom, er der håb for din fremtid,</para>
+  <para style="q2">et håb, der ikke vil skuffe dig.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>Lig ikke på lur for at angribe retskafne mennesker,</para>
+  <para style="q2">forbryd dig ikke ved at ødelægge deres hjem.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Den gudfrygtige rejser sig igen, når han er faldet,</para>
+  <para style="q2">men den gudløse bliver liggende, hvor han blev fældet.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Glæd dig ikke, når Herren straffer dine fjender,</para>
+  <para style="q2">vær ikke skadefro, når de får problemer,</para>
+  <para style="q1">
+    <verse number="18" style="v"/>for det bryder Herren sig ikke om,</para>
+  <para style="q2">og måske standser han så sin straf.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>Lad være at ærgre dig over de ondes fremgang,</para>
+  <para style="q2">misund dem ikke, når det går dem godt,</para>
+  <para style="q1">
+    <verse number="20" style="v"/>for de har hverken fremtid eller håb,</para>
+  <para style="q2">pludselig dør de, og det er forbi med dem.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>Min søn, vis ærefrygt for Herren og for kongen,</para>
+  <para style="q2">og hold dig væk fra dem, der gør oprør,</para>
+  <para style="q1">
+    <verse number="22" style="v"/>for pludselig kommer straffen over dem,</para>
+  <para style="q2">og hverken Guds eller kongens straf er til at spøge med.</para>
+  <para style="s1">Flere vise ordsprog</para>
+  <para style="p">
+    <verse number="23" style="v"/>Følgende ordsprog er forfattet af forskellige vise mænd:</para>
+  <para style="q1">Partiskhed hos en dommer er forfærdelig.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Hvis han frikender den skyldige,</para>
+  <para style="q2">bliver han forbandet og set ned på.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Men hvis han dømmer retfærdigt,</para>
+  <para style="q2">bliver han æret og set op til.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="26" style="v"/>Et ærligt svar er tegn på sandt venskab.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="27" style="v"/>Du må have økonomien i orden,</para>
+  <para style="q2">før du tænker på at stifte familie.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="28" style="v"/>Lad være at anklage nogen uden grund,</para>
+  <para style="q2">kom ikke med en falsk forklaring i retten.</para>
+  <para style="q1">
+    <verse number="29" style="v"/>Tænk ikke: „Nu skal han få betalt!</para>
+  <para style="q2">Han har selv været ude om det!”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="30" style="v"/>Jeg kom forbi en doven mands mark,</para>
+  <para style="q2">og en vingård, der tilhørte en tåbe,</para>
+  <para style="q1">
+    <verse number="31" style="v"/>der var tidsler og ukrudt overalt,</para>
+  <para style="q2">og muren var styrtet sammen.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>Jeg så det, tænkte over det,</para>
+  <para style="q2">og tog ved lære deraf:</para>
+  <para style="q1">
+    <verse number="33" style="v"/>„Bare en lille en på øjet,</para>
+  <para style="q2">bare lidt mere søvn,</para>
+  <para style="q3">en lille lur med foldede hænder.”</para>
+  <para style="q1">
+    <verse number="34" style="v"/>Mens du har travlt med at hvile dig,</para>
+  <para style="q2">bliver du overlistet af fattigdom.</para>
+  <chapter number="25" style="c"/>
+  <para style="s1">Flere af Salomons ordsprog</para>
+  <para style="p">
+    <verse number="1" style="v"/>Her følger nogle flere af Salomons ordsprog, samlet af embedsmænd ved kong Hizkija af Judas hof.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Gud har ret til at holde ting skjult,</para>
+  <para style="q2">og kongen har ret til at afsløre ting.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Ingen kender himlens og jordens mysterier,</para>
+  <para style="q2">eller hvad kongen tænker i sit stille sind.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Sølv skal renses for urenheder,</para>
+  <para style="q2">før sølvsmeden kan bruge det.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Hoffet skal renses for onde rådgivere,</para>
+  <para style="q2">før kongen kan regere med retfærdighed.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>Når du er indbudt til fest hos kongen,</para>
+  <para style="q2">så tag ikke en af de fornemmeste pladser.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Det er bedre at få tildelt en bedre plads</para>
+  <para style="q2">end at blive vist ned på en ringere.</para>
+  <para style="b"/>
+  <para style="q1">Tal kun om det, du selv har set,<note caller="+" style="f"><char style="fr" closed="false">25,7 </char><char style="ft" closed="false">Til dels oversat efter LXX, da den hebraiske tekst er uklar og mangelfuld.</char></note></para>
+  <para style="q2">
+    <verse number="8" style="v"/>vær ikke for hurtig til at anklage en anden.</para>
+  <para style="q1">Det bliver dig, der står tilbage med skammen,</para>
+  <para style="q2">hvis din anklage viser sig at være falsk.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>Hvis du kommer i klammeri med din nabo,</para>
+  <para style="q2">så lad være med at røbe fortrolige oplysninger.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Ellers vil man opdage, at du er åbenmundet,</para>
+  <para style="q2">og du har mistet din troværdighed for altid.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>Et ord i rette tid og på rette sted</para>
+  <para style="q2">er som et dejligt æble,<note caller="+" style="f"><char style="fr" closed="false">25,11 </char><char style="ft" closed="false">Det vides ikke, om det hebraiske ord betyder „æble”, „abrikos” eller måske „appelsin”.</char></note> serveret på et sølvfad.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Værdifuld som en ørering eller et smykke af guld</para>
+  <para style="q2">er den vises irettesættelse for den, der vil tage ved lære.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>En pålidelig budbringer er velgørende for sin herre</para>
+  <para style="q2">som en iskold forfriskning på en varm sommerdag.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Den, der giver tomme løfter,</para>
+  <para style="q2">er som en drivende sky uden regn.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>Selv en konge kan overtales, hvis du er tålmodig nok,</para>
+  <para style="q2">med venlighed kan man klare mange problemer.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v"/>For meget af det gode giver væmmelse.</para>
+  <para style="q2">Finder du honning, så spis ikke mere, end hvad godt er.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>Rend ikke dine venner på dørene,</para>
+  <para style="q2">ellers bliver de trætte af dig.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v"/>At blive anklaget på falsk grundlag</para>
+  <para style="q2">er som at få en dolk stukket i ryggen.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>At stole på en upålidelig person i en nødsituation</para>
+  <para style="q2">er som at tygge med en løs tand</para>
+  <para style="q3">eller støtte på en forstuvet fod.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>At synge muntre viser for en, som sørger,</para>
+  <para style="q2">er som at tage tøjet af ham på en kold dag</para>
+  <para style="q3">eller gnide salt i såret.<note caller="+" style="f"><char style="fr" closed="false">25,20 </char><char style="ft" closed="false">Ordret: „at hælde eddike på natron”. Den græske oversættelse har „et sår” i stedet for „natron”.</char></note></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>Er din fjende sulten, så giv ham noget at spise,</para>
+  <para style="q2">er han tørstig, så giv ham noget at drikke.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>På den måde gør du ham skamfuld,</para>
+  <para style="q2">og Herren vil belønne dig.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="23" style="v"/>Så sikkert som nordenvinden bringer kulde,</para>
+  <para style="q2">bringer sladder vrede i sindet.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="24" style="v"/>Hellere bo i et hummer på loftet</para>
+  <para style="q2">end i hus med en kone, der skælder ud.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="25" style="v"/>At høre godt nyt fra et fjernt land</para>
+  <para style="q2">er som et glas koldt vand for en, som tørster.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="26" style="v"/>En retsindig, der lader sig overtale af en gudløs,</para>
+  <para style="q2">er som en mudret kilde eller en forurenet brønd.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="27" style="v"/>Det er ikke godt at spise for mange søde sager,</para>
+  <para style="q2">man skal ikke forvente altid at blive rost.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="28" style="v"/>Den, der ikke kan beherske sig,</para>
+  <para style="q2">er sårbar som en by uden mur omkring.</para>
+  <chapter number="26" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>At en tåbe bliver æret er lige så upassende</para>
+  <para style="q2">som regn i tørtiden eller sne om sommeren.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v"/>En svale sætter sig ikke på din skulder,</para>
+  <para style="q2">og en ufortjent forbandelse rammer dig ikke.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>En hest kan styres med bidsel og et æsel med pisk,</para>
+  <para style="q2">en tåbe lærer kun ved at få tæsk.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Giver du en tåbe igen med samme mønt,</para>
+  <para style="q2">kommer du selv til at ligne en tåbe.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Giver du en fornuftig forklaring til en tåbe,</para>
+  <para style="q2">kan han måske indse sin tåbelighed.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Det er skørt at sende en besked med en tåbe,</para>
+  <para style="q2">det er værre end ingenting, det giver bagslag.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Hvis en tåbe prøver at bruge et ordsprog,</para>
+  <para style="q2">er det som en lam, der prøver at gå.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>At hædre en tåbe er lige så tosset</para>
+  <para style="q2">som at binde stenen fast til slyngen.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>En tåbe, der stiver sig af med ordsprog,</para>
+  <para style="q2">er som en drukkenbolt, der støtter sig til en tjørnekæp.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Den arbejdsgiver, der hyrer den første den bedste,</para>
+  <para style="q2">er som en skytte, der skyder på må og få.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>En tåbe, der fremturer i sin tåbelighed,</para>
+  <para style="q2">er som en hund, der slikker sit eget bræk i sig.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>En tåbe, der er ærlig, er bedre faren</para>
+  <para style="q2">end den, der fejlagtigt tror, han er klog.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>Den dovne siger: „Jeg kan ikke gå på arbejde,</para>
+  <para style="q2">for jeg risikerer at blive ædt af en løve!”</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Den dovne vender og drejer sig i sengen,</para>
+  <para style="q2">som døren drejer sig på sine hængsler.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Den dovne stikker fingrene i frugtfadet,</para>
+  <para style="q2">men gider ikke føre hånden til munden.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Den dovne er klogere i sine egne øjne</para>
+  <para style="q2">end syv vise og fornuftige mennesker.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>En forbipasserende, der blander sig i et skænderi,</para>
+  <para style="q2">er som en, der rykker en vild hund i øret.</para>
+  <para style="q1">
+    <verse number="18-19" style="v"/>Den, der bedrager sin ven og bagefter påstår, at det var for sjov,</para>
+  <para style="q2">er som en sindssyg, der leger med et dødbringende våben.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>Uden brændsel går ilden ud,</para>
+  <para style="q2">uden bagtalelse dør striden ud.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>En kværulant får en strid til at blusse op,</para>
+  <para style="q2">som når man bærer brænde til bålet.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Sladder sluges med hud og hår</para>
+  <para style="q2">og lagrer sig dybt i sindet.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="23" style="v"/>Som skinnende glasur på en grim lerkrukke</para>
+  <para style="q2">er smukke ord, der dækker over falske motiver.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>En ondskabsfuld person kan tale smigrende ord,</para>
+  <para style="q2">men er fyldt med had indvendigt.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Tro ikke på de venlige ord,</para>
+  <para style="q2">for hans hjerte er fuldt af onde planer.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Skønt han snedigt skjuler sit had,</para>
+  <para style="q2">bliver det før eller senere klart for enhver.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Den, der graver en grav for andre, falder selv i den,</para>
+  <para style="q2">den, der ruller en stor sten mod andre, knuses selv under den.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Den, der lyver, viser sit had,</para>
+  <para style="q2">ondsindet smiger gør megen fortræd.</para>
+  <chapter number="27" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Pral ikke med dine fremtidsplaner,</para>
+  <para style="q2">du ved jo ikke, hvad morgendagen bringer.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v"/>Ros ikke dig selv,</para>
+  <para style="q2">men overlad det til andre.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>Sten og sand er tungt at bære,</para>
+  <para style="q2">men at udholde en tåbes provokationer er værre.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>Det er hårdt at møde vrede,</para>
+  <para style="q2">men bitter jalousi er dog værre.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>Kærlighed, der irettesætter,</para>
+  <para style="q2">er bedre end passiv kærlighed.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Det er bedre at få kritik fra en ven</para>
+  <para style="q2">end skulderklap fra en fjende.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>Den, der er stopmæt, har ikke lyst til dessert,</para>
+  <para style="q2">men den sultne kan spise tørt brød.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Som en fugl, der er kommet bort fra sin rede,</para>
+  <para style="q2">er den, der har måttet forlade sit hjem.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Sande venner giver styrke til sjælen,</para>
+  <para style="q2">som aromatiske olier giver lindring til kroppen.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Vedligehold dine venskaber,</para>
+  <para style="q2">både dine egne og dine forældres.</para>
+  <para style="q1">Når ulykken da rammer,</para>
+  <para style="q2">behøver du ikke søge hjælp hos en slægtning.</para>
+  <para style="q1">Det er bedre at have en god ven tæt på</para>
+  <para style="q2">end en slægtning langt borte.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>Når du vokser i visdom, min unge lærling, gør du mig glad,</para>
+  <para style="q2">for så har min undervisning dog båret frugt.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Den fornuftige ser faren på forhånd og undgår den,</para>
+  <para style="q2">en tåbe vader videre og må tage konsekvensen.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>Den, der stiller kaution og tager imod pant fra fremmede,</para>
+  <para style="q2">risikerer at miste alt, hvad han ejer.<note caller="+" style="f"><char style="fr" closed="false">27,13 </char><char style="ft" closed="false">Teksten er uklar og oversættelsen usikker.</char></note></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>Hvis man for tidligt råber godmorgen til sin nabo,</para>
+  <para style="q2">bliver han irriteret i stedet for glad.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>En kone, der altid skælder ud,</para>
+  <para style="q2">er som vedvarende dryp fra et hul i taget.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>At få hende til at holde op</para>
+  <para style="q2">er som at prøve at fange vinden</para>
+  <para style="q2">eller holde fast på et stykke sæbe.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>Som jern skærper jern,</para>
+  <para style="q2">sådan skærper gode venner hinanden.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v"/>Den, der passer et figentræ godt,</para>
+  <para style="q2">får del i frugten,</para>
+  <para style="q1">og den tjener, der passer sit arbejde godt,</para>
+  <para style="q2">får ære og ros fra sin herre.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>Dit ansigt kan du se i et spejl,</para>
+  <para style="q2">din karakter kan du se i dit hjerte.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>Død og ødelæggelse får aldrig ende,</para>
+  <para style="q2">et begærligt menneske får aldrig nok.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>Smeltning afslører guldets ægthed,</para>
+  <para style="q2">et menneskes omdømme viser dets karakter.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="22" style="v"/>Om du så hakkede en tåbe til plukfisk,</para>
+  <para style="q2">ville hans dumhed stadig hænge ved ham.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="23" style="v"/>Pas godt på dine får og geder,</para>
+  <para style="q2">sørg godt for hele din besætning.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Ejendele og position kan man hurtigt miste,</para>
+  <para style="q2">selv kongen ved ikke, om hans søn arver tronen.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Men når høet er høstet, og nyt græs spirer frem,</para>
+  <para style="q2">og når græsset på skråningerne er bragt i hus,</para>
+  <para style="q1">
+    <verse number="26" style="v"/>da får du masser af uld til nyt tøj,</para>
+  <para style="q2">og du kan opkøbe jord ved at sælge dine geder.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Tilmed har du rigeligt med gedemælk,</para>
+  <para style="q2">nok til dig selv, din familie og dine tjenestefolk.</para>
+  <chapter number="28" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Den, som har dårlig samvittighed, flygter,</para>
+  <para style="q2">selv når ingen er efter ham,</para>
+  <para style="q1">men den, hvis samvittighed er god,</para>
+  <para style="q2">holder stand som en løve.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v"/>Når et folk er i oprør, holder en leder ikke længe,</para>
+  <para style="q2">men en klog og dygtig regent skaber ro og tryghed.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>En ubehøvlet tyran, der undertrykker de svage,</para>
+  <para style="q2">er som en haglbyge, der slår kornet ned.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>Den, der ignorerer loven, støtter ondskaben,</para>
+  <para style="q2">den, der holder fast ved loven, bekæmper det onde.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>De onde forstår ikke, hvad retfærdighed er,</para>
+  <para style="q2">men det gør de, der ønsker at gøre Guds vilje.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Det er bedre at være ærlig og fattig</para>
+  <para style="q2">end at være rig og uhæderlig.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>En fornuftig søn adlyder loven,</para>
+  <para style="q2">men den, der føjter om med dårlige venner,</para>
+  <para style="q2">er en vanære for sin far.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Den, som bliver rig ved at udnytte andre og kræve høje renter,</para>
+  <para style="q2">mister sin rigdom til den, som er barmhjertig mod de hjælpeløse.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>Når et menneske ignorerer Guds lov,</para>
+  <para style="q2">er selv hans bønner en afskyelighed.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Den, der forleder andre til synd, falder i sin egen fælde,</para>
+  <para style="q2">men de retsindige skal få en rig belønning.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>En, der er rig, tror, han ved alt,</para>
+  <para style="q2">men en fattig med sund fornuft ved bedre.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>Når retfærdigheden sejrer, er der grund til fest,</para>
+  <para style="q2">men når ondskaben hersker, søger folk i skjul.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>Den, der dækker over sine fejl, får aldrig fremgang,</para>
+  <para style="q2">den, der erkender dem og lover bedring, får en ny chance.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Velsignet er den, som har ærefrygt for Gud,</para>
+  <para style="q2">den, som kun tror på sig selv, ender i store problemer.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>Farlig som en brølende løve eller en sulten bjørn</para>
+  <para style="q2">er en ondsindet hersker for det folk, han regerer.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v"/>En regent, der undertrykker sit folk, er en tåbe.</para>
+  <para style="q2">En god leder udnytter ikke sin magt til egen fordel.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>Den, der har mord på samvittigheden, er altid på flugt,</para>
+  <para style="q2">lad være med at dække over ham.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Den retsindige bliver reddet,</para>
+  <para style="q2">den uærlige går sin undergang i møde.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>Den, der passer sit arbejde, har nok at spise,</para>
+  <para style="q2">den, der drømmer tiden bort, må sulte.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Den, der er ærlig og trofast, bliver rigt belønnet,</para>
+  <para style="q2">den, der uærligt bliver rig, undgår ikke straf.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>Partiskhed i retten er altid af det onde,</para>
+  <para style="q2">og nogle kan bestikkes bare med et stykke brød.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Den griske har kun øje for at vinde sig rigdom,</para>
+  <para style="q2">han ser ikke, at det er fattigdom, der venter ham.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="23" style="v"/>I sidste ende er en ærlig irettesættelse bedre</para>
+  <para style="q2">end altid at høre på smigrende ord.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="24" style="v"/>Den, der stjæler fra sine forældre,</para>
+  <para style="q2">er ikke bedre end en simpel røver.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Selviskhed fører til skænderier,</para>
+  <para style="q2">tillid til Herren fører til fremgang.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Den, der kun stoler på sig selv, er en tåbe,</para>
+  <para style="q2">den, der vandrer i visdom, er tryg.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="27" style="v"/>Den, der giver til mennesker i nød, vil altid selv have nok,</para>
+  <para style="q2">den, der lukker øjnene for nøden, bliver foragtet.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="28" style="v"/>Når et ondt menneske regerer, søger folk i dækning,</para>
+  <para style="q2">når den onde styrtes, blomstrer retfærdigheden.</para>
+  <chapter number="29" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Den, der aldrig tager en irettesættelse alvorligt,</para>
+  <para style="q2">vil en dag opdage, at nu er det for sent.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v"/>Folk er glade, når de har gode ledere,</para>
+  <para style="q2">men de stønner, når ondskaben hersker.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>Den søn, der værdsætter visdom, glæder sin far,</para>
+  <para style="q2">men den, der omgås løsagtige piger, mister sin formue.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>En retfærdig konge styrker sit land,</para>
+  <para style="q2">men den, der tager imod bestikkelse, ødelægger det.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>Den, der lefler for andre,</para>
+  <para style="q2">spreder et net for sine<note caller="+" style="f"><char style="fr" closed="false">29,5 </char><char style="ft" closed="false">Eller: „deres fødder”.</char></note> fødder.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>Den onde bliver straffet for sine synder,</para>
+  <para style="q2">men de retskafne synger af glæde.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>Den retsindige beskytter de svages rettigheder,</para>
+  <para style="q2">den onde er ligeglad.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Hån og spot kan sætte en hel by i oprør,</para>
+  <para style="q2">men den vise beroliger gemytterne.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Man kan ikke diskutere med en tåbe,</para>
+  <para style="q2">han vil enten blive vred eller fornærmet.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Voldsmænd hader en ærlig mand</para>
+  <para style="q2">og prøver at gøre det af med ham.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>En tåbe giver luft for sin vrede,</para>
+  <para style="q2">den vise behersker sig.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>En leder, der accepterer løgn,</para>
+  <para style="q2">tiltrækker uærlige rådgivere.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>Den undertrykte og undertrykkeren har én ting tilfælles:</para>
+  <para style="q2">Herren gav dem begge øjne at se med.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>Den konge, der forsvarer de svages ret,</para>
+  <para style="q2">får lov at regere længe.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>Et barn opdrages ved vejledning og irettesættelse,</para>
+  <para style="q2">en uopdragen unge bringer skam over sin mor.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v"/>Hvis landets ledere er onde, sker der mange forbrydelser,</para>
+  <para style="q2">men de retskafne holder ud og vil opleve regimets fald.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>Opdrag dine børn godt,</para>
+  <para style="q2">så vil de bringe dig glæde og fred.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v"/>Uden Guds ledelse vil et folk fare vild,</para>
+  <para style="q2">velsignet er den, der følger hans vejledning.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>Ord er ikke nok over for en modvillig slave,</para>
+  <para style="q2">han retter sig ikke efter dem, selvom han forstår dem.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>En tåbe er bedre stillet</para>
+  <para style="q2">end den, der taler uden at tænke.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>Giver du din slave, hvad han peger på, mens han er barn,</para>
+  <para style="q2">vil han give dig store problemer, når han bliver voksen.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="22" style="v"/>En ilter person kommer let i klammeri,</para>
+  <para style="q2">hidsighed fører til meget ondt.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="23" style="v"/>Hovmod fører et menneske til fald,</para>
+  <para style="q2">ydmyghed fører til hæder og ære.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="24" style="v"/>Er du medskyldig i en forbrydelse, er det værst for dig selv,</para>
+  <para style="q2">når du indkaldes som vidne, tør du ikke røbe sandheden.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="25" style="v"/>Menneskefrygt lukker dig inde i et bur,</para>
+  <para style="q2">men at sætte sin lid til Herren giver tryghed.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="26" style="v"/>Mange søger medhold hos dem, der har magten,</para>
+  <para style="q2">men den fuldkomne retfærdighed finder du hos Herren.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="27" style="v"/>De retskafne tager afstand fra de uærlige,</para>
+  <para style="q2">og de onde foragter de gode.</para>
+  <chapter number="30" style="c"/>
+  <para style="s1">Agurs sentenser</para>
+  <para style="p">
+    <verse number="1" style="v"/>Her følger nogle ord af Agur, Jakes søn, henvendt til Itiel og Ukal.<note caller="+" style="f"><char style="fr" closed="false">30,1 </char><char style="ft" closed="false">Teksten er uklar.</char></note></para>
+  <para style="q1">
+    <verse number="2" style="v"/>Jeg er bare et almindeligt menneske</para>
+  <para style="q2">uden nogen særlig indsigt.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Jeg er ikke nogen vismand</para>
+  <para style="q2">og kan ikke udgrunde Guds tanker.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Hvem er steget op til himlen og steget ned igen?</para>
+  <para style="q2">Hvem har kontrol over vinden?</para>
+  <para style="q3">Hvem har magt over havets bølger?</para>
+  <para style="q1">Er det måske et menneske, der har grundlagt jorden</para>
+  <para style="q2">og fastsat dens grænser?</para>
+  <para style="q1">I så fald hvad hedder han, og hvad hedder hans søn?</para>
+  <para style="q2">Fortæl mig det, hvis du kender ham.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>Alt, hvad Gud siger, er sandt,</para>
+  <para style="q2">han beskytter dem, der søger tilflugt hos ham.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Lav ikke om på hans ord,</para>
+  <para style="q2">for at han ikke skal dømme dig som løgner.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>Herre, jeg beder dig om to ting,</para>
+  <para style="q2">som skal kendetegne mit liv.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>For det første: Bevar mig fra falskhed og løgn.</para>
+  <para style="q2">For det andet: Bevar mig fra fattigdom såvel som fra rigdom.</para>
+  <para style="q3">Giv mig blot de daglige fornødenheder.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>For hvis jeg bliver rig,</para>
+  <para style="q2">bliver jeg måske selvtilfreds</para>
+  <para style="q3">og tror ikke længere, jeg har brug for dig,</para>
+  <para style="q1">og hvis jeg bliver fattig,</para>
+  <para style="q2">stjæler jeg måske og vanærer derved dit navn.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Anklag ikke en slave over for hans herre på et falsk grundlag,</para>
+  <para style="q2">ellers vil slaven forbande dig, og du må bøde for det.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>Der findes dem, som forbander deres far</para>
+  <para style="q2">og ikke påskønner deres mor.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>I egne øjne er de helt uskyldige</para>
+  <para style="q2">på trods af deres mange synder.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>De har himmelvendte blikke</para>
+  <para style="q2">og går rundt med næsen i sky.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Deres tænder er knivskarpe,</para>
+  <para style="q2">og de fortærer de hjælpeløse.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>Iglen har to døtre, der hedder:</para>
+  <para style="q2">„Giv mig dit” og „Giv mig dat”.</para>
+  <para style="b"/>
+  <para style="q1">Der er fire ting, som aldrig får nok</para>
+  <para style="q2">og altid vil have mere:</para>
+  <para style="q1">
+    <verse number="16" style="v"/>De dødes rige og det ufrugtbare moderliv,</para>
+  <para style="q2">den udtørrede, tørstige jord og ilden, der breder sig uhæmmet.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>Hvis du ser på din far med foragt i blikket,</para>
+  <para style="q2">og hvis du ser på din mor med trodsige øjne,</para>
+  <para style="q1">skal ravnene hakke dine øjne ud,</para>
+  <para style="q2">og gribbene skal æde dem.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v"/>Der er fire ting, jeg ikke fatter:</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Ørnens vej på himlen,</para>
+  <para style="q2">slangens vej over klippen,</para>
+  <para style="q1">skibets vej over havet,</para>
+  <para style="q2">den unge mands vej i ungdommen.<note caller="+" style="f"><char style="fr" closed="false">30,19 </char><char style="ft" closed="false">Oversat efter LXX. Meningen er uklar.</char></note></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>Jeg forstår heller ikke den utro kvinde:</para>
+  <para style="q1">Først stiller hun sin sult,</para>
+  <para style="q2">så tørrer hun sig om munden og siger:</para>
+  <para style="q3">„Jeg har da ikke gjort noget forkert!”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>Fire ting er ikke til at bære:</para>
+  <para style="q1">
+    <verse number="22" style="v"/>En slave, der bliver konge,</para>
+  <para style="q2">en tåbe, der bliver rig,</para>
+  <para style="q1">
+    <verse number="23" style="v"/>en bitter kvinde, der bliver gift,</para>
+  <para style="q2">og en slavepige, der overtager sin frues plads.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="24" style="v"/>Fire skabninger på jorden er små,</para>
+  <para style="q2">men kan udføre store bedrifter:</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Myrerne er små og svage,</para>
+  <para style="q2">men samler dog vinterforråd om sommeren.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Klippegrævlinger er ikke særlig stærke,</para>
+  <para style="q2">men kan dog bygge deres bolig i klippen.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Græshopper har ingen leder,</para>
+  <para style="q2">men flyver alligevel i tæt formation.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Firben kan med lethed fanges,</para>
+  <para style="q2">men trænger dog ind i kongens palads.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="29" style="v"/>Der er fire slags konger på jorden,</para>
+  <para style="q2">og de optræder alle med selvbevidst værdighed:</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Løven, dyrenes konge, der ikke viger tilbage for noget,</para>
+  <para style="q2">
+    <verse number="31" style="v"/>kamphanen, der ikke lader sig kue,</para>
+  <para style="q1">bjerggeden, der skuer ud over sletten,</para>
+  <para style="q2">og kongen, der fører an i slaget.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="32" style="v"/>Hvis du har været så dum at ophøje dig selv,</para>
+  <para style="q2">eller hvis du har lagt ondskabsfulde planer,</para>
+  <para style="q3">så hold op med det samme.</para>
+  <para style="q1">
+    <verse number="33" style="v"/>For ligesom mælk, der kærnes, bliver til smør,</para>
+  <para style="q2">og et slag på næsen får blodet frem,</para>
+  <para style="q3">sådan vil stadige provokationer ende med ufred.</para>
+  <chapter number="31" style="c"/>
+  <para style="s1">Kong Lemuels sentenser</para>
+  <para style="p">
+    <verse number="1" style="v"/>Her følger nogle ord af kong Lemuel, gode råd, som hans mor lærte ham.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Lemuel, min søn, min elskede søn, du, som er svaret på mine bønner, hør godt efter, hvad jeg siger.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Brug ikke energi, penge og tid på at jagte kvinder,</para>
+  <para style="q2">for det har ført konger før dig på vildspor.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>Det er upassende for en konge at drikke sig fuld,</para>
+  <para style="q2">ledere må ikke være afhængige af alkohol,</para>
+  <para style="q1">
+    <verse number="5" style="v"/>for da kommer de let til at gøre noget forkert,</para>
+  <para style="q2">og de værner ikke længere om de svages ret.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Men giv gerne alkohol til de døende,</para>
+  <para style="q2">og vin til dem, der lider.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Lad dem drikke, så de glemmer deres smerter</para>
+  <para style="q2">og kan udholde deres lidelser.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Forsvar dem, der ikke kan tale deres egen sag,</para>
+  <para style="q2">sørg for, at de hjælpeløse opnår retfærdighed.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Når du afsiger dine domme, da døm retfærdigt,</para>
+  <para style="q2">og stil dig gerne på den svages side.</para>
+  <para style="s1">En ode til den ideelle hustru</para>
+  <para style="q1">
+    <verse number="10" style="v"/>At<note caller="+" style="f"><char style="fr" closed="false">31,10 </char><char style="ft" closed="false">Følgende lovprisning af den ædle og ideelle hustru er akrostisk, idet hvert af de 22 vers begynder med et af de 22 hebraiske bogstaver i alfabetisk rækkefølge. For at gøre det samme på dansk har vi rokeret lidt rundt på rækkefølgen af vers 20-25 og oversat teksten lidt friere end normalt.</char></note> finde den ideelle hustru er enhver mands drøm.</para>
+  <para style="q2">Lykkes det, har han fundet en uvurderlig skat.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Bedre kan ingen mand ønske sig det,</para>
+  <para style="q2">altid har hun hans fulde tillid.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Charmerende er hun tillige,</para>
+  <para style="q2">støtter og opmuntrer ham livet igennem.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Dagene bruger hun flittigt,</para>
+  <para style="q2">hun samler uld og hør og har travlt med at spinde.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Eksotiske retter forstår hun at frembringe,</para>
+  <para style="q2">for hun har en bred horisont.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Før daggry står hun op for at lave mad til familien</para>
+  <para style="q2">og fordele opgaverne mellem husets piger.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Går hun forbi et frugtbart jordstykke, køber hun det</para>
+  <para style="q2">og planter en vingård for, hvad hun har tjent.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Hun går energisk i gang</para>
+  <para style="q2">og arbejder med stor udholdenhed.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Indsatsen bærer frugt,</para>
+  <para style="q2">og der er lys i hendes vindue til langt ud på natten.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Jævnligt sidder hun ved sin rok</para>
+  <para style="q2">eller spinder dygtigt ved tenen.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Kulden er ikke noget problem,</para>
+  <para style="q2">for hun er klar med det varme tøj.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>Lider de fattige nød,</para>
+  <para style="q2">er hun der straks med en hjælpende hånd.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Man ser hendes mand som en af byens ledere,</para>
+  <para style="q2">for han er en mand, der aftvinger respekt.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Nydeligt er hun klædt i dragter af det fineste stof,</para>
+  <para style="q2">hun syr selv sit tøj og væver sine tæpper.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Optimistisk ser hun fremtiden i møde,</para>
+  <para style="q2">hun optræder værdigt og karakterfast.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Penge har hun nok af,</para>
+  <para style="q2">for hun sælger af det pragtfulde tøj, hun fremstiller.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Råd og opmuntring giver hun gerne,</para>
+  <para style="q2">hun taler med visdom og venlige ord.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Sit hus har hun styr på,</para>
+  <para style="q2">hun kender ikke til lediggang.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Til hver en tid får hun ros af sine børn,</para>
+  <para style="q2">og hendes mand lovpriser hende med følgende ord:</para>
+  <para style="q1">
+    <verse number="29" style="v"/>„Utallige kvinder er dygtige,</para>
+  <para style="q2">men du overgår dem alle!”</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Ydre skønhed falmer, og charme kan bedrage,</para>
+  <para style="q2">men en kvinde, der følger Herren, er al beundring værd.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>Ære og hæder fortjener hun fuldt ud,</para>
+  <para style="q2">og hendes gerninger lovprises overalt i byen.</para>
+</usx>

@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="3.0">
+  <book code="LAM" style="id">- New Russian Translation (Новый русский перевод)</book>
+  <para style="rem">Copyright © 1988, 1991, 1998, 2006, 2010, 2014 by Biblica, Inc.</para>
+  <para style="h">ПЛАЧ ИЕРЕМИИ</para>
+  <para style="toc1">Плач Иеремии</para>
+  <para style="toc2">Плач Иеремии</para>
+  <para style="toc3">Плач</para>
+  <para style="mt1">Плач Иеремии</para>
+  <para style="ip">Книга Плач Иеремии – это сборник, состоящий из пяти горестных песен, в которых оплакиваются Иерусалим и храм Бога, разрушенные вавилонскими войсками в 586 г. до н. э. Главная тема книги – беспощадное наказание Иерусалима за грехи его жителей. Можно наблюдать тесную связь этой книги с 28 главой книги Второзаконие, где были перечислены проклятия, которые могут постигнуть народ, если он не будет послушен повелениям Бога. Автор Плача хотел показать, что все происшедшее с Иерусалимом и Иудеей стало исполнением этих проклятий.</para>
+  <para style="ip">Несмотря на все это, в кульминации, которая приходится на середину книги, утверждается, что Бог милостив, добр и верен, готов простить всех тех, кто терпеливо ожидает Его (<char style="xt"><ref loc="LAM 3:22-27">3:22-27</ref></char>) и возвращается к Нему с искренним раскаянием (<char style="xt"><ref loc="LAM 3:40-42">3:40-42</ref></char>).</para>
+  <para style="ip">Часто в этой книге встречается персонификация Иерусалима и Иудеи, например, в таких выражениях как «дочь Сиона», «дочь Иуды» и т. п. Иерусалим действует и говорит здесь как личность.</para>
+  <para style="ip">
+    <char style="xt">Главы <ref loc="LAM 1-4">1–4</ref></char> написаны в форме акростиха: каждый стих главы начинается с очередной буквы еврейского алфавита, состоящего из 22 букв. Но в третьей главе с одной буквы начинаются уже каждые три стиха. Пятая глава, хоть и не является акростихом, тоже состоит из 22 стихов.</para>
+  <para style="ip">Традиционно иудеи читают эту книгу на годовщину разрушения храма.</para>
+  <para style="iot">Содержание</para>
+  <para style="io1">Иерусалим – одинокая вдова (<char style="ior"><ref loc="LAM 1:1-22">1:1-22</ref></char>).</para>
+  <para style="io1">Бог наказывает Иерусалим (<char style="ior"><ref loc="LAM 2:1-22">2:1-22</ref></char>).</para>
+  <para style="io1">Великая верность Бога (<char style="ior"><ref loc="LAM 3:1-66">3:1-66</ref></char>).</para>
+  <para style="io1">Разрушенный Иерусалим (<char style="ior"><ref loc="LAM 4:1-22">4:1-22</ref></char>).</para>
+  <para style="io1">Молитва об избавлении (<char style="ior"><ref loc="LAM 5:1-22">5:1-22</ref></char>).</para>
+  <para style="ie"/>
+  <chapter number="1" style="c" sid="LAM 1"/>
+  <para style="s1">Иерусалим – одинокая вдова</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="LAM 1:1"/>Как одиноко стоит столица,</para>
+  <para style="q2" vid="LAM 1:1">что некогда была многолюдной!</para>
+  <para style="q1" vid="LAM 1:1">Она стала, как вдова,</para>
+  <para style="q2" vid="LAM 1:1">а была великой среди народов,</para>
+  <para style="q1" vid="LAM 1:1">была царицей над областями,</para>
+  <para style="q2" vid="LAM 1:1">но стала рабыней.<verse eid="LAM 1:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="LAM 1:2"/>Горько плачет она ночью,</para>
+  <para style="q2" vid="LAM 1:2">и слезы текут по ее щекам.</para>
+  <para style="q1" vid="LAM 1:2">Нет у нее утешителя</para>
+  <para style="q2" vid="LAM 1:2">среди всех возлюбленных<note caller="+" style="f"><char style="fr" closed="false">1:2 </char><char style="ft" closed="false">возлюбленные – союзники Иудеи, которые предали ее, и их боги. Также в ст. 19.</char></note> ее,</para>
+  <para style="q1" vid="LAM 1:2">все друзья изменили ей</para>
+  <para style="q2" vid="LAM 1:2">и стали врагами.<verse eid="LAM 1:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="LAM 1:3"/>Иудея пошла в изгнание,</para>
+  <para style="q2" vid="LAM 1:3">после бед и тяжкого рабства.</para>
+  <para style="q1" vid="LAM 1:3">Поселилась она среди других народов,</para>
+  <para style="q2" vid="LAM 1:3">но не нашла покоя.</para>
+  <para style="q1" vid="LAM 1:3">Все ее преследователи настигли ее</para>
+  <para style="q2" vid="LAM 1:3">посреди бедствия.<verse eid="LAM 1:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="LAM 1:4"/>Дороги Сиона плачут,</para>
+  <para style="q2" vid="LAM 1:4">потому что никто не идет на праздник.</para>
+  <para style="q1" vid="LAM 1:4">Все ворота столицы опустели,</para>
+  <para style="q2" vid="LAM 1:4">стонут священники ее,</para>
+  <para style="q1" vid="LAM 1:4">девушки печальны,</para>
+  <para style="q2" vid="LAM 1:4">горько и ей самой.<verse eid="LAM 1:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="LAM 1:5"/>Враги правят ею,</para>
+  <para style="q2" vid="LAM 1:5">неприятели ее благоденствуют.</para>
+  <para style="q1" vid="LAM 1:5">Горе послал ей Господь</para>
+  <para style="q2" vid="LAM 1:5">из-за множества ее беззаконий.</para>
+  <para style="q1" vid="LAM 1:5">Дети ее пошли в плен,</para>
+  <para style="q2" vid="LAM 1:5">враг гонит их перед собой.<verse eid="LAM 1:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="LAM 1:6"/>Все великолепие покинуло дочь Сиона.</para>
+  <para style="q2" vid="LAM 1:6">Вожди ее подобны оленям, не находящим пастбища;</para>
+  <para style="q2" vid="LAM 1:6">обессиленные, они бегут впереди погонщика.<verse eid="LAM 1:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="LAM 1:7"/>В дни своих бедствий и скитаний</para>
+  <para style="q2" vid="LAM 1:7">вспомнила столица о всех драгоценностях,</para>
+  <para style="q2" vid="LAM 1:7">которые были у нее в прежние дни.</para>
+  <para style="q1" vid="LAM 1:7">Когда народ ее попал в руки врага,</para>
+  <para style="q2" vid="LAM 1:7">никто не помог ей;</para>
+  <para style="q1" vid="LAM 1:7">враги смотрели на нее</para>
+  <para style="q2" vid="LAM 1:7">и смеялись над ее поражением.<verse eid="LAM 1:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="LAM 1:8"/>Ужасно согрешила столица,</para>
+  <para style="q2" vid="LAM 1:8">поэтому она и стала нечистой.</para>
+  <para style="q1" vid="LAM 1:8">Все, кто прославлял ее, теперь презирают,</para>
+  <para style="q2" vid="LAM 1:8">потому что увидели ее наготу.</para>
+  <para style="q1" vid="LAM 1:8">Да и сама она вздыхает и отворачивается;<verse eid="LAM 1:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="LAM 1:9"/>ее нечистота замарала ей подол.</para>
+  <para style="q2" vid="LAM 1:9">И так как она не задумывалась о будущем,</para>
+  <para style="q1" vid="LAM 1:9">падение ее было ошеломительным,</para>
+  <para style="q2" vid="LAM 1:9">и не было у нее утешителя.</para>
+  <para style="q1" vid="LAM 1:9">– О Господь, взгляни на мое страдание,</para>
+  <para style="q2" vid="LAM 1:9">ведь враг торжествует!<verse eid="LAM 1:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="LAM 1:10"/>Враг похитил у нее все самое ценное;</para>
+  <para style="q2" vid="LAM 1:10">она видит, как в ее святилище входят язычники,</para>
+  <para style="q2" vid="LAM 1:10">те, кому Ты запретил вступать в Твое собрание.<verse eid="LAM 1:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="LAM 1:11"/>Весь народ ее стонет в поисках хлеба,</para>
+  <para style="q2" vid="LAM 1:11">отдает драгоценности свои за пищу,</para>
+  <para style="q2" vid="LAM 1:11">лишь бы жизнь сохранить.</para>
+  <para style="q1" vid="LAM 1:11">– О Господь, обрати Твой взор</para>
+  <para style="q2" vid="LAM 1:11">и посмотри как я унижена!<verse eid="LAM 1:11"/></para>
+  <para style="s1">Вопль Иерусалима</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="LAM 1:12"/>Неужели это не трогает вас, все проходящие мимо?</para>
+  <para style="q2" vid="LAM 1:12">Взгляните и посмотрите,</para>
+  <para style="q1" vid="LAM 1:12">есть ли страдание, подобное моему страданию,</para>
+  <para style="q2" vid="LAM 1:12">которое постигло меня,</para>
+  <para style="q1" vid="LAM 1:12">которое Господь послал на меня</para>
+  <para style="q2" vid="LAM 1:12">в день Своего пылающего гнева?<verse eid="LAM 1:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="LAM 1:13"/>Свыше Он послал огонь,</para>
+  <para style="q2" vid="LAM 1:13">послал его в кости мои.</para>
+  <para style="q1" vid="LAM 1:13">Он раскинул сеть для ног моих,</para>
+  <para style="q2" vid="LAM 1:13">опрокинул меня.</para>
+  <para style="q1" vid="LAM 1:13">Он опустошил меня</para>
+  <para style="q2" vid="LAM 1:13">и наполнил дни мои болезнью.<verse eid="LAM 1:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="LAM 1:14"/>Беззакония мои Он взял</para>
+  <para style="q2" vid="LAM 1:14">и, связав их, сделал из них ярмо.</para>
+  <para style="q1" vid="LAM 1:14">Владыка возложил его на шею мою,</para>
+  <para style="q2" vid="LAM 1:14">чем ослабил силы мои.</para>
+  <para style="q1" vid="LAM 1:14">Он отдал меня в руки тех,</para>
+  <para style="q2" vid="LAM 1:14">кому я не могу противостоять.<verse eid="LAM 1:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="LAM 1:15"/>Владыка низложил среди меня</para>
+  <para style="q2" vid="LAM 1:15">всех сильных моих,</para>
+  <para style="q1" vid="LAM 1:15">собрал против меня войска,</para>
+  <para style="q2" vid="LAM 1:15">чтобы истребить моих юношей;</para>
+  <para style="q1" vid="LAM 1:15">как в давильне, истоптал Владыка</para>
+  <para style="q2" vid="LAM 1:15">девственную дочь Иуды<note caller="+" style="f"><char style="fr" closed="false">1:15 </char><char style="ft" closed="false">То есть народ Иудеи.</char></note>.<verse eid="LAM 1:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="LAM 1:16"/>Вот почему я плачу,</para>
+  <para style="q2" vid="LAM 1:16">и из глаз моих потоками льются слезы.</para>
+  <para style="q1" vid="LAM 1:16">Рядом нет никого, кто бы утешил меня,</para>
+  <para style="q2" vid="LAM 1:16">оживил бы душу мою.</para>
+  <para style="q1" vid="LAM 1:16">Дети мои разорены,</para>
+  <para style="q2" vid="LAM 1:16">потому что враг одолел их.<verse eid="LAM 1:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="LAM 1:17"/>Сион простирает руки свои,</para>
+  <para style="q2" vid="LAM 1:17">но нет никого, кто бы утешил его.</para>
+  <para style="q1" vid="LAM 1:17">Господь повелел окружающим народам</para>
+  <para style="q2" vid="LAM 1:17">враждовать с Иаковом.</para>
+  <para style="q1" vid="LAM 1:17">Иерусалим стал мерзостью среди них.<verse eid="LAM 1:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="LAM 1:18"/>– Праведен Господь,</para>
+  <para style="q2" vid="LAM 1:18">а я была непокорна слову Его.</para>
+  <para style="q1" vid="LAM 1:18">Послушайте, все народы,</para>
+  <para style="q2" vid="LAM 1:18">и взгляните на страдание мое.</para>
+  <para style="q1" vid="LAM 1:18">Девушки и юноши мои</para>
+  <para style="q2" vid="LAM 1:18">пошли в плен.<verse eid="LAM 1:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="LAM 1:19"/>Звала я возлюбленных моих,</para>
+  <para style="q2" vid="LAM 1:19">но они меня предали.</para>
+  <para style="q1" vid="LAM 1:19">Священники и старцы мои</para>
+  <para style="q2" vid="LAM 1:19">умирали в городе,</para>
+  <para style="q1" vid="LAM 1:19">ища себе пищи,</para>
+  <para style="q2" vid="LAM 1:19">чтобы сохранить себе жизнь.<verse eid="LAM 1:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="LAM 1:20"/>Взгляни, Господь, как я страдаю:</para>
+  <para style="q2" vid="LAM 1:20">душа моя мается,</para>
+  <para style="q1" vid="LAM 1:20">и сердце потеряло покой,</para>
+  <para style="q2" vid="LAM 1:20">потому что я упорно противилась Тебе.</para>
+  <para style="q1" vid="LAM 1:20">Снаружи меч лишил меня детей,</para>
+  <para style="q2" vid="LAM 1:20">а внутри – <char style="add">поселилась</char> смерть.<verse eid="LAM 1:20"/></para>
+  <para style="q1">
+    <verse number="21" style="v" sid="LAM 1:21"/>Люди услышали стоны мои,</para>
+  <para style="q2" vid="LAM 1:21">но нет мне утешителя.</para>
+  <para style="q1" vid="LAM 1:21">Все враги мои услышали о бедствии моем</para>
+  <para style="q2" vid="LAM 1:21">и были рады тому, что Ты сделал со мною.</para>
+  <para style="q1" vid="LAM 1:21">Пусть же наступит день,</para>
+  <para style="q2" vid="LAM 1:21">объявленный Тобой,</para>
+  <para style="q1" vid="LAM 1:21">когда с ними случится то же,</para>
+  <para style="q2" vid="LAM 1:21">что и со мной.<verse eid="LAM 1:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="LAM 1:22"/>Пусть все их злодеяния предстанут пред Тобой,</para>
+  <para style="q2" vid="LAM 1:22">и поступи с ними так же,</para>
+  <para style="q1" vid="LAM 1:22">как Ты поступил со мною</para>
+  <para style="q2" vid="LAM 1:22">за все грехи мои,</para>
+  <para style="q1" vid="LAM 1:22">потому что многочисленны стоны мои,</para>
+  <para style="q2" vid="LAM 1:22">и изнемогает сердце мое.<verse eid="LAM 1:22"/></para>
+  <chapter eid="LAM 1"/>
+  <chapter number="2" style="c" sid="LAM 2"/>
+  <para style="s1">Бог наказывает Иерусалим</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="LAM 2:1"/>О, как навис гнев Владыки над дочерью Сиона,</para>
+  <para style="q2" vid="LAM 2:1">словно грозовые тучи!</para>
+  <para style="q1" vid="LAM 2:1">С небес сбросил на землю</para>
+  <para style="q2" vid="LAM 2:1">красу Израиля</para>
+  <para style="q1" vid="LAM 2:1">и не вспомнил о подножии ног Своих</para>
+  <para style="q2" vid="LAM 2:1">в день гнева Своего.<verse eid="LAM 2:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="LAM 2:2"/>Без пощады поглотил Владыка</para>
+  <para style="q2" vid="LAM 2:2">все жилища Иакова,</para>
+  <para style="q1" vid="LAM 2:2">в гневе Своем Он разрушил</para>
+  <para style="q2" vid="LAM 2:2">твердыни дочери Иуды.</para>
+  <para style="q1" vid="LAM 2:2">Он отверг царство</para>
+  <para style="q2" vid="LAM 2:2">и в нечестии поверг вождей его на землю.<verse eid="LAM 2:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="LAM 2:3"/>В свирепом гневе Он сокрушил</para>
+  <para style="q2" vid="LAM 2:3">все силы<note caller="+" style="f"><char style="fr" closed="false">2:3 </char><char style="ft" closed="false">Букв.: «все рога». Рог был символом могущества, власти и силы.</char></note> Израиля.</para>
+  <para style="q1" vid="LAM 2:3">Он отвел Свою правую руку,</para>
+  <para style="q2" vid="LAM 2:3">не защитил от наступающего врага.</para>
+  <para style="q1" vid="LAM 2:3">Он воспылал в Иакове, как пламя,</para>
+  <para style="q2" vid="LAM 2:3">что пожирает все вокруг.<verse eid="LAM 2:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="LAM 2:4"/>Подобно врагу, Он натянул Свой лук,</para>
+  <para style="q2" vid="LAM 2:4">занес Свою правую руку, словно недруг.</para>
+  <para style="q1" vid="LAM 2:4">Он сразил всех, кто приятен для глаз,</para>
+  <para style="q2" vid="LAM 2:4">излил Свой гнев, как огонь,</para>
+  <para style="q2" vid="LAM 2:4">на шатер дочери Сиона.<verse eid="LAM 2:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="LAM 2:5"/>Владыка стал подобен врагу,</para>
+  <para style="q2" vid="LAM 2:5">поглотил Он Израиль;</para>
+  <para style="q1" vid="LAM 2:5">уничтожил все дворцы его</para>
+  <para style="q2" vid="LAM 2:5">и разрушил твердыни его.</para>
+  <para style="q1" vid="LAM 2:5">Он умножил плач и причитание</para>
+  <para style="q2" vid="LAM 2:5">дочери Иуды.<verse eid="LAM 2:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="LAM 2:6"/>Разорил Он шатер Свой, как шалаш в огороде<note caller="+" style="f"><char style="fr" closed="false">2:6 </char><char style="ft" closed="false">См. также <char style="xt"><ref loc="ISA 1:8">Ис. 1:8</ref></char>.</char></note>,</para>
+  <para style="q2" vid="LAM 2:6">Он разрушил место собрания Своего.</para>
+  <para style="q1" vid="LAM 2:6">Господь заставил Сион забыть</para>
+  <para style="q2" vid="LAM 2:6">праздники и субботы.</para>
+  <para style="q1" vid="LAM 2:6">В свирепом гневе Он отверг</para>
+  <para style="q2" vid="LAM 2:6">царя и священника.<verse eid="LAM 2:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="LAM 2:7"/>Владыка отверг Свой жертвенник</para>
+  <para style="q2" vid="LAM 2:7">и оставил Свое святилище;</para>
+  <para style="q1" vid="LAM 2:7">отдал Он в руки врагов</para>
+  <para style="q2" vid="LAM 2:7">стены дворцов Сиона.</para>
+  <para style="q1" vid="LAM 2:7">Неприятели подняли шум в доме Господа,</para>
+  <para style="q2" vid="LAM 2:7">словно в праздничный день.<verse eid="LAM 2:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="LAM 2:8"/>Господь решил разрушить</para>
+  <para style="q2" vid="LAM 2:8">стену дочери Сиона;</para>
+  <para style="q1" vid="LAM 2:8">Он протянул вервь<note caller="+" style="f"><char style="fr" closed="false">2:8 </char><char style="ft" closed="false">То есть Он тщательно все спланировал.</char></note></para>
+  <para style="q2" vid="LAM 2:8">и не удержал Своей руки от разорения.</para>
+  <para style="q1" vid="LAM 2:8">Рыдали и стены и внешние укрепления,</para>
+  <para style="q2" vid="LAM 2:8">изнывая вместе.<verse eid="LAM 2:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="LAM 2:9"/>Ворота ее втоптаны в землю,</para>
+  <para style="q2" vid="LAM 2:9">их засовы Он сломал и уничтожил.</para>
+  <para style="q1" vid="LAM 2:9">Царь и вожди ее в изгнании</para>
+  <para style="q2" vid="LAM 2:9">среди чужих народов.</para>
+  <para style="q1" vid="LAM 2:9">Нет больше Закона,</para>
+  <para style="q2" vid="LAM 2:9">и пророки ее не получают видений от Господа.<verse eid="LAM 2:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="LAM 2:10"/>Старцы дочери Сиона</para>
+  <para style="q2" vid="LAM 2:10">сидят безмолвно на земле,</para>
+  <para style="q1" vid="LAM 2:10">посыпали прахом головы свои</para>
+  <para style="q2" vid="LAM 2:10">и оделись в рубище.</para>
+  <para style="q1" vid="LAM 2:10">Девы Иерусалима</para>
+  <para style="q2" vid="LAM 2:10">опустили лица свои к земле.<verse eid="LAM 2:10"/></para>
+  <para style="s1">Плач Иеремии об Иерусалиме</para>
+  <para style="q1">
+    <verse number="11" style="v" sid="LAM 2:11"/>Глаза мои ослабли от слез,</para>
+  <para style="q2" vid="LAM 2:11">душа моя мается,</para>
+  <para style="q1" vid="LAM 2:11">и сердце мое пролилось на землю</para>
+  <para style="q2" vid="LAM 2:11">из-за гибели народа моего,</para>
+  <para style="q1" vid="LAM 2:11">из-за того, что дети и грудные младенцы</para>
+  <para style="q2" vid="LAM 2:11">теряют сознание на улицах городских.<verse eid="LAM 2:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="LAM 2:12"/>Они говорят своим матерям:</para>
+  <para style="q2" vid="LAM 2:12">«Где хлеб и вино?» –</para>
+  <para style="q1" vid="LAM 2:12">теряя сознание, подобно раненым,</para>
+  <para style="q2" vid="LAM 2:12">на улицах городских,</para>
+  <para style="q1" vid="LAM 2:12">испуская дух</para>
+  <para style="q2" vid="LAM 2:12">на руках своих матерей.<verse eid="LAM 2:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="LAM 2:13"/>Что скажу я тебе?</para>
+  <para style="q2" vid="LAM 2:13">С чем тебя сравню,</para>
+  <para style="q2" vid="LAM 2:13">о дочь Иерусалима?</para>
+  <para style="q1" vid="LAM 2:13">Чему уподоблю тебя,</para>
+  <para style="q2" vid="LAM 2:13">чтоб я мог утешить тебя,</para>
+  <para style="q2" vid="LAM 2:13">о дева, дочь Сиона?</para>
+  <para style="q1" vid="LAM 2:13">Рана твоя глубока, как море;</para>
+  <para style="q2" vid="LAM 2:13">кто может исцелить тебя?<verse eid="LAM 2:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="LAM 2:14"/>Видения твоих пророков</para>
+  <para style="q2" vid="LAM 2:14">были ложными и пустыми.</para>
+  <para style="q1" vid="LAM 2:14">Они не раскрывали твой грех,</para>
+  <para style="q2" vid="LAM 2:14">иначе предотвратили бы твое пленение.</para>
+  <para style="q1" vid="LAM 2:14">Их пророчества были ложными</para>
+  <para style="q2" vid="LAM 2:14">и вводили тебя в заблуждение.<verse eid="LAM 2:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="LAM 2:15"/>Руками всплескивают все проходящие мимо,</para>
+  <para style="q2" vid="LAM 2:15">качают головой и глумятся</para>
+  <para style="q1" vid="LAM 2:15">над дочерью Иерусалима:</para>
+  <para style="q2" vid="LAM 2:15">«Не этот ли город называли</para>
+  <para style="q1" vid="LAM 2:15">совершенством красоты,</para>
+  <para style="q2" vid="LAM 2:15">радостью всей земли?»<verse eid="LAM 2:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="LAM 2:16"/>Все враги твои широко разинули</para>
+  <para style="q2" vid="LAM 2:16">пасть свою на тебя.</para>
+  <para style="q1" vid="LAM 2:16">Они глумятся и скрежещут зубами, говоря:</para>
+  <para style="q2" vid="LAM 2:16">«Мы поглотили ее!</para>
+  <para style="q1" vid="LAM 2:16">Вот день, который мы так ждали,</para>
+  <para style="q2" vid="LAM 2:16">вот и дожили мы, вот и увидели!»<verse eid="LAM 2:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="LAM 2:17"/>Господь исполнил Свой замысел,</para>
+  <para style="q2" vid="LAM 2:17">исполнил слово Свое,</para>
+  <para style="q2" vid="LAM 2:17">провозглашенное в древние дни.</para>
+  <para style="q1" vid="LAM 2:17">Разгромил Он тебя без пощады</para>
+  <para style="q2" vid="LAM 2:17">и позволил врагу злорадствовать над тобою,</para>
+  <para style="q2" vid="LAM 2:17">Он возвысил<note caller="+" style="f"><char style="fr" closed="false">2:17 </char><char style="ft" closed="false">Букв.: «вознес рог». Рог был символом могущества, власти и силы.</char></note> неприятелей твоих.<verse eid="LAM 2:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="LAM 2:18"/>Сердца людей взывают к Владыке.</para>
+  <para style="q2" vid="LAM 2:18">О стена дочери Сиона,</para>
+  <para style="q2" vid="LAM 2:18">день и ночь проливай слезы ручьем,</para>
+  <para style="q1" vid="LAM 2:18">не давай покоя себе,</para>
+  <para style="q2" vid="LAM 2:18">не давай отдыха глазам твоим!<verse eid="LAM 2:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="LAM 2:19"/>Вставай и взывай ночью,</para>
+  <para style="q2" vid="LAM 2:19">снова и снова.</para>
+  <para style="q1" vid="LAM 2:19">Изливай сердце свое, как воду,</para>
+  <para style="q2" vid="LAM 2:19">в присутствии Владыки.</para>
+  <para style="q1" vid="LAM 2:19">Простирай свои руки к Нему</para>
+  <para style="q2" vid="LAM 2:19">и моли о жизни детей своих,</para>
+  <para style="q1" vid="LAM 2:19">теряющих сознание от голода</para>
+  <para style="q2" vid="LAM 2:19">на всех перекрестках.<verse eid="LAM 2:19"/></para>
+  <para style="s1">Стон Иерусалима</para>
+  <para style="q1">
+    <verse number="20" style="v" sid="LAM 2:20"/>– Взгляни, Господи, и посмотри,</para>
+  <para style="q2" vid="LAM 2:20">с кем Ты когда-либо поступал так,</para>
+  <para style="q1" vid="LAM 2:20">чтобы женщины ели своих детей,</para>
+  <para style="q2" vid="LAM 2:20">младенцев, вскормленных ими?</para>
+  <para style="q1" vid="LAM 2:20">Чтобы убивали священника и пророка</para>
+  <para style="q2" vid="LAM 2:20">в святилище Владыки?<verse eid="LAM 2:20"/></para>
+  <para style="q1">
+    <verse number="21" style="v" sid="LAM 2:21"/>Дети и старики лежат в пыли на улицах,</para>
+  <para style="q2" vid="LAM 2:21">мои юноши и девушки пали от меча.</para>
+  <para style="q1" vid="LAM 2:21">Убивал Ты их в день гнева Своего,</para>
+  <para style="q2" vid="LAM 2:21">заколал их без пощады.<verse eid="LAM 2:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="LAM 2:22"/>Ты отовсюду, как на праздник,</para>
+  <para style="q2" vid="LAM 2:22">созвал на меня ужасы.</para>
+  <para style="q1" vid="LAM 2:22">В день гнева Господа</para>
+  <para style="q2" vid="LAM 2:22">никто не спасся и не уцелел.</para>
+  <para style="q1" vid="LAM 2:22">Тех, о ком я заботилась и кого растила,</para>
+  <para style="q2" vid="LAM 2:22">погубил мой враг.<verse eid="LAM 2:22"/></para>
+  <chapter eid="LAM 2"/>
+  <chapter number="3" style="c" sid="LAM 3"/>
+  <para style="s1">Великая верность Бога</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="LAM 3:1"/>Я человек, испытавший горе</para>
+  <para style="q2" vid="LAM 3:1">от жезла гнева Господа.<verse eid="LAM 3:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="LAM 3:2"/>Он погнал меня и ввел</para>
+  <para style="q2" vid="LAM 3:2">во тьму, а не в свет.<verse eid="LAM 3:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="LAM 3:3"/>Несомненно, Он обратил Свою руку против меня,</para>
+  <para style="q2" vid="LAM 3:3">и обращает ее снова и снова, в течение всего дня.<verse eid="LAM 3:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="LAM 3:4"/>Он состарил кожу мою и плоть мою,</para>
+  <para style="q2" vid="LAM 3:4">сокрушил кости мои.<verse eid="LAM 3:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="LAM 3:5"/>Он осадил меня и окружил</para>
+  <para style="q2" vid="LAM 3:5">горечью и тяготою.<verse eid="LAM 3:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="LAM 3:6"/>Погрузил меня во мрак,</para>
+  <para style="q2" vid="LAM 3:6">как давно умерших.<verse eid="LAM 3:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="LAM 3:7"/>Окружил меня стеной, чтобы я не мог выйти,</para>
+  <para style="q2" vid="LAM 3:7">заковал меня в тяжелые цепи.<verse eid="LAM 3:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="LAM 3:8"/>Даже когда я взываю и прошу о помощи</para>
+  <para style="q2" vid="LAM 3:8">Он не обращает внимания на мою молитву.<verse eid="LAM 3:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="LAM 3:9"/>Камнями Он преградил мне путь,</para>
+  <para style="q2" vid="LAM 3:9">искривил стези мои.<verse eid="LAM 3:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="LAM 3:10"/>Он подобен медведю в засаде</para>
+  <para style="q2" vid="LAM 3:10">или затаившемуся льву.<verse eid="LAM 3:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="LAM 3:11"/>Сбил меня с пути и растерзал меня,</para>
+  <para style="q2" vid="LAM 3:11">оставив без помощи.<verse eid="LAM 3:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="LAM 3:12"/>Натянул Он Свой лук</para>
+  <para style="q2" vid="LAM 3:12">и сделал меня мишенью для стрел Своих.<verse eid="LAM 3:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="LAM 3:13"/>Он пронзил мое сердце</para>
+  <para style="q2" vid="LAM 3:13">стрелами из Своего колчана.<verse eid="LAM 3:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="LAM 3:14"/>Стал я посмешищем для всего моего народа,</para>
+  <para style="q2" vid="LAM 3:14">весь день в песнях насмехаются надо мной.<verse eid="LAM 3:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="LAM 3:15"/>Он напоил меня горькими травами</para>
+  <para style="q2" vid="LAM 3:15">и насытил горечью.<verse eid="LAM 3:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="LAM 3:16"/>Камнями сокрушил зубы мои,</para>
+  <para style="q2" vid="LAM 3:16">втоптал меня в пыль.<verse eid="LAM 3:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="LAM 3:17"/>Лишена душа моя мира</para>
+  <para style="q2" vid="LAM 3:17">я позабыл о благоденствии.<verse eid="LAM 3:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="LAM 3:18"/>И сказал я: «Исчезло величие мое</para>
+  <para style="q2" vid="LAM 3:18">и надежда моя на Господа».<verse eid="LAM 3:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="LAM 3:19"/>Помню лишь о страдании и скитании,</para>
+  <para style="q2" vid="LAM 3:19">во мне лишь горечь и желчь.<verse eid="LAM 3:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="LAM 3:20"/>Сильна память об этом,</para>
+  <para style="q2" vid="LAM 3:20">поникла душа моя.<verse eid="LAM 3:20"/></para>
+  <para style="q1">
+    <verse number="21" style="v" sid="LAM 3:21"/>Но вот что говорю я себе,</para>
+  <para style="q2" vid="LAM 3:21">вот что дает мне надежду:<verse eid="LAM 3:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="LAM 3:22"/>«Милость Господа никогда не иссякает<note caller="+" style="f"><char style="fr" closed="false">3:22 </char><char style="ft" closed="false">Или: «По милости Господа мы не исчезли, потому что … »</char></note>,</para>
+  <para style="q2" vid="LAM 3:22">сострадание Его не истощается.<verse eid="LAM 3:22"/></para>
+  <para style="q1">
+    <verse number="23" style="v" sid="LAM 3:23"/>Они обновляются<note caller="+" style="f"><char style="fr" closed="false">3:23 </char><char style="ft" closed="false">Или: «Оно обновляется».</char></note> каждое утро;</para>
+  <para style="q2" vid="LAM 3:23">велика верность Твоя!»<verse eid="LAM 3:23"/></para>
+  <para style="q1">
+    <verse number="24" style="v" sid="LAM 3:24"/>Я сказал себе: «Господь – часть моя,</para>
+  <para style="q2" vid="LAM 3:24">потому я буду надеяться на Него».<verse eid="LAM 3:24"/></para>
+  <para style="q1">
+    <verse number="25" style="v" sid="LAM 3:25"/>Благ Господь к тем, кто уповает на Него,</para>
+  <para style="q2" vid="LAM 3:25">к тем, кто ищет Его.<verse eid="LAM 3:25"/></para>
+  <para style="q1">
+    <verse number="26" style="v" sid="LAM 3:26"/>Благо тому, кто молча ожидает</para>
+  <para style="q2" vid="LAM 3:26">спасения от Господа.<verse eid="LAM 3:26"/></para>
+  <para style="q1">
+    <verse number="27" style="v" sid="LAM 3:27"/>Благо человеку, который несет ярмо</para>
+  <para style="q2" vid="LAM 3:27">в юности своей.<verse eid="LAM 3:27"/></para>
+  <para style="q1">
+    <verse number="28" style="v" sid="LAM 3:28"/>Пусть сидит в уединении и молчании,</para>
+  <para style="q2" vid="LAM 3:28">потому что <char style="add">бремя это</char> возложил на него <char style="add">Господь</char>.<verse eid="LAM 3:28"/></para>
+  <para style="q1">
+    <verse number="29" style="v" sid="LAM 3:29"/>Пусть опускает уста свои в прах,</para>
+  <para style="q2" vid="LAM 3:29">может быть, есть еще надежда.<verse eid="LAM 3:29"/></para>
+  <para style="q1">
+    <verse number="30" style="v" sid="LAM 3:30"/>Пусть подставляет щеку свою бьющему</para>
+  <para style="q2" vid="LAM 3:30">и насыщается бесчестием.<verse eid="LAM 3:30"/></para>
+  <para style="q1">
+    <verse number="31" style="v" sid="LAM 3:31"/>Ведь Владыка не отвергает людей навеки!<verse eid="LAM 3:31"/></para>
+  <para style="q1">
+    <verse number="32" style="v" sid="LAM 3:32"/>И хотя Он посылает страдания,</para>
+  <para style="q2" vid="LAM 3:32">Он же потом и помилует</para>
+  <para style="q1" vid="LAM 3:32">по Своей великой любви.<verse eid="LAM 3:32"/></para>
+  <para style="q1">
+    <verse number="33" style="v" sid="LAM 3:33"/>Ведь не по изволению сердца Своего</para>
+  <para style="q2" vid="LAM 3:33">Он приносит бедствие и горе людям.<verse eid="LAM 3:33"/></para>
+  <para style="q1">
+    <verse number="34" style="v" sid="LAM 3:34"/>А когда топчут ногами</para>
+  <para style="q2" vid="LAM 3:34">всех узников земли,<verse eid="LAM 3:34"/></para>
+  <para style="q1">
+    <verse number="35" style="v" sid="LAM 3:35"/>лишают человека правосудия</para>
+  <para style="q2" vid="LAM 3:35">перед лицом Всевышнего,<verse eid="LAM 3:35"/></para>
+  <para style="q1">
+    <verse number="36" style="v" sid="LAM 3:36"/>притесняют человека на суде,</para>
+  <para style="q2" vid="LAM 3:36">разве Владыка всего этого не видит?<verse eid="LAM 3:36"/></para>
+  <para style="q1">
+    <verse number="37" style="v" sid="LAM 3:37"/>Кто может сказать – и исполнится,</para>
+  <para style="q2" vid="LAM 3:37">если Владыка не повелит этому случиться?<verse eid="LAM 3:37"/></para>
+  <para style="q1">
+    <verse number="38" style="v" sid="LAM 3:38"/>Не по слову ли Всевышнего</para>
+  <para style="q2" vid="LAM 3:38">приходят бедствие и благо?<verse eid="LAM 3:38"/></para>
+  <para style="q1">
+    <verse number="39" style="v" sid="LAM 3:39"/>Для чего жаловаться человеку,</para>
+  <para style="q2" vid="LAM 3:39">ведь он остался жив, <char style="add">хоть и был наказан за</char> грехи свои?<verse eid="LAM 3:39"/></para>
+  <para style="q1">
+    <verse number="40" style="v" sid="LAM 3:40"/>Проверим же пути наши и испытаем их,</para>
+  <para style="q2" vid="LAM 3:40">и вернемся к Господу.<verse eid="LAM 3:40"/></para>
+  <para style="q1">
+    <verse number="41" style="v" sid="LAM 3:41"/>Вознесем сердца наши и руки</para>
+  <para style="q2" vid="LAM 3:41">к Богу на небесах <char style="add">и скажем</char>:<verse eid="LAM 3:41"/></para>
+  <para style="q1">
+    <verse number="42" style="v" sid="LAM 3:42"/>«Мы согрешили и восстали против Тебя,</para>
+  <para style="q2" vid="LAM 3:42">и Ты не простил <char style="add">нас</char>.<verse eid="LAM 3:42"/></para>
+  <para style="q1">
+    <verse number="43" style="v" sid="LAM 3:43"/>Ты покрыл Себя гневом и преследовал нас,</para>
+  <para style="q2" vid="LAM 3:43">губя без пощады.<verse eid="LAM 3:43"/></para>
+  <para style="q1">
+    <verse number="44" style="v" sid="LAM 3:44"/>Ты скрыл Себя облаком,</para>
+  <para style="q2" vid="LAM 3:44">чтобы не доходила <char style="add">наша</char> молитва.<verse eid="LAM 3:44"/></para>
+  <para style="q1">
+    <verse number="45" style="v" sid="LAM 3:45"/>Ты сделал нас грязью и сором</para>
+  <para style="q2" vid="LAM 3:45">среди народов.<verse eid="LAM 3:45"/></para>
+  <para style="q1">
+    <verse number="46" style="v" sid="LAM 3:46"/>Все враги наши широко разинули</para>
+  <para style="q2" vid="LAM 3:46">свою пасть на нас.<verse eid="LAM 3:46"/></para>
+  <para style="q1">
+    <verse number="47" style="v" sid="LAM 3:47"/>Мы страдали от ужаса и западни,</para>
+  <para style="q2" vid="LAM 3:47">опустошения и разорения».<verse eid="LAM 3:47"/></para>
+  <para style="q1">
+    <verse number="48" style="v" sid="LAM 3:48"/>Ручьями слезы текут из глаз моих,</para>
+  <para style="q2" vid="LAM 3:48">потому что народ мой уничтожен.<verse eid="LAM 3:48"/></para>
+  <para style="q1">
+    <verse number="49" style="v" sid="LAM 3:49"/>Слезы мои будут течь,</para>
+  <para style="q2" vid="LAM 3:49">не останавливаясь, без перерыва,<verse eid="LAM 3:49"/></para>
+  <para style="q1">
+    <verse number="50" style="v" sid="LAM 3:50"/>пока Господь не посмотрит с небес</para>
+  <para style="q2" vid="LAM 3:50">и не увидит.<verse eid="LAM 3:50"/></para>
+  <para style="q1">
+    <verse number="51" style="v" sid="LAM 3:51"/>Я смотрю, и горечь наполняет душу мою</para>
+  <para style="q2" vid="LAM 3:51">за всех дочерей моего города.<verse eid="LAM 3:51"/></para>
+  <para style="q1">
+    <verse number="52" style="v" sid="LAM 3:52"/>Без причины враги мои пытались</para>
+  <para style="q2" vid="LAM 3:52">поймать меня, словно птицу,<verse eid="LAM 3:52"/></para>
+  <para style="q1">
+    <verse number="53" style="v" sid="LAM 3:53"/>бросили меня в яму</para>
+  <para style="q2" vid="LAM 3:53">и камнями закидали меня.<verse eid="LAM 3:53"/></para>
+  <para style="q1">
+    <verse number="54" style="v" sid="LAM 3:54"/>Воды сомкнулись над моей головой,</para>
+  <para style="q2" vid="LAM 3:54">и я подумал: «Погиб я».<verse eid="LAM 3:54"/></para>
+  <para style="q1">
+    <verse number="55" style="v" sid="LAM 3:55"/>Я воззвал к имени Твоему, о Господь,</para>
+  <para style="q2" vid="LAM 3:55">из ямы глубокой.<verse eid="LAM 3:55"/></para>
+  <para style="q1">
+    <verse number="56" style="v" sid="LAM 3:56"/>Ты услышал голос мой;</para>
+  <para style="q2" vid="LAM 3:56">не закрывай же ухо Свое</para>
+  <para style="q2" vid="LAM 3:56">от моей мольбы об облегчении.<verse eid="LAM 3:56"/></para>
+  <para style="q1">
+    <verse number="57" style="v" sid="LAM 3:57"/>Ты приближался, когда я взывал к Тебе,</para>
+  <para style="q2" vid="LAM 3:57">и говорил: «Не бойся»<note caller="+" style="f"><char style="fr" closed="false">3:57 </char><char style="ft" closed="false">Ср. <char style="xt"><ref loc="JER 1:7-8">Иер. 1:7-8</ref></char>.</char></note>.<verse eid="LAM 3:57"/></para>
+  <para style="q1">
+    <verse number="58" style="v" sid="LAM 3:58"/>О Владыка, Ты защищал дело души моей,</para>
+  <para style="q2" vid="LAM 3:58">искуплял жизнь мою.<verse eid="LAM 3:58"/></para>
+  <para style="q1">
+    <verse number="59" style="v" sid="LAM 3:59"/>Ты видишь, Господи, угнетение мое,</para>
+  <para style="q2" vid="LAM 3:59">рассуди же тяжбу мою.<verse eid="LAM 3:59"/></para>
+  <para style="q1">
+    <verse number="60" style="v" sid="LAM 3:60"/>Ты видишь всю их мстительность,</para>
+  <para style="q2" vid="LAM 3:60">все их заговоры против меня.<verse eid="LAM 3:60"/></para>
+  <para style="q1">
+    <verse number="61" style="v" sid="LAM 3:61"/>О Господь, Ты слышишь их оскорбления,</para>
+  <para style="q2" vid="LAM 3:61">все их заговоры против меня,<verse eid="LAM 3:61"/></para>
+  <para style="q1">
+    <verse number="62" style="v" sid="LAM 3:62"/>как враги перешептываются</para>
+  <para style="q2" vid="LAM 3:62">обо мне весь день.<verse eid="LAM 3:62"/></para>
+  <para style="q1">
+    <verse number="63" style="v" sid="LAM 3:63"/>Взгляни на них! Сидят ли они, стоят ли,</para>
+  <para style="q2" vid="LAM 3:63">они насмехаются надо мною в своих песнях.<verse eid="LAM 3:63"/></para>
+  <para style="q1">
+    <verse number="64" style="v" sid="LAM 3:64"/>Воздай им, Господи,</para>
+  <para style="q2" vid="LAM 3:64">по делам их рук.<verse eid="LAM 3:64"/></para>
+  <para style="q1">
+    <verse number="65" style="v" sid="LAM 3:65"/>Мраком покрой их сердца,</para>
+  <para style="q2" vid="LAM 3:65">и пусть проклятье Твое будет на них.<verse eid="LAM 3:65"/></para>
+  <para style="q1">
+    <verse number="66" style="v" sid="LAM 3:66"/>Преследуй их в гневе</para>
+  <para style="q2" vid="LAM 3:66">и истреби их из поднебесья, о Господь.<verse eid="LAM 3:66"/></para>
+  <chapter eid="LAM 3"/>
+  <chapter number="4" style="c" sid="LAM 4"/>
+  <para style="s1">Разрушенный Иерусалим</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="LAM 4:1"/>О, как поблекло золото!</para>
+  <para style="q2" vid="LAM 4:1">Как потускнело золото наилучшее!</para>
+  <para style="q1" vid="LAM 4:1">Драгоценные камни святилища разбросаны</para>
+  <para style="q2" vid="LAM 4:1">по всем перекресткам улиц.<verse eid="LAM 4:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="LAM 4:2"/>Драгоценные сыны Сиона,</para>
+  <para style="q2" vid="LAM 4:2">некогда равноценные чистейшему золоту,</para>
+  <para style="q1" vid="LAM 4:2">теперь приравниваются к глиняной посуде,</para>
+  <para style="q2" vid="LAM 4:2">изделию рук горшечника.<verse eid="LAM 4:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="LAM 4:3"/>Даже шакалы сосцы дают,</para>
+  <para style="q2" vid="LAM 4:3">чтобы кормить своих детенышей,</para>
+  <para style="q1" vid="LAM 4:3">но мой народ стал жесток,</para>
+  <para style="q2" vid="LAM 4:3">подобно страусам в пустыне<note caller="+" style="f"><char style="fr" closed="false">4:3 </char><char style="ft" closed="false">Страусы откладывают свои яйца в песке и бросают их там, совсем не заботясь о своем потомстве.</char></note>.<verse eid="LAM 4:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="LAM 4:4"/>От жажды язык младенца</para>
+  <para style="q2" vid="LAM 4:4">прилипает к нёбу его,</para>
+  <para style="q1" vid="LAM 4:4">дети просят хлеба,</para>
+  <para style="q2" vid="LAM 4:4">но никто им его не дает.<verse eid="LAM 4:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="LAM 4:5"/>Кто привык к изысканным яствам,</para>
+  <para style="q2" vid="LAM 4:5">выброшен на улицу,</para>
+  <para style="q1" vid="LAM 4:5">кто в роскоши<note caller="+" style="f"><char style="fr" closed="false">4:5 </char><char style="ft" closed="false">Букв.: «на багрянице». Багряница – одежда багряного цвета, знак царской власти.</char></note> воспитан,</para>
+  <para style="q2" vid="LAM 4:5">копается в кучах мусора.<verse eid="LAM 4:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="LAM 4:6"/>Наказание народа моего</para>
+  <para style="q2" vid="LAM 4:6">превышает наказание Содома<note caller="+" style="f"><char style="fr" closed="false">4:6 </char><char style="ft" closed="false">Или: «Грех народа моего превышает грех Содома».</char></note>,</para>
+  <para style="q1" vid="LAM 4:6">который был разрушен мгновенно,</para>
+  <para style="q2" vid="LAM 4:6">и руки человеческие даже не коснулись его.<verse eid="LAM 4:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="LAM 4:7"/>Вожди <char style="add">Иерусалима</char> были чище снега,</para>
+  <para style="q2" vid="LAM 4:7">белее молока,</para>
+  <para style="q1" vid="LAM 4:7">тела их были румянее кораллов,</para>
+  <para style="q2" vid="LAM 4:7">на вид были подобны сапфирам.<verse eid="LAM 4:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="LAM 4:8"/>А сейчас они чернее копоти,</para>
+  <para style="q2" vid="LAM 4:8">их не узнают на улицах,</para>
+  <para style="q1" vid="LAM 4:8">кожа их сморщилась на костях их,</para>
+  <para style="q2" vid="LAM 4:8">иссохла, словно дерево.<verse eid="LAM 4:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="LAM 4:9"/>Те, кто погиб от меча,</para>
+  <para style="q2" vid="LAM 4:9">счастливее умирающих от голода.</para>
+  <para style="q1" vid="LAM 4:9">Испытывая муки голода, изнемогают они</para>
+  <para style="q2" vid="LAM 4:9">от недостатка полевых плодов.<verse eid="LAM 4:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="LAM 4:10"/>Своими руками любящие матери</para>
+  <para style="q2" vid="LAM 4:10">варили собственных детей;</para>
+  <para style="q1" vid="LAM 4:10">младенцы стали пищей</para>
+  <para style="q2" vid="LAM 4:10">во время гибели моего народа.<verse eid="LAM 4:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="LAM 4:11"/>Господь выплеснул все негодование Свое,</para>
+  <para style="q2" vid="LAM 4:11">Он излил пылающий гнев Свой</para>
+  <para style="q1" vid="LAM 4:11">и зажег в Сионе огонь,</para>
+  <para style="q2" vid="LAM 4:11">который пожрал основания его.<verse eid="LAM 4:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="LAM 4:12"/>Не верили ни цари земные,</para>
+  <para style="q2" vid="LAM 4:12">ни все жители мира,</para>
+  <para style="q1" vid="LAM 4:12">что неприятель войдет</para>
+  <para style="q2" vid="LAM 4:12">в ворота Иерусалима.<verse eid="LAM 4:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="LAM 4:13"/>Но это случилось из-за грехов его пророков</para>
+  <para style="q2" vid="LAM 4:13">и беззаконий его священников,</para>
+  <para style="q1" vid="LAM 4:13">которые проливали в нем</para>
+  <para style="q2" vid="LAM 4:13">кровь праведников.<verse eid="LAM 4:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="LAM 4:14"/>Теперь они, как слепые, бродят по улицам,</para>
+  <para style="q2" vid="LAM 4:14">оскверненные кровью,</para>
+  <para style="q2" vid="LAM 4:14">так что никто не осмеливается прикоснуться к ним.<verse eid="LAM 4:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="LAM 4:15"/>«Уходите, нечистые! – кричат им, –</para>
+  <para style="q2" vid="LAM 4:15">уходите прочь, не прикасайтесь!»</para>
+  <para style="q1" vid="LAM 4:15">И тогда они исчезают</para>
+  <para style="q2" vid="LAM 4:15">и начинают скитаться между народами,</para>
+  <para style="q1" vid="LAM 4:15">а им и там говорят:</para>
+  <para style="q2" vid="LAM 4:15">«Вы не можете здесь оставаться».<verse eid="LAM 4:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="LAM 4:16"/>Господь Сам<note caller="+" style="f"><char style="fr" closed="false">4:16 </char><char style="ft" closed="false">Господь Сам – букв. «Лицо Господне».</char></note> рассеял их,</para>
+  <para style="q2" vid="LAM 4:16">Он больше не смотрит за ними.</para>
+  <para style="q1" vid="LAM 4:16">Священникам<note caller="+" style="f"><char style="fr" closed="false">4:16 </char><char style="ft" closed="false">Букв. «Лицам священников».</char></note> не оказывают уважения,</para>
+  <para style="q2" vid="LAM 4:16">и старцам – милости.<verse eid="LAM 4:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="LAM 4:17"/>Глаза наши утомились,</para>
+  <para style="q2" vid="LAM 4:17">напрасно ожидая помощи;</para>
+  <para style="q1" vid="LAM 4:17">с наших башен мы ожидали народ,</para>
+  <para style="q2" vid="LAM 4:17">который не мог спасти нас<note caller="+" style="f"><char style="fr" closed="false">4:17 </char><char style="ft" closed="false">Иудея ожидала от своего союзника Египта, помощи в войне с Вавилоном, но эта помощь так и не пришла (см. <char style="xt"><ref loc="JER 37:5-7">Иер. 37:5-7</ref></char>).</char></note>.<verse eid="LAM 4:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="LAM 4:18"/>На каждом шагу подстерегали нас,</para>
+  <para style="q2" vid="LAM 4:18">так что мы не могли ходить по улицам нашим.</para>
+  <para style="q1" vid="LAM 4:18">Приблизился наш конец,</para>
+  <para style="q2" vid="LAM 4:18">число наших дней сочтено:</para>
+  <para style="q2" vid="LAM 4:18">пришел наш конец.<verse eid="LAM 4:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="LAM 4:19"/>Наши преследователи были</para>
+  <para style="q2" vid="LAM 4:19">быстрее орлов в небе.</para>
+  <para style="q1" vid="LAM 4:19">Они гонялись за нами по горам,</para>
+  <para style="q2" vid="LAM 4:19">подкарауливали нас в пустыне.<verse eid="LAM 4:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="LAM 4:20"/>Дыхание нашей жизни –</para>
+  <para style="q2" vid="LAM 4:20">царь наш, помазанник Господа<note caller="+" style="f"><char style="fr" closed="false">4:20 </char><char style="ft" closed="false">Вероятно, речь идет о последнем правителе Иудеи, царе Цедекии (см. <char style="xt"><ref loc="JER 39:4-7">Иер. 39:4-7</ref>; <ref loc="JER 52:7-11">52:7-11</ref></char>).</char></note>, –</para>
+  <para style="q2" vid="LAM 4:20">пойман в их ловушки.</para>
+  <para style="q1" vid="LAM 4:20">А мы говорили, что под его тенью</para>
+  <para style="q2" vid="LAM 4:20">мы будем жить среди народов.<verse eid="LAM 4:20"/></para>
+  <para style="q1">
+    <verse number="21" style="v" sid="LAM 4:21"/>Радуйся пока и веселись, дочь Эдома,</para>
+  <para style="q2" vid="LAM 4:21">живущая в земле Уц!</para>
+  <para style="q1" vid="LAM 4:21">Но и до тебя дойдет чаша,</para>
+  <para style="q2" vid="LAM 4:21">напьешься допьяна и обнажишься.<verse eid="LAM 4:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="LAM 4:22"/>О дочь Сиона! Наказание твое скоро закончится,</para>
+  <para style="q2" vid="LAM 4:22">Он не продлит изгнание твое.</para>
+  <para style="q1" vid="LAM 4:22">А тебя, дочь Эдома, Он накажет за беззакония твои</para>
+  <para style="q2" vid="LAM 4:22">и откроет все грехи твои.<verse eid="LAM 4:22"/></para>
+  <chapter eid="LAM 4"/>
+  <chapter number="5" style="c" sid="LAM 5"/>
+  <para style="s1">Молитва об избавлении</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="LAM 5:1"/>Вспомни, о Господь, что случилось с нами,</para>
+  <para style="q2" vid="LAM 5:1">взгляни и посмотри на бесчестие наше.<verse eid="LAM 5:1"/></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="LAM 5:2"/>Наследие наше досталось чужим,</para>
+  <para style="q2" vid="LAM 5:2">дома наши – иноземцам.<verse eid="LAM 5:2"/></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="LAM 5:3"/>Мы стали сиротами – отца лишились,</para>
+  <para style="q2" vid="LAM 5:3">матери наши овдовели.<verse eid="LAM 5:3"/></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="LAM 5:4"/>Воду свою мы пьем за плату,</para>
+  <para style="q2" vid="LAM 5:4">отдаем деньги за наши же дрова.<verse eid="LAM 5:4"/></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="LAM 5:5"/>Преследуют нас по пятам,</para>
+  <para style="q2" vid="LAM 5:5">мы измучены и не находим покоя.<verse eid="LAM 5:5"/></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="LAM 5:6"/>Мы протягивали руку к Египту и Ассирии,</para>
+  <para style="q2" vid="LAM 5:6">чтобы насытиться хлебом.<verse eid="LAM 5:6"/></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="LAM 5:7"/>Наши отцы грешили – их уже нет,</para>
+  <para style="q2" vid="LAM 5:7">а мы несем наказание за их беззакония.<verse eid="LAM 5:7"/></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="LAM 5:8"/>Рабы господствуют над нами,</para>
+  <para style="q2" vid="LAM 5:8">и некому вызволить нас из их рук.<verse eid="LAM 5:8"/></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="LAM 5:9"/>Рискуя своей жизнью, мы добываем хлеб свой,</para>
+  <para style="q2" vid="LAM 5:9">потому что меч подстерегает нас в пустыне.<verse eid="LAM 5:9"/></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="LAM 5:10"/>Кожа наша раскалилась от сильного голода,</para>
+  <para style="q2" vid="LAM 5:10">как будто побывала в печи.<verse eid="LAM 5:10"/></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="LAM 5:11"/>Женщин бесчестят на Сионе,</para>
+  <para style="q2" vid="LAM 5:11">девушек – в городах иудейских.<verse eid="LAM 5:11"/></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="LAM 5:12"/>Вожди повешены руками захватчиков,</para>
+  <para style="q2" vid="LAM 5:12">старцев они не уважают.<verse eid="LAM 5:12"/></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="LAM 5:13"/>Юноши трудятся за жерновами,</para>
+  <para style="q2" vid="LAM 5:13">и мальчики падают под ношами дров.<verse eid="LAM 5:13"/></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="LAM 5:14"/>Старцы перестали <char style="add">сидеть</char> у городских ворот,</para>
+  <para style="q2" vid="LAM 5:14">юноши больше не поют.<verse eid="LAM 5:14"/></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="LAM 5:15"/>Радость покинула наши сердца,</para>
+  <para style="q2" vid="LAM 5:15">танцы наши сменились плачем.<verse eid="LAM 5:15"/></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="LAM 5:16"/>Упал венец с головы нашей,</para>
+  <para style="q2" vid="LAM 5:16">горе нам, согрешившим!<verse eid="LAM 5:16"/></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="LAM 5:17"/>Слабеют из-за этого сердца наши,</para>
+  <para style="q2" vid="LAM 5:17">и мрак затмевает глаза.<verse eid="LAM 5:17"/></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="LAM 5:18"/>Опустела гора Сион,</para>
+  <para style="q2" vid="LAM 5:18">и шакалы бродят по ней.<verse eid="LAM 5:18"/></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="LAM 5:19"/>Ты, о Господь, – Царь навеки,</para>
+  <para style="q2" vid="LAM 5:19">престол Твой – из поколения в поколение.<verse eid="LAM 5:19"/></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="LAM 5:20"/>Почему же Ты до сих пор не вспомнил нас?</para>
+  <para style="q2" vid="LAM 5:20">Почему оставляешь нас на столь долгое время?<verse eid="LAM 5:20"/></para>
+  <para style="q1">
+    <verse number="21" style="v" sid="LAM 5:21"/>Верни нас к Себе, Господи, и мы возвратимся,</para>
+  <para style="q2" vid="LAM 5:21">обнови наши дни подобно дням, давно миновавшим.<verse eid="LAM 5:21"/></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="LAM 5:22"/>Или Ты полностью отверг нас,</para>
+  <para style="q2" vid="LAM 5:22">и гневу Твоему нет меры?<verse eid="LAM 5:22"/></para>
+  <chapter eid="LAM 5"/>
+</usx>

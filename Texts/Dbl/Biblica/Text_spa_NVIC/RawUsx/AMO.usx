@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="AMO" style="id">- Spanish (Castellano): Nueva Versión Internacional</book>
+  <para style="rem">Copyright © 1999, 2005, 2017 by Biblica, Inc.®</para>
+  <para style="h">AMÓS</para>
+  <para style="toc1">Amós</para>
+  <para style="toc2">Amós</para>
+  <para style="toc3">Am</para>
+  <para style="mt1">Amós</para>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Estas son las palabras de Amós, pastor de Tecoa. Es la visión que recibió acerca de Israel dos años antes del terremoto, cuando Uzías era rey de Judá, y Jeroboán hijo de Joás era rey de Israel.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Amós dijo:</para>
+  <para style="q1">«Ruge el <char style="nd">Señor</char> desde <char style="w">Sión</char>;</para>
+  <para style="q2">truena su voz desde Jerusalén.</para>
+  <para style="q1">Los pastizales de los pastores quedan asolados,</para>
+  <para style="q2">y se seca la cumbre del Carmelo».</para>
+  <para style="s1">Juicio contra las naciones vecinas</para>
+  <para style="p">
+    <verse number="3" style="v"/>Así dice el <char style="nd">Señor</char>:</para>
+  <para style="q1">«Porque los delitos de Damasco han llegado a su colmo,<note caller="+" style="f"><char style="fr" closed="false">1:3 </char><char style="fq" closed="false">Porque … colmo</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">Por tres delitos de Damasco, y por el cuarto </char><char style="ft" closed="false">(hebraísmo que indica plenitud); también en <char style="xt"><ref loc="AMO 1:6">1:6</ref>,<ref loc="AMO 1:9">9</ref>,<ref loc="AMO 1:11">11</ref>,<ref loc="AMO 1:13">13</ref>; <ref loc="AMO 2:1">2:1</ref>,<ref loc="AMO 2:4">4</ref>,<ref loc="AMO 2:6">6</ref></char>.</char></note></para>
+  <para style="q2">no revocaré su castigo.</para>
+  <para style="q1">Porque trillaron a Galaad</para>
+  <para style="q2">con trillos de hierro,</para>
+  <para style="q1">
+    <verse number="4" style="v"/>yo enviaré fuego contra el palacio de Jazael,</para>
+  <para style="q2">que consumirá las fortalezas de Ben Adad.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Romperé el cerrojo de la <char style="w">puerta</char> de Damasco,</para>
+  <para style="q2">destruiré al que reina en el valle de Avén<note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="fq" closed="false">Avén</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">maldad.</char></note></para>
+  <para style="q2">y al que empuña el cetro en Bet Edén.</para>
+  <para style="q1">Y el pueblo de Siria</para>
+  <para style="q2">será desterrado a Quir»,</para>
+  <para style="q4">dice el <char style="nd">Señor</char>.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Así dice el <char style="nd">Señor</char>:</para>
+  <para style="q1">«Los delitos de Gaza han llegado a su colmo;</para>
+  <para style="q2">por tanto, no revocaré su castigo:</para>
+  <para style="q1">Porque desterraron a poblaciones enteras</para>
+  <para style="q2">para venderlas a Edom,</para>
+  <para style="q1">
+    <verse number="7" style="v"/>yo enviaré fuego contra los muros de Gaza,</para>
+  <para style="q2">que consumirá sus fortalezas.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Destruiré al que reina en Asdod</para>
+  <para style="q2">y al que empuña el cetro en Ascalón.</para>
+  <para style="q1">Volveré mi mano contra Ecrón,</para>
+  <para style="q2">y perecerá hasta el último de los filisteos»,</para>
+  <para style="q4">dice el <char style="nd">Señor</char> omnipotente.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Así dice el <char style="nd">Señor</char>:</para>
+  <para style="q1">«Los delitos de Tiro han llegado a su colmo;</para>
+  <para style="q2">por tanto, no revocaré su castigo:</para>
+  <para style="q1">Porque le vendieron a Edom poblaciones enteras de cautivos,</para>
+  <para style="q2">olvidando así una alianza entre hermanos,</para>
+  <para style="q1">
+    <verse number="10" style="v"/>yo enviaré fuego contra los muros de Tiro,</para>
+  <para style="q2">que consumirá sus fortalezas».</para>
+  <para style="p">
+    <verse number="11" style="v"/>Así dice el <char style="nd">Señor</char>:</para>
+  <para style="q1">«Los delitos de Edom han llegado a su colmo;</para>
+  <para style="q2">por tanto, no revocaré su castigo:</para>
+  <para style="q1">Porque sin mostrar ninguna compasión</para>
+  <para style="q2">persiguieron con espada a su hermano;</para>
+  <para style="q1">porque dieron rienda suelta a su ira</para>
+  <para style="q2">y no dejaron de alimentar su enojo,</para>
+  <para style="q1">
+    <verse number="12" style="v"/>yo enviaré fuego contra Temán,</para>
+  <para style="q2">que consumirá las fortalezas de Bosra».</para>
+  <para style="p">
+    <verse number="13" style="v"/>Así dice el <char style="nd">Señor</char>:</para>
+  <para style="q1">«Los delitos de Amón han llegado a su colmo;</para>
+  <para style="q2">por tanto, no revocaré su castigo:</para>
+  <para style="q1">Porque, a fin de extender sus fronteras,</para>
+  <para style="q2">a las mujeres encintas de la región de Galaad</para>
+  <para style="q2">les abrieron el vientre,</para>
+  <para style="q1">
+    <verse number="14" style="v"/>yo prenderé fuego a los muros de Rabá,</para>
+  <para style="q2">que consumirá sus fortalezas</para>
+  <para style="q1">entre gritos de guerra en el día de la batalla,</para>
+  <para style="q2">y en el rugir de la tormenta en un día de tempestad.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Su rey<note caller="+" style="f"><char style="fr" closed="false">1:15 </char><char style="fq" closed="false">Su rey</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">Milcón.</char></note> marchará al destierro,</para>
+  <para style="q2">junto con sus oficiales»,</para>
+  <para style="q4">dice el <char style="nd">Señor</char>.</para>
+  <chapter number="2" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Así dice el <char style="nd">Señor</char>:</para>
+  <para style="q1">«Los delitos de Moab han llegado a su colmo;</para>
+  <para style="q2">por tanto, no revocaré su castigo:</para>
+  <para style="q1">Porque quemaron los huesos del rey de Edom</para>
+  <para style="q2">hasta reducirlos a ceniza,</para>
+  <para style="q1">
+    <verse number="2" style="v"/>yo enviaré fuego sobre Moab,</para>
+  <para style="q2">que consumirá las fortalezas de Queriot,</para>
+  <para style="q1">y morirá Moab en medio del estrépito</para>
+  <para style="q2">de gritos de guerra y toques de trompeta.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Destruiré al gobernante en medio de su pueblo,</para>
+  <para style="q2">y junto con él mataré a todos sus oficiales»,</para>
+  <para style="q4">dice el <char style="nd">Señor</char>.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Así dice el <char style="nd">Señor</char>:</para>
+  <para style="q1">«Los delitos de Judá han llegado a su colmo;</para>
+  <para style="q2">por tanto, no revocaré su castigo:</para>
+  <para style="q1">Porque, dejándose descarriar por sus mentiras,</para>
+  <para style="q2">tras las cuales anduvieron sus antepasados,</para>
+  <para style="q1">rechazaron la <char style="w" lemma="ley">ley del</char> <char style="nd">Señor</char></para>
+  <para style="q2">y no obedecieron sus preceptos.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Por eso yo enviaré fuego contra Judá,</para>
+  <para style="q2">que consumirá las fortalezas de Jerusalén».</para>
+  <para style="s1">Juicio contra Israel</para>
+  <para style="p">
+    <verse number="6" style="v"/>Así dice el <char style="nd">Señor</char>:</para>
+  <para style="q1">«Los delitos de Israel han llegado a su colmo;</para>
+  <para style="q2">por tanto, no revocaré su castigo:</para>
+  <para style="q1">Venden al justo por monedas,</para>
+  <para style="q2">y al necesitado, por un par de sandalias.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Pisotean la cabeza de los desvalidos</para>
+  <para style="q2">como si fuera el polvo de la tierra,</para>
+  <para style="q2">y pervierten el camino de los pobres.</para>
+  <para style="q1">Padre e hijo se acuestan con la misma mujer,</para>
+  <para style="q2">profanando así mi <char style="w">santo</char> <char style="w">nombre</char>.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Junto a cualquier altar</para>
+  <para style="q2">se acuestan sobre ropa que tomaron en prenda,</para>
+  <para style="q1">y el vino que han cobrado como multa</para>
+  <para style="q2">lo beben en la casa de su Dios.<note caller="+" style="f"><char style="fr" closed="false">2:8 </char><char style="fq" closed="false">su Dios</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">sus dioses.</char></note></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>»Todo esto, a pesar de que por ellos</para>
+  <para style="q2">yo destruí a los amorreos;</para>
+  <para style="q1">destruí su fruto arriba</para>
+  <para style="q2">y sus raíces abajo,</para>
+  <para style="q1">aunque eran altos como el cedro</para>
+  <para style="q2">y fuertes como la encina.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>»Yo mismo os hice subir desde Egipto,</para>
+  <para style="q2">y os conduje cuarenta años por el desierto,</para>
+  <para style="q1">a fin de conquistar para vosotros</para>
+  <para style="q2">la tierra de los amorreos.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>También levanté profetas de entre vuestros hijos</para>
+  <para style="q2">y nazareos de entre vuestros jóvenes.</para>
+  <para style="q2">¿Acaso no fue así, israelitas?</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Pero vosotros les hicisteis beber vino a los nazareos</para>
+  <para style="q2">y les ordenasteis a los profetas que no profetizaran.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>»Pues bien, voy a aplastaros</para>
+  <para style="q2">como aplasta una carreta cargada de trigo.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Entonces no habrá escapatoria para el ágil,</para>
+  <para style="q2">ni el fuerte podrá valerse de su fuerza,</para>
+  <para style="q2">ni el valiente librará su vida.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>El arquero no resistirá,</para>
+  <para style="q2">ni escapará con vida el ágil de piernas,</para>
+  <para style="q2">ni se salvará el que monta a caballo.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>En aquel día huirá desnudo</para>
+  <para style="q2">aun el más valiente de los guerreros»,</para>
+  <para style="q4">afirma el <char style="nd">Señor</char>.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Vocación del profeta Amós</para>
+  <para style="p">
+    <verse number="1" style="v"/>Oíd, israelitas, esta palabra que el <char style="nd">Señor</char> pronuncia contra vosotros, contra toda la familia que saqué de Egipto:</para>
+  <para style="q1">
+    <verse number="2" style="v"/>«Solo a vosotros os he escogido</para>
+  <para style="q2">entre todas las familias de la tierra.</para>
+  <para style="q1">Por tanto, os haré pagar</para>
+  <para style="q2">todas vuestras perversidades».</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>¿Pueden dos caminar juntos</para>
+  <para style="q2">sin antes ponerse de acuerdo?</para>
+  <para style="q1">
+    <verse number="4" style="v"/>¿Ruge el león en la espesura</para>
+  <para style="q2">sin tener presa alguna?</para>
+  <para style="q1">¿Gruñe el leoncillo en su guarida</para>
+  <para style="q2">sin haber atrapado nada?</para>
+  <para style="q1">
+    <verse number="5" style="v"/>¿Cae el pájaro en la trampa</para>
+  <para style="q2">sin que haya carnada?</para>
+  <para style="q1">¿Salta del suelo la trampa</para>
+  <para style="q2">sin haber atrapado nada?</para>
+  <para style="q1">
+    <verse number="6" style="v"/>¿Se toca la trompeta en la ciudad</para>
+  <para style="q2">sin que el pueblo se alarme?</para>
+  <para style="q1">¿Ocurrirá en la ciudad alguna desgracia</para>
+  <para style="q2">que el <char style="nd">Señor</char> no haya provocado?</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>En verdad, nada hace el <char style="nd">Señor</char> omnipotente</para>
+  <para style="q2">sin antes revelar sus designios</para>
+  <para style="q2">a sus siervos los profetas.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Ruge el león;</para>
+  <para style="q2">¿quién no temblará de miedo?</para>
+  <para style="q1">Habla el <char style="nd">Señor</char> omnipotente;</para>
+  <para style="q2">¿quién no profetizará?</para>
+  <para style="s1">El castigo a Israel</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Proclamad en las fortalezas de Asdod</para>
+  <para style="q2">y en los baluartes de Egipto:</para>
+  <para style="q1">«Reuníos sobre los montes de Samaria</para>
+  <para style="q2">y ved cuánto pánico hay en ella,</para>
+  <para style="q2">¡cuánta opresión hay en su medio!»</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>«Los que acumulan en sus fortalezas</para>
+  <para style="q2">el fruto de la violencia y el saqueo</para>
+  <para style="q2">no saben actuar con rectitud»,</para>
+  <para style="q4">afirma el <char style="nd">Señor</char>.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Por lo tanto, así dice el <char style="nd">Señor</char> omnipotente:</para>
+  <para style="q1">«Un enemigo invadirá tu tierra;</para>
+  <para style="q2">echará abajo tu poderío</para>
+  <para style="q2">y saqueará tus fortalezas».</para>
+  <para style="p">
+    <verse number="12" style="v"/>Así dice el <char style="nd">Señor</char>:</para>
+  <para style="q1">«Como el pastor arrebata de las fauces del león</para>
+  <para style="q2">dos patas o un pedazo de oreja,</para>
+  <para style="q1">así serán rescatados los israelitas que viven en Samaria</para>
+  <para style="q2">con un pedazo de una cama y la pata de un diván.<note caller="+" style="f"><char style="fr" closed="false">3:12 </char><char style="fq" closed="false">con un pedazo … diván</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">en el borde de la cama y en divanes de Damasco.</char></note></para>
+  <para style="p">
+    <verse number="13" style="v"/>»Oíd esto y testificad contra el pueblo de Jacob —afirma el <char style="nd">Señor</char> omnipotente, el Dios <char style="w">Todopoderoso</char>—:</para>
+  <para style="q1">
+    <verse number="14" style="v"/>»El día en que haga pagar a Israel sus delitos,</para>
+  <para style="q2">destruiré los altares de Betel;</para>
+  <para style="q1">los cuernos del altar serán arrancados,</para>
+  <para style="q2">y caerán a tierra.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Derribaré tanto la casa de invierno</para>
+  <para style="q2">como la de verano;</para>
+  <para style="q1">serán destruidas las casas adornadas de marfil</para>
+  <para style="q2">y serán demolidas muchas mansiones»,</para>
+  <para style="q4">afirma el <char style="nd">Señor</char>.</para>
+  <para style="b"/>
+  <chapter number="4" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>Oíd esta palabra, vacas de Basán,</para>
+  <para style="q2">que vivís en el monte de Samaria,</para>
+  <para style="q1">que oprimís a los desvalidos</para>
+  <para style="q2">y maltratáis a los necesitados,</para>
+  <para style="q1">que decís a vuestros esposos:</para>
+  <para style="q2">«¡Traednos de beber!»</para>
+  <para style="q1">
+    <verse number="2" style="v"/>El <char style="nd">Señor</char> omnipotente ha jurado por su <char style="w">santidad</char>:</para>
+  <para style="q2">«Vendrán días en que hasta la última de vosotras</para>
+  <para style="q2">será arreada con garfios y arpones.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Una tras otra saldréis por las brechas del muro,</para>
+  <para style="q2">y hacia Hermón seréis expulsadas</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>»Id a Betel y pecad;</para>
+  <para style="q2">id a Guilgal y seguid pecando.</para>
+  <para style="q1">Ofreced vuestros sacrificios por la mañana,</para>
+  <para style="q2">y al tercer día vuestros diezmos.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Quemad pan leudado como ofrenda de gratitud</para>
+  <para style="q2">y proclamad ofrendas voluntarias.</para>
+  <para style="q1">Hacedlo saber a todos, israelitas;</para>
+  <para style="q2">¡eso es lo que a vosotros os encanta!</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char> omnipotente—.</para>
+  <para style="s1">Dureza de Israel</para>
+  <para style="q1">
+    <verse number="6" style="v"/>»Yo os hice pasar hambre en todas vuestras ciudades,</para>
+  <para style="q2">y os privé de pan en todos vuestros poblados.</para>
+  <para style="q2">Con todo, vosotros no os volvisteis a mí</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>»Yo os retuve la lluvia</para>
+  <para style="q2">cuando aún faltaban tres meses para la cosecha.</para>
+  <para style="q1">En una ciudad hacía llover,</para>
+  <para style="q2">pero en otra, no;</para>
+  <para style="q1">una parcela recibía lluvia,</para>
+  <para style="q2">mientras que otra, no, y se secó.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Vagando de ciudad en ciudad, iba la gente en busca de agua,</para>
+  <para style="q2">pero no calmaba su sed.</para>
+  <para style="q2">Con todo, vosotros no os volvisteis a mí</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>»Castigué vuestros campos con plagas y sequía;</para>
+  <para style="q2">la langosta devoró vuestros huertos y viñedos,</para>
+  <para style="q1">vuestras higueras y olivares.</para>
+  <para style="q2">Con todo, no os volvisteis a mí</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>»Os mandé plagas</para>
+  <para style="q2">como las de Egipto.</para>
+  <para style="q1">Pasé por la espada a vuestros mejores jóvenes,</para>
+  <para style="q2">junto con los caballos capturados.</para>
+  <para style="q1">Hice que llegara hasta vuestras propias narices</para>
+  <para style="q2">el hedor de los cadáveres.</para>
+  <para style="q2">Con todo, no os volvisteis a mí</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>»Yo os envié destrucción</para>
+  <para style="q2">como la de Sodoma y Gomorra;</para>
+  <para style="q1">¡quedasteis como tizones arrebatados del fuego!</para>
+  <para style="q2">Con todo, vosotros no os volvisteis a mí</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>»Por eso, Israel, voy a actuar contra ti;</para>
+  <para style="q2">y, como voy a hacerlo,</para>
+  <para style="q2">¡prepárate, Israel, para encontrarte con tu Dios!»</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>He aquí el que forma las montañas,</para>
+  <para style="q2">el que crea el viento,</para>
+  <para style="q2">el que revela al hombre sus designios,</para>
+  <para style="q1">el que convierte la aurora en tinieblas,</para>
+  <para style="q2">el que marcha sobre las alturas de la tierra:</para>
+  <para style="q2">su nombre es el <char style="nd">Señor</char> Dios <char style="w">Todopoderoso</char>.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Advertencias y lamentos</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Oye esta palabra, reino de Israel,</para>
+  <para style="q2">este canto fúnebre que por ti entono:</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v"/>«Ha caído la joven Israel,</para>
+  <para style="q2">y no volverá a levantarse;</para>
+  <para style="q1">postrada en su propia tierra,</para>
+  <para style="q2">no hay quien la levante».</para>
+  <para style="p">
+    <verse number="3" style="v"/>Así dice el <char style="nd">Señor</char> omnipotente al reino de Israel:</para>
+  <para style="q1">«La ciudad que salía a la guerra con mil hombres</para>
+  <para style="q2">se quedará solo con cien,</para>
+  <para style="q1">y la que salía con cien</para>
+  <para style="q2">se quedará solo con diez».</para>
+  <para style="p">
+    <verse number="4" style="v"/>Así dice el <char style="nd">Señor</char> al reino de Israel:</para>
+  <para style="q1">«Buscadme y viviréis.</para>
+  <para style="q2">
+    <verse number="5" style="v"/>Pero no acudáis a Betel,</para>
+  <para style="q1">ni vayáis a Guilgal,</para>
+  <para style="q2">ni paséis a Berseba,</para>
+  <para style="q1">porque Guilgal será llevada cautiva,</para>
+  <para style="q2">y Betel, reducida a la nada».</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>Buscad al <char style="nd">Señor</char> y viviréis,</para>
+  <para style="q2">no sea que él caiga como fuego</para>
+  <para style="q2">sobre los descendientes de José,</para>
+  <para style="q1">fuego que devore a Betel</para>
+  <para style="q2">sin que haya quien lo apague.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Vosotros convertís el derecho en amargura</para>
+  <para style="q2">y echáis por tierra la justicia.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>El <char style="nd">Señor</char> hizo las Pléyades y el Orión,</para>
+  <para style="q2">convierte en aurora las densas tinieblas</para>
+  <para style="q2">y oscurece el día hasta convertirlo en noche.</para>
+  <para style="q1">Él convoca las aguas del mar</para>
+  <para style="q2">y las derrama sobre la tierra.</para>
+  <para style="q2">¡Su nombre es el <char style="nd">Señor</char>!</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Él reduce a la nada la fortaleza</para>
+  <para style="q2">y trae la ruina sobre la plaza fuerte.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Vosotros odiáis al que defiende la justicia en el tribunal</para>
+  <para style="q2">y detestáis al que dice la verdad.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Por eso, como pisoteáis al desvalido</para>
+  <para style="q2">y le imponéis tributo de grano,</para>
+  <para style="q1">no viviréis en las casas de piedra labrada que habéis construido,</para>
+  <para style="q2">ni beberéis del vino de los selectos viñedos que habéis plantado.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>¡Yo sé cuán numerosos son vuestros delitos,</para>
+  <para style="q2">cuán grandes vuestros pecados!</para>
+  <para style="b"/>
+  <para style="q1">Vosotros oprimís al justo, exigís soborno</para>
+  <para style="q2">y en los tribunales atropelláis al necesitado.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Por eso en circunstancias como estas guarda silencio el prudente,</para>
+  <para style="q2">porque estos tiempos son malos.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>Buscad el bien y no el mal, y viviréis;</para>
+  <para style="q2">y así estará con vosotros el <char style="nd">Señor</char> Dios <char style="w">Todopoderoso</char>,</para>
+  <para style="q2">tal como vosotros lo afirmáis.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>¡Odiad el mal y amad el bien!</para>
+  <para style="q2">Haced que impere la justicia en los tribunales;</para>
+  <para style="q1">tal vez así el <char style="nd">Señor</char>, el Dios Todopoderoso,</para>
+  <para style="q2">tenga compasión del remanente de José.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Por eso, así dice el <char style="nd">Señor</char> omnipotente, el Dios Todopoderoso:</para>
+  <para style="q1">«En todas las plazas se escucharán lamentos,</para>
+  <para style="q2">y gritos de angustia en todas las calles.</para>
+  <para style="q1">Llamarán a duelo a los campesinos,</para>
+  <para style="q2">y a los llorones profesionales, a hacer lamentación.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Se escucharán lamentos en todos los viñedos</para>
+  <para style="q2">cuando yo pase en medio de ti»,</para>
+  <para style="q4">dice el <char style="nd">Señor</char>.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="18" style="v"/>¡Ay de los que suspiran</para>
+  <para style="q2">por el día del <char style="nd">Señor</char>!</para>
+  <para style="q1">¿De qué os servirá ese día</para>
+  <para style="q2">si va a ser de oscuridad y no de luz?</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Será como cuando alguien huye de un león</para>
+  <para style="q2">y se le viene encima un oso,</para>
+  <para style="q1">o como cuando al llegar a su casa,</para>
+  <para style="q2">apoya la mano en la pared</para>
+  <para style="q2">y le muerde una serpiente.</para>
+  <para style="q1">
+    <verse number="20" style="v"/>¿No será el día del <char style="nd">Señor</char> de oscuridad y no de luz?</para>
+  <para style="q2">¡Será por cierto sombrío y sin resplandor!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>«Detesto y aborrezco vuestras fiestas religiosas;</para>
+  <para style="q2">no me agradan vuestros cultos solemnes.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Aunque me traigáis holocaustos y ofrendas de cereal,</para>
+  <para style="q2">no los aceptaré,</para>
+  <para style="q1">ni prestaré atención</para>
+  <para style="q2">a los sacrificios de <char style="w">comunión</char> de novillos cebados.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Aleja de mí el bullicio de tus canciones;</para>
+  <para style="q2">no quiero oír la música de tus cítaras.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>¡Pero que fluya el derecho como las aguas,</para>
+  <para style="q2">y la justicia como arroyo inagotable!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="25" style="v"/>»Pueblo de Israel, ¿acaso me ofrecisteis sacrificios y ofrendas</para>
+  <para style="q2">durante los cuarenta años en el desierto?</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Tendréis que cargar con la imagen de Sicut, su rey,</para>
+  <para style="q2">y también con la de Quiyún,</para>
+  <para style="q1">imágenes de esos dioses astrales</para>
+  <para style="q2">que vosotros mismos os habéis fabricado.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Entonces os mandaré al exilio más allá de Damasco»,</para>
+  <para style="q2">dice el <char style="nd">Señor</char>, cuyo nombre es Dios Todopoderoso.</para>
+  <para style="b"/>
+  <chapter number="6" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>¡Ay de los que viven tranquilos en <char style="w">Sión</char></para>
+  <para style="q2">y de los que viven confiados en el monte de Samaria!</para>
+  <para style="q1">¡Ay de los notables de la nación más importante,</para>
+  <para style="q2">a quienes acude el pueblo de Israel!</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Pasad a Calné y observadla;</para>
+  <para style="q2">id de allí a Jamat la grande,</para>
+  <para style="q2">bajad luego a Gat de los filisteos.</para>
+  <para style="q1">¿Acaso sois vosotros superiores a estos reinos,</para>
+  <para style="q2">o es más grande su territorio que el vuestro?</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Vosotros creéis alejar el día de la desgracia,</para>
+  <para style="q2">pero estáis acercando el imperio de la violencia.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Vosotros que os acostáis en camas incrustadas de marfil</para>
+  <para style="q2">y os arrellanáis en divanes;</para>
+  <para style="q1">que coméis corderos selectos</para>
+  <para style="q2">y terneros engordados;</para>
+  <para style="q1">
+    <verse number="5" style="v"/>que, a la manera de David,</para>
+  <para style="q2">improvisáis canciones al son de la cítara</para>
+  <para style="q2">e inventáis instrumentos musicales;</para>
+  <para style="q1">
+    <verse number="6" style="v"/>que bebéis vino en tazones</para>
+  <para style="q2">y os perfumáis con las esencias más finas</para>
+  <para style="q2">sin afligiros por la ruina de José,</para>
+  <para style="q1">
+    <verse number="7" style="v"/>marcharéis a la cabeza de los desterrados,</para>
+  <para style="q2">y así terminará el banquete de los holgazanes.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>El <char style="nd">Señor</char> omnipotente jura por sí mismo;</para>
+  <para style="q2">esto afirma el <char style="nd">Señor</char> Dios <char style="w">Todopoderoso</char>:</para>
+  <para style="b"/>
+  <para style="q1">«Yo detesto la arrogancia de Jacob;</para>
+  <para style="q2">yo aborrezco sus fortalezas;</para>
+  <para style="q1">por eso entregaré la ciudad al enemigo,</para>
+  <para style="q2">con todo lo que hay en ella».</para>
+  <para style="p">
+    <verse number="9" style="v"/>Sucederá que, si en una casa quedan diez hombres con vida, todos morirán. <verse number="10" style="v"/>Y, cuando vengan a la casa para levantar los cadáveres y quemarlos, algún pariente le preguntará a otro que ande en la casa: «¿Queda alguien más contigo?» Y aquel le responderá: «No». Entonces le dirá: «¡Cállate! No vayamos a mencionar el <char style="w">nombre</char> del <char style="nd">Señor</char>».</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Mira, el <char style="nd">Señor</char> da la orden</para>
+  <para style="q2">de golpear la casa grande hasta hacerla añicos</para>
+  <para style="q2">y de hacer trizas la casa pequeña.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>¿Acaso galopan los caballos por las rocas</para>
+  <para style="q2">o se ara en estas con bueyes?</para>
+  <para style="q1">Pero vosotros habéis convertido el derecho en veneno,</para>
+  <para style="q2">y en amargura el fruto de la justicia.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Vosotros os regocijáis por la conquista de Lo Debar<note caller="+" style="f"><char style="fr" closed="false">6:13 </char><char style="ft" closed="false">En hebreo, </char><char style="fqa" closed="false">Lo Debar </char><char style="ft" closed="false">significa </char><char style="fqa" closed="false">nada.</char></note></para>
+  <para style="q2">y agregáis: «¿No fue con nuestras propias fuerzas</para>
+  <para style="q2">como nos apoderamos de Carnayin?»<note caller="+" style="f"><char style="fr" closed="false">6:13 </char><char style="ft" closed="false">En hebreo, </char><char style="fq" closed="false">Carnayin </char><char style="ft" closed="false">significa </char><char style="fqa" closed="false">dos cuernos</char><char style="ft" closed="false">; el cuerno es símbolo del poder.</char></note></para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>«Por tanto, pueblo de Israel,</para>
+  <para style="q2">voy a levantar contra ti una nación</para>
+  <para style="q1">que te oprimirá desde Lebó Jamat<note caller="+" style="f"><char style="fr" closed="false">6:14 </char><char style="fq" closed="false">Lebó Jamat</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">la entrada de Jamat.</char></note></para>
+  <para style="q2">hasta el torrente del Arabá»,</para>
+  <para style="q4">afirma el <char style="nd">Señor</char>, el Dios Todopoderoso.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Tres visiones</para>
+  <para style="p">
+    <verse number="1" style="v"/>El <char style="nd">Señor</char> omnipotente me mostró esta visión: Empezaba a crecer la hierba después de la siega que corresponde al rey, y vi al Señor preparando enjambres de langostas. <verse number="2" style="v"/>Cuando las langostas acababan con la hierba de la tierra, exclamé:</para>
+  <para style="p">―¡<char style="nd">Señor</char> mi Dios, te ruego que perdones a Jacob! ¿Cómo va a sobrevivir, si es tan pequeño?</para>
+  <para style="p">
+    <verse number="3" style="v"/>Entonces el <char style="nd">Señor</char> se compadeció y dijo:</para>
+  <para style="p">―Esto no va a suceder.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="4" style="v"/>El <char style="nd">Señor</char> omnipotente me mostró entonces otra visión: Vi al <char style="nd">Señor</char> llamar a juicio con un fuego que devoraba el gran abismo y consumía los campos. <verse number="5" style="v"/>Y exclamé:</para>
+  <para style="p">―¡Detente, <char style="nd">Señor</char> mi Dios, te lo ruego! ¿Cómo sobrevivirá Jacob, si es tan pequeño?</para>
+  <para style="p">
+    <verse number="6" style="v"/>Entonces el <char style="nd">Señor</char> se compadeció y dijo:</para>
+  <para style="p">―Esto tampoco va a suceder.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="7" style="v"/>El Señor me mostró otra visión: Estaba él de pie junto a un muro construido a plomo, y tenía una cuerda de plomada en la mano. <verse number="8" style="v"/>Y el <char style="nd">Señor</char> me preguntó:</para>
+  <para style="p">―¿Qué ves, Amós?</para>
+  <para style="p">―Una cuerda de plomada —respondí.</para>
+  <para style="p">Entonces el Señor dijo:</para>
+  <para style="p">―Mira, voy a tirar la plomada en medio de mi pueblo Israel; no volveré a perdonarlo.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>»Los <char style="w">altares</char> paganos de Isaac serán destruidos,</para>
+  <para style="q2">y arruinados los santuarios de Israel;</para>
+  <para style="q1">me levantaré con espada</para>
+  <para style="q2">contra el palacio de Jeroboán».</para>
+  <para style="s1">Amasías contra Amós</para>
+  <para style="p">
+    <verse number="10" style="v"/>Entonces Amasías, sacerdote de Betel, envió un mensaje a Jeroboán rey de Israel: «Amós está conspirando contra ti en medio de Israel. El país ya no aguanta tanta palabrería de Amós, <verse number="11" style="v"/>porque anda diciendo:</para>
+  <para style="q1">»“Jeroboán morirá a espada,</para>
+  <para style="q2">e Israel será llevado cautivo</para>
+  <para style="q2">lejos de su tierra”».</para>
+  <para style="p">
+    <verse number="12" style="v"/>Entonces Amasías le dijo a Amós:</para>
+  <para style="p">―¡Largo de aquí, vidente! ¡Si quieres ganarte el pan profetizando, vete a la tierra de Judá! <verse number="13" style="v"/>No vuelvas a profetizar en Betel, porque este es el santuario del rey; es el templo del reino.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Amós le respondió a Amasías:</para>
+  <para style="p">―Yo no soy profeta ni hijo de profeta, sino que cuido ovejas y cultivo higueras. <verse number="15" style="v"/>Pero el <char style="nd">Señor</char> me sacó de detrás del rebaño y me dijo: “Ve y profetiza a mi pueblo Israel”. <verse number="16" style="v"/>Así que oye la palabra del <char style="nd">Señor</char>. Tú dices:</para>
+  <para style="q1">»“No profetices contra Israel;</para>
+  <para style="q2">deja de predicar contra los descendientes de Isaac”.</para>
+  <para style="p">
+    <verse number="17" style="v"/>»Por eso, así dice el <char style="nd">Señor</char>:</para>
+  <para style="q1">»“Tu esposa se prostituirá en la ciudad,</para>
+  <para style="q2">y tus hijos y tus hijas caerán a espada.</para>
+  <para style="q1">Tu tierra será medida y repartida,</para>
+  <para style="q2">y tú mismo morirás en un país <char style="w" lemma="paganos">pagano</char>.</para>
+  <para style="q1">E Israel será llevado cautivo</para>
+  <para style="q2">lejos de su tierra”».</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Cuarta visión y advertencias</para>
+  <para style="p">
+    <verse number="1" style="v"/>El <char style="nd">Señor</char> omnipotente me mostró en una visión una canasta de fruta madura, <verse number="2" style="v"/>y me preguntó:</para>
+  <para style="p">―¿Qué ves, Amós?</para>
+  <para style="p">―Una canasta de fruta madura —respondí.</para>
+  <para style="p">Entonces el <char style="nd">Señor</char> me dijo:</para>
+  <para style="p">―Ha llegado el tiempo de que Israel caiga como fruta madura; no volveré a perdonarlo.</para>
+  <para style="p">
+    <verse number="3" style="v"/>»En aquel día —afirma el <char style="nd">Señor</char> omnipotente—, las canciones del palacio se volverán lamentos. ¡Muchos serán los cadáveres tirados por todas partes! ¡Silencio!»</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Oíd esto, los que pisoteáis a los necesitados</para>
+  <para style="q2">y extermináis a los pobres de la tierra.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Vosotros decís:</para>
+  <para style="q1">«¿Cuándo pasará la fiesta de luna nueva</para>
+  <para style="q2">para que podamos vender grano,</para>
+  <para style="q1">o el día de reposo</para>
+  <para style="q2">para que pongamos a la venta el trigo?»</para>
+  <para style="p">Vosotros buscáis</para>
+  <para style="q1">achicar la medida</para>
+  <para style="q2">y aumentar el precio,</para>
+  <para style="q1">falsear las balanzas</para>
+  <para style="q2">
+    <verse number="6" style="v"/>y vender los deshechos del trigo,</para>
+  <para style="q1">comprar al desvalido por dinero,</para>
+  <para style="q2">y al necesitado, por un par de sandalias.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Jura el <char style="nd">Señor</char> por el orgullo de Jacob: «Jamás olvidaré nada de lo que han hecho.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>»¿Y con todo esto no temblará la tierra?</para>
+  <para style="q2">¿No se enlutarán sus habitantes?</para>
+  <para style="q1">Subirá la tierra entera como el Nilo;</para>
+  <para style="q2">se agitará y bajará,</para>
+  <para style="q2">como el río de Egipto.</para>
+  <para style="p">
+    <verse number="9" style="v"/>»En aquel día —afirma el <char style="nd">Señor</char> omnipotente—,</para>
+  <para style="q1">»haré que el sol se ponga al mediodía,</para>
+  <para style="q2">y que en pleno día la tierra se oscurezca.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Convertiré en luto vuestras fiestas religiosas,</para>
+  <para style="q2">y en cantos fúnebres todas vuestras canciones.</para>
+  <para style="q1">Os vestiré de luto</para>
+  <para style="q2">y os afeitaré la cabeza.</para>
+  <para style="q1">Será como si lloraseis la muerte de un hijo único,</para>
+  <para style="q2">y terminaréis el día en amargura.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>»Vienen días —afirma el <char style="nd">Señor</char> omnipotente—,</para>
+  <para style="q2">en que enviaré hambre al país;</para>
+  <para style="q1">no será hambre de pan ni sed de agua,</para>
+  <para style="q2">sino hambre de oír las palabras del <char style="nd">Señor</char>.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>La gente vagará sin rumbo de mar a mar;</para>
+  <para style="q2">andarán errantes del norte al este,</para>
+  <para style="q1">buscando la palabra del <char style="nd">Señor</char>,</para>
+  <para style="q2">pero no la encontrarán.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>»En aquel día se desmayarán de sed</para>
+  <para style="q2">las jóvenes hermosas y los jóvenes fuertes.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Y caerán para no levantarse jamás</para>
+  <para style="q2">los que juran por la culpa<note caller="+" style="f"><char style="fr" closed="false">8:14 </char><char style="fq" closed="false">por la culpa</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">por Asima</char><char style="ft" closed="false">; es decir, el ídolo samaritano.</char></note> de Samaria,</para>
+  <para style="q1">los que dicen: “¡Por la vida de tu dios, oh Dan!</para>
+  <para style="q2">¡Por la vida de tu dios, Berseba!”»<note caller="+" style="f"><char style="fr" closed="false">8:14 </char><char style="fq" closed="false">de tu dios, Berseba</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">del camino de Berseba.</char></note></para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Quinta visión</para>
+  <para style="p">
+    <verse number="1" style="v"/>Vi al Señor de pie junto al altar, y él dijo:</para>
+  <para style="q1">«Golpea los capiteles de las columnas</para>
+  <para style="q2">para que se estremezcan los umbrales,</para>
+  <para style="q1">y que caigan en pedazos sobre sus cabezas.</para>
+  <para style="q2">A los que queden los mataré a espada.</para>
+  <para style="q1">Ni uno solo escapará,</para>
+  <para style="q2">ninguno saldrá con vida.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Aunque se escondan en lo profundo del <char style="w">sepulcro</char>,</para>
+  <para style="q2">de allí los sacará mi mano.</para>
+  <para style="q1">Aunque suban hasta el cielo,</para>
+  <para style="q2">de allí los derribaré.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Aunque se oculten en la cumbre del Carmelo,</para>
+  <para style="q2">allí los buscaré y los atraparé.</para>
+  <para style="q1">Aunque de mí se escondan en el fondo del mar,</para>
+  <para style="q2">allí ordenaré a la serpiente que los muerda.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Aunque vayan al destierro delante de sus enemigos,</para>
+  <para style="q2">allí ordenaré que los mate la espada.</para>
+  <para style="q1">Para mal, y no para bien,</para>
+  <para style="q2">fijaré en ellos mis ojos».</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>El <char style="nd">Señor</char> omnipotente, el Todopoderoso,</para>
+  <para style="q2">toca la tierra, y ella se desmorona.</para>
+  <para style="q1">Sube y baja la tierra</para>
+  <para style="q2">como las aguas del Nilo, el río de Egipto,</para>
+  <para style="q2">y se enlutan todos los que en ella viven.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Dios construye su excelso palacio en el cielo</para>
+  <para style="q2">y pone su cimiento<note caller="+" style="f"><char style="fr" closed="false">9:6 </char><char style="fq" closed="false">excelso palacio … cimiento</char><char style="ft" closed="false">. Palabras de difícil traducción.</char></note> en la tierra,</para>
+  <para style="q1">llama a las aguas del mar</para>
+  <para style="q2">y las derrama sobre la superficie de la tierra:</para>
+  <para style="q2">su <char style="w">nombre</char> es el <char style="nd">Señor</char>.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>«Israelitas, ¿acaso vosotros</para>
+  <para style="q2">no me sois como <char style="w" lemma="cusita">cusitas</char>?</para>
+  <para style="q1">¿Acaso no saqué de Egipto a Israel,</para>
+  <para style="q2">de Creta<note caller="+" style="f"><char style="fr" closed="false">9:7 </char><char style="fq" closed="false">Creta</char><char style="ft" closed="false">. Lit. </char><char style="fqa" closed="false">Caftor.</char></note> a los filisteos</para>
+  <para style="q2">y de Quir a los <char style="w">sirios</char>?</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Por eso los ojos del <char style="nd">Señor</char> omnipotente</para>
+  <para style="q2">están sobre este reino pecaminoso.</para>
+  <para style="q1">Borraré de la faz de la tierra a los descendientes de Jacob,</para>
+  <para style="q2">aunque no del todo</para>
+  <para style="q4">—afirma el <char style="nd">Señor</char>—.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Daré la orden de zarandear al pueblo de Israel</para>
+  <para style="q2">entre todas las naciones,</para>
+  <para style="q1">como se zarandea la arena en una criba,</para>
+  <para style="q2">sin que caiga a tierra ni una sola piedra.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Morirán a filo de espada</para>
+  <para style="q2">todos los pecadores de mi pueblo,</para>
+  <para style="q1">todos los que dicen:</para>
+  <para style="q2">“No nos alcanzará la calamidad;</para>
+  <para style="q2">¡jamás se nos acercará!”</para>
+  <para style="s1">Restauración de Israel</para>
+  <para style="q1">
+    <verse number="11" style="v"/>»En aquel día levantaré</para>
+  <para style="q2">la choza caída de David.</para>
+  <para style="q1">Repararé sus grietas,</para>
+  <para style="q2">restauraré sus ruinas</para>
+  <para style="q2">y la reconstruiré tal como era en días pasados,</para>
+  <para style="q1">
+    <verse number="12" style="v"/>para que ellos posean el remanente de Edom</para>
+  <para style="q2">y todas las naciones que llevan mi <char style="w">nombre</char></para>
+  <para style="q1">—afirma el <char style="nd">Señor</char>,</para>
+  <para style="q2">que hará estas cosas—.</para>
+  <para style="p">
+    <verse number="13" style="v"/>»Vienen días —afirma el <char style="nd">Señor</char>—,</para>
+  <para style="q1">»en los cuales el que ara alcanzará al segador</para>
+  <para style="q2">y el que pisa las uvas, al sembrador.</para>
+  <para style="q1">Los montes destilarán vino dulce,</para>
+  <para style="q2">el cual correrá por todas las colinas.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Restauraré a<note caller="+" style="f"><char style="fr" closed="false">9:14 </char><char style="fq" closed="false">Restauraré a</char><char style="ft" closed="false">. Alt. </char><char style="fqa" closed="false">Haré volver a los cautivos de.</char></note> mi pueblo Israel;</para>
+  <para style="q2">ellos reconstruirán las ciudades arruinadas</para>
+  <para style="q2">y vivirán en ellas.</para>
+  <para style="q1">Plantarán viñedos y beberán su vino;</para>
+  <para style="q2">cultivarán huertos y comerán sus frutos.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Plantaré a Israel en su propia tierra,</para>
+  <para style="q2">para que nunca más sea arrancado</para>
+  <para style="q2">de la tierra que yo le di»,</para>
+  <para style="b"/>
+  <para style="q4">dice el <char style="nd">Señor</char> tu Dios.</para>
+</usx>

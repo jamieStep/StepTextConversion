@@ -1,0 +1,724 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata id="e959e47176271f18" revision="6" version="2.2.1">
+    <identification>
+      <name>Korean Living Bible (현대인의 성경) 1985</name>
+      <nameLocal>현대인의 성경</nameLocal>
+      <description>Korean: 현대인의 성경 (Bible)</description>
+      <descriptionLocal>성경</descriptionLocal>
+      <abbreviation>KLB</abbreviation>
+      <abbreviationLocal>KLB</abbreviationLocal>
+      <scope>Bible</scope>
+      <dateCompleted>1996-01-01</dateCompleted>
+      <bundleProducer>Paratext/9.0.100.87</bundleProducer>
+      <systemId type="paratext">
+        <id>e959e47176271f186fe250ea46cb4a8b5001059f</id>
+        <csetId>d46bd159714c002ad88e50ce152d54c21b25cdfb</csetId>
+        <name>korKLB85</name>
+        <fullName>Korean Living Bible (현대인의 성경) 1985</fullName>
+      </systemId>
+      <systemId type="ptreg">
+        <id>Puqma8snSS6AvFjJC</id>
+      </systemId>
+    </identification>
+    <type>
+      <medium>text</medium>
+      <isConfidential>false</isConfidential>
+      <hasCharacters>true</hasCharacters>
+      <isTranslation>true</isTranslation>
+      <isExpression>true</isExpression>
+      <translationType>New</translationType>
+      <audience>Common</audience>
+      <projectType>Standard</projectType>
+    </type>
+    <relationships />
+    <agencies>
+      <rightsHolder>
+        <abbr>Biblica</abbr>
+        <url>http://www.Biblica.com/permissions</url>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </rightsHolder>
+      <rightsAdmin>
+        <url>http://www.Biblica.com</url>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </rightsAdmin>
+      <contributor>
+        <content>true</content>
+        <publication>true</publication>
+        <management>true</management>
+        <finance>true</finance>
+        <qa>true</qa>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </contributor>
+    </agencies>
+    <language>
+      <iso>kor</iso>
+      <name>Korean</name>
+      <nameLocal>한국어</nameLocal>
+      <script>Korean (Hangul + Han)</script>
+      <scriptCode>Kore</scriptCode>
+      <scriptDirection>LTR</scriptDirection>
+      <ldml>ko</ldml>
+      <numerals>Arabic</numerals>
+    </language>
+    <countries>
+      <country>
+        <iso>KR</iso>
+        <name>Korea, Republic of</name>
+      </country>
+    </countries>
+    <format>
+      <usxVersion>3.0</usxVersion>
+      <versedParagraphs>false</versedParagraphs>
+    </format>
+    <names>
+      <name id="book-gen">
+        <abbr>창</abbr>
+        <short>창세기</short>
+        <long>창세기</long>
+      </name>
+      <name id="book-exo">
+        <abbr>출</abbr>
+        <short>출애굽기</short>
+        <long>출애굽기</long>
+      </name>
+      <name id="book-lev">
+        <abbr>레</abbr>
+        <short>레위기</short>
+        <long>레위기</long>
+      </name>
+      <name id="book-num">
+        <abbr>민</abbr>
+        <short>민수기</short>
+        <long>민수기</long>
+      </name>
+      <name id="book-deu">
+        <abbr>신</abbr>
+        <short>신명기</short>
+        <long>신명기</long>
+      </name>
+      <name id="book-jos">
+        <abbr>수</abbr>
+        <short>여호수아</short>
+        <long>여호수아</long>
+      </name>
+      <name id="book-jdg">
+        <abbr>삿</abbr>
+        <short>사사기</short>
+        <long>사사기</long>
+      </name>
+      <name id="book-rut">
+        <abbr>룻</abbr>
+        <short>룻기</short>
+        <long>룻기</long>
+      </name>
+      <name id="book-1sa">
+        <abbr>삼상</abbr>
+        <short>사무엘상</short>
+        <long>사무엘상</long>
+      </name>
+      <name id="book-2sa">
+        <abbr>삼하</abbr>
+        <short>사무엘하</short>
+        <long>사무엘하</long>
+      </name>
+      <name id="book-1ki">
+        <abbr>왕상</abbr>
+        <short>열왕기상</short>
+        <long>열왕기상</long>
+      </name>
+      <name id="book-2ki">
+        <abbr>왕하</abbr>
+        <short>열왕기하</short>
+        <long>열왕기하</long>
+      </name>
+      <name id="book-1ch">
+        <abbr>대상</abbr>
+        <short>역대상</short>
+        <long>역대상</long>
+      </name>
+      <name id="book-2ch">
+        <abbr>대하</abbr>
+        <short>역대하</short>
+        <long>역대하</long>
+      </name>
+      <name id="book-ezr">
+        <abbr>스</abbr>
+        <short>에스라</short>
+        <long>에스라</long>
+      </name>
+      <name id="book-neh">
+        <abbr>느</abbr>
+        <short>느헤미야</short>
+        <long>느헤미야</long>
+      </name>
+      <name id="book-est">
+        <abbr>에</abbr>
+        <short>에스더</short>
+        <long>에스더</long>
+      </name>
+      <name id="book-job">
+        <abbr>욥</abbr>
+        <short>욥기</short>
+        <long>욥기</long>
+      </name>
+      <name id="book-psa">
+        <abbr>시</abbr>
+        <short>시편</short>
+        <long>시편</long>
+      </name>
+      <name id="book-pro">
+        <abbr>잠</abbr>
+        <short>잠언</short>
+        <long>잠언</long>
+      </name>
+      <name id="book-ecc">
+        <abbr>전</abbr>
+        <short>전도서</short>
+        <long>전도서</long>
+      </name>
+      <name id="book-sng">
+        <abbr>아</abbr>
+        <short>아가</short>
+        <long>아가</long>
+      </name>
+      <name id="book-isa">
+        <abbr>사</abbr>
+        <short>이사야</short>
+        <long>이사야</long>
+      </name>
+      <name id="book-jer">
+        <abbr>렘</abbr>
+        <short>예레미야</short>
+        <long>예레미야</long>
+      </name>
+      <name id="book-lam">
+        <abbr>애</abbr>
+        <short>예레미야애가</short>
+        <long>예레미야애가</long>
+      </name>
+      <name id="book-ezk">
+        <abbr>겔</abbr>
+        <short>에스겔</short>
+        <long>에스겔</long>
+      </name>
+      <name id="book-dan">
+        <abbr>단</abbr>
+        <short>다니엘</short>
+        <long>다니엘</long>
+      </name>
+      <name id="book-hos">
+        <abbr>호</abbr>
+        <short>호세아</short>
+        <long>호세아</long>
+      </name>
+      <name id="book-jol">
+        <abbr>욜</abbr>
+        <short>요엘</short>
+        <long>요엘</long>
+      </name>
+      <name id="book-amo">
+        <abbr>암</abbr>
+        <short>아모스</short>
+        <long>아모스</long>
+      </name>
+      <name id="book-oba">
+        <abbr>옵</abbr>
+        <short>오바댜</short>
+        <long>오바댜</long>
+      </name>
+      <name id="book-jon">
+        <abbr>욘</abbr>
+        <short>요나</short>
+        <long>요나</long>
+      </name>
+      <name id="book-mic">
+        <abbr>미</abbr>
+        <short>미가</short>
+        <long>미가</long>
+      </name>
+      <name id="book-nam">
+        <abbr>나</abbr>
+        <short>나훔</short>
+        <long>나훔</long>
+      </name>
+      <name id="book-hab">
+        <abbr>합</abbr>
+        <short>하박국</short>
+        <long>하박국</long>
+      </name>
+      <name id="book-zep">
+        <abbr>습</abbr>
+        <short>스바냐</short>
+        <long>스바냐</long>
+      </name>
+      <name id="book-hag">
+        <abbr>학</abbr>
+        <short>학개</short>
+        <long>학개</long>
+      </name>
+      <name id="book-zec">
+        <abbr>슥</abbr>
+        <short>스가랴</short>
+        <long>스가랴</long>
+      </name>
+      <name id="book-mal">
+        <abbr>말</abbr>
+        <short>말라기</short>
+        <long>말라기</long>
+      </name>
+      <name id="book-mat">
+        <abbr>마</abbr>
+        <short>마태복음</short>
+        <long>마태복음</long>
+      </name>
+      <name id="book-mrk">
+        <abbr>막</abbr>
+        <short>마가복음</short>
+        <long>마가복음</long>
+      </name>
+      <name id="book-luk">
+        <abbr>눅</abbr>
+        <short>누가복음</short>
+        <long>누가복음</long>
+      </name>
+      <name id="book-jhn">
+        <abbr>요</abbr>
+        <short>요한복음</short>
+        <long>요한복음</long>
+      </name>
+      <name id="book-act">
+        <abbr>행</abbr>
+        <short>사도행전</short>
+        <long>사도행전</long>
+      </name>
+      <name id="book-rom">
+        <abbr>롬</abbr>
+        <short>로마서</short>
+        <long>로마서</long>
+      </name>
+      <name id="book-1co">
+        <abbr>고전</abbr>
+        <short>고린도전서</short>
+        <long>고린도전서</long>
+      </name>
+      <name id="book-2co">
+        <abbr>고후</abbr>
+        <short>고린도후서</short>
+        <long>고린도후서</long>
+      </name>
+      <name id="book-gal">
+        <abbr>갈</abbr>
+        <short>갈라디아서</short>
+        <long>갈라디아서</long>
+      </name>
+      <name id="book-eph">
+        <abbr>엡</abbr>
+        <short>에베소서</short>
+        <long>에베소서</long>
+      </name>
+      <name id="book-php">
+        <abbr>빌</abbr>
+        <short>빌립보서</short>
+        <long>빌립보서</long>
+      </name>
+      <name id="book-col">
+        <abbr>골</abbr>
+        <short>골로새서</short>
+        <long>골로새서</long>
+      </name>
+      <name id="book-1th">
+        <abbr>살전</abbr>
+        <short>데살로니가전서</short>
+        <long>데살로니가전서</long>
+      </name>
+      <name id="book-2th">
+        <abbr>살후</abbr>
+        <short>데살로니가후서</short>
+        <long>데살로니가후서</long>
+      </name>
+      <name id="book-1ti">
+        <abbr>딤전</abbr>
+        <short>디모데전서</short>
+        <long>디모데전서</long>
+      </name>
+      <name id="book-2ti">
+        <abbr>딤후</abbr>
+        <short>디모데후서</short>
+        <long>디모데후서</long>
+      </name>
+      <name id="book-tit">
+        <abbr>딛</abbr>
+        <short>디도서</short>
+        <long>디도서</long>
+      </name>
+      <name id="book-phm">
+        <abbr>본</abbr>
+        <short>빌레몬서</short>
+        <long>빌레몬서</long>
+      </name>
+      <name id="book-heb">
+        <abbr>히</abbr>
+        <short>히브리서</short>
+        <long>히브리서</long>
+      </name>
+      <name id="book-jas">
+        <abbr>약</abbr>
+        <short>야고보서</short>
+        <long>야고보서</long>
+      </name>
+      <name id="book-1pe">
+        <abbr>벧전</abbr>
+        <short>베드로전서</short>
+        <long>베드로전서</long>
+      </name>
+      <name id="book-2pe">
+        <abbr>벧후</abbr>
+        <short>베드로후서</short>
+        <long>베드로후서</long>
+      </name>
+      <name id="book-1jn">
+        <abbr>요일</abbr>
+        <short>요한일서</short>
+        <long>요한일서</long>
+      </name>
+      <name id="book-2jn">
+        <abbr>요이</abbr>
+        <short>요한이서</short>
+        <long>요한이서</long>
+      </name>
+      <name id="book-3jn">
+        <abbr>요삼</abbr>
+        <short>요한삼서</short>
+        <long>요한삼서</long>
+      </name>
+      <name id="book-jud">
+        <abbr>유</abbr>
+        <short>유다서</short>
+        <long>유다서</long>
+      </name>
+      <name id="book-rev">
+        <abbr>계</abbr>
+        <short>요한계시록</short>
+        <long>요한계시록</long>
+      </name>
+    </names>
+    <manifest>
+      <resource checksum="cfd6e32ad4ee0f0433f56ad793ead8ef" mimeType="application/xml" size="230626" uri="release/USX_1/1CH.usx" />
+      <resource checksum="5a9cdc018a7a5ad90ac8b191a9f676ee" mimeType="application/xml" size="124425" uri="release/USX_1/1CO.usx" />
+      <resource checksum="3b537e89bc4271d59e648d0304c70a21" mimeType="application/xml" size="31227" uri="release/USX_1/1JN.usx" />
+      <resource checksum="4c6ccd50dd66d3d39f91bca661584c3a" mimeType="application/xml" size="226874" uri="release/USX_1/1KI.usx" />
+      <resource checksum="f5a1a0dd79dad7d740859e656b015c0e" mimeType="application/xml" size="32357" uri="release/USX_1/1PE.usx" />
+      <resource checksum="810f2524d50b93bbcd5822bcc42a0369" mimeType="application/xml" size="246356" uri="release/USX_1/1SA.usx" />
+      <resource checksum="5434b08fd7ef2673124db91305f587f1" mimeType="application/xml" size="25300" uri="release/USX_1/1TH.usx" />
+      <resource checksum="5d3dcb93e35002ba223ca695c3ab7541" mimeType="application/xml" size="31420" uri="release/USX_1/1TI.usx" />
+      <resource checksum="679600f6fb4802322598b843d0837f8f" mimeType="application/xml" size="249138" uri="release/USX_1/2CH.usx" />
+      <resource checksum="5ca8a34b7f9f321da1e75e131746839f" mimeType="application/xml" size="77424" uri="release/USX_1/2CO.usx" />
+      <resource checksum="98dce3405f6edc5bec19e1f0171f95d7" mimeType="application/xml" size="4447" uri="release/USX_1/2JN.usx" />
+      <resource checksum="564910e1a13c71ac78175e7efff3678b" mimeType="application/xml" size="219399" uri="release/USX_1/2KI.usx" />
+      <resource checksum="11adcfb41ed5cdda38bfe01c06e04dde" mimeType="application/xml" size="17691" uri="release/USX_1/2PE.usx" />
+      <resource checksum="da07cc49cdd9d5723b93012d4b4a19ea" mimeType="application/xml" size="208999" uri="release/USX_1/2SA.usx" />
+      <resource checksum="9179fc8cec576ddacaf5e8feb79b6227" mimeType="application/xml" size="13808" uri="release/USX_1/2TH.usx" />
+      <resource checksum="b0d671dfae6dc8985dd6817d7d122804" mimeType="application/xml" size="22533" uri="release/USX_1/2TI.usx" />
+      <resource checksum="10e9f83e8d0b53fbfa0cd05c6d302ce3" mimeType="application/xml" size="4575" uri="release/USX_1/3JN.usx" />
+      <resource checksum="0fa5ef1ba70fc9f892c1c9eff525da64" mimeType="application/xml" size="287637" uri="release/USX_1/ACT.usx" />
+      <resource checksum="e4f395252887dec2825883a83be8e89e" mimeType="application/xml" size="48078" uri="release/USX_1/AMO.usx" />
+      <resource checksum="8ab7c3d4143c61de34cc7fbe17575978" mimeType="application/xml" size="28161" uri="release/USX_1/COL.usx" />
+      <resource checksum="775756c5dd26180dc7ba25c9c02de13e" mimeType="application/xml" size="112769" uri="release/USX_1/DAN.usx" />
+      <resource checksum="9b9bae2874774394a0957bf1aaaa0c49" mimeType="application/xml" size="281899" uri="release/USX_1/DEU.usx" />
+      <resource checksum="90fd229119339454820c2cb077541118" mimeType="application/xml" size="60532" uri="release/USX_1/ECC.usx" />
+      <resource checksum="680acd7d28271ad3265cce67514e31af" mimeType="application/xml" size="41114" uri="release/USX_1/EPH.usx" />
+      <resource checksum="bf58d3eaa0c0d327ecf9e750fe6817e2" mimeType="application/xml" size="51436" uri="release/USX_1/EST.usx" />
+      <resource checksum="4790cc1cf35fb4a5e2c0e9cdfc867257" mimeType="application/xml" size="328772" uri="release/USX_1/EXO.usx" />
+      <resource checksum="042199ea737f7b26a1a13002bda8c051" mimeType="application/xml" size="373438" uri="release/USX_1/EZK.usx" />
+      <resource checksum="6d3be3e3bbb0d6bdc730ec43e036b214" mimeType="application/xml" size="74750" uri="release/USX_1/EZR.usx" />
+      <resource checksum="840eb26b8e66ae229ca2f2dacf228250" mimeType="application/xml" size="44247" uri="release/USX_1/GAL.usx" />
+      <resource checksum="3655ceb1fcb7567b1e138c02670dd346" mimeType="application/xml" size="409139" uri="release/USX_1/GEN.usx" />
+      <resource checksum="dda60328fb7e60b0ca061523347c238a" mimeType="application/xml" size="20005" uri="release/USX_1/HAB.usx" />
+      <resource checksum="a1af285be45ea0f80a481b41400adc2b" mimeType="application/xml" size="11400" uri="release/USX_1/HAG.usx" />
+      <resource checksum="5d2ecaf5a2d98ee3d72a660bbdcd4c74" mimeType="application/xml" size="89839" uri="release/USX_1/HEB.usx" />
+      <resource checksum="65a00c9aa4ba9a09984022cc7e936f0c" mimeType="application/xml" size="62238" uri="release/USX_1/HOS.usx" />
+      <resource checksum="a36d5991105421398c38aa7bc0812681" mimeType="application/xml" size="388539" uri="release/USX_1/ISA.usx" />
+      <resource checksum="09c1275d773ccd108e1b8d9484a0a9b2" mimeType="application/xml" size="29696" uri="release/USX_1/JAS.usx" />
+      <resource checksum="13a4ab00f239b8ec56e15a8700218a17" mimeType="application/xml" size="187450" uri="release/USX_1/JDG.usx" />
+      <resource checksum="3a258bc18393e8a5bbfba958dbde3681" mimeType="application/xml" size="417124" uri="release/USX_1/JER.usx" />
+      <resource checksum="adae955e6c2e1dfd0400286bc80198d8" mimeType="application/xml" size="244420" uri="release/USX_1/JHN.usx" />
+      <resource checksum="b7d35092065447e4dda7a8f40b2e7ee8" mimeType="application/xml" size="239495" uri="release/USX_1/JOB.usx" />
+      <resource checksum="1e0dd9cacc488804257e29ed788a3b31" mimeType="application/xml" size="22121" uri="release/USX_1/JOL.usx" />
+      <resource checksum="354f3afa4dc95734aaab44ef3fed686e" mimeType="application/xml" size="16126" uri="release/USX_1/JON.usx" />
+      <resource checksum="9474deaf543a014b12c8873fe6cce0cc" mimeType="application/xml" size="182996" uri="release/USX_1/JOS.usx" />
+      <resource checksum="c8cf8b774d17216702966326dbd0bdc7" mimeType="application/xml" size="8289" uri="release/USX_1/JUD.usx" />
+      <resource checksum="069d3362b1b4041335292e80c99f5805" mimeType="application/xml" size="38589" uri="release/USX_1/LAM.usx" />
+      <resource checksum="32ac503c8397ff688bbb14fa34f7a6e7" mimeType="application/xml" size="219297" uri="release/USX_1/LEV.usx" />
+      <resource checksum="8e8d140196cd360802a69eae7196070b" mimeType="application/xml" size="318024" uri="release/USX_1/LUK.usx" />
+      <resource checksum="3f4f31c920c1fbd0593318d2161060b9" mimeType="application/xml" size="20510" uri="release/USX_1/MAL.usx" />
+      <resource checksum="9720b0343bbfdb4ea2923e0bebcbaf6e" mimeType="application/xml" size="297128" uri="release/USX_1/MAT.usx" />
+      <resource checksum="d1d6eef1671d3219cd5fd82529ee0218" mimeType="application/xml" size="36062" uri="release/USX_1/MIC.usx" />
+      <resource checksum="f94c4bb96ebd3976abd802b6fb3e3fd0" mimeType="application/xml" size="181914" uri="release/USX_1/MRK.usx" />
+      <resource checksum="92ab525ab15a919429793703cf92b9bf" mimeType="application/xml" size="14769" uri="release/USX_1/NAM.usx" />
+      <resource checksum="009b41f7b31efdb3df65be40ed7ea2f0" mimeType="application/xml" size="111322" uri="release/USX_1/NEH.usx" />
+      <resource checksum="4d282dd6cc6cf6d85f68a4ee8044b118" mimeType="application/xml" size="292348" uri="release/USX_1/NUM.usx" />
+      <resource checksum="43d9c0592396f3aff1776af04f58728d" mimeType="application/xml" size="6901" uri="release/USX_1/OBA.usx" />
+      <resource checksum="02eb22b595ecbd660cc29aad10043d6c" mimeType="application/xml" size="6392" uri="release/USX_1/PHM.usx" />
+      <resource checksum="786bc63f8c932ed2aac5d7abc8aeb929" mimeType="application/xml" size="28792" uri="release/USX_1/PHP.usx" />
+      <resource checksum="adbcf2453f566986a09a2ba88ff9ec9a" mimeType="application/xml" size="205476" uri="release/USX_1/PRO.usx" />
+      <resource checksum="268f08ec2e52366dd9194c43a4080bf6" mimeType="application/xml" size="877416" uri="release/USX_1/PSA.usx" />
+      <resource checksum="e6aa9ef7f7d5adf418298f06c4f925a0" mimeType="application/xml" size="120969" uri="release/USX_1/REV.usx" />
+      <resource checksum="c84f9e392d16b5343d4e5d82f6208970" mimeType="application/xml" size="131437" uri="release/USX_1/ROM.usx" />
+      <resource checksum="cb7be7ef67f04ffc404be6382e7c4256" mimeType="application/xml" size="26831" uri="release/USX_1/RUT.usx" />
+      <resource checksum="34188585f5fcecb73ac838ece774bd2e" mimeType="application/xml" size="31710" uri="release/USX_1/SNG.usx" />
+      <resource checksum="cb12e625a8e6d8fa97594831c31949fa" mimeType="application/xml" size="13391" uri="release/USX_1/TIT.usx" />
+      <resource checksum="eaefe5eee7a882087d496b0a24b3c6ae" mimeType="application/xml" size="67601" uri="release/USX_1/ZEC.usx" />
+      <resource checksum="0812be96c43aeac5fc3dda73925c5225" mimeType="application/xml" size="18454" uri="release/USX_1/ZEP.usx" />
+      <resource checksum="87cc32a2f7af1a52eaa38c7478a63e15" mimeType="application/xml" size="24264" uri="release/kor_ko.ldml" />
+      <resource checksum="f23baffd39f5f5a043ab2872d5d55c52" mimeType="application/xml" size="97655" uri="release/styles.xml" />
+      <resource checksum="ad829a7d2ac2acbed7a573364ce818df" mimeType="text/plain" size="15359" uri="release/versification.vrs" />
+      <resource checksum="18866d8073086f9aa74e5b2f450eed9a" mimeType="application/zip" size="1628277" uri="source/source.zip" />
+    </manifest>
+    <source>
+      <canonicalContent>
+        <book code="1CH" />
+        <book code="1CO" />
+        <book code="1JN" />
+        <book code="1KI" />
+        <book code="1PE" />
+        <book code="1SA" />
+        <book code="1TH" />
+        <book code="1TI" />
+        <book code="2CH" />
+        <book code="2CO" />
+        <book code="2JN" />
+        <book code="2KI" />
+        <book code="2PE" />
+        <book code="2SA" />
+        <book code="2TH" />
+        <book code="2TI" />
+        <book code="3JN" />
+        <book code="ACT" />
+        <book code="AMO" />
+        <book code="COL" />
+        <book code="DAN" />
+        <book code="DEU" />
+        <book code="ECC" />
+        <book code="EPH" />
+        <book code="EST" />
+        <book code="EXO" />
+        <book code="EZK" />
+        <book code="EZR" />
+        <book code="GAL" />
+        <book code="GEN" />
+        <book code="HAB" />
+        <book code="HAG" />
+        <book code="HEB" />
+        <book code="HOS" />
+        <book code="ISA" />
+        <book code="JAS" />
+        <book code="JDG" />
+        <book code="JER" />
+        <book code="JHN" />
+        <book code="JOB" />
+        <book code="JOL" />
+        <book code="JON" />
+        <book code="JOS" />
+        <book code="JUD" />
+        <book code="LAM" />
+        <book code="LEV" />
+        <book code="LUK" />
+        <book code="MAL" />
+        <book code="MAT" />
+        <book code="MIC" />
+        <book code="MRK" />
+        <book code="NAM" />
+        <book code="NEH" />
+        <book code="NUM" />
+        <book code="OBA" />
+        <book code="PHM" />
+        <book code="PHP" />
+        <book code="PRO" />
+        <book code="PSA" />
+        <book code="REV" />
+        <book code="ROM" />
+        <book code="RUT" />
+        <book code="SNG" />
+        <book code="TIT" />
+        <book code="ZEC" />
+        <book code="ZEP" />
+      </canonicalContent>
+      <structure>
+        <content role="sourceZip" src="source/source.zip" />
+      </structure>
+    </source>
+    <publications>
+      <publication default="true" id="p1">
+        <name>Korean Living Bible 1985</name>
+        <nameLocal>현대인의성경 1985</nameLocal>
+        <description>Bible</description>
+        <descriptionLocal>성경</descriptionLocal>
+        <abbreviation>KLB</abbreviation>
+        <abbreviationLocal>KLB</abbreviationLocal>
+        <canonicalContent>
+          <book code="1CH" />
+          <book code="1CO" />
+          <book code="1JN" />
+          <book code="1KI" />
+          <book code="1PE" />
+          <book code="1SA" />
+          <book code="1TH" />
+          <book code="1TI" />
+          <book code="2CH" />
+          <book code="2CO" />
+          <book code="2JN" />
+          <book code="2KI" />
+          <book code="2PE" />
+          <book code="2SA" />
+          <book code="2TH" />
+          <book code="2TI" />
+          <book code="3JN" />
+          <book code="ACT" />
+          <book code="AMO" />
+          <book code="COL" />
+          <book code="DAN" />
+          <book code="DEU" />
+          <book code="ECC" />
+          <book code="EPH" />
+          <book code="EST" />
+          <book code="EXO" />
+          <book code="EZK" />
+          <book code="EZR" />
+          <book code="GAL" />
+          <book code="GEN" />
+          <book code="HAB" />
+          <book code="HAG" />
+          <book code="HEB" />
+          <book code="HOS" />
+          <book code="ISA" />
+          <book code="JAS" />
+          <book code="JDG" />
+          <book code="JER" />
+          <book code="JHN" />
+          <book code="JOB" />
+          <book code="JOL" />
+          <book code="JON" />
+          <book code="JOS" />
+          <book code="JUD" />
+          <book code="LAM" />
+          <book code="LEV" />
+          <book code="LUK" />
+          <book code="MAL" />
+          <book code="MAT" />
+          <book code="MIC" />
+          <book code="MRK" />
+          <book code="NAM" />
+          <book code="NEH" />
+          <book code="NUM" />
+          <book code="OBA" />
+          <book code="PHM" />
+          <book code="PHP" />
+          <book code="PRO" />
+          <book code="PSA" />
+          <book code="REV" />
+          <book code="ROM" />
+          <book code="RUT" />
+          <book code="SNG" />
+          <book code="TIT" />
+          <book code="ZEC" />
+          <book code="ZEP" />
+        </canonicalContent>
+        <structure>
+          <content name="book-gen" role="GEN" src="release/USX_1/GEN.usx" />
+          <content name="book-exo" role="EXO" src="release/USX_1/EXO.usx" />
+          <content name="book-lev" role="LEV" src="release/USX_1/LEV.usx" />
+          <content name="book-num" role="NUM" src="release/USX_1/NUM.usx" />
+          <content name="book-deu" role="DEU" src="release/USX_1/DEU.usx" />
+          <content name="book-jos" role="JOS" src="release/USX_1/JOS.usx" />
+          <content name="book-jdg" role="JDG" src="release/USX_1/JDG.usx" />
+          <content name="book-rut" role="RUT" src="release/USX_1/RUT.usx" />
+          <content name="book-1sa" role="1SA" src="release/USX_1/1SA.usx" />
+          <content name="book-2sa" role="2SA" src="release/USX_1/2SA.usx" />
+          <content name="book-1ki" role="1KI" src="release/USX_1/1KI.usx" />
+          <content name="book-2ki" role="2KI" src="release/USX_1/2KI.usx" />
+          <content name="book-1ch" role="1CH" src="release/USX_1/1CH.usx" />
+          <content name="book-2ch" role="2CH" src="release/USX_1/2CH.usx" />
+          <content name="book-ezr" role="EZR" src="release/USX_1/EZR.usx" />
+          <content name="book-neh" role="NEH" src="release/USX_1/NEH.usx" />
+          <content name="book-est" role="EST" src="release/USX_1/EST.usx" />
+          <content name="book-job" role="JOB" src="release/USX_1/JOB.usx" />
+          <content name="book-psa" role="PSA" src="release/USX_1/PSA.usx" />
+          <content name="book-pro" role="PRO" src="release/USX_1/PRO.usx" />
+          <content name="book-ecc" role="ECC" src="release/USX_1/ECC.usx" />
+          <content name="book-sng" role="SNG" src="release/USX_1/SNG.usx" />
+          <content name="book-isa" role="ISA" src="release/USX_1/ISA.usx" />
+          <content name="book-jer" role="JER" src="release/USX_1/JER.usx" />
+          <content name="book-lam" role="LAM" src="release/USX_1/LAM.usx" />
+          <content name="book-ezk" role="EZK" src="release/USX_1/EZK.usx" />
+          <content name="book-dan" role="DAN" src="release/USX_1/DAN.usx" />
+          <content name="book-hos" role="HOS" src="release/USX_1/HOS.usx" />
+          <content name="book-jol" role="JOL" src="release/USX_1/JOL.usx" />
+          <content name="book-amo" role="AMO" src="release/USX_1/AMO.usx" />
+          <content name="book-oba" role="OBA" src="release/USX_1/OBA.usx" />
+          <content name="book-jon" role="JON" src="release/USX_1/JON.usx" />
+          <content name="book-mic" role="MIC" src="release/USX_1/MIC.usx" />
+          <content name="book-nam" role="NAM" src="release/USX_1/NAM.usx" />
+          <content name="book-hab" role="HAB" src="release/USX_1/HAB.usx" />
+          <content name="book-zep" role="ZEP" src="release/USX_1/ZEP.usx" />
+          <content name="book-hag" role="HAG" src="release/USX_1/HAG.usx" />
+          <content name="book-zec" role="ZEC" src="release/USX_1/ZEC.usx" />
+          <content name="book-mal" role="MAL" src="release/USX_1/MAL.usx" />
+          <content name="book-mat" role="MAT" src="release/USX_1/MAT.usx" />
+          <content name="book-mrk" role="MRK" src="release/USX_1/MRK.usx" />
+          <content name="book-luk" role="LUK" src="release/USX_1/LUK.usx" />
+          <content name="book-jhn" role="JHN" src="release/USX_1/JHN.usx" />
+          <content name="book-act" role="ACT" src="release/USX_1/ACT.usx" />
+          <content name="book-rom" role="ROM" src="release/USX_1/ROM.usx" />
+          <content name="book-1co" role="1CO" src="release/USX_1/1CO.usx" />
+          <content name="book-2co" role="2CO" src="release/USX_1/2CO.usx" />
+          <content name="book-gal" role="GAL" src="release/USX_1/GAL.usx" />
+          <content name="book-eph" role="EPH" src="release/USX_1/EPH.usx" />
+          <content name="book-php" role="PHP" src="release/USX_1/PHP.usx" />
+          <content name="book-col" role="COL" src="release/USX_1/COL.usx" />
+          <content name="book-1th" role="1TH" src="release/USX_1/1TH.usx" />
+          <content name="book-2th" role="2TH" src="release/USX_1/2TH.usx" />
+          <content name="book-1ti" role="1TI" src="release/USX_1/1TI.usx" />
+          <content name="book-2ti" role="2TI" src="release/USX_1/2TI.usx" />
+          <content name="book-tit" role="TIT" src="release/USX_1/TIT.usx" />
+          <content name="book-phm" role="PHM" src="release/USX_1/PHM.usx" />
+          <content name="book-heb" role="HEB" src="release/USX_1/HEB.usx" />
+          <content name="book-jas" role="JAS" src="release/USX_1/JAS.usx" />
+          <content name="book-1pe" role="1PE" src="release/USX_1/1PE.usx" />
+          <content name="book-2pe" role="2PE" src="release/USX_1/2PE.usx" />
+          <content name="book-1jn" role="1JN" src="release/USX_1/1JN.usx" />
+          <content name="book-2jn" role="2JN" src="release/USX_1/2JN.usx" />
+          <content name="book-3jn" role="3JN" src="release/USX_1/3JN.usx" />
+          <content name="book-jud" role="JUD" src="release/USX_1/JUD.usx" />
+          <content name="book-rev" role="REV" src="release/USX_1/REV.usx" />
+        </structure>
+      </publication>
+    </publications>
+    <copyright>
+      <fullStatement>
+        <statementContent type="xhtml">
+          <p>Korean Living Bible (현대인의 성경)</p>
+          <p>Copyright © 1985 by Biblica, Inc.®</p>
+          <p>Used by permission of Biblica, Inc.®. All rights reserved worldwide.</p>
+        </statementContent>
+        <statementContent type="plain">© 1985 by Biblica, Inc.®</statementContent>
+      </fullStatement>
+    </copyright>
+    <promotion>
+      <promoVersionInfo contentType="xhtml">
+        <p>Biblica provides Godʼs Word to people through translation, publishing and Bible engagement in Africa, Asia Pacific, Europe, Latin America, Middle East, and North America. Through its worldwide reach, Biblica engages people with Godʼs Word so that their lives are transformed through a relationship with Jesus Christ.</p>
+      </promoVersionInfo>
+    </promotion>
+    <progress>
+      <book code="DEU" stage="1" />
+      <book code="PSA" stage="1" />
+      <book code="ISA" stage="1" />
+    </progress>
+    <archiveStatus>
+      <archivistName>Kent Spielmann</archivistName>
+      <dateArchived>2020-06-05T22:11:10.220483</dateArchived>
+      <dateUpdated>2020-06-05T22:19:12.799496</dateUpdated>
+      <comments>Text update 2SA Metadata update</comments>
+    </archiveStatus>
+  </DBLMetadata>

@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="HOS" style="id">- Thai New Contemporary Version</book>
+  <para style="rem">Copyright © 1999, 2001, 2007 by Biblica, Inc.®</para>
+  <para style="h">โฮเชยา</para>
+  <para style="toc1">โฮเชยา</para>
+  <para style="toc2">โฮเชยา</para>
+  <para style="toc3">โฮเชยา</para>
+  <para style="mt1">โฮเชยา</para>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>พระดำรัสของ<char style="nd">องค์พระผู้เป็นเจ้า</char>ซึ่งมีมาถึงโฮเชยาบุตรเบเออรีในรัชกาลอุสซียาห์ โยธาม อาหัส และเฮเซคียาห์แห่งยูดาห์ และในรัชกาลเยโรโบอัมบุตรกษัตริย์เยโฮอาช<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">ภาษาฮีบรูว่า</char><char style="fqa" closed="false">โยอาช</char><char style="ft" closed="false">เป็นอีกรูปหนึ่งของ</char><char style="fqa" closed="false">เยโฮอาช</char></note>แห่งอิสราเอล</para>
+  <para style="s1">ภรรยากับลูกๆ ของโฮเชยา</para>
+  <para style="p">
+    <verse number="2" style="v"/>เมื่อ<char style="nd">องค์พระผู้เป็นเจ้า</char>เริ่มตรัสผ่านโฮเชยานั้น <char style="nd">องค์พระผู้เป็นเจ้า</char>ตรัสกับเขาว่า “จงไปรับหญิงเจ้าชู้มาเป็นภรรยา และรับลูกๆ ที่เกิดจากความไม่ซื่อสัตย์ของนางมาด้วย เพราะว่าดินแดนนี้มีความผิดฐานล่วงประเวณีอย่างร้ายแรงที่สุดโดยการละทิ้งองค์พระผู้เป็นเจ้า” <verse number="3" style="v"/>ฉะนั้นโฮเชยาจึงแต่งงานกับโกเมอร์ธิดาของดิบลาอิม นางก็ตั้งครรภ์และคลอดบุตรชายคนหนึ่งให้แก่เขา</para>
+  <para style="p">
+    <verse number="4" style="v"/>แล้ว<char style="nd">องค์พระผู้เป็นเจ้า</char>ตรัสกับโฮเชยาว่า “จงเรียกชื่อเด็กคนนี้ว่ายิสเรเอล เพราะในไม่ช้าเราจะลงโทษวงศ์วานของเยฮูเนื่องด้วยการประหารครั้งใหญ่ที่ยิสเรเอล และเราจะปิดฉากอาณาจักรอิสราเอลลง <verse number="5" style="v"/>ในวันนั้นเราจะหักธนูของอิสราเอลในหุบเขายิสเรเอล”</para>
+  <para style="p">
+    <verse number="6" style="v"/>โกเมอร์ก็ตั้งครรภ์อีกและคลอดบุตรสาว แล้วพระองค์ตรัสกับโฮเชยาว่า “จงเรียกเด็กคนนี้ว่าโลรุหะมาห์<note caller="+" style="f"><char style="fr" closed="false">1:6 </char><char style="ft" closed="false">แปลว่า</char><char style="fqa" closed="false">ไม่เป็นที่รัก</char></note> เพราะเราจะไม่แสดงความรักต่อพงศ์พันธุ์อิสราเอลอีกต่อไป เราจะไม่อภัยให้พวกเขา <verse number="7" style="v"/>แต่เราจะแสดงความรักต่อพงศ์พันธุ์ยูดาห์และจะช่วยพวกเขา ไม่ใช่ด้วยธนู ดาบ สงคราม หรือด้วยม้าและพลม้า แต่โดยพระยาห์เวห์พระเจ้าของพวกเขา”</para>
+  <para style="p">
+    <verse number="8" style="v"/>หลังจากที่ให้โลรุหะมาห์หย่านมแล้ว โกเมอร์ก็มีบุตรชายอีกคนหนึ่ง <verse number="9" style="v"/>แล้วพระองค์ตรัสว่า “จงเรียกเขาว่าโลอัมมี<note caller="+" style="f"><char style="fr" closed="false">1:9 </char><char style="ft" closed="false">แปลว่า</char><char style="fqa" closed="false">ไม่ใช่ประชากรของเรา</char></note> เพราะพวกเจ้าไม่ใช่ประชากรของเราและเราไม่ใช่พระเจ้าของเจ้า</para>
+  <para style="p">
+    <verse number="10" style="v"/>“ถึงกระนั้นชนชาติอิสราเอลจะเป็นเหมือนเม็ดทรายที่ชายทะเลซึ่งตวงนับไม่ได้ ในที่ซึ่งพระเจ้าตรัสแก่เขาว่า ‘เจ้าไม่ใช่ประชากรของเรา’ พวกเขาจะได้ชื่อว่า ‘บุตรของพระเจ้าผู้ทรงพระชนม์อยู่’ <verse number="11" style="v"/>ประชากรยูดาห์และอิสราเอลจะถูกรวมเข้าด้วยกันอีก และพวกเขาจะแต่งตั้งผู้นำคนหนึ่งและจะพากันออกมาจากแผ่นดินนั้น เพราะวันแห่งยิสเรเอลจะยิ่งใหญ่</para>
+  <chapter number="2" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>“จงเรียกน้องชายของเจ้าว่า ‘ประชากรของเรา’ และเรียกพี่สาวของเจ้าว่า ‘ผู้เป็นที่รักของเรา’</para>
+  <para style="s1">อิสราเอลถูกลงโทษและกลับสู่สภาพดี</para>
+  <para style="q1">
+    <verse number="2" style="v"/>“จงตำหนิมารดาของเจ้า จงตำหนินางเถิด</para>
+  <para style="q1">เพราะนางไม่ใช่ภรรยาของเรา</para>
+  <para style="q1">และเราไม่ใช่สามีของนาง</para>
+  <para style="q1">ให้นางทิ้งความยั่วยวนจากใบหน้าของนาง</para>
+  <para style="q1">และทิ้งความไม่ซื่อสัตย์จากอกของนางเถิด</para>
+  <para style="q1">
+    <verse number="3" style="v"/>มิฉะนั้นเราจะเปลื้องนางให้เปลือยเปล่า</para>
+  <para style="q1">ล่อนจ้อนเหมือนวันที่นางเกิดมา</para>
+  <para style="q1">เราจะทำให้นางเหมือนถิ่นกันดาร</para>
+  <para style="q1">ให้นางเป็นดินแดนแห้งผาก</para>
+  <para style="q1">และประหารนางด้วยความกระหาย</para>
+  <para style="q1">
+    <verse number="4" style="v"/>เราจะไม่แสดงความรักต่อลูกๆ ของนาง</para>
+  <para style="q1">เพราะเป็นลูกชู้</para>
+  <para style="q1">
+    <verse number="5" style="v"/>แม่ของเขาไม่ซื่อสัตย์</para>
+  <para style="q1">และให้กำเนิดพวกเขามาอย่างน่าอดสู</para>
+  <para style="q1">นางกล่าวว่า ‘ฉันจะตามบรรดาชู้รักไป</para>
+  <para style="q1">เขาให้อาหารและน้ำ</para>
+  <para style="q1">ให้ขนสัตว์ ผ้าลินิน น้ำมัน และเครื่องดื่มแก่ฉัน’</para>
+  <para style="q1">
+    <verse number="6" style="v"/>ฉะนั้นเราจะเอาพุ่มหนามกีดขวางหนทางของนาง</para>
+  <para style="q1">เราจะล้อมกรอบจนนางหมดทางไป</para>
+  <para style="q1">
+    <verse number="7" style="v"/>นางจะวิ่งไล่ตามชู้รัก แต่ไม่ทัน</para>
+  <para style="q1">นางจะเสาะหาพวกเขา แต่ไม่พบ</para>
+  <para style="q1">แล้วนางจะบอกว่า</para>
+  <para style="q1">‘ฉันจะกลับไปหาสามีคนแรกของฉัน</para>
+  <para style="q1">เพราะเมื่อก่อนฉันมีชีวิตที่ดีกว่านี้มากนัก’</para>
+  <para style="q1">
+    <verse number="8" style="v"/>นางไม่รับรู้ว่าเรานี่แหละ</para>
+  <para style="q1">คือผู้ที่ให้เมล็ดข้าว เหล้าองุ่นใหม่ และน้ำมันแก่นาง</para>
+  <para style="q1">คือผู้ที่ให้เงินและทอง</para>
+  <para style="q1">ซึ่งพวกเขาใช้บูชาพระบาอัล</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>“ดังนั้นเราจะริบเมล็ดข้าวของเราเมื่อมันสุก</para>
+  <para style="q1">และริบเหล้าองุ่นใหม่เมื่อได้ที่แล้ว</para>
+  <para style="q1">เราจะเอาผ้าขนสัตว์และผ้าลินินของเราคืน</para>
+  <para style="q1">ซึ่งเราตั้งใจให้นางไว้ปกปิดความเปลือยเปล่าของนาง</para>
+  <para style="q1">
+    <verse number="10" style="v"/>ดังนั้นในบัดนี้เราจะแฉความสำส่อนของนาง</para>
+  <para style="q1">ต่อหน้าชู้รักทั้งหลาย</para>
+  <para style="q1">และจะไม่มีผู้ใดช่วยนางให้พ้นมือเราไปได้</para>
+  <para style="q1">
+    <verse number="11" style="v"/>เราจะยุติงานฉลองทั้งปวงของนาง</para>
+  <para style="q1">ได้แก่เทศกาลประจำปีทั้งหลาย วันขึ้นหนึ่งค่ำและวันสะบาโต</para>
+  <para style="q1">ทั้งหมดนี้เป็นเทศกาลตามกำหนดของนาง</para>
+  <para style="q1">
+    <verse number="12" style="v"/>เราจะทำลายบรรดาเถาองุ่นและต้นมะเดื่อของนาง</para>
+  <para style="q1">ซึ่งนางกล่าวว่าชู้รักให้มาเป็นค่าตัว</para>
+  <para style="q1">เราจะทำให้มันกลายเป็นพุ่มหนาม</para>
+  <para style="q1">และสัตว์ป่าทั้งหลายจะเข้ามารุมกิน</para>
+  <para style="q1">
+    <verse number="13" style="v"/>เราจะลงโทษนาง</para>
+  <para style="q1">ที่นางเผาเครื่องหอมบูชาแก่พระบาอัลในวันเหล่านั้น</para>
+  <para style="q1">นางประดับกายด้วยแหวนและเพชรพลอยแพรวพราว</para>
+  <para style="q1">แล้วโลดแล่นตามชู้รักไป</para>
+  <para style="q1">แต่นางกลับลืมเรา”</para>
+  <para style="q4">
+    <char style="nd">องค์พระผู้เป็นเจ้า</char>ประกาศดังนั้น</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>“ดังนั้นเรากำลังจะเกลี้ยกล่อมนาง</para>
+  <para style="q1">เราจะพานางเข้าไปในถิ่นกันดาร</para>
+  <para style="q1">และพูดกับนางอย่างอ่อนโยน</para>
+  <para style="q1">
+    <verse number="15" style="v"/>ที่นั่นเราจะคืนสวนองุ่นแก่นาง</para>
+  <para style="q1">และจะทำให้หุบเขาอาโคร์<note caller="+" style="f"><char style="fr" closed="false">2:15 </char><char style="ft" closed="false">แปลว่า</char><char style="fqa" closed="false">ลำบากเดือดร้อน</char></note>กลายเป็นประตูแห่งความหวัง</para>
+  <para style="q1">ที่นั่นนางจะร้องเพลง<note caller="+" style="f"><char style="fr" closed="false">2:15 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">ตอบสนอง</char></note>เหมือนเมื่อครั้งแรกรุ่น</para>
+  <para style="q1">เหมือนวันที่นางออกมาจากอียิปต์”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="16" style="v"/>
+    <char style="nd">องค์พระผู้เป็นเจ้า</char>ประกาศแก่ชาวอิสราเอลว่า</para>
+  <para style="q1">“ในวันนั้นเจ้าจะเรียกเราว่า ‘สามีของฉัน’</para>
+  <para style="q1">และไม่เรียกว่า ‘นายของฉัน<note caller="+" style="f"><char style="fr" closed="false">2:16 </char><char style="ft" closed="false">ภาษาฮีบรูว่า</char><char style="fqa" closed="false">บาอัล</char></note>’ อีกต่อไป</para>
+  <para style="q1">
+    <verse number="17" style="v"/>เราจะกำจัดชื่อของพระบาอัลออกจากริมฝีปากของนาง</para>
+  <para style="q1">จะไม่มีการเอ่ยถึงชื่อเหล่านี้อีกต่อไป</para>
+  <para style="q1">
+    <verse number="18" style="v"/>ในวันนั้นเราจะทำพันธสัญญา</para>
+  <para style="q1">กับสัตว์ในท้องทุ่ง นกในอากาศ</para>
+  <para style="q1">และสัตว์ที่เลื้อยคลานเพื่อพวกเจ้า</para>
+  <para style="q1">เราจะกำจัดธนู ดาบ และสงคราม</para>
+  <para style="q1">ให้หมดสิ้นจากดินแดนนี้</para>
+  <para style="q1">เพื่อทุกชีวิตจะอยู่อย่างปลอดภัย</para>
+  <para style="q1">
+    <verse number="19" style="v"/>เราจะหมั้นเจ้าไว้ให้เป็นของเราชั่วนิรันดร์</para>
+  <para style="q1">เราจะหมั้นเจ้าไว้ใน<note caller="+" style="f"><char style="fr" closed="false">2:19 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">ด้วย</char><char style="ft" closed="false">เช่นเดียวกับข้อ 20</char></note>ความชอบธรรมและความยุติธรรม</para>
+  <para style="q1">ใน<note caller="+" style="f"><char style="fr" closed="false">2:19 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">ด้วย</char></note>ความรักและความเห็นอกเห็นใจ</para>
+  <para style="q1">
+    <verse number="20" style="v"/>เราจะหมั้นเจ้าไว้ในความซื่อสัตย์</para>
+  <para style="q1">และเจ้าจะรู้จักองค์พระผู้เป็นเจ้า”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="21" style="v"/>
+    <char style="nd">องค์พระผู้เป็นเจ้า</char>ประกาศว่า</para>
+  <para style="q1">“ในวันนั้นเราจะตอบสนอง</para>
+  <para style="q1">โดยเราจะทำให้ท้องฟ้าเกิดฝน</para>
+  <para style="q1">ตามคำเรียกร้องของแผ่นดิน</para>
+  <para style="q1">
+    <verse number="22" style="v"/>และจะให้ผืนดินเกิดเมล็ดข้าว</para>
+  <para style="q1">เหล้าองุ่นใหม่และน้ำมัน</para>
+  <para style="q1">ตามคำเรียกร้องของยิสเรเอล<note caller="+" style="f"><char style="fr" closed="false">2:22 </char><char style="ft" closed="false">แปลว่า</char><char style="fqa" closed="false">พระเจ้าทรงปลูก</char></note></para>
+  <para style="q1">
+    <verse number="23" style="v"/>เราจะปลูกนางไว้ในดินแดนนั้นเพื่อเรา</para>
+  <para style="q1">เราจะแสดงความรักแก่ผู้ที่เราเรียกว่า ‘ไม่เป็นที่รักของเรา<note caller="+" style="f"><char style="fr" closed="false">2:23 </char><char style="ft" closed="false">ภาษาฮีบรูว่า</char><char style="fqa" closed="false">โลรุหะมาห์</char></note>’</para>
+  <para style="q1">เราจะเรียกผู้ที่ ‘ไม่ใช่ประชากรของเรา<note caller="+" style="f"><char style="fr" closed="false">2:23 </char><char style="ft" closed="false">ภาษาฮีบรูว่า</char><char style="fqa" closed="false">โลอัมมี</char></note>’ ว่า ‘เจ้าคือประชากรของเรา’</para>
+  <para style="q1">และพวกเขาจะเรียกเราว่า ‘พระองค์ทรงเป็นพระเจ้าของเรา’ ”</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">โฮเชยาคืนดีกับภรรยา</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <char style="nd">องค์พระผู้เป็นเจ้า</char>ตรัสกับข้าพเจ้าว่า “จงไปแสดงความรักแก่ภรรยาของเจ้าอีกครั้ง แม้ว่ามีคนอื่นรักนางอยู่และนางคบชู้ จงรักนางเหมือนที่<char style="nd">องค์พระผู้เป็นเจ้า</char>ทรงรักชนอิสราเอล แม้ว่าพวกเขาหันไปหาพระอื่นๆ และรักขนมลูกเกดที่ถวายแก่พระเหล่านั้น”</para>
+  <para style="p">
+    <verse number="2" style="v"/>ดังนั้นข้าพเจ้าจึงซื้อตัวนางคืนมาด้วยเงินหนัก 15 เชเขล<note caller="+" style="f"><char style="fr" closed="false">3:2 </char><char style="ft" closed="false">1 เชเขล คือเงินหนักประมาณ 11.5 กรัม มีค่าเท่ากับค่าแรงสองเดือน</char></note> และข้าวบาร์เลย์ประมาณ 330 ลิตร<note caller="+" style="f"><char style="fr" closed="false">3:2 </char><char style="ft" closed="false">ภาษาฮีบรูว่า</char><char style="fqa" closed="false">1 โฮเมอร์กับ 1 เลเธค</char></note> <verse number="3" style="v"/>ข้าพเจ้าจึงบอกนางว่า “เจ้าจะต้องอยู่กับเราหลายวัน เจ้าต้องเลิกทำตัวเป็นโสเภณี และไม่ทำตัวใกล้ชิดกับชายใดๆ แล้วเราจะอยู่กับ<note caller="+" style="f"><char style="fr" closed="false">3:3 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">รอคอย</char></note>เจ้า”</para>
+  <para style="p">
+    <verse number="4" style="v"/>ฉะนั้นชาวอิสราเอลจึงอยู่โดยไม่มีกษัตริย์หรือเจ้านาย ไม่มีการถวายเครื่องบูชาหรือมีศิลาศักดิ์สิทธิ์ ไม่มีเอโฟดหรือรูปเคารพเป็นเวลานาน <verse number="5" style="v"/>หลังจากนั้นชนชาติอิสราเอลจะกลับมาแสวงหาพระยาห์เวห์พระเจ้าของเขาและดาวิดกษัตริย์ของเขา พวกเขาจะตัวสั่นเข้ามาหา<char style="nd">องค์พระผู้เป็นเจ้า</char>และกลับมาหาพระพรของพระองค์ในบั้นปลาย</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">ข้อกล่าวหาต่ออิสราเอล</para>
+  <para style="q1">
+    <verse number="1" style="v"/>ชนอิสราเอลทั้งหลาย จงฟังพระดำรัสของ<char style="nd">องค์พระผู้เป็นเจ้า</char></para>
+  <para style="q1">เพราะ<char style="nd">องค์พระผู้เป็นเจ้า</char>ทรงมีข้อกล่าวหา</para>
+  <para style="q1">ต่อเจ้าผู้อาศัยอยู่ในดินแดนนี้ ความว่า</para>
+  <para style="q1">“ในดินแดนนี้ไม่มีความซื่อสัตย์ ไม่มีความรัก</para>
+  <para style="q1">ไม่ยอมรับรู้พระเจ้า</para>
+  <para style="q1">
+    <verse number="2" style="v"/>มีแต่การสาปแช่ง<note caller="+" style="f"><char style="fr" closed="false">4:2 </char><char style="ft" closed="false">คือ การกล่าวคำสาปแช่ง</char></note> การโกหก และการเข่นฆ่า</para>
+  <para style="q1">การลักขโมย และการล่วงประเวณี</para>
+  <para style="q1">พวกเขาละเมิดพันธะผูกพันต่างๆ</para>
+  <para style="q1">และเข่นฆ่ากันครั้งแล้วครั้งเล่า</para>
+  <para style="q1">
+    <verse number="3" style="v"/>ด้วยเหตุนี้แผ่นดินจึงโศกเศร้าคร่ำครวญ<note caller="+" style="f"><char style="fr" closed="false">4:3 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">แห้งแล้ง</char></note></para>
+  <para style="q1">และทุกคนที่อาศัยอยู่ในดินแดนนี้ก็เสื่อมสูญไป</para>
+  <para style="q1">สัตว์ในท้องทุ่ง นกในอากาศ</para>
+  <para style="q1">และปลาในทะเลกำลังจะตายไป</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>“แต่อย่าให้ใครฟ้องร้อง</para>
+  <para style="q1">อย่าให้ใครกล่าวโทษคนอื่น</para>
+  <para style="q1">เพราะประชากรของเจ้า</para>
+  <para style="q1">ก็เป็นเหมือนคนที่ฟ้องร้องกล่าวโทษปุโรหิต</para>
+  <para style="q1">
+    <verse number="5" style="v"/>เจ้าสะดุดล้มทั้งวันทั้งคืน</para>
+  <para style="q1">และบรรดาผู้พยากรณ์ก็สะดุดล้มไปกับเจ้า</para>
+  <para style="q1">ฉะนั้นเราจะทำลายมารดาของเจ้า</para>
+  <para style="q1">
+    <verse number="6" style="v"/>ประชากรของเราถูกทำลายไปเพราะขาดความรู้</para>
+  <para style="b"/>
+  <para style="q1">“เนื่องจากเจ้าปฏิเสธความรู้</para>
+  <para style="q1">เราจึงไม่ยอมรับว่าพวกเจ้าเป็นปุโรหิตของเรา</para>
+  <para style="q1">เนื่องจากเจ้าเพิกเฉยต่อบทบัญญัติของพระเจ้าของเจ้า</para>
+  <para style="q1">เราจึงเพิกเฉยต่อลูกๆ ของเจ้า</para>
+  <para style="q1">
+    <verse number="7" style="v"/>จำนวนปุโรหิตเพิ่มมากขึ้นเท่าใด</para>
+  <para style="q1">พวกเขาก็ยิ่งทำบาปต่อเรามากขึ้นเท่านั้น</para>
+  <para style="q1">พวกเขาได้แลก<note caller="+" style="f"><char style="fr" closed="false">4:7 </char><char style="ft" closed="false">ฉบับ MT. ว่า</char><char style="fqa" closed="false">เราจะแลก</char></note>องค์ผู้ทรงเกียรติสิริของพวกเขา<note caller="+" style="f"><char style="fr" closed="false">4:7 </char><char style="ft" closed="false">สำเนาต้นฉบับภาษาฮีบรูโบราณว่า</char><char style="fqa" closed="false">ของเรา</char></note>กับสิ่งที่น่าละอาย</para>
+  <para style="q1">
+    <verse number="8" style="v"/>พวกเขาเลี้ยงชีพด้วยบาปของประชากรของเรา</para>
+  <para style="q1">และชื่นชอบความชั่วร้ายของพวกเขา</para>
+  <para style="q1">
+    <verse number="9" style="v"/>และจะเป็นเช่นนี้คือ ประชาชนเป็นอย่างไรปุโรหิตก็เป็นอย่างนั้น</para>
+  <para style="q1">เราจะลงโทษทั้งสองฝ่ายเนื่องด้วยวิถีความประพฤติของพวกเขา</para>
+  <para style="q1">และตอบสนองการกระทำของพวกเขา</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>“พวกเขาจะกิน แต่ไม่อิ่ม</para>
+  <para style="q1">พวกเขาจะเข้าไปเกี่ยวข้องกับการเป็นโสเภณี แต่จะไม่มีลูก</para>
+  <para style="q1">เพราะพวกเขาละทิ้งองค์พระผู้เป็นเจ้า</para>
+  <para style="q1">ยอมตัว <verse number="11" style="v"/>เป็นโสเภณี</para>
+  <para style="q1">ปล่อยตัวไปกับเหล้าองุ่นทั้งเก่าและใหม่</para>
+  <para style="q1">ซึ่งสิ่งเหล่านี้ได้ริบความเข้าใจไปจากพวกเขา</para>
+  <para style="q1">
+    <verse number="12" style="v"/>ประชากรของเราไปปรึกษารูปเคารพไม้</para>
+  <para style="q1">อาศัยคำตอบจากไม้เสี่ยงโชค</para>
+  <para style="q1">วิญญาณแห่งการเป็นโสเภณีชักนำเขาให้หลงเตลิด</para>
+  <para style="q1">เขาไม่ซื่อสัตย์ต่อพระเจ้าของเขา</para>
+  <para style="q1">
+    <verse number="13" style="v"/>เขาถวายเครื่องบูชาบนยอดเขา</para>
+  <para style="q1">และเผาเครื่องบูชาต่างๆ บนเนินเขา</para>
+  <para style="q1">ใต้ต้นโอ๊ก ต้นปอปลาร์ และต้นเทเลบินธ์</para>
+  <para style="q1">ซึ่งแผ่ร่มเงาเย็นสบาย</para>
+  <para style="q1">ฉะนั้นลูกสาวทั้งหลายของเจ้าก็หันไปเป็นโสเภณี</para>
+  <para style="q1">และลูกสะใภ้ของเจ้าก็คบชู้</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>“เราจะไม่ลงโทษลูกสาวของเจ้า</para>
+  <para style="q1">เมื่อพวกเขาหันไปเป็นโสเภณี</para>
+  <para style="q1">หรือลงโทษลูกสะใภ้ของเจ้า</para>
+  <para style="q1">ที่ไปคบชู้</para>
+  <para style="q1">เพราะพวกผู้ชายเองก็ไปคบค้ากับโสเภณี</para>
+  <para style="q1">และทอดตัวให้กับหญิงโสเภณีประจำเทวสถานต่างๆ</para>
+  <para style="q1">ประชาชาติที่ไม่มีความเข้าใจจะถึงแก่ความพินาศ!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>“อิสราเอลเอ๋ย แม้เจ้าจะคบชู้</para>
+  <para style="q1">ก็อย่าให้ยูดาห์ทำผิดไป</para>
+  <para style="b"/>
+  <para style="q1">“อย่าไปที่กิลกาล</para>
+  <para style="q1">อย่าไปยังเบธอาเวน<note caller="+" style="f"><char style="fr" closed="false">4:15 </char><char style="ft" closed="false">แปลว่า</char><char style="fqa" closed="false">บ้านแห่งความชั่วร้าย</char><char style="ft" closed="false">(แทนที่จะเรียกว่า</char><char style="fqa" closed="false">เบธเอล</char><char style="ft" closed="false">ซึ่งแปลว่า</char><char style="fqa" closed="false">พระนิเวศของพระเจ้า</char><char style="ft" closed="false">)</char></note></para>
+  <para style="q1">และอย่าสาบานโดยกล่าวว่า ‘<char style="nd">องค์พระผู้เป็นเจ้า</char>ทรงพระชนม์อยู่แน่ฉันใด!’</para>
+  <para style="q1">
+    <verse number="16" style="v"/>ชนอิสราเอลดื้อ</para>
+  <para style="q1">เหมือนวัวสาวที่ดื้อรั้น</para>
+  <para style="q1">แล้ว<char style="nd">องค์พระผู้เป็นเจ้า</char>จะทรงเลี้ยงดูเขา</para>
+  <para style="q1">เหมือนลูกแกะในทุ่งหญ้าได้อย่างไร?</para>
+  <para style="q1">
+    <verse number="17" style="v"/>เอฟราอิมไปยึดติดกับรูปเคารพ</para>
+  <para style="q1">จงปล่อยเขาไว้ตามลำพังเถิด!</para>
+  <para style="q1">
+    <verse number="18" style="v"/>แม้เครื่องดื่มของพวกเขาจะหมดไปแล้ว</para>
+  <para style="q1">พวกเขาก็ยังคงทำตัวเป็นโสเภณีต่อไป</para>
+  <para style="q1">บรรดาผู้ปกครองของเขารักใคร่หลงใหลวิถีอันน่าอับอาย</para>
+  <para style="q1">
+    <verse number="19" style="v"/>ลมพายุหมุนจะกวาดซัดพวกเขาไป</para>
+  <para style="q1">และเครื่องบูชาต่างๆ ของพวกเขาจะนำความอัปยศอดสูมาถึงพวกเขา</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">คำพิพากษาอิสราเอล</para>
+  <para style="q1">
+    <verse number="1" style="v"/>“เหล่าปุโรหิต ฟังเถิด!</para>
+  <para style="q1">อิสราเอลทั้งหลาย จงตั้งใจฟัง!</para>
+  <para style="q1">ราชวงศ์เอ๋ย จงฟัง!</para>
+  <para style="q1">นี่คือคำพิพากษาที่มีมาถึงเจ้า</para>
+  <para style="q1">เจ้าเป็นกับดักที่มิสปาห์</para>
+  <para style="q1">เป็นตาข่ายที่ขึงไว้บนภูเขาทาโบร์</para>
+  <para style="q1">
+    <verse number="2" style="v"/>บรรดากบฏก็พ่ายแพ้ยับเยิน</para>
+  <para style="q1">เราจะตีสั่งสอนเขาทุกคน</para>
+  <para style="q1">
+    <verse number="3" style="v"/>เรารู้เรื่องของเอฟราอิมทุกอย่าง</para>
+  <para style="q1">อิสราเอลไม่ได้ถูกซ่อนเร้นจากเรา</para>
+  <para style="q1">เอฟราอิมเอ๋ย บัดนี้เจ้าได้หันไปเป็นโสเภณี</para>
+  <para style="q1">อิสราเอลก็เสื่อมทรามลง</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>“การกระทำของพวกเขาไม่ยอมปล่อยพวกเขา</para>
+  <para style="q1">ให้กลับมาหาพระเจ้าของพวกเขา</para>
+  <para style="q1">วิญญาณแห่งการเป็นโสเภณีอยู่ในหัวใจของพวกเขา</para>
+  <para style="q1">พวกเขาไม่ยอมรับองค์พระผู้เป็นเจ้า</para>
+  <para style="q1">
+    <verse number="5" style="v"/>ความหยิ่งผยองของอิสราเอลเป็นหลักฐานผูกมัดพวกเขา</para>
+  <para style="q1">ชนอิสราเอลและแม้แต่เอฟราอิมเองก็สะดุดล้มลงในบาป</para>
+  <para style="q1">ยูดาห์ก็ล้มลงไปกับพวกเขาด้วย</para>
+  <para style="q1">
+    <verse number="6" style="v"/>เมื่อพวกเขานำฝูงแกะและฝูงสัตว์ของตน</para>
+  <para style="q1">มาแสวงหาองค์พระผู้เป็นเจ้า</para>
+  <para style="q1">พวกเขาจะไม่พบพระองค์</para>
+  <para style="q1">พระองค์ทรงทิ้งพวกเขาไปเสียแล้ว</para>
+  <para style="q1">
+    <verse number="7" style="v"/>พวกเขาไม่ซื่อสัตย์ต่อองค์พระผู้เป็นเจ้า</para>
+  <para style="q1">พวกเขาให้กำเนิดลูกนอกสมรส</para>
+  <para style="q1">บัดนี้เทศกาลขึ้นหนึ่งค่ำของพวกเขา</para>
+  <para style="q1">จะทำลายล้างพวกเขาและทุ่งนาของพวกเขา</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>“จงเป่าแตรในกิเบอาห์</para>
+  <para style="q1">จงเป่าเขาสัตว์ในรามาห์</para>
+  <para style="q1">จงโห่ร้องเหมือนออกศึกในเบธอาเวน<note caller="+" style="f"><char style="fr" closed="false">5:8 </char><char style="ft" closed="false">แปลว่า</char><char style="fqa" closed="false">บ้านแห่งความชั่วร้าย</char><char style="ft" closed="false">(แทนที่จะเรียกว่า</char><char style="fqa" closed="false">เบธเอล</char><char style="ft" closed="false">ซึ่งแปลว่า</char><char style="fqa" closed="false">พระนิเวศของพระเจ้า</char><char style="ft" closed="false">)</char></note></para>
+  <para style="q1">เบนยามินเอ๋ย จงนำหน้าไป</para>
+  <para style="q1">
+    <verse number="9" style="v"/>ในวันลงทัณฑ์</para>
+  <para style="q1">เอฟราอิมจะถูกทิ้งร้าง</para>
+  <para style="q1">เราประกาศสิ่งที่แน่นอน</para>
+  <para style="q1">ท่ามกลางเผ่าต่างๆ ของอิสราเอล</para>
+  <para style="q1">
+    <verse number="10" style="v"/>บรรดาผู้นำของยูดาห์</para>
+  <para style="q1">เป็นเหมือนคนที่โยกย้ายหลักหินกั้นเขตแดน</para>
+  <para style="q1">เราจะระบายโทสะเหนือพวกเขา</para>
+  <para style="q1">เหมือนกระแสน้ำท่วม</para>
+  <para style="q1">
+    <verse number="11" style="v"/>เอฟราอิมถูกกดขี่ข่มเหง</para>
+  <para style="q1">และถูกเหยียบย่ำลงทัณฑ์</para>
+  <para style="q1">แต่ก็ยังดึงดันติดตามบรรดารูปเคารพ<note caller="+" style="f"><char style="fr" closed="false">5:11 </char><char style="ft" closed="false">ในภาษาฮีบรูคำนี้มีความหมายไม่ชัดเจน</char></note></para>
+  <para style="q1">
+    <verse number="12" style="v"/>เราเป็นเหมือนแมลงกัดกินเอฟราอิม</para>
+  <para style="q1">และเป็นเหมือนความเน่าเปื่อยของชนยูดาห์</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="13" style="v"/>“เมื่อเอฟราอิมเห็นโรคภัยของตน</para>
+  <para style="q1">และยูดาห์เห็นบาดแผลของตน</para>
+  <para style="q1">เอฟราอิมก็หันไปหาอัสซีเรีย</para>
+  <para style="q1">และส่งคนไปหากษัตริย์ผู้ยิ่งใหญ่เพื่อขอความช่วยเหลือ</para>
+  <para style="q1">แต่เขาไม่สามารถรักษาเจ้าให้หายได้</para>
+  <para style="q1">ไม่สามารถเยียวยาบาดแผลของเจ้าได้เลย</para>
+  <para style="q1">
+    <verse number="14" style="v"/>เพราะเราจะเป็นเหมือนสิงโตสำหรับเอฟราอิม</para>
+  <para style="q1">เป็นเหมือนราชสีห์สำหรับยูดาห์</para>
+  <para style="q1">เราจะฉีกทึ้งพวกเขาเป็นชิ้นๆ แล้วจากไป</para>
+  <para style="q1">เราจะคาบพวกเขาไป และไม่มีใครช่วยเขาได้</para>
+  <para style="q1">
+    <verse number="15" style="v"/>จากนั้นเราจะกลับไปยังที่ของเรา</para>
+  <para style="q1">จนกว่าพวกเขาจะยอมรับผิด</para>
+  <para style="q1">แล้วพวกเขาจะแสวงหาหน้าของเรา</para>
+  <para style="q1">ในความทุกข์ยากของพวกเขา พวกเขาจะแสวงหาเราอย่างจริงจัง”</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">อิสราเอลไม่กลับใจ</para>
+  <para style="q1">
+    <verse number="1" style="v"/>“มาเถิด ให้เรากลับมาหาองค์พระผู้เป็นเจ้า</para>
+  <para style="q1">แม้พระองค์ทรงฉีกเราเป็นชิ้นๆ</para>
+  <para style="q1">แต่พระองค์จะทรงรักษาเรา</para>
+  <para style="q1">แม้ทรงกระทำให้เราบาดเจ็บ</para>
+  <para style="q1">แต่พระองค์จะทรงสมานแผลให้เรา</para>
+  <para style="q1">
+    <verse number="2" style="v"/>ภายในสองวัน พระองค์จะทรงฟื้นฟูเรา</para>
+  <para style="q1">ในวันที่สาม พระองค์จะทรงให้เรากลับสู่สภาพดี</para>
+  <para style="q1">เพื่อเราจะมีชีวิตอยู่ต่อหน้าพระองค์</para>
+  <para style="q1">
+    <verse number="3" style="v"/>ให้เรายอมรับรู้องค์พระผู้เป็นเจ้า</para>
+  <para style="q1">ให้เราบากบั่นต่อไปเพื่อรู้จักพระองค์</para>
+  <para style="q1">ตราบเท่าที่ดวงตะวันขึ้นจากฟ้าฉันใด</para>
+  <para style="q1">พระองค์จะทรงปรากฏพระองค์ฉันนั้น</para>
+  <para style="q1">พระองค์จะเสด็จมาหาเราเหมือนฝนในฤดูหนาว</para>
+  <para style="q1">เหมือนฝนในฤดูใบไม้ผลิที่รดผืนแผ่นดิน”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>“เอฟราอิมเอ๋ย เราจะทำอะไรให้เจ้าได้?</para>
+  <para style="q1">ยูดาห์เอ๋ย เราจะทำอะไรกับเจ้าดี?</para>
+  <para style="q1">ความรักของเจ้าเหมือนหมอกบางยามเช้า</para>
+  <para style="q1">เหมือนน้ำค้างรุ่งอรุณซึ่งเหือดหายไป</para>
+  <para style="q1">
+    <verse number="5" style="v"/>ฉะนั้นเราจะมาห้ำหั่นเจ้าเป็นชิ้นๆ ด้วยผู้เผยพระวจนะของเรา</para>
+  <para style="q1">เราจะประหารเจ้าด้วยถ้อยคำจากปากของเรา</para>
+  <para style="q1">คำพิพากษาของเราจะจู่โจมเข้าใส่เจ้าดั่งสายฟ้าแลบ</para>
+  <para style="q1">
+    <verse number="6" style="v"/>เพราะเราประสงค์ความเมตตา ไม่ใช่เครื่องบูชา</para>
+  <para style="q1">เราต้องการให้เจ้ารู้จักเราผู้เป็นพระเจ้ามากกว่าต้องการเครื่องเผาบูชา</para>
+  <para style="q1">
+    <verse number="7" style="v"/>พวกเขาทำลายพันธสัญญาเช่นเดียวกับอาดัม<note caller="+" style="f"><char style="fr" closed="false">6:7 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">เช่นเดียวกับที่เมืองอาดัม</char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">เช่นเดียวกับมนุษย์ทั้งหลาย</char></note></para>
+  <para style="q1">ที่นั่นพวกเขาไม่ซื่อสัตย์ต่อเรา</para>
+  <para style="q1">
+    <verse number="8" style="v"/>กิเลอาดเป็นเมืองของคนชั่ว</para>
+  <para style="q1">แปดเปื้อนไปด้วยรอยเท้าแห่งโลหิต</para>
+  <para style="q1">
+    <verse number="9" style="v"/>กองโจรซุ่มคอยปล้นคนฉันใด</para>
+  <para style="q1">หมู่ปุโรหิตก็ทำเช่นเดียวกันฉันนั้น</para>
+  <para style="q1">พวกเขาเข่นฆ่าผู้คนบนเส้นทางไปเชเคม</para>
+  <para style="q1">ก่อกรรมทำชั่วอย่างน่าอดสู</para>
+  <para style="q1">
+    <verse number="10" style="v"/>เราเห็นสิ่งที่เลวร้ายสิ่งหนึ่ง</para>
+  <para style="q1">ในบ้านของอิสราเอล</para>
+  <para style="q1">ที่นั่นเอฟราอิมยอมตัวเป็นโสเภณี</para>
+  <para style="q1">และอิสราเอลทำตัวให้เป็นมลทิน</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>“ส่วนเจ้า ยูดาห์</para>
+  <para style="q1">เวลาแห่งการเก็บเกี่ยวก็ถูกกำหนดไว้แล้ว</para>
+  <para style="b"/>
+  <para style="q1">“เมื่อใดก็ตามที่เราจะรื้อฟื้นความรุ่งเรืองของประชากรของเรา</para>
+  <chapter number="7" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>เมื่อใดก็ตามที่เราจะรักษาอิสราเอล</para>
+  <para style="q1">เมื่อนั้นบาปทั้งหลายของเอฟราอิมจะถูกตีแผ่</para>
+  <para style="q1">และอาชญากรรมของสะมาเรียจะถูกเปิดโปง</para>
+  <para style="q1">พวกเขาชอบการหลอกลวง</para>
+  <para style="q1">พวกขโมยพังเข้าไปในบ้านเรือน</para>
+  <para style="q1">โจรผู้ร้ายก็ปล้นชิงตามท้องถนน</para>
+  <para style="q1">
+    <verse number="2" style="v"/>แต่พวกเขาไม่สำนึก</para>
+  <para style="q1">ว่าเราจดจำการกระทำอันชั่วร้ายทั้งปวงของพวกเขา</para>
+  <para style="q1">บาปของพวกเขาท่วมท้นเหนือพวกเขา</para>
+  <para style="q1">มันอยู่ตรงหน้าเราเสมอ</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>“พวกเขาทำให้กษัตริย์พอพระทัยด้วยความชั่วช้าของพวกเขา</para>
+  <para style="q1">ทำให้บรรดาเจ้านายพอใจด้วยคำโกหกของพวกเขา</para>
+  <para style="q1">
+    <verse number="4" style="v"/>พวกเขาล้วนแล้วแต่เป็นคนเล่นชู้</para>
+  <para style="q1">เร่าร้อนเหมือนเตาอบ</para>
+  <para style="q1">ที่คนทำขนมปังไม่ต้องโหมไฟในเตานั้น</para>
+  <para style="q1">ตั้งแต่ลงมือนวดแป้งจนก้อนแป้งขึ้นฟู</para>
+  <para style="q1">
+    <verse number="5" style="v"/>ในวันฉลองกษัตริย์ของเรา</para>
+  <para style="q1">บรรดาเจ้านายก็เร่าร้อนด้วยฤทธิ์เหล้าองุ่น</para>
+  <para style="q1">และกษัตริย์นั้นก็จับมือกับคนเยาะเย้ย</para>
+  <para style="q1">
+    <verse number="6" style="v"/>จิตใจของพวกเขาเหมือนเตาอบ</para>
+  <para style="q1">พวกเขาใช้เล่ห์เพทุบายเข้าหากษัตริย์</para>
+  <para style="q1">อารมณ์ของเขาคุกรุ่นอยู่ตลอดคืน</para>
+  <para style="q1">และตอนเช้าก็ร้อนแรงเหมือนไฟลุกจ้า</para>
+  <para style="q1">
+    <verse number="7" style="v"/>พวกเขาทุกคนร้อนเหมือนเตาอบ</para>
+  <para style="q1">กลืนกินผู้ปกครองของพวกเขา</para>
+  <para style="q1">กษัตริย์ทั้งปวงของเขาล้มลง</para>
+  <para style="q1">และไม่มีสักคนในพวกเขาร้องทูลเรา</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>“เอฟราอิมเข้าปะปนกับชาติต่างๆ</para>
+  <para style="q1">เอฟราอิมเป็นเหมือนขนมปิ้งที่ไม่ได้พลิกด้าน</para>
+  <para style="q1">
+    <verse number="9" style="v"/>คนต่างชาติสูบพลังวังชาของเขาไป</para>
+  <para style="q1">แต่เขาไม่รู้สึกตัวเลย</para>
+  <para style="q1">ผมของเขาหงอกประปรายแล้ว</para>
+  <para style="q1">แต่เขาไม่ได้สังเกตเลย</para>
+  <para style="q1">
+    <verse number="10" style="v"/>ความหยิ่งผยองของอิสราเอลปรักปรำตนเอง</para>
+  <para style="q1">แม้จะเป็นเช่นนี้แล้ว</para>
+  <para style="q1">เขาก็ไม่ยอมหันมาหาพระยาห์เวห์พระเจ้าของเขา</para>
+  <para style="q1">หรือแสวงหาพระองค์</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>“เอฟราอิมเป็นเหมือนนกเขา</para>
+  <para style="q1">ที่ถูกหลอกง่ายและไร้สติ</para>
+  <para style="q1">เดี๋ยวร้องหาอียิปต์</para>
+  <para style="q1">เดี๋ยวหันมาหาอัสซีเรีย</para>
+  <para style="q1">
+    <verse number="12" style="v"/>เมื่อพวกเขาไป เราจะเหวี่ยงตาข่ายของเราจับเขาไว้</para>
+  <para style="q1">เราจะดึงพวกเขาลงมาเหมือนนกในอากาศ</para>
+  <para style="q1">เมื่อเราได้ยินเสียงเขาจับกลุ่มกัน</para>
+  <para style="q1">เราจะจับเขา</para>
+  <para style="q1">
+    <verse number="13" style="v"/>วิบัติแก่พวกเขา</para>
+  <para style="q1">เพราะเขาหลงทางไปจากเรา!</para>
+  <para style="q1">หายนะจงมีแก่เขา</para>
+  <para style="q1">เพราะเขากบฏต่อเรา!</para>
+  <para style="q1">เราปรารถนาจะไถ่เขาเหลือเกิน</para>
+  <para style="q1">แต่เขาพูดเท็จกับเรา</para>
+  <para style="q1">
+    <verse number="14" style="v"/>พวกเขาไม่ได้ร้องเรียกเราจากใจจริง</para>
+  <para style="q1">เอาแต่คร่ำครวญบนที่นอน</para>
+  <para style="q1">พวกเขารวมตัวกัน<note caller="+" style="f"><char style="fr" closed="false">7:14 </char><char style="ft" closed="false">สำเนาต้นฉบับภาษาฮีบรูบางฉบับ และฉบับ LXX. ว่า</char><char style="fqa" closed="false">พวกเขากรีดตนเอง</char></note>เพื่อเมล็ดข้าวและเหล้าองุ่นใหม่</para>
+  <para style="q1">แต่กลับหันหนีไปจากเรา</para>
+  <para style="q1">
+    <verse number="15" style="v"/>เราได้ฝึกฝนพวกเขาและทำให้เขาเข้มแข็งขึ้น</para>
+  <para style="q1">แต่เขาก็คิดการร้ายต่อเรา</para>
+  <para style="q1">
+    <verse number="16" style="v"/>พวกเขาไม่ได้หันมาหาองค์ผู้สูงสุด</para>
+  <para style="q1">พวกเขาเหมือนคันธนูที่บิดเบี้ยว</para>
+  <para style="q1">ผู้นำของพวกเขาจะล้มลงด้วยดาบ</para>
+  <para style="q1">เพราะถ้อยคำอวดดี</para>
+  <para style="q1">ด้วยเหตุนี้พวกเขาจะถูกเย้ยหยัน</para>
+  <para style="q1">ในดินแดนอียิปต์</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">อิสราเอลจะเก็บเกี่ยวลมพายุหมุน</para>
+  <para style="q1">
+    <verse number="1" style="v"/>“จงหยิบแตรขึ้นจรดริมฝีปากของเจ้า!</para>
+  <para style="q1">นกอินทรีตัวหนึ่งอยู่เหนือพระนิเวศขององค์พระผู้เป็นเจ้า</para>
+  <para style="q1">เพราะเหล่าประชากรได้ละเมิดพันธสัญญาของเรา</para>
+  <para style="q1">และกบฏต่อบทบัญญัติของเรา</para>
+  <para style="q1">
+    <verse number="2" style="v"/>อิสราเอลร้องเรียกเราว่า</para>
+  <para style="q1">‘ข้าแต่พระเจ้าของข้าพระองค์ทั้งหลาย ข้าพระองค์ทั้งหลายยอมรับว่าทรงเป็นพระเจ้าของข้าพระองค์ทั้งหลาย!’</para>
+  <para style="q1">
+    <verse number="3" style="v"/>แต่อิสราเอลปฏิเสธสิ่งที่ดีงาม</para>
+  <para style="q1">ศัตรูจะไล่ตามเขา</para>
+  <para style="q1">
+    <verse number="4" style="v"/>เขาแต่งตั้งกษัตริย์โดยที่เราไม่เห็นด้วย</para>
+  <para style="q1">เขาเลือกเจ้านายโดยที่เราไม่เห็นชอบ</para>
+  <para style="q1">เขาใช้เงินและทองคำ</para>
+  <para style="q1">สร้างเทวรูปทั้งหลาย</para>
+  <para style="q1">พาตัวเองให้พินาศ</para>
+  <para style="q1">
+    <verse number="5" style="v"/>สะมาเรียเอ๋ย! จงขว้างเทวรูปลูกวัวของเจ้าทิ้งเสียเถิด</para>
+  <para style="q1">ความโกรธของเราเผาผลาญเขา</para>
+  <para style="q1">อีกนานเพียงใดพวกเขาจึงจะบริสุทธิ์ได้?</para>
+  <para style="q1">
+    <verse number="6" style="v"/>สิ่งเหล่านี้มาจากอิสราเอล!</para>
+  <para style="q1">ช่างฝีมือได้สร้างลูกวัวตัวนี้ขึ้น</para>
+  <para style="q1">มันไม่ใช่พระเจ้า</para>
+  <para style="q1">เทวรูปลูกวัวของสะมาเรีย</para>
+  <para style="q1">จะถูกทุบแตกเป็นเสี่ยงๆ</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>“พวกเขาหว่านลม</para>
+  <para style="q1">และเก็บเกี่ยวลมพายุหมุน</para>
+  <para style="q1">ต้นข้าวไม่มีรวง</para>
+  <para style="q1">มันจะไม่ให้ข้าวสำหรับทำแป้ง</para>
+  <para style="q1">แม้มันจะเกิดผล</para>
+  <para style="q1">แต่ชาวต่างชาติก็จะกลืนกินหมด</para>
+  <para style="q1">
+    <verse number="8" style="v"/>อิสราเอลถูกกลืนกิน</para>
+  <para style="q1">บัดนี้นางอยู่ท่ามกลางชนชาติต่างๆ</para>
+  <para style="q1">เหมือนของไร้ค่า</para>
+  <para style="q1">
+    <verse number="9" style="v"/>เพราะพวกเขาขึ้นไปหาอัสซีเรีย</para>
+  <para style="q1">เหมือนลาป่าเร่ร่อนอยู่ตามลำพัง</para>
+  <para style="q1">เอฟราอิมได้ขายตัวให้ชู้รัก</para>
+  <para style="q1">
+    <verse number="10" style="v"/>ถึงแม้พวกเขาขายตัวไปอยู่ท่ามกลางชนชาติต่างๆ</para>
+  <para style="q1">บัดนี้เราจะรวบรวมพวกเขาเข้าด้วยกัน</para>
+  <para style="q1">พวกเขาเริ่มจะเสื่อมสูญไป</para>
+  <para style="q1">ภายใต้การกดขี่ของกษัตริย์ผู้เกรียงไกร</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>“ถึงแม้เอฟราอิมสร้างแท่นบูชามากมายเพื่อถวายเครื่องบูชาไถ่บาป</para>
+  <para style="q1">แต่มันก็กลายเป็นแท่นให้ทำบาป</para>
+  <para style="q1">
+    <verse number="12" style="v"/>เราเขียนบทบัญญัติของเรามากมายให้พวกเขา</para>
+  <para style="q1">แต่พวกเขากลับถือว่ามันเป็นสิ่งแปลกปลอม</para>
+  <para style="q1">
+    <verse number="13" style="v"/>พวกเขาถวายเครื่องบูชาแก่เรา</para>
+  <para style="q1">แล้วพวกเขาก็กินเนื้อ</para>
+  <para style="q1">แต่<char style="nd">องค์พระผู้เป็นเจ้า</char>ไม่ได้พอพระทัยพวกเขา</para>
+  <para style="q1">บัดนี้พระองค์จะทรงระลึกถึงความชั่วร้ายของพวกเขา</para>
+  <para style="q1">และลงโทษบาปทั้งหลายของพวกเขา</para>
+  <para style="q1">พวกเขาจะกลับไปยังอียิปต์</para>
+  <para style="q1">
+    <verse number="14" style="v"/>อิสราเอลลืมพระผู้สร้างของตน</para>
+  <para style="q1">และสร้างปราสาทราชวังต่างๆ</para>
+  <para style="q1">ยูดาห์เสริมป้อมปราการที่เมืองต่างๆ</para>
+  <para style="q1">แต่เราจะส่งไฟมายังเมืองทั้งหลายของพวกเขา</para>
+  <para style="q1">ซึ่งจะเผาผลาญป้อมปราการของพวกเขาเสีย”</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">การลงโทษอิสราเอล</para>
+  <para style="q1">
+    <verse number="1" style="v"/>อิสราเอลเอ๋ย อย่าชื่นชมยินดี</para>
+  <para style="q1">อย่าเปรมปรีดิ์เหมือนชาติอื่นๆ</para>
+  <para style="q1">เพราะเจ้าไม่ได้ซื่อสัตย์ต่อพระเจ้าของเจ้า</para>
+  <para style="q1">เจ้ารักค่าจ้างของหญิงโสเภณี</para>
+  <para style="q1">ตามลานนวดข้าวทุกแห่ง</para>
+  <para style="q1">
+    <verse number="2" style="v"/>ลานนวดข้าวและบ่อย่ำองุ่นจะไม่พอเลี้ยงประชากร</para>
+  <para style="q1">เหล้าองุ่นใหม่ดับความกระหายของเขาไม่ได้</para>
+  <para style="q1">
+    <verse number="3" style="v"/>พวกเขาจะไม่ได้อาศัยอยู่ในแผ่นดินขององค์พระผู้เป็นเจ้า</para>
+  <para style="q1">เอฟราอิมจะกลับไปอียิปต์</para>
+  <para style="q1">และกินอาหารที่มีมลทิน<note caller="+" style="f"><char style="fr" closed="false">9:3 </char><char style="ft" closed="false">คือ เป็นมลทินตามระเบียบพิธี</char></note>ในอัสซีเรีย</para>
+  <para style="q1">
+    <verse number="4" style="v"/>พวกเขาจะไม่ได้รินเหล้าองุ่นบูชาถวายแด่องค์พระผู้เป็นเจ้า</para>
+  <para style="q1">และเครื่องบูชาของเขาก็ไม่เป็นที่พอพระทัยพระองค์</para>
+  <para style="q1">เครื่องบูชาเหล่านี้จะเป็นเหมือนอาหารผู้ไว้ทุกข์สำหรับเขา</para>
+  <para style="q1">ผู้ที่กินเข้าไปจะเป็นมลทิน</para>
+  <para style="q1">อาหารนี้จะมีไว้เพื่อตัวเขาเอง</para>
+  <para style="q1">ไม่เหมาะที่จะนำเข้ามาในวิหารขององค์พระผู้เป็นเจ้า</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>พวกเจ้าจะทำอะไรในงานเลี้ยงฉลองตามกำหนด</para>
+  <para style="q1">ในวันเทศกาลขององค์พระผู้เป็นเจ้า?</para>
+  <para style="q1">
+    <verse number="6" style="v"/>ถึงแม้พวกเขาจะรอดพ้นจากความพินาศย่อยยับ</para>
+  <para style="q1">อียิปต์ก็จะรวบรวมพวกเขา</para>
+  <para style="q1">และเมมฟิสจะฝังพวกเขาไว้</para>
+  <para style="q1">คลังเงินของพวกเขาจะถูกปกคลุมด้วยพืชหนาม</para>
+  <para style="q1">ต้นหนามจะงอกขึ้นท่วมเต็นท์ของพวกเขา</para>
+  <para style="q1">
+    <verse number="7" style="v"/>วันแห่งการลงโทษกำลังมาถึง</para>
+  <para style="q1">วันลงอาญามาใกล้แล้ว</para>
+  <para style="q1">อิสราเอลจงรู้เถิด</para>
+  <para style="q1">เพราะบาปของพวกเจ้ามากมายนัก</para>
+  <para style="q1">เจตนาร้ายของพวกเจ้าใหญ่หลวงนัก</para>
+  <para style="q1">ผู้เผยพระวจนะถูกนับว่าเป็นคนโง่</para>
+  <para style="q1">ผู้ที่พระเจ้าดลใจกลับถูกหาว่าเป็นคนบ้าคลั่ง</para>
+  <para style="q1">
+    <verse number="8" style="v"/>ผู้เผยพระวจนะพร้อมกับพระเจ้าของข้าพเจ้า</para>
+  <para style="q1">เป็นยามดูแลเอฟราอิม<note caller="+" style="f"><char style="fr" closed="false">9:8 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">ผู้เผยพระวจนะเป็นยามดูแลเอฟราอิม / ผู้เป็นประชากรของพระเจ้าของข้าพเจ้า</char></note></para>
+  <para style="q1">แต่กับดักรอเขาอยู่ตลอดเส้นทาง</para>
+  <para style="q1">และมีศัตรูในพระนิเวศของพระเจ้าของพวกเขา</para>
+  <para style="q1">
+    <verse number="9" style="v"/>พวกเขาจมดิ่งลงในความเสื่อมทราม</para>
+  <para style="q1">เหมือนสมัยกิเบอาห์</para>
+  <para style="q1">พระเจ้าจะทรงระลึกถึงความชั่วช้าของพวกเขา</para>
+  <para style="q1">และลงโทษบาปทั้งหลายของพวกเขา</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>“เมื่อเราพบอิสราเอล</para>
+  <para style="q1">ก็เหมือนพบองุ่นในถิ่นกันดาร</para>
+  <para style="q1">เมื่อเราเห็นบรรพบุรุษของพวกเจ้า</para>
+  <para style="q1">ก็เหมือนเห็นผลมะเดื่อรุ่นแรก</para>
+  <para style="q1">แต่เมื่อพวกเขามาที่บาอัลเปโอร์</para>
+  <para style="q1">พวกเขาก็อุทิศตัวแก่เทวรูปอันน่าอับอายนั้น</para>
+  <para style="q1">และชั่วช้าไปเหมือนสิ่งที่พวกเขารัก</para>
+  <para style="q1">
+    <verse number="11" style="v"/>ศักดิ์ศรีของเอฟราอิมจะบินหายลับไปเหมือนนก</para>
+  <para style="q1">ไม่มีการเกิด ไม่มีการตั้งครรภ์ และไม่มีการปฏิสนธิ</para>
+  <para style="q1">
+    <verse number="12" style="v"/>ถึงแม้พวกเขาจะเลี้ยงดูลูกๆ ได้</para>
+  <para style="q1">เราก็จะพรากทุกคนไปจากพวกเขา</para>
+  <para style="q1">วิบัติแก่พวกเขา</para>
+  <para style="q1">เมื่อเราหันหนีไปจากพวกเขา!</para>
+  <para style="q1">
+    <verse number="13" style="v"/>เราได้เห็นเอฟราอิม</para>
+  <para style="q1">ถูกปลูกไว้ในที่ร่มรื่นเช่นเดียวกับเมืองไทระ</para>
+  <para style="q1">แต่เอฟราอิมจะพาลูกๆ ของพวกเขา</para>
+  <para style="q1">ออกมาให้เพชฌฆาต”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>ข้าแต่<char style="nd">องค์พระผู้เป็นเจ้า</char> ขอโปรดประทาน</para>
+  <para style="q1">พระองค์จะประทานสิ่งใดแก่พวกเขา?</para>
+  <para style="q1">โปรดประทานครรภ์ที่แท้ง</para>
+  <para style="q1">และทรวงอกที่ไม่มีน้ำนม</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="15" style="v"/>“เพราะความชั่วร้ายทั้งปวงของพวกเขาในกิลกาล</para>
+  <para style="q1">ที่นั่นเราจึงเกลียดชังพวกเขา</para>
+  <para style="q1">เพราะการกระทำอันบาปหนาของพวกเขา</para>
+  <para style="q1">เราจะขับไล่พวกเขาออกจากนิเวศของเรา</para>
+  <para style="q1">เราจะไม่รักพวกเขาอีกต่อไป</para>
+  <para style="q1">ผู้นำทั้งหมดของพวกเขาเป็นคนชอบกบฏ</para>
+  <para style="q1">
+    <verse number="16" style="v"/>เอฟราอิมย่อยยับไปแล้ว</para>
+  <para style="q1">รากของพวกเขาเหี่ยวเฉา</para>
+  <para style="q1">พวกเขาไม่เกิดผล</para>
+  <para style="q1">ถึงแม้พวกเขามีลูก</para>
+  <para style="q1">เราก็จะประหารวงศ์วานที่รักยิ่งของพวกเขา”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>พระเจ้าของข้าพเจ้าจะปฏิเสธพวกเขา</para>
+  <para style="q1">เพราะพวกเขาไม่เชื่อฟังพระองค์</para>
+  <para style="q1">พวกเขาจะเป็นคนเร่ร่อนอยู่ท่ามกลางชนชาติต่างๆ</para>
+  <para style="b"/>
+  <chapter number="10" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>อิสราเอลเป็นองุ่นเถางาม</para>
+  <para style="q1">เขาเกิดผลเพื่อตัวเอง</para>
+  <para style="q1">เมื่อผลยิ่งดก</para>
+  <para style="q1">เขาก็ยิ่งสร้างแท่นบูชาเพิ่ม</para>
+  <para style="q1">เมื่อดินแดนของเขารุ่งเรืองขึ้น</para>
+  <para style="q1">เขาก็ตกแต่งหินศักดิ์สิทธิ์</para>
+  <para style="q1">
+    <verse number="2" style="v"/>จิตใจของพวกเขาเต็มไปด้วยความหลอกลวง</para>
+  <para style="q1">และบัดนี้พวกเขาต้องรับโทษ</para>
+  <para style="q1">พระองค์จะทรงพังแท่นบูชาของพวกเขา</para>
+  <para style="q1">และทำลายหินศักดิ์สิทธิ์ของพวกเขา</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>แล้วพวกเขาจะพูดว่า “เราไม่มีกษัตริย์</para>
+  <para style="q1">เพราะเราไม่ได้ยำเกรงองค์พระผู้เป็นเจ้า</para>
+  <para style="q1">แต่ถึงเรามีกษัตริย์</para>
+  <para style="q1">พวกเขาจะทำอะไรให้เราได้?”</para>
+  <para style="q1">
+    <verse number="4" style="v"/>พวกเขาสัญญาไว้มากมาย</para>
+  <para style="q1">ทำข้อตกลง</para>
+  <para style="q1">และสาบานเท็จ</para>
+  <para style="q1">ฉะนั้นการฟ้องร้องคดีจึงงอกงาม</para>
+  <para style="q1">เหมือนวัชพืชที่เป็นพิษในทุ่งนาที่ไถแล้ว</para>
+  <para style="q1">
+    <verse number="5" style="v"/>ประชาชนที่อาศัยในสะมาเรีย</para>
+  <para style="q1">กลัวเทวรูปลูกวัวที่เบธอาเวน<note caller="+" style="f"><char style="fr" closed="false">10:5 </char><char style="ft" closed="false">แปลว่า</char><char style="fqa" closed="false">บ้านแห่งความชั่วร้าย</char><char style="ft" closed="false">(แทนที่จะเรียกว่า</char><char style="fqa" closed="false">เบธเอล</char><char style="ft" closed="false">ซึ่งแปลว่า</char><char style="fqa" closed="false">พระนิเวศของพระเจ้า</char><char style="ft" closed="false">)</char></note></para>
+  <para style="q1">คนของพระนั้นจะคร่ำครวญถึงมัน</para>
+  <para style="q1">ปุโรหิตผู้ลุ่มหลงมันก็เช่นกัน</para>
+  <para style="q1">และบรรดาผู้ที่ชื่นชมในความโอ่อ่าตระการของพระนั้นก็เป็นไปด้วย</para>
+  <para style="q1">เพราะมันจะถูกเนรเทศออกไป</para>
+  <para style="q1">
+    <verse number="6" style="v"/>มันจะถูกนำไปอัสซีเรีย</para>
+  <para style="q1">เป็นเครื่องบรรณาการแก่กษัตริย์ผู้เกรียงไกร</para>
+  <para style="q1">เอฟราอิมจะอับอายขายหน้า</para>
+  <para style="q1">อิสราเอลจะอดสูเนื่องด้วยเทวรูป<note caller="+" style="f"><char style="fr" closed="false">10:6 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">ที่ปรึกษาของเขา</char></note>ซึ่งทำด้วยไม้ของพวกเขา</para>
+  <para style="q1">
+    <verse number="7" style="v"/>สะมาเรียและกษัตริย์ของมันจะลอยหายไป</para>
+  <para style="q1">เหมือนเศษไม้ที่อยู่บนผิวน้ำ</para>
+  <para style="q1">
+    <verse number="8" style="v"/>เทวสถานแห่งความชั่วร้าย<note caller="+" style="f"><char style="fr" closed="false">10:8 </char><char style="ft" closed="false">ภาษาฮีบรูว่า</char><char style="fqa" closed="false">อาเวน</char><char style="ft" closed="false">หมายถึง</char><char style="fqa" closed="false">เบธอาเวน</char><char style="ft" closed="false">(ชื่อในทางเสื่อมเสียของเบธเอล)</char></note>ซึ่งอยู่บนที่สูงของอิสราเอลจะถูกทำลาย</para>
+  <para style="q1">มันเป็นบาปของอิสราเอล</para>
+  <para style="q1">พืชหนามจะงอกขึ้น</para>
+  <para style="q1">ปกคลุมแท่นบูชาของเขา</para>
+  <para style="q1">แล้วพวกเขาจะกล่าวแก่ภูเขาทั้งหลายว่า “ปกคลุมเราไว้เถิด!”</para>
+  <para style="q1">และบอกเนินเขาทั้งหลายว่า “ล้มมาทับเราเถิด!”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>“อิสราเอลเอ๋ย เจ้าได้ทำบาปมาตั้งแต่สมัยกิเบอาห์</para>
+  <para style="q1">และเจ้ายังทำอยู่อย่างนั้นเรื่อยมา<note caller="+" style="f"><char style="fr" closed="false">10:9 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">และเจ้าก็ยืนหยัดอยู่อย่างนั้นเรื่อยมา</char></note></para>
+  <para style="q1">สงครามไม่ได้เล่นงานคนทำชั่ว</para>
+  <para style="q1">ในกิเบอาห์หรอกหรือ?</para>
+  <para style="q1">
+    <verse number="10" style="v"/>เมื่อเราเห็นชอบ เราจะลงโทษพวกเขา</para>
+  <para style="q1">ชนชาติต่างๆ จะรวมตัวกันต่อสู้พวกเขา</para>
+  <para style="q1">คุมขังพวกเขาเนื่องด้วยบาปซ้อนบาปของพวกเขา</para>
+  <para style="q1">
+    <verse number="11" style="v"/>เอฟราอิมเป็นวัวสาวที่ฝึกปรือแล้ว</para>
+  <para style="q1">มันชอบนวดข้าว</para>
+  <para style="q1">ฉะนั้นเราจะวางแอก</para>
+  <para style="q1">บนคออันสวยงามของมัน</para>
+  <para style="q1">เราจะลงประตักใส่เอฟราอิม</para>
+  <para style="q1">ยูดาห์ต้องลากคันไถ</para>
+  <para style="q1">และยาโคบต้องไถพรวนดิน</para>
+  <para style="q1">
+    <verse number="12" style="v"/>จงหว่านความชอบธรรมเพื่อตัวเจ้าเอง</para>
+  <para style="q1">จงเก็บเกี่ยวผลแห่งความรักมั่นคง</para>
+  <para style="q1">จงไถพรวนเนื้อดินที่ยังแข็งกระด้างของเจ้า</para>
+  <para style="q1">เพราะถึงเวลาที่จะแสวงหาองค์พระผู้เป็นเจ้า</para>
+  <para style="q1">จนกว่าพระองค์จะเสด็จมา</para>
+  <para style="q1">และโปรยความชอบธรรมลงบนพวกเจ้าดั่งสายฝน</para>
+  <para style="q1">
+    <verse number="13" style="v"/>แต่เจ้ากลับปลูกความชั่วช้า</para>
+  <para style="q1">เจ้าเก็บเกี่ยวความอธรรม</para>
+  <para style="q1">เจ้ากินผลแห่งการหลอกลวง</para>
+  <para style="q1">เพราะเจ้าพึ่งกำลังตัวเอง</para>
+  <para style="q1">เจ้าพึ่งนักรบมากมายของเจ้า</para>
+  <para style="q1">
+    <verse number="14" style="v"/>เสียงโห่ร้องของสงครามจะดังขึ้นสู้คนของเจ้า</para>
+  <para style="q1">ดังนั้นป้อมปราการทั้งหลายของเจ้าจะถูกทำลายย่อยยับ</para>
+  <para style="q1">เมื่อแม่ทั้งหลายกับลูกๆ ของนางจะถูกจับฟาดกับพื้น</para>
+  <para style="q1">ก็จะเป็นเหมือนอย่างชัลมันทำลายล้างเบธอาร์เบลในยามศึก</para>
+  <para style="q1">
+    <verse number="15" style="v"/>เบธเอลเอ๋ย มันจะเกิดขึ้นกับเจ้าอย่างนั้นแหละ</para>
+  <para style="q1">เพราะเจ้าชั่วร้ายยิ่งนัก</para>
+  <para style="q1">เมื่อรุ่งอรุณวันนั้นเริ่มขึ้น</para>
+  <para style="q1">กษัตริย์อิสราเอลจะถูกทำลายอย่างสิ้นเชิง</para>
+  <chapter number="11" style="c"/>
+  <para style="s1">ความรักของพระเจ้าต่ออิสราเอล</para>
+  <para style="q1">
+    <verse number="1" style="v"/>“เมื่ออิสราเอลยังเด็กอยู่ เรารักเขา</para>
+  <para style="q1">เราเรียกบุตรของเราออกจากอียิปต์</para>
+  <para style="q1">
+    <verse number="2" style="v"/>แต่ยิ่งเรา<note caller="+" style="f"><char style="fr" closed="false">11:2 </char><char style="ft" closed="false">ภาษาฮีบรูว่า</char><char style="fqa" closed="false">พวกเขา</char></note>เรียกอิสราเอลมากเท่าใด</para>
+  <para style="q1">พวกเขายิ่งไกลห่างจากเรา<note caller="+" style="f"><char style="fr" closed="false">11:2 </char><char style="ft" closed="false">ภาษาฮีบรูว่า</char><char style="fqa" closed="false">พวกเขา</char></note>มากเท่านั้น</para>
+  <para style="q1">พวกเขาถวายเครื่องบูชาแก่พระบาอัล</para>
+  <para style="q1">และเผาเครื่องหอมถวายรูปปั้นต่างๆ</para>
+  <para style="q1">
+    <verse number="3" style="v"/>เรานี่แหละสอนให้เอฟราอิมหัดเดิน</para>
+  <para style="q1">เราโอบอุ้มพวกเขาไว้ในอ้อมแขน</para>
+  <para style="q1">แต่พวกเขาไม่ตระหนัก</para>
+  <para style="q1">ว่าเรานี่แหละเป็นผู้รักษาพวกเขาให้หาย</para>
+  <para style="q1">
+    <verse number="4" style="v"/>เรานำพวกเขาด้วยสายใยแห่งความเมตตา</para>
+  <para style="q1">และด้วยพันธะแห่งความรัก</para>
+  <para style="q1">เราปลดแอกจากคอของพวกเขา</para>
+  <para style="q1">และก้มลงมาป้อนอาหารพวกเขา</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>“พวกเขาจะไม่กลับไปยังอียิปต์หรือ</para>
+  <para style="q1">และอัสซีเรียจะไม่ปกครองพวกเขาหรือ</para>
+  <para style="q1">ในเมื่อพวกเขาไม่ยอมกลับใจ?</para>
+  <para style="q1">
+    <verse number="6" style="v"/>ดาบทั้งหลายจะกวัดแกว่งอยู่ในเมืองต่างๆ ของพวกเขา</para>
+  <para style="q1">จะทำลายดาลประตูของพวกเขา</para>
+  <para style="q1">และทำให้แผนการต่างๆ ของพวกเขาจบสิ้นลง</para>
+  <para style="q1">
+    <verse number="7" style="v"/>ประชากรของเราตั้งใจทิ้งเราไป</para>
+  <para style="q1">แม้ว่าพวกเขาจะร้องทูลต่อเราผู้สูงสุด</para>
+  <para style="q1">เราก็จะไม่เชิดชูพวกเขาเลย</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>“เอฟราอิมเอ๋ย เราจะปล่อยเจ้าหลุดมือไปได้อย่างไร?</para>
+  <para style="q1">อิสราเอลเอ๋ย เราจะยอมปล่อยเจ้าไปได้อย่างไร?</para>
+  <para style="q1">เราจะปฏิบัติต่อเจ้าเหมือนอัดมาห์ได้หรือ?</para>
+  <para style="q1">เราจะทำให้เจ้าเหมือนเศโบยิมได้อย่างไร?</para>
+  <para style="q1">จิตใจที่อยู่ภายในเราก็เปลี่ยนไป</para>
+  <para style="q1">ความเมตตาเอ็นดูของเราก็ได้รับการปลุกขึ้น</para>
+  <para style="q1">
+    <verse number="9" style="v"/>เราจะไม่ลงโทษเจ้าตามความโกรธอันรุนแรงของเรา</para>
+  <para style="q1">หรือหันมาทำลายล้างเอฟราอิมอีก</para>
+  <para style="q1">เพราะเราเป็นพระเจ้า ไม่ใช่มนุษย์</para>
+  <para style="q1">เป็นองค์บริสุทธิ์ท่ามกลางเจ้า</para>
+  <para style="q1">เราจะไม่มาด้วยความโกรธ<note caller="+" style="f"><char style="fr" closed="false">11:9 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">ไม่มาต่อสู้กับเมืองใดๆ</char></note></para>
+  <para style="q1">
+    <verse number="10" style="v"/>เขาจะติดตามองค์พระผู้เป็นเจ้า</para>
+  <para style="q1">พระองค์จะทรงเปล่งพระสุรเสียงดุจราชสีห์</para>
+  <para style="q1">เมื่อพระองค์ทรงเปล่งเสียงกึกก้อง</para>
+  <para style="q1">ลูกๆ ของพระองค์จะสั่นสะท้านกลับมาจากทางตะวันตก</para>
+  <para style="q1">
+    <verse number="11" style="v"/>เขาจะรีบรุดตัวสั่น</para>
+  <para style="q1">มาจากอียิปต์เหมือนนก</para>
+  <para style="q1">และมาจากอัสซีเรียเหมือนนกพิราบ</para>
+  <para style="q1">เราจะพาพวกเขากลับมายังบ้านเกิดเมืองนอนอีก”</para>
+  <para style="q4">
+    <char style="nd">องค์พระผู้เป็นเจ้า</char>ประกาศดังนั้น</para>
+  <para style="s1">บาปของอิสราเอล</para>
+  <para style="q1">
+    <verse number="12" style="v"/>เอฟราอิมล้อมกรอบเราด้วยคำโกหก</para>
+  <para style="q1">พงศ์พันธุ์อิสราเอลห้อมล้อมเราด้วยการหลอกลวง</para>
+  <para style="q1">และยูดาห์ดื้อด้านแม้แต่กับพระเจ้า</para>
+  <para style="q1">ซึ่งเป็นองค์บริสุทธิ์ผู้ซื่อสัตย์</para>
+  <para style="b"/>
+  <chapter number="12" style="c"/>
+  <para style="q1">
+    <verse number="1" style="v"/>เอฟราอิมเลี้ยงชีพด้วยลม</para>
+  <para style="q1">เขาติดตามลมตะวันออกทั้งวัน</para>
+  <para style="q1">เขาทวีการโกหกและความอำมหิต</para>
+  <para style="q1">เขาทำสัญญากับอัสซีเรีย</para>
+  <para style="q1">และส่งน้ำมันมะกอกไปยังอียิปต์</para>
+  <para style="q1">
+    <verse number="2" style="v"/>
+    <char style="nd">องค์พระผู้เป็นเจ้า</char>ทรงดำเนินคดีกับยูดาห์</para>
+  <para style="q1">พระองค์จะทรงลงโทษยาโคบ<note caller="+" style="f"><char style="fr" closed="false">12:2 </char><char style="ft" closed="false">แปลว่า</char><char style="fqa" closed="false">เขาจับส้นเท้า</char><char style="ft" closed="false">(เป็นสำนวนหมายถึง</char><char style="fqa" closed="false">เขาหลอกลวง</char><char style="ft" closed="false">)</char></note>ตามวิถีทางความประพฤติของเขา</para>
+  <para style="q1">และตอบแทนเขาตามการกระทำของเขา</para>
+  <para style="q1">
+    <verse number="3" style="v"/>เขาฉวยส้นเท้าของพี่ชายไว้ตั้งแต่อยู่ในครรภ์</para>
+  <para style="q1">ครั้นหนุ่มใหญ่เขาก็ต่อสู้กับพระเจ้า</para>
+  <para style="q1">
+    <verse number="4" style="v"/>เขาสู้กับทูตสวรรค์และเอาชนะได้</para>
+  <para style="q1">เขาร่ำไห้อ้อนวอนขอความเมตตา</para>
+  <para style="q1">พระองค์ทรงพบเขาที่เบธเอล</para>
+  <para style="q1">และตรัสกับเขาที่นั่น</para>
+  <para style="q1">
+    <verse number="5" style="v"/>พระยาห์เวห์พระเจ้าผู้ทรงฤทธิ์</para>
+  <para style="q1">พระยาห์เวห์เป็นพระนามอันเกรียงไกรของพระองค์!</para>
+  <para style="q1">
+    <verse number="6" style="v"/>แต่เจ้าต้องกลับมาหาพระเจ้าของเจ้า</para>
+  <para style="q1">จงผดุงความรักและความยุติธรรม</para>
+  <para style="q1">และรอคอยพระเจ้าของเจ้าเสมอ</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>พวกพ่อค้าโกงตาชั่ง</para>
+  <para style="q1">เขารักการฉ้อฉล</para>
+  <para style="q1">
+    <verse number="8" style="v"/>เอฟราอิมโอ้อวดว่า</para>
+  <para style="q1">“เราร่ำรวยมากและกลายเป็นเศรษฐี</para>
+  <para style="q1">ด้วยทรัพย์สมบัติทั้งหมดของเรา</para>
+  <para style="q1">พวกเขาจะไม่พบความชั่วช้าหรือบาปใดๆ ในเราเลย”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>“เราคือพระยาห์เวห์พระเจ้าของเจ้า</para>
+  <para style="q1">ผู้พาเจ้าออกมาจาก<note caller="+" style="f"><char style="fr" closed="false">12:9 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">พระเจ้าของเจ้า / ตั้งแต่ครั้งที่เจ้าอยู่ในอียิปต์ </char></note>อียิปต์</para>
+  <para style="q1">เราจะทำให้เจ้าอาศัยอยู่ในเต็นท์อีกครั้ง</para>
+  <para style="q1">เหมือนเมื่อครั้งเทศกาลงานเลี้ยงตามกำหนดของเจ้า</para>
+  <para style="q1">
+    <verse number="10" style="v"/>เราพูดกับบรรดาผู้เผยพระวจนะ</para>
+  <para style="q1">ให้นิมิตมากมายแก่พวกเขา</para>
+  <para style="q1">และกล่าวคำอุปมาผ่านทางพวกเขา”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>กิเลอาดชั่วร้ายหรือ?</para>
+  <para style="q1">ชาวเมืองนั้นไร้ค่านัก!</para>
+  <para style="q1">พวกเขาถวายวัวผู้ในกิลกาลหรือ?</para>
+  <para style="q1">แท่นบูชาของพวกเขาจะเป็นเหมือนกองหิน</para>
+  <para style="q1">บนทุ่งที่ไถแล้ว</para>
+  <para style="q1">
+    <verse number="12" style="v"/>ยาโคบหนีไปยังแดนอารัม</para>
+  <para style="q1">อิสราเอลปรนนิบัติรับใช้เพื่อจะได้ภรรยา</para>
+  <para style="q1">เขาเลี้ยงแกะเพื่อจ่ายเป็นค่าตัวนาง</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <char style="nd">องค์พระผู้เป็นเจ้า</char>ทรงใช้ผู้เผยพระวจนะคนหนึ่งนำอิสราเอลออกมาจากอียิปต์</para>
+  <para style="q1">ทรงใช้ผู้เผยพระวจนะดูแลอิสราเอล</para>
+  <para style="q1">
+    <verse number="14" style="v"/>แต่เอฟราอิมยั่วโทสะพระองค์อย่างรุนแรง</para>
+  <para style="q1">องค์พระผู้เป็นเจ้าของเขาจะทรงปล่อยให้ความผิดเพราะการนองเลือดตกอยู่กับเขา</para>
+  <para style="q1">และจะตอบแทนการหมิ่นประมาทของพวกเขา</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">พระพิโรธขององค์พระผู้เป็นเจ้า</para>
+  <para style="q1">
+    <verse number="1" style="v"/>เมื่อเอฟราอิมกล่าว ผู้คนก็สั่นสะท้าน</para>
+  <para style="q1">เขาเป็นที่ยกย่องในอิสราเอล</para>
+  <para style="q1">แต่เขาก็มีความผิดและตายไปเพราะกราบไหว้พระบาอัล</para>
+  <para style="q1">
+    <verse number="2" style="v"/>บัดนี้ เขายิ่งทำบาปมากขึ้น</para>
+  <para style="q1">เขาใช้เงินทำรูปเคารพเพื่อตัวเขาเอง</para>
+  <para style="q1">เป็นเทวรูปที่ปั้นแต่งขึ้นอย่างชาญฉลาด</para>
+  <para style="q1">ทั้งหมดล้วนแล้วแต่เป็นผลงานของช่างฝีมือ</para>
+  <para style="q1">ผู้คนกล่าวถึงคนเหล่านี้ว่า</para>
+  <para style="q1">“พวกเขาใช้มนุษย์เป็นเครื่องบูชา</para>
+  <para style="q1">และจูบ<note caller="+" style="f"><char style="fr" closed="false">13:2 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">มนุษย์ผู้ถวายบูชา / จูบ</char></note>เทวรูปลูกวัว”</para>
+  <para style="q1">
+    <verse number="3" style="v"/>ฉะนั้นเขาจะเป็นเหมือนหมอกในยามเช้า</para>
+  <para style="q1">เหมือนน้ำค้างยามรุ่งอรุณซึ่งหายลับไป</para>
+  <para style="q1">เหมือนแกลบปลิวจากลานนวดข้าว</para>
+  <para style="q1">เหมือนควันที่ลอยออกไปทางหน้าต่าง</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>“แต่เราคือพระยาห์เวห์พระเจ้าของเจ้า</para>
+  <para style="q1">ผู้นำเจ้าออกมาจากอียิปต์<note caller="+" style="f"><char style="fr" closed="false">13:4 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">พระเจ้าของเจ้า / ตั้งแต่ครั้งที่เจ้าอยู่ในอียิปต์</char></note></para>
+  <para style="q1">เจ้าจะไม่มีพระเจ้าอื่นใดนอกจากเรา</para>
+  <para style="q1">และไม่มีผู้ช่วยให้รอดอื่นใดยกเว้นเรา</para>
+  <para style="q1">
+    <verse number="5" style="v"/>เราฟูมฟักดูแลเจ้าในทะเลทราย</para>
+  <para style="q1">ในดินแดนอันร้อนระอุ</para>
+  <para style="q1">
+    <verse number="6" style="v"/>เมื่อเราเลี้ยงดูพวกเขา พวกเขาก็อิ่มหนำ</para>
+  <para style="q1">เมื่ออิ่มหนำแล้ว พวกเขาก็หยิ่งผยองขึ้น</para>
+  <para style="q1">และลืมเรา</para>
+  <para style="q1">
+    <verse number="7" style="v"/>ดังนั้นเราจึงจู่โจมเข้าใส่พวกเขาเหมือนสิงโต</para>
+  <para style="q1">เราจะซุ่มอยู่ริมทางเหมือนเสือดาว</para>
+  <para style="q1">
+    <verse number="8" style="v"/>เหมือนแม่หมีที่ถูกขโมยลูกไป</para>
+  <para style="q1">เราจะเข้าโจมตีและฉีกพวกเขาออก</para>
+  <para style="q1">เราจะเป็นดั่งราชสีห์ที่กลืนกินพวกเขา</para>
+  <para style="q1">สัตว์ป่าจะฉีกพวกเขาออกเป็นชิ้นๆ</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>“อิสราเอลเอ๋ย เจ้าถูกทำลายล้าง</para>
+  <para style="q1">เพราะเจ้าต่อสู้เราผู้ที่ช่วยเหลือเจ้า</para>
+  <para style="q1">
+    <verse number="10" style="v"/>ไหนล่ะกษัตริย์ของเจ้า ผู้ที่จะช่วยเจ้าได้?</para>
+  <para style="q1">ไหนล่ะเจ้าเมืองทั้งปวง</para>
+  <para style="q1">ที่เจ้าพูดว่า</para>
+  <para style="q1">‘ให้เรามีกษัตริย์และเจ้านายเถิด’?</para>
+  <para style="q1">
+    <verse number="11" style="v"/>ฉะนั้นเราจึงให้กษัตริย์แก่เจ้าด้วยโทสะของเรา</para>
+  <para style="q1">และเราก็พรากเขาไปด้วยความกริ้วโกรธของเรา</para>
+  <para style="q1">
+    <verse number="12" style="v"/>ความผิดของเอฟราอิมถูกสะสมไว้</para>
+  <para style="q1">และบาปของเขาถูกบันทึกไว้</para>
+  <para style="q1">
+    <verse number="13" style="v"/>เขาเจ็บปวดเหมือนหญิงใกล้คลอด</para>
+  <para style="q1">แต่เขาเป็นเด็กไร้สติปัญญา</para>
+  <para style="q1">เมื่อถึงเวลาแล้ว</para>
+  <para style="q1">เขาก็ไม่ยอมคลอดออกมา</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="14" style="v"/>“เราจะไถ่ตัวพวกเขาจากอำนาจของแดนผู้ตาย</para>
+  <para style="q1">เราจะไถ่เขาจากความตาย</para>
+  <para style="q1">ความตายเอ๋ย ไหนล่ะพิษสงของเจ้า?</para>
+  <para style="q1">แดนผู้ตายเอ๋ย ไหนล่ะหายนะของเจ้า?</para>
+  <para style="b"/>
+  <para style="q1">“เราจะไม่มีความเมตตาสงสารเลย</para>
+  <para style="q1">
+    <verse number="15" style="v"/>ถึงแม้ว่าเขารุ่งโรจน์อยู่ในหมู่พี่น้อง</para>
+  <para style="q1">แต่ลมตะวันออกจาก<char style="nd">องค์พระผู้เป็นเจ้า</char>จะมาถึง</para>
+  <para style="q1">พัดกระหน่ำมาจากทะเลทราย</para>
+  <para style="q1">น้ำพุของเขาจะไม่ไหล</para>
+  <para style="q1">บ่อน้ำของเขาจะเหือดแห้ง</para>
+  <para style="q1">และคลังของเขาจะถูกปล้นชิง</para>
+  <para style="q1">เอาทรัพย์สมบัติไปหมด</para>
+  <para style="q1">
+    <verse number="16" style="v"/>ชาวสะมาเรียต้องรับโทษความผิดของตน</para>
+  <para style="q1">เพราะพวกเขากบฏต่อพระเจ้าของพวกเขา</para>
+  <para style="q1">พวกเขาจะล้มลงด้วยดาบ</para>
+  <para style="q1">ลูกอ่อนของพวกเขาจะถูกจับฟาดกับพื้น</para>
+  <para style="q1">และหญิงมีครรภ์ของพวกเขาจะถูกผ่าท้อง”</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">การกลับใจใหม่ซึ่งนำพระพรมา</para>
+  <para style="q1">
+    <verse number="1" style="v"/>อิสราเอลเอ๋ย จงหันกลับมาหาพระยาห์เวห์พระเจ้าของเจ้าเถิด</para>
+  <para style="q1">ที่เจ้าล่มจมลงก็เพราะบาปทั้งหลายของเจ้า!</para>
+  <para style="q1">
+    <verse number="2" style="v"/>จงนำคำอ้อนวอนมาด้วย</para>
+  <para style="q1">และกลับมาหา<char style="nd">องค์พระผู้เป็นเจ้า</char>เถิด</para>
+  <para style="q1">จงทูลพระองค์ว่า</para>
+  <para style="q1">“ขอทรงอภัยบาปทั้งสิ้นของข้าพระองค์ทั้งหลาย</para>
+  <para style="q1">ขอทรงรับข้าพระองค์ทั้งหลายไว้ด้วยพระคุณ</para>
+  <para style="q1">เพื่อข้าพระองค์ทั้งหลายจะถวายคำสรรเสริญจากริมฝีปากของข้าพระองค์ทั้งหลาย<note caller="+" style="f"><char style="fr" closed="false">14:2 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">ถวายปากของเราแทนวัวที่ใช้เป็นเครื่องบูชา</char></note></para>
+  <para style="q1">
+    <verse number="3" style="v"/>อัสซีเรียไม่อาจช่วยเหล่าข้าพระองค์ได้</para>
+  <para style="q1">ข้าพระองค์ทั้งหลายจะไม่พึ่งม้าศึก</para>
+  <para style="q1">จะไม่เรียกสิ่งที่มือของข้าพระองค์ทั้งหลายสร้างขึ้นนั้นว่า</para>
+  <para style="q1">‘บรรดาพระเจ้าของข้าพระองค์ทั้งหลาย’ อีกต่อไป</para>
+  <para style="q1">เพราะลูกกำพร้าพ่อจะพบความเมตตาสงสารในพระองค์”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>“เราจะรักษาความดื้อด้านของพวกเขา</para>
+  <para style="q1">และจะรักพวกเขาอย่างเต็มที่</para>
+  <para style="q1">เพราะเราหายโกรธพวกเขาแล้ว</para>
+  <para style="q1">
+    <verse number="5" style="v"/>เราจะเป็นเหมือนน้ำค้างพร่างพรมให้อิสราเอล</para>
+  <para style="q1">เขาจะผลิบานดั่งดอกลิลลี่</para>
+  <para style="q1">เขาจะหยั่งรากลง</para>
+  <para style="q1">เหมือนสนซีดาร์แห่งเลบานอน</para>
+  <para style="q1">
+    <verse number="6" style="v"/>หน่ออ่อนของเขาจะเติบโตขึ้น</para>
+  <para style="q1">เขาจะงดงามรุ่งโรจน์เหมือนต้นมะกอก</para>
+  <para style="q1">และส่งกลิ่นหอมเหมือนสนซีดาร์แห่งเลบานอน</para>
+  <para style="q1">
+    <verse number="7" style="v"/>ผู้คนจะพักพิงในร่มเงาของเขาอีก</para>
+  <para style="q1">เขาจะเจริญงอกงามเหมือนเมล็ดข้าว</para>
+  <para style="q1">จะผลิบานเหมือนเถาองุ่น</para>
+  <para style="q1">ชื่อเสียงเลื่องลือเหมือนเหล้าองุ่นจากเลบานอน</para>
+  <para style="q1">
+    <verse number="8" style="v"/>เอฟราอิมเอ๋ย เรา<note caller="+" style="f"><char style="fr" closed="false">14:8 </char><char style="ft" closed="false">หรือ</char><char style="fqa" closed="false">เอฟราอิม</char></note>จะต้องเกี่ยวข้องอะไรกับรูปเคารพทั้งหลายอีก?</para>
+  <para style="q1">เราจะตอบเขาและห่วงใยดูแลเขา</para>
+  <para style="q1">เราเป็นเหมือนต้นสนเขียวชอุ่ม</para>
+  <para style="q1">เจ้าจะมีผลงอกงามเพราะเรา”</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>ผู้ใดเฉลียวฉลาด? ผู้นั้นจะประจักษ์สิ่งเหล่านี้</para>
+  <para style="q1">ผู้ใดมีวิจารณญาณ? ผู้นั้นจะเข้าใจ</para>
+  <para style="q1">วิถีทางของ<char style="nd">องค์พระผู้เป็นเจ้า</char>ล้วนถูกต้อง</para>
+  <para style="q1">ผู้ชอบธรรมดำเนินในวิถีทางเหล่านี้</para>
+  <para style="q1">แต่ผู้กบฏต่อพระเจ้าก็สะดุดอยู่ในทางของพระองค์</para>
+</usx>

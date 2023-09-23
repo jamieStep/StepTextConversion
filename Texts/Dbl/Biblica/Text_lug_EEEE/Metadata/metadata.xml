@@ -1,0 +1,722 @@
+<?xml version="1.0" standalone="yes"?><DBLMetadata version="2.1" id="da34f369635c82b8" revision="7">
+  <identification>
+    <name>Luganda Contemporary Bible</name>
+    <nameLocal>Endagaano Enkadde n'Endagaano Empya</nameLocal>
+    <description>Ganda: Endagaano Enkadde n'Endagaano Empya (Bible)</description>
+    <abbreviation>LCB</abbreviation>
+    <abbreviationLocal>EEEE</abbreviationLocal>
+    <scope>Bible</scope>
+    <dateCompleted>2017-07-01</dateCompleted>
+    <bundleProducer>Paratext/8.0.100.77</bundleProducer>
+    <systemId type="paratext">
+      <id>da34f369635c82b8ae4f006b0b3955f26fad03d8</id>
+      <csetId>2ecb8cdc1f3179a85e3a8eb56a777dfc775ffaf9</csetId>
+      <name>lgLCB14</name>
+      <fullName>Luganda Contemporary Bible</fullName>
+    </systemId>
+    <systemId type="ptreg">
+      <id>mS8J7FW5RFmJ3zCjv</id>
+    </systemId>
+  </identification>
+  <type>
+    <medium>text</medium>
+    <isConfidential>false</isConfidential>
+    <hasCharacters>true</hasCharacters>
+    <isTranslation>true</isTranslation>
+    <isExpression>true</isExpression>
+    <translationType>New</translationType>
+    <audience>Basic</audience>
+  </type>
+  <relationships/>
+  <agencies>
+    <rightsHolder>
+      <abbr>Biblica</abbr>
+      <url>http://www.Biblica.com</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsHolder>
+    <rightsAdmin>
+      <url>http://www.Biblica.com</url>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </rightsAdmin>
+    <contributor>
+      <content>true</content>
+      <publication>true</publication>
+      <management>true</management>
+      <finance>true</finance>
+      <qa>true</qa>
+      <uid>545d2cb00fd5dca263562474</uid>
+      <name>Biblica, Inc.</name>
+    </contributor>
+  </agencies>
+  <language>
+    <iso>lug</iso>
+    <name>Ganda</name>
+    <nameLocal>Luganda</nameLocal>
+    <script>Latin</script>
+    <scriptCode>Latn</scriptCode>
+    <scriptDirection>LTR</scriptDirection>
+    <ldml>lg</ldml>
+    <numerals>Arabic</numerals>
+  </language>
+  <countries>
+    <country>
+      <iso>UG</iso>
+      <name>Uganda</name>
+    </country>
+  </countries>
+  <format>
+    <versedParagraphs>false</versedParagraphs>
+  </format>
+  <names>
+    <name id="book-gen">
+      <abbr>Lub</abbr>
+      <short>Olubereberye</short>
+      <long>Ekitabo Ekiyitibwa Olubereberye</long>
+    </name>
+    <name id="book-exo">
+      <abbr>Kuv</abbr>
+      <short>Okuva</short>
+      <long>Ekitabo Ekiyitibwa Okuva</long>
+    </name>
+    <name id="book-lev">
+      <abbr>Lv</abbr>
+      <short>Ebyabaleevi</short>
+      <long>Ekitabo Ekiyitibwa Ebyabaleevi</long>
+    </name>
+    <name id="book-num">
+      <abbr>Kbl</abbr>
+      <short>Okubala</short>
+      <long>Ekitabo Ekiyitibwa Okubala</long>
+    </name>
+    <name id="book-deu">
+      <abbr>Ma</abbr>
+      <short>Ekyamateeka Olwokubiri</short>
+      <long>Ekitabo Ekiyitibwa Ekyamateeka Olwokubiri</long>
+    </name>
+    <name id="book-jos">
+      <abbr>Yos</abbr>
+      <short>Yoswa</short>
+      <long>Ekitabo Ekiyitibwa Yoswa</long>
+    </name>
+    <name id="book-jdg">
+      <abbr>Bal</abbr>
+      <short>Balam</short>
+      <long>Ekitabo Ekiyitibwa Ekyabalamuzi</long>
+    </name>
+    <name id="book-rut">
+      <abbr>Lus</abbr>
+      <short>Luusi</short>
+      <long>Ekitabo Ekiyitibwa Luusi</long>
+    </name>
+    <name id="book-1sa">
+      <abbr>1Sa</abbr>
+      <short>1 Samwiri</short>
+      <long>Ekitabo Ekiyitibwa Samwiri ekyʼOlubereberye</long>
+    </name>
+    <name id="book-2sa">
+      <abbr>2Sa</abbr>
+      <short>2 Samwiri</short>
+      <long>Ekitabo Ekiyitibwa Samwiri Ekyokubiri</long>
+    </name>
+    <name id="book-1ki">
+      <abbr>1Bk</abbr>
+      <short>1 Bassekabaka</short>
+      <long>Ekitabo Ekiyitibwa Bassekabaka ekyʼOlubereberye</long>
+    </name>
+    <name id="book-2ki">
+      <abbr>2Bk</abbr>
+      <short>2 Bassekabaka</short>
+      <long>Ekitabo Ekiyitibwa Bassekabaka Ekyokubiri</long>
+    </name>
+    <name id="book-1ch">
+      <abbr>1By</abbr>
+      <short>1 Ebyomumirembe</short>
+      <long>Ekitabo Ekiyitibwa Ebyomumirembe ekyʼOlubereberye</long>
+    </name>
+    <name id="book-2ch">
+      <abbr>2By</abbr>
+      <short>2 Ebyomumirembe</short>
+      <long>Ekitabo Ekiyitibwa Ebyomumirembe Ekyokubiri</long>
+    </name>
+    <name id="book-ezr">
+      <abbr>Ezr</abbr>
+      <short>Ezera</short>
+      <long>Ekitabo Ekiyitibwa Ezera</long>
+    </name>
+    <name id="book-neh">
+      <abbr>Nek</abbr>
+      <short>Nekkemiya</short>
+      <long>Nekkemiya</long>
+    </name>
+    <name id="book-est">
+      <abbr>Es</abbr>
+      <short>Eseza</short>
+      <long>Eseza</long>
+    </name>
+    <name id="book-job">
+      <abbr>Yob</abbr>
+      <short>Yobu</short>
+      <long>Yobu</long>
+    </name>
+    <name id="book-psa">
+      <abbr>Zab</abbr>
+      <short>Zabbuli</short>
+      <long>Zabbuli</long>
+    </name>
+    <name id="book-pro">
+      <abbr>Nge</abbr>
+      <short>Engero</short>
+      <long>Engero</long>
+    </name>
+    <name id="book-ecc">
+      <abbr>Mub</abbr>
+      <short>Omubuulizi</short>
+      <long>Omubuulizi</long>
+    </name>
+    <name id="book-sng">
+      <abbr>Lu</abbr>
+      <short>Oluyimba</short>
+      <long>Oluyimba</long>
+    </name>
+    <name id="book-isa">
+      <abbr>Is</abbr>
+      <short>Isaaya</short>
+      <long>Isaaya</long>
+    </name>
+    <name id="book-jer">
+      <abbr>Yer</abbr>
+      <short>Yeremiya</short>
+      <long>Yeremiya</long>
+    </name>
+    <name id="book-lam">
+      <abbr>Kgb</abbr>
+      <short>Okukungubaga</short>
+      <long>Okukungubaga</long>
+    </name>
+    <name id="book-ezk">
+      <abbr>Ez</abbr>
+      <short>Ezeekyeri</short>
+      <long>Ezeekyeri</long>
+    </name>
+    <name id="book-dan">
+      <abbr>Dan</abbr>
+      <short>Danyeri</short>
+      <long>Danyeri</long>
+    </name>
+    <name id="book-hos">
+      <abbr>Kos</abbr>
+      <short>Koseya</short>
+      <long>Koseya</long>
+    </name>
+    <name id="book-jol">
+      <abbr>Yo</abbr>
+      <short>Yoweeri</short>
+      <long>Yoweeri</long>
+    </name>
+    <name id="book-amo">
+      <abbr>Am</abbr>
+      <short>Amosi</short>
+      <long>Amosi</long>
+    </name>
+    <name id="book-oba">
+      <abbr>Ob</abbr>
+      <short>Obadiya</short>
+      <long>Obadiya</long>
+    </name>
+    <name id="book-jon">
+      <abbr>Yon</abbr>
+      <short>Yona</short>
+      <long>Yona</long>
+    </name>
+    <name id="book-mic">
+      <abbr>Mi</abbr>
+      <short>Mikka</short>
+      <long>Mikka</long>
+    </name>
+    <name id="book-nam">
+      <abbr>Nak</abbr>
+      <short>Nakkumu</short>
+      <long>Nakkumu</long>
+    </name>
+    <name id="book-hab">
+      <abbr>Kbk</abbr>
+      <short>Kaabakuuku</short>
+      <long>Kaabakuuku</long>
+    </name>
+    <name id="book-zep">
+      <abbr>Zef</abbr>
+      <short>Zeffaniya</short>
+      <long>Zeffaniya</long>
+    </name>
+    <name id="book-hag">
+      <abbr>Kag</abbr>
+      <short>Kaggayi</short>
+      <long>Kaggayi</long>
+    </name>
+    <name id="book-zec">
+      <abbr>Zek</abbr>
+      <short>Zekkaliya</short>
+      <long>Zekkaliya</long>
+    </name>
+    <name id="book-mal">
+      <abbr>Mal</abbr>
+      <short>Malaki</short>
+      <long>Malaki</long>
+    </name>
+    <name id="book-mat">
+      <abbr>Mat</abbr>
+      <short>Matayo</short>
+      <long>Enjiri nga bwe Yawandiikibwa Matayo</long>
+    </name>
+    <name id="book-mrk">
+      <abbr>Mak</abbr>
+      <short>Makko</short>
+      <long>Enjiri nga bwe Yawandiikibwa Makko</long>
+    </name>
+    <name id="book-luk">
+      <abbr>Luk</abbr>
+      <short>Lukka</short>
+      <long>Enjiri nga bwe Yawandiikibwa Lukka</long>
+    </name>
+    <name id="book-jhn">
+      <abbr>Yk</abbr>
+      <short>Yokaana</short>
+      <long>Enjiri nga bwe Yawandiikibwa Yokaana</long>
+    </name>
+    <name id="book-act">
+      <abbr>Bik</abbr>
+      <short>Ebikolwa byʼAbatume</short>
+      <long>Ekitabo Ekiyitibwa Ebikolwa byʼAbatume</long>
+    </name>
+    <name id="book-rom">
+      <abbr>Bar</abbr>
+      <short>Abaruumi</short>
+      <long>Ebbaluwa ya Pawulo Omutukuvu eri Abaruumi</long>
+    </name>
+    <name id="book-1co">
+      <abbr>1Ko</abbr>
+      <short>1 Abakkolinso</short>
+      <long>Ebbaluwa ya Pawulo Omutukuvu eyʼOlubereberye eri Abakkolinso</long>
+    </name>
+    <name id="book-2co">
+      <abbr>2Ko</abbr>
+      <short>2 Abakkolinso</short>
+      <long>Ebbaluwa ya Pawulo Omutukuvu Eyookubiri eri Abakkolinso</long>
+    </name>
+    <name id="book-gal">
+      <abbr>Bag</abbr>
+      <short>Abaggalatiya</short>
+      <long>Ebbaluwa ya Pawulo Omutukuvu eri Abaggalatiya</long>
+    </name>
+    <name id="book-eph">
+      <abbr>Bef</abbr>
+      <short>Abaefeso</short>
+      <long>Ebbaluwa ya Pawulo Omutukuvu eri Abaefeso</long>
+    </name>
+    <name id="book-php">
+      <abbr>Baf</abbr>
+      <short>Abafiripi</short>
+      <long>Ebbaluwa ya Pawulo Omutukuvu eri Abafiripi</long>
+    </name>
+    <name id="book-col">
+      <abbr>Bak</abbr>
+      <short>Abakkolosaayi</short>
+      <long>Ebbaluwa ya Pawulo Omutukuvu eri Abakkolosaayi</long>
+    </name>
+    <name id="book-1th">
+      <abbr>1Bs</abbr>
+      <short>1 Basessaloniika</short>
+      <long>Ebbaluwa ya Pawulo Omutukuvu eyʼOlubereberye eri Basessaloniika</long>
+    </name>
+    <name id="book-2th">
+      <abbr>2Bs</abbr>
+      <short>2 Basessaloniika</short>
+      <long>Ebbaluwa ya Pawulo Eyookubiri eri Basessaloniika</long>
+    </name>
+    <name id="book-1ti">
+      <abbr>1Ti</abbr>
+      <short>1 Timoseewo</short>
+      <long>Ebbaluwa ya Pawulo Omutukuvu eyʼOlubereberye eri Timoseewo</long>
+    </name>
+    <name id="book-2ti">
+      <abbr>2Ti</abbr>
+      <short>2 Timoseewo</short>
+      <long>Ebbaluwa ya Pawulo Omutukuvu Eyookubiri eri Timoseewo</long>
+    </name>
+    <name id="book-tit">
+      <abbr>Tit</abbr>
+      <short>Tito</short>
+      <long>Ebbaluwa ya Pawulo Omutukuvu eri Tito</long>
+    </name>
+    <name id="book-phm">
+      <abbr>Fir</abbr>
+      <short>Firemooni</short>
+      <long>Ebbaluwa ya Pawulo Omutukuvu eri Firemooni</long>
+    </name>
+    <name id="book-heb">
+      <abbr>Beb</abbr>
+      <short>Abaebbulaniya</short>
+      <long>Ebbaluwa eri Abaebbulaniya</long>
+    </name>
+    <name id="book-jas">
+      <abbr>Yak</abbr>
+      <short>Yakobo</short>
+      <long>Ebbaluwa ya Yakobo</long>
+    </name>
+    <name id="book-1pe">
+      <abbr>1Pe</abbr>
+      <short>1 Peetero</short>
+      <long>Ebbaluwa ya Peetero Omutukuvu eyʼOlubereberye</long>
+    </name>
+    <name id="book-2pe">
+      <abbr>2Pe</abbr>
+      <short>2 Peetero</short>
+      <long>Ebbaluwa ya Peetero Omutukuvu Eyookubiri</long>
+    </name>
+    <name id="book-1jn">
+      <abbr>1Yk</abbr>
+      <short>1 Yokaana</short>
+      <long>Ebbaluwa ya Yokaana Omutukuvu Omutume eyʼOlubereberye</long>
+    </name>
+    <name id="book-2jn">
+      <abbr>2Yk</abbr>
+      <short>2 Yokaana</short>
+      <long>Ebbaluwa ya Yokaana Omutukuvu Omutume Eyookubiri</long>
+    </name>
+    <name id="book-3jn">
+      <abbr>3Yk</abbr>
+      <short>3 Yokaana</short>
+      <long>Ebbaluwa ya Yokaana Omutukuvu Omutume Eyokusatu</long>
+    </name>
+    <name id="book-jud">
+      <abbr>Yud</abbr>
+      <short>Yuda</short>
+      <long>Ebbaluwa ya Yuda Omutukuvu</long>
+    </name>
+    <name id="book-rev">
+      <abbr>Kub</abbr>
+      <short>Okubikkulirwa</short>
+      <long>Ekitabo kya Yokaana Omutukuvu Omutume Ekiyitibwa Okubikkulirwa</long>
+    </name>
+  </names>
+  <manifest>
+    <container uri="release">
+      <container uri="USX_1">
+        <resource checksum="5e0734e1f495a665468f917dd8e55f65" mimeType="application/xml" size="323264" uri="1CH.usx"/>
+        <resource checksum="8c3af628226c900b4e04589bfa6eac34" mimeType="application/xml" size="156558" uri="1CO.usx"/>
+        <resource checksum="44644b3e727974f9de27d193dd5c6584" mimeType="application/xml" size="43079" uri="1JN.usx"/>
+        <resource checksum="d66be7110a3632dfb25dc60db04b0803" mimeType="application/xml" size="308503" uri="1KI.usx"/>
+        <resource checksum="5e87ea40ae14bec00dc9e064e91bcd3a" mimeType="application/xml" size="46915" uri="1PE.usx"/>
+        <resource checksum="e10c2c74837e0e1c3f1aa82ef1b0018e" mimeType="application/xml" size="330516" uri="1SA.usx"/>
+        <resource checksum="09d78ec491e9ddbb4b329d4e4a417860" mimeType="application/xml" size="33318" uri="1TH.usx"/>
+        <resource checksum="aafb3b3fd748ea4bf48fcd12f66efc2c" mimeType="application/xml" size="44492" uri="1TI.usx"/>
+        <resource checksum="cd1191d49a3082455588b40702154671" mimeType="application/xml" size="338852" uri="2CH.usx"/>
+        <resource checksum="f6663f32da8fb883fff7215422ef492a" mimeType="application/xml" size="102146" uri="2CO.usx"/>
+        <resource checksum="29b22a2e80183c34960f689686aea7dd" mimeType="application/xml" size="6250" uri="2JN.usx"/>
+        <resource checksum="c6f7a5ed69dfdd942d3f11f17f757329" mimeType="application/xml" size="311521" uri="2KI.usx"/>
+        <resource checksum="cc82ebe0b786e7c91be7f17374aaeeb7" mimeType="application/xml" size="28129" uri="2PE.usx"/>
+        <resource checksum="2f60e7710c77cd73ddb706cf9cca1182" mimeType="application/xml" size="289868" uri="2SA.usx"/>
+        <resource checksum="7e13803676f826dbd59d0cbd7114bb9e" mimeType="application/xml" size="20437" uri="2TH.usx"/>
+        <resource checksum="09dc994ad4474bb16e36be205d76d1fc" mimeType="application/xml" size="31863" uri="2TI.usx"/>
+        <resource checksum="2fdeb4d96765a6219f994f3eef62d9e8" mimeType="application/xml" size="6512" uri="3JN.usx"/>
+        <resource checksum="ef5915acffb83bd73964f3db47d1f0df" mimeType="application/xml" size="393943" uri="ACT.usx"/>
+        <resource checksum="5ab36240b5cb20c8b7b4f340e6f5a4dc" mimeType="application/xml" size="94426" uri="AMO.usx"/>
+        <resource checksum="0b72b7a8ef1a96e4edc90f9d397fab69" mimeType="application/xml" size="38264" uri="COL.usx"/>
+        <resource checksum="cd91ad5db64438a25c6ab6056eda2ae2" mimeType="application/xml" size="164393" uri="DAN.usx"/>
+        <resource checksum="02a468f90a73cbd873f24e37cb2cbecf" mimeType="application/xml" size="407084" uri="DEU.usx"/>
+        <resource checksum="fcea1ceb17e5a732927808be87df01c3" mimeType="application/xml" size="97420" uri="ECC.usx"/>
+        <resource checksum="b69ccf5ad1bdef6698f5dc446d2b1e87" mimeType="application/xml" size="54348" uri="EPH.usx"/>
+        <resource checksum="4960cd5567e2f6fff871a60676a43440" mimeType="application/xml" size="77315" uri="EST.usx"/>
+        <resource checksum="586c5ed4f37aa714f6538d2e89592019" mimeType="application/xml" size="449220" uri="EXO.usx"/>
+        <resource checksum="ced93298e22b65bbc04a2d09d55d7d9c" mimeType="application/xml" size="551925" uri="EZK.usx"/>
+        <resource checksum="25c182bf105627125291ee38a03ce95a" mimeType="application/xml" size="111175" uri="EZR.usx"/>
+        <resource checksum="b57dc9f091df6a3858530049ab97ea86" mimeType="application/xml" size="55142" uri="GAL.usx"/>
+        <resource checksum="b07dff050af09f546369eeab8e5a4d4d" mimeType="application/xml" size="534103" uri="GEN.usx"/>
+        <resource checksum="ccb3c5d672943775e7afded27d1cc23e" mimeType="application/xml" size="33728" uri="HAB.usx"/>
+        <resource checksum="43e78c069b37612370878d45e7efca09" mimeType="application/xml" size="18885" uri="HAG.usx"/>
+        <resource checksum="464958446c0426dd2e96e9a316ee1643" mimeType="application/xml" size="128022" uri="HEB.usx"/>
+        <resource checksum="298d747f04712ab05e74c7f3fe749e7b" mimeType="application/xml" size="123014" uri="HOS.usx"/>
+        <resource checksum="d51642dacb54aa4fc5e792e21f6ad0c0" mimeType="application/xml" size="817264" uri="ISA.usx"/>
+        <resource checksum="4a3a14192748126ec88b851b1aeac8d5" mimeType="application/xml" size="42455" uri="JAS.usx"/>
+        <resource checksum="18fb3834734533d57ab73f2033f4834e" mimeType="application/xml" size="238496" uri="JDG.usx"/>
+        <resource checksum="11a83bc21c29561e03377360965b08b2" mimeType="application/xml" size="727381" uri="JER.usx"/>
+        <resource checksum="1286c9f4d4626b2c4c1e370de344af0d" mimeType="application/xml" size="322196" uri="JHN.usx"/>
+        <resource checksum="c64f5552f6438aca27d100d8e31fd01c" mimeType="application/xml" size="421462" uri="JOB.usx"/>
+        <resource checksum="5808ab1cb3b1c9cd5488d51b866c95c7" mimeType="application/xml" size="48280" uri="JOL.usx"/>
+        <resource checksum="5637700dc50cdf497a3a1cdf877afb19" mimeType="application/xml" size="21460" uri="JON.usx"/>
+        <resource checksum="7e256f71f1919b9aa38d6bee0239e62c" mimeType="application/xml" size="261340" uri="JOS.usx"/>
+        <resource checksum="8b58c752746a22fdf42c4471b4ca23d0" mimeType="application/xml" size="14390" uri="JUD.usx"/>
+        <resource checksum="83438e847e3d469fa0c475028eea6c3c" mimeType="application/xml" size="87241" uri="LAM.usx"/>
+        <resource checksum="de9ac7e1b61516aa8da2c79c2382b57f" mimeType="application/xml" size="326782" uri="LEV.usx"/>
+        <resource checksum="2ad9d9b53afe7383a66eef46169f3427" mimeType="application/xml" size="402920" uri="LUK.usx"/>
+        <resource checksum="30ce8af13f308edc74d5e02a9df53ec6" mimeType="application/xml" size="30895" uri="MAL.usx"/>
+        <resource checksum="f7373177a1fa92d6ce414acbf8134208" mimeType="application/xml" size="388450" uri="MAT.usx"/>
+        <resource checksum="87996be615629adea8ede7f1ab429c43" mimeType="application/xml" size="71184" uri="MIC.usx"/>
+        <resource checksum="8cb8198b2097f766d3b28dc9e08e6e54" mimeType="application/xml" size="225548" uri="MRK.usx"/>
+        <resource checksum="663887c43a7efff5fd837fe90ecae9db" mimeType="application/xml" size="29981" uri="NAM.usx"/>
+        <resource checksum="0433c42abae15b700075741e0eb47756" mimeType="application/xml" size="156868" uri="NEH.usx"/>
+        <resource checksum="b9dfcc453b930029e8f715dcd65faf6e" mimeType="application/xml" size="489087" uri="NUM.usx"/>
+        <resource checksum="2cd03dc6b82aa7dbcff8eaab45cd727f" mimeType="application/xml" size="14205" uri="OBA.usx"/>
+        <resource checksum="2ddbf76a56452464d28baf580d335375" mimeType="application/xml" size="9438" uri="PHM.usx"/>
+        <resource checksum="10e4e0274b8ce2721796c465b3efe062" mimeType="application/xml" size="40696" uri="PHP.usx"/>
+        <resource checksum="d6277d5ed5c78e32bee375a370f4f279" mimeType="application/xml" size="356737" uri="PRO.usx"/>
+        <resource checksum="809af624691f6f18f401caedca9b099c" mimeType="application/xml" size="1114781" uri="PSA.usx"/>
+        <resource checksum="b3cec68a8f6d05b65692d0abf4c95886" mimeType="application/xml" size="216096" uri="REV.usx"/>
+        <resource checksum="1041a699eaa5298b44886353512f0074" mimeType="application/xml" size="171600" uri="ROM.usx"/>
+        <resource checksum="f082e401669342546292bcebdabb693d" mimeType="application/xml" size="37457" uri="RUT.usx"/>
+        <resource checksum="d66944f65bf1a3d652c5d2514e868b6f" mimeType="application/xml" size="66459" uri="SNG.usx"/>
+        <resource checksum="6b378993f9b71ee8ab0f47b68ecee98d" mimeType="application/xml" size="19873" uri="TIT.usx"/>
+        <resource checksum="75e66fae987828880428709ef6700bb6" mimeType="application/xml" size="102722" uri="ZEC.usx"/>
+        <resource checksum="525643b8d83bdb20e0a6bc39dd181073" mimeType="application/xml" size="38586" uri="ZEP.usx"/>
+      </container>
+      <resource checksum="93a009226b71b13beda251f9ff56724e" mimeType="application/xml" size="4813" uri="lug_lg.ldml"/>
+      <resource checksum="c59b0a713be37614057afa4630216cc8" mimeType="application/xml" size="93519" uri="styles.xml"/>
+      <resource checksum="7fd45195d0b12e7e2690721878433a92" mimeType="text/plain" size="15416" uri="versification.vrs"/>
+    </container>
+    <container uri="source">
+      <resource checksum="b6f124ca307541ce8c9316d6237a03cb" mimeType="application/zip" size="27501439" uri="source.zip"/>
+    </container>
+  </manifest>
+  <source>
+    <canonicalContent>
+      <book code="1CH"/>
+      <book code="1CO"/>
+      <book code="1JN"/>
+      <book code="1KI"/>
+      <book code="1PE"/>
+      <book code="1SA"/>
+      <book code="1TH"/>
+      <book code="1TI"/>
+      <book code="2CH"/>
+      <book code="2CO"/>
+      <book code="2JN"/>
+      <book code="2KI"/>
+      <book code="2PE"/>
+      <book code="2SA"/>
+      <book code="2TH"/>
+      <book code="2TI"/>
+      <book code="3JN"/>
+      <book code="ACT"/>
+      <book code="AMO"/>
+      <book code="COL"/>
+      <book code="DAN"/>
+      <book code="DEU"/>
+      <book code="ECC"/>
+      <book code="EPH"/>
+      <book code="EST"/>
+      <book code="EXO"/>
+      <book code="EZK"/>
+      <book code="EZR"/>
+      <book code="GAL"/>
+      <book code="GEN"/>
+      <book code="HAB"/>
+      <book code="HAG"/>
+      <book code="HEB"/>
+      <book code="HOS"/>
+      <book code="ISA"/>
+      <book code="JAS"/>
+      <book code="JDG"/>
+      <book code="JER"/>
+      <book code="JHN"/>
+      <book code="JOB"/>
+      <book code="JOL"/>
+      <book code="JON"/>
+      <book code="JOS"/>
+      <book code="JUD"/>
+      <book code="LAM"/>
+      <book code="LEV"/>
+      <book code="LUK"/>
+      <book code="MAL"/>
+      <book code="MAT"/>
+      <book code="MIC"/>
+      <book code="MRK"/>
+      <book code="NAM"/>
+      <book code="NEH"/>
+      <book code="NUM"/>
+      <book code="OBA"/>
+      <book code="PHM"/>
+      <book code="PHP"/>
+      <book code="PRO"/>
+      <book code="PSA"/>
+      <book code="REV"/>
+      <book code="ROM"/>
+      <book code="RUT"/>
+      <book code="SNG"/>
+      <book code="TIT"/>
+      <book code="ZEC"/>
+      <book code="ZEP"/>
+    </canonicalContent>
+    <structure>
+      <content src="source/source.zip" role="sourceZip"/>
+    </structure>
+  </source>
+  <publications>
+    <publication id="p1" default="true">
+      <name>Luganda Contemporary Bible</name>
+      <nameLocal>Endagaano Enkadde n’Endagaano Empya</nameLocal>
+      <description>The Holy Bible</description>
+      <descriptionLocal>Bayibuli Entukuvu</descriptionLocal>
+      <canonicalContent>
+        <book code="1CH"/>
+        <book code="1CO"/>
+        <book code="1JN"/>
+        <book code="1KI"/>
+        <book code="1PE"/>
+        <book code="1SA"/>
+        <book code="1TH"/>
+        <book code="1TI"/>
+        <book code="2CH"/>
+        <book code="2CO"/>
+        <book code="2JN"/>
+        <book code="2KI"/>
+        <book code="2PE"/>
+        <book code="2SA"/>
+        <book code="2TH"/>
+        <book code="2TI"/>
+        <book code="3JN"/>
+        <book code="ACT"/>
+        <book code="AMO"/>
+        <book code="COL"/>
+        <book code="DAN"/>
+        <book code="DEU"/>
+        <book code="ECC"/>
+        <book code="EPH"/>
+        <book code="EST"/>
+        <book code="EXO"/>
+        <book code="EZK"/>
+        <book code="EZR"/>
+        <book code="GAL"/>
+        <book code="GEN"/>
+        <book code="HAB"/>
+        <book code="HAG"/>
+        <book code="HEB"/>
+        <book code="HOS"/>
+        <book code="ISA"/>
+        <book code="JAS"/>
+        <book code="JDG"/>
+        <book code="JER"/>
+        <book code="JHN"/>
+        <book code="JOB"/>
+        <book code="JOL"/>
+        <book code="JON"/>
+        <book code="JOS"/>
+        <book code="JUD"/>
+        <book code="LAM"/>
+        <book code="LEV"/>
+        <book code="LUK"/>
+        <book code="MAL"/>
+        <book code="MAT"/>
+        <book code="MIC"/>
+        <book code="MRK"/>
+        <book code="NAM"/>
+        <book code="NEH"/>
+        <book code="NUM"/>
+        <book code="OBA"/>
+        <book code="PHM"/>
+        <book code="PHP"/>
+        <book code="PRO"/>
+        <book code="PSA"/>
+        <book code="REV"/>
+        <book code="ROM"/>
+        <book code="RUT"/>
+        <book code="SNG"/>
+        <book code="TIT"/>
+        <book code="ZEC"/>
+        <book code="ZEP"/>
+      </canonicalContent>
+      <structure>
+        <content name="book-gen" src="release/USX_1/GEN.usx" role="GEN"/>
+        <content name="book-exo" src="release/USX_1/EXO.usx" role="EXO"/>
+        <content name="book-lev" src="release/USX_1/LEV.usx" role="LEV"/>
+        <content name="book-num" src="release/USX_1/NUM.usx" role="NUM"/>
+        <content name="book-deu" src="release/USX_1/DEU.usx" role="DEU"/>
+        <content name="book-jos" src="release/USX_1/JOS.usx" role="JOS"/>
+        <content name="book-jdg" src="release/USX_1/JDG.usx" role="JDG"/>
+        <content name="book-rut" src="release/USX_1/RUT.usx" role="RUT"/>
+        <content name="book-1sa" src="release/USX_1/1SA.usx" role="1SA"/>
+        <content name="book-2sa" src="release/USX_1/2SA.usx" role="2SA"/>
+        <content name="book-1ki" src="release/USX_1/1KI.usx" role="1KI"/>
+        <content name="book-2ki" src="release/USX_1/2KI.usx" role="2KI"/>
+        <content name="book-1ch" src="release/USX_1/1CH.usx" role="1CH"/>
+        <content name="book-2ch" src="release/USX_1/2CH.usx" role="2CH"/>
+        <content name="book-ezr" src="release/USX_1/EZR.usx" role="EZR"/>
+        <content name="book-neh" src="release/USX_1/NEH.usx" role="NEH"/>
+        <content name="book-est" src="release/USX_1/EST.usx" role="EST"/>
+        <content name="book-job" src="release/USX_1/JOB.usx" role="JOB"/>
+        <content name="book-psa" src="release/USX_1/PSA.usx" role="PSA"/>
+        <content name="book-pro" src="release/USX_1/PRO.usx" role="PRO"/>
+        <content name="book-ecc" src="release/USX_1/ECC.usx" role="ECC"/>
+        <content name="book-sng" src="release/USX_1/SNG.usx" role="SNG"/>
+        <content name="book-isa" src="release/USX_1/ISA.usx" role="ISA"/>
+        <content name="book-jer" src="release/USX_1/JER.usx" role="JER"/>
+        <content name="book-lam" src="release/USX_1/LAM.usx" role="LAM"/>
+        <content name="book-ezk" src="release/USX_1/EZK.usx" role="EZK"/>
+        <content name="book-dan" src="release/USX_1/DAN.usx" role="DAN"/>
+        <content name="book-hos" src="release/USX_1/HOS.usx" role="HOS"/>
+        <content name="book-jol" src="release/USX_1/JOL.usx" role="JOL"/>
+        <content name="book-amo" src="release/USX_1/AMO.usx" role="AMO"/>
+        <content name="book-oba" src="release/USX_1/OBA.usx" role="OBA"/>
+        <content name="book-jon" src="release/USX_1/JON.usx" role="JON"/>
+        <content name="book-mic" src="release/USX_1/MIC.usx" role="MIC"/>
+        <content name="book-nam" src="release/USX_1/NAM.usx" role="NAM"/>
+        <content name="book-hab" src="release/USX_1/HAB.usx" role="HAB"/>
+        <content name="book-zep" src="release/USX_1/ZEP.usx" role="ZEP"/>
+        <content name="book-hag" src="release/USX_1/HAG.usx" role="HAG"/>
+        <content name="book-zec" src="release/USX_1/ZEC.usx" role="ZEC"/>
+        <content name="book-mal" src="release/USX_1/MAL.usx" role="MAL"/>
+        <content name="book-mat" src="release/USX_1/MAT.usx" role="MAT"/>
+        <content name="book-mrk" src="release/USX_1/MRK.usx" role="MRK"/>
+        <content name="book-luk" src="release/USX_1/LUK.usx" role="LUK"/>
+        <content name="book-jhn" src="release/USX_1/JHN.usx" role="JHN"/>
+        <content name="book-act" src="release/USX_1/ACT.usx" role="ACT"/>
+        <content name="book-rom" src="release/USX_1/ROM.usx" role="ROM"/>
+        <content name="book-1co" src="release/USX_1/1CO.usx" role="1CO"/>
+        <content name="book-2co" src="release/USX_1/2CO.usx" role="2CO"/>
+        <content name="book-gal" src="release/USX_1/GAL.usx" role="GAL"/>
+        <content name="book-eph" src="release/USX_1/EPH.usx" role="EPH"/>
+        <content name="book-php" src="release/USX_1/PHP.usx" role="PHP"/>
+        <content name="book-col" src="release/USX_1/COL.usx" role="COL"/>
+        <content name="book-1th" src="release/USX_1/1TH.usx" role="1TH"/>
+        <content name="book-2th" src="release/USX_1/2TH.usx" role="2TH"/>
+        <content name="book-1ti" src="release/USX_1/1TI.usx" role="1TI"/>
+        <content name="book-2ti" src="release/USX_1/2TI.usx" role="2TI"/>
+        <content name="book-tit" src="release/USX_1/TIT.usx" role="TIT"/>
+        <content name="book-phm" src="release/USX_1/PHM.usx" role="PHM"/>
+        <content name="book-heb" src="release/USX_1/HEB.usx" role="HEB"/>
+        <content name="book-jas" src="release/USX_1/JAS.usx" role="JAS"/>
+        <content name="book-1pe" src="release/USX_1/1PE.usx" role="1PE"/>
+        <content name="book-2pe" src="release/USX_1/2PE.usx" role="2PE"/>
+        <content name="book-1jn" src="release/USX_1/1JN.usx" role="1JN"/>
+        <content name="book-2jn" src="release/USX_1/2JN.usx" role="2JN"/>
+        <content name="book-3jn" src="release/USX_1/3JN.usx" role="3JN"/>
+        <content name="book-jud" src="release/USX_1/JUD.usx" role="JUD"/>
+        <content name="book-rev" src="release/USX_1/REV.usx" role="REV"/>
+      </structure>
+    </publication>
+  </publications>
+  <copyright>
+    <fullStatement>
+      <statementContent type="xhtml">
+        <p>Bayibuli Entukuvu, Endagaano Enkadde nʼEndagaano Empya</p>
+        <p>Copyright © 1984, 1986, 1993, 2014 by Biblica, Inc.®</p>
+        <p>Tuweereddwa olukusa okuva mu Biblica, Inc.® Olukusa lwonna mu nsi yonna lusigalidde mu Biblica, Inc.</p>
+        <p>Luganda Contemporary Bible</p>
+        <p>Copyright © 1984, 1986, 1993, 2014 by Biblica, Inc.®</p>
+        <p>Used by permission of Biblica, Inc.® All rights reserved worldwide.</p>
+      </statementContent>
+    </fullStatement>
+  </copyright>
+  <promotion>
+    <promoVersionInfo contentType="xhtml">
+      <p>Ekitongole kya Biblica,<em> The International Bible Society</em>, kituusa Ekigambo kya Katonda eri abantu bonna mu nsi nga kiyita mu kukyusa Ebyawandiikibwa okuva mu nnimi ezakozesebwa mu biro ebyʼedda mu Isirayiri ne mu mawanga agaliraanyeewo, okubizza mu nnimi ezʼennaku zino ezitegeerekeka; ne mu kukuba mu kyuma ebiwandiikiddwa; awamu nʼokukozesa Ebyawandiikibwa mu ngeri endala yonna okusobola okubuulira enjiri. Emirimu gino Biblica egikolera mu zissemazinga zino wammanga: mu Afrika, ne mu Asiya Pasifiki, ne mu Bulaaya, ne mu Amerika ekyʼomu Bukiikaddyo, ne mu Amerika ekyʼomu Bukiikakkono, ne mu nsi ezʼomu Buwalabu. Biblica ekozesa Ekigambo kya Katonda okutuuka ku bantu bonna mu nsi yonna, abantu abo bakyusibwe mu bulamu bwabwe nga bakkiriza Yesu Kristo.</p>
+    </promoVersionInfo>
+  </promotion>
+  <archiveStatus>
+    <archivistName>Kent Spielmann</archivistName>
+    <dateArchived>2014-11-14T22:46:34.314277</dateArchived>
+    <dateUpdated>2019-05-07T16:30:37.915482</dateUpdated>
+    <comments>Metadata Update</comments>
+  </archiveStatus>
+</DBLMetadata>

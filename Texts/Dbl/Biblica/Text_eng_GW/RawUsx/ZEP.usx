@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<usx version="3.0">
+  <book code="ZEP" style="id">- God’s Word Bible</book>
+  <para style="ide">UTF-8</para>
+  <para style="rem">© 1995, 2003, 2013, 2014, 2019, 2020 by God’s Word to the Nations Mission Society. All rights reserved.</para>
+  <para style="rem">Converted from InDesign files to USFM-3 by Elbert Boot (Digital Bible Library Customer Service Team, Miami [USA])</para>
+  <para style="rem">Language: English</para>
+  <para style="rem">This project has 9 poetry levels, and Paratext only supports up to 4 levels. To upload the text to DBL, we have created a dblChanges file and added q5 to q9 to a custom.sty to obtain the desired design in Paratext.</para>
+  <para style="h">ZEPHANIAH</para>
+  <para style="toc1">Zephaniah</para>
+  <para style="toc2">Zephaniah</para>
+  <para style="toc3">Zephaniah</para>
+  <para style="mt1">Zephaniah</para>
+  <chapter number="1" style="c" sid="ZEP 1" />
+  <para style="s1">Zephaniah’s Prophecy</para>
+  <para style="m">
+    <verse number="1" style="v" sid="ZEP 1:1" />This is the word that the <char style="nd">Lord</char> spoke to Zephaniah, who was the son of Cushi, the grandson of Gedaliah, and the great-grandson of Amariah, son of Hezekiah. The <char style="nd">Lord</char> spoke his word in the days of Judah’s King Josiah, son of Amon.<verse eid="ZEP 1:1" /></para>
+  <para style="s1">The <char style="nd">LORD</char> Will Judge the Earth</para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ZEP 1:2" />“I will gather everything on the face of the earth</para>
+  <para style="q1" vid="ZEP 1:2">and put an end to it,” declares the <char style="nd">Lord</char>.<verse eid="ZEP 1:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="ZEP 1:3" />“I will put an end to humans and animals.</para>
+  <para style="q1" vid="ZEP 1:3">I will put an end to</para>
+  <para style="q1" vid="ZEP 1:3">the birds in the sky,</para>
+  <para style="q1" vid="ZEP 1:3">the fish in the sea,</para>
+  <para style="q1" vid="ZEP 1:3">and the sins that make people fall, together with the sinners.</para>
+  <para style="q1" vid="ZEP 1:3">I will remove all people from the face of the earth,” declares the <char style="nd">Lord</char>.<verse eid="ZEP 1:3" /></para>
+  <para style="s1">The <char style="nd">LORD</char> Will Judge Judah</para>
+  <para style="q1">
+    <verse number="4" style="v" sid="ZEP 1:4" />“I will use my power against Judah</para>
+  <para style="q1" vid="ZEP 1:4">and against those who live in Jerusalem.</para>
+  <para style="q1" vid="ZEP 1:4">I will remove the faithful few of Baal from this place</para>
+  <para style="q1" vid="ZEP 1:4">and the names of the pagan priests along with my priests.<verse eid="ZEP 1:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="ZEP 1:5" />I will remove those who worship all the stars in the sky on their rooftops</para>
+  <para style="q1" vid="ZEP 1:5">and those who worship by swearing loyalty to the <char style="nd">Lord</char></para>
+  <para style="q1" vid="ZEP 1:5">while also swearing loyalty to the god Milcom.<note caller="+" style="f"><char style="fr" closed="false">1:5 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“to their king.”</char></note><verse eid="ZEP 1:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="ZEP 1:6" />I will remove those who have turned away from following the <char style="nd">Lord</char></para>
+  <para style="q1" vid="ZEP 1:6">and those who no longer seek the <char style="nd">Lord</char> or ask him for help.”<verse eid="ZEP 1:6" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="7" style="v" sid="ZEP 1:7" />Be silent in the presence of the Almighty <char style="nd">Lord</char>,</para>
+  <para style="q1" vid="ZEP 1:7">because the day of the <char style="nd">Lord</char> is near.</para>
+  <para style="q1" vid="ZEP 1:7">The <char style="nd">Lord</char> has prepared a sacrifice.</para>
+  <para style="q1" vid="ZEP 1:7">He has invited his special guests.<verse eid="ZEP 1:7" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="8" style="v" sid="ZEP 1:8" />“On the day of the <char style="nd">Lord</char>’s sacrifice I will punish the officials,</para>
+  <para style="q1" vid="ZEP 1:8">the king’s sons, and all who dress in foreign clothing.<note caller="+" style="f"><char style="fr" closed="false">1:8 </char><char style="ft" closed="false">Wearing </char><char style="fq" closed="false">foreign clothing </char><char style="ft" closed="false">was a sign of worshiping foreign gods.</char></note><verse eid="ZEP 1:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="ZEP 1:9" />On that day I will punish all who jump over the doorway</para>
+  <para style="q1" vid="ZEP 1:9">and all who fill their master’s house with violence and deception.<verse eid="ZEP 1:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="ZEP 1:10" />On that day a loud cry will come from Fish Gate,</para>
+  <para style="q1" vid="ZEP 1:10">a howling from the Second Part of the city,</para>
+  <para style="q1" vid="ZEP 1:10">and a loud crashing sound from the hills,” declares the <char style="nd">Lord</char>.<verse eid="ZEP 1:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="ZEP 1:11" />“Howl, inhabitants of the Mortar,<note caller="+" style="f"><char style="fr" closed="false">1:10–11 </char><char style="fq" closed="false">The Mortar </char><char style="ft" closed="false">was in the northern part of Jerusalem, the Second Part of the city, which could be entered through the Fish Gate.</char></note></para>
+  <para style="q1" vid="ZEP 1:11">because all the merchants will be destroyed</para>
+  <para style="q1" vid="ZEP 1:11">and all who handle money will be killed.<verse eid="ZEP 1:11" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="12" style="v" sid="ZEP 1:12" />“At that time I will search Jerusalem with lamps and punish those</para>
+  <para style="q1" vid="ZEP 1:12">who are satisfied with their hardened lifestyle,</para>
+  <para style="q1" vid="ZEP 1:12">who think that the <char style="nd">Lord</char> won’t do anything—good or bad.<verse eid="ZEP 1:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="ZEP 1:13" />Their wealth will be looted.</para>
+  <para style="q1" vid="ZEP 1:13">Their homes will be demolished.</para>
+  <para style="q1" vid="ZEP 1:13">They will build houses, but they won’t live in them.</para>
+  <para style="q1" vid="ZEP 1:13">They will plant vineyards, but they won’t drink their wine.”<verse eid="ZEP 1:13" /></para>
+  <para style="s1">The Day of the <char style="nd">LORD</char></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="ZEP 1:14" />The frightening day of the <char style="nd">Lord</char> is near.</para>
+  <para style="q1" vid="ZEP 1:14">It is near and coming very quickly.</para>
+  <para style="q1" vid="ZEP 1:14">Listen! Warriors will cry out bitterly on the day of the <char style="nd">Lord</char>.<verse eid="ZEP 1:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="ZEP 1:15" />That day will be a day of overflowing fury,</para>
+  <para style="q1" vid="ZEP 1:15">a day of trouble and distress,</para>
+  <para style="q1" vid="ZEP 1:15">a day of devastation and desolation,</para>
+  <para style="q1" vid="ZEP 1:15">a day of darkness and gloom,</para>
+  <para style="q1" vid="ZEP 1:15">a day of clouds and overcast skies,<verse eid="ZEP 1:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="ZEP 1:16" />a day of rams’ horns and battle cries</para>
+  <para style="q1" vid="ZEP 1:16">against the fortified cities</para>
+  <para style="q1" vid="ZEP 1:16">and against the high corner towers.<verse eid="ZEP 1:16" /></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="ZEP 1:17" />“I will bring such distress on humans that they will walk like they are blind,</para>
+  <para style="q1" vid="ZEP 1:17">because they have sinned against the <char style="nd">Lord</char>.”</para>
+  <para style="q1" vid="ZEP 1:17">Their blood will be poured out like dust</para>
+  <para style="q1" vid="ZEP 1:17">and their intestines like manure.<verse eid="ZEP 1:17" /></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="ZEP 1:18" />Their silver and their gold will not be able to rescue them</para>
+  <para style="q1" vid="ZEP 1:18">on the day of the <char style="nd">Lord</char>’s overflowing fury.</para>
+  <para style="q1" vid="ZEP 1:18">The whole earth will be consumed by his fiery anger,</para>
+  <para style="q1" vid="ZEP 1:18">because he will put an end, a frightening end,</para>
+  <para style="q1" vid="ZEP 1:18">to those who live on earth.<verse eid="ZEP 1:18" /></para>
+  <chapter eid="ZEP 1" />
+  <chapter number="2" style="c" sid="ZEP 2" />
+  <para style="s1">A Call for Judah to Turn Away from Sin</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="ZEP 2:1" />Gather yourselves together!</para>
+  <para style="q1" vid="ZEP 2:1">Yes, gather together, you shameless nation,<verse eid="ZEP 2:1" /></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ZEP 2:2" />before the decree is carried out</para>
+  <para style="q1" vid="ZEP 2:2">
+    <char style="add">⌞and⌟</char> the day passes like windblown husks,</para>
+  <para style="q1" vid="ZEP 2:2">before the <char style="nd">Lord</char>’s burning anger comes to you,</para>
+  <para style="q1" vid="ZEP 2:2">before the day of the <char style="nd">Lord</char>’s anger comes to you.<verse eid="ZEP 2:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="ZEP 2:3" />Search for the <char style="nd">Lord</char>, all you humble people in the land</para>
+  <para style="q1" vid="ZEP 2:3">who carry out his justice.</para>
+  <para style="q1" vid="ZEP 2:3">Search for what is right.</para>
+  <para style="q1" vid="ZEP 2:3">Search for humility.</para>
+  <para style="q1" vid="ZEP 2:3">Maybe you will find shelter on the day of the <char style="nd">Lord</char>’s anger.<verse eid="ZEP 2:3" /></para>
+  <para style="s1">The <char style="nd">LORD</char> Will Judge His People’s Enemies</para>
+  <para style="q1">
+    <verse number="4" style="v" sid="ZEP 2:4" />Gaza will be deserted,</para>
+  <para style="q1" vid="ZEP 2:4">and Ashkelon will be destroyed.</para>
+  <para style="q1" vid="ZEP 2:4">Ashdod will be driven out at noon,</para>
+  <para style="q1" vid="ZEP 2:4">and Ekron will be torn out by the roots.<verse eid="ZEP 2:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="ZEP 2:5" />How horrible it will be for those who live on the seacoast,</para>
+  <para style="q1" vid="ZEP 2:5">for the nation from Crete.</para>
+  <para style="q1" vid="ZEP 2:5">The <char style="nd">Lord</char>’s word is against you, Canaan, the land of the Philistines:</para>
+  <para style="q1" vid="ZEP 2:5">“I will destroy you so that no one will be living there.”<verse eid="ZEP 2:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="ZEP 2:6" />The seacoast will become pastureland</para>
+  <para style="q1" vid="ZEP 2:6">with meadows for shepherds</para>
+  <para style="q1" vid="ZEP 2:6">and fenced-off places for sheep.<verse eid="ZEP 2:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="ZEP 2:7" />The coast will belong to the faithful few from the nation of Judah.</para>
+  <para style="q1" vid="ZEP 2:7">There they will graze their sheep.</para>
+  <para style="q1" vid="ZEP 2:7">In the evening they will lie down in the houses of Ashkelon.</para>
+  <para style="q1" vid="ZEP 2:7">The <char style="nd">Lord</char> their God will take care of them</para>
+  <para style="q1" vid="ZEP 2:7">and will restore their fortunes.<verse eid="ZEP 2:7" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="8" style="v" sid="ZEP 2:8" />“I have heard the insults from Moab and the mockery from Ammon.</para>
+  <para style="q1" vid="ZEP 2:8">They insulted my people and bragged about their territory.<verse eid="ZEP 2:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="ZEP 2:9" />Therefore, I solemnly swear, as I live,”</para>
+  <para style="q1" vid="ZEP 2:9">declares the <char style="nd">Lord</char> of Armies, the God of Israel,</para>
+  <para style="q1" vid="ZEP 2:9">“Moab will become like Sodom, and Ammon will become like Gomorrah:</para>
+  <para style="q1" vid="ZEP 2:9">a place of weeds, salt pits, and ruins forever.</para>
+  <para style="q1" vid="ZEP 2:9">The faithful few of my people will loot them,</para>
+  <para style="q1" vid="ZEP 2:9">and those who are left in my nation will take possession of them.”<verse eid="ZEP 2:9" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="10" style="v" sid="ZEP 2:10" />This is what they will get for their sinful pride,</para>
+  <para style="q1" vid="ZEP 2:10">because they insulted the people who belong to the <char style="nd">Lord</char> of Armies</para>
+  <para style="q1" vid="ZEP 2:10">and made themselves greater than them.<verse eid="ZEP 2:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="ZEP 2:11" />The <char style="nd">Lord</char> will terrify them,</para>
+  <para style="q1" vid="ZEP 2:11">because he will make all the gods of the earth waste away.</para>
+  <para style="q1" vid="ZEP 2:11">So every person from every coast and nation will bow to him.<verse eid="ZEP 2:11" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="12" style="v" sid="ZEP 2:12" />“Even you, the people from Sudan,</para>
+  <para style="q1" vid="ZEP 2:12">you will also die by my sword.”<verse eid="ZEP 2:12" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="13" style="v" sid="ZEP 2:13" />The <char style="nd">Lord</char> will use his power against the north and destroy Assyria.</para>
+  <para style="q1" vid="ZEP 2:13">He will turn Nineveh into a deserted ruin,</para>
+  <para style="q1" vid="ZEP 2:13">a dried up wasteland like the desert.<verse eid="ZEP 2:13" /></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="ZEP 2:14" />Flocks will lie down in it along with animals of every kind.</para>
+  <para style="q1" vid="ZEP 2:14">Even pelicans and herons will nest on top of its columns.</para>
+  <para style="q1" vid="ZEP 2:14">Listen! A bird will sing in a window.</para>
+  <para style="q1" vid="ZEP 2:14">The doorway will be in ruins,</para>
+  <para style="q1" vid="ZEP 2:14">because the <char style="nd">Lord</char> will expose the cedar beams.<verse eid="ZEP 2:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="ZEP 2:15" />Is this the arrogant city?</para>
+  <para style="q1" vid="ZEP 2:15">Is this the city that used to live securely,</para>
+  <para style="q1" vid="ZEP 2:15">the city that used to think to itself,</para>
+  <para style="q1" vid="ZEP 2:15">“I’m the only one, and no one else exists but me”?</para>
+  <para style="q1" vid="ZEP 2:15">What a wasteland it is now, a resting place for wild animals!</para>
+  <para style="q1" vid="ZEP 2:15">All who pass by it will hiss and make an obscene gesture.<verse eid="ZEP 2:15" /></para>
+  <chapter eid="ZEP 2" />
+  <chapter number="3" style="c" sid="ZEP 3" />
+  <para style="s1">Jerusalem Will Be Destroyed</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="ZEP 3:1" />How horrible it will be for that rebellious</para>
+  <para style="q1" vid="ZEP 3:1">and corrupt place, the city of violence.<verse eid="ZEP 3:1" /></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="ZEP 3:2" />It obeys no one.</para>
+  <para style="q1" vid="ZEP 3:2">It does not accept correction.</para>
+  <para style="q1" vid="ZEP 3:2">It does not trust the <char style="nd">Lord</char>.</para>
+  <para style="q1" vid="ZEP 3:2">It does not draw close to its God.<verse eid="ZEP 3:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="ZEP 3:3" />Its officials are <char style="add">⌞like⌟</char> roaring lions.</para>
+  <para style="q1" vid="ZEP 3:3">Its judges are <char style="add">⌞like⌟</char> wolves in the evening.</para>
+  <para style="q1" vid="ZEP 3:3">They leave nothing to gnaw on for the morning.<verse eid="ZEP 3:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="ZEP 3:4" />Its prophets are reckless and unfaithful.</para>
+  <para style="q1" vid="ZEP 3:4">Its priests contaminate what is holy.</para>
+  <para style="q1" vid="ZEP 3:4">They violate the teachings.<verse eid="ZEP 3:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="ZEP 3:5" />The righteous <char style="nd">Lord</char> is in that city.</para>
+  <para style="q1" vid="ZEP 3:5">He does no wrong.</para>
+  <para style="q1" vid="ZEP 3:5">He brings his judgment to light every morning.</para>
+  <para style="q1" vid="ZEP 3:5">He does not fail.</para>
+  <para style="q1" vid="ZEP 3:5">But those who are perverted are shameless.<verse eid="ZEP 3:5" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="6" style="v" sid="ZEP 3:6" />“I will cut off the nations.</para>
+  <para style="q1" vid="ZEP 3:6">Their towers will be destroyed.</para>
+  <para style="q1" vid="ZEP 3:6">I will demolish their streets.</para>
+  <para style="q1" vid="ZEP 3:6">No one will walk through them.</para>
+  <para style="q1" vid="ZEP 3:6">Their cities will be completely destroyed.</para>
+  <para style="q1" vid="ZEP 3:6">Not a single person will be left.</para>
+  <para style="q1" vid="ZEP 3:6">No one will be living there.<verse eid="ZEP 3:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="ZEP 3:7" />I said <char style="add">⌞to my people⌟</char>,</para>
+  <para style="q1" vid="ZEP 3:7">‘You will fear me.</para>
+  <para style="q1" vid="ZEP 3:7">You will accept correction!’</para>
+  <para style="q1" vid="ZEP 3:7">Then their homeland would not be wiped out</para>
+  <para style="q1" vid="ZEP 3:7">even though I have punished them.</para>
+  <para style="q1" vid="ZEP 3:7">Still, they continued to be corrupt in everything they did.”<verse eid="ZEP 3:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="ZEP 3:8" />The <char style="nd">Lord</char> declares, “Just wait!</para>
+  <para style="q1" vid="ZEP 3:8">One day I will stand up as a witness.</para>
+  <para style="q1" vid="ZEP 3:8">I have decided to gather nations,</para>
+  <para style="q1" vid="ZEP 3:8">to bring kingdoms together,</para>
+  <para style="q1" vid="ZEP 3:8">and to pour my rage, my burning anger, on them.</para>
+  <para style="q1" vid="ZEP 3:8">The whole land will be consumed by my fiery fury.<verse eid="ZEP 3:8" /></para>
+  <para style="s1">Israel Will Turn Away from Sin</para>
+  <para style="q1">
+    <verse number="9" style="v" sid="ZEP 3:9" />“Then I will give all people pure lips</para>
+  <para style="q1" vid="ZEP 3:9">to worship the <char style="nd">Lord</char></para>
+  <para style="q1" vid="ZEP 3:9">and to serve him with one purpose.<verse eid="ZEP 3:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="ZEP 3:10" />From beyond the rivers of Sudan</para>
+  <para style="q1" vid="ZEP 3:10">my worshipers, my scattered people, will bring my offering.<verse eid="ZEP 3:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="ZEP 3:11" />On that day you will no longer be ashamed</para>
+  <para style="q1" vid="ZEP 3:11">of all your rebellious acts against me.</para>
+  <para style="q1" vid="ZEP 3:11">Then I will remove your arrogance</para>
+  <para style="q1" vid="ZEP 3:11">and never again will you act proud on my holy mountain.<verse eid="ZEP 3:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="ZEP 3:12" />So with you I will leave a faithful few, a humble and poor people.</para>
+  <para style="q1" vid="ZEP 3:12">They will seek refuge in the name of the <char style="nd">Lord</char>.<verse eid="ZEP 3:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="ZEP 3:13" />The faithful few in Israel will not do wrong, tell lies,</para>
+  <para style="q1" vid="ZEP 3:13">or use their tongues to deceive others.</para>
+  <para style="q1" vid="ZEP 3:13">They will graze their sheep and lie down,</para>
+  <para style="q1" vid="ZEP 3:13">and there will be no one to terrify them.”<verse eid="ZEP 3:13" /></para>
+  <para style="s1">Israel’s Joyful Song</para>
+  <para style="q1">
+    <verse number="14" style="v" sid="ZEP 3:14" />Sing happily, people of Zion!</para>
+  <para style="q1" vid="ZEP 3:14">Shout loudly, Israel!</para>
+  <para style="q1" vid="ZEP 3:14">Celebrate and rejoice with all your heart, people of Jerusalem.<verse eid="ZEP 3:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="ZEP 3:15" />The <char style="nd">Lord</char> has reversed the judgments against you.</para>
+  <para style="q1" vid="ZEP 3:15">He has forced out your enemies.</para>
+  <para style="q1" vid="ZEP 3:15">The king of Israel, the <char style="nd">Lord</char>, is with you.</para>
+  <para style="q1" vid="ZEP 3:15">You will never fear disaster again.<verse eid="ZEP 3:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="ZEP 3:16" />On that day Jerusalem will be told,</para>
+  <para style="q1" vid="ZEP 3:16">“Do not be afraid, Zion!</para>
+  <para style="q1" vid="ZEP 3:16">Do not lose courage!”<verse eid="ZEP 3:16" /></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="ZEP 3:17" />The <char style="nd">Lord</char> your God is with you.</para>
+  <para style="q1" vid="ZEP 3:17">He is a hero who saves you.</para>
+  <para style="q1" vid="ZEP 3:17">He happily rejoices over you,</para>
+  <para style="q1" vid="ZEP 3:17">renews you with his love,</para>
+  <para style="q1" vid="ZEP 3:17">and celebrates over you with shouts of joy.<verse eid="ZEP 3:17" /></para>
+  <para style="s1">Israel Will Return Home</para>
+  <para style="q1">
+    <verse number="18" style="v" sid="ZEP 3:18" />“I will gather those among you who are troubled because of the festivals.</para>
+  <para style="q1" vid="ZEP 3:18">They bear a burden of disgrace.<verse eid="ZEP 3:18" /></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="ZEP 3:19" />At that time</para>
+  <para style="q1" vid="ZEP 3:19">I will deal with all who have overpowered you.</para>
+  <para style="q1" vid="ZEP 3:19">I will rescue those who are lame.</para>
+  <para style="q1" vid="ZEP 3:19">I will gather those who have been scattered.</para>
+  <para style="q1" vid="ZEP 3:19">I will make them praised and famous in all the world,</para>
+  <para style="q1" vid="ZEP 3:19">though they had been ashamed.<verse eid="ZEP 3:19" /></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="ZEP 3:20" />At that time I will bring you <char style="add">⌞home⌟</char>.</para>
+  <para style="q1" vid="ZEP 3:20">Yes, at that time I will gather you together.</para>
+  <para style="q1" vid="ZEP 3:20">I will make you famous and praised among all the people of the earth</para>
+  <para style="q1" vid="ZEP 3:20">when I restore your fortunes right before your eyes,” says the <char style="nd">Lord</char>.<verse eid="ZEP 3:20" /></para>
+  <chapter eid="ZEP 3" />
+</usx>

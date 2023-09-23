@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="NEH" style="id">- The Holy Word of God</book>
+  <para style="rem">Copyright © 2013 by Biblica, Inc.®</para>
+  <para style="h">Nehemia</para>
+  <para style="toc1">Nehemia</para>
+  <para style="toc2">Nehemia</para>
+  <para style="toc3">Neh</para>
+  <para style="mt1">NEHEMIA</para>
+  <para style="imt1">Ũhoro wa Ibuku Rĩĩrĩ</para>
+  <para style="ip">Mĩaka mĩrongo ĩĩrĩ thuutha wa maũndũ marĩa maandĩkĩtwo ibuku-inĩ rĩa Ezara-rĩ, Nehemia nĩaiguire ũhoro ũtaarĩ mwega ũkoniĩ Jerusalemu. Thingo cia itũũra rĩu inene nĩciagwĩte, nacio ihingo ciarĩo iria ciarĩ njine itiakĩtwo rĩngĩ.</para>
+  <para style="ip">Nehemia aatũũraga Shushani, itũũra inene rĩa Perisia, na aarĩ ndungata ya Mũthamaki Ahasuerusu. Nehemia nĩahooire Mũthamaki Ahasuerusu amwĩtĩkĩrie athiĩ Jerusalemu nĩguo agaake itũũra rĩu rĩngĩ. Mũthamaki Ahasuerusu nĩamwĩtĩkĩririe athiĩ, o na akĩmũhe indo cia gwaka.</para>
+  <para style="ip">Wĩra wa gwaka wambĩrĩria, anene arĩa moimĩte matũũra marĩa maariganĩtie na itũũra rĩa Jerusalemu makĩambĩrĩria kũruma Ayahudi, o na kũmathitanga atĩ nĩmaremagĩra watho wa Perisia. Marigĩrĩrio-inĩ thingo na ihingo nĩciarĩkire gwakwo, na ikĩamũrĩrwo Ngai. Ũndũ ũcio nĩwonanirie atĩ Ngai nĩehaarĩirie kũrathima andũ ake.</para>
+  <para style="iot">Mwandĩki</para>
+  <para style="im">Mwandĩki wa ibuku rĩĩrĩ nĩ Nehemia.</para>
+  <para style="iot">Ũrĩa Ibuku Rĩĩrĩ Rĩgayanĩtio</para>
+  <para style="io1">· Gũkinya kwa Nehemia Jerusalemu <char style="ior"><ref loc="NEH 1:1-2:20">1:1–2:20</ref></char></para>
+  <para style="io1">· Kwambĩrĩria gwaka thingo <char style="ior"><ref loc="NEH 3:1-7:73">3:1–7:73</ref></char></para>
+  <para style="io1">· Gũthoma watho, na kwĩrira kwa andũ a bũrũri wothe <char style="ior"><ref loc="NEH 8:1-10:39">8:1–10:39</ref></char></para>
+  <para style="io1">· Kwamũrwo gwa thingo, na Nehemia kũrehe ũgarũrũku <char style="ior"><ref loc="NEH 11:1-13:31">11:1–13:31</ref></char>.</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="s1">Ihooya rĩa Nehemia</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ZEC 7:1">Zek 7:1</ref>; <ref loc="EZR 4:9">Ezar 4:9</ref></char>
+    </note>Ici nĩcio ciugo cia Nehemia mũrũ wa Hakalia:</para>
+  <para style="b"/>
+  <para style="p">Atĩrĩrĩ, mweri-inĩ wa Kiselevu wa mwaka wa mĩrongo ĩĩrĩ,<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">Kwarĩ mĩaka mĩrongo kenda na ũmwe kuuma mĩgwate ya mbere yacooka Jerusalemu.</char></note> rĩrĩa ndaarĩ thĩinĩ wa nyũmba ya ũthamaki kũu Shushani-rĩ,<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">Shushani nĩkuo athamaki a Perisia maaikaraga hĩndĩ ya heho; kwarĩ mũkuru-inĩ wa Rũũĩ rwa Tigirisi.</char></note> <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:2 </char><char style="xt" closed="false"><ref loc="2KI 21:14">2Ath 21:14</ref>; <ref loc="JER 52:28">Jer 52:28</ref></char></note>Hanani, ũmwe wa ariũ a baba, agĩũka kuuma Juda arĩ na andũ angĩ, na ngĩmahooya ũhoro wa matigari ma Ayahudi arĩa maahonokete gũtahwo, o na ngĩmahooya ũhoro wa Jerusalemu.</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 26:31">Alaw 26:31</ref>; <ref loc="ISA 22:9">Isa 22:9</ref></char>
+    </note>Nao makĩnjookeria atĩrĩ, “Andũ arĩa maahonokire gũtahwo, o acio marĩ kũu bũrũri-inĩ, marĩ na thĩĩna mũnene na makanyararwo mũno. Rũthingo rwa Jerusalemu nĩrũmomore, na ihingo ciaruo igacinwo na mwaki.”<note caller="+" style="f"><char style="fr" closed="false">1:3 </char><char style="ft" closed="false">Wathani wa Perisia wagayanĩtio ngʼongo ithatũ; rũgongo rwa Juda rwathagwo kuuma Samaria.</char></note></para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 137:1">Thab 137:1</ref>; <ref loc="2CH 7:15">2Maũ 7:15</ref></char>
+    </note>Rĩrĩa ndaiguire maũndũ macio, ngĩikara thĩ, ngĩrĩra. Ngĩikara ngĩcakayaga matukũ maigana ũna, ngĩĩhinga kũrĩa irio na ngĩhooya Ngai wa igũrũ. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:5 </char><char style="xt" closed="false"><ref loc="PSA 137:1">Thab 137:1</ref>; <ref loc="2CH 20:3">2Maũ 20:3</ref></char></note>Ningĩ ngiuga atĩrĩ:</para>
+  <para style="b"/>
+  <para style="pm">“Wee Jehova Ngai wa Igũrũ, wee Mũrungu mũnene na wa kũmakania, ũrĩa ũhingagia kĩrĩkanĩro gĩake kĩa wendo kũrĩ arĩa mamwendete na magaathĩkĩra maathani make, <verse number="6" style="v"/>ndagũthaitha ũtege gũtũ gwaku, na ũhingũre maitho maku ũigue ihooya rĩrĩa ndungata yaku ĩrahooya ĩrĩ mbere yaku mũthenya na ũtukũ nĩ ũndũ wa ndungata ciaku, andũ a Isiraeli. Nĩngumbũra mehia ma andũ a Isiraeli, na makwa, na ma nyũmba ya baba, marĩa ithuĩ tũkwĩhĩirie. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:7 </char><char style="xt" closed="false"><ref loc="PSA 106:6">Thab 106:6</ref></char></note>Nĩtwĩkĩte maũndũ ma waganu mũnene harĩwe. Tũtiathĩkĩire maathani na irĩra cia watho waku cia kũrũmĩrĩrwo, o na mawatho marĩa waheire Musa ndungata yaku.</para>
+  <para style="pm">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 8:1">Kĩam 8:1</ref>; <ref loc="LEV 26:33">Alaw 26:33</ref></char>
+    </note>“Ririkana ũrutani ũrĩa waheire Musa ndungata yaku, ũkiuga atĩrĩ, ‘Mũngĩaga kwĩhokeka, nĩngamũhurunja gatagatĩ ka ndũrĩrĩ, <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:9 </char><char style="xt" closed="false"><ref loc="DEU 30:4">Gũcook 30:4</ref>; <ref loc="JER 29:14">Jer 29:14</ref>; <ref loc="MIC 2:12">Mik 2:12</ref></char></note>no mũngĩkanjookerera na mwathĩkĩre maathani makwa, hĩndĩ ĩyo o na andũ anyu arĩa maatahĩtwo magatwarwo ituri cia thĩ kũrĩa kũraya mũno, nĩngamacookereria ndĩmarute kuo, ndĩmarehe kũndũ kũrĩa thuurĩte gũtuĩke gĩikaro kĩa Rĩĩtwa rĩakwa.’</para>
+  <para style="pm">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 32:11">Thaam 32:11</ref>; <ref loc="ISA 51:9-11">Isa 51:9-11</ref></char>
+    </note>“Acio nĩ ndungata ciaku na andũ aku, arĩa wakũũrire na ũndũ wa hinya waku mũnene na guoko gwaku kũrĩ ũhoti. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:11 </char><char style="xt" closed="false"><ref loc="2CH 6:40">2Maũ 6:40</ref>; <ref loc="EXO 3:21">Thaam 3:21</ref></char></note>Wee, Jehova, ndagũthaitha ũtege gũtũ ũigue mahooya ma ndungata ĩno yaku, o na mahooya ma ndungata ciaku iria ikenagio nĩ gwĩtigĩra rĩĩtwa rĩaku. Kĩreke ndungata yaku ĩgaacĩre ũmũthĩ na ũndũ wa gũtũma ĩtĩkĩrĩke harĩ mũndũ ũyũ.”</para>
+  <para style="b"/>
+  <para style="p">Nĩ niĩ ndatwaragĩra mũthamaki kĩndũ gĩa kũnyua.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Aritashashita Gũtũma Nehemia Jerusalemu</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 4:7">Ezar 4:7</ref>
+      </char>
+    </note>Mweri-inĩ wa Nisani, mwaka wa mĩrongo ĩĩrĩ wa Mũthamaki Aritashashita, rĩrĩa aareheirwo ndibei, ngĩoya ndibei ĩyo ngĩmĩnengera mũthamaki. Mbere ya hĩndĩ ĩyo ndiatukĩtie gĩthiithi ndĩ harĩ we; <verse number="2" style="v"/>nĩ ũndũ ũcio mũthamaki akĩnjũũria atĩrĩ, “Nĩ kĩĩ gĩtũmĩte ũtukie gĩthiithi ũguo na ndũrĩ mũrũaru? Ũndũ ũcio no uumanire na kĩeha kĩa ngoro.”</para>
+  <para style="p">Na niĩ ngĩĩtigĩra mũno, <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:3 </char><char style="xt" closed="false"><ref loc="1KI 1:31">1Ath 1:31</ref>; <ref loc="PSA 137:6">Thab 137:6</ref></char></note>no ngĩĩra mũthamaki atĩrĩ, “Mũthamaki arotũũra nginya tene! Gĩthiithi gĩakwa kĩngĩaga gũtuka atĩa hĩndĩ ĩrĩa itũũra inene rĩrĩa maithe makwa mathikĩtwo rĩkirĩte ihooru, na ihingo ciarĩo igacinwo ikaniinwo na mwaki?”</para>
+  <para style="p">
+    <verse number="4" style="v"/>Mũthamaki akĩnjũũria atĩrĩ, “Ũkwenda atĩa?”</para>
+  <para style="p">Hĩndĩ ĩyo ngĩhooya Ngai wa Igũrũ, <verse number="5" style="v"/>na ngĩcookeria mũthamaki atĩrĩ, “Mũthamaki, angĩona kwagĩrĩire, na ndungata yaku ĩtĩkĩrĩke maitho-inĩ make, nĩakĩndũme itũũra rĩu inene rĩa Juda, kũrĩa maithe makwa mathikĩtwo, nĩguo ngarĩake rĩngĩ.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 5:14">Neh 5:14</ref>; <ref loc="NEH 13:6">13:6</ref></char>
+    </note>Hĩndĩ ĩyo mũthamaki, aikaranĩtie na mũtumia wake, akĩnjũũria atĩrĩ, “Rũgendo rwaku nĩ rwa matukũ maigana na ũgaacooka rĩ?” Mũthamaki akĩona arĩ wega andũme; nĩ ũndũ ũcio ngĩtua ihinda rĩa gũthiĩ.</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 8:36">Ezar 8:36</ref>
+      </char>
+    </note>Ningĩ ngĩmwĩra atĩrĩ, “Mũthamaki angĩona kwagĩrĩire, reke heo marũa ndwarĩre abarũthi a Mũrĩmo-wa-Farati, nĩgeetha manjĩtĩkĩrie hĩtũkĩre kuo kinya nginye Juda. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:8 </char><char style="xt" closed="false"><ref loc="NEH 7:2">Neh 7:2</ref>; <ref loc="EZR 4:24">Ezar 4:24</ref></char></note>O na no heo marũa ndwarĩre Asafu, mũmenyereri wa mũtitũ wa mũthamaki, nĩgeetha akaahe mbaũ cia gũthondeka mĩgamba ya ihingo cia nyũmba ya ũthamaki ĩrĩa ĩriganĩtie na hekarũ, na cia gwaka rũthingo rwa itũũra inene o na cia gwaka nyũmba ĩrĩa ndĩrĩikaraga?” Na tondũ ũtugi wa guoko kwa Ngai wakwa warĩ hamwe na niĩ, mũthamaki agĩĩtĩkĩra kũũhingĩria maũndũ marĩa mothe ndaamũũrĩtie. <verse number="9" style="v"/>Nĩ ũndũ ũcio ngĩthiĩ kũrĩ abarũthi a Mũrĩmo-wa-Farati, ngĩmanengera marũa ma mũthamaki. Ningĩ mũthamaki nĩatũmĩte anene a mbũtũ cia ita hamwe na thigari iria ithiiaga na mbarathi tũthiĩ hamwe nao.</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 4:1">Neh 4:1</ref>, <ref loc="NEH 4:7">7</ref></char>
+    </note>Rĩrĩa Sanibalati ũrĩa Mũhoroni,<note caller="+" style="f"><char style="fr" closed="false">2:10 </char><char style="ft" closed="false">Sanibalati aarĩ barũthi wa Samaria.</char></note> na Tobia mũnene ũrĩa Mũamoni, maaiguire ũhoro ũcio, magĩtangĩka mũno makĩria nĩkũigua atĩ kwarĩ mũndũ wokĩte gũcaria maũndũ ma kũguna andũ a Isiraeli.</para>
+  <para style="s1">Nehemia Kũrora Thingo cia Jerusalemu</para>
+  <para style="p">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 40:13">Kĩam 40:13</ref>
+      </char>
+    </note>Nĩndathiire Jerusalemu, na thuutha wa gũikara kuo mĩthenya ĩtatũ-rĩ, <verse number="12" style="v"/>ngiumagara ũtukũ ndĩ na andũ matarĩ aingĩ. Ndierĩte mũndũ o na ũmwe ũndũ ũrĩa Ngai wakwa eekĩrĩte ngoro-inĩ yakwa njĩke nĩ ũndũ wa Jerusalemu. Gũtiarĩ na mbarathi ingĩ tiga ĩrĩa yanguuĩte.</para>
+  <para style="p">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 26:9">2Maũ 26:9</ref>
+      </char>
+    </note>Nĩndathiire ũtukũ ngereire Kĩhingo gĩa Kĩanda,<note caller="+" style="f"><char style="fr" closed="false">2:13 </char><char style="ft" closed="false">Kĩhingo gĩa Kĩanda kĩarĩ mwena wa ithũĩro wa rũthingo rwa Jerusalemu.</char></note> njerekeire Gĩthima kĩa Ndamathia na Kĩhingo gĩa Kĩara-inĩ,<note caller="+" style="f"><char style="fr" closed="false">2:13 </char><char style="ft" closed="false">Kĩhingo gĩa Kĩara-inĩ nĩkĩo Ayahudi moimagĩria nyamũ iria ciarutagwo magongona, magacitwara Gĩtuamba-inĩ kĩa Beni-Hinomu.</char></note> ngĩroraga thingo cia Jerusalemu iria ciamomoretwo, na ihingo ciarĩo iria ciacinĩtwo ikaniinwo nĩ mwaki. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:14 </char><char style="xt" closed="false"><ref loc="NEH 3:15">Neh 3:15</ref>; <ref loc="NEH 12:37">12:37</ref>; <ref loc="2KI 18:17">2Ath 18:17</ref></char></note>Ningĩ ngĩthiĩ o na mbere njerekeire Kĩhingo gĩa Gĩthima na Karia-inĩ ka Mũthamaki, no hatiarĩ handũ haiganu ha kũhĩtũkĩrwo nĩ mbarathi yakwa; <verse number="15" style="v"/>nĩ ũndũ ũcio ngĩambata na mũkuru ũtukũ ngĩroraga ũrĩa rũthingo rwatariĩ. Ndakinya mũthia, ngĩhũndũka ngĩingĩrĩra Kĩhingo gĩa Kĩanda rĩngĩ. <verse number="16" style="v"/>Anene a kũu matiamenyire kũrĩa ndathiĩte kana ũrĩa ndekaga tondũ ndiamenyithĩtie Ayahudi, kana athĩnjĩri-Ngai, kana arĩa maarĩ igweta, kana anene, o na kana arĩa angĩ mangĩarutire wĩra.</para>
+  <para style="p">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 1:3">Neh 1:3</ref>; <ref loc="ISA 58:12">Isa 58:12</ref></char>
+    </note>Ningĩ ngĩmeera atĩrĩ, “Nĩmũrona thĩĩna ũrĩa tũrĩ naguo: itũũra rĩa Jerusalemu nĩrĩanangĩku, na ihingo ciarĩo igacinwo na mwaki. Ũkai twake rũthingo rwa Jerusalemu rĩngĩ, na tũtigacooka kũnyararwo o na rĩ.” <verse number="18" style="v"/>O na ningĩ ngĩmeera ũrĩa guoko kwa ũtugi kwa Ngai wakwa kwarĩ hamwe na niĩ, na ũrĩa mũthamaki anjĩĩrĩte.</para>
+  <para style="p">Nao magĩcookia atĩrĩ, “Nĩtwambĩrĩriei gwaka rĩngĩ.” Nĩ ũndũ ũcio makĩambĩrĩria wĩra ũcio mwega.</para>
+  <para style="p">
+    <verse number="19" style="v"/>No rĩrĩa Sanibalati ũrĩa Mũhoroni na Tobia mũnene ũrĩa Mũamoni na Geshemu ũrĩa Mũarabu maiguire ũhoro ũcio, magĩtũnyũrũria na magĩtũthekerera, makĩũria atĩrĩ, “Nĩ atĩa ũũ mũreka? Kaĩ mũkũremera mũthamaki?”</para>
+  <para style="p">
+    <verse number="20" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:20 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 4:3">Ezar 4:3</ref>; <ref loc="ACT 8:21">Atũm 8:21</ref></char>
+    </note>Ngĩmacookeria atĩrĩ, “Ngai wa Igũrũ nĩwe ũgũtũma tũgaacĩre. Ithuĩ ndungata ciake nĩtũkwambĩrĩria gwaka rĩngĩ, no ha ũhoro wanyu-rĩ, mũtirĩ na igai gũkũ Jerusalemu, kana kĩhooto, kana ũndũ wa tene wa kũmũnyiitithania narĩo.”</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Aaki a Rũthingo</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 12:39">Neh 12:39</ref>; <ref loc="JER 31:38">Jer 31:38</ref></char>
+    </note>Na rĩrĩ, Eliashibu mũthĩnjĩri-Ngai ũrĩa mũnene na athĩnjĩri-Ngai arĩa angĩ a thiritũ yake, magĩthiĩ kũruta wĩra, na magĩcookereria Kĩhingo kĩa Ngʼondu. Magĩkĩamũra na magĩgĩĩkĩra mĩrango. Magĩaka o nginya Mũthiringo ũrĩa mũraihu na igũrũ wa Igana, ũrĩa maamũrire, na magĩaka o nginya Mũthiringo ũrĩa mũraihu na igũrũ wa Hananeli. <verse number="2" style="v"/>Andũ a Jeriko magĩaka gĩcunjĩ kĩrĩa kĩariganĩtie na ho, nake Zakuri mũrũ wa Imuri agĩaka kũrigania nao.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 33:14">2Maũ 33:14</ref>
+      </char>
+    </note>Kĩhingo gĩa Thamaki gĩakirwo rĩngĩ nĩ ariũ a Hasenaa. Nĩmarire mĩgogo yakĩo, na magĩĩkĩra mĩrango na igera cia kũmĩhinga na icuuma ciakĩo. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:4 </char><char style="xt" closed="false"><ref loc="EZR 8:33">Ezar 8:33</ref></char></note>Meremothu mũrũ wa Uria mũrũ wa Hakozu, nĩwe wacookereirie gĩcunjĩ kĩrĩa kĩarũmĩrĩire. Nake Meshulamu mũrũ wa Berekia mũrũ wa Meshezabeli agĩcookereria rũthingo gĩcunjĩ kĩrĩa kĩariganĩtie na hau. Ningĩ Zadoku mũrũ wa Baana agĩthiĩ na mbere gũcookereria gĩcunjĩ kĩrĩa kĩarũmĩrĩire. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:5 </char><char style="xt" closed="false"><ref loc="2SA 14:2">2Sam 14:2</ref></char></note>Gĩcunjĩ kĩrĩa kĩarũmĩrĩire gĩacookereirio nĩ andũ a Tekoa, no andũ ao arĩa maarĩ igweta nĩmaregire kũruta wĩra ũrĩa maaheetwo nĩ arũgamĩrĩri ao.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 12:39">Neh 12:39</ref>
+      </char>
+    </note>Joiada mũrũ wa Pasea marĩ na Meshulamu mũrũ wa Besodeia nĩo macookereirie Kĩhingo kĩa Jeshanahi. Nĩmarire mĩgogo yakĩo, na magĩĩkĩra mĩrango na igera cia kũmĩhinga na icuuma ciakĩo. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:7 </char><char style="xt" closed="false"><ref loc="JOS 9:3">Josh 9:3</ref></char></note>Kũrigania nao, wĩra wa gũcookereria rũthingo warutirwo nĩ andũ a kuuma Gibeoni na Mizipa, nĩo Melatia wa Gibeoni, na Jadoni wa Meronothu, matũũra marĩa maathagwo nĩ barũthi wa Mũrĩmo-wa-Farati. <verse number="8" style="v"/>Uzieli mũrũ wa Harihaia, ũmwe wa aturi a thahabu, nĩacookereirie kũrĩa kwarũmĩrĩire; nake Hanania, ũmwe wa athondeki a maguta manungi wega, agĩcookereria rũthingo harĩa haariganĩtie na hau. Magĩcookereria rũthingo rwa Jerusalemu o nginya Rũthingo rũrĩa Rwariĩ. <verse number="9" style="v"/>Gĩcunjĩ kĩrĩa kĩarũmĩrĩire gĩacookereirio nĩ Refaia mũrũ wa Huri ũrĩa warĩ mwathi wa nuthu ya gĩcigo kĩmwe kĩa Jerusalemu. <verse number="10" style="v"/>Kũhakana na hau, Jedaia mũrũ wa Harumafu agĩcookereria rũthingo rũrĩa rwangʼetheire nyũmba yake, nake Hatushu mũrũ wa Hashabineia agĩcookereria rũthingo rũrĩa rwariganĩtie nake. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:11 </char><char style="xt" closed="false"><ref loc="NEH 12:38">Neh 12:38</ref></char></note>Malikija mũrũ wa Harimu, na Hashubu mũrũ wa Pahathu-Moabi nao nĩmacookereirie gĩcunjĩ kĩngĩ, hamwe na Mũthiringo ũrĩa mũraihu na igũrũ wa Mariiko ma Mwaki. <verse number="12" style="v"/>Gĩcunjĩ kĩrĩa kĩarũmĩrĩire gĩacookereirio nĩ Shalumu mũrũ wa Haloheshu, mwathi wa nuthu ya gĩcigo kĩa Jerusalemu, ateithĩrĩirio nĩ airĩtu ake.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 26:9">2Maũ 26:9</ref>; <ref loc="JOS 15:34">Josh 15:34</ref></char>
+    </note>Kĩhingo gĩa Kĩanda gĩacookereirio nĩ Hanuni hamwe na andũ arĩa maatũũraga Zanoa. Magĩgĩaka rĩngĩ na magĩĩkĩra mĩrango, na igera cia kũmĩhinga na icuuma ciakĩo, ningĩ magĩcookereria rũthingo ũraihu wa mĩkono 1,000<note caller="+" style="f"><char style="fr" closed="false">3:13 </char><char style="ft" closed="false">nĩ ta mita 450</char></note> o nginya Kĩhingo gĩa Kĩara-inĩ.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="14" style="v"/>Kĩhingo gĩa Kĩara-inĩ gĩacookereirio nĩ Malikija mũrũ wa Rekabu, mwathi wa gĩcigo kĩa Bethi-Hakeremu. Agĩgĩaka rĩngĩ na agĩĩkĩra mĩrango, na igera cia kũmĩhinga na icuuma ciakĩo.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 8:6">Isa 8:6</ref>; <ref loc="JHN 9:7">Joh 9:7</ref></char>
+    </note>Kĩhingo gĩa Gĩthima gĩacookereirio nĩ Shalumu mũrũ wa Koli-Hoze, mwathi wa gĩcigo kĩa Mizipa. Agĩgĩaka rĩngĩ, agĩkĩgita, na agĩĩkĩra mĩrango na igera cia kũmĩhinga na icuuma ciakĩo. Ningĩ nĩacookereirie rũthingo rwa Karia ga Siloamu kũrigania na Mũgũnda wa Mũthamaki, o nginya ngathĩ-inĩ ya gũikũrũka kuuma Itũũra Inene rĩa Daudi. <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:16 </char><char style="xt" closed="false"><ref loc="JOS 15:58">Josh 15:58</ref>; <ref loc="ACT 2:29">Atũm 2:29</ref></char></note>Kuuma harĩ we, Nehemia mũrũ wa Azibuku, mwathi wa nuthu ya gĩcigo kĩmwe kĩa Bethi-Zuru,<note caller="+" style="f"><char style="fr" closed="false">3:16 </char><char style="ft" closed="false">Bethi-Zuru yarĩ kambĩ ya tene ya arangĩri a Mũthamaki Daudi.</char></note> agĩcookereria rũthingo nginya kũngʼethera mbĩrĩra cia Daudi, o nginya karia-inĩ ga kwĩyenjera, na o nginya Nyũmba ya Njamba cia Ita.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Kũrigania nake, wĩra wa gũcookereria rũthingo warutirwo nĩ Alawii arĩa maarũgamĩrĩirwo nĩ Rehumu mũrũ wa Bani. Kũrigania nake, Hashabia, mwathi wa nuthu ya gĩcigo gĩa Keila, agĩcookereria rũthingo handũ-inĩ ha andũ a gĩcigo gĩake. <verse number="18" style="v"/>Kũrigania nake, andũ ao a bũrũri nĩo maacookereirie rũthingo matongoretio nĩ Binui mũrũ wa Henadadi, mwathi wa nuthu ĩyo ĩngĩ ya Keila. <verse number="19" style="v"/>Kũrigania nake, Ezeri mũrũ wa Jeshua, mwathi wa Mizipa, nĩacookereirie gĩcunjĩ kĩngĩ kuuma harĩa haangʼetheire mwambato nginya harĩa haigagwo indo cia mbaara, o nginyagia koine-inĩ. <verse number="20" style="v"/>Kũrigania nake, Baruku mũrũ wa Zabai agĩcookereria gĩcunjĩ kĩngĩ arĩ na kĩyo, kuuma koine-inĩ nginya itoonyero rĩa nyũmba ya Eliashibu mũthĩnjĩri-Ngai ũrĩa mũnene. <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:21 </char><char style="xt" closed="false"><ref loc="EZR 8:33">Ezar 8:33</ref></char></note>Kũrigania nake, Meremothu mũrũ wa Uria, mũrũ wa Hakozu, nĩacookereirie gĩcunjĩ kĩu kĩngĩ kuuma itoonyero rĩa nyũmba ya Eliashibu nginya mũthia-inĩ wayo.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Kũrigania nake, rũthingo rwacookereirio nĩ athĩnjĩri-Ngai a kuuma rũgongo rũrĩa rwathiũrũrũkĩirie kũu. <verse number="23" style="v"/>Kuuma harĩo, Benjamini na Hashubu magĩcookereria rũthingo gĩcunjĩ kĩrĩa kĩarĩ mbere ya nyũmba yao; na kũrigania nao, Azaria mũrũ wa Maaseia, mũrũ wa Anania, agĩcookereria rũthingo hakuhĩ na nyũmba yake. <verse number="24" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:24 </char><char style="xt" closed="false"><ref loc="EZR 8:33">Ezar 8:33</ref></char></note>Kũrigania nake, Binui mũrũ wa Henadadi nĩacookereirie gĩcunjĩ kĩngĩ kuuma nyũmba-inĩ ya Azaria o nginya koine-inĩ harĩa thingo ciacemanĩirie, <verse number="25" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:25 </char><char style="xt" closed="false"><ref loc="JER 32:2">Jer 32:2</ref></char></note>nake Palali mũrũ wa Uzai agĩcookereria rũthingo kũngʼethera harĩa thingo ciacemanĩirie na mũthiringo ũrĩa wacomokete nyũmba-inĩ ya igũrũ ya mũthamaki hakuhĩ na nja ya arangĩri. Kũrigania nake, Pedaia mũrũ wa Paroshu <verse number="26" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:26 </char><char style="xt" closed="false"><ref loc="NEH 7:46">Neh 7:46</ref>; <ref loc="2CH 33:14">2Maũ 33:14</ref></char></note>hamwe na atungati a hekarũ arĩa maatũũraga kĩrĩma-igũrũ kĩa Ofeli magĩcookereria rũthingo o nginya kũngʼethera Kĩhingo kĩa Maaĩ kwerekera mwena wa irathĩro na kũngʼethera mũthiringo ũrĩa wacomokete na igũrũ. <verse number="27" style="v"/>Kũrigania nao, andũ a Tekoa magĩcookereria gĩcunjĩ kĩngĩ kuuma mũthiringo mũnene ũrĩa wacomokete na igũrũ nginya rũthingo rwa Ofeli.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="28" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:28 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 11:16">2Ath 11:16</ref>
+      </char>
+    </note>Igũrũ wa Kĩhingo kĩa Mbarathi, athĩnjĩri-Ngai nĩmacookereirie rũthingo, o mũndũ mbere ya nyũmba yake. <verse number="29" style="v"/>Kũrigania nao, Zadoku mũrũ wa Imeri agĩcookereria rũthingo kũngʼethera nyũmba yake. Kũrigania nake, Shemaia mũrũ wa Shekania, mũikaria wa Kĩhingo kĩa Irathĩro, nĩwe wacookereirie rũthingo rũrĩa rwarũmĩrĩire. <verse number="30" style="v"/>Kũrigania nake, Hanania mũrũ wa Shelemia, na Hanuni mũriũ wa gatandatũ wa Zalafu, nĩo maacookereirie gĩcunjĩ kĩu kĩngĩ. Kũrigania nao, Meshulamu mũrũ wa Berekia agĩcookereria rũthingo kũngʼethera harĩa aikaraga. <verse number="31" style="v"/>Kũrigania nake, Malikija, ũmwe wa aturi a thahabu, agĩcookereria rũthingo nginya nyũmba-inĩ ya ndungata cia hekarũ na cia onjorithia, kũngʼethera Kĩhingo gĩa Gũtuĩria, na o nginya kanyũmba karĩa kaarĩ igũrũ rĩa koine; <verse number="32" style="v"/>na gatagatĩ ga kanyũmba karĩa kaarĩ igũrũ rĩa koine na Kĩhingo kĩa Ngʼondu haacookereirio nĩ aturi a thahabu na onjorithia.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Kũgirio Gwaka Rũthingo Rĩngĩ</para>
+  <para style="p">
+    <verse number="1" style="v"/>Rĩrĩa Sanibalati aaiguire atĩ nĩtwakaga rũthingo rĩngĩ, akĩrakara na agĩthirĩka mũno. Agĩthekerera Ayahudi, <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:2 </char><char style="xt" closed="false"><ref loc="EZR 4:9-10">Ezar 4:9-10</ref>; <ref loc="JER 26:18">Jer 26:18</ref></char></note>na arĩ mbere ya athiritũ ake na mbũtũ cia ita cia Samaria, akiuga atĩrĩ, “Ayahudi aya ahinyaru-rĩ, nĩ kĩĩ mareka? Nĩmegũcookereria rũthingo rwao? Nĩmekũruta magongona? Nĩmekũrĩkia wĩra ũyũ na mũthenya ũmwe? Maahota gũtũma mahiga macooke muoyo kuuma hĩba-inĩ ici cia mahuti maya mahĩĩte ũũ wothe?”</para>
+  <para style="p">
+    <verse number="3" style="v"/>Tobia ũrĩa Mũamoni, ũrĩa warĩ mwena wake, akiuga atĩrĩ, “Rũthingo rũu rwa mahiga maraaka-rĩ, o na mbwe ĩngĩrũhaica no ĩrũmomore!”</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 123:3-4">Thab 123:3-4</ref>
+      </char>
+    </note>No rĩrĩ, Wee Ngai witũ tũthikĩrĩrie, tondũ tũrĩ andũ anyarare. Garũra irumi icio ciao imacookerere. Maneane ta matahĩtwo bũrũri-inĩ wa ũkombo. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:5 </char><char style="xt" closed="false"><ref loc="PSA 69:27-28">Thab 69:27-28</ref>; <ref loc="JER 18:23">Jer 18:23</ref></char></note>Ndũkahithĩrĩre mahĩtia mao kana weherie mehia mao kuuma ũthiũ-inĩ waku, nĩgũkorwo nĩmarumĩte andũ arĩa maraaka.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="6" style="v"/>Nĩ ũndũ ũcio tũgĩaka rũthingo rũu rĩngĩ o nginya ruothe rũgĩkinya nuthu ya ũraihu waruo, nĩgũkorwo andũ acio maarutire wĩra na ngoro cia kwĩyendera.</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 2:10">Neh 2:10</ref>
+      </char>
+    </note>No hĩndĩ ĩrĩa Sanibalati, na Tobia, na Aarabu, na Aamoni, na andũ a Ashidodi maiguire atĩ thingo cia Jerusalemu nĩciathiiaga na mbere gũcookererio na atĩ mĩanya nĩyathingagwo-rĩ, makĩrakara mũno. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:8 </char><char style="xt" closed="false"><ref loc="PSA 2:2">Thab 2:2</ref></char></note>Magĩthiĩ ndundu marĩ othe, magĩciira ũrĩa megũka mahũũrane na Jerusalemu, na mambĩrĩrie ngũĩ kuo. <verse number="9" style="v"/>No nĩtwahooire Ngai witũ na tũkĩiga arangĩri a gũtũgitĩra mũthenya na ũtukũ nĩ ũndũ nĩtwehĩtĩirwo.</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 23:4">1Maũ 23:4</ref>
+      </char>
+    </note>O ihinda rĩu, andũ a Juda makiuga atĩrĩ, “Aruti a wĩra nĩmaroorwo nĩ hinya, na nĩ kũrĩ na mahuti maingĩ mũno matangĩreka twake rũthingo rũu rĩngĩ.”</para>
+  <para style="p">
+    <verse number="11" style="v"/>O nacio thũ ciitũ ikiuga atĩrĩ, “Mũira wa mamenye ũhoro kana matuone, tũgũkorwo hamwe nao, tũmoorage na tũtũme wĩra ũcio ũtige kũrutwo.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>Hĩndĩ ĩyo Ayahudi arĩa maatũũraga hakuhĩ na thũ icio magĩũka, magĩtwĩra maita ikũmi atĩrĩ, “O kũrĩa mũngĩũrĩra-rĩ, nĩmegũtũtharĩkĩra.”</para>
+  <para style="p">
+    <verse number="13" style="v"/>Nĩ ũndũ ũcio ngĩiga andũ amwe na thuutha wa kũrĩa rũthingo rwarĩ thĩ mũno na gũtaarĩ na ũgitĩri; ngĩmaiga kũringana na nyũmba ciao marĩ na hiũ ciao cia njora, na matimũ, na mota. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:14 </char><char style="xt" closed="false"><ref loc="DEU 1:29">Gũcook 1:29</ref>; <ref loc="2SA 10:12">2Sam 10:12</ref></char></note>Ndaarĩkia kuona ũrĩa maũndũ maatariĩ, ngĩrũgama ngĩĩra andũ arĩa maarĩ igweta, na anene, na andũ arĩa angĩ atĩrĩ, “Mũtikametigĩre. Ririkanai Mwathani, o we ũrĩa mũnene na wa kũmakania, nĩguo mũrũĩrĩre ariũ a thoguo, na aanake anyu, na airĩtu anyu, na atumia anyu, o na mĩciĩ yanyu.”</para>
+  <para style="p">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="2SA 17:14">2Sam 17:14</ref>; <ref loc="JOB 5:12">Ayub 5:12</ref></char>
+    </note>Rĩrĩa thũ ciitũ ciamenyire atĩ nĩtwamenyete ũhoro wa ndundu yao, na atĩ Ngai nĩarigĩrĩirie ũndũ ũcio, ithuothe tũgĩcooka rũthingo-inĩ, o mũndũ agĩthiĩ wĩra-inĩ wake.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Kuuma mũthenya ũcio nuthu ya andũ akwa nĩo maarutaga wĩra nayo nuthu ĩyo ĩngĩ yao makĩheo matimũ, na ngo, na mota, o na nguo cia kĩgera. Anene nao makĩrũgama thuutha wa andũ othe a Juda <verse number="17" style="v"/>arĩa maakaga rũthingo. Nao arĩa maakuuaga indo cia mwako maarutaga wĩra na guoko kũmwe, nakuo kũrĩa kũngĩ kũnyiitĩte kĩndũ kĩa mbaara, <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:18 </char><char style="xt" closed="false"><ref loc="NUM 10:2">Ndar 10:2</ref></char></note>nake mwaki o wothe aikaraga eyohete rũhiũ rwake rwa njora njohero o akĩrutaga wĩra. No mũhuhi wa karumbeta aanjikaraga hakuhĩ.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Ningĩ ngĩĩra arĩa maarĩ igweta, na anene, na andũ arĩa angĩ atĩrĩ, “Wĩra nĩ mũingĩ mũno na ũgatambũrũka, na nĩtũraihanĩrĩirie mũno mũndũ na ũrĩa ũngĩ rũthingo-inĩ. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:20 </char><char style="xt" closed="false"><ref loc="EZK 33:3">Ezek 33:3</ref>; <ref loc="EXO 14:14">Thaam 14:14</ref></char></note>Rĩrĩa rĩothe mũngĩigua karumbeta kaahuhwo, mũũke harĩa tũrĩ. Ngai witũ nĩwe ũgũtũrũĩrĩra!”</para>
+  <para style="p">
+    <verse number="21" style="v"/>Nĩ ũndũ ũcio tũgĩthiĩ na mbere na kũruta wĩra, nuthu ya andũ ĩnyiitĩte matimũ kuuma rũciinĩ nginya njata cioneke hwaĩ-inĩ. <verse number="22" style="v"/>Hĩndĩ o ĩyo ngĩĩra andũ atĩrĩ, “Reke o mũndũ na mũteithia wake maikarage Jerusalemu thĩinĩ ũtukũ, nĩgeetha matũtungatagĩre ta arangĩri ũtukũ, na mũthenya makaruta wĩra.” <verse number="23" style="v"/>Niĩ mwene, kana ariũ a baba, kana andũ akwa, kana arangĩri arĩa maarĩ hamwe na niĩ gũtirĩ warutaga nguo; o mũndũ aakoragwo na indo ciake cia mbaara o na agĩthiĩ gũtaha maaĩ.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Nehemia Gũteithia Athĩĩni</para>
+  <para style="p">
+    <verse number="1" style="v"/>Na rĩrĩ, andũ amwe na atumia ao nĩmatetire mũno nĩ ũndũ wa ũrĩa maahinyĩrĩirio nĩ Ayahudi arĩa angĩ ariũ a ithe wao. <verse number="2" style="v"/>Amwe moigaga atĩrĩ, “Ithuĩ na aanake aitũ na airĩtu aitũ tũrĩ aingĩ. Na no nginya tũkorwo na irio, nĩguo tũrĩe tũtũũre muoyo.”</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 109:11">Thab 109:11</ref>; <ref loc="GEN 47:23">Kĩam 47:23</ref></char>
+    </note>Angĩ moigaga atĩrĩ, “Tũneanaga ithaka ciitũ na mĩgũnda iitũ ya mĩthabibũ, na mĩciĩ iitũ itũrũgamĩrĩre nĩguo tũheo irio hĩndĩ ya ngʼaragu.”</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 4:13">Ezar 4:13</ref>
+      </char>
+    </note>O na angĩ moigaga atĩrĩ, “No nginya tũngĩakombire mbeeca nĩguo tũhote kũrĩha igooti rĩa mũthamaki rĩa ithaka ciitũ na mĩgũnda ya mĩthabibũ. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:5 </char><char style="xt" closed="false"><ref loc="LEV 25:39-43">Alaw 25:39-43</ref>; <ref loc="DEU 15:7-11">Gũcook 15:7-11</ref></char></note>O na gũtuĩka tũrĩ a mũthiimo ũmwe na thakame ĩmwe na andũ a bũrũri witũ, na o na gũtuĩka aanake aitũ nĩ ega o ta ao-rĩ, ithuĩ tũtuĩkĩte no nginya tũneane aanake aitũ na airĩtu aitũ matuĩke ngombo. O na rĩu airĩtu aitũ amwe nĩ ngombo, no tũtirĩ na ũhoti wa kũgirĩrĩria ũndũ ũcio tondũ ithaka ciitũ na mĩgũnda iitũ ya mĩthabibũ ĩrĩ moko-inĩ ma andũ angĩ.”</para>
+  <para style="p">
+    <verse number="6" style="v"/>Rĩrĩa ndaiguire mateta mao na thitango icio, nĩndarakarire mũno. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:7 </char><char style="xt" closed="false"><ref loc="EXO 22:25-27">Thaam 22:25-27</ref>; <ref loc="LEV 25:35-37">Alaw 25:35-37</ref></char></note>Ngĩĩcũũrania maũndũ macio, na ngĩrũithia andũ arĩa maarĩ igweta na anene, ngĩmeera atĩrĩ, “Nĩmũreetia andũ a bũrũri wanyu uumithio wa mbeeca iria mũmakombithĩtie!” Nĩ ũndũ ũcio ngĩĩtana mũcemanio mũnene wa kũmaciirithia, <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:8 </char><char style="xt" closed="false"><ref loc="LEV 25:47">Alaw 25:47</ref>; <ref loc="JER 34:8">Jer 34:8</ref></char></note>ngiuga atĩrĩ, “Tũgeretie o ũrĩa tũngĩhota gũkũũra Ayahudi ariũ a ithe witũ arĩa mendeirio ndũrĩrĩ. No inyuĩ nĩ kwendia mũrendia andũ anyu nĩguo tũcooke tũmagũre rĩngĩ!” Andũ acio magĩkira ki tondũ matingĩonire wa kuuga.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Ningĩ ngĩthiĩ na mbere ngiuga atĩrĩ, “Ũrĩa mũreka ti wega. Githĩ mũtiagĩrĩirwo nĩ gũthiiaga mwĩtigĩrĩte Ngai witũ nĩgeetha tũtikanyararwo nĩ ndũrĩrĩ iria irĩ ũthũ na ithuĩ? <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:10 </char><char style="xt" closed="false"><ref loc="EXO 22:25">Thaam 22:25</ref></char></note>Niĩ, na ariũ a baba, na andũ akwa, o na ithuĩ nĩtũrakombithia andũ mbeeca na irio. No rekei gwĩtia kwa uumithio wa mbeeca iria mũkombanĩire gũthire! <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:11 </char><char style="xt" closed="false"><ref loc="ISA 58:6">Isa 58:6</ref></char></note>Cookeriai andũ ithaka ciao narua, na mĩgũnda yao ya mĩthabibũ na ya mĩtamaiyũ, na nyũmba ciao, o na uumithio ũcio mũmarĩhagia wa gĩcunjĩ kĩa igana kĩa mbeeca, na ngano, na ndibei ya mũhihano, na kĩa maguta.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 10:5">Ezar 10:5</ref>
+      </char>
+    </note>Nao makiuga atĩrĩ, “Nĩtũkũmacookeria. Na tũtikũmetia kĩndũ kĩngĩ. Tũgwĩka o ta ũrĩa ũkuuga.”</para>
+  <para style="p">Ningĩ ngĩtũmanĩra athĩnjĩri-Ngai ngĩĩra andũ arĩa maarĩ igweta na arĩa anene mehĩte atĩ nĩmakahingia ũrĩa meranĩire. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:13 </char><char style="xt" closed="false"><ref loc="MAT 10:14">Math 10:14</ref></char></note>O na niĩ ngĩribariba icũrĩ cia nguo yakwa ya igũrũ, ngiuga atĩrĩ, “O ta ũguo-rĩ, mũndũ o wothe ũtakahingia kĩrĩkanĩro gĩkĩ, Ngai aromũribariba kuuma nyũmba yake na kuuma kũrĩ indo ciake. Nĩ ũndũ ũcio mũndũ ta ũcio aroribaribwo, atigwo atarĩ kĩndũ!”</para>
+  <para style="p">Mũingĩ wothe ũkiuga, “Ameni,” na ũkĩgooca Jehova. Nao andũ othe magĩĩka o ta ũrĩa meeranĩire.</para>
+  <para style="p">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 42:6">Kĩam 42:6</ref>; <ref loc="EZR 6:7">Ezar 6:7</ref></char>
+    </note>Ningĩ kuuma mwaka wa mĩrongo ĩĩrĩ wa Mũthamaki Aritashashita, rĩrĩa ndathuurirwo nduĩke barũthi wao bũrũri wa Juda, nginyagia mwaka wa mĩrongo ĩtatũ na ĩĩrĩ, mĩaka ikũmi na ĩĩrĩ-rĩ, niĩ o na kana ariũ a baba, tũtiarĩire irio iria ciagayagĩrwo barũthi. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:15 </char><char style="xt" closed="false"><ref loc="GEN 20:11">Kĩam 20:11</ref></char></note>No rĩrĩ, abarũthi arĩa maarĩ mbere yakwa nĩmahatagĩrĩria andũ mũno na makametia cekeri cia betha mĩrongo ĩna,<note caller="+" style="f"><char style="fr" closed="false">5:15 </char><char style="ft" closed="false">nĩ ta nuthu kilo</char></note> hamwe na irio na ndibei. Ateithĩrĩria ao nao no mahatagĩrĩria andũ. No niĩ tondũ wa gwĩtigĩra Ngai ndiekire ũguo. <verse number="16" style="v"/>Handũ ha gwĩka ũguo-rĩ, niĩ ndeheanire gwaka rũthingo rũrũ. Andũ akwa othe moonganĩte hau nĩ ũndũ wa wĩra; na tũtiigana kũgũra ithaka.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Ningĩ-rĩ, Ayahudi igana rĩa mĩrongo ĩtano, o hamwe na anene maarĩĩaga gwakwa, hamwe na arĩa mookaga kuuma ndũrĩrĩ-inĩ iria ciatũthiũrũrũkĩirie. <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:18 </char><char style="xt" closed="false"><ref loc="1KI 4:23">1Ath 4:23</ref></char></note>O mũthenya indo iria ciahaaragĩrio cia kũrĩĩo ciarĩ ndegwa ĩmwe, na ngʼondu ithathatũ noru, na ngũkũ, na o mĩthenya ikũmi yathira ndaarehagĩrwo ndibei nyingĩ mũno ya mĩthemba yothe. O na kũrĩ ũguo-rĩ, ndietagia irio iria ciagayagĩrwo barũthi, tondũ maruta macio nĩmaritũhĩire andũ.</para>
+  <para style="p">
+    <verse number="19" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:19 </char>
+      <char style="xt" closed="false">
+        <ref loc="2KI 20:3">2Ath 20:3</ref>
+      </char>
+    </note>Wee Ngai wakwa, ndirikana, ũnjĩke wega nĩ ũndũ wa maũndũ marĩa mothe njĩkĩire andũ aya.</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Gũthiĩ na Mbere Kũgirio Gwaka Rũthingo</para>
+  <para style="p">
+    <verse number="1" style="v"/>Na rĩrĩa Sanibalati, na Tobia, na Geshemu ũrĩa Mũarabu, na thũ iria ingĩ ciitũ maakinyĩirwo nĩ ũhoro atĩ nĩnjakĩte rũthingo rĩngĩ na hatiarĩ ithenya o na rĩmwe rĩatigarĩte rũthingo-inĩ, o na gũtuĩka nginyagia ihinda rĩu ndiekĩrĩte mĩrango ya ihingo, <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:2 </char><char style="xt" closed="false"><ref loc="1CH 8:12">1Maũ 8:12</ref></char></note>Sanibalati na Geshemu makĩndũmĩra ndũmĩrĩri ĩno: “Ũka, reke tũcemanie itũũra-inĩ rĩmwe werũ-inĩ wa Ono.”</para>
+  <para style="p">No rĩrĩ, maathugundaga kũnjĩka ũũru; <verse number="3" style="v"/>nĩ ũndũ ũcio ngĩmatũmĩra andũ mamacookerie atĩrĩ: “Ndĩ na wĩra wa bata ndĩraruta, ndingĩhota gũikũrũka njũke. Wĩra ũngĩkĩrũgamio nĩkĩ, atĩ nyambe njikũrũke kũrĩ inyuĩ?” <verse number="4" style="v"/>Maandũmĩire ndũmĩrĩri ta ĩyo maita mana, na o hĩndĩ ndaacookagia icookio rĩu.</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 2:10">Neh 2:10</ref>
+      </char>
+    </note>Ihinda rĩa gatano Sanibalati akĩndũmĩra ndungata yake na ndũmĩrĩri o ro ĩyo, ĩkuuĩte marũa mataarĩ matume, <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:6 </char><char style="xt" closed="false"><ref loc="NEH 2:19">Neh 2:19</ref></char></note>marĩa maandĩkĩtwo ũũ:</para>
+  <para style="b"/>
+  <para style="pm">“Ũhoro nĩwarĩtio ndũrĩrĩ-inĩ, na Geshemu aroiga ũhoro ũcio nĩ wa ma, atĩ wee na Ayahudi nĩmũrathugunda kũremera mũthamaki mũmũũkĩrĩre, na nĩ ũndũ ũcio nĩmũraaka rũthingo. Ningĩ kũringana na ũhoro ũcio nĩũrenda gũtuĩka mũthamaki wao <verse number="7" style="v"/>na atĩ nĩ ũthuurĩte anabii a kwanĩrĩra ũhoro ũgũkoniĩ kũu Jerusalemu makiugaga atĩrĩ, ‘Juda kũrĩ na mũthamaki!’ Rĩu-rĩ, ũhoro ũcio nĩũgũkinyĩra mũthamaki; nĩ ũndũ ũcio ũka, twaranĩrie.”</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="8" style="v"/>Na niĩ ngĩkĩmũcookeria atĩrĩ: “Gũtirĩ ũndũ ta ũcio ũroiga ũrekĩka; nĩ gwĩthugundĩra ũrethugundĩra ũhoro ũcio meciiria-inĩ maku.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>Andũ acio maageragia ũrĩa wothe mangĩtũguoyohia, magĩĩciiria atĩrĩ, “Moko mao nĩmekwaga hinya wa kũruta wĩra, naguo wage kũrĩĩka.”</para>
+  <para style="p">No ngĩhooya Ngai, ngĩmwĩra atĩrĩ, “Rĩu ĩkĩra moko makwa hinya.”</para>
+  <para style="p">
+    <verse number="10" style="v"/>Mũthenya ũmwe nĩndathiire mũciĩ gwa Shemaia mũrũ wa Delaia, mũrũ wa Mehetabeli, ũrĩa wahingĩirwo gwake mũciĩ. Akĩnjĩĩra atĩrĩ, “Nĩtũcemanie nyũmba ya Ngai, hekarũ thĩinĩ, na tũhinge mĩrango ya hekarũ, tondũ kũrĩ na andũ maroka gũkũũraga, megũka gũkũũraga ũtukũ.”</para>
+  <para style="p">
+    <verse number="11" style="v"/>No ngĩmũũria atĩrĩ, “Mũndũ ta niĩ nĩagĩrĩirwo nĩ kũũra? Kana mũndũ ta niĩ nĩagĩrĩirwo kwĩhitha thĩinĩ wa hekarũ<note caller="+" style="f"><char style="fr" closed="false">6:11 </char><char style="ft" closed="false">Andũ arĩa mataarĩ athĩnjĩri-Ngai matietĩkĩrĩtio gũtoonya Handũ-harĩa-Hatheru-Mũno.</char></note> ahonokie muoyo wake? Niĩ ndigũthiĩ!” <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:12 </char><char style="xt" closed="false"><ref loc="EZK 13:22-23">Ezek 13:22-23</ref></char></note>Nĩndamenyire atĩ ti Ngai wamũtũmĩte, no aandathagĩra ũũru tondũ Tobia na Sanibalati nĩmamũrĩhĩte eke ũguo. <verse number="13" style="v"/>Aarĩhĩtwo nĩguo atũme ndĩtigĩre nĩgeetha ndeka ũguo njĩhie, ngĩe na rĩĩtwa rĩũru nao mone njĩra ya kũũmenithia.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 15:20">Thaam 15:20</ref>; <ref loc="EZK 13:17-23">Ezek 13:17-23</ref></char>
+    </note>Wee Ngai wakwa, ririkana Tobia na Sanibalati tondũ wa ũrĩa mekĩte, na ũririkane Noadia mũnabii mũndũ-wa-nja, o na anabii arĩa angĩ makoretwo makĩgeria kũnjĩkĩra guoya.</para>
+  <para style="s1">Kũrĩĩka kwa Rũthingo</para>
+  <para style="p">
+    <verse number="15" style="v"/>Nĩ ũndũ ũcio, rũthingo rũu rwarĩĩkire thuutha wa mĩthenya mĩrongo ĩtano na ĩĩrĩ, mũthenya wa mĩrongo ĩĩrĩ na ĩtano, mweri-inĩ wa Eluli. <verse number="16" style="v"/>Rĩrĩa thũ ciitũ ciaiguire ũhoro ũcio, ndũrĩrĩ ciothe iria ciatũthiũrũrũkĩirie igĩĩtigĩra na ikĩaga mwĩhoko, nĩ ũndũ nĩmamenyire atĩ wĩra ũcio warutĩkire na ũndũ wa ũteithio wa Ngai witũ.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Ningĩ matukũ-inĩ macio, andũ arĩa maarĩ igweta a Juda nĩmatũmagĩra Tobia marũa maingĩ, nao nĩmanyiitaga macookio kuuma kũrĩ Tobia. <verse number="18" style="v"/>Nĩgũkorwo andũ aingĩ a Juda nĩmehĩtĩte gũkorwo mwena wake, tondũ aarĩ mũthoni-we wa Shekania mũrũ wa Ara, na mũriũ wake Jehohanani aahikĩtie mwarĩ wa Meshulamu mũrũ wa Berekia. <verse number="19" style="v"/>Na ningĩ nĩmaikaraga makĩĩheaga ũhoro wa ciĩko ciake njega magacooka makamwĩra ũrĩa na niĩ njugĩte. Nake Tobia akaandũmagĩra marũa ma gũtũma ndĩĩtigĩre.</para>
+  <chapter number="7" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 9:27">1Maũ 9:27</ref>; <ref loc="PSA 68:25">Thab 68:25</ref></char>
+    </note>Na rĩrĩ, rũthingo rwarĩka gwakwo rĩngĩ, na niĩ ngĩkorwo njĩkĩrĩte mĩrango ihingo-inĩ-rĩ, nĩrĩo arangĩri a ihingo, na aini, na Alawii maathuurirwo. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:2 </char><char style="xt" closed="false"><ref loc="NEH 1:2">Neh 1:2</ref>; <ref loc="NEH 2:8">Neh 2:8</ref></char></note>Nĩndatuire Hanani mũrũ wa baba mũrũgamĩrĩri wa Jerusalemu, marĩ na Hanania mũnene wa gĩikaro kĩgitĩre kĩa mũthamaki, tondũ aarĩ mũndũ mwĩhokeku, na agetigĩra Ngai gũkĩra andũ arĩa angĩ. <verse number="3" style="v"/>Ngĩmeera atĩrĩ, “Ihingo cia Jerusalemu itikahingũragwo, o nginya rĩrĩa riũa rĩrĩkoragwo rĩarĩte. Ningĩ o na rĩrĩa arangĩri a ihingo marĩ wĩra-inĩ, nĩmaikarage mahingĩte mĩrango ĩyo, na makamĩĩkĩra mĩgĩĩko. Ningĩ mũthuure aikari a Jerusalemu matuĩke arangĩri, amwe marangagĩre harĩa matuĩrĩirwo kũrangĩra, na arĩa angĩ marangagĩre hakuhĩ na nyũmba ciao.”</para>
+  <para style="s1">Andũ arĩa Maacookire kuuma Ithaamĩrio</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 11:1">Neh 11:1</ref>
+      </char>
+    </note>Na rĩrĩ, itũũra rĩa Jerusalemu rĩarĩ inene mũno na rĩkaarama, no andũ arĩa maatũũraga kuo maarĩ anini, na nyũmba itiakoretwo ciakĩtwo rĩngĩ. <verse number="5" style="v"/>Nĩ ũndũ ũcio Ngai wakwa akĩnjĩkĩra wendo ngoro-inĩ yakwa wa gũcookanĩrĩria andũ arĩa maarĩ igweta, na anene, na andũ arĩa angĩ nĩguo meyandĩkithie kũringana na nyũmba ciao. Nĩndonire ibuku rĩa marĩĩtwa ma njiaro cia arĩa maarĩ a mbere gũcooka. Ũũ nĩguo ndonire rĩandĩkĩtwo:</para>
+  <para style="b"/>
+  <para style="pi1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 36:20">2Maũ 36:20</ref>
+      </char>
+    </note>Aya nĩo andũ a bũrũri arĩa maacookire kuuma bũrũri ũrĩa maatahĩirwo, arĩa Nebukadinezaru mũthamaki wa Babuloni aatahĩte akamatwara Babuloni bũrũri wa ũkombo (nao magĩcooka Jerusalemu na Juda, o mũndũ itũũra-inĩ rĩake, <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:7 </char><char style="xt" closed="false"><ref loc="1CH 3:19">1Maũ 3:19</ref></char></note>marehanĩte na Zerubabeli, na Jeshua, na Nehemia, na Azaria, na Raamia, na Nahamani, na Moridekai, na Bilishani, na Misiperethu, na Bigivai, na Nehumu, na Baana):</para>
+  <para style="b"/>
+  <para style="li1">Mũigana wa andũ a Isiraeli watariĩ ũũ:</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="8" style="v"/>njiaro cia Paroshu ciarĩ 2,172</para>
+  <para style="li2">
+    <verse number="9" style="v"/>na cia Shafatia ciarĩ 372</para>
+  <para style="li2">
+    <verse number="10" style="v"/>na cia Ara ciarĩ 652</para>
+  <para style="li2">
+    <verse number="11" style="v"/>na cia Pahathu-Moabi (iria cioimĩte harĩ Jeshua na Joabu) ciarĩ 2,818</para>
+  <para style="li2">
+    <verse number="12" style="v"/>na cia Elamu ciarĩ 1,254</para>
+  <para style="li2">
+    <verse number="13" style="v"/>na cia Zatu ciarĩ 845</para>
+  <para style="li2">
+    <verse number="14" style="v"/>na cia Zakai ciarĩ 760</para>
+  <para style="li2">
+    <verse number="15" style="v"/>na cia Binui ciarĩ 648</para>
+  <para style="li2">
+    <verse number="16" style="v"/>na cia Bebai ciarĩ 628</para>
+  <para style="li2">
+    <verse number="17" style="v"/>na cia Azigadi ciarĩ 2,322</para>
+  <para style="li2">
+    <verse number="18" style="v"/>na njiaro cia Adonikamu ciarĩ 667</para>
+  <para style="li2">
+    <verse number="19" style="v"/>na njiaro cia Bigivai ciarĩ 2,067</para>
+  <para style="li2">
+    <verse number="20" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:20 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 8:6">Ezar 8:6</ref>
+      </char>
+    </note>na cia Adini ciarĩ 655</para>
+  <para style="li2">
+    <verse number="21" style="v"/>na cia Ateri (iria cioimĩte harĩ Hezekia) ciarĩ 98</para>
+  <para style="li2">
+    <verse number="22" style="v"/>na cia Hashumu ciarĩ 328</para>
+  <para style="li2">
+    <verse number="23" style="v"/>na cia Bezai ciarĩ 324</para>
+  <para style="li2">
+    <verse number="24" style="v"/>na cia Harifu ciarĩ 112</para>
+  <para style="li2">
+    <verse number="25" style="v"/>na cia Gibeoni ciarĩ 95.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="26" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:26 </char>
+      <char style="xt" closed="false">
+        <ref loc="2SA 23:28">2Sam 23:28</ref>; <ref loc="1CH 2:54">1Maũ 2:54</ref></char>
+    </note>nao andũ a Bethilehemu na Netofa maarĩ 188</para>
+  <para style="li2">
+    <verse number="27" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:27 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 21:18">Josh 21:18</ref>
+      </char>
+    </note>na andũ a Anathothu maarĩ 128</para>
+  <para style="li2">
+    <verse number="28" style="v"/>na andũ a Bethi-Azimavethu maarĩ 42</para>
+  <para style="li2">
+    <verse number="29" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:29 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 18:25">Josh 18:25</ref>, <ref loc="JOS 18:26">26</ref></char>
+    </note>na andũ a Kiriathu-Jearimu, na Kefira, na Beerothu maarĩ 743</para>
+  <para style="li2">
+    <verse number="30" style="v"/>na andũ a Rama na Geba maarĩ 621</para>
+  <para style="li2">
+    <verse number="31" style="v"/>na andũ a Mikimashi maarĩ 122</para>
+  <para style="li2">
+    <verse number="32" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:32 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 12:8">Kĩam 12:8</ref>
+      </char>
+    </note>na andũ a Betheli na Ai maarĩ 123</para>
+  <para style="li2">
+    <verse number="33" style="v"/>na andũ a Nebo ĩrĩa ĩngĩ maarĩ 52</para>
+  <para style="li2">
+    <verse number="34" style="v"/>na andũ a Elamu ĩrĩa ĩngĩ maarĩ 1,254</para>
+  <para style="li2">
+    <verse number="35" style="v"/>na andũ a Harimu maarĩ 320</para>
+  <para style="li2">
+    <verse number="36" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:36 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 3:2">Neh 3:2</ref>
+      </char>
+    </note>na andũ a Jeriko maarĩ 345</para>
+  <para style="li2">
+    <verse number="37" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:37 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 8:12">1Maũ 8:12</ref>
+      </char>
+    </note>na andũ a Lodi, na Hadidi, na Ono maarĩ 721</para>
+  <para style="li2">
+    <verse number="38" style="v"/>na andũ a Senaa maarĩ 3,930.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="39" style="v"/>Nao athĩnjĩri-Ngai maarĩ:</para>
+  <para style="b"/>
+  <para style="li1">njiaro cia Jedaia</para>
+  <para style="li2">(iria cioimĩte harĩ nyũmba ya Jeshua) ciarĩ 973</para>
+  <para style="li1">
+    <verse number="40" style="v"/>na cia Imeri ciarĩ 1,052</para>
+  <para style="li2">
+    <verse number="41" style="v"/>na cia Pashuri ciarĩ 1,247</para>
+  <para style="li2">
+    <verse number="42" style="v"/>na cia Harimu ciarĩ 1,017.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="43" style="v"/>Nao Alawii maarĩ:</para>
+  <para style="b"/>
+  <para style="li2">a njiaro cia Jeshua (iria cioimĩte harĩ Kadimieli, rũciaro-inĩ rwa Hodavia) ciarĩ 74.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="44" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:44 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 11:23">Neh 11:23</ref>
+      </char>
+    </note>Nao aini maarĩ:</para>
+  <para style="b"/>
+  <para style="li1">njiaro cia Asafu ciarĩ 148.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="45" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:45 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 9:17">1Maũ 9:17</ref>
+      </char>
+    </note>Nao aikaria a ihingo maarĩ:</para>
+  <para style="b"/>
+  <para style="li1">njiaro cia</para>
+  <para style="li2">Shalumu, na Ateri, na Talimoni, na Akubu, na Hatita, na Shobai ciarĩ 138.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="46" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:46 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 3:26">Neh 3:26</ref>
+      </char>
+    </note>Nacio ndungata cia hekarũ ciarĩ:</para>
+  <para style="b"/>
+  <para style="li1">njiaro cia</para>
+  <para style="li2">Ziha, na Hasufa, na Tabaothu,</para>
+  <para style="li2">
+    <verse number="47" style="v"/>na Keroso, na Sia, na Padoni,</para>
+  <para style="li2">
+    <verse number="48" style="v"/>na Lebana, na Hagaba, na Shalimai,</para>
+  <para style="li2">
+    <verse number="49" style="v"/>na Hanani, na Gideli, na Gaharu,</para>
+  <para style="li2">
+    <verse number="50" style="v"/>na Reaia, na Rezini, na Nekoda,</para>
+  <para style="li2">
+    <verse number="51" style="v"/>na Gazamu, na Uza, na Pasea,</para>
+  <para style="li2">
+    <verse number="52" style="v"/>na Besai, na Meunimu, na Nefisimu,</para>
+  <para style="li2">
+    <verse number="53" style="v"/>na Bakabuku, na Hakufa, na Harihuru,</para>
+  <para style="li2">
+    <verse number="54" style="v"/>na Baziluthu, na Mehida, na Harasha,</para>
+  <para style="li2">
+    <verse number="55" style="v"/>na Barikosi, na Sisera, na Tema,</para>
+  <para style="li2">
+    <verse number="56" style="v"/>na Nezia, na Hatifa.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="57" style="v"/>Nacio njiaro cia ndungata cia Solomoni ciarĩ:</para>
+  <para style="b"/>
+  <para style="li1">njiaro cia</para>
+  <para style="li2">Sotai, na Soferethu, na Perida,</para>
+  <para style="li2">
+    <verse number="58" style="v"/>na Jaala, na Darikoni, na Gideli,</para>
+  <para style="li2">
+    <verse number="59" style="v"/>na Shefatia, na Hatili, na Pokerethu-Hazebaimu, na Amoni.</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="60" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:60 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 9:2">1Maũ 9:2</ref>
+      </char>
+    </note>Ndungata cia hekarũ hamwe na njiaro cia ndungata cia Solomoni maarĩ andũ 392.</para>
+  <para style="b"/>
+  <para style="pi1">
+    <verse number="61" style="v"/>Nao aya nĩo maambatire kuuma matũũra ma Teli-Mela, na Teli-Harasha, na Kerubu, na Adoni, na Imeri, no matingĩonanirie atĩ nyũmba ciao ciarĩ cia njiaro cia Isiraeli:</para>
+  <para style="b"/>
+  <para style="li1">
+    <verse number="62" style="v"/>njiaro cia</para>
+  <para style="li1">Delaia, na Tobia, na Nekoda ciarĩ 642.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="63" style="v"/>Na kuuma kũrĩ athĩnjĩri-Ngai:</para>
+  <para style="b"/>
+  <para style="li1">njiaro cia</para>
+  <para style="li2">Hobaia, na Hakozu, na Barizilai (mũndũ ũrĩa wahikĩtie mwarĩ wa Barizilai ũrĩa Mũgileadi, na eetanagio na rĩĩtwa rĩu).</para>
+  <para style="pi1">
+    <verse number="64" style="v"/>Andũ acio nĩmacaririe maandĩko ma nyũmba ciao, no matiigana kũmona, nĩ ũndũ ũcio makĩeherio thiritũ-inĩ ya athĩnjĩri-Ngai, magĩtuuo ta andũ maarĩ na thaahu. <verse number="65" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:65 </char><char style="xt" closed="false"><ref loc="EXO 28:30">Thaam 28:30</ref></char></note>Nake barũthi wa kũu akĩmaatha matikarĩe irio iria therie mũno, o nginya gũkaagĩa mũthĩnjĩri-Ngai ũratungata na Urimu na Thumimu.</para>
+  <para style="b"/>
+  <para style="pi1">
+    <verse number="66" style="v"/>Andũ acio othe marĩ hamwe maarĩ 42,360, <verse number="67" style="v"/>gũtatarĩtwo ndungata ciao cia arũme na cia andũ-a-nja 7, 337; ningĩ nĩ maarĩ na aini arũme na andũ-a-nja 245. <verse number="68" style="v"/>Maarĩ na mbarathi 736, na nyũmbũ 245, <verse number="69" style="v"/>na ngamĩĩra 435, na ndigiri 6,720.</para>
+  <para style="b"/>
+  <para style="pi1">
+    <verse number="70" style="v"/>Atongoria amwe a nyũmba nĩmarutire indo ciao nĩ ũndũ wa wĩra ũcio. Barũthi wa kũu nĩaheanire durakima 1,000<note caller="+" style="f"><char style="fr" closed="false">7:70 </char><char style="ft" closed="false">nĩ ta kilo inyanya na nuthu (8.5)</char></note> cia thahabu, na mbakũri 50, na nguo cia athĩnjĩri-Ngai 530, nacio ikĩigwo kĩgĩĩna-inĩ. <verse number="71" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:71 </char><char style="xt" closed="false"><ref loc="1CH 29:7">1Maũ 29:7</ref></char></note>Nao atongoria amwe a nyũmba nĩmaheanire indo nĩ ũndũ wa wĩra ũcio, durakima 20,000<note caller="+" style="f"><char style="fr" closed="false">7:71 </char><char style="ft" closed="false">nĩ ta kilo 170</char></note> cia thahabu, na ratiri 2,200<note caller="+" style="f"><char style="fr" closed="false">7:71 </char><char style="ft" closed="false">nĩ ta tani ĩmwe na robo (1:25)</char></note> cia betha, nacio ikĩigwo kĩgĩĩna-inĩ. <verse number="72" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:72 </char><char style="xt" closed="false"><ref loc="EXO 25:2">Thaam 25:2</ref></char></note>Mũigana wa kĩrĩa kĩaheanirwo nĩ andũ arĩa angĩ warĩ durakima 20,000 cia thahabu, na ratiri 2,000<note caller="+" style="f"><char style="fr" closed="false">7:72 </char><char style="ft" closed="false">nĩ ta tani ĩmwe na gĩcunjĩ gĩa ikũmi (1:1)</char></note> cia betha, na nguo 67 cia athĩnjĩri-Ngai.</para>
+  <para style="pi1">
+    <verse number="73" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:73 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 34:22">Thab 34:22</ref>; <ref loc="EZR 3:1">Ezar 3:1</ref></char>
+    </note>Athĩnjĩri-Ngai, na Alawii, na aikaria a ihingo, na aini na ndungata cia hekarũ, marĩ hamwe na andũ amwe ao, na andũ arĩa angĩ a Isiraeli magĩaka na magĩtũũra matũũra-inĩ mao.</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Ezara Gũthoma Watho</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 28:61">Gũcook 28:61</ref>
+      </char>
+    </note>Na rĩrĩ, mweri wa mũgwanja wagĩkinya-rĩ, andũ a Isiraeli magĩkorwo maatũũrĩte thĩinĩ wa matũũra mao. Nao andũ othe makĩũngana marĩ ta mũndũ ũmwe kĩhaaro-inĩ kĩrĩa kĩarĩ mbere ya Kĩhingo kĩa Maaĩ. Nao makĩĩra Ezara ũrĩa mwandĩki-marũa arute Ibuku rĩrĩa rĩa Watho wa Musa ũrĩa Jehova aathĩte andũ a Isiraeli.</para>
+  <para style="p">
+    <verse number="2" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:2 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 23:23-25">Alaw 23:23-25</ref>; <ref loc="NUM 29:1-6">Ndar 29:1-6</ref></char>
+    </note>Nĩ ũndũ ũcio, mũthenya wa mbere wa mweri wa mũgwanja, Ezara ũrĩa mũthĩnjĩri-Ngai agĩtwara ibuku rĩu rĩa Watho mbere ya kĩũngano kĩu kĩonganĩte kĩa arũme na andũ-a-nja, na arĩa angĩ othe mangĩahotire gũtaũkĩrwo nĩ ũhoro ũcio. <verse number="3" style="v"/>Agĩthoma ibuku rĩu aanĩrĩire kuuma rũciinĩ nginya mĩaraho, angʼetheire kĩhaaro kĩrĩa kĩarĩ mbere ya Kĩhingo kĩa Maaĩ, arĩ mbere ya arũme, na andũ-a-nja, na andũ arĩa angĩ mangĩahotire gũtaũkĩrwo nĩ ũhoro ũcio. Nao andũ othe magĩtega matũ, magĩthikĩrĩria ciugo cia Ibuku rĩa Watho.</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 6:13">2Maũ 6:13</ref>
+      </char>
+    </note>Ezara ũrĩa mwandĩki-marũa aarũgamĩte igũrũ rĩa gĩtara kĩa mbaũ kĩrĩa gĩakĩtwo nĩ ũndũ wa ũndũ ũcio kĩũmbe. Mwena wake wa ũrĩo haarũgamĩte Matithia, na Shema, na Anaia, na Uria, na Hilikia, na Maaseia, naguo mwena wa ũmotho hakarũgama Pedaia, na Mishaeli, na Malikija, na Hashumu, na Hashibadana, na Zekaria, na Meshulamu.</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="JDG 3:20">Atiir 3:20</ref>
+      </char>
+    </note>Ezara akĩhingũra ibuku rĩu. Andũ othe nĩmamuonaga tondũ aarũgamĩte handũ hatũũgĩru. Na rĩrĩa aahingũrire ibuku, andũ othe makĩrũgama na igũrũ. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:6 </char><char style="xt" closed="false"><ref loc="EZR 9:5">Ezar 9:5</ref>; <ref loc="1TI 2:8">1Tim 2:8</ref></char></note>Ezara akĩgooca Jehova, Ngai ũrĩa mũnene; nao andũ othe makĩoya moko mao na igũrũ makiuga atĩrĩ, “Ameni! Ameni!” Magĩcooka makĩinamĩrĩra, makĩhooya Jehova maturumithĩtie mothiũ mao thĩ.</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 10:11">Alaw 10:11</ref>; <ref loc="2CH 17:2">2Maũ 17:2</ref></char>
+    </note>Nao Alawii, na nĩo Jeshua, na Bani, na Sherebia, na Jamini, na Akubu, na Shabethai, na Hodia, na Maaseia, na Kelita, na Azaria, na Jozabadu, na Hanani, na Pelaia, makĩruta andũ ũhoro wa Watho, andũ acio marũgamĩte o hau. <verse number="8" style="v"/>Magĩthoma kuuma Ibuku rĩa Watho wa Ngai, magĩtaũraga na magĩtaaragĩria wega nĩgeetha andũ acio mataũkĩrwo wega nĩ ũhoro ũcio wathomagwo.</para>
+  <para style="p">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 7:1">Neh 7:1</ref>; <ref loc="DEU 12:7">Gũcook 12:7</ref>, <ref loc="DEU 12:12">12</ref>; <ref loc="DEU 16:14-15">16:14-15</ref></char>
+    </note>Ningĩ Nehemia ũrĩa barũthi wa kũu na Ezara mũthĩnjĩri-Ngai na mwandĩki-marũa hamwe na Alawii arĩa maarutaga andũ, makĩĩra andũ acio othe atĩrĩ, “Mũthenya ũyũ wa ũmũthĩ nĩmwamũrĩre Jehova Ngai wanyu. Mũtigaacakaye kana mũrĩre.” Nĩgũkorwo andũ acio othe nĩmarĩraga maigua ciugo cia Watho ũcio.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Nehemia akĩmeera atĩrĩ, “Thiĩi mũgekenie na irio iria njega, na mũnyue indo irĩ mũrĩo, na indo icio imwe mũhe arĩa matarĩ na kĩndũ mathondekeirwo. Mũthenya wa ũmũthĩ nĩmwamũrĩre Mwathani witũ. Mũtikagĩe na kĩeha, nĩgũkorwo gĩkeno kĩa Jehova nĩkĩo hinya wanyu.”</para>
+  <para style="p">
+    <verse number="11" style="v"/>Alawii makĩhooreria andũ acio othe, makĩmeeraga atĩrĩ, “Hoorerai tondũ ũyũ nĩ mũthenya mwamũre. Mũtikagĩe na kĩeha.”</para>
+  <para style="p">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="EST 9:22">Esit 9:22</ref>
+      </char>
+    </note>Ningĩ andũ othe magĩthiĩ makarĩe na makanyue, na makaheane irio imwe, na magakũngũĩre makenete nĩ ũndũ nĩmataũkĩirwo nĩ ciugo iria maarutĩtwo.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Mũthenya wa keerĩ wa mweri, atongoria a nyũmba ciothe, marĩ hamwe na athĩnjĩri-Ngai na Alawii, makĩũngana harĩ Ezara ũcio mwandĩki-marũa nĩguo mathikĩrĩrie ciugo cia Watho. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:14 </char><char style="xt" closed="false"><ref loc="EXO 23:16">Thaam 23:16</ref></char></note>Nao magĩkora kwandĩkĩtwo watho-inĩ ũrĩa Jehova aathanĩte na kanua ka Musa, atĩ andũ a Isiraeli maikarage thĩinĩ wa ithũnũ hĩndĩ ya gĩathĩ kĩa mweri wa mũgwanja, <verse number="15" style="v"/>na atĩ maanagĩrĩre na mahunjagie ũhoro ũyũ matũũra-inĩ mao o na kũu Jerusalemu makiugaga atĩrĩ: “Thiĩi kũu bũrũri ũrĩa ũrĩ irĩma mũrehe honge cia mĩtamaiyũ ya mĩgũnda na ya gĩthaka, na cia mĩhandathi,<note caller="+" style="f"><char style="fr" closed="false">8:15 </char><char style="ft" closed="false">Mĩhandathi yakũraga ĩrĩ tũhinga, na mahuti mayo nĩmanungaga wega.</char></note> na cia mĩkĩndũ, o na cia mĩtĩ ya kĩĩruru cia gwaka ithũnũ,” o ta ũrĩa kwandĩkĩtwo.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Nĩ ũndũ ũcio andũ makiumagara, makĩrehe honge, makĩĩakĩra ithũnũ igũrũ rĩa nyũmba ciao o na nja ciao, na nja cia nyũmba ya Ngai, na kĩhaaro-inĩ kĩrĩa kĩarĩ Kĩhingo-inĩ kĩa Maaĩ, na kĩrĩa kĩarĩ Kĩhingo-inĩ kĩa Efiraimu. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:17 </char><char style="xt" closed="false"><ref loc="HOS 12:9">Hos 12:9</ref>; <ref loc="2CH 7:8">2Maũ 7:8</ref></char></note>Andũ arĩa othe maacookete kuuma kũrĩa maatwarĩtwo maatahwo makĩĩakĩra ithũnũ, magĩikara thĩinĩ wacio. Kuuma matukũ ma Joshua mũrũ wa Nuni nginya mũthenya ũcio, andũ a Isiraeli matiakoretwo makũngũĩire gĩathĩ kĩu ta ũguo. Nakĩo gĩkeno kĩao kĩarĩ kĩnene mũno.</para>
+  <para style="p">
+    <verse number="18" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 31:11">Gũcook 31:11</ref>; <ref loc="EZR 3:4">Ezar 3:4</ref></char>
+    </note>Mũthenya o mũthenya, kuuma mũthenya wa mbere nginya wa mũthia, Ezara nĩathomaga Ibuku rĩa Watho wa Ngai. Nao nĩmakũngũĩire gĩathĩ kĩu mĩthenya mũgwanja, na mũthenya wa kanana, kũringana na watho, gũkĩgĩa na kĩũngano.</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Andũ a Isiraeli Kuumbũra Mehia Mao</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 26:40-45">Alaw 26:40-45</ref>; <ref loc="JOS 7:6">Josh 7:6</ref></char>
+    </note>Mweri-inĩ o ro ũcio, mũthenya wa mĩrongo ĩĩrĩ na ĩna, andũ a Isiraeli makĩũngana hamwe mehingĩte kũrĩa irio na makehumba nguo cia makũnia, o na makeitĩrĩria tĩĩri mĩtwe yao. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:2 </char><char style="xt" closed="false"><ref loc="NEH 13:3">Neh 13:3</ref>, <ref loc="NEH 13:30">30</ref>; <ref loc="EZR 10:11">Ezar 10:11</ref></char></note>Arĩa maarĩ a rũciaro rwa andũ a Isiraeli nĩmeyamũranĩtie na ageni othe. Makĩrũgama o andũ handũ hao, makiumbũra mehia mao na waganu wa maithe mao. <verse number="3" style="v"/>Makĩrũgama o ro hau maarĩ, magĩthoma Ibuku rĩa Watho wa Jehova Ngai wao ihinda rĩa gĩcunjĩ gĩa kana kĩa mũthenya, na magĩtũmĩra gĩcunjĩ o kĩngĩ gĩa kana makiumbũra mehia na magĩthathaiyagia Jehova Ngai wao. <verse number="4" style="v"/>Na rĩrĩ, ngathĩ-inĩ nĩ haarũgamĩte Alawii, nĩo Jeshua, na Bani, na Kadimieli, na Shebania, na Buni, na Sherebia, na Bani, na Kenani, nao magakayagĩra Jehova Ngai wao na mĩgambo maanĩrĩire.</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 78:4">Thab 78:4</ref>; <ref loc="2SA 7:26">2Sam 7:26</ref></char>
+    </note>Nao Alawii nĩo Jeshua, na Kadimieli, na Bani, na Hashabineia, na Sherebia, na Hodia, na Shebania, na Pethahia, makiuga atĩrĩ, “Rũgamai mũgooce Jehova Ngai wanyu, ũcio ũtũũraga tene na tene.”</para>
+  <para style="b"/>
+  <para style="pm">“Kũrathimwo nĩ rĩĩtwa rĩaku rĩrĩ riiri, narĩo rĩrotũũgĩrio gũkĩra ũgooci na irathimo ciothe. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:6 </char><char style="xt" closed="false"><ref loc="GEN 1:1">Kĩam 1:1</ref>; <ref loc="JON 1:9">Jon 1:9</ref>; <ref loc="ACT 4:24">Atũm 4:24</ref></char></note>Wee wiki nowe Jehova. Nĩwe wombire igũrũ, o igũrũ kũrĩa kũraya mũno, na ũkĩũmba mbũtũ cia njata ciakuo, na thĩ na kĩrĩa gĩothe kĩrĩ kuo, na maria na indo ciothe iria irĩ thĩinĩ wamo. Nĩwe ũheaga indo ciothe muoyo, nacio mbũtũ cia igũrũ nĩigũthathaiyagia.</para>
+  <para style="pm">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 17:5">Kĩam 17:5</ref>
+      </char>
+    </note>“Wee nĩwe Jehova Ngai, ũrĩa wathuurire Aburamu ũkĩmũruta Uri-ya-Akalidei na ũkĩmũtua rĩĩtwa rĩngĩ Iburahĩmu. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:8 </char><char style="xt" closed="false"><ref loc="JOS 21:45">Josh 21:45</ref>; <ref loc="GEN 15:6">Kĩam 15:6</ref></char></note>Nĩwonire atĩ ngoro yake nĩyakwĩhokete, nawe ũkĩgĩa na kĩrĩkanĩro nake atĩ nĩũkahe njiaro ciake bũrũri wa Akaanani, na wa Ahiti, na wa Aamori, na wa Aperizi, na wa Ajebusi, na wa Agirigashi. Nĩũhingĩtie kĩĩranĩro gĩaku nĩ tondũ ũrĩ mũthingu.</para>
+  <para style="pm">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 14:10-30">Thaam 14:10-30</ref>
+      </char>
+    </note>“Nĩwonire ũrĩa maithe maitũ ma tene maathĩĩnĩkire marĩ bũrũri wa Misiri; ũkĩigua kĩrĩro kĩao marĩ hau Iria-inĩ Itune. <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:10 </char><char style="xt" closed="false"><ref loc="EXO 10:1">Thaam 10:1</ref>; <ref loc="NUM 6:27">Ndar 6:27</ref></char></note>Ũkĩringa ciama na morirũ, na ũgĩũkĩrĩra Firaũni, na anene ake othe, na andũ a bũrũri wake othe, nĩgũkorwo nĩwamenyete ũrĩa andũ a Misiri metĩĩaga makĩmahinyĩrĩria. Nawe ũkĩĩgĩĩra igweta, rĩrĩa rĩtũũraga nginya ũmũthĩ. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:11 </char><char style="xt" closed="false"><ref loc="PSA 78:13">Thab 78:13</ref>; <ref loc="HEB 11:29">Ahib 11:29</ref></char></note>Nĩwagayanirie Iria Itune mbere yao, nĩ ũndũ ũcio magĩtuĩkanĩria iria gatagatĩ harĩa haatuĩkĩte thĩ nyũmũ, no arĩa maamaingatithĩtie ũkĩmaikia kũu kũriku o ta ihiga rĩikĩtio maaĩ-inĩ mariku mũno. <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:12 </char><char style="xt" closed="false"><ref loc="EXO 13:21">Thaam 13:21</ref></char></note>Mũthenya wamatongoragia na gĩtugĩ gĩa itu, naguo ũtukũ ũkamatongoria na gĩtugĩ kĩa mwaki gĩa kũmamũrĩkĩra njĩra ĩrĩa mekũgera.</para>
+  <para style="pm">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 19:11">Thaam 19:11</ref>; <ref loc="PSA 119:137">Thab 119:137</ref></char>
+    </note>“Nĩwaikũrũkire Kĩrĩma-inĩ gĩa Sinai, ũkĩmaarĩria kuuma igũrũ. Nĩwamaheire mĩtabarĩre na mawatho ma kĩhooto na magĩrĩru, na kĩrĩra gĩaku gĩa kũrũmĩrĩrwo, o na maathani mega. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:14 </char><char style="xt" closed="false"><ref loc="GEN 2:3">Kĩam 2:3</ref>; <ref loc="EXO 20:8-11">Thaam 20:8-11</ref></char></note>Nĩwamamenyithirie Thabatũ yaku theru na ũkĩmahe maathani, na kĩrĩra gĩaku gĩa kũrũmĩrĩrwo, na mawatho kũgerera kanua ka Musa ndungata yaku. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:15 </char><char style="xt" closed="false"><ref loc="PSA 78:24-25">Thab 78:24-25</ref>; <ref loc="JHN 6:31">Joh 6:31</ref></char></note>Hĩndĩ ya ngʼaragu nĩwamaheire irio kuuma igũrũ, na rĩrĩa maarĩ anyootu ũkĩmahe maaĩ kuuma rwaro-inĩ rwa ihiga; wamaathire mathiĩ makegwatĩre bũrũri ũrĩa wehĩtĩte woete guoko na igũrũ atĩ nĩũkamahe.</para>
+  <para style="pm">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 3:9">Thaam 3:9</ref>; <ref loc="DEU 1:26-33">Gũcook 1:26-33</ref>; <ref loc="DEU 31:29">31:29</ref></char>
+    </note>“No rĩrĩ, maithe maitũ ma tene magĩĩtĩĩa na makĩũmia ngoro ciao, makĩaga gwathĩkĩra maathani maku. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:17 </char><char style="xt" closed="false"><ref loc="JDG 8:34">Atiir 8:34</ref>; <ref loc="PSA 77:11">Thab 77:11</ref>; <ref loc="EZK 5:6">Ezek 5:6</ref></char></note>Makĩrega kũigua na makĩaga kũririkana ciama iria waringĩte gatagatĩ-inĩ kao. Nĩmoomirie ngingo, na tondũ wa ũremi wao magĩĩthuurĩra mũtongoria nĩgeetha macooke ũkombo-inĩ wao. No rĩrĩ, we ũrĩ Ngai ũrekanagĩra mehia, na ũrĩ mũtugi na mũigua tha, ndũhiũhaga kũrakara na ũiyũrĩtwo nĩ wendo. Nĩ ũndũ ũcio ndwamatiganĩirie, <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:18 </char><char style="xt" closed="false"><ref loc="EXO 32:4">Thaam 32:4</ref></char></note>o na rĩrĩa methondekeire mũhianano wa njaũ, makiuga atĩrĩ, ‘Ĩno nĩyo ngai yanyu ĩrĩa yamũrutire bũrũri wa Misiri,’ kana o na rĩrĩa meekire maũndũ mooru mũno ma gũkũruma.</para>
+  <para style="pm">
+    <verse number="19" style="v"/>“Tondũ wa tha ciaku nyingĩ, ndwamatiganĩirie kũu werũ-inĩ. Gĩtugĩ gĩa itu gĩtiagire kũmatongoria njĩra-inĩ yao mũthenya, kana gĩtugĩ kĩa mwaki gĩkĩaga kũmamũrĩkĩra ũtukũ njĩra ĩrĩa mekũgerera. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:20 </char><char style="xt" closed="false"><ref loc="NUM 9:17">Ndar 9:17</ref>; <ref loc="EXO 16:15">Thaam 16:15</ref></char></note>Wamaheire Roho waku mwega amarutage. Ndwagire kũmahe mana marĩe, kana ũkĩaga kũmahe maaĩ maanyoota. <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:21 </char><char style="xt" closed="false"><ref loc="DEU 2:7">Gũcook 2:7</ref></char></note>Ihinda rĩa mĩaka mĩrongo ĩna nĩwamatũũririe werũ-inĩ; matiagire kĩndũ o nakĩ, ningĩ nguo ciao itiigana gũthira, kana magũrũ mao makĩimba.</para>
+  <para style="pm">
+    <verse number="22" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="NUM 21:21">Ndar 21:21</ref>
+      </char>
+    </note>“Nĩwamaheire mothamaki na ndũrĩrĩ, ũkĩmagaĩra o nginya mĩhaka-inĩ ya kũraya. Magĩtaha bũrũri wa Sihoni mũthamaki wa Heshiboni, na bũrũri wa Ogu mũthamaki wa Bashani. <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:23 </char><char style="xt" closed="false"><ref loc="GEN 12:2">Kĩam 12:2</ref></char></note>Waingĩhirie ariũ ao o ta njata cia matu-inĩ na ũkĩmakinyia bũrũri ũrĩa werĩte maithe mao matoonye makawĩgwatĩre ũtuĩke wao. <verse number="24" style="v"/>Ariũ ao nĩmatoonyire, makĩĩgwatĩra bũrũri ũcio. Ũgĩtooria andũ a Kaanani arĩa maatũũraga bũrũri ũcio mbere yao; ũkĩneana andũ a Kaanani kũrĩ o, hamwe na athamaki ao na andũ a bũrũri ũcio, ũkĩmaneana moko-inĩ mao meke nao o ũrĩa mangĩendire. <verse number="25" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:25 </char><char style="xt" closed="false"><ref loc="DEU 6:10-12">Gũcook 6:10-12</ref>; <ref loc="PSA 23:6">Thab 23:6</ref></char></note>Nĩmatunyanire matũũra maarĩ mairigĩre na thingo cia hinya, na mĩgũnda mĩnoru, makĩĩgwatĩra nyũmba ciaiyũrĩte indo njega cia mĩthemba yothe, na ithima iria cienjetwo, na mĩgũnda ya mĩthabibũ, na mĩgũnda ya mĩtamaiyũ, na mĩtĩ mĩingĩ mũno ya matunda. Makĩrĩa, nginya makĩhũũna na makĩagĩra mĩĩrĩ; magĩkenera wega waku mũingĩ.</para>
+  <para style="pm">
+    <verse number="26" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:26 </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 14:9">1Ath 14:9</ref>; <ref loc="MAT 21:35-36">Math 21:35-36</ref></char>
+    </note>“No nĩmagire gwathĩka, magĩkũremera, na makĩhutatĩra watho waku. Nĩmooragire anabii aku arĩa maamataaraga nĩguo mamacookie kũrĩ we; magĩĩka maũndũ mooru mũno ma gũkũruma. <verse number="27" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:27 </char><char style="xt" closed="false"><ref loc="NUM 25:17">Ndar 25:17</ref>; <ref loc="JDG 2:14">Atiir 2:14</ref></char></note>Nĩ ũndũ ũcio, ũkĩmaneana moko-inĩ ma thũ ciao, nacio ikĩmahinyĩrĩria. No rĩrĩa maahinyĩrĩirio, magĩgũkaĩra. Ũkĩmaigua kuuma igũrũ, na tondũ wa tha ciaku nyingĩ ũkĩmahe andũ a kũmahonokia, nao makĩmateithũra kuuma moko-inĩ ma thũ ciao.</para>
+  <para style="pm">
+    <verse number="28" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:28 </char>
+      <char style="xt" closed="false">
+        <ref loc="JDG 2:17">Atiir 2:17</ref>; <ref loc="PSA 106:43">Thab 106:43</ref></char>
+    </note>“No maarĩkia kũgĩa na ũhurũko, magĩcookerera gwĩka maũndũ mooru maitho-inĩ maku. Hĩndĩ ĩyo ũkĩmatiganĩria moko-inĩ ma thũ ciao nĩgeetha imaathe. Na rĩrĩa maagũkaĩire rĩngĩ, ũkĩmaigua ũrĩ o kũu igũrũ, na tondũ wa tha ciaku nĩwamahonokagia kaingĩ.</para>
+  <para style="pm">
+    <verse number="29" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:29 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 30:16">Gũcook 30:16</ref>; <ref loc="ZEC 7:11-12">Zek 7:11-12</ref></char>
+    </note>“Nĩwamataarire macookerere watho waku, no-o magĩĩtĩĩa na makĩrega gwathĩkĩra maathani maku. Makĩĩhia nĩkũregana na mawatho maku marĩa mangĩtũũria mũndũ muoyo angĩmaathĩkĩra. Nĩ ũndũ wa kũngʼathia, magĩkũhutatĩra, makĩũmia ngingo, na makĩrega gũkũigua. <verse number="30" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:30 </char><char style="xt" closed="false"><ref loc="2KI 17:13-18">2Ath 17:13-18</ref>; <ref loc="JER 16:11">Jer 16:11</ref></char></note>Nĩwamakirĩrĩirie mĩaka mĩingĩ. Na ũndũ wa Roho waku, nĩwamakaanagia na tũnua twa anabii aku. No matiigana gũkũigua, na nĩ ũndũ ũcio ũkĩmaneana moko-inĩ ma ndũrĩrĩ iria maariganĩtie nacio. <verse number="31" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:31 </char><char style="xt" closed="false"><ref loc="ISA 48:9">Isa 48:9</ref>; <ref loc="ISA 65:9">65:9</ref>; <ref loc="DEU 4:31">Gũcook 4:31</ref></char></note>No tondũ wa tha ciaku nyingĩ, ndwamaniinire kana ũkĩmatiganĩria, nĩgũkorwo ũrĩ Mũrungu mũtugi na mũigua tha.</para>
+  <para style="pm">
+    <verse number="32" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:32 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 9:19">Ayub 9:19</ref>; <ref loc="1KI 8:33">1Ath 8:33</ref></char>
+    </note>“Na rĩu-rĩ, Wee Ngai witũ, Mũrungu mũnene ũrĩ hinya na wa gwĩtigĩrwo, o wee ũhingagia kĩrĩkanĩro gĩaku kĩa wendo, ndũkareke moritũ maya moneke arĩ ũndũ mũnini maitho-inĩ maku, moritũ maya matũkorete, na magakora athamaki aitũ na atongoria aitũ, na magakora athĩnjĩri-Ngai na anabii aitũ, na magakora maithe maitũ na andũ aku othe, kuuma matukũ ma athamaki a Ashuri nginya ũmũthĩ. <verse number="33" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:33 </char><char style="xt" closed="false"><ref loc="GEN 18:25">Kĩam 18:25</ref>; <ref loc="DAN 9:7-8">Dan 9:7-8</ref>, <ref loc="DAN 9:14">14</ref></char></note>Maũndũ-inĩ macio mothe matũkorete, wee ũkoretwo ũrĩ na kĩhooto; wĩkĩte maũndũ na wĩhokeku, o rĩrĩa ithuĩ tũhĩtĩtie. <verse number="34" style="v"/>Athamaki aitũ, na atongoria aitũ, na athĩnjĩri-Ngai aitũ na maithe maitũ, matiarũmĩrĩire watho waku; matiathikĩrĩirie maathani maku kana mataaro marĩa wamaheire. <verse number="35" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:35 </char><char style="xt" closed="false"><ref loc="ISA 63:7">Isa 63:7</ref>; <ref loc="DEU 28:45-48">Gũcook 28:45-48</ref></char></note>O na rĩrĩa maarĩ ũthamaki-inĩ wao, magĩkenagĩra wega waku mũnene bũrũri-inĩ ũcio mwariĩ na mũnoru ũrĩa wamaheete, matiagũtungatĩire kana magĩtigana na njĩra ciao cia waganu.</para>
+  <para style="pm">
+    <verse number="36" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:36 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 9:9">Ezar 9:9</ref>
+      </char>
+    </note>“No rĩrĩ, ũmũthĩ ũyũ tũrĩ ngombo, ngombo bũrũri-inĩ ũrĩa waheire maithe maitũ ma tene nĩguo marĩĩage matunda maguo na indo iria ingĩ njega ikũraga kuo. <verse number="37" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:37 </char><char style="xt" closed="false"><ref loc="DEU 28:33">Gũcook 28:33</ref>; <ref loc="LAM 5:5">Maca 5:5</ref></char></note>Tondũ wa mehia maitũ, magetha maguo maingĩ mathiiaga kũrĩ athamaki arĩa ũigĩte igũrũ riitũ. Maathaga mĩĩrĩ iitũ na ngʼombe ciitũ o ũrĩa mekwenda. Tũrĩ ahinyĩrĩrie mũno.</para>
+  <para style="s1">Kĩrĩko kĩa Andũ</para>
+  <para style="p">
+    <verse number="38" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:38 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 23:16">2Maũ 23:16</ref>; <ref loc="ISA 44:5">Isa 44:5</ref></char>
+    </note>“Nĩ ũndũ wa ũguo-rĩ, nĩtũgũthondeka kĩrĩko gĩa gũtũũra na twandĩkanĩre, nao atongoria aitũ, na Alawii aitũ na athĩnjĩri-Ngai aitũ makĩhũũre mũhũũri.”</para>
+  <para style="b"/>
+  <chapter number="10" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Arĩa meekĩrire kĩrĩkanĩro kĩu mũhũũri maarĩ:</para>
+  <para style="b"/>
+  <para style="li1">Nehemia ũrĩa warĩ barũthi wa kũu, mũrũ wa Hakalia,</para>
+  <para style="b"/>
+  <para style="li1">na Zedekia, <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:2 </char><char style="xt" closed="false"><ref loc="EZR 2:2">Ezar 2:2</ref></char></note>na Seraia, na Azaria, na Jeremia,</para>
+  <para style="li1">
+    <verse number="3" style="v"/>na Pashuru, na Amaria, na Malikija,</para>
+  <para style="li1">
+    <verse number="4" style="v"/>na Hatushu, na Shebania, na Maluku,</para>
+  <para style="li1">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 24:8">1Maũ 24:8</ref>
+      </char>
+    </note>na Harimu, na Meremothu, na Obadia,</para>
+  <para style="li1">
+    <verse number="6" style="v"/>na Danieli, na Ginethoni, na Baruku,</para>
+  <para style="li1">
+    <verse number="7" style="v"/>na Meshulamu, na Abija, na Mijamini,</para>
+  <para style="li1">
+    <verse number="8" style="v"/>na Maazia, na Biligai, na Shemaia.</para>
+  <para style="li2">Acio nĩo maarĩ athĩnjĩri-Ngai.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="9" style="v"/>Nao Alawii maarĩ:</para>
+  <para style="b"/>
+  <para style="li1">Jeshua mũrũ wa Azania,</para>
+  <para style="li2">na Binui wa ariũ a Henadadi, na Kadimieli,</para>
+  <para style="li1">
+    <verse number="10" style="v"/>nao athiritũ ao maarĩ:</para>
+  <para style="li2">Shebania, na Hodia, na Kelita, na Pelaia, na Hanani,</para>
+  <para style="li1">
+    <verse number="11" style="v"/>na Mika, na Rehobu, na Hashabia,</para>
+  <para style="li1">
+    <verse number="12" style="v"/>na Zakuri, na Sherebia, na Shebania,</para>
+  <para style="li1">
+    <verse number="13" style="v"/>na Hodia, na Bani, na Beninu.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="14" style="v"/>Nao atongoria a andũ maarĩ:</para>
+  <para style="b"/>
+  <para style="li2">Paroshu, na Pahathu-Moabi, na Elamu, na Zatu, na Bani,</para>
+  <para style="li1">
+    <verse number="15" style="v"/>na Buni, na Azigadi, na Bebai,</para>
+  <para style="li1">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 8:6">Ezar 8:6</ref>
+      </char>
+    </note>na Adonija, na Bigivai, na Adini,</para>
+  <para style="li1">
+    <verse number="17" style="v"/>na Ateri, na Hezekia, na Azuri,</para>
+  <para style="li1">
+    <verse number="18" style="v"/>na Hodia, na Hashumu, na Bezai,</para>
+  <para style="li1">
+    <verse number="19" style="v"/>na Harifu, na Anathothu, na Nebai,</para>
+  <para style="li1">
+    <verse number="20" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:20 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 24:15">1Maũ 24:15</ref>
+      </char>
+    </note>na Magipiashu, na Meshulamu, na Heziri,</para>
+  <para style="li1">
+    <verse number="21" style="v"/>na Meshezabeli, na Zadoku, na Jadua,</para>
+  <para style="li1">
+    <verse number="22" style="v"/>na Pelatia, na Hanani, na Anaia,</para>
+  <para style="li1">
+    <verse number="23" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:23 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 7:2">Neh 7:2</ref>
+      </char>
+    </note>na Hoshea, na Hanania, na Hashubu,</para>
+  <para style="li1">
+    <verse number="24" style="v"/>na Haloheshu, na Piliha, na Shobeku,</para>
+  <para style="li1">
+    <verse number="25" style="v"/>na Rehumu, na Hashabina, na Maaseia,</para>
+  <para style="li1">
+    <verse number="26" style="v"/>na Ahia, na Hanani, na Anani,</para>
+  <para style="li1">
+    <verse number="27" style="v"/>na Maluku, na Harimu, na Baana.</para>
+  <para style="b"/>
+  <para style="pm">
+    <verse number="28" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:28 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 135:1">Thab 135:1</ref>; <ref loc="NEH 9:2">Neh 9:2</ref></char>
+    </note>“Andũ arĩa angĩ, nĩo athĩnjĩri-Ngai, na Alawii, na aikaria a ihingo, na aini, o na ndungata cia hekarũ na arĩa othe meyamũranĩtie na andũ arĩa maariganĩtie nao nĩguo maathĩkĩre Watho wa Ngai, marĩ hamwe na atumia ao, na aanake, na airĩtu ao othe arĩa mangĩhota gũtaũkĩrwo nĩ maũndũ, <verse number="29" style="v"/>andũ aya othe maanyiitana na ariũ a ithe wao arĩa marĩ igweta, na meeohe na kĩrumi na mwĩhĩtwa atĩ nĩmarĩrũmagĩrĩra Watho wa Ngai ũrĩa waheirwo Musa ndungata ya Ngai, na mamenyagĩrĩre gwathĩkĩra maathani mothe, na mawatho, na kĩrĩra gĩa kũrũmĩrĩrwo kĩa Jehova Mwathani witũ.</para>
+  <para style="pm">
+    <verse number="30" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:30 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 34:16">Thaam 34:16</ref>
+      </char>
+    </note>“Tweranĩra atĩ tũtikaheana airĩtu aitũ mahikio nĩ andũ arĩa matũrigiicĩirie o na kana aanake aitũ mahikie airĩtu ao.</para>
+  <para style="pm">
+    <verse number="31" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:31 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 23:11">Thaam 23:11</ref>; <ref loc="DEU 15:1">Gũcook 15:1</ref></char>
+    </note>“Rĩrĩa andũ a mabũrũri marĩa tũriganĩtie marĩrehaga indo na ngano ya kwendia mũthenya wa Thabatũ, tũtikamagũrĩra mũthenya ũcio wa Thabatũ o na kana mũthenya ũngĩ o wothe mwamũre. O mwaka wa mũgwanja wakinya tũtirĩrĩmaga mĩgũnda iitũ, na nĩtũrĩĩrekanagĩra mathiirĩ mothe.</para>
+  <para style="pm">
+    <verse number="32" style="v"/>“Nĩtuoya mũrigo wa kũhingia mawatho ma kũheanaga gĩcunjĩ gĩa gatatũ gĩa cekeri<note caller="+" style="f"><char style="fr" closed="false">10:32 </char><char style="ft" closed="false">nĩ ta giramu 4</char></note> o mwaka nĩ ũndũ wa wĩra wa nyũmba ya Ngai witũ: <verse number="33" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:33 </char><char style="xt" closed="false"><ref loc="LEV 24:6">Alaw 24:6</ref>; <ref loc="2CH 24:5">2Maũ 24:5</ref></char></note>nĩ ũndũ wa mĩgate ĩrĩa ĩigagwo metha-inĩ; nĩ ũndũ wa mahinda ma maruta ma mũtu na ma njino; na nĩ ũndũ wa maruta marĩa marutagwo mũthenya wa Thabatũ, na wa ciathĩ cia Karũgamo ka Mweri, na wa ciathĩ iria ciathanĩtwo; nĩ ũndũ wa maruta marĩa maamũre; nĩ ũndũ wa maruta ma kũhoroheria mehia ma Isiraeli; o na nĩ ũndũ wa mawĩra mothe ma nyũmba ya Ngai witũ.</para>
+  <para style="pm">
+    <verse number="34" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:34 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 16:8">Alaw 16:8</ref>; <ref loc="NEH 13:31">Neh 13:31</ref></char>
+    </note>“Ithuĩ athĩnjĩri-Ngai, na Alawii o na andũ aya angĩ nĩtũcuukĩte mĩtĩ tũgatuanĩra rĩrĩa o nyũmba iitũ ĩrĩĩrehaga ngũ nyũmba-inĩ ya Ngai witũ, cia gũikaragia mwaki wakanĩte kĩgongona-inĩ kĩa Jehova Ngai witũ mahinda marĩa matuanĩirwo o mwaka, o ta ũrĩa kwandĩkĩtwo Watho-inĩ.</para>
+  <para style="pm">
+    <verse number="35" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:35 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 22:29">Thaam 22:29</ref>; <ref loc="NUM 18:12">Ndar 18:12</ref></char>
+    </note>“O na nĩtuoya mũrigo wa kũrehaga maciaro ma mbere ma mĩgũnda iitũ na ma mũtĩ o wothe wa matunda nyũmba-inĩ ya Jehova o mwaka.</para>
+  <para style="pm">
+    <verse number="36" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:36 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 13:2">Thaam 13:2</ref>
+      </char>
+    </note>“O ta ũrĩa kwandĩkĩtwo Watho-inĩ, nĩtũrĩĩrehaga marigithathi maitũ ma aanake, na ma ngʼombe, na ma ndũũru cia ngʼombe na cia mbũri ciitũ gũkũ nyũmba-inĩ ya Ngai witũ kũrĩ athĩnjĩri-Ngai arĩa matungataga kuo.</para>
+  <para style="pm">
+    <verse number="37" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:37 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 27:30">Alaw 27:30</ref>; <ref loc="EZK 44:30">Ezek 44:30</ref></char>
+    </note>“O na ningĩ nĩtũrĩĩrehaga thĩinĩ wa makũmbĩ ma nyũmba ya Ngai, tũnengere athĩnjĩri-Ngai mũtu wa mbere, na magongona maitũ ma ngano ma mbere, na maruta ma matunda ma mĩtĩ iitũ yothe ma mbere, na ma ndibei iitũ ya mũhihano o na ma maguta. O na nĩtũrĩĩrehaga gĩcunjĩ gĩa ikũmi kĩa maciaro ma mĩgũnda iitũ, tũkanengera Alawii, nĩgũkorwo nĩ Alawii maamũkagĩra icunjĩ cia ikũmi kuuma matũũra mothe kũrĩa tũrutaga wĩra. <verse number="38" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:38 </char><char style="xt" closed="false"><ref loc="NUM 18:26">Ndar 18:26</ref></char></note>Mũthĩnjĩri-Ngai wa rũciaro rwa Harũni nĩarĩkoragwo ho Alawii makĩamũkĩra gĩcunjĩ kĩu gĩa ikũmi, nao Alawii nĩmarĩĩrehaga gĩcunjĩ gĩa ikũmi kĩa indo ciothe makũmbĩ-inĩ ma kĩgĩĩna kĩa nyũmba ya Ngai witũ.<note caller="+" style="f"><char style="fr" closed="false">10:38 </char><char style="ft" closed="false">Nĩ kwarĩ na tũnyũmba hekarũ-inĩ kũrĩa indo iria theru ciaigagwo.</char></note> <verse number="39" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:39 </char><char style="xt" closed="false"><ref loc="NEH 13:11">Neh 13:11</ref>, <ref loc="NEH 13:12">12</ref></char></note>Andũ a Isiraeli, hamwe na Alawii, nĩmarĩĩrehaga maruta mao ma ngano, na ndibei ya mũhihano, na maguta thĩinĩ wa makũmbĩ marĩa indo cia handũ-harĩa-haamũre ciigagwo, na kũrĩa athĩnjĩri-Ngai, arĩa maratungata, na aikaria a ihingo, na aini maikaraga.</para>
+  <para style="pm">“Tũtirĩrekagĩrĩria nyũmba ya Ngai witũ.”</para>
+  <chapter number="11" style="c"/>
+  <para style="s1">Atũũri Eerũ a Jerusalemu</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 7:4">Neh 7:4</ref>; <ref loc="ISA 48:2">Isa 48:2</ref></char>
+    </note>Na rĩrĩ, atongoria a andũ magĩtũũra Jerusalemu, nao andũ acio angĩ magĩcuuka mĩtĩ nĩguo mathuure mũndũ ũmwe harĩ o andũ ikũmi atuĩke wa gũtũũra Jerusalemu, itũũra rĩrĩa itheru, nao acio angĩ kenda megũtigara mathiĩ magatũũre matũũra-inĩ mao. <verse number="2" style="v"/>Andũ nĩmagathĩrĩirie andũ arĩa othe meerutĩire gũtũũra Jerusalemu na kwĩyendera.</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 2:1">Ezar 2:1</ref>
+      </char>
+    </note>Aya nĩo atongoria a bũrũri arĩa maatũũrire Jerusalemu (na rĩrĩ, andũ amwe a Isiraeli, na athĩnjĩri-Ngai, na Alawii, na ndungata cia hekarũ, na njiaro cia ndungata cia Solomoni maatũũraga matũũra-inĩ ma Juda, o mũndũ gĩthaka-inĩ gĩake thĩinĩ wa matũũra mao. <verse number="4" style="v"/>O na andũ angĩ kuuma Juda na Benjamini nĩmatũũraga Jerusalemu):</para>
+  <para style="b"/>
+  <para style="m">Kuuma njiaro-inĩ cia Juda maarĩ:</para>
+  <para style="b"/>
+  <para style="mi">Athaia mũrũ wa Uzia, mũrũ wa Zekaria, mũrũ wa Amaria, mũrũ wa Shefatia, mũrũ wa Mahalaleli, wa rũciaro rwa Perezu; <verse number="5" style="v"/>na Maaseia mũrũ wa Baruku, mũrũ wa Koli-Hoze, mũrũ wa Hazaia, mũrũ wa Adaia, mũrũ wa Joiaribu, mũrũ wa Zekaria, wa rũciaro rwa Mũshiloni. <verse number="6" style="v"/>Njiaro cia Perezu iria ciatũũraga Jerusalemu, arĩa maarĩ andũ njamba, mũigana wao warĩ andũ 468.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="7" style="v"/>Kuuma njiaro-inĩ cia Benjamini maarĩ:</para>
+  <para style="b"/>
+  <para style="mi">Salu mũrũ wa Meshulamu, mũrũ wa Joedi, mũrũ wa Pedaia, mũrũ wa Kolaia, mũrũ wa Maaseia, mũrũ wa Ithieli, mũrũ wa Jeshaia, <verse number="8" style="v"/>na arũmĩrĩri ake, Gabai na Salai, othe maarĩ andũ 928. <verse number="9" style="v"/>Joeli mũrũ wa Zikiri nĩwe warĩ mũrũgamĩrĩri wao ũrĩa mũnene, nake Juda mũrũ wa Hasenua nĩwe warũgamĩrĩire Gĩcigo gĩa Keerĩ kĩa itũũra rĩrĩa inene.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="10" style="v"/>Nao athĩnjĩri-Ngai maarĩ:</para>
+  <para style="b"/>
+  <para style="mi">Jedaia; mũrũ wa Joiaribu; Jakini; <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:11 </char><char style="xt" closed="false"><ref loc="2KI 25:18">2Ath 25:18</ref>; <ref loc="EZR 2:2">Ezar 2:2</ref></char></note>Sheraia mũrũ wa Hilikia, mũrũ wa Meshulamu, mũrũ wa Zadoku, mũrũ wa Meraiothu, mũrũ wa Ahitubu, mũrori wa maũndũ ma nyũmba ya Ngai, <verse number="12" style="v"/>hamwe na athiritũ ao arĩa maarutaga wĩra wa hekarũ, maarĩ andũ 822; Adaia mũrũ wa Jerohamu, mũrũ wa Pelalia, mũrũ wa Amuzi, mũrũ wa Zekaria, mũrũ wa Pashuru, mũrũ wa Malikija, <verse number="13" style="v"/>hamwe na andũ a thiritũ yake arĩa maarĩ atongoria a nyũmba ciao, maarĩ andũ 242; Amashusai mũrũ wa Azareli, mũrũ wa Ahazai, mũrũ wa Meshilemothu, mũrũ wa Imeri, <verse number="14" style="v"/>na andũ a thiritũ yake arĩa maarĩ njamba, maarĩ andũ 128. Mũtongoria wao mũnene aarĩ Zabidieli mũrũ wa Hagedolimu.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="15" style="v"/>Na kuuma kũrĩ Alawii maarĩ:</para>
+  <para style="b"/>
+  <para style="mi">Shemaia mũrũ wa Hashubu, mũrũ wa Azirikamu, mũrũ wa Hashabia, mũrũ wa Buni; <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:16 </char><char style="xt" closed="false"><ref loc="EZR 10:15">Ezar 10:15</ref>; <ref loc="EZR 8:33">Ezar 8:33</ref></char></note>Shabethai na Jozabadu, arĩa maarĩ atongoria eerĩ a Alawii, na nĩo maaroraga wĩra wa nja wa nyũmba ya Ngai; <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:17 </char><char style="xt" closed="false"><ref loc="1CH 9:15">1Maũ 9:15</ref>; <ref loc="1CH 25:1">1Maũ 25:1</ref></char></note>Matania mũrũ wa Mika, mũrũ wa Zabedi, mũrũ wa Asafu, ũrĩa watongoragia mahooya ma gũcookeria Ngai ngaatho; Bakabukia ũrĩa warĩ wa keerĩ harĩ athiritũ ake: na Abada mũrũ wa Shamua, mũrũ wa Galali, mũrũ wa Jeduthuni. <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:18 </char><char style="xt" closed="false"><ref loc="REV 21:2">Kũg 21:2</ref></char></note>Alawii arĩa maarĩ thĩinĩ wa Itũũra rĩu itheru maarĩ andũ 284.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="19" style="v"/>Aikaria a ihingo maarĩ:</para>
+  <para style="b"/>
+  <para style="mi">Akubu, na Talimoni, na andũ a thiritũ yao, arĩa maarangagĩra ihingo, maarĩ andũ 172.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="20" style="v"/>Andũ a Isiraeli acio angĩ, hamwe na athĩnjĩri-Ngai na Alawii, maarĩ matũũra-inĩ mothe ma Juda, o mũndũ gĩthaka-inĩ kĩa maithe mao.</para>
+  <para style="p">
+    <verse number="21" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:21 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 2:43">Ezar 2:43</ref>; <ref loc="NEH 3:26">Neh 3:26</ref></char>
+    </note>Ndungata cia hekarũ ciatũũraga kĩrĩma-inĩ kĩa Ofeli, marũgamĩrĩirwo nĩ Ziha na Gishipa.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Mũtongoria mũnene wa Alawii kũu Jerusalemu aarĩ Uzi mũrũ wa Bani, mũrũ wa Hashabia, mũrũ wa Matania, mũrũ wa Mika. Uzi aarĩ ũmwe wa rũciaro rwa Asafu, arĩa maarĩ aini arĩa maarũgamĩrĩire wĩra wa nyũmba ya Ngai. <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:23 </char><char style="xt" closed="false"><ref loc="1CH 15:16">1Maũ 15:16</ref>; <ref loc="NEH 7:44">Neh 7:44</ref></char></note>Aini maarĩ watho-inĩ wa mũthamaki, ũrĩa wamatuagĩra wĩra wao wa o mũthenya.</para>
+  <para style="p">
+    <verse number="24" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:24 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 38:30">Kĩam 38:30</ref>
+      </char>
+    </note>Pethahia mũrũ wa Meshezabeli, wa rũciaro rwa Zera mũrũ wa Juda, aarĩ mũramati wa mũthamaki maũndũ-inĩ mothe makonainie na andũ.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Ha ũhoro wa tũtũũra na mĩgũnda yatuo-rĩ, andũ amwe a Juda maatũũraga Kiriathu-Ariba na matũũra marĩo marĩa marĩrigiicĩirie, na Diboni na matũũra marĩo, na Jekabizeeli na tũtũũra twarĩo, <verse number="26" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:26 </char><char style="xt" closed="false"><ref loc="JOS 15:28">Josh 15:28</ref>; <ref loc="GEN 21:14">Kĩam 21:14</ref></char></note>na kũu Jeshua, na Molada, na Bethi-Peleti, <verse number="27" style="v"/>na Hazari-Shuali, na Biri-Shiba na matũũra marĩo; <verse number="28" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:28 </char><char style="xt" closed="false"><ref loc="1SA 27:6">1Sam 27:6</ref></char></note>na Zikilagi, na Mekona na matũũra marĩo, <verse number="29" style="v"/>na Eni-Rimoni, na Zora, na Jaramuthu, <verse number="30" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:30 </char><char style="xt" closed="false"><ref loc="JOS 15:34">Josh 15:34</ref></char></note>na Zanoa, na Adulamu na tũtũũra twarĩo, na Lakishi na mĩgũnda ya rĩo, na Azeka na matũũra marĩo. Nĩ ũndũ ũcio maatũũraga kuuma Birishiba o nginya Kĩanda kĩa Hinomu.</para>
+  <para style="p">
+    <verse number="31" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:31 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOS 21:17">Josh 21:17</ref>; <ref loc="1SA 13:2">1Sam 13:2</ref></char>
+    </note>Njiaro cia Benjamini kuuma Geba ciatũũraga Mikimashi, na Aija, na Betheli na matũũra marĩo, <verse number="32" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:32 </char><char style="xt" closed="false"><ref loc="JOS 21:18">Josh 21:18</ref>; <ref loc="1SA 21:1">1Sam 21:1</ref></char></note>na kũu Anathothu, na Nobu na Anania, <verse number="33" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:33 </char><char style="xt" closed="false"><ref loc="JOS 11:1">Josh 11:1</ref>; <ref loc="2SA 4:3">2Sam 4:3</ref></char></note>na Hazoru, na Rama na Gitaimu, <verse number="34" style="v"/>na Hadidi, na Zeboimu na Nebalati, <verse number="35" style="v"/>na Lodi na Ono, na Kĩanda-inĩ kĩa Aturi.</para>
+  <para style="p">
+    <verse number="36" style="v"/>Amwe a ikundi cia Alawii a Juda maatũũrire Benjamini.</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">Athĩnjĩri-Ngai na Alawii</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 3:19">1Maũ 3:19</ref>; <ref loc="EZR 3:2">Ezar 3:2</ref></char>
+    </note>Aya nĩo athĩnjĩri-Ngai na Alawii arĩa maacookire hamwe na Zerubabeli mũrũ wa Shealitieli, na Jeshua:</para>
+  <para style="li1">Seraia, na Jeremia, na Ezara,<note caller="+" style="f"><char style="fr" closed="false">12:1 </char><char style="ft" closed="false">Ezara ũyũ tiwe Ezara ũrĩa mũthĩnjĩri-Ngai.</char></note></para>
+  <para style="li1">
+    <verse number="2" style="v"/>na Amaria, na Maluku, na Hatushu,</para>
+  <para style="li1">
+    <verse number="3" style="v"/>na Shekania, na Rehumu, na Meremothu,</para>
+  <para style="li1">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="ZEC 1:1">Zek 1:1</ref>; <ref loc="LUK 1:5">Luk 1:5</ref></char>
+    </note>na Ido, na Ginethoni, na Abija,</para>
+  <para style="li1">
+    <verse number="5" style="v"/>na Mijamini, na Maadia, na Biliga,</para>
+  <para style="li1">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 24:7">1Maũ 24:7</ref>
+      </char>
+    </note>na Shemaia, na Joiaribu, na Jedaia,</para>
+  <para style="li1">
+    <verse number="7" style="v"/>na Salu, na Amoku, na Hilikia, na Jedaia.</para>
+  <para style="m">Acio nĩo maarĩ atongoria a athĩnjĩri-Ngai na athiritũ ao, matukũ-inĩ macio ma Jeshua.</para>
+  <para style="p">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 2:2">Ezar 2:2</ref>; <ref loc="NEH 11:17">Neh 11:17</ref></char>
+    </note>Nao Alawii maarĩ Jeshua, na Binui, na Kadimieli, na Sherebia, na Juda, o na Matania, ũrĩa, marĩ hamwe na athiritũ ake, nĩwe warũgamĩrĩire arĩa maainaga nyĩmbo cia gũcookia ngaatho. <verse number="9" style="v"/>Bakabukia na Uni, athiritũ ao, maarũgamaga mangʼethanĩire nao magĩtungata.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Jeshua nĩwe warĩ ithe wa Joiakimu, nake Joiakimu aarĩ ithe wa Eliashibu, nake Eliashibu aarĩ ithe wa Joiada, <verse number="11" style="v"/>nake Joiada aarĩ ithe wa Jonathani, nake Jonathani aarĩ ithe wa Jadua.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Matukũ-inĩ ma Joiakimu, aya nĩo maarĩ atongoria a nyũmba cia athĩnjĩri-Ngai:</para>
+  <para style="li2">ya Seraia, aarĩ Meraia;</para>
+  <para style="li2">ya Jeremia, aarĩ Hanania;</para>
+  <para style="li1">
+    <verse number="13" style="v"/>ya Ezara, aarĩ Meshulamu;</para>
+  <para style="li2">ya Amaria, aarĩ Jehohanani;</para>
+  <para style="li1">
+    <verse number="14" style="v"/>ya Maluki, aarĩ Jonathani;</para>
+  <para style="li2">ya Shebania, aarĩ Jusufu;</para>
+  <para style="li1">
+    <verse number="15" style="v"/>ya Harimu, aarĩ Adina;</para>
+  <para style="li2">ya Meraiothu, aarĩ Helikai;</para>
+  <para style="li1">
+    <verse number="16" style="v"/>ya Ido, aarĩ Zekaria;</para>
+  <para style="li2">ya Ginethoni, aarĩ Meshulamu;</para>
+  <para style="li1">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:17 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CH 24:10">1Maũ 24:10</ref>
+      </char>
+    </note>ya Abija, aarĩ Zikiri;</para>
+  <para style="li2">ya Miniamini na Moadia, aarĩ Pilitai;</para>
+  <para style="li1">
+    <verse number="18" style="v"/>ya Biliga, aarĩ Shamua;</para>
+  <para style="li2">ya Shemaia, aarĩ Jehonathani;</para>
+  <para style="li1">
+    <verse number="19" style="v"/>ya Joiaribu, aarĩ Matenai;</para>
+  <para style="li2">ya Jedaia, aarĩ Uzi;</para>
+  <para style="li1">
+    <verse number="20" style="v"/>ya Salai, aarĩ Kalai;</para>
+  <para style="li2">ya Amoku, aarĩ Eberi;</para>
+  <para style="li1">
+    <verse number="21" style="v"/>ya Hilikia, aarĩ Hashabia;</para>
+  <para style="li2">na ya Jedaia, aarĩ Nethaneli.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Nao atongoria a nyũmba cia Alawii matukũ-inĩ ma Eliashibu, na Joiada, na Johanani, na Jadua, o ũndũ ũmwe na atongoria a athinjĩri-Ngai, nĩmandĩkirwo marĩĩtwa mao hĩndĩ ya wathani wa Dario ũrĩa Mũperisia. <verse number="23" style="v"/>Atongoria a nyũmba cia njiaro cia Lawi nginya hĩndĩ ya Johanani mũrũ wa Eliashibu o nao nĩmandĩkĩtwo ibuku-inĩ rĩa matukũ macio. <verse number="24" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:24 </char><char style="xt" closed="false"><ref loc="EZR 2:40">Ezar 2:40</ref>; <ref loc="2CH 8:14">2Maũ 8:14</ref></char></note>Nao atongoria a Alawii maarĩ Hashabia, na Sherebia, na Jeshua mũrũ wa Kadimieli, na athiritũ ao, arĩa maarũgamaga mamangʼetheire makĩina nyĩmbo cia kũgooca na cia gũcookia ngaatho, gĩkundi kĩmwe gĩkaamũkagĩria kĩrĩa kĩngĩ, kũringana na ũrĩa gwathanĩtwo nĩ Daudi mũndũ wa Ngai.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Matania, na Bakabukia, na Obadia, na Meshulamu, na Talimoni, na Akubu maarĩ aikaria a ihingo arĩa maarangagĩra makũmbĩ marĩa maarĩ ihingo-inĩ. <verse number="26" style="v"/>Maatungataga hĩndĩ ya Joiakimu mũrũ wa Jeshua, mũrũ wa Jozadaku, na hĩndĩ ya Nehemia ũrĩa warĩ barũthi, na hĩndĩ ya Ezara ũrĩa warĩ mũthĩnjĩri-Ngai na mwandĩki-marũa.</para>
+  <para style="s1">Kwamũrwo kwa Rũthingo rwa Jerusalemu</para>
+  <para style="p">
+    <verse number="27" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:27 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 20:5">Gũcook 20:5</ref>; <ref loc="PSA 92:3">Thab 92:3</ref></char>
+    </note>Hĩndĩ ya kwamũrwo kwa rũthingo rwa Jerusalemu, Alawii nĩmacaririo kuuma kũrĩa guothe maarĩ nĩguo moke Jerusalemu makũngũĩre kwamũrwo kũu marĩ na gĩkeno, na makĩinaga nyĩmbo cia gũcookia ngaatho, makĩinaga na thaani iria ihũũrithanagio, na inanda cia kĩnũbi, na cia mũgeeto. <verse number="28" style="v"/>Aini o nao nĩmacookanĩrĩirio hamwe kuuma ngʼongo iria ciathiũrũrũkĩirie Jerusalemu, magĩcookanĩrĩrio kuuma tũtũũra-inĩ twa Anetofathi, <verse number="29" style="v"/>na kuuma Bethi-Giligali, na kuuma mwena wa Geba na Azimavethu, nĩgũkorwo aini nĩmeyakĩire matũũra gũthiũrũrũkĩria Jerusalemu. <verse number="30" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:30 </char><char style="xt" closed="false"><ref loc="EXO 19:10">Thaam 19:10</ref>; <ref loc="JOB 1:5">Ayub 1:5</ref></char></note>Nao athĩnjĩri-Ngai na Alawii marĩkia gwĩtheria, magĩtheria andũ, na ihingo, o na rũthingo.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Atongoria a Juda nĩndameerire mahaice rũthingo-igũrũ. Ningĩ ngĩhe ikundi igĩrĩ nene cia aini wĩra wa gũcookia ngaatho. Gĩkundi kĩmwe gĩgĩthiĩ mwena wa ũrĩo kĩrĩ rũthingo-igũrũ, kĩerekeire Kĩhingo gĩa Kĩara-inĩ. <verse number="32" style="v"/>Hoshaia hamwe na nuthu ya atongoria a Juda makĩmarũmĩrĩra, <verse number="33" style="v"/>hamwe na Azaria, na Ezara, na Meshulamu, <verse number="34" style="v"/>na Juda, na Benjamini, na Shemaia, na Jeremia, <verse number="35" style="v"/>o ũndũ ũmwe na athĩnjĩri-Ngai amwe me na tũrumbeta, o na Zekaria mũrũ wa Jonathani, mũrũ wa Shemaia, mũrũ wa Matania, mũrũ wa Mikaia, mũrũ wa Zakuri, mũrũ wa Asafu, <verse number="36" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:36 </char><char style="xt" closed="false"><ref loc="1CH 15:16">1Maũ 15:16</ref>; <ref loc="EZR 7:6">Ezar 7:6</ref></char></note>na athiritũ ake, nĩo Shemaia, na Azareli, na Milalai, na Gilalai, na Maai, na Nethaneli, na Juda, na Hanani, marĩ na indo cia kũina nacio o ta ũrĩa gwathanĩtwo nĩ Daudi, mũndũ wa Ngai. Ezara ũrĩa mwandĩki-marũa nĩwe wamatongoretie. <verse number="37" style="v"/>Na rĩrĩ, kuuma Kĩhingo gĩa Gĩthima maathiire marũngĩrĩirie, makĩhaica rũthingo igũrũ na ngathĩ cia Itũũra rĩa Daudi, makĩhĩtũkĩra igũrũ rĩa nyũmba ya Daudi, o nginya Kĩhingo kĩa Maaĩ mwena wa irathĩro.</para>
+  <para style="p">
+    <verse number="38" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:38 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 3:11">Neh 3:11</ref>
+      </char>
+    </note>Gĩkundi gĩa keerĩ kĩa aini gĩgĩthiĩ kĩerekeire mwena wa ũmotho. Na niĩ ngĩmarũmĩrĩra kũu rũthingo igũrũ hamwe na nuthu ya andũ, tũkĩhĩtũkĩra Mũthiringo wa Mariiko ma Mwaki o nginya Rũthingo-inĩ Rwariĩ, <verse number="39" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:39 </char><char style="xt" closed="false"><ref loc="2KI 14:13">2Ath 14:13</ref>; <ref loc="2CH 33:14">2Maũ 33:14</ref></char></note>igũrũ rĩa Kĩhingo kĩa Efiraimu, na Kĩhingo kĩa Jeshana, na Kĩhingo gĩa Thamaki, na Mũthiringo wa Hananeli, na Mũthiringo wa Igana, nginya Kĩhingo-inĩ kĩa Ngʼondu. Makĩrũgama Kĩhingo-inĩ kĩa Mũrangĩri.</para>
+  <para style="p">
+    <verse number="40" style="v"/>Ikundi icio cierĩ cia aini cia gũcookia ngaatho igĩikara handũ ha cio thĩinĩ wa nyũmba ya Ngai, o na niĩ ngĩĩka o ũguo, hamwe na nuthu ya anene, <verse number="41" style="v"/>o ũndũ ũmwe na athĩnjĩri-Ngai, nĩo Eliakimu, na Maaseia, na Miniamini, na Mikaia, na Elioenai, na Zekaria, na Hanania marĩ na tũrumbeta twao, <verse number="42" style="v"/>o hamwe na Maaseia, na Shemaia, na Eleazaru, na Uzi, na Jehohanani, na Malikija, na Elamu, na Ezeri. Nao aini maatongoragio nĩ Jezerahia. <verse number="43" style="v"/>Na mũthenya ũcio nĩmarutire magongona manene, makĩrũũhagia tondũ Ngai nĩamaheete gĩkeno kĩnene. O nao andũ-a-nja na ciana magĩkena. Mbugĩrĩrio ya gĩkeno kũu Jerusalemu nĩyaiguĩkaga kũndũ kũraya.</para>
+  <para style="p">
+    <verse number="44" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:44 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 13:4">Neh 13:4</ref>, <ref loc="NEH 13:13">13</ref>; <ref loc="DEU 18:8">Gũcook 18:8</ref></char>
+    </note>Mahinda-inĩ macio nĩ gwathuurirwo andũ marũgamĩrĩre makũmbĩ ma indo iria ciarutagwo, na maciaro ma mbere, na gĩcunjĩ gĩa ikũmi. Kuuma mĩgũnda-inĩ ĩrĩa yathiũrũrũkĩirie matũũra magĩrĩirwo kurehe makũmbĩ-inĩ icunjĩ iria ciatuĩtwo nĩ watho irĩ cia athĩnjĩri-Ngai na Alawii, tondũ andũ a Juda nĩmakenagĩra athĩnjĩri-Ngai na Alawii arĩa maatungataga. <verse number="45" style="v"/>Nĩmarutaga wĩra wa gũtungatĩra Ngai wao, na wĩra wa gwĩtheria, o ta ũrĩa aini na aikaria a ihingo meekaga, kũringana na ũrĩa gwathanĩtwo nĩ Daudi na mũriũ Solomoni. <verse number="46" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:46 </char><char style="xt" closed="false"><ref loc="2CH 35:15">2Maũ 35:15</ref>; <ref loc="PSA 137:4">Thab 137:4</ref></char></note>Nĩgũkorwo tene mũno, matukũ-inĩ ma Daudi na ma Asafu, nĩ kwarĩ na atongoria a aini na a nyĩmbo cia kũgooca na gũcookeria Ngai ngaatho. <verse number="47" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:47 </char><char style="xt" closed="false"><ref loc="DEU 18:8">Gũcook 18:8</ref></char></note>Nĩ ũndũ ũcio matukũ-inĩ ma Zerubabeli na ma Nehemia, andũ a Isiraeli othe nĩmarutaga icunjĩ cia o mũthenya nĩ ũndũ wa aini na aikaria a ihingo. Ningĩ nĩmamũraga icunjĩ nĩ ũndũ wa Alawii arĩa angĩ, nao Alawii makaamũra icunjĩ nĩ ũndũ wa njiaro cia Harũni.</para>
+  <chapter number="13" style="c"/>
+  <para style="s1">Magarũrĩra ma Mũthia ma Nehemia</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 23:3">Gũcook 23:3</ref>
+      </char>
+    </note>Na rĩrĩ, mũthenya ũcio, Ibuku rĩa Musa rĩgĩthomwo na mũgambo mũnene andũ makĩĩiguagĩra, rĩgĩthomwo handũ haandĩkĩtwo atĩ gũtirĩ Mũamoni kana Mũmoabi ũgetĩkĩrio akorwo kĩũngano-inĩ kĩa andũ a Ngai, <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:2 </char><char style="xt" closed="false"><ref loc="NUM 22:3-11">Ndar 22:3-11</ref>; <ref loc="NUM 23:11">Ndar 23:11</ref></char></note>tondũ matiigana kũhe andũ a Isiraeli irio na maaĩ; no-o nĩ kũrĩha maarĩhire Balamu amarume. (No rĩrĩ, Ngai witũ akĩgarũra kĩrumi gĩgĩtuĩka kĩrathimo.) <verse number="3" style="v"/>Rĩrĩa andũ maaiguire watho ũcio, makĩeheria andũ othe arĩa maarĩ ageni kuuma Isiraeli.</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 12:44">Neh 12:44</ref>
+      </char>
+    </note>Mbere ĩyo, Eliashibu ũrĩa mũthĩnjĩri-Ngai nĩakoretwo atuĩtwo mũrũgamĩrĩri wa makũmbĩ ma nyũmba ya Ngai witũ. Aarĩ wa thiritũ ya hakuhĩ na Tobia, <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:5 </char><char style="xt" closed="false"><ref loc="LEV 27:30">Alaw 27:30</ref>; <ref loc="NUM 18:21">Ndar 18:21</ref></char></note>na nĩamũhete nyũmba nene aikarage ĩrĩa mbere ĩyo yaigagwo mĩhothi ya ngano, na ũbumba, na indo cia hekarũ, o na mĩhothi ya gĩcunjĩ gĩa ikũmi kĩa ngano, na ndibei ya mũhihano na maguta marĩa maaheagwo Alawii, na aini na aikaria a ihingo, o na mĩhothi ĩrĩa yarutagĩrwo athĩnjĩri-Ngai.</para>
+  <para style="p">
+    <verse number="6" style="v"/>No rĩrĩa maũndũ maya mothe maathiiaga na mbere, niĩ ndiarĩ kũu Jerusalemu, nĩgũkorwo mwaka-inĩ ũcio wa mĩrongo ĩtatũ na ĩĩrĩ wa ũthamaki wa Aritashashita, mũthamaki wa Babuloni,<note caller="+" style="f"><char style="fr" closed="false">13:6 </char><char style="ft" closed="false">Thuutha wa kũhoota na kwĩgwatĩra Babuloni, Kurusu nĩeheire rĩĩtwa “Mũthamaki wa Babuloni”.</char></note> nĩndacookete kũrĩ mũthamaki. Matukũ manini maathira nĩndamũhooire rũtha, <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:7 </char><char style="xt" closed="false"><ref loc="EZR 10:24">Ezar 10:24</ref>; <ref loc="NEH 2:10">Neh 2:10</ref></char></note>ngĩcooka Jerusalemu. Ndacooka Jerusalemu nĩguo ndaamenyire ũũru ũrĩa Eliashibu eekĩte nĩ ũndũ wa kũhe Tobia kanyũmba nja ya nyũmba ya Ngai. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:8 </char><char style="xt" closed="false"><ref loc="MRK 11:15-17">Mar 11:15-17</ref>; <ref loc="JHN 2:13-16">Joh 2:13-16</ref></char></note>Nĩndarakaririo nĩ ũhoro ũcio mũno na ngĩikia indo ciothe cia Tobia nja. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:9 </char><char style="xt" closed="false"><ref loc="2CH 29:5">2Maũ 29:5</ref></char></note>Ngĩcooka ngĩruta watho kũgĩe igongona rĩa gũtheria nyũmba ĩyo, na ngĩcookia indo ciothe cia nyũmba ya Ngai kuo, hamwe na maruta ma ngano na ũbumba.</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 12:19">Gũcook 12:19</ref>; <ref loc="2CH 31:4">2Maũ 31:4</ref></char>
+    </note>Ningĩ nĩndamenyire atĩ Alawii matiaheagwo gĩcunjĩ kĩrĩa kĩerĩtwo maaheagwo, na Alawii othe hamwe na aini arĩa maatungataga nĩmatiganĩirie ũtungata, magacooka mĩgũnda-inĩ yao. <verse number="11" style="v"/>Nĩ ũndũ ũcio ngĩrũithia anene acio, ngĩmooria atĩrĩ: “Nyũmba ya Ngai ĩtiganĩirio nĩkĩ?” Ningĩ ngĩmeeta othe hamwe, ngĩmacookia o mũndũ wĩra-inĩ wake.</para>
+  <para style="p">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 7:51">1Ath 7:51</ref>; <ref loc="MAL 3:10">Mal 3:10</ref></char>
+    </note>Andũ othe a Juda nĩmarehire gĩcunjĩ gĩa ikũmi kĩa ngano, na ndibei ya mũhihano, o na maguta makũmbĩ-inĩ. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:13 </char><char style="xt" closed="false"><ref loc="NEH 12:44">Neh 12:44</ref>; <ref loc="ACT 6:1-5">Atũm 6:1-5</ref></char></note>Na niĩ ngĩtua Shelemia ũrĩa mũthĩnjĩri-Ngai, na Zadoku ũrĩa mwandĩki-marũa, marĩ na Mulawii wetagwo Pedaia, arũgamĩrĩri a makũmbĩ, na ngĩtua Hanani mũrũ wa Zakuri mũrũ wa Matania mũnini wao, tondũ andũ aya nĩmoonagwo marĩ ehokeku. Nĩmatuirwo a kũgayagĩra ariũ a ithe wao indo.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="14" style="v"/>Ndirikana, Wee Ngai wakwa, nĩ ũndũ wa maũndũ maya, na ndũgatharie wĩra na ũtungata ũrĩa ndungatĩte nyũmba-inĩ ya Ngai wakwa ndĩ mwĩhokeku.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:15 </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 20:8-11">Thaam 20:8-11</ref>
+      </char>
+    </note>Matukũ-inĩ macio nĩndeyoneire andũ a Juda makĩhiha ndibei mũthenya wa Thabatũ na makĩrehe ngano, na magĩkuuithia ndigiri ngano hamwe na ndibei, na thabibũ, na ngũyũ, na mĩthemba yothe ya mĩrigo. Indo icio ciothe maarehaga Jerusalemu mũthenya wa Thabatũ. Nĩ ũndũ ũcio ngĩmakaania kwendia irio mũthenya ũcio wa Thabatũ. <verse number="16" style="v"/>Andũ a Turo arĩa maatũũraga Jerusalemu nĩmarehaga thamaki na indo cia mĩthemba yothe, na magaciendagĩria andũ a Juda mũthenya wa Thabatũ kũu Jerusalemu. <verse number="17" style="v"/>Ngĩrũithia andũ arĩa maarĩ igweta a Juda, ngĩmooria atĩrĩ, “Nĩ ũndũ ũrĩkũ ũyũ mũreka wa waganu wa gũthaahia mũthenya wa Thabatũ? <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:18 </char><char style="xt" closed="false"><ref loc="JER 44:23">Jer 44:23</ref>; <ref loc="NEH 10:31">Neh 10:31</ref></char></note>Maithe manyu ma tene-rĩ, githĩ ti maũndũ ta maya meekire, nake Ngai witũ agĩtũrehere mathĩĩna maya mothe matũkorete na magakora itũũra rĩĩrĩ inene? No rĩu inyuĩ mũrarehera Isiraeli mangʼũrĩ maingĩ makĩria na ũndũ wa gũthaahia Thabatũ.”</para>
+  <para style="p">
+    <verse number="19" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:19 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 23:32">Alaw 23:32</ref>
+      </char>
+    </note>Na rĩrĩ, hwaĩ-inĩ kwambĩrĩria kũgĩa nduma ihingo-inĩ cia Jerusalemu Thabatũ ĩtanakinya-rĩ, ngĩathana mĩrango ya Jerusalemu ĩhingwo na ndĩkahingũrwo nginya Thabatũ ĩthire. Ngĩiga andũ amwe akwa ihingo-inĩ marangĩre, nĩgeetha gũtikagĩe mũrigo ũngĩtoonyio thĩinĩ mũthenya wa Thabatũ. <verse number="20" style="v"/>Rĩmwe kana meerĩ, onjorithia na endia a indo cia mĩthemba yothe maraarire nja ya Jerusalemu. <verse number="21" style="v"/>No ngĩmakaania ngĩmooria atĩrĩ, “Nĩ kĩĩ gĩgũtũma mũraare rũthingo-inĩ? Mũngĩĩka ũguo rĩngĩ nĩndĩmũnyiitithia.” Kuuma hĩndĩ ĩyo matiacookire gũũka mũthenya wa Thabatũ. <verse number="22" style="v"/>Ningĩ ngĩatha Alawii meetherie macooke mathiĩ makarangĩre ihingo nĩgeetha maige mũthenya wa Thabatũ ũrĩ mũtheru.</para>
+  <para style="b"/>
+  <para style="p">Ndirikana, Wee Ngai wakwa, nĩ ũndũ wa ũndũ ũyũ o naguo, na ũnjiguĩre tha kũringana na wendo waku mũnene.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="23" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:23 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAL 2:11">Mal 2:11</ref>; <ref loc="RUT 1:4">Ruth 1:4</ref></char>
+    </note>Na rĩrĩ, matukũ-inĩ macio nĩndonire arũme a Juda arĩa maahikĩtie andũ-a-nja a kuuma Ashidodi, na Amoni, na Moabi. <verse number="24" style="v"/>Nuthu ya ciana ciao ciaaragia rũthiomi rwa Ashidodi kana thiomi cia ndũrĩrĩ icio ingĩ, no matiooĩ kwaria rũthiomi rwa Juda. <verse number="25" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:25 </char><char style="xt" closed="false"><ref loc="EZR 10:5">Ezar 10:5</ref></char></note>Ngĩmarũithia na ngĩmetĩria kĩrumi. Nĩndahũũrire arũme amwe ao na ngĩmamunya njuĩrĩ. Ngĩtũma mehĩte mwĩhĩtwa makĩgwetaga rĩĩtwa rĩa Ngai, ngĩmeera atĩrĩ: “Menyai gũkaaneana airĩtu anyu mahikio nĩ ariũ ao, kana aanake anyu inyuĩ ene mahikie airĩtu ao. <verse number="26" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:26 </char><char style="xt" closed="false"><ref loc="1KI 3:13">1Ath 3:13</ref>; <ref loc="2SA 12:25">2Sam 12:25</ref></char></note>Githĩ ti ihikanio ta icio ciatũmire Solomoni mũthamaki wa Isiraeli eehie? Ndũrĩrĩ-inĩ nyingĩ gũtiarĩ mũthamaki ũngĩ watariĩ take. Ngai wake nĩamwendete, akĩmũtua mũthamaki Isiraeli guothe; no-o na kũrĩ ũguo-rĩ, nĩatoonyirio mehia-inĩ nĩ andũ-a-nja a kũngĩ. <verse number="27" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:27 </char><char style="xt" closed="false"><ref loc="EZR 9:14">Ezar 9:14</ref></char></note>Ithuĩ-rĩ, no nginya tũigue atĩ o na inyuĩ mũreka waganu ũyũ wothe mũũru ũũ, mũkaaga kwĩhokeka kũrĩ Ngai witũ na ũndũ wa kũhikia andũ-a-nja a kũngĩ?”</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="28" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:28 </char>
+      <char style="xt" closed="false">
+        <ref loc="EZR 10:24">Ezar 10:24</ref>; <ref loc="NEH 2:10">Neh 2:10</ref></char>
+    </note>Mũriũ ũmwe wa Joiada mũrũ wa Eliashibu mũthĩnjĩri-Ngai ũrĩa mũnene aarĩ mũthoni-we wa Sanibalati ũrĩa Mũhoroni. Nĩndamũingatire oime harĩ niĩ.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="29" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:29 </char>
+      <char style="xt" closed="false">
+        <ref loc="NEH 1:8">Neh 1:8</ref>; <ref loc="NUM 3:12">Ndar 3:12</ref></char>
+    </note>Maririkane, Wee Ngai wakwa, tondũ nĩmathaahirie wĩra wa ũthĩnjĩri-Ngai, o na magĩthaahia kĩrĩkanĩro kĩa wĩra wa athĩnjĩri-Ngai na kĩa Alawii.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="30" style="v"/>Nĩ ũndũ ũcio, ngĩtheria athĩnjĩri-Ngai na Alawii kuuma kũrĩ ũndũ o wothe mũgeni, ngĩcooka ngĩmagaĩra o mũndũ wĩra wake kĩũmbe. <verse number="31" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:31 </char><char style="xt" closed="false"><ref loc="NEH 10:34">Neh 10:34</ref>; <ref loc="GEN 8:1">Kĩam 8:1</ref></char></note>Ningĩ nĩndathondekire mweke wa kũhothaga ngũ na maciaro ma mbere mahinda marĩa maatuĩtwo.</para>
+  <para style="b"/>
+  <para style="p">Wee Ngai wakwa, ndirikana na ũnjĩke wega.</para>
+</usx>

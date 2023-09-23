@@ -1,0 +1,641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<usx version="3.0">
+  <book code="LAM" style="id">- God’s Word Bible</book>
+  <para style="ide">UTF-8</para>
+  <para style="rem">© 1995, 2003, 2013, 2014, 2019, 2020 by God’s Word to the Nations Mission Society. All rights reserved.</para>
+  <para style="rem">Converted from InDesign files to USFM-3 by Elbert Boot (Digital Bible Library Customer Service Team, Miami [USA])</para>
+  <para style="rem">Language: English</para>
+  <para style="rem">This project has 9 poetry levels, and Paratext only supports up to 4 levels. To upload the text to DBL, we have created a dblChanges file and added q5 to q9 to a custom.sty to obtain the desired design in Paratext.</para>
+  <para style="h">LAMENTATIONS</para>
+  <para style="toc1">Lamentations</para>
+  <para style="toc2">Lamentations</para>
+  <para style="toc3">Lamentations</para>
+  <para style="mt1">Lamentations</para>
+  <chapter number="1" style="c" sid="LAM 1" />
+  <para style="s1">The Prophet Speaks Out: No One Offers Comfort</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="LAM 1:1" />
+    <note caller="+" style="f">
+      <char style="fr" closed="false">1:1 </char>
+      <char style="ft" closed="false">Chapter 1 is a poem in Hebrew alphabetical order.</char>
+    </note>“Look how deserted Jerusalem is!</para>
+  <para style="q1" vid="LAM 1:1">Once the city was crowded with people.</para>
+  <para style="q1" vid="LAM 1:1">Once it was important among the nations.</para>
+  <para style="q1" vid="LAM 1:1">Now it is a widow.</para>
+  <para style="q1" vid="LAM 1:1">Once it was a princess among the provinces.</para>
+  <para style="q1" vid="LAM 1:1">Now it does forced labor.<verse eid="LAM 1:1" /></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="LAM 1:2" />Jerusalem cries bitterly at night with tears running down its cheeks.</para>
+  <para style="q1" vid="LAM 1:2">Out of all those who love the city, no one offers it comfort.</para>
+  <para style="q1" vid="LAM 1:2">All of Jerusalem’s friends have betrayed it and become its enemies.<verse eid="LAM 1:2" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="3" style="v" sid="LAM 1:3" />“Judah has been exiled after <char style="add">⌞much⌟</char> suffering and harsh treatment.</para>
+  <para style="q1" vid="LAM 1:3">Its <char style="add">⌞people⌟</char> live among the nations; they find no rest.</para>
+  <para style="q1" vid="LAM 1:3">Those who chased them caught up with them</para>
+  <para style="q1" vid="LAM 1:3">in places where there was no way out.<verse eid="LAM 1:3" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="4" style="v" sid="LAM 1:4" />“The roads to Zion are deserted.<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“are in mourning.”</char></note></para>
+  <para style="q1" vid="LAM 1:4">No one comes to the annual festivals.</para>
+  <para style="q1" vid="LAM 1:4">No one passes through any of its gates.<note caller="+" style="f"><char style="fr" closed="false">1:4 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“All its gates are in despair.”</char></note></para>
+  <para style="q1" vid="LAM 1:4">Its priests are groaning.</para>
+  <para style="q1" vid="LAM 1:4">Its young women are made to suffer.</para>
+  <para style="q1" vid="LAM 1:4">Zion is bitter.<verse eid="LAM 1:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="LAM 1:5" />Its opponents are now in control.</para>
+  <para style="q1" vid="LAM 1:5">Its enemies have no worries.</para>
+  <para style="q1" vid="LAM 1:5">The <char style="nd">Lord</char> made Zion suffer for its many rebellious acts.</para>
+  <para style="q1" vid="LAM 1:5">Its children go ahead of their opponents into captivity.<verse eid="LAM 1:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="LAM 1:6" />All splendor has abandoned the people of Zion.</para>
+  <para style="q1" vid="LAM 1:6">Its influential people were like deer that couldn’t find any pasture.</para>
+  <para style="q1" vid="LAM 1:6">They ran without any strength ahead of the hunters.<verse eid="LAM 1:6" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="7" style="v" sid="LAM 1:7" />“Now, during its suffering and oppression,</para>
+  <para style="q1" vid="LAM 1:7">Jerusalem remembers all the treasures it had from ancient times,</para>
+  <para style="q1" vid="LAM 1:7">when its people fell into the power of their enemies</para>
+  <para style="q1" vid="LAM 1:7">with no one to help them.</para>
+  <para style="q1" vid="LAM 1:7">Their opponents looked on, and they laughed at Jerusalem’s downfall.<verse eid="LAM 1:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="LAM 1:8" />Jerusalem has sinned so much that it has become a filthy thing.</para>
+  <para style="q1" vid="LAM 1:8">Everyone who used to honor it now despises it.</para>
+  <para style="q1" vid="LAM 1:8">They’ve seen it naked.</para>
+  <para style="q1" vid="LAM 1:8">Jerusalem groans and turns away.<verse eid="LAM 1:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="LAM 1:9" />Jerusalem’s own filth <char style="add">⌞covers⌟</char> its clothes.</para>
+  <para style="q1" vid="LAM 1:9">It gave no thought to its future.</para>
+  <para style="q1" vid="LAM 1:9">Its downfall was shocking.</para>
+  <para style="q1" vid="LAM 1:9">No one offers it comfort.</para>
+  <para style="q1" vid="LAM 1:9">‘O <char style="nd">Lord</char>, look at my suffering,</para>
+  <para style="q1" vid="LAM 1:9">because my enemies have triumphed.’<verse eid="LAM 1:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="LAM 1:10" />The enemies laid their hands on all of the city’s treasures.</para>
+  <para style="q1" vid="LAM 1:10">Jerusalem has seen the nations enter the holy place.</para>
+  <para style="q1" vid="LAM 1:10">‘O Lord, they are the same people</para>
+  <para style="q1" vid="LAM 1:10">you have forbidden to enter your congregation.’<verse eid="LAM 1:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="LAM 1:11" />All the people are groaning as they beg for bread.</para>
+  <para style="q1" vid="LAM 1:11">They trade their treasures for food to keep themselves alive.</para>
+  <para style="q1" vid="LAM 1:11">‘O <char style="nd">Lord</char>, look and see how despised I am!’ ”<verse eid="LAM 1:11" /></para>
+  <para style="s1">Zion Speaks Out: No One Offers Comfort</para>
+  <para style="q1">
+    <verse number="12" style="v" sid="LAM 1:12" />“Doesn’t this affect all of you who pass by?</para>
+  <para style="q1" vid="LAM 1:12">Look and see if there’s any pain</para>
+  <para style="q1" vid="LAM 1:12">like the pain that the <char style="nd">Lord</char> has caused me,</para>
+  <para style="q1" vid="LAM 1:12">like the pain that he has made me suffer on the day of his fierce anger.<verse eid="LAM 1:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="LAM 1:13" />He sent fire from above.</para>
+  <para style="q1" vid="LAM 1:13">He made it go deep into my bones.</para>
+  <para style="q1" vid="LAM 1:13">He spread a net for my feet.</para>
+  <para style="q1" vid="LAM 1:13">He made me turn back.</para>
+  <para style="q1" vid="LAM 1:13">He has left me devastated.</para>
+  <para style="q1" vid="LAM 1:13">He has made me sick all day long.<verse eid="LAM 1:13" /></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="LAM 1:14" />My rebellious acts are a heavy burden for me.</para>
+  <para style="q1" vid="LAM 1:14">They were tied together by God’s own hands.</para>
+  <para style="q1" vid="LAM 1:14">They were tied around my neck.</para>
+  <para style="q1" vid="LAM 1:14">He has weakened me <char style="add">⌞with them⌟</char>.</para>
+  <para style="q1" vid="LAM 1:14">The Lord has handed me over to people I cannot oppose.<verse eid="LAM 1:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="LAM 1:15" />The Lord has treated all the warriors inside my <char style="add">⌞walls⌟</char> with contempt.</para>
+  <para style="q1" vid="LAM 1:15">He called an army to defeat my young men.</para>
+  <para style="q1" vid="LAM 1:15">The <char style="nd">Lord</char> trampled the people of Judah in a winepress.<verse eid="LAM 1:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="LAM 1:16" />I’m crying because of <char style="add">⌞all⌟</char> these things.</para>
+  <para style="q1" vid="LAM 1:16">My eyes—my eyes flow with tears.</para>
+  <para style="q1" vid="LAM 1:16">No one can give me the comfort I need to keep me alive.</para>
+  <para style="q1" vid="LAM 1:16">Everyone is too far away from me.</para>
+  <para style="q1" vid="LAM 1:16">My children are devastated because my enemies have won.”<verse eid="LAM 1:16" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="17" style="v" sid="LAM 1:17" />Zion holds out its hands.</para>
+  <para style="q1" vid="LAM 1:17">No one offers it comfort.</para>
+  <para style="q1" vid="LAM 1:17">The <char style="nd">Lord</char> has given this order about Jacob:</para>
+  <para style="q1" vid="LAM 1:17">His own neighbors will become his opponents.</para>
+  <para style="q1" vid="LAM 1:17">Jerusalem has become a filthy thing among them.<verse eid="LAM 1:17" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="18" style="v" sid="LAM 1:18" />“The <char style="nd">Lord</char> is right in what he did,</para>
+  <para style="q1" vid="LAM 1:18">because I rebelled against his word.</para>
+  <para style="q1" vid="LAM 1:18">Please listen, all you people, and look at my pain.</para>
+  <para style="q1" vid="LAM 1:18">My young women and young men have gone into captivity.<verse eid="LAM 1:18" /></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="LAM 1:19" />I called for those who love me, but they betrayed me.</para>
+  <para style="q1" vid="LAM 1:19">My priests and leaders breathed their last breath in the city,</para>
+  <para style="q1" vid="LAM 1:19">looking for food to keep themselves alive.<verse eid="LAM 1:19" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="20" style="v" sid="LAM 1:20" />“O <char style="nd">Lord</char>, see the distress I’m in!</para>
+  <para style="q1" vid="LAM 1:20">My stomach is churning.</para>
+  <para style="q1" vid="LAM 1:20">My heart is pounding because I’ve been very bitter.</para>
+  <para style="q1" vid="LAM 1:20">In the streets swords kill my children.</para>
+  <para style="q1" vid="LAM 1:20">Inside the houses it’s like death.<verse eid="LAM 1:20" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="21" style="v" sid="LAM 1:21" />“All my enemies have heard that I am groaning.</para>
+  <para style="q1" vid="LAM 1:21">No one offers me comfort.</para>
+  <para style="q1" vid="LAM 1:21">All my enemies have heard about my disaster.</para>
+  <para style="q1" vid="LAM 1:21">They are happy that you did it.</para>
+  <para style="q1" vid="LAM 1:21">You have allowed the day to come, the one that you had announced.</para>
+  <para style="q1" vid="LAM 1:21">Let my enemies be like me now.<verse eid="LAM 1:21" /></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="LAM 1:22" />Recall all of their wickedness.</para>
+  <para style="q1" vid="LAM 1:22">Then deal with them as you have dealt with me</para>
+  <para style="q1" vid="LAM 1:22">because of all my rebellious acts.</para>
+  <para style="q1" vid="LAM 1:22">I groan so much and feel so sick at heart.”<verse eid="LAM 1:22" /></para>
+  <chapter eid="LAM 1" />
+  <chapter number="2" style="c" sid="LAM 2" />
+  <para style="s1">The Prophet Speaks Out: the <char style="nd">LORD</char> Destroyed Zion</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="LAM 2:1" />
+    <note caller="+" style="f">
+      <char style="fr" closed="false">2:1 </char>
+      <char style="ft" closed="false">Chapter 2 is a poem in Hebrew alphabetical order.</char>
+    </note>“Look how the Lord has covered the people of Zion</para>
+  <para style="q1" vid="LAM 2:1">with the cloud of his anger!</para>
+  <para style="q1" vid="LAM 2:1">He has thrown down Israel’s beauty from heaven to earth.</para>
+  <para style="q1" vid="LAM 2:1">He didn’t <char style="add">⌞even⌟</char> remember his footstool on the day of his anger.<verse eid="LAM 2:1" /></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="LAM 2:2" />The Lord swallowed up all of Jacob’s pastures without any pity.</para>
+  <para style="q1" vid="LAM 2:2">He tore down the fortified cities of Judah in his fury.</para>
+  <para style="q1" vid="LAM 2:2">He brought the kingdom <char style="add">⌞of Judah⌟</char> and its leaders</para>
+  <para style="q1" vid="LAM 2:2">down to the ground in dishonor.<verse eid="LAM 2:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="LAM 2:3" />In his burning anger he cut off all of Israel’s strength.</para>
+  <para style="q1" vid="LAM 2:3">He withdrew his right hand when they faced their enemy.</para>
+  <para style="q1" vid="LAM 2:3">He burned like a raging fire in <char style="add">⌞the land of⌟</char> Jacob,</para>
+  <para style="q1" vid="LAM 2:3">destroying everything around him.<verse eid="LAM 2:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="LAM 2:4" />Like an enemy he bent his bow.</para>
+  <para style="q1" vid="LAM 2:4">Like an opponent his right hand held the arrow steady.</para>
+  <para style="q1" vid="LAM 2:4">He killed all the beautiful people.</para>
+  <para style="q1" vid="LAM 2:4">He poured out his fury like fire on the tent of Zion’s people.<verse eid="LAM 2:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="LAM 2:5" />The Lord became an enemy.</para>
+  <para style="q1" vid="LAM 2:5">He swallowed up Israel.</para>
+  <para style="q1" vid="LAM 2:5">He swallowed up all of its palaces.</para>
+  <para style="q1" vid="LAM 2:5">He destroyed its strongholds.</para>
+  <para style="q1" vid="LAM 2:5">He made the people of Judah mourn and moan.<verse eid="LAM 2:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="LAM 2:6" />He stripped his own booth as if it were a garden</para>
+  <para style="q1" vid="LAM 2:6">and destroyed his own festivals.</para>
+  <para style="q1" vid="LAM 2:6">The <char style="nd">Lord</char> wiped out the memory of festivals and days of rest—holy days—in Zion.</para>
+  <para style="q1" vid="LAM 2:6">He expelled kings and priests because of his fierce anger.<verse eid="LAM 2:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="LAM 2:7" />The Lord rejected his altar and disowned his holy place.</para>
+  <para style="q1" vid="LAM 2:7">He handed the walls of Zion’s palaces over to its enemies.</para>
+  <para style="q1" vid="LAM 2:7">The enemies made noise in the <char style="nd">Lord</char>’s temple</para>
+  <para style="q1" vid="LAM 2:7">as though it were a festival day.<verse eid="LAM 2:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="LAM 2:8" />The <char style="nd">Lord</char> planned to destroy the wall of Zion’s people.</para>
+  <para style="q1" vid="LAM 2:8">He marked it off with a line.</para>
+  <para style="q1" vid="LAM 2:8">He didn’t take his hand away until he had swallowed it up.</para>
+  <para style="q1" vid="LAM 2:8">He made the towers and walls mourn.</para>
+  <para style="q1" vid="LAM 2:8">They are completely dejected.<verse eid="LAM 2:8" /></para>
+  <para style="s1">The Prophet Describes Jerusalem’s Destruction</para>
+  <para style="q1">
+    <verse number="9" style="v" sid="LAM 2:9" />“<char style="add">⌞Zion’s⌟</char> gates have sunk into the ground.</para>
+  <para style="q1" vid="LAM 2:9">
+    <char style="add">⌞The <char style="nd">Lord</char>⌟</char> destroyed and shattered the bars across its <char style="add">⌞gates⌟</char>.</para>
+  <para style="q1" vid="LAM 2:9">Its king and influential people are <char style="add">⌞scattered⌟</char> among the nations.</para>
+  <para style="q1" vid="LAM 2:9">There is no longer any instruction <char style="add">⌞from Moses’ Teachings⌟</char>.</para>
+  <para style="q1" vid="LAM 2:9">Its prophets can find no visions from the <char style="nd">Lord</char>.<verse eid="LAM 2:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="LAM 2:10" />The respected leaders of Zion’s people sit silently on the ground.</para>
+  <para style="q1" vid="LAM 2:10">They throw dirt on their heads and put on sackcloth.</para>
+  <para style="q1" vid="LAM 2:10">The young women of Jerusalem bow their heads to the ground.<verse eid="LAM 2:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="LAM 2:11" />My eyes are worn out with tears.</para>
+  <para style="q1" vid="LAM 2:11">My stomach is churning.</para>
+  <para style="q1" vid="LAM 2:11">My heart is poured out on the ground</para>
+  <para style="q1" vid="LAM 2:11">because of the destruction of my people.</para>
+  <para style="q1" vid="LAM 2:11">Little children and infants faint in the city streets.<verse eid="LAM 2:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="LAM 2:12" />They’re asking their mothers for some bread and wine</para>
+  <para style="q1" vid="LAM 2:12">as they faint like wounded people in the city streets.</para>
+  <para style="q1" vid="LAM 2:12">Their lives dwindle away in their mothers’ arms.<verse eid="LAM 2:12" /></para>
+  <para style="s1">The Prophet Speaks Out: the <char style="nd">LORD</char> Destroyed You</para>
+  <para style="q1">
+    <verse number="13" style="v" sid="LAM 2:13" />“What example can I give you?</para>
+  <para style="q1" vid="LAM 2:13">What parallel can I show you, people of Jerusalem?</para>
+  <para style="q1" vid="LAM 2:13">What comparison can I make that will comfort you, beloved people of Zion?</para>
+  <para style="q1" vid="LAM 2:13">Your wounds are as deep as the sea.</para>
+  <para style="q1" vid="LAM 2:13">Who can heal you?<verse eid="LAM 2:13" /></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="LAM 2:14" />Your prophets saw misleading visions about you.</para>
+  <para style="q1" vid="LAM 2:14">They painted a good picture of you.</para>
+  <para style="q1" vid="LAM 2:14">They didn’t expose your guilt in order to make things better again.</para>
+  <para style="q1" vid="LAM 2:14">They gave you false prophecies that misled you.<verse eid="LAM 2:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="LAM 2:15" />Everyone who walks along the road shakes a fist at you.</para>
+  <para style="q1" vid="LAM 2:15">They hiss and shake their heads at Jerusalem’s people:</para>
+  <para style="q1" vid="LAM 2:15">‘Is this the city they used to call absolutely beautiful,</para>
+  <para style="q1" vid="LAM 2:15">the joy of the whole world?’<verse eid="LAM 2:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="LAM 2:16" />All your enemies gawk at you.</para>
+  <para style="q1" vid="LAM 2:16">They hiss and grit their teeth.</para>
+  <para style="q1" vid="LAM 2:16">They say, ‘We’ve swallowed it up.</para>
+  <para style="q1" vid="LAM 2:16">Yes, this is the day we’ve been waiting for.</para>
+  <para style="q1" vid="LAM 2:16">At last we have seen it!’<verse eid="LAM 2:16" /></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="LAM 2:17" />The <char style="nd">Lord</char> has accomplished what he had planned to do.</para>
+  <para style="q1" vid="LAM 2:17">He carried out the threat he announced long ago.</para>
+  <para style="q1" vid="LAM 2:17">He tore you down without any pity, <char style="add">⌞Jerusalem⌟</char>.</para>
+  <para style="q1" vid="LAM 2:17">He made your enemies gloat over you.</para>
+  <para style="q1" vid="LAM 2:17">He raised the weapons of your opponents.<verse eid="LAM 2:17" /></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="LAM 2:18" />The hearts of Jerusalem’s people</para>
+  <para style="q1" vid="LAM 2:18">cried out to the <char style="nd">Lord</char>, the wall of Zion’s people.</para>
+  <para style="q1" vid="LAM 2:18">Let your tears run down like a river day and night.</para>
+  <para style="q1" vid="LAM 2:18">Don’t let them stop.</para>
+  <para style="q1" vid="LAM 2:18">Don’t let your eyes rest.<verse eid="LAM 2:18" /></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="LAM 2:19" />Get up! Cry out at night, every hour on the hour.</para>
+  <para style="q1" vid="LAM 2:19">Pour your heart out like water in the presence of the <char style="nd">Lord</char>.</para>
+  <para style="q1" vid="LAM 2:19">Lift up your hands to him <char style="add">⌞in prayer⌟</char></para>
+  <para style="q1" vid="LAM 2:19">for the life of your little children</para>
+  <para style="q1" vid="LAM 2:19">who faint from hunger at every street corner.”<verse eid="LAM 2:19" /></para>
+  <para style="s1">Zion Speaks Out: the <char style="nd">LORD</char> Destroyed Me</para>
+  <para style="q1">
+    <verse number="20" style="v" sid="LAM 2:20" />“O <char style="nd">Lord</char>, look and consider:</para>
+  <para style="q1" vid="LAM 2:20">Have you ever treated anyone like this?</para>
+  <para style="q1" vid="LAM 2:20">Should women eat their own children,</para>
+  <para style="q1" vid="LAM 2:20">the children they have nursed?</para>
+  <para style="q1" vid="LAM 2:20">Should priests and prophets be killed in the Lord’s holy place?<verse eid="LAM 2:20" /></para>
+  <para style="q1">
+    <verse number="21" style="v" sid="LAM 2:21" />Young and old lie on the ground in the streets.</para>
+  <para style="q1" vid="LAM 2:21">My young women and men are cut down by swords.</para>
+  <para style="q1" vid="LAM 2:21">You killed them on the day of your anger.</para>
+  <para style="q1" vid="LAM 2:21">You slaughtered them without any pity.<verse eid="LAM 2:21" /></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="LAM 2:22" />You have invited those who terrorize me on every side,</para>
+  <para style="q1" vid="LAM 2:22">as though they were invited to a festival.</para>
+  <para style="q1" vid="LAM 2:22">No one escaped or survived on the day of the <char style="nd">Lord</char>’s anger.</para>
+  <para style="q1" vid="LAM 2:22">My enemy has murdered the children I nursed and raised.”<verse eid="LAM 2:22" /></para>
+  <chapter eid="LAM 2" />
+  <chapter number="3" style="c" sid="LAM 3" />
+  <para style="s1">The Prophet—a Man of Despair</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="LAM 3:1" />
+    <note caller="+" style="f">
+      <char style="fr" closed="false">3:1 </char>
+      <char style="ft" closed="false">Chapter 3 is a poem in Hebrew alphabetical order.</char>
+    </note>“I am the man who has experienced suffering under the rod of God’s fury.<verse eid="LAM 3:1" /></para>
+  <para style="q1">
+    <verse number="2" style="v" sid="LAM 3:2" />God has driven me away</para>
+  <para style="q1" vid="LAM 3:2">and made me walk in darkness instead of light.<verse eid="LAM 3:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="LAM 3:3" />He beat me again and again all day long.<verse eid="LAM 3:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="LAM 3:4" />He has made my flesh and my skin waste away.</para>
+  <para style="q1" vid="LAM 3:4">He has broken my bones.<verse eid="LAM 3:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="LAM 3:5" />He has attacked me and surrounded me with bitterness and hardship.<verse eid="LAM 3:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="LAM 3:6" />He has made me live in darkness,</para>
+  <para style="q1" vid="LAM 3:6">like those who died a long time ago.<verse eid="LAM 3:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="LAM 3:7" />He has blocked me so that I can’t get out.</para>
+  <para style="q1" vid="LAM 3:7">He has put heavy chains on me.<verse eid="LAM 3:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="LAM 3:8" />Even when I cry and call for help, he shuts out my prayer.<verse eid="LAM 3:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="LAM 3:9" />He has blocked my way with cut stones and made my paths crooked.<verse eid="LAM 3:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="LAM 3:10" />He is like a bear waiting to ambush me, like a lion in hiding.<verse eid="LAM 3:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="LAM 3:11" />He has forced me off the road I was taking, torn me to pieces,</para>
+  <para style="q1" vid="LAM 3:11">and left me with nothing.<verse eid="LAM 3:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="LAM 3:12" />He has drawn his bow and made me the target for his arrows.<verse eid="LAM 3:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="LAM 3:13" />He has shot the arrows from his quiver into my heart.<verse eid="LAM 3:13" /></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="LAM 3:14" />I have become a laughingstock to all my people.</para>
+  <para style="q1" vid="LAM 3:14">All day long <char style="add">⌞they make fun of me⌟</char> with their songs.<verse eid="LAM 3:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="LAM 3:15" />He has filled me with bitterness.</para>
+  <para style="q1" vid="LAM 3:15">He has made me drink wormwood.<verse eid="LAM 3:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="LAM 3:16" />He has ground my teeth with gravel.</para>
+  <para style="q1" vid="LAM 3:16">He has trampled me into the dust.<verse eid="LAM 3:16" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="17" style="v" sid="LAM 3:17" />“My soul has been kept from enjoying peace.</para>
+  <para style="q1" vid="LAM 3:17">I have forgotten what happiness is.<verse eid="LAM 3:17" /></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="LAM 3:18" />I said, ‘I’ve lost my strength <char style="add">⌞to live⌟</char> and my hope in the <char style="nd">Lord</char>.’<verse eid="LAM 3:18" /></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="LAM 3:19" />Remember my suffering and my <char style="add">⌞aimless⌟</char> wandering,</para>
+  <para style="q1" vid="LAM 3:19">the wormwood and poison.<verse eid="LAM 3:19" /></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="LAM 3:20" />My soul continues to remember <char style="add">⌞these things⌟</char> and is so discouraged.<verse eid="LAM 3:20" /></para>
+  <para style="s1">The Prophet—a Man of Hope</para>
+  <para style="q1">
+    <verse number="21" style="v" sid="LAM 3:21" />“The reason I can <char style="add">⌞still⌟</char> find hope is that I keep this one thing in mind:<verse eid="LAM 3:21" /></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="LAM 3:22" />the <char style="nd">Lord</char>’s mercy.</para>
+  <para style="q1" vid="LAM 3:22">We were not completely wiped out.</para>
+  <para style="q1" vid="LAM 3:22">His compassion is never limited.<verse eid="LAM 3:22" /></para>
+  <para style="q1">
+    <verse number="23" style="v" sid="LAM 3:23" />It is new every morning.</para>
+  <para style="q1" vid="LAM 3:23">His faithfulness is great.<verse eid="LAM 3:23" /></para>
+  <para style="q1">
+    <verse number="24" style="v" sid="LAM 3:24" />My soul can say, ‘The <char style="nd">Lord</char> is my lot <char style="add">⌞in life⌟</char>.</para>
+  <para style="q1" vid="LAM 3:24">That is why I find hope in him.’<verse eid="LAM 3:24" /></para>
+  <para style="q1">
+    <verse number="25" style="v" sid="LAM 3:25" />The <char style="nd">Lord</char> is good to those who wait for him,</para>
+  <para style="q1" vid="LAM 3:25">to anyone who seeks help from him.<verse eid="LAM 3:25" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="26" style="v" sid="LAM 3:26" />“It is good to continue to hope and wait silently</para>
+  <para style="q1" vid="LAM 3:26">for the <char style="nd">Lord</char> to save us.<verse eid="LAM 3:26" /></para>
+  <para style="q1">
+    <verse number="27" style="v" sid="LAM 3:27" />It is good for people to endure burdens when they’re young.<verse eid="LAM 3:27" /></para>
+  <para style="q1">
+    <verse number="28" style="v" sid="LAM 3:28" />They should sit alone and remain silent</para>
+  <para style="q1" vid="LAM 3:28">because the <char style="nd">Lord</char> has laid these burdens on them.<verse eid="LAM 3:28" /></para>
+  <para style="q1">
+    <verse number="29" style="v" sid="LAM 3:29" />They should put their mouths in the dust.</para>
+  <para style="q1" vid="LAM 3:29">Maybe a reason to hope exists.<verse eid="LAM 3:29" /></para>
+  <para style="q1">
+    <verse number="30" style="v" sid="LAM 3:30" />They should turn their cheeks to the one who strikes them</para>
+  <para style="q1" vid="LAM 3:30">and take their fill of insults.<verse eid="LAM 3:30" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="31" style="v" sid="LAM 3:31" />“The Lord will not reject <char style="add">⌞such⌟</char> people forever.<verse eid="LAM 3:31" /></para>
+  <para style="q1">
+    <verse number="32" style="v" sid="LAM 3:32" />Even if he makes us suffer,</para>
+  <para style="q1" vid="LAM 3:32">he will have compassion</para>
+  <para style="q1" vid="LAM 3:32">in keeping with the richness of his mercy.<verse eid="LAM 3:32" /></para>
+  <para style="q1">
+    <verse number="33" style="v" sid="LAM 3:33" />He does not willingly bring suffering or grief to anyone,<verse eid="LAM 3:33" /></para>
+  <para style="q1">
+    <verse number="34" style="v" sid="LAM 3:34" />crush any prisoner on earth underfoot,<verse eid="LAM 3:34" /></para>
+  <para style="q1">
+    <verse number="35" style="v" sid="LAM 3:35" />deny people their rights in the presence of the Most High God,<verse eid="LAM 3:35" /></para>
+  <para style="q1">
+    <verse number="36" style="v" sid="LAM 3:36" />or deprive people of justice in court.</para>
+  <para style="q1" vid="LAM 3:36">The Lord isn’t happy to see <char style="add">⌞these things⌟</char>.<verse eid="LAM 3:36" /></para>
+  <para style="q1">
+    <verse number="37" style="v" sid="LAM 3:37" />Who was it who spoke and it came into being?</para>
+  <para style="q1" vid="LAM 3:37">It was the Lord who gave the order.<verse eid="LAM 3:37" /></para>
+  <para style="q1">
+    <verse number="38" style="v" sid="LAM 3:38" />Both good and bad come from the mouth of the Most High God.<verse eid="LAM 3:38" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="39" style="v" sid="LAM 3:39" />“Why should any living mortal (any person)</para>
+  <para style="q1" vid="LAM 3:39">complain about being punished for sin?<verse eid="LAM 3:39" /></para>
+  <para style="q1">
+    <verse number="40" style="v" sid="LAM 3:40" />Let us look closely at our ways and examine them</para>
+  <para style="q1" vid="LAM 3:40">and then return to the <char style="nd">Lord</char>.<verse eid="LAM 3:40" /></para>
+  <para style="q1">
+    <verse number="41" style="v" sid="LAM 3:41" />Let us raise our hearts and hands to God in heaven.<verse eid="LAM 3:41" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="42" style="v" sid="LAM 3:42" />“We have been disobedient and rebellious.</para>
+  <para style="q1" vid="LAM 3:42">You haven’t forgiven us.<verse eid="LAM 3:42" /></para>
+  <para style="q1">
+    <verse number="43" style="v" sid="LAM 3:43" />You covered yourself with anger and pursued us.</para>
+  <para style="q1" vid="LAM 3:43">You killed without pity.<verse eid="LAM 3:43" /></para>
+  <para style="q1">
+    <verse number="44" style="v" sid="LAM 3:44" />You covered yourself with a cloud</para>
+  <para style="q1" vid="LAM 3:44">so that no prayer could get through it.<verse eid="LAM 3:44" /></para>
+  <para style="q1">
+    <verse number="45" style="v" sid="LAM 3:45" />You made us the scum and trash of the nations.<verse eid="LAM 3:45" /></para>
+  <para style="q1">
+    <verse number="46" style="v" sid="LAM 3:46" />All our enemies gawk at us.<verse eid="LAM 3:46" /></para>
+  <para style="q1">
+    <verse number="47" style="v" sid="LAM 3:47" />Panic and pitfalls have found us, so have devastation and destruction.<verse eid="LAM 3:47" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="48" style="v" sid="LAM 3:48" />“Streams of tears run down from my eyes</para>
+  <para style="q1" vid="LAM 3:48">over the ruin of my dear people.<verse eid="LAM 3:48" /></para>
+  <para style="q1">
+    <verse number="49" style="v" sid="LAM 3:49" />My eyes will keep flowing without stopping for a moment<verse eid="LAM 3:49" /></para>
+  <para style="q1">
+    <verse number="50" style="v" sid="LAM 3:50" />until the <char style="nd">Lord</char> looks down from heaven and sees.<verse eid="LAM 3:50" /></para>
+  <para style="q1">
+    <verse number="51" style="v" sid="LAM 3:51" />What I see with my eyes disturbs me deeply</para>
+  <para style="q1" vid="LAM 3:51">because of all the young women in my city.<verse eid="LAM 3:51" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="52" style="v" sid="LAM 3:52" />“Those who were my enemies for no reason hunted me like a bird.<verse eid="LAM 3:52" /></para>
+  <para style="q1">
+    <verse number="53" style="v" sid="LAM 3:53" />They threw me alive into a pit and threw rocks at me.<verse eid="LAM 3:53" /></para>
+  <para style="q1">
+    <verse number="54" style="v" sid="LAM 3:54" />Water flowed over my head. I thought I was finished.<verse eid="LAM 3:54" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="55" style="v" sid="LAM 3:55" />“I call your name from the deepest pit, O <char style="nd">Lord</char>.<verse eid="LAM 3:55" /></para>
+  <para style="q1">
+    <verse number="56" style="v" sid="LAM 3:56" />Listen to my cry <char style="add">⌞for help⌟</char>.</para>
+  <para style="q1" vid="LAM 3:56">Don’t close your ears when I cry out for relief.<verse eid="LAM 3:56" /></para>
+  <para style="q1">
+    <verse number="57" style="v" sid="LAM 3:57" />Be close at hand when I call to you. You told me not to be afraid.<verse eid="LAM 3:57" /></para>
+  <para style="q1">
+    <verse number="58" style="v" sid="LAM 3:58" />Plead my case for me, O <char style="nd">Lord</char>. Reclaim my life.<verse eid="LAM 3:58" /></para>
+  <para style="q1">
+    <verse number="59" style="v" sid="LAM 3:59" />Look at the wrong that has been done to me, O <char style="nd">Lord</char>.</para>
+  <para style="q1" vid="LAM 3:59">Give me a fair verdict.<verse eid="LAM 3:59" /></para>
+  <para style="q1">
+    <verse number="60" style="v" sid="LAM 3:60" />Look at all their malice, all their plots against me.<verse eid="LAM 3:60" /></para>
+  <para style="q1">
+    <verse number="61" style="v" sid="LAM 3:61" />Listen to their insults, all their plots against me.<verse eid="LAM 3:61" /></para>
+  <para style="q1">
+    <verse number="62" style="v" sid="LAM 3:62" />The words and thoughts of those who attack me</para>
+  <para style="q1" vid="LAM 3:62">are directed against me all day long.<verse eid="LAM 3:62" /></para>
+  <para style="q1">
+    <verse number="63" style="v" sid="LAM 3:63" />Look at them! Whether they are sitting or standing,</para>
+  <para style="q1" vid="LAM 3:63">they make fun of me in their songs.<verse eid="LAM 3:63" /></para>
+  <para style="q1">
+    <verse number="64" style="v" sid="LAM 3:64" />Pay them back, O <char style="nd">Lord</char>, for what they deserve,</para>
+  <para style="q1" vid="LAM 3:64">for what their own hands have done.<verse eid="LAM 3:64" /></para>
+  <para style="q1">
+    <verse number="65" style="v" sid="LAM 3:65" />Make them stubborn. Let your curse be on them.<verse eid="LAM 3:65" /></para>
+  <para style="q1">
+    <verse number="66" style="v" sid="LAM 3:66" />Pursue them in anger, and wipe them out from under the <char style="nd">Lord</char>’s heaven.”<verse eid="LAM 3:66" /></para>
+  <chapter eid="LAM 3" />
+  <chapter number="4" style="c" sid="LAM 4" />
+  <para style="s1">The Prophet Speaks Out: Zion’s Suffering Was Worse Than Sodom’s</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="LAM 4:1" />
+    <note caller="+" style="f">
+      <char style="fr" closed="false">4:1 </char>
+      <char style="ft" closed="false">Chapter 4 is a poem in Hebrew alphabetical order.</char>
+    </note>“Look how the gold has become tarnished!</para>
+  <para style="q1" vid="LAM 4:1">The fine gold has changed!</para>
+  <para style="q1" vid="LAM 4:1">The sacred stones are scattered at every street corner.<verse eid="LAM 4:1" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="2" style="v" sid="LAM 4:2" />“Zion’s precious children, who are worth their weight in fine gold,</para>
+  <para style="q1" vid="LAM 4:2">are now treated like clay pots,</para>
+  <para style="q1" vid="LAM 4:2">like those made by a potter’s hands.<verse eid="LAM 4:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="LAM 4:3" />Even jackals offer their breasts to nurse their young,</para>
+  <para style="q1" vid="LAM 4:3">but the women of my people are as cruel as wild ostriches.<verse eid="LAM 4:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="LAM 4:4" />The tongues of nursing infants stick to the roofs of their mouths</para>
+  <para style="q1" vid="LAM 4:4">because of their thirst.</para>
+  <para style="q1" vid="LAM 4:4">Little children beg for bread,</para>
+  <para style="q1" vid="LAM 4:4">but no one will break off a piece for them.<verse eid="LAM 4:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="LAM 4:5" />Those who used to eat delicacies are now destitute in the streets.</para>
+  <para style="q1" vid="LAM 4:5">Those who used to wear expensive clothes now pick through piles of garbage.<verse eid="LAM 4:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="LAM 4:6" />The punishment for my people’s wickedness has been more severe</para>
+  <para style="q1" vid="LAM 4:6">than the punishment for the sins of Sodom.</para>
+  <para style="q1" vid="LAM 4:6">Sodom was destroyed instantly, without one human hand touching it.<verse eid="LAM 4:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="LAM 4:7" />Zion’s princes were purer than snow, whiter than milk.</para>
+  <para style="q1" vid="LAM 4:7">Their bodies were more pink than coral.</para>
+  <para style="q1" vid="LAM 4:7">Their hair was like sapphires.<verse eid="LAM 4:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="LAM 4:8" />Their faces are <char style="add">⌞now⌟</char> blacker than soot.</para>
+  <para style="q1" vid="LAM 4:8">No one recognizes them on the streets.</para>
+  <para style="q1" vid="LAM 4:8">Their skin has shriveled on their bones.</para>
+  <para style="q1" vid="LAM 4:8">It has become as dry as bark.<verse eid="LAM 4:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="LAM 4:9" />Those who were killed with swords are better off</para>
+  <para style="q1" vid="LAM 4:9">than those who are dying from starvation.</para>
+  <para style="q1" vid="LAM 4:9">Those who were stabbed bled to death.</para>
+  <para style="q1" vid="LAM 4:9">The others are dying because there is nothing in the fields to eat.<verse eid="LAM 4:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="LAM 4:10" />The hands of loving mothers cooked their own children.</para>
+  <para style="q1" vid="LAM 4:10">The children were used for food by my people</para>
+  <para style="q1" vid="LAM 4:10">when they were being destroyed <char style="add">⌞by a blockade⌟</char>.<verse eid="LAM 4:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="LAM 4:11" />The <char style="nd">Lord</char>’s fury has accomplished his purpose.</para>
+  <para style="q1" vid="LAM 4:11">He unleashed his burning anger.</para>
+  <para style="q1" vid="LAM 4:11">He started a fire in Zion that even burned its foundations.<verse eid="LAM 4:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="LAM 4:12" />Neither the kings of the earth nor anyone living on earth could believe</para>
+  <para style="q1" vid="LAM 4:12">that enemies or invaders would ever get through the gates of Jerusalem.<verse eid="LAM 4:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="LAM 4:13" />
+    <char style="add">⌞They got through⌟</char> because of the sins of Jerusalem’s prophets</para>
+  <para style="q1" vid="LAM 4:13">and the crimes of its priests,</para>
+  <para style="q1" vid="LAM 4:13">who spilled the blood of righteous people within it.<verse eid="LAM 4:13" /></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="LAM 4:14" />My people staggered blindly through the streets.</para>
+  <para style="q1" vid="LAM 4:14">They were so contaminated with bloodstains</para>
+  <para style="q1" vid="LAM 4:14">that no one would touch their clothes.<verse eid="LAM 4:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="LAM 4:15" />‘Get away! You’re unclean,’ <note caller="+" style="f"><char style="fr" closed="false">4:15 </char><char style="ft" closed="false">“</char><char style="fk" closed="false">Unclean</char><char style="ft" closed="false">” refers to anything that Moses’ Teachings say is not presentable to God.</char></note> people yelled at them.</para>
+  <para style="q1" vid="LAM 4:15">‘Get away! Get away! Don’t touch anyone.’</para>
+  <para style="q1" vid="LAM 4:15">When they fled and wandered around,</para>
+  <para style="q1" vid="LAM 4:15">the people of the nations said, ‘They can’t stay here any longer.’<verse eid="LAM 4:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="LAM 4:16" />The <char style="nd">Lord</char> himself has scattered them.</para>
+  <para style="q1" vid="LAM 4:16">He will no longer look favorably on them.</para>
+  <para style="q1" vid="LAM 4:16">They no longer respected the priests,</para>
+  <para style="q1" vid="LAM 4:16">nor did they honor their older leaders.”<verse eid="LAM 4:16" /></para>
+  <para style="s1">The People of Zion Speak Out</para>
+  <para style="q1">
+    <verse number="17" style="v" sid="LAM 4:17" />“We are still straining our eyes, trying in vain to find help.</para>
+  <para style="q1" vid="LAM 4:17">We waited and waited for a nation that didn’t save us.<verse eid="LAM 4:17" /></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="LAM 4:18" />
+    <char style="add">⌞The enemy⌟</char> kept tracking us down,</para>
+  <para style="q1" vid="LAM 4:18">so we couldn’t even go out into the streets.</para>
+  <para style="q1" vid="LAM 4:18">Our end was near.</para>
+  <para style="q1" vid="LAM 4:18">Our time was up.</para>
+  <para style="q1" vid="LAM 4:18">Our end had come.<verse eid="LAM 4:18" /></para>
+  <para style="q1">
+    <verse number="19" style="v" sid="LAM 4:19" />Those who were hunting us were faster than eagles in the sky.</para>
+  <para style="q1" vid="LAM 4:19">They chased us in the mountains and ambushed us in the wilderness.<verse eid="LAM 4:19" /></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="LAM 4:20" />The person the <char style="nd">Lord</char> anointed <char style="add">⌞as king⌟</char>, who is the breath of our life,</para>
+  <para style="q1" vid="LAM 4:20">was caught in their pits.</para>
+  <para style="q1" vid="LAM 4:20">We had thought that we would live</para>
+  <para style="q1" vid="LAM 4:20">in our king’s shadow among the nations.”<verse eid="LAM 4:20" /></para>
+  <para style="s1">The Prophet Speaks Out: Be Warned about Edom’s Impending Doom</para>
+  <para style="q1">
+    <verse number="21" style="v" sid="LAM 4:21" />“Rejoice and be glad, people of Edom, inhabitants of the country of Uz.</para>
+  <para style="q1" vid="LAM 4:21">The cup <char style="add">⌞of the <char style="nd">Lord</char>’s fury⌟</char> will be passed to you next.</para>
+  <para style="q1" vid="LAM 4:21">You’ll get drunk and take off all your clothes.<verse eid="LAM 4:21" /></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="LAM 4:22" />People of Zion, the punishment for your wickedness will end.</para>
+  <para style="q1" vid="LAM 4:22">The <char style="nd">Lord</char> will not let you remain in exile.</para>
+  <para style="q1" vid="LAM 4:22">People of Edom, he will punish you for your wickedness.</para>
+  <para style="q1" vid="LAM 4:22">He will expose your sins.”<verse eid="LAM 4:22" /></para>
+  <chapter eid="LAM 4" />
+  <chapter number="5" style="c" sid="LAM 5" />
+  <para style="s1">A Prayer of the Prophet</para>
+  <para style="q1">
+    <verse number="1" style="v" sid="LAM 5:1" />“Remember, O <char style="nd">Lord</char>, what has happened to us.</para>
+  <para style="q1" vid="LAM 5:1">Take a look at our disgrace!<verse eid="LAM 5:1" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="2" style="v" sid="LAM 5:2" />“The land we inherited has been turned over to strangers.</para>
+  <para style="q1" vid="LAM 5:2">Our homes have been turned over to foreigners.<verse eid="LAM 5:2" /></para>
+  <para style="q1">
+    <verse number="3" style="v" sid="LAM 5:3" />We are orphans without a father.</para>
+  <para style="q1" vid="LAM 5:3">Our mothers are like widows.<verse eid="LAM 5:3" /></para>
+  <para style="q1">
+    <verse number="4" style="v" sid="LAM 5:4" />We have to pay to drink our own water.</para>
+  <para style="q1" vid="LAM 5:4">We have to pay to chop our own wood.<verse eid="LAM 5:4" /></para>
+  <para style="q1">
+    <verse number="5" style="v" sid="LAM 5:5" />
+    <char style="add">⌞Our enemies⌟</char> are breathing down our necks.</para>
+  <para style="q1" vid="LAM 5:5">We are worn out <char style="add">⌞and⌟</char> not permitted to rest.<verse eid="LAM 5:5" /></para>
+  <para style="q1">
+    <verse number="6" style="v" sid="LAM 5:6" />We had to beg Egypt and Assyria for food.<note caller="+" style="f"><char style="fr" closed="false">5:6 </char><char style="ft" closed="false">Or </char><char style="fqa" closed="false">“We made a pledge to Egypt and Assyria in order to get enough food.”</char></note><verse eid="LAM 5:6" /></para>
+  <para style="q1">
+    <verse number="7" style="v" sid="LAM 5:7" />Our ancestors sinned.</para>
+  <para style="q1" vid="LAM 5:7">Now they are gone,</para>
+  <para style="q1" vid="LAM 5:7">
+    <char style="add">⌞but⌟</char> we have to take the punishment for their wickedness.<verse eid="LAM 5:7" /></para>
+  <para style="q1">
+    <verse number="8" style="v" sid="LAM 5:8" />Slaves rule us.</para>
+  <para style="q1" vid="LAM 5:8">There is no one to rescue us from them.<verse eid="LAM 5:8" /></para>
+  <para style="q1">
+    <verse number="9" style="v" sid="LAM 5:9" />To get our food, we have to risk our lives</para>
+  <para style="q1" vid="LAM 5:9">in the heat of the desert.<verse eid="LAM 5:9" /></para>
+  <para style="q1">
+    <verse number="10" style="v" sid="LAM 5:10" />Our skin is as hot as an oven from the burning heat of starvation.<verse eid="LAM 5:10" /></para>
+  <para style="q1">
+    <verse number="11" style="v" sid="LAM 5:11" />Women in Zion are raped, so are the girls in the cities of Judah.<verse eid="LAM 5:11" /></para>
+  <para style="q1">
+    <verse number="12" style="v" sid="LAM 5:12" />
+    <char style="add">⌞Our⌟</char> leaders are hung by their hands.</para>
+  <para style="q1" vid="LAM 5:12">
+    <char style="add">⌞Our⌟</char> older leaders are shown no respect.<verse eid="LAM 5:12" /></para>
+  <para style="q1">
+    <verse number="13" style="v" sid="LAM 5:13" />
+    <char style="add">⌞Our⌟</char> young men work at the mill,</para>
+  <para style="q1" vid="LAM 5:13">and <char style="add">⌞our⌟</char> boys stagger under loads of wood.<verse eid="LAM 5:13" /></para>
+  <para style="q1">
+    <verse number="14" style="v" sid="LAM 5:14" />
+    <char style="add">⌞Our⌟</char> older leaders have stopped meeting at the city gate,</para>
+  <para style="q1" vid="LAM 5:14">and <char style="add">⌞our⌟</char> young men no longer play their music.<verse eid="LAM 5:14" /></para>
+  <para style="q1">
+    <verse number="15" style="v" sid="LAM 5:15" />There is no joy left in our hearts.</para>
+  <para style="q1" vid="LAM 5:15">Our dancing has turned into mourning.<verse eid="LAM 5:15" /></para>
+  <para style="q1">
+    <verse number="16" style="v" sid="LAM 5:16" />The crown has fallen from our head.</para>
+  <para style="q1" vid="LAM 5:16">Because we have sinned, it has been disastrous for us.<verse eid="LAM 5:16" /></para>
+  <para style="q1">
+    <verse number="17" style="v" sid="LAM 5:17" />This is why we feel sick.</para>
+  <para style="q1" vid="LAM 5:17">This is why our eyes see less and less.<verse eid="LAM 5:17" /></para>
+  <para style="q1">
+    <verse number="18" style="v" sid="LAM 5:18" />Foxes roam around on Mount Zion, which lies in ruins.<verse eid="LAM 5:18" /></para>
+  <para style="b" />
+  <para style="q1">
+    <verse number="19" style="v" sid="LAM 5:19" />“But you, O <char style="nd">Lord</char>, sit enthroned forever,</para>
+  <para style="q1" vid="LAM 5:19">and your reign continues throughout every generation.<verse eid="LAM 5:19" /></para>
+  <para style="q1">
+    <verse number="20" style="v" sid="LAM 5:20" />Why have you completely forgotten us?</para>
+  <para style="b" vid="LAM 5:20" />
+  <para style="q1" vid="LAM 5:20">Why have you abandoned us for such a long time?<verse eid="LAM 5:20" /></para>
+  <para style="q1">
+    <verse number="21" style="v" sid="LAM 5:21" />O <char style="nd">Lord</char>, bring us back to you, and we’ll come back.</para>
+  <para style="q1" vid="LAM 5:21">Give us back the life we had long ago,<verse eid="LAM 5:21" /></para>
+  <para style="q1">
+    <verse number="22" style="v" sid="LAM 5:22" />unless you have completely rejected us</para>
+  <para style="q1" vid="LAM 5:22">
+    <char style="add">⌞and⌟</char> are very angry with us.”<verse eid="LAM 5:22" /></para>
+  <chapter eid="LAM 5" />
+</usx>

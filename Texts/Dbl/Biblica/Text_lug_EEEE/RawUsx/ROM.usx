@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="ROM" style="id">- Luganda Contemporary Bible</book>
+  <para style="rem">Copyright © 2014 by Biblica, Inc.®</para>
+  <para style="h">Abaruumi</para>
+  <para style="toc1">Ebbaluwa ya Pawulo Omutukuvu eri Abaruumi</para>
+  <para style="toc2">Abaruumi</para>
+  <para style="toc3">Bar</para>
+  <para style="mt2">Ebbaluwa ya Pawulo Omutukuvu eri</para>
+  <para style="mt1">Abaruumi</para>
+  <para style="imt">Ennyanjula</para>
+  <para style="ip">Pawulo Omutukuvu ye yawandiika ebbaluwa eno. Yawandiikibwa wakati w’emyaka <char style="sc">ad</char> 48 ne 50. Mu kiseera ekyo Pawulo yali ali mu Kkolinso ku lugendo lwe olwokusatu olw’okubunyisa Enjiri mu Baamawanga. Yali ateekateeka okukyalako e Ruumi, kubanga yali tatuukangayo. Bw’atyo n’awandiika ebbaluwa eno nga yeeyanjula eri Ekkanisa y’omu Ruumi, era ng’annyonnyola mu bimpimpi enjigiriza ye ey’Ekigambo kya Katonda. Mu bbaluwa za Pawulo zonna ze yawandiika, eno y’erowoozebwa nga gye yasinga okutegeka obulungi. Atandika n’okulaga ng’ekibi bwe kyabuna eri buli muntu yenna ku nsi. Abayudaaya n’Abaamawanga tebasaana kusemberera Katonda Omutukuvu, olwokubanga bonna bajjudde ebibi. Abayudaaya tebaagondera Mateeka ga Katonda ge yawa Musa, ate n’Abaamawanga bagaanyi okulowooza ku Katonda. Naye Katonda, olw’okusaasira kwe n’ekisa kye ekingi, yateesa okubaako ky’atukolera. Noolwekyo Katonda atusembeza kubanga tulina okukkiriza mu mwana we Yesu Kristo. Naye tusembezebwa tutya Katonda? Ekyo kye kibuuzo Pawulo ky’addamu mu bbaluwa eno. Newaakubadde nga twali tukyali mu bibi, yatuggulirawo ekkubo eritutuusa gy’ali (<char style="xt"><ref loc="ROM 5:8">5:8</ref></char>). Bw’atyo kaakano Katonda ataddewo ekkubo mwe tuyinza okujja gyali nga tukkiriza Yesu Kristo omwana we omu yekka. Omwo mwe muva obulamu bw’Ekikristaayo obuwanguzi. Pawulo n’alyoka annyonnyola ekifo ky’Abayudaaya mu nteekateeka ya Katonda (9-11). Bw’atyo n’amaliriza n’okubuulirira abantu bonna babeere n’empisa ennungi.</para>
+  <para style="ie"/>
+  <chapter number="1" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 1:1">1Ko 1:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 9:15">Bik 9:15</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 11:7">2Ko 11:7</ref>
+      </char>
+    </note>Nze Pawulo, omuddu<note caller="+" style="f"><char style="fr" closed="false">1:1 </char><char style="ft" closed="false">Omukkiriza eyeeteeka mu kifo ky’omuddu eri Kristo talina bwetwaze wadde eddembe erirye ku bubwe. Akola ebyo byokka mukama we by’alagira.</char></note> wa Yesu Kristo, Mukama waffe Kristo, nayitibwa okuba omutume, eyayawulibwa okubuulira Enjiri ya Katonda, <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:2 </char><char style="xt" closed="false"><ref loc="GAL 3:8">Bag 3:8</ref></char></note>gye yasuubiriza mu bannabbi be mu byawandiikibwa ebitukuvu, <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:3 </char><char style="xt" closed="false"><ref loc="JHN 1:14">Yk 1:14</ref></char></note>ebyogera ku Mwana we, eyava mu zadde lya Dawudi mu mubiri, <verse number="4" style="v"/>eyakakasibwa okuba Omwana wa Katonda mu maanyi aga Mwoyo Mutukuvu olw’okuzuukira kw’abafu, ye Yesu Kristo Mukama waffe. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:5 a </char><char style="xt" closed="false"><ref loc="ACT 9:15">Bik 9:15</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ACT 6:7">Bik 6:7</ref></char></note>Mu Yesu Kristo Mukama waffe, mwe twaweerwa ekisa, ne mpitibwa okuba omutume, amawanga gonna galyoke gamugondere mu kukkiriza ku lw’erinnya lye. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:6 </char><char style="xt" closed="false"><ref loc="REV 17:14">Kub 17:14</ref></char></note>Nammwe muli mu abo abaayitibwa okuba abayigirizwa ba Yesu Kristo.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:7 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 8:39">Bar 8:39</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 1:3">1Ko 1:3</ref>
+      </char>
+    </note>Mpandikira abo bonna ababeera mu Ruumi, abaagalwa ba Katonda, abaayitibwa okuba abatukuvu.<note caller="+" style="f"><char style="fr" closed="false">1:7 </char><char style="ft" closed="false">abatukuvu kitegeeza omuntu ayawuliddwa.</char></note></para>
+  <para style="b"/>
+  <para style="p">Ekisa n’emirembe ebiva eri Katonda Kitaffe ne Yesu Kristo Mukama waffe, bibeerenga nammwe.</para>
+  <para style="s1">Pawulo Ayagala Okukyala mu Ruumi</para>
+  <para style="p">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:8 a </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 1:4">1Ko 1:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 16:19">Bar 16:19</ref>
+      </char>
+    </note>Okusooka neebaza nnyo Katonda wange ku lwammwe mwenna, ku bwa Yesu Kristo, olw’okukkiriza kwammwe okunywevu okwogerwako mu nsi yonna. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:9 a </char><char style="xt" closed="false"><ref loc="2TI 1:3">2Ti 1:3</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="PHP 1:8">Baf 1:8</ref></char></note>Katonda gwe mpeereza n’omutima gwange gwonna nga mbulira Enjiri ey’Omwana we, ye mujulirwa wange, nga bwe mbasabira bulijjo, <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:10 </char><char style="xt" closed="false"><ref loc="ROM 15:32">Bar 15:32</ref></char></note>nga mbegayiririra bulijjo mu kusaba kwange, ndyoke nsobole okubatuukako nga Katonda bw’anaayagala.</para>
+  <para style="p">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 15:23">Bar 15:23</ref>
+      </char>
+    </note>Kubanga neesunga nnyo okubalaba, ndyoke mbawe ku kirabo eky’omwoyo, mulyoke munywezebwe okutuuka ku nkomerero, <verse number="12" style="v"/>kwe kugamba: twezengamu amaanyi ffekka ne ffekka olw’okukkiriza kwe tulina. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:13 </char><char style="xt" closed="false"><ref loc="ROM 15:22">Bar 15:22</ref>, <ref loc="ROM 15:23">23</ref></char></note>Wabula njagala mumanye kino, abooluganda nti, Emirundi mingi nateekateeka okujja gye muli naye ne nziyizibwa okutuusa kaakano, ndyoke nkungule ebibala mu mmwe, nga bwe kiri mu mawanga amalala.</para>
+  <para style="p">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 9:16">1Ko 9:16</ref>
+      </char>
+    </note>Kubanga nnina ebbanja eri Abayonaani n’abatali Bayonaani, n’eri ab’amagezi n’eri abasirusiru, <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:15 </char><char style="xt" closed="false"><ref loc="ROM 15:20">Bar 15:20</ref></char></note>era nammwe ab’e Ruumi kyenva njagala okubabuulira Enjiri.</para>
+  <para style="p">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:16 a </char>
+      <char style="xt" closed="false">
+        <ref loc="2TI 1:8">2Ti 1:8</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 1:18">1Ko 1:18</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 3:26">Bik 3:26</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 2:9">Bar 2:9</ref>, <ref loc="ROM 2:10">10</ref></char>
+    </note>Enjiri tenkwasa nsonyi: kubanga ge maanyi ga Katonda agalokola buli muntu akkiriza, okusooka eri Omuyudaaya n’eri Omunnamawanga. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:17 a </char><char style="xt" closed="false"><ref loc="ROM 3:21">Bar 3:21</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="HAB 2:4">Kbk 2:4</ref>; <ref loc="GAL 3:11">Bag 3:11</ref>; <ref loc="HEB 10:38">Beb 10:38</ref></char></note>Kubanga mu yo obutuukirivu bwa Katonda bubikkulibwa. Obutuukirivu obwo butuweebwa olw’okukkiriza, olw’okukkiriza kwokka, nga bwe kyawandiikibwa nti, “Abatuukirivu banaabeeranga balamu lwa kukkiriza.”</para>
+  <para style="s1">Obusungu bwa Katonda eri abantu</para>
+  <para style="p">
+    <verse number="18" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 5:6">Bef 5:6</ref>; <ref loc="COL 3:6">Bak 3:6</ref></char>
+    </note>Kubanga obusungu bwa Katonda bubikkulibbwa okuva mu ggulu ku abo abatatya Katonda bonna n’abakaafiiri bonna ku bye bakola okuziyiza amazima okuvaayo. <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:19 </char><char style="xt" closed="false"><ref loc="ACT 14:17">Bik 14:17</ref></char></note>Kubanga ebisoboka okumanyibwa ku Katonda bibabikkuliddwa, kubanga Katonda abibalaze byonna mu bujjuvu. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:20 </char><char style="xt" closed="false"><ref loc="PSA 19:1-6">Zab 19:1-6</ref></char></note>Kubanga okuviira ddala ku kutondebwa kw’ensi, ebintu bye ebitalabika, bwe buyinza bwe obutaggwaawo n’obwa Katonda bwe, bitegeerwa ne birabikira ddala mu by’obutonde bwe, abantu balyoke baleme kubaako na kya kwewolereza.</para>
+  <para style="p">
+    <verse number="21" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:21 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 2:5">Yer 2:5</ref>; <ref loc="EPH 4:17">Bef 4:17</ref>, <ref loc="EPH 4:18">18</ref></char>
+    </note>Kubanga newaakubadde nga Katonda bamumanyi, tebaamugulumiza nga Katonda wadde okumwebazanga, naye ne bagobereranga ebitaliimu mu mpaka zaabwe, omutima gwabwe omusirusiru ne gujjuzibwa ekizikiza. <verse number="22" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:22 </char><char style="xt" closed="false"><ref loc="1CO 1:20">1Ko 1:20</ref>, <ref loc="1CO 1:27">27</ref></char></note>Beeyita ab’amagezi ne bafuuka abasirusiru, <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:23 </char><char style="xt" closed="false"><ref loc="PSA 106:20">Zab 106:20</ref>; <ref loc="JER 2:11">Yer 2:11</ref>; <ref loc="ACT 17:29">Bik 17:29</ref></char></note>ne bawanyisa ekitiibwa kya Katonda ataggwaawo okukifaananyiriza ekifaananyi ky’omuntu aggwaawo, n’eky’ebinyonyi, n’eky’ebirina amagulu ana n’eky’ebyewalula.</para>
+  <para style="p">
+    <verse number="24" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:24 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 4:19">Bef 4:19</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1PE 4:3">1Pe 4:3</ref>
+      </char>
+    </note>Katonda kyeyava abaleka, emitima gyabwe ne girulunkanira eby’obugwagwa ne bawemula emibiri gyabwe bokka na bokka. <verse number="25" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:25 a </char><char style="xt" closed="false"><ref loc="ISA 44:20">Is 44:20</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="JER 10:14">Yer 10:14</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ROM 9:5">Bar 9:5</ref></char></note>Ne bafuula amazima ga Katonda okuba obulimba ne basinza era ne baweereza ebitonde, mu kifo ky’okusinza eyabitonda, eyeebazibwa emirembe n’emirembe. Amiina.</para>
+  <para style="p">
+    <verse number="26" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:26 a </char>
+      <char style="xt" closed="false">nny 24, 28 </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1TH 4:5">1Bs 4:5</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 18:22">Lv 18:22</ref>, <ref loc="LEV 18:23">23</ref></char>
+    </note>Katonda kyeyava abaleka ne beeyongera mu kwegomba kwabwe okw’obuwemu. Abakazi baabwe baawanyisa enkolagana yaabwe ey’obuzaaliranwa n’abasajja, ne bakola ebitali bya buzaaliranwa. <verse number="27" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:27 </char><char style="xt" closed="false"><ref loc="LEV 18:22">Lv 18:22</ref>; <ref loc="LEV 20:13">20:13</ref></char></note>Abasajja nabo baalekayo okwegatta ne bakazi baabwe mu ngeri ey’obuzaaliranwa, ne bajjuzibwa obukaba ne beegatta ne basajja bannaabwe. N’ekyava mu bikolwa ebyo eby’obugwagwa, kwe kusasulibwa empeera esaanira okwonoona kwabwe.</para>
+  <para style="p">
+    <verse number="28" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">1:28 </char>
+      <char style="xt" closed="false">nny 24, 26</char>
+    </note>Bwe baagaana okumanya Katonda, Katonda kyeyava abaleka ne babeera n’omutima omwonoonefu ne bakola ebitasaana. <verse number="29" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:29 </char><char style="xt" closed="false"><ref loc="2CO 12:20">2Ko 12:20</ref></char></note>Bajjuzibbwa obutali butuukirivu bwonna, n’ebibi, n’omululu, n’obukyayi, n’obuggya, n’obussi, n’entalo, n’obulimba, n’enkwe, n’okwogera ebitasaana, nga basala ku bannaabwe ebigambo, <verse number="30" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:30 </char><char style="xt" closed="false"><ref loc="2TI 3:2">2Ti 3:2</ref></char></note>era nga bageya, nga bakyawa Katonda, nga bavuma bannaabwe, nga bajjudde amalala n’okwekulumbaza, nga bagunjawo enkola y’ebikyamu, era nga bajeemera bakadde baabwe. <verse number="31" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:31 </char><char style="xt" closed="false"><ref loc="2TI 3:3">2Ti 3:3</ref></char></note>Tebategeera so tebalina kukkiriza, tebalina kwagala, era tebalina mutima gusaasira. <verse number="32" style="v"/><note caller="-" style="x"><char style="xo" closed="false">1:32 a </char><char style="xt" closed="false"><ref loc="ROM 6:23">Bar 6:23</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="PSA 50:18">Zab 50:18</ref>; <ref loc="LUK 11:48">Luk 11:48</ref></char></note>Newaakubadde nga bamanyi nga Katonda yagamba nti abantu abakola ebintu ng’ebyo balizikirizibwa, tebakoma ku kubikola kyokka, naye basiima n’abo ababikola.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Omusango Katonda aligusala na bwenkanya</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:20">Bar 1:20</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2SA 12:5-7">2Sa 12:5-7</ref>
+      </char>
+    </note>Gwe anenya omuntu omulala, okola ebibi bye bimu ne by’onenyeza omuntu oyo. Kyonoova olema okubeera n’eky’okuwoza, kubanga bw’okola bw’otyo, weesalira wekka omusango. <verse number="2" style="v"/>Naye kaakano, tumanyi nga Katonda mutuufu okunenya abo abakola ebiri ng’ebyo. <verse number="3" style="v"/>Naye ggwe omuntu obuntu, akola ebiri ng’ebyo, kyokka n’onenya abantu abalala, olowooza nga Katonda alikuleka? <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:4 a </char><char style="xt" closed="false"><ref loc="ROM 9:23">Bar 9:23</ref>; <ref loc="EPH 1:7">Bef 1:7</ref>, <ref loc="EPH 1:18">18</ref>; <ref loc="EPH 2:7">2:7</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 11:22">Bar 11:22</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ROM 3:25">Bar 3:25</ref> </char><char style="xo" closed="false">d </char><char style="xt" closed="false"><ref loc="EXO 34:6">Kuv 34:6</ref> </char><char style="xo" closed="false">e </char><char style="xt" closed="false"><ref loc="2PE 3:9">2Pe 3:9</ref></char></note>Oba onyooma ekisa kya Katonda ekingi, n’okugumiikiriza kwe n’obukwatampola bwe? Tomanyi ng’ekisa kya Katonda kikuleeta mu kwenenya?</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="JUD 1:6">Yud 6</ref>
+      </char>
+    </note>Naye olw’obukakanyavu bwo n’omutima oguteenenya, weeterekera ekiruyi ku lunaku lw’ekiruyi n’okubikkulirwa, Katonda lw’alisalirako omusango ogw’obutuukirivu. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:6 </char><char style="xt" closed="false"><ref loc="PSA 62:12">Zab 62:12</ref>; <ref loc="MAT 16:27">Mat 16:27</ref></char></note>Katonda aliwa buli omu empeera esaanira ebikolwa bye. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:7 a </char><char style="xt" closed="false">nny 10 </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CO 15:53">1Ko 15:53</ref>, <ref loc="1CO 15:54">54</ref></char></note>Aliwa obulamu obutaggwaawo abo abaakola obulungi, nga balina essuubi ery’okuweebwa ekitiibwa, ettendo n’obulamu obw’emirembe n’emirembe. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:8 </char><char style="xt" closed="false"><ref loc="2TH 2:12">2Bs 2:12</ref></char></note>Naye abo abeenoonyeza ebyabwe, abajeemera amazima nga bagondera obutali butuukirivu, kiriba kiruyi na busungu. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:9 </char><char style="xt" closed="false"><ref loc="1PE 4:17">1Pe 4:17</ref></char></note>Walibaawo ennaku n’okubonaabona ku buli mmeeme y’omuntu akola ebibi, okusookera ku Muyudaaya n’oluvannyuma ku Munnaggwanga. <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:10 </char><char style="xt" closed="false">nny 9</char></note>Naye ekitiibwa n’ettendo n’emirembe biriba ku buli akola ebituufu, okusookera ku Muyudaaya n’oluvannyuma ku Munnaggwanga. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:11 </char><char style="xt" closed="false"><ref loc="ACT 10:34">Bik 10:34</ref></char></note>Kubanga Katonda tasosola mu bantu.</para>
+  <para style="p">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 3:19">Bar 3:19</ref>; <ref loc="1CO 9:20">1Ko 9:20</ref>, <ref loc="1CO 9:21">21</ref></char>
+    </note>Abo bonna abaayonoona olw’obutamanya mateeka, balizikirira; era n’abo bonna abaamanya amateeka ne boonoona, bwe batyo bwe balisalirwa omusango, okusinziira mu Mateeka. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:13 </char><char style="xt" closed="false"><ref loc="JAS 1:22">Yak 1:22</ref>, <ref loc="JAS 1:23">23</ref>, <ref loc="JAS 1:25">25</ref></char></note>Kuba abawulira obuwulizi amateeka, si be bejjeerera eri Katonda, wabula abo abakola bye galagira, be baliweebwa obutuukirivu. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:14 </char><char style="xt" closed="false"><ref loc="ACT 10:35">Bik 10:35</ref></char></note>Abaamawanga abatalina mateeka bwe bakolera mu buzaaliranwa ebintu eby’Amateeka, ebintu ebyo byennyini bifuuka amateeka gye bali, newaakubadde ng’Amateeka tegaabaweebwa. <verse number="15" style="v"/>Ekyo kiraga ng’Amateeka gawandiikibbwa mu mitima gyabwe, era kikakasa munda mu birowoozo byabwe, ng’emitima gyabwe giribasaliriza omusango oba okubejjeereza okusinziira ku ekyo kye bamanyi. <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:16 a </char><char style="xt" closed="false"><ref loc="ECC 12:14">Mub 12:14</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ACT 10:42">Bik 10:42</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ROM 16:25">Bar 16:25</ref></char></note>Kino kiribaawo ku lunaku Katonda kw’aliramulira abantu olw’ebyo bye baakisa, ng’enjiri yange bw’eri ku bwa Yesu Kristo.</para>
+  <para style="s1">Abayudaaya n’amateeka</para>
+  <para style="p">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:17 </char>
+      <char style="xt" closed="false">nny 23; <ref loc="MIC 3:11">Mi 3:11</ref>; <ref loc="ROM 9:4">Bar 9:4</ref></char>
+    </note>Abamu ku mmwe mweyita Bayudaaya. Mwesiga amateeka ne mwewaana nga bwe mumanyi Katonda. <verse number="18" style="v"/>Bwe musoma ebyawandiikibwa muyiga engeri Katonda gy’ayagala mweyise ne muzuula ekituufu. <verse number="19" style="v"/>Mukakasa nga bwe muli abakulembeze b’abazibe b’amaaso, era ettabaaza eri abo bonna abali mu kizikiza. <verse number="20" style="v"/>Naye olwokubanga, amateeka ga Katonda gatuwa amagezi n’amazima, mulowooza muyinza okuyigiriza abatali bagezi n’abaana abato. <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:21 </char><char style="xt" closed="false"><ref loc="MAT 23:3">Mat 23:3</ref>, <ref loc="MAT 23:4">4</ref></char></note>Kale ggwe ayigiriza abalala, lwaki toyinza kweyigiriza wekka? Ategeeza abalala obutabba, tobba? <verse number="22" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:22 </char><char style="xt" closed="false"><ref loc="ACT 19:37">Bik 19:37</ref></char></note>Ategeeza obutayenda, toyenda? Akyawa ebifaananyi, si ggwe onyaga eby’omu masabo? <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:23 </char><char style="xt" closed="false">nny 17</char></note>Mwenyumiririza mu mateeka, naye ne muswaza Katonda olw’obutagatuukiriza. <verse number="24" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:24 </char><char style="xt" closed="false"><ref loc="ISA 52:5">Is 52:5</ref>; <ref loc="EZK 36:22">Ez 36:22</ref></char></note>Ekyawandiikibwa kigamba nti, “Olw’ebikolwa byammwe ebyo, erinnya lya Katonda kyelivudde livvoolebwa mu mawanga.”</para>
+  <para style="p">
+    <verse number="25" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:25 a </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 5:3">Bag 5:3</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 4:4">Yer 4:4</ref>
+      </char>
+    </note>Okukomolebwa kugasiza ddala bw’okwata amateeka, naye bw’otagatuukiriza tewaba njawulo wakati wo n’atali mukomole. <verse number="26" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:26 a </char><char style="xt" closed="false"><ref loc="ROM 8:4">Bar 8:4</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CO 7:19">1Ko 7:19</ref></char></note>Kale obanga atali mukomole akwata amateeka, talibalibwa ng’eyakomolebwa? <verse number="27" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:27 </char><char style="xt" closed="false"><ref loc="MAT 12:41">Mat 12:41</ref>, <ref loc="MAT 12:42">42</ref></char></note>Noolwekyo ataakomolebwa mu buzaaliranwa naye ng’akuuma amateeka, alikusaliza omusango gwe alina amateeka amawandiike n’otagatuukiriza ate nga wakomolebwa.</para>
+  <para style="p">
+    <verse number="28" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">2:28 a </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 3:9">Mat 3:9</ref>; <ref loc="JHN 8:39">Yk 8:39</ref>; <ref loc="ROM 9:6">Bar 9:6</ref>, <ref loc="ROM 9:7">7</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 6:15">Bag 6:15</ref>
+      </char>
+    </note>Okweyisa ng’Omuyudaaya ate nga wakomolebwa, tekikufuula Muyudaaya yennyini. <verse number="29" style="v"/><note caller="-" style="x"><char style="xo" closed="false">2:29 a </char><char style="xt" closed="false"><ref loc="PHP 3:3">Baf 3:3</ref>; <ref loc="COL 2:11">Bak 2:11</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 7:6">Bar 7:6</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="JHN 5:44">Yk 5:44</ref>; <ref loc="1CO 4:5">1Ko 4:5</ref>; <ref loc="2CO 10:18">2Ko 10:18</ref>; <ref loc="1TH 2:4">1Bs 2:4</ref>; <ref loc="1PE 3:4">1Pe 3:4</ref></char></note>Okuba Omuyudaaya yennyini oteekwa okugondera amateeka. Okukomolebwa okutuufu kwe kukomolebwa okubaawo mu mutima, so si okw’omubiri. Omuntu ng’oyo atenderezebwa Katonda, so si abantu.</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Obwesigwa bwa Katonda</para>
+  <para style="p">
+    <verse number="1" style="v"/>Kaakano olwo Omuyudaaya alina nkizo ki? Oba okukomolebwa kugasa ki? <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:2 </char><char style="xt" closed="false"><ref loc="DEU 4:8">Ma 4:8</ref>; <ref loc="PSA 147:19">Zab 147:19</ref></char></note>Kugasa nnyo mu ngeri nnyingi. Okusookera ddala, Abayudaaya be baateresebwa ebigambo bya Katonda.</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:3 a </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 4:2">Beb 4:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2TI 2:13">2Ti 2:13</ref>
+      </char>
+    </note>Kituufu nti abamu ku bo tebakkiriza bigambo ebyo. Obutakkiriza bwabwe buliggyawo obwesigwa bwa Katonda, olw’okuba nga bo tebaalina kukkiriza? <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:4 a </char><char style="xt" closed="false"><ref loc="JHN 3:33">Yk 3:33</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="PSA 116:11">Zab 116:11</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="PSA 51:4">Zab 51:4</ref></char></note>Tekisoboka. Katonda ye wa mazima, newaakubadde nga buli muntu yenna mulimba. Ebyawandiikibwa bigamba nti,</para>
+  <para style="q1">“Olyoke otuukirire mu bigambo byo,</para>
+  <para style="q2">era osinge bw’osala omusango.”</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 6:19">Bar 6:19</ref>; <ref loc="GAL 3:15">Bag 3:15</ref></char>
+    </note>Naye obanga obutali butuukirivu bwaffe bulagira ddala obutuukirivu bwa Katonda, tunaayogera ki? Kikyamu Katonda okutunyiigira era n’atubonereza? Mu kino njogera ng’omuntu. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:6 </char><char style="xt" closed="false"><ref loc="GEN 18:25">Lub 18:25</ref></char></note>Nedda, sikikyamu. Katonda alisalira atya ensi omusango? <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:7 </char><char style="xt" closed="false">nny 4</char></note>Naye obanga obulimba bwammwe bweyongera okugulumiza Katonda, nga kiraga Katonda bw’ali ow’amazima, oyinza okwebuuza lwaki okyasalirwa omusango ng’omwonoonyi? <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:8 </char><char style="xt" closed="false"><ref loc="ROM 6:1">Bar 6:1</ref></char></note>Era okyayinza okwongerako na kino nti tukolenga ebibi mulyoke muveemu ebirungi, ng’abamu bwe batuwaayiriza nti, bwe tugamba. Kyokka Katonda mwenkanya, era alibasalira nga bwe kibagwanira.</para>
+  <para style="s1">Tewali mutuukirivu n’omu</para>
+  <para style="p">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:9 </char>
+      <char style="xt" closed="false">nny 19, 23; <ref loc="GAL 3:22">Bag 3:22</ref></char>
+    </note>Bino byonna bitegeeza ki? Kitegeeza nti ffe Abayudaaya tuli bulungi nnyo okusinga abantu abalala bonna? Nedda, n’akatono. Ffenna tufugibwa kibi, ne bwe baba Abayudaaya oba Abaamawanga. <verse number="10" style="v"/>Ng’ebyawandiikibwa bwe bigamba nti:</para>
+  <para style="q1">“Tewali mutuukirivu n’omu.</para>
+  <para style="q2">
+    <verse number="11" style="v"/>Tewali ategeera</para>
+  <para style="q2">wadde anoonya Katonda.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 14:1-3">Zab 14:1-3</ref>
+      </char>
+    </note>Bonna baakyama,</para>
+  <para style="q2">bonna awamu baafuuka kitagasa;</para>
+  <para style="q1">tewali n’omu akola obulungi,</para>
+  <para style="q2">tewali n’omu.”</para>
+  <para style="q1">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:13 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 5:9">Zab 5:9</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 140:3">Zab 140:3</ref>
+      </char>
+    </note>“Emimiro gyabwe giringa entaana ezaasaamiridde,</para>
+  <para style="q2">n’emimwa gyabwe gijjudde obulimba.”</para>
+  <para style="q1">“Buli kigambo ekibavaamu kiri ng’obusagwa bw’omusota.”</para>
+  <para style="q2">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 10:7">Zab 10:7</ref>
+      </char>
+    </note>“Emimwa gyabwe gijjudde okukolima n’obukyayi.”</para>
+  <para style="q1">
+    <verse number="15" style="v"/>“Ebigere byabwe byanguwa okuyiwa omusaayi,</para>
+  <para style="q2">
+    <verse number="16" style="v"/>buli gye balaga baleka abantu baayo mu kuzikirira na mu nnaku njereere.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Tebamanyi kkubo lya mirembe.”</para>
+  <para style="q2">
+    <verse number="18" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 36:1">Zab 36:1</ref>
+      </char>
+    </note>“N’okutya tebatya Katonda.”</para>
+  <para style="p">
+    <verse number="19" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:19 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JHN 10:34">Yk 10:34</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 2:12">Bar 2:12</ref>
+      </char>
+    </note>Tumanyi nga buli kyawandiikibwa mu mateeka, kyawandiikibwa ku lw’abo abafugibwa amateeka. Amateeka malambulukufu ku nsonga ezo, omuntu yenna aleme okwekwasa ensonga yonna, ate era ne Katonda okwongera okulaga ng’ensi yonna bwe yasobya. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:20 a </char><char style="xt" closed="false"><ref loc="ACT 13:39">Bik 13:39</ref>; <ref loc="GAL 2:16">Bag 2:16</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 7:7">Bar 7:7</ref></char></note>Kubanga tewali n’omu aliweebwa obutuukirivu mu maaso ga Katonda olw’ebikolwa by’amateeka. Mu mateeka mwe tutegeerera ddala ekibi.</para>
+  <para style="s1">Obutuukirivu buva mu Kukkiriza</para>
+  <para style="p">
+    <verse number="21" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:21 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:17">Bar 1:17</ref>; <ref loc="ROM 9:30">9:30</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 10:43">Bik 10:43</ref>
+      </char>
+    </note>Kale kaakano tutegeere ng’obutuukirivu bwa Katonda tebutuweebwa lwa kugondera Mateeka. Ekyo kikakasibwa Amateeka ne bannabbi. <verse number="22" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:22 a </char><char style="xt" closed="false"><ref loc="ROM 9:30">Bar 9:30</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 10:12">Bar 10:12</ref>; <ref loc="GAL 3:28">Bag 3:28</ref>; <ref loc="COL 3:11">Bak 3:11</ref></char></note>Obutuukirivu bwa Katonda butuweebwa olw’okukkiriza Yesu Kristo. Katonda tasosola. <verse number="23" style="v"/>Ffenna twayonoona era tetusaanira kitiibwa kya Katonda. <verse number="24" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:24 a </char><char style="xt" closed="false"><ref loc="ROM 4:16">Bar 4:16</ref>; <ref loc="EPH 2:8">Bef 2:8</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EPH 1:7">Bef 1:7</ref>, <ref loc="EPH 1:14">14</ref>; <ref loc="COL 1:14">Bak 1:14</ref>; <ref loc="HEB 9:12">Beb 9:12</ref></char></note>Kyokka twaweebwa obutuukirivu bwa buwa olw’ekisa kye ekiri mu kununulibwa okuli mu Yesu Kristo; <verse number="25" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:25 a </char><char style="xt" closed="false"><ref loc="1JN 4:10">1Yk 4:10</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="HEB 9:12">Beb 9:12</ref>, <ref loc="HEB 9:14">14</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ACT 17:30">Bik 17:30</ref></char></note>Katonda yaweereza Kristo okuba omutango, bwe tukkiriza Kristo olw’omusaayi gwe yayiwa. Alaga obutuukirivu bwe mu kugumiikiriza ebibi ebyakolebwa edda, be bantu abaayonoona mu biseera biri eby’edda. <verse number="26" style="v"/>Kino kiraga Katonda bw’alaga okwaniriza kw’alina eri abantu mu biro bino, bwe baba n’okukkiriza mu Yesu.</para>
+  <para style="p">
+    <verse number="27" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">3:27 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 2:17">Bar 2:17</ref>, <ref loc="ROM 2:23">23</ref>; <ref loc="ROM 4:2">4:2</ref>; <ref loc="1CO 1:29-31">1Ko 1:29-31</ref>; <ref loc="EPH 2:9">Bef 2:9</ref></char>
+    </note>Kale lwaki twenyumiriza? Tewali nsonga etwenyumirizisa. Lwa kuba nga twagoberera amateeka? Nedda, lwa kukkiriza. <verse number="28" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:28 </char><char style="xt" closed="false">nny 20, 21; <ref loc="ACT 13:39">Bik 13:39</ref>; <ref loc="EPH 2:9">Bef 2:9</ref></char></note>Noolwekyo omuntu aweebwa obutuukirivu lwa kukkiriza so si lwa kugoberera mateeka. <verse number="29" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:29 </char><char style="xt" closed="false"><ref loc="ROM 9:24">Bar 9:24</ref></char></note>Oba Katonda wa Bayudaaya bokka? Si ye Katonda w’amawanga amalala gonna? Weewaawo nabo Katonda waabwe. <verse number="30" style="v"/><note caller="-" style="x"><char style="xo" closed="false">3:30 </char><char style="xt" closed="false"><ref loc="GAL 3:8">Bag 3:8</ref></char></note>Kubanga ye Katonda omu awa obutuukirivu abaakomolebwa, n’abo abataakomolebwa olw’okukkiriza kwabwe. <verse number="31" style="v"/>Kale amateeka tugaggyewo olw’okukkiriza? Kikafuuwe. Tunyweza manyweze.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Ibulayimu Yaweebwa Obutuukirivu lwa Kukkiriza</para>
+  <para style="p">
+    <verse number="1" style="v"/>Kale kiki kye tunaayogera ku jjajjaffe Ibulayimu ku bikwata ku by’omubiri? <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:2 </char><char style="xt" closed="false"><ref loc="1CO 1:31">1Ko 1:31</ref></char></note>Singa Ibulayimu yaweebwa obutuukirivu lwa bikolwa, yandyenyumirizza, naye si eri Katonda. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:3 </char><char style="xt" closed="false">nny 5, 9, 22; <ref loc="GEN 15:6">Lub 15:6</ref>; <ref loc="GAL 3:6">Bag 3:6</ref>; <ref loc="JAS 2:23">Yak 2:23</ref></char></note>Ebyawandiikibwa bitugamba bitya? Ibulayimu yakkiriza Katonda ne kimubalirwa okuba obutuukirivu.</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:4 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 11:6">Bar 11:6</ref>
+      </char>
+    </note>Omuntu bw’akola omulimu, asasulwa empeera ye. Empeera gy’aweebwa, teba kirabo. <verse number="5" style="v"/>Katonda tayinza kukusembeza olw’ebikolwa byo. Katonda asembeza aboonoonyi olw’okukkiriza kwe balina mu ye. <verse number="6" style="v"/>Kabaka Dawudi naye yayogera kye kimu ku muntu ono Katonda gw’awa obutuukirivu obutavudde mu bikolwa bye ng’agamba nti:</para>
+  <para style="q1">
+    <verse number="7" style="v"/>“Baweereddwa omukisa,</para>
+  <para style="q2">abasonyiyiddwa ebyonoono byabwe,</para>
+  <para style="q2">ne baggyibwako ebibi byabwe.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:8 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 32:1">Zab 32:1</ref>, <ref loc="PSA 32:2">2</ref>; <ref loc="2CO 5:19">2Ko 5:19</ref></char>
+    </note>Aweereddwa omukisa omuntu,</para>
+  <para style="q2">Mukama gw’atalibalira kibi.”</para>
+  <para style="p">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:9 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 3:30">Bar 3:30</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">nny 3</char>
+    </note>Kale omukisa guno, gw’abakomole bokka oba n’abatali bakomole? Ebyawandiikibwa bitugamba nti okukkiriza kwa Ibulayimu kwamubalirwa okuba obutuukirivu. <verse number="10" style="v"/>Kale, kwamubalirwa kutya? Ng’akomolebbwa oba nga tannakomolebwa? Nedda si ng’akomolebbwa naye nga tannakomolebwa. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:11 a </char><char style="xt" closed="false"><ref loc="GEN 17:10">Lub 17:10</ref>, <ref loc="GEN 17:11">11</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false">nny 16, 17; <ref loc="LUK 19:9">Luk 19:9</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ROM 3:22">Bar 3:22</ref></char></note>Akabonero ke yafuna ak’okukomolebwa, ye nvumbo ku butuukirivu olw’okukkiriza kwe, nga tannakomolebwa, alyoke abeere jjajja w’abo bonna abakkiriza nga si bakomole, nabo balyoke babalirwe obutuukirivu. <verse number="12" style="v"/>Ate era ye jjajja w’abantu bonna, abakomole, era abatambulira mu kkubo ery’okukkiriza, jjajjaffe Ibulayimu kwe yalina nga tannakomolebwa.</para>
+  <para style="p">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:13 a </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 3:16">Bag 3:16</ref>, <ref loc="GAL 3:29">29</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 17:4-6">Lub 17:4-6</ref>
+      </char>
+    </note>Ibulayimu n’ezzadde lye tebaaweebwa kisuubizo eky’okulya ensi yonna, ng’omugabo gwe, lwa kukwata mateeka. Katonda, ensi yagimusuubiza lwa butuukirivu obwamuweebwa olw’okukkiriza. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:14 </char><char style="xt" closed="false"><ref loc="GAL 3:18">Bag 3:18</ref></char></note>Kale obanga baweebwa obusika lw’amateeka, okukkiriza kuba tekugasa, era nga n’ekisuubizo tekirina makulu. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:15 a </char><char style="xt" closed="false"><ref loc="ROM 7:7-25">Bar 7:7-25</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 3:20">Bar 3:20</ref>; <ref loc="ROM 7:7">7:7</ref></char></note>Katonda anyiiga Amateeka ge bwe gatagonderwa. Naye bwe wataba mateeka, tewaba mateeka ga kujeemera.</para>
+  <para style="p">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:16 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 3:24">Bar 3:24</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 15:8">Bar 15:8</ref>
+      </char>
+    </note>Noolwekyo ekisuubizo kijja lwa kukkiriza, kiryoke kiweebwe lwa kisa, eri ezzadde lyonna, so si ezzadde erigondera amateeka lyokka naye n’eri ezzadde erya Ibulayimu olw’okukkiriza; era oyo ye jjajjaffe ffenna. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:17 a </char><char style="xt" closed="false"><ref loc="GEN 17:5">Lub 17:5</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="JHN 5:21">Yk 5:21</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ISA 48:13">Is 48:13</ref> </char><char style="xo" closed="false">d </char><char style="xt" closed="false"><ref loc="1CO 1:28">1Ko 1:28</ref></char></note>Kyawandiikibwa nti, “Nkufudde jjajja w’amawanga amangi.” Ye jjajjaffe mu maaso g’oyo gwe yakkiriza, Katonda azuukiza abafu, era alaba ebitaliiwo ng’ebiriwo, era atonda ebintu ebiggya.</para>
+  <para style="p">
+    <verse number="18" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">4:18 a </char>
+      <char style="xt" closed="false">nny 17 </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 15:5">Lub 15:5</ref>
+      </char>
+    </note>Katonda yasuubiza Ibulayimu abazzukulu bangi. Ne bwe kyalabika ng’ekitasoboka, Ibulayimu yalina okukkiriza mu Katonda, n’oluvannyuma n’abeera jjajja w’amawanga mangi, okusinziira ku ekyo ekyayogerwa nti, “Ezadde lyo bwe liriba.” <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:19 a </char><char style="xt" closed="false"><ref loc="HEB 11:11">Beb 11:11</ref>, <ref loc="HEB 11:12">12</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="GEN 17:17">Lub 17:17</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="GEN 18:11">Lub 18:11</ref></char></note>Teyatendewererwa mu kukkiriza, newaakubadde nga yali wa myaka nga kikumi, nga n’omubiri gwe munafu nnyo, ate nga ne Saala mugumba. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:20 </char><char style="xt" closed="false"><ref loc="MAT 9:8">Mat 9:8</ref></char></note>Teyabuusabuusa kisuubizo kya Katonda mu butakkiriza, naye yaweebwa amaanyi lwa kukkiriza; n’agulumiza Katonda. <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:21 </char><char style="xt" closed="false"><ref loc="GEN 18:14">Lub 18:14</ref></char></note>Yakakasiza ddala nti Katonda kye yasuubiza asobola okukituukiriza, <verse number="22" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:22 </char><char style="xt" closed="false">nny 3</char></note>era bwe kityo ne kimubalirwa okuba obutuukirivu. <verse number="23" style="v"/>Naye tekyawandiikibwa ku lulwe yekka nti, “Kyamubalirwa okuba obutuukirivu;” <verse number="24" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:24 a </char><char style="xt" closed="false"><ref loc="ROM 15:4">Bar 15:4</ref>; <ref loc="1CO 9:10">1Ko 9:10</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 10:9">Bar 10:9</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ACT 2:24">Bik 2:24</ref></char></note>naye era naffe, abakkiririza mu oyo eyazuukiza Yesu Mukama waffe mu bafu. <verse number="25" style="v"/><note caller="-" style="x"><char style="xo" closed="false">4:25 </char><char style="xt" closed="false"><ref loc="ISA 53:5">Is 53:5</ref>, <ref loc="ISA 53:6">6</ref></char></note>Kristo yaweebwayo okuttibwa olw’ebibi byaffe, n’azuukizibwa tulyoke tuweebwe obutuukirivu.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Emirembe n’essanyu</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 3:28">Bar 3:28</ref>
+      </char>
+    </note>Kale nga bwe twaweebwa obutuukirivu olw’okukkiriza tulina emirembe ne Katonda, mu Mukama waffe Yesu Kristo, <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:2 a </char><char style="xt" closed="false"><ref loc="EPH 2:18">Bef 2:18</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CO 15:1">1Ko 15:1</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="HEB 3:6">Beb 3:6</ref></char></note>era olw’okukkiriza mu Kristo tufunye ekisa kya Katonda mwe tubeera, era mwe twenyumiririza, nga tusuubira ekitiibwa kya Katonda. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:3 a </char><char style="xt" closed="false"><ref loc="MAT 5:12">Mat 5:12</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="JAS 1:2">Yak 1:2</ref>, <ref loc="JAS 1:3">3</ref></char></note>Tetukoma ku ekyo kyokka, naye twenyumiririza ne mu kubonaabona, nga tumanyi ng’okubonaabona kutuyigiriza okugumiikiriza. <verse number="4" style="v"/>Era okugumiikiriza kututuusa ku mbala ennungi, n’embala ennungi ne zitutuusa ku ssuubi. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:5 a </char><char style="xt" closed="false"><ref loc="PHP 1:20">Baf 1:20</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ACT 2:33">Bik 2:33</ref></char></note>Era essuubi teritukwasa nsonyi kubanga Katonda atuwadde Mwoyo Mutukuvu ajjuza emitima gyaffe okwagala kwe.</para>
+  <para style="p">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:6 a </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 4:4">Bag 4:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 4:25">Bar 4:25</ref>
+      </char>
+    </note>Bwe twali tukyali banafu wakati mu bibi, Kristo yatufiirira ffe aboonoonyi. <verse number="7" style="v"/>Kizibu okufiirira omuntu omutuukirivu. Oboolyawo omuntu ayinza okwewaayo okufa ku lw’omuntu omulungi. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:8 </char><char style="xt" closed="false"><ref loc="JHN 15:13">Yk 15:13</ref>; <ref loc="1PE 3:18">1Pe 3:18</ref></char></note>Kyokka Katonda alaga okwagala kwe gye tuli mu ngeri eno: bwe twali tukyali boonoonyi, Kristo n’atufiirira.</para>
+  <para style="p">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:9 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 3:25">Bar 3:25</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:18">Bar 1:18</ref>
+      </char>
+    </note>Kale obanga twaweebwa obutuukirivu olw’omusaayi gwe, alitulokola okuva mu busungu bwa Katonda. <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:10 a </char><char style="xt" closed="false"><ref loc="ROM 11:28">Bar 11:28</ref>; <ref loc="COL 1:21">Bak 1:21</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="2CO 5:18">2Ko 5:18</ref>, <ref loc="2CO 5:19">19</ref>; <ref loc="COL 1:20">Bak 1:20</ref>, <ref loc="COL 1:22">22</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ROM 8:34">Bar 8:34</ref></char></note>Kale obanga bwe twali tukyali balabe ba Katonda twatabaganyizibwa naye mu kufa kw’Omwana we, bwe tutabagana naye tetulisingawo nnyo okulokolebwa olw’obulamu bwe? <verse number="11" style="v"/>So si ekyo kyokka, twenyumiririza mu Katonda, kubanga Katonda yaweereza Mukama waffe Yesu Kristo, mwe twatabaganyizibwa.</para>
+  <para style="s1">Okufa mu Adamu n’Obulamu mu Kristo</para>
+  <para style="p">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:12 a </char>
+      <char style="xt" closed="false">nny 15, 16, 17; <ref loc="1CO 15:21">1Ko 15:21</ref>, <ref loc="1CO 15:22">22</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 2:17">Lub 2:17</ref>; <ref loc="GEN 3:19">3:19</ref>; <ref loc="ROM 6:23">Bar 6:23</ref></char>
+    </note>Ekibi kyajja mu nsi olw’omuntu omu, ne kireeta okufa mu nsi. Mu ngeri y’emu olw’okuba nga bonna baayonoona, bonna balifa. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:13 </char><char style="xt" closed="false"><ref loc="ROM 4:15">Bar 4:15</ref></char></note>Ekibi kyaliwo mu nsi ng’amateeka tegannabaawo. Kyokka Katonda teyagamba nti be balina okuvunaanyizibwa olw’ebibi byabwe, kubanga Amateeka gaali tegannabeerawo. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:14 </char><char style="xt" closed="false"><ref loc="1CO 15:22">1Ko 15:22</ref>, <ref loc="1CO 15:45">45</ref></char></note>Kyokka okufa kwali kukyafuga okuva ku Adamu okutuusa ku Musa, nga kutwaliramu n’abo abataayonoona mu ngeri Adamu gye yayonoonamu. Mu ngeri endala, Adamu ali mu kifaananyi kya Kristo eyajja oluvannyuma. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:15 a </char><char style="xt" closed="false">nny 12, 18, 19 </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ACT 15:11">Bik 15:11</ref></char></note>Naye Katonda wa kisa nnyo, kubanga ekirabo kye yali agenda okutuwa, kyali kya njawulo ku kibi kya Adamu. Okwonoona kw’omuntu omu, Adamu, kwaleetera bangi okufa, kyokka ekisa kya Katonda n’ekirabo ekiri mu kisa ky’omuntu omu Yesu Kristo kyasukkirira nnyo ne kibuna mu bantu bangi. <verse number="16" style="v"/>Waliwo enjawulo nnene wakati w’ekibi kya Adamu n’ekirabo kya Katonda. Ekibi ekimu kyatuweesa ekibonerezo. Kyokka ekirabo kya Katonda kyatukkirizisa gy’ali, newaakubadde nga twonoona emirundi mingi. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:17 </char><char style="xt" closed="false">nny 12</char></note>Obanga olw’okwonoona kw’omuntu omu okufa kwabuna, abaliweebwa ekisa kya Katonda n’ekirabo eky’obutuukirivu, tebalisinga nnyo okufugira mu bulamu olw’omuntu omu Yesu Kristo?</para>
+  <para style="p">
+    <verse number="18" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:18 a </char>
+      <char style="xt" closed="false">nny 12 </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 4:25">Bar 4:25</ref>
+      </char>
+    </note>Kale ng’abantu bonna bwe baasalirwa omusango olw’ekibi ekimu, bwe kityo n’olw’ekikolwa ekimu eky’obutuukirivu abantu bonna mwe baaweerwa obutuukirivu ne bafuna obulamu. <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:19 a </char><char style="xt" closed="false">nny 12 </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="PHP 2:8">Baf 2:8</ref></char></note>Obujeemu bw’omuntu omu bwafuula abangi okuba aboonoonyi. Bwe butyo n’obuwulize bw’omuntu omu Yesu, bulifuula bangi okuba abatuukirivu.</para>
+  <para style="p">
+    <verse number="20" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">5:20 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 7:7">Bar 7:7</ref>, <ref loc="ROM 7:8">8</ref>; <ref loc="GAL 3:19">Bag 3:19</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1TI 1:13">1Ti 1:13</ref>, <ref loc="1TI 1:14">14</ref></char>
+    </note>Amateeka gaatekebwawo, amaanyi g’ekibi galyoke galabisibwe. Kyokka ekibi bwe kyeyongera, ekisa kya Katonda kyo ne kyeyongera nnyo okusingawo. <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">5:21 </char><char style="xt" closed="false">nny 12, 14</char></note>Ng’ekibi bwe kyafugira mu kufa, n’ekisa kya Katonda kifugira mu butuukirivu ne kitutuusa mu bulamu obutaggwaawo mu Yesu Kristo Mukama waffe.</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Okuba Abalamu mu Kristo</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:1 </char>
+      <char style="xt" closed="false">nny 15; <ref loc="ROM 3:5">Bar 3:5</ref>, <ref loc="ROM 3:8">8</ref></char>
+    </note>Kale tunaagamba tutya? Tweyongere okwonoona, olwo ekisa kya Katonda kiryoke kyeyongere? <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:2 </char><char style="xt" closed="false"><ref loc="COL 3:3">Bak 3:3</ref>, <ref loc="COL 3:5">5</ref>; <ref loc="1PE 2:24">1Pe 2:24</ref></char></note>Kikafuuwe, kubanga ffe abaafa eri ekibi tuyinza tutya okweyongera okukikola? <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:3 </char><char style="xt" closed="false"><ref loc="MAT 28:19">Mat 28:19</ref></char></note>Oba temumanyi nga bonna bwe baabatizibwa mu Yesu Kristo, baafiira wamu naye? <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:4 a </char><char style="xt" closed="false"><ref loc="COL 2:12">Bak 2:12</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 7:6">Bar 7:6</ref>; <ref loc="GAL 6:15">Bag 6:15</ref>; <ref loc="EPH 4:22-24">Bef 4:22-24</ref>; <ref loc="COL 3:10">Bak 3:10</ref></char></note>Bwe twabatizibwa twaziikibwa wamu ne Kristo. Nga Kristo bwe yazuukizibwa okuva mu bafu olw’ekitiibwa kya Kitaawe, naffe twafuna obulamu obuggya, era bwe tutyo tutambulirenga mu bulamu obwo obuggya.</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 4:10">2Ko 4:10</ref>; <ref loc="PHP 3:10">Baf 3:10</ref>, <ref loc="PHP 3:11">11</ref></char>
+    </note>Obanga twegatta wamu naye mu kifaananyi eky’okufa kwe, bwe tutyo bwe tulyegattira awamu naye mu kuzuukira kwe. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:6 a </char><char style="xt" closed="false"><ref loc="EPH 4:22">Bef 4:22</ref>; <ref loc="COL 3:9">Bak 3:9</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="GAL 2:20">Bag 2:20</ref>; <ref loc="COL 2:12">Bak 2:12</ref>, <ref loc="COL 2:20">20</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ROM 7:24">Bar 7:24</ref></char></note>Tumanyi kino nti omuntu waffe ow’edda yakomererwa wamu naye ku musaalaba, omubiri gw’ekibi guleme kuba gwa mugaso, tuleme kuddamu kuba baddu ba kibi. <verse number="7" style="v"/>Omuntu bw’afa aba takyafugibwa kibi.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Naye obanga twafiira wamu ne Kristo, tukkiriza nga tuliba balamu wamu naye <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:9 a </char><char style="xt" closed="false"><ref loc="ACT 2:24">Bik 2:24</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="REV 1:18">Kub 1:18</ref></char></note>Tumanyi nti, nga Kristo bwe yazuukizibwa mu bafu, takyafa nate, okufa tekukyamufuga. <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:10 </char><char style="xt" closed="false">nny 2</char></note>Okufa kwe yafa eri ekibi, yafa omulundi gumu, naye kaakano mulamu era mulamu ku bwa Katonda.</para>
+  <para style="p">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:11 </char>
+      <char style="xt" closed="false">nny 2</char>
+    </note>Bwe mutyo nammwe mwerowoozenga okuba abaafiira ddala eri ekibi, naye abalamu eri Katonda mu Kristo Yesu. <verse number="12" style="v"/>Noolwekyo ekibi kiremenga okufuga omubiri gwammwe ogufa, nga mugondera okwegomba kwagwo. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:13 a </char><char style="xt" closed="false">nny 16, 19; <ref loc="ROM 7:5">Bar 7:5</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 12:1">Bar 12:1</ref>; <ref loc="1PE 2:24">1Pe 2:24</ref></char></note>Temuwangayo bitundu byammwe eby’omubiri okukozesebwa ebitali bya butuukirivu eri ekibi, naye mweweereyo ddala eri Katonda, ng’abantu abalamu abaava mu bafu. Ebitundu byammwe eby’omubiri gwammwe bikozesebwe eby’obutuukirivu eri Katonda. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:14 a </char><char style="xt" closed="false"><ref loc="GAL 5:18">Bag 5:18</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 3:24">Bar 3:24</ref></char></note>Temukkiriza kibi kwongera kubafuga, kubanga temukyafugibwa mateeka, wabula ekisa kya Katonda.</para>
+  <para style="s1">Baddu ba butuukirivu</para>
+  <para style="p">
+    <verse number="15" style="v"/>Kale tukole tutya? Kale tukole ekibi kubanga tetufugibwa mateeka wabula ekisa kya Katonda? Kikafuuwe. <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:16 a </char><char style="xt" closed="false"><ref loc="JHN 8:34">Yk 8:34</ref>; <ref loc="2PE 2:19">2Pe 2:19</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false">nny 23</char></note>Temumanyi nga muba baddu b’oyo gwe muwulira? Muyinza okuba abaddu b’ekibi ne kibaleetera okufa, oba muyinza okuba abaddu abawulira Katonda n’abawa obutuukirivu. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:17 a </char><char style="xt" closed="false"><ref loc="ROM 1:8">Bar 1:8</ref>; <ref loc="2CO 2:14">2Ko 2:14</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="2TI 1:13">2Ti 1:13</ref></char></note>Kyokka Katonda yeebazibwe kubanga mwabanga baddu ba kibi, naye bwe mwagondera okuyigiriza kwe mwayigirizibwa n’omutima gwammwe gwonna, ne mukugondera. <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:18 </char><char style="xt" closed="false">nny 7, 22; <ref loc="ROM 8:2">Bar 8:2</ref></char></note>Noolwekyo mwasumululwa okuva mu kibi, ne mufuuka baddu ba butuukirivu abasanyusa Katonda.</para>
+  <para style="p">
+    <verse number="19" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">6:19 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 3:5">Bar 3:5</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">nny 13</char>
+    </note>Njogera nga nkozesa olulimi olwa bulijjo kubanga mukyali banafu. Nga bwe mwawangayo ebitundu byammwe eby’omubiri okuba abaddu b’ebirowoozo eby’obugwagwa, ne mweyongeranga okukola ebitali bya butuukirivu, bwe mutyo muweeyo ebitundu byammwe eby’omubiri okuba abaddu b’obutuukirivu, nga mweweerayo ddala eri Katonda, mube batukuvu. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:20 </char><char style="xt" closed="false">nny 16</char></note>Bwe mwali abaddu b’ekibi, temwafugibwanga butuukirivu. <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:21 </char><char style="xt" closed="false">nny 23</char></note>Kale mwagasibwa ki mu kukola ebintu ebyo, ebibaleetera ensonyi? Enkomerero yaabyo kufa. <verse number="22" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:22 a </char><char style="xt" closed="false">nny 18 </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CO 7:22">1Ko 7:22</ref>; <ref loc="1PE 2:16">1Pe 2:16</ref></char></note>Naye kaakano obanga mwasumululwa mu kibi, ne mufuuka baddu ba Katonda, ebivaamu bibatuusa ku kutukuzibwa, n’enkomerero bwe bulamu obutaggwaawo. <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">6:23 a </char><char style="xt" closed="false"><ref loc="GEN 2:17">Lub 2:17</ref>; <ref loc="ROM 5:12">Bar 5:12</ref>; <ref loc="GAL 6:7">Bag 6:7</ref>, <ref loc="GAL 6:8">8</ref>; <ref loc="JAS 1:15">Yak 1:15</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="MAT 25:46">Mat 25:46</ref></char></note>Empeera y’ekibi kwe kufa, naye ekirabo kya Katonda, bwe bulamu obutaggwaawo mu Yesu Kristo Mukama waffe.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Ekyokulabirako ekiva mu Bufumbo</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:13">Bar 1:13</ref>
+      </char>
+    </note>Temumanyi abooluganda, kubanga njogera eri abamanyi amateeka, ng’amateeka gafuga oyo yekka akyali omulamu? <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:2 </char><char style="xt" closed="false"><ref loc="1CO 7:39">1Ko 7:39</ref></char></note>Ka mbawe ekyokulabirako: mu mateeka omukazi omufumbo, asigala nga wa bba, bba bw’aba ng’akyali mulamu. Naye bba bw’afa, omukazi oyo ng’asumuluddwa mu tteeka eribagatta. <verse number="3" style="v"/>Noolwekyo omukazi oyo bwe yeegatta n’omusajja omulala, bba ng’akyali mulamu, omukazi oyo anaayitibwanga mwenzi. Naye bba bw’afanga, olwo omukazi omufumbo anaabanga asumuluddwa mu tteeka, era taabenga mwenzi bw’anaafumbirwanga omusajja omulala.</para>
+  <para style="p">
+    <verse number="4" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:4 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 8:2">Bar 8:2</ref>; <ref loc="GAL 2:19">Bag 2:19</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="COL 1:22">Bak 1:22</ref>
+      </char>
+    </note>Nammwe baganda bange mwafa eri amateeka, muli ba mubiri gwa Kristo. Mwegatta ku Kristo eyazuukizibwa okuva mu bafu, tulyoke tubale ebibala ebisanyusa Katonda. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:5 a </char><char style="xt" closed="false">nny 7-11 </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 6:13">Bar 6:13</ref></char></note>Kubanga bwe twali tukyafugibwa omubiri, okwegomba kw’ebibi kwakoleranga mu bitundu byaffe eby’omubiri olw’amateeka, era enkomerero kwali kufa. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:6 </char><char style="xt" closed="false"><ref loc="ROM 2:29">Bar 2:29</ref>; <ref loc="2CO 3:6">2Ko 3:6</ref></char></note>Naye kaakano tetukyafugibwa mateeka. Tuli bafu eri ebyo ebyali bitusibye, era tebitulinaako buyinza. Noolwekyo tuyinza okuweereza Katonda mu ngeri empya eya Mwoyo Mutukuvu, so si mu nkola enkadde ey’amateeka.</para>
+  <para style="s1">Okulwanagana n’Ekibi</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:7 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 3:20">Bar 3:20</ref>; <ref loc="ROM 4:15">4:15</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EXO 20:17">Kuv 20:17</ref>; <ref loc="DEU 5:21">Ma 5:21</ref></char>
+    </note>Kale tunaayogera ki? Amateeka kye kibi? Kikafuuwe. Singa tewaali mateeka, sanditegedde kibi. N’okwegomba kw’omubiri sandikutegeeredde ddala singa amateeka tegaagamba nti, “Teweegombanga.” <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:8 a </char><char style="xt" closed="false">nny 11 </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 4:15">Bar 4:15</ref>; <ref loc="1CO 15:56">1Ko 15:56</ref></char></note>Ekibi kyeyambisa etteeka lino, ne kindeetera okwegomba okwa buli ngeri. Noolwekyo awatali mateeka, ekibi kiba kifu. <verse number="9" style="v"/>Edda nali mulamu awatali mateeka, naye etteeka bwe lyajja, ekibi ne kiramuka, n’okufa ne nfa. <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:10 </char><char style="xt" closed="false"><ref loc="LEV 18:5">Lv 18:5</ref>; <ref loc="ROM 10:5">Bar 10:5</ref></char></note>Era ne nkizuula ng’etteeka eryali liteekwa okumpa obulamu, lye lyandetera okufa. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:11 </char><char style="xt" closed="false"><ref loc="GEN 3:13">Lub 3:13</ref></char></note>Ekibi kyeyambisa ekiragiro ekyo ne kinnimba, era ne kinzita. <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:12 </char><char style="xt" closed="false"><ref loc="1TI 1:8">1Ti 1:8</ref></char></note>Noolwekyo amateeka matukuvu, era n’ekiragiro kitukuvu, kiruŋŋamya era kirungi.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Kale ekirungi gye ndi, ate kye kyafuuka okufa? Nedda. Ekibi kye kyakozesa ekiragiro ekirungi kiryoke kinzite. Noolwekyo tulaba ekibi bwe kiri, ekibi ddala.</para>
+  <para style="p">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:14 a </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 3:1">1Ko 3:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1KI 21:20">1Bk 21:20</ref>, <ref loc="1KI 21:25">25</ref></char>
+    </note>Tumanyi ng’amateeka mwoyo, naye nze omuntu obuntu, natundibwa ng’omuddu nfugibwe ekibi. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:15 </char><char style="xt" closed="false">nny 19; <ref loc="GAL 5:17">Bag 5:17</ref></char></note>Kubanga kye nkola sikimanyi. Kye njagala si kye nkola, naye kye nkyawa kye nkola. <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:16 </char><char style="xt" closed="false">nny 12</char></note>Newaakubadde nga nkola kye mmanyi nga kikyamu, nzikiriza ng’amateeka malungi. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:17 </char><char style="xt" closed="false">nny 20</char></note>Noolwekyo si nze nkola ebintu ebyo ebibi, wabula ekibi ekiri mu nze. <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:18 </char><char style="xt" closed="false">nny 25</char></note>Mmanyi nga mu nze, temuli kalungi n’akamu. Ne bwe njagala okukola ekirungi, tewali kirungi kye nkola. <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:19 </char><char style="xt" closed="false">nny 15</char></note>Ekirungi kye njagala okukola si kye nkola, naye ekibi kye saagala kye nkola. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:20 </char><char style="xt" closed="false">nny 17</char></note>Naye obanga kye saagala kye nkola, si nze mba nkikola, wabula ekibi ekibeera mu nze.</para>
+  <para style="p">
+    <verse number="21" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">7:21 </char>
+      <char style="xt" closed="false">nny 23, 25</char>
+    </note>Noolwekyo nzudde mu mateeka nga bwe njagala okukola ebirungi, ekibi kimbeera kumpi. <verse number="22" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:22 a </char><char style="xt" closed="false"><ref loc="EPH 3:16">Bef 3:16</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="PSA 1:2">Zab 1:2</ref></char></note>Mu nze mu muntu ow’omunda njagala nnyo okugondera amateeka ga Katonda. <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:23 </char><char style="xt" closed="false"><ref loc="GAL 5:17">Bag 5:17</ref>; <ref loc="JAS 4:1">Yak 4:1</ref></char></note>Naye mu mubiri gwange gwonna, ndaba amateeka ag’enjawulo nga gawakana n’etteeka lya Katonda amagezi gange ge limanyi. Ekyo kinfuula omusibe w’amateeka ag’ekibi, ekikolera mu mubiri gwange. <verse number="24" style="v"/><note caller="-" style="x"><char style="xo" closed="false">7:24 </char><char style="xt" closed="false"><ref loc="ROM 6:6">Bar 6:6</ref>; <ref loc="ROM 8:2">8:2</ref></char></note>Nga ndi muntu munaku! Ani alindokola mu mubiri guno ogugenda okufa? <verse number="25" style="v"/>Kyokka Katonda yeebazibwe mu Yesu Kristo Mukama waffe.</para>
+  <para style="p">Nze kennyini mu birowoozo byange, ndi muddu w’amateeka ga Katonda era gwe mpeereza, newaakubadde ng’okwegomba kwange okw’omubiri, mpeereza etteeka ly’ekibi.</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Obulamu Obuva mu Mwoyo</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:1 a </char>
+      <char style="xt" closed="false">nny 34 </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">nny 39; <ref loc="ROM 16:3">Bar 16:3</ref></char>
+    </note>Noolwekyo abo abali mu Kristo Yesu, tebaliiko musango; abo abatagoberera kwegomba okw’omubiri wabula ne bagoberera Omwoyo. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:2 a </char><char style="xt" closed="false"><ref loc="1CO 15:45">1Ko 15:45</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 6:18">Bar 6:18</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ROM 7:4">Bar 7:4</ref></char></note>Kubanga etteeka ery’Omwoyo aleeta obulamu mu Kristo Yesu, lyannunula okuva mu tteeka ly’ekibi n’okufa. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:3 a </char><char style="xt" closed="false"><ref loc="ACT 13:39">Bik 13:39</ref>; <ref loc="HEB 7:18">Beb 7:18</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="PHP 2:7">Baf 2:7</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="HEB 2:14">Beb 2:14</ref>, <ref loc="HEB 2:17">17</ref></char></note>Amateeka ga Musa kye gataayinza kukola, olw’okunafuyizibwa omubiri, Katonda yakikola mu Mwana we yennyini bwe yamutuma mu kifaananyi ky’omubiri ogw’ekibi, n’asalira ekibi omusango mu mubiri. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:4 </char><char style="xt" closed="false"><ref loc="GAL 5:16">Bag 5:16</ref></char></note>Ekyo kyabaawo, eby’obutuukirivu mu mateeka biryoke bituukirire mu ffe bwe tugondera Omwoyo, ffe abatatambulira mu mubiri naye abatambulira mu Mwoyo.</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:5 a </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 5:19-21">Bag 5:19-21</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 5:22-25">Bag 5:22-25</ref>
+      </char>
+    </note>Abo abalowooleza mu mubiri balowooza bintu bya mubiri, naye abalowooleza mu Mwoyo balowooza bya Mwoyo. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:6 </char><char style="xt" closed="false"><ref loc="GAL 6:8">Bag 6:8</ref></char></note>Okulowooleza mu by’omubiri kwe kufa, naye okufugibwa Omwoyo bwe bulamu n’emirembe. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:7 </char><char style="xt" closed="false"><ref loc="JAS 4:4">Yak 4:4</ref></char></note>Kubanga okulowooza eby’omubiri kya bulabe eri Katonda. Ebirowoozo eby’omubiri tebiyinza kuwulira mateeka ga Katonda. <verse number="8" style="v"/>N’abo abafugibwa omubiri tebayinza kusanyusa Katonda.</para>
+  <para style="p">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:9 a </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 6:19">1Ko 6:19</ref>; <ref loc="GAL 4:6">Bag 4:6</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="JHN 14:17">Yk 14:17</ref>; <ref loc="1JN 4:13">1Yk 4:13</ref></char>
+    </note>Naye mmwe temufugibwa mubiri wabula mufugibwa Mwoyo, kubanga Omwoyo wa Katonda abeera mu mmwe. Era omuntu yenna bw’ataba na Mwoyo wa Kristo, oyo si wa Kristo. <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:10 </char><char style="xt" closed="false"><ref loc="GAL 2:20">Bag 2:20</ref></char></note>Era obanga Kristo ali mu mmwe, omubiri gwammwe mufu olw’ekibi, ate ng’omwoyo gwammwe mulamu olw’obutuukirivu. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:11 a </char><char style="xt" closed="false"><ref loc="ACT 2:24">Bik 2:24</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="JHN 5:21">Yk 5:21</ref></char></note>Era obanga Omwoyo w’oyo eyazuukiza Yesu okuva mu bafu abeera mu mmwe, oyo eyazuukiza Kristo mu bafu, alifuula emibiri gyammwe egifa okuba emiramu ku bw’Omwoyo we abeera mu mmwe.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Noolwekyo abooluganda tulina ebbanja, so si eri omubiri okugondera bye gutulagira. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:13 </char><char style="xt" closed="false"><ref loc="GAL 6:8">Bag 6:8</ref></char></note>Kubanga bwe munaagobereranga omubiri, mugenda kufa. Naye bwe munnatta ebikolwa eby’omubiri, muliba balamu, <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:14 a </char><char style="xt" closed="false"><ref loc="GAL 5:18">Bag 5:18</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="JHN 1:12">Yk 1:12</ref>; <ref loc="REV 21:7">Kub 21:7</ref></char></note>kubanga abo bonna abakulemberwa Omwoyo wa Katonda be baana ba Katonda. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:15 a </char><char style="xt" closed="false"><ref loc="2TI 1:7">2Ti 1:7</ref>; <ref loc="HEB 2:15">Beb 2:15</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="MRK 14:36">Mak 14:36</ref></char></note>Temwaweebwa mwoyo gwa buddu ate mutye, wabula mwaweebwa Omwoyo eyabafuula abaana, era ku bw’oyo tumukoowoola nti, “<char style="tl">Aba,</char> Kitaffe.” <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:16 </char><char style="xt" closed="false"><ref loc="EPH 1:13">Bef 1:13</ref></char></note>Omwoyo yennyini akakasiza wamu n’omwoyo waffe nga bwe tuli abaana ba Katonda. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:17 a </char><char style="xt" closed="false"><ref loc="ACT 20:32">Bik 20:32</ref>; <ref loc="GAL 4:7">Bag 4:7</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1PE 4:13">1Pe 4:13</ref></char></note>Kale nga bwe tuli abaana, tuli basika ba Katonda, era tulisikira wamu ne Kristo, bwe tubonaabonera awamu naye, tulyoke tuweerwe wamu naye ekitiibwa.</para>
+  <para style="s1">Ekitiibwa ekijja</para>
+  <para style="p">
+    <verse number="18" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:18 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 4:17">2Ko 4:17</ref>
+      </char>
+    </note>Okubonaabona kwe tubonaabona kaakano kutono nnyo bwe kugeraageranyizibwa n’ekitiibwa ekiritubikulirwa. <verse number="19" style="v"/>Ebitonde birindirira n’essuubi lingi ekiseera abaana ba Katonda lwe baliragibwa. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:20 </char><char style="xt" closed="false"><ref loc="GEN 3:17-19">Lub 3:17-19</ref></char></note>Kubanga ebitonde tebyafugibwa butaliimu nga byeyagalidde, wabula ku bw’oyo eyabifugisa, mu kusuubira. <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:21 </char><char style="xt" closed="false"><ref loc="ACT 3:21">Bik 3:21</ref>; <ref loc="2PE 3:13">2Pe 3:13</ref></char></note>Ebitonde birifuulibwa bya ddembe okuva mu kufugibwa okuvunda ne bigabanira wamu n’abaana ba Katonda ekitiibwa eky’okuba mu ddembe.</para>
+  <para style="p">
+    <verse number="22" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 12:4">Yer 12:4</ref>
+      </char>
+    </note>Tumanyi ng’ebitonde byonna bisinda era ne birumwa ng’omukazi alumwa okuzaala bw’abeera. <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:23 a </char><char style="xt" closed="false"><ref loc="2CO 5:5">2Ko 5:5</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="2CO 5:2">2Ko 5:2</ref>, <ref loc="2CO 5:4">4</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="GAL 5:5">Bag 5:5</ref></char></note>Naye ate si ekyo kyokka, era naffe abalina ebibala ebibereberye eby’Omwoyo, naffe tusinda munda yaffe nga tulindirira okufuuka abaana, kwe kununulibwa kw’emibiri gyaffe. <verse number="24" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:24 </char><char style="xt" closed="false"><ref loc="1TH 5:8">1Bs 5:8</ref></char></note>Twalokolebwa lwa ssuubi eryo. Naye essuubi erirabibwa si ssuubi; kubanga ani asuubira ky’alabako? <verse number="25" style="v"/>Naye bwe tusuubira kye tutalabako, tukirindirira n’okugumiikiriza.</para>
+  <para style="p">
+    <verse number="26" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:26 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 6:18">Bef 6:18</ref>
+      </char>
+    </note>N’Omwoyo bw’atyo atubeera mu bunafu bwaffe. Tetumanyi kusaba nga bwe kitugwanira, naye Omwoyo yennyini atwegayiririra n’okusinda okutayogerekeka. <verse number="27" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:27 </char><char style="xt" closed="false"><ref loc="REV 2:23">Kub 2:23</ref></char></note>Oyo akebera emitima, amanyi Omwoyo ky’alowooza, kubanga yeegayiririra abatukuvu ng’okusiima kwa Katonda bwe kuli. <verse number="28" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:28 </char><char style="xt" closed="false"><ref loc="1CO 1:9">1Ko 1:9</ref>; <ref loc="2TI 1:9">2Ti 1:9</ref></char></note>Era tumanyi nga eri abo abaagala Katonda, era abo abayitibwa ng’okuteesa kwe bwe kuli, ebintu byonna bibatuukako olw’obulungi. <verse number="29" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:29 a </char><char style="xt" closed="false"><ref loc="ROM 11:2">Bar 11:2</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EPH 1:5">Bef 1:5</ref>, <ref loc="EPH 1:11">11</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="1CO 15:49">1Ko 15:49</ref>; <ref loc="2CO 3:18">2Ko 3:18</ref>; <ref loc="PHP 3:21">Baf 3:21</ref>; <ref loc="1JN 3:2">1Yk 3:2</ref></char></note>Kubanga abo be yamanya olubereberye, yabalonda okufaananyizibwa mu kifaananyi ky’Omwana we, ye abeerenga omubereberye mu booluganda abangi. <verse number="30" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:30 a </char><char style="xt" closed="false"><ref loc="EPH 1:5">Bef 1:5</ref>, <ref loc="EPH 1:11">11</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CO 6:11">1Ko 6:11</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ROM 9:23">Bar 9:23</ref></char></note>Abo be yalonda, n’okubayita yabayita, n’abo be yayita, yabawa obutuukirivu, n’abo be yawa obutuukirivu yabagulumiza.</para>
+  <para style="p">
+    <verse number="31" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:31 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 4:1">Bar 4:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 118:6">Zab 118:6</ref>
+      </char>
+    </note>Kale tunaagamba ki ku bintu bino? Katonda bw’abeera ku lwaffe, ani asobola okutulwanyisa? <verse number="32" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:32 </char><char style="xt" closed="false"><ref loc="JHN 3:16">Yk 3:16</ref>; <ref loc="ROM 4:25">Bar 4:25</ref>; <ref loc="ROM 5:8">5:8</ref></char></note>Oyo ataasaasira Mwana we ye, naye n’amuwaayo ku lwaffe ffenna, talituwa buwi bintu byonna awamu naye? <verse number="33" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:33 </char><char style="xt" closed="false"><ref loc="ISA 50:8">Is 50:8</ref>, <ref loc="ISA 50:9">9</ref></char></note>Ani aliroopa abalonde ba Katonda? Katonda y’awa obutuukirivu. <verse number="34" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:34 a </char><char style="xt" closed="false"><ref loc="ROM 5:6-8">Bar 5:6-8</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="MRK 16:19">Mak 16:19</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="HEB 7:25">Beb 7:25</ref>; <ref loc="HEB 9:24">9:24</ref>; <ref loc="1JN 2:1">1Yk 2:1</ref></char></note>Ani alibasalira omusango? Kristo Yesu yafa, kyokka okusinga byonna yazuukizibwa, era ali ku mukono ogwa ddyo ogwa Katonda, ng’atwegayiririra. <verse number="35" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:35 </char><char style="xt" closed="false"><ref loc="1CO 4:11">1Ko 4:11</ref></char></note>Ani alitwawukanya n’okwagala kwa Kristo? Kubonaabona, oba bulumi, oba kuyigganyizibwa, oba njala, oba kuba bwerere, oba kabi, oba kitala? <verse number="36" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:36 </char><char style="xt" closed="false"><ref loc="PSA 44:22">Zab 44:22</ref>; <ref loc="2CO 4:11">2Ko 4:11</ref></char></note>Kyawandiikibwa nti:</para>
+  <para style="q1">“Ku lulwo tutiisibwatiisibwa n’okuttibwa obudde okuziba,</para>
+  <para style="q2">era tubalibwa ng’endiga ez’okusalibwa.”</para>
+  <para style="m">
+    <verse number="37" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">8:37 a </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 15:57">1Ko 15:57</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 2:20">Bag 2:20</ref>; <ref loc="REV 1:5">Kub 1:5</ref></char>
+    </note>Naye mu bino byonna tuwangudde n’okukirawo ku bw’oyo eyatwagala. <verse number="38" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:38 </char><char style="xt" closed="false"><ref loc="EPH 1:21">Bef 1:21</ref>; <ref loc="1PE 3:22">1Pe 3:22</ref></char></note>Kubanga nkakasiza ddala nga newaakubadde okufa, wadde obulamu, wadde bamalayika, wadde abafuzi, wadde ebiriwo, wadde ebigenda okujja, wadde amaanyi, <verse number="39" style="v"/><note caller="-" style="x"><char style="xo" closed="false">8:39 </char><char style="xt" closed="false"><ref loc="ROM 5:8">Bar 5:8</ref></char></note>wadde obugulumivu, wadde okukka wansi, wadde ekitonde ekirala kyonna, tewali kiriyinza kutwawukanya n’okwagala kwa Katonda okuli mu Kristo Yesu Mukama waffe.</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Okulonda kwa Katonda</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 11:10">2Ko 11:10</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:9">Bar 1:9</ref>
+      </char>
+    </note>Njogera amazima mu Kristo, sirimba, omwoyo gwange nga gunkakasa mu Mwoyo Mutukuvu, <verse number="2" style="v"/>nga ndimunakuwavu nnyo era nga nnumwa mu mutima. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:3 a </char><char style="xt" closed="false"><ref loc="EXO 32:32">Kuv 32:32</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CO 12:3">1Ko 12:3</ref>; <ref loc="1CO 16:22">16:22</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ROM 11:14">Bar 11:14</ref></char></note>Nnali njagala nze mwene nkolimirwe Katonda era njawukanyizibwe ku Kristo olwa baganda bange, bwe tuli ab’omu mubiri, <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:4 a </char><char style="xt" closed="false"><ref loc="EXO 4:22">Kuv 4:22</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="GEN 17:2">Lub 17:2</ref>; <ref loc="ACT 3:25">Bik 3:25</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="PSA 147:19">Zab 147:19</ref> </char><char style="xo" closed="false">d </char><char style="xt" closed="false"><ref loc="HEB 9:1">Beb 9:1</ref> </char><char style="xo" closed="false">e </char><char style="xt" closed="false"><ref loc="ACT 13:32">Bik 13:32</ref></char></note>be Bayisirayiri, abantu ba Katonda abalonde. Katonda yabalaga ekitiibwa kye, n’akola nabo endagaano, n’abawa n’amateeka ge. Yeekaalu yagibawa, n’abawa n’ebyasuubizibwa. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:5 a </char><char style="xt" closed="false"><ref loc="MAT 1:1-16">Mat 1:1-16</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="JHN 1:1">Yk 1:1</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ROM 1:25">Bar 1:25</ref></char></note>Balina bajjajjaabwe abamanyiddwa, Kristo be yasibukamu mu mubiri. Nsaba Katonda afuga byonna atenderezebwenga emirembe gyonna, Amiina.</para>
+  <para style="p">
+    <verse number="6" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:6 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 2:28">Bar 2:28</ref>, <ref loc="ROM 2:29">29</ref></char>
+    </note>Naye si kuba nti Katonda yalemwa okutuukiriza kye yasuubiza. Si bonna ab’omu Isirayiri nti bantu ba Katonda ddala. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:7 </char><char style="xt" closed="false"><ref loc="GEN 21:12">Lub 21:12</ref></char></note>Ate so si nti ly’ezzadde lya Ibulayimu bonna balyoke babeere abaana, naye ekisuubizo kyali ku Isaaka bwe kyagambibwa nti, “Mu Isaaka mwe ndituukiririza ebyo byonna bye nakusuubiza.” <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:8 </char><char style="xt" closed="false"><ref loc="ROM 8:14">Bar 8:14</ref></char></note>Kino kitegeeza nti abaana ab’omubiri si be baana ba Katonda, wabula abo ab’okusuubiza be babalibwa okuba ezzadde lya Ibulayimu. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:9 </char><char style="xt" closed="false"><ref loc="GEN 18:10">Lub 18:10</ref>, <ref loc="GEN 18:14">14</ref></char></note>Kubanga ekigambo ky’okusuubiza kye kino nti, “Mu kiseera nga kino Saala alizaala omwana owoobulenzi.”</para>
+  <para style="p">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 25:21">Lub 25:21</ref>
+      </char>
+    </note>Ate si ekyo kyokka, naye ne Isaaka jjajjaffe yalina Lebbeeka eyali olubuto. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:11 </char><char style="xt" closed="false"><ref loc="ROM 8:28">Bar 8:28</ref></char></note>Naye ng’abalongo tebannazaalibwa, era nga tebannabaako kye bakola kyonna ekirungi oba ekibi, okusiima kwa Katonda nga bwe kuli, <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:12 </char><char style="xt" closed="false"><ref loc="GEN 25:23">Lub 25:23</ref></char></note>si lwa bikolwa wabula ku bw’oyo eyabayita, kyategeezebwa Lebbeeka nti, “Omukulu y’aliba omuweereza w’omuto.” <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:13 </char><char style="xt" closed="false"><ref loc="MAL 1:2">Mal 1:2</ref>, <ref loc="MAL 1:3">3</ref></char></note>Era nga bwe kyawandiikibwa nti, “Yakobo namwagala, naye Esawu namukyawa.”</para>
+  <para style="p">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 19:7">2By 19:7</ref>
+      </char>
+    </note>Kale tunaagamba ki? Ddala ddala Katonda talina bwenkanya? Kikafuuwe. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:15 </char><char style="xt" closed="false"><ref loc="EXO 33:19">Kuv 33:19</ref></char></note>Agamba Musa nti,</para>
+  <para style="q1">“Ndisaasira oyo gwe ndisaasira,</para>
+  <para style="q2">era ndikwatirwa ekisa oyo gwe ndikwatirwa ekisa.”</para>
+  <para style="m">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 2:8">Bef 2:8</ref>
+      </char>
+    </note>Noolwekyo tekiva ku ebyo omuntu by’ayagala newaakubadde by’akola, wabula ku kusaasira kwa Katonda. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:17 </char><char style="xt" closed="false"><ref loc="EXO 9:16">Kuv 9:16</ref></char></note>Ebyawandiikibwa kyebyava byogera ku Falaawo nti, “Kyennava nkuyimusa, ndyoke njolese amaanyi gange mu ggwe, erinnya lyange liryoke litegeezebwe mu nsi zonna.” <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:18 </char><char style="xt" closed="false"><ref loc="EXO 4:21">Kuv 4:21</ref></char></note>Noolwekyo Katonda asaasira oyo gw’ayagala okusaasira, ate n’akakanyaza omutima gw’oyo gw’ayagala okukakanyaza.</para>
+  <para style="p">
+    <verse number="19" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:19 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 11:19">Bar 11:19</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2CH 20:6">2By 20:6</ref>; <ref loc="DAN 4:35">Dan 4:35</ref></char>
+    </note>Omu akyayinza okumbuuza nti, Lwaki Katonda atunenya, obanga y’atuleetera okukola nga bw’asiima? <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:20 a </char><char style="xt" closed="false"><ref loc="ISA 64:8">Is 64:8</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ISA 29:16">Is 29:16</ref></char></note>Naye ggwe omuntu obuntu, ggwe ani addamu ng’owakanya Katonda? Ekibumbe kiyinza okubuuza eyakibumba nti, “Lwaki wammumba bw’oti?” <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:21 </char><char style="xt" closed="false"><ref loc="2TI 2:20">2Ti 2:20</ref></char></note>Oba omubumbi talina buyinza ku bbumba, okubumbamu ekibya eky’omugaso, oba okubumbamu ekitali kya mugaso?</para>
+  <para style="p">
+    <verse number="22" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 2:4">Bar 2:4</ref>
+      </char>
+    </note>Katonda yayagala okulaga obusungu bwe, n’amaanyi ge eri abo bonna abaali basaanira okuzikirizibwa, kyokka n’abalaga obugumiikiriza. <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:23 a </char><char style="xt" closed="false"><ref loc="ROM 2:4">Bar 2:4</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 8:30">Bar 8:30</ref></char></note>Ekyo yakikola alyoke amanyise obugagga bw’ekitiibwa kye, eri abo bonna be yeerondera okugabanira awamu ekitiibwa kye. <verse number="24" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:24 a </char><char style="xt" closed="false"><ref loc="ROM 8:28">Bar 8:28</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 3:29">Bar 3:29</ref></char></note>Naffe yatuyita, si Bayudaaya bokka naye n’Abaamawanga. <verse number="25" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:25 </char><char style="xt" closed="false"><ref loc="HOS 2:23">Kos 2:23</ref>; <ref loc="1PE 2:10">1Pe 2:10</ref></char></note>Ne mu Koseya agamba nti,</para>
+  <para style="q1">“Abataali bantu bange ndibayita abantu bange,</para>
+  <para style="q2">Ne gwe nnali ssaagala, ndimwagala.”</para>
+  <para style="m">
+    <verse number="26" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:26 </char>
+      <char style="xt" closed="false">
+        <ref loc="HOS 1:10">Kos 1:10</ref>
+      </char>
+    </note>Mu kifo omwo mwe baayitirwa nti,</para>
+  <para style="q1">“Temuli bantu bange,</para>
+  <para style="q2">mwe baliyitirwa abaana ba Katonda omulamu.”</para>
+  <para style="m">
+    <verse number="27" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:27 a </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 22:17">Lub 22:17</ref>; <ref loc="HOS 1:10">Kos 1:10</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 11:5">Bar 11:5</ref>
+      </char>
+    </note>Isaaya ayogera eri Isirayiri mu ddoboozi ery’omwanguka nti,</para>
+  <para style="q1">“Omuwendo gw’abaana ba Isirayiri ne bwe gulyenkana ng’omusenyu gw’ennyanja,</para>
+  <para style="q2">ekitundu ekirisigalawo kye kirirokolebwa.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:28 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 10:22">Is 10:22</ref>, <ref loc="ISA 10:23">23</ref></char>
+    </note>Kubanga Mukama alisalawo</para>
+  <para style="q2">era alituukiriza mangu ekyo kye yagamba okukola ku nsi.”</para>
+  <para style="m">
+    <verse number="29" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:29 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JAS 5:4">Yak 5:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 1:9">Is 1:9</ref>; <ref loc="DEU 29:23">Ma 29:23</ref>; <ref loc="ISA 13:19">Is 13:19</ref>; <ref loc="JER 50:40">Yer 50:40</ref></char>
+    </note>Era nga Isaaya bwe yayogera edda nti,</para>
+  <para style="q1">“Singa Mukama ow’Eggye</para>
+  <para style="q2">teyatulekerawo zzadde,</para>
+  <para style="q1">twandifuuse nga Sodomu,</para>
+  <para style="q2">era twandifaananye nga Ggomola.”</para>
+  <para style="s1">Obutakkiriza bw’Abayudaaya</para>
+  <para style="p">
+    <verse number="30" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">9:30 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:17">Bar 1:17</ref>; <ref loc="ROM 10:6">10:6</ref>; <ref loc="GAL 2:16">Bag 2:16</ref>; <ref loc="PHP 3:9">Baf 3:9</ref>; <ref loc="HEB 11:7">Beb 11:7</ref></char>
+    </note>Kale tunaagamba ki? Tugambe nti Abaamawanga abataagobereranga butuukirivu, baafuna obutuukirivu, bwe butuukirivu obuva mu kukkiriza, <verse number="31" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:31 a </char><char style="xt" closed="false"><ref loc="ISA 51:1">Is 51:1</ref>; <ref loc="ROM 10:2">Bar 10:2</ref>, <ref loc="ROM 10:3">3</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="GAL 5:4">Bag 5:4</ref></char></note>naye Isirayiri mu kugobereranga amateeka ag’obutuukirivu, teyafuna butuukirivu obwo? <verse number="32" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:32 </char><char style="xt" closed="false"><ref loc="1PE 2:8">1Pe 2:8</ref></char></note>Lwaki? Ekyo baalema okukituukako kubanga tebaagoberera butuukirivu mu kukkiriza wabula mu bikolwa. Beesittala ku jjinja eryo eryesittalwako, <verse number="33" style="v"/><note caller="-" style="x"><char style="xo" closed="false">9:33 </char><char style="xt" closed="false"><ref loc="ISA 28:16">Is 28:16</ref>; <ref loc="ROM 10:11">Bar 10:11</ref></char></note>nga bwe kyawandiikibwa nti,</para>
+  <para style="q1">“Laba, nteeka mu Sayuuni ejjinja eryesittalwako<note caller="+" style="f"><char style="fr" closed="false">9:33 </char><char style="ft" closed="false">Ejjinja eryesittalwako ye Kristo.</char></note></para>
+  <para style="q2">n’olwazi olulibasuula.</para>
+  <para style="q2">Oyo amukkiriza taliswazibwa.”</para>
+  <chapter number="10" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>Abooluganda, kye njagala mu mutima gwange era kye nsabira Abayisirayiri eri Katonda, kwe kulokolebwa. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:2 </char><char style="xt" closed="false"><ref loc="ACT 21:20">Bik 21:20</ref></char></note>Kubanga nkakasa nga balina obunyiikivu eri Katonda, naye si mu kutegeera. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:3 </char><char style="xt" closed="false"><ref loc="ROM 1:17">Bar 1:17</ref></char></note>Mu butamanya butuukirivu bwa Katonda, bagezaako okwenoonyeza obutuukirivu, nga bagondera amateeka mu kifo ky’okugondera obutuukirivu bwa Katonda. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:4 a </char><char style="xt" closed="false"><ref loc="GAL 3:24">Bag 3:24</ref>; <ref loc="ROM 7:1-4">Bar 7:1-4</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 3:22">Bar 3:22</ref></char></note>Kristo atuwa amakulu amajjuvu, buli amukkiriza n’amuwa obutuukirivu.</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="LEV 18:5">Lv 18:5</ref>; <ref loc="NEH 9:29">Nek 9:29</ref>; <ref loc="EZK 20:11">Ez 20:11</ref>, <ref loc="EZK 20:13">13</ref>, <ref loc="EZK 20:21">21</ref>; <ref loc="ROM 7:10">Bar 7:10</ref></char>
+    </note>Musa awandiika ku butuukirivu obuva mu mateeka nti, “Omuntu alikola ebintu ebyo aliba mulamu mu byo.” <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:6 a </char><char style="xt" closed="false"><ref loc="ROM 9:30">Bar 9:30</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="DEU 30:12">Ma 30:12</ref></char></note>Naye okukkiriza okuva mu butuukirivu, kugamba nti, “Toyogeranga mu mutima gwo nti, ‘Ani alirinnya mu ggulu?’ (kwe kuggya Kristo mu ggulu) <verse number="7" style="v"/>newaakubadde okugamba nti, ‘Ani alikka emagombe?’ (kwe kuggya Kristo mu bafu.)” <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:8 </char><char style="xt" closed="false"><ref loc="DEU 30:14">Ma 30:14</ref></char></note>Abo bonna abalina okukkiriza mu Kristo bagamba nti, “Ekigambo kiri kumpi naawe, kiri mu kamwa ko era kiri mu mutima gwo,” kye kigambo eky’okukkiriza kye tubuulira. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:9 a </char><char style="xt" closed="false"><ref loc="MAT 10:32">Mat 10:32</ref>; <ref loc="LUK 12:8">Luk 12:8</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ACT 2:24">Bik 2:24</ref></char></note>Bw’oyatula n’akamwa ko nti, Yesu ye Mukama, n’okkiriza n’omutima gwo nga Katonda yamuzuukiza mu bafu, olokoka. <verse number="10" style="v"/>Kubanga omuntu akkiriza na mutima gwe n’aweebwa obutuukirivu, era ayatula na kamwa ke n’alokoka. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:11 </char><char style="xt" closed="false"><ref loc="ISA 28:16">Is 28:16</ref>; <ref loc="ROM 9:33">Bar 9:33</ref></char></note>Kubanga Ebyawandiikibwa bigamba nti, “Buli amukkiriza taliswazibwa.” <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:12 a </char><char style="xt" closed="false"><ref loc="ROM 3:22">Bar 3:22</ref>, <ref loc="ROM 3:29">29</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ACT 10:36">Bik 10:36</ref></char></note>Tewali njawulo wakati wa Muyudaaya na Muyonaani, kubanga Mukama waabwe y’omu era ayanukula abo bonna abamukoowoola. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:13 a </char><char style="xt" closed="false"><ref loc="ACT 2:21">Bik 2:21</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="JOL 2:32">Yo 2:32</ref></char></note>Buli alikoowoola erinnya lya Mukama alirokoka. <verse number="14" style="v"/>Kale balikoowoola batya oyo gwe batakkiririzaamu? Era balikkiriza batya oyo gwe batawulirangako? Era baliwulira batya awatali abuulira? <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:15 </char><char style="xt" closed="false"><ref loc="ISA 52:7">Is 52:7</ref>; <ref loc="NAM 1:15">Nak 1:15</ref></char></note>Era balibuulira batya nga tebatumiddwa? Ekyawandiikibwa nga bwe kigamba nti, “Ebigere by’abo abategeeza amawulire amalungi, nga birungi.” <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:16 </char><char style="xt" closed="false"><ref loc="ISA 53:1">Is 53:1</ref>; <ref loc="JHN 12:38">Yk 12:38</ref></char></note>Naye si bonna abaagondera Enjiri. Isaaya agamba nti, “Mukama, waliwo akkirizza obubaka bwaffe?” <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:17 a </char><char style="xt" closed="false"><ref loc="GAL 3:2">Bag 3:2</ref>, <ref loc="GAL 3:5">5</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="COL 3:16">Bak 3:16</ref></char></note>Noolwekyo okukkiriza kujja olw’okuwulira ekigambo kya Kristo. <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">10:18 </char><char style="xt" closed="false"><ref loc="PSA 19:4">Zab 19:4</ref>; <ref loc="MAT 24:14">Mat 24:14</ref>; <ref loc="COL 1:6">Bak 1:6</ref>, <ref loc="COL 1:23">23</ref>; <ref loc="1TH 1:8">1Bs 1:8</ref></char></note>Naye mulowooza Abayisirayiri tebaawulira? Weewaawo baawulira. Ebyawandiikibwa bigamba nti,</para>
+  <para style="q1">“Eddoboozi lyabwe lyabuna mu nsi zonna,</para>
+  <para style="q2">n’ebigambo byabwe byatuuka ku nkomerero z’ensi.”</para>
+  <para style="m">
+    <verse number="19" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:19 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 11:11">Bar 11:11</ref>, <ref loc="ROM 11:14">14</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:21">Ma 32:21</ref>
+      </char>
+    </note>Abayisirayiri baabitegeera oba tebaabitegeera? Bw’ati Musa bw’addamu ekibuuzo ekyo:</para>
+  <para style="q1">“Ndibaleetera okukwatirwa obuggya abatali ggwanga,</para>
+  <para style="q2">ne mbasunguwaza olw’eggwanga eritalina kutegeera.”</para>
+  <para style="m">
+    <verse number="20" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:20 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 65:1">Is 65:1</ref>; <ref loc="ROM 9:30">Bar 9:30</ref></char>
+    </note>Ne Isaaya yali muvumu bwe yagamba nti,</para>
+  <para style="q1">“Nazuulibwa abo abatannoonya,</para>
+  <para style="q2">ne ndabika eri abo abatambuulirizaako.”</para>
+  <para style="m">
+    <verse number="21" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">10:21 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 65:2">Is 65:2</ref>
+      </char>
+    </note>Naye eri Isirayiri agamba nti,</para>
+  <para style="q1">“Olunaku lwonna nalumala nga ngolodde emikono gyange</para>
+  <para style="q2">eri eggwanga ekkakanyavu era abantu abeewaggula.”</para>
+  <chapter number="11" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="1SA 12:22">1Sa 12:22</ref>; <ref loc="JER 31:37">Yer 31:37</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 11:22">2Ko 11:22</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="PHP 3:5">Baf 3:5</ref>
+      </char>
+    </note>Kale ka mbuuze: Katonda yeegoberako ddala abantu be? Kikafuuwe. Kubanga nange ndi Muyisirayiri, era muzzukulu wa Ibulayimu, ow’omu kika kya Benyamini. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:2 </char><char style="xt" closed="false"><ref loc="ROM 8:29">Bar 8:29</ref></char></note>Katonda tasuulanga bantu be, be yalonda okuva ku lubereberye. Oba temumanyi ekyawandiikibwa ekyogera ku Eriya bwe yeegayirira Katonda nga yeemulugunya olwa Isirayiri? <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:3 </char><char style="xt" closed="false"><ref loc="1KI 19:10">1Bk 19:10</ref>, <ref loc="1KI 19:14">14</ref></char></note>Yagamba nti, “Mukama, basse bannabbi bo ne bamenyaamenya n’ebyoto byo. Nze nzekka nze nsigaddewo, ate bannoonya okunzita.” <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:4 </char><char style="xt" closed="false"><ref loc="1KI 19:18">1Bk 19:18</ref></char></note>Naye Katonda yamuddamu atya? Yamugamba nti: “Neesigalizzaawo abasajja kasanvu abatafukaamirira Baali.” <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:5 </char><char style="xt" closed="false"><ref loc="ROM 9:27">Bar 9:27</ref></char></note>Era bwe kityo ne mu biro bino waliwo ekitundu ekyasigalawo abaalondebwamu olw’ekisa. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:6 </char><char style="xt" closed="false"><ref loc="ROM 4:4">Bar 4:4</ref></char></note>Naye obanga lwa kisa, si lwa bikolwa nate, kubanga ekisa kyandibadde tekikyali kisa.</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:7 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 9:31">Bar 9:31</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">nny 25; <ref loc="ROM 9:18">Bar 9:18</ref></char>
+    </note>Kale tugambe ki? Abayisirayiri baalemwa okufuna kye baali banoonya, wabula be yalondamu be baakifuna, abalala ne bakakanyazibwa, emitima, <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:8 a </char><char style="xt" closed="false"><ref loc="MAT 13:13-15">Mat 13:13-15</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="DEU 29:4">Ma 29:4</ref>; <ref loc="ISA 29:10">Is 29:10</ref></char></note>nga bwe kyawandiikibwa nti,</para>
+  <para style="q1">“Katonda yabawa omwoyo ogw’okubongoota,</para>
+  <para style="q2">n’aleetera amaaso gaabwe obutalaba,</para>
+  <para style="q2">n’amatu gaabwe obutawulira</para>
+  <para style="q1">okutuusa leero.”</para>
+  <para style="m">
+    <verse number="9" style="v"/>Ne Dawudi yagamba nti,</para>
+  <para style="q1">“Leka ekijjulo kyabwe kibafuukire omutego, era ekitimba,</para>
+  <para style="q2">eky’okubatega era empeera ebasaanira.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 69:22">Zab 69:22</ref>, <ref loc="PSA 69:23">23</ref></char>
+    </note>Amaaso gaabwe ka gabeeko ekifu, baleme okulaba.</para>
+  <para style="q2">Era batambule nga bakootakoota emirembe n’emirembe.”</para>
+  <para style="p">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:11 a </char>
+      <char style="xt" closed="false">nny 1 </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 13:46">Bik 13:46</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 10:19">Bar 10:19</ref>
+      </char>
+    </note>Kale ka mbuuze, kyebaava beesittala balyoke bagwe? Kikafuuwe. Naye olw’okwonoona kwabwe, obulokozi kyebwava bujja eri Abaamawanga, Abayudaaya balyoke bakwatibwe obuggya. <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:12 </char><char style="xt" closed="false">nny 25</char></note>Kale obanga okwonoona kwabwe kutegeeza bugagga eri ensi, n’okulemwa kwabwe nga kutegeeza bugagga eri Abaamawanga, okuganyulwa kwabwe tekulisingawo!</para>
+  <para style="p">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 9:15">Bik 9:15</ref>
+      </char>
+    </note>Kaakano njogera gye muli Abaamawanga, nga bwe ndi omutume eri Abaamawanga, ngulumiza obuweereza bwange, <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:14 a </char><char style="xt" closed="false">nny 11; <ref loc="ROM 10:19">Bar 10:19</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CO 1:21">1Ko 1:21</ref>; <ref loc="1TI 2:4">1Ti 2:4</ref>; <ref loc="TIT 3:5">Tit 3:5</ref></char></note>singa kisoboka nkwase baganda bange obuggya abamu ku bo basobole okulokolebwa. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:15 a </char><char style="xt" closed="false"><ref loc="ROM 5:10">Bar 5:10</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="LUK 15:24">Luk 15:24</ref>, <ref loc="LUK 15:32">32</ref></char></note>Kubanga obanga okugobebwa kwabwe kwe kutabaganya ensi, okusembezebwa kwabwe kulitegeeza ki, bwe kutaliwa bafu bulamu? <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:16 </char><char style="xt" closed="false"><ref loc="LEV 23:10">Lv 23:10</ref>, <ref loc="LEV 23:17">17</ref>; <ref loc="NUM 15:18-21">Kbl 15:18-21</ref></char></note>Kale kaakano obanga ekitole ky’eŋŋano ekandiddwa ne kiweebwayo ng’ekibala ekibereberye kitukuvu, n’eŋŋaano yonna ntukuvu; era obanga ekikolo kitukuvu, n’amatabi matukuvu.</para>
+  <para style="p">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:17 a </char>
+      <char style="xt" closed="false">
+        <ref loc="JER 11:16">Yer 11:16</ref>; <ref loc="JHN 15:2">Yk 15:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 2:39">Bik 2:39</ref>; <ref loc="EPH 2:11-13">Bef 2:11-13</ref></char>
+    </note>Naye obanga amatabi agamu gaawogolebwa, ate nga ggwe eyali omuzeyituuni ogw’omu nsiko wasimbibwa ku kikolo kyagwo, n’ogabana ku bugimu bw’ekikolo ky’omuzeyituuni, <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:18 </char><char style="xt" closed="false"><ref loc="JHN 4:22">Yk 4:22</ref></char></note>teweenyumiririzanga ku matabi ago; naye bwe weenyumirizanga, jjukira nga si gwe owaniridde ekikolo, naye ekikolo kye kikuwaniridde. <verse number="19" style="v"/>Oyinza okwogera nti, “Amatabi gaawogolwako, ndyoke nsimbibweko.” <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:20 a </char><char style="xt" closed="false"><ref loc="1CO 10:12">1Ko 10:12</ref>; <ref loc="2CO 1:24">2Ko 1:24</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 12:16">Bar 12:16</ref>; <ref loc="1TI 6:17">1Ti 6:17</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="1PE 1:17">1Pe 1:17</ref></char></note>Ky’oyogedde kiba kituufu. Weewaawo gaawogolwako lwa butakkiriza, kyokka ggwe onywedde lwa kukkiriza. Teweenyumirizanga, naye otyanga. <verse number="21" style="v"/>Kuba obanga Katonda teyasaasira matabi ga buzaaliranwa, nammwe ayinza obutabasaasira.</para>
+  <para style="p">
+    <verse number="22" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:22 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 2:4">Bar 2:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 15:2">1Ko 15:2</ref>; <ref loc="HEB 3:6">Beb 3:6</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="JHN 15:2">Yk 15:2</ref>
+      </char>
+    </note>Kale mufumiitirize ku kisa n’obukambwe bwa Katonda. Aba mukambwe eri abo abaagwa, naye n’aba wa kisa eri ggwe, bwe weeyongera okunywerera mu kisa kye, kubanga naawe bw’otonywere oliwogolwako. <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:23 </char><char style="xt" closed="false"><ref loc="2CO 3:16">2Ko 3:16</ref></char></note>Era n’abo oluvannyuma bwe balikkiriza, balizzibwako ku nduli kubanga Katonda ayinza okubazaako kuli. <verse number="24" style="v"/>Kuba obanga ggwe mu buzaaliranwa bwo gwe eyawogolwa ku muzeyituuni, wazzibwa ku muzeyituuni ogutali gwa buzaaliranwa bo, abo ab’obuzaaliranwa tebalisinga nnyo okuzzibwa ku muzeyituuni gwabwe bo?</para>
+  <para style="p">
+    <verse number="25" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:25 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:13">Bar 1:13</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 16:25">Bar 16:25</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 12:16">Bar 12:16</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">nny 7; <ref loc="ROM 9:18">Bar 9:18</ref> </char>
+      <char style="xo" closed="false">e </char>
+      <char style="xt" closed="false">
+        <ref loc="LUK 21:24">Luk 21:24</ref>
+      </char>
+    </note>Kubanga ssaagala mmwe abooluganda obutamanya kyama kino nga mwelowooza okuba ab’amagezi, ng’abamu ku Bayisirayiri bwe baakakanyaza emitima gyabwe, okutuusa mmwe Abaamawanga, lwe muliyingira. <verse number="26" style="v"/>N’oluvannyuma Isirayiri yenna alirokolebwa, ng’Ekyawandiikibwa bwe kigamba nti,</para>
+  <para style="q1">“Omulokozi aliva mu Sayuuni,</para>
+  <para style="q2">era aliggyawo obutatya Katonda mu bazzukulu ba Yakobo.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:27 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 27:9">Is 27:9</ref>; <ref loc="HEB 8:10">Beb 8:10</ref>, <ref loc="HEB 8:12">12</ref></char>
+    </note>Era eyo ye ndagaano yange nabo,</para>
+  <para style="q2">bwe ndibaggyako ebibi byabwe.”</para>
+  <para style="p">
+    <verse number="28" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:28 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 5:10">Bar 5:10</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 7:8">Ma 7:8</ref>; <ref loc="DEU 10:15">10:15</ref>; <ref loc="ROM 9:5">Bar 9:5</ref></char>
+    </note>Mu njiri balabe ku lwammwe, naye mu kulondebwa baagalwa olwa bajjajjaabwe. <verse number="29" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:29 a </char><char style="xt" closed="false"><ref loc="ROM 8:28">Bar 8:28</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="HEB 7:21">Beb 7:21</ref></char></note>Kubanga Katonda bw’agabira abantu ebirabo oba bw’abayita, teyejjusa. <verse number="30" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:30 </char><char style="xt" closed="false"><ref loc="EPH 2:2">Bef 2:2</ref></char></note>Kuba nga mmwe edda bwe mwajeemera Katonda, kyokka kaakano nga musaasiddwa olw’obujeemu bw’Abayudaaya, <verse number="31" style="v"/>bwe batyo nabo kaakano bajeemu, eri ekyo ekyali okusaasira gye muli, balyoke basaasirwe. <verse number="32" style="v"/><note caller="-" style="x"><char style="xo" closed="false">11:32 </char><char style="xt" closed="false"><ref loc="ROM 3:9">Bar 3:9</ref></char></note>Kubanga Katonda yaleka abantu bonna mu bujeemu alyoke abakwatirwe ekisa.</para>
+  <para style="q1">
+    <verse number="33" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:33 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 2:4">Bar 2:4</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 92:5">Zab 92:5</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 11:7">Yob 11:7</ref>
+      </char>
+    </note>Kale nga Katonda wa kitalo,</para>
+  <para style="q2">ng’amagezi ge mangi n’okutegeera kwe kungi era n’obugagga bungi;</para>
+  <para style="q2">ensala ye ey’emisango nga tekeberekeka, n’amakubo ge tegekkaanyizika.</para>
+  <para style="q1">
+    <verse number="34" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:34 </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 40:13">Is 40:13</ref>, <ref loc="ISA 40:14">14</ref>; <ref loc="JOB 15:8">Yob 15:8</ref>; <ref loc="JOB 36:22">36:22</ref>; <ref loc="1CO 2:16">1Ko 2:16</ref></char>
+    </note>“Kubanga ani ayinza okutegeera okulowooza kwa Mukama?</para>
+  <para style="q2">Oba ani ayinza okumuluŋŋamya?”</para>
+  <para style="q1">
+    <verse number="35" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:35 </char>
+      <char style="xt" closed="false">
+        <ref loc="JOB 35:7">Yob 35:7</ref>
+      </char>
+    </note>“Oba ani eyali asoose okumuwa ekintu,</para>
+  <para style="q2">alyoke amuddizeewo?”</para>
+  <para style="q1">
+    <verse number="36" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">11:36 a </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 8:6">1Ko 8:6</ref>; <ref loc="COL 1:16">Bak 1:16</ref>; <ref loc="HEB 2:10">Beb 2:10</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 16:27">Bar 16:27</ref>
+      </char>
+    </note>Kubanga byonna biva gy’ali, era biyita mu ye era bidda gy’ali.</para>
+  <para style="q2">Ekitiibwa kibe gy’ali emirembe gyonna. Amiina.</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">Ssaddaaka Ennamu</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 4:1">Bef 4:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 6:13">Bar 6:13</ref>, <ref loc="ROM 6:16">16</ref>, <ref loc="ROM 6:19">19</ref>; <ref loc="1PE 2:5">1Pe 2:5</ref></char>
+    </note>Noolwekyo abooluganda mbeegayirira olw’okusaasira kwa Katonda, muwengayo emibiri gyammwe nga ssaddaaka ennamu entukuvu esanyusa Katonda, kwe kuweereza kwammwe okw’omwoyo. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:2 a </char><char style="xt" closed="false"><ref loc="1PE 1:14">1Pe 1:14</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1JN 2:15">1Yk 2:15</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="EPH 4:23">Bef 4:23</ref> </char><char style="xo" closed="false">d </char><char style="xt" closed="false"><ref loc="EPH 5:17">Bef 5:17</ref></char></note>So temwefaananyirizanga ba mirembe gino, naye mukyusibwe olw’okudda obuggya mu birowoozo byammwe okukakasibwa okusiimibwa kwa Katonda, okusanyusa era okw’amazima.</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:3 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 15:15">Bar 15:15</ref>; <ref loc="GAL 2:9">Bag 2:9</ref>; <ref loc="EPH 4:7">Bef 4:7</ref></char>
+    </note>Kubanga njogera olw’ekisa kye naweebwa, eri buli muntu mu mmwe, obuteerowooza okusinga ekyo ky’asaanidde okulowooza, naye okulowoozanga nga yeegendereza, nga Katonda bwe yagabira buli muntu ekigera ky’okukkiriza. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:4 </char><char style="xt" closed="false"><ref loc="1CO 12:12-14">1Ko 12:12-14</ref>; <ref loc="EPH 4:16">Bef 4:16</ref></char></note>Kubanga nga bwe tulina ebitundu ebingi mu mubiri ogumu, ebitundu ebyo byonna bikola emirimu gya njawulo. <verse number="5" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:5 </char><char style="xt" closed="false"><ref loc="1CO 10:17">1Ko 10:17</ref></char></note>Noolwekyo nga bwe tuli omubiri ogumu mu Kristo, buli muntu kitundu ku mubiri ogumu ogwo. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:6 a </char><char style="xt" closed="false"><ref loc="1CO 7:7">1Ko 7:7</ref>; <ref loc="1CO 12:4">12:4</ref>, <ref loc="1CO 12:8-10">8-10</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1PE 4:10">1Pe 4:10</ref>, <ref loc="1PE 4:11">11</ref></char></note>Tulina ebirabo, ng’ekisa kye tulina bwe kyatuweebwa mu ngeri ey’enjawulo, oba bunnabbi, ng’ekigera ky’okukkiriza bwe kiri, <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:7 </char><char style="xt" closed="false"><ref loc="EPH 4:11">Bef 4:11</ref></char></note>oba buweereza, mu buweereza, oba omu okuyigiriza, mu kuyigiriza; <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:8 a </char><char style="xt" closed="false"><ref loc="ACT 15:32">Bik 15:32</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="2CO 9:5-13">2Ko 9:5-13</ref></char></note>oba omulala okugumya banne mu kubazzaamu amaanyi, oba omulala mu kugaba, oba omulala, okufuga n’obunyiikivu, n’omulala okulaga ekisa nga musanyufu.</para>
+  <para style="s1">Okwagala</para>
+  <para style="p">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:9 </char>
+      <char style="xt" closed="false">
+        <ref loc="1TI 1:5">1Ti 1:5</ref>
+      </char>
+    </note>Mube n’okwagala okutaliimu bukuusa. Mukyawenga ekibi, munywererenga ku kirungi, <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:10 a </char><char style="xt" closed="false"><ref loc="HEB 13:1">Beb 13:1</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="PHP 2:3">Baf 2:3</ref></char></note>nga mwagalana mu kwagala okw’abooluganda, nga muwaŋŋana ekitiibwa, <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:11 </char><char style="xt" closed="false"><ref loc="ACT 18:25">Bik 18:25</ref></char></note>mu kunyiikira so si mu kugayaala. Musanyukirenga mu mwoyo nga muweereza Mukama, <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:12 a </char><char style="xt" closed="false"><ref loc="ROM 5:2">Bar 5:2</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="HEB 10:32">Beb 10:32</ref>, <ref loc="HEB 10:36">36</ref></char></note>nga musanyukira mu kusuubira, nga mugumiikiriza mu kubonaabona era nga munyiikira mu kusaba. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:13 </char><char style="xt" closed="false"><ref loc="1TI 3:2">1Ti 3:2</ref></char></note>Mufengayo ku byetaago by’abantu ba Katonda, era mwanirizenga abagenyi.</para>
+  <para style="p">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:14 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 5:44">Mat 5:44</ref>
+      </char>
+    </note>Musabirenga ababayigganya; mubasabirenga so temubakolimiranga. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:15 </char><char style="xt" closed="false"><ref loc="JOB 30:25">Yob 30:25</ref></char></note>Musanyukirenga wamu n’abo abasanyuka, era mukaabirenga wamu n’abo abakaaba. <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">12:16 a </char><char style="xt" closed="false"><ref loc="ROM 15:5">Bar 15:5</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="JER 45:5">Yer 45:5</ref>; <ref loc="ROM 11:25">Bar 11:25</ref></char></note>Buli muntu abeerenga mu mirembe muntu ne munne, nga temwegulumiza naye nga muba bakkakkamu. Temwekulumbazanga.</para>
+  <para style="p">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">12:17 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PRO 20:22">Nge 20:22</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 8:21">2Ko 8:21</ref>
+      </char>
+    </note>Temusasulanga kibi olw’ekibi, naye mukolenga birungi byereere eri bonna. <verse number="18" style="v"/>Mukolenga kyonna ekisoboka okutabagana n’abantu bonna; <verse number="19" style="v"/>abaagalwa, temuwalananga ggwanga, era ekiruyi mukirekere Katonda, nga bwe kyawandiikibwa nti, “Okuwoolera eggwanga kwange, nze ndisasula,” bw’ayogera Mukama. <verse number="20" style="v"/>“Noolwekyo omulabe wo bw’alumwanga enjala, muliisenga; bw’alumwanga ennyonta muwenga ekyokunywa, bw’okola bw’otyo olimukumira amanda g’omuliro ku mutwe gwe.” <verse number="21" style="v"/>Towangulwanga kibi, naye wangulanga ekibi ng’okola obulungi.</para>
+  <chapter number="13" style="c"/>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="TIT 3:1">Tit 3:1</ref>; <ref loc="1PE 2:13">1Pe 2:13</ref>, <ref loc="1PE 2:14">14</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="DAN 2:21">Dan 2:21</ref>; <ref loc="JHN 19:11">Yk 19:11</ref></char>
+    </note>Buli muntu awulirenga abafuzi, kubanga tewali buyinza butava eri Katonda, era n’abafuzi abaliwo Katonda ye yabalonda. <verse number="2" style="v"/>Noolwekyo abawakanya abafuzi, bawakanya buyinza bwa Katonda. Era baba bawakanya kiragiro kye, bwe batyo ne beereetako bokka omusango. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:3 </char><char style="xt" closed="false"><ref loc="1PE 2:14">1Pe 2:14</ref></char></note>Kubanga abafuzi baba tebalwanyisa bikolwa birungi naye ebibi. Oyagala obutakangibwa wa buyinza, kola bulungi osiimibwe, <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:4 </char><char style="xt" closed="false"><ref loc="1TH 4:6">1Bs 4:6</ref></char></note>kubanga muweereza wa Katonda ku lw’obulungi bwo. Naye bw’onookolanga ekibi, osaanidde otye kubanga ekitala ky’alina si kya bwereere, kubanga muweereza wa Katonda awoolera eggwanga eri oyo akola ekibi. <verse number="5" style="v"/>Noolwekyo kibagwanira okuba abawulize, si lwa busungu bwokka, naye n’olw’okumanya nga kye kituufu.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Era kyemuva muwa omusolo kubanga abakozi abo baweereza ba Katonda nga banyiikirira emirimu gyabwe. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:7 </char><char style="xt" closed="false"><ref loc="MAT 17:25">Mat 17:25</ref>; <ref loc="MAT 22:17">22:17</ref>, <ref loc="MAT 22:21">21</ref>; <ref loc="LUK 23:2">Luk 23:2</ref></char></note>Abantu bonna basasulenga ebibabanjibwa; musasulenga emisolo eri abo be muteekwa okuwa omusolo, n’ow’empooza mumuwenga empooza; n’oyo ateekwa okutiibwa mumutyenga, n’oyo ateekwa okuweebwa ekitiibwa mumuwenga ekitiibwa.</para>
+  <para style="p">
+    <verse number="8" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:8 </char>
+      <char style="xt" closed="false">nny 10; <ref loc="JHN 13:34">Yk 13:34</ref>; <ref loc="GAL 5:14">Bag 5:14</ref>; <ref loc="COL 3:14">Bak 3:14</ref></char>
+    </note>Temubeeranga na bbanja lyonna eri omuntu yenna, wabula okwagalananga; kubanga ayagala muntu munne ng’atuukiriza amateeka. <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:9 a </char><char style="xt" closed="false"><ref loc="EXO 20:13-15">Kuv 20:13-15</ref>, <ref loc="EXO 20:17">17</ref>; <ref loc="DEU 5:17-19">Ma 5:17-19</ref>, <ref loc="DEU 5:21">21</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="LEV 19:18">Lv 19:18</ref>; <ref loc="MAT 19:19">Mat 19:19</ref></char></note>Kubanga amateeka gano nti, “Toyendanga, tottanga, tobbanga, teweegombanga,” n’etteeka eddala, ligattiddwa mu kino nti, “Yagalanga muliraanwa wo nga bwe weeyagala wekka.” <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:10 </char><char style="xt" closed="false">nny 8; <ref loc="MAT 22:39">Mat 22:39</ref>, <ref loc="MAT 22:40">40</ref></char></note>Ayagala muliraanwa we tamukola bubi; noolwekyo okwagala kyekuva kutuukiriza amateeka.</para>
+  <para style="p">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">13:11 a </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 7:29-31">1Ko 7:29-31</ref>; <ref loc="1CO 10:11">10:11</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 5:14">Bef 5:14</ref>; <ref loc="1TH 5:5">1Bs 5:5</ref>, <ref loc="1TH 5:6">6</ref></char>
+    </note>Mumanye nga kino kye kiseera, era essaawa etuuse mugolokoke okuva mu tulo, kubanga kaakano obulokozi bwaffe buli kumpi okusinga ne we twakkiririza. <verse number="12" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:12 a </char><char style="xt" closed="false"><ref loc="1JN 2:8">1Yk 2:8</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="EPH 5:11">Bef 5:11</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="EPH 6:11">Bef 6:11</ref>, <ref loc="EPH 6:13">13</ref></char></note>Ekiro kiyise, obudde bunaatera okukya, noolwekyo tweyambulemu ebikolwa eby’ekizikiza, twambale ebyokulwanyisa eby’omusana. <verse number="13" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:13 </char><char style="xt" closed="false"><ref loc="GAL 5:20">Bag 5:20</ref>, <ref loc="GAL 5:21">21</ref></char></note>Tutambulenga ng’ab’omu musana, so si mu binyumu ne mu kutamiira, ne mu bwenzi n’obukaba, ne mu kuyombagana n’obuggya, <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">13:14 </char><char style="xt" closed="false"><ref loc="GAL 3:27">Bag 3:27</ref>; <ref loc="GAL 5:16">5:16</ref>; <ref loc="EPH 4:24">Bef 4:24</ref></char></note>naye twambale Mukama waffe Yesu Kristo so tetuwanga mubiri bbanga kukola ng’okwegomba kwagwo bwe kuli.</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">Obutanenyagananga lwa Byakulya</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 15:1">Bar 15:1</ref>; <ref loc="1CO 8:9-12">1Ko 8:9-12</ref></char>
+    </note>Mwanirizenga omunafu mu kukkiriza, nga temumusalira musango. <verse number="2" style="v"/>Wabaawo omuntu omu akkiririza mu kulya ebintu byonna, nga so ye omunafu akoma ku nva kwokka. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:3 a </char><char style="xt" closed="false"><ref loc="LUK 18:9">Luk 18:9</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="COL 2:16">Bak 2:16</ref></char></note>Omuntu asalawo okubaako ky’alya tanyoomanga atakirya, n’oyo atalya kintu alemenga kusalira musango oyo akirya kubanga Katonda yamusembeza. <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:4 </char><char style="xt" closed="false"><ref loc="JAS 4:12">Yak 4:12</ref></char></note>Ggwe ani asalira omusango omuweereza w’omuntu omulala? Mukama we y’amanya oba atuukiriza emirimu gye oba tagituukiriza. Naye aligituukiriza kubanga Mukama we alimusobozesa.</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 4:10">Bag 4:10</ref>
+      </char>
+    </note>Omuntu omu agulumiza olunaku olumu okusinga olulala, naye omulala n’alowooza nti ennaku zonna zenkanankana. Noolwekyo buli muntu anywererenga ku ky’alowooza bwe kiba nga kye kituufu. <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:6 </char><char style="xt" closed="false"><ref loc="MAT 14:19">Mat 14:19</ref>; <ref loc="1CO 10:30">1Ko 10:30</ref>, <ref loc="1CO 10:31">31</ref>; <ref loc="1TI 4:3">1Ti 4:3</ref>, <ref loc="1TI 4:4">4</ref></char></note>Akuza olunaku aba alukuza eri Mukama. Oyo alya aba alya ku bwa Mukama, kubanga aba agulumiza Katonda. N’oyo atalya aba talya ku bwa Mukama, era aba agulumiza Katonda. <verse number="7" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:7 </char><char style="xt" closed="false"><ref loc="2CO 5:15">2Ko 5:15</ref>; <ref loc="GAL 2:20">Bag 2:20</ref></char></note>Kubanga tewali n’omu ku ffe abeera omulamu ku bubwe yekka, era tewali n’omu afa ku lulwe. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:8 </char><char style="xt" closed="false"><ref loc="PHP 1:20">Baf 1:20</ref></char></note>Kubanga bwe tuba abalamu, tuba balamu ku bwa Mukama, oba bwe tufa, tufa ku bwa Mukama. Kale nno bwe tuba abalamu oba bwe tufa, tuli ba Mukama.</para>
+  <para style="p">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:9 a </char>
+      <char style="xt" closed="false">
+        <ref loc="REV 1:18">Kub 1:18</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 5:15">2Ko 5:15</ref>
+      </char>
+    </note>Kubanga ekyo Kristo kye yafiira ate n’abeera omulamu, alyoke abeere Mukama w’abo abaafa era n’abalamu. <verse number="10" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:10 </char><char style="xt" closed="false"><ref loc="2CO 5:10">2Ko 5:10</ref></char></note>Kale ggwe lwaki osalira muganda wo omusango? Oba lwaki onyooma muganda wo? Kubanga ffenna tuliyimirira mu maaso g’entebe ya Katonda, ey’okulamula. <verse number="11" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:11 </char><char style="xt" closed="false"><ref loc="ISA 45:23">Is 45:23</ref></char></note>Kubanga kyawandiikibwa nti,</para>
+  <para style="q1">“ ‘Nga bwe ndi omulamu,’ bw’ayogera Mukama,</para>
+  <para style="q1">‘buli vviivi lirinfukaamirira</para>
+  <para style="q2">era na buli lulimi lulyatula Katonda.’ ”</para>
+  <para style="m">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:12 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 12:36">Mat 12:36</ref>; <ref loc="1PE 4:5">1Pe 4:5</ref></char>
+    </note>Noolwekyo buli omu ku ffe alyennyonnyolako eri Katonda.</para>
+  <para style="s1">Okwesittaza Abalala</para>
+  <para style="p">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:13 </char>
+      <char style="xt" closed="false">
+        <ref loc="MAT 7:1">Mat 7:1</ref>
+      </char>
+    </note>Noolwekyo tetusaliragananga misango. Tumalirire obuteesittaza waluganda wadde okumutega okugwa mu kibi. <verse number="14" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:14 a </char><char style="xt" closed="false"><ref loc="ACT 10:15">Bik 10:15</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CO 8:7">1Ko 8:7</ref></char></note>Mmanyi era nkakasiza ddala mu Mukama waffe Yesu, nga tewali kya muzizo ku bwakyo, wabula kya muzizo eri oyo akirowooza nga kya muzizo. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:15 a </char><char style="xt" closed="false"><ref loc="EPH 5:2">Bef 5:2</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CO 8:11">1Ko 8:11</ref></char></note>Kubanga obanga muganda wo anakuwala olw’ekyo ky’olya, oba tokyatambulira mu kwagala; tolyanga kintu kyonna ky’omanyi nga kinaakyamya omuntu oyo Kristo gwe yafiirira. <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:16 </char><char style="xt" closed="false"><ref loc="1CO 10:30">1Ko 10:30</ref></char></note>Ekirungi ekiri mu mmwe kireme okuvumibwa. <verse number="17" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:17 a </char><char style="xt" closed="false"><ref loc="1CO 8:8">1Ko 8:8</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 15:13">Bar 15:13</ref></char></note>Kubanga obwakabaka bwa Katonda si kulya na kunywa, wabula butuukirivu na mirembe, na ssanyu mu Mwoyo Omutukuvu. <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:18 </char><char style="xt" closed="false"><ref loc="2CO 8:21">2Ko 8:21</ref></char></note>Kubanga aweereza Kristo mu ebyo asanyusa nnyo Katonda era asiimibwa abantu.</para>
+  <para style="p">
+    <verse number="19" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:19 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 34:14">Zab 34:14</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 15:2">Bar 15:2</ref>
+      </char>
+    </note>Noolwekyo tunyiikirirenga eby’emirembe, n’eby’okuzimbagana ffekka ne ffekka. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:20 a </char><char style="xt" closed="false">nny 15 </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="1CO 8:9-12">1Ko 8:9-12</ref></char></note>Toyonoonanga mulimu gwa Katonda olw’emmere. Ebintu byonna birongoofu, naye ekibi kwe kulya ekyo ekireetera omulala okwesittala. <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:21 </char><char style="xt" closed="false"><ref loc="1CO 8:13">1Ko 8:13</ref></char></note>Kirungi obutalya nnyama newaakubadde okunywa wayini newaakubadde ekintu kyonna ekyesittaza muganda wo.</para>
+  <para style="p">
+    <verse number="22" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">14:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="1JN 3:21">1Yk 3:21</ref>
+      </char>
+    </note>Ky’okkiririzaamu mu kulya kikuume nga kya kyama ne Katonda. Alina omukisa ateesalira musango kumusinga mu ekyo ky’alowooza nga kituufu. <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">14:23 </char><char style="xt" closed="false">nny 5</char></note>Naye oyo abuusabuusa bw’alya, omusango gumaze okumusinga, kubanga talya lwa kukkiriza, era na buli ekitava mu kukkiriza kiba kibi.</para>
+  <chapter number="15" style="c"/>
+  <para style="s1">Temwesanyusa Mwekka</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">15:1 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 14:1">Bar 14:1</ref>
+      </char>
+    </note>Ffe abanywevu kitugwanidde okwetikkanga obunafu bw’abo abatali banywevu, so si okwesanyusa ffekka. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:2 a </char><char style="xt" closed="false"><ref loc="1CO 10:33">1Ko 10:33</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 14:19">Bar 14:19</ref></char></note>Buli omu ku ffe asanyusenga muliraanwa we mu bulungi olw’okumuzimba mu kukkiriza. <verse number="3" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:3 a </char><char style="xt" closed="false"><ref loc="2CO 8:9">2Ko 8:9</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="PSA 69:9">Zab 69:9</ref></char></note>Kubanga ne Kristo teyeesanyusa yekka, nga bwe kyawandiikibwa nti, “Ebivume by’abo abaakuvuma byagwa ku nze.” <verse number="4" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:4 </char><char style="xt" closed="false"><ref loc="ROM 4:23">Bar 4:23</ref>, <ref loc="ROM 4:24">24</ref></char></note>Kubanga ebyawandiikibwa byonna edda, byawandiikibwa kutuyigiriza, tulyoke tugumiikirizenga era tuzzibwemu amaanyi, ate tube n’essuubi.</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">15:5 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 12:16">Bar 12:16</ref>; <ref loc="1CO 1:10">1Ko 1:10</ref></char>
+    </note>Kaakano Katonda w’okugumiikiriza era azaamu amaanyi, abawe okulowoozanga obumu buli omu eri munne mu Kristo Yesu, <verse number="6" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:6 </char><char style="xt" closed="false"><ref loc="REV 1:6">Kub 1:6</ref></char></note>mu mwoyo gumu n’eddoboozi limu mulyoke mugulumizenga Katonda, Kitaawe wa Mukama waffe Yesu Kristo.</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">15:7 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 14:1">Bar 14:1</ref>
+      </char>
+    </note>Noolwekyo mwanirizaganenga, nga Kristo bwe yabaaniriza olw’ekitiibwa kya Katonda. <verse number="8" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:8 a </char><char style="xt" closed="false"><ref loc="MAT 15:24">Mat 15:24</ref>; <ref loc="ACT 3:25">Bik 3:25</ref>, <ref loc="ACT 3:26">26</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="2CO 1:20">2Ko 1:20</ref></char></note>Kubanga njogera nti Kristo yafuuka muweereza w’abakomole olw’amazima ga Katonda alyoke anyweze ebisuubizo bya bajjajjaffe <verse number="9" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:9 a </char><char style="xt" closed="false"><ref loc="ROM 3:29">Bar 3:29</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="MAT 9:8">Mat 9:8</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="2SA 22:50">2Sa 22:50</ref>; <ref loc="PSA 18:49">Zab 18:49</ref></char></note>n’Abaamawanga balyoke bagulumize Katonda olw’okusaasira kwe, nga bwe kyawandiikibwa nti,</para>
+  <para style="q1">“Kyendiva nkutendereza mu Baamawanga,</para>
+  <para style="q2">era ne ntendereza erinnya lyo.”</para>
+  <para style="m">
+    <verse number="10" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">15:10 </char>
+      <char style="xt" closed="false">
+        <ref loc="DEU 32:43">Ma 32:43</ref>
+      </char>
+    </note>Era n’ayongera n’agamba nti:</para>
+  <para style="q1">“Mmwe Abaamawanga musanyukirenga wamu n’abantu be.”</para>
+  <para style="m">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">15:11 </char>
+      <char style="xt" closed="false">
+        <ref loc="PSA 117:1">Zab 117:1</ref>
+      </char>
+    </note>Era nate nti,</para>
+  <para style="q1">“Abaamawanga mwenna, mutendereze Mukama,</para>
+  <para style="q2">era abantu bonna bamutenderezenga.”</para>
+  <para style="m">
+    <verse number="12" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">15:12 a </char>
+      <char style="xt" closed="false">
+        <ref loc="REV 5:5">Kub 5:5</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ISA 11:10">Is 11:10</ref>; <ref loc="MAT 12:21">Mat 12:21</ref></char>
+    </note>Ne Nnabbi Isaaya agamba nate nti,</para>
+  <para style="q1">“Walibaawo muzzukulu wa Yese alijja</para>
+  <para style="q2">era alisituka okufuga Abaamawanga,</para>
+  <para style="q1">era mu ye mwe muliba essuubi lyabwe.”</para>
+  <para style="p">
+    <verse number="13" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">15:13 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 14:17">Bar 14:17</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">nny 19; <ref loc="1CO 2:4">1Ko 2:4</ref>; <ref loc="1TH 1:5">1Bs 1:5</ref></char>
+    </note>Kaakano Katonda w’okusuubira, abajjuze essanyu lyonna n’emirembe mu kukkiriza, mulyoke mweyongerenga mu ssuubi ery’amaanyi aga Mwoyo Mutukuvu.</para>
+  <para style="s1">Pawulo Omuweereza w’Abaamawanga</para>
+  <para style="p">
+    <verse number="14" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">15:14 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 5:9">Bef 5:9</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2PE 1:12">2Pe 1:12</ref>
+      </char>
+    </note>Era matidde baganda bange, nze kennyini, nga nammwe bennyini mujjudde obulungi, nga mujjudde okutegeera kwonna, era nga muyinza okubuuliriragana. <verse number="15" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:15 </char><char style="xt" closed="false"><ref loc="ROM 12:3">Bar 12:3</ref></char></note>Naye mu bitundu ebimu eby’ebbaluwa eno nabawandiikira n’obuvumu nga mbajjukiza olw’ekisa ekyampebwa okuva eri Katonda, <verse number="16" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:16 a </char><char style="xt" closed="false"><ref loc="ACT 9:15">Bik 9:15</ref>; <ref loc="ROM 11:13">Bar 11:13</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 1:1">Bar 1:1</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ISA 66:20">Is 66:20</ref></char></note>kubanga nze ndi muweereza wa Kristo Yesu eri Abaamawanga, nga nkola obuweereza obutukuvu nga mbulira Enjiri ya Katonda, ekiweebwayo ky’Abaamawanga kiryoke kikkirizibwe, nga kitukuzibbwa Mwoyo Mutukuvu.</para>
+  <para style="p">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">15:17 a </char>
+      <char style="xt" closed="false">
+        <ref loc="PHP 3:3">Baf 3:3</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="HEB 2:17">Beb 2:17</ref>
+      </char>
+    </note>Noolwekyo neenyumiririza mu Kristo olw’omulimu gwa Katonda; <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:18 a </char><char style="xt" closed="false"><ref loc="ACT 15:12">Bik 15:12</ref>; <ref loc="ACT 21:19">21:19</ref>; <ref loc="ROM 1:5">Bar 1:5</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ROM 16:26">Bar 16:26</ref></char></note>kubanga siryaŋŋanga kwogera bintu Kristo by’atakolera mu nze Abaamawanga balyoke babeere abawulize mu kigambo ne mu bikolwa, <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:19 a </char><char style="xt" closed="false"><ref loc="JHN 4:48">Yk 4:48</ref>; <ref loc="ACT 19:11">Bik 19:11</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false">nny 13 </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="ACT 22:17-21">Bik 22:17-21</ref></char></note>ne mu maanyi ag’obubonero n’eby’amagero, ne mu maanyi ag’Omwoyo wa Katonda. Bwe ntyo okuva e Yerusaalemi n’okwetooloola okutuuka mu Iruliko<note caller="+" style="f"><char style="fr" closed="false">15:19 </char><char style="ft" closed="false">Iruliko: mu biro bino y’ensi ya Yugosiloviya mu nsi z’Ebulaaya</char></note>, mbulidde Enjiri ya Kristo mu bujjuvu. <verse number="20" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:20 </char><char style="xt" closed="false"><ref loc="2CO 10:15">2Ko 10:15</ref>, <ref loc="2CO 10:16">16</ref></char></note>Nduubirira okubuulira Enjiri mu bifo etayatulwanga linnya lya Kristo, nneme okuzimba ku musingi gw’omuntu omulala, <verse number="21" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:21 </char><char style="xt" closed="false"><ref loc="ISA 52:15">Is 52:15</ref></char></note>nga bwe kyawandiikibwa nti,</para>
+  <para style="q1">“Abo abatategeezebwanga bimufaako baliraba,</para>
+  <para style="q2">n’abo abatawulirangako balitegeera.”</para>
+  <para style="s1">Pawulo Ategeka Okukyalira Ruumi</para>
+  <para style="p">
+    <verse number="22" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">15:22 </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 1:13">Bar 1:13</ref>
+      </char>
+    </note>Kyennava nziyizibwanga ennyo okujja gye muli; <verse number="23" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:23 </char><char style="xt" closed="false"><ref loc="ACT 19:21">Bik 19:21</ref>; <ref loc="ROM 1:10">Bar 1:10</ref>, <ref loc="ROM 1:11">11</ref></char></note>naye kaakano nga bwe sikyalina kifo mu bitundu by’eno, ate nga maze emyaka mingi nga njagala okujja gye muli, nsubira okujjayo, <verse number="24" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:24 </char><char style="xt" closed="false">nny 28</char></note>bwe ndiba nga ndaga mu Esupaniya. Kubanga nsuubira okubalaba nga mpitayo, n’oluvannyuma munnyambe okuva eyo ndyoke ntuukirize ekitundu ekisooka. <verse number="25" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:25 a </char><char style="xt" closed="false"><ref loc="ACT 19:21">Bik 19:21</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ACT 24:17">Bik 24:17</ref></char></note>Naye kaakano ndaga e Yerusaalemi okuweereza abatukuvu. <verse number="26" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:26 a </char><char style="xt" closed="false"><ref loc="ACT 16:9">Bik 16:9</ref>; <ref loc="2CO 8:1">2Ko 8:1</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ACT 18:12">Bik 18:12</ref></char></note>Ab’omu Makedoniya ne mu Akaya baasanyuka okuwaayo ku byabwe eri abatukuvu abaavu ab’omu Yerusaalemi. <verse number="27" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:27 </char><char style="xt" closed="false"><ref loc="1CO 9:11">1Ko 9:11</ref></char></note>Baasanyuka era balina ebbanja gye bali, kubanga ng’Abaamawanga bwe baagabana ku bintu eby’omwoyo okuva gye bali, n’Abaamawanga nabo basaanye okubaweereza mu bintu eby’omubiri. <verse number="28" style="v"/>Noolwekyo bwe ndimaliriza ekyo ne mbakwasa ekibala ekyo, ndiyitira ewammwe nga ŋŋenda Esupaniya. <verse number="29" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:29 </char><char style="xt" closed="false"><ref loc="ROM 1:10">Bar 1:10</ref>, <ref loc="ROM 1:11">11</ref></char></note>Era mmanyi nga bwe ndijja gye muli, ndijja n’omukisa gwa Kristo mu bujjuvu.</para>
+  <para style="p">
+    <verse number="30" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">15:30 a </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 5:22">Bag 5:22</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 1:11">2Ko 1:11</ref>; <ref loc="COL 4:12">Bak 4:12</ref></char>
+    </note>Kaakano mbakuutira abooluganda, mu Mukama waffe Yesu Kristo ne mu kwagala kw’Omwoyo, okufubiranga awamu nange, nga munsabira eri Katonda, <verse number="31" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:31 </char><char style="xt" closed="false"><ref loc="2TH 3:2">2Bs 3:2</ref></char></note>mpone abo abajeemu mu Buyudaaya, n’obuweereza bwange busiimibwe abatukuvu mu Yerusaalemi, <verse number="32" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:32 a </char><char style="xt" closed="false"><ref loc="ROM 1:10">Bar 1:10</ref>, <ref loc="ROM 1:13">13</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="ACT 18:21">Bik 18:21</ref> </char><char style="xo" closed="false">c </char><char style="xt" closed="false"><ref loc="1CO 16:18">1Ko 16:18</ref></char></note>ndyoke nsobole okujja gye muli olw’okwagala kwa Katonda, okuwummulira awamu nammwe, nga ndi musanyufu. <verse number="33" style="v"/><note caller="-" style="x"><char style="xo" closed="false">15:33 </char><char style="xt" closed="false"><ref loc="ROM 16:20">Bar 16:20</ref>; <ref loc="2CO 13:11">2Ko 13:11</ref>; <ref loc="PHP 4:9">Baf 4:9</ref>; <ref loc="1TH 5:23">1Bs 5:23</ref>; <ref loc="HEB 13:20">Beb 13:20</ref></char></note>Kale kaakano Katonda ow’emirembe, abeerenga nammwe mwenna. Amiina.</para>
+  <chapter number="16" style="c"/>
+  <para style="s1">Okulamusa</para>
+  <para style="p">
+    <verse number="1" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:1 a </char>
+      <char style="xt" closed="false">
+        <ref loc="2CO 3:1">2Ko 3:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 18:18">Bik 18:18</ref>
+      </char>
+    </note>Kaakano mbanjulira Foyibe mwannyinaffe, era omuweereza w’ekkanisa<note caller="+" style="f"><char style="fr" closed="false">16:1 </char><char style="fq" closed="false">Foyibe </char><char style="ft" closed="false">yali mudiikoni mu kkanisa eyo</char></note> ey’omu Kenkereya. <verse number="2" style="v"/><note caller="-" style="x"><char style="xo" closed="false">16:2 </char><char style="xt" closed="false"><ref loc="PHP 2:29">Baf 2:29</ref></char></note>Mumwanirize mu Mukama waffe, nga bwe kigwanidde abatukuvu, era muyimirire naye nga mumuyamba mu nsonga yonna gye yeetaaga, kubanga naye yennyini yayamba bangi era nange kennyini.</para>
+  <para style="p">
+    <verse number="3" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:3 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 18:2">Bik 18:2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">nny 7, 9, 10</char>
+    </note>Mundabire Pulisikira ne Akula, bwe tukola omulimu mu Kristo Yesu, <verse number="4" style="v"/>abeewaayo wakiri okutemwako emitwe olw’obulamu bwange, era si beebaza bokka wabula n’Ekkanisa z’Abamawanga zonna.</para>
+  <para style="p">
+    <verse number="5" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:5 a </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 16:19">1Ko 16:19</ref>; <ref loc="COL 4:15">Bak 4:15</ref>; <ref loc="PHM 1:2">Fir 2</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 16:15">1Ko 16:15</ref>
+      </char>
+    </note>Mutuuse okulamusa kwange eri abo bonna abakuŋŋaana ng’ekkanisa mu maka gaabwe.</para>
+  <para style="p">Mundabire mukwano gwange omwagalwa Epayineeto, kye kibala eky’olubereberye eky’omu Asiya eri Kristo.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Mundabire Maliyamu eyabakolera ennyo.</para>
+  <para style="p">
+    <verse number="7" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:7 </char>
+      <char style="xt" closed="false">nny 11, 21</char>
+    </note>Mundabire Anduloniiko ne Yuniya ab’ekika kyange, abaasibibwa awamu nange mu kkomera, era bassibwamu nnyo ekitiibwa abatume era be bansooka okubeera mu Kristo.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Mundabire Ampuliyaato omwagalwa wange mu Mukama waffe.</para>
+  <para style="p">
+    <verse number="9" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:9 </char>
+      <char style="xt" closed="false">nny 3</char>
+    </note>Mundabire Ulubano, mukozi munnaffe mu Kristo, n’omwagalwa waffe Sutaku.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Mundabire Apere, asiimibwa mu Kristo.</para>
+  <para style="p">Mundabire n’ab’omu nnyumba ya Alisutobulo.</para>
+  <para style="p">
+    <verse number="11" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:11 </char>
+      <char style="xt" closed="false">nny 7, 21</char>
+    </note>Mundabire Kerodiyoni muganda wange.</para>
+  <para style="p">Mundabire ab’omu nnyumba ya Nalukiso.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Mundabire Terufayina ne Terufoosa, abaakola ennyo omulimu gwa Mukama waffe.</para>
+  <para style="p">Mundabire Perusi omwagalwa eyakola ennyo omulimu mu Mukama waffe.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Mundabire Luufo Mukama gwe yalonda, era ne nnyina ali nga mmange.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Mundabire Asunkulito ne Felegoni, ne Kerume, ne Patuloba, ne Keruma era n’abooluganda abali nabo.</para>
+  <para style="p">
+    <verse number="15" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:15 a </char>
+      <char style="xt" closed="false">nny 2 </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">nny 14</char>
+    </note>Mundabire Firologo ne Yuliya, ne Nerewu ne mwannyina, ne Olumpa n’abatukuvu bonna abali awamu nabo.</para>
+  <para style="p">
+    <verse number="16" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:16 </char>
+      <char style="xt" closed="false">
+        <ref loc="1CO 16:20">1Ko 16:20</ref>; <ref loc="2CO 13:12">2Ko 13:12</ref>; <ref loc="1TH 5:26">1Bs 5:26</ref></char>
+    </note>Mulamusagane n’okunywegera okutukuvu.</para>
+  <para style="p">Ekkanisa zonna eza Kristo, zibalamusizza.</para>
+  <para style="s1">Ebisembayo</para>
+  <para style="p">
+    <verse number="17" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:17 a </char>
+      <char style="xt" closed="false">
+        <ref loc="GAL 1:8">Bag 1:8</ref>, <ref loc="GAL 1:9">9</ref>; <ref loc="1TI 1:3">1Ti 1:3</ref>; <ref loc="1TI 6:3">6:3</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="2TH 3:6">2Bs 3:6</ref>, <ref loc="2TH 3:14">14</ref>; <ref loc="2JN 1:10">2Yk 10</ref></char>
+    </note>Noolwekyo mbakuutira abooluganda mwegenderezenga abo abaleeta enjawukana, n’eby’esittaza ebikontana n’okuyigiriza kwe mwayiga, era mubakubenga amabega. <verse number="18" style="v"/><note caller="-" style="x"><char style="xo" closed="false">16:18 a </char><char style="xt" closed="false"><ref loc="PHP 3:19">Baf 3:19</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="COL 2:4">Bak 2:4</ref></char></note>Kubanga abantu ng’abo tebaweereza Mukama waffe Yesu, wabula embuto zaabwe. Bakozesa ebigambo ebirungi eby’okuwaanawaana nga balimbalimba emitima gy’abanafu. <verse number="19" style="v"/><note caller="-" style="x"><char style="xo" closed="false">16:19 a </char><char style="xt" closed="false"><ref loc="ROM 1:8">Bar 1:8</ref> </char><char style="xo" closed="false">b </char><char style="xt" closed="false"><ref loc="MAT 10:16">Mat 10:16</ref>; <ref loc="1CO 14:20">1Ko 14:20</ref></char></note>Kubanga amawulire ag’okuwulira kwammwe gaabuna mu bantu bonna, kyenvudde mbasanyukira. Naye njagala mubenga bagezi mu kukola obulungi, era abalongoofu abeewala ekibi.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="20" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:20 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 15:33">Bar 15:33</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="GEN 3:15">Lub 3:15</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="1TH 5:28">1Bs 5:28</ref>
+      </char>
+    </note>Kaakano Katonda ow’emirembe ajja kubetentera Setaani wansi w’ebigere byammwe, mangu.</para>
+  <para style="b"/>
+  <para style="p">Ekisa kya Mukama waffe Yesu kibeerenga nammwe.</para>
+  <para style="b"/>
+  <para style="p">
+    <verse number="21" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:21 a </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 16:1">Bik 16:1</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 13:1">Bik 13:1</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 17:5">Bik 17:5</ref> </char>
+      <char style="xo" closed="false">d </char>
+      <char style="xt" closed="false">nny 7, 11</char>
+    </note>Timoseewo mukozi munnange, ne Lukiyo ne Yasooni wamu ne Sosipateri, baganda bange, babatumidde.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Nange Terutiyo<note caller="+" style="f"><char style="fr" closed="false">16:22 </char><char style="fq" closed="false">Terutiyo </char><char style="ft" closed="false">ye yakubanga tayipu nga Pawulo awandiika ebbaluwa ze</char></note> awandiika ebbaluwa eno, mbatumidde mu Mukama waffe.</para>
+  <para style="p">
+    <verse number="23" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:23 </char>
+      <char style="xt" closed="false">
+        <ref loc="ACT 19:22">Bik 19:22</ref>
+      </char>
+    </note>Gaayo<note caller="+" style="f"><char style="fr" closed="false">16:23 </char><char style="fq" closed="false">Gaayo </char><char style="ft" closed="false">yandiba Gaayo ow’omu <char style="xt"><ref loc="1CO 1:14">1Ko 1:14</ref></char>, Pawulo gwe yabatiza</char></note> ansuza, n’ekkanisa yonna babalamusizza. Mundabire Erasuto omuwanika w’ekibuga, ne Kwaluto muganda we.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Ekisa kya Mukama waffe Yesu Kristo kibeerenga nammwe mwenna. Amiina.</para>
+  <para style="s1">Pawulo abasiibula n’okusaba</para>
+  <para style="p">
+    <verse number="25" style="v"/>
+    <note caller="-" style="x">
+      <char style="xo" closed="false">16:25 a </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 3:20">Bef 3:20</ref> </char>
+      <char style="xo" closed="false">b </char>
+      <char style="xt" closed="false">
+        <ref loc="ROM 2:16">Bar 2:16</ref> </char>
+      <char style="xo" closed="false">c </char>
+      <char style="xt" closed="false">
+        <ref loc="EPH 1:9">Bef 1:9</ref>; <ref loc="COL 1:26">Bak 1:26</ref>, <ref loc="COL 1:27">27</ref></char>
+    </note>Kaakano eri oyo ayinza okubanyweza ng’enjiri yange n’okubuulira mu Kristo Yesu bwe biri, ng’ekyama ky’okubikkulirwa eby’ebiro eby’emirembe n’emirembe ebyasirikirwa, bwe kiri, <verse number="26" style="v"/>kaakano nga bannabbi bwe baayogerera mu byawandiikibwa, ng’ekiragiro kya Katonda ataggwaawo bwe kiri, olw’okugonda mu kukkiriza eri Abaamawanga bonna abaamanyibwa, <verse number="27" style="v"/><note caller="-" style="x"><char style="xo" closed="false">16:27 </char><char style="xt" closed="false"><ref loc="ROM 11:36">Bar 11:36</ref></char></note>Katonda omu yekka ow’amagezi, agulumizibwenga ku bwa Yesu Kristo, emirembe n’emirembe. Amiina.</para>
+</usx>
