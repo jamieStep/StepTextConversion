@@ -3,7 +3,7 @@ plugins {
     application
 }
 
-group = "org.stepbible.textconverter"
+group = "org.stepbible.converteradmintool"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -11,15 +11,11 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-    implementation("com.google.code.gson:gson:2.10.1")
     implementation("commons-cli:commons-cli:1.5.0")
-    implementation("commons-codec:commons-codec:1.16.0")
-    implementation("commons-io:commons-io:2.13.0")
     implementation("net.sf.saxon:Saxon-HE:12.3")
-    implementation("org.jasypt:jasypt:1.9.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.8.10")
 }
-
 
 tasks.test {
     useJUnitPlatform()
