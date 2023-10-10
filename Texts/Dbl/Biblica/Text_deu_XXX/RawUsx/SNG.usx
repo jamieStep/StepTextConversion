@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="SNG" style="id">- Hoffnung für alle®</book>
+  <para style="rem">Copyright © 1983, 1996, 2002, 2015 by Biblica, Inc®</para>
+  <para style="h">Das Hohelied</para>
+  <para style="toc1">Das Lied von der Liebe (Das Hohelied)</para>
+  <para style="toc2">Hoheslied</para>
+  <para style="toc3">Hld</para>
+  <para style="mt1">Das Lied von der Liebe</para>
+  <para style="mt3">(Das Hohelied)</para>
+  <para style="imt1">Inhaltsübersicht</para>
+  <para style="io1">Von der Schönheit der Liebe <char style="ior">Kapitel <ref loc="SNG 1-8">1–8</ref></char></para>
+  <chapter number="1" style="c"/>
+  <para style="ms1">Von der Schönheit der Liebe</para>
+  <para style="mr">(Kapitel <ref loc="SNG 1-8">1–8</ref>)</para>
+  <para style="s1">Du bist mein König</para>
+  <para style="m">
+    <verse number="1" style="v"/>Das schönste aller Lieder, von Salomo.</para>
+  <para style="sp">Sie:<note caller="+" style="f"><char style="fr" closed="false">1,2 </char><char style="ft" closed="false">Die Angaben über die jeweils sprechenden Personen finden sich nicht im hebräischen Text, sondern wurden zum besseren Verständnis hinzugefügt.</char></note></para>
+  <para style="q1">
+    <verse number="2" style="v"/>Komm und küss mich,</para>
+  <para style="q1">küss mich immer wieder!</para>
+  <para style="q1">Ich genieße deine Liebe</para>
+  <para style="q1">mehr als den besten Wein.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>Der Duft deiner Salben betört mich.</para>
+  <para style="q1">Dein Name ist wie ein besonderes Parfüm,</para>
+  <para style="q1">darum lieben dich die Mädchen.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>Nimm mich bei der Hand!</para>
+  <para style="q1">Schnell, lass uns laufen,</para>
+  <para style="q1">bring mich zu dir nach Hause!</para>
+  <para style="b"/>
+  <para style="q1">Du bist mein König!</para>
+  <para style="q1">Ich freue mich über dich,</para>
+  <para style="q1">du bist mein ganzes Glück.</para>
+  <para style="b"/>
+  <para style="q1">Deine Liebe ist kostbarer</para>
+  <para style="q1">als der edelste Wein.</para>
+  <para style="q1">Kein Wunder, dass die Mädchen für dich schwärmen!</para>
+  <para style="s1">Schaut nicht auf mich herab!</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="5-6" style="v"/>Schaut nicht auf mich herab,</para>
+  <para style="q1">ihr Mädchen von Jerusalem,</para>
+  <para style="q1">weil meine Haut so dunkel ist,</para>
+  <para style="q1">braun wie die Zelte der Nomaden.</para>
+  <para style="q1">Ich bin dennoch schön,</para>
+  <para style="q1">so wie die wertvollen Zeltdecken Salomos.</para>
+  <para style="q1">Meine Brüder waren streng mit mir,</para>
+  <para style="q1">sie ließen mich ihre Weinberge hüten.</para>
+  <para style="q1">Doch mich selbst zu pflegen, meinen eigenen Weinberg,</para>
+  <para style="q1">dafür hatte ich keine Zeit!</para>
+  <para style="q1">Darum bin ich von der Sonne braun gebrannt.</para>
+  <para style="s1">Wo bist du?</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Sag mir, mein Geliebter,</para>
+  <para style="q1">wo lässt du deine Schafe weiden,</para>
+  <para style="q1">wo lässt du sie am Mittag lagern?</para>
+  <para style="q1">Lass mich nicht vergebens nach dir suchen,</para>
+  <para style="q1">nicht umherirren bei den Herden anderer Hirten!</para>
+  <para style="sp">Er:</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Weißt du’s wirklich nicht,</para>
+  <para style="q1">du schönste aller Frauen?</para>
+  <para style="q1">Folg den Spuren meiner Schafe</para>
+  <para style="q1">und weide deine kleinen Ziegen bei den Hirtenzelten!</para>
+  <para style="q1">
+    <char style="add">Dort wirst du mich treffen.</char></para>
+  <para style="s1">Du bist schön!</para>
+  <para style="sp">Er:</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Wie schön du bist, meine Freundin,</para>
+  <para style="q1">schön wie eine Stute vor dem Prachtwagen des Pharaos!</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Deine Wangen sind von Ohrringen umrahmt,</para>
+  <para style="q1">deinen Hals schmückt eine Kette.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>
+    <char style="add">Doch ich will dir noch mehr geben:</char></para>
+  <para style="q1">Ein Geschmeide aus Gold sollst du haben</para>
+  <para style="q1">und Perlen um den Hals, in Silber gefasst!</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Wenn mein König mit mir speist,</para>
+  <para style="q1">riecht er den Duft meines Nardenöls<note caller="+" style="f"><char style="fr" closed="false">1,12 </char><char style="ft" closed="false">Dieses Öl ist vergleichbar mit unserem heutigen Parfüm und wurde aus der Indischen Narde gewonnen, einer stark duftenden Pflanze im Himalaja.</char></note>.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Mein Geliebter ruht an meiner Brust</para>
+  <para style="q1">wie ein Säckchen gefüllt mit Myrrhe.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Er duftet wie die Blüten des Hennastrauchs,</para>
+  <para style="q1">der in den Weingärten von En-Gedi wächst.</para>
+  <para style="sp">Er:</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Wie schön du bist, meine Freundin,</para>
+  <para style="q1">wunderschön bist du,</para>
+  <para style="q1">deine Augen glänzen wie das Gefieder der Tauben.</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Schön bist auch du, mein Liebster –</para>
+  <para style="q1">wie stattlich anzusehen!</para>
+  <para style="q1">Das Gras ist unser Lager,</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Zedern sind die Balken unsres Hauses</para>
+  <para style="q1">und die Zypressen unser Dach.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Du bist einzigartig!</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Ich bin nur eine Narzisse in der Scharon-Ebene,</para>
+  <para style="q1">eine Lilie aus den Tälern.</para>
+  <para style="sp">Er:</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Ja, eine Lilie bist du, meine Freundin,</para>
+  <para style="q1">eine Lilie unter lauter Dornen,</para>
+  <para style="q1">schöner als alle anderen Mädchen!</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Und du, mein Liebster,</para>
+  <para style="q1">bist wie ein Apfelbaum unter den Bäumen des Waldes,</para>
+  <para style="q1">du übertriffst alle anderen Männer!</para>
+  <para style="q1">Im Schatten dieses Baumes möchte ich ausruhn</para>
+  <para style="q1">und seine süßen Früchte genießen.</para>
+  <para style="s1">Ich bin krank vor Liebe</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Ins Weinhaus<note caller="+" style="f"><char style="fr" closed="false">2,4 </char><char style="ft" closed="false">Vermutlich ein frei stehendes Haus, in dem immer wieder Feste gefeiert wurden.</char></note> hat er mich geführt,</para>
+  <para style="q1">dort zeigt er mir, wie sehr er mich liebt<note caller="+" style="f"><char style="fr" closed="false">2,4 </char><char style="ft" closed="false">Wörtlich: die Liebe ist sein Banner über mir.</char></note>.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Stärkt mich mit Rosinenkuchen,</para>
+  <para style="q1">erfrischt mich mit Äpfeln,</para>
+  <para style="q1">denn ich bin krank vor Liebe!</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Sein linker Arm liegt unter meinem Kopf,</para>
+  <para style="q1">und mit dem rechten hält er mich umschlungen.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Ihr Mädchen von Jerusalem,</para>
+  <para style="q1">ich beschwöre euch bei der Liebe selbst<note caller="+" style="f"><char style="fr" closed="false">2,7 </char><char style="ft" closed="false">Wörtlich: bei den Rehen und Gazellen. – Diese Tiere galten als Symbole der Liebe.</char></note>:</para>
+  <para style="q1">Weckt sie nicht auf und facht die Leidenschaft nicht an,</para>
+  <para style="q1">bis die Zeit dafür kommt!<note caller="+" style="f"><char style="fr" closed="false">2,7 </char><char style="ft" closed="false">Oder: Schreckt uns nicht auf, stört unsere Liebe nicht, bis es ihr selber gefällt!</char></note></para>
+  <para style="s1">Die Regenzeit ist vorbei – der Frühling ist da!</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Da kommt mein Geliebter!</para>
+  <para style="q1">Ich höre es, ja, ich kann ihn schon sehen!</para>
+  <para style="q1">Er springt über die Berge und hüpft über die Hügel.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Schnell wie eine Gazelle läuft er,</para>
+  <para style="q1">flink wie ein Hirsch.</para>
+  <para style="q1">Schon steht er vor dem Haus!</para>
+  <para style="q1">Er späht durch das Gitter,</para>
+  <para style="q1">blickt zum Fenster herein.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Er sagt zu mir:</para>
+  <para style="q1">»Steh auf, meine Freundin, meine Schöne, und komm!</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Die Regenzeit liegt hinter uns,</para>
+  <para style="q1">der Winter ist vorbei!</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Die Blumen beginnen zu blühen,</para>
+  <para style="q1">die Vögel zwitschern,</para>
+  <para style="q1">und überall im Land</para>
+  <para style="q1">hört man die Turteltaube gurren.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Die ersten Feigen werden reif,</para>
+  <para style="q1">die Reben blühen und verströmen ihren Duft.</para>
+  <para style="q1">Steh auf, meine Freundin, meine Schöne, und komm!</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Versteck dich nicht wie eine Taube im Felsspalt,</para>
+  <para style="q1">bleib mir nicht fern!</para>
+  <para style="q1">Zeig mir dein schönes Gesicht</para>
+  <para style="q1">und lass mich deine wunderbare Stimme hören!«</para>
+  <para style="sp">Die Mädchen:</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Fangt uns doch die kleinen Füchse<note caller="+" style="f"><char style="fr" closed="false">2,15 </char><char style="ft" closed="false">»Füchse« steht hier vermutlich für andere Männer, die um die Zuneigung der jungen Frau werben.</char></note>,</para>
+  <para style="q1">denn sie verwüsten den Weinberg,</para>
+  <para style="q1">wenn die Reben in schönster Blüte stehn.</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Nur mir gehört mein Liebster,</para>
+  <para style="q1">und ich gehöre ihm.</para>
+  <para style="q1">Er allein darf zwischen den Lilien weiden.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Abends, wenn es kühl wird</para>
+  <para style="q1">und die Nacht ihre Schatten über das Land breitet,</para>
+  <para style="q1">dann komm zu mir, mein Liebster!</para>
+  <para style="q1">Sei schnell wie eine Gazelle,</para>
+  <para style="q1">flink wie ein junger Hirsch,</para>
+  <para style="q1">der über die rauen Berge springt!</para>
+  <chapter number="3" style="c"/>
+  <para style="s1">Nächtliche Sehnsucht</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Nachts auf meinem Bett</para>
+  <para style="q1">sehnte ich mich nach meinem Liebsten.</para>
+  <para style="q1">So gern wollte ich bei ihm sein,</para>
+  <para style="q1">doch er war nicht da!</para>
+  <para style="q1">
+    <verse number="2" style="v"/>»Ich will aufstehn, die Stadt durchstreifen,</para>
+  <para style="q1">durch die Gassen und über die Plätze laufen.</para>
+  <para style="q1">Meinen Liebsten muss ich finden!«</para>
+  <para style="q1">Ich suchte nach ihm, doch vergebens.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>Bei ihrem Rundgang griff die Wache mich auf:</para>
+  <para style="q1">»Habt ihr meinen Liebsten gesehen?«, fragte ich sie.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Kaum war ich an ihnen vorbei,</para>
+  <para style="q1">da fand ich ihn, dem mein Herz gehört.</para>
+  <para style="q1">Ich hielt ihn fest und ließ ihn nicht mehr los.</para>
+  <para style="q1">Ich führte ihn in das Haus meiner Mutter,</para>
+  <para style="q1">in jene Kammer, in der sie mich empfing.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>Ihr Mädchen von Jerusalem,</para>
+  <para style="q1">ich beschwöre euch bei der Liebe selbst:</para>
+  <para style="q1">Weckt sie nicht auf und facht die Leidenschaft nicht an,</para>
+  <para style="q1">bis die Zeit dafür kommt!<note caller="+" style="f"><char style="fr" closed="false">3,5 </char><char style="ft" closed="false">Vgl. die Anmerkungen zu <char style="xt">Kapitel <ref loc="SNG 2:7">2,7</ref>.</char></char></note></para>
+  <para style="s1">Der Hochzeitszug</para>
+  <para style="sp">Die Zuschauer:</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Wer kommt dort herauf aus der Wüste,</para>
+  <para style="q1">umgeben von Rauchsäulen aus Weihrauch und Myrrhe</para>
+  <para style="q1">und allen Parfümen der Händler?</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Seht! Es ist die Sänfte Salomos,</para>
+  <para style="q1">von sechzig Männern ist sie umringt,</para>
+  <para style="q1">von Israels tapferen Soldaten.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Sie alle sind im Kampf erprobt,</para>
+  <para style="q1">sie tragen das Schwert an der Seite</para>
+  <para style="q1">zum Schutz vor den Gefahren der Nacht.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Eine Sänfte ließ König Salomo sich bauen</para>
+  <para style="q1">aus dem kostbaren Holz des Libanon.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Die Pfosten sind mit Silber beschlagen</para>
+  <para style="q1">und die Lehnen mit Gold überzogen.</para>
+  <para style="q1">Der Stoff des Thronsitzes ist purpurrot,</para>
+  <para style="q1">liebevoll bestickt von Jerusalems Frauen.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="11" style="v"/>Kommt heraus, ihr Mädchen von Jerusalem!</para>
+  <para style="q1">Seht König Salomo mit seiner Krone!</para>
+  <para style="q1">Heute hat seine Mutter ihn damit geschmückt,</para>
+  <para style="q1">am Tag seiner Hochzeit, am Tag seines Glücks!</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Wie schön du bist!</para>
+  <para style="sp">Er:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Wie schön du bist, meine Freundin,</para>
+  <para style="q1">wie wunderschön!</para>
+  <para style="q1">Deine Augen hinter dem Schleier</para>
+  <para style="q1">glänzen wie das Gefieder der Tauben.</para>
+  <para style="q1">Dein Haar fließt über deine Schultern</para>
+  <para style="q1">wie eine Herde Ziegen,</para>
+  <para style="q1">die vom Gebirge Gilead ins Tal zieht.</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Deine Zähne sind weiß wie frisch geschorene Schafe,</para>
+  <para style="q1">die aus der Schwemme kommen.</para>
+  <para style="q1">Sie stehen in zwei vollkommenen Reihen,</para>
+  <para style="q1">keiner von ihnen fehlt.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Wie ein scharlachrotes Band</para>
+  <para style="q1">leuchten deine Lippen,</para>
+  <para style="q1">dein Mund ist verlockend und schön.</para>
+  <para style="q1">Hinter dem Schleier schimmern deine Wangen</para>
+  <para style="q1">rosig wie die Hälften eines Granatapfels.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Dein schlanker Hals ist so herrlich anzusehen</para>
+  <para style="q1">wie der Turm Davids,</para>
+  <para style="q1">dein Schmuck gleicht tausend prachtvollen Schilden,</para>
+  <para style="q1">die daran hängen.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Deine Brüste sind wie junge Zwillinge einer Gazelle,</para>
+  <para style="q1">die zwischen Lilien weiden.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Abends, wenn es kühl wird</para>
+  <para style="q1">und die Nacht ihre Schatten über das Land breitet,</para>
+  <para style="q1">will ich zu dir kommen – zu dem Hügel,</para>
+  <para style="q1">der nach Myrrhe und Weihrauch duftet.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Deine Schönheit ist vollkommen, meine Freundin,</para>
+  <para style="q1">kein Makel ist an dir.</para>
+  <para style="s1">Du hast mich verzaubert</para>
+  <para style="sp">Er:</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Komm mit mir, meine Braut,</para>
+  <para style="q1">steig mit mir herab vom Libanon,</para>
+  <para style="q1">verlass den Gipfel des Amanaberges,</para>
+  <para style="q1">den steilen Senir und den Hermon!</para>
+  <para style="q1">Komm weg von den Klippen,</para>
+  <para style="q1">wo die Löwen und Leoparden lauern!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="9" style="v"/>Du hast mich verzaubert,</para>
+  <para style="q1">mein Mädchen, meine Braut!</para>
+  <para style="q1">Mit einem einzigen Blick</para>
+  <para style="q1">hast du mein Herz gestohlen.</para>
+  <para style="q1">Schon eine Kette deines Halsschmucks</para>
+  <para style="q1">zog mich in deinen Bann!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Wie glücklich macht mich deine Liebe,</para>
+  <para style="q1">mein Mädchen, meine Braut!</para>
+  <para style="q1">Ich genieße deine Liebe</para>
+  <para style="q1">mehr als den besten Wein.</para>
+  <para style="q1">Dein Duft ist bezaubernder als jedes Parfüm.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Wie Honig schmecken deine Lippen, meine Braut,</para>
+  <para style="q1">ja, süße Honigmilch hält deine Zunge für mich bereit!</para>
+  <para style="q1">Und wie der Wald dort auf dem Libanon,</para>
+  <para style="q1">so duften deine Kleider!</para>
+  <para style="s1">Ein Garten voll edler Pflanzen</para>
+  <para style="sp">Er:</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Mein Mädchen ist ein Garten,</para>
+  <para style="q1">in dem die schönsten Pflanzen wachsen.</para>
+  <para style="q1">Aber noch ist er mir verschlossen.</para>
+  <para style="q1">Meine Braut ist eine erfrischende Quelle,</para>
+  <para style="q1">aber noch kann ich nicht davon trinken.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Ja, dein Körper ist ein herrlicher Garten.</para>
+  <para style="q1">Darin stehen Granatapfelbäume mit köstlichen Früchten,</para>
+  <para style="q1">und die Hennasträucher blühen in voller Pracht.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Es duftet nach Narde<note caller="+" style="f"><char style="fr" closed="false">4,14 </char><char style="ft" closed="false">Vgl. die Anmerkung zu <char style="xt">Kapitel <ref loc="SNG 1:12">1,12</ref>.</char></char></note> und Safran, Kalmus<note caller="+" style="f"><char style="fr" closed="false">4,14 </char><char style="ft" closed="false">Eine aus Vorderindien stammende Schilfart, die zur Herstellung wohlriechender Öle verwendet wird.</char></note> und Zimt;</para>
+  <para style="q1">selbst Weihrauchsträucher, Myrrhe, Aloe</para>
+  <para style="q1">und die edelsten Balsamgewächse sind dort zu finden.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Du bist eine sprudelnde Quelle mit frischem Wasser,</para>
+  <para style="q1">vom Libanon fließt es herab.</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Kommt, Nordwind und Südwind,</para>
+  <para style="q1">durchweht meinen Garten,</para>
+  <para style="q1">tragt seine Düfte hinaus!</para>
+  <para style="q1">Komm, mein Liebster, in deinen Garten</para>
+  <para style="q1">und genieße die köstlichen Früchte!</para>
+  <chapter number="5" style="c"/>
+  <para style="sp">Er:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Ich betrete den Garten,</para>
+  <para style="q1">mein Mädchen, meine Braut.</para>
+  <para style="q1">Ich pflücke die Myrrhe</para>
+  <para style="q1">und ernte den Balsam.</para>
+  <para style="q1">Ich öffne die Wabe</para>
+  <para style="q1">und esse den Honig.</para>
+  <para style="q1">Ich trinke den Wein</para>
+  <para style="q1">und genieße die Milch.</para>
+  <para style="q1">Esst auch ihr, Freunde,</para>
+  <para style="q1">trinkt euren Wein!</para>
+  <para style="q1">Berauscht euch an der Liebe!</para>
+  <para style="s1">Suche in der Nacht</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Ich schlief, doch mein Herz war wach.</para>
+  <para style="q1">Da, es klopft! Mein Liebster kommt!</para>
+  <para style="sp">Er:</para>
+  <para style="q1">Mach auf, mein Mädchen, meine Freundin!</para>
+  <para style="q1">Mein Täubchen, meine Vollkommene, lass mich herein!</para>
+  <para style="q1">Mein Haar ist vom Tau der Nacht ganz durchnässt.</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Ich habe mein Kleid schon ausgezogen,</para>
+  <para style="q1">soll ich es deinetwegen wieder anziehn?</para>
+  <para style="q1">Meine Füße habe ich schon gewaschen,</para>
+  <para style="q1">ich würde sie nur wieder schmutzig machen.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="4" style="v"/>Jetzt streckt er seine Hand</para>
+  <para style="q1">durch die Öffnung in der Tür.</para>
+  <para style="q1">Mein Herz schlägt bis zum Hals,</para>
+  <para style="q1">weil er in meiner Nähe ist.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Ich springe auf und will dem Liebsten öffnen;</para>
+  <para style="q1">meine Hände greifen nach dem Riegel,</para>
+  <para style="q1">sie sind voll von Myrrhenöl.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Schnell öffne ich die Tür für meinen Liebsten,</para>
+  <para style="q1">doch weg ist er, spurlos verschwunden.</para>
+  <para style="q1">Entsetzen packt mich: Er ist fortgegangen!</para>
+  <para style="q1">Ich suche ihn, doch ich kann ihn nirgends finden;</para>
+  <para style="q1">ich rufe laut nach ihm, doch er gibt keine Antwort.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="7" style="v"/>Bei ihrem Rundgang greifen die Wächter mich auf.</para>
+  <para style="q1">Sie schlagen und verwunden mich,</para>
+  <para style="q1">ohne Mitleid reißen sie mir den Umhang weg.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Ihr Mädchen von Jerusalem,</para>
+  <para style="q1">ich beschwöre euch:</para>
+  <para style="q1">Wenn ihr meinen Liebsten findet, dann sagt ihm,</para>
+  <para style="q1">dass ich krank vor Liebe bin.</para>
+  <para style="sp">Die Mädchen:</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Warum beschwörst du uns,</para>
+  <para style="q1">du schönste aller Frauen?</para>
+  <para style="q1">Was hat denn dein Liebster anderen voraus?</para>
+  <para style="q1">Was unterscheidet ihn von den anderen Männern?</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Mein Liebster strahlt vor Schönheit und Kraft<note caller="+" style="f"><char style="fr" closed="false">5,10 </char><char style="ft" closed="false">Wörtlich: ist strahlend und rötlich. – Gemeint ist eine schöne, gesunde Hautfarbe.</char></note>,</para>
+  <para style="q1">unter Tausenden ist keiner so wie er!</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Sein Gesicht schimmert wie Gold,</para>
+  <para style="q1">sein Haar ist rabenschwarz,</para>
+  <para style="q1">seine Locken erinnern an die Blütenrispen einer Dattelpalme.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Seine Augen sind von vollkommener Schönheit,</para>
+  <para style="q1">so wie Tauben, die in Milch baden</para>
+  <para style="q1">und aus vollen Bächen trinken.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Seine Wangen duften nach Balsamkräutern,</para>
+  <para style="q1">nach kostbaren Salben.</para>
+  <para style="q1">Seine Lippen leuchten wie rote Lilien,</para>
+  <para style="q1">sie sind mit Myrrhenöl benetzt.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Seine Arme sind wie Barren aus Gold,</para>
+  <para style="q1">mit Türkissteinen verziert.</para>
+  <para style="q1">Sein Leib gleicht einer Statue aus Elfenbein,</para>
+  <para style="q1">über und über mit Saphiren bedeckt.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Seine Beine sind Alabastersäulen,</para>
+  <para style="q1">die auf goldenen Sockeln stehn.</para>
+  <para style="q1">Eindrucksvoll wie der Libanon ist seine Gestalt,</para>
+  <para style="q1">stattlich wie mächtige Zedern.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Seine Küsse sind zärtlich,</para>
+  <para style="q1">alles an ihm ist begehrenswert.</para>
+  <para style="b"/>
+  <para style="q1">So ist mein Liebster, mein Freund,</para>
+  <para style="q1">ihr Mädchen von Jerusalem.</para>
+  <chapter number="6" style="c"/>
+  <para style="sp">Die Mädchen:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Wohin ist dein Liebster denn gegangen,</para>
+  <para style="q1">du schönste aller Frauen?</para>
+  <para style="q1">Wir wollen mit dir gehn und nach ihm suchen,</para>
+  <para style="q1">wo könnte er denn sein?</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Mein Liebster ging in seinen Garten,</para>
+  <para style="q1">wo Balsamkräuter wachsen.</para>
+  <para style="q1">Dort ist seine Weide,</para>
+  <para style="q1">dort pflückt er schöne Lilien.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Nur mir gehört mein Liebster,</para>
+  <para style="q1">und ich gehöre ihm.</para>
+  <para style="q1">Er allein darf zwischen den Lilien weiden.</para>
+  <para style="s1">Schöner als alle bist du!</para>
+  <para style="sp">Er:</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Schön bist du, meine Freundin,</para>
+  <para style="q1">schön wie die Stadt Tirza<note caller="+" style="f"><char style="fr" closed="false">6,4 </char><char style="ft" closed="false">Tirza war die Hauptstadt des Nordreichs Israel zur Zeit der Könige Jerobeam I. bis Omri. Der Name lässt sich mit »Anmut« wiedergeben.</char></note>,</para>
+  <para style="q1">prachtvoll wie Jerusalem!</para>
+  <para style="q1">Du hast mich erobert wie ein mächtiges Heer,</para>
+  <para style="q1">das zum Krieg auszieht.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Wende deine Augen von mir ab,</para>
+  <para style="q1">denn dein Blick überwältigt mich.</para>
+  <para style="b"/>
+  <para style="q1">Dein Haar fließt über deine Schultern</para>
+  <para style="q1">wie eine Herde Ziegen,</para>
+  <para style="q1">die vom Gebirge Gilead ins Tal zieht.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Deine Zähne sind weiß wie Mutterschafe,</para>
+  <para style="q1">die aus der Schwemme kommen.</para>
+  <para style="q1">Sie stehen in zwei vollkommenen Reihen,</para>
+  <para style="q1">keiner von ihnen fehlt.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Hinter dem Schleier schimmern deine Wangen</para>
+  <para style="q1">rosig wie die Hälften eines Granatapfels.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Mag der König sechzig Ehefrauen haben,</para>
+  <para style="q1">achtzig Nebenfrauen und Mädchen ohne Zahl:</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Ich liebe nur die eine,</para>
+  <para style="q1">mein Täubchen, meine Vollkommene.</para>
+  <para style="q1">Sie ist einmalig für ihre Mutter,</para>
+  <para style="q1">ihr Lieblingskind, dem sie das Leben gab.</para>
+  <para style="q1">Alle Mädchen, die sie sehen,</para>
+  <para style="q1">bewundern ihre Schönheit.</para>
+  <para style="q1">Selbst die Frauen und Nebenfrauen des Königs</para>
+  <para style="q1">schwärmen von ihr.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="10" style="v"/>Sie ist so strahlend schön wie das Morgenrot,</para>
+  <para style="q1">so herrlich wie der Mond und der Schein der Sonne!</para>
+  <para style="q1">Sie kann einen Mann erobern</para>
+  <para style="q1">wie ein mächtiges Heer, das zum Krieg auszieht.</para>
+  <para style="s1">Sehnsucht</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Ich ging hinunter ins Tal,</para>
+  <para style="q1">in den Garten, wo die Walnussbäume stehen.</para>
+  <para style="q1">Ich wollte sehen, ob die Bäume schon blühen,</para>
+  <para style="q1">ob der Weinstock neue Blätter treibt</para>
+  <para style="q1">und ob am Granatapfelbaum Knospen sprießen.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Ohne dass ich es merkte,</para>
+  <para style="q1">trieb mich die Sehnsucht zu meinem Liebsten,</para>
+  <para style="q1">hin zu seinem königlichen Prachtwagen.<note caller="+" style="f"><char style="fr" closed="false">6,12 </char><char style="ft" closed="false">Der hebräische Text ist nicht sicher zu deuten.</char></note></para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Lass dich bewundern!</para>
+  <para style="sp">Die Mädchen:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Dreh dich, Sulamith,</para>
+  <para style="q1">dreh dich beim Tanz im Kreise,</para>
+  <para style="q1">denn wir wollen dich bewundern!</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">Was gibt es denn zu sehen,</para>
+  <para style="q1">wenn ich den Reigen von Mahanajim<note caller="+" style="f"><char style="fr" closed="false">7,1 </char><char style="ft" closed="false">Oder: den Tanz der zwei Lager. – Vielleicht sind hier zwei Reihen von Tänzern gemeint.</char></note> tanze?</para>
+  <para style="sp">Er:</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Meine Prinzessin,</para>
+  <para style="q1">wie schön sind deine Füße in den Sandalen!</para>
+  <para style="q1">Die Rundungen deiner Hüften</para>
+  <para style="q1">sind wie ein Halsgeschmeide,</para>
+  <para style="q1">ein Werk aus Künstlerhand.</para>
+  <para style="q1">
+    <verse number="3" style="v"/>Dein Schoß gleicht einem runden Kelch,</para>
+  <para style="q1">der stets mit edlem Wein gefüllt ist.</para>
+  <para style="q1">Dein Bauch ist golden wie Weizen,</para>
+  <para style="q1">von Lilien umkränzt.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Deine Brüste sind wie junge Zwillinge einer Gazelle.</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Dein Hals gleicht einem Turm aus Elfenbein,</para>
+  <para style="q1">und deine Augen sind wie die Teiche von Heschbon</para>
+  <para style="q1">am Bat-Rabbim-Tor.</para>
+  <para style="q1">Deine Nase ist wie der Libanonturm,</para>
+  <para style="q1">der nach Damaskus blickt.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Dein Kopf ist schön und majestätisch</para>
+  <para style="q1">wie das Karmelgebirge.</para>
+  <para style="q1">Dein Haar schimmert wie Purpur,</para>
+  <para style="q1">deine Locken können einen König fesseln.</para>
+  <para style="s1">Du bist mein ganzes Glück</para>
+  <para style="sp">Er:</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Wie schön und bezaubernd du bist, meine Liebste!</para>
+  <para style="q1">Du bist mein ganzes Glück.</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Deine Gestalt gleicht einer hohen Dattelpalme,</para>
+  <para style="q1">und deine Brüste sind wie ihre Früchte.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Ich sagte mir: Ich will auf die Palme steigen</para>
+  <para style="q1">und nach ihren reifen Früchten greifen.</para>
+  <para style="q1">Freuen will ich mich an deinen Brüsten,</para>
+  <para style="q1">die den Trauben am Weinstock gleichen.</para>
+  <para style="q1">Deinen Atem will ich trinken,</para>
+  <para style="q1">der wie frische Äpfel duftet;</para>
+  <para style="q1">
+    <verse number="10" style="v"/>deine Lippen will ich spüren,</para>
+  <para style="q1">denn sie schmecken mir wie edler Wein.</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">Ja, möge der Wein dich so erfreuen,</para>
+  <para style="q1">dass du ihn im Schlaf noch auf den Lippen spürst.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Ich gehöre meinem Liebsten,</para>
+  <para style="q1">und sein Herz sehnt sich nach mir.</para>
+  <para style="s1">Ich will dir meine Liebe schenken</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Komm, wir gehn hinaus aufs Feld, mein Liebster,</para>
+  <para style="q1">unter Hennasträuchern lass uns die Nacht verbringen!</para>
+  <para style="q1">
+    <verse number="13" style="v"/>In der Frühe wollen wir zum Weinberg gehen</para>
+  <para style="q1">und sehen, ob der Weinstock treibt,</para>
+  <para style="q1">ob seine kleinen Blüten aufgegangen sind</para>
+  <para style="q1">und der Granatapfelbaum schon die ersten Knospen hat.</para>
+  <para style="q1">Dort will ich dir meine Liebe schenken!</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Die Liebesäpfel<note caller="+" style="f"><char style="fr" closed="false">7,14 </char><char style="ft" closed="false">Gemeint sind die Früchte der Alraune, die als Symbol der Liebe galten. Vgl. <char style="xt"><ref loc="GEN 30:14">1. Mose 30,14</ref>.</char></char></note> verströmen ihren Duft.</para>
+  <para style="q1">Verlockende Früchte liegen vor unsrer Tür,</para>
+  <para style="q1">frische Köstlichkeiten und solche,</para>
+  <para style="q1">die ich für dich, mein Liebster, aufbewahrt habe.</para>
+  <chapter number="8" style="c"/>
+  <para style="s1">Könnten wir doch ungestört sein!</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="1" style="v"/>Ach, wärst du doch mein Bruder,</para>
+  <para style="q1">hätte meine Mutter dich doch gestillt!</para>
+  <para style="q1">Dann könnte ich dich unbekümmert küssen,</para>
+  <para style="q1">wenn wir uns auf der Straße treffen,</para>
+  <para style="q1">und niemand würde Anstoß daran nehmen!</para>
+  <para style="q1">
+    <verse number="2" style="v"/>Ins Haus meiner Mutter würde ich dich führen,</para>
+  <para style="q1">dort könntest du mir deine Liebe zeigen;</para>
+  <para style="q1">ich gäbe dir gewürzten Wein zu trinken</para>
+  <para style="q1">und Nektar von meinen Granatäpfeln.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="3" style="v"/>Sein linker Arm liegt unter meinem Kopf,</para>
+  <para style="q1">und mit dem rechten hält er mich umschlungen.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Ihr Mädchen von Jerusalem,</para>
+  <para style="q1">ich beschwöre euch:</para>
+  <para style="q1">Weckt die Liebe nicht auf und facht die Leidenschaft nicht an,</para>
+  <para style="q1">bis die Zeit dafür kommt!<note caller="+" style="f"><char style="fr" closed="false">8,4 </char><char style="ft" closed="false">Vgl. die Anmerkung zu <char style="xt">Kapitel <ref loc="SNG 2:7">2,7</ref>.</char></char></note></para>
+  <para style="s1">Die Macht der Liebe</para>
+  <para style="sp">Die Mädchen:</para>
+  <para style="q1">
+    <verse number="5" style="v"/>Wer ist sie, die heraufkommt aus der Wüste,</para>
+  <para style="q1">Arm in Arm mit ihrem Liebsten?</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">Unter dem Apfelbaum,</para>
+  <para style="q1">da habe ich deine Liebe geweckt,</para>
+  <para style="q1">dort, wo deine Mutter dich empfing,</para>
+  <para style="q1">wo sie dir das Leben gab.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="6" style="v"/>Lass mich deinem Herzen nahe sein,</para>
+  <para style="q1">so wie der Siegelring auf deiner Brust.</para>
+  <para style="q1">Ich will einzigartig für dich bleiben,</para>
+  <para style="q1">so wie der Siegelreif um deinen Arm.</para>
+  <para style="b"/>
+  <para style="q1">Unüberwindlich wie der Tod, so ist die Liebe,</para>
+  <para style="q1">und ihre Leidenschaft so unentrinnbar wie das Totenreich!</para>
+  <para style="q1">Wen die Liebe erfasst hat, der kennt ihr Feuer:</para>
+  <para style="q1">Sie ist eine Flamme des <char style="nd">Herrn</char><note caller="+" style="f"><char style="fr" closed="false">8,6 </char><char style="ft" closed="false">Oder: eine lodernde Flamme.</char></note>!</para>
+  <para style="q1">
+    <verse number="7" style="v"/>Mächtige Fluten können sie nicht auslöschen,</para>
+  <para style="q1">gewaltige Ströme sie nicht fortreißen.</para>
+  <para style="q1">Böte einer seinen ganzen Besitz,</para>
+  <para style="q1">um die Liebe zu kaufen,</para>
+  <para style="q1">so würde man ihn nur verspotten.</para>
+  <para style="s1">Leicht zu erobern?</para>
+  <para style="sp">Die Brüder:</para>
+  <para style="q1">
+    <verse number="8" style="v"/>Unsre Schwester ist fast noch ein Kind</para>
+  <para style="q1">und hat noch keine Brüste.</para>
+  <para style="q1">Doch kommt einmal die Zeit, dass jemand um sie werben wird,</para>
+  <para style="q1">dann müssen wir zur Stelle sein!</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Wenn sie uneinnehmbar ist wie eine Mauer,</para>
+  <para style="q1">dann schmücken wir sie mit einem silbernen Turm.</para>
+  <para style="q1">Doch wenn sie leicht zu erobern ist wie eine offene Tür,</para>
+  <para style="q1">dann verriegeln wir sie mit Zedernbalken.</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Ich bin wie eine starke Mauer,</para>
+  <para style="q1">und meine Brüste sind wie Wachtürme.</para>
+  <para style="q1">Darum habe ich das Herz meines Liebsten gewonnen.<note caller="+" style="f"><char style="fr" closed="false">8,10 </char><char style="ft" closed="false">Oder: Doch meinem Liebsten bringe ich Erfüllung.</char></note></para>
+  <para style="s1">Reicher als Salomo</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Salomo besaß einen Weinberg in Baal-Hamon.</para>
+  <para style="q1">Er überließ ihn den Pächtern,</para>
+  <para style="q1">und bei der Ernte sollte jeder</para>
+  <para style="q1">ihm tausend Silbermünzen zahlen.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="12" style="v"/>Die tausend gönne ich dir, Salomo,</para>
+  <para style="q1">und zweihundert den Pächtern,</para>
+  <para style="q1">doch über meinen Weinberg verfüge ich ganz allein!</para>
+  <para style="s1">Rufe nur mich</para>
+  <para style="sp">Er:</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Du Mädchen in den Gärten,</para>
+  <para style="q1">noch andre Männer lauschen,</para>
+  <para style="q1">ob du sie rufst.</para>
+  <para style="q1">Nur mich lass deine Stimme hören!</para>
+  <para style="sp">Sie:</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Ja, komm rasch zu mir, mein Liebster!</para>
+  <para style="q1">Sei schnell wie eine Gazelle,</para>
+  <para style="q1">flink wie ein junger Hirsch,</para>
+  <para style="q1">der von den Bergen kommt,</para>
+  <para style="q1">wo duftende Kräuter wachsen!</para>
+</usx>

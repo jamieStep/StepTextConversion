@@ -341,7 +341,7 @@ object TextConverterVersificationHealthCheck
         if (!ok) ok = ref.toRefKey() in m_SubverseTwosWhichDontNeedChecking // And we're ok if this is a verse which doesn't need checking.
         if (!ok)
         {
-          m_ErrorReporter(refAsString, "Subverse / verse ordering errors at and possibly also after verse $verse")
+          m_OutOfOrderReporter(refAsString, "Subverse / verse ordering errors at and possibly also after verse $verse")
           throw StepException("")
         }
 

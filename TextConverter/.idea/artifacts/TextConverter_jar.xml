@@ -2,6 +2,7 @@
   <artifact type="jar" name="TextConverter:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/TextConverter_jar</output-path>
     <root id="archive" name="TextConverter.jar">
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/resources" />
       <element id="module-output" name="TextConverter.main" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xmlresolver/xmlresolver/5.2.0/c24d17008879ace5a64e819377863ca26c517367/xmlresolver-5.2.0-data.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.6.3/7ce526bbb9e6202e8a30140a50bfff644fddd10e/junit-platform-commons-1.6.3.jar" path-in-jar="/" />

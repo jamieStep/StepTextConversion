@@ -181,11 +181,11 @@ object StandardFileLocations
   fun getSwordZipFilePath (moduleName: String): String { return Paths.get(m_SwordRootFolderPath, "$moduleName.zip").toString() }
   private fun getTextFeaturesFileName (): String { return m_TextFeaturesFileName }
   fun getTextFeaturesFilePath (): String { return Paths.get(getTextFeaturesFolderPath(), getTextFeaturesFileName()).toString() }
-  fun getTextFeaturesFolderPath (): String { return m_TextFeaturesFolderPath }
+  fun getTextFeaturesFolderPath (): String { return makeTextFeaturesFolderPath() }
   private fun getVernacularBibleStructureFileName (): String { return m_VernacularBibleStructureFileName }
   fun getVernacularBibleStructureFilePath (): String { return Paths.get(getTextFeaturesFolderPath(), getVernacularBibleStructureFileName()).toString() }
   fun getVersificationFilePath (): String { return Paths.get(getRootFolderPath(), "stepRawTextVersification.txt").toString() }
-  private fun getVersificationStructureForBespokeOsis2ModFileName (): String { return ConfigData["stepVersificationScheme"]!! + ".json" }
+  private fun getVersificationStructureForBespokeOsis2ModFileName (): String { return ConfigData["stepModuleName"]!! + ".json" }
   fun getVersificationStructureForBespokeOsis2ModFilePath (): String { return Paths.get(getEncryptionDataRootFolder(), "versification", getVersificationStructureForBespokeOsis2ModFileName()).toString() }
   fun getVLFilePath (): String { return Paths.get(getRootFolderPath(), "VL", "vl.txt").toString() }
 
@@ -250,11 +250,15 @@ object StandardFileLocations
     m_StepChangeHistoryFilePath = Paths.get(m_RootFolderPath, "Metadata", m_StepChangeHistoryFileName).toString()
     m_OsisFilePath = Paths.get(m_OsisFolderPath, m_RootFolderName.replace("Text_", "") + "_osis.xml").toString()
     
-    m_TextFeaturesFolderPath = Paths.get(m_SwordRootFolderPath, "textFeatures").toString()
     m_TextFeaturesFileName = "textFeatures.json"
     
     m_VernacularBibleStructureFolderPath = Paths.get(m_SwordRootFolderPath, "textFeatures").toString()
     m_VernacularBibleStructureFileName = "vernacularBibleStructure.json"
+  }
+
+  private fun makeTextFeaturesFolderPath (): String // Have to do this late, because it relies on stepModuleName, and that's not finalised until late.
+  {
+    return Paths.get(m_SwordRootFolderPath, "textFeatures", ConfigData["stepModuleName"]).toString()
   }
 
 
@@ -288,7 +292,6 @@ object StandardFileLocations
   private var m_SwordModuleFolderPath = ""
   private var m_SwordRootFolderPath = ""
   private var m_TextFeaturesFileName = ""
-  private var m_TextFeaturesFolderPath = ""
   private var m_VernacularBibleStructureFileName = ""
   private var m_VernacularBibleStructureFolderPath = ""
 }

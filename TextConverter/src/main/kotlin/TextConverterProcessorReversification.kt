@@ -454,7 +454,7 @@ object TextConverterProcessorReversification: TextConverterProcessorBase ()
   private fun doCrossReferenceMappings (document: Document)
   {
     val mappings = ReversificationData.getReferenceMappings() as MutableMap<RefKey, RefKey>
-    if (C_ConfigurationFlag_CollapseSubverses) mappings.keys.forEach { if (Ref.hasS(mappings[it]!!)) mappings[it] = Ref.clearS(mappings[it]!!) }
+    if (XXXOsis2ModInterface.C_CollapseSubverses) mappings.keys.forEach { if (Ref.hasS(mappings[it]!!)) mappings[it] = Ref.clearS(mappings[it]!!) }
     CrossReferenceProcessor.updateCrossReferences(document, mappings)
   }
 

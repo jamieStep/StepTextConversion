@@ -99,13 +99,13 @@ object Dbg
     {
       "<" -> {
         val bookNo = getBookNo(abbrevs)
-        for (i in 0..bookNo) m_BooksToBeProcessed[i].m_Process = true
+        for (i in 0..< bookNo) m_BooksToBeProcessed[i].m_Process = true
       }
 
 
       "<=" -> {
         val bookNo = getBookNo(abbrevs)
-        m_BooksToBeProcessed[bookNo].m_Process = true
+        for (i in 0.. bookNo) m_BooksToBeProcessed[i].m_Process = true
       }
 
       
@@ -124,14 +124,14 @@ object Dbg
       ">" ->
       {
         val bookNo = getBookNo(abbrevs)
-        for (i in bookNo + 1 until m_BooksToBeProcessed.size) m_BooksToBeProcessed[i].m_Process = true
+        for (i in bookNo + 1..< m_BooksToBeProcessed.size) m_BooksToBeProcessed[i].m_Process = true
       }
       
       
       ">=" ->
       {
         val bookNo = getBookNo(abbrevs)
-        for (i in bookNo until m_BooksToBeProcessed.size) m_BooksToBeProcessed[i].m_Process = true
+        for (i in bookNo..< m_BooksToBeProcessed.size) m_BooksToBeProcessed[i].m_Process = true
       }
     }
   }

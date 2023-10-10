@@ -1,0 +1,233 @@
+\id XXA - The Text-Critical English New Testament 
+\h APPENDIX A: CALCULATION OF MANUSCRIPT PERCENTAGES 
+\toc1 Appendix A: Calculation of Manuscript Percentages 
+\toc2 Appendix A 
+\toc3 App. A 
+\mt1 APPENDIX A 
+\mt2 CALCULATION OF MANUSCRIPT PERCENTAGES 
+\ip The calculation of manuscript percentages is not as straightforward as one might assume. There are four primary factors that must be taken into consideration: (1) the length of the variant unit, (2) whether corrections and additions by later scribes are counted, (3) how misspellings and alternate spellings are handled, and (4) how long omissions are handled. Because the manuscript percentages in this volume are calculated from the collations presented in the \it Text und Textwert\it* volumes, those volumes guide how these four factors are handled in the present volume. The length of the variant unit is simply the length as presented in \it Text und Textwert\it*.\f + \fr 1:0  \ft It should be noted that the length of any given variant unit in \ft \+it Text und Textwert\+it* may sometimes be longer than what is cited in the footnotes of \+it The Text-Critical English New Testament\+it*. For example, the first variant in Mark 2:16 reads as follows:
+\fp  
+\fp and 96.6% ¦ of CT 0.2%
+\fp  
+\fp However, the length of the variant unit in \+it Text und Textwert\+it* includes all of the Greek words translated as “him. When the scribes and the Pharisees…” This difference is due to the fact that some manuscripts have further variations that are not included in the main text of any of the editions of the Greek New Testament compared in the footnotes presented in this volume. Nevertheless, the percentages listed in the footnotes correspond to the variant units as they are presented in \+it Text und Textwert\+it* because it provides a truer picture of the manuscript evidence as a whole.\f* Corrections and additions by later scribes are counted in addition to the original reading of a manuscript. Thus, a single manuscript can be counted more than once.\f + \fr 1:0  \ft Percentages calculated from Tommy Wasserman's collation of Jude are based on Joey McCollum's tabulations, which take into account only the original text for each manuscript. The effect of this different calculation method on the overall percentages is extremely minimal. Apart from this difference, the percentages are calculated in the same manner as the percentages based on the \ft \+it Text und Textwert\+it* volumes. Percentages calculated from McCollum's tabulations of Wasserman's collation are placed in brackets, as are the percentages calculated from Matthew Solomon's collation of Philemon.\f* Consequently, it is more accurate to speak of the percentage of manuscript \it readings\it* than the percentage of manuscripts. When \it Text und Textwert\it* groups alternate spellings under one variant, they are counted as one variant in the calculation of manuscript percentages in this volume. Similarly, when \it Text und Textwert\it* groups alternate spellings under separate variants, they are counted as separate variants in the calculation of manuscript percentages in this volume. Finally, manuscripts that have long omissions due to factors such as homoioteleuton are included in the total number when calculating percentages. 
+\ip The process of calculation is best illustrated by example. Below is a summary of the \it Text und Textwert\it* collation for 2 John 9. This variant unit occurs after the words ο μενων εν τη διδαχη (‘whoever abides in the teaching’). The readings are as follows: 
+\ib
+\tr
+\tc1  \bd Reading\bd*
+\tc2  \bd Text\bd*
+\tc3  \bd Subtotal\bd* 
+\tr
+\tc1 1
+\tc2 του χριστου (‘of Christ’)
+\tc3 458 
+\tr
+\tc1 2
+\tc2 —
+\tc3 23 
+\tr
+\tc1 3
+\tc2 του θεου (‘of God’)
+\tc3 1 
+\tr
+\tc1 4
+\tc2 του κυριου (‘of the Lord’)
+\tc3 1 
+\tr
+\tc1 U1
+\tc2 long omission (homoioteleuton)
+\tc3 4 
+\tr
+\tc1 U2
+\tc2 long omission (homoioteleuton)
+\tc3 25 
+\tr
+\tc1 V
+\tc2 long omission (other)
+\tc3 1 
+\tr
+\tc1 X
+\tc2 illegible
+\tc3 3 
+\tr
+\tc1 Y
+\tc2 film error
+\tc3 1 
+\tr
+\tc1 Z
+\tc2 lacuna
+\tc3 52 
+\ib
+\im Although the grand total is 569, the manuscripts labeled as X, Y, and Z are not included in the calculations. This reduces the total to 513. Thus the percentages are as follows: 
+\ib
+\tr
+\tc1  \bd Reading\bd* 
+\tc2  \bd Percentage\bd* 
+\tr
+\tc1 1
+\tc2 89.3% (458/513) 
+\tr
+\tc1 2
+\tc2 4.5% (23/513) 
+\tr
+\tc1 3
+\tc2 0.2% (1/513) 
+\tr
+\tc1 4
+\tc2 0.2% (1/513) 
+\tr
+\tc1 U1
+\tc2 0.8% (4/513) 
+\tr
+\tc1 U2
+\tc2 4.9% (25/513) 
+\tr
+\tc1 V
+\tc2 0.2% (1/513) 
+\ib
+\im In summary, 89.3% of the manuscript readings support the Byzantine text (Reading 1), while 4.5% of the manuscript readings support the critical text (Reading 2). 
+\ip 1 Corinthians 2:1 provides another helpful example. This variant unit occurs after the words καταγγελλων υμιν (‘proclaiming to you’). 
+\ib
+\tr
+\tc1  \bd Reading\bd*
+\tc2  \bd Text\bd*
+\tc3  \bd Subtotal\bd* 
+\tr
+\tc1 1
+\tc2 το μαρτυριον του θεου (‘the testimony of God’)
+\tc3 556 
+\tr
+\tc1 1B
+\tc2 το μαρτυριον θεου (‘the testimony of God’)
+\tc3 2 
+\tr
+\tc1 2
+\tc2 το μυστηριον του θεου (‘the mystery of God’) 
+\tc3 26 
+\tr
+\tc1 3
+\tc2 το μαρτυριον του θεου {υμιν} (‘the testimony of God’ but placed before the words ‘to you’)
+\tc3 1 
+\tr
+\tc1 4
+\tc2 το μαρτυριον του ιησου (‘the testimony of Jesus’)
+\tc3 1 
+\tr
+\tc1 5
+\tc2 το μαρτυριον του χριστου (‘the testimony of Christ’)
+\tc3 3 
+\tr
+\tc1 6
+\tc2 το σωτηριον του θεου (‘the salvation of God’)
+\tc3 1 
+\tr
+\tc1 7
+\tc2 το ευαγγελιον του θεου (‘the good news of God’)
+\tc3 6 
+\tr
+\tc1 U
+\tc2 long omission (homoioteleuton)
+\tc3 1 
+\tr
+\tc1 W
+\tc2 uncertain as to whether it is Reading 1, Reading 2, or Reading 6
+\tc3 1 
+\tr
+\tc1 X 
+\tc2 illegible 
+\tc3 3 
+\tr
+\tc1 Z
+\tc2 lacuna
+\tc3 145 
+\ib
+\im Although the grand total is 746, the manuscripts labeled as W, X, and Z are not included in the calculations. This reduces the total to 597. Thus the percentages are as follows: 
+\ib
+\tr
+\tc1  \bd Reading\bd* 
+\tc2  \bd Percentage\bd* 
+\tr
+\tc1 1
+\tc2 93.1% (556/597) 
+\tr
+\tc1 1B
+\tc2 0.3% (2/597) 
+\tr
+\tc1 2
+\tc2 4.4% (26/597) 
+\tr
+\tc1 3
+\tc2 0.2% (1/597) 
+\tr
+\tc1 4
+\tc2 0.2% (1/597) 
+\tr
+\tc1 5
+\tc2 0.5% (3/597) 
+\tr
+\tc1 6
+\tc2 0.2% (1/597) 
+\tr
+\tc1 7
+\tc2 1% (6/597) 
+\tr
+\tc1 U
+\tc2 0.2% (1/597) 
+\ib
+\im In summary, 93.1% of the manuscript readings support the Byzantine text (Reading 1), while 4.4% of the manuscript readings support Nestle-Aland and Westcott-Hort (Reading 2). (In this case SBL and Tyndale House agree with the Byzantine text.) It should be noted that although Reading 1B and Reading 3 have the same English translation as Reading 1, it is the percentage for Reading 1 that is given in the footnote at 1 Corinthians 2:1. This is because the Greek text of Robinson and Pierpont matches Reading 1 and not Reading 1B or Reading 3. 
+\ip As a rule, manuscripts labeled as U or V are included in the calculations, while manuscripts labeled as W, X, Y, or Z are not. Readings labeled as 1B, 1C, 1D, 2B, 2C, 2D, etc., are always treated separately.\f + \fr 1:0  \ft Two exceptions are 1 Cor. 14:24 and 2 Cor. 11:3 in which the percentage for Reading 1B is combined with the percentage for Reading 1 since the only difference is the inclusion or exclusion of \ft \+it sigma\+it* for the word ουτω(ς). Other exceptions are Mark 16:9–20, John 5:4, John 7:53–8:11, Romans 14:24–26, and Romans 16:25–27 in which the totals from different readings are combined because the differences in the readings are based upon the presence or absence of asterisks or obeli in the margin and other similar notations or distinctions.\f* 
+\ip The \it Text und Textwert\it* collations for the Gospel of John present manuscript totals in a peculiar way that requires additional explanation. While some readings are labeled 1B, 1C, 1D, 2B, 2C, 2D, etc., other readings are labeled 1-f or 1-f1, 1-f2, 1-f3, etc. Readings with the -f label are not presented with a subtotal. Usually (but not always) they are included in the prior subtotal. For example, in John 4:37 the first three readings are listed as follows: 
+\ib
+\tr
+\tc1  \bd Reading\bd*
+\tc2  \bd Text\bd*
+\tc3  \bd Subtotal\bd* 
+\tr
+\tc1 1
+\tc2 ο αληθινος
+\tc3 1,333 
+\tr
+\tc1 1-f
+\tc2 ο αληθος
+\tc3 no subtotal 
+\tr
+\tc1 1C
+\tc2 ο αληθης
+\tc3 1 
+\ib
+\im In this case, the actual subtotals are as follows: 
+\ib
+\tr
+\tc1  \bd Reading\bd*
+\tc2  \bd Text\bd*
+\tc3  \bd Subtotal\bd* 
+\tr
+\tc1 1
+\tc2 ο αληθινος
+\tc3 1,332 
+\tr
+\tc1 1-f
+\tc2 ο αληθος
+\tc3 1 
+\tr
+\tc1 1C
+\tc2 ο αληθης
+\tc3 1 
+\ib
+\im In order to be consistent with the calculation methods used with the other \it Text und Textwert\it* volumes, the subtotal of 1,332 is what would be used to calculate the percentage of manuscripts for Reading 1. 
+\ip Nevertheless, there are times when the -f label is not included in the prior subtotal. Reading 13 and Reading 14-f in John 7:40(1) provide a good example. Below is an exact representation of the \it Text und Textwert\it* data. 
+\ib
+\tr
+\tc1 13 OM. των λογων τουτων 
+\tr
+\tc1 030* 106 164 494 516* 1349* 1356 1474 2649* 
+\tr
+\tc1 ANZAHL DER ZEUGEN:\f + \fr 1:0  \ft That is, “NUMBER OF WITNESSES.”\f* 9 
+\tr
+\tc1  
+\tr
+\tc1 14-f των οχλων λογων 
+\tr
+\tc1 335 
+\ib
+\im Reading 13 is found in nine manuscripts, which are each listed. The subtotal is 9 and cannot therefore include Reading 14-f. Reading 14-f, which is supported only by manuscript 335, must be given a separate subtotal of 1 even though no subtotal is listed. The rule of thumb is that if the label preceding -f is the same as the prior label, it is included in the prior subtotal, but if the label preceding -f is not the same as the prior label, it is not included in the prior subtotal. Thus in John 4:37 Reading 1-f is included in the subtotal for Reading 1 because the label preceding -f is the same as the prior label. However, in John 7:40(1) Reading 14-f is not included in the subtotal for Reading 13 because the label preceding -f is not the same as the prior label. While -f is the most common label that is not presented with a subtotal, the same rule applies for any readings that have a hyphen followed by a lowercase letter or lowercase letters (such as -o and -of). 
+\ip By following the model for calculation described above, anyone with access to the \it Text und Textwert\it* volumes should be able to replicate the manuscript percentages found in the footnotes of this volume.\f + \fr 1:0  \ft It should be noted, however, that the collations for five variant sets (Mark 2:14; 12:25; Acts 2:7; 18:21; 27:5) are unreliable, with many manuscripts classified incorrectly.\f* 

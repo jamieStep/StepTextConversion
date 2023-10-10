@@ -1,0 +1,604 @@
+<DBLMetadata version="2.2.1" id="a0d7cbba76315e54" revision="3">
+    <identification>
+      <name>Indonesian Living Bible (Firman Allah yang Hidup) 2020, New Testament</name>
+      <nameLocal>Firman Allah yang Hidup</nameLocal>
+      <description>Indonesian: Firman Allah yang Hidup (New Testament)</description>
+      <descriptionLocal>Perjanjian Baru</descriptionLocal>
+      <abbreviation>ILB</abbreviation>
+      <abbreviationLocal>FAYH</abbreviationLocal>
+      <scope>New Testament</scope>
+      <bundleProducer>Paratext/9.0.103.41</bundleProducer>
+      <systemId type="paratext">
+        <id>a0d7cbba76315e549d990f11e5d11d173f507508</id>
+        <csetId>d1351f8d1b05257c3d11a6c5d14a6e73b74647cb</csetId>
+        <name>idFAYH20</name>
+        <fullName>Indonesian Living Bible (Firman Allah yang Hidup) 2020, New Testament</fullName>
+      </systemId>
+      <systemId type="ptreg">
+        <id>HfAi55TkXa9kAEZbw</id>
+      </systemId>
+    </identification>
+    <type>
+      <medium>text</medium>
+      <isConfidential>false</isConfidential>
+      <hasCharacters>true</hasCharacters>
+      <isTranslation>true</isTranslation>
+      <isExpression>true</isExpression>
+      <translationType>Revision</translationType>
+      <audience>Basic</audience>
+      <projectType>Standard</projectType>
+    </type>
+    <relationships/>
+    <agencies>
+      <rightsHolder>
+        <abbr>Biblica</abbr>
+        <url>http://www.Biblica.com</url>
+        <nameLocal>Biblica, Inc.</nameLocal>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </rightsHolder>
+      <rightsAdmin>
+        <url>http://www.Biblica.com</url>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </rightsAdmin>
+      <contributor>
+        <content>true</content>
+        <publication>true</publication>
+        <management>true</management>
+        <finance>true</finance>
+        <qa>true</qa>
+        <uid>545d2cb00fd5dca263562474</uid>
+        <name>Biblica, Inc.</name>
+      </contributor>
+    </agencies>
+    <language>
+      <iso>ind</iso>
+      <name>Indonesian</name>
+      <nameLocal>Indonesia, bahasa</nameLocal>
+      <script>Latin</script>
+      <scriptCode>Latn</scriptCode>
+      <scriptDirection>LTR</scriptDirection>
+      <ldml>id</ldml>
+      <numerals>Arabic</numerals>
+    </language>
+    <countries>
+      <country>
+        <iso>ID</iso>
+        <name>Indonesia</name>
+      </country>
+    </countries>
+    <format>
+      <usxVersion>3.0</usxVersion>
+      <versedParagraphs>false</versedParagraphs>
+    </format>
+    <names>
+      <name id="book-gen">
+        <abbr>Kej</abbr>
+        <short>Kejadian</short>
+        <long>Kejadian</long>
+      </name>
+      <name id="book-exo">
+        <abbr>Kel</abbr>
+        <short>Keluaran</short>
+        <long>Keluaran</long>
+      </name>
+      <name id="book-lev">
+        <abbr>Im</abbr>
+        <short>Imamat</short>
+        <long>Imamat</long>
+      </name>
+      <name id="book-num">
+        <abbr>Bil</abbr>
+        <short>Bilangan</short>
+        <long>Bilangan</long>
+      </name>
+      <name id="book-deu">
+        <abbr>Ul</abbr>
+        <short>Ulangan</short>
+        <long>Ulangan</long>
+      </name>
+      <name id="book-jos">
+        <abbr>Yos</abbr>
+        <short>Yosua</short>
+        <long>Yosua</long>
+      </name>
+      <name id="book-jdg">
+        <abbr>Hak</abbr>
+        <short>Hakim-hakim</short>
+        <long>Hakim-hakim</long>
+      </name>
+      <name id="book-rut">
+        <abbr>Rut</abbr>
+        <short>Rut</short>
+        <long>Rut</long>
+      </name>
+      <name id="book-1sa">
+        <abbr>1Sam</abbr>
+        <short>1 Samuel</short>
+        <long>1 Samuel</long>
+      </name>
+      <name id="book-2sa">
+        <abbr>2Sam</abbr>
+        <short>2 Samuel</short>
+        <long>2 Samuel</long>
+      </name>
+      <name id="book-1ki">
+        <abbr>1Raj</abbr>
+        <short>1 Raja-raja</short>
+        <long>1 Raja-raja</long>
+      </name>
+      <name id="book-2ki">
+        <abbr>2Raj</abbr>
+        <short>2 Raja-raja</short>
+        <long>2 Raja-raja</long>
+      </name>
+      <name id="book-1ch">
+        <abbr>1Taw</abbr>
+        <short>1 Tawarikh</short>
+        <long>1 Tawarikh</long>
+      </name>
+      <name id="book-2ch">
+        <abbr>2Taw</abbr>
+        <short>2 Tawarikh</short>
+        <long>2 Tawarikh</long>
+      </name>
+      <name id="book-ezr">
+        <abbr>Ezr</abbr>
+        <short>Ezra</short>
+        <long>Ezra</long>
+      </name>
+      <name id="book-neh">
+        <abbr>Neh</abbr>
+        <short>Nehemia</short>
+        <long>Nehemia</long>
+      </name>
+      <name id="book-est">
+        <abbr>Est</abbr>
+        <short>Ester</short>
+        <long>Ester</long>
+      </name>
+      <name id="book-job">
+        <abbr>Ayb</abbr>
+        <short>Ayub</short>
+        <long>Ayub</long>
+      </name>
+      <name id="book-psa">
+        <abbr>Mzm</abbr>
+        <short>Mazmur</short>
+        <long>Mazmur</long>
+      </name>
+      <name id="book-pro">
+        <abbr>Ams</abbr>
+        <short>Amsal</short>
+        <long>Amsal</long>
+      </name>
+      <name id="book-ecc">
+        <abbr>Pkh</abbr>
+        <short>Pengkhotbah</short>
+        <long>Pengkhotbah</long>
+      </name>
+      <name id="book-sng">
+        <abbr>Kid</abbr>
+        <short>Kidung Agung</short>
+        <long>Kidung Agung</long>
+      </name>
+      <name id="book-isa">
+        <abbr>Yes</abbr>
+        <short>Yesaya</short>
+        <long>Yesaya</long>
+      </name>
+      <name id="book-jer">
+        <abbr>Yer</abbr>
+        <short>Yeremia</short>
+        <long>Yeremia</long>
+      </name>
+      <name id="book-lam">
+        <abbr>Rat</abbr>
+        <short>Ratapan</short>
+        <long>Ratapan</long>
+      </name>
+      <name id="book-ezk">
+        <abbr>Yeh</abbr>
+        <short>Yehezkiel</short>
+        <long>Yehezkiel</long>
+      </name>
+      <name id="book-dan">
+        <abbr>Dan</abbr>
+        <short>Daniel</short>
+        <long>Daniel</long>
+      </name>
+      <name id="book-hos">
+        <abbr>Hos</abbr>
+        <short>Hosea</short>
+        <long>Hosea</long>
+      </name>
+      <name id="book-jol">
+        <abbr>Yl</abbr>
+        <short>Yoel</short>
+        <long>Yoel</long>
+      </name>
+      <name id="book-amo">
+        <abbr>Am</abbr>
+        <short>Amos</short>
+        <long>Amos</long>
+      </name>
+      <name id="book-oba">
+        <abbr>Ob</abbr>
+        <short>Obaja</short>
+        <long>Obaja</long>
+      </name>
+      <name id="book-jon">
+        <abbr>Yun</abbr>
+        <short>Yunus</short>
+        <long>Yunus</long>
+      </name>
+      <name id="book-mic">
+        <abbr>Mi</abbr>
+        <short>Mikha</short>
+        <long>Mikha</long>
+      </name>
+      <name id="book-nam">
+        <abbr>Nah</abbr>
+        <short>Nahum</short>
+        <long>Nahum</long>
+      </name>
+      <name id="book-hab">
+        <abbr>Hab</abbr>
+        <short>Habakuk</short>
+        <long>Habakuk</long>
+      </name>
+      <name id="book-zep">
+        <abbr>Zef</abbr>
+        <short>Zefanya</short>
+        <long>Zefanya</long>
+      </name>
+      <name id="book-hag">
+        <abbr>Hag</abbr>
+        <short>Hagai</short>
+        <long>Hagai</long>
+      </name>
+      <name id="book-zec">
+        <abbr>Zak</abbr>
+        <short>Zakharia</short>
+        <long>Zakharia</long>
+      </name>
+      <name id="book-mal">
+        <abbr>Mal</abbr>
+        <short>Maleakhi</short>
+        <long>Maleakhi</long>
+      </name>
+      <name id="book-mat">
+        <abbr>Mat</abbr>
+        <short>Matius</short>
+        <long>Matius</long>
+      </name>
+      <name id="book-mrk">
+        <abbr>Mrk</abbr>
+        <short>Markus</short>
+        <long>Markus</long>
+      </name>
+      <name id="book-luk">
+        <abbr>Luk</abbr>
+        <short>Lukas</short>
+        <long>Lukas</long>
+      </name>
+      <name id="book-jhn">
+        <abbr>Yoh</abbr>
+        <short>Yohanes</short>
+        <long>Yohanes</long>
+      </name>
+      <name id="book-act">
+        <abbr>Kis</abbr>
+        <short>Kisah Para Rasul</short>
+        <long>Kisah Para Rasul</long>
+      </name>
+      <name id="book-rom">
+        <abbr>Rm</abbr>
+        <short>Roma</short>
+        <long>Roma</long>
+      </name>
+      <name id="book-1co">
+        <abbr>1Kor</abbr>
+        <short>1 Korintus</short>
+        <long>1 Korintus</long>
+      </name>
+      <name id="book-2co">
+        <abbr>2Kor</abbr>
+        <short>2 Korintus</short>
+        <long>2 Korintus</long>
+      </name>
+      <name id="book-gal">
+        <abbr>Gal</abbr>
+        <short>Galatia</short>
+        <long>Galatia</long>
+      </name>
+      <name id="book-eph">
+        <abbr>Efe</abbr>
+        <short>Efesus</short>
+        <long>Efesus</long>
+      </name>
+      <name id="book-php">
+        <abbr>Flp</abbr>
+        <short>Filipi</short>
+        <long>Filipi</long>
+      </name>
+      <name id="book-col">
+        <abbr>Kol</abbr>
+        <short>Kolose</short>
+        <long>Kolose</long>
+      </name>
+      <name id="book-1th">
+        <abbr>1Tes</abbr>
+        <short>1 Tesalonika</short>
+        <long>1 Tesalonika</long>
+      </name>
+      <name id="book-2th">
+        <abbr>2Tes</abbr>
+        <short>2 Tesalonika</short>
+        <long>2 Tesalonika</long>
+      </name>
+      <name id="book-1ti">
+        <abbr>1Tim</abbr>
+        <short>1 Timotius</short>
+        <long>1 Timotius</long>
+      </name>
+      <name id="book-2ti">
+        <abbr>2Tim</abbr>
+        <short>2 Timotius</short>
+        <long>2 Timotius</long>
+      </name>
+      <name id="book-tit">
+        <abbr>Tit</abbr>
+        <short>Titus</short>
+        <long>Titus</long>
+      </name>
+      <name id="book-phm">
+        <abbr>Flm</abbr>
+        <short>Filemon</short>
+        <long>Filemon</long>
+      </name>
+      <name id="book-heb">
+        <abbr>Ibr</abbr>
+        <short>Ibrani</short>
+        <long>Ibrani</long>
+      </name>
+      <name id="book-jas">
+        <abbr>Yak</abbr>
+        <short>Yakobus</short>
+        <long>Yakobus</long>
+      </name>
+      <name id="book-1pe">
+        <abbr>1Ptr</abbr>
+        <short>1 Petrus</short>
+        <long>1 Petrus</long>
+      </name>
+      <name id="book-2pe">
+        <abbr>2Ptr</abbr>
+        <short>2 Petrus</short>
+        <long>2 Petrus</long>
+      </name>
+      <name id="book-1jn">
+        <abbr>1Yoh</abbr>
+        <short>1 Yohanes</short>
+        <long>1 Yohanes</long>
+      </name>
+      <name id="book-2jn">
+        <abbr>2Yoh</abbr>
+        <short>2 Yohanes</short>
+        <long>2 Yohanes</long>
+      </name>
+      <name id="book-3jn">
+        <abbr>3Yoh</abbr>
+        <short>3 Yohanes</short>
+        <long>3 Yohanes</long>
+      </name>
+      <name id="book-jud">
+        <abbr>Yud</abbr>
+        <short>Yudas</short>
+        <long>Yudas</long>
+      </name>
+      <name id="book-rev">
+        <abbr>Why</abbr>
+        <short>Wahyu</short>
+        <long>Wahyu</long>
+      </name>
+    </names>
+    <manifest>
+      <resource checksum="878f4ad7d3277066c7b3589dcc8aa322" mimeType="application/xml" size="120623" uri="release/USX_2/1CO.usx"/>
+      <resource checksum="a8d0ca65aef3b3de387545ff014106fa" mimeType="application/xml" size="29016" uri="release/USX_2/1JN.usx"/>
+      <resource checksum="4fccffb947043489af0ace1a16a030d5" mimeType="application/xml" size="31659" uri="release/USX_2/1PE.usx"/>
+      <resource checksum="0a732c953aecd3b1a5a45fe6b80a88fb" mimeType="application/xml" size="22828" uri="release/USX_2/1TH.usx"/>
+      <resource checksum="567efb9a878bcf1fad497f2bab9e3f56" mimeType="application/xml" size="30650" uri="release/USX_2/1TI.usx"/>
+      <resource checksum="b08c2dd78853b76072bee95a3e4e2fcc" mimeType="application/xml" size="76545" uri="release/USX_2/2CO.usx"/>
+      <resource checksum="f8f3944b9247aae436dd0e7e3454477e" mimeType="application/xml" size="3902" uri="release/USX_2/2JN.usx"/>
+      <resource checksum="845ee703489886fcbbb5e6d3522707fd" mimeType="application/xml" size="16931" uri="release/USX_2/2PE.usx"/>
+      <resource checksum="d7f9358d1c9281ab3a31eb03fcffdb32" mimeType="application/xml" size="12887" uri="release/USX_2/2TH.usx"/>
+      <resource checksum="70b5a9831257b010e0eb114ba077a95a" mimeType="application/xml" size="21919" uri="release/USX_2/2TI.usx"/>
+      <resource checksum="7c9af3d5b22eb5ac9b5f90891580b397" mimeType="application/xml" size="4043" uri="release/USX_2/3JN.usx"/>
+      <resource checksum="4497c786f5e84d976b8eb5b9f76a9e79" mimeType="application/xml" size="247666" uri="release/USX_2/ACT.usx"/>
+      <resource checksum="c3db710b0731f8d3e24e006229e9caee" mimeType="application/xml" size="26052" uri="release/USX_2/COL.usx"/>
+      <resource checksum="cb1fb2ef25700a31dfb7795d4f19d450" mimeType="application/xml" size="38674" uri="release/USX_2/EPH.usx"/>
+      <resource checksum="430c9cabdac5e0ffb07903095b2692ac" mimeType="application/xml" size="40737" uri="release/USX_2/GAL.usx"/>
+      <resource checksum="aa0abaaec6449ba041198db01bc99073" mimeType="application/xml" size="88036" uri="release/USX_2/HEB.usx"/>
+      <resource checksum="b5b7e601ee08f4f82c4fe973396f1a06" mimeType="application/xml" size="28968" uri="release/USX_2/JAS.usx"/>
+      <resource checksum="af23c2a112f822fc4a8d3324dc2b4efa" mimeType="application/xml" size="201396" uri="release/USX_2/JHN.usx"/>
+      <resource checksum="6f0cfe2472cf662852b4e26735021e00" mimeType="application/xml" size="8541" uri="release/USX_2/JUD.usx"/>
+      <resource checksum="ba365deb42a7634aa953b14548f97196" mimeType="application/xml" size="271609" uri="release/USX_2/LUK.usx"/>
+      <resource checksum="77d639f10496aba08d642a9675ec4d8a" mimeType="application/xml" size="250388" uri="release/USX_2/MAT.usx"/>
+      <resource checksum="375b962fd84967651098eb9262fd7262" mimeType="application/xml" size="159570" uri="release/USX_2/MRK.usx"/>
+      <resource checksum="ace46fee5c11adac37b865b51006bedf" mimeType="application/xml" size="5787" uri="release/USX_2/PHM.usx"/>
+      <resource checksum="24ce105466bd7ab9aa7dce7b901e0d41" mimeType="application/xml" size="27133" uri="release/USX_2/PHP.usx"/>
+      <resource checksum="c6ebe49183bb82f024f28cc367ca290c" mimeType="application/xml" size="118079" uri="release/USX_2/REV.usx"/>
+      <resource checksum="dfc19d495d941521107a9392f81c48b4" mimeType="application/xml" size="122191" uri="release/USX_2/ROM.usx"/>
+      <resource checksum="c1e1bb82f9c6b4da25282b63b6bb100b" mimeType="application/xml" size="12301" uri="release/USX_2/TIT.usx"/>
+      <resource checksum="76b54565cbab256af7f413fdc30eff69" mimeType="application/xml" size="3122" uri="release/ind_id.ldml"/>
+      <resource checksum="180a520c1be6dd7bfe7a50611a9c7300" mimeType="application/xml" size="96711" uri="release/styles.xml"/>
+      <resource checksum="512b3f9616b2312455788155378ae945" mimeType="text/plain" size="15451" uri="release/versification.vrs"/>
+      <resource checksum="50a77e90e7b5bdc654a4d634bbb08e70" mimeType="application/zip" size="1273479" uri="source/source.zip"/>
+    </manifest>
+    <source>
+      <canonicalContent>
+        <book code="1CH"/>
+        <book code="1CO"/>
+        <book code="1JN"/>
+        <book code="1KI"/>
+        <book code="1PE"/>
+        <book code="1SA"/>
+        <book code="1TH"/>
+        <book code="1TI"/>
+        <book code="2CH"/>
+        <book code="2CO"/>
+        <book code="2JN"/>
+        <book code="2KI"/>
+        <book code="2PE"/>
+        <book code="2SA"/>
+        <book code="2TH"/>
+        <book code="2TI"/>
+        <book code="3JN"/>
+        <book code="ACT"/>
+        <book code="AMO"/>
+        <book code="COL"/>
+        <book code="DAN"/>
+        <book code="DEU"/>
+        <book code="ECC"/>
+        <book code="EPH"/>
+        <book code="EST"/>
+        <book code="EXO"/>
+        <book code="EZK"/>
+        <book code="EZR"/>
+        <book code="GAL"/>
+        <book code="GEN"/>
+        <book code="HAB"/>
+        <book code="HAG"/>
+        <book code="HEB"/>
+        <book code="HOS"/>
+        <book code="ISA"/>
+        <book code="JAS"/>
+        <book code="JDG"/>
+        <book code="JER"/>
+        <book code="JHN"/>
+        <book code="JOB"/>
+        <book code="JOL"/>
+        <book code="JON"/>
+        <book code="JOS"/>
+        <book code="JUD"/>
+        <book code="LAM"/>
+        <book code="LEV"/>
+        <book code="LUK"/>
+        <book code="MAL"/>
+        <book code="MAT"/>
+        <book code="MIC"/>
+        <book code="MRK"/>
+        <book code="NAM"/>
+        <book code="NEH"/>
+        <book code="NUM"/>
+        <book code="OBA"/>
+        <book code="PHM"/>
+        <book code="PHP"/>
+        <book code="PRO"/>
+        <book code="PSA"/>
+        <book code="REV"/>
+        <book code="ROM"/>
+        <book code="RUT"/>
+        <book code="SNG"/>
+        <book code="TIT"/>
+        <book code="ZEC"/>
+        <book code="ZEP"/>
+      </canonicalContent>
+      <structure>
+        <content src="source/source.zip" role="sourceZip"/>
+      </structure>
+    </source>
+    <publications>
+      <publication id="p2" default="true">
+        <name>Firman Allah Yang Hidup 2020</name>
+        <nameLocal>Firman Allah Yang Hidup</nameLocal>
+        <description>New Testament</description>
+        <descriptionLocal>Perjanjian Baru</descriptionLocal>
+        <abbreviation>ILB</abbreviation>
+        <abbreviationLocal>FAYH</abbreviationLocal>
+        <canonicalContent>
+          <book code="1CO"/>
+          <book code="1JN"/>
+          <book code="1PE"/>
+          <book code="1TH"/>
+          <book code="1TI"/>
+          <book code="2CO"/>
+          <book code="2JN"/>
+          <book code="2PE"/>
+          <book code="2TH"/>
+          <book code="2TI"/>
+          <book code="3JN"/>
+          <book code="ACT"/>
+          <book code="COL"/>
+          <book code="EPH"/>
+          <book code="GAL"/>
+          <book code="HEB"/>
+          <book code="JAS"/>
+          <book code="JHN"/>
+          <book code="JUD"/>
+          <book code="LUK"/>
+          <book code="MAT"/>
+          <book code="MRK"/>
+          <book code="PHM"/>
+          <book code="PHP"/>
+          <book code="REV"/>
+          <book code="ROM"/>
+          <book code="TIT"/>
+        </canonicalContent>
+        <structure>
+          <content name="book-mat" src="release/USX_2/MAT.usx" role="MAT"/>
+          <content name="book-mrk" src="release/USX_2/MRK.usx" role="MRK"/>
+          <content name="book-luk" src="release/USX_2/LUK.usx" role="LUK"/>
+          <content name="book-jhn" src="release/USX_2/JHN.usx" role="JHN"/>
+          <content name="book-act" src="release/USX_2/ACT.usx" role="ACT"/>
+          <content name="book-rom" src="release/USX_2/ROM.usx" role="ROM"/>
+          <content name="book-1co" src="release/USX_2/1CO.usx" role="1CO"/>
+          <content name="book-2co" src="release/USX_2/2CO.usx" role="2CO"/>
+          <content name="book-gal" src="release/USX_2/GAL.usx" role="GAL"/>
+          <content name="book-eph" src="release/USX_2/EPH.usx" role="EPH"/>
+          <content name="book-php" src="release/USX_2/PHP.usx" role="PHP"/>
+          <content name="book-col" src="release/USX_2/COL.usx" role="COL"/>
+          <content name="book-1th" src="release/USX_2/1TH.usx" role="1TH"/>
+          <content name="book-2th" src="release/USX_2/2TH.usx" role="2TH"/>
+          <content name="book-1ti" src="release/USX_2/1TI.usx" role="1TI"/>
+          <content name="book-2ti" src="release/USX_2/2TI.usx" role="2TI"/>
+          <content name="book-tit" src="release/USX_2/TIT.usx" role="TIT"/>
+          <content name="book-phm" src="release/USX_2/PHM.usx" role="PHM"/>
+          <content name="book-heb" src="release/USX_2/HEB.usx" role="HEB"/>
+          <content name="book-jas" src="release/USX_2/JAS.usx" role="JAS"/>
+          <content name="book-1pe" src="release/USX_2/1PE.usx" role="1PE"/>
+          <content name="book-2pe" src="release/USX_2/2PE.usx" role="2PE"/>
+          <content name="book-1jn" src="release/USX_2/1JN.usx" role="1JN"/>
+          <content name="book-2jn" src="release/USX_2/2JN.usx" role="2JN"/>
+          <content name="book-3jn" src="release/USX_2/3JN.usx" role="3JN"/>
+          <content name="book-jud" src="release/USX_2/JUD.usx" role="JUD"/>
+          <content name="book-rev" src="release/USX_2/REV.usx" role="REV"/>
+        </structure>
+      </publication>
+    </publications>
+    <copyright>
+      <fullStatement>
+        <statementContent type="xhtml">
+          <p>Firman Allah Yang Hidup™, Perjanjian Baru</p>
+          <p>Hak Cipta © 1975, 1989, 2020 by Biblica, Inc.</p>
+          <p>Digunakan dengan izin. Semua hak dilindungi di seluruh dunia.</p>
+          <p>Indonesian Living Bible™, New Testament</p>
+          <p>Copyright © 1975, 1989, 2020 by Biblica, Inc.</p>
+          <p>Used with permission. All rights reserved worldwide.</p>
+        </statementContent>
+      </fullStatement>
+    </copyright>
+    <promotion>
+      <promoVersionInfo contentType="xhtml">
+        <p>Biblica, <em>The International Bible Society</em>, menyediakan Firman Tuhan kepada semua orang melalui penerjemahan dan penerbitan Alkitab, serta penggunaan Alkitab di Afrika, Asia Pasifik, Eropa, Amerika Latin, Timur Tengah, Amerika Utara, dan Asia Selatan. Melalui jangkauannya di seluruh dunia, Biblica menyediakan Firman Tuhan kepada orang-orang, sehingga hidup mereka diubah melalui hubungan mereka dengan Yesus Kristus.</p>
+      </promoVersionInfo>
+    </promotion>
+    <archiveStatus>
+      <archivistName>Kent Spielmann</archivistName>
+      <dateArchived>2020-10-05T16:10:08.695103</dateArchived>
+      <dateUpdated>2020-10-05T16:54:06.420523</dateUpdated>
+      <comments>Submission of NT only. OT revision still needs to be completed</comments>
+    </archiveStatus>
+  </DBLMetadata>

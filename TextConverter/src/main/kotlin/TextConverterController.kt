@@ -47,6 +47,9 @@ class TextConverterController
         CommandLineProcessor.addCommandLineOption("permitComplexChanges", 1, "Permit eg reversification Moves (may be ruled out by licensing conditions).", listOf("Yes", "No", "AsLicence"), "AsLicence", false)
         CommandLineProcessor.addCommandLineOption("debugLevel", 1, "Debug level -- 0 => no debug, larger numbers => increasing amounts of debug.", null, "0", false)
         CommandLineProcessor.addCommandLineOption("help", 0, "Get help.", null, null, false)
+
+        CommandLineProcessor.addCommandLineOption("forcedOsis2ModVariant", 1, "Force to use Crosswire osis2mod or our own for test purposes", listOf("Crosswire", "Step", "CrosswireRelaxed"), "Crosswire", false)
+
         m_Processors.forEach { it.getCommandLineOptions(CommandLineProcessor) }
         TextConverterProcessorEvaluateVersificationSchemes.getCommandLineOptions(CommandLineProcessor)
     }

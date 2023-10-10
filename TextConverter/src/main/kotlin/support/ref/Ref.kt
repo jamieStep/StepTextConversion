@@ -656,12 +656,30 @@ class Ref : RefCollectionPart
        Note that at particular points in the proceedings, you may not know whether
        you will be parsing a single reference or a range.  In these cases, use
        RefRange.rdUsx or RefCollection.rdUsx instead.
+
+       One other thing.  Ever since time immemorial, I have assumed that it is
+       ok to have a range which covers a number of verses in the same chapter;
+       and ok to have a range which covers a number of subverses in the same
+       verse.  These constraints were aimed at making it possible to expand
+       a range into the individual references which make it up.  It's easy to
+       expand 1-10 into ten verses, ditto a-c into three subverses.
+
+       Cross-chapter ranges are more difficult -- you have to know what the
+       maximum verse number is in each chapter, but I think I concluded some
+       time ago that I normally _would_ know, and that therefore there wasn't
+       a major problem there.
+
+       But cross-verse subverse ranges -- 10c-11f, or 10-11b, or 10c-11 --
+       remained a no-no.  Even now, I don't think I've done anything to
+       make it possible to expand these out, but I've decided to relent
+       here, and make it possible to _have_ them, in the hope that I'm not
+       then asked to do much with them.
      */
 
     private fun rdUsxInternal (theText: String, context: Ref?, resolveAmbiguitiesAs: String?): Ref
     {
       /************************************************************************/
-      //Dbg.d(theText, "NUM 1:42-43")
+      //Dbg.d(theText, "ZEC 4:9-10a")
 
 
 

@@ -201,9 +201,9 @@ object ReversificationData
     /* Find out whether licensing conditions etc limit the kinds of changes we
        can apply. */
 
-    val stepAbout = ConfigData.get("stepAbout")!!.lowercase()
+    val stepAbout = ConfigData["stepAbout"]!!.lowercase()
     val licenceDefinitelyBarsSignificantChanges = "®" in stepAbout || "©" in stepAbout || "copyright" in stepAbout || "trademark" in stepAbout
-    val stepPermitSignificantTextRestructuring = ConfigData.get("stepPermitsSignificantTextRestructuring") ?: "no"
+    val stepPermitSignificantTextRestructuring = ConfigData["stepPermitsSignificantTextRestructuring"] ?: "no"
     when (stepPermitSignificantTextRestructuring.lowercase())
     {
       "n", "no", "f", "false" -> m_LicensingTermsLimitWhatWeCanDo = false
@@ -611,7 +611,7 @@ object ReversificationData
   private fun findLine (data: List<String>, lookFor: String, startAt: Int): Int
   {
     val lookForLower = lookFor.lowercase()
-    for (i in startAt until data.size)
+    for (i in startAt..< data.size)
       if (data[i].lowercase().startsWith(lookForLower)) return i
 
     throw StepException("Guard row $lookFor missing from reversification data")
@@ -636,7 +636,7 @@ object ReversificationData
     else
       Dbg.reportProgress("Reading reversification data from webpage.  (This contains data needed even if not reversifying.)", 1)
 
-    val dataLocation = ConfigData.get("stepReversificationDataLocation")!!
+    val dataLocation = ConfigData["stepReversificationDataLocation"]!!
     if (!dataLocation.startsWith("http")) Logger.warning("Running with local copy of reversification data.")
     val rawData = readData(dataLocation)
     Dbg.reportProgress("Parsing reversification data", 1)
@@ -1714,19 +1714,19 @@ object ReversificationData
         {
           '+' ->
            {
-              m_EquivalenceInformationFormatString = ConfigData.get("V_reversification_ancientVersionsEquivalencePlus")!!
+              m_EquivalenceInformationFormatString = ConfigData["V_reversification_ancientVersionsEquivalencePlus"]!!
               equivalenceInformation = equivalenceInformation!!.substring(1)
            }
 
            '=' ->
             {
-              m_EquivalenceInformationFormatString = ConfigData.get("V_reversification_ancientVersionsEquivalenceEquals")!!
+              m_EquivalenceInformationFormatString = ConfigData["V_reversification_ancientVersionsEquivalenceEquals"]!!
               equivalenceInformation = equivalenceInformation!!.substring(1)
             }
 
             else ->
             {
-              m_EquivalenceInformationFormatString = ConfigData.get("V_reversification_ancientVersionsEquivalenceUndecorated")!!
+              m_EquivalenceInformationFormatString = ConfigData["V_reversification_ancientVersionsEquivalenceUndecorated"]!!
               equivalenceInformation = equivalenceInformation!!.substring(1)
            }
         }
@@ -1879,7 +1879,7 @@ object ReversificationData
 
     if (m_AnticipatedSourceType!!.isEmpty())
     {
-      m_AnticipatedSourceType = ConfigData.get("stepDebugReversificationAnticipatedSourceType")
+      m_AnticipatedSourceType = ConfigData["stepDebugReversificationAnticipatedSourceType"]
       if (null == m_AnticipatedSourceType) return
       m_AnticipatedSourceType = m_AnticipatedSourceType!!.lowercase()
     }

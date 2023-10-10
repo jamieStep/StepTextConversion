@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osis xmlns="http://www.bibletechnologies.net/2003/OSIS/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bibletechnologies.net/2003/OSIS/namespace                           https://www.crosswire.org/~dmsmith/osis/osisCore.2.1.1-cw-latest.xsd">
+  
+  <osisText canonical="true" osisIDWork="Sami0926T1347DeuHFA" osisRefWork="bible" xml:lang="deu">
+    <header>
+      <work osisWork="Sami0926T1347DeuHFA">
+        <title>Hoffnung für alle (Hope for all) (HFA) / Hoffnung für alle) Biblica 2015 + Col in German Sept'23</title>
+        <type type="OSIS">Bible</type>
+        <identifier type="OSIS">Bible.deu.Sami0926T1347DeuHFA.2015</identifier>
+        <rights type="x-copyright"> </rights>
+        <scope>Col</scope>
+        <refSystem>Bible</refSystem>
+      </work>
+      <work osisWork="bible">
+        <type type="OSIS">Bible</type>
+        <refSystem>Bible</refSystem>
+      </work>
+      <work osisWork="strong"/> 
+    </header>
+<div canonical="false" osisID="Col" type="book">
+<title level="1" subType="x-preverse" type="main">Der Brief von Paulus an die Christen in Kolossä</title>
+<chapter osisID="Col.1">
+<div type="majorSection"><title>Jesus – das Ebenbild Gottes und der Ursprung allen Lebens</title></div>
+<div type="majorSection"><title type="scope">(Kapitel 1,1‒23)</title></div>
+<div type="section"><title>Anschrift und Gruß</title></div>
+<p>
+<verse osisID="Col.1.1" sID="Col.1.1"/>Paulus, ein Apostel von Jesus Christus, durch Gott berufen, und sein Mitarbeiter Timotheus <verse eID="Col.1.1"/>
+<verse osisID="Col.1.2" sID="Col.1.2"/>schreiben diesen Brief an die Brüder und Schwestern in Kolossä, die durch den Glauben mit Jesus Christus verbunden sind und ganz zu Gott gehören. Wir wünschen euch Gnade und Frieden von Gott, unserem Vater.<verse eID="Col.1.2"/>
+</p>
+<div type="section"><title>Wir beten für euch</title></div>
+<p>
+<verse osisID="Col.1.3" sID="Col.1.3"/>Jedes Mal wenn wir für euch beten, danken wir Gott, dem Vater unseres Herrn Jesus Christus. <verse eID="Col.1.3"/>
+<verse osisID="Col.1.4" sID="Col.1.4"/>Wir haben von eurem Glauben an Jesus Christus gehört und davon, wie ihr allen Christen in Liebe verbunden seid. <verse eID="Col.1.4"/>
+<verse osisID="Col.1.5" sID="Col.1.5"/>Beides ist so reich bei euch vorhanden, weil ihr wisst, dass sich eure Hoffnung im Himmel erfüllen wird. Von dieser Hoffnung habt ihr gehört, als man euch das Wort der Wahrheit, die rettende Botschaft von Jesus Christus, verkündete.<verse eID="Col.1.5"/>
+</p>
+<p>
+<verse osisID="Col.1.6" sID="Col.1.6"/>Diese Botschaft wird nicht nur bei euch, sondern auch in der ganzen Welt verbreitet. Immer mehr Menschen hören sie, nehmen sie an, und so trägt sie reiche Frucht. Auch bei euch ist es vom ersten Tag an so gewesen, als ihr erfahren habt, wie gnädig Gott ist. <verse eID="Col.1.6"/>
+<verse osisID="Col.1.7" sID="Col.1.7"/>Euch brachte unser lieber Mitarbeiter Epaphras diese rettende Botschaft. Wir wissen, dass er Christus dient und dass er euch ein treuer und guter Lehrer war. <verse eID="Col.1.7"/>
+<verse osisID="Col.1.8" sID="Col.1.8"/>Er hat uns auch davon berichtet, welche Liebe der Geist Gottes in euch geweckt hat.<verse eID="Col.1.8"/>
+</p>
+<p>
+<verse osisID="Col.1.9" sID="Col.1.9"/>Deshalb haben wir seitdem nicht aufgehört, für euch zu beten. Wir bitten Gott, dass sein Geist euch mit Weisheit und Einsicht erfüllt und ihr auf diese Weise seinen Willen immer besser erkennt. <verse eID="Col.1.9"/>
+<verse osisID="Col.1.10" sID="Col.1.10"/>Dann nämlich könnt ihr so leben, dass der Herr dadurch geehrt wird und er sich in jeder Hinsicht über euch freut. Euer Leben wird für Gott Frucht bringen, indem ihr in vielerlei Weise Gutes tut. Ihr werdet ihn immer besser kennen lernen <verse eID="Col.1.10"/>
+<verse osisID="Col.1.11" sID="Col.1.11"/><hi type="normal">&amp;#x2013;</hi><verse eID="Col.1.11"/>
+<verse osisID="Col.1.12" sID="Col.1.12"/>und das ganze Ausmaß seiner herrlichen Kraft und Stärke erfahren, damit ihr geduldig und ausdauernd euren Weg gehen könnt.</p>
+<p>Ihr habt wirklich allen Grund, Gott, dem Vater, voll Freude dafür zu danken. Denn er hat euch zu seinen rechtmäßigen Erben gemacht. Zusammen mit allen, die zu ihm gehören, dürft ihr einmal bei ihm sein, in seinem Reich des Lichts. <verse eID="Col.1.12"/>
+<verse osisID="Col.1.13" sID="Col.1.13"/>Er hat uns aus der Gewalt der Finsternis befreit, und nun leben wir unter der Herrschaft seines geliebten Sohnes Jesus Christus. <verse eID="Col.1.13"/>
+<verse osisID="Col.1.14" sID="Col.1.14"/>Durch ihn sind wir erlöst, unsere Sünden sind vergeben.<verse eID="Col.1.14"/>
+</p>
+<div type="section"><title>Christus steht über der ganzen Schöpfung</title></div>
+<l level="1">
+<verse osisID="Col.1.15" sID="Col.1.15"/>Christus ist das Ebenbild des unsichtbaren Gottes.</l>
+<l level="1">Als sein Sohn steht er über der ganzen Schöpfung</l>
+<l level="1">und war selbst schon längst vor ihr da.<note n="▼" osisID="Col.1.15!fref_1" osisRef="Col.1.15" type="explanation">Wörtlich: Er ist der Erstgeborene (vor) der ganzen Schöpfung.</note></l><verse eID="Col.1.15"/>
+<l level="1">
+<verse osisID="Col.1.16" sID="Col.1.16"/>Durch ihn ist alles erschaffen,</l>
+<l level="1">was im Himmel und auf der Erde ist: Sichtbares und Unsichtbares,</l>
+<l level="1">Königreiche und Mächte, Herrscher und Gewalten.</l>
+<l level="1">Ja, alles ist durch ihn geschaffen und vollendet sich schließlich in ihm.</l><verse eID="Col.1.16"/>
+<l level="1">
+<verse osisID="Col.1.17" sID="Col.1.17"/>Denn Christus war vor allem anderen;</l>
+<l level="1">und alles hat nur durch ihn Bestand.</l><verse eID="Col.1.17"/>
+<l level="1">
+<verse osisID="Col.1.18" sID="Col.1.18"/>Er ist das Haupt der Gemeinde, die sein Leib ist.</l>
+<l level="1">Er ist der Ursprung allen Lebens<note n="▼" osisID="Col.1.18!fref_1" osisRef="Col.1.18" type="explanation">Oder: der Anfang der neuen Schöpfung.</note></l>
+<l level="1">
+<transChange type="added">und zugleich</transChange> der Erste, der vom Tod zu einem unvergänglichen Leben auferstand.</l>
+<l level="1">So sollte er in jeder Hinsicht an erster Stelle stehen.</l><verse eID="Col.1.18"/>
+<l level="1">
+<verse osisID="Col.1.19" sID="Col.1.19"/>Denn Gott hat beschlossen, mit seiner ganzen Fülle in ihm zu wohnen<verse eID="Col.1.19"/>
+</l>
+<l level="1">
+<verse osisID="Col.1.20" sID="Col.1.20"/>und alles im Himmel und auf der Erde</l>
+<l level="1">durch ihn mit sich zu versöhnen.</l>
+<l level="1">Ja, Gott hat Frieden gestiftet,</l>
+<l level="1">als Jesus am Kreuz sein Blut vergoss.</l><verse eID="Col.1.20"/>
+<l level="1"/>
+<p>
+<verse osisID="Col.1.21" sID="Col.1.21"/>Auch ihr wusstet früher nicht, was es bedeutet, mit Gott zu leben; ihr wart seine Feinde durch alles Böse, das ihr gedacht und getan habt. <verse eID="Col.1.21"/>
+<verse osisID="Col.1.22" sID="Col.1.22"/>Doch indem Christus Mensch wurde und am Kreuz starb, hat Gott euch mit sich selbst versöhnt. Jetzt gehören wir zu Gott und stehen befreit von aller Sünde und Schuld vor ihm da. <verse eID="Col.1.22"/>
+<verse osisID="Col.1.23" sID="Col.1.23"/>Wichtig ist aber, dass ihr auch weiterhin fest und unerschütterlich in eurem Glauben bleibt. Lasst euch durch nichts davon abbringen! Keine Macht der Erde soll euch die Hoffnung rauben, die Gott euch durch seine rettende Botschaft geschenkt hat. Ihr habt sie gehört, und sie ist überall in der Welt verkündet worden. Mein ganzes Leben steht im Dienst dieser Botschaft. Sie will ich weitersagen.<verse eID="Col.1.23"/>
+</p>
+<div type="majorSection"><title>Warnung vor falschen Lehren</title></div>
+<div type="majorSection"><title type="scope">(Kapitel 1,24–2,23)</title></div>
+<div type="section"><title>Paulus verkündet die Botschaft im Auftrag Gottes</title></div>
+<p>
+<verse osisID="Col.1.24" sID="Col.1.24"/>Was ich auch immer für euch erleiden muss, nehme ich gern auf mich; ich freue mich sogar darüber. Das Maß der Leiden, die ich für Christus auf mich nehmen muss, ist noch nicht voll. Und ich leide für seinen Leib, für seine Gemeinde. <verse eID="Col.1.24"/>
+<verse osisID="Col.1.25" sID="Col.1.25"/>Gott hat mir aufgetragen, seiner Gemeinde zu dienen und euch seine Botschaft ohne Abstriche zu verkünden. <verse eID="Col.1.25"/>
+<verse osisID="Col.1.26" sID="Col.1.26"/>Ihr habt erfahren, was von Anfang der Welt, ja, was der gesamten Menschheit vor euch verborgen war: ein Geheimnis, das jetzt allen Christen enthüllt worden ist. <verse eID="Col.1.26"/>
+<verse osisID="Col.1.27" sID="Col.1.27"/>Dabei geht es um ein unbegreifliches Wunder, das Gott für alle Menschen auf dieser Erde bereithält. Ihr, die ihr zu Gott gehört, dürft dieses Geheimnis verstehen. Es lautet: Christus lebt in euch! Und damit habt ihr die feste Hoffnung, dass Gott euch Anteil an seiner Herrlichkeit gibt.<verse eID="Col.1.27"/>
+</p>
+<p>
+<verse osisID="Col.1.28" sID="Col.1.28"/>Diesen Christus verkünden wir. Mit aller Weisheit, die Gott mir gegeben hat, ermahne ich die Menschen und unterweise sie im Glauben, damit jeder Einzelne durch die Verbindung mit Christus reif und mündig wird. <verse eID="Col.1.28"/>
+<verse osisID="Col.1.29" sID="Col.1.29"/>Das ist das Ziel meiner Arbeit, dafür kämpfe ich, und dafür mühe ich mich ab. Christus, der mit seiner Macht in mir wirkt, schenkt mir die Kraft dazu.<verse eID="Col.1.29"/>
+</p></chapter>
+<chapter osisID="Col.2">
+<p>
+<verse osisID="Col.2.1" sID="Col.2.1"/>Ihr sollt wissen, wie sehr ich um euch kämpfe, auch um die Gemeinde in Laodizea und um all die anderen, die mich persönlich noch gar nicht kennen. <verse eID="Col.2.1"/>
+<verse osisID="Col.2.2" sID="Col.2.2"/>Ja, ich setze mich dafür ein, dass Gott euch allen Mut und Kraft gibt und euch in seiner Liebe zusammenhält. Er schenke euch tiefes Verstehen, damit ihr die ganze Größe seines Geheimnisses erkennt. Dieses Geheimnis ist Christus. <verse eID="Col.2.2"/>
+<verse osisID="Col.2.3" sID="Col.2.3"/>In ihm sind alle Schätze der Weisheit und Erkenntnis verborgen.<verse eID="Col.2.3"/>
+</p>
+<p>
+<verse osisID="Col.2.4" sID="Col.2.4"/>Ich sage das, damit ihr euch von niemandem durch wohlklingende Worte auf einen falschen Weg bringen lasst. <verse eID="Col.2.4"/>
+<verse osisID="Col.2.5" sID="Col.2.5"/>Zwar bin ich weit von euch entfernt, aber im Geist bin ich mit euch allen verbunden. Ich bin glücklich, wenn ich sehe, wie fest ihr zusammensteht und wie unerschütterlich ihr an Christus glaubt.<verse eID="Col.2.5"/>
+</p>
+<div type="section"><title>Bleibt mit Christus verbunden</title></div>
+<p>
+<verse osisID="Col.2.6" sID="Col.2.6"/>Ihr habt Jesus Christus als euren Herrn angenommen; nun lebt auch in der Gemeinschaft mit ihm. <verse eID="Col.2.6"/>
+<verse osisID="Col.2.7" sID="Col.2.7"/>Wie ein Baum in der Erde, so sollt ihr in Christus fest verwurzelt bleiben, und nur er soll das Fundament eures Lebens sein. Haltet fest an dem Glauben, den man euch lehrte. Für das, was Gott euch geschenkt hat, könnt ihr ihm gar nicht genug danken.<verse eID="Col.2.7"/>
+</p>
+<p>
+<verse osisID="Col.2.8" sID="Col.2.8"/>Passt auf, dass ihr nicht auf Weltanschauungen und Hirngespinste hereinfallt. All das haben sich Menschen ausgedacht; aber hinter ihren Gedanken stehen dunkle Mächte und nicht Christus. <verse eID="Col.2.8"/>
+<verse osisID="Col.2.9" sID="Col.2.9"/>Nur in Christus ist Gott wirklich zu finden, denn in ihm lebt er in seiner ganzen Fülle.<note n="▼" osisID="Col.2.9!fref_1" osisRef="Col.2.9" type="explanation">Oder: Nur in Christus lebt Gott mit seiner ganzen Fülle leibhaftig.</note><verse eID="Col.2.9"/>
+<verse osisID="Col.2.10" sID="Col.2.10"/>Deshalb lebt Gott auch in euch, wenn ihr mit Christus verbunden seid. Er ist der Herr über alle Mächte und Gewalten.<verse eID="Col.2.10"/>
+</p>
+<p>
+<verse osisID="Col.2.11" sID="Col.2.11"/>Durch euren Glauben an Christus habt ihr euer altes, sündiges Leben aufgegeben. Nun seid auch ihr Beschnittene – nicht durch eine äußerliche Beschneidung, wie Menschen sie vornehmen, sondern durch die Beschneidung, wie ihr sie durch Christus erfahren habt. <verse eID="Col.2.11"/>
+<verse osisID="Col.2.12" sID="Col.2.12"/>Damit meine ich die Taufe, die euer altes Leben beendet hat; durch sie wurdet ihr mit Christus begraben. Ebenso seid ihr auch mit Christus zu einem neuen Leben auferweckt worden durch den Glauben an die Kraft Gottes, der ihn von den Toten auferstehen ließ. <verse eID="Col.2.12"/>
+<verse osisID="Col.2.13" sID="Col.2.13"/>Früher wart ihr gewissermaßen unbeschnitten, denn ihr habt euch von eurer sündigen Natur bestimmen lassen und wart durch eure Schuld von Gott getrennt. In seinen Augen wart ihr tot, aber er hat euch mit Christus lebendig gemacht und alle Schuld vergeben.<verse eID="Col.2.13"/>
+</p>
+<p>
+<verse osisID="Col.2.14" sID="Col.2.14"/>Gott hat den Schuldschein, der uns mit seinen Forderungen so schwer belastete, für ungültig erklärt. Ja, er hat ihn zusammen mit Jesus ans Kreuz genagelt und somit auf ewig vernichtet. <verse eID="Col.2.14"/>
+<verse osisID="Col.2.15" sID="Col.2.15"/>Auf diese Weise wurden die Mächte und Gewalten entwaffnet und in ihrer Ohnmacht bloßgestellt, als Christus über sie am Kreuz triumphierte.<verse eID="Col.2.15"/>
+</p>
+<div type="section"><title>Freiheit durch Christus</title></div>
+<p>
+<verse osisID="Col.2.16" sID="Col.2.16"/>Darum lasst euch keine Vorschriften machen über eure Ess- und Trinkgewohnheiten oder bestimmte Feiertage, über den Neumondtag und über das, was man am Sabbat tun darf oder nicht. <verse eID="Col.2.16"/>
+<verse osisID="Col.2.17" sID="Col.2.17"/>Das alles sind nur schwache Abbilder, ein Schatten von dem, was in Christus Wirklichkeit geworden ist.<verse eID="Col.2.17"/>
+</p>
+<p>
+<verse osisID="Col.2.18" sID="Col.2.18"/>Lasst eure Rettung deshalb von niemandem in Frage stellen. Schon gar nicht von solchen Leuten, die sich in falsch verstandener Demut gefallen, Engel zu verehren, und sich dabei stolz auf ihre Visionen berufen! Diese Menschen haben nicht den geringsten Grund, sich derart aufzuspielen. Sie drehen sich ja doch nur um sich selbst <verse eID="Col.2.18"/>
+<verse osisID="Col.2.19" sID="Col.2.19"/>und halten sich nicht mehr an Christus, der doch das Haupt der Gemeinde ist. Denn nur von ihm her kann die Gemeinde als sein Leib zusammengehalten werden und – gestützt durch die verschiedenen Gelenke und Bänder – so wachsen, wie Gott es will.<verse eID="Col.2.19"/>
+</p>
+<p>
+<verse osisID="Col.2.20" sID="Col.2.20"/>Wenn ihr nun mit Christus gestorben seid, dann seid ihr auch von den Mächten und Zwängen dieser Welt befreit. Weshalb unterwerft ihr euch dann von neuem ihren Forderungen und lebt so, als wäre diese Welt für euch maßgebend? <verse eID="Col.2.20"/>
+<verse osisID="Col.2.21" sID="Col.2.21"/>Weshalb lasst ihr euch vorschreiben: »Du darfst dieses nicht anfassen, jenes nicht essen und musst dich von ganz bestimmten Dingen fernhalten«? <verse eID="Col.2.21"/>
+<verse osisID="Col.2.22" sID="Col.2.22"/>Sie alle sind doch dazu da, dass man sie für sich nutzt und verzehrt. Warum also lasst ihr euch noch Vorschriften von Menschen machen? <verse eID="Col.2.22"/>
+<verse osisID="Col.2.23" sID="Col.2.23"/>Möglich, dass manche, die danach leben, den Anschein von Weisheit erwecken. Schließlich glänzen sie mit ihrer selbst erdachten Frömmigkeit, geben sich dabei auch noch bescheiden und schonen bei asketischen Übungen ihren Körper nicht. Doch das alles bringt uns Gott nicht näher, sondern es dient ausschließlich menschlichem Ehrgeiz und menschlicher Eitelkeit.<verse eID="Col.2.23"/>
+</p></chapter>
+<chapter osisID="Col.3">
+<div type="majorSection"><title>Anweisungen für ein Leben unter Gottes Herrschaft</title></div>
+<div type="majorSection"><title type="scope">(Kapitel 3–4)</title></div>
+<p>
+<verse osisID="Col.3.1" sID="Col.3.1"/>Wenn ihr nun mit Christus zu einem neuen Leben auferweckt worden seid, dann richtet euch ganz auf Gottes himmlische Welt aus. Seht dahin, wo Christus ist, auf dem Ehrenplatz an Gottes rechter Seite. <verse eID="Col.3.1"/>
+<verse osisID="Col.3.2" sID="Col.3.2"/>Ja, richtet eure Gedanken auf Gottes himmlische Welt und nicht auf das, was diese irdische Welt ausmacht. <verse eID="Col.3.2"/>
+<verse osisID="Col.3.3" sID="Col.3.3"/>Denn für sie seid ihr gestorben, aber Gott hat euch mit Christus zu neuem Leben auferweckt, auch wenn das jetzt noch verborgen ist. <verse eID="Col.3.3"/>
+<verse osisID="Col.3.4" sID="Col.3.4"/>Doch wenn Christus, euer Leben, erscheinen wird, dann wird jeder sehen, dass ihr an seiner Herrlichkeit Anteil habt.<verse eID="Col.3.4"/>
+</p>
+<div type="section"><title>Wie Christen leben sollen</title></div>
+<p>
+<verse osisID="Col.3.5" sID="Col.3.5"/>Also trennt euch ganz entschieden von einem Lebensstil, wie er für diese Welt kennzeichnend ist! Trennt euch von sexueller Unmoral und Ausschweifungen, von Leidenschaften und Lastern, aber auch von der Habgier, die den Besitz für das Wichtigste hält und ihn zu ihrem Gott macht! <verse eID="Col.3.5"/>
+<verse osisID="Col.3.6" sID="Col.3.6"/>Gerade mit einem solchen Verhalten ziehen die Menschen, die Gott nicht gehorchen wollen, seinen Zorn auf sich.<verse eID="Col.3.6"/>
+</p>
+<p>
+<verse osisID="Col.3.7" sID="Col.3.7"/>Auch ihr habt früher so gelebt und habt euch von diesen Dingen beherrschen lassen. <verse eID="Col.3.7"/>
+<verse osisID="Col.3.8" sID="Col.3.8"/>Aber jetzt ist es Zeit, das alles abzulegen. Lasst euch nicht mehr zum Zorn und zu Wutausbrüchen hinreißen. Schluss mit aller Bosheit! Redet nicht schlecht übereinander und beleidigt niemanden! <verse eID="Col.3.8"/>
+<verse osisID="Col.3.9" sID="Col.3.9"/>Hört auf, euch gegenseitig zu belügen. Ihr habt doch euer altes Leben mit allem, was dazugehörte, wie alte Kleider abgelegt. <verse eID="Col.3.9"/>
+<verse osisID="Col.3.10" sID="Col.3.10"/>Jetzt habt ihr neue Kleider an, denn ihr seid neue Menschen geworden. Gott ist beständig in euch am Werk, damit ihr immer mehr seinem Ebenbild entsprecht, nach dem er euch geschaffen hat. So habt ihr Gemeinschaft mit Gott und versteht immer besser, was ihm gefällt. <verse eID="Col.3.10"/>
+<verse osisID="Col.3.11" sID="Col.3.11"/>Dann ist unwichtig, ob einer Grieche oder Jude ist, beschnitten oder unbeschnitten, ob er aus einem anderen Kulturkreis oder aus einem Nomadenvolk stammt, ob er ein Sklave oder Herr ist. Wichtig ist einzig und allein Christus, der in allen lebt.<verse eID="Col.3.11"/>
+</p>
+<p>
+<verse osisID="Col.3.12" sID="Col.3.12"/>Ihr seid von Gott auserwählt und seine geliebten Kinder, die zu ihm gehören. Darum soll jetzt herzliches Mitgefühl euer Leben bestimmen, ebenso wie Güte, Bescheidenheit, Nachsicht und Geduld. <verse eID="Col.3.12"/>
+<verse osisID="Col.3.13" sID="Col.3.13"/>Ertragt einander und vergebt euch gegenseitig, wenn jemand euch Unrecht getan hat. Denn auch Christus hat euch vergeben. <verse eID="Col.3.13"/>
+<verse osisID="Col.3.14" sID="Col.3.14"/>Wichtiger als alles andere ist die Liebe. Wenn ihr sie habt, wird euch nichts fehlen. Sie ist das Band, das euch verbindet. <verse eID="Col.3.14"/>
+<verse osisID="Col.3.15" sID="Col.3.15"/>Und der Friede, den Christus schenkt, soll euer ganzes Leben bestimmen. Gott hat euch dazu berufen, in Frieden miteinander zu leben; ihr gehört ja alle zu dem einen Leib von Christus. Dankt Gott dafür!<verse eID="Col.3.15"/>
+</p>
+<p>
+<verse osisID="Col.3.16" sID="Col.3.16"/>Lasst die Botschaft von Christus ihren ganzen Reichtum bei euch entfalten. Unterweist und ermahnt euch gegenseitig mit aller Weisheit und dankt Gott von ganzem Herzen mit Psalmen, Lobgesängen und Liedern, die euch Gottes Geist schenkt. Ihr habt doch Gottes Gnade erfahren! <verse eID="Col.3.16"/>
+<verse osisID="Col.3.17" sID="Col.3.17"/>All euer Tun – euer Reden wie euer Handeln – soll zeigen, dass Jesus euer Herr ist. Weil ihr mit ihm verbunden seid, könnt ihr Gott, dem Vater, für alles danken.<verse eID="Col.3.17"/>
+</p>
+<div type="section"><title>Das Zusammenleben in Ehe und Familie</title></div>
+<p>
+<verse osisID="Col.3.18" sID="Col.3.18"/>Ihr Frauen, ordnet euch euren Männern unter. So erwartet es Christus, der Herr, von euch, mit dem ihr verbunden seid. <verse eID="Col.3.18"/>
+<verse osisID="Col.3.19" sID="Col.3.19"/>Ihr Männer, liebt eure Frauen und kränkt sie nicht. <verse eID="Col.3.19"/>
+<verse osisID="Col.3.20" sID="Col.3.20"/>Ihr Kinder, seid euren Eltern in allen Dingen gehorsam; denn so ist es richtig, da ihr ja zum Herrn gehört. <verse eID="Col.3.20"/>
+<verse osisID="Col.3.21" sID="Col.3.21"/>Ihr Väter, behandelt eure Kinder nicht zu streng, damit sie nicht ängstlich und mutlos werden.<verse eID="Col.3.21"/>
+</p>
+<div type="section"><title>Der Umgang zwischen Sklaven und ihren Herren</title></div>
+<p>
+<verse osisID="Col.3.22" sID="Col.3.22"/>Ihr Sklaven, gehorcht in allem euren irdischen Herren! Tut dies nicht nur, wenn sie euch dabei beobachten und ihr von ihnen anerkannt werden wollt. Verrichtet eure Arbeit aufrichtig und in Ehrfurcht vor Christus, dem Herrn im Himmel. <verse eID="Col.3.22"/>
+<verse osisID="Col.3.23" sID="Col.3.23"/>Denkt bei allem daran, dass ihr letztlich für ihn und nicht für die Menschen arbeitet. <verse eID="Col.3.23"/>
+<verse osisID="Col.3.24" sID="Col.3.24"/>Als Lohn dafür wird er euch das Erbe geben, das er versprochen hat. Das wisst ihr ja. Denn Jesus Christus ist euer wahrer Herr! <verse eID="Col.3.24"/>
+<verse osisID="Col.3.25" sID="Col.3.25"/>Wer allerdings Unrecht tut, wird auch dafür den entsprechenden Lohn bekommen. Gott beurteilt alle Menschen gleich, egal welches Ansehen sie genießen.<verse eID="Col.3.25"/>
+</p></chapter>
+<chapter osisID="Col.4">
+<p>
+<verse osisID="Col.4.1" sID="Col.4.1"/>Ihr Herren, behandelt eure Sklaven gerecht und anständig. Denkt immer daran, dass auch ihr einen Herrn im Himmel habt, dem ihr untersteht.<verse eID="Col.4.1"/>
+</p>
+<div type="section"><title>Für andere leben</title></div>
+<p>
+<verse osisID="Col.4.2" sID="Col.4.2"/>Lasst euch durch nichts vom Gebet abbringen und vergesst dabei nicht, Gott zu danken. <verse eID="Col.4.2"/>
+<verse osisID="Col.4.3" sID="Col.4.3"/>Betet auch für uns, damit Gott uns eine Möglichkeit gibt, sein Geheimnis zu verkünden: die Botschaft von Christus, für die ich hier im Gefängnis sitze. <verse eID="Col.4.3"/>
+<verse osisID="Col.4.4" sID="Col.4.4"/>Und betet, dass ich darüber frei und offen reden kann, wie Gott es mir aufgetragen hat.<verse eID="Col.4.4"/>
+</p>
+<p>
+<verse osisID="Col.4.5" sID="Col.4.5"/>Verhaltet euch weise und besonnen denen gegenüber, die keine Christen sind. Macht das Beste aus der Zeit, die euch geschenkt ist! <verse eID="Col.4.5"/>
+<verse osisID="Col.4.6" sID="Col.4.6"/>Redet mit jedem Menschen freundlich; alles, was ihr sagt, soll gut und hilfreich sein<note n="▼" osisID="Col.4.6!fref_1" osisRef="Col.4.6" type="explanation">Wörtlich: mit Salz gewürzt sein.</note>. Bemüht euch darum, für jeden die richtigen Worte zu finden.<verse eID="Col.4.6"/>
+</p>
+<div type="section"><title>Persönliche Grüße und Wünsche</title></div>
+<p>
+<verse osisID="Col.4.7" sID="Col.4.7"/>Unser lieber Bruder Tychikus wird euch ausführlich berichten, wie es mir geht. Er ist mein treuer Mitarbeiter und dient dem Herrn. <verse eID="Col.4.7"/>
+<verse osisID="Col.4.8" sID="Col.4.8"/>Ich schicke ihn eben deshalb zu euch, damit ihr erfahrt, wie es um uns steht. Er soll euch ermutigen. <verse eID="Col.4.8"/>
+<verse osisID="Col.4.9" sID="Col.4.9"/>Mit ihm zusammen schicke ich Onesimus, der ja zu euch gehört. Auch ihn schätze ich als treuen und lieben Bruder. Beide werden euch alles erzählen, was hier geschehen ist.<verse eID="Col.4.9"/>
+</p>
+<p>
+<verse osisID="Col.4.10" sID="Col.4.10"/>Aristarch, der zusammen mit mir im Gefängnis ist, lässt euch grüßen, ebenso Markus, der Vetter von Barnabas. Seinetwegen hatte ich euch ja schon geschrieben. Ich bitte euch noch einmal, ihn freundlich aufzunehmen, wenn er zu euch kommt. <verse eID="Col.4.10"/>
+<verse osisID="Col.4.11" sID="Col.4.11"/>Auch Jesus Justus schickt euch seine Grüße. Diese drei Männer sind die einzigen Christen jüdischer Herkunft, die sich mit mir für Gottes Reich einsetzen. Sie sind mir Trost und Hilfe zugleich.<verse eID="Col.4.11"/>
+</p>
+<p>
+<verse osisID="Col.4.12" sID="Col.4.12"/>Epaphras, der zu euch gehört, grüßt euch ebenfalls sehr herzlich. Er dient Jesus Christus und lässt nicht nach, im Gebet für euch zu kämpfen. Inständig bittet er Gott darum, dass ihr reife Christen werdet und bereit, in allen Dingen Gottes Willen zu erfüllen. <verse eID="Col.4.12"/>
+<verse osisID="Col.4.13" sID="Col.4.13"/>Ich kann bezeugen, wie viel Mühe er auf sich nimmt für euch, für die Christen in Laodizea und die in Hierapolis. <verse eID="Col.4.13"/>
+<verse osisID="Col.4.14" sID="Col.4.14"/>Freundliche Grüße auch von dem Arzt Lukas, den wir alle sehr schätzen, und von Demas. <verse eID="Col.4.14"/>
+<verse osisID="Col.4.15" sID="Col.4.15"/>Grüßt alle Christen in Laodizea von mir, vor allem Nympha und die Gemeinde, die sich in ihrem Haus versammelt.<verse eID="Col.4.15"/>
+</p>
+<p>
+<verse osisID="Col.4.16" sID="Col.4.16"/>Wenn ihr diesen Brief bei euch vorgelesen habt, dann gebt ihn an die Gemeinde in Laodizea weiter. Lest auch den Brief, den ich dorthin geschrieben habe. <verse eID="Col.4.16"/>
+<verse osisID="Col.4.17" sID="Col.4.17"/>Und sagt Archippus: Erfüll den Dienst, den dir der Herr gegeben hat, treu und gewissenhaft!<verse eID="Col.4.17"/>
+</p>
+<p>
+<verse osisID="Col.4.18" sID="Col.4.18"/>Und hier noch mein persönlicher Gruß an euch; ich, Paulus, schreibe ihn mit eigener Hand. Denkt <transChange type="added">in euren Gebeten</transChange> daran, dass ich im Gefängnis bin!</p>
+<p>Gottes Gnade sei mit euch!</p><verse eID="Col.4.18"/>
+</chapter></div></osisText>
+</osis>

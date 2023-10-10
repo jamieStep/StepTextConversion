@@ -8,6 +8,7 @@ import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProce
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Dbg
+import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.shared.SharedData
 import java.io.File
 
@@ -120,7 +121,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
   private fun evaluateNeedForReversification ()
   {
-    var fromCommandLineOrConfig = (ConfigData.get("stepReversificationType") ?: "none").lowercase()
+    val fromCommandLineOrConfig = (ConfigData["stepReversificationType"] ?: "none").lowercase()
 
     if (!fromCommandLineOrConfig.contains("?")) return
 
@@ -146,19 +147,16 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
   private fun investigateResults (): List<Evaluation>
   {
-    val details = m_Evaluations.sortedBy { it.score }
+    val details = m_Evaluations.sortedBy { it.scoreForSorting }
 
     SharedData.BestVersificationScheme = details[0].scheme
     SharedData.BestVersificationSchemeScore= details[0].score
 
     val ix = details.indexOfFirst { it.scheme.matches("(?i)nrsv(a)?".toRegex()) }
-    if (null != ix)
-    {
-      SharedData.NrsvVersificationScheme = details[ix].scheme
-      SharedData.BestVersificationSchemeScore = details[ix].score
-      SharedData.NrsvVersificationSchemeNumberOfExcessVerseEquivalentsInOsisScheme = details[ix].versesInExcessInOsis2modScheme
-      SharedData.NrsvVersificationSchemeNumberOfMissingVerseEquivalentsInOsisScheme = details[ix].versesMissingInOsis2modScheme
-    }
+    SharedData.NrsvVersificationScheme = details[ix].scheme
+    SharedData.BestVersificationSchemeScore = details[ix].score
+    SharedData.NrsvVersificationSchemeNumberOfExcessVerseEquivalentsInOsisScheme = details[ix].versesInExcessInOsis2modScheme
+    SharedData.NrsvVersificationSchemeNumberOfMissingVerseEquivalentsInOsisScheme = details[ix].versesMissingInOsis2modScheme
 
     return details
   }
@@ -168,6 +166,11 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
   private fun evaluateScheme (scheme: String, bookNumbersInTextUnderConstruction: List<Int>)
   {
     /**************************************************************************/
+    //Dbg.dCont(scheme, "nrsva")
+
+
+
+    /**************************************************************************/
     Dbg.reportProgress("  Evaluating $scheme")
     val bibleStructureOther = BibleStructuresSupportedByOsis2modAll.getStructureFor(scheme)
 
@@ -176,7 +179,16 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
     /**************************************************************************/
     if (BibleStructureTextUnderConstruction.hasDc() && !bibleStructureOther.hasDc())
     {
-      m_Evaluations.add(Evaluation(scheme,999_999, 0, 0, "rejected because it lacks DC"))
+      //m_Evaluations.add(Evaluation(scheme,999_999, 0, 0, "rejected because it lacks DC"))
+      return
+    }
+
+
+
+    /**************************************************************************/
+    if (!BibleStructureTextUnderConstruction.hasDc() && bibleStructureOther.hasDc())
+    {
+      //m_Evaluations.add(Evaluation(scheme,999_999, 0, 0, "rejected because it lacks DC"))
       return
     }
 
@@ -187,8 +199,8 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
        text being processed doesn't have DC -- the versions without will be
        fine. */
 
-    if (!BibleStructureTextUnderConstruction.hasDc() && ("kjva" == scheme || "nrsva" == scheme))
-      return
+    //if (!BibleStructureTextUnderConstruction.hasDc() && ("kjva" == scheme || "nrsva" == scheme))
+    //  return
 
 
 
@@ -201,6 +213,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
        val comparisonDetails = BibleStructureTextUnderConstruction.compareWithGivenScheme(bookNumber, bibleStructureOther)
        versesMissingInOsis2modScheme += comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.size
        versesInExcessInOsis2modScheme += comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.size
+       //if ("german" == scheme) comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.forEach { Dbg.d("===== " + Ref.rd(it).toString() )}
      }
 
      bookNumbersInTextUnderConstruction.forEach { evaluate(it) }
@@ -287,9 +300,11 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
     override fun toString (): String
     {
       return String.format("Scheme: %12s   Score: %10d   Based upon    %6d verses which osis2mod lacks   AND   %6d verses which osis2mod has in excess%s.",
-                          scheme, score, versesMissingInOsis2modScheme, versesInExcessInOsis2modScheme, if (null == text) "" else "   " + text)
+                          scheme, score, versesMissingInOsis2modScheme, versesInExcessInOsis2modScheme, if (null == text) "" else "   $text")
     }
 
+    // Want to favour NRSV(A) over other schemes which may score the same.
+    val scoreForSorting: Double = if ("nrsv" == scheme) score.toDouble() - 0.2 else if ("nrsva" == scheme) score.toDouble() - 0.1 else score.toDouble()
   }
 
 

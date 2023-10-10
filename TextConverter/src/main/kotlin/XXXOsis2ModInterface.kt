@@ -32,6 +32,17 @@ import java.io.PrintWriter
  * support it, notably creating a JSON file containing information about the
  * structure of the text.
  *
+ * Note that this doesn't _drive_ the selection: it merely responds to settings
+ * established in TestController, qv.
+ *
+ * Once we establish whether in future we're going to go with our version of
+ * osis2mod or Crosswire's, a lot of this can go (and we won't want to be
+ * driven by TestController).  Indeed if we revert to using Crosswire's all of
+ * it can go, provided we reinstate any code dependent upon checking which
+ * version we are using.  If we use our own, then a fair bit of code here will
+ * need to remain, because our version requires a JSON file which is generated
+ * here.
+ *
  * @author ARA "Jamie" Jamieson
  */
 
@@ -46,17 +57,55 @@ object XXXOsis2ModInterface
   /****************************************************************************/
 
   /****************************************************************************/
-  enum class Osis2ModVariant { CROSSWIRE, STEP }
+  enum class Osis2ModVariant { CROSSWIRE, CROSSWIRE_RELAXED, STEP }
 
 
   /****************************************************************************/
-  val C_CreateEmptyChapters: Boolean
-  val C_ExpandElisions: Boolean
+  var C_CollapseSubverses = false
+  var C_CreateEmptyChapters = false
+  var C_ExpandElisions = false
 
 
 
 
- /****************************************************************************/
+  /****************************************************************************/
+  /**
+  * Records the osis2mod variant we are going to use, and sets up any other
+  * aspects of the environment dependent upon that.
+  *
+  * @param osis2modVariant What it says on the tin.
+  */
+
+  fun setOsis2ModVariant (osis2modVariant: Osis2ModVariant)
+  {
+    m_Osis2ModVariant = osis2modVariant
+
+    when (m_Osis2ModVariant)
+    {
+      Osis2ModVariant.CROSSWIRE, Osis2ModVariant.CROSSWIRE_RELAXED ->
+      {
+        //initialiseBookDetails()
+        C_CollapseSubverses = true
+        C_CreateEmptyChapters = true
+        C_ExpandElisions = true
+        System.err.println("Make sure you DON'T have Zec.")
+      }
+
+      else -> // ie "step"
+      {
+        C_CollapseSubverses = false
+        C_CreateEmptyChapters = false
+        C_ExpandElisions = true // false !!!!!!!!!!!!!!!!!!!!!!!!!
+        ConfigData.put("stepReversificationType", "none", true) // With our osis2mod, we don't actually apply reversification -- we just record what it would do.
+                                                                                  // This will need changing at some point so that we can at least apply footnotes.
+        initialiseBookDetails()
+        System.err.println("Make sure you DO have Zec.")
+     }
+    }
+  }
+
+
+  /****************************************************************************/
   /**
   * Outputs all relevant information to the JSON files where we are using
   * the STEP variant of osis2mod.
@@ -129,8 +178,8 @@ object XXXOsis2ModInterface
        outputBookDetails(writer,"ntbooks", ntBooks)
 
        print(writer, "  'vm': [")
-       outputMaxVerses(writer, otBooks)
-       outputMaxVerses(writer, ntBooks)
+       outputMaxVerses(writer, otBooks, ntBooks.isNotEmpty())
+       outputMaxVerses(writer, ntBooks, false)
        print(writer, "    ],\n")
 
        outputMappings(writer)
@@ -157,10 +206,12 @@ object XXXOsis2ModInterface
     }
 
 
-    fun outputMaxVerses (writer: PrintWriter, content: List<BookDetails>)
+    fun outputMaxVerses (writer: PrintWriter, content: List<BookDetails>, addTrailer: Boolean)
     {
-      val s = content.subList(0, content.size - 1).joinToString(",\n\n") { it.maxVersesToJson() }
-      print(writer, "$s\n")
+      val s = content.subList(0, content.size - 1).filter { it.chapMax > 0} .joinToString(",\n\n") { it.maxVersesToJson() }
+      print(writer, s)
+      if (addTrailer) print(writer, ",\n")
+      print(writer, "\n")
     }
   }
 
@@ -193,101 +244,10 @@ object XXXOsis2ModInterface
 
 
   /****************************************************************************/
-  /* Note that OT and DC books all get grouped into otbooks for output purposes.
-     I don't necessarily understand why, but it _is_ what's required. */
-
-  private fun populateBibleStructure ()
-  {
-    m_BibleStructure.v11nName = ConfigData["stepVersificationScheme"]!!
-    populateBibleStructure(m_BibleStructure.otBooks, BibleAnatomy.getBookNumberForStartOfOt(), BibleAnatomy.getBookNumberForEndOfOt())
-    populateBibleStructure(m_BibleStructure.otBooks, BibleAnatomy.getBookNumberForStartOfDc(), BibleAnatomy.getBookNumberForEndOfDc()) // otbooks _is_ intended here -- see head of method comments.
-    populateBibleStructure(m_BibleStructure.ntBooks, BibleAnatomy.getBookNumberForStartOfNt(), BibleAnatomy.getBookNumberForEndOfNt())
-
-    m_BibleStructure.otBooks.add(BookDetails()) // Terminate with empty entry.
-    m_BibleStructure.ntBooks.add(BookDetails()) // Terminate with empty entry.
-  }
-
-
-  /****************************************************************************/
-  private fun populateBibleStructure (headers: MutableList<BookDetails>, bookLow: Int, bookHigh: Int)
-  {
-    for (bookNo in bookLow .. bookHigh)
-    {
-      if (!BibleStructureTextUnderConstruction.hasBook(bookNo)) continue
-      val header = BookDetails()
-      headers.add(header)
-
-      val ubsAbbreviation = BibleBookNamesUsx.numberToAbbreviatedName(bookNo)
-      header.name = m_CrosswireBookDetails[ubsAbbreviation]!!.fullName
-      header.osis = BibleBookNamesOsis.numberToAbbreviatedName(bookNo)
-      header.prefAbbrev = m_CrosswireBookDetails[ubsAbbreviation]!!.abbreviation
-      header.chapMax = BibleStructureTextUnderConstruction.getLastChapterNo(bookNo)
-      for (chapterNo in 1 .. header.chapMax) header.vm.add(BibleStructureTextUnderConstruction.getLastVerseNo(bookNo, chapterNo))
-    }
-  }
-
-
-  /****************************************************************************/
-  private fun populateReversificationMappings ()
-  {
-    val renumbers = ReversificationData.getReferenceMappings()
-    renumbers.forEach { m_BibleStructure.jswordMappings.add(Pair(it.key, Ref.clearS(it.value))) }
-
-    val psalmTitles = ReversificationData.getAllAcceptedRows().filter { 0 != it.processingFlags.and(ReversificationData.C_StandardIsPsalmTitle) }
-    psalmTitles.forEach { m_BibleStructure.jswordMappings.add(Pair(it.sourceRefAsRefKey, Ref.setV(it.standardRefAsRefKey, 0))) }
-
-    m_BibleStructure.jswordMappings.sortBy { it.first }
-    m_BibleStructure.jswordMappings.forEach { Dbg.d("" + it.first + "=" + it.second)}
-  }
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                           Common utilities                             **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  private fun outputJson (filePath:String)
-  {
-    File(filePath).parentFile.mkdirs()
-
-    try
-    {
-      PrintWriter(filePath).use { m_BibleStructure.output(it) }
-    }
-    catch (e:Exception)
-    {
-        throw StepException(e)
-    }
-  }
-
-
-  /****************************************************************************/
-  private fun print (writer: PrintWriter, s: String)
-  {
-    writer.print(s.replace("'", "\""))
-  }
-
-
-
-  /****************************************************************************/
-  private data class CrosswireBookDetails (val fullName: String, val abbreviation: String)
-
-
-  /****************************************************************************/
-  private val m_BibleStructure = BibleStructure()
-  private val m_CrosswireBookDetails: MutableMap<String, CrosswireBookDetails?>  = mutableMapOf()
-  private val m_Osis2ModVariant: Osis2ModVariant
-
-
-
-  /****************************************************************************/
+  /* If creating the JSON file needed by our own version of ossi2mod, we need
+     Crosswire book abbreviations, which unfortunately differ from USX and
+     OSIS.  (Crosswire also differs from other schemes in terms of the DC books
+     it supports -- there's a lot of overlap, but it's not an exact match.) */
   private fun initialiseBookDetails ()
   {
     m_CrosswireBookDetails["Gen"] = CrosswireBookDetails("Genesis", "Gen")
@@ -387,32 +347,99 @@ object XXXOsis2ModInterface
     m_CrosswireBookDetails["6Ez"] = null
   }
 
+
   /****************************************************************************/
-  /* Sadly Crosswire use neither OSIS nor UBS book names and abbreviations, so
-     I need a mapping from UBS to Crosswire.  Note that the two collections are
-     not identical: UBS supports a number of DC books which Crosswire does not
-     and Crosswire supports some which UBS does not (unless they're
-     masquerading under different names and I haven't recognised the fact.) */
+  /* Note that OT and DC books all get grouped into otbooks for output purposes.
+     I don't necessarily understand why, but it _is_ what's required. */
 
-  init
+  private fun populateBibleStructure ()
   {
-    when (ConfigData.get("stepOsis2ModVariant", "crosswire").lowercase())
-    {
-      "crosswire" ->
-      {
-        //initialiseBookDetails()
-        m_Osis2ModVariant = Osis2ModVariant.CROSSWIRE
-        C_CreateEmptyChapters = true
-        C_ExpandElisions = true
-      }
+    m_BibleStructure.v11nName = ConfigData["stepModuleName"]!!
+    populateBibleStructure(m_BibleStructure.otBooks, BibleAnatomy.getBookNumberForStartOfOt(), BibleAnatomy.getBookNumberForEndOfOt())
+    populateBibleStructure(m_BibleStructure.otBooks, BibleAnatomy.getBookNumberForStartOfDc(), BibleAnatomy.getBookNumberForEndOfDc(), true) // otbooks _is_ intended here -- see head of method comments.
+    populateBibleStructure(m_BibleStructure.ntBooks, BibleAnatomy.getBookNumberForStartOfNt(), BibleAnatomy.getBookNumberForEndOfNt())
 
-      else -> // ie "step"
-      {
-        m_Osis2ModVariant = Osis2ModVariant.STEP
-        C_CreateEmptyChapters = false
-        C_ExpandElisions = false
-        initialiseBookDetails()
-      }
+    m_BibleStructure.otBooks.add(BookDetails()) // Terminate with empty entry.
+    m_BibleStructure.ntBooks.add(BookDetails()) // Terminate with empty entry.
+  }
+
+
+  /****************************************************************************/
+  private fun populateBibleStructure (headers: MutableList<BookDetails>, bookLow: Int, bookHigh: Int, skipMissingBooks: Boolean = false)
+  {
+    for (bookNo in bookLow .. bookHigh)
+    {
+      val missingBook = !BibleStructureTextUnderConstruction.hasBook(bookNo)
+      if (skipMissingBooks && missingBook) continue
+
+      val header = BookDetails()
+      headers.add(header)
+
+      val ubsAbbreviation = BibleBookNamesUsx.numberToAbbreviatedName(bookNo)
+      header.name = m_CrosswireBookDetails[ubsAbbreviation]!!.fullName
+      header.osis = BibleBookNamesOsis.numberToAbbreviatedName(bookNo)
+      header.prefAbbrev = m_CrosswireBookDetails[ubsAbbreviation]!!.abbreviation
+      header.chapMax = if (missingBook) 0 else BibleStructureTextUnderConstruction.getLastChapterNo(bookNo)
+      for (chapterNo in 1 .. header.chapMax) header.vm.add(BibleStructureTextUnderConstruction.getLastVerseNo(bookNo, chapterNo))
     }
   }
+
+
+  /****************************************************************************/
+  private fun populateReversificationMappings ()
+  {
+    val renumbers = ReversificationData.getReferenceMappings()
+    renumbers.forEach { m_BibleStructure.jswordMappings.add(Pair(it.key, Ref.clearS(it.value))) }
+
+    val psalmTitles = ReversificationData.getAllAcceptedRows().filter { 0 != it.processingFlags.and(ReversificationData.C_StandardIsPsalmTitle) }
+    psalmTitles.forEach { m_BibleStructure.jswordMappings.add(Pair(it.sourceRefAsRefKey, Ref.setV(it.standardRefAsRefKey, 0))) }
+
+    m_BibleStructure.jswordMappings.sortBy { it.first }
+    //m_BibleStructure.jswordMappings.forEach { Dbg.d("" + it.first + "=" + it.second)}
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                           Common utilities                             **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  private fun outputJson (filePath:String)
+  {
+    File(filePath).parentFile.mkdirs()
+
+    try
+    {
+      PrintWriter(filePath).use { m_BibleStructure.output(it) }
+    }
+    catch (e:Exception)
+    {
+        throw StepException(e)
+    }
+  }
+
+
+  /****************************************************************************/
+  private fun print (writer: PrintWriter, s: String)
+  {
+    writer.print(s.replace("'", "\""))
+  }
+
+
+
+  /****************************************************************************/
+  private data class CrosswireBookDetails (val fullName: String, val abbreviation: String)
+
+
+  /****************************************************************************/
+  private val m_BibleStructure = BibleStructure()
+  private val m_CrosswireBookDetails: MutableMap<String, CrosswireBookDetails?>  = mutableMapOf()
+  private var m_Osis2ModVariant: Osis2ModVariant = Osis2ModVariant.CROSSWIRE
 }

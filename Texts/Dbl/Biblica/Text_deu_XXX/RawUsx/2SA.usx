@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="2SA" style="id">- Hoffnung für alle®</book>
+  <para style="rem">Copyright © 1983, 1996, 2002, 2015 by Biblica, Inc®</para>
+  <para style="h">2. Samuel</para>
+  <para style="toc1">Das zweite Buch Samuel</para>
+  <para style="toc2">2. Samuel</para>
+  <para style="toc3">2 Sam</para>
+  <para style="mt1">Das zweite Buch Samuel</para>
+  <para style="imt1">Inhaltsübersicht</para>
+  <para style="io1">David wird König von Juda und ganz Israel <char style="ior">Kapitel <ref loc="2SA 1-7">1–7</ref></char></para>
+  <para style="io1">Kriege während Davids Herrschaft <char style="ior">Kapitel <ref loc="2SA 8-10">8–10</ref></char></para>
+  <para style="io1">David und Batseba – Salomos Geburt <char style="ior">Kapitel <ref loc="2SA 11-12">11–12</ref></char></para>
+  <para style="io1">Aufstände gegen David: Absalom und Scheba <char style="ior">Kapitel <ref loc="2SA 13-20">13–20</ref></char></para>
+  <para style="io1">Weitere Ereignisse aus Davids Regierungszeit <char style="ior">Kapitel <ref loc="2SA 21-24">21–24</ref></char></para>
+  <chapter number="1" style="c"/>
+  <para style="ms1">David wird König von Juda und ganz Israel</para>
+  <para style="mr">(Kapitel <ref loc="2SA 1-7">1–7</ref>)</para>
+  <para style="s1">David erfährt von Sauls und Jonatans Tod</para>
+  <para style="m">
+    <verse number="1" style="v"/>König Saul war in der Schlacht gegen die Philister umgekommen. Nachdem David von seinem Vergeltungsschlag gegen die Amalekiter nach Ziklag zurückgekehrt war, <verse number="2" style="v"/>erschien zwei Tage später bei ihm ein Mann aus Sauls Heer. Als Zeichen der Trauer waren seine Kleider zerrissen und sein Haar voller Erde. Er warf sich ehrerbietig vor David zu Boden. <verse number="3" style="v"/>»Woher kommst du?«, fragte David. Der Mann antwortete: »Ich habe im israelitischen Heer gekämpft und konnte den Feinden entkommen.« <verse number="4" style="v"/>»Wie ist die Lage?«, wollte David wissen. »Erzähl es mir!« Da berichtete der Mann: »Viele unserer Soldaten liegen gefallen oder schwer verwundet auf dem Schlachtfeld, und der Rest ist geflohen. Auch Saul und sein Sohn Jonatan sind tot.«</para>
+  <para style="p">
+    <verse number="5" style="v"/>»Woher weißt du, dass Saul und Jonatan tot sind?«, hakte David nach. <verse number="6" style="v"/>Der junge Mann fuhr fort: »Ich kam zufällig ins Bergland von Gilboa. Dort entdeckte ich Saul, der sich auf seinen Speer stützte. Die feindlichen Wagen und Reiter schlossen den Kreis um ihn immer enger. <verse number="7" style="v"/>Er drehte sich um, sah mich und rief mir zu, ich solle herkommen. <verse number="8" style="v"/>Als ich bei ihm war, fragte er: ›Wer bist du?‹ ›Ich bin ein Amalekiter‹, antwortete ich. <verse number="9" style="v"/>Da bat er mich: ›Komm und töte mich, denn noch ist zwar Leben in mir, aber ich bin schwer verwundet und am Ende meiner Kraft.‹ <verse number="10" style="v"/>Ich erfüllte ihm seine letzte Bitte: Ich erstach ihn, denn ich wusste ja, dass Saul schon ganz schwach war und sowieso sterben würde. Dann nahm ich ihm die Krone und den Armreif ab, um sie dir, meinem Herrn und Gebieter, zu überbringen.«</para>
+  <para style="p">
+    <verse number="11" style="v"/>Da zerrissen David und die Männer, die bei ihm standen, ihre Gewänder. <verse number="12" style="v"/>Sie weinten und trauerten um Saul, seinen Sohn Jonatan und um das ganze Volk des <char style="nd">Herrn</char>, weil so viele Israeliten in der Schlacht umgekommen waren. Bis zum Abend fasteten sie.</para>
+  <para style="p">
+    <verse number="13" style="v"/>David fragte den jungen Mann, der ihm die Nachricht überbracht hatte: »Woher kommst du?« »Ich bin der Sohn eines Einwanderers aus Amalek«, antwortete er. <verse number="14" style="v"/>Da fuhr David ihn an: »Wie konntest du es wagen, den König umzubringen, den der <char style="nd">Herr</char> auserwählt hat?« <verse number="15" style="v"/>Er befahl einem der jungen Männer, die bei ihm standen: »Komm her und töte ihn!« Der Mann gehorchte und stach den Amalekiter nieder. Bevor er starb, <verse number="16" style="v"/>sagte David noch zu ihm: »Das ist die gerechte Strafe für dein Verbrechen! Du selbst hast dich zum Tod verurteilt, als du sagtest: ›Ich habe den König umgebracht, den der <char style="nd">Herr</char> erwählt hat.‹«</para>
+  <para style="s1">Davids Klagelied</para>
+  <para style="m">
+    <verse number="17" style="v"/>David dichtete ein Klagelied über Sauls und Jonatans Tod. <verse number="18" style="v"/>Er ordnete an, dass alle Bewohner von Juda es auswendig lernen sollten. Es wird das »Bogenlied« genannt und steht im »Buch des Rechtschaffenen«:</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="19" style="v"/>Ach, Israel, erschlagen liegen sie auf deinen Hügeln,</para>
+  <para style="q1">die Soldaten, die dein ganzer Stolz und deine Freude waren!</para>
+  <para style="q1">Deine Helden sind tot, im Kampf gefallen.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="20" style="v"/>Verheimlicht es den Städten Gat und Aschkelon,</para>
+  <para style="q1">verkündet diese Nachricht nicht in ihren Gassen!</para>
+  <para style="q1">Die Mädchen der Philister sollen keine Freudenlieder singen,</para>
+  <para style="q1">die Frauen dieser unbeschnittenen Heiden keine Reigen tanzen.</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Ihr Berge von Gilboa,</para>
+  <para style="q1">kein Tau soll euch bedecken und kein Regen fallen,</para>
+  <para style="q1">nie mehr soll Korn auf euren Äckern wachsen,</para>
+  <para style="q1">weil dort die blutverschmierten Schilde liegen,</para>
+  <para style="q1">die einst unseren besten Soldaten gehörten.</para>
+  <para style="q1">Sauls Schild hat seinen Glanz verloren,</para>
+  <para style="q1">sein Leder wird nicht mehr mit Öl gepflegt.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="22" style="v"/>Die Pfeile Jonatans verfehlten nie das Ziel,</para>
+  <para style="q1">nie schlug das Schwert von König Saul daneben.</para>
+  <para style="q1">Stets trieften ihre Waffen vom Blut der Durchbohrten,</para>
+  <para style="q1">sie glänzten vom Fett der erstochenen Helden.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Saul und Jonatan – jeder liebte und verehrte sie!</para>
+  <para style="q1">Unzertrennlich waren sie im Leben,</para>
+  <para style="q1">und nun sind sie auch im Tod vereint.</para>
+  <para style="q1">Sie waren schneller noch als Adler,</para>
+  <para style="q1">stärker als der stärkste Löwe.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Ihr Frauen von Israel, trauert und weint um König Saul,</para>
+  <para style="q1">der euch Kleider aus Purpur gab</para>
+  <para style="q1">und euch mit goldenem Schmuck beschenkte!</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="25" style="v"/>Die Helden sind tot, im Kampf gefallen.</para>
+  <para style="q1">Durchbohrt liegt Jonatan auf deinen Bergen, Israel.</para>
+  <para style="q1">
+    <verse number="26" style="v"/>Mein Bruder Jonatan, wie schmerzt mich dein Verlust!</para>
+  <para style="q1">Du warst mir lieber als der größte Schatz der Welt.</para>
+  <para style="q1">Niemals kann die Liebe einer Frau ersetzen,</para>
+  <para style="q1">was deine Freundschaft mir bedeutet hat.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Die Helden sind tot, im Kampf gefallen,</para>
+  <para style="q1">unsere besten Männer haben wir verloren.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">David wird König von Juda</para>
+  <para style="m">
+    <verse number="1" style="v"/>Danach fragte David den <char style="nd">Herrn</char>: »Soll ich nach Juda zurückkehren?« »Ja«, sagte der <char style="nd">Herr</char>, »geh wieder dorthin.« »In welcher Stadt soll ich mich niederlassen?« fragte David weiter. »In Hebron«, bekam er zur Antwort. <verse number="2" style="v"/>So zog David nach Hebron im judäischen Bergland. Seine beiden Frauen, Ahinoam aus Jesreel und Abigajil aus Karmel, die Witwe von Nabal, gingen mit ihm. <verse number="3" style="v"/>David wollte seine Soldaten in der Nähe behalten, deshalb siedelte er sie mit ihren Familien in den umliegenden Ortschaften an. <verse number="4" style="v"/>Eines Tages kamen die Männer von Juda zu David nach Hebron und salbten ihn zu ihrem König.</para>
+  <para style="p">Als David hörte, dass die Einwohner der Stadt Jabesch im Gebiet von Gilead Saul beerdigt hatten, <verse number="5" style="v"/>ließ er ihnen durch Boten sagen: »Der <char style="nd">Herr</char> möge euch dafür belohnen, dass ihr eurem Herrn, König Saul, diese letzte Ehre erwiesen und ihn begraben habt! <verse number="6" style="v"/>Ohne Ende möge der <char style="nd">Herr</char> euch Gutes tun und euch seine Liebe erweisen. Aber auch ich will euch für diese gute Tat belohnen. <verse number="7" style="v"/>Seid stark und lasst euch nicht entmutigen! Euer König Saul ist zwar gestorben, aber der Stamm Juda hat mich zu seinem Nachfolger ernannt.«</para>
+  <para style="s1">Isch-Boschet wird König von Israel</para>
+  <para style="m">
+    <verse number="8" style="v"/>Sauls Heerführer Abner, ein Sohn von Ner, hatte Isch-Boschet<note caller="+" style="f"><char style="fr" closed="false">2,8 </char><char style="ft" closed="false">Isch-Boschet hieß ursprünglich Eschbaal. Die Schreiber wollten den Namen Baal (kanaanitische Gottheit) nicht nennen und änderten ihn deshalb in Boschet (»Schande«).</char></note>, einen Sohn von Saul, nach Mahanajim in Sicherheit gebracht <verse number="9" style="v"/>und ihn dort zum König ausgerufen. Sein Herrschaftsgebiet umfasste die Landstriche von Gilead und Jesreel, die Gebiete der Stämme Asser, Ephraim und Benjamin und das restliche Israel. <verse number="10" style="v"/>Nur der Stamm Juda stand hinter David. Isch-Boschet wurde mit 40 Jahren König und regierte zwei Jahre. <verse number="11" style="v"/>David herrschte siebeneinhalb Jahre in Hebron als König über Juda.</para>
+  <para style="s1">Beginn des Bürgerkriegs zwischen Israel und Juda</para>
+  <para style="m">
+    <verse number="12" style="v"/>Abner marschierte mit den Soldaten von Sauls Sohn Isch-Boschet von Mahanajim nach Gibeon. <verse number="13" style="v"/>Davids Heer zog ihm unter der Führung von Joab, dem Sohn von Davids Schwester Zeruja, entgegen. Beim Teich von Gibeon trafen sie aufeinander. Abner und seine Truppen lagerten auf der einen Seite des Teiches, Joabs Männer auf der anderen. <verse number="14" style="v"/>Abner schlug Joab vor: »Lass uns Kampfspiele veranstalten, die jungen Soldaten sollen gegeneinander antreten!« Joab war einverstanden, <verse number="15" style="v"/>und so stellte jede Seite ihre Kämpfer: zwölf für Isch-Boschet und den Stamm Benjamin und zwölf für David. <verse number="16" style="v"/>Als der Kampf begann, packten die Gegner einander an den Haaren, und jeder stieß dem anderen das Schwert in die Seite. Alle vierundzwanzig waren auf einen Schlag tot. Später nannte man diesen Platz bei Gibeon Helkat-Hazzurim (»Felsenfeld«).</para>
+  <para style="p">
+    <verse number="17" style="v"/>Nun kam es zwischen den Truppen zum erbitterten Kampf. Abner und seine israelitischen Soldaten unterlagen Davids Heer und ergriffen die Flucht. <verse number="18" style="v"/>Auch Joabs Brüder Abischai und Asaël, die Söhne von Davids Schwester Zeruja, nahmen an der Schlacht teil. Asaël war schnell und flink wie eine Gazelle. <verse number="19" style="v"/>Er jagte dem fliehenden Abner nach und ließ sich durch niemanden aufhalten. <verse number="20" style="v"/>Plötzlich drehte Abner sich um und rief: »Bist du es, Asaël?« »Ja, ich bin es«, antwortete er. <verse number="21" style="v"/>Abner schrie: »Hör auf, mich zu verfolgen! Kämpf doch lieber mit einem der jungen Soldaten, an denen du vorbeigerannt bist. Ihm kannst du Rüstung und Waffen abnehmen.«</para>
+  <para style="p">Aber Asaël ließ sich nicht umstimmen und lief weiter. <verse number="22" style="v"/>»Ich warne dich!«, drohte Abner. »Verfolge mich nicht länger, sonst zwingst du mich, dich zu töten. Wie könnte ich dann deinem Bruder Joab noch in die Augen sehen?« <verse number="23" style="v"/>Doch Asaël hörte nicht auf ihn. Da stieß Abner ihm das hintere Ende seines Speeres mit solcher Wucht in den Bauch, dass es am Rücken wieder herauskam. Asaël brach zusammen und starb. Jeder, der vorbeikam und ihn dort liegen sah, blieb entsetzt stehen.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Auch Joab und Abischai jagten Abner nach. Als die Sonne unterging, kamen sie zum Hügel Amma; er liegt gegenüber von Giach an der Straße, die von Gibeon in die Wüste führt. <verse number="25" style="v"/>Die Männer vom Stamm Benjamin sammelten sich um Abner und folgten ihm auf einen Hügel. <verse number="26" style="v"/>Abner rief zu Joab hinüber: »Wie lange soll das Schwert noch morden? Denkst du nicht daran, dass dieser Krieg nur Leid und Hass mit sich bringt? Befiehl deinen Leuten endlich, uns, ihre Brüder, nicht weiter zu verfolgen!«</para>
+  <para style="p">
+    <verse number="27" style="v"/>Joab erwiderte: »Ich schwöre dir, so wahr Gott lebt: Hättest du das nicht gesagt, dann hätten meine Leute euch noch die ganze Nacht gejagt.« <verse number="28" style="v"/>Er blies das Horn, und seine Soldaten machten Halt; sie gaben die Verfolgung der Israeliten auf und stellten den Kampf ein.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Noch in derselben Nacht traten Abner und seine Truppen den Rückzug an. Sie marschierten durch die Jordan-Ebene, überquerten den Jordan und gelangten schließlich durch die Schlucht wieder nach Mahanajim.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Nachdem Joab die Verfolgung Abners abgebrochen hatte, sammelte er seine Männer um sich. Außer Asaël waren weitere neunzehn Soldaten gefallen. <verse number="31" style="v"/>Doch ihre Gegner hatten viel größere Verluste zu beklagen: 360 Mann aus Abners Heer waren umgekommen, die meisten gehörten zum Stamm Benjamin. <verse number="32" style="v"/>Joab und seine Männer nahmen Asaëls Leiche mit und begruben sie auf dem Rückweg im Grab seines Vaters in Bethlehem. Noch in derselben Nacht zogen sie weiter und erreichten im Morgengrauen Hebron.</para>
+  <chapter number="3" style="c"/>
+  <para style="m">
+    <verse number="1" style="v"/>Der Krieg zwischen den Anhängern von Sauls Sohn Isch-Boschet und Davids Anhängern zog sich lange hin. Mit der Zeit wurde David immer stärker und mächtiger, während die andere Seite an Macht und Ansehen verlor.</para>
+  <para style="s1">Davids Familie in Hebron</para>
+  <para style="m">
+    <verse number="2" style="v"/>Als David in Hebron wohnte, wurden ihm mehrere Söhne geboren: Der älteste hieß Amnon, seine Mutter war Ahinoam aus Jesreel. <verse number="3" style="v"/>Danach kam Kilab, seine Mutter war Abigajil aus Karmel, die Witwe von Nabal. Der dritte Sohn war Absalom, seine Mutter hieß Maacha und war eine Tochter von Talmai, dem König von Geschur. <verse number="4" style="v"/>Der vierte Sohn hieß Adonija, und seine Mutter war Haggit. Der fünfte war Schefatja, seine Mutter hieß Abital. <verse number="5" style="v"/>Jitream, der sechste, war der Sohn von Davids Frau Egla. Diese sechs Söhne wurden in Hebron geboren.</para>
+  <para style="s1">Abner und Isch-Boschet geraten aneinander</para>
+  <para style="m">
+    <verse number="6" style="v"/>Während des Krieges zwischen Isch-Boschet und David hielt Abner treu zu Sauls Königshaus.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Eines Tages aber stellte Isch-Boschet Abner zur Rede, weil er mit einer Nebenfrau des verstorbenen Königs Saul geschlafen hatte. Die Frau hieß Rizpa und war eine Tochter von Ajja. <verse number="8" style="v"/>Abner wurde wütend und beschimpfte Isch-Boschet: »Was denkst du eigentlich, wer ich bin? Ein mieser Verräter, der zum Stamm Juda hält? Die ganze Zeit schon kämpfe ich mit aller Kraft für das Königshaus deines Vaters, ich helfe seinen Verwandten und Freunden. Dich habe ich beschützt, damit du David nicht in die Hände fällst. Und was ist der Dank? Wegen einer Frauengeschichte führst du dich nun so auf! <verse number="9-10" style="v"/>Ich habe genug von dir! Von jetzt an unterstütze ich David. Der <char style="nd">Herr</char> hat schließlich geschworen, dass er Sauls Familie vom Thron stoßen und David die Herrschaft geben wird. Gott soll mich hart bestrafen, wenn ich nicht dafür sorge, dass David bald König ist über ganz Israel und Juda, von Dan im Norden bis Beerscheba im Süden!«</para>
+  <para style="p">
+    <verse number="11" style="v"/>Isch-Boschet brachte kein Wort mehr heraus, denn er hatte große Angst vor Abner.</para>
+  <para style="s1">Abner verhandelt mit David</para>
+  <para style="m">
+    <verse number="12" style="v"/>Abner schickte Boten zu David und ließ ihm sagen: »Ich weiß so gut wie du, wem die Herrschaft über unser Land zusteht. Darum mache ich dir einen Vorschlag: Verbünde dich mit mir! Ich stelle mich auf deine Seite und sorge dafür, dass ganz Israel dich als König anerkennt.«</para>
+  <para style="p">
+    <verse number="13" style="v"/>»Gut«, antwortete David, »ich werde mich mit dir verbünden, doch nur unter einer Bedingung: Du musst mir meine Frau Michal, Sauls Tochter, mitbringen. Sonst verhandle ich nicht mit dir.« <verse number="14" style="v"/>Zugleich sandte David Boten zu Sauls Sohn Isch-Boschet mit der Forderung: »Gib mir meine Frau Michal zurück! Schließlich habe ich für sie einen Brautpreis bezahlt: die Vorhäute von hundert Philistern.« <verse number="15" style="v"/>Isch-Boschet ließ Michal von ihrem zweiten Mann Paltiël, einem Sohn von Lajisch, wegholen. <verse number="16" style="v"/>Der Mann konnte sich aber nicht von ihr trennen. Weinend lief er ihr nach bis Bahurim. Schließlich fuhr Abner ihn an: »Geh endlich zurück!« Da erst kehrte er um.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Abner hatte vorher mit den Sippenoberhäuptern Israels eine Unterredung gehabt und ihnen gesagt: »Ihr wolltet doch schon lange, dass David euer König wird. <verse number="18" style="v"/>Jetzt ist der Augenblick zum Handeln gekommen! Der <char style="nd">Herr</char> selbst hat ja versprochen: ›Durch meinen Diener David will ich mein Volk aus der Gewalt der Philister und aller anderen Feinde befreien.‹« <verse number="19" style="v"/>Das Gleiche sagte Abner auch den führenden Männern des Stammes Benjamin. Danach reiste er nach Hebron, um David zu melden, was die Sippenoberhäupter von Israel und vom Stamm Benjamin beschlossen hatten.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Eine Abordnung von zwanzig Männern begleitete Abner nach Hebron. Dort gab David ein Festessen für sie. <verse number="21" style="v"/>Bevor Abner sich wieder verabschiedete, sagte er zu David: »Ich gehe nun zurück und lasse die Vertreter des ganzen Volkes zu einer Versammlung kommen, an der auch du, mein Herr, teilnehmen sollst. Ich werde dafür sorgen, dass sie dich als ihren neuen König anerkennen und einen Bund mit dir schließen. Dann bist du König über das ganze Land, wie du es dir schon lange gewünscht hast!« David verabschiedete Abner und ließ ihn unbehelligt gehen.</para>
+  <para style="s1">Abners Ermordung</para>
+  <para style="m">
+    <verse number="22" style="v"/>Kurz darauf kam Joab mit Davids Soldaten von einem Streifzug zurück. Sie hatten reiche Beute gemacht. <verse number="23" style="v"/>Kaum waren sie in der Stadt, wurde Joab berichtet: »Abner, der Sohn von Ner, ist beim König gewesen, und der ließ ihn unbehelligt wieder ziehen.« <verse number="24" style="v"/>Sofort lief Joab zum König und rief: »Was habe ich da gehört? Abner war hier, und du hast ihn einfach wieder gehen lassen? <verse number="25" style="v"/>Du kennst ihn doch, er heuchelt dir nur etwas vor! In Wirklichkeit wollte er ausspionieren, was du tust und vorhast.«</para>
+  <para style="p">
+    <verse number="26" style="v"/>Joab schickte einige Boten hinter Abner her, die ihn zurückbringen sollten. Bei der Zisterne von Sira holten sie ihn ein, und er kehrte mit ihnen um; der König aber wusste nichts davon. <verse number="27" style="v"/>Als Abner in Hebron angekommen war, nahm Joab ihn beiseite und führte ihn in einen Raum im Stadttor, als wollte er heimlich etwas mit ihm besprechen. Doch plötzlich zog er sein Schwert und stieß es Abner in den Bauch. So brachte Joab ihn um und rächte sich dafür, dass er seinen Bruder Asaël getötet hatte.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Als David davon erfuhr, rief er: »Ich schwöre vor dem <char style="nd">Herrn</char>, dass ich unschuldig bin an Abners Tod, und auch meine Nachfolger sollen niemals dafür büßen müssen! <verse number="29" style="v"/>Joab allein trägt die Verantwortung. Ihn und seine Familie soll die gerechte Strafe treffen: Von jetzt an sollen immer einige seiner Nachkommen eine Geschlechtskrankheit haben, aussätzig oder gelähmt sein, ermordet werden oder Hunger leiden.« <verse number="30" style="v"/>So rächten sich Joab und sein Bruder Abischai an Abner. Sie ermordeten ihn, weil er in der Schlacht bei Gibeon ihren Bruder Asaël getötet hatte.</para>
+  <para style="s1">David trauert um Abner</para>
+  <para style="m">
+    <verse number="31-32" style="v"/>David befahl Joab und den anderen, die bei ihm waren: »Zerreißt eure Kleider, hüllt euch in Trauergewänder und haltet die Totenklage um Abner!« Die Beerdigung fand in Hebron statt. Im Trauerzug ging David direkt hinter der Bahre her. Am Grab ließ er seinen Tränen freien Lauf, und alle Versammelten weinten mit. <verse number="33" style="v"/>Dann stimmte David dieses Klagelied für Abner an:</para>
+  <para style="p">»Abner, warum musstest du wie ein Verbrecher sterben? <verse number="34" style="v"/>Deine Hände waren nicht gebunden, deine Füße lagen nicht in Ketten. Nein, Mördern fielst du in die Hände, du warst ihnen schutzlos ausgeliefert.«</para>
+  <para style="p">Da weinten alle noch mehr um den Toten. <verse number="35" style="v"/>Den ganzen Tag über wollten die Leute David dazu überreden, etwas zu essen. Doch er schwor: »Gott soll mich hart bestrafen, wenn ich vor Sonnenuntergang auch nur einen Bissen Brot zu mir nehme!« <verse number="36" style="v"/>Die Leute beobachteten, wie David sich verhielt, und es gefiel ihnen. Ja, an allem, was der König tat, fand das Volk Gefallen. <verse number="37" style="v"/>Wer bei der Beerdigung gewesen war, war überzeugt, dass David nichts mit dem Mord an Abner zu tun hatte, und alle Israeliten dachten ebenso. <verse number="38" style="v"/>David sagte zu seinen Hofleuten: »Heute ist ein großer und bedeutender Mann aus Israel umgebracht worden. <verse number="39" style="v"/>Ich bin erst vor kurzem zum König gesalbt worden und besitze noch nicht genug Macht, um gegen meine beiden Neffen Joab und Abischai vorzugehen. Möge der <char style="nd">Herr</char> dafür sorgen, dass sie die gerechte Strafe für ihre Bosheit bekommen!«</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Isch-Boschet wird ermordet</para>
+  <para style="m">
+    <verse number="1" style="v"/>Als Isch-Boschet, der Sohn von Saul, hörte, dass Abner in Hebron ermordet worden war, verlor er jeden Mut. Auch das ganze Volk war entsetzt. <verse number="2" style="v"/>Isch-Boschet ernannte zwei Brüder zu seinen Heerführern: Baana und Rechab, die Söhne von Rimmon. Sie kamen aus Beerot, einer Stadt, die nun zum Gebiet des Stammes Benjamin gehört. <verse number="3" style="v"/>Die ursprünglichen Einwohner von Beerot hatten aus ihrer Heimat fliehen müssen und sich in Gittajim angesiedelt, wo sie bis heute als Ausländer wohnen.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Zu dieser Zeit lebte noch ein Enkel von König Saul: Mefi-Boschet<note caller="+" style="f"><char style="fr" closed="false">4,4 </char><char style="ft" closed="false">Mefi-Boschet hieß ursprünglich Merib-Baal (vgl. <char style="xt"><ref loc="1CH 8:34">1. Chronik 8,34</ref></char>). Da Baal (»Herr«) zugleich der Name einer kanaanitischen Gottheit war, wollten die Schreiber ihn vermutlich nicht nennen und änderten ihn zu Boschet (»Schande«).</char></note>, Jonatans Sohn. Er war fünf Jahre alt gewesen, als die schreckliche Nachricht von Sauls und Jonatans Tod aus Jesreel eintraf. Seine Amme hatte den Jungen genommen und war geflohen. Doch in der Hetze hatte sie ihn fallen lassen, und seitdem konnte er nicht mehr richtig laufen.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Eines Tages nun kamen Rechab und Baana, die Söhne von Rimmon aus Beerot, am Mittag zu Isch-Boschets Haus. Es war sehr heiß, und Isch-Boschet hatte sich zum Schlafen hingelegt. <verse number="6-7" style="v"/>Die beiden gingen ins Haus, unter dem Vorwand, sie wollten einen Sack Weizen aus der Vorratskammer holen. Sie schlichen sich in Isch-Boschets Zimmer und erstachen den Schlafenden auf seinem Bett. Dann schlugen sie ihm den Kopf ab und machten sich damit auf und davon.</para>
+  <para style="p">Die ganze Nacht durchquerten sie die Jordan-Ebene, <verse number="8" style="v"/>bis sie schließlich in Hebron ankamen. Dort zeigten sie König David den Kopf und sagten: »Hier bringen wir dir den Kopf von Isch-Boschet, dessen Vater Saul dein Feind war und dir nach dem Leben trachtete. Heute nun hat sich der <char style="nd">Herr</char> für dich an Saul und an seiner Familie gerächt.«</para>
+  <para style="s1">David bestraft die Mörder</para>
+  <para style="m">
+    <verse number="9" style="v"/>Aber David antwortete Rimmons Söhnen, Rechab und Baana, aus Beerot: »So wahr der <char style="nd">Herr</char> lebt, der mir in allen Schwierigkeiten geholfen hat: <verse number="10" style="v"/>Der Mann, der mir damals in Ziklag Sauls Tod meldete, glaubte auch, er würde mir eine gute Nachricht bringen. Aber ich richtete ihn hin – so bekam er den verdienten Lohn. <verse number="11" style="v"/>Wie viel schlimmer noch ist euer Verbrechen: Ihr gottlosen Mörder habt einen rechtschaffenen Mann zu Hause in seinem Bett ermordet. Ist es da nicht erst recht meine Pflicht, euch für diese Bluttat zu bestrafen? Mit dem Tod sollt ihr dafür büßen!«</para>
+  <para style="p">
+    <verse number="12" style="v"/>David befahl, die beiden hinzurichten. Seine Diener töteten sie, schlugen ihnen Hände und Füße ab und hängten ihre Leichen beim Teich von Hebron auf. Isch-Boschets Kopf begruben sie in Abners Grab in Hebron.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">David wird König über ganz Israel</para>
+  <para style="r">(<ref loc="1CH 11:1-3">1. Chronik 11,1‒3</ref>)</para>
+  <para style="m">
+    <verse number="1" style="v"/>Aus allen Stämmen Israels kamen Gesandte zu David nach Hebron und sagten zu ihm: »Wir sind dein Volk und gehören zu dir.<note caller="+" style="f"><char style="fr" closed="false">5,1 </char><char style="ft" closed="false">Wörtlich: Siehe, wir sind dein Gebein und dein Fleisch.</char></note> <verse number="2" style="v"/>Schon damals, als Saul noch König war, bist du es gewesen, der Israels Heer in den Kampf geführt und siegreich wieder zurückgebracht hat. Zu dir hat der <char style="nd">Herr</char> gesagt: ›Du bist der Mann, der mein Volk Israel weiden soll wie ein Hirte seine Schafe. Dich habe ich zum neuen König über Israel bestimmt.‹« <verse number="3" style="v"/>Dann schloss König David einen Bund mit allen Sippenoberhäuptern Israels, die sich in Hebron versammelt hatten, und sie riefen den <char style="nd">Herrn</char> als Zeugen an. Sie salbten David und setzten ihn zum König über Israel ein.</para>
+  <para style="p">
+    <verse number="4" style="v"/>David war 30 Jahre alt, als er König wurde; er regierte insgesamt 40 Jahre lang: <verse number="5" style="v"/>zunächst siebeneinhalb Jahre in Hebron als König über Juda und dann 33 Jahre in Jerusalem als König über Israel und Juda.</para>
+  <para style="s1">David erobert Jerusalem</para>
+  <para style="r">(<ref loc="1CH 11:4-9">1. Chronik 11,4‒9</ref>)</para>
+  <para style="m">
+    <verse number="6" style="v"/>Nachdem David König geworden war, unternahm er mit seinen Soldaten einen Feldzug gegen die Stadt Jerusalem. In dieser Gegend wohnte immer noch der kanaanitische Stamm der Jebusiter. Die Einwohner verhöhnten David: »In unsere Stadt wirst du nie hereinkommen! Selbst unsere Lahmen und Blinden könnten dich in die Flucht schlagen.« Sie waren sicher, dass es David nicht gelingen würde, die Stadt einzunehmen.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Doch David und seine Truppen eroberten die Festung Zion, die später »Stadt Davids« genannt wurde. <verse number="8" style="v"/>An dem Tag, als sie Jerusalem angriffen, sagte er zu seinen Soldaten: »Wer durch den Wasserschacht in die Stadt gelangt und die Jebusiter überwältigt, soll sie umbringen, diese Blinden und Lahmen, denn ich hasse sie!« So entstand die Redensart: »Blinde und Lahme kommen mir nicht ins Haus.«</para>
+  <para style="p">
+    <verse number="9" style="v"/>Nach der Eroberung machte David die Festung zu seiner Residenz und nannte sie »Stadt Davids«. Ringsum baute er die Stadt weiter aus. Er begann damit bei den Verteidigungsanlagen und ging dann nach innen vor bis zur Festung.</para>
+  <para style="p">
+    <verse number="10" style="v"/>So wurde Davids Macht immer größer, denn der <char style="nd">Herr</char>, der allmächtige Gott, stand ihm bei.</para>
+  <para style="s1">David baut seine Macht aus</para>
+  <para style="r">(<ref loc="1CH 14:1-7">1. Chronik 14,1‒7</ref>)</para>
+  <para style="m">
+    <verse number="11" style="v"/>Eines Tages schickte König Hiram von Tyrus eine Gesandtschaft zu David. Es waren Maurer und Zimmerleute dabei, sie brachten Zedernholz mit und bauten David einen Palast. <verse number="12" style="v"/>So erlebte er, wie der <char style="nd">Herr</char> ihn als König bestätigte und ihn aus Liebe zu seinem Volk zu großem Ruhm gelangen ließ.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Nachdem David von Hebron nach Jerusalem gezogen war, heiratete er noch weitere Frauen und Nebenfrauen und bekam noch mehr Söhne und Töchter. <verse number="14" style="v"/>Die Söhne, die in Jerusalem zur Welt kamen, hießen: Schammua, Schobab, Nathan, Salomo, <verse number="15" style="v"/>Jibhar, Elischua, Nefeg, Jafia, <verse number="16" style="v"/>Elischama, Eljada und Elifelet.</para>
+  <para style="s1">Siege über die Philister</para>
+  <para style="r">(<ref loc="1CH 14:8-17">1. Chronik 14,8‒17</ref>)</para>
+  <para style="m">
+    <verse number="17" style="v"/>Als die Philister hörten, dass David zum König von Israel gekrönt worden war, zogen sie mit ihrem Heer nach Israel, um ihn zu stellen. Doch David wurde rechtzeitig gewarnt und verschanzte sich in einer Bergfestung.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Die Philister besetzten unterdessen die Refaïm-Ebene. <verse number="19" style="v"/>David fragte den <char style="nd">Herrn</char>: »Soll ich die Philister angreifen? Wirst du mir den Sieg geben?« Der <char style="nd">Herr</char> antwortete: »Greif an! Ich verspreche dir, dass ich die Philister in deine Gewalt gebe.« <verse number="20" style="v"/>David zog mit seinen Soldaten nach Baal-Perazim und besiegte die Philister. Nach der Schlacht bezeugte er: »Wie Wassermassen einen Damm durchbrechen, so hat der <char style="nd">Herr</char> heute die Schlachtreihen der Feinde vor meinen Augen durchbrochen!« Deshalb nannte David den Ort der Schlacht Baal-Perazim (»Herr des Durchbruchs«). <verse number="21" style="v"/>Auf der Flucht ließen die Philister ihre Götzenfiguren zurück. David und seine Soldaten nahmen sie als Beute mit.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Doch die Philister gaben nicht auf. Sie zogen noch einmal nach Israel und fielen auch diesmal in die Refaïm-Ebene ein. <verse number="23" style="v"/>Wieder bat David den <char style="nd">Herrn</char> um Weisung, und er antwortete ihm: »Greift sie diesmal nicht von vorne an, sondern umgeht sie und fallt ihnen bei den Balsamstauden in den Rücken! <verse number="24" style="v"/>Sobald du in den Wipfeln der Balsamsträucher ein Geräusch wie von Schritten hörst, greif sofort an! Denn dann weißt du, dass ich selbst dir vorausgegangen bin, um das Heer der Philister zu schlagen.«</para>
+  <para style="p">
+    <verse number="25" style="v"/>David tat, was der <char style="nd">Herr</char> ihm befohlen hatte. Unter seiner Führung schlugen die Israeliten die Philister und verfolgten sie von Gibeon bis weit in die Ebene hinunter nach Geser.</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">David holt die Bundeslade nach Jerusalem</para>
+  <para style="r">(<ref loc="1CH 13">1. Chronik 13</ref>; <ref loc="1CH 15:25-16:3">15,25–16,3</ref>)</para>
+  <para style="m">
+    <verse number="1" style="v"/>Noch einmal ließ David alle führenden Männer Israels zusammenkommen, es waren 30.000 Mann. <verse number="2" style="v"/>Gemeinsam mit ihnen zog er nach Baala<note caller="+" style="f"><char style="fr" closed="false">6,2 </char><char style="ft" closed="false">Das ist ein anderer Name für Kirjat-Jearim. Vgl. <char style="xt"><ref loc="1SA 7:1">1. Samuel 7,1</ref>.</char></char></note> im Stammesgebiet von Juda, um die Bundeslade von dort nach Jerusalem zu bringen. Sie war dem <char style="nd">Herrn</char> geweiht, dem allmächtigen Gott, der über den Keruben thront. <verse number="3-4" style="v"/>Man holte sie aus Abinadabs Haus auf dem Hügel und lud sie auf einen neuen Wagen, der von Rindern gezogen wurde. Abinadabs Söhne Usa und Achjo lenkten ihn. Achjo ging vor dem Gespann, <verse number="5" style="v"/>David und alle Israeliten liefen dem Wagen hinterher. Sie tanzten und lobten den <char style="nd">Herrn</char> mit allerlei Instrumenten<note caller="+" style="f"><char style="fr" closed="false">6,5 </char><char style="ft" closed="false">Wörtlich: Zypressenhölzern. – Daraus wurden vermutlich Musikinstrumente hergestellt. Oder nach anderen Handschriften: mit ganzer Hingabe und Liedern. – Vgl. <char style="xt"><ref loc="1CH 13:8">1. Chronik 13,8</ref>.</char></char></note>: mit Harfen und Lauten, mit Tamburinen, Rasseln und Zimbeln.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Bei dem Dreschplatz, der einem Mann namens Nachon gehörte, brachen die Rinder plötzlich aus, und der Wagen drohte umzustürzen. Schnell streckte Usa seine Hand aus und hielt die Bundeslade fest. <verse number="7" style="v"/>Da wurde der <char style="nd">Herr</char> sehr zornig über ihn, weil er es gewagt hatte, die Bundeslade zu berühren, und er ließ Usa auf der Stelle tot zu Boden fallen. <verse number="8" style="v"/>David war entsetzt, dass der <char style="nd">Herr</char> ihn so aus dem Leben gerissen hatte. Seitdem heißt der Dreschplatz Perez-Usa (»Entreißen Usas«).</para>
+  <para style="p">
+    <verse number="9" style="v"/>David bekam Angst vor dem <char style="nd">Herrn</char>. »Wie kann ich es jetzt noch wagen, die Bundeslade des <char style="nd">Herrn</char> zu mir zu nehmen?«, fragte er sich. <verse number="10" style="v"/>Er beschloss, sie nicht nach Jerusalem zu bringen, sondern sie im Haus von Obed-Edom, einem Leviten<note caller="+" style="f"><char style="fr" closed="false">6,10 </char><char style="ft" closed="false">»einem Leviten« ist ergänzt nach <char style="xt"><ref loc="1CH 16:4-5">1. Chronik 16,4‒5</ref>.</char></char></note> aus Gat, abzustellen. <verse number="11" style="v"/>Dort blieb sie drei Monate lang.</para>
+  <para style="p">In dieser Zeit ging es Obed-Edom und seiner ganzen Familie sehr gut, denn der <char style="nd">Herr</char> segnete sie. <verse number="12" style="v"/>Eines Tages berichtete jemand David: »Seit die Bundeslade bei Obed-Edom ist, hat der <char style="nd">Herr</char> ihn, seine Familie und all seinen Besitz reich gesegnet.« Da ging David voller Freude zu Obed-Edoms Haus, um die Bundeslade nach Jerusalem zu holen. <verse number="13" style="v"/>Als die Männer, die sie trugen, die ersten sechs Schritte auf dem Weg nach Jerusalem zurückgelegt hatten, ließ David sie anhalten und opferte dem <char style="nd">Herrn</char> einen Stier und ein Mastkalb. <verse number="14" style="v"/>Als der Zug sich wieder in Bewegung setzte, tanzte David voller Hingabe neben der Bundeslade her, um den <char style="nd">Herrn</char> zu loben. Er war nur mit einem leichten Leinenschurz bekleidet, wie ihn sonst die Priester trugen. <verse number="15" style="v"/>Jubelnd brachten David und alle Israeliten, die ihn begleiteten, die Bundeslade nach Jerusalem, und die Musiker bliesen ihre Hörner.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Als die Menge in der »Stadt Davids« ankam, schaute Davids Frau Michal, Sauls Tochter, aus dem Fenster. Sie sah, wie der König zu Ehren des <char style="nd">Herrn</char> hüpfte und tanzte, und verachtete ihn dafür.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Man trug die Bundeslade in das Zelt, das David für sie errichtet hatte, und stellte sie auf den vorgesehenen Platz in der Mitte. Dann ließ David dem <char style="nd">Herrn</char> Brand- und Friedensopfer darbringen. <verse number="18" style="v"/>Nach dem Opfer segnete er das Volk im Namen des <char style="nd">Herrn</char>, des allmächtigen Gottes. <verse number="19" style="v"/>Alle Israeliten, Männer und Frauen, erhielten einen Laib Brot, einen Rosinen- und einen Dattelkuchen. Dann machten sie sich auf den Heimweg.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Auch David ging nach Hause, um seine eigene Familie zu segnen<note caller="+" style="f"><char style="fr" closed="false">6,20 </char><char style="ft" closed="false">Oder: zu begrüßen.</char></note>. Er war noch nicht im Palast, als ihm Michal schon entgegenkam. »Ach, wie würdevoll ist heute der Herr König vor seinem Volk aufgetreten!«, spottete sie. »Bei deiner halb nackten Tanzerei hast du dich vor den Sklavinnen deiner Hofbeamten schamlos entblößt. So etwas tut sonst nur das Gesindel!« <verse number="21" style="v"/>David erwiderte: »Ich habe dem <char style="nd">Herrn</char> zu Ehren getanzt. Er hat deinem Vater und seinen Nachkommen die Herrschaft genommen und sie mir anvertraut. Mich hat er zum König über sein Volk Israel eingesetzt, und ihm zu Ehren will ich auch künftig tanzen. <verse number="22" style="v"/>Ja, ich wäre sogar bereit, mich noch tiefer zu erniedrigen als heute. Ich will mich selbst für gering halten,<note caller="+" style="f"><char style="fr" closed="false">6,22 </char><char style="ft" closed="false">Oder nach der griechischen Übersetzung: Du magst mich für gering halten …</char></note> aber die Sklavinnen, über die du eben so herablassend gesprochen hast, sie werden mich schätzen und ehren.«</para>
+  <para style="p">
+    <verse number="23" style="v"/>Michal aber bekam ihr Leben lang keine Kinder.</para>
+  <chapter number="7" style="c"/>
+  <para style="s1">Der Herr verheißt David die ewige Königsherrschaft</para>
+  <para style="r">(<ref loc="1CH 17:1-14">1. Chronik 17,1‒14</ref>)</para>
+  <para style="m">
+    <verse number="1" style="v"/>König David konnte in Frieden in seinem Palast wohnen, denn der <char style="nd">Herr</char> sorgte dafür, dass ihn die feindlichen Völker ringsum nicht angriffen. <verse number="2" style="v"/>Eines Tages sagte David zu dem Propheten Nathan: »Während ich hier in meinem Palast aus kostbarem Zedernholz wohne, steht die Bundeslade Gottes immer noch in einem dürftigen Zelt. So kann es nicht weitergehen!«</para>
+  <para style="p">
+    <verse number="3" style="v"/>Nathan ermutigte den König: »Was immer du vorhast – tu es! Der <char style="nd">Herr</char> wird dir beistehen.«</para>
+  <para style="p">
+    <verse number="4" style="v"/>Doch in der folgenden Nacht sprach der <char style="nd">Herr</char> zu Nathan: <verse number="5" style="v"/>»Geh zu David, meinem Diener, und sag ihm: ›So spricht der <char style="nd">Herr</char>: Du willst ein Haus für mich bauen? <verse number="6" style="v"/>Bis heute habe ich noch nie in einem Tempel gewohnt. Seit ich mein Volk Israel aus Ägypten befreit habe, wohnte ich immer nur in einem Zelt und zog von einem Ort zum anderen. <verse number="7" style="v"/>Während dieser ganzen Zeit habe ich von den führenden Männern Israels nur eines verlangt: Sie sollten mein Volk weiden wie ein Hirte seine Herde. Nie habe ich einem von ihnen vorgeworfen: Warum habt ihr mir noch keinen Tempel aus Zedernholz gebaut?‹</para>
+  <para style="p">
+    <verse number="8" style="v"/>Darum sollst du meinem Diener David diese Botschaft weitergeben: ›Der <char style="nd">Herr</char>, der allmächtige Gott, lässt dir sagen: Ich war es, der dich von deiner Schafherde weggeholt hat, um dich zum König über mein Volk Israel zu machen. <verse number="9" style="v"/>Was du auch unternommen hast – ich habe dir immer beigestanden. Ich habe alle deine Feinde ausgerottet und dich berühmt gemacht. Du bist in aller Welt bekannt. <verse number="10" style="v"/>Auch habe ich meinem Volk Israel eine Heimat gegeben, ein Land, in dem es bleiben und sich niederlassen kann. Keine fremden und gottlosen Völker dürfen euch mehr so unterdrücken wie zu der Zeit, <verse number="11" style="v"/>als ich Richter über euch eingesetzt hatte. Alle deine Feinde habe ich zum Schweigen gebracht und dafür gesorgt, dass sie dich in Ruhe lassen. Ich, der <char style="nd">Herr</char>, sage dir: Nicht du sollst mir ein Haus bauen, sondern ich werde dir ein Haus bauen!</para>
+  <para style="p">
+    <verse number="12" style="v"/>Wenn du alt geworden und gestorben bist, will ich einen deiner Söhne als deinen Nachfolger einsetzen und seine Herrschaft festigen. <verse number="13" style="v"/>Er wird mir einen Tempel bauen, und ich werde seinem Königtum Bestand geben für alle Zeiten. <verse number="14" style="v"/>Ich will sein Vater sein, und er wird mein Sohn sein. Wenn er sich schuldig macht, werde ich ihn von Menschenhand bestrafen lassen. <verse number="15" style="v"/>Doch nie werde ich meine Güte von ihm abwenden, wie ich es bei Saul getan habe. Ihn habe ich damals abgesetzt und dir an seiner Stelle die Herrschaft anvertraut. <verse number="16" style="v"/>Deine Nachkommen aber werden für alle Zeiten Könige sein. Niemand wird sie je vom Thron stoßen.‹«</para>
+  <para style="s1">Davids Dankgebet</para>
+  <para style="r">(<ref loc="1CH 17:15-27">1. Chronik 17,15‒27</ref>)</para>
+  <para style="m">
+    <verse number="17" style="v"/>Nathan berichtete David alles, was Gott ihm in der Nacht gesagt hatte. <verse number="18" style="v"/>Da ging David in das heilige Zelt, kniete vor dem <char style="nd">Herrn</char> nieder und begann zu beten:</para>
+  <para style="p">»Gott, mein <char style="nd">Herr</char>, wer bin ich schon, dass du gerade mich und meine Familie so weit gebracht hast? Ich bin es nicht wert. <verse number="19" style="v"/>Und nun willst du mir sogar noch mehr schenken, mein <char style="nd">Herr</char> und mein Gott! Du hast mir ein Versprechen gegeben, das bis in die ferne Zukunft reicht. So gütig bist du zu den Menschen!<note caller="+" style="f"><char style="fr" closed="false">7,19 </char><char style="ft" closed="false">Wörtlich: Und das ist die Weisung für den Menschen. – Der hebräische Text ist nicht sicher zu deuten.</char></note> <verse number="20" style="v"/>Doch was soll ich weiter davon reden? <char style="nd">Herr</char>, du kennst mich und weißt, was in mir vorgeht. <verse number="21" style="v"/>Weil du es versprochen hast und weil du es so wolltest, hast du all dies Große getan und hast es mich erkennen lassen.</para>
+  <para style="p">
+    <verse number="22" style="v"/>
+    <char style="nd">Herr</char>, mein Gott, wie mächtig bist du! Keiner ist dir gleich. Nach allem, was wir gehört haben, sind wir überzeugt: Es gibt keinen Gott außer dir. <verse number="23" style="v"/>Welches Volk auf der Erde hat solche Wunder erlebt wie wir? Ist je ein anderes Volk von seinem Gott aus der Sklaverei befreit worden, weil er es zu seinem Volk machen wollte? Große und furchterregende Dinge hast du für Israel getan, und so wurde dein Name überall berühmt. Du hast uns von der Unterdrückung der Ägypter erlöst. Andere Völker und ihre Götter hast du unseretwegen vertrieben. <verse number="24" style="v"/>Für alle Zeiten hast du Israel zu deinem Volk gemacht; und du selbst, <char style="nd">Herr</char>, bist sein Gott geworden. <verse number="25" style="v"/>So bitte ich dich nun, <char style="nd">Herr</char>, mein Gott: Lass deine Zusage für mich und meine Familie ewig gelten und löse dein Versprechen ein! <verse number="26" style="v"/>So wird dein Name für alle Zeiten berühmt sein, und man wird bekennen: ›Der <char style="nd">Herr</char>, der allmächtige Gott, ist Israels Gott.‹ Dann wird auch mein Königshaus ewig vor dir bestehen.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Du, der allmächtige <char style="nd">Herr</char> und Gott Israels, hast zu mir gesprochen. Du hast mir zugesagt: ›Ich werde dir ein Haus bauen und deinem Königtum Bestand geben.‹ Nur darum habe ich es gewagt, so zu dir zu beten. <verse number="28" style="v"/><char style="nd">Herr</char>, du bist der wahre Gott, auf dein Wort kann man sich verlassen. Du hast mir, deinem Diener, so viel Gutes verheißen. <verse number="29" style="v"/>Bitte segne mich und mein Haus. Lass für alle Zeiten einen meiner Nachkommen König sein. <char style="nd">Herr</char>, mein Gott, weil du meine Familie gesegnet hast, wird sie in Ewigkeit gesegnet sein, denn du selbst hast es mir versprochen.«</para>
+  <chapter number="8" style="c"/>
+  <para style="ms1">Kriege während Davids Herrschaft</para>
+  <para style="mr">(Kapitel <ref loc="2SA 8-10">8–10</ref>)</para>
+  <para style="s1">Davids Siege über die Nachbarvölker</para>
+  <para style="r">(<ref loc="1CH 18:1-13">1. Chronik 18,1‒13</ref>)</para>
+  <para style="m">
+    <verse number="1" style="v"/>Einige Zeit später griff David mit seinem Heer die Philister an. Er brachte ihnen eine beschämende Niederlage bei und machte ihrer Vorherrschaft im Gebiet Israels ein Ende.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Auch die Moabiter schlug David. Die Gefangenen mussten sich alle nebeneinander auf den Boden legen. Dann ging David mit einer Messschnur an der Reihe entlang. Er maß jeweils zwei Schnurlängen ab, und alle, die innerhalb dieses Bereiches lagen, wurden hingerichtet. Dann maß er jeweils eine Schnurlänge ab, und diese Gefangenen durften am Leben bleiben. Sie mussten sich aber David unterwerfen und ihm regelmäßig Tribut zahlen.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Als König Hadad-Eser, der Sohn von Rehob aus Zoba in Nordsyrien, mit seinen Truppen auszog, um am Euphrat seine Macht wiederherzustellen, griff David ihn an und besiegte ihn. <verse number="4" style="v"/>Davids Heer nahm 1700 Reiter und 20.000 Fußsoldaten gefangen. Von den Zugpferden der Streitwagen behielt David 100 für sich, allen anderen ließ er die Fußsehnen durchschneiden.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Die Syrer aus Damaskus wollten König Hadad-Eser von Zoba zu Hilfe kommen. Da griff David auch sie an. In dieser Schlacht fielen 22.000 von ihnen. <verse number="6" style="v"/>David ließ das Gebiet um Damaskus besetzen und machte die Syrer zu seinen Untertanen. Sie mussten ihm Tribut zahlen. Der <char style="nd">Herr</char> half David bei allen seinen Kriegszügen und schenkte ihm den Sieg. <verse number="7" style="v"/>David erbeutete auch die goldenen Schilde von Hadad-Esers Soldaten und brachte sie nach Jerusalem. <verse number="8" style="v"/>Aus den Städten Tebach und Berotai, die beide Hadad-Eser gehört hatten, nahm er eine große Menge Bronze mit.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Als König Toï von Hamat hörte, dass David Hadad-Esers Heer besiegt hatte, <verse number="10" style="v"/>sandte er seinen Sohn Joram<note caller="+" style="f"><char style="fr" closed="false">8,10 </char><char style="ft" closed="false">Joram ist die jüdische Form von Hadoram. Vgl. <char style="xt"><ref loc="1CH 18:10">1. Chronik 18,10</ref>.</char></char></note> zu David. Er sollte ihm Grüße ausrichten und ihm zu seinem Sieg gratulieren. Denn Hadad-Eser und Toï waren verfeindet und hatten schon gegeneinander Krieg geführt. Joram brachte David Geschenke mit: Gefäße aus Gold, Silber und Bronze. <verse number="11-12" style="v"/>David brachte sie in das Heiligtum und weihte sie dem <char style="nd">Herrn</char>, ebenso die Schätze aus Gold und Silber, die er bei seinen Eroberungszügen gegen die Edomiter, Moabiter, Ammoniter, Philister, Amalekiter und gegen König Hadad-Eser aus Zoba, den Sohn von Rehob, erbeutet hatte.</para>
+  <para style="p">
+    <verse number="13" style="v"/>David wurde noch berühmter, als er die Edomiter in einer Schlacht im Salztal besiegte. 18.000 von ihnen kamen dabei um. <verse number="14" style="v"/>David errichtete im ganzen Land Garnisonen und machte die Bewohner von Edom zu seinen Untertanen. Der <char style="nd">Herr</char> half ihm bei allen Kriegszügen und schenkte ihm stets den Sieg.</para>
+  <para style="s1">Davids oberste Beamte</para>
+  <para style="r">(<ref loc="1CH 18:14-17">1. Chronik 18,14‒17</ref>)</para>
+  <para style="m">
+    <verse number="15" style="v"/>Solange David König über ganz Israel war, sorgte er für Recht und Gerechtigkeit in seinem Volk. <verse number="16" style="v"/>Joab, der Sohn von Davids Schwester Zeruja, war der oberste Befehlshaber über das Heer. Joschafat, ein Sohn von Ahilud, war Berater des Königs. <verse number="17" style="v"/>Zadok, ein Sohn von Ahitub, und Ahimelech, ein Sohn von Abjatar, waren die obersten Priester. Seraja war Hofsekretär. <verse number="18" style="v"/>Benaja, ein Sohn von Jojada, hatte den Befehl über die Leibwache des Königs. Alle Söhne Davids hatten den Rang von Priestern.</para>
+  <chapter number="9" style="c"/>
+  <para style="s1">David beschenkt Jonatans Sohn</para>
+  <para style="m">
+    <verse number="1" style="v"/>David begann nachzuforschen, ob noch jemand von Sauls Familie lebte. »Ich möchte ihm Gutes tun und so mein Versprechen einlösen, das ich Jonatan gegeben habe«,<note caller="+" style="f"><char style="fr" closed="false">9,1 </char><char style="ft" closed="false">Vgl. <char style="xt"><ref loc="1SA 20:14-17">1. Samuel 20,14‒17</ref>.</char></char></note> sagte er.</para>
+  <para style="p">
+    <verse number="2" style="v"/>An Sauls Königshof hatte ein Diener namens Ziba gearbeitet. Er wurde zu David gerufen, und der König fragte ihn: »Bist du Ziba?« »Ja, mein Herr«, antwortete der Mann. <verse number="3" style="v"/>David erkundigte sich: »Weißt du, ob noch jemand von Sauls Familie lebt? Ich möchte ihm Gutes tun, damit er Gottes Güte durch mich erfährt.« Ziba erwiderte: »Ein Sohn von Jonatan lebt noch. Er <char style="add">wurde als Kind an den Beinen verletzt und</char> kann seitdem nicht mehr richtig laufen.« <verse number="4" style="v"/>»Wo ist er?«, wollte David wissen. Ziba antwortete: »Er wohnt bei Machir, einem Sohn von Ammiël, in Lo-Dabar.« <verse number="5" style="v"/>Sofort ließ David ihn an den Königshof holen.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Als Mefi-Boschet, der Sohn von Jonatan und Enkel von Saul, vor den König trat, verbeugte er sich tief und warf sich vor ihm zu Boden. »Du also bist Mefi-Boschet«, sagte David. »Ja, ich bin dein ergebenster Diener«, antwortete er. <verse number="7" style="v"/>David ermutigte ihn: »Du brauchst keine Angst zu haben. Dein Vater Jonatan war mein bester Freund, und ich will dir, seinem Sohn, etwas Gutes tun. Ich gebe dir nun alle Felder zurück, die deinem Großvater Saul gehörten. Außerdem möchte ich, dass du täglich als mein Gast bei mir am Tisch isst.«</para>
+  <para style="p">
+    <verse number="8" style="v"/>Erneut warf sich Mefi-Boschet vor dem König zu Boden und rief: »Womit habe ich deine Freundlichkeit verdient? Ich bin doch so unbedeutend wie ein toter Hund!« <verse number="9" style="v"/>David rief Ziba, den Diener von Saul, wieder zu sich und erklärte ihm: »Ich habe den ganzen Besitz von Saul und seiner Familie seinem Enkel Mefi-Boschet vermacht! <verse number="10-11" style="v"/>Du sollst nun zusammen mit deinen Söhnen und Knechten für ihn die Felder bestellen. Bring ihm die Ernte ein, damit seine Familie von dem Ertrag leben kann. Mefi-Boschet selbst aber, der Enkel deines früheren Herrn, soll täglich mein Gast sein und bei mir am Tisch essen, als wäre er mein Sohn.«</para>
+  <para style="p">Ziba, der fünfzehn Söhne und zwanzig Knechte hatte, antwortete dem König: »Ich bin dein ergebener Diener. Ich werde alles ausführen, was du, mein Herr, mir befohlen hast.« <verse number="12-13" style="v"/>So wurden alle, die zu Zibas Familie gehörten, Mefi-Boschets Diener. Mefi-Boschet, der nicht mehr richtig laufen konnte, wohnte in Jerusalem und aß jeden Tag mit König David zusammen. Er hatte einen kleinen Sohn namens Micha.</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">König Hanun beleidigt Davids Gesandte</para>
+  <para style="r">(<ref loc="1CH 19:1-5">1. Chronik 19,1‒5</ref>)</para>
+  <para style="m">
+    <verse number="1" style="v"/>Einige Zeit später starb <char style="add">Nahasch,</char> der König der Ammoniter, und sein Sohn Hanun trat die Nachfolge an. <verse number="2" style="v"/>David dachte: »König Nahasch war mir immer wohlgesinnt. Darum will ich mich nun seinem Sohn Hanun gegenüber freundlich verhalten.« Er schickte eine Gesandtschaft zu Hanun, um ihm sein Beileid auszusprechen.</para>
+  <para style="p">Als aber Davids Boten zum ammonitischen Königshof kamen, <verse number="3" style="v"/>sagten die Fürsten des Landes zu König Hanun: »Glaubst du wirklich, David hat diese Männer nur zu dir gesandt, um deinem Vater die letzte Ehre zu erweisen und dir sein Beileid auszusprechen? Das ist doch nur ein Vorwand! Spione sind sie, die unsere Hauptstadt auskundschaften sollen, weil David sie bald angreifen und erobern will!« <verse number="4" style="v"/>Da nahm Hanun Davids Gesandte gefangen, ließ ihnen den Bart auf einer Seite abrasieren und die Kleider bis über das Gesäß abschneiden. Dann jagte er sie davon.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Als David das erfuhr, schickte er seinen Gesandten Boten entgegen und ließ ihnen ausrichten: »Bleibt in Jericho, bis euer Bart wieder nachgewachsen ist, und kommt erst dann heim.« David wollte ihnen die Schande ersparen, mit abrasiertem Bart zurückkehren zu müssen.</para>
+  <para style="s1">Es kommt zum Krieg mit den Ammonitern</para>
+  <para style="r">(<ref loc="1CH 19:6-15">1. Chronik 19,6‒15</ref>)</para>
+  <para style="m">
+    <verse number="6" style="v"/>Die Ammoniter wussten genau, dass sie David durch diese Tat schwer beleidigt hatten. Darum warben sie 20.000 syrische Söldner aus Bet-Rehob und Zoba an, außerdem den König von Maacha mit einem Heer von 1000 Mann und schließlich noch 12.000 Soldaten aus Tob. <verse number="7" style="v"/>David hörte davon und befahl Joab, sofort mit dem ganzen Heer gegen die Feinde auszurücken. <verse number="8" style="v"/>Die Ammoniter stellten sich vor den Toren ihrer Hauptstadt Rabba zur Schlacht auf, während die verbündeten Syrer aus Zoba, Rehob, Tob und Maacha in einiger Entfernung auf offenem Feld Stellung bezogen.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Als Joab merkte, dass ihm von vorne und von hinten ein Angriff drohte, teilte er sein Heer. Er selbst wollte mit den besten Soldaten den Kampf gegen die Syrer aufnehmen. <verse number="10" style="v"/>Den Rest des Heeres übergab er dem Kommando seines Bruders Abischai, der gegen die Ammoniter kämpfen sollte. <verse number="11" style="v"/>Bevor die beiden Heere sich trennten, sagte Joab zu seinem Bruder: »Wenn die Syrer uns überlegen sind, dann komm uns mit deiner Truppe zu Hilfe. Sind die Ammoniter stärker als ihr, dann helfe ich dir mit meinen Soldaten. <verse number="12" style="v"/>Sei mutig und entschlossen! Wir wollen für unser Volk kämpfen und für die Städte, die Gott uns gegeben hat. Der <char style="nd">Herr</char> aber möge tun, was er für richtig hält.«</para>
+  <para style="p">
+    <verse number="13" style="v"/>Dann griff Joab mit seinem Heer die Syrer an und schlug sie in die Flucht. <verse number="14" style="v"/>Als das die Ammoniter sahen, flohen auch sie vor Abischai und zogen sich in die Stadt zurück. Da stellte Joab den Kampf gegen die Ammoniter ein und kehrte nach Jerusalem um.</para>
+  <para style="s1">Der Krieg gegen die Syrer</para>
+  <para style="r">(<ref loc="1CH 19:16-19">1. Chronik 19,16‒19</ref>)</para>
+  <para style="m">
+    <verse number="15" style="v"/>Die Syrer wollten sich mit der Niederlage gegen die Israeliten nicht abfinden, darum riefen sie noch einmal alle ihre Truppen zusammen. <verse number="16" style="v"/>Hadad-Eser ließ auch die syrischen Stämme, die jenseits des Euphrat in Mesopotamien wohnten, zum Kampf ausrücken. Schobach, der oberste Heerführer von Hadad-Eser, führte die syrischen Truppen nach Helam. <verse number="17" style="v"/>Als David das erfuhr, zog er alle wehrfähigen Israeliten ein, überquerte mit seinem Heer den Jordan und marschierte bis nach Helam. Die Syrer stellten sich zum Kampf auf, und eine heftige Schlacht begann. <verse number="18" style="v"/>Wieder wurden die Syrer in die Flucht geschlagen. Doch diesmal erlitten sie schwere Verluste: 700 Wagenlenker und 40.000 Reiter fielen. David hatte den Heerführer Schobach so schwer verwundet, dass er noch auf dem Schlachtfeld starb.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Die besiegten syrischen Könige, die bis dahin Hadad-Esers Untertanen gewesen waren, schlossen Frieden mit den Israeliten und stellten sich in ihren Dienst. Von da an wagten die Syrer nicht mehr, die Ammoniter zu unterstützen.</para>
+  <chapter number="11" style="c"/>
+  <para style="ms1">David und Batseba – Salomos Geburt</para>
+  <para style="mr">(Kapitel <ref loc="2SA 11-12">11–12</ref>)</para>
+  <para style="s1">David begeht Ehebruch</para>
+  <para style="m">
+    <verse number="1" style="v"/>Als der Frühling kam, begann wieder die Zeit, in der die Könige ihre Feldzüge unternahmen. Auch König David ließ seine Soldaten ausrücken: Unter Joabs Führung zogen seine Offiziere mit dem ganzen Heer Israels in den Krieg gegen die Ammoniter. Sie verwüsteten das Land der Feinde und belagerten die Hauptstadt Rabba. David selbst blieb in Jerusalem.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Eines frühen Abends stand David auf, nachdem er sich eine Weile ausgeruht hatte, und ging auf dem flachen Dach seines Palasts spazieren. Da fiel sein Blick auf eine Frau, die im Hof eines Nachbarhauses ein Bad nahm. Sie war sehr schön. <verse number="3" style="v"/>David wollte unbedingt wissen, wer sie war, und schickte einen Diener los, der es herausfinden sollte. Man berichtete ihm: »Die Frau heißt Batseba. Sie ist eine Tochter von Eliam und verheiratet mit Uria, einem Hetiter.« <verse number="4" style="v"/>David sandte Boten zu ihr und ließ sie holen. Batseba kam, und er schlief mit ihr. Danach kehrte sie in ihr Haus zurück. Gerade vorher hatte sie die Reinigung vorgenommen, die das Gesetz nach der monatlichen Blutung vorschreibt.<note caller="+" style="f"><char style="fr" closed="false">11,4 </char><char style="ft" closed="false">Vgl. <char style="xt"><ref loc="LEV 15:19">3. Mose 15,19</ref>.<ref loc="LEV 15:29">29</ref>.</char></char></note></para>
+  <para style="p">
+    <verse number="5" style="v"/>Nach einiger Zeit merkte Batseba, dass sie schwanger war. Sie schickte einen Boten zu David, der es ihm sagen sollte. <verse number="6" style="v"/>Kaum hatte der König das gehört, ließ er Joab melden: »Schickt sofort den Hetiter Uria zu mir!« Joab gehorchte und schickte den Mann zu David. <verse number="7" style="v"/>Als Uria ankam, erkundigte sich David zunächst, ob es Joab und den Soldaten gut gehe und wie weit die Belagerung der Stadt schon vorangeschritten sei.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Schließlich forderte er Uria auf: »Geh nun nach Hause zu deiner Frau, bade dich und ruh dich aus!« Uria war noch nicht weit gekommen, als ihn ein Diener einholte und ihm ein Geschenk des Königs überreichte. <verse number="9" style="v"/>Doch Uria ging nicht nach Hause, sondern zur königlichen Leibwache am Tor des Palasts. Dort übernachtete er.</para>
+  <para style="p">
+    <verse number="10" style="v"/>David hörte davon und ließ Uria gleich am nächsten Morgen zu sich rufen. »Warum hast du nicht zu Hause bei deiner Frau übernachtet?«, fragte er ihn. »Du warst doch jetzt so lange von ihr getrennt!« <verse number="11" style="v"/>Uria antwortete: »Die Bundeslade steht nur in einem Zelt, und auch die Soldaten Israels und Judas müssen mit Zelten auskommen. Selbst der Heerführer Joab und seine Offiziere übernachten auf offenem Feld am Boden. Und da sollte ich nach Hause gehen, essen, trinken und mit meiner Frau schlafen? So wahr du, mein Herr, lebst: Niemals könnte ich so etwas tun!«</para>
+  <para style="p">
+    <verse number="12" style="v"/>David bat ihn: »Bleib heute noch hier, Uria. Morgen lasse ich dich dann wieder ziehen.« So blieb Uria noch in Jerusalem.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Am Abend lud David ihn zum Essen ein und machte ihn völlig betrunken. Doch auch diesmal ging Uria nicht nach Hause, sondern schlief wieder bei der Leibwache am Palast.</para>
+  <para style="s1">Uria muss sterben</para>
+  <para style="m">
+    <verse number="14" style="v"/>Am nächsten Morgen schrieb David einen Brief an Joab und gab ihn Uria mit. <verse number="15" style="v"/>Darin befahl er seinem Heerführer: »Stell Uria an die vorderste Front, wo der Kampf am härtesten tobt! Keiner von euch soll ihm Deckung geben. Zieht euch mitten in der Schlacht von ihm zurück, damit er getroffen wird und stirbt.«</para>
+  <para style="p">
+    <verse number="16" style="v"/>Joab hatte die Feinde in der belagerten Stadt schon länger beobachtet, und so wusste er, wo ihre gefährlichsten Leute standen. Genau dort setzte er Uria ein. <verse number="17" style="v"/>Als nun die Ammoniter aus der Stadt herausstürmten und angriffen, wurden einige Israeliten getötet, und auch der Hetiter Uria war unter den Gefallenen.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Joab ließ David über den Ablauf des Kampfes genau unterrichten. <verse number="19" style="v"/>Er sagte dem Boten, der die Nachricht überbringen sollte: »Wenn du dem König über das Geschehene berichtest, <verse number="20" style="v"/>wird er vielleicht zornig und hält dir vor: ›Warum seid ihr so nah an die Stadtmauer herangerückt? Habt ihr denn nicht daran gedacht, dass die Feinde von der Mauer aus auf euch schießen würden? <verse number="21" style="v"/>Wisst ihr nicht mehr, wie es damals in Tebez Gideons Sohn<note caller="+" style="f"><char style="fr" closed="false">11,21 </char><char style="ft" closed="false">Wörtlich: Jerubbaals Sohn. – Gideon wurde auch Jerubbaal genannt. Vgl. <char style="xt"><ref loc="JDG 7:1">Richter 7,1</ref>.</char></char></note> Abimelech erging? Von einer Frau wurde er umgebracht! Sie warf von der Mauer der Festung einen Mühlstein und erschlug ihn damit.<note caller="+" style="f"><char style="fr" closed="false">11,21 </char><char style="ft" closed="false">Vgl. <char style="xt"><ref loc="JDG 9:51-53">Richter 9,51‒53</ref>.</char></char></note> Warum also habt ihr so nahe an der Stadtmauer gekämpft?‹ Wenn David dir solche Vorwürfe macht, dann erwidere ihm, dass auch der Hetiter Uria gefallen ist.«</para>
+  <para style="p">
+    <verse number="22" style="v"/>Der Bote machte sich auf den Weg und ging in Jerusalem sofort zum König. Er richtete David alles aus, was Joab ihm aufgetragen hatte. <verse number="23" style="v"/>»Die Feinde waren stärker als wir«, erzählte er, »sie stürmten aus der Stadt und griffen uns auf freiem Feld an. Wir konnten sie bis unmittelbar vor die Tore der Stadt zurückdrängen. <verse number="24" style="v"/>Doch da schossen die Bogenschützen von der Mauer auf uns herunter. Einige deiner Soldaten wurden tödlich getroffen. Auch der Hetiter Uria ist gefallen.« <verse number="25" style="v"/>Da antwortete David: »Geh zurück und melde Joab: ›Lass dich durch diese Niederlage nicht entmutigen! Der Krieg ist eben so grausam: Mal trifft es diesen, mal jenen. Kämpfe entschlossen weiter gegen die Stadt, bis du sie zerstört hast.‹ Mit diesen Worten sollst du Joab aufmuntern!«</para>
+  <para style="p">
+    <verse number="26" style="v"/>Als Batseba hörte, dass Uria gefallen war, hielt sie die Totenklage für ihren Mann. <verse number="27" style="v"/>Gleich nach der Trauerzeit ließ David sie zu sich in den Palast holen und heiratete sie. Bald darauf brachte sie einen Sohn zur Welt.</para>
+  <para style="p">Der <char style="nd">Herr</char> aber verabscheute, was David getan hatte.</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">Du bist der Mann!</para>
+  <para style="m">
+    <verse number="1" style="v"/>Der <char style="nd">Herr</char> sandte den Propheten Nathan zu David.</para>
+  <para style="p">Als Nathan vor dem König stand, sagte er zu ihm: »Ich muss dir etwas erzählen: Ein reicher und ein armer Mann lebten in derselben Stadt. <verse number="2" style="v"/>Der Reiche hatte sehr viele Schafe und Rinder, <verse number="3" style="v"/>der Arme aber besaß nichts außer einem kleinen Lamm, das er erworben hatte. Er versorgte es liebevoll und zog es zusammen mit seinen Kindern groß. Es durfte sogar aus seinem Teller essen und aus seinem Becher trinken, und nachts schlief es in seinen Armen. Es war für ihn wie eine Tochter. <verse number="4" style="v"/>Eines Tages bekam der reiche Mann Besuch. Er wollte seinem Gast, der einen weiten Weg hinter sich hatte, etwas zu essen anbieten. Aber er brachte es nicht über sich, eines seiner eigenen Schafe oder Rinder zu schlachten. Darum nahm er dem Armen sein einziges Lamm weg und bereitete es für seinen Besucher zu.«</para>
+  <para style="p">
+    <verse number="5" style="v"/>David wurde vom Zorn gepackt und brauste auf: »So wahr der <char style="nd">Herr</char> lebt: Dieser Mann hat den Tod verdient! <verse number="6" style="v"/>Dem Armen soll er vier Lämmer geben für das eine, das er ihm rücksichtslos weggenommen hat.«</para>
+  <para style="p">
+    <verse number="7" style="v"/>Da sagte Nathan zu David: »Du bist dieser Mann! Der <char style="nd">Herr</char>, der Gott Israels, lässt dir sagen: ›Ich habe dich zum König von Israel erwählt und dich beschützt, als Saul dich umbringen wollte. <verse number="8" style="v"/>Den gesamten Reichtum Sauls und auch seine Frauen habe ich dir gegeben. Ganz Israel und Juda gehören dir. Und sollte dir das noch zu wenig sein, würde ich dir sogar noch mehr schenken. <verse number="9" style="v"/>Warum also missachtest du meinen Willen? Warum hast du getan, was ich verabscheue? Den Hetiter Uria hast du ermordet und dann seine Frau geheiratet. Ja, du, David, bist der Mörder Urias, denn du hast angeordnet, dass Uria im Kampf gegen die Ammoniter fallen sollte! <verse number="10" style="v"/>Du hast dich mir widersetzt und Uria die Frau weggenommen. Darum soll dein Königshaus von nun an immer wieder das Schwert zu spüren bekommen.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Ich, der <char style="nd">Herr</char>, sage dir: Jemand aus deiner eigenen Familie wird dich ins Unglück stürzen. Ich selbst werde dafür sorgen. Du musst erleben, wie ein Mann, der dir sehr nahesteht, dir deine Frauen wegnimmt und in aller Öffentlichkeit mit ihnen schläft. <verse number="12" style="v"/>Was du, David, heimlich getan hast, das lasse ich am helllichten Tag geschehen. Ganz Israel soll Zeuge sein.‹«</para>
+  <para style="p">
+    <verse number="13" style="v"/>Da bekannte David: »Ich habe gegen den <char style="nd">Herrn</char> gesündigt.« Nathan erwiderte: »Der <char style="nd">Herr</char> hat dir vergeben, du wirst nicht sterben. <verse number="14" style="v"/>Doch wegen deiner Tat spotten die Feinde Gottes noch mehr über ihn. Darum muss der Sohn, den Batseba dir geboren hat, sterben.«</para>
+  <para style="p">
+    <verse number="15" style="v"/>Nach diesen Worten ging Nathan wieder nach Hause.</para>
+  <para style="s1">Davids Sohn stirbt</para>
+  <para style="m">Der <char style="nd">Herr</char> ließ das Kind, das Urias Frau geboren hatte, todkrank werden. <verse number="16" style="v"/>David zog sich zurück, um für seinen Sohn zu beten. Er fastete tagelang und schlief nachts auf dem Fußboden. <verse number="17" style="v"/>Seine Hofbeamten kamen und versuchten, ihn zum Aufstehen zu bewegen, doch ohne Erfolg. Auch zum Essen ließ er sich nicht überreden.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Am siebten Tag starb das Kind. Keiner der Diener wagte es, David mitzuteilen, denn sie befürchteten das Schlimmste. »Schon als das Kind noch lebte, ließ er sich durch nichts aufmuntern«, sagten sie zueinander. »Wie wird er sich erst verhalten, wenn er erfährt, dass es tot ist? Er könnte sich etwas antun!«</para>
+  <para style="p">
+    <verse number="19" style="v"/>Doch als David merkte, wie die Hofleute miteinander flüsterten, ahnte er, was geschehen war. »Ist der Junge tot?«, fragte er, und sie antworteten: »Ja, er ist gestorben.«</para>
+  <para style="p">
+    <verse number="20" style="v"/>Da stand David auf, wusch sich, pflegte sich mit wohlriechenden Salben und zog frische Kleider an. Dann ging er ins Heiligtum und warf sich nieder, um den <char style="nd">Herrn</char> anzubeten. Danach kehrte er in den Palast zurück und ließ sich etwas zu essen bringen. <verse number="21" style="v"/>»Wir verstehen dich nicht«, sagten seine Diener, »als das Kind noch lebte, hast du seinetwegen gefastet und geweint. Doch jetzt, wo es gestorben ist, stehst du auf und isst wieder.« <verse number="22" style="v"/>David erwiderte: »Solange mein Sohn lebte, habe ich gefastet und geweint, weil ich dachte: Vielleicht hat der <char style="nd">Herr</char> Erbarmen mit mir und lässt ihn am Leben. <verse number="23" style="v"/>Doch nun ist er gestorben – warum soll ich jetzt noch fasten? Kann ich ihn damit etwa zurückholen? Nein, er kehrt nicht mehr zu mir zurück, ich aber werde eines Tages zu ihm gehen!«</para>
+  <para style="p">
+    <verse number="24" style="v"/>Dann ging David zu seiner Frau Batseba und tröstete sie. Er schlief mit ihr, und sie brachte wieder einen Sohn zur Welt. David nannte ihn Salomo (»der Friedliche«). Der <char style="nd">Herr</char> liebte das Kind, <verse number="25" style="v"/>darum gab er dem Propheten Nathan den Auftrag, hinzugehen und dem Jungen einen zweiten Namen zu geben: Jedidja (»Liebling des Herrn«).</para>
+  <para style="s1">Die Eroberung der Stadt Rabba</para>
+  <para style="r">(<ref loc="1CH 20:1-3">1. Chronik 20,1‒3</ref>)</para>
+  <para style="m">
+    <verse number="26" style="v"/>Noch immer belagerte Joab mit dem israelitischen Heer Rabba, die Hauptstadt der Ammoniter. Es gelang ihm, einen Bezirk zu erobern, der »Königsstadt« genannt wurde. <verse number="27" style="v"/>Er schickte Boten zu David und ließ ihm ausrichten: »Ich habe Rabba angegriffen und nun schon die Wasserversorgung der Stadt<note caller="+" style="f"><char style="fr" closed="false">12,27 </char><char style="ft" closed="false">Wörtlich: die Wasserstadt. – Eventuell sind die am Fluss gelegenen Stadtteile gemeint.</char></note> unter Kontrolle gebracht. <verse number="28" style="v"/>Darum sammle jetzt den Rest deines Heeres und stürme die Stadt. Du sollst sie einnehmen, nicht ich. Sonst werde ich als Eroberer gefeiert!«</para>
+  <para style="p">
+    <verse number="29" style="v"/>Da zog David mit den übrigen Soldaten nach Rabba. Er griff die Stadt an und eroberte sie. <verse number="30" style="v"/>Die Israeliten machten reiche Beute und schafften sie aus Rabba fort. David nahm König Hanun die Krone ab und setzte sie selbst auf. Sie wog 35 Kilogramm, war aus reinem Gold und mit einem kostbaren Edelstein besetzt. <verse number="31" style="v"/>Die Einwohner von Rabba verschleppte David und verurteilte sie zur Zwangsarbeit mit Steinsägen, eisernen Pickeln und Äxten; außerdem mussten sie Ziegel brennen. Ebenso erging es den Einwohnern der anderen ammonitischen Städte.</para>
+  <para style="p">Als der Krieg vorüber war, kehrten David und sein Heer nach Jerusalem zurück.</para>
+  <chapter number="13" style="c"/>
+  <para style="ms1">Aufstände gegen David: Absalom und Scheba</para>
+  <para style="mr">(Kapitel <ref loc="2SA 13-20">13–20</ref>)</para>
+  <para style="s1">Tamar wird vergewaltigt</para>
+  <para style="m">
+    <verse number="1" style="v"/>Absalom, einer von Davids Söhnen, hatte eine schöne Schwester namens Tamar. Eines Tages verliebte sich ihr Halbbruder Amnon in sie. Er war Davids ältester Sohn. <verse number="2" style="v"/>Amnon begehrte Tamar so sehr, dass er krank wurde. Er sah keine Möglichkeit, an sie heranzukommen, denn die unverheirateten Töchter des Königs wurden gut behütet.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Amnon war mit Jonadab befreundet, einem Sohn von Davids Bruder Schamma. Jonadab war ein sehr kluger Mann. <verse number="4" style="v"/>Er fragte Amnon: »Was ist los mit dir, Königssohn? Jeden Morgen siehst du trauriger aus! Willst du es mir nicht sagen?« Da gestand Amnon: »Ich habe mich in Absaloms Schwester Tamar verliebt.« <verse number="5" style="v"/>Jonadab riet seinem Freund: »Leg dich doch ins Bett und stell dich krank! Wenn dein Vater dich besucht, dann frag ihn, ob nicht deine Schwester Tamar dir etwas zu essen bringen könnte. Sag ihm: ›Wenn ich zuschauen kann, wie sie mir etwas Gutes kocht, dann bekomme ich bestimmt wieder Appetit und esse etwas. Sie selbst soll es mir reichen.‹«</para>
+  <para style="p">
+    <verse number="6" style="v"/>So legte Amnon sich ins Bett und stellte sich krank. Als der König kam, um nach ihm zu sehen, bat Amnon: »Könnte nicht meine Schwester Tamar zu mir kommen? Sie soll vor meinen Augen zwei Kuchen in der Pfanne backen und sie mir bringen.«</para>
+  <para style="p">
+    <verse number="7" style="v"/>Sofort schickte David einen Diener zu dem Haus, wo Tamar wohnte, und ließ ihr sagen: »Dein Bruder Amnon ist krank. Geh doch zu ihm und mach ihm etwas zu essen!« <verse number="8" style="v"/>Tamar kam zu Amnon. Während sie einen Teig knetete, die Kuchen formte und sie in der Pfanne backte, lag er da und schaute ihr zu. <verse number="9" style="v"/>Als sie ihm die fertigen Kuchen bringen wollte, weigerte sich Amnon zu essen. Stattdessen befahl er: »Alle Diener sollen das Zimmer verlassen!« Danach <verse number="10" style="v"/>sagte er zu Tamar: »Ich will nur von dir bedient werden! Bring mir das Essen ins Schlafzimmer!« Tamar nahm die Kuchen und brachte sie ihrem Bruder ans Bett.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Als sie ihm das Essen reichen wollte, packte er sie und sagte: »Komm, meine Schwester, leg dich doch zu mir!« <verse number="12" style="v"/>Sie rief: »Nein, Amnon, zwing mich nicht zu so etwas. Das ist in Israel doch verboten. Ein solches Verbrechen darfst du nicht begehen! <verse number="13" style="v"/>Was soll dann aus mir werden? Denk doch, welche Schande das für mich wäre! Und du würdest in ganz Israel als gewissenloser Kerl dastehen. Warum redest du nicht mit dem König? Bestimmt erlaubt er dir, mich zu heiraten.« <verse number="14" style="v"/>Doch Amnon wollte nicht auf sie hören. Er stürzte sich auf sie und vergewaltigte sie.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Aber dann schlug seine große Liebe in glühenden Hass um. Ja, er hasste Tamar nun mehr, als er sie vorher geliebt hatte. »Mach, dass du fortkommst!«, schrie er sie an. <verse number="16" style="v"/>»Nein«, flehte sie, »tu das nicht! Wenn du mich jetzt wegjagst, ist das noch viel schlimmer als das, was du mir vorhin angetan hast.« Aber auch jetzt ließ er sich nichts von ihr sagen. <verse number="17" style="v"/>Er rief seinen Kammerdiener und befahl: »Jag die da hinaus und verriegle die Tür hinter ihr!« <verse number="18" style="v"/>Der Diener warf sie hinaus und verschloss die Tür.</para>
+  <para style="p">Tamar trug ein weites Gewand mit langen Ärmeln. So kleideten sich die Töchter des Königs, die noch Jungfrauen waren. <verse number="19" style="v"/>In ihrer Verzweiflung zerriss sie ihr Gewand, streute sich Asche auf den Kopf und legte die Hand darauf. Laut weinend lief sie davon. <verse number="20" style="v"/>Zu Hause fragte Absalom sie: »Hat Amnon dich etwa belästigt? Sag niemandem etwas davon, denn er ist dein Bruder. Nimm die Sache nicht zu schwer!« Von da an wohnte Tamar einsam im Haus ihres Bruders Absalom.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Als König David davon erfuhr, wurde er sehr zornig. Doch er brachte es nicht übers Herz, Amnon zu bestrafen, denn er war sein ältester Sohn, und David liebte ihn besonders.<note caller="+" style="f"><char style="fr" closed="false">13,21 </char><char style="ft" closed="false">»Doch … besonders« ist nach der griechischen Übersetzung ergänzt.</char></note> <verse number="22" style="v"/>Absalom sprach kein Wort mehr mit Amnon, er machte ihm keine Vorwürfe, aber er grüßte ihn auch nicht. Er hasste seinen Bruder, weil er seine Schwester Tamar vergewaltigt hatte.</para>
+  <para style="s1">Absaloms Rache</para>
+  <para style="m">
+    <verse number="23" style="v"/>Zwei Jahre vergingen. Absalom ließ in Baal-Hazor in der Nähe der Stadt Ephraim seine Schafe scheren. Bei dieser Gelegenheit wollte er einmal alle Söhne des Königs zu einem Fest einladen. <verse number="24" style="v"/>Er ging zu König David und sagte zu ihm: »Mein Vater, ich lasse gerade meine Schafe scheren. Und da wäre es mir eine Ehre, wenn der König und sein Hofstaat meine Einladung zu einem Fest annehmen würden.«</para>
+  <para style="p">
+    <verse number="25" style="v"/>Doch David wehrte ab: »Nein, mein Sohn, wir können nicht alle kommen. Wir würden dir nur zur Last fallen!« Absalom versuchte, seinen Vater zu überreden, aber David nahm die Einladung nicht an. Er segnete seinen Sohn und verabschiedete sich von ihm.</para>
+  <para style="p">
+    <verse number="26" style="v"/>Schließlich bat Absalom: »Wenn du selbst schon nicht willst, dann lass doch wenigstens meinen Bruder Amnon mitkommen.« »Warum gerade Amnon?«, fragte David. <verse number="27" style="v"/>Doch Absalom ließ nicht locker, und so gestattete David Amnon und seinen anderen Söhnen, mit nach Baal-Hazor zu gehen.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Ehe das Fest begann, befahl Absalom seinen Dienern: »Sobald Amnon vom Wein etwas angeheitert ist, gebe ich euch ein Zeichen. Dann bringt ihr ihn um! Ihr habt nichts zu befürchten, denn ich habe es euch befohlen und trage die volle Verantwortung dafür. Nur Mut, erweist euch als tapfere Männer!«</para>
+  <para style="p">
+    <verse number="29" style="v"/>Die Diener führten den Befehl aus und ermordeten Amnon. Entsetzt sprangen die anderen Königssöhne auf und flohen auf ihren Maultieren. <verse number="30" style="v"/>Noch bevor sie in Jerusalem ankamen, war ihnen das Gerücht vorausgeeilt. Man berichtete dem König: »Absalom hat alle deine Söhne umgebracht, kein einziger hat überlebt!«</para>
+  <para style="p">
+    <verse number="31" style="v"/>Der König fuhr auf, zerriss seine Kleider und warf sich auf den Boden. Sprachlos standen seine Diener um ihn herum, auch sie hatten ihre Gewänder zerrissen. <verse number="32" style="v"/>Schließlich ergriff Davids Neffe Jonadab das Wort: »Mein Herr«, versuchte er den König zu beruhigen, »noch weißt du nicht sicher, ob wirklich alle deine Söhne ermordet worden sind. Ich nehme an, dass nur Amnon tot ist. Denn seit er Tamar vergewaltigt hat, war Absalom fest entschlossen, sich zu rächen. <verse number="33" style="v"/>Darum, mein Herr und König, nimm das Gerücht nicht allzu ernst, dass alle deine Söhne umgekommen seien. Bestimmt wurde nur Amnon getötet.«</para>
+  <para style="p">
+    <verse number="34" style="v"/>Absalom war nach seiner Tat geflohen. Einer der Wächter auf der Stadtmauer von Jerusalem erblickte plötzlich in der Ferne eine große Gruppe von Menschen. Sie kamen auf der Straße von Horonajim<note caller="+" style="f"><char style="fr" closed="false">13,34 </char><char style="ft" closed="false">So nach der griechischen Übersetzung. Der hebräische Text lautet: auf der Straße hinter ihm.</char></note> den Hügel herunter. <verse number="35" style="v"/>Da sagte Jonadab zu David: »Siehst du, schon kommen deine Söhne zurück. Ich habe es doch gleich gewusst!« <verse number="36" style="v"/>Kaum hatte er ausgeredet, da liefen Davids Söhne herein. Sie fingen alle an zu weinen, auch der König und seine Diener brachen in Tränen aus.</para>
+  <para style="p">
+    <verse number="37" style="v"/>Es verging kein Tag, an dem David nicht um seinen Sohn trauerte. Absalom aber floh zum König von Geschur, zu Talmai, dem Sohn von Ammihud. <verse number="38" style="v"/>Dort blieb er drei Jahre lang. <verse number="39" style="v"/>Allmählich fand David sich mit Amnons Tod ab, und so legte sich mit der Zeit auch sein Zorn gegen Absalom.</para>
+  <chapter number="14" style="c"/>
+  <para style="s1">Joab setzt sich für Absalom ein</para>
+  <para style="m">
+    <verse number="1" style="v"/>Joab, der Sohn von Davids Schwester Zeruja, merkte, dass der König seinen Sohn Absalom vermisste. <verse number="2" style="v"/>Da ließ er eine Frau aus Tekoa holen, die für ihre Klugheit bekannt war. Joab trug ihr auf: »Tu so, als würdest du schon lange um jemanden trauern. Zieh Trauerkleider an und benutze keine wohlriechenden Salben. <verse number="3" style="v"/>Du sollst für mich zum König gehen und mit ihm reden.« Dann sagte Joab ihr Wort für Wort, was sie dem König erzählen sollte.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Als die Frau vor David trat, verbeugte sie sich und warf sich vor ihm zu Boden. »Mein König, bitte steh mir bei!«, flehte sie ihn an. <verse number="5" style="v"/>»Was bedrückt dich?«, wollte David wissen, und sie antwortete: »Ach, ich bin Witwe, mein Mann ist gestorben. <verse number="6" style="v"/>Ich hatte zwei Söhne. Eines Tages stritten sie draußen auf dem Feld heftig miteinander. Leider war weit und breit kein Mensch, der hätte eingreifen können, und so schlug der eine den anderen tot. <verse number="7" style="v"/>Seitdem, o König, ist die ganze Verwandtschaft meines Mannes hinter mir her. Sie verlangen, dass ich ihnen meinen Sohn ausliefere, weil er seinen Bruder umgebracht hat. Sie wollen ihn töten und so den Mord rächen. Ja, umbringen wollen sie ihn, damit er nicht das Erbe seines Vaters antreten kann! So rauben sie mir noch den letzten Funken Hoffnung. Wenn nämlich mein zweiter Sohn auch umkommt, dann gibt es im ganzen Land niemanden mehr, der den Namen meines Mannes weiterträgt; und so stirbt seine Familie aus.« <verse number="8" style="v"/>Da sagte der König zu der Frau: »Ich werde die Sache in die Hand nehmen. Geh ruhig nach Hause.«</para>
+  <para style="p">
+    <verse number="9" style="v"/>Doch die Frau wandte ein: »Mein König, ich befürchte, dass die Verwandten meines verstorbenen Mannes mich trotzdem nicht in Ruhe lassen. Sie werden mich und meine Familie dafür verantwortlich machen, wenn der Tod meines Sohnes nicht gerächt wird. Dir werden sie es sicher nicht vorzuwerfen wagen.« <verse number="10" style="v"/>David erwiderte: »Wer dir Schwierigkeiten macht, den zeige bei mir an! Ich werde dafür sorgen, dass er dich in Ruhe lässt.« <verse number="11" style="v"/>Die Frau aber gab sich immer noch nicht zufrieden; sie bat: »Mein König, schwöre mir doch bei dem <char style="nd">Herrn</char>, deinem Gott, die Blutrache zu verhindern und nicht zuzulassen, dass man meinen Sohn umbringt. Das erste Verbrechen soll nicht ein schlimmeres nach sich ziehen.« Da sagte David: »Ich schwöre dir, so wahr der <char style="nd">Herr</char> lebt: Deinem Sohn wird kein Haar gekrümmt werden.«</para>
+  <para style="p">
+    <verse number="12" style="v"/>Die Frau fragte: »Nun habe ich noch etwas auf dem Herzen. Darf ich es vorbringen?« »Sprich!«, forderte David sie auf. <verse number="13" style="v"/>Da sagte sie: »Warum begehst du gegen jemanden aus dem Volk Gottes genau das Unrecht, das du eben verurteilt hast? Indem du dieses Urteil fällst, sprichst du dich selbst schuldig, denn du hast deinen Sohn verstoßen und lässt ihn nicht wieder zurückkehren. <verse number="14" style="v"/>Zwar müssen wir alle einmal sterben. Wir sind wie Wasser, das auf den Boden geschüttet wird: Es verrinnt und versickert unwiederbringlich. Aber Gott löscht das Leben nicht einfach so aus. Er will den Verbannten zurückholen, damit er nicht für immer von ihm verstoßen bleibt. <verse number="15" style="v"/>Ja, mein König, ich bin mit meinem Anliegen hierhergekommen, weil ich keinen anderen Ausweg mehr sah: Meine Verwandten haben mir große Angst eingejagt. Da dachte ich: Ich wage es, dem König meinen Fall vorzulegen; vielleicht nimmt er sich meiner an. <verse number="16" style="v"/>Gewiss wirst du, mein König, mich vor dem Mann beschützen, der mich und meinen Sohn um das Erbe bringen will, das Gott uns in Israel gegeben hat. <verse number="17" style="v"/>Wenn der König die Sache für mich in die Hand nimmt, so dachte ich, dann kann ich endlich wieder in Frieden leben. Denn du bist wie der Engel Gottes: Du kannst Recht und Unrecht unterscheiden. Der <char style="nd">Herr</char>, dein Gott, möge dir beistehen.«</para>
+  <para style="p">
+    <verse number="18" style="v"/>Darauf sagte David: »Eine Frage möchte ich dir noch stellen. Beantworte sie ehrlich, verheimliche mir nichts!« »Ja, ich höre«, antwortete sie. <verse number="19" style="v"/>David fragte: »Hat Joab hier die Hand im Spiel?« Da rief die Frau: »Es ist tatsächlich wahr: Der König lässt sich einfach nichts vormachen! Ja, es war dein Heerführer Joab, der mich hergeschickt hat. Er hat mir Wort für Wort aufgetragen, was ich erzählen soll, <verse number="20" style="v"/>denn er wollte, dass du die ganze Angelegenheit mit anderen Augen siehst. Aber mein Herr, der König, ist so klug wie ein Engel Gottes. Er hat alles sofort durchschaut, nichts entgeht ihm!«</para>
+  <para style="s1">Absaloms Rückkehr</para>
+  <para style="m">
+    <verse number="21" style="v"/>David ließ Joab zu sich rufen und sagte zu ihm: »Hör zu, ich will dir deinen Wunsch erfüllen. Lass meinen Sohn Absalom zurückholen!« <verse number="22" style="v"/>Joab verneigte sich, warf sich vor David zu Boden und rief: »Nun weiß ich, dass du, mein König, mir deine Gunst geschenkt hast, denn du erfüllst meine Bitte! Gott segne dich dafür!«</para>
+  <para style="p">
+    <verse number="23" style="v"/>Joab reiste nach Geschur und holte Absalom zurück. <verse number="24" style="v"/>Doch als sie in Jerusalem ankamen, befahl der König: »Er darf wieder in seinem Haus wohnen, aber mir soll er nicht unter die Augen kommen!« So lebte Absalom wieder in seinem Haus, den König durfte er jedoch nicht sehen.</para>
+  <para style="p">
+    <verse number="25" style="v"/>In ganz Israel gab es keinen Mann, der so schön war wie Absalom. Er war von Kopf bis Fuß vollkommen, und alle Leute bewunderten ihn. <verse number="26" style="v"/>Einmal im Jahr ließ er sich die Haare schneiden, weil sie ihm zu schwer wurden. Sie wogen mehr als zwei Kilogramm<note caller="+" style="f"><char style="fr" closed="false">14,26 </char><char style="ft" closed="false">Wörtlich: 200 Schekel nach königlichem Gewicht.</char></note>. <verse number="27" style="v"/>Absalom hatte drei Söhne und eine Tochter, die Tamar hieß. Sie war ein sehr hübsches Mädchen.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Inzwischen wohnte Absalom schon zwei Jahre wieder in Jerusalem, den König aber durfte er noch immer nicht besuchen. <verse number="29" style="v"/>Da ließ er eines Tages Joab zu sich rufen. Der sollte beim König ein gutes Wort für ihn einlegen. Doch Joab weigerte sich zu kommen. Absalom bat ihn ein zweites Mal zu sich, aber wieder erschien er nicht. <verse number="30" style="v"/>Da befahl Absalom seinen Knechten: »Los, geht zu Joabs Gerstenfeld, das an mein Land angrenzt, und steckt es in Brand!«</para>
+  <para style="p">Als das Feld in Flammen stand, <verse number="31" style="v"/>eilte Joab zu Absalom und stellte ihn zur Rede: »Warum haben deine Knechte mein Gerstenfeld angezündet?« <verse number="32" style="v"/>»Weil du nicht gekommen bist, als ich dich rufen ließ«, erwiderte Absalom. »Du solltest für mich zum König gehen und ihn fragen, warum man mich überhaupt aus Geschur geholt hat. Ich hätte lieber dort bleiben sollen. Entweder der König empfängt mich jetzt endlich, oder er lässt mich hinrichten, falls er mich immer noch für schuldig hält!«</para>
+  <para style="p">
+    <verse number="33" style="v"/>Joab berichtete dem König, was Absalom gesagt hatte. Da ließ David seinen Sohn zu sich rufen. Absalom kam herein, verneigte sich und warf sich vor dem König zu Boden. David aber umarmte seinen Sohn und küsste ihn.</para>
+  <chapter number="15" style="c"/>
+  <para style="s1">Absalom plant eine Verschwörung</para>
+  <para style="m">
+    <verse number="1" style="v"/>Absalom beschaffte sich einen Wagen mit Pferden und eine 50 Mann starke Leibwache. <verse number="2" style="v"/>Er stellte sich jeden Morgen in aller Frühe an die Straße, die zum Palast führte. Alle, die mit einer Streitsache kamen, um sie dem König als oberstem Richter vorzulegen, fragte er nach ihrer Heimatstadt. Wenn jemand zu einem der Nordstämme Israels gehörte, <verse number="3" style="v"/>sagte Absalom zu ihm: »Zweifellos würdest du den Prozess gewinnen, denn du bist im Recht. Aber man wird dich gar nicht erst bis zum König vorlassen.« <verse number="4" style="v"/>Und er fügte noch hinzu: »Ach, wäre doch ich der oberste Richter in unserem Land! Ich würde mir Zeit nehmen für jeden, der mit seinem Fall zu mir kommt. Allen würde ich zu ihrem Recht verhelfen.« <verse number="5" style="v"/>Wenn der andere sich dann voller Ehrfurcht vor Absalom zu Boden werfen wollte, kam der ihm zuvor, umarmte und küsste ihn. <verse number="6" style="v"/>So verhielt Absalom sich gegenüber allen Leuten aus Israel, die mit ihren Streitigkeiten zum König nach Jerusalem kamen. Dadurch machte er sich bei ihnen beliebt.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Das ging vier<note caller="+" style="f"><char style="fr" closed="false">15,7 </char><char style="ft" closed="false">So nach der griechischen Übersetzung. Der hebräische Text lautet: vierzig.</char></note> Jahre lang so. Eines Tages sagte Absalom zu David: »Ich möchte gern nach Hebron gehen, um ein Gelübde zu erfüllen, das ich vor dem <char style="nd">Herrn</char> abgelegt habe. <verse number="8" style="v"/>Denn als ich in Geschur in Syrien war, schwor ich ihm: ›Wenn du mich wieder nach Jerusalem heimkehren lässt, bringe ich dir ein Opfer dar.‹« <verse number="9" style="v"/>»Geh nur und erfülle dein Gelübde«, antwortete der König. Absalom ging nach Hebron <verse number="10" style="v"/>und sandte heimlich Boten in alle Stammesgebiete Israels. Sie sollten überall verkünden: »Sobald ihr die Hörner hört, ruft, so laut ihr könnt: ›Absalom ist unser König! In Hebron wurde er gekrönt.‹« <verse number="11" style="v"/>Absalom hatte zweihundert Männer aus Jerusalem zu seinem Opferfest nach Hebron eingeladen. Sie wussten nichts von seinen Plänen und gingen ahnungslos mit.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Als die Opfertiere geschlachtet waren, schickte Absalom noch eine Einladung an Ahitofel, einen Berater von König David, der in Gilo wohnte. Ahitofel kam und schloss sich ihm an. So sammelte Absalom immer mehr Leute um sich, die seine Verschwörung unterstützten.</para>
+  <para style="s1">Davids Flucht aus Jerusalem</para>
+  <para style="m">
+    <verse number="13" style="v"/>Ein Bote kam zu David nach Jerusalem und meldete: »Absalom hat eine Verschwörung angezettelt! Die meisten Israeliten sind auf seiner Seite.« <verse number="14" style="v"/>»Dann gibt es für uns nur eines: fliehen, damit wir ihm nicht in die Hände fallen«, sagte David zu seinen Anhängern. »Wir müssen sofort aufbrechen, beeilt euch! Sonst überwältigt er uns hier in der Stadt, und dann sind wir und alle Einwohner verloren. Denn bestimmt würde er ein großes Blutbad anrichten.« <verse number="15" style="v"/>Davids Leute antworteten: »Wir stehen zu unserem König. Tu, was du für richtig hältst!«</para>
+  <para style="p">
+    <verse number="16" style="v"/>David floh mit seiner Familie und allen Anhängern aus der Stadt. Nur zehn seiner Nebenfrauen ließ er zurück, damit der Palast nicht unbeaufsichtigt blieb. <verse number="17" style="v"/>Er ging mit seinem Gefolge bis zum letzten Haus am Stadtrand und machte dort Halt. <verse number="18" style="v"/>Dann ließ er alle, die mitgekommen waren, an sich vorüberziehen: zuerst die königliche Leibwache, dann die 600 Mann, die ihm aus Gat gefolgt waren, und schließlich alle anderen, die zu ihm hielten. <verse number="19" style="v"/>Als Ittai, ein Philister aus Gat, an David vorüberging, sprach der König ihn an: »Warum möchtest du mit uns ziehen? Es ist besser für dich, wenn du umkehrst und dich dem neuen König anschließt. Du bist als Einwanderer nach Israel gekommen, weil du deine Heimat verlassen musstest. <verse number="20" style="v"/>Erst vor kurzem hast du dich hier angesiedelt, und jetzt solltest du schon wieder vertrieben werden? Nein, ich kann nicht verlangen, dass du bei mir bleibst. Wer weiß, wohin ich noch fliehen muss. Darum kehr um und geh mit deinen Landsleuten zurück in die Stadt. Der Herr möge dir Gutes tun und dir seine Liebe erweisen.«</para>
+  <para style="p">
+    <verse number="21" style="v"/>Doch Ittai entgegnete: »So wahr der <char style="nd">Herr</char> lebt und so wahr du lebst: Ich werde dich, meinen König, niemals im Stich lassen, und wenn es mich das Leben kostet! Das schwöre ich dir!« <verse number="22" style="v"/>Da gab David nach und sagte: »Gut, dann komm mit uns!« Und so zog Ittai mit seinen Begleitern und ihren Familien an David vorbei. <verse number="23" style="v"/>Schließlich überquerte David den Bach Kidron und schlug den Weg in Richtung Wüste ein. Die Leute von Jerusalem weinten laut, als sie den König und sein Gefolge fliehen sahen.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Auch der Priester Zadok und die Leviten hatten mit David die Stadt verlassen. Die Leviten trugen die Bundeslade und stellten sie außerhalb der Stadt ab. Der Priester Abjatar brachte Opfer dar, bis alle Leute vorbeigezogen waren. <verse number="25" style="v"/>David sagte zu Zadok: »Tragt die Bundeslade zurück in die Stadt! Wenn der <char style="nd">Herr</char> Erbarmen mit mir hat, bringt er auch mich eines Tages wieder dorthin und lässt mich die Bundeslade und das Zelt, in dem sie steht, wiedersehen. <verse number="26" style="v"/>Wenn er aber sagt, dass ihm nichts mehr an mir liegt, so will ich auch das annehmen. Er soll mit mir tun, was er für richtig hält.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Du aber, Zadok, gehst besser nach Jerusalem zurück. Nimm deinen Sohn Ahimaaz mit, und auch Abjatar und sein Sohn Jonatan sollen sich euch anschließen. <verse number="28" style="v"/>Ich selbst werde am Rand der Wüste am Jordanübergang warten, bis ich von euch Nachricht über die Lage in Jerusalem erhalte.«</para>
+  <para style="p">
+    <verse number="29" style="v"/>Da brachten die Priester Zadok und Abjatar die Bundeslade Gottes zurück nach Jerusalem und blieben dort. <verse number="30" style="v"/>David und die Menschen, die mit ihm gegangen waren, stiegen weinend den Ölberg hinauf. Als Zeichen der Trauer hatten sie ihre Gesichter verhüllt und liefen barfuß. <verse number="31" style="v"/>Unterwegs wurde David gemeldet: »Dein Berater Ahitofel unterstützt Absalom bei der Verschwörung.« Da betete er: »<char style="nd">Herr</char>, sorge dafür, dass man die klugen Ratschläge Ahitofels für Unsinn hält.«</para>
+  <para style="p">
+    <verse number="32" style="v"/>Als David den Gipfel erreicht hatte, wo man zu Gott betete, kam ihm sein alter Freund, der Arkiter Huschai, entgegen. Auch er hatte sein Gewand zerrissen und sich Erde auf den Kopf gestreut. <verse number="33" style="v"/>David sagte zu ihm: »Wenn du in deinem Alter mit uns ziehst, fällst du uns nur zur Last. <verse number="34" style="v"/>Gehst du aber zurück in die Stadt, dann kannst du mir einen großen Dienst erweisen. Sag zu Absalom: ›Mein Herr und König, ich stehe dir zur Seite! Früher diente ich deinem Vater, jetzt aber bist du mein Herr.‹ So kannst du mir helfen, die Pläne zu vereiteln, die Ahitofel sich ausdenkt. <verse number="35-36" style="v"/>Du bist nicht allein: Auch die Priester Zadok und Abjatar bleiben in Jerusalem. Berichte ihnen alles Wichtige aus dem königlichen Palast. Zadoks Sohn Ahimaaz und Abjatars Sohn Jonatan werden es mir dann weitersagen. Auch sie bleiben vorerst noch in der Stadt.«</para>
+  <para style="p">
+    <verse number="37" style="v"/>Da kehrte Davids Freund und Berater Huschai um. Er kam gerade nach Jerusalem, als Absalom wie ein König einzog.</para>
+  <chapter number="16" style="c"/>
+  <para style="s1">Ziba verleumdet Mefi-Boschet</para>
+  <para style="m">
+    <verse number="1" style="v"/>Als David den Gipfel des Ölbergs verlassen hatte und seinen Weg fortsetzen wollte, kam ihm Ziba, der Diener von Sauls Enkel Mefi-Boschet, entgegen. Er führte zwei gesattelte Esel mit sich, denen er zweihundert Brote, hundert Rosinenkuchen, hundert frische Früchte und einen Weinschlauch aufgeladen hatte. <verse number="2" style="v"/>»Was hast du damit vor?«, wollte der König wissen. Ziba antwortete: »Die Esel sind als Reittiere für deine Familie gedacht, das Brot und das Obst für deine Leute und der Wein zur Stärkung für alle, die auf dem Weg durch die Wüste müde werden.« <verse number="3" style="v"/>»Und wo ist Mefi-Boschet, der Enkel deines früheren Herrn?«, fragte der König. Ziba antwortete: »Der wollte in Jerusalem bleiben. Er hat behauptet, dass die Israeliten ihm heute das Königreich seines Großvaters Saul zurückgeben werden.« <verse number="4" style="v"/>Da erwiderte David: »Ab sofort gehört dir, Ziba, der ganze Besitz von Mefi-Boschet!« Ziba sagte: »Ich bin dir ergeben, mein Herr und König! Für mich zählt nur eines: dass du mir deine Gunst schenkst.«</para>
+  <para style="s1">Schimi beschimpft David</para>
+  <para style="m">
+    <verse number="5" style="v"/>Als König David nach Bahurim kam, lief ihm ein Mann aus dem Ort entgegen und beschimpfte ihn. Es war Schimi, ein Sohn von Gera, der mit Saul verwandt war. <verse number="6" style="v"/>Schimi ließ sich von der Leibwache und den Elitesoldaten, die den König umgaben, nicht abschrecken und warf mit Steinen nach David und seinem Gefolge. <verse number="7" style="v"/>Dabei fluchte er und schrie: »Verschwinde, du Verbrecher, du Mörder! <verse number="8" style="v"/>Ja, du bist schuld daran, dass Saul und seine Familie umgekommen sind, du hast die Herrschaft einfach an dich gerissen! Jetzt aber straft dich der <char style="nd">Herr</char> für das unschuldig vergossene Blut: Er hat deinen Sohn Absalom an deiner Stelle zum König gemacht und dich ins Unglück gestürzt. Etwas Besseres hast du auch nicht verdient, du Mörder!«</para>
+  <para style="p">
+    <verse number="9" style="v"/>Da sagte Abischai, der Sohn von Davids Schwester Zeruja, zum König: »Wie kommt dieser Nichtsnutz dazu, dich so zu beschimpfen? Lass mich hingehen und ihm den Kopf abschlagen!« <verse number="10" style="v"/>Doch David bremste ihn: »Wie oft muss ich es dir und deinem Bruder Joab noch sagen: Ich halte nichts von euren Racheakten! Soll dieser Schimi mich doch beschimpfen! Wenn der <char style="nd">Herr</char> es ihm befohlen hat – können wir es ihm dann verbieten?« <verse number="11" style="v"/>Nun wandte David sich an seine Soldaten, die um ihn standen: »Wenn schon mein eigener Sohn mir nach dem Leben trachtet, dann ist es doch von diesem Verwandten Sauls erst recht zu erwarten! Lasst ihn nur schimpfen und fluchen! Bestimmt hat der <char style="nd">Herr</char> es ihm befohlen. <verse number="12" style="v"/>Doch ich hoffe, dass der <char style="nd">Herr</char> mich nicht alleinlässt in meinem Elend. Vielleicht verwandelt er Schimis Flüche in Segen.«</para>
+  <para style="p">
+    <verse number="13" style="v"/>David und seine Leute setzten ihren Weg fort. Schimi lief ihnen am Berghang entlang nach, fluchte und warf mit Steinen und Erdklumpen nach dem König. <verse number="14" style="v"/>Erschöpft erreichten sie schließlich den Jordan und ruhten sich dort aus.</para>
+  <para style="s1">Absalom in Jerusalem</para>
+  <para style="m">
+    <verse number="15" style="v"/>Inzwischen waren Absalom und seine Anhänger in Jerusalem eingezogen. Auch Ahitofel hatte sich ihnen angeschlossen. <verse number="16" style="v"/>Bald darauf kam Davids Freund und Berater Huschai zu Absalom und rief ihm zu: »Hoch lebe der König! Hoch lebe der König!« <verse number="17" style="v"/>Da spottete Absalom: »Und so einer nennt sich Freund des Königs! Ist deine Liebe zu ihm schon erloschen? Warum bist du nicht mit deinem Freund gegangen?« <verse number="18" style="v"/>Huschai antwortete: »Ich stehe zu dem König, den der <char style="nd">Herr</char> und sein Volk auserwählt haben! Der und kein anderer ist mein Herr! <verse number="19" style="v"/>Außerdem bist du doch Davids Sohn. Ich werde dir ergeben sein, so wie ich deinem Vater treu ergeben war.«</para>
+  <para style="p">
+    <verse number="20" style="v"/>Danach wandte Absalom sich an Ahitofel und fragte: »Was sollen wir nun weiter unternehmen? Gib mir einen Rat!« <verse number="21" style="v"/>Ahitofel erwiderte: »Dein Vater hat doch einige Nebenfrauen hiergelassen, damit der Palast nicht unbeaufsichtigt bleibt. Hol sie dir und schlaf mit ihnen! Dann sieht ganz Israel, dass du dich bei deinem Vater verhasst gemacht hast, und deine Anhänger werden noch entschlossener zu dir halten.« <verse number="22" style="v"/>Da schlug man auf dem Dach des Palasts für Absalom ein Zelt auf. Ganz Israel wurde Zeuge, als er mit den Nebenfrauen seines Vaters dort hineinging, um mit ihnen zu schlafen.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Damals wurden Ahitofels Ratschläge bereitwillig befolgt, als kämen sie von Gott. So war es schon bei David gewesen, und daran änderte sich auch bei Absalom nichts.</para>
+  <chapter number="17" style="c"/>
+  <para style="s1">Ahitofel und Huschai beraten Absalom</para>
+  <para style="m">
+    <verse number="1" style="v"/>Ahitofel machte Absalom noch einen Vorschlag: »Erlaube mir, dass ich sofort ein Heer von 12.000 Mann aufstelle und noch heute Nacht die Verfolgung von David aufnehme. <verse number="2" style="v"/>Ich will ihn überraschen, solange er erschöpft und entmutigt ist. Wir werden seine Leute in Angst und Schrecken versetzen, sie werden fliehen, und dann bringe ich den König um. <verse number="3" style="v"/>So wird nur er allein getötet, und ich kann dir ganz Israel als dein Volk zuführen. Dann herrscht wieder Frieden im Land!«</para>
+  <para style="p">
+    <verse number="4" style="v"/>Dieser Vorschlag gefiel Absalom, und auch die Sippenoberhäupter von Israel stimmten zu. <verse number="5" style="v"/>Trotzdem sagte Absalom: »Wir wollen erst noch hören, was der Arkiter Huschai dazu meint. Jemand soll ihn holen!« <verse number="6" style="v"/>Als Huschai da war, erklärte Absalom ihm Ahitofels Plan und fragte: »Was denkst du, sollen wir so vorgehen, oder hast du eine bessere Idee?«</para>
+  <para style="p">
+    <verse number="7" style="v"/>Huschai antwortete: »Mir scheint, diesmal hat Ahitofel dir keinen guten Rat gegeben. <verse number="8" style="v"/>Du kennst doch deinen Vater und seine Männer: Sie alle sind kampferprobte Soldaten. Sie werden erbittert kämpfen wie eine Bärin, der man die Jungen weggenommen hat. Dein Vater ist ein erfahrener Heerführer, er wird kaum bei seinen Leuten übernachten. <verse number="9" style="v"/>Wahrscheinlich hat er sich längst in einer Höhle oder sonst irgendwo versteckt. Wenn gleich am Anfang einige deiner Soldaten fallen und es überall heißt: ›Absaloms Heer hat eine Niederlage erlitten!‹, <verse number="10" style="v"/>dann bekommen alle deine Männer es mit der Angst zu tun, selbst wenn sie tapfer sind wie Löwen. Da kannst du sicher sein! Denn in Israel weiß jeder, dass dein Vater ein erfahrener Heerführer ist und die besten Soldaten um sich hat.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Darum rate ich dir: Berufe alle wehrfähigen Israeliten ein, von Dan im Norden bis Beerscheba im Süden; dann kannst du ein riesiges Heer aufstellen, mit Soldaten so zahlreich wie der Sand am Meer. Du musst sie aber selbst anführen. <verse number="12" style="v"/>Dann spüren wir David auf, egal wo er sich versteckt. Du wirst sehen: Wir fallen über seine Soldaten her und verschonen niemand, so wie Tau am frühen Morgen auf die Erde fällt und alles bedeckt. Keiner wird mit dem Leben davonkommen, auch er selbst nicht. <verse number="13" style="v"/>Hat David sich aber in einer Stadt verschanzt, dann sollen deine Männer Seile an der Mauer befestigen und die ganze Stadt ins Tal schleifen. Kein Stein wird auf dem anderen bleiben!«</para>
+  <para style="p">
+    <verse number="14" style="v"/>Da waren sich Absalom und die führenden Israeliten einig: »Huschais Vorschlag ist besser als Ahitofels.« Sie wussten nicht, dass der <char style="nd">Herr</char> hier seine Hand im Spiel hatte: Er vereitelte Ahitofels Plan, obwohl er eigentlich der bessere war. Denn der <char style="nd">Herr</char> wollte Absalom ins Unglück stürzen.</para>
+  <para style="s1">David erfährt von Absaloms Plan</para>
+  <para style="m">
+    <verse number="15" style="v"/>Huschai berichtete den Priestern Zadok und Abjatar, was Ahitofel Absalom und den Sippenoberhäuptern Israels geraten hatte. Auch von seinem eigenen Vorschlag erzählte er ihnen. <verse number="16" style="v"/>Dann sagte er: »Schickt nun sofort einen Boten zu David. Er soll ihm alles mitteilen und ihn warnen, auf keinen Fall am Rand der Wüste zu übernachten! Er muss unbedingt heute noch den Jordan überqueren, sonst ist er verloren und mit ihm alle seine Begleiter.«</para>
+  <para style="p">
+    <verse number="17" style="v"/>Jonatan und Ahimaaz warteten inzwischen außerhalb von Jerusalem bei der Quelle Rogel, denn sie durften sich in der Stadt nicht sehen lassen. Eine Magd überbrachte ihnen die Nachricht für David. <verse number="18" style="v"/>Doch sie wurden von einem jungen Mann gesehen, der gleich zu Absalom ging und es ihm meldete. Schnell brachen die beiden auf; unterwegs fanden sie bei einem Mann in Bahurim Unterschlupf. Sie versteckten sich in der Zisterne in seinem Hof. <verse number="19" style="v"/>Die Frau des Mannes breitete eine Decke über die Öffnung und streute Getreidekörner zum Trocknen darauf aus, damit niemand etwas merkte.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Bald kamen Soldaten Absaloms zu dem Haus und fragten die Frau: »Wo sind Ahimaaz und Jonatan?« Sie antwortete: »Die beiden sind fortgegangen, sie wollten den Bach dort überqueren.« Die Männer suchten weiter. Als sie nichts fanden, kehrten sie unverrichteter Dinge nach Jerusalem zurück.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Kaum waren Absaloms Leute verschwunden, kletterten Ahimaaz und Jonatan aus der Zisterne und eilten zu David, um ihm Bericht zu erstatten. »Ihr müsst sofort den Jordan überqueren!«, sagten sie zu ihm und erzählten, was Ahitofel Absalom geraten hatte. <verse number="22" style="v"/>Schnell brachen David und alle seine Begleiter auf und überquerten noch in derselben Nacht den Jordan. Beim Morgengrauen war auch der Letzte von ihnen am anderen Ufer angelangt.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Als Ahitofel merkte, dass Absalom nicht auf seinen Rat hörte, sattelte er seinen Esel und ritt in seine Heimatstadt zurück. Zu Hause regelte er noch die letzten Dinge, dann erhängte er sich. Man begrub ihn in seinem Familiengrab.</para>
+  <para style="p">
+    <verse number="24" style="v"/>David war schon in Mahanajim angekommen, als Absalom noch mit dem israelitischen Heer den Jordan überquerte. <verse number="25" style="v"/>Absalom hatte Amasa zu seinem Heerführer ernannt, denn Joab war bei David. Amasa war der Sohn eines Ismaeliters<note caller="+" style="f"><char style="fr" closed="false">17,25 </char><char style="ft" closed="false">So nach <char style="xt"><ref loc="1CH 2:17">1. Chronik 2,17</ref></char> und einigen Handschriften der griechischen Übersetzung. Der hebräische Text lautet: eines Israeliten.</char></note> namens Jeter; seine Mutter hieß Abigal, sie war eine Tochter von Isai<note caller="+" style="f"><char style="fr" closed="false">17,25 </char><char style="ft" closed="false">So nach <char style="xt"><ref loc="1CH 2:13-16">1. Chronik 2,13‒16</ref>.</char> Im hebräischen Text steht hier der Name Nahasch.</char></note> und die Schwester von Joabs Mutter Zeruja. <verse number="26" style="v"/>Absalom und die Israeliten schlugen ihr Heerlager bei Gilead auf.</para>
+  <para style="p">
+    <verse number="27" style="v"/>David war noch nicht lange in Mahanajim, als drei Männer zu ihm kamen: Schobi, ein Sohn von Nahasch aus Rabba, der Hauptstadt der Ammoniter, Machir, ein Sohn von Ammiël aus Lo-Dabar, und Barsillai aus Roglim in Gilead. <verse number="28-29" style="v"/>Die drei brachten David und seinen Männern Schlafmatten mit, Töpfe und Schüsseln, Weizen, Gerste, Mehl, geröstete Getreidekörner, Bohnen und Linsen, Honig, Butter und Käse sowie einige Schafe und Ziegen. Denn sie dachten: »Bestimmt sind sie hungrig, durstig und erschöpft von ihrem Marsch durch die Wüste.«</para>
+  <chapter number="18" style="c"/>
+  <para style="s1">Vorbereitungen für die Schlacht</para>
+  <para style="m">
+    <verse number="1" style="v"/>David musterte seine Truppen, er ließ sie Abteilungen zu je 1000 und Unterabteilungen zu je 100 Mann bilden und setzte Hauptleute über sie ein. <verse number="2" style="v"/>Das Heer sollte in drei Verbänden losziehen, die von Joab, dessen Bruder Abischai und von Ittai aus Gat angeführt wurden.</para>
+  <para style="p">»Ich selbst werde auch mit euch ziehen«, sagte David zu seinen Soldaten. <verse number="3" style="v"/>Doch sie wandten ein: »Tu das nicht! Wenn wir vor den Feinden fliehen müssen oder sogar die Hälfte von uns im Kampf fällt, bedeutet ihnen das nicht so viel wie dein Tod. Denn du bist für sie wichtiger als zehntausend von uns! Bleib lieber in der Stadt und komm uns im Notfall mit Verstärkung zu Hilfe.«</para>
+  <para style="p">
+    <verse number="4" style="v"/>»Ich will euren Rat befolgen«, antwortete David. Dann stellte er sich ans Stadttor, und das Heer zog in Abteilungen geordnet an ihm vorbei. <verse number="5" style="v"/>Den drei Heerführern Joab, Abischai und Ittai schärfte er ein: »Sorgt dafür, dass meinem Sohn Absalom nichts zustößt!« Auch alle Soldaten hörten den Befehl.</para>
+  <para style="s1">Absaloms Niederlage</para>
+  <para style="m">
+    <verse number="6" style="v"/>Davids Truppen zogen den Israeliten entgegen, und im Wald von Ephraim kam es zur Schlacht. <verse number="7" style="v"/>Davids Soldaten schlugen das feindliche Heer vernichtend: 20.000 Israeliten fielen an diesem Tag. <verse number="8" style="v"/>Die Kämpfe breiteten sich über das ganze umliegende Gebiet aus. Der Wald dort aber war so unwegsam und gefährlich, dass er noch mehr Opfer forderte als die Schlacht selbst.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Einige von Davids Soldaten verfolgten Absalom, der auf seinem Maultier floh. Doch als er unter einer großen Eiche durchritt, verfingen sich seine Haare in den dichten Ästen. Sein Maultier lief weiter, er aber blieb am Baum hängen. <verse number="10" style="v"/>Einer der Männer, die es beobachtet hatten, meldete Joab: »Ich habe Absalom gesehen! Er hängt an den Ästen einer Eiche.«</para>
+  <para style="p">
+    <verse number="11" style="v"/>Joab rief: »Was, du hast ihn gesehen und ihn nicht auf der Stelle umgebracht? Ich hätte dir zehn Silberstücke und einen wertvollen Gürtel dafür gegeben!« <verse number="12" style="v"/>Doch der Mann entgegnete: »Auch wenn du mir 1000 Silberstücke bieten würdest – dem Sohn des Königs könnte ich nichts antun. Ich habe doch genau gehört, wie der König dir, Abischai und Ittai befohlen hat: ›Sorgt dafür, dass meinem Sohn Absalom nichts zustößt!‹ <verse number="13" style="v"/>Und wenn ich ihn unbemerkt getötet hätte – dem König wäre sowieso zu Ohren gekommen, wer es war, denn früher oder später erfährt er doch alles. Dann würdest du mir bestimmt keine Rückendeckung geben!«</para>
+  <para style="p">
+    <verse number="14" style="v"/>»Ich will meine Zeit nicht länger mit dir vergeuden!«, unterbrach Joab ihn. Er nahm drei Speere und stieß sie Absalom, der immer noch am Baum hing, ins Herz. <verse number="15" style="v"/>Dann umringten die zehn Waffenträger von Joab Davids Sohn und töteten ihn vollends.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Nun blies Joab das Horn als Zeichen dafür, dass der Kampf beendet war. Da kehrten seine Soldaten um, <verse number="17" style="v"/>und die Israeliten flohen nach Hause. Joabs Männer warfen Absaloms Leiche in eine Grube im Wald und errichteten darüber einen großen Steinhaufen.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Schon zu seinen Lebzeiten hatte Absalom im Königstal einen Gedenkstein für sich errichten lassen. Er hatte ihn nach sich selbst benannt, denn er dachte: »Ich habe keinen Sohn, der meinen Namen weiterträgt.« Noch heute nennt man diesen Stein das »Denkmal Absaloms«.</para>
+  <para style="s1">David erfährt von Absaloms Tod</para>
+  <para style="m">
+    <verse number="19" style="v"/>Ahimaaz, der Sohn von Zadok, bat Joab: »Gestatte mir, zum König nach Mahanajim zu laufen und ihm die gute Nachricht zu bringen, dass der <char style="nd">Herr</char> ihm den Sieg über seine Feinde geschenkt hat.« <verse number="20" style="v"/>Doch Joab wehrte ab: »Was du dem König melden musst, ist keine Freudenbotschaft für ihn, denn sein Sohn ist tot. Ein anderes Mal schicke ich dich gern als Boten zu ihm, aber heute nicht.« <verse number="21" style="v"/>Dann wandte er sich an seinen äthiopischen Sklaven und befahl ihm: »Geh du zum König und berichte, was du gesehen hast!« Der Sklave verneigte sich vor Joab und machte sich auf den Weg.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Doch Ahimaaz gab nicht nach. »Egal was geschieht – ich laufe ihm hinterher!« Noch einmal versuchte Joab ihn zurückzuhalten: »Mein Sohn, warum brennst du darauf, dem König die schlechte Nachricht zu bringen? Er wird dich dafür sicher nicht belohnen!« <verse number="23" style="v"/>»Egal was passiert – ich will auf jeden Fall zu ihm!«, gab Ahimaaz zurück. Da ließ Joab ihn gehen. Ahimaaz schlug den Weg durch die Jordan-Ebene ein und kam schneller voran als der Äthiopier.</para>
+  <para style="p">
+    <verse number="24" style="v"/>David saß zwischen dem inneren und dem äußeren Stadttor und wartete. Als der Wächter wieder einmal auf den Turm stieg, um Ausschau zu halten, sah er einen Mann, der allein auf Mahanajim zulief. <verse number="25" style="v"/>Er meldete es sofort dem König. David sagte: »Wenn er allein kommt, bringt er uns bestimmt eine gute Nachricht!« Während der Bote immer näher kam, <verse number="26" style="v"/>entdeckte der Wächter einen zweiten Mann, der in Richtung Stadt unterwegs war. Er rief zum Torwächter hinunter: »Ich sehe noch jemanden kommen; auch er ist allein.« David meinte dazu: »Sicher wird er uns ebenfalls eine frohe Botschaft bringen.« <verse number="27" style="v"/>Dann meldete der Wächter: »Ich glaube, der erste ist Ahimaaz, der Sohn von Zadok. Ich erkenne ihn an seinem Gang.« Erleichtert sagte David: »Er ist ein zuverlässiger Mann. Bestimmt meldet er uns Erfreuliches!«</para>
+  <para style="p">
+    <verse number="28" style="v"/>Schon von weitem rief Ahimaaz: »Die Schlacht ist gewonnen!« Als er vor dem König stand, warf er sich zu Boden und sagte: »Gepriesen sei der <char style="nd">Herr</char>, dein Gott! Er hat dir den Sieg geschenkt über die Feinde, die sich gegen dich, mein Herr und König, aufgelehnt haben.« <verse number="29" style="v"/>»Und wie geht es meinem Sohn Absalom?«, erkundigte David sich. »Es ist ihm doch hoffentlich nichts zugestoßen?« Ahimaaz antwortete: »Als Joab deinen äthiopischen Sklaven und mich, deinen ergebenen Diener, zu dir schickte, herrschte noch ein großes Durcheinander. Ich konnte leider nicht erkennen, was im Einzelnen geschehen war.« <verse number="30" style="v"/>»Warte dort drüben!«, befahl David. Ahimaaz gehorchte und trat ein paar Schritte zur Seite.</para>
+  <para style="p">
+    <verse number="31" style="v"/>In diesem Augenblick kam der Äthiopier an und berichtete: »Mein König, höre, was für eine gute Nachricht ich dir zu überbringen habe: Der <char style="nd">Herr</char> hat den Aufstand niedergeschlagen, den deine Feinde gegen dich geplant haben! Er hat dir heute zu deinem Recht verholfen.« <verse number="32" style="v"/>»Und wie geht es meinem Sohn?«, fragte David auch ihn. »Ihm ist doch hoffentlich nichts zugestoßen?« Der Sklave antwortete: »So wie ihm möge es allen deinen Feinden ergehen, allen, die sich gegen dich auflehnen und dir schaden wollen!«</para>
+  <chapter number="19" style="c"/>
+  <para style="m">
+    <verse number="1" style="v"/>Diese Worte gaben David einen Stich ins Herz. Er stieg hinauf ins Turmzimmer des Stadttors und weinte. Dabei klagte er ununterbrochen: »Mein Sohn Absalom! Mein Sohn, mein Sohn, ach, Absalom! Wäre ich doch an deiner Stelle gestorben! Ach, Absalom, mein Sohn, mein Sohn!«</para>
+  <para style="s1">Joab weist David zurecht</para>
+  <para style="m">
+    <verse number="2" style="v"/>Jemand meldete Joab: »Der König weint und trauert um Absalom.« <verse number="3" style="v"/>Auch bei den Soldaten hatte sich schnell herumgesprochen, dass David über den Tod seines Sohnes verzweifelt war. Ihre Freude über den Sieg war auf einmal wie weggeblasen, Trauer und Niedergeschlagenheit machten sich breit. <verse number="4" style="v"/>Bedrückt schlichen die Männer in die Stadt zurück – wie Verlierer, die sich schämen, weil sie vom Schlachtfeld geflohen sind.</para>
+  <para style="p">
+    <verse number="5" style="v"/>David aber saß noch immer im Turmzimmer, er hatte sein Gesicht verhüllt und klagte laut: »Mein Sohn Absalom! Ach, Absalom, mein Sohn, mein Sohn!« <verse number="6" style="v"/>Da ging Joab zu ihm und wies ihn zurecht: »Deine Soldaten haben dir heute das Leben gerettet, und nicht nur dir, sondern auch deinen Söhnen und Töchtern, deinen Frauen und Nebenfrauen. Und was ist der Dank? Du benimmst dich so, dass sie sich für ihre große Tat nur schämen können! <verse number="7" style="v"/>Du liebst alle, die dich hassen, und hasst alle, die dich lieben. Deine Heerführer und Soldaten bedeuten dir offenbar überhaupt nichts. Es hätte dir nichts ausgemacht, wenn wir heute alle in der Schlacht gefallen wären – Hauptsache, Absalom wäre noch am Leben! <verse number="8" style="v"/>Du musst dich jetzt zusammennehmen und zu deinen Männern hinausgehen, um sie wieder zu ermutigen. Sonst laufen sie dir alle noch heute Nacht davon. Das schwöre ich dir, so wahr der <char style="nd">Herr</char> lebt! Etwas Schlimmeres könnte dir gar nicht passieren. Es wäre schrecklicher als alles, was du bisher erleiden musstest.«</para>
+  <para style="p">
+    <verse number="9" style="v"/>Da stand David auf und ging hinunter zum Stadttor. Seinen Soldaten wurde gemeldet, dass der König wieder dort saß. Sofort kamen sie und versammelten sich vor ihm.</para>
+  <para style="s1">Davids Rückkehr nach Jerusalem</para>
+  <para style="m">Inzwischen waren die Israeliten in ihre Heimatorte geflohen. <verse number="10" style="v"/>In allen Stämmen des Landes warfen sie sich gegenseitig vor: »Wir sind schuld daran, dass König David vor Absalom fliehen und das Gebiet Juda verlassen musste. Dabei hat er uns doch immer von unseren Feinden befreit, und auch die Macht der Philister hat er gebrochen. <verse number="11" style="v"/>Absalom, den wir zum neuen König gekrönt haben, ist in der Schlacht gefallen. Warum unternimmt niemand etwas, um David zurückzuholen?«</para>
+  <para style="p">
+    <verse number="12" style="v"/>David sandte die beiden Priester Zadok und Abjatar zu den Sippenoberhäuptern des Stammes Juda. Sie sollten ihnen im Namen des Königs ausrichten: »Wollt ihr die Letzten sein, die mich, euren König, wieder in seinen Palast zurückholen? Die Israeliten haben dies schon lange geplant, wie ich gehört habe. <verse number="13" style="v"/>Ihr seid doch meine Stammesbrüder und viel näher mit mir verwandt. Warum kommt ihr ihnen nicht zuvor?« <verse number="14" style="v"/>Amasa, dem Heerführer von Absalom, sollten die beiden Priester von David ausrichten: »Ich schwöre dir, dass ich dich heute an Joabs Stelle zu meinem obersten Heerführer ernenne. Das sollst du dein Leben lang bleiben, denn du bist mein Neffe. Gott soll mich hart bestrafen, wenn ich mein Versprechen nicht halte.«</para>
+  <para style="p">
+    <verse number="15" style="v"/>So gelang es David, die Unterstützung der Judäer zurückzugewinnen. Geschlossen stellten sie sich hinter ihn und ließen ihm sagen: »Komm mit deinem Gefolge wieder nach Jerusalem!« <verse number="16" style="v"/>Da trat David den Rückweg an und erreichte den Jordan. Die Männer aus dem Stamm Juda kamen ihm auf der anderen Seite bis nach Gilgal entgegen, um ihn über den Fluss zu geleiten.</para>
+  <para style="s1">David begnadigt Schimi</para>
+  <para style="m">
+    <verse number="17" style="v"/>Zur gleichen Zeit lief auch der Benjaminiter Schimi, ein Sohn von Gera aus Bahurim, zum Jordan, um David dort zu treffen. <verse number="18" style="v"/>Tausend Mann vom Stamm Benjamin waren bei ihm. Auch Ziba, Sauls früherer Diener, hatte sich mit seinen fünfzehn Söhnen und zwanzig Knechten dem Zug angeschlossen. Sie erreichten den Jordan vor dem König. <verse number="19" style="v"/>Dann brachten sie ein Boot an das gegenüberliegende Ufer, um David mit seinem Gefolge über den Fluss zu setzen und ihm ihren Dienst anzubieten.</para>
+  <para style="p">Als David den Jordan überqueren wollte, ging Schimi zu ihm, warf sich vor ihm zu Boden <verse number="20" style="v"/>und flehte: »Mein König, vergib mir, was ich dir angetan habe, als du Jerusalem verlassen musstest. Bitte rechne mir diese große Schuld nicht an. <verse number="21" style="v"/>Ich weiß, dass es ein schwerer Fehler war. Aber bedenke, mein König: Ich bin heute als Erster aus den Nordstämmen hierhergelaufen, um dich zu empfangen.«</para>
+  <para style="p">
+    <verse number="22" style="v"/>Da mischte sich Davids Neffe Abischai ein: »Schimi verdient den Tod! Er hat den König, den der <char style="nd">Herr</char> auserwählt hat, aufs Übelste beschimpft.« <verse number="23" style="v"/>Doch David wies ihn zurecht: »Von dir und deinem Bruder lasse ich mir nichts vorschreiben! Ihr könnt mich nicht zu so einer Tat verleiten. Von jetzt an bin ich wieder König, darum soll heute kein Israelit hingerichtet werden!« <verse number="24" style="v"/>Dann wandte der König sich an Schimi und versprach ihm: »Du musst nicht sterben, ich gebe dir mein Wort!«</para>
+  <para style="s1">Die Begegnung mit Mefi-Boschet</para>
+  <para style="m">
+    <verse number="25" style="v"/>Auch Sauls Enkel Mefi-Boschet kam dem König entgegen. Seit David aus Jerusalem fliehen musste, hatte er als Zeichen der Trauer seine Füße nicht mehr gewaschen, den Bart nicht mehr gepflegt und keine frischen Kleider mehr angezogen. So wollte er warten, bis David wohlbehalten zurückkehren würde. <verse number="26" style="v"/>Als er nun dem König entgegenkam, fragte dieser ihn: »Warum bist du nicht mit mir gekommen, Mefi-Boschet?«</para>
+  <para style="p">
+    <verse number="27" style="v"/>Er antwortete: »Mein König, dafür ist mein Knecht Ziba verantwortlich, denn er hat mich betrogen! Ich wollte dich begleiten und dafür meinen Esel satteln lassen, weil ich ja nicht mehr richtig laufen kann. <verse number="28" style="v"/>Doch Ziba ist zu dir gegangen und hat mich bei dir verleumdet. Du aber bist klug und weise wie ein Engel Gottes. Tu mit mir, was du für richtig hältst! <verse number="29" style="v"/>Die Familie meines Großvaters hatte den Tod verdient nach allem, was sie dir angetan hat. Trotzdem hast du mich, deinen ergebenen Diener, als Gast an deinem Tisch essen lassen. Da kann ich es nicht wagen, noch mehr von dir zu erwarten!«</para>
+  <para style="p">
+    <verse number="30" style="v"/>»Reden wir nicht mehr davon«, sagte David. »Ziba und du, ihr sollt euch Sauls Besitz teilen.« <verse number="31" style="v"/>»Ziba kann auch alles haben«, erwiderte Mefi-Boschet, »das Wichtigste für mich ist, dass der König heute unversehrt in seinen Palast zurückkehrt.«</para>
+  <para style="s1">David und Barsillai</para>
+  <para style="m">
+    <verse number="32" style="v"/>Barsillai, ein Mann aus Gilead, war von Roglim gekommen, um den König über den Jordan zu begleiten und sich dann von ihm zu verabschieden. <verse number="33" style="v"/>Barsillai war 80 Jahre alt. Er hatte David in Mahanajim mit allem versorgt, was dieser zum Leben brauchte, denn er war sehr reich. <verse number="34" style="v"/>Jetzt lud der König ihn ein: »Komm mit mir nach Jerusalem an meinen Hof! Es wird dir dort an nichts fehlen.«</para>
+  <para style="p">
+    <verse number="35" style="v"/>Doch Barsillai lehnte ab: »Ich habe nicht mehr lange zu leben, warum sollte ich da noch nach Jerusalem ziehen! <verse number="36" style="v"/>80 Jahre bin ich nun schon alt, und es fällt mir schwer, klare Gedanken zu fassen<note caller="+" style="f"><char style="fr" closed="false">19,36 </char><char style="ft" closed="false">Wörtlich: Gut und Böse zu unterscheiden.</char></note>. Ich schmecke kaum noch, was ich esse oder trinke, und den Gesang deiner Sänger und Sängerinnen höre ich nicht mehr gut. Ich würde dir, mein König, doch nur zur Last fallen. <verse number="37" style="v"/>Nein, deine Einladung kann ich nicht annehmen. Ich will dich nur noch über den Jordan begleiten, <verse number="38" style="v"/>und dann lass mich zurückkehren! Ich möchte in meiner Heimatstadt sterben, dort, wo schon mein Vater und meine Mutter begraben sind. Doch mein Sohn Kimham kann ja mit dir ziehen und dir dienen. Setz ihn dort ein, wo du ihn gebrauchen kannst.«</para>
+  <para style="p">
+    <verse number="39" style="v"/>Da antwortete David: »Ja, Kimham soll mit mir kommen. Ich werde alles für ihn tun, was du wünschst. Und wenn ich dir sonst noch Gutes erweisen kann, dann sag es ruhig! Ich erfülle dir jede Bitte.«</para>
+  <para style="p">
+    <verse number="40" style="v"/>Anschließend überquerte David mit allen Begleitern den Jordan. Er küsste Barsillai zum Abschied und segnete ihn. Der alte Mann kehrte in seine Heimatstadt zurück, <verse number="41" style="v"/>während David weiter nach Gilgal zog. Kimham ging mit ihm. Der König wurde begleitet von den Männern des Stammes Juda und von der Hälfte der übrigen Israeliten.</para>
+  <para style="s1">Israel und Juda streiten um den König</para>
+  <para style="m">
+    <verse number="42" style="v"/>Unterwegs kamen die Israeliten zum König und beklagten sich: »Warum haben ausgerechnet die Judäer dich, deine Familie und deine Truppen aus Mahanajim abgeholt und über den Jordan geleitet? Dazu hatten sie doch gar kein Recht!«</para>
+  <para style="p">
+    <verse number="43" style="v"/>»Die Antwort ist ganz einfach«, sagten die Judäer zu den Israeliten, »schließlich steht der König dem Stamm Juda näher. Was regt ihr euch darüber auf? Denkt ihr, wir hätten auf Kosten des Königs gelebt oder uns von ihm beschenken lassen?«</para>
+  <para style="p">
+    <verse number="44" style="v"/>Die Israeliten hielten dagegen: »Unser Anrecht auf den König ist zehnmal größer als eures! Warum habt ihr uns einfach übergangen? Haben nicht wir zuerst daran gedacht, unseren König zurückzuholen?« Die Judäer aber gaben nicht nach und behielten das letzte Wort.</para>
+  <chapter number="20" style="c"/>
+  <para style="s1">Schebas Aufstand</para>
+  <para style="m">
+    <verse number="1" style="v"/>Unter den Streitenden war ein niederträchtiger Mann namens Scheba aus dem Stamm Benjamin, ein Sohn von Bichri. Laut blies er das Horn und rief: »Ihr Männer von Israel, was geht uns dieser David noch an? Wir wollen nichts mehr mit ihm zu tun haben! Los, geht nach Hause!« <verse number="2" style="v"/>Da sagten sich alle Israeliten von David los und schlossen sich Scheba an. Nur die Männer vom Stamm Juda blieben bei ihrem König und begleiteten ihn vom Jordan bis nach Jerusalem.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Als David in seinem Palast angekommen war, ordnete er an, was mit den zehn Nebenfrauen geschehen sollte, die er in Jerusalem zurückgelassen hatte: Sie mussten von jetzt an in einem bewachten Haus wohnen und durften es nicht verlassen. Der König versorgte sie mit allem Nötigen, aber er schlief nie mehr mit ihnen. Sie waren für immer eingeschlossen und lebten einsam wie Witwen.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Dann befahl David seinem Heerführer Amasa: »Ruf alle Soldaten aus Juda zusammen! In spätestens drei Tagen will ich dich und die Truppen hier in Jerusalem sehen!« <verse number="5" style="v"/>Amasa machte sich sofort auf den Weg. Als er aber nach der festgesetzten Zeit nicht erschienen war, <verse number="6" style="v"/>sagte David zu Abischai: »Jetzt wird Scheba für uns noch gefährlicher als Absalom. Nimm mit meinen Männern die Verfolgung von Scheba auf. Er darf nicht die befestigten Städte in seine Gewalt bringen, denn damit würde er uns einen schweren Schlag versetzen<note caller="+" style="f"><char style="fr" closed="false">20,6 </char><char style="ft" closed="false">Oder: bringen und sie uns vor unseren Augen entreißen.</char></note>.« <verse number="7" style="v"/>Da verließen Joabs Soldaten sowie die königliche Leibwache und die Elitetruppe des Königs Jerusalem, um Scheba, dem Sohn von Bichri, nachzujagen.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Als sie den großen Stein bei Gibeon erreichten, trafen sie Amasa, der kurz vor ihnen dort angekommen war. Joab hatte seine Waffenrüstung angelegt. Um die Hüfte trug er einen Gürtel mit einem Dolch. Während er auf Amasa zuging, nahm er unbemerkt den Dolch in die linke Hand. <verse number="9" style="v"/>»Wie geht es dir, mein Freund?«, begrüßte er Amasa und fasste mit der rechten Hand dessen Bart, als wolle er ihm einen Kuss geben. <verse number="10" style="v"/>Amasa aber hatte den Dolch nicht gesehen, den Joab in der anderen Hand hielt. Da stieß Joab ihm die Waffe mit solcher Wucht in den Bauch, dass die Därme heraushingen. Er brauchte kein zweites Mal zuzustechen, denn Amasa war sofort tot.</para>
+  <para style="p">Joab und sein Bruder Abischai nahmen die Verfolgung von Scheba wieder auf. <verse number="11" style="v"/>Einer von Joabs Männern blieb bei der Leiche und rief allen Soldaten, die vorbeikamen, zu: »Hältst du zu Joab? Bist du auf Davids Seite? Dann folge Joab!« <verse number="12" style="v"/>Doch einer nach dem anderen blieb erschüttert stehen, als er Amasas blutüberströmte Leiche mitten auf dem Weg liegen sah. Da schleifte der Soldat den Toten weg auf ein Feld und warf einen Mantel über ihn, damit die Männer sich nicht durch seinen Anblick aufhalten ließen. <verse number="13" style="v"/>Nachdem die Leiche weg war, eilten alle Joab nach, um unter seiner Führung Scheba, den Sohn von Bichri, zu verfolgen.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Scheba war inzwischen durch ganz Israel bis zur Stadt Abel-Bet-Maacha im Norden des Landes gezogen. Die Männer der Sippe Bichri hatten sich ihm angeschlossen und folgten ihm dorthin. <verse number="15" style="v"/>Als nun Joab und seine Soldaten die Stadt erreicht hatten und hörten, dass Scheba sich dort aufhielt, begannen sie mit der Belagerung. Sie schütteten einen Wall auf und gelangten so über die Vormauer. Dann fingen sie an, die Hauptmauer zu untergraben, um sie zum Einsturz zu bringen.</para>
+  <para style="p">
+    <verse number="16" style="v"/>In der Stadt wohnte eine sehr kluge Frau. Von der Mauer aus rief sie den Belagerern zu: »Hört her! Ruft bitte Joab zu mir, ich möchte mit ihm reden!« <verse number="17" style="v"/>Als er an die Mauer gekommen war, fragte sie: »Bist du Joab?« »Ja, der bin ich«, antwortete er. Sie bat: »Ich muss mit dir sprechen, bitte hör mich an!« »Gut«, erwiderte er, <verse number="18" style="v"/>und sie brachte ihr Anliegen vor: »Früher sagte man bei uns: ›Hol dir Rat in Abel, und du bist gut beraten!‹ <verse number="19" style="v"/>Unsere Stadt ist eine der friedlichsten Städte Israels, immer konnte man auf sie zählen. Sie wird sogar ›Mutter in Israel‹ genannt. Und nun willst du sie zerstören? Wie kommst du dazu, das Eigentum des <char style="nd">Herrn</char> zu vernichten?«</para>
+  <para style="p">
+    <verse number="20" style="v"/>Joab entgegnete: »Nie und nimmer würde ich eure Stadt zerstören! <verse number="21" style="v"/>Ich bin aus einem anderen Grund hier: Ein Mann vom Gebirge Ephraim hat einen Aufstand gegen unseren König angezettelt. Er heißt Scheba und ist Bichris Sohn. Ihn allein suchen wir. Liefert ihn uns aus – und wir lassen die Stadt in Ruhe!«</para>
+  <para style="p">»Einverstanden, man wird dir seinen Kopf über die Mauer zuwerfen!«, erwiderte die Frau. <verse number="22" style="v"/>Sie redete mit den Einwohnern Abel-Bet-Maachas und setzte mit ihrer Klugheit ihren Plan durch: Man enthauptete Scheba und warf seinen Kopf zu Joab hinaus. Dieser blies das Horn als Zeichen zum Aufbruch, und die Soldaten kehrten in ihre Heimatorte zurück. Joab aber ging nach Jerusalem zu König David.</para>
+  <para style="s1">Die obersten Beamten Davids</para>
+  <para style="r">(<ref loc="1CH 18:14-17">1. Chronik 18,14‒17</ref>)</para>
+  <para style="m">
+    <verse number="23" style="v"/>Joab war der oberste Befehlshaber über das ganze israelitische Heer. Benaja, ein Sohn von Jojada, hatte den Befehl über die Leibwache des Königs. <verse number="24" style="v"/>Adoniram war Aufseher über die Zwangsarbeiter. Joschafat, ein Sohn von Ahilud, war Berater des Königs, <verse number="25" style="v"/>Schewa war Hofsekretär. Zadok und Abjatar waren die obersten Priester, <verse number="26" style="v"/>und auch Ira aus Jaïr hatte den Rang eines Priesters.</para>
+  <chapter number="21" style="c"/>
+  <para style="ms1">Weitere Ereignisse aus Davids Regierungszeit</para>
+  <para style="mr">(Kapitel <ref loc="2SA 21-24">21–24</ref>)</para>
+  <para style="s1">Ein Verbrechen von Saul wird gesühnt</para>
+  <para style="m">
+    <verse number="1" style="v"/>Während Davids Regierungszeit brach im Land eine Hungersnot aus, die drei Jahre dauerte. David flehte deswegen zum <char style="nd">Herrn</char>, und der <char style="nd">Herr</char> antwortete: »Die Hungersnot hört nicht auf, weil Saul damals ein Blutbad unter den Gibeonitern angerichtet hat.«</para>
+  <para style="p">
+    <verse number="2" style="v"/>Da ließ der König die Gibeoniter zu sich kommen, um mit ihnen zu reden. Sie waren keine Israeliten, sondern gehörten zu den Amoritern, die früher das Land bewohnt hatten. Als die Israeliten Kanaan in Besitz nahmen, hatten sie den Gibeonitern geschworen, sie am Leben zu lassen.<note caller="+" style="f"><char style="fr" closed="false">21,2 </char><char style="ft" closed="false">Vgl. <char style="xt"><ref loc="JOS 9">Josua 9</ref>.</char></char></note> Saul aber, der sich voller Eifer für Juda und Israel einsetzte, hatte versucht, sie auszurotten.</para>
+  <para style="p">
+    <verse number="3" style="v"/>David fragte die Gibeoniter: »Wie kann ich das Unrecht sühnen, das ihr erleiden musstet? Was soll ich für euch tun, damit ihr das Land wieder segnet, das der <char style="nd">Herr</char> uns für immer geschenkt hat?« <verse number="4" style="v"/>Sie erwiderten: »Mit Silber und Gold lässt sich nicht wiedergutmachen, was Saul und seine Familie uns angetan haben; und wir haben auch nicht das Recht, irgendjemanden aus Israel dafür umzubringen.« »Was kann ich dann für euch tun?«, wollte David wissen. <verse number="5" style="v"/>Da sagten die Gibeoniter: »Saul plante unseren Untergang, er wollte uns vernichten, damit es in ganz Israel niemanden mehr von uns gibt. <verse number="6" style="v"/>Darum liefere nun sieben männliche Nachkommen von Saul an uns aus. Wir wollen sie aufhängen, um den Zorn des <char style="nd">Herrn</char> abzuwenden,<note caller="+" style="f"><char style="fr" closed="false">21,6 </char><char style="ft" closed="false">Wörtlich: Wir wollen sie vor dem <char style="nd">Herrn</char> aufhängen.</char></note> und zwar in Gibea, der Heimatstadt von Saul, den der <char style="nd">Herr</char> damals als König erwählt hat.«</para>
+  <para style="p">»Ich werde sie euch ausliefern«, versprach David ihnen. <verse number="7" style="v"/>Er hatte aber Sauls Sohn Jonatan im Namen des <char style="nd">Herrn</char> geschworen, seine Nachkommen nie auszurotten. Darum wollte er Mefi-Boschet, Jonatans Sohn, auf jeden Fall verschonen. <verse number="8" style="v"/>David suchte Armoni und Mefi-Boschet aus, die beiden Söhne von Sauls Nebenfrau Rizpa, einer Tochter von Ajja, und die fünf Söhne von Sauls Tochter Merab, die mit Adriël aus Mehola, einem Sohn von Barsillai, verheiratet war. <verse number="9" style="v"/>Er übergab sie den Gibeonitern.</para>
+  <para style="p">Alle sieben wurden am selben Tag auf dem Berg bei Gibea aufgehängt, um den Zorn des <char style="nd">Herrn</char> abzuwenden.<note caller="+" style="f"><char style="fr" closed="false">21,9 </char><char style="ft" closed="false">Wörtlich: wurden … vor dem <char style="nd">Herrn</char> aufgehängt.</char></note> Man richtete sie hin, als die Gerstenernte gerade begonnen hatte.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Rizpa, die Tochter von Ajja, ging zu dem Felsen, auf dem die sieben gestorben waren, breitete dort einen Sack auf dem Boden für sich aus und bewachte die Toten. Tagsüber verscheuchte sie die Raubvögel, und nachts hielt sie die wilden Tiere von den Leichen fern. Vom Anfang der Ernte im Frühjahr bis zum ersten Regen im Herbst harrte sie dort aus.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Als David erfuhr, was Sauls Nebenfrau Rizpa tat, <verse number="12-14" style="v"/>ließ er Sauls Gebeine und die seines Sohnes Jonatan aus Jabesch in Gilead holen, um sie im Familiengrab von Sauls Vater Kisch beizusetzen. Bei der Schlacht auf dem Gilboagebirge hatten die Philister die Israeliten besiegt und Sauls und Jonatans Leichen auf dem Marktplatz von Bet-Schean aufgehängt. Die Bürger von Jabesch in Gilead waren dann heimlich gekommen und hatten die Toten mitgenommen. Auch die sieben Erhängten ließ David vom Berg holen und im Familiengrab bestatten. Das Grab lag in Zela, einem Dorf im Stammesgebiet von Benjamin.</para>
+  <para style="p">Als alle Befehle Davids ausgeführt waren, erhörte Gott die Gebete für das Land und machte der Hungersnot ein Ende.</para>
+  <para style="s1">Kriege gegen die Philister</para>
+  <para style="r">(<ref loc="1CH 20:4-8">1. Chronik 20,4‒8</ref>)</para>
+  <para style="m">
+    <verse number="15" style="v"/>Wieder einmal herrschte Krieg zwischen den Philistern und Israel. David zog mit seinem Heer aus, und es kam zur Schlacht. Als David vom Kampf erschöpft war, <verse number="16" style="v"/>griff ein Philister namens Jischbi-Benob ihn an und wollte ihn umbringen. Jischbi-Benob war ein Nachkomme von Rafa, ein Riese. Er war bewaffnet mit einem neuen Schwert und mit einem Speer, dessen bronzene Spitze allein fast vier Kilogramm wog. <verse number="17" style="v"/>Doch Abischai, der Sohn von Davids Schwester Zeruja, kam David zu Hilfe und tötete den Philister. Nach dieser Schlacht musste David seinen Männern versprechen, in Zukunft nicht mehr selbst in den Krieg zu ziehen. Sie sagten zu ihm: »Wir wollen dich nicht verlieren, denn du bist die leuchtende Hoffnung unseres Volkes.«</para>
+  <para style="p">
+    <verse number="18" style="v"/>Kurze Zeit später kämpften die Israeliten in der Nähe von Gob gegen die Philister. Dabei tötete Sibbechai, der Huschatiter, den Riesen Saf. <verse number="19" style="v"/>In einer weiteren Schlacht bei Gob gegen die Philister erschlug Elhanan aus Bethlehem, der Sohn von Jaïr<note caller="+" style="f"><char style="fr" closed="false">21,19 </char><char style="ft" closed="false">So nach <char style="xt"><ref loc="1CH 20:5">1. Chronik 20,5</ref>.</char> Im hebräischen Text steht der Name Jaare-Oregim.</char></note>, den Bruder von Goliat aus Gat<note caller="+" style="f"><char style="fr" closed="false">21,19 </char><char style="ft" closed="false">Vermutlicher Text nach <char style="xt"><ref loc="1CH 20:5">1. Chronik 20,5</ref>.</char> Der hebräische Text lautet: Goliat aus Gat.</char></note>; dessen Speer war so dick wie ein kleiner Baum<note caller="+" style="f"><char style="fr" closed="false">21,19 </char><char style="ft" closed="false">Wörtlich: wie ein Weberbaum. – So hießen die beiden dicken Querstangen an den Enden des Webstuhls, an denen die Fäden befestigt wurden.</char></note>. <verse number="20" style="v"/>Einmal kam es bei Gat zum Kampf. Einer der Philister, ein Nachkomme von Rafa, war sehr groß. An jeder Hand hatte er sechs Finger und an jedem Fuß sechs Zehen. <verse number="21" style="v"/>Er machte sich über die Israeliten lustig, doch Jonatan, ein Sohn von Davids Bruder Schamma, tötete ihn. <verse number="22" style="v"/>Diese vier Riesen waren Nachkommen von Rafa und kamen aus Gat. Sie wurden von David und seinen Soldaten umgebracht.</para>
+  <chapter number="22" style="c"/>
+  <para style="s1">Davids Danklied</para>
+  <para style="r">(<ref loc="PSA 18">Psalm 18</ref>)</para>
+  <para style="m">
+    <verse number="1" style="v"/>David sang das folgende Danklied, nachdem der <char style="nd">Herr</char> ihn aus der Gewalt aller Feinde und auch aus der Hand von Saul befreit hatte:</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="2" style="v"/>Der <char style="nd">Herr</char> ist mein Fels, meine Festung und mein Erretter,</para>
+  <para style="q1">
+    <verse number="3" style="v"/>mein Gott, meine Zuflucht, mein sicherer Ort.</para>
+  <para style="q1">Er ist mein Schild, mein starker Helfer,<note caller="+" style="f"><char style="fr" closed="false">22,3 </char><char style="ft" closed="false">Wörtlich: das Horn meines Heils. – Das Horn steht sinnbildlich für Stärke und Kraft.</char></note></para>
+  <para style="q1">meine Burg auf unbezwingbarer Höhe.</para>
+  <para style="q1">Du, Gott, bewahrst mich vor den Angriffen meiner Feinde.</para>
+  <para style="q1">
+    <verse number="4" style="v"/>Gepriesen seist du, <char style="nd">Herr</char>!</para>
+  <para style="q1">Wenn ich zu dir um Hilfe rufe,</para>
+  <para style="q1">dann werde ich vor meinen Feinden gerettet.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="5" style="v"/>Ich war schon umgeben von den Fluten des Todes,</para>
+  <para style="q1">er drohte mich zu verschlingen wie eine mächtige Woge.</para>
+  <para style="q1">
+    <verse number="6" style="v"/>Hilflos musste ich zusehen,</para>
+  <para style="q1">wie die tödliche Falle zuschnappte.</para>
+  <para style="q1">
+    <verse number="7" style="v"/>In äußerster Bedrängnis schrie ich zum <char style="nd">Herrn</char>.</para>
+  <para style="q1">Ja, zu meinem Gott rief ich um Hilfe.</para>
+  <para style="q1">Da hörte er mich in seinem Tempel,</para>
+  <para style="q1">mein Schreien drang durch bis an sein Ohr.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="8" style="v"/>Plötzlich erbebte die Erde,</para>
+  <para style="q1">selbst der Himmel geriet ins Wanken,</para>
+  <para style="q1">denn glühender Zorn hatte Gott gepackt.</para>
+  <para style="q1">
+    <verse number="9" style="v"/>Schwarzer Rauch quoll aus seiner Nase,</para>
+  <para style="q1">aus seinem Mund loderten Flammen,</para>
+  <para style="q1">und glühende Kohlen wurden herausgeschleudert.</para>
+  <para style="q1">
+    <verse number="10" style="v"/>Er riss den Himmel auf</para>
+  <para style="q1">und kam auf dunklen Wolken zur Erde herunter.</para>
+  <para style="q1">
+    <verse number="11" style="v"/>Auf einem Kerub flog er daher</para>
+  <para style="q1">und schwebte herab, vom Sturm getragen.</para>
+  <para style="q1">
+    <verse number="12" style="v"/>Er hüllte sich in Finsternis,</para>
+  <para style="q1">verbarg sich in dichten, dunklen Regenwolken.</para>
+  <para style="q1">
+    <verse number="13" style="v"/>Dann ging ein Lichtglanz von ihm aus,</para>
+  <para style="q1">und glühende Kohlen prasselten nieder.</para>
+  <para style="q1">
+    <verse number="14" style="v"/>Der <char style="nd">Herr</char> ließ einen Donnerschlag auf den anderen folgen,</para>
+  <para style="q1">vom Himmel dröhnte die Stimme des höchsten Gottes.</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Er schoss seine Pfeile ab,</para>
+  <para style="q1">und die Feinde stoben auseinander.</para>
+  <para style="q1">Grelle Blitze zuckten und verwirrten das feindliche Heer.</para>
+  <para style="q1">
+    <verse number="16" style="v"/>Sogar den Meeresboden konnte man sehen;</para>
+  <para style="q1">offen lagen die Fundamente der Erde da,</para>
+  <para style="q1">als der <char style="nd">Herr</char> meine Feinde bedrohte</para>
+  <para style="q1">und vor Entrüstung schnaubte.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="17" style="v"/>Er streckte mir seine Hand von oben entgegen</para>
+  <para style="q1">und riss mich aus den tosenden Fluten.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Er befreite mich von der Übermacht meiner Feinde,</para>
+  <para style="q1">von allen, die mich hassten und so viel stärker waren als ich.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Sie hatten mich überfallen, als ich schon im Unglück steckte.</para>
+  <para style="q1">Aber der <char style="nd">Herr</char> gab mir sicheren Halt</para>
+  <para style="q1">
+    <verse number="20" style="v"/>und führte mich aus der Not hinaus in die Freiheit.</para>
+  <para style="q1">Er rettete mich. So viel bedeute ich ihm!</para>
+  <para style="q1">
+    <verse number="21" style="v"/>Der <char style="nd">Herr</char> tat mir Gutes für meine Treue,</para>
+  <para style="q1">meine Rechtschaffenheit hat er belohnt.</para>
+  <para style="q1">
+    <verse number="22" style="v"/>Denn stets bin ich dem <char style="nd">Herrn</char> gefolgt</para>
+  <para style="q1">und habe meinem Gott nie den Rücken gekehrt.</para>
+  <para style="q1">
+    <verse number="23" style="v"/>Seine Gebote hielt ich mir immer vor Augen,</para>
+  <para style="q1">und seine Befehle schlug ich nicht in den Wind.</para>
+  <para style="q1">
+    <verse number="24" style="v"/>Ich lebte vollkommen nach seinem Willen</para>
+  <para style="q1">und ging jedem Unrecht aus dem Weg.</para>
+  <para style="q1">
+    <verse number="25" style="v"/>Ja, der <char style="nd">Herr</char> belohnte meine Treue,</para>
+  <para style="q1">meine Rechtschaffenheit übersah er nicht.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="26" style="v"/>Wer zu dir steht, <char style="nd">Herr</char>, dem stehst auch du zur Seite;</para>
+  <para style="q1">wer nach deinem Willen lebt, den enttäuschst du nicht.</para>
+  <para style="q1">
+    <verse number="27" style="v"/>Wer ein reines Herz hat, kann sich ganz auf dich verlassen,</para>
+  <para style="q1">doch falsche Menschen führst du hinters Licht.</para>
+  <para style="q1">
+    <verse number="28" style="v"/>Du hilfst denen, die sich selbst nicht überschätzen<note caller="+" style="f"><char style="fr" closed="false">22,28 </char><char style="ft" closed="false">Oder: die sich selbst nicht helfen können.</char></note>.</para>
+  <para style="q1">Die Überheblichen aber stößt du von ihrem Thron.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="29" style="v"/>
+    <char style="nd">Herr</char>, du machst die Finsternis um mich hell,</para>
+  <para style="q1">du bist mein Licht.</para>
+  <para style="q1">
+    <verse number="30" style="v"/>Mit dir kann ich die Feinde angreifen;</para>
+  <para style="q1">mit dir, mein Gott, kann ich über Mauern springen.</para>
+  <para style="q1">
+    <verse number="31" style="v"/>Was für ein Gott!</para>
+  <para style="q1">Sein Handeln ist vollkommen,</para>
+  <para style="q1">und was er sagt, ist durch und durch wahr.</para>
+  <para style="q1">Er beschützt alle, die zu ihm flüchten.</para>
+  <para style="q1">
+    <verse number="32" style="v"/>Der <char style="nd">Herr</char> allein ist Gott!</para>
+  <para style="q1">Wer außer ihm ist so stark und unerschütterlich wie ein Fels?</para>
+  <para style="q1">
+    <verse number="33" style="v"/>Gott allein ist meine Burg, in der ich Zuflucht finde.</para>
+  <para style="q1">Er ebnet mir meinen Weg.</para>
+  <para style="q1">
+    <verse number="34" style="v"/>Er beflügelt meine Schritte,</para>
+  <para style="q1">lässt mich laufen und springen wie ein Hirsch.</para>
+  <para style="q1">Selbst auf steilen Felsen gibt er mir festen Halt.</para>
+  <para style="q1">
+    <verse number="35" style="v"/>Er lehrt mich, die Waffen zu gebrauchen,</para>
+  <para style="q1">und zeigt mir, wie ich auch den stärksten Bogen spannen kann.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="36" style="v"/>Herr, deine Hilfe war für mich wie ein schützender Schild.</para>
+  <para style="q1">Du beugst dich zu mir herab und machst mich groß.</para>
+  <para style="q1">
+    <verse number="37" style="v"/>Du räumst mir alle Hindernisse aus dem Weg,</para>
+  <para style="q1">noch nie bin ich beim Laufen gestürzt.</para>
+  <para style="q1">
+    <verse number="38" style="v"/>Ich jagte meinen Feinden nach und überwältigte sie,</para>
+  <para style="q1">ich kehrte erst um, als auch der Letzte von ihnen gefallen war.</para>
+  <para style="q1">
+    <verse number="39" style="v"/>Mit Wucht schlug ich sie nieder,</para>
+  <para style="q1">bis sie nicht mehr aufstehen konnten</para>
+  <para style="q1">und tot zu meinen Füßen lagen.</para>
+  <para style="q1">
+    <verse number="40" style="v"/>Du, Herr, hast mich mit Kraft für diesen Kampf ausgerüstet,</para>
+  <para style="q1">du hast mir zum Sieg über meine Gegner verholfen.</para>
+  <para style="q1">
+    <verse number="41" style="v"/>Dass sie fliehen mussten, verdanke ich dir;</para>
+  <para style="q1">alle, die mich hassten, konnte ich umbringen.</para>
+  <para style="q1">
+    <verse number="42" style="v"/>Sie suchten nach Hilfe, doch weit und breit war kein Retter.</para>
+  <para style="q1">Sie schrien zum <char style="nd">Herrn</char>, aber er hörte nicht auf sie.</para>
+  <para style="q1">
+    <verse number="43" style="v"/>Ich rieb sie auf, zermalmte sie zu Staub,</para>
+  <para style="q1">ich zertrat sie wie Dreck auf der Straße.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="44" style="v"/>Als ein Aufstand meines Volkes mich bedrohte,</para>
+  <para style="q1">hast du mir geholfen,</para>
+  <para style="q1">und mich zum Herrscher über viele Nationen gemacht.</para>
+  <para style="q1">Sogar Völker, die ich nicht kannte, haben sich mir unterworfen.</para>
+  <para style="q1">
+    <verse number="45" style="v"/>Fremde ergaben sich, sobald sie nur von mir hörten,</para>
+  <para style="q1">und gingen gehorsam vor mir auf die Knie.</para>
+  <para style="q1">
+    <verse number="46" style="v"/>Zitternd kamen sie aus ihren Festungen heraus</para>
+  <para style="q1">und hatten keine Kraft mehr zum Widerstand.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="47" style="v"/>Der <char style="nd">Herr</char> lebt! Er ist mein schützender Fels – ich preise ihn!</para>
+  <para style="q1">Ihn allein will ich rühmen,</para>
+  <para style="q1">denn er ist mein Gott, mein Fels, bei dem ich Rettung fand.</para>
+  <para style="q1">
+    <verse number="48" style="v"/>Er ist es, der sich an meinen Feinden gerächt hat;</para>
+  <para style="q1">ganze Völker hat er mir unterworfen</para>
+  <para style="q1">
+    <verse number="49" style="v"/>und mich der Gewalt meiner grausamen Gegner entrissen.</para>
+  <para style="q1">Du, Gott, gabst mir den Sieg über meine Feinde,</para>
+  <para style="q1">von diesen brutalen Menschen hast du mich befreit.</para>
+  <para style="b"/>
+  <para style="q1">
+    <verse number="50" style="v"/>Darum will ich dich loben, <char style="nd">Herr</char>.</para>
+  <para style="q1">Alle Völker sollen es hören!</para>
+  <para style="q1">Deinen Namen will ich preisen mit meinem Lied.</para>
+  <para style="q1">
+    <verse number="51" style="v"/>Du hast deinen auserwählten König aus großen Gefahren errettet.</para>
+  <para style="q1">Ja, du erweist mir, David, deine Liebe,</para>
+  <para style="q1">und auch meine Nachkommen dürfen für alle Zeit darauf zählen.</para>
+  <chapter number="23" style="c"/>
+  <para style="s1">Davids letzte Worte</para>
+  <para style="m">
+    <verse number="1" style="v"/>Die letzten Worte von David lauteten:</para>
+  <para style="p">»Dies sagt David, Isais Sohn, der Mann, den der Gott Jakobs mit großer Ehre bedacht und zum König erwählt hat, der Mann, der in Israel für seine schönen Lieder berühmt ist.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Der Geist des <char style="nd">Herrn</char> hat durch mich geredet und mir seine Worte in den Mund gelegt. <verse number="3" style="v"/>Der Gott Israels, der schützende Fels meines Volkes, hat zu mir gesprochen: Ein König, der gerecht regiert und Gott mit Ehrfurcht begegnet, <verse number="4" style="v"/>gleicht der Morgensonne, die nach einem Regenschauer am wolkenlosen Himmel steht: Unter ihren warmen Strahlen sprießen die Pflanzen aus der Erde hervor.</para>
+  <para style="p">
+    <verse number="5" style="v"/>So sieht Gott mich und mein Königshaus an: Er hat einen Bund mit mir geschlossen, den er niemals brechen wird, seine Zusage gilt für alle Zeiten. Ja, er rettet mich und schenkt mir alles, was man sich nur wünschen kann.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Aber alle, die von Gott nichts wissen wollen, sind wie entwurzeltes Dornengestrüpp, das der Wind wegweht: Niemand rührt es mit bloßen Händen an. <verse number="7" style="v"/>Mit Schaufel und Speer sammelt man es ein und wirft die Dornen an Ort und Stelle ins Feuer.«</para>
+  <para style="s1">Die berühmtesten Soldaten Davids</para>
+  <para style="r">(<ref loc="1CH 11:10-41">1. Chronik 11,10‒41</ref>)</para>
+  <para style="m">
+    <verse number="8" style="v"/>Dies ist das Verzeichnis der berühmtesten Offiziere des Königs:</para>
+  <para style="p">Jischbaal<note caller="+" style="f"><char style="fr" closed="false">23,8 </char><char style="ft" closed="false">So nach der griechischen Übersetzung. Im hebräischen Text lautet der Name Joscheb-Baschebet.</char></note>, ein Nachkomme von Hachmoni, stand an der Spitze von Davids militärischer Führungsriege, die man die »drei Helden« nannte. Er tötete in einer Schlacht 800 Mann mit seinem Speer.<note caller="+" style="f"><char style="fr" closed="false">23,8 </char><char style="ft" closed="false">Vermutlicher Text nach <char style="xt"><ref loc="1CH 11:11">1. Chronik 11,11</ref>.</char> Der hebräische Text scheint falsch überliefert und lautet etwa: Adino, der Ezniter, tötete in einer Schlacht 800 Mann.</char></note></para>
+  <para style="p">
+    <verse number="9" style="v"/>An zweiter Stelle kam Eleasar, Dodos Sohn, ein Nachkomme von Ahoach. Er gehörte ebenfalls zu den »drei Helden«, den berühmtesten Soldaten Davids. Sie boten an Davids Seite den Philistern die Stirn. In einer Schlacht, als die Israeliten schon den Rückzug antraten, <verse number="10" style="v"/>stürzte Eleasar sich mit dem Schwert auf die Feinde. Er schlug so lange auf sie ein, bis er keine Kraft mehr im Arm hatte und seine Hand sich so verkrampfte, dass er sie kaum noch vom Schwertgriff lösen konnte. Der <char style="nd">Herr</char> schenkte den Israeliten an diesem Tag einen großen Sieg. Da kehrten auch die restlichen Israeliten wieder um, aber bloß, um die Gefallenen auszuplündern.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Der Dritte war der Harariter Schamma, der Sohn von Age. Einmal kämpften die Philister auf einem Linsenfeld in der Nähe von Lehi gegen Israel. Die Israeliten flohen vor den Feinden, <verse number="12" style="v"/>doch Schamma drang mitten auf das Feld vor, trieb die Philister zurück und schlug sie in die Flucht. So schenkte der <char style="nd">Herr</char> den Israeliten einen großen Sieg.</para>
+  <para style="p">
+    <verse number="13-14" style="v"/>Ein anderes Mal hielten die Philister in der Erntezeit die Refaïm-Ebene besetzt. In Bethlehem hatten sie einen Posten aufgestellt. David aber hatte sich in einer Bergfestung verschanzt, in der Adullamhöhle. Dort suchten ihn drei seiner dreißig Offiziere auf. <verse number="15" style="v"/>David hatte großen Durst und sagte zu ihnen: »Wer holt mir einen Schluck Wasser aus dem Brunnen am Tor von Bethlehem?« <verse number="16" style="v"/>Da drangen die drei Offiziere ins Heerlager der Philister ein, schöpften Wasser aus dem Brunnen bei Bethlehem und brachten es David. Doch er wollte es nicht trinken, sondern schüttete es aus als Trankopfer für den <char style="nd">Herrn</char> <verse number="17" style="v"/>und sagte: »Der <char style="nd">Herr</char> bewahre mich vor einer solchen Tat! Da könnte ich ja gleich das Blut dieser Männer trinken, die ihr Leben aufs Spiel gesetzt haben, um mir das Wasser zu holen!« Darum wollte er nichts davon trinken. So setzten sich diese drei Männer für den König ein.</para>
+  <para style="p">
+    <verse number="18-19" style="v"/>Joabs Bruder Abischai, der Sohn von Davids Schwester Zeruja, führte die drei<note caller="+" style="f"><char style="fr" closed="false">23,18‒19 </char><char style="ft" closed="false">Einige hebräische Handschriften haben hier und im folgenden Vers stattdessen die Zahl 30. Vgl. <char style="xt"><ref loc="1CH 11:20">1. Chronik 11,20</ref>.</char></char></note> an. Einmal erstach er mit seinem Speer im Kampf 300 Mann. Er war der berühmteste dieser drei Offiziere, aber er gehörte nicht zu den »drei Helden«.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Benaja aus Kabzeel, ein Sohn von Jojada, war ein starker Mann, der große Taten vollbrachte. Er tötete die beiden gefürchteten Soldaten der Moabiter, die »Löwen aus Moab« genannt wurden. Als es einmal geschneit hatte, stieg er in eine Zisterne hinunter und tötete einen Löwen, der dort hineingefallen war. <verse number="21" style="v"/>Ein anderes Mal brachte er einen riesigen Ägypter um, der mit einem Speer bewaffnet war, während er selbst nur einen Stock in der Hand hatte. Benaja ging auf den Ägypter zu, riss ihm den Speer aus der Hand und erstach ihn damit. <verse number="22" style="v"/>Weil Benaja, der Sohn von Jojada, solche Taten vollbrachte, war er als einer jener drei Offiziere bekannt. <verse number="23" style="v"/>Er war der berühmteste unter den dreißig Offizieren, aber er gehörte nicht zu den »drei Helden«. David machte ihn zum Oberbefehlshaber seiner Leibwache.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Folgende Männer gehörten zu den dreißig Offizieren des Königs:</para>
+  <para style="li">Asaël, der Bruder von Joab;</para>
+  <para style="li">Elhanan, der Sohn von Dodo, aus Bethlehem;</para>
+  <para style="li">
+    <verse number="25" style="v"/>Schamma aus Harod;</para>
+  <para style="li">Elika aus Harod;</para>
+  <para style="li">
+    <verse number="26" style="v"/>Helez aus Pelet;</para>
+  <para style="li">Ira, der Sohn von Ikkesch, aus Tekoa;</para>
+  <para style="li">
+    <verse number="27" style="v"/>Abiëser aus Anatot;</para>
+  <para style="li">Sibbechai<note caller="+" style="f"><char style="fr" closed="false">23,27 </char><char style="ft" closed="false">So nach <char style="xt"><ref loc="1CH 11:29">1. Chronik 11,29</ref></char> und der griechischen Übersetzung. Im hebräischen Text lautet der Name Mebunnai.</char></note> aus Huscha;</para>
+  <para style="li">
+    <verse number="28" style="v"/>Zalmon aus Ahoach;</para>
+  <para style="li">Mahrai aus Netofa;</para>
+  <para style="li">
+    <verse number="29" style="v"/>Heled, der Sohn von Baana, aus Netofa;</para>
+  <para style="li">Ittai, der Sohn von Ribai, aus Gibea im Stammesgebiet von Benjamin;</para>
+  <para style="li">
+    <verse number="30" style="v"/>Benaja aus Piraton;</para>
+  <para style="li">Hiddai aus dem Gaasch-Tal;</para>
+  <para style="li">
+    <verse number="31" style="v"/>Abialbon aus Arba;</para>
+  <para style="li">Asmawet aus Bahurim;</para>
+  <para style="li">
+    <verse number="32-33" style="v"/>Eljachba aus Schaalbon;</para>
+  <para style="li">die Söhne von Jaschen;</para>
+  <para style="li">Jonatan, der Sohn von Schamma<note caller="+" style="f"><char style="fr" closed="false">23,32‒33 </char><char style="ft" closed="false">So nach der griechischen Übersetzung. Der hebräische Text lautet: Jonatan, Schamma.</char></note>, aus Harar;</para>
+  <para style="li">Ahiam, der Sohn von Scharar, aus Harar;</para>
+  <para style="li">
+    <verse number="34" style="v"/>Elifelet, der Sohn von Ahasbai, aus Maacha;</para>
+  <para style="li">Eliam, der Sohn von Ahitofel, aus Gilo;</para>
+  <para style="li">
+    <verse number="35" style="v"/>Hezro aus Karmel;</para>
+  <para style="li">Paarai aus Arab;</para>
+  <para style="li">
+    <verse number="36" style="v"/>Jigal, der Sohn von Nathan, aus Zoba;</para>
+  <para style="li">Bani aus Gad;</para>
+  <para style="li">
+    <verse number="37" style="v"/>der Ammoniter Zelek;</para>
+  <para style="li">Nachrai, der Waffenträger von Joab, dem Sohn von Zeruja, aus Beerot;</para>
+  <para style="li">
+    <verse number="38" style="v"/>Ira und Gareb aus Jattir</para>
+  <para style="li">
+    <verse number="39" style="v"/>und der Hetiter Uria.</para>
+  <para style="b"/>
+  <para style="m">Insgesamt waren es siebenunddreißig berühmte Soldaten.</para>
+  <chapter number="24" style="c"/>
+  <para style="s1">Davids Volkszählung</para>
+  <para style="r">(<ref loc="1CH 21:1-27">1. Chronik 21,1‒27</ref>)</para>
+  <para style="m">
+    <verse number="1" style="v"/>Der <char style="nd">Herr</char> wurde noch einmal zornig auf die Israeliten. Darum verleitete er David dazu, sie ins Unglück zu stürzen. Er brachte den König auf den Gedanken, eine Volkszählung durchzuführen.</para>
+  <para style="p">
+    <verse number="2" style="v"/>David befahl Joab, seinem obersten Heerführer: »Reise durch alle Stammesgebiete Israels, von Dan im Norden bis Beerscheba im Süden, und zähl alle wehrfähigen Männer! Ich möchte wissen, wie viele es sind.« <verse number="3" style="v"/>Doch Joab wandte ein: »Mein König, ich wünsche dir ja, dass der <char style="nd">Herr</char>, dein Gott, das Volk noch zu deinen Lebzeiten hundertmal größer werden lässt! Aber ich verstehe nicht, warum du nun so etwas verlangst.« <verse number="4" style="v"/>Doch der König blieb bei seinem Entschluss, trotz aller Einwände, die Joab und die Offiziere vorbrachten. Und so machten sie sich auf den Weg, um die Volkszählung durchzuführen.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Sie überquerten den Jordan und begannen ihre Arbeit in Aroër, südlich der Stadt, die mitten im Arnontal liegt. Von dort zogen sie weiter in das Stammesgebiet von Gad und nach Jaser, <verse number="6" style="v"/>dann nach Gilead und bis nach Kadesch, das schon zum Land der Hetiter gehört<note caller="+" style="f"><char style="fr" closed="false">24,6 </char><char style="ft" closed="false">So nach der griechischen Übersetzung. Der hebräische Text lautet: bis nach Tachtim-Hodschi.</char></note>. Weiter kamen sie nach Dan-Jaan, in die Gegend von Sidon, <verse number="7" style="v"/>in die befestigte Stadt Tyrus und in alle Städte der Hiwiter und Kanaaniter. Schließlich zogen sie durch den Süden Judas bis nach Beerscheba.</para>
+  <para style="p">
+    <verse number="8" style="v"/>So reisten sie durch das ganze Land und kehrten nach neun Monaten und zwanzig Tagen wieder nach Jerusalem zurück. <verse number="9" style="v"/>Dort legte Joab dem König das Ergebnis vor: In Israel gab es 800.000 wehrfähige Männer, dazu kamen 500.000 aus dem Stamm Juda.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Doch nun bereute David, was er getan hatte. Er betete zum <char style="nd">Herrn</char>: »Meine Schuld ist groß. Bitte, <char style="nd">Herr</char>, vergib mir! Wie dumm bin ich gewesen!«</para>
+  <para style="p">
+    <verse number="11" style="v"/>Am nächsten Morgen, als David gerade aufgestanden war, befahl der <char style="nd">Herr</char> dem Propheten Gad, der als Seher im Dienst des Königs stand: <verse number="12" style="v"/>»Geh zu David und sag ihm: Drei Strafen legt der <char style="nd">Herr</char> dir vor. Wähl dir eine davon aus!« <verse number="13" style="v"/>Gad ging zu David und gab ihm Gottes Botschaft weiter. Er fragte ihn: »Was wählst du? Drei<note caller="+" style="f"><char style="fr" closed="false">24,13 </char><char style="ft" closed="false">So nach <char style="xt"><ref loc="1CH 21:12">1. Chronik 21,12</ref></char> und der griechischen Übersetzung. Der hebräische Text lautet: Sieben.</char></note> Jahre Hungersnot in ganz Israel? Oder drei Monate, in denen du vor deinen Feinden fliehen musst? Oder soll drei Tage lang die Pest in deinem Land wüten? Überleg dir, was ich dem antworten soll, der mich zu dir geschickt hat!«</para>
+  <para style="p">
+    <verse number="14" style="v"/>David entgegnete: »Ich habe große Angst. Aber ich will lieber dem <char style="nd">Herrn</char> als den Menschen in die Hände fallen, denn er ist sehr barmherzig.«</para>
+  <para style="p">
+    <verse number="15" style="v"/>Da ließ der <char style="nd">Herr</char> in Israel die Pest ausbrechen, sie begann noch am selben Morgen und wütete drei Tage lang. In ganz Israel, von Dan im Norden bis Beerscheba im Süden, kamen 70.000 Menschen dabei um. <verse number="16" style="v"/>Doch als der Engel, der die Strafe Gottes ausführte, vor Jerusalem stand und schon die Hand zum vernichtenden Schlag erhoben hatte, da hatte der <char style="nd">Herr</char> Mitleid mit den Menschen in ihrem Elend, und er befahl: »Genug damit! Hör auf, das Volk zu töten!« Der Engel des <char style="nd">Herrn</char> stand gerade auf dem Dreschplatz des Jebusiters Arauna.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Als David den Engel sah, rief er zum <char style="nd">Herrn</char>: »Ich allein habe gesündigt und einen schweren Fehler begangen, aber das Volk, meine Herde, trifft keine Schuld! Darum bestrafe nur mich und meine Verwandten!«</para>
+  <para style="p">
+    <verse number="18" style="v"/>Am selben Tag kam der Prophet Gad zu David und forderte ihn auf: »Geh zum Dreschplatz des Jebusiters Arauna und bau dort einen Altar für den <char style="nd">Herrn</char>!« <verse number="19" style="v"/>David machte sich auf den Weg, um den Befehl auszuführen, den der <char style="nd">Herr</char> ihm durch Gad gegeben hatte.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Als Arauna den König und sein Gefolge kommen sah, lief er ihm entgegen, warf sich ihm zu Füßen und berührte mit seinem Gesicht den Boden. <verse number="21" style="v"/>Dann fragte er: »Warum kommt mein Herr und König zu einem so geringen Mann wie mir?« David antwortete: »Ich möchte deinen Dreschplatz kaufen, um hier einen Altar für den <char style="nd">Herrn</char> zu bauen, damit die Pest nicht länger wütet.«</para>
+  <para style="p">
+    <verse number="22" style="v"/>»Mein König, nimm dir doch, was du zum Opfern brauchst!«, erwiderte Arauna. »Ich gebe dir die Rinder für das Brandopfer. Als Brennholz kannst du meinen Dreschschlitten und das Joch der Rinder verwenden. <verse number="23" style="v"/>Ich schenke dir alles. Möge der <char style="nd">Herr</char>, dein Gott, dein Opfer gnädig annehmen!«</para>
+  <para style="p">
+    <verse number="24" style="v"/>Doch der König wandte ein: »Nein, ich will alles zum vollen Preis kaufen. Ich möchte dem <char style="nd">Herrn</char>, meinem Gott, nicht ein Opfer darbringen, das mich nichts gekostet hat.«</para>
+  <para style="p">Und so bezahlte David für den Dreschplatz und die Rinder 50 Silberstücke. <verse number="25" style="v"/>Er baute dort einen Altar für den <char style="nd">Herrn</char> und brachte auf ihm Brand- und Friedensopfer dar. Der <char style="nd">Herr</char> erhörte Davids Gebet und machte der Pest in Israel ein Ende.</para>
+</usx>

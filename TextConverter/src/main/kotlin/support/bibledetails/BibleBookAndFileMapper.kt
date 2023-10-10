@@ -251,8 +251,8 @@ open class BibleBookAndFileMapper
     try
     {
       val filePattern = StandardFileLocations.getRawUsxFilePattern(null)
-      StepFileUtils.iterateOverFilesInFolder(preferredFolderPath, filePattern,false, ::handleFile, null)
-      if (null != otherFolderPath) StepFileUtils.iterateOverFilesInFolder(otherFolderPath, filePattern,false, ::handleFile, null)
+      if (File(preferredFolderPath).exists()) StepFileUtils.iterateOverFilesInFolder(preferredFolderPath, filePattern,false, ::handleFile, null)
+      if (null != otherFolderPath && File(otherFolderPath).exists()) StepFileUtils.iterateOverFilesInFolder(otherFolderPath, filePattern,false, ::handleFile, null)
     }
     catch (e: Exception)
     {

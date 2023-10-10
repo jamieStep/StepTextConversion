@@ -7,6 +7,7 @@ import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRa
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.getExtendedNodeName
 import org.stepbible.textconverter.support.ref.Ref
@@ -480,7 +481,7 @@ object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase()
           m_CurrentChapterSid = if (Dom.hasAttribute(node, "sid"))
             Dom.getAttribute(node,"sid")!!
           else
-            m_CurrentBook + Dom.getAttribute(node, "number")
+            m_CurrentBook + " " + Dom.getAttribute(node, "number")
         }
       }
 
@@ -493,7 +494,7 @@ object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase()
           m_CurrentVerseSid = if (Dom.hasAttribute(node, "sid"))
             Dom.getAttribute(node,"sid")!!
           else
-            m_CurrentChapterSid + Dom.getAttribute(node, "number")
+            m_CurrentChapterSid + ":" + Dom.getAttribute(node, "number")
         }
       }
     }

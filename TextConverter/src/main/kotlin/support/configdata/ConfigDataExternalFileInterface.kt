@@ -301,7 +301,13 @@ private class ConfigDataExternalFileInterfaceDbl : ConfigDataExternalFileInterfa
 
 
     /************************************************************************/
-    val node = m_XPath.compile(xpath).evaluate(m_XmlDocument, XPathConstants.NODE) as Node
+    val node = try { // Have to allow for the possibility that a given element may not exist.  In DBL, eg nameLocal may appear in a variety of locations, and we may initially have tried the wrong one.
+      m_XPath.compile(xpath).evaluate(m_XmlDocument, XPathConstants.NODE) as Node
+    }
+    catch (_: Exception)
+    {
+      return null
+    }
 
     if (null != attribute)
       return Dom.getAttribute(node, attribute)

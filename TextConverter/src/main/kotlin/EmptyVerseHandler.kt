@@ -4,6 +4,7 @@ import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.bibledetails.BibleStructureTextUnderConstruction
 import org.stepbible.textconverter.support.bibledetails.BibleStructuresSupportedByOsis2modAll
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
@@ -160,8 +161,6 @@ object EmptyVerseHandler
 
   fun createEmptyVerseForElision (insertBefore: Node, sid: String): Pair<Node, Node>?
   {
-    if (!XXXOsis2ModInterface.C_ExpandElisions) return null
-
     val elisionSid = Dom.getAttribute(insertBefore, "sid")
     val template = "<verse ID _X_generatedReason='inElision' _X_reasonEmpty='inElision' _X_elided='y' _X_originalId='$elisionSid'/>"
     val start = Dom.createNode(insertBefore.ownerDocument, template.replace("ID", "sid='$sid'"))
@@ -229,7 +228,11 @@ object EmptyVerseHandler
     {
       res = true
       val map = getSidMap(document, "_X_chapter")
-      diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { createEmptyChapter(document, it, map[map.ceilingKey(it)]) }
+      diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.forEach {
+        val ix = map.ceilingKey(it)
+        val insertBefore = if (null == ix) null else map[ix]
+        createEmptyChapter(document, it, insertBefore)
+      }
     }
 
 
@@ -238,8 +241,14 @@ object EmptyVerseHandler
     if (diffs.versesInTargetSchemeButNotInTextUnderConstruction.isNotEmpty())
     {
       var versesOfInterest = diffs.versesInTargetSchemeButNotInTextUnderConstruction
+      Dbg.d(versesOfInterest.map { Ref.rd(it).toString() }.joinToString(", "))
       if (!C_ConfigurationFlags_GenerateVersesAtEndsOfChapters)
+      {
+        val x = versesOfInterest.toSet()
         versesOfInterest = versesOfInterest.filter { Ref.getV(it) < BibleStructureTextUnderConstruction.getLastVerseNo(it) }
+        val delta = x - versesOfInterest.toSet()
+        delta.sorted().forEach { Dbg.d(">>>>> " + Ref.rd(it)).toString() }
+      }
 
       if (versesOfInterest.isNotEmpty())
       {

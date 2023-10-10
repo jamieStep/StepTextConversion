@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<usx version="3.0">
+  <book code="XXB" style="id">- The Text-Critical English New Testament</book>
+  <para style="h">APPENDIX B: LIST OF CORRECTIONS TO CERTAIN EDITIONS OF THE GREEK NEW TESTAMENT</para>
+  <para style="toc1">Appendix B: List of Corrections to Certain Editions of the Greek New Testament</para>
+  <para style="toc2">Appendix B</para>
+  <para style="toc3">App. B</para>
+  <para style="mt1">APPENDIX B</para>
+  <para style="mt2">LIST OF CORRECTIONS TO CERTAIN EDITIONS OF THE GREEK NEW TESTAMENT</para>
+  <para style="ip">The text-critical footnotes in this volume have been made on the basis of the corrections listed below. The corrections in ANT and ST are based on other editions of the same basic Greek text. For HF the corrections in Luke 1:36, John 15:13, John 21:7, Romans 16:1, and Hebrews 10:17 are based on the fact that (1) HF does not document variants in the apparatus, and (2) these readings have no support among Byzantine manuscripts. The correction in Revelation 9:18 is based on the apparatus, which indicates that Ἀπὸ is the intended reading. The changes in the other verses correct what are clearly typographical errors.</para>
+  <para style="ib" />
+  <para style="im">
+    <char style="bd">ANT</char></para>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">Matt. 7:7 </cell>
+      <cell style="tc2" align="start">ἀνοιγήσεται ἡμῖν → ἀνοιγήσεται ὑμῖν</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Matt. 23:39 </cell>
+      <cell style="tc2" align="start">ἴδετε → ἴδητε</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Matt. 27:9 </cell>
+      <cell style="tc2" align="start">τετιμημημένου → τετιμημένου</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Mark 3:2 </cell>
+      <cell style="tc2" align="start">παρετήτήρουν → παρετήρουν</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Mark 9:22 </cell>
+      <cell style="tc2" align="start">ὑμῖν → ἡμῖν</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Luke 1:59 </cell>
+      <cell style="tc2" align="start">Ζαχαχαρίαν → Ζαχαρίαν</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Luke 4:17 </cell>
+      <cell style="tc2" align="start">ἐπεδόδη → ἐπεδόθη</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Luke 22:31 </cell>
+      <cell style="tc2" align="start">συνιάσαι → σινιάσαι</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">John 2:4 </cell>
+      <cell style="tc2" align="start">αὐτῷ → αὐτῇ</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">John 4:20 </cell>
+      <cell style="tc2" align="start">ὑμῶν → ἡμῶν</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">John 11:27 </cell>
+      <cell style="tc2" align="start">σὺ ὁ → σὺ εἶ ὁ</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Acts 23:7 </cell>
+      <cell style="tc2" align="start">τούτου → τοῦτο</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Acts 26:30 </cell>
+      <cell style="tc2" align="start">Βερενίκη → Βερνίκη</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">1 Cor. 14:30 </cell>
+      <cell style="tc2" align="start">ἀποκακαλυφθῇ → ἀποκαλυφθῇ</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Gal. 3:18 </cell>
+      <cell style="tc2" align="start">ἐξ ἐπαγγγελίας → ἐξ ἐπαγγελίας</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">1 Thess. 3:9 </cell>
+      <cell style="tc2" align="start">δι᾽ ἡμᾶς → δι᾽ ὑμᾶς</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Heb. 3:2 </cell>
+      <cell style="tc2" align="start">ποιήσατιν → ποιήσαντι</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Heb. 11:6 </cell>
+      <cell style="tc2" align="start">δὴ → δεῖ</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Rev. 17:8 </cell>
+      <cell style="tc2" align="start">τὰ ὄνομα → τὸ ὄνομα</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Rev. 22:11 </cell>
+      <cell style="tc2" align="start">δικαισύνην → δικαιοσύνην</cell>
+    </row>
+  </table>
+  <para style="ib" />
+  <para style="im">
+    <char style="bd">HF</char></para>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">Matt. 8:29 </cell>
+      <cell style="tc2" align="start">οοί → σοί</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Luke 1:36 </cell>
+      <cell style="tc2" align="start">καλουμένῃ → τῇ καλουμένῃ</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Luke 2:26 </cell>
+      <cell style="tc2" align="start">Πνεύματι → Πνεύματος</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">John 11:53 </cell>
+      <cell style="tc2" align="start">συνεβουλεύσατο → συνεβουλεύσαντο</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">John 15:13 </cell>
+      <cell style="tc2" align="start">φίλων → τῶν φίλων</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">John 15:24 </cell>
+      <cell style="tc2" align="start">οὐχ → οὐκ</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">John 21:7 </cell>
+      <cell style="tc2" align="start">Σίμων → Σίμων οὖν</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Acts 2:17 </cell>
+      <cell style="tc2" align="start">προφητεύοουσιν → προφητεύσουσιν</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Acts 8:1 </cell>
+      <cell style="tc2" align="start">τῷ ἀναιρέσει → τῇ ἀναιρέσει</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Rom. 7:7 </cell>
+      <cell style="tc2" align="start">νόμον → νόμου</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Rom. 16:1 </cell>
+      <cell style="tc2" align="start">δὲ → δὲ ὑμῖν</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">1 Tim. 6:19 </cell>
+      <cell style="tc2" align="start">αἰνωίου → αἰωνίου</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">2 Tim 2:4 </cell>
+      <cell style="tc2" align="start">σρατευόμενος → στρατευόμενος</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Heb. 10:17 </cell>
+      <cell style="tc2" align="start">ἁμαρτιῶν → ἁμαρτιῶν αὐτῶν</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Rev. 9:18 </cell>
+      <cell style="tc2" align="start">Ὑπὸ → Ἀπὸ</cell>
+    </row>
+  </table>
+  <para style="ib" />
+  <para style="im">
+    <char style="bd">PCK</char></para>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">1 Cor. 4:10 </cell>
+      <cell style="tc2" align="start">ὑμεῖς ἀσθενεῖς → ἡμεῖς ἀσθενεῖς (later corrected)</cell>
+    </row>
+  </table>
+  <para style="ib" />
+  <para style="im">
+    <char style="bd">ST</char></para>
+  <table>
+    <row style="tr">
+      <cell style="tc1" align="start">Matt. 20:22 </cell>
+      <cell style="tc2" align="start">ὁ δὲ → δὲ ὁ</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Mark 6:29 </cell>
+      <cell style="tc2" align="start">τῳ μνημείῳ → μνημείῳ</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Mark 9:45 </cell>
+      <cell style="tc2" align="start">γέεναν → γέενναν</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Mark 13:14 </cell>
+      <cell style="tc2" align="start">ἑστὸς → ἑστὼς</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">John 5:7 </cell>
+      <cell style="tc2" align="start">πρὸς → πρὸ</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">John 21:2 </cell>
+      <cell style="tc2" align="start">Ναθανὴλ → Ναθαναὴλ</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Acts 9:24 </cell>
+      <cell style="tc2" align="start">τὰ → τὰς</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Acts 23:15 </cell>
+      <cell style="tc2" align="start">διαγνώσκειν → διαγινώσκειν</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Acts 28:13 </cell>
+      <cell style="tc2" align="start">εἰν Ῥήγιον → εἰς Ῥήγιον</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">1 Cor. 7:4 </cell>
+      <cell style="tc2" align="start">γυνὴ τοῦ ἰδίου σώματος ὀκ → γυνὴ τοῦ ἰδίου σώματος οὐκ</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">1 Cor. 9:1 </cell>
+      <cell style="tc2" align="start">ἡμεῖς → ὑμεῖς</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">1 Cor. 9:27 </cell>
+      <cell style="tc2" align="start">δουλαγαγῶ → δουλαγωγῶ</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">1 Cor. 16:10 </cell>
+      <cell style="tc2" align="start">ἐγάζεται → ἐργάζεται</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">Eph. 4:25 </cell>
+      <cell style="tc2" align="start">ἀλλήλοιν → ἀλλήλων</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">1 Pet. 3:11 </cell>
+      <cell style="tc2" align="start">ποιησάτω → ποιησάτω ἀγαθόν· ζητησάτω</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">1 John 2:29 </cell>
+      <cell style="tc2" align="start">γεγένηται → γεγέννηται</cell>
+    </row>
+    <row style="tr">
+      <cell style="tc1" align="start">1 John 4:14 </cell>
+      <cell style="tc2" align="start">μαρτοῦμεν → μαρτυροῦμεν</cell>
+    </row>
+  </table>
+</usx>

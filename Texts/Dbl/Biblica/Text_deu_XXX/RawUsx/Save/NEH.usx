@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="NEH" style="id">- Hoffnung für alle®</book>
+  <para style="rem">Copyright © 1983, 1996, 2002, 2015 by Biblica, Inc®</para>
+  <para style="h">Nehemia</para>
+  <para style="toc1">Das Buch Nehemia</para>
+  <para style="toc2">Nehemia</para>
+  <para style="toc3">Neh</para>
+  <para style="mt1">Das Buch Nehemia</para>
+  <para style="imt1">Inhaltsübersicht</para>
+  <para style="io1">Nehemia wird nach Jerusalem entsandt <char style="ior">Kapitel <ref loc="NEH 1-2">1–2</ref></char></para>
+  <para style="io1">Der Wiederaufbau der Stadtmauer <char style="ior">Kapitel <ref loc="NEH 3-7">3–7</ref></char></para>
+  <para style="io1">Die Israeliten verpflichten sich zur Einhaltung des Gesetzes <char style="ior">Kapitel <ref loc="NEH 8-10">8–10</ref></char></para>
+  <para style="io1">Weitere Verzeichnisse und die Einweihung der Stadtmauer <char style="ior">Kapitel <ref loc="NEH 11-12">11–12</ref></char></para>
+  <para style="io1">Nehemias Reformen <char style="ior">Kapitel <ref loc="NEH 13">13</ref></char></para>
+  <chapter number="1" style="c"/>
+  <para style="ms1">Nehemia wird nach Jerusalem entsandt</para>
+  <para style="mr">(Kapitel <ref loc="NEH 1-2">1–2</ref>)</para>
+  <para style="s1">Nehemia betet für Jerusalem</para>
+  <para style="m">
+    <verse number="1" style="v"/>Dies ist der Bericht von Nehemia, dem Sohn von Hachalja:</para>
+  <para style="p">Im 20. Regierungsjahr des Königs Artaxerxes von Persien, im Monat Kislew, hielt ich mich in der königlichen Residenz Susa auf. <verse number="2" style="v"/>Da besuchte mich Hanani, einer meiner Brüder, und mit ihm noch andere Männer aus Juda. Ich fragte sie: »Wie geht es den Juden, die aus der Verbannung heimgekehrt sind, und wie steht es um Jerusalem?« <verse number="3" style="v"/>Sie berichteten: »Die Zurückgekehrten leiden bittere Not. Man beschimpft sie. Von der Stadtmauer Jerusalems sind nur noch Trümmer übrig, die Tore liegen in Schutt und Asche.«</para>
+  <para style="p">
+    <verse number="4" style="v"/>Als ich das hörte, setzte ich mich hin und weinte. Ich trauerte tagelang, fastete und betete:</para>
+  <para style="p">
+    <verse number="5" style="v"/>»Ach, <char style="nd">Herr</char>, du Gott des Himmels, du großer und ehrfurchtgebietender Gott! Du hältst deinen Bund mit uns und erweist allen deine Güte, die dich lieben und nach deinen Geboten leben. <verse number="6" style="v"/>Verschließe deine Augen und Ohren nicht, wenn ich zu dir flehe! Tag und Nacht bete ich zu dir für das Leben der Israeliten. Du bist unser Herr. Ich bekenne dir, dass wir gegen dich gesündigt haben, auch ich und meine Verwandten. <verse number="7" style="v"/>Wir alle haben schwere Schuld auf uns geladen. Wir hielten uns nicht an die Gebote und Weisungen, die dein Diener Mose von dir bekommen hat. <verse number="8" style="v"/>Aber denke doch daran, was du zu Mose gesagt hast: ›Wenn ihr mich verlasst, werde ich euch unter die fremden Völker zerstreuen; <verse number="9" style="v"/>wenn ihr aber wieder zu mir umkehrt und meine Gebote befolgt, dann lasse ich euch in euer Land zurückkehren, auch wenn ich euch bis ans Ende der Erde vertrieben habe. Ich bringe euch an den Ort, den ich erwählt habe, um dort selbst zu wohnen<note caller="+" style="f"><char style="fr" closed="false">1,9 </char><char style="ft" closed="false">Wörtlich: um meinen Namen dort wohnen zu lassen. – Vgl. »Name Gottes« in den Sacherklärungen.</char></note>.‹ <verse number="10" style="v"/>Ach, Herr, sie gehören ja trotz allem zu dir; sie sind dein Volk, das du durch deine Macht und Stärke erlöst hast. <verse number="11" style="v"/>Bitte erhöre doch mein Gebet und das Gebet aller, die dir dienen und dich ehren wollen. Und wenn ich beim König vorspreche, dann hilf mir, dass ich ein offenes Ohr bei ihm finde!«</para>
+  <para style="p">Denn ich war der Mundschenk des Königs.</para>
+  <chapter number="2" style="c"/>
+  <para style="s1">Nehemia reist nach Jerusalem</para>
+  <para style="m">
+    <verse number="1" style="v"/>Vier Monate waren seither vergangen.<note caller="+" style="f"><char style="fr" closed="false">2,1 </char><char style="ft" closed="false">Wörtlich: Im Monat Nisan, im 20. Regierungsjahr des Königs Artaxerxes.</char></note> Eines Tages, als ich König Artaxerxes beim Essen Wein einschenkte und ihm den Becher reichte, fiel ihm auf, dass ich traurig aussah. Das war der König bei mir nicht gewohnt, <verse number="2" style="v"/>darum fragte er mich: »Warum siehst du so bedrückt aus? Du bist doch nicht etwa krank? Nein, irgendetwas belastet dich!«</para>
+  <para style="p">Ich erschrak heftig <verse number="3" style="v"/>und antwortete: »Lang lebe der König! Wie könnte ich fröhlich sein, wenn die Stadt, in der meine Vorfahren begraben sind, zerstört ist und ihre Tore in Schutt und Asche liegen?«</para>
+  <para style="p">
+    <verse number="4" style="v"/>Da fragte mich der König: »Worum bittest du?« Ich flehte zum Gott des Himmels, <verse number="5" style="v"/>dann sagte ich: »Mein König! Wenn du es für richtig hältst und wenn du mir vertraust, dann sende mich nach Juda in die Stadt, in der meine Vorfahren begraben liegen. Ich möchte sie wieder aufbauen.«</para>
+  <para style="p">
+    <verse number="6" style="v"/>Der König, neben dem die Königin saß, fragte mich: »Wie lange soll deine Reise dauern? Wann bist du wieder zurück?« Als ich ihm einen Zeitpunkt nannte, stimmte er zu. <verse number="7" style="v"/>Dann bat ich ihn: »Mein König, wenn du möchtest, so gib mir bitte Briefe an die Provinzstatthalter westlich des Euphrat mit, damit sie mir die Durchreise nach Juda gestatten. <verse number="8" style="v"/>Außerdem bitte ich dich um ein Schreiben an Asaf, den Verwalter der königlichen Wälder, denn ich brauche Holz für die Torbalken der Burg am Tempel, für die Stadtmauer und für das Haus, in dem ich wohnen werde.« Der König gab mir die Briefe, denn Gott stand mir bei.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Dann befahl Artaxerxes, dass eine Leibgarde von Offizieren und Soldaten mich begleiten sollte. So kam ich zu den Provinzstatthaltern westlich des Euphrat und übergab ihnen die Briefe des Königs. <verse number="10" style="v"/>Der Statthalter Sanballat aus Bet-Horon und Tobija, sein Beauftragter für die Provinz Ammon, wurden zornig, als sie hörten, dass jemand den Israeliten helfen wollte.</para>
+  <para style="s1">Nehemia sieht sich die Stadtmauer an</para>
+  <para style="m">
+    <verse number="11" style="v"/>Schließlich kam ich nach Jerusalem. Nach drei Tagen <verse number="12" style="v"/>brach ich mitten in der Nacht auf, begleitet von einigen Männern; nur ich hatte ein Reittier dabei. Ich erzählte niemandem, welche Aufgabe Gott mir für Jerusalem ans Herz gelegt hatte. <verse number="13" style="v"/>So verließ ich mitten in der Nacht die Stadt durch das Taltor, ritt in südlicher Richtung an der Drachenquelle vorbei und kam zum Misttor. Ich untersuchte die zerstörten Mauern und die niedergebrannten Tore. <verse number="14" style="v"/>Dann zog ich nach Norden zum Quelltor und zum Königsteich. Als mein Reittier keinen Weg mehr durch die Trümmer fand, <verse number="15" style="v"/>ritt ich trotz der Dunkelheit das Flusstal aufwärts und untersuchte von dort aus die Mauer. Schließlich kehrte ich um und kam durch das Taltor wieder in die Stadt zurück.</para>
+  <para style="s1">Gespräche mit den führenden Männern</para>
+  <para style="m">
+    <verse number="16" style="v"/>Die führenden Männer von Jerusalem wussten nicht, wohin ich gegangen war und was ich getan hatte, denn ich hatte ihnen, den Priestern und allen, die beim Wiederaufbau mithelfen sollten, noch nichts von meinem Vorhaben erzählt. <verse number="17" style="v"/>Jetzt aber sagte ich zu ihnen: »Ihr seht selbst unser Elend: Jerusalem ist ein einziger Trümmerhaufen, die Stadttore liegen in Schutt und Asche. Kommt, lasst uns die Mauer wieder aufbauen, damit wir nicht länger dem Gespött der Leute preisgegeben sind!« <verse number="18" style="v"/>Ich erzählte ihnen, wie Gott mir geholfen und was der König von Persien mir versprochen hatte. Da erklärten sie: »Gut, wir wollen beginnen!«, und machten sich entschlossen an die Arbeit.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Als Sanballat, Tobija und der Araber Geschem davon hörten, lachten sie uns aus und spotteten: »Da habt ihr euch ja einiges vorgenommen! Wollt ihr euch etwa gegen den König auflehnen?« <verse number="20" style="v"/>Ich entgegnete ihnen: »Der Gott des Himmels wird unser Vorhaben gelingen lassen. Wir tun nur, was er von uns möchte; darum werden wir mit dem Bau beginnen. Ihr aber habt kein Anrecht auf Grund und Boden in Jerusalem, und auch aus der Vergangenheit könnt ihr keinerlei Anspruch erheben.«</para>
+  <chapter number="3" style="c"/>
+  <para style="ms1">Der Wiederaufbau der Stadtmauer</para>
+  <para style="mr">(Kapitel <ref loc="NEH 3-7">3–7</ref>)</para>
+  <para style="s1">Verzeichnis der Bauleute</para>
+  <para style="m">
+    <verse number="1" style="v"/>Der Hohepriester Eljaschib und die anderen Priester bauten das Schaftor wieder auf, sie weihten es dem Herrn und setzten die Torflügel ein. Auch den angrenzenden Mauerabschnitt weihten sie bis zum »Turm der Hundert« und zum Hananelturm.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Die Männer von Jericho besserten das anschließende Teilstück aus, und Sakkur, der Sohn von Imri, den darauffolgenden Abschnitt.</para>
+  <para style="p">
+    <verse number="3" style="v"/>Das Fischtor errichtete die Sippe Senaa. Sie setzten Balken ein, brachten Torflügel an und versahen sie mit Riegeln und Sperrbalken.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Den Wiederaufbau des nächsten Mauerabschnitts leitete Meremot, der Sohn von Uria und Enkel von Hakkoz.</para>
+  <para style="p">Daneben arbeitete Meschullam, der Sohn von Berechja und Enkel von Meschesabel.</para>
+  <para style="p">Zadok, der Sohn von Baana, besserte das folgende Teilstück aus.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Am nächsten Abschnitt bauten die Einwohner von Tekoa; doch die führenden Männer jener Stadt waren zu stolz, um den Rücken krumm zu machen und den Anweisungen der Aufseher zu folgen<note caller="+" style="f"><char style="fr" closed="false">3,5 </char><char style="ft" closed="false">Oder: und sich an der Arbeit für den Herrn zu beteiligen.</char></note>.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Das Jeschana-Tor errichteten Jojada, der Sohn von Paseach, und Meschullam, der Sohn von Besodja. Sie setzten Balken ein, brachten Torflügel an und versahen sie mit Riegeln und Sperrbalken.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Das nächste Stück bis zum Sitz des Statthalters für das Gebiet westlich des Euphrat bauten Melatja aus Gibeon, Jadon aus Meronot und einige Männer aus Gibeon und Mizpa.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Für den danebenliegenden Abschnitt war der Goldschmied Usiël, der Sohn von Harhaja, verantwortlich.</para>
+  <para style="p">Der Salbenmischer Hananja leitete die Arbeiten am nächsten Stück. Diese beiden befestigten Jerusalem bis zur »Breiten Mauer«.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Daneben baute Refaja, der Sohn von Hur, dem die eine Hälfte des Bezirks Jerusalem unterstand.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Jedaja, der Sohn von Harumaf, leitete die Arbeiten am folgenden Mauerabschnitt, der an seinem eigenen Haus entlangführte.</para>
+  <para style="p">Das nächste Stück besserte Hattusch, der Sohn von Haschabneja, aus.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Den anschließenden Teil der Mauer und den Ofenturm stellten Malkija, der Sohn von Harim, und Haschub, der Sohn von Pahat-Moab, wieder her.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Schallum, der Sohn von Lohesch, dem die zweite Hälfte des Bezirks Jerusalem unterstand, besserte den nächsten Abschnitt aus, und seine Töchter halfen mit.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Das Taltor bauten Hanun und die Einwohner von Sanoach. Sie hängten die Torflügel ein und versahen sie mit Riegeln und Sperrbalken. Außerdem errichteten sie die Mauer von dort bis zum Misttor, eine Strecke von ungefähr 500 Metern.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Das Misttor baute Malkija, der Sohn von Rechab, der Vorsteher des Bezirks Bet-Kerem. Er setzte hier die Tore ein und befestigte Riegel und Sperrbalken.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Für den Wiederaufbau des Quelltors übernahm Schallun, der Sohn von Kolhose, die Verantwortung. Er war der Vorsteher des Bezirks Mizpa. Er überdachte das Tor, hängte die Torflügel ein und brachte Riegel und Sperrbalken an. Unter seiner Aufsicht wurde auch die Mauer am Teich beim königlichen Garten ausgebessert, zu dem die Wasserleitung führte. Dieses Teilstück reichte bis zu den Stufen, die von der »Stadt Davids« herabkommen.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Die Arbeiten am nächsten Abschnitt übernahm Nehemja, der Sohn von Asbuk, dem die Hälfte des Bezirks Bet-Zur unterstand. Dieser Teil der Mauer lag den Gräbern des Königshauses David gegenüber und erstreckte sich bis zum künstlich angelegten Teich und bis zu den Unterkünften der Offiziere<note caller="+" style="f"><char style="fr" closed="false">3,16 </char><char style="ft" closed="false">Wörtlich: bis zum Haus der Helden. – Möglicherweise geht diese Bezeichnung auf Davids Elitetruppe zurück. Vgl. <char style="xt"><ref loc="2SA 23:8-12">2. Samuel 23,8‒12</ref>.</char></char></note>.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Folgende Leviten bauten die nächsten Mauerabschnitte: Rehum, der Sohn von Bani, hatte die Oberaufsicht.</para>
+  <para style="p">Haschabja, der Vorsteher über die Hälfte des Bezirks Keïla, besserte das nächste Teilstück aus.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Daneben arbeiteten die Leviten unter der Führung von Binnui, dem Sohn von Henadad. Er war Vorsteher über die andere Hälfte des Bezirks Keïla.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Danach kam Eser, der Sohn von Jeschua, der Vorsteher von Mizpa. Sein Bauabschnitt lag beim Aufgang zur Waffenkammer und ging bis zur Biegung der Mauer.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Besonders fleißig arbeitete Baruch, der Sohn von Sabbai. Ihm war der Abschnitt zwischen der Biegung der Mauer und dem Eingang zum Haus des Hohenpriesters Eljaschib zugeteilt.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Das nächste Mauerstück besserte Meremot aus, der Sohn von Uria und Enkel von Hakkoz; es reichte vom Eingang bis zum Ende von Eljaschibs Haus.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Die folgenden Abschnitte wurden von Priestern aus der Umgebung von Jerusalem gebaut.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Benjamin und Haschub leiteten die Arbeiten am nächsten Teilstück, das ihren Häusern gegenüberlag.</para>
+  <para style="p">Asarja, der Sohn von Maaseja und Enkel von Ananja, widmete sich dem nächsten Teil der Mauer in der Nähe seines Hauses.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Den darauffolgenden Abschnitt von Asarjas Haus bis zur Biegung und zur Ecke der Mauer baute Binnui, der Sohn von Henadad, wieder auf.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Palal, der Sohn von Usai, war verantwortlich für das Teilstück, das an der Mauerecke begann, und für den oberen Turm, der am königlichen Palast beim Gefängnishof vorspringt.</para>
+  <para style="p">Pedaja, der Sohn von Parosch, <verse number="26" style="v"/>und die Tempeldiener, die auf dem Hügel Ofel wohnten, besserten den anschließenden Abschnitt aus bis zu der Stelle gegenüber dem Wassertor im Osten und dem vorspringenden Turm.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Das nächste Stück vom vorspringenden Turm bis zur Mauer auf dem Hügel Ofel bauten die Einwohner von Tekoa.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Oberhalb des Rosstores arbeiteten die Priester; jeder an dem Stück Mauer, das seinem Haus gegenüberlag.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Auch Zadok, der Sohn von Immer, hatte die Verantwortung für den Teil der Mauer, der seinem Haus am nächsten war.</para>
+  <para style="p">Den folgenden Abschnitt besserte Schemaja aus, der Sohn von Schechanja, der Wächter am Osttor.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Daneben leiteten Hananja, der Sohn von Schelemja, und Hanun, der sechste Sohn von Zalaf, die Arbeiten.</para>
+  <para style="p">Meschullam, der Sohn von Berechja, baute den folgenden Mauerteil gegenüber seinem Haus wieder auf.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Das nächste Teilstück bis zum Haus der Tempeldiener und der Händler gegenüber dem Wachtor und bis zum oberen Raum an der Mauerecke besserte der Goldschmied Malkija aus.</para>
+  <para style="p">
+    <verse number="32" style="v"/>Den letzten Mauerabschnitt von dort bis zum Schaftor errichteten die Goldschmiede und die Händler.</para>
+  <para style="s1">Sanballat verspottet die Juden</para>
+  <para style="m">
+    <verse number="33" style="v"/>Als Sanballat erfuhr, dass wir mit dem Bau der Stadtmauer begonnen hatten, packte ihn der Zorn. Er verspottete uns <verse number="34" style="v"/>vor seinen Vertrauten und den Truppen von Samarien: »Was wollen diese armseligen Juden eigentlich? Jerusalem zur Festung ausbauen? Sie meinen wohl, wenn sie Opfer darbringen, können sie an einem Tag fertig werden! Mit diesen verbrannten Steinen und diesem Schutt wollen sie eine neue Stadtmauer errichten?«</para>
+  <para style="p">
+    <verse number="35" style="v"/>Der Ammoniter Tobija stand neben ihm und pflichtete ihm bei: »Sollen sie doch bauen! Wenn ein Fuchs an der Mauer hochspringt, fällt sie wieder in sich zusammen!«</para>
+  <para style="p">
+    <verse number="36" style="v"/>Doch ich betete: »Hör doch, unser Gott, wie sie sich über uns lustig machen! Strafe sie für ihren Spott! Sorge dafür, dass ihnen ihr ganzer Besitz genommen wird und sie in ein fremdes Land verschleppt werden. <verse number="37" style="v"/>Vergib ihnen nicht, vergiss niemals, welches Unrecht sie uns angetan haben! Denn sie haben die verspottet, die Jerusalem wieder aufbauen.«</para>
+  <para style="p">
+    <verse number="38" style="v"/>Trotz allem besserten wir die Mauer weiter aus, und schon bald waren ihre Lücken bis zur halben Höhe geschlossen. Denn das Volk arbeitete mit ganzer Kraft.</para>
+  <chapter number="4" style="c"/>
+  <para style="s1">Die Feinde planen einen Angriff</para>
+  <para style="m">
+    <verse number="1" style="v"/>Als Sanballat und Tobija, die Araber, die Ammoniter und die Einwohner von Aschdod erfuhren, dass der Aufbau der Jerusalemer Mauer Fortschritte machte und die letzten Lücken schon fast geschlossen waren, gerieten sie in Wut. <verse number="2" style="v"/>Sie verbündeten sich, um Jerusalem anzugreifen und unsere Pläne zu durchkreuzen. <verse number="3" style="v"/>Wir aber flehten zu unserem Gott und stellten Tag und Nacht Wachen auf. <verse number="4" style="v"/>Das Volk der Judäer sang ein Klagelied:</para>
+  <para style="b"/>
+  <para style="q1">»Die Kraft der Träger reicht nicht mehr,</para>
+  <para style="q1">der Schutt ist viel zu viel.</para>
+  <para style="q1">Alleine ist es uns zu schwer,</para>
+  <para style="q1">wir kommen nie ans Ziel.«</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="5" style="v"/>Unsere Feinde dachten: »Noch bevor die Juden uns bemerken, sind wir schon mitten unter ihnen, bringen sie um und zerstören ihr Bauwerk!«</para>
+  <para style="p">
+    <verse number="6" style="v"/>Aber immer wieder kamen Juden, die in ihrer Nähe wohnten, zu uns und erzählten, was die Völker ringsum gegen uns im Schilde führten. <verse number="7" style="v"/>Darum stellte ich dort wehrfähige Männer auf, wo die Mauer noch besonders niedrig war und Lücken aufwies. Sie waren nach Sippen eingeteilt und mit Schwertern, Lanzen und Bogen bewaffnet. <verse number="8" style="v"/>Ich sah mir alles noch einmal genau an, dann sagte ich zu den führenden Männern und zum übrigen Volk: »Habt keine Angst vor ihnen! Vertraut dem Herrn, denn er ist groß und mächtig. Kämpft für eure Brüder und Söhne, für eure Töchter und Frauen und für eure Häuser!«</para>
+  <para style="p">
+    <verse number="9" style="v"/>Als unsere Feinde hörten, dass wir alles wussten und dass Gott ihre Pläne vereitelt hatte, konnten wir wieder an die Arbeit gehen, jeder an seinen Platz. <verse number="10" style="v"/>Allerdings baute von diesem Tag an nur noch die Hälfte der Männer an der Mauer weiter, die anderen hielten in ihren Rüstungen Wache und waren mit Lanzen, Schilden und Bogen bewaffnet. Sie standen mit ihren Offizieren hinter den Männern, <verse number="11" style="v"/>die an der Mauer arbeiteten. Die Lastträger trugen mit der einen Hand das Baumaterial, in der anderen hielten sie eine Waffe. <verse number="12" style="v"/>Alle Arbeiter hatten ihr Schwert umgeschnallt. Der Mann, der mit dem Horn Alarm blasen sollte, blieb die ganze Zeit in meiner Nähe. <verse number="13" style="v"/>Den führenden Männern und dem übrigen Volk hatte ich eingeschärft: »Die Mauerabschnitte, die wieder aufgebaut werden müssen, sind sehr lang. Darum sind auch wir weit voneinander entfernt. <verse number="14" style="v"/>Sobald ihr irgendwo das Horn blasen hört, lauft sofort dorthin! Unser Gott wird für uns kämpfen!«</para>
+  <para style="p">
+    <verse number="15" style="v"/>So arbeiteten wir alle vom Morgengrauen bis zum Einbruch der Dunkelheit, und die Hälfte der Männer hielt mit der Lanze in der Hand Wache. <verse number="16" style="v"/>Ich hatte allen befohlen: »Übernachtet in Jerusalem, damit ihr nachts eine Wache übernehmen und tagsüber arbeiten könnt.« <verse number="17" style="v"/>Sogar nachts zog ich meine Kleider nicht aus, und auch meine Verwandten, meine Mitarbeiter und die Männer meiner Leibwache waren jederzeit einsatzbereit mit der Waffe in der Hand.</para>
+  <chapter number="5" style="c"/>
+  <para style="s1">Schuldenerlass für die arme Bevölkerung</para>
+  <para style="m">
+    <verse number="1" style="v"/>Nach einiger Zeit kamen jüdische Männer und Frauen zu mir und beschwerten sich über Leute aus ihrem eigenen Volk. <verse number="2" style="v"/>Die einen klagten: »Wir haben viele Söhne und Töchter und brauchen mehr Getreide, sonst können wir nicht überleben.« <verse number="3" style="v"/>Andere sagten: »Wir mussten unsere Felder, Weinberge und Häuser verpfänden, um während der Hungersnot Brot kaufen zu können.« <verse number="4" style="v"/>Und wieder andere beklagten sich: »Wir mussten uns Geld leihen, um dem König die Steuern auf unsere Felder und Weinberge bezahlen zu können. <verse number="5" style="v"/>Wir gehören doch zum selben Volk wie die anderen Juden! Unsere Kinder sind nicht weniger wert als ihre. Und doch müssen wir ihnen unsere Söhne und Töchter als Sklaven verkaufen; einige unserer Töchter sind schon in ihrer Gewalt. Wir sind machtlos, denn unsere Felder und Weinberge gehören ja ihnen.«</para>
+  <para style="p">
+    <verse number="6" style="v"/>Als ich ihre Klagen hörte und von dem Unrecht erfuhr, wurde ich sehr zornig. <verse number="7" style="v"/>Ich dachte über alles gründlich nach, dann stellte ich die führenden Männer zur Rede: »Eure eigenen Landsleute beutet ihr skrupellos aus!« Ich berief eine Volksversammlung ein <verse number="8" style="v"/>und redete ihnen ins Gewissen: »Menschen aus unserem Volk sind von fremden Völkern zu Sklaven gemacht worden. Wir haben von ihnen so viele wie möglich freigekauft. Und jetzt habt ihr eure eigenen Landsleute zu Sklaven gemacht! Sollen wir sie nun etwa von euch zurückkaufen?« Darauf wussten sie keine Antwort und schwiegen.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Ich fuhr fort: »Ihr begeht ein großes Unrecht! Warum gehorcht ihr Gott nicht und tut, was recht ist? Ihr macht uns zum Gespött unserer Feinde! <verse number="10" style="v"/>Auch ich, meine Verwandten und meine Mitarbeiter haben anderen Geld und Getreide geliehen. Doch wir wollen nichts mehr zurückfordern. <verse number="11" style="v"/>Gebt auch ihr euren Schuldnern noch heute die gepfändeten Felder und Weinberge, die Ölberge und Häuser zurück. Erlasst ihnen alles, was ihr ihnen an Geld und Getreide, an Wein und Öl geliehen habt!« <verse number="12" style="v"/>Sie antworteten: »Gut, wir wollen tun, was du sagst. Wir geben alles zurück und fordern nichts mehr.«</para>
+  <para style="p">Da rief ich die Priester zu mir und ließ die Gläubiger vor ihnen schwören, ihr Versprechen zu halten. <verse number="13" style="v"/>Dann schüttelte ich alles aus, was ich in meinem Gewand trug, und sagte: »Genau so soll Gott jeden, der seinen Eid bricht, aus seiner Sippe und aus seinem Besitz hinauswerfen!«</para>
+  <para style="p">Alle Versammelten riefen: »Ja, so soll es geschehen!« Sie lobten den <char style="nd">Herrn</char> und erfüllten ihr Versprechen.</para>
+  <para style="s1">Nehemia geht mit gutem Beispiel voran</para>
+  <para style="m">
+    <verse number="14" style="v"/>Zwölf Jahre war ich Statthalter der Provinz Juda, vom 20. bis zum 32. Regierungsjahr des Königs Artaxerxes; in dieser Zeit verzichteten meine Verwandten und ich auf die zusätzlichen Abgaben, die uns zustanden. <verse number="15" style="v"/>Meine Vorgänger hatten sich am Volk bereichert. Sie hatten nicht nur Brot und Wein von ihm verlangt, sondern zusätzlich noch 40 Silberstücke pro Tag<note caller="+" style="f"><char style="fr" closed="false">5,15 </char><char style="ft" closed="false">So nach der lateinischen Übersetzung. Im hebräischen Text ist kein Zeitraum angegeben.</char></note>. Auch ihre Mitarbeiter beuteten das Volk aus. Doch ich handelte nicht so, denn ich hatte Ehrfurcht vor Gott. <verse number="16" style="v"/>Ich setzte meine ganze Kraft daran, beim Bau der Stadtmauer von Jerusalem mitzuhelfen, und auch alle Männer, die für mich arbeiteten, waren beteiligt. Keiner von uns kaufte für sich selbst Land. <verse number="17" style="v"/>An meinem Tisch waren regelmäßig hundertfünfzig führende Juden zu Gast, dazu alle, die aus den umliegenden Völkern zu uns gestoßen waren. <verse number="18" style="v"/>Jeden Tag ließ ich ein Rind, sechs der besten Schafe und viel Geflügel schlachten und zubereiten. Alle zehn Tage wurden die verschiedensten Weine in großen Mengen bereitgestellt. Für die Kosten kam ich selbst auf. Trotzdem verzichtete ich auf die zusätzlichen Abgaben, die mir als Statthalter zustanden, denn das Volk musste für den Bau der Stadtmauer schon genug aufbringen.</para>
+  <para style="p">
+    <verse number="19" style="v"/>Mein Gott, vergiss nicht, wie viel Gutes ich für dieses Volk getan habe!</para>
+  <chapter number="6" style="c"/>
+  <para style="s1">Mordpläne gegen Nehemia</para>
+  <para style="m">
+    <verse number="1" style="v"/>Sanballat, Tobija, der Araber Geschem und unsere übrigen Feinde erfuhren, dass ich die Stadtmauer wieder aufgebaut hatte und dass sie keine Lücken mehr aufwies. Nur die Torflügel hatten wir noch nicht eingesetzt. <verse number="2" style="v"/>Da ließen Sanballat und Geschem mir ausrichten: »Wir wollen uns mit dir in Kefirim in der Ebene von Ono treffen!« Weil sie aber einen Anschlag gegen mich planten, <verse number="3" style="v"/>schickte ich Boten zu ihnen und ließ ihnen sagen: »Ich kann nicht kommen, denn wir führen hier ein großes Werk aus. Die ganze Arbeit müsste unterbrochen werden, wenn ich eurer Aufforderung folgen würde.«</para>
+  <para style="p">
+    <verse number="4" style="v"/>Noch viermal schickten sie mir dieselbe Botschaft, und jedes Mal gab ich ihnen die gleiche Antwort. <verse number="5" style="v"/>Doch Sanballat sandte mir zum fünften Mal einen seiner Männer, diesmal mit einem unverschlossenen Brief. <verse number="6" style="v"/>Darin stand: »Die anderen Völker des Landes erzählen, dass du mit den Juden einen Aufstand planst und darum die Mauer wieder aufbaust. Auch von Geschem habe ich das gehört. Anscheinend willst du König der Juden werden. <verse number="7" style="v"/>Du sollst sogar schon einige Propheten beauftragt haben, dich in Jerusalem zum König von Juda auszurufen. Von solchen Gerüchten wird natürlich auch der persische König erfahren. Darum lass uns miteinander beraten, was zu tun ist!«</para>
+  <para style="p">
+    <verse number="8" style="v"/>Ich ließ ihm ausrichten: »Keine deiner Behauptungen ist wahr. Sie sind alle frei erfunden!« <verse number="9" style="v"/>Unsere Feinde wollten uns Angst einjagen, um die Fertigstellung der Mauer zu verhindern. <char style="add">Doch ich betete:</char> »Herr, gib mir Mut und Kraft!«<note caller="+" style="f"><char style="fr" closed="false">6,9 </char><char style="ft" closed="false">Oder: Doch ich ging umso entschlossener ans Werk.</char></note></para>
+  <para style="p">
+    <verse number="10" style="v"/>Eines Tages besuchte ich Schemaja, den Sohn von Delaja und Enkel von Mehetabel, denn er konnte nicht zu mir kommen. Er sagte zu mir: »Wir müssen uns im inneren Raum des Tempels treffen und die Türen fest verschließen, sie wollen dich nämlich umbringen – noch heute Nacht!«</para>
+  <para style="p">
+    <verse number="11" style="v"/>Ich entgegnete: »Ein Mann wie ich läuft nicht davon! Außerdem bin ich kein Priester, ich darf den inneren Raum des Tempels überhaupt nicht betreten, sonst habe ich mein Leben verwirkt. Nein, ich gehe nicht!« <verse number="12" style="v"/>Mir war klar geworden, dass Schemaja nicht in Gottes Auftrag sprach. Er tat, als habe er eine Botschaft von Gott empfangen, doch in Wirklichkeit hatten Tobija und Sanballat ihn bestochen. <verse number="13" style="v"/>Sie wollten mir Angst einjagen und mich zu einer Tat verleiten, durch die ich mich schuldig machte. So hätten sie meinen guten Ruf zerstören und mich zur Zielscheibe des Spotts machen können.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Ach, Gott, vergiss nicht, was mir Tobija und Sanballat angetan haben! Denke daran, dass die Prophetin Noadja und die anderen Propheten mich einschüchtern wollten!</para>
+  <para style="s1">Die Stadtmauer wird fertiggestellt</para>
+  <para style="m">
+    <verse number="15" style="v"/>Die Mauer wurde nach 52 Tagen, am 25. Tag des Monats Elul, fertig. <verse number="16" style="v"/>Als unsere Feinde aus den Völkern ringsum das hörten, bekamen sie Angst und verloren allen Mut. Denn sie erkannten, dass unser Gott uns geholfen hatte.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Während dieser ganzen Zeit hatten einige einflussreiche Männer aus Juda ständig an Tobija geschrieben und auch Briefe von ihm erhalten. <verse number="18" style="v"/>Viele Judäer hatten ihm Beistand geschworen, denn er war der Schwiegersohn von Schechanja, dem Sohn von Arach, und sein Sohn Johanan war mit einer Tochter von Meschullam, dem Sohn von Berechja, verheiratet. <verse number="19" style="v"/>Darum hoben sie vor mir Tobijas Verdienste hervor und meldeten ihm alles, was ich gesagt hatte. Tobija wollte mich daraufhin mit Briefen einschüchtern.</para>
+  <chapter number="7" style="c"/>
+  <para style="m">
+    <verse number="1" style="v"/>Als die Stadtmauer wieder ganz aufgebaut war, ließ ich die Torflügel einsetzen. Dann bestimmte ich einige Männer zu Torwächtern am Tempel und wies den Sängern und Leviten ihren Dienst zu. <verse number="2" style="v"/>Zu Befehlshabern über Jerusalem ernannte ich meinen Bruder Hanani sowie Hananja, den Kommandanten der Festung. Hananja war ein zuverlässiger Mann und ging den anderen in seiner Liebe zu Gott mit gutem Beispiel voran. <verse number="3" style="v"/>Ich sagte zu den beiden: »Die Tore von Jerusalem dürfen erst geöffnet werden, wenn die Sonne schon hoch am Himmel steht. Und sie sollen noch vor Sonnenuntergang wieder geschlossen und verriegelt werden. Stellt einige Einwohner von Jerusalem als Wachposten auf, die einen zum Schutz der Stadtmauer, die anderen für die Häuser in der Stadt!«</para>
+  <para style="s1">Verzeichnis der aus Babylonien Heimgekehrten</para>
+  <para style="r">(<ref loc="EZR 2">Esra 2</ref>)</para>
+  <para style="m">
+    <verse number="4" style="v"/>Jerusalem war sehr groß, doch es lebten erst wenige Menschen dort, und die zerstörten Häuser waren noch nicht wieder aufgebaut. <verse number="5" style="v"/>Da gab Gott mir in den Sinn, eine Versammlung der führenden Männer und des ganzen Volkes einzuberufen, um ein Verzeichnis der Sippen anzulegen. Dabei fand ich die Schriftrolle mit dem Verzeichnis der ersten Judäer, die aus der Verbannung zurückgekehrt waren. Darin hieß es:</para>
+  <para style="p">
+    <verse number="6" style="v"/>»Die hier Eingetragenen kommen aus der persischen Provinz Juda. Nebukadnezar, der König von Babylonien, hatte ihre Vorfahren in sein Land verschleppt. Sie kehrten in Sippenverbänden nach Jerusalem und Juda zurück, jeder an den Ort, aus dem seine Familie ursprünglich stammte.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Sie wurden angeführt von Serubbabel, Jeschua, Nehemja, Asarja, Raamja, Nahamani, Mordochai, Bilschan, Misperet, Bigwai, Rehum und Baana.«</para>
+  <para style="p">Es folgt ein Verzeichnis der heimkehrenden Sippen mit der Zahl der zu ihnen gehörenden Männer:</para>
+  <para style="li1">
+    <verse number="8" style="v"/>von der Sippe Parosch 2172;</para>
+  <para style="li1">
+    <verse number="9" style="v"/>von Schefatja 372;</para>
+  <para style="li1">
+    <verse number="10" style="v"/>von Arach 652;</para>
+  <para style="li1">
+    <verse number="11" style="v"/>von Pahat-Moab 2818, sie waren Nachkommen von Jeschua und Joab;</para>
+  <para style="li1">
+    <verse number="12" style="v"/>von Elam 1254;</para>
+  <para style="li1">
+    <verse number="13" style="v"/>von Sattu 845;</para>
+  <para style="li1">
+    <verse number="14" style="v"/>von Sakkai 760;</para>
+  <para style="li1">
+    <verse number="15" style="v"/>von Binnui 648;</para>
+  <para style="li1">
+    <verse number="16" style="v"/>von Bebai 628;</para>
+  <para style="li1">
+    <verse number="17" style="v"/>von Asgad 2322;</para>
+  <para style="li1">
+    <verse number="18" style="v"/>von Adonikam 667;</para>
+  <para style="li1">
+    <verse number="19" style="v"/>von Bigwai 2067;</para>
+  <para style="li1">
+    <verse number="20" style="v"/>von Adin 655;</para>
+  <para style="li1">
+    <verse number="21" style="v"/>von Ater 98, sie waren Nachkommen von Hiskia;</para>
+  <para style="li1">
+    <verse number="22" style="v"/>von Haschum 328;</para>
+  <para style="li1">
+    <verse number="23" style="v"/>von Bezai 324;</para>
+  <para style="li1">
+    <verse number="24" style="v"/>von Harif 112;</para>
+  <para style="li1">
+    <verse number="25" style="v"/>von Gibeon 95;</para>
+  <para style="li1">
+    <verse number="26" style="v"/>aus Bethlehem und Netofa 188;</para>
+  <para style="li1">
+    <verse number="27" style="v"/>aus Anatot 128;</para>
+  <para style="li1">
+    <verse number="28" style="v"/>aus Bet-Asmawet 42;</para>
+  <para style="li1">
+    <verse number="29" style="v"/>aus Kirjat-Jearim, Kefira und Beerot 743;</para>
+  <para style="li1">
+    <verse number="30" style="v"/>aus Rama und Geba 621;</para>
+  <para style="li1">
+    <verse number="31" style="v"/>aus Michmas 122;</para>
+  <para style="li1">
+    <verse number="32" style="v"/>aus Bethel und Ai 123;</para>
+  <para style="li1">
+    <verse number="33" style="v"/>aus dem anderen Nebo 52;</para>
+  <para style="li1">
+    <verse number="34" style="v"/>von der Sippe des anderen Elam 1254;</para>
+  <para style="li1">
+    <verse number="35" style="v"/>von Harim 320;</para>
+  <para style="li1">
+    <verse number="36" style="v"/>aus Jericho 345;</para>
+  <para style="li1">
+    <verse number="37" style="v"/>aus Lod, Hadid und Ono 721;</para>
+  <para style="li1">
+    <verse number="38" style="v"/>von der Sippe Senaa 3930.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="39" style="v"/>Aus den Sippen der Priester kehrten zurück:</para>
+  <para style="li1">von der Sippe Jedaja 973 Männer mit ihren Familien, sie waren Nachkommen von Jeschua;</para>
+  <para style="li1">
+    <verse number="40" style="v"/>von Immer 1052;</para>
+  <para style="li1">
+    <verse number="41" style="v"/>von Paschhur 1247;</para>
+  <para style="li1">
+    <verse number="42" style="v"/>von Harim 1017.</para>
+  <para style="li1">
+    <verse number="43" style="v"/>Von den Leviten:</para>
+  <para style="li1">aus den Sippen Jeschua und Kadmiël 74, sie waren Nachkommen von Hodawja;<note caller="+" style="f"><char style="fr" closed="false">7,43 </char><char style="ft" closed="false">So nach <char style="xt"><ref loc="EZR 2:40">Esra 2,40</ref>.</char> Der hebräische Text lautet: Jeschua (Nachkommen von Kadmiël und Hodawja).</char></note></para>
+  <para style="li">
+    <verse number="44" style="v"/>von den Tempelsängern:</para>
+  <para style="li1">aus der Sippe Asaf 148;</para>
+  <para style="li">
+    <verse number="45" style="v"/>von den Wächtern an den Tempeltoren:</para>
+  <para style="li1">aus den Sippen Schallum, Ater, Talmon, Akkub, Hatita und Schobai 138;</para>
+  <para style="li">
+    <verse number="46" style="v"/>von den Tempeldienern:</para>
+  <para style="li1">die Sippen von Ziha, Hasufa, Tabbaot, <verse number="47" style="v"/>Keros, Sia, Padon, <verse number="48" style="v"/>Lebana, Hagaba, Salmai, <verse number="49" style="v"/>Hanan, Giddel, Gahar, <verse number="50" style="v"/>Reaja, Rezin, Nekoda, <verse number="51" style="v"/>Gasam, Usa, Paseach, <verse number="52" style="v"/>Besai, die Mëuniter und die Nefusiter <verse number="53" style="v"/>sowie die Sippen von Bakbuk, Hakufa, Harhur, <verse number="54" style="v"/>Bazlut, Mehida, Harscha, <verse number="55" style="v"/>Barkos, Sisera, Temach, <verse number="56" style="v"/>Neziach und Hatifa.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="57" style="v"/>Von den Nachkommen der Diener Salomos kamen zurück:</para>
+  <para style="li1">die Sippen von Sotai, Soferet, Peruda, <verse number="58" style="v"/>Jaala, Darkon, Giddel, <verse number="59" style="v"/>Schefatja, Hattil, Pocheret-Zebajim und Amon.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="60" style="v"/>Insgesamt kehrten 392 Tempeldiener und Nachkommen von Salomos Dienern nach Israel zurück.</para>
+  <para style="p">
+    <verse number="61-62" style="v"/>Von den heimkehrenden Familien stammten 642 aus den Orten Tel-Melach, Tel-Harscha, Kerub-Addon und Immer. Sie gehörten zu den Sippen Delaja, Tobija und Nekoda, konnten jedoch ihre israelitische Abstammung nicht nachweisen.</para>
+  <para style="p">
+    <verse number="63-64" style="v"/>Einige der Priester durften keinen Tempeldienst ausüben, denn ihre Abstammungsregister waren nicht aufzufinden. Sie kamen aus den Sippen von Habaja, Hakkoz und Barsillai. Der Stammvater der Sippe Barsillai hatte eine Tochter des Gileaditers Barsillai geheiratet und den Namen seines Schwiegervaters angenommen. <verse number="65" style="v"/>Der persische Statthalter verbot den Priestern aus diesen drei Sippen, von den geweihten Opfergaben zu essen, bis wieder ein Hoherpriester im Amt wäre, der das heilige Los werfen durfte, um über ihren Fall zu entscheiden.</para>
+  <para style="p">
+    <verse number="66" style="v"/>Insgesamt kehrten 42.360 Israeliten in ihre Heimat zurück, <verse number="67" style="v"/>dazu kamen 7337 Sklaven und Sklavinnen und 245 Sänger und Sängerinnen.</para>
+  <para style="p">
+    <verse number="68" style="v"/>Die Israeliten brachten 435 Kamele und 6720 Esel mit.</para>
+  <para style="p">
+    <verse number="69" style="v"/>Einige Sippenoberhäupter stifteten freiwillige Gaben für den Wiederaufbau des Tempels. Der Statthalter gab 1000 Goldmünzen, 50 Opferschalen und 530 Priestergewänder. <verse number="70" style="v"/>Die Sippenoberhäupter legten 20.000 Goldmünzen und 1500 Kilogramm Silber zusammen. <verse number="71" style="v"/>Das übrige Volk spendete 20.000 Goldmünzen, 1400 Kilogramm Silber und 67 Priestergewänder.</para>
+  <para style="p">
+    <verse number="72" style="v"/>Die Priester, die Leviten, die Torwächter, Sänger und Tempeldiener ließen sich wie die übrigen Israeliten in ihren früheren Heimatorten nieder.</para>
+  <chapter number="8" style="c"/>
+  <para style="ms1">Die Israeliten verpflichten sich zur Einhaltung des Gesetzes</para>
+  <para style="mr">(Kapitel <ref loc="NEH 8-10">8–10</ref>)</para>
+  <para style="s1">Esra liest aus dem Gesetz vor</para>
+  <para style="m">
+    <verse number="1-2" style="v"/>Am 1. Tag des 7. Monats, als alle Israeliten wieder in ihren Städten wohnten,<note caller="+" style="f"><char style="fr" closed="false">8,1-2 </char><char style="ft" closed="false">Dieser Versteil gehört nach der regulären Zählung noch zu <char style="xt">Kapitel <ref loc="NEH 7:72">7,72</ref>.</char></char></note> versammelte sich das ganze Volk auf dem Platz vor dem Wassertor. Sie baten den Schriftgelehrten Esra, das Buch mit dem Gesetz zu holen, das der <char style="nd">Herr</char> dem Volk Israel durch Mose gegeben hatte. <verse number="3" style="v"/>Da las der Priester Esra das Gesetz vor den Männern und Frauen und vor den Kindern, die alt genug waren, um es verstehen zu können. Alle hörten aufmerksam zu, vom frühen Morgen bis zum Mittag. <verse number="4" style="v"/>Esra stand auf einer Plattform aus Holz, die man eigens dafür errichtet hatte. Rechts neben ihm waren Mattitja, Schema, Anaja, Uria, Hilkija und Maaseja, links Pedaja, Mischaël, Malkija, Haschum, Haschbaddana, Secharja und Meschullam.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Weil Esra einen erhöhten Platz hatte, konnten alle sehen, wie er die Schriftrolle öffnete. Da stand das ganze Volk auf. <verse number="6" style="v"/>Esra pries den <char style="nd">Herrn</char>, den großen Gott, und alle riefen mit erhobenen Händen: »Amen, so soll es sein!« Dann warfen sie sich vor dem <char style="nd">Herrn</char> nieder, mit dem Gesicht zum Boden. <verse number="7" style="v"/>Die Leviten Jeschua, Bani, Scherebja, Jamin, Akkub, Schabbetai, Hodija, Maaseja, Kelita, Asarja, Josabad, Hanan und Pelaja legten den Versammelten das Gesetz aus. <verse number="8" style="v"/>Sie lasen laut aus dem Buch vor und erklärten Abschnitt für Abschnitt, damit das Volk es wirklich verstehen konnte.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Als die Menschen hörten, was im Gesetz stand, begannen sie zu weinen. Aber der Statthalter Nehemia, der Priester und Schriftgelehrte Esra und die Leviten, die das Gesetz auslegten, ermutigten sie: »Seid nicht traurig und weint nicht! Heute ist ein Festtag; er gehört dem <char style="nd">Herrn</char>, eurem Gott! <verse number="10" style="v"/>Und nun geht nach Hause, esst und trinkt! Bereitet euch ein Festmahl zu und feiert! Gebt auch denen etwas, die sich ein solches Mahl nicht leisten können! Dieser Tag gehört unserem Gott. Lasst den Mut nicht sinken, denn die Freude am <char style="nd">Herrn</char> gibt euch Kraft!« <verse number="11" style="v"/>Auch die Leviten beruhigten das Volk und sagten: »Seid nicht traurig, denn dieser Tag gehört Gott!«</para>
+  <para style="p">
+    <verse number="12" style="v"/>Da gingen die Versammelten nach Hause und feierten ein großes Freudenfest. Sie aßen und tranken und teilten mit denen, die selbst nichts besaßen, denn sie hatten verstanden, was man ihnen verkündet hatte.</para>
+  <para style="s1">Das Laubhüttenfest</para>
+  <para style="m">
+    <verse number="13" style="v"/>Am zweiten Tag kamen die Sippenoberhäupter des ganzen Volkes, die Priester und Leviten zu Esra, dem Schriftgelehrten, um das Gesetz noch besser zu verstehen. <verse number="14" style="v"/>Dabei entdeckten sie, dass der <char style="nd">Herr</char> durch Mose befohlen hatte, die Israeliten sollten während des Festes im 7. Monat in Laubhütten wohnen. <verse number="15" style="v"/>Darum ließ man in Jerusalem und in allen anderen Städten bekannt geben: »Steigt auf die Hügel und bringt frische Zweige von Ölbäumen, Myrten, Palmen und anderen Bäumen mit dichten Blättern. Dann baut damit Laubhütten, wie es das Gesetz vorschreibt!«</para>
+  <para style="p">
+    <verse number="16" style="v"/>Die Judäer folgten der Aufforderung. Sie schnitten Zweige ab und errichteten Hütten auf den flachen Dächern ihrer Häuser, in ihren Höfen, in den Vorhöfen am Tempel, auf dem Platz am Wassertor und am Tor Ephraim. <verse number="17" style="v"/>Alle, die aus der Verbannung zurückgekehrt waren, bauten Laubhütten und wohnten darin. Seit der Zeit von Josua, dem Sohn von Nun, hatten die Israeliten es nicht mehr so gemacht. Nun aber feierten sie mit großer Freude. <verse number="18" style="v"/>An jedem Tag des Festes wurde aus dem Gesetzbuch Gottes vorgelesen. Sieben Tage lang feierten die Israeliten, und am achten Tag beendeten sie das Fest mit einer Versammlung, wie es im Gesetz steht.<note caller="+" style="f"><char style="fr" closed="false">8,18 </char><char style="ft" closed="false">Vgl. <char style="xt"><ref loc="LEV 23:40-43">3. Mose 23,40‒43</ref>.</char></char></note></para>
+  <chapter number="9" style="c"/>
+  <para style="s1">Die Israeliten bekennen ihre Schuld</para>
+  <para style="m">
+    <verse number="1" style="v"/>Am 24. Tag desselben Monats kamen die Israeliten zu einem Fastentag zusammen. Sie zogen Bußgewänder an und streuten sich als Zeichen ihrer Trauer Erde auf den Kopf. <verse number="2" style="v"/>Von allen, die nicht zum Volk Israel gehörten, hatten sie sich getrennt und versammelten sich nun, um die Sünden zu bekennen, die sie und ihre Vorfahren begangen hatten. <verse number="3" style="v"/>Drei Stunden lang hörten sie im Stehen zu, was aus dem Gesetzbuch des <char style="nd">Herrn</char>, ihres Gottes, vorgelesen wurde. Dann warfen sie sich vor dem <char style="nd">Herrn</char>, ihrem Gott, nieder und bekannten ihm drei Stunden lang ihre Schuld.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Auf einer Plattform standen die Leviten Jeschua, Bani, Kadmiël, Schebanja, Bunni, Scherebja, Bani und Kenani. Mit lauter Stimme beteten sie zum <char style="nd">Herrn</char>, ihrem Gott.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Die Leviten Jeschua, Kadmiël, Bani, Haschabneja, Scherebja, Hodija, Schebanja und Petachja riefen: »Steht auf, preist den <char style="nd">Herrn</char>, euren Gott, bis in alle Ewigkeit! Rühmt seinen herrlichen Namen, denn unser Gott ist groß und mächtig; selbst mit unseren Lobliedern können wir ihn nicht beschreiben!«</para>
+  <para style="p">
+    <verse number="6" style="v"/>
+    <char style="add">Dann betete Esra:</char></para>
+  <para style="p">»Du bist der <char style="nd">Herr</char>, du allein! Du hast den Himmel geschaffen mit all seinen Sternen! Die Erde und das Meer sind dein Werk mit allen Geschöpfen, die es dort gibt. Du hast ihnen das Leben geschenkt; die Mächte des Himmels beten dich an.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Du, o <char style="nd">Herr</char>, bist der Gott, der Abram erwählte; du führtest ihn aus Ur im Land der Chaldäer und gabst ihm den Namen Abraham.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Du sahst, dass er dir treu war, und hast einen Bund mit ihm geschlossen. Du versprachst, seinen Nachkommen eine Heimat zu geben: das Land der Kanaaniter und Hetiter, der Amoriter und Perisiter, der Jebusiter und Girgaschiter. Du hast dein Wort gehalten, denn du bist zuverlässig und gerecht!</para>
+  <para style="p">
+    <verse number="9" style="v"/>Als unsere Vorfahren in Ägypten unterdrückt wurden, hast du dich über sie erbarmt. Am Schilfmeer schrien sie um Hilfe, und du hast sie erhört.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Der Pharao, seine obersten Beamten und sein Volk haben unsere Vorfahren verspottet und gedemütigt. Doch du hast ihnen Einhalt geboten mit großen Wundern und mit Zeichen deiner Macht. So hast du deinen Namen in aller Welt bekannt gemacht, noch heute spricht man von deinen Taten.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Vor den Augen deines Volkes teiltest du das Meer, trockenen Fußes zogen sie mitten hindurch. Doch ihre Verfolger stürztest du in die Wogen, wie Steine sanken sie in die Tiefe.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Mit einer Wolkensäule führtest du dein Volk bei Tag, in der Nacht mit einer Feuersäule. So zeigtest du ihnen den Weg.</para>
+  <para style="p">
+    <verse number="13" style="v"/>Du stiegst vom Himmel herab auf den Berg Sinai und sprachst zu deinem Volk. Du gabst ihnen klare Bestimmungen, Weisungen, auf die man sich verlassen kann, gute Ordnungen und Gebote.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Du lehrtest sie, den Sabbat als einen Tag zu achten, der dir allein gehört. Durch Mose, deinen Diener, hast du ihnen Gebote, Ordnungen und ein Gesetz gegeben.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Als der Hunger sie quälte, gabst du ihnen Brot vom Himmel<note caller="+" style="f"><char style="fr" closed="false">9,15 </char><char style="ft" closed="false">Gemeint ist das Manna. Vgl. »Manna« in den Sacherklärungen.</char></note>; als sie Durst litten, ließest du Wasser aus dem Felsen fließen. Du befahlst ihnen, das Land einzunehmen, das du ihnen zugesagt hattest.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Aber unsere Vorfahren waren hochmütig, sie widersetzten sich dir und schlugen deine Weisungen in den Wind.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Sie wollten dir nicht gehorchen und vergaßen deine großen Wunder, mit denen du ihnen geholfen hattest. Eigensinnig und widerspenstig, wie sie waren, wollten sie selbst einen Anführer berufen, der sie in die Sklaverei nach Ägypten zurückbringen sollte. Du aber bist ein Gott, der vergibt, du bist gnädig und barmherzig; deine Geduld ist groß, und deine Liebe kennt kein Ende. Du hast unsere Vorfahren nicht verlassen, <verse number="18" style="v"/>auch nicht, als sie sich eine Stierfigur gossen und sagten: ›Das ist unser Gott, der uns aus Ägypten geführt hat!‹ Wie sehr haben sie dich damit beleidigt!</para>
+  <para style="p">
+    <verse number="19" style="v"/>Du aber hast sie in der Wüste nicht im Stich gelassen, denn du bist barmherzig. Am Tag zeigte die Wolkensäule, wohin sie gehen sollten, und in der Nacht erleuchtete die Feuersäule ihren Weg.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Du schenktest ihnen deinen guten Geist, um sie zur Einsicht zu bringen. Als sie hungrig und durstig waren, hast du sie mit Manna und Wasser versorgt.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Vierzig Jahre wanderten sie in der Wüste umher, und immer bekamen sie von dir, was sie brauchten. Ihre Kleider verschlissen nicht, und ihre Füße schwollen nicht an vom langen Marsch.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Königreiche und Völker gabst du in ihre Gewalt, ein Land nach dem anderen konnten sie einnehmen. Sie eroberten Heschbon, das Land von König Sihon, und Baschan, das Land von König Og.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Du hast ihnen viele Kinder gegeben, so zahlreich wie die Sterne am Himmel. Du brachtest sie in das Land, das du ihren Vorfahren versprochen hattest.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Sie eroberten es und ließen sich dort nieder. Die Bewohner von Kanaan mussten sich ihnen unterwerfen; die Herrscher und das Volk gabst du in ihre Gewalt, sie mussten sich ihrem Willen beugen.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Dein Volk eroberte die befestigten Städte und nahm fruchtbares Ackerland in Besitz, dazu reich ausgestattete Häuser, ausgehobene Zisternen, viele Weinberge, Olivengärten und Obstbäume. Nun konnten sie essen, so viel sie wollten. Es ging ihnen sehr gut, du hattest sie so reich beschenkt!</para>
+  <para style="p">
+    <verse number="26" style="v"/>Doch trotz allem kehrten sie dir den Rücken und lehnten sich gegen dich auf: Von deinen Geboten wollten sie nichts mehr wissen; sie brachten deine Propheten um, die sie eindringlich ermahnt hatten, wieder zu dir zurückzukehren. Damit haben sie dich selbst beleidigt.</para>
+  <para style="p">
+    <verse number="27" style="v"/>Da ließest du ihre Feinde Macht über sie gewinnen, grausam wurden sie von ihnen unterdrückt. In ihrer Not schrien sie zu dir um Hilfe, und du erhörtest sie im Himmel, weil du Erbarmen mit ihnen hattest. Du schicktest ihnen Retter, die sie von ihren Unterdrückern befreiten. <verse number="28" style="v"/>Doch kaum hatten sie Ruhe vor ihnen, taten sie wieder, was du verabscheust. Erneut ließest du sie in die Hände ihrer Feinde fallen, hilflos waren sie ihnen ausgeliefert. Und wieder schrien sie zu dir, und du erhörtest sie im Himmel. Du brachtest ihnen immer wieder Rettung, weil du Erbarmen mit ihnen hattest.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Du riefst sie zur Besinnung, sie sollten umkehren und sich an dein Gesetz halten. Doch sie waren zu stolz und folgten deinen Weisungen nicht. Sie übertraten deine Gebote, die doch jedem, der sie befolgt, das Leben bringen. Sie wandten sich von dir ab, sie wollten nichts mehr von dir wissen und weigerten sich, dir zu gehorchen.</para>
+  <para style="p">
+    <verse number="30" style="v"/>Viele Jahre lang hattest du Geduld mit ihnen; du ermahntest sie durch deinen Geist und sprachst zu ihnen durch die Propheten. Doch sie stellten sich taub. Da gabst du sie in die Gewalt fremder Völker.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Aber weil du erneut Erbarmen mit ihnen hattest, wolltest du sie nicht völlig vernichten; du überließest sie nicht ihrem Schicksal. Denn du bist gnädig und barmherzig.</para>
+  <para style="p">
+    <verse number="32" style="v"/>Unser Gott, du großer, mächtiger und ehrfurchtgebietender Herr! Du hältst dich an deinen Bund mit uns, deine Liebe hört niemals auf. Sieh doch, welches Leid uns getroffen hat! Unsere Könige und führenden Männer, unsere Priester und Propheten, ja, schon unsere Vorfahren und das ganze Volk – sie alle haben schwer gelitten seit der Zeit, als die assyrischen Könige uns unterdrückten, bis zum heutigen Tag.</para>
+  <para style="p">
+    <verse number="33" style="v"/>Doch du hast uns zu Recht bestraft. Du bist uns immer treu geblieben, selbst dann, wenn wir uns von dir lossagten.</para>
+  <para style="p">
+    <verse number="34" style="v"/>Unsere Könige und führenden Männer, unsere Priester und unsere Vorfahren, sie alle haben dein Gesetz missachtet, sie haben deine Gebote übertreten und deine Warnungen in den Wind geschlagen. <verse number="35" style="v"/>Du hattest ihnen die Herrschaft anvertraut, du hattest sie mit Gütern reich beschenkt und ihnen ein großes und fruchtbares Land gegeben. Doch sie weigerten sich, dir zu dienen und von ihren falschen Wegen umzukehren.</para>
+  <para style="p">
+    <verse number="36" style="v"/>Und heute sind wir Sklaven in dem Land, das du unseren Vorfahren anvertraut hast, damit sie seine Früchte und seinen Reichtum genießen sollten. Wir müssen hier als Sklaven dienen!</para>
+  <para style="p">
+    <verse number="37" style="v"/>Die reiche Ernte fällt den Königen zu, die du wegen unserer Sünden über uns herrschen lässt. Nun haben sie Gewalt über uns und über unser Vieh; sie behandeln uns, wie es ihnen gerade passt. Darum sind wir in so großer Not.«</para>
+  <chapter number="10" style="c"/>
+  <para style="s1">Das Volk verpflichtet sich, das Gesetz zu befolgen</para>
+  <para style="m">
+    <verse number="1" style="v"/>Nachdem wir Gott unsere Schuld bekannt hatten, schlossen wir eine Vereinbarung und hielten sie schriftlich fest. Unsere führenden Männer, unsere Leviten und Priester unterschrieben die Urkunde und versiegelten sie.</para>
+  <para style="p">
+    <verse number="2" style="v"/>Als Erste unterzeichneten der Statthalter Nehemia, der Sohn von Hachalja, und Zedekia, <verse number="3" style="v"/>dann die Priester Seraja, Asarja, Jirmeja, <verse number="4" style="v"/>Paschhur, Amarja, Malkija, <verse number="5" style="v"/>Hattusch, Schebanja, Malluch, <verse number="6" style="v"/>Harim, Meremot, Obadja, <verse number="7" style="v"/>Daniel, Ginneton, Baruch, <verse number="8" style="v"/>Meschullam, Abija, Mijamin, <verse number="9" style="v"/>Maasja, Bilga und Schemaja.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Danach unterschrieben die Leviten Jeschua, der Sohn von Asanja, Binnui von der Sippe Henadad, Kadmiël <verse number="11" style="v"/>und ihre Stammesbrüder Schechanja, Hodija, Kelita, Pelaja, Hanan, <verse number="12" style="v"/>Micha, Rehob, Haschabja, <verse number="13" style="v"/>Sakkur, Scherebja, Schebanja, <verse number="14" style="v"/>Hodija, Bani und Beninu.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Als Nächste unterzeichneten die führenden Männer des Volkes: Parosch, Pahat-Moab, Elam, Sattu, Bani, <verse number="16" style="v"/>Bunni, Asgad, Bebai, <verse number="17" style="v"/>Adonija, Bigwai, Adin, <verse number="18" style="v"/>Ater, Hiskia, Asur, <verse number="19" style="v"/>Hodija, Haschum, Bezai, <verse number="20" style="v"/>Harif, Anatot, Nebai, <verse number="21" style="v"/>Magpiasch, Meschullam, Hesir, <verse number="22" style="v"/>Meschesabel, Zadok, Jaddua, <verse number="23" style="v"/>Pelatja, Hanan, Anaja, <verse number="24" style="v"/>Hoschea, Hananja, Haschub, <verse number="25" style="v"/>Lohesch, Pilha, Schobek, <verse number="26" style="v"/>Rehum, Haschabna, Maaseja, <verse number="27" style="v"/>Ahija, Hanan, Anan, <verse number="28" style="v"/>Malluch, Harim und Baana.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Auch das übrige Volk schloss sich der Verpflichtung an: weitere Priester und Leviten, die Torwächter, Sänger, Tempeldiener und alle, die sich von den heidnischen Völkern des Landes abgesondert hatten, um Gottes Gesetz zu befolgen. Auch ihre Frauen schlossen sich an sowie ihre Söhne und Töchter, sofern sie alt genug waren, die Vereinbarung zu verstehen. <verse number="30" style="v"/>Zusammen mit den führenden Männern legten sie einen Eid ab, das Gesetz zu befolgen, das uns Gott durch seinen Diener Mose gegeben hat. Sie wollten nach den Geboten des <char style="nd">Herrn</char>, nach seinen Ordnungen und Weisungen leben. <verse number="31" style="v"/>Sie schworen:</para>
+  <para style="p">»Wir verheiraten unsere Söhne und Töchter nicht mit Männern und Frauen aus den anderen Völkern.</para>
+  <para style="p">
+    <verse number="32" style="v"/>Wenn Angehörige fremder Völker uns am Sabbat oder an einem anderen Gott geweihten Tag Getreide und Waren anbieten, so kaufen wir nichts.</para>
+  <para style="p">Jedes siebte Jahr lassen wir das Land brachliegen und erlassen den Menschen sämtliche Schulden.</para>
+  <para style="p">
+    <verse number="33" style="v"/>Wir verpflichten uns, jährlich eine kleine Silbermünze für den Dienst im Tempel zu zahlen: <verse number="34" style="v"/>für das Brot, das Gott geweiht ist, für die täglichen Speiseopfer und Brandopfer, die Opfer an den Sabbaten, Neumondfeiern und den übrigen Festtagen, für die besonderen Opfergaben und für die Opfer, die Israels Schuld tilgen, sowie für alle Arbeiten im Tempel unseres Gottes.</para>
+  <para style="p">
+    <verse number="35" style="v"/>Wir werfen das Los unter den Priestern, den Leviten und dem übrigen Volk, um zu bestimmen, in welcher Reihenfolge ihre Sippen jedes Jahr zu den festgesetzten Zeiten beim Tempel erscheinen sollen. Sie sollen das Brennholz für die Opfer stiften, die auf dem Altar am Tempel verbrannt werden, wie es im Gesetz vorgeschrieben ist.</para>
+  <para style="p">
+    <verse number="36" style="v"/>Die ersten Früchte unserer Felder und Bäume liefern wir jedes Jahr beim Tempel des <char style="nd">Herrn</char> ab.</para>
+  <para style="p">
+    <verse number="37" style="v"/>Wie es im Gesetz steht, bringen wir unseren erstgeborenen Sohn zum Tempel und weihen ihn Gott. Die ersten Jungen unserer Kühe, Schafe und Ziegen geben wir den Priestern. <verse number="38" style="v"/>Bei ihnen liefern wir auch das erste gemahlene Korn ab sowie die besten Früchte unserer Bäume, den ersten Wein und das erste Olivenöl. Diese Gaben bringen wir in die Vorratskammern beim Tempel unseres Gottes.</para>
+  <para style="p">In den Dörfern geben wir den Leviten den zehnten Teil vom Ertrag unserer Felder. <verse number="39" style="v"/>Dabei soll ein Priester, ein Nachkomme von Aaron, anwesend sein. Den zehnten Teil dieser Abgaben sollen die Leviten in die Vorratskammern am Tempel unseres Gottes bringen. <verse number="40" style="v"/>Das Volk und die Leviten werden dort das Getreide, den neuen Wein und das Olivenöl abliefern. In den Räumen werden auch alle Gegenstände für den Tempeldienst aufbewahrt; außerdem haben dort die Priester, Torwächter und Sänger ihre Kammern.</para>
+  <para style="p">Wir wollen dafür sorgen, dass der Tempeldienst ausgeübt werden kann, so wie es vorgeschrieben ist.«</para>
+  <chapter number="11" style="c"/>
+  <para style="ms1">Weitere Verzeichnisse und die Einweihung der Stadtmauer</para>
+  <para style="mr">(Kapitel <ref loc="NEH 11-12">11–12</ref>)</para>
+  <para style="s1">Die Bewohner von Jerusalem und Juda</para>
+  <para style="m">
+    <verse number="1" style="v"/>Alle führenden Männer hatten sich in Jerusalem niedergelassen. Aus dem übrigen Volk sollte jede zehnte Familie in Jerusalem, der Heiligen Stadt, wohnen. Sie wurden durch das Los bestimmt. Die anderen Familien konnten in ihren Heimatorten bleiben. <verse number="2" style="v"/>Doch wer freiwillig nach Jerusalem zog, wurde vom Volk besonders geehrt.</para>
+  <para style="p">
+    <verse number="3" style="v"/>In den Städten und Dörfern von Juda wohnten Leute aus dem Volk sowie Priester, Leviten, Tempeldiener und Nachkommen der Diener Salomos, jeder auf dem Grundstück, das er von seinen Vorfahren geerbt hatte.</para>
+  <para style="p">Folgende Sippenoberhäupter aus Juda ließen sich in Jerusalem nieder:</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="4" style="v"/>aus dem Stamm Juda:</para>
+  <para style="p">Ataja, der Sohn von Usija, zu seinen Vorfahren gehörten Secharja, Amarja, Schefatja, Mahalalel und Perez;</para>
+  <para style="p">
+    <verse number="5" style="v"/>Maaseja, der Sohn von Baruch, zu seinen Vorfahren gehörten Kolhose, Hasaja, Adaja, Jojarib, Secharja und Schela.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Von den Nachkommen von Perez wohnten 468 angesehene Männer mit ihren Familien in Jerusalem.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="7" style="v"/>Aus dem Stamm Benjamin:</para>
+  <para style="p">Sallu, der Sohn von Meschullam, seine Vorfahren reichten über Joëd, Pedaja, Kolaja, Maaseja und Itiël bis zu Jesaja;</para>
+  <para style="p">
+    <verse number="8" style="v"/>Gabbai und Sallai, zwei nahe Verwandte von Sallu;<note caller="+" style="f"><char style="fr" closed="false">11,8 </char><char style="ft" closed="false">So nach der griechischen Übersetzung. Der hebräische Text lautet: und nach ihm Gabbai und Sallai.</char></note> zu den Sippen dieser drei Männer gehörten 928 Familien. <verse number="9" style="v"/>Sie alle unterstanden Joel, dem Sohn von Sichri; Juda, der Sohn von Senua, war zweiter Stadtoberster.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Die Priester, die in Jerusalem lebten, waren Jedaja, Jojarib, Jachin <verse number="11" style="v"/>und der oberste Priester Seraja, ein Sohn von Hilkija; unter seinen Vorfahren waren Meschullam, Zadok, Merajot und Ahitub.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Zu den Sippen dieser Priester gehörten 822 Familien; die Männer verrichteten den Tempeldienst.</para>
+  <para style="p">Außerdem Adaja, der Sohn von Jeroham, seine Vorfahren reichten über Pelalja, Amzi, Secharja und Paschhur bis zu Malkija; <verse number="13" style="v"/>seine Sippe umfasste 242 Familien.</para>
+  <para style="p">Ferner Amaschsai, der Sohn von Asarel, zu seinen Vorfahren gehörten Achsai, Meschillemot und Immer; <verse number="14" style="v"/>seine Sippe bestand aus 128 Familien, die hohes Ansehen genossen. Sie unterstanden Sabdiël, dem Sohn von Haggadolim.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="15" style="v"/>Von den Leviten lebten folgende Sippenoberhäupter in Jerusalem:</para>
+  <para style="p">Schemaja, der Sohn von Haschub, zu seinen Vorfahren gehörten Asrikam, Haschabja und Bunni;</para>
+  <para style="p">
+    <verse number="16" style="v"/>außerdem Schabbetai und Josabad, die für den Dienst im äußeren Bereich des Tempels verantwortlich waren;</para>
+  <para style="p">
+    <verse number="17" style="v"/>ferner Mattanja, der Sohn von Micha, er stammte über Sabdi von Asaf ab; er leitete den Lobgesang und das Dankgebet im Tempel.</para>
+  <para style="p">Außerdem Mattanjas Bruder Bakbukja, der auch sein Stellvertreter war;</para>
+  <para style="p">schließlich Abda, der Sohn von Schammua, der über Galal von Jedutun abstammte.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Insgesamt lebten 284 levitische Familien in der Heiligen Stadt.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="19" style="v"/>Dazu kamen folgende Sippenoberhäupter der Torwächter:</para>
+  <para style="p">Akkub und Talmon mit ihren Verwandten, insgesamt 172 Familien.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="20" style="v"/>Der Rest des Volkes, der Priester und Leviten lebte außerhalb von Jerusalem in den übrigen Städten von Juda, jeder auf dem Grundstück, das er von seinen Vorfahren geerbt hatte.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Die Tempeldiener wohnten auf dem Hügel Ofel; Ziha und Gischpa hatten die Aufsicht über sie.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Die Leviten in Jerusalem unterstanden Usi, dem Sohn von Bani; zu seinen Vorfahren gehörten Haschabja, Mattanja und Micha. Sie stammten von Asaf ab, dessen Familie für die Musik im Tempel verantwortlich war. <verse number="23" style="v"/>Der König<note caller="+" style="f"><char style="fr" closed="false">11,23 </char><char style="ft" closed="false">Wahrscheinlich ist hier der persische König gemeint und nicht König David, der seinerzeit die Dienste am Tempel ordnete. Vgl. <char style="xt"><ref loc="1CH 25:1-31">1. Chronik 25,1‒31</ref>.</char></char></note> hatte genau festgelegt, in welcher Reihenfolge die Männer aus der Sippe Asaf den Gesang im Tempel leiten sollten.</para>
+  <para style="p">
+    <verse number="24" style="v"/>Petachja vertrat die Belange der Israeliten am persischen Königshof. Er war ein Sohn von Meschesabel und Nachkomme von Serach, dem Sohn von Juda.</para>
+  <para style="p">
+    <verse number="25" style="v"/>In folgenden Städten wohnten Familien aus dem Stamm Juda: Kirjat-Arba, Dibon und Kabzeel mit den umliegenden Dörfern, <verse number="26" style="v"/>Jeschua, Molada, Bet-Pelet, <verse number="27" style="v"/>Hazar-Schual, Beerscheba mit seinen Dörfern, <verse number="28" style="v"/>Ziklag, Mechona mit seinen Dörfern, <verse number="29" style="v"/>En-Rimmon, Zora, Jarmut, <verse number="30" style="v"/>Sanoach, Adullam mit den dazugehörigen Dörfern, Lachisch mit den umliegenden Feldern sowie Aseka und seinen Dörfern. Das Gebiet erstreckte sich von Beerscheba im Süden bis zum Hinnomtal im Norden.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Wohnorte für die Familien aus dem Stamm Benjamin waren: Geba, Michmas, Ajja, Bethel und die umliegenden Dörfer, <verse number="32" style="v"/>Anatot, Nob, Ananja, <verse number="33" style="v"/>Hazor, Rama, Gittajim, <verse number="34" style="v"/>Hadid, Zeboïm, Neballat, <verse number="35" style="v"/>Lod, Ono und das Tal der Handwerker.</para>
+  <para style="p">
+    <verse number="36" style="v"/>Auch einige levitische Sippen aus dem Gebiet von Juda ließen sich im Bereich des Stammes Benjamin nieder.</para>
+  <chapter number="12" style="c"/>
+  <para style="s1">Verzeichnis der Priester und Leviten</para>
+  <para style="m">
+    <verse number="1" style="v"/>Es folgt ein Verzeichnis der Priester und Leviten, die mit Serubbabel, dem Sohn von Schealtiël, und mit Jeschua aus der Verbannung zurückkehrten:</para>
+  <para style="p">Priester:</para>
+  <para style="p">Seraja, Jirmeja, Esra, <verse number="2" style="v"/>Amarja, Malluch, Hattusch, <verse number="3" style="v"/>Schechanja, Rehum, Meremot, <verse number="4" style="v"/>Iddo, Ginneton, Abija, <verse number="5" style="v"/>Mijamin, Maadja, Bilga, <verse number="6" style="v"/>Schemaja, Jojarib, Jedaja, <verse number="7" style="v"/>Sallu, Amok, Hilkija und Jedaja. Sie waren die obersten Priester zu der Zeit, als Jeschua Hoherpriester war.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Leviten:</para>
+  <para style="p">Jeschua, Binnui, Kadmiël, Scherebja, Juda und Mattanja. Sie leiteten den Lobgesang im Tempel. <verse number="9" style="v"/>Bakbukja, Unni und ihre Verwandten sangen im Wechsel mit ihnen die Loblieder.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Die Nachkommen des Hohenpriesters Jeschua:</para>
+  <para style="p">Jeschua war der Vater von Jojakim, auf diesen folgten in direkter Linie Eljaschib, Jojada, <verse number="11" style="v"/>Johanan<note caller="+" style="f"><char style="fr" closed="false">12,11 </char><char style="ft" closed="false">So nach Vers 22. Der hebräische Text lautet: Jonatan.</char></note> und Jaddua.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Als Jojakim das Amt des Hohenpriesters ausübte, waren folgende Priester die Oberhäupter ihrer Sippen:</para>
+  <para style="li1">Meraja von der Sippe Seraja,</para>
+  <para style="li1">Hananja von der Sippe Jirmeja,</para>
+  <para style="li1">
+    <verse number="13" style="v"/>Meschullam von der Sippe Esra,</para>
+  <para style="li1">Johanan von der Sippe Amarja,</para>
+  <para style="li1">
+    <verse number="14" style="v"/>Jonatan von der Sippe Malluch,</para>
+  <para style="li1">Josef von der Sippe Schebanja,</para>
+  <para style="li1">
+    <verse number="15" style="v"/>Adna von der Sippe Harim,</para>
+  <para style="li1">Helkai von der Sippe Meremot,</para>
+  <para style="li1">
+    <verse number="16" style="v"/>Secharja von der Sippe Iddo,</para>
+  <para style="li1">Meschullam von der Sippe Ginneton,</para>
+  <para style="li1">
+    <verse number="17" style="v"/>Sichri von der Sippe Abija,</para>
+  <para style="li1">…<note caller="+" style="f"><char style="fr" closed="false">12,17 </char><char style="ft" closed="false">Hier fehlt ein Name im hebräischen Text.</char></note> von der Sippe Mijamin,</para>
+  <para style="li1">Piltai von der Sippe Maadja,</para>
+  <para style="li1">
+    <verse number="18" style="v"/>Schammua von der Sippe Bilga,</para>
+  <para style="li1">Jonatan von der Sippe Schemaja,</para>
+  <para style="li1">
+    <verse number="19" style="v"/>Mattenai von der Sippe Jojarib,</para>
+  <para style="li1">Usi von der Sippe Jedaja,</para>
+  <para style="li1">
+    <verse number="20" style="v"/>Kallai von der Sippe Sallu,</para>
+  <para style="li1">Eber von der Sippe Amok,</para>
+  <para style="li1">
+    <verse number="21" style="v"/>Haschabja von der Sippe Hilkija,</para>
+  <para style="li1">Netanel von der Sippe Jedaja.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="22" style="v"/>Zur Zeit der Hohenpriester Eljaschib, Jojada, Johanan und Jaddua und des persischen Königs Darius wurden Verzeichnisse erstellt, in denen die Sippenoberhäupter der Priester und Leviten aufgeschrieben waren.</para>
+  <para style="p">
+    <verse number="23" style="v"/>Die Sippenoberhäupter der Leviten wurden auch in den Chroniken aufgezeichnet, und zwar bis zur Zeit des Hohenpriesters Johanan, des Enkels von Eljaschib.</para>
+  <para style="p">
+    <verse number="24-25" style="v"/>Die levitischen Sippenoberhäupter Haschabja, Scherebja, Jeschua, Binnui und Kadmiël<note caller="+" style="f"><char style="fr" closed="false">12,24‒25 </char><char style="ft" closed="false">So nach Vers 8 und <char style="xt">Kapitel <ref loc="NEH 9:4">9,4</ref>; <ref loc="NEH 10:10">10,10</ref>.</char> Der hebräische Text lautet: Jeschua, der Sohn Kadmiëls.</char></note> leiteten Dienstgruppen, die im Tempel Loblieder sangen. Im Wechsel mit ihnen sangen Mattanja, Bakbukja und Obadja mit ihren Gruppen. So hatte es früher David, der Mann Gottes, angeordnet.</para>
+  <para style="p">Meschullam, Talmon und Akkub waren als Torwächter für die Vorratsräume bei den Tempeltoren eingesetzt.</para>
+  <para style="p">
+    <verse number="26" style="v"/>Diese Männer lebten zur selben Zeit wie der Hohepriester Jojakim, ein Sohn von Jeschua und Enkel von Jozadak, wie der Statthalter Nehemia und wie Esra, der Priester und Schriftgelehrte.</para>
+  <para style="s1">Die Einweihung der Stadtmauer</para>
+  <para style="m">
+    <verse number="27" style="v"/>Zur Einweihung der Stadtmauer wollten wir ein großes Fest feiern. Dazu ließen wir die Leviten aus dem ganzen Land nach Jerusalem kommen, sie sollten Loblieder singen und auf Zimbeln, Harfen und Lauten spielen. <verse number="28" style="v"/>Die Sänger kamen aus den Ortschaften rings um Jerusalem, aus den Dörfern der Netofatiter, <verse number="29" style="v"/>aus Bet-Gilgal und aus der Gegend von Geba und Asmawet, wo sie sich angesiedelt hatten. <verse number="30" style="v"/>Die Priester und Leviten reinigten sich für das Fest, dann besprengten sie auch das Volk, die Stadttore und die Mauer.</para>
+  <para style="p">
+    <verse number="31" style="v"/>Anschließend ließ ich die führenden Männer aus dem Stamm Juda auf die Mauer steigen und teilte die Sänger in zwei große Gruppen ein: Die erste zog oben auf der Mauer in südlicher Richtung auf das Misttor zu. <verse number="32" style="v"/>Hinter ihnen ging Hoschaja mit der einen Hälfte der führenden Männer. <verse number="33" style="v"/>Dann folgten die Priester Asarja, Esra, Meschullam, <verse number="34" style="v"/>Juda, Benjamin, Schemaja und Jirmeja. <verse number="35" style="v"/>Sie bliesen die Trompeten. Danach kamen Secharja, der über Jonatan, Schemaja, Mattanja, Michaja und Sakkur von Asaf abstammte, <verse number="36" style="v"/>sowie seine Verwandten Schemaja, Asarel, Milalai, Gilalai, Maai, Netanel, Juda und Hanani. Sie spielten Saiteninstrumente, wie sie schon David, der Mann Gottes, eingesetzt hatte. Esra, der Schriftgelehrte, führte die ganze Gruppe an. <verse number="37" style="v"/>Beim Quelltor gingen sie geradeaus die Stufen hinauf, die zur »Stadt Davids« führten, und hinter dem früheren Palast von David vorbei zum Wassertor im Osten der Stadt.</para>
+  <para style="p">
+    <verse number="38" style="v"/>Ich selbst schloss mich mit den übrigen führenden Männern des Volkes der zweiten Gruppe an. Wir gingen auf der Mauer in nördlicher Richtung zum Ofentor und zur »Breiten Mauer«, <verse number="39" style="v"/>dann vorbei am Ephraimtor, am Jeschana-Tor, am Fischtor, am Hananelturm, am »Turm der Hundert« und am Schaftor. Schließlich gelangten wir zum Wachtor.</para>
+  <para style="p">
+    <verse number="40" style="v"/>Die beiden Gruppen stellten sich beim Tempel auf. Bei mir standen die zweite Gruppe der führenden Männer <verse number="41" style="v"/>und die Priester Eljakim, Maaseja, Mijamin, Michaja, Eljoënai, Secharja und Hananja mit ihren Trompeten. <verse number="42" style="v"/>Daneben hatte sich eine weitere Gruppe aufgestellt: Maaseja, Schemaja, Eleasar, Usi, Johanan, Malkija, Elam und Eser. Die Sänger sangen ihre Loblieder unter der Leitung von Jisrachja.</para>
+  <para style="p">
+    <verse number="43" style="v"/>An diesem Tag wurden viele Tiere für das Opfermahl geschlachtet. Gott schenkte uns allen, Männern, Frauen und Kindern, große Freude. Unser Jubel war noch weit weg von Jerusalem zu hören.</para>
+  <para style="s1">Abgaben für die Priester und Leviten</para>
+  <para style="m">
+    <verse number="44" style="v"/>Damals wurden einige Männer zur Aufsicht über die Vorratsräume bestimmt, in denen die Abgaben für den Dienst am Tempel aufbewahrt wurden: die ersten Früchte der Ernte und der zehnte Teil aller Einkünfte. Dort lagerte man auch die Abgaben, die man in den Dörfern je nach Größe der Felder für die Priester und Leviten eingesammelt hatte. Die Judäer freuten sich, dass die Priester und Leviten den Tempeldienst gewissenhaft versahen, <verse number="45" style="v"/>denn sie sorgten dafür, dass die Reinigungsvorschriften eingehalten wurden und der Gottesdienst regelmäßig gefeiert wurde. Auch die Sänger und Torwächter hielten sich an die Anweisungen, die David und sein Sohn Salomo gegeben hatten. <verse number="46" style="v"/>Schon seit den Tagen von David und Asaf wurde Gott im Heiligtum mit Lobliedern gepriesen, und es gab Männer, die den Gesang leiteten.</para>
+  <para style="p">
+    <verse number="47" style="v"/>Ganz Israel versorgte zur Zeit von Serubbabel und Nehemia die Sänger und Torwächter mit allem, was sie zum Leben brauchten. Den Leviten lieferte man die Gott geweihten Gaben ab, und die Priester bekamen von den Leviten ihren Anteil.</para>
+  <chapter number="13" style="c"/>
+  <para style="ms1">Nehemias Reformen</para>
+  <para style="mr">(Kapitel <ref loc="NEH 13">13</ref>)</para>
+  <para style="s1">Trennung von den Moabitern und Ammonitern</para>
+  <para style="m">
+    <verse number="1" style="v"/>Zu jener Zeit las man dem Volk aus dem Gesetz von Mose vor. Dabei stieß man auf das Gebot, dass niemals Ammoniter oder Moabiter in das Volk Gottes aufgenommen werden dürfen. <verse number="2" style="v"/>Diese Völker hatten sich nämlich geweigert, den Israeliten auf ihrem Durchzug von Ägypten nach Kanaan etwas zu essen und zu trinken zu geben. Die Moabiter hatten sogar Bileam dafür bezahlt, dass er das Volk Israel verfluchte; doch unser Gott hatte den Fluch in Segen verwandelt. <verse number="3" style="v"/>Als nun die Israeliten dieses Gebot hörten, schlossen sie alle mit ausländischer Abstammung aus dem Volk aus.</para>
+  <para style="s1">Nehemia beseitigt Missstände im Tempel</para>
+  <para style="m">
+    <verse number="4" style="v"/>Schon früher hatte der Priester Eljaschib, der Aufseher über die Vorratskammern des Tempels, seinem Verwandten Tobija <verse number="5" style="v"/>erlaubt, eine große Kammer im Tempel für sich zu benutzen. Vorher hatte man dort das Mehl für die Speiseopfer aufbewahrt, ebenso Weihrauch, die Gegenstände für den Tempeldienst und den zehnten Teil vom Getreide, vom neuen Wein und Olivenöl, der für die Leviten, Sänger und Torwächter bestimmt war. Auch der Anteil für die Priester war hier gelagert worden. <verse number="6" style="v"/>Zu dieser Zeit hielt ich mich nicht in Jerusalem auf, denn im 32. Regierungsjahr des persischen Königs Artaxerxes war ich an seinen Hof zurückgekehrt. Einige Zeit später bat ich den König, wieder nach Jerusalem gehen zu dürfen. <verse number="7" style="v"/>Kaum war ich dort angekommen, erfuhr ich von dem Missstand, dass Eljaschib seinem Verwandten Tobija eine Kammer im Vorhof des Tempels überlassen hatte. <verse number="8" style="v"/>Darüber war ich sehr erbost und ließ alles, was Tobija gehörte, hinauswerfen. <verse number="9" style="v"/>Dann befahl ich, die Räume des Tempels wieder neu zu weihen und die Gegenstände für den Tempeldienst, das Mehl für die Speiseopfer und den Weihrauch zurückzubringen.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Ich erfuhr auch, dass die Leviten und Sänger ihren Dienst im Tempel nicht mehr ausübten, sondern auf ihren Feldern arbeiteten, weil sie die Abgaben nicht bekamen, auf die sie Anspruch hatten. <verse number="11" style="v"/>Da stellte ich die zuständigen Männer zur Rede: »Warum wird der Tempeldienst so vernachlässigt?« Ich ließ die Leviten und Sänger zurückholen und teilte sie wieder zum Dienst ein. <verse number="12" style="v"/>Nun brachte auch das ganze Volk wieder den zehnten Teil von seinem Getreide, vom neuen Wein und vom Olivenöl in die Vorratskammern. <verse number="13" style="v"/>Die Aufsicht über die Vorräte übertrug ich dem Priester Schelemja, dem Schreiber Zadok und dem Leviten Pedaja. Hanan, der Sohn von Sakkur und Enkel von Mattanja, sollte ihnen dabei helfen. Sie alle galten als zuverlässige Männer. Deshalb sollten sie die Vorräte an die Priester und Leviten verteilen.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Denke an mich, mein Gott! Vergiss niemals, was ich für dein Haus und für den Tempeldienst getan habe!</para>
+  <para style="s1">Nehemia verschafft dem Sabbat wieder Geltung</para>
+  <para style="m">
+    <verse number="15" style="v"/>Zu dieser Zeit sah ich in Juda einige, die am Sabbat in der Kelter Weintrauben auspressten. Andere fuhren Getreide vom Feld ein, beluden ihre Esel damit und brachten es zusammen mit Wein, Trauben, Feigen und anderen Lebensmitteln am Sabbat nach Jerusalem. Nachdrücklich warnte ich sie davor, ihre Waren zum Kauf anzubieten. <verse number="16" style="v"/>Es wohnten auch einige Tyrer in Jerusalem; selbst am Sabbat verkauften sie an die Judäer Fische und andere Waren, die sie nach Jerusalem gebracht hatten. <verse number="17" style="v"/>Da stellte ich die einflussreichen Männer von Juda zur Rede: »Warum ladet ihr solche Schuld auf euch und achtet den Sabbat nicht als Ruhetag? <verse number="18" style="v"/>Haben eure Vorfahren nicht genauso gehandelt? Darum hat unser Gott so viel Unheil über uns und unsere Stadt gebracht. Und jetzt fordert ihr erst recht seinen Zorn heraus, indem ihr den Sabbat missachtet!«</para>
+  <para style="p">
+    <verse number="19" style="v"/>Ich ordnete an, die Tore von Jerusalem am Abend vor dem Sabbat zu schließen, sobald die Dämmerung hereinbrach, und sie erst wieder zu öffnen, wenn der Sabbat vorüber war. Einige meiner Männer stellte ich an den Toren auf; sie sollten darauf achten, dass am Sabbat keine Waren mehr nach Jerusalem gelangten. <verse number="20" style="v"/>Da blieben die Kaufleute und Händler mehrmals in der Nacht zum Sabbat vor der Stadt und boten dort ihre Waren an. <verse number="21" style="v"/>Ich warnte sie: »Warum schlagt ihr am Sabbat euer Lager vor der Stadtmauer auf? Geschieht das noch ein einziges Mal, lasse ich euch festnehmen!« Von da an kamen sie am Sabbat nicht wieder. <verse number="22" style="v"/>Den Leviten befahl ich, sich zu reinigen und die Stadttore zu bewachen, damit der Sabbat nicht wieder verletzt würde.</para>
+  <para style="p">Denke daran, mein Gott, wie ich mich für dich eingesetzt habe! Hab Erbarmen mit mir, denn deine Gnade ist grenzenlos!</para>
+  <para style="s1">Verbot der Mischehen</para>
+  <para style="m">
+    <verse number="23" style="v"/>Zu dieser Zeit fand ich auch heraus, dass viele jüdische Männer Frauen aus Aschdod, Ammon und Moab geheiratet hatten. <verse number="24" style="v"/>Die Hälfte ihrer Kinder redete in der Sprache von Aschdod oder in einer anderen fremden Sprache, doch Hebräisch konnten sie nicht. <verse number="25" style="v"/>Da redete ich den Männern ins Gewissen, ja, ich verfluchte sie sogar, schlug auf einige von ihnen ein und zerrte sie an den Haaren. Ich ließ sie vor Gott schwören, ihre Söhne und Töchter niemals mit Angehörigen fremder Völker zu verheiraten. <verse number="26" style="v"/>Ich sagte zu ihnen: »Salomo, der König von Israel, lud schwere Schuld auf sich wegen seiner heidnischen Frauen. Dabei gab es keinen so großen König wie ihn. Gott liebte ihn ganz besonders und ließ ihn Herrscher über ganz Israel werden. Doch sogar einen solchen König haben heidnische Frauen zum Götzendienst verführt! <verse number="27" style="v"/>Und nun begeht ihr genau dasselbe Unrecht und heiratet Frauen aus fremden Völkern! Damit habt ihr Gott die Treue gebrochen!«</para>
+  <para style="p">
+    <verse number="28" style="v"/>Jojada, ein Sohn des Hohenpriesters Eljaschib, hatte einen Sohn, der mit einer Tochter des Horoniters Sanballat verheiratet war. Deshalb jagte ich ihn aus Jerusalem fort.</para>
+  <para style="p">
+    <verse number="29" style="v"/>Vergiss nicht, mein Gott, wie diese Männer das Priesteramt in Verruf gebracht und den Bund verletzt haben, den du mit den Priestern und Leviten geschlossen hast!</para>
+  <para style="p">
+    <verse number="30" style="v"/>So setzte ich mich dafür ein, dass unser Volk nicht mehr von heidnischen Völkern beeinflusst wurde. Ich gab den Priestern und Leviten Anordnungen für ihren Dienst und für ihre verschiedenen Aufgaben. <verse number="31" style="v"/>Auch sorgte ich dafür, dass die ersten Früchte der Ernte und das Brennholz für die Opfer rechtzeitig abgegeben wurden.</para>
+  <para style="p">Denke an mich, mein Gott! Lass mich deine Güte erfahren!</para>
+</usx>

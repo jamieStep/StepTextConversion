@@ -695,7 +695,19 @@
       </structure>
     </publication>
   </publications>
-  <copyright/>
+  <copyright>
+    <fullStatement>
+      <statementContent type="xhtml">
+	<p>พระคริสตธรรมคัมภีร์ไทย ฉบับอมตธรรมร่วมสมัย</p>
+	<p>สงวนลิขสิทธิ์ © 1999, 2001, 2007 โดยองค์การอมตธรรม</p>
+	<p>Thai New Contemporary Version</p>
+	<p>Copyright © 1999, 2001, 2007 by Biblica, Inc.®</p>
+	<p>Used by permission of Biblica, Inc.® All rights reserved worldwide.</p>
+      </statementContent>
+    </fullStatement>
+  </copyright>
+  <!-- $$$ Jamie: Originally this lacked any content for the copyright tag.  I think
+       possibly it may have been inadvertently places in promoVersionInfo. -->
   <promotion>
     <promoVersionInfo contentType="xhtml">
       <p>พระคริสตธรรมคัมภีร์ไทย ฉบับอมตธรรมร่วมสมัย</p>

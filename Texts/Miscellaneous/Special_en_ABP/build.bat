@@ -1,0 +1,1 @@
+"C:\Program Files\Jamie\STEP\SwordUtilities\osis2mod.exe" "C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Miscellaneous\Special_en_ABP\Sword\modules\texts\ztext\abpen_sb" "C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Miscellaneous\Special_en_ABP\Osis\abpen_sb.xml" -v KJV  -z

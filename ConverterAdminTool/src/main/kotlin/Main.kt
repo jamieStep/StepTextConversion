@@ -1,11 +1,12 @@
 /******************************************************************************/
 /**
-* Utility to extract information from Sword configuration files.
+* Utility to do things to groups of text files -- etc.
 *
-* I store various information about texts in Sword configuration files,
-* using stylised comments.  The fact that they are comments means they can
-* remain in the configuration file as supplied to osis2mod.  The fact that they
-* are stylised means I can look for and parse them.
+* It can run the converter on all of a given collection of text files; or
+* extract useful information from config files; or set up config files where
+* a whole bunch of texts need very similar ones; or do ad hoc things.  You're
+* very likely to want to change a fair amount of this to tailor it to a
+* particular use.
 *
 * This programme caters for running over files below a given root folder in order
 * to carry out administrative-type functions.  At the time of writing, the only
@@ -23,12 +24,13 @@
 */
 /******************************************************************************/
 
+import kotlinx.coroutines.*
 import java.io.File
 import java.nio.file.Paths
 import kotlin.io.path.writeLines
-import kotlin.system.exitProcess
-import kotlinx.coroutines.*
-import org.w3c.dom.Node
+
+
+
 
 
 
@@ -46,7 +48,7 @@ fun main (args: Array<String>)
   try
   {
     //val processor = ProcessorExtractSummaryInformation()
-    val processor = ProcessorAdHoc()
+    val processor = ProcessorCheckVersification()
     //val processor = ProcessorRunConverter()
     processor.process(args)
     println("Finished")
@@ -65,7 +67,7 @@ fun main (args: Array<String>)
 /******************************************************************************/
 /******************************************************************************/
 /**                                                                          **/
-/**                              Data classes                                **/
+/**                          Extracted config data                           **/
 /**                                                                          **/
 /******************************************************************************/
 /******************************************************************************/
@@ -142,6 +144,74 @@ private interface Processor
 
 
 /******************************************************************************/
+private class ProcessorCheckVersification: Processor
+{
+  /****************************************************************************/
+  override fun process (args: Array<String>)
+  {
+    /**************************************************************************/
+    CommandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
+    CommandLineProcessor.addCommandLineOption("args", 1, "Arguments to pass to converter.", null, null, true)
+    if (!CommandLineProcessor.parse(args, "AdminDataExtractor/CheckVersification"))
+      return
+
+
+
+    /**************************************************************************/
+    val converterArg = CommandLineProcessor.getOptionValue("args") ?: "C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Dbl\\Biblica"
+    val rootFolder = CommandLineProcessor.getOptionValue("rootFolder") ?: "C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Dbl\\Biblica"
+
+
+
+    /**************************************************************************/
+    /* Run over files. */
+
+    val folders = getFiles(rootFolder, listOf("Text_.*".toRegex()))
+    val cmd = listOf("java", "-jar", "C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\TextConverter\\out\\artifacts\\TextConverter_jar\\TextConverter.jar", "-rootFolder", "%", converterArg)
+    iterateRunCommand(folders, cmd)
+
+
+
+    /**************************************************************************/
+    /* Summarise results. */
+
+    val failed = folders.filter { !File(Paths.get(it.toString(), "stepRawTextVersification.txt").toString()).exists() } .map { it.toString() }
+    val results = mutableListOf<String>()
+    folders.filter { it.toString() !in failed } .forEach {
+      results.add(getRawTextVersificationDetails(it))
+    }
+
+    if (failed.isNotEmpty())
+    {
+      println("Failed to generate versification files for:\n  " + failed.joinToString("\n  "){ File(it).name })
+      println()
+      println()
+    }
+
+    results.forEach { println("$it\n") }
+  }
+
+
+  /****************************************************************************/
+  /* Extracts summary information from stepRawTextVersification.txt files --
+     the name of the folder, the optimal versification scheme, and the NRSV(A)
+     details.  All are returned as a single line, newline separated. */
+  private fun getRawTextVersificationDetails (file: File): String
+  {
+    val versificationFile = File(Paths.get(file.toString(), "stepRawTextVersification.txt").toString())
+    val lines = versificationFile.readLines()
+    val nrsvLine = lines.find { "nrsv" in it && "Scheme:" in it }
+    val preferredLine = lines.find { "Scheme:" in it }
+    val fileName = String.format(file.name, "%13s")
+    val res = (if (nrsvLine != preferredLine) "*** NOT NRSV *** " else "") +
+              fileName + ": " + preferredLine +
+              (if (nrsvLine != preferredLine) "\n*** NOT NRSV *** ${fileName}: " + nrsvLine else "")
+    return res
+  }
+}
+
+
+/******************************************************************************/
 private class ProcessorRunConverter: Processor
 {
   /****************************************************************************/
@@ -160,22 +230,13 @@ private class ProcessorRunConverter: Processor
 
 
     /**************************************************************************/
-    val startOfCommandLine = "java -jar \"C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\TextConverter\\out\\artifacts\\TextConverter_jar\\TextConverter.jar\" "
-    val commandLineParameters = "-rootFolder \"%\" " + CommandLineProcessor.getOptionValue("args")!!
-    val folders = getFiles(CommandLineProcessor.getOptionValue("rootFolder")!!, listOf("Text_.*".toRegex())).map { it.toString() }
+    val cmd = listOf("java", "-jar", "C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\TextConverter\\out\\artifacts\\TextConverter_jar\\TextConverter.jar", "-rootFolder", "%", CommandLineProcessor.getOptionValue("args")!!)
+    val folders = getFiles(CommandLineProcessor.getOptionValue("rootFolder")!!, listOf("Text_.*".toRegex()))
 
 
 
     /**************************************************************************/
-    runBlocking {
-      folders.subList(0, 1).forEach {
-        launch {
-          val thisCommandLine = startOfCommandLine + commandLineParameters.replace("%", it)
-          runCommand(listOf(thisCommandLine))
-          //println(thisCommandLine)
-        }
-      }
-    }
+    iterateRunCommand(folders, cmd)
 
 
 
@@ -210,7 +271,8 @@ private class ProcessorExtractSummaryInformation: Processor
 
 
     /**************************************************************************/
-    getFiles(rootFolder, listOf("%Text_.*".toRegex(), "Sword".toRegex(), "mods\\.d".toRegex(), ".*\\.conf".toRegex())).forEach {
+    val files = getFiles(rootFolder, listOf("%Text_.*".toRegex(), "Sword".toRegex(), "mods\\.d".toRegex(), ".*\\.conf".toRegex()))
+    files.forEach {
       val summaryData = SummaryData()
       summaryData.extract(it)
       val x = summaryData.asString()
@@ -231,6 +293,9 @@ private class ProcessorExtractSummaryInformation: Processor
 }
 
 
+
+
+
 /******************************************************************************/
 private class ProcessorAdHoc: Processor
 {
@@ -241,123 +306,64 @@ private class ProcessorAdHoc: Processor
   override fun process (args: Array<String>)
   {
     /**************************************************************************/
-    CommandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, false)
+    CommandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
+    CommandLineProcessor.addCommandLineOption("args", 1, "Arguments to pass to converter.", null, null, true)
     if (!CommandLineProcessor.parse(args, "AdminDataExtractor/AdHoc"))
       return
 
 
 
     /**************************************************************************/
+    val converterArg = CommandLineProcessor.getOptionValue("args") ?: "C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Dbl\\Biblica"
     val rootFolder = CommandLineProcessor.getOptionValue("rootFolder") ?: "C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Dbl\\Biblica"
 
 
 
     /**************************************************************************/
-    /* New files. */
+    /* Run over files. */
 
-    getFiles(rootFolder, listOf("Text_".toRegex()))
-      .filterNot { "NASV" in it.name }
-      .forEach {
-      process(it)
-    }
+    //getFiles(rootFolder, listOf("Text_.*".toRegex())) .forEach { generateConfig(it) }
+    val folders = getFiles(rootFolder, listOf("Text_.*".toRegex()))
+    val cmd = listOf("java", "-jar", "C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\TextConverter\\out\\artifacts\\TextConverter_jar\\TextConverter.jar", "-rootFolder", "%", converterArg)
+    iterateRunCommand(folders, cmd)
 
 
 
     /**************************************************************************/
-    /* Old files. */
+    /* Summarise results. */
 
-//   var firstTime = true
-//    getFiles("C:\\Users\\Jamie\\Desktop\\Step\\BiblicaDbl\\_Modules", listOf("license\\.xml".toRegex())).forEach {
-//       processLicenceDetails(it, firstTime)
-//      firstTime = false
-//    }
+    val failed = folders.filter { !File(Paths.get(it.toString(), "stepRawTextVersification.txt").toString()).exists() } .map { it.toString() }
+    val results = mutableListOf<String>()
+    folders.filter { it.toString() !in failed } .forEach {
+      results.add(getRawTextVersificationDetails(it))
+    }
+
+    if (failed.isNotEmpty())
+    {
+      println("Failed to generate versification files for:\n  " + failed.joinToString("\n  "){ File(it).name })
+      println()
+      println()
+    }
+
+    results.forEach { println("$it\n") }
   }
 
 
   /****************************************************************************/
-  private fun process (file: File)
+  /* Extracts summary information from stepRawTextVersification.txt files --
+     the name of the folder, the optimal versification scheme, and the NRSV(A)
+     details.  All are returned as a single line, newline separated. */
+  private fun getRawTextVersificationDetails (file: File): String
   {
-    println(file.name)
-
-    /*
-    val doc = Dom.getDocument(file.toString())
-
-    var node = Dom.findNodeByName(doc, "DBLMetadata")!!
-    val id = Dom.getAttribute(node, "id")
-    val revision = Dom.getAttribute(node, "revision")
-
-    node = Dom.findNodeByXpath(doc, "identification/name")!!
-    //node = Dom.findNodeByName(node, "name", false)!!
-    val name = node.textContent
-
-    val moduleName = File(File(file.parent).parent).name.replace("%Text_", "")
-    println(id + "\t" + moduleName + "\t" + revision + "\t" + name)
-
-
-    val moduleName = File(File(file.parent).parent).name.replace("%Text_", "")
-
-    var selector = ""
-    var node: Node? = null
-
-    if (null == node)
-    {
-      selector = "identification/abbreviationLocal"
-      node = Dom.findNodeByXpath(doc, selector)
-    }
-
-    if (null == node)
-    {
-      selector = "publications/publication/abbreviationLocal"
-      Dom.findNodeByXpath(doc, selector)
-    }
-
-    if (null == node)
-    {
-      selector = "identification/abbreviation"
-      node = Dom.findNodeByXpath(doc, selector)
-    }
-
-    var newAbbreviation = node!!.textContent.lowercase().capitalize()
-    if (!isAscii((newAbbreviation)))
-      newAbbreviation = Dom.findNodeByXpath(doc, "identification/abbreviation")!!.textContent.lowercase().capitalize()
-
-    newAbbreviation = removeNonAlphabetical(newAbbreviation)
-
-    node = Dom.findNodeByXpath(doc, "language/iso")!!
-    val newName = node.textContent + "_" + newAbbreviation
-
-    if (moduleName != newName) println("ren %Text_$moduleName %Text_$newName & rem $selector")
-    */
-
-  }
-
-
-  /****************************************************************************/
-  private fun processLicenceDetails (file: File, doHeader: Boolean)
-  {
-    val doc = Dom.getDocument(file.toString())
-
-    var node = Dom.findNodeByName(doc, "DBLMetadata")!!
-    val licenseId = Dom.getAttribute(node, "id")
-
-    node = Dom.findNodeByName(doc, "dateLicense")!!
-    val dateLicense = node.textContent
-
-    node = Dom.findNodeByName(doc, "dateLicenseExpiry")!!
-    val dateLicenseExpiry = node.textContent
-
-    node = Dom.findNodeByName(doc, "publicationRights")!!
-    val allowIntroductions = Dom.findNodeByName(node, "allowIntroductions", false)!!.textContent
-    val allowFootnotes = Dom.findNodeByName(node, "allowFootnotes", false)!!.textContent
-    val allowCrossReferences = Dom.findNodeByName(node, "allowCrossReferences", false)!!.textContent
-    val allowExtendedNotes = Dom.findNodeByName(node, "allowCrossReferences", false)!!.textContent
-
-    val moduleName = File(File(file.parent).parent).name.replace("%Text_", "")
-
-    if (doHeader)
-      println("ModuleName\tLicenceId\tDateLicensed\tDateLicenceExpiry\tAllowIntroductions\tAllowFootnotes\tAllowCrossReferences\tAllowExtendedNotes")
-
-    println("$moduleName\t$licenseId\t$dateLicense\t$dateLicenseExpiry\t$allowIntroductions\t$allowFootnotes\t$allowCrossReferences\t$allowExtendedNotes")
+    val versificationFile = File(Paths.get(file.toString(), "stepRawTextVersification.txt").toString())
+    val lines = versificationFile.readLines()
+    val nrsvLine = lines.find { "nrsv" in it && "Scheme:" in it }
+    val preferredLine = lines.find { "Scheme:" in it }
+    val fileName = String.format("%13s", file.name)
+    val res = (if (nrsvLine != preferredLine) "*** NOT NRSV *** " else "") +
+              fileName + ": " + preferredLine +
+              (if (nrsvLine != preferredLine) "\n*** NOT NRSV *** ${fileName}: " + nrsvLine else "")
+    return res
   }
 }
 
@@ -371,16 +377,6 @@ private class ProcessorAdHoc: Processor
 /**                                                                          **/
 /******************************************************************************/
 /******************************************************************************/
-
-/******************************************************************************/
-private fun checkArgs (args: Array<String>): String
-{
-  if (args.isEmpty()) return Paths.get("").toAbsolutePath().toString()
-  if (2 == args.size && args[0].lowercase() == "-rootfolder") return args[1]
-  println("\n\nUsage:\n\n  java ... -rootFolder <pathToFolder>\n")
-  exitProcess(0)
-}
-
 
 /******************************************************************************/
 /* Looks through a directory tree rooted at rootFolder.  It starts by looking
@@ -404,7 +400,7 @@ private fun getFiles (rootFolder: String, patternMatches: List<Regex>): List<Fil
 
 
 /******************************************************************************/
-fun isAscii (input: String): Boolean
+private fun isAscii (input: String): Boolean
 {
   val asciiRegex = Regex("^\\p{ASCII}*\$")
   return input.matches(asciiRegex)
@@ -412,7 +408,33 @@ fun isAscii (input: String): Boolean
 
 
 /******************************************************************************/
-fun removeNonAlphabetical (input: String): String
+/* Iterates over a list of files or folders, applying runCommand to each of
+   them.  Outputs a start and end message for each.  Returns only when all
+   individual processes are complete. */
+
+private fun iterateRunCommand (filesOrFolders: List<File>, command: List<String>, errorFilePath: String? = null, workingDirectory: String? = null)
+{
+  /****************************************************************************/
+  val waitFor: MutableList<Pair<Process, String>> = mutableListOf()
+  runBlocking {
+    filesOrFolders.forEach { fileOrFolder ->
+      val cmd = command.map { elt -> if ("%" == elt) fileOrFolder.toString() else elt }
+      val cmdAsString = cmd.joinToString(" ")
+      launch { println("Starting: $cmdAsString"); waitFor.add(Pair(runCommand(cmd, errorFilePath, workingDirectory), cmdAsString)) }
+    }
+  }
+
+
+
+  /****************************************************************************/
+  /* Wait for things to finish. */
+
+  waitFor.forEach { it.first.waitFor(); println("Finished: ${it.second}") }
+}
+
+
+/******************************************************************************/
+private fun removeNonAlphabetical (input: String): String
 {
   val regex = Regex("[^a-zA-Z]")
   return input.replace(regex, "")
@@ -420,25 +442,124 @@ fun removeNonAlphabetical (input: String): String
 
 
 /******************************************************************************/
-fun runCommand (command: List<String>, errorFilePath: String? = null, workingDirectory: String? = null)
+private fun runCommand (command: List<String>, errorFilePath: String? = null, workingDirectory: String? = null, wait: Boolean = false): Process
 {
-  println("Starting: " + java.lang.String.join(" ", command))
   val pb = ProcessBuilder(command)
   if (null != errorFilePath) pb.redirectError(File(errorFilePath))
   if (null != workingDirectory) pb.directory(File(workingDirectory))
   val process = pb.start()
-  process.waitFor()
-  println("Finished: " + java.lang.String.join(" ", command))
+  if (wait) process.waitFor()
+  return process
 }
 
 
 
 
 
-///******************************************************************************/
-///******************************************************************************/
-///******************************************************************************/
-// I used to output to a spreadsheet.  Just in case we ever want to do this again,
+
+/******************************************************************************/
+/******************************************************************************/
+/**                                                                          **/
+/**                             Code fragments                               **/
+/**                                                                          **/
+/******************************************************************************/
+/******************************************************************************/
+
+//  /****************************************************************************/
+//  private fun process (file: File, args: String)
+//  {
+//
+//    /*
+//    val doc = Dom.getDocument(file.toString())
+//
+//    var node = Dom.findNodeByName(doc, "DBLMetadata")!!
+//    val id = Dom.getAttribute(node, "id")
+//    val revision = Dom.getAttribute(node, "revision")
+//
+//    node = Dom.findNodeByXpath(doc, "identification/name")!!
+//    //node = Dom.findNodeByName(node, "name", false)!!
+//    val name = node.textContent
+//
+//    val moduleName = File(File(file.parent).parent).name.replace("%Text_", "")
+//    println(id + "\t" + moduleName + "\t" + revision + "\t" + name)
+//
+//
+//    val moduleName = File(File(file.parent).parent).name.replace("%Text_", "")
+//
+//    var selector = ""
+//    var node: Node? = null
+//
+//    if (null == node)
+//    {
+//      selector = "identification/abbreviationLocal"
+//      node = Dom.findNodeByXpath(doc, selector)
+//    }
+//
+//    if (null == node)
+//    {
+//      selector = "publications/publication/abbreviationLocal"
+//      Dom.findNodeByXpath(doc, selector)
+//    }
+//
+//    if (null == node)
+//    {
+//      selector = "identification/abbreviation"
+//      node = Dom.findNodeByXpath(doc, selector)
+//    }
+//
+//    var newAbbreviation = node!!.textContent.lowercase().capitalize()
+//    if (!isAscii((newAbbreviation)))
+//      newAbbreviation = Dom.findNodeByXpath(doc, "identification/abbreviation")!!.textContent.lowercase().capitalize()
+//
+//    newAbbreviation = removeNonAlphabetical(newAbbreviation)
+//
+//    node = Dom.findNodeByXpath(doc, "language/iso")!!
+//    val newName = node.textContent + "_" + newAbbreviation
+//
+//    if (moduleName != newName) println("ren %Text_$moduleName %Text_$newName & rem $selector")
+//    */
+//
+//  }
+//
+//
+//  /****************************************************************************/
+//  private fun processLicenceDetails (file: File, doHeader: Boolean)
+//  {
+//    val doc = Dom.getDocument(file.toString())
+//
+//    var node = Dom.findNodeByName(doc, "DBLMetadata")!!
+//    val licenseId = Dom.getAttribute(node, "id")
+//
+//    node = Dom.findNodeByName(doc, "dateLicense")!!
+//    val dateLicense = node.textContent
+//
+//    node = Dom.findNodeByName(doc, "dateLicenseExpiry")!!
+//    val dateLicenseExpiry = node.textContent
+//
+//    node = Dom.findNodeByName(doc, "publicationRights")!!
+//    val allowIntroductions = Dom.findNodeByName(node, "allowIntroductions", false)!!.textContent
+//    val allowFootnotes = Dom.findNodeByName(node, "allowFootnotes", false)!!.textContent
+//    val allowCrossReferences = Dom.findNodeByName(node, "allowCrossReferences", false)!!.textContent
+//    val allowExtendedNotes = Dom.findNodeByName(node, "allowCrossReferences", false)!!.textContent
+//
+//    val moduleName = File(File(file.parent).parent).name.replace("%Text_", "")
+//
+//    if (doHeader)
+//      println("ModuleName\tLicenceId\tDateLicensed\tDateLicenceExpiry\tAllowIntroductions\tAllowFootnotes\tAllowCrossReferences\tAllowExtendedNotes")
+//
+//    println("$moduleName\t$licenseId\t$dateLicense\t$dateLicenseExpiry\t$allowIntroductions\t$allowFootnotes\t$allowCrossReferences\t$allowExtendedNotes")
+//  }
+//
+//
+//
+//    /**************************************************************************/
+//    /* Old files. */
+//
+//   var firstTime = true
+///   getFiles("C:\\Users\\Jamie\\Desktop\\Step\\BiblicaDbl\\_Modules", listOf("license\\.xml".toRegex())).forEach {
+//       processLicenceDetails(it, firstTime)
+//      firstTime = false
+//    }// I used to output to a spreadsheet.  Just in case we ever want to do this again,
 // here are the details ...
 
 ///******************************************************************************/
@@ -611,11 +732,3 @@ fun runCommand (command: List<String>, errorFilePath: String? = null, workingDir
 //  val headers = parts.map { it.split("=")[0].trim() }
 //  return headers.joinToString("\t")
 //}
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                Public                                  **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/

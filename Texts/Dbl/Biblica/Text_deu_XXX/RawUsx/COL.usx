@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="COL" style="id">- Hoffnung für alle®</book>
+  <para style="rem">Copyright © 1983, 1996, 2002, 2015 by Biblica, Inc®</para>
+  <para style="h">Kolosser</para>
+  <para style="toc1">Der Brief von Paulus an die Christen in Kolossä</para>
+  <para style="toc2">Kolosser</para>
+  <para style="toc3">Kol</para>
+  <para style="mt1">Der Brief von Paulus an die Christen in Kolossä</para>
+  <para style="imt1">Inhaltsübersicht</para>
+  <para style="io1">Jesus – das Ebenbild Gottes und der Ursprung allen Lebens <char style="ior">Kapitel <ref loc="COL 1:1-23">1,1‒23</ref></char></para>
+  <para style="io1">Warnung vor falschen Lehren <char style="ior">Kapitel <ref loc="COL 1:24-2:23">1,24–2,23</ref></char></para>
+  <para style="io1">Anweisungen für ein Leben unter Gottes Herrschaft <char style="ior">Kapitel <ref loc="COL 3-4">3–4</ref></char></para>
+  <chapter number="1" style="c"/>
+  <para style="ms1">Jesus – das Ebenbild Gottes und der Ursprung allen Lebens</para>
+  <para style="mr">(Kapitel <ref loc="COL 1:1-23">1,1‒23</ref>)</para>
+  <para style="s1">Anschrift und Gruß</para>
+  <para style="m">
+    <verse number="1" style="v"/>Paulus, ein Apostel von Jesus Christus, durch Gott berufen, und sein Mitarbeiter Timotheus <verse number="2" style="v"/>schreiben diesen Brief an die Brüder und Schwestern in Kolossä, die durch den Glauben mit Jesus Christus verbunden sind und ganz zu Gott gehören. Wir wünschen euch Gnade und Frieden von Gott, unserem Vater.</para>
+  <para style="s1">Wir beten für euch</para>
+  <para style="m">
+    <verse number="3" style="v"/>Jedes Mal wenn wir für euch beten, danken wir Gott, dem Vater unseres Herrn Jesus Christus. <verse number="4" style="v"/>Wir haben von eurem Glauben an Jesus Christus gehört und davon, wie ihr allen Christen in Liebe verbunden seid. <verse number="5" style="v"/>Beides ist so reich bei euch vorhanden, weil ihr wisst, dass sich eure Hoffnung im Himmel erfüllen wird. Von dieser Hoffnung habt ihr gehört, als man euch das Wort der Wahrheit, die rettende Botschaft von Jesus Christus, verkündete.</para>
+  <para style="p">
+    <verse number="6" style="v"/>Diese Botschaft wird nicht nur bei euch, sondern auch in der ganzen Welt verbreitet. Immer mehr Menschen hören sie, nehmen sie an, und so trägt sie reiche Frucht. Auch bei euch ist es vom ersten Tag an so gewesen, als ihr erfahren habt, wie gnädig Gott ist. <verse number="7" style="v"/>Euch brachte unser lieber Mitarbeiter Epaphras diese rettende Botschaft. Wir wissen, dass er Christus dient und dass er euch ein treuer und guter Lehrer war. <verse number="8" style="v"/>Er hat uns auch davon berichtet, welche Liebe der Geist Gottes in euch geweckt hat.</para>
+  <para style="p">
+    <verse number="9" style="v"/>Deshalb haben wir seitdem nicht aufgehört, für euch zu beten. Wir bitten Gott, dass sein Geist euch mit Weisheit und Einsicht erfüllt und ihr auf diese Weise seinen Willen immer besser erkennt. <verse number="10" style="v"/>Dann nämlich könnt ihr so leben, dass der Herr dadurch geehrt wird und er sich in jeder Hinsicht über euch freut. Euer Leben wird für Gott Frucht bringen, indem ihr in vielerlei Weise Gutes tut. Ihr werdet ihn immer besser kennen lernen <verse number="11-12" style="v"/>und das ganze Ausmaß seiner herrlichen Kraft und Stärke erfahren, damit ihr geduldig und ausdauernd euren Weg gehen könnt.</para>
+  <para style="p">Ihr habt wirklich allen Grund, Gott, dem Vater, voll Freude dafür zu danken. Denn er hat euch zu seinen rechtmäßigen Erben gemacht. Zusammen mit allen, die zu ihm gehören, dürft ihr einmal bei ihm sein, in seinem Reich des Lichts. <verse number="13" style="v"/>Er hat uns aus der Gewalt der Finsternis befreit, und nun leben wir unter der Herrschaft seines geliebten Sohnes Jesus Christus. <verse number="14" style="v"/>Durch ihn sind wir erlöst, unsere Sünden sind vergeben.</para>
+  <para style="s1">Christus steht über der ganzen Schöpfung</para>
+  <para style="q1">
+    <verse number="15" style="v"/>Christus ist das Ebenbild des unsichtbaren Gottes.</para>
+  <para style="q1">Als sein Sohn steht er über der ganzen Schöpfung</para>
+  <para style="q1">und war selbst schon längst vor ihr da.<note caller="+" style="f"><char style="fr" closed="false">1,15 </char><char style="ft" closed="false">Wörtlich: Er ist der Erstgeborene (vor) der ganzen Schöpfung.</char></note></para>
+  <para style="q1">
+    <verse number="16" style="v"/>Durch ihn ist alles erschaffen,</para>
+  <para style="q1">was im Himmel und auf der Erde ist: Sichtbares und Unsichtbares,</para>
+  <para style="q1">Königreiche und Mächte, Herrscher und Gewalten.</para>
+  <para style="q1">Ja, alles ist durch ihn geschaffen und vollendet sich schließlich in ihm.</para>
+  <para style="q1">
+    <verse number="17" style="v"/>Denn Christus war vor allem anderen;</para>
+  <para style="q1">und alles hat nur durch ihn Bestand.</para>
+  <para style="q1">
+    <verse number="18" style="v"/>Er ist das Haupt der Gemeinde, die sein Leib ist.</para>
+  <para style="q1">Er ist der Ursprung allen Lebens<note caller="+" style="f"><char style="fr" closed="false">1,18 </char><char style="ft" closed="false">Oder: der Anfang der neuen Schöpfung.</char></note></para>
+  <para style="q1">
+    <char style="add">und zugleich</char> der Erste, der vom Tod zu einem unvergänglichen Leben auferstand.</para>
+  <para style="q1">So sollte er in jeder Hinsicht an erster Stelle stehen.</para>
+  <para style="q1">
+    <verse number="19" style="v"/>Denn Gott hat beschlossen, mit seiner ganzen Fülle in ihm zu wohnen</para>
+  <para style="q1">
+    <verse number="20" style="v"/>und alles im Himmel und auf der Erde</para>
+  <para style="q1">durch ihn mit sich zu versöhnen.</para>
+  <para style="q1">Ja, Gott hat Frieden gestiftet,</para>
+  <para style="q1">als Jesus am Kreuz sein Blut vergoss.</para>
+  <para style="b"/>
+  <para style="m">
+    <verse number="21" style="v"/>Auch ihr wusstet früher nicht, was es bedeutet, mit Gott zu leben; ihr wart seine Feinde durch alles Böse, das ihr gedacht und getan habt. <verse number="22" style="v"/>Doch indem Christus Mensch wurde und am Kreuz starb, hat Gott euch mit sich selbst versöhnt. Jetzt gehören wir zu Gott und stehen befreit von aller Sünde und Schuld vor ihm da. <verse number="23" style="v"/>Wichtig ist aber, dass ihr auch weiterhin fest und unerschütterlich in eurem Glauben bleibt. Lasst euch durch nichts davon abbringen! Keine Macht der Erde soll euch die Hoffnung rauben, die Gott euch durch seine rettende Botschaft geschenkt hat. Ihr habt sie gehört, und sie ist überall in der Welt verkündet worden. Mein ganzes Leben steht im Dienst dieser Botschaft. Sie will ich weitersagen.</para>
+  <para style="ms1">Warnung vor falschen Lehren</para>
+  <para style="mr">(Kapitel <ref loc="COL 1:24-2:23">1,24–2,23</ref>)</para>
+  <para style="s1">Paulus verkündet die Botschaft im Auftrag Gottes</para>
+  <para style="m">
+    <verse number="24" style="v"/>Was ich auch immer für euch erleiden muss, nehme ich gern auf mich; ich freue mich sogar darüber. Das Maß der Leiden, die ich für Christus auf mich nehmen muss, ist noch nicht voll. Und ich leide für seinen Leib, für seine Gemeinde. <verse number="25" style="v"/>Gott hat mir aufgetragen, seiner Gemeinde zu dienen und euch seine Botschaft ohne Abstriche zu verkünden. <verse number="26" style="v"/>Ihr habt erfahren, was von Anfang der Welt, ja, was der gesamten Menschheit vor euch verborgen war: ein Geheimnis, das jetzt allen Christen enthüllt worden ist. <verse number="27" style="v"/>Dabei geht es um ein unbegreifliches Wunder, das Gott für alle Menschen auf dieser Erde bereithält. Ihr, die ihr zu Gott gehört, dürft dieses Geheimnis verstehen. Es lautet: Christus lebt in euch! Und damit habt ihr die feste Hoffnung, dass Gott euch Anteil an seiner Herrlichkeit gibt.</para>
+  <para style="p">
+    <verse number="28" style="v"/>Diesen Christus verkünden wir. Mit aller Weisheit, die Gott mir gegeben hat, ermahne ich die Menschen und unterweise sie im Glauben, damit jeder Einzelne durch die Verbindung mit Christus reif und mündig wird. <verse number="29" style="v"/>Das ist das Ziel meiner Arbeit, dafür kämpfe ich, und dafür mühe ich mich ab. Christus, der mit seiner Macht in mir wirkt, schenkt mir die Kraft dazu.</para>
+  <chapter number="2" style="c"/>
+  <para style="m">
+    <verse number="1" style="v"/>Ihr sollt wissen, wie sehr ich um euch kämpfe, auch um die Gemeinde in Laodizea und um all die anderen, die mich persönlich noch gar nicht kennen. <verse number="2" style="v"/>Ja, ich setze mich dafür ein, dass Gott euch allen Mut und Kraft gibt und euch in seiner Liebe zusammenhält. Er schenke euch tiefes Verstehen, damit ihr die ganze Größe seines Geheimnisses erkennt. Dieses Geheimnis ist Christus. <verse number="3" style="v"/>In ihm sind alle Schätze der Weisheit und Erkenntnis verborgen.</para>
+  <para style="p">
+    <verse number="4" style="v"/>Ich sage das, damit ihr euch von niemandem durch wohlklingende Worte auf einen falschen Weg bringen lasst. <verse number="5" style="v"/>Zwar bin ich weit von euch entfernt, aber im Geist bin ich mit euch allen verbunden. Ich bin glücklich, wenn ich sehe, wie fest ihr zusammensteht und wie unerschütterlich ihr an Christus glaubt.</para>
+  <para style="s1">Bleibt mit Christus verbunden</para>
+  <para style="m">
+    <verse number="6" style="v"/>Ihr habt Jesus Christus als euren Herrn angenommen; nun lebt auch in der Gemeinschaft mit ihm. <verse number="7" style="v"/>Wie ein Baum in der Erde, so sollt ihr in Christus fest verwurzelt bleiben, und nur er soll das Fundament eures Lebens sein. Haltet fest an dem Glauben, den man euch lehrte. Für das, was Gott euch geschenkt hat, könnt ihr ihm gar nicht genug danken.</para>
+  <para style="p">
+    <verse number="8" style="v"/>Passt auf, dass ihr nicht auf Weltanschauungen und Hirngespinste hereinfallt. All das haben sich Menschen ausgedacht; aber hinter ihren Gedanken stehen dunkle Mächte und nicht Christus. <verse number="9" style="v"/>Nur in Christus ist Gott wirklich zu finden, denn in ihm lebt er in seiner ganzen Fülle.<note caller="+" style="f"><char style="fr" closed="false">2,9 </char><char style="ft" closed="false">Oder: Nur in Christus lebt Gott mit seiner ganzen Fülle leibhaftig.</char></note> <verse number="10" style="v"/>Deshalb lebt Gott auch in euch, wenn ihr mit Christus verbunden seid. Er ist der Herr über alle Mächte und Gewalten.</para>
+  <para style="p">
+    <verse number="11" style="v"/>Durch euren Glauben an Christus habt ihr euer altes, sündiges Leben aufgegeben. Nun seid auch ihr Beschnittene – nicht durch eine äußerliche Beschneidung, wie Menschen sie vornehmen, sondern durch die Beschneidung, wie ihr sie durch Christus erfahren habt. <verse number="12" style="v"/>Damit meine ich die Taufe, die euer altes Leben beendet hat; durch sie wurdet ihr mit Christus begraben. Ebenso seid ihr auch mit Christus zu einem neuen Leben auferweckt worden durch den Glauben an die Kraft Gottes, der ihn von den Toten auferstehen ließ. <verse number="13" style="v"/>Früher wart ihr gewissermaßen unbeschnitten, denn ihr habt euch von eurer sündigen Natur bestimmen lassen und wart durch eure Schuld von Gott getrennt. In seinen Augen wart ihr tot, aber er hat euch mit Christus lebendig gemacht und alle Schuld vergeben.</para>
+  <para style="p">
+    <verse number="14" style="v"/>Gott hat den Schuldschein, der uns mit seinen Forderungen so schwer belastete, für ungültig erklärt. Ja, er hat ihn zusammen mit Jesus ans Kreuz genagelt und somit auf ewig vernichtet. <verse number="15" style="v"/>Auf diese Weise wurden die Mächte und Gewalten entwaffnet und in ihrer Ohnmacht bloßgestellt, als Christus über sie am Kreuz triumphierte.</para>
+  <para style="s1">Freiheit durch Christus</para>
+  <para style="m">
+    <verse number="16" style="v"/>Darum lasst euch keine Vorschriften machen über eure Ess- und Trinkgewohnheiten oder bestimmte Feiertage, über den Neumondtag und über das, was man am Sabbat tun darf oder nicht. <verse number="17" style="v"/>Das alles sind nur schwache Abbilder, ein Schatten von dem, was in Christus Wirklichkeit geworden ist.</para>
+  <para style="p">
+    <verse number="18" style="v"/>Lasst eure Rettung deshalb von niemandem in Frage stellen. Schon gar nicht von solchen Leuten, die sich in falsch verstandener Demut gefallen, Engel zu verehren, und sich dabei stolz auf ihre Visionen berufen! Diese Menschen haben nicht den geringsten Grund, sich derart aufzuspielen. Sie drehen sich ja doch nur um sich selbst <verse number="19" style="v"/>und halten sich nicht mehr an Christus, der doch das Haupt der Gemeinde ist. Denn nur von ihm her kann die Gemeinde als sein Leib zusammengehalten werden und – gestützt durch die verschiedenen Gelenke und Bänder – so wachsen, wie Gott es will.</para>
+  <para style="p">
+    <verse number="20" style="v"/>Wenn ihr nun mit Christus gestorben seid, dann seid ihr auch von den Mächten und Zwängen dieser Welt befreit. Weshalb unterwerft ihr euch dann von neuem ihren Forderungen und lebt so, als wäre diese Welt für euch maßgebend? <verse number="21" style="v"/>Weshalb lasst ihr euch vorschreiben: »Du darfst dieses nicht anfassen, jenes nicht essen und musst dich von ganz bestimmten Dingen fernhalten«? <verse number="22" style="v"/>Sie alle sind doch dazu da, dass man sie für sich nutzt und verzehrt. Warum also lasst ihr euch noch Vorschriften von Menschen machen? <verse number="23" style="v"/>Möglich, dass manche, die danach leben, den Anschein von Weisheit erwecken. Schließlich glänzen sie mit ihrer selbst erdachten Frömmigkeit, geben sich dabei auch noch bescheiden und schonen bei asketischen Übungen ihren Körper nicht. Doch das alles bringt uns Gott nicht näher, sondern es dient ausschließlich menschlichem Ehrgeiz und menschlicher Eitelkeit.</para>
+  <chapter number="3" style="c"/>
+  <para style="ms1">Anweisungen für ein Leben unter Gottes Herrschaft</para>
+  <para style="mr">(Kapitel <ref loc="COL 3-4">3–4</ref>)</para>
+  <para style="m">
+    <verse number="1" style="v"/>Wenn ihr nun mit Christus zu einem neuen Leben auferweckt worden seid, dann richtet euch ganz auf Gottes himmlische Welt aus. Seht dahin, wo Christus ist, auf dem Ehrenplatz an Gottes rechter Seite. <verse number="2" style="v"/>Ja, richtet eure Gedanken auf Gottes himmlische Welt und nicht auf das, was diese irdische Welt ausmacht. <verse number="3" style="v"/>Denn für sie seid ihr gestorben, aber Gott hat euch mit Christus zu neuem Leben auferweckt, auch wenn das jetzt noch verborgen ist. <verse number="4" style="v"/>Doch wenn Christus, euer Leben, erscheinen wird, dann wird jeder sehen, dass ihr an seiner Herrlichkeit Anteil habt.</para>
+  <para style="s1">Wie Christen leben sollen</para>
+  <para style="m">
+    <verse number="5" style="v"/>Also trennt euch ganz entschieden von einem Lebensstil, wie er für diese Welt kennzeichnend ist! Trennt euch von sexueller Unmoral und Ausschweifungen, von Leidenschaften und Lastern, aber auch von der Habgier, die den Besitz für das Wichtigste hält und ihn zu ihrem Gott macht! <verse number="6" style="v"/>Gerade mit einem solchen Verhalten ziehen die Menschen, die Gott nicht gehorchen wollen, seinen Zorn auf sich.</para>
+  <para style="p">
+    <verse number="7" style="v"/>Auch ihr habt früher so gelebt und habt euch von diesen Dingen beherrschen lassen. <verse number="8" style="v"/>Aber jetzt ist es Zeit, das alles abzulegen. Lasst euch nicht mehr zum Zorn und zu Wutausbrüchen hinreißen. Schluss mit aller Bosheit! Redet nicht schlecht übereinander und beleidigt niemanden! <verse number="9" style="v"/>Hört auf, euch gegenseitig zu belügen. Ihr habt doch euer altes Leben mit allem, was dazugehörte, wie alte Kleider abgelegt. <verse number="10" style="v"/>Jetzt habt ihr neue Kleider an, denn ihr seid neue Menschen geworden. Gott ist beständig in euch am Werk, damit ihr immer mehr seinem Ebenbild entsprecht, nach dem er euch geschaffen hat. So habt ihr Gemeinschaft mit Gott und versteht immer besser, was ihm gefällt. <verse number="11" style="v"/>Dann ist unwichtig, ob einer Grieche oder Jude ist, beschnitten oder unbeschnitten, ob er aus einem anderen Kulturkreis oder aus einem Nomadenvolk stammt, ob er ein Sklave oder Herr ist. Wichtig ist einzig und allein Christus, der in allen lebt.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Ihr seid von Gott auserwählt und seine geliebten Kinder, die zu ihm gehören. Darum soll jetzt herzliches Mitgefühl euer Leben bestimmen, ebenso wie Güte, Bescheidenheit, Nachsicht und Geduld. <verse number="13" style="v"/>Ertragt einander und vergebt euch gegenseitig, wenn jemand euch Unrecht getan hat. Denn auch Christus hat euch vergeben. <verse number="14" style="v"/>Wichtiger als alles andere ist die Liebe. Wenn ihr sie habt, wird euch nichts fehlen. Sie ist das Band, das euch verbindet. <verse number="15" style="v"/>Und der Friede, den Christus schenkt, soll euer ganzes Leben bestimmen. Gott hat euch dazu berufen, in Frieden miteinander zu leben; ihr gehört ja alle zu dem einen Leib von Christus. Dankt Gott dafür!</para>
+  <para style="p">
+    <verse number="16" style="v"/>Lasst die Botschaft von Christus ihren ganzen Reichtum bei euch entfalten. Unterweist und ermahnt euch gegenseitig mit aller Weisheit und dankt Gott von ganzem Herzen mit Psalmen, Lobgesängen und Liedern, die euch Gottes Geist schenkt. Ihr habt doch Gottes Gnade erfahren! <verse number="17" style="v"/>All euer Tun – euer Reden wie euer Handeln – soll zeigen, dass Jesus euer Herr ist. Weil ihr mit ihm verbunden seid, könnt ihr Gott, dem Vater, für alles danken.</para>
+  <para style="s1">Das Zusammenleben in Ehe und Familie</para>
+  <para style="m">
+    <verse number="18" style="v"/>Ihr Frauen, ordnet euch euren Männern unter. So erwartet es Christus, der Herr, von euch, mit dem ihr verbunden seid. <verse number="19" style="v"/>Ihr Männer, liebt eure Frauen und kränkt sie nicht. <verse number="20" style="v"/>Ihr Kinder, seid euren Eltern in allen Dingen gehorsam; denn so ist es richtig, da ihr ja zum Herrn gehört. <verse number="21" style="v"/>Ihr Väter, behandelt eure Kinder nicht zu streng, damit sie nicht ängstlich und mutlos werden.</para>
+  <para style="s1">Der Umgang zwischen Sklaven und ihren Herren</para>
+  <para style="m">
+    <verse number="22" style="v"/>Ihr Sklaven, gehorcht in allem euren irdischen Herren! Tut dies nicht nur, wenn sie euch dabei beobachten und ihr von ihnen anerkannt werden wollt. Verrichtet eure Arbeit aufrichtig und in Ehrfurcht vor Christus, dem Herrn im Himmel. <verse number="23" style="v"/>Denkt bei allem daran, dass ihr letztlich für ihn und nicht für die Menschen arbeitet. <verse number="24" style="v"/>Als Lohn dafür wird er euch das Erbe geben, das er versprochen hat. Das wisst ihr ja. Denn Jesus Christus ist euer wahrer Herr! <verse number="25" style="v"/>Wer allerdings Unrecht tut, wird auch dafür den entsprechenden Lohn bekommen. Gott beurteilt alle Menschen gleich, egal welches Ansehen sie genießen.</para>
+  <chapter number="4" style="c"/>
+  <para style="m">
+    <verse number="1" style="v"/>Ihr Herren, behandelt eure Sklaven gerecht und anständig. Denkt immer daran, dass auch ihr einen Herrn im Himmel habt, dem ihr untersteht.</para>
+  <para style="s1">Für andere leben</para>
+  <para style="m">
+    <verse number="2" style="v"/>Lasst euch durch nichts vom Gebet abbringen und vergesst dabei nicht, Gott zu danken. <verse number="3" style="v"/>Betet auch für uns, damit Gott uns eine Möglichkeit gibt, sein Geheimnis zu verkünden: die Botschaft von Christus, für die ich hier im Gefängnis sitze. <verse number="4" style="v"/>Und betet, dass ich darüber frei und offen reden kann, wie Gott es mir aufgetragen hat.</para>
+  <para style="p">
+    <verse number="5" style="v"/>Verhaltet euch weise und besonnen denen gegenüber, die keine Christen sind. Macht das Beste aus der Zeit, die euch geschenkt ist! <verse number="6" style="v"/>Redet mit jedem Menschen freundlich; alles, was ihr sagt, soll gut und hilfreich sein<note caller="+" style="f"><char style="fr" closed="false">4,6 </char><char style="ft" closed="false">Wörtlich: mit Salz gewürzt sein.</char></note>. Bemüht euch darum, für jeden die richtigen Worte zu finden.</para>
+  <para style="s1">Persönliche Grüße und Wünsche</para>
+  <para style="m">
+    <verse number="7" style="v"/>Unser lieber Bruder Tychikus wird euch ausführlich berichten, wie es mir geht. Er ist mein treuer Mitarbeiter und dient dem Herrn. <verse number="8" style="v"/>Ich schicke ihn eben deshalb zu euch, damit ihr erfahrt, wie es um uns steht. Er soll euch ermutigen. <verse number="9" style="v"/>Mit ihm zusammen schicke ich Onesimus, der ja zu euch gehört. Auch ihn schätze ich als treuen und lieben Bruder. Beide werden euch alles erzählen, was hier geschehen ist.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Aristarch, der zusammen mit mir im Gefängnis ist, lässt euch grüßen, ebenso Markus, der Vetter von Barnabas. Seinetwegen hatte ich euch ja schon geschrieben. Ich bitte euch noch einmal, ihn freundlich aufzunehmen, wenn er zu euch kommt. <verse number="11" style="v"/>Auch Jesus Justus schickt euch seine Grüße. Diese drei Männer sind die einzigen Christen jüdischer Herkunft, die sich mit mir für Gottes Reich einsetzen. Sie sind mir Trost und Hilfe zugleich.</para>
+  <para style="p">
+    <verse number="12" style="v"/>Epaphras, der zu euch gehört, grüßt euch ebenfalls sehr herzlich. Er dient Jesus Christus und lässt nicht nach, im Gebet für euch zu kämpfen. Inständig bittet er Gott darum, dass ihr reife Christen werdet und bereit, in allen Dingen Gottes Willen zu erfüllen. <verse number="13" style="v"/>Ich kann bezeugen, wie viel Mühe er auf sich nimmt für euch, für die Christen in Laodizea und die in Hierapolis. <verse number="14" style="v"/>Freundliche Grüße auch von dem Arzt Lukas, den wir alle sehr schätzen, und von Demas. <verse number="15" style="v"/>Grüßt alle Christen in Laodizea von mir, vor allem Nympha und die Gemeinde, die sich in ihrem Haus versammelt.</para>
+  <para style="p">
+    <verse number="16" style="v"/>Wenn ihr diesen Brief bei euch vorgelesen habt, dann gebt ihn an die Gemeinde in Laodizea weiter. Lest auch den Brief, den ich dorthin geschrieben habe. <verse number="17" style="v"/>Und sagt Archippus: Erfüll den Dienst, den dir der Herr gegeben hat, treu und gewissenhaft!</para>
+  <para style="p">
+    <verse number="18" style="v"/>Und hier noch mein persönlicher Gruß an euch; ich, Paulus, schreibe ihn mit eigener Hand. Denkt <char style="add">in euren Gebeten</char> daran, dass ich im Gefängnis bin!</para>
+  <para style="p">Gottes Gnade sei mit euch!</para>
+</usx>

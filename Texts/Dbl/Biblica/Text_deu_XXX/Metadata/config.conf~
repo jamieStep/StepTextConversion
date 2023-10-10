@@ -1,0 +1,3 @@
+stepSoftwareVersionRequired#=2
+stepValidationReportOutOfOrderAsError#=n #! This text legitimately has verses in the wrong order.
+$include $root/../_Metadata_/biblicaCommonConfig.conf

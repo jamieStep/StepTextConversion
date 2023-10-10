@@ -441,6 +441,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
         correctCommonUsxIssues()                           // a) Change usx tag to _X_usx, book to _X_book, and turn the latter into an enclosing tag.
         canonicaliseRootAndBook()                          // a) Change usx tag to _X_usx, book to _X_book, and turn the latter into an enclosing tag.
         canonicaliseChapterAndVerseStarts(); x()           // a) Make sure we have sids (rather than numbers); that there are no verse-ends (we deal with those ourselves) and that chapters are enclosing tags.
+        correctNoteStyles()                                // a) Mainly for Biblica.  Biblica seem to have used note:f where they mean note:x.
         handleStrongs()                                    // a) Iron out any idiosyncrasies in Strong's representations.
         forceCallouts()                                    // a) Override any translator-supplied callouts and use our own standard form.
         convertTagsToLevelOneWhereAppropriate()            // a) Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
@@ -848,6 +849,41 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
 
 
     /******************************************************************************************************************/
+    /* This probably ought to be handled outside of here, since we have discovered this to be an issue only with
+       Biblica texts, whereas this processing is really intended to be relevant to _all_ texts.  But it's easier to do
+       it here, and at the time of writing it seems that most Biblica texts are affected, and there are a lot of them.
+
+       So anyway, many Biblica texts contain cross-references.  Cross-reference information ought to appear within
+       note:x tags, but Biblica seem to have marked them up using note:f, so I need to change things.  The processing
+       here does assume that the texts aren't messed up beyond that: I assume that every note:f contains _either_ just
+       explanatory text (in which case I can leave well alone) or else just cross-reference-related tags (in which
+       case I need to change to note:x.  Unfortunately it's not easy to check this, so I just have to assume it to be
+       the case.
+
+       The test below looks for char:xt, char:xot and char:xnt as being indicative of what should be a note:x.  Note
+       that I _don't_ look for <ref> tags.  This may be seen as a significant drop-off, but I think <ref> tags may
+       legitimately appear within explanatory footnotes, and I don't want to turn pukka explanatory notes into
+       notes.
+
+       Note also that there are other tags -- note:f / note:ef and note:/fe are all involved with plain vanilla
+       footnotes, and note:x / note:ex with cross-references.  Unfortunately I can't work out from the USX
+       documentation what the more esoteric types do, so I'm burying my head in the sand and assuming that if I ignore
+       them, there won't actually be any. */
+
+    private fun correctNoteStyles ()
+    {
+      Dom.findNodesByAttributeValue(m_Document, "note", "style", "f").forEach {
+        val charNodes = Dom.findNodesByName(it, "char", false)
+        if (null != charNodes.find { Dom.getAttribute(it, "style")!! in "xt,xot,xnt" })
+        {
+          Dom.setAttribute(it, "style", "x")
+          Dom.setAttribute(it, "_X_change", "Style was 'f' but contains cross-reference details.")
+        }
+      }
+    }
+
+
+    /******************************************************************************************************************/
     /* To simplify later processing, it is convenient to collect headings together into encapsulating nodes.  The aim
        here is to enclose headers into <_X_headingBlock style='...'/>" style is preVerse or inVerse.  At this stage,
        all I want is the encapsulation: I'll worry about the attributes later. */
@@ -1018,6 +1054,11 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     private fun expandElision (sid: Node, eid: Node)
     {
       /****************************************************************************************************************/
+      if (!XXXOsis2ModInterface.C_ExpandElisions) return // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ This has downstream ramifications -- it looks as though quite a number of things may need changing, but I need to hear from Sami what he requires.
+
+
+
+      /****************************************************************************************************************/
       //Dbg.d("+++++++++++")
       //Dbg.d(sid)
       //Dbg.d(nextSid)
@@ -1049,7 +1090,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
       /* Generate empty verse markers for the additional verses, all of which are inserted _before_ the actual verse
          which we're carrying over. */
 
-      for (i in 0 until n - 1)
+      for (i in 0..< n - 1)
       {
          val refAsString = Ref.rd(refKeys[i]).toString()
          val nodePair = EmptyVerseHandler.createEmptyVerseForElision(sid, refAsString) ?: continue

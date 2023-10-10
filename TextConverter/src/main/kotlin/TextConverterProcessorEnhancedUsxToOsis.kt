@@ -529,7 +529,7 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
     m_Document = document
     reportBookBeingProcessed(m_Document)
     Logger.setPrefix("TextConverterProcessorUsxToOsis (" + StepFileUtils.getFileName(inputFilePath).split(".")[0] + "): ")
-    if (C_ConfigurationFlag_CollapseSubverses) collapseSubverses()
+    if (XXXOsis2ModInterface.C_CollapseSubverses) collapseSubverses()
     convertVerseNodesToNewFormat()
     deleteVerseMarkersEmbeddedWithinCanonicalHeadings()
     processNode(m_Document.documentElement)

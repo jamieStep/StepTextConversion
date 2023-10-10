@@ -112,8 +112,11 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
     Logger.setLogFile(StandardFileLocations.getConverterLogFilePath())
 
-    val programName = if (XXXOsis2ModInterface.usingCrosswireOsis2Mod()) "osis2mod.exe" else "samisOsis2Mod.exe"
-    val workingDirectoryName = if (XXXOsis2ModInterface.usingCrosswireOsis2Mod()) "C:\\Program Files\\Jamie\\STEP\\SwordUtilities" else "C:\\Program Files\\Jamie\\STEP\\SamiOsis2mod"
+    val programName =
+      if (XXXOsis2ModInterface.usingCrosswireOsis2Mod())
+        "\"C:\\Program Files\\Jamie\\STEP\\SwordUtilities\\osis2mod.exe\""
+      else
+        "\"C:\\Program Files\\Jamie\\STEP\\SamiOsis2mod\\samisOsis2Mod.exe\""
 
     val swordExternalConversionCommand: MutableList<String> = ArrayList()
     swordExternalConversionCommand.add(programName)
@@ -142,7 +145,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
     generateChangesFile()
     Dbg.reportProgress("")
-    runCommand("Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = StandardFileLocations.getOsisToModLogFilePath(), workingDirectory = workingDirectoryName)
+    runCommand("Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = StandardFileLocations.getOsisToModLogFilePath())
     ChangeHistoryHandler.process()
     getFileSizeIndicator()
     generateConfigFile()
@@ -410,7 +413,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
   private fun createZip()
   {
     val zipPath: String = StandardFileLocations.getSwordZipFilePath(m_ModuleName)
-    val inputs = mutableListOf(StandardFileLocations.getSwordConfigFolderPath(), StandardFileLocations.getSwordTextFolderPath(m_ModuleName))
+    val inputs = mutableListOf(StandardFileLocations.getSwordConfigFolderPath(), StandardFileLocations.getSwordTextFolderPath(m_ModuleName), StandardFileLocations.getTextFeaturesFolderPath())
     if (ConfigData.getAsBoolean("stepEncryptionRequired")) inputs.add(StandardFileLocations.getEncryptionDataRootFolder())
     Zip.createZipFile(zipPath, 9, StandardFileLocations.getSwordRootFolderPath(), inputs)
   }

@@ -142,7 +142,7 @@ object Logger
 
   @Synchronized fun error (refKey: Long, text: String)
   {
-    if (TestController.suppressErrors())
+    if (TestController.activeController().suppressErrors())
     {
       warning(refKey,"!!!!!!!!!!!!!! Error converted to warning while testing: $text")
       return
@@ -290,11 +290,12 @@ object Logger
 
 
     /**************************************************************************/
-    var content = ""
-    fun convertToDisplayableForm(refKey: Long)
+    val content: MutableList<String> = mutableListOf()
+    fun convertToDisplayableForm (refKey: Long)
     {
-      val prefix = msgType + (if (0L == refKey) "" else ": " + Ref.rd(refKey).toString()) + ": "
-      (messageContainer[refKey]?.distinct()?.map { prefix + it })?.forEach { content += it + "\n" }
+      var refPart = ""; if (refKey > 0L) refPart = Ref.rd(refKey).toString() + ": "
+      val prefix = "$msgType: $refPart"
+      (messageContainer[refKey]?.distinct()?.map { prefix + it })?.forEach { content.add(it) }
     }
     
 
@@ -306,8 +307,13 @@ object Logger
 
     val fileAlreadyExists = (File(m_LogFilePath)).exists()
     if (!fileAlreadyExists) File(m_LogFilePath).appendText(File(m_LogFilePath).parent + "\n\n")
-    messageContainer.forEach{ convertToDisplayableForm(it.key) }
-    outputter(content)
+    messageContainer.forEach { convertToDisplayableForm(it.key) }
+    val filteredContent = content.filter { it !in m_MessageDeduplicator }
+    if (filteredContent.isNotEmpty())
+    {
+      filteredContent.forEach { m_MessageDeduplicator.add(it); outputter("$it\n") }
+      outputter("\n")
+    }
   }
   
   
@@ -363,6 +369,8 @@ object Logger
   private var m_ErrorCount   = 0
   private var m_InfoCount    = 0
   private var m_WarningCount = 0
+
+  private val m_MessageDeduplicator = TreeSet(String.CASE_INSENSITIVE_ORDER)
 
   private var m_LogFilePath: String = ""
   private val m_Prefix: Stack<String>  = Stack()

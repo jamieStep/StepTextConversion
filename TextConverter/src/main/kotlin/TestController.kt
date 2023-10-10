@@ -64,10 +64,23 @@ object TestController: TestControllerBase()
   override fun initialise () { } // Deliberately left blank.
   override fun makeTestRelatedDataForUseInConfigAbout () { m_TestController.makeTestRelatedDataForUseInConfigAbout() }
 
-  private var m_TestController = TestControllerBase() // TestControllerBase is a null implementation, so unless this is overridden in the init block, the TestController does nothing.
+  fun activeController (): TestControllerBase { return m_TestController }
+
+  private var m_TestController: TestControllerBase
   init
   {
-    //m_TestController = SamiTestController // ++++++++++++ Change as per the kind of test to be applied, or comment out if not performing tests.
+    var forcedOsis2ModVariant = ConfigData["stepForcedOsis2ModVariant"]
+    if (null == forcedOsis2ModVariant) forcedOsis2ModVariant = "step"
+    forcedOsis2ModVariant = forcedOsis2ModVariant.lowercase()
+
+    m_TestController = when (forcedOsis2ModVariant)
+    {
+      "step" -> TestControllerSami
+      "crosswirerelaxed" -> TestControllerCrosswireRelaxed
+      else -> TestControllerBase()
+    }
+
+
     m_TestController.initialise()
   }
 }
@@ -83,7 +96,7 @@ object TestController: TestControllerBase()
 /**                                                                          **/
 /******************************************************************************/
 /******************************************************************************/
-open class TestControllerBase
+open class TestControllerBase // Base class serves to support the Crosswire osis2mod.  Inheriting classes tailor this to other versions.
 {
   /*****************************************************************************/
   private var m_UniquePrefix = ""
@@ -116,8 +129,9 @@ open class TestControllerBase
    */
   open fun initialise ()
   {
-    ConfigData.put("stepOsis2ModVariant", "Crosswire", true)
+    XXXOsis2ModInterface.setOsis2ModVariant(XXXOsis2ModInterface.Osis2ModVariant.CROSSWIRE)
   }
+
 
 
   /*****************************************************************************/
@@ -129,12 +143,12 @@ open class TestControllerBase
    */
   fun getModuleNamePrefix (): String
   {
-    if (getTestName().isEmpty())
-      return ""
+    return if (getTestName().isEmpty())
+      ""
     else
     {
       if (m_UniquePrefix.isEmpty()) m_UniquePrefix = getTestName() + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
-      return m_UniquePrefix
+      m_UniquePrefix
     }
   }
 
@@ -145,7 +159,7 @@ open class TestControllerBase
    * Sets ConfigData stepAboutTestSupport in order to add test-related data to
    * the end of the Sword About information.
    */
-  open fun makeTestRelatedDataForUseInConfigAbout (){ }
+  open fun makeTestRelatedDataForUseInConfigAbout () { }
 
 
 
@@ -159,9 +173,57 @@ open class TestControllerBase
    * @return True if errors are to be converted to warnings.
    */
 
-   fun suppressErrors (): Boolean
+   open fun suppressErrors (): Boolean
    {
      return false
+   }
+}
+
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/**                                                                          **/
+/**                            Relaxed Crosswire                             **/
+/**                                                                          **/
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+/* This is basically a Crosswire run, but with most / all errors converted to
+   warnings so they don't prevent us from generating a module. */
+
+object TestControllerCrosswireRelaxed: TestControllerBase()
+{
+  /*****************************************************************************/
+  /**
+   * Returns a name by which all of these tests can be identified.  This is used
+   * at the front of file-name prefixes, so that related files can be grouped
+   * together.
+   *
+   * @return Name
+   */
+  override fun getTestName (): String
+  {
+    return "CWR"
+  }
+
+
+  /*****************************************************************************/
+  /**
+   * If this returns True, errors are converted to warnings.  This permits runs
+   * to complete even if errors are detected.  (Except, of course, that
+   * errors which are not acted upon may well mean that later processing goes
+   * wrong.)
+   *
+   * @return True if errors are to be converted to warnings.
+   */
+
+   override fun suppressErrors (): Boolean
+   {
+     return true
    }
 }
 
@@ -176,7 +238,7 @@ open class TestControllerBase
 /**                                                                          **/
 /******************************************************************************/
 /******************************************************************************/
-object SamiTestController: TestControllerBase()
+object TestControllerSami: TestControllerBase()
 {
   /*****************************************************************************/
   /**
@@ -209,7 +271,7 @@ object SamiTestController: TestControllerBase()
   */
   override fun initialise ()
   {
-    ConfigData.put("stepOsis2ModVariant", "Step", true)
+    XXXOsis2ModInterface.setOsis2ModVariant(XXXOsis2ModInterface.Osis2ModVariant.STEP)
     makeGithubUrls()
     makeTestRelatedDataForUseInConfigAbout()
   }

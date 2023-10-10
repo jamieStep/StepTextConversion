@@ -10,15 +10,6 @@ package org.stepbible.textconverter
 
 
 /****************************************************************************/
-/** Determines whether subverses remain in the output as such, or whether we
- *  concatenate the content of all the subverses of a given verse and turn
- *  the result into the owning verse.
- */
-
-const val C_ConfigurationFlag_CollapseSubverses = true
-
-
-/****************************************************************************/
 /** Controls whether or not we bother with USX validation prior to
 *   generating OSIS.
 */
@@ -51,6 +42,18 @@ const val C_ConfigurationFlags_ReversificationThresholdMarkingAFairAmountOfWork 
 *   we always need to generate empty verses to fill the gaps.  This is not
 *   necessarily the case at the end of chapters, though -- we may be happy
 *   for chapters to finish prematurely.
+*
+*   This was added in Sept 2023 because DIB felt it inappropriate to
+*   generate empty verses, and indeed has put forward a good rationale for
+*   not doing so.  However, subsequent experience indicated that when using
+*   the Crosswire version of osis2mod and JSword, missing verses were
+*   fabricated anyway, and I therefore felt it better to generate them
+*   myself, since this gives us the chance to explain why the empty verse
+*   is there.  I therefore changed the setting below to false.
+*
+*   Note that if we end up going with Sami's revised osis2mod and JSword,
+*   this ceases to be an issue anyway, because we never generate empty
+*   verses there.
 */
 
-const val C_ConfigurationFlags_GenerateVersesAtEndsOfChapters = false
+const val C_ConfigurationFlags_GenerateVersesAtEndsOfChapters = true

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usx version="2.6">
+  <book code="PHM" style="id">- Hoffnung für alle®</book>
+  <para style="rem">Copyright © 1983, 1996, 2002, 2015 by Biblica, Inc®</para>
+  <para style="h">Philemon</para>
+  <para style="toc1">Der Brief von Paulus an Philemon</para>
+  <para style="toc2">Philemon</para>
+  <para style="toc3">Phlm</para>
+  <para style="mt1">Der Brief von Paulus an Philemon</para>
+  <para style="imt1">Inhaltsübersicht</para>
+  <para style="io1">Fürsprache für einen geflohenen Sklaven <char style="ior">Kapitel <ref loc="PHM 1:1">1</ref></char></para>
+  <chapter number="1" style="c"/>
+  <para style="ms1">Fürsprache für einen geflohenen Sklaven</para>
+  <para style="mr">(Kapitel <ref loc="PHM 1:1">1</ref>)</para>
+  <para style="s1">Anschrift und Gruß</para>
+  <para style="m">
+    <verse number="1" style="v"/>Paulus, der im Gefängnis ist, weil er die rettende Botschaft von Jesus Christus verkündet, und der Bruder Timotheus schreiben diesen Brief an ihren lieben Freund und Mitarbeiter Philemon, <verse number="2" style="v"/>an unsere Schwester Aphia, an Archippus, der sich wie wir mit aller Kraft für die rettende Botschaft einsetzt, und an alle anderen Christen, die sich in Philemons Haus versammeln. <verse number="3" style="v"/>Wir wünschen euch Gnade und Frieden von Gott, unserem Vater, und von Jesus Christus, unserem Herrn.</para>
+  <para style="s1">Ein Glaube, der ermutigt</para>
+  <para style="m">
+    <verse number="4" style="v"/>Lieber Philemon! Ich danke meinem Gott immer wieder, wenn ich im Gebet an dich denke. <verse number="5" style="v"/>Denn ich habe von deinem Glauben an unseren Herrn Jesus gehört und davon, wie du allen Christen in Liebe verbunden bist. <verse number="6" style="v"/>Ich bete, dass unser gemeinsamer Glaube in dir weiter wächst und du immer mehr erkennst, wie reich uns Jesus Christus beschenkt hat. <verse number="7" style="v"/>Durch die Liebe, die du anderen erwiesen hast, habe auch ich viel Freude und Ermutigung erfahren, denn ich weiß, wie oft du, lieber Bruder, andere Christen in ihrem Glauben gestärkt hast.</para>
+  <para style="s1">Ein Sklave wird zum Bruder und Freund</para>
+  <para style="m">
+    <verse number="8" style="v"/>Aus diesem Grund möchte ich dich jetzt um etwas bitten, was ich als Apostel von Jesus Christus auch mit gutem Recht von dir verlangen könnte. <verse number="9" style="v"/>Doch um der Liebe willen möchte ich dir nichts befehlen, sondern dich schlicht und einfach bitten als ein alter Mann, den man jetzt auch noch ins Gefängnis geworfen hat, weil er die rettende Botschaft von Jesus Christus verkündet.</para>
+  <para style="p">
+    <verse number="10" style="v"/>Es geht um deinen Sklaven Onesimus, der hier durch mich zum Glauben an Christus gefunden hat und für mich deswegen wie ein Sohn geworden ist. <verse number="11" style="v"/>Möglich, dass er früher <char style="add">seinem Namen keine Ehre gemacht hat</char><note caller="+" style="f"><char style="fr" closed="false">1,11 </char><char style="ft" closed="false">Onesimus bedeutet »der Nützliche«.</char></note> <char style="add">und</char> für dich nicht besonders nützlich war. Aber wie viel Nutzen kann er nun dir und mir bringen!</para>
+  <para style="p">
+    <verse number="12" style="v"/>Ich schicke ihn jetzt zu dir zurück und mit ihm mein eigenes Herz. <verse number="13" style="v"/>Wie gern hätte ich ihn noch bei mir behalten, solange ich für die rettende Botschaft im Gefängnis sein muss. Er hätte mir helfen können, so wie du selbst es tun würdest. <verse number="14" style="v"/>Aber ich wollte ihn nicht ohne deine Einwilligung hierbehalten. Denn eine gute Tat sollte nicht erzwungen sein, sondern freiwillig geschehen.</para>
+  <para style="p">
+    <verse number="15" style="v"/>Vielleicht ist dir Onesimus nur deshalb für eine kurze Zeit genommen worden, damit du ihn für immer zurückerhältst. <verse number="16" style="v"/>Er kommt jetzt nämlich nicht nur als dein Sklave wieder, du wirst viel mehr an ihm haben: einen geliebten Bruder. Das ist er schon für mich gewesen. Wie viel mehr wird er es für dich sein; er gehört ja zu dir – als Mensch und nun auch als Christ.</para>
+  <para style="p">
+    <verse number="17" style="v"/>Wenn ich also dein Freund und Bruder bin, dann nimm Onesimus auf, als würde ich selbst zu dir kommen. <verse number="18" style="v"/>Sollte dir durch seine Flucht irgendein Schaden entstanden sein, oder sollte er dir etwas schulden, dann stell es mir in Rechnung. <verse number="19" style="v"/>Ich werde es bezahlen. Dafür bürge ich hier mit meiner Unterschrift. Was du mir allerdings schuldest, weil du durch mich zum Glauben an Jesus Christus gefunden hast, davon will ich hier gar nicht reden.<note caller="+" style="f"><char style="fr" closed="false">1,19 </char><char style="ft" closed="false">Wörtlich: Ich, Paulus, schreibe es mit eigener Hand: Ich werde es bezahlen – um dir nicht zu sagen, dass du mir dich selbst schuldest.</char></note> <verse number="20" style="v"/>Philemon, mein lieber Bruder! Bereite mir doch diese Freude und erfülle meine Bitte, weil wir beide an den Herrn glauben und durch Jesus Christus verbunden sind.</para>
+  <para style="p">
+    <verse number="21" style="v"/>Ich schreibe dir im Vertrauen darauf, dass du dich nach mir richten wirst. Ja, ich bin sicher, du wirst noch mehr tun, als ich von dir erbitte.</para>
+  <para style="p">
+    <verse number="22" style="v"/>Einen Wunsch hätte ich außerdem noch: Halte bitte eine Unterkunft für mich bereit. Denn ich rechne damit, dass Gott eure Gebete erhört und uns ein Wiedersehen schenkt.</para>
+  <para style="s1">Herzliche Grüße</para>
+  <para style="m">
+    <verse number="23" style="v"/>Epaphras lässt dich herzlich grüßen. Er ist mit mir für Jesus Christus im Gefängnis. <verse number="24" style="v"/>Herzliche Grüße auch von meinen Mitarbeitern Markus, Aristarch, Demas und Lukas.</para>
+  <para style="p">
+    <verse number="25" style="v"/>Die Gnade unseres Herrn Jesus Christus sei mit euch!</para>
+</usx>

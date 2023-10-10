@@ -798,39 +798,56 @@ object BibleStructureTextUnderConstruction: BibleStructure("underconstruction")
    private fun makeRefKeyRange (node: Node, currentRef: String): Pair<RefKey, RefKey>
    {
        /*************************************************************************/
-       if (Dom.hasAttribute(node, "sid"))
-       {
-           val sid = Dom.getAttribute(node, "sid")!!
-           val refRange = RefRange.rdUsx(sid)
-           if (refRange.getLowAsRef().hasS()) // If we have a subverse, assume it can't be an elision, and we can just take this as-is.
-               return Pair(refRange.getLowAsRefKey(), refRange.getLowAsRefKey())
+       //Dbg.d(currentRef, "ZEC 4:9-10a")
 
-           val verseHigh = refRange.getHighAsRef().getV()
-           val lowRefKey = refRange.getLowAsRefKey()
-           return Pair(lowRefKey, Ref.setV(lowRefKey, verseHigh))
-       }
+
+
+//       /*************************************************************************/
+//       if (Dom.hasAttribute(node, "sid"))
+//       {
+//           val sid = Dom.getAttribute(node, "sid")!!
+//           val refRange = RefRange.rdUsx(sid)
+//           if (refRange.getLowAsRef().hasS()) // If we have a subverse, assume it can't be an elision, and we can just take this as-is.
+//               return Pair(refRange.getLowAsRefKey(), refRange.getLowAsRefKey())
+//
+//           val verseHigh = refRange.getHighAsRef().getV()
+//           val lowRefKey = refRange.getLowAsRefKey()
+//           return Pair(lowRefKey, Ref.setV(lowRefKey, verseHigh))
+//       }
 
 
 
        /*************************************************************************/
-       /* Not sid, so it must be a number. */
+       val sid =
+         if (Dom.hasAttribute(node, "sid"))
+           Dom.getAttribute(node, "sid")!!
+         else
+           currentRef.split(":")[0] + ":" + Dom.getAttribute(node, "number")!!
 
-       val number = Dom.getAttribute(node, "number")!!
-       if (number.matches(Regex(".*[a-z]+"))) // If we have a subverse, assume it can't be an elision, and we can just take this as-is.
-       {
-           val currentRefPart = currentRef.split(":")[0] + ":" + number
-           val refKey = Ref.rdUsx(currentRefPart).toRefKey()
-           return Pair(refKey, refKey)
-       }
+       val refRange = RefRange.rdUsx(sid)
+       return Pair(refRange.getLowAsRefKey(), refRange.getHighAsRefKey())
 
-       val x = number.split("-")
-       val verseLow = x[0].toInt()
-       val verseHigh = if (1 == x.size) verseLow else x[1].toInt()
-       val refLow = currentRef.split(":")[0] + ":" + verseLow
-       val refKeyLow = Ref.rdUsx(refLow).toRefKey()
-       val refHigh = currentRef.split(":")[0] + ":" + verseHigh
-       val refKeyHigh = Ref.rdUsx(refHigh).toRefKey()
-       return Pair(refKeyLow, refKeyHigh)
+
+
+//       /*************************************************************************/
+//       /* Not sid, so it must be a number. */
+//
+//       val number = Dom.getAttribute(node, "number")!!
+//       if (number.matches(Regex(".*[a-z]+"))) // If we have a subverse, assume it can't be an elision, and we can just take this as-is.
+//       {
+//           val currentRefPart = currentRef.split(":")[0] + ":" + number
+//           val refKey = Ref.rdUsx(currentRefPart).toRefKey()
+//           return Pair(refKey, refKey)
+//       }
+//
+//       val x = number.split("-")
+//       val verseLow = x[0].toInt()
+//       val verseHigh = if (1 == x.size) verseLow else x[1].toInt()
+//       val refLow = currentRef.split(":")[0] + ":" + verseLow
+//       val refKeyLow = Ref.rdUsx(refLow).toRefKey()
+//       val refHigh = currentRef.split(":")[0] + ":" + verseHigh
+//       val refKeyHigh = Ref.rdUsx(refHigh).toRefKey()
+//       return Pair(refKeyLow, refKeyHigh)
     }
 
 

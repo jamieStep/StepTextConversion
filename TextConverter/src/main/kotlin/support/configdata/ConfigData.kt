@@ -904,7 +904,7 @@ object ConfigData
      private fun expandReferences1 (theValue: String?, errorStack: Stack<String>, level: Int): String?
      {
          /**********************************************************************/
-         //Dbg.dCont(theValue!!, "todate")
+         //Dbg.dCont(theValue!!, "stepBiblicaDefaultAboutDerivedFromMetadata")
 
 
 
@@ -1077,7 +1077,7 @@ object ConfigData
             {
               var moduleName = getInternal("stepModuleNameWithoutSuffix", false)
               if (getAsBoolean("stepHasAddedValue") && getAsBoolean("stepDecorateModuleNamesWhereStepHasAddedValue", "No")) moduleName += "_"
-              moduleName = TestController.getModuleNamePrefix() + moduleName
+              moduleName = TestController.activeController().getModuleNamePrefix() + moduleName
               return moduleName
             }
 
