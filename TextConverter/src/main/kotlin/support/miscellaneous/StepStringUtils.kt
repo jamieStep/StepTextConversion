@@ -49,6 +49,32 @@ object StepStringUtils
 
   /****************************************************************************/
   /**
+   * Marks balanced parens.  (  (   )  ) becomes (.001.  (.002.   .002.)  .001.)
+   *
+   * @param text Text to be marked up.
+   *
+   * @return Modified string.
+   */
+
+  fun markBalancedParens (text: String): String
+  {
+    val C_Pat = "(?<char>[()])".toRegex()
+    var level = 0
+
+    val res = C_Pat.replace(text) {
+      val bracket = it.groups["char"]!!.value
+      if ("(" == bracket)
+        "(." + String.format("%03d", ++level) + "."
+      else
+        "." + String.format("%03d", level--) + ".)"
+    }
+
+    return res
+  }
+
+
+  /****************************************************************************/
+  /**
   * Replaces all matches for a given regular expression by something based upon
   * the matched value.  A sample call might look like:
   *
@@ -140,5 +166,20 @@ object StepStringUtils
   fun sentenceCaseFirstLetter(s: String): String
   {
     return if (s.isEmpty()) s else s.substring(0, 1).uppercase() + s.substring(1).lowercase()
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Returns a count of the number of words in a string.
+   *
+   * @param text String to be examined.
+   * @return Count of words.
+   */
+
+  fun wordCount (text: String): Int
+  {
+    val s = text.replace("\n", " ").trim { it <= ' ' }
+    return if (s.isBlank()) 0 else s.split("\\p{Z}+".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray().size
   }
 }

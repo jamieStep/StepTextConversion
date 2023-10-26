@@ -54,7 +54,6 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase()
   override fun getCommandLineOptions(commandLineProcessor: CommandLineProcessor)
   {
     commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
-    commandLineProcessor.addCommandLineOption("debugLevel", 1, "Debug level -- 0 => no debug, larger numbers => increasing amounts of debug.", null, "0", false)
   }
 
 
@@ -103,7 +102,7 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase()
      trying to make the enhanced USX files more human-readable, and that's
      _always_ going to do something. */
 
-  private fun processFile (filePath: String, document: Document)
+  private fun processFile (bookName: String, filePath: String, document: Document)
   {
     val C_MinimalChangesOnly = false // Introduced because DIB wanted a version of LXX to which I'd done as little as possible.  Should normally be false.
 

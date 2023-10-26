@@ -27,7 +27,7 @@ package org.stepbible.textconverter.support.bibledetails
 *   information tied to a particular text -- the number of chapters in the
 *   various books, the number of verses in the various chapters, etc.  There's a
 *   slightly complicated inheritance structure here.  The thing you are likely
-*   to want to use most often is **[BibleStructureTextUnderConstruction]**.
+*   to want to use most often is **[BibleStructure.UsxUnderConstructionInstance()]**.
 *   And the only other thing likely to be of interest is
 *   **[BibleStructureNrsvx]**, which gives you details either of NRSV or of
 *   NRSVA, depending upon whether you are working on a text with DC books or

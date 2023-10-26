@@ -16,18 +16,20 @@ import org.stepbible.textconverter.support.debug.Logger
 
 fun main (args: Array<String>)
 {
-  //Dbg.setBooksToBeProcessed("2Ki")
+  Dbg.setBooksToBeProcessed("3Jn")
 
   try
   {
     mainCommon(args)
     if (!ConfigData["stepReversificationDataLocation"]!!.startsWith("http")) println(C_Local_ReversificationData)
     if (!ConfigData.getAsBoolean("stepEncryptionApplied", "no")) println(C_NotEncrypted)
+    Dbg.endOfRun()
     println("Finished\n")
   }
   catch (e: Exception)
   {
-    println(e.message)
+    Dbg.endOfRun()
+    if (null != e.message) println(e.message)
     e.printStackTrace()
   }
 }
@@ -64,25 +66,3 @@ private const val C_NotEncrypted = """
      |_| \_|  \___/    |_|     |_____| |_| \_|  \____| |_| \_\   |_|   |_|       |_|   |_____| |____/
                      
      """
-
-
-/******************************************************************************/
-/* Convenient place to lodge small tests which don't need config. */
-
-private fun test ()
-{
-/*
-      println(convertRepeatingStringToNumber("a", 'a'.code, 'z'.code - 'a'.code + 1))
-      println(convertRepeatingStringToNumber("z", 'a'.code, 'z'.code - 'a'.code + 1))
-      println(convertRepeatingStringToNumber("aa", 'a'.code, 'z'.code - 'a'.code + 1))
-      println(convertRepeatingStringToNumber("az", 'a'.code, 'z'.code - 'a'.code + 1))
-      println(convertRepeatingStringToNumber("ba", 'a'.code, 'z'.code - 'a'.code + 1))
-      println(convertRepeatingStringToNumber("bz", 'a'.code, 'z'.code - 'a'.code + 1))
-      println(convertNumberToRepeatingString(1, 'a', 'z'))
-      println(convertNumberToRepeatingString(26, 'a', 'z'))
-      println(convertNumberToRepeatingString(27, 'a', 'z'))
-      println(convertNumberToRepeatingString(52, 'a', 'z'))
-      println(convertNumberToRepeatingString(53, 'a', 'z'))
-      println(convertNumberToRepeatingString(78, 'a', 'z'))
-*/
-}

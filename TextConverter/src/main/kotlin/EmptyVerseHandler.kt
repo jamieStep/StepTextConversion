@@ -1,15 +1,15 @@
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
-import org.stepbible.textconverter.support.bibledetails.BibleStructureTextUnderConstruction
-import org.stepbible.textconverter.support.bibledetails.BibleStructuresSupportedByOsis2modAll
+import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
 import org.stepbible.textconverter.support.miscellaneous.Translations.stringFormatWithLookup
+import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.ref.Ref
+import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.usx.Usx
 import org.w3c.dom.Document
@@ -150,6 +150,29 @@ object EmptyVerseHandler
    *
    * An empty elision verse does have a content, but is not given a footnote.
    *
+   * @param doc Document within which nodes are created.
+   *
+   * @param id sid / eid to be used in new verse.
+   *
+   * @return A pair containing the sid and eid nodes.
+   */
+
+  fun createEmptyVerseForElision (doc: Document, id: String): Pair<Node, Node>
+  {
+    val template = "<verse ID _X_generatedReason='inElision' _X_reasonEmpty='inElision' _X_elided='y' _X_originalId='$id'/>"
+    val start = Dom.createNode(doc, template.replace("ID", "sid='$id'"))
+    val end   = Dom.createNode(doc, template.replace("ID", "eid='$id'"))
+    return Pair(start, end)
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Creates an empty verse for use in elisions, and inserts it before the
+   * given node.
+   *
+   * An empty elision verse does have a content, but is not given a footnote.
+   *
    * @param insertBefore Node before which the verse and its content are to be
    *   inserted.  This needs to be the verse which was originally flagged as the
    *   elision.
@@ -159,7 +182,7 @@ object EmptyVerseHandler
    * @return A pair containing the sid and eid nodes.
    */
 
-  fun createEmptyVerseForElision (insertBefore: Node, sid: String): Pair<Node, Node>?
+  fun createEmptyVerseForElisionAndInsert (insertBefore: Node, sid: String): Pair<Node, Node>
   {
     val elisionSid = Dom.getAttribute(insertBefore, "sid")
     val template = "<verse ID _X_generatedReason='inElision' _X_reasonEmpty='inElision' _X_elided='y' _X_originalId='$elisionSid'/>"
@@ -186,11 +209,18 @@ object EmptyVerseHandler
   * @param document
   * @return True if changes were made.
   */
+
   fun createEmptyVersesForAdHocVersificationScheme (document: Document): Boolean
   {
     /**************************************************************************/
-    BibleStructureTextUnderConstruction.populate(document, wantWordCount = false, reportIssues = false)
-    val holes = BibleStructureTextUnderConstruction.getAllRefKeysForMissingVerses()
+    val bookCode = Dom.findNodeByName(document,"_X_book")!!["code"]!!
+    val bookNo = BibleBookNamesUsx.nameToNumber(bookCode)
+
+
+
+    /**************************************************************************/
+    BibleStructure.UsxUnderConstructionInstance().populateFromDom(document, wantWordCount = false)
+    val holes = BibleStructure.UsxUnderConstructionInstance().getMissingEmbeddedVersesForBook(bookNo)
     if (holes.isEmpty()) return false
 
 
@@ -212,14 +242,15 @@ object EmptyVerseHandler
   * @param document
   * @return True if changes were made.
   */
+
   fun createEmptyVersesForKnownOsis2modScheme (document: Document): Boolean
   {
     /**************************************************************************/
     var res = false
-    val osis2modSchemeDetails = BibleStructuresSupportedByOsis2modAll.getStructureFor(ConfigData["stepVersificationScheme"]!!)
-    val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.getAttribute(Dom.findNodeByName(document,"_X_book")!!, "code")!!)
-    BibleStructureTextUnderConstruction.populate(document, wantWordCount = false, reportIssues = false)
-    val diffs = BibleStructureTextUnderConstruction.compareWithGivenScheme(bookNumber, osis2modSchemeDetails)
+    val osis2modStructure = BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationSchemeCanonical"]!!, true)
+    val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.findNodeByName(document,"_X_book")!!["code"]!!)
+    BibleStructure.UsxUnderConstructionInstance().populateFromDom(document, wantWordCount = false)
+    val diffs = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), osis2modStructure)
 
 
 
@@ -241,11 +272,11 @@ object EmptyVerseHandler
     if (diffs.versesInTargetSchemeButNotInTextUnderConstruction.isNotEmpty())
     {
       var versesOfInterest = diffs.versesInTargetSchemeButNotInTextUnderConstruction
-      Dbg.d(versesOfInterest.map { Ref.rd(it).toString() }.joinToString(", "))
+      //Dbg.d(versesOfInterest.map { Ref.rd(it).toString() }.joinToString(", "))
       if (!C_ConfigurationFlags_GenerateVersesAtEndsOfChapters)
       {
         val x = versesOfInterest.toSet()
-        versesOfInterest = versesOfInterest.filter { Ref.getV(it) < BibleStructureTextUnderConstruction.getLastVerseNo(it) }
+        versesOfInterest = versesOfInterest.filter { Ref.getV(it) < BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(it) }
         val delta = x - versesOfInterest.toSet()
         delta.sorted().forEach { Dbg.d(">>>>> " + Ref.rd(it)).toString() }
       }
@@ -312,8 +343,8 @@ object EmptyVerseHandler
     val newChapterRefAsString = Ref.rd(newChapterRefKey).toStringUsx()
 
     val chapterNode = Dom.createNode(document, "<_X_chapter sid='$newChapterRefAsString' _X_generatedReason='$generatedReason' _X_reasonEmpty='$reasonEmpty'/>")
-    val dummyVerseSidNode = Dom.createNode(document,"<verse _TEMP_dummy='y' sid='$newChapterRefAsString:500'/>")
-    val dummyVerseEidNode = Dom.createNode(document,"<verse _TEMP_dummy='y' eid='$newChapterRefAsString:500'/>")
+    val dummyVerseSidNode = Dom.createNode(document,"<verse _TEMP_dummy='y' sid='$newChapterRefAsString:${RefBase.C_BackstopVerseNumber}'/>")
+    val dummyVerseEidNode = Dom.createNode(document,"<verse _TEMP_dummy='y' eid='$newChapterRefAsString:${RefBase.C_BackstopVerseNumber}'/>")
     chapterNode.appendChild(dummyVerseSidNode)
     chapterNode.appendChild(dummyVerseEidNode)
 

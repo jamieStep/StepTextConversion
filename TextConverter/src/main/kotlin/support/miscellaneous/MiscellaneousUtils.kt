@@ -25,6 +25,22 @@ object MiscellaneousUtils
  {
     /**********************************************************************************************************************/
     /**
+    * Checks whether a list of items is arranged in strictly increasing order.
+    *
+    * @param data
+    * @return True if strictly increasing.
+    */
+
+    fun <T: Comparable<T>> checkInStrictlyAscendingOrder (data: List<T>): Boolean
+    {
+      for (i in 1 ..< data.size)
+        if (data[i] <= data[i - 1]) return false
+      return true
+    }
+
+
+    /**********************************************************************************************************************/
+    /**
     * Converts 1, 2, ... 26, 27, 28 ... to a, b, ... z, aa, ab ...
     *
     * @param n Number to be converted
@@ -114,7 +130,7 @@ object MiscellaneousUtils
       return List(nChars) { C_generateRandomString_Chars.random() }.joinToString("")
     }
 
-    private val C_generateRandomString_Chars : List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9') + listOf('!', '£', '$', '%', '&', '_', '#', '~', '@')
+    private val C_generateRandomString_Chars : List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9') + listOf('!', '$', '%', '_', '#', '~', '@')
 
 
     /****************************************************************************/

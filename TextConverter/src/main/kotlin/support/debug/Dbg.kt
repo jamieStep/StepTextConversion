@@ -1,11 +1,17 @@
 /******************************************************************************/
 package org.stepbible.textconverter.support.debug
 
+import org.stepbible.textconverter.ReversificationDataRow
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRawUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import java.io.File
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import kotlin.system.exitProcess
 
 
@@ -44,7 +50,7 @@ object Dbg
 
   fun getBooksToBeProcessed (): List<String>
   {
-     return m_BooksToBeProcessed.filter { it.m_Process} .map { it.m_Abbrev}
+     return m_BooksToBeProcessed.filter { it.m_Process } .map { it.m_Abbrev }
   }
 
 
@@ -187,61 +193,6 @@ object Dbg
 
 
 
-  /****************************************************************************/
-  /****************************************************************************/
-  /*                                                                          */
-  /*                               Set flags                                  */
-  /*                                                                          */
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  const val C_DebugFlag_none                 = 0L
-  const val C_DebugFlag_basic                = 0x0000_0000_0000_0001L
-  const val C_DebugFlag_addAttributesToNodes = 0x1000_0000_0000_0000L
-
-
-  /****************************************************************************/
-  /**
-   * Returns the debug level.
-   *
-   * @return  The debug level.
-   */
-
-  fun getDebugFlag (): Long { return m_DebugLevel }
-
-
-  /****************************************************************************/
-  /**
-   * Sets the debug level, taking the input as a string representing a number.
-   *
-   * @param s Debug level as a number.
-   * @param onOff Indicates whether the bit should be set or not.
-   */
-
-  fun setDebugFlag (s :String, onOff: Boolean = true)
-  {
-    setDebugFlag(s.toLong(), onOff)
-  }
-
-
-  /****************************************************************************/
-  /**
-   * Sets or clears a debug flag setting.
-   *
-   * @param flag Single bit.
-   * @param onOff Indicates whether the bit should be set or not.
-   */
-
-  fun setDebugFlag (flag: Long, onOff: Boolean = true)
-  {
-    m_DebugLevel =
-      if (onOff)
-        m_DebugLevel or flag
-      else
-        m_DebugLevel and flag.inv()
-  }
-
 
 
 
@@ -249,7 +200,7 @@ object Dbg
   /****************************************************************************/
   /****************************************************************************/
   /*                                                                          */
-  /*                            Dom modification                              */
+  /*                                Public                                    */
   /*                                                                          */
   /****************************************************************************/
   /****************************************************************************/
@@ -263,12 +214,101 @@ object Dbg
    * @param value Value to be assigned to attribute.
    */
 
-  fun recordDbgAttribute(node: Node, name: String, value: String): Node
+  fun addDebugAttributeToNode (node: Node, name: String, value: String): Node
   {
-    if (0L != (m_DebugLevel and C_DebugFlag_addAttributesToNodes))
+    if (m_AddDebugAttributesToNodes)
       Dom.setAttribute(node, "_DBG_$name", value)
     return node
   }
+
+
+  /****************************************************************************/
+  /**
+  * What it says on the tin -- outputs details of reversification rows (which
+  * presumably the caller will have limited to those actually selected).
+  *
+  * Does this conditionally, though, dependent upon the config settings.
+  *
+  * @param data Rows to be output.
+  */
+
+  fun displayReversificationRows (data: List<ReversificationDataRow>)
+  {
+    if (m_DbgDisplayReversificationRowsOutputter.isNotEmpty())
+      data.forEach { runOutputters("rev", m_DbgDisplayReversificationRowsOutputter, it.toString()) }
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Outputs any debug data accumulated during the run for which output was
+  * deferred until the end of the run.
+  */
+
+  fun endOfRun ()
+  {
+    if (m_ScreenOutput.isNotEmpty())
+    {
+      d("\n\n\nDeferred debug data:\n\n")
+      m_ScreenOutput.groupBy { group -> group.first } .forEach { elt -> elt.value.forEach { d(it.first + ": " + it.second) }; d(""); d("") }
+    }
+
+    if (m_FileOutput.isEmpty()) return
+
+    File(StandardFileLocations.getDebugOutputFilePath()).bufferedWriter().use { out ->
+      out.write(ConfigData["stepModuleName"]!! + ": " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MMM-yy HH:mm")))
+      out.newLine(); out.newLine()
+      m_FileOutput.groupBy { group -> group.first } .forEach { elt -> elt.value.forEach { out.write(it.first + ": " + it.second); out.newLine() }; out.newLine(); out.newLine() }
+    }
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /*                                                                          */
+  /*                                Private                                   */
+  /*                                                                          */
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  private fun runOutputters (cat: String, outputters: List<(String, String) -> Unit>, s: String) { outputters.forEach { it.invoke(cat, s) } }
+  private fun fileOutputter (cat: String, s: String)            { m_FileOutput.add(Pair(cat, s)) }
+  private fun screenOutputterDeferred (cat: String, s: String)  { m_ScreenOutput.add(Pair(cat, s)) }
+  private fun screenOutputterImmediate (cat: String, s: String) { d("$cat: $s") }
+
+
+  /****************************************************************************/
+  /**
+  * Given a config parameter which can contain Screen, File and Deferred -- or
+  * anything other than these -- works out whether we want to send output to
+  * screen, file or both, and in the case of screen, whether we want the output
+  * immediately at the time it is generated, or gathered up and output at the
+  * end of the run, and then returns a suitably list of outputters. */
+
+  private fun getOutputter (selector: String): List<(String, String) -> Unit>
+  {
+    val res: MutableList<(String, String) -> Unit> = mutableListOf()
+    val sel = selector.lowercase().trim()
+
+    if ("file" in sel)
+      res.add(::fileOutputter)
+
+    if ("screen" in sel)
+      res.add(if ("deferred" in sel) ::screenOutputterDeferred else ::screenOutputterImmediate)
+
+    return res
+  }
+
+
+  /****************************************************************************/
+  private var m_AddDebugAttributesToNodes              = ConfigData.getAsBoolean("stepDbgAddDebugAttributesToNodes", "No")
+  private var m_DbgDisplayReversificationRowsOutputter = getOutputter(ConfigData.get("stepDbgDisplayReversificationRows", "None"))
+  private val m_FileOutput:   MutableList<Pair<String, String>> = mutableListOf() // Deferred output.
+  private val m_ScreenOutput: MutableList<Pair<String, String>> = mutableListOf() // Deferred output.
 
 
 
@@ -594,71 +634,6 @@ object Dbg
 
   /****************************************************************************/
   /****************************************************************************/
-  /*                                                                          */
-  /*                   Debug output based upon debug level                    */
-  /*                                                                          */
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  /* Functions in this section output data to System.err based upon the debug
-     level setting -- either outputting data if the level is non-zero, or
-     doing so if the level ANDed with a bitmap passed to the method gives a
-     non-zero value.  All of them return their argument. */
-
-  /****************************************************************************/
-  /**
-   * Outputs information if the debug level is non-zero.
-   *
-   * @param s The string to be printed.
-   * @return Copy of input.
-   */
-  
-  fun println (s: String): String
-  {
-    if (m_DebugLevel > 0) System.err.println(s)
-    return s
-  }
-  
-  
-  /****************************************************************************/
-  /**
-   * Outputs information based upon bit settings in the debug level.
-   *
-   * @param s The string to be printed.
-   * @param flag A set of debug flags which are ANDed with the debug level to
-   *   determine whether to generate output or not.
-   * @return Copy of input.
-   */
-  
-  fun println (s: String, flag: Long): String
-  {
-    if (0L != (m_DebugLevel and flag))
-      System.err.println(s)
-    return s
-  }
-  
-  
-  /****************************************************************************/
-  /**
-   * Outputs information no matter what.
-   *
-   * @param s The string to be printed.
-   * @return Copy of input
-   */
-  
-  fun printlnForce (s: String): String
-  {
-    System.err.println(s)
-    return s
-  }
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
   /**                                                                        **/
   /**                             Miscellaneous                              **/
   /**                                                                        **/
@@ -691,7 +666,7 @@ object Dbg
   @Synchronized fun reportProgress (s: String, level: Int = 0)
   {
     print("                    ".substring(0, 2 * level))
-    kotlin.io.println(s)
+    println(s)
   }
 
 
@@ -722,6 +697,6 @@ object Dbg
   /****************************************************************************/
 
   /****************************************************************************/
-  private var m_DebugLevel = 0L
   private var m_DebugRunningOnPartialCollectionOfBooksOnly = false
+
 }

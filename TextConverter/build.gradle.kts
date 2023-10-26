@@ -18,6 +18,7 @@ dependencies {
     implementation("commons-io:commons-io:2.13.0")
     implementation("net.sf.saxon:Saxon-HE:12.3")
     implementation("org.jasypt:jasypt:1.9.3")
+    implementation(kotlin("reflect"))
 }
 
 

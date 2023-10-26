@@ -198,10 +198,10 @@ open class BibleBookAndFileMapper
    * @param fn Function to apply to each file.
    */
   
-  fun iterateOverAllFiles      (fn: (filePath: String)               -> Unit) { iterateOverFiles(fn, false) }
-  fun iterateOverAllFiles      (fn: (filePath: String, dom:Document) -> Unit) { iterateOverFiles(fn, false) }
-  fun iterateOverSelectedFiles (fn: (filePath: String)               -> Unit) { iterateOverFiles(fn, true ) }
-  fun iterateOverSelectedFiles (fn: (filePath: String, dom:Document) -> Unit) { iterateOverFiles(fn, true ) }
+  fun iterateOverAllFiles      (fn: (bookName: String, filePath: String)               -> Unit) { iterateOverFiles(fn, false) }
+  fun iterateOverAllFiles      (fn: (bookName: String, filePath: String, dom:Document) -> Unit) { iterateOverFiles(fn, false) }
+  fun iterateOverSelectedFiles (fn: (bookName: String, filePath: String)               -> Unit) { iterateOverFiles(fn, true ) }
+  fun iterateOverSelectedFiles (fn: (bookName: String, filePath: String, dom:Document) -> Unit) { iterateOverFiles(fn, true ) }
 
 
 
@@ -270,7 +270,9 @@ open class BibleBookAndFileMapper
   
   
   /****************************************************************************/
-  private fun getFileList (limitToSelectedBooks: Boolean): List<String>
+  /* 24-Oct-23: Changes to return book name as well as file path. */
+
+  private fun getFileList (limitToSelectedBooks: Boolean): List<Pair<String, String>>
   {
     val limitationFilter: (bookNumber: Int) -> Boolean = if (limitToSelectedBooks) { {  x -> Dbg.wantToProcessBook(x) } } else { { _ -> true } }
     return m_BookOrderingDetailsByBookNumber
@@ -280,22 +282,22 @@ open class BibleBookAndFileMapper
       .filter { null != m_BookOrderingDetailsByBookNumber[it] }
       .filter { limitationFilter.invoke(m_BookOrderingDetailsByBookNumber[it]!!.bookNumber) }
       .filter { File(m_BookOrderingDetailsByBookNumber[it]!!.filePath).exists() } // Particularly with reversification, books which originally existed may have been emptied and deleted.
-      .map { m_BookOrderingDetailsByBookNumber[it]!!.filePath }
+      .map { Pair(BibleBookNamesUsx.numberToAbbreviatedName(m_BookOrderingDetailsByBookNumber[it]!!.bookNumber), m_BookOrderingDetailsByBookNumber[it]!!.filePath) }
       .toList()
   }
 
 
   /****************************************************************************/
-  private fun iterateOverFiles (fn: (filePath: String) -> Unit, limitToSelectedBooks: Boolean)
+  private fun iterateOverFiles (fn: (bookName: String, filePath: String) -> Unit, limitToSelectedBooks: Boolean)
   {
-    getFileList(limitToSelectedBooks).forEach { fn(it) }
+    getFileList(limitToSelectedBooks).forEach { fn(it.first, it.second) }
   }
 
 
   /****************************************************************************/
-  private fun iterateOverFiles (fn: (filePath: String, document: Document) -> Unit, limitToSelectedBooks: Boolean)
+  private fun iterateOverFiles (fn: (bookName: String, filePath: String, document: Document) -> Unit, limitToSelectedBooks: Boolean)
   {
-    getFileList(limitToSelectedBooks).forEach { fn(it, Dom.getDocument(it)) }
+    getFileList(limitToSelectedBooks).forEach { fn(it.first, it.second, Dom.getDocument(it.second)) }
   }
   
   

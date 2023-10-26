@@ -2264,11 +2264,14 @@ object Dom
      *
      * @param node Node.
      * @param attributeName Attribute name.
-     * @param attributeValue Value.
+     * @param attributeValue Value.  (If null, attribute is deleted.)
      */
 
-    fun setAttribute (node: Node, attributeName: String, attributeValue: String)
+    fun setAttribute (node: Node, attributeName: String, attributeValue: String?)
     {
+      if (null == attributeValue)
+        deleteAttribute(node, attributeName)
+      else
         (node as Element).setAttribute(attributeName, attributeValue)
     }
 
@@ -2600,24 +2603,13 @@ object Dom
     }
 }
 
-/*
-  I _was_ using this as an alternative to getNodeContentAsString before I found
-  that this was horrendously slow.
 
-import org.w3c.dom.ls.DOMImplementationLS
 
-    /************************************************************************/
-    /* Gets the full content of a node.  Code nicked off the web, so don't
-       assume I understand it. */
+/******************************************************************************/
+/**
+* Couple of useful extensions, which let you get or set attribute values using
+* [...] syntax.  You'll need to import org.w3c.dom.Node to use them.
+*/
 
-    fun getInnerXml (node: Node): String
-    {
-        val lsImpl = node.ownerDocument.implementation.getFeature("LS", "3.0") as DOMImplementationLS
-        val lsSerializer = lsImpl.createLSSerializer()
-        lsSerializer.domConfig.setParameter("xml-declaration", java.lang.Boolean.FALSE)
-        val childNodes = node.childNodes
-        val sb = StringBuilder()
-        for (i in 0 until childNodes.length) sb.append(lsSerializer.writeToString(childNodes.item(i)))
-        return sb.toString().replace("\n", "").trim { it <= ' ' }.replace("\\s+".toRegex(), " ")
-    }
- */
+operator fun Node.get (attributeName: String): String? { return Dom.getAttribute(this, attributeName) }
+operator fun Node.set (attributeName: String, value: String) { Dom.setAttribute(this, attributeName, value) }

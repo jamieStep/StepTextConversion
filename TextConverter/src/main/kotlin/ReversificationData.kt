@@ -278,11 +278,11 @@ object ReversificationData
   * @return Lists of things.
   */
 
-  fun getAllBooksAbbreviatedNames (): List<String> { return m_AllBooks } // All book names subject to reversification processing.
+  fun getAllBookNumbersAbbreviatedNames (): List<String> { return m_AllBooks } // All book names subject to reversification processing.
   fun getSourceBooksAbbreviatedNames (): List<String> { return m_SourceBooks }
   fun getStandardBooksAbbreviatedNames (): List<String> { return m_StandardBooks }
 
-  fun getAllBooksInvolvedInMoveActionsAbbreviatedNames (): List<String> { return m_AllBooksInvolvedInMoveActions } // Book names, but just those involved in move processing as either source or target.
+  fun getAllBookNumbersInvolvedInMoveActionsAbbreviatedNames (): List<String> { return m_AllBooksInvolvedInMoveActions } // Book names, but just those involved in move processing as either source or target.
   fun getSourceBooksInvolvedInMoveActionsAbbreviatedNames (): List<String> { return m_SourceBooksInvolvedInMoveActions }
   fun getStandardBooksInvolvedInMoveActionsAbbreviatedNames (): List<String> { return m_StandardBooksInvolvedInMoveActions }
 
@@ -366,7 +366,7 @@ object ReversificationData
       loadRow(rawRow, ++rowNumber, isInNoTestsSection, rawData.size)
     }
 
-    //Dbg.d(getAllAcceptedRows())
+    Dbg.displayReversificationRows(getAllAcceptedRows())
   }
 
 
@@ -1277,8 +1277,8 @@ object ReversificationData
       if (1 != grp.rows.first().sourceRef.getV()) return
       if (1 != grp.rows.first().standardRef.getV()) return
 
-      if (BibleStructureTextUnderConstruction.getLastVerseNo(grp.rows.first().sourceRef) != grp.rows.last().sourceRef.getV()) return
-      if (BibleStructureNrsvx().getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
+      if (BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(grp.rows.first().sourceRef) != grp.rows.last().sourceRef.getV()) return
+      if (BibleStructure.NrsvxInstance().getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
 
       grp.isEntireChapter = true
     }
@@ -1889,7 +1889,7 @@ object ReversificationData
     /**************************************************************************/
     /* Ignore lines where the source ref relates to a book we don't have. */
 
-   if (!BibleStructureTextUnderConstruction.hasBook(row.sourceRef.getB())) return
+   if (!BibleStructure.UsxUnderConstructionInstance().bookExists(row.sourceRef.getB())) return
 
 
 

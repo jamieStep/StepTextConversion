@@ -82,6 +82,8 @@ object TestController: TestControllerBase()
 
 
     m_TestController.initialise()
+    //ConfigData.delete("stepEncryptionRequired")
+    //ConfigData.put("stepEncryptionRequired", "No", true)
   }
 }
 

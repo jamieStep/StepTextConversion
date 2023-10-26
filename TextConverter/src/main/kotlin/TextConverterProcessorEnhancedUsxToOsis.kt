@@ -65,7 +65,6 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
   {
     commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
-    commandLineProcessor.addCommandLineOption("debugLevel", 1, "Debug level -- 0 => no debug, larger numbers => increasing amounts of debug.", null, "0", false)
   }
 
 
@@ -112,7 +111,7 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
   private fun doProcess ()
   {
     /**************************************************************************/
-    // XXXBibleStructureTextUnderConstruction.populate(StandardFileLocations.getEnhancedUsxFolderPath(), false)
+    // XXXBibleStructure.UsxUnderConstructionInstance().populate(StandardFileLocations.getEnhancedUsxFolderPath(), false)
 
 
 
@@ -150,6 +149,13 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
       val validationErrors = validateXmlAgainstSchema(StandardFileLocations.getOsisFilePath())
       if (null != validationErrors) Logger.error(validationErrors)
     }
+  }
+
+
+  /****************************************************************************/
+  private fun getOsisXsdLocation (): String
+  {
+    return ConfigData["stepExternalDataPath_OsisXsd"]!! // With Crosswire tweaks.
   }
 
 
@@ -289,7 +295,7 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
     vals["title"] = ConfigData.makeStepDescription()
     vals["toLowerPublicationType"] = publicationType.lowercase(Locale.getDefault())
     vals["todaysDate"] = SimpleDateFormat("dd-MMM-yy").format(Date())
-    vals["xsdLocation"] = C_XsdLocation
+    vals["xsdLocation"] = getOsisXsdLocation()
     vals["yearOfText"] = yearOfText
 
 
@@ -524,7 +530,7 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
      metadata, etc.
   */
 
-  private fun processFile (inputFilePath: String, document: Document)
+  private fun processFile (bookName: String, inputFilePath: String, document: Document)
   {
     m_Document = document
     reportBookBeingProcessed(m_Document)
@@ -802,7 +808,7 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
       {
         Dbg.reportProgress("\nReading XSD")
         val factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
-        val schema = factory.newSchema(URL(C_XsdLocation))
+        val schema = factory.newSchema(URL(getOsisXsdLocation()))
         val validator = schema.newValidator()
         Dbg.reportProgress("  Validating OSIS")
         validator.validate(StreamSource(File(xmlPath)))
@@ -813,8 +819,6 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
         e.toString()
       }
     }
-
-    private const val C_XsdLocation = "https://www.crosswire.org/~dmsmith/osis/osisCore.2.1.1-cw-latest.xsd" // With Crosswire tweaks.  /****************************************************************************/
 
 
 

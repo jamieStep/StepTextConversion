@@ -27,6 +27,23 @@ object CommandLineProcessor
     private data class CommandLineOption (val name: String, val nArgs: Int, val description: String, val options: List<String>?, val default: String?, val required: Boolean)
 
 
+//    /****************************************************************************/
+//    fun getRunType (args: Array<String>): String
+//    {
+//      val options = Options()
+//      val runTypeOptions = "tagOsis/full"
+//      val optBuilder = Option.builder("runType")
+//                        .desc("Tag existing OSIS, or full conversion: $runTypeOptions (default: full)")
+//                        .numberOfArgs(1)
+//                        .build()
+//     options.addOption(optBuilder)
+//
+//     val parser = DefaultParser()
+//     val cmds = parser.parse(options, args)
+//     return if (cmds.getOptions().isEmpty()) "full" else "tagOsis"
+//    }
+
+
     /****************************************************************************/
     /**
      * Adds a command line option, avoiding duplication and beefing up the

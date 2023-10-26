@@ -45,7 +45,6 @@ class TextConverterController
     {
         CommandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
         CommandLineProcessor.addCommandLineOption("permitComplexChanges", 1, "Permit eg reversification Moves (may be ruled out by licensing conditions).", listOf("Yes", "No", "AsLicence"), "AsLicence", false)
-        CommandLineProcessor.addCommandLineOption("debugLevel", 1, "Debug level -- 0 => no debug, larger numbers => increasing amounts of debug.", null, "0", false)
         CommandLineProcessor.addCommandLineOption("help", 0, "Get help.", null, null, false)
 
         CommandLineProcessor.addCommandLineOption("forcedOsis2ModVariant", 1, "Force to use Crosswire osis2mod or our own for test purposes", listOf("Crosswire", "Step", "CrosswireRelaxed"), "Crosswire", false)
@@ -91,7 +90,7 @@ class TextConverterController
     {
         try
         {
-            Dbg.reportProgress("\n" + processor.banner())
+            if (processor.banner().isNotEmpty()) Dbg.reportProgress("\n" + processor.banner())
             Logger.setPrefix(processor.banner())
             if (!processor.process()) return false
             Logger.setPrefix(null)
@@ -118,6 +117,11 @@ class TextConverterController
 
     private fun initialiseCommandLineArgsAndConfigData (args: Array<String>)
     {
+        /**************************************************************************/
+        //val runType = CommandLineProcessor.getRunType(args)
+
+
+
         /**************************************************************************/
         /* Determine what command line parameters are permitted and then parse the
            command line. */
@@ -158,11 +162,6 @@ class TextConverterController
 
 
         /**************************************************************************/
-        Dbg.setDebugFlag(CommandLineProcessor.getOptionValue("debugLevel")!!)
-
-
-
-        /**************************************************************************/
         /* Depending upon the parameter supplied, reversification processing may be
            driven either by the user's input on the command line, or by the
            converter's own assessment of the situation.  We will assume the former,
@@ -182,7 +181,7 @@ class TextConverterController
            the evaluation might otherwise produce, and which may have been left
            lying around from a previous run. */
 
-        m_EvaluateSchemesOnly = ConfigData.getAsBoolean("stepEvaluateSchemesOnly") || ConfigData.get("stepReversificationType")!!.contains("?")
+        m_EvaluateSchemesOnly = ConfigData.getAsBoolean("stepEvaluateSchemesOnly") || ConfigData["stepReversificationType"]!!.contains("?")
         if (m_EvaluateSchemesOnly)
         {
           TextConverterProcessorEvaluateVersificationSchemes.pre()
@@ -207,11 +206,10 @@ class TextConverterController
 
 
     /******************************************************************************************************************/
-    /* List of processors in the order in which they run.  TextConverterProcessorEvaluateVersificationSchemes doesn't
-       exactly fit here, since a given run _either_ does this _or_ it does the others.  However, I arrange that on a run
-       which requires it, it will itself inform the present processing that nothing else should be run. */
+    /* Lists of processors in the order in which they run. */
 
-    private val m_Processors : List<TextConverterProcessorBase> = listOf(
+    private val C_ProcessorsForFullConversionRun = listOf(
+        DbgController,
         TextConverterProcessorVLToEnhancedUsx,
         TextConverterProcessorUsxToEnhancedUsx1,
         TextConverterProcessorReversification,
@@ -219,6 +217,20 @@ class TextConverterController
         TextConverterFeatureSummaryGenerator,
         TextConverterEnhancedUsxValidator,
         TextConverterProcessorEnhancedUsxToOsis,
+        TextConverterTaggingHandler,
         TextConverterProcessorOsisToSword
     )
+
+    /******************************************************************************************************************/
+    /* Lists of processors in the order in which they run. */
+
+    private val C_ProcessorsForFullOsisTaggingOnly = listOf(
+        DbgController,
+        TextConverterTaggingHandler,
+        TextConverterProcessorOsisToSword
+    )
+
+
+    /******************************************************************************************************************/
+    private var m_Processors = C_ProcessorsForFullConversionRun
 }

@@ -431,7 +431,7 @@ object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase()
   {
     /**************************************************************************/
     m_TextFeatures.ModuleName = ConfigData["stepModuleName"]!!
-    m_TextFeatures.VersificationScheme = ConfigData["stepVersificationScheme"]!!
+    m_TextFeatures.VersificationScheme = ConfigData["stepVersificationSchemeCanonical"]!!
     m_TextFeatures.ReversificationType = ConfigData["stepReversificationType"]!!
     BibleBookAndFileMapperRawUsx.iterateOverAllFiles(::populateTextFeatures)
     m_TextFeatures.TagNamesInRawUsx = m_NodeNames.sorted()
@@ -455,7 +455,7 @@ object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase()
 
 
   /****************************************************************************/
-  private fun populateTextFeatures (filePath: String, document: Document)
+  private fun populateTextFeatures (bookName: String, filePath: String, document: Document)
   {
     Dom.collectNodesInTree(document).forEach { populateTextFeaturesFromNode(it) }
   }

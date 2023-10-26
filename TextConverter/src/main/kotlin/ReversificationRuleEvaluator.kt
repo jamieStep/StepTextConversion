@@ -1,12 +1,12 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
- import org.stepbible.textconverter.ReversificationData.usxifyFromStepFormat
- import org.stepbible.textconverter.support.bibledetails.BibleStructureTextUnderConstruction
- import org.stepbible.textconverter.support.debug.Logger
- import org.stepbible.textconverter.support.ref.Ref
- import org.stepbible.textconverter.support.ref.RefCollection
- import org.stepbible.textconverter.support.stepexception.StepException
+import org.stepbible.textconverter.ReversificationData.usxifyFromStepFormat
+import org.stepbible.textconverter.support.bibledetails.BibleStructure
+import org.stepbible.textconverter.support.debug.Logger
+import org.stepbible.textconverter.support.ref.Ref
+import org.stepbible.textconverter.support.ref.RefCollection
+import org.stepbible.textconverter.support.stepexception.StepException
 
 /******************************************************************************/
 /**
@@ -91,11 +91,11 @@ object ReversificationRuleEvaluator
     {
       if (0 == sourceRef.getV()) // Within the reversification data, the canonical title is held as v0, but we need to split that case out for existence checks.
       {
-        if (!BibleStructureTextUnderConstruction.hasCanonicalTitle(sourceRef)) return false
+        if (!BibleStructure.UsxUnderConstructionInstance().hasCanonicalTitle(sourceRef)) return false
       }
       else
       {
-        if (!BibleStructureTextUnderConstruction.hasElementAsRequested(sourceRef)) return false
+        if (!BibleStructure.UsxUnderConstructionInstance().verseOrSubverseExistsAsSpecified(sourceRef)) return false
       }
     }
 
@@ -201,21 +201,13 @@ object ReversificationRuleEvaluator
 
         refs.forEach {
           ref = Ref.rd(it, ref)
-          val thisNWords = if (isTitle) BibleStructureTextUnderConstruction.getCanonicalTitleWordCount(ref.toRefKey_bc()) else BibleStructureTextUnderConstruction.getWordCount(ref.toRefKey_bcvs())
+          val thisNWords = if (isTitle) BibleStructure.UsxUnderConstructionInstance().getWordCountForCanonicalTitle(ref.toRefKey_bc()) else BibleStructure.UsxUnderConstructionInstance().getWordCount(ref.toRefKey_bcvs())
 
           when (thisNWords)
           {
-            BibleStructureTextUnderConstruction.C_ElementInElision   ->
+            BibleStructure.C_ElementInElision   ->
             {
               lengthWarning("$ref forms part of an elision, and we cannot therefore carry out length tests upon it.")
-              return false
-            }
-
-
-            BibleStructureTextUnderConstruction.C_ElementUnavailable ->
-            {
-              if (!isTitle && BibleStructureTextUnderConstruction.hasBook(ref.getB()))
-                lengthWarning("$ref lacks length information, and we cannot therefore carry out length tests upon it.")
               return false
             }
 
@@ -292,7 +284,7 @@ object ReversificationRuleEvaluator
       var ref = m_BackstopDefaultRef
       text = text.replace("last", "").replace("=", "").trim()
       ref = RefCollection.rdUsx(usxifyFromStepFormat(text), ref, "v").getFirstAsRef()
-      return BibleStructureTextUnderConstruction.getLastVerseNo(ref.toRefKey_bc()) == ref.getV()
+      return BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(ref.toRefKey_bc()) == ref.getV()
     }
 
 
@@ -314,12 +306,12 @@ object ReversificationRuleEvaluator
       {
         text = text.split(":")[0]
         ref = RefCollection.rdUsx(usxifyFromStepFormat(text), ref, "v").getFirstAsRef()
-        res = BibleStructureTextUnderConstruction.hasCanonicalTitle(ref)
+        res = BibleStructure.UsxUnderConstructionInstance().hasCanonicalTitle(ref)
       }
       else
       {
         ref = RefCollection.rdUsx(usxifyFromStepFormat(text), ref).getFirstAsRef()
-        res = BibleStructureTextUnderConstruction.hasElementAsRequested(ref.toRefKey_bcvs())
+        res = BibleStructure.UsxUnderConstructionInstance().verseOrSubverseExistsAsSpecified(ref.toRefKey_bcvs())
       }
 
       return if (invert) !res else res

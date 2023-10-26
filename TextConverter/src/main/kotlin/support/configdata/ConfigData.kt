@@ -3,23 +3,25 @@ package org.stepbible.textconverter.support.configdata
 
 
 import org.stepbible.textconverter.ReversificationData
-import org.stepbible.textconverter.TestController
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
-import org.stepbible.textconverter.support.bibledetails.BibleStructureTextUnderConstruction
-import org.stepbible.textconverter.support.bibledetails.BibleStructuresSupportedByOsis2modAll.canonicaliseSchemeName
-import org.stepbible.textconverter.support.configdata.ConfigDataSupport.determineModuleDetails
-import org.stepbible.textconverter.support.debug.Dbg
+import org.stepbible.textconverter.support.bibledetails.BibleStructure
+import org.stepbible.textconverter.support.bibledetails.BibleStructuresSupportedByOsis2mod.canonicaliseSchemeName
 import org.stepbible.textconverter.support.debug.Logger
+import org.stepbible.textconverter.support.iso.IsoLanguageCodes
 import org.stepbible.textconverter.support.iso.Unicode
+import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.*
 import java.text.SimpleDateFormat
 import java.time.LocalDate
+import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.reflect.full.memberFunctions
+import kotlin.reflect.KFunction
 
 
 /******************************************************************************/
@@ -398,7 +400,6 @@ object ConfigData
     {
         if (m_Initialised) return // Guard against multiple initialisation.
         m_Initialised = true
-        determineModuleDetails()
         load(rootConfigFilePath, null, false) // User overrides.
         loadDone()
     }
@@ -426,7 +427,7 @@ object ConfigData
         /* Originally I would have regarded any attempt to load the same file twice
            as probably indicating an error.  However, it is convenient to accept
            this and simply not load the file a second time.  (Slightly obscure
-           rationale: this lets me create a bog standard base configuration file
+           rationale: this lets me create a bog-standard base configuration file
            in the resources section and then copy this as the template config.conf
            file for each new text.  To minimise the number of changes required to
            that template file, it is convenient if the template file $include's
@@ -441,7 +442,7 @@ object ConfigData
         val lines = getConfigLines(configFilePath, callingFilePath, okIfNotExists)
         for (x in lines)
         {
-            var line = x
+            var line = x.trim()
             val lineLowerCase = line.lowercase().trim()
 
             line = line.replace("@home", System.getProperty("user.home"))
@@ -467,9 +468,10 @@ object ConfigData
 
 
             if (lineLowerCase.startsWith("\$include"))
+            if (lineLowerCase.startsWith("\$include"))
             {
                 var newFilePath = line.replace("${'$'}includeIfExists", "")
-                newFilePath = newFilePath.replace("${'$'}include", "")
+                newFilePath = newFilePath.replace("${'$'}include", "").trim()
                 newFilePath = expandReferences(newFilePath, false)!!
                 load(newFilePath, configFilePath, lineLowerCase.contains("exist"))
                 continue
@@ -745,7 +747,7 @@ object ConfigData
     fun put (key: String, theValue: String, force: Boolean)
     {
       /************************************************************************/
-      //Dbg.d(key, "stepTextDirection")
+      //Dbg.d(key, "???")
 
 
 
@@ -776,15 +778,7 @@ object ConfigData
       /************************************************************************/
       /* Sort out special markers. */
 
-      var value = tidyVal(theValue)
-
-
-
-      /************************************************************************/
-      /* Get rid of parens and comma from @getExternal to simplify parsing
-         later. */
-
-      value = C_patGetExternalRaw.replace(value) { it.value.replace("(", "[").replace(")", "]").replace(",", " ") }
+      val value = tidyVal(theValue)
 
 
 
@@ -853,7 +847,6 @@ object ConfigData
 
 
 
-
     /**************************************************************************/
     /**************************************************************************/
     /**                                                                      **/
@@ -863,400 +856,323 @@ object ConfigData
     /**************************************************************************/
 
     /**************************************************************************/
-     private val C_patGetExternalRevised = Regex("(?i)(?<pre>.*?)@getExternal\\[(?<selector>\\w+)\\W+(?<xpath>.+?)](\\.#(?<fn>\\w+))?(?<post>.*)")
-     private val C_patGetExternalRaw = Regex("(?i)(@getExternal\\(.+?\\))")
-     private val C_patAt = Regex("(?<pre>.*?)@\\((?<key>.+?)\\)(\\.to(?<fn>\\w+)\\(\\))?(?<post>.*)")
-
-
-     /**************************************************************************/
-     /**
-      * Loops over a string repeatedly replacing @(...) entries by their
-      * associated values until we no longer succeed in making any changes.
-      * Mainly used internally, but also used when generating the Sword config
-      * file.
-      *
-      * This is complicated, and I almost certainly haven't covered all nesting
-      * possibilities (@getExternal within @(...) within @getExternal etc), but
-      * hopefully it's good enough for the things we're likely to encounter.
-      *
-      * @param value Value to be expanded.
-      * @return Expanded value.
-      */
-
-     fun expandReferences (value: String, nullIsOk: Boolean): String?
-     {
-       val errorStack: Stack<String> = Stack()
-       errorStack.push(value)
-
-       try
-       {
-         return expandReferences1(value, errorStack, if (nullIsOk) 999 else 1)
-       }
-       catch (_: Exception)
-       {
-         throw StepException("ConfigData error parsing: " + errorStack.joinToString(" -> "))
-       }
-     }
-
-
-
-     /**************************************************************************/
-     private fun expandReferences1 (theValue: String?, errorStack: Stack<String>, level: Int): String?
-     {
-         /**********************************************************************/
-         //Dbg.dCont(theValue!!, "stepBiblicaDefaultAboutDerivedFromMetadata")
-
-
-
-         /**********************************************************************/
-         fun doAdditionalProcessing (mr: MatchResult, value: String?): String?
-         {
-           if (null == value) return null
-           var x = value
-           if (null != mr.groups["fn"]) x = specialistProcessing(value, mr.groups["fn"]!!.value)
-           return mr.groups["pre"]!!.value + x + mr.groups["post"]!!.value
-         }
-
-
-
-         /**********************************************************************/
-         if (null == theValue)
-         {
-           if (1 == level) throw StepException("")
-           return null
-        }
-
-
-
-        /**********************************************************************/
-        /* tidyVal (above) sorts out things like converting {space} to ' '.  We
-           now replace escaped parens by special markers so they don't confuse
-           parsing. */
-
-        var value = tidyVal(theValue).replace("\\(", "\u0000").replace("\\)", "\u0001")
-
-
-
-        /**********************************************************************/
-        /* Expand all @(...)'s, one at a time. */
-
-        while (true)
-        {
-          val mr: MatchResult = C_patAt.find(value) ?: break
-          value = doAdditionalProcessing(mr, expandReferencesAt(value, mr, errorStack, level)) ?: return null
-        }
-
-
-
-         /**********************************************************************/
-         /* Expand all @getExternal's, one at a time. */
-
-         while (true)
-         {
-           val mr: MatchResult = C_patGetExternalRevised.find(value) ?: break
-           value = doAdditionalProcessing(mr, expandReferencesGetExternal(value, mr, errorStack, level)) ?: return null
-         }
-
-
-
-       /**********************************************************************/
-        value =  value.replace("\u0000", "(").replace("\u0001", ")")
-        return value
-     }
-
-
-     /**************************************************************************/
-     /* Expands all @getExternal's.  Because getExternal is concerned with data
-        obtained from a third party who will not use our calling conventions, we
-        can be confident that the data we obtain will not use @(...), and
-        therefore we can be sure that no further expansion of the data is
-        required. */
-
-     private fun expandReferencesGetExternal (theValue: String, mr: MatchResult, errorStack: Stack<String>, level: Int): String?
-     {
-       var res = ConfigDataExternalFileInterface.getData(mr.groups["selector"]!!.value, mr.groups["xpath"]!!.value)
-       if (null == res && 1 == level)
-       {
-         errorStack.push(theValue)
-         throw StepException("")
-       }
-
-       if (null == res)
-         return null
-
-       //if (null != mr.groups["fn"] && mr.groups["fn"]!!.value.isNotEmpty())
-       //  res = specialistProcessing(res, mr.groups["fn"]!!.value)
-
-       return res + mr.groups["post"]!!.value
-     }
-
-
-
-     /****************************************************************************/
-     /* Certain values have to be determined based upon other values, or else
-        require to be converted to canonical form.  The processing here handles
-        this.  Note that it is not concerned with expanding @-references or
-        anything like that -- it works things out based purely upon its own
-        knowledge. */
-
-     private fun getCalculatedValue (key: String): String?
-     {
-         /************************************************************************/
-         when (key.lowercase())
-         {
-           /**********************************************************************/
-           /* We have language codes and language codes.  Crosswire wants
-              extended information in the Sword configuration file -- the
-              2-character language code (or the 3-character code if no 2-character
-              code is available), followed by the script code (if any) and the
-              country code (again if any), with dashes as separators.  And I think
-              trailing dashes need to be stripped off.  I'm not sure what is
-              supposed to happen if we have a country code but no script code;
-              I guess that should never happen. */
-
-           "stepextendedlanguagecode" ->
-           {
-             val languageCode = get("stepLanguageCode2Char")!!
-             val script = get("stepSuppliedScriptCode")!!
-             val country = get("stepSuppliedCountryCode")!!
-             var res = listOf(languageCode, script, country).joinToString("-")
-             while (res.endsWith("-")) res = res.substring(0, res.length - 1)
-             return res
-           }
-
-
-
-           /**********************************************************************/
-           /* This is fairly unpleasant, and will need careful maintenance (which
-              means that at some point you will find yourself cursing me for
-              having done this).  Certain aspects of the processing (most notably
-              determining the full module name, which appears below) need to know
-              whether STEP has done anything to add value to the module.  At the
-              time of writing, value may be added by adding Strong's markup,
-              morphology markup, or 'significant' reversification.  The first two
-              have to be flagged directly in the config, but the third is
-              calculated internally.  We cannot therefore give back a value for
-              stepHasAddedValue until that assessment has been carried out, which
-              can be recognised because only at that point will
-              stepAddedValueReversification have been set.
-
-              Note that this will need to be altered if the list of things via
-              which we can add value is changed.  Look also for a reference to
-              stepHasAddedValue in ConverterOsisToSwordController, because there is
-              a following para which adds information about the various added value
-              to the copyright page, and this will need changing too. */
-
-            "stephasaddedvalue" ->
-            {
-              if (null == getInternal("stepAddedValueReversification", true))
-                throw StepException("Metadata request for stepHasAddedValue before reversification has run")
-
-              return if (getAsBoolean("stepAddedValueMorphology", "No") ||
-                         getAsBoolean("stepAddedValueStrongs", "No") ||
-                         getAsBoolean("stepAddedValueReversification")) "Yes" else "No"
-            }
-
-
-
-           /**********************************************************************/
-           /* Also rather awkward.  DIB has asked that where STEP is adding value
-              to a module (see previous para for details) we add a suffix to the
-              module name.  We were able to set stepModuleNameWithoutSuffix early
-              on, based purely upon looking at the name of the root folder, but we
-              can't return a full module name (including possible suffix) until
-              we've carried out an assessment as to whether reversification will
-              need to be applied.
-
-              Except, on 13-Apr-22, this changed rather: now in general we don't
-              want to add this suffix after all, regardless of what we have done
-              to the module, unless we reckon there is a risk of a name clash.
-              This is controlled by stepDecorateModuleNamesWhereStepHasAddedValue.
-            */
-
-            "stepmodulename" ->
-            {
-              var moduleName = getInternal("stepModuleNameWithoutSuffix", false)
-              if (getAsBoolean("stepHasAddedValue") && getAsBoolean("stepDecorateModuleNamesWhereStepHasAddedValue", "No")) moduleName += "_"
-              moduleName = TestController.activeController().getModuleNamePrefix() + moduleName
-              return moduleName
-            }
-
-
-
-           /**************************************************************************/
-           "steptextdirection" ->
-           {
-             if (null != m_Metadata["stepTextDirection"]) return m_Metadata["stepTextDirection"]!!.m_Value
-             return Unicode.getTextDirection(m_SampleText) // $$$ Need a string taken from a canonical portion of the scripture as input.
-           }
-
-
-
-           /**************************************************************************/
-           "steptextdirectionforsword" ->
-           {
-             val x = getInternal("stepTextDirection", false)
-             return if ("LTR" == x || "LtoR" == x) "LtoR" else "RtoL"
-           }
-
-
-
-           /**************************************************************************/
-           "stepTextModifiedDate" ->
-           {
-             val modificationDate = m_Metadata["stepTextModifiedDate"]
-             return if (null == modificationDate)
-               "Text accessed: " + getInternal("stepVernacularTextAccessedDate", false)
-             else
-               "Text last modified: $modificationDate"
-           }
-
-
-
-           /**********************************************************************/
-           /* I allow the configuration data to force verse-per-line.  The main
-              rationale for this code paragraph, however, was that at one stage
-              RTL texts had to be forced to verse-per-line or they were
-              rendered incorrectly.  This is no longer the case. */
-
-          "stepforceverseperline" ->
-           {
-             if (null != m_Metadata["stepForceVersePerLine"]) return m_Metadata["stepForceVersePerLine"]!!.m_Value
-             // return if ("RTL" == getInternal("stepTextDirection", false)) "true" else "false"
-             return "false"
-           }
-
-
-
-           /**********************************************************************/
-           /* We need to be very careful to get the case right here, because this is
-              usually passed as an argument to osis2mod.exe, and there the scheme
-              name is case-sensitive. */
-
-            "stepVersificationScheme" ->
-            {
-              val parmValue = m_Metadata[key] ?: throw StepException("No metadata found for $key.")
-              var schemeName = parmValue.m_Value.lowercase()
-              if (schemeName.startsWith("nrsv") || schemeName.startsWith("kjv"))
-                schemeName = schemeName.substring(0, schemeName.length - 1) +
-                  if (BibleStructureTextUnderConstruction.hasDc() || ReversificationData.targetsDc()) "a" else ""
-              return canonicaliseSchemeName(schemeName)
-            }
-
-
-
-            /**********************************************************************/
-            else ->
-              return null
-        } // when
-     }
-
-
-     /**************************************************************************/
-     /* Applies any additional specialist processing required on certain types
-        of value. */
-
-     private fun specialistProcessing (value: String, fn: String): String
-     {
-       var revisedValue = value
-
-       when (fn.lowercase())
-       {
-         "todate" ->
-         {
-           if (revisedValue.matches(".*([+-])\\d\\d:\\d\\d$".toRegex())) // Assume standard format but may need to get rid of daylight savings because LocalDateTime can't handle it.
-             revisedValue = revisedValue.substring(0, revisedValue.length - 7)
-           val ldt = LocalDate.parse(revisedValue)
-           val cal = Calendar.getInstance()
-           cal[ldt.year, ldt.monthValue - 1] = ldt.dayOfMonth
-           revisedValue = SimpleDateFormat("dd-MMM-yyyy").format(cal.time)
-         }
-
-         "totextdirection" ->
-         {
-           revisedValue = revisedValue.lowercase()
-           revisedValue = if (revisedValue == "ltr") "LtoR" else "RtoL"
-         }
-       } // when
-
-
-       return revisedValue
-     }
-
-
-     /**************************************************************************/
-     /* This is called to expand @(aaa, bbb, ... =xzy) where the =xyz is a fixed
-        string to serve as the default and is optional, and there may be one or
-        more other elements.
-
-        This method deals with only a single @(...) as defined by the match
-        result passed to it.  It works through each element aaa, bbb, ... in
-        turn trying to obtain a value for it, which it does via a recursive
-        call to expandReferences1.  If it fails, it falls back on any default
-        instead.
-
-        Note that there is no call to have another @(...) nested inside the one
-        we are processing, which simplifies the parsing -- an element may
-        _resolve_ to a string containing further @(...)'s, but that string is
-        dealt with via the recursive call and therefore does not serve to
-        confuse the present one. */
-
-     private fun expandReferencesAt (theValue: String, mr: MatchResult, errorStack: Stack<String>, level: Int):  String?
-     {
-       /************************************************************************/
-       var mainPart = mr.groups["key"]!!.value
-       var dflt: String? = null
-       //Dbg.dCont(theValue, "code3")
-
-
-
-       /************************************************************************/
-       /* '=' marks the start of the default value if any.  Split this off. */
-
-       val ix = mainPart.indexOf("=")
-       if (ix >= 0)
-       {
-         dflt = mainPart.substring(ix + 1)
-         mainPart = mainPart.substring(0, ix)
-       }
-
-
-
-       /************************************************************************/
-       /* Having got the default out of the way, the remainder of the @(...) may
-          consist of one or more elements, comma-separated. */
-
-       val parts = mainPart.split(",")
-       var resolvedValue: String? = null
-
-       for (i in parts.indices)
-       {
-         resolvedValue = expandReferences1(parts[i].trim(), errorStack, level + 1)
-         if (null != resolvedValue)
-         {
-           if (!parts[i].lowercase().contains("@get"))
-             resolvedValue = getInternal(resolvedValue, false)
-         }
-
-         if (null != resolvedValue)
-           break
-       }
-
-
-
-       /************************************************************************/
-       /* Default if necessary. */
-
-      if (null == resolvedValue) resolvedValue = dflt
-      if (null == resolvedValue && 1 == level)
+    /**
+     * Takes a string possibly containing @(...) and / or @getExternal(...) and
+     * returns the expanded form.
+     *
+     * nullsOk is relevant only where we are obtaining a single value.  If
+     * we have multiple top level values being concatenated, a null is always
+     * an error.
+     *
+     * @param theLine Line to be processed.
+     * @param nullsOk True if a null value is ok.  (Throws an exception otherwise.)
+     * @return Resulting value.
+     */
+
+    fun expandReferences (theLine: String?, nullsOk: Boolean): String?
+    {
+      val errorStack: Stack<String> = Stack()
+
+      try
       {
-        errorStack.push(theValue)
-        throw StepException("")
+        //Dbg.dCont(theLine ?: "", ".#")
+        return expandReferencesTopLevel(theLine, nullsOk, errorStack)
+      }
+      catch (_: StepException)
+      {
+        throw StepException("ConfigData error parsing: " + errorStack.joinToString(" -> "))
+      }
+    }
+
+
+    /**************************************************************************/
+    private val C_Pat_ExpandReferences = "(?i)(?<at>(@|@getExternal|@choose))\\(\\.(\\d\\d\\d)\\.(?<content>.*?)\\.\\3\\.\\)(?<additionalProcessing>(\\.#\\w+))?".toRegex()
+    private val C_Pat_ExpandReferences_AdditionalProcessing = "(?<additionalProcessing>(\\.#\\w+))".toRegex()
+
+
+
+    /**************************************************************************/
+    /* Processes a single @-thing.  These are characterised by the fact that
+       they contain one or more elements, comma-separated, and we run across the
+       list until we find one that returns non-null.  In addition, they may
+       optionally contain a fixed string by way of default.  If present, this
+       will be preceded by '='.  Note that the default value is _not_ expanded
+       out -- it is taken as a fixed string. */
+
+    private fun expandReferenceAtThing (at: String, theLine: String, additionalProcessing: String?, errorStack: Stack<String>): String?
+    {
+      /************************************************************************/
+      val C_Evaluate = 1
+      val C_Choose = 2
+      val C_GetExternal = 3
+      val atType =
+        when (at)
+        {
+          "@" -> C_Evaluate
+          "@choose" -> C_Choose
+          else -> C_GetExternal
+        }
+      //Dbg.d(C_Choose == atType)
+
+
+
+      /************************************************************************/
+      errorStack.push("[expandReferenceAlternative: $theLine]")
+
+
+
+      /************************************************************************/
+      /* Split off the default, if any. */
+
+      val (line, dflt) = if ("=" in theLine) theLine.split("=").map { it.trim() } else listOf(theLine, null)
+
+
+
+      /************************************************************************/
+      /* If this is a getExternal, the first element is the file selector. */
+
+      var args = splitStringAtCommasOutsideOfParens(line!!)
+      var fileSelector: String? = null
+      if (C_GetExternal == atType)
+      {
+        fileSelector = args[0]
+        args = args.subList(1, args.size)
       }
 
-      return resolvedValue
+
+
+      /************************************************************************/
+      /* This takes a single argument to the @-thing, and expands this one
+         argument -- not to evaluate any value associated with it, but to see
+         if it, itself, involves @-things, in which case these @-things are
+         expanded out.  This leaves us with the actual value which can be
+         used to evaluate the @-thing.  Note that this will never return a
+         null -- the caller is guaranteed to have _something_ which can be
+         evaluated. */
+
+      fun expandArgument (arg: String): String?
+      {
+        val res = expandReferencesTopLevel(arg, false, errorStack) ?: return null // Expand out the argument itself.
+        return if (C_Choose == atType) res else expandReferenceIndividualElement(fileSelector, res, errorStack)
+      }
+
+
+
+      /************************************************************************/
+      /* Run over the individual elements until we find a non-null. */
+
+      var res: String? = null
+      for (arg in args)
+      {
+        res = expandArgument(arg) // See if the argument contains any @-things to be expanded.  res will always be non-null.
+
+        if (null != res) // If we've found a value. there's no need to evaluate further, but we do need to see if the value needs to be post-processed.
+        {
+          if (null != additionalProcessing)
+            res = specialistProcessing(res, additionalProcessing.replace(".#", ""))
+          break
+        }
+      }
+
+
+
+      /************************************************************************/
+      errorStack.pop()
+      return res ?: dflt
+  }
+
+
+  /**************************************************************************/
+  private fun expandReferenceIndividualElement (fileSelector: String?, elt: String, errorStack: Stack<String>): String?
+  {
+    errorStack.push("[expandReferenceAlternative: $elt]")
+    val res = if (null == fileSelector) get(elt) else ConfigDataExternalFileInterface.getData(fileSelector, elt)
+    errorStack.pop()
+    return res
+  }
+
+
+    /**************************************************************************/
+    /* Handles a string which may contain one or more @-things at the top level.
+       Expands all of them. */
+
+    private fun expandReferencesTopLevel (theLine: String?, nullsOk: Boolean, errorStack: Stack<String>): String?
+    {
+      /************************************************************************/
+      if (null == theLine)
+        return null
+
+
+
+      /************************************************************************/
+      var line = tidyVal(theLine) // Replace {space} by ' ' etc.
+
+
+
+      /************************************************************************/
+      //Dbg.dCont(line, "MinimumVersion=")
+
+
+
+      /************************************************************************/
+      /* Nothing to do unless the string contains "@(" or "@getExternal(". */
+
+      if ("@(" !in line && "@getExternal(" !in line && "@choose(" !in line)
+        return line
+
+
+
+      /************************************************************************/
+      line = line.replace("\\(", "JamieBra").replace("\\)", "JamieKet")
+
+
+
+      /************************************************************************/
+      errorStack.push("[expandReferencesConsecutive: $line]")
+
+
+
+      /************************************************************************/
+      /* Mark the corresponding sets of parens so that balanced parens can be
+         identified -- eg '(.001.   .001.)' */
+
+      line = StepStringUtils.markBalancedParens(line)
+
+
+
+      /************************************************************************/
+      /* Called when we have an @-thing to expand.  Parses the @-thing to
+         determine whether it's @() or @getExternal() and to obtain its content.
+         Removes from the content the markers introduced by
+         StepStringUtils.markBalancedParens because this method may be called
+         recursively on the content, and we don't want the markers to confuse
+         things.  Then expands the @-thing. */
+
+      fun evaluate (details: String, additionalProcessing: String?): String?
+      {
+        val mr = C_Pat_ExpandReferences.find(details) ?: return details
+        val at = mr.groups["at"]!!.value
+        var content = mr.groups["content"]!!.value
+        content = content.replace("\\.\\d\\d\\d\\.".toRegex(), "")
+        return expandReferenceAtThing(at, content, additionalProcessing, errorStack)
      }
 
+
+
+     /*************************************************************************/
+     /* Repeatedly looks for the next @-thing in the string and then arranges
+        tp parse it and replace it by its expanded value. */
+
+     while (true)
+     {
+       var at = "@(" // Look for @(.
+       var ixLow = line.indexOf(at)
+       if (-1 == ixLow)
+       {
+         at = "@getExternal("
+         ixLow = line.indexOf(at) // If @( wasn't found, look for @getExternal( instead.
+       }
+       if (-1 == ixLow)
+       {
+         at = "@choose("
+         ixLow = line.indexOf(at) // If @getExternal( wasn't found, look for @choose( instead.
+       }
+
+       if (-1 == ixLow) // If we didn't find any @-things, there's nothing else to expand.
+         break
+
+       val atLength = at.length
+       val marker = line.substring(ixLow + atLength, ixLow + atLength + 5) // Get the start marker eg .001.
+       val ixHigh = line.indexOf(marker, ixLow + at.length + 1) + marker.length + 1 // Points to the corresponding end marker.
+
+       val pre = line.substring(0, ixLow) // The bit before the @-thing.
+       val content = line.substring(ixLow, ixHigh) // The argument list within the @-thing.
+       var post = line.substring(ixHigh) // The bit after the @-thing.
+
+       var additionalProcessing: String? = null // Check to see if there's any additional processing -- eg .#toDate.
+       val mr = C_Pat_ExpandReferences_AdditionalProcessing.find(post)
+       if (null != mr)
+       {
+         additionalProcessing = mr.groups["additionalProcessing"]!!.value
+         post = post.substring(additionalProcessing.length) // Knock the additionalProcessing off the text which followed the @-thing.
+       }
+
+       line = pre + (evaluate(content, additionalProcessing) ?: "\b") + post // I use \b to flag the fact that we've had a null value.
+     }
+
+
+
+     /*************************************************************************/
+     /* I used \b above to indicate that something has returned a null.  If the
+        processed line comprises just a \b, then the overall value is null. */
+
+     var res = if ("\b" == line) null else line
+
+
+
+     /*************************************************************************/
+     /* If the overall result is a null, then it's an error if we actually have
+        just a null.  Otherwise, it's an error if we have a null anywhere in
+        the string, because we've been concatenating things, and it doesn't make
+        sense to concatenate something with a null. */
+
+     if (null == res)
+     {
+       if (!nullsOk)
+         throw StepException("")
+     }
+     else
+     {
+       if ("\b" in res)
+         throw StepException("")
+     }
+
+
+
+     /*************************************************************************/
+     /* If the result is non-null, we try expanding it again, and then also
+        replace the special markers I use for escaped parens. */
+
+     if (null != res)
+     {
+       res = expandReferencesTopLevel(res, nullsOk, errorStack)
+       res = res!!.replace("JamieBra", "(").replace("JamieKet", ")")
+     }
+
+     errorStack.pop()
+     return res
+  }
+
+  /****************************************************************************/
+  /* Applies any additional specialist processing required on certain types
+     of value. */
+
+  private fun specialistProcessing (value: String, fn: String): String
+  {
+    var revisedValue = value
+
+    when (fn.lowercase())
+    {
+      "todate" ->
+      {
+        if (revisedValue.matches(".*([+-])\\d\\d:\\d\\d$".toRegex())) // Assume standard format but may need to get rid of daylight savings because LocalDateTime can't handle it.
+          revisedValue = revisedValue.substring(0, revisedValue.length - 7)
+        val ldt = LocalDateTime.parse(revisedValue)
+        val cal = Calendar.getInstance()
+        cal[ldt.year, ldt.monthValue - 1] = ldt.dayOfMonth
+        revisedValue = SimpleDateFormat("yyyy-MM-dd").format(cal.time)
+      }
+
+      "totextdirection" ->
+      {
+        revisedValue = revisedValue.lowercase()
+        revisedValue = if (revisedValue == "ltr") "LtoR" else "RtoL"
+      }
+    } // when
+
+
+    return revisedValue
+  }
 
 
 
@@ -1614,7 +1530,7 @@ object ConfigData
         /* And the English and vernacular abbreviations, except, again, where
            they are essentially the same thing. */
 
-        var englishAbbreviation = get("stepAbbreviationEnglish")!!
+        val englishAbbreviation = get("stepAbbreviationEnglish")!!
         var vernacularAbbreviation = get("stepAbbreviationLocal") ?: "\u0001"
 
         if (englishAbbreviation.lowercase() == vernacularAbbreviation.lowercase() ||
@@ -1890,6 +1806,31 @@ object ConfigData
     /****************************************************************************/
 
     /****************************************************************************/
+    /* Does what it says on the tin -- takes a string which may contain commas
+       and (hopefully balanced) parentheses, and splits the string at commas
+       outside of parens.  The individual elements are then trimmed. */
+
+    private fun splitStringAtCommasOutsideOfParens (line: String): List<String>
+    {
+      var level = 0
+      var modifiedString = ""
+      for (c in line)
+      {
+        var newC = c
+        when (c)
+        {
+          '(' -> ++level
+          ')' -> --level
+          ',' -> if (0 == level) newC = '\u0003'
+        }
+        modifiedString += newC
+      }
+
+      return modifiedString.split("\u0003").map { it.trim() }
+    }
+
+
+    /****************************************************************************/
     private fun tidyVal (vv: String): String
     {
         val v = vv.trim()
@@ -1899,7 +1840,7 @@ object ConfigData
 
 
     /****************************************************************************/
-    data class ParameterSetting (var m_Value: String, var m_Force: Boolean)
+    data class ParameterSetting (var m_Value: String?, var m_Force: Boolean)
 
 
     /****************************************************************************/
@@ -1929,7 +1870,7 @@ object ConfigData
     /****************************************************************************/
     private fun getBookList (otBooks: MutableSet<String>, ntBooks: MutableSet<String>, dcBooks: MutableSet<String>)
     {
-      fun process (filePath: String) { getBookList(otBooks, ntBooks, dcBooks, filePath) }
+      fun process (bookName: String, filePath: String) { getBookList(otBooks, ntBooks, dcBooks, filePath) }
       BibleBookAndFileMapperEnhancedUsx.iterateOverAllFiles(::process)
     }
 
@@ -1967,5 +1908,218 @@ object ConfigData
       catch (_: Exception)
       {
       }
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                           Calculated values                            **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /* The various calc_ modules have to be public in order to be able to call
+     them as required. */
+
+  /****************************************************************************/
+  fun parseRootFolderName (key: String): String
+  {
+    val bits = StandardFileLocations.getRootFolderName().split("_")
+    return if ("languageCode" == key) bits[1] else bits[2]
+  }
+
+
+  /****************************************************************************/
+  /* We have language codes and language codes.  Crosswire wants extended
+     information in the Sword configuration file -- the 2-character language
+     code (or the 3-character code if no 2-character code is available),
+     followed by the script code (if any) and the country code (again if any),
+     with dashes as separators.  And I think trailing dashes need to be stripped
+     off.  I'm not sure what is supposed to happen if we have a country code but
+     no script code; I guess that should never happen. */
+
+  fun calc_stepExtendedLanguageCode (): String
+  {
+    val languageCode = get("stepLanguageCode2Char")!!
+    val script = get("stepSuppliedScriptCode")!!
+    val country = get("stepSuppliedCountryCode")!!
+    var res = listOf(languageCode, script, country).joinToString("-")
+    while (res.endsWith("-")) res = res.substring(0, res.length - 1)
+    return res
+  }
+
+
+  /****************************************************************************/
+  /* At one time, it was necessary to force verse-per-line output on RTL texts
+     because of a bug in STEP.  I think that has now been fixed. */
+
+  fun calc_stepForceVersePerLine (): String
+  {
+    // return if ("RTL" == getInternal("stepTextDirection", false)).uppercase() "true" else "false"
+    return "false"
+  }
+
+
+  /****************************************************************************/
+  fun calc_stepLanguageCode2Char (): String
+  {
+    var languageCode = getInternal("stepLanguageCodeFromRootFolderName", false)!!.lowercase()
+    if (2 != languageCode.length) languageCode = IsoLanguageCodes.get2CharacterIsoCode(languageCode)
+    return languageCode
+  }
+
+
+  /****************************************************************************/
+  fun calc_stepLanguageCode3Char (): String
+  {
+    var languageCode = getInternal("stepLanguageCodeFromRootFolderName", false)!!.lowercase()
+    if (3 != languageCode.length) languageCode = IsoLanguageCodes.get3CharacterIsoCode(languageCode)
+    return languageCode
+  }
+
+
+  /****************************************************************************/
+  /* The language name will often be available from the metadata.  However, we
+     can't pick it up from there conveniently, because we may need it while
+     processing the configuration data at a point before we've actually been
+     able to read it.  We therefore need to rely upon it appearing in the
+     root folder, and at present the name there is of the form eg Text_deuHFA. */
+
+  fun calc_stepLanguageCodeFromRootFolderName (): String
+  {
+    return parseRootFolderName("languageCode")
+  }
+
+
+  /****************************************************************************/
+  fun calc_stepLanguageNameInEnglish (): String
+  {
+    return IsoLanguageCodes.getLanguageName(getInternal("stepLanguageCode3Char", false)!!)
+  }
+
+
+  /****************************************************************************/
+  /* Typically something like DeuHFA, comprising the three-character ISO
+     language code (first letter upper case, rest lower case), followed by
+     the abbreviated name of the text.  The abbreviated name should be as
+     supplied by the translators (and should be the vernacular abbreviation in
+     preference to the English abbreviation where the vernacular abbreviation
+     uses suitable Roman characters).  Hopefully it will be all upper case,
+     but we need to go with whatever the translators give us.
+
+     Note the use of 'hbo' as a language code for ancient Hebrew.  I am not
+     sure of the extent to which this has official status, having been unable
+     to find it in any online lists.  However, apparently STEP is set up to
+     accept this.  The alternative -- heb -- covers both ancient and modern
+     Hebrew, which would mean that using just this abbreviation we could not
+     distinguish between an ancient text and a modern Hebrew translation. */
+
+
+  fun calc_stepModuleName (): String
+  {
+    var moduleName = getInternal("stepLanguageCode3Char", false)!!.lowercase()
+    moduleName = if (moduleName in listOf("eng", "grc", "hbo")) "" else moduleName[0].uppercase() + moduleName.substring(1).lowercase()
+    moduleName += getInternal("stepVernacularAbbreviation", false)!!
+    return moduleName + if (getAsBoolean("stepNeedToDisambiguateAbbreviation", "no")) "_sb" else ""
+  }
+
+
+  /****************************************************************************/
+  fun calc_stepTextDirection (): String
+  {
+    return Unicode.getTextDirection(m_SampleText) // Need a string taken from a canonical portion of the scripture as input.
+  }
+
+
+  /****************************************************************************/
+  /* Aggravatingly, Sword won't accept LTR or RTL. */
+
+  fun calc_stepTextDirectionForSword (): String
+  {
+    val x = getInternal("stepTextDirection", false)!!.uppercase()
+    return if ("LTR" == x || "LtoR" == x) "LtoR" else "RtoL"
+  }
+
+
+  /****************************************************************************/
+  /* The vernacular abbreviation will often be available from the metadata.
+     However, we can't pick it up from there conveniently, because we may need
+     it while processing the configuration data at a point before we've actually
+     been able to read it.  We therefore need to rely upon it appearing in the
+     root folder, and at present the name there is of the form eg Text_deuHFA. */
+
+  fun calc_stepVernacularAbbreviation (): String
+  {
+    return parseRootFolderName("vernacularAbbreviation")
+  }
+
+
+  /****************************************************************************/
+  /* Forces the versification scheme to canonical form.  This basically means
+     sorting adding (or removing) the 'a' on texts like kjv and nrsv each of
+     which comes in two forms, one which includes DC books and one which does
+     not; and sorting out lower case / upper case issues (osis2mod is sensitive
+     to case). */
+
+  fun calc_stepVersificationSchemeCanonical (): String
+  {
+    var schemeName = getInternal("stepVersificationScheme", false)!!.lowercase()
+    if (schemeName.startsWith("nrsv") || schemeName.startsWith("kjv"))
+      schemeName = schemeName.replace("a", "") + if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.targetsDc()) "a" else ""
+    return canonicaliseSchemeName(schemeName)
+  }
+
+
+  /****************************************************************************/
+  /* Certain values have to be determined based upon other values, or else
+     require to be converted to canonical form.  The processing here handles
+     this.  Note that it is not concerned with expanding @-references or
+     anything like that -- it works things out based purely upon its own
+     knowledge. */
+
+  private val m_CalculatedValueProcessors = TreeMap<String, KFunction<*>>(String.CASE_INSENSITIVE_ORDER)
+
+
+  /****************************************************************************/
+  /* Called to check if a given configuration item is actually supplied by a
+     calc_ function.  If it is, it carries out the calculation, and stores the
+     result for future use.  Storing it means that it will not be subject to
+     changes if the things upon which it depends change.  It's swings and
+     roundabouts as to whether this is the right thing to do, but I think
+     it's probably more comprehensible if it remains constant after first
+     being accessed.
+
+     Note that I don't set the 'force' flag when storing the calculated
+     value.  Again a bit of a moot point, but I don't think I want to override
+     any values which the user may have chosen to supply.  Not that we'll
+     actually get as far as the present method anyway if we already have a
+     value available for the selected parameter. */
+
+  private fun getCalculatedValue (key: String): String?
+  {
+    //Dbg.d(key)
+    val res: String? = m_CalculatedValueProcessors[key]?.call(ConfigData)?.toString()
+    if (null != res) put(key, res, false)
+    return res
+  }
+
+
+  /****************************************************************************/
+  private fun initCalcMethods ()
+  {
+    ConfigData::class.memberFunctions.filter { it.name.startsWith("calc_") }.forEach {
+      m_CalculatedValueProcessors[it.name.replace("calc_", "")] = it
+    }
+  }
+
+
+  /****************************************************************************/
+  init {
+    initCalcMethods()
   }
 }

@@ -1,14 +1,12 @@
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
-import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
-import org.stepbible.textconverter.support.bibledetails.BibleStructureTextUnderConstruction
-import org.stepbible.textconverter.support.bibledetails.BibleStructuresSupportedByOsis2modAll
+import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.support.ref.RefCollection
@@ -140,12 +138,12 @@ object TextConverterVersificationHealthCheck
 
   private fun checkChapterOrdering (chapters: List<Node>)
   {
-     val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.getAttribute(Dom.findNodeByName(chapters[0].ownerDocument, "_X_book")!!, "code")!!)
+     val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.findNodeByName(chapters[0].ownerDocument, "_X_book")!!["code"]!!)
      var expectation = 1
 
      fun checkExpectation (chapterNode: Node)
      {
-       val refAsString = Dom.getAttribute(chapterNode, "sid")!!
+       val refAsString = chapterNode["sid"]!!
        try
        {
          val ref = Ref.rdUsx(refAsString)
@@ -211,7 +209,7 @@ object TextConverterVersificationHealthCheck
 
     fun collect (sid: Node)
     {
-      val refAsString = Dom.getAttribute(sid, "sid")
+      val refAsString = sid["sid"]
       val rc = RefCollection.rdUsx(refAsString!!)
       val refKeys = rc.getAllAsRefKeys()
       refKeys.forEach { addVerse(it) }
@@ -239,18 +237,18 @@ object TextConverterVersificationHealthCheck
     /* ... and for missing verses. */
 
     var missings: MutableList<Int> = mutableListOf()
-    val chapterSid = Dom.getAttribute(chapter, "sid")!!
+    val chapterSid = chapter["sid"]!!
 
     if (XXXOsis2ModInterface.usingCrosswireOsis2Mod())
     {
-      for (i in 1 .. BibleStructuresSupportedByOsis2modAll.getStructureFor(ConfigData["stepVersificationScheme"]!!).getLastVerseNo(chapterSid))
+      for (i in 1 .. BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationSchemeCanonical"]!!, true!!).getLastVerseNo(chapterSid))
         if (null == verseCollection[i])
           missings.add(i)
     }
     else
     {
       val chapter = Ref.rdUsx(chapterSid).getC()
-      missings = BibleStructureTextUnderConstruction.getAllRefKeysForMissingVerses().filter { Ref.getC(it) == chapter } .map { Ref.getV(it) } as MutableList<Int>
+      missings = BibleStructure.UsxUnderConstructionInstance().getMissingEmbeddedVersesForText().filter { Ref.getC(it) == chapter } .map { Ref.getV(it) } as MutableList<Int>
     }
 
 
@@ -279,10 +277,10 @@ object TextConverterVersificationHealthCheck
   private fun checkForMissingAndExcessVerses (document: Document)
   {
     /**************************************************************************/
-    val osis2modSchemeDetails = BibleStructuresSupportedByOsis2modAll.getStructureFor(ConfigData["stepVersificationScheme"]!!)
-    val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.getAttribute(Dom.findNodeByName(document,"_X_book")!!, "code")!!)
-    BibleStructureTextUnderConstruction.populate(document, wantWordCount = false, reportIssues = false)
-    val diffs = BibleStructureTextUnderConstruction.compareWithGivenScheme(bookNumber, osis2modSchemeDetails)
+    val osis2modSchemeDetails = BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationSchemeCanonical"]!!, true)
+    val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.findNodeByName(document,"_X_book")!!["code"]!!)
+    BibleStructure.UsxUnderConstructionInstance().populateFromDom(document, wantWordCount = false)
+    val diffs = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), osis2modSchemeDetails)
 
 
 
@@ -318,7 +316,7 @@ object TextConverterVersificationHealthCheck
     /**************************************************************************/
     fun check (sid: Node)
     {
-      val refAsString = Dom.getAttribute(sid, "sid")!!
+      val refAsString = sid["sid"]!!
       val ref = Ref.rdUsx(refAsString)
       val verse = ref.getV()
       val subverse = ref.getS()
@@ -378,12 +376,12 @@ object TextConverterVersificationHealthCheck
     {
       if (Dom.hasAttribute(node, "sid"))
       {
-        currentSid = Dom.getAttribute(node, "sid")!!
+        currentSid = node["sid"]!!
         if ("sid" == expectation)
           expectation = "eid"
         else
         {
-          m_ErrorReporter(Dom.getAttribute(node, "sid")!!, "sid / eid ordering error near here.")
+          m_ErrorReporter(node["sid"]!!, "sid / eid ordering error near here.")
           throw StepException("")
         }
       }
@@ -392,13 +390,13 @@ object TextConverterVersificationHealthCheck
       {
         if ("eid" == expectation)
         {
-          if (!currentSid.equals(Dom.getAttribute(node, "eid")!!, ignoreCase = true))
-            m_ErrorReporter(Dom.getAttribute(node, "eid")!!, "Incorrect eid value: " + Dom.getAttribute(node, "eid")!!)
+          if (!currentSid.equals(node["eid"]!!, ignoreCase = true))
+            m_ErrorReporter(node["eid"]!!, "Incorrect eid value: " + node["eid"]!!)
             expectation = "sid"
         }
         else
         {
-          m_ErrorReporter(Dom.getAttribute(node, "eid")!!, "sid / eid ordering error near here.")
+          m_ErrorReporter(node["eid"]!!, "sid / eid ordering error near here.")
           throw StepException("")
         }
       }
@@ -420,7 +418,7 @@ object TextConverterVersificationHealthCheck
 
       if ("sid" != expectation)
       {
-        val lastVerseRefAsString = Dom.getAttribute(verses[verses.size - 1], "eid")!!
+        val lastVerseRefAsString = verses[verses.size - 1]["eid"]!!
         val chapterRefAsRefKey = Ref.rdUsx(lastVerseRefAsString).toRefKey_bc()
         val chapterRef = Ref.rd(chapterRefAsRefKey).toString()
         m_ErrorReporter(chapterRef, "sid / eid ordering error at end of this chapter.")
@@ -439,7 +437,7 @@ object TextConverterVersificationHealthCheck
   private fun checkVerseSidsAndEidsAreValidRefs (chapter: Node)
   {
     /**************************************************************************/
-    val  chapterSid = Dom.getAttribute(chapter, "sid")!!
+    val  chapterSid = chapter["sid"]!!
     val  chapterRef = Ref.rdUsx(chapterSid)
     val  bookNo = chapterRef.getB()
     val  chapterNo = chapterRef.getC()
@@ -475,7 +473,7 @@ object TextConverterVersificationHealthCheck
   /****************************************************************************/
   private fun getId (verse: Node): String
   {
-    return (if (Dom.hasAttribute(verse, "sid")) Dom.getAttribute(verse, "sid") else Dom.getAttribute(verse, "eid"))!!
+    return (if (Dom.hasAttribute(verse, "sid")) verse["sid"] else verse["eid"])!!
   }
 
 

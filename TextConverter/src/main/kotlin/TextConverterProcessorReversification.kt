@@ -2,8 +2,7 @@ package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
-import org.stepbible.textconverter.support.bibledetails.BibleStructureNrsvx
-import org.stepbible.textconverter.support.bibledetails.BibleStructureTextUnderConstruction
+import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
@@ -226,11 +225,11 @@ object TextConverterProcessorReversification: TextConverterProcessorBase ()
   {
     initialise()
     ReversificationData.getSourceBooksInvolvedInMoveActionsAbbreviatedNames()  .forEach { processMovePart1(it) }
-    ReversificationData.getAllBooksAbbreviatedNames()                          .forEach { processNonMove(it, "renumber") }
+    ReversificationData.getAllBookNumbersAbbreviatedNames()                          .forEach { processNonMove(it, "renumber") }
     ReversificationData.getStandardBooksInvolvedInMoveActionsAbbreviatedNames().forEach { processMovePart2(it) }
-    ReversificationData.getAllBooksAbbreviatedNames()                          .forEach { processNonMove(it, "") }
+    ReversificationData.getAllBookNumbersAbbreviatedNames()                          .forEach { processNonMove(it, "") }
     insertMoveOriginals()
-    ReversificationData.getAllBooksAbbreviatedNames()                          .forEach { terminate(it) }
+    ReversificationData.getAllBookNumbersAbbreviatedNames()                          .forEach { terminate(it) }
   }
 
 
@@ -253,7 +252,7 @@ object TextConverterProcessorReversification: TextConverterProcessorBase ()
      ReversificationData.process()
      getReversificationNotesLevel()
      checkExistenceCriteriaForCrossBookMappings(ReversificationData.getBookMappings())
-     ReversificationData.getAllBooksAbbreviatedNames().forEach { BookDetails(it) } // Create BookDetails entry and carry out any pre-processing.
+     ReversificationData.getAllBookNumbersAbbreviatedNames().forEach { BookDetails(it) } // Create BookDetails entry and carry out any pre-processing.
   }
 
 
@@ -298,13 +297,13 @@ object TextConverterProcessorReversification: TextConverterProcessorBase ()
     fun dontWantTarget (from: String, to: String, message: String)
     {
       if (!crossBookMappings.contains("$from.$to")) return
-      if (BibleStructureTextUnderConstruction.hasBook(to)) throw StepException(message)
+      if (BibleStructure.UsxUnderConstructionInstance().bookExists(to)) throw StepException(message)
     }
 
     fun doWantTarget (from: String, to: String, message: String)
     {
       if (!crossBookMappings.contains("$from.$to")) return
-      if (!BibleStructureTextUnderConstruction.hasBook(to)) throw StepException(message)
+      if (!BibleStructure.UsxUnderConstructionInstance().bookExists(to)) throw StepException(message)
     }
 
     dontWantTarget("dan", "bel", "Need to move text from Dan to Bel, but Bel already exists")
@@ -486,7 +485,7 @@ object TextConverterProcessorReversification: TextConverterProcessorBase ()
       out.println("<?xml version='1.0' encoding='UTF-8'?>")
       out.println("<_X_usx version='3.0'>")
       out.println("  <_X_book code='#'/>".replace("#", bookName))
-      for (i in 1 .. BibleStructureNrsvx().getLastChapterNo(bookName)) makeChapter(out, bookName, i)
+      for (i in 1 .. BibleStructure.NrsvxInstance().getLastChapterNo(bookName)) makeChapter(out, bookName, i)
       out.println("</_X_usx>")
     }
 
@@ -1104,7 +1103,7 @@ object TextConverterProcessorReversification: TextConverterProcessorBase ()
     {
       val nextStart = m_MoveOriginals[i + 1].m_FirstSourceRefKey
       val thisEnd = m_MoveOriginals[i].m_LastSourceRefKey
-      if (!BibleStructureTextUnderConstruction.isAdjacent(thisEnd, nextStart)) continue
+      if (!BibleStructure.UsxUnderConstructionInstance().isAdjacent(thisEnd, nextStart)) continue
 
       val childNodes = m_MoveOriginals[i + 1].m_Container.childNodes
       Dom.addChildren(m_MoveOriginals[i].m_Container, childNodes)
@@ -1792,8 +1791,8 @@ object TextConverterProcessorReversification: TextConverterProcessorBase ()
     {
       val bookNode = Dom.findNodeByName(document, "_X_book")!!
       chapterNode = Dom.createNode(document, "<_X_chapter sid='$chapterRef' _X_generatedReason='chapterCreatedByReversification'/>")
-      val verseSidNode = Dom.createNode(document, "<verse _TEMP_dummy='y' sid='$chapterRef:500'/>")
-      val verseEidNode = Dom.createNode(document, "<verse _TEMP_dummy='y' eid='$chapterRef:500'/>")
+      val verseSidNode = Dom.createNode(document, "<verse _TEMP_dummy='y' sid='$chapterRef:${RefBase.C_BackstopVerseNumber}'/>")
+      val verseEidNode = Dom.createNode(document, "<verse _TEMP_dummy='y' eid='$chapterRef:${RefBase.C_BackstopVerseNumber}'/>")
       chapterNode.appendChild(verseSidNode)
       chapterNode.appendChild(verseEidNode)
       bookNode.appendChild(chapterNode)

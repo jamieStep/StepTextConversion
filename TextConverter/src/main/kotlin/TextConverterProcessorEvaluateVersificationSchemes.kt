@@ -1,14 +1,11 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRawUsx
-import org.stepbible.textconverter.support.bibledetails.BibleStructureTextUnderConstruction
-import org.stepbible.textconverter.support.bibledetails.BibleStructuresSupportedByOsis2modAll
+import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.shared.SharedData
 import java.io.File
 
@@ -97,9 +94,9 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
   private fun doIt ()
   {
     Dbg.reportProgress("  Evaluating versification schemes")
-    BibleStructureTextUnderConstruction.populate(BibleBookAndFileMapperRawUsx, wantWordCount = false, reportIssues = true)
+    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, wantWordCount = false)
     val bookNumbersInRawUsx = BibleBookAndFileMapperRawUsx.getBookNumbersInOrder()
-    BibleStructuresSupportedByOsis2modAll.getSchemes().forEach { evaluateScheme(it, bookNumbersInRawUsx) }
+    BibleStructuresSupportedByOsis2mod.getSchemes().forEach { evaluateScheme(it, bookNumbersInRawUsx) }
     val details = investigateResults()
     evaluateNeedForReversification()
     outputDetails(details)
@@ -172,12 +169,14 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
     /**************************************************************************/
     Dbg.reportProgress("  Evaluating $scheme")
-    val bibleStructureOther = BibleStructuresSupportedByOsis2modAll.getStructureFor(scheme)
+    val bibleStructureOther = BibleStructure.Osis2modSchemeInstance(scheme, false)
 
 
 
     /**************************************************************************/
-    if (BibleStructureTextUnderConstruction.hasDc() && !bibleStructureOther.hasDc())
+    val textUnderConstructionHasDc = BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc()
+    val otherHasDc = bibleStructureOther.hasAnyBooksDc()
+    if (textUnderConstructionHasDc && !otherHasDc)
     {
       //m_Evaluations.add(Evaluation(scheme,999_999, 0, 0, "rejected because it lacks DC"))
       return
@@ -186,21 +185,10 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
 
     /**************************************************************************/
-    if (!BibleStructureTextUnderConstruction.hasDc() && bibleStructureOther.hasDc())
+    if (!textUnderConstructionHasDc && otherHasDc)
     {
-      //m_Evaluations.add(Evaluation(scheme,999_999, 0, 0, "rejected because it lacks DC"))
       return
     }
-
-
-
-    /**************************************************************************/
-    /* No point in looking at the version with DC on KJVA and NRSVA if the
-       text being processed doesn't have DC -- the versions without will be
-       fine. */
-
-    //if (!BibleStructureTextUnderConstruction.hasDc() && ("kjva" == scheme || "nrsva" == scheme))
-    //  return
 
 
 
@@ -210,7 +198,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
      fun evaluate (bookNumber: Int)
      {
-       val comparisonDetails = BibleStructureTextUnderConstruction.compareWithGivenScheme(bookNumber, bibleStructureOther)
+       val comparisonDetails = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), bibleStructureOther)
        versesMissingInOsis2modScheme += comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.size
        versesInExcessInOsis2modScheme += comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.size
        //if ("german" == scheme) comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.forEach { Dbg.d("===== " + Ref.rd(it).toString() )}

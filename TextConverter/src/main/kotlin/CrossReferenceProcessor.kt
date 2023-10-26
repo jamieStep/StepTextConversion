@@ -3,13 +3,13 @@ package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
-import org.stepbible.textconverter.support.bibledetails.BibleStructureTextUnderConstruction
+import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
-import org.stepbible.textconverter.support.miscellaneous.StepStringFormatter
+import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.ref.*
 import org.stepbible.textconverter.support.ref.RefFormatHandlerReaderVernacular.readEmbedded
 import org.w3c.dom.Document
@@ -42,7 +42,7 @@ import org.w3c.dom.Node
  * these tags and the variations upon them appears later.  For now, the
  * important take-away message is that each gives the target reference(s)
  * in two forms -- a USX format attribute (loc or link-href) which tells
- * teh processing where to link to, and a (presumably) vernacular form
+ * the processing where to link to, and a (presumably) vernacular form
  * which is visible to the user, and which they can click on to activate
  * the link.  (This vernacular form is given by the *content* of the tag.
  * It is *presumably* going to be a vernacular representation of the target,
@@ -81,6 +81,12 @@ import org.w3c.dom.Node
  *   do not exist I issue a warning (except where xnt, xot or xdc give the
  *   impression that the translators didn't *expect* the target to be present)
  *   and turn the tag into plain text.
+ *
+ * - There is also some processing specific to Biblica texts, because Biblica
+ *   tend to use note:f throughout when they really need to use note:x.
+ *   (note:f is for plain vanilla footnotes, while note:x is for cross-refs.
+ *   You *can* have cross-references within footnotes, and they will work,
+ *   but they're clumsy.  See correctNoteStyles for details.
  *
  * - Subsequent to reversification, update references.  I *do* do this, but
  *   only in a slightly half-hearted manner.  Reversification may change the
@@ -206,6 +212,7 @@ import org.w3c.dom.Node
     //validate(document)
     checkRefTargetsExist(document)
     convertSingleChapterReferences(document)
+    correctNoteStyles(document)
     deleteBelongsTo(document)
   }
 
@@ -291,7 +298,7 @@ import org.w3c.dom.Node
     fun processRef (node: Node)
     {
       val rc = RefCollection.rdUsx(Dom.getAttribute(node, "loc")!!)
-      val foundError = rc.getAllAsRefs().firstOrNull { !BibleStructureTextUnderConstruction.hasBook(it) }
+      val foundError = rc.getAllAsRefs().firstOrNull { !BibleStructure.UsxUnderConstructionInstance().bookExists(it) }
 
       if (null != foundError)
       {
@@ -338,6 +345,112 @@ import org.w3c.dom.Node
     }
 
     Dom.findNodesByName(document, "ref").forEach { processRef(it) }
+  }
+
+
+  /****************************************************************************/
+  /* This code shouldn't exist.  It's here only because Biblica don't tend to
+     use note:x even for cross-references.  Sadly to make sense of all this
+     I'm going to have to go into some detail.
+
+     note:f (and related tags note:ef and note:fe, neither of which I have ever
+     seen being used) is employed to mark a plain vanilla footnote -- ie one
+     whose main purpose is to hold explanatory text (text which in some
+     instances can be quite large).
+
+     note:x (and note:ex) is used basically to hold cross-references.
+
+     The purpose of this method is to convert note:f to note:x where this seems
+     appropriate.  I should possibly limit the processing to Biblica texts only,
+     but at present this will run regardless of the type of text we are
+     handling.
+
+     To my mind, footnotes essentially come in three flavours.  There is the
+     extensive explanatory footnote; the 'pure' cross-reference (which may
+     actually contain a few additional noise words, like 'See' -- 'See Jn 3:1');
+     and a hybrid which contains a 'fair amount' of explanatory text, and some
+     references too.
+
+     The first of these genuinely should be contained within note:f.
+
+     The second should genuinely be contained with note:x.
+
+     The third requires a somewhat arbitrary call, since it could be contained
+     in either.  My processing here looks to see how much plain text accompanies
+     the cross-reference(s).  If there's a lot, it prefers note:f, otherwise
+     note:x.
+
+     Actually that's a slight simplification.  I have a table below which lists
+     tag flavours which must be present (ref being the obvious one), and
+     flavours which must _not_ be present (at the time of writing, char:fqa
+     -- alternative translation -- because I kinda feel that this deserves to be
+     treated as a fully-fledged footnote come what may).
+
+     The choice between note:f and note:x matters, because the two give rise to
+     different behaviours in STEP.  References within note:x are displayed
+     rather like tool-tips when you hover the mouse over them, and then clicking
+     on the verse reference within the tool-tip brings up a pop-up window
+     containing the target text.
+
+     Earlier processing in this class will have introduced a useful measure of
+     uniformity, in that even though USX lets cross-references be recorded in a
+     number of different ways, they will all have been reduced to <ref> tags by
+     now.
+
+     All I need do, therefore, is look for note:f tags which contain <ref> tags.
+     The call I make then is based upon the amount of explanatory text within
+     the enclosing note tag.
+   */
+
+  private fun correctNoteStyles (document: Document)
+  {
+    /**************************************************************************/
+    val C_NoOfCanonicalWordsWhichMeansThisIsANoteF = 6
+
+
+
+    /**************************************************************************/
+    /* This lists tags to look for.  The later tests run through these in order
+       and give up if any of them returns false. */
+
+    val checks = mapOf("ref" to true,        // Of interest if a ref node is present.
+                       "char:fqa" to false)  // Not of interest if char:fqa (translation alternative) is present -- I assume this really _does_ need to come out as note:f.
+
+
+
+    /**************************************************************************/
+    /* Looks for things under 'node' of a given kind.  ifFound is true, then
+       returns true if found and false if not found.  ifFound is false, the
+       return value is inverted. */
+
+    fun check (node: Node, check: String, ifFound: Boolean): Boolean
+    {
+      val res = if (":" in check)
+      {
+        val bits = check.split(":")
+        null != Dom.findNodeByAttributeValue(node, bits[0], "style", bits[1])
+      }
+      else
+        null != Dom.findNodeByName(node, check, false)
+
+      return if (ifFound) res else !res
+    }
+
+
+
+    /**************************************************************************/
+    Dom.findNodesByAttributeValue(document, "note", "style", "f").forEach { noteNode -> // We look only at note:f.
+      if (false !in checks.map { check(noteNode, it.key, it.value) }) // Nothing to do unless the note tag contains the right flavours of node, and does not contain the wrong ones.
+      {
+        val charNodes = Dom.findNodesByName(noteNode, "char", false)
+        val canonicalText = charNodes.joinToString(" ") { Dom.getCanonicalTextContentToAnyDepth(it) }
+        if (StepStringUtils.wordCount(canonicalText) < C_NoOfCanonicalWordsWhichMeansThisIsANoteF)
+        {
+          Dom.setAttribute(noteNode, "style", "x")
+          Dom.setAttribute(noteNode, "_X_change", "Style was 'f' but contains cross-reference details.")
+        }
+      }
+    }
   }
 
 
@@ -573,7 +686,7 @@ import org.w3c.dom.Node
   fun updateCrossReferences (mappings: Map<RefKey, RefKey>)
   {
     if (mappings.isEmpty()) return
-    fun process (@Suppress("UNUSED_PARAMETER") filePath: String, document: Document) { updateCrossReferences(document, mappings); }
+    fun process (@Suppress("UNUSED_PARAMETER") bookName: String, @Suppress("UNUSED_PARAMETER") filePath: String, document: Document) { updateCrossReferences(document, mappings); }
     BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::process)
   }
 

@@ -17,10 +17,7 @@ import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.runC
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.Translations
 import org.stepbible.textconverter.support.miscellaneous.Zip
-import org.stepbible.textconverter.support.ref.Ref
-import org.stepbible.textconverter.support.ref.RefBase
-import org.stepbible.textconverter.support.ref.RefCollection
-import org.stepbible.textconverter.support.ref.RefRange
+import org.stepbible.textconverter.support.ref.*
 import org.stepbible.textconverter.support.shared.Language
 import org.stepbible.textconverter.support.shared.SharedData
 import org.stepbible.textconverter.support.usx.Usx
@@ -308,7 +305,6 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
     {
         commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
-        CommandLineProcessor.addCommandLineOption("debugLevel", 1, "Debug level -- 0 => no debug, larger numbers => increasing amounts of debug.", null, "0", false)
     }
 
 
@@ -316,7 +312,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     override fun process (): Boolean
     {
       runPreprocessor()
-      BibleStructureTextUnderConstruction.populate(BibleBookAndFileMapperRawUsx) // Gets the chapter / verse structure -- how many chapters in each verse, etc.
+      BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx) // Gets the chapter / verse structure -- how many chapters in each verse, etc.
       forceVersificationSchemeIfAppropriate()
       ReversificationData.process()                                              // Does what it says on the tin.  This gives the chance (which I may not take) to do 'difficult' restructuring only where reversification will require it.
       BibleBookAndFileMapperRawUsx.iterateOverSelectedFiles(::processFile)       // Creates the enhanced USX.
@@ -423,7 +419,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
        rendered text which looks rather better than would be the case by default.
     */
 
-    private fun processFile (rawUsxPath: String, document: Document)
+    private fun processFile (bookName: String, rawUsxPath: String, document: Document)
     {
         /**********************************************************************/
         fun x () { if (Logger.getNumberOfErrors() > 0) panic() }
@@ -438,10 +434,10 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
         initialise(rawUsxPath, document)                   // a) Get book details etc.
         validateInitialAssumptions(); x()                  // a) Check that things I rely upon later (or think I _may_ rely upon) do actually hold.
         deleteIgnorableTags()                              // a) Anything of no interest to our processing.
-        correctCommonUsxIssues()                           // a) Change usx tag to _X_usx, book to _X_book, and turn the latter into an enclosing tag.
+        correctCommonUsxIssues()                           // a) Correct common errors.
+        simplePreprocessTagModifications()                 // a) Sort out things we don't think we like.
         canonicaliseRootAndBook()                          // a) Change usx tag to _X_usx, book to _X_book, and turn the latter into an enclosing tag.
         canonicaliseChapterAndVerseStarts(); x()           // a) Make sure we have sids (rather than numbers); that there are no verse-ends (we deal with those ourselves) and that chapters are enclosing tags.
-        correctNoteStyles()                                // a) Mainly for Biblica.  Biblica seem to have used note:f where they mean note:x.
         handleStrongs()                                    // a) Iron out any idiosyncrasies in Strong's representations.
         forceCallouts()                                    // a) Override any translator-supplied callouts and use our own standard form.
         convertTagsToLevelOneWhereAppropriate()            // a) Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
@@ -849,41 +845,6 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
 
 
     /******************************************************************************************************************/
-    /* This probably ought to be handled outside of here, since we have discovered this to be an issue only with
-       Biblica texts, whereas this processing is really intended to be relevant to _all_ texts.  But it's easier to do
-       it here, and at the time of writing it seems that most Biblica texts are affected, and there are a lot of them.
-
-       So anyway, many Biblica texts contain cross-references.  Cross-reference information ought to appear within
-       note:x tags, but Biblica seem to have marked them up using note:f, so I need to change things.  The processing
-       here does assume that the texts aren't messed up beyond that: I assume that every note:f contains _either_ just
-       explanatory text (in which case I can leave well alone) or else just cross-reference-related tags (in which
-       case I need to change to note:x.  Unfortunately it's not easy to check this, so I just have to assume it to be
-       the case.
-
-       The test below looks for char:xt, char:xot and char:xnt as being indicative of what should be a note:x.  Note
-       that I _don't_ look for <ref> tags.  This may be seen as a significant drop-off, but I think <ref> tags may
-       legitimately appear within explanatory footnotes, and I don't want to turn pukka explanatory notes into
-       notes.
-
-       Note also that there are other tags -- note:f / note:ef and note:/fe are all involved with plain vanilla
-       footnotes, and note:x / note:ex with cross-references.  Unfortunately I can't work out from the USX
-       documentation what the more esoteric types do, so I'm burying my head in the sand and assuming that if I ignore
-       them, there won't actually be any. */
-
-    private fun correctNoteStyles ()
-    {
-      Dom.findNodesByAttributeValue(m_Document, "note", "style", "f").forEach {
-        val charNodes = Dom.findNodesByName(it, "char", false)
-        if (null != charNodes.find { Dom.getAttribute(it, "style")!! in "xt,xot,xnt" })
-        {
-          Dom.setAttribute(it, "style", "x")
-          Dom.setAttribute(it, "_X_change", "Style was 'f' but contains cross-reference details.")
-        }
-      }
-    }
-
-
-    /******************************************************************************************************************/
     /* To simplify later processing, it is convenient to collect headings together into encapsulating nodes.  The aim
        here is to enclose headers into <_X_headingBlock style='...'/>" style is preVerse or inVerse.  At this stage,
        all I want is the encapsulation: I'll worry about the attributes later. */
@@ -935,7 +896,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
         fun convert(x: Node)
         {
             val style = Dom.getAttribute(x, "style")
-            val callout = ConfigData.get(if ("f" == style) "stepExplanationCallout" else "stepCrossReferenceCallout")!!
+            val callout = ConfigData[if ("f" == style) "stepExplanationCallout" else "stepCrossReferenceCallout"]!!
             Dom.setAttribute(x, "caller", callout)
         }
 
@@ -1006,6 +967,41 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     }
 
 
+    /******************************************************************************************************************/
+    /* Changes tagName or tagName+style for another tagName or tagName+style. */
+
+    private fun simplePreprocessTagModifications ()
+    {
+      val modifications = ConfigData["stepSimplePreprocessTagModifications"] ?: return
+      if (modifications.isEmpty()) return
+      val individualMods = modifications.split("|").map { it.trim() }
+      individualMods.forEach { details ->
+        val (from, to) = details.split("->").map { it.trim() }
+        val (fromTag, fromStyle) = ( if (":" in from) from else "$from: " ).split(":")
+        val (toTag,   toStyle)   = ( if (":" in to  ) to   else "$to: " ).split(":")
+
+        val froms =
+          if (":" in from)
+            Dom.findNodesByAttributeValue(m_Document, fromTag, "style", fromStyle)
+          else
+            Dom.findNodesByName(m_Document, fromTag)
+
+        val setStyle = ":" in to
+
+        froms.forEach {
+          if (setStyle)
+            Dom.setAttribute(it, "style", toStyle)
+          else
+            Dom.deleteAttribute(it, "style")
+
+          Dom.setNodeName(it, toTag)
+
+          Dom.setAttribute(it, "_X_simplePreprocessTagModification", "$from becomes $to")
+        }
+      }
+    }
+
+
 
 
 
@@ -1039,7 +1035,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
       fun processChapter (chapterNode: Node)
       {
         val verses = Dom.findNodesByName(chapterNode, "verse", false)
-        for (ix in 0 until verses.size - 2 step 2)
+        for (ix in 0..< verses.size - 2 step 2)
         { // -2 to avoid the dummy verses at the end of the chapter.
           if (Dom.getAttribute(verses[ix], "sid")!!.contains("-"))
             expandElision(verses[ix], verses[ix + 1])
@@ -1093,8 +1089,8 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
       for (i in 0..< n - 1)
       {
          val refAsString = Ref.rd(refKeys[i]).toString()
-         val nodePair = EmptyVerseHandler.createEmptyVerseForElision(sid, refAsString) ?: continue
-         val (start, end) = nodePair!!
+         val nodePair = EmptyVerseHandler.createEmptyVerseForElisionAndInsert(sid, refAsString) ?: continue
+         val (start, end) = nodePair
          if (Dom.hasAttribute(sid, "_X_wasInTable"))
          {
             Dom.setAttribute(start, "_X_wasInTable", "y")
@@ -1172,7 +1168,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
        // Dbg.outputDom(m_Document, "a")
        Dom.findNodesByName(m_Document,"_X_chapter").forEach {
          val verses = Dom.findNodesByName(it,"verse", false)
-         for (i in 0 until verses.size - 2)
+         for (i in 0..< verses.size - 2)
          {
            insertVerseEnd(Dom.getAttribute(verses[i], "sid")!!, verses[i], verses[i + 1])
          }
@@ -1861,7 +1857,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     /* We're going to create an eid for the owning verse and position it at the
        other end of the table, so we no longer want its existing eid. */
 
-    val existingEid = Dom.findNodeByAttributeValue(m_Document, "verse", "eid", Dom.getAttribute(owningVerseSid!!, "sid")!!)
+    val existingEid = Dom.findNodeByAttributeValue(m_Document, "verse", "eid", Dom.getAttribute(owningVerseSid, "sid")!!)
     Dom.deleteNode(existingEid!!)
 
 
@@ -1870,23 +1866,21 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     /* Change the sid of the owning verse to reflect the elision, and add an
        explanatory footnote. */
 
-    var elisionRef: String
-    run {
-      val startOfElisionRef = Ref.rdUsx(Dom.getAttribute(owningVerseSid, "sid")!!)
-      val endOfElisionRef   = Ref.rdUsx(Dom.getAttribute(verseStarts.last(), "sid")!!)
-      elisionRef = "$startOfElisionRef-$endOfElisionRef"
-      Dom.setAttribute(owningVerseSid, "sid", elisionRef)
-      Dom.setAttribute(owningVerseSid, "_X_generatedElisionToCoverTable", "y")
-      val owningVerseFootnote = makeFootnote(m_Document, startOfElisionRef.toRefKey(), Translations.stringFormat(Language.Vernacular, "V_tableElision_owningVerse"))
-      Dom.insertAsFirstChild(owningVerseSid, owningVerseFootnote)
-    }
+    val startOfElisionRef = Ref.rdUsx(Dom.getAttribute(owningVerseSid, "sid")!!)
+    val endOfElisionRef   = Ref.rdUsx(Dom.getAttribute(verseStarts.last(), "sid")!!)
+    val elisionRef = "$startOfElisionRef-$endOfElisionRef"
+
+    Dom.setAttribute(owningVerseSid, "sid", startOfElisionRef.toString())
+    Dom.setAttribute(owningVerseSid, "_X_generatedElisionToCoverTable", "y")
+    val owningVerseFootnote = makeFootnote(m_Document, startOfElisionRef.toRefKey(), Translations.stringFormat(Language.Vernacular, "V_tableElision_owningVerse"))
+    Dom.insertNodeAfter(owningVerseSid, owningVerseFootnote)
 
 
 
     /**************************************************************************/
     /* Insert an eid after the table to correspond to the owning verse. */
 
-    val owningVerseEid = Dom.createNode(m_Document, "<verse eid='$elisionRef'/>")
+    val owningVerseEid = Dom.createNode(m_Document, "<verse eid='$startOfElisionRef'/>")
     Dom.insertNodeAfter(closeElisionAfterNode, owningVerseEid)
     if (closeElisionAfterNode !== table) Dom.deleteNode(closeElisionAfterNode) // We're closing after an eid which is no longer required.
 
@@ -1919,9 +1913,30 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     /**************************************************************************/
     /* At this juncture, we have the table entirely contained within a single
        verse, and the verse is marked up appropriately as an elision.  All that
-       remains is to exapnd out the elision. */
+       remains is to expand out the elision.  As a reminder, we encountered the
+       table tag in the _first_ verse, so we want to have that recorded as the
+       master, and we want the empty verses to follow it.  We almost have code
+       to do this via expandElision, but that was set up on the assumption
+       that empty verses would precede the master, and it's a bit fiddly to
+       change that. */
 
-    expandElision(owningVerseSid, owningVerseEid)
+    fun generateEmptyVerse (ref: Ref)
+    {
+      val (start, end) = EmptyVerseHandler.createEmptyVerseForElision(owningVerseSid.ownerDocument, ref.toString())
+      Dom.insertNodeAfter(owningVerseEid, end)
+      Dom.insertNodeAfter(owningVerseEid, start)
+    }
+
+    Dom.setAttribute(owningVerseSid, "_X_originalId", elisionRef)
+    Dom.setAttribute(owningVerseSid, "_X_elided", "y")
+    Dom.setAttribute(owningVerseSid, "_X_masterForElisionWithVerseCountOf", "" + verseStarts.size + 1)
+
+    val elisionRange = RefRange.rdUsx(elisionRef).getAllAsRefs()
+    elisionRange.subList(1, elisionRange.size).reversed().forEach { // We want to generate empty verses for everything bar the first verse, because the first verse is the master and contains all the text.
+      generateEmptyVerse(it)
+    }
+
+    //Dbg.outputDom((owningVerseEid.ownerDocument))
   }
 
 
@@ -2113,10 +2128,10 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     private fun forceVersificationSchemeIfAppropriate ()
     {
         if (XXXOsis2ModInterface.usingStepOsis2Mod())
-          ConfigData.put("stepVersificationScheme", "v11n" + ConfigData["stepModuleName"], true)
+          ConfigData.put("stepVersificationSchemeCanonical", "v11n" + ConfigData["stepModuleName"], true)
         // Note that to keep osis2mod happy, the scheme names _must_ be all caps.
         else if (TextConverterProcessorReversification.runMe())
-          ConfigData.put("stepVersificationScheme", if (BibleStructureTextUnderConstruction.hasDc() || ReversificationData.targetsDc()) "NRSVA" else "NRSV", true)
+          ConfigData.put("stepVersificationSchemeCanonical", if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.targetsDc()) "NRSVA" else "NRSV", true)
   }
 
 

@@ -5,6 +5,7 @@ import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRa
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.Dom
@@ -179,6 +180,11 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase ()
     fun check (refKey: RefKey)
     {
       /************************************************************************/
+      //Dbg.d("Jos 12:8", Ref.rd(refKey).toString())
+
+
+
+      /************************************************************************/
       val enhancedSid = m_EnhancedBookAnatomy.m_SidToIndex[refKey]!!
       val enhancedEid = m_EnhancedBookAnatomy.m_EidToIndex[refKey]!!
 
@@ -215,11 +221,11 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase ()
            below, when we are processing the one verse of the elision which now
            contains the entire content.) */
 
-      var skipTest = Dom.hasAttribute(m_EnhancedBookAnatomy.m_AllNodes[enhancedSid], "_TEMP_dummy")
+      var skipTest = Dom.hasAttribute(m_EnhancedBookAnatomy.m_AllNodes[enhancedSid], "_TEMP_dummy") // Ignore dummy verses.
 
-      if (!skipTest) skipTest = null == inputAnatomy.m_SidToIndex[refKey]
+      if (!skipTest) skipTest = null == inputAnatomy.m_SidToIndex[refKey] // Verses which didn't exist in the original (presumably ones which were part of an elision).
 
-      if (!skipTest) skipTest = Dom.hasAttribute(m_EnhancedBookAnatomy.m_AllNodes[enhancedSid], "_X_reasonEmpty")
+      if (!skipTest) skipTest = Dom.hasAttribute(m_EnhancedBookAnatomy.m_AllNodes[enhancedSid], "_X_reasonEmpty") // Verses flagged as legitimately empty.
 
 
 

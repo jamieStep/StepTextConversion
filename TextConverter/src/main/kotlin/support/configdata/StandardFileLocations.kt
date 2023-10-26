@@ -149,13 +149,12 @@ object StandardFileLocations
 
   fun getConfigFileName (): String { return "config.conf"; }
   fun getConverterLogFilePath (): String { return m_ConverterLogFilePath }
+  fun getDebugOutputFilePath (): String { return Paths.get(m_RootFolderPath, "debugLog.txt").toString() }
   fun getEncryptionDataRootFolder (): String { return Paths.get(getSwordRootFolderPath(), "step").toString() }
   fun getEncryptionDataFolder (): String { return Paths.get(getEncryptionDataRootFolder(), "jsword-mods.d").toString() }
   fun getEncryptionDataFilePath (moduleName: String): String { return Paths.get(getEncryptionDataFolder(), moduleName).toString() }
   fun getEnhancedUsxFilePattern (): String { return "*.usx" }
   fun getEnhancedUsxFolderPath (): String { return m_EnhancedUsxFolderPath }
-  fun getHistoryFilePath (): String { return return Paths.get(getMetadataFolderPath(), "history.conf").toString() }
-  fun getHistoryTemplateFilePath (): String { return "\$common/historyTemplate.conf" }
   private fun getMetadataFolderPath (): String { return m_MetadataFolderPath }
   fun getOsisFilePath (): String { return m_OsisFilePath }
   fun getOsisFolderPath (): String { return m_OsisFolderPath }

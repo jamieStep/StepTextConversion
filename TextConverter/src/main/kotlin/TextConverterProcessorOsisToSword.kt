@@ -50,7 +50,6 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
   {
     commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
-    commandLineProcessor.addCommandLineOption("debugLevel", 1, "Debug level -- 0 => no debug, larger numbers => increasing amounts of debug.", null, "0", false)
   }
 
 
@@ -121,12 +120,13 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
     val swordExternalConversionCommand: MutableList<String> = ArrayList()
     swordExternalConversionCommand.add(programName)
     swordExternalConversionCommand.add("\"" + StandardFileLocations.getSwordTextFolderPath(m_ModuleName) + "\"")
+    //$$$swordExternalConversionCommand.add("\"" + StandardFileLocations.getSwordTextFolderPath("Step") + "\"")
     swordExternalConversionCommand.add("\"" + StandardFileLocations.getOsisFilePath() + "\"")
 
     if (XXXOsis2ModInterface.usingCrosswireOsis2Mod())
     {
       swordExternalConversionCommand.add("-v")
-      swordExternalConversionCommand.add(ConfigData["stepVersificationScheme"]!!)
+      swordExternalConversionCommand.add(ConfigData["stepVersificationSchemeCanonical"]!!)
     }
     else
     {
@@ -146,7 +146,6 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
     generateChangesFile()
     Dbg.reportProgress("")
     runCommand("Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = StandardFileLocations.getOsisToModLogFilePath())
-    ChangeHistoryHandler.process()
     getFileSizeIndicator()
     generateConfigFile()
     checkOsis2ModLog()
@@ -204,34 +203,29 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
 
     /**************************************************************************/
-    if (!ConfigData.getAsBoolean("stepHasAddedValue"))
-      stepInfo = stepInfo.replace("@(AddedValue)", "")
-    else
+    val texts: MutableList<String> = ArrayList()
+    var reversificationDetails: String? = null
+    if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Morphology"))
+    if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Strongs"))
+    if (ConfigData.getAsBoolean("stepAddedValueReversification", "No"))
     {
-      val texts: MutableList<String> = ArrayList()
-      var reversificationDetails: String? = null
-      if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Morphology"))
-      if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Strongs"))
-      if (ConfigData.getAsBoolean("stepAddedValueReversification", "No"))
-      {
-        texts.add(Translations.stringFormatWithLookup("V_AddedValue_Reversification"))
-        reversificationDetails = Translations.stringFormatWithLookup("V_reversification_LongDescription_" + sentenceCaseFirstLetter(ConfigData["stepReversificationType"]!!))
-        reversificationDetails = reversificationDetails.replace("%d", SharedData.VersesAmendedByReversification.size.toString())
-      }
+      texts.add(Translations.stringFormatWithLookup("V_AddedValue_Reversification"))
+      reversificationDetails = Translations.stringFormatWithLookup("V_reversification_LongDescription_" + sentenceCaseFirstLetter(ConfigData["stepReversificationType"]!!))
+      reversificationDetails = reversificationDetails.replace("%d", SharedData.VersesAmendedByReversification.size.toString())
+    }
 
 
 
-      /**************************************************************************/
-      var text = ""
-      if (texts.isNotEmpty())
-      {
-        text = Translations.stringFormatWithLookup("V_addedValue_AddedValue") + " "
-        text += java.lang.String.join("; ", texts)
-      }
+    /**************************************************************************/
+    var text = ""
+    if (texts.isNotEmpty())
+    {
+      text = Translations.stringFormatWithLookup("V_addedValue_AddedValue") + " "
+      text += java.lang.String.join("; ", texts)
+    }
 
-      if (null != reversificationDetails) text += "¬¬$reversificationDetails"
-      stepInfo = stepInfo.replace("@(AddedValue)", text)
-    } // else
+    if (null != reversificationDetails) text += "¬¬$reversificationDetails"
+    stepInfo = stepInfo.replace("@(AddedValue)", text)
 
 
 
@@ -436,9 +430,25 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
   private fun generateConfigFile ()
   {
     /**************************************************************************/
+    /* In the past we have always wanted to create the Sword config file -- and
+       in a normal conversion run (ie where we are starting from USX), we will
+       still want to do so.  However, I now also need to cater for the
+       possibility that we are simply starting from OSIS, and our sole purpose
+       was to tag OSIS supplied to us by someone else.
+
+       On a full conversion run, we'll have deleted the config file at the
+       outset, whereas on an OSIS-tagging run we will not, and the existing
+       Sword config file will be the one to use. */
+
+    val configFile = File(StandardFileLocations.getSwordConfigFilePath(m_ModuleName))
+    if (configFile.exists()) return
+
+
+
+    /**************************************************************************/
     addCalculatedValuesToMetadata()
     val lines = StandardFileLocations.getInputStream(StandardFileLocations.getSwordTemplateConfigFilePath(), null)!!.bufferedReader().readLines()
-    val writer = File(Paths.get(StandardFileLocations.getSwordConfigFilePath(m_ModuleName)).toString()).bufferedWriter()
+    val writer = configFile.bufferedWriter()
 
 
 
@@ -446,13 +456,6 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
     for (x in lines)
     {
       var line = x.trim()
-
-      if ("\$includeChangeHistory".equals(line, ignoreCase = true))
-      {
-        val newLines = StandardFileLocations.getInputStream(StandardFileLocations.getHistoryFilePath(), null)!!.bufferedReader().readLines().map { it.trim() }
-        newLines.filterNot { it.startsWith("#!") } .forEach { writer.write(it); writer.write("\n")}
-        continue
-      }
 
       if ("\$includeCopyAsIsLines".equals(line, ignoreCase = true))
       {
@@ -520,8 +523,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
 
     /**************************************************************************/
-    /* And a copy of it in the Metadata folder, to make it easier to find if I
-       need to pass it to anyone else. */
+    /* Write the details to the file which controls encryption. */
 
     val writer = File(withinModuleDecryptionFilePath).bufferedWriter()
     writer.write("[$m_ModuleName]");              writer.write("\n")

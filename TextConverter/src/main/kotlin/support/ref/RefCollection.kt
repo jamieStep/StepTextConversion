@@ -1,6 +1,6 @@
 /****************************************************************************/
 package org.stepbible.textconverter.support.ref
-import org.stepbible.textconverter.support.bibledetails.BibleStructureTextUnderConstruction
+import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.stepexception.StepException
 
@@ -387,9 +387,9 @@ class RefCollection: RefBase
         // text.
         val diff =
           if (lastWasSubVerse)
-            BibleStructureTextUnderConstruction.getSubVerseDifference(prevKey, thisKey)
+            BibleStructure.UsxUnderConstructionInstance().getSubverseDifference(prevKey, thisKey)
              else
-               BibleStructureTextUnderConstruction.getVerseDifference(prevKey, thisKey)
+               BibleStructure.UsxUnderConstructionInstance().getVerseDifference(prevKey, thisKey)
         if (diff != 1) break
 
         prevKey = thisKey

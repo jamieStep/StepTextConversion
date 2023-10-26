@@ -64,7 +64,6 @@ object TextConverterProcessorVLToEnhancedUsx : TextConverterProcessorBase()
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
   {
     commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
-    CommandLineProcessor.addCommandLineOption("debugLevel", 1, "Debug level -- 0 => no debug, larger numbers => increasing amounts of debug.", null, "0", false)
   }
 
 

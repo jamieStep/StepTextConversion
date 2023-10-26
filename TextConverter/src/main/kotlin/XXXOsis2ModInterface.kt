@@ -3,7 +3,6 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -63,7 +62,7 @@ object XXXOsis2ModInterface
   /****************************************************************************/
   var C_CollapseSubverses = false
   var C_CreateEmptyChapters = false
-  var C_ExpandElisions = false
+  var C_ExpandElisions = true
 
 
 
@@ -88,18 +87,30 @@ object XXXOsis2ModInterface
         C_CollapseSubverses = true
         C_CreateEmptyChapters = true
         C_ExpandElisions = true
-        System.err.println("Make sure you DON'T have Zec.")
+        // System.err.println("Make sure you DON'T have Zec.")
       }
 
       else -> // ie "step"
       {
+        /**********************************************************************/
         C_CollapseSubverses = false
         C_CreateEmptyChapters = false
         C_ExpandElisions = true // false !!!!!!!!!!!!!!!!!!!!!!!!!
         ConfigData.put("stepReversificationType", "none", true) // With our osis2mod, we don't actually apply reversification -- we just record what it would do.
                                                                                   // This will need changing at some point so that we can at least apply footnotes.
+
+
+        /**********************************************************************/
+        /* There are some settings which I think Sami ignores anyway, but just
+           to be sure, I clear them and then reinstate anything which is
+           needed. */
+
+        ConfigData.delete("stepVersificationScheme")
+        ConfigData.delete("stepVersificationSchemeCanonical")
+        ConfigData.put("stepVersificationScheme", ConfigData["stepModuleName"]!!, true)
+        ConfigData.put("stepVersificationSchemeCanonical", ConfigData["stepModuleName"]!!, true)
         initialiseBookDetails()
-        System.err.println("Make sure you DO have Zec.")
+        // System.err.println("Make sure you DO have Zec.")
      }
     }
   }
@@ -114,7 +125,7 @@ object XXXOsis2ModInterface
   fun createSupportingData ()
   {
     if (usingCrosswireOsis2Mod()) return
-    BibleStructureTextUnderConstruction.populate(BibleBookAndFileMapperEnhancedUsx, wantWordCount = false, reportIssues = true) // Make sure we have up-to-date structural information.
+    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, wantWordCount = false) // Make sure we have up-to-date structural information.
     populateBibleStructure()
     populateReversificationMappings()
     outputJson(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath())
@@ -159,7 +170,7 @@ object XXXOsis2ModInterface
   /****************************************************************************/
 
   /****************************************************************************/
-  private class BibleStructure
+  private class MyBibleStructure
   {
      var v11nName = ""
 
@@ -248,6 +259,7 @@ object XXXOsis2ModInterface
      Crosswire book abbreviations, which unfortunately differ from USX and
      OSIS.  (Crosswire also differs from other schemes in terms of the DC books
      it supports -- there's a lot of overlap, but it's not an exact match.) */
+
   private fun initialiseBookDetails ()
   {
     m_CrosswireBookDetails["Gen"] = CrosswireBookDetails("Genesis", "Gen")
@@ -369,7 +381,7 @@ object XXXOsis2ModInterface
   {
     for (bookNo in bookLow .. bookHigh)
     {
-      val missingBook = !BibleStructureTextUnderConstruction.hasBook(bookNo)
+      val missingBook = !BibleStructure.UsxUnderConstructionInstance().bookExists(bookNo)
       if (skipMissingBooks && missingBook) continue
 
       val header = BookDetails()
@@ -379,8 +391,8 @@ object XXXOsis2ModInterface
       header.name = m_CrosswireBookDetails[ubsAbbreviation]!!.fullName
       header.osis = BibleBookNamesOsis.numberToAbbreviatedName(bookNo)
       header.prefAbbrev = m_CrosswireBookDetails[ubsAbbreviation]!!.abbreviation
-      header.chapMax = if (missingBook) 0 else BibleStructureTextUnderConstruction.getLastChapterNo(bookNo)
-      for (chapterNo in 1 .. header.chapMax) header.vm.add(BibleStructureTextUnderConstruction.getLastVerseNo(bookNo, chapterNo))
+      header.chapMax = if (missingBook) 0 else BibleStructure.UsxUnderConstructionInstance().getLastChapterNo(bookNo)
+      for (chapterNo in 1 .. header.chapMax) header.vm.add(BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(bookNo, chapterNo))
     }
   }
 
@@ -389,7 +401,8 @@ object XXXOsis2ModInterface
   private fun populateReversificationMappings ()
   {
     val renumbers = ReversificationData.getReferenceMappings()
-    renumbers.forEach { m_BibleStructure.jswordMappings.add(Pair(it.key, Ref.clearS(it.value))) }
+    //renumbers.forEach { m_BibleStructure.jswordMappings.add(Pair(it.key, Ref.clearS(it.value))) }
+    renumbers.forEach { m_BibleStructure.jswordMappings.add(Pair(it.key, it.value)) }
 
     val psalmTitles = ReversificationData.getAllAcceptedRows().filter { 0 != it.processingFlags.and(ReversificationData.C_StandardIsPsalmTitle) }
     psalmTitles.forEach { m_BibleStructure.jswordMappings.add(Pair(it.sourceRefAsRefKey, Ref.setV(it.standardRefAsRefKey, 0))) }
@@ -439,7 +452,7 @@ object XXXOsis2ModInterface
 
 
   /****************************************************************************/
-  private val m_BibleStructure = BibleStructure()
+  private val m_BibleStructure = MyBibleStructure()
   private val m_CrosswireBookDetails: MutableMap<String, CrosswireBookDetails?>  = mutableMapOf()
   private var m_Osis2ModVariant: Osis2ModVariant = Osis2ModVariant.CROSSWIRE
 }

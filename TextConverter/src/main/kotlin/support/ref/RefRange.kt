@@ -1,10 +1,9 @@
 /******************************************************************************/
 package org.stepbible.textconverter.support.ref
 
-import org.stepbible.textconverter.support.bibledetails.BibleStructureTextUnderConstruction
+import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.stepexception.StepException
 
 
 /******************************************************************************/
@@ -272,18 +271,44 @@ class RefRange: RefCollectionPart
   companion object
   {
     /**************************************************************************/
-    /* The various read methods.  We definitely shouldn't need to read OSIS,
-       so there's no method for that (OSIS is write-only).  We do need to be
-       able to read USX ranges, so there's a method for that (rd and rdUsx
-       are the same, incidentally).  But there is no method for reading
-       vernacular material, because we have to assume that may appear
-       embedded in a larger text string, and therefore cannot be returned as a
-       simple range. */
+    /* The various read methods.  We need to be able to read USX ranges, so
+       there's a method for that (rd and rdUsx are the same, incidentally).
+       And late in the day, we've decided we need to read OSIS too, in support
+       of extended tagging, so there's a method for that.  But there is no
+       method for reading vernacular material, because we have to assume that
+       may appear embedded in a larger text string, and therefore cannot be
+       returned as a simple range. */
 
-    fun rd           (text: String, context: Ref? = null, resolveAmbiguitiesAs: String? = null): RefRange { return rdUsx(text, context, resolveAmbiguitiesAs)  }
-    fun rdUsx        (text: String, context: Ref? = null, resolveAmbiguitiesAs: String? = null): RefRange { return rdUsxInternal(text, context, resolveAmbiguitiesAs) }
+    fun rd           (text: String, context: Ref? = null, resolveAmbiguitiesAs: String? = null): RefRange { return rdUsx         (text, context, resolveAmbiguitiesAs) }
+    fun rdOsis       (text: String, context: Ref? = null, resolveAmbiguitiesAs: String? = null): RefRange { return rdOsisInternal(text, context, resolveAmbiguitiesAs) }
+    fun rdUsx        (text: String, context: Ref? = null, resolveAmbiguitiesAs: String? = null): RefRange { return rdUsxInternal (text, context, resolveAmbiguitiesAs) }
 
     fun rd (refLow: Ref, refHigh: Ref): RefRange { return RefRange(refLow, refHigh) }
+
+
+    /**************************************************************************/
+    /* Because of the highly constrained circumstances under which we may
+       encounter OSIS references, for much of the time I can guarantee that what
+       we may be required to parse contains a fully populated reference or
+       reference range.  This means that I can circumvent the generic parsing,
+       and use something which is much more efficient -- useful given the number
+       of times we may need parse OSIS references.
+
+       Parsing OSIS is simpler than parsing USX, because (at least in theory)
+       we are guaranteed to have full references (ie no defaulting from
+       context).
+
+       If you know in advance that you are not dealing with a situation where
+       ranges might be an issue, you might want to use Ref.rdOsis instead.
+     */
+
+    private fun rdOsisInternal (text: String, context: Ref?, resolveAmbiguitiesAs: String?): RefRange
+    {
+      val bits = text.replace("\\s*-\\s*".toRegex(), "-").split("-")
+      val refLow = Ref.rdOsis(bits[0], context, resolveAmbiguitiesAs)
+      val refHigh = if (1 == bits.size) refLow else Ref.rdOsis(bits[1], context, resolveAmbiguitiesAs)
+      return RefRange(refLow, refHigh)
+    }
 
 
     /**************************************************************************/
@@ -303,7 +328,7 @@ class RefRange: RefCollectionPart
        ranges might be an issue, you might want to use Ref.rdUsx instead.
      */
 
-    private fun rdUsxInternal (text: String, context: Ref?, @Suppress("UNUSED_PARAMETER") resolveAmbiguitiesAs: String?): RefRange
+    private fun rdUsxInternal (text: String, context: Ref?, resolveAmbiguitiesAs: String?): RefRange
     {
       /************************************************************************/
       //Dbg.dCont(text,"A:1")
@@ -392,7 +417,7 @@ class RefRange: RefCollectionPart
 
 
   /****************************************************************************/
-  /* Note that throughout, BibleStructureTextUnderConstruction really _is_
+  /* Note that throughout, BibleStructure.UsxUnderConstructionInstance() really _is_
      meant -- the supplied text is the one we're working on.  We may have USX
      references, for instance, but they're always references which describe
      the supplied text. */
@@ -420,7 +445,7 @@ class RefRange: RefCollectionPart
       for (c in Ref.getC(lowRefKey)..Ref.getC(highRefKey))
       {
         refKey = Ref.setC(refKey, c)
-        for (v in 1..BibleStructureTextUnderConstruction.getLastVerseNo(refKey))
+        for (v in 1..BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(refKey))
           res.add(Ref.setV(refKey, v))
       }
 
@@ -439,10 +464,10 @@ class RefRange: RefCollectionPart
     {
       var refKey: RefKey = lowRefKey
       val res: MutableList<RefKey> = ArrayList(1000)
-      for (c in Ref.getC(lowRefKey) until Ref.getC(highRefKey))
+      for (c in Ref.getC(lowRefKey)..< Ref.getC(highRefKey))
       {
         refKey = Ref.setC(refKey,c)
-        for (v in 1 .. BibleStructureTextUnderConstruction.getLastVerseNo(refKey))
+        for (v in 1 .. BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(refKey))
           res.add(Ref.setV(refKey, v))
       }
 
@@ -466,13 +491,13 @@ class RefRange: RefCollectionPart
       var refKey: RefKey = Ref.clearS(lowRefKey)
       val res: MutableList<RefKey> = ArrayList(1000)
 
-      for (v in 1 .. BibleStructureTextUnderConstruction.getLastVerseNo(refKey))
+      for (v in 1 .. BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(refKey))
         res.add(Ref.setV(refKey, v))
 
       for (c in Ref.getC(lowRefKey) + 1 .. Ref.getC(highRefKey))
       {
         refKey = Ref.setC(refKey,c)
-        for (v in 1 .. BibleStructureTextUnderConstruction.getLastVerseNo(refKey))
+        for (v in 1 .. BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(refKey))
           res.add(Ref.setV(refKey, v))
       }
 
@@ -485,7 +510,7 @@ class RefRange: RefCollectionPart
     /* Verse to verse of same chapter or different chapters. */
 
     if (!Ref.hasS(lowRefKey) && !Ref.hasS(highRefKey))
-      return BibleStructureTextUnderConstruction.getRefKeysInRange(lowRefKey, highRefKey)
+      return BibleStructure.UsxUnderConstructionInstance().getRefKeysInRange(lowRefKey, highRefKey)
 
 
 

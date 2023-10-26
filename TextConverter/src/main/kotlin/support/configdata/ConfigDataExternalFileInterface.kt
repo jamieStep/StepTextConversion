@@ -270,7 +270,17 @@ private class ConfigDataExternalFileInterfaceDbl : ConfigDataExternalFileInterfa
 
 
   /****************************************************************************/
-  override fun getValue (parms: String): String?
+  /* The argument (theParms) may be a list of one or more space-separated
+     xpaths -- eg DBLMetadata/archiveStatus/dateUpdated  DBL/archiveStatus/dateArchived  DBLMetadata/identification/dateCompleted --
+     followed optionally by an equals sign and a default value.
+
+     The special path 'names-slash-asterisk' gives back a list of all book
+     names.
+
+     The return value is the first of the xpaths to return a value, or the
+     default value if any. */
+
+  override fun getValue (theParms: String): String?
   {
     /************************************************************************/
     //Dbg.dCont(parms, "direction")
@@ -278,20 +288,49 @@ private class ConfigDataExternalFileInterfaceDbl : ConfigDataExternalFileInterfa
 
 
     /************************************************************************/
+    var parms = theParms.trim()
     if (parms.contains("names/*"))
     {
       return getBookList(parms)
     }
 
 
+
+    /************************************************************************/
+    /* Split out any default value. */
+
+    var dflt: String? = null
+    if ("=" in parms)
+    {
+      val (a, b) = parms.split("=")
+      parms = a.trim()
+      dflt = b.trim()
+    }
+
+
+
+    /************************************************************************/
+    val paths = parms.split("\\s+".toRegex())
+    var res = paths.map { getValue1(it) }. first { null != it }
+
+
+
+    /************************************************************************/
+    return res ?: if (null == dflt) dflt else getValue(dflt)
+  }
+
+
+  /****************************************************************************/
+  private fun getValue1 (path: String): String?
+ {
     /************************************************************************/
     /* Check if we're getting an attribute. */
 
     var attribute: String? = null
     var res: String
-    var xpath = parms
+    var xpath = path
 
-    if (parms.contains("/@"))
+    if ("/@" in path)
     {
       val x = xpath.split("/@")
       xpath = x[0]

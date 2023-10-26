@@ -478,9 +478,9 @@ class Ref : RefCollectionPart
     /* Creates references from various forms of textual input. */
 
     fun rd           (text: String, context: Ref? = null, resolveAmbiguitiesAs: String? = null): Ref { return rdUsx(text, context, resolveAmbiguitiesAs)  }
+    fun rdOsis       (text: String, context: Ref? = null, resolveAmbiguitiesAs: String? = null): Ref { return rdOsisInternal(text, context, resolveAmbiguitiesAs)  }
     fun rdUsx        (text: String, context: Ref? = null, resolveAmbiguitiesAs: String? = null): Ref { return rdUsxInternal(text, context, resolveAmbiguitiesAs)  }
     fun rdVernacular (text: String, context: Ref? = null, resolveAmbiguitiesAs: String? = null): Ref { return rdCommon(RefFormatHandlerReaderVernacular, text, context, resolveAmbiguitiesAs)  }
-    fun rdOsis       (@Suppress("UNUSED_PARAMETER") text: String, @Suppress("UNUSED_PARAMETER") context: Ref? = null, @Suppress("UNUSED_PARAMETER") resolveAmbiguitiesAs: String? = null): Ref { throw StepException("Not expecting to have to read OSIS"); /* return rdCommon(RefFormatHandlerOsis,       text, context, resolveAmbiguitiesAs) */  }
 
 
   
@@ -628,6 +628,30 @@ class Ref : RefCollectionPart
       {
         throw StepException("Cannot parse as single ref: $text")
       }
+    }
+
+
+    /****************************************************************************/
+    /* A late arrival on the scene -- I never anticipated having to read OSIS
+       refs because OSIS was an _output_ of the processing, not an input.
+       However, late in the day we've discovered it may be necessary to parse
+       OSIS files in support of extended tagging.
+
+       The rationale for the existence of this as a separate method is the same
+       as that for rdUsxInternal, qv.
+
+       OSIS references look to be rather simpler than USX ones, because -- so
+       long as people play by the rules -- they are guaranteed to be
+       complete (ie no defaulting from context. */
+
+    private fun rdOsisInternal (theText: String, context: Ref?, resolveAmbiguitiesAs: String?): Ref
+    {
+      var elts = theText.trim().split("[.!]".toRegex())
+      val b = BibleBookNamesOsis.nameToNumber(elts[0])
+      val c = if (elts.size < 2) C_DummyElement else Integer.parseInt(elts[1])
+      val v = if (elts.size < 3) C_DummyElement else Integer.parseInt(elts[2])
+      val s = if (elts.size < 4) C_DummyElement else convertRepeatingStringToNumber(elts[3], 'a', 'z')
+      return rd(b, c, v, s)
     }
 
 
