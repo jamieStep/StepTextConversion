@@ -231,16 +231,13 @@ object StepFileUtils
    *
    * @param folderName Name of folder to be scanned.
    * @param pat Pattern-match name.
-   * @param regexPattern If true, this is a regex pattern.  If false, it's a
-   *                     file system pattern, and needs conversion to work
-   *                     with regex.
    *
    * @return List of matching file details.
    */
 
-  fun getMatchingFilesFromFolder (folderName: String, pat: String, regexPattern: Boolean): List<Path>
+  fun getMatchingFilesFromFolder (folderName: String, pat: Regex): List<Path>
   {
-    return getMatchingThingsFromFolder(folderName, pat, regexPattern, "F")
+    return getMatchingThingsFromFolder(folderName, pat, "F")
   }
 
 
@@ -250,16 +247,13 @@ object StepFileUtils
    *
    * @param folderName Name of folder to be scanned.
    * @param pat Pattern-match name.
-   * @param regexPattern If true, this is a regex pattern.  If false, it's a
-   *                     file system pattern, and needs conversion to work
-   *                     with regex.
    *
    * @return List of matching file details.
    */
 
-  fun getMatchingFoldersFromFolder (folderName: String, pat: String, regexPattern: Boolean): List<Path>
+  fun getMatchingFoldersFromFolder (folderName: String, pat: Regex): List<Path>
   {
-    return getMatchingThingsFromFolder(folderName, pat, regexPattern, "D")
+    return getMatchingThingsFromFolder(folderName, pat, "D")
   }
 
 
@@ -282,16 +276,13 @@ object StepFileUtils
    *
    * @param folderName Name of folder to be scanned.
    * @param pat Pattern-match name.
-   * @param regexPattern If true, this is a regex pattern.  If false, it's a
-   *                     file system pattern, and needs conversion to work
-   *                     with regex.
    *
    * @return Path object for file if precisely one matches, otherwise null.
    */
 
-  fun getSingleMatchingFileFromFolder (folderName: String, pat: String, regexPattern: Boolean): Path?
+  fun getSingleMatchingFileFromFolder (folderName: String, pat: Regex): Path?
   {
-    val files = getMatchingFilesFromFolder(folderName, pat, regexPattern)
+    val files = getMatchingFilesFromFolder(folderName, pat)
     return if (1 == files.size) files[0] else null
   }
 
@@ -310,91 +301,20 @@ object StepFileUtils
    */
 
   fun iterateOverFilesInFolder (folderPath: String,
-                                theFilePattern: String?,
-                                theRegexPattern: Boolean,
+                                theFilePattern: Regex?,
                                 processor: ((filePath: String) -> Unit)?,
                                 sorter: Comparator<String>?): List<String>
   {
     /**************************************************************************/
-    var filePattern = theFilePattern
-    var regexPattern = theRegexPattern
-    if (null == theFilePattern)
-    {
-      filePattern = "*.*"
-      regexPattern = false
-    }
+    var filePattern = theFilePattern ?: ".*\\..*".toRegex()
 
 
 
     /**************************************************************************/
-    val filePaths = getMatchingFilesFromFolder(folderPath, filePattern!!, regexPattern)
+    val filePaths = getMatchingFilesFromFolder(folderPath, filePattern!!)
     var filePathsAsString = filePaths.map { it.toString() }
     if (null != sorter) filePathsAsString = filePathsAsString.sortedWith(sorter)
     if (null != processor) filePathsAsString.forEach { processor(it) }
-    return filePathsAsString
-  }
-
-
-  /****************************************************************************/
-  /**
-   * Iterates over all or selected files in a folder, calling some supplied
-   * function.  The files are assumed to contain XML, and the XML is fed to
-   * the processor in DOM form.
-   *
-   * @param folderPath Folder containing files of interest.
-   * @param theFilePattern Pattern-match to select files, or null for all files.
-   * @param theRegexPattern If true, filePattern is taken to be a regex; otherwise a command-line style pattern.
-   * @param processor Processor to be called on each file.  If null, the files are not processed, and the method simply returns the file list.
-   * @param sorter If non-null, something which determines the order in which the files should be processed.  Otherwise, they are processed in alphabetical order.
-   * @return File-list or null.
-   * @throws Exception
-   */
-
-  fun iterateOverFilesInFolderXmlDom (folderPath: String,
-                                      theFilePattern: String?,
-                                      theRegexPattern: Boolean,
-                                      processor: ((filePath: String, document: Document) -> Unit)?,
-                                      sorter: Comparator<String>?): List<String>
-  {
-    /**************************************************************************/
-    var filePattern = theFilePattern
-    var regexPattern = theRegexPattern
-    if (null == filePattern) {
-      filePattern = "*.*"
-      regexPattern = false
-    }
-
-
-
-    /**************************************************************************/
-    val filePaths = getMatchingFilesFromFolder(folderPath, filePattern, regexPattern)
-    var filePathsAsString = filePaths.map { it.toString() }
-    if (null != sorter) filePathsAsString = filePathsAsString.sortedWith(sorter)
-
-
-
-    /**************************************************************************/
-    if (null != processor)
-    {
-      fun domReader(x: String)
-      {
-        try
-        {
-          val doc = Dom.getDocument(x)
-          processor(x, doc)
-        }
-        catch (e: Exception)
-        {
-          throw StepException(e)
-        }
-      }
-
-      filePathsAsString.forEach { domReader(it) }
-    }
-
-
-
-    /**************************************************************************/
     return filePathsAsString
   }
 
@@ -479,38 +399,20 @@ object StepFileUtils
 
   /****************************************************************************/
   /* Gets Path entries for all the things in a given folder whose names match a
-   given pattern.  Note that matching is case-insensitive, to try to ease
-   the migration between Windows and Linux / Mac. */
+     given pattern.  Note that matching is case-insensitive, to try to ease
+     the migration between Windows and Linux / Mac. */
 
-  fun getMatchingThingsFromFolder (folderName: String, pat: String, regexPattern: Boolean, thingTypes: String): List<Path>
+  fun getMatchingThingsFromFolder (folderName: String, pat: Regex, thingTypes: String): List<Path>
   {
     /**************************************************************************/
-    var fileName = pat
+    val fileNamePattern = Regex(pat.pattern, RegexOption.IGNORE_CASE) // Also had Pattern.UNICODE_CASE in Java, but there appears to be no Kotlin equivalent.)
+
+
+
+    /**************************************************************************/
     val res: MutableList<Path> = ArrayList()
     val wantDirectory = ("D" in thingTypes)
     val wantFile = ("F" in thingTypes)
-
-
-
-    /**************************************************************************/
-    if (!regexPattern)
-    {
-      val x: MutableList<String> = fileName.split("").toMutableList()
-      for (i in 0..< x.size)
-        when (x[i])
-        {
-          "*" -> x[i] = ".*"
-          "?" -> x[i] = ".?"
-          "$" -> x[i] = "\\" + x[i]
-        }
-
-      fileName = x.joinToString("")
-    }
-
-
-
-    /**************************************************************************/
-    val pattern = Regex(fileName, RegexOption.IGNORE_CASE) // Also had Pattern.UNICODE_CASE in Java, but there appears to be no Kotlin equivalent.
 
 
 
@@ -521,7 +423,7 @@ object StepFileUtils
       for (entry in stream)
       {
         val s = entry.fileName.toString()
-        if (pattern.matches(s))
+        if (fileNamePattern.matches(s))
         {
           if (wantDirectory && Files.isDirectory(entry))
             res.add(entry)

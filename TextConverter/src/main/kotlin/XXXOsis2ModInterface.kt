@@ -1,6 +1,7 @@
 package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.*
+import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.ref.Ref
@@ -65,6 +66,33 @@ object XXXOsis2ModInterface
   var C_ExpandElisions = true
 
 
+  /****************************************************************************/
+  /**
+  * Outputs all relevant information to the JSON files where we are using
+  * the STEP variant of osis2mod.
+  */
+
+  fun createSupportingData ()
+  {
+    if (usingCrosswireOsis2Mod()) return
+    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, wantWordCount = false) // Make sure we have up-to-date structural information.
+    populateBibleStructure()
+    populateReversificationMappings()
+    outputJson(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath())
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Returns details of any command-line parameters this processor requires or permits.
+   *
+   * @param commandLineProcessor Command line processor.
+   */
+
+  fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
+  {
+    commandLineProcessor.addCommandLineOption("forcedOsis2ModVariant", 1, "Force to use Crosswire osis2mod or our own for test purposes", listOf("Crosswire", "Step", "CrosswireRelaxed"), "Crosswire", false)
+  }
 
 
   /****************************************************************************/
@@ -75,9 +103,14 @@ object XXXOsis2ModInterface
   * @param osis2modVariant What it says on the tin.
   */
 
-  fun setOsis2ModVariant (osis2modVariant: Osis2ModVariant)
+  fun setOsis2ModVariant ()
   {
-    m_Osis2ModVariant = osis2modVariant
+    m_Osis2ModVariant = when (ConfigData["stepForcedOsis2ModVariant"]!!.lowercase())
+    {
+      "step"             -> Osis2ModVariant.STEP
+      "crosswirerelaxed" -> Osis2ModVariant.CROSSWIRE_RELAXED
+      else               -> Osis2ModVariant.CROSSWIRE
+    }
 
     when (m_Osis2ModVariant)
     {
@@ -107,28 +140,12 @@ object XXXOsis2ModInterface
 
         ConfigData.delete("stepVersificationScheme")
         ConfigData.delete("stepVersificationSchemeCanonical")
-        ConfigData.put("stepVersificationScheme", ConfigData["stepModuleName"]!!, true)
-        ConfigData.put("stepVersificationSchemeCanonical", ConfigData["stepModuleName"]!!, true)
+        ConfigData.put("stepVersificationScheme", ConfigData["stepModuleNameWithoutDisambiguation"]!!, true)
+        ConfigData.put("stepVersificationSchemeCanonical", ConfigData["stepModuleNameWithoutDisambiguation"]!!, true)
         initialiseBookDetails()
         // System.err.println("Make sure you DO have Zec.")
      }
     }
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Outputs all relevant information to the JSON files where we are using
-  * the STEP variant of osis2mod.
-  */
-
-  fun createSupportingData ()
-  {
-    if (usingCrosswireOsis2Mod()) return
-    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, wantWordCount = false) // Make sure we have up-to-date structural information.
-    populateBibleStructure()
-    populateReversificationMappings()
-    outputJson(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath())
   }
 
 
@@ -189,7 +206,7 @@ object XXXOsis2ModInterface
        outputBookDetails(writer,"ntbooks", ntBooks)
 
        print(writer, "  'vm': [")
-       outputMaxVerses(writer, otBooks, ntBooks.isNotEmpty())
+       outputMaxVerses(writer, otBooks, true)
        outputMaxVerses(writer, ntBooks, false)
        print(writer, "    ],\n")
 
@@ -217,11 +234,11 @@ object XXXOsis2ModInterface
     }
 
 
-    fun outputMaxVerses (writer: PrintWriter, content: List<BookDetails>, addTrailer: Boolean)
+    fun outputMaxVerses (writer: PrintWriter, content: List<BookDetails>, moreToCome: Boolean)
     {
       val s = content.subList(0, content.size - 1).filter { it.chapMax > 0} .joinToString(",\n\n") { it.maxVersesToJson() }
       print(writer, s)
-      if (addTrailer) print(writer, ",\n")
+      if (moreToCome && s.isNotEmpty()) print(writer, ",\n")
       print(writer, "\n")
     }
   }

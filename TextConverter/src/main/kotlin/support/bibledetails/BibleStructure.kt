@@ -88,7 +88,8 @@ import kotlin.math.abs
  *
  * I make the assumption that elisions run from one *verse* to another (ie that
  * they do not involve subverses), and that they fall entirely within a single
- * chapter.
+ * chapter.  (This limitation means I can always know how many elements make up
+ * the elision, because it is simply the difference in the two verse numbers.)
  *
  * I cater for the possibility that the text as a whole may be incomplete (may
  * lack certain books); that a given book may be incomplete (may lack certain
@@ -125,6 +126,12 @@ import kotlin.math.abs
  * If subverses are present, a request for a list of all verses will include
  * the subverses as well.
  *
+ * Note that in the full conversion process, elisions tend to be expanded out
+ * into their individual verses early on in the processing.  Unfortunately,
+ * this doesn't necessarily occur prior to the point where the present
+ * processing is called upon to read the text, though, so I need to be able
+ * to cope with non-expanded elisions.
+ *
  * @author ARA "Jamie" Jamieson
 */
 
@@ -143,9 +150,19 @@ abstract class BibleStructure
   {
     /**************************************************************************/
     /** Dummy word count when dealing with verses in an elision (for which no
-    *   meaningful word count can be obtained). */
+    *   meaningful word count can be obtained).
+    */
 
     const val C_ElementInElision   = -1
+
+
+
+    /**************************************************************************/
+    /** Dummy indicator returned when asking for something which is not
+    *   available.
+    */
+
+    const val C_Unavailable   = -2
 
 
 
@@ -324,7 +341,7 @@ abstract class BibleStructure
 
   open fun addFromDom (doc: Document, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
   {
-    if (null != bookName) Dbg.reportProgress("    Determining Bible structure for $bookName")
+    if (null != bookName) Dbg.reportProgress("  Determining Bible structure for $bookName")
     m_CollectingWordCounts = wantWordCount
     preprocess(doc)
     load(doc, wantWordCount)
@@ -1011,7 +1028,8 @@ abstract class BibleStructure
   /****************************************************************************/
   protected open fun commonGetLastVerseNo (elts: IntArray): Int
   {
-    return Ref.getV(getChapterDescriptor(elts)!!.m_Content.m_Limits.m_HighIx.toLong())
+    val cd = getChapterDescriptor(elts)
+    return if (null == cd) C_Unavailable else Ref.getV(cd!!.m_Content.m_Limits.m_HighIx.toLong())
   }
 
 
@@ -1034,7 +1052,20 @@ abstract class BibleStructure
   /****************************************************************************/
   protected open fun commonGetMissingEmbeddedVersesForChapter (elts: IntArray): List<RefKey>
   {
-    return getMissingEmbeddedVersesForChapter(elts)
+    val cd = getChapterDescriptor(elts)!!
+    val verses = cd.m_Content.m_ContentMap.keys.map { Ref.rd(it.toLong()).getV() }
+
+    val baseRef = Ref.rd(elts).toRefKey_bcv()
+    var prevVerse = 0
+    var res: MutableList<RefKey> = mutableListOf()
+
+    verses.forEach {
+      for (i in prevVerse + 1 ..< it)
+        res.add(Ref.setV(baseRef, i))
+      prevVerse = it
+    }
+
+    return res
   }
 
 
@@ -1149,10 +1180,7 @@ abstract class BibleStructure
 
   protected fun getStandardisedId (node: Node, attributeName: String): String
   {
-    val idEltsFromText = node[attributeName]!!.split('-')
-    val idLow = m_RefParser(idEltsFromText[0]).toString()
-    val idHigh = if (1 == idEltsFromText.size) "" else ("-" + m_RefParser(idEltsFromText[1]).toString())
-    return idLow + idHigh
+    return m_RefRangeParser(node[attributeName]!!).toString()
   }
 
 
@@ -1166,6 +1194,115 @@ abstract class BibleStructure
   */
 
   protected abstract fun isNonCanonical (node: Node): Boolean
+
+
+  /****************************************************************************/
+  /**
+  * Loads the data structures from a given document, accumulating a word count
+  * where requested and possible.  This outline structure should almost
+  * certainly be fine for any XML-based representation (you'd simply need to
+  * supply suitable implementations of isNonCanonical and getRelevacneOfNode),
+  * but you may want to override it for other representations.
+  *
+  * @param doc Document from which data is taken.  (This data is added to any
+  *   data already stored -- it does not *replace* it.)
+  *
+  * @param wantWordCount What it say on the tin.
+  */
+
+  protected open fun load (doc: Document, wantWordCount: Boolean)
+  {
+    /**************************************************************************/
+    var canonicalTitleWordCount = 0
+    var inCanonicalTitle = false
+    var inVerse = false
+    var isElision = false
+    var verseWordCount = 0
+
+
+
+    /**************************************************************************/
+    fun textIsOfInterest (textNode: Node): Boolean
+    {
+      var parent = textNode
+      while (true)
+     {
+        parent = parent.parentNode ?: break
+        if (isNonCanonical(parent))
+          return false
+      }
+
+      return true
+    }
+
+
+
+    /**************************************************************************/
+    /* Decides whether text needs to be added to the word count. */
+
+    fun processText (node: Node)
+    {
+      if (inCanonicalTitle && textIsOfInterest(node))
+        canonicalTitleWordCount += StepStringUtils.wordCount(node.textContent)
+
+      else if (inVerse && !isElision && textIsOfInterest(node))
+        verseWordCount += StepStringUtils.wordCount(node.textContent)
+    }
+
+
+
+    /**************************************************************************/
+    val allNodes = Dom.collectNodesInTree(doc)
+    allNodes.forEach {
+      var processNode = true
+      while (processNode)
+      {
+        val relevance = getRelevanceOfNode(it)
+        when (relevance.nodeType)
+        {
+          NodeRelevanceType.VerseStart ->
+          {
+            handleVerseSid(relevance.idAsString)
+            isElision = "-" in relevance.idAsString; verseWordCount = 0; inVerse = true
+          }
+
+
+          NodeRelevanceType.VerseEnd ->
+          {
+            handleVerseEid(relevance.idAsString, verseWordCount)
+            isElision = false; inVerse = false
+          }
+
+
+          NodeRelevanceType.CanonicalTitleStart ->
+          {
+            canonicalTitleWordCount = 0
+            inCanonicalTitle = true
+          }
+
+
+          NodeRelevanceType.CanonicalTitleEnd ->
+          {
+            m_Text.m_CanonicalTitleDetails[Ref.rdUsx(relevance.idAsString).toRefKey()] = canonicalTitleWordCount
+            inCanonicalTitle = false
+          }
+
+
+          NodeRelevanceType.Text ->
+          {
+            processText(it)
+          }
+
+
+          NodeRelevanceType.Boring ->
+          {
+          }
+        } // when
+
+        processNode = relevance.andProcessThisNode
+      } // while (processNode)
+    } // forEach
+  } // load
 
 
   /****************************************************************************/
@@ -1222,7 +1359,7 @@ abstract class BibleStructure
   /****************************************************************************/
   private val C_Multiplier = RefBase.C_Multiplier.toInt()
   private var m_CollectingWordCounts = false
-  protected lateinit var m_RefParser: (String) -> Ref  // A routine to parse individual references.
+  protected lateinit var m_RefRangeParser: (String) -> RefRange  // A routine to parse individual references.
   private var m_Text = TextDescriptor() // The root of the structure.
 
 
@@ -1355,6 +1492,23 @@ abstract class BibleStructure
 
 
   /****************************************************************************/
+  /* This needs to cater for both single verses and elisions.  For a single
+     verse, it will store the actual word count.  For an elision, each verse
+     will be given the dummy value C_ElementInElision. */
+
+  private fun handleVerseEid (id: String, wordCount: Int)
+  {
+    val refKeys = RefRange.rdUsx(id).getAllAsRefs()
+    val isElision = refKeys.size > 1
+
+    refKeys.forEach {
+      val v = getVerseDescriptor(it.getCopyOfElements())!!
+      v.m_WordCount = if (isElision) C_ElementInElision else wordCount
+    }
+  }
+
+
+  /****************************************************************************/
   private fun handleVerseSid (id: String): VerseDescriptor
   {
     /**************************************************************************/
@@ -1408,102 +1562,6 @@ abstract class BibleStructure
     return res!!
   }
 
-
-  /****************************************************************************/
-  private fun load (doc: Document, wantWordCount: Boolean)
-  {
-    /**************************************************************************/
-    var canonicalTitleWordCount = 0
-    var inCanonicalTitle = false
-    var inVerse = false
-    var isElision = false
-    var verseWordCount = 0
-
-
-
-    /**************************************************************************/
-    fun textIsOfInterest (textNode: Node): Boolean
-    {
-      var parent = textNode
-      while (true)
-     {
-        parent = parent.parentNode ?: break
-        if (isNonCanonical(parent))
-          return false
-      }
-
-      return true
-    }
-
-
-
-    /**************************************************************************/
-    /* Decides whether text needs to be added to the word count. */
-
-    fun processText (node: Node)
-    {
-      if (inCanonicalTitle && textIsOfInterest(node))
-        canonicalTitleWordCount += StepStringUtils.wordCount(node.textContent)
-
-      else if (inVerse && !isElision && textIsOfInterest(node))
-        verseWordCount += StepStringUtils.wordCount(node.textContent)
-    }
-
-
-
-    /**************************************************************************/
-    val allNodes = Dom.collectNodesInTree(doc)
-    allNodes.forEach {
-      var processNode = true
-      while (processNode)
-      {
-        val relevance = getRelevanceOfNode(it)
-        when (relevance.nodeType)
-        {
-          NodeRelevanceType.VerseStart ->
-          {
-            handleVerseSid(relevance.idAsString)
-            isElision = "-" in relevance.idAsString; verseWordCount = 0; inVerse = true
-          }
-
-
-          NodeRelevanceType.VerseEnd ->
-          {
-            val v = getVerseDescriptor(Ref.rdUsx(relevance.idAsString).getCopyOfElements())!!
-            v.m_WordCount = if (isElision) C_ElementInElision else verseWordCount
-            isElision = false; inVerse = false
-          }
-
-
-          NodeRelevanceType.CanonicalTitleStart ->
-          {
-            canonicalTitleWordCount = 0
-            inCanonicalTitle = true
-          }
-
-
-          NodeRelevanceType.CanonicalTitleEnd ->
-          {
-            m_Text.m_CanonicalTitleDetails[Ref.rdUsx(relevance.idAsString).toRefKey()] = canonicalTitleWordCount
-            inCanonicalTitle = false
-          }
-
-
-          NodeRelevanceType.Text ->
-          {
-            processText(it)
-          }
-
-
-          NodeRelevanceType.Boring ->
-          {
-          }
-        } // when
-
-        processNode = relevance.andProcessThisNode
-      } // while (processNode)
-    } // forEach
-  } // load
 
   /****************************************************************************/
   private fun makeElts (ref: Ref): IntArray { return ref.getCopyOfElements() }
@@ -1660,7 +1718,7 @@ class BibleStructureOsis: BibleStructure()
   /*****************************************************************************/
   init {
     /***************************************************************************/
-    m_RefParser = { text -> Ref.rdOsis(text, null, null) }
+    m_RefRangeParser = { text -> RefRange.rdOsis(text, null, null) }
 
 
 
@@ -1759,7 +1817,7 @@ open class BibleStructureUsx: BibleStructure()
         val id: String
         var type: NodeRelevanceType
 
-        if (Dom.hasAttribute(node, "sid"))
+        if ("sid" in node)
         {
           type = NodeRelevanceType.VerseStart
           id = node["sid"]!!
@@ -1770,7 +1828,8 @@ open class BibleStructureUsx: BibleStructure()
           id = node["eid"]!!
         }
 
-        if (RefBase.C_BackstopVerseNumber == Ref.rdUsx(id).getV()) // Don't include the dummy temporary verses inserted to simplify processing.
+        // When processing USX, I add dummy verses at the end of each chapter to simplify processing.  We don't want to include these.
+        if (RefBase.C_BackstopVerseNumber == RefRange.rdUsx(id).getLowAsRef().getV()) // RefRange because we may need to cope with elisions.
           type = NodeRelevanceType.Boring
 
         return NodeRelevance(type, id, false)
@@ -1833,7 +1892,7 @@ open class BibleStructureUsx: BibleStructure()
 
   override fun preprocess (doc: Document)
   {
-    convertToSidEidAttributes(doc)
+    MiscellaneousUtils.sidify(doc)
   }
 
 
@@ -1845,73 +1904,8 @@ open class BibleStructureUsx: BibleStructure()
   /****************************************************************************/
  init {
     /**************************************************************************/
-    m_RefParser = { text -> Ref.rdUsx(text, null, null) }
+    m_RefRangeParser = { text -> RefRange.rdUsx(text, null, null) }
   }
-
-  /****************************************************************************/
-  companion object {
-    /**************************************************************************/
-    /**
-    * Checks if the document uses number attributes rather than sid/eid.  If it
-    * does, converts it to use sid and eid.
-    *
-    * This can cope with both milestone and (I think) with non-milestone.  If
-    * we have a text which gives only verse- or chapter- starts, they get sids.
-    *
-    * @param doc Document to be processed.
-    */
-
-    fun convertToSidEidAttributes (doc: Document)
-    {
-      /************************************************************************/
-      var bookName = ""
-      var chapterNo = ""
-
-
-
-      /************************************************************************/
-      fun processNode (node: Node)
-      {
-        when (Dom.getNodeName(node))
-        {
-          /********************************************************************/
-          "book", "_X_book" ->
-          {
-            bookName = node["code"]!!
-          }
-
-
-
-          /********************************************************************/
-          "chapter", "_X_chapter" ->
-          {
-            if (!Dom.hasAttribute(node, "sid")) return
-            if (!Dom.hasAttribute(node, "eid")) return
-            chapterNo = node["number"]!!
-            Dom.deleteAttribute(node, "number")
-            node["sid"] = "$bookName $chapterNo"
-          }
-
-
-
-          /********************************************************************/
-          "verse" ->
-          {
-            if (!Dom.hasAttribute(node, "sid")) return
-            if (!Dom.hasAttribute(node, "eid")) return
-            val verseNo = node["number"]!!
-            Dom.deleteAttribute(node, "number")
-            node["sid"] = "$bookName $chapterNo:$verseNo"
-          }
-        } // when
-       } // processNode
-
-
-
-       /************************************************************************/
-       Dom.collectNodesInTree(doc).forEach { processNode(it) }
-    } // convertToSidEidAttributes
-  } // companion object
 }
 
 
@@ -1935,6 +1929,7 @@ class BibleStructureOsis2ModScheme (scheme: String): BibleStructure()
   override fun commonGetWordCountForCanonicalTitle(elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
   override fun getRelevanceOfNode (node: Node): NodeRelevance { throw StepException("getRelevanceOfNode should not be being called on an osis2mod scheme.") }
   override fun isNonCanonical (node: Node): Boolean { throw StepException("isNonCanonical should not be being called on an osis2mod scheme.") }
+  override fun load (doc: Document, wantWordCount: Boolean) { throw StepException("load should not be being called on an osis2mod scheme.") }
 
 
   /****************************************************************************/
@@ -1970,7 +1965,7 @@ class BibleStructureOsis2ModScheme (scheme: String): BibleStructure()
   /****************************************************************************/
   init {
     m_Scheme = BibleStructuresSupportedByOsis2mod.canonicaliseSchemeName(scheme)
-    m_RefParser = { _ -> throw StepException("Parsing method should not be being called.") }
+    m_RefRangeParser = { _ -> throw StepException("Parsing method should not be being called.") }
     parseData()
   }
 }

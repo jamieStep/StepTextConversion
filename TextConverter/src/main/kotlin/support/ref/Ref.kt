@@ -93,7 +93,7 @@ class Ref : RefCollectionPart
   private fun getElementSources (): Array<ElementSource> { return m_RefEltSources }
 
 
-  /******************************************************************************/
+  /****************************************************************************/
   /** Comparisons.  cf returns -1, +1 or 0, and really assumes that none of the
    *  elements is empty. */
 
@@ -102,7 +102,7 @@ class Ref : RefCollectionPart
   override fun hashCode (): Int { return 0 }
 
 
-  /******************************************************************************/
+  /****************************************************************************/
   /** Gets, sets, clears, and checks for the existence of a given element.  */
 
   fun getB () = m_RefElts[C_BookIx]
@@ -139,7 +139,7 @@ class Ref : RefCollectionPart
 
 
 
-  /******************************************************************************/
+  /****************************************************************************/
   /** Gets, sets and tests the element source of a given element.  */
 
   fun getSourceB (): ElementSource { return getSource(C_BookIx) }
@@ -167,7 +167,7 @@ class Ref : RefCollectionPart
   fun hasExplicit (elt: String): Boolean { return hasExplicit(getIndex(elt)) }
 
 
-  /******************************************************************************/
+  /****************************************************************************/
   /** Convert to refKey form. */
 
   fun toRefKey (): RefKey { return refKeyFromElts(m_RefElts) }
@@ -179,16 +179,21 @@ class Ref : RefCollectionPart
   fun toRefKey (selectors: String): RefKey { return refKeyFromElts(m_RefElts, selectors) }
 
 
-  /******************************************************************************/
+  /****************************************************************************/
   override fun getFirstAsRef (): Ref { return this }
   override fun getHighAsRef () : Ref { return this }
   override fun getLastAsRef () : Ref { return this }
   override fun getLowAsRef ()  : Ref { return this }
 
   
-  /******************************************************************************/
+  /****************************************************************************/
   override fun getElementCount ()  : Int { return 1 }
   override fun getReferenceCount (): Int { return 1 }
+
+
+  /****************************************************************************/
+  fun isSameChapter (otherRef: Ref): Boolean { return toRefKey_bc() == otherRef.toRefKey_bc() }
+
 
 
   /****************************************************************************/

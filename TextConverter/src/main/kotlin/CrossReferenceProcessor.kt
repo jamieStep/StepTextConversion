@@ -2,14 +2,10 @@
 package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.miscellaneous.Dom
-import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
-import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
+import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.*
 import org.stepbible.textconverter.support.ref.RefFormatHandlerReaderVernacular.readEmbedded
 import org.w3c.dom.Document
@@ -25,6 +21,39 @@ import org.w3c.dom.Node
  * I suppose eventually I may come across an aspect of USX which doesn't make
  * for complicated processing.  Unfortunately, this isn't one of them.
  *
+ * - There are several tags involved in cross-reference markup,
+ *
+ * - There are different ways of using these tags.
+ *
+ * - There are certain rules which may or may not have been obeyed.
+ *
+ * - References are usually given in two forms -- USX and vernacular.
+ *   In theory these should tie up, but they don't always.
+ *
+ * - References may or may not be syntactically correct.
+ *
+ * - References may or may not be semantically correct.
+ *
+ * - References may point to verses which don't actually exist in this text,
+ *   something which may or may not have been anticipated in the markup.
+ *
+ * - References may or may not point to subverses, and the subverses may not
+ *   have been identified in the original markup and / or may have had to be
+ *   stripped out because the official Crosswire tools do not support them.
+ *
+ * - If reversification is being applied and is actually restructuring the
+ *   text (fortunately something which it seems may no longer be happening),
+ *   references which point to verses affected by reversification may have to
+ *   be amended.
+ *
+ * - Etc.
+ *
+ *
+ *
+ *
+ *
+ * ## Slightly less of an overview and more of a detailed consideration.
+ *
  * There are several tags involved in cross-reference processing.  The two of
  * most immediate interest are char:xt and ref, which are the ones which
  * actually carry details of the references to which we wish to link.  In
@@ -38,64 +67,15 @@ import org.w3c.dom.Node
  *     <ref loc='GEN 2:1'>   Gen 2:1   </ref>
  *
  * where I have introduced extra spacing to improve readability -- spacing
- * which is not present in the real markup.  A more detailed discussion of
- * these tags and the variations upon them appears later.  For now, the
- * important take-away message is that each gives the target reference(s)
- * in two forms -- a USX format attribute (loc or link-href) which tells
- * the processing where to link to, and a (presumably) vernacular form
- * which is visible to the user, and which they can click on to activate
- * the link.  (This vernacular form is given by the *content* of the tag.
- * It is *presumably* going to be a vernacular representation of the target,
- * although I don't recall seeing anything which mandates this.)
+ * which is not present in the real markup.  In each of these examples,
+ * the link-href or loc attribute is supposed to contain the USX form of the
+ * target, and the content of the node forms, in STEP, the clickable text
+ * which takes you to the reference (and is presumably the same target in
+ * vernacular form, although I don't think there's anything which says it
+ * *has* to be).
  *
- * So far as I can see, the two tags serve the same ends in much the same
- * way -- except a) that char:xt may actually *contain* a ref tag which
- * does all the work; and b) that the link-href attribute is optional, and
- * in the absence of a contained ref tag, you would need to parse the tag
- * content to work out where the tag is supposed to be pointing.
- *
- * So things we might check / might do :-
- *
- * - Generate a ref tag within char:x?t where they lack a ref tag but do
- *   have a link-href.  This means that I only then need to deal with
- *   refs.  This I *do* do.
- *
- * - Parse the content of char:x?t tags which lack link-href to determine
- *   where the tag is pointing, and then create refs for these too.
- *   I'm not doing this at present -- I do have code which might do the job
- *   but it may take a fair bit of work to get it going, and in any case
- *   it will only work if I have details of how vernacular references are
- *   formatted.  Fortunately, I don't think I've seen many char:xt's of this
- *   kind.
- *
- * - Check that the loc parameter of all actual or generated refs are legit.
- *   Again, I don't do this -- I'm assuming, somewhat riskily, that the
- *   translators have got it right.
- *
- * - Check that the content of actual and generated refs point to the same
- *   place as do the corresponding loc attributes.  (I don't do that either,
- *   since it would require me to parse vernacular text.)
- *
- * - Check that the text contains the relevant target references, so that
- *   cross-referencing will actually work.  This I *do* do.  If the targets
- *   do not exist I issue a warning (except where xnt, xot or xdc give the
- *   impression that the translators didn't *expect* the target to be present)
- *   and turn the tag into plain text.
- *
- * - There is also some processing specific to Biblica texts, because Biblica
- *   tend to use note:f throughout when they really need to use note:x.
- *   (note:f is for plain vanilla footnotes, while note:x is for cross-refs.
- *   You *can* have cross-references within footnotes, and they will work,
- *   but they're clumsy.  See correctNoteStyles for details.
- *
- * - Subsequent to reversification, update references.  I *do* do this, but
- *   only in a slightly half-hearted manner.  Reversification may change the
- *   verse numbers assigned to particular pieces of text, and presumably
- *   cross-references which pointed to them previously need still to point to
- *   them now.  To this end, I update the USX references which appear in the
- *   loc attribute of refs.  However, I *don't* update the associated
- *   displayable text.  For all the reasons set out above, this would be
- *   difficult to do anyway, but I've specifically been asked not to do it.
+ * In fact, the char:xt doesn't usually have the link-href attribute; more
+ * often, it simply serves as a container for ref tags.
  *
  *
  *
@@ -127,42 +107,6 @@ import org.w3c.dom.Node
  * be very large: one of the examples above gives three entire books as the
  * range.  In each case, the content of the tag gives the range in vernacular
  * form.
- *
- * References to entire books or chapters I turn into plain text, either because
- * it doesn't seem to make sense to treat them as cross-references, or because
- * at one time STEP would crash or hang if trying to cross-reference a large
- * amount of text.
- *
- *
- * *char:xt*
- *      <char style="xt" link-href="GEN 2:1">1</char>
- *
- * This ostensibly gives target references.  In this case, though, the target
- * references are based purely upon the text which appears as the content of the
- * tag (and will therefore be supplied in vernacular form only).  The link-href
- * parameter is optional.  If present, it should give an equivalent scripture
- * reference in USX format for use in any glossaries etc.  This makes it
- * possible to give very terse references (as the '1' in the example above),
- * and still to have something meaningful in the glossary.  The USX ref manual
- * says that if the content comprises just a single number, it should be
- * interpreted as a chapter number (in the context of the owning book), and not
- * as a verse number.
- *
- * As outlined above, char:xt may already contain a ref tag, in which case we
- * already have all we need, and I leave the char:xt as-is.  If char:xt has
- * link-href, I generate a ref tag and put it below the char:xt.  Otherwise,
- * I warn about the issue and drop the tag.
- *
- *
- * *note*
- *     <note caller="..." style="x|ex">
- *       ... Various tags.
- *     </note>
- *
- *
- * The note tag encapsulates various of the other tags discussed here (notably
- * char:xt and ref).  In STEP it arranges for details of the cross-reference
- * to be placed in the left margin (or at any rate, it used to).
  *
  * Other tags which may appear within *note* include :-
  *
@@ -196,120 +140,207 @@ import org.w3c.dom.Node
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                             Canonicalisation                           **/
+  /**                                  Public                                **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+   /****************************************************************************/
+  public fun canonicaliseAndPatchUp (document: Document)
+  {
+    /**************************************************************************/
+    /* Add an indication of which verse 'owns' each cross-reference. */
+
+    addBelongsTo(document)
+
+
+
+    /**************************************************************************/
+    /* Turn char:xot, char:xnt and char:dc all to char:xt to simplify later
+       processing.  Having done this, we now have all of the char:xt nodes
+       we're ever going to have, so to save looking for them repeatedly in
+       later processing, we can simply build up a list here. */
+
+    canonicaliseCharXtsStandardiseStyles(document)
+    val charXts = Dom.findNodesByAttributeValue(document, "char",  "style","xt")
+
+
+    /**************************************************************************/
+    /* A given char:xt should contain _either_ a link-href attribute or one or
+       more ref nodes (or, in fact, possibly neither).  To avoid later
+       confusion, I drop href-link in favour of ref where both exist. */
+
+    canonicaliseCharXtsDealWithHrefLinkNodesWhichAlsoContainRefTags(charXts)
+
+
+
+    /**************************************************************************/
+    /* USX does allow for refs to be based purely upon vernacular text,
+       more's the pity.  Where this is the case, try to work out the equivalent
+       USX. */
+
+    canonicaliseCharXtsReliantUponVernacularText(charXts)
+
+
+
+    /**************************************************************************/
+    /* Check that any href-links still present are valid. */
+
+    canonicaliseCharXtsValidateHrefLinks(charXts)
+
+
+
+    /**************************************************************************/
+    /* Attempt to standardise the node structure within char:xt by introducing
+       ref tags where necessary / possible. */
+
+    canonicaliseCharXts(charXts)
+
+
+
+    /**************************************************************************/
+    /* We may possibly have some char:xt's which don't actually contain any ref
+       tags.  Flag those. */
+
+    canonicaliseCharXtsHandleNodesLackingRefs(charXts)
+
+
+
+    /**************************************************************************/
+    /* We have now done all we can with char:xt tags themselves.  Time to look
+       at any contained ref tags.
+
+       First, ref tags are _supposed_ to have loc tags, because they tell us
+       where to point to.  If there are any which _don't_ have loc tags, turn
+       them into plain text nodes.
+
+       Note that unlike char:xt, we can't so readily build up a list of refs
+       which will serve as input for everything, because at least some of the
+       steps below remove refs or turn them into something else. */
+
+    canonicaliseCharXtsConvertLoclessNodesToTextOnly(document)
+
+
+
+    /**************************************************************************/
+    /* USX caters for special references to appear within major headings.
+       These are probably best converted to plan text, because they normally
+       point to very large chunks of text -- eg whole chapters -- and those
+       don't really work in STEP as cross-references, because cross-references
+       are shown in pop-up windows, which don't readily accommodate vast
+       amounts of text. */
+
+    canonicaliseRefsDropRefsFromMajorHeadings(document)
+
+
+
+    /**************************************************************************/
+    /* Convert any ref containing an invalid loc attribute to _X_contentOnly. */
+
+    canonicaliseRefsValidateLocAttributes(document)
+
+
+
+    /**************************************************************************/
+    /* In theory, ref 'loc' attributes shouldn't contain collections, but
+       sometimes they don't.  In these cases, attempt to split them out into
+       separate ref tags. */
+
+    canonicaliseRefsSplitCollections(document)
+
+
+
+    /**************************************************************************/
+    /* Where refs point to non-existent locations, convert them to
+       _X_contentOnly. */
+
+    canonicaliseRefsCheckTargetsExist(document)
+
+
+
+    /**************************************************************************/
+    /* References to single-chapter books have to include chapter=1. */
+
+    canonicaliseRefsConvertSingleChapterReferences(document)
+
+
+
+    /**************************************************************************/
+    /* Really of interest only on Biblica texts -- they have a distressing
+       habit of enclosing _all_ footnotes in note:f, whereas really cross-
+       references should be in note:x. */
+
+    canonicaliseNotesCorrectNoteStyles(document)
+
+
+
+    /**************************************************************************/
+    canonicaliseRefsCompareLocAndContent(document)
+
+
+
+    /**************************************************************************/
+    reportWarnings()
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                  char:xt                               **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
 
   /****************************************************************************/
-  fun canonicalise (document: Document)
+  /* It's convenient to convert xot, xnt and xdc all to xt so they can all be
+     handled the same way.
+
+     Also USX permits the actual cross-reference details to be recorded in a
+     number of different ways:
+
+     - They may be recorded on one or more ref tags within the char:xt.  This
+       appears to be the commonest approach, and if I find it to be the case
+       here, that's fine.
+
+     - They may be recorded in an href-link attribute within the char:xt tag.
+       In this case, I generate ref tags within the char:xt as necessary,
+       thus reducing it to 'standard' form.
+
+     to be recorded on one or more ref tags within the char:xt, or as an
+     href-link attribute on the char:xt itself, or merely to be recorded within
+     the char:xt in vernacular form.  This looks for char:xt's which lack the
+     ref tag but which contain href-link, and creates the ref tag instead.
+     This means that after this call, we can rely upon tags having a ref tag
+     wherever they had one already, or where href-link permitted us to create
+     one. */
+
+  private fun canonicaliseCharXts (charXts: List<Node>)
   {
-    addBelongsTo(document)
-    canonicaliseCharXt(document)
-    //addBelongsTo(document)
-    convertLoclessRefsToTextOnly(document)
-    dropRefsFromMajorHeadings(document)
-    //validate(document)
-    checkRefTargetsExist(document)
-    convertSingleChapterReferences(document)
-    correctNoteStyles(document)
-    deleteBelongsTo(document)
-  }
-
-
-  /****************************************************************************/
-  /* Add to each ref details of the chapter or verse to which it belongs. */
-
-  private fun addBelongsTo (document: Document)
-  {
-    var chapterRef = ""
-    var theRef = ""
-
-    fun processNode (node: Node)
-    {
-      when (Dom.getNodeName(node))
-      {
-        "_X_chapter" -> chapterRef = Dom.getAttribute(node, "sid")!!
-        "verse" -> theRef = if (Dom.hasAttribute(node, "sid")) Dom.getAttribute(node, "sid")!! else chapterRef
-        "ref" -> Dom.setAttribute(node, "_TEMP_belongsTo", theRef)
-        "char" ->
-          if ("xt" == Dom.getAttribute(node, "style"))
-            Dom.setAttribute(node, "_TEMP_belongsTo", if (theRef.contains("-")) RefRange.rdUsx(theRef).getHighAsRef().toString() else theRef)
-      }
-    }
-
-    Dom.collectNodesInTree(document).forEach { processNode(it) }
-  }
-
-
-  /****************************************************************************/
-  /* Converts x?t to xt, and creates ref tags where necessary / possible. */
-
-  private fun canonicaliseCharXt (document: Document)
-  {
-    /**************************************************************************/
-    fun changeToXt (node: Node)
-    {
-      MiscellaneousUtils.recordTagChange(node, "char", "xt", "Reduced to common form")
-    }
-
-    Dom.findNodesByAttributeValue(document, "char", "style", "xot").forEach { changeToXt(it) }
-    Dom.findNodesByAttributeValue(document, "char", "style", "xnt").forEach { changeToXt(it) }
-    Dom.findNodesByAttributeValue(document, "char", "style", "xdc").forEach { changeToXt(it) }
-
-
-
     /**************************************************************************/
     fun processXt (node: Node)
     {
       if (null != Dom.findNodeByName(node, "ref", false)) return // Already has a ref child -- assume that's all we need.
 
-      val href = Dom.getAttribute(node, "href-link")
-      if (null == href) // No href-link, so no way of handling it.
-      {
-        if (!tryCreatingXtFromVernacularContent(node))
-        {
-          warning(node, "Can't identify target: " + Dom.toString(node) + " / " + node.textContent)
-          MiscellaneousUtils.recordTagChange(node, "_X_contentOnly", null, "Can't identify target")
-        }
-      }
-
-      else // We have a href-link.  Use it to create a ref node and place it under char:xt, inheriting the children from the latter.
+      val href = node["href-link"]
+      if (null != href) // Use the href-link to create a ref node and place it under char:xt, inheriting the children from the latter.
       {
         val originalChildren = Dom.getChildren(node)
         Dom.deleteNodes(originalChildren)
-        val newNode = Dom.createNode(document, "<ref loc='$href' _X_tagGeneratedReason='Canonicalise char:xt'/>")
+        val newNode = Dom.createNode(node.ownerDocument, "<ref loc='$href' _X_action='Added refTag in order to canonicalise char:xt'/>")
         Dom.addChildren(newNode, originalChildren)
         node.appendChild(newNode)
-        Dom.deleteAttribute(node, "href-link")
+        node -="href-link"
       }
     }
 
-    Dom.findNodesByAttributeValue(document, "char", "style", "xt").forEach { processXt(it) }
-  }
 
 
-  /****************************************************************************/
-  /* Checks ref targets exist. */
-
-  private fun checkRefTargetsExist (document: Document)
-  {
     /**************************************************************************/
-    fun processRef (node: Node)
-    {
-      val rc = RefCollection.rdUsx(Dom.getAttribute(node, "loc")!!)
-      val foundError = rc.getAllAsRefs().firstOrNull { !BibleStructure.UsxUnderConstructionInstance().bookExists(it) }
-
-      if (null != foundError)
-      {
-        val was = Dom.getAttribute(node, "_X_origTag")
-        if (null != was && "char:xot" != was && "char:xnt" != was && "char:xdc" != was)
-          error(node, "Target does not exist: " + Dom.getAttribute(node, "loc")!!)
-        MiscellaneousUtils.recordTagChange(node, "_X_contentOnly", null, "Target does not exist")
-      }
-    }
-
-    Dom.findNodesByName(document, "ref").forEach { processRef(it) }
+    charXts.forEach { processXt(it) }
   }
 
 
@@ -319,34 +350,129 @@ import org.w3c.dom.Node
      to verses, and the loc tells you where to point.  However, it is deemed
      useful to retain the details as read-only information. */
 
-  private fun convertLoclessRefsToTextOnly (document: Document)
+  private fun canonicaliseCharXtsConvertLoclessNodesToTextOnly (document: Document)
   {
     Dom.findNodesByName(document, "ref")
-      .filter { !Dom.hasAttribute(it, "loc") }
-      .forEach { MiscellaneousUtils.recordTagChange(it, "_X_contentOnly", null, "Was ref with no loc") }
+      .filter { "loc" !in it }
+      .forEach {
+        MiscellaneousUtils.recordTagChange(it, "_X_contentOnly", null, "Was ref with no loc")
+        recordWarning(it, "Was ref with no loc")
+      }
   }
 
 
   /****************************************************************************/
-  /* Adds chapter 1 to single chapter references which lack the chapter. */
+  /* A given char:xt should contain _either_ a href-link or embedded refs, but
+     not both.  (Possibly it may contain neither.)  If it does contain both,
+     I throw away the link-href and just retain the refs -- I think trying to
+     check the two are compatible is just a step too far. */
 
-  private fun convertSingleChapterReferences (document: Document)
+  private fun canonicaliseCharXtsDealWithHrefLinkNodesWhichAlsoContainRefTags (charXts: List<Node>)
   {
-    fun processRef (node: Node)
-    {
-      var loc = Dom.getAttribute(node, "loc") ?: return // Of course, it always _should_ have loc.
-      if (loc.contains(":")) return // Already have a chapter.
-      if (!BibleAnatomy.isSingleChapterBook(loc)) return // Nothing to do.
-
-      val bits = loc.split("\\s+".toRegex())
-      loc = bits[0] + " 1:" + bits[1]
-      Dom.setAttribute(node, "loc", loc)
-      Dom.setAttribute(node, "_X_attributeValueChangedReason", "Added v1 to single-chapter-book reference")
-    }
-
-    Dom.findNodesByName(document, "ref").forEach { processRef(it) }
+    charXts
+      .filter { "href-link" in it && null != Dom.findNodeByName(it, "ref", false) }
+      .forEach {
+        recordWarning(it, "Deleted href-link attribute (${it["href-link"]!!}) in favour of existing ref tags")
+        it -= "href-link"
+      }
   }
 
+
+  /****************************************************************************/
+  /* In order to function as a cross-reference, any char:xt must contain one or
+     more ref nodes by now. */
+
+  private fun canonicaliseCharXtsHandleNodesLackingRefs (charXts: List<Node>)
+  {
+    charXts
+      .filter { null == Dom.findNodeByName(it, "ref", false) }
+      .forEach { recordWarning(it, "char:xt with no contained refNodes") }
+  }
+
+
+  /****************************************************************************/
+  /* This deals with char:xt nodes which have no href-link and no embedded ref
+     tag, leaving us dependent upon attempting to parse the vernacular
+     content.  Note that the effect of this may be to create refs which
+     themselves are collections (something which neither USX nor OSIS support),
+     but we straighten that out later. */
+
+  private fun canonicaliseCharXtsReliantUponVernacularText (charXts: List<Node>)
+  {
+    /**************************************************************************/
+    fun process (node: Node)
+    {
+      val s = tryCreatingXtFromVernacularContent(node)
+      if (null != s) recordWarning(node, "$s (was char:x?t)")
+    }
+
+
+
+    /**************************************************************************/
+    charXts
+      .filter { "href-link" !in it && null == Dom.findNodeByName(it, "ref", false) }
+      .forEach { process(it) }
+  }
+
+
+  /****************************************************************************/
+  /* USX makes provision for cross-references to be labelled as for use only if
+     the text contains the OT, only if it contains the NT, or only if it
+     contains the DC.  This does raise the question of what this means.  There
+     seem to be several options:
+
+     - If the relevant portion of the Bible is missing, we could simply
+       expunge the cross-reference altogether.
+
+     - We could retain something come what may, but convert it to plain text
+       if the relevant portion is missing.
+
+     - We could largely ignore the issue of whether the target portion is
+       present or not, and leave it to later processing to see whether it
+       can make the thing work.  (This later always checks to see whether the
+       targets for the cross-references exist.
+
+     This final option seems to be the most useful, so that's what I've gone
+     with.  I do add a temporary attribute so that later processing won't
+     issue warnings if the target turns out not to exist.
+   */
+
+  private fun canonicaliseCharXtsStandardiseStyles (document: Document)
+  {
+    fun changeToXt (node: Node, was: String) { MiscellaneousUtils.recordTagChange(node, "char", "xt", "Was $was") }
+
+    Dom.findNodesByAttributeValue(document, "char", "style", "xot").forEach { changeToXt(it, "xot") }
+    Dom.findNodesByAttributeValue(document, "char", "style", "xnt").forEach { changeToXt(it, "xnt") }
+    Dom.findNodesByAttributeValue(document, "char", "style", "xdc").forEach { changeToXt(it, "xdc") }
+  }
+
+
+  /****************************************************************************/
+  /* Checks that any href-links are valid references, and deletes ones which
+     aren't. */
+
+  private fun canonicaliseCharXtsValidateHrefLinks (charXts: List<Node>)
+  {
+    charXts
+      .filter { "href-link" in it }
+      .forEach {
+        if (!validateUsx(it["href-link"]!!))
+          recordWarning(it, "char:xt has invalid href-link (${it["href-link"]!!})")
+          it -= "href-link"
+      }
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                   note                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
 
   /****************************************************************************/
   /* This code shouldn't exist.  It's here only because Biblica don't tend to
@@ -361,9 +487,10 @@ import org.w3c.dom.Node
      note:x (and note:ex) is used basically to hold cross-references.
 
      The purpose of this method is to convert note:f to note:x where this seems
-     appropriate.  I should possibly limit the processing to Biblica texts only,
-     but at present this will run regardless of the type of text we are
-     handling.
+     appropriate.  At present this _always_ runs, which is perhaps not ideal,
+     because I think it addresses an issue which is limited to Biblica texts.
+     However, aside from using a little extra processing, I don't think it
+     does any _harm_ to apply it universally.
 
      To my mind, footnotes essentially come in three flavours.  There is the
      extensive explanatory footnote; the 'pure' cross-reference (which may
@@ -402,7 +529,7 @@ import org.w3c.dom.Node
      the enclosing note tag.
    */
 
-  private fun correctNoteStyles (document: Document)
+  private fun canonicaliseNotesCorrectNoteStyles (document: Document)
   {
     /**************************************************************************/
     val C_NoOfCanonicalWordsWhichMeansThisIsANoteF = 6
@@ -445,34 +572,33 @@ import org.w3c.dom.Node
         val charNodes = Dom.findNodesByName(noteNode, "char", false)
         val canonicalText = charNodes.joinToString(" ") { Dom.getCanonicalTextContentToAnyDepth(it) }
         if (StepStringUtils.wordCount(canonicalText) < C_NoOfCanonicalWordsWhichMeansThisIsANoteF)
-        {
-          Dom.setAttribute(noteNode, "style", "x")
-          Dom.setAttribute(noteNode, "_X_change", "Style was 'f' but contains cross-reference details.")
-        }
+          MiscellaneousUtils.recordTagChange(noteNode, "note", "x", "Style was 'f' but contains cross-reference details.")
       }
     }
   }
 
 
+
+
+
   /****************************************************************************/
-  /* Get rid of the temporary markers. */
-
-  private fun deleteBelongsTo (document: Document)
-  {
-    Dom.findNodesByAttributeName(document, "*", "_TEMP_belongsTo").forEach { Dom.deleteAttribute(it, "_TEMP_belongsTo")}
-  }
-
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                    ref                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
 
   /****************************************************************************/
   /* Certain headings -- particularly those at the start of a book -- tend to
      contain ref tags which point to large chunks of text (multiple chapters,
      for instance).  We probably don't want these actually to be clickable,
      both because there is no point, when sitting at the front of the book
-     then to look at 10 chapters of that book in a separate window, and also
+     then to look at 10 chapters of that book in a pop-up window, and also
      because trying to show a lot of text causes STEP to crash (or certainly
      did so at one time).  I therefore change these refs to _X_contentOnly. */
 
-  private fun dropRefsFromMajorHeadings (document: Document)
+  private fun canonicaliseRefsDropRefsFromMajorHeadings (document: Document)
   {
     fun modifyRef (ref: Node)
     {
@@ -487,6 +613,442 @@ import org.w3c.dom.Node
     Dom.findNodesByAttributeValue(document, "para", "style", "mr").forEach { modifyRefs(it) }
     Dom.findNodesByAttributeValue(document, "para", "style", "sr").forEach { modifyRefs(it) }
     Dom.findNodesByAttributeValue(document, "char", "style", "ior").forEach { modifyRefs(it) }
+  }
+
+
+  /****************************************************************************/
+  /* In theory, the loc attributes on ref tags should not contain collections,
+     but I've seen texts where they do.  I attempt here to split such refs
+     out into multiple adjacent ones.  However, to do this, I also have to be
+     able to parse the vernacular text; where I cannot do that, I report an
+     issue, but leave the tag as-is in the hope that nothing downstream will
+     break too egregiously
+
+     I think I'm safe in assuming here that we'll have at most one collection
+     in the vernacular text, because earlier processing will have sorted
+     things out to ensure this is the case.  Thus it is 'simply' a case of
+     marrying the individual elements of the USX text with those of the
+     vernacular. */
+
+  private fun canonicaliseRefsSplitCollections (document: Document)
+  {
+    /**************************************************************************/
+    fun process (node: Node)
+    {
+      /************************************************************************/
+      if (!m_CanReadAndWriteVernacular)
+      {
+        recordWarning(node, "loc attribute (${node["loc"]!!}) represents a reference collection, which is illegal")
+        return
+      }
+
+
+
+      /************************************************************************/
+      val usxRefCollection = RefCollection.rdUsx(node["loc"]!!) // Parse the loc attribute as a USX collection.
+      val vernacularElts = readEmbedded(node.textContent.trim(), context=Ref.rdUsx(node["_X_belongsTo"]!!)) // Can't do the same with the content, because it may contain noise words like 'See'.
+      var eltCollectionIx = 0 // I assume that the vernacularElts collection will contain just one collection, but it may be preceded by noise.
+
+      var prefix: String? = null // Any noise before the first (sole) vernacular collection.
+      var suffix: String? = null // Any noise after the last vernacular collection.
+      if (vernacularElts[0] is RefFormatHandlerReaderVernacular.EmbeddedReferenceElementText)
+        prefix = vernacularElts[eltCollectionIx++].text
+      if (vernacularElts.last() is RefFormatHandlerReaderVernacular.EmbeddedReferenceElementText)
+        suffix = vernacularElts.last().text
+
+      val vernacularRefCollection = (vernacularElts[eltCollectionIx] as RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection).rc
+      if (usxRefCollection != vernacularRefCollection)
+      {
+        recordWarning(node, "USX reference and vernacular reference do not match")
+        return
+      }
+
+
+
+      /************************************************************************/
+      val usxElements = usxRefCollection.getElements()               // The individual refs or refRanges which make up the USX collection.
+      val vernacularElements = vernacularRefCollection.getElements() // The individual refs or refRanges which make up the vernacular collection.
+
+      val newNodes: MutableList<Node> = mutableListOf()              // The nodes which are going to replace the existing ref.
+      if (null != prefix)                                            // Add any noise which needs to go at the front.
+        newNodes.add(Dom.createTextNode(node.ownerDocument, prefix))
+
+      var prevRef: Ref? = null
+      var sep: String?
+
+      for (ix in usxRefCollection.getElements().indices)
+      {
+        val thisRef = usxElements[ix].getLowAsRef()
+
+        if (null != prevRef) // If we've had a previous Ref or RefRange, we need to follow it with a suitable separator.
+        {
+          sep = if (thisRef.isSameChapter(prevRef)) RefFormatHandlerWriterVernacular.getCollectionSeparatorSameChapter() else RefFormatHandlerWriterVernacular.getCollectionSeparatorDifferentChapters()
+          newNodes.add(Dom.createTextNode(node.ownerDocument, "$sep "))
+        }
+
+        val newNode = Dom.createNode(node.ownerDocument, "<ref loc='${usxElements[ix]}' _X_generatedReason='Split from reference collection (${node["loc"]!!}) in original ref")
+        newNode.appendChild(Dom.createTextNode(node.ownerDocument, vernacularElements[ix].toString("e")))
+        newNodes.add(newNode)
+
+        prevRef = thisRef
+      }
+
+
+
+      /************************************************************************/
+      if (null != suffix) // Add any trailing noise words.
+        newNodes.add(Dom.createTextNode(node.ownerDocument, suffix))
+
+
+
+      /************************************************************************/
+      Dom.insertNodesAfter(node, newNodes)
+      Dom.deleteNode(node)
+    }
+
+
+
+    /**************************************************************************/
+    Dom.findNodesByName(document, "ref")
+      .filter { 1 != RefCollection.rdUsx(it["loc"]!!).getElementCount() }
+      .forEach { process(it) }
+  }
+
+
+  /****************************************************************************/
+  /* Checks for any loc parameters which have invalid loc attributes.  Reports
+     them and changes the owning ref into an _X_contentOnly. */
+
+  private fun canonicaliseRefsValidateLocAttributes (document: Document)
+  {
+    Dom.findNodesByName(document, "ref").forEach {
+      if (!validateUsx(it["loc"]!!))
+        recordWarning(it, "ref has invalid loc (${it["loc"]!!})")
+        MiscellaneousUtils.recordTagChange(it, "_X_contentOnly", null, "Invalid loc")
+    }
+  }
+
+
+
+
+
+ /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Reporting                               **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  private fun recordWarning (node: Node, attributeValue: String)
+  {
+    node["_X_warning"] = attributeValue
+    val refKey = Ref.rdUsx(node["_X_belongsTo"]!!).toRefKey()
+    if (null == m_Warnings[refKey]) m_Warnings[refKey] = attributeValue
+  }
+
+
+  /****************************************************************************/
+  private fun reportWarnings ()
+  {
+    m_Warnings.forEach { (refKey, text) -> Logger.warning(refKey, "Cross-reference: $text.")}
+  }
+
+
+  /****************************************************************************/
+  private val m_Warnings: MutableMap<RefKey, String> = mutableMapOf()
+
+
+
+
+
+  /****************************************************************************/
+  /* Checks ref targets exist. */
+
+  private fun canonicaliseRefsCheckTargetsExist (document: Document)
+  {
+    /**************************************************************************/
+    fun processRef (node: Node)
+    {
+      val rc = RefCollection.rdUsx(node["loc"]!!)
+      val problems = rc.getAllAsRefKeys().filter { !BibleStructure.UsxUnderConstructionInstance().bookExists(it) } .map { Ref.getB(it)}
+      val report = when (node["_X_tagOrStyleChangedReason"]?.replace("Was ", ""))
+      {
+        "xot" -> !problems.all { BibleAnatomy.isOt(it) }
+        "xnt" -> !problems.all { BibleAnatomy.isNt(it) }
+        "xdc" -> !problems.all { BibleAnatomy.isDc(it) }
+        else -> true
+      }
+
+      if (report)
+        recordWarning(node, "Target does not exist: " + node["loc"]!!)
+      MiscellaneousUtils.recordTagChange(node, "_X_contentOnly", null, "Target does not exist")
+    }
+
+    Dom.findNodesByName(document, "ref").forEach { processRef(it) }
+  }
+
+
+  /****************************************************************************/
+  /* Adds chapter 1 to single chapter references which lack the chapter. */
+
+  private fun canonicaliseRefsConvertSingleChapterReferences (document: Document)
+  {
+    fun processRef (node: Node)
+    {
+      var loc = node["loc"]!!
+      if (":" in loc) return // Already have a chapter.
+      if (!BibleAnatomy.isSingleChapterBook(loc)) return // Nothing to do.
+
+      val bits = loc.split("\\s+".toRegex())
+      loc = bits[0] + " 1:" + bits[1]
+      node["loc"] = loc
+      node["_X_attributeValueChangedReason"] = "Added v1 to single-chapter-book reference"
+    }
+
+    Dom.findNodesByName(document, "ref").forEach { processRef(it) }
+  }
+
+
+  /****************************************************************************/
+  /* All ref tags should have loc attributes and content.  STEP uses the latter
+     to provide the clickable text used to access cross-references.  I kind of
+     _assume_, therefore, that the content and loc should both refer to the
+     same reference, with the loc being the USX version and the content being
+     the vernacular version.  There is actually -- so far as I know -- no
+     _requirement_ for this to be the case, so I merely issue a warning here
+     if the two do not tie up. */
+
+  private fun canonicaliseRefsCompareLocAndContent (document: Document)
+  {
+    /**************************************************************************/
+    if (!m_CanReadAndWriteVernacular) return
+
+
+
+    /**************************************************************************/
+    fun validate (node: Node)
+    {
+      /************************************************************************/
+      val usxCollection = RefCollection.rdUsx(node["loc"]!!).getAllAsRefKeys()
+      val vernacularCollection: List<RefKey>?
+
+
+
+      /************************************************************************/
+      try
+      {
+        /**********************************************************************/
+        val x = readEmbedded(node.textContent.trim(), context=Ref.rdUsx(node["_X_belongsTo"]!!))
+        val embeddedReferences = x.filterIsInstance<RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection>()
+        if (1 != embeddedReferences.count())
+        {
+          recordWarning(node, "Content is not a valid vernacular representation of a reference")
+          return
+        }
+
+
+
+        /**********************************************************************/
+        vernacularCollection = embeddedReferences[0].rc.getAllAsRefKeys()
+      }
+      catch (_: Exception)
+      {
+        recordWarning(node, "Content is not a valid vernacular representation of a reference")
+        return
+      }
+
+
+
+      /************************************************************************/
+      if (usxCollection != vernacularCollection)
+        recordWarning(node, "USX reference and vernacular reference do not match")
+    } // fun
+
+
+
+    /**************************************************************************/
+    Dom.findNodesByName(document, "ref").forEach { validate(it) }
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                          Update cross-references                       **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /* This section contains code used only by the original implementation of
+     reversification.  That physically renumbered and or moved verses to new
+     locations, and therefore references which pointed to the old location
+     needed to be updated to point to the new one.  At the time of writing we
+     are intending to implement reversification in a different manner, which
+     means that the code below is no longer required.  I am retaining it here
+     temporarily in case it is needed again. */
+
+  fun updateCrossReferences (document: Document, mappings: Map<RefKey, RefKey>)
+  {
+    // Dummy version.
+  }
+
+
+//  /****************************************************************************/
+//  /**
+//  * Runs over the enhanced USX folder and updates any cross-references in the
+//  * wake of reversification changes.
+//  *
+//  * @param mappings Maps old refKey to new one.
+// */
+//
+//  fun updateCrossReferences (mappings: Map<RefKey, RefKey>)
+//  {
+//    if (mappings.isEmpty()) return
+//    fun process (@Suppress("UNUSED_PARAMETER") bookName: String, @Suppress("UNUSED_PARAMETER") filePath: String, document: Document) { updateCrossReferences(document, mappings); }
+//    BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::process)
+//  }
+//
+//
+//  /****************************************************************************/
+//  /**
+//  * Runs over a given document and updates any cross-references in the wake of
+//  * reversification changes.
+//  *
+//  * I carry out only very rudimentary checks here.  The details are as follows:
+//  *
+//  * - I allow for the loc parameter to be a single reference or a range.
+//  *
+//  * - If the low reference (or only reference) is not subject to a mapping, I
+//  *   assume that nothing will be (but do not check).
+//  *
+//  * - If the low reference (on ranges) is subject to a mapping but the high is
+//  *   not, I treat this as an error and change the ref to _X_contentOnly.
+//  *   However, I don't bother to check any of the other references which may
+//  *   make up the range.
+//  *
+//  * - Otherwise, I update the loc parameter to reflect the mappings.  Note,
+//  *   though, that I do *not* update the user-visible vernacular text
+//  *   associated with the ref tag.  This would be difficult, but thankfully
+//  *   that's not an issue, because I've been requested not to do it.
+//  *
+//  * @param mappings Maps old refKey to new one.
+//  */
+//
+//  fun updateCrossReferences (document: Document, mappings: Map<RefKey, RefKey>)
+//  {
+//    fun oops (refNode: Node)
+//    {
+//      warning(refNode, "Cross-ref broken as a result of reversification")
+//      MiscellaneousUtils.recordTagChange(refNode, "_X_contentOnly", null, "Cross-ref broken as a result of reversification")
+//    }
+//
+//    fun processRef (refNode: Node)
+//    {
+//      var loc = Dom.getAttribute(refNode, "loc")!!
+//      val range = RefRange.rdUsx(loc)
+//
+//      val lowRefKey = range.getLowAsRefKey()
+//      val lowMapping = mappings[lowRefKey] ?: return // Slight cop out.  I assume that if the low ref isn't mapped, nothing will be; and that if it is, all should be.
+//
+//      val highRefKey = range.getHighAsRefKey()
+//      val highMapping = mappings[lowRefKey]
+//      if (null == highMapping) // If low is mapped, I expect high to be mapped as well.
+//      {
+//        oops(refNode)
+//        return
+//      }
+//
+//      loc = Ref.rd(lowMapping).toString()
+//      if (lowRefKey != highRefKey) loc += "-" + Ref.rd(highMapping).toString()
+//      Dom.setAttribute(refNode, "loc", loc)
+//      Dom.setAttribute(refNode, "_X_attributeValueChangedReason", "Revised loc to reflect reversification")
+//    }
+//
+//    Dom.findNodesByName(document, "ref").forEach { processRef(it) }
+//  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                              Miscellaneous                             **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /* Add to each ref details of the chapter or verse to which it belongs. */
+
+  private fun addBelongsTo (document: Document)
+  {
+    var chapterRef = ""
+    var theRef = ""
+
+    fun processNode (node: Node)
+    {
+      when (Dom.getNodeName(node))
+      {
+        "_X_chapter" -> chapterRef = Dom.getAttribute(node, "sid")!!
+        "verse" -> theRef = if ("sid" in node) node["sid"]!! else chapterRef
+        "ref" -> node["_X_belongsTo"] = theRef
+        "char" ->
+          if (node["style"]!!.matches("x.?t".toRegex()))
+            node["_X_belongsTo"] = if (theRef.contains("-")) RefRange.rdUsx(theRef).getHighAsRef().toString() else theRef
+      }
+    }
+
+    document.getAllNodes().forEach { processNode(it) }
+  }
+
+
+  /****************************************************************************/
+  /* Called when we have a char:xt containing no ref information in USX form
+     (which will happen if the char:xt lacks both href-link and embedded
+     ref tags).
+
+     This is complicated by the fact that both USX and OSIS require that the
+     reference be in the form of either a single reference or a range, but I've
+     seen texts where the reference was in the form of a collection.  In the
+     case of it being a collection, it needs to be split out into multiple
+     ref's, all of which go within the enclosing char:xt (and replace its
+     existing content). */
+
+  private fun generateContainedRefTagsUsingParsedVernacularContent (node: Node, embeddedDetails: List<RefFormatHandlerReaderVernacular.EmbeddedReferenceElement>)
+  {
+    /**************************************************************************/
+    fun processElt (elt: RefFormatHandlerReaderVernacular.EmbeddedReferenceElement)
+    {
+      if (elt is RefFormatHandlerReaderVernacular.EmbeddedReferenceElementText)
+      {
+        if (elt.text.isNotBlank()) // I don't think it ever can be blank or empty, in fact, because that would be subsumed into the reference.
+          node.appendChild(Dom.createTextNode(node.ownerDocument, elt.text))
+      }
+
+      else // A reference collection
+      {
+        val rcElt = elt as RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection
+        val rc = rcElt.rc
+        val refNode = Dom.createNode(node.ownerDocument, "<ref _X_generatedReason='Converted from char:xt vernacular content'/>")
+        refNode["_X_belongsTo"] = node["_X_belongsTo"]!!
+        refNode["loc"] = rc.toStringUsx()
+        refNode.textContent = elt.text  // Does this actually manage to carry through the original formatting?
+        node.appendChild(refNode)
+      } // else
+    } // fun
+
+
+    /**************************************************************************/
+    Dom.deleteChildren(node)
+    embeddedDetails.forEach { processElt(it) }
   }
 
 
@@ -506,10 +1068,17 @@ import org.w3c.dom.Node
      split out into multiple elements.
      */
 
-  private fun tryCreatingXtFromVernacularContent (node: Node): Boolean
+  private fun tryCreatingXtFromVernacularContent (node: Node): String?
   {
     /**************************************************************************/
-    if (!m_CanReadAndWriteVernacular) return false
+    if (!m_CanReadAndWriteVernacular)
+      return "Needed to parse vernacular content but don't have details of format"
+
+
+
+    /**************************************************************************/
+    if (node.hasChildNodes())
+      return "Needed to parse vernacular content, but can't cope with existence of child nodes"
 
 
 
@@ -523,9 +1092,16 @@ import org.w3c.dom.Node
        we have a mixture of the two, the list may start or end with either. */
 
     val textContent = node.textContent
-    val belongsTo = Dom.getAttribute(node, "_TEMP_belongsTo")!!
-    val context = Ref.rdUsx(belongsTo)
-    val embeddedDetails = readEmbedded(textContent.trim(), context=context)
+    val context = Ref.rdUsx(node["_TEMP_belongsTo"]!!)
+    val embeddedDetails =
+      try
+      {
+        readEmbedded(textContent.trim(), context=context)
+      }
+      catch (e: Exception)
+      {
+        return "Couldn't parse vernacular text"
+      }
 
 
 
@@ -534,251 +1110,27 @@ import org.w3c.dom.Node
        the string could not be parsed, which is a problem. */
 
     val nRefs = embeddedDetails.filterIsInstance<RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection>().count()
-    if (0 == nRefs) return false
-
-
-
-    /**************************************************************************/
-    /* Both USX and OSIS require that a single reference tag contains either a
-       single reference or a single reference range -- collections are not
-       permitted.  However, I've seen quite a number of texts which do in fact
-       have collections.  I've tried retaining them as such, but that doesn't
-       work, so here if I have a collection I have to generate multiple
-       refs.  Whatever I generate here replaces the char:xt, which I don't think
-       is actually needed (and if it is, I can't work out what it should look
-       like). */
-
-    val elt = embeddedDetails.filterIsInstance<RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection>().first()
-    val rc = elt.rc
-    val refNodes: MutableList<Node> = mutableListOf()
-    rc.getElements().forEach {
-      val refNode = Dom.createNode(node.ownerDocument, "<ref _X_generatedReason='Converted from char:xt'/>")
-      Dom.setAttribute(refNode, "loc", it.toStringUsx())
-      refNode.textContent = it.toStringVernacular("e")
-      refNodes.add(refNode)
-     }
-
-     refNodes.indices.forEach {
-       Dom.insertNodeBefore(node, refNodes[it])
-       if (it != refNodes.size - 1)
-       {
-         val thisRef = RefRange.rdUsx(Dom.getAttribute(refNodes[it], "loc")!!).getHighAsRef()
-         val nextRef = RefRange.rdUsx(Dom.getAttribute(refNodes[it + 1], "loc")!!).getLowAsRef()
-         val sep =
-           if (thisRef.getB() == nextRef.getB() && thisRef.getC() == nextRef.getC())
-             RefFormatHandlerWriterVernacular.getCollectionSeparatorSameChapter() + " "
-           else
-             RefFormatHandlerWriterVernacular.getCollectionSeparatorDifferentChapters() + " "
-
-         Dom.insertNodeBefore(node, Dom.createTextNode(node.ownerDocument, sep))
-       }
-     }
-
-     Dom.deleteNode(node)
-
-    return true
-  }
-
-
-
-  /****************************************************************************/
-  /* By the time we get here, all cross-references should be held in ref tags.
-     This method checks that the content of the tag can be parsed, and also that
-     this vernacular text corresponds to the text held in the loc attribute.
-
-     Currently I change the ref tag into a content-only tag if I can't parse the
-     loc parameter.  Anything else I give the benefit of the doubt to: I report
-     it as a warning, but I still retain the ref tag as such.
-
-     NOT USED AT PRESENT.  This gets too complicated.
-   */
-
-  private fun validate (document: Document)
-  {
-    /**************************************************************************/
-    if (!m_CanReadAndWriteVernacular) return
-
-
-
-    /**************************************************************************/
-    fun validateRef (ref: Node)
+    return if (0 == nRefs)
+      "Vernacular content lacks any reference information"
+    else
     {
-      /************************************************************************/
-      val usxCollection: RefCollection
-      try
-      {
-        usxCollection = RefCollection.rdUsx(Dom.getAttribute(ref, "loc")!!)
-      }
-      catch (_: Exception)
-      {
-        warning(ref, "Could not parse loc parameter")
-        MiscellaneousUtils.recordTagChange(ref, "_X_contentOnly", null, "Could not parse loc parameter")
-        return
-      }
-
-
-
-      /************************************************************************/
-      val vernacularDetails: List<RefFormatHandlerReaderVernacular.EmbeddedReferenceElement>
-      try
-      {
-        println(ref.textContent)
-        val context = RefCollection.rdUsx(Dom.getAttribute(ref, "loc")!!).getHighAsRef()
-        vernacularDetails = readEmbedded(ref.textContent, context = context)
-      }
-      catch (_: Exception)
-      {
-        warning(ref, "Could not parse loc parameter")
-        MiscellaneousUtils.recordTagChange(ref, "_X_contentOnly", null, "Could not parse vernacular content")
-        return
-      }
-
-
-      /************************************************************************/
-      val vernacularCollection = RefCollection()
-      vernacularDetails.filterIsInstance<RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection>().forEach { vernacularCollection.add(it.rc) }
-      if (vernacularCollection.getElementCount() != usxCollection.getElementCount())
-      {
-        warning(ref, "Element counts differ between USX details and vernacular details")
-        // MiscellaneousUtils.recordTagChange(ref, "_X_contentOnly", null, "Element counts differ between USX details and vernacular details")
-        return
-      }
-
-      for (i in usxCollection.getElements().indices)
-      {
-        val usxRefOrRange        = usxCollection.getElements()[i]
-        val vernacularRefOrRange = vernacularCollection.getElements()[i]
-        if (usxRefOrRange.getLowAsRefKey () != vernacularRefOrRange.getLowAsRefKey() ||
-            usxRefOrRange.getHighAsRefKey() != vernacularRefOrRange.getHighAsRefKey())
-        {
-          warning(ref, "Mismatch between USX and vernacular content")
-          // MiscellaneousUtils.recordTagChange(ref, "_X_contentOnly", null, "Mismatch between USX and vernacular content")
-          return
-        }
-      }
+      generateContainedRefTagsUsingParsedVernacularContent(node, embeddedDetails)
+      null
     }
-
-
-
-    /**************************************************************************/
-    Dom.findNodesByName(document, "ref").forEach { validateRef(it) }
-  }
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                          Update cross-references                       **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  /**
-  * Runs over the enhanced USX folder and updates any cross-references in the
-  * wake of reversification changes.
-  *
-  * @param mappings Maps old refKey to new one.
- */
-
-  fun updateCrossReferences (mappings: Map<RefKey, RefKey>)
-  {
-    if (mappings.isEmpty()) return
-    fun process (@Suppress("UNUSED_PARAMETER") bookName: String, @Suppress("UNUSED_PARAMETER") filePath: String, document: Document) { updateCrossReferences(document, mappings); }
-    BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::process)
   }
 
 
   /****************************************************************************/
-  /**
-  * Runs over a given document and updates any cross-references in the wake of
-  * reversification changes.
-  *
-  * I carry out only very rudimentary checks here.  The details are as follows:
-  *
-  * - I allow for the loc parameter to be a single reference or a range.
-  *
-  * - If the low reference (or only reference) is not subject to a mapping, I
-  *   assume that nothing will be (but do not check).
-  *
-  * - If the low reference (on ranges) is subject to a mapping but the high is
-  *   not, I treat this as an error and change the ref to _X_contentOnly.
-  *   However, I don't bother to check any of the other references which may
-  *   make up the range.
-  *
-  * - Otherwise, I update the loc parameter to reflect the mappings.  Note,
-  *   though, that I do *not* update the user-visible vernacular text
-  *   associated with the ref tag.  This would be difficult, but thankfully
-  *   that's not an issue, because I've been requested not to do it.
-  *
-  * @param mappings Maps old refKey to new one.
-  */
-
-  fun updateCrossReferences (document: Document, mappings: Map<RefKey, RefKey>)
+  private fun validateUsx (ref: String): Boolean
   {
-    fun oops (refNode: Node)
+    return try {
+      RefCollection.rdUsx(ref)
+      true
+    }
+    catch (_: Exception)
     {
-      warning(refNode, "Cross-ref broken as a result of reversification")
-      MiscellaneousUtils.recordTagChange(refNode, "_X_contentOnly", null, "Cross-ref broken as a result of reversification")
+      false
     }
-
-    fun processRef (refNode: Node)
-    {
-      var loc = Dom.getAttribute(refNode, "loc")!!
-      val range = RefRange.rdUsx(loc)
-
-      val lowRefKey = range.getLowAsRefKey()
-      val lowMapping = mappings[lowRefKey] ?: return // Slight cop out.  I assume that if the low ref isn't mapped, nothing will be; and that if it is, all should be.
-
-      val highRefKey = range.getHighAsRefKey()
-      val highMapping = mappings[lowRefKey]
-      if (null == highMapping) // If low is mapped, I expect high to be mapped as well.
-      {
-        oops(refNode)
-        return
-      }
-
-      loc = Ref.rd(lowMapping).toString()
-      if (lowRefKey != highRefKey) loc += "-" + Ref.rd(highMapping).toString()
-      Dom.setAttribute(refNode, "loc", loc)
-      Dom.setAttribute(refNode, "_X_attributeValueChangedReason", "Revised loc to reflect reversification")
-    }
-
-    Dom.findNodesByName(document, "ref").forEach { processRef(it) }
-  }
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                              Miscellaneous                             **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  private fun error (node: Node, text: String)
-  {
-    Logger.warning(getRefKey(node), text)
-  }
-
-
-  /****************************************************************************/
-  private fun warning (node: Node, text: String)
-  {
-    Logger.warning(getRefKey(node), text)
-  }
-
-
-  /****************************************************************************/
-  private fun getRefKey (node: Node): RefKey
-  {
-    return Ref.rdUsx(Dom.getAttribute(node, "_TEMP_belongsTo")!!).toRefKey()
   }
 
 

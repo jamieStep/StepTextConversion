@@ -75,6 +75,20 @@ object StepStringUtils
 
   /****************************************************************************/
   /**
+  * Undoes the effect of markBalancedParentheses, qv
+  *
+  * @param text Text to be processed.
+  * @return Modified text.
+  */
+
+  fun unmarkBalancedParens (text: String): String
+  {
+    return text.replace("\\(\\.\\d\\d\\d\\.".toRegex(), "(").replace("\\.\\d\\d\\d\\.\\)".toRegex(), ")")
+  }
+
+
+  /****************************************************************************/
+  /**
   * Replaces all matches for a given regular expression by something based upon
   * the matched value.  A sample call might look like:
   *

@@ -1,12 +1,14 @@
 /**********************************************************************************************************************/
 package org.stepbible.textconverter
 
+import org.stepbible.textconverter.XXXOsis2ModInterface.setOsis2ModVariant
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
+import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.File
 import java.nio.file.Paths
 import kotlin.system.exitProcess
@@ -47,7 +49,8 @@ class TextConverterController
         CommandLineProcessor.addCommandLineOption("permitComplexChanges", 1, "Permit eg reversification Moves (may be ruled out by licensing conditions).", listOf("Yes", "No", "AsLicence"), "AsLicence", false)
         CommandLineProcessor.addCommandLineOption("help", 0, "Get help.", null, null, false)
 
-        CommandLineProcessor.addCommandLineOption("forcedOsis2ModVariant", 1, "Force to use Crosswire osis2mod or our own for test purposes", listOf("Crosswire", "Step", "CrosswireRelaxed"), "Crosswire", false)
+        XXXOsis2ModInterface.getCommandLineOptions(CommandLineProcessor)
+        TestController.getCommandLineOptions(CommandLineProcessor)
 
         m_Processors.forEach { it.getCommandLineOptions(CommandLineProcessor) }
         TextConverterProcessorEvaluateVersificationSchemes.getCommandLineOptions(CommandLineProcessor)
@@ -59,6 +62,7 @@ class TextConverterController
 
     private fun doPre(): Boolean
     {
+        setOsis2ModVariant()
         m_Processors.filter { it.runMe() }.forEach { if (!it.pre()) return false }
         return true
     }
@@ -96,6 +100,13 @@ class TextConverterController
             Logger.setPrefix(null)
             Logger.announceAll(true)
         }
+        catch (e: StepException)
+        {
+            if (!e.getSuppressStackTrace()) e.printStackTrace(System.err)
+            System.err.println("Fatal error: " + processor.banner() + ": " + e.toString())
+            System.err.flush()
+            exitProcess(1)
+        }
         catch (e: Exception)
         {
             e.printStackTrace(System.err)
@@ -118,11 +129,6 @@ class TextConverterController
     private fun initialiseCommandLineArgsAndConfigData (args: Array<String>)
     {
         /**************************************************************************/
-        //val runType = CommandLineProcessor.getRunType(args)
-
-
-
-        /**************************************************************************/
         /* Determine what command line parameters are permitted and then parse the
            command line. */
 
@@ -142,7 +148,7 @@ class TextConverterController
            to that. */
 
         val rootFolderPathFromCommandLine = CommandLineProcessor.getOptionValue("rootFolder")!!
-        val rootFolderPath: String =
+        val rootFolderPath =
           if (Paths.get(rootFolderPathFromCommandLine).isAbsolute)
             rootFolderPathFromCommandLine
           else
@@ -210,24 +216,16 @@ class TextConverterController
 
     private val C_ProcessorsForFullConversionRun = listOf(
         DbgController,
-        TextConverterProcessorVLToEnhancedUsx,
-        TextConverterProcessorUsxToEnhancedUsx1,
-        TextConverterProcessorReversification,
-        TextConverterProcessorUsxToEnhancedUsx2,
-        TextConverterFeatureSummaryGenerator,
-        TextConverterEnhancedUsxValidator,
-        TextConverterProcessorEnhancedUsxToOsis,
+        TextConverterProcessorVLToEnhancedUsx,      // USX only.
+        TextConverterProcessorUsxToEnhancedUsx1,    // USX only.
+        TextConverterProcessorReversification,      // USX only.
+        TextConverterProcessorUsxToEnhancedUsx2,    // USX only.
+        TextConverterFeatureSummaryGenerator,       // USX only.
+        TextConverterEnhancedUsxValidator,          // USX only.
+        TextConverterProcessorEnhancedUsxToOsis,    // USX only.
         TextConverterTaggingHandler,
-        TextConverterProcessorOsisToSword
-    )
-
-    /******************************************************************************************************************/
-    /* Lists of processors in the order in which they run. */
-
-    private val C_ProcessorsForFullOsisTaggingOnly = listOf(
-        DbgController,
-        TextConverterTaggingHandler,
-        TextConverterProcessorOsisToSword
+        TextConverterProcessorOsisToSword,
+        RepositoryPackageHandler,
     )
 
 

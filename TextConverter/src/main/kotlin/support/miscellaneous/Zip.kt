@@ -5,6 +5,7 @@ import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.*
 import java.nio.charset.Charset
 import java.nio.charset.StandardCharsets
+import java.nio.file.Paths
 import java.util.*
 import java.util.zip.*
 
@@ -221,8 +222,9 @@ object Zip
    *   default is used.
    *
    * @param theRelativeTo Path relative to which relative paths are determined.
-   *   Take care to ensure this genuinely is a prefix of all
-   *   the individual input files.
+   *   Take care to ensure this genuinely is a prefix of all the individual
+   *   input files.  May be null, in which case each element is taken
+   *   relative to its own parent.
    *
    * @param inputs Input files or folders.  Each may optionally be terminated
    *   by "¬" followed by something starting S(tored) or
@@ -232,37 +234,65 @@ object Zip
 
   fun createZipFile (zipFilePath: String,
                      compressionLevel: Int,
-                     theRelativeTo: String,
-                     inputs: MutableList<String>)
+                     theRelativeTo: String?,
+                     inputs: List<String>)
   {
-    var relativeTo = theRelativeTo
+     /*************************************************************************/
+     /* Sort out relative paths etc. */
+
+     val relativeTo = if (null == theRelativeTo) null else File(theRelativeTo).canonicalPath
+     fun dealWithRelativePath (asSupplied: String): Triple<String, String, Int>
+     {
+       val bits = asSupplied.split("¬") // May have ¬ followed by compression type.
+
+       val compressionType =
+         if (1 == bits.size)
+           ZipOutputStream.DEFLATED // Default.
+         else
+         {
+           if ("d" == bits[1].lowercase()) ZipOutputStream.DEFLATED else ZipOutputStream.STORED
+         }
+
+       val f = File(bits[0])
+       val canonicalPath = f.canonicalPath
+       val canonicalParent = f.parent
+       val canonicalSelf = f.name
+
+       return if (null == relativeTo) // If no overarching relativeTo, then make the thing relative to its own parent.
+         Triple(canonicalParent, canonicalSelf, compressionType)
+       else
+       {
+         if (canonicalPath.startsWith(relativeTo))
+           Triple(relativeTo, canonicalPath.substring(relativeTo.length + 1), compressionType)  // The thing is in the path starting relativeTo, so we can give it as relative.
+         else
+           throw StepException("File to be zipped not in relativeTo path: $asSupplied.") // Triple(null, canonicalPath, compressionType) // Not in the relativeTo path.  I have a feeling perhaps this should be an exception.
+       }
+    }
+
+    val myInputs = inputs.map { dealWithRelativePath(it) }
+
+
+    /*************************************************************************/
     try
     {
       FileOutputStream(zipFilePath).use { dest ->
         m_ZipStream = ZipOutputStream(BufferedOutputStream(dest))
         if (compressionLevel >= 0) m_ZipStream!!.setLevel(compressionLevel)
-        if (relativeTo.isNotEmpty()) relativeTo = File(relativeTo).canonicalPath
-        if (relativeTo.isNotEmpty())
-          for (i in inputs.indices)
-          {
-            val s = File(inputs[i]).canonicalPath
-            if (s.startsWith(relativeTo)) inputs[i] = s.substring(relativeTo.length + 1) // Convert to relative form if necessary, removing the leading "\" also.
-          }
-
-        for (i in inputs.indices) zip(relativeTo, inputs[i])
+        myInputs.forEach { zip(it.first, it.second, it.third)}
         m_ZipStream!!.close()
       } // use
     }
     catch (e: Exception)
     {
-      throw StepException("Zip failed")
+      throw StepException("Zip failed: ${e}.")
     }
   }
 
 
   /****************************************************************************/
   /**
-   * Returns a zip entry for a given file within a zip, or null if not found.
+   * Reader: returns a zip entry for a given file within a zip, or null if
+   * not found.
    *
    * @param zipFileName
    * @param memberFileName
@@ -287,8 +317,8 @@ object Zip
 
   /****************************************************************************/
   /**
-   * Returns an input stream for a given member of a zip file, or null if
-   * the entry is not found.
+   * Reader: returns an input stream for a given member of a zip file, or null
+   * if the entry is not found.
    *
    * @param zipFileName
    * @param memberFileName What it says on the tin.
@@ -317,8 +347,8 @@ object Zip
 
   /****************************************************************************/
   /**
-   * Returns a buffered reader for a given member of a zip file, or null if
-   * the entry is not found.
+   * Reader: returns a buffered reader for a given member of a zip file, or
+   * null if the entry is not found.
    *
    * @param zipFileName
    * @param memberFileName
@@ -358,33 +388,18 @@ object Zip
   /****************************************************************************/
   private var m_ZipStream: ZipOutputStream? = null
 
-  /****************************************************************************/
-  /* Processes a single input -- splits out and applies any compression
-     setting, and then passes the input on for further processing. */
-
-  private fun zip (relativeTo: String, path: String)
-  {
-    val details = path.split("¬".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-    val method: Int = if (2 == details.size) if (details[1].uppercase().startsWith("S")) ZipOutputStream.STORED else ZipOutputStream.DEFLATED else ZipOutputStream.DEFLATED
-    if (details[0].isNotEmpty()) zip1(relativeTo, details[0], method)
-  }
-
 
   /****************************************************************************/
   /* Processes a single folder or file. */
 
-  private fun zip1 (relativeTo: String, path: String, method: Int)
+  private fun zip (relativeTo: String, path: String, method: Int)
   {
-    val absolutePath = (if (relativeTo.isEmpty()) "" else relativeTo + File.separator) + path
-    if (File(absolutePath).isFile)
+    val absolutePath = Paths.get(relativeTo, path).toString()
+    val f = File(absolutePath)
+    if (f.isFile)
       zipFile(path, absolutePath, method)
     else
-    {
-      val f = File(absolutePath)
-      val files = f.list()
-      for (i in files!!.indices)
-        zip1(relativeTo, absolutePath.substring(1 + relativeTo.length) + File.separator + files[i], method)
-    }
+      f.list().forEach { zip(relativeTo, absolutePath.substring(1 + relativeTo.length) + File.separator + it, method) }
   }
 
 

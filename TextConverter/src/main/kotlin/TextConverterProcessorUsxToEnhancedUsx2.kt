@@ -67,6 +67,7 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase()
   /****************************************************************************/
   override fun process (): Boolean
   {
+    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, wantWordCount = false) // Make sure we have up-to-date structural information.
     BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::processFile)
     XXXOsis2ModInterface.createSupportingData()
     return true
@@ -76,7 +77,7 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase()
   /****************************************************************************/
   override fun runMe (): Boolean
   {
-    return true
+     return C_InputType == InputType.USX
   }
 
 

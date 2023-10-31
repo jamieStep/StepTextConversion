@@ -1,16 +1,18 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
+import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRawUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.reportBookBeingProcessed
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.sidify
+import org.stepbible.textconverter.support.miscellaneous.contains
+import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.ref.RefRange
@@ -80,7 +82,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase ()
   /****************************************************************************/
   override fun runMe (): Boolean
   {
-    return C_ConfigurationFlag_DoUsxFinalValidation
+    return C_InputType == InputType.USX && C_ConfigurationFlag_DoUsxFinalValidation
   }
 
 
@@ -111,19 +113,20 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase ()
     m_ImplicitReversificationRenumbers = ReversificationData.getImplicitRenumbers()
     m_ReversificationRowsForAllBooks = ReversificationData.getAllAcceptedRows()
 
-    val paths = StepFileUtils.getMatchingFilesFromFolder(StandardFileLocations.getEnhancedUsxFolderPath(), StandardFileLocations.getEnhancedUsxFilePattern(), false)
-    paths.forEach { checkBook(it.toString()) }
+    BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::checkBook)
+    //getMatchingFilesFromFolder(StandardFileLocations.getEnhancedUsxFolderPath(), StandardFileLocations.getEnhancedUsxFilePattern())
+//    val paths = StepFileUtils.
+//    paths.forEach { checkBook(it.toString()) }
   }
 
 
   /****************************************************************************/
-  private fun checkBook (filePath: String)
+  private fun checkBook (bookName: String, filePath: String)
   {
    /**************************************************************************/
    val enhancedDocument = Dom.getDocument(filePath)
    reportBookBeingProcessed(enhancedDocument)
-   val bookNode = Dom.findNodeByName(enhancedDocument, "book") ?: Dom.findNodeByName(enhancedDocument, "_X_book")!!
-   m_EnhancedBookAbbreviation = Dom.getAttribute(bookNode, "code")!!
+   m_EnhancedBookAbbreviation = bookName
    val enhancedBookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(m_EnhancedBookAbbreviation)
 
 
@@ -856,16 +859,15 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase ()
       {
         "verse" ->
         {
-          if (Dom.hasAttribute(node, "sid"))
-            res.m_SidToIndex[Ref.rdUsx(Dom.getAttribute(node, "sid")!!).toRefKey()] = i
+          if ("sid" in node)
+            res.m_SidToIndex[Ref.rdUsx(node["sid"]!!).toRefKey()] = i
           else
-            res.m_EidToIndex[Ref.rdUsx(Dom.getAttribute(node, "eid")!!).toRefKey()] = i
+            res.m_EidToIndex[Ref.rdUsx(node["eid"]!!).toRefKey()] = i
         }
 
         "para" ->
         {
-          val style = Dom.getAttribute(node, "style")
-          if (null != style && "d" == style && "start" == Dom.getAttribute(node, "_X_location"))
+          if ("d" == node["style"] && "start" == node["_X_location"])
           {
             val sidRefKey = Ref.rdUsx(Dom.getAttribute(Dom.getAncestorNamed(node, "_X_chapter")!!, "sid")!!).toRefKey()
             res.m_chapterSidToPsalmTitle[sidRefKey] = node

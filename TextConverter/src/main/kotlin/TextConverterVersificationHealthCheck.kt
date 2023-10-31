@@ -3,9 +3,11 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.contains
 import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefBase
@@ -63,7 +65,7 @@ object TextConverterVersificationHealthCheck
 
   fun checkAllBooks ()
   {
-    StepFileUtils.getMatchingFilesFromFolder(StandardFileLocations.getEnhancedUsxFolderPath(), StandardFileLocations.getEnhancedUsxFilePattern(), false)
+    StepFileUtils.getMatchingFilesFromFolder(StandardFileLocations.getEnhancedUsxFolderPath(), StandardFileLocations.getEnhancedUsxFilePattern())
       .forEach { checkBook(Dom.getDocument(it.toString())) }
   }
 
@@ -180,6 +182,11 @@ object TextConverterVersificationHealthCheck
   private fun checkForDuplicatesAndHoles (chapter: Node)
   {
     /**************************************************************************/
+    //Dbg.d(chapter["sid"]!!, "Mat 17")
+
+
+
+    /**************************************************************************/
     /* Collect all verse numbers and also determine the maximum verse number. */
 
     val verseCollection: MutableMap<Int, Int?> = HashMap(2000)
@@ -219,7 +226,7 @@ object TextConverterVersificationHealthCheck
 
     /**************************************************************************/
     val verses = Dom.findNodesByName(chapter, "verse", false)
-    verses.filter { Dom.hasAttribute(it, "sid") }.forEach { collect(it) }
+    verses.filter { "sid" in it }.forEach { collect(it) }
 
 
 
@@ -247,8 +254,9 @@ object TextConverterVersificationHealthCheck
     }
     else
     {
+      val chapterRefKey = Ref.rdUsx(chapterSid).toRefKey_bc()
       val chapter = Ref.rdUsx(chapterSid).getC()
-      missings = BibleStructure.UsxUnderConstructionInstance().getMissingEmbeddedVersesForText().filter { Ref.getC(it) == chapter } .map { Ref.getV(it) } as MutableList<Int>
+      missings = BibleStructure.UsxUnderConstructionInstance().getMissingEmbeddedVersesForChapter(Ref.getB(chapterRefKey), Ref.getC(chapterRefKey)) .map { Ref.getV(it) } as MutableList<Int>
     }
 
 
@@ -263,11 +271,27 @@ object TextConverterVersificationHealthCheck
 
 
 
+//    /**************************************************************************/
+//    val reportableMissings = missings.filterNot { BibleAnatomy.isCommonlyMissingVerse("$chapterSid:$it") }
+//    if (reportableMissings.isNotEmpty())
+//    {
+//      val missingMsg = "Missing verse(s): ${reportableMissings.joinToString(", ")}"
+//      m_WarningReporter(chapterSid, missingMsg)
+//    }
+
+
+
     /**************************************************************************/
-    val reportableMissings = missings.filterNot { BibleAnatomy.isCommonlyMissingVerse("$chapterSid:$it") }
-    if (reportableMissings.isNotEmpty())
+    val chapterSidAsRefKey = Ref.rdUsx(chapterSid).toRefKey_bc()
+    val commonlyMissingVersesForThisChapterAsRefKeys = BibleAnatomy.getCommonlyMissingVerses().filter { Ref.rd(it).toRefKey_bc() == chapterSidAsRefKey }.toSet()
+    val missingsAsRefKeys = missings.map { Ref.setV(chapterSidAsRefKey, it) }.toSet()
+    val reportableMissingsAsRefKeys = missingsAsRefKeys - commonlyMissingVersesForThisChapterAsRefKeys
+    val nonReportableMissingsAsRefKeys = commonlyMissingVersesForThisChapterAsRefKeys - reportableMissingsAsRefKeys
+    val missingsAsString = if (missingsAsRefKeys.isEmpty()) "" else missingsAsRefKeys.sorted().joinToString(", "){ Ref.getV(it).toString() }
+    val nonReportableMissingsAsString = if (nonReportableMissingsAsRefKeys.isEmpty()) "" else ("  (The following verse(s) are absent in many Bibles, and therefore are not of concern: " + nonReportableMissingsAsRefKeys.sorted().joinToString(", "){ Ref.getV(it).toString() } + ".)")
+    if (missingsAsRefKeys.isNotEmpty())
     {
-      val missingMsg = "Missing verse(s): ${reportableMissings.joinToString(", ")}"
+      val missingMsg = "Missing verse(s): $missingsAsString$nonReportableMissingsAsString"
       m_WarningReporter(chapterSid, missingMsg)
     }
   }

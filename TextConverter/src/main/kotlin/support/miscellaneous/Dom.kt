@@ -81,6 +81,7 @@ object Dom
     fun addChildren (parent: Node, newChildren: List<Node>?)
     {
         if (newChildren.isNullOrEmpty()) return
+
         val parentOwnerDocument = parent.ownerDocument
         if (newChildren[0].ownerDocument === parentOwnerDocument)
             newChildren.forEach { n: Node? -> parent.appendChild(n) }
@@ -331,7 +332,7 @@ object Dom
     {
         if (!node.hasAttributes()) return
         val attributes = getAttributes(node)
-        attributes.keys.forEach { x: String? -> deleteAttribute(node, x) }
+        attributes.keys.forEach { x -> deleteAttribute(node, x) }
     }
 
 
@@ -363,7 +364,8 @@ object Dom
      * @param node Node.
      * @param attributeName Attribute name.
      */
-    fun deleteAttribute(node: Node, attributeName: String?) {
+
+    fun deleteAttribute(node: Node, attributeName: String) {
         try
         {
             (node as Element).removeAttribute(attributeName)
@@ -1485,7 +1487,7 @@ object Dom
      * @return List of nodes.
      */
 
-    fun getNodesBetweenExcludingStartAndEnd(a: Node, test: Function<Node, Boolean>, exclude: Function<Node, Boolean>): List<Node>
+    fun getNodesBetweenExcludingStartAndEnd (a: Node, test: Function<Node, Boolean>, exclude: Function<Node, Boolean>): List<Node>
     {
         return getNodesBetween(a, test, exclude, includeStart = false, includeEnd = false)
     }
@@ -1698,6 +1700,7 @@ object Dom
     * @param putativeAncestor The node we believe might be an ancestor.
     * @return True if the descendant-ancestor relationship holds.
     */
+
     fun hasAsAncestor (descendant: Node, putativeAncestor: Node): Boolean
     {
       if (descendant === putativeAncestor) return false
@@ -2115,7 +2118,7 @@ object Dom
      * @return True if text node.
      */
 
-    fun isTextNode(node: Node): Boolean
+    fun isTextNode (node: Node): Boolean
     {
         return "#text" == getNodeName(node)
     }
@@ -2607,9 +2610,14 @@ object Dom
 
 /******************************************************************************/
 /**
-* Couple of useful extensions, which let you get or set attribute values using
-* [...] syntax.  You'll need to import org.w3c.dom.Node to use them.
+* A few useful extensions, which let you get or set attribute values using
+* [...] syntax -- etc.  You'll need to import org.w3c.dom.Node to use them.
 */
 
-operator fun Node.get (attributeName: String): String? { return Dom.getAttribute(this, attributeName) }
-operator fun Node.set (attributeName: String, value: String) { Dom.setAttribute(this, attributeName, value) }
+operator fun Node.get (attributeName: String): String? { return Dom.getAttribute(this, attributeName) }           // val x = node[attrName"]
+operator fun Node.set (attributeName: String, value: String) { Dom.setAttribute(this, attributeName, value) }     // node["attrName"] = value
+operator fun Node.minus (attributeName: String): Node { Dom.deleteAttribute(this, attributeName); return this }   // node = node - "attrName" (delete attribute)
+operator fun Node.minusAssign (attributeName: String) { Dom.deleteAttribute(this, attributeName) }                // node -= "attrName" (delete attribute)
+operator fun Node.contains (attributeName: String): Boolean { return Dom.hasAttribute(this, attributeName) }      // "attrName" in node (or !in)
+
+fun Document.getAllNodes(): List<Node> { return Dom.collectNodesInTree(this) }

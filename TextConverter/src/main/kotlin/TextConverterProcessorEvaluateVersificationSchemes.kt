@@ -186,22 +186,33 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
     /**************************************************************************/
     if (!textUnderConstructionHasDc && otherHasDc)
-    {
       return
-    }
 
 
 
      /**************************************************************************/
+     var booksMissingInOsis2modScheme = 0
+     var booksInExcessInOsis2modScheme = 0
      var versesMissingInOsis2modScheme = 0
      var versesInExcessInOsis2modScheme = 0
 
      fun evaluate (bookNumber: Int)
      {
-       val comparisonDetails = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), bibleStructureOther)
-       versesMissingInOsis2modScheme += comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.size
-       versesInExcessInOsis2modScheme += comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.size
-       //if ("german" == scheme) comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.forEach { Dbg.d("===== " + Ref.rd(it).toString() )}
+       if (!BibleStructure.UsxUnderConstructionInstance().bookExists(bookNumber) && !bibleStructureOther.bookExists(bookNumber))
+         return
+
+       else if (!BibleStructure.UsxUnderConstructionInstance().bookExists(bookNumber))
+         ++booksInExcessInOsis2modScheme
+
+       else if (!bibleStructureOther.bookExists(bookNumber))
+         ++booksMissingInOsis2modScheme
+
+       else
+       {
+         val comparisonDetails = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), bibleStructureOther)
+         versesMissingInOsis2modScheme += comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.size
+         versesInExcessInOsis2modScheme += comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.size
+       }
      }
 
      bookNumbersInTextUnderConstruction.forEach { evaluate(it) }
@@ -209,8 +220,8 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
 
      /**************************************************************************/
-     val score = versesMissingInOsis2modScheme * 1000 + versesInExcessInOsis2modScheme
-     m_Evaluations.add(Evaluation(scheme, score, versesMissingInOsis2modScheme, versesInExcessInOsis2modScheme, null))
+     val score = booksMissingInOsis2modScheme * 1_000_000 + versesMissingInOsis2modScheme * 1000 + versesInExcessInOsis2modScheme
+     m_Evaluations.add(Evaluation(scheme, score, booksMissingInOsis2modScheme, versesMissingInOsis2modScheme, booksInExcessInOsis2modScheme, versesInExcessInOsis2modScheme, null))
  }
 
 
@@ -283,12 +294,17 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
 
   /****************************************************************************/
-  private data class Evaluation (val scheme: String, val score: Int, val versesMissingInOsis2modScheme: Int, val versesInExcessInOsis2modScheme: Int, val text: String?)
+  private data class Evaluation (val scheme: String,
+                                 val score: Int,
+                                 val booksMissingInOsis2modScheme: Int,
+                                 val versesMissingInOsis2modScheme: Int,
+                                 val booksInExcessInOsis2modScheme: Int,
+                                 val versesInExcessInOsis2modScheme: Int, val text: String?)
   {
     override fun toString (): String
     {
-      return String.format("Scheme: %12s   Score: %10d   Based upon    %6d verses which osis2mod lacks   AND   %6d verses which osis2mod has in excess%s.",
-                          scheme, score, versesMissingInOsis2modScheme, versesInExcessInOsis2modScheme, if (null == text) "" else "   $text")
+      return String.format("Scheme: %12s   Score: %12d   Based upon    %3d books and %6d verses which osis2mod lacks   AND   %3d books and %6d verses which osis2mod has in excess%s.",
+                          scheme, score, booksMissingInOsis2modScheme, versesMissingInOsis2modScheme, booksInExcessInOsis2modScheme, versesInExcessInOsis2modScheme, if (null == text) "" else "   $text")
     }
 
     // Want to favour NRSV(A) over other schemes which may score the same.

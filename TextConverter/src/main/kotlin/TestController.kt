@@ -1,12 +1,15 @@
 /*******************************************************************************/
 package org.stepbible.textconverter
 
+import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.debug.Dbg
 import java.io.File
 import java.nio.file.Paths
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import java.util.*
 
 
 /******************************************************************************/
@@ -19,167 +22,148 @@ import java.time.format.DateTimeFormatter
  *
  * More particularly, this caters for ...
  *
- *   - Returning a date/time-stamped prefix which can be used on module names
- *     etc in case more than one version is lying around.
+ *   - Returning a date/time-stamped identifier which can be used on module
+ *     names etc in case more than one version is lying around.
  *
- *   - Creating a few lines of HTML which can be added to the Sword
- *     configuration file, for example to point to the files upon which the
- *     module was based.
+ *   - Providing an opportunity to save intermediate and output files which
+ *     would otherwise be overwritten on the next run.
  *
- *   - Saving intermediate files, such as the OSIS file, to a separate
- *     folder so that they continue to be available even after the 'main'
- *     version has been overwritten by later runs.  (These can be flagged with
- *     the same date/time-stamped prefix used to distinguish different
- *     versions of the module.)
+ *   - Suppressing the converter's normal error processing, so as to prevent
+ *     premature termination, and also so as to ensure intermediate files are
+ *     not deleted.  (Obviously this may not be entirely successful -- if the
+ *     converter terminates prematurely, it will normally be because it
+ *     suspects any errors it has detected are likely to invalidate further
+ *     processing.)
  *
  *
- * To control this, look for the line marked with plus signs in TestController.
- * If you are applying a particular test, you need to set m_TestController to
- * be an appropriate instance of a class derived from TestControllerBase.  If
- * you do _not_ wish to apply tests (ie if you just want a plain vanilla run
- * of the system, comment out the line which assigns to m_TestController.
+ * To use the features here ...
  *
- * You can use SamiTestController as an exemplar of a test class.
+ *   - You need to set up classes in support of each of the various tests
+ *     you wish to run.  All should have names of the form TestControllerXxx,
+ *     and all should inherit from TestControllerBase.  You must also have a
+ *     TestControllerNoTest, which organises things for a non-test run.
+ *
+ *   - You need to modify m_Options (marked '+++' below), so that it maps
+ *     the 'Xxx' part of all of these class names to the relevant test object.
+ *     The names are not case-sensitive.
+ *
+ *   - Each inheriting class (with the exception of TestControllerNoTest)
+ *     should probably set m_TestName as part of its initialisation, so that
+ *     any outputs can be given unique names -- assuming, of course, that
+ *     you'd find unique names useful.
+ *
+ *   - And you should override initialise, terminate and suppressErrors as
+ *     appropriate.  This means, for instance, that you can arrange to
+ *     copy intermediate files to some Save folder for later investigation,
+ *     create information to be added to the Sword About field to identify
+ *     the test, etc.  See TestControllerSami below (assuming it's still
+ *     there) for an example.
+ *
+ *
+ * To access the controller use TestControllerBase.instance().
  *
  * @author ARA Jamieson
  */
 
-
-
-
-
 /******************************************************************************/
 /******************************************************************************/
 /**                                                                          **/
-/**                              Initialisation                              **/
+/**                               Base class                                 **/
 /**                                                                          **/
 /******************************************************************************/
 /******************************************************************************/
-object TestController: TestControllerBase()
+
+/******************************************************************************/
+open class TestController // Base class serves to support the Crosswire osis2mod.
 {
-  override fun atEndOfProcessing () { m_TestController.atEndOfProcessing() }
-
-  override fun getTestName(): String { return m_TestController.getTestName() }
-
-  override fun initialise () { } // Deliberately left blank.
-  override fun makeTestRelatedDataForUseInConfigAbout () { m_TestController.makeTestRelatedDataForUseInConfigAbout() }
-
-  fun activeController (): TestControllerBase { return m_TestController }
-
-  private var m_TestController: TestControllerBase
-  init
-  {
-    var forcedOsis2ModVariant = ConfigData["stepForcedOsis2ModVariant"]
-    if (null == forcedOsis2ModVariant) forcedOsis2ModVariant = "step"
-    forcedOsis2ModVariant = forcedOsis2ModVariant.lowercase()
-
-    m_TestController = when (forcedOsis2ModVariant)
-    {
-      "step" -> TestControllerSami
-      "crosswirerelaxed" -> TestControllerCrosswireRelaxed
-      else -> TestControllerBase()
-    }
+  /****************************************************************************/
+  open fun initialise () {}                           // What it says on the tin.
+  open fun suppressErrors (): Boolean { return false} // Can be used to convert errors to warnings, thus, for example, preventing errors from causing files to be deleted.
+  open fun terminate () {}                            // eg copy to another location any intermediate files of interest which might otherwise get lost on the next run.
 
 
-    m_TestController.initialise()
-    //ConfigData.delete("stepEncryptionRequired")
-    //ConfigData.put("stepEncryptionRequired", "No", true)
-  }
-}
-
-
-
-
-
-/******************************************************************************/
-/******************************************************************************/
-/**                                                                          **/
-/**                      Base class and null interface                       **/
-/**                                                                          **/
-/******************************************************************************/
-/******************************************************************************/
-open class TestControllerBase // Base class serves to support the Crosswire osis2mod.  Inheriting classes tailor this to other versions.
-{
-  /*****************************************************************************/
-  private var m_UniquePrefix = ""
-
-
-  /*****************************************************************************/
-  /**
-   * Saves any intermediate files.
-   */
-  open fun atEndOfProcessing () {}
-
-
-  /*****************************************************************************/
-  /**
-   * Returns a name by which all of these tests can be identified.  This is used
-   * at the front of file-name prefixes, so that related files can be grouped
-   * together.
-   *
-   * @return Name
-   */
-  open fun getTestName (): String
-  {
-    return ""
-  }
-
-
-  /*****************************************************************************/
-  /**
-   * Initialisation.
-   */
-  open fun initialise ()
-  {
-    XXXOsis2ModInterface.setOsis2ModVariant(XXXOsis2ModInterface.Osis2ModVariant.CROSSWIRE)
-  }
-
-
-
-  /*****************************************************************************/
+  /****************************************************************************/
   /**
    * Returns a date/time based prefix to be prepended to the module name so we
-   * can tell one version from another.
+   * can tell one version from another.  So long as makeUniqueNameForThisTest
+   * has been set up to return a non-empty value, makes a name comprising that
+   * value along with a date/time stamp.
    *
    * @return Prefix.
    */
-  fun getModuleNamePrefix (): String
+
+  fun getUniqueIdentifierForRun (): String
   {
-    return if (getTestName().isEmpty())
-      ""
-    else
-    {
-      if (m_UniquePrefix.isEmpty()) m_UniquePrefix = getTestName() + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
-      m_UniquePrefix
-    }
+    return if (m_TestName.isEmpty()) "" else m_TestName + m_TimeStamp
   }
 
 
-
-  /*****************************************************************************/
-  /**
-   * Sets ConfigData stepAboutTestSupport in order to add test-related data to
-   * the end of the Sword About information.
-   */
-  open fun makeTestRelatedDataForUseInConfigAbout () { }
+  /****************************************************************************/
+  protected var m_TestName = ""
+  private val m_TimeStamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
 
 
+  /****************************************************************************/
+  companion object
+  {
+    /**************************************************************************/
+    /* Returns an instance of the actual controller in use. */
 
-  /*****************************************************************************/
-  /**
-   * If this returns True, errors are converted to warnings.  This permits runs
-   * to complete even if errors are detected.  (Except, of course, that
-   * errors which are not acted upon may well mean that later processing goes
-   * wrong.)
-   *
-   * @return True if errors are to be converted to warnings.
-   */
+    fun instance (): TestController
+    {
+      if (null == m_Instance)
+      {
+        m_Instance = m_Options[ConfigData["stepTestType"]!!]
+        m_Instance!!.initialise()
+      }
 
-   open fun suppressErrors (): Boolean
-   {
-     return false
-   }
+      return m_Instance!!
+    }
+
+
+    /**************************************************************************/
+    /**
+     * Returns details of any command-line parameters this processor requires
+     * or permits.
+     *
+     * @param commandLineProcessor Command line processor.
+     */
+
+    fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
+    {
+      commandLineProcessor.addCommandLineOption("testType", 1, "Type of test, if this is a test run", m_Options.keys.toList(), "NoTest", false)
+    }
+
+
+    /**************************************************************************/
+    /* +++ Change m_Options as appropriate.  Make sure you always include
+       NoTest. */
+
+    private val m_Options = TreeMap<String, TestController>(String.CASE_INSENSITIVE_ORDER)
+     .apply {
+      put("Sami",TestControllerSami)
+      put("CrossWireRelaxed", TestControllerCrosswireRelaxed)
+      put("NoTest", TestControllerNoTest) // Always retain this entry.
+    }
+
+    private var m_Instance: TestController? = null
+  }
 }
+
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/**                                                                          **/
+/**                  Default set up when not running tests                   **/
+/**                                                                          **/
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+object TestControllerNoTest: TestController() // Ignore the fact that IDEA says this isn't used -- it is, but it's created using its name as a string.
 
 
 
@@ -197,36 +181,10 @@ open class TestControllerBase // Base class serves to support the Crosswire osis
 /* This is basically a Crosswire run, but with most / all errors converted to
    warnings so they don't prevent us from generating a module. */
 
-object TestControllerCrosswireRelaxed: TestControllerBase()
+object TestControllerCrosswireRelaxed: TestController() // Ignore the fact that IDEA says this isn't used -- it is, but it's created using its name as a string.
 {
-  /*****************************************************************************/
-  /**
-   * Returns a name by which all of these tests can be identified.  This is used
-   * at the front of file-name prefixes, so that related files can be grouped
-   * together.
-   *
-   * @return Name
-   */
-  override fun getTestName (): String
-  {
-    return "CWR"
-  }
-
-
-  /*****************************************************************************/
-  /**
-   * If this returns True, errors are converted to warnings.  This permits runs
-   * to complete even if errors are detected.  (Except, of course, that
-   * errors which are not acted upon may well mean that later processing goes
-   * wrong.)
-   *
-   * @return True if errors are to be converted to warnings.
-   */
-
-   override fun suppressErrors (): Boolean
-   {
-     return true
-   }
+  override fun suppressErrors (): Boolean { return true }
+  init { m_TestName = "CWR" }
 }
 
 
@@ -240,30 +198,17 @@ object TestControllerCrosswireRelaxed: TestControllerBase()
 /**                                                                          **/
 /******************************************************************************/
 /******************************************************************************/
-object TestControllerSami: TestControllerBase()
+object TestControllerSami: TestController() // Ignore the fact that IDEA says this isn't used -- it is, but it's created using its name as a string.
 {
   /*****************************************************************************/
   /**
    * Saves any intermediate files.
    */
-  override fun atEndOfProcessing ()
+
+  override fun terminate ()
   {
     File(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath()).copyTo(File(m_JsonFileCopyLocalPath), overwrite = true)
     File(StandardFileLocations.getOsisFilePath()).copyTo(File(m_OsisFileCopyLocalPath), overwrite = true)
-  }
-
-
-  /*****************************************************************************/
-  /**
-   * Returns a name by which all of these tests can be identified.  This is used
-   * at the front of file-name prefixes, so that related files can be grouped
-   * together.
-   *
-   * @return Name
-   */
-  override fun getTestName (): String
-  {
-    return "Sami"
   }
 
 
@@ -273,9 +218,8 @@ object TestControllerSami: TestControllerBase()
   */
   override fun initialise ()
   {
-    XXXOsis2ModInterface.setOsis2ModVariant(XXXOsis2ModInterface.Osis2ModVariant.STEP)
     makeGithubUrls()
-    makeTestRelatedDataForUseInConfigAbout()
+    createTestRelatedSwordAboutDetails()
   }
 
 
@@ -286,13 +230,13 @@ object TestControllerSami: TestControllerBase()
   *
   * @return any details to be added.
  */
-  override fun makeTestRelatedDataForUseInConfigAbout ()
+  private fun createTestRelatedSwordAboutDetails ()
   {
     val s = """
 <p><p><p>
 =============================================================================<p><p>
 <div style='font-size:xx-large;color:red'>Supporting data</div>
-<div>Tests: ${getTestName()}</div>
+<div>Tests: $m_TestName</div>
 <div><a href='$m_OsisCopyFileGithubUrl' target='_blank'>OSIS</a></div>
 <div><a href='$m_JsonCopyFileGithubUrl' target='_blank'>JSON file including mappings</a></div>
 """.trimIndent()
@@ -309,10 +253,10 @@ object TestControllerSami: TestControllerBase()
     val moduleFolderName = File(StandardFileLocations.getRootFolderPath()).name // eg en_NETSLXX.
     val moduleParentFolderName = File(StandardFileLocations.getRootFolderPath()).parentFile!!.name // eg 'Miscellaneous'.
 
-    m_JsonFileCopyLocalPath = Paths.get(saveFolder, getModuleNamePrefix() + File(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath()).name).toString()
+    m_JsonFileCopyLocalPath = Paths.get(saveFolder, getUniqueIdentifierForRun() + File(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath()).name).toString()
     m_JsonCopyFileGithubUrl = "$githubRoot$moduleParentFolderName/$moduleFolderName/$m_SaveFolderName/${File(m_JsonFileCopyLocalPath).name}"
 
-    m_OsisFileCopyLocalPath = Paths.get(saveFolder, getModuleNamePrefix() + File(StandardFileLocations.getOsisFilePath()).name).toString()
+    m_OsisFileCopyLocalPath = Paths.get(saveFolder, getUniqueIdentifierForRun() + File(StandardFileLocations.getOsisFilePath()).name).toString()
     m_OsisCopyFileGithubUrl = "$githubRoot$moduleParentFolderName/$moduleFolderName/$m_SaveFolderName/${File(m_OsisFileCopyLocalPath).name}"
   }
 
@@ -323,4 +267,8 @@ object TestControllerSami: TestControllerBase()
   private var m_JsonCopyFileGithubUrl = ""
   private var m_OsisFileCopyLocalPath = ""
   private var m_OsisCopyFileGithubUrl = ""
+
+
+  /*****************************************************************************/
+  init { m_TestName = "Sami" }
 }

@@ -2,7 +2,6 @@ package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.bibledetails.BibleStructure
-import org.stepbible.textconverter.support.bibledetails.BibleStructureOsis
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
@@ -82,6 +81,7 @@ object TextConverterTaggingHandler: TextConverterProcessorBase()
     describeDataFiles()
     BibleStructure.OsisInstance().populateFromFile("C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Dbl\\Biblica\\Text_deu_XXX\\Osis\\deu_XXX_osis.xml", false)
     //getReversificationMappings()
+    // $$$ Need to set stepHasAppliedExtendedTagging to either true or false.
     return true
   }
 

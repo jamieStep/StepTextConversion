@@ -796,7 +796,7 @@ object RefFormatHandlerReaderVernacular
 
   private class EmbeddedReferenceElementRefCollectionPart (theRcp: RefCollectionPart, asText: String) : EmbeddedReferenceElement() { val rcp = theRcp; init { text = asText } }
 
-  private class EmbeddedReferenceElementText (theText: String) : EmbeddedReferenceElement() { init { text = theText } }
+  class EmbeddedReferenceElementText (theText: String) : EmbeddedReferenceElement() { init { text = theText } }
 
 
   /****************************************************************************/

@@ -71,6 +71,7 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
   /****************************************************************************/
   override fun pre (): Boolean
   {
+    if (C_InputType != InputType.USX) return true
     deleteFiles(listOf(Pair(StandardFileLocations.getOsisFolderPath(), null)))
     createFolders(listOf(StandardFileLocations.getOsisFolderPath()))
     return true
@@ -88,7 +89,7 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
   /****************************************************************************/
   override fun runMe (): Boolean
   {
-    return true
+    return C_InputType == InputType.USX
   }
 
 

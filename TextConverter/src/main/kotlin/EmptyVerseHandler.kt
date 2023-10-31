@@ -219,7 +219,6 @@ object EmptyVerseHandler
 
 
     /**************************************************************************/
-    BibleStructure.UsxUnderConstructionInstance().populateFromDom(document, wantWordCount = false)
     val holes = BibleStructure.UsxUnderConstructionInstance().getMissingEmbeddedVersesForBook(bookNo)
     if (holes.isEmpty()) return false
 
@@ -278,7 +277,7 @@ object EmptyVerseHandler
         val x = versesOfInterest.toSet()
         versesOfInterest = versesOfInterest.filter { Ref.getV(it) < BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(it) }
         val delta = x - versesOfInterest.toSet()
-        delta.sorted().forEach { Dbg.d(">>>>> " + Ref.rd(it)).toString() }
+        //delta.sorted().forEach { Dbg.d(">>>>> " + Ref.rd(it)).toString() }
       }
 
       if (versesOfInterest.isNotEmpty())

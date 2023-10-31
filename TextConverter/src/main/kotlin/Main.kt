@@ -4,6 +4,7 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
+import org.stepbible.textconverter.support.stepexception.StepException
 
 
 
@@ -16,7 +17,7 @@ import org.stepbible.textconverter.support.debug.Logger
 
 fun main (args: Array<String>)
 {
-  Dbg.setBooksToBeProcessed("3Jn")
+  Dbg.setBooksToBeProcessed("Mat")
 
   try
   {
@@ -25,6 +26,12 @@ fun main (args: Array<String>)
     if (!ConfigData.getAsBoolean("stepEncryptionApplied", "no")) println(C_NotEncrypted)
     Dbg.endOfRun()
     println("Finished\n")
+  }
+  catch (e: StepException)
+  {
+    Dbg.endOfRun()
+    if (null != e.message) println(e.message)
+    if (!e.getSuppressStackTrace()) e.printStackTrace()
   }
   catch (e: Exception)
   {
@@ -39,7 +46,7 @@ fun main (args: Array<String>)
 private fun mainCommon (args: Array<String>)
 {
   TextConverterController().process(args)
-  TestController.activeController().atEndOfProcessing()
+  TestController.instance().terminate()
   Logger.summariseResults()
 }
 

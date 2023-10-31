@@ -19,6 +19,6 @@ object BibleBookAndFileMapperRawUsx: BibleBookAndFileMapper()
 {
   init
   {
-    populate(StandardFileLocations.getPreprocessedUsxFolderPath(), StandardFileLocations.getRawUsxFolderPath())
+    populate(StandardFileLocations.getPreprocessedUsxFolderPath(), StandardFileLocations.getRawInputFolderPath())
   }
 }

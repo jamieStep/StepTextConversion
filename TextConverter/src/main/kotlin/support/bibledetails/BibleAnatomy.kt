@@ -4,6 +4,7 @@ package org.stepbible.textconverter.support.bibledetails
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.shared.BiblePart
 import org.stepbible.textconverter.support.ref.Ref
+import org.stepbible.textconverter.support.ref.RefKey
 
 
 /******************************************************************************/
@@ -75,6 +76,20 @@ object BibleAnatomy
     if (isOt(bookNumber)) return BiblePart.OT
     if (isNt(bookNumber)) return BiblePart.NT
     return BiblePart.DC
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Returns a list of all verses which are missing in many texts, and therefore
+  * perhaps not worth reporting.
+  *
+  * @return Commonly missing verses.
+  */
+
+  fun getCommonlyMissingVerses (): List<RefKey>
+  {
+    return m_CommonlyMissingVerses
   }
 
 

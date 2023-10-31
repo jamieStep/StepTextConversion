@@ -1,8 +1,9 @@
 package org.stepbible.textconverter
 
+
 /****************************************************************************/
 /**
- * Compile-time configuration flags.
+ * Compile-time configuration flags and associated items.
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -56,4 +57,11 @@ const val C_ConfigurationFlags_ReversificationThresholdMarkingAFairAmountOfWork 
 *   verses there.
 */
 
-const val C_ConfigurationFlags_GenerateVersesAtEndsOfChapters = true
+const val C_ConfigurationFlags_GenerateVersesAtEndsOfChapters = false
+
+
+/****************************************************************************/
+/** What it says on the tin. */
+
+enum class InputType { USX, OSIS, VL, UNDEFINED}
+var C_InputType = InputType.UNDEFINED

@@ -4,7 +4,6 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
@@ -39,8 +38,9 @@ object TextConverterProcessorVLToEnhancedUsx : TextConverterProcessorBase()
   /****************************************************************************/
   override fun pre (): Boolean
   {
-    createFolders(listOf(StandardFileLocations.getRawUsxFolderPath()))
-    deleteFiles(listOf(Pair(StandardFileLocations.getRawUsxFolderPath(), "*.usx")))
+    if (C_InputType != InputType.VL) return true
+    createFolders(listOf(StandardFileLocations.getRawInputFolderPath()))
+    deleteFiles(listOf(Pair(StandardFileLocations.getRawInputFolderPath(), "*.usx")))
     return true
   }
 
@@ -51,7 +51,7 @@ object TextConverterProcessorVLToEnhancedUsx : TextConverterProcessorBase()
 
   override fun runMe (): Boolean
   {
-    return StepFileUtils.fileExists(StandardFileLocations.getVLFilePath())
+    return C_InputType == InputType.VL
   }
 
 
@@ -190,7 +190,7 @@ object TextConverterProcessorVLToEnhancedUsx : TextConverterProcessorBase()
   {
    val bookName = lines[0].substring(3, 6).uppercase()
 
-    File(Paths.get(StandardFileLocations.getRawUsxFolderPath(), "$bookName.usx").toString()).printWriter().use { out ->
+    File(Paths.get(StandardFileLocations.getRawInputFolderPath(), "$bookName.usx").toString()).printWriter().use { out ->
       Out.m_Out = out
       bookHeader(bookName)
       lines.groupBy { it.substring(7, 10) }. forEach { processChapter(bookName, it.key.trimStart('0'), it.value) }

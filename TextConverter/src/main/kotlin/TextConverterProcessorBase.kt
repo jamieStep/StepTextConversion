@@ -115,7 +115,7 @@ abstract class TextConverterProcessorBase
             path = StepFileUtils.getParentFolderName(path)
         }
 
-        try { StepFileUtils.getMatchingThingsFromFolder(path, pattern, false, "DF").forEach{ StepFileUtils.deleteFileOrFolder(it.toString()) } } catch (_: Exception) {}
+        try { StepFileUtils.getMatchingThingsFromFolder(path, ("\\Q$pattern\\E").toRegex(), "DF").forEach{ StepFileUtils.deleteFileOrFolder(it.toString()) } } catch (_: Exception) {}
     }
 
 

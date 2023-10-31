@@ -1,7 +1,10 @@
 /******************************************************************************/
 package org.stepbible.textconverter.support.configdata
 
+import org.stepbible.textconverter.C_InputType
+import org.stepbible.textconverter.InputType
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
+import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.File
 import java.io.FileInputStream
 import java.nio.file.Paths
@@ -139,7 +142,7 @@ object StandardFileLocations
     val file = File(fileNameOrEntryNameWithinJar)
     val folderPath = file.parent
     val fileName = file.name
-    val path = StepFileUtils.getSingleMatchingFileFromFolder(folderPath, fileName, false) ?: return null
+    val path = StepFileUtils.getSingleMatchingFileFromFolder(folderPath, ("\\Q$fileName\\E").toRegex()) ?: return null
     return FileInputStream(path.toString())
   }
     
@@ -153,9 +156,9 @@ object StandardFileLocations
   fun getEncryptionDataRootFolder (): String { return Paths.get(getSwordRootFolderPath(), "step").toString() }
   fun getEncryptionDataFolder (): String { return Paths.get(getEncryptionDataRootFolder(), "jsword-mods.d").toString() }
   fun getEncryptionDataFilePath (moduleName: String): String { return Paths.get(getEncryptionDataFolder(), moduleName).toString() }
-  fun getEnhancedUsxFilePattern (): String { return "*.usx" }
+  fun getEnhancedUsxFilePattern (): Regex { return ".*\\.usx".toRegex() }
   fun getEnhancedUsxFolderPath (): String { return m_EnhancedUsxFolderPath }
-  private fun getMetadataFolderPath (): String { return m_MetadataFolderPath }
+  fun getMetadataFolderPath (): String { return m_MetadataFolderPath }
   fun getOsisFilePath (): String { return m_OsisFilePath }
   fun getOsisFolderPath (): String { return m_OsisFolderPath }
   fun getOsisToModLogFilePath (): String { return m_OsisToModLogFilePath; }
@@ -166,7 +169,8 @@ object StandardFileLocations
   fun getPreprocessorJavaFilePath (): String { return Paths.get(m_RootFolderPath, "Preprocessor", "preprocessor.jar").toString() }
   fun getPreprocessorJavascriptFilePath (): String { return Paths.get(m_RootFolderPath, "Preprocessor", "preprocessor.js").toString() }
   fun getPreprocessorPythonFilePath (): String { return Paths.get(m_RootFolderPath, "Preprocessor", "preprocessor.py").toString() }
-  fun getRawUsxFolderPath (): String { return m_RawUsxFolderPath }
+  fun getRawInputFolderPath (): String { return m_RawInputFolderPath }
+  fun getRepositoryPackageFilePath (): String { return Paths.get(getSwordRootFolderPath(), getRepositoryPackageFileName()).toString() }
   fun getRootFolderName (): String { return m_RootFolderName }
   fun getRootFolderPath (): String { return m_RootFolderPath }
   fun getStepChangeHistoryFilePath (): String { return m_StepChangeHistoryFilePath }
@@ -186,7 +190,20 @@ object StandardFileLocations
   fun getVersificationFilePath (): String { return Paths.get(getRootFolderPath(), "stepRawTextVersification.txt").toString() }
   private fun getVersificationStructureForBespokeOsis2ModFileName (): String { return ConfigData["stepModuleName"]!! + ".json" }
   fun getVersificationStructureForBespokeOsis2ModFilePath (): String { return Paths.get(getEncryptionDataRootFolder(), "versification", getVersificationStructureForBespokeOsis2ModFileName()).toString() }
-  fun getVLFilePath (): String { return Paths.get(getRootFolderPath(), "VL", "vl.txt").toString() }
+  fun getVLFilePath (): String { return Paths.get(getRootFolderPath(), "RawVl", "vl.txt").toString() }
+
+
+  /****************************************************************************/
+  private fun getRepositoryPackageFileName (): String
+  {
+     return "forRepository_" +
+            ConfigData["stepLanguageCode3Char"]!! + "_" +
+            ConfigData["stepVernacularAbbreviation"]!! +
+            //"Trans" + ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!! + "_" +
+            //"Step" + String.format("%03d", Integer.parseInt(ConfigData.get("stepTextRevision", "1"))) +
+            (if (null == ConfigData["stepNeedToDisambiguateAbbreviation"]) "" else ConfigData.getDisambiguationSuffixForModuleNames()) +
+            ".zip"
+  }
 
 
   /****************************************************************************/
@@ -197,13 +214,12 @@ object StandardFileLocations
    *   _any_ USX file.  Otherwise it will match the file for the specific
    *   book.
    *
-   * @return Pattern-match string for raw USX files.
+   * @return Pattern-match regex for raw USX files.
    */
   
-  fun getRawUsxFilePattern (ubsBookAbbreviation: String?): String
+  fun getRawUsxFilePattern (ubsBookAbbreviation: String?): Regex
   {
-    val res = ConfigData.get("stepRawUsxFileNamePattern") ?: "\$abbrev\\.usx"
-    return res.replace("\$abbrev", ubsBookAbbreviation ?: ".*?")
+    return if (null == ubsBookAbbreviation) "(?i).*\\.usx".toRegex() else "(?i).*$ubsBookAbbreviation.*\\.usx".toRegex()
   }
 
 
@@ -216,15 +232,45 @@ object StandardFileLocations
   
   fun initialise (rootFolderPath: String)  
   {
-    // rootFolderPath is supplied from the command line, and on Windows there's
-    // no guarantee it follows the upper- / lower-case layout of the actual
-    // folder name.  It's the latter which we want.
+    /**************************************************************************/
+    /* rootFolderPath is supplied from the command line, and on Windows there's
+       no guarantee it follows the upper- / lower-case layout of the actual
+       folder name.  It's the latter which we want. */
     
     m_RootFolderPath = (File(rootFolderPath)).canonicalPath
-    
     m_RootFolderName = File(m_RootFolderPath).name
 
-    m_RawUsxFolderPath = Paths.get(m_RootFolderPath, "RawUsx").toString()
+
+
+    /**************************************************************************/
+    /* Hitherto, we've always been taking input from RawUsx.  Now, however, we
+       also need to be able to cope with OSIS.  (Other things such as VL have
+       to be handled specially, perhaps by converting them to USX before
+       running the converter.  OSIS is special because in the normal course of
+       events its one of the outputs here, and it needs to go through part of
+       the standard conversion processing pipeline, even though it is _only_
+       part of it.
+
+       I am therefore presently catering for having a folder called RawUsx
+       (as before) or RawOsis.  The processing here also extracts the
+       input type and stores it in ConfigData. */
+
+    val rawFolderName = StepFileUtils.getMatchingFoldersFromFolder(m_RootFolderPath, "^Raw.*".toRegex())[0].fileName.toString()
+    val inputType = rawFolderName.replace("Raw", "").lowercase()
+    C_InputType = when (inputType)
+      {
+        "osis" -> InputType.OSIS
+        "usx"  -> InputType.USX
+        "vl" -> InputType.VL
+        else -> throw StepException("Input type not presently handled: $inputType.")
+      }
+
+
+
+    /**************************************************************************/
+    /* That's the end of the exciting bit. */
+
+    m_RawInputFolderPath = Paths.get(m_RootFolderPath, rawFolderName).toString()
     
     m_PreprocessedUsxFolderPath = Paths.get(m_RootFolderPath, "PreprocessedUsx").toString()
 
@@ -280,7 +326,7 @@ object StandardFileLocations
   private var m_OsisFolderPath = ""
   private var m_OsisToModLogFilePath = ""
   private var m_PreprocessedUsxFolderPath = ""
-  private var m_RawUsxFolderPath = ""
+  private var m_RawInputFolderPath = ""
   private var m_RootFolderName = ""
   private var m_RootFolderPath = ""
   private var m_StepChangeHistoryFileName = ""

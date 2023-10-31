@@ -3,17 +3,20 @@ package org.stepbible.textconverter.support.configdata
 
 
 import org.stepbible.textconverter.ReversificationData
+import org.stepbible.textconverter.XXXOsis2ModInterface
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.bibledetails.BibleStructuresSupportedByOsis2mod.canonicaliseSchemeName
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.iso.IsoLanguageCodes
 import org.stepbible.textconverter.support.iso.Unicode
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.*
+import java.net.URL
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -1023,7 +1026,7 @@ object ConfigData
 
 
       /************************************************************************/
-      line = line.replace("\\(", "JamieBra").replace("\\)", "JamieKet")
+      //$$$line = line.replace("\\(", "JamieBra").replace("\\)", "JamieKet")
 
 
 
@@ -1136,7 +1139,8 @@ object ConfigData
      if (null != res)
      {
        res = expandReferencesTopLevel(res, nullsOk, errorStack)
-       res = res!!.replace("JamieBra", "(").replace("JamieKet", ")")
+       //$$$res = res!!.replace("JamieBra", "(").replace("JamieKet", ")")
+       res = StepStringUtils.unmarkBalancedParens(res!!)
      }
 
      errorStack.pop()
@@ -1560,7 +1564,6 @@ object ConfigData
         val language = makeStepDescription_getLanguage(englishTitle)
         val moduleMonthYear = makeStepDescription_getModuleMonthYear().trim()
 
-
         var abbreviatedNameOfRightsHolder = get("stepTextOwnerOrganisationAbbreviatedName") ?: ""
         if (abbreviatedNameOfRightsHolder.isNotEmpty()) abbreviatedNameOfRightsHolder += " "
 
@@ -1892,6 +1895,8 @@ object ConfigData
         // forces the abbreviation into canonical form (and will also check
         // that the abbreviation is one we know about).
         val bookNo = BibleBookNamesUsx.nameToNumber(s)
+        if (!Dbg.wantToProcessBook(bookNo)) return false
+
         s = BibleBookNamesUsx.numberToAbbreviatedName(bookNo)
         getBookListAddBook(otBooks, ntBooks, dcBooks, s)
 
@@ -2017,15 +2022,28 @@ object ConfigData
      to find it in any online lists.  However, apparently STEP is set up to
      accept this.  The alternative -- heb -- covers both ancient and modern
      Hebrew, which would mean that using just this abbreviation we could not
-     distinguish between an ancient text and a modern Hebrew translation. */
+     distinguish between an ancient text and a modern Hebrew translation.
 
+     We use an additional suffix to avoid potential name clashes.  See the
+     head-of-method comments for getDisambiguationSuffixForModuleNames for
+     more information. */
 
   fun calc_stepModuleName (): String
+  {
+    return calc_stepModuleNameWithoutDisambiguation() + getDisambiguationSuffixForModuleNames()
+  }
+
+
+  /****************************************************************************/
+  /* Returns the basic module name devoid of disambiguation suffix.  See
+     calc_stepModuleName for more information. */
+
+  fun calc_stepModuleNameWithoutDisambiguation (): String
   {
     var moduleName = getInternal("stepLanguageCode3Char", false)!!.lowercase()
     moduleName = if (moduleName in listOf("eng", "grc", "hbo")) "" else moduleName[0].uppercase() + moduleName.substring(1).lowercase()
     moduleName += getInternal("stepVernacularAbbreviation", false)!!
-    return moduleName + if (getAsBoolean("stepNeedToDisambiguateAbbreviation", "no")) "_sb" else ""
+    return moduleName
   }
 
 
@@ -2071,7 +2089,7 @@ object ConfigData
     var schemeName = getInternal("stepVersificationScheme", false)!!.lowercase()
     if (schemeName.startsWith("nrsv") || schemeName.startsWith("kjv"))
       schemeName = schemeName.replace("a", "") + if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.targetsDc()) "a" else ""
-    return canonicaliseSchemeName(schemeName)
+    return if (XXXOsis2ModInterface.usingStepOsis2Mod()) schemeName else canonicaliseSchemeName(schemeName)
   }
 
 
@@ -2122,4 +2140,214 @@ object ConfigData
   init {
     initCalcMethods()
   }
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                 Public                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /* Used to help disambiguate module names ... etc.
+
+     The basic module name consists of a language code followed by the
+     abbreviated name of the text -- eg deuHFA.  (With English and ancient
+     languages, the language code is omitted.)
+
+     We are not the only people to use names of this form.  This raises the
+     possibility of clashes, both in terms of us bringing into STEP from the
+     outside world something which has the same name as a module we already
+     support, and also in terms of us making material available to the wider
+     community.
+
+     To get round this I have been asked to append '_sb' (for STEPBible) in
+     certain cases.  I really have severe doubts about the efficacy of this
+     as currently conceived, so to save repeatedly revisiting potential issues,
+     I give details both of what I have been asked to do and what I see as the
+     problems with it.
+
+     The '_sb' is actually intended to do two different things -- to avoid
+     name clashes, as already explained, and to highlight texts which may
+     possibly cause problems to third parties who pick them up.
+
+     sb it to be applied under the following circumstances (and _only_ under
+     these):
+
+     - If we are generating a module using our own proprietary version of
+       osis2mod.
+
+     - If the module name would otherwise clash with the name of a module
+       available from the Crosswire repository.
+
+
+     I foresee quite a number of issues here.  The following are in no
+     particular order.
+
+
+
+     Flagging modules which may cause problems to third parties
+     ==========================================================
+
+     One of the reasons for adding sb module names is to flag the fact that the
+     module may cause problems if third parties pick it up.
+
+     We are proposing to do this only on modules generated using our proprietary
+     osis2mod.  But these definitely _won't_ work for third parties expecting a
+     conformant Sword module, so we can't make them available anyway -- in which
+     case adding sb doesn't really buy us anything.
+
+     This also overlooks the fact that with the exception of modules built
+     direct from OSIS supplied by third parties, we are _always_ non-conformant
+     because we long ago took the decision to prioritise 'working for STEP' over
+     being conformant.  This means that pretty much _any_ module may not work
+     for third parties, on which grounds _all_ modules should be marked sb.  Or
+     alternatively, there is no point in marking any modules at all, because
+     we can't make modules available anyway.  (Or at the very least, it's a
+     case of caveat emptor.)
+
+
+
+     Disambiguating module names
+     ===========================
+
+     As explained above, the decision to add sb for disambiguation purposes is
+     based upon a static analysis of the content of the Crosswire repository
+     (something I have automated below, although it involves accessing web
+     pages and is consequently very slow).
+
+     One problem with this is that the analysis is indeed limited to Crosswire.
+     There are other sources of modules available, but we do not consider
+     these (and indeed, given that we almost certainly won't be aware of all
+     of them, probably never could).
+
+     This might buy us some level of immunity to name clashes if we take
+     modules from Crosswire, but it won't do so if we ever want to take them
+     from elsewhere.  And it definitely doesn't protect the world at large
+     from name clashes involving material which we put 'out there', because
+     we have no idea whether we are introducing name clashes or not.
+
+     There is a further problem, in that we add sb only if there is a name
+     clash with Crosswire _today_.  If there is no clash, we don't add sb.
+     But that then leaves us with a potential future name clash, because
+     there is nothing to prevent Crosswire from releasing a module tomorrow
+     with the same name as ours.
+
+     It has been suggested that this is not a significant problem, because
+     we can always rename modules in future if we discover a clash --
+     something which is seen as being very unlikely anyway.  I'm not sure
+     this is really practical -- we're unlikely to become aware of name
+     clashes unless we constantly go looking for them, and if we find them,
+     changing the name is likely to be sufficient of a pain that we're not
+     going to do it.  In any case, this really doesn't seem to make sense
+     to me: we're doing something which we accept won't necessarily be
+     effective at guarding against a situation which we are assuming is
+     vanishingly unlikely to happen anyway.
+
+     (And if we _don't_ go looking for name clashes, that kinda suggests
+     they don't matter anyway.)
+
+     To put it another way, consider our existing stock of modules.  If
+     any of those clash with Crosswire modules, then it rather undermines
+     our assumption that clashes are unlikely to happen -- which implies
+     that we may, indeed, need a disambiguation mechanism.  But this then
+     underlines the fact that the current proposal really won't work,
+     because there would have been a time prior to the existence of the
+     Crosswire module, and if we had generated ours then, we would indeed
+     subsequently have had a name clash, against which the proposed
+     mechanism would not have guarded us.
+
+     The obvious solution (or so it seems to me) would simply be to add
+     sb to _all_ the modules we generate.  However that has implications
+     for the STEP server, because we don't want people to be aware of the
+     _sb suffix, and therefore it is necessary to set up aliasing.  In view
+     of this, it has been ruled out as a possibility.
+
+     Except ... so far as I know, the intention is to put _all_ future modules
+     through our own bespoke osis2mod, and as explained above, that will, in
+     fact give us sb on everything.
+  */
+
+  fun getDisambiguationSuffixForModuleNames (): String
+  {
+    /**************************************************************************/
+    /* Avoid repeatedly calculating this. */
+
+    if (null != m_DisambiguationSuffixForModuleNames)
+      return m_DisambiguationSuffixForModuleNames!!
+
+
+
+    /**************************************************************************/
+    val suffix = "_sb"
+
+
+
+    /**************************************************************************/
+    /* If we're running with Sami's version and not dealing with KJV or NRSV,
+       then we definitely need the disambiguation. */
+
+    val osis2modType = ConfigData["stepForcedOsis2ModVariant"]!!.lowercase()
+    val versificationScheme = ConfigData["stepVersificationScheme"]!!
+    if (false && "step" == osis2modType && !versificationScheme.contains("kjv", ignoreCase = true) && !versificationScheme.contains("nrsv", ignoreCase = true))
+    {
+      m_DisambiguationSuffixForModuleNames = "_sb"
+      return m_DisambiguationSuffixForModuleNames!!
+    }
+
+
+
+//    $$$ Not sure we need this.
+//    /**************************************************************************/
+//    /* Ditto if we've done any extended tagging. */
+//
+//    if (ConfigData.getAsBoolean("stepHasAppliedExtendedTagging"))
+//    {
+//      m_DisambiguationSuffixForModuleNames = suffix
+//      return m_DisambiguationSuffixForModuleNames!!
+//    }
+
+
+
+    /**************************************************************************/
+    /* Check to see if there are any clashes against the Crosswire module
+       list. */
+
+    Dbg.reportProgress("Obtaining details of Crosswire modules so as to avoid name clashes")
+    val crosswireModules = TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER)
+    val dataLocations = listOf(ConfigData["stepExternalDataPath_CrosswireModuleListBibles"]!!,
+                               ConfigData["stepExternalDataPath_CrosswireModuleListCommentaries"]!!,
+                               ConfigData["stepExternalDataPath_CrosswireModuleListDevotionals"]!!)
+    dataLocations.forEach { url ->
+      val lines = URL(url).readText().lines()
+      var i = -1
+      while (++i < lines.size)
+      {
+        var line = lines[i]
+        var ix = line.indexOf("jsp?modName")
+        if (ix < 0) continue
+
+        var name = line.substring(ix + "jsp?modName".length + 1)
+        ix = name.indexOf("\"")
+        name = name.substring(0, ix)
+
+        i += 2
+        val description = lines[i].trim().replace("<td>", "").replace("</td>", "")
+
+        crosswireModules[name] = description
+      } // for i
+    } // For each dataLocation.
+
+
+
+    /**************************************************************************/
+    //crosswireModules.keys.sorted().forEach { it -> Dbg.d(it + "\t" + crosswireModules[it] ) }
+    val moduleNameWithoutSuffix = ConfigData["stepModuleNameWithoutDisambiguation"]!!
+    m_DisambiguationSuffixForModuleNames = if (moduleNameWithoutSuffix in crosswireModules) suffix else ""
+    return m_DisambiguationSuffixForModuleNames!!
+  }
+
+  private var m_DisambiguationSuffixForModuleNames: String? = null
 }

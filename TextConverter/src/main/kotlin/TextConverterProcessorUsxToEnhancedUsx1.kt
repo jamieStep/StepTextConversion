@@ -281,6 +281,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     /******************************************************************************************************************/
     override fun pre (): Boolean
     {
+        if (C_InputType != InputType.USX) return true
         createFolders(listOf(StandardFileLocations.getEnhancedUsxFolderPath(), StandardFileLocations.getPreprocessedUsxFolderPath(), StandardFileLocations.getTextFeaturesFolderPath()))
         deleteFiles(listOf(Pair(StandardFileLocations.getEnhancedUsxFolderPath(), "*.usx"),
                            Pair(StandardFileLocations.getPreprocessedUsxFolderPath(), "*.usx"),
@@ -292,7 +293,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     /******************************************************************************************************************/
     override fun runMe (): Boolean
     {
-        return true
+      return C_InputType == InputType.USX
     }
 
 
@@ -312,7 +313,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     override fun process (): Boolean
     {
       runPreprocessor()
-      BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx) // Gets the chapter / verse structure -- how many chapters in each verse, etc.
+      BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, true) // Gets the chapter / verse structure -- how many chapters in each verse, etc.
       forceVersificationSchemeIfAppropriate()
       ReversificationData.process()                                              // Does what it says on the tin.  This gives the chance (which I may not take) to do 'difficult' restructuring only where reversification will require it.
       BibleBookAndFileMapperRawUsx.iterateOverSelectedFiles(::processFile)       // Creates the enhanced USX.
@@ -381,7 +382,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
       /***************************************************************************************************************/
       val booksToBeProcessed = Dbg.getBooksToBeProcessed().joinToString(".")
       command.add(StandardFileLocations.getPreprocessedUsxFolderPath())
-      command.add(StandardFileLocations.getRawUsxFolderPath())
+      command.add(StandardFileLocations.getRawInputFolderPath())
       if (booksToBeProcessed.isNotEmpty()) command.add(booksToBeProcessed)
       runCommand("  Preprocessing: ", command)
       Dbg.reportProgress("Preprocessing complete", 1)
@@ -443,7 +444,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
         convertTagsToLevelOneWhereAppropriate()            // a) Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
         encapsulateLists()                                 // a) Sort out list structures.
         encapsulateHeadings()                              // a) For later processing it may be useful to encapsulate headers; or maybe it's just my aesthetic sense.
-        CrossReferenceProcessor.canonicalise(document)     // a) There are all sorts of awkward things about refs and associated tags which it would be nice to sort out.
+        CrossReferenceProcessor.canonicaliseAndPatchUp(document)     // a) There are all sorts of awkward things about refs and associated tags which it would be nice to sort out.
 
         positionVerseEnds(); x()                           // b) Move sids and eids where possible to avoid cross-verse-boundary markup.
 
