@@ -1,7 +1,6 @@
 package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.*
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.ref.Ref
@@ -46,7 +45,7 @@ import java.io.PrintWriter
  * @author ARA "Jamie" Jamieson
  */
 
-object XXXOsis2ModInterface
+open abstract class Osis2ModInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -57,13 +56,17 @@ object XXXOsis2ModInterface
   /****************************************************************************/
 
   /****************************************************************************/
-  enum class Osis2ModVariant { CROSSWIRE, CROSSWIRE_RELAXED, STEP }
+  companion object
+  {
+    fun instance (): Osis2ModInterface
+    {
+      if (null == m_Instance)
+        m_Instance = if ("step" == ConfigData["stepOsis2modType"]!!) Osis2ModInterfaceStep else Osis2ModInterfaceCrosswire
+      return m_Instance!!
+    }
 
-
-  /****************************************************************************/
-  var C_CollapseSubverses = false
-  var C_CreateEmptyChapters = false
-  var C_ExpandElisions = true
+    var m_Instance: Osis2ModInterface? = null
+  }
 
 
   /****************************************************************************/
@@ -72,27 +75,7 @@ object XXXOsis2ModInterface
   * the STEP variant of osis2mod.
   */
 
-  fun createSupportingData ()
-  {
-    if (usingCrosswireOsis2Mod()) return
-    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, wantWordCount = false) // Make sure we have up-to-date structural information.
-    populateBibleStructure()
-    populateReversificationMappings()
-    outputJson(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath())
-  }
-
-
-  /****************************************************************************/
-  /**
-   * Returns details of any command-line parameters this processor requires or permits.
-   *
-   * @param commandLineProcessor Command line processor.
-   */
-
-  fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
-  {
-    commandLineProcessor.addCommandLineOption("forcedOsis2ModVariant", 1, "Force to use Crosswire osis2mod or our own for test purposes", listOf("Crosswire", "Step", "CrosswireRelaxed"), "Crosswire", false)
-  }
+  abstract fun createSupportingData ()
 
 
   /****************************************************************************/
@@ -103,76 +86,125 @@ object XXXOsis2ModInterface
   * @param osis2modVariant What it says on the tin.
   */
 
-  fun setOsis2ModVariant ()
+  abstract fun initialise ()
+}
+
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/**                                                                          **/
+/**                                Crosswire                                 **/
+/**                                                                          **/
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+object Osis2ModInterfaceCrosswire: Osis2ModInterface()
+{
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Public                                  **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+  * Outputs any support information required by osis2mod.
+  */
+
+  override fun createSupportingData ()
   {
-    m_Osis2ModVariant = when (ConfigData["stepForcedOsis2ModVariant"]!!.lowercase())
-    {
-      "step"             -> Osis2ModVariant.STEP
-      "crosswirerelaxed" -> Osis2ModVariant.CROSSWIRE_RELAXED
-      else               -> Osis2ModVariant.CROSSWIRE
-    }
-
-    when (m_Osis2ModVariant)
-    {
-      Osis2ModVariant.CROSSWIRE, Osis2ModVariant.CROSSWIRE_RELAXED ->
-      {
-        //initialiseBookDetails()
-        C_CollapseSubverses = true
-        C_CreateEmptyChapters = true
-        C_ExpandElisions = true
-        // System.err.println("Make sure you DON'T have Zec.")
-      }
-
-      else -> // ie "step"
-      {
-        /**********************************************************************/
-        C_CollapseSubverses = false
-        C_CreateEmptyChapters = false
-        C_ExpandElisions = true // false !!!!!!!!!!!!!!!!!!!!!!!!!
-        ConfigData.put("stepReversificationType", "none", true) // With our osis2mod, we don't actually apply reversification -- we just record what it would do.
-                                                                                  // This will need changing at some point so that we can at least apply footnotes.
-
-
-        /**********************************************************************/
-        /* There are some settings which I think Sami ignores anyway, but just
-           to be sure, I clear them and then reinstate anything which is
-           needed. */
-
-        ConfigData.delete("stepVersificationScheme")
-        ConfigData.delete("stepVersificationSchemeCanonical")
-        ConfigData.put("stepVersificationScheme", ConfigData["stepModuleNameWithoutDisambiguation"]!!, true)
-        ConfigData.put("stepVersificationSchemeCanonical", ConfigData["stepModuleNameWithoutDisambiguation"]!!, true)
-        initialiseBookDetails()
-        // System.err.println("Make sure you DO have Zec.")
-     }
-    }
   }
 
 
   /****************************************************************************/
   /**
-  * Determines whether we are using the Crosswire variant of osis2mod.
-  *
-  * @return True if using the Crosswire variant of osis2mod.
+  * Records the osis2mod variant we are going to use, and sets up any other
+  * aspects of the environment dependent upon that.
   */
 
-  fun usingCrosswireOsis2Mod (): Boolean
+  override fun initialise ()
   {
-    return Osis2ModVariant.CROSSWIRE == m_Osis2ModVariant
+    C_CollapseSubverses = true
+    C_CreateEmptyChapters = true
+    C_ExpandElisions = true
+  }
+}
+
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/**                                                                          **/
+/**                                   Step                                   **/
+/**                                                                          **/
+/******************************************************************************/
+/******************************************************************************/
+
+/******************************************************************************/
+object Osis2ModInterfaceStep: Osis2ModInterface()
+{
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Public                                  **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+  * Outputs any support information required by osis2mod.
+  */
+
+  override fun createSupportingData ()
+  {
+    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, wantWordCount = false) // Make sure we have up-to-date structural information.
+    populateBibleStructure()
+    populateReversificationMappings()
+    outputJson(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath())
   }
 
 
-   /****************************************************************************/
-   /**
-   * Determines whether we are using the STEP variant of osis2mod.
-   *
-   * @return True if using the STEP variant of osis2mod.
-   */
+  /****************************************************************************/
+  /**
+  * Records the osis2mod variant we are going to use, and sets up any other
+  * aspects of the environment dependent upon that.
+  */
 
-   fun usingStepOsis2Mod (): Boolean
-   {
-     return Osis2ModVariant.STEP == m_Osis2ModVariant
-   }
+  override fun initialise ()
+  {
+    /**************************************************************************/
+    initialiseBookDetails()
+
+
+
+    /**************************************************************************/
+    C_CollapseSubverses = false
+    C_CreateEmptyChapters = false
+    C_ExpandElisions = true // false !!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+    /**************************************************************************/
+    /* There are some settings which I think Sami ignores anyway, but just
+       to be sure, I clear them and then reinstate anything which is
+       needed. */
+
+    ConfigData.delete("stepVersificationScheme")
+    ConfigData.delete("stepVersificationSchemeCanonical")
+    ConfigData.put("stepVersificationScheme", ConfigData["stepModuleNameWithoutDisambiguation"]!!, true)
+    ConfigData.put("stepVersificationSchemeCanonical", ConfigData["stepModuleNameWithoutDisambiguation"]!!, true)
+    ConfigData.put("stepReversificationType", "none", true) // With our osis2mod, we don't actually apply reversification -- we just record what it would do.
+                                                                              // This will need changing at some point so that we can at least apply footnotes.
+  }
 
 
 
@@ -463,7 +495,6 @@ object XXXOsis2ModInterface
   }
 
 
-
   /****************************************************************************/
   private data class CrosswireBookDetails (val fullName: String, val abbreviation: String)
 
@@ -471,5 +502,4 @@ object XXXOsis2ModInterface
   /****************************************************************************/
   private val m_BibleStructure = MyBibleStructure()
   private val m_CrosswireBookDetails: MutableMap<String, CrosswireBookDetails?>  = mutableMapOf()
-  private var m_Osis2ModVariant: Osis2ModVariant = Osis2ModVariant.CROSSWIRE
 }

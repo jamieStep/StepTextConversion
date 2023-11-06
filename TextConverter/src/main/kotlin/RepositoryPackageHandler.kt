@@ -32,7 +32,6 @@ object RepositoryPackageHandler: TextConverterProcessorBase()
   /****************************************************************************/
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
   {
-    commandLineProcessor.addCommandLineOption("doRepositoryPackage", 1, "Indicates whether we want a package for the repository.", listOf("Yes", "No"), "No", false)
   }
 
 
@@ -47,7 +46,7 @@ object RepositoryPackageHandler: TextConverterProcessorBase()
   /****************************************************************************/
   override fun runMe (): Boolean
   {
-    return true //ConfigData.getAsBoolean("stepDoRepositoryPackage")
+    return "release" == ConfigData["stepRunType"]!!.lowercase()
   }
 
 

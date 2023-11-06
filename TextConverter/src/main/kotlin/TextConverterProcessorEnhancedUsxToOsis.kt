@@ -15,6 +15,7 @@ import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.ref.*
 import org.stepbible.textconverter.support.shared.SharedData
 import org.stepbible.textconverter.support.stepexception.StepException
+import org.stepbible.textconverter.C_CollapseSubverses
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.BufferedWriter
@@ -292,7 +293,7 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
     vals["publicationType"] = publicationType
     vals["revisionDesc"] = ConfigData["revisionDesc"] ?: "" // See note above.
     vals["scope"] = makeScope()
-    vals["shortCopyright"] = ConfigData["stepShortCopyright"]!!.replace("<.*?>".toRegex(), " ")
+    vals["shortCopyright"] = ConfigData["stepShortCopyright"]!!.replace("<.*?>".toRegex(), " ").replace("&copy;", "(c)")
     vals["title"] = ConfigData.makeStepDescription()
     vals["toLowerPublicationType"] = publicationType.lowercase(Locale.getDefault())
     vals["todaysDate"] = SimpleDateFormat("dd-MMM-yy").format(Date())
@@ -536,7 +537,7 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase()
     m_Document = document
     reportBookBeingProcessed(m_Document)
     Logger.setPrefix("TextConverterProcessorUsxToOsis (" + StepFileUtils.getFileName(inputFilePath).split(".")[0] + "): ")
-    if (XXXOsis2ModInterface.C_CollapseSubverses) collapseSubverses()
+    if (C_CollapseSubverses) collapseSubverses()
     convertVerseNodesToNewFormat()
     deleteVerseMarkersEmbeddedWithinCanonicalHeadings()
     processNode(m_Document.documentElement)

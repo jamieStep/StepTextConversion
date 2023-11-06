@@ -69,7 +69,7 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase()
   {
     BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, wantWordCount = false) // Make sure we have up-to-date structural information.
     BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::processFile)
-    XXXOsis2ModInterface.createSupportingData()
+    Osis2ModInterface.instance().createSupportingData()
     return true
   }
 
@@ -118,10 +118,10 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase()
 
     if (!C_MinimalChangesOnly)
     {
-      if (XXXOsis2ModInterface.usingCrosswireOsis2Mod())
-        changed = changed or EmptyVerseHandler.createEmptyVersesForKnownOsis2modScheme(document)
-      else
+      if ("step" == ConfigData["stepOsis2modType"]!!)
         changed = changed or EmptyVerseHandler.createEmptyVersesForAdHocVersificationScheme(document)
+      else
+        changed = changed or EmptyVerseHandler.createEmptyVersesForKnownOsis2modScheme(document)
     }
 
     changed = changed or EmptyVerseHandler.annotateEmptyVerses(document)

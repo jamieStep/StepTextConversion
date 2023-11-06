@@ -128,9 +128,6 @@ object StandardFileLocations
     {
       val ix = fileNameOrEntryNameWithinJar.indexOf("/")
       val fileName = fileNameOrEntryNameWithinJar.substring(ix + 1)
-      //return File(ClassLoader.getSystemResource(fileName).file).inputStream()
-      //return Thread.currentThread().contextClassLoader.getResourceAsStream(fileName)
-      //return File(getResource(this.javaClass, "/$fileName").file).inputStream()
       return {}::class.java.getResourceAsStream("/$fileName")
     }
     
@@ -151,6 +148,7 @@ object StandardFileLocations
   /* All the obvious things ... */
 
   fun getConfigFileName (): String { return "config.conf"; }
+  fun getConfigFilePath (): String { return Paths.get(getMetadataFolderPath(), "config.conf").toString() }
   fun getConverterLogFilePath (): String { return m_ConverterLogFilePath }
   fun getDebugOutputFilePath (): String { return Paths.get(m_RootFolderPath, "debugLog.txt").toString() }
   fun getEncryptionDataRootFolder (): String { return Paths.get(getSwordRootFolderPath(), "step").toString() }
@@ -158,6 +156,8 @@ object StandardFileLocations
   fun getEncryptionDataFilePath (moduleName: String): String { return Paths.get(getEncryptionDataFolder(), moduleName).toString() }
   fun getEnhancedUsxFilePattern (): Regex { return ".*\\.usx".toRegex() }
   fun getEnhancedUsxFolderPath (): String { return m_EnhancedUsxFolderPath }
+  fun getHistoryFilePath (): String { return Paths.get(m_MetadataFolderPath, "history.txt").toString() }
+  fun getHistoryTemplateFilePath (): String { return "\$common/historyTemplate.txt" }
   fun getMetadataFolderPath (): String { return m_MetadataFolderPath }
   fun getOsisFilePath (): String { return m_OsisFilePath }
   fun getOsisFolderPath (): String { return m_OsisFolderPath }
@@ -199,9 +199,7 @@ object StandardFileLocations
      return "forRepository_" +
             ConfigData["stepLanguageCode3Char"]!! + "_" +
             ConfigData["stepVernacularAbbreviation"]!! +
-            //"Trans" + ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!! + "_" +
-            //"Step" + String.format("%03d", Integer.parseInt(ConfigData.get("stepTextRevision", "1"))) +
-            (if (null == ConfigData["stepNeedToDisambiguateAbbreviation"]) "" else ConfigData.getDisambiguationSuffixForModuleNames()) +
+            ConfigData["stepModuleNameAudienceRelatedSuffix"]!! +
             ".zip"
   }
 

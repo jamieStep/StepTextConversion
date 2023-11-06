@@ -366,6 +366,21 @@ abstract class BibleStructure
 
   /****************************************************************************/
   /**
+  * USE WITH CAUTION: Indicates that the instance has been populated with
+  * _something_.  It does not follow that it is necessarily up to date, nor
+  * that it has been populated with anything more than a single book.
+  *
+  * @return True if already populated.
+  */
+
+  fun alreadyPopulated (): Boolean
+  {
+    return m_Text.m_Content.m_ContentMap.isNotEmpty()
+  }
+
+
+  /****************************************************************************/
+  /**
   * Populates the data structures by running over the items identified by the
   * mapper.
   *

@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.support.debug
 
+import org.stepbible.textconverter.GeneralEnvironmentHandler
 import org.stepbible.textconverter.TestController
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
@@ -283,10 +284,7 @@ object Logger
   private fun announce (messageContainer: Map<RefKey, List<String>>, msgType: String)
   {
     /**************************************************************************/
-    val outputterToConsole: (String) -> Unit = { print(it) }
-    val outputterToFile   : (String) -> Unit = { File(m_LogFilePath).appendText(it) }
-    val outputter = if (m_LogFilePath.isEmpty()) outputterToConsole else outputterToFile
-
+    val outputter = getOutputter()
 
 
     /**************************************************************************/
@@ -317,6 +315,17 @@ object Logger
   }
   
   
+  /****************************************************************************/
+  /* Determine where to send output. */
+
+  private fun getOutputter (): (String) -> Unit
+  {
+    val outputterToConsole: (String) -> Unit = { print(it) }
+    val outputterToFile   : (String) -> Unit = { File(m_LogFilePath).appendText(it) }
+    return if (m_LogFilePath.isEmpty()) outputterToConsole else outputterToFile
+  }
+
+
   /****************************************************************************/
   /** Sorts the log file so that errors come before warnings come before
    *  information messages.

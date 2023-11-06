@@ -66,6 +66,24 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
   }
 
 
+  /****************************************************************************/
+  /**
+  * Returns the evaluation details for a single scheme.
+  *
+  * @param schemeName Must be in canonical form.
+  * @return Result of evaluating against the given scheme.
+  */
+
+  fun evaluateSingleScheme (schemeName: String): Evaluation?
+  {
+    if (!BibleStructure.UsxUnderConstructionInstance().alreadyPopulated())
+      BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, wantWordCount = false)
+    val bookNumbersInRawUsx = BibleBookAndFileMapperRawUsx.getBookNumbersInOrder()
+    return evaluateScheme(schemeName, bookNumbersInRawUsx)
+  }
+
+
+
 
 
 
@@ -160,7 +178,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
 
   /****************************************************************************/
-  private fun evaluateScheme (scheme: String, bookNumbersInTextUnderConstruction: List<Int>)
+  private fun evaluateScheme (scheme: String, bookNumbersInTextUnderConstruction: List<Int>): Evaluation?
   {
     /**************************************************************************/
     //Dbg.dCont(scheme, "nrsva")
@@ -179,14 +197,14 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
     if (textUnderConstructionHasDc && !otherHasDc)
     {
       //m_Evaluations.add(Evaluation(scheme,999_999, 0, 0, "rejected because it lacks DC"))
-      return
+      return null
     }
 
 
 
     /**************************************************************************/
     if (!textUnderConstructionHasDc && otherHasDc)
-      return
+      return null
 
 
 
@@ -221,8 +239,10 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
      /**************************************************************************/
      val score = booksMissingInOsis2modScheme * 1_000_000 + versesMissingInOsis2modScheme * 1000 + versesInExcessInOsis2modScheme
-     m_Evaluations.add(Evaluation(scheme, score, booksMissingInOsis2modScheme, versesMissingInOsis2modScheme, booksInExcessInOsis2modScheme, versesInExcessInOsis2modScheme, null))
- }
+     val res = Evaluation(scheme, score, booksMissingInOsis2modScheme, versesMissingInOsis2modScheme, booksInExcessInOsis2modScheme, versesInExcessInOsis2modScheme, null)
+     m_Evaluations.add(res)
+     return res
+  }
 
 
   /****************************************************************************/
@@ -294,12 +314,12 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
 
   /****************************************************************************/
-  private data class Evaluation (val scheme: String,
-                                 val score: Int,
-                                 val booksMissingInOsis2modScheme: Int,
-                                 val versesMissingInOsis2modScheme: Int,
-                                 val booksInExcessInOsis2modScheme: Int,
-                                 val versesInExcessInOsis2modScheme: Int, val text: String?)
+  data class Evaluation (val scheme: String,
+                         val score: Int,
+                         val booksMissingInOsis2modScheme: Int,
+                         val versesMissingInOsis2modScheme: Int,
+                         val booksInExcessInOsis2modScheme: Int,
+                         val versesInExcessInOsis2modScheme: Int, val text: String?)
   {
     override fun toString (): String
     {

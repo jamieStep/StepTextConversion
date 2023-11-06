@@ -3,7 +3,6 @@ package org.stepbible.textconverter.support.configdata
 
 
 import org.stepbible.textconverter.ReversificationData
-import org.stepbible.textconverter.XXXOsis2ModInterface
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
@@ -16,7 +15,6 @@ import org.stepbible.textconverter.support.iso.Unicode
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.*
-import java.net.URL
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -445,59 +443,9 @@ object ConfigData
         val lines = getConfigLines(configFilePath, callingFilePath, okIfNotExists)
         for (x in lines)
         {
-            var line = x.trim()
-            val lineLowerCase = line.lowercase().trim()
-
-            line = line.replace("@home", System.getProperty("user.home"))
-
-            if (lineLowerCase.startsWith("#vernacularbookdetails"))
-            {
-                processVernacularBibleDetails(line)
-                continue
-            }
-
-
-            if (line.matches(Regex("(?i)stepUsxToOsisTagTranslation.*")))
-            {
-                saveUsxToOsisTagTranslation(line)
-                continue
-            }
-
-            if (line.matches(Regex("(?i)stepExternalDataSource.*")))
-            {
-              ConfigDataExternalFileInterface.recordDataSourceMapping(line, configFilePath)
-              continue
-            }
-
-
-            if (lineLowerCase.startsWith("\$include"))
-            if (lineLowerCase.startsWith("\$include"))
-            {
-                var newFilePath = line.replace("${'$'}includeIfExists", "")
-                newFilePath = newFilePath.replace("${'$'}include", "").trim()
-                newFilePath = expandReferences(newFilePath, false)!!
-                load(newFilePath, configFilePath, lineLowerCase.contains("exist"))
-                continue
-            }
-
-
-
-            /**************************************************************************/
-            if (line.matches(Regex("(?i)copyAsIs.*")))
-            {
-              m_CopyAsIsLines.add(line.substring(line.indexOf("=") + 1))
-              continue
-            }
-
-
-
-            /**************************************************************************/
-            if (line.contains("=")) // I think this should account for all remaining lines.
-            {
-              line = line.replace("(?i)\\.totextdirection\\s*\\(\\s*\\)".toRegex(), ".#toTextDirection")
-              line = line.replace("(?i)\\.todate\\s*\\(\\s*\\)".toRegex(), ".#toDate")
-              loadParameterSetting(line)
-            }
+          val line = x.trim().replace("@home", System.getProperty("user.home"))
+          if (processConfigLine(line, configFilePath, callingFilePath, )) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
+          throw StepException("Couldn't process config line: $line")
         } // for
 
 
@@ -510,6 +458,34 @@ object ConfigData
 
         if (handlingEnglishTranslationsFile)
           m_ProcessingEnglishMessageDefinitions = false
+    }
+
+
+    /****************************************************************************/
+    /**
+    * I make provision for parameters to be stored in an environment variable
+    * named StepTextConverterParameters.  The format is:
+    *
+    *   setting;setting;setting; ...
+    *
+    * where individual settings look as they would in a config file -- key=val.
+    * If you need a semicolon within a setting, escape it using \;.  If you need
+    * a backslash, escape it as \\.
+    *
+    * Clearly you're not going to want to store too many settings this way, but
+    * there may be things -- such as the location of osis2mod -- which is more
+    * easily handled like this, rather than storing it in config files.
+    */
+
+    fun loadFromEnvironmentVariable ()
+    {
+      var parmList = System.getenv("StepTextConverterParameters") ?: return
+      parmList = parmList.replace("\\\\", "\u0001").replace("\\;", "\u0002")
+      val settings = parmList.split(";").map { it.trim().replace("\u0001", "\\").replace("\u0002", ";") }
+      settings.forEach {
+        if (!processConfigLine(it, null, null))
+          throw StepException("Couldn't parse setting from environment variable: $it")
+      }
     }
 
 
@@ -594,6 +570,82 @@ object ConfigData
           m_Mandatories[parts[0]] = parts[1].contains("MayBeEmpty", ignoreCase = true)
         else
           put(parts[0].trim(), parts[1].trim(), force)
+    }
+
+
+    /****************************************************************************/
+    /* This caters for that subset of configuration lines which can reasonably
+       turn up both in config files and in the converter's environment
+       variable. */
+
+    private fun processConfigLine (directive: String, configFilePath: String?, callingFilePath: String?): Boolean
+    {
+      /**************************************************************************/
+      val lineLowerCase = directive.lowercase()
+
+
+
+      /**************************************************************************/
+      if (lineLowerCase.startsWith("\$include"))
+      {
+        var newFilePath = directive.replace("${'$'}includeIfExists", "")
+        newFilePath = newFilePath.replace("${'$'}include", "").trim()
+        newFilePath = expandReferences(newFilePath, false)!!
+        load(newFilePath, configFilePath, lineLowerCase.contains("exist"))
+        return true
+      }
+
+
+
+      /**************************************************************************/
+      if (lineLowerCase.startsWith("#vernacularbookdetails"))
+      {
+        processVernacularBibleDetails(directive)
+        return true
+      }
+
+
+
+      /**************************************************************************/
+      if (directive.matches(Regex("(?i)stepUsxToOsisTagTranslation.*")))
+      {
+        saveUsxToOsisTagTranslation(directive)
+        return true
+      }
+
+
+
+      /**************************************************************************/
+      if (directive.matches(Regex("(?i)stepExternalDataSource.*")))
+      {
+        ConfigDataExternalFileInterface.recordDataSourceMapping(directive, configFilePath!!)
+        return true
+      }
+
+
+
+      /**************************************************************************/
+      if (directive.matches(Regex("(?i)copyAsIs.*")))
+      {
+        m_CopyAsIsLines.add(directive.substring(directive.indexOf("=") + 1))
+        return true
+      }
+
+
+
+      /**************************************************************************/
+      if (directive.contains("=")) // I think this should account for all remaining lines.
+      {
+        var x = directive.replace("(?i)\\.totextdirection\\s*\\(\\s*\\)".toRegex(), ".#toTextDirection")
+        x = x.replace("(?i)\\.todate\\s*\\(\\s*\\)".toRegex(), ".#toDate")
+        loadParameterSetting(x)
+        return true
+      }
+
+
+
+      /**************************************************************************/
+      return false // In other words, we haven't managed to process it.
     }
 
 
@@ -878,7 +930,7 @@ object ConfigData
 
       try
       {
-        //Dbg.dCont(theLine ?: "", ".#")
+        //Dbg.dCont(theLine ?: "", "revision")
         return expandReferencesTopLevel(theLine, nullsOk, errorStack)
       }
       catch (_: StepException)
@@ -1431,76 +1483,6 @@ object ConfigData
     /****************************************************************************/
 
     /****************************************************************************/
-    /**
-    * This is fairly revolting.  OSIS requires, in the header, a 'scope' tag
-    * giving details of the portions of the Bible covered by the text, in OSIS
-    * osisRef format.  Note that in theory, I think we're supposed to be able to
-    * get down to the level of individual verses, but I make no attempt to do
-    * that here.
-    *
-    * @return Data for use in scope tag.
-    */
-
-    fun UNUSED_makeOsisScope (): String
-    {
-        /**************************************************************************/
-        /* This isn't ideal -- getBookList was set up for other purposes, and
-           I'd prefer to have all the output in one variable as book numbers, rather
-           than abbreviations.  However, getBookList is what it is. */
-
-        val otBooks: MutableSet<String> = HashSet()
-        val ntBooks: MutableSet<String> = HashSet()
-        val dcBooks: MutableSet<String> = HashSet()
-        val bookNos: MutableSet<Int> = HashSet ()
-        getBookList(otBooks, ntBooks, dcBooks)
-        otBooks.stream().forEach { bookNos.add(BibleBookNamesUsx.nameToNumber(it)) }
-        ntBooks.stream().forEach { bookNos.add(BibleBookNamesUsx.nameToNumber(it)) }
-        dcBooks.stream().forEach { bookNos.add(BibleBookNamesUsx.nameToNumber(it)) }
-
-        var low = BibleAnatomy.getBookNumberForStartOfOt()
-        var high = BibleAnatomy.getBookNumberForEndOfOt()
-        val availableOtBooks = makeOsisScopeChunk(bookNos, low, high)
-
-        low = BibleAnatomy.getBookNumberForStartOfNt()
-        high = BibleAnatomy.getBookNumberForEndOfNt()
-        val availableNtBooks = makeOsisScopeChunk (bookNos, low, high)
-
-        low = BibleAnatomy.getBookNumberForStartOfDc()
-        high = BibleAnatomy.getBookNumberForEndOfDc()
-        val availableDcBooks = makeOsisScopeChunk (bookNos, low, high)
-
-        var res = "$availableOtBooks $availableNtBooks $availableDcBooks"
-        res = res.trim().replace(Regex("\\s+"), " ")
-        return res
-    }
-
-
-    /****************************************************************************/
-    private fun makeOsisScopeChunk (bookNos: Set<Int>, low: Int, high: Int): String
-    {
-        var res = ""
-        var ixEnd: Int
-        var ixStart = low
-
-        while (true)
-        {
-            while (ixStart <= high && !bookNos.contains(ixStart)) ++ixStart
-            if (ixStart > high) break
-            ixEnd = ixStart
-            while (ixEnd <= high && bookNos.contains(ixEnd)) ++ixEnd
-            --ixEnd
-            res += " " + BibleBookNamesUsx.numberToAbbreviatedName(ixStart)
-            if (ixStart != ixEnd)
-                res += "-" + BibleBookNamesUsx.numberToAbbreviatedName(ixStart)
-            ixStart = ixEnd + 1
-        }
-
-        res = res.trim().replace(Regex("\\s+"), " ")
-        return res
-    }
-
-
-    /****************************************************************************/
     /** This gets rather complicated.  Originally I had hoped to be able to define
     *  this in the same was as all the other config information -- ie in a config
     *  file -- but there are just too many conditional inclusions etc for this
@@ -1670,10 +1652,10 @@ object ConfigData
         /************************************************************************/
         val haveNtPortion = ntPortion.isNotEmpty()
         val haveApocPortion = apocPortion.isNotEmpty()
-        var res = otPortion + if (haveNtPortion || haveApocPortion) " + " else ""
+        var res = otPortion + if (otPortion.isNotEmpty() && (haveNtPortion || haveApocPortion)) " + " else ""
         res += ntPortion + if (haveApocPortion) " + " else ""
         res += apocPortion
-        
+
         if (res.startsWith("+ ")) res = res.substring(2)
 
         return if (res.isEmpty()) "" else "$res "
@@ -1785,10 +1767,10 @@ object ConfigData
 
     /****************************************************************************/
     /* The spec says that the module date should be included only if we make
-    changes to the text, for example pursuant to reversification.  However,
-    given the potential need to restructure the text so that markup does not
-    run across verse boundaries (to keep osis2mod happy), we almost always
-    _will_ be making changes, so I always give the date.*/
+       changes to the text, for example pursuant to reversification.  However,
+       given the potential need to restructure the text so that markup does not
+       run across verse boundaries (to keep osis2mod happy), we almost always
+       _will_ be making changes, so I always give the date.*/
 
     private fun makeStepDescription_getModuleMonthYear (): String
     {
@@ -1929,7 +1911,8 @@ object ConfigData
 
   /****************************************************************************/
   /* The various calc_ modules have to be public in order to be able to call
-     them as required. */
+     them as required.  Ignore the fact that IDEA says they are not used --
+     they are accessed using reflection. */
 
   /****************************************************************************/
   fun parseRootFolderName (key: String): String
@@ -2009,34 +1992,39 @@ object ConfigData
 
 
   /****************************************************************************/
-  /* Typically something like DeuHFA, comprising the three-character ISO
-     language code (first letter upper case, rest lower case), followed by
-     the abbreviated name of the text.  The abbreviated name should be as
-     supplied by the translators (and should be the vernacular abbreviation in
-     preference to the English abbreviation where the vernacular abbreviation
-     uses suitable Roman characters).  Hopefully it will be all upper case,
-     but we need to go with whatever the translators give us.
-
-     Note the use of 'hbo' as a language code for ancient Hebrew.  I am not
-     sure of the extent to which this has official status, having been unable
-     to find it in any online lists.  However, apparently STEP is set up to
-     accept this.  The alternative -- heb -- covers both ancient and modern
-     Hebrew, which would mean that using just this abbreviation we could not
-     distinguish between an ancient text and a modern Hebrew translation.
-
-     We use an additional suffix to avoid potential name clashes.  See the
-     head-of-method comments for getDisambiguationSuffixForModuleNames for
-     more information. */
+  /* The extended name.  This comprises the basic name as returned by
+     calc_stepModuleNameWithoutDisambiguation along with one or possibly two
+     suffixes.  All modules get a moduleNameAudienceRelatedSuffix, which says
+     whether the module can be used only within STEP, or may be made publicly
+     available.  And on non-release runs, we also have a suffix which includes
+     a time-stamp (stepModuleNameTestRelatedSuffix), so that it is possible to
+     keep multiple copies of the module lying around without them overwriting
+     one another. */
 
   fun calc_stepModuleName (): String
   {
-    return calc_stepModuleNameWithoutDisambiguation() + getDisambiguationSuffixForModuleNames()
+    return calc_stepModuleNameWithoutDisambiguation() + get("stepModuleNameTestRelatedSuffix") + get("moduleNameAudienceRelatedSuffix")
   }
 
 
   /****************************************************************************/
-  /* Returns the basic module name devoid of disambiguation suffix.  See
-     calc_stepModuleName for more information. */
+  /* Returns the basic module name devoid of disambiguation suffix.
+
+     Typically something like DeuHFA, comprising the three-character ISO
+     language code (first letter upper case, rest lower case), followed by the
+     abbreviated name of the text.  The abbreviated name should be as supplied
+     by the translators (and should be the vernacular abbreviation in preference
+     to the English abbreviation where the vernacular abbreviation uses suitable
+     Roman characters).  Hopefully it will be all upper case, but we need to go
+     with whatever the translators give us.
+
+     Note the use of 'hbo' as a language code for ancient Hebrew.  I am not sure
+     of the extent to which this has official status, having been unable to find
+     it in any online lists.  However, apparently STEP is set up to accept this.
+     The alternative -- heb -- covers both ancient and modern Hebrew, which
+     would mean that using just this abbreviation we could not distinguish
+     between an ancient text and a modern Hebrew translation.
+ */
 
   fun calc_stepModuleNameWithoutDisambiguation (): String
   {
@@ -2089,7 +2077,7 @@ object ConfigData
     var schemeName = getInternal("stepVersificationScheme", false)!!.lowercase()
     if (schemeName.startsWith("nrsv") || schemeName.startsWith("kjv"))
       schemeName = schemeName.replace("a", "") + if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.targetsDc()) "a" else ""
-    return if (XXXOsis2ModInterface.usingStepOsis2Mod()) schemeName else canonicaliseSchemeName(schemeName)
+    return if ("step" == get("stepOsis2modType")) schemeName else canonicaliseSchemeName(schemeName)
   }
 
 
@@ -2140,214 +2128,4 @@ object ConfigData
   init {
     initCalcMethods()
   }
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                 Public                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  /* Used to help disambiguate module names ... etc.
-
-     The basic module name consists of a language code followed by the
-     abbreviated name of the text -- eg deuHFA.  (With English and ancient
-     languages, the language code is omitted.)
-
-     We are not the only people to use names of this form.  This raises the
-     possibility of clashes, both in terms of us bringing into STEP from the
-     outside world something which has the same name as a module we already
-     support, and also in terms of us making material available to the wider
-     community.
-
-     To get round this I have been asked to append '_sb' (for STEPBible) in
-     certain cases.  I really have severe doubts about the efficacy of this
-     as currently conceived, so to save repeatedly revisiting potential issues,
-     I give details both of what I have been asked to do and what I see as the
-     problems with it.
-
-     The '_sb' is actually intended to do two different things -- to avoid
-     name clashes, as already explained, and to highlight texts which may
-     possibly cause problems to third parties who pick them up.
-
-     sb it to be applied under the following circumstances (and _only_ under
-     these):
-
-     - If we are generating a module using our own proprietary version of
-       osis2mod.
-
-     - If the module name would otherwise clash with the name of a module
-       available from the Crosswire repository.
-
-
-     I foresee quite a number of issues here.  The following are in no
-     particular order.
-
-
-
-     Flagging modules which may cause problems to third parties
-     ==========================================================
-
-     One of the reasons for adding sb module names is to flag the fact that the
-     module may cause problems if third parties pick it up.
-
-     We are proposing to do this only on modules generated using our proprietary
-     osis2mod.  But these definitely _won't_ work for third parties expecting a
-     conformant Sword module, so we can't make them available anyway -- in which
-     case adding sb doesn't really buy us anything.
-
-     This also overlooks the fact that with the exception of modules built
-     direct from OSIS supplied by third parties, we are _always_ non-conformant
-     because we long ago took the decision to prioritise 'working for STEP' over
-     being conformant.  This means that pretty much _any_ module may not work
-     for third parties, on which grounds _all_ modules should be marked sb.  Or
-     alternatively, there is no point in marking any modules at all, because
-     we can't make modules available anyway.  (Or at the very least, it's a
-     case of caveat emptor.)
-
-
-
-     Disambiguating module names
-     ===========================
-
-     As explained above, the decision to add sb for disambiguation purposes is
-     based upon a static analysis of the content of the Crosswire repository
-     (something I have automated below, although it involves accessing web
-     pages and is consequently very slow).
-
-     One problem with this is that the analysis is indeed limited to Crosswire.
-     There are other sources of modules available, but we do not consider
-     these (and indeed, given that we almost certainly won't be aware of all
-     of them, probably never could).
-
-     This might buy us some level of immunity to name clashes if we take
-     modules from Crosswire, but it won't do so if we ever want to take them
-     from elsewhere.  And it definitely doesn't protect the world at large
-     from name clashes involving material which we put 'out there', because
-     we have no idea whether we are introducing name clashes or not.
-
-     There is a further problem, in that we add sb only if there is a name
-     clash with Crosswire _today_.  If there is no clash, we don't add sb.
-     But that then leaves us with a potential future name clash, because
-     there is nothing to prevent Crosswire from releasing a module tomorrow
-     with the same name as ours.
-
-     It has been suggested that this is not a significant problem, because
-     we can always rename modules in future if we discover a clash --
-     something which is seen as being very unlikely anyway.  I'm not sure
-     this is really practical -- we're unlikely to become aware of name
-     clashes unless we constantly go looking for them, and if we find them,
-     changing the name is likely to be sufficient of a pain that we're not
-     going to do it.  In any case, this really doesn't seem to make sense
-     to me: we're doing something which we accept won't necessarily be
-     effective at guarding against a situation which we are assuming is
-     vanishingly unlikely to happen anyway.
-
-     (And if we _don't_ go looking for name clashes, that kinda suggests
-     they don't matter anyway.)
-
-     To put it another way, consider our existing stock of modules.  If
-     any of those clash with Crosswire modules, then it rather undermines
-     our assumption that clashes are unlikely to happen -- which implies
-     that we may, indeed, need a disambiguation mechanism.  But this then
-     underlines the fact that the current proposal really won't work,
-     because there would have been a time prior to the existence of the
-     Crosswire module, and if we had generated ours then, we would indeed
-     subsequently have had a name clash, against which the proposed
-     mechanism would not have guarded us.
-
-     The obvious solution (or so it seems to me) would simply be to add
-     sb to _all_ the modules we generate.  However that has implications
-     for the STEP server, because we don't want people to be aware of the
-     _sb suffix, and therefore it is necessary to set up aliasing.  In view
-     of this, it has been ruled out as a possibility.
-
-     Except ... so far as I know, the intention is to put _all_ future modules
-     through our own bespoke osis2mod, and as explained above, that will, in
-     fact give us sb on everything.
-  */
-
-  fun getDisambiguationSuffixForModuleNames (): String
-  {
-    /**************************************************************************/
-    /* Avoid repeatedly calculating this. */
-
-    if (null != m_DisambiguationSuffixForModuleNames)
-      return m_DisambiguationSuffixForModuleNames!!
-
-
-
-    /**************************************************************************/
-    val suffix = "_sb"
-
-
-
-    /**************************************************************************/
-    /* If we're running with Sami's version and not dealing with KJV or NRSV,
-       then we definitely need the disambiguation. */
-
-    val osis2modType = ConfigData["stepForcedOsis2ModVariant"]!!.lowercase()
-    val versificationScheme = ConfigData["stepVersificationScheme"]!!
-    if (false && "step" == osis2modType && !versificationScheme.contains("kjv", ignoreCase = true) && !versificationScheme.contains("nrsv", ignoreCase = true))
-    {
-      m_DisambiguationSuffixForModuleNames = "_sb"
-      return m_DisambiguationSuffixForModuleNames!!
-    }
-
-
-
-//    $$$ Not sure we need this.
-//    /**************************************************************************/
-//    /* Ditto if we've done any extended tagging. */
-//
-//    if (ConfigData.getAsBoolean("stepHasAppliedExtendedTagging"))
-//    {
-//      m_DisambiguationSuffixForModuleNames = suffix
-//      return m_DisambiguationSuffixForModuleNames!!
-//    }
-
-
-
-    /**************************************************************************/
-    /* Check to see if there are any clashes against the Crosswire module
-       list. */
-
-    Dbg.reportProgress("Obtaining details of Crosswire modules so as to avoid name clashes")
-    val crosswireModules = TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER)
-    val dataLocations = listOf(ConfigData["stepExternalDataPath_CrosswireModuleListBibles"]!!,
-                               ConfigData["stepExternalDataPath_CrosswireModuleListCommentaries"]!!,
-                               ConfigData["stepExternalDataPath_CrosswireModuleListDevotionals"]!!)
-    dataLocations.forEach { url ->
-      val lines = URL(url).readText().lines()
-      var i = -1
-      while (++i < lines.size)
-      {
-        var line = lines[i]
-        var ix = line.indexOf("jsp?modName")
-        if (ix < 0) continue
-
-        var name = line.substring(ix + "jsp?modName".length + 1)
-        ix = name.indexOf("\"")
-        name = name.substring(0, ix)
-
-        i += 2
-        val description = lines[i].trim().replace("<td>", "").replace("</td>", "")
-
-        crosswireModules[name] = description
-      } // for i
-    } // For each dataLocation.
-
-
-
-    /**************************************************************************/
-    //crosswireModules.keys.sorted().forEach { it -> Dbg.d(it + "\t" + crosswireModules[it] ) }
-    val moduleNameWithoutSuffix = ConfigData["stepModuleNameWithoutDisambiguation"]!!
-    m_DisambiguationSuffixForModuleNames = if (moduleNameWithoutSuffix in crosswireModules) suffix else ""
-    return m_DisambiguationSuffixForModuleNames!!
-  }
-
-  private var m_DisambiguationSuffixForModuleNames: String? = null
 }

@@ -2,7 +2,6 @@ package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
@@ -12,6 +11,7 @@ import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.usx.Usx
+import org.stepbible.textconverter.C_CreateEmptyChapters
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.util.*
@@ -254,7 +254,7 @@ object EmptyVerseHandler
 
 
     /**************************************************************************/
-    if (diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.isNotEmpty() && XXXOsis2ModInterface.C_CreateEmptyChapters)
+    if (diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.isNotEmpty() && C_CreateEmptyChapters)
     {
       res = true
       val map = getSidMap(document, "_X_chapter")

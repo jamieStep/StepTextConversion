@@ -1,7 +1,6 @@
 /**********************************************************************************************************************/
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.XXXOsis2ModInterface.setOsis2ModVariant
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
@@ -33,7 +32,9 @@ class TextConverterController
       initialiseCommandLineArgsAndConfigData(args)
       if (m_EvaluateSchemesOnly) exitProcess(0)
       if (!doPre()) return false
-      return doProcess()
+      val status = doProcess()
+      if (status) VersionAndHistoryHandler.writeRevisedHistoryFile()
+      return status
     }
 
 
@@ -45,15 +46,14 @@ class TextConverterController
 
     private fun collectPermittedCommandLineParameters ()
     {
-        CommandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
-        CommandLineProcessor.addCommandLineOption("permitComplexChanges", 1, "Permit eg reversification Moves (may be ruled out by licensing conditions).", listOf("Yes", "No", "AsLicence"), "AsLicence", false)
-        CommandLineProcessor.addCommandLineOption("help", 0, "Get help.", null, null, false)
+        //CommandLineProcessor.addCommandLineOption("permitComplexChanges", 1, "Permit eg reversification Moves (may be ruled out by licensing conditions).", listOf("Yes", "No", "AsLicence"), "AsLicence", false)
 
-        XXXOsis2ModInterface.getCommandLineOptions(CommandLineProcessor)
-        TestController.getCommandLineOptions(CommandLineProcessor)
+        CommandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
+        CommandLineProcessor.addCommandLineOption("help", 0, "Get help.", null, null, false)
+        GeneralEnvironmentHandler.getCommandLineOptions(CommandLineProcessor)
+        TextConverterProcessorEvaluateVersificationSchemes.getCommandLineOptions(CommandLineProcessor)
 
         m_Processors.forEach { it.getCommandLineOptions(CommandLineProcessor) }
-        TextConverterProcessorEvaluateVersificationSchemes.getCommandLineOptions(CommandLineProcessor)
     }
 
 
@@ -62,7 +62,7 @@ class TextConverterController
 
     private fun doPre(): Boolean
     {
-        setOsis2ModVariant()
+        VersionAndHistoryHandler.createHistoryFileIfNecessaryAndWorkOutVersionDetails()
         m_Processors.filter { it.runMe() }.forEach { if (!it.pre()) return false }
         return true
     }
@@ -138,10 +138,15 @@ class TextConverterController
 
 
         /**************************************************************************/
+        ConfigData.loadFromEnvironmentVariable()
+
+
+
+        /**************************************************************************/
         /* Use this to enable us to read the configuration files, and then also
            copy the command line parameters to the configuration data store.
 
-           rootFolder is taken as-is if it specifies and absolute path.  Otherwise,
+           rootFolder is taken as-is if it specifies an absolute path.  Otherwise,
            we check to see if it makes sense if taken relative to the current
            working directory.  And if that fails, we assume there is an
            environment variable StepTextConverterDataRoot, and it is taken relative
@@ -157,23 +162,13 @@ class TextConverterController
             if (File(x.toString()).exists())
               x.toString()
             else
-              Paths.get(System.getenv("StepTextConverterDataRoot"), rootFolderPathFromCommandLine).toString()
+              Paths.get(ConfigData["stepTextConverterDataRoot"]!!, rootFolderPathFromCommandLine).toString()
           }
 
         StandardFileLocations.initialise(rootFolderPath)
 
         ConfigData.load(StandardFileLocations.getConfigFileName())
         CommandLineProcessor.copyCommandLineOptionsToConfigData("TextConverter")
-
-
-
-        /**************************************************************************/
-        /* Depending upon the parameter supplied, reversification processing may be
-           driven either by the user's input on the command line, or by the
-           converter's own assessment of the situation.  We will assume the former,
-           but the processing invoked by the next paragraph may change that. */
-
-        ConfigData.put("stepReversificationBasis", "Driven by command line", true)
 
 
 
@@ -198,6 +193,7 @@ class TextConverterController
 
 
         /**************************************************************************/
+        GeneralEnvironmentHandler.onStartup()
         StepFileUtils.deleteFile(StandardFileLocations.getConverterLogFilePath())
         Logger.setLogFile(StandardFileLocations.getConverterLogFilePath())
         Logger.announceAll(true)
@@ -216,6 +212,7 @@ class TextConverterController
 
     private val C_ProcessorsForFullConversionRun = listOf(
         DbgController,
+        TestController.instance(),
         TextConverterProcessorVLToEnhancedUsx,      // USX only.
         TextConverterProcessorUsxToEnhancedUsx1,    // USX only.
         TextConverterProcessorReversification,      // USX only.
@@ -225,7 +222,7 @@ class TextConverterController
         TextConverterProcessorEnhancedUsxToOsis,    // USX only.
         TextConverterTaggingHandler,
         TextConverterProcessorOsisToSword,
-        RepositoryPackageHandler,
+        RepositoryPackageHandler
     )
 
 

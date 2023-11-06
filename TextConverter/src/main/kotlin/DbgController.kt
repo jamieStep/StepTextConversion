@@ -37,11 +37,11 @@ object DbgController: TextConverterProcessorBase()
   {
     fun addDisplayOption (name: String, description: String)
     {
-      val commonText = ": 'No' or anything containing 'screen' (output to screen), 'file' (output to debugLog.txt), or both.  Include 'deferred' if you want screen output at the end of the run, rather than as it occurs.  Default: 'no'.  Not case-sensitive."
+      val commonText = ": 'No' or anything containing 'screen' (output to screen), 'file' (output to debugLog.txt), or both.  Include 'deferred' if you want screen output at the end of the run, rather than as it occurs.  Not case-sensitive."
       commandLineProcessor.addCommandLineOption(name, 1, description + commonText, null, "no", false)
     }
 
-    commandLineProcessor.addCommandLineOption("dbgAddDebugAttributesToNodes", 1, "Root folder of Bible text structure.", null, "No", false)
+    commandLineProcessor.addCommandLineOption("dbgAddDebugAttributesToNodes", 1, "Add debug attributes to nodes.", null, "No", false)
     addDisplayOption("dbgDisplayReversificationRows", "Display selected reversification rows")
   }
 }

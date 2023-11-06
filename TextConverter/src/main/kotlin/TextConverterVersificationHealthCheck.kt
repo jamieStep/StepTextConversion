@@ -3,7 +3,6 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
@@ -81,7 +80,7 @@ object TextConverterVersificationHealthCheck
   {
     Logger.setPrefix("Structural health check")
 
-    if (XXXOsis2ModInterface.usingCrosswireOsis2Mod())
+    if ("step" != ConfigData["stepOsis2modType"]!!)
       checkForMissingAndExcessVerses(document) // We can do this only with the Crosswire osis2mod, because with the STEP version we don't know what the expectations are.
 
     val chapters = Dom.findNodesByName(document, "_X_chapter").filter{ Dom.hasAttribute(it,"sid") }
@@ -246,17 +245,17 @@ object TextConverterVersificationHealthCheck
     var missings: MutableList<Int> = mutableListOf()
     val chapterSid = chapter["sid"]!!
 
-    if (XXXOsis2ModInterface.usingCrosswireOsis2Mod())
-    {
-      for (i in 1 .. BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationSchemeCanonical"]!!, true!!).getLastVerseNo(chapterSid))
-        if (null == verseCollection[i])
-          missings.add(i)
-    }
-    else
+    if ("step" == ConfigData["stepOsis2modType"]!!)
     {
       val chapterRefKey = Ref.rdUsx(chapterSid).toRefKey_bc()
       val chapter = Ref.rdUsx(chapterSid).getC()
       missings = BibleStructure.UsxUnderConstructionInstance().getMissingEmbeddedVersesForChapter(Ref.getB(chapterRefKey), Ref.getC(chapterRefKey)) .map { Ref.getV(it) } as MutableList<Int>
+    }
+    else
+    {
+      for (i in 1 .. BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationSchemeCanonical"]!!, true!!).getLastVerseNo(chapterSid))
+        if (null == verseCollection[i])
+          missings.add(i)
     }
 
 
@@ -287,11 +286,11 @@ object TextConverterVersificationHealthCheck
     val missingsAsRefKeys = missings.map { Ref.setV(chapterSidAsRefKey, it) }.toSet()
     val reportableMissingsAsRefKeys = missingsAsRefKeys - commonlyMissingVersesForThisChapterAsRefKeys
     val nonReportableMissingsAsRefKeys = commonlyMissingVersesForThisChapterAsRefKeys - reportableMissingsAsRefKeys
-    val missingsAsString = if (missingsAsRefKeys.isEmpty()) "" else missingsAsRefKeys.sorted().joinToString(", "){ Ref.getV(it).toString() }
+    val missingsAsString = if (missingsAsRefKeys.isEmpty()) "" else missingsAsRefKeys.sorted().joinToString(", "){ Ref.rd(it).toString("bcv") }
     val nonReportableMissingsAsString = if (nonReportableMissingsAsRefKeys.isEmpty()) "" else ("  (The following verse(s) are absent in many Bibles, and therefore are not of concern: " + nonReportableMissingsAsRefKeys.sorted().joinToString(", "){ Ref.getV(it).toString() } + ".)")
     if (missingsAsRefKeys.isNotEmpty())
     {
-      val missingMsg = "Missing verse(s): $missingsAsString$nonReportableMissingsAsString"
+      val missingMsg = "Text lacks verse(s) which target versification scheme expects: $missingsAsString$nonReportableMissingsAsString"
       m_WarningReporter(chapterSid, missingMsg)
     }
   }
@@ -315,8 +314,8 @@ object TextConverterVersificationHealthCheck
     if (diffs.chaptersInTextUnderConstructionButNotInTargetScheme.isNotEmpty())
       m_ExcessElementReporter(null, "Text contains chapter(s) which target versification scheme does not expect: ${diffs.chaptersInTextUnderConstructionButNotInTargetScheme.joinToString(", ") { Ref.rd(it).toString() } }.")
 
-    if (diffs.versesInTargetSchemeButNotInTextUnderConstruction.isNotEmpty())
-      m_MissingElementReporter(null, "Text lacks verse(s) which target versification scheme expects: ${diffs.versesInTargetSchemeButNotInTextUnderConstruction.joinToString(", ") { Ref.rd(it).toString() } }.")
+    //if (diffs.versesInTargetSchemeButNotInTextUnderConstruction.isNotEmpty()) // Reported later as a result of later checks.
+    //  m_MissingElementReporter(null, "Text lacks verse(s) which target versification scheme expects: ${diffs.versesInTargetSchemeButNotInTextUnderConstruction.joinToString(", ") { Ref.rd(it).toString() } }.")
 
     if (diffs.versesInTextUnderConstructionButNotInTargetScheme.isNotEmpty())
       m_ExcessElementReporter(null, "Text contains verse(s) which target versification scheme does not expect: ${diffs.versesInTextUnderConstructionButNotInTargetScheme.joinToString(", ") { Ref.rd(it).toString() } }.")

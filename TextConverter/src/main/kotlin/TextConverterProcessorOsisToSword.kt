@@ -87,6 +87,8 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
 
 
+    Logger.setLogFile(StandardFileLocations.getConverterLogFilePath())
+
     /**************************************************************************/
     /* Since there are occasions when we need to be able to run the relevant
        osis2mod command manually from the command line, and since it is always
@@ -109,29 +111,23 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
        runCommand.
     */
 
-    Logger.setLogFile(StandardFileLocations.getConverterLogFilePath())
-
-    val programName =
-      if (XXXOsis2ModInterface.usingCrosswireOsis2Mod())
-        "\"C:\\Program Files\\Jamie\\STEP\\SwordUtilities\\osis2mod.exe\""
-      else
-        "\"C:\\Program Files\\Jamie\\STEP\\SamiOsis2mod\\samisOsis2Mod.exe\""
-
+    val usingStepOsis2Mod = "step" == ConfigData["stepOsis2modType"]!!
+    val programName = if (usingStepOsis2Mod) ConfigData["stepStepOsis2ModFolderPath"]!! else ConfigData["stepCrosswireOsis2ModFolderPath"]!!
     val swordExternalConversionCommand: MutableList<String> = ArrayList()
     swordExternalConversionCommand.add(programName)
     swordExternalConversionCommand.add("\"" + StandardFileLocations.getSwordTextFolderPath(m_ModuleName) + "\"")
     //$$$swordExternalConversionCommand.add("\"" + StandardFileLocations.getSwordTextFolderPath("Step") + "\"")
     swordExternalConversionCommand.add("\"" + StandardFileLocations.getOsisFilePath() + "\"")
 
-    if (XXXOsis2ModInterface.usingCrosswireOsis2Mod())
-    {
-      swordExternalConversionCommand.add("-v")
-      swordExternalConversionCommand.add(ConfigData["stepVersificationSchemeCanonical"]!!)
-    }
-    else
+    if (usingStepOsis2Mod)
     {
       swordExternalConversionCommand.add("-V")
       swordExternalConversionCommand.add("\"" + StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath() + "\"")
+    }
+    else
+    {
+      swordExternalConversionCommand.add("-v")
+      swordExternalConversionCommand.add(ConfigData["stepVersificationSchemeCanonical"]!!)
     }
 
     swordExternalConversionCommand.add("-z")
@@ -207,6 +203,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
     var reversificationDetails: String? = null
     if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Morphology"))
     if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Strongs"))
+    if (ConfigData.getAsBoolean("stepAddedValueExtendedTagging", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_ExtendedTagging"))
     if (ConfigData.getAsBoolean("stepAddedValueReversification", "No"))
     {
       texts.add(Translations.stringFormatWithLookup("V_AddedValue_Reversification"))
@@ -460,6 +457,12 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
       if ("\$includeCopyAsIsLines".equals(line, ignoreCase = true))
       {
         ConfigData.getCopyAsIsLines().forEach { writer.write(it); writer.write("\n")}
+        continue
+      }
+
+      if ("\$includeChangeHistory".equals(line, ignoreCase = true))
+      {
+        File(StandardFileLocations.getHistoryFilePath()).readLines().filter { it.isNotEmpty() && !it.startsWith("#") } .forEach {writer.write(it); writer.write("\n") }
         continue
       }
 

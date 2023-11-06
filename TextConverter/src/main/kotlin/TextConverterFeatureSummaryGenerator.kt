@@ -159,6 +159,19 @@ object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase()
   }
 
 
+  /****************************************************************************/
+  /**
+  * Does what it says on the tin.
+  *
+  * value New setting.
+  */
+
+  fun setHaveAppliedExtendedTagging (value: Boolean)
+  {
+    m_TextFeatures.HaveAppliedExtendedTagging = value
+  }
+
+
 
 
 
@@ -328,6 +341,11 @@ object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase()
     /**************************************************************************/
     var ExcessVerses: MutableList<String>? = null // Verses in the text which the selected osis2mod scheme doesn't cater for.
     var MissingVerses: MutableList<String>? = null  // Verses which the selected osis2mod scheme expects and which I had to create at the end of processing to fill the blanks.
+
+
+
+    /**************************************************************************/
+    var HaveAppliedExtendedTagging = false
 
 
 

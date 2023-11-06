@@ -6,7 +6,6 @@ import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.getExtendedNodeName
@@ -14,6 +13,7 @@ import org.stepbible.textconverter.support.ref.*
 import org.stepbible.textconverter.support.shared.SharedData
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.support.usx.Usx
+import org.stepbible.textconverter.C_CollapseSubverses
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
@@ -453,7 +453,7 @@ object TextConverterProcessorReversification: TextConverterProcessorBase ()
   private fun doCrossReferenceMappings (document: Document)
   {
     val mappings = ReversificationData.getReferenceMappings() as MutableMap<RefKey, RefKey>
-    if (XXXOsis2ModInterface.C_CollapseSubverses) mappings.keys.forEach { if (Ref.hasS(mappings[it]!!)) mappings[it] = Ref.clearS(mappings[it]!!) }
+    if (C_CollapseSubverses) mappings.keys.forEach { if (Ref.hasS(mappings[it]!!)) mappings[it] = Ref.clearS(mappings[it]!!) }
     CrossReferenceProcessor.updateCrossReferences(document, mappings)
   }
 

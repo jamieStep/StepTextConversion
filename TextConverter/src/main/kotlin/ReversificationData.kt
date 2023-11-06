@@ -202,7 +202,7 @@ object ReversificationData
        can apply. */
 
     val stepAbout = ConfigData["stepAbout"]!!.lowercase()
-    val licenceDefinitelyBarsSignificantChanges = "®" in stepAbout || "©" in stepAbout || "copyright" in stepAbout || "trademark" in stepAbout
+    val licenceDefinitelyBarsSignificantChanges = "®" in stepAbout || "©" in stepAbout || "(c)" in stepAbout || "copyright" in stepAbout || "trademark" in stepAbout
     val stepPermitSignificantTextRestructuring = ConfigData["stepPermitsSignificantTextRestructuring"] ?: "no"
     when (stepPermitSignificantTextRestructuring.lowercase())
     {

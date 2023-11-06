@@ -10,41 +10,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9495aca-7970-4593-a7e0-92356b5adca5" name="Changes" comment="Misc changes after IDEA messed things up.">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/RepositoryPackageHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/CallablePreprocessor.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/GeneralEnvironmentHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/RunTimeConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/VersionAndHistoryHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/historyTemplate.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Support/converterUserGuide.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Support/converterUserGuide.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Support/intellijGotchas.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Support/intellijGotchas.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Test.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/CompileTimeConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/CompileTimeConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/CrossReferenceProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/CrossReferenceProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/DbgController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/DbgController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/EmptyVerseHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/EmptyVerseHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RepositoryPackageHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RepositoryPackageHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ReversificationData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ReversificationData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TestController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TestController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterEnhancedUsxValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterEnhancedUsxValidator.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterFeatureSummaryGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterFeatureSummaryGenerator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorBase.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEnhancedUsxToOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEnhancedUsxToOsis.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEvaluateVersificationSchemes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEvaluateVersificationSchemes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorOsisToSword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorOsisToSword.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorReversification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorReversification.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx1.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorVLToRawUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorVLToRawUsx.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterTaggingHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterTaggingHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterVersificationHealthCheck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterVersificationHealthCheck.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/XXXOsis2ModInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/XXXOsis2ModInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleAnatomy.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleAnatomy.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleBookAndFileMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleBookAndFileMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleBookAndFileMapperRawUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleBookAndFileMapperRawUsx.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/XXXOsis2ModInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Osis2ModInterface.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleStructure.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleStructure.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/configdata/ConfigData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/configdata/ConfigData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/configdata/StandardFileLocations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/configdata/StandardFileLocations.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/debug/Logger.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/debug/Logger.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/Dom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/Dom.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/MiscellaneousUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/MiscellaneousUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/StepFileUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/StepFileUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/StepStringUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/StepStringUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/Zip.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/Zip.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/ref/Ref.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/ref/Ref.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/ref/RefFormatHandlerReaderVernacular.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/ref/RefFormatHandlerReaderVernacular.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/usx/Usx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/usx/Usx.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/PerOwnerOrganisation/Biblica.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/PerOwnerOrganisation/Biblica.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TextTranslations/vernacularTextTranslations_eng.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TextTranslations/vernacularTextTranslations_eng.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/externalDataPaths.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/externalDataPaths.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/swordTemplateConfigFile.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/swordTemplateConfigFile.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/cmn-Hans.ldml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/styles.xml" beforeDir="false" />
@@ -298,7 +300,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -315,7 +317,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/TextConverter/src/main/resources/META-INF/MANIFEST.MF&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/TextConverter/src/main/kotlin&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.23793103&quot;,
@@ -324,19 +326,19 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\TextConverter\src\main" />
       <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\TextConverter\src\main\kotlin" />
+      <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\TextConverter\src\main\resources" />
+      <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\TextConverter\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\TextConverter\src\main" />
       <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\TextConverter\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.deu_XXX">
+  <component name="RunManager" selected="Kotlin.eng_LSB">
     <configuration name="Temp" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_eng_GW -evaluateSchemesOnly" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -387,13 +389,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="eng_LSB" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder Dbl\Lockman\Text_eng_LSB -runType EvalOnly" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Kotlin.Temp" />
+      <item itemvalue="Kotlin.eng_LSB" />
       <item itemvalue="Kotlin.amh_NASV" />
       <item itemvalue="Kotlin.deu_HFA" />
       <item itemvalue="Kotlin.deu_XXX" />
-      <item itemvalue="Kotlin.en_NIV" />
       <item itemvalue="Kotlin.en_GW" />
+      <item itemvalue="Kotlin.en_NIV" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -456,38 +468,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/TextConverterTaggingHandler.kt</url>
-          <line>131</line>
+          <line>133</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEvaluateVersificationSchemes.kt</url>
-          <line>222</line>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/support/debug/Logger.kt</url>
-          <line>100</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
-          <line>31</line>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
-          <line>37</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleStructure.kt</url>
-          <line>394</line>
-          <option name="timeStamp" value="123" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleStructure.kt</url>
-          <line>410</line>
+          <line>425</line>
           <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
+          <line>84</line>
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
+          <line>72</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/TextConverterEnhancedUsxValidator.kt</url>
+          <line>592</line>
+          <option name="timeStamp" value="175" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

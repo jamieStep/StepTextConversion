@@ -260,7 +260,7 @@ object Usx
       "para:iq",
       "para:is",
       "para:li",
-      "para:lim",
+      "para:lim", // Not sure whether this is a typo, or whether it was in an earlier version of USX.  Doesn't appear in the 4.7.0 documentation.  I presently treat it like li.
       "para:ms",
       "para:mt",
       "para:ph",

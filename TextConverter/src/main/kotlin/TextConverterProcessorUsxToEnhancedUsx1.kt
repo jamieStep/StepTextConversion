@@ -310,9 +310,14 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
 
 
     /******************************************************************************************************************/
+    /* runPreprocessor below runs the standalong JAR, .exe, etc which runs over raw USX files and creates modified
+       versions where necessary.  If stepCallablePreprocessorJar is defined, it must point to a JAR which is passed
+       DOMs one at a time and updates them in memory.  This is an alternative to the work done by runPreprocessor, and
+       takes precedence -- even if the standalone JAR, .exe or whatever exists, it is not run. */
+
     override fun process (): Boolean
     {
-      runPreprocessor()
+      if (null == ConfigData["stepCallablePreprocessorJar"]) runPreprocessor()
       BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, true) // Gets the chapter / verse structure -- how many chapters in each verse, etc.
       forceVersificationSchemeIfAppropriate()
       ReversificationData.process()                                              // Does what it says on the tin.  This gives the chance (which I may not take) to do 'difficult' restructuring only where reversification will require it.
@@ -428,6 +433,23 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
 
 
         /**********************************************************************/
+        /* The other potential form of preprocessing: A JAR file which supplies
+           a method to which we can pass a DOM. */
+
+        CallablePreprocessor.process(document)?.forEach {
+          val ix = it.indexOf(':')
+          val text = it.substring(ix + 2)
+          when (it.substring(0, ix))
+          {
+            "ERROR"       -> Logger.error(text)
+            "WARNING"     -> Logger.warning(text)
+            "INFORMATION" -> Logger.info(text)
+          }
+        }
+
+
+
+        /**********************************************************************/
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         //!!!!!!!!!!!!!!!! DO READ THE HEAD-OF-METHOD COMMENTS !!!!!!!!!!!!!!!!!
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -444,7 +466,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
         convertTagsToLevelOneWhereAppropriate()            // a) Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
         encapsulateLists()                                 // a) Sort out list structures.
         encapsulateHeadings()                              // a) For later processing it may be useful to encapsulate headers; or maybe it's just my aesthetic sense.
-        CrossReferenceProcessor.canonicaliseAndPatchUp(document)     // a) There are all sorts of awkward things about refs and associated tags which it would be nice to sort out.
+        CrossReferenceProcessor.canonicaliseAndPatchUp(document) // a) There are all sorts of awkward things about refs and associated tags which it would be nice to sort out.
 
         positionVerseEnds(); x()                           // b) Move sids and eids where possible to avoid cross-verse-boundary markup.
 
@@ -1051,7 +1073,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     private fun expandElision (sid: Node, eid: Node)
     {
       /****************************************************************************************************************/
-      if (!XXXOsis2ModInterface.C_ExpandElisions) return // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ This has downstream ramifications -- it looks as though quite a number of things may need changing, but I need to hear from Sami what he requires.
+      if (!C_ExpandElisions) return // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ This has downstream ramifications -- it looks as though quite a number of things may need changing, but I need to hear from Sami what he requires.
 
 
 
@@ -1090,7 +1112,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
       for (i in 0..< n - 1)
       {
          val refAsString = Ref.rd(refKeys[i]).toString()
-         val nodePair = EmptyVerseHandler.createEmptyVerseForElisionAndInsert(sid, refAsString) ?: continue
+         val nodePair = EmptyVerseHandler.createEmptyVerseForElisionAndInsert(sid, refAsString)
          val (start, end) = nodePair
          if (Dom.hasAttribute(sid, "_X_wasInTable"))
          {
@@ -2128,7 +2150,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
 
     private fun forceVersificationSchemeIfAppropriate ()
     {
-        if (XXXOsis2ModInterface.usingStepOsis2Mod())
+        if ("step" == ConfigData["stepOsis2modType"]!!)
           ConfigData.put("stepVersificationSchemeCanonical", "v11n" + ConfigData["stepModuleName"], true)
         // Note that to keep osis2mod happy, the scheme names _must_ be all caps.
         else if (TextConverterProcessorReversification.runMe())

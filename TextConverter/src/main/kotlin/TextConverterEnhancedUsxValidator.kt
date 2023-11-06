@@ -588,7 +588,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase ()
                                   .replace("\\s+".toRegex(), " ").trim()
 
     val contentInput    = input   .replace("\\s+".toRegex(), " ").trim()
-    if (contentInput == contentEnhanced) return
+    if (CallablePreprocessor.getTextForValidation(contentInput.replace("\\s+".toRegex(), "")) == contentEnhanced.replace("\\s+".toRegex(), "")) return
 
     val message = "Verse mismatch:<nl>  Enhanced = '$contentEnhanced'<nl>  Raw      = '$contentInput'<nl>"
     error(enhancedRefKey, message)

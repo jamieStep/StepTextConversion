@@ -50,7 +50,7 @@ object TextConverterTaggingHandler: TextConverterProcessorBase()
   /****************************************************************************/
   override fun banner (): String
   {
-    return "  Tagging USX"
+    return "Tagging USX"
   }
 
 
@@ -78,10 +78,12 @@ object TextConverterTaggingHandler: TextConverterProcessorBase()
   /****************************************************************************/
   override fun process (): Boolean
   {
+    return true // $$$ Temporary until we're in a position to do tagging.
     describeDataFiles()
     BibleStructure.OsisInstance().populateFromFile("C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Dbl\\Biblica\\Text_deu_XXX\\Osis\\deu_XXX_osis.xml", false)
     //getReversificationMappings()
-    // $$$ Need to set stepHasAppliedExtendedTagging to either true or false.
+    TextConverterFeatureSummaryGenerator.setHaveAppliedExtendedTagging(true)
+    ConfigData["stepAddedValueExtendedTagging"] = "Yes"
     return true
   }
 
