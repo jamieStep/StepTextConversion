@@ -299,7 +299,17 @@ object ReversificationData
 
   fun getIfEmptyRows (): List<ReversificationDataRow> { return m_IfEmptyRows }
 
-  fun targetsDc (): Boolean { return m_StandardBooks.any { BibleAnatomy.isDc(BibleBookNamesUsx.abbreviatedNameToNumber(it)) } }
+  fun targetsDc (): Boolean
+  {
+    try
+    {
+      return m_StandardBooks.any { BibleAnatomy.isDc(BibleBookNamesUsx.abbreviatedNameToNumber(it)) }
+    }
+    catch (_: Exception)
+    {
+      return false
+    }
+  }
 
 
   /****************************************************************************/

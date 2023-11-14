@@ -6,6 +6,8 @@ import java.io.BufferedWriter
 import java.io.File
 import java.io.FileWriter
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -99,9 +101,13 @@ object VersionAndHistoryHandler
   fun writeRevisedHistoryFile ()
   {
     /**************************************************************************/
-    getNewDetails()
     if (ReleaseType.Trial == m_ReleaseType) // We update the file only on release runs.
       return
+
+
+
+    /**************************************************************************/
+    val sortedKeys = m_HistoryEntries.keys.filter { "0.0" != m_HistoryEntries[it]!!.stepVersion }.sortedDescending()
 
 
 
@@ -111,8 +117,8 @@ object VersionAndHistoryHandler
       writer.newLine()
       writer.newLine()
 
-      m_HistoryEntries.keys.reversed().filter { "0.0" != m_HistoryEntries[it]!!.stepVersion }. forEach { dateAsLong ->
-        val parsedHistoryLine = m_HistoryEntries[dateAsLong]!!
+      sortedKeys. forEach { key ->
+        val parsedHistoryLine = m_HistoryEntries[key]!!
         val historyLine = makeHistoryLine(parsedHistoryLine.stepVersion, parsedHistoryLine.moduleDate, parsedHistoryLine.supplierVersion, parsedHistoryLine.text)
         writer.write(historyLine)
         writer.newLine()
@@ -184,7 +190,7 @@ object VersionAndHistoryHandler
     val newStepVersion = when (m_ReleaseType)
     {
       ReleaseType.Major -> (1 + Integer.parseInt(x[0])).toString() + ".0"
-      else -> x[0] + "." + (1 + Integer.parseInt(x[0])).toString()
+      else -> x[0] + "." + (1 + Integer.parseInt(x[1])).toString()
     }
 
     ConfigData["stepTextRevision"] = newStepVersion
@@ -196,12 +202,12 @@ object VersionAndHistoryHandler
    val text =
       when (m_ReleaseType)
       {
-        ReleaseType.Major -> "SupplierReason: " + ConfigData["stepSupplierUpdateReason"]!!
+        ReleaseType.Major -> "SupplierReason: " + ConfigData["stepSupplierUpdateReason"]!! + "; StepReason: Supplier updated source documents."
         else -> "StepReason: " + (ConfigData["stepUpdateReason"] ?: "Unspecified.")
       }
 
     val newHistoryDetails = ParsedHistoryLine(newStepVersion, C_DateFormat.format(today), ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!!, text)
-    m_HistoryEntries[-Date().time] = newHistoryDetails
+    m_HistoryEntries[makeKey(newHistoryDetails)] = newHistoryDetails
   }
 
 
@@ -209,7 +215,26 @@ object VersionAndHistoryHandler
   private fun makeHistoryLine (stepVersion: String, moduleDate: String, supplierVersion: String, text: String): String
   {
     val revisedText = text + (if (text.endsWith('.')) "" else ".")
-    return "History_$stepVersion $moduleDate [SupplierVersion: $supplierVersion] $revisedText"
+    return "History_$stepVersion=$moduleDate [SupplierVersion: $supplierVersion] $revisedText"
+  }
+
+
+  /****************************************************************************/
+  /* Creates a suitably key for use when ordering history lines.  Keys are of
+     the form:
+
+       20231107_002.003
+
+     where the first part is the date from the history line, and the second part
+     is the STEP version number in a canonical form.  Reverse alphabetical
+     ordering by key will give the lines in the required order. */
+
+  private fun makeKey (line: ParsedHistoryLine): String
+  {
+    val formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd", Locale.ENGLISH)
+    val date = LocalDate.parse(line.moduleDate, formatter)
+    val x = line.stepVersion.split(".")
+    return date.year.toString() + String.format("%02d", date.month.value) + String.format("%02d", date.dayOfMonth) + "_" + String.format("%03d", x[0].toInt()) + "." + String.format("%03d", x[1].toInt())
   }
 
 
@@ -226,8 +251,7 @@ object VersionAndHistoryHandler
       else if (lineLc.startsWith("history"))
       {
         val parsedHistoryLine = parseHistoryLine(line)
-        val date  = C_DateFormat.parse(parsedHistoryLine.moduleDate)
-        m_HistoryEntries[-date.time] = parsedHistoryLine // date.time gives us a Long representation.  Using minus this as the key is an easy way of producing descending order.
+        m_HistoryEntries[makeKey(parsedHistoryLine)] = parsedHistoryLine // date.time gives us a Long representation.  Using minus this as the key is an easy way of producing descending order.
       }
     }
 
@@ -247,8 +271,8 @@ object VersionAndHistoryHandler
   private enum class ReleaseType { Trial, Major, Minor, Unknown }
   private data class ParsedHistoryLine (val stepVersion: String, val moduleDate: String, val supplierVersion: String, val text: String)
   private val C_DateFormat = SimpleDateFormat("yyyy-MMM-dd")
-  private val C_HistoryLinePat = "(?i)History_(?<stepVersion>.*?)\\s+(?<date>.*?)\\s+\\[(?<supplierVersion>.*?)]\\s*(?<text>.*)".toRegex()
+  private val C_HistoryLinePat = "(?i)History_(?<stepVersion>.*?)=(?<date>.*?)\\s+\\[SupplierVersion: (?<supplierVersion>.*?)]\\s*(?<text>.*)".toRegex()
   private val m_HeaderCommentLines: MutableList<String> = mutableListOf()
-  private var m_HistoryEntries: SortedMap<Long, ParsedHistoryLine> = sortedMapOf()
+  private var m_HistoryEntries: SortedMap<String, ParsedHistoryLine> = sortedMapOf()
   private var m_ReleaseType = ReleaseType.Unknown
 }

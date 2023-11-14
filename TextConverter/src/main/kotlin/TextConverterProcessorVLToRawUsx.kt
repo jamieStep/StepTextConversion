@@ -38,9 +38,9 @@ object TextConverterProcessorVLToEnhancedUsx : TextConverterProcessorBase()
   /****************************************************************************/
   override fun pre (): Boolean
   {
-    if (C_InputType != InputType.VL) return true
+    if (!runControlTypeContains(RunControlType.VlInput)) return true
     createFolders(listOf(StandardFileLocations.getRawInputFolderPath()))
-    deleteFiles(listOf(Pair(StandardFileLocations.getRawInputFolderPath(), "*.usx")))
+    deleteFiles(listOf(Pair(StandardFileLocations.getRawInputFolderPath(), StandardFileLocations.getRawUsxFilePattern(null))))
     return true
   }
 
@@ -51,7 +51,7 @@ object TextConverterProcessorVLToEnhancedUsx : TextConverterProcessorBase()
 
   override fun runMe (): Boolean
   {
-    return C_InputType == InputType.VL
+    return runControlTypeContains(RunControlType.VlInput)
   }
 
 

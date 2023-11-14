@@ -5,7 +5,6 @@ import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.doNothing
@@ -13,10 +12,8 @@ import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.getE
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.makeFootnote
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.recordTagChange
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.reportBookBeingProcessed
-import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.runCommand
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.Translations
-import org.stepbible.textconverter.support.miscellaneous.Zip
 import org.stepbible.textconverter.support.ref.*
 import org.stepbible.textconverter.support.shared.Language
 import org.stepbible.textconverter.support.shared.SharedData
@@ -24,7 +21,6 @@ import org.stepbible.textconverter.support.usx.Usx
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.w3c.dom.Document
 import org.w3c.dom.Node
-import java.nio.file.Files
 import java.nio.file.Paths
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -197,53 +193,6 @@ import java.time.format.DateTimeFormatter
  * than it is already.
  *
  * To address this, I make provision for separate pre-processing to be supplied.
- * The pre-processor must be either a batch file named preprocessor.bat, a
- * Python script named preprocessor.py (and you must have Python available
- * and runnable from the command-line), or a preprocessor.exe, and must sit in a
- * directory called Preprocessor within the root folder for the text.  If more
- * than one of these exists, batch files take precedence over the others, and
- * .exe's over .py's.
- *
- * Rules are as follows :-
- *
- * - The pre-processor will receive two arguments -- the path to the input
- *   folder, and the path to the output folder.
- *
- * - All relevant input files will have an extension of .usx.  Files with
- *   other extensions should be ignored.
- *
- * - The output folder will be empty at the time the pre-processor is
- *   invoked.
- *
- * - Output files must be placed in the output folder, must have an
- *   extension of .usx, and must have the same name as the input file
- *   which gave rise to them.
- *
- * - Output files must be valid 'standard' USX.
- *
- * - It's unlikely that you will want to create a file in the output folder
- *   for which you have no input counterpart, but there is nothing to
- *   prevent you from doing so.  In this case, you can call the new file
- *   anything you like so long as it has the .usx suffix.
- *
- * - If a file with a given name exists in both the output and input folder,
- *   the converter processes the output version.
- *
- * - If a file with a given name exists only in the input folder, the
- *   converter processes it.
- *
- * - The effect of these previous bullet points is that a) you *can*
- *   create entirely new files if you need to; b) you can force a revised
- *   version of a file to be used by giving the revised version the same
- *   name as the original; and c) there is no need to copy files to the
- *   output folder if you are not applying changes to them (although there
- *   is no harm if you do so).
- *
- * - This leaves only the issue of how the pre-processor can *prevent<*
- *   an input file from being processed.  Again this is probably an unlikely
- *   eventuality, but if you should need to do it, simply create an empty
- *   file in the output folder with the same name as the input file.
- *
  *
  *
  *
@@ -253,8 +202,8 @@ import java.time.format.DateTimeFormatter
  *
  * It may also be useful, particularly where restructuring has been applied, to
  * retain rudimentary information about what the changes have been.  This is
- * handled by _X_dbg tags.  Whether these appear or not is controlled by the
- * debugLevel command line parameter.
+ * handled by _X_dbg tags.  Whether these appear or not is controlled by a
+ * command line parameter.
  *
  *
  *
@@ -281,11 +230,10 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     /******************************************************************************************************************/
     override fun pre (): Boolean
     {
-        if (C_InputType != InputType.USX) return true
         createFolders(listOf(StandardFileLocations.getEnhancedUsxFolderPath(), StandardFileLocations.getPreprocessedUsxFolderPath(), StandardFileLocations.getTextFeaturesFolderPath()))
-        deleteFiles(listOf(Pair(StandardFileLocations.getEnhancedUsxFolderPath(), "*.usx"),
-                           Pair(StandardFileLocations.getPreprocessedUsxFolderPath(), "*.usx"),
-                           Pair(StandardFileLocations.getTextFeaturesFolderPath(), "*.json")))
+        deleteFiles(listOf(Pair(StandardFileLocations.getEnhancedUsxFolderPath(), StandardFileLocations.getEnhancedUsxFilePattern()),
+                           Pair(StandardFileLocations.getPreprocessedUsxFolderPath(), StandardFileLocations.getRawUsxFilePattern(null)),
+                           Pair(StandardFileLocations.getTextFeaturesFolderPath(), ".*\\.json".toRegex())))
         return true
     }
 
@@ -293,7 +241,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
     /******************************************************************************************************************/
     override fun runMe (): Boolean
     {
-      return C_InputType == InputType.USX
+      return true
     }
 
 
@@ -311,86 +259,18 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
 
     /******************************************************************************************************************/
     /* runPreprocessor below runs the standalong JAR, .exe, etc which runs over raw USX files and creates modified
-       versions where necessary.  If stepCallablePreprocessorJar is defined, it must point to a JAR which is passed
+       versions where necessary.  If stepCallablePreprocessorFilePath is defined, it must point to a JAR which is passed
        DOMs one at a time and updates them in memory.  This is an alternative to the work done by runPreprocessor, and
        takes precedence -- even if the standalone JAR, .exe or whatever exists, it is not run. */
 
     override fun process (): Boolean
     {
-      if (null == ConfigData["stepCallablePreprocessorJar"]) runPreprocessor()
+      PreprocessorHandler.runPreprocessor()
       BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, true) // Gets the chapter / verse structure -- how many chapters in each verse, etc.
       forceVersificationSchemeIfAppropriate()
       ReversificationData.process()                                              // Does what it says on the tin.  This gives the chance (which I may not take) to do 'difficult' restructuring only where reversification will require it.
       BibleBookAndFileMapperRawUsx.iterateOverSelectedFiles(::processFile)       // Creates the enhanced USX.
       return true
-    }
-
-
-    /******************************************************************************************************************/
-    /* With some texts, we have to do a little pre-processing to massage them into a reasonable shape.  The constraints
-       upon the pre-processor are ...
-
-       * The code must be in the Preprocessor folder under the root for the text.
-
-       * It must be called preprocessor.xxx, where xxx is bat, exe, jar, js or py.  I suggest you avoid having more
-         than one of these in a given folder.  If by any mischance you do, .bat takes priority, but after that you
-         should assume that the choice is essentially random.
-
-       * If you use .jar, you must have the java run-time available on your computer and accessible via PATH (although
-         of course you will do, or else you couldn't be running the present code).
-
-       * If you use .js, you must have node.js available on your computer and accessible via PATH.
-
-       * If you use .py, you must have Python available on your computer and accessible via PATH.
-
-       * It will be called with the arguments (in the following order): PreprocessedUsxFolder, RawUsxFolder, [fileList]
-         where [fileList] is optional.  If present it is a fullstop-separated list of abbreviated book names.  It is
-         passed only on runs which are using the Dbg facilities to limit the list of files being processed for debug
-         purposes, and it lists those files.  You don't _have_ to take it into account, but if you're debugging the
-         present code and the preprocessor fails to take it into account, things could get confusing, because you're
-         likely to end up with files lying around which you aren't expecting.
-
-       * The preprocessor must take files from the raw folder and create them under the same name in the preprocessed
-         folder, applying whatever changes are necessary in the process.  If no changes are applied to a particular
-         file, there is no need to create a copy of the file in the preprocessed folder -- but not problem if you do.
-    */
-
-    private fun runPreprocessor ()
-    {
-      /****************************************************************************************************************/
-      val command: MutableList<String> = ArrayList()
-
-      if (Files.exists(Paths.get(StandardFileLocations.getPreprocessorExeFilePath())))
-        command.add(Paths.get(StandardFileLocations.getPreprocessorExeFilePath()).toString())
-      else if (Files.exists(Paths.get(StandardFileLocations.getPreprocessorBatchFilePath())))
-        command.add(Paths.get(StandardFileLocations.getPreprocessorBatchFilePath()).toString())
-      else if (Files.exists(Paths.get(StandardFileLocations.getPreprocessorJavaFilePath())))
-      {
-        command.add("java")
-        command.add("-jar")
-        val mainClass = Zip.getInputStream(StandardFileLocations.getPreprocessorJavaFilePath(), "META-INF/MANIFEST.MF")!!.first.bufferedReader().readLines().first { it.contains("Main-Class") }.split(" ")[1]
-        command.add(mainClass) // Not sure we actually need this.
-        command.add(Paths.get(StandardFileLocations.getPreprocessorBatchFilePath()).toString())
-      }
-      else if (Files.exists(Paths.get(StandardFileLocations.getPreprocessorJavascriptFilePath())))
-      { command.add("node"); command.add(Paths.get(StandardFileLocations.getPreprocessorBatchFilePath()).toString()) }
-      else if (Files.exists(Paths.get(StandardFileLocations.getPreprocessorPythonFilePath())))
-      { command.add("python"); command.add(Paths.get(StandardFileLocations.getPreprocessorPythonFilePath()).toString()) }
-
-
-
-      /***************************************************************************************************************/
-      if (command.isEmpty()) return
-
-
-
-      /***************************************************************************************************************/
-      val booksToBeProcessed = Dbg.getBooksToBeProcessed().joinToString(".")
-      command.add(StandardFileLocations.getPreprocessedUsxFolderPath())
-      command.add(StandardFileLocations.getRawInputFolderPath())
-      if (booksToBeProcessed.isNotEmpty()) command.add(booksToBeProcessed)
-      runCommand("  Preprocessing: ", command)
-      Dbg.reportProgress("Preprocessing complete", 1)
     }
 
 
@@ -436,7 +316,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
         /* The other potential form of preprocessing: A JAR file which supplies
            a method to which we can pass a DOM. */
 
-        CallablePreprocessor.process(document)?.forEach {
+        PreprocessorHandler.applyCallablePreprocessor(document)?.forEach {
           val ix = it.indexOf(':')
           val text = it.substring(ix + 2)
           when (it.substring(0, ix))

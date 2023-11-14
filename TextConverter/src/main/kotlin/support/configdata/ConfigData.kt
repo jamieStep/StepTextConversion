@@ -802,7 +802,7 @@ object ConfigData
     fun put (key: String, theValue: String, force: Boolean)
     {
       /************************************************************************/
-      //Dbg.d(key, "???")
+      //Dbg.d(key, "stepEvaluateSchemesOnly")
 
 
 
@@ -1386,7 +1386,8 @@ object ConfigData
 
     private fun generateTagTranslationDetails ()
     {
-       m_RawUsxToOsisTagTranslationLines.forEach { processConverterStepTagTranslation(it) }
+      val forcedAssignments: MutableSet<String> = mutableSetOf()
+       m_RawUsxToOsisTagTranslationLines.forEach { processConverterStepTagTranslation(forcedAssignments, it) }
     }
 
 
@@ -1394,16 +1395,36 @@ object ConfigData
     /* Converts the saved translation lines to the form needed for further
     processing. */
 
-    private fun processConverterStepTagTranslation (theLine: String)
+    private fun processConverterStepTagTranslation (forcedAssignments: MutableSet<String>, theLine: String)
     {
         /**************************************************************************/
         if (theLine.matches(Regex("(?i).*\\btbd\\b.*"))) return
 
 
+
         /**************************************************************************/
-        var line = theLine.substring(theLine.indexOf("=") + 1).trim() // Get the RHS.
+        val forced = "#=" in theLine
+        var line = theLine.split(Regex("="), 2)[1]
+        line = line.substring(line.indexOf("=") + 1).trim() // Get the RHS.
         line = expandReferences(line, false)!!.trim()
         val usx = line.split(" ")[0].substring(1).replace("Ͽ", "")
+
+
+
+        /**************************************************************************/
+        /* With forced assignments, the first one takes precedence, so if we already
+           have a forced setting for this USX entry, we can ignore this one.
+
+           If this is itself a forced setting, then we record the fact, in order
+           that the check here works.
+
+           But if we get past this point, then we want to take the assignment on
+           board come what may. */
+
+        if (usx in forcedAssignments)
+          return
+        else if (forced)
+          forcedAssignments += usx
 
 
 
@@ -1466,7 +1487,7 @@ object ConfigData
 
     private fun saveUsxToOsisTagTranslation (line: String)
     {
-        m_RawUsxToOsisTagTranslationLines.add(line.split(Regex("="), 2)[1])
+      m_RawUsxToOsisTagTranslationLines.add(line)
     }
 
 
@@ -1551,7 +1572,7 @@ object ConfigData
 
         if (englishTitle.contains(officialYear.trim()) || vernacularTitle.contains(officialYear.trim())) officialYear = "" // DIB: 2021-09-10.
 
-        var text = "$name$abbreviatedNameOfRightsHolder$officialYear $biblePortion$language$moduleMonthYear"
+        var text = "$name$abbreviatedNameOfRightsHolder$officialYear $biblePortion$language" // $moduleMonthYear"
         text = expandReferences(text, false)!!
         text = text.replace("\\s+".toRegex(), " ").trim()
         return text
@@ -1994,16 +2015,16 @@ object ConfigData
   /****************************************************************************/
   /* The extended name.  This comprises the basic name as returned by
      calc_stepModuleNameWithoutDisambiguation along with one or possibly two
-     suffixes.  All modules get a moduleNameAudienceRelatedSuffix, which says
-     whether the module can be used only within STEP, or may be made publicly
-     available.  And on non-release runs, we also have a suffix which includes
-     a time-stamp (stepModuleNameTestRelatedSuffix), so that it is possible to
-     keep multiple copies of the module lying around without them overwriting
-     one another. */
+     suffixes.  All modules get a stepModuleNameAudienceRelatedSuffix, which
+     says whether the module can be used only within STEP, or may be made
+     publicly available.  And on non-release runs, we also have a suffix which
+     includes a time-stamp (stepModuleNameTestRelatedSuffix), so that it is
+     possible to keep multiple copies of the module lying around without them
+     overwriting one another. */
 
   fun calc_stepModuleName (): String
   {
-    return calc_stepModuleNameWithoutDisambiguation() + get("stepModuleNameTestRelatedSuffix") + get("moduleNameAudienceRelatedSuffix")
+    return calc_stepModuleNameWithoutDisambiguation() + get("stepModuleNameTestRelatedSuffix") + get("stepModuleNameAudienceRelatedSuffix")
   }
 
 

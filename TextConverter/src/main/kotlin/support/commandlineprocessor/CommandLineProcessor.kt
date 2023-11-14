@@ -105,7 +105,7 @@ object CommandLineProcessor
 
 
        /************************************************************************/
-       m_CommandLineOptions.keys.forEach { ConfigData.put(generateConfigDataName(it), m_CommandLineOptions[it]!!.default ?: "", false) } // Assume defaults throughout.
+       m_CommandLineOptions.keys.filter { null != m_CommandLineOptions[it]!!.default } .forEach { ConfigData.put(generateConfigDataName(it), m_CommandLineOptions[it]!!.default!!, false) } // Assume defaults throughout.
        m_ParsedCommandLine?.options?.forEach { recordOption(it) } // Override with values actually supplied.
     }
 

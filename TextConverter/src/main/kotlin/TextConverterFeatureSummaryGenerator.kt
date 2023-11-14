@@ -72,7 +72,6 @@ object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase()
   /****************************************************************************/
   override fun pre (): Boolean
   {
-    if (C_InputType != InputType.USX) return true
     deleteFile(Pair(StandardFileLocations.getTextFeaturesFilePath(), null))
     return true
   }
@@ -81,7 +80,7 @@ object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase()
   /****************************************************************************/
   override fun runMe (): Boolean
   {
-    return C_InputType == InputType.USX
+    return true
   }
 
 

@@ -11,11 +11,13 @@ import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
 import org.stepbible.textconverter.support.shared.SharedData
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.runCommand
+import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils.copyFile
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils.createFolderStructure
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils.sentenceCaseFirstLetter
 import org.stepbible.textconverter.support.miscellaneous.Translations
 import org.stepbible.textconverter.support.miscellaneous.Zip
+import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.File
 import java.nio.file.Paths
 import java.text.SimpleDateFormat
@@ -87,7 +89,14 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
 
 
+    /**************************************************************************/
+    /* On a USX-based run, this will already have been set.  However, we may
+       also sometimes be called upon to work direct from OSIS, in which case
+       it may not have been set. */
+
     Logger.setLogFile(StandardFileLocations.getConverterLogFilePath())
+
+
 
     /**************************************************************************/
     /* Since there are occasions when we need to be able to run the relevant
@@ -95,7 +104,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
        a pain to work out what the command line should look like, here is the
        information you need ...
 
-         osis2mod.exe <outputPath> <osisFilePath> -v <versificationScheme> -z -c"<password>"
+         osis2mod.exe <outputPath> <osisFilePath> -v <versificationScheme> -z -c "<password>"
 
        where <outputPath> is eg ...\Sword\modules\texts\ztext\NIV2011 and
        <password> is a random string of letters, digits and selected special
@@ -109,15 +118,26 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
        control of the converter -- there are problems with system utilities which
        mean this doesn't work properly -- see head-of-method comments to
        runCommand.
+
+       The OSIS file path differs according to whether we have used OSIS as input,
+       or something else.  In the latter case, the parent folder is Osis.  In the
+       former, it is RawOsis.
     */
+
+    val osisFilePath = if (runControlTypeContains(RunControlType.OsisInput))
+    {
+      val folder = StepFileUtils.getMatchingFoldersFromFolder(StandardFileLocations.getRootFolderPath(), "(?i)RawOsis".toRegex())[0]
+      StepFileUtils.getMatchingFilesFromFolder(folder.toString(), ".*".toRegex())[0]
+    }
+    else
+      StandardFileLocations.getOsisFilePath()
 
     val usingStepOsis2Mod = "step" == ConfigData["stepOsis2modType"]!!
     val programName = if (usingStepOsis2Mod) ConfigData["stepStepOsis2ModFolderPath"]!! else ConfigData["stepCrosswireOsis2ModFolderPath"]!!
     val swordExternalConversionCommand: MutableList<String> = ArrayList()
-    swordExternalConversionCommand.add(programName)
+    swordExternalConversionCommand.add("\"$programName\"")
     swordExternalConversionCommand.add("\"" + StandardFileLocations.getSwordTextFolderPath(m_ModuleName) + "\"")
-    //$$$swordExternalConversionCommand.add("\"" + StandardFileLocations.getSwordTextFolderPath("Step") + "\"")
-    swordExternalConversionCommand.add("\"" + StandardFileLocations.getOsisFilePath() + "\"")
+    swordExternalConversionCommand.add("\"" + osisFilePath + "\"")
 
     if (usingStepOsis2Mod)
     {
@@ -139,14 +159,45 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
       swordExternalConversionCommand.add("\"" + osis2modEncryptionKey + "\"")
     }
 
+
+
+    /**************************************************************************/
     generateChangesFile()
+
+
+
+    /**************************************************************************/
+    /* If we have any grounds at all for giving up, now would be a good time to
+       do it, before bother with the remaining processing. */
+
+    Logger.announceAll(true)
     Dbg.reportProgress("")
     runCommand("Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = StandardFileLocations.getOsisToModLogFilePath())
+
+
+
+    /**************************************************************************/
+    /* Again, now would be a good time to abandon stuff, because after this
+       point we start updating history etc, and if that happens and there have,
+       in fact, been errors, we'd need to work out how to roll back the history,
+       which is a pain. */
+
+    if (!osis2modHasReportedSuccess())
+      Logger.error("osis2mod has not reported success.")
+
+
+
+    /**************************************************************************/
+    Logger.announceAll(true)
     getFileSizeIndicator()
+    VersionAndHistoryHandler.writeRevisedHistoryFile()
     generateConfigFile()
     checkOsis2ModLog()
     createZip()
 
+
+
+    /**************************************************************************/
     return true
   }
 
@@ -433,12 +484,21 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
        possibility that we are simply starting from OSIS, and our sole purpose
        was to tag OSIS supplied to us by someone else.
 
-       On a full conversion run, we'll have deleted the config file at the
-       outset, whereas on an OSIS-tagging run we will not, and the existing
-       Sword config file will be the one to use. */
+       On a run starting from OSIS, we'll have a copy of the Sword config file
+       in the Metadata folder. */
 
     val configFile = File(StandardFileLocations.getSwordConfigFilePath(m_ModuleName))
-    if (configFile.exists()) return
+
+    if (runControlTypeContains(RunControlType.OsisInput))
+    {
+      val originalConfFile = StepFileUtils.getMatchingFilesFromFolder(StandardFileLocations.getMetadataFolderPath(), ".*\\.conf".toRegex())
+        . firstOrNull { "_sb" in it.toString() }
+        ?: throw StepException("Can't find master Sword config file (you should have stored a copy in the Metadata folder, and it should have a name which includes _sb or _sbOnly).")
+      originalConfFile.toFile().copyTo(File(StandardFileLocations.getSwordConfigFilePath(m_ModuleName)), true)
+      return
+    }
+
+
 
 
 
@@ -612,6 +672,19 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
     var size = File(Paths.get(StandardFileLocations.getSwordTextFolderPath(m_ModuleName)).toString()).walkTopDown().filter { it.isFile }.map { it.length() }.sum()
     size = ((size + 500) / 1000) * 1000 // Round to nearest 1000.
     ConfigData.put("stepModuleSize", size.toString(), true)
+  }
+
+
+  /****************************************************************************/
+  /* Checks whether the osis2mod log file exists and contains a line which
+     indicates success. */
+     
+  private fun osis2modHasReportedSuccess (): Boolean
+  {
+    val file = File(StandardFileLocations.getOsisToModLogFilePath())
+    if (!file.exists()) return false
+    val successLine = file.readLines().firstOrNull { "SUCCESS" in it }
+    return null != successLine
   }
 
 

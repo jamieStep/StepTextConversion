@@ -62,7 +62,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
   override fun process (): Boolean
   {
     doIt()
-    return ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "no") // Prevent further processing from running.
+    return true
   }
 
 

@@ -4,8 +4,6 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.stepexception.StepException
-import java.io.File
-import java.net.URLClassLoader
 
 
 
@@ -18,11 +16,11 @@ import java.net.URLClassLoader
 
 fun main (args: Array<String>)
 {
-  Dbg.setBooksToBeProcessed("Gal,Nam,Sng")
+  //Dbg.setBooksToBeProcessed("Gen")
 
   try
   {
-    test()
+    //test()
     mainCommon(args)
     val majorWarnings = GeneralEnvironmentHandler.getMajorWarningsAsBigCharacters()
     if (majorWarnings.isNotEmpty())
@@ -31,7 +29,6 @@ fun main (args: Array<String>)
       Logger.warning(majorWarnings)
       Logger.announceAll(false);
     }
-
 
     Dbg.endOfRun()
     println("Finished\n")
@@ -59,29 +56,3 @@ private fun mainCommon (args: Array<String>)
   Logger.summariseResults()
 }
 
-/******************************************************************************/
-private fun test ()
-{
-  return
-    val jarFile = File("C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Dbl\\Lockman\\Text_eng_LSB\\Preprocessor\\LockmanPreprocessor.jar")
-    val jarURL = jarFile.toURI().toURL()
-    val classLoader = URLClassLoader(arrayOf(jarURL), Thread.currentThread().contextClassLoader)
-
-    try
-    {
-        // Load the class dynamically
-        val loadedClass = classLoader.loadClass("org.stepbible.preprocessor.Preprocessor")
-
-        // Create an instance of the loaded class
-        val instance = loadedClass.getDeclaredConstructor().newInstance()
-        val classToLoad = Class.forName("org.stepbible.preprocessor.Preprocessor", true, classLoader)
-        val method = classToLoad.getDeclaredMethod("preprocess", String::class.java)
-        method.invoke(instance, "Hi there")
-        println(instance::class.simpleName)
-        println(instance::class.qualifiedName)
-    }
-    catch (e: Exception)
-    {
-      println("Oops")
-    }
-}

@@ -99,23 +99,23 @@ abstract class TextConverterProcessorBase
      * @param filesToBeDeleted Details of files to be deleted.
      */
 
-    protected fun deleteFiles (filesToBeDeleted: List<Pair<String, String?>>)
+    protected fun deleteFiles (filesToBeDeleted: List<Pair<String, Regex?>>)
     {
       filesToBeDeleted.forEach { deleteFile(it) }
     }
 
 
     /**************************************************************************************************************/
-    protected fun deleteFile (fileDetails: Pair<String, String?>)
+    protected fun deleteFile (fileDetails: Pair<String, Regex?>)
     {
         var (path, pattern) = fileDetails
         if (null == pattern)
         {
-            pattern = StepFileUtils.getFileName(path)
+            pattern = ("\\Q" + StepFileUtils.getFileName(path) + "\\E").toRegex()
             path = StepFileUtils.getParentFolderName(path)
         }
 
-        try { StepFileUtils.getMatchingThingsFromFolder(path, ("\\Q$pattern\\E").toRegex(), "DF").forEach{ StepFileUtils.deleteFileOrFolder(it.toString()) } } catch (_: Exception) {}
+        try { StepFileUtils.getMatchingThingsFromFolder(path, pattern, "DF").forEach{ StepFileUtils.deleteFileOrFolder(it.toString()) } } catch (_: Exception) {}
     }
 
 

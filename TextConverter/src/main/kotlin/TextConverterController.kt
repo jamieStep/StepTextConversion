@@ -30,11 +30,8 @@ class TextConverterController
     fun process (args: Array<String>): Boolean
     {
       initialiseCommandLineArgsAndConfigData(args)
-      if (m_EvaluateSchemesOnly) exitProcess(0)
       if (!doPre()) return false
-      val status = doProcess()
-      if (status) VersionAndHistoryHandler.writeRevisedHistoryFile()
-      return status
+      return doProcess()
     }
 
 
@@ -53,17 +50,17 @@ class TextConverterController
         GeneralEnvironmentHandler.getCommandLineOptions(CommandLineProcessor)
         TextConverterProcessorEvaluateVersificationSchemes.getCommandLineOptions(CommandLineProcessor)
 
-        m_Processors.forEach { it.getCommandLineOptions(CommandLineProcessor) }
+        m_Processors.forEach { it.second.getCommandLineOptions(CommandLineProcessor) }
     }
 
 
     /******************************************************************************************************************/
-    /* Runs over all processor permitting each to have a chance to set up its environment. */
+    /* Runs over all processors permitting each to have a chance to set up its environment. */
 
     private fun doPre(): Boolean
     {
-        VersionAndHistoryHandler.createHistoryFileIfNecessaryAndWorkOutVersionDetails()
-        m_Processors.filter { it.runMe() }.forEach { if (!it.pre()) return false }
+        if (!runControlTypeContains(RunControlType.OsisInput)) VersionAndHistoryHandler.createHistoryFileIfNecessaryAndWorkOutVersionDetails()
+        m_Processors.filter { runProcessor(it) }.forEach { if (!it.second.pre()) return false }
         return true
     }
 
@@ -74,9 +71,9 @@ class TextConverterController
     private fun doProcess(): Boolean
     {
         m_Processors.forEach {
-            if (it.runMe())
+            if (runProcessor(it))
             {
-                if (!doProcess(it)) return false
+                if (!doProcess(it.second)) return false
                 Logger.announceAll(true)
             }
         }
@@ -167,28 +164,14 @@ class TextConverterController
 
         StandardFileLocations.initialise(rootFolderPath)
 
-        ConfigData.load(StandardFileLocations.getConfigFileName())
+        if (File(StandardFileLocations.getConfigFilePath()).exists())
+          ConfigData.load(StandardFileLocations.getConfigFileName())
+        else if (!runControlTypeContains(RunControlType.OsisInput))
+          throw StepException("Can't find config file: ${StandardFileLocations.getConfigFilePath()}.")
+
         CommandLineProcessor.copyCommandLineOptionsToConfigData("TextConverter")
-
-
-
-        /**************************************************************************/
-        /* This run may be intended purely to evaluate the available schemes, in
-           which case we need to do that.  Or the user may have requested the
-           processing to make up its own mind as to whether or not reversification
-           is required, in which case we need to make that call and update the
-           associated parameters accordingly.  Or it may be neither of these, in
-           which case we need to do nothing apart from delete any output which
-           the evaluation might otherwise produce, and which may have been left
-           lying around from a previous run. */
-
-        m_EvaluateSchemesOnly = ConfigData.getAsBoolean("stepEvaluateSchemesOnly") || ConfigData["stepReversificationType"]!!.contains("?")
-        if (m_EvaluateSchemesOnly)
-        {
-          TextConverterProcessorEvaluateVersificationSchemes.pre()
-          TextConverterProcessorEvaluateVersificationSchemes.process()
-          return
-        }
+        if (ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "No"))
+          C_RunControlType = RunControlType.EvaluateSchemesOnly
 
 
 
@@ -200,30 +183,33 @@ class TextConverterController
    }
 
 
-    /******************************************************************************************************************/
-    /* Is this a run where we merely want to evaluate possible versification schemes, rather than actually do any text
-       conversion? */
+   /******************************************************************************************************************/
+   /* Determines whether a particular processor should run. */
 
-    private var m_EvaluateSchemesOnly = false
+   private fun runProcessor (selector: Pair<RunControlType, TextConverterProcessorBase>): Boolean
+   {
+     return 0 != (selector.first.type and C_RunControlType.type) && selector.second.runMe()
+   }
 
 
-    /******************************************************************************************************************/
-    /* Lists of processors in the order in which they run. */
+   /******************************************************************************************************************/
+   /* Lists of processors in the order in which they run. */
 
-    private val C_ProcessorsForFullConversionRun = listOf(
-        DbgController,
-        TestController.instance(),
-        TextConverterProcessorVLToEnhancedUsx,      // USX only.
-        TextConverterProcessorUsxToEnhancedUsx1,    // USX only.
-        TextConverterProcessorReversification,      // USX only.
-        TextConverterProcessorUsxToEnhancedUsx2,    // USX only.
-        TextConverterFeatureSummaryGenerator,       // USX only.
-        TextConverterEnhancedUsxValidator,          // USX only.
-        TextConverterProcessorEnhancedUsxToOsis,    // USX only.
-        TextConverterTaggingHandler,
-        TextConverterProcessorOsisToSword,
-        RepositoryPackageHandler
-    )
+   private val C_ProcessorsForFullConversionRun = listOf(
+       Pair(RunControlType.All,                 DbgController),
+       Pair(RunControlType.All,                 TestController.instance()),
+       Pair(RunControlType.EvaluateSchemesOnly, TextConverterProcessorEvaluateVersificationSchemes),
+       Pair(RunControlType.UsxInput,            TextConverterProcessorVLToEnhancedUsx),
+       Pair(RunControlType.UsxInput,            TextConverterProcessorUsxToEnhancedUsx1),
+       Pair(RunControlType.UsxInput,            TextConverterProcessorReversification), // Need to reconsider this?
+       Pair(RunControlType.UsxInput,            TextConverterProcessorUsxToEnhancedUsx2),
+       Pair(RunControlType.UsxInput,            TextConverterFeatureSummaryGenerator),
+       Pair(RunControlType.UsxInput,            TextConverterEnhancedUsxValidator),
+       Pair(RunControlType.UsxInput,            TextConverterProcessorEnhancedUsxToOsis),
+       Pair(RunControlType.ModuleGenerator,     TextConverterTaggingHandler),
+       Pair(RunControlType.ModuleGenerator,     TextConverterProcessorOsisToSword),
+       Pair(RunControlType.ModuleGenerator,     TextConverterRepositoryPackageHandler)
+   )
 
 
     /******************************************************************************************************************/

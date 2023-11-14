@@ -5,9 +5,7 @@ import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEn
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRawUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.reportBookBeingProcessed
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.sidify
@@ -82,7 +80,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase ()
   /****************************************************************************/
   override fun runMe (): Boolean
   {
-    return C_InputType == InputType.USX && C_ConfigurationFlag_DoUsxFinalValidation
+    return C_ConfigurationFlag_DoUsxFinalValidation
   }
 
 
@@ -588,7 +586,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase ()
                                   .replace("\\s+".toRegex(), " ").trim()
 
     val contentInput    = input   .replace("\\s+".toRegex(), " ").trim()
-    if (CallablePreprocessor.getTextForValidation(contentInput.replace("\\s+".toRegex(), "")) == contentEnhanced.replace("\\s+".toRegex(), "")) return
+    if (PreprocessorHandler.getTextForValidation(contentInput.replace("\\s+".toRegex(), "")) == contentEnhanced.replace("\\s+".toRegex(), "")) return
 
     val message = "Verse mismatch:<nl>  Enhanced = '$contentEnhanced'<nl>  Raw      = '$contentInput'<nl>"
     error(enhancedRefKey, message)

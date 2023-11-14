@@ -6,7 +6,7 @@
 #!
 #! - A history line must look like
 #!
-#!    History_1.2 2023-11-01 [SupplierVersion: 1234] SupplierReason: blah.
+#!    History_1.2=2023-11-01 [SupplierVersion: 1234] SupplierReason: blah.
 #!
 #!   Where 1.2 is our version number; the date is the date the module was
 #!   created (obviously nothing checks this, so you can pretty much get away

@@ -63,5 +63,22 @@ const val C_ConfigurationFlags_GenerateVersesAtEndsOfChapters = false
 /****************************************************************************/
 /** What it says on the tin. */
 
-enum class InputType { USX, OSIS, VL, UNDEFINED}
-var C_InputType = InputType.UNDEFINED
+enum class RunControlType (val type: Int)
+{
+  Undefined          (0x0000),                  // The initial value, until we know better.
+  All                (0xFFFF),                  // Used to flag processing which needs to run no matter what.
+
+  UsxInput           (0x0001),                  // We're working from USX.
+  OsisInput          (0x0002),                  // We're working from OSIS.
+  VlInput            (0x0004 or UsxInput.type), // We're working from VL (which will also entail going via USX).
+
+  EvaluateSchemesOnly(0x1000),                  // Evaluates versification schemes but does not generate a module.
+
+  ModuleGenerator(UsxInput.type or OsisInput.type or VlInput.type) // Anything which generates a module.
+}
+var C_RunControlType = RunControlType.Undefined
+
+fun runControlTypeContains (flag: RunControlType): Boolean
+{
+  return flag.type == C_RunControlType.type and flag.type
+}

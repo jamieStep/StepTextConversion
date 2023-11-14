@@ -1,8 +1,8 @@
 /******************************************************************************/
 package org.stepbible.textconverter.support.configdata
 
-import org.stepbible.textconverter.C_InputType
-import org.stepbible.textconverter.InputType
+import org.stepbible.textconverter.C_RunControlType
+import org.stepbible.textconverter.RunControlType
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.File
@@ -164,13 +164,8 @@ object StandardFileLocations
   fun getOsisToModLogFilePath (): String { return m_OsisToModLogFilePath; }
   fun getOsis2modVersificationDetailsFilePath (): String { return "\$common/osis2modVersification.txt" }
   fun getPreprocessedUsxFolderPath (): String { return m_PreprocessedUsxFolderPath }
-  fun getPreprocessorBatchFilePath (): String { return Paths.get(m_RootFolderPath, "Preprocessor", "preprocessor.bat").toString() }
-  fun getPreprocessorExeFilePath (): String { return Paths.get(m_RootFolderPath, "Preprocessor", "preprocessor.exe").toString() }
-  fun getPreprocessorJavaFilePath (): String { return Paths.get(m_RootFolderPath, "Preprocessor", "preprocessor.jar").toString() }
-  fun getPreprocessorJavascriptFilePath (): String { return Paths.get(m_RootFolderPath, "Preprocessor", "preprocessor.js").toString() }
-  fun getPreprocessorPythonFilePath (): String { return Paths.get(m_RootFolderPath, "Preprocessor", "preprocessor.py").toString() }
   fun getRawInputFolderPath (): String { return m_RawInputFolderPath }
-  fun getRepositoryPackageFilePath (): String { return Paths.get(getSwordRootFolderPath(), getRepositoryPackageFileName()).toString() }
+  fun getRepositoryPackageFilePath (): String { return Paths.get(getRootFolderPath(), getRepositoryPackageFileName()).toString() }
   fun getRootFolderName (): String { return m_RootFolderName }
   fun getRootFolderPath (): String { return m_RootFolderPath }
   fun getStepChangeHistoryFilePath (): String { return m_StepChangeHistoryFilePath }
@@ -253,14 +248,14 @@ object StandardFileLocations
        (as before) or RawOsis.  The processing here also extracts the
        input type and stores it in ConfigData. */
 
-    val rawFolderName = StepFileUtils.getMatchingFoldersFromFolder(m_RootFolderPath, "^Raw.*".toRegex())[0].fileName.toString()
+    val rawFolderName = StepFileUtils.getMatchingFoldersFromFolder(m_RootFolderPath, "(?i)^Raw.*".toRegex())[0].fileName.toString()
     val inputType = rawFolderName.replace("Raw", "").lowercase()
-    C_InputType = when (inputType)
+    C_RunControlType = when (inputType)
       {
-        "osis" -> InputType.OSIS
-        "usx"  -> InputType.USX
-        "vl" -> InputType.VL
-        else -> throw StepException("Input type not presently handled: $inputType.")
+        "osis" -> RunControlType.OsisInput
+        "usx"  -> RunControlType.UsxInput
+        "vl"   -> RunControlType.VlInput
+        else   -> throw StepException("Input type not presently handled: $inputType.")
       }
 
 

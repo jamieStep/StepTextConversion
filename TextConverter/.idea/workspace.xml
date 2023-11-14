@@ -10,43 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9495aca-7970-4593-a7e0-92356b5adca5" name="Changes" comment="Misc changes after IDEA messed things up.">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/CallablePreprocessor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/GeneralEnvironmentHandler.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/RunTimeConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/VersionAndHistoryHandler.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/historyTemplate.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Support/converterUserGuide.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Support/converterUserGuide.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Support/intellijGotchas.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Support/intellijGotchas.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Test.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/DbgController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/DbgController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/EmptyVerseHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/EmptyVerseHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/CallablePreprocessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/PreprocessorHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/CompileTimeConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/CompileTimeConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GeneralEnvironmentHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GeneralEnvironmentHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RepositoryPackageHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RepositoryPackageHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RepositoryPackageHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterRepositoryPackageHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ReversificationData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ReversificationData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TestController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TestController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterEnhancedUsxValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterEnhancedUsxValidator.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterFeatureSummaryGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterFeatureSummaryGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorBase.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEnhancedUsxToOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEnhancedUsxToOsis.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEvaluateVersificationSchemes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEvaluateVersificationSchemes.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorOsisToSword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorOsisToSword.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorReversification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorReversification.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx1.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterTaggingHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterTaggingHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterVersificationHealthCheck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterVersificationHealthCheck.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/XXXOsis2ModInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Osis2ModInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleStructure.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleStructure.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorVLToRawUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorVLToRawUsx.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/VersionAndHistoryHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/VersionAndHistoryHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleBookAndFileMapperRawUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleBookAndFileMapperRawUsx.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/commandlineprocessor/CommandLineProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/commandlineprocessor/CommandLineProcessor.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/configdata/ConfigData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/configdata/ConfigData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/configdata/StandardFileLocations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/configdata/StandardFileLocations.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/debug/Logger.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/debug/Logger.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/usx/Usx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/usx/Usx.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/PerOwnerOrganisation/Biblica.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/PerOwnerOrganisation/Biblica.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TextTranslations/vernacularTextTranslations_eng.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TextTranslations/vernacularTextTranslations_eng.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/externalDataPaths.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/externalDataPaths.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/swordTemplateConfigFile.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/swordTemplateConfigFile.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/historyTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/historyTemplate.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/cmn-Hans.ldml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/styles.xml" beforeDir="false" />
@@ -273,6 +262,138 @@
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/Metadata/history.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/RawUsx/EXO.usx" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/RawUsx/EXO.usx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/__US_VERSION_NOT_USED_Text_eng_NIVUS/Metadata/license.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/1CH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/1ES.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/1KI.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/1MA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/1SA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/2CH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/2KI.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/2MA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/2SA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/3MA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/4MA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/AMO.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/BAR.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/BEL.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/DAN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/DEU.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/ECC.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/EST.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/EXO.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/EZK.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/EZR.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/GEN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/HAB.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/HAG.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/HOS.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/ISA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JDG.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JDT.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JER.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JOB.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JOL.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JON.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JOS.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/LAM.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/LEV.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/LJE.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/MAL.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/MAN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/MIC.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/NAM.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/NEH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/NUM.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/OBA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/PRO.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/PS2.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/PSA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/PSS.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/RUT.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/SIR.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/SNG.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/SUS.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/TOB.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/WIS.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/ZEC.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/ZEP.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0831T1005NRSVA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0831T1005en_NETSLXX_osis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0831T1016NRSVA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0831T1016en_NETSLXX_osis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0831T2059NRSVA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0831T2059en_NETSLXX_osis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2011NRSVA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2011en_NETSLXX_osis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2013NRSVA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2013en_NETSLXX_osis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2022NRSVA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2022en_NETSLXX_osis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2034NRSVA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2034en_NETSLXX_osis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Metadata/copr.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/040MAT.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/041MRK.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/042LUK.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/043JHN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/044ACT.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/045ROM.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0461CO.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0472CO.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/048GAL.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/049EPH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/050PHP.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/051COL.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0521TH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0532TH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0541TI.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0552TI.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/056TIT.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/057PHM.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/058HEB.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/059JAS.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0601PE.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0612PE.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0621JN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0632JN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0643JN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/065JUD.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/066REV.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/093XXA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/094XXB.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/107INT.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/01-INTengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/46-MATengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/47-MRKengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/48-LUKengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/49-JHNengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/50-ACTengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/51-ROMengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/52-1COengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/53-2COengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/54-GALengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/55-EPHengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/56-PHPengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/57-COLengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/58-1THengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/59-2THengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/60-1TIengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/61-2TIengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/62-TITengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/63-PHMengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/64-HEBengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/65-JASengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/66-1PEengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/67-2PEengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/68-1JNengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/69-2JNengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/70-3JNengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/71-JUDengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/72-REVengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/75-XXAengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/76-XXBengtcent.usfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/_Miscellaneous/dejavuserif.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,7 +456,7 @@
       <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\TextConverter\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.eng_LSB">
+  <component name="RunManager" selected="Kotlin.eng_QQQTest">
     <configuration name="Temp" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
@@ -383,7 +504,16 @@
     <configuration name="en_NIV" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_eng_NIV -forcedOsis2ModVariant crosswire" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_eng_NIV -runType EvalOnly" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="eng_ESV" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder Miscellaneous\Text_eng_ESV -runType release" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -392,7 +522,16 @@
     <configuration name="eng_LSB" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder Dbl\Lockman\Text_eng_LSB -runType EvalOnly" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder Dbl\Lockman\Text_eng_LSB -runType release" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="eng_QQQTest" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder Dbl\Other\Text_eng_QQQTest -runType release" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -401,6 +540,8 @@
     <list>
       <item itemvalue="Kotlin.Temp" />
       <item itemvalue="Kotlin.eng_LSB" />
+      <item itemvalue="Kotlin.eng_QQQTest" />
+      <item itemvalue="Kotlin.eng_ESV" />
       <item itemvalue="Kotlin.amh_NASV" />
       <item itemvalue="Kotlin.deu_HFA" />
       <item itemvalue="Kotlin.deu_XXX" />
@@ -477,19 +618,14 @@
           <option name="timeStamp" value="124" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
-          <line>84</line>
-          <option name="timeStamp" value="170" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
-          <line>72</line>
-          <option name="timeStamp" value="171" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/TextConverterEnhancedUsxValidator.kt</url>
-          <line>592</line>
+          <line>590</line>
           <option name="timeStamp" value="175" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
+          <line>58</line>
+          <option name="timeStamp" value="209" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

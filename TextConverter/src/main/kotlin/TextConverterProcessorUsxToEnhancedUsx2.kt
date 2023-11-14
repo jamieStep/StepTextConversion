@@ -77,7 +77,7 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase()
   /****************************************************************************/
   override fun runMe (): Boolean
   {
-     return C_InputType == InputType.USX
+     return true
   }
 
 
@@ -118,10 +118,10 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase()
 
     if (!C_MinimalChangesOnly)
     {
-      if ("step" == ConfigData["stepOsis2modType"]!!)
-        changed = changed or EmptyVerseHandler.createEmptyVersesForAdHocVersificationScheme(document)
+      changed = if ("step" == ConfigData["stepOsis2modType"]!!)
+        changed or EmptyVerseHandler.createEmptyVersesForAdHocVersificationScheme(document)
       else
-        changed = changed or EmptyVerseHandler.createEmptyVersesForKnownOsis2modScheme(document)
+        changed or EmptyVerseHandler.createEmptyVersesForKnownOsis2modScheme(document)
     }
 
     changed = changed or EmptyVerseHandler.annotateEmptyVerses(document)

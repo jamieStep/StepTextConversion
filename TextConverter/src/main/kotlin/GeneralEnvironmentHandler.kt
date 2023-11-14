@@ -4,7 +4,6 @@ import org.stepbible.textconverter.TextConverterProcessorEvaluateVersificationSc
 import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.debug.Logger
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -35,8 +34,9 @@ object GeneralEnvironmentHandler
 
   fun getMajorWarningsAsBigCharacters (): String
   {
+    // The try below is required because if we start from OSIS, we won't have any reversification details.
     var res = ""
-    if (!ConfigData["stepReversificationDataLocation"]!!.startsWith("http")) res += C_Local_ReversificationData
+    try { if (!ConfigData["stepReversificationDataLocation"]!!.startsWith("http")) res += C_Local_ReversificationData } catch (_: Exception) {}
     if (!ConfigData.getAsBoolean("stepEncryptionApplied", "no")) res += C_NotEncrypted
     if ("trial" == ConfigData["stepRunType"]!!) res += C_NonRelease
     return res
@@ -103,7 +103,7 @@ object GeneralEnvironmentHandler
     val isSbOnly = "step" == ConfigData["stepOsis2modType"] ||
                    ConfigData.getAsBoolean("stepEncryptionRequired")
 
-    ConfigData["moduleNameAudienceRelatedSuffix"] = if (isSbOnly) "_sbOnly" else "_sb"
+    ConfigData["stepModuleNameAudienceRelatedSuffix"] = if (isSbOnly) "_sbOnly" else "_sb"
   }
 
 
