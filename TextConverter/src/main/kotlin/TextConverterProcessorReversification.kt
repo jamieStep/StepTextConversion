@@ -225,11 +225,11 @@ object TextConverterProcessorReversification: TextConverterProcessorBase ()
   {
     initialise()
     ReversificationData.getSourceBooksInvolvedInMoveActionsAbbreviatedNames()  .forEach { processMovePart1(it) }
-    ReversificationData.getAllBookNumbersAbbreviatedNames()                          .forEach { processNonMove(it, "renumber") }
+    ReversificationData.getAllBookNumbersAbbreviatedNames()                    .forEach { processNonMove(it, "renumber") }
     ReversificationData.getStandardBooksInvolvedInMoveActionsAbbreviatedNames().forEach { processMovePart2(it) }
-    ReversificationData.getAllBookNumbersAbbreviatedNames()                          .forEach { processNonMove(it, "") }
+    ReversificationData.getAllBookNumbersAbbreviatedNames()                    .forEach { processNonMove(it, "") }
     insertMoveOriginals()
-    ReversificationData.getAllBookNumbersAbbreviatedNames()                          .forEach { terminate(it) }
+    ReversificationData.getAllBookNumbersAbbreviatedNames()                    .forEach { terminate(it) }
   }
 
 

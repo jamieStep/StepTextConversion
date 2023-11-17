@@ -38,7 +38,7 @@ object GeneralEnvironmentHandler
     var res = ""
     try { if (!ConfigData["stepReversificationDataLocation"]!!.startsWith("http")) res += C_Local_ReversificationData } catch (_: Exception) {}
     if (!ConfigData.getAsBoolean("stepEncryptionApplied", "no")) res += C_NotEncrypted
-    if ("trial" == ConfigData["stepRunType"]!!) res += C_NonRelease
+    if ("evalonly" == ConfigData["stepRunType"]!!.lowercase()) res += C_NonRelease
     return res
   }
 
@@ -52,8 +52,7 @@ object GeneralEnvironmentHandler
 
   fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
   {
-    //commandLineProcessor.addCommandLineOption("runType", 1, "Type of run.", TestController.getTestTypes(), "EvalOnly", false)
-    commandLineProcessor.addCommandLineOption("updateReason", 1, "A reason for creating this version of the module (required only if runType is Release).", null, "<BLANK>", false)
+    commandLineProcessor.addCommandLineOption("updateReason", 1, "A reason for creating this version of the module (required only if runType is Release and the release arises because of changes to the converter as opposed to a new release from he text suppliers).", null, "Unknown", false)
   }
 
 
@@ -115,7 +114,7 @@ object GeneralEnvironmentHandler
   private fun determineModuleNameTestRelatedSuffix ()
   {
     ConfigData["stepModuleNameTestRelatedSuffix"] =
-      if ("release" == ConfigData["stepRunType"]!!)
+      if ("release" in ConfigData["stepRunType"]!!.lowercase())
         ""
       else
         "_" + ConfigData["stepRunType"]!! + "_" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")

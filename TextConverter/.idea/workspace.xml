@@ -10,33 +10,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9495aca-7970-4593-a7e0-92356b5adca5" name="Changes" comment="Misc changes after IDEA messed things up.">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorOsisTweaker.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dummyMandatoryValuesForUseWhereSwordConfigHasBeenSupplied.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Support/converterUserGuide.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Support/converterUserGuide.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/CallablePreprocessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/PreprocessorHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/CompileTimeConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/CompileTimeConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/DbgController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/DbgController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/GeneralEnvironmentHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GeneralEnvironmentHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RepositoryPackageHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterRepositoryPackageHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ReversificationData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ReversificationData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TestController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TestController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterEnhancedUsxValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterEnhancedUsxValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterFeatureSummaryGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterFeatureSummaryGenerator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorBase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEnhancedUsxToOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEnhancedUsxToOsis.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEvaluateVersificationSchemes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEvaluateVersificationSchemes.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorOsisToSword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorOsisToSword.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorReversification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorReversification.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorVLToRawUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorVLToRawUsx.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/VersionAndHistoryHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/VersionAndHistoryHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleBookAndFileMapperRawUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleBookAndFileMapperRawUsx.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/commandlineprocessor/CommandLineProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/commandlineprocessor/CommandLineProcessor.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/configdata/ConfigData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/configdata/ConfigData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/configdata/StandardFileLocations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/configdata/StandardFileLocations.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/historyTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/historyTemplate.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/iso/Unicode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/iso/Unicode.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/MiscellaneousUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/MiscellaneousUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/Zip.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/Zip.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/shared/FeatureIdentifier.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/shared/FeatureIdentifier.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/PerTextRepositoryOrganisation/Dbl.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/PerTextRepositoryOrganisation/Dbl.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/_readMeFirst_.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/_readMeFirst_.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/commonRoot.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/commonRoot.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/step.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/historyTemplate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/swordTemplateConfigFile.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/swordTemplateConfigFile.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_amh_NASV/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_arb_KEH/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ceb_APD/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ces_SNC/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ckb_KSS/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/cmn-Hans.ldml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/styles.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/versification.vrs" beforeDir="false" />
@@ -183,6 +187,9 @@
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/ZEC.usx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/ZEP.usx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/stepRawTextVersification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_dan_BPH/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/PSA_modified.usx" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/PSA_modified.usx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/stepRawTextVersification.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/Metadata/Miscellaneous/eng_en.ldml" beforeDir="false" />
@@ -258,9 +265,51 @@
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/ZEC.usx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/ZEP.usx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/stepRawTextVersification.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/Metadata/config.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/Metadata/config.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/Metadata/history.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/RawUsx/EXO.usx" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/RawUsx/EXO.usx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIrV/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ewe_BEE/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_fra_BDS/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_gbr_GAW/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hau_SRK/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_heb_HD/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hil_APD/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hin_HSS/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hne_NNC/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hrv_KOK/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ibo_BIU/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ind_FAYH/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ita_PEV/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_jpn_JCB/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kik_GKY/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kor_KLB/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lin_MNB/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lug_EEEE/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_mal_MCV/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nde_BEN/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nob_ELB/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nya_CCL/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pes_PCB/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pol_PSZ/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_por_NVI/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ron_NTR/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARS/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARSA/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARST/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_NRT/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_slv_ZNZ/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_sna_BDSC/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVI/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVIC/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swe_NB/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swh_NEN/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_tgl_ASD/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_tha_TNCV/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_twi_NAK/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_vie_KTHD/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_yom_NWM/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_yor_BMYO/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/__US_VERSION_NOT_USED_Text_eng_NIVUS/Metadata/license.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/1CH.usx" beforeDir="false" />
@@ -432,19 +481,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/TextConverter/src/main/kotlin&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.23793103&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/TextConverter/src/main/kotlin",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.23793103",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\TextConverter\src\main\kotlin" />
@@ -455,8 +505,11 @@
       <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\TextConverter\src\main" />
       <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\TextConverter\src" />
     </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Kotlin.eng_QQQTest">
+  <component name="RunManager" selected="Kotlin.eng_ESV">
     <configuration name="Temp" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
@@ -513,7 +566,7 @@
     <configuration name="eng_ESV" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder Miscellaneous\Text_eng_ESV -runType release" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder Miscellaneous\Text_eng_ESV -runType majorRelease -updateReason &quot;Miscellanous tagging changes&quot; -manualOsis2mod" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -626,6 +679,11 @@
           <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
           <line>58</line>
           <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEvaluateVersificationSchemes.kt</url>
+          <line>188</line>
+          <option name="timeStamp" value="241" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

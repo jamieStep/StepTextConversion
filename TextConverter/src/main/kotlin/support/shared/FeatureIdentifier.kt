@@ -268,7 +268,7 @@ class FeatureIdentifier
   private fun getAttribute (reader: XMLStreamReader, attribute: String): String?
   {
     var res: String? = null
-    for (i in 0 until reader.attributeCount)
+    for (i in 0..< reader.attributeCount)
       if (attribute == reader.getAttributeLocalName(i))
       {
         res = reader.getAttributeValue(i)
@@ -290,7 +290,7 @@ class FeatureIdentifier
       XMLStreamConstants.SPACE,
       XMLStreamConstants.CHARACTERS,
       XMLStreamConstants.COMMENT ->
-        doNothing()
+        return
       
       
       XMLStreamConstants.START_ELEMENT ->
@@ -298,7 +298,7 @@ class FeatureIdentifier
 
       
       XMLStreamConstants.END_ELEMENT ->
-        processEndElement(reader)
+        return // processEndElement(reader)
     }
   }
     
@@ -326,16 +326,16 @@ class FeatureIdentifier
       
       "note" ->
       {
-        if (!m_HasFootnotes || !m_HasScriptureReferences) {
-          val s = getAttribute(reader, "type")
+        if (!m_HasFootnotes || !m_HasScriptureReferences || !m_HasVariants)
+        {
+          val s = getAttribute(reader, "type")!!.substring(0, 3).lowercase()
 
-          if ("crossReference".equals(s, ignoreCase = true))
+          if (!m_HasScriptureReferences && "cro" == s) // crossReference
             m_HasScriptureReferences = true
+          else if (!m_HasVariants && "var" == s)
+            m_HasVariants = true
           else
             m_HasFootnotes = true
-
-          if ("variant".equals(s, ignoreCase = true)) m_HasVariants = true
-
         }
       } // note
       
@@ -385,7 +385,7 @@ class FeatureIdentifier
   /****************************************************************************/
   /* Many of the following are used to set flags in the Sword config file.  In
      some (all) cases, the flags have to be set appropriately in order to
-     enable relevant features in the dispayed text -- so, for example, if your
+     enable relevant features in the displayed text -- so, for example, if your
      text contains non-canonical headings, but you omit to tell Sword as much,
      non-canonical headings are not displayed.
   

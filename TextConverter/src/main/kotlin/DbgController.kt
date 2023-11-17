@@ -41,7 +41,7 @@ object DbgController: TextConverterProcessorBase()
       commandLineProcessor.addCommandLineOption(name, 1, description + commonText, null, "no", false)
     }
 
-    commandLineProcessor.addCommandLineOption("dbgAddDebugAttributesToNodes", 1, "Add debug attributes to nodes.", null, "No", false)
+    commandLineProcessor.addCommandLineOption("dbgAddDebugAttributesToNodes", 0, "Add debug attributes to nodes.", null, "no", false)
     addDisplayOption("dbgDisplayReversificationRows", "Display selected reversification rows")
   }
 }

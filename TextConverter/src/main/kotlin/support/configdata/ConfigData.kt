@@ -67,12 +67,12 @@ import kotlin.reflect.KFunction
  * pairs.
  *
  * The processing automatically sets up a lot of defaults on your behalf.  You
- * will also need, in your Metadata folder, a file called config.conf.  You
+ * will also need, in your Metadata folder, a file called step.conf.  You
  * use this to define any parameters which absolutely _have_ to be set up on a
  * per-text basis (copyright information being an obvious example), or to
  * override the defaults.  You can put these definitions directly into
- * config.conf, or you can put them into other files which you refer to from
- * config.conf via an 'include' mechanism -- see below.
+ * step.conf, or you can put them into other files which you refer to from
+ * step.conf via an 'include' mechanism -- see below.
  *
  *
  *
@@ -114,7 +114,7 @@ import kotlin.reflect.KFunction
  * in which configuration information is, or is not, split across files.  It
  * requires that it *sees* the information in the appropriate order, not that
  * * it sees it in any particular file.  The only requirement is that there be
- * a config.conf file to act as a starting point.
+ * a step.conf file to act as a starting point.
  *
  *
  *
@@ -429,7 +429,7 @@ object ConfigData
            as probably indicating an error.  However, it is convenient to accept
            this and simply not load the file a second time.  (Slightly obscure
            rationale: this lets me create a bog-standard base configuration file
-           in the resources section and then copy this as the template config.conf
+           in the resources section and then copy this as the template step.conf
            file for each new text.  To minimise the number of changes required to
            that template file, it is convenient if the template file $include's
            itself, but I want the file to be included only once. */
@@ -708,6 +708,19 @@ object ConfigData
 
     /****************************************************************************/
     /**
+    *  Returns all of the keys from the metadata.
+    *
+    *  @return Keys.
+    */
+
+    fun getKeys () : Set<String>
+    {
+      return m_Metadata.keys
+    }
+
+
+    /****************************************************************************/
+    /**
     * The configuration data may include lines which are simply to be copied
     * as-is to the Sword configuration file.  This returns that list.
     *
@@ -876,7 +889,7 @@ object ConfigData
 
     private fun getInternal (key: String, nullsOk: Boolean): String?
     {
-      //Dbg.d(key, "stepBibleNameVernacular")
+      //Dbg.d(key, "stepTextDirection")
 
       val calculated = getCalculatedValue(key)
       if (null != calculated && "@get" !in calculated) return calculated
@@ -2068,8 +2081,8 @@ object ConfigData
 
   fun calc_stepTextDirectionForSword (): String
   {
-    val x = getInternal("stepTextDirection", false)!!.uppercase()
-    return if ("LTR" == x || "LtoR" == x) "LtoR" else "RtoL"
+    val x = (getInternal("stepTextDirection", true) ?: "LTR").uppercase()
+    return if ("LTR" == x || "LTOR" == x) "LtoR" else "RtoL"
   }
 
 

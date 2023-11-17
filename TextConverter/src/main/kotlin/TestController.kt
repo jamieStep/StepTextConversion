@@ -94,6 +94,14 @@ open class TestController: TextConverterProcessorBase() // Base class serves to 
   /****************************************************************************/
   override fun pre (): Boolean
   {
+    when (ConfigData["stepRunType"]!!.lowercase())
+    {
+      "release"      -> { ConfigData["stepReleaseType"] = "tbd"  ; ConfigData.delete("stepRunType"); ConfigData["stepRunType"] = "release" }
+      "majorrelease" -> { ConfigData["stepReleaseType"] = "major"; ConfigData.delete("stepRunType"); ConfigData["stepRunType"] = "release" }
+      "minorrelease" -> { ConfigData["stepReleaseType"] = "minor"; ConfigData.delete("stepRunType"); ConfigData["stepRunType"] = "release" }
+      else           -> { val x = ConfigData["stepRunType"]!!.lowercase(); ConfigData.delete("stepRunType"); ConfigData["stepRunType"] = x }
+    }
+
     instance().initialise()
     return true
   }
@@ -157,14 +165,16 @@ open class TestController: TextConverterProcessorBase() // Base class serves to 
 
     /**************************************************************************/
     /* +++ Change m_Options as appropriate.  Make sure you always include
-       NoTest. */
+       Release. */
 
     private val m_Options = TreeMap<String, TestController>(String.CASE_INSENSITIVE_ORDER)
      .apply {
-      put("Release", TestControllerRelease)   // Always retain this entry.
-      put("EvalOnly", TestControllerEvalOnly) // Always retain this entry.
-      put("Sami",TestControllerSami)
-      put("CrosswireRelaxed", TestControllerCrosswireRelaxed)
+        put("Release", TestControllerRelease)   // Always retain this entry.
+        put("MajorRelease", TestControllerRelease)   // Always retain this entry.
+        put("MinorRelease", TestControllerRelease)   // Always retain this entry.
+        put("EvalOnly", TestControllerEvalOnly) // Always retain this entry.
+        put("Sami",TestControllerSami)
+        put("CrosswireRelaxed", TestControllerCrosswireRelaxed)
     }
 
     private var m_Instance: TestController? = null

@@ -29,6 +29,7 @@ object Unicode
 
   fun getTextDirection (s: String): String
   {
+    if (s.isEmpty()) return "LTR"
     return if (textDirectionIsRtl(s[0].toChar().code)) "RTL" else "LTR"
   }
 

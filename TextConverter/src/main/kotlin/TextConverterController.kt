@@ -30,6 +30,7 @@ class TextConverterController
     fun process (args: Array<String>): Boolean
     {
       initialiseCommandLineArgsAndConfigData(args)
+      determineProcessorList()
       if (!doPre()) return false
       return doProcess()
     }
@@ -43,14 +44,38 @@ class TextConverterController
 
     private fun collectPermittedCommandLineParameters ()
     {
-        //CommandLineProcessor.addCommandLineOption("permitComplexChanges", 1, "Permit eg reversification Moves (may be ruled out by licensing conditions).", listOf("Yes", "No", "AsLicence"), "AsLicence", false)
-
         CommandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
-        CommandLineProcessor.addCommandLineOption("help", 0, "Get help.", null, null, false)
+        CommandLineProcessor.addCommandLineOption("help", 0, "Get help.", null, "no", false)
         GeneralEnvironmentHandler.getCommandLineOptions(CommandLineProcessor)
-        TextConverterProcessorEvaluateVersificationSchemes.getCommandLineOptions(CommandLineProcessor)
 
-        m_Processors.forEach { it.second.getCommandLineOptions(CommandLineProcessor) }
+        (C_ProcessorsCommonPre.toSet() +
+         C_ProcessorsForCreatingModule.toSet() +
+         C_ProcessorsForEvaluationOnly.toSet() +
+         C_ProcessorsForOsisInput.toSet() +
+         C_ProcessorsForUsxInput.toSet() +
+         C_ProcessorsForVlInput.toSet() +
+         C_ProcessorsStartingFromEnhancedUsx.toSet()).forEach { it.getCommandLineOptions(CommandLineProcessor) }
+    }
+
+
+    /******************************************************************************************************************/
+    /* Determine the list of processors to be run. */
+
+    private fun determineProcessorList ()
+    {
+      if (ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "No"))
+      {
+        m_ProcessorsForThisRun = C_ProcessorsForEvaluationOnly
+        return
+      }
+
+      m_ProcessorsForThisRun = when (val inputFolderName = StandardFileLocations.getRawInputFolderType().lowercase().replace("raw", ""))
+      {
+        "usx"  -> C_ProcessorsForUsxInput
+        "osis" -> C_ProcessorsForOsisInput
+        "vl"   -> C_ProcessorsForVlInput
+        else   -> throw StepException("Unknown raw data type: $inputFolderName.")
+      }
     }
 
 
@@ -59,8 +84,7 @@ class TextConverterController
 
     private fun doPre(): Boolean
     {
-        if (!runControlTypeContains(RunControlType.OsisInput)) VersionAndHistoryHandler.createHistoryFileIfNecessaryAndWorkOutVersionDetails()
-        m_Processors.filter { runProcessor(it) }.forEach { if (!it.second.pre()) return false }
+        m_ProcessorsForThisRun.forEach { if (!it.pre()) return false }
         return true
     }
 
@@ -70,12 +94,9 @@ class TextConverterController
 
     private fun doProcess(): Boolean
     {
-        m_Processors.forEach {
-            if (runProcessor(it))
-            {
-                if (!doProcess(it.second)) return false
-                Logger.announceAll(true)
-            }
+        m_ProcessorsForThisRun.forEach {
+          if (!doProcess(it)) return false
+            Logger.announceAll(true)
         }
 
         return true
@@ -163,15 +184,8 @@ class TextConverterController
           }
 
         StandardFileLocations.initialise(rootFolderPath)
-
-        if (File(StandardFileLocations.getConfigFilePath()).exists())
-          ConfigData.load(StandardFileLocations.getConfigFileName())
-        else if (!runControlTypeContains(RunControlType.OsisInput))
-          throw StepException("Can't find config file: ${StandardFileLocations.getConfigFilePath()}.")
-
+        ConfigData.load(StandardFileLocations.getStepConfigFileName())
         CommandLineProcessor.copyCommandLineOptionsToConfigData("TextConverter")
-        if (ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "No"))
-          C_RunControlType = RunControlType.EvaluateSchemesOnly
 
 
 
@@ -184,34 +198,72 @@ class TextConverterController
 
 
    /******************************************************************************************************************/
-   /* Determines whether a particular processor should run. */
+   /* Lists of processors in the order in which they run. */
 
-   private fun runProcessor (selector: Pair<RunControlType, TextConverterProcessorBase>): Boolean
-   {
-     return 0 != (selector.first.type and C_RunControlType.type) && selector.second.runMe()
-   }
+   private var m_ProcessorsForThisRun: List<TextConverterProcessorBase> = listOf()
 
 
    /******************************************************************************************************************/
-   /* Lists of processors in the order in which they run. */
+   /* Everything needs this, and they need to run early. */
 
-   private val C_ProcessorsForFullConversionRun = listOf(
-       Pair(RunControlType.All,                 DbgController),
-       Pair(RunControlType.All,                 TestController.instance()),
-       Pair(RunControlType.EvaluateSchemesOnly, TextConverterProcessorEvaluateVersificationSchemes),
-       Pair(RunControlType.UsxInput,            TextConverterProcessorVLToEnhancedUsx),
-       Pair(RunControlType.UsxInput,            TextConverterProcessorUsxToEnhancedUsx1),
-       Pair(RunControlType.UsxInput,            TextConverterProcessorReversification), // Need to reconsider this?
-       Pair(RunControlType.UsxInput,            TextConverterProcessorUsxToEnhancedUsx2),
-       Pair(RunControlType.UsxInput,            TextConverterFeatureSummaryGenerator),
-       Pair(RunControlType.UsxInput,            TextConverterEnhancedUsxValidator),
-       Pair(RunControlType.UsxInput,            TextConverterProcessorEnhancedUsxToOsis),
-       Pair(RunControlType.ModuleGenerator,     TextConverterTaggingHandler),
-       Pair(RunControlType.ModuleGenerator,     TextConverterProcessorOsisToSword),
-       Pair(RunControlType.ModuleGenerator,     TextConverterRepositoryPackageHandler)
+   private val C_ProcessorsCommonPre = listOf(
+     DbgController,
+     TestController.instance() // This _does_ need to be .instance().
    )
 
 
-    /******************************************************************************************************************/
-    private var m_Processors = C_ProcessorsForFullConversionRun
+   /******************************************************************************************************************/
+   /* Used where we're creating modules.  Needs to run after all other processing. */
+
+   private val C_ProcessorsForCreatingModule = listOf(
+     TextConverterOsisTweaker,
+     TextConverterTaggingHandler,
+     TextConverterProcessorOsisToSword,
+     TextConverterRepositoryPackageHandler
+   )
+
+
+   /******************************************************************************************************************/
+   /* What it says on the tin. */
+
+   private val C_ProcessorsForEvaluationOnly = C_ProcessorsCommonPre + listOf(
+     TextConverterProcessorEvaluateVersificationSchemes
+   )
+
+
+   /******************************************************************************************************************/
+   /* Anything where previous processing has created enhanced USX. */
+
+   private val C_ProcessorsStartingFromEnhancedUsx = listOf(
+     TextConverterProcessorUsxToEnhancedUsx1,
+     TextConverterProcessorReversification, // Need to reconsider this?
+     TextConverterProcessorUsxToEnhancedUsx2,
+     TextConverterFeatureSummaryGenerator,
+     TextConverterEnhancedUsxValidator,
+     TextConverterProcessorEnhancedUsxToOsis
+   ) + C_ProcessorsForCreatingModule
+
+
+   /******************************************************************************************************************/
+   /* When the starting point is OSIS. */
+
+   private val C_ProcessorsForOsisInput = C_ProcessorsCommonPre + listOf(
+     TextConverterProcessorReversification // Need to reconsider this?
+   ) + C_ProcessorsForCreatingModule
+
+
+
+   /******************************************************************************************************************/
+   /* When the starting point is USX. */
+
+   private val C_ProcessorsForUsxInput = C_ProcessorsCommonPre + listOf(
+     TextConverterProcessorUsxToEnhancedUsx1) + C_ProcessorsStartingFromEnhancedUsx
+
+
+   /******************************************************************************************************************/
+   /* When the starting point is VL. */
+
+   private val C_ProcessorsForVlInput = C_ProcessorsCommonPre + listOf(
+     TextConverterProcessorVLToEnhancedUsx
+   ) + C_ProcessorsStartingFromEnhancedUsx
 }

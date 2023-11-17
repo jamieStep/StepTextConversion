@@ -1,5 +1,7 @@
 package org.stepbible.textconverter.support.miscellaneous
 
+import java.awt.Toolkit
+import java.awt.datatransfer.StringSelection
 import org.jasypt.util.text.BasicTextEncryptor
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
@@ -62,6 +64,21 @@ object MiscellaneousUtils
        }
 
        return res
+    }
+
+
+    /**********************************************************************************************************************/
+    /**
+    * Does what it says on the tin.
+    *
+    * @param text Text to be copied to clipboard.
+    */
+
+    fun copyTextToClipboard (text: String)
+    {
+      val stringSelection = StringSelection(text)
+      val clipboard = Toolkit.getDefaultToolkit().systemClipboard
+      clipboard.setContents(stringSelection, null)
     }
 
 

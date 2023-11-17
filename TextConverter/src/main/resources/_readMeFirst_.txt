@@ -73,7 +73,7 @@
 #! actually, you would _expect_ to need to alter -- things like language codes,
 #! copyright information etc); but the majority of things will not change from
 #! one text to another.  Details of the things you are most likely to need to
-#! change are held in the file config.conf, and you should refer to that for
+#! change are held in the file step.conf, and you should refer to that for
 #! more details, and copy and tailor it as the basis of your own configuration.
 #!
 #! This present file gives an overview of the configuration data, and also
@@ -103,7 +103,7 @@
 #!
 #! The simplest way to approach the configuration data is probably to read
 #! the remainder of the present file, which describes the basics of how
-#! configuration data is represented.  Then look at config.conf.  Only if you
+#! configuration data is represented.  Then look at step.conf.  Only if you
 #! determine that you need to configure other things would you need to have
 #! recourse to the other built-in files.
 #!
@@ -122,11 +122,11 @@
 #! this in any way you see fit -- the processing does not ascribe any meaning
 #! to the manner in which the statements are split up among files.
 #!
-#! You must have a file called config.conf in the Metadata folder for your
+#! You must have a file called step.conf in the Metadata folder for your
 #! text.  This forms the root of the configuration collection.  You create
-#! this file by copying config.conf from the Resources collection and then
+#! this file by copying step.conf from the Resources collection and then
 #! modifying it to suit the text you are processing.  Details of what to do
-#! appear within config.conf itself.  From here you can include other files
+#! appear within step.conf itself.  From here you can include other files
 #! if you wish -- and they, in turn, may include yet other files, to any
 #! reasonable depth.
 #!
@@ -308,7 +308,7 @@
 #! locate the various items we might need.  For example, the processing needs to
 #! know the English name of the text being processed.  For an arbitrary text we
 #! might have to work that out for ourselves and perhaps store it in our
-#! config.conf file.  For DBL (which presently is the one source for which we do
+#! step.conf file.  For DBL (which presently is the one source for which we do
 #! have the necessary processing and configuration information) the processing
 #! can pick it up automatically from a particular field in the metadata.xml file.
 #!
@@ -380,6 +380,37 @@
 #!
 #!
 #!
+#! History lines
+#! =============
+#!
+#! The Sword configuration file is supposed to include History lines which
+#! give the change history for a module.  The processing itself manages these
+#! lines, and updates the step.conf file at the end of each run, so that the
+#! history lines used most recently are available for use in future runs.
+#!
+#! You can seed step.conf with an initial collection of history lines (so long
+#! as you use the correct format), although there is no need for you to do so;
+#! and you can also modify the history rows which appear in the file at any time
+#! so that the revised lines will be used as input next time round.
+#!
+#! A couple of caveats apply, however:
+#!
+#! - You probably don't want to use the @(...) mechanism to incorporate
+#!   looked-up values into history lines at run time.  This _will_ work, but
+#!   when I write the history lines back into the file, I will write the
+#!   _expanded_ version, and so the @(...) will not be available for future
+#!   runs.
+#!
+#! - If you do opt to put history lines into your initial configuration
+#!   information, put them into step.conf, not into some file included from
+#!   it.  When I write the history lines back, they will end up in step.conf,
+#!   and things will get confusing if you also had history lines in some other
+#!   file.
+#!
+#!
+#!
+#!
+#!
 #! Miscellaneous
 #! =============
 #!
@@ -401,6 +432,18 @@
 #! Obtaining data from external sources
 #! ====================================
 #!
-
+#! Setting up configuration information can be quite an onerous undertaking,
+#! particularly if you are having to deal with many texts at the same time.
+#!
+#! Where texts are coming from a common source, they may well come with
+#! standardised metadata (this is the case with DBL, for instance), and it
+#! may be useful to be able to transfer some of the information direct from this
+#! metadata, rather than have to transcribe it manually.
+#!
+#! At the time of writing, DBL is, in fact, the only source which supplies
+#! standardised metadata, and we do indeed have facilities to extract data
+#! from their metadata.xml.  See Dbl.conf for details, and also to get an idea
+#! of what may be involved if you wish to set up something similar for some
+#! other data source in future.
 #!
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
