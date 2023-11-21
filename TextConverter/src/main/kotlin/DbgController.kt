@@ -15,7 +15,7 @@ import org.stepbible.textconverter.support.configdata.StandardFileLocations
  * @author ARA "Jamie" Jamieson
 */
 
-object DbgController: TextConverterProcessorBase()
+object DbgController: TextConverterProcessorBase
 {
   /****************************************************************************/
   /****************************************************************************/

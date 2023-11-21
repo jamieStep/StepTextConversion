@@ -43,7 +43,7 @@ import java.io.File
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterOsisTweaker : TextConverterProcessorBase()
+object TextConverterOsisTweaker : TextConverterProcessorBase
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -63,7 +63,6 @@ object TextConverterOsisTweaker : TextConverterProcessorBase()
   /****************************************************************************/
   override fun pre (): Boolean
   {
-    deleteFolder(StandardFileLocations.getOsisFolderPath())
     if ("osis" == StandardFileLocations.getRawInputFolderType())
       File(StandardFileLocations.getRawInputFolderPath()).copyRecursively(File(StandardFileLocations.getOsisFolderPath()))
     return true
@@ -140,7 +139,9 @@ object TextConverterOsisTweaker : TextConverterProcessorBase()
       changed = true
     }
 
-    Dom.findNodesByName(m_Document, "note").filter { null == it.previousSibling || "hi" != Dom.getNodeName(it.previousSibling) } .forEach { insertNode(it) }
+    Dom.findNodesByName(m_Document, "note")
+      .filter { null != it.previousSibling && "#text" != Dom.getNodeName(it.previousSibling) && "," == it.previousSibling.textContent.trim() }
+      .forEach { insertNode(it) }
 
     return changed
   }

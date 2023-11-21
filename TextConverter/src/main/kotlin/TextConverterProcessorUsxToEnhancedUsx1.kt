@@ -218,7 +218,7 @@ import java.time.format.DateTimeFormatter
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
+object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
 {
     /******************************************************************************************************************/
     override fun banner (): String
@@ -258,7 +258,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
 
 
     /******************************************************************************************************************/
-    /* runPreprocessor below runs the standalong JAR, .exe, etc which runs over raw USX files and creates modified
+    /* runPreprocessor below runs the standalone JAR, .exe, etc which runs over raw USX files and creates modified
        versions where necessary.  If stepCallablePreprocessorFilePath is defined, it must point to a JAR which is passed
        DOMs one at a time and updates them in memory.  This is an alternative to the work done by runPreprocessor, and
        takes precedence -- even if the standalone JAR, .exe or whatever exists, it is not run. */
@@ -307,6 +307,11 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase()
 
     private fun processFile (bookName: String, rawUsxPath: String, document: Document)
     {
+        /**********************************************************************/
+        //val a = Dom.findNodesByAttributeName(document, "verse", "number")
+
+
+
         /**********************************************************************/
         fun x () { if (Logger.getNumberOfErrors() > 0) panic() }
 

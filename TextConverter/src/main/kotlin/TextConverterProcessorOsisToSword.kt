@@ -29,7 +29,7 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
+object TextConverterProcessorOsisToSword : TextConverterProcessorBase
  {
   /****************************************************************************/
   /****************************************************************************/
@@ -51,6 +51,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
   {
     commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
     commandLineProcessor.addCommandLineOption("manualOsis2mod", 0, "Run osis2mod manually (useful where osis2mod fails to complete under control of the converter).", null, "n", false)
+    commandLineProcessor.addCommandLineOption("forceOsis2modType", 0, "Force a particular version of osis2mod to be used (as opposed to letting the converter decide).", listOf("crosswire", "step"), "n", false)
   }
 
 
@@ -257,11 +258,16 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
 
 
     /**************************************************************************/
+    /* $$$ The ValueAddedSupplier line below is the way to go in future.  I'm
+       not changing the others yet, because the processing upon which they rely
+       is likely to change -- particularly the reversification stuff. */
+
     val texts: MutableList<String> = ArrayList()
     var reversificationDetails: String? = null
+    val x = ValueAddedSupplier.getConsolidatedDetailsForStepAbout(); if (null != x) texts.add(x)
+
     if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Morphology"))
     if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Strongs"))
-    if (ConfigData.getAsBoolean("stepAddedValueExtendedTagging", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_ExtendedTagging"))
     if (ConfigData.getAsBoolean("stepAddedValueReversification", "No"))
     {
       texts.add(Translations.stringFormatWithLookup("V_AddedValue_Reversification"))
@@ -279,7 +285,8 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
       text += java.lang.String.join("; ", texts)
     }
 
-    if (null != reversificationDetails) text += "¬¬$reversificationDetails"
+    if (null != reversificationDetails) text += reversificationDetails
+    if (text.isNotEmpty()) text = "¬¬$text."
     stepInfo = stepInfo.replace("@(AddedValue)", text)
 
 
@@ -481,6 +488,8 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
   {
     /**************************************************************************/
     addCalculatedValuesToMetadata()
+    val x = ValueAddedSupplier.getConsolidatedDetailsForSwordConfigFileComments()
+    if (null != x) ConfigData["stepAddedValueLinesForSwordConfigComments"] = x
 
 
 
@@ -495,12 +504,9 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
        in the Metadata folder. */
 
     val configFile = File(StandardFileLocations.getSwordConfigFilePath(m_ModuleName))
-
+    VersionAndHistoryHandler.process()
     if ("osis" == StandardFileLocations.getRawInputFolderType())
-    {
-      VersionAndHistoryHandler.process()
       return
-    }
 
 
 
@@ -530,7 +536,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase()
       if (line.startsWith("#!")) continue // Internal comment only.
       line = line.split("#!")[0].trim() // Remove any trailing comment.
       line = line.replace("@reversificationMap", m_ReversificationMap) // Could use ordinary dollar expansions here, but it's too slow because the map is so big.
-      Dbg.d(line)
+      //Dbg.d(line)
       writer.write(ConfigData.expandReferences(line, false)!!)
       writer.write("\n")
     }

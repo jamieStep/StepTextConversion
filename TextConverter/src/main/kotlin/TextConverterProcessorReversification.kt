@@ -82,7 +82,7 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorReversification: TextConverterProcessorBase ()
+object TextConverterProcessorReversification: TextConverterProcessorBase
 {
   /****************************************************************************/
   override fun banner (): String

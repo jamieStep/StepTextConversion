@@ -156,6 +156,11 @@ class TextConverterController
 
 
         /**************************************************************************/
+        /* We look for a particular environment variable which may contain
+           configuration settings.  These may be of the form key=val or key#=val,
+           and are treated in the normal way.  Because they are loaded first, it
+           means that anything else at all can override key=val settings. */
+
         ConfigData.loadFromEnvironmentVariable()
 
 
@@ -235,9 +240,6 @@ class TextConverterController
    /* Anything where previous processing has created enhanced USX. */
 
    private val C_ProcessorsStartingFromEnhancedUsx = listOf(
-     TextConverterProcessorUsxToEnhancedUsx1,
-     TextConverterProcessorReversification, // Need to reconsider this?
-     TextConverterProcessorUsxToEnhancedUsx2,
      TextConverterFeatureSummaryGenerator,
      TextConverterEnhancedUsxValidator,
      TextConverterProcessorEnhancedUsxToOsis
@@ -257,7 +259,9 @@ class TextConverterController
    /* When the starting point is USX. */
 
    private val C_ProcessorsForUsxInput = C_ProcessorsCommonPre + listOf(
-     TextConverterProcessorUsxToEnhancedUsx1) + C_ProcessorsStartingFromEnhancedUsx
+     TextConverterProcessorUsxToEnhancedUsx1,
+     TextConverterProcessorReversification, // Need to reconsider this?
+     TextConverterProcessorUsxToEnhancedUsx2) + C_ProcessorsStartingFromEnhancedUsx
 
 
    /******************************************************************************************************************/

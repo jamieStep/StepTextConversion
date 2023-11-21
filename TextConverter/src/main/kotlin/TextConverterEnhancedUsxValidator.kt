@@ -55,7 +55,7 @@ import org.w3c.dom.Node
 * @author ARA 'Jamie' Jamieson
 */
 
-object TextConverterEnhancedUsxValidator: TextConverterProcessorBase ()
+object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
 {
   /****************************************************************************/
   override fun banner (): String
@@ -779,7 +779,6 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase ()
       val node = allNodes[i]
       if ("#text" == Dom.getNodeName(node) &&                                // The content is limited to text nodes.
           !Usx.isInherentlyNonCanonicalTagOrIsUnderNonCanonicalTag(node) &&  // And they're excluded if we know for sure they're non-canonical.
-          //!Dom.hasAncestorNamed(node, "para", "d") && // And we need to exclude canonical titles, because these get faffed around with.
           !Dom.hasAttribute(node, "_X_wasCanonicalTitle"))       // And by the same token, we need to exclude things which _were_ canonical titles, but have had to be changed to plain-ish text
       {
         res.append(" ")

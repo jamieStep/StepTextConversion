@@ -12,7 +12,9 @@ import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import java.io.ByteArrayOutputStream
 import java.io.File
+import java.io.PrintStream
 import kotlin.reflect.full.createInstance
 
 
@@ -295,6 +297,28 @@ object MiscellaneousUtils
 
     /******************************************************************************************************************/
     /**
+    * Runs a given function, captureing stderr and returning anything sent to stderr as a string.
+    *
+    * @param fn Function to run.
+    * @return Anything sent to stderr.
+    */
+
+    fun capturingStderr (fn: () -> Any): String
+    {
+      val byteArrayOutputStream = ByteArrayOutputStream()
+      val printStream = PrintStream(byteArrayOutputStream)
+      val save = System.err
+      System.setErr(printStream)
+
+      fn()
+
+      System.setErr(save)
+      return byteArrayOutputStream.toString()
+    }
+
+
+    /******************************************************************************************************************/
+    /**
     * Reports the fact that a particular book is being processed.
     *
     * @param document The document being handled.
@@ -333,7 +357,7 @@ object MiscellaneousUtils
       if (null != workingDirectory) pb.directory(File(workingDirectory))
       val process = pb.start()
       process.waitFor()
-      Dbg.reportProgress("osis2mod completed")
+      Dbg.reportProgress("External command completed")
     }
 
 

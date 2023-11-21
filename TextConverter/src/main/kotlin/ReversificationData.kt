@@ -1431,7 +1431,6 @@ object ReversificationData
     if (!containsSlash && !containsPlus)
     {
       val rc = RefCollection.rdUsx(usxifyFromStepFormat(refAsString), dflt = null, resolveAmbiguitiesAs = "v")
-      //Dbg.d(bits[0].trim()) // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
       return Translations.stringFormat(Language.Vernacular, getTextKey(bits[0].trim())!!, rc)
     }
 

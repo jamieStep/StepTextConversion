@@ -12,7 +12,7 @@ import org.stepbible.textconverter.support.miscellaneous.Zip
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterRepositoryPackageHandler: TextConverterProcessorBase()
+object TextConverterRepositoryPackageHandler: TextConverterProcessorBase
  {
   /****************************************************************************/
   /****************************************************************************/

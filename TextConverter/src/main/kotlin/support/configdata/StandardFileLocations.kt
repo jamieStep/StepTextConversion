@@ -153,7 +153,7 @@ object StandardFileLocations
   fun getEnhancedUsxFilePattern (): Regex { return ".*\\.usx".toRegex() }
   fun getEnhancedUsxFolderPath (): String { return m_EnhancedUsxFolderPath }
   fun getMetadataFolderPath (): String { return m_MetadataFolderPath }
-  fun getOsisFilePath (): String { return StepFileUtils.getMatchingFilesFromFolder(m_OsisFolderPath, "(?i).*\\.xml".toRegex())[0].toString() }
+  fun getOsisFilePath (): String { val x = StepFileUtils.getMatchingFilesFromFolder(getOsisFolderPath(), "(?i).*\\.xml".toRegex()); return if (x.isNotEmpty()) x[0].toString() else Paths.get(getOsisFolderPath(), "osis.xml").toString() }
   fun getOsisFolderPath (): String { return m_OsisFolderPath }
   fun getOsisToModLogFilePath (): String { return m_OsisToModLogFilePath; }
   fun getOsis2modVersificationDetailsFilePath (): String { return "\$common/osis2modVersification.txt" }
@@ -165,6 +165,7 @@ object StandardFileLocations
   fun getRootFolderPath (): String { return m_RootFolderPath }
   fun getStepConfigFileName (): String { return "step.conf"; }
   fun getStepConfigFilePath (): String { return Paths.get(getMetadataFolderPath(), getStepConfigFileName()).toString() }
+  fun getStrongsCorrectionsFilePath (): String { return "\$common/strongsCorrections.txt"}
   fun getSwordConfigFolderPath (): String { return m_SwordConfigFolderPath }
   fun getSwordConfigFilePath (moduleName: String): String { return Paths.get(m_SwordConfigFolderPath, "$moduleName.conf").toString() }
   fun getSwordModuleFolderPath (): String { return m_SwordModuleFolderPath }

@@ -16,7 +16,7 @@ import org.stepbible.textconverter.support.stepexception.StepException
 
 fun main (args: Array<String>)
 {
-  //Dbg.setBooksToBeProcessed("Gen")
+  Dbg.setBooksToBeProcessed("Gen")
 
   try
   {

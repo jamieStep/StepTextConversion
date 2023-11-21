@@ -1,15 +1,20 @@
 package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
-import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
+import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.Translations
 import org.stepbible.textconverter.support.ref.RefKey
+import org.stepbible.textconverter.support.shared.SharedData
 import org.w3c.dom.Document
+import org.w3c.dom.Node
 import java.io.File
 import java.net.URL
+import java.util.*
 
 
 /******************************************************************************/
@@ -37,7 +42,7 @@ import java.net.URL
  * @author ARA Jamieson
  */
 
-object TextConverterTaggingHandler: TextConverterProcessorBase()
+object TextConverterTaggingHandler: TextConverterProcessorBase, ValueAddedSupplier()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -48,9 +53,40 @@ object TextConverterTaggingHandler: TextConverterProcessorBase()
   /****************************************************************************/
 
   /****************************************************************************/
+  /**
+  * Supplies a list of details appropriate for use as part of the StepAbout
+  * setting.
+  *
+  * @return Details.
+  */
+
+  override fun detailsForStepAbout (): List<String>?
+  {
+    if (!m_StrongsCorrectionsApplied) return null
+    return listOf(Translations.stringFormatWithLookup("V_AddedValue_RevisedStrongsTagging"))
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Supplies a list of details appropriate for use as part of the Sword
+  * config file administrative details.
+  *
+  * @return Details.
+  */
+
+  override fun detailsForSwordConfigFileComments (): List<String>?
+  {
+    if (!runMe()) return null
+    val text = "StepAdminRevisedStrongsTagging: " + (if (m_StrongsCorrectionsApplied) "Yes" else "Not required")
+    return listOf(text)
+  }
+
+
+  /****************************************************************************/
   override fun banner (): String
   {
-    return "Tagging USX"
+    return "Tagging OSIS"
   }
 
 
@@ -70,7 +106,7 @@ object TextConverterTaggingHandler: TextConverterProcessorBase()
   /****************************************************************************/
   override fun runMe (): Boolean
   {
-    return true
+    return SharedData.SpecialFeatures.hasStrongs() // This assumes that the only change we are making is to update Strong's.
   }
 
 
@@ -78,16 +114,94 @@ object TextConverterTaggingHandler: TextConverterProcessorBase()
   /****************************************************************************/
   override fun process (): Boolean
   {
-    return true // $$$ Temporary until we're in a position to do tagging.
-    describeDataFiles()
-    BibleStructure.OsisInstance().populateFromFile("C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Dbl\\Biblica\\Text_deu_XXX\\Osis\\deu_XXX_osis.xml", false)
-    //getReversificationMappings()
-    TextConverterFeatureSummaryGenerator.setHaveAppliedExtendedTagging(true)
-    ConfigData["stepAddedValueExtendedTagging"] = "Yes"
+    ValueAddedSupplier.register("ExtendedTagging", this)
+    handleStrongsCorrections()
     return true
+
+
+//    describeDataFiles()
+//    BibleStructure.OsisInstance().populateFromFile("C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Dbl\\Biblica\\Text_deu_XXX\\Osis\\deu_XXX_osis.xml", false)
+//    getReversificationMappings()
+//    TextConverterFeatureSummaryGenerator.setHaveAppliedExtendedTagging(true)
+//    ConfigData["stepAddedValueExtendedTagging"] = "Yes"
+//    return true
   }
 
 
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                    Private -- applying tagging                         **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  private fun handleStrongsCorrections ()
+  {
+    readStrongsCorrectionFile()
+    val doc = Dom.getDocument(StandardFileLocations.getOsisFilePath())
+    val strongsNodes = Dom.findNodesByAttributeName(doc, "w", "lemma")
+    if (strongsNodes.isEmpty()) return
+    strongsNodes.forEach { handleStrongsCorrections(it) }
+    if (m_StrongsCorrectionsApplied)
+      Dom.outputDomAsXml(doc, StandardFileLocations.getOsisFilePath(), null)
+
+    m_StrongsCorrections.clear() // No longer needed.
+  }
+
+
+  /****************************************************************************/
+  private fun handleStrongsCorrections (node: Node)
+  {
+    val lemma = Dom.getAttribute(node, "lemma")!!.trim()
+    var strongsNumbers = if (' ' in lemma) lemma.split("\\s+".toRegex()) else listOf(lemma)
+    var prefix = if (':' in strongsNumbers[0]) strongsNumbers[0].substring(0, strongsNumbers[0].indexOf(':') + 1) else null
+    if (null != prefix) strongsNumbers = strongsNumbers.map { it.replace(prefix, "") }
+    strongsNumbers = strongsNumbers.map { val x = m_StrongsCorrections[it]; if (null != x) { m_StrongsCorrectionsApplied = true; x } else it }
+    if (null != prefix) strongsNumbers.map { prefix + it }
+    val newVal = strongsNumbers.joinToString(" ")
+    Dom.setAttribute(node, "lemma", newVal)
+ }
+
+
+  /****************************************************************************/
+  private fun readStrongsCorrectionFile ()
+  {
+
+    StandardFileLocations.getInputStream(StandardFileLocations.getStrongsCorrectionsFilePath(), null)!!.bufferedReader()
+        .readLines()
+        .map { it.trim() }
+        .filter { it.isNotEmpty() && !it.startsWith("#") }
+        .forEach { val x = it.split("=>"); m_StrongsCorrections[x[0].trim()] = x[1].trim() }
+  }
+
+
+  /****************************************************************************/
+  private var m_StrongsCorrectionsApplied = false
+  private val m_StrongsCorrections = TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // The stuff below was based on some data which DIB was working on at some
+  // stage.  I'm not sure whether this is still a candidate for completion.
+  // I don't want to get rid of it until I know one way or the other.
   /****************************************************************************/
   fun analyse ()
   {

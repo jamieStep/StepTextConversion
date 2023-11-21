@@ -4,6 +4,7 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.*
@@ -146,8 +147,20 @@ import org.w3c.dom.Node
   /****************************************************************************/
 
    /****************************************************************************/
-  public fun canonicaliseAndPatchUp (document: Document)
+  fun canonicaliseAndPatchUp (document: Document)
   {
+    /**************************************************************************/
+    /* Turn char:xot, char:xnt and char:dc all to char:xt to simplify later
+       processing.  Having done this, we now have all of the char:xt nodes
+       we're ever going to have, so to save looking for them repeatedly in
+       later processing, we can simply build up some lists here. */
+
+    val charXts = canonicaliseCharXtsStandardiseStyles(document)
+    val charXtsHavingRefs = canonicaliseCharXtsFindCharXtsHavingRefs(document)
+    var charXtsLackingRefs = charXts - charXtsHavingRefs.toSet()
+
+
+
     /**************************************************************************/
     /* Add an indication of which verse 'owns' each cross-reference. */
 
@@ -156,21 +169,19 @@ import org.w3c.dom.Node
 
 
     /**************************************************************************/
-    /* Turn char:xot, char:xnt and char:dc all to char:xt to simplify later
-       processing.  Having done this, we now have all of the char:xt nodes
-       we're ever going to have, so to save looking for them repeatedly in
-       later processing, we can simply build up a list here. */
-
-    canonicaliseCharXtsStandardiseStyles(document)
-    val charXts = Dom.findNodesByAttributeValue(document, "char",  "style","xt")
-
-
-    /**************************************************************************/
     /* A given char:xt should contain _either_ a link-href attribute or one or
        more ref nodes (or, in fact, possibly neither).  To avoid later
        confusion, I drop href-link in favour of ref where both exist. */
 
-    canonicaliseCharXtsDealWithHrefLinkNodesWhichAlsoContainRefTags(charXts)
+    canonicaliseCharXtsDealWithHrefLinkNodesWhichAlsoContainRefTags(charXtsHavingRefs)
+
+
+
+    /**************************************************************************/
+    /* Where href-links remain, convert them to refs. */
+
+    var diffs = canonicaliseCharXtsConvertHrefsToRefs(charXts)
+    charXtsLackingRefs = charXtsLackingRefs - diffs.toSet()
 
 
 
@@ -179,30 +190,16 @@ import org.w3c.dom.Node
        more's the pity.  Where this is the case, try to work out the equivalent
        USX. */
 
-    canonicaliseCharXtsReliantUponVernacularText(charXts)
+    diffs = canonicaliseCharXtsReliantUponVernacularText(charXtsLackingRefs)
+    charXtsLackingRefs = charXtsLackingRefs - diffs.toSet()
 
 
 
     /**************************************************************************/
-    /* Check that any href-links still present are valid. */
+    /* We may possibly have some char:xt's which still don't actually contain
+       any ref tags.  Flag those. */
 
-    canonicaliseCharXtsValidateHrefLinks(charXts)
-
-
-
-    /**************************************************************************/
-    /* Attempt to standardise the node structure within char:xt by introducing
-       ref tags where necessary / possible. */
-
-    canonicaliseCharXts(charXts)
-
-
-
-    /**************************************************************************/
-    /* We may possibly have some char:xt's which don't actually contain any ref
-       tags.  Flag those. */
-
-    canonicaliseCharXtsHandleNodesLackingRefs(charXts)
+    canonicaliseCharXtsHandleNodesLackingRefs(charXtsLackingRefs)
 
 
 
@@ -212,13 +209,11 @@ import org.w3c.dom.Node
 
        First, ref tags are _supposed_ to have loc tags, because they tell us
        where to point to.  If there are any which _don't_ have loc tags, turn
-       them into plain text nodes.
+       them into plain text nodes. */
 
-       Note that unlike char:xt, we can't so readily build up a list of refs
-       which will serve as input for everything, because at least some of the
-       steps below remove refs or turn them into something else. */
-
-    canonicaliseCharXtsConvertLoclessNodesToTextOnly(document)
+    var refs = Dom.findNodesByName(document, "ref")
+    diffs = canonicaliseCharXtsConvertLoclessNodesToTextOnly(refs)
+    refs = refs - diffs.toSet()
 
 
 
@@ -230,14 +225,16 @@ import org.w3c.dom.Node
        are shown in pop-up windows, which don't readily accommodate vast
        amounts of text. */
 
-    canonicaliseRefsDropRefsFromMajorHeadings(document)
+    diffs = canonicaliseRefsDropRefsFromMajorHeadings(document)
+    refs = refs - diffs.toSet()
 
 
 
     /**************************************************************************/
     /* Convert any ref containing an invalid loc attribute to _X_contentOnly. */
 
-    canonicaliseRefsValidateLocAttributes(document)
+    diffs = canonicaliseRefsValidateLocAttributes(refs)
+    refs = refs - diffs.toSet()
 
 
 
@@ -246,7 +243,7 @@ import org.w3c.dom.Node
        sometimes they don't.  In these cases, attempt to split them out into
        separate ref tags. */
 
-    canonicaliseRefsSplitCollections(document)
+    refs = refs + canonicaliseRefsSplitCollections(refs)
 
 
 
@@ -254,14 +251,20 @@ import org.w3c.dom.Node
     /* Where refs point to non-existent locations, convert them to
        _X_contentOnly. */
 
-    canonicaliseRefsCheckTargetsExist(document)
+    diffs = canonicaliseRefsCheckTargetsExist(refs)
+    refs = refs - diffs.toSet()
 
 
 
     /**************************************************************************/
     /* References to single-chapter books have to include chapter=1. */
 
-    canonicaliseRefsConvertSingleChapterReferences(document)
+    canonicaliseRefsConvertSingleChapterReferences(refs)
+
+
+
+    /**************************************************************************/
+    canonicaliseRefsCompareLocAndContent(refs)
 
 
 
@@ -270,12 +273,8 @@ import org.w3c.dom.Node
        habit of enclosing _all_ footnotes in note:f, whereas really cross-
        references should be in note:x. */
 
-    canonicaliseNotesCorrectNoteStyles(document)
-
-
-
-    /**************************************************************************/
-    canonicaliseRefsCompareLocAndContent(document)
+    if ("Biblica".equals(ConfigData["stepFileSelectorForOwnerOrganisation"], ignoreCase = true))
+      canonicaliseNotesCorrectNoteStyles(document)
 
 
 
@@ -296,51 +295,38 @@ import org.w3c.dom.Node
   /****************************************************************************/
 
   /****************************************************************************/
-  /* It's convenient to convert xot, xnt and xdc all to xt so they can all be
-     handled the same way.
+  /* By the time we get here, href-link will have been removed from any nodes
+     which also contain ref nodes, since the two serve the same purpose, and
+     if any nodes have both, I make the assumption that ref can be relied upon.
 
-     Also USX permits the actual cross-reference details to be recorded in a
-     number of different ways:
+     This method processes any remaining href-link nodes, and creates ref
+     nodes below them instead. */
 
-     - They may be recorded on one or more ref tags within the char:xt.  This
-       appears to be the commonest approach, and if I find it to be the case
-       here, that's fine.
-
-     - They may be recorded in an href-link attribute within the char:xt tag.
-       In this case, I generate ref tags within the char:xt as necessary,
-       thus reducing it to 'standard' form.
-
-     to be recorded on one or more ref tags within the char:xt, or as an
-     href-link attribute on the char:xt itself, or merely to be recorded within
-     the char:xt in vernacular form.  This looks for char:xt's which lack the
-     ref tag but which contain href-link, and creates the ref tag instead.
-     This means that after this call, we can rely upon tags having a ref tag
-     wherever they had one already, or where href-link permitted us to create
-     one. */
-
-  private fun canonicaliseCharXts (charXts: List<Node>)
+  private fun canonicaliseCharXtsConvertHrefsToRefs (charXts: List<Node>): List<Node>
   {
+    /**************************************************************************/
+    val res: MutableList<Node> = mutableListOf()
+
+
+
     /**************************************************************************/
     fun processXt (node: Node)
     {
-      if (null != Dom.findNodeByName(node, "ref", false)) return // Already has a ref child -- assume that's all we need.
-
-      val href = node["href-link"]
-      if (null != href) // Use the href-link to create a ref node and place it under char:xt, inheriting the children from the latter.
-      {
-        val originalChildren = Dom.getChildren(node)
-        Dom.deleteNodes(originalChildren)
-        val newNode = Dom.createNode(node.ownerDocument, "<ref loc='$href' _X_action='Added refTag in order to canonicalise char:xt'/>")
-        Dom.addChildren(newNode, originalChildren)
-        node.appendChild(newNode)
-        node -="href-link"
-      }
+      val href = node["href-link"]!!
+      val originalChildren = Dom.getChildren(node)
+      Dom.deleteNodes(originalChildren)
+      val newNode = Dom.createNode(node.ownerDocument, "<ref loc='$href' _X_action='Added refTag in order to canonicalise char:xt'/>")
+      Dom.addChildren(newNode, originalChildren)
+      node.appendChild(newNode)
+      node -="href-link"
+      res.add(node)
     }
 
 
 
     /**************************************************************************/
-    charXts.forEach { processXt(it) }
+    charXts.filter { Dom.hasAttribute(it, "href-link") } .forEach { processXt(it) }
+    return res
   }
 
 
@@ -350,14 +336,18 @@ import org.w3c.dom.Node
      to verses, and the loc tells you where to point.  However, it is deemed
      useful to retain the details as read-only information. */
 
-  private fun canonicaliseCharXtsConvertLoclessNodesToTextOnly (document: Document)
+  private fun canonicaliseCharXtsConvertLoclessNodesToTextOnly (refs: List<Node>): List<Node>
   {
-    Dom.findNodesByName(document, "ref")
+    val res: MutableList<Node> = mutableListOf()
+    refs
       .filter { "loc" !in it }
       .forEach {
         MiscellaneousUtils.recordTagChange(it, "_X_contentOnly", null, "Was ref with no loc")
         recordWarning(it, "Was ref with no loc")
+        res.add(it)
       }
+
+      return res
   }
 
 
@@ -367,14 +357,46 @@ import org.w3c.dom.Node
      I throw away the link-href and just retain the refs -- I think trying to
      check the two are compatible is just a step too far. */
 
-  private fun canonicaliseCharXtsDealWithHrefLinkNodesWhichAlsoContainRefTags (charXts: List<Node>)
+  private fun canonicaliseCharXtsDealWithHrefLinkNodesWhichAlsoContainRefTags (charXtsHavingRefs: List<Node>)
   {
-    charXts
-      .filter { "href-link" in it && null != Dom.findNodeByName(it, "ref", false) }
+    charXtsHavingRefs
+      .filter { "href-link" in it }
       .forEach {
         recordWarning(it, "Deleted href-link attribute (${it["href-link"]!!}) in favour of existing ref tags")
         it -= "href-link"
       }
+  }
+
+
+  /****************************************************************************/
+  private fun canonicaliseCharXtsFindCharXtsHavingRefs (document: Document): List<Node>
+  {
+    /**************************************************************************/
+    val res: MutableList<Node> = mutableListOf()
+
+
+
+    /**************************************************************************/
+    fun findXtAncestor (node: Node)
+    {
+      var parent = node.parentNode
+      while (null != parent)
+      {
+        if ("char" == parent.nodeName && "xt" == parent["style"])
+        {
+          res.add(parent)
+          return
+        }
+
+        parent = parent.parentNode
+      }
+    }
+
+
+
+    /**************************************************************************/
+    Dom.findNodesByName(document, "ref").forEach { findXtAncestor(it) }
+    return res
   }
 
 
@@ -395,23 +417,35 @@ import org.w3c.dom.Node
      tag, leaving us dependent upon attempting to parse the vernacular
      content.  Note that the effect of this may be to create refs which
      themselves are collections (something which neither USX nor OSIS support),
-     but we straighten that out later. */
+     but we straighten that out later.  Returns a list of nodes which have
+     been amended. */
 
-  private fun canonicaliseCharXtsReliantUponVernacularText (charXts: List<Node>)
+  private fun canonicaliseCharXtsReliantUponVernacularText (charXtsLackingRefs: List<Node>): List<Node>
   {
+    /**************************************************************************/
+    val res: MutableList<Node> = mutableListOf()
+
+
+
     /**************************************************************************/
     fun process (node: Node)
     {
       val s = tryCreatingXtFromVernacularContent(node)
-      if (null != s) recordWarning(node, "$s (was char:x?t)")
+      if (null != s)
+      {
+        recordWarning(node, "$s (was char:x?t)")
+        res.add(node)
+      }
     }
 
 
 
     /**************************************************************************/
-    charXts
-      .filter { "href-link" !in it && null == Dom.findNodeByName(it, "ref", false) }
+    charXtsLackingRefs
+      .filter { "href-link" !in it }
       .forEach { process(it) }
+
+    return res
   }
 
 
@@ -437,30 +471,20 @@ import org.w3c.dom.Node
      issue warnings if the target turns out not to exist.
    */
 
-  private fun canonicaliseCharXtsStandardiseStyles (document: Document)
+  private fun canonicaliseCharXtsStandardiseStyles (document: Document): List<Node>
   {
-    fun changeToXt (node: Node, was: String) { MiscellaneousUtils.recordTagChange(node, "char", "xt", "Was $was") }
+    val res: MutableList<Node> = mutableListOf()
 
-    Dom.findNodesByAttributeValue(document, "char", "style", "xot").forEach { changeToXt(it, "xot") }
-    Dom.findNodesByAttributeValue(document, "char", "style", "xnt").forEach { changeToXt(it, "xnt") }
-    Dom.findNodesByAttributeValue(document, "char", "style", "xdc").forEach { changeToXt(it, "xdc") }
-  }
-
-
-  /****************************************************************************/
-  /* Checks that any href-links are valid references, and deletes ones which
-     aren't. */
-
-  private fun canonicaliseCharXtsValidateHrefLinks (charXts: List<Node>)
-  {
-    charXts
-      .filter { "href-link" in it }
-      .forEach {
-        if (!validateUsx(it["href-link"]!!))
-          recordWarning(it, "char:xt has invalid href-link (${it["href-link"]!!})")
-          it -= "href-link"
+    Dom.findNodesByName(document, "char").forEach {
+      when (val style = it["style"]!!)
+      {
+        "xt" -> res.add(it)
+        "xot", "xnt", "xdc" -> { res.add(it); MiscellaneousUtils.recordTagChange(it, "char", "xt", "Was $style") }
       }
-  }
+    }
+
+    return res
+   }
 
 
 
@@ -517,57 +541,14 @@ import org.w3c.dom.Node
      different behaviours in STEP.  References within note:x are displayed
      rather like tool-tips when you hover the mouse over them, and then clicking
      on the verse reference within the tool-tip brings up a pop-up window
-     containing the target text.
-
-     Earlier processing in this class will have introduced a useful measure of
-     uniformity, in that even though USX lets cross-references be recorded in a
-     number of different ways, they will all have been reduced to <ref> tags by
-     now.
-
-     All I need do, therefore, is look for note:f tags which contain <ref> tags.
-     The call I make then is based upon the amount of explanatory text within
-     the enclosing note tag.
-   */
+     containing the target text. */
 
   private fun canonicaliseNotesCorrectNoteStyles (document: Document)
   {
-    /**************************************************************************/
     val C_NoOfCanonicalWordsWhichMeansThisIsANoteF = 6
-
-
-
-    /**************************************************************************/
-    /* This lists tags to look for.  The later tests run through these in order
-       and give up if any of them returns false. */
-
-    val checks = mapOf("ref" to true,        // Of interest if a ref node is present.
-                       "char:fqa" to false)  // Not of interest if char:fqa (translation alternative) is present -- I assume this really _does_ need to come out as note:f.
-
-
-
-    /**************************************************************************/
-    /* Looks for things under 'node' of a given kind.  ifFound is true, then
-       returns true if found and false if not found.  ifFound is false, the
-       return value is inverted. */
-
-    fun check (node: Node, check: String, ifFound: Boolean): Boolean
-    {
-      val res = if (":" in check)
-      {
-        val bits = check.split(":")
-        null != Dom.findNodeByAttributeValue(node, bits[0], "style", bits[1])
-      }
-      else
-        null != Dom.findNodeByName(node, check, false)
-
-      return if (ifFound) res else !res
-    }
-
-
-
-    /**************************************************************************/
     Dom.findNodesByAttributeValue(document, "note", "style", "f").forEach { noteNode -> // We look only at note:f.
-      if (false !in checks.map { check(noteNode, it.key, it.value) }) // Nothing to do unless the note tag contains the right flavours of node, and does not contain the wrong ones.
+      if (null != Dom.findNodeByName(noteNode, "ref", false)) /* &&
+          null == Dom.findNodeByAttributeValue(noteNode, "char", "style", "fqa"))*/ // Nothing to do unless the note tag contains the right flavours of node, and does not contain the wrong ones.
       {
         val charNodes = Dom.findNodesByName(noteNode, "char", false)
         val canonicalText = charNodes.joinToString(" ") { Dom.getCanonicalTextContentToAnyDepth(it) }
@@ -598,11 +579,14 @@ import org.w3c.dom.Node
      because trying to show a lot of text causes STEP to crash (or certainly
      did so at one time).  I therefore change these refs to _X_contentOnly. */
 
-  private fun canonicaliseRefsDropRefsFromMajorHeadings (document: Document)
+  private fun canonicaliseRefsDropRefsFromMajorHeadings (document: Document): List<Node>
   {
+    val res: MutableList<Node> = mutableListOf()
+
     fun modifyRef (ref: Node)
     {
       MiscellaneousUtils.recordTagChange(ref, "_X_contentOnly", Dom.getAttribute(ref, "style"), "Probably not intended to be clickable")
+      res.add(ref)
     }
 
     fun modifyRefs (owner: Node)
@@ -613,6 +597,8 @@ import org.w3c.dom.Node
     Dom.findNodesByAttributeValue(document, "para", "style", "mr").forEach { modifyRefs(it) }
     Dom.findNodesByAttributeValue(document, "para", "style", "sr").forEach { modifyRefs(it) }
     Dom.findNodesByAttributeValue(document, "char", "style", "ior").forEach { modifyRefs(it) }
+
+    return res
   }
 
 
@@ -630,8 +616,13 @@ import org.w3c.dom.Node
      marrying the individual elements of the USX text with those of the
      vernacular. */
 
-  private fun canonicaliseRefsSplitCollections (document: Document)
+  private fun canonicaliseRefsSplitCollections (refs: List<Node>): List<Node>
   {
+    /**************************************************************************/
+    val res: MutableList<Node> = mutableListOf()
+
+
+
     /**************************************************************************/
     fun process (node: Node)
     {
@@ -689,6 +680,7 @@ import org.w3c.dom.Node
         val newNode = Dom.createNode(node.ownerDocument, "<ref loc='${usxElements[ix]}' _X_generatedReason='Split from reference collection (${node["loc"]!!}) in original ref")
         newNode.appendChild(Dom.createTextNode(node.ownerDocument, vernacularElements[ix].toString("e")))
         newNodes.add(newNode)
+        res.add(newNode)
 
         prevRef = thisRef
       }
@@ -709,9 +701,11 @@ import org.w3c.dom.Node
 
 
     /**************************************************************************/
-    Dom.findNodesByName(document, "ref")
+    refs
       .filter { 1 != RefCollection.rdUsx(it["loc"]!!).getElementCount() }
       .forEach { process(it) }
+
+    return res
   }
 
 
@@ -719,13 +713,19 @@ import org.w3c.dom.Node
   /* Checks for any loc parameters which have invalid loc attributes.  Reports
      them and changes the owning ref into an _X_contentOnly. */
 
-  private fun canonicaliseRefsValidateLocAttributes (document: Document)
+  private fun canonicaliseRefsValidateLocAttributes (refs: List<Node>): List<Node>
   {
-    Dom.findNodesByName(document, "ref").forEach {
+    val res: MutableList<Node> = mutableListOf()
+    refs.forEach {
       if (!validateUsx(it["loc"]!!))
+      {
         recordWarning(it, "ref has invalid loc (${it["loc"]!!})")
         MiscellaneousUtils.recordTagChange(it, "_X_contentOnly", null, "Invalid loc")
+        res.add(it)
+      }
     }
+
+    return res
   }
 
 
@@ -766,13 +766,19 @@ import org.w3c.dom.Node
   /****************************************************************************/
   /* Checks ref targets exist. */
 
-  private fun canonicaliseRefsCheckTargetsExist (document: Document)
+  private fun canonicaliseRefsCheckTargetsExist (refs: List<Node>): List<Node>
   {
+    /**************************************************************************/
+    val res: MutableList<Node> = mutableListOf()
+
+
+
     /**************************************************************************/
     fun processRef (node: Node)
     {
+      //Dbg.d(node["loc"]!!, "GEN 2:19")
       val rc = RefCollection.rdUsx(node["loc"]!!)
-      val problems = rc.getAllAsRefKeys().filter { !BibleStructure.UsxUnderConstructionInstance().bookExists(it) } .map { Ref.getB(it)}
+      val problems = rc.getAllAsRefKeys().filter { !BibleStructure.UsxUnderConstructionInstance().thingExists(it) } .map { Ref.getB(it) }
       val report = when (node["_X_tagOrStyleChangedReason"]?.replace("Was ", ""))
       {
         "xot" -> !problems.all { BibleAnatomy.isOt(it) }
@@ -781,19 +787,21 @@ import org.w3c.dom.Node
         else -> true
       }
 
-      if (report)
+      if (report && problems.isNotEmpty())
         recordWarning(node, "Target does not exist: " + node["loc"]!!)
       MiscellaneousUtils.recordTagChange(node, "_X_contentOnly", null, "Target does not exist")
+      res.add(node)
     }
 
-    Dom.findNodesByName(document, "ref").forEach { processRef(it) }
+    refs.forEach { processRef(it) }
+    return res
   }
 
 
   /****************************************************************************/
   /* Adds chapter 1 to single chapter references which lack the chapter. */
 
-  private fun canonicaliseRefsConvertSingleChapterReferences (document: Document)
+  private fun canonicaliseRefsConvertSingleChapterReferences (refs: List<Node>)
   {
     fun processRef (node: Node)
     {
@@ -807,7 +815,7 @@ import org.w3c.dom.Node
       node["_X_attributeValueChangedReason"] = "Added v1 to single-chapter-book reference"
     }
 
-    Dom.findNodesByName(document, "ref").forEach { processRef(it) }
+    refs.forEach { processRef(it) }
   }
 
 
@@ -820,7 +828,7 @@ import org.w3c.dom.Node
      _requirement_ for this to be the case, so I merely issue a warning here
      if the two do not tie up. */
 
-  private fun canonicaliseRefsCompareLocAndContent (document: Document)
+  private fun canonicaliseRefsCompareLocAndContent (refs: List<Node>)
   {
     /**************************************************************************/
     if (!m_CanReadAndWriteVernacular) return
@@ -869,7 +877,7 @@ import org.w3c.dom.Node
 
 
     /**************************************************************************/
-    Dom.findNodesByName(document, "ref").forEach { validate(it) }
+    refs.forEach { validate(it) }
   }
 
 
@@ -1001,7 +1009,7 @@ import org.w3c.dom.Node
         "verse" -> theRef = if ("sid" in node) node["sid"]!! else chapterRef
         "ref" -> node["_X_belongsTo"] = theRef
         "char" ->
-          if (node["style"]!!.matches("x.?t".toRegex()))
+          if ("xt" == node["style"])
             node["_X_belongsTo"] = if (theRef.contains("-")) RefRange.rdUsx(theRef).getHighAsRef().toString() else theRef
       }
     }
@@ -1136,4 +1144,4 @@ import org.w3c.dom.Node
 
   /****************************************************************************/
   private var m_CanReadAndWriteVernacular =  ConfigData.getAsBoolean("stepUseVernacularFormats")
-}
+ }

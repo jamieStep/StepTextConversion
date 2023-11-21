@@ -45,7 +45,7 @@ import kotlin.collections.HashSet
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase()
+object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase
 {
   /****************************************************************************/
   /****************************************************************************/

@@ -10,7 +10,7 @@ import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
  * @author ARA "Jamie" Jamieson
  */
 
-abstract class TextConverterProcessorBase
+interface TextConverterProcessorBase
 {
     /****************************************************************************/
     /**
@@ -19,7 +19,7 @@ abstract class TextConverterProcessorBase
      * @return Banner
      */
 
-    abstract fun banner (): String
+    fun banner (): String
 
 
     /****************************************************************************/
@@ -29,7 +29,7 @@ abstract class TextConverterProcessorBase
      * @param commandLineProcessor Command line processor.
      */
 
-    abstract fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
+    fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
 
 
 
@@ -43,7 +43,7 @@ abstract class TextConverterProcessorBase
      * @return True if processing should continue.
      */
 
-    abstract fun pre (): Boolean
+    fun pre (): Boolean
 
 
 
@@ -54,7 +54,7 @@ abstract class TextConverterProcessorBase
      * @return True if ok to continue to the next stage of processing.
      */
 
-    abstract fun process (): Boolean
+    fun process (): Boolean
 
 
 
@@ -65,7 +65,7 @@ abstract class TextConverterProcessorBase
      * @return True if the class should be run.
      */
 
-    abstract fun runMe (): Boolean
+    fun runMe (): Boolean
 
 
 
@@ -77,7 +77,7 @@ abstract class TextConverterProcessorBase
      * @param foldersToBeCreated What it says on the tin.
      */
 
-    protected fun createFolders (foldersToBeCreated: List<String>)
+    fun createFolders (foldersToBeCreated: List<String>)
     {
         foldersToBeCreated.forEach {
             if (!StepFileUtils.fileExists(it))
@@ -99,14 +99,14 @@ abstract class TextConverterProcessorBase
      * @param filesToBeDeleted Details of files to be deleted.
      */
 
-    protected fun deleteFiles (filesToBeDeleted: List<Pair<String, Regex?>>)
+    fun deleteFiles (filesToBeDeleted: List<Pair<String, Regex?>>)
     {
       filesToBeDeleted.forEach { deleteFile(it) }
     }
 
 
     /**************************************************************************************************************/
-    protected fun deleteFile (fileDetails: Pair<String, Regex?>)
+    fun deleteFile (fileDetails: Pair<String, Regex?>)
     {
         var (path, pattern) = fileDetails
         if (null == pattern)
@@ -120,7 +120,7 @@ abstract class TextConverterProcessorBase
 
 
     /**************************************************************************************************************/
-    protected fun deleteFolder (folderPath: String)
+    fun deleteFolder (folderPath: String)
     {
       StepFileUtils.deleteFolder(folderPath)
     }

@@ -87,7 +87,7 @@ object GeneralEnvironmentHandler
      within STEPBible).  Some are intended for possible public consumption, and
      these get the suffix _sb (ie produced by STEPBible, and intended to make
      sure the names we give to them do not clash with the name of any existing
-     module upon which they may have been based.
+     module upon which they may have been based).
 
      At present 'for use only within STEPBible' and 'won't work outside of
      STEPBible come down to the same thing.  A Bible is _sbOnly if:
@@ -95,14 +95,26 @@ object GeneralEnvironmentHandler
      - It has been encrypted OR ...
 
      - We have run it through our own version of osis2mod.
+
+     Stop press: We have just discovered that it's too painful to rename ESV
+     to follow this new standard.  So I've added another option.  We are
+     already using the root folder name to give us the language code and
+     vernacular abbreviation (eg eng_ESV).  If the root folder name has a
+     third element (eng_ESV_th), I take that as being the suffix.
   */
 
   private fun determineModuleNameAudienceRelatedSuffix ()
   {
-    val isSbOnly = "step" == ConfigData["stepOsis2modType"] ||
-                   ConfigData.getAsBoolean("stepEncryptionRequired")
+    val forcedSuffix = ConfigData.parseRootFolderName("stepModuleSuffixOverride")
+    if (forcedSuffix.isNotEmpty())
+      ConfigData["stepModuleNameAudienceRelatedSuffix"] = forcedSuffix
+    else
+    {
+      val isSbOnly = "step" == ConfigData["stepOsis2modType"] ||
+                     ConfigData.getAsBoolean("stepEncryptionRequired")
 
-    ConfigData["stepModuleNameAudienceRelatedSuffix"] = if (isSbOnly) "_sbOnly" else "_sb"
+      ConfigData["stepModuleNameAudienceRelatedSuffix"] = if (isSbOnly) "_sbOnly" else "_sb"
+    }
   }
 
 
@@ -127,7 +139,7 @@ object GeneralEnvironmentHandler
     /**************************************************************************/
     /* Type forced from command line? */
 
-    val forcedOsis2modType = ConfigData["stepForcedOsis2modType"]
+    val forcedOsis2modType = ConfigData["stepForceOsis2modType"]
     if (null != forcedOsis2modType)
     {
       ConfigData["stepOsis2modType"] = forcedOsis2modType.lowercase()

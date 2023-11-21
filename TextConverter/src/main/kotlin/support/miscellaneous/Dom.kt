@@ -1382,9 +1382,28 @@ object Dom
 
     fun getDocument (inputFilePath: String, retainComments: Boolean = false): Document
     {
+      /************************************************************************/
+      /* There is a slightly awkward decision as to whether the factory should
+         be made namespace aware below.  Parsing USX is fine because it has no
+         namespace setting.  But parsing OSIS (which recent requirement changes
+         have made necessary) is a problem, because according to the
+         documentation you do need namespace details there.  The problem is
+         that if the namespace is included in the OSIS, then the various 'find'
+         facilities here don't work, and I don't know how to fix them -- the
+         only workaround I've been able to find is to make the factory non-
+         namespace aware.  But if I do that, then if I have to write out
+         revised OSIS, you get a warning saying that a default namespace has
+         been defined but things aren't namespace aware.
+
+         The fix I've adopted overall (until I discover that it doesn't work)
+         is to remove the namespace details from the OSIS (but I've left a
+         comment there to indicate what they would have been.  As a matter of
+         fact, none of the URI's given in the OSIS reference manual for the
+         namespace exists anyway. */
+
         System.setProperty("javax.xml.xpath.XPathFactory:" + NamespaceConstant.OBJECT_MODEL_SAXON, "net.sf.saxon.xpath.XPathFactoryImpl")
         val factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
-        factory.isNamespaceAware = true
+        factory.isNamespaceAware = true // See comments above.
         factory.isIgnoringComments = !retainComments
         val builder: DocumentBuilder = factory.newDocumentBuilder()
         val doc =  builder.parse(FileInputStream(inputFilePath))

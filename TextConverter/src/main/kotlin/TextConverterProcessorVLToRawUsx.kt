@@ -26,7 +26,7 @@ import java.time.LocalDate
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorVLToEnhancedUsx : TextConverterProcessorBase()
+object TextConverterProcessorVLToEnhancedUsx : TextConverterProcessorBase
 {
   /****************************************************************************/
   override fun banner (): String

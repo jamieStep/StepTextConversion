@@ -27,7 +27,7 @@ import java.io.File
 * @author ARA 'Jamie' Jamieson
 */
 
-object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcessorBase()
+object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcessorBase
 {
   /****************************************************************************/
   override fun banner (): String

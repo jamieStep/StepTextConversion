@@ -124,9 +124,9 @@
 #!
 #! You must have a file called step.conf in the Metadata folder for your
 #! text.  This forms the root of the configuration collection.  You create
-#! this file by copying step.conf from the Resources collection and then
+#! this file by copying step.conf from the Resources section and then
 #! modifying it to suit the text you are processing.  Details of what to do
-#! appear within step.conf itself.  From here you can include other files
+#! appear within step.conf itself.  From there you can include other files
 #! if you wish -- and they, in turn, may include yet other files, to any
 #! reasonable depth.
 #!
@@ -239,17 +239,18 @@
 #!   PerTextRepositoryOrganisation/Dbl.conf in this JAR file.
 #!
 #!
-#! * Definitions of the form key=value associate a value with the given
+#! - Definitions of the form key=value associate a value with the given
 #!   key.  You _can_ have any key you like, but there's little point in
 #!   introducing keys of your own (other than perhaps to hold intermediate
-#!   values), because the processing uses only keys which it knows about,
-#!   and all of these appear in the various configuration files in the
-#!   Resources section of this JAR file.
+#!   values which you yourself intend to use in order to generate other things)
+#!   because the processing uses only keys which it knows about, and all of
+#!   these appear in the various configuration files in the  Resources section
+#!   of this JAR file.
 #!
 #!   There is also a variant form of this statement -- key#=value.  The '#'
-#!   means 'force'.  In this case, the value overrides which has already
-#!   been established, and will _not_ be overridden by any definitions
-#!   encountered later in the processing.
+#!   means 'force'.  This overrides any previous key=value statement for this
+#!   key, and will _not_ itself then be susceptible to being overridden.  A
+#!   later force statement does not override an earlier one.
 #!
 #!
 #!
@@ -334,7 +335,7 @@
 #! Having done this, you can now use @getExternal to obtain data from these data
 #! sources -- eg
 #!
-#!   stepAbbreviationLocal=@getExternal(metadata, DBLMetadata/identification/abbreviation)
+#!   stepAbbreviationVernacular=@getExternal(metadata, DBLMetadata/identification/abbreviation)
 #!
 #! which says to look in the file associated with the name 'metadata' and
 #! extract data using the parameter DBLMetadata/identification/abbreviation,
@@ -343,7 +344,7 @@
 #! As with @(...), you can give a number of alternative parameters and
 #! optionally a default if you wish:
 #!
-#!   stepAbbreviationLocal=@getExternal(metadata, DBLMetadata/a, DBLMetadata/b, =Dunno)
+#!   stepAbbreviationVernacular=@getExternal(metadata, DBLMetadata/a, DBLMetadata/b, =Dunno)
 #!
 #!
 #! Note that substitutions are made at the time the data is _requested_, not

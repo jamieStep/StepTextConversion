@@ -248,12 +248,11 @@ object TextConverterVersificationHealthCheck
     if ("step" == ConfigData["stepOsis2modType"]!!)
     {
       val chapterRefKey = Ref.rdUsx(chapterSid).toRefKey_bc()
-      val chapter = Ref.rdUsx(chapterSid).getC()
       missings = BibleStructure.UsxUnderConstructionInstance().getMissingEmbeddedVersesForChapter(Ref.getB(chapterRefKey), Ref.getC(chapterRefKey)) .map { Ref.getV(it) } as MutableList<Int>
     }
     else
     {
-      for (i in 1 .. BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationSchemeCanonical"]!!, true!!).getLastVerseNo(chapterSid))
+      for (i in 1 .. BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationSchemeCanonical"]!!, true).getLastVerseNo(chapterSid))
         if (null == verseCollection[i])
           missings.add(i)
     }

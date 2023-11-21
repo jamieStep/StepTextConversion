@@ -343,6 +343,7 @@ abstract class BibleStructure
   {
     if (null != bookName) Dbg.reportProgress("  Determining Bible structure for $bookName")
     m_CollectingWordCounts = wantWordCount
+    if (null != bookName && null != filePath) m_BookAbbreviationToFilePathMappings[bookName.lowercase()] = filePath
     preprocess(doc)
     load(doc, wantWordCount)
     postprocess(doc)
@@ -376,6 +377,21 @@ abstract class BibleStructure
   fun alreadyPopulated (): Boolean
   {
     return m_Text.m_Content.m_ContentMap.isNotEmpty()
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Returns the path to the file which contains a given book, or null if not
+  * found.
+  *
+  * @param bookAbbreviation Abbreviated name of book of interest.
+  * @return File path.
+  */
+
+  fun getFilePathForBook (bookAbbreviation: String): String?
+  {
+    return m_BookAbbreviationToFilePathMappings[bookAbbreviation.lowercase()]
   }
 
 
@@ -494,6 +510,14 @@ abstract class BibleStructure
   fun verseOrSubverseExistsAsSpecified (b: Int, c: Int, v: Int, s: Int = 0): Boolean { return commonVerseOrSubverseExistsAsSpecified(makeElts(b, c, v, s)) }
   fun verseOrSubverseExistsAsSpecified (verseOrSubverseRefAsString: String): Boolean { return commonVerseOrSubverseExistsAsSpecified(makeElts(verseOrSubverseRefAsString)) }
   fun verseOrSubverseExistsAsSpecified (elts: IntArray)                    : Boolean { return commonVerseOrSubverseExistsAsSpecified(elts) }
+
+
+
+  fun thingExists (chapterRef: Ref)                       : Boolean { return commonThingExists(makeElts(chapterRef)) }
+  fun thingExists (chapterRefKey: RefKey)                 : Boolean { return commonThingExists(makeElts(chapterRefKey)) }
+  fun thingExists (b: Int, c: Int, v: Int = 0, s: Int = 0): Boolean { return commonThingExists(makeElts(b, c, 0, 0)) }
+  fun thingExists (chapterRefAsString: String)            : Boolean { return commonThingExists(makeElts(chapterRefAsString)) }
+  fun thingExists (elts: IntArray)                        : Boolean { return commonThingExists(elts) }
 
 
 
@@ -1152,6 +1176,16 @@ abstract class BibleStructure
 
 
   /****************************************************************************/
+  protected open fun commonThingExists (elts: IntArray): Boolean
+  {
+    if (RefBase.C_DummyElement == elts[1]) return commonBookExists(elts)
+    if (RefBase.C_DummyElement == elts[2]) return commonChapterExists(elts)
+    if (RefBase.C_DummyElement == elts[3]) return commonVerseExistsWithOrWithoutSubverses(elts)
+    return commonVerseOrSubverseExistsAsSpecified(elts)
+  }
+
+
+  /****************************************************************************/
   protected open fun commonVerseExistsWithOrWithoutSubverses (elts: IntArray): Boolean
   {
     val eltsWithoutSubverse = elts.clone(); elts[3] = 0
@@ -1373,6 +1407,7 @@ abstract class BibleStructure
 
   /****************************************************************************/
   private val C_Multiplier = RefBase.C_Multiplier.toInt()
+  private val m_BookAbbreviationToFilePathMappings: MutableMap<String, String> = mutableMapOf()
   private var m_CollectingWordCounts = false
   protected lateinit var m_RefRangeParser: (String) -> RefRange  // A routine to parse individual references.
   private var m_Text = TextDescriptor() // The root of the structure.

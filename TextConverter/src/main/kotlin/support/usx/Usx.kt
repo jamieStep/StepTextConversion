@@ -178,7 +178,6 @@ object Usx
       "char:rq",
       "char:va",
       "char:vp",
-      "char:w",
       "char:wa",
       "char:wg",
       "char:wh",

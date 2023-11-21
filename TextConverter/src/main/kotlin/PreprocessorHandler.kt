@@ -1,5 +1,8 @@
 package org.stepbible.textconverter
 
+import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRawUsx
+import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Dbg
@@ -12,6 +15,7 @@ import org.w3c.dom.Document
 import java.io.File
 import java.lang.reflect.Method
 import java.net.URLClassLoader
+import kotlin.collections.ArrayList
 
 /******************************************************************************/
 /**
@@ -285,7 +289,7 @@ object PreprocessorHandler
   fun runPreprocessor (): Boolean
   {
     /**************************************************************************/
-    var preprocessorPrefix = ConfigData["stepRunnablePreprocessorCommandPrefix"] ?: ""
+    val preprocessorPrefix = ConfigData["stepRunnablePreprocessorCommandPrefix"] ?: ""
     var preprocessorFilePath = ConfigData["stepRunnablePreprocessorFilePath"] ?: return false
     preprocessorFilePath = StandardFileLocations.getInputPath(preprocessorFilePath, null) // Expand out things like $root etc.
 
@@ -320,12 +324,25 @@ object PreprocessorHandler
 
 
     /**************************************************************************/
-    val booksToBeProcessed = Dbg.getBooksToBeProcessed().joinToString(".")
-    command.add(StandardFileLocations.getPreprocessedUsxFolderPath())
-    command.add(StandardFileLocations.getRawInputFolderPath())
-    if (booksToBeProcessed.isNotEmpty()) command.add(booksToBeProcessed)
+    /* If we are limiting this run to a particular set of books only, convert
+       the list to a comma-separated list giving the file names (not the
+       paths). */
+
+    val bookNumbersToBeProcessed =
+      if (Dbg.getBooksToBeProcessed().isEmpty())
+        BibleStructure.UsxUnderConstructionInstance().getAllBookNumbersOt() + BibleStructure.UsxUnderConstructionInstance().getAllBookNumbersNt() + BibleStructure.UsxUnderConstructionInstance().getAllBookNumbersDc()
+      else
+        Dbg.getBooksToBeProcessed().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }
+
+    val bookDetails = bookNumbersToBeProcessed.sorted().joinToString("||"){
+      val x = BibleBookNamesUsx.numberToAbbreviatedName(it)
+      x + "::" + File(BibleBookAndFileMapperRawUsx.getFilePathForBook(x)!!).name
+    }
+
+    command.add("\"${StandardFileLocations.getPreprocessedUsxFolderPath()}\"")
+    command.add("\"${StandardFileLocations.getRawInputFolderPath()}\"")
+    command.add("\"$bookDetails\"")
     runCommand("  Preprocessing: ", command)
-    Dbg.reportProgress("Preprocessing complete", 1)
     return true
   }
 
@@ -378,6 +395,7 @@ object PreprocessorHandler
     /**************************************************************************/
     m_CheckedExistence = true
     var jarPath = ConfigData["stepCallablePreprocessorFilePath"] ?: return
+    if (jarPath.isEmpty()) return
     jarPath = StandardFileLocations.getInputPath(jarPath, null)
 
 

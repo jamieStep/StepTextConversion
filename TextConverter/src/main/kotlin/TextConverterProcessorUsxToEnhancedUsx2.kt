@@ -33,7 +33,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase()
+object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase
  {
   /****************************************************************************/
   /****************************************************************************/

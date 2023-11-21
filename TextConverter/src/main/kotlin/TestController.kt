@@ -75,7 +75,7 @@ import java.util.*
 /******************************************************************************/
 
 /******************************************************************************/
-open class TestController: TextConverterProcessorBase() // Base class serves to support the Crosswire osis2mod.
+open class TestController: TextConverterProcessorBase // Base class serves to support the Crosswire osis2mod.
 {
   /****************************************************************************/
   override fun banner (): String

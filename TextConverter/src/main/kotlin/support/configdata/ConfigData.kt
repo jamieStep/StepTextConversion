@@ -1551,7 +1551,7 @@ object ConfigData
            they are essentially the same thing. */
 
         val englishAbbreviation = get("stepAbbreviationEnglish")!!
-        var vernacularAbbreviation = get("stepAbbreviationLocal") ?: "\u0001"
+        var vernacularAbbreviation = get("stepAbbreviationVernacular") ?: "\u0001"
 
         if (englishAbbreviation.lowercase() == vernacularAbbreviation.lowercase() ||
             vernacularAbbreviation == "\u0001")
@@ -1952,7 +1952,12 @@ object ConfigData
   fun parseRootFolderName (key: String): String
   {
     val bits = StandardFileLocations.getRootFolderName().split("_")
-    return if ("languageCode" == key) bits[1] else bits[2]
+    return when (key.lowercase())
+    {
+      "steplanguagecode"                   -> return bits[1]
+      "stepvernacularabbreviation"         -> return bits[2]
+      else /* stepModuleSuffixOverride */  -> return if (bits.size > 3) bits[3] else ""
+    }
   }
 
 
@@ -2014,7 +2019,7 @@ object ConfigData
 
   fun calc_stepLanguageCodeFromRootFolderName (): String
   {
-    return parseRootFolderName("languageCode")
+    return parseRootFolderName("stepLanguageCode")
   }
 
 
@@ -2063,7 +2068,7 @@ object ConfigData
   fun calc_stepModuleNameWithoutDisambiguation (): String
   {
     var moduleName = getInternal("stepLanguageCode3Char", false)!!.lowercase()
-    moduleName = if (moduleName in listOf("eng", "grc", "hbo")) "" else moduleName[0].uppercase() + moduleName.substring(1).lowercase()
+    moduleName = if (moduleName in listOf("eng", "grc", "hbo")) "" else (moduleName[0].uppercase() + moduleName.substring(1).lowercase())
     moduleName += getInternal("stepVernacularAbbreviation", false)!!
     return moduleName
   }

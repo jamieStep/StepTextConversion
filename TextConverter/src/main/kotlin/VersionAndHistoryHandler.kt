@@ -193,7 +193,10 @@ object VersionAndHistoryHandler
        update things only on release runs. */
 
     if ("release" != ConfigData["stepRunType"]!!.lowercase())
+    {
+      ConfigData["stepTextRevision"] = "0.0" // Dummy version.
       return
+    }
 
 
 
@@ -287,6 +290,7 @@ object VersionAndHistoryHandler
     writer.write("\n")
     writer.write("Version=" + ConfigData["stepTextRevision"]!!); writer.write("\n")
     m_HistoryLines.forEach { writer.write(it.toString()); writer.write("\n") }
+    ConfigData.getCopyAsIsLines().forEach { writer.write(it.toString()); writer.write("\n") }
 
     writer.close()
   }
