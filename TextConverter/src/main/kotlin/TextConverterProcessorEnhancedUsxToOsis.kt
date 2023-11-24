@@ -523,7 +523,6 @@ object TextConverterProcessorEnhancedUsxToOsis : TextConverterProcessorBase
     }
 
     if (s.startsWith("<note")) SharedData.SpecialFeatures.setHasFootnotes(true)
-
     m_Out.write(s)
     m_JustOutputNewLine = s.endsWith("\n")
   }

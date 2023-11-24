@@ -110,6 +110,9 @@ class TextConverterController
 
     private fun doProcess (processor: TextConverterProcessorBase): Boolean
     {
+        if (!processor.runMe())
+          return true
+
         try
         {
             if (processor.banner().isNotEmpty()) Dbg.reportProgress("\n" + processor.banner())
@@ -268,6 +271,8 @@ class TextConverterController
    /* When the starting point is VL. */
 
    private val C_ProcessorsForVlInput = C_ProcessorsCommonPre + listOf(
-     TextConverterProcessorVLToEnhancedUsx
-   ) + C_ProcessorsStartingFromEnhancedUsx
+     TextConverterProcessorVLToEnhancedUsx,
+     TextConverterFeatureSummaryGenerator,
+     TextConverterProcessorEnhancedUsxToOsis
+   ) + C_ProcessorsForCreatingModule
 }

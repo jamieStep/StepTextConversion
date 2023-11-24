@@ -19,6 +19,8 @@ dependencies {
     implementation("net.sf.saxon:Saxon-HE:12.3")
     implementation("org.jasypt:jasypt:1.9.3")
     implementation(kotlin("reflect"))
+    implementation("io.arrow-kt:arrow-core:1.2.0")
+    implementation("io.arrow-kt:arrow-fx-coroutines:1.2.0")
 }
 
 

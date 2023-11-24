@@ -5,6 +5,7 @@ import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProce
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
@@ -64,7 +65,12 @@ object TextConverterOsisTweaker : TextConverterProcessorBase
   override fun pre (): Boolean
   {
     if ("osis" == StandardFileLocations.getRawInputFolderType())
+    {
+      if (!StepFileUtils.fileExists(StandardFileLocations.getOsisFolderPath())) StepFileUtils.createFolderStructure(StandardFileLocations.getOsisFolderPath())
+      StepFileUtils.getMatchingFilesFromFolder(StandardFileLocations.getOsisFolderPath(), ".*\\.xml".toRegex()).forEach { File(it.toString()).delete() }
       File(StandardFileLocations.getRawInputFolderPath()).copyRecursively(File(StandardFileLocations.getOsisFolderPath()))
+    }
+
     return true
   }
 

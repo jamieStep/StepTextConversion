@@ -50,7 +50,7 @@ object Dbg
 
   fun getBooksToBeProcessed (): List<String>
   {
-     return m_BooksToBeProcessed.filter { it.m_Process } .map { it.m_Abbrev }
+     return m_BooksToBeProcessed.filter { "XXX" != it.m_Abbrev && it.m_Process } .map { it.m_Abbrev }
   }
 
 

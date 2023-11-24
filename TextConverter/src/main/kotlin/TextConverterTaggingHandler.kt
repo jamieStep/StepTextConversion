@@ -142,47 +142,72 @@ object TextConverterTaggingHandler: TextConverterProcessorBase, ValueAddedSuppli
   /****************************************************************************/
   private fun handleStrongsCorrections ()
   {
-    readStrongsCorrectionFile()
-    val doc = Dom.getDocument(StandardFileLocations.getOsisFilePath())
-    val strongsNodes = Dom.findNodesByAttributeName(doc, "w", "lemma")
-    if (strongsNodes.isEmpty()) return
-    strongsNodes.forEach { handleStrongsCorrections(it) }
-    if (m_StrongsCorrectionsApplied)
-      Dom.outputDomAsXml(doc, StandardFileLocations.getOsisFilePath(), null)
-
-    m_StrongsCorrections.clear() // No longer needed.
+    val verncularAbbreviation = ConfigData["stepVernacularAbbreviation"]!!.lowercase()
+    if ("nasb" in verncularAbbreviation || "lsb" == verncularAbbreviation)
+    {
+      StrongsCorrectionsForLockman.handleStrongsCorrections()
+      return
+    }
   }
 
 
-  /****************************************************************************/
-  private fun handleStrongsCorrections (node: Node)
+
+  /**************************************************************************/
+  /* I don't really _like_ polluting the converter with lots of stuff
+     specific to individual text suppliers or texts, but until I have more of
+     a handle on what's going on, this will have to do. */
+     
+  /**************************************************************************/
+  private object StrongsCorrectionsForLockman
   {
-    val lemma = Dom.getAttribute(node, "lemma")!!.trim()
-    var strongsNumbers = if (' ' in lemma) lemma.split("\\s+".toRegex()) else listOf(lemma)
-    var prefix = if (':' in strongsNumbers[0]) strongsNumbers[0].substring(0, strongsNumbers[0].indexOf(':') + 1) else null
-    if (null != prefix) strongsNumbers = strongsNumbers.map { it.replace(prefix, "") }
-    strongsNumbers = strongsNumbers.map { val x = m_StrongsCorrections[it]; if (null != x) { m_StrongsCorrectionsApplied = true; x } else it }
-    if (null != prefix) strongsNumbers.map { prefix + it }
-    val newVal = strongsNumbers.joinToString(" ")
-    Dom.setAttribute(node, "lemma", newVal)
- }
+    /************************************************************************/
+    fun handleStrongsCorrections ()
+    {
+      readStrongsCorrectionFile()
+      val doc = Dom.getDocument(StandardFileLocations.getOsisFilePath())
+      val strongsNodes = Dom.findNodesByAttributeName(doc, "w", "lemma")
+      if (strongsNodes.isEmpty()) return
+      strongsNodes.forEach { handleStrongsCorrections(it) }
+      if (m_StrongsCorrectionsApplied)
+        Dom.outputDomAsXml(doc, StandardFileLocations.getOsisFilePath(), null)
+
+      m_StrongsCorrections.clear() // No longer needed.
+    }
 
 
-  /****************************************************************************/
-  private fun readStrongsCorrectionFile ()
-  {
+    /**************************************************************************/
+    private fun handleStrongsCorrections (node: Node)
+    {
+      val lemma = Dom.getAttribute(node, "lemma")!!.trim()
+      var strongsNumbers = if (' ' in lemma) lemma.split("\\s+".toRegex()) else listOf(lemma)
+      var prefix = if (':' in strongsNumbers[0]) strongsNumbers[0].substring(0, strongsNumbers[0].indexOf(':') + 1) else null
+      if (null != prefix) strongsNumbers = strongsNumbers.map { it.replace(prefix, "") }
+      strongsNumbers = strongsNumbers.map { val x = m_StrongsCorrections[it]; if (null != x) { m_StrongsCorrectionsApplied = true; x } else it }
+      if (null != prefix) strongsNumbers.map { prefix + it }
+      val newVal = strongsNumbers.joinToString(" ")
+      Dom.setAttribute(node, "lemma", newVal)
+    }
 
-    StandardFileLocations.getInputStream(StandardFileLocations.getStrongsCorrectionsFilePath(), null)!!.bufferedReader()
+
+    /**************************************************************************/
+    private fun readStrongsCorrectionFile ()
+    {
+      StandardFileLocations.getInputStream(StandardFileLocations.getStrongsCorrectionsFilePath(), null)!!.bufferedReader()
         .readLines()
         .map { it.trim() }
         .filter { it.isNotEmpty() && !it.startsWith("#") }
         .forEach { val x = it.split("=>"); m_StrongsCorrections[x[0].trim()] = x[1].trim() }
+    }
+
+
+    /**************************************************************************/
+    private val m_StrongsCorrections = TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER)
+
   }
 
 
   /****************************************************************************/
   private var m_StrongsCorrectionsApplied = false
-  private val m_StrongsCorrections = TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER)
 
 
 

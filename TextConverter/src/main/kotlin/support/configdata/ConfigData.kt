@@ -1867,7 +1867,7 @@ object ConfigData
     private val m_CopyAsIsLines: MutableList<String> = ArrayList()
     private val m_EnglishDefinitions: MutableSet<String> = mutableSetOf()
     private var m_Initialised: Boolean = false
-    private val m_Metadata: MutableMap<String, ParameterSetting> = HashMap()
+    private val m_Metadata = TreeMap<String, ParameterSetting?>(String.CASE_INSENSITIVE_ORDER)
     private var m_ProcessingEnglishMessageDefinitions = false
     private val m_UsxToOsisTagTranslationDetails: MutableMap<String, Pair<String, TagAction>> = TreeMap(String.CASE_INSENSITIVE_ORDER)
     private val m_RawUsxToOsisTagTranslationLines: MutableList<String> = ArrayList()
@@ -2100,7 +2100,7 @@ object ConfigData
 
   fun calc_stepVernacularAbbreviation (): String
   {
-    return parseRootFolderName("vernacularAbbreviation")
+    return parseRootFolderName("stepVernacularAbbreviation")
   }
 
 

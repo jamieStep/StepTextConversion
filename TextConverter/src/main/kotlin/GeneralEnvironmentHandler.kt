@@ -107,7 +107,7 @@ object GeneralEnvironmentHandler
   {
     val forcedSuffix = ConfigData.parseRootFolderName("stepModuleSuffixOverride")
     if (forcedSuffix.isNotEmpty())
-      ConfigData["stepModuleNameAudienceRelatedSuffix"] = forcedSuffix
+      ConfigData["stepModuleNameAudienceRelatedSuffix"] = "_$forcedSuffix"
     else
     {
       val isSbOnly = "step" == ConfigData["stepOsis2modType"] ||

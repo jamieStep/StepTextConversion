@@ -19,8 +19,10 @@ import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.transform.OutputKeys
 import javax.xml.transform.Transformer
 import javax.xml.transform.TransformerFactory
+import javax.xml.transform.dom.DOMResult
 import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
+import javax.xml.transform.stream.StreamSource
 import javax.xml.xpath.XPathConstants
 import javax.xml.xpath.XPathFactory
 import kotlin.collections.ArrayList
@@ -124,6 +126,100 @@ object Dom
         deleteNode(tempNode)
         return 0 == ix
     }
+
+
+  /****************************************************************************/
+  /**
+  * Applies XSLT processing to a given document.  This attempts to relieve the
+  * user of the boring bits of markdown like the standard header and trailer,
+  * and the chunk you normally need in order to copy across to the output
+  * elements which aren't affected by the transformation.  All you need is
+  * a series of chunks something like:
+  *
+  * ```
+  *       <xsl:template match="verse">
+  *         <jamie>
+  *            <xsl:apply-templates select='@* | node()'/>
+  *         </jamie>
+  *     </xsl:template>
+  * ```
+  *
+  * and you can even replace the apply-templates above by !recurse and the
+  * code here will insert it for you.
+  *
+  * This takes care of header and trailer, and also default namespace.  If you
+  * need to do more sophisticated things, you'll need to create a fully-fledged
+  * stylesheet for yourself, including all the nasty boring bits, and call
+  * [applyStylesheet] instead.
+  *
+  * @param document The document to be processed.
+  * @param basicStylesheet The stylesheet.
+  * @return Modified document.
+  */
+
+  fun applyBasicStylesheet (document: Document, basicStylesheet: String): Document
+  {
+    val defaultNamespace = getAttribute(document.documentElement, "xmlns")
+    val defaultNamespaceSetting = if (null == defaultNamespace) "" else "xpath-default-namespace='$defaultNamespace'"
+
+    val otherNameSpaces = getAttributes(document.documentElement)
+      .filterKeys { it.startsWith("xmlns") && "xmlns" != it }
+      .map { (name, value) -> "$name='$value'" }
+      .joinToString(" ")
+
+    val stylesheet: String = """
+      <xsl:stylesheet version='2.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform' $defaultNamespaceSetting $otherNameSpaces>
+
+        <!-- Identity template to copy all nodes and attributes. -->
+        <xsl:template match='@* | node()'>
+          <xsl:copy>
+            <xsl:apply-templates select='@* | node()'/>
+          </xsl:copy>
+        </xsl:template>
+    
+        $basicStylesheet
+
+      </xsl:stylesheet>
+    """.replace("!recurse", "<xsl:apply-templates select='@* | node()'/>")
+
+    //Dbg.d(stylesheet)
+
+    return applyStylesheet(document, stylesheet)
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Takes a given document and applies an XSLT stylesheet to it.  The stylesheet
+  * must be 'complete' -- ie contained within xsl:stylesheet and with anything
+  * necessary to handle namespaces and to copy material which is not subject to
+  * modification by the spreadsheet (assuming you want to do that).  For a
+  * slightly easier approach -- where circumstances permit -- see
+  * applyBasicStylesheet.
+  *
+  * @param document The document to be processed.
+  * @param stylesheet The stylesheet.
+  * @return Modified document.
+  */
+
+  fun applyStylesheet (document: Document, stylesheet: String): Document
+  {
+    try
+    {
+      val transformerFactory = TransformerFactory.newInstance()
+      val styleSource = StreamSource(StringReader(stylesheet))
+      val transformer = transformerFactory.newTransformer(styleSource)
+      val source = DOMSource(document)
+      val newDom = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument()
+      val result = DOMResult(newDom)
+      transformer.transform(source, result)
+      return newDom
+    }
+    catch (e:Exception)
+    {
+      throw StepException(e.message + "\n\n" + stylesheet)
+    }
+  }
 
 
     /****************************************************************************/
@@ -580,7 +676,7 @@ object Dom
 
     fun findCommentNodes (doc: Document): List<Comment>
     {
-      return Dom.collectNodesInTree(doc).filter { it.nodeType == Node.COMMENT_NODE } .map { it as Comment}
+      return collectNodesInTree(doc).filter { it.nodeType == Node.COMMENT_NODE } .map { it as Comment}
     }
 
 

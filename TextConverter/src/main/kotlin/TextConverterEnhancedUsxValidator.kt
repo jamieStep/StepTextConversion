@@ -1,10 +1,11 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
+import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRawUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
+import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.reportBookBeingProcessed
@@ -78,9 +79,13 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
 
 
   /****************************************************************************/
+  /**
+  * This says whether or not to run the processing.  Given that the processing
+  * here compares enhacned
+*/
   override fun runMe (): Boolean
   {
-    return C_ConfigurationFlag_DoUsxFinalValidation
+    return C_ConfigurationFlag_DoUsxFinalValidation && "vl" != StandardFileLocations.getRawInputFolderType()
   }
 
 
@@ -655,7 +660,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
       Dom.setAttribute(elisionSids[i], "sid", changeIdTo)
       Dom.setAttribute(elisionEids[i], "eid", changeIdTo)
       val refKeys = range.getAllAsRefKeys()
-      for (j in 0 until refKeys.size - 1)
+      for (j in 0..< refKeys.size - 1)
       {
         val id = Ref.rd(refKeys[j]).toString()
         val newSid = Dom.createNode(document, "<verse sid='$id'/>")
@@ -816,7 +821,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
   {
     fun getMappings (bookNumber: Int)
     {
-      val filePath = BibleBookAndFileMapperRawUsx.getFilePathForBook(bookNumber) ?: return
+      val filePath = BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx.getFilePathForBook(bookNumber) ?: return
       val document = Dom.getDocument(filePath)
       m_RawBookAnatomies[bookNumber] = getBookAnatomy(document)
     }

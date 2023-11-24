@@ -24,6 +24,11 @@ import java.io.File
 * retained it as a descendant of that class in case I change my mind
 * some time about the way things should be organised.
 *
+* Note that I make the assumption that any pre-processing which will be applied
+* to the text during an actual run of the converter will not change the
+* versification structure of the text, and that therefore it is ok to evaluate
+* the versification schemes against the raw USX.
+*
 * @author ARA 'Jamie' Jamieson
 */
 

@@ -195,6 +195,8 @@ object VersionAndHistoryHandler
     if ("release" != ConfigData["stepRunType"]!!.lowercase())
     {
       ConfigData["stepTextRevision"] = "0.0" // Dummy version.
+      if ("osis" == StandardFileLocations.getRawInputFolderType())
+        createUpdatedSwordConfigFileFromThirdPartyFile(true)
       return
     }
 
@@ -240,9 +242,10 @@ object VersionAndHistoryHandler
     m_HistoryLines.add(0, ParsedHistoryLine(true, newStepVersion, today, ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!!, text))
 
 
+
     /**************************************************************************/
     if ("osis" == StandardFileLocations.getRawInputFolderType())
-      createUpdatedSwordConfigFileFromThirdPartyFile()
+      createUpdatedSwordConfigFileFromThirdPartyFile(false)
     else
     {
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -268,7 +271,7 @@ object VersionAndHistoryHandler
      assumed to exist).  You can't call this until you have already called
      'process'. */
 
-  private fun createUpdatedSwordConfigFileFromThirdPartyFile ()
+  private fun createUpdatedSwordConfigFileFromThirdPartyFile (evalVersionOnly: Boolean)
   {
     val x =
       File(StandardFileLocations.getThirdPartySwordConfigFilePath())
@@ -288,8 +291,12 @@ object VersionAndHistoryHandler
     writer.write("DataPath=./modules/texts/ztext/${ConfigData["stepModuleName"]!!}/"); writer.write("\n");
     linesToBeCarriedThrough.forEach { writer.write(it); writer.write("\n") }
     writer.write("\n")
+
     writer.write("Version=" + ConfigData["stepTextRevision"]!!); writer.write("\n")
-    m_HistoryLines.forEach { writer.write(it.toString()); writer.write("\n") }
+
+    if (!evalVersionOnly)
+       m_HistoryLines.forEach { writer.write(it.toString()); writer.write("\n") }
+
     ConfigData.getCopyAsIsLines().forEach { writer.write(it.toString()); writer.write("\n") }
 
     writer.close()
@@ -428,12 +435,12 @@ object VersionAndHistoryHandler
   {
     val revisedText = text + (if (text.endsWith('.')) "" else ".")
     val revisedModuleDate = if (moduleDate.isBlank()) "" else "$moduleDate "
-    return "History_$stepVersion#=$revisedModuleDate[SupplierVersion: ${supplierVersion.ifEmpty { "Unknown" }}] $revisedText"
+    return "History_$stepVersion=$revisedModuleDate[SupplierVersion: ${supplierVersion.ifEmpty { "Unknown" }}] $revisedText"
   }
 
 
   /****************************************************************************/
-  /* Creates a suitably key for use when ordering history lines.  Keys are of
+  /* Creates a suitable key for use when ordering history lines.  Keys are of
      the form 002.003 being the STEP version number in a canonical form.
      Reverse alphabetical ordering by key will give the lines in the required
      order. */

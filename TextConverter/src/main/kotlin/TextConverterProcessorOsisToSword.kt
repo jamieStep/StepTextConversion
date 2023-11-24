@@ -239,8 +239,8 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
     val osisFilePath = File(StandardFileLocations.getOsisFilePath())
     //val osisSha256: String = DigestUtils(SHA_256).digestAsHex(osisFilePath)
     var stepInfo = """
-¬--Sword module @(stepModuleName) created @(stepModuleCreationDate) (@(stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation)).
-¬--@(stepThanks)
+¬¬Sword module @(stepModuleName) created @(stepModuleCreationDate) (@(stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation)).
+¬@(stepThanks)
 @(AddedValue)
 """
 
@@ -295,12 +295,6 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
     stepInfo = stepInfo.replace("¬", "<br>")
     stepInfo = ConfigData.expandReferences(stepInfo, false)!!
     stepInfo = stepInfo.replace("NEWLINE", "")
-
-
-
-    /**************************************************************************/
-    ConfigData.put("stepModuleName", m_ModuleName, true)
-    //ConfigData.put("stepOsisSha256", osisSha256, true)
     ConfigData.put("stepConversionInfo", stepInfo, true)
 
 

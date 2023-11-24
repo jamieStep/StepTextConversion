@@ -1,8 +1,8 @@
 package org.stepbible.textconverter
 
+import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRawUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
-import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Dbg
@@ -16,6 +16,7 @@ import java.io.File
 import java.lang.reflect.Method
 import java.net.URLClassLoader
 import kotlin.collections.ArrayList
+
 
 /******************************************************************************/
 /**
@@ -33,13 +34,22 @@ import kotlin.collections.ArrayList
  * preprocessing, and to have this automatically picked up and applied by the
  * converter before it starts its work proper.
  * 
- * I support two different forms of preprocessing.  In one, the preprocessor is
- * run standalone.  In this version, the preprocessor reads the raw USX files
- * and creates new files as necessary.  In the other, the preprocessor
- * effectively becomes part of the converter for the duration of the run, and
- * works in-memory -- it is passed a document object module, and returns a
- * revised version of the module.  These are described in detail below.
- * 
+ * I support three different forms of preprocessing:
+ *
+ * - The preprocessor may be supplied in the form of an external program (eg a
+ *   Python or Javascript program).  In this case, it works on the raw input
+ *   files as just that (ie files), and creates revised versions of them where
+ *   necessary.
+ *
+ * - Or you can supply a JAR which supports a particular API, and have this
+ *   perform the transformation.  This is run from *within* the converter,
+ *   and receives a DOM which it updates in situ.
+ *
+ * - Or you can provide an XSLT stylesheet.  This, again, is used from within
+ *   the converter: it takes an existing DOM and supplies a revised DOM.
+ *
+ * All of these are described in more detail below.
+ *
  * 
  * 
  * 
@@ -60,7 +70,7 @@ import kotlin.collections.ArrayList
  * Thus, for example, if you have a Perl script C:\Users\Me\Documents\perl.pl,
  * you give stepRunnablePreprocessorFilePath as 'C:\Users\Me\Documents\perl.pl'
  * and stepRunnablePreprocessorCommandPrefix as 'perl', and the converter will
- * run this as 'perl "C:\Users\Me\Documents\perl.pl <args>'.
+ * run this as 'perl "C:\Users\Me\Documents\perl.pl" <args>'.
  *
  * There is no need to use stepRunnablePreprocessorCommandPrefix with .jar
  * files, .py files or .js files, unless you need to do something odd: the
@@ -73,7 +83,7 @@ import kotlin.collections.ArrayList
  *
  * Including arguments, a command line might look like:
  *
- *   C:\Users\Me\Documents\preprocessor.exe <outputFolderPath> <inputFolderPath> [<bookList>]
+ *   C:\Users\Me\Documents\preprocessor.exe <outputFolderPath> <inputFolderPath> [<fileDetails>]
  *
  * The arguments are as follows:
  *
@@ -90,12 +100,13 @@ import kotlin.collections.ArrayList
  *     the preprocessing is invoked, so there is no need to clear it before
  *     starting work.
  *
- * - bookList: This may or may not appear, and even if it does, there is no
- *     requirement for the preprocessor to take any notice of it.  It gives a
- *     list of UBS (USX) book abbreviations which are the ones which the
- *     preprocessor *must* handle on this run.  Any others can be ignored for
- *     the sake of speeding things up and reducing file io, but there is no
- *     problem if you choose to process them regardless.
+ * - fileDetails: This lists the files to be processed (on some runs we may not
+ *     particularly want to process *all* files, because we may, for instance,
+ *     be debugging the processing for a particular file, and may not want to
+ *     bother handling all of the others.  This is a '||'-separated list of
+ *     entries.  Each entry is of the form eg gen::01gen.usx where the first
+ *     portion is the lowercase book abbreviation, and the remainder is the name
+ *     of the file, relative to the input folder.
  *
  *
  * It is unlikely that you will want to create in the output folder a file for
@@ -103,12 +114,13 @@ import kotlin.collections.ArrayList
  * for it.  In his case you can give it any name you like, but it must have
  * the .usx extension.
  *
- * The preprocess can also *prevent* a given file from being processed, by
+ * The preprocessor can also *prevent* a given file from being processed, by
  * creating in the output folder an empty file of the given name.  Again,
  * though, I should imagine this is an unlikely eventuality.
  *
- * The converter will pick up files from the output folder in preference to
- * corresponding files in the input folder, where both exist.
+ * When carrying out the actual conversion, the converter will pick up
+ * preprocessed versions of files in preference to raw versions where both
+ * exist.
  *
  * There are several advantages to using a standalone preprocessor:
  *
@@ -176,9 +188,9 @@ import kotlin.collections.ArrayList
  * without it -- it seemed to be difficult to get the JAR file set up correctly,
  * and syntax highlighting in the editor wasn't working correctly.
  *
- * 'preprocess' is passed a document and updates it.  In the example here, I'm
+ * 'preprocess' is passed a DOM and updates it.  In the example here, I'm
  * stripping paragraph markers from all text nodes.  'findAllTextNodes' is part
- * of the 'Anything else you need'.  It can return error, warning and
+ * of the 'Anything else you need'.  preprocess can return error, warning and
  * information messages via its output.  Each should be prefixed by 'ERROR: ',
  * 'WARNING: ' or 'INFORMATION: '.  They can appear in any order, and the
  * different flavours can be interleaved with each other if that is easier.
@@ -207,8 +219,7 @@ import kotlin.collections.ArrayList
  *
  *
  *
- *
- * ## Creating a callable preprocessor
+ * ## Building a callable preprocessor
  *
  * The mechanics of creating a callable preprocessor using Intellij IDEA have
  * proved somewhat challenging, so I give details of what I think is needed
@@ -236,6 +247,46 @@ import kotlin.collections.ArrayList
  *
  * - Don't forget to rebuild it and copy it again each time you need to change
  *   it.
+ *
+ *
+ *
+ *
+ *
+ * ## Using XSLT stylesheets
+ *
+ * A third alternative way of preprocessing USX files is via XSLT stylesheets.
+ * 
+ * You specify these as the values of configuration parameters named
+ * stepXsltStylesheet and / or stepXsltStylesheet_Gen, stepXsltStylesheet_Exo,
+ * etc (the names are not case-sensitive).
+ * 
+ * stepXsltStylesheet gives a stylesheet which is used by default on all files.
+ * stepXsltStylesheet_Gen, etc, give stylesheets which are used only on the
+ * particular book.  If a specific stylesheet for a book exists, only that
+ * stylesheet is applied to that book -- the default stylesheet is not also
+ * applied.
+ *
+ * The value assigned to these parameters can be either a complete XSLT
+ * stylesheet or a collection of xsl:template chunks.  In the latter case, a
+ * stylesheet is fabricated which contains all of the namespace settings from
+ * the document being processed, along with code to copy across any parts of the
+ * document not altered by the various templates.  Thus something like:
+ *
+ *   <xsl:template match="para[matches(@style, '^mt(1|2)')]"/>
+ *
+ *   <xsl:template match="verse">
+ *     <newVerse>
+ *       !recurse
+ *     </newVerse>
+ *   </xsl:template>
+ *
+ * is perfectly acceptable.  (This example illustrates a further shortcut -- if
+ * you include !recurse, it is expanded into code to process material contained
+ * within the matched tag.)
+ *
+ * Recall, incidentally, that the definition of a configuration parameter may
+ * extend over several lines, but you need to mark the end of any continued
+ * line with a backslash.
  *
  * @author ARA Jamieson
  */
@@ -265,7 +316,7 @@ object PreprocessorHandler
   fun applyCallablePreprocessor (doc: Document): List<String>?
   {
     if (!m_CheckedExistence)
-      initialise()
+      initialiseCallablePreprocessor()
 
     if (null != m_MethodPreprocess)
     {
@@ -275,6 +326,26 @@ object PreprocessorHandler
     }
 
     return null
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Applies any relevant XSLT stylesheet to a document to generate a
+  * transformed document.
+  *
+  * @param document Input document.
+  * @return Revised document.
+  */
+
+  fun applyXslt (document: Document, bookAbbreviation: String = ""): Document
+  {
+    val stylesheetContent = m_Stylesheets[bookAbbreviation.lowercase()] ?: m_Stylesheets[""] ?: return document
+
+    return if ("xsl:stylesheet" in stylesheetContent)
+      Dom.applyStylesheet(document, stylesheetContent)
+    else
+      Dom.applyBasicStylesheet(document, stylesheetContent)
   }
 
 
@@ -290,7 +361,8 @@ object PreprocessorHandler
   {
     /**************************************************************************/
     val preprocessorPrefix = ConfigData["stepRunnablePreprocessorCommandPrefix"] ?: ""
-    var preprocessorFilePath = ConfigData["stepRunnablePreprocessorFilePath"] ?: return false
+    var preprocessorFilePath = ConfigData["stepRunnablePreprocessorFilePath"] ?: ""
+    if (preprocessorFilePath.isEmpty()) return false
     preprocessorFilePath = StandardFileLocations.getInputPath(preprocessorFilePath, null) // Expand out things like $root etc.
 
     val command: MutableList<String> = ArrayList()
@@ -324,18 +396,21 @@ object PreprocessorHandler
 
 
     /**************************************************************************/
-    /* If we are limiting this run to a particular set of books only, convert
-       the list to a comma-separated list giving the file names (not the
-       paths). */
+    /* Sort out the list of books / files to be handled */
+
+    val allAvailableBooks = BibleBookAndFileMapperRawUsx.getBookNumbersInOrder()
 
     val bookNumbersToBeProcessed =
       if (Dbg.getBooksToBeProcessed().isEmpty())
-        BibleStructure.UsxUnderConstructionInstance().getAllBookNumbersOt() + BibleStructure.UsxUnderConstructionInstance().getAllBookNumbersNt() + BibleStructure.UsxUnderConstructionInstance().getAllBookNumbersDc()
+        allAvailableBooks
       else
-        Dbg.getBooksToBeProcessed().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }
+      {
+        val booksSelectedForDebug = Dbg.getBooksToBeProcessed().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) } .toSet()
+        allAvailableBooks.toSet().intersect(booksSelectedForDebug)
+      }
 
     val bookDetails = bookNumbersToBeProcessed.sorted().joinToString("||"){
-      val x = BibleBookNamesUsx.numberToAbbreviatedName(it)
+      val x = BibleBookNamesUsx.numberToAbbreviatedName(it).lowercase()
       x + "::" + File(BibleBookAndFileMapperRawUsx.getFilePathForBook(x)!!).name
     }
 
@@ -343,6 +418,8 @@ object PreprocessorHandler
     command.add("\"${StandardFileLocations.getRawInputFolderPath()}\"")
     command.add("\"$bookDetails\"")
     runCommand("  Preprocessing: ", command)
+
+    BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx // Force the mapper to be initialised.
     return true
   }
 
@@ -390,7 +467,7 @@ object PreprocessorHandler
 
 
   /****************************************************************************/
-  private fun initialise ()
+  private fun initialiseCallablePreprocessor ()
   {
     /**************************************************************************/
     m_CheckedExistence = true
@@ -420,5 +497,27 @@ object PreprocessorHandler
     {
       throw StepException("Failed to initialise callable preprocessor: ${e.message}")
     }
+  }
+
+
+  /****************************************************************************/
+  /* Stylesheet information is held in ConfigData as stepXsltStylesheet, or as
+     eg stepXsltStylesheet_Gen.  Empty or null values are regarded as flagging
+     non-existent information. */
+
+  private val m_Stylesheets: MutableMap<String, String?> = mutableMapOf()
+  init {
+    ConfigData.getKeys()
+      .filter { it.lowercase().startsWith("stepXsltStylesheet") }
+      .forEach {
+        val value = ConfigData[it]
+        if (!value.isNullOrBlank())
+        {
+          if ("_" in it)
+            m_Stylesheets[it.split("_")[1].lowercase()] = value
+          else
+            m_Stylesheets[""] = value
+        }
+      }
   }
 }

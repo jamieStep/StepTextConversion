@@ -22,14 +22,15 @@ import org.w3c.dom.Node
  * I suppose eventually I may come across an aspect of USX which doesn't make
  * for complicated processing.  Unfortunately, this isn't one of them.
  *
- * - There are several tags involved in cross-reference markup,
+ * - There are several tags involved in cross-reference markup.
  *
  * - There are different ways of using these tags.
  *
  * - There are certain rules which may or may not have been obeyed.
  *
- * - References are usually given in two forms -- USX and vernacular.
- *   In theory these should tie up, but they don't always.
+ * - References within a cross-reference are usually given in both of two forms
+ *   -- USX and vernacular.  In theory these should tie up, but they don't
+ *   always do so.
  *
  * - References may or may not be syntactically correct.
  *
@@ -53,7 +54,7 @@ import org.w3c.dom.Node
  *
  *
  *
- * ## Slightly less of an overview and more of a detailed consideration.
+ * ## Slightly less of an overview and more of a detailed consideration
  *
  * There are several tags involved in cross-reference processing.  The two of
  * most immediate interest are char:xt and ref, which are the ones which
@@ -76,7 +77,8 @@ import org.w3c.dom.Node
  * *has* to be).
  *
  * In fact, the char:xt doesn't usually have the link-href attribute; more
- * often, it simply serves as a container for ref tags.
+ * often, it simply serves as a container for ref tags.  (I think it may be
+ * a hang-over from earlier versions of USX.)
  *
  *
  *
@@ -103,7 +105,7 @@ import org.w3c.dom.Node
  *     <ref loc="MAT 3:4-5:6">Matthew 3.4—5.6</ref>; <ref loc="LUK 7">Luke 7</ref>
  *
  * It appears to be permissible to have this tag in quite a number of different
- * contexts.  The loc parameter must always be in USX format, and either a
+ * contexts.  The loc parameter must always be in USX format, and be either a
  * single reference or a range (not a collection).  Note that the range can
  * be very large: one of the examples above gives three entire books as the
  * range.  In each case, the content of the tag gives the range in vernacular
@@ -120,7 +122,9 @@ import org.w3c.dom.Node
  * - char:xta, which is used to include non-cross reference text within a
  *   run of cross-references, so that you might have 'SEE Jn 3:16 AND
  *   Mat 1:1', where the SEE and AND appear within xta, and the references
- *   appear within xt.
+ *   appear within xt.  (In fact noise words like this appear relatively
+ *   frequently.  Unfortunately it is frequently the case that they are *not*
+ *   enclosed in char:xta.)
  *
  * - char:xk and char:xq, representing keywords and scripture quotations
  *   respectively.  Unfortunately the documentation gives no example of
@@ -156,13 +160,16 @@ import org.w3c.dom.Node
        later processing, we can simply build up some lists here. */
 
     val charXts = canonicaliseCharXtsStandardiseStyles(document)
-    val charXtsHavingRefs = canonicaliseCharXtsFindCharXtsHavingRefs(document)
+    var charXtsHavingRefs = canonicaliseCharXtsFindCharXtsHavingRefs(document)
     var charXtsLackingRefs = charXts - charXtsHavingRefs.toSet()
 
 
 
     /**************************************************************************/
-    /* Add an indication of which verse 'owns' each cross-reference. */
+    /* Add an indication of which verse 'owns' each cross-reference.  I need to
+       do this early because it's used when generating diagnostics.  However
+       I may also need to add to the list later if I generate any additional
+       refs. */
 
     addBelongsTo(document)
 
@@ -182,6 +189,7 @@ import org.w3c.dom.Node
 
     var diffs = canonicaliseCharXtsConvertHrefsToRefs(charXts)
     charXtsLackingRefs = charXtsLackingRefs - diffs.toSet()
+    var haveGeneratedNewRefs = diffs.isNotEmpty()
 
 
 
@@ -192,6 +200,10 @@ import org.w3c.dom.Node
 
     diffs = canonicaliseCharXtsReliantUponVernacularText(charXtsLackingRefs)
     charXtsLackingRefs = charXtsLackingRefs - diffs.toSet()
+    charXtsHavingRefs = charXtsHavingRefs + diffs.toSet()
+
+    haveGeneratedNewRefs = haveGeneratedNewRefs || diffs.isNotEmpty()
+    if (haveGeneratedNewRefs) addBelongsTo(document)
 
 
 
@@ -240,7 +252,7 @@ import org.w3c.dom.Node
 
     /**************************************************************************/
     /* In theory, ref 'loc' attributes shouldn't contain collections, but
-       sometimes they don't.  In these cases, attempt to split them out into
+       sometimes they do.  In these cases, attempt to split them out into
        separate ref tags. */
 
     refs = refs + canonicaliseRefsSplitCollections(refs)
@@ -248,18 +260,17 @@ import org.w3c.dom.Node
 
 
     /**************************************************************************/
-    /* Where refs point to non-existent locations, convert them to
-       _X_contentOnly. */
+    /* References to single-chapter books have to include chapter=1. */
 
-    diffs = canonicaliseRefsCheckTargetsExist(refs)
-    refs = refs - diffs.toSet()
+    canonicaliseRefsConvertSingleChapterReferences(refs)
 
 
 
     /**************************************************************************/
-    /* References to single-chapter books have to include chapter=1. */
+    /* Where refs point to non-existent locations, convert them to
+       _X_contentOnly. */
 
-    canonicaliseRefsConvertSingleChapterReferences(refs)
+    refs = canonicaliseRefsCheckTargetsExist(refs)
 
 
 
@@ -463,8 +474,8 @@ import org.w3c.dom.Node
 
      - We could largely ignore the issue of whether the target portion is
        present or not, and leave it to later processing to see whether it
-       can make the thing work.  (This later always checks to see whether the
-       targets for the cross-references exist.
+       can make the thing work.  (This later processing always checks to see
+       whether the targets for the cross-references exist.)
 
      This final option seems to be the most useful, so that's what I've gone
      with.  I do add a temporary attribute so that later processing won't
@@ -764,7 +775,8 @@ import org.w3c.dom.Node
 
 
   /****************************************************************************/
-  /* Checks ref targets exist. */
+  /* Checks ref targets exist.  The return value is a list of refs which are
+     ok. */
 
   private fun canonicaliseRefsCheckTargetsExist (refs: List<Node>): List<Node>
   {
@@ -788,9 +800,12 @@ import org.w3c.dom.Node
       }
 
       if (report && problems.isNotEmpty())
+      {
         recordWarning(node, "Target does not exist: " + node["loc"]!!)
-      MiscellaneousUtils.recordTagChange(node, "_X_contentOnly", null, "Target does not exist")
-      res.add(node)
+        MiscellaneousUtils.recordTagChange(node, "_X_contentOnly", null, "Target does not exist")
+      }
+      else
+        res.add(node)
     }
 
     refs.forEach { processRef(it) }

@@ -266,10 +266,10 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
     override fun process (): Boolean
     {
       PreprocessorHandler.runPreprocessor()
-      BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, true) // Gets the chapter / verse structure -- how many chapters in each verse, etc.
+      BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx, true) // Gets the chapter / verse structure -- how many chapters in each verse, etc.
       forceVersificationSchemeIfAppropriate()
-      ReversificationData.process()                                              // Does what it says on the tin.  This gives the chance (which I may not take) to do 'difficult' restructuring only where reversification will require it.
-      BibleBookAndFileMapperRawUsx.iterateOverSelectedFiles(::processFile)       // Creates the enhanced USX.
+      ReversificationData.process()
+      BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx.iterateOverSelectedFiles(::processFile) // Creates the enhanced USX.
       return true
     }
 
@@ -305,10 +305,15 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
        rendered text which looks rather better than would be the case by default.
     */
 
-    private fun processFile (bookName: String, rawUsxPath: String, document: Document)
+    private fun processFile (bookName: String, usxInputPath: String, theDocument: Document)
     {
         /**********************************************************************/
         //val a = Dom.findNodesByAttributeName(document, "verse", "number")
+
+
+
+        /**********************************************************************/
+        initialise(usxInputPath, theDocument)
 
 
 
@@ -318,10 +323,17 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
 
 
         /**********************************************************************/
-        /* The other potential form of preprocessing: A JAR file which supplies
-           a method to which we can pass a DOM. */
+        /* I support several different forms of preprocessing.  You can call an
+           external program to transform individual files in their entirety
+           before we ever start processing; you can create a JAR file which
+           supports a particular API, and load and call it with a DOM which
+           it revises; or you can apply an XSLT stylesheet to the DOM.
 
-        PreprocessorHandler.applyCallablePreprocessor(document)?.forEach {
+           The external program is dealt with elsewhere.  Here we deal with
+           the other two. */
+
+       m_Document = PreprocessorHandler.applyXslt(m_Document, m_BookName)
+       PreprocessorHandler.applyCallablePreprocessor(m_Document)?.forEach {
           val ix = it.indexOf(':')
           val text = it.substring(ix + 2)
           when (it.substring(0, ix))
@@ -339,7 +351,6 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
         //!!!!!!!!!!!!!!!! DO READ THE HEAD-OF-METHOD COMMENTS !!!!!!!!!!!!!!!!!
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        initialise(rawUsxPath, document)                   // a) Get book details etc.
         validateInitialAssumptions(); x()                  // a) Check that things I rely upon later (or think I _may_ rely upon) do actually hold.
         deleteIgnorableTags()                              // a) Anything of no interest to our processing.
         correctCommonUsxIssues()                           // a) Correct common errors.
@@ -351,7 +362,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
         convertTagsToLevelOneWhereAppropriate()            // a) Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
         encapsulateLists()                                 // a) Sort out list structures.
         encapsulateHeadings()                              // a) For later processing it may be useful to encapsulate headers; or maybe it's just my aesthetic sense.
-        CrossReferenceProcessor.canonicaliseAndPatchUp(document) // a) There are all sorts of awkward things about refs and associated tags which it would be nice to sort out.
+        CrossReferenceProcessor.canonicaliseAndPatchUp(m_Document) // a) There are all sorts of awkward things about refs and associated tags which it would be nice to sort out.
 
         positionVerseEnds(); x()                           // b) Move sids and eids where possible to avoid cross-verse-boundary markup.
 
@@ -364,7 +375,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
 
 
         val dt = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MMMM-yyyy"))
-        Dom.outputDomAsXml(m_Document, Paths.get(StandardFileLocations.getEnhancedUsxFolderPath(), StepFileUtils.getFileName(rawUsxPath)).toString(), "STEP extended USX created $dt")
+        Dom.outputDomAsXml(m_Document, Paths.get(StandardFileLocations.getEnhancedUsxFolderPath(), StepFileUtils.getFileName(usxInputPath)).toString(), "STEP extended USX created $dt")
     }
 
 
@@ -551,7 +562,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
            already in the right place, so in this case I retain the verse eids. */
 
         Dom.findNodesByAttributeName(m_Document, "chapter", "eid").forEach { Dom.deleteNode(it) }
-        if ("VL" != m_SourceConversion) Dom.findNodesByAttributeName(m_Document, "verse",   "eid").forEach { Dom.deleteNode(it) }
+        Dom.findNodesByAttributeName(m_Document, "verse",   "eid").forEach { Dom.deleteNode(it) }
 
 
 
@@ -1041,8 +1052,6 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
     /******************************************************************************************************************/
     private fun positionVerseEnds ()
     {
-      if ("VL" == m_SourceConversion) return // No need to do anything if the original input format was VL.
-
       changeParaPToMilestone()  // Possibly change para:p to milestone, to make cross-boundary markup less of an issue.
       splitEnclosingCharNodes() // If a sid happens to be directly within a char node, split the char node so that the verse can be moved out of it.
       insertVerseEnds()         // Initial positioning.
@@ -2050,29 +2059,6 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
         m_Document = document
         m_BookName = Dom.getAttribute(Dom.findNodeByName(m_Document, "book")!!, "code")!!
         reportBookBeingProcessed(document)
-        if (null != m_SourceConversion) return
-
-
-
-        /**********************************************************************/
-        /* In some cases, we create the raw USX from some other format, such as
-           VL.  In these we may be able to cut back on some of the processing
-           here, because we can trust the input to be particularly simple or
-           particularly reliable. */
-
-        val doc = Dom.getDocument(rawUsxPath, retainComments = true)
-
-        val comments = Dom.findCommentNodes(doc)
-        if (comments.isEmpty())
-        {
-          m_SourceConversion = ""
-          return
-        }
-
-        val x = comments[0].data
-        val regex = Regex("(?i)SourceFormat:\\s*(?<fmt>.*?)\\.")
-        val m = regex.find(x)
-        m_SourceConversion = m?.groups?.get("fmt")?.value ?: ""
      }
 
 
@@ -2087,6 +2073,5 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
     /******************************************************************************************************************/
     private var m_BookName = ""
     private lateinit var m_Document: Document
-    private var m_SourceConversion: String? = null
 }
 
