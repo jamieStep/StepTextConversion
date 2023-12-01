@@ -142,6 +142,7 @@ object TextConverterTaggingHandler: TextConverterProcessorBase, ValueAddedSuppli
   /****************************************************************************/
   private fun handleStrongsCorrections ()
   {
+    return
     val verncularAbbreviation = ConfigData["stepVernacularAbbreviation"]!!.lowercase()
     if ("nasb" in verncularAbbreviation || "lsb" == verncularAbbreviation)
     {
@@ -183,7 +184,7 @@ object TextConverterTaggingHandler: TextConverterProcessorBase, ValueAddedSuppli
       var prefix = if (':' in strongsNumbers[0]) strongsNumbers[0].substring(0, strongsNumbers[0].indexOf(':') + 1) else null
       if (null != prefix) strongsNumbers = strongsNumbers.map { it.replace(prefix, "") }
       strongsNumbers = strongsNumbers.map { val x = m_StrongsCorrections[it]; if (null != x) { m_StrongsCorrectionsApplied = true; x } else it }
-      if (null != prefix) strongsNumbers.map { prefix + it }
+      if (null != prefix) strongsNumbers = strongsNumbers.map { prefix + it }
       val newVal = strongsNumbers.joinToString(" ")
       Dom.setAttribute(node, "lemma", newVal)
     }

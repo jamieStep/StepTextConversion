@@ -755,7 +755,7 @@ import org.w3c.dom.Node
   private fun recordWarning (node: Node, attributeValue: String)
   {
     node["_X_warning"] = attributeValue
-    val refKey = Ref.rdUsx(node["_X_belongsTo"]!!).toRefKey()
+    val refKey = RefCollection.rdUsx(node["_X_belongsTo"]!!).getFirstAsRefKey()
     if (null == m_Warnings[refKey]) m_Warnings[refKey] = attributeValue
   }
 

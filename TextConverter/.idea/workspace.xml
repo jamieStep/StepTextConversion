@@ -10,35 +10,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9495aca-7970-4593-a7e0-92356b5adca5" name="Changes" comment="Misc changes after IDEA messed things up.">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleBookAndFileMapperCombinedRawAndPreprocessedUsx.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Support/converterUserGuide.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Support/converterUserGuide.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ThrowAwayCode.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/CrossReferenceProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/CrossReferenceProcessor.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/GeneralEnvironmentHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GeneralEnvironmentHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/PreprocessorHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/PreprocessorHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterEnhancedUsxValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterEnhancedUsxValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEnhancedUsxToOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEnhancedUsxToOsis.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEvaluateVersificationSchemes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEvaluateVersificationSchemes.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorOsisToSword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorOsisToSword.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorOsisTweaker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorOsisTweaker.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorUsxToEnhancedUsx1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorVLToRawUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorVLToEnhancedUsx.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorVLToEnhancedUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorVLToEnhancedUsx.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextConverterTaggingHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextConverterTaggingHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/VersionAndHistoryHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/VersionAndHistoryHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleBookAndFileMapperRawUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/bibledetails/BibleBookAndFileMapperRawUsx.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/configdata/ConfigData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/configdata/ConfigData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/debug/Dbg.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/debug/Dbg.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/configdata/ConfigDataExternalFileInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/configdata/ConfigDataExternalFileInterface.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/Dom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/support/miscellaneous/Dom.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/step.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/step.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/PerOwnerOrganisation/Biblica.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/PerOwnerOrganisation/Biblica.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/PerTextRepositoryOrganisation/Dbl.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/PerTextRepositoryOrganisation/Dbl.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_amh_NASV/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_amh_NASV/Metadata/history.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_amh_NASV/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_amh_NASV/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_arb_KEH/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_arb_KEH/stepRawTextVersification.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ceb_APD/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ceb_APD/_MODULE_NAME_GENERATED_MANUALLY_.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ceb_APD/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ceb_APD/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ces_SNC/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ces_SNC/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ces_SNC/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ckb_KSS/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ckb_KSS/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ckb_KSS/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/cmn-Hans.ldml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/styles.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/versification.vrs" beforeDir="false" />
@@ -186,9 +187,88 @@
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/ZEP.usx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/stepRawTextVersification.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_dan_BPH/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_dan_BPH/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_dan_BPH/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/Miscellaneous/deu_de.ldml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/Miscellaneous/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/Miscellaneous/versification.vrs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/PSA_modified.usx" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/PSA_modified.usx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/history.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/license.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1CH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1CO.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1JN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1KI.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1PE.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1SA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1TH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1TI.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2CH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2CO.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2JN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2KI.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2PE.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2SA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2TH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2TI.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/3JN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/ACT.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/AMO.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/COL.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/DAN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/DEU.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/ECC.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/EPH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/EST.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/EXO.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/EZK.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/EZR.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/GAL.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/GEN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/HAB.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/HAG.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/HEB.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/HOS.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/ISA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JAS.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JDG.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JER.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JHN.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JOB.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JOL.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JON.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JOS.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JUD.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/LAM.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/LEV.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/LUK.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/MAL.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/MAT.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/MIC.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/MRK.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/NAM.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/NEH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/NUM.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/OBA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/PHM.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/PHP.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/PRO.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/PSA_modified.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/REV.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/ROM.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/RUT.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/SNG.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/Save/2KI.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/Save/NEH.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/Save/PSA.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/Save/ZEC.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/TIT.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/ZEC.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/ZEP.usx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/_SavedTestData_/Sami1009T1013Sami1009T1013DeuXXX.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/_SavedTestData_/Sami1009T1013deu_XXX_osis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/build.bat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/stepRawTextVersification.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/Metadata/Miscellaneous/eng_en.ldml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/Metadata/Miscellaneous/styles.xml" beforeDir="false" />
@@ -267,47 +347,82 @@
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/Metadata/history.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/RawUsx/EXO.usx" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/RawUsx/EXO.usx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIrV/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIrV/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIrV/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ewe_BEE/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ewe_BEE/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ewe_BEE/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_fra_BDS/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_fra_BDS/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_fra_BDS/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_gbr_GAW/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_gbr_GAW/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_gbr_GAW/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hau_SRK/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hau_SRK/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hau_SRK/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_heb_HD/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_heb_HD/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_heb_HD/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hil_APD/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hil_APD/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hil_APD/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hin_HSS/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hin_HSS/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hin_HSS/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hne_NNC/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hne_NNC/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hne_NNC/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hrv_KOK/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hrv_KOK/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hrv_KOK/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ibo_BIU/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ibo_BIU/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ibo_BIU/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ind_FAYH/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ind_FAYH/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ind_FAYH/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ita_PEV/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ita_PEV/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ita_PEV/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_jpn_JCB/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_jpn_JCB/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_jpn_JCB/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kik_GKY/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kik_GKY/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kik_GKY/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kor_KLB/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kor_KLB/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kor_KLB/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lin_MNB/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lin_MNB/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lin_MNB/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lug_EEEE/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lug_EEEE/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lug_EEEE/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_mal_MCV/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_mal_MCV/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_mal_MCV/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nde_BEN/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nde_BEN/RawUsx/JHN.usx" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nde_BEN/RawUsx/JHN.usx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nde_BEN/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nde_BEN/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nob_ELB/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nob_ELB/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nob_ELB/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nya_CCL/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nya_CCL/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nya_CCL/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pes_PCB/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pes_PCB/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pes_PCB/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pol_PSZ/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pol_PSZ/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pol_PSZ/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_por_NVI/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_por_NVI/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_por_NVI/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ron_NTR/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ron_NTR/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ron_NTR/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARS/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARS/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARS/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARSA/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARST/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_NRT/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_slv_ZNZ/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_slv_ZNZ/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_slv_ZNZ/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_sna_BDSC/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_sna_BDSC/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_sna_BDSC/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVI/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVI/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVI/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVIC/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVIC/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVIC/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swe_NB/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swe_NB/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swe_NB/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swh_NEN/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swh_NEN/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swh_NEN/stepRawTextVersification.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_tgl_ASD/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_tha_TNCV/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_twi_NAK/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_vie_KTHD/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_yom_NWM/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_yor_BMYO/Metadata/config.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/_Metadata_/biblicaCommonConfig.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/_Metadata_/biblicaCommonConfig.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/__US_VERSION_NOT_USED_Text_eng_NIVUS/Metadata/license.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/Metadata/config.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/1CH.usx" beforeDir="false" />
@@ -509,7 +624,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.eng_NASB1995">
+  <component name="RunManager" selected="Kotlin.deu_HFA">
     <configuration name="Temp" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
@@ -522,7 +637,70 @@
     <configuration name="amh_NASV" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_amh_NASV" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_amh_NASV -runType majorRelease -updateReason &quot;Miscellanous tagging changes&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="arb_KEH" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_arb_KEH -evaluateSchemesOnly -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ceb_APD" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_ceb_APD -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ces_SNC" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_ces_SNC -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="chi_CCB" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_chi_CCB -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="chi_CCBT" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_chi_CCBT -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ckb_KSS" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_ckb_KSS -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dan_BPH" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_dan_BPH -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -531,16 +709,7 @@
     <configuration name="deu_HFA" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_deu_HFA -forcedOsis2ModVariant crosswireRelaxed" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="deu_XXX" type="JetRunConfigurationType">
-      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
-      <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_deu_XXX -forcedOsis2ModVariant step -testType sami -dbgDisplayReversificationRows screenDeferred" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_deu_HFA -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -585,7 +754,7 @@
     <configuration name="eng_NASB1995" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder Miscellaneous\Text_eng_NASB1995 -runType EvalOnly -updateReason &quot;Miscellanous tagging changes&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder Miscellaneous\Text_eng_NASB1995 -runType Release -updateReason &quot;Miscellanous tagging changes&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -594,7 +763,16 @@
     <configuration name="eng_NASB2020" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder Miscellaneous\Text_eng_NASB2020 -runType EvalOnly -updateReason &quot;Miscellanous tagging changes&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder Miscellaneous\Text_eng_NASB2020 -runType Release -updateReason &quot;Miscellanous tagging changes&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="eng_NIrV" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_eng_NiRV -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -609,10 +787,343 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ewe_BEE" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_ewe_BEE -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fra_BDS" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_fra_BDS -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gbr_GAW" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_gbr_GAW -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="grc_SRGNT" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder Miscellaneous\Text_grc_SRGNT -runType Release -updateReason &quot;Minor corrections&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder Miscellaneous\Text_grc_SRGNT -runType Release -updateReason &quot;Minor modifications to improve legibility&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hau_SRK" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_hau_SRK -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="heb_HD" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_heb_HD -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hil_APD" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_hil_APD -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hin_HSS" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_hin_HSS -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hne_NNC" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_hne_NNC -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hrv_KOK" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_hrv_KOK -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ibo_BIU" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_ibo_BIU -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ind_FAYH" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_ind_FAYH -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="jpn_JCB" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_jpn_JCB -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kik_GKY" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_kik_GKY -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kor_KLB" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_kor_KLB -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lin_MNB" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_lin_MNB -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lug_EEEE" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_lug_EEEE -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mal_MCV" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_mal_MCV -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="nde_BEN" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_nde_BEN -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="nob_ELB" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_nob_ELB -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="nya_CCL" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_nya_CCL -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pes_PCB" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_pes_PCB -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pol_PSZ" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_pol_PSZ -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="por_NVI" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_por_NVI -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ron_NTR" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_ron_NTR -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rus_CARS" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_rus_CARS -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="slv_ZNZ" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_slv_ZNZ -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sna_BDSC" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_sna_BDSC -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="spa_NVI" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_spa_NVI -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="spa_NVIC" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_spa_NVIC -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="swe_NB" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_swe_NB -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="swh_NEN" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_swh_NEN -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tgl_ASD" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_tgl_ASD -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tha_TNCV" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_tha_TNCV -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="twi_NAK" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_twi_nak -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="vie_KTHD" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_vie_KTHD -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="yom_NWM" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_yom_NWM -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="yor_BMYO" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_yor_BMYO -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -627,8 +1138,52 @@
       <item itemvalue="Kotlin.grc_SRGNT" />
       <item itemvalue="Kotlin.eng_NASB1995" />
       <item itemvalue="Kotlin.amh_NASV" />
+      <item itemvalue="Kotlin.arb_KEH" />
+      <item itemvalue="Kotlin.ceb_APD" />
+      <item itemvalue="Kotlin.ces_SNC" />
+      <item itemvalue="Kotlin.fra_BDS" />
+      <item itemvalue="Kotlin.nde_BEN" />
+      <item itemvalue="Kotlin.nob_ELB" />
+      <item itemvalue="Kotlin.nya_CCL" />
+      <item itemvalue="Kotlin.pes_PCB" />
+      <item itemvalue="Kotlin.pol_PSZ" />
+      <item itemvalue="Kotlin.tgl_ASD" />
+      <item itemvalue="Kotlin.tha_TNCV" />
+      <item itemvalue="Kotlin.twi_NAK" />
+      <item itemvalue="Kotlin.vie_KTHD" />
+      <item itemvalue="Kotlin.yom_NWM" />
+      <item itemvalue="Kotlin.yor_BMYO" />
+      <item itemvalue="Kotlin.rus_CARS" />
+      <item itemvalue="Kotlin.slv_ZNZ" />
+      <item itemvalue="Kotlin.sna_BDSC" />
+      <item itemvalue="Kotlin.spa_NVI" />
+      <item itemvalue="Kotlin.spa_NVIC" />
+      <item itemvalue="Kotlin.por_NVI" />
+      <item itemvalue="Kotlin.ron_NTR" />
+      <item itemvalue="Kotlin.gbr_GAW" />
+      <item itemvalue="Kotlin.hau_SRK" />
+      <item itemvalue="Kotlin.heb_HD" />
+      <item itemvalue="Kotlin.hin_HSS" />
+      <item itemvalue="Kotlin.hil_APD" />
+      <item itemvalue="Kotlin.hne_NNC" />
+      <item itemvalue="Kotlin.hrv_KOK" />
+      <item itemvalue="Kotlin.ibo_BIU" />
+      <item itemvalue="Kotlin.ind_FAYH" />
+      <item itemvalue="Kotlin.jpn_JCB" />
+      <item itemvalue="Kotlin.kik_GKY" />
+      <item itemvalue="Kotlin.kor_KLB" />
+      <item itemvalue="Kotlin.lin_MNB" />
+      <item itemvalue="Kotlin.lug_EEEE" />
+      <item itemvalue="Kotlin.mal_MCV" />
+      <item itemvalue="Kotlin.swe_NB" />
+      <item itemvalue="Kotlin.swh_NEN" />
+      <item itemvalue="Kotlin.chi_CCB" />
+      <item itemvalue="Kotlin.chi_CCBT" />
+      <item itemvalue="Kotlin.ckb_KSS" />
+      <item itemvalue="Kotlin.dan_BPH" />
+      <item itemvalue="Kotlin.ewe_BEE" />
+      <item itemvalue="Kotlin.eng_NIrV" />
       <item itemvalue="Kotlin.deu_HFA" />
-      <item itemvalue="Kotlin.deu_XXX" />
       <item itemvalue="Kotlin.en_GW" />
       <item itemvalue="Kotlin.en_NIV" />
     </list>
@@ -693,13 +1248,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/TextConverterTaggingHandler.kt</url>
-          <line>272</line>
+          <line>273</line>
           <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/TextConverterEnhancedUsxValidator.kt</url>
-          <line>595</line>
-          <option name="timeStamp" value="270" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorReversification.kt</url>
@@ -708,7 +1258,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
-          <line>120</line>
+          <line>59</line>
           <option name="timeStamp" value="296" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
@@ -717,19 +1267,14 @@
           <option name="timeStamp" value="297" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEnhancedUsxToOsis.kt</url>
-          <line>547</line>
-          <option name="timeStamp" value="299" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/CrossReferenceProcessor.kt</url>
           <line>1154</line>
           <option name="timeStamp" value="301" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/CrossReferenceProcessor.kt</url>
-          <line>293</line>
-          <option name="timeStamp" value="302" />
+          <url>file://$PROJECT_DIR$/src/main/kotlin/TextConverterProcessorEvaluateVersificationSchemes.kt</url>
+          <line>189</line>
+          <option name="timeStamp" value="305" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

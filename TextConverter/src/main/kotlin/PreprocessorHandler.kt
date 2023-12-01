@@ -315,7 +315,7 @@ object PreprocessorHandler
 
   fun applyCallablePreprocessor (doc: Document): List<String>?
   {
-    if (!m_CheckedExistence)
+    if (!m_CheckedExistenceOfCallablePreprocessor)
       initialiseCallablePreprocessor()
 
     if (null != m_MethodPreprocess)
@@ -340,6 +340,9 @@ object PreprocessorHandler
 
   fun applyXslt (document: Document, bookAbbreviation: String = ""): Document
   {
+    if (!m_CheckedExistenceOfXsltStylesheets)
+      initialiseXsltStylesheets()
+
     val stylesheetContent = m_Stylesheets[bookAbbreviation.lowercase()] ?: m_Stylesheets[""] ?: return document
 
     return if ("xsl:stylesheet" in stylesheetContent)
@@ -459,7 +462,8 @@ object PreprocessorHandler
   /****************************************************************************/
 
   /****************************************************************************/
-  private var m_CheckedExistence = false
+  private var m_CheckedExistenceOfCallablePreprocessor = false
+  private var m_CheckedExistenceOfXsltStylesheets = false
   private var m_MethodGetTextForValidation: Method? = null
   private var m_MethodPreprocess: Method? = null
   private var m_PreprocessorInstance: Any? = null
@@ -470,7 +474,7 @@ object PreprocessorHandler
   private fun initialiseCallablePreprocessor ()
   {
     /**************************************************************************/
-    m_CheckedExistence = true
+    m_CheckedExistenceOfCallablePreprocessor = true
     var jarPath = ConfigData["stepCallablePreprocessorFilePath"] ?: return
     if (jarPath.isEmpty()) return
     jarPath = StandardFileLocations.getInputPath(jarPath, null)
@@ -501,14 +505,12 @@ object PreprocessorHandler
 
 
   /****************************************************************************/
-  /* Stylesheet information is held in ConfigData as stepXsltStylesheet, or as
-     eg stepXsltStylesheet_Gen.  Empty or null values are regarded as flagging
-     non-existent information. */
-
-  private val m_Stylesheets: MutableMap<String, String?> = mutableMapOf()
-  init {
+  private fun initialiseXsltStylesheets ()
+  {
+    /**************************************************************************/
+    m_CheckedExistenceOfXsltStylesheets = true
     ConfigData.getKeys()
-      .filter { it.lowercase().startsWith("stepXsltStylesheet") }
+      .filter { it.lowercase().startsWith("stepxsltstylesheet") }
       .forEach {
         val value = ConfigData[it]
         if (!value.isNullOrBlank())
@@ -520,4 +522,11 @@ object PreprocessorHandler
         }
       }
   }
+
+  /****************************************************************************/
+  /* Stylesheet information is held in ConfigData as stepXsltStylesheet, or as
+     eg stepXsltStylesheet_Gen.  Empty or null values are regarded as flagging
+     non-existent information. */
+
+  private val m_Stylesheets: MutableMap<String, String?> = mutableMapOf()
 }

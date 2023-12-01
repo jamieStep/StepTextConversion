@@ -92,6 +92,11 @@ object ConfigDataExternalFileInterface
   fun getData (selector: String, xpath: String): String?
   {
     /**************************************************************************/
+    //Dbg.d(xpath, "DBLMetadata/agencies/rightsHolder/name")
+
+
+
+    /**************************************************************************/
     /* We're accessing a logical name which hasn't been defined. */
 
     val processor = m_ConfigDataExternalProcessors[selector] ?: throw StepException("External data processor not defined: $selector")
@@ -311,7 +316,7 @@ private class ConfigDataExternalFileInterfaceDbl : ConfigDataExternalFileInterfa
 
     /************************************************************************/
     val paths = parms.split("\\s+".toRegex())
-    var res = paths.map { getValue1(it) }. first { null != it }
+    var res = paths.map { getValue1(it) }. firstOrNull { null != it }
 
 
 

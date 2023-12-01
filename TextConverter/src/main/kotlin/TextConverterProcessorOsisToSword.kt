@@ -51,7 +51,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
   {
     commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
     commandLineProcessor.addCommandLineOption("manualOsis2mod", 0, "Run osis2mod manually (useful where osis2mod fails to complete under control of the converter).", null, "n", false)
-    commandLineProcessor.addCommandLineOption("forceOsis2modType", 0, "Force a particular version of osis2mod to be used (as opposed to letting the converter decide).", listOf("crosswire", "step"), "n", false)
+    commandLineProcessor.addCommandLineOption("forceOsis2modType", 0, "Force a particular version of osis2mod to be used (as opposed to letting the converter decide).", listOf("crosswire", "step"), null, false)
   }
 
 
@@ -264,7 +264,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
 
     val texts: MutableList<String> = ArrayList()
     var reversificationDetails: String? = null
-    val x = ValueAddedSupplier.getConsolidatedDetailsForStepAbout(); if (null != x) texts.add(x)
+    val x = ValueAddedSupplier.getConsolidatedDetailsForStepAbout(); if (null != x && x.isNotEmpty()) texts.add(x)
 
     if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Morphology"))
     if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Strongs"))

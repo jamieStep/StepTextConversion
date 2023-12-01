@@ -10,6 +10,8 @@ import java.io.File
 import java.io.PrintWriter
 import java.nio.file.Paths
 import java.time.LocalDate
+import java.util.*
+import kotlin.collections.HashMap
 
 
 /******************************************************************************/
@@ -123,7 +125,7 @@ object TextConverterProcessorVLToEnhancedUsx : TextConverterProcessorBase
 
     private fun reformatReference (line: String): String
     {
-       val id = line.split(" ")[0]
+      val id = line.split(" ")[0]
       val bookNo = id.substring(0, 2).toInt() + 1 // SRGNT numbers NT books from 40; USX numbers them from 41.
       val newId = String.format("%02d", bookNo) + "_" + BibleBookNamesUsx.numberToAbbreviatedName(bookNo) + "." + id.substring(2, 5) + "." + id.substring(5)
       return newId + "\t" + line.substring(line.indexOf(" ") + 1)
@@ -136,6 +138,107 @@ object TextConverterProcessorVLToEnhancedUsx : TextConverterProcessorBase
       val res = reformatReference(line)
       return res.replace("˚", "°&#8201;") // SRGNT has an odd character in quite a lot of places.  Not sure what it's supposed to signify, but I've been asked to insert a small space before it.
     }
+  }
+
+
+  /****************************************************************************/
+  private object LineReformatter_Luther: LineReformatter
+  {
+    /**************************************************************************/
+    /* References are of the form '"Gn","1","1",' where the book abbreviations
+    *  are all 2-character and German. */
+
+    private fun reformatReference (line: String): String
+    {
+      val id = line.split(",", limit=4)
+      val bookNo = m_BookAbbreviationMappings[id[0]]!!
+      val chapterNo = id[1]
+      val verseNo = id[2]
+      var text = id[3].substring(1)
+      text = text.substring(0, text.length - 1)
+      val newId = String.format("%02d", bookNo) + "_" + BibleBookNamesUsx.numberToAbbreviatedName(bookNo) + "." + chapterNo + "." + verseNo
+      return newId + "\t" + text
+    }
+
+
+    /**************************************************************************/
+    override fun reformatLine (line: String): String
+    {
+      val res = reformatReference(line)
+      return res.replace("˚", "°&#8201;") // SRGNT has an odd character in quite a lot of places.  Not sure what it's supposed to signify, but I've been asked to insert a small space before it.
+    }
+
+
+
+    /**************************************************************************/
+    private val m_BookAbbreviationMappings: MutableMap<String, Int> = mutableMapOf(
+      "Gn" to BibleBookNamesUsx.nameToNumber("Gen"),
+      "Ex" to BibleBookNamesUsx.nameToNumber("Exo"),
+      "Lv" to BibleBookNamesUsx.nameToNumber("Lev"),
+      "Nu" to BibleBookNamesUsx.nameToNumber("Num"),
+      "Dt" to BibleBookNamesUsx.nameToNumber("Deu"),
+      "Joz" to BibleBookNamesUsx.nameToNumber("Jos"),
+      "Sd" to BibleBookNamesUsx.nameToNumber("Jdg"),
+      "Rt" to BibleBookNamesUsx.nameToNumber("Rut"),
+      "1S" to BibleBookNamesUsx.nameToNumber("1Sa"),
+      "2S" to BibleBookNamesUsx.nameToNumber("2Sa"),
+      "1Kr" to BibleBookNamesUsx.nameToNumber("1Ki"),
+      "2Kr" to BibleBookNamesUsx.nameToNumber("2Ki"),
+      "1Pa" to BibleBookNamesUsx.nameToNumber("1Ch"),
+      "2Pa" to BibleBookNamesUsx.nameToNumber("2Ch"),
+      "Ezd" to BibleBookNamesUsx.nameToNumber("Ezr"),
+      "Neh" to BibleBookNamesUsx.nameToNumber("Neh"),
+      "Est" to BibleBookNamesUsx.nameToNumber("Est"),
+      "Jb" to BibleBookNamesUsx.nameToNumber("Job"),
+      "Z" to BibleBookNamesUsx.nameToNumber("Psa"),
+      "Pr" to BibleBookNamesUsx.nameToNumber("Pro"),
+      "Kaz" to BibleBookNamesUsx.nameToNumber("Ecc"),
+      "Pis" to BibleBookNamesUsx.nameToNumber("Sng"),
+      "Iz" to BibleBookNamesUsx.nameToNumber("Isa"),
+      "Jr" to BibleBookNamesUsx.nameToNumber("Jer"),
+      "Pl" to BibleBookNamesUsx.nameToNumber("Lam"),
+      "Ez" to BibleBookNamesUsx.nameToNumber("Ezk"),
+      "Da" to BibleBookNamesUsx.nameToNumber("Dan"),
+      "Oz" to BibleBookNamesUsx.nameToNumber("Hos"),
+      "Jl" to BibleBookNamesUsx.nameToNumber("Jol"),
+      "Am" to BibleBookNamesUsx.nameToNumber("Amo"),
+      "Abd" to BibleBookNamesUsx.nameToNumber("Oba"),
+      "Jon" to BibleBookNamesUsx.nameToNumber("Jon"),
+      "Mi" to BibleBookNamesUsx.nameToNumber("Mic"),
+      "Na" to BibleBookNamesUsx.nameToNumber("Nam"),
+      "Abk" to BibleBookNamesUsx.nameToNumber("Hab"),
+      "Sf" to BibleBookNamesUsx.nameToNumber("Zep"),
+      "Ag" to BibleBookNamesUsx.nameToNumber("Hag"),
+      "Za" to BibleBookNamesUsx.nameToNumber("Zec"),
+      "Mal" to BibleBookNamesUsx.nameToNumber("Mal"),
+      "Mt" to BibleBookNamesUsx.nameToNumber("Mat"),
+      "Mk" to BibleBookNamesUsx.nameToNumber("Mrk"),
+      "L" to BibleBookNamesUsx.nameToNumber("Luk"),
+      "J" to BibleBookNamesUsx.nameToNumber("Jhn"),
+      "Sk" to BibleBookNamesUsx.nameToNumber("Act"),
+      "R" to BibleBookNamesUsx.nameToNumber("Rom"),
+      "1K" to BibleBookNamesUsx.nameToNumber("1Co"),
+      "2K" to BibleBookNamesUsx.nameToNumber("2Co"),
+      "Ga" to BibleBookNamesUsx.nameToNumber("Gal"),
+      "Ef" to BibleBookNamesUsx.nameToNumber("Eph"),
+      "Fp" to BibleBookNamesUsx.nameToNumber("Php"),
+      "Ko" to BibleBookNamesUsx.nameToNumber("Col"),
+      "1Te" to BibleBookNamesUsx.nameToNumber("1Th"),
+      "2Te" to BibleBookNamesUsx.nameToNumber("2Th"),
+      "1Tm" to BibleBookNamesUsx.nameToNumber("1Ti"),
+      "2Tm" to BibleBookNamesUsx.nameToNumber("2Ti"),
+      "Tit" to BibleBookNamesUsx.nameToNumber("Tit"),
+      "Fm" to BibleBookNamesUsx.nameToNumber("Phm"),
+      "Zd" to BibleBookNamesUsx.nameToNumber("Heb"),
+      "Jk" to BibleBookNamesUsx.nameToNumber("Jas"),
+      "1P" to BibleBookNamesUsx.nameToNumber("1Pe"),
+      "2P" to BibleBookNamesUsx.nameToNumber("2Pe"),
+      "1J" to BibleBookNamesUsx.nameToNumber("1Jn"),
+      "2J" to BibleBookNamesUsx.nameToNumber("2Jn"),
+      "3J" to BibleBookNamesUsx.nameToNumber("3Jn"),
+      "Ju" to BibleBookNamesUsx.nameToNumber("Jud"),
+      "Zj" to BibleBookNamesUsx.nameToNumber("Rev")
+    )
   }
 
 

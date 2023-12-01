@@ -643,7 +643,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
 
        /**************************************************************************************************************/
        /* We get a useful degree of uniformity if we have a dummy verse with a high verse number at the end of each
-          chapter (sid only). */
+          chapter. */
 
        fun addDummyVerse (chapter: Node)
        {
@@ -827,7 +827,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
     /* Expands numbers to four characters with leading zeroes; removes spaces; ensures that each element starts with
        'G' or 'H' (I've seen at least one text in which there was a Strong's ref comprising several elements, and
        only the first started this way, the assumption presumably being that the others should assume this same
-       value from context). */
+       value from context).  Also prepends 'strong:' to each element. */
 
     private fun handleStrongs()
     {

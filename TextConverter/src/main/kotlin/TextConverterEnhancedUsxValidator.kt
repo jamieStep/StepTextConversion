@@ -227,7 +227,9 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
            below, when we are processing the one verse of the elision which now
            contains the entire content.) */
 
-      var skipTest = Dom.hasAttribute(m_EnhancedBookAnatomy.m_AllNodes[enhancedSid], "_TEMP_dummy") // Ignore dummy verses.
+      var skipTest = enhancedSid == -1
+
+      if (!skipTest) skipTest = Dom.hasAttribute(m_EnhancedBookAnatomy.m_AllNodes[enhancedSid], "_TEMP_dummy") // Ignore dummy verses.
 
       if (!skipTest) skipTest = null == inputAnatomy.m_SidToIndex[refKey] // Verses which didn't exist in the original (presumably ones which were part of an elision).
 
@@ -585,12 +587,20 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
 
   private fun compare (enhanced: String, input: String, enhancedRefKey: RefKey, inputRefKey: RefKey)
   {
-    val contentEnhanced = enhanced.replace("\\s+|&#160;".toRegex(), " ")
-                                  .replace("\\s+|&#x2013;".toRegex(), " ")
+    if ('\u0001' in enhanced) return
+
+    val contentEnhanced = enhanced.replace("&#160;".toRegex(), " ") // XML non-breaking space.
+                                  .replace("&#x2013;".toRegex(), " ")  // En-dash.
                                   .replace("&nbsp;", " ")
+                                  .replace("\u00a0", " ") // Unicode non-breaking space.
                                   .replace("\\s+".toRegex(), " ").trim()
 
-    val contentInput    = input   .replace("\\s+".toRegex(), " ").trim()
+    val contentInput = input.replace("&#160;".toRegex(), " ") // XML non-breaking space.
+                            .replace("&#x2013;".toRegex(), " ") // En-dash.
+                            .replace("&nbsp;", " ")
+                            .replace("\u00a0", " ") // Unicode non-breaking space.
+                            .replace("\\s+".toRegex(), " ").trim()
+
     if (PreprocessorHandler.getTextForValidation(contentInput.replace("\\s+".toRegex(), "")) == contentEnhanced.replace("\\s+".toRegex(), "")) return
 
     val message = "Verse mismatch:<nl>  Enhanced = '$contentEnhanced'<nl>  Raw      = '$contentInput'<nl>"
@@ -854,6 +864,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
 
 
     /**************************************************************************/
+    var mostRecentSidRefKey = Ref.rd(0, 0, 0, 0).toRefKey()
     for (i in res.m_AllNodes.indices)
     {
       val node = res.m_AllNodes[i]
@@ -862,7 +873,10 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
         "verse" ->
         {
           if ("sid" in node)
-            res.m_SidToIndex[Ref.rdUsx(node["sid"]!!).toRefKey()] = i
+          {
+            mostRecentSidRefKey = Ref.rdUsx(node["sid"]!!).toRefKey()
+            res.m_SidToIndex[mostRecentSidRefKey] = i
+          }
           else
             res.m_EidToIndex[Ref.rdUsx(node["eid"]!!).toRefKey()] = i
         }
@@ -876,6 +890,12 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
           }
         }
       } // when
+
+      if ("_X_suppressValidation" in node) // If the node has been tagged as suppressing validation, mark the owning verse as not to be validated.
+      {
+        res.m_SidToIndex[mostRecentSidRefKey] = -1
+        res.m_EidToIndex[mostRecentSidRefKey] = -1
+      }
     } // for
 
 

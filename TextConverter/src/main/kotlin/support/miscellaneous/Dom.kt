@@ -144,8 +144,6 @@ object Dom
   *     </xsl:template>
   * ```
   *
-  * and you can even replace the apply-templates above by !recurse and the
-  * code here will insert it for you.
   *
   * This takes care of header and trailer, and also default namespace.  If you
   * need to do more sophisticated things, you'll need to create a fully-fledged
@@ -167,20 +165,20 @@ object Dom
       .map { (name, value) -> "$name='$value'" }
       .joinToString(" ")
 
-    val stylesheet: String = """
+    val stylesheet = """
       <xsl:stylesheet version='2.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform' $defaultNamespaceSetting $otherNameSpaces>
 
         <!-- Identity template to copy all nodes and attributes. -->
-        <xsl:template match='@* | node()'>
+        <xsl:template match='@*|node()'>
           <xsl:copy>
-            <xsl:apply-templates select='@* | node()'/>
+            <xsl:apply-templates select='@*|node()'/>
           </xsl:copy>
         </xsl:template>
     
         $basicStylesheet
 
       </xsl:stylesheet>
-    """.replace("!recurse", "<xsl:apply-templates select='@* | node()'/>")
+    """
 
     //Dbg.d(stylesheet)
 
@@ -1502,7 +1500,8 @@ object Dom
         factory.isNamespaceAware = true // See comments above.
         factory.isIgnoringComments = !retainComments
         val builder: DocumentBuilder = factory.newDocumentBuilder()
-        val doc =  builder.parse(FileInputStream(inputFilePath))
+        val inputData = ByteArrayInputStream(File(inputFilePath).readText().replace("\u00a0", "&#160;").toByteArray()) // Unicode non-breaking space.
+        val doc =  builder.parse(inputData)
         doc.normalizeDocument()
         return doc
     }

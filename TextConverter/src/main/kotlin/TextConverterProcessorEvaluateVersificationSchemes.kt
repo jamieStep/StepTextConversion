@@ -6,6 +6,7 @@ import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProce
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Dbg
+import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.shared.SharedData
 import java.io.File
 
@@ -186,7 +187,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
   private fun evaluateScheme (scheme: String, bookNumbersInTextUnderConstruction: List<Int>): Evaluation?
   {
     /**************************************************************************/
-    //Dbg.dCont(scheme, "nrsva")
+    //Dbg.dCont(scheme, "nrsv")
 
 
 
@@ -235,6 +236,8 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
          val comparisonDetails = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), bibleStructureOther)
          versesMissingInOsis2modScheme += comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.size
          versesInExcessInOsis2modScheme += comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.size
+         //Dbg.d(comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.joinToString(prefix = "Bad: ", separator = ", "){ Ref.rd(it).toString() })
+         //Dbg.d(comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.joinToString(prefix = "Ok: ", separator = ", "){ Ref.rd(it).toString() })
        }
      }
 

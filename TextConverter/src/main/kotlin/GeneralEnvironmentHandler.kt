@@ -140,7 +140,7 @@ object GeneralEnvironmentHandler
     /* Type forced from command line? */
 
     val forcedOsis2modType = ConfigData["stepForceOsis2modType"]
-    if (null != forcedOsis2modType)
+    if (!forcedOsis2modType.isNullOrEmpty())
     {
       ConfigData["stepOsis2modType"] = forcedOsis2modType.lowercase()
       return

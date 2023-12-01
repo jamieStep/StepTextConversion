@@ -554,7 +554,6 @@ object ConfigData
             .filter { it in m_Metadata } // We do have an associated value.
             .filter { get(it)!!.isEmpty() } // But the value is empty.
             .forEach { Logger.error("Null / empty value not permitted for parameter $it.")}
-
     }
 
 
@@ -686,6 +685,7 @@ object ConfigData
 
     operator fun get (key: String): String?
     {
+      //Dbg.d(key, "stepTextOwnerOrganisationFullName")
       return getInternal(key, true)
     }
 
@@ -815,7 +815,7 @@ object ConfigData
     fun put (key: String, theValue: String, force: Boolean)
     {
       /************************************************************************/
-      //Dbg.d(key, "stepEvaluateSchemesOnly")
+      //Dbg.d(key, "stepForceOsis2modType")
 
 
 
@@ -1129,7 +1129,7 @@ object ConfigData
 
      /*************************************************************************/
      /* Repeatedly looks for the next @-thing in the string and then arranges
-        tp parse it and replace it by its expanded value. */
+        to parse it and replace it by its expanded value. */
 
      while (true)
      {
