@@ -12,10 +12,8 @@ import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
 import org.stepbible.textconverter.support.shared.SharedData
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.runCommand
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils.createFolderStructure
-import org.stepbible.textconverter.support.miscellaneous.StepStringUtils.sentenceCaseFirstLetter
 import org.stepbible.textconverter.support.miscellaneous.Translations
 import org.stepbible.textconverter.support.miscellaneous.Zip
-import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.File
 import java.nio.file.Paths
 import java.text.SimpleDateFormat
@@ -260,20 +258,13 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
     /**************************************************************************/
     /* $$$ The ValueAddedSupplier line below is the way to go in future.  I'm
        not changing the others yet, because the processing upon which they rely
-       is likely to change -- particularly the reversification stuff. */
+       is likely to change. */
 
     val texts: MutableList<String> = ArrayList()
-    var reversificationDetails: String? = null
-    val x = ValueAddedSupplier.getConsolidatedDetailsForStepAbout(); if (null != x && x.isNotEmpty()) texts.add(x)
+    val x = ValueAddedSupplier.getConsolidatedDetailsForStepAbout(); if (x.isNotEmpty()) texts.add(x)
 
     if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Morphology"))
     if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Strongs"))
-    if (ConfigData.getAsBoolean("stepAddedValueReversification", "No"))
-    {
-      texts.add(Translations.stringFormatWithLookup("V_AddedValue_Reversification"))
-      reversificationDetails = Translations.stringFormatWithLookup("V_reversification_LongDescription_" + sentenceCaseFirstLetter(ConfigData["stepReversificationType"]!!))
-      reversificationDetails = reversificationDetails.replace("%d", SharedData.VersesAmendedByReversification.size.toString())
-    }
 
 
 
@@ -285,7 +276,6 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
       text += java.lang.String.join("; ", texts)
     }
 
-    if (null != reversificationDetails) text += reversificationDetails
     if (text.isNotEmpty()) text = "¬¬$text."
     stepInfo = stepInfo.replace("@(AddedValue)", text)
 
@@ -511,9 +501,9 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
 
 
     /**************************************************************************/
-    for (x in lines)
+    for (theLine in lines)
     {
-      var line = x.trim()
+      var line = theLine.trim()
 
       if ("\$includeCopyAsIsLines".equals(line, ignoreCase = true))
       {

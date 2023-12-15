@@ -31,14 +31,6 @@ const val C_ConfigurationFlag_PreferredTableConversionType = "Elide"
 
 
 /****************************************************************************/
-/** In reversification we evaluate the amount of change which reversification
-*   has applied by counting how many reversification footnotes are applied.
-*/
-
-const val C_ConfigurationFlags_ReversificationThresholdMarkingAFairAmountOfWork = 6
-
-
-/****************************************************************************/
 /** Where verses are missing at the start of or within the body of chapters,
 *   we always need to generate empty verses to fill the gaps.  This is not
 *   necessarily the case at the end of chapters, though -- we may be happy

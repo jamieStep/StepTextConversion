@@ -122,42 +122,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
     val bookNumbersInRawUsx = BibleBookAndFileMapperRawUsx.getBookNumbersInOrder()
     BibleStructuresSupportedByOsis2mod.getSchemes().forEach { evaluateScheme(it, bookNumbersInRawUsx) }
     val details = investigateResults()
-    evaluateNeedForReversification()
     outputDetails(details)
-  }
-
-
-  /****************************************************************************/
-  /* Determines whether we are to reversify or not.  This is driven in part by
-     command-line parameters.  The user may give None / Basic / Basic? /
-     Academic / Academic?.  Any of the options which lack question marks force
-     the issue.
-
-     Any option which has a question mark means that it is up to the processing
-     here to make a call as to whether the text departs far enough from the
-     NRSV(A) versification to warrant reversification.
-
-     Note that the thresholds which determine this are essentially arbitrary, so
-     you are at liberty to change them. */
-
-  private fun evaluateNeedForReversification ()
-  {
-    val fromCommandLineOrConfig = (ConfigData["stepReversificationType"] ?: "none").lowercase()
-
-    if (!fromCommandLineOrConfig.contains("?")) return
-
-    val doIt = SharedData.NrsvVersificationSchemeNumberOfExcessVerseEquivalentsInOsisScheme!!  > 10 || // Thresholds -- see above.
-               SharedData.NrsvVersificationSchemeNumberOfMissingVerseEquivalentsInOsisScheme!! > 5
-    if (doIt)
-    {
-      ConfigData.put("stepReversificationType", fromCommandLineOrConfig.replace("?", ""), true)
-      ConfigData.put("stepReversificationBasis", "Converter decided to reversify because text departs too far from NRSV(A).", true)
-    }
-    else
-    {
-      ConfigData.put("stepReversificationType", "none", true)
-      ConfigData.put("stepReversificationBasis", "Converter decided not to reversify because text is reasonably close to NRSV(A).", true)
-    }
   }
 
 

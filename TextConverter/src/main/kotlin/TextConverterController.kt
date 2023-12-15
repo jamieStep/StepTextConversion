@@ -46,6 +46,7 @@ class TextConverterController
     {
         CommandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
         CommandLineProcessor.addCommandLineOption("help", 0, "Get help.", null, "no", false)
+        CommandLineProcessor.addCommandLineOption("reversificationType", 1, "None / Basic / Academic (append '?' to Basic or Academic to have the converter decide whether to reversify", listOf("None", "Basic", "Academic", "Basic?", "Academic?"), "Basic?", false)
         GeneralEnvironmentHandler.getCommandLineOptions(CommandLineProcessor)
 
         (C_ProcessorsCommonPre.toSet() +
@@ -253,7 +254,7 @@ class TextConverterController
    /* When the starting point is OSIS. */
 
    private val C_ProcessorsForOsisInput = C_ProcessorsCommonPre + listOf(
-     TextConverterProcessorReversification // Need to reconsider this?
+     // $$$ TextConverterProcessorReversification // Need to reconsider this?
    ) + C_ProcessorsForCreatingModule
 
 
@@ -263,7 +264,7 @@ class TextConverterController
 
    private val C_ProcessorsForUsxInput = C_ProcessorsCommonPre + listOf(
      TextConverterProcessorUsxToEnhancedUsx1,
-     TextConverterProcessorReversification, // Need to reconsider this?
+     // $$$ TextConverterProcessorReversification, // Need to reconsider this?
      TextConverterProcessorUsxToEnhancedUsx2) + C_ProcessorsStartingFromEnhancedUsx
 
 

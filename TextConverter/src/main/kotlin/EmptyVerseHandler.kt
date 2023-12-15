@@ -11,7 +11,7 @@ import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.usx.Usx
-import org.stepbible.textconverter.C_CreateEmptyChapters
+import org.stepbible.textconverter.support.miscellaneous.contains
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.util.*
@@ -199,6 +199,68 @@ object EmptyVerseHandler
 
   /****************************************************************************/
   /**
+  * Creates an empty verse where it has been determined elsewhere that we are
+  * missing a verse.  The verse is also given a footnote, but only if
+  * there is no footnote in an adjacent verse (if there *is* a footnote in an
+  * adjacent verse, we assume that it already explains why this verse is empty).
+  *
+  * @param document Document to which verse is to be added.
+  * @param refKey RefKey for new verse.
+  * @param footnoteText Text to appear in footnote.
+  * @param reason Reason for creating the empty verse.  This is added as an
+  *               attribute to the sid node for debug purposes.
+  */
+
+  fun createEmptyVerseForMissingVerse (document: Document, refKey: RefKey, footnoteText: String?, reason: String)
+  {
+    val allNodes = Dom.collectNodesInTree(document)
+  }
+
+
+  /****************************************************************************/
+  /* Creates an empty verse to fill in a gap in the versification, and inserts
+     it before the given node, or at the end of the parent chapter if
+     insertBefore is null.  Returns a pair consisting of the sid and the eid.
+
+     Note 2023-09-20
+     ---------------
+
+     The commented-out Dom.insertNodeBefore line was what was originally in the
+     code.  It looked up the target verse to see if we had a specific override
+     for the footnote text.  However, I think this was specific to cases where
+     we were doing reversification, and I don't _think_ this method gets
+     called for that.  So I have replaced it with the two lines which refer to
+     footnoteText.
+  */
+
+  fun createEmptyVerseForMissingVerse (document: Document, refKey: RefKey, insertBefore: Node?, generatedReason: String = "Not found on completion of processing", reasonEmpty: String = "verseWasMissing"): Pair<Node, Node>
+  {
+    Logger.warning(refKey, "Created verse which was missing from the original text.")
+
+    val sidAsString = Ref.rd(refKey).toString()
+    val template = "<verse ID _X_generatedReason='$generatedReason' _X_reasonEmpty='$reasonEmpty'/>"
+    val start = Dom.createNode(document, template.replace("ID", "sid='$sidAsString'"))
+    val end   = Dom.createNode(document, template.replace("ID", "eid='$sidAsString'"))
+
+    val ib = insertBefore ?: Dom.createNode(document,"<_TEMP/>")
+
+
+    Dom.insertNodeBefore(ib, start)
+    val footnoteNode = MiscellaneousUtils.makeFootnote(document, refKey, text = stringFormatWithLookup("V_emptyContentFootnote_verseEmptyInThisTranslation") , callout = ConfigData["stepExplanationCallout"])  // See note for 2023-09-20 above.
+    Dom.insertNodeBefore(ib, footnoteNode)  // See note for 2023-09-20 above.
+    // Dom.insertNodeBefore(ib, makeReferenceSpecificFootnote(document, sidAsString, "V_emptyContentFootnote_verseEmptyInThisTranslation"))  // See note for 2023-09-20 above.
+    Dom.insertNodeBefore(ib, makeContent(document, m_Content_MissingVerse))
+    Dom.insertNodeBefore(ib, end)
+
+    if (null == insertBefore)
+      Dom.deleteNode(ib)
+
+    return Pair(start, end)
+  }
+
+
+  /****************************************************************************/
+  /**
   * Checks for missing verses within the given document (and also for missing
   * chapters) and fills things in as necessary.  This version is for the case
   * where we are dealing with an ad hoc versification scheme, and therefore do
@@ -322,6 +384,51 @@ object EmptyVerseHandler
   }
 
 
+  /****************************************************************************/
+  /**
+  * Returns a list of all the empty verses in the document.  A verse is
+  * regarded as empty if either it is indeed completely empty, or if it contains
+  * only whitespace.
+  *
+  * @param document The document to be examined.
+  * @return List of sid nodes for empty verses.
+  */
+
+  fun getEmptyVerses (document: Document): List<Node>
+  {
+    /**************************************************************************/
+    var res: MutableList<Node> = mutableListOf()
+    var couldBeEmpty: Node? = null
+
+
+
+    /**************************************************************************/
+    fun processNode (node: Node)
+    {
+      if ("_X_verse" == Dom.getNodeName(node))
+      {
+        if ("sid" in node)
+          couldBeEmpty = node
+        else
+        {
+          if (null != couldBeEmpty)
+            res.add(node)
+          couldBeEmpty = null
+        }
+      }
+
+      else if (!Dom.isTextNode(node) || node.textContent.isNotBlank())
+        couldBeEmpty = null
+    }
+
+
+
+    /**************************************************************************/
+    Dom.collectNodesInTree(document).forEach { processNode(it) }
+    return res
+  }
+
+
 
 
 
@@ -357,47 +464,6 @@ object EmptyVerseHandler
 
 
   /****************************************************************************/
-  /* Creates an empty verse to fill in a gap in the versification, and inserts
-     it before the given node, or at the end of the parent chapter if
-     insertBefore is null.  Returns a pair consisting of the sid and the eid.
-
-     Note 2023-09-20
-     ---------------
-
-     The commented-out Dom.insertNodeBefore line was what was originally in the
-     code.  It looked up the target verse to see if we had a specific override
-     for the footnote text.  However, I think this was specific to cases where
-     we were doing reversification, and I don't _think_ this method gets
-     called for that.  So I have replaced it with the two lines which refer to
-     footnoteText.
-  */
-  private fun createEmptyVerseForMissingVerse (document: Document, refKey: RefKey, insertBefore: Node?, generatedReason: String = "Not found on completion of processing", reasonEmpty: String = "verseWasMissing"): Pair<Node, Node>
-  {
-    Logger.warning(refKey, "Created verse which was missing from the original text.")
-
-    val sidAsString = Ref.rd(refKey).toString()
-    val template = "<verse ID _X_generatedReason='$generatedReason' _X_reasonEmpty='$reasonEmpty'/>"
-    val start = Dom.createNode(document, template.replace("ID", "sid='$sidAsString'"))
-    val end   = Dom.createNode(document, template.replace("ID", "eid='$sidAsString'"))
-
-    val ib = insertBefore ?: Dom.createNode(document,"<_TEMP/>")
-
-
-    Dom.insertNodeBefore(ib, start)
-    val footnoteNode = MiscellaneousUtils.makeFootnote(document, refKey, text = stringFormatWithLookup("V_emptyContentFootnote_verseEmptyInThisTranslation") , callout = ConfigData["stepExplanationCallout"])  // See note for 2023-09-20 above.
-    Dom.insertNodeBefore(ib, footnoteNode)  // See note for 2023-09-20 above.
-    // Dom.insertNodeBefore(ib, makeReferenceSpecificFootnote(document, sidAsString, "V_emptyContentFootnote_verseEmptyInThisTranslation"))  // See note for 2023-09-20 above.
-    Dom.insertNodeBefore(ib, makeContent(document, m_Content_MissingVerse))
-    Dom.insertNodeBefore(ib, end)
-
-    if (null == insertBefore)
-      Dom.deleteNode(ib)
-
-    return Pair(start, end)
-  }
-
-
-  /****************************************************************************/
   private fun getSidMap (document: Document, nodeName: String): NavigableMap<RefKey, Node>
   {
     return Dom.findNodesByName(document, nodeName)
@@ -410,8 +476,7 @@ object EmptyVerseHandler
   private fun makeReferenceSpecificFootnote (doc: Document, sid: String, dflt: String): Node
   {
     val refKey = Ref.rdUsx(sid).toRefKey()
-    val dataRow = m_VerseSpecificFootnoteText[refKey]
-    val footnoteText = if (null == dataRow) stringFormatWithLookup(dflt) else ReversificationData.getFootnoteA(dataRow)
+    val footnoteText = m_VerseSpecificFootnoteText[refKey]!!
     return MiscellaneousUtils.makeFootnote(doc, refKey, text = footnoteText , callout = ConfigData["stepExplanationCallout"])
   }
 
@@ -440,12 +505,5 @@ object EmptyVerseHandler
   private val m_Content_EmptyVerse = stringFormatWithLookup("V_contentForEmptyVerse_verseEmptyInThisTranslation")
   private val m_Content_MissingVerse = stringFormatWithLookup("V_contentForEmptyVerse_verseWasMissing")
   private var m_Toggle = true
-  private val m_VerseSpecificFootnoteText: MutableMap<RefKey, ReversificationDataRow> = mutableMapOf()
-
-
-  /****************************************************************************/
-  init
-  {
-    ReversificationData.getIfEmptyRows().forEach { m_VerseSpecificFootnoteText[it.sourceRefAsRefKey] = it }
-  }
+  private val m_VerseSpecificFootnoteText = ReversificationData.getIfEmptyFootnoteDetails()
 }

@@ -109,7 +109,6 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase
 
     //Dbg.d(document)
     reportBookBeingProcessed(document)
-    TextConverterVersificationHealthCheck.checkBook(document)
 
     var changed = false // As a reminder below, 'or' does an OR _without_ short-circuit evaluation.
     changed = changed or handleCanonicalTitlesContainingVerses(document)
@@ -131,6 +130,8 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase
     changed = changed or generateFootnotesForElisionMastersMain(document)
     changed = changed or tidyUpMain(document)
     changed = changed or cosmeticChangesMain(document)
+
+    TextConverterVersificationHealthCheck.checkBook(document)
 
     if (changed) Dom.outputDomAsXml(document, filePath, null)
   }
@@ -432,7 +433,7 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase
   {
      val document = paraD.ownerDocument
      val children = Dom.getChildren(paraD)
-     children.filter { val x = Dom.getNodeName(it); x != "verse" && x != "note"}
+     children.filter { val x = Dom.getNodeName(it); x != "_X_verse" && x != "note"}
              .forEach {
                val italicsNode = Dom.createNode(document, "<char style='it'/>")
                Dom.insertNodeBefore(it, italicsNode)

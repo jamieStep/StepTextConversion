@@ -149,7 +149,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
        processing having removed 'awkward' verses from the list of those still
        to be handled. */
 
-    if (TextConverterProcessorReversification.runMe())
+    if (TextConverterProcessorReversificationAnnotateOnly.runMe())
     {
       checkReversifiedEverythingButCanonicalTitles(reversificationDetails)
       checkReversifiedCanonicalTitles(reversificationDetails)

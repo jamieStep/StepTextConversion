@@ -45,7 +45,7 @@ import java.io.PrintWriter
  * @author ARA "Jamie" Jamieson
  */
 
-open abstract class Osis2ModInterface
+abstract class Osis2ModInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -65,7 +65,7 @@ open abstract class Osis2ModInterface
       return m_Instance!!
     }
 
-    var m_Instance: Osis2ModInterface? = null
+    private var m_Instance: Osis2ModInterface? = null
   }
 
 
@@ -82,8 +82,6 @@ open abstract class Osis2ModInterface
   /**
   * Records the osis2mod variant we are going to use, and sets up any other
   * aspects of the environment dependent upon that.
-  *
-  * @param osis2modVariant What it says on the tin.
   */
 
   abstract fun initialise ()
@@ -168,7 +166,7 @@ object Osis2ModInterfaceStep: Osis2ModInterface()
   {
     BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, wantWordCount = false) // Make sure we have up-to-date structural information.
     populateBibleStructure()
-    populateReversificationMappings()
+    m_BibleStructure.jswordMappings = TextConverterProcessorReversificationAnnotateOnly.getReversificationMappings()
     outputJson(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath())
   }
 
@@ -181,29 +179,10 @@ object Osis2ModInterfaceStep: Osis2ModInterface()
 
   override fun initialise ()
   {
-    /**************************************************************************/
     initialiseBookDetails()
-
-
-
-    /**************************************************************************/
     C_CollapseSubverses = false
     C_CreateEmptyChapters = false
     C_ExpandElisions = true // false !!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-    /**************************************************************************/
-    /* There are some settings which I think Sami ignores anyway, but just
-       to be sure, I clear them and then reinstate anything which is
-       needed. */
-
-    ConfigData.delete("stepVersificationScheme")
-    ConfigData.delete("stepVersificationSchemeCanonical")
-    ConfigData.put("stepVersificationScheme", ConfigData["stepModuleNameWithoutDisambiguation"]!!, true)
-    ConfigData.put("stepVersificationSchemeCanonical", ConfigData["stepModuleNameWithoutDisambiguation"]!!, true)
-    ConfigData.put("stepReversificationType", "none", true) // With our osis2mod, we don't actually apply reversification -- we just record what it would do.
-                                                                              // This will need changing at some point so that we can at least apply footnotes.
   }
 
 
@@ -226,7 +205,7 @@ object Osis2ModInterfaceStep: Osis2ModInterface()
      val otBooks: MutableList<BookDetails> = mutableListOf()
      val ntBooks: MutableList<BookDetails> = mutableListOf()
 
-     val jswordMappings: MutableList<Pair<RefKey, RefKey>> = mutableListOf()
+     var jswordMappings: List<Pair<RefKey, RefKey>> = listOf()
 
 
      fun output (writer: PrintWriter)
@@ -443,21 +422,6 @@ object Osis2ModInterfaceStep: Osis2ModInterface()
       header.chapMax = if (missingBook) 0 else BibleStructure.UsxUnderConstructionInstance().getLastChapterNo(bookNo)
       for (chapterNo in 1 .. header.chapMax) header.vm.add(BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(bookNo, chapterNo))
     }
-  }
-
-
-  /****************************************************************************/
-  private fun populateReversificationMappings ()
-  {
-    val renumbers = ReversificationData.getReferenceMappings()
-    //renumbers.forEach { m_BibleStructure.jswordMappings.add(Pair(it.key, Ref.clearS(it.value))) }
-    renumbers.forEach { m_BibleStructure.jswordMappings.add(Pair(it.key, it.value)) }
-
-    val psalmTitles = ReversificationData.getAllAcceptedRows().filter { 0 != it.processingFlags.and(ReversificationData.C_StandardIsPsalmTitle) }
-    psalmTitles.forEach { m_BibleStructure.jswordMappings.add(Pair(it.sourceRefAsRefKey, Ref.setV(it.standardRefAsRefKey, 0))) }
-
-    m_BibleStructure.jswordMappings.sortBy { it.first }
-    //m_BibleStructure.jswordMappings.forEach { Dbg.d("" + it.first + "=" + it.second)}
   }
 
 

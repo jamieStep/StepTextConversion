@@ -53,7 +53,7 @@ class ReversificationDataRow (rowNo: Int)
            var footnoteLevel = -1
            var isInNoTestsSection = false
            var processingFlags = 0
-           val rowNumber: Int
+   private val rowNumber: Int
   lateinit var sourceRef: Ref
            var sourceRefAsRefKey = 0L
   lateinit var sourceType: String
@@ -168,6 +168,7 @@ object ReversificationData
           const val C_StandardIsPsalmTitle       = 0x0040
           const val C_RetainOriginalVersesInSitu = 0x0080
   private const val C_IfEmpty                    = 0x0100
+  private const val C_IfAbsent                   = 0x0200
 
 
 
@@ -189,49 +190,8 @@ object ReversificationData
 
   fun process ()
   {
-    /**************************************************************************/
-    /* Assume reversification isn't doing anything useful until we know
-       otherwise. */
-
-    ConfigData.put("stepAddedValueReversification", "n", true)
-
-
-
-    /**************************************************************************/
-    /* Find out whether licensing conditions etc limit the kinds of changes we
-       can apply. */
-
-    val stepAbout = ConfigData["stepAbout"]!!.lowercase()
-    val licenceDefinitelyBarsSignificantChanges = "®" in stepAbout || "©" in stepAbout || "(c)" in stepAbout || "copyright" in stepAbout || "trademark" in stepAbout
-    val stepPermitSignificantTextRestructuring = ConfigData["stepPermitsSignificantTextRestructuring"] ?: "no"
-    when (stepPermitSignificantTextRestructuring.lowercase())
-    {
-      "n", "no", "f", "false" -> m_LicensingTermsLimitWhatWeCanDo = false
-      "y", "yes", "t", "true" -> m_LicensingTermsLimitWhatWeCanDo = true
-      "aslicence"             -> m_LicensingTermsLimitWhatWeCanDo = !licenceDefinitelyBarsSignificantChanges
-      else                    -> Logger.error("Invalid value for stepPermitSignificantTextRestructuring: $stepPermitSignificantTextRestructuring")
-    }
-
-
-
-    /**************************************************************************/
-    /* Load and analyse the reversification data.  Then look for rows marked as
-       Move or Renumber.  If there are enough of them, make a record of the
-       fact that reversification will be doing a fair amount of work, because
-       when this is the case, we mark the module as being ours -- we want
-       something to distinguish it from modules to which we haven't added value,
-       but at the same time we recognise that this may be interpreted as us
-       claiming credit for a text which is largely someone else's work, so we
-       try to avoid marking the module in this way too readily.  (This isn't the
-       only form of added value which feeds into the decision, incidentally.) */
-
     initialise()
-    val n = m_SelectedRows.count { 0 != it.processingFlags.and(C_Move.or(C_Renumber)) }
-    if (n > C_ConfigurationFlags_ReversificationThresholdMarkingAFairAmountOfWork)
-      ConfigData.put("stepAddedValueReversification", "y", true)
   }
-
-  private var m_LicensingTermsLimitWhatWeCanDo: Boolean = true
 
 
 
@@ -297,17 +257,18 @@ object ReversificationData
 
   fun getAllAcceptedRows (): List<ReversificationDataRow> { return m_SelectedRows }
 
-  fun getIfEmptyRows (): List<ReversificationDataRow> { return m_IfEmptyRows }
+  fun getIfAbsentFootnoteDetails (): Map<RefKey, String> { return m_IfAbsentRows.associateBy(ReversificationDataRow::sourceRefAsRefKey) { getFootnoteB(it) } }
+  fun getIfEmptyFootnoteDetails (): Map<RefKey, String>  { return m_IfEmptyRows .associateBy(ReversificationDataRow::sourceRefAsRefKey) { getFootnoteB(it) } }
 
   fun targetsDc (): Boolean
   {
-    try
+    return try
     {
-      return m_StandardBooks.any { BibleAnatomy.isDc(BibleBookNamesUsx.abbreviatedNameToNumber(it)) }
+      m_StandardBooks.any { BibleAnatomy.isDc(BibleBookNamesUsx.abbreviatedNameToNumber(it)) }
     }
     catch (_: Exception)
     {
-      return false
+      false
     }
   }
 
@@ -356,6 +317,7 @@ object ReversificationData
   /****************************************************************************/
 
   /****************************************************************************/
+  private val m_IfAbsentRows: MutableList<ReversificationDataRow> = ArrayList(20)
   private val m_IfEmptyRows: MutableList<ReversificationDataRow> = ArrayList(200)
   private val m_SelectedRows: MutableList<ReversificationDataRow> = ArrayList(10000)
 
@@ -531,11 +493,20 @@ object ReversificationData
     /* It would actually be more efficient to do this earlier on and abandon
        further processing if it fails.  However, it is convenient to do a fair
        bit of the processing regardless, because it creates information which
-       may be useful for debugging. */
+       may be useful for debugging.
+
+       IfAbsent is special.  First, in all other cases, a row applies only if
+       the source verse exists.  IfAbsent really relates to the situation
+       where the source verse _doesn't_ exist.  And second, even that we're
+       not all that interested in: the IfAbsent rows are used entirely
+       outside of the context of reversification, merely to hold details of the
+       footnote to be added to any verse which may be generated to fill in
+       holes in the reversification scheme.
+    */
 
     processedRow.sourceRef = Ref.rdUsx(usxifyFromStepFormat(sourceRefAsString))
     val ruleData = getField("Tests", processedRow)
-    val tmp = if (processedRow.sourceType.equals("IfEmpty", ignoreCase = true)) null else processedRow.sourceRef // Don't test existence of sourceRef on an IfEmpty row (which actually has nothing directly to do with reversification).
+    val tmp = if (processedRow.sourceType.equals("IfAbsent", ignoreCase = true)) null else processedRow.sourceRef // Don't test existence of sourceRef on an IfEmpty row (which actually has nothing directly to do with reversification).
     if (!ReversificationRuleEvaluator.rulePasses(tmp, ruleData, processedRow))
       accepted = false
 
@@ -641,10 +612,7 @@ object ReversificationData
     if (m_AlreadyInitialised) return
     m_AlreadyInitialised = true
 
-    if (TextConverterProcessorReversification.runMe())
-      Dbg.reportProgress("Reading reversification data from webpage.", 1)
-    else
-      Dbg.reportProgress("Reading reversification data from webpage.  (This contains data needed even if not reversifying.)", 1)
+    Dbg.reportProgress("Reading reversification data from webpage.  (This contains data needed even if not reversifying.)", 1)
 
     val dataLocation = ConfigData["stepReversificationDataLocation"]!!
     if (!dataLocation.startsWith("http")) Logger.warning("Running with local copy of reversification data.")
@@ -683,26 +651,39 @@ object ReversificationData
     /**************************************************************************/
     val fields = rawData.split("\t").map { it.trim() }
 
+
+
+    /**************************************************************************/
     if (m_Headers.isEmpty())
     {
       var n = -1
       fields.forEach { m_Headers[it] = ++n }
+      return
     }
+
+
+
+    /**************************************************************************/
+    val (processedRow, accepted) = convertToProcessedForm(fields.toMutableList(), rowNumber, isInNoTestsSection)
+    if (!accepted)
+    {
+      debugRecordReversificationRow(false, processedRow)
+      return
+    }
+
+
+
+    /**************************************************************************/
+    if (0 != processedRow.processingFlags and C_IfEmpty)
+      m_IfEmptyRows.add(processedRow)
+
+    else if (0 != processedRow.processingFlags and C_IfAbsent)
+      m_IfAbsentRows.add(processedRow)
+
     else
     {
-      val (processedRow, accepted) = convertToProcessedForm(fields.toMutableList(), rowNumber, isInNoTestsSection)
-      if (accepted) // We always need IfEmpty rows; but we need other rows only on reversification rows.
-      {
-        if (0 == processedRow.processingFlags and C_IfEmpty)
-        {
-          m_SelectedRows.add(processedRow)
-          debugRecordReversificationRow(true, processedRow)
-        }
-        else
-          m_IfEmptyRows.add(processedRow)
-      }
-      else // Not accepted.
-        debugRecordReversificationRow(false, processedRow)
+      m_SelectedRows.add(processedRow)
+      debugRecordReversificationRow(true, processedRow)
     }
   }
 
@@ -904,6 +885,7 @@ object ReversificationData
     {
       "ne" -> row.footnoteLevel = 0 // Necessary.
       "ac" -> row.footnoteLevel = 1 // Academic.
+      "op" -> row.footnoteLevel = 999 // Suppress.
       else -> Logger.error("Reversification invalid note level: " + x[0])
     }
 
@@ -1056,41 +1038,6 @@ object ReversificationData
 
 
     /**************************************************************************/
-    /* Things get a bit confusing here.  We want to weed out rows which might
-       make 'significant' changes to the text where the text is subject to
-       copyright and we don't have permission to make changes.  But we've been
-       messing around with the Action field to get rid of what I believe to be
-       errors in the reversification data and / or to make processing more
-       uniform.
-
-       So, we evaluate things here only if m_LicensingTermsLimitWhatWeCanDo
-       indicates the need to do so, and only if we believe we are moving
-       stuff.
-
-       Where this applies, I make the assumption that if the original version
-       of the Action parameter indicated a Move, then this is definitely a
-       Move which we wish to reject.
-
-       We have an original version only if the processing has actually changed
-       the action parameter.  If we don't have an original version, I assume
-       that we can go by whether the Action field itself is marked as a Move
-       (ie contains an asterisk).
-     */
-
-    if (m_LicensingTermsLimitWhatWeCanDo && 0 != moveFlag)
-    {
-      if (null != row.originalAction)
-      {
-        if ('*' in row.originalAction!!)
-          return false
-      }
-      else if ('*' in row.action)
-        return false
-    }
-
-
-
-    /**************************************************************************/
     /* The only thing we haven't taken into account is PsalmTitle.  However,
        that never involves a move, and is never marked as doing so, so there's
        nothing to do with that.  So we can now go ahead and set the Move flag
@@ -1107,6 +1054,9 @@ object ReversificationData
 
     if (row.sourceType.equals("IfEmpty", ignoreCase = true))
       row.processingFlags = row.processingFlags.or(C_IfEmpty)
+
+    if (row.sourceType.equals("IfAbsent", ignoreCase = true))
+      row.processingFlags = row.processingFlags.or(C_IfAbsent)
 
     else if (row.action.contains("renumber"))
     {
@@ -1379,6 +1329,24 @@ object ReversificationData
 
     var content = getField(selector, row)
     if (content.isEmpty()) return ""
+
+
+
+    /**************************************************************************/
+    /* A change in December 2023 introduced some NoteB footnotes which have
+       a reference at the front, and then '%in some Bibles%' or '%in most Bibles%'.
+       It is convenient to move the reference to the end, to convert these
+       entries to the same form as the footnotes which we have processed
+       previously. */
+
+    val contentLowercase = content.lowercase()
+    if ("%in some bibles%" in contentLowercase || "%in most bibles%" in contentLowercase)
+    {
+      val ix = content.indexOf(' ')
+      val ref = content.substring(0, ix).trim()
+      val text = content.substring(ix + 1).trim()
+      content = "$text $ref"
+    }
 
 
 
@@ -1943,6 +1911,9 @@ object ReversificationData
 
   init
   {
+    m_TextKeyMap["in most Bibles"] = "V_reversification_inMostBibles"
+    m_TextKeyMap["in some Bibles"] = "V_reversification_inSomeBibles"
+
     m_TextKeyMap["Some manuscripts have no text here. Others have text similar to"] = "V_emptyContentFootnote_someManuscriptsHaveNoTextHereOthersHaveTextSimilarTo"
     m_TextKeyMap["Some manuscripts have no text here"] = "V_emptyContentFootnote_someManuscriptsHaveNoTextHere"
     m_TextKeyMap["Some manuscripts have no text at"] = "V_emptyContentFootnote_someManuscriptsHaveNoTextAt"
@@ -1972,7 +1943,7 @@ object ReversificationData
     m_TextKeyMap["Normally in this Bible only the start of this verse is present"] = "V_reversification_normallyInThisBibleOnlyTheStartOfThisVerseIsPresent"
     m_TextKeyMap["Normally in this Bible similar text is found at"] = "V_reversification_normallyInThisBibleSimilarTextIsFoundAt"
     m_TextKeyMap["Normally in this Bible the verse numbering here is"] = "V_reversification_normallyInThisBibleTheVerseNumberingHereIs"
-    m_TextKeyMap["Normally in this Bible this verse and the next occur as one verse that is numbered"] = "V_reversification_normallyInThisBibleThisVerseAndTheNextOccurAsOneVerseThatIsNumbered"
+    m_TextKeyMap["In many Bibles this is split into more than one verse"] = "V_reversification_inManyBiblesThisIsSplitIntoMoreThanOneVerse"
     m_TextKeyMap["Normally in this Bible this verse does not contain any text"] = "V_reversification_normallyInThisBibleThisVerseDoesNotContainAnyText"
     m_TextKeyMap["Normally in this Bible this verse includes words that are at"] = "V_reversification_normallyInThisBibleThisVerseIncludesWordsThatAreAt"
     m_TextKeyMap["Normally in this Bible this verse is followed by contents similar to"] = "V_reversification_normallyInThisBibleThisVerseIsFollowedByContentsSimilarTo"

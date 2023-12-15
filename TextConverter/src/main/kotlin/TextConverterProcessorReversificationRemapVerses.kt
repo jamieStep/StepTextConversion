@@ -13,7 +13,6 @@ import org.stepbible.textconverter.support.ref.*
 import org.stepbible.textconverter.support.shared.SharedData
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.support.usx.Usx
-import org.stepbible.textconverter.C_CollapseSubverses
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
@@ -25,6 +24,31 @@ import java.util.*
 /******************************************************************************/
 /**
  * Handles reversification.
+ *
+ * READ ME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
+ * In theory, reversification can be applied in two different places.  We can
+ * restructure texts as part of the conversion process; or we can leave them
+ * largely as-is during that process, and then restructure them on the fly as
+ * part of the rendering process (by which I mean that we restructure them only
+ * during the time when STEP's added value features are being applied, and need
+ * to work with the text in standard form).
+ *
+ * In practice, there are very few texts which can be restructured within the
+ * reversification process, because this introduces significant changes to the
+ * text -- changes which are largely precluded by licence conditions which
+ * require the text remain in its original form.
+ *
+ * At one stage we were restructuring everything during conversion despite this
+ * issue, but have now ceased to do so.  This present class -- which handled
+ * this conversion-time restructuring -- is therefore largely defunct, but has
+ * been retained because apparently we may decide to apply conversion-time
+ * restructuring to a few public domain texts sometime or other.  I have
+ * retained it largely because if we do this it would be a pain to have to
+ * reimplement all of this.  However, by the time you find yourself in a
+ * position to want to use it, it will almost certainly no longer work, because
+ * I am not maintaining it in line with any changes made to the reversification
+ * data or philosophy.
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
  *
  * Not all Bibles are split up into verses in the same way.  This is a problem
  * both from the point of view of interlinear display and from the point of
@@ -82,8 +106,22 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorReversification: TextConverterProcessorBase
+object TextConverterProcessorReversificationRemapVerses: TextConverterProcessorBase, ValueAddedSupplier()
 {
+  /****************************************************************************/
+  override fun detailsForStepAbout(): List<String>
+  {
+    return listOf(Translations.stringFormatWithLookup("V_reversification_LongDescription_" + StepStringUtils.sentenceCaseFirstLetter(ConfigData["stepReversificationFootnotesLevel"]!!)))
+  }
+
+
+  /****************************************************************************/
+  override fun detailsForSwordConfigFileComments(): List<String>
+  {
+    return listOf(Translations.stringFormatWithLookup("V_AddedValue_Reversification"))
+  }
+
+
   /****************************************************************************/
   override fun banner (): String
   {
@@ -101,20 +139,20 @@ object TextConverterProcessorReversification: TextConverterProcessorBase
   /****************************************************************************/
   override fun runMe (): Boolean
   {
-      return "none" != ConfigData["stepReversificationType"]!!.lowercase()
+      return "conversiontime" == ConfigData["stepReversificationType"]!!.lowercase()
   }
 
 
   /****************************************************************************/
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
   {
-    commandLineProcessor.addCommandLineOption("reversificationType", 1, "None / Basic / Academic (append '?' to Basic or Academic to have the converter decide whether to reversify", listOf("None", "Basic", "Academic", "Basic?", "Academic?"), "None", false)
   }
 
 
   /****************************************************************************/
   override fun process (): Boolean
   {
+    ValueAddedSupplier.register("ConversionTimeReversification", this)
     control()
     return true
   }
@@ -466,7 +504,7 @@ object TextConverterProcessorReversification: TextConverterProcessorBase
 
   private fun getReversificationNotesLevel ()
   {
-     when (ConfigData["stepReversificationType"])
+     when (ConfigData["stepReversificationFootnotesLevel"])
      {
        "basic" ->    m_ReversificationNotesLevel = C_ReversificationNotesLevel_Basic
        "academic" -> m_ReversificationNotesLevel = C_ReversificationNotesLevel_Academic

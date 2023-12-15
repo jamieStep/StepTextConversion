@@ -143,8 +143,8 @@ object TextConverterTaggingHandler: TextConverterProcessorBase, ValueAddedSuppli
   private fun handleStrongsCorrections ()
   {
     return
-    val verncularAbbreviation = ConfigData["stepVernacularAbbreviation"]!!.lowercase()
-    if ("nasb" in verncularAbbreviation || "lsb" == verncularAbbreviation)
+    val vernacularAbbreviation = ConfigData["stepVernacularAbbreviation"]!!.lowercase()
+    if ("nasb" in vernacularAbbreviation || "lsb" == vernacularAbbreviation)
     {
       StrongsCorrectionsForLockman.handleStrongsCorrections()
       return

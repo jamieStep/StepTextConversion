@@ -628,6 +628,21 @@ abstract class BibleStructure
 
 
 
+  fun versesAreInOrder () : Boolean
+  {
+    var v = getAllBookNumbersOt().map { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }. firstOrNull { !it }
+    if (null != v) return false
+
+    v = getAllBookNumbersNt().map { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }. firstOrNull { !it }
+    if (null != v) return false
+
+    v = getAllBookNumbersDc().map { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }. firstOrNull { !it }
+    if (null != v) return false
+
+    return true
+  }
+
+
   fun versesAreInOrder (chapterRef: Ref)                       : Boolean { return commonVersesAreInOrder(makeElts(chapterRef)) }
   fun versesAreInOrder (chapterRefKey: RefKey)                 : Boolean { return commonVersesAreInOrder(makeElts(chapterRefKey)) }
   fun versesAreInOrder (b: Int, c: Int, v: Int = 0, s: Int = 0): Boolean { return commonVersesAreInOrder(makeElts(b, c, 0, 0)) }

@@ -243,7 +243,7 @@ object ReversificationRuleEvaluator
 
   private fun lengthWarning (theMsg: String)
   {
-    if (!TextConverterProcessorReversification.runMe()) return
+    if (!TextConverterProcessorReversificationAnnotateOnly.runMe()) return
     val msg = "$theMsg ($m_Row)"
     Logger.warning(msg)
     TextConverterFeatureSummaryGenerator.addReversificationIssue(msg)

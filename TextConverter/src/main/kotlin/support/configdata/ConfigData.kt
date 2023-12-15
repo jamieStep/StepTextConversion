@@ -901,6 +901,22 @@ object ConfigData
 
     /****************************************************************************/
     /**
+    * Replaces any existing value.
+    *
+    * @param key Key.
+    * @param theValue Associated value.
+    * @param force If true, later calls for this same key are ignored.
+    */
+
+    fun replace (key: String, value: String, force: Boolean = false)
+    {
+      delete(key)
+      put(key, value, force)
+    }
+
+
+    /****************************************************************************/
+    /**
     * Sets a value, without forcing.
     *
     * @param key

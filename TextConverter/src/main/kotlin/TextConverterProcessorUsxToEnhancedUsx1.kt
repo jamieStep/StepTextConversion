@@ -268,7 +268,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
       PreprocessorHandler.runPreprocessor()
       BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx, true) // Gets the chapter / verse structure -- how many chapters in each verse, etc.
       forceVersificationSchemeIfAppropriate()
-      ReversificationData.process()
+      // $$$$$$$$$$$$ ReversificationData.process()
       BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx.iterateOverSelectedFiles(::processFile) // Creates the enhanced USX.
       return true
     }
@@ -288,21 +288,21 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
        the markup applied to the majority of tables I've seen to date.  And I do it also because osis2mod sometimes
        complains about cross-verse-boundary markup, and tables are a likely source of such markup.
 
-       As regards osis2mod, these considerations are speculative -- I have not found any pattern as to what kinds of
-       things cause osis2mod to issue warnings and which do not -- nor to whether it actually gets things wrong when
-       it issues warnings, or gets them right when it does not.
+       I would _like_ in this method to apply _all_ of the changes needed to create enhanced USX, and would be able
+       to do so, but for the fact that we are continuing to support two forms of reversification.  The straightforward
+       one does little more than add footnotes to verses (relying upon the bulk of the work to be done by STEPBible
+       during the rendering process).  This version is actually called here, and if it were the only one we were to
+       contemplate, then I could indeed move all of the processing currently held in TextConverterProcessorUsxToEnhancedUsx2
+       to this present method.  This would be simpler, would save having two classes both working towards creating
+       USX, and would save creating intermediate files.
 
-       As regards reversification, I believe it probably _is_ useful to carry out the kind of restructuring I do here;
-       but of course only to tables which are affected by reversification.
-
-       If you wanted a more nuanced approach, you can call ReversificationData.initialiseIfNecessary at the end of
-       block A below, and then use the information it can supply about cases where verses are to be moved.  This would
-       enable you to identify 'at risk' tables, and reformat just those.  (There is no problem doing this even on
-       non-reversification runs: ReversificationData.initialiseIfNecessary will do nothing, and the information
-       regarding moves will be empty.)
-
-       Bear in mind, though, that of the various attempts at restructuring below, at least one actually produces
-       rendered text which looks rather better than would be the case by default.
+       The fly in the ointment is that there remains a vague chance that we will want to apply complex reversification
+       here, complex restructuring actually changing the verse structure of a text so that it is aligned with NRSVA.
+       In the vast bulk of cases, we can't do this because licence conditions preclude making significant changes to
+       the text, but we may possibly want to do it when dealing with certain Public Domain texts.  So long as this
+       remains a possibility, that processing is saved from being more complex than it already is by having the
+       files created here all written out and available before it starts.  And this means that we do then need a
+       second pass to finish creating the enhanced USX files.
     */
 
     private fun processFile (bookName: String, usxInputPath: String, theDocument: Document)
@@ -372,7 +372,8 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
         expandElisions()                                   // c) Replaces elisions by individual verses.
         markCanonicalTitleLocations()                      // c) Some psalms have canonical titles at the end as well as the beginning.  It's useful to mark the para:d's to say where they are.
         deleteTrailingBlankLinesInChapters()               // c) The rendering gets messed up if chapters have trailing blank lines.
-
+        if (TextConverterProcessorReversificationAnnotateOnly.runMe())
+          TextConverterProcessorReversificationAnnotateOnly.applyReversificationChanges(m_Document, m_BookName)
 
         val dt = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MMMM-yyyy"))
         Dom.outputDomAsXml(m_Document, Paths.get(StandardFileLocations.getEnhancedUsxFolderPath(), StepFileUtils.getFileName(usxInputPath)).toString(), "STEP extended USX created $dt")
@@ -2047,7 +2048,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
         if ("step" == ConfigData["stepOsis2modType"]!!)
           ConfigData.put("stepVersificationSchemeCanonical", "v11n" + ConfigData["stepModuleName"], true)
         // Note that to keep osis2mod happy, the scheme names _must_ be all caps.
-        else if (TextConverterProcessorReversification.runMe())
+        else if (TextConverterProcessorReversificationAnnotateOnly.runMe())
           ConfigData.put("stepVersificationSchemeCanonical", if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.targetsDc()) "NRSVA" else "NRSV", true)
   }
 

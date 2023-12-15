@@ -4,6 +4,7 @@ import org.stepbible.textconverter.TextConverterProcessorEvaluateVersificationSc
 import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.debug.Logger
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -29,7 +30,7 @@ object GeneralEnvironmentHandler
   /****************************************************************************/
   /**
   * For use at the end of a run.  Returns major warnings as simulated large
-  * characters.
+  * characters to output to stderr.
   */
 
   fun getMajorWarningsAsBigCharacters (): String
@@ -45,13 +46,16 @@ object GeneralEnvironmentHandler
 
   /****************************************************************************/
   /**
-   * Returns details of any command-line parameters.
+   * Sets up details of any general command-line parameters which nothing else
+   * is likely to deal with.
    *
    * @param commandLineProcessor Command line processor.
    */
 
   fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
   {
+    commandLineProcessor.addCommandLineOption("reversificationType", 1, "When reversification is to be applied (if at all)", listOf("None", "RunTime", "ConversionTime"), "None", false)
+    commandLineProcessor.addCommandLineOption("reversificationFootnoteLevel", 1, "Type of reversification footnotes", listOf("Basic", "Academic"), "Basic", false)
     commandLineProcessor.addCommandLineOption("updateReason", 1, "A reason for creating this version of the module (required only if runType is Release and the release arises because of changes to the converter as opposed to a new release from he text suppliers).", null, "Unknown", false)
   }
 
@@ -63,10 +67,10 @@ object GeneralEnvironmentHandler
 
   fun onStartup ()
   {
-    determineOsis2modType()
-    Osis2ModInterface.instance().initialise()
-    determineModuleNameAudienceRelatedSuffix()
-    determineModuleNameTestRelatedSuffix()
+    determineOsis2modAndReversificationType()   // Are we going to reversify, and what flavour of osis2mod do we need?
+    Osis2ModInterface.instance().initialise()   // Now we know which osis2mod flavour we're dealing with, do anything needed to set it up.
+    determineModuleNameAudienceRelatedSuffix()  // Adds to the module name something which says whether this can be used only within STEP, or more widely.
+    determineModuleNameTestRelatedSuffix()      // On test runs, adds to the module name something saying this version of the module is for evaluation only.
   }
 
 
@@ -90,7 +94,7 @@ object GeneralEnvironmentHandler
      module upon which they may have been based).
 
      At present 'for use only within STEPBible' and 'won't work outside of
-     STEPBible come down to the same thing.  A Bible is _sbOnly if:
+     STEPBible' come down to the same thing.  A Bible is _sbOnly if:
 
      - It has been encrypted OR ...
 
@@ -134,31 +138,143 @@ object GeneralEnvironmentHandler
 
 
   /****************************************************************************/
-  private fun determineOsis2modType ()
+  /* Hmm ... this gets rather complicated.
+
+     You can, if you wish, force which version of osis2mod is used -- set
+     stepForceOsis2modType to either 'crosswire' or 'step'.   This parameter
+     feeds into stepOsis2modType.
+
+     You can, if you wish, force the point at which reversification is applied.
+     set stepForceReversificationType to 'none' to prevent reversification,
+     to 'runTime' to have reversification applied on the fly when someone using
+     STEP uses added value functionality which relies upon the text conforming
+     to NRSVA.  Or use 'conversionTime' to have the text restructured during
+     the conversion process.  The default is none.  'conversionTime' is
+     probably applicable only in very limited circumstances, because it may
+     produce a module which diverges significantly from the raw text in some
+     places -- it is probably of use mainly with Public Domain Bibles, and even
+     then only ones where it there is some good reason for accepting a
+     restructured Bible.
+
+     This parameter feeds into stepReversificationType.
+
+     And finally you can also set the level of footnotes to be output where
+     reversification applies, the options being Basic or Academic (default
+     Basic).  The relevant parameter here is stepReversificationFootnoteLevel.
+
+     Having said all of this, the processing is capable of making its own mind up
+     as to what settings are appropriate.  Reversification is required, for
+     instance, if the raw text diverges the 'wrong' way from any specified
+     versification scheme (see below for explanation).
+
+     If any stipulated values are at odds with the processing's own
+     determination, it may honour them (but warn) or may raise an error.
+
+     A deviation is in the right direction if the text lacks verses which
+     osis2mod expects, given the specified versification scheme.  We regard this
+     as ok, because everything seems to cope.  It is in the wrong direction if
+     the text contains verses which osis2mod does _not_ expect because here
+     osis2mod intervenes and starts moving text around.  If a text exhibits a
+     combination of right and wrong deviations, it is regarded as deviating in
+     the wrong direction.
+  */
+
+  private fun determineOsis2modAndReversificationType ()
   {
     /**************************************************************************/
-    /* Type forced from command line? */
-
-    val forcedOsis2modType = ConfigData["stepForceOsis2modType"]
-    if (!forcedOsis2modType.isNullOrEmpty())
+    fun reversificationNeeded (): Boolean
     {
-      ConfigData["stepOsis2modType"] = forcedOsis2modType.lowercase()
-      return
+      val versificationScheme = ConfigData["stepVersificationSchemeCanonical"]!!
+      val schemeEvaluation = evaluateSingleScheme(versificationScheme)!!
+      return schemeEvaluation.booksMissingInOsis2modScheme > 0 || schemeEvaluation.versesMissingInOsis2modScheme > 0
     }
 
 
 
     /**************************************************************************/
-    /* We need to use our own version unless we're very close to KJV(A).
-       'Very close' here is rather an arbitrary threshold. */
+    val reversificationType = (ConfigData["stepForceReversificationType"] ?: "tbd").lowercase()
+    when (reversificationType)
+    {
+      "conversiontime" ->
+      {
+        if (!reversificationNeeded())
+          Logger.warning("Conversion-time reversification specified (and honoured), but reversification not needed.")
+      }
 
-    var apoc = if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc()) "A" else ""
-    val schemeEvaluation = evaluateSingleScheme("KJV$apoc")!!
-    ConfigData["stepOsis2modType"] =
-      if (schemeEvaluation.booksMissingInOsis2modScheme > 0 || schemeEvaluation.versesMissingInOsis2modScheme > 10)
-        "step"
-      else
-        "crosswire"
+      "runtime" ->
+      {
+        if (!reversificationNeeded())
+          Logger.warning("Run-time reversification specified (and honoured), but reversification not needed.")
+      }
+
+      "none" ->
+      {
+        if (reversificationNeeded())
+          Logger.error("Reversification prohibited but text requires it.")
+      }
+
+      "tbd" ->
+      {
+        if (reversificationNeeded())
+        {
+          ConfigData["stepForceReversificationType"] = "runtime"
+          Logger.info("Processing has decided to apply runtime reversification.")
+        }
+        else
+        {
+          ConfigData["stepForceReversificationType"] = "none"
+          Logger.info("Processing has decided no reversification is needed.")
+        }
+      }
+    }
+
+
+
+    /**************************************************************************/
+    ConfigData.delete("stepReversificationType")
+    ConfigData["stepReversificationType"] = ConfigData["stepForceReversificationType"]!!
+    val reversificationFootnoteLevel = ConfigData["stepReversificationFootnoteLevel"] ?: "basic"
+    ConfigData.delete("stepReversificationFootnoteLevel")
+    ConfigData["stepReversificationFootnoteLevel"] = reversificationFootnoteLevel
+
+
+
+    /**************************************************************************/
+    var osis2modType = (ConfigData["stepForceOsis2modType"] ?: "tbd").lowercase()
+    when (osis2modType)
+    {
+      "step" ->
+      {
+        if ("none" == ConfigData["stepForceReversificationType"])
+          Logger.warning("Use of STEP osis2mod stipulated (and honoured), but the usual grounds for requiring (ie reversification) it do not apply.")
+      }
+
+      "crosswire" ->
+      {
+        if ("none" != ConfigData["stepForceReversificationType"] && "conversiontime" != ConfigData["stepForceReversificationType"])
+          Logger.error("Use of Crosswire osis2mod stipulated, but text requires reversification, and Crosswire osis2mod won't work with that.")
+      }
+
+      "tbd" ->
+      {
+        if ("none" == ConfigData["stepForceReversificationType"] || "conversiontime" == ConfigData["stepForceReversificationType"])
+        {
+          ConfigData["stepForceOsis2modType"] = "crosswire"
+          Logger.info("Processing has decided to use Crosswire osis2mod.")
+        }
+        else
+        {
+          ConfigData["stepForceOsis2modType"] = "step"
+          Logger.info("Processing has decided to use STEP osis2mod.")
+        }
+      }
+    }
+
+
+
+    /**************************************************************************/
+    ConfigData.delete("stepOsis2modType")
+    ConfigData["stepOsis2modType"] = ConfigData["stepForceOsis2modType"]!!
   }
 
 
