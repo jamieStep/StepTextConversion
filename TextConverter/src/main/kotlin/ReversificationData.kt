@@ -20,13 +20,178 @@ import java.util.*
  * it, and groups Move statements into blocks all of whose elements are
  * adjacent, and which can therefore be processed en masse.
  *
- * 22-Jun-23: The reversification data has been extended to contain some rows
- * with a SourceType of IfEmpty.  Strictly these are not actually
- * reversification-related -- they are used regardless of whether
- * reversification is applied, with a view to adding annotation to empty
- * verses.  In point of fact, 'empty' verses created by reversification always
- * have a footnote applied to them, and therefore are not affected by these
- * new rows.
+ * Note that not all data stored alongside the reversification data in the STEP
+ * repository is actually reversification-related -- latterly some rows marked
+ * IfAbsent and IfEmpty have been added, which apply regardless of whether
+ * we are reversifying or not.  I handle these here nonetheless: they may not be
+ * to do with reversification, but they are bundled with the reversification
+ * data.
+ *
+ *
+ *
+ *
+ * ## Reversification flavours
+ *
+ * There are two flavours of reversification processing.  One, which I have
+ * dubbed 'conversionTime', generates a fully NRSVA-compliant module during
+ * the conversion process.  The other ('runTime') leaves the text largely as
+ * received from the translators (apart the addition of some footnotes), and
+ * relies upon the text being restructured on the fly at run time when it
+ * needs to be NRSVA-compliant in order to support STEP's added value
+ * features.
+ *
+ * The former of these is unlikely to be used to any great extent, because it
+ * may make wholesale changes to the structure of the text, something ruled
+ * out by the licence conditions applied to many texts.
+ *
+ * CAVEAT: One word of warning.  DIB refers to conversionTime processing
+ * as reversification, and runTime as versification.  I struggle with this,
+ * having got used to using reversification to mean pretty much anything which
+ * makes use of the reversification data.  I limit myself to my own
+ * terminology below -- or I will do so provided I remember.
+ *
+ *
+ *
+ *
+ * ## Reversification actions
+ *
+ * The following actions may be applied during conversionTime processing:
+ *
+ * a) We may simply annotate a verse or a canonical heading.
+ *
+ * b) In some cases, if the verse which we wish to annotate does not exist
+ *    we may create it.
+ *
+ * c) We may change the number of a verse, but leave it in situ (ie with the
+ *    same neighbours as before).
+ *
+ * d) We may change both the verse reference and the physical location of the
+ *    verse (perhaps even moving it to a different book, even a book which
+ *    does not exist in the text as supplied to us).
+ *
+ * e) We may combine multiple verses or subverses to generate a single verse.
+ *
+ * f) We may turn one or two verses into a canonical title.
+ *
+ *
+ * In what follows, I will refer to options c-f as restructuring actions.
+ *
+ *
+ *
+ *
+ *
+ * ## Reversification data -- detailed discussion
+ *
+ * I normally pick the data up directly from STEP's online repository.  This
+ * file contains *two* copies of the data, one in compact form and one in
+ * extended form, and we take the latter.  Each copy is demarcated by lines
+ * containing #DataStart and #DataEnd, and we want the data from the *second*
+ * pair.  From this, we exclude blank lines and comments, and what remains is
+ * the data of interest.
+ *
+ * I'll now work through the various fields (not necessarily in the order in
+ * which they appear in the file).
+ *
+ * - SourceType: Usually this is there for information only, and indicates,
+ *   for example, that a particular row typically applies only to texts
+ *   which follow the Latin (Vulgate) versification.  On some rows, it may
+ *   contain AllBibles, and this value does (unfortunately) have some
+ *   significance for the processing.
+ *
+ *   At the time of writing it is also not used entirely consistently --
+ *   at the end of the data are some rows which have IfAbsent or IfEmpty
+ *   in this field.  To my mind, these rows *should* have AllBibles in this
+ *   field.
+ *
+ *
+ * - SourceRef gives a verse number which is to be located in the raw text.
+ *   In general, if this verse does not exist, the data row upon which it
+ *   appears does not apply.  But there are exceptions to this -- where
+ *   we are allowed to create a verse if it does not already exist, or where
+ *   we are specifically checking for the *absence* of a verse.  For any of
+ *   the restructuring actions, this gives the verse which is to be
+ *   manipulated.
+ *
+ * - StandardRef: On restructuring actions, StandardRef indicates where the
+ *   SourceRef should end up.  On other actions, it's rather less clear: I
+ *   have always struggled to understand why we need both a SourceRef and a
+ *   StandardRef on non-restructuring actions and why in some cases the two
+ *   are different.
+ *
+ * - Action indicates the type of action required.  On restructuring actions,
+ *   an asterisk appended to the action indicates that the source verse is
+ *   being moved to another location.  There are some issues here, in that
+ *   asterisks are not always used in the way I should expect.  This is
+ *   discussed in more detail in a later section.
+ *
+ * - NoteMarker is a somewhat complicated field which determines whether
+ *   footnotes should be added at all (and if they should, how comprehensive
+ *   the footnote should be) and also provides a verse number which is
+ *   embedded in the canonical text to make it *look* as though a given verse
+ *   has not been reversified.
+ *
+ * - ReversificationNote gives the footnote to be added to the *standard*
+ *   verse (ie the verse after restructuring) where footnotes are indeed
+ *   being added and we are doing conversionTime restructuring.
+ *
+ * - VersificationFootnote gives the footnote to be added to the *source*
+ *   verse where footnotes are indeed being added and we are doing runTime
+ *   restructuring.
+ *
+ * - AncientVersions gives additional information to be added to footnotes
+ *   where we are doing conversionTime restructuring and are generating a
+ *   module aimed at an academic audience.
+ *
+ * - Tests gives tests which have to pass in order for the data row to be
+ *   applicable.
+ *
+ *
+ *
+ *
+ * ## Processing -- conversionTime restructuring
+ *
+ * A row applies only if the tests in the Tests field pass.  (This field may be
+ * empty, in which case, the test is assumed always to pass.)
+ *
+ * Furthermore, the row applies only if a test applied to the SourceRef passes.
+ * This test differs according to the type of action being applied, and is
+ * discussed in more detail below.
+ *
+ *
+ * *Restructuring options (except those involving psalm titles)*
+ *
+ * - The Action value is RenumberVerse (with or without an asterisk).
+ *
+ * - The SourceRef must exist.
+ *
+ * - For RenumberVerse the content of the SourceRef is left in situ, but
+ *   the verse reference is changed to that for the StandardRef.  For
+ *   RenumberVerse* the source content is moved to a new location and
+ *   renumbered.
+ *
+ * - The standard verse may or may not be annotatd -- see discussion below.
+ *
+ *
+ *
+ *
+ *
+ * ## Investigation of existing reversification data
+ *
+ * The reversification data is complicated, and has also changed a lot recently.
+ * As a result, I suspect there are some places where it may now be wrong (or
+ * where, at the very least, I don't understand it, which means I may now be
+ * applying the wrong processing).  Investigating it also forces me to confirm
+ * any assumptions I may be making.
+ *
+ *
+ * - RenumberVerse: In all cases, the source and standard refs differ, which is
+ *   what I should expect.  Most -- but not all -- action fields contain Nec;
+ *   there are a few which contain Opt.  All rows have a ReversificationNote;
+ *   Most, but not all have a VersificationNote.
+ *
+ * -
+ *
+ *
  *
  * @author ARA "Jamie" Jamieson
 **/
@@ -48,46 +213,45 @@ class ReversificationDataRow (rowNo: Int)
 {
   lateinit var action: String
            var ancientVersions = ""
-  lateinit var fields: List<String>
+  lateinit var fields: MutableList<String>
+  lateinit var originalFields: List<String>
   lateinit var calloutDetails: CalloutDetails
            var footnoteLevel = -1
-           var isInNoTestsSection = false
            var processingFlags = 0
    private val rowNumber: Int
   lateinit var sourceRef: Ref
            var sourceRefAsRefKey = 0L
-  lateinit var sourceType: String
   lateinit var standardRef: Ref
            var standardRefAsRefKey = 0L
 
-           var originalAction: String? = null
-           var originalSourceRef: String? = null
-           var originalStandardRef: String? = null
 
-  fun retainOriginalTextInSitu (): Boolean
+  /****************************************************************************/
+  fun complainIfStandardRefDidNotExist (): Boolean { return 0 != processingFlags.and(ReversificationData.C_ComplainIfStandardRefDidNotExist) }
+  fun createStandardVerseIfNecessary   (): Boolean { return 0 != processingFlags.and(ReversificationData.C_CreateIfNecessary) }
+  fun isRenumber                       (): Boolean { return 0 != processingFlags.and(ReversificationData.C_Renumber) }
+  fun sourceIsPsalmTitle               (): Boolean { return 0 != processingFlags.and(ReversificationData.C_SourceIsPsalmTitle) }
+
+
+  /****************************************************************************/
+  /**
+  * Footnotes for AllBibles rows need to be moved to the start of the verse.
+  */
+
+  fun requiresNotesToBeMovedToStartOfVerse (): Boolean
   {
-    return 0 != processingFlags.and(ReversificationData.C_RetainOriginalVersesInSitu)
+    return "AllBibles" == ReversificationData.getField("SourceType", this)
   }
 
+
+  /****************************************************************************/
   override fun toString (): String
   {
-    fun printableDetails (original: String?, revised: String): String
-    {
-      val changed = null != original && original.replace(" ", "").lowercase() != revised.replace(" ", "").lowercase()
-      return if (changed) "$original [changed to $revised]" else revised
-    }
-
-    val sourceType  = ReversificationData.getField("SourceType", this)
-    val sourceRef   = printableDetails(originalSourceRef, sourceRef.toString())
-    val standardRef = printableDetails(originalStandardRef, standardRef.toString())
-    val action      = printableDetails(originalAction, action)
-
     return "Row: " + rowNumber.toString() + " " +
-      sourceType  + " " +
-      sourceRef   + " " +
-      standardRef + " " +
-      action      + " " +
-      ReversificationData.getField("NoteMarker", this)
+      ReversificationData.getFieldOriginal("SourceType" , this) + " " +
+      ReversificationData.getFieldOriginal("SourceRef"  , this) + " " +
+      ReversificationData.getFieldOriginal("StandardRef", this) + " " +
+      ReversificationData.getFieldOriginal("Action"     , this) + " " +
+      ReversificationData.getFieldOriginal("NoteMarker" , this)
   }
 
   init
@@ -100,7 +264,7 @@ class ReversificationDataRow (rowNo: Int)
 /******************************************************************************/
 class ReversificationMoveGroup (theRows: List<ReversificationDataRow>)
 {
-  fun getSourceBookAbbreviatedName (): String { return BibleBookNamesUsx.numberToAbbreviatedName(rows[0].sourceRef.getB()) }
+  //fun getSourceBookAbbreviatedName (): String { return BibleBookNamesUsx.numberToAbbreviatedName(rows[0].sourceRef.getB()) }
   fun getStandardBookAbbreviatedName (): String { return BibleBookNamesUsx.numberToAbbreviatedName(rows[0].standardRef.getB()) }
 
   fun getSourceChapterRefAsString   (): String { return rows.first().sourceRef  .toString("bc")}
@@ -129,81 +293,34 @@ object ReversificationData
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                                Package                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  /* General comments
-     ================
-
-     In general reversification rows are applicable so long as the sourceRef
-     exists and the rule (if any) passes.  However, currently we are reigning
-     back on copyright texts, something we check for below.  If a text is
-     recognised as being copyright (which is flagged up either by a command-line
-     flag or by finding tell-tale signs like the word 'copyright' in the
-     metadata), we exclude rows which would entail moving verses to new
-     chapters.  Or more accurately, we exclude _most_ such rows: more details
-     below.
-
-     Note that the reversification data as supplied from here may not be
-     identical to the original.  There are various places where later
-     processing is helped if we make minor changes here; and a few places
-     where I suspect that the reversification data may be wrong, and correct it
-     here.
-  */
-
-  /****************************************************************************/
-  /* Repertoire of atomic actions.  I do not cater for flagging situations where
-     things should be annotated, because I assume that circumstances
-     permitting, _all_ should. */
-
-  private const val C_Move                       = 0x0001
-          const val C_Renumber                   = 0x0002
-          const val C_CreateIfNecessary          = 0x0004
-          const val C_ComplainIfExisted          = 0x0008
-          const val C_ComplainIfDidNotExist      = 0x0010
-          const val C_SourceIsPsalmTitle         = 0x0020
-          const val C_StandardIsPsalmTitle       = 0x0040
-          const val C_RetainOriginalVersesInSitu = 0x0080
-  private const val C_IfEmpty                    = 0x0100
-  private const val C_IfAbsent                   = 0x0200
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                             Initialisation                             **/
+  /**                                 Getters                                **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
 
   /****************************************************************************/
   /**
-  * Does what it says on the tin.  The 'IfNecessary' part is there because we
-  * need do this only on reversification runs.
+  * Determines whether a given footnote should be output or not.
+  *
+  * @param row Data row containing the footnote.
+  * @param reversificationType R(untime) or C(onversionTime).
+  * @param reversificationNoteType B(asic) or A(cademic).
+  * @return True if note should be output.
   */
 
-  fun process ()
+  fun wantFootnote (row: ReversificationDataRow, reversificationType: Char, reversificationNoteType: Char): Boolean
   {
-    initialise()
+    when ("$reversificationType$reversificationNoteType")
+    {
+      "CB" -> return C_FootnoteLevelNec == row.footnoteLevel || C_FootnoteLevelOpt == row.footnoteLevel
+      "RB" -> return C_FootnoteLevelNec == row.footnoteLevel
+      "CA" -> return true
+      "RA" -> return true
+      else -> throw StepException("wantFootnote: Invalid parameter.")
+    }
   }
 
 
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                 Getters                                **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
 
   /****************************************************************************/
   /** Getters -- obtain data from a given data row.
@@ -212,15 +329,16 @@ object ReversificationData
   * @return Item requested.
   */
 
+  //fun getProcessingDetails (row: ReversificationDataRow): Int { return row.processingFlags }
+
   fun getAncientVersions (row: ReversificationDataRow): String { return row.ancientVersions }
-  fun getProcessingDetails (row: ReversificationDataRow): Int { return row.processingFlags }
-  fun getFootnoteA (row: ReversificationDataRow): String { return getFootnote(row, "Note A") }
-  fun getFootnoteB (row: ReversificationDataRow): String { return getFootnote(row, "Note B") }
-  fun getFootnoteDetails (row: ReversificationDataRow): CalloutDetails { return row.calloutDetails }
-  fun getSourceRef (row: ReversificationDataRow): Ref { return row.sourceRef }
-  fun getSourceRefAsRefKey (row: ReversificationDataRow): RefKey { return row.sourceRefAsRefKey }
-  fun getStandardRef (row: ReversificationDataRow): Ref { return row.standardRef }
-  fun getStandardRefAsRefKey (row: ReversificationDataRow): RefKey { return row.standardRefAsRefKey }
+  fun getFootnoteReversification (row: ReversificationDataRow): String { return getFootnote(row, "Reversification Note") }
+  fun getFootnoteVersification (row: ReversificationDataRow): String { return getFootnote(row, "Versification Note") }
+  //fun getFootnoteDetails (row: ReversificationDataRow): CalloutDetails { return row.calloutDetails }
+  //fun getSourceRef (row: ReversificationDataRow): Ref { return row.sourceRef }
+  //fun getSourceRefAsRefKey (row: ReversificationDataRow): RefKey { return row.sourceRefAsRefKey }
+  //fun getStandardRef (row: ReversificationDataRow): Ref { return row.standardRef }
+  //fun getStandardRefAsRefKey (row: ReversificationDataRow): RefKey { return row.standardRefAsRefKey }
 
 
 
@@ -228,7 +346,7 @@ object ReversificationData
   /**
   * Getters -- get aggregate details of all books, all reversification rows
   * of a given kind, etc.  Where possible / sensible, things are returned in
-  * order.  LIst of book names, for instance, are ordered in Bible order.
+  * order.  List of book names, for instance, are ordered in Bible order.
   *
   * Note 1: getCrossReferenceMappings maps source to standard refKey.  If the
   *   target is a subverse, that's what you get.  If the reversification
@@ -238,39 +356,28 @@ object ReversificationData
   * @return Lists of things.
   */
 
-  fun getAllBookNumbersAbbreviatedNames (): List<String> { return m_AllBooks } // All book names subject to reversification processing.
-  fun getSourceBooksAbbreviatedNames (): List<String> { return m_SourceBooks }
-  fun getStandardBooksAbbreviatedNames (): List<String> { return m_StandardBooks }
+  //fun getSourceBooksAbbreviatedNames (): List<String> { return m_SourceBooks }
+  //fun getStandardBooksAbbreviatedNames (): List<String> { return m_StandardBooks }
+  //fun getAllBookNumbersInvolvedInMoveActionsAbbreviatedNames (): List<String> { return m_AllBooksInvolvedInMoveActions } // Book names, but just those involved in move processing as either source or target.
+  //fun getNonMoveRowsWithBookAsSource   (abbreviatedName: String): List<ReversificationDataRow> {  val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(abbreviatedName); return m_SelectedRows.filter { 0 == it.processingFlags.and(C_Move) && bookNo == it.sourceRef.getB() } }
 
-  fun getAllBookNumbersInvolvedInMoveActionsAbbreviatedNames (): List<String> { return m_AllBooksInvolvedInMoveActions } // Book names, but just those involved in move processing as either source or target.
-  fun getSourceBooksInvolvedInMoveActionsAbbreviatedNames (): List<String> { return m_SourceBooksInvolvedInMoveActions }
-  fun getStandardBooksInvolvedInMoveActionsAbbreviatedNames (): List<String> { return m_StandardBooksInvolvedInMoveActions }
+  fun getAllAcceptedRows (): List<ReversificationDataRow> { return m_SelectedRows }
+
+  fun getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing (): List<String> { return m_AllBooks } // All book names subject to reversification processing.
+  fun getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames (): List<String> { return m_SourceBooksInvolvedInMoveActions }
+  fun getStandardBooksInvolvedInReversificationMoveActionsAbbreviatedNames (): List<String> { return m_StandardBooksInvolvedInMoveActions }
 
   fun getBookMappings (): Set<String> { return m_BookMappings } // String of the form abc.xyz, indicating there is a mapping from book abc to xyz.
   fun getReferenceMappings (): Map<RefKey, RefKey> { return m_SelectedRows.filter { 0 != it.processingFlags.and(C_Renumber) }. associate { it.sourceRefAsRefKey to it.standardRefAsRefKey } } // Note 1 above.
 
   fun getAllMoveGroups (): List<ReversificationMoveGroup> { return m_MoveGroups }
   fun getMoveGroupsWithBookAsSource (abbreviatedName: String): List<ReversificationMoveGroup> { val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(abbreviatedName); return m_MoveGroups.filter { bookNo == it.sourceRange.getLowAsRef().getB() } }
-
-  fun getNonMoveRowsWithBookAsSource   (abbreviatedName: String): List<ReversificationDataRow> {  val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(abbreviatedName); return m_SelectedRows.filter { 0 == it.processingFlags.and(C_Move) && bookNo == it.sourceRef.getB() } }
   fun getNonMoveRowsWithBookAsStandard (abbreviatedName: String): List<ReversificationDataRow> {  val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(abbreviatedName); return m_SelectedRows.filter { 0 == it.processingFlags.and(C_Move) && bookNo == it.standardRef.getB() } }
 
-  fun getAllAcceptedRows (): List<ReversificationDataRow> { return m_SelectedRows }
+  fun reversificationTargetsDc (): Boolean { return try { m_StandardBooks.any { BibleAnatomy.isDc(BibleBookNamesUsx.abbreviatedNameToNumber(it)) } } catch (_: Exception) { false } }
 
-  fun getIfAbsentFootnoteDetails (): Map<RefKey, String> { return m_IfAbsentRows.associateBy(ReversificationDataRow::sourceRefAsRefKey) { getFootnoteB(it) } }
-  fun getIfEmptyFootnoteDetails (): Map<RefKey, String>  { return m_IfEmptyRows .associateBy(ReversificationDataRow::sourceRefAsRefKey) { getFootnoteB(it) } }
-
-  fun targetsDc (): Boolean
-  {
-    return try
-    {
-      m_StandardBooks.any { BibleAnatomy.isDc(BibleBookNamesUsx.abbreviatedNameToNumber(it)) }
-    }
-    catch (_: Exception)
-    {
-      false
-    }
-  }
+  fun getFootnoteForEmptyVerses (refKey: RefKey)       : String { return m_IfEmptyFootnotes [refKey] ?: Translations.stringFormatWithLookup("V_emptyContentFootnote_verseEmptyInThisTranslation") }
+  fun getFootnoteForNewlyCreatedVerses (refKey: RefKey): String { return m_IfAbsentFootnotes[refKey] ?: Translations.stringFormatWithLookup("V_emptyContentFootnote_verseEmptyInThisTranslation") }
 
 
   /****************************************************************************/
@@ -307,38 +414,339 @@ object ReversificationData
   }
 
 
-
   /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                     Private -- data initialisation                     **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
+  /**
+  * Returns information needed in STEPBible when we are relying upon it to
+  * handle reversification-related text restructuring, rather than doing it
+  * ourselves in the converter.
+  *
+  * The return value is a list of RefKey -> RefKey pairs, covering all
+  * reversification rows where a source verse is renumbered or moved, given
+  * the source and target RefKey.
+  *
+  * @return List of mappings, ordered by source RefKey.
+  */
 
-  /****************************************************************************/
-  private val m_IfAbsentRows: MutableList<ReversificationDataRow> = ArrayList(20)
-  private val m_IfEmptyRows: MutableList<ReversificationDataRow> = ArrayList(200)
-  private val m_SelectedRows: MutableList<ReversificationDataRow> = ArrayList(10000)
-
-
-
-  /****************************************************************************/
-  /* Runs over the text, selects the relevant portion, and then parses and
-     canonicalises the individual rows in that portion. */
-
-  private fun convertToProcessedForm (rawData: List<String>)
+  fun getReversificationMappings (): List<Pair<RefKey, RefKey>>
   {
-    var rowNumber = 0
+    val res: MutableList<Pair<RefKey, RefKey>> = mutableListOf()
+    val renumbers = getReferenceMappings()
+    val psalmTitles = getAllAcceptedRows().filter { 0 != it.processingFlags.and(C_StandardIsPsalmTitle) }
 
-    rawData.forEach {
-      var rawRow = it
-      val isInNoTestsSection = '\u0001' == rawRow.last() // See head-of-routine comments to readData.
-      if (isInNoTestsSection) rawRow = it.substring(0, rawRow.length - 1)
-      loadRow(rawRow, ++rowNumber, isInNoTestsSection, rawData.size)
+    renumbers.forEach { res.add(Pair(it.key, it.value)) }
+    psalmTitles.forEach { res.add(Pair(it.sourceRefAsRefKey, Ref.setV(it.standardRefAsRefKey, 0))) }
+    res.sortBy { it.first }
+
+    //res.forEach { Dbg.d("" + it.first + "=" + it.second)}
+    return res
+  }
+
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                 Main                                   **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+  * Does what it says on the tin.
+  */
+
+  fun process ()
+  {
+    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, "enhanced", wantWordCount = true) // Make sure we have up-to-date structural information.
+    initialise()
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                             Initialisation                             **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /* Looks for a row containing a given piece of text.  Used to identify where
+     the reversification data of interest to us starts and ends within the
+     overall text.
+  */
+
+  private fun findLine (data: List<String>, lookFor: String, startAt: Int): Int
+  {
+    val lookForLower = lookFor.lowercase()
+    for (i in startAt..< data.size)
+      if (data[i].lowercase().startsWith(lookForLower)) return i
+
+    throw StepException("Guard row $lookFor missing from reversification data")
+  }
+
+
+  /****************************************************************************/
+  /* Locates the relevant data within the input file and then reads it in and
+     arranges to parse and filter it. */
+
+  private fun initialise ()
+  {
+    /**************************************************************************/
+    Dbg.reportProgress("Reading reversification data.  (This contains data needed even if not reversifying.)", 1)
+
+
+
+    /**************************************************************************/
+    val dataLocation = ConfigData["stepReversificationDataLocation"]!!
+    if (!dataLocation.startsWith("http")) Logger.warning("Running with local copy of reversification data.")
+    val rawData = (if (dataLocation.contains("http")) URL(dataLocation).readText() else File(dataLocation).readText()).split("\n")
+
+
+
+    /**************************************************************************/
+    Dbg.reportProgress("Parsing reversification data", 1)
+    val ixLow = findLine(rawData, "#DataStart(Expanded)", 0)
+    val ixHigh = findLine(rawData, "#DataEnd", ixLow)
+    val filteredData = rawData.subList(ixLow + 1, ixHigh).map { it.trim() }.filterNot { it.startsWith('#') || it.isBlank() || it.startsWith('=')  }
+
+
+
+    /**************************************************************************/
+    var rowNumber = 0
+    filteredData.forEach { loadRow(it, ++rowNumber, rawData.size) }
+    //$$$Dbg.displayReversificationRows(getAllAcceptedRows())
+
+
+
+    /**************************************************************************/
+    Logger.announceAll(true)
+
+
+
+    /**************************************************************************/
+    aggregateData()
+    debugOutputDebugData()
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Parsing                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /* Adds details of a single row, assuming it passes the relevant tests. */
+
+  private fun loadRow (rawData: String, rowNumber: Int, rawDataSize: Int)
+  {
+    /**************************************************************************/
+    //Dbg.d(rowNumber)
+    //Dbg.dCont(rawData, "Gen.32:33")
+
+
+
+    /**************************************************************************/
+    if (rowNumber == 1000 * (rowNumber / 1000))
+      Dbg.reportProgress("Processing row $rowNumber of $rawDataSize", 2)
+
+
+
+    /**************************************************************************/
+    val fields = rawData.split("\t").map { it.trim() }.toMutableList()
+    val dataRow = ReversificationDataRow(rowNumber)
+    dataRow.fields = fields
+    dataRow.originalFields = fields.map { it } // We want a _copy_.
+
+
+
+    /**************************************************************************/
+    if (m_Headers.isEmpty())
+    {
+      var n = -1
+      fields.forEach { m_Headers[it] = ++n }
+      return
     }
 
-    Dbg.displayReversificationRows(getAllAcceptedRows())
+
+    /**************************************************************************/
+    if (ignoreRow(dataRow))
+      return
+
+
+
+    /**************************************************************************/
+    canonicaliseAndCorrectData(dataRow)
+
+
+
+    /**************************************************************************/
+    val (processedRow, accepted) = convertToProcessedForm(dataRow)
+    if (accepted)
+      m_SelectedRows.add(processedRow)
+
+    debugRecordReversificationRow(accepted, processedRow)
+  }
+
+
+  /****************************************************************************/
+  /* There are some inconsistencies / infelicities in the reversification data,
+     and processing is easier if these are sorted out. */
+
+  private fun canonicaliseAndCorrectData (dataRow: ReversificationDataRow)
+  {
+    /**************************************************************************/
+    /* Some rows are marked IfEmpty or IfAbsent in the SourceType column.  I
+       think that's wrong -- these should be moved to the Action column, and
+       the SourceType should be set to AllBibles. */
+
+    val sourceType = getField("SourceType",  dataRow)
+    if ("IfAbsent".equals(sourceType, ignoreCase = true))
+    {
+      setField(dataRow, "Action", "IfAbsent")
+      setField(dataRow, "SourceType", "AllBiblesEvenIfNotReversifying")
+    }
+    else if ("IfEmpty".equals(sourceType, ignoreCase = true))
+    {
+      setField(dataRow, "Action", "IfEmpty")
+      setField(dataRow, "SourceType", "AllBiblesEvenIfNotReversifying")
+    }
+
+
+
+    /**************************************************************************/
+    /* Convert the action field to camelback with uppercase first letter. */
+
+    var action = getField("action", dataRow)
+    action = action.split("\\s+".toRegex()).joinToString(""){ it.substring(0, 1).uppercase() + it.substring(1).lowercase() }
+
+
+
+    /**************************************************************************/
+    /* Prettify the SourceType. */
+
+    setField(dataRow, "SourceType", getField("SourceType", dataRow).replace("EngTitle", "EnglishTitle"))
+
+
+
+    /**************************************************************************/
+    /* There are several parts to sorting out the references.  First step is to
+       convert them to USX form (unfortunately they aren't in that form in the
+       reversification data). */
+
+    var sourceRef   = usxifyFromStepFormat(getField("SourceRef", dataRow))
+    var standardRef = usxifyFromStepFormat(getField("StandardRef", dataRow))
+
+
+
+    /**************************************************************************/
+    /* The Action field contains an asterisk where verses are being moved.  Or
+       it does in theory.  In practice, it seems to contain the asterisk in a
+       few places where verses are being renumbered in situ or are not being
+       renumbered or moved at all.  Get rid of these superfluous asterisks. */
+
+    if (sourceRef == standardRef)
+      action = action.replace("*", "")
+    else if ("RenumberVerse" !in action)
+      action = action.replace("*", "")
+
+
+
+    /**************************************************************************/
+    /* If either sourceRef or standardRef refer to subverse zero, the subverse
+       can be dropped -- USX doesn't recognise subverse zero, so we won't have
+       anything marked as such in the input (it will just be the verse), and
+       we don't want to create anything like that in the output. */
+
+    if (sourceRef.endsWith(".0"))
+      sourceRef = sourceRef.replace(".0", "")
+
+    if (standardRef.endsWith(".0"))
+      standardRef = standardRef.replace(".0", "")
+
+
+
+    /**************************************************************************/
+    /* It is rather convenient to treat anything involving a title as actually
+       involving a verse.  I distinguish this verse by giving it a special verse
+       number (499 at the time of writing).
+
+       One downside to using this is that if I fabricate a canonical title,
+       it's going to come out right at the end of the chapter, so I need to
+       move it back when I've finished processing.  From that point of view,
+       using v0 as the special marker would be better.  But the problem is that
+       everything is set up to believe that a reference whose verse number is
+       zero is a chapter reference, and that makes life very difficult.
+
+       Of course, this will only work if I pre-process the text to change any
+       existing canonical titles to be of this same form (and if I change them
+       back again before going on to generate the OSIS).  Clearly this is a
+       complication, both in terms of having to do it, and also in terms of the
+       confusion it's likely to cause when it comes to maintaining the code.  I
+       _think_ it's worth it, though. */
+
+    if (standardRef.contains("title"))
+    {
+      standardRef = standardRef.replace("title", RefBase.C_TitlePseudoVerseNumber.toString())
+      if (!sourceRef.contains("title")) // If we're using verses to create the title, make it appear they are creating subverses of the special verse.
+      {
+        val sourceVerse = Ref.rdUsx(sourceRef).getV()
+        standardRef += convertNumberToRepeatingString(sourceVerse, 'a', 'z')
+      }
+    }
+
+    if (sourceRef.contains("title"))
+      sourceRef = sourceRef.replace("title", RefBase.C_TitlePseudoVerseNumber.toString())
+
+
+
+    /**************************************************************************/
+    setField(dataRow, "Action", action)
+    setField(dataRow, "SourceRef", sourceRef)
+    setField(dataRow, "StandardRef", standardRef)
+   }
+
+
+  /****************************************************************************/
+  /* Identifies rows which should not be processed. */
+
+  private fun ignoreRow (row: ReversificationDataRow): Boolean
+  {
+    /**************************************************************************/
+    /* The reversification data contains a few rows for 4Esdras.  We need to
+       weed these out, because the USX scheme doesn't recognise this book.
+       Don't be tempted to filter these out earlier on in the processing,
+       because we need them still to be recognised in the row-number setting. */
+
+    val sourceRef = getField("SourceRef", row)
+    if (sourceRef.contains("4es", ignoreCase = true)) return true
+
+
+
+    /**************************************************************************/
+    /* For debug purposes it is often convenient to process only a few books.
+       We need to ignore reversification data for any where the source
+      reference is for a book which we are not processing. */
+
+    if (!Dbg.wantToProcessBookByAbbreviatedName(sourceRef.substring(0, 3))) return true
+
+
+
+    /**************************************************************************/
+    return false
   }
 
 
@@ -355,137 +763,20 @@ object ReversificationData
      stick with it to the end, because the processed form of the row may be
      useful for debugging purposes. */
 
-  private fun convertToProcessedForm (fields: MutableList<String>, rowNumber: Int, isInNoTestsSection: Boolean): Pair<ReversificationDataRow, Boolean>
+  private fun convertToProcessedForm (dataRow: ReversificationDataRow): Pair<ReversificationDataRow, Boolean>
   {
     /**************************************************************************/
+    //Dbg.d(20772 == rowNumber)
+
+
+
+    /**************************************************************************/
     var accepted = true
-    val processedRow = ReversificationDataRow(rowNumber)
-    processedRow.fields = fields
-    processedRow.isInNoTestsSection = isInNoTestsSection
-    processedRow.sourceType = getField("SourceType", processedRow).replace("EngTitle", "EnglishTitle").replace("AllBibles", "")
-
-
-
-    /**************************************************************************/
-    var sourceRefAsString   = usxifyFromStepFormat(getField("SourceRef", processedRow))
-    var standardRefAsString = usxifyFromStepFormat(getField("StandardRef", processedRow))
-    processedRow.action = getField("Action", processedRow)
-
-
-
-    /**************************************************************************/
-    /*
-       * The reversification data talks about 4Es, but USX doesn't allow for it.
-         If we have 4Es, then I ignore it.
-
-       * For debug purposes it is often convenient to process only a few books.
-         We need to ignore reversification data for any where the source
-         reference is for a book which we are not processing. */
-
-    if (sourceRefAsString.lowercase().contains("4es")) accepted = false
-    if (accepted && !Dbg.wantToProcessBookByAbbreviatedName(sourceRefAsString.substring(0, 3))) accepted = false
-
-
-
-    /**************************************************************************/
-    /* Debug. */
-    //Dbg.d(processedRow.rowNumber == 4863)
-    //Dbg.d(processedRow.rowNumber)
-
-
-
-   /**************************************************************************/
-   /**************************************************************************/
-   /* I'm not entirely convinced the reversification data is correct in all
-      cases.  And even where it _is_ correct, it may be convenient to modify
-      it to make later processing simpler. */
-   /**************************************************************************/
-   /**************************************************************************/
-
-   /**************************************************************************/
-   /* There are some places where source and standard ref are identical, and
-      yet the action is shown (erroneously I believe) as a Move.  Change
-      these to non-move. */
-
-   if (sourceRefAsString == standardRefAsString && processedRow.action.contains("*"))
-   {
-     processedRow.originalAction = processedRow.action
-     processedRow.action = processedRow.action.replace("*", "")
-   }
-
-
-
-   /**************************************************************************/
-   /* If either sourceRef or standardRef refer to subverse zero, the subverse
-      can be dropped -- USX doesn't recognise subverse zero, so we won't have
-      anything marked as such in the input (it will just be the verse), and
-      we don't want to create anything like that in the output. */
-
-   if (sourceRefAsString.endsWith(".0"))
-   {
-     processedRow.originalSourceRef = sourceRefAsString
-     sourceRefAsString = sourceRefAsString.replace(".0", "")
-   }
-
-   if (standardRefAsString.endsWith(".0"))
-   {
-     processedRow.originalStandardRef = standardRefAsString
-     standardRefAsString = standardRefAsString.replace(".0", "")
-   }
-
-
-
-   /**************************************************************************/
-   /* It is rather convenient to treat anything involving a title as actually
-      involving a verse.  I distinguish this verse by giving it a special verse
-      number (499 at the time of writing).
-
-      One downside to using this is that if I fabricate a canonical title,
-      it's going to come out right at the end of the chapter, so I need to
-      move it back when I've finished processing.  From that point of view,
-      using v0 as the special marker would be better.  But the problem is that
-      everything is set up to believe that a reference whose verse number is
-      zero is a chapter reference, and that makes life very difficult.
-
-      Of course, this will only work if I pre-process the text to change any
-      existing canonical titles to be of this same form (and if I change them
-      back again before going on to generate the OSIS).  Clearly this is a
-      complication, both in terms of having to do it, and also in terms of the
-      confusion it's likely to cause when it comes to maintaining the code.  I
-      _think_ it's worth it, though. */
-
-   if (standardRefAsString.contains("title"))
-   {
-     processedRow.originalStandardRef = standardRefAsString
-     standardRefAsString = standardRefAsString.replace("title", RefBase.C_TitlePseudoVerseNumber.toString())
-     if (!sourceRefAsString.contains("title")) // If we're using verses to create the title, make it appear they are creating subverses of the special verse.
-     {
-       val sourceVerse = Ref.rdUsx(sourceRefAsString).getV()
-       standardRefAsString += convertNumberToRepeatingString(sourceVerse, 'a', 'z')
-     }
-     processedRow.processingFlags = processedRow.processingFlags or C_StandardIsPsalmTitle
-   }
-
-   if (sourceRefAsString.contains("title"))
-   {
-     processedRow.originalSourceRef = sourceRefAsString
-     sourceRefAsString = sourceRefAsString.replace("title", RefBase.C_TitlePseudoVerseNumber.toString())
-     processedRow.processingFlags = processedRow.processingFlags.or(C_SourceIsPsalmTitle)
-  }
-
-
-
-    /**************************************************************************/
-    processedRow.sourceRef   = Ref.rdUsx(sourceRefAsString)
-    processedRow.standardRef = Ref.rdUsx(standardRefAsString)
-
-    processedRow.sourceRefAsRefKey   = processedRow.sourceRef.toRefKey()
-    processedRow.standardRefAsRefKey = processedRow.standardRef.toRefKey()
-
-
-
-    /**************************************************************************/
-    setCalloutAndFootnoteLevel(processedRow)
+    dataRow.action = getField("Action", dataRow)
+    dataRow.sourceRef   = Ref.rdUsx(getField("SourceRef", dataRow))
+    dataRow.standardRef = Ref.rdUsx(getField("StandardRef", dataRow))
+    dataRow.sourceRefAsRefKey   = dataRow.sourceRef.toRefKey()
+    dataRow.standardRefAsRefKey = dataRow.standardRef.toRefKey()
 
 
 
@@ -493,62 +784,44 @@ object ReversificationData
     /* It would actually be more efficient to do this earlier on and abandon
        further processing if it fails.  However, it is convenient to do a fair
        bit of the processing regardless, because it creates information which
-       may be useful for debugging.
+       may be useful for debugging. */
 
-       IfAbsent is special.  First, in all other cases, a row applies only if
-       the source verse exists.  IfAbsent really relates to the situation
-       where the source verse _doesn't_ exist.  And second, even that we're
-       not all that interested in: the IfAbsent rows are used entirely
-       outside of the context of reversification, merely to hold details of the
-       footnote to be added to any verse which may be generated to fill in
-       holes in the reversification scheme.
-    */
-
-    processedRow.sourceRef = Ref.rdUsx(usxifyFromStepFormat(sourceRefAsString))
-    val ruleData = getField("Tests", processedRow)
-    val tmp = if (processedRow.sourceType.equals("IfAbsent", ignoreCase = true)) null else processedRow.sourceRef // Don't test existence of sourceRef on an IfEmpty row (which actually has nothing directly to do with reversification).
-    if (!ReversificationRuleEvaluator.rulePasses(tmp, ruleData, processedRow))
+    val ruleData = getField("Tests", dataRow)
+    val sourceRef = if ("AllBiblesEvenIfNotReversifying" == getField("SourceType", dataRow)) null else dataRow.sourceRef
+    if (!ReversificationRuleEvaluator.rulePasses(sourceRef, ruleData, dataRow))
       accepted = false
 
 
 
     /**************************************************************************/
-    /* Work out what we actually need to do to implement the required action.
-       setupProcessingDetails will return false if the action is one we can't
-       carry out (which, at the time of writing, will be where we are being
-       asked to do something 'significant' like moving a verse, which might be
-       beyond the pale as regards licensing conditions). */
+    /* Set up flags to indicate what kind of processing is required. */
 
-    if (!setupProcessingDetails(processedRow))
-      accepted = false
+    dataRow.processingFlags = dataRow.processingFlags.or(
+      when (dataRow.action)
+      {
+        "EmptyVerse"     -> C_CreateIfNecessary
+        "IfAbsent"       -> C_CreateIfNecessary
+        "IfEmpty"        -> 0
+        "KeepVerse"      -> getAllBiblesComplaintFlag(dataRow)
+        "MergedVerse"    -> C_CreateIfNecessary
+        "Psalm Title"    -> C_ComplainIfStandardRefDidNotExist
+        "Renumber Title" -> C_ComplainIfStandardRefExisted.or(C_StandardIsPsalmTitle).or(if ("title" in getField("SourceRef", dataRow).lowercase()) C_SourceIsPsalmTitle else 0).or(if ("title" in getField("StandardRef", dataRow).lowercase()) C_StandardIsPsalmTitle else 0)
+        "RenumberVerse"  -> C_ComplainIfStandardRefExisted.or(C_Renumber)
+        "RenumberVerse*" -> C_ComplainIfStandardRefExisted.or(C_Renumber).or(C_Move)
+        else             -> 0
+    })
 
-
-
-    /**************************************************************************/
-    setAncientVersions(getField("Ancient Versions", processedRow))
-
-
-
-    /**************************************************************************/
-    /* Where verses are subject to Move's, recent changes require us sometimes
-       to retain a copy of the original text in situ, as well as creating a new
-       copy in the target location.  To a first approximation, we want to do
-       this an any Move which moves stuff to a new chapter -- except on Psalms,
-       where in some texts just about every chapter is renumbered, and retaining
-       a copy would be way over the top.  In fact, it looks as though things may
-       end up being more nuanced than this, and I'm wondering whether ultimately
-       an automatic decision will be possible at all, but pro tem this code
-       should be ok while we're still investigating. */
-
-    if ( (0 != processedRow.processingFlags and C_Move) &&
-         processedRow.sourceRef.toRefKey_bc() != processedRow.standardRef.toRefKey_bc() &&
-         BibleBookNamesUsx.C_BookNo_Psa != processedRow.sourceRef.getB())
-      processedRow.processingFlags = processedRow.processingFlags.or(C_RetainOriginalVersesInSitu)
 
 
 
     /**************************************************************************/
-    return Pair(processedRow, accepted)
+    setCalloutAndFootnoteLevel(dataRow)
+    setAncientVersions(getField("Ancient Versions", dataRow))
+
+
+
+    /**************************************************************************/
+    return Pair(dataRow, accepted)
   }
 
 
@@ -578,177 +851,8 @@ object ReversificationData
 
   private fun getAllBiblesComplaintFlag (row: ReversificationDataRow): Int
   {
-    val noteA = getField("Note A", row)
-    return if (m_NoteAOptionsText.contains(noteA)) C_ComplainIfDidNotExist else 0
-  }
-
-
-  /****************************************************************************/
-  /* Looks for a row containing a given piece of text.  Used to identify where
-     the reversification data of interest to us starts and ends within the
-     overall text.
-  */
-
-  private fun findLine (data: List<String>, lookFor: String, startAt: Int): Int
-  {
-    val lookForLower = lookFor.lowercase()
-    for (i in startAt..< data.size)
-      if (data[i].lowercase().startsWith(lookForLower)) return i
-
-    throw StepException("Guard row $lookFor missing from reversification data")
-  }
-
-
-  /****************************************************************************/
-  /**
-   * Returns all of the reversification data which has been selected.  Entries
-   * are in the same order as the rows of the raw reversification data.
-   *
-   * The data is split up into groups of similar actions.
-   */
-
-  private fun initialise ()
-  {
-    if (m_AlreadyInitialised) return
-    m_AlreadyInitialised = true
-
-    Dbg.reportProgress("Reading reversification data from webpage.  (This contains data needed even if not reversifying.)", 1)
-
-    val dataLocation = ConfigData["stepReversificationDataLocation"]!!
-    if (!dataLocation.startsWith("http")) Logger.warning("Running with local copy of reversification data.")
-    val rawData = readData(dataLocation)
-    Dbg.reportProgress("Parsing reversification data", 1)
-    val ixLow = findLine(rawData, "#DataStart(Expanded)", 0)
-    val ixHigh = findLine(rawData, "#DataEnd", ixLow)
-    convertToProcessedForm(rawData.subList(ixLow + 1, ixHigh))
-    // validate() // Checks validity of the reversification data itself.  This used to matter when the data was still being developed.  Hopefully it's no longer required.  The old Java code is appended at the end of this file.
-    Logger.announceAll(true)
-    aggregateData()
-    debugOutputDebugData()
-  }
-
-  private var m_AlreadyInitialised = false
-
-
-  /****************************************************************************/
-  /**
-  * Adds details of a single row, assuming it passes the relevant tests.
-  *
-  * @param rawData The row in raw form.
-  * @param rowNumber Ordinal number of row within reversification data -- for progress reporting and debugging.
-  * @param isInNoTestsSection True if we're in the 'no tests' section of the data.
-  * @param rawDataSize Number of rows in the raw data.
-  */
-
-  private fun loadRow (rawData: String, rowNumber: Int, isInNoTestsSection: Boolean, rawDataSize: Int)
-  {
-    /**************************************************************************/
-    if (rowNumber == 1000 * (rowNumber / 1000))
-      Dbg.reportProgress("Processing row $rowNumber of $rawDataSize", 2)
-
-
-
-    /**************************************************************************/
-    val fields = rawData.split("\t").map { it.trim() }
-
-
-
-    /**************************************************************************/
-    if (m_Headers.isEmpty())
-    {
-      var n = -1
-      fields.forEach { m_Headers[it] = ++n }
-      return
-    }
-
-
-
-    /**************************************************************************/
-    val (processedRow, accepted) = convertToProcessedForm(fields.toMutableList(), rowNumber, isInNoTestsSection)
-    if (!accepted)
-    {
-      debugRecordReversificationRow(false, processedRow)
-      return
-    }
-
-
-
-    /**************************************************************************/
-    if (0 != processedRow.processingFlags and C_IfEmpty)
-      m_IfEmptyRows.add(processedRow)
-
-    else if (0 != processedRow.processingFlags and C_IfAbsent)
-      m_IfAbsentRows.add(processedRow)
-
-    else
-    {
-      m_SelectedRows.add(processedRow)
-      debugRecordReversificationRow(true, processedRow)
-    }
-  }
-
-
-  /****************************************************************************/
-  /* Reads text from the reversification file or web page.  There is one
-     revolting kluge which needs describing here.  Very late in the day a
-     requirement was added.  In the raw reversification data, there is a comment
-     row which says 'NO TESTS:', reflecting the fact that subsequent
-     reversification data rows do not have any tests as to applicability.
-     I have been asked to ensure that any footnotes generated by any rows after
-     the NO TESTS row come out at the beginning of the verse.  (In the normal
-     course of events, if a row applied to a verse which had already been
-     given content, the footnote would come out at the end of the existing
-     content, and before any new content.)
-
-     This new requirement is wrong on so many scores.  It relies on testing a
-     comment, and being a comment there is nothing to require that it continue
-     in its present form, or even that it exist at all; and it then requires
-     that I use the existence of this comment to apply special processing to
-     rows of reversification data, rather than making this requirement explicit
-     in the data itself.
-
-     Nonetheless, that is the requirement, so the processing here (and elsewhere
-     in this file, which refers back to this routine) is as follows :-
-
-     * I check for the special comment row.  In doing this, I have to assume
-       both that the row continues to exist, and to exist in its present form,
-       and that nowhere else in the reversification data is there any other
-       comment which could be mistaken for this comment.
-
-     * To rows which follow this comment, I append \u0001 here, as a marker for
-       later use.
-
-     * When I actually use the data gathered here, I look for this marker, and
-       if present, I set a flag in the reversification data for use by
-       downstream processing.
-  */
-
-  private fun readData (dataLocation: String): List<String>
-  {
-    var inNoTestsSectionAppend = ""
-
-    val res: MutableList<String> = ArrayList(30000)
-
-    val data = (if (dataLocation.contains("http")) URL(dataLocation).readText() else File(dataLocation).readText()).split("\n")
-
-    data.forEach loop@ {
-        var trimmed = it.trim()
-        if (trimmed.isEmpty()) return@loop
-        if (trimmed.startsWith("=")) return@loop // Rows of equals signs are underlines for headers in the raw data.
-
-        if (trimmed.startsWith("#")) // # marks a comment, and can be ignored, except that we need to retain #DataStart and #DataEnd in order to recognise the section of data we require.
-        {
-          val lc = trimmed.lowercase()
-          if (lc.contains("no tests:")) inNoTestsSectionAppend = "\u0001"
-          if (!lc.startsWith("#datastart") && !lc.startsWith("#dataend")) return@loop
-        }
-
-        trimmed = trimmed.replace("٠", "") // That character is an Arabic numeral, which appears occasionally in the data to mark subverse zero.
-
-        res.add(trimmed + inNoTestsSectionAppend)
-      }
-
-    return res
+    val noteA = getField("Reversification Note", row)
+    return if (m_NoteAOptionsText.contains(noteA)) C_ComplainIfStandardRefDidNotExist else 0
   }
 
 
@@ -877,15 +981,19 @@ object ReversificationData
        suppress the embedded source reference altogether.
   */
 
+  private const val C_FootnoteLevelNec    = 0
+  private const val C_FootnoteLevelAc = 1
+  private const val C_FootnoteLevelOpt = 2
+
   private fun setCalloutAndFootnoteLevel (row: ReversificationDataRow)
   {
     /**************************************************************************/
     var x = getField("NoteMarker", row)
     when (x.trim().substring(0, 2).lowercase())
     {
-      "ne" -> row.footnoteLevel = 0 // Necessary.
-      "ac" -> row.footnoteLevel = 1 // Academic.
-      "op" -> row.footnoteLevel = 999 // Suppress.
+      "ne" -> row.footnoteLevel = C_FootnoteLevelNec // Necessary.
+      "ac" -> row.footnoteLevel = C_FootnoteLevelAc  // Academic.
+      "op" -> row.footnoteLevel = C_FootnoteLevelOpt // Not exactly sure what this means, but it is used in a slightly complicated way.
       else -> Logger.error("Reversification invalid note level: " + x[0])
     }
 
@@ -943,154 +1051,6 @@ object ReversificationData
   }
 
 
-  /****************************************************************************/
-  /* Converts the information now available into details of the actual
-     processing steps which will be required.
-
-     Returns false if, based upon the reversification actions, we don't want
-     this row after all.  This happens basically if we are doing anything
-     which involves a Move on a copyright text where we have reason to believe
-     that the licensing terms may limit what we can do. */
-
-  private fun setupProcessingDetails (row: ReversificationDataRow): Boolean
-  {
-    /**************************************************************************/
-    //Dbg.d(5120 == row.rowNumber)
-
-
-
-    /**************************************************************************/
-    /* Rationalise the action shown in the reversification data.  I need to
-       reduce this to a list of the individual actions I actually need to
-       perform, at the same time, ironing out any idiosyncrasies and making some
-       changes to assist the processing.
-
-       In essence, I'm concerned with two things.  First, I need to identify
-       which actions involve moving things around physically; and second I
-       need to reduce the various actions to a series of common atomic changes
-       to be applied. */
-
-
-
-    /**************************************************************************/
-    /* To begin with, DIB has already marked things which he regards as moves.
-       One particular point to note here is that where verses are ending up with
-       the same neighbours as before, but _are_ being renumbered, in general
-       these rows are _not_ marked as moves (because the update can be
-       carried out in situ).  There are a few places where it _appears_ that we
-       are operating in situ, but which are nonetheless flagged as moves.  In
-       general, these are places where we have a small cycle of associated
-       changes eg v1 -> v2 -> v3 -> v1.  I suspect in many of these cases that
-       not all of the individual actions need to be flagged as moves, but I've
-       gone with what DIB has marked up. */
-
-    row.action = row.action.lowercase()
-    var moveFlag = if (row.action.endsWith('*')) C_Move else 0
-    row.originalAction = row.action
-    row.action = row.action.replace("*", "")
-
-
-
-    /**************************************************************************/
-    /* Sometimes KeepVerse, MergedVerse and EmptyVerse are flagged as moves, but
-       I'm not clear why, since in none of these cases is anything moved from
-       one place to another. */
-
-    if (row.action.contains("keep") || row.action.contains("merge") || row.action.contains("empty"))
-    {
-      moveFlag = 0
-      row.originalAction = row.action
-      row.action = row.action.replace("*", "")
-    }
-
-
-
-    /**************************************************************************/
-    /* Some Renumber rows are not marked as Moves, because they simply take,
-       say, a verse which falls at the start of one chapter and move it to the
-       end of the previous one (this is particularly the case in Psalms).  I
-       need to treat these as Moves nonetheless, because I turn chapter tags
-       into enclosing tags rather then milestones, and therefore do physically
-       need to shift things.  And in fact at the time of writing I think there
-       are also some places where genuine Moves have not been marked as such,
-       so here I force things to be flagged as Moves if the source book /
-       chapter is not the same as the standard book / chapter. */
-
-    else if (row.sourceRef.toRefKey_bc() != row.standardRef.toRefKey_bc())
-      moveFlag = C_Move
-
-
-
-    /**************************************************************************/
-    /* We have already picked up RenumberVerse issues from above -- ie we've
-       carried through what DIB had to say on the subject.  However, anything
-       which starts with Renumber (RenumberVerse or RenumberTitle) needs to
-       be forced to be a move if it involves a change of chapter.  DIB doesn't
-       always flag these as such, but I need them marked as moves because I
-       have _enclosing_ chapter tags (not milestones), so moving a verse to a
-       new chapter must involve a physical move. */
-
-    if (row.action.startsWith("renumber"))
-    {
-      if (row.sourceRef.toRefKey_bc() != row.sourceRef.toRefKey_bc()) moveFlag = C_Move
-    }
-
-
-
-    /**************************************************************************/
-    /* The only thing we haven't taken into account is PsalmTitle.  However,
-       that never involves a move, and is never marked as doing so, so there's
-       nothing to do with that.  So we can now go ahead and set the Move flag
-       if necessary. */
-
-    row.processingFlags = row.processingFlags.or(moveFlag)
-
-
-
-    /**************************************************************************/
-    /* The next stage is to map the various possible compound actions as they
-       appear in the reversification data to the atomic actions which implement
-       them. */
-
-    if (row.sourceType.equals("IfEmpty", ignoreCase = true))
-      row.processingFlags = row.processingFlags.or(C_IfEmpty)
-
-    if (row.sourceType.equals("IfAbsent", ignoreCase = true))
-      row.processingFlags = row.processingFlags.or(C_IfAbsent)
-
-    else if (row.action.contains("renumber"))
-    {
-      if (!row.action.contains("title"))
-        row.processingFlags = row.processingFlags.or(C_Renumber)
-    }
-
-    else if (row.action.contains("empty"))
-      row.processingFlags = row.processingFlags.or(C_CreateIfNecessary)
-
-    else if (row.action.contains("merge"))
-      row.processingFlags = row.processingFlags.or(C_CreateIfNecessary)
-
-    else if (row.action.contains("keep"))
-    {
-      if (row.sourceType.isEmpty()) // In the AllBibles section -- needs special processing.
-      {
-        row.processingFlags = row.processingFlags.or(C_CreateIfNecessary)
-        row.processingFlags = row.processingFlags.or(getAllBiblesComplaintFlag(row))
-      }
-      else
-        row.processingFlags = row.processingFlags.or(C_CreateIfNecessary)
-    }
-
-    else if (row.action.contains("psalm"))
-      ;
-
-    else
-      throw StepException("Can't work out how to process &action")
-
-      return true
-  }
-
-
 
 
 
@@ -1101,6 +1061,12 @@ object ReversificationData
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  private val m_SelectedRows: MutableList<ReversificationDataRow> = ArrayList(10000)
+
+  private val m_IfAbsentFootnotes: MutableMap<RefKey, String> = mutableMapOf()
+  private val m_IfEmptyFootnotes: MutableMap<RefKey, String> = mutableMapOf()
 
   private val m_MoveGroups: MutableList<ReversificationMoveGroup> = ArrayList()
 
@@ -1120,15 +1086,19 @@ object ReversificationData
 
   private fun aggregateData ()
   {
+    aggregateIfAbsentAndIfEmptyRows(m_IfAbsentFootnotes, "IfAbsent")
+    aggregateIfAbsentAndIfEmptyRows(m_IfEmptyFootnotes , "IfEmpty")
     aggregateBooks()
     aggregateBooksInvolvedInMoveActions()
     aggregateMoveGroups()
-    identifySpecialistMoves()
+    markSpecialistMoves()
     recordBookMappings()
   }
 
 
   /****************************************************************************/
+  /* Generates book information into various collections. */
+
   private fun aggregateBooks ()
   {
     val allBooks:     MutableSet<Int> = HashSet()
@@ -1163,6 +1133,20 @@ object ReversificationData
     m_AllBooksInvolvedInMoveActions      = allBooks   .sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
     m_SourceBooksInvolvedInMoveActions   = sourceBooks.sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
     m_StandardBooksInvolvedInMoveActions = targetBooks.sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
+  }
+
+
+  /****************************************************************************/
+  /* Records footnote details for IfAbsent and IfEmpty rows and then removes
+     these rows from the ones to be processed.  Note that it doesn't matter
+     whether I choose sourceRef or standardRef for key purposes, because they
+     are the same.  And nor does it matter whether I choose the reversification
+     footnote or the versification one, because again they are the same. */
+
+  private fun aggregateIfAbsentAndIfEmptyRows (map: MutableMap<RefKey, String>, action: String)
+  {
+    m_SelectedRows.filter { action == it.action }. forEach { map[it.standardRefAsRefKey] = getFootnoteVersification(it) }
+    m_SelectedRows.removeIf { action == it.action }
   }
 
 
@@ -1227,29 +1211,6 @@ object ReversificationData
 
 
   /****************************************************************************/
-  private fun identifySpecialistMoves ()
-  {
-    fun process (grp: ReversificationMoveGroup)
-    {
-      if (grp.rows.first().sourceRef.hasS()) return
-      if (grp.rows.first().standardRef.hasS()) return
-
-      if (1 != grp.rows.first().sourceRef.getV()) return
-      if (1 != grp.rows.first().standardRef.getV()) return
-
-      if (BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(grp.rows.first().sourceRef) != grp.rows.last().sourceRef.getV()) return
-      if (BibleStructure.NrsvxInstance().getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
-
-      grp.isEntireChapter = true
-    }
-
-    m_MoveGroups.forEach { process(it) }
-    m_MoveGroups.forEach { it.crossBook = it.rows.first().sourceRef.getB() != it.rows.first().standardRef.getB()
-}
-  }
-
-
-  /****************************************************************************/
   /**
    * Gives ordering information.  Rows will be ordered on increasing source
    * refKey, and within that on increasing standard refKey.
@@ -1281,6 +1242,31 @@ object ReversificationData
   }
 
   /****************************************************************************/
+  /* Marks groups which involve an entire chapter, or which target a different
+     book. */
+
+  private fun markSpecialistMoves ()
+  {
+    fun process (grp: ReversificationMoveGroup)
+    {
+      if (grp.rows.first().sourceRef.hasS()) return
+      if (grp.rows.first().standardRef.hasS()) return
+
+      if (1 != grp.rows.first().sourceRef.getV()) return
+      if (1 != grp.rows.first().standardRef.getV()) return
+
+      if (BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(grp.rows.first().sourceRef) != grp.rows.last().sourceRef.getV()) return
+      if (BibleStructure.NrsvxInstance().getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
+
+      grp.isEntireChapter = true
+    }
+
+    m_MoveGroups.forEach { process(it) }
+    m_MoveGroups.forEach { it.crossBook = it.rows.first().sourceRef.getB() != it.rows.first().standardRef.getB() }
+  }
+
+
+  /****************************************************************************/
   private fun recordBookMappings ()
   {
     fun addMapping (row: ReversificationDataRow)
@@ -1292,7 +1278,6 @@ object ReversificationData
 
     m_SelectedRows.forEach { addMapping(it) }
   }
-
 
 
 
@@ -1311,6 +1296,14 @@ object ReversificationData
   {
     val ix = m_Headers[key]!!
     return if (ix < dataRow.fields.size) dataRow.fields[ix] else ""
+  }
+
+
+  /****************************************************************************/
+  fun getFieldOriginal (key: String, dataRow: ReversificationDataRow): String
+  {
+    val ix = m_Headers[key]!!
+    return if (ix < dataRow.originalFields.size) dataRow.fields[ix] else ""
   }
 
 
@@ -1453,6 +1446,14 @@ object ReversificationData
 
 
   /****************************************************************************/
+  private fun setField (dataRow: ReversificationDataRow, key: String, value: String)
+  {
+    val ix = m_Headers[key]!!
+    dataRow.fields[ix] =value
+  }
+
+
+  /****************************************************************************/
   /**
    * The reversification data uses its own formats for references.  It's
    * convenient to convert this to USX for processing.
@@ -1548,6 +1549,7 @@ object ReversificationData
   /****************************************************************************/
   /****************************************************************************/
 
+  // $$$ I have not revamped this, but have no reason to believe it needs changing.
   /****************************************************************************/
   /* You get one of these per tradition in the AncientVersions information. */
 
@@ -1871,7 +1873,7 @@ object ReversificationData
 
 
     /**************************************************************************/
-    val sourceType = row.sourceType.lowercase()
+    val sourceType = getField("SourceType", row).lowercase()
     val containsAnticipatedSource = sourceType.contains(m_AnticipatedSourceType!!) || sourceType.isEmpty()
 
 
@@ -1901,6 +1903,23 @@ object ReversificationData
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  /* Repertoire of atomic actions.  I do not cater for flagging situations where
+     things should be annotated, because I assume that circumstances
+     permitting, _all_ should. */
+
+  private const val C_Move                             = 0x0001
+          const val C_Renumber                         = 0x0002
+          const val C_CreateIfNecessary                = 0x0004
+  private const val C_ComplainIfStandardRefExisted     = 0x0008
+          const val C_ComplainIfStandardRefDidNotExist = 0x0010
+          const val C_SourceIsPsalmTitle               = 0x0020
+          const val C_StandardIsPsalmTitle             = 0x0040
+
+
+
+
 
   /****************************************************************************/
   /* Sets up a table converting actual text from the reversification data to

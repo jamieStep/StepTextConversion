@@ -417,9 +417,9 @@ class RefRange: RefCollectionPart
 
 
   /****************************************************************************/
-  /* Note that throughout, BibleStructure.UsxUnderConstructionInstance() really _is_
-     meant -- the supplied text is the one we're working on.  We may have USX
-     references, for instance, but they're always references which describe
+  /* Note that throughout, BibleStructure.UsxUnderConstructionInstance() really
+     _is_ meant -- the supplied text is the one we're working on.  We may have
+     USX references, for instance, but they're always references which describe
      the supplied text. */
 
   private fun getAllAsRefKeysInternal (lowRefKey: RefKey, highRefKey: RefKey): List<RefKey>?
@@ -547,7 +547,7 @@ class RefRange: RefCollectionPart
     /* That leaves cross-verse ranges with a subverse at one or other end, etc.
        Anything like this we can't cope with. */
 
-    Logger.warning("Cross-verse subverse range: " + toString())
+    Logger.warning("Cross-verse subverse range (may not expand correctly): " + toString())
     return null
   }
 

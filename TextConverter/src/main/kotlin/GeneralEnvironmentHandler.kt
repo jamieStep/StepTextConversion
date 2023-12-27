@@ -39,7 +39,7 @@ object GeneralEnvironmentHandler
     var res = ""
     try { if (!ConfigData["stepReversificationDataLocation"]!!.startsWith("http")) res += C_Local_ReversificationData } catch (_: Exception) {}
     if (!ConfigData.getAsBoolean("stepEncryptionApplied", "no")) res += C_NotEncrypted
-    if ("evalonly" == ConfigData["stepRunType"]!!.lowercase()) res += C_NonRelease
+    if ("evaluationonly" == ConfigData["stepRunType"]!!.lowercase()) res += C_NonRelease
     return res
   }
 
@@ -133,7 +133,11 @@ object GeneralEnvironmentHandler
       if ("release" in ConfigData["stepRunType"]!!.lowercase())
         ""
       else
-        "_" + ConfigData["stepRunType"]!! + "_" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
+      {
+        var x = ConfigData["stepRunType"]!!
+        if ("evaluation" in x.lowercase()) x = "evalOnly"
+        "_" + x + "_" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
+      }
   }
 
 
@@ -186,13 +190,14 @@ object GeneralEnvironmentHandler
     {
       val versificationScheme = ConfigData["stepVersificationSchemeCanonical"]!!
       val schemeEvaluation = evaluateSingleScheme(versificationScheme)!!
-      return schemeEvaluation.booksMissingInOsis2modScheme > 0 || schemeEvaluation.versesMissingInOsis2modScheme > 0
+      return schemeEvaluation.booksMissingInOsis2modScheme > 0 || schemeEvaluation.versesMissingInOsis2modScheme > 0 || BibleStructure.UsxUnderConstructionInstance().hasSubverses()
     }
 
 
 
     /**************************************************************************/
-    val reversificationType = (ConfigData["stepForceReversificationType"] ?: "tbd").lowercase()
+    var reversificationType = (ConfigData["stepForceReversificationType"] ?: "tbd").lowercase()
+    if (reversificationType.isEmpty()) reversificationType = "tbd"
     when (reversificationType)
     {
       "conversiontime" ->
@@ -234,30 +239,31 @@ object GeneralEnvironmentHandler
     ConfigData.delete("stepReversificationType")
     ConfigData["stepReversificationType"] = ConfigData["stepForceReversificationType"]!!
     val reversificationFootnoteLevel = ConfigData["stepReversificationFootnoteLevel"] ?: "basic"
-    ConfigData.delete("stepReversificationFootnoteLevel")
-    ConfigData["stepReversificationFootnoteLevel"] = reversificationFootnoteLevel
+    ConfigData.delete("stepReversificationFootnotesLevel")
+    ConfigData["stepReversificationFootnotesLevel"] = reversificationFootnoteLevel
 
 
 
     /**************************************************************************/
     var osis2modType = (ConfigData["stepForceOsis2modType"] ?: "tbd").lowercase()
+    if (osis2modType.isEmpty()) osis2modType = "tbd"
     when (osis2modType)
     {
       "step" ->
       {
-        if ("none" == ConfigData["stepForceReversificationType"])
-          Logger.warning("Use of STEP osis2mod stipulated (and honoured), but the usual grounds for requiring (ie reversification) it do not apply.")
+        if (ConfigData["stepForceReversificationType"]!! in "none.conversiontime" && BibleStructure.UsxUnderConstructionInstance().versesAreInOrder())
+          Logger.warning("Use of STEP osis2mod stipulated (and honoured), but the usual grounds for requiring (ie reversification or out of order verses) it do not apply.")
       }
 
       "crosswire" ->
       {
-        if ("none" != ConfigData["stepForceReversificationType"] && "conversiontime" != ConfigData["stepForceReversificationType"])
+        if (ConfigData["stepForceReversificationType"]!! !in "none.conversiontime" || BibleStructure.UsxUnderConstructionInstance().versesAreInOrder())
           Logger.error("Use of Crosswire osis2mod stipulated, but text requires reversification, and Crosswire osis2mod won't work with that.")
       }
 
       "tbd" ->
       {
-        if ("none" == ConfigData["stepForceReversificationType"] || "conversiontime" == ConfigData["stepForceReversificationType"])
+        if (ConfigData["stepForceReversificationType"]!! in "none.conversiontime" && BibleStructure.UsxUnderConstructionInstance().versesAreInOrder())
         {
           ConfigData["stepForceOsis2modType"] = "crosswire"
           Logger.info("Processing has decided to use Crosswire osis2mod.")

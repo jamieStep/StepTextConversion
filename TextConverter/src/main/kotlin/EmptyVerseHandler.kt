@@ -3,15 +3,12 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.miscellaneous.Dom
-import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
+import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.miscellaneous.Translations.stringFormatWithLookup
-import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.usx.Usx
-import org.stepbible.textconverter.support.miscellaneous.contains
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.util.*
@@ -60,6 +57,7 @@ object EmptyVerseHandler
   /****************************************************************************/
 
   /****************************************************************************/
+  /****************************************************************************/
   /**
    * The various other methods in this class let you create empty verses for
    * specific purposes.  They all of them add an _X_reasonEmpty attribute to
@@ -88,7 +86,9 @@ object EmptyVerseHandler
     fun addContent ()
     {
       res = true
-      Dom.insertNodeAfter(sid!!, makeReferenceSpecificFootnote(document, Dom.getAttribute(sid!!, "sid")!!, "V_emptyContentFootnote_verseEmptyInThisTranslation"))
+      val sidAsRefKey = Ref.rdUsx(sid!!["sid"]!!).toRefKey()
+      val footnoteNode =  MiscellaneousUtils.makeFootnote(document, sidAsRefKey, text = ReversificationData.getFootnoteForEmptyVerses(sidAsRefKey) , callout = ConfigData["stepExplanationCallout"])
+      Dom.insertNodeAfter(sid!!, footnoteNode)
       Dom.insertNodeAfter(sid!!, makeContent(document, m_Content_EmptyVerse))
     }
 
@@ -198,44 +198,13 @@ object EmptyVerseHandler
 
 
   /****************************************************************************/
-  /**
-  * Creates an empty verse where it has been determined elsewhere that we are
-  * missing a verse.  The verse is also given a footnote, but only if
-  * there is no footnote in an adjacent verse (if there *is* a footnote in an
-  * adjacent verse, we assume that it already explains why this verse is empty).
-  *
-  * @param document Document to which verse is to be added.
-  * @param refKey RefKey for new verse.
-  * @param footnoteText Text to appear in footnote.
-  * @param reason Reason for creating the empty verse.  This is added as an
-  *               attribute to the sid node for debug purposes.
-  */
-
-  fun createEmptyVerseForMissingVerse (document: Document, refKey: RefKey, footnoteText: String?, reason: String)
-  {
-    val allNodes = Dom.collectNodesInTree(document)
-  }
-
-
-  /****************************************************************************/
   /* Creates an empty verse to fill in a gap in the versification, and inserts
      it before the given node, or at the end of the parent chapter if
-     insertBefore is null.  Returns a pair consisting of the sid and the eid.
+     insertBefore is null.  Returns a pair consisting of the sid and the eid. */
 
-     Note 2023-09-20
-     ---------------
-
-     The commented-out Dom.insertNodeBefore line was what was originally in the
-     code.  It looked up the target verse to see if we had a specific override
-     for the footnote text.  However, I think this was specific to cases where
-     we were doing reversification, and I don't _think_ this method gets
-     called for that.  So I have replaced it with the two lines which refer to
-     footnoteText.
-  */
-
-  fun createEmptyVerseForMissingVerse (document: Document, refKey: RefKey, insertBefore: Node?, generatedReason: String = "Not found on completion of processing", reasonEmpty: String = "verseWasMissing"): Pair<Node, Node>
+  private fun createEmptyVerseForMissingVerse (document: Document, refKey: RefKey, insertBefore: Node?, generatedReason: String = "Not found on completion of processing", reasonEmpty: String = "verseWasMissing"): Pair<Node, Node>
   {
-    Logger.warning(refKey, "Created verse which was missing from the original text.")
+    Logger.info(refKey, "Created verse which was missing from the original text.")
 
     val sidAsString = Ref.rd(refKey).toString()
     val template = "<verse ID _X_generatedReason='$generatedReason' _X_reasonEmpty='$reasonEmpty'/>"
@@ -246,9 +215,8 @@ object EmptyVerseHandler
 
 
     Dom.insertNodeBefore(ib, start)
-    val footnoteNode = MiscellaneousUtils.makeFootnote(document, refKey, text = stringFormatWithLookup("V_emptyContentFootnote_verseEmptyInThisTranslation") , callout = ConfigData["stepExplanationCallout"])  // See note for 2023-09-20 above.
-    Dom.insertNodeBefore(ib, footnoteNode)  // See note for 2023-09-20 above.
-    // Dom.insertNodeBefore(ib, makeReferenceSpecificFootnote(document, sidAsString, "V_emptyContentFootnote_verseEmptyInThisTranslation"))  // See note for 2023-09-20 above.
+    val footnoteNode = MiscellaneousUtils.makeFootnote(document, refKey, text = ReversificationData.getFootnoteForNewlyCreatedVerses(refKey), callout = ConfigData["stepExplanationCallout"])  // See note for 2023-09-20 above.
+    Dom.insertNodeBefore(ib, footnoteNode)
     Dom.insertNodeBefore(ib, makeContent(document, m_Content_MissingVerse))
     Dom.insertNodeBefore(ib, end)
 
@@ -281,7 +249,18 @@ object EmptyVerseHandler
 
 
     /**************************************************************************/
+    /* This may look a little counterintuitive.  getMissingEmbeddedVersesForBook
+       runs through chapters in verse order, looking for missing verses.
+       (A verse n is regarded as missing if it does not exist, but there are
+       later verses in the chapter, such that m > n.  We don't worry about
+       verses which may be missing at the _end_ of a chapter.)
+
+       However, in a few texts, the translators have deliberately put verses in
+       the wrong order, and we don't want to process these, because that would
+       give us duplicates.  Hence the 'filter' below. */
+
     val holes = BibleStructure.UsxUnderConstructionInstance().getMissingEmbeddedVersesForBook(bookNo)
+      .filter { !BibleStructure.UsxUnderConstructionInstance().verseExistsWithOrWithoutSubverses(it) }
     if (holes.isEmpty()) return false
 
 
@@ -310,7 +289,7 @@ object EmptyVerseHandler
     var res = false
     val osis2modStructure = BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationSchemeCanonical"]!!, true)
     val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.findNodeByName(document,"_X_book")!!["code"]!!)
-    BibleStructure.UsxUnderConstructionInstance().populateFromDom(document, wantWordCount = false)
+    BibleStructure.UsxUnderConstructionInstance().populateFromDom(document, wantWordCount = false, collection = "enhanced")
     val diffs = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), osis2modStructure)
 
 
@@ -397,7 +376,7 @@ object EmptyVerseHandler
   fun getEmptyVerses (document: Document): List<Node>
   {
     /**************************************************************************/
-    var res: MutableList<Node> = mutableListOf()
+    val res: MutableList<Node> = mutableListOf()
     var couldBeEmpty: Node? = null
 
 
@@ -473,15 +452,6 @@ object EmptyVerseHandler
 
 
   /****************************************************************************/
-  private fun makeReferenceSpecificFootnote (doc: Document, sid: String, dflt: String): Node
-  {
-    val refKey = Ref.rdUsx(sid).toRefKey()
-    val footnoteText = m_VerseSpecificFootnoteText[refKey]!!
-    return MiscellaneousUtils.makeFootnote(doc, refKey, text = footnoteText , callout = ConfigData["stepExplanationCallout"])
-  }
-
-
-  /****************************************************************************/
   /* Most (all?) 'empty' verses do in fact have some content, either to make it
      clear that they have deliberately been left empty, or at least because
      osis2mod seems to suppress genuinely empty verses.  There is a further
@@ -505,5 +475,4 @@ object EmptyVerseHandler
   private val m_Content_EmptyVerse = stringFormatWithLookup("V_contentForEmptyVerse_verseEmptyInThisTranslation")
   private val m_Content_MissingVerse = stringFormatWithLookup("V_contentForEmptyVerse_verseWasMissing")
   private var m_Toggle = true
-  private val m_VerseSpecificFootnoteText = ReversificationData.getIfEmptyFootnoteDetails()
 }

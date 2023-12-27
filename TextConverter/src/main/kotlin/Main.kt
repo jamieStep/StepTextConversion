@@ -16,7 +16,7 @@ import org.stepbible.textconverter.support.stepexception.StepException
 
 fun main (args: Array<String>)
 {
-  //Dbg.setBooksToBeProcessed("Luk")
+  //Dbg.setBooksToBeProcessed("Zec")
   //ThrowAwayCode.validateXmlFileStructure()
   //ThrowAwayCode.tryXslt()
 
@@ -27,7 +27,7 @@ fun main (args: Array<String>)
     if (majorWarnings.isNotEmpty())
     {
       print(majorWarnings)
-      Logger.warning(majorWarnings)
+      Logger.specialMessage(majorWarnings)
       Logger.announceAll(false)
     }
 

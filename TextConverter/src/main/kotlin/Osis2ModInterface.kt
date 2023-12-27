@@ -85,6 +85,17 @@ abstract class Osis2ModInterface
   */
 
   abstract fun initialise ()
+
+
+  /****************************************************************************/
+  /**
+  * Returns an indication of whether the version of osis2mod being used
+  * supports subverses.
+  *
+  * @return True if osis2mod supports subverses.
+  */
+
+  abstract fun supportsSubverses (): Boolean
 }
 
 
@@ -131,6 +142,21 @@ object Osis2ModInterfaceCrosswire: Osis2ModInterface()
     C_CollapseSubverses = true
     C_CreateEmptyChapters = true
     C_ExpandElisions = true
+    ConfigData.put("stepVersificationSchemeCanonical", if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.reversificationTargetsDc()) "NRSVA" else "NRSV", true)
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Returns an indication of whether the version of osis2mod being used
+  * supports subverses.
+  *
+  * @return True if osis2mod supports subverses.
+  */
+
+  override fun supportsSubverses (): Boolean
+  {
+    return false
   }
 }
 
@@ -164,9 +190,9 @@ object Osis2ModInterfaceStep: Osis2ModInterface()
 
   override fun createSupportingData ()
   {
-    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, wantWordCount = false) // Make sure we have up-to-date structural information.
+    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, collection = "enhanced/createSupportingData", wantWordCount = false) // Make sure we have up-to-date structural information.
     populateBibleStructure()
-    m_BibleStructure.jswordMappings = TextConverterProcessorReversificationAnnotateOnly.getReversificationMappings()
+    m_BibleStructure.jswordMappings = ReversificationData.getReversificationMappings()
     outputJson(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath())
   }
 
@@ -183,9 +209,23 @@ object Osis2ModInterfaceStep: Osis2ModInterface()
     C_CollapseSubverses = false
     C_CreateEmptyChapters = false
     C_ExpandElisions = true // false !!!!!!!!!!!!!!!!!!!!!!!!!
+    ConfigData.put("stepVersificationSchemeCanonical", "v11n" + ConfigData["stepModuleName"], true)
   }
 
 
+
+  /****************************************************************************/
+  /**
+  * Returns an indication of whether the version of osis2mod being used
+  * supports subverses.
+  *
+  * @return True if osis2mod supports subverses.
+  */
+
+  override fun supportsSubverses (): Boolean
+  {
+    return true
+  }
 
 
 

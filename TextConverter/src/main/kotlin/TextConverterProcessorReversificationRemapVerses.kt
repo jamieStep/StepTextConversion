@@ -23,57 +23,54 @@ import java.util.*
 
 /******************************************************************************/
 /**
- * Handles reversification.
+ * Handles one flavour of reversification -- what DIB labels 'reversification'
+ * (which might seem like a non-statement, but reversification was an
+ * umbrella term, but now refers specifically to the activity performed by this
+ * present class).
  *
- * READ ME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
- * In theory, reversification can be applied in two different places.  We can
- * restructure texts as part of the conversion process; or we can leave them
- * largely as-is during that process, and then restructure them on the fly as
- * part of the rendering process (by which I mean that we restructure them only
- * during the time when STEP's added value features are being applied, and need
- * to work with the text in standard form).
+ * Not all Bibles are split up into verses in the same way.  A given piece of
+ * Greek text may be labelled Mat 99:1 in one Bible, and Mat 100:2 in another.
+ * This makes it difficult to support STEP's added value functionality.  In an
+ * interlinear display, you cannot necessarily show verse Luk 12:1 of one text
+ * against Luk 12:1 of another, because the two may be translations of different
+ * chunks of the underlying text.  Similarly you need to take care when
+ * displaying verse vocabulary: linking the vocabulary to a particular verse
+ * number may not work, because in different Bibles, that verse number may
+ * relate to different bits of Greek text.
  *
- * In practice, there are very few texts which can be restructured within the
- * reversification process, because this introduces significant changes to the
- * text -- changes which are largely precluded by licence conditions which
- * require the text remain in its original form.
+ * Reversification attempts to get round this by restructuring Bibles to fit
+ * a standard scheme (our choice being NRSV(A)).  This may entail various
+ * kinds of changes -- verses may remain in situ but be renumbered, may be moved
+ * to other locations (even in different books), may be created ex nihilo, etc.
+ * And in addition we may add footnotes to verses to given more information
+ * about places where the structure departs from that commonly seen elsewhere.
  *
- * At one stage we were restructuring everything during conversion despite this
- * issue, but have now ceased to do so.  This present class -- which handled
- * this conversion-time restructuring -- is therefore largely defunct, but has
- * been retained because apparently we may decide to apply conversion-time
- * restructuring to a few public domain texts sometime or other.  I have
- * retained it largely because if we do this it would be a pain to have to
- * reimplement all of this.  However, by the time you find yourself in a
- * position to want to use it, it will almost certainly no longer work, because
- * I am not maintaining it in line with any changes made to the reversification
- * data or philosophy.
- * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
+ * We can handle this in either of two ways.  We can either restructure the
+ * text during the conversion process so as to create a module which is fully
+ * NRSVA compliant.  Or we can leave the text pretty much as-is, and then
+ * carry out on-the-fly restructuring within STEPBible.
  *
- * Not all Bibles are split up into verses in the same way.  This is a problem
- * both from the point of view of interlinear display and from the point of
- * view of interacting with other tools.
+ * The latter of these is handled by [TextConverterProcessorReversificationAnnotateOnly],
+ * and the advantages and disadvantages of this approach are discussed there.
  *
- * If you have a given piece of Greek translated into v1 of one Bible and v2
- * of another, you can't simply display v1 of the one against v1 of the other,
- * because you would be lining up two different things.
+ * The approach which performs restructuring within the converter is handled in
+ * the present class.  This too has its advantages and disadvantages.
  *
- * And you can't necessarily link v1 of one of the texts to the section of a
- * commentary dealing with v1, because chances are that the commentary has
- * assumed that v1 translates the same portion of the Greek as does v1 in
- * KJVA, and this may not be the case.
+ * The major advantage is that the module we generate will work with Crosswire's
+ * own version of JSword (ie it doesn't need our bespoke extensions).  This
+ * means it will work even with old versions of offline STEPBible, and also the
+ * module could in theory be made available to third parties where licence
+ * conditions permit ('in theory' because in fact at present we are having to
+ * generate modules with some rather arbitrary fixes in them: they work for us,
+ * but they might not be so acceptable to other people -- and not being fully
+ * OSIS compliant, we couldn't give them to Crosswire).
  *
- * The purpose of the present class is to reorganise the verse structure of
- * the Bible being worked upon so that it matches up with NRSVA (a lot of
- * commentaries are based upon KJVA, but NRSV, aside from being more modern,
- * uses a virtually identical versification scheme.
- *
- * The processing is driven by a very extensive dataset which is read directly
- * from the web.  This may require verses to be renumbered in situ, to be moved
- * elsewhere (even to different books in some cases), to be merged, etc, etc.
- * And whether changes are applied to the text or not, footnotes may be added
- * to indicate what would happen in other Bibles.
- *
+ * The major disadvantage is that the text may be restructured significantly in
+ * some areas.  This means that users may be presented with a text which looks
+ * unfamiliar in some areas; and this approach to reversification almost
+ * certainly cannot be applied to copyrighted texts, because licence conditions
+ * are likely to preclude significant changes.
+ * *
  * One word of warning.  When DIB drew up the reversification data, he imagined
  * a situation in which the target book started off empty, and was then
  * progressively populated, using the reversification data where this provided
@@ -262,12 +259,12 @@ object TextConverterProcessorReversificationRemapVerses: TextConverterProcessorB
   private fun control ()
   {
     initialise()
-    ReversificationData.getSourceBooksInvolvedInMoveActionsAbbreviatedNames()  .forEach { processMovePart1(it) }
-    ReversificationData.getAllBookNumbersAbbreviatedNames()                    .forEach { processNonMove(it, "renumber") }
-    ReversificationData.getStandardBooksInvolvedInMoveActionsAbbreviatedNames().forEach { processMovePart2(it) }
-    ReversificationData.getAllBookNumbersAbbreviatedNames()                    .forEach { processNonMove(it, "") }
+    ReversificationData.getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames()  .forEach { processMovePart1(it) }
+    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()                    .forEach { processNonMove(it, "renumber") }
+    ReversificationData.getStandardBooksInvolvedInReversificationMoveActionsAbbreviatedNames().forEach { processMovePart2(it) }
+    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()                    .forEach { processNonMove(it, "") }
     insertMoveOriginals()
-    ReversificationData.getAllBookNumbersAbbreviatedNames()                    .forEach { terminate(it) }
+    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()                    .forEach { terminate(it) }
   }
 
 
@@ -287,10 +284,10 @@ object TextConverterProcessorReversificationRemapVerses: TextConverterProcessorB
   {
      SharedData.SpecialFeatures.addSpecialFeature("Reversification type", ConfigData["stepReversificationType"]!!)
      m_FootnoteCalloutGenerator = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!)
-     ReversificationData.process()
+     //ReversificationData.process()
      getReversificationNotesLevel()
      checkExistenceCriteriaForCrossBookMappings(ReversificationData.getBookMappings())
-     ReversificationData.getAllBookNumbersAbbreviatedNames().forEach { BookDetails(it) } // Create BookDetails entry and carry out any pre-processing.
+     ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().forEach { BookDetails(it) } // Create BookDetails entry and carry out any pre-processing.
   }
 
 
@@ -763,30 +760,12 @@ object TextConverterProcessorReversificationRemapVerses: TextConverterProcessorB
      These are easy because there is no possibility of us encountering a parent
      of the eid while running from sid to eid, and therefore no need to worry
      that there may be any nodes belonging to that parent which fall after the
-     eid and therefore need to be excluded.
-
-     Note 1: This statement potentially removes the source nodes and any
-     superstructure rendered empty by their removal.  Originally it was
-     unconditional.  At present, as part of the experiment referred to above,
-     I do this only if the reversification row does not indicate that the
-     source rows are to be retained.  I make the assumption that since all of
-     the MOVEs in a group are related, I need look only at the first row in the
-     group to make that call.  If we want to revert to the earlier behaviour of
-     _always_ removing the source code, all that is necessary is to remove the
-     'if' and make the forEach statement unconditional.
-   */
+     eid and therefore need to be excluded. */
 
   private fun movePart1BlockEasy (nodes: List<Node>, moveGroup: ReversificationMoveGroup, sourceBookDetails: BookDetails)
   {
-    val retainSourceNodesInSitu = moveGroup.rows[0].retainOriginalTextInSitu()
     val sourceNodes = Dom.pruneToTopLevelOnly(nodes)                              // We don't want both children and their parents in the list.
-
-    if (retainSourceNodesInSitu)                                                  // See note 1 above.
-      sourceNodes
-      .filter { "verse" == Dom.getNodeName(it) }
-      .forEach { Dom.setAttribute(it, "_X_doNotValidate", "reversificationMoveRetainedOriginalSource") }
-    else
-      sourceNodes.forEach { Dom.deleteNodeRecursivelyUpwards(it) }                // See note 1 above.
+    sourceNodes.forEach { Dom.deleteNodeRecursivelyUpwards(it) }
 
     val container = makeMoveContainer(sourceNodes, sourceBookDetails, moveGroup)  // It's convenient to have everything under a single node temporarily.
     processSimpleRows(container, moveGroup.rows, "renumber")               // Do the processing needed to revise the sids and eids.
@@ -1373,13 +1352,13 @@ object TextConverterProcessorReversificationRemapVerses: TextConverterProcessorB
 
     if (null == sidNode)
     {
-      if (0 == row.processingFlags.and(ReversificationData.C_CreateIfNecessary))
+      if (!row.createStandardVerseIfNecessary())
       {
         error(row.standardRefAsRefKey, "Verse not found: $row")
         return
       }
 
-      if (0 != row.processingFlags.and(ReversificationData.C_ComplainIfDidNotExist))
+      if (row.complainIfStandardRefDidNotExist())
         warning(row.standardRefAsRefKey, "Verse not found and had to create it: $row")
 
       sidNode = EmptyVerseHandler.createEmptyVerseForReversification(getInsertionPoint(document, row.standardRef), row.standardRef.toString()).first
@@ -1705,7 +1684,7 @@ object TextConverterProcessorReversificationRemapVerses: TextConverterProcessorB
     /* We only want the footnote if we are applying an appropriate level of
        reversification. */
 
-    val wantFootnote: Boolean = m_ReversificationNotesLevel >= row.footnoteLevel
+    val wantFootnote = ReversificationData.wantFootnote(row, 'C', if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A')
     val calloutDetails = row.calloutDetails
     val document = sidNode.ownerDocument
     val res = Dom.createNode(document, "<_X_reversificationCalloutData/>")
@@ -1730,9 +1709,7 @@ object TextConverterProcessorReversificationRemapVerses: TextConverterProcessorB
 
     if (wantFootnote)
     {
-      var text  = ReversificationData.getFootnoteA(row)
-      val textB = ReversificationData.getFootnoteB(row)
-      if (textB.isNotEmpty()) text += " $textB"
+      var text  = ReversificationData.getFootnoteReversification(row)
       text = text.replace("S3y", "S3Y") // DIB prefers this.
       val ancientVersions = if (m_ReversificationNotesLevel > C_ReversificationNotesLevel_Basic) ReversificationData.getAncientVersions(row) else null
       if (null != ancientVersions) text += " $ancientVersions"
@@ -1748,7 +1725,7 @@ object TextConverterProcessorReversificationRemapVerses: TextConverterProcessorB
          natural position would be later.  I flag such notes here with a special
          attribute and then move them later. */
 
-      if (row.isInNoTestsSection)
+      if (row.requiresNotesToBeMovedToStartOfVerse())
         Dom.setAttribute(noteNode, "_TEMP_moveNoteToStartOfVerse", "y")
 
 

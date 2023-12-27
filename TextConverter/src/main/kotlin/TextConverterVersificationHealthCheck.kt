@@ -290,7 +290,7 @@ object TextConverterVersificationHealthCheck
     if (missingsAsRefKeys.isNotEmpty())
     {
       val missingMsg = "Text lacks verse(s) which target versification scheme expects: $missingsAsString$nonReportableMissingsAsString"
-      m_WarningReporter(chapterSid, missingMsg)
+      Logger.info(Ref.rdUsx(chapterSid).toRefKey(), missingMsg)
     }
   }
 
@@ -301,7 +301,7 @@ object TextConverterVersificationHealthCheck
     /**************************************************************************/
     val osis2modSchemeDetails = BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationSchemeCanonical"]!!, true)
     val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.findNodeByName(document,"_X_book")!!["code"]!!)
-    BibleStructure.UsxUnderConstructionInstance().populateFromDom(document, wantWordCount = false)
+    BibleStructure.UsxUnderConstructionInstance().populateFromDom(document, wantWordCount = false, collection = "enhanced/healthCheck", )
     val diffs = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), osis2modSchemeDetails)
 
 

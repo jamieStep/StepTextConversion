@@ -1,6 +1,5 @@
 package org.stepbible.textconverter.support.debug
 
-import org.stepbible.textconverter.GeneralEnvironmentHandler
 import org.stepbible.textconverter.TestController
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
@@ -39,7 +38,7 @@ object Logger
   
   fun getNumberOfErrors (): Int
   {
-    return m_Errors.size
+    return m_Errors!!.size
   }
   
   
@@ -52,7 +51,7 @@ object Logger
   
   fun getNumberOfInformations (): Int
   {
-    return m_Info.size
+    return m_Info!!.size
   }
   
   
@@ -65,7 +64,7 @@ object Logger
   
   fun getNumberOfWarnings () : Int
   {
-    return m_Warnings.size
+    return m_Warnings!!.size
   }
   
   
@@ -93,11 +92,14 @@ object Logger
   
   fun announceAll (throwException: Boolean)
   {
-    val n = m_Errors.size
-    announce(m_Errors,   "Error"      ); if (m_LogFilePath.isNotEmpty()) m_Errors.clear()
-    announce(m_Warnings, "Warning"    ); if (m_LogFilePath.isNotEmpty()) m_Warnings.clear()
-    announce(m_Info,     "Information"); if (m_LogFilePath.isNotEmpty()) m_Info.clear()
+    val n = m_Errors!!.size
+    announce(m_Errors!!,   "Error"      ); if (m_LogFilePath.isNotEmpty()) m_Errors!!.clear()
+    announce(m_Warnings!!, "Warning"    ); if (m_LogFilePath.isNotEmpty()) m_Warnings!!.clear()
+    announce(m_Info!!,     "Information"); if (m_LogFilePath.isNotEmpty()) m_Info!!.clear()
     sortLogFile()
+
+    announceSpecial(); if (m_LogFilePath.isNotEmpty()) m_SpecialMessages.clear()
+
     if (throwException && 0 != n)
       throw StepException("Abandoning processing -- errors detected.  See converterLog.txt.", false)
   }
@@ -212,6 +214,20 @@ object Logger
   
   /****************************************************************************/
   /**
+  * Records details of a 'special' message.  Special messages come out at the
+  * end of the log output.
+  *
+  * @param text
+  */
+
+  fun specialMessage (text: String)
+  {
+    m_SpecialMessages.add(text)
+  }
+
+
+  /****************************************************************************/
+  /**
    * Summarises the present messages to the Dbg stream.
    */
   
@@ -229,6 +245,83 @@ object Logger
   }
   
   
+  /****************************************************************************/
+  /**
+  * Suppresses error messages within the code passed as argument.
+  *
+  * @param body Code to run.
+  */
+
+  fun suppressErrors (body: Any.() -> Unit)
+  {
+    val save = m_Errors; m_Errors = null
+    try
+    {
+      body()
+    }
+    catch (e: Exception)
+    {
+      throw StepException(e)
+    }
+    finally
+    {
+      m_Errors = save
+    }
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Suppresses error messages within the code passed as argument.
+  *
+  * @param body Code to run.
+  */
+
+  fun suppressErrorsAndWarnings (body: Any.() -> Unit)
+  {
+    val saveWarnings = m_Warnings; m_Warnings = null
+    val saveErrors = m_Errors; m_Errors = null
+    try
+    {
+      body()
+    }
+    catch (e: Exception)
+    {
+      throw StepException(e)
+    }
+    finally
+    {
+      m_Errors = saveErrors
+      m_Warnings = saveWarnings
+    }
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Suppresses warning messages within the code passed as argument.
+  *
+  * @param body Code to run.
+  */
+
+  fun suppressWarnings (body: Any.() -> Unit)
+  {
+    val save = m_Warnings; m_Warnings = null
+    try
+    {
+      body()
+    }
+    catch (e: Exception)
+    {
+      throw StepException(e)
+    }
+    finally
+    {
+      m_Warnings = save
+    }
+  }
+
+
   /****************************************************************************/
   /**
    * Records a warning.
@@ -270,8 +363,9 @@ object Logger
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun addMessage (messageContainer: SortedMap<RefKey, MutableList<String>>, refKey: Long, text: String)
+  private fun addMessage (messageContainer: SortedMap<RefKey, MutableList<String>>?, refKey: Long, text: String)
   {
+    if (null == messageContainer) return
     var me: MutableList<String>? = messageContainer[refKey]
     if (null == me) { me = mutableListOf(); messageContainer[refKey] = me }
     var s = if (m_Prefix.isEmpty()) "" else m_Prefix.peek() + ": "
@@ -285,6 +379,7 @@ object Logger
   {
     /**************************************************************************/
     val outputter = getOutputter()
+
 
 
     /**************************************************************************/
@@ -315,6 +410,15 @@ object Logger
   }
   
   
+  /****************************************************************************/
+  private fun announceSpecial ()
+  {
+    val outputter = getOutputter()
+    m_SpecialMessages.forEach { outputter("$it\n") }
+    outputter("\n")
+  }
+
+
   /****************************************************************************/
   /* Determine where to send output. */
 
@@ -371,9 +475,10 @@ object Logger
   
   
   /********************************************************************************************************************/
-  private val m_Errors  : SortedMap<RefKey, MutableList<String>> = TreeMap()
-  private val m_Info    : SortedMap<RefKey, MutableList<String>> = TreeMap()
-  private val m_Warnings: SortedMap<RefKey, MutableList<String>> = TreeMap()
+  private var m_Errors  : SortedMap<RefKey, MutableList<String>>? = TreeMap()
+  private var m_Info    : SortedMap<RefKey, MutableList<String>>? = TreeMap()
+  private var m_Warnings: SortedMap<RefKey, MutableList<String>>? = TreeMap()
+  private val m_SpecialMessages: MutableList<String> = mutableListOf()
   
   private var m_ErrorCount   = 0
   private var m_InfoCount    = 0

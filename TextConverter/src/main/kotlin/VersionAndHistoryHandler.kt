@@ -195,7 +195,7 @@ object VersionAndHistoryHandler
     if ("release" != ConfigData["stepRunType"]!!.lowercase())
     {
       ConfigData["stepTextRevision"] = "0.0" // Dummy version.
-      if ("osis" == StandardFileLocations.getRawInputFolderType())
+      if ("osis" == TextConverterProcessorRawInputManager.getRawInputFolderType())
         createUpdatedSwordConfigFileFromThirdPartyFile(true)
       return
     }
@@ -244,7 +244,7 @@ object VersionAndHistoryHandler
 
 
     /**************************************************************************/
-    if ("osis" == StandardFileLocations.getRawInputFolderType())
+    if ("osis" == TextConverterProcessorRawInputManager.getRawInputFolderType())
       createUpdatedSwordConfigFileFromThirdPartyFile(false)
     else
     {

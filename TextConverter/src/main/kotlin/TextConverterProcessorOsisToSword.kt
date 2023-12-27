@@ -411,6 +411,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
     val file = File(StandardFileLocations.getOsisToModLogFilePath())
     if (!file.exists()) return false
 
+    var errors = 0
     var fatals = 0
     var hadSuccess = false
     var info = 0
@@ -418,8 +419,9 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
     Logger.setPrefix("osis2mod")
 
     StandardFileLocations.getInputStream(file.toString(), null)!!.bufferedReader().readLines().forEach {
-      if (it.startsWith("WARNING(PARSE): SWORD does not search numeric entities")) return@forEach  // osis2mod doesn't like things like &#9999;, but apparently we need them and they do work.
-      if (it.startsWith("SUCCESS"))
+      if (it.startsWith("WARNING(PARSE): SWORD does not search numeric entities"))
+        return@forEach  // osis2mod doesn't like things like &#9999;, but apparently we need them and they do work.
+      else if (it.startsWith("SUCCESS"))
       {
         Logger.info(it)
         hadSuccess = true
@@ -429,14 +431,19 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
         ++fatals
         Logger.error(it)
       }
+      else if (it.contains("ERROR"))
+      {
+        ++errors
+        Logger.warning("Treated as a warning because osis2mod often overreacts: $it")
+      }
       else if (it.contains("WARNING"))
       {
-        warnings++
+        ++warnings
         Logger.warning(it)
       }
-      else if (it.contains("INFO(V11N)"))
+      else if (it.contains("INFO("))
       {
-        info++
+        ++info
         Logger.info(it)
       }
     } // forEach
@@ -445,6 +452,8 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
 
     if (fatals > 0)
       System.err.println("CAUTION: osis2mod.exe reports $fatals fatal error(s).  Please check the OSIS log file to see if the conversion to Sword format has worked.")
+    else if (errors > 0)
+      System.err.println("CAUTION: osis2mod.exe reports $errors error(s).  These have been treated here as non-fatal, because often they do not seem to reflect an actual problem, but please check the OSIS log file to see if the conversion to Sword format has worked.")
     else if (warnings > 0)
       System.err.println("CAUTION: osis2mod.exe reports $warnings warning(s).  Please check the OSIS log file to see if the conversion to Sword format has worked.")
     else if (!hadSuccess)
@@ -489,7 +498,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
 
     val configFile = File(StandardFileLocations.getSwordConfigFilePath(m_ModuleName))
     VersionAndHistoryHandler.process()
-    if ("osis" == StandardFileLocations.getRawInputFolderType())
+    if ("osis" == TextConverterProcessorRawInputManager.getRawInputFolderType())
       return
 
 

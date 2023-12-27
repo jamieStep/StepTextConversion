@@ -334,14 +334,15 @@ abstract class BibleStructure
   * BibleStructureOsis2ModScheme) can ensure that it doesn't get called.
   *
   * @param doc
+  * @param collection 'raw', 'enhanced', etc -- used to clarify output messages.
   * @param wantWordCount True if we need to accumulate the word count.
   * @param filePath: Optional: used for debugging and progress reporting only.
   * @param bookName USX abbreviation.
   */
 
-  open fun addFromDom (doc: Document, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
+  open fun addFromDom (doc: Document, collection: String, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
   {
-    if (null != bookName) Dbg.reportProgress("  Determining Bible structure for $bookName")
+    if (null != bookName) Dbg.reportProgress("  Determining $collection Bible structure for ${bookName.uppercase()}")
     m_CollectingWordCounts = wantWordCount
     if (null != bookName && null != filePath) m_BookAbbreviationToFilePathMappings[bookName.lowercase()] = filePath
     preprocess(doc)
@@ -355,13 +356,14 @@ abstract class BibleStructure
   * Adds the data from a given file to the current data structures.
   *
   * @param filePath
+  * @param collection 'raw', 'enhanced', etc -- used to clarify output messages.
   * @param wantWordCount True if we need to accumulate the word count.
   * @param bookName USX abbreviation.
  */
 
-  fun addFromFile (filePath: String, wantWordCount: Boolean, bookName: String? = null)
+  fun addFromFile (filePath: String, collection: String, wantWordCount: Boolean, bookName: String? = null)
   {
-    addFromDom(Dom.getDocument(filePath, false), wantWordCount, filePath, bookName)
+    addFromDom(Dom.getDocument(filePath, false), collection, wantWordCount, filePath, bookName)
   }
 
 
@@ -401,13 +403,14 @@ abstract class BibleStructure
   * mapper.
   *
   * @param mapper
+  * @param collection 'raw' or 'enhanced' -- used only to clarify messages.
   * @param wantWordCount
   */
 
-  fun populateFromBookAndFileMapper (mapper: BibleBookAndFileMapper, wantWordCount: Boolean = false)
+  fun populateFromBookAndFileMapper (mapper: BibleBookAndFileMapper, collection: String, wantWordCount: Boolean = false)
   {
     clear()
-    mapper.iterateOverSelectedFiles{ bookName: String, filePath: String -> addFromFile(filePath, wantWordCount, bookName) }
+    mapper.iterateOverSelectedFiles{ bookName: String, filePath: String -> addFromFile(filePath, collection, wantWordCount, bookName) }
   }
 
 
@@ -416,15 +419,16 @@ abstract class BibleStructure
   * Clears the data structures and adds the data from a given file.
   *
   * @param doc
+  * @param collection 'raw', 'enhanced', etc -- used to clarify output messages.
   * @param wantWordCount True if we need to accumulate the word count.
   * @param filePath: Optional: used for debugging and progress reporting only.
   * @param bookName USX abbreviation.
   */
 
-  fun populateFromDom (doc: Document, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
+  fun populateFromDom (doc: Document, collection: String, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
   {
     clear()
-    addFromDom(doc, wantWordCount, bookName)
+    addFromDom(doc, collection, wantWordCount, bookName)
   }
 
 
@@ -433,14 +437,15 @@ abstract class BibleStructure
   * Clears the data structures and adds the data from a given file.
   *
   * @param filePath
+  * @param collection 'raw', 'enhanced', etc -- used to clarify output messages.
   * @param wantWordCount True if we need to accumulate the word count.
   * @param bookName USX abbreviation.
   */
 
-  fun populateFromFile (filePath: String, wantWordCount: Boolean, bookName: String? = null)
+  fun populateFromFile (filePath: String, collection: String, wantWordCount: Boolean, bookName: String? = null)
   {
     clear()
-    addFromFile(filePath, wantWordCount, bookName)
+    addFromFile(filePath, collection, wantWordCount, bookName)
   }
 
 
@@ -576,6 +581,8 @@ abstract class BibleStructure
   fun hasCanonicalTitle (b: Int, c: Int, v: Int = 0, s: Int = 0): Boolean { return commonHasCanonicalTitle(makeElts(b, c, 0, 0)) }
   fun hasCanonicalTitle (chapterRefAsString: String)            : Boolean { return commonHasCanonicalTitle(makeElts(chapterRefAsString)) }
   fun hasCanonicalTitle (elts: IntArray)                        : Boolean { return commonHasCanonicalTitle(elts) }
+
+  fun hasSubverses (): Boolean { return m_Text.m_SubverseDetails.isNotEmpty() }
 
 
 
@@ -1107,7 +1114,7 @@ abstract class BibleStructure
   protected open fun commonGetMissingEmbeddedVersesForChapter (elts: IntArray): List<RefKey>
   {
     val cd = getChapterDescriptor(elts)!!
-    val verses = cd.m_Content.m_ContentMap.keys.map { Ref.rd(it.toLong()).getV() }
+    val verses = cd.m_Content.m_ContentMap.keys.map { Ref.rd(it.toLong()).getV() } .toMutableSet()
 
     val baseRef = Ref.rd(elts).toRefKey_bcv()
     var prevVerse = 0
@@ -1115,7 +1122,8 @@ abstract class BibleStructure
 
     verses.forEach {
       for (i in prevVerse + 1 ..< it)
-        res.add(Ref.setV(baseRef, i))
+        if (i !in verses)
+          res.add(Ref.setV(baseRef, i))
       prevVerse = it
     }
 
@@ -1989,7 +1997,7 @@ class BibleStructureOsis2ModScheme (scheme: String): BibleStructure()
 
 
   /****************************************************************************/
-  override fun addFromDom (doc: Document, wantWordCount: Boolean, filePath: String?, bookName: String?) { throw StepException("Can't populate osis2mod scheme from text.") }
+  override fun addFromDom (doc: Document, collection: String, wantWordCount: Boolean, filePath: String?, bookName: String?) { throw StepException("Can't populate osis2mod scheme from text.") }
   override fun commonGetWordCount(elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
   override fun commonGetWordCountForCanonicalTitle(elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
   override fun getRelevanceOfNode (node: Node): NodeRelevance { throw StepException("getRelevanceOfNode should not be being called on an osis2mod scheme.") }

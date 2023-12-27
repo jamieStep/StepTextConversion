@@ -79,6 +79,7 @@ object ReversificationRuleEvaluator
   /**
    * Checks to see if a given rule passes.
    *
+   * @param sourceRef The reference for the source verse.
    * @param theRuleData The rule.
    * @param row Raw row data, used only in error messages.
    * @return True if the rule passes.
@@ -91,7 +92,7 @@ object ReversificationRuleEvaluator
     {
       if (0 == sourceRef.getV()) // Within the reversification data, the canonical title is held as v0, but we need to split that case out for existence checks.
       {
-        if (!BibleStructure.UsxUnderConstructionInstance().hasCanonicalTitle(sourceRef)) return false
+          if (!BibleStructure.UsxUnderConstructionInstance().hasCanonicalTitle(sourceRef)) return false
       }
       else
       {
@@ -228,22 +229,8 @@ object ReversificationRuleEvaluator
 
 
   /****************************************************************************/
-  /* This code may be called on both reversification and non-reversification
-     runs.  This is because sadly there are a few rows in the reversification
-     data -- to do with the handling of empty verses -- which are needed
-     regardless of whether we are reversifying or not.  In an effort to avoid
-     complicating the code beyond its already complicated state, I always
-     process the whole of the reversification data even if it is only these
-     few rows which are of interest.  This present method is called to report
-     cases where we are asked to perform a length test on an elided verse.
-     Because I always process the whole of the data, I may detect this
-     situation even if we are not reversifying.  If I do so, it will never be
-     on these rows which address empty verses, and so it would be confusing
-     to report issues here.  Hence the 'if' at the start of the method. */
-
   private fun lengthWarning (theMsg: String)
   {
-    if (!TextConverterProcessorReversificationAnnotateOnly.runMe()) return
     val msg = "$theMsg ($m_Row)"
     Logger.warning(msg)
     TextConverterFeatureSummaryGenerator.addReversificationIssue(msg)

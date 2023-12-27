@@ -253,7 +253,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
 
     override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
     {
-        commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
+      commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
     }
 
 
@@ -266,9 +266,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
     override fun process (): Boolean
     {
       PreprocessorHandler.runPreprocessor()
-      BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx, true) // Gets the chapter / verse structure -- how many chapters in each verse, etc.
-      forceVersificationSchemeIfAppropriate()
-      // $$$$$$$$$$$$ ReversificationData.process()
+      ReversificationData.process()
       BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx.iterateOverSelectedFiles(::processFile) // Creates the enhanced USX.
       return true
     }
@@ -372,8 +370,6 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
         expandElisions()                                   // c) Replaces elisions by individual verses.
         markCanonicalTitleLocations()                      // c) Some psalms have canonical titles at the end as well as the beginning.  It's useful to mark the para:d's to say where they are.
         deleteTrailingBlankLinesInChapters()               // c) The rendering gets messed up if chapters have trailing blank lines.
-        if (TextConverterProcessorReversificationAnnotateOnly.runMe())
-          TextConverterProcessorReversificationAnnotateOnly.applyReversificationChanges(m_Document, m_BookName)
 
         val dt = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MMMM-yyyy"))
         Dom.outputDomAsXml(m_Document, Paths.get(StandardFileLocations.getEnhancedUsxFolderPath(), StepFileUtils.getFileName(usxInputPath)).toString(), "STEP extended USX created $dt")
@@ -2027,31 +2023,6 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
     /**                                                                                                              **/
     /******************************************************************************************************************/
     /******************************************************************************************************************/
-
-    /******************************************************************************************************************/
-    /* The user may use the configuration data to specify the versification scheme to be used.  However, we may need to
-       override anything they give under certain circumstances ...
-
-       * If we are using the (currently experimental) STEP variant of osis2mod, we don't want to use any of the schemes
-         built into osis2mod -- and indeed we want the scheme name to be unique.  For this, I prepend v11n on to the
-         module name.
-
-       * Otherwise if we're reversifying, we need the scheme to be either NRSV or NRSVA, depending upon whether or not
-         we have DC books.
-
-       Note that all of this may be up for grabs at present -- if we go with the STEP variant of osis2mod, we may well
-       no longer be using reversification as originally anticipated, and the non-STEP branch below will be irrelevant.
-  */
-
-    private fun forceVersificationSchemeIfAppropriate ()
-    {
-        if ("step" == ConfigData["stepOsis2modType"]!!)
-          ConfigData.put("stepVersificationSchemeCanonical", "v11n" + ConfigData["stepModuleName"], true)
-        // Note that to keep osis2mod happy, the scheme names _must_ be all caps.
-        else if (TextConverterProcessorReversificationAnnotateOnly.runMe())
-          ConfigData.put("stepVersificationSchemeCanonical", if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.targetsDc()) "NRSVA" else "NRSV", true)
-  }
-
 
     /******************************************************************************************************************/
     private fun initialise (rawUsxPath: String, document: Document)

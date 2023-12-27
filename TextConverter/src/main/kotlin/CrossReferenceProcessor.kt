@@ -267,6 +267,15 @@ import org.w3c.dom.Node
 
 
     /**************************************************************************/
+    /* The Crosswire version of osis2mod doesn't support subverses, so if we
+       have a loc which targets subverses, I take the somewhat arbitrary
+       decision to replace them with their owning verses. */
+
+    SubverseProcessor.canonicaliseRefsConvertCrossVerseSubverseRangesToVersesIfNecessary(refs)
+
+
+
+    /**************************************************************************/
     /* Where refs point to non-existent locations, convert them to
        _X_contentOnly. */
 
@@ -752,6 +761,13 @@ import org.w3c.dom.Node
   /****************************************************************************/
 
   /****************************************************************************/
+  private fun recordInfo (node: Node, attributeValue: String)
+  {
+    Logger.info(RefCollection.rdUsx(node["_X_belongsTo"]!!).getFirstAsRefKey(), attributeValue)
+  }
+
+
+  /****************************************************************************/
   private fun recordWarning (node: Node, attributeValue: String)
   {
     node["_X_warning"] = attributeValue
@@ -790,7 +806,10 @@ import org.w3c.dom.Node
     {
       //Dbg.d(node["loc"]!!, "GEN 2:19")
       val rc = RefCollection.rdUsx(node["loc"]!!)
-      val problems = rc.getAllAsRefKeys().filter { !BibleStructure.UsxUnderConstructionInstance().thingExists(it) } .map { Ref.getB(it) }
+      val problems = rc.getAllAsRefKeys()
+        .map { Ref.clearS(it) } // If we have cross-references which point to subverses, I'm happy to take them as being just the owning verse.
+        .filter { !BibleStructure.UsxUnderConstructionInstance().thingExists(it) }
+        .map { Ref.getB(it) }
       val report = when (node["_X_tagOrStyleChangedReason"]?.replace("Was ", ""))
       {
         "xot" -> !problems.all { BibleAnatomy.isOt(it) }
@@ -801,8 +820,8 @@ import org.w3c.dom.Node
 
       if (report && problems.isNotEmpty())
       {
-        recordWarning(node, "Target does not exist: " + node["loc"]!!)
-        MiscellaneousUtils.recordTagChange(node, "_X_contentOnly", null, "Target does not exist")
+        recordInfo(node, "Cross-reference converted to plain text (target does not exist or target is assumed to be too large for use as a cross-reference): " + node["loc"]!!)
+        MiscellaneousUtils.recordTagChange(node, "_X_contentOnly", null, "Cross-reference converted to plain text (target does not exist or target is assumed to be too large for use as a cross-reference)")
       }
       else
         res.add(node)

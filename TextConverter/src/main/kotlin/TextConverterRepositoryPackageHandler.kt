@@ -74,7 +74,7 @@ object TextConverterRepositoryPackageHandler: TextConverterProcessorBase
   {
     val zipPath: String = StandardFileLocations.getRepositoryPackageFilePath()
     val inputs = mutableListOf(StandardFileLocations.getMetadataFolderPath(),
-                               StandardFileLocations.getRawInputFolderPath(),
+                               TextConverterProcessorRawInputManager.getRawInputFolderPath(),
                                StandardFileLocations.getOsisFilePath(),
                                StandardFileLocations.getSwordZipFilePath(ConfigData["stepModuleName"]!!))
     Zip.createZipFile(zipPath, 9, null, inputs)

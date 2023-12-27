@@ -1,6 +1,8 @@
 /**********************************************************************************************************************/
 package org.stepbible.textconverter
 
+import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRawUsx
+import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
@@ -49,13 +51,7 @@ class TextConverterController
         CommandLineProcessor.addCommandLineOption("reversificationType", 1, "None / Basic / Academic (append '?' to Basic or Academic to have the converter decide whether to reversify", listOf("None", "Basic", "Academic", "Basic?", "Academic?"), "Basic?", false)
         GeneralEnvironmentHandler.getCommandLineOptions(CommandLineProcessor)
 
-        (C_ProcessorsCommonPre.toSet() +
-         C_ProcessorsForCreatingModule.toSet() +
-         C_ProcessorsForEvaluationOnly.toSet() +
-         C_ProcessorsForOsisInput.toSet() +
-         C_ProcessorsForUsxInput.toSet() +
-         C_ProcessorsForVlInput.toSet() +
-         C_ProcessorsStartingFromEnhancedUsx.toSet()).forEach { it.getCommandLineOptions(CommandLineProcessor) }
+        (C_FullConversionProcessorList.map { it.processor}.toSet() union C_ProcessorsForEvaluationOnly.toSet()) .forEach { it.getCommandLineOptions(CommandLineProcessor) }
     }
 
 
@@ -70,14 +66,11 @@ class TextConverterController
         return
       }
 
-      m_ProcessorsForThisRun = when (val inputFolderName = StandardFileLocations.getRawInputFolderType().lowercase().replace("raw", ""))
-      {
-        "usx"  -> C_ProcessorsForUsxInput
-        "osis" -> C_ProcessorsForOsisInput
-        "vl"   -> C_ProcessorsForVlInput
-        else   -> throw StepException("Unknown raw data type: $inputFolderName.")
-      }
+     TextConverterProcessorRawInputManager.runMe() // This call merely initialises the internal data structures.
+     m_InputType = TextConverterProcessorRawInputManager.getRawInputFolderType()
+     m_ProcessorsForThisRun = C_FullConversionProcessorList.filter { it.fn() }.map { it.processor }
     }
+
 
 
     /******************************************************************************************************************/
@@ -199,11 +192,17 @@ class TextConverterController
 
 
         /**************************************************************************/
+        BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, "raw", wantWordCount = false)
         GeneralEnvironmentHandler.onStartup()
         StepFileUtils.deleteFile(StandardFileLocations.getConverterLogFilePath())
         Logger.setLogFile(StandardFileLocations.getConverterLogFilePath())
         Logger.announceAll(true)
    }
+
+
+
+   /******************************************************************************************************************/
+   private lateinit var m_InputType: String
 
 
    /******************************************************************************************************************/
@@ -213,67 +212,33 @@ class TextConverterController
 
 
    /******************************************************************************************************************/
-   /* Everything needs this, and they need to run early. */
-
-   private val C_ProcessorsCommonPre = listOf(
-     DbgController,
-     TestController.instance() // This _does_ need to be .instance().
-   )
-
-
-   /******************************************************************************************************************/
-   /* Used where we're creating modules.  Needs to run after all other processing. */
-
-   private val C_ProcessorsForCreatingModule = listOf(
-     TextConverterOsisTweaker,
-     TextConverterTaggingHandler,
-     TextConverterProcessorOsisToSword,
-     TextConverterRepositoryPackageHandler
-   )
-
-
-   /******************************************************************************************************************/
    /* What it says on the tin. */
 
-   private val C_ProcessorsForEvaluationOnly = C_ProcessorsCommonPre + listOf(
+   private val C_ProcessorsForEvaluationOnly = listOf(
+     DbgController,
+     TestController.instance(),
      TextConverterProcessorEvaluateVersificationSchemes
    )
 
 
    /******************************************************************************************************************/
-   /* Anything where previous processing has created enhanced USX. */
+   private data class ProcessorSelector (val processor: TextConverterProcessorBase, val fn: () -> Boolean)
+   private val C_FullConversionProcessorList = listOf(
+     ProcessorSelector(DbgController )                          { true },
+     ProcessorSelector(TestController.instance())               { true },
 
-   private val C_ProcessorsStartingFromEnhancedUsx = listOf(
-     TextConverterFeatureSummaryGenerator,
-     TextConverterEnhancedUsxValidator,
-     TextConverterProcessorEnhancedUsxToOsis
-   ) + C_ProcessorsForCreatingModule
+     ProcessorSelector(TextConverterProcessorRawInputManager)   { "usx" != m_InputType },
 
+     ProcessorSelector(TextConverterProcessorUsxToEnhancedUsx1) { "osis" != m_InputType},
+     // $$$ Processor(TextConverterProcessorReversification), // Need to reconsider this?
+     ProcessorSelector(TextConverterProcessorUsxToEnhancedUsx2) { "osis" != m_InputType },
 
-   /******************************************************************************************************************/
-   /* When the starting point is OSIS. */
+     ProcessorSelector(TextConverterFeatureSummaryGenerator)    { "osis" != m_InputType },
+     ProcessorSelector(TextConverterEnhancedUsxValidator)       { "osis" != m_InputType },
+     ProcessorSelector(TextConverterProcessorEnhancedUsxToOsis) { "osis" != m_InputType },
 
-   private val C_ProcessorsForOsisInput = C_ProcessorsCommonPre + listOf(
-     // $$$ TextConverterProcessorReversification // Need to reconsider this?
-   ) + C_ProcessorsForCreatingModule
-
-
-
-   /******************************************************************************************************************/
-   /* When the starting point is USX. */
-
-   private val C_ProcessorsForUsxInput = C_ProcessorsCommonPre + listOf(
-     TextConverterProcessorUsxToEnhancedUsx1,
-     // $$$ TextConverterProcessorReversification, // Need to reconsider this?
-     TextConverterProcessorUsxToEnhancedUsx2) + C_ProcessorsStartingFromEnhancedUsx
-
-
-   /******************************************************************************************************************/
-   /* When the starting point is VL. */
-
-   private val C_ProcessorsForVlInput = C_ProcessorsCommonPre + listOf(
-     TextConverterProcessorVLToEnhancedUsx,
-     TextConverterFeatureSummaryGenerator,
-     TextConverterProcessorEnhancedUsxToOsis
-   ) + C_ProcessorsForCreatingModule
+     ProcessorSelector(TextConverterTaggingHandler)             { true },
+     ProcessorSelector(TextConverterProcessorOsisToSword)       { true },
+     ProcessorSelector(TextConverterRepositoryPackageHandler)   { true }
+   )
 }

@@ -85,7 +85,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
 */
   override fun runMe (): Boolean
   {
-    return C_ConfigurationFlag_DoUsxFinalValidation && "vl" != StandardFileLocations.getRawInputFolderType()
+    return C_ConfigurationFlag_DoUsxFinalValidation && "vl" != TextConverterProcessorRawInputManager.getRawInputFolderType()
   }
 
 
@@ -115,11 +115,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
   {
     m_ImplicitReversificationRenumbers = ReversificationData.getImplicitRenumbers()
     m_ReversificationRowsForAllBooks = ReversificationData.getAllAcceptedRows()
-
     BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::checkBook)
-    //getMatchingFilesFromFolder(StandardFileLocations.getEnhancedUsxFolderPath(), StandardFileLocations.getEnhancedUsxFilePattern())
-//    val paths = StepFileUtils.
-//    paths.forEach { checkBook(it.toString()) }
   }
 
 
@@ -149,7 +145,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
        processing having removed 'awkward' verses from the list of those still
        to be handled. */
 
-    if (TextConverterProcessorReversificationAnnotateOnly.runMe())
+    if (TextConverterProcessorReversificationRemapVerses.runMe())
     {
       checkReversifiedEverythingButCanonicalTitles(reversificationDetails)
       checkReversifiedCanonicalTitles(reversificationDetails)
@@ -363,7 +359,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
        manipulation, therefore, I have only to look at the sourceRef.*/
 
     reversificationDetails.m_CanonicalTitleRows
-      .filter { ReversificationData.C_SourceIsPsalmTitle   == it.processingFlags.and(ReversificationData.C_SourceIsPsalmTitle) }
+      .filter { it.sourceIsPsalmTitle() }
       .forEach { checkReversifiedCanonicalTitles_TitleToTitle(it)}
 
 
@@ -525,7 +521,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
          going to want to take input from the verse identified by the source
          ref, otherwise from the verse identified by the standard ref. */
 
-      val refKeySelector = if (0 == rows[0].processingFlags.and(ReversificationData.C_Renumber)) ::getInputRefKeyUsingStandardField else ::getInputRefKeyUsingSourceField
+      val refKeySelector = if (rows[0].isRenumber()) ::getInputRefKeyUsingSourceField else ::getInputRefKeyUsingStandardField
       val inputBookAnatomy = m_RawBookAnatomies[Ref.getB(refKeySelector(rows[0]))]
 
       val inputContent = if (rows[0].action.contains("merge")) "" else gatherContentForAllConstituents(inputBookAnatomy!!, refKeySelector, rows)
@@ -832,8 +828,10 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
     fun getMappings (bookNumber: Int)
     {
       val filePath = BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx.getFilePathForBook(bookNumber) ?: return
-      val document = Dom.getDocument(filePath)
-      m_RawBookAnatomies[bookNumber] = getBookAnatomy(document)
+      Logger.suppressWarnings { // Warnings on the raw USX should already have been reported -- I think.
+        val document = Dom.getDocument(filePath)
+        m_RawBookAnatomies[bookNumber] = getBookAnatomy(document)
+      }
     }
 
     m_RawBookAnatomies.clear()

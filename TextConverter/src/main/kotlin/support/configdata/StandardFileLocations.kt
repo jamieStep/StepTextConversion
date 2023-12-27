@@ -2,7 +2,6 @@
 package org.stepbible.textconverter.support.configdata
 
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.File
 import java.io.FileInputStream
 import java.nio.file.Paths
@@ -158,8 +157,7 @@ object StandardFileLocations
   fun getOsisToModLogFilePath (): String { return m_OsisToModLogFilePath; }
   fun getOsis2modVersificationDetailsFilePath (): String { return "\$common/osis2modVersification.txt" }
   fun getPreprocessedUsxFolderPath (): String { return m_PreprocessedUsxFolderPath }
-  fun getRawInputFolderType (): String { return m_RawInputFolderName.lowercase().replace("raw", "") }
-  fun getRawInputFolderPath (): String { return m_RawInputFolderPath }
+  fun getRawUsxFolderPath (): String { return Paths.get(getRootFolderPath(), "RawUsx").toString() }
   fun getRepositoryPackageFilePath (): String { return Paths.get(getRootFolderPath(), getRepositoryPackageFileName()).toString() }
   fun getRootFolderName (): String { return m_RootFolderName }
   fun getRootFolderPath (): String { return m_RootFolderPath }
@@ -176,14 +174,14 @@ object StandardFileLocations
   private fun getTextFeaturesFileName (): String { return m_TextFeaturesFileName }
   fun getTextFeaturesFilePath (): String { return Paths.get(getTextFeaturesFolderPath(), getTextFeaturesFileName()).toString() }
   fun getTextFeaturesFolderPath (): String { return makeTextFeaturesFolderPath() }
-  fun getThirdPartySwordConfigFileName (): String { return "sword.conf"; }
+  private fun getThirdPartySwordConfigFileName (): String { return "sword.conf"; }
   fun getThirdPartySwordConfigFilePath (): String { return Paths.get(getMetadataFolderPath(), getThirdPartySwordConfigFileName()).toString() }
   private fun getVernacularBibleStructureFileName (): String { return m_VernacularBibleStructureFileName }
   fun getVernacularBibleStructureFilePath (): String { return Paths.get(getTextFeaturesFolderPath(), getVernacularBibleStructureFileName()).toString() }
   fun getVersificationFilePath (): String { return Paths.get(getRootFolderPath(), "stepRawTextVersification.txt").toString() }
   private fun getVersificationStructureForBespokeOsis2ModFileName (): String { return ConfigData["stepModuleName"]!! + ".json" }
   fun getVersificationStructureForBespokeOsis2ModFilePath (): String { return Paths.get(getEncryptionDataRootFolder(), "versification", getVersificationStructureForBespokeOsis2ModFileName()).toString() }
-  fun getVLFilePath (): String { return Paths.get(getRootFolderPath(), "RawVl", "vl.txt").toString() }
+
 
 
   /****************************************************************************/
@@ -234,30 +232,8 @@ object StandardFileLocations
 
 
     /**************************************************************************/
-    /* Hitherto, we've always been taking input from RawUsx.  Now, however, we
-       also need to be able to cope with OSIS.  (Other things such as VL have
-       to be handled specially, perhaps by converting them to USX before
-       running the converter.  OSIS is special because in the normal course of
-       events its one of the outputs here, and it needs to go through part of
-       the standard conversion processing pipeline, even though it is _only_
-       part of it.
-
-       I am therefore presently catering for having a folder called RawUsx
-       (as before) or RawOsis.  The processing here also extracts the
-       input type and stores it in ConfigData. */
-
-    val x = StepFileUtils.getMatchingFoldersFromFolder(m_RootFolderPath, "(?i)^Raw.*".toRegex())
-    if (x.isEmpty()) throw StepException("No raw input folder.")
-    m_RawInputFolderName = x[0].fileName.toString()
-
-
-
-
-    /**************************************************************************/
     /* That's the end of the exciting bit. */
 
-    m_RawInputFolderPath = Paths.get(m_RootFolderPath, m_RawInputFolderName).toString()
-    
     m_PreprocessedUsxFolderPath = Paths.get(m_RootFolderPath, "PreprocessedUsx").toString()
 
     m_EnhancedUsxFolderPath = Paths.get(m_RootFolderPath, "EnhancedUsx").toString()
@@ -307,8 +283,6 @@ object StandardFileLocations
   private var m_OsisFolderPath = ""
   private var m_OsisToModLogFilePath = ""
   private var m_PreprocessedUsxFolderPath = ""
-  private var m_RawInputFolderName = ""
-  private var m_RawInputFolderPath = ""
   private var m_RootFolderName = ""
   private var m_RootFolderPath = ""
   private var m_SwordConfigFolderName = ""

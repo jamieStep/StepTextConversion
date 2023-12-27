@@ -1,6 +1,8 @@
 package org.stepbible.textconverter
 
+import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.*
@@ -11,7 +13,7 @@ import org.w3c.dom.Node
 
 /******************************************************************************/
 /**
- * Handles reversification (sort of).
+ * Handles one flavour of reversification -- what DIB labels 'versification'.
  *
  * Not all Bibles are split up into verses in the same way.  A given piece of
  * Greek text may be labelled Mat 99:1 in one Bible, and Mat 100:2 in another.
@@ -30,29 +32,40 @@ import org.w3c.dom.Node
  * And in addition we may add footnotes to verses to given more information
  * about places where the structure departs from that commonly seen elsewhere.
  *
- * Unfortunately, reversification exists in two incarnations currently,
- * according to where this restructuring occurs.
+ * We can handle this in either of two ways.  We can either restructure the
+ * text during the conversion process so as to create a module which is fully
+ * NRSVA compliant.  Or we can leave the text pretty much as-is, and then
+ * carry out on-the-fly restructuring within STEPBible.
  *
- * This present class contains much the easier of the two, because here we
- * retain the text in its original form, except perhaps for two relatively
- * minor changes: if the text lacks verses from the start or middle of
- * chapters, we create them; and we may add the footnotes referred to above.
- * Restructuring is something carried out on-the-fly during the rendering
- * process when it is needed in order to support our added value; and since
- * it is carried out at run-time, it is of no concern to us here.
+ * The former of these is handled by [TextConverterProcessorReversificationRemapVerses],
+ * and the advantages and disadvantages of this approach are discussed there.
  *
- * This approach means that when viewing the text stand-alone in STEPBible,
- * it looks almost exactly as it did when supplied to us, which is important
- * because very often licence conditions prevent us from making significant
- * changes.  We do still need the restructuring in support of STEPBible's
- * added value, but that can restructuring can be made temporary, and is
- * hopefully acceptable in support of things like searches, interlinear
- * display etc.
+ * The approach which leaves restructuring to be handled within STEPBible is
+ * handled in the present class.  This too has its advantages and disadvantages.
  *
- * The class TextConverterProcessorReversificationRemapVerses (qv) deals with
- * the more complicated form, where we restructure the text during the
- * conversion process.  This is likely to be of use only on a very few texts,
- * because of the licence conditions mentioned above.
+ * The big advantage is that when the text is being displayed in STEPBible in
+ * 'plain vanilla mode', it looks like the original as supplied by the
+ * translators.  This is good both for users (who are not confronted with a text
+ * with verses in the 'wrong' places or carrying the wrong verse numbers); and
+ * it is good in that very often licence conditions preclude us from carrying
+ * out the sort of significant restructuring required by the alternative
+ * approach.
+ *
+ * The disadvantage is that it produces a module which can be displayed only
+ * using our own bespoke variant of JSword etc.  This means it will not be
+ * usable with older versions of offline STEPBible, and it also means we can't
+ * make it available to third parties (although this latter fact is perhaps not
+ * so much of an issue, because the licence conditions probably mean we couldn't
+ * offer it to third parties anyway).
+ *
+ *
+ * The processing here is very modest -- we simply take those rows from the
+ * reversification data which are selected for this text, and apply to the
+ * source verses any footnotes which those rows define.
+ *
+ * (Processing elsewhere may make a few other minor changes -- for example, we
+ * cannot have missing verses within chapters, so we have to create any verses
+ * to fill in any gaps.)
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -69,24 +82,6 @@ object TextConverterProcessorReversificationAnnotateOnly
 
   /****************************************************************************/
   /**
-  * Indicates whether this functionality should be used on a particular run.
-  * Note that the 'this functionality' here relates specifically to that
-  * portion which may annotates verses and may create empty ones.  The class
-  * also provides information for other purposes, and this may be used even if
-  * the present method returns false.
-  *
-  * @return True if this functionality should be used.
-  */
-
-  fun runMe (): Boolean
-  {
-    return "conversiontime" == ConfigData["stepReversificationType"]!!.lowercase()
-  }
-
-
-
-  /****************************************************************************/
-  /**
   * Applies the changes associated with this variant of reversification (ie the
   * one where any significant changes are left to STEPBible to apply at run
   * time).  This entails adding footnotes and possibly creating empty verses
@@ -94,85 +89,44 @@ object TextConverterProcessorReversificationAnnotateOnly
   *
   * @param document The document to be processed.
   * @param bookName The book covered by this document.
+  * @return True if any changes made.
   */
 
-  fun applyReversificationChanges (document: Document, bookName: String)
+  fun process (document: Document, bookName: String): Boolean
   {
-    initialise()
-    addMissingVerses(document, bookName)
-    addFootnotes(document, bookName)
+    return if ("runtime" == ConfigData["stepReversificationType"]!!.lowercase())
+      addFootnotes(document, bookName)
+    else
+      false
   }
 
 
-  /****************************************************************************/
-  /**
-  * Returns information needed in STEPBible when we are rely upon it to handle
-  * reversification-related text restructuring, rather than doing it ourselves
-  * in the converter.
-  *
-  * The return value is a list of RefKey -> RefKey pairs, covering all
-  * reversification rows where a source verse is renumbered or moved, given
-  * the source and target RefKey.
-  *
-  * @return List of mappings, ordered by source RefKey.
-  */
-  
-  fun getReversificationMappings (): List<Pair<RefKey, RefKey>>
-  {
-    initialise()
 
-    val res: MutableList<Pair<RefKey, RefKey>> = mutableListOf()
-    val renumbers = ReversificationData.getReferenceMappings()
-    //renumbers.forEach { m_BibleStructure.jswordMappings.add(Pair(it.key, Ref.clearS(it.value))) }
-    renumbers.forEach { res.add(Pair(it.key, it.value)) }
-
-    val psalmTitles = ReversificationData.getAllAcceptedRows().filter { 0 != it.processingFlags.and(ReversificationData.C_StandardIsPsalmTitle) }
-    psalmTitles.forEach { res.add(Pair(it.sourceRefAsRefKey, Ref.setV(it.standardRefAsRefKey, 0))) }
-
-    res.sortBy { it.first }
-    //res.forEach { Dbg.d("" + it.first + "=" + it.second)}
-    return res
-  }
 
 
   /****************************************************************************/
-  /* This method has changed a lot over time.  In this latest incarnation:
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Public                                  **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
 
-     - It is always appropriate for the method to add a footnote, except
-       a) If the reversification data indicates IfAbsent (this requires
-       the verse to be created ex nihilo, and it gets the necessary footnote
-       as part of that processing); or b) The data indicates IfEmpty and the
-       verse is _not_ empty.
+  /****************************************************************************/
+  /* $$$ Do I always add the footnote if one is available, or do I need to take
+     Nec / Acd / Opt into account?
 
-     - Except also that it gets the footnote only if the footnote level
-       requires it.
+     The reversification data defines various actions which must be applied
+     to the text if we are actually restructuring it.  In this present class,
+     we are _not_ restructuring -- we are merely adding footnotes.
 
-     - It gets a plain vanilla callout marker (previously we were doing
-       something clever to insert a related verse number as part of the
-       canonical text).
-  */
+     We are applying footnotes to _source_ verses, and the reversification
+     data will have been filtered so that rows will have been selected only
+     if their source verses exist.  There is therefore never any need to create
+     verses here. */
 
   private fun addFootnote (sidNode: Node, row: ReversificationDataRow)
   {
-    /**************************************************************************/
-    val action = row.action.lowercase()
-    if ("ifabsent" == action)
-      return
-
-
-
-    /**************************************************************************/
-    if ("ifempty" == row.action && !verseIsEmpty(sidNode))
-      return
-
-
-
-    /**************************************************************************/
-    val calloutDetails = row.calloutDetails
-    val document = sidNode.ownerDocument
-
-
-
     /**************************************************************************/
     /* This is the 'pukka' callout -- ie the piece of text which you click on in
        order to reveal the footnote.  Originally it was expected to be taken
@@ -182,54 +136,19 @@ object TextConverterProcessorReversificationAnnotateOnly
        callout text we request.  I therefore need to generate a down-arrow here,
        which is what the callout generator gives me. */
 
-     val callout: String = m_FootnoteCalloutGenerator.get()
+     val callout = m_FootnoteCalloutGenerator.get()
 
 
 
     /**************************************************************************/
-    /* Insert the footnote itself. */
+    /* I have been asked to force certain footnotes to the start of the owning
+       verse, even if their natural position would be later.  I flag such notes
+       here with a special attribute and then move them later. */
 
-    var footnoteText = makeFootnoteText(row)
-     val noteNode = MiscellaneousUtils.makeFootnote(document, row.standardRefAsRefKey, footnoteText, callout)
-//    res.appendChild(noteNode)
-//    res.appendChild(Dom.createTextNode(document, " "))
-
-
-
-    /**************************************************************************/
-    /* Bit of rather yucky special case processing.  I have been asked to
-       force certain footnotes to the start of the owning verse, even if their
-       natural position would be later.  I flag such notes here with a special
-       attribute and then move them later. */
-
-    if (row.isInNoTestsSection)
+    val footnoteText = makeFootnoteText(row) ?: return
+    val noteNode = MiscellaneousUtils.makeFootnote(sidNode.ownerDocument, row.standardRefAsRefKey, footnoteText, callout)
+    if ("AllBibles" == row.action)
       Dom.setAttribute(noteNode, "_TEMP_moveNoteToStartOfVerse", "y")
-
-
-
-//    /**************************************************************************/
-//    /* Check if we need the text which will typically be superscripted and
-//       bracketed. */
-//
-//    val alternativeRefCollection = calloutDetails.alternativeRefCollection
-//    if (null != alternativeRefCollection)
-//    {
-//      val basicContent = if (calloutDetails.alternativeRefCollectionHasEmbeddedPlusSign)
-//          alternativeRefCollection.getLowAsRef().toString("a") + Translations.stringFormatWithLookup("V_reversification_alternativeReferenceEmbeddedPlusSign") + alternativeRefCollection.getHighAsRef().toString("a")
-//        else if (calloutDetails.alternativeRefCollectionHasPrefixPlusSign)
-//          Translations.stringFormatWithLookup("V_reversification_alternativeReferencePrefixPlusSign") + alternativeRefCollection.toString("a")
-//        else
-//          alternativeRefCollection.toString("a")
-//
-//      val textNode = Dom.createTextNode(document, Translations.stringFormatWithLookup("V_reversification_alternativeReferenceFormat", basicContent))
-//      val containerNode = Dom.createNode(document, "<_X_reversificationCalloutAlternativeRefCollection/>")
-//      containerNode.appendChild(textNode)
-//      res.appendChild(containerNode)
-//    }
-
-
-
-    /**************************************************************************/
     Dom.insertNodeAfter(sidNode, noteNode)
   }
 
@@ -238,23 +157,14 @@ object TextConverterProcessorReversificationAnnotateOnly
   /* Runs over all reversification rows for this book and adds footnotes as
      necessary. */
 
-  private fun addFootnotes (document: Document, bookName: String)
+  private fun addFootnotes (document: Document, bookName: String): Boolean
   {
-    val reversificationRows = m_FootnoteReversificationRows!![BibleBookNamesUsx.nameToNumber(bookName)] ?: return
+    initialise()
+    var res = false
+    val reversificationRows = m_FootnoteReversificationRows!![BibleBookNamesUsx.nameToNumber(bookName)] ?: return false
     val sidNodes = Dom.findNodesByName(document, "_X_verse").filter { "sid" in it }. associateBy { Ref.rdUsx(it["sid"]!!).toRefKey() }
-    reversificationRows.filter { it.sourceRefAsRefKey in sidNodes } .forEach { addFootnote(sidNodes[it.sourceRefAsRefKey]!!, it) }
-  }
-
-
-  /****************************************************************************/
-  private fun addMissingVerses (document: Document, bookName: String)
-  {
-    val reversificationRows = m_IfAbsentReversificationRows[BibleBookNamesUsx.nameToNumber(bookName)] ?: return
-    val sidRefKeys = Dom.findNodesByName(document, "_X_verse") .filter { "sid" in it } .map { Ref.rdUsx(it["sid"]!!).toRefKey() } .toSet()
-    reversificationRows.filterNot { it.sourceRefAsRefKey in sidRefKeys } .forEach {
-      val footnoteText = if (m_ReversificationNotesLevel >= it.footnoteLevel) makeFootnoteText(it) else null
-      EmptyVerseHandler.createEmptyVerseForMissingVerse(document, it.sourceRefAsRefKey, footnoteText, "addedByReversification")
-    }
+    reversificationRows.filter { it.sourceRefAsRefKey in sidNodes } .forEach { res = true; addFootnote(sidNodes[it.sourceRefAsRefKey]!!, it) }
+    return res
   }
 
 
@@ -278,48 +188,31 @@ object TextConverterProcessorReversificationAnnotateOnly
   {
     if (null != m_FootnoteReversificationRows) return // Already initialised.
 
+    BibleStructure.UsxUnderConstructionInstance().clear() // Force USX structure to be re-evaluated, including obtaining word counts.
+    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, collection = "enhanced/reversificationAnnotate", true)
+
     getReversificationNotesLevel() // Determine what kind of footnotes are required on this run.
     m_FootnoteCalloutGenerator = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!)
-    ReversificationData.process() // Read the reversification data.
+    //ReversificationData.process() // Read the reversification data.
 
     val allReversificationRows = ReversificationData.getAllAcceptedRows()
     m_AllReversificationRows = allReversificationRows.groupBy { Ref.getB(it.sourceRefAsRefKey) }
-    m_FootnoteReversificationRows = allReversificationRows.filter { wantFootnote(it) } .groupBy { Ref.getB(it.sourceRefAsRefKey) }
+    m_FootnoteReversificationRows = allReversificationRows
+      .filter { ReversificationData.wantFootnote(it, 'R', if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A') }
+      .groupBy { Ref.getB(it.sourceRefAsRefKey) }
     m_IfAbsentReversificationRows = allReversificationRows.filter { "IfAbsent" == it.action} .groupBy { Ref.getB(it.sourceRefAsRefKey) }
   }
 
 
   /****************************************************************************/
-  private fun makeFootnoteText (row: ReversificationDataRow): String
+  private fun makeFootnoteText (row: ReversificationDataRow): String?
   {
-    var text  = ReversificationData.getFootnoteB(row)
+    var text  = ReversificationData.getFootnoteVersification(row)
+    if (text.isEmpty()) return null
     text = text.replace("S3y", "S3Y") // DIB prefers this.
     val ancientVersions = if (m_ReversificationNotesLevel > C_ReversificationNotesLevel_Basic) ReversificationData.getAncientVersions(row) else null
     if (null != ancientVersions) text += " $ancientVersions"
     return text
-  }
-
-
-  /****************************************************************************/
-  private fun verseIsEmpty (sidNode: Node): Boolean
-  {
-    if (sidNode.ownerDocument !== m_DocumentForWhichWeHaveEmptyVerses)
-    {
-      m_DocumentForWhichWeHaveEmptyVerses = sidNode.ownerDocument
-      m_EmptyVersesForGivenDocument = EmptyVerseHandler.getEmptyVerses(m_DocumentForWhichWeHaveEmptyVerses!!)
-    }
-
-    return sidNode in m_EmptyVersesForGivenDocument
-  }
-
-
-  /****************************************************************************/
-  /* Determines whether or not we want a footnote for this reversification data
-     row. */
-
-  private fun wantFootnote (row: ReversificationDataRow): Boolean
-  {
-    return row.footnoteLevel <= m_ReversificationNotesLevel
   }
 
 

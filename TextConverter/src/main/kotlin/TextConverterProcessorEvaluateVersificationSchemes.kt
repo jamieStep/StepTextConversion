@@ -82,12 +82,9 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
   fun evaluateSingleScheme (schemeName: String): Evaluation?
   {
-    if (!BibleStructure.UsxUnderConstructionInstance().alreadyPopulated())
-      BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, wantWordCount = false)
     val bookNumbersInRawUsx = BibleBookAndFileMapperRawUsx.getBookNumbersInOrder()
     return evaluateScheme(schemeName, bookNumbersInRawUsx)
   }
-
 
 
 
@@ -118,7 +115,8 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
   private fun doIt ()
   {
     Dbg.reportProgress("  Evaluating versification schemes")
-    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, wantWordCount = false)
+    m_Evaluations.clear() // Just in case we've already evaluated a scheme, perhaps to see if the text needs reversifying.  Avoids duplicating the output.
+    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, "raw", wantWordCount = false)
     val bookNumbersInRawUsx = BibleBookAndFileMapperRawUsx.getBookNumbersInOrder()
     BibleStructuresSupportedByOsis2mod.getSchemes().forEach { evaluateScheme(it, bookNumbersInRawUsx) }
     val details = investigateResults()
@@ -153,6 +151,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
   {
     /**************************************************************************/
     //Dbg.dCont(scheme, "nrsv")
+    //Dbg.dCont(scheme, "kjv")
 
 
 
@@ -201,7 +200,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
          val comparisonDetails = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), bibleStructureOther)
          versesMissingInOsis2modScheme += comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.size
          versesInExcessInOsis2modScheme += comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.size
-         //Dbg.d(comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.joinToString(prefix = "Bad: ", separator = ", "){ Ref.rd(it).toString() })
+         // if (comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.isNotEmpty()) Dbg.d(comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.joinToString(prefix = "Bad: ", separator = ", "){ Ref.rd(it).toString() })
          //Dbg.d(comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.joinToString(prefix = "Ok: ", separator = ", "){ Ref.rd(it).toString() })
        }
      }

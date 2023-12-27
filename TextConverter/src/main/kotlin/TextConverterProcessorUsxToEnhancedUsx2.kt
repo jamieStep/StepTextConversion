@@ -67,7 +67,7 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase
   /****************************************************************************/
   override fun process (): Boolean
   {
-    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, wantWordCount = false) // Make sure we have up-to-date structural information.
+    //BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, "enhanced", wantWordCount = true) // Make sure we have up-to-date structural information.
     BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::processFile)
     Osis2ModInterface.instance().createSupportingData()
     return true
@@ -128,8 +128,9 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase
     changed = changed or generateContentForEmptyVersesMain(document)
     changed = changed or forceVersePerLineIfNecessaryMain(document)
     changed = changed or generateFootnotesForElisionMastersMain(document)
-    changed = changed or tidyUpMain(document)
     changed = changed or cosmeticChangesMain(document)
+    changed = changed or TextConverterProcessorReversificationAnnotateOnly.process(document, bookName)
+    changed = changed or tidyUpMain(document)
 
     TextConverterVersificationHealthCheck.checkBook(document)
 

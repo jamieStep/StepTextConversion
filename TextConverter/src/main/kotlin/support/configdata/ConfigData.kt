@@ -443,6 +443,7 @@ object ConfigData
         val lines = getConfigLines(configFilePath, callingFilePath, okIfNotExists)
         for (x in lines)
         {
+          //Dbg.d(x)
           val line = x.trim().replace("@home", System.getProperty("user.home"))
           if (processConfigLine(line, configFilePath, callingFilePath, )) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
           throw StepException("Couldn't process config line: $line")
@@ -2131,7 +2132,7 @@ object ConfigData
   {
     var schemeName = getInternal("stepVersificationScheme", false)!!.lowercase()
     if (schemeName.startsWith("nrsv") || schemeName.startsWith("kjv"))
-      schemeName = schemeName.replace("a", "") + if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.targetsDc()) "a" else ""
+      schemeName = schemeName.replace("a", "") + if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.reversificationTargetsDc()) "a" else ""
     return if ("step" == get("stepOsis2modType")) schemeName else canonicaliseSchemeName(schemeName)
   }
 

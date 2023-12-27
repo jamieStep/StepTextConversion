@@ -4,7 +4,6 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
-import org.stepbible.textconverter.support.debug.Dbg
 import java.io.File
 import java.nio.file.Paths
 import java.util.*
@@ -87,7 +86,7 @@ open class TestController: TextConverterProcessorBase // Base class serves to su
   /****************************************************************************/
   override fun getCommandLineOptions(commandLineProcessor: CommandLineProcessor)
   {
-    commandLineProcessor.addCommandLineOption("runType", 1, "Type of run.", getTestTypes(), "EvalOnly", false)
+    commandLineProcessor.addCommandLineOption("runType", 1, "Type of run.", getTestTypes(), "EvaluationOnly", false)
   }
 
 
@@ -169,10 +168,10 @@ open class TestController: TextConverterProcessorBase // Base class serves to su
 
     private val m_Options = TreeMap<String, TestController>(String.CASE_INSENSITIVE_ORDER)
      .apply {
-        put("Release", TestControllerRelease)   // Always retain this entry.
-        put("MajorRelease", TestControllerRelease)   // Always retain this entry.
-        put("MinorRelease", TestControllerRelease)   // Always retain this entry.
-        put("EvalOnly", TestControllerEvalOnly) // Always retain this entry.
+        put("Release", TestControllerRelease)         // Always retain this entry.
+        put("MajorRelease", TestControllerRelease)    // Always retain this entry.
+        put("MinorRelease", TestControllerRelease)    // Always retain this entry.
+        put("EvaluationOnly", TestControllerEvaluationOnly) // Always retain this entry.
         put("Sami",TestControllerSami)
         put("CrosswireRelaxed", TestControllerCrosswireRelaxed)
     }
@@ -196,7 +195,7 @@ open class TestController: TextConverterProcessorBase // Base class serves to su
 /******************************************************************************/
 object TestControllerForceErrorsToBeReported : TestController()            // Dummy used to ensure errors are reported while processing command line.
 object TestControllerRelease                 : TestController()            // Release run.
-object TestControllerEvalOnly                : TestController()            // Module evaluation only.
+object TestControllerEvaluationOnly          : TestController()            // Module evaluation only.
 object TestControllerSami                    : TestControllerSavingFiles() // Version for testing Sami's software.
 
 

@@ -418,7 +418,7 @@ object PreprocessorHandler
     }
 
     command.add("\"${StandardFileLocations.getPreprocessedUsxFolderPath()}\"")
-    command.add("\"${StandardFileLocations.getRawInputFolderPath()}\"")
+    command.add("\"${StandardFileLocations.getRawUsxFolderPath()}\"")
     command.add("\"$bookDetails\"")
     runCommand("  Preprocessing: ", command)
 
