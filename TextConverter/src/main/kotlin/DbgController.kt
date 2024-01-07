@@ -1,7 +1,6 @@
 package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
 
 
 /******************************************************************************/
@@ -15,7 +14,7 @@ import org.stepbible.textconverter.support.configdata.StandardFileLocations
  * @author ARA "Jamie" Jamieson
 */
 
-object DbgController: TextConverterProcessorBase
+object DbgController: TextConverterProcessor
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -26,10 +25,9 @@ object DbgController: TextConverterProcessorBase
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun banner (): String { return "" }
-  override fun pre (): Boolean { deleteFile(Pair(StandardFileLocations.getDebugOutputFilePath(), null)); return true }
-  override fun process (): Boolean { return true }
-  override fun runMe (): Boolean { return true }
+  override fun banner () = ""
+  override fun prepare () {}
+  override fun process ()  {}
 
 
   /****************************************************************************/

@@ -2,6 +2,7 @@
 package org.stepbible.textconverter.support.configdata
 
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
+import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.File
 import java.io.FileInputStream
 import java.nio.file.Paths
@@ -144,72 +145,130 @@ object StandardFileLocations
   /****************************************************************************/
   /* All the obvious things ... */
 
-  fun getConverterLogFilePath (): String { return m_ConverterLogFilePath }
-  fun getDebugOutputFilePath (): String { return Paths.get(m_RootFolderPath, "debugLog.txt").toString() }
-  fun getEncryptionDataRootFolder (): String { return Paths.get(getSwordRootFolderPath(), "step").toString() }
-  fun getEncryptionDataFolder (): String { return Paths.get(getEncryptionDataRootFolder(), "jsword-mods.d").toString() }
-  fun getEncryptionDataFilePath (moduleName: String): String { return Paths.get(getEncryptionDataFolder(), moduleName).toString() }
-  fun getEnhancedUsxFilePattern (): Regex { return ".*\\.usx".toRegex() }
-  fun getEnhancedUsxFolderPath (): String { return m_EnhancedUsxFolderPath }
-  fun getMetadataFolderPath (): String { return m_MetadataFolderPath }
-  fun getOsisFilePath (): String { val x = StepFileUtils.getMatchingFilesFromFolder(getOsisFolderPath(), "(?i).*\\.xml".toRegex()); return if (x.isNotEmpty()) x[0].toString() else Paths.get(getOsisFolderPath(), "osis.xml").toString() }
-  fun getOsisFolderPath (): String { return m_OsisFolderPath }
-  fun getOsisToModLogFilePath (): String { return m_OsisToModLogFilePath; }
-  fun getOsis2modVersificationDetailsFilePath (): String { return "\$common/osis2modVersification.txt" }
-  fun getPreprocessedUsxFolderPath (): String { return m_PreprocessedUsxFolderPath }
-  fun getRawUsxFolderPath (): String { return Paths.get(getRootFolderPath(), "RawUsx").toString() }
+  /****************************************************************************/
+  /* Root folder for text. */
+
+  fun getRootFolderName () = m_RootFolderName
+  fun getRootFolderPath () = m_RootFolderPath
+
+
+  /****************************************************************************/
+  /* Log files. */
+
+  fun getConverterLogFilePath () = Paths.get(m_RootFolderPath, "converterLog.txt").toString()
+  fun getOsisToModLogFilePath () = Paths.get(m_RootFolderPath, "osis2ModLog.txt").toString()
+  fun getDebugOutputFilePath () = Paths.get(m_RootFolderPath, "debugLog.txt").toString()
+
+
+  /****************************************************************************/
+  /* Metadata. */
+
+  fun getMetadataFolderPath () = Paths.get(m_RootFolderPath, "Metadata").toString()
+  fun getStepConfigFileName () = "step.conf"
+  fun getStepConfigFilePath () = Paths.get(getMetadataFolderPath(), getStepConfigFileName()).toString()
+
+
+  /****************************************************************************/
+  /* Input folders. */
+
+  fun getInputOsisFolderPath () = Paths.get(getRootFolderPath(), "InputOsis").toString()
+  fun getInputUsxFolderPath  () = Paths.get(getRootFolderPath(), "InputUsx" ).toString()
+  fun getInputVlFolderPath   () = Paths.get(getRootFolderPath(), "InputVl"  ).toString()
+
+  fun getInputOsisFilePath (): String?
+  {
+    if (!StepFileUtils.fileOrFolderExists(getInputOsisFolderPath())) return null
+    val res = StepFileUtils.getMatchingFilesFromFolder(getInputOsisFolderPath(), ".*\\.xml".toRegex())
+    if (res.isEmpty()) return null
+    if (1 != res.size) throw StepException("More than one OSIS file exists.")
+    return res[0].toString()
+  }
+
+  fun getInputUsxFilesExist (): Boolean
+  {
+    return if (!StepFileUtils.fileOrFolderExists(getInputVlFolderPath())) false else !StepFileUtils.folderIsEmpty(getInputVlFolderPath())
+  }
+
+  fun getInputVlFilePath (): String?
+  {
+    if (!StepFileUtils.fileOrFolderExists(getInputVlFolderPath())) return null
+    val res = StepFileUtils.getMatchingFilesFromFolder(getInputVlFolderPath(), ".*\\.txt".toRegex())
+    if (res.isEmpty()) return null
+    if (1 != res.size) throw StepException("More than one VL file exists.")
+    return res[0].toString()
+  }
+
+
+  /****************************************************************************/
+  /* Internal folders etc. */
+
+  fun getInternalUsxAFolderPath     () = Paths.get(getRootFolderPath(), "A_Usx" ).toString()
+  fun getInternalUsxBFolderPath     () = Paths.get(getRootFolderPath(), "B_Usx" ).toString()
+  fun getInternalOsisFolderPath     () = Paths.get(getRootFolderPath(), "C_Osis").toString()
+  fun getInternalSwordFolderPath    () = Paths.get(getRootFolderPath(), "D_Sword").toString()
+  fun getInternalTempOsisFolderPath () = Paths.get(getRootFolderPath(), "X_TempOsis").toString()
+  fun getInternalTempOsisFilePath   () = Paths.get(getInternalTempOsisFolderPath(), "tempOsis.xml").toString()
+
+  fun getDefaultInternalOsisFilePath () = Paths.get(getInternalOsisFolderPath(), "osis.xml").toString() // Used when creating a new file, when we haven't decided what to call it yet.
+  fun getInternalOsisFilePath (): String
+  {
+    val res = StepFileUtils.getMatchingFilesFromFolder(getInternalOsisFolderPath(), ".*\\.xml".toRegex())
+    if (res.isEmpty()) throw StepException("No OSIS file exists.")
+    if (1 != res.size) throw StepException("More than one OSIS file exists.")
+    return res[0].toString()
+  }
+
+
+  /****************************************************************************/
+  /* Sword structure and the stuff which resides in it. */
+
+  fun getEncryptionDataRootFolder ()= Paths.get(getInternalSwordFolderPath(), "step").toString()
+  fun getEncryptionDataFolder () = Paths.get(getEncryptionDataRootFolder(), "jsword-mods.d").toString()
+  fun getEncryptionDataFilePath (moduleName: String) = Paths.get(getEncryptionDataFolder(), moduleName).toString()
+  fun getSwordConfigFolderPath (): String = Paths.get(getInternalSwordFolderPath(), "mods.d").toString()
+  fun getSwordConfigFilePath (moduleName: String) = Paths.get(getSwordConfigFolderPath(), "$moduleName.conf").toString()
+  fun getSwordTemplateConfigFilePath () = "\$common/swordTemplateConfigFile.conf"
+  fun getSwordTextFolderPath (moduleName: String) = Paths.get(Paths.get(getInternalSwordFolderPath(), "modules").toString(), "texts", "ztext", moduleName).toString()
+  fun getSwordZipFilePath (moduleName: String) = Paths.get(getInternalSwordFolderPath (), "$moduleName.zip").toString()
+
+
+  /****************************************************************************/
+  /* Versification details. */
+
+  fun getVersificationFilePath () = Paths.get(getRootFolderPath(), "stepRawTextVersification.txt").toString()
+  private fun getVersificationStructureForBespokeOsis2ModFileName () = ConfigData["stepModuleName"]!! + ".json"
+  fun getVersificationStructureForBespokeOsis2ModFilePath () = Paths.get(getEncryptionDataRootFolder(), "versification", getVersificationStructureForBespokeOsis2ModFileName()).toString()
+
+
+  /****************************************************************************/
+  /* Text features. */
+
+  private fun getTextFeaturesFileName () = "textFeatures.json"
+  fun getTextFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), getTextFeaturesFileName()).toString()
+  fun getTextFeaturesFolderPath () = makeTextFeaturesFolderPath()
+
+
+  /****************************************************************************/
+  /* Miscellaneous. */
+
+  fun getOsis2modVersificationDetailsFilePath () = "\$common/osis2modVersification.txt"
   fun getRepositoryPackageFilePath (): String { return Paths.get(getRootFolderPath(), getRepositoryPackageFileName()).toString() }
-  fun getRootFolderName (): String { return m_RootFolderName }
-  fun getRootFolderPath (): String { return m_RootFolderPath }
-  fun getStepConfigFileName (): String { return "step.conf"; }
-  fun getStepConfigFilePath (): String { return Paths.get(getMetadataFolderPath(), getStepConfigFileName()).toString() }
-  fun getStrongsCorrectionsFilePath (): String { return "\$common/strongsCorrections.txt"}
-  fun getSwordConfigFolderPath (): String { return m_SwordConfigFolderPath }
-  fun getSwordConfigFilePath (moduleName: String): String { return Paths.get(m_SwordConfigFolderPath, "$moduleName.conf").toString() }
-  fun getSwordModuleFolderPath (): String { return m_SwordModuleFolderPath }
-  fun getSwordRootFolderPath (): String { return m_SwordRootFolderPath }
-  fun getSwordTemplateConfigFilePath (): String { return "\$common/swordTemplateConfigFile.conf"}
-  fun getSwordTextFolderPath (moduleName: String): String { return Paths.get(m_SwordModuleFolderPath, "texts", "ztext", moduleName).toString() }
-  fun getSwordZipFilePath (moduleName: String): String { return Paths.get(m_SwordRootFolderPath, "$moduleName.zip").toString() }
-  private fun getTextFeaturesFileName (): String { return m_TextFeaturesFileName }
-  fun getTextFeaturesFilePath (): String { return Paths.get(getTextFeaturesFolderPath(), getTextFeaturesFileName()).toString() }
-  fun getTextFeaturesFolderPath (): String { return makeTextFeaturesFolderPath() }
-  private fun getThirdPartySwordConfigFileName (): String { return "sword.conf"; }
-  fun getThirdPartySwordConfigFilePath (): String { return Paths.get(getMetadataFolderPath(), getThirdPartySwordConfigFileName()).toString() }
-  private fun getVernacularBibleStructureFileName (): String { return m_VernacularBibleStructureFileName }
-  fun getVernacularBibleStructureFilePath (): String { return Paths.get(getTextFeaturesFolderPath(), getVernacularBibleStructureFileName()).toString() }
-  fun getVersificationFilePath (): String { return Paths.get(getRootFolderPath(), "stepRawTextVersification.txt").toString() }
-  private fun getVersificationStructureForBespokeOsis2ModFileName (): String { return ConfigData["stepModuleName"]!! + ".json" }
-  fun getVersificationStructureForBespokeOsis2ModFilePath (): String { return Paths.get(getEncryptionDataRootFolder(), "versification", getVersificationStructureForBespokeOsis2ModFileName()).toString() }
+  fun getStrongsCorrectionsFilePath () = "\$common/strongsCorrections.txt"
+  private fun getThirdPartySwordConfigFileName () = "sword.conf"
+  fun getThirdPartySwordConfigFilePath () = Paths.get(getMetadataFolderPath(), getThirdPartySwordConfigFileName()).toString()
+  private fun getVernacularBibleStructureFileName () = "vernacularBibleStructure.json"
+  fun getVernacularBibleStructureFilePath () = Paths.get(getTextFeaturesFolderPath(), getVernacularBibleStructureFileName()).toString()
 
 
 
-  /****************************************************************************/
-  private fun getRepositoryPackageFileName (): String
-  {
-     return "forRepository_" +
-            ConfigData["stepLanguageCode3Char"]!! + "_" +
-            ConfigData["stepVernacularAbbreviation"]!! +
-            ConfigData["stepModuleNameAudienceRelatedSuffix"]!! +
-            ".zip"
-  }
+ /****************************************************************************/
+  private fun getRepositoryPackageFileName () =
+    "forRepository_" +
+    ConfigData["stepLanguageCode3Char"]!! + "_" +
+    ConfigData["stepVernacularAbbreviation"]!! +
+    ConfigData["stepModuleNameAudienceRelatedSuffix"]!! +
+    ".zip"
 
-
-  /****************************************************************************/
-  /**
-   * Returns a pattern-match string for raw USX files.
-   * 
-   * @param ubsBookAbbreviation If null, the result is a regex which will match
-   *   _any_ USX file.  Otherwise it will match the file for the specific
-   *   book.
-   *
-   * @return Pattern-match regex for raw USX files.
-   */
-  
-  fun getRawUsxFilePattern (ubsBookAbbreviation: String?): Regex
-  {
-    return if (null == ubsBookAbbreviation) "(?i).*\\.usx".toRegex() else "(?i).*$ubsBookAbbreviation.*\\.usx".toRegex()
-  }
 
 
   /****************************************************************************/
@@ -228,41 +287,14 @@ object StandardFileLocations
     
     m_RootFolderPath = (File(rootFolderPath)).canonicalPath
     m_RootFolderName = File(m_RootFolderPath).name
-
-
-
-    /**************************************************************************/
-    /* That's the end of the exciting bit. */
-
-    m_PreprocessedUsxFolderPath = Paths.get(m_RootFolderPath, "PreprocessedUsx").toString()
-
-    m_EnhancedUsxFolderPath = Paths.get(m_RootFolderPath, "EnhancedUsx").toString()
-    
-    m_OsisFolderPath = Paths.get(m_RootFolderPath, "Osis").toString()
-    
-    m_SwordRootFolderPath = Paths.get(m_RootFolderPath, "Sword").toString()
-    
-    m_SwordConfigFolderName = "mods.d"
-    m_SwordConfigFolderPath = Paths.get(m_SwordRootFolderPath, m_SwordConfigFolderName).toString()
-    
-    m_SwordModuleFolderName = "modules"
-    m_SwordModuleFolderPath = Paths.get(m_SwordRootFolderPath, m_SwordModuleFolderName).toString()
-    
-    m_ConverterLogFilePath = Paths.get(m_RootFolderPath, "converterLog.txt").toString()
-    m_OsisToModLogFilePath = Paths.get(m_RootFolderPath, "osis2ModLog.txt").toString()
-    
-    m_MetadataFolderPath = Paths.get(m_RootFolderPath, "Metadata").toString()
-    
-    m_TextFeaturesFileName = "textFeatures.json"
-    
-    m_VernacularBibleStructureFolderPath = Paths.get(m_SwordRootFolderPath, "textFeatures").toString()
-    m_VernacularBibleStructureFileName = "vernacularBibleStructure.json"
   }
 
-  private fun makeTextFeaturesFolderPath (): String // Have to do this late, because it relies on stepModuleName, and that's not finalised until late.
-  {
-    return Paths.get(m_SwordRootFolderPath, "textFeatures", ConfigData["stepModuleName"]).toString()
-  }
+
+  /****************************************************************************/
+  /* Have to do this late, because it relies on stepModuleName, and that's not
+     finalised until late. */
+
+  private fun makeTextFeaturesFolderPath () = Paths.get(getInternalSwordFolderPath(), "textFeatures", ConfigData["stepModuleName"]).toString()
 
 
  
@@ -277,20 +309,6 @@ object StandardFileLocations
   /****************************************************************************/
   
   /****************************************************************************/
-  private var m_ConverterLogFilePath = ""
-  private var m_EnhancedUsxFolderPath = ""
-  private var m_MetadataFolderPath = ""
-  private var m_OsisFolderPath = ""
-  private var m_OsisToModLogFilePath = ""
-  private var m_PreprocessedUsxFolderPath = ""
   private var m_RootFolderName = ""
   private var m_RootFolderPath = ""
-  private var m_SwordConfigFolderName = ""
-  private var m_SwordConfigFolderPath = ""
-  private var m_SwordModuleFolderName = ""
-  private var m_SwordModuleFolderPath = ""
-  private var m_SwordRootFolderPath = ""
-  private var m_TextFeaturesFileName = ""
-  private var m_VernacularBibleStructureFileName = ""
-  private var m_VernacularBibleStructureFolderPath = ""
 }

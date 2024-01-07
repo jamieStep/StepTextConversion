@@ -322,13 +322,15 @@ object MiscellaneousUtils
     * Reports the fact that a particular book is being processed.
     *
     * @param document The document being handled.
+    * @return Book name
     */
 
-    fun reportBookBeingProcessed (document: Document)
+    fun reportBookBeingProcessed (document: Document): String
     {
       val bookNode = Dom.findNodeByName(document, "_X_book") ?: Dom.findNodeByName(document, "book")!!
       val bookName = bookNode["code"]!!
       Dbg.reportProgress("Processing $bookName", 1)
+      return bookName
     }
 
 

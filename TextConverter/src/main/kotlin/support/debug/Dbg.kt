@@ -2,7 +2,7 @@
 package org.stepbible.textconverter.support.debug
 
 import org.stepbible.textconverter.ReversificationDataRow
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRawUsx
+import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperStandardUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
@@ -154,7 +154,7 @@ object Dbg
   
   fun wantToProcessBook (filePath: String): Boolean
   {
-    val bookNo = BibleBookAndFileMapperRawUsx.getBookNumberFromFile(filePath)
+    val bookNo = BibleBookAndFileMapperStandardUsx.getBookNumberFromFile(filePath)
     return if (-1 == bookNo) false else wantToProcessBook(bookNo)
   }
 

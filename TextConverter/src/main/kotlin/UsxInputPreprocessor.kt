@@ -1,13 +1,14 @@
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRawUsx
+import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperStandardUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Dbg
+import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.runCommand
+import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.Zip
 import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -15,7 +16,9 @@ import org.w3c.dom.Document
 import java.io.File
 import java.lang.reflect.Method
 import java.net.URLClassLoader
+import java.nio.file.Paths
 import kotlin.collections.ArrayList
+import kotlin.io.path.exists
 
 
 /******************************************************************************/
@@ -292,12 +295,33 @@ import kotlin.collections.ArrayList
  */
 
 
-object PreprocessorHandler
+object UsxInputPreprocessor
 {
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
   /**                               Public                                   **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  fun process ()
+  {
+    if (initialiseCallablePreprocessor())
+      BibleBookAndFileMapperStandardUsx.iterateOverSelectedFiles(::applyCallablePreprocessor)
+    else if (initialiseXsltStylesheets())
+      BibleBookAndFileMapperStandardUsx.iterateOverSelectedFiles(::applyXslt)
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                               Private                                  **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
@@ -313,19 +337,14 @@ object PreprocessorHandler
   * @return List of errors / warnings / informationals, or null
   */
 
-  fun applyCallablePreprocessor (doc: Document): List<String>?
+  private fun applyCallablePreprocessor (bookName: String, filePath: String)
   {
-    if (!m_CheckedExistenceOfCallablePreprocessor)
-      initialiseCallablePreprocessor()
-
-    if (null != m_MethodPreprocess)
-    {
-      val bookName = Dom.findNodeByName(doc, "book")!!["code"]!!
-      Dbg.reportProgress("  Preprocessing $bookName")
-      return m_MethodPreprocess!!.invoke(m_PreprocessorInstance!!, doc) as List<String>?
-    }
-
-    return null
+    val document = Dom.getDocument(filePath)
+    Dbg.reportProgress("  Preprocessing $bookName")
+    val messages = m_MethodPreprocess!!.invoke(m_PreprocessorInstance!!, document) as List<String>?
+    processMessages(messages)
+    val outFilePath = Paths.get(StandardFileLocations.getInternalUsxAFolderPath(), Paths.get(filePath).fileName.toString()).toString()
+    Dom.outputDomAsXml(document, outFilePath, null)
   }
 
 
@@ -334,21 +353,44 @@ object PreprocessorHandler
   * Applies any relevant XSLT stylesheet to a document to generate a
   * transformed document.
   *
+  * You call this method directly -- not via the raw input manager.
+  *
   * @param document Input document.
-  * @return Revised document.
   */
 
-  fun applyXslt (document: Document, bookAbbreviation: String = ""): Document
+  fun applyXslt (bookName: String, filePath: String)
   {
-    if (!m_CheckedExistenceOfXsltStylesheets)
-      initialiseXsltStylesheets()
+    val stylesheetContent = m_Stylesheets[bookName.lowercase()] ?: m_Stylesheets[""] ?: return
 
-    val stylesheetContent = m_Stylesheets[bookAbbreviation.lowercase()] ?: m_Stylesheets[""] ?: return document
+    val document = Dom.getDocument(filePath)
 
-    return if ("xsl:stylesheet" in stylesheetContent)
+    if ("xsl:stylesheet" in stylesheetContent)
       Dom.applyStylesheet(document, stylesheetContent)
     else
       Dom.applyBasicStylesheet(document, stylesheetContent)
+
+    val outFilePath = Paths.get(StandardFileLocations.getInternalUsxAFolderPath(), Paths.get(filePath).fileName.toString()).toString()
+    Dom.outputDomAsXml(document, outFilePath, null)
+  }
+
+
+
+
+  /****************************************************************************/
+  private fun processMessages (messages: List<String>?)
+  {
+    if (null == messages) return
+
+    messages.forEach {
+      val ix = it.indexOf(':')
+      val text = it.substring(ix + 2)
+      when (it.substring(0, ix))
+      {
+        "ERROR"       -> Logger.error(text)
+        "WARNING"     -> Logger.warning(text)
+        "INFORMATION" -> Logger.info(text)
+      }
+    }
   }
 
 
@@ -360,7 +402,7 @@ object PreprocessorHandler
   * @return True if anything was done.
   */
 
-  fun runPreprocessor (): Boolean
+  private fun runPreprocessor (): Boolean
   {
     /**************************************************************************/
     val preprocessorPrefix = ConfigData["stepRunnablePreprocessorCommandPrefix"] ?: ""
@@ -368,6 +410,15 @@ object PreprocessorHandler
     if (preprocessorFilePath.isEmpty()) return false
     preprocessorFilePath = StandardFileLocations.getInputPath(preprocessorFilePath, null) // Expand out things like $root etc.
 
+
+
+   /**************************************************************************/
+   if (!Paths.get(StandardFileLocations.getInternalUsxAFolderPath()).exists())
+     StepFileUtils.createFolderStructure(StandardFileLocations.getInternalUsxAFolderPath())
+
+
+
+   /**************************************************************************/
     val command: MutableList<String> = ArrayList()
     if (preprocessorPrefix.isNotEmpty())
       command.add(preprocessorPrefix.trim())
@@ -401,7 +452,7 @@ object PreprocessorHandler
     /**************************************************************************/
     /* Sort out the list of books / files to be handled */
 
-    val allAvailableBooks = BibleBookAndFileMapperRawUsx.getBookNumbersInOrder()
+    val allAvailableBooks = BibleBookAndFileMapperStandardUsx.getBookNumbersInOrder()
 
     val bookNumbersToBeProcessed =
       if (Dbg.getBooksToBeProcessed().isEmpty())
@@ -412,17 +463,16 @@ object PreprocessorHandler
         allAvailableBooks.toSet().intersect(booksSelectedForDebug)
       }
 
-    val bookDetails = bookNumbersToBeProcessed.sorted().joinToString("||"){
+    val bookDetails = bookNumbersToBeProcessed.sorted().joinToString("||") {
       val x = BibleBookNamesUsx.numberToAbbreviatedName(it).lowercase()
-      x + "::" + File(BibleBookAndFileMapperRawUsx.getFilePathForBook(x)!!).name
+      x + "::" + File(BibleBookAndFileMapperStandardUsx.getFilePathForBook(x)!!).name
     }
 
-    command.add("\"${StandardFileLocations.getPreprocessedUsxFolderPath()}\"")
-    command.add("\"${StandardFileLocations.getRawUsxFolderPath()}\"")
+    command.add("\"${StandardFileLocations.getInternalUsxAFolderPath()}\"")
+    command.add("\"${StandardFileLocations.getInputUsxFolderPath()}\"")
     command.add("\"$bookDetails\"")
     runCommand("  Preprocessing: ", command)
 
-    BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx // Force the mapper to be initialised.
     return true
   }
 
@@ -462,8 +512,6 @@ object PreprocessorHandler
   /****************************************************************************/
 
   /****************************************************************************/
-  private var m_CheckedExistenceOfCallablePreprocessor = false
-  private var m_CheckedExistenceOfXsltStylesheets = false
   private var m_MethodGetTextForValidation: Method? = null
   private var m_MethodPreprocess: Method? = null
   private var m_PreprocessorInstance: Any? = null
@@ -471,12 +519,11 @@ object PreprocessorHandler
 
 
   /****************************************************************************/
-  private fun initialiseCallablePreprocessor ()
+  private fun initialiseCallablePreprocessor (): Boolean
   {
     /**************************************************************************/
-    m_CheckedExistenceOfCallablePreprocessor = true
-    var jarPath = ConfigData["stepCallablePreprocessorFilePath"] ?: return
-    if (jarPath.isEmpty()) return
+    var jarPath = ConfigData["stepCallablePreprocessorFilePath"] ?: return false
+    if (jarPath.isEmpty()) return false
     jarPath = StandardFileLocations.getInputPath(jarPath, null)
 
 
@@ -496,6 +543,7 @@ object PreprocessorHandler
       val classToLoad = Class.forName("org.stepbible.preprocessor.Preprocessor", true, classLoader)
       m_MethodPreprocess = classToLoad.getDeclaredMethod("preprocess", Document::class.java)
       try { m_MethodGetTextForValidation = classToLoad.getDeclaredMethod("getTextForValidation", String::class.java) } catch (_: Exception) {}
+      return true
     }
     catch (e: Exception)
     {
@@ -505,22 +553,25 @@ object PreprocessorHandler
 
 
   /****************************************************************************/
-  private fun initialiseXsltStylesheets ()
+  private fun initialiseXsltStylesheets (): Boolean
   {
-    /**************************************************************************/
-    m_CheckedExistenceOfXsltStylesheets = true
+    var res = false
     ConfigData.getKeys()
       .filter { it.lowercase().startsWith("stepxsltstylesheet") }
       .forEach {
         val value = ConfigData[it]
         if (!value.isNullOrBlank())
         {
+          res = true
+
           if ("_" in it)
             m_Stylesheets[it.split("_")[1].lowercase()] = value
           else
             m_Stylesheets[""] = value
         }
       }
+
+    return res
   }
 
   /****************************************************************************/

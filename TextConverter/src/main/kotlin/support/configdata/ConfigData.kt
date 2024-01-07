@@ -2,12 +2,9 @@
 package org.stepbible.textconverter.support.configdata
 
 
-import org.stepbible.textconverter.ReversificationData
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
-import org.stepbible.textconverter.support.bibledetails.BibleStructure
-import org.stepbible.textconverter.support.bibledetails.BibleStructuresSupportedByOsis2mod.canonicaliseSchemeName
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.iso.IsoLanguageCodes
@@ -2048,23 +2045,14 @@ object ConfigData
 
 
   /****************************************************************************/
-  /* The extended name.  This comprises the basic name as returned by
-     calc_stepModuleNameWithoutDisambiguation along with one or possibly two
-     suffixes.  All modules get a stepModuleNameAudienceRelatedSuffix, which
-     says whether the module can be used only within STEP, or may be made
-     publicly available.  And on non-release runs, we also have a suffix which
-     includes a time-stamp (stepModuleNameTestRelatedSuffix), so that it is
-     possible to keep multiple copies of the module lying around without them
-     overwriting one another. */
-
-  fun calc_stepModuleName (): String
+  fun calc_stepModuleCreationDate (): String
   {
-    return calc_stepModuleNameWithoutDisambiguation() + get("stepModuleNameTestRelatedSuffix") + get("stepModuleNameAudienceRelatedSuffix")
+    return SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date())
   }
 
 
   /****************************************************************************/
-  /* Returns the basic module name devoid of disambiguation suffix.
+  /* Returns the basic module name devoid of disambiguation suffix etc.
 
      Typically something like DeuHFA, comprising the three-character ISO
      language code (first letter upper case, rest lower case), followed by the
@@ -2082,7 +2070,7 @@ object ConfigData
      between an ancient text and a modern Hebrew translation.
  */
 
-  fun calc_stepModuleNameWithoutDisambiguation (): String
+  fun calc_stepModuleNameBase (): String
   {
     var moduleName = getInternal("stepLanguageCode3Char", false)!!.lowercase()
     moduleName = if (moduleName in listOf("eng", "grc", "hbo")) "" else (moduleName[0].uppercase() + moduleName.substring(1).lowercase())
@@ -2109,6 +2097,16 @@ object ConfigData
 
 
   /****************************************************************************/
+  /* We may well have a supplied value for this; if not, then this method will
+     supply a default. */
+
+  fun calc_stepTextModifiedDate (): String
+  {
+    return SimpleDateFormat("dd-MMM-yyyy").format(Date())
+  }
+
+
+  /****************************************************************************/
   /* The vernacular abbreviation will often be available from the metadata.
      However, we can't pick it up from there conveniently, because we may need
      it while processing the configuration data at a point before we've actually
@@ -2128,13 +2126,15 @@ object ConfigData
      not; and sorting out lower case / upper case issues (osis2mod is sensitive
      to case). */
 
-  fun calc_stepVersificationSchemeCanonical (): String
-  {
-    var schemeName = getInternal("stepVersificationScheme", false)!!.lowercase()
-    if (schemeName.startsWith("nrsv") || schemeName.startsWith("kjv"))
-      schemeName = schemeName.replace("a", "") + if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.reversificationTargetsDc()) "a" else ""
-    return if ("step" == get("stepOsis2modType")) schemeName else canonicaliseSchemeName(schemeName)
-  }
+//  fun calc_stepVersificationScheme (): String
+//  {
+//    var schemeNameRaw = getInternal("stepVersificationScheme", false)!!
+//    if ("step" == getInternal("stepOsis2modType", false)) return schemeNameRaw // Our own scheme used by Sami's software.
+//    schemeNameRaw = schemeNameRaw.lowercase()
+//    if (schemeNameRaw.startsWith("nrsv") || schemeNameRaw.startsWith("kjv"))
+//      schemeNameRaw = schemeNameRaw.replace("a", "") + if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.reversificationTargetsDc()) "a" else ""
+//    return canonicaliseSchemeName(schemeNameRaw)
+//  }
 
 
   /****************************************************************************/

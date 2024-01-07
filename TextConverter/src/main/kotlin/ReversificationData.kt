@@ -218,7 +218,7 @@ class ReversificationDataRow (rowNo: Int)
   lateinit var calloutDetails: CalloutDetails
            var footnoteLevel = -1
            var processingFlags = 0
-   private val rowNumber: Int
+           val rowNumber: Int // Publicly accessible only for debugging.
   lateinit var sourceRef: Ref
            var sourceRefAsRefKey = 0L
   lateinit var standardRef: Ref
@@ -461,7 +461,7 @@ object ReversificationData
 
   fun process ()
   {
-    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, "enhanced", wantWordCount = true) // Make sure we have up-to-date structural information.
+    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperStandardUsx, "enhanced", wantWordCount = true) // Make sure we have up-to-date structural information.
     initialise()
   }
 

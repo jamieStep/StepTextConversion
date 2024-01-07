@@ -64,7 +64,7 @@ object TextConverterVersificationHealthCheck
 
   fun checkAllBooks ()
   {
-    StepFileUtils.getMatchingFilesFromFolder(StandardFileLocations.getEnhancedUsxFolderPath(), StandardFileLocations.getEnhancedUsxFilePattern())
+    StepFileUtils.getMatchingFilesFromFolder(StandardFileLocations.getInternalUsxBFolderPath(), ".*\\.usx".toRegex())
       .forEach { checkBook(Dom.getDocument(it.toString())) }
   }
 
@@ -252,11 +252,10 @@ object TextConverterVersificationHealthCheck
     }
     else
     {
-      for (i in 1 .. BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationSchemeCanonical"]!!, true).getLastVerseNo(chapterSid))
+      for (i in 1 .. BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationScheme"]!!, true).getLastVerseNo(chapterSid))
         if (null == verseCollection[i])
           missings.add(i)
     }
-
 
 
 
@@ -299,7 +298,7 @@ object TextConverterVersificationHealthCheck
   private fun checkForMissingAndExcessVerses (document: Document)
   {
     /**************************************************************************/
-    val osis2modSchemeDetails = BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationSchemeCanonical"]!!, true)
+    val osis2modSchemeDetails = BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationScheme"]!!, true)
     val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.findNodeByName(document,"_X_book")!!["code"]!!)
     BibleStructure.UsxUnderConstructionInstance().populateFromDom(document, wantWordCount = false, collection = "enhanced/healthCheck", )
     val diffs = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), osis2modSchemeDetails)
@@ -310,13 +309,13 @@ object TextConverterVersificationHealthCheck
     if (diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.isNotEmpty())
       m_MissingElementReporter(null, "Text lacks chapter(s) which target versification scheme expects: ${diffs.chaptersInTargetSchemeButNotInTextUnderConstruction.joinToString(", ") { Ref.rd(it).toString() } }.")
 
-    if (diffs.chaptersInTextUnderConstructionButNotInTargetScheme.isNotEmpty())
+    if ("runtime" != ConfigData["stepForceReversificationType"]!!.lowercase() && diffs.chaptersInTextUnderConstructionButNotInTargetScheme.isNotEmpty())
       m_ExcessElementReporter(null, "Text contains chapter(s) which target versification scheme does not expect: ${diffs.chaptersInTextUnderConstructionButNotInTargetScheme.joinToString(", ") { Ref.rd(it).toString() } }.")
 
     //if (diffs.versesInTargetSchemeButNotInTextUnderConstruction.isNotEmpty()) // Reported later as a result of later checks.
     //  m_MissingElementReporter(null, "Text lacks verse(s) which target versification scheme expects: ${diffs.versesInTargetSchemeButNotInTextUnderConstruction.joinToString(", ") { Ref.rd(it).toString() } }.")
 
-    if (diffs.versesInTextUnderConstructionButNotInTargetScheme.isNotEmpty())
+    if ("runtime" != ConfigData["stepForceReversificationType"]!!.lowercase() && diffs.versesInTextUnderConstructionButNotInTargetScheme.isNotEmpty())
       m_ExcessElementReporter(null, "Text contains verse(s) which target versification scheme does not expect: ${diffs.versesInTextUnderConstructionButNotInTargetScheme.joinToString(", ") { Ref.rd(it).toString() } }.")
   }
 

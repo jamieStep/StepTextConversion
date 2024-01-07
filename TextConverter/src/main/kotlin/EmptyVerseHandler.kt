@@ -287,7 +287,7 @@ object EmptyVerseHandler
   {
     /**************************************************************************/
     var res = false
-    val osis2modStructure = BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationSchemeCanonical"]!!, true)
+    val osis2modStructure = BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationScheme"]!!, true)
     val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.findNodeByName(document,"_X_book")!!["code"]!!)
     BibleStructure.UsxUnderConstructionInstance().populateFromDom(document, wantWordCount = false, collection = "enhanced")
     val diffs = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), osis2modStructure)

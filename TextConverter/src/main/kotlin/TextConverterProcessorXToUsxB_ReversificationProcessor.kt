@@ -3,7 +3,6 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.bibledetails.BibleStructure
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Logger
@@ -103,56 +102,22 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorReversificationRemapVerses: TextConverterProcessorBase, ValueAddedSupplier()
+object TextConverterProcessorXToUsxB_ReversificationProcessor: ValueAddedSupplier()
 {
   /****************************************************************************/
-  override fun detailsForStepAbout(): List<String>
-  {
-    return listOf(Translations.stringFormatWithLookup("V_reversification_LongDescription_" + StepStringUtils.sentenceCaseFirstLetter(ConfigData["stepReversificationFootnotesLevel"]!!)))
-  }
+  override fun detailsForStepAbout(): List<String> = listOf(Translations.stringFormatWithLookup("V_reversification_LongDescription_" + StepStringUtils.sentenceCaseFirstLetter(ConfigData["stepReversificationFootnotesLevel"]!!)))
+  override fun detailsForSwordConfigFileComments(): List<String> = listOf(Translations.stringFormatWithLookup("V_AddedValue_Reversification"))
 
 
   /****************************************************************************/
-  override fun detailsForSwordConfigFileComments(): List<String>
-  {
-    return listOf(Translations.stringFormatWithLookup("V_AddedValue_Reversification"))
-  }
-
-
-  /****************************************************************************/
-  override fun banner (): String
-  {
-    return "Reversifying"
-  }
-
-
-  /****************************************************************************/
-  override fun pre (): Boolean
-  {
-      return true
-  }
-
-
-  /****************************************************************************/
-  override fun runMe (): Boolean
-  {
-      return "conversiontime" == ConfigData["stepReversificationType"]!!.lowercase()
-  }
-
-
-  /****************************************************************************/
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
-  {
-  }
-
-
-  /****************************************************************************/
-  override fun process (): Boolean
+  fun process ()
   {
     ValueAddedSupplier.register("ConversionTimeReversification", this)
-    control()
-    return true
+    doIt()
   }
+
+  /****************************************************************************/
+  fun runMe () = "conversiontime" == ConfigData["stepReversificationType"]!!.lowercase()
 
 
 
@@ -256,15 +221,16 @@ object TextConverterProcessorReversificationRemapVerses: TextConverterProcessorB
 
 
   /****************************************************************************/
-  private fun control ()
+  private fun doIt ()
   {
     initialise()
     ReversificationData.getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames()  .forEach { processMovePart1(it) }
-    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()                    .forEach { processNonMove(it, "renumber") }
+    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().forEach { processNonMove(it, "renumber") }
     ReversificationData.getStandardBooksInvolvedInReversificationMoveActionsAbbreviatedNames().forEach { processMovePart2(it) }
-    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()                    .forEach { processNonMove(it, "") }
+    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().forEach { processNonMove(it, "") }
     insertMoveOriginals()
-    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()                    .forEach { terminate(it) }
+    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().forEach { terminate(it) }
+    m_BookDetails.clear() // Free up memory.
   }
 
 
@@ -514,7 +480,7 @@ object TextConverterProcessorReversificationRemapVerses: TextConverterProcessorB
   private fun makeBook (bookAbbreviation: String): String
   {
     val bookName = bookAbbreviation.uppercase()
-    val filePath = Paths.get(StandardFileLocations.getEnhancedUsxFolderPath(), "generatedFile_$bookName.usx").toString()
+    val filePath = Paths.get(StandardFileLocations.getInternalUsxBFolderPath(), "generatedFile_$bookName.usx").toString()
     BibleBookAndFileMapperEnhancedUsx.addBookDetails(filePath, bookName)
     File(filePath).printWriter().use { out ->
       out.println("<?xml version='1.0' encoding='UTF-8'?>")

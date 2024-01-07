@@ -6,7 +6,7 @@ import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProce
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.ref.Ref
+import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.shared.SharedData
 import java.io.File
 
@@ -16,7 +16,7 @@ import java.io.File
 * fit.  Note that on a run which invokes this processing, nothing else is
 * done.
 *
-* This is organised as a descendant of [TextConverterProcessorBase], and
+* This is organised as a descendant of [TextConverterProcessor], and
 * indeed at one point it was used that way.  This is no longer the case,
 * however, because now one of its primary functions is to evaluate the
 * fit between the text and the osis2mod versification schemes in a run which
@@ -33,43 +33,14 @@ import java.io.File
 * @author ARA 'Jamie' Jamieson
 */
 
-object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcessorBase
+object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcessor
 {
   /****************************************************************************/
-  override fun banner (): String
-  {
-    return "Evaluating fit with versification schemes"
-  }
+  override fun banner () = "Evaluating fit with versification schemes"
+  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) = commandLineProcessor.addCommandLineOption("evaluateSchemesOnly", 0, "Evaluate alternative osis2mod versification schemes only.", null, null, false)
+  override fun prepare () = StepFileUtils.deleteFile(StandardFileLocations.getVersificationFilePath())
+  override fun process () = doIt()
 
-
-  /****************************************************************************/
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
-  {
-    commandLineProcessor.addCommandLineOption("evaluateSchemesOnly", 0, "Evaluate alternative osis2mod versification schemes only.", null, null, false)
-  }
-
-
-  /****************************************************************************/
-  override fun pre (): Boolean
-  {
-    deleteFile(Pair(StandardFileLocations.getVersificationFilePath(), null))
-    return true
-  }
-
-
-  /****************************************************************************/
-  override fun runMe (): Boolean
-  {
-    return true
-  }
-
-
-  /****************************************************************************/
-  override fun process (): Boolean
-  {
-    doIt()
-    return true
-  }
 
 
   /****************************************************************************/
@@ -82,7 +53,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
   fun evaluateSingleScheme (schemeName: String): Evaluation?
   {
-    val bookNumbersInRawUsx = BibleBookAndFileMapperRawUsx.getBookNumbersInOrder()
+    val bookNumbersInRawUsx = BibleBookAndFileMapperStandardUsx.getBookNumbersInOrder()
     return evaluateScheme(schemeName, bookNumbersInRawUsx)
   }
 
@@ -114,10 +85,9 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
   private fun doIt ()
   {
-    Dbg.reportProgress("  Evaluating versification schemes")
     m_Evaluations.clear() // Just in case we've already evaluated a scheme, perhaps to see if the text needs reversifying.  Avoids duplicating the output.
-    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperRawUsx, "raw", wantWordCount = false)
-    val bookNumbersInRawUsx = BibleBookAndFileMapperRawUsx.getBookNumbersInOrder()
+    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperStandardUsx, "raw", wantWordCount = false)
+    val bookNumbersInRawUsx = BibleBookAndFileMapperStandardUsx.getBookNumbersInOrder()
     BibleStructuresSupportedByOsis2mod.getSchemes().forEach { evaluateScheme(it, bookNumbersInRawUsx) }
     val details = investigateResults()
     outputDetails(details)

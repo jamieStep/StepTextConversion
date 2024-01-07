@@ -9,7 +9,6 @@ import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.Translations
 import org.stepbible.textconverter.support.ref.RefKey
-import org.stepbible.textconverter.support.shared.SharedData
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
@@ -42,7 +41,7 @@ import java.util.*
  * @author ARA Jamieson
  */
 
-object TextConverterTaggingHandler: TextConverterProcessorBase, ValueAddedSupplier()
+object TextConverterTaggingHandler: TextConverterProcessor, ValueAddedSupplier()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -77,46 +76,20 @@ object TextConverterTaggingHandler: TextConverterProcessorBase, ValueAddedSuppli
 
   override fun detailsForSwordConfigFileComments (): List<String>?
   {
-    if (!runMe()) return null
     val text = "StepAdminRevisedStrongsTagging: " + (if (m_StrongsCorrectionsApplied) "Yes" else "Not required")
     return listOf(text)
   }
 
 
   /****************************************************************************/
-  override fun banner (): String
+  override fun banner () = "Tagging OSIS"
+  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
+  override fun prepare () {}
+  override fun process ()
   {
-    return "Tagging OSIS"
-  }
-
-
-  /****************************************************************************/
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
-  {
-  }
-
-
-  /****************************************************************************/
-  override fun pre (): Boolean
-  {
-    return true
-  }
-
-
-  /****************************************************************************/
-  override fun runMe (): Boolean
-  {
-    return SharedData.SpecialFeatures.hasStrongs() // This assumes that the only change we are making is to update Strong's.
-  }
-
-
-
-  /****************************************************************************/
-  override fun process (): Boolean
-  {
+    return
     ValueAddedSupplier.register("ExtendedTagging", this)
     handleStrongsCorrections()
-    return true
 
 
 //    describeDataFiles()
@@ -165,12 +138,12 @@ object TextConverterTaggingHandler: TextConverterProcessorBase, ValueAddedSuppli
     fun handleStrongsCorrections ()
     {
       readStrongsCorrectionFile()
-      val doc = Dom.getDocument(StandardFileLocations.getOsisFilePath())
+      val doc = Dom.getDocument(StandardFileLocations.getInternalOsisFilePath())
       val strongsNodes = Dom.findNodesByAttributeName(doc, "w", "lemma")
       if (strongsNodes.isEmpty()) return
       strongsNodes.forEach { handleStrongsCorrections(it) }
       if (m_StrongsCorrectionsApplied)
-        Dom.outputDomAsXml(doc, StandardFileLocations.getOsisFilePath(), null)
+        Dom.outputDomAsXml(doc, StandardFileLocations.getInternalOsisFilePath(), null)
 
       m_StrongsCorrections.clear() // No longer needed.
     }

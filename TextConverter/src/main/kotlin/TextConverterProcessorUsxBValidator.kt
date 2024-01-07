@@ -1,11 +1,10 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx
+import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperStandardUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.reportBookBeingProcessed
@@ -56,46 +55,13 @@ import org.w3c.dom.Node
 * @author ARA 'Jamie' Jamieson
 */
 
-object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
+object TextConverterProcessorUsxBValidator: TextConverterProcessor
 {
   /****************************************************************************/
-  override fun banner (): String
-  {
-    return "Validating"
-  }
-
-
-  /****************************************************************************/
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
-  {
-  }
-
-
-  /****************************************************************************/
-  override fun pre (): Boolean
-  {
-    return true
-  }
-
-
-  /****************************************************************************/
-  /**
-  * This says whether or not to run the processing.  Given that the processing
-  * here compares enhacned
-*/
-  override fun runMe (): Boolean
-  {
-    return C_ConfigurationFlag_DoUsxFinalValidation && "vl" != TextConverterProcessorRawInputManager.getRawInputFolderType()
-  }
-
-
-  /****************************************************************************/
-  override fun process (): Boolean
-  {
-    if (runMe()) doIt()
-    return true
-  }
-
+  override fun banner () = "Validating"
+  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
+  override fun prepare () {}
+  override fun process () = doIt()
 
 
 
@@ -109,10 +75,11 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
   /****************************************************************************/
 
   /****************************************************************************/
-  /* Runs over all files in the EnhancedUsx folder, checking each one. */
+  /* Runs over all files in the UsxB folder, checking each one. */
 
   private fun doIt ()
   {
+    if (!C_ConfigurationFlag_DoUsxFinalValidation) return
     m_ImplicitReversificationRenumbers = ReversificationData.getImplicitRenumbers()
     m_ReversificationRowsForAllBooks = ReversificationData.getAllAcceptedRows()
     BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::checkBook)
@@ -145,7 +112,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
        processing having removed 'awkward' verses from the list of those still
        to be handled. */
 
-    if (TextConverterProcessorReversificationRemapVerses.runMe())
+    if (TextConverterProcessorXToUsxB_ReversificationProcessor.runMe())
     {
       checkReversifiedEverythingButCanonicalTitles(reversificationDetails)
       checkReversifiedCanonicalTitles(reversificationDetails)
@@ -597,7 +564,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
                             .replace("\u00a0", " ") // Unicode non-breaking space.
                             .replace("\\s+".toRegex(), " ").trim()
 
-    if (PreprocessorHandler.getTextForValidation(contentInput.replace("\\s+".toRegex(), "")) == contentEnhanced.replace("\\s+".toRegex(), "")) return
+    if (UsxInputPreprocessor.getTextForValidation(contentInput.replace("\\s+".toRegex(), "")) == contentEnhanced.replace("\\s+".toRegex(), "")) return
 
     val message = "Verse mismatch:<nl>  Enhanced = '$contentEnhanced'<nl>  Raw      = '$contentInput'<nl>"
     error(enhancedRefKey, message)
@@ -827,7 +794,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
   {
     fun getMappings (bookNumber: Int)
     {
-      val filePath = BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx.getFilePathForBook(bookNumber) ?: return
+      val filePath = BibleBookAndFileMapperStandardUsx.getFilePathForBook(bookNumber) ?: return
       Logger.suppressWarnings { // Warnings on the raw USX should already have been reported -- I think.
         val document = Dom.getDocument(filePath)
         m_RawBookAnatomies[bookNumber] = getBookAnatomy(document)
@@ -916,6 +883,7 @@ object TextConverterEnhancedUsxValidator: TextConverterProcessorBase
      has a fair number of knock-on effects, and since psalm title processing
      also goes through the affected methods and _may_ still require a map,
      I don't want to upset the apple cart too much. */
+
   private fun getReversificationDetails (enhancedBookNumber: Int): ReversificationDetails
   {
     val res = ReversificationDetails()

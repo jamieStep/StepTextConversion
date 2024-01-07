@@ -12,7 +12,7 @@ import org.stepbible.textconverter.support.miscellaneous.Zip
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterRepositoryPackageHandler: TextConverterProcessorBase
+object TextConverterProcessorRepositoryPackageHandler: TextConverterProcessor
  {
   /****************************************************************************/
   /****************************************************************************/
@@ -23,39 +23,10 @@ object TextConverterRepositoryPackageHandler: TextConverterProcessorBase
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun banner (): String
-  {
-    return "Generating package for repository"
-  }
-
-
-  /****************************************************************************/
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
-  {
-  }
-
-
-  /****************************************************************************/
-  override fun pre (): Boolean
-  {
-    //deleteFile(Pair(StandardFileLocations.getRepositoryPackageFilePath(), null))
-    return true
-  }
-
-
-  /****************************************************************************/
-  override fun runMe (): Boolean
-  {
-    return "release" == ConfigData["stepRunType"]!!.lowercase()
-  }
-
-
-  /****************************************************************************/
-  override fun process (): Boolean
-  {
-    createZip()
-    return true
-  }
+  override fun banner () = "Generating package for repository"
+  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
+  override fun prepare () {}
+  override fun process () = doIt()
 
 
 
@@ -70,13 +41,21 @@ object TextConverterRepositoryPackageHandler: TextConverterProcessorBase
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun createZip()
+  private fun doIt()
   {
+    if ("release" != ConfigData["stepRunType"]!!.lowercase()) return
+
+    val inputOsis = if (StandardFileLocations.getInputUsxFilesExist()) StandardFileLocations.getInputUsxFolderPath() else null
+    val inputUsx = if (null == StandardFileLocations.getInputVlFilePath()) null else StandardFileLocations.getInputVlFolderPath()
+    val inputVl  = if (null == StandardFileLocations.getInputVlFilePath()) null else StandardFileLocations.getInputVlFolderPath()
+
     val zipPath: String = StandardFileLocations.getRepositoryPackageFilePath()
     val inputs = mutableListOf(StandardFileLocations.getMetadataFolderPath(),
-                               TextConverterProcessorRawInputManager.getRawInputFolderPath(),
-                               StandardFileLocations.getOsisFilePath(),
-                               StandardFileLocations.getSwordZipFilePath(ConfigData["stepModuleName"]!!))
+                               inputOsis,
+                               inputUsx,
+                               inputVl,
+                               StandardFileLocations.getInternalOsisFilePath(),
+                               StandardFileLocations.getSwordZipFilePath(ConfigData["stepModuleName"]!!)).filterNotNull()
     Zip.createZipFile(zipPath, 9, null, inputs)
   }
 }

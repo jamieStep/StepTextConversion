@@ -3,16 +3,17 @@ package org.stepbible.textconverter
 import com.google.gson.GsonBuilder
 import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.w3c.dom.Document
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperRawUsx
+import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperStandardUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.getExtendedNodeName
+import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefCollection
 import org.stepbible.textconverter.support.ref.RefRange
+import org.stepbible.textconverter.support.stepexception.StepBreakOutOfProcessing
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.w3c.dom.Node
 import java.io.PrintWriter
@@ -45,7 +46,7 @@ import kotlin.collections.HashSet
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase
+object TextConverterFeatureSummaryGenerator: TextConverterProcessor
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -56,41 +57,20 @@ object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun banner (): String
-  {
-    return "Recording summary of text features"
-  }
+  override fun banner () = "Recording summary of text features"
+  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) = commandLineProcessor.addCommandLineOption("summariseTextFeaturesOnly", 0, "Generate summary of text features, but do not generate OSIS or module.", null, null, false)
+  override fun prepare () =   StepFileUtils.deleteFile(StandardFileLocations.getTextFeaturesFilePath())
 
-
-  /****************************************************************************/
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
-  {
-    commandLineProcessor.addCommandLineOption("summariseTextFeaturesOnly", 0, "Generate summary of text features, but do not generate OSIS or module.", null, null, false)
-  }
 
 
   /****************************************************************************/
-  override fun pre (): Boolean
-  {
-    deleteFile(Pair(StandardFileLocations.getTextFeaturesFilePath(), null))
-    return true
-  }
-
-
-  /****************************************************************************/
-  override fun runMe (): Boolean
-  {
-    return true
-  }
-
-
-  /****************************************************************************/
-  override fun process (): Boolean
+  override fun process ()
   {
     Files.createDirectories(Paths.get(StandardFileLocations.getTextFeaturesFolderPath()))
     outputBibleStructureToJson()
     outputTextFeaturesToJson()
-    return !ConfigData.getAsBoolean("summariseTextFeaturesOnly", "no") // Prevent further processing from running.
+    if (ConfigData.getAsBoolean("summariseTextFeaturesOnly", "no")) // Prevent further processing from running.
+      throw StepBreakOutOfProcessing("summariseTextFeaturesOnly")
   }
 
 
@@ -235,14 +215,14 @@ object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase
   private fun populateBibleStructure ()
   {
     m_BibleStructure.ModuleName = ConfigData["stepModuleName"]!!
-    m_BibleStructure.RawTextBooksOt = BibleBookAndFileMapperRawUsx.getBooksOt()
-    m_BibleStructure.RawTextBooksNt = BibleBookAndFileMapperRawUsx.getBooksNt()
-    m_BibleStructure.RawTextBooksDc = BibleBookAndFileMapperRawUsx.getBooksDc()
-    m_BibleStructure.RawTextHasOt = BibleBookAndFileMapperRawUsx.hasOt()
-    m_BibleStructure.RawTextHasNt = BibleBookAndFileMapperRawUsx.hasNt()
-    m_BibleStructure.RawTextHasDc = BibleBookAndFileMapperRawUsx.hasDc()
-    m_BibleStructure.RawTextHasFullOt = BibleBookAndFileMapperRawUsx.hasFullOt()
-    m_BibleStructure.RawTextHasFullNt = BibleBookAndFileMapperRawUsx.hasFullNt()
+    m_BibleStructure.RawTextBooksOt = BibleBookAndFileMapperStandardUsx.getBooksOt()
+    m_BibleStructure.RawTextBooksNt = BibleBookAndFileMapperStandardUsx.getBooksNt()
+    m_BibleStructure.RawTextBooksDc = BibleBookAndFileMapperStandardUsx.getBooksDc()
+    m_BibleStructure.RawTextHasOt = BibleBookAndFileMapperStandardUsx.hasOt()
+    m_BibleStructure.RawTextHasNt = BibleBookAndFileMapperStandardUsx.hasNt()
+    m_BibleStructure.RawTextHasDc = BibleBookAndFileMapperStandardUsx.hasDc()
+    m_BibleStructure.RawTextHasFullOt = BibleBookAndFileMapperStandardUsx.hasFullOt()
+    m_BibleStructure.RawTextHasFullNt = BibleBookAndFileMapperStandardUsx.hasFullNt()
 
      m_BibleStructure.EnhancedTextBooksOt = BibleBookAndFileMapperEnhancedUsx.getBooksOt()
      m_BibleStructure.EnhancedTextBooksNt = BibleBookAndFileMapperEnhancedUsx.getBooksNt()
@@ -449,9 +429,9 @@ object TextConverterFeatureSummaryGenerator: TextConverterProcessorBase
   {
     /**************************************************************************/
     m_TextFeatures.ModuleName = ConfigData["stepModuleName"]!!
-    m_TextFeatures.VersificationScheme = ConfigData["stepVersificationSchemeCanonical"]!!
+    m_TextFeatures.VersificationScheme = ConfigData["stepVersificationScheme"]!!
     m_TextFeatures.ReversificationType = ConfigData["stepReversificationType"]!!
-    BibleBookAndFileMapperRawUsx.iterateOverAllFiles(::populateTextFeatures)
+    BibleBookAndFileMapperStandardUsx.iterateOverAllFiles(::populateTextFeatures)
     m_TextFeatures.TagNamesInRawUsx = m_NodeNames.sorted()
 
 

@@ -1,9 +1,12 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
+import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperStandardUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -27,7 +30,7 @@ import kotlin.collections.HashMap
  * @author ARA "Jamie" Jamieson
  */
 
-class RawInputPreprocessor_vl: RawInputPreprocessor()
+object TextConverterProcessorInputVlToUsxA: TextConverterProcessor
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -38,23 +41,26 @@ class RawInputPreprocessor_vl: RawInputPreprocessor()
   /****************************************************************************/
 
   /****************************************************************************/
-  /* Checks the inputs, and then compares the timestamp on the input file with
-     the timestamp recorded in the name of a file in the RawUsx folder. */
-
-  override fun runMe (inputFolderPath: String): Boolean
-  {
-    val inputFiles = StepFileUtils.getMatchingFilesFromFolder(inputFolderPath, ".*".toRegex()).map { it.toString() }
-    if (inputFiles.isEmpty()) throw StepException("Raw input folder is empty.")
-    if (inputFiles.size > 1) throw StepException("More than one VL input file")
-    return !sameTimestamp(inputFiles[0], StandardFileLocations.getRawUsxFolderPath(),"usx")
-  }
-
+  override fun banner () = "Converting VL to USX"
+  override fun getCommandLineOptions(commandLineProcessor: CommandLineProcessor) {}
 
 
   /****************************************************************************/
-  override fun process (inputFolderPath: String)
+  override fun prepare ()
   {
-    doIt(StepFileUtils.getMatchingFilesFromFolder(inputFolderPath, ".*".toRegex()).map { it.toString() } [0])
+    StepFileUtils.deleteFolder(StandardFileLocations.getInternalUsxAFolderPath())
+    StepFileUtils.createFolderStructure(StandardFileLocations.getInternalUsxAFolderPath())
+  }
+
+
+  /****************************************************************************/
+  override fun process ()
+  {
+    val inFiles = StepFileUtils.getMatchingFilesFromFolder(StandardFileLocations.getInputVlFolderPath(), ".*\\.txt".toRegex()).map { it.toString() }
+    if (inFiles.isEmpty()) throw StepException("Expecting VL files, but none available.")
+    val outFolder = StandardFileLocations.getInternalUsxAFolderPath()
+    inFiles.forEach { doIt(outFolder, it) }
+    BibleBookAndFileMapperStandardUsx.repopulate()
   }
 
 
@@ -70,33 +76,34 @@ class RawInputPreprocessor_vl: RawInputPreprocessor()
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun doIt (inputFilePath: String)
+  private fun doIt (outFolder: String, inFilePath: String)
   {
     /**************************************************************************/
     val commentMarker = ConfigData["stepVlCommentMarker"] ?: "\u0001" // If no comment marker is defined, use a dummy value which we'll never actually encounter.
     val linePattern = ConfigData["stepVlLineFormat"]!!.toRegex()
     m_BookDescriptors = ConfigData.getBookDescriptors().associate { it.vernacularAbbreviation to it.ubsAbbreviation }
-    m_InputFileDateStamp = getFormattedDateStamp(inputFilePath)
 
 
 
     /**************************************************************************/
-    File(inputFilePath).useLines { lines ->
+    File(inFilePath).useLines { lines ->
       lines.map { it.trim() }
-           .filter { it.isNotEmpty() && !it.trim().startsWith(commentMarker) }
-           .map { ParsedLine(linePattern.matchEntire(it)!!, it,this) }
+           .filter { it.isNotEmpty() && !it.startsWith(commentMarker) }
+           .map { ParsedLine(linePattern.matchEntire(it)!!, it, this) }
            .groupBy { it.m_UbsBookNo }
-           .forEach { processBook(it.value) }
+           .forEach { processBook(outFolder, it.value) }
     }
   }
 
 
    /****************************************************************************/
-   private fun processBook (parsedLines: List<ParsedLine>)
+   private fun processBook (outFolder: String, parsedLines: List<ParsedLine>)
    {
      val bookName = parsedLines[0].m_UbsBookAbbreviation
 
-     File(Paths.get(StandardFileLocations.getRawUsxFolderPath(), makeUsxBookFileName(bookName, m_InputFileDateStamp, "usx")).toString()).printWriter().use { out ->
+     Dbg.reportProgress("  Creating ${bookName.uppercase()}")
+
+     File(Paths.get(outFolder, "$bookName.usx").toString()).printWriter().use { out ->
        Out.m_Out = out
        bookHeader(bookName)
        parsedLines.groupBy { Integer.parseInt(it.m_ChapterNo) }. forEach { processChapter(bookName, it.value) }
@@ -167,8 +174,9 @@ class RawInputPreprocessor_vl: RawInputPreprocessor()
 
 
     /**************************************************************************/
-    val sid = "$bookName $parsedLine.m_ChapterNo:$parsedLine.m_VerseNo"
+    val sid = "$bookName ${parsedLine.m_ChapterNo}:${parsedLine.m_VerseNo}"
     val prefixPara = if (0 == paraPos) "<para style='p'/>" else ""
+    //Dbg.d("      $prefixPara<verse sid=\"$sid\"/>$content<verse eid=\"$sid\"/>")
     Out.println("      $prefixPara<verse sid=\"$sid\"/>$content<verse eid=\"$sid\"/>")
   }
 
@@ -179,31 +187,31 @@ class RawInputPreprocessor_vl: RawInputPreprocessor()
     val dt = LocalDate.now()
     Out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
     Out.println("<!-- SourceFormat: VL.  Converted to USX by the STEP project: $dt -->")
-    Out.println("<_X_usx version=\"2.0\">")
+    Out.println("<usx version=\"2.0\">")
     Out.println("  <para style=\"ide\">UTF-8</para>")
-    Out.println("  <_X_book code=\"$bookName\">")
+    Out.println("  <book code=\"$bookName\"/>")
   }
 
 
   /****************************************************************************/
   private fun bookTrailer ()
   {
-    Out.println("  </_X_book>")
-    Out.println("</_X_usx>")
+//    Out.println("  </book>")
+    Out.println("</usx>")
   }
 
 
   /****************************************************************************/
   private fun chapterHeader (bookName: String, chapterNo: String)
   {
-    Out.println("\n\n\n    <_X_chapter sid=\"$bookName $chapterNo\">")
+    Out.println("\n\n\n    <chapter sid=\"$bookName $chapterNo\"/>")
   }
 
 
   /****************************************************************************/
   private fun chapterTrailer ()
   {
-    Out.println("    </_X_chapter>")
+    //Out.println("    </chapter>")
   }
 
 
@@ -243,7 +251,7 @@ class RawInputPreprocessor_vl: RawInputPreprocessor()
 
 
   /****************************************************************************/
-  private class ParsedLine (mc: MatchResult, rawLine: String, preprocessor: RawInputPreprocessor_vl)
+  private class ParsedLine (mc: MatchResult, rawLine: String, processor: TextConverterProcessorInputVlToUsxA)
   {
     val m_UbsBookAbbreviation: String
     val m_VernacularBookAbbreviation: String
@@ -255,11 +263,11 @@ class RawInputPreprocessor_vl: RawInputPreprocessor()
 
     init {
       m_RawLine = rawLine
-      m_ChapterNo = mc.groups["chapterNo"]!!.value
-      m_VerseNo = mc.groups["verseNo"]!!.value
+      m_ChapterNo = mc.groups["chapter"]!!.value
+      m_VerseNo = mc.groups["verse"]!!.value
       m_Text = mc.groups["text"]!!.value
       m_VernacularBookAbbreviation = mc.groups["bookAbbrev"]!!.value
-      m_UbsBookAbbreviation = preprocessor.m_BookDescriptors[m_VernacularBookAbbreviation] ?: m_VernacularBookAbbreviation
+      m_UbsBookAbbreviation = processor.m_BookDescriptors[m_VernacularBookAbbreviation] ?: m_VernacularBookAbbreviation
       m_UbsBookNo = BibleBookNamesUsx.abbreviatedNameToNumber(m_UbsBookAbbreviation)
     }
   }
@@ -289,6 +297,5 @@ class RawInputPreprocessor_vl: RawInputPreprocessor()
   private val C_Regex_FootnotePlaceHolder = Regex("<(N\\d+)>")
   private val C_Regex_QuoteInFootnote = Regex("(?i)Ͼ/quote\\|\\s*(.*?)/Ͽ")
   private lateinit var m_BookDescriptors: Map<String, String>
-  private lateinit var m_InputFileDateStamp: String
 }
 

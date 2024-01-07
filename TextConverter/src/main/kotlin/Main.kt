@@ -23,7 +23,7 @@ fun main (args: Array<String>)
   try
   {
     mainCommon(args)
-    val majorWarnings = GeneralEnvironmentHandler.getMajorWarningsAsBigCharacters()
+    val majorWarnings = TextConverterController.getMajorWarningsAsBigCharacters()
     if (majorWarnings.isNotEmpty())
     {
       print(majorWarnings)
@@ -52,7 +52,7 @@ fun main (args: Array<String>)
 /******************************************************************************/
 private fun mainCommon (args: Array<String>)
 {
-  TextConverterController().process(args)
+  TextConverterController.process(args)
   TestController.instance().terminate()
   Logger.summariseResults()
 }

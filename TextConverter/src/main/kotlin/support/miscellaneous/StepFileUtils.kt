@@ -3,11 +3,11 @@ package org.stepbible.textconverter.support.miscellaneous
 
 import org.apache.commons.io.FilenameUtils
 import org.stepbible.textconverter.support.stepexception.StepException
-import org.w3c.dom.Document
 import java.io.File
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
+import kotlin.io.path.notExists
 
 
 
@@ -146,9 +146,24 @@ object StepFileUtils
    * @return True if file exists.
    */
 
-  fun fileExists (pathName: String): Boolean
+  fun fileOrFolderExists (pathName: String): Boolean
   {
     return File(pathName).exists()
+  }
+
+
+  /******************************************************************************/
+  /**
+   * Checks if the given folder is empty.
+   *
+   * @param folderPath
+   * @return True if folder is empty.
+   */
+
+  fun folderIsEmpty (folderPath: String): Boolean
+  {
+    val folder = File(folderPath)
+    return folder.listFiles()?.isEmpty() ?: true
   }
 
 
@@ -190,7 +205,7 @@ object StepFileUtils
 
   fun getFileSize (filePath: String): Long
   {
-    if (!fileExists(filePath)) return -1
+    if (!fileOrFolderExists(filePath)) return -1
     return File(filePath).length()
   }
 
@@ -222,6 +237,26 @@ object StepFileUtils
   fun getFileName (path: String): String
   {
     return Paths.get(path).fileName.toString()
+  }
+
+
+  /******************************************************************************/
+  /**
+  * returns the latest modification timestamp for any file in a given folder, or
+  * 0 if there are no files in the folder or the folder does not exist.
+  *
+  * @return Latest modification timestamp
+  */
+
+  fun getLatestFileDate (folder: String, extension: String): Long
+  {
+    return if (Paths.get(folder).notExists())
+      0
+    else
+    {
+      val files = StepFileUtils.getMatchingFilesFromFolder(folder, ".*\\.$extension".toRegex())
+      return files.maxOfOrNull{ File(it.toString()).lastModified() } ?: 0
+    }
   }
 
 

@@ -11,23 +11,21 @@ import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
 import org.stepbible.textconverter.support.shared.SharedData
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.runCommand
-import org.stepbible.textconverter.support.miscellaneous.StepFileUtils.createFolderStructure
+import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.Translations
 import org.stepbible.textconverter.support.miscellaneous.Zip
 import java.io.File
 import java.nio.file.Paths
-import java.text.SimpleDateFormat
 import java.util.*
 
 /******************************************************************************/
 /**
- * Main program which handles the conversion of the STEP intermediate USX-ish
- * format to OSIS and validates the output.
+ * Main program which handles the conversion of the OSIS to a Sword module.
  *
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorOsisToSword : TextConverterProcessorBase
+object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterProcessorWithInputSelector
  {
   /****************************************************************************/
   /****************************************************************************/
@@ -38,61 +36,51 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun banner (): String
-  {
-    return "Converting OSIS to Sword"
-  }
+  override fun banner () = "Converting OSIS to Sword"
 
 
   /****************************************************************************/
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
   {
-    commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
     commandLineProcessor.addCommandLineOption("manualOsis2mod", 0, "Run osis2mod manually (useful where osis2mod fails to complete under control of the converter).", null, "n", false)
     commandLineProcessor.addCommandLineOption("forceOsis2modType", 0, "Force a particular version of osis2mod to be used (as opposed to letting the converter decide).", listOf("crosswire", "step"), null, false)
   }
 
 
   /****************************************************************************/
-  override fun pre (): Boolean
+  override fun prepare ()
   {
-    deleteFolder(StandardFileLocations.getEncryptionDataRootFolder())
-    deleteFile(Pair(StandardFileLocations.getOsisToModLogFilePath(), null))
-    deleteFile(Pair(StandardFileLocations.getSwordRootFolderPath(), null))
-    createFolders(listOf(StandardFileLocations.getSwordRootFolderPath(),
-                         StandardFileLocations.getSwordConfigFolderPath(),
-                         StandardFileLocations.getSwordModuleFolderPath(),
-                         StandardFileLocations.getTextFeaturesFolderPath()))
-    //deleteFiles(listOf(Pair(StandardFileLocations.getSwordConfigFolderPath(), "*.*")))
-    //deleteFiles(listOf(Pair(StandardFileLocations.getSwordModuleFolderPath(), "*.*")))
-    return true
+    StepFileUtils.deleteFolder(StandardFileLocations.getInternalSwordFolderPath())
+    StepFileUtils.createFolderStructure(StandardFileLocations.getInternalSwordFolderPath())
+    StepFileUtils.createFolderStructure(StandardFileLocations.getSwordConfigFolderPath())
+    StepFileUtils.createFolderStructure(StandardFileLocations.getInternalSwordFolderPath())
+    StepFileUtils.createFolderStructure(StandardFileLocations.getTextFeaturesFolderPath())
+
+    StepFileUtils.deleteFolder(StandardFileLocations.getInternalTempOsisFolderPath())
+    StepFileUtils.createFolderStructure(StandardFileLocations.getInternalTempOsisFolderPath())
+
+    StepFileUtils.deleteFile(StandardFileLocations.getOsisToModLogFilePath())
   }
 
 
   /****************************************************************************/
-  override fun runMe (): Boolean
-  {
-    return true
-  }
-
-
-  /****************************************************************************/
-  override fun process (): Boolean
+  override fun process ()
   {
     /**************************************************************************/
+    /* Apply any tweaks.  The resulting file is written to a temporary
+       location, so we need to pick it up from there. */
+
+    val osisFilePath = if ("internal" == m_InputSelector) StandardFileLocations.getInternalOsisFilePath() else StandardFileLocations.getInputOsisFilePath()
+    OsisTweaker.process(osisFilePath!!)
+    m_OsisFilePath = StandardFileLocations.getInternalTempOsisFilePath()
+
+
+
+    /**************************************************************************/
     m_ModuleName = ConfigData["stepModuleName"]!!
-    createFolderStructure(StandardFileLocations.getSwordTextFolderPath(m_ModuleName))
+    StepFileUtils.createFolderStructure(StandardFileLocations.getSwordTextFolderPath(m_ModuleName))
     generateEncryptionData()
     if (!ConfigData.getAsBoolean("stepEncryptionApplied", "no")) Logger.warning("********** NOT ENCRYPTED **********")
-
-
-
-    /**************************************************************************/
-    /* On a USX-based run, this will already have been set.  However, we may
-       also sometimes be called upon to work direct from OSIS, in which case
-       it may not have been set. */
-
-    Logger.setLogFile(StandardFileLocations.getConverterLogFilePath())
 
 
 
@@ -123,7 +111,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
     val swordExternalConversionCommand: MutableList<String> = ArrayList()
     swordExternalConversionCommand.add("\"$programName\"")
     swordExternalConversionCommand.add("\"" + StandardFileLocations.getSwordTextFolderPath(m_ModuleName) + "\"")
-    swordExternalConversionCommand.add("\"" + StandardFileLocations.getOsisFilePath() + "\"")
+    swordExternalConversionCommand.add("\"" + m_OsisFilePath + "\"")
 
     if (usingStepOsis2Mod)
     {
@@ -133,7 +121,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
     else
     {
       swordExternalConversionCommand.add("-v")
-      swordExternalConversionCommand.add(ConfigData["stepVersificationSchemeCanonical"]!!)
+      swordExternalConversionCommand.add(ConfigData["stepVersificationScheme"]!!)
     }
 
     swordExternalConversionCommand.add("-z")
@@ -191,11 +179,6 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
     generateSwordConfigFile()
     VersionAndHistoryHandler.appendHistoryLinesToStepConfigFile()
     createZip()
-
-
-
-    /**************************************************************************/
-    return true
   }
 
 
@@ -214,18 +197,6 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
   private fun addCalculatedValuesToMetadata()
   {
     /**************************************************************************/
-    val moduleCreationDateAndTime: String = SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date())
-    ConfigData.put("stepModuleCreationDate", moduleCreationDateAndTime, true)
-
-    if (null == ConfigData["stepTextModifiedDate"])
-    {
-      val moduleCreationDate: String = SimpleDateFormat("dd-MMM-yyyy").format(Date())
-      ConfigData["stepTextModifiedDate"] = moduleCreationDate
-    }
-
-
-
-    /**************************************************************************/
     /* Deal with reversification details. */
 
     ConfigData.put("stepNoOfVersesAmendedByReversification", SharedData.VersesAmendedByReversification.size.toString(), true)
@@ -234,7 +205,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
 
 
     /**************************************************************************/
-    val osisFilePath = File(StandardFileLocations.getOsisFilePath())
+    val osisFilePath = File(m_OsisFilePath)
     //val osisSha256: String = DigestUtils(SHA_256).digestAsHex(osisFilePath)
     var stepInfo = """
 ¬¬Sword module @(stepModuleName) created @(stepModuleCreationDate) (@(stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation)).
@@ -309,10 +280,15 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
     var textId: String = ConfigData["stepTextIdSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""
     if (textId.isBlank() || "unknown".equals(textId, ignoreCase = true)) textId = ""
 
-    var textCombinedId = "$textDisambiguatorForId.$textId"
-    textCombinedId = if ("." == textCombinedId) "" else "&nbsp;&nbsp;Id: $textCombinedId"
+    val textCombinedId =
+      if (textDisambiguatorForId.isNotEmpty() && textId.isNotEmpty())
+        "$textDisambiguatorForId.$textId"
+      else if (textId.isNotEmpty())
+        "Version $textId"
+      else
+        ""
 
-    textSource = textSource + ownerOrganisation + textCombinedId
+    textSource = "$textSource $ownerOrganisation $textCombinedId"
     ConfigData.put("stepTextSource", textSource, true)
 
 
@@ -469,7 +445,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
     val zipPath: String = StandardFileLocations.getSwordZipFilePath(m_ModuleName)
     val inputs = mutableListOf(StandardFileLocations.getSwordConfigFolderPath(), StandardFileLocations.getSwordTextFolderPath(m_ModuleName), StandardFileLocations.getTextFeaturesFolderPath())
     if (ConfigData.getAsBoolean("stepEncryptionRequired")) inputs.add(StandardFileLocations.getEncryptionDataRootFolder())
-    Zip.createZipFile(zipPath, 9, StandardFileLocations.getSwordRootFolderPath(), inputs)
+    Zip.createZipFile(zipPath, 9, StandardFileLocations.getInternalSwordFolderPath(), inputs)
   }
 
 
@@ -487,23 +463,8 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
 
 
     /**************************************************************************/
-    /* In the past we have always wanted to create the Sword config file -- and
-       in a normal conversion run (ie where we are starting from USX), we will
-       still want to do so.  However, I now also need to cater for the
-       possibility that we are simply starting from OSIS, and our sole purpose
-       was to tag OSIS supplied to us by someone else.
-
-       On a run starting from OSIS, we'll have a copy of the Sword config file
-       in the Metadata folder. */
-
     val configFile = File(StandardFileLocations.getSwordConfigFilePath(m_ModuleName))
     VersionAndHistoryHandler.process()
-    if ("osis" == TextConverterProcessorRawInputManager.getRawInputFolderType())
-      return
-
-
-
-    /**************************************************************************/
     val lines = StandardFileLocations.getInputStream(StandardFileLocations.getSwordTemplateConfigFilePath(), null)!!.bufferedReader().readLines()
     val writer = configFile.bufferedWriter()
 
@@ -573,7 +534,7 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
 
     /**************************************************************************/
     val withinModuleDecryptionFilePath = StandardFileLocations.getEncryptionDataFilePath("$m_ModuleName.conf")
-    createFolderStructure(StandardFileLocations.getEncryptionDataFolder())
+    StepFileUtils.createFolderStructure(StandardFileLocations.getEncryptionDataFolder())
 
 
 
@@ -677,6 +638,8 @@ object TextConverterProcessorOsisToSword : TextConverterProcessorBase
 
 
   /****************************************************************************/
+  override lateinit var m_InputSelector: String
   private var m_ModuleName: String = ""
+  private lateinit var m_OsisFilePath: String
   private var m_ReversificationMap = ""
 }

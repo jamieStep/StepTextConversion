@@ -37,7 +37,7 @@ import org.w3c.dom.Node
  * NRSVA compliant.  Or we can leave the text pretty much as-is, and then
  * carry out on-the-fly restructuring within STEPBible.
  *
- * The former of these is handled by [TextConverterProcessorReversificationRemapVerses],
+ * The former of these is handled by [TextConverterProcessorXToUsxB_ReversificationProcessor],
  * and the advantages and disadvantages of this approach are discussed there.
  *
  * The approach which leaves restructuring to be handled within STEPBible is
@@ -162,7 +162,7 @@ object TextConverterProcessorReversificationAnnotateOnly
     initialise()
     var res = false
     val reversificationRows = m_FootnoteReversificationRows!![BibleBookNamesUsx.nameToNumber(bookName)] ?: return false
-    val sidNodes = Dom.findNodesByName(document, "_X_verse").filter { "sid" in it }. associateBy { Ref.rdUsx(it["sid"]!!).toRefKey() }
+    val sidNodes = Dom.findNodesByName(document, "verse").filter { "sid" in it }. associateBy { Ref.rdUsx(it["sid"]!!).toRefKey() }
     reversificationRows.filter { it.sourceRefAsRefKey in sidNodes } .forEach { res = true; addFootnote(sidNodes[it.sourceRefAsRefKey]!!, it) }
     return res
   }

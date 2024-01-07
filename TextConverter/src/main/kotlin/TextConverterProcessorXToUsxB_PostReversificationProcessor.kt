@@ -1,8 +1,6 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.*
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.makeFootnote
@@ -20,74 +18,19 @@ import org.w3c.dom.Node
 
 /******************************************************************************/
 /**
- * Part 2 of the process which converts USX to enhanced USX.
+ * The last part of the process which converts USX to enhanced USX.
  *
- * The processing is split into two parts because there are some things we have
- * to do prior to any reversification processing, and some which have to be done
- * afterwards.  This present class covers the 'afterwards'.
- *
- * In summary we are concerned here with recording and / or remedying any
- * shortfalls in the text as it stands after earlier processing, and responding
- * to any changes marked as 'pending' in earlier processing.
+ * See [TextConverterProcessorXToUsxB] for details.
  *
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase
- {
+class TextConverterProcessorXToUsxB_PostReversificationProcessor
+{
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
   /**                                Package                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  override fun banner (): String
-  {
-    return "Creating enhanced USX -- Part 2"
-  }
-
-
-  /****************************************************************************/
-  override fun getCommandLineOptions(commandLineProcessor: CommandLineProcessor)
-  {
-    commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
-  }
-
-
-  /****************************************************************************/
-  override fun pre (): Boolean
-  {
-    return true
-  }
-
-
-  /****************************************************************************/
-  override fun process (): Boolean
-  {
-    //BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, "enhanced", wantWordCount = true) // Make sure we have up-to-date structural information.
-    BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::processFile)
-    Osis2ModInterface.instance().createSupportingData()
-    return true
-  }
-
-
-  /****************************************************************************/
-  override fun runMe (): Boolean
-  {
-     return true
-  }
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                Control                                 **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
@@ -103,12 +46,12 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase
      trying to make the enhanced USX files more human-readable, and that's
      _always_ going to do something. */
 
-  private fun processFile (bookName: String, filePath: String, document: Document)
+  fun processFile (filePath: String)
   {
     val C_MinimalChangesOnly = false // Introduced because DIB wanted a version of LXX to which I'd done as little as possible.  Should normally be false.
 
-    //Dbg.d(document)
-    reportBookBeingProcessed(document)
+    val document = Dom.getDocument(filePath)
+    val bookName = reportBookBeingProcessed(document)
 
     var changed = false // As a reminder below, 'or' does an OR _without_ short-circuit evaluation.
     changed = changed or handleCanonicalTitlesContainingVerses(document)
@@ -140,6 +83,14 @@ object TextConverterProcessorUsxToEnhancedUsx2 : TextConverterProcessorBase
 
 
 
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Private                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
 
   /****************************************************************************/
   /****************************************************************************/

@@ -1,276 +1,29 @@
-/**********************************************************************************************************************/
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.*
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.StandardFileLocations
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
-import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.doNothing
-import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.getExtendedNodeName
-import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.makeFootnote
-import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.recordTagChange
-import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.reportBookBeingProcessed
+import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.Translations
-import org.stepbible.textconverter.support.ref.*
+import org.stepbible.textconverter.support.ref.Ref
+import org.stepbible.textconverter.support.ref.RefBase
+import org.stepbible.textconverter.support.ref.RefCollection
+import org.stepbible.textconverter.support.ref.RefRange
 import org.stepbible.textconverter.support.shared.Language
 import org.stepbible.textconverter.support.shared.SharedData
-import org.stepbible.textconverter.support.usx.Usx
 import org.stepbible.textconverter.support.stepexception.StepException
+import org.stepbible.textconverter.support.usx.Usx
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.nio.file.Paths
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-/******************************************************************************/
-/**
- * Investigates and restructures USX.
- *
- *
- *
- *
- *
- * ## Overview
- *
- * It has seemed useful to me both a) to have the chance to investigate incoming
- * USX and identify any structures which might thwart the automated processing;
- * and b) to modify the incoming data to some extent, in order to simplify
- * later processing -- both of which functions are performed under control of
- * this present class.
- *
- * The class assumes a standard folder structure, and runs over all files in the
- * RawUsx folder (or, where pre-processing has been applied, some combination of
- * the content of the raw and standardised folders). For each, it creates a
- * restructured file with the same name in the StandardisedUsx folder.
- * Where pre-processing has been applied, this new file replaces the one created
- * by pre-processing.
- *
- * In addition, it creates some files in the TextFeatures folder (that's just
- * some files overall, not some for each input file), one of them giving details
- * of any 'interesting' features which appear in any of the input files, and one
- * giving information about the text (which books it contains, which chapters,
- * etc).  These are not used by the processing, but may be of use when looking
- * for texts with particular characteristics.
- *
- *
- *
- *
- *
- * ## Restructuring
- *
- * Aside from investigating the incoming USX to provide summary information
- * about it, there are a number of reasons why it might be useful to make
- * modifications to the incoming USX before passing it on for further
- * processing :-
- *
- * - USX comes in a number of different versions, and things are simplified
- *   if the main differences between them can be ironed out.
- *
- * - There are a few common traits to the way USX is misused, and it is
- *   useful to see if we can iron these out.
- *
- * - There are some places where I just think a little reordering will
- *   make things easier.
- *
- * - Some tags are level-related (q1, q2, q3 etc), and where this is the
- *   case, USX permits the level-1 version to be given with or without the
- *   '1'.  I add the number here, for the sake of uniformity.
- *
- * - There are some places where USX falls short of what is really needed
- *   for later processing.  As an example, USX supports list items (the
- *   equivalent of the HTML 'li' element), but lacks any means of enclosing
- *   the list (the equivalent of the HTML 'ul').  OSIS, for one, demands
- *   such bracketing items (or it does in theory; in practice I have to say
- *   it seems to fare rather better without).  It therefore seems to make
- *   sense to undertake the complicated processing needed to add the
- *   brackets sooner rather than later (except that as I explain later, I
- *   don't: this present class is the place to do it, but I don't bother).
- *
- * - Cross-references are subject to a lot of checks and potential
- *   restructuring.  More details of this are given in
- *   [CrossReferenceProcessor].
- *
- * - There are some blocks of contiguous related tags which I suspect it
- *   may be useful to encapsulate into a single container node (book
- *   introductions being an obvious example).
- *
- * - There are some bugs (either in osis2mod or in the rendering) which
- *   mean that the output sometimes looks wrong.  Changes here can avoid
- *   these bugs.
- *
- *
- * Historically, I was also making another tranche of particularly complicated
- * changes.  USX supports the use of milestone markers for chapters and verses,
- * with the clear intention that people would then be able to have formatting
- * and semantic markup run across chapter- (or more particularly) verse-
- * boundaries.
- *
- * This is problematical, both from the point of Crosswire's osis2mod tool which
- * we use to create Sword modules and when it comes to reversification.
- *
- * As regards osis2mod, I am sure there was an email thread which suggested
- * that cross-boundary markup was a problem.  More recently I have been told
- * that this is not the case.  However, the fact remains that with some kinds of
- * cross-boundary markup, osis2mod does at least issue warnings, and since it is
- * not clear what may be the implications of this, I tend to the view that we
- * are better trying to avoid such markup where possible.
- *
- * And as regards reversification, there are some places where we physically
- * move verses from one place to another.  Admittedly in the overall scheme of
- * things these are relatively few in number, but having any at all is
- * awkward, because it becomes difficult to excise text from its original
- * position (although I now believe less difficult than I once thought was the
- * case).
- *
- * In an earlier incarnation of the present module, I was attempting to address
- * these issues by turning both verse- and chapter- tags into enclosing tags.
- * I still do this for chapters, in fact, because it seems to me to bring
- * benefits, and the likelihood of encountering cross-chapter markup is
- * vanishingly small.
- *
- * With verses, however, this is just not practical.  Experience suggests that
- * in any given text there are likely to be some places where the markup is
- * such that verse tags can indeed be turned into enclosing tags with no
- * additional work at all; and others where a certain amount of fiddly tweaking
- * can reduce things to a structure in which, again, the verses can be enclosed.
- * But there usually remain some which are not amenable to this kind of
- * treatment.
- *
- * This leaves me in somewhat of a quandary, because there is no way in which I
- * can guarantee a text which satisfies all of the actual or presumed
- * requirements of osis2mod and reversification.  Possibly the approach I have
- * adopted here succeeds in combining the worst of both worlds.  I employ
- * unpleasantly complicated code in order to achieve a situation where hopefully
- * as many verses as possible are indeed 'enapsulable' (in the sense that the
- * start and end tags do indeed effectively encapsulate a single verse, even
- * though they remain as milestones, and there is no cross-boundary markup);
- * but at the same time recognising that there are likely to be quite a few
- * situations in which this cannot be achieved, and I just have to hope that
- * these won't end up causing problems.
- *
- *
- *
- *
- *
- * ## Outputs
- *
- * The class generates a) a file summarising any 'important' features of the
- * text; b) a file giving details of the structure of the text (which books it
- * contains, the number of the last chapter for each book, etc); and c) revised
- * and restructured USX.
- *
- * The first two of these are placed into the TextFeatures folder, under the
- * names textFeatures.json and vernacularBibleStructure.json respectively (both
- * of them in extended JSON format -- ie with // used as comment markers).
- *
- * The restructured USX is stored in the EnhancedUsx folder, one file for
- * each of the input files.
- *
- * In addition to highlighting any 'interesting' features in the text,
- * textFeatures.json also lists any books in which errors were detected.
- *
- * Similarly, in addition to giving basic details about which books, chapters
- * and verses are present, vernacularBibleStructure.json also lists missing and
- * duplicate verses.  Duplicate verses are definitely a problem.  Missing verses
- * may or may not be -- some texts lack certain verses, but these can be filled
- * in by reversification.
- *
- *
- *
- *
- *
- * ## Pre-processing
- *
- * Because of the complexity of the USX standard and of the different
- * requirements and different assumptions brought to things by the various
- * translators, many texts are a law unto themselves to some extent or other.
- * This suggests a need to have text-specific pre-processing to iron out these
- * differences.  Without that, the converter would have to be extended with
- * each new text it was required to process, making it vastly more baroque even
- * than it is already.
- *
- * To address this, I make provision for separate pre-processing to be supplied.
- *
- *
- *
- *
- *
- * ## Debugging
- *
- * It may also be useful, particularly where restructuring has been applied, to
- * retain rudimentary information about what the changes have been.  This is
- * handled by _X_dbg tags.  Whether these appear or not is controlled by a
- * command line parameter.
- *
- *
- *
- *
- *
- * ## Weasel words
- *
- * I have made no attempt to make this code efficient -- it has been more than
- * enough to attempt to make it clear (and even here I suspect I have failed
- * miserably).
- *
- * @author ARA "Jamie" Jamieson
- */
 
-object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
+class TextConverterProcessorXToUsxB_PreReversificationProcessor
 {
-    /******************************************************************************************************************/
-    override fun banner (): String
-    {
-        return "Creating enhanced USX -- Part 1"
-    }
-
-
-    /******************************************************************************************************************/
-    override fun pre (): Boolean
-    {
-        createFolders(listOf(StandardFileLocations.getEnhancedUsxFolderPath(), StandardFileLocations.getPreprocessedUsxFolderPath(), StandardFileLocations.getTextFeaturesFolderPath()))
-        deleteFiles(listOf(Pair(StandardFileLocations.getEnhancedUsxFolderPath(), StandardFileLocations.getEnhancedUsxFilePattern()),
-                           Pair(StandardFileLocations.getPreprocessedUsxFolderPath(), StandardFileLocations.getRawUsxFilePattern(null)),
-                           Pair(StandardFileLocations.getTextFeaturesFolderPath(), ".*\\.json".toRegex())))
-        return true
-    }
-
-
-    /******************************************************************************************************************/
-    override fun runMe (): Boolean
-    {
-      return true
-    }
-
-
-
-    /******************************************************************************************************************/
-    /**
-     * @{inheritDoc}
-     */
-
-    override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
-    {
-      commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
-    }
-
-
-    /******************************************************************************************************************/
-    /* runPreprocessor below runs the standalone JAR, .exe, etc which runs over raw USX files and creates modified
-       versions where necessary.  If stepCallablePreprocessorFilePath is defined, it must point to a JAR which is passed
-       DOMs one at a time and updates them in memory.  This is an alternative to the work done by runPreprocessor, and
-       takes precedence -- even if the standalone JAR, .exe or whatever exists, it is not run. */
-
-    override fun process (): Boolean
-    {
-      PreprocessorHandler.runPreprocessor()
-      ReversificationData.process()
-      BibleBookAndFileMapperCombinedRawAndPreprocessedUsxRawUsx.iterateOverSelectedFiles(::processFile) // Creates the enhanced USX.
-      return true
-    }
-
 
     /******************************************************************************************************************/
     /* An eclectic set of changes.  Anything labelled a) does not rely upon the revised chapter / verse structure which
@@ -303,7 +56,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
        second pass to finish creating the enhanced USX files.
     */
 
-    private fun processFile (bookName: String, usxInputPath: String, theDocument: Document)
+    fun processFile (usxInputPath: String)
     {
         /**********************************************************************/
         //val a = Dom.findNodesByAttributeName(document, "verse", "number")
@@ -311,36 +64,13 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
 
 
         /**********************************************************************/
+        val theDocument = Dom.getDocument(usxInputPath)
         initialise(usxInputPath, theDocument)
 
 
 
         /**********************************************************************/
         fun x () { if (Logger.getNumberOfErrors() > 0) panic() }
-
-
-
-        /**********************************************************************/
-        /* I support several different forms of preprocessing.  You can call an
-           external program to transform individual files in their entirety
-           before we ever start processing; you can create a JAR file which
-           supports a particular API, and load and call it with a DOM which
-           it revises; or you can apply an XSLT stylesheet to the DOM.
-
-           The external program is dealt with elsewhere.  Here we deal with
-           the other two. */
-
-       m_Document = PreprocessorHandler.applyXslt(m_Document, m_BookName)
-       PreprocessorHandler.applyCallablePreprocessor(m_Document)?.forEach {
-          val ix = it.indexOf(':')
-          val text = it.substring(ix + 2)
-          when (it.substring(0, ix))
-          {
-            "ERROR"       -> Logger.error(text)
-            "WARNING"     -> Logger.warning(text)
-            "INFORMATION" -> Logger.info(text)
-          }
-        }
 
 
 
@@ -372,7 +102,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
         deleteTrailingBlankLinesInChapters()               // c) The rendering gets messed up if chapters have trailing blank lines.
 
         val dt = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MMMM-yyyy"))
-        Dom.outputDomAsXml(m_Document, Paths.get(StandardFileLocations.getEnhancedUsxFolderPath(), StepFileUtils.getFileName(usxInputPath)).toString(), "STEP extended USX created $dt")
+        Dom.outputDomAsXml(m_Document, Paths.get(StandardFileLocations.getInternalUsxBFolderPath(), StepFileUtils.getFileName(usxInputPath)).toString(), "STEP extended USX created $dt")
     }
 
 
@@ -597,7 +327,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
 
          var high = low
          while ("chapter" != Dom.getNodeName(childrenOfBookNode[++high])) // Move forward to the next chapter (which will be off the end of the previous chapter).
-           doNothing()
+           MiscellaneousUtils.doNothing()
 
          childrenOfBookNode.subList(low + 1, high).forEach { Dom.deleteNode(it); lowChapterNode.appendChild(it) } // Take the intervening nodes as children of the starting chapter node.
 
@@ -702,8 +432,8 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
      /************************************************************************/
      fun changeNode (translations: Map<String, String>, node: Node)
      {
-       val translation = translations[getExtendedNodeName(node)]?.split(":") ?: return
-       recordTagChange(node, translation[0], if (2 == translation.size) translation[1] else null, "Corrected raw USX markup")
+       val translation = translations[MiscellaneousUtils.getExtendedNodeName(node)]?.split(":") ?: return
+       MiscellaneousUtils.recordTagChange(node, translation[0], if (2 == translation.size) translation[1] else null, "Corrected raw USX markup")
      }
 
 
@@ -871,7 +601,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
        var location = ""
        fun process (node: Node)
        {
-         when (getExtendedNodeName(node))
+         when (MiscellaneousUtils.getExtendedNodeName(node))
          {
            "_X_chapter" -> location = "start"
            "_X_verse"   -> location = "end"
@@ -1462,7 +1192,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
     fun markTablesWhichDoNotContainVerseTags (tableNode: Node)
     {
       if (Dom.findNodesByName(tableNode, "verse", false).isEmpty())
-        recordTagChange(tableNode, "_X_tableWithNoContainedVerseTags", null, "FYI only")
+        MiscellaneousUtils.recordTagChange(tableNode, "_X_tableWithNoContainedVerseTags", null, "FYI only")
     }
 
 
@@ -1786,7 +1516,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
 
     Dom.setAttribute(owningVerseSid, "sid", startOfElisionRef.toString())
     Dom.setAttribute(owningVerseSid, "_X_generatedElisionToCoverTable", "y")
-    val owningVerseFootnote = makeFootnote(m_Document, startOfElisionRef.toRefKey(), Translations.stringFormat(Language.Vernacular, "V_tableElision_owningVerse"))
+    val owningVerseFootnote = MiscellaneousUtils.makeFootnote(m_Document, startOfElisionRef.toRefKey(), Translations.stringFormat(Language.Vernacular, "V_tableElision_owningVerse"))
     Dom.insertNodeAfter(owningVerseSid, owningVerseFootnote)
 
 
@@ -2000,7 +1730,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
         fun doIt (node: Node)
         {
             if ("verse" == Dom.getNodeName(node) && Dom.hasAttribute(node, "sid"))
-                doNothing()
+                MiscellaneousUtils.doNothing()
             else if ("para" == Dom.getNodeName(node) && "b" != Dom.getAttribute(node, "style") &&
                      null != Dom.getAncestorNamed(node, "para"))
             {
@@ -2030,7 +1760,7 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
         /**********************************************************************/
         m_Document = document
         m_BookName = Dom.getAttribute(Dom.findNodeByName(m_Document, "book")!!, "code")!!
-        reportBookBeingProcessed(document)
+        MiscellaneousUtils.reportBookBeingProcessed(document)
      }
 
 
@@ -2046,4 +1776,3 @@ object TextConverterProcessorUsxToEnhancedUsx1 : TextConverterProcessorBase
     private var m_BookName = ""
     private lateinit var m_Document: Document
 }
-

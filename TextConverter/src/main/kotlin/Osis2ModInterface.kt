@@ -142,7 +142,6 @@ object Osis2ModInterfaceCrosswire: Osis2ModInterface()
     C_CollapseSubverses = true
     C_CreateEmptyChapters = true
     C_ExpandElisions = true
-    ConfigData.put("stepVersificationSchemeCanonical", if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.reversificationTargetsDc()) "NRSVA" else "NRSV", true)
   }
 
 
@@ -209,9 +208,7 @@ object Osis2ModInterfaceStep: Osis2ModInterface()
     C_CollapseSubverses = false
     C_CreateEmptyChapters = false
     C_ExpandElisions = true // false !!!!!!!!!!!!!!!!!!!!!!!!!
-    ConfigData.put("stepVersificationSchemeCanonical", "v11n" + ConfigData["stepModuleName"], true)
   }
-
 
 
   /****************************************************************************/
@@ -434,7 +431,7 @@ object Osis2ModInterfaceStep: Osis2ModInterface()
 
   private fun populateBibleStructure ()
   {
-    m_BibleStructure.v11nName = ConfigData["stepModuleName"]!!
+    m_BibleStructure.v11nName = ConfigData["stepVersificationScheme"]!!
     populateBibleStructure(m_BibleStructure.otBooks, BibleAnatomy.getBookNumberForStartOfOt(), BibleAnatomy.getBookNumberForEndOfOt())
     populateBibleStructure(m_BibleStructure.otBooks, BibleAnatomy.getBookNumberForStartOfDc(), BibleAnatomy.getBookNumberForEndOfDc(), true) // otbooks _is_ intended here -- see head of method comments.
     populateBibleStructure(m_BibleStructure.ntBooks, BibleAnatomy.getBookNumberForStartOfNt(), BibleAnatomy.getBookNumberForEndOfNt())

@@ -151,6 +151,24 @@ open class BibleBookAndFileMapper
   
   
   /****************************************************************************/
+  /* 24-Oct-23: Changes to return book name as well as file path. */
+
+  private fun getFileList (limitToSelectedBooks: Boolean): List<Pair<String, String>>
+  {
+    val limitationFilter: (bookNumber: Int) -> Boolean = if (limitToSelectedBooks) { {  x -> Dbg.wantToProcessBook(x) } } else { { _ -> true } }
+    return m_BookOrderingDetailsByBookNumber
+      .keys
+      .asSequence()
+      .sorted()
+      .filter { null != m_BookOrderingDetailsByBookNumber[it] }
+      .filter { limitationFilter.invoke(m_BookOrderingDetailsByBookNumber[it]!!.bookNumber) }
+      .filter { File(m_BookOrderingDetailsByBookNumber[it]!!.filePath).exists() } // Particularly with reversification, books which originally existed may have been emptied and deleted.
+      .map { Pair(BibleBookNamesUsx.numberToAbbreviatedName(m_BookOrderingDetailsByBookNumber[it]!!.bookNumber), m_BookOrderingDetailsByBookNumber[it]!!.filePath) }
+      .toList()
+  }
+
+
+  /****************************************************************************/
   /**
    * Returns the path to the USX file for the book.
    * 
@@ -204,6 +222,10 @@ open class BibleBookAndFileMapper
   fun iterateOverSelectedFiles (fn: (bookName: String, filePath: String, dom:Document) -> Unit) { iterateOverFiles(fn, true ) }
 
 
+  /****************************************************************************/
+  /* Forcibly empties and repopulates the structure. */
+
+  open fun repopulate () { throw StepException("Base class implementation of repopulate exposed.")}
 
 
 
@@ -217,22 +239,15 @@ open class BibleBookAndFileMapper
   /****************************************************************************/
   
   /****************************************************************************/
-  //protected fun populate () {}
-
-
-  /****************************************************************************/
   /**
    * Empties out the existing structures and populates from the files in the
    * given folder.
    *
-   * @param preferredFolderPath Path of folder containing files to be processed.
-   * @param otherFolderPath Things are populated from preferredFolderPath
-   *        first, but if any book is not found there, we look for it in
-   *        otherFolderPath.
+   * @param folderPath Path of folder containing files to be processed.
    * @throws Exception Any old exception.
    */
 
-  protected fun populate (preferredFolderPath: String, otherFolderPath: String? = null)
+  protected fun populate (folderPath: String)
   {
     /**************************************************************************/
     val done: MutableSet<Int> = HashSet()
@@ -250,9 +265,8 @@ open class BibleBookAndFileMapper
     reset()
     try
     {
-      val filePattern = StandardFileLocations.getRawUsxFilePattern(null)
-      if (File(preferredFolderPath).exists()) StepFileUtils.iterateOverFilesInFolder(preferredFolderPath, filePattern,::handleFile, null)
-      if (null != otherFolderPath && File(otherFolderPath).exists()) StepFileUtils.iterateOverFilesInFolder(otherFolderPath, filePattern, ::handleFile, null)
+      val filePattern = "(?i).*\\.usx".toRegex()
+      if (File(folderPath).exists()) StepFileUtils.iterateOverFilesInFolder(folderPath, filePattern, ::handleFile, null)
     }
     catch (e: Exception)
     {
@@ -270,24 +284,6 @@ open class BibleBookAndFileMapper
   
   
   /****************************************************************************/
-  /* 24-Oct-23: Changes to return book name as well as file path. */
-
-  private fun getFileList (limitToSelectedBooks: Boolean): List<Pair<String, String>>
-  {
-    val limitationFilter: (bookNumber: Int) -> Boolean = if (limitToSelectedBooks) { {  x -> Dbg.wantToProcessBook(x) } } else { { _ -> true } }
-    return m_BookOrderingDetailsByBookNumber
-      .keys
-      .asSequence()
-      .sorted()
-      .filter { null != m_BookOrderingDetailsByBookNumber[it] }
-      .filter { limitationFilter.invoke(m_BookOrderingDetailsByBookNumber[it]!!.bookNumber) }
-      .filter { File(m_BookOrderingDetailsByBookNumber[it]!!.filePath).exists() } // Particularly with reversification, books which originally existed may have been emptied and deleted.
-      .map { Pair(BibleBookNamesUsx.numberToAbbreviatedName(m_BookOrderingDetailsByBookNumber[it]!!.bookNumber), m_BookOrderingDetailsByBookNumber[it]!!.filePath) }
-      .toList()
-  }
-
-
-  /****************************************************************************/
   private fun iterateOverFiles (fn: (bookName: String, filePath: String) -> Unit, limitToSelectedBooks: Boolean)
   {
     getFileList(limitToSelectedBooks).forEach { fn(it.first, it.second) }
@@ -302,7 +298,12 @@ open class BibleBookAndFileMapper
   
   
   /****************************************************************************/
-  private fun reset ()
+  /**
+  * Empties the data structures.  Useful mainly to ensure things can be
+  * repopulated reliably as necessary.
+  */
+
+  protected fun reset ()
   {
     m_BookOrderingDetailsByBookNumber.clear()
 
@@ -321,4 +322,66 @@ open class BibleBookAndFileMapper
   private data class BookDetails (val filePath: String, val bookNumber: Int)
   private val m_BookOrderingDetailsByBookNumber: MutableMap<Int, BookDetails?> = LinkedHashMap()
   private val m_BookOrderingDetailsByFilePath  : MutableMap<String, Int > = HashMap()
+}
+
+
+/******************************************************************************/
+/**
+ * A verse of BibleBookAndFileMapper which handles files stored in the UsxB
+ * folder.
+ *
+ * @author ARA "Jamie" Jamieson
+ */
+
+object BibleBookAndFileMapperEnhancedUsx: BibleBookAndFileMapper()
+{
+  /****************************************************************************/
+  /* Forcibly empties and repopulates the structure. */
+
+  override fun repopulate ()
+  {
+    reset()
+    val inFolder = StandardFileLocations.getInternalUsxBFolderPath()
+    populate(inFolder)
+  }
+
+
+  /****************************************************************************/
+  init
+  {
+    repopulate()
+  }
+}
+
+
+
+
+/******************************************************************************/
+/**
+ * A version of BibleBookAndFileMapper which looks at whichever standard USX
+ * folder (InputUsx or UsxA) is appropriate.
+ *
+ * @author ARA "Jamie" Jamieson
+*/
+
+object BibleBookAndFileMapperStandardUsx: BibleBookAndFileMapper()
+{
+  /****************************************************************************/
+  /* Forcibly empties and repopulates the structure. */
+
+  override fun repopulate ()
+  {
+    reset()
+    val inputUsxFileDate = StepFileUtils.getLatestFileDate(StandardFileLocations.getInputUsxFolderPath(), "usx")
+    val internalUsxAFileDate = StepFileUtils.getLatestFileDate(StandardFileLocations.getInternalUsxAFolderPath(), "usx")
+    val inFolder = if (internalUsxAFileDate > inputUsxFileDate) StandardFileLocations.getInternalUsxAFolderPath() else StandardFileLocations.getInputUsxFolderPath()
+    populate(inFolder)
+  }
+
+
+  /****************************************************************************/
+  init
+  {
+    repopulate()
+  }
 }

@@ -193,12 +193,7 @@ object VersionAndHistoryHandler
        update things only on release runs. */
 
     if ("release" != ConfigData["stepRunType"]!!.lowercase())
-    {
       ConfigData["stepTextRevision"] = "0.0" // Dummy version.
-      if ("osis" == TextConverterProcessorRawInputManager.getRawInputFolderType())
-        createUpdatedSwordConfigFileFromThirdPartyFile(true)
-      return
-    }
 
 
 
@@ -240,16 +235,6 @@ object VersionAndHistoryHandler
     ConfigData["stepHistory_$newStepVersion"] = newHistoryLine
     m_HistoryLines.forEach { ConfigData["stepHistory_${it.stepVersion}"] = makeHistoryLine(it.stepVersion, it.moduleDate, it.supplierVersion, it.text)}
     m_HistoryLines.add(0, ParsedHistoryLine(true, newStepVersion, today, ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!!, text))
-
-
-
-    /**************************************************************************/
-    if ("osis" == TextConverterProcessorRawInputManager.getRawInputFolderType())
-      createUpdatedSwordConfigFileFromThirdPartyFile(false)
-    else
-    {
-// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-    }
   }
 
 

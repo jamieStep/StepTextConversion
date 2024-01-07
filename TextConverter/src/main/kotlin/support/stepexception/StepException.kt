@@ -1,7 +1,7 @@
 /******************************************************************************/
 package org.stepbible.textconverter.support.stepexception
 
-import java.lang.RuntimeException
+import kotlin.RuntimeException
 
 
 /******************************************************************************/
@@ -143,4 +143,15 @@ class StepException: RuntimeException
   /****************************************************************************/
   private var m_SuppressStackTrace: Boolean = false
 }
+
+
+
+
+
+/******************************************************************************/
+/**
+* Used to make it possible to break out of processing.
+*/
+
+data class StepBreakOutOfProcessing (val reason: String): RuntimeException()
 
