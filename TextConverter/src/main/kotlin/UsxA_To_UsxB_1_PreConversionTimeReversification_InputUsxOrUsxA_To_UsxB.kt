@@ -1,7 +1,7 @@
 package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
@@ -22,7 +22,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 
-class TextConverterProcessorXToUsxB_PreReversificationProcessor
+class UsxA_To_UsxB_1_PreConversionTimeReversification_InputUsxOrUsxA_To_UsxB
 {
 
     /******************************************************************************************************************/
@@ -102,7 +102,7 @@ class TextConverterProcessorXToUsxB_PreReversificationProcessor
         deleteTrailingBlankLinesInChapters()               // c) The rendering gets messed up if chapters have trailing blank lines.
 
         val dt = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MMMM-yyyy"))
-        Dom.outputDomAsXml(m_Document, Paths.get(StandardFileLocations.getInternalUsxBFolderPath(), StepFileUtils.getFileName(usxInputPath)).toString(), "STEP extended USX created $dt")
+        Dom.outputDomAsXml(m_Document, Paths.get(FileLocations.getInternalUsxBFolderPath(), StepFileUtils.getFileName(usxInputPath)).toString(), "STEP extended USX created $dt")
     }
 
 

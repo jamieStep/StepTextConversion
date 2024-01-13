@@ -22,7 +22,7 @@ package org.stepbible.textconverter.support.configdata
 *   you to pick up configuration data direct from these files, rather than
 *   having to transcribe it manually into our own format.
 *
-* - **[StandardFileLocations]** gives you all of the file locations (eg where
+* - **[FileLocations]** gives you all of the file locations (eg where
 *   to find the Metadata folder, the OSIS folder, etc), along with things like
 *   patterns by which particular types of files can be recognised.
 *

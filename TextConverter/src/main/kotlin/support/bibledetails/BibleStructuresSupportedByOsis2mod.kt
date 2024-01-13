@@ -1,7 +1,7 @@
 /******************************************************************************/
 package org.stepbible.textconverter.support.bibledetails
 
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.util.*
 
@@ -17,7 +17,7 @@ object BibleStructuresSupportedByOsis2mod
   /****************************************************************************/
   /**
    * osis2mod is sensitive to the case of the scheme name passed to it, so this
-   * method gives back the canonical form.
+   * method gives back the canonical form.  Names starting v11n are takig
    *
    * @param schemeName
    * @return Canonical form of scheme name.
@@ -25,7 +25,7 @@ object BibleStructuresSupportedByOsis2mod
 
   fun canonicaliseSchemeName (schemeName: String): String
   {
-    return m_CanonicalSchemeNameMappings[schemeName] ?: throw StepException("Invalid versification scheme: $schemeName")
+    return if ("tbd" == schemeName) schemeName else m_CanonicalSchemeNameMappings[schemeName] ?: throw StepException("Invalid versification scheme: $schemeName")
   }
 
 
@@ -54,7 +54,7 @@ object BibleStructuresSupportedByOsis2mod
   init
   {
     val C_UnwantedSchemes = ".calvin.darbyfr."
-    StandardFileLocations.getInputStream(StandardFileLocations.getOsis2modVersificationDetailsFilePath(), null)!!.bufferedReader().use { it.readText() } .lines()
+    FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath(), null)!!.bufferedReader().use { it.readText() } .lines()
       .map { it.trim() }
       .filter { it.isNotEmpty() && !it.startsWith('#') } // Remove comments and blanks
       .map { it.substring(0, it.indexOf('/')) }          // Get the scheme name

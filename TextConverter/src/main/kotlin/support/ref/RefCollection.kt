@@ -1,7 +1,7 @@
 /****************************************************************************/
 package org.stepbible.textconverter.support.ref
-import org.stepbible.textconverter.support.bibledetails.BibleStructure
-import org.stepbible.textconverter.support.debug.Dbg
+
+import org.stepbible.textconverter.support.bibledetails.TextStructureEnhancedUsx
 import org.stepbible.textconverter.support.stepexception.StepException
 
 
@@ -328,7 +328,7 @@ class RefCollection: RefBase
    * -- for example ranges which cross chapter boundaries.
    */
 
-  fun simplify()
+  fun simplify ()
   {
     /**************************************************************************/
     val refKeys: List<RefKey> =
@@ -381,15 +381,11 @@ class RefCollection: RefBase
         if (thisIsSubVerse != lastWasSubVerse) break
 
 
-        // Note that BibleStructureTextAsSupplied really _is_ meant here -- the
-        // supplied text is the one we're working on.  We may have USX references,
-        // for instance, but they're always references which describe the supplied
-        // text.
         val diff =
           if (lastWasSubVerse)
-            BibleStructure.UsxUnderConstructionInstance().getSubverseDifference(prevKey, thisKey)
-             else
-               BibleStructure.UsxUnderConstructionInstance().getVerseDifference(prevKey, thisKey)
+            TextStructureEnhancedUsx.getBibleStructure().getSubverseDifference(prevKey, thisKey)
+          else
+            TextStructureEnhancedUsx.getBibleStructure().getVerseDifference(prevKey, thisKey)
         if (diff != 1) break
 
         prevKey = thisKey

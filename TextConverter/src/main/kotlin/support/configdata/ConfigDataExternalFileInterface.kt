@@ -1,7 +1,6 @@
 /****************************************************************************/
 package org.stepbible.textconverter.support.configdata
 
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils.forceToSingleLine
@@ -217,7 +216,7 @@ abstract class ConfigDataExternalFileInterfaceXmlCommon: ConfigDataExternalFileI
 {
   override fun initialise (filePath: String, callingFilePath: String?)
   {
-    val path = StandardFileLocations.getInputPath(filePath, callingFilePath)
+    val path = FileLocations.getInputPath(filePath, callingFilePath)
     m_XmlDocument = Dom.getDocument(path)
   }
 

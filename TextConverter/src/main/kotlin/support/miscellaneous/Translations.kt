@@ -1,7 +1,7 @@
 /******************************************************************************/
 package org.stepbible.textconverter.support.miscellaneous
 
-import org.stepbible.textconverter.TextConverterFeatureSummaryGenerator
+import org.stepbible.textconverter.UsxA_GenerateTextFeatures
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.miscellaneous.StepStringFormatter.convertNameAndValueListToMap
 import org.stepbible.textconverter.support.shared.Language
@@ -118,7 +118,7 @@ object Translations
 
     /**************************************************************************/
     val res = StepStringFormatter.format(text, if (1 == otherBits.size) otherBits[0] else convertNameAndValueListToMap(*otherBits))
-    TextConverterFeatureSummaryGenerator.addTranslatableText(key, text) // Record details of
+    UsxA_GenerateTextFeatures.addTranslatableText(key, text) // Record details of which translation keys are used.
     return res
   }
 

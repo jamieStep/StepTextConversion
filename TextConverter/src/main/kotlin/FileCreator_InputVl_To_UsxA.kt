@@ -1,11 +1,11 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperStandardUsx
+import org.stepbible.textconverter.support.bibledetails.TextStructureUsxForUseWhenConvertingToEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
@@ -30,7 +30,7 @@ import kotlin.collections.HashMap
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorInputVlToUsxA: TextConverterProcessor
+object FileCreator_InputVl_To_UsxA: ProcessingChainElement
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -43,24 +43,18 @@ object TextConverterProcessorInputVlToUsxA: TextConverterProcessor
   /****************************************************************************/
   override fun banner () = "Converting VL to USX"
   override fun getCommandLineOptions(commandLineProcessor: CommandLineProcessor) {}
-
-
-  /****************************************************************************/
-  override fun prepare ()
-  {
-    StepFileUtils.deleteFolder(StandardFileLocations.getInternalUsxAFolderPath())
-    StepFileUtils.createFolderStructure(StandardFileLocations.getInternalUsxAFolderPath())
-  }
+  override fun pre () = StepFileUtils.deleteFolder(FileLocations.getInternalUsxAFolderPath())
+  override fun takesInputFrom () = Pair(FileLocations.getInputVlFolderPath(), FileLocations.getFileExtensionForVl())
 
 
   /****************************************************************************/
   override fun process ()
   {
-    val inFiles = StepFileUtils.getMatchingFilesFromFolder(StandardFileLocations.getInputVlFolderPath(), ".*\\.txt".toRegex()).map { it.toString() }
+    StepFileUtils.createFolderStructure(FileLocations.getInternalUsxAFolderPath())
+    val inFiles = StepFileUtils.getMatchingFilesFromFolder(FileLocations.getInputVlFolderPath(), ".*\\.txt".toRegex()).map { it.toString() }
     if (inFiles.isEmpty()) throw StepException("Expecting VL files, but none available.")
-    val outFolder = StandardFileLocations.getInternalUsxAFolderPath()
+    val outFolder = FileLocations.getInternalUsxAFolderPath()
     inFiles.forEach { doIt(outFolder, it) }
-    BibleBookAndFileMapperStandardUsx.repopulate()
   }
 
 
@@ -251,7 +245,7 @@ object TextConverterProcessorInputVlToUsxA: TextConverterProcessor
 
 
   /****************************************************************************/
-  private class ParsedLine (mc: MatchResult, rawLine: String, processor: TextConverterProcessorInputVlToUsxA)
+  private class ParsedLine (mc: MatchResult, rawLine: String, processor: FileCreator_InputVl_To_UsxA)
   {
     val m_UbsBookAbbreviation: String
     val m_VernacularBookAbbreviation: String

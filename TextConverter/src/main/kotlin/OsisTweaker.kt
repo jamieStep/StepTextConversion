@@ -1,7 +1,7 @@
 /**********************************************************************************************************************/
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -60,7 +60,7 @@ object OsisTweaker
   {
     m_Document = Dom.getDocument(inputFilePath)
     doChanges()
-    Dom.outputDomAsXml(m_Document, StandardFileLocations.getInternalTempOsisFilePath(), null)
+    Dom.outputDomAsXml(m_Document, FileLocations.getInternalTempOsisFilePath(), null)
   }
 
 

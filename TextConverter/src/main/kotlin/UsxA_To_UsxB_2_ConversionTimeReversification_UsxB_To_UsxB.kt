@@ -1,10 +1,10 @@
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
+import org.stepbible.textconverter.support.bibledetails.TextStructureEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.getExtendedNodeName
@@ -49,7 +49,7 @@ import java.util.*
  * NRSVA compliant.  Or we can leave the text pretty much as-is, and then
  * carry out on-the-fly restructuring within STEPBible.
  *
- * The latter of these is handled by [TextConverterProcessorReversificationAnnotateOnly],
+ * The latter of these is handled by [AddFootnotesOnRuntimeReversification],
  * and the advantages and disadvantages of this approach are discussed there.
  *
  * The approach which performs restructuring within the converter is handled in
@@ -102,7 +102,7 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorXToUsxB_ReversificationProcessor: ValueAddedSupplier()
+object UsxA_To_UsxB_2_ConversionTimeReversification_UsxB_To_UsxB: ValueAddedSupplier()
 {
   /****************************************************************************/
   override fun detailsForStepAbout(): List<String> = listOf(Translations.stringFormatWithLookup("V_reversification_LongDescription_" + StepStringUtils.sentenceCaseFirstLetter(ConfigData["stepReversificationFootnotesLevel"]!!)))
@@ -206,7 +206,7 @@ object TextConverterProcessorXToUsxB_ReversificationProcessor: ValueAddedSupplie
     {
       m_AbbreviatedName = bookName
       m_BookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(m_AbbreviatedName)
-      m_FilePath = BibleBookAndFileMapperEnhancedUsx.getFilePathForBook(bookName) ?: makeBook(bookName)
+      m_FilePath = TextStructureEnhancedUsx.getFilePathForBook(bookName) ?: makeBook(bookName)
       m_Document = Dom.getDocument(m_FilePath)
       when (m_BookNumber)
       {
@@ -298,13 +298,13 @@ object TextConverterProcessorXToUsxB_ReversificationProcessor: ValueAddedSupplie
     fun dontWantTarget (from: String, to: String, message: String)
     {
       if (!crossBookMappings.contains("$from.$to")) return
-      if (BibleStructure.UsxUnderConstructionInstance().bookExists(to)) throw StepException(message)
+      if (TextStructureEnhancedUsx.getBibleStructure().bookExists(to)) throw StepException(message)
     }
 
     fun doWantTarget (from: String, to: String, message: String)
     {
       if (!crossBookMappings.contains("$from.$to")) return
-      if (!BibleStructure.UsxUnderConstructionInstance().bookExists(to)) throw StepException(message)
+      if (!TextStructureEnhancedUsx.getBibleStructure().bookExists(to)) throw StepException(message)
     }
 
     dontWantTarget("dan", "bel", "Need to move text from Dan to Bel, but Bel already exists")
@@ -480,13 +480,13 @@ object TextConverterProcessorXToUsxB_ReversificationProcessor: ValueAddedSupplie
   private fun makeBook (bookAbbreviation: String): String
   {
     val bookName = bookAbbreviation.uppercase()
-    val filePath = Paths.get(StandardFileLocations.getInternalUsxBFolderPath(), "generatedFile_$bookName.usx").toString()
-    BibleBookAndFileMapperEnhancedUsx.addBookDetails(filePath, bookName)
+    val filePath = Paths.get(FileLocations.getInternalUsxBFolderPath(), "generatedFile_$bookName.usx").toString()
+    TextStructureEnhancedUsx.addBookDetails(filePath, bookName)
     File(filePath).printWriter().use { out ->
       out.println("<?xml version='1.0' encoding='UTF-8'?>")
       out.println("<_X_usx version='3.0'>")
       out.println("  <_X_book code='#'/>".replace("#", bookName))
-      for (i in 1 .. BibleStructure.NrsvxInstance().getLastChapterNo(bookName)) makeChapter(out, bookName, i)
+      for (i in 1 .. BibleStructure.makeOsis2modNrsvxSchemeInstance().getLastChapterNo(bookName)) makeChapter(out, bookName, i)
       out.println("</_X_usx>")
     }
 
@@ -1086,7 +1086,7 @@ object TextConverterProcessorXToUsxB_ReversificationProcessor: ValueAddedSupplie
     {
       val nextStart = m_MoveOriginals[i + 1].m_FirstSourceRefKey
       val thisEnd = m_MoveOriginals[i].m_LastSourceRefKey
-      if (!BibleStructure.UsxUnderConstructionInstance().isAdjacent(thisEnd, nextStart)) continue
+      if (!TextStructureEnhancedUsx.getBibleStructure().isAdjacent(thisEnd, nextStart)) continue
 
       val childNodes = m_MoveOriginals[i + 1].m_Container.childNodes
       Dom.addChildren(m_MoveOriginals[i].m_Container, childNodes)

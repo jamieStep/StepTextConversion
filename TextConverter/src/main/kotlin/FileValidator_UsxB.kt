@@ -1,10 +1,9 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperStandardUsx
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
+import org.stepbible.textconverter.support.bibledetails.TextStructureUsxForUseWhenConvertingToEnhancedUsx
+import org.stepbible.textconverter.support.bibledetails.TextStructureEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.reportBookBeingProcessed
@@ -55,17 +54,8 @@ import org.w3c.dom.Node
 * @author ARA 'Jamie' Jamieson
 */
 
-object TextConverterProcessorUsxBValidator: TextConverterProcessor
+object FileValidator_UsxB
 {
-  /****************************************************************************/
-  override fun banner () = "Validating"
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
-  override fun prepare () {}
-  override fun process () = doIt()
-
-
-
-
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -77,12 +67,12 @@ object TextConverterProcessorUsxBValidator: TextConverterProcessor
   /****************************************************************************/
   /* Runs over all files in the UsxB folder, checking each one. */
 
-  private fun doIt ()
+  fun process ()
   {
     if (!C_ConfigurationFlag_DoUsxFinalValidation) return
     m_ImplicitReversificationRenumbers = ReversificationData.getImplicitRenumbers()
     m_ReversificationRowsForAllBooks = ReversificationData.getAllAcceptedRows()
-    BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::checkBook)
+    TextStructureEnhancedUsx.iterateOverSelectedFiles(::checkBook)
   }
 
 
@@ -112,7 +102,7 @@ object TextConverterProcessorUsxBValidator: TextConverterProcessor
        processing having removed 'awkward' verses from the list of those still
        to be handled. */
 
-    if (TextConverterProcessorXToUsxB_ReversificationProcessor.runMe())
+    if (UsxA_To_UsxB_2_ConversionTimeReversification_UsxB_To_UsxB.runMe())
     {
       checkReversifiedEverythingButCanonicalTitles(reversificationDetails)
       checkReversifiedCanonicalTitles(reversificationDetails)
@@ -564,7 +554,7 @@ object TextConverterProcessorUsxBValidator: TextConverterProcessor
                             .replace("\u00a0", " ") // Unicode non-breaking space.
                             .replace("\\s+".toRegex(), " ").trim()
 
-    if (UsxInputPreprocessor.getTextForValidation(contentInput.replace("\\s+".toRegex(), "")) == contentEnhanced.replace("\\s+".toRegex(), "")) return
+    if (contentInput.replace("\\s+".toRegex(), "") == contentEnhanced.replace("\\s+".toRegex(), "")) return
 
     val message = "Verse mismatch:<nl>  Enhanced = '$contentEnhanced'<nl>  Raw      = '$contentInput'<nl>"
     error(enhancedRefKey, message)
@@ -794,7 +784,7 @@ object TextConverterProcessorUsxBValidator: TextConverterProcessor
   {
     fun getMappings (bookNumber: Int)
     {
-      val filePath = BibleBookAndFileMapperStandardUsx.getFilePathForBook(bookNumber) ?: return
+      val filePath = TextStructureUsxForUseWhenConvertingToEnhancedUsx.getFilePathForBook(bookNumber) ?: return
       Logger.suppressWarnings { // Warnings on the raw USX should already have been reported -- I think.
         val document = Dom.getDocument(filePath)
         m_RawBookAnatomies[bookNumber] = getBookAnatomy(document)

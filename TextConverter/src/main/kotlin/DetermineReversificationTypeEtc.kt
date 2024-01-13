@@ -1,10 +1,10 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.BibleStructure
+import org.stepbible.textconverter.support.bibledetails.TextStructureEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleStructuresSupportedByOsis2mod
+import org.stepbible.textconverter.support.bibledetails.TextStructureUsxForUseWhenAnalysingInput
 import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 
 
@@ -15,7 +15,7 @@ import org.stepbible.textconverter.support.configdata.ConfigData
 * @author ARA "Jamie" Jamieson
 */
 
-object TextConverterProcessorDetermineReversificationTypeEtc: TextConverterProcessor
+object DetermineReversificationTypeEtc
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -26,10 +26,7 @@ object TextConverterProcessorDetermineReversificationTypeEtc: TextConverterProce
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun banner () = ""
-  override fun getCommandLineOptions(commandLineProcessor: CommandLineProcessor) {}
-  override fun prepare () {}
-  override fun process () = doIt()
+  fun process () = doIt()
 
 
 
@@ -54,10 +51,15 @@ object TextConverterProcessorDetermineReversificationTypeEtc: TextConverterProce
 
 
     /**************************************************************************/
-    fun reversificationNeeded (): Boolean
+    fun reversificationTypeNeeded (): String
     {
-      val schemeEvaluation = TextConverterProcessorEvaluateVersificationSchemes.evaluateSingleScheme(versificationSchemeWhichWouldBeUsedByCrosswireOsis2mod)!!
-      return schemeEvaluation.booksMissingInOsis2modScheme > 0 || schemeEvaluation.versesMissingInOsis2modScheme > 0 || BibleStructure.UsxUnderConstructionInstance().hasSubverses()
+      val schemeEvaluation = VersificationSchemesEvaluator_InputUsxOrUsxA.evaluateSingleScheme(versificationSchemeWhichWouldBeUsedByCrosswireOsis2mod)
+      return if (null == schemeEvaluation)
+          "runtime" // We're using a bespoke scheme, in which case we do need reversification.  Runtime will do,
+        else if (schemeEvaluation.booksMissingInOsis2modScheme > 0 || schemeEvaluation.versesMissingInOsis2modScheme > 0 || TextStructureEnhancedUsx.getBibleStructure().hasSubverses())
+          "either"
+        else
+          "none"
     }
 
 
@@ -89,33 +91,37 @@ object TextConverterProcessorDetermineReversificationTypeEtc: TextConverterProce
     {
       "conversiontime" ->
       {
-        if (!reversificationNeeded())
+        if ("none" == reversificationTypeNeeded())
           Logger.warning("Conversion-time reversification specified (and honoured), but reversification not needed.")
       }
 
       "runtime" ->
       {
-        if (!reversificationNeeded())
+        if ("none" == reversificationTypeNeeded())
           Logger.warning("Run-time reversification specified (and honoured), but reversification not needed.")
       }
 
       "none" ->
       {
-        if (reversificationNeeded())
+        if ("none" != reversificationTypeNeeded())
           Logger.error("Reversification prohibited but text requires it.")
       }
 
       "tbd" ->
       {
-        if (reversificationNeeded())
+        when(reversificationTypeNeeded())
         {
-          ConfigData["stepForceReversificationType"] = "runtime"
-          Logger.info("Processing has decided to apply runtime reversification.")
-        }
-        else
-        {
-          ConfigData["stepForceReversificationType"] = "none"
-          Logger.info("Processing has decided no reversification is needed.")
+          "none" ->
+          {
+            ConfigData["stepForceReversificationType"] = "none"
+            Logger.info("Processing has decided no reversification is needed.")
+          }
+
+          "runtime", "either" -> // Prefer runtime reversification if it is needed at all
+          {
+            ConfigData["stepForceReversificationType"] = "runtime"
+            Logger.info("Processing has decided to apply runtime reversification.")
+          }
         }
       }
     }
@@ -130,6 +136,7 @@ object TextConverterProcessorDetermineReversificationTypeEtc: TextConverterProce
     val reversificationFootnoteLevel = ConfigData["stepReversificationFootnoteLevel"] ?: "basic"
     ConfigData.delete("stepReversificationFootnotesLevel")
     ConfigData["stepReversificationFootnotesLevel"] = reversificationFootnoteLevel
+
 
 
     /**************************************************************************/
@@ -154,6 +161,7 @@ object TextConverterProcessorDetermineReversificationTypeEtc: TextConverterProce
     {
       "none"           -> ConfigData["stepVersificationScheme"] = versificationSchemeWhichWouldBeUsedByCrosswireOsis2mod
       "conversiontime" -> ConfigData["stepVersificationScheme"] = BibleStructuresSupportedByOsis2mod.canonicaliseSchemeName("NRSV" + if ("a" in versificationSchemeWhichWouldBeUsedByCrosswireOsis2mod.lowercase()) "A" else "")
+      "runtime"        -> ConfigData.delete("stepVersificationScheme")
     }
 
 
@@ -176,7 +184,7 @@ object TextConverterProcessorDetermineReversificationTypeEtc: TextConverterProce
        If the setting is 'tbd', the choice is determined by whether there are
        grounds for needing our version or not. */
 
-    fun groundsForUsingStepOsis2mod () = ConfigData["stepForceReversificationType"]!! !in "none.conversiontime" || BibleStructure.UsxUnderConstructionInstance().versesAreInOrder()
+    fun groundsForUsingStepOsis2mod () = ConfigData["stepForceReversificationType"]!! !in "none.conversiontime" || TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().versesAreInOrder()
 
     var osis2modType = (ConfigData["stepForceOsis2modType"] ?: "tbd").lowercase()
     if (osis2modType.isEmpty()) osis2modType = "tbd"
@@ -214,8 +222,8 @@ object TextConverterProcessorDetermineReversificationTypeEtc: TextConverterProce
     /**************************************************************************/
     ConfigData.delete("stepOsis2modType")
     ConfigData["stepOsis2modType"] = ConfigData["stepForceOsis2modType"]!!
-    Osis2ModInterface.instance().initialise()
-    TestController.setInstance()
+    UsxA_Osis2modInterface.instance().initialise()
+    //TestController.setInstance()
   }
 
 
@@ -246,7 +254,8 @@ object TextConverterProcessorDetermineReversificationTypeEtc: TextConverterProce
     val existsAsBothWithAndWithoutDc= versificationScheme.uppercase().substring(0,3) in "KJV.NRSV"
     if (existsAsBothWithAndWithoutDc)
     {
-      val requiresDc = BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.reversificationTargetsDc()
+      TextStructureUsxForUseWhenAnalysingInput.populateVerseStructure("Analysing input")
+      val requiresDc = TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().hasAnyBooksDc() || ReversificationData.reversificationTargetsDc()
       if (requiresDc && "A" !in versificationScheme)
         versificationScheme += "A"
       else if (!requiresDc)
@@ -255,6 +264,4 @@ object TextConverterProcessorDetermineReversificationTypeEtc: TextConverterProce
 
     return BibleStructuresSupportedByOsis2mod.canonicaliseSchemeName(versificationScheme)
   }
-
-
 }

@@ -1,13 +1,13 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
+import org.stepbible.textconverter.support.bibledetails.TextStructureEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.getExtendedNodeName
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.reportBookBeingProcessed
@@ -44,7 +44,7 @@ import javax.xml.validation.SchemaFactory
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorUsxBToOsis : TextConverterProcessor
+object FileCreator_UsxB_To_Osis : ProcessingChainElement
  {
   /****************************************************************************/
   /****************************************************************************/
@@ -58,14 +58,8 @@ object TextConverterProcessorUsxBToOsis : TextConverterProcessor
   override fun banner (): String = "Converting enhanced USX to OSIS"
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
   override fun process () = doIt()
-
-
-  /****************************************************************************/
-  override fun prepare ()
-  {
-    StepFileUtils.deleteFolder(StandardFileLocations.getInternalOsisFolderPath())
-    StepFileUtils.createFolderStructure(StandardFileLocations.getInternalOsisFolderPath())
-  }
+  override fun pre () = StepFileUtils.deleteFolder(FileLocations.getInternalOsisFolderPath())
+  override fun takesInputFrom() = Pair(FileLocations.getInternalUsxBFolderPath(), FileLocations.getFileExtensionForUsx())
 
 
 
@@ -87,15 +81,15 @@ object TextConverterProcessorUsxBToOsis : TextConverterProcessor
   private fun doIt ()
   {
     /**************************************************************************/
-    // XXXBibleStructure.UsxUnderConstructionInstance().populate(StandardFileLocations.getEnhancedUsxFolderPath(), false)
+    StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath())
 
 
 
     /**************************************************************************/
-    Files.newBufferedWriter(Paths.get(StandardFileLocations.getDefaultInternalOsisFilePath())).use { fOut -> // The output OSIS file.
+    Files.newBufferedWriter(Paths.get(FileLocations.getInternalOsisFilePath())).use { fOut -> // The output OSIS file.
       m_Out = fOut
       fileHeader(m_Out)
-      BibleBookAndFileMapperEnhancedUsx.iterateOverSelectedFiles(::processFile)
+      TextStructureEnhancedUsx.iterateOverSelectedFiles(::processFile)
       fileTrailer(m_Out)
     }
     
@@ -122,7 +116,7 @@ object TextConverterProcessorUsxBToOsis : TextConverterProcessor
     val C_DoValidation = false
     if (C_DoValidation)
     {
-      val validationErrors = validateXmlAgainstSchema(StandardFileLocations.getDefaultInternalOsisFilePath())
+      val validationErrors = validateXmlAgainstSchema(FileLocations.getInternalOsisFilePath())
       if (null != validationErrors) Logger.error(validationErrors)
     }
   }
@@ -144,7 +138,7 @@ object TextConverterProcessorUsxBToOsis : TextConverterProcessor
   private fun processLineBreaks ()
   {
     /**************************************************************************/
-    val dom: Document = Dom.getDocument(StandardFileLocations.getDefaultInternalOsisFilePath())
+    val dom: Document = Dom.getDocument(FileLocations.getInternalOsisFilePath())
 
 
 
@@ -189,7 +183,7 @@ object TextConverterProcessorUsxBToOsis : TextConverterProcessor
     val lineBreaks = Dom.findNodesByName(dom.documentElement, "l", false)
         .filter { "l" == Dom.getNodeName(it) && !it.hasChildNodes() }
     lineBreaks.forEach { processLineBreak(it) }
-    Dom.outputDomAsXml(dom, StandardFileLocations.getDefaultInternalOsisFilePath(), null)
+    Dom.outputDomAsXml(dom, FileLocations.getInternalOsisFilePath(), null)
   }
 
 
@@ -462,7 +456,7 @@ object TextConverterProcessorUsxBToOsis : TextConverterProcessor
 
   private fun makeScope(): String?
   {
-    val mapper = BibleBookAndFileMapperEnhancedUsx
+    val mapper = TextStructureEnhancedUsx
     if (mapper.hasFullOt() && mapper.hasFullNt()) return null
     var resOt = ""; if (mapper.hasFullOt()) resOt = "GEN-MAL" else if (mapper.hasOt()) resOt = java.lang.String.join(" ", mapper.getBooksOt())
     var resNt = ""; if (mapper.hasFullNt()) resNt = "MAT-REV" else if (mapper.hasNt()) resNt = java.lang.String.join(" ", mapper.getBooksNt())

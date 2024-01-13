@@ -1,8 +1,7 @@
 /******************************************************************************/
 package org.stepbible.textconverter.support.ref
 
-import org.stepbible.textconverter.support.bibledetails.BibleStructure
-import org.stepbible.textconverter.support.debug.Dbg
+import org.stepbible.textconverter.support.bibledetails.TextStructureEnhancedUsx
 import org.stepbible.textconverter.support.debug.Logger
 
 
@@ -445,7 +444,7 @@ class RefRange: RefCollectionPart
       for (c in Ref.getC(lowRefKey)..Ref.getC(highRefKey))
       {
         refKey = Ref.setC(refKey, c)
-        for (v in 1..BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(refKey))
+        for (v in 1 .. TextStructureEnhancedUsx.getBibleStructure().getLastVerseNo(refKey))
           res.add(Ref.setV(refKey, v))
       }
 
@@ -467,7 +466,7 @@ class RefRange: RefCollectionPart
       for (c in Ref.getC(lowRefKey)..< Ref.getC(highRefKey))
       {
         refKey = Ref.setC(refKey,c)
-        for (v in 1 .. BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(refKey))
+        for (v in 1 .. TextStructureEnhancedUsx.getBibleStructure().getLastVerseNo(refKey))
           res.add(Ref.setV(refKey, v))
       }
 
@@ -491,13 +490,13 @@ class RefRange: RefCollectionPart
       var refKey: RefKey = Ref.clearS(lowRefKey)
       val res: MutableList<RefKey> = ArrayList(1000)
 
-      for (v in 1 .. BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(refKey))
+      for (v in 1 .. TextStructureEnhancedUsx.getBibleStructure().getLastVerseNo(refKey))
         res.add(Ref.setV(refKey, v))
 
       for (c in Ref.getC(lowRefKey) + 1 .. Ref.getC(highRefKey))
       {
         refKey = Ref.setC(refKey,c)
-        for (v in 1 .. BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(refKey))
+        for (v in 1 .. TextStructureEnhancedUsx.getBibleStructure().getLastVerseNo(refKey))
           res.add(Ref.setV(refKey, v))
       }
 
@@ -510,7 +509,7 @@ class RefRange: RefCollectionPart
     /* Verse to verse of same chapter or different chapters. */
 
     if (!Ref.hasS(lowRefKey) && !Ref.hasS(highRefKey))
-      return BibleStructure.UsxUnderConstructionInstance().getRefKeysInRange(lowRefKey, highRefKey)
+      return TextStructureEnhancedUsx.getBibleStructure().getRefKeysInRange(lowRefKey, highRefKey)
 
 
 

@@ -3,7 +3,7 @@ package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import java.io.File
 import java.nio.file.Paths
 import java.util.*
@@ -66,16 +66,17 @@ import java.util.*
  */
 
 /******************************************************************************/
-object TestController: TextConverterProcessor
+object ZZZ_UNUSED_TestController: ProcessingChainElement
 {
   /****************************************************************************/
   override fun banner () = ""
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) = commandLineProcessor.addCommandLineOption("runType", 1, "Type of run.", getTestTypes(), "EvaluationOnly", false)
   override fun process () {}
+  override fun takesInputFrom () = Pair("", "") // To do
 
 
   /****************************************************************************/
-  override fun prepare ()
+  override fun pre ()
   {
     when (ConfigData["stepRunType"]!!.lowercase())
     {
@@ -200,8 +201,8 @@ open class TestControllerSavingFiles: TestControllerSpecialisation() // Ignore t
 
   override fun terminate ()
   {
-    File(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath()).copyTo(File(m_JsonFileCopyLocalPath), overwrite = true)
-    File(StandardFileLocations.getInternalOsisFolderPath()).copyTo(File(m_OsisFileCopyLocalPath), overwrite = true)
+    File(FileLocations.getVersificationStructureForBespokeOsis2ModFilePath()).copyTo(File(m_JsonFileCopyLocalPath), overwrite = true)
+    File(FileLocations.getInternalOsisFolderPath()).copyTo(File(m_OsisFileCopyLocalPath), overwrite = true)
   }
 
 
@@ -243,15 +244,15 @@ open class TestControllerSavingFiles: TestControllerSpecialisation() // Ignore t
   private fun makeGithubUrls ()
   {
     val githubRoot = "https://github.com/jamieStep/StepTextConversion/blob/main/Texts/"
-    val saveFolder = Paths.get(StandardFileLocations.getRootFolderPath(), m_SaveFolderName).toString()
-    val moduleFolderName = File(StandardFileLocations.getRootFolderPath()).name // eg en_NETSLXX.
-    val moduleParentFolderName = File(StandardFileLocations.getRootFolderPath()).parentFile!!.name // eg 'Miscellaneous'.
+    val saveFolder = Paths.get(FileLocations.getRootFolderPath(), m_SaveFolderName).toString()
+    val moduleFolderName = File(FileLocations.getRootFolderPath()).name // eg en_NETSLXX.
+    val moduleParentFolderName = File(FileLocations.getRootFolderPath()).parentFile!!.name // eg 'Miscellaneous'.
     val moduleName = ConfigData["stepModuleName"]
 
-    m_JsonFileCopyLocalPath = Paths.get(saveFolder, moduleName + File(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath()).name).toString()
+    m_JsonFileCopyLocalPath = Paths.get(saveFolder, moduleName + File(FileLocations.getVersificationStructureForBespokeOsis2ModFilePath()).name).toString()
     m_JsonCopyFileGithubUrl = "$githubRoot$moduleParentFolderName/$moduleFolderName/$m_SaveFolderName/${File(m_JsonFileCopyLocalPath).name}"
 
-    m_OsisFileCopyLocalPath = Paths.get(saveFolder, moduleName + File(StandardFileLocations.getInternalOsisFolderPath()).name).toString()
+    m_OsisFileCopyLocalPath = Paths.get(saveFolder, moduleName + File(FileLocations.getInternalOsisFolderPath()).name).toString()
     m_OsisCopyFileGithubUrl = "$githubRoot$moduleParentFolderName/$moduleFolderName/$m_SaveFolderName/${File(m_OsisFileCopyLocalPath).name}"
   }
 

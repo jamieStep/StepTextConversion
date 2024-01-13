@@ -1,6 +1,6 @@
 package org.stepbible.textconverter.support.bibledetails
 
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.Ref
@@ -17,6 +17,16 @@ import kotlin.math.abs
 /******************************************************************************/
 /**
  * Base class for details of chapter / verse structure of Bibles.
+ *
+ * This is used for two purposes -- to hold the structure details of a
+ * collection of USX files, or to hold the details of one of Crosswire
+ * osis2mod's built-in versification schemes.
+ *
+ * You should never need to instantiate this class directly.  For USX files,
+ * there are instances of [TextStructure] for the various folders, which
+ * mediate access to the functionality here -- you can get at it using
+ * [TextStructure.getBibleStructure].  For the osis2mod schemes ...
+ * $$$$$$$$$
  *
  * Via derived classes, you can use this to hold the structure of a populated
  * USX or OSIS text; or you can use it to hold the structure of one of the
@@ -185,67 +195,6 @@ abstract class BibleStructure
 
     /**************************************************************************/
     /**
-     * Acts as a singleton for a USX structure.  The intention here is that this
-     * might be used to retain information about the raw USX (separate from
-     * information about the USX under construction), but whether or how you
-     * use it is up to you.
-     *
-     * @return Instance.
-     */
-
-    fun UsxRawInstance (): BibleStructureUsx
-    {
-      if (null == m_InstanceUsxRaw)
-        m_InstanceUsxRaw = BibleStructureUsx()
-        return m_InstanceUsxRaw!!
-    }
-
-    private var m_InstanceUsxRaw: BibleStructureUsx?  = null
-
-
-    /**************************************************************************/
-    /**
-     * Acts as a singleton a USX structure.  The intention here is that this
-     * might be used to retain information about the USX under construction
-     * (separate from information about the raw USX), but whether or how you
-     * use it is up to you.
-     *
-     * @return Instance.
-     */
-
-    fun UsxUnderConstructionInstance (): BibleStructureUsx
-    {
-      if (null == m_InstanceUsxUnderConstruction)
-        m_InstanceUsxUnderConstruction = BibleStructureUsx()
-      return m_InstanceUsxUnderConstruction!!
-    }
-
-    private var m_InstanceUsxUnderConstruction: BibleStructureUsx?  = null
-
-
-    /**************************************************************************/
-    /**
-     * Creates and or returns an instance of BibleStructureOsis2ModScheme which
-     * contains either NRSV or NRSVA data, according to whether or not the text
-     * under construction contains the DC.  (Cannot be called until the
-     * BibleStructure details for the text under construction have been
-     * established.)
-     *
-     * @return Instance.
-     */
-
-    fun NrsvxInstance (): BibleStructureOsis2ModScheme
-    {
-      if (null == m_BibleStructureNrsvxInstance)
-        m_BibleStructureNrsvxInstance = Osis2modSchemeInstance(if (m_InstanceUsxUnderConstruction!!.hasAnyBooksDc()) "nrsva" else "nrsv", true)
-      return m_BibleStructureNrsvxInstance!!
-    }
-
-    private var m_BibleStructureNrsvxInstance : BibleStructureOsis2ModScheme? = null
-
-
-    /**************************************************************************/
-    /**
     * Returns an instance for a given osis2mod scheme.  (The name supplied need
     * not be in canonical form -- it is converted to canonical form within the
     * method.)
@@ -260,25 +209,36 @@ abstract class BibleStructure
     * case the call acts as a singleton.
     *
     * @param schemeName
-    * @param retain True if you want to retain the data rather than rebuild it if
-    *               it is called for again.
     * @return Instance.
     */
 
-    fun Osis2modSchemeInstance (schemeName: String, retain: Boolean): BibleStructureOsis2ModScheme
+    fun makeOsis2modSchemeInstance (schemeName: String): BibleStructureOsis2ModScheme
     {
       val canonicalSchemeName = BibleStructuresSupportedByOsis2mod.canonicaliseSchemeName(schemeName)
       var res = m_RetainedOsis2modSchemes[canonicalSchemeName]
       if (null == res)
       {
         res = BibleStructureOsis2ModScheme(canonicalSchemeName)
-        if (retain) m_RetainedOsis2modSchemes[canonicalSchemeName] = res
+        m_RetainedOsis2modSchemes[canonicalSchemeName] = res
       }
 
       return res
     }
 
     private val m_RetainedOsis2modSchemes: MutableMap<String, BibleStructureOsis2ModScheme> = mutableMapOf()
+
+
+    /****************************************************************************/
+    /**
+    * Returns details for the osis2mod scheme which represents either NRSV or
+    * NRSVA, depending upon whether or not we are working with a text which
+    * contains DC books.
+    *
+    * @return Details of osis2mod scheme.
+    */
+
+    fun makeOsis2modNrsvxSchemeInstance() = makeOsis2modSchemeInstance("NRSV" + (if (TextStructureUsxForUseWhenAnalysingInput.hasDc()) "A" else ""))
+
 
 
     /****************************************************************************/
@@ -333,16 +293,17 @@ abstract class BibleStructure
   * is marked 'open' mainly so that inheriting classes (and in particular,
   * BibleStructureOsis2ModScheme) can ensure that it doesn't get called.
   *
+  * @param prompt Output to screen as part of progress indicator.
   * @param doc
-  * @param collection 'raw', 'enhanced', etc -- used to clarify output messages.
   * @param wantWordCount True if we need to accumulate the word count.
   * @param filePath: Optional: used for debugging and progress reporting only.
   * @param bookName USX abbreviation.
   */
 
-  open fun addFromDom (doc: Document, collection: String, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
+  open fun addFromDom (prompt: String, doc: Document, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
   {
-    if (null != bookName) Dbg.reportProgress("  Determining $collection Bible structure for ${bookName.uppercase()}")
+    m_Populated = true
+    if (null != bookName) Dbg.reportProgress("  $prompt: Determining Bible structure for ${bookName.uppercase()}")
     m_CollectingWordCounts = wantWordCount
     if (null != bookName && null != filePath) m_BookAbbreviationToFilePathMappings[bookName.lowercase()] = filePath
     preprocess(doc)
@@ -351,50 +312,15 @@ abstract class BibleStructure
   }
 
 
-  /****************************************************************************/
-  /**
-  * Adds the data from a given file to the current data structures.
-  *
-  * @param filePath
-  * @param collection 'raw', 'enhanced', etc -- used to clarify output messages.
-  * @param wantWordCount True if we need to accumulate the word count.
-  * @param bookName USX abbreviation.
- */
-
-  fun addFromFile (filePath: String, collection: String, wantWordCount: Boolean, bookName: String? = null)
-  {
-    addFromDom(Dom.getDocument(filePath, false), collection, wantWordCount, filePath, bookName)
-  }
-
 
   /****************************************************************************/
   /**
-  * USE WITH CAUTION: Indicates that the instance has been populated with
-  * _something_.  It does not follow that it is necessarily up to date, nor
-  * that it has been populated with anything more than a single book.
+  * Returns an indication of whether or not the instance has been populated.
   *
-  * @return True if already populated.
+  * @return True if populated.
   */
 
-  fun alreadyPopulated (): Boolean
-  {
-    return m_Text.m_Content.m_ContentMap.isNotEmpty()
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Returns the path to the file which contains a given book, or null if not
-  * found.
-  *
-  * @param bookAbbreviation Abbreviated name of book of interest.
-  * @return File path.
-  */
-
-  fun getFilePathForBook (bookAbbreviation: String): String?
-  {
-    return m_BookAbbreviationToFilePathMappings[bookAbbreviation.lowercase()]
-  }
+  fun isPopulated () = m_Populated
 
 
   /****************************************************************************/
@@ -402,15 +328,21 @@ abstract class BibleStructure
   * Populates the data structures by running over the items identified by the
   * mapper.
   *
+  * You almost certainly don't want to call this without *very* careful thought
+  * -- so far as I know, I've identified all of the places where it would be
+  * appopriate to do so.
+  *
+  * @param prompt Output as part of the progress indicator to make it clear what's going on.
   * @param mapper
-  * @param collection 'raw' or 'enhanced' -- used only to clarify messages.
   * @param wantWordCount
   */
 
-  fun populateFromBookAndFileMapper (mapper: BibleBookAndFileMapper, collection: String, wantWordCount: Boolean = false)
+  fun populateFromBookAndFileMapper (prompt: String, mapper: TextStructure, wantWordCount: Boolean = true)
   {
-    clear()
-    mapper.iterateOverSelectedFiles{ bookName: String, filePath: String -> addFromFile(filePath, collection, wantWordCount, bookName) }
+    if (m_Populated) return
+    mapper.iterateOverSelectedFiles{ bookName: String, filePath: String -> addFromFile(prompt, filePath, wantWordCount, bookName) }
+    if (!m_Populated)
+      throw StepException("BibleStructure populated from empty folder.")
   }
 
 
@@ -418,34 +350,17 @@ abstract class BibleStructure
   /**
   * Clears the data structures and adds the data from a given file.
   *
+  * @param prompt Output to screen as part of progress indicator.
   * @param doc
-  * @param collection 'raw', 'enhanced', etc -- used to clarify output messages.
   * @param wantWordCount True if we need to accumulate the word count.
   * @param filePath: Optional: used for debugging and progress reporting only.
   * @param bookName USX abbreviation.
   */
 
-  fun populateFromDom (doc: Document, collection: String, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
+  fun populateFromDom (prompt: String, doc: Document, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
   {
     clear()
-    addFromDom(doc, collection, wantWordCount, bookName)
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Clears the data structures and adds the data from a given file.
-  *
-  * @param filePath
-  * @param collection 'raw', 'enhanced', etc -- used to clarify output messages.
-  * @param wantWordCount True if we need to accumulate the word count.
-  * @param bookName USX abbreviation.
-  */
-
-  fun populateFromFile (filePath: String, collection: String, wantWordCount: Boolean, bookName: String? = null)
-  {
-    clear()
-    addFromFile(filePath, collection, wantWordCount, bookName)
+    addFromDom(prompt = prompt, doc, wantWordCount, bookName = bookName)
   }
 
 
@@ -621,9 +536,9 @@ abstract class BibleStructure
 
 
 
-  open fun otBooksAreInOrder (): Boolean { return MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllBookNumbersOt()) }
-  open fun ntBooksAreInOrder (): Boolean { return MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllBookNumbersNt()) }
-  open fun dcBooksAreInOrder (): Boolean { return MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllBookNumbersDc()) }
+  open fun otBooksAreInOrder (): Boolean { return null == MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllBookNumbersOt()) }
+  open fun ntBooksAreInOrder (): Boolean { return null == MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllBookNumbersNt()) }
+  open fun dcBooksAreInOrder (): Boolean { return null == MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllBookNumbersDc()) }
 
 
 
@@ -635,16 +550,26 @@ abstract class BibleStructure
 
 
 
+  fun getOutOfOrderVerses () : List<RefKey>
+  {
+    var ot = getAllBookNumbersOt().mapNotNull { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }
+    var nt = getAllBookNumbersNt().mapNotNull { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }
+    var dc = getAllBookNumbersDc().mapNotNull { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }
+    return (ot.toSet() union nt.toSet() union dc.toSet()).toList().sorted()
+  }
+
+
+
   fun versesAreInOrder () : Boolean
   {
-    var v = getAllBookNumbersOt().map { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }. firstOrNull { !it }
-    if (null != v) return false
+    var v = getAllBookNumbersOt().mapNotNull { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }
+    if (v.isNotEmpty()) return false
 
-    v = getAllBookNumbersNt().map { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }. firstOrNull { !it }
-    if (null != v) return false
+    v = getAllBookNumbersNt().mapNotNull { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }
+    if (v.isNotEmpty()) return false
 
-    v = getAllBookNumbersDc().map { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }. firstOrNull { !it }
-    if (null != v) return false
+    v = getAllBookNumbersDc().mapNotNull { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }
+    if (v.isNotEmpty()) return false
 
     return true
   }
@@ -663,7 +588,6 @@ abstract class BibleStructure
   fun allChaptersArePresent (b: Int, c: Int = 0, v: Int =0, s: Int = 0): Boolean { return commonAllChaptersArePresent(makeElts(b, 0, 0, 0)) }
   fun allChaptersArePresent (bookRefAsString: String)                  : Boolean { return commonAllChaptersArePresent(makeElts(bookRefAsString)) }
   fun allChaptersArePresent (elts: IntArray)                           : Boolean { return commonAllChaptersArePresent(elts) }
-
 
 
 
@@ -1060,7 +984,7 @@ abstract class BibleStructure
   /****************************************************************************/
   protected open fun commonChaptersAreInOrder (elts: IntArray): Boolean
   {
-    return MiscellaneousUtils.checkInStrictlyAscendingOrder(getBookDescriptor(elts)!!.m_Content.m_ContentMap.keys.toList())
+    return null == MiscellaneousUtils.checkInStrictlyAscendingOrder(getBookDescriptor(elts)!!.m_Content.m_ContentMap.keys.toList())
   }
 
 
@@ -1235,7 +1159,7 @@ abstract class BibleStructure
   /****************************************************************************/
   protected open fun commonVersesAreInOrder (elts: IntArray): Boolean
   {
-    return MiscellaneousUtils.checkInStrictlyAscendingOrder(getChapterDescriptor(elts)!!.m_Content.m_ContentMap.keys.toList())
+    return null == MiscellaneousUtils.checkInStrictlyAscendingOrder(getChapterDescriptor(elts)!!.m_Content.m_ContentMap.keys.toList())
   }
 
 
@@ -1432,6 +1356,7 @@ abstract class BibleStructure
   private val C_Multiplier = RefBase.C_Multiplier.toInt()
   private val m_BookAbbreviationToFilePathMappings: MutableMap<String, String> = mutableMapOf()
   private var m_CollectingWordCounts = false
+  private var m_Populated = false // Used to make sure we don't use the facilities without first populating things.
   protected lateinit var m_RefRangeParser: (String) -> RefRange  // A routine to parse individual references.
   private var m_Text = TextDescriptor() // The root of the structure.
 
@@ -1516,6 +1441,22 @@ abstract class BibleStructure
   protected class VerseDescriptor
   {
     var m_WordCount: Int = 0
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Adds the data from a given file to the current data structures.
+  *
+  * @param prompt Output to screen as part of progress indicator.
+  * @param filePath
+  * @param wantWordCount True if we need to accumulate the word count.
+  * @param bookName USX abbreviation.
+ */
+
+  private fun addFromFile (prompt: String, filePath: String, wantWordCount: Boolean, bookName: String? = null)
+  {
+    addFromDom(prompt = prompt, Dom.getDocument(filePath, false), wantWordCount, filePath = filePath, bookName = bookName)
   }
 
 
@@ -1987,17 +1928,17 @@ open class BibleStructureUsx: BibleStructure()
 
 /******************************************************************************/
 /**
-* osis2mod scheme.
+* osis2mod scheme for any selected scheme.
 */
 
-class BibleStructureOsis2ModScheme (scheme: String): BibleStructure()
+open class BibleStructureOsis2ModScheme (scheme: String): BibleStructure()
 {
   /****************************************************************************/
   private val m_Scheme: String
 
 
   /****************************************************************************/
-  override fun addFromDom (doc: Document, collection: String, wantWordCount: Boolean, filePath: String?, bookName: String?) { throw StepException("Can't populate osis2mod scheme from text.") }
+  override fun addFromDom (prompt: String, doc: Document, wantWordCount: Boolean, filePath: String?, bookName: String?) { throw StepException("Can't populate osis2mod scheme from text.") }
   override fun commonGetWordCount(elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
   override fun commonGetWordCountForCanonicalTitle(elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
   override fun getRelevanceOfNode (node: Node): NodeRelevance { throw StepException("getRelevanceOfNode should not be being called on an osis2mod scheme.") }
@@ -2011,7 +1952,7 @@ class BibleStructureOsis2ModScheme (scheme: String): BibleStructure()
   private fun parseData ()
   {
     /**************************************************************************/
-    fun processLine (line: String)
+    fun processLine (line: String, retain: Boolean = false)
     {
       val (schemeName, bookAbbreviation, verseCountDetails) = line.split('/')
       val bookNo = BibleBookNamesUsx.nameToNumber(bookAbbreviation.trim())
@@ -2028,7 +1969,7 @@ class BibleStructureOsis2ModScheme (scheme: String): BibleStructure()
 
     /**************************************************************************/
     val selector = "$m_Scheme/"
-    StandardFileLocations.getInputStream(StandardFileLocations.getOsis2modVersificationDetailsFilePath(), null)!!.bufferedReader().use { it.readText() } .lines()
+    FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath(), null)!!.bufferedReader().use { it.readText() } .lines()
       .map { it.trim() }
       .filter { it.startsWith(selector) } // Limit to the lines for this text.
       .forEach { processLine(it) }

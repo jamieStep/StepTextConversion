@@ -259,8 +259,8 @@ object EmptyVerseHandler
        the wrong order, and we don't want to process these, because that would
        give us duplicates.  Hence the 'filter' below. */
 
-    val holes = BibleStructure.UsxUnderConstructionInstance().getMissingEmbeddedVersesForBook(bookNo)
-      .filter { !BibleStructure.UsxUnderConstructionInstance().verseExistsWithOrWithoutSubverses(it) }
+    val holes = TextStructureEnhancedUsx.getBibleStructure().getMissingEmbeddedVersesForBook(bookNo)
+      .filter { !TextStructureEnhancedUsx.getBibleStructure().verseExistsWithOrWithoutSubverses(it) }
     if (holes.isEmpty()) return false
 
 
@@ -287,10 +287,10 @@ object EmptyVerseHandler
   {
     /**************************************************************************/
     var res = false
-    val osis2modStructure = BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationScheme"]!!, true)
+    val osis2modStructure = BibleStructure.makeOsis2modSchemeInstance(ConfigData["stepVersificationScheme"]!!)
     val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.findNodeByName(document,"_X_book")!!["code"]!!)
-    BibleStructure.UsxUnderConstructionInstance().populateFromDom(document, wantWordCount = false, collection = "enhanced")
-    val diffs = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), osis2modStructure)
+    TextStructureEnhancedUsx.getBibleStructure().populateFromDom("osis2mod scheme", document, wantWordCount = false)
+    val diffs = BibleStructure.compareWithGivenScheme(bookNumber, TextStructureEnhancedUsx.getBibleStructure(), osis2modStructure)
 
 
 
@@ -316,7 +316,7 @@ object EmptyVerseHandler
       if (!C_ConfigurationFlags_GenerateVersesAtEndsOfChapters)
       {
         val x = versesOfInterest.toSet()
-        versesOfInterest = versesOfInterest.filter { Ref.getV(it) < BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(it) }
+        versesOfInterest = versesOfInterest.filter { Ref.getV(it) < TextStructureEnhancedUsx.getBibleStructure().getLastVerseNo(it) }
         val delta = x - versesOfInterest.toSet()
         //delta.sorted().forEach { Dbg.d(">>>>> " + Ref.rd(it)).toString() }
       }

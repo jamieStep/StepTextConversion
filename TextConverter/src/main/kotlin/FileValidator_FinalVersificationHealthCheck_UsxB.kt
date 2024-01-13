@@ -2,7 +2,7 @@ package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
@@ -47,7 +47,7 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterVersificationHealthCheck
+object FileValidator_FinalVersificationHealthCheck_UsxB
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -64,7 +64,7 @@ object TextConverterVersificationHealthCheck
 
   fun checkAllBooks ()
   {
-    StepFileUtils.getMatchingFilesFromFolder(StandardFileLocations.getInternalUsxBFolderPath(), ".*\\.usx".toRegex())
+    StepFileUtils.getMatchingFilesFromFolder(FileLocations.getInternalUsxBFolderPath(), ".*\\.usx".toRegex())
       .forEach { checkBook(Dom.getDocument(it.toString())) }
   }
 
@@ -248,11 +248,11 @@ object TextConverterVersificationHealthCheck
     if ("step" == ConfigData["stepOsis2modType"]!!)
     {
       val chapterRefKey = Ref.rdUsx(chapterSid).toRefKey_bc()
-      missings = BibleStructure.UsxUnderConstructionInstance().getMissingEmbeddedVersesForChapter(Ref.getB(chapterRefKey), Ref.getC(chapterRefKey)) .map { Ref.getV(it) } as MutableList<Int>
+      missings = TextStructureEnhancedUsx.getBibleStructure().getMissingEmbeddedVersesForChapter(Ref.getB(chapterRefKey), Ref.getC(chapterRefKey)) .map { Ref.getV(it) } as MutableList<Int>
     }
     else
     {
-      for (i in 1 .. BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationScheme"]!!, true).getLastVerseNo(chapterSid))
+      for (i in 1 .. BibleStructure.makeOsis2modSchemeInstance(ConfigData["stepVersificationScheme"]!!).getLastVerseNo(chapterSid))
         if (null == verseCollection[i])
           missings.add(i)
     }
@@ -298,10 +298,9 @@ object TextConverterVersificationHealthCheck
   private fun checkForMissingAndExcessVerses (document: Document)
   {
     /**************************************************************************/
-    val osis2modSchemeDetails = BibleStructure.Osis2modSchemeInstance(ConfigData["stepVersificationScheme"]!!, true)
+    val osis2modSchemeDetails = BibleStructure.makeOsis2modSchemeInstance(ConfigData["stepVersificationScheme"]!!)
     val bookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(Dom.findNodeByName(document,"_X_book")!!["code"]!!)
-    BibleStructure.UsxUnderConstructionInstance().populateFromDom(document, wantWordCount = false, collection = "enhanced/healthCheck", )
-    val diffs = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), osis2modSchemeDetails)
+    val diffs = BibleStructure.compareWithGivenScheme(bookNumber, TextStructureEnhancedUsx.getBibleStructure(), osis2modSchemeDetails)
 
 
 

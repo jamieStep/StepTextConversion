@@ -20,12 +20,12 @@ import org.w3c.dom.Node
 /**
  * The last part of the process which converts USX to enhanced USX.
  *
- * See [TextConverterProcessorXToUsxB] for details.
+ * See [FileCreator_UsxA_To_UsxB] for details.
  *
  * @author ARA "Jamie" Jamieson
  */
 
-class TextConverterProcessorXToUsxB_PostReversificationProcessor
+class UsxA_To_UsxB_3_PostConversionTimeReversification_InputUsxB_To_UsxB
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -72,10 +72,10 @@ class TextConverterProcessorXToUsxB_PostReversificationProcessor
     changed = changed or forceVersePerLineIfNecessaryMain(document)
     changed = changed or generateFootnotesForElisionMastersMain(document)
     changed = changed or cosmeticChangesMain(document)
-    changed = changed or TextConverterProcessorReversificationAnnotateOnly.process(document, bookName)
+    changed = changed or AddFootnotesOnRuntimeReversification.process(document, bookName)
     changed = changed or tidyUpMain(document)
 
-    TextConverterVersificationHealthCheck.checkBook(document)
+    FileValidator_FinalVersificationHealthCheck_UsxB.checkBook(document)
 
     if (changed) Dom.outputDomAsXml(document, filePath, null)
   }

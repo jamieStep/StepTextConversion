@@ -5,7 +5,7 @@ import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.File
@@ -18,6 +18,24 @@ import kotlin.system.exitProcess
 /******************************************************************************/
 /**
 * Controls the whole of the processing.
+*
+* At the end of processing, two configuration parameters have been set up with
+* information which will be useful later on:
+*
+* - stepProcessingOriginalData will be VL, USX or OSIS.  This represents the
+*   raw data upon which the run was based.  In other words, if InputVl exists,
+*   it will be 'VL'; if InputUsx exists it will be USX< and if neither exists,
+*   it will be OSIS.  With VL, however, the run may not have started from that
+*   folder: VL is always subject to pre-processing to turn it into USX, and if
+*   that USX already exists (and postdates the VL), that may have been used
+*   instead if the command-line parameters permitted it.  Similarly InputUsx
+*   *may* have been pre-processed to produce revised USX, and again if the
+*   revised USX already exists, the run may have started with that.
+*
+* - stepProcessingOriginalDataAdditionalInfo contains additional text
+*   explaining this issue of pre-processing where we have started from the
+*   pre-processed text.  (The parameter will be undefined where we have
+*   started from the raw text.)
 *
 * @author ARA "Jamie" Jamieson
 */
@@ -39,7 +57,9 @@ object TextConverterController
 
   fun process (args: Array<String>)
   {
+    deleteLogFilesEtc()
     initialise(args)
+    determineProcessingSteps()
     runProcessors()
   }
 
@@ -70,6 +90,16 @@ object TextConverterController
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  private fun deleteLogFilesEtc ()
+  {
+    StepFileUtils.deleteFile(FileLocations.getConverterLogFilePath())
+    StepFileUtils.deleteFile(FileLocations.getDebugOutputFilePath())
+    StepFileUtils.deleteFile(FileLocations.getOsisToModLogFilePath())
+    StepFileUtils.deleteFile(FileLocations.getVersificationFilePath())
+  }
+
 
   /****************************************************************************/
   /* This goes on the end of every module we generate.  Some modules can be
@@ -133,228 +163,213 @@ object TextConverterController
 
      I think we can distinguish the following alternative processes:
 
-     1. Start from existing OSIS and 'just' create a module.
+     1. Start from existing OSIS and create a module.
 
      2. Start from existing USX and then create OSIS and module.
 
      3. Start from other format (only VL at present) and then create USX and
         then OSIS and then module.
 
-     2) and 3) are subject to a further complication, in that it may be
-     necessary to break the process after creating the OSIS, so that DIB can
-     modify it; and once that has happened, we then need to resume the
-     processing in order to create the module.
+     4. Start from some point within the processing chain to avoid duplicating
+        unnecessary duplication of effort.
 
-     And it should not be assumed that in case 1) neither USX nor VL exists:
-     we may have created OSIS previously, and simply be updating it without
-     wishing to run the process all the way through from the USX or VL.
+     The user can stipulate which of these is to be applied, the default
+     being option 4.
 
-     And finally there is a further complication, because DIB is not the only
-     one who may need to update the OSIS -- at least at present I may be
-     updating it myself to cater for known issues.
-
-     So what I need is a hopefully robust was of determining which steps are
-     needed, and of handling this break -- a major complication, at least as
-     I write these comments, being that the processing hasn't been written
-     with such a break in mind, and therefore assumes that data remains
-     available in memory from the very beginning right up to the point where
-     a module is available.  (Hopefully by the time you read this, I'll
-     have rejigged things so this is no longer a problem.)
-
-     I deal here purely with determining which processing steps are required,
-     something which I _think_ can be handled purely by a combination of
-     existence and DateModified checks.  (The latter do rely upon it taking
-     longer to carry out a processing step than the granularity of
-     DateModified, but I think that's one second, and processing steps
-     normally _do_ take longer than that.) */
+     The processing here has to validate the selection and then convert this
+     into the actual processing steps to be carried out. */
 
   private fun determineProcessingSteps ()
   {
     /**************************************************************************/
-    /* At present we can evaluate schemes only when starting from InputUsx or
-       InputVl.  The evaluator actually requires USX to run from, so I may need
-       to include TextConverterProcessorInputVlToUsxA here. */
+    /* Things which are handled out of the main processing flow -- evaluations
+       which we can carry out straight away and then exit.  */
 
-    if (ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "no"))
-    {
-      var inputProcessor: TextConverterProcessor? = TextConverterProcessorInputVlToUsxA
-      if (!StepFileUtils.fileOrFolderExists(StandardFileLocations.getInputVlFolderPath()))
-        inputProcessor = null
-      else if (StepFileUtils.folderIsEmpty(StandardFileLocations.getInputVlFolderPath()))
-        inputProcessor = null
-      else if (!StepFileUtils.folderIsEmpty(StandardFileLocations.getInternalUsxAFolderPath()))
-      {
-        val usxFileDate = StepFileUtils.getLatestFileDate(StandardFileLocations.getInternalUsxAFolderPath(), "usx")
-        val vlFileDate = StepFileUtils.getLatestFileDate(StandardFileLocations.getInputVlFolderPath(), "txt")
-        if (usxFileDate > vlFileDate)
-          inputProcessor = null
-      }
-
-      m_Processors = mutableListOf(DbgController, TestController, inputProcessor, TextConverterProcessorEvaluateVersificationSchemes).filterNotNull()
-      return
-    }
+    if (seeIfWeAreCheckingInputDataAgainstPrevious()) exitProcess(0)
+    if (seeIfWeAreEvaluatingSchemes()) exitProcess(0)
 
 
 
     /**************************************************************************/
-    TextConverterProcessorXToSword.setInputSelector("internal") // We _have_ to tell this where to pick up its input -- see the class itself for an explanation.
-
-    val standardFullList: MutableList<Pair<String, TextConverterProcessor>> =
-      mutableListOf(Pair("toUsxAOrNot", TextConverterProcessorInputVlToUsxA), // Processing below may override this, depending upon what kind of input is available.
-                    Pair("determineReversificationType", TextConverterProcessorDetermineReversificationTypeEtc),
-                    Pair("toUsxB", TextConverterProcessorXToUsxB), // Fixed.
-                    Pair("generateFeatureSummary", TextConverterFeatureSummaryGenerator), // Fixed.
-                    Pair("validateUsx", TextConverterProcessorUsxBValidator), // Fixed.
-                    Pair("toOsis", TextConverterProcessorUsxBToOsis), // Fixed.
-                    Pair("toSword", TextConverterProcessorXToSword), // Processing below may need to change this, depending upon whether we want to use supplied OSIS or our own generated OSIS.
-                    Pair("toRepositoryPackage", TextConverterProcessorRepositoryPackageHandler))
+    determineWhereWeAreStartingFrom()
 
 
 
     /**************************************************************************/
-    /* When we know we're starting from InputVl or InputUsx, it gives me
-       slightly more confidence in later processing if I clear the internal
-       folders. */
-       
-    fun deleteAndRecreateInternalFolders ()
-    {
-      StepFileUtils.deleteFolder(StandardFileLocations.getInternalUsxAFolderPath())
-      StepFileUtils.createFolderStructure(StandardFileLocations.getInternalUsxAFolderPath())
-      
-      StepFileUtils.deleteFolder(StandardFileLocations.getInternalUsxBFolderPath())
-      StepFileUtils.createFolderStructure(StandardFileLocations.getInternalUsxBFolderPath())
-    }
+    /* Clear all output files to make sure that if processing fails, we aren't
+       left with previous outputs lying around which we might mistake for the
+       real thing. */
 
-
-    /**************************************************************************/
-    /* Are we forcing things? */
-
-    var force = ConfigData["stepStartProcessFrom"]?.lowercase()
-    if (null != force && "none" != force)
-    {
-      val ix: Int
-
-      if ("vl"   == force && (!StepFileUtils.fileOrFolderExists(StandardFileLocations.getInputVlFolderPath  ()) || StepFileUtils.folderIsEmpty(StandardFileLocations.getInputVlFolderPath  ()))) force = "usx"
-      if ("usx"  == force && (!StepFileUtils.fileOrFolderExists(StandardFileLocations.getInputUsxFolderPath ()) || StepFileUtils.folderIsEmpty(StandardFileLocations.getInputUsxFolderPath  ()))) force = "osis"
-      if ("osis" == force && (!StepFileUtils.fileOrFolderExists(StandardFileLocations.getInputOsisFolderPath()) || StepFileUtils.folderIsEmpty(StandardFileLocations.getInputOsisFolderPath ()))) return
-      when (force)
-      {
-        "vl"   -> { ix = standardFullList.indexOfFirst { it.first == "toUsxAOrNot" }; deleteAndRecreateInternalFolders() }
-        "usx"  -> { ix = standardFullList.indexOfFirst { it.first == "toUsxAOrNot" }; deleteAndRecreateInternalFolders(); standardFullList[ix] = Pair(standardFullList[ix].first, TextConverterProcessorInputUsxToUsxA) }
-        "osis" -> { ix = standardFullList.indexOfFirst { it.first == "toSword" }; TextConverterProcessorXToSword.setInputSelector("input") }
-        else -> throw StepException("Invalid setting for 'startProcessFrom'.")
-      }
-
-      m_Processors = mutableListOf(DbgController, TestController)
-      (m_Processors as MutableList<TextConverterProcessor>).addAll(standardFullList.subList(ix, standardFullList.size).map { it.second })
-      return
-    }
+    m_ElementChainKeys.forEach { m_ElementChain[it]!!.processorToNextElement!!.pre() }
 
 
 
-    /**************************************************************************/
-    /* We now do a series of date- / existence- based checks on various
-       combinations of folder and files.  Recall in what follows that all
-       timestamps are >= 0, and that a stamp of zero means that the
-       corresponding item does not exist. */
+   /**************************************************************************/
+   /* Needed for later processing. */
 
-    val moduleFileDate = StepFileUtils.getLatestFileDate(StandardFileLocations.getInternalSwordFolderPath(), "zip")
-    val inputOsisFileDate = StepFileUtils.getLatestFileDate(StandardFileLocations.getInputOsisFolderPath(), "xml")
-    val inputUsxFileDate = StepFileUtils.getLatestFileDate(StandardFileLocations.getInputUsxFolderPath(), "usx")
-    val inputVlFileDate = StepFileUtils.getLatestFileDate(StandardFileLocations.getInputVlFolderPath(), "txt")
-    val internalUsxAFileDate = StepFileUtils.getLatestFileDate(StandardFileLocations.getInternalUsxAFolderPath(), "usx")
-
-
-
-    /**************************************************************************/
-    fun makeSubListStartingAt (startAt: String)
-    {
-      val ix = standardFullList.indexOfFirst { it.first == startAt }
-      m_Processors = mutableListOf(DbgController, TestController)
-      (m_Processors as MutableList<TextConverterProcessor>).addAll(standardFullList.subList(ix, standardFullList.size).map { it.second })
-    }
-
-
-
-    /**************************************************************************/
-    /* If we have both a module and an _input_ OSIS file, and if the module
-       date exceeds the OSIS date, then there's nothing to do. */
-
-    if (moduleFileDate > inputOsisFileDate && 0L != inputOsisFileDate)
-    {
-      Dbg.reportProgress("")
-      Dbg.reportProgress("********** Module is more recent than OSIS file, so nothing to do. **********")
-      Dbg.reportProgress("")
-      exitProcess(0)
-    }
-
-
-
-    /**************************************************************************/
-    /* If we have an _input_ OSIS file and either no module or an earlier one,
-       then ignore everything else, and assume that we want to generate the
-       module from the input OSIS. */
-
-    if (inputOsisFileDate > moduleFileDate)
-    {
-      TextConverterProcessorXToSword.setInputSelector("input")
-      makeSubListStartingAt("toSword")
-      return
-    }
-
-
-    /**************************************************************************/
-    /* VL goes to UsxA.  If we have a VL and no UsxA, or if the VL is later
-       than the UsxA, we want to rerun everything starting with the VL. */
-
-    if (inputVlFileDate > internalUsxAFileDate)
-    {
-      deleteAndRecreateInternalFolders()
-      val ix = standardFullList.indexOfFirst { it.first == "toUsxAOrNot" }
-      standardFullList[ix] = Pair(standardFullList[ix].first, TextConverterProcessorInputVlToUsxA)
-      TextConverterProcessorXToSword.setInputSelector("internal")
-      makeSubListStartingAt("toUsxAOrNot")
-      return
-    }
-
-
-
-    /**************************************************************************/
-    /* inputUsx also goes to UsxA, so same processing as previous paragraph. */
-
-    if (inputUsxFileDate > internalUsxAFileDate)
-    {
-      deleteAndRecreateInternalFolders()
-      val ix = standardFullList.indexOfFirst { it.first == "toUsxAOrNot" }
-      standardFullList[ix] = Pair(standardFullList[ix].first, TextConverterProcessorInputUsxToUsxA)
-      TextConverterProcessorXToSword.setInputSelector("internal")
-      makeSubListStartingAt("toUsxAOrNot")
-      return
-    }
-
-
-
-    /**************************************************************************/
-    /* That's now considered all of the cases where we are taking into account
-       supplied input.  In all cases, the output data post-dates the input data.
-       so there's nothing to do. */
-
-    Dbg.reportProgress("")
-    Dbg.reportProgress("********** Module is more recent than OSIS file, so nothing to do. **********")
-    Dbg.reportProgress("")
-    exitProcess(0)
+    DetermineReversificationTypeEtc.process()
   }
 
 
   /****************************************************************************/
+  /* Determines the starting point -- either user-requested or determined
+     internally -- and validates etc. */
+
+  private fun determineWhereWeAreStartingFrom ()
+  {
+    /**************************************************************************/
+    /* See if we are being forced to start at a particular location, and if so,
+       perform some rudimentary validation. */
+
+    var whereWeAreStartingFrom =
+      when ((ConfigData["startProcessFrom"] ?: "original+").lowercase().replace("+", ""))
+      {
+        "osis" -> // Forces OSIS -- cf option below.
+        {
+          if (null == m_ElementChain["InputOsis"]!!.folderPath)
+            throw StepException("Requested processing should start with supplied OSIS, but we do not have any.")
+          else
+            "InputOsis"
+        }
+
+        "original" -> // Will accept OSIS, but only if there's no VL or USX.
+        {
+          if (null != m_ElementChain["InputVl"]!!.folderPath)
+            "InputVl"
+          else if (null != m_ElementChain["InputUsx"]!!.folderPath)
+            "InputUsx"
+          else if (null != m_ElementChain["InputOsis"]!!.folderPath)
+            "InputOsis"
+          else
+            throw StepException("No valid input folders from which to take data.")
+        }
+
+        else -> throw StepException("Unexpected value for startProcessFrom") // Don't think we're ever going to get here.
+      }
+
+
+
+    /**************************************************************************/
+    /* If the option was Original+, we need to decide between VL or USX and
+       UsxA. */
+
+    if ('+' in (ConfigData["startProcessFrom"] ?: "original+") && m_ElementChain[whereWeAreStartingFrom]!!.creationDate > m_ElementChain["UsxA"]!!.creationDate)
+      whereWeAreStartingFrom = "UsxA"
+
+
+
+    /**************************************************************************/
+    /* Validate the starting point.  If something later in the chain has
+       a later date, then it's just a warning that you started unnecessarily
+       early.  If anything earlier in the chain has a later date, then it's an
+       error that you're ignoring new data. */
+
+    val folderShortNames = m_ElementChain.keys.toList()
+    val dateOfItemSelected = m_ElementChain[whereWeAreStartingFrom]!!.creationDate
+    val ix = folderShortNames.indexOf(whereWeAreStartingFrom)
+
+    val badFolders = folderShortNames.subList(0, ix).filter { m_ElementChain[it]!!.creationDate > dateOfItemSelected }
+    if (badFolders.isNotEmpty())
+    {
+      val msg = "*** Earlier data in the processing chain has a later datestamp than the item you selected as your starting point: " + badFolders.joinToString(", ") { StepFileUtils.getFileName(m_ElementChain[it]!!.folderPath!!) }
+      Dbg.reportProgress(msg)
+      exitProcess(0)
+    }
+
+    val somethingLaterInTheChainHasALaterDate = folderShortNames.subList(ix + 1, folderShortNames.size).find { m_ElementChain[it]!!.creationDate > dateOfItemSelected }
+    if (null != somethingLaterInTheChainHasALaterDate)
+      Logger.warning("Something later in the processing chain has a later datestamp that the item you started as your selecting point.  This isn't a problem, but you may want to know you started earlier than necessary.")
+
+
+
+    /**************************************************************************/
+    /* Limit the keys to items we actually intend to process. */
+
+    val firstProcessor = m_ElementChainKeys.indexOf(whereWeAreStartingFrom)
+    m_ElementChainKeys = m_ElementChainKeys.subList(firstProcessor, m_ElementChainKeys.size)
+    if ("InputOsis" != whereWeAreStartingFrom) m_ElementChainKeys.remove("InputOsis")
+
+
+
+
+
+    /**************************************************************************/
+    /* Work out the original from which we _could_ have started, regardless of
+       where we actually _have_ set out, and then convert this into a user-
+       friendly representation for use later.  Be careful if you change this,
+       because processing elsewhere checks for a value of "OSIS". */
+
+    when (whereWeAreStartingFrom)
+    {
+      "InputVl"   -> ConfigData["stepProcessingOriginalData"] = "VL"
+      "InputUsx"  -> ConfigData["stepProcessingOriginalData"] = "USX"
+      "InputOsis" -> ConfigData["stepProcessingOriginalData"] = "OSIS"
+
+      "UsxA" ->
+      {
+        ConfigData["stepProcessingOriginalData"] = if (StepFileUtils.isNonEmptyFolder(FileLocations.getInputVlFolderPath())) "VL" else "USX"
+        ConfigData["stepProcessingOriginalDataAdditionalInfo"] = "Pre-processing was previously applied to this format to create USX, and the run used the latter data: it did not start from the raw data."
+      }
+    }
+  }
+
+
+  /****************************************************************************/
+  /* The element chain was initially populated with just the processor objects.
+     I now need to look at each element to see what folder it writes to, and
+     copy the details.  I couldn't do this earlier, because this information
+     relies upon the configuration details having been read, and I use the
+     initial (empty-ish) version of m_ElementChain to get the command-line
+     parameters to let me do that. */
+
+  private fun fillInDetailsInElementChain ()
+  {
+    m_ElementChainKeys.forEach {
+      val elementDetails = m_ElementChain[it]!!
+      val inputDetails = elementDetails.processorToNextElement?.takesInputFrom()
+      if (null != inputDetails)
+      {
+        if (StepFileUtils.isNonEmptyFolder(inputDetails.first))
+        {
+          elementDetails.folderPath = inputDetails.first
+          elementDetails.extension = inputDetails.second
+          elementDetails.creationDate = StepFileUtils.getLatestFileDate(elementDetails.folderPath!!, elementDetails.extension)
+        }
+      }
+    }
+  }
+
+
+  /****************************************************************************/
+  /* Gathers up command line options for all possible processors, plus adds
+     some common ones which might not otherwise turn up. */
+
   private fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
   {
-    m_ProcessorsAll.forEach { it.getCommandLineOptions(commandLineProcessor) }
+     /*************************************************************************/
+     /* From the processing elements. */
+
+     m_ElementChainKeys.forEach { m_ElementChain[it]!!.processorToNextElement!!.getCommandLineOptions(commandLineProcessor) }
+
+
+
+    /*************************************************************************/
+    /* Common or not otherwise available. */
+
     commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
-    commandLineProcessor.addCommandLineOption("reversificationType", 1, "When reversification is to be applied (if at all)", listOf("None", "RunTime", "ConversionTime"), "None", false)
-    commandLineProcessor.addCommandLineOption("reversificationFootnoteLevel", 1, "Type of reversification footnotes", listOf("Basic", "Academic"), "Basic", false)
-    commandLineProcessor.addCommandLineOption("updateReason", 1, "A reason for creating this version of the module (required only if runType is Release and the release arises because of changes to the converter as opposed to a new release from he text suppliers).", null, "Unknown", false)
-    commandLineProcessor.addCommandLineOption("startProcessFrom", 1, "Forces the processing to start from a given stage of input.", listOf("VL", "USX", "OSIS"), "None", false)
+    commandLineProcessor.addCommandLineOption("startProcessFrom", 1, "Forces the processing to start from a given type of input -- see documentation.", listOf("OSIS", "Original", "Original+"), "Original", false)
+    commandLineProcessor.addCommandLineOption("runType", 1, "Type of run.", listOf("Release", "MajorRelease", "MinorRelease", "EvalOnly", "EvaluationOnly"), "EvaluationOnly", true)
+    commandLineProcessor.addCommandLineOption("checkInputsAgainstPreviousModule", 0, "Check whether the current inputs were used to build the existing module.", null, null, false)
+    commandLineProcessor.addCommandLineOption("evaluateSchemesOnly", 0, "Evaluate alternative osis2mod versification schemes only.", null, null, false)
+
+
+
+    /*************************************************************************/
+    /* Debug. */
+
+    commandLineProcessor.addCommandLineOption("dbgAddDebugAttributesToNodes", 0, "Add debug attributes to nodes.", null, "no", false)
+    val commonText = ": 'No' or anything containing 'screen' (output to screen), 'file' (output to debugLog.txt), or both.  Include 'deferred' if you want screen output at the end of the run, rather than as it occurs.  Not case-sensitive."
+    commandLineProcessor.addCommandLineOption("dbgDisplayReversificationRows", 1, "Display selected reversification rows$commonText", null, "no", false)
   }
 
 
@@ -364,7 +379,19 @@ object TextConverterController
   private fun initialise (args: Array<String>)
   {
     /**************************************************************************/
+    makeElementChain()
     initialiseCommandLineArgsAndConfigData(args)
+
+
+
+    /**************************************************************************/
+    when (ConfigData["stepRunType"]!!.lowercase())
+    {
+      "release"      -> { ConfigData["stepReleaseType"] = "tbd"  ; ConfigData.delete("stepRunType"); ConfigData["stepRunType"] = "release" }
+      "majorrelease" -> { ConfigData["stepReleaseType"] = "major"; ConfigData.delete("stepRunType"); ConfigData["stepRunType"] = "release" }
+      "minorrelease" -> { ConfigData["stepReleaseType"] = "minor"; ConfigData.delete("stepRunType"); ConfigData["stepRunType"] = "release" }
+      else           -> { val x = ConfigData["stepRunType"]!!.lowercase(); ConfigData.delete("stepRunType"); ConfigData["stepRunType"] = x }
+    }
 
 
 
@@ -376,24 +403,11 @@ object TextConverterController
     ConfigData["stepModuleName"] = ConfigData.calc_stepModuleNameBase() + ConfigData["stepModuleNameTestRelatedSuffix"] + ConfigData["stepModuleNameAudienceRelatedSuffix"]
 
     if (null == ConfigData["stepVersificationScheme"])                  // Where we are doing runtime reversification, we have had to defer working out the scheme name because we use one of our own making and only now have all the inputs.
-      ConfigData["stepVersificationScheme"] = "v11n_" + ConfigData["stepModuleName"]
-
+      ConfigData["stepVersificationScheme"] = "tbd"
 
 
     /**************************************************************************/
-    determineProcessingSteps()
-
-    if (m_Processors.isEmpty())
-    {
-      Logger.error("No processing steps selected.  Either you have no input data, or the module is up to date already.")
-      return
-    }
-    else
-    {
-      val msg = "Running the following processing steps: " + m_Processors.map { it::class.simpleName } .joinToString(", ")
-      Dbg.reportProgress(msg)
-      Logger.info(msg)
-    }
+    fillInDetailsInElementChain()
   }
 
 
@@ -445,23 +459,58 @@ object TextConverterController
           Paths.get(ConfigData["stepTextConverterDataRoot"]!!, rootFolderPathFromCommandLine).toString()
       }
 
-    StandardFileLocations.initialise(rootFolderPath)
-    ConfigData.load(StandardFileLocations.getStepConfigFileName())
+    FileLocations.initialise(rootFolderPath)
+    ConfigData.load(FileLocations.getStepConfigFileName())
     CommandLineProcessor.copyCommandLineOptionsToConfigData("TextConverter")
 
 
 
     /**************************************************************************/
-    Logger.setLogFile(StandardFileLocations.getConverterLogFilePath())
+    Logger.setLogFile(FileLocations.getConverterLogFilePath())
     Logger.announceAll(true)
+  }
+
+
+  /****************************************************************************/
+  /* Returns a collection of all relevant processors, ordered according to the
+     processing order.  Later I also add information about the latest dates
+     of any associated files, but I can't do that immediately -- I need the
+     table below partly to determine what command-line parameters the program
+     will accept, and until I have managed to parse the command line parameters,
+     I can't locate the data folders in order to check on dates.
+
+     The key for each element is something which identifies the folder which it
+     uses as input (although I've made a deliberate decision to use logical
+     names rather than actual folder names, in case I decide at some point to
+     change the latter).  And each element writes data to the folder which
+     serves as input to the next element.  (The one exception being InputOsis --
+     that serves as a starting point and is not fed from the previous element.)
+
+     Note that the table below remains fixed.  We may not necessarily want to
+     run everything in the chain, but I handle that by maintaining a separate
+     list of the keys for those elements we want to process. */
+
+  private fun makeElementChain ()
+  {
+    m_ElementChain = mutableMapOf()
+    m_ElementChain["InputVl"     ] = ElementDescriptor(FileCreator_InputVl_To_UsxA)
+    m_ElementChain["InputUsx"    ] = ElementDescriptor(FileCreator_InputUsx_To_UsxA)
+    m_ElementChain["UsxA"        ] = ElementDescriptor(FileCreator_UsxA_To_UsxB)
+    m_ElementChain["UsxB"        ] = ElementDescriptor(FileCreator_UsxB_To_Osis)
+    m_ElementChain["InputOsis"   ] = ElementDescriptor(FileCreator_InputOsisToInternalOsis)
+    m_ElementChain["InternalOsis"] = ElementDescriptor(FileCreator_InternalOsis_To_SwordModule)
+    m_ElementChain["SwordModule" ] = ElementDescriptor(FileCreator_SwordModuleEtc_To_RepositoryPackage)
+    m_ElementChainKeys = m_ElementChain.keys.toMutableList()
   }
 
 
   /****************************************************************************/
   /* Runs a single processor and checks for issues. */
 
-  private fun runProcessor (processor: TextConverterProcessor)
+  private fun runProcessor (element: ElementDescriptor)
   {
+    val processor = element.processorToNextElement ?: return
+
     try
     {
       if (processor.banner().isNotEmpty()) Dbg.reportProgress("\n" + processor.banner())
@@ -496,31 +545,130 @@ object TextConverterController
 
   private fun runProcessors ()
   {
-    StepFileUtils.deleteFile(StandardFileLocations.getConverterLogFilePath())
-    StepFileUtils.deleteFile(StandardFileLocations.getDebugOutputFilePath())
-    StepFileUtils.deleteFile(StandardFileLocations.getOsisToModLogFilePath())
-    StepFileUtils.deleteFile(StandardFileLocations.getVersificationFilePath())
-    m_Processors.forEach { it.prepare() }
-    m_Processors.forEach { runProcessor(it)}
+    Logger.info("Running the following steps: " + m_ElementChainKeys.joinToString(", ") + ".")
+    m_ElementChainKeys.forEach { runProcessor(m_ElementChain[it]!!) }
   }
 
 
   /****************************************************************************/
-  private val m_ProcessorsAll: List<TextConverterProcessor> = listOf(
-    DbgController,
-    TestController,
-    TextConverterFeatureSummaryGenerator,
-    TextConverterProcessorEvaluateVersificationSchemes,
-    TextConverterProcessorXToSword,
-    TextConverterProcessorInputUsxToUsxA,
-    TextConverterProcessorInputVlToUsxA,
-    TextConverterProcessorUsxBToOsis,
-    TextConverterProcessorXToUsxB,
-    TextConverterProcessorRepositoryPackageHandler,
-    TextConverterProcessorUsxBValidator
-  )
+  /* Checks to see if we've been called just to check input data against that
+     used on the previous run (if any).  If we have, carries out the necessary
+     processing and exist the program. */
 
-  private lateinit var m_Processors: List<TextConverterProcessor>
+  private fun seeIfWeAreCheckingInputDataAgainstPrevious (): Boolean
+  {
+    if (ConfigData.getAsBoolean("stepCheckInputsAgainstPreviousModule", "no"))
+    {
+      DigestHandler.checkFileDigests()
+      return true
+    }
+
+    return false
+  }
+
+
+  /****************************************************************************/
+  /* Checks to see if we've been called just to evaluate versification
+    schemes. */
+
+  private fun seeIfWeAreEvaluatingSchemes (): Boolean
+  {
+    /**************************************************************************/
+    if (!ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "no"))
+      return false
+
+
+
+    /**************************************************************************/
+    StepFileUtils.deleteFile(FileLocations.getVersificationFilePath())
+
+
+
+    /**************************************************************************/
+    /* If we have VL available, we may need to convert it to USX if it doesn't
+       already exist.  To that end we may also have to create the UsxA folder
+       if that doesn't exist.  Then we need to do the conversion -- but only
+       if we didn't already have stuff in UsxA.  If we did, we want to do the
+       conversion only if teh relative dates of the VL and USX demand it. */
+
+    var inputFolder: String? = null
+    var createdUsxA = false
+
+    if (StepFileUtils.fileOrFolderExists(FileLocations.getInputVlFolderPath()) &&
+        !StepFileUtils.folderIsEmpty(FileLocations.getInputVlFolderPath()))
+    {
+      if (!StepFileUtils.fileOrFolderExists(FileLocations.getInternalUsxAFolderPath()))
+      {
+        createdUsxA = true
+        StepFileUtils.createFolderStructure(FileLocations.getInternalUsxAFolderPath())
+      }
+
+      if (StepFileUtils.getLatestFileDate(FileLocations.getInputVlFolderPath(), FileLocations.getFileExtensionForVl()) >
+          StepFileUtils.getLatestFileDate(FileLocations.getInternalUsxAFolderPath(), FileLocations.getFileExtensionForUsx()))
+        FileCreator_InputVl_To_UsxA.process()
+
+      inputFolder = FileLocations.getInternalUsxAFolderPath()
+    }
+
+
+
+    /**************************************************************************/
+    /* Otherwise, much the same processing, with InputUsx assuming the role
+       of InputVl.  */
+
+    else if (StepFileUtils.fileOrFolderExists(FileLocations.getInputUsxFolderPath()) &&
+             !StepFileUtils.folderIsEmpty(FileLocations.getInputUsxFolderPath()))
+    {
+      inputFolder = FileLocations.getInputUsxFolderPath()
+
+      if (!StepFileUtils.fileOrFolderExists(FileLocations.getInternalUsxAFolderPath()))
+      {
+        createdUsxA = true
+        StepFileUtils.createFolderStructure(FileLocations.getInternalUsxAFolderPath())
+      }
+
+      if (StepFileUtils.getLatestFileDate(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForVl()) >
+          StepFileUtils.getLatestFileDate(FileLocations.getInternalUsxAFolderPath(), FileLocations.getFileExtensionForUsx()))
+      {
+        FileCreator_InputUsx_To_UsxA.process()
+        inputFolder = FileLocations.getInternalUsxAFolderPath()
+      }
+    }
+
+
+
+    /**************************************************************************/
+    /* By this stage we need inputFolder to have been set up.  If it has not,
+       it implies that at best we have only OSIS to work with as an input, and
+       the processing isn't set up to handle that. */
+
+    if (null == inputFolder)
+    {
+      Dbg.reportProgress("Can evaluate versification schemes only where we have VL or USX available")
+      return true
+    }
+
+
+
+    /**************************************************************************/
+    Dbg.reportProgress("Evaluating fit with versification schemes")
+    VersificationSchemesEvaluator_InputUsxOrUsxA.process()
+    if (createdUsxA) StepFileUtils.deleteFolder(FileLocations.getInternalUsxAFolderPath()) // If we created the folder just for evaluation purposes, ditch it again.
+    return true
+  }
+
+
+  /******************************************************************************/
+  private data class ElementDescriptor (var processorToNextElement: ProcessingChainElement?)
+  {
+    var folderPath: String? = null
+    var extension: String = ""
+    var creationDate: Long = -1L
+  }
+
+  private lateinit var m_ElementChain: MutableMap<String, ElementDescriptor>
+  private lateinit var m_ElementChainKeys: MutableList<String>
+
 
 
   /******************************************************************************/

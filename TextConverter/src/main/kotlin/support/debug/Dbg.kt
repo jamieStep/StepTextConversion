@@ -2,10 +2,10 @@
 package org.stepbible.textconverter.support.debug
 
 import org.stepbible.textconverter.ReversificationDataRow
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperStandardUsx
+import org.stepbible.textconverter.support.bibledetails.TextStructureUsxForUseWhenConvertingToEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -154,7 +154,7 @@ object Dbg
   
   fun wantToProcessBook (filePath: String): Boolean
   {
-    val bookNo = BibleBookAndFileMapperStandardUsx.getBookNumberFromFile(filePath)
+    val bookNo = TextStructureUsxForUseWhenConvertingToEnhancedUsx.getBookNumberFromFile(filePath)
     return if (-1 == bookNo) false else wantToProcessBook(bookNo)
   }
 
@@ -255,7 +255,7 @@ object Dbg
 
     if (m_FileOutput.isEmpty()) return
 
-    File(StandardFileLocations.getDebugOutputFilePath()).bufferedWriter().use { out ->
+    File(FileLocations.getDebugOutputFilePath()).bufferedWriter().use { out ->
       out.write(ConfigData["stepModuleName"]!! + ": " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MMM-yy HH:mm")))
       out.newLine(); out.newLine()
       m_FileOutput.groupBy { group -> group.first } .forEach { elt -> elt.value.forEach { out.write(it.first + ": " + it.second); out.newLine() }; out.newLine(); out.newLine() }

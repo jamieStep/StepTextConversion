@@ -3,7 +3,7 @@ package org.stepbible.textconverter.support.configdata
 
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
+import org.stepbible.textconverter.support.bibledetails.TextStructureEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
@@ -505,7 +505,7 @@ object ConfigData
         /************************************************************************/
         try
         {
-            val rawLines = StandardFileLocations.getInputStream(configFilePath, callingFilePath)!!.bufferedReader().use { it.readText() } .lines()
+            val rawLines = FileLocations.getInputStream(configFilePath, callingFilePath)!!.bufferedReader().use { it.readText() } .lines()
             val lines: MutableList<String> = rawLines.map{ it.split("#!")[0].trim() }.filter{ it.isNotEmpty() }.toMutableList() // Ditch comments and remove blank lines.
             for (i in lines.size - 2 downTo 0) // Join continuation lines.
                 if (lines[i].endsWith("\\"))
@@ -1904,7 +1904,7 @@ object ConfigData
     private fun getBookList (otBooks: MutableSet<String>, ntBooks: MutableSet<String>, dcBooks: MutableSet<String>)
     {
       fun process (bookName: String, filePath: String) { getBookList(otBooks, ntBooks, dcBooks, filePath) }
-      BibleBookAndFileMapperEnhancedUsx.iterateOverAllFiles(::process)
+      TextStructureEnhancedUsx.iterateOverAllFiles(::process)
     }
 
 
@@ -1965,7 +1965,7 @@ object ConfigData
   /****************************************************************************/
   fun parseRootFolderName (key: String): String
   {
-    val bits = StandardFileLocations.getRootFolderName().split("_")
+    val bits = FileLocations.getRootFolderName().split("_")
     return when (key.lowercase())
     {
       "steplanguagecode"                   -> return bits[1]

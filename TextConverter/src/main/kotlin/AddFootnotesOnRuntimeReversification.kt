@@ -1,8 +1,6 @@
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
-import org.stepbible.textconverter.support.bibledetails.BibleStructure
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.*
@@ -37,7 +35,7 @@ import org.w3c.dom.Node
  * NRSVA compliant.  Or we can leave the text pretty much as-is, and then
  * carry out on-the-fly restructuring within STEPBible.
  *
- * The former of these is handled by [TextConverterProcessorXToUsxB_ReversificationProcessor],
+ * The former of these is handled by [UsxA_To_UsxB_2_ConversionTimeReversification_UsxB_To_UsxB],
  * and the advantages and disadvantages of this approach are discussed there.
  *
  * The approach which leaves restructuring to be handled within STEPBible is
@@ -70,7 +68,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorReversificationAnnotateOnly
+object AddFootnotesOnRuntimeReversification
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -188,9 +186,6 @@ object TextConverterProcessorReversificationAnnotateOnly
   {
     if (null != m_FootnoteReversificationRows) return // Already initialised.
 
-    BibleStructure.UsxUnderConstructionInstance().clear() // Force USX structure to be re-evaluated, including obtaining word counts.
-    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, collection = "enhanced/reversificationAnnotate", true)
-
     getReversificationNotesLevel() // Determine what kind of footnotes are required on this run.
     m_FootnoteCalloutGenerator = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!)
     //ReversificationData.process() // Read the reversification data.
@@ -214,12 +209,6 @@ object TextConverterProcessorReversificationAnnotateOnly
     if (null != ancientVersions) text += " $ancientVersions"
     return text
   }
-
-
-  /****************************************************************************/
-  private var m_DocumentForWhichWeHaveEmptyVerses: Document? = null
-  private var m_EmptyVersesForGivenDocument: List<Node> = listOf()
-
 
 
   /****************************************************************************/

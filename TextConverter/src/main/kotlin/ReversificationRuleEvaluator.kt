@@ -3,6 +3,7 @@ package org.stepbible.textconverter
 
 import org.stepbible.textconverter.ReversificationData.usxifyFromStepFormat
 import org.stepbible.textconverter.support.bibledetails.BibleStructure
+import org.stepbible.textconverter.support.bibledetails.TextStructureUsxForUseWhenAnalysingInput
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefCollection
@@ -92,11 +93,11 @@ object ReversificationRuleEvaluator
     {
       if (0 == sourceRef.getV()) // Within the reversification data, the canonical title is held as v0, but we need to split that case out for existence checks.
       {
-          if (!BibleStructure.UsxUnderConstructionInstance().hasCanonicalTitle(sourceRef)) return false
+          if (!TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().hasCanonicalTitle(sourceRef)) return false
       }
       else
       {
-        if (!BibleStructure.UsxUnderConstructionInstance().verseOrSubverseExistsAsSpecified(sourceRef)) return false
+        if (!TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().verseOrSubverseExistsAsSpecified(sourceRef)) return false
       }
     }
 
@@ -202,7 +203,7 @@ object ReversificationRuleEvaluator
 
         refs.forEach {
           ref = Ref.rd(it, ref)
-          val thisNWords = if (isTitle) BibleStructure.UsxUnderConstructionInstance().getWordCountForCanonicalTitle(ref.toRefKey_bc()) else BibleStructure.UsxUnderConstructionInstance().getWordCount(ref.toRefKey_bcvs())
+          val thisNWords = if (isTitle) TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().getWordCountForCanonicalTitle(ref.toRefKey_bc()) else TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().getWordCount(ref.toRefKey_bcvs())
 
           when (thisNWords)
           {
@@ -233,7 +234,7 @@ object ReversificationRuleEvaluator
   {
     val msg = "$theMsg ($m_Row)"
     Logger.warning(msg)
-    TextConverterFeatureSummaryGenerator.addReversificationIssue(msg)
+    UsxA_GenerateTextFeatures.addReversificationIssue(msg)
   }
 
 
@@ -271,7 +272,7 @@ object ReversificationRuleEvaluator
       var ref = m_BackstopDefaultRef
       text = text.replace("last", "").replace("=", "").trim()
       ref = RefCollection.rdUsx(usxifyFromStepFormat(text), ref, "v").getFirstAsRef()
-      return BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(ref.toRefKey_bc()) == ref.getV()
+      return TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().getLastVerseNo(ref.toRefKey_bc()) == ref.getV()
     }
 
 
@@ -293,12 +294,12 @@ object ReversificationRuleEvaluator
       {
         text = text.split(":")[0]
         ref = RefCollection.rdUsx(usxifyFromStepFormat(text), ref, "v").getFirstAsRef()
-        res = BibleStructure.UsxUnderConstructionInstance().hasCanonicalTitle(ref)
+        res = TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().hasCanonicalTitle(ref)
       }
       else
       {
         ref = RefCollection.rdUsx(usxifyFromStepFormat(text), ref).getFirstAsRef()
-        res = BibleStructure.UsxUnderConstructionInstance().verseOrSubverseExistsAsSpecified(ref.toRefKey_bcvs())
+        res = TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().verseOrSubverseExistsAsSpecified(ref.toRefKey_bcvs())
       }
 
       return if (invert) !res else res

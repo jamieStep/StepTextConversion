@@ -1,13 +1,14 @@
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.support.bibledetails.BibleBookAndFileMapperStandardUsx
+import org.stepbible.textconverter.support.bibledetails.TextStructureUsxForUseWhenConvertingToEnhancedUsx
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.runCommand
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.Zip
@@ -45,6 +46,13 @@ import kotlin.collections.ArrayList
  * which is currently being processed.  However, there may be cases where it is
  * simpler to create an external pre-processor, and this present class handles
  * the invocation of that.
+ *
+ * This class handles this pre-processing.  If no pre-processing is required,
+ * then it simply copies all input files to the UsxA folder (except that if
+ * the UsxA folder is already fully populated with exact copies of the input
+ * USX files, it doesn't bother).  I'd prefer not to do this copy, but it
+ * gives a measure of uniformity for later processing; without it, there are
+ * just too many potentially fiddly situations to take on board.
  * 
  *
  * 
@@ -131,7 +139,7 @@ import kotlin.collections.ArrayList
  * @author ARA Jamieson
  */
 
-object TextConverterProcessorInputUsxToUsxA: TextConverterProcessor
+object FileCreator_InputUsx_To_UsxA: ProcessingChainElement
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -143,16 +151,10 @@ object TextConverterProcessorInputUsxToUsxA: TextConverterProcessor
 
   /****************************************************************************/
   override fun banner () = ""
-  override fun getCommandLineOptions(commandLineProcessor: CommandLineProcessor) {}
+  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
+  override fun pre () {} // We don't delete anything in advance, because if it turns out there is no pre-processing, we want to retain any files already in UsxA.
   override fun process () = doIt()
-
-
-  /****************************************************************************/
-  override fun prepare ()
-  {
-    StepFileUtils.deleteFolder(StandardFileLocations.getInternalUsxAFolderPath())
-    StepFileUtils.createFolderStructure(StandardFileLocations.getInternalUsxAFolderPath())
-  }
+  override fun takesInputFrom () = Pair(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForUsx())
 
 
 
@@ -168,28 +170,35 @@ object TextConverterProcessorInputUsxToUsxA: TextConverterProcessor
 
   private fun doIt ()
   {
+    /*************************************************************************/
     if (!ConfigData["stepRunnablePreprocessorFilePath"].isNullOrBlank())
     {
+      StepFileUtils.deleteFolder(FileLocations.getInternalUsxAFolderPath())
+      StepFileUtils.createFolderStructure(FileLocations.getInternalUsxAFolderPath())
       Dbg.reportProgress("Pre-processing to USX")
+      TextStructureUsxForUseWhenConvertingToEnhancedUsx // Force initialisation.
       applyRunnablePreprocessor()
     }
     else if (initialiseCallablePreprocessor())
     {
+      StepFileUtils.deleteFolder(FileLocations.getInternalUsxAFolderPath())
+      StepFileUtils.createFolderStructure(FileLocations.getInternalUsxAFolderPath())
       Dbg.reportProgress("Pre-processing to USX")
-      BibleBookAndFileMapperStandardUsx.iterateOverSelectedFiles(::applyCallablePreprocessor)
+      TextStructureUsxForUseWhenConvertingToEnhancedUsx.iterateOverSelectedFiles(::applyCallablePreprocessor)
     }
     else if (initialiseXsltStylesheets())
     {
+      StepFileUtils.deleteFolder(FileLocations.getInternalUsxAFolderPath())
+      StepFileUtils.createFolderStructure(FileLocations.getInternalUsxAFolderPath())
       Dbg.reportProgress("Pre-processing to USX")
-      BibleBookAndFileMapperStandardUsx.iterateOverSelectedFiles(::applyXslt)
+      TextStructureUsxForUseWhenConvertingToEnhancedUsx.iterateOverSelectedFiles(::applyXslt)
     }
     else
-      return
+      copyFilesIfDifferent()
 
 
     /**************************************************************************/
     fillInMissingFiles()
-    BibleBookAndFileMapperStandardUsx.repopulate()
   }
 
 
@@ -200,7 +209,7 @@ object TextConverterProcessorInputUsxToUsxA: TextConverterProcessor
     Dbg.reportProgress("  Preprocessing $bookName")
     val messages = m_MethodPreprocess!!.invoke(m_PreprocessorInstance!!, document) as List<String>?
     processMessages(messages)
-    val outFilePath = Paths.get(StandardFileLocations.getInternalUsxAFolderPath(), Paths.get(filePath).fileName.toString()).toString()
+    val outFilePath = Paths.get(FileLocations.getInternalUsxAFolderPath(), Paths.get(filePath).fileName.toString()).toString()
     Dom.outputDomAsXml(document, outFilePath, null)
   }
 
@@ -217,7 +226,7 @@ object TextConverterProcessorInputUsxToUsxA: TextConverterProcessor
     else
       Dom.applyBasicStylesheet(document, stylesheetContent)
 
-    val outFilePath = Paths.get(StandardFileLocations.getInternalUsxAFolderPath(), Paths.get(filePath).fileName.toString()).toString()
+    val outFilePath = Paths.get(FileLocations.getInternalUsxAFolderPath(), Paths.get(filePath).fileName.toString()).toString()
     Dom.outputDomAsXml(document, outFilePath, null)
   }
 
@@ -228,7 +237,7 @@ object TextConverterProcessorInputUsxToUsxA: TextConverterProcessor
     /**************************************************************************/
     var jarPath = ConfigData["stepCallablePreprocessorFilePath"] ?: return false
     if (jarPath.isEmpty()) return false
-    jarPath = StandardFileLocations.getInputPath(jarPath, null)
+    jarPath = FileLocations.getInputPath(jarPath, null)
 
 
 
@@ -308,8 +317,8 @@ object TextConverterProcessorInputUsxToUsxA: TextConverterProcessor
   private fun applyRunnablePreprocessor ()
   {
     /**************************************************************************/
-    val inFolder = StandardFileLocations.getInputUsxFolderPath()
-    val outFolder = StandardFileLocations.getInternalUsxAFolderPath()
+    val inFolder = FileLocations.getInputUsxFolderPath()
+    val outFolder = FileLocations.getInternalUsxAFolderPath()
 
 
 
@@ -317,7 +326,7 @@ object TextConverterProcessorInputUsxToUsxA: TextConverterProcessor
     val preprocessorPrefix = ConfigData["stepRunnablePreprocessorCommandPrefix"] ?: ""
     var preprocessorFilePath = ConfigData["stepRunnablePreprocessorFilePath"] ?: ""
     if (preprocessorFilePath.isEmpty()) return
-    preprocessorFilePath = StandardFileLocations.getInputPath(preprocessorFilePath, null) // Expand out things like $root etc.
+    preprocessorFilePath = FileLocations.getInputPath(preprocessorFilePath, null) // Expand out things like $root etc.
 
 
 
@@ -357,7 +366,7 @@ object TextConverterProcessorInputUsxToUsxA: TextConverterProcessor
 
     val bookAbbreviations = getBookNamesToBeProcessed()
     val bookDetails = bookAbbreviations.joinToString("||") {
-      it + "::" + File(BibleBookAndFileMapperStandardUsx.getFilePathForBook(it)!!).name
+      it + "::" + File(TextStructureUsxForUseWhenConvertingToEnhancedUsx.getFilePathForBook(it)!!).name
     }
 
     command.add("\"$outFolder\"")
@@ -368,14 +377,52 @@ object TextConverterProcessorInputUsxToUsxA: TextConverterProcessor
 
 
   /****************************************************************************/
+  /* For use where we are applying no pre-processing.  Checks to see if the
+     files in the InputUsx and UsxA folders are different.  If so, clears out
+     UsxA and copies all of the files across.  I'd prefer not to have to do
+     this, but it's just too complicated trying to work out the implications
+     where we either may or may not have UsxA. */
+
+  private fun copyFilesIfDifferent ()
+  {
+    val inputUsxFiles = StepFileUtils.getMatchingFilesFromFolder(FileLocations.getInputUsxFolderPath(), (".*\\." + FileLocations.getFileExtensionForUsx()).toRegex())
+      .map { StepFileUtils.getFileName(it)}
+      .toSet()
+
+    val usxAFiles: Set<String> =
+      if (StepFileUtils.fileOrFolderExists(FileLocations.getInternalUsxAFolderPath()))
+        StepFileUtils.getMatchingFilesFromFolder(FileLocations.getInternalUsxAFolderPath(), (".*\\." + FileLocations.getFileExtensionForUsx()).toRegex())
+          .map { StepFileUtils.getFileName(it)}
+          .toSet()
+      else
+       setOf()
+
+    var needToCopy = (usxAFiles - inputUsxFiles).isNotEmpty() || (inputUsxFiles - usxAFiles).isNotEmpty()
+    if (!needToCopy)
+      needToCopy = usxAFiles.any { MiscellaneousUtils.getSha256(Paths.get(FileLocations.getInternalUsxAFolderPath(), it).toString()) !=
+                                   MiscellaneousUtils.getSha256(Paths.get(FileLocations.getInputUsxFolderPath(), it).toString()) }
+
+    if (needToCopy)
+    {
+      StepFileUtils.deleteFolder(FileLocations.getInternalUsxAFolderPath())
+      StepFileUtils.createFolderStructure(FileLocations.getInternalUsxAFolderPath())
+
+      inputUsxFiles.forEach { StepFileUtils.copyFile(Paths.get(FileLocations.getInternalUsxAFolderPath(), it).toString(),
+                                                     Paths.get(FileLocations.getInputUsxFolderPath(), it).toString())}
+
+    }
+  }
+
+
+  /****************************************************************************/
   /* Copies from input to output any files which were requested but which the
      pre-processor has not created. */
 
   private fun fillInMissingFiles ()
   {
     val bookDetails = getBookNamesToBeProcessed()
-    val outFolder = StandardFileLocations.getInternalUsxAFolderPath()
-    bookDetails.map { Pair(it, BibleBookAndFileMapperStandardUsx.getFilePathForBook(it)) } // Book abbreviation plus input file path if the file exists.
+    val outFolder = FileLocations.getInternalUsxAFolderPath()
+    bookDetails.map { Pair(it, TextStructureUsxForUseWhenConvertingToEnhancedUsx.getFilePathForBook(it)) } // Book abbreviation plus input file path if the file exists.
                .filter { null != it.second } // Remove entries for books which do not exist in the input.
                .map { Pair(Paths.get(outFolder, Paths.get(it.second!!).fileName.toString()).toString(), it.second) } // Input file path, output file path.
                .filterNot { StepFileUtils.fileOrFolderExists(it.first) } // Remove entries where the output file exists.
@@ -389,7 +436,7 @@ object TextConverterProcessorInputUsxToUsxA: TextConverterProcessor
 
   private fun getBookNamesToBeProcessed (): List<String>
   {
-    val allAvailableBooks = BibleBookAndFileMapperStandardUsx.getBookNumbersInOrder()
+    val allAvailableBooks = TextStructureUsxForUseWhenConvertingToEnhancedUsx.getBookNumbersInOrder()
 
     val bookNumbersToBeProcessed =
       if (Dbg.getBooksToBeProcessed().isEmpty())
@@ -403,8 +450,6 @@ object TextConverterProcessorInputUsxToUsxA: TextConverterProcessor
     return bookNumbersToBeProcessed.sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it).lowercase() }
   }
 
-
-  /****************************************************************************/
 
   /****************************************************************************/
   private var m_MethodGetTextForValidation: Method? = null

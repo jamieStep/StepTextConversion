@@ -1,11 +1,9 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
-//import org.apache.commons.codec.digest.DigestUtils
-//import org.apache.commons.codec.digest.MessageDigestAlgorithms.SHA_256
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
@@ -25,7 +23,7 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterProcessorWithInputSelector
+object FileCreator_InternalOsis_To_SwordModule : ProcessingChainElement
  {
   /****************************************************************************/
   /****************************************************************************/
@@ -37,6 +35,7 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
 
   /****************************************************************************/
   override fun banner () = "Converting OSIS to Sword"
+  override fun takesInputFrom(): Pair<String, String> = Pair(FileLocations.getInternalOsisFolderPath(), FileLocations.getFileExtensionForOsis())
 
 
   /****************************************************************************/
@@ -44,22 +43,15 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
   {
     commandLineProcessor.addCommandLineOption("manualOsis2mod", 0, "Run osis2mod manually (useful where osis2mod fails to complete under control of the converter).", null, "n", false)
     commandLineProcessor.addCommandLineOption("forceOsis2modType", 0, "Force a particular version of osis2mod to be used (as opposed to letting the converter decide).", listOf("crosswire", "step"), null, false)
+    commandLineProcessor.addCommandLineOption("updateReason", 1, "A reason for creating this version of the module (required only if runType is Release and the release arises because of changes to the converter as opposed to a new release from he text suppliers).", null, "Unknown", false)
   }
 
 
   /****************************************************************************/
-  override fun prepare ()
+  override fun pre ()
   {
-    StepFileUtils.deleteFolder(StandardFileLocations.getInternalSwordFolderPath())
-    StepFileUtils.createFolderStructure(StandardFileLocations.getInternalSwordFolderPath())
-    StepFileUtils.createFolderStructure(StandardFileLocations.getSwordConfigFolderPath())
-    StepFileUtils.createFolderStructure(StandardFileLocations.getInternalSwordFolderPath())
-    StepFileUtils.createFolderStructure(StandardFileLocations.getTextFeaturesFolderPath())
-
-    StepFileUtils.deleteFolder(StandardFileLocations.getInternalTempOsisFolderPath())
-    StepFileUtils.createFolderStructure(StandardFileLocations.getInternalTempOsisFolderPath())
-
-    StepFileUtils.deleteFile(StandardFileLocations.getOsisToModLogFilePath())
+    StepFileUtils.deleteFolder(FileLocations.getInternalSwordFolderPath())
+    StepFileUtils.deleteFolder(FileLocations.getInternalTempOsisFolderPath())
   }
 
 
@@ -67,18 +59,25 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
   override fun process ()
   {
     /**************************************************************************/
-    /* Apply any tweaks.  The resulting file is written to a temporary
-       location, so we need to pick it up from there. */
-
-    val osisFilePath = if ("internal" == m_InputSelector) StandardFileLocations.getInternalOsisFilePath() else StandardFileLocations.getInputOsisFilePath()
-    OsisTweaker.process(osisFilePath!!)
-    m_OsisFilePath = StandardFileLocations.getInternalTempOsisFilePath()
+    StepFileUtils.createFolderStructure(FileLocations.getInternalSwordFolderPath())
+    StepFileUtils.createFolderStructure(FileLocations.getSwordConfigFolderPath())
+    StepFileUtils.createFolderStructure(FileLocations.getInternalSwordFolderPath())
+    StepFileUtils.createFolderStructure(FileLocations.getTextFeaturesFolderPath())
+    StepFileUtils.createFolderStructure(FileLocations.getInternalTempOsisFolderPath())
 
 
 
     /**************************************************************************/
-    m_ModuleName = ConfigData["stepModuleName"]!!
-    StepFileUtils.createFolderStructure(StandardFileLocations.getSwordTextFolderPath(m_ModuleName))
+    /* Apply any tweaks.  The resulting file is written to a temporary
+       location, so we need to pick it up from there. */
+
+    OsisTweaker.process(FileLocations.getInternalOsisFilePath())
+    m_OsisFilePath = FileLocations.getInternalTempOsisFilePath()
+
+
+
+    /**************************************************************************/
+    StepFileUtils.createFolderStructure(FileLocations.getSwordTextFolderPath())
     generateEncryptionData()
     if (!ConfigData.getAsBoolean("stepEncryptionApplied", "no")) Logger.warning("********** NOT ENCRYPTED **********")
 
@@ -110,13 +109,13 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
     val programName = if (usingStepOsis2Mod) ConfigData["stepStepOsis2ModFolderPath"]!! else ConfigData["stepCrosswireOsis2ModFolderPath"]!!
     val swordExternalConversionCommand: MutableList<String> = ArrayList()
     swordExternalConversionCommand.add("\"$programName\"")
-    swordExternalConversionCommand.add("\"" + StandardFileLocations.getSwordTextFolderPath(m_ModuleName) + "\"")
+    swordExternalConversionCommand.add("\"" + FileLocations.getSwordTextFolderPath() + "\"")
     swordExternalConversionCommand.add("\"" + m_OsisFilePath + "\"")
 
     if (usingStepOsis2Mod)
     {
       swordExternalConversionCommand.add("-V")
-      swordExternalConversionCommand.add("\"" + StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath() + "\"")
+      swordExternalConversionCommand.add("\"" + FileLocations.getOsis2ModSupportFilePath() + "\"")
     }
     else
     {
@@ -147,7 +146,7 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
     /**************************************************************************/
     if (ConfigData.getAsBoolean("stepManualOsis2mod"))
     {
-      val commandAsString = swordExternalConversionCommand.joinToString(" ") + " > ${StandardFileLocations.getOsisToModLogFilePath()} 2>&1"
+      val commandAsString = swordExternalConversionCommand.joinToString(" ") + " > ${FileLocations.getOsisToModLogFilePath()} 2>&1"
       MiscellaneousUtils.copyTextToClipboard(commandAsString)
       println("")
       println("The command to run osis2mod has been copied to the clipboard.  Open a plain vanilla command window and run it from there.")
@@ -156,7 +155,7 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
     }
     else
     {
-      runCommand("Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = StandardFileLocations.getOsisToModLogFilePath())
+      runCommand("Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = FileLocations.getOsisToModLogFilePath())
       Dbg.reportProgress("osis2mod completed")
     }
 
@@ -206,7 +205,6 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
 
     /**************************************************************************/
     val osisFilePath = File(m_OsisFilePath)
-    //val osisSha256: String = DigestUtils(SHA_256).digestAsHex(osisFilePath)
     var stepInfo = """
 ¬¬Sword module @(stepModuleName) created @(stepModuleCreationDate) (@(stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation)).
 ¬@(stepThanks)
@@ -352,6 +350,11 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
 
 
     /**************************************************************************/
+    ConfigData["stepInputFileDigests"] = DigestHandler.makeFileDigests()
+
+
+
+    /**************************************************************************/
     val header = arrayOf(
       "################################################################################",
       "#",
@@ -384,7 +387,7 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
 
   private fun checkOsis2ModLog(): Boolean
   {
-    val file = File(StandardFileLocations.getOsisToModLogFilePath())
+    val file = File(FileLocations.getOsisToModLogFilePath())
     if (!file.exists()) return false
 
     var errors = 0
@@ -394,7 +397,7 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
     var warnings = 0
     Logger.setPrefix("osis2mod")
 
-    StandardFileLocations.getInputStream(file.toString(), null)!!.bufferedReader().readLines().forEach {
+    FileLocations.getInputStream(file.toString(), null)!!.bufferedReader().readLines().forEach {
       if (it.startsWith("WARNING(PARSE): SWORD does not search numeric entities"))
         return@forEach  // osis2mod doesn't like things like &#9999;, but apparently we need them and they do work.
       else if (it.startsWith("SUCCESS"))
@@ -440,12 +443,48 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
 
 
   /****************************************************************************/
+  /* The module structure comprises ...
+
+     - A folder which contains the Sword configuration file.
+
+     - A folder which contains the text.
+
+     - A folder which contains the encryption data (if the module is encrypted).
+
+     - A folder which contains the JSON file needed to support our bespoke
+       osis2mod (if required).
+
+     Of these, all but the final one are created in the appropriate location.
+
+     The final one is created in Internal_E_FilesForRepositoryEtc and is
+     retained there in case we do later builds starting from OSIS, in which
+     case we'd need to pick up this earlier copy.
+
+     I need to copy the file across to the right place, rename it to reflect
+     the name of the module, and alter its contents so that selected places
+     (of which at the time of writing there is only one) also contain
+     something which reflects the module name. */
+
+  private fun copyModuleInputsToModuleStructure ()
+  {
+    if (!StepFileUtils.fileOrFolderExists(FileLocations.getMasterOsis2ModSupportFilePath())) return
+    StepFileUtils.createFolderStructure((FileLocations.getOsis2ModSupportFolderPath()))
+
+    fun alterText (line: String): String = line.replace("toBeRenamed", ConfigData["stepVersificationScheme"]!!)
+    StepFileUtils.copyFileWithChanges(FileLocations.getOsis2ModSupportFilePath(), FileLocations.getMasterOsis2ModSupportFilePath(), ::alterText)
+  }
+
+
+  /****************************************************************************/
+  /* This is the _module_ zip, not the repository zip. */
+
   private fun createZip()
   {
-    val zipPath: String = StandardFileLocations.getSwordZipFilePath(m_ModuleName)
-    val inputs = mutableListOf(StandardFileLocations.getSwordConfigFolderPath(), StandardFileLocations.getSwordTextFolderPath(m_ModuleName), StandardFileLocations.getTextFeaturesFolderPath())
-    if (ConfigData.getAsBoolean("stepEncryptionRequired")) inputs.add(StandardFileLocations.getEncryptionDataRootFolder())
-    Zip.createZipFile(zipPath, 9, StandardFileLocations.getInternalSwordFolderPath(), inputs)
+    copyModuleInputsToModuleStructure()
+    val zipPath: String = FileLocations.getSwordZipFilePath()
+    val inputs = mutableListOf(FileLocations.getSwordConfigFolderPath(), FileLocations.getSwordTextFolderPath(), FileLocations.getEncryptionAndBespokeOsisToModDataRootFolder())
+    if (ConfigData.getAsBoolean("stepEncryptionRequired")) inputs.add(FileLocations.getEncryptionAndBespokeOsisToModDataRootFolder())
+    Zip.createZipFile(zipPath, 9, FileLocations.getInternalSwordFolderPath(), inputs)
   }
 
 
@@ -463,9 +502,9 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
 
 
     /**************************************************************************/
-    val configFile = File(StandardFileLocations.getSwordConfigFilePath(m_ModuleName))
+    val configFile = File(FileLocations.getSwordConfigFilePath())
     VersionAndHistoryHandler.process()
-    val lines = StandardFileLocations.getInputStream(StandardFileLocations.getSwordTemplateConfigFilePath(), null)!!.bufferedReader().readLines()
+    val lines = FileLocations.getInputStream(FileLocations.getSwordTemplateConfigFilePath(), null)!!.bufferedReader().readLines()
     val writer = configFile.bufferedWriter()
 
 
@@ -533,8 +572,8 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
 
 
     /**************************************************************************/
-    val withinModuleDecryptionFilePath = StandardFileLocations.getEncryptionDataFilePath("$m_ModuleName.conf")
-    StepFileUtils.createFolderStructure(StandardFileLocations.getEncryptionDataFolder())
+    val withinModuleDecryptionFilePath = FileLocations.getEncryptionDataFilePath()
+    StepFileUtils.createFolderStructure(FileLocations.getEncryptionDataFolder())
 
 
 
@@ -551,9 +590,9 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
     /* Write the details to the file which controls encryption. */
 
     val writer = File(withinModuleDecryptionFilePath).bufferedWriter()
-    writer.write("[$m_ModuleName]");              writer.write("\n")
-    writer.write("CipherKey=$stepEncryptionKey"); writer.write("\n")
-    writer.write("STEPLocked=true");              writer.write("\n")
+    writer.write("[${ConfigData["stepModuleName"]!!}]"); writer.write("\n")
+    writer.write("CipherKey=$stepEncryptionKey");        writer.write("\n")
+    writer.write("STEPLocked=true");                     writer.write("\n")
     writer.close()
  }
 
@@ -631,15 +670,13 @@ object TextConverterProcessorXToSword : TextConverterProcessor, TextConverterPro
      
   private fun getFileSizeIndicator()
   {
-    var size = File(Paths.get(StandardFileLocations.getSwordTextFolderPath(m_ModuleName)).toString()).walkTopDown().filter { it.isFile }.map { it.length() }.sum()
+    var size = File(Paths.get(FileLocations.getSwordTextFolderPath()).toString()).walkTopDown().filter { it.isFile }.map { it.length() }.sum()
     size = ((size + 500) / 1000) * 1000 // Round to nearest 1000.
     ConfigData.put("stepModuleSize", size.toString(), true)
   }
 
 
   /****************************************************************************/
-  override lateinit var m_InputSelector: String
-  private var m_ModuleName: String = ""
   private lateinit var m_OsisFilePath: String
   private var m_ReversificationMap = ""
 }

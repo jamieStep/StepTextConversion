@@ -2,6 +2,7 @@ package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
 import java.io.File
 import javax.xml.parsers.DocumentBuilderFactory
 import kotlin.system.exitProcess
@@ -14,10 +15,15 @@ object ThrowAwayCode
 fun convertLutherVLToUsx ()
 {
   File("C:\\Users\\Jamie\\Desktop\\Martin_Luther_Uebersetzung_Strong_1545.txt").readLines().forEach {
-
   }
 }
 
+
+fun makeDigest()
+{
+  Dbg.d(MiscellaneousUtils.getSha256("C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Miscellaneous\\Text_deu_Lut1545\\InputVl\\Luther_1545+Strongs.txt"))
+  exitProcess(0)
+}
 
 /******************************************************************************/
 /**

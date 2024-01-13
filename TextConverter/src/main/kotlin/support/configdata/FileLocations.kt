@@ -11,12 +11,13 @@ import java.io.InputStream
 
 /******************************************************************************/
 /**
- * A central location for handling file paths.
+ * A central location for handling file paths, thus making it easy to change
+ * things.
  *
  * @author ARA "Jamie" Jamieson
  */
 
-object StandardFileLocations
+object FileLocations
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -146,6 +147,12 @@ object StandardFileLocations
   /* All the obvious things ... */
 
   /****************************************************************************/
+  fun getFileExtensionForOsis () = "xml"
+  fun getFileExtensionForUsx() = "usx"
+  fun getFileExtensionForVl() = "txt"
+
+
+  /****************************************************************************/
   /* Root folder for text. */
 
   fun getRootFolderName () = m_RootFolderName
@@ -175,10 +182,10 @@ object StandardFileLocations
   fun getInputUsxFolderPath  () = Paths.get(getRootFolderPath(), "InputUsx" ).toString()
   fun getInputVlFolderPath   () = Paths.get(getRootFolderPath(), "InputVl"  ).toString()
 
-  fun getInputOsisFilePath (): String?
+  fun getInputOsisFilePath (): String? // Can be called anything at all, but we cannot have more than one.
   {
     if (!StepFileUtils.fileOrFolderExists(getInputOsisFolderPath())) return null
-    val res = StepFileUtils.getMatchingFilesFromFolder(getInputOsisFolderPath(), ".*\\.xml".toRegex())
+    val res = StepFileUtils.getMatchingFilesFromFolder(getInputOsisFolderPath(), ".*\\.${getFileExtensionForOsis()}".toRegex())
     if (res.isEmpty()) return null
     if (1 != res.size) throw StepException("More than one OSIS file exists.")
     return res[0].toString()
@@ -186,13 +193,13 @@ object StandardFileLocations
 
   fun getInputUsxFilesExist (): Boolean
   {
-    return if (!StepFileUtils.fileOrFolderExists(getInputVlFolderPath())) false else !StepFileUtils.folderIsEmpty(getInputVlFolderPath())
+    return if (!StepFileUtils.fileOrFolderExists(getInputUsxFolderPath())) false else StepFileUtils.getMatchingFilesFromFolder(getInputOsisFolderPath(), ".*\\.${getFileExtensionForUsx()}".toRegex()).isNotEmpty()
   }
 
-  fun getInputVlFilePath (): String?
+  fun getInputVlFilePath (): String? // Can be called anything at all, but we cannot have more than one.
   {
     if (!StepFileUtils.fileOrFolderExists(getInputVlFolderPath())) return null
-    val res = StepFileUtils.getMatchingFilesFromFolder(getInputVlFolderPath(), ".*\\.txt".toRegex())
+    val res = StepFileUtils.getMatchingFilesFromFolder(getInputVlFolderPath(), ".*\\.${getFileExtensionForVl()}".toRegex())
     if (res.isEmpty()) return null
     if (1 != res.size) throw StepException("More than one VL file exists.")
     return res[0].toString()
@@ -200,68 +207,138 @@ object StandardFileLocations
 
 
   /****************************************************************************/
-  /* Internal folders etc. */
+  /* Internal folders etc.  Again OSIS is a complication.  Regardless of what
+     we start out from -- USX, VL or OSIS -- we will be creating an OSIS file
+     internally, and it's convenient to give that a fixed name.  However,
+     if we end up copying this file to the repository package, we need at that
+     time to give it a name which reflects the module name.  The xxx in the
+     default name is intended to draw attention to the fact that the thing may
+     need renaming -- if we have an xxx file in the repository, it's a sure sign
+     I've forgotten to do something. */
 
-  fun getInternalUsxAFolderPath     () = Paths.get(getRootFolderPath(), "A_Usx" ).toString()
-  fun getInternalUsxBFolderPath     () = Paths.get(getRootFolderPath(), "B_Usx" ).toString()
-  fun getInternalOsisFolderPath     () = Paths.get(getRootFolderPath(), "C_Osis").toString()
-  fun getInternalSwordFolderPath    () = Paths.get(getRootFolderPath(), "D_Sword").toString()
-  fun getInternalTempOsisFolderPath () = Paths.get(getRootFolderPath(), "X_TempOsis").toString()
-  fun getInternalTempOsisFilePath   () = Paths.get(getInternalTempOsisFolderPath(), "tempOsis.xml").toString()
+  fun getInternalUsxAFolderPath        () = Paths.get(getRootFolderPath(), "Internal_A_Usx" ).toString()
+  fun getInternalUsxBFolderPath        () = Paths.get(getRootFolderPath(), "Internal_B_Usx" ).toString()
+  fun getInternalOsisFolderPath        () = Paths.get(getRootFolderPath(), "Internal_C_Osis").toString()
+  fun getInternalSwordFolderPath       () = Paths.get(getRootFolderPath(), "Internal_D_Sword").toString()
+  fun getMasterMiscellaneousFolderPath () = Paths.get(getRootFolderPath(), "Internal_E_FilesForRepositoryEtc").toString()
+  fun getInternalTempOsisFolderPath    () = Paths.get(getRootFolderPath(), "Internal_X_TempOsis").toString()
 
-  fun getDefaultInternalOsisFilePath () = Paths.get(getInternalOsisFolderPath(), "osis.xml").toString() // Used when creating a new file, when we haven't decided what to call it yet.
-  fun getInternalOsisFilePath (): String
-  {
-    val res = StepFileUtils.getMatchingFilesFromFolder(getInternalOsisFolderPath(), ".*\\.xml".toRegex())
-    if (res.isEmpty()) throw StepException("No OSIS file exists.")
-    if (1 != res.size) throw StepException("More than one OSIS file exists.")
-    return res[0].toString()
-  }
+  fun getInternalOsisFilePath          () = Paths.get(getInternalOsisFolderPath(), makeOsisFileName()).toString()
+  fun getInternalTempOsisFilePath      () = Paths.get(getInternalTempOsisFolderPath(), "tempOsis.${getFileExtensionForOsis()}").toString()
+
+
 
 
   /****************************************************************************/
   /* Sword structure and the stuff which resides in it. */
 
-  fun getEncryptionDataRootFolder ()= Paths.get(getInternalSwordFolderPath(), "step").toString()
-  fun getEncryptionDataFolder () = Paths.get(getEncryptionDataRootFolder(), "jsword-mods.d").toString()
-  fun getEncryptionDataFilePath (moduleName: String) = Paths.get(getEncryptionDataFolder(), moduleName).toString()
+  fun getEncryptionAndBespokeOsisToModDataRootFolder ()= Paths.get(getInternalSwordFolderPath(), "step").toString()
+  fun getEncryptionDataFolder () = Paths.get(getEncryptionAndBespokeOsisToModDataRootFolder(), "jsword-mods.d").toString()
+  fun getEncryptionDataFilePath () = Paths.get(getEncryptionDataFolder(), "${getModuleName()}.conf").toString()
+
+  fun getSwordConfigFilePath (): String { return Paths.get(getSwordConfigFolderPath(), "${getModuleName()}.conf").toString() }
   fun getSwordConfigFolderPath (): String = Paths.get(getInternalSwordFolderPath(), "mods.d").toString()
-  fun getSwordConfigFilePath (moduleName: String) = Paths.get(getSwordConfigFolderPath(), "$moduleName.conf").toString()
+
   fun getSwordTemplateConfigFilePath () = "\$common/swordTemplateConfigFile.conf"
-  fun getSwordTextFolderPath (moduleName: String) = Paths.get(Paths.get(getInternalSwordFolderPath(), "modules").toString(), "texts", "ztext", moduleName).toString()
-  fun getSwordZipFilePath (moduleName: String) = Paths.get(getInternalSwordFolderPath (), "$moduleName.zip").toString()
+
+  fun getSwordTextFolderPath () = Paths.get(Paths.get(getInternalSwordFolderPath(), "modules").toString(), "texts", "ztext", getModuleName()).toString()
+  fun getSwordZipFilePath () = Paths.get(getInternalSwordFolderPath (), "${getModuleName()}.zip").toString()
 
 
   /****************************************************************************/
-  /* Versification details. */
+  /* Used when evaluating alternative schemes. */
 
   fun getVersificationFilePath () = Paths.get(getRootFolderPath(), "stepRawTextVersification.txt").toString()
-  private fun getVersificationStructureForBespokeOsis2ModFileName () = ConfigData["stepModuleName"]!! + ".json"
-  fun getVersificationStructureForBespokeOsis2ModFilePath () = Paths.get(getEncryptionDataRootFolder(), "versification", getVersificationStructureForBespokeOsis2ModFileName()).toString()
 
 
   /****************************************************************************/
-  /* Text features. */
+  /* Text and run features, and also the file used to communication
+     versification information when using our bespoke osis2mod (the latter
+     being absent if we are _not_ using the bespoke osis2mod).
 
-  private fun getTextFeaturesFileName () = "textFeatures.json"
-  fun getTextFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), getTextFeaturesFileName()).toString()
+     These can be created only when building a module starting at VL or USX.
+     If the _only_ input is OSIS, then we can't build them at all presently,
+     because I don't have any processing capable of generating these files from
+     OSIS.
+
+     If we have VL or USX, though, it's still possible at a later date that we
+     might want to modify the OSIS and regenerate the module from that.  I'd
+     much rather we didn't, but unfortunately it's a requirement.  Here I'm
+     trusting it's relatively safe to generate the text and run features files
+     and the bespoke osis2mod data when we do a run from VL or USX, and simply
+     retain it for use if we do a later run from OSIS.  This isn't entirely
+     true -- I can't legislate for what changes might be applied to OSIS.  In
+     fact it wouldn't matter hugely if the text and run features files ended
+     up being slightly wrong, because nothing relies upon them -- they're for
+     interest only.  But it would be a problem if the changes invalidated the
+     bespoke osis2mod data, because then there would be problems when the text
+     was displayed in STEPBible.  So we'd better hope that doesn't happen.
+
+     Anyway, in support of this, all of this various data is written to an
+     'internal' folder, where it remains until overwritten.  From there, it's
+     copied into the relevant places when we generate the module (and
+     repository package).
+
+     Methods below with 'Master' in their name refer to this internal copy.
+     Other methods refer to the locations which the things assume when written
+     to the module or the repository package
+
+     So, the master structure looks like this:
+
+       Text_deuHFA
+         Internal_E_FilesForRepositoryEtc
+           textFeatures
+             ToBeRenamed (changed to reflect module name when module or repo package is generated)
+               runFeatures.json
+               textFeatures.json
+           versification
+             osis2modSupportToBeRenamed.json (on selected runs)
+
+      And when the repository or module is created, you get:
+
+        <moduleRoot>
+          Usual gubbins ...
+          step
+            jsword-mods.d
+              encryptionFileNameBasedOnModuleName.conf
+              osis2modSupportFileNameBasedOnModuleName.conf -- Copied from master folder.
+
+      and the repository package contains
+
+        _README_.txt
+        textFeatures
+          Copy of ToBeRenamed, with name changed to reflect module name.
+
+     */
+
+  fun getMasterTextFeaturesRootFolderPath() = Paths.get(getMasterMiscellaneousFolderPath(), "textFeatures").toString() // All packages end up with TextFeatures.
+  fun getMasterTextFeaturesFolderPath () = Paths.get(getMasterMiscellaneousFolderPath(), "ToBeRenamed").toString() // Under TextFeatures you get a folder whose name (eventually) reflects the basic module name.
+
+  fun getMasterBibleTextFeaturesFilePath () = Paths.get(getMasterTextFeaturesFolderPath(), "textFeatures.json").toString()
+  fun getMasterRunFeaturesFilePath () = Paths.get(getMasterTextFeaturesFolderPath(), "runFeatures.json").toString()
+
   fun getTextFeaturesFolderPath () = makeTextFeaturesFolderPath()
+  fun getTextFeaturesRootFolderPath () = Paths.get(getInternalSwordFolderPath(), "textFeatures").toString()
+
+  fun getRepositoryReadMeFilePath () = Paths.get(getMasterMiscellaneousFolderPath(), "_README_.txt").toString()
+
+  fun getMasterOsis2ModSupportFilePath() = Paths.get(getMasterMiscellaneousFolderPath(), getMasterOsis2modSupportFileName()).toString()
+  fun getMasterOsis2modSupportFileName () = "osis2modSupportToBeRenamed.json"
+  fun getOsis2ModSupportFolderPath() = Paths.get(getEncryptionAndBespokeOsisToModDataRootFolder(), "versification").toString()
+  fun getOsis2ModSupportFilePath() = Paths.get(getOsis2ModSupportFolderPath(), getModuleName() + ".json").toString()
 
 
   /****************************************************************************/
   /* Miscellaneous. */
 
   fun getOsis2modVersificationDetailsFilePath () = "\$common/osis2modVersification.txt"
-  fun getRepositoryPackageFilePath (): String { return Paths.get(getRootFolderPath(), getRepositoryPackageFileName()).toString() }
-  fun getStrongsCorrectionsFilePath () = "\$common/strongsCorrections.txt"
-  private fun getThirdPartySwordConfigFileName () = "sword.conf"
-  fun getThirdPartySwordConfigFilePath () = Paths.get(getMetadataFolderPath(), getThirdPartySwordConfigFileName()).toString()
-  private fun getVernacularBibleStructureFileName () = "vernacularBibleStructure.json"
-  fun getVernacularBibleStructureFilePath () = Paths.get(getTextFeaturesFolderPath(), getVernacularBibleStructureFileName()).toString()
 
 
 
  /****************************************************************************/
+ /* Repository. */
+
+  fun getRepositoryPackageFilePath (): String { return Paths.get(getRootFolderPath(), getRepositoryPackageFileName()).toString() }
   private fun getRepositoryPackageFileName () =
     "forRepository_" +
     ConfigData["stepLanguageCode3Char"]!! + "_" +
@@ -269,6 +346,20 @@ object StandardFileLocations
     ConfigData["stepModuleNameAudienceRelatedSuffix"]!! +
     ".zip"
 
+
+  /****************************************************************************/
+  /* Not yet fully integrated.  Strongs is intended for use when applying
+     Strongs corrections automatically, and it's not clear we'll be doing that.
+
+     And ThirdParty is for use where we have only OSIS available as input, and
+     need to pick up an existing config file for use with it.  I don't have
+     any experience of actually doing that, and possibly we won't work that way
+     anyway -- I may require that a proper step.conf is set up, in which case
+     this special-case processing will not be needed. */
+
+  fun getStrongsCorrectionsFilePath () = "\$common/strongsCorrections.txt"
+  private fun getThirdPartySwordConfigFileName () = "sword.conf"
+  fun getThirdPartySwordConfigFilePath () = Paths.get(getMetadataFolderPath(), getThirdPartySwordConfigFileName()).toString()
 
 
   /****************************************************************************/
@@ -290,14 +381,7 @@ object StandardFileLocations
   }
 
 
-  /****************************************************************************/
-  /* Have to do this late, because it relies on stepModuleName, and that's not
-     finalised until late. */
 
-  private fun makeTextFeaturesFolderPath () = Paths.get(getInternalSwordFolderPath(), "textFeatures", ConfigData["stepModuleName"]).toString()
-
-
- 
 
   
   /****************************************************************************/
@@ -308,6 +392,12 @@ object StandardFileLocations
   /****************************************************************************/
   /****************************************************************************/
   
+  /****************************************************************************/
+  private fun getModuleName () = ConfigData["stepModuleName"]!!
+  private fun makeOsisFileName () = "osis${ConfigData["stepModuleNameBase"]}.${getFileExtensionForOsis()}"
+  private fun makeTextFeaturesFolderPath () = Paths.get(getTextFeaturesRootFolderPath(), getModuleName()).toString()
+
+
   /****************************************************************************/
   private var m_RootFolderName = ""
   private var m_RootFolderPath = ""

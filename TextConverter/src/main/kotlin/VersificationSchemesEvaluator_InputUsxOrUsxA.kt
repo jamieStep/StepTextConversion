@@ -2,11 +2,10 @@
 package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.*
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
+import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.shared.SharedData
 import java.io.File
 
@@ -16,7 +15,7 @@ import java.io.File
 * fit.  Note that on a run which invokes this processing, nothing else is
 * done.
 *
-* This is organised as a descendant of [TextConverterProcessor], and
+* This is organised as a descendant of [ProcessingChainElement], and
 * indeed at one point it was used that way.  This is no longer the case,
 * however, because now one of its primary functions is to evaluate the
 * fit between the text and the osis2mod versification schemes in a run which
@@ -33,14 +32,94 @@ import java.io.File
 * @author ARA 'Jamie' Jamieson
 */
 
-object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcessor
+object VersificationSchemesEvaluator_InputUsxOrUsxA
 {
   /****************************************************************************/
-  override fun banner () = "Evaluating fit with versification schemes"
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) = commandLineProcessor.addCommandLineOption("evaluateSchemesOnly", 0, "Evaluate alternative osis2mod versification schemes only.", null, null, false)
-  override fun prepare () = StepFileUtils.deleteFile(StandardFileLocations.getVersificationFilePath())
-  override fun process () = doIt()
+  fun process () = doIt()
 
+
+
+  /****************************************************************************/
+  class DetailedEvaluation
+  {
+    lateinit var DCPresence: String
+    var booksMissingInOsis2modScheme: MutableList<Int> = mutableListOf()
+    var booksInExcessInOsis2modScheme: MutableList<Int> = mutableListOf()
+    var versesMissingInOsis2modScheme: MutableList<RefKey> = mutableListOf()
+    var versesInExcessInOsis2modScheme: MutableList<RefKey> = mutableListOf()
+  }
+
+
+  /****************************************************************************/
+  /**
+  * A late addition.  Compares a given text with a specified scheme and returns
+  * a detailed analysis.  This was introduced to make it possible to report any
+  * issues in the TextFeatures details.  I really ought to make the time to
+  * integrate it properly -- the outline analysis reported in Evaluation
+  * could make use of this, for instance.
+  *
+  * @param scheme osis2mod scheme to be analysed.
+  * @return Detailed evaluation.
+  */
+
+  fun evaluateSingleSchemeDetailed (scheme: String): DetailedEvaluation
+  {
+    /**************************************************************************/
+    Dbg.reportProgress("  Evaluating $scheme")
+    val res = DetailedEvaluation()
+    val bibleStructureOther = BibleStructure.makeOsis2modSchemeInstance(scheme)
+
+
+
+    /**************************************************************************/
+    val textUnderConstructionHasDc = TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().hasAnyBooksDc()
+    val schemeHasDc = bibleStructureOther.hasAnyBooksDc()
+    if (textUnderConstructionHasDc && !schemeHasDc)
+
+
+
+    /**************************************************************************/
+    res.DCPresence =
+      if (!textUnderConstructionHasDc && schemeHasDc)
+        "MAJOR ISSUE: Input text contains DC, but selected scheme does not"
+      else if (textUnderConstructionHasDc && !schemeHasDc)
+        "MODERATE ISSUE: Selected scheme contains DC, but input text does not"
+      else if (textUnderConstructionHasDc && schemeHasDc)
+        "DC present"
+      else
+        "DC absent"
+
+
+
+     /**************************************************************************/
+    fun evaluate (bookNumber: Int)
+     {
+       if (!TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().bookExists(bookNumber) && !bibleStructureOther.bookExists(bookNumber))
+         return
+
+       else if (!TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().bookExists(bookNumber))
+         res.booksInExcessInOsis2modScheme.add(bookNumber)
+
+       else if (!bibleStructureOther.bookExists(bookNumber))
+         res.booksMissingInOsis2modScheme.add(bookNumber)
+
+       else
+       {
+         val comparisonDetails = BibleStructure.compareWithGivenScheme(bookNumber, TextStructureUsxForUseWhenAnalysingInput.getBibleStructure(), bibleStructureOther)
+         res.versesMissingInOsis2modScheme.addAll(comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme)
+         res.versesInExcessInOsis2modScheme.addAll(comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction)
+       }
+     }
+
+     TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().getAllBookNumbersOt().forEach { evaluate(it) }
+     TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().getAllBookNumbersNt().forEach { evaluate(it) }
+     TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().getAllBookNumbersDc().forEach { evaluate(it) }
+
+
+
+     /**************************************************************************/
+     return res
+  }
 
 
   /****************************************************************************/
@@ -53,7 +132,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
   fun evaluateSingleScheme (schemeName: String): Evaluation?
   {
-    val bookNumbersInRawUsx = BibleBookAndFileMapperStandardUsx.getBookNumbersInOrder()
+    val bookNumbersInRawUsx = TextStructureUsxForUseWhenAnalysingInput.getBookNumbersInOrder()
     return evaluateScheme(schemeName, bookNumbersInRawUsx)
   }
 
@@ -86,8 +165,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
   private fun doIt ()
   {
     m_Evaluations.clear() // Just in case we've already evaluated a scheme, perhaps to see if the text needs reversifying.  Avoids duplicating the output.
-    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperStandardUsx, "raw", wantWordCount = false)
-    val bookNumbersInRawUsx = BibleBookAndFileMapperStandardUsx.getBookNumbersInOrder()
+    val bookNumbersInRawUsx = TextStructureUsxForUseWhenAnalysingInput.getBookNumbersInOrder()
     BibleStructuresSupportedByOsis2mod.getSchemes().forEach { evaluateScheme(it, bookNumbersInRawUsx) }
     val details = investigateResults()
     outputDetails(details)
@@ -126,14 +204,27 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
 
     /**************************************************************************/
-    Dbg.reportProgress("  Evaluating $scheme")
-    val bibleStructureOther = BibleStructure.Osis2modSchemeInstance(scheme, false)
+    /* "tbd" is used where we are doing runtime reversification and have not
+       yet decided on a scheme name.  Even if we had an actual scheme name
+       available here, there would be no point in evaluating against it,
+       because the scheme would be a bespoke one, and we're guaranteed to fit
+       that. */
+
+    if ("tbd" == scheme)
+      return null
 
 
 
     /**************************************************************************/
-    val textUnderConstructionHasDc = BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc()
-    val otherHasDc = bibleStructureOther.hasAnyBooksDc()
+    Dbg.reportProgress("  Evaluating $scheme")
+    TextStructureUsxForUseWhenAnalysingInput.getBibleStructure()
+    val bibleStructureForScheme = BibleStructure.makeOsis2modSchemeInstance(scheme)
+
+
+
+    /**************************************************************************/
+    val textUnderConstructionHasDc = TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().hasAnyBooksDc()
+    val otherHasDc = bibleStructureForScheme.hasAnyBooksDc()
     if (textUnderConstructionHasDc && !otherHasDc)
     {
       //m_Evaluations.add(Evaluation(scheme,999_999, 0, 0, "rejected because it lacks DC"))
@@ -156,18 +247,18 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
 
      fun evaluate (bookNumber: Int)
      {
-       if (!BibleStructure.UsxUnderConstructionInstance().bookExists(bookNumber) && !bibleStructureOther.bookExists(bookNumber))
+       if (!TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().bookExists(bookNumber) && !bibleStructureForScheme.bookExists(bookNumber))
          return
 
-       else if (!BibleStructure.UsxUnderConstructionInstance().bookExists(bookNumber))
+       else if (!TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().bookExists(bookNumber))
          ++booksInExcessInOsis2modScheme
 
-       else if (!bibleStructureOther.bookExists(bookNumber))
+       else if (!TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().bookExists(bookNumber))
          ++booksMissingInOsis2modScheme
 
        else
        {
-         val comparisonDetails = BibleStructure.compareWithGivenScheme(bookNumber, BibleStructure.UsxUnderConstructionInstance(), bibleStructureOther)
+         val comparisonDetails = BibleStructure.compareWithGivenScheme(bookNumber, TextStructureUsxForUseWhenAnalysingInput.getBibleStructure(), bibleStructureForScheme)
          versesMissingInOsis2modScheme += comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.size
          versesInExcessInOsis2modScheme += comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.size
          // if (comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.isNotEmpty()) Dbg.d(comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.joinToString(prefix = "Bad: ", separator = ", "){ Ref.rd(it).toString() })
@@ -248,7 +339,7 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
                     
                     """.trimIndent()
 
-   File(StandardFileLocations.getVersificationFilePath()).printWriter().use { writer ->
+   File(FileLocations.getVersificationFilePath()).printWriter().use { writer ->
       writer.println(header)
       details.forEach { writer.println(it.toString()); println(it.toString()) }
     }
@@ -272,7 +363,6 @@ object TextConverterProcessorEvaluateVersificationSchemes: TextConverterProcesso
     // Want to favour NRSV(A) over other schemes which may score the same.
     val scoreForSorting: Double = if ("nrsv" == scheme) score.toDouble() - 0.2 else if ("nrsva" == scheme) score.toDouble() - 0.1 else score.toDouble()
   }
-
 
 
   /****************************************************************************/

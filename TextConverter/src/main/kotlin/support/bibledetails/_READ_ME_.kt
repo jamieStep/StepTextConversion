@@ -10,11 +10,11 @@ package org.stepbible.textconverter.support.bibledetails
 *   information here is knowable without reference to any particular Bible, and
 *   therefore is available prior to any processing.
 *
-* - **[BibleBookAndFileMapper]** relates files to Bible books.  So if you need
+* - **[TextStructure]** relates files to Bible books.  So if you need
 *   to iterate over files such that you are processing books in order, or if you
 *   need to know which file corresponds to a particular book, this is the place
-*   to look.  There are two derived classes, one of which looks at the RawUsx
-*   folder and the other at the EnhancedUsx folder.
+*   to look.  There are various derived classes which are tied to particular
+*   folders -- eg InputUsx.
 *
 * - **[BibleBookNames]** does just what the name suggests -- it supplies the
 *   names used for the various book (abbreviated, short and long, as available).
@@ -25,15 +25,10 @@ package org.stepbible.textconverter.support.bibledetails
 *
 * - **[BibleStructure]** differs from BibleAnatomy in that it contains
 *   information tied to a particular text -- the number of chapters in the
-*   various books, the number of verses in the various chapters, etc.  There's a
-*   slightly complicated inheritance structure here.  The thing you are likely
-*   to want to use most often is **[BibleStructure.UsxUnderConstructionInstance()]**.
-*   And the only other thing likely to be of interest is
-*   **[BibleStructureNrsvx]**, which gives you details either of NRSV or of
-*   NRSVA, depending upon whether you are working on a text with DC books or
-*   not.  The other classes are used only pursuant to the task of working
-*   out which is the best among the various versification schemes supported
-*   by osis2mod.
+*   various books, the number of verses in the various chapters, etc.  In
+*   general you won't acccess this directly -- each variant of TextStructure
+*   has its own associated BibleStructure instance, and you can access it via
+*   the TextStructure instance.
 *
 * @author ARA 'Jamie' Jamieson
 */

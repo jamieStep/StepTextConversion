@@ -2,9 +2,8 @@
 package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
-import org.stepbible.textconverter.support.bibledetails.BibleStructure
+import org.stepbible.textconverter.support.bibledetails.TextStructureEnhancedUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.*
@@ -808,7 +807,7 @@ import org.w3c.dom.Node
       val rc = RefCollection.rdUsx(node["loc"]!!)
       val problems = rc.getAllAsRefKeys()
         .map { Ref.clearS(it) } // If we have cross-references which point to subverses, I'm happy to take them as being just the owning verse.
-        .filter { !BibleStructure.UsxUnderConstructionInstance().thingExists(it) }
+        .filter { !TextStructureEnhancedUsx.getBibleStructure().thingExists(it) }
         .map { Ref.getB(it) }
       val report = when (node["_X_tagOrStyleChangedReason"]?.replace("Was ", ""))
       {

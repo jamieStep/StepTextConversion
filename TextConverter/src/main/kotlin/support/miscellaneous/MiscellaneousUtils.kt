@@ -2,6 +2,8 @@ package org.stepbible.textconverter.support.miscellaneous
 
 import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
+import org.apache.commons.codec.digest.DigestUtils
+import org.apache.commons.codec.digest.MessageDigestAlgorithms.SHA_256
 import org.jasypt.util.text.BasicTextEncryptor
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
@@ -32,14 +34,14 @@ object MiscellaneousUtils
     * Checks whether a list of items is arranged in strictly increasing order.
     *
     * @param data
-    * @return True if strictly increasing.
+    * @return The first element such that the item before it is in the wrong place, or null if all in order.
     */
 
-    fun <T: Comparable<T>> checkInStrictlyAscendingOrder (data: List<T>): Boolean
+    fun <T: Comparable<T>> checkInStrictlyAscendingOrder (data: List<T>): T?
     {
       for (i in 1 ..< data.size)
-        if (data[i] <= data[i - 1]) return false
-      return true
+        if (data[i] <= data[i - 1]) return data[i]
+      return null
     }
 
 
@@ -228,6 +230,17 @@ object MiscellaneousUtils
         if ("style" in node) res += ":" + node["style"]
         return res
     }
+
+
+    /**********************************************************************************************************************/
+    /**
+    * Calculates a SHA256 digest for a file.
+    *
+    * @param filePath
+    * @return Digest
+    */
+
+    fun getSha256 (filePath: String) = DigestUtils(SHA_256).digestAsHex(File(filePath).readBytes())
 
 
     /******************************************************************************************************************/

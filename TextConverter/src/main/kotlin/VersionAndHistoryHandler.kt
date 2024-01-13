@@ -1,7 +1,7 @@
 package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import java.io.File
 import java.time.LocalDate
 
@@ -9,6 +9,8 @@ import java.time.LocalDate
 /******************************************************************************/
 /**
  * Handles the history information required in the Sword configuration file.
+ *
+ * Note that no history is output on an evaluation run.
  *
  * The Crosswire documentation gives details of a version indicator and history
  * details which are to appear in the Sword configuration file.
@@ -145,7 +147,10 @@ object VersionAndHistoryHandler
 
   fun getHistoryLines (): List<String>
   {
-    return m_HistoryLines.map { it.toString() }
+    return if ("eval" !in ConfigData["stepRunType"]!!)
+      listOf()
+    else
+      m_HistoryLines.map { it.toString() }
   }
 
 
@@ -157,13 +162,16 @@ object VersionAndHistoryHandler
 
   fun appendHistoryLinesToStepConfigFile ()
   {
+    if ("eval" in ConfigData["stepRunType"]!!.lowercase())
+      return // Don't update history on an evaluation module.
+
     val nonHistoryLines =
-      File(StandardFileLocations.getStepConfigFilePath())
+      File(FileLocations.getStepConfigFilePath())
         .readLines()
         .filter { !it.trim().lowercase().startsWith("history_") }
         .dropLastWhile { it.trim().isEmpty() }
 
-    val writer = File(StandardFileLocations.getStepConfigFilePath()).bufferedWriter()
+    val writer = File(FileLocations.getStepConfigFilePath()).bufferedWriter()
     nonHistoryLines.forEach { writer.write(it); writer.write("\n") }
     writer.write("\n")
     m_HistoryLines.forEach { writer.write(it.toString()); writer.write("\n") }
@@ -178,6 +186,9 @@ object VersionAndHistoryHandler
     /* Get a list of any existing history lines in descending version order,
        along with the version number from the most recent history line, or 0.0
        if there are no history lines. */
+
+    /**************************************************************************/
+    /* Don't update history on evaluation runs. */
 
     run {
       val historyLinesFromStepConfig = getHistoryLinesFromConfigData()
@@ -259,7 +270,7 @@ object VersionAndHistoryHandler
   private fun createUpdatedSwordConfigFileFromThirdPartyFile (evalVersionOnly: Boolean)
   {
     val x =
-      File(StandardFileLocations.getThirdPartySwordConfigFilePath())
+      File(FileLocations.getThirdPartySwordConfigFilePath())
         .readLines()
         .dropLastWhile { it.trim().isEmpty() }
         .map { it.trim() }
@@ -269,7 +280,7 @@ object VersionAndHistoryHandler
        .filter { !(it.startsWith('[') && it.endsWith(']')) }
 
 
-    val writer = File(StandardFileLocations.getSwordConfigFilePath(ConfigData["stepModuleName"]!!)).bufferedWriter()
+    val writer = File(FileLocations.getSwordConfigFilePath()).bufferedWriter()
 
     writer.write("[${ConfigData["stepModuleName"]!!}]"); writer.write("\n")
     writer.write("# " + ConfigData["stepAdminLine"]!!); writer.write("\n");
@@ -318,7 +329,7 @@ object VersionAndHistoryHandler
 
   private fun getHistoryLinesFromThirdPartyConfig (): Map<String, ParsedHistoryLine>
   {
-    val filePath = StandardFileLocations.getThirdPartySwordConfigFilePath()
+    val filePath = FileLocations.getThirdPartySwordConfigFilePath()
 
     if (!File(filePath).exists())
       return mapOf()
@@ -338,7 +349,7 @@ object VersionAndHistoryHandler
 
   private fun getVersionFromThirdPartyConfig (): String
   {
-    val filePath = StandardFileLocations.getThirdPartySwordConfigFilePath()
+    val filePath = FileLocations.getThirdPartySwordConfigFilePath()
     if (!File(filePath).exists())
       return "0.0"
 
@@ -451,6 +462,6 @@ object VersionAndHistoryHandler
   private val C_HistoryLineNonStepPat = "(?i)History_(?<stepVersion>.*?)=(?<preDate>.*?)(?<date>\\d\\d\\d\\d-\\d\\d-\\d\\d)?(?<postDate>.*?)".toRegex()
   private val C_HistoryLineStepPat = "(?i)History_(?<stepVersion>.*?)=(?<date>.*?)\\s+\\[SupplierVersion: (?<supplierVersion>.*?)]\\s*(?<text>.*)".toRegex()
   private var m_ReleaseType = ReleaseType.Unknown
-  private lateinit var m_HistoryLines: MutableList<ParsedHistoryLine>
+  private var m_HistoryLines: MutableList<ParsedHistoryLine> = mutableListOf()
 
 }

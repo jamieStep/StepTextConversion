@@ -2,6 +2,7 @@
 package org.stepbible.textconverter.support.miscellaneous
 
 import org.apache.commons.io.FilenameUtils
+import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.File
 import java.nio.file.Files
@@ -44,6 +45,40 @@ object StepFileUtils
   fun copyFile (toPath: String, fromPath: String)
   {
     Files.copy(Paths.get(fromPath), Paths.get(toPath))
+  }
+
+
+  /******************************************************************************/
+  /**
+   * Copies a file.
+   *
+   * @param toPath Target path name.
+   * @param fromPath Source path name.
+   * @param replacer Function which receives a single line at a time and returns
+   *                 a possibly revised version of that line.
+   */
+
+  fun copyFileWithChanges (toPath: String, fromPath: String, replacer: (String) -> String)
+  {
+    File(toPath).bufferedWriter().use { writer ->
+      File(fromPath).forEachLine {
+        writer.write(replacer(it))
+      }
+    }
+  }
+
+
+  /******************************************************************************/
+  /**
+  * Copies a folder.
+  *
+  * @param toPath Target path name.
+  * @param fromPath Source path name.
+  */
+
+  fun copyFolder (toPath: String, fromPath: String)
+  {
+    File(fromPath).copyRecursively(File(toPath))
   }
 
 
@@ -130,10 +165,11 @@ object StepFileUtils
   {
     try
     {
-      File(path).deleteRecursively()
+      if (fileOrFolderExists(path)) File(path).deleteRecursively()
     }
-    catch (_: Exception)
+    catch (x: Exception)
     {
+      throw StepException("Failed to delete folder $path")
     }
   }
 
@@ -320,6 +356,18 @@ object StepFileUtils
     val files = getMatchingFilesFromFolder(folderName, pat)
     return if (1 == files.size) files[0] else null
   }
+
+
+  /****************************************************************************/
+  /**
+  * Returns an indication of whether a given putative folder exists and has
+  * content.
+  *
+  * @param folderPath
+  * @return True if folder exists and is not empty.
+  */
+
+  fun isNonEmptyFolder (folderPath: String): Boolean = fileOrFolderExists(folderPath) && !folderIsEmpty(folderPath)
 
 
   /******************************************************************************/

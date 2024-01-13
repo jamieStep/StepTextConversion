@@ -3,6 +3,7 @@ package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
+import org.stepbible.textconverter.support.stepexception.StepBreakOutOfProcessing
 import org.stepbible.textconverter.support.stepexception.StepException
 
 
@@ -19,6 +20,7 @@ fun main (args: Array<String>)
   //Dbg.setBooksToBeProcessed("Zec")
   //ThrowAwayCode.validateXmlFileStructure()
   //ThrowAwayCode.tryXslt()
+  //ThrowAwayCode.makeDigest()
 
   try
   {
@@ -33,6 +35,10 @@ fun main (args: Array<String>)
 
     Dbg.endOfRun()
     println("Finished\n")
+  }
+  catch (_: StepBreakOutOfProcessing)
+  {
+    Dbg.endOfRun()
   }
   catch (e: StepException)
   {
@@ -53,7 +59,7 @@ fun main (args: Array<String>)
 private fun mainCommon (args: Array<String>)
 {
   TextConverterController.process(args)
-  TestController.instance().terminate()
+  //TestController.instance().terminate()
   Logger.summariseResults()
 }
 

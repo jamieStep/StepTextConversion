@@ -3,7 +3,7 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
@@ -41,7 +41,7 @@ import java.util.*
  * @author ARA Jamieson
  */
 
-object TextConverterTaggingHandler: TextConverterProcessor, ValueAddedSupplier()
+object ZZZ_UNUSED_FileCreator_TaggingHandler_InternalOsisToInternalOsis: ProcessingChainElement, ValueAddedSupplier()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -84,7 +84,9 @@ object TextConverterTaggingHandler: TextConverterProcessor, ValueAddedSupplier()
   /****************************************************************************/
   override fun banner () = "Tagging OSIS"
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
-  override fun prepare () {}
+  override fun pre() {}
+  override fun takesInputFrom(): Pair<String, String> = Pair("", "") // TBD
+
   override fun process ()
   {
     return
@@ -138,12 +140,12 @@ object TextConverterTaggingHandler: TextConverterProcessor, ValueAddedSupplier()
     fun handleStrongsCorrections ()
     {
       readStrongsCorrectionFile()
-      val doc = Dom.getDocument(StandardFileLocations.getInternalOsisFilePath())
+      val doc = Dom.getDocument(FileLocations.getInternalOsisFilePath())
       val strongsNodes = Dom.findNodesByAttributeName(doc, "w", "lemma")
       if (strongsNodes.isEmpty()) return
       strongsNodes.forEach { handleStrongsCorrections(it) }
       if (m_StrongsCorrectionsApplied)
-        Dom.outputDomAsXml(doc, StandardFileLocations.getInternalOsisFilePath(), null)
+        Dom.outputDomAsXml(doc, FileLocations.getInternalOsisFilePath(), null)
 
       m_StrongsCorrections.clear() // No longer needed.
     }
@@ -166,7 +168,7 @@ object TextConverterTaggingHandler: TextConverterProcessor, ValueAddedSupplier()
     /**************************************************************************/
     private fun readStrongsCorrectionFile ()
     {
-      StandardFileLocations.getInputStream(StandardFileLocations.getStrongsCorrectionsFilePath(), null)!!.bufferedReader()
+      FileLocations.getInputStream(FileLocations.getStrongsCorrectionsFilePath(), null)!!.bufferedReader()
         .readLines()
         .map { it.trim() }
         .filter { it.isNotEmpty() && !it.startsWith("#") }

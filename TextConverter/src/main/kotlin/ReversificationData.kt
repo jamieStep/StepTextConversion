@@ -310,12 +310,12 @@ object ReversificationData
 
   fun wantFootnote (row: ReversificationDataRow, reversificationType: Char, reversificationNoteType: Char): Boolean
   {
-    when ("$reversificationType$reversificationNoteType")
+    return when ("$reversificationType$reversificationNoteType")
     {
-      "CB" -> return C_FootnoteLevelNec == row.footnoteLevel || C_FootnoteLevelOpt == row.footnoteLevel
-      "RB" -> return C_FootnoteLevelNec == row.footnoteLevel
-      "CA" -> return true
-      "RA" -> return true
+      "CB" -> C_FootnoteLevelNec == row.footnoteLevel || C_FootnoteLevelOpt == row.footnoteLevel
+      "RB" -> C_FootnoteLevelNec == row.footnoteLevel
+      "CA" -> true
+      "RA" -> true
       else -> throw StepException("wantFootnote: Invalid parameter.")
     }
   }
@@ -461,7 +461,6 @@ object ReversificationData
 
   fun process ()
   {
-    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperStandardUsx, "enhanced", wantWordCount = true) // Make sure we have up-to-date structural information.
     initialise()
   }
 
@@ -1255,8 +1254,8 @@ object ReversificationData
       if (1 != grp.rows.first().sourceRef.getV()) return
       if (1 != grp.rows.first().standardRef.getV()) return
 
-      if (BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(grp.rows.first().sourceRef) != grp.rows.last().sourceRef.getV()) return
-      if (BibleStructure.NrsvxInstance().getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
+      if (TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().getLastVerseNo(grp.rows.first().sourceRef) != grp.rows.last().sourceRef.getV()) return
+      if (BibleStructure.makeOsis2modNrsvxSchemeInstance().getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
 
       grp.isEntireChapter = true
     }
@@ -1868,7 +1867,7 @@ object ReversificationData
     /**************************************************************************/
     /* Ignore lines where the source ref relates to a book we don't have. */
 
-   if (!BibleStructure.UsxUnderConstructionInstance().bookExists(row.sourceRef.getB())) return
+   if (!TextStructureUsxForUseWhenAnalysingInput.getBibleStructure().bookExists(row.sourceRef.getB())) return
 
 
 

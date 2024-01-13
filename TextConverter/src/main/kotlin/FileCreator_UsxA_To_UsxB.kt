@@ -1,8 +1,10 @@
 /**********************************************************************************************************************/
 package org.stepbible.textconverter
 
+import org.stepbible.textconverter.support.bibledetails.TextStructureUsxForUseWhenConvertingToEnhancedUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 
@@ -26,13 +28,6 @@ import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
  * The class runs over all input files.  It may take its input from either of
  * two folders, and is informed by the caller which of the two is being used
  * on this run.
- *
- * In addition, it creates some files in the TextFeatures folder (that's just
- * some files overall, not some for each input file), one of them giving details
- * of any 'interesting' features which appear in any of the input files, and one
- * giving information about the text (which books it contains, which chapters,
- * etc).  These are not used by the processing, but may be of use when looking
- * for texts with particular characteristics.
  *
  *
  *
@@ -136,26 +131,11 @@ import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
  *
  * ## Outputs
  *
- * The class generates a) a file summarising any 'important' features of the
- * text; b) a file giving details of the structure of the text (which books it
- * contains, the number of the last chapter for each book, etc); and c) revised
- * and restructured USX.
- *
- * The first two of these are placed into the TextFeatures folder, under the
- * names textFeatures.json and vernacularBibleStructure.json respectively (both
- * of them in extended JSON format -- ie with // used as comment markers).
+ * The class generates revised and restructured USX.
  *
  * The restructured USX is stored in the EnhancedUsx folder, one file for
  * each of the input files.
  *
- * In addition to highlighting any 'interesting' features in the text,
- * textFeatures.json also lists any books in which errors were detected.
- *
- * Similarly, in addition to giving basic details about which books, chapters
- * and verses are present, vernacularBibleStructure.json also lists missing and
- * duplicate verses.  Duplicate verses are definitely a problem.  Missing verses
- * may or may not be -- some texts lack certain verses, but these can be filled
- * in by reversification.
  *
  *
  *
@@ -171,9 +151,9 @@ import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
  *
  * I have therefore found it convenient to have the present class handle the
  * control aspect, and to offload the actual processing to the classes
- * [TextConverterProcessorXToUsxB_PreReversificationProcessor],
- * [TextConverterProcessorXToUsxB_ReversificationProcessor] and
- * [TextConverterProcessorXToUsxB_PostReversificationProcessor]
+ * [UsxA_To_UsxB_1_PreConversionTimeReversification_InputUsxOrUsxA_To_UsxB],
+ * [UsxA_To_UsxB_2_ConversionTimeReversification_UsxB_To_UsxB] and
+ * [UsxA_To_UsxB_3_PostConversionTimeReversification_InputUsxB_To_UsxB]
  *
  *
  *
@@ -186,14 +166,14 @@ import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
  *
  * This can be done in one of three ways.  You can supply an external program
  * which runs over all of the input USX and creates revised files.  This is
- * handled in class [TextConverterProcessorInputUsxToUsxA].
+ * handled in class [FileCreator_InputUsx_To_UsxA].
  *
  * You can provide a JAR file which conforms to a particular API spec.  This is
  * loaded into the converter at run-time and run directly from the code in
- * [TextConverterProcessorXToUsxB_PreReversificationProcessor].
+ * [UsxA_To_UsxB_1_PreConversionTimeReversification_InputUsxOrUsxA_To_UsxB].
  *
  * Or you can supply XSLT fragments in a configuration parameter.  These, again,
- * are applied in [TextConverterProcessorXToUsxB_PreReversificationProcessor].
+ * are applied in [UsxA_To_UsxB_1_PreConversionTimeReversification_InputUsxOrUsxA_To_UsxB].
  *
  *
  *
@@ -216,25 +196,63 @@ import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
  * enough to attempt to make it clear (and even here I suspect I have failed
  * miserably).
  *
+ *
+ *
+ *
+ * ## Important note
+ *
+ * There are some ancillary files -- the TextFeatures files, the JSON file
+ * required where we are using Sami's version of osis2mod, and the
+ * encryption file.
+ *
+ * The TextFeatures files are related to the USX which is present in UsxA by the
+ * time we reach this present class, and can therefore be generated here.  (If
+ * a later run happens to start from later in the processing chain, or takes
+ * OSIS as its input, they are left in place, on the assumption that they will
+ * continue to be useful.
+ *
+ * The JSON file (which is required _only_ when using Sami's version of
+ * osis2mod) is handled in a similar way.
+ *
+ * The encryption file has to be created afresh on each run, and is therefore
+ * not handled here -- it is needed regardless of whereabouts in the processing
+ * chain we start.
+ *
  * @author ARA "Jamie" Jamieson
  */
 
-object TextConverterProcessorXToUsxB : TextConverterProcessor
+object FileCreator_UsxA_To_UsxB : ProcessingChainElement
 {
   /****************************************************************************/
   override fun banner () = "Creating enhanced USX"
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
+  override fun takesInputFrom (): Pair<String, String> = Pair(FileLocations.getInternalUsxAFolderPath(), FileLocations.getFileExtensionForUsx())
 
-  override fun prepare ()
+  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
   {
-    StepFileUtils.deleteFolder(StandardFileLocations.getInternalUsxBFolderPath())
-    StepFileUtils.createFolderStructure(StandardFileLocations.getInternalUsxBFolderPath())
+    commandLineProcessor.addCommandLineOption("reversificationType", 1, "When reversification is to be applied (if at all)", listOf("None", "RunTime", "ConversionTime"), "None", false)
+    commandLineProcessor.addCommandLineOption("reversificationFootnoteLevel", 1, "Type of reversification footnotes", listOf("Basic", "Academic"), "Basic", false)
+  }
+
+  override fun pre ()
+  {
+    StepFileUtils.deleteFolder(FileLocations.getInternalUsxBFolderPath())
+    StepFileUtils.deleteFolder(FileLocations.getMasterMiscellaneousFolderPath()) // If we get here, we'll definitely recreate this, so it's ok to ditch any existing version.
   }
 
 
   /****************************************************************************/
   override fun process ()
   {
+    /**************************************************************************/
+    TextStructureUsxForUseWhenConvertingToEnhancedUsx // Forces this to be initialised.
+
+
+
+    /**************************************************************************/
+    StepFileUtils.createFolderStructure(FileLocations.getInternalUsxBFolderPath())
+
+
+
     /**************************************************************************/
     ReversificationData.process()
 
@@ -252,9 +270,9 @@ object TextConverterProcessorXToUsxB : TextConverterProcessor
        the input must be in InputUsx. */
 
     let {
-      val inFolder = if (StepFileUtils.fileOrFolderExists(StandardFileLocations.getInternalUsxAFolderPath()) && !StepFileUtils.folderIsEmpty(StandardFileLocations.getInternalUsxAFolderPath())) StandardFileLocations.getInternalUsxAFolderPath() else StandardFileLocations.getInputUsxFolderPath()
+      val inFolder = if (StepFileUtils.fileOrFolderExists(FileLocations.getInternalUsxAFolderPath()) && !StepFileUtils.folderIsEmpty(FileLocations.getInternalUsxAFolderPath())) FileLocations.getInternalUsxAFolderPath() else FileLocations.getInputUsxFolderPath()
       val inFiles = StepFileUtils.getMatchingFilesFromFolder(inFolder, ".*\\.usx".toRegex()).map { it.toString() }
-      val processor = TextConverterProcessorXToUsxB_PreReversificationProcessor()
+      val processor = UsxA_To_UsxB_1_PreConversionTimeReversification_InputUsxOrUsxA_To_UsxB()
       inFiles.forEach { processor.processFile(it) }// Creates the enhanced USX.
     }
 
@@ -263,12 +281,11 @@ object TextConverterProcessorXToUsxB : TextConverterProcessor
     /**************************************************************************/
     /* Reversification on those few texts to which it is applied. */
 
-    if (TextConverterProcessorXToUsxB_ReversificationProcessor.runMe())
+    if (UsxA_To_UsxB_2_ConversionTimeReversification_UsxB_To_UsxB.runMe())
       let {
         Dbg.reportProgress("")
         Dbg.reportProgress("Reversifying")
-        Osis2ModInterface.instance().createSupportingData()
-        TextConverterProcessorXToUsxB_ReversificationProcessor.process()
+        UsxA_To_UsxB_2_ConversionTimeReversification_UsxB_To_UsxB.process()
       }
 
 
@@ -279,12 +296,27 @@ object TextConverterProcessorXToUsxB : TextConverterProcessor
     let {
       Dbg.reportProgress("")
       Dbg.reportProgress("Creating enhanced USX -- Part 2")
-      Osis2ModInterface.instance().createSupportingData()
+      UsxA_Osis2modInterface.instance().createSupportingData()
 
-      val inFolder = StandardFileLocations.getInternalUsxBFolderPath()
+      val inFolder = FileLocations.getInternalUsxBFolderPath()
       val inFiles = StepFileUtils.getMatchingFilesFromFolder(inFolder, ".*\\.usx".toRegex()).map { it.toString() }
-      val processor = TextConverterProcessorXToUsxB_PostReversificationProcessor()
-      inFiles.forEach { processor.processFile(it) }// Creates the enhanced USX.
+      val processor = UsxA_To_UsxB_3_PostConversionTimeReversification_InputUsxB_To_UsxB()
+      inFiles.forEach { processor.processFile(it) } // Creates the enhanced USX.
     }
+
+
+
+    /**************************************************************************/
+    Dbg.reportProgress("Recording summary of text and run features etc")
+    UsxA_GenerateTextFeatures.process()
+    if ("runtime" == ConfigData["stepReversificationType"]!!.lowercase())
+      UsxA_Osis2modInterface.instance().createSupportingData()
+
+
+
+    /**************************************************************************/
+    /* Validation. */
+
+    FileValidator_UsxB.process()
   }
 }

@@ -2,7 +2,7 @@ package org.stepbible.textconverter
 
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.StandardFileLocations
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -25,11 +25,11 @@ import java.io.PrintWriter
  * despite the fact that in a few texts the translators may deliberately have
  * put them in the wrong order.  To address this, at the time of writing we have
  * our own variant of osis2mod.  Whether this will turn out to be a permanent
- * feature or not is not certain at present; but so long as we opt to use it,
- * it does have implications for the processing at large, which needs to know
- * which variant we are using, and there are certain things we need to do to
- * support it, notably creating a JSON file containing information about the
- * structure of the text.
+ * feature is not certain at present; but so long as we opt to use it, it does
+ * have implications for the processing at large, which needs to know which
+ * variant we are using, and there are certain things we need to do to support
+ * notably creating a JSON file containing information about the structure of
+ * the text.
  *
  * Note that this doesn't _drive_ the selection: it merely responds to settings
  * established in TestController, qv.
@@ -45,7 +45,7 @@ import java.io.PrintWriter
  * @author ARA "Jamie" Jamieson
  */
 
-abstract class Osis2ModInterface
+abstract class UsxA_Osis2modInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -58,14 +58,14 @@ abstract class Osis2ModInterface
   /****************************************************************************/
   companion object
   {
-    fun instance (): Osis2ModInterface
+    fun instance (): UsxA_Osis2modInterface
     {
       if (null == m_Instance)
         m_Instance = if ("step" == ConfigData["stepOsis2modType"]!!) Osis2ModInterfaceStep else Osis2ModInterfaceCrosswire
       return m_Instance!!
     }
 
-    private var m_Instance: Osis2ModInterface? = null
+    private var m_Instance: UsxA_Osis2modInterface? = null
   }
 
 
@@ -111,7 +111,7 @@ abstract class Osis2ModInterface
 /******************************************************************************/
 
 /******************************************************************************/
-object Osis2ModInterfaceCrosswire: Osis2ModInterface()
+object Osis2ModInterfaceCrosswire: UsxA_Osis2modInterface()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -172,7 +172,7 @@ object Osis2ModInterfaceCrosswire: Osis2ModInterface()
 /******************************************************************************/
 
 /******************************************************************************/
-object Osis2ModInterfaceStep: Osis2ModInterface()
+object Osis2ModInterfaceStep: UsxA_Osis2modInterface()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -189,10 +189,9 @@ object Osis2ModInterfaceStep: Osis2ModInterface()
 
   override fun createSupportingData ()
   {
-    BibleStructure.UsxUnderConstructionInstance().populateFromBookAndFileMapper(BibleBookAndFileMapperEnhancedUsx, collection = "enhanced/createSupportingData", wantWordCount = false) // Make sure we have up-to-date structural information.
     populateBibleStructure()
     m_BibleStructure.jswordMappings = ReversificationData.getReversificationMappings()
-    outputJson(StandardFileLocations.getVersificationStructureForBespokeOsis2ModFilePath())
+    outputJson(FileLocations.getMasterOsis2ModSupportFilePath())
   }
 
 
@@ -431,7 +430,7 @@ object Osis2ModInterfaceStep: Osis2ModInterface()
 
   private fun populateBibleStructure ()
   {
-    m_BibleStructure.v11nName = ConfigData["stepVersificationScheme"]!!
+    m_BibleStructure.v11nName = "ToBeRenamed"
     populateBibleStructure(m_BibleStructure.otBooks, BibleAnatomy.getBookNumberForStartOfOt(), BibleAnatomy.getBookNumberForEndOfOt())
     populateBibleStructure(m_BibleStructure.otBooks, BibleAnatomy.getBookNumberForStartOfDc(), BibleAnatomy.getBookNumberForEndOfDc(), true) // otbooks _is_ intended here -- see head of method comments.
     populateBibleStructure(m_BibleStructure.ntBooks, BibleAnatomy.getBookNumberForStartOfNt(), BibleAnatomy.getBookNumberForEndOfNt())
@@ -446,7 +445,7 @@ object Osis2ModInterfaceStep: Osis2ModInterface()
   {
     for (bookNo in bookLow .. bookHigh)
     {
-      val missingBook = !BibleStructure.UsxUnderConstructionInstance().bookExists(bookNo)
+      val missingBook = !TextStructureEnhancedUsx.getBibleStructure().bookExists(bookNo)
       if (skipMissingBooks && missingBook) continue
 
       val header = BookDetails()
@@ -456,8 +455,8 @@ object Osis2ModInterfaceStep: Osis2ModInterface()
       header.name = m_CrosswireBookDetails[ubsAbbreviation]!!.fullName
       header.osis = BibleBookNamesOsis.numberToAbbreviatedName(bookNo)
       header.prefAbbrev = m_CrosswireBookDetails[ubsAbbreviation]!!.abbreviation
-      header.chapMax = if (missingBook) 0 else BibleStructure.UsxUnderConstructionInstance().getLastChapterNo(bookNo)
-      for (chapterNo in 1 .. header.chapMax) header.vm.add(BibleStructure.UsxUnderConstructionInstance().getLastVerseNo(bookNo, chapterNo))
+      header.chapMax = if (missingBook) 0 else TextStructureEnhancedUsx.getBibleStructure().getLastChapterNo(bookNo)
+      for (chapterNo in 1 .. header.chapMax) header.vm.add(TextStructureEnhancedUsx.getBibleStructure().getLastVerseNo(bookNo, chapterNo))
     }
   }
 

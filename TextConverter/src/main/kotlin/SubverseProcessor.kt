@@ -60,7 +60,7 @@ object SubverseProcessor
   fun canonicaliseRefsConvertCrossVerseSubverseRangesToVersesIfNecessary (refs: List<Node>): Boolean
   {
     /**************************************************************************/
-    if (Osis2ModInterface.instance().supportsSubverses())
+    if (UsxA_Osis2modInterface.instance().supportsSubverses())
       return false
 
 

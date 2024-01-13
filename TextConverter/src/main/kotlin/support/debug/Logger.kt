@@ -1,6 +1,6 @@
 package org.stepbible.textconverter.support.debug
 
-import org.stepbible.textconverter.TestController
+//import org.stepbible.textconverter.TestController
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -145,11 +145,11 @@ object Logger
 
   @Synchronized fun error (refKey: Long, text: String)
   {
-    if (TestController.instance().suppressErrors())
-    {
-      warning(refKey,"!!!!!!!!!!!!!! Error converted to warning while testing: $text")
-      return
-    }
+//    if (TestController.instance().suppressErrors())
+//    {
+//      warning(refKey,"!!!!!!!!!!!!!! Error converted to warning while testing: $text")
+//      return
+//    }
 
 
     ++m_ErrorCount
