@@ -38,7 +38,7 @@ import kotlin.collections.HashMap
  * @author ARA "Jamie" Jamieson
  */
 
-open class SE_ConversionTimeReversification protected constructor (fileProtocol: Z_FileProtocol): SE
+open class SE_ConversionTimeReversification protected constructor (dataCollection: X_DataCollection): SE(dataCollection)
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -49,24 +49,22 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process (dataCollection: Z_DataCollection) = doIt(dataCollection)
+  override fun process () = doIt(m_DataCollection)
 
 
 
   /****************************************************************************/
   fun setParameters (reversificationData: ReversificationData,
-                     emptyVerseHandler: Z_EmptyVerseHandler)
+                     emptyVerseHandler: EmptyVerseHandler)
   {
     m_EmptyVerseHandler = emptyVerseHandler
     m_ReversificationData = reversificationData
   }
   
-  protected lateinit var m_BibleStructure: Z_BibleStructure
-  protected lateinit var m_DataCollection: Z_DataCollection
-  private lateinit var m_EmptyVerseHandler: Z_EmptyVerseHandler
+  protected lateinit var m_BibleStructure: BibleStructure
+  private lateinit var m_EmptyVerseHandler: EmptyVerseHandler
   private lateinit var m_ReversificationData: ReversificationData
 
-  open fun getCanonicalTitles (rootNode: Node): List<Node> = throw StepExceptionShouldHaveBeenOverridden()
 
 
 
@@ -137,11 +135,12 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
      form if necessary before I do anything else.
   */
 
-  private fun doIt (dataCollection: Z_DataCollection)
+  private fun doIt (dataCollection: X_DataCollection)
   {
+    IssueAndInformationRecorder.setConversionTimeReversification()
+    dataCollection.loadWordCounts()
+
     TODO("This has never been tested yet -- you have been warned.")
-    m_DataCollection = dataCollection
-    m_BibleStructure = dataCollection.BibleStructure
     initialise()
     m_ReversificationData.getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart1(it) }
     m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "renumber") }
@@ -679,7 +678,7 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
      6. For step 2, we had an over-extended list of nodes.  However, we
         can safely delete from this list anything which is not a parent
         of the final eid, and we know which things they are because we
-        added _TEMP_childPos to them.
+        added _childPos to them.
 
      7. And then finally, we can delete from the ancestor chain any
         nodes which will already have appeared within the list of
@@ -695,8 +694,8 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
     while (true)
     {
       val parent = node.parentNode
-      if ("X_chapter" == Dom.getNodeName(parent)) break
-      Dom.setAttribute(parent, "_TEMP_childPos", Dom.getChildNumber(node).toString())
+      if ("chapter" == Dom.getNodeName(parent)) break
+      NodeMarker.setReversificationChildPos(parent, Dom.getChildNumber(node).toString())
       node = parent
     }
 
@@ -716,9 +715,9 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
     fun deleteYoungerSiblings (node: Node): Boolean
     {
       val parent = node.parentNode
-      if (!Dom.hasAttribute(parent, "_TEMP_childPos")) return false
-      val ix = Dom.getAttribute(parent, "_TEMP_childPos")!!.toInt()
-      Dom.deleteAttribute(parent, "_TEMP_childPos")
+      if (!NodeMarker.hasReversificationChildPos(parent)) return false
+      val ix = NodeMarker.getReversificationChildPos(parent)!!.toInt()
+      NodeMarker.deleteReversificationChildPos(parent)
       val siblings = Dom.getChildren(node.parentNode)
       siblings.subList(ix + 1, siblings.size).forEach { Dom.deleteNode(it) } // No need to delete recursively upwards, because the parent is guaranteed still to have at least one child.
       return true
@@ -757,9 +756,9 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
     /**************************************************************************/
     /* Step 6.  Take over original over-extended list, and remove anything
        which is not a parent of the final eid (ie anything not flagged with
-       _TEMP_childPos. */
+       _childPos. */
 
-    overExtendedSourceList.filter { !Dom.hasAttribute(it, "_TEMP_childPos") } .forEach { Dom.deleteNodeRecursivelyUpwards(it) }
+    overExtendedSourceList.filter { !NodeMarker.hasReversificationChildPos(it) } .forEach { Dom.deleteNodeRecursivelyUpwards(it) }
 
 
 
@@ -770,9 +769,9 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
     fun deleteOlderSiblings (node: Node): Boolean
     {
       val parent = node.parentNode
-      if (!Dom.hasAttribute(parent, "_TEMP_childPos")) return false
-      val ix = Dom.getAttribute(parent, "_TEMP_childPos")!!.toInt()
-      Dom.deleteAttribute(parent, "_TEMP_childPos")
+      if (!NodeMarker.hasReversificationChildPos(parent)) return false
+      val ix = NodeMarker.getReversificationChildPos(parent)!!.toInt()
+      NodeMarker.deleteReversificationChildPos(parent)
       val siblings = Dom.getChildren(node.parentNode)
       if (!Dom.hasNonWhitespaceChildren(siblings[ix])) Dom.deleteNode(siblings[ix])
       siblings.subList(0, ix).forEach { Dom.deleteNode(it) }
@@ -826,7 +825,7 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
 
     fun doIt (container: Node)
     {
-      val lastEid = m_FileProtocol.readRef(container["_TEMP_lastEid"]!!)
+      val lastEid = m_FileProtocol.readRef(NodeMarker.getReversificationLastEid(container)!!)
       val insertionPoint = getInsertionPoint(bookDetails.m_RootNode, lastEid)
       Dom.insertNodesBefore(insertionPoint, Dom.getChildren(container))
     }
@@ -855,10 +854,10 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
     val targetBookDetails = if (moveGroup.crossBook) m_BookDetails[BibleBookNamesUsx.nameToNumber(moveGroup.getStandardBookAbbreviatedName())]!! else sourceBookDetails
     val targetDoc = targetBookDetails.m_RootNode.ownerDocument
     val clonedNodes = Dom.cloneNodes(targetDoc, nodes, true)
-    val container = Dom.createNode(targetDoc, "<_TEMP_container/>")
+    val container = Dom.createNode(targetDoc, "<_NODE_container/>")
     Dom.addChildren(container, clonedNodes)
     targetBookDetails.m_MoveDataForInsertionIntoTarget.add(container)
-    Dom.setAttribute(container,"_TEMP_lastEid", moveGroup.rows.last().standardRef.toString()) // Useful when working out where to insert the block.
+    NodeMarker.setReversificationLastEid(container, moveGroup.rows.last().standardRef.toString()) // Useful when working out where to insert the block.
     cloneMoveNodesIfNecessary(nodes, moveGroup)
     return container
   }
@@ -944,12 +943,12 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
 
 
     /**************************************************************************/
-    /* Turn verse sids into _TEMP_verse sids, and make a note of any additional
+    /* Turn verse sids into _NODE_verse sids, and make a note of any additional
        information we may require later.  Then get rid of all eids -- we don't
        need them later, and they may confuse things. */
 
     var moveGroupIx = 0
-    clonedNodes.filter { m_FileProtocol.tagName_verse() == Dom.getNodeName(it) && m_FileProtocol.attrName_verseSid() in it }. forEach { Dom.setNodeName(it, "_TEMP_verse"); Dom.setAttribute(it, "_X_standardRefKey", moveGroup.rows[moveGroupIx++].standardRefAsRefKey.toString()) }
+    clonedNodes.filter { m_FileProtocol.tagName_verse() == Dom.getNodeName(it) && m_FileProtocol.attrName_verseSid() in it }. forEach { Dom.setNodeName(it, "_NODE_verse"); Dom.setAttribute(it, "_X_standardRefKey", moveGroup.rows[moveGroupIx++].standardRefAsRefKey.toString()) }
     clonedNodes.removeIf { m_FileProtocol.tagName_verse() == Dom.getNodeName(it) }
 
 
@@ -1042,7 +1041,7 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
 //
 //    /**************************************************************************/
 //    /* We now know where material is to be inserted; we now need to run over
-//       all of the _TEMP_verse nodes in that material, transforming it into the
+//       all of the _NODE_verse nodes in that material, transforming it into the
 //       form required, and then insert it. */
 //
 //    val owningRef = m_FileProtocol.readRef(Dom.getAttribute(insertBefore, m_FileProtocol.attrName_verseEid())!!).toRefKey()
@@ -1095,9 +1094,9 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
 //
 //
 //    /**************************************************************************/
-//    /* Process all of the _TEMP_verses. */
+//    /* Process all of the _NODE_verses. */
 //
-//    Dom.findNodesByName(details.m_Container, "_TEMP_verse", false).forEach { replaceVerseNode(it) }
+//    Dom.findNodesByName(details.m_Container, "_NODE_verse", false).forEach { replaceVerseNode(it) }
 //
 //
 //
@@ -1266,8 +1265,8 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
      In Psalms, most titles appear at the start of the chapter, although in a
      few cases there are canonical titles at the end as well.  Only the ones
      at the start are of interest here, and these can be recognised because
-     earlier processing will have added an attribute
-     _temp_canonicalHeaderLocation='start'.
+     earlier processing will have added an attribute canonicalHeaderLocation=
+     'start'.
 
      Regrettably there are a lot of different cases which we need to cater for.
 
@@ -1346,13 +1345,13 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
 
     /**************************************************************************/
     /* If the original text had a canonical title which has merely been carried
-       forward, we'll have a temporary verse marked _TEMP_wasCanonicalTitle
+       forward, we'll have a temporary verse marked _wasCanonicalTitle
        which contains it.  If this is the case, we simply need to restore it
        to its former glory.  (There will only be one such verse, and it will be
        the first verse in the chapter.) */
 
     val sidNode = allNodes[firstSpecialVerseSidIx]
-    if (Dom.hasAttribute(sidNode, "_TEMP_wasCanonicalTitle"))
+    if (NodeMarker.hasReversificationWasCanonicalTitle(sidNode))
     {
       val eid = allNodes.find { m_FileProtocol.tagName_verse() == Dom.getNodeName(it) && m_FileProtocol.attrName_verseEid() in it }!!
       Dom.deleteNode(eid)
@@ -1384,7 +1383,7 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
     val topLevelNodes = Dom.pruneToTopLevelOnly(allNodes.subList(firstSpecialVerseSidIx, lastSpecialVerseEidIx + 1))
     topLevelNodes.forEach { Dom.deleteNode(it) } // No need to delete recursively up the tree -- these won't be under anything relevant.
 
-    val canonicalTitle = Dom.createNode(ownerDocument, "<para style='d'/>"); Utils.addTemporaryAttribute(canonicalTitle, "_temp_location", "start")
+    val canonicalTitle = Dom.createNode(ownerDocument, "<para style='d'/>"); NodeMarker.setCanonicalHeaderLocation(canonicalTitle, "start")
     val insertBefore = Dom.findNodeByName(chapterNode, m_FileProtocol.tagName_verse(), false)
     Dom.insertNodeBefore(insertBefore!!, canonicalTitle)
     Dom.addChildren(canonicalTitle, topLevelNodes)
@@ -1425,14 +1424,14 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
     {
       val chapter = Dom.findAncestorByNodeName(heading, m_FileProtocol.tagName_chapter())!!
       val id = Dom.getAttribute(chapter, m_FileProtocol.attrName_chapterSid()) + RefBase.C_TitlePseudoVerseNumber.toString()
-      val sidNode = Dom.createNode(rootNode.ownerDocument, "<${m_FileProtocol.tagName_verse()} ${m_FileProtocol.attrName_verseSid()}='$id' _TEMP_wasCanonicalTitle='y'/>")
-      val eidNode = Dom.createNode(rootNode.ownerDocument, "<${m_FileProtocol.tagName_verse()} ${m_FileProtocol.attrName_verseEid()}='$id' _TEMP_wasCanonicalTitle='y'/>")
+      val sidNode = Dom.createNode(rootNode.ownerDocument, "<${m_FileProtocol.tagName_verse()} ${m_FileProtocol.attrName_verseSid()}='$id'/>"); NodeMarker.setReversificationWasCanonicalTitle(sidNode)
+      val eidNode = Dom.createNode(rootNode.ownerDocument, "<${m_FileProtocol.tagName_verse()} ${m_FileProtocol.attrName_verseEid()}='$id'/>"); NodeMarker.setReversificationWasCanonicalTitle(eidNode)
       Dom.insertNodeBefore(heading, sidNode)
       Dom.insertNodeAfter(heading, eidNode)
     }
 
     getCanonicalTitles(rootNode)
-      .filter { "start" == it["_temp_canonicalHeaderLocation"]!! }
+      .filter { "start" == NodeMarker.getCanonicalHeaderLocation(it) }
       .forEach { encapsulate(it) }
   }
 
@@ -1464,6 +1463,10 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
 
     Dom.getNodesInTree(rootNode).forEach { process(it) }
   }
+
+
+  /****************************************************************************/
+  private fun getCanonicalTitles (rootNode: Node) = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isCanonicalTitleNode(it) }
 
 
 
@@ -1557,7 +1560,7 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
          attribute and then move them later. */
 
       if (row.requiresNotesToBeMovedToStartOfVerse())
-        Dom.setAttribute(noteNode, "_TEMP_moveNoteToStartOfVerse", "y")
+        NodeMarker.setMoveNoteToStartOfVerse(noteNode)
 
 
 
@@ -1610,7 +1613,7 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
   /****************************************************************************/
   private fun changeId (node: Node, sel: String, newVal: String)
   {
-    Utils.addTemporaryAttribute(node, "_temp_originalId", node[sel]!!)
+    NodeMarker.setOriginalId(node, node[sel]!!)
     node[sel] = newVal
   }
 
@@ -1636,7 +1639,7 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
     if (null == chapterNode) // If we're having to create a new chapter, chapterNode will presently be null.
     {
       val bookNode = Dom.findNodeByName(rootNode, m_FileProtocol.tagName_book(), false)!!
-      chapterNode = Dom.createNode(rootNode.ownerDocument, "<${m_FileProtocol.tagName_chapter()} ${m_FileProtocol.attrName_chapterSid()}='$chapterRef'"); Utils.addTemporaryAttribute(chapterNode, "_temp_generatedReason", "chapterCreatedByReversification")
+      chapterNode = Dom.createNode(rootNode.ownerDocument, "<${m_FileProtocol.tagName_chapter()} ${m_FileProtocol.attrName_chapterSid()}='$chapterRef'"); NodeMarker.setGeneratedReason(chapterNode, "chapterCreatedByReversification")
       val verseSidNode = Dom.createNode(rootNode.ownerDocument, "<${m_FileProtocol.tagName_verse()} ${m_FileProtocol.attrName_verseSid()}='$chapterRef:${RefBase.C_BackstopVerseNumber}'/>")
       val verseEidNode = Dom.createNode(rootNode.ownerDocument, "<${m_FileProtocol.tagName_verse()} ${m_FileProtocol.attrName_verseEid()}='$chapterRef:${RefBase.C_BackstopVerseNumber}'/>")
       chapterNode.appendChild(verseSidNode)
@@ -1755,10 +1758,6 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
   */
 
   override fun process (rootNode: Node) = throw StepExceptionShouldHaveBeenOverridden()
-
-
-  /****************************************************************************/
-  protected val m_FileProtocol = fileProtocol
 }
 
 
@@ -1766,10 +1765,8 @@ open class SE_ConversionTimeReversification protected constructor (fileProtocol:
 
 
 /******************************************************************************/
-object Osis_SE_ConversiontimeReversification: SE_ConversionTimeReversification(Osis_FileProtocol)
+class Osis_SE_ConversiontimeReversification (dataCollection: X_DataCollection): SE_ConversionTimeReversification(dataCollection)
 {
-  override fun getCanonicalTitles(rootNode: Node): List<Node> = Dom.findNodesByAttributeValue(rootNode, "title", "type", "psalm")
-
   /****************************************************************************/
   override fun makeBook (bookNo: Int): Node
   {
@@ -1783,7 +1780,7 @@ object Osis_SE_ConversiontimeReversification: SE_ConversionTimeReversification(O
     val documentRoot = doc.createElement("<usx version='3.0'>")
     val bookRoot = Dom.createNode(doc, "<book code='$bookName'/>")
     documentRoot.appendChild(bookRoot)
-    for (i in 1 .. Z_BibleStructure.makeOsis2modNrsvxSchemeInstance(m_BibleStructure).getLastChapterNo(bookName)) makeChapter(bookRoot, bookName, i)
+    for (i in 1 .. BibleStructure.makeOsis2modNrsvxSchemeInstance(m_BibleStructure).getLastChapterNo(bookName)) makeChapter(bookRoot, bookName, i)
 
     return bookRoot
   }
@@ -1796,16 +1793,12 @@ object Osis_SE_ConversiontimeReversification: SE_ConversionTimeReversification(O
     val chapterNode = Dom.createNode(rootNode.ownerDocument, "<chapter sid='$bookAbbreviation $chapterNo' _X_revAction='generatedChapter'>")
     rootNode.appendChild(chapterNode)
 
-    var verseNode = Dom.createNode(rootNode.ownerDocument, "<verse sid='$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}' _TEMP_dummy='y' />")
+    var verseNode = Dom.createNode(rootNode.ownerDocument, "<verse sid='$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}'/>"); NodeMarker.setDummy(verseNode)
     chapterNode.appendChild(verseNode)
 
-    verseNode = Dom.createNode(rootNode.ownerDocument, "<verse eid='$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}' _TEMP_dummy='y' />")
+    verseNode = Dom.createNode(rootNode.ownerDocument, "<verse eid='$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}'/>"); NodeMarker.setDummy(verseNode)
     chapterNode.appendChild(verseNode)
   }
-
-
-  /****************************************************************************/
-  override fun makeFootnote (doc: Document, refKey: RefKey, text: String, callout: String): Node = Usx_Utils.makeFootnote(doc, refKey, text, callout)
 }
 
 
@@ -1813,12 +1806,8 @@ object Osis_SE_ConversiontimeReversification: SE_ConversionTimeReversification(O
 
 
 /******************************************************************************/
-object Usx_SE_ConversiontimeReversification: SE_ConversionTimeReversification(Usx_FileProtocol)
+class Usx_SE_ConversiontimeReversification (dataCollection: X_DataCollection): SE_ConversionTimeReversification(dataCollection)
 {
-  /****************************************************************************/
-  override fun getCanonicalTitles(rootNode: Node): List<Node> = Dom.findNodesByAttributeValue(rootNode, "para", "style", "d")
-
-
   /****************************************************************************/
   override fun makeBook (bookNo: Int): Node
   {
@@ -1831,7 +1820,7 @@ object Usx_SE_ConversiontimeReversification: SE_ConversionTimeReversification(Us
     val documentRoot = doc.createElement("<usx version='3.0'>")
     val bookRoot = Dom.createNode(doc, "<book code='$bookName'/>")
     documentRoot.appendChild(bookRoot)
-    for (i in 1 .. Z_BibleStructure.makeOsis2modNrsvxSchemeInstance(m_BibleStructure).getLastChapterNo(bookName)) makeChapter(bookRoot, bookName, i)
+    for (i in 1 .. BibleStructure.makeOsis2modNrsvxSchemeInstance(m_BibleStructure).getLastChapterNo(bookName)) makeChapter(bookRoot, bookName, i)
 
     return bookRoot
   }
@@ -1843,19 +1832,10 @@ object Usx_SE_ConversiontimeReversification: SE_ConversionTimeReversification(Us
     val chapterNode = Dom.createNode(rootNode.ownerDocument, "<chapter sid='$bookAbbreviation $chapterNo' _X_revAction='generatedChapter'>")
     rootNode.appendChild(chapterNode)
 
-    var verseNode = Dom.createNode(rootNode.ownerDocument, "<verse sid='$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}' _TEMP_dummy='y' />")
+    var verseNode = Dom.createNode(rootNode.ownerDocument, "<verse sid='$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}'/>"); NodeMarker.setDummy(verseNode)
     chapterNode.appendChild(verseNode)
 
-    verseNode = Dom.createNode(rootNode.ownerDocument, "<verse eid='$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}' _TEMP_dummy='y' />")
+    verseNode = Dom.createNode(rootNode.ownerDocument, "<verse eid='$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}'/>"); NodeMarker.setDummy(verseNode)
     chapterNode.appendChild(verseNode)
   }
-
-
-  /****************************************************************************/
-  override fun makeFootnote (doc: Document, refKey: RefKey, text: String, callout: String): Node = Usx_Utils.makeFootnote(doc, refKey, text, callout)
 }
-
-
-/******************************************************************************/
-object Osis_ConversionTimeReversification: SE_ConversionTimeReversification(Osis_FileProtocol)
-object Usx_ConversionTimeReversification : SE_ConversionTimeReversification(Usx_FileProtocol)

@@ -48,7 +48,6 @@ object PE_Phase3_To_SwordModule : PE
   /****************************************************************************/
   override fun pre ()
   {
-    StepFileUtils.deleteFolder(FileLocations.getOutputFolderPath())
     StepFileUtils.deleteFolder(FileLocations.getInternalSwordFolderPath())
   }
 
@@ -58,6 +57,7 @@ object PE_Phase3_To_SwordModule : PE
   {
     /**************************************************************************/
     if (!ConfigData.getAsBoolean("stepEncryptionRequired", "no")) Logger.warning("********** NOT ENCRYPTED **********")
+    StepFileUtils.createFolderStructure(FileLocations.getInternalSwordFolderPath())
     PackageContentHandler.processPreOsis2mod()
     handleOsis2modCall()
 
@@ -309,12 +309,12 @@ object PackageContentHandler
 
   /****************************************************************************/
   private fun osis2modDataHandler (filePath: String) = Osis_Osis2modInterface.instance().createSupportingDataIfRequired(filePath)
-  private fun featuresSummaryBibleStructureHandler (filePath: String) = IssueAndInformationRecorder.processFeaturesSummaryBibleStructure(filePath, OsisTempDataCollection.BibleStructure)
-  private fun featuresSummaryRunParametersHandler (filePath: String) = IssueAndInformationRecorder.processFeaturesSummaryRunParameters(filePath)
+  private fun featuresSummaryBibleStructureHandler (filePath: String) = IssueAndInformationRecorder.processFeaturesSummaryBibleDetails(filePath, OsisTempDataCollection)
+  private fun featuresSummaryRunParametersHandler (filePath: String) = IssueAndInformationRecorder.processFeaturesSummaryRunDetails(filePath)
 
 
   /****************************************************************************/
-  /* Saves the OSIS to the Input_Osis folder if appropriate ...
+  /* Saves the OSIS to the InputOsis folder if appropriate ...
 
      If the original input for this run was OSIS, then we wish to retain that
      OSIS, and there is therefore nothing to do here.
@@ -322,12 +322,12 @@ object PackageContentHandler
 
   private fun osisSaver (filePath: String)
   {
-    if ("osis" != ConfigData["stepProcessingOriginalData"]!!)
+    if ("osis" == ConfigData["stepOriginData"]!!)
       return
 
-    StepFileUtils.deleteFileOrFolder(FileLocations.getTempOsisFolderPath())
-    StepFileUtils.createFolderStructure(FileLocations.getTempOsisFolderPath())
-    Dom.outputDomAsXml(OsisPhase2SavedDataCollection.getDocument(), FileLocations.getTempOsisFolderPath(),null)
+    StepFileUtils.deleteFileOrFolder(FileLocations.getInputOsisFolderPath())
+    StepFileUtils.createFolderStructure(FileLocations.getInputOsisFolderPath())
+    Dom.outputDomAsXml(OsisPhase2SavedDataCollection.getDocument(), FileLocations.getInputOsisFolderPath(),null)
   }
 
 
@@ -418,7 +418,7 @@ object PackageContentHandler
       if (line.startsWith("#!")) continue // Internal comment only.
       line = line.split("#!")[0].trim() // Remove any trailing comment.
       line = line.replace("@reversificationMap", m_ReversificationMap) // Could use ordinary dollar expansions here, but it's too slow because the map is so big.
-      //Dbg.dCont(line, "stepProcessingOriginalDataAdditionalInfo")
+      //Dbg.dCont(line, "stepOriginDataAdditionalInfo")
       writer.write(ConfigData.expandReferences(line, false)!!)
       writer.write("\n")
     }

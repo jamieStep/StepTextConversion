@@ -1261,14 +1261,22 @@ object ConfigData
     /****************************************************************************/
     /**
     * Returns a list of vernacular book descriptors, if these are known (an
-    * empty list if not).
+    * empty list if not).  The list follows the ordering specified in the
+    * metadata, so if that has indicated that books are required to be out of
+    * order, that's what you'll get.
     *
     * @return Book descriptors.
     */
 
-    fun getBookDescriptors(): List<VernacularBookDescriptor>
+    fun getBookDescriptors (): List<VernacularBookDescriptor>
     {
-        return m_BookDescriptors
+      if (m_BookDescriptors.isNotEmpty()) return m_BookDescriptors
+
+      get("stepBookList") // Dummy call which forces things to be populated from external metadata if available.
+      if (m_BookDescriptors.isNotEmpty()) return m_BookDescriptors
+
+      m_BookDescriptors = BibleBookNamesUsx.getBookDescriptors().toMutableList()
+      return m_BookDescriptors
     }
 
 
@@ -1865,7 +1873,7 @@ object ConfigData
 
 
     /****************************************************************************/
-    private val m_BookDescriptors: MutableList<VernacularBookDescriptor> = ArrayList()
+    private var m_BookDescriptors: MutableList<VernacularBookDescriptor> = ArrayList()
     private val m_CopyAsIsLines: MutableList<String> = ArrayList()
     private val m_EnglishDefinitions: MutableSet<String> = mutableSetOf()
     private var m_Initialised: Boolean = false
@@ -1987,6 +1995,18 @@ object ConfigData
 
 
   /****************************************************************************/
+  /* Says whether the module is intended for STEP only or for potential public
+     distribution. */
+
+  fun calc_stepIntendedAudience (): String
+  {
+    if (getAsBoolean("stepEncryptionRequired")) return "step"
+    if ("step" == get("stepOsis2ModType")!!.lowercase()) return "step"
+    return "public"
+  }
+
+
+  /****************************************************************************/
   fun calc_stepLanguageCode2Char (): String
   {
     var languageCode = getInternal("stepLanguageCodeFromRootFolderName", false)!!.lowercase()
@@ -2028,6 +2048,58 @@ object ConfigData
   fun calc_stepModuleCreationDate (): String
   {
     return SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date())
+  }
+
+
+  /****************************************************************************/
+  /* This can be used only once things like encryption, reversification, etc
+     have been determined. */
+
+  fun calc_stepModuleName (): String
+  {
+    /**************************************************************************/
+    /* We require a suffix on the ends of the names of some modules to indicate
+       the intended audience ...
+
+       - If the root folder for the text already has a suffix (implying that it
+         was given a suffix at some point in its history), we retain that for
+         the sake of backward compatibility.
+
+       - Otherwise if the module could, in theory, be made publicly available,
+         we add _sb in the hope that this will avoid name clashes with other
+         versions of the same text supplied by other people.
+
+       - Otherwise the module must be intended for use only within STEPBible,
+         and in this case we don't have a suffix. */
+
+    var audienceRelatedSuffix = parseRootFolderName("stepModuleSuffixOverride")
+    if (audienceRelatedSuffix.isEmpty())
+      audienceRelatedSuffix = if ("public" == ConfigData["stepIntendedAudience"]) "sb" else ""
+    if (audienceRelatedSuffix.isNotEmpty())
+      audienceRelatedSuffix = "_$audienceRelatedSuffix"
+
+
+
+    /**************************************************************************/
+    /* A potential further addition to module names.  On release runs, it adds
+       nothing.  On non-release runs it adds a timestamp etc to the name, so
+       that we can have multiple copies of a module lying around without them
+       clashing.  This part of the processing can be run at any time, because
+       the parameters it looks at will normally come direct from the command
+       line. */
+
+    var testRelatedSuffix =
+      if ("release" in ConfigData["stepRunType"]!!.lowercase())
+        ""
+      else
+      {
+        var x = ConfigData["stepRunType"]!!
+        if ("evaluation" in x.lowercase()) x = "eval"
+        "_" + x + "_" + ConfigData["stepBuildTimestamp"]!!
+      }
+
+
+     return calc_stepModuleNameBase() + testRelatedSuffix + audienceRelatedSuffix
   }
 
 

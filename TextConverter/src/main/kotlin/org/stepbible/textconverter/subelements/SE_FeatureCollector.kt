@@ -5,12 +5,9 @@ import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.shared.FeatureIdentifier
 import org.stepbible.textconverter.support.stepexception.StepException
-import org.stepbible.textconverter.support.stepexception.StepExceptionShouldHaveBeenOverridden
-import org.stepbible.textconverter.utils.IssueAndInformationRecorder
-import org.stepbible.textconverter.utils.Osis_FileProtocol
-import org.stepbible.textconverter.utils.Usx_FileProtocol
-import org.stepbible.textconverter.utils.Z_FileProtocol
+import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
+
 
 /****************************************************************************/
 /**
@@ -24,24 +21,8 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-open class SE_FeatureCollector protected constructor (fileProtocol: Z_FileProtocol): SE
+class SE_FeatureCollector (dataCollection: X_DataCollection): SE(dataCollection)
 {
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                               Protected                                **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  protected open fun isParaWhichMightContainMultipleVerses (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
-  protected val m_FileProtocol = fileProtocol
-
-
-
-
-
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -92,7 +73,7 @@ open class SE_FeatureCollector protected constructor (fileProtocol: Z_FileProtoc
     /**************************************************************************/
     fun countVerses (x: Node)
     {
-      if (!isParaWhichMightContainMultipleVerses(x))
+      if (!m_FileProtocol.isParaWhichCouldContainMultipleVerses(x))
         return
 
       val descendants = Dom.getNodesInTree(x)
@@ -139,34 +120,4 @@ open class SE_FeatureCollector protected constructor (fileProtocol: Z_FileProtoc
   /****************************************************************************/
   private val m_AlreadyGotSampleText = false
   private var m_AlreadyKnowResultForCountVersesInParas = false
-}
-
-
-
-
-
-/******************************************************************************/
-object Osis_SE_FeatureCollector: SE_FeatureCollector(Osis_FileProtocol)
-{
-  override fun isParaWhichMightContainMultipleVerses (node: Node): Boolean
-  {
-    if ("p" == Dom.getNodeName(node)) return true
-    return false
-    // %%%More work?
-  }
-}
-
-
-
-
-
-/******************************************************************************/
-object Usx_SE_FeatureCollector: SE_FeatureCollector(Usx_FileProtocol)
-{
-  override fun isParaWhichMightContainMultipleVerses (node: Node): Boolean
-  {
-    if ("para" != Dom.getNodeName(node)) return false
-    val style = Dom.getAttribute(node, "style")
-    return ("p" == style || "q" == style || "l" != style)
-  }
 }

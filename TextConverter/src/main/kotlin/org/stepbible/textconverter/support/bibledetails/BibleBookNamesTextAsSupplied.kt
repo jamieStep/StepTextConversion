@@ -2,7 +2,6 @@
 package org.stepbible.textconverter.support.bibledetails
 
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.stepexception.StepException
 
 
 /******************************************************************************/
@@ -21,6 +20,28 @@ object BibleBookNamesTextAsSupplied: BibleBookNames()
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
+  /**                                Public                                  **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+  * Gets the abbreviated name for a given book number.
+  *
+  * @param bookNo
+  * @return Abbreviated name.
+  */
+
+  operator fun get (bookNo: Int): String = numberToAbbreviatedName(bookNo)
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
   /**                                Private                                 **/
   /**                                                                        **/
   /****************************************************************************/
@@ -30,7 +51,7 @@ object BibleBookNamesTextAsSupplied: BibleBookNames()
   init
   {
     var bookDescriptors = ConfigData.getBookDescriptors()
-    if (bookDescriptors.isEmpty()) bookDescriptors = BibleBookNamesUsx.getBookDescriptors()
+    if (bookDescriptors.isEmpty()) bookDescriptors = BibleBookNamesUsx.getBookDescriptors().toMutableList()
 
     var previousBookNo = -1
 

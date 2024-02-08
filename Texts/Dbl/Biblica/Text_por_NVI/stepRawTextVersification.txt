@@ -50,12 +50,14 @@
 #
 ################################################################################
 
-PorNVI
+PorNVI_sbOnly
 
-Scheme:         nrsv   Score:       1000   Based upon         1 verses which osis2mod lacks   AND        0 verses which osis2mod has in excess.
-Scheme:          kjv   Score:       3000   Based upon         3 verses which osis2mod lacks   AND        0 verses which osis2mod has in excess.
-Scheme:       segond   Score:      45110   Based upon        45 verses which osis2mod lacks   AND      110 verses which osis2mod has in excess.
-Scheme:       german   Score:     136203   Based upon       136 verses which osis2mod lacks   AND      203 verses which osis2mod has in excess.
-Scheme:  synodalprot   Score:     785843   Based upon       785 verses which osis2mod lacks   AND      843 verses which osis2mod has in excess.
-Scheme:    leningrad   Score:    8094202   Based upon      8094 verses which osis2mod lacks   AND      202 verses which osis2mod has in excess.
-Scheme:           mt   Score:    8094202   Based upon      8094 verses which osis2mod lacks   AND      202 verses which osis2mod has in excess.
+Scheme:         NRSV   Score:         1000   Based upon      0 books and      1 verses which osis2mod lacks   AND     0 books and      0 verses which osis2mod has in excess.
+Scheme:          KJV   Score:         3000   Based upon      0 books and      3 verses which osis2mod lacks   AND     0 books and      0 verses which osis2mod has in excess.
+Scheme:      DarbyFr   Score:        30032   Based upon      0 books and     30 verses which osis2mod lacks   AND     0 books and     32 verses which osis2mod has in excess.
+Scheme:       Calvin   Score:        30095   Based upon      0 books and     30 verses which osis2mod lacks   AND     0 books and     95 verses which osis2mod has in excess.
+Scheme:       Segond   Score:        45110   Based upon      0 books and     45 verses which osis2mod lacks   AND     0 books and    110 verses which osis2mod has in excess.
+Scheme:       German   Score:       136203   Based upon      0 books and    136 verses which osis2mod lacks   AND     0 books and    203 verses which osis2mod has in excess.
+Scheme:  SynodalProt   Score:       785843   Based upon      0 books and    785 verses which osis2mod lacks   AND     0 books and    843 verses which osis2mod has in excess.
+Scheme:    Leningrad   Score:     27135202   Based upon     27 books and    135 verses which osis2mod lacks   AND     0 books and    202 verses which osis2mod has in excess.
+Scheme:           MT   Score:     27135202   Based upon     27 books and    135 verses which osis2mod lacks   AND     0 books and    202 verses which osis2mod has in excess.

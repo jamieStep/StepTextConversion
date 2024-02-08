@@ -209,8 +209,8 @@ object FileLocations
   }
 
   fun getInputOsisFileExists () = if (!StepFileUtils.fileOrFolderExists(getInputOsisFolderPath())) false else StepFileUtils.getMatchingFilesFromFolder(getInputOsisFolderPath(), ".*\\.${getFileExtensionForOsis()}".toRegex()).isNotEmpty()
-  fun getInputUsxFilesExist  () = if (!StepFileUtils.fileOrFolderExists(getInputUsxFolderPath())) false else StepFileUtils.getMatchingFilesFromFolder(getInputOsisFolderPath(), ".*\\.${getFileExtensionForUsx()}".toRegex()).isNotEmpty()
-  fun getInputVlFilesExist   () = if (!StepFileUtils.fileOrFolderExists(getInputVlFolderPath())) false else StepFileUtils.getMatchingFilesFromFolder(getInputVlFolderPath(), ".*\\.${getFileExtensionForVl()}".toRegex()).isNotEmpty()
+  fun getInputUsxFilesExist  () = if (!StepFileUtils.fileOrFolderExists(getInputUsxFolderPath()))  false else StepFileUtils.getMatchingFilesFromFolder(getInputUsxFolderPath(), ".*\\.${getFileExtensionForUsx()}".toRegex()).isNotEmpty()
+  fun getInputVlFilesExist   () = if (!StepFileUtils.fileOrFolderExists(getInputVlFolderPath()))   false else StepFileUtils.getMatchingFilesFromFolder(getInputVlFolderPath(), ".*\\.${getFileExtensionForVl()}".toRegex()).isNotEmpty()
 
 
 
@@ -224,12 +224,10 @@ object FileLocations
      need renaming -- if we have an xxx file in the repository, it's a sure sign
      I've forgotten to do something. */
 
-  fun getInternalOsisFolderPath                () = Paths.get(getRootFolderPath(), "_InternalOsis").toString()
-  fun getInternalSwordFolderPath               () = Paths.get(getRootFolderPath(), "_InternalSword").toString()
-  private fun getMasterMiscellaneousFolderPath () = Paths.get(getRootFolderPath(), "_InternalFilesForRepositoryEtc").toString()
-  fun getTempOsisFolderPath                    () = Paths.get(getRootFolderPath(), "_InternalTempOsis").toString()
+  fun getInternalSwordFolderPath               () = Paths.get(getOutputFolderPath(), "_InternalSword").toString()
+  private fun getMasterMiscellaneousFolderPath () = Paths.get(getOutputFolderPath(), "_InternalFilesForRepositoryEtc").toString()
 
-  fun getInternalOsisFilePath                  () = Paths.get(getInternalOsisFolderPath(), makeOsisFileName()).toString()
+  fun getTempOsisFolderPath                    () = Paths.get(getOutputFolderPath(), "TempOsis").toString()
   fun getTempOsisFilePath                      () = Paths.get(getTempOsisFolderPath(), "tempOsis.${getFileExtensionForOsis()}").toString()
 
   fun getOutputFolderPath                      () = Paths.get(getRootFolderPath(), "_Output").toString()
@@ -241,7 +239,7 @@ object FileLocations
   /* Sword structure and the stuff which resides in it. */
 
   fun getEncryptionAndBespokeOsisToModDataRootFolder ()= Paths.get(getInternalSwordFolderPath(), "step").toString()
-  fun getEncryptionDataFolder () = Paths.get(getEncryptionAndBespokeOsisToModDataRootFolder(), "jsword-mods.d").toString()
+  private fun getEncryptionDataFolder () = Paths.get(getEncryptionAndBespokeOsisToModDataRootFolder(), "jsword-mods.d").toString()
   fun getEncryptionDataFilePath () = Paths.get(getEncryptionDataFolder(), "${getModuleName()}.conf").toString()
 
   fun getSwordConfigFilePath (): String { return Paths.get(getSwordConfigFolderPath(), "${getModuleName()}.conf").toString() }

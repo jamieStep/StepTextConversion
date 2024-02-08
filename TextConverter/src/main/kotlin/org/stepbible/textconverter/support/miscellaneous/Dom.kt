@@ -119,10 +119,10 @@ object Dom
 
     fun ancestorAndDescendantAreSeparatedByWhitespaceOnly (ancestor: Node, descendant: Node): Boolean
     {
-        val tempNode: Node = createTextNode(ancestor.ownerDocument, "_temp_XXX")
+        val tempNode: Node = createTextNode(ancestor.ownerDocument, "_XXX")
         insertNodeBefore(descendant, tempNode)
         val s = ancestor.textContent.trim { it <= ' ' }
-        val ix = s.indexOf("_temp_XXX")
+        val ix = s.indexOf("_XXX")
         deleteNode(tempNode)
         return 0 == ix
     }
@@ -879,7 +879,6 @@ object Dom
      * Returns the first node with a given name under a given node, or null if not
      * found.
      *
-     *
      * IMPORTANT: You can't use this method to find text nodes.
      *
      * @param node Owning node.
@@ -890,18 +889,23 @@ object Dom
 
     fun findNodeByName (node: Node, nodeName: String, includeRoot: Boolean): Node?
     {
-        return if (includeRoot && nodeName == getNodeName(node)) node else
-            try
-            {
-                val xPathFactory = XPathFactory.newInstance()
-                val xPath = xPathFactory.newXPath()
-                val expr = xPath.compile(".//$nodeName[1]")
-                expr.evaluate(node, XPathConstants.NODE) as Node?
-            }
-            catch (e: Exception)
-            {
-                throw StepException(e)
-            }
+      val res: Node?
+      if (includeRoot && nodeName == getNodeName(node))
+        res = node
+      else
+        try
+        {
+          val xPathFactory = XPathFactory.newInstance()
+          val xPath = xPathFactory.newXPath()
+          val expr = xPath.compile(".//$nodeName[1]")
+          res = expr.evaluate(node, XPathConstants.NODE) as Node?
+        }
+        catch (e: Exception)
+        {
+          throw StepException(e)
+        }
+
+        return res
     }
 
 
@@ -2747,4 +2751,14 @@ operator fun Node.minus (attributeName: String): Node { Dom.deleteAttribute(this
 operator fun Node.minusAssign (attributeName: String) { Dom.deleteAttribute(this, attributeName) }                // node -= "attrName" (delete attribute)
 operator fun Node.contains (attributeName: String): Boolean { return Dom.hasAttribute(this, attributeName) }      // "attrName" in node (or !in)
 
-fun Document.getAllNodes(): List<Node> { return Dom.getNodesInTree(this) }
+fun Node.getNodesInTree (): List<Node> = Dom.getNodesInTree(this)
+fun Node.findNodeByName (nodeName: String, includeThisNode: Boolean) = Dom.findNodeByName(this, nodeName, includeThisNode)
+fun Node.findNodesByAttributeName (nodeName: String, attributeName: String) = Dom.findNodesByAttributeName(this, nodeName, attributeName)
+fun Node.findNodesByAttributeValue (nodeName: String, attributeName: String, attributeValue: String) = Dom.findNodesByAttributeValue(this, nodeName, attributeName, attributeValue)
+
+fun Document.add (textForTag: String): Node = Dom.createNode(this, textForTag)
+fun Document.getNodesInTree (): List<Node> = Dom.getNodesInTree(this)
+fun Document.findNodeByName (nodeName: String) = Dom.findNodeByName(this, nodeName)
+fun Document.findNodesByName (nodeName: String) = Dom.findNodesByName(this, nodeName)
+fun Document.findNodesByAttributeName (nodeName: String, attributeName: String) = Dom.findNodesByAttributeName(this, nodeName, attributeName)
+fun Document.findNodesByAttributeValue (nodeName: String, attributeName: String, attributeValue: String) = Dom.findNodesByAttributeValue(this, nodeName, attributeName, attributeValue)

@@ -656,7 +656,15 @@ class Ref : RefCollectionPart
       val c = if (elts.size < 2) C_DummyElement else Integer.parseInt(elts[1])
       val v = if (elts.size < 3) C_DummyElement else Integer.parseInt(elts[2])
       val s = if (elts.size < 4) C_DummyElement else convertRepeatingStringToNumber(elts[3], 'a', 'z')
-      return rd(b, c, v, s)
+
+      val res = rd(b, c, v, s)
+
+      res.setSource('b', if (C_DummyElement == b) RefBase.ElementSource.Undefined else RefBase.ElementSource.Explicit)
+      res.setSource('c', if (C_DummyElement == c) RefBase.ElementSource.Undefined else RefBase.ElementSource.Explicit)
+      res.setSource('v', if (C_DummyElement == v) RefBase.ElementSource.Undefined else RefBase.ElementSource.Explicit)
+      res.setSource('s', if (C_DummyElement == s) RefBase.ElementSource.Undefined else RefBase.ElementSource.Explicit)
+
+      return res
     }
 
 

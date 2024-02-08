@@ -5,6 +5,7 @@ import java.util.TreeMap
 import org.stepbible.textconverter.support.shared.*
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.stepexception.StepException
+import org.stepbible.textconverter.utils.BibleStructure
 
 
 /******************************************************************************/
@@ -15,8 +16,43 @@ import org.stepbible.textconverter.support.stepexception.StepException
  * @author ARA "Jamie" Jamieson
 */
 
-abstract class BibleBookNames
+open class BibleBookNames
 {
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                              Companion                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  companion object {
+    /**************************************************************************/
+    /**
+    * Gets the UBS book number corresponding to a given name, by hook or by
+    * croook.  Caters for the possibility that the name may be abbreviated,
+    * short or long, and that it may be in USX form, OSIS form or vernacular
+    * form.
+    *
+    * @param name
+    * @return Book number, or zero.
+    */
+
+    operator fun get (name: String): Int
+    {
+      var res = BibleBookNamesUsx.nameToNumber(name)
+      if (0 == res) res = BibleBookNamesOsis.nameToNumber(name)
+      if (0 == res) res = BibleBookNamesTextAsSupplied.nameToNumber(name)
+      return res
+    }
+  }
+
+
+
+
+
+
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -31,7 +67,7 @@ abstract class BibleBookNames
 
 
 
-  /****************************************************************************/
+   /****************************************************************************/
   /**
    * Takes a name of the length implied by the name of the method, and returns
    * the corresponding UBS book number.  Throws a StepException if not found.
@@ -227,3 +263,4 @@ abstract class BibleBookNames
   private val m_ShortNameToIndex:       MutableMap<String, Int> = TreeMap(String.CASE_INSENSITIVE_ORDER)
   private val m_LongNameToIndex:        MutableMap<String, Int> = TreeMap(String.CASE_INSENSITIVE_ORDER)
 }
+

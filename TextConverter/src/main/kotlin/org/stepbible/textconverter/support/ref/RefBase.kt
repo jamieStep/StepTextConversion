@@ -1,8 +1,7 @@
 /****************************************************************************/
 package org.stepbible.textconverter.support.ref
 
-import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.utils.Z_BibleStructure
+import org.stepbible.textconverter.utils.BibleStructure
 import kotlin.math.abs
 
 
@@ -360,11 +359,11 @@ abstract class RefBase
     * @param bibleStructure Z_BibleStructure instance.
     */
 
-    fun setBibleStructure (bibleStructure: Z_BibleStructure) { m_BibleStructure = bibleStructure }
+    fun setBibleStructure (bibleStructure: BibleStructure?) { m_BibleStructure = bibleStructure }
 
 
     /**************************************************************************/
-    private lateinit var m_BibleStructure: Z_BibleStructure
+    private var m_BibleStructure: BibleStructure? = null
 
   }
 }

@@ -20,5 +20,5 @@ interface CrossReferenceChecker
   /****************************************************************************/
 
   /****************************************************************************/
-  fun process (dataCollection: Z_DataCollection)
+  fun process (dataCollection: X_DataCollection)
 }

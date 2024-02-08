@@ -13,7 +13,7 @@ import org.stepbible.textconverter.support.stepexception.StepException
  * @author A Jamieson www.stepbible.org
  */
 
-open class ReversificationRuleEvaluator (bibleStructure: Z_BibleStructure)
+open class ReversificationRuleEvaluator (bibleStructure: BibleStructure)
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -204,7 +204,7 @@ open class ReversificationRuleEvaluator (bibleStructure: Z_BibleStructure)
 
           when (thisNWords)
           {
-            Z_BibleStructure.C_ElementInElision   ->
+            BibleStructure.C_ElementInElision   ->
             {
               lengthWarning("$ref forms part of an elision, and we cannot therefore carry out length tests upon it.")
               return false

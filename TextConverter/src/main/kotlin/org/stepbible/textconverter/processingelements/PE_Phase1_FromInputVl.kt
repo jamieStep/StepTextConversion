@@ -1,5 +1,4 @@
 /******************************************************************************/
-/******************************************************************************/
 package org.stepbible.textconverter.processingelements
 
 import org.stepbible.textconverter.osisinputonly.Osis_Utils
@@ -12,6 +11,8 @@ import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
+import org.stepbible.textconverter.support.miscellaneous.findNodeByName
+import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.*
 import java.io.BufferedWriter
@@ -27,7 +28,7 @@ import kotlin.collections.HashMap
  * per line, relatively simple additional features, and no cross-verse boundary
  * markup.  We presently have only a couple of texts which use it, but I guess
  * it may be useful to have a general-purpose converter to turn it directly
- * into enhanced USX.
+ * into OSIS.
  *
  * The processing relies upon the following configuration parameters:
  *
@@ -48,9 +49,21 @@ import kotlin.collections.HashMap
  *   VL are in fact standard USX abbreviations.
  *
  *
- * The output is written to [OsisPhase1OutputDataCollection] in extended OSIS form.
- * On release runs, the OSIS, converted to pure form, is saved in InputOsis in
- * case we want to tweak it manually and use it as input on future runs.
+ * The output forms the text element of [OsisPhase1OutputDataCollection].  Note
+ * that it is *not* fed into the parsed data structures of that item, nor its
+ * associated BibleStructure.
+ *
+ *
+ * IMPORTANT: VerseLine is not a standard.  Each instance of VerseLine which I've
+ * seen is different from every other, in terms both of syntax (eg how the
+ * verse references are represented) and in terms of what additional features it
+ * supports (footnotes, Strong's, etc).  The processing here supports the few
+ * examples I've seen, but there's no guarantee it will cope with the next one
+ * which comes along.  You therefore need to be reconciled to the possible need to
+ * do additional coding work each time.  At the same time, we don't really want the
+ * converter to grow and grow merely to accommodate new texts, so you may possibly
+ * need to consider some way of offloading this additional processing to something
+ * outside the converter -- a pre-processor of some kind.
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -126,7 +139,7 @@ object PE_Phase1_FromInputVl: PE
       writeln(Osis_Utils.fileTrailer())
     }
 
-    val text = Utils.outputToFileOrString(null, ::writeFn)
+    val text = Utils.outputToFileOrString(null, ::writeFn)!!
 
 
 
@@ -135,19 +148,11 @@ object PE_Phase1_FromInputVl: PE
        information which appears in the header -- I need to have the bulk of
        the data loaded before I can to work out what this should be. */
 
-    val dom = Dom.getDocumentFromText(text!!, retainComments = true)
-    val titleNode = Dom.findNodeByName(dom, "title")!!
-    val textContent = titleNode.textContent.replace("%%%biblePortion%%%", ConfigData.makeStepDescription_getBiblePortion()).replace("\\s+".toRegex(), " ")
-    titleNode.textContent = textContent
-    if (!ConfigData.getAsBoolean("evaluateSchemesOnly", "no"))
-    {
-      OsisPhase1OutputDataCollection.recordDataFormat(Z_DataCollection.DataFormats.OsisExtended)
-      OsisPhase1OutputDataCollection.addFromText(text, true)
-      Dbg.outputDom(OsisPhase1OutputDataCollection.getDocument())
-    }
-
-
-//      File(FileLocations.getInternalOsisFilePath()).bufferedWriter().use{ m_Writer = it; writeln(text) }
+//    val doc = Dom.getDocumentFromText(text!!, retainComments = true)
+//    val titleNode = doc.findNodeByName("title")!!
+//    val textContent = titleNode.textContent.replace("%%%biblePortion%%%", ConfigData.makeStepDescription_getBiblePortion()).replace("\\s+".toRegex(), " ")
+//    titleNode.textContent = textContent
+    OsisPhase1OutputDataCollection.setText(text)
   }
 
 
@@ -237,7 +242,7 @@ object PE_Phase1_FromInputVl: PE
   {
     writeln(""); writeln(""); writeln(""); writeln(""); writeln("")
     writeln("<!-- ================================================================================ -->")
-    writeln("<div canonical='false' osisID='$bookName' type='Book'>")
+    writeln("<div canonical='false' osisID='$bookName' type='book'>")
   }
 
 

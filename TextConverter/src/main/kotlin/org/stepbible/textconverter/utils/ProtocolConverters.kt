@@ -5,7 +5,6 @@ import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.RefCollection
 import org.w3c.dom.Document
 import org.w3c.dom.Node
-import javax.print.Doc
 
 /******************************************************************************/
 /**
@@ -56,6 +55,8 @@ import javax.print.Doc
 * creating STEP-internal OSIS, and it is this which is passed to osis2mod.
 * This is in standard OSIS form, but is a temporary which can be disposed of
 * once osis2mod has run (although I may perhaps retain it for debug purposes).
+*
+* @author ARA "Jamie" Jamieson
 */
 
 class ProtocolConverters // Just here to give the documentation processor something to latch on to -- isn't intended to be used by anything.
@@ -80,12 +81,12 @@ object ProtocolConverterExtendedOsisToStandardOsis
   /****************************************************************************/
 
   /****************************************************************************/
-  fun process (doc: Document)
+  fun process (dataCollection: X_DataCollection)
   {
     Dbg.reportProgress("Converting to standard OSIS.")
-    m_Document = doc
+    m_Document = dataCollection.getDocument() // Extended OSIS will always be held as a single document, so getDocument will work ok.
     doMappings()
-    Utils.deleteTemporaryAttributes(m_Document)
+    NodeMarker.deleteAllMarkers(m_Document)
   }
 
 
@@ -163,7 +164,7 @@ object ProtocolConverterStandardOsisToExtendedOsis
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                                 Public                                 **/
+  /**                                 Private                                **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
@@ -187,8 +188,8 @@ object ProtocolConverterStandardOsisToExtendedOsis
     /**************************************************************************/
     fun processNode (node: Node)
     {
-      if (Osis_FileProtocol.isCanonicalHeader(node))
-        Utils.addTemporaryAttribute(node, "_temp_canonicalHeaderLocation", if (verseNo <= 3) "start" else "end")
+      if (Osis_FileProtocol.isCanonicalTitleNode(node))
+        NodeMarker.setCanonicalHeaderLocation(node, if (verseNo <= 3) "start" else "end")
       else if ("chapter" == Dom.getNodeName(node))
         verseNo = 0
       else if ("verse" == Dom.getNodeName(node) && "sID" in node)
@@ -418,7 +419,7 @@ object ProtocolConverterExtendedOsisToStepOsis
          below turns this into a bold italic para, but I can't recall whether
          this is what we had before. */
 
-      if (Osis_FileProtocol.isCanonicalHeader(node) && "end" == node["_temp_canonicalHeadingLocation"]!!)
+      if (Osis_FileProtocol.isCanonicalTitleNode(node) && "end" == node["_temp_canonicalHeadingLocation"]!!)
       {
         val wrapperPara = Dom.createNode(node.ownerDocument, "<p/>")
         Dom.insertNodeBefore(node, wrapperPara)

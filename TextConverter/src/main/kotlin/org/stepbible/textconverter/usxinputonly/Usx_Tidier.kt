@@ -1,20 +1,16 @@
 package org.stepbible.textconverter.usxinputonly
 
-import org.stepbible.textconverter.subelements.*
-import org.stepbible.textconverter.support.debug.Logger
+import org.stepbible.textconverter.subelements.SE_VerseEndInserter
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.*
-import org.stepbible.textconverter.utils.Usx_FileProtocol
+import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
 
 /******************************************************************************/
 /**
-* Takes data from InputUsx, applies any necessary pre-processing, and then
-* converts the result to OSIS in InternalOsis.
-*
 * In a previous implementation, I did a lot of work here.  This reflected the
 * fact that so far as I knew, all texts were likely to be in USX form (or in
 * VL form, which I translated to USX).  Latterly, though, it has become
@@ -46,7 +42,7 @@ import org.w3c.dom.Node
 * At the end of processing, two configuration parameters have been set up with
 * information which will be useful later on:
 *
-* - stepProcessingOriginalData will be VL, USX or OSIS.  This represents the
+* - stepOriginData will be VL, USX or OSIS.  This represents the
 *   raw data upon which the run was based.  In other words, if InputVl exists,
 *   it will be 'VL'; if InputUsx exists it will be USX< and if neither exists,
 *   it will be OSIS.  With VL, however, the run may not have started from that
@@ -56,7 +52,7 @@ import org.w3c.dom.Node
 *   *may* have been pre-processed to produce revised USX, and again if the
 *   revised USX already exists, the run may have started with that.
 *
-* - stepProcessingOriginalDataAdditionalInfo contains additional text
+* - stepOriginDataAdditionalInfo contains additional text
 *   explaining this issue of pre-processing where we have started from the
 *   pre-processed text.  (The parameter will be undefined where we have
 *   started from the raw text.)
@@ -75,38 +71,55 @@ object Usx_Tidier
   /****************************************************************************/
 
   /****************************************************************************/
-  fun process (items: Map<String, Document?>)
+  /**
+  * Applies general processing to a data collection.  Note that despite
+  * disclaimers elsewhere, this does actually currently assume that each
+  * book comes in a separate document.
+*/
+  fun process (dataCollection: X_DataCollection)
   {
-    items.forEach { if (null != it.value) { m_BookName = it.key; m_Document = it.value!!; processDom() } }
+    dataCollection.getDocuments().forEach(::doIt)
   }
 
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                               Private                                  **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
 
   /****************************************************************************/
   /* Canonicalises and generally tidies up a single document -- but does not
      fix any problems which I reckon might also turn up in OSIS when we use
      that as input: things like that I sort out later by messing around with
-     the OSIS. */
+     the OSIS.
 
-  private fun processDom ()
+     IMPORTANT: This assumes that the data has already been read into an
+     X_DataCollection, and book nodes have been converted into enclosing
+     nodes. */
+
+  private fun doIt (doc: Document)
   {
     /**************************************************************************/
-    fun x () = Logger.announceAllAndTerminateImmediatelyIfErrors()
+    m_BookName = Dom.findNodeByName(doc, "book")!!["code"]!!
+    Dbg.reportProgress("Processing ${Utils.prettifyBookAbbreviation(m_BookName)}.", 1)
 
 
 
     /**************************************************************************/
-    /* These are unique to USX input. */
-    
-    Dbg.reportProgress("Processing $m_BookName", 1)
-    deleteIgnorableTags()                              // Anything of no interest to our processing.
-    correctCommonUsxIssues()                           // Correct common errors.
-    simplePreprocessTagModifications()                 // Sort out things we don't think we like.
-    canonicaliseRootAndBook()                          // Basically turns book into an enclosing tag.
-    canonicaliseChapterAndVerseStarts(); x()           // Make sure we have sids (rather than numbers); that there are no verse-ends (we deal with those ourselves) and that chapters are enclosing tags.
-    convertTagsToLevelOneWhereAppropriate()            // Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
-    Usx_CrossReferenceCanonicaliser.process(m_Document)
-    tidyUpMain()
-    Usx_SE_FeatureCollector.doNothing(null)
+    deleteIgnorableTags(doc)                         // Anything of no interest to our processing.
+    correctCommonUsxIssues(doc)                      // Correct common errors.
+    simplePreprocessTagModifications(doc)            // Sort out things we don't think we like.
+    convertTagsToLevelOneWhereAppropriate(doc)       // Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
+    Usx_CrossReferenceCanonicaliser.process(doc)     // Cross-refs can be represented in a number of different ways, and we'd rather have just one way.
+    SE_VerseEndInserter(UsxDataCollection).process() // Position verse-ends to avoid cross-boundary markup as far as possible.
+    addStylesToVerses(doc)                           // See documentation below.
+    tidyUpMain(doc)
   }
 
 
@@ -122,153 +135,21 @@ object Usx_Tidier
   /****************************************************************************/
 
   /****************************************************************************/
-  /* Turns the book node into an enclosing node. */
+  /* The functionality which converts to OSIS needs to distinguish sid and eid,
+     and it can do this only if we set up a suitable style attribute. */
 
-  private fun canonicaliseRootAndBook ()
+  private fun addStylesToVerses (doc: Document)
   {
-    val rootNode = Dom.findNodeByName(m_Document, "usx")!!
-    val topLevelChildren = Dom.getChildren(rootNode)
-    val ix = topLevelChildren.indexOfFirst { "book" == Dom.getNodeName(it) }
-    val bookNode = topLevelChildren[ix]
-    Dom.deleteChildren(bookNode)
-
-    topLevelChildren.subList(ix + 1, topLevelChildren.size).forEach { Dom.deleteNode(it); bookNode.appendChild(it) }
-    Dom.deleteAttribute(bookNode, "style")
-  }
-
-
-  /****************************************************************************/
-  /* Different versions of USX have different ways of marking chapters and
-     verses.
-
-     USX 2 required markers at the start only, with the chapter or verse number
-     identified with a 'number' attribute. USX 3 requires a separate milestone
-     marker at both start and end, with a sid on the former and an eid on the
-     latter, both of which are full references.  I therefore definitely want to
-     accommodate both of these; but I feel that it's appropriate too to try to
-     cater for combinations which more or less fit this picture, but aren't
-     _quite_ right.
-
-     I make the assumption below that the data will at least be consistent (so
-     that if, for instance, we have _any_ chapter/sids, we'll have chapter/sids
-     throughout). */
-
-  private fun canonicaliseChapterAndVerseStarts ()
-  {
-    /**************************************************************************/
-    /* Assume if we have any chapter:eids, we're going to have chapter:eids
-       throughout; and that if we have any verse:eids, we'll have verse:eids
-       throughout.  And because I want to position these things for myself, I
-       need to delete all of them. */
-
-    Dom.findNodesByAttributeName(m_Document, "chapter", "eid").forEach { Dom.deleteNode(it) }
-    Dom.findNodesByAttributeName(m_Document, "verse",   "eid").forEach { Dom.deleteNode(it) }
-
-
-
-    /**************************************************************************/
-    /* In some texts, chapter and verse nodes carry style parameters.  I'm not
-       sure what it's supposed to achieve, but it can get in the way of
-       processing. */
-
-    val chapters = Dom.findNodesByName(m_Document, "chapter")
-    val verses   = Dom.findNodesByName(m_Document, "verse")
-    chapters.forEach { it -= "style" }
-    verses  .forEach { it -= "style" }
-
-
-
-    /**************************************************************************/
-    /* Temporarily add a dummy chapter sid at the end of the book, then turn
-       each chapter into an enclosing chapter, and then get rid of the dummy
-       chapter. */
-
-    val bookNode = Dom.findNodeByName(m_Document, "book")!!
-    val dummyChapter = Dom.createNode(m_Document, "<chapter _TEMP_dummy='y'/>")
-    bookNode.appendChild(dummyChapter)
-    val childrenOfBookNode = Dom.getChildren(bookNode)
-
-    var low = 0
-    while (true)
-    {
-      if ("chapter" != Dom.getNodeName(childrenOfBookNode[low])) // Move forward to the next chapter node (which will mark the start of the chapter being worked on).
-      {
-        ++low
-        continue
-      }
-
-      val lowChapterNode = childrenOfBookNode[low]
-      if (Dom.hasAttribute(lowChapterNode, "_TEMP_dummy")) break
-      var high = low
-      while ("chapter" != Dom.getNodeName(childrenOfBookNode[++high])) // Move forward to the next chapter (which will be off the end of the previous chapter).
-        MiscellaneousUtils.doNothing()
-
-      childrenOfBookNode.subList(low + 1, high).forEach { Dom.deleteNode(it); lowChapterNode.appendChild(it) } // Take the intervening nodes as children of the starting chapter node.
-
-      low = high
-    } // while.
-
-    Dom.deleteNode(dummyChapter)
-
-
-
-    /**************************************************************************/
-    /* Having got this far, we have no eids.  I definitely do want sids,
-       however, and possibly we have 'number' attributes instead of sids.  If
-       so, we need to replace the 'number' parameters by sids. */
-
-    if (null == chapters[0]["sid"]) // Assume if the first chapter does not have a sid, neither chapters nor verses will have them.
-    {
-      var chapterSid = ""
-
-      fun addVerseSid (verse: Node)
-      {
-        verse["sid"] = "$chapterSid:${Dom.getAttribute(verse, "number")}"
-        verse -= "number"
-      }
-
-      fun addChapterSid (chapter: Node)
-      {
-        val number = chapter["number"]!!
-        chapterSid = "$m_BookName $number"
-        chapter["sid"] = chapterSid
-        chapter -= "number"
-        Dom.findNodesByName(chapter, "verse", false).forEach { addVerseSid(it) }
-      }
-
-      chapters.forEach { addChapterSid(it) }
-    }
-
-
-
-    /**************************************************************************/
-    /* Insert verse eids just before the next verse sid throughout.  I'll
-       position them more appropriately later as part of the OSIS processing. */
-
-    Dom.findNodesByName(m_Document, "chapter").forEach { chapter ->
-      var prevSid = ""
-      Dom.findNodesByName(chapter, "verse", false).forEach { verse ->
-        if (prevSid.isNotEmpty())
-        {
-          val node = Dom.createNode(m_Document, "<verse eid='$prevSid'/>")
-          Dom.insertNodeBefore(verse, node)
-        }
-
-        prevSid = verse["sid"]!!
-      }
-
-      val node = Dom.createNode(m_Document, "<verse eid='$prevSid'/>")
-      chapter.appendChild(node)
-    }
+    doc.findNodesByName("verse").forEach { it["style"] = if ("sid" in it) "sid" else "eid" }
   }
 
 
   /****************************************************************************/
   /* Convert eg style='q' to style='q1'. */
 
-  private fun convertTagsToLevelOneWhereAppropriate()
+  private fun convertTagsToLevelOneWhereAppropriate(rootNode: Node)
   {
-    val nodes = Dom.findNodesByAttributeName(m_Document, "*", "style")
+    val nodes = Dom.findNodesByAttributeName(rootNode, "*", "style")
     fun convertTag (tagNamePlusStyle: String)
     {
       val styleName = tagNamePlusStyle.split(":")[1]
@@ -287,7 +168,7 @@ object Usx_Tidier
      seamless job in converting from USFM to USX.  Whatever the reason, we need
      to straighten things out as best we can. */
 
-  private fun correctCommonUsxIssues ()
+  private fun correctCommonUsxIssues (doc: Document)
   {
     /**************************************************************************/
     val C_ParaTranslations = mapOf("para:po" to "para:pmo",           // Epistle introductions.
@@ -309,8 +190,8 @@ object Usx_Tidier
 
 
     /**************************************************************************/
-    Dom.findNodesByName(m_Document, "para").forEach { changeNode(C_ParaTranslations, it) }
-    Dom.findNodesByName(m_Document, "char").forEach { changeNode(C_CharTranslations, it) }
+    Dom.findNodesByName(doc, "para").forEach { changeNode(C_ParaTranslations, it) }
+    Dom.findNodesByName(doc, "char").forEach { changeNode(C_CharTranslations, it) }
   }
 
 
@@ -318,17 +199,17 @@ object Usx_Tidier
   /* There are certain kinds of tags which are meaningless in an electronic
      version of a text, or which we can't handle, and these I delete. */
 
-  private fun deleteIgnorableTags ()
+  private fun deleteIgnorableTags (doc: Document)
   {
-    Dom.findNodesByAttributeValue(m_Document, "para", "style", "toc\\d").forEach { Dom.deleteNode(it) }
-    Dom.findNodesByName(m_Document, "figure").forEach { Dom.deleteNode(it) }
+    Dom.findNodesByAttributeValue(doc, "para", "style", "toc\\d").forEach { Dom.deleteNode(it) }
+    Dom.findNodesByName(doc, "figure").forEach { Dom.deleteNode(it) }
   }
 
 
   /****************************************************************************/
   /* Changes tagName or tagName+style for another tagName or tagName+style. */
 
-  private fun simplePreprocessTagModifications ()
+  private fun simplePreprocessTagModifications (doc: Document)
   {
     val modifications = ConfigData["stepSimplePreprocessTagModifications"] ?: return
     if (modifications.isEmpty()) return
@@ -341,9 +222,9 @@ object Usx_Tidier
 
       val froms =
         if (":" in from)
-          Dom.findNodesByAttributeValue(m_Document, fromTag, "style", fromStyle)
+          Dom.findNodesByAttributeValue(doc, fromTag, "style", fromStyle)
         else
-          Dom.findNodesByName(m_Document, fromTag)
+          Dom.findNodesByName(doc, fromTag)
 
       val setStyle = ":" in to
 
@@ -373,11 +254,11 @@ object Usx_Tidier
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun tidyUpMain ()
+  private fun tidyUpMain (doc: Document)
   {
-    tidyMoveNotesToStartOfVerseWhereNecessary()
-    tidyDeleteConsecutiveWhiteSpace()
-    tidyDeleteBlanksAtEndOfChapter()
+    tidyMoveNotesToStartOfVerseWhereNecessary(doc)
+    tidyDeleteConsecutiveWhiteSpace(doc)
+    tidyDeleteBlanksAtEndOfChapter(doc)
   }
 
 
@@ -387,7 +268,7 @@ object Usx_Tidier
      of no good reason for retaining this or anything else blank-ish at the
      end. */
 
-  private fun tidyDeleteBlanksAtEndOfChapter (): Boolean
+  private fun tidyDeleteBlanksAtEndOfChapter (doc: Document): Boolean
   {
     var res = false
 
@@ -404,7 +285,7 @@ object Usx_Tidier
       }
     }
 
-    Dom.findNodesByName(m_Document, "chapter").forEach { deleteTerminatingBlanks(it) }
+    Dom.findNodesByName(doc, "chapter").forEach { deleteTerminatingBlanks(it) }
 
     return res
   }
@@ -414,7 +295,7 @@ object Usx_Tidier
   /* Cosmetic only, but some books end up with a lot of newlines in them, which
      makes it difficult to read the USX. */
 
-  private fun tidyDeleteConsecutiveWhiteSpace (): Boolean
+  private fun tidyDeleteConsecutiveWhiteSpace (doc: Document): Boolean
   {
     var res = false
 
@@ -426,7 +307,7 @@ object Usx_Tidier
       node.textContent = if (textContent.contains("\n")) "\n" else " "
     }
 
-    Dom.findAllTextNodes(m_Document).filter { Dom.isWhitespace(it) }.forEach { deleteWhiteSpace(it) }
+    Dom.findAllTextNodes(doc).filter { Dom.isWhitespace(it) }.forEach { deleteWhiteSpace(it) }
     return res
   }
 
@@ -438,7 +319,7 @@ object Usx_Tidier
      relevant to footnotes introduced during reversification processing, but
      since it could be useful for other things, may as well apply it here.) */
 
-  private fun tidyMoveNotesToStartOfVerseWhereNecessary (): Boolean
+  private fun tidyMoveNotesToStartOfVerseWhereNecessary (doc: Document): Boolean
   {
     /**************************************************************************/
     var mostRecentSid: Node? = null
@@ -450,22 +331,21 @@ object Usx_Tidier
         "verse" -> if (Dom.hasAttribute(node, "sid")) mostRecentSid = node
 
         "note" ->
-          if (Dom.hasAttribute(node, "_TEMP_moveNoteToStartOfVerse"))
+          if (NodeMarker.hasMoveNoteToStartOfVerse(node))
           {
             res = true
-            Dom.deleteAttribute(node, "_TEMP_moveNoteToStartOfVerse")
+            NodeMarker.deleteMoveNoteToStartOfVerse(node)
             Dom.deleteNode(node)
             Dom.insertNodeAfter(mostRecentSid!!, node)
           }
       } // when
     }
 
-    Dom.getNodesInTree(m_Document).forEach { processNode(it) }
+    Dom.getNodesInTree(doc).forEach { processNode(it) }
 
     return res
   }
 
     /**************************************************************************/
     private var m_BookName = ""
-    private lateinit var m_Document: Document
 }

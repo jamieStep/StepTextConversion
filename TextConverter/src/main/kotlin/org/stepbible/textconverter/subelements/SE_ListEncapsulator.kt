@@ -1,10 +1,7 @@
 package org.stepbible.textconverter.subelements
 
 import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.stepexception.StepExceptionShouldHaveBeenOverridden
-import org.stepbible.textconverter.utils.Osis_FileProtocol
-import org.stepbible.textconverter.utils.Usx_FileProtocol
-import org.stepbible.textconverter.utils.Z_FileProtocol
+import org.stepbible.textconverter.utils.X_DataCollection
 import org.w3c.dom.Node
 
 /****************************************************************************/
@@ -19,23 +16,8 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-open class SE_ListEncapsulator protected constructor (fileProtocol: Z_FileProtocol): SE
+open class SE_ListEncapsulator (dataCollection: X_DataCollection): SE(dataCollection)
 {
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                               Public                                   **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  open fun encapsulateLists (rootNode: Node): Unit = throw StepExceptionShouldHaveBeenOverridden()
-
-
-
-
-
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -47,7 +29,7 @@ open class SE_ListEncapsulator protected constructor (fileProtocol: Z_FileProtoc
   /****************************************************************************/
   override fun process (rootNode: Node)
   {
-    Dbg.reportProgress("Possibly encapsulating lists (but probably not) for ${m_FileProtocol.getBookCode(rootNode)}.")
+    Dbg.reportProgress("Possibly encapsulating lists (but probably not) for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     encapsulateLists(rootNode)
   }
 
@@ -64,36 +46,8 @@ open class SE_ListEncapsulator protected constructor (fileProtocol: Z_FileProtoc
   /****************************************************************************/
 
   /****************************************************************************/
-  protected val m_FileProtocol = fileProtocol
-}
-
-
-
-
-
-/******************************************************************************/
-object Osis_SE_ListEncapsulator: SE_ListEncapsulator(Osis_FileProtocol)
-{
-  override fun encapsulateLists (rootNode: Node) {  }
-}
-
-
-
-
-
-/******************************************************************************/
-object Usx_SE_ListEncapsulator: SE_ListEncapsulator(Usx_FileProtocol)
-{
-  /****************************************************************************/
-  override fun encapsulateLists (rootNode: Node) = listOf("io", "is", "li", "pi", "q").forEach { encapsulateList(rootNode, it) }
-
-
-  /******************************************************************************/
-  /* Wraps poetry or bullet point lists within a container node (equivalent to
-     HTML <ul>).  Or, as noted above, actually _doesn't_ wrap things.*/
-
-  private fun encapsulateList (rootNode: Node, type: String)
+  private fun encapsulateLists (rootNode: Node)
   {
-    // No implementation currently -- we don't encapsulate lists.
+      // listOf("io", "is", "li", "pi", "q") -- this may be relevant to USX, but I'm not implementing anything currently.
   }
 }

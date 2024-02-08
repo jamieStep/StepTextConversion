@@ -7,6 +7,7 @@ import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.*
 import org.stepbible.textconverter.support.ref.RefFormatHandlerReaderVernacular.readEmbedded
 import org.stepbible.textconverter.utils.Usx_FileProtocol
+import org.w3c.dom.Document
 import org.w3c.dom.Node
 
 /******************************************************************************/
@@ -147,7 +148,23 @@ import org.w3c.dom.Node
   /****************************************************************************/
 
    /****************************************************************************/
-  fun process (rootNode: Node)
+   fun process (doc: Document) = doc.findNodesByName("book").forEach(::process)
+   fun process (rootNode: Node) = doIt(rootNode)
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                  Private                               **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  private fun doIt (rootNode: Node)
   {
     /**************************************************************************/
     /* Turn char:xot, char:xnt and char:dc all to char:xt to simplify later
@@ -333,7 +350,7 @@ import org.w3c.dom.Node
 
 
     /**************************************************************************/
-    charXts.filter { Dom.hasAttribute(it, "href-link") } .forEach { processXt(it) }
+    charXts.filter { "href-link" in it } .forEach { processXt(it) }
     return res
   }
 
@@ -554,11 +571,11 @@ import org.w3c.dom.Node
   private fun canonicaliseNotesCorrectNoteStyles (rootNode: Node)
   {
     val C_NoOfCanonicalWordsWhichMeansThisIsANoteF = 6
-    Dom.findNodesByAttributeValue(rootNode, "note", "style", "f").forEach { noteNode -> // We look only at note:f.
-      if (null != Dom.findNodeByName(noteNode, "ref", false)) /* &&
+    rootNode.findNodesByAttributeValue("note", "style", "f").forEach { noteNode -> // We look only at note:f.
+      if (null != noteNode.findNodeByName("ref", false)) /* &&
           null == Dom.findNodeByAttributeValue(noteNode, "char", "style", "fqa"))*/ // Nothing to do unless the note tag contains the right flavours of node, and does not contain the wrong ones.
       {
-        val charNodes = Dom.findNodesByName(noteNode, "char", false)
+        val charNodes = noteNode.findNodesByName("char", false)
         val canonicalText = charNodes.joinToString(" ") { Dom.getCanonicalTextContentToAnyDepth(it) }
         if (StepStringUtils.wordCount(canonicalText) < C_NoOfCanonicalWordsWhichMeansThisIsANoteF)
           Usx_FileProtocol.recordTagChange(noteNode, "note", "x", "Style was 'f' but contains cross-reference details.")
@@ -597,14 +614,11 @@ import org.w3c.dom.Node
       res.add(ref)
     }
 
-    fun modifyRefs (owner: Node)
-    {
-      Dom.findNodesByName(owner, "ref", false).forEach { modifyRef(it) }
-    }
+    fun modifyRefs (owner: Node) = owner.findNodesByName("ref", false).forEach { modifyRef(it) }
 
-    Dom.findNodesByAttributeValue(rootNode, "para", "style", "mr").forEach { modifyRefs(it) }
-    Dom.findNodesByAttributeValue(rootNode, "para", "style", "sr").forEach { modifyRefs(it) }
-    Dom.findNodesByAttributeValue(rootNode, "char", "style", "ior").forEach { modifyRefs(it) }
+    rootNode.findNodesByAttributeValue("para", "style", "mr" ).forEach { modifyRefs(it) }
+    rootNode.findNodesByAttributeValue("para", "style", "sr" ).forEach { modifyRefs(it) }
+    rootNode.findNodesByAttributeValue("char", "style", "ior").forEach { modifyRefs(it) }
 
     return res
   }
@@ -992,7 +1006,7 @@ import org.w3c.dom.Node
       }
     }
 
-    Dom.getNodesInTree(rootNode).forEach { processNode(it) }
+    rootNode.getNodesInTree().forEach { processNode(it) }
   }
 
 
@@ -1016,14 +1030,14 @@ import org.w3c.dom.Node
       if (elt is RefFormatHandlerReaderVernacular.EmbeddedReferenceElementText)
       {
         if (elt.text.isNotBlank()) // I don't think it ever can be blank or empty, in fact, because that would be subsumed into the reference.
-          node.appendChild(Dom.createTextNode(node.ownerDocument, elt.text))
+          node.appendChild(node.ownerDocument.add(elt.text))
       }
 
       else // A reference collection
       {
         val rcElt = elt as RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection
         val rc = rcElt.rc
-        val refNode = Dom.createNode(node.ownerDocument, "<ref _X_generatedReason='Converted from char:xt vernacular content'/>")
+        val refNode = node.ownerDocument.add("<ref _X_generatedReason='Converted from char:xt vernacular content'/>")
         refNode["_X_belongsTo"] = node["_X_belongsTo"]!!
         refNode["loc"] = rc.toStringUsx()
         refNode.textContent = elt.text  // Does this actually manage to carry through the original formatting?

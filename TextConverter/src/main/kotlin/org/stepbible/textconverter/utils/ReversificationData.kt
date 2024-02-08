@@ -586,7 +586,7 @@ object ReversificationData
   * Does what it says on the tin.
   */
 
-  fun process (bibleStructure: Z_BibleStructure)
+  fun process (bibleStructure: BibleStructure)
   {
     initialise(bibleStructure)
   }
@@ -623,7 +623,7 @@ object ReversificationData
   /* Locates the relevant data within the input file and then reads it in and
      arranges to parse and filter it. */
 
-  private fun initialise (bibleStructure: Z_BibleStructure)
+  private fun initialise (bibleStructure: BibleStructure)
   {
     /**************************************************************************/
     Dbg.reportProgress("Reading reversification data.  (This contains data needed even if not reversifying.)")
@@ -1357,7 +1357,7 @@ object ReversificationData
       if (1 != grp.rows.first().standardRef.getV()) return
 
       if (m_BibleStructure.getLastVerseNo(grp.rows.first().sourceRef) != grp.rows.last().sourceRef.getV()) return
-      if (Z_BibleStructure.makeOsis2modNrsvxSchemeInstance(DataCollection.BibleStructure).getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
+      if (BibleStructure.makeOsis2modNrsvxSchemeInstance(DataCollection.BibleStructure).getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
 
       grp.isEntireChapter = true
     }
@@ -1921,7 +1921,7 @@ object ReversificationData
   /****************************************************************************/
 
   /****************************************************************************/
-  private lateinit var m_BibleStructure: Z_BibleStructure
+  private lateinit var m_BibleStructure: BibleStructure
 
 
   /****************************************************************************/

@@ -415,11 +415,6 @@ class RefRange: RefCollectionPart
 
 
   /****************************************************************************/
-  /* Note that throughout, BibleStructure.UsxUnderConstructionInstance() really
-     _is_ meant -- the supplied text is the one we're working on.  We may have
-     USX references, for instance, but they're always references which describe
-     the supplied text. */
-
   private fun getAllAsRefKeysInternal (lowRefKey: RefKey, highRefKey: RefKey): List<RefKey>?
   {
     /**************************************************************************/
@@ -443,7 +438,7 @@ class RefRange: RefCollectionPart
       for (c in Ref.getC(lowRefKey)..Ref.getC(highRefKey))
       {
         refKey = Ref.setC(refKey, c)
-        for (v in 1 .. getBibleStructure().getLastVerseNo(refKey))
+        for (v in 1 .. getBibleStructure()!!.getLastVerseNo(refKey))
           res.add(Ref.setV(refKey, v))
       }
 
@@ -465,7 +460,7 @@ class RefRange: RefCollectionPart
       for (c in Ref.getC(lowRefKey)..< Ref.getC(highRefKey))
       {
         refKey = Ref.setC(refKey,c)
-        for (v in 1 .. getBibleStructure().getLastVerseNo(refKey))
+        for (v in 1 .. getBibleStructure()!!.getLastVerseNo(refKey))
           res.add(Ref.setV(refKey, v))
       }
 
@@ -489,13 +484,13 @@ class RefRange: RefCollectionPart
       var refKey: RefKey = Ref.clearS(lowRefKey)
       val res: MutableList<RefKey> = ArrayList(1000)
 
-      for (v in 1 .. getBibleStructure().getLastVerseNo(refKey))
+      for (v in 1 .. getBibleStructure()!!.getLastVerseNo(refKey))
         res.add(Ref.setV(refKey, v))
 
       for (c in Ref.getC(lowRefKey) + 1 .. Ref.getC(highRefKey))
       {
         refKey = Ref.setC(refKey,c)
-        for (v in 1 .. getBibleStructure().getLastVerseNo(refKey))
+        for (v in 1 .. getBibleStructure()!!.getLastVerseNo(refKey))
           res.add(Ref.setV(refKey, v))
       }
 
@@ -508,7 +503,7 @@ class RefRange: RefCollectionPart
     /* Verse to verse of same chapter or different chapters. */
 
     if (!Ref.hasS(lowRefKey) && !Ref.hasS(highRefKey))
-      return getBibleStructure().getRefKeysInRange(lowRefKey, highRefKey)
+      return getBibleStructure()!!.getRefKeysInRange(lowRefKey, highRefKey)
 
 
 

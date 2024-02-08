@@ -4,11 +4,9 @@ package org.stepbible.textconverter.usxinputonly
 import org.stepbible.textconverter.osisinputonly.Osis_Utils
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
+import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.*
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Document
@@ -24,7 +22,7 @@ import javax.xml.validation.SchemaFactory
 
 /******************************************************************************/
 /**
- * A class which converts a collection of canonicalised USX files to OSIS.
+ * A class which converts a collection of canonicalised USX data to OSIS.
  *
  * The USX-to-OSIS mappings are based mainly upon some suggestions for
  * USFM-to-OSIS mappings in the OSIS 2.1.1 reference manual, Appendix F, but
@@ -48,7 +46,7 @@ object Usx_OsisCreator
    * Converts a collection of USX documents to OSIS.
    */
 
-  fun process (items: Map<String, Document?>)
+  fun process (usxDataCollection: X_DataCollection)
   {
     /**************************************************************************/
     Dbg.reportProgress("")
@@ -58,26 +56,31 @@ object Usx_OsisCreator
 
 
     /**************************************************************************/
-    StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath())
-    val bookNumbers = items.filter { null != it.value } .keys.map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }
-
-
-
-    /**************************************************************************/
     fun writeFn (writer: BufferedWriter)
     {
       m_Out = writer
-      m_Out.write(Osis_Utils.fileHeader(Osis_Utils.makeScope(bookNumbers)))
-      items.forEach { m_Document = it.value!!; m_UsxBookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(it.key); processDom() }
+      m_Out.write(Osis_Utils.fileHeader(Osis_Utils.makeScope(usxDataCollection.getBookNumbers())))
+
+      if (1 == usxDataCollection.getNumberOfDocuments()) // All books in a single file.
+      {
+        m_Document = usxDataCollection.getRootNodes().firstOrNull()!!.ownerDocument
+        usxDataCollection.getRootNodes().forEach { processRootNode(it) }
+      }
+      else // The normal case -- a file per book.
+        usxDataCollection.getRootNodes().forEach {
+          m_Document = it.ownerDocument
+          processRootNode(it)
+      }
+
       m_Out.write(Osis_Utils.fileTrailer())
     }
 
-    Utils.outputToFileOrString(FileLocations.getInternalOsisFilePath(), ::writeFn)
+    OsisPhase1OutputDataCollection.setText(Utils.outputToFileOrString(null, ::writeFn)!!)
 
 
 
     /**************************************************************************/
-    if (false) { val validationErrors = validateXmlAgainstSchema(FileLocations.getInternalOsisFilePath()); if (null != validationErrors) Logger.error(validationErrors) }
+    //if (false) { val validationErrors = validateXmlAgainstSchema(FileLocations.getInternalOsisFilePath()); if (null != validationErrors) Logger.error(validationErrors) }
 
 
 
@@ -98,9 +101,9 @@ object Usx_OsisCreator
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun processDom ()
+  private fun processRootNode (rootNode: Node)
   {
-    val bookName =BibleBookNamesUsx.numberToAbbreviatedName(m_UsxBookNumber)
+    val bookName = rootNode["code"]!!
     Logger.setPrefix("Converting to OSIS $bookName")
     Dbg.reportProgress("Processing $bookName.")
     processNode(m_Document.documentElement)
@@ -272,7 +275,6 @@ object Usx_OsisCreator
       s = s.replace("‘\\s+".toRegex(), "‘").replace("\\s+’".toRegex(), "’")
     }
 
-    if (s.startsWith("<note")) IssueAndInformationRecorder.setHasFootnotes()
     m_Out.write(s)
     m_JustOutputNewLine = s.endsWith("\n")
   }
@@ -291,10 +293,33 @@ object Usx_OsisCreator
   private fun processNode (node: Node, closeMarker: String)
   {
     /**************************************************************************/
+    val extendedName = Usx_FileProtocol.getExtendedNodeName(node)
     val isClosing = "/" == closeMarker
-    val lookupKey = closeMarker + Usx_FileProtocol.getExtendedNodeName(node)
+    val lookupKey = closeMarker + extendedName
     val tagProcessDetails = ConfigData.getUsxToOsisTagTranslation(lookupKey)
     var tags: String? = tagProcessDetails?.first
+
+
+
+    /**************************************************************************/
+    /* Regrettably, some USX semantics are lost in converting to OSIS, which
+       lacks equivalent semantic tags.  It is therefore convenient -- if a bit
+       of a pain -- to add some temporary attributes to the tags to record the
+       USX tag details. */
+
+    if (null != tags && "<" in tags && !tags.startsWith("</"))
+    {
+      val insert = " _t='y' _usx='$extendedName'"
+      val x = tags.split("<").toMutableList()
+      for (i in x.indices)
+      {
+        var ix = x[i].indexOf(" ")
+        if (-1 == ix) ix = x[i].indexOf(">")
+        if (-1 != ix) x[i] = x[i].substring(0, ix) + insert + x[i].substring(ix)
+      }
+
+      tags = x.joinToString("<")
+    }
 
 
 
@@ -308,6 +333,9 @@ object Usx_OsisCreator
     }
 
     when (lookupKey) {
+      "#comment" -> return
+
+
       "book" ->
       {
         m_ChapterNo = RefBase.C_DummyElement
@@ -345,17 +373,17 @@ object Usx_OsisCreator
         val strongs = java.lang.String.join(" ", revisedStrongsElts)
         //val lemma: String? = if (Dom.hasAttribute(node, "lemma")) Dom.getAttribute(node, "lemma")!!.trim() else null
         val morph: String? = if (Dom.hasAttribute(node, "morph")) Dom.getAttribute(node, "morph")!!.trim() else null // Wishful thinking: in fact I can't see anything anywhere at all in the USX 3 spec to suggest it supports morphology.
-        val srcloc: String? = if (Dom.hasAttribute(node, "srcloc")) Dom.getAttribute(node, "srcloc")!!.trim() else null // Wishful thinking: in fact I can't see anything anywhere at all in the USX 3 spec to suggest it supports this.
+        val srcloc: String? = if ("srcloc" in node) node["srcloc"]!!.trim() else null // Wishful thinking: in fact I can't see anything anywhere at all in the USX 3 spec to suggest it supports this.
         Dom.deleteAllAttributes(node)
-        Dom.setAttribute(node, "lemma", strongs) // _Not_ 'gloss' as per OSIS documentation.
+        node["lemma"] = strongs // _Not_ 'gloss' as per OSIS documentation.
         //if (null != lemma)  Dom.setAttribute(node, "lemma",  lemma); Can't use lemma, because that holds the Strong's number.
-        if (null != morph) Dom.setAttribute(node, "morph", morph)
-        if (null != srcloc) Dom.setAttribute(node, "src", srcloc)
+        if (null != morph) node["morph"] = morph
+        if (null != srcloc) node["src"] = srcloc
       }
 
-      "_X_verseSid" ->
-       {
-        m_CurrentReferenceCollection = RefCollection(Ref.rdUsx(Dom.getAttribute(node, "sid")!!))
+      "verse:sid" ->
+      {
+        m_CurrentReferenceCollection = RefCollection.rdUsx(node["sid"]!!)
         m_CurrentVerseLow = Ref.rd(m_CurrentReferenceCollection.getLowAsRef())
         m_CurrentVerseHigh = Ref.rd(m_CurrentReferenceCollection.getHighAsRef())
         if (0 == m_CurrentVerseLow.getS()) m_CurrentVerseLow.setS(RefBase.C_DummyElement)

@@ -23,24 +23,8 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-open class SE_SubverseCollapser protected constructor (fileProtocol: Z_FileProtocol): SE
+open class SE_SubverseCollapser (dataCollection: X_DataCollection): SE(dataCollection)
 {
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                             Protected                                  **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  protected val m_FileProtocol = fileProtocol
-  
-  
-  
-  
-
-  /****************************************************************************/
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -120,7 +104,7 @@ open class SE_SubverseCollapser protected constructor (fileProtocol: Z_FileProto
       val coverage = group[0][m_FileProtocol.attrName_verseSid()]!! + "-" + group.last()[m_FileProtocol.attrName_verseSid()]!!
       group.subList(1, group.size).forEach { Dom.deleteNode(it) }
       group[0][m_FileProtocol.attrName_verseSid()] = m_FileProtocol.refToString(Ref.clearS(firstRefKey))
-      Utils.addTemporaryAttribute(group[0], "_temp_subverseCoverage", coverage)
+      NodeMarker.setSubverseCoverage(group[0], coverage)
 
       group.subList(0, group.size - 1).forEach { handleVerseEnd(it) }
     }
@@ -131,11 +115,3 @@ open class SE_SubverseCollapser protected constructor (fileProtocol: Z_FileProto
     sidGroups.forEach { processGroup(it.key, it.value) }
   }
 }
-
-
-
-
-
-/******************************************************************************/
-object Osis_SE_SubverseCollapser: SE_SubverseCollapser(Osis_FileProtocol)
-object Usx_SE_SubverseCollapser : SE_SubverseCollapser(Usx_FileProtocol)

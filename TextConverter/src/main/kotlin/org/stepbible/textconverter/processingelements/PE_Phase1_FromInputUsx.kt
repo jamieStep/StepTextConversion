@@ -3,16 +3,18 @@ package org.stepbible.textconverter.processingelements
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.miscellaneous.*
+import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.usxinputonly.Usx_OsisCreator
 import org.stepbible.textconverter.usxinputonly.Usx_Preprocessor
 import org.stepbible.textconverter.usxinputonly.Usx_Tidier
 import org.stepbible.textconverter.utils.OsisPhase1OutputDataCollection
+import org.stepbible.textconverter.utils.UsxDataCollection
 
 
 /******************************************************************************/
 /**
 * Takes data from InputUsx, applies any necessary pre-processing, and then
-* converts the result to expanded OSIS.
+* converts the result to expanded OSIS in [OsOsisPhase1OutputDataCollection].
 *
 * In a previous implementation, I did a lot of work here.  In this latest
 * incarnation all of that work has been deferred to later in the processing
@@ -28,7 +30,9 @@ import org.stepbible.textconverter.utils.OsisPhase1OutputDataCollection
 * at present for retaining it in the OSIS side of the system, and so long as
 * this remains the case, you should avoid doing anything very much here.)
 *
-* Output goes to [OsisPhase1OutputDataCollection].
+* The output forms the text element of [OsisPhase1OutputDataCollection].  Note
+* that it is *not* fed into the parsed data structures of that item, nor its
+* associated BibleStructure.
 *
 * @author ARA "Jamie" Jamieson
 */
@@ -46,7 +50,7 @@ object PE_Phase1_FromInputUsx: PE
   /****************************************************************************/
   override fun banner () = "Preparing USX and converting to OSIS"
   override fun getCommandLineOptions(commandLineProcessor: CommandLineProcessor) {}
-  override fun pre () = StepFileUtils.deleteFolder(FileLocations.getInternalOsisFolderPath())
+  override fun pre () { }
   override fun process () = doIt()
 
 
@@ -64,8 +68,11 @@ object PE_Phase1_FromInputUsx: PE
   /****************************************************************************/
   private fun doIt ()
   {
-    val items = Usx_Preprocessor.process() // Gets DOMs for each selected input file, after post-processing them.
-    Usx_Tidier.process(items)
-    Usx_OsisCreator.process(items)
+    RefBase.setBibleStructure(UsxDataCollection.BibleStructure)
+    UsxDataCollection.loadFromFolder(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForUsx(), false)
+    Usx_Preprocessor.process(UsxDataCollection)
+    Usx_Tidier.process(UsxDataCollection)
+    Usx_OsisCreator.process(UsxDataCollection)
+    RefBase.setBibleStructure(null)
   }
 }

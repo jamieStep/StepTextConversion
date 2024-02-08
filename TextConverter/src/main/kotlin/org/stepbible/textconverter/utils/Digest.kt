@@ -126,7 +126,7 @@ object Digest
 
   private fun getDigests (): List<Pair<String, String>>
   {
-    m_Input = ConfigData["stepProcessingOriginalData"]!!
+    m_Input = ConfigData["stepOriginData"]!!
     val fileList = when (m_Input)
     {
       "osis" -> listOf(FileLocations.getInputOsisFilePath()!!)

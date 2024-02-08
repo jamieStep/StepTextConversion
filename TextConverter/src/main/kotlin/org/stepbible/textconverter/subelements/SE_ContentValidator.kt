@@ -2,17 +2,15 @@ package org.stepbible.textconverter.subelements
 
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.utils.Z_FileProtocol
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.contains
 import org.stepbible.textconverter.support.miscellaneous.get
+import org.stepbible.textconverter.support.miscellaneous.getNodesInTree
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
-import org.stepbible.textconverter.utils.ReversificationData
-import org.stepbible.textconverter.utils.ReversificationDataRow
-import org.stepbible.textconverter.utils.Z_DataCollection
+import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
 
 /******************************************************************************/
@@ -55,8 +53,8 @@ object ContentValidator
    *
    */
 
-  fun process (dataCollectionNew: Z_DataCollection, fileProtocolNew: Z_FileProtocol,
-               dataCollectionOld: Z_DataCollection, fileProtocolOld: Z_FileProtocol)
+  fun process (dataCollectionNew: X_DataCollection, fileProtocolNew: X_FileProtocol,
+               dataCollectionOld: X_DataCollection, fileProtocolOld: X_FileProtocol)
   {
     m_DataCollectionNew = dataCollectionNew
     m_DataCollectionOld = dataCollectionOld
@@ -88,6 +86,7 @@ object ContentValidator
    /**************************************************************************/
    if (null == m_DataCollectionNew.getRootNode(bookNo)) return
    Dbg.reportProgress("Checking " + BibleBookNamesUsx.numberToAbbreviatedName(bookNo))
+   //Dbg.outputDom(m_DataCollectionNew.getRootNode(bookNo)!!.ownerDocument)
 
 
 
@@ -290,7 +289,7 @@ object ContentValidator
     fun process (refKey: RefKey)
     {
       val ix = m_BookAnatomyNew.m_SidToIndex[refKey]!!
-      if (!Dom.hasAttribute(m_BookAnatomyNew.m_AllNodes[ix], "_TEMP_dummy"))
+      if (NodeMarker.C_Dummy !in m_BookAnatomyNew.m_AllNodes[ix])
       {
         //Dbg.d(m_EnhancedBibleAnatomy.m_AllNodes[ix].ownerDocument)
         error(refKey, "Verse not covered by validation.")
@@ -617,7 +616,7 @@ object ContentValidator
   /****************************************************************************/
   /* Gets canonical content. */
 
-  private fun gatherContent (allNodes: List<Node>, sidIx: Int, eidIx: Int, fileProtocol: Z_FileProtocol): String
+  private fun gatherContent (allNodes: List<Node>, sidIx: Int, eidIx: Int, fileProtocol: X_FileProtocol): String
   {
     val res = StringBuilder(1000)
     for (i in sidIx .. eidIx) // Normally there's no point in including sid and eid, but I want to press this into service also for canonical titles, where sid and eid are actually just the first and last child of para:d.
@@ -672,7 +671,7 @@ object ContentValidator
   private fun gatherContentForAllConstituents (bookAnatomy: BookAnatomy,
                                                refKeySelector: (ReversificationDataRow) -> RefKey,
                                                rows: List<ReversificationDataRow>,
-                                               fileProtocol: Z_FileProtocol): String
+                                               fileProtocol: X_FileProtocol): String
   {
     val content = StringBuilder(1000)
     rows.forEach { content.append(gatherContentForSingleConstituent(bookAnatomy, refKeySelector, it, fileProtocol)) }
@@ -683,7 +682,7 @@ object ContentValidator
   /****************************************************************************/
   /* Does what it says on the tin. */
 
-  private fun gatherContentForCanonicalTitle (titleNode: Node, fileProtocol: Z_FileProtocol): String
+  private fun gatherContentForCanonicalTitle (titleNode: Node, fileProtocol: X_FileProtocol): String
   {
     val res = StringBuilder(500)
     Dom.findAllTextNodes(titleNode)
@@ -730,7 +729,7 @@ object ContentValidator
   private fun gatherContentForSingleConstituent (bookAnatomy: BookAnatomy,
                                                  refKeySelector: (ReversificationDataRow) -> RefKey,
                                                  row: ReversificationDataRow,
-                                                 fileProtocol: Z_FileProtocol): String
+                                                 fileProtocol: X_FileProtocol): String
   {
     val key = refKeySelector.invoke(row)
     return if (row.standardRefAsRefKey in m_ImplicitReversificationRenumbers)
@@ -741,7 +740,7 @@ object ContentValidator
 
 
   /****************************************************************************/
-  private fun gatherContentForSingleConstituent (bookAnatomy: BookAnatomy, refKey: RefKey, fileProtocol: Z_FileProtocol): String
+  private fun gatherContentForSingleConstituent (bookAnatomy: BookAnatomy, refKey: RefKey, fileProtocol: X_FileProtocol): String
   {
     if (0L == refKey) return ""
 
@@ -761,16 +760,16 @@ object ContentValidator
      nodes -- plus a map relating chapter sids to canonical title where
      appropriate. */
 
-  private fun getBookAnatomy (rootNode: Node, fileProtocol: Z_FileProtocol): BookAnatomy
+  private fun getBookAnatomy (rootNode: Node, fileProtocol: X_FileProtocol): BookAnatomy
   {
     /**************************************************************************/
-    //Dbg.outputDom(document, "a")
+    //Dbg.outputDom(rootNode.ownerDocument, "a")
 
 
 
     /**************************************************************************/
     val res = BookAnatomy()
-    res.m_AllNodes = Dom.getNodesInTree(rootNode)
+    res.m_AllNodes = rootNode.getNodesInTree()
 
 
 
@@ -790,9 +789,9 @@ object ContentValidator
           res.m_EidToIndex[fileProtocol.readRef(node[fileProtocol.attrName_verseEid()]!!).toRefKey()] = i
       }
 
-      else if (fileProtocol.isCanonicalHeader(node))
+      else if (fileProtocol.isCanonicalTitleNode(node))
       {
-        if ("start" == node["_temp_canonicalHeaderLocation"])
+        if ("start" == NodeMarker.getCanonicalHeaderLocation(node))
         {
           val sidRefKey = fileProtocol.readRef(Dom.getAttribute(Dom.getAncestorNamed(node, fileProtocol.tagName_chapter())!!, fileProtocol.attrName_chapterSid())!!).toRefKey()
           res.m_chapterSidToPsalmTitle[sidRefKey] = node
@@ -855,9 +854,9 @@ object ContentValidator
   private class BookAnatomy
   {
     lateinit var m_AllNodes: List<Node>
-    var m_SidToIndex: MutableMap<RefKey, Int> = HashMap(2000)
-    var m_EidToIndex: MutableMap<RefKey, Int> = HashMap(2000)
-    var m_chapterSidToPsalmTitle: MutableMap<RefKey, Node> = HashMap(200)
+    var m_SidToIndex: MutableMap<RefKey, Int> = mutableMapOf()
+    var m_EidToIndex: MutableMap<RefKey, Int> = mutableMapOf()
+    var m_chapterSidToPsalmTitle: MutableMap<RefKey, Node> = mutableMapOf()
   }
 
 
@@ -876,10 +875,10 @@ object ContentValidator
 
 
   /****************************************************************************/
-  private lateinit var  m_DataCollectionNew: Z_DataCollection
-  private lateinit var  m_DataCollectionOld: Z_DataCollection
-  private lateinit var m_FileProtocolNew: Z_FileProtocol
-  private lateinit var m_FileProtocolOld: Z_FileProtocol
+  private lateinit var  m_DataCollectionNew: X_DataCollection
+  private lateinit var  m_DataCollectionOld: X_DataCollection
+  private lateinit var m_FileProtocolNew: X_FileProtocol
+  private lateinit var m_FileProtocolOld: X_FileProtocol
 
   private lateinit var m_BookAnatomyNew: BookAnatomy
   private var m_RawBookAnatomies: MutableMap<Int, BookAnatomy> = mutableMapOf()

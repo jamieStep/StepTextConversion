@@ -1,7 +1,6 @@
 /******************************************************************************/
 package org.stepbible.textconverter.processingelements
 
-import org.stepbible.textconverter.utils.Z_BibleStructure
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
@@ -9,7 +8,7 @@ import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.ref.RefKey
-import org.stepbible.textconverter.utils.DataCollection
+import org.stepbible.textconverter.utils.*
 import java.io.File
 
 /******************************************************************************/
@@ -79,12 +78,12 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
   * @return Detailed evaluation.
   */
 
-  fun evaluateSingleSchemeDetailed (scheme: String, bibleStructureToCompareWith: Z_BibleStructure): DetailedEvaluation
+  fun evaluateSingleSchemeDetailed (scheme: String, bibleStructureToCompareWith: BibleStructure): DetailedEvaluation
   {
     /**************************************************************************/
-    Dbg.reportProgress("  Evaluating $scheme")
+    Dbg.reportProgress("Evaluating $scheme")
     val res = DetailedEvaluation()
-    val bibleStructureOsis2mod = Z_BibleStructure.makeOsis2modSchemeInstance(scheme)
+    val bibleStructureOsis2mod = BibleStructure.makeOsis2modSchemeInstance(scheme)
 
 
 
@@ -121,7 +120,7 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
 
        else
        {
-         val comparisonDetails = Z_BibleStructure.compareWithGivenScheme(bookNumber, bibleStructureToCompareWith, bibleStructureOsis2mod)
+         val comparisonDetails = BibleStructure.compareWithGivenScheme(bookNumber, bibleStructureToCompareWith, bibleStructureOsis2mod)
          res.versesMissingInOsis2modScheme.addAll(comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme)
          res.versesInExcessInOsis2modScheme.addAll(comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction)
        }
@@ -147,7 +146,7 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
   * @return Result of evaluating against the given scheme.
   */
 
-  fun evaluateSingleScheme (schemeName: String, bibleStructureToCompareWith: Z_BibleStructure): Evaluation?
+  fun evaluateSingleScheme (schemeName: String, bibleStructureToCompareWith: BibleStructure): Evaluation?
   {
     //???val bookNumbersInRawUsx = bibleStructureToCompareWith.getAllBookNumbers().toList()
     return evaluateScheme(schemeName, bibleStructureToCompareWith)
@@ -184,16 +183,21 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
     val bibleStructureToCompareWith = determineInput()
     m_Evaluations.clear() // Just in case we've already evaluated a scheme, perhaps to see if the text needs reversifying.  Avoids duplicating the output.
     VersificationSchemesSupportedByOsis2mod.getSchemes().forEach { evaluateScheme(it, bibleStructureToCompareWith) }
-    val details = investigateResults()
-    outputDetails(details)
+    val details = m_Evaluations.sortedBy { it.scoreForSorting }
+
+    var additionalInformation: String? = null
+    if (!bibleStructureToCompareWith.otBooksAreInOrder() || !bibleStructureToCompareWith.ntBooksAreInOrder()) additionalInformation  = "*** Text contains out-of-order books. ***\n"
+    if (!bibleStructureToCompareWith.versesAreInOrder()) additionalInformation += "*** Text contains out-of-order verses. ***"
+    if (null != additionalInformation && additionalInformation.endsWith("\n")) additionalInformation = additionalInformation.substring(0, additionalInformation.length - 1)
+    outputDetails(details, additionalInformation)
   }
 
 
   /****************************************************************************/
-  private fun determineInput (): Z_BibleStructure
+  private fun determineInput (): BibleStructure
   {
     /**************************************************************************/
-    when (ConfigData["stepProcessingOriginalData"]!!)
+    when (ConfigData["stepOriginData"]!!)
     {
       "osis" ->
       {
@@ -217,34 +221,13 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
 
 
     /**************************************************************************/
-    return DataCollection.BibleStructure
+    OsisPhase1OutputDataCollection.loadFromText(OsisPhase1OutputDataCollection.getText(), false)
+    return OsisPhase1OutputDataCollection.BibleStructure
   }
 
 
   /****************************************************************************/
-  /* Investigates the evaluations and records the best scheme and also details
-     of how well NRSV(A) fits (useful where it has been left to the processing
-     to decide whether to reversify or not). */
-
-  private fun investigateResults (): List<Evaluation>
-  {
-    val details = m_Evaluations.sortedBy { it.scoreForSorting }
-//
-//    SharedData.BestVersificationScheme = details[0].scheme
-//    SharedData.BestVersificationSchemeScore= details[0].score
-//
-//    val ix = details.indexOfFirst { it.scheme.matches("(?i)nrsv(a)?".toRegex()) }
-//    SharedData.NrsvVersificationScheme = details[ix].scheme
-//    SharedData.BestVersificationSchemeScore = details[ix].score
-//    SharedData.NrsvVersificationSchemeNumberOfExcessVerseEquivalentsInOsisScheme = details[ix].versesInExcessInOsis2modScheme
-//    SharedData.NrsvVersificationSchemeNumberOfMissingVerseEquivalentsInOsisScheme = details[ix].versesMissingInOsis2modScheme
-
-    return details
-  }
-
-
-  /****************************************************************************/
-  private fun evaluateScheme (scheme: String, bibleStructureToCompareWith: Z_BibleStructure): Evaluation?
+  private fun evaluateScheme (scheme: String, bibleStructureToCompareWith: BibleStructure): Evaluation?
   {
     /**************************************************************************/
     //Dbg.dCont(scheme, "nrsv")
@@ -265,8 +248,9 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
 
 
     /**************************************************************************/
-    Dbg.reportProgress("  Evaluating $scheme")
-    val bibleStructureForScheme = Z_BibleStructure.makeOsis2modSchemeInstance(scheme)
+    Dbg.reportProgress("Evaluating $scheme")
+    val bibleStructureForScheme = BibleStructure.makeOsis2modSchemeInstance(scheme)
+    var additionalText: String? = null
 
 
 
@@ -284,55 +268,49 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
 
     /**************************************************************************/
     if (!bibleStructureToCompareWithHasDc && osis2modSchemeHasDc)
+      additionalText = "(Scheme has DC where text does not.)"
+
+
+
+    /**************************************************************************/
+    var booksMissingInOsis2modScheme = 0
+    var booksInExcessInOsis2modScheme = 0
+    var versesMissingInOsis2modScheme = 0
+    var versesInExcessInOsis2modScheme = 0
+
+    fun evaluate (bookNumber: Int)
     {
-      val x = Evaluation(scheme,Int.MAX_VALUE, 0, 0, 0, 0, text = "Rejected because it expects DC.")
-      m_Evaluations.add(x)
-      return x
+      if (!bibleStructureToCompareWith.bookExists(bookNumber) && !bibleStructureForScheme.bookExists(bookNumber))
+        return
+
+      else if (!bibleStructureToCompareWith.bookExists(bookNumber))
+        ++booksInExcessInOsis2modScheme
+
+      else if (!bibleStructureToCompareWith.bookExists(bookNumber))
+        ++booksMissingInOsis2modScheme
+
+      else
+      {
+        val comparisonDetails = BibleStructure.compareWithGivenScheme(bookNumber, bibleStructureToCompareWith, bibleStructureForScheme)
+        versesMissingInOsis2modScheme += comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.size
+        versesInExcessInOsis2modScheme += comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.size
+      }
     }
 
-
-
-     /**************************************************************************/
-     var booksMissingInOsis2modScheme = 0
-     var booksInExcessInOsis2modScheme = 0
-     var versesMissingInOsis2modScheme = 0
-     var versesInExcessInOsis2modScheme = 0
-
-     fun evaluate (bookNumber: Int)
-     {
-       if (!bibleStructureToCompareWith.bookExists(bookNumber) && !bibleStructureForScheme.bookExists(bookNumber))
-         return
-
-       else if (!bibleStructureToCompareWith.bookExists(bookNumber))
-         ++booksInExcessInOsis2modScheme
-
-       else if (!bibleStructureToCompareWith.bookExists(bookNumber))
-         ++booksMissingInOsis2modScheme
-
-       else
-       {
-         val comparisonDetails = Z_BibleStructure.compareWithGivenScheme(bookNumber, bibleStructureToCompareWith, bibleStructureForScheme)
-         versesMissingInOsis2modScheme += comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.size
-         versesInExcessInOsis2modScheme += comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.size
-         // if (comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.isNotEmpty()) Dbg.d(comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.joinToString(prefix = "Bad: ", separator = ", "){ Ref.rd(it).toString() })
-         //Dbg.d(comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.joinToString(prefix = "Ok: ", separator = ", "){ Ref.rd(it).toString() })
-       }
-     }
-
-     bibleStructureToCompareWith.getAllBookNumbers().forEach { evaluate(it) }
+    bibleStructureToCompareWith.getAllBookNumbers().forEach { evaluate(it) }
 
 
 
-     /**************************************************************************/
-     val score = booksMissingInOsis2modScheme * 1_000_000 + versesMissingInOsis2modScheme * 1000 + versesInExcessInOsis2modScheme
-     val res = Evaluation(scheme, score, booksMissingInOsis2modScheme, versesMissingInOsis2modScheme, booksInExcessInOsis2modScheme, versesInExcessInOsis2modScheme, null)
-     m_Evaluations.add(res)
-     return res
+    /**************************************************************************/
+    val score = booksMissingInOsis2modScheme * 1_000_000 + versesMissingInOsis2modScheme * 1000 + versesInExcessInOsis2modScheme
+    val res = Evaluation(scheme, score, booksMissingInOsis2modScheme, versesMissingInOsis2modScheme, booksInExcessInOsis2modScheme, versesInExcessInOsis2modScheme, additionalText)
+    m_Evaluations.add(res)
+    return res
   }
 
 
   /****************************************************************************/
-  private fun outputDetails (details: List<Evaluation>)
+  private fun outputDetails (details: List<Evaluation>, additionalInformation: String?)
   {
     /**************************************************************************/
      val header = """
@@ -388,13 +366,18 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
                     #
                     ################################################################################
                     
-                    ${ConfigData["stepModuleName"]!!}
+                    ${ConfigData["stepModuleNameBase"]!!}
                     
                     """.trimIndent()
 
    File(FileLocations.getVersificationFilePath()).printWriter().use { writer ->
       writer.println(header)
       details.forEach { writer.println(it.toString()); println(it.toString()) }
+      if (null != additionalInformation)
+      {
+        writer.println(""); println("")
+        writer.println(additionalInformation); println(additionalInformation)
+      }
     }
   }
 

@@ -2,7 +2,7 @@
 package org.stepbible.textconverter.osisinputonly
 
 import org.stepbible.textconverter.processingelements.PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation
-import org.stepbible.textconverter.utils.Z_BibleStructure
+import org.stepbible.textconverter.utils.BibleStructure
 import org.stepbible.textconverter.support.bibledetails.VersificationSchemesSupportedByOsis2mod
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.configdata.ConfigData
@@ -47,7 +47,7 @@ object Osis_DetermineReversificationTypeEtc
   /****************************************************************************/
 
   /****************************************************************************/
-  fun process (bibleStructureUnderConstruction: Z_BibleStructure) = doIt(bibleStructureUnderConstruction)
+  fun process (bibleStructureUnderConstruction: BibleStructure) = doIt(bibleStructureUnderConstruction)
 
 
 
@@ -64,7 +64,7 @@ object Osis_DetermineReversificationTypeEtc
   /****************************************************************************/
   /* Hmm ... this gets rather complicated, as will shortly be apparent. */
 
-  private fun doIt (bibleStructureUnderConstruction: Z_BibleStructure)
+  private fun doIt (bibleStructureUnderConstruction: BibleStructure)
   {
     /**************************************************************************/
     Dbg.reportProgress("Determining reversification requirements.")
@@ -273,7 +273,7 @@ object Osis_DetermineReversificationTypeEtc
      scheme might be should we choose to go with it.  It is down to the caller
      to decide whether or not to go with it. */
 
-  private fun getVersificationSchemeWhichWouldBeUsedByCrosswireOsis2mod (bibleStructureUnderConstruction: Z_BibleStructure): String
+  private fun getVersificationSchemeWhichWouldBeUsedByCrosswireOsis2mod (bibleStructureUnderConstruction: BibleStructure): String
   {
     var versificationScheme = ConfigData["stepVersificationScheme"] ?: "NRSV"
     val existsAsBothWithAndWithoutDc= versificationScheme.uppercase().substring(0,3) in "KJV.NRSV"

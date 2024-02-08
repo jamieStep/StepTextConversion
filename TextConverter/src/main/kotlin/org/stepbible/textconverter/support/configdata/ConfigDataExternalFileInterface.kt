@@ -1,9 +1,11 @@
 /****************************************************************************/
 package org.stepbible.textconverter.support.configdata
 
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils.forceToSingleLine
+import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -254,7 +256,7 @@ private class ConfigDataExternalFileInterfaceDbl : ConfigDataExternalFileInterfa
     for (i in 0..< nodeList.length)
     {
       val nameNode = nodeList.item(i)
-      val ubsName = nameNode.attributes.getNamedItem("id").nodeValue.split("\\-")[1]
+      val ubsName = nameNode["id"]!!.split("-")[1]
       val vernacularNames: MutableMap<String, String> = HashMap()
       val vernacularNameNodes = nameNode.childNodes
       for (j in 0..< vernacularNameNodes.length)
@@ -302,7 +304,7 @@ private class ConfigDataExternalFileInterfaceDbl : ConfigDataExternalFileInterfa
     if (parms.contains("names/*"))
     {
       getBookList(parms)
-      return null
+      return "dummyReturnValue"
     }
 
 

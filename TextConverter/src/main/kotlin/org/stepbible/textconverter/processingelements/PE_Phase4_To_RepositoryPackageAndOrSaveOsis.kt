@@ -8,6 +8,7 @@ import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.miscellaneous.Zip
 import org.stepbible.textconverter.support.stepexception.StepException
+import org.stepbible.textconverter.utils.OsisPhase1OutputDataCollection
 import org.stepbible.textconverter.utils.OsisPhase2SavedDataCollection
 import org.stepbible.textconverter.utils.ProtocolConverterExtendedOsisToStandardOsis
 import java.io.File
@@ -35,7 +36,7 @@ object PE_Phase4_To_RepositoryPackageAndOrSaveOsis: PE
   override fun banner () = "Generating package for repository"
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
   override fun process () = doIt()
-  override fun pre () = StepFileUtils.deleteFolder(FileLocations.getRepositoryPackageFilePath())
+  override fun pre () {}
 
 
 
@@ -76,7 +77,6 @@ object PE_Phase4_To_RepositoryPackageAndOrSaveOsis: PE
                                inputVl,
                                FileLocations.getRepositoryReadMeFilePath(),
                                FileLocations.getTextFeaturesFolderPath(),
-                               FileLocations.getInternalOsisFilePath(),
                                FileLocations.getSwordZipFilePath()).filterNotNull()
     Zip.createZipFile(zipPath, 9, null, inputs)
   }
@@ -91,9 +91,9 @@ object PE_Phase4_To_RepositoryPackageAndOrSaveOsis: PE
 
     val dateTimeStamp = SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date())
 
-    val originalSource = "Input" + StepStringUtils.sentenceCaseFirstLetter(ConfigData["stepProcessingOriginalData"]!!)
+    val originalSource = "Input" + StepStringUtils.sentenceCaseFirstLetter(ConfigData["stepOriginData"]!!)
 
-    val indirectly = if (null == ConfigData["stepProcessingOriginalDataAdditionalInfo"]) " indirectly " else ""
+    val indirectly = if (null == ConfigData["stepOriginDataAdditionalInfo"]) " indirectly " else ""
 
     var indirectlyExplanation: String? = null
     if (indirectly.isNotEmpty())
@@ -104,7 +104,7 @@ object PE_Phase4_To_RepositoryPackageAndOrSaveOsis: PE
                                  """.trimIndent()
 
     var osisExplanation: String? = null
-    if ("OSIS" == ConfigData["stepProcessingOriginalData"]!! && null != alternativeFormat)
+    if ("OSIS" == ConfigData["stepOriginData"]!! && null != alternativeFormat)
       osisExplanation = """Originally this module was probably built from the data in $alternativeFormat.  However,
                            this run began with the data in InputOSIS.
       """.trimMargin()
@@ -127,14 +127,15 @@ object PE_Phase4_To_RepositoryPackageAndOrSaveOsis: PE
   /****************************************************************************/
   /* If the input wasn't a previously-supplied OSIS file, we need to copy the
      output which came from USX or VL, in standardised form, to the Input_Vl
-     folder. */
+     folder.  The necessary data will have been left lying around in
+     OsisPhase2SavedDataCollection. */
 
   private fun saveOsis ()
   {
-    if ("osis" == ConfigData["stepProcessingOriginalData"]) return
+    if ("osis" == ConfigData["stepOriginData"]) return
     StepFileUtils.deleteFolder(FileLocations.getInputOsisFolderPath())
     StepFileUtils.createFolderStructure(FileLocations.getInputOsisFolderPath())
-    ProtocolConverterExtendedOsisToStandardOsis.process(OsisPhase2SavedDataCollection.getDocument())
-    Dom.outputDomAsXml(OsisPhase2SavedDataCollection.getDocument(), FileLocations.makeInputOsisFilePath(), null)
+    ProtocolConverterExtendedOsisToStandardOsis.process(OsisPhase2SavedDataCollection)
+    Dom.outputDomAsXml(OsisPhase1OutputDataCollection.getDocument(), FileLocations.makeInputOsisFilePath(), null)
   }
 }

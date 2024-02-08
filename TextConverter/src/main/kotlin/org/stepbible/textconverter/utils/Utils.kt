@@ -1,6 +1,8 @@
 package org.stepbible.textconverter.utils
 
+import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.MarkerHandler
 import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.miscellaneous.set
 import org.w3c.dom.Document
@@ -29,34 +31,23 @@ object Utils
 
   /****************************************************************************/
   /**
-  * Adds a temporary attribute to a node, and records the fact that it has done
-  * so, to make removal of temporaries easier later.
+  * Gets the explanation callout for a footnote.
   *
-  * @param node Node to which attribute is to be attached.
-  * @param attributeName
-  * @param attributeValue
+  * @param Details of proposed callout.  If null, we use a value from the
+  *   configuratin data.  If a string, we use that.  Otherwise must be a marker
+  *   handler, and we call on that to supply a value.
+  *
+  * @return Callout.
   */
 
-  fun addTemporaryAttribute (node: Node, attributeName: String, attributeValue: String)
+  fun getCallout (callout: Any?): String
   {
-    node[attributeName] = attributeValue
-    node["_t"] = "y"
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Deletes all temporary attributes from nodes which are marked as having
-  * temporary attributes.
-  *
-  * @param doc The document from which the attributes are to be deleted.
-  */
-
-  fun deleteTemporaryAttributes (doc: Document)
-  {
-    Dom.getNodesInTree(doc)
-      .filter { null != it["_t"] }
-      .forEach { node -> Dom.getAttributes(node).keys.filter { it.startsWith("_temp_") }.forEach { Dom.deleteAttribute(node, it) } }
+    return when (callout)
+      {
+        null      -> ConfigData["stepExplanationCallout"]!!
+        is String -> callout
+        else      -> (callout as MarkerHandler).get()
+      }
   }
 
 
@@ -101,5 +92,23 @@ object Utils
     bufferedWriter.close()
 
     return if (null == filePath) stringWriter.toString() else null
+  }
+
+
+  /****************************************************************************/
+  /**
+   *  Converts a book abbreviation into a standard 'pretty' form for use in
+   *  progress reports.
+   *
+   * @param abbreviation
+   * @return Prettified abbreviation.
+   */
+
+  fun prettifyBookAbbreviation (abbreviation: String): String
+  {
+    val number = if (abbreviation[0].isDigit()) abbreviation[0].toString() else ""
+    var rest = abbreviation.substring(number.length)
+    rest = rest[0].uppercase() + rest.substring(1).lowercase()
+    return number + rest
   }
 }

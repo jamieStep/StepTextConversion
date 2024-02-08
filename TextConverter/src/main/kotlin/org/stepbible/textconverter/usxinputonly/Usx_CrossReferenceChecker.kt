@@ -39,7 +39,7 @@ object Usx_CrossReferenceChecker: CrossReferenceChecker
 
 
   /****************************************************************************/
-  override fun process (dataCollection: Z_DataCollection)
+  override fun process (dataCollection: X_DataCollection)
   {
     m_BibleStructure = dataCollection.BibleStructure
     dataCollection.getRootNodes().forEach(::process)
@@ -93,7 +93,7 @@ object Usx_CrossReferenceChecker: CrossReferenceChecker
         res.add(node)
       else
       {
-        Osis_IssueAndInformationRecorder.crossReferenceNonExistentTarget(node["osisRef"]!!, getOsisIdAsRefKey(node), forceError = true)
+        IssueAndInformationRecorder.crossReferenceNonExistentTarget(node["osisRef"]!!, getOsisIdAsRefKey(node), forceError = true)
         node["type"] = "explanation" // Convert to plain footnote.
       }
     }
@@ -136,7 +136,7 @@ object Usx_CrossReferenceChecker: CrossReferenceChecker
         val embeddedReferences = x.filterIsInstance<RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection>()
         if (1 != embeddedReferences.count())
         {
-          Osis_IssueAndInformationRecorder.crossReferenceInvalidVernacularText(node.textContent.trim(), getOsisIdAsRefKey(node), forceError = false, reassurance = "Cross-reference has been retained regardless.")
+          IssueAndInformationRecorder.crossReferenceInvalidVernacularText(node.textContent.trim(), getOsisIdAsRefKey(node), forceError = false, reassurance = "Cross-reference has been retained regardless.")
           return
         }
 
@@ -147,7 +147,7 @@ object Usx_CrossReferenceChecker: CrossReferenceChecker
       }
       catch (_: Exception)
       {
-        Osis_IssueAndInformationRecorder.crossReferenceInvalidVernacularText(node.textContent.trim(), getOsisIdAsRefKey(node), forceError = false, reassurance = "Cross-reference has been retained regardless.")
+        IssueAndInformationRecorder.crossReferenceInvalidVernacularText(node.textContent.trim(), getOsisIdAsRefKey(node), forceError = false, reassurance = "Cross-reference has been retained regardless.")
         return
       }
 
@@ -155,7 +155,7 @@ object Usx_CrossReferenceChecker: CrossReferenceChecker
 
       /************************************************************************/
       if (usxCollection != vernacularCollection)
-        Osis_IssueAndInformationRecorder.crossReferenceInternalAndVernacularTargetDoNotMatch(node.textContent.trim(), getOsisIdAsRefKey(node), forceError = false, reassurance = "Cross-reference has been retained regardless.")
+        IssueAndInformationRecorder.crossReferenceInternalAndVernacularTargetDoNotMatch(node.textContent.trim(), getOsisIdAsRefKey(node), forceError = false, reassurance = "Cross-reference has been retained regardless.")
     } // fun
 
 
@@ -184,7 +184,7 @@ object Usx_CrossReferenceChecker: CrossReferenceChecker
       }
       catch (_: Exception)
       {
-        Osis_IssueAndInformationRecorder.crossReferenceInvalidReference(node["osisRef"]!!, getOsisIdAsRefKey(node), forceError = true)
+        IssueAndInformationRecorder.crossReferenceInvalidReference(node["osisRef"]!!, getOsisIdAsRefKey(node), forceError = true)
       }
     }
 
@@ -198,6 +198,6 @@ object Usx_CrossReferenceChecker: CrossReferenceChecker
 
 
   /****************************************************************************/
-  private lateinit var m_BibleStructure: Z_BibleStructure
+  private lateinit var m_BibleStructure: BibleStructure
   private var m_CanReadAndWriteVernacular =  ConfigData.getAsBoolean("stepUseVernacularFormats")
 }

@@ -2,12 +2,14 @@ package org.stepbible.textconverter.subelements
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.contains
 import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
+import org.stepbible.textconverter.support.ref.RefRange
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
@@ -23,7 +25,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol, utils: Z_Utils): SE
+class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -34,7 +36,7 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process (dataCollection: Z_DataCollection) = doIt(dataCollection)
+  override fun process () = doIt(m_DataCollection)
   override fun process (rootNode: Node) = throw StepException("Should not be called directly")
 
 
@@ -50,7 +52,7 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun doIt (dataCollection: Z_DataCollection)
+  private fun doIt (dataCollection: X_DataCollection)
   {
     basicValidationAndCorrection(dataCollection)
     structuralValidation(dataCollection)
@@ -75,7 +77,7 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
      some of these we may be able to remedy; others we may simply have to
      report, and abandon further processing. */
 
-  private fun basicValidationAndCorrection (dataCollection: Z_DataCollection)
+  private fun basicValidationAndCorrection (dataCollection: X_DataCollection)
   {
     /**************************************************************************/
     val bibleStructure = dataCollection.BibleStructure
@@ -105,12 +107,12 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
 
     if ("conversiontime" == ConfigData["stepReversificationType"]!!.lowercase())
     {
-      val nrsvx = Z_BibleStructure.makeOsis2modNrsvxSchemeInstance(bibleStructure)
+      val nrsvx = BibleStructure.makeOsis2modNrsvxSchemeInstance(bibleStructure)
       dataCollection.getBookNumbers().forEach {
-        Z_BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { refKey -> Logger.error(refKey, "Chapter in NRSV(A) but not in supplied text.") }
-        Z_BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error(refKey, "Chapter in in supplied text but not in NRSV(A).") }
-        Z_BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).versesInTargetSchemeButNotInTextUnderConstruction.forEach   { refKey -> Logger.error(refKey, "Verse in NRSV(A) but not in supplied text.") }
-        Z_BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error(refKey, "Verse in in supplied text but not in NRSV(A).") }
+        BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { refKey -> Logger.error(refKey, "Chapter in NRSV(A) but not in supplied text.") }
+        BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error(refKey, "Chapter in in supplied text but not in NRSV(A).") }
+        BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).versesInTargetSchemeButNotInTextUnderConstruction.forEach   { refKey -> Logger.error(refKey, "Verse in NRSV(A) but not in supplied text.") }
+        BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error(refKey, "Verse in in supplied text but not in NRSV(A).") }
       }
 
       Logger.announceAll(true)
@@ -123,8 +125,8 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
     /* If we're not restructuring, it's ok to have missing verses at this point,
        but we must now fill them all in. */
 
-    if (Osis_EmptyVerseHandler.createEmptyVersesForMissingVerses(dataCollection))
-      dataCollection.reloadBibleStructure()
+    if (EmptyVerseHandler(dataCollection).createEmptyVersesForMissingVerses(dataCollection))
+      dataCollection.reloadBibleStructureFromRootNodes(false)
 
 
 
@@ -135,13 +137,13 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
     if ("step" != ConfigData["stepOsis2modType"])
     {
       val schemeName = ConfigData["stepVersificationScheme"]!!
-      val scheme = Z_BibleStructure.makeOsis2modSchemeInstance(schemeName)
+      val scheme = BibleStructure.makeOsis2modSchemeInstance(schemeName)
       dataCollection.getBookNumbers().forEach { bookNo ->
-        Z_BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { refKey -> Logger.warning(refKey, "Chapter in $schemeName but not in supplied text.") }
-        Z_BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error  (refKey, "Chapter in in supplied text but not in $schemeName.") }
-        Z_BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).versesInTextUnderConstructionButNotInTargetScheme  .forEach { refKey -> Logger.error  (refKey, "Verse in in supplied text but not in $schemeName.") }
+        BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { refKey -> Logger.warning(refKey, "Chapter in $schemeName but not in supplied text.") }
+        BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error  (refKey, "Chapter in in supplied text but not in $schemeName.") }
+        BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).versesInTextUnderConstructionButNotInTargetScheme  .forEach { refKey -> Logger.error  (refKey, "Verse in in supplied text but not in $schemeName.") }
 
-        val missingVerses = Z_BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).versesInTargetSchemeButNotInTextUnderConstruction.toSet()
+        val missingVerses = BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).versesInTargetSchemeButNotInTextUnderConstruction.toSet()
         val commonlyMissingVerses = BibleAnatomy.getCommonlyMissingVerses().toSet()
         val reportableMissings = missingVerses - commonlyMissingVerses
         val nonReportableMissings = commonlyMissingVerses - reportableMissings
@@ -177,7 +179,7 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
   /* Checks the basis structure -- are all chapters within books, all verses
      within chapters, etc. */
 
-  fun structuralValidation (dataCollection: Z_DataCollection)
+  fun structuralValidation (dataCollection: X_DataCollection)
   {
     dataCollection.getRootNodes().forEach { structuralValidationForBook(it) }
 
@@ -196,21 +198,21 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
     if (m_VersesWithBadChapterAncestor.isNotEmpty())
       Logger.error("Verses which are not under a chapter, or are under the wrong chapter: " + m_VersesWithBadChapterAncestor.joinToString(", "){ Ref.rd(it).toString() })
 
-    if (m_VersesWhereSidAndEidDoNotAlternative.isNotEmpty())
-      Logger.error("Locations where verse sids and eids do not alternate: " + m_VersesWhereSidAndEidDoNotAlternative.joinToString(", "){ Ref.rd(it).toString() })
+    if (m_VersesWhereSidAndEidDoNotAlternate.isNotEmpty())
+      Logger.error("Locations where verse sids and eids do not alternate: " + m_VersesWhereSidAndEidDoNotAlternate.joinToString(", "){ Ref.rd(it).toString() })
 
     if (m_VersesWhereSidAndEidDoNotMatch.isNotEmpty())
       Logger.error("Locations where verse sids and eids do not match: " + m_VersesWhereSidAndEidDoNotMatch.joinToString(", "){ Ref.rd(it).toString() })
 
     if (m_ElidedSubverses.isNotEmpty())
-      Logger.warning("Elided subverses: " + m_ElidedSubverses.joinToString(", "){ Ref.rd(it).toString() })
+      Logger.warning("Elided subverses: " + m_ElidedSubverses.joinToString(", "){ RefRange.rdUsx(it).toString() })
   }
 
 
   /****************************************************************************/
   private fun structuralValidationForBook (bookNode: Node)
   {
-    val bookNo = m_FileProtocol.readRef(m_FileProtocol.getBookCode(bookNode)).getB()
+    val bookNo = m_FileProtocol.readRef(m_FileProtocol.getBookAbbreviation(bookNode)).getB()
     Dom.findNodesByName(bookNode, m_FileProtocol.tagName_chapter(), false).forEach { chapterNode ->
       if (!Dom.hasAsAncestor(chapterNode, bookNode))
         m_ChaptersWithBadBookAncestor.add(m_FileProtocol.readRef(chapterNode[m_FileProtocol.attrName_chapterSid()]!!).toRefKey())
@@ -240,7 +242,9 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
         m_VersesWithBadChapterAncestor.add(m_FileProtocol.readRef(verseNode[m_FileProtocol.attrName_verseSid()]!!).toRefKey())
       else
       {
-        val verseRefKey = getRefKey(chapterNode[m_FileProtocol.attrName_verseSid()]!!)
+        Dbg.d(verseNode)
+        val id = if (m_FileProtocol.attrName_verseSid() in verseNode) m_FileProtocol.attrName_verseSid() else m_FileProtocol.attrName_verseSid()
+        val verseRefKey = getRefKey(verseNode[id]!!)
         if (0L == verseRefKey)
           m_VersesWithBadIds.add(chapterNode[m_FileProtocol.attrName_verseSid()]!!)
         else
@@ -253,12 +257,12 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
       }
     }
 
-    checkVerseSidsAndEidsAlternate(verseNodes)
+    //checkVerseSidsAndEidsAlternate(verseNodes)
   }
 
 
   /****************************************************************************/
-  private fun validationForOrderingAndHoles (dataCollection: Z_DataCollection)
+  private fun validationForOrderingAndHoles (dataCollection: X_DataCollection)
   {
     val softReporter: (String) -> Unit = if ("step" == ConfigData["stepOsis2modType"]!!) Logger::warning else Logger::error
 
@@ -303,7 +307,7 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
       {
         if (null != expectedId)
         {
-          m_VersesWhereSidAndEidDoNotAlternative.add(m_FileProtocol.readRef(verseNode[m_FileProtocol.attrName_verseSid()]!!).toRefKey())
+          m_VersesWhereSidAndEidDoNotAlternate.add(m_FileProtocol.readRef(verseNode[m_FileProtocol.attrName_verseSid()]!!).toRefKey())
           return@forEach
         }
 
@@ -314,7 +318,7 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
       {
         if (null == expectedId)
         {
-          m_VersesWhereSidAndEidDoNotAlternative.add(m_FileProtocol.readRef(verseNode[m_FileProtocol.attrName_verseEid()]!!).toRefKey())
+          m_VersesWhereSidAndEidDoNotAlternate.add(m_FileProtocol.readRef(verseNode[m_FileProtocol.attrName_verseEid()]!!).toRefKey())
           return@forEach
         }
 
@@ -333,7 +337,7 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
   private val m_ElidedSubverses: MutableList<String> = mutableListOf()
   private val m_ChaptersWithBadBookAncestor: MutableList<RefKey> = mutableListOf()
   private val m_VersesWithBadChapterAncestor: MutableList<RefKey> = mutableListOf()
-  private val m_VersesWhereSidAndEidDoNotAlternative: MutableList<RefKey> = mutableListOf()
+  private val m_VersesWhereSidAndEidDoNotAlternate: MutableList<RefKey> = mutableListOf()
   private val m_VersesWhereSidAndEidDoNotMatch: MutableList<RefKey> = mutableListOf()
 
 
@@ -366,11 +370,6 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
 
 
   /****************************************************************************/
-  private val m_FileProtocol = fileProtocol
-  private val m_Utils = utils
-
-
-  /****************************************************************************/
   /* Where we are applying reversification, reversification sometimes creates
      a subverse b without having a row which creates the subverse a.  Where this
      is the case, the reversification data implicitly assumes that the verse
@@ -383,12 +382,3 @@ open class SE_BasicValidator protected constructor (fileProtocol: Z_FileProtocol
 
   private lateinit var m_SubverseTwosWhichDontNeedChecking: Set<RefKey>
 }
-
-
-
-
-
-/******************************************************************************/
-object Osis_BasicValidator: SE_BasicValidator(Osis_FileProtocol, Osis_Utils)
-object Usx_basic_Validator: SE_BasicValidator(Usx_FileProtocol, Usx_Utils)
-

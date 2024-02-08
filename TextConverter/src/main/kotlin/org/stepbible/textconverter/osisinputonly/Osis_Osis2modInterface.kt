@@ -1,9 +1,8 @@
 package org.stepbible.textconverter.osisinputonly
 
-import org.stepbible.textconverter.utils.Z_BibleStructure
+import org.stepbible.textconverter.utils.BibleStructure
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -425,7 +424,7 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
   /* Note that OT and DC books all get grouped into otBooks for output purposes.
      I don't necessarily understand why, but it _is_ what's required. */
 
-  private fun populateBibleStructure (bibleStructureUnderConstruction: Z_BibleStructure)
+  private fun populateBibleStructure (bibleStructureUnderConstruction: BibleStructure)
   {
     m_BibleStructure.v11nName = ConfigData["stepVersificationScheme"]!!
 
@@ -439,7 +438,7 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
 
 
   /****************************************************************************/
-  private fun populateBibleStructure (bibleStructureUnderConstruction: Z_BibleStructure, headers: MutableList<BookDetails>, bookLow: Int, bookHigh: Int, skipMissingBooks: Boolean = false)
+  private fun populateBibleStructure (bibleStructureUnderConstruction: BibleStructure, headers: MutableList<BookDetails>, bookLow: Int, bookHigh: Int, skipMissingBooks: Boolean = false)
   {
     for (bookNo in bookLow .. bookHigh)
     {

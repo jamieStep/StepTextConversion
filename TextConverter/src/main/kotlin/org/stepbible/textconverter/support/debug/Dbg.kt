@@ -1,6 +1,7 @@
 /******************************************************************************/
 package org.stepbible.textconverter.support.debug
 
+import org.stepbible.textconverter.support.bibledetails.BibleBookNames
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.utils.ReversificationDataRow
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
@@ -51,6 +52,20 @@ object Dbg
   fun getBooksToBeProcessed (): List<String>
   {
      return m_BooksToBeProcessed.filter { "XXX" != it.m_Abbrev && it.m_Process } .map { it.m_Abbrev }
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Used to make all books as being processed.  This is the default anyway, but
+  * on a run where, for instance, you are just evaluating schemes, you need to
+  * process all books, but may inadvertently have some config or whatever
+  * hanging around which is limiting the books, and this will clear it.
+  */
+
+  fun resetBooksToBeProcessed ()
+  {
+    m_BooksToBeProcessed.forEach { it.m_Process = true}
   }
 
 
@@ -169,23 +184,7 @@ object Dbg
 
   fun wantToProcessBookByAbbreviatedName (bookName: String): Boolean
   {
-    val bookNo =
-    try
-    {
-      BibleBookNamesUsx.abbreviatedNameToNumber(bookName)
-    }
-    catch (_: Exception)
-    {
-      try
-      {
-        BibleBookNamesOsis.abbreviatedNameToNumber(bookName)
-      }
-      catch (_: Exception)
-      {
-        -1
-      }
-    }
-
+    val bookNo = BibleBookNames[bookName]
     return m_BooksToBeProcessed[bookNo].m_Process
   }
 

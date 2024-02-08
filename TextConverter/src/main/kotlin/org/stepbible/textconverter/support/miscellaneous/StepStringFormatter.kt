@@ -337,7 +337,7 @@ object StepStringFormatter
       val ixAsString = mr.groups["index"]!!.value
       val ix = ixAsString.toInt()
       if (revisedArgs[ix - 1] is String)
-        return "%$ixAsString\\\$s"
+        return "%$ixAsString\$s"
 
 
 

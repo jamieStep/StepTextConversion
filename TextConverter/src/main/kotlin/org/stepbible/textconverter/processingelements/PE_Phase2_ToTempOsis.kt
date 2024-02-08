@@ -77,11 +77,11 @@ object PE_Phase2_ToTempOsis : PE
     /***************************************************************************/
     /* Sort out the input data. */
 
-    IssueAndInformationRecorder = Osis_IssueAndInformationRecorder
     StepFileUtils.createFolderStructure(FileLocations.getTempOsisFolderPath())
     selectInitialData()
     val doc = OsisTempDataCollection.getDocument()
     DataCollection = OsisTempDataCollection
+    Dbg.d(OsisTempDataCollection.getDocument())
 
 
 
@@ -92,8 +92,7 @@ object PE_Phase2_ToTempOsis : PE
        decided there is little point in trying to set up common structures. */
 
     ProtocolConverterStandardOsisToExtendedOsis.process(doc) // It's safe to do this, regardless of whether the input is in standard or extended form.
-    addTemporarySupportStructure(doc)  // Things which make processing easier, but which have to be undone later.
-    Osis_BasicValidator.structuralValidation(OsisTempDataCollection) // Checks for basic things like all verses being under chapters.
+    SE_BasicValidator(OsisTempDataCollection).structuralValidation(OsisTempDataCollection) // Checks for basic things like all verses being under chapters.
 
 
 
@@ -102,15 +101,16 @@ object PE_Phase2_ToTempOsis : PE
        OSIS, these are common classes, and you're likely to want to make use of
        some or all of these in some order or other. */
 
-    Osis_SE_CrossBoundaryMarkup.process(OsisTempDataCollection); x()
-    Osis_SE_Tables.process(OsisTempDataCollection); x()
-    Osis_SE_SubverseCollapser.process(OsisTempDataCollection); x()
-    Osis_SE_Elisions.process(OsisTempDataCollection); x()
-    Osis_SE_Strongs.process(OsisTempDataCollection); x()
+Dbg.outputDom(OsisTempDataCollection.getDocument())
+    SE_CrossBoundaryMarkupHandler(OsisTempDataCollection).process(); x(); Dbg.outputDom(OsisTempDataCollection.getDocument())
+    SE_TableHandler(OsisTempDataCollection).process(); x()
+    SE_SubverseCollapser(OsisTempDataCollection).process(); x()
+    SE_ElisionHandler(OsisTempDataCollection).process(); x()
+    SE_StrongsHandler(OsisTempDataCollection).process(); x()
     Osis_CrossReferenceChecker.process(OsisTempDataCollection); x()
-    Osis_SE_CalloutStandardiser.process(OsisTempDataCollection); x()
-    Osis_SE_CanonicalHeadings.process(OsisTempDataCollection); x()
-    Osis_SE_ListEncapsulator.process(OsisTempDataCollection); x()
+    SE_CalloutStandardiser(OsisTempDataCollection).process(); x()
+    SE_CanonicalHeadingsHandler(OsisTempDataCollection).process(); x()
+    SE_ListEncapsulator(OsisTempDataCollection).process(); x()
 
 
 
@@ -120,57 +120,13 @@ object PE_Phase2_ToTempOsis : PE
        specifically for USX. */
 
     handleReversification(); x()
-    Osis_EmptyVerseHandler.annotateEmptyVerses(doc)
-    removeTemporarySupportStructure(doc)
-    Osis_BasicValidator.process(OsisTempDataCollection)
+    removeTemporarySupportStructure(OsisTempDataCollection)
     ContentValidator.process(OsisTempDataCollection, Osis_FileProtocol, OsisPhase2SavedDataCollection, Osis_FileProtocol)
-    Osis_SE_FeatureCollector.process(OsisTempDataCollection)
+    EmptyVerseHandler(OsisTempDataCollection).markVersesWhichWereEmptyInTheRawText()
+    EmptyVerseHandler.preventSuppressionOfEmptyVerses(OsisTempDataCollection)
+    SE_FeatureCollector(OsisTempDataCollection).process()
     ProtocolConverterExtendedOsisToStepOsis.process(doc)
     Dom.outputDomAsXml(doc, FileLocations.getTempOsisFilePath(), null)
-  }
-
-
-  /****************************************************************************/
-  /* Adds a dummy verse at the end of each chapter so that any insertions can
-     always go _before_ something. */
-     
-  private fun addDummyVerses (doc: Document)
-  {
-    Dom.findNodesByName(doc, "chapter").forEach { chapterNode ->
-      val id = chapterNode["osisID"]!! + ".${RefBase.C_BackstopVerseNumber}"
-      val dummySid = Dom.createNode(doc, "<verse sID='$id' osisID='$id'/>"); Utils.addTemporaryAttribute(dummySid, "_temp_dummy", "y")
-      val dummyEid = Dom.createNode(doc, "<verse eID='$id' osisID='$id'/>"); Utils.addTemporaryAttribute(dummyEid, "_temp_dummy", "y")
-      chapterNode.appendChild(dummySid)
-      chapterNode.appendChild(dummyEid)
-    }
-  }
-
-
-  /***************************************************************************/
-  /* Adds temporary nodes etc to aid later processing. */
-
-  private fun addTemporarySupportStructure (doc: Document)
-  {
-    Dbg.reportProgress("Adding temporary support details to OSIS.")
-
-    addDummyVerses(doc)
-
-    Dom.findNodesByAttributeValue(doc, "div", "type", "book").forEach {
-      if (null != it["osisID"])
-        Utils.addTemporaryAttribute(it, "_temp_id", it["osisID"]!!)
-    }
-
-    Dom.findNodesByName(doc, "chapter").forEach {
-      if (null != it["osisID"])
-        Utils.addTemporaryAttribute(it, "_temp_id", it["osisID"]!!)
-    }
-
-    Dom.findNodesByName(doc, "verse").forEach {
-      if (null != it["sID"])
-        Utils.addTemporaryAttribute(it, "_temp_id", it["sID"]!!)
-      else if (null != it["eID"])
-        Utils.addTemporaryAttribute(it, "_temp_id", it["eID"]!!)
-    }
   }
 
 
@@ -188,12 +144,12 @@ object PE_Phase2_ToTempOsis : PE
     {
       "runtime" ->
       {
-        Osis_SE_RuntimeReversification.process(OsisTempDataCollection)
+        SE_RuntimeReversificationHandler(OsisTempDataCollection).process()
       }
 
       "conversiontime" ->
       {
-        Osis_SE_ConversiontimeReversification.process(OsisTempDataCollection)
+        Osis_SE_ConversiontimeReversification(OsisTempDataCollection).process()
       }
     }
   }
@@ -202,41 +158,30 @@ object PE_Phase2_ToTempOsis : PE
   /****************************************************************************/
   /* Removes any temporary items added to support processing. */
 
-  private fun removeTemporarySupportStructure (doc: Document)
+  private fun removeTemporarySupportStructure (dataCollection: X_DataCollection)
   {
     Dbg.reportProgress("Removing temporary support details from OSIS.")
-    Dom.findNodesByAttributeName(doc, "verse", "_temp_dummy").forEach { Dom.deleteNode(it) }
-    Dom.findNodesByName(doc, "book").forEach { Dom.setNodeName(it, "div") }
-    Utils.deleteTemporaryAttributes(doc)
+    dataCollection.getRootNodes().forEach {rootNode ->
+      Dom.findNodesByName(rootNode, dataCollection.getFileProtocol().tagName_verse(), false).filter { NodeMarker.hasDummy(it) }.forEach { Dom.deleteNode(it) }
+      Dom.setNodeName(rootNode, "div")
+    }
+
+    NodeMarker.deleteAllMarkers(dataCollection)
   }
 
 
   /****************************************************************************/
   /* On entry, OsisPhase1OutputCollection contains the data upon which we are
-     to work.  This means that OsisPhase2InputCollection can be set equal to
-     that, because that's what we now work with.
-
-     However, we may also need to retain the original data.  Unless the input
-     was OSIS (in which case we want to leave that OSIS as-is), we need a copy
-     of this original data so we can save it later to the InputOsis folder for
-     potential future manual tweaks and use as input.
-   */
+     to work.  We need a working copy of this so that we can create the
+     module.  And we also retain it in case we want to save it to serve as an
+     input on later runs. */
 
   private fun selectInitialData ()
   {
-    /**************************************************************************/
-    OsisTempDataCollection = OsisPhase1OutputDataCollection
-
-
-
-    /**************************************************************************/
-    /* Save the input data for use in validation and also in case we need to
-       store it for possible use as an input in future runs (perhaps after
-       tweaking it manually). */
-
-    OsisPhase2SavedDataCollection.addFromText(OsisPhase1OutputDataCollection.getText(), false)
-    OsisPhase1OutputDataCollection.clearText()
+    //File("C:/Users/Jamie/Desktop/a.usx").bufferedWriter().use { it.write(OsisPhase1OutputDataCollection.getText())}
+    OsisTempDataCollection.loadFromText(OsisPhase1OutputDataCollection.getText(), false)
+    OsisPhase2SavedDataCollection.loadFromText(OsisPhase1OutputDataCollection.getText(), false)
+    OsisPhase1OutputDataCollection.clearAll()
+    RefBase.setBibleStructure(OsisTempDataCollection.BibleStructure)
   }
-
-
 }

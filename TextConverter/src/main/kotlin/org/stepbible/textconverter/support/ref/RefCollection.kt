@@ -382,9 +382,9 @@ class RefCollection: RefBase
 
         val diff =
           if (lastWasSubVerse)
-            getBibleStructure().getSubverseDifference(prevKey, thisKey)
+            getBibleStructure()!!.getSubverseDifference(prevKey, thisKey)
           else
-            getBibleStructure().getVerseDifference(prevKey, thisKey)
+            getBibleStructure()!!.getVerseDifference(prevKey, thisKey)
         if (diff != 1) break
 
         prevKey = thisKey

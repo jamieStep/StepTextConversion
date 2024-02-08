@@ -24,7 +24,7 @@ import kotlin.system.exitProcess
 * At the end of processing, two configuration parameters have been set up with
 * information which will be useful later on:
 *
-* - stepProcessingOriginalData will be VL, USX or OSIS.  This represents the
+* - stepOriginData will be VL, USX or OSIS.  This represents the
 *   raw data upon which the run was based.  In other words, if InputVl exists,
 *   it will be 'VL'; if InputUsx exists it will be USX< and if neither exists,
 *   it will be OSIS.  With VL, however, the run may not have started from that
@@ -34,7 +34,7 @@ import kotlin.system.exitProcess
 *   *may* have been pre-processed to produce revised USX, and again if the
 *   revised USX already exists, the run may have started with that.
 *
-* - stepProcessingOriginalDataAdditionalInfo contains additional text
+* - stepOriginDataAdditionalInfo contains additional text
 *   explaining this issue of pre-processing where we have started from the
 *   pre-processed text.  (The parameter will be undefined where we have
 *   started from the raw text.)
@@ -105,65 +105,8 @@ object ProcessingController
 
 
   /****************************************************************************/
-  /* This goes on the end of every module we generate.  Some modules can be
-     used only within STEP, and these get the suffix _sbOnly (ie for use only
-     within STEPBible).  Some are intended for possible public consumption, and
-     these get the suffix _sb (ie produced by STEPBible, and intended to make
-     sure the names we give to them do not clash with the name of any existing
-     module upon which they may have been based).
-
-     At present 'for use only within STEPBible' and 'won't work outside of
-     STEPBible' come down to the same thing.  A Bible is _sbOnly if:
-
-     - It has been encrypted OR ...
-
-     - We have run it through our own version of osis2mod.
-
-     Stop press: We have just discovered that it's too painful to rename ESV
-     to follow this new standard.  So I've added another option.  We are
-     already using the root folder name to give us the language code and
-      vernacular abbreviation (eg eng_ESV).  If the root folder name has a
-      third element (eng_ESV_th), I take that as being the suffix.
-  */
-
-  private fun determineModuleNameAudienceRelatedSuffix ()
-  {
-    val forcedSuffix = ConfigData.parseRootFolderName("stepModuleSuffixOverride")
-    if (forcedSuffix.isNotEmpty())
-      ConfigData["stepModuleNameAudienceRelatedSuffix"] = "_$forcedSuffix"
-    else
-    {
-      val isSbOnly = "step" == ConfigData["stepOsis2modType"] ||
-                     ConfigData.getAsBoolean("stepEncryptionRequired")
-       ConfigData["stepModuleNameAudienceRelatedSuffix"] = if (isSbOnly) "_sbOnly" else "_sb"
-    }
-  }
-
-
-  /****************************************************************************/
-  /* A potential further addition to module names.  On release runs, it adds
-     nothing.  On non-release runs it adds a timestamp etc to the name, so that
-     we can have multiple copies of a module lying around.  This method can be
-     run safely at any time, because the parameters it looks at will normally
-     come direct from the command line. */
-
-  private fun determineModuleNameTestRelatedSuffix ()
-  {
-    ConfigData["stepModuleNameTestRelatedSuffix"] =
-      if ("release" in ConfigData["stepRunType"]!!.lowercase())
-        ""
-      else
-      {
-        var x = ConfigData["stepRunType"]!!
-        if ("evaluation" in x.lowercase()) x = "eval"
-        "_" + x + "_" + ConfigData["stepBuildTimestamp"]!!
-      }
-  }
-
-
-  /****************************************************************************/
-  private val C_ProcessingElementsStarters = listOf<PE>(PE_Phase1_FromInputVl, PE_Phase1_FromInputUsx, PE_Phase1_FromInputOsis)
-  private val C_ProcessingElementsFromInternalOsis = listOf<PE>(PE_Phase2_ToTempOsis, PE_Phase3_To_SwordModule, PE_Phase4_To_RepositoryPackageAndOrSaveOsis)
+  private val C_ProcessingElementsStarters = listOf(PE_Phase1_FromInputVl, PE_Phase1_FromInputUsx, PE_Phase1_FromInputOsis)
+  private val C_ProcessingElementsFromInternalOsis = listOf(PE_Phase2_ToTempOsis, PE_Phase3_To_SwordModule, PE_Phase4_To_RepositoryPackageAndOrSaveOsis)
   private val m_AllAvailableProcessingElements = listOf(C_ProcessingElementsStarters, C_ProcessingElementsFromInternalOsis).flatten()
   private val m_ProcessingElements = mutableListOf<PE>()
 
@@ -213,7 +156,7 @@ object ProcessingController
         Logger.warning("Starting from OSIS, but the InputVl data is later.")
     }
 
-    ConfigData["stepProcessingOriginalData"] = startFrom
+    ConfigData["stepOriginData"] = startFrom
 
 
 
@@ -234,7 +177,7 @@ object ProcessingController
 
       "usx" ->
       {
-        m_ProcessingElements.add(PE_Phase1_FromInputVl)
+        m_ProcessingElements.add(PE_Phase1_FromInputUsx)
         m_ProcessingElements.addAll(C_ProcessingElementsFromInternalOsis)
       }
 
@@ -277,6 +220,7 @@ object ProcessingController
     commandLineProcessor.addCommandLineOption("dbgAddDebugAttributesToNodes", 0, "Add debug attributes to nodes.", null, "no", false)
     val commonText = ": 'No' or anything containing 'screen' (output to screen), 'file' (output to debugLog.txt), or both.  Include 'deferred' if you want screen output at the end of the run, rather than as it occurs.  Not case-sensitive."
     commandLineProcessor.addCommandLineOption("dbgDisplayReversificationRows", 1, "Display selected reversification rows$commonText", null, "no", false)
+    commandLineProcessor.addCommandLineOption("dbgSelectBooks", 1, "Limits processing to selected books.  Either <, <=, -, >=, > followed by the USX abbreviation for a book, or else a comma-separated list of books.",null, null, false )
   }
 
 
@@ -287,6 +231,21 @@ object ProcessingController
   {
     /**************************************************************************/
     initialiseCommandLineArgsAndConfigData(args)
+
+
+
+    /**************************************************************************/
+    /* If supplied, this could be something like   <Isa   or it could be a
+       comma-separated list of USX abbreviations.  */
+
+    if (null != ConfigData["dbgSelectBooks"])
+    {
+      val regex = "(?<comparison>\\W*?)(?<books>.*)".toRegex()
+      val mr = regex.matchEntire(ConfigData["dbgSelectBooks"]!!) ?: throw StepException("Invalid 'dbgSelectBooks' parameter")
+      val books = mr.groups["books"]!!.value.replace("\\s+".toRegex(), "")
+      val comparison = mr.groups["comparison"]!!.value.replace("\\s+".toRegex(), "")
+      Dbg.setBooksToBeProcessed(books, if (comparison.isEmpty()) "=" else comparison)
+    }
 
 
 
@@ -303,11 +262,6 @@ object ProcessingController
 
     /**************************************************************************/
     ConfigData["stepBuildTimestamp"] = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
-    determineModuleNameTestRelatedSuffix()                              // On test runs, adds to the module name something saying this version of the module is for evaluation only.
-    determineModuleNameAudienceRelatedSuffix()                          // Gets a further suffix for the module name which says whether this can be used only within STEP, or more widely.
-
-    ConfigData["stepModuleName"] = ConfigData.calc_stepModuleNameBase() + ConfigData["stepModuleNameTestRelatedSuffix"] + ConfigData["stepModuleNameAudienceRelatedSuffix"]
-
     if (null == ConfigData["stepVersificationScheme"])                  // Where we are doing runtime reversification, we have had to defer working out the scheme name because we use one of our own making and only now have all the inputs.
       ConfigData["stepVersificationScheme"] = "tbd"
   }
@@ -456,6 +410,7 @@ object ProcessingController
 
     /**************************************************************************/
     Dbg.reportProgress("Evaluating fit with versification schemes")
+    Dbg.resetBooksToBeProcessed() // Force all books to be included.
     PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.process()
     return true
   }

@@ -46,12 +46,10 @@ object Globals
 
 /******************************************************************************/
 var OsisPhase1OutputDataCollection = Osis_DataCollection()
-//var OsisPhase2InputCollection = Osis_DataCollection()
 var OsisPhase2SavedDataCollection = Osis_DataCollection()
 var OsisTempDataCollection = Osis_DataCollection()
 var UsxDataCollection = Usx_DataCollection()
 
-lateinit var DataCollection: Z_DataCollection
-lateinit var IssueAndInformationRecorder: Z_IssueAndInformationRecorder
+lateinit var DataCollection: X_DataCollection
 
 
