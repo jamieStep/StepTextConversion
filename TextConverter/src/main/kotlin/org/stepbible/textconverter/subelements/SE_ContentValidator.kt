@@ -7,7 +7,7 @@ import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.contains
 import org.stepbible.textconverter.support.miscellaneous.get
-import org.stepbible.textconverter.support.miscellaneous.getNodesInTree
+import org.stepbible.textconverter.support.miscellaneous.getAllNodes
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.utils.*
@@ -624,7 +624,7 @@ object ContentValidator
       val node = allNodes[i]
       if ("#text" == Dom.getNodeName(node) &&                                         // The content is limited to text nodes.
           !fileProtocol.isInherentlyNonCanonicalTagOrIsUnderNonCanonicalTag(node) &&  // And they're excluded if we know for sure they're non-canonical.
-          "_temp_wasCanonicalTitle" in node)                                          // And by the same token, we need to exclude things which _were_ canonical titles, but have had to be changed to plain-ish text
+          NodeMarker.hasReversificationWasCanonicalTitle(node))                       // And by the same token, we need to exclude things which _were_ canonical titles, but have had to be changed to plain-ish text
       {
         res.append(" ")
         res.append(node.textContent)
@@ -769,7 +769,7 @@ object ContentValidator
 
     /**************************************************************************/
     val res = BookAnatomy()
-    res.m_AllNodes = rootNode.getNodesInTree()
+    res.m_AllNodes = rootNode.getAllNodes()
 
 
 

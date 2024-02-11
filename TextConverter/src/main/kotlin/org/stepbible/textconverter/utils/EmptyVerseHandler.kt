@@ -124,9 +124,9 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
 
   fun createEmptyVerseForElision (doc: Document, refKey: RefKey): List<Node>
   {
-    val sid = m_FileProtocol.makeVerseSidNode(doc, refKey)
+    val sid = m_FileProtocol.makeVerseSidNode(doc, Pair(refKey, null))
     val content = createEmptyContent(doc, m_Content_Elision)
-    val eid = m_FileProtocol.makeVerseEidNode(doc, refKey)
+    val eid = m_FileProtocol.makeVerseEidNode(doc, Pair(refKey, null))
     NodeMarker.setEmptyVerseType(sid, "elision") // May be overwritten with a more specific value by the caller.
     return listOf(sid, content, eid)
   }
@@ -178,8 +178,8 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
 
   fun createEmptyVerseForReversification (insertBefore: Node, sidRefKey: RefKey): Pair<Node, Node>
   {
-    val start = m_FileProtocol.makeVerseSidNode(insertBefore.ownerDocument, sidRefKey)
-    val end   = m_FileProtocol.makeVerseEidNode(insertBefore.ownerDocument, sidRefKey)
+    val start = m_FileProtocol.makeVerseSidNode(insertBefore.ownerDocument, Pair(sidRefKey, null))
+    val end   = m_FileProtocol.makeVerseEidNode(insertBefore.ownerDocument, Pair(sidRefKey, null))
 
     NodeMarker.setEmptyVerseType(start, "reversification")
 
@@ -256,7 +256,7 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
     val end   = Dom.createNode(rootNode.ownerDocument, template.replace("ID", "${m_FileProtocol.attrName_verseSid()}='$sidAsString'"))
     NodeMarker.setAddedFootnote(start).setEmptyVerseType(start, "missingInRawText")
 
-    val ib = insertBefore ?: Dom.createNode(rootNode.ownerDocument,"<_TEMP/>")
+    val ib = insertBefore ?: Dom.createNode(rootNode.ownerDocument,"<TempNode/>")
     Dom.insertNodeBefore(ib, start)
     val footnoteNode = m_FileProtocol.makeFootnoteNode(rootNode.ownerDocument, refKey, ReversificationData.getFootnoteForNewlyCreatedVerses(refKey))
     Dom.insertNodeBefore(ib, footnoteNode)

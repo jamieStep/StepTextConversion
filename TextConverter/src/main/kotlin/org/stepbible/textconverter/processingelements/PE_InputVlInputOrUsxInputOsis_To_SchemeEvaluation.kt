@@ -8,6 +8,7 @@ import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.ref.RefKey
+import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.*
 import java.io.File
 
@@ -185,10 +186,10 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
     VersificationSchemesSupportedByOsis2mod.getSchemes().forEach { evaluateScheme(it, bibleStructureToCompareWith) }
     val details = m_Evaluations.sortedBy { it.scoreForSorting }
 
-    var additionalInformation: String? = null
+    var additionalInformation = ""
     if (!bibleStructureToCompareWith.otBooksAreInOrder() || !bibleStructureToCompareWith.ntBooksAreInOrder()) additionalInformation  = "*** Text contains out-of-order books. ***\n"
     if (!bibleStructureToCompareWith.versesAreInOrder()) additionalInformation += "*** Text contains out-of-order verses. ***"
-    if (null != additionalInformation && additionalInformation.endsWith("\n")) additionalInformation = additionalInformation.substring(0, additionalInformation.length - 1)
+    if (additionalInformation.endsWith("\n")) additionalInformation = additionalInformation.substring(0, additionalInformation.length - 1)
     outputDetails(details, additionalInformation)
   }
 
@@ -203,26 +204,34 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
       {
         PE_Phase1_FromInputOsis.pre()
         PE_Phase1_FromInputOsis.process()
+        val dataCollection = X_DataCollection(Osis_FileProtocol)
+        dataCollection.loadFromText(Phase1TextOutput, false)
+        return dataCollection.BibleStructure
       }
+
 
       "usx" ->
       {
         PE_Phase1_FromInputUsx.pre()
         PE_Phase1_FromInputUsx.process()
+        return UsxDataCollection.BibleStructure
       }
+
 
       "vl" ->
       {
         PE_Phase1_FromInputVl.pre()
         PE_Phase1_FromInputVl.process()
+        val dataCollection = X_DataCollection(Osis_FileProtocol)
+        dataCollection.loadFromText(Phase1TextOutput, false)
+        return dataCollection.BibleStructure
       }
     }
 
 
 
     /**************************************************************************/
-    OsisPhase1OutputDataCollection.loadFromText(OsisPhase1OutputDataCollection.getText(), false)
-    return OsisPhase1OutputDataCollection.BibleStructure
+    throw StepException("Invalid case")
   }
 
 
@@ -310,7 +319,7 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
 
 
   /****************************************************************************/
-  private fun outputDetails (details: List<Evaluation>, additionalInformation: String?)
+  private fun outputDetails (details: List<Evaluation>, additionalInformation: String)
   {
     /**************************************************************************/
      val header = """
@@ -373,7 +382,7 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
    File(FileLocations.getVersificationFilePath()).printWriter().use { writer ->
       writer.println(header)
       details.forEach { writer.println(it.toString()); println(it.toString()) }
-      if (null != additionalInformation)
+      if (additionalInformation.isNotEmpty())
       {
         writer.println(""); println("")
         writer.println(additionalInformation); println(additionalInformation)

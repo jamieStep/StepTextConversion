@@ -11,21 +11,20 @@ import org.w3c.dom.Node
 * We are concerned here with USX, standard OSIS, extended OSIS and STEP-internal
 * OSIS.
 *
-* All of the code in this file converts something to OSIS -- either USX to OSIS,
-* or one of the forms of OSIS to one of the other forms.
+* All of the code in this file converts one form of OSIS to another.
 *
 * **Standard OSIS** is ... well, just OSIS.  'Standard' means that it contains
 * just the standard OSIS tags and attributes.  It *doesn't* necessarily mean
 * that the file complies with the OSIS XSD.  For example, translators often use
-* list tags in the hope that this will simply generate fully indented
-* paragraphs (it won't).  In OSIS, list tags are supposed to be encapsulated
-* within the OSIS equivalent of HTML's ul tags.  However, there is no
-* corresponding USX enclosing tag.  Fabricating one and position it correctly
-* is difficult; it also tends to introduce cross-verse-boundary markup; things
-* seem to work perfectly well without; and having it introduces excessive
-* vertical whitespace when rendered.  We therefore don't bother with it.  This
-* means that we are not conformant, and therefore limits our ability to share
-* stuff.  But it does save a lot of work.
+* poetry tags in the hope that this will simply generate fully indented
+* paragraphs (it won't).  In OSIS, poetry tags are supposed to be encapsulated
+* within the OSIS equivalent of HTML's ul tags.  However, when we start from
+* USX there is no corresponding USX enclosing tag.  Fabricating one and
+* positioning it correctly is difficult; it also tends to introduce cross-verse-
+* boundary markup; things seem to work perfectly well without; and having it
+* introduces excessive vertical whitespace when rendered.  We therefore don't
+* bother with it.  This means that we are not conformant, and therefore limits
+* our ability to share stuff.  But it does save a lot of work.
 *
 * If OSIS is all we have available for a given text, then it will be standard
 * OSIS.  I also save, for possible future use, any OSIS which I generate from
@@ -81,10 +80,10 @@ object ProtocolConverterExtendedOsisToStandardOsis
   /****************************************************************************/
 
   /****************************************************************************/
-  fun process (dataCollection: X_DataCollection)
+  fun process (doc: Document)
   {
     Dbg.reportProgress("Converting to standard OSIS.")
-    m_Document = dataCollection.getDocument() // Extended OSIS will always be held as a single document, so getDocument will work ok.
+    m_Document = doc
     doMappings()
     NodeMarker.deleteAllMarkers(m_Document)
   }
@@ -141,7 +140,7 @@ object ProtocolConverterStandardOsisToExtendedOsis
        the tag name here, but the result isn't valid OSIS, so it will need to
        be changed back before I do anything 'official' with the OSIS. */
 
-    Dom.findNodesByAttributeValue(doc, "div", "type", "book").forEach { Dom.setNodeName(it, "book") }
+    doc.findNodesByAttributeValue("div", "type", "book").forEach { Dom.setNodeName(it, "book") }
 
 
 
@@ -149,7 +148,15 @@ object ProtocolConverterStandardOsisToExtendedOsis
     /* This can be left as-is.  div/type=chapter and <chapter> are synonyms in
        OSIS, but the <chapter> version is more convenient. */
 
-    Dom.findNodesByAttributeValue(doc, "div", "type", "chapter").forEach { Dom.setNodeName(it, "chapter") }
+    doc.findNodesByAttributeValue("div", "type", "chapter").forEach { Dom.setNodeName(it, "chapter") }
+
+
+
+    /**************************************************************************/
+    doc.getAllNodes().filter { "_wantPointlessHiTag" in it }.forEach {
+      val pointlessNode = doc.createNode("<hi type='normal'")
+      Dom.insertNodeBefore(it, pointlessNode)
+    }
 
 
 
@@ -252,10 +259,9 @@ object ProtocolConverterExtendedOsisToStepOsis
   private fun doChanges ()
   {
     doCommaNote()
-    doLg()
     doUnacceptableTextCharacters()
     doLineBreaks()
-    doMappings()
+    m_Document.getAllNodes().forEach(::doMapping)
   }
 
 
@@ -291,20 +297,6 @@ object ProtocolConverterExtendedOsisToStepOsis
       .forEach { insertNode(it) }
 
     return changed
-  }
-
-
-  /****************************************************************************/
-  /* Remove <lg> and promote children.  In theory, lg is required in OSIS (it's
-     used to wrap list-type things).  However, it introduces excessive vertical
-     whitespace when rendered, and nothing seems to reply upon it. */
-
-  private fun doLg ()
-  {
-    Dom.findNodesByName(m_Document, "lg"). forEach {
-      Dom.promoteChildren(it)
-      Dom.deleteNode(it)
-    }
   }
 
 
@@ -363,90 +355,135 @@ object ProtocolConverterExtendedOsisToStepOsis
   /****************************************************************************/
   /* Individual specific mappings. */
 
-  private fun doMappings ()
+  private fun doMapping (node: Node)
   {
     /**************************************************************************/
-    fun processNode (node: Node)
+    val extendedNodeName = Dom.getNodeName(node)
+
+
+
+    /**************************************************************************/
+    /* Speaker is legit OSIS, but it doesn't get rendered well, so we need to
+       do something about it.  More specifically, we convert it to
+
+         <p><hi type='bold'><hi type='italic'> ... </hi></hi></p>
+     */
+
+    if ("speaker" == extendedNodeName)
     {
-      /************************************************************************/
-      val extendedNodeName = Dom.getNodeName(node)
+      val wrapperPara = Dom.createNode(node.ownerDocument, "<p/>")
+      Dom.insertNodeBefore(node, wrapperPara)
 
+       val wrapperHi = Dom.createTextNode(node.ownerDocument, "hi type='bold'/>")
+       wrapperPara.appendChild(wrapperHi)
 
+       Dom.deleteNode(node)
+       wrapperHi.appendChild(node)
 
-      /************************************************************************/
-      /* Speaker is legit OSIS, but it doesn't get rendered well, so we need to
-         do something about it.  More specifically, we convert it to
+      // Turn the node into hi:italic.
+      node -= "who"
+      node["type"] = "italic"
+      Dom.setNodeName(node, "hi")
 
-           <p><hi type='bold'><hi type='italic'> ... </hi></hi></p>
-      */
-
-      if ("speaker" == extendedNodeName)
-      {
-        val wrapperPara = Dom.createNode(node.ownerDocument, "<p/>")
-        Dom.insertNodeBefore(node, wrapperPara)
-
-         val wrapperHi = Dom.createTextNode(node.ownerDocument, "hi type='bold'/>")
-         wrapperPara.appendChild(wrapperHi)
-
-         Dom.deleteNode(node)
-         wrapperHi.appendChild(node)
-
-        // Turn the node into hi:italic.
-        node -= "who"
-        node["type"] = "italic"
-        Dom.setNodeName(node, "hi")
-
-        return
-      }
-
-
-
-      /************************************************************************/
-      /* Selah doesn't get formatted well either, so change it to italic. */
-
-      if ("l:selah" == extendedNodeName)
-      {
-        Dom.deleteAllAttributes(node)
-        node["type"] = "italic"
-        Dom.setNodeName(node, "hi")
-        return
-      }
-
-
-
-      /************************************************************************/
-      /* Canonical titles at the ends of books don't work either.  The code
-         below turns this into a bold italic para, but I can't recall whether
-         this is what we had before. */
-
-      if (Osis_FileProtocol.isCanonicalTitleNode(node) && "end" == node["_temp_canonicalHeadingLocation"]!!)
-      {
-        val wrapperPara = Dom.createNode(node.ownerDocument, "<p/>")
-        Dom.insertNodeBefore(node, wrapperPara)
-
-        val wrapperHi = Dom.createTextNode(node.ownerDocument, "hi type='bold'/>")
-        wrapperPara.appendChild(wrapperHi)
-
-        Dom.deleteNode(node)
-        wrapperHi.appendChild(node)
-
-        // Turn the node into hi:italic.
-        node -= "who"
-        node["type"] = "italic"
-        Dom.setNodeName(node, "hi")
-
-        return
-      }
+      return
     }
 
 
 
+    /**************************************************************************/
+    /* Selah doesn't get formatted well either, so change it to italic. */
 
-      /************************************************************************/
+    if ("l:selah" == extendedNodeName)
+    {
+      Dom.deleteAllAttributes(node)
+      node["type"] = "italic"
+      Dom.setNodeName(node, "hi")
+      return
+    }
 
-//    selah ->   <hi type='italic'>   (may be para or char in USX; both are treated the same way.)
 
-      Dom.getNodesInTree(m_Document).forEach(::processNode)
+
+    /**************************************************************************/
+    /* There are various other forms of 'l' tag.  Some of these carry 'type'
+       attributes, and I have to admit to not knowing how to handle them (so
+       hope we'll never see them.  But there are other plain vanilla ones
+       which, for some bizarre reason sometimes don't get rendered correctly
+       if I leave them as-is, but are ok if I insert an entirely irrelevant
+       markup before them -- see discussion of xWeird in
+       usxToOsisTagConversionsEtc.conf. */
+
+    if ("l" == extendedNodeName)
+    {
+      val pointlessNode = node.ownerDocument.createNode("<hi type='normal'/>")
+      Dom.insertNodeBefore(node, pointlessNode)
+      return
+    }
+
+
+
+    /**************************************************************************/
+    /* Acrostic elements come in two forms -- as titles and as hi:acrostic.
+       In fact, STEP doesn't render either of them correctly, so we need to
+       convert them to something else.
+
+       Here we deal with the title form.  The bold/italic version used here
+       represents DIB's preferred option.
+
+       To make the native title:acrostic acceptable, you'd need a change in the
+       stylesheet (STEP\step-web\scss\step-template.css):
+
+         h3.canonicalHeading.acrostic {
+           font-style: italic;
+           font-weight: bold;
+           color: #333;
+           margin-bottom: 0;
+           margin-left: 0;
+           margin-top: 20px;
+         } */
+
+    if ("title:acrostic" == extendedNodeName)
+    {
+      // Turn the node itself into hi:italic.
+      Dom.setNodeName(node, "hi"); Dom.deleteAllAttributes(node); node["type"] = "italic"
+
+      // Create a bold node, insert it before the node itself, and then move the target node into the bold node.
+      val bold = node.ownerDocument.createTextNode("<hi type='bold'/>")
+      Dom.insertNodeBefore(node, bold); Dom.deleteNode(node); bold.appendChild(node)
+    }
+
+
+
+    /**************************************************************************/
+    /* The other form of acrostic. */
+
+    if ("hi:acrostic" == extendedNodeName)
+    {
+      node["type"] = "italic"
+      return
+    }
+
+
+
+    /**************************************************************************/
+    /* Canonical titles at the ends of books don't work either.  The code
+       below turns this into a bold italic para, but I can't recall whether
+       this is what we had before. */
+
+    if (Osis_FileProtocol.isCanonicalTitleNode(node) && "end" == NodeMarker.getCanonicalHeaderLocation(node)!!)
+    {
+      // Turn the node itself into hi:italic.
+      Dom.setNodeName(node, "hi"); Dom.deleteAllAttributes(node); node["type"] = "italic"
+
+      // Create a bold node, insert it before the node itself, and then move the target node into the bold node.
+      val bold = node.ownerDocument.createTextNode("<hi type='bold'/>")
+      Dom.insertNodeBefore(node, bold); Dom.deleteNode(node); bold.appendChild(node)
+
+      // Ditto with a para.
+      val para = node.ownerDocument.createTextNode("<p/>")
+      Dom.insertNodeBefore(bold, para); Dom.deleteNode(bold); para.appendChild(bold)
+
+      return
+    }
   }
 
 

@@ -135,7 +135,7 @@ object Osis_DetermineReversificationTypeEtc
 
       "tbd" ->
       {
-        when(reversificationTypeNeeded())
+        when (reversificationTypeNeeded())
         {
           "none" ->
           {

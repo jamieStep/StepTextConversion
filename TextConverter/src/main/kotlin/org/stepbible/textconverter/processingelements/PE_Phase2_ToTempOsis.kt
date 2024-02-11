@@ -8,12 +8,11 @@ import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.miscellaneous.Dom
-import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.support.miscellaneous.get
+import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Document
+import javax.print.Doc
 
 
 /****************************************************************************/
@@ -78,10 +77,9 @@ object PE_Phase2_ToTempOsis : PE
     /* Sort out the input data. */
 
     StepFileUtils.createFolderStructure(FileLocations.getTempOsisFolderPath())
-    selectInitialData()
+    setupInitialData(); x()
     val doc = OsisTempDataCollection.getDocument()
     DataCollection = OsisTempDataCollection
-    Dbg.d(OsisTempDataCollection.getDocument())
 
 
 
@@ -97,12 +95,6 @@ object PE_Phase2_ToTempOsis : PE
 
 
     /***************************************************************************/
-    /* If at some future point you decide to work directly with USX, rather than
-       OSIS, these are common classes, and you're likely to want to make use of
-       some or all of these in some order or other. */
-
-Dbg.outputDom(OsisTempDataCollection.getDocument())
-    SE_CrossBoundaryMarkupHandler(OsisTempDataCollection).process(); x(); Dbg.outputDom(OsisTempDataCollection.getDocument())
     SE_TableHandler(OsisTempDataCollection).process(); x()
     SE_SubverseCollapser(OsisTempDataCollection).process(); x()
     SE_ElisionHandler(OsisTempDataCollection).process(); x()
@@ -122,8 +114,8 @@ Dbg.outputDom(OsisTempDataCollection.getDocument())
     handleReversification(); x()
     removeTemporarySupportStructure(OsisTempDataCollection)
     ContentValidator.process(OsisTempDataCollection, Osis_FileProtocol, OsisPhase2SavedDataCollection, Osis_FileProtocol)
-    EmptyVerseHandler(OsisTempDataCollection).markVersesWhichWereEmptyInTheRawText()
     EmptyVerseHandler.preventSuppressionOfEmptyVerses(OsisTempDataCollection)
+    EmptyVerseHandler(OsisTempDataCollection).markVersesWhichWereEmptyInTheRawText()
     SE_FeatureCollector(OsisTempDataCollection).process()
     ProtocolConverterExtendedOsisToStepOsis.process(doc)
     Dom.outputDomAsXml(doc, FileLocations.getTempOsisFilePath(), null)
@@ -156,6 +148,18 @@ Dbg.outputDom(OsisTempDataCollection.getDocument())
 
 
   /****************************************************************************/
+  /* Removes list brackets -- <lg> etc.  This gives us invalid OSIS, but it
+     still works and renders better than if we retain the <l>.  Plus unless we
+     do this, we almost invariably end up with cross-boundary markup. */
+
+  private fun removeListBrackets (doc: Document)
+  {
+    doc.findNodesByName("lg").forEach {Dom.promoteChildren(it); Dom.deleteNode(it) }
+    doc.findNodesByName("l").forEach { Dom.promoteChildren(it); Dom.deleteNode(it) }
+  }
+
+
+  /****************************************************************************/
   /* Removes any temporary items added to support processing. */
 
   private fun removeTemporarySupportStructure (dataCollection: X_DataCollection)
@@ -171,17 +175,81 @@ Dbg.outputDom(OsisTempDataCollection.getDocument())
 
 
   /****************************************************************************/
-  /* On entry, OsisPhase1OutputCollection contains the data upon which we are
-     to work.  We need a working copy of this so that we can create the
-     module.  And we also retain it in case we want to save it to serve as an
-     input on later runs. */
+  /* Sets up the input and working data.
 
-  private fun selectInitialData ()
+     On entry, Phase1TextOutput contains OSIS.  It will be valid in the sense
+     that it contains only official OSIS tags and attributes (or OSIS
+     extensions where those are permitted).  But it may lack verse eids, or
+     if it has them, they may not be optimally positioned.
+
+     (It may also fail to conform to the OSIS XSD in other respects too,
+     because -- as explained elsewhere -- there are certain aspects of that
+     which we have ended up concluding are just too difficult to live with.)
+
+     As regards the issues with verse ends, we have two different situations
+     to consider:
+
+     - This run may have started from VL or USX, in which case I won't yet
+       have generated any verse eids.
+
+     - Or the run may have started from OSIS.  This may be third party OSIS,
+       or it may be our own OSIS from a previous run.  Either way, I have had
+       no control over it, and although it will probably contain eids (or else
+       it would be totally invalid), there is no guarantee they are placed in
+       such a way to minimise cross-boundary-markup, which is what I want.
+
+
+     Regardless of the source, therefore, I remove any existing verse eids,
+     and then insert new ones optimally positioned, to the extent that I can
+     achieve it.  (But before I can do that, I also need to sort out tables,
+     because these will normally fall foul of cross-boundary markup, and
+     will complicate verse-end placement.)
+
+     If the run started from VL or USX, I will in due course save this
+     improved OSIS to InputOsis to act as a possible input for future runs
+     (for example where someone finds it convenient to tweak OSIS in order to
+     add tagging or whatever).  I _don't_ save it if the starting point was
+     itself OSIS, because I assume we want to retain that version.
+
+     Further processing has to be applied to the OSIS before we are in a
+     position to create a module, but I do that to a separate throw-away copy
+     which is held in OsisTempDataCollection. */
+
+  private fun setupInitialData ()
   {
-    //File("C:/Users/Jamie/Desktop/a.usx").bufferedWriter().use { it.write(OsisPhase1OutputDataCollection.getText())}
-    OsisTempDataCollection.loadFromText(OsisPhase1OutputDataCollection.getText(), false)
-    OsisPhase2SavedDataCollection.loadFromText(OsisPhase1OutputDataCollection.getText(), false)
-    OsisPhase1OutputDataCollection.clearAll()
+    /**************************************************************************/
+    OsisTempDataCollection.loadFromText(Phase1TextOutput, false)
+    removeListBrackets(OsisTempDataCollection.getDocument())
+    SE_TableHandler(OsisTempDataCollection).process()
+    SE_CrossBoundaryMarkupHandler(OsisTempDataCollection).process()
+
+
+
+    /**************************************************************************/
+    /* OsisTempDataCollection is now as correct as it's going to get in raw
+       form, and we need to hang on to the content in case we need to save it
+       later to form a possible input to future processing.  I can't work out
+       what would be needed to copy from one data collection to another, so
+       rather than copy, I load the OsisTempDataCollection document into
+       OsisPhase2SavedDataCollection, which will do the necessary. */
+
+    OsisPhase2SavedDataCollection.loadFromDoc(OsisTempDataCollection.getDocument())
+
+
+
+    /**************************************************************************/
+    /* We no longer need this.  Empty it to free up space and also to remove
+       any temptation to use it. */
+
+    Phase1TextOutput = ""
+
+
+
+    /**************************************************************************/
+    /* Future reference processing -- particularly any processing which
+       requires us to expand out elisions -- needs to be based upon the
+       Bible structure associated with OsisTempDataCollection. */
+
     RefBase.setBibleStructure(OsisTempDataCollection.BibleStructure)
   }
 }

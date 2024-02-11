@@ -8,7 +8,6 @@ import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.miscellaneous.Zip
 import org.stepbible.textconverter.support.stepexception.StepException
-import org.stepbible.textconverter.utils.OsisPhase1OutputDataCollection
 import org.stepbible.textconverter.utils.OsisPhase2SavedDataCollection
 import org.stepbible.textconverter.utils.ProtocolConverterExtendedOsisToStandardOsis
 import java.io.File
@@ -128,14 +127,30 @@ object PE_Phase4_To_RepositoryPackageAndOrSaveOsis: PE
   /* If the input wasn't a previously-supplied OSIS file, we need to copy the
      output which came from USX or VL, in standardised form, to the Input_Vl
      folder.  The necessary data will have been left lying around in
-     OsisPhase2SavedDataCollection. */
+     OsisPhase2SavedDataCollection.
+
+     Just to confirm that, since OsisTempDataCollection may seem a more likely
+     candidate ...
+
+     OsisPhase2SavedDataCollection received a copy of the data from the
+     Phase1 processing.  This may have had a few extra features to support
+     processing -- it may, for instance, have had verse-ends added.  But
+     basically it's the 'official' version of the OSIS.  I do a little
+     tidying up, for instance, to make sure there are no temporary attributes
+     lying around, but that's it.
+
+     OsisTempDataCollection has had all kinds of things done to it to make it
+     easier to process and to take into account idiosyncrasies of STEP.  It will
+     work for _us_ (otherwise there'd have been no point in creating it), but
+     it's not the sort of thing we want to save (and perhaps make available to
+     third parties. */
 
   private fun saveOsis ()
   {
     if ("osis" == ConfigData["stepOriginData"]) return
     StepFileUtils.deleteFolder(FileLocations.getInputOsisFolderPath())
     StepFileUtils.createFolderStructure(FileLocations.getInputOsisFolderPath())
-    ProtocolConverterExtendedOsisToStandardOsis.process(OsisPhase2SavedDataCollection)
-    Dom.outputDomAsXml(OsisPhase1OutputDataCollection.getDocument(), FileLocations.makeInputOsisFilePath(), null)
+    ProtocolConverterExtendedOsisToStandardOsis.process(OsisPhase2SavedDataCollection.getDocument())
+    Dom.outputDomAsXml(OsisPhase2SavedDataCollection.getDocument(), FileLocations.makeInputOsisFilePath(), null)
   }
 }

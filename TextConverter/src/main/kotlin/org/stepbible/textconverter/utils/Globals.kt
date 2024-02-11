@@ -1,5 +1,7 @@
 package org.stepbible.textconverter.utils
 
+import org.w3c.dom.Document
+
 /****************************************************************************/
 /**
  * Shared globals.
@@ -45,11 +47,9 @@ object Globals
 
 
 /******************************************************************************/
-var OsisPhase1OutputDataCollection = Osis_DataCollection()
 var OsisPhase2SavedDataCollection = Osis_DataCollection()
 var OsisTempDataCollection = Osis_DataCollection()
 var UsxDataCollection = Usx_DataCollection()
 
 lateinit var DataCollection: X_DataCollection
-
-
+lateinit var Phase1TextOutput: String

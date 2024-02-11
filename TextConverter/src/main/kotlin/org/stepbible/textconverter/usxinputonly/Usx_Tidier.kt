@@ -7,6 +7,7 @@ import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import javax.print.Doc
 
 
 /******************************************************************************/
@@ -112,13 +113,11 @@ object Usx_Tidier
 
 
     /**************************************************************************/
-    deleteIgnorableTags(doc)                         // Anything of no interest to our processing.
-    correctCommonUsxIssues(doc)                      // Correct common errors.
-    simplePreprocessTagModifications(doc)            // Sort out things we don't think we like.
-    convertTagsToLevelOneWhereAppropriate(doc)       // Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
-    Usx_CrossReferenceCanonicaliser.process(doc)     // Cross-refs can be represented in a number of different ways, and we'd rather have just one way.
-    SE_VerseEndInserter(UsxDataCollection).process() // Position verse-ends to avoid cross-boundary markup as far as possible.
-    addStylesToVerses(doc)                           // See documentation below.
+    deleteIgnorableTags(doc)                           // Anything of no interest to our processing.
+    correctCommonUsxIssues(doc)                        // Correct common errors.
+    simplePreprocessTagModifications(doc)              // Sort out things we don't think we like.
+    convertTagsToLevelOneWhereAppropriate(doc)         // Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
+    Usx_CrossReferenceCanonicaliser.process(doc)       // Cross-refs can be represented in a number of different ways, and we'd rather have just one way.
     tidyUpMain(doc)
   }
 
@@ -133,16 +132,6 @@ object Usx_Tidier
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
-
-  /****************************************************************************/
-  /* The functionality which converts to OSIS needs to distinguish sid and eid,
-     and it can do this only if we set up a suitable style attribute. */
-
-  private fun addStylesToVerses (doc: Document)
-  {
-    doc.findNodesByName("verse").forEach { it["style"] = if ("sid" in it) "sid" else "eid" }
-  }
-
 
   /****************************************************************************/
   /* Convert eg style='q' to style='q1'. */
@@ -203,6 +192,21 @@ object Usx_Tidier
   {
     Dom.findNodesByAttributeValue(doc, "para", "style", "toc\\d").forEach { Dom.deleteNode(it) }
     Dom.findNodesByName(doc, "figure").forEach { Dom.deleteNode(it) }
+  }
+
+
+  /****************************************************************************/
+  /* Strictly we could position verse ends later, which on some runs would make
+     the processing faster.  However, it helps make things more uniform if I
+     insert verse ends here.
+   */
+  private fun positionVerseEnds (doc: Document)
+  {
+    if (ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "no"))
+      return
+
+    val processor = SE_VerseEndInserter(UsxDataCollection)
+    doc.findNodesByName("book").forEach(processor::process)
   }
 
 

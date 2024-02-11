@@ -22,8 +22,6 @@ fun convertLutherVLToUsx ()
 /******************************************************************************/
 fun testOsis ()
 {
-  //PE_InternalOsis_To_TempOsis.process()
-  //exitProcess(0)
 }
 
 

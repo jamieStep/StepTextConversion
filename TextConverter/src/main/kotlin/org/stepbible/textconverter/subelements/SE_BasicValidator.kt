@@ -242,8 +242,7 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
         m_VersesWithBadChapterAncestor.add(m_FileProtocol.readRef(verseNode[m_FileProtocol.attrName_verseSid()]!!).toRefKey())
       else
       {
-        Dbg.d(verseNode)
-        val id = if (m_FileProtocol.attrName_verseSid() in verseNode) m_FileProtocol.attrName_verseSid() else m_FileProtocol.attrName_verseSid()
+        val id = if (m_FileProtocol.attrName_verseSid() in verseNode) m_FileProtocol.attrName_verseSid() else m_FileProtocol.attrName_verseEid()
         val verseRefKey = getRefKey(verseNode[id]!!)
         if (0L == verseRefKey)
           m_VersesWithBadIds.add(chapterNode[m_FileProtocol.attrName_verseSid()]!!)

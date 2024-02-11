@@ -1256,7 +1256,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   protected open fun addFromDoc (doc: Document, wantWordCount: Boolean)
   {
-    doc.getNodesInTree()
+    doc.getAllNodes()
       .filter { m_FileProtocol!!.isBookNode(it) }
       .forEach { addFromRootNode(it, wantWordCount) }
   }
@@ -1324,7 +1324,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
-    rootNode.getNodesInTree().forEach {
+    rootNode.getAllNodes().forEach {
       var processNode = true
       while (processNode)
       {
@@ -1421,12 +1421,12 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   private fun insertVerseEids (chapterNode: Node)
   {
-    val dummyNode = chapterNode.ownerDocument.add("<${m_FileProtocol!!.tagName_verse()}/>")
+    val dummyNode = chapterNode.ownerDocument.createNode("<${m_FileProtocol!!.tagName_verse()}/>")
     chapterNode.appendChild(dummyNode)
     val verseNodes = chapterNode.findNodesByName(m_FileProtocol!!.tagName_verse())
     for (i in 1..< verseNodes.size)
     {
-      val newNode = chapterNode.ownerDocument.add("<${m_FileProtocol!!.tagName_verse()}/>")
+      val newNode = chapterNode.ownerDocument.createNode("<${m_FileProtocol!!.tagName_verse()}/>")
       newNode[m_FileProtocol!!.attrName_verseEid()] = verseNodes[i - 1][m_FileProtocol!!.attrName_verseSid()]!!
       Dom.insertNodeBefore(verseNodes[i], newNode)
     }

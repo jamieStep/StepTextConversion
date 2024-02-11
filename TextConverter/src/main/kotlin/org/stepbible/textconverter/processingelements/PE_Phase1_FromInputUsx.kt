@@ -1,13 +1,13 @@
 package org.stepbible.textconverter.processingelements
 
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
+import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.usxinputonly.Usx_OsisCreator
 import org.stepbible.textconverter.usxinputonly.Usx_Preprocessor
 import org.stepbible.textconverter.usxinputonly.Usx_Tidier
-import org.stepbible.textconverter.utils.OsisPhase1OutputDataCollection
 import org.stepbible.textconverter.utils.UsxDataCollection
 
 
@@ -72,7 +72,8 @@ object PE_Phase1_FromInputUsx: PE
     UsxDataCollection.loadFromFolder(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForUsx(), false)
     Usx_Preprocessor.process(UsxDataCollection)
     Usx_Tidier.process(UsxDataCollection)
-    Usx_OsisCreator.process(UsxDataCollection)
+    if (!ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "no"))
+       Usx_OsisCreator.process(UsxDataCollection)
     RefBase.setBibleStructure(null)
   }
 }

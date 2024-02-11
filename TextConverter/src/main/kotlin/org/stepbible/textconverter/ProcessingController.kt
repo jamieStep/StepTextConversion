@@ -120,7 +120,7 @@ object ProcessingController
     val haveVl   = FileLocations.getInputVlFilesExist()
 
     val startFrom =
-      if (ConfigData.getAsBoolean("startProcessFromOsis", "no"))
+      if (ConfigData.getAsBoolean("stepStartProcessFromOsis", "no"))
       {
         if (!haveOsis) throw StepException("Requested to start from OSIS, but no OSIS exists.")
         "osis"

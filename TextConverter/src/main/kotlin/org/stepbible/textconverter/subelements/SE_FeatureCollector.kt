@@ -110,7 +110,7 @@ class SE_FeatureCollector (dataCollection: X_DataCollection): SE(dataCollection)
       return
 
     val x = Dom.findAllTextNodes(rootNode)
-      .filter { m_FileProtocol.isInherentlyCanonicalTagOrIsUnderCanonicalTag(it) }
+      .filter { m_FileProtocol.isCanonicalNode(it) }
       .first { Dom.toString(it); it.textContent.length > 5 }.textContent
 
     ConfigData.setSampleText(x)

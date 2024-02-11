@@ -152,7 +152,8 @@ object PE_Phase1_FromInputVl: PE
 //    val titleNode = doc.findNodeByName("title")!!
 //    val textContent = titleNode.textContent.replace("%%%biblePortion%%%", ConfigData.makeStepDescription_getBiblePortion()).replace("\\s+".toRegex(), " ")
 //    titleNode.textContent = textContent
-    OsisPhase1OutputDataCollection.setText(text)
+
+    Phase1TextOutput = text
   }
 
 

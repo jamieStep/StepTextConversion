@@ -38,20 +38,10 @@ object Osis_CrossReferenceChecker: CrossReferenceChecker
   /****************************************************************************/
   override fun process (dataCollection: X_DataCollection)
   {
-    //m_BibleStructure = dataCollection.BibleStructure
-    //dataCollection.getRootNodes().forEach(::process)
+    m_BibleStructure = dataCollection.BibleStructure
+    dataCollection.getRootNodes().forEach(::process)
   }
 
-
-  /****************************************************************************/
-  fun process (rootNode: Node)
-  {
-    Dbg.reportProgress("Checking for dangling cross-references ${Osis_FileProtocol.getBookAbbreviation(rootNode)}.")
-    var refs = Dom.findNodesByAttributeValue(rootNode, "note", "type", "crossReference")
-    refs = validateRefs(refs)
-    refs = checkTargetsExist(refs)
-    compareLocAndContent(refs)
-  }
 
 
 
@@ -158,6 +148,17 @@ object Osis_CrossReferenceChecker: CrossReferenceChecker
 
     /**************************************************************************/
     refs.forEach { validate(it) }
+  }
+
+
+  /****************************************************************************/
+  private fun process (rootNode: Node)
+  {
+    Dbg.reportProgress("Checking for dangling cross-references ${Osis_FileProtocol.getBookAbbreviation(rootNode)}.")
+    var refs = Dom.findNodesByAttributeValue(rootNode, "note", "type", "crossReference")
+    refs = validateRefs(refs)
+    refs = checkTargetsExist(refs)
+    compareLocAndContent(refs)
   }
 
 

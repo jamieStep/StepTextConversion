@@ -139,22 +139,6 @@ object NodeMarker
   private const val C_ElisionType = "_ElisionType"
 
 
-//  /****************************************************************************/
-//  fun deleteInElision (node: Node) = deleteTemporaryAttribute(node, C_InElision)
-//  fun getInElision (node: Node) = node[C_InElision]
-//  fun hasInElision (node: Node) = null != getInElision(node)
-//  fun setInElision (node: Node): NodeMarker { addTemporaryAttribute(node, C_InElision, "y"); return this }
-//  private const val C_InElision = "_InElision"
-//
-//
-//  /****************************************************************************/
-//  fun deleteInTableElision (node: Node) = deleteTemporaryAttribute(node, C_InTableElision)
-//  fun getInTableElision (node: Node) = node[C_InTableElision]
-//  fun hasInTableElision (node: Node) = null != getInTableElision(node)
-//  fun setInTableElision (node: Node): NodeMarker { addTemporaryAttribute(node, C_InTableElision, "y"); return this }
-//  private const val C_InTableElision = "_InTableElision"
-//
-//
   /****************************************************************************/
   fun deleteMasterForElisionOfLength (node: Node) = deleteTemporaryAttribute(node, C_MasterForElisionOfLength)
   fun getMasterForElisionOfLength (node: Node) = node[C_MasterForElisionOfLength]

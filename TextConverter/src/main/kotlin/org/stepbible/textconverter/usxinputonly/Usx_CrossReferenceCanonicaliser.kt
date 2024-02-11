@@ -9,6 +9,7 @@ import org.stepbible.textconverter.support.ref.RefFormatHandlerReaderVernacular.
 import org.stepbible.textconverter.utils.Usx_FileProtocol
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import java.util.*
 
 /******************************************************************************/
 /**
@@ -449,13 +450,38 @@ import org.w3c.dom.Node
   {
     /**************************************************************************/
     val res: MutableList<Node> = mutableListOf()
+    val owners = IdentityHashMap<Node, Ref>()
+
+
+
+    /**************************************************************************/
+    var mostRecentRef: Ref? = null
+    fun makeOwners ()
+    {
+      charXtsLackingRefs[0].ownerDocument.getAllNodes().forEach {
+        when (Dom.getNodeName(it))
+        {
+          "chapter", "verse" ->
+          {
+            if ("sid" in it)
+              mostRecentRef = RefCollection.rdUsx(it["sid"]!!).getLowAsRef()
+          }
+
+          "char" ->
+          {
+            if ("xt" == it["style"])
+              owners[it] = mostRecentRef!!
+          }
+        } // when
+      } // forEach
+    } // fun
 
 
 
     /**************************************************************************/
     fun process (node: Node)
     {
-      val s = tryCreatingXtFromVernacularContent(node)
+      val s = tryCreatingXtFromVernacularContent(node, owners)
       if (null != s)
       {
         recordWarning(node, "$s (was char:x?t)")
@@ -466,9 +492,12 @@ import org.w3c.dom.Node
 
 
     /**************************************************************************/
-    charXtsLackingRefs
-      .filter { "href-link" !in it }
-      .forEach { process(it) }
+    var toBeProcessed = charXtsLackingRefs.filter { "href-link" !in it }
+    if (toBeProcessed.isNotEmpty())
+    {
+       makeOwners()
+       toBeProcessed.forEach { process(it) }
+    }
 
     return res
   }
@@ -1006,7 +1035,7 @@ import org.w3c.dom.Node
       }
     }
 
-    rootNode.getNodesInTree().forEach { processNode(it) }
+    rootNode.getAllNodes().forEach { processNode(it) }
   }
 
 
@@ -1030,14 +1059,14 @@ import org.w3c.dom.Node
       if (elt is RefFormatHandlerReaderVernacular.EmbeddedReferenceElementText)
       {
         if (elt.text.isNotBlank()) // I don't think it ever can be blank or empty, in fact, because that would be subsumed into the reference.
-          node.appendChild(node.ownerDocument.add(elt.text))
+          node.appendChild(node.ownerDocument.createNode(elt.text))
       }
 
       else // A reference collection
       {
         val rcElt = elt as RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection
         val rc = rcElt.rc
-        val refNode = node.ownerDocument.add("<ref _X_generatedReason='Converted from char:xt vernacular content'/>")
+        val refNode = node.ownerDocument.createNode("<ref _X_generatedReason='Converted from char:xt vernacular content'/>")
         refNode["_X_belongsTo"] = node["_X_belongsTo"]!!
         refNode["loc"] = rc.toStringUsx()
         refNode.textContent = elt.text  // Does this actually manage to carry through the original formatting?
@@ -1068,7 +1097,7 @@ import org.w3c.dom.Node
      split out into multiple elements.
      */
 
-  private fun tryCreatingXtFromVernacularContent (node: Node): String?
+  private fun tryCreatingXtFromVernacularContent (node: Node, owners: IdentityHashMap<Node, Ref>): String?
   {
     /**************************************************************************/
     if (!m_CanReadAndWriteVernacular)
@@ -1092,7 +1121,7 @@ import org.w3c.dom.Node
        we have a mixture of the two, the list may start or end with either. */
 
     val textContent = node.textContent
-    val context = Ref.rdUsx(node["_TEMP_belongsTo"]!!)
+    val context = owners[node]
     val embeddedDetails =
       try
       {

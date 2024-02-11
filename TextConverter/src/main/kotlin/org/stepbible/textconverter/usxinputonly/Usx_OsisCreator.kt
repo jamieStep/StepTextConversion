@@ -75,7 +75,7 @@ object Usx_OsisCreator
       m_Out.write(Osis_Utils.fileTrailer())
     }
 
-    OsisPhase1OutputDataCollection.setText(Utils.outputToFileOrString(null, ::writeFn)!!)
+    Phase1TextOutput = Utils.outputToFileOrString(null, ::writeFn)!!
 
 
 
@@ -381,7 +381,7 @@ object Usx_OsisCreator
         if (null != srcloc) node["src"] = srcloc
       }
 
-      "verse:sid" ->
+      "verse", "verse:sid" ->
       {
         m_CurrentReferenceCollection = RefCollection.rdUsx(node["sid"]!!)
         m_CurrentVerseLow = Ref.rd(m_CurrentReferenceCollection.getLowAsRef())

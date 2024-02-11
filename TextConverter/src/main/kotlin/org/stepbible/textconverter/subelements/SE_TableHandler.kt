@@ -66,14 +66,21 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
   override fun process (rootNode: Node)
   {
+    var hasInsertedDummyElements = false
     requireHasNotRun(SE_ElisionHandler::class.java)
     Dbg.reportProgress("Handling tables.")
     Dom.findNodesByName(rootNode, m_FileProtocol.tagName_table(), false).forEach {
       if (Dom.findNodesByName(it, "verse", false).any())
+      {
+        if (!hasInsertedDummyElements) { insertDummyElements(rootNode); hasInsertedDummyElements = true }
         restructureTablesConvertToElidedForm(it)
+      }
       else
         reformatTableWhichDidNotRequireElision(it)
     }
+
+    if (hasInsertedDummyElements)
+      deleteDummyElements(rootNode)
   }
 
 
@@ -89,13 +96,49 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
 
   /****************************************************************************/
-    /* If we temporarily changed tag names above, we have some 'proper' tables
-       which we are retaining.  The main thing we need to do with these is to
-       rename them back to 'table' again so later processing can pick them up.
-       In addition, it seems like a good idea to boldface any heading cells.  And
-       experience shows that Sword does not leave any spaces between columns,
-       so I add some here.  I also insert a blank before the table, although
-       I'm less clear as to whether this will _always_ be a good thing. */
+  /* Deletes any dummy elements inserted to make processing easier. */
+
+  private fun deleteDummyElements (rootNode: Node)
+  {
+    Utils.deleteDummyVerseTags(m_FileProtocol, rootNode)
+    rootNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid()).forEach(Dom::deleteNode)
+  }
+
+
+  /****************************************************************************/
+  /* This was originally written to work where we already have verse ends.  It
+     now needs to work where we don't necessarily have verse ends.  To save
+     rewriting it, I add temporary verse ends here if necessary, and then
+     delete them again later.
+
+     I assume that if it already has any verse ends, it will have all the ones
+     it needs.
+
+     I assume further that if I need to create them, it's enough to place them
+     immediately before the next verse sid. */
+
+
+  private fun insertDummyElements (rootNode: Node)
+  {
+    val sidNodes = rootNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid())
+    for (i in 1 ..< sidNodes.size - 1 )
+    {
+      val eidNode = m_FileProtocol.makeVerseEidNode(rootNode.ownerDocument, sidNodes[i - 1][m_FileProtocol.attrName_verseSid()]!!)
+      Dom.insertNodeBefore(sidNodes[i], eidNode) //
+    }
+
+    Utils.insertDummyVerseTags(m_FileProtocol, rootNode)
+  }
+
+
+  /****************************************************************************/
+  /* If we temporarily changed tag names above, we have some 'proper' tables
+     which we are retaining.  The main thing we need to do with these is to
+     rename them back to 'table' again so later processing can pick them up.
+     In addition, it seems like a good idea to boldface any heading cells.  And
+     experience shows that Sword does not leave any spaces between columns,
+     so I add some here.  I also insert a blank before the table, although
+     I'm less clear as to whether this will _always_ be a good thing. */
 
   private fun reformatTableWhichDidNotRequireElision (tableNode: Node)
   {

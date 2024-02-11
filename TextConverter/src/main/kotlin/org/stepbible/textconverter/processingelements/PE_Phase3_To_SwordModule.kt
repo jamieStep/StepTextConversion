@@ -282,15 +282,17 @@ object PackageContentHandler
 
   /****************************************************************************/
   private val m_DataPreOsis2mod = listOf(
-    ProcessingDetails(::ifEncrypting, ::encryptionDataHandler, FileLocations.getEncryptionDataFilePath()),
-    ProcessingDetails(::ifUsingStepOsis2mod, ::osis2modDataHandler, FileLocations.getOsis2ModSupportFilePath())
+    ProcessingDetails(::ifEncrypting,        ::encryptionDataHandler,  FileLocations.getEncryptionDataFilePath()),
+    ProcessingDetails(::ifUsingStepOsis2mod, ::osis2modDataHandler,    FileLocations.getOsis2ModSupportFilePath()),
+    ProcessingDetails(::doItAlways,          null,             FileLocations.getSwordConfigFolderPath()),
+    ProcessingDetails(::doItAlways,          null,             Paths.get(FileLocations.getSwordTextFolderPath(), "dummyFile.txt").toString()),
+    ProcessingDetails(::doItAlways,          ::swordConfigFileHandler, FileLocations.getSwordConfigFilePath()),
   )
 
 
   /****************************************************************************/
   private val m_DataPostOsis2mod = listOf(
     ProcessingDetails(::doItAlways, null,                           FileLocations.getSwordZipFilePath()),
-    ProcessingDetails(::doItAlways, ::swordConfigFileHandler,               FileLocations.getSwordConfigFilePath()),
     ProcessingDetails(::doItAlways, ::featuresSummaryBibleStructureHandler, FileLocations.getTextFeaturesFilePath()),
     ProcessingDetails(::doItAlways, ::featuresSummaryRunParametersHandler,  FileLocations.getRunFeaturesFilePath()),
     ProcessingDetails(::doItAlways, ::osisSaver,                            FileLocations.makeInputOsisFilePath())

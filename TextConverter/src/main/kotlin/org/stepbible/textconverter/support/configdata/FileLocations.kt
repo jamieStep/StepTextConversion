@@ -224,8 +224,8 @@ object FileLocations
      need renaming -- if we have an xxx file in the repository, it's a sure sign
      I've forgotten to do something. */
 
-  fun getInternalSwordFolderPath               () = Paths.get(getOutputFolderPath(), "_InternalSword").toString()
-  private fun getMasterMiscellaneousFolderPath () = Paths.get(getOutputFolderPath(), "_InternalFilesForRepositoryEtc").toString()
+  fun getInternalSwordFolderPath               () = Paths.get(getOutputFolderPath(), "Sword").toString()
+  private fun getMasterMiscellaneousFolderPath () = Paths.get(getOutputFolderPath(), "FilesForRepositoryEtc").toString()
 
   fun getTempOsisFolderPath                    () = Paths.get(getOutputFolderPath(), "TempOsis").toString()
   fun getTempOsisFilePath                      () = Paths.get(getTempOsisFolderPath(), "tempOsis.${getFileExtensionForOsis()}").toString()

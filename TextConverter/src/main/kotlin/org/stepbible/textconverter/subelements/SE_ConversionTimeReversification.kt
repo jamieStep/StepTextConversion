@@ -49,7 +49,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process () = doIt(m_DataCollection)
+  override fun process () { TODO("Not used at all, and not fully converted from the previous implementation."); doIt(m_DataCollection) }
 
 
 
@@ -140,7 +140,6 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
     IssueAndInformationRecorder.setConversionTimeReversification()
     dataCollection.loadWordCounts()
 
-    TODO("This has never been tested yet -- you have been warned.")
     initialise()
     m_ReversificationData.getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart1(it) }
     m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "renumber") }

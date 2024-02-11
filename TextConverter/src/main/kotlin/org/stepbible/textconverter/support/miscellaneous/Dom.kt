@@ -2033,6 +2033,20 @@ object Dom
 
     /****************************************************************************/
     /**
+     * Checks if a given node is a comment node.
+     *
+     * @param node Node to be tested.
+     * @return True if comment node.
+     */
+
+    fun isCommentNode (node: Node): Boolean
+    {
+        return "#comment" == getNodeName(node)
+    }
+
+
+    /****************************************************************************/
+    /**
      * Returns true if 'descendant' is the descendant of 'ancestor'.
      *
      * @param descendant Descendant node.
@@ -2751,13 +2765,18 @@ operator fun Node.minus (attributeName: String): Node { Dom.deleteAttribute(this
 operator fun Node.minusAssign (attributeName: String) { Dom.deleteAttribute(this, attributeName) }                // node -= "attrName" (delete attribute)
 operator fun Node.contains (attributeName: String): Boolean { return Dom.hasAttribute(this, attributeName) }      // "attrName" in node (or !in)
 
-fun Node.getNodesInTree (): List<Node> = Dom.getNodesInTree(this)
+fun Node.getAllNodes (): List<Node> = Dom.getNodesInTree(this)
+fun Node.findNodeByAttributeName (nodeName: String, attributeName: String) = Dom.findNodeByAttributeName(this, nodeName, attributeName)
 fun Node.findNodeByName (nodeName: String, includeThisNode: Boolean) = Dom.findNodeByName(this, nodeName, includeThisNode)
 fun Node.findNodesByAttributeName (nodeName: String, attributeName: String) = Dom.findNodesByAttributeName(this, nodeName, attributeName)
 fun Node.findNodesByAttributeValue (nodeName: String, attributeName: String, attributeValue: String) = Dom.findNodesByAttributeValue(this, nodeName, attributeName, attributeValue)
+fun Node.getPreviousSibling () = Dom.getPreviousSibling(this)
+fun Node.isCommentNode () = Dom.isCommentNode(this)
+fun Node.isWhitespace () = Dom.isWhitespace(this)
+fun Node.isSiblingOf (node: Node) = Dom.isSiblingOf(this, node)
 
-fun Document.add (textForTag: String): Node = Dom.createNode(this, textForTag)
-fun Document.getNodesInTree (): List<Node> = Dom.getNodesInTree(this)
+fun Document.createNode (textForTag: String): Node = Dom.createNode(this, textForTag)
+fun Document.getAllNodes (): List<Node> = Dom.getNodesInTree(this)
 fun Document.findNodeByName (nodeName: String) = Dom.findNodeByName(this, nodeName)
 fun Document.findNodesByName (nodeName: String) = Dom.findNodesByName(this, nodeName)
 fun Document.findNodesByAttributeName (nodeName: String, attributeName: String) = Dom.findNodesByAttributeName(this, nodeName, attributeName)

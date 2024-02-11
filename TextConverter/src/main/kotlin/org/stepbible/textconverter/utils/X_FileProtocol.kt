@@ -40,6 +40,15 @@ import org.w3c.dom.Node
 
 open class X_FileProtocol
 {
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                               Public                                   **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
   open fun readRef (node: Node, attrId: String) = readRef(node[attrId]!!)
   open fun readRef (text: String) = readRefCollection(text).getFirstAsRef()
   open fun readRefCollection (node: Node, attrId: String) = readRefCollection(node[attrId]!!)
@@ -75,22 +84,25 @@ open class X_FileProtocol
   open fun isCrossReferenceFootnoteNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isDummySid (sidVerse: Node): Boolean = RefBase.isDummyValue(Ref.getV(getSidAsRefKey(sidVerse)))
   open fun isExplanatoryFootnoteNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
-  open fun isHeadingTag (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isInherentlyCanonicalTag (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isInherentlyNonCanonicalTag (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isIntroductionNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
+  open fun isNoteNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isNumberedLevelTag (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isParaWhichCouldContainMultipleVerses (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isPlainVanillaPara (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isSpanType (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isSpeakerNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isStrongsNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
+  open fun isXrefNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeDoNothingMarkup (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeFootnoteNode (doc: Document, refKeyForOsisIdOfFootnote: RefKey, text: String, caller: String? = null): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeItalicsNode (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makePlainVanillaParaNode (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
-  open fun makeVerseEidNode (doc: Document, refKey: RefKey): Node = throw StepExceptionShouldHaveBeenOverridden()
-  open fun makeVerseSidNode (doc: Document, refKey: RefKey): Node = throw StepExceptionShouldHaveBeenOverridden()
+  open fun makeVerseEidNode (doc: Document, refKey: Pair<RefKey, RefKey?>): Node = throw StepExceptionShouldHaveBeenOverridden()
+  open fun makeVerseEidNode (doc: Document, refAsString: String): Node = throw StepExceptionShouldHaveBeenOverridden()
+  open fun makeVerseSidNode (doc: Document, refKey: Pair<RefKey, RefKey?>): Node = throw StepExceptionShouldHaveBeenOverridden()
+  open fun makeVerseSidNode (doc: Document, refAsString: String): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun recordTagChange (node: Node, newTag: String, newStyleOrType: String? = null, reason: String? = null): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun refToString (refKey: RefKey): String = throw StepExceptionShouldHaveBeenOverridden()
   open fun standardiseCallout (noteNode: Node): Unit = throw StepExceptionShouldHaveBeenOverridden()
@@ -99,24 +111,61 @@ open class X_FileProtocol
 
   /****************************************************************************/
   /**
-   * Returns an indication of whether a given node is canonical in its own
-   * right or falls under a canonical node with no non-canonical nodes
-   * intervening.
+  * Returns the TagDescriptor for a given node.
+  *
+  * @param node: Node
+  * @return TagDescriptor
+  */
+
+  fun getTagDescriptor (node: Node): TagDescriptor
+  {
+    val key = getExtendedNodeName(node)
+    return m_TagDetails[key] ?: m_TagDetails[Dom.getNodeName(node)]!!
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Essentially this indicates the canonicity of a given node, which
+   * whether we can step over the node when trying to place verse ends.  The
+   * one exception is notes: they obviously aren't canonical, but we need to
+   * pretend they are, because they need to remain as part of the verse.
    *
-   * @param node Node of interest.
-   * @return True if node is inherently non-canonical.
+   * @param node
+   * @return 'Y' (definitely contains canonical text or is a note node);
+   *         'N' (definitely does not contain canonical text);
+   *         '?' (may or may not contain canonical text -- deduce from context)
+   *         'X' (a node of a type we are not presently catering.
    */
 
-  fun isInherentlyCanonicalTagOrIsUnderCanonicalTag (node: Node): Boolean
+  fun getVerseEndInteraction (node: Node): Char
   {
-    var n = node
+    val key = Osis_FileProtocol.getExtendedNodeName(node)
+    if (isNoteNode(node) || isXrefNode(node)) return 'Y'
+    return m_TagDetails[key]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Returns an indication of whether a given node is canonical.
+  *
+  * @param node
+  * @return True if node is canonical.
+  */
+
+  fun isCanonicalNode (node: Node): Boolean
+  {
+    var p = node
     while (true)
     {
-      if (isInherentlyCanonicalTag(n)) return true
-      if (isInherentlyNonCanonicalTag(n)) return false
-      n = n.parentNode
-      if (n is Document) return false
+      val canonicity = getTagDescriptor(node).canonicity
+      if ('Y' == canonicity || "chapter" == Dom.getNodeName(p)) return true
+      if ('N' == canonicity) break
+      p = p.parentNode
     }
+
+    return false
   }
 
 
@@ -139,7 +188,24 @@ open class X_FileProtocol
       if (n is Document) return true
     }
   }
+  
+  
+  
+  
+  
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                              Protected                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  data class TagDescriptor (val canonicity: Char, val span: Char)
+  protected val m_TagDetails: MutableMap<String, TagDescriptor> = mutableMapOf()
 }
+
 
 
 
@@ -170,6 +236,9 @@ object Osis_FileProtocol: X_FileProtocol()
   override fun getBookAbbreviation (rootNode: Node) = rootNode["osisID"]!!
   override fun getBookNode (doc: Document) = Dom.findNodeByName(doc, "book") ?: Dom.findNodeByAttributeValue(doc, "div", "type", "book")!!
   override fun isBookNode (node: Node) = "book" == Dom.getNodeName(node) || "div:book" == getExtendedNodeName(node)
+  override fun isNoteNode (node: Node) = "note" == Dom.getNodeName(node)
+  override fun isXrefNode (node: Node) = "note" == Dom.getNodeName(node)
+
 
   /****************************************************************************/
   /**
@@ -245,24 +314,13 @@ object Osis_FileProtocol: X_FileProtocol()
 
   /****************************************************************************/
   /**
-   * Returns an indication of whether a given node is a heading tag.
-   *
-   * @param node Node of interest.
-   * @return True if node is a heading tag.
-   */
-
-  override fun isHeadingTag (node: Node) = 'Y' == m_OsisTagDetails[Dom.getNodeName(node)]!!.title
-
-
-  /****************************************************************************/
-  /**
    * Returns an indication of whether a given node is definitely canonical.
    *
    * @param node Node of interest.
    * @return True if node is inherently non-canonical.
    */
 
-  override fun isInherentlyCanonicalTag (node: Node) = 'Y' == m_OsisTagDetails[Dom.getNodeName(node)]!!.canonical
+  override fun isInherentlyCanonicalTag (node: Node) = 'Y' == m_TagDetails[Dom.getNodeName(node)]!!.canonicity
 
 
   /****************************************************************************/
@@ -274,7 +332,7 @@ object Osis_FileProtocol: X_FileProtocol()
    * @return True if node is inherently non-canonical.
    */
 
-  override fun isInherentlyNonCanonicalTag (node: Node) = 'N' == m_OsisTagDetails[Dom.getNodeName(node)]!!.canonical
+  override fun isInherentlyNonCanonicalTag (node: Node) = 'N' == m_TagDetails[Dom.getNodeName(node)]!!.canonicity
 
 
   /****************************************************************************/
@@ -338,7 +396,7 @@ object Osis_FileProtocol: X_FileProtocol()
   * @return True if this is a span type.
   */
 
-  override fun isSpanType (node: Node) = 'Y' == m_OsisTagDetails[Dom.getNodeName(node)]!!.span
+  override fun isSpanType (node: Node) = 'Y' == m_TagDetails[Dom.getNodeName(node)]!!.span
 
 
   /****************************************************************************/
@@ -425,13 +483,29 @@ object Osis_FileProtocol: X_FileProtocol()
   * Makes a verse eid tag.
   *
   * @param doc Document within which the tag is created.
-  * @param refKey Reference details for eid attribute.
+  * @param refKey Reference details for sid attribute -- a single refKey, or a
+  *   pair where we are dealing with an elision.
   * @return Tag.
   */
 
-  override fun makeVerseEidNode (doc: Document, refKey: RefKey): Node
+  override fun makeVerseEidNode (doc: Document, refKey: Pair<RefKey, RefKey?>): Node
   {
-    val refAsString = Ref.rd(refKey).toStringOsis()
+    val refAsString = if (null == refKey.second) Ref.rd(refKey.first).toStringOsis() else RefCollection.rd(listOf(refKey.first, refKey.second!!)).toStringOsis()
+    return makeVerseEidNode(doc, refAsString)
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Makes a verse eid tag.
+  *
+  * @param doc Document within which the tag is created.
+  * @param refAsString
+  * @return Tag.
+  */
+
+  override fun makeVerseEidNode (doc: Document, refAsString: String): Node
+  {
     return Dom.createNode(doc, "<verse eID='$refAsString'/>")
   }
 
@@ -441,13 +515,29 @@ object Osis_FileProtocol: X_FileProtocol()
   * Makes a verse sid tag.
   *
   * @param doc Document within which the tag is created.
-  * @param refKey Reference details for sid attribute.
+  * @param refKey Reference details for sid attribute -- a single refKey, or a
+  *   pair where we are dealing with an elision.
   * @return Tag.
   */
 
-  override fun makeVerseSidNode (doc: Document, refKey: RefKey): Node
+  override fun makeVerseSidNode (doc: Document, refKey: Pair<RefKey, RefKey?>): Node
   {
-    val refAsString = Ref.rd(refKey).toStringOsis()
+    val refAsString = if (null == refKey.second) Ref.rd(refKey.first).toStringOsis() else RefCollection.rd(listOf(refKey.first, refKey.second!!)).toStringOsis()
+    return makeVerseSidNode(doc, refAsString)
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Makes a verse eid tag.
+  *
+  * @param doc Document within which the tag is created.
+  * @param refAsString
+  * @return Tag.
+  */
+
+  override fun makeVerseSidNode (doc: Document, refAsString: String): Node
+  {
     return Dom.createNode(doc, "<verse osisID='$refAsString' sID='$refAsString'/>")
   }
 
@@ -543,102 +633,151 @@ object Osis_FileProtocol: X_FileProtocol()
 
   private val m_ExplanationFootnoteCalloutGenerator: MarkerHandler = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!)
 
-  data class OsisTagDescriptor (val canonical: Char, val title: Char, val span: Char)
-  private val m_OsisTagDetails: MutableMap<String, OsisTagDescriptor> = mutableMapOf()
 
+  /****************************************************************************/
   init {
 
-    //*** Replace any code below with code generated by osisReference.xlsm. ***
+    //*** Replace any code below with the *** OSIS *** code generated by protocolDetails.xlsm. ***
 
-    m_OsisTagDetails["a"] = OsisTagDescriptor('N', 'N', 'N') // Similar to an HTML link. The "http://..." is recorded in the href attribute of this element. The
-    m_OsisTagDetails["abbr"] = OsisTagDescriptor('N', 'N', 'N') // Abbreviations should be encoded using this element. The expansion attribute records the full
-    m_OsisTagDetails["actor"] = OsisTagDescriptor('N', 'N', 'N') // Actor is used to encode the name of an actor in a castItem element, which itself occurs in a
-    m_OsisTagDetails["caption"] = OsisTagDescriptor('N', 'N', 'N') // Caption is used in the figure element to record the caption for a map, image or similar items.
-    m_OsisTagDetails["castGroup"] = OsisTagDescriptor('N', 'N', 'N') // The castGroup element does not allow text content.
+    m_TagDetails["#text"] = TagDescriptor('?', 'N') // Text.  EndVerseInteraction is Skip for empty tags, and from context for others.
+    m_TagDetails["#comment"] = TagDescriptor('N', 'N') // Comment.
+    m_TagDetails["a"] = TagDescriptor('X', 'N') // Similar to an HTML link. The "http://..." is recorded in the href attribute of this element. The
+    m_TagDetails["abbr"] = TagDescriptor('X', 'N') // Abbreviations should be encoded using this element. The expansion attribute records the full
+    m_TagDetails["actor"] = TagDescriptor('X', 'N') // Actor is used to encode the name of an actor in a castItem element, which itself occurs in a
 
-    m_OsisTagDetails["castItem"] = OsisTagDescriptor('N', 'N', 'N') // The castItem is a container that groups together information for a particular member of a
-    m_OsisTagDetails["castList"] = OsisTagDescriptor('N', 'N', 'N') // The castList element appears in the work element of an OSIS document to contain one or
-    m_OsisTagDetails["catchWord"] = OsisTagDescriptor('N', 'N', 'N') // The catchWord element is used in note and p elements that may appear in note
-    m_OsisTagDetails["chapter"] = OsisTagDescriptor('Y', 'N', 'N') // Chapter is used as syntactic sugar for the div element. It will most often be found in nonbiblical  I turn div type='chapter' into <chapter>, so there is no need to worry about div type='chapter'.
-    m_OsisTagDetails["closer"] = OsisTagDescriptor('Y', 'N', 'N') // The closer element is used for the closing portion of a letter, usually containing a final
+    m_TagDetails["caption"] = TagDescriptor('X', 'N') // Caption is used in the figure element to record the caption for a map, image or similar items.
+    m_TagDetails["castGroup"] = TagDescriptor('X', 'N') // The castGroup element does not allow text content.
+    m_TagDetails["castItem"] = TagDescriptor('X', 'N') // The castItem is a container that groups together information for a particular member of a
+    m_TagDetails["castList"] = TagDescriptor('X', 'N') // The castList element appears in the work element of an OSIS document to contain one or
+    m_TagDetails["catchWord"] = TagDescriptor('N', 'N') // The catchWord element is used in note and p elements that may appear in note
 
-    m_OsisTagDetails["contributor"] = OsisTagDescriptor('N', 'N', 'N') // The contributor element appears only in a work element. It is used to list a person or
-    m_OsisTagDetails["coverage"] = OsisTagDescriptor('N', 'N', 'N') // The coverage element appears only in a work element. It is used to specify what is
-    m_OsisTagDetails["creator"] = OsisTagDescriptor('N', 'N', 'N') // The creator element appears only in a work element. The person or organization principally
-    m_OsisTagDetails["date"] = OsisTagDescriptor('N', 'N', 'N') // The date element is used to record a date in an OSIS document. The type attribute is used to
-    m_OsisTagDetails["description"] = OsisTagDescriptor('N', 'N', 'N') // The description element is only within a work element. It is used to provide a reader
+    m_TagDetails["chapter"] = TagDescriptor('Y', 'N') // Chapter is used as syntactic sugar for the div element. It will most often be found in nonbiblical  I turn div type='chapter' into <chapter>, so there is no need to worry about div type='chapter'.
+    m_TagDetails["closer"] = TagDescriptor('Y', 'N') // The closer element is used for the closing portion of a letter, usually containing a final
+    m_TagDetails["contributor"] = TagDescriptor('X', 'N') // The contributor element appears only in a work element. It is used to list a person or
+    m_TagDetails["coverage"] = TagDescriptor('X', 'N') // The coverage element appears only in a work element. It is used to specify what is
+    m_TagDetails["creator"] = TagDescriptor('X', 'N') // The creator element appears only in a work element. The person or organization principally
 
-    m_OsisTagDetails["div"] = OsisTagDescriptor('N', 'N', 'N') // The div element is the basic divider for all OSIS texts.  So far as I can see, all uses of div are non-canonical, with the exception of book and chapter, and these I change internally to be book or chapter anyway.
-    m_OsisTagDetails["divineName"] = OsisTagDescriptor('Y', 'N', 'Y') // The divineName element is used to mark the name of the Deity only. Other names,
-    m_OsisTagDetails["figure"] = OsisTagDescriptor('N', 'N', 'N') // The figure element is used to insert maps, images and other materials into an OSIS document.
-    m_OsisTagDetails["foreign"] = OsisTagDescriptor('Y', 'N', 'Y') // The foreign element is used to mark "foreign" words or phrases in a text. That is words or
-    m_OsisTagDetails["format"] = OsisTagDescriptor('N', 'N', 'N') // The format element appears only in a work element. It is recommended that the format of a
+    m_TagDetails["date"] = TagDescriptor('X', 'N') // The date element is used to record a date in an OSIS document. The type attribute is used to
+    m_TagDetails["description"] = TagDescriptor('X', 'N') // The description element is only within a work element. It is used to provide a reader
+    m_TagDetails["div:acknowledgement"] = TagDescriptor('X', 'N') // I have to admit I have no clue how most of these are used.  I believe there are many we will never encounter.  Book and chapter are not relevant because I don't mark these as div.  Of the others, I think perhaps paragraph, section and subSection are of interest.
+    m_TagDetails["div:afterword"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:annotant"] = TagDescriptor('X', 'N') //
 
-    m_OsisTagDetails["head"] = OsisTagDescriptor('N', 'Y', 'N') // The head element is used for book, chapter and other headings. While those are sometimes
-    m_OsisTagDetails["header"] = OsisTagDescriptor('N', 'N', 'N') // The header element is a container that appears only in the osisCorpus or osisText elements.
-    m_OsisTagDetails["identifier"] = OsisTagDescriptor('N', 'N', 'N') // The identifier element appears only in the work element. The value of the type attribute
-    m_OsisTagDetails["hi"] = OsisTagDescriptor('?', 'N', 'Y') // The hi element provides a simple text highlighting mechanism.
-    m_OsisTagDetails["index"] = OsisTagDescriptor('N', 'N', 'N') // The index element has no content and can appear anywhere in the body of an OSIS document.
+    m_TagDetails["div:appendix"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:article"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:back"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:bibliography"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:body"] = TagDescriptor('X', 'N') //
 
-    m_OsisTagDetails["inscription"] = OsisTagDescriptor('Y', 'N', 'Y') // The inscription element is used to mark text that reports a written inscription.
-    m_OsisTagDetails["item"] = OsisTagDescriptor('Y', 'N', 'N') // The item element is used within a list element to hold the content of each item in the list. An
-    m_OsisTagDetails["l"] = OsisTagDescriptor('Y', 'N', 'N') // The l element is used to mark separate lines in a lg (line group) element. This will be most
-    m_OsisTagDetails["label"] = OsisTagDescriptor('N', 'N', 'N') // The label element is used in an item element to provide a label for the content of an item.
-    m_OsisTagDetails["language"] = OsisTagDescriptor('N', 'N', 'N') // The language element appears only in a work element. There can be multiple language
+    m_TagDetails["div:book"] = TagDescriptor('X', 'N') //   Won't encounter div:book because I change it internally to <book>.
+    m_TagDetails["div:bookGroup"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:bridge"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:chapter"] = TagDescriptor('X', 'N') //   Won't encounter div:chapter because I change it to <chapter>.
+    m_TagDetails["div:colophon"] = TagDescriptor('X', 'N') //
 
-    m_OsisTagDetails["lb"] = OsisTagDescriptor('N', 'N', 'N') // The lb element is used to indicate a typographical line break in a text. As a milestone type
-    m_OsisTagDetails["lg"] = OsisTagDescriptor('Y', 'N', 'N') // The lg element is generally used to group other lg (line group) and l (line) elements together.
-    m_OsisTagDetails["list"] = OsisTagDescriptor('Y', 'N', 'N') // The list element is used to represent lists and can include a head element for the list.
-    m_OsisTagDetails["mentioned"] = OsisTagDescriptor('Y', 'N', 'Y') // The mentioned element is used when a name, for instance, is mentioned but not used as
-    m_OsisTagDetails["milestone"] = OsisTagDescriptor('N', 'N', 'N') // The milestone element is used to mark a location in the text. It does not permit any
+    m_TagDetails["div:commentary"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:concordance"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:coverPage"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:dedication"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:devotional"] = TagDescriptor('X', 'N') //
 
-    m_OsisTagDetails["milestoneEnd"] = OsisTagDescriptor('N', 'N', 'N') // This element should not be used in current OSIS documents. It has been replaced by
-    m_OsisTagDetails["milestoneStart"] = OsisTagDescriptor('N', 'N', 'N') // This element should not be used in current OSIS documents. It has been replaced by
-    m_OsisTagDetails["name"] = OsisTagDescriptor('Y', 'N', 'Y') // The name element is used to mark place, personal and other names in an OSIS text. The
-    m_OsisTagDetails["note"] = OsisTagDescriptor('N', 'N', 'N') // The note element is used for all notes on a text. Liberal use of the type attribute will enable
-    m_OsisTagDetails["osis"] = OsisTagDescriptor('N', 'N', 'N') // The osis element is the root element of all OSIS texts.
+    m_TagDetails["div:entry"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:front"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:gazetteer"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:glossary"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:imprimatur"] = TagDescriptor('X', 'N') //
 
-    m_OsisTagDetails["osisCorpus"] = OsisTagDescriptor('N', 'N', 'N') // The osisCorpus element has no attributes and may have a header, followed by an
-    m_OsisTagDetails["osisText"] = OsisTagDescriptor('N', 'N', 'N') // The osisText element is the main container for a text encoded in OSIS. It is composed of
-    m_OsisTagDetails["p"] = OsisTagDescriptor('?', 'N', 'N') // The p element is used to mark paragraphs in a text. Since paragraphs are one of the most common
-    m_OsisTagDetails["publisher"] = OsisTagDescriptor('N', 'N', 'N') // The publisher element occurs only in a work element.
-    m_OsisTagDetails["q"] = OsisTagDescriptor('Y', 'N', 'N') // The q element is used to mark quotations in a text.
+    m_TagDetails["div:index"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:introduction"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:majorSection"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:map"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:outline"] = TagDescriptor('X', 'N') //
 
-    m_OsisTagDetails["rdg"] = OsisTagDescriptor('N', 'N', 'N') // The rdg element is used to record a variant reading of a text. Most often seen where a note says:
-    m_OsisTagDetails["reference"] = OsisTagDescriptor('N', 'N', 'N') // The reference element is used to mark references in one text to another text. The type
-    m_OsisTagDetails["refSystem"] = OsisTagDescriptor('N', 'N', 'N') // The refSystem element occurs only in a work element. It has text only content and is
-    m_OsisTagDetails["relation"] = OsisTagDescriptor('N', 'N', 'N') // The relation element occurs only in a work element. It has text only content and is
-    m_OsisTagDetails["revisionDesc"] = OsisTagDescriptor('N', 'N', 'N') // The revisionDesc element is used only in a header element. It is used to record
+    m_TagDetails["div:paragraph"] = TagDescriptor('?', 'N') //
+    m_TagDetails["div:part"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:preface"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:publicationData"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:section"] = TagDescriptor('?', 'N') //
 
-    m_OsisTagDetails["rights"] = OsisTagDescriptor('N', 'N', 'N') // The rights element is used only in a work element. It is used to specify for a reader the
-    m_OsisTagDetails["role"] = OsisTagDescriptor('N', 'N', 'N') // Role is used in a castItem element to identify the role of a particular actor.
-    m_OsisTagDetails["roleDesc"] = OsisTagDescriptor('N', 'N', 'N') // The roleDesc element is used to provide a description of a role in a castItem element.
-    m_OsisTagDetails["row"] = OsisTagDescriptor('?', 'N', 'N') // The row element occurs only in table elements and is used to contain cell elements.
-    m_OsisTagDetails["salute"] = OsisTagDescriptor('Y', 'N', 'N') // The salute element is used to mark a salutation or opening comments. It is most generally
+    m_TagDetails["div:subSection"] = TagDescriptor('?', 'N') //
+    m_TagDetails["div:summary"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:tableofContents"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:titlePage"] = TagDescriptor('X', 'N') //
+    m_TagDetails["divineName"] = TagDescriptor('Y', 'Y') // The divineName element is used to mark the name of the Deity only. Other names,
 
-    m_OsisTagDetails["scope"] = OsisTagDescriptor('N', 'N', 'N') // The scope element is used only in a work element. The general area covered by a text is
-    m_OsisTagDetails["seg"] = OsisTagDescriptor('Y', 'N', 'N') // The seg element should be used for very small divisions, such as within word elements. The  Not sure whether to make this canonical or not, but it looks as though we're not really going to come across it.
-    m_OsisTagDetails["signed"] = OsisTagDescriptor('Y', 'N', 'N') // The signed element is used to mark the signer of a letter within a closer element.
-    m_OsisTagDetails["source"] = OsisTagDescriptor('N', 'N', 'N') // The source element appears only in a work element. It is used to indicate the source for a
-    m_OsisTagDetails["speaker"] = OsisTagDescriptor('Y', 'N', 'N') // The speaker element is used to mark the speaker in a text. It will be used when the speaker
+    m_TagDetails["figure"] = TagDescriptor('X', 'N') // The figure element is used to insert maps, images and other materials into an OSIS document.
+    m_TagDetails["foreign"] = TagDescriptor('Y', 'Y') // The foreign element is used to mark "foreign" words or phrases in a text. That is words or
+    m_TagDetails["format"] = TagDescriptor('X', 'N') // The format element appears only in a work element. It is recommended that the format of a
+    m_TagDetails["head"] = TagDescriptor('X', 'N') // The head element is used for book, chapter and other headings. While those are sometimes
+    m_TagDetails["header"] = TagDescriptor('X', 'N') // The header element is a container that appears only in the osisCorpus or osisText elements.
 
-    m_OsisTagDetails["speech"] = OsisTagDescriptor('Y', 'N', 'N') // The speech element is used to mark speeches in a text.
-    m_OsisTagDetails["subject"] = OsisTagDescriptor('N', 'N', 'N') // The subject element occurs only in a work element. It consists only of text drawn from a
-    m_OsisTagDetails["table"] = OsisTagDescriptor('?', 'N', 'N') // The table element contains an optional head element and one or more row elements.
-    m_OsisTagDetails["teiHeader"] = OsisTagDescriptor('N', 'N', 'N') // The teiHeader element occurs only in a header element. It is used to contain a TEI
-    m_OsisTagDetails["title"] = OsisTagDescriptor('N', 'N', 'N') // The title element is used to record a title both in a work element and elsewhere in an OSIS text.
+    m_TagDetails["identifier"] = TagDescriptor('X', 'N') // The identifier element appears only in the work element. The value of the type attribute
+    m_TagDetails["hi"] = TagDescriptor('?', 'Y') // The hi element provides a simple text highlighting mechanism.
+    m_TagDetails["index"] = TagDescriptor('X', 'N') // The index element has no content and can appear anywhere in the body of an OSIS document.
+    m_TagDetails["inscription"] = TagDescriptor('Y', 'Y') // The inscription element is used to mark text that reports a written inscription.
+    m_TagDetails["item"] = TagDescriptor('?', 'N') // The item element is used within a list element to hold the content of each item in the list. An
 
-    m_OsisTagDetails["titlePage"] = OsisTagDescriptor('N', 'N', 'N') // The titlePage element is used to specify a particular title page for an OSIS document.
-    m_OsisTagDetails["transChange"] = OsisTagDescriptor('N', 'N', 'N') // The transChange element is used to mark text that is not present in the original  Moot point whether to regard this as canonical or not.
-    m_OsisTagDetails["type"] = OsisTagDescriptor('N', 'N', 'N') // The type element occurs only in a work element. It is used to indicate to the reader the type of
-    m_OsisTagDetails["verse"] = OsisTagDescriptor('N', 'N', 'N') // The verse element should almost always be used in its milestoneable form. While some older  I've marked this as non-canonical purely because it does not normally contain anything.
-    m_OsisTagDetails["w"] = OsisTagDescriptor('Y', 'N', 'N') // The w element is used to encode particular words in a text.  eg Strongs.
+    m_TagDetails["l"] = TagDescriptor('?', 'N') // The l element is used to mark separate lines in a lg (line group) element. This will be most
+    m_TagDetails["label"] = TagDescriptor('N', 'N') // The label element is used in an item element to provide a label for the content of an item.
+    m_TagDetails["language"] = TagDescriptor('X', 'N') // The language element appears only in a work element. There can be multiple language
+    m_TagDetails["lb"] = TagDescriptor('N', 'N') // The lb element is used to indicate a typographical line break in a text. As a milestone type
+    m_TagDetails["lg"] = TagDescriptor('?', 'N') // The lg element is generally used to group other lg (line group) and l (line) elements together.
 
-    m_OsisTagDetails["word"] = OsisTagDescriptor('Y', 'N', 'N') //   I'm not sure whether this exists.  It appears in examples in the OSIS ref man, but is not described there.
-    m_OsisTagDetails["work"] = OsisTagDescriptor('N', 'N', 'N') // The work element occurs only in a header element. It provides all the basic identification and
-    m_OsisTagDetails["book"] = OsisTagDescriptor('N', 'N', 'N') // I turn div type='book' into <book> to make processing easier.  There is no need for it to be marked as canonical, because the chapters it contains wil be marked as such.
-    m_OsisTagDetails["#comment"] = OsisTagDescriptor('N', 'N', 'N') //
-    m_OsisTagDetails["#text"] = OsisTagDescriptor('?', '?', 'N') //
+    m_TagDetails["list"] = TagDescriptor('?', 'N') // The list element is used to represent lists and can include a head element for the list.
+    m_TagDetails["mentioned"] = TagDescriptor('Y', 'Y') // The mentioned element is used when a name, for instance, is mentioned but not used as
+    m_TagDetails["milestone"] = TagDescriptor('N', 'N') // The milestone element is used to mark a location in the text. It does not permit any
+    m_TagDetails["milestoneEnd"] = TagDescriptor('N', 'N') // This element should not be used in current OSIS documents. It has been replaced by
+    m_TagDetails["milestoneStart"] = TagDescriptor('N', 'N') // This element should not be used in current OSIS documents. It has been replaced by
+
+    m_TagDetails["name"] = TagDescriptor('?', 'Y') // The name element is used to mark place, personal and other names in an OSIS text. The
+    m_TagDetails["note"] = TagDescriptor('Y', 'N') // The note element is used for all notes on a text. Liberal use of the type attribute will enable
+    m_TagDetails["osis"] = TagDescriptor('X', 'N') // The osis element is the root element of all OSIS texts.
+    m_TagDetails["osisCorpus"] = TagDescriptor('X', 'N') // The osisCorpus element has no attributes and may have a header, followed by an
+    m_TagDetails["osisText"] = TagDescriptor('X', 'N') // The osisText element is the main container for a text encoded in OSIS. It is composed of
+
+    m_TagDetails["p"] = TagDescriptor('?', 'N') // The p element is used to mark paragraphs in a text. Since paragraphs are one of the most common
+    m_TagDetails["publisher"] = TagDescriptor('X', 'N') // The publisher element occurs only in a work element.
+    m_TagDetails["q"] = TagDescriptor('?', 'N') // The q element is used to mark quotations in a text.
+    m_TagDetails["rdg"] = TagDescriptor('N', 'N') // The rdg element is used to record a variant reading of a text. Most often seen where a note says:
+    m_TagDetails["reference"] = TagDescriptor('N', 'N') // The reference element is used to mark references in one text to another text. The type
+
+    m_TagDetails["refSystem"] = TagDescriptor('X', 'N') // The refSystem element occurs only in a work element. It has text only content and is
+    m_TagDetails["relation"] = TagDescriptor('X', 'N') // The relation element occurs only in a work element. It has only text only content and is
+    m_TagDetails["revisionDesc"] = TagDescriptor('X', 'N') // The revisionDesc element is used only in a header element. It is used to record
+    m_TagDetails["rights"] = TagDescriptor('X', 'N') // The rights element is used only in a work element. It is used to specify for a reader the
+    m_TagDetails["role"] = TagDescriptor('X', 'N') // Role is used in a castItem element to identify the role of a particular actor.
+
+    m_TagDetails["roleDesc"] = TagDescriptor('X', 'N') // The roleDesc element is used to provide a description of a role in a castItem element.
+    m_TagDetails["row"] = TagDescriptor('?', 'N') // The row element occurs only in table elements and is used to contain cell elements.
+    m_TagDetails["salute"] = TagDescriptor('?', 'N') // The salute element is used to mark a saluation or opening comments. It is most generally
+    m_TagDetails["scope"] = TagDescriptor('X', 'N') // The scope element is used only in a work element. The general area covered by a text is
+    m_TagDetails["seg"] = TagDescriptor('Y', 'N') // The seg element should be used for very small divisions, such as within word elements. The  Not sure whether to make this canonical or not, but it looks as though we're not really going to come across it.
+
+    m_TagDetails["signed"] = TagDescriptor('Y', 'N') // The signed element is used to mark the signer of a letter within a closer element.
+    m_TagDetails["source"] = TagDescriptor('X', 'N') // The source element appears only in a work element. It is used to indicate the source for a
+    m_TagDetails["speaker"] = TagDescriptor('Y', 'N') // The speaker element is used to mark the speaker in a text. It will be used when the speaker
+    m_TagDetails["speech"] = TagDescriptor('?', 'N') // The speech element is used to mark speeches in a text.
+    m_TagDetails["subject"] = TagDescriptor('X', 'N') // The subject element occurs only in a work element. It consists only of text drawn from a
+
+    m_TagDetails["table"] = TagDescriptor('?', 'N') // The table element contains an optional head element and one or more row elements.
+    m_TagDetails["teiHeader"] = TagDescriptor('X', 'N') // The teiHeader element occurs only in a header element. It is used to contain a TEI
+    m_TagDetails["title"] = TagDescriptor('X', 'N') // The title element is used to record a title both in a work element and elsewhere in an OSIS text.
+    m_TagDetails["title:acrostic"] = TagDescriptor('Y', 'Y') // Acrostic title.
+    m_TagDetails["title:continued"] = TagDescriptor('N', 'N') //
+
+    m_TagDetails["title:main"] = TagDescriptor('N', 'N') //
+    m_TagDetails["title:parallel"] = TagDescriptor('N', 'N') //
+    m_TagDetails["title:psalm"] = TagDescriptor('?', 'N') //   We may need to look inside this, because some texts place verse tags inside the canonical title.
+    m_TagDetails["title:sub"] = TagDescriptor('N', 'N') //
+    m_TagDetails["titlePage"] = TagDescriptor('X', 'N') // The titlePage element is used to specify a particular title page for an OSIS document.
+
+    m_TagDetails["transChange"] = TagDescriptor('Y', 'N') // The transChange element is used to mark text that is not present in the original  Moot point whether to regard this as canonical or not.
+    m_TagDetails["type"] = TagDescriptor('X', 'N') // The type element occurs only in a work element. It is used to indicate to the reader the type of
+    m_TagDetails["verse"] = TagDescriptor('Y', 'N') // The verse element should almost always be used in its milestoneable form. While some older  I've marked this as non-canonical purely because it does not normally contain anything.
+    m_TagDetails["w"] = TagDescriptor('Y', 'N') // The w element is used to encode particular words in a text.  eg Strongs.
+    m_TagDetails["work"] = TagDescriptor('X', 'N') // The work element occurs only in a header element. It provides all the basic identification and
+
+    m_TagDetails["book"] = TagDescriptor('N', 'N') // I turn div type='book' into <book> to make processing easier.  There is no need for it to be marked as canonical, because the chapters it contains wil be marked as such.
 
     // *** End of replacement code. ***
   }
@@ -677,6 +816,8 @@ object Usx_FileProtocol: X_FileProtocol()
 
   override fun getBookNode (doc: Document) = Dom.findNodeByName(doc, "book")
   override fun isBookNode (node: Node) = "book" == Dom.getNodeName(node)
+  override fun isNoteNode (node: Node) = "note" == Dom.getNodeName(node)
+  override fun isXrefNode (node: Node) = "note" == Dom.getNodeName(node)
 
   override fun isCanonicalTitleNode (node: Node) = "para:d" == Osis_FileProtocol.getExtendedNodeName(node)
 
@@ -745,17 +886,6 @@ object Usx_FileProtocol: X_FileProtocol()
 
   /****************************************************************************/
   /**
-   * Returns an indication of whether a given node is a heading tag.
-   *
-   * @param node Node of interest.
-   * @return True if node is a heading tag.
-   */
-
-  override fun isHeadingTag (node: Node) = m_TagsHeadings.contains(getExtendedNodeName(node))
-
-
-  /****************************************************************************/
-  /**
    * Returns an indication of whether a given node is definitely canonical.
    * Really intended for Strong's tags because we can be confident that these
    * contain canonical text, and it's much quicker if we don't have to examine
@@ -780,7 +910,7 @@ object Usx_FileProtocol: X_FileProtocol()
   {
     var extendedNodeName = getExtendedNodeName(node)
     if (isNumberedLevelTag(node)) extendedNodeName += "1" // Force numbered level tags to have a digit on the end.
-    return m_TagsNonCanonical.contains(extendedNodeName.replace("\\d+$".toRegex(), "#"))
+    return false // $$$$$$$$$ m_TagsNonCanonical.contains(extendedNodeName.replace("\\d+$".toRegex(), "#"))
   }
 
 
@@ -934,14 +1064,62 @@ object Usx_FileProtocol: X_FileProtocol()
   * Makes a verse eid tag.
   *
   * @param doc Document within which the tag is created.
-  * @param refKey Reference details for eid attribute.
+  * @param refKey Reference details for sid attribute -- a single refKey, or a
+  *   pair where we are dealing with an elision.
   * @return Tag.
   */
 
-  override fun makeVerseEidNode (doc: Document, refKey: RefKey): Node
+  override fun makeVerseEidNode (doc: Document, refKey: Pair<RefKey, RefKey?>): Node
   {
-    val refAsString = Ref.rd(refKey).toStringUsx()
+    val refAsString = if (null == refKey.second) Ref.rd(refKey.first).toStringOsis() else RefCollection.rd(listOf(refKey.first, refKey.second!!)).toStringOsis()
+    return makeVerseEidNode(doc, refAsString)
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Makes a verse eid tag.
+  *
+  * @param doc Document within which the tag is created.
+  * @param refAsString
+  * @return Tag.
+  */
+
+  override fun makeVerseEidNode (doc: Document, refAsString: String): Node
+  {
     return Dom.createNode(doc, "<verse eid='$refAsString'/>")
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Makes a verse sid tag.
+  *
+  * @param doc Document within which the tag is created.
+  * @param refKey Reference details for sid attribute -- a single refKey, or a
+  *   pair where we are dealing with an elision.
+  * @return Tag.
+  */
+
+  override fun makeVerseSidNode (doc: Document, refKey: Pair<RefKey, RefKey?>): Node
+  {
+    val refAsString = if (null == refKey.second) Ref.rd(refKey.first).toStringOsis() else RefCollection.rd(listOf(refKey.first, refKey.second!!)).toStringOsis()
+    return makeVerseSidNode(doc, refAsString)
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Makes a verse sid tag.
+  *
+  * @param doc Document within which the tag is created.
+  * @param refAsString
+  * @return Tag.
+  */
+
+  override fun makeVerseSidNode (doc: Document, refAsString: String): Node
+  {
+    return Dom.createNode(doc, "<verse sid='$refAsString'/>")
   }
 
 
@@ -955,22 +1133,6 @@ object Usx_FileProtocol: X_FileProtocol()
   override fun standardiseCallout (noteNode: Node)
   {
     noteNode["callout"] = ConfigData[if ("f" == noteNode["style"]) "stepExplanationCallout" else "stepCrossReferenceCallout"]!!
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Makes a verse sid tag.
-  *
-  * @param doc Document within which the tag is created.
-  * @param refKey Reference details for sid attribute.
-  * @return Tag.
-  */
-
-  override fun makeVerseSidNode (doc: Document, refKey: RefKey): Node
-  {
-    val refAsString = Ref.rd(refKey).toStringUsx()
-    return Dom.createNode(doc, "<verse sid='$refAsString'/>")
   }
 
 
@@ -1051,173 +1213,229 @@ object Usx_FileProtocol: X_FileProtocol()
 
   /****************************************************************************/
   private const val C_IntroductionStyles = ".ib.ie.iex.ili.im.imi.imq.imt.imte.io.iot.ip.ipi.ipq.ipr.iq.is.rem."
+  private var m_TagsWithNumberedLevels: Set<String>
 
 
   /****************************************************************************/
-  /*                                                                          */
-  /*           Insert here the code generated by usxReference.xlsm.           */
-  /*                                                                          */
-  /****************************************************************************/
+  init {
 
-  private val m_TagsHeadings = setOf(
-    "para:cd",
-    "para:cl",
-    "para:d",
-    "para:mr",
-    "para:ms#",
-    "para:mt#",
-    "para:mte",
-    "para:r",
-    "para:s#",
-    "para:sd#",
-    "para:sp",
-    "para:sr",
-    )
+    //*** Replace any code below with the *** USX *** code generated by protocolDetails.xlsm. ***
+
+    m_TagDetails["#text"] = TagDescriptor('?', 'N') // Text.
+    m_TagDetails["_X_bracketStart:ili"] = TagDescriptor('N', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
+    m_TagDetails["_X_bracketEnd:ili"] = TagDescriptor('N', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
+    m_TagDetails["_X_bracketStart:io"] = TagDescriptor('N', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
+    m_TagDetails["_X_bracketEnd:io"] = TagDescriptor('N', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
+
+    m_TagDetails["_X_bracketStart:li"] = TagDescriptor('?', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
+    m_TagDetails["_X_bracketEnd:li"] = TagDescriptor('?', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
+    m_TagDetails["_X_bracketStart:q"] = TagDescriptor('?', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
+    m_TagDetails["_X_bracketEnd:q"] = TagDescriptor('?', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
+    m_TagDetails["chapter"] = TagDescriptor('Y', 'N') // STEP version of chapter (encloses text, by contrast with USX milestones).  May actually contain non-canonical material, but I assume such material will appear within specific non-canonical tags.  Anything not in such tags is assumed to be canonical.
+
+    m_TagDetails["_X_comment"] = TagDescriptor('N', 'N') // Comment.
+    m_TagDetails["_X_contentOnly"] = TagDescriptor('?', 'N') // Used to replace an existing tag, when we want to retain just the content of the tag, but not do anything to render the tag itself.
+    m_TagDetails["_X_headingBlock"] = TagDescriptor('?', 'N') // Encapsulates headings.
+    m_TagDetails["_X_introductionBlock:book"] = TagDescriptor('N', 'N') // Encapsulates introductory material.
+    m_TagDetails["_X_introductionBlock:chapter"] = TagDescriptor('N', 'N') // Encapsulates introductory material.
+
+    m_TagDetails["_X_reversificationCalloutData"] = TagDescriptor('N', 'N') // Encapsulates callout information in reversified text.
+    m_TagDetails["_X_reversificationMoveOriginalText"] = TagDescriptor('N', 'N') // Optionally on cross-chapter Moves we leave the original source in place (but changed, roughly speaking, to subverses of the preceding non-moved verse).  This enables us to ignore this text when carrying out validation.
+    m_TagDetails["_X_reversificationSourceVerse"] = TagDescriptor('N', 'N') // A char-level marker which encloses an indicator of the source verse for a reversification action.
+    m_TagDetails["_X_strong"] = TagDescriptor('Y', 'N') // My own Strongs markup.
+    m_TagDetails["_X_subverseSeparator"] = TagDescriptor('N', 'N') // Used within verses to mark subverse boundaries.
+
+    m_TagDetails["_X_tableWithNoContainedVerseTags"] = TagDescriptor('Y', 'N') // A table which is easy to process (it's vanishingly unlikely we'll ever hit one of these).
+    m_TagDetails["_X_usx"] = TagDescriptor('N', 'N') // Overall header.
+    m_TagDetails["_X_verseBoundaryWithinElidedTable"] = TagDescriptor('N', 'N') // Used to mark verse boundaries where we have elided verses so that a table lies entirely within a single verse.
+    m_TagDetails["book"] = TagDescriptor('N', 'N') // Book.  See book:id.  We have this alternative just in case a text does not include the style attribute.
+    m_TagDetails["book:id"] = TagDescriptor('N', 'N') // Book:Need to have this because it's in USX.  However, it is replaced pretty sharpish during processing by the _X_ equivalent.
+
+    m_TagDetails["cell"] = TagDescriptor('?', 'N') // Cell within row.
+    m_TagDetails["cell:tc#"] = TagDescriptor('?', 'N') // Cell within row.
+    m_TagDetails["cell:tcc#"] = TagDescriptor('?', 'N') // Cell within row.
+    m_TagDetails["cell:tcr#"] = TagDescriptor('?', 'N') // Cell within row.
+    m_TagDetails["cell:th#"] = TagDescriptor('?', 'N') // Cell within row.
+
+    m_TagDetails["cell:thr#"] = TagDescriptor('?', 'N') // Cell within row.
+    m_TagDetails["chapter"] = TagDescriptor('Y', 'N') // Chapter.  See chapter:c.  We have this alternative just in case a text does not include the style attribute.
+    m_TagDetails["chapter:c"] = TagDescriptor('?', 'N') // Chapter.  Need to have this because it's in USX.  However, it is replaced pretty sharpish during processing by the _X_ equivalent.
+    m_TagDetails["char:add"] = TagDescriptor('N', 'Y') // Translator’s addition.  Needs to be AsParent because it may crop up in canonical psalm titles, which are placed outside canonical text. 03-Dec-22: Made this canonical, so it appears to be part of verse.
+    m_TagDetails["char:bd"] = TagDescriptor('?', 'Y') // Bold text.
+
+    m_TagDetails["char:bdit"] = TagDescriptor('?', 'Y') // Bold + italic text.
+    m_TagDetails["char:bk"] = TagDescriptor('N', 'Y') // Quoted book title.
+    m_TagDetails["char:dc"] = TagDescriptor('?', 'Y') // Deuterocanonical/LXX additions or insertions in the Protocanonical text.
+    m_TagDetails["char:em"] = TagDescriptor('?', 'Y') // Emphasis text.
+    m_TagDetails["char:fdc"] = TagDescriptor('N', 'Y') // Footnote material to be included only in publications that contain the Deuterocanonical/Apocrypha books.
+
+    m_TagDetails["char:fk"] = TagDescriptor('N', 'Y') // A specific keyword/term from the text for which the footnote is being provided.
+    m_TagDetails["char:fl"] = TagDescriptor('N', 'Y') // Footnote 'label' text.
+    m_TagDetails["char:fm"] = TagDescriptor('N', 'Y') // Reference to caller of previous footnote.
+    m_TagDetails["char:fp"] = TagDescriptor('N', 'Y') // Footnote additional paragraph.
+    m_TagDetails["char:fq"] = TagDescriptor('N', 'Y') // Footnote translation quotation.
+
+    m_TagDetails["char:fqa"] = TagDescriptor('N', 'Y') // Footnote alternate translation.
+    m_TagDetails["char:fr"] = TagDescriptor('N', 'Y') // Footnote reference.
+    m_TagDetails["char:ft"] = TagDescriptor('N', 'Y') // Footnote text.
+    m_TagDetails["char:fv"] = TagDescriptor('N', 'Y') // Footnote verse number.
+    m_TagDetails["char:fw"] = TagDescriptor('N', 'Y') // Footnote witness list.
+
+    m_TagDetails["char:ior"] = TagDescriptor('N', 'Y') // Introduction outline reference range.
+    m_TagDetails["char:iqt"] = TagDescriptor('N', 'Y') // Introduction quoted text.
+    m_TagDetails["char:it"] = TagDescriptor('?', 'Y') // Italic text.
+    m_TagDetails["char:jmp"] = TagDescriptor('N', 'Y') // Available for associating linking attributes to a span of text.
+    m_TagDetails["char:k"] = TagDescriptor('N', 'Y') // Keyword / keyterm.
+
+    m_TagDetails["char:lik"] = TagDescriptor('N', 'Y') // List entry “key” content.
+    m_TagDetails["char:litl"] = TagDescriptor('N', 'Y') // List entry total.
+    m_TagDetails["char:liv#"] = TagDescriptor('N', 'Y') // List entry “value” content.
+    m_TagDetails["char:nd"] = TagDescriptor('?', 'Y') // Name of God.
+    m_TagDetails["char:no"] = TagDescriptor('?', 'Y') // Normal text.
+
+    m_TagDetails["char:ord"] = TagDescriptor('N', 'Y') // Ordinal number ending (i.e. in 1st — 1<char style="ord">st</char>).
+    m_TagDetails["char:pn"] = TagDescriptor('N', 'Y') // Proper name.
+    m_TagDetails["char:png"] = TagDescriptor('N', 'Y') // Geographic proper name (see doc -- particularly of use in China).
+    m_TagDetails["char:pro"] = TagDescriptor('N', 'Y') // Pronunciation information – deprecated; use char:rb instead.
+    m_TagDetails["char:qac"] = TagDescriptor('N', 'Y') // Used to indicate the acrostic letter within a poetic line.
+
+    m_TagDetails["char:qs"] = TagDescriptor('N', 'Y') // Selah.
+    m_TagDetails["char:qt"] = TagDescriptor('Y', 'Y') // Old Testament quotations in the New Testament, or other quotations.
+    m_TagDetails["char:rb"] = TagDescriptor('N', 'Y') // Ruby glossing.
+    m_TagDetails["char:rq"] = TagDescriptor('N', 'Y') // Inline quotation reference(s).
+    m_TagDetails["char:sc"] = TagDescriptor('?', 'Y') // Small cap text.
+
+    m_TagDetails["char:sig"] = TagDescriptor('Y', 'Y') // Signature of the author of an epistle.
+    m_TagDetails["char:sls"] = TagDescriptor('?', 'Y') // Passage of text based on a secondary language or alternate text source.  (Used eg to highlight where the underlying text moves from Hebrew to Aramaic.)  Strictly this should be canonical, but I've seen some texts where it appears in Psalm titles, and since for processing reasons I've chosen to represent these as being non-canonical, I've had to mark this AsParent.
+    m_TagDetails["char:sup"] = TagDescriptor('?', 'Y') // Superscript text.
+    m_TagDetails["char:tl"] = TagDescriptor('Y', 'Y') // Transliterated (or foreign) word(s).  Eg Eli, Eli, lema sabachtani?
+    m_TagDetails["char:va"] = TagDescriptor('N', 'Y') // Second (alternate) verse number.  Note that this is in the schema definition but is not mentioned in the documentation.
+
+    m_TagDetails["char:vp"] = TagDescriptor('N', 'Y') // Published verse number -- a verse marking which would be used in the published text.  Note that this is in the schema definition but is not mentioned in the documentation.
+    m_TagDetails["char:w"] = TagDescriptor('Y', 'Y') // Wordlist/glossary/dictionary entry.
+    m_TagDetails["char:wa"] = TagDescriptor('N', 'Y') // Aramaic word list entry.
+    m_TagDetails["char:wg"] = TagDescriptor('N', 'Y') // Greek word list entry.
+    m_TagDetails["char:wh"] = TagDescriptor('N', 'Y') // Hebrew word list entry.
+
+    m_TagDetails["char:wj"] = TagDescriptor('Y', 'Y') // Words of Jesus.
+    m_TagDetails["char:xdc"] = TagDescriptor('N', 'Y') // For reference notes: References (or other material) to be included only in publications that contain the Deuterocanonical/Apocrypha books.  Deprecated.
+    m_TagDetails["char:xk"] = TagDescriptor('N', 'Y') // For reference notes: A keyword from the scripture translation text which the target reference(s) also refer to.
+    m_TagDetails["char:xnt"] = TagDescriptor('N', 'Y') // For reference notes: References (or other text) which is only to be included in publications that contain the New Testament books.
+    m_TagDetails["char:xo"] = TagDescriptor('N', 'Y') // For reference notes: Cross-reference origin.
+
+    m_TagDetails["char:xop"] = TagDescriptor('N', 'Y') // For reference notes: Published cross reference origin text.
+    m_TagDetails["char:xot"] = TagDescriptor('N', 'Y') // For reference notes: References (or other text) which is only to be included in publications that contain the Old Testament books.
+    m_TagDetails["char:xq"] = TagDescriptor('N', 'Y') // For reference notes: A quotation from the scripture text.
+    m_TagDetails["char:xq"] = TagDescriptor('N', 'Y') // For reference notes: A quotation from the scripture text.
+    m_TagDetails["char:xt"] = TagDescriptor('N', 'Y') // For reference notes: Cross reference target reference(s).
+
+    m_TagDetails["char:xta"] = TagDescriptor('N', 'Y') // For reference notes: Target reference(s) extra / added text.
+    m_TagDetails["figure"] = TagDescriptor('N', 'N') // Figure.
+    m_TagDetails["note:ef"] = TagDescriptor('N', 'N') // Study note.
+    m_TagDetails["note:ex"] = TagDescriptor('N', 'N') // Extended cross reference.
+    m_TagDetails["note:f"] = TagDescriptor('N', 'N') // Footnote.
+
+    m_TagDetails["note:fe"] = TagDescriptor('N', 'N') // Endnote.
+    m_TagDetails["note:x"] = TagDescriptor('N', 'N') // Cross reference.
+    m_TagDetails["optbreak"] = TagDescriptor('N', 'N') // Optional line break.
+    m_TagDetails["para:b"] = TagDescriptor('N', 'N') // Blank line.
+    m_TagDetails["para:cd"] = TagDescriptor('N', 'N') // Chapter description.
+
+    m_TagDetails["para:cl"] = TagDescriptor('N', 'N') // The chapter “label” to be used when the chosen publishing presentation will render chapter divisions as headings (not drop cap numerals).
+    m_TagDetails["para:cls"] = TagDescriptor('Y', 'N') // Closure of epistle.
+    m_TagDetails["para:cp"] = TagDescriptor('N', 'N') // Published chapter number. Probably really non-canonical, but AsParent makes it less likely to mess things up.  Contents are suppressed anyway.
+    m_TagDetails["para:d"] = TagDescriptor('Y', 'N') // Chapter description (canonical psalm title).
+    m_TagDetails["para:h"] = TagDescriptor('N', 'N') // Running header.
+
+    m_TagDetails["para:ib"] = TagDescriptor('N', 'N') // Introduction blank line.
+    m_TagDetails["para:ide"] = TagDescriptor('N', 'N') // Some kind of identification -- not exactly sure what.
+    m_TagDetails["para:ie"] = TagDescriptor('N', 'N') // Introduction end.
+    m_TagDetails["para:iex"] = TagDescriptor('N', 'N') // Introduction explanatory or bridge text (e.g. explanation of missing book in a short Old Testament).  Although this is marked as 'introductory', it looks as though it can turn up elsewhere.
+    m_TagDetails["para:ili#"] = TagDescriptor('N', 'N') // Introduction list item.
+
+    m_TagDetails["para:im"] = TagDescriptor('N', 'N') // Introduction flush left (margin) paragraph.
+    m_TagDetails["para:imi"] = TagDescriptor('N', 'N') // Indented introduction flush left (margin) paragraph.
+    m_TagDetails["para:imq"] = TagDescriptor('N', 'N') // Introduction flush left (margin) quote from scripture text paragraph.
+    m_TagDetails["para:imt#"] = TagDescriptor('N', 'N') // Introduction major title.
+    m_TagDetails["para:imt#"] = TagDescriptor('N', 'N') // Introduction major title ending.
+
+    m_TagDetails["para:io#"] = TagDescriptor('N', 'N') // Introduction outline entry.
+    m_TagDetails["para:iot"] = TagDescriptor('N', 'N') // Introduction outline title.
+    m_TagDetails["para:ip"] = TagDescriptor('N', 'N') // Introduction paragraph.
+    m_TagDetails["para:ipi"] = TagDescriptor('N', 'N') // Introduction indented paragraph.
+    m_TagDetails["para:ipq"] = TagDescriptor('N', 'N') // Introduction quote from scripture text paragraph.
+
+    m_TagDetails["para:ipr"] = TagDescriptor('N', 'N') // Introduction right-aligned paragraph.
+    m_TagDetails["para:iq#"] = TagDescriptor('N', 'N') // Introduction poetic line.
+    m_TagDetails["para:is#"] = TagDescriptor('N', 'N') // Introduction section heading.
+    m_TagDetails["para:lf"] = TagDescriptor('?', 'N') // List footer.
+    m_TagDetails["para:lh"] = TagDescriptor('?', 'N') // List header.
+
+    m_TagDetails["para:li#"] = TagDescriptor('?', 'N') // List entry.
+    m_TagDetails["para:lim#"] = TagDescriptor('?', 'N') // Indented list entry.
+    m_TagDetails["para:lit"] = TagDescriptor('N', 'N') // Liturgical note.
+    m_TagDetails["para:litl"] = TagDescriptor('N', 'N') // List entry total.
+    m_TagDetails["para:m"] = TagDescriptor('?', 'N') // Margin paragraph.
+
+    m_TagDetails["para:mi"] = TagDescriptor('?', 'N') // Indented flush left paragraph.
+    m_TagDetails["para:mr"] = TagDescriptor('N', 'N') // Major section reference range.
+    m_TagDetails["para:ms#"] = TagDescriptor('N', 'N') // Major section heading.
+    m_TagDetails["para:mt#"] = TagDescriptor('N', 'N') // Main title.
+    m_TagDetails["para:mte"] = TagDescriptor('N', 'N') // Main title at introduction ending.
+
+    m_TagDetails["para:nb"] = TagDescriptor('?', 'N') // Paragraph text, with no break from previous paragraph text (at chapter boundary).
+    m_TagDetails["para:p"] = TagDescriptor('?', 'N') // Paragraph.
+    m_TagDetails["para:pc"] = TagDescriptor('?', 'N') // Centered paragraph.
+    m_TagDetails["para:ph#"] = TagDescriptor('?', 'N') // Indented paragraph with hanging indent.
+    m_TagDetails["para:pi#"] = TagDescriptor('?', 'N') // Embedded text paragraph.
+
+    m_TagDetails["para:pm"] = TagDescriptor('?', 'N') // Embedded text paragraph.
+    m_TagDetails["para:pmc"] = TagDescriptor('?', 'N') // Embedded text closing.
+    m_TagDetails["para:pmo"] = TagDescriptor('?', 'N') // Embedded text opening.
+    m_TagDetails["para:pmr"] = TagDescriptor('?', 'N') // Embedded text refrain.
+    m_TagDetails["para:po"] = TagDescriptor('?', 'N') // Opening of epistle.
+
+    m_TagDetails["para:pr"] = TagDescriptor('?', 'N') // Embedded text refrain.
+    m_TagDetails["para:pr"] = TagDescriptor('?', 'N') // Right-aligned paragraph.
+    m_TagDetails["para:q#"] = TagDescriptor('Y', 'N') // Poetry.
+    m_TagDetails["para:qa"] = TagDescriptor('N', 'N') // Acrostic heading.  Moot point as to whether this should be canonical or not, but it appears I _need_ it to be non-canonical.
+    m_TagDetails["para:qc"] = TagDescriptor('Y', 'N') // Centered poetic line.
+
+    m_TagDetails["para:qd"] = TagDescriptor('N', 'N') // Hebrew note.
+    m_TagDetails["para:qm#"] = TagDescriptor('Y', 'N') // Embedded text poetic line.
+    m_TagDetails["para:qr"] = TagDescriptor('Y', 'N') // Right-aligned poetic line.
+    m_TagDetails["para:qs"] = TagDescriptor('Y', 'N') // Selah.
+    m_TagDetails["para:r"] = TagDescriptor('N', 'N') // Parallel passage reference(s).
+
+    m_TagDetails["para:rem"] = TagDescriptor('N', 'N') // Remark.  I _think_ I've seen this somewhere or other, although it doesn't appear to be valid USX.  Strictly should be NonCanonical, but usually needs to remain with adjacent items, and Canonical helps achieve that.
+    m_TagDetails["para:s#"] = TagDescriptor('N', 'N') // Section heading.  At one point I was giving this as 'AsParent', so that headings within a verse were seen as canonical and therefore remained with the verse.  Now kind of think that may be wrong.
+    m_TagDetails["para:sd#"] = TagDescriptor('N', 'N') // Semantic division (vertical whitespace).
+    m_TagDetails["para:sp"] = TagDescriptor('N', 'N') // Speaker identification.
+    m_TagDetails["para:sr"] = TagDescriptor('N', 'N') // Section reference range.  Strictly speaking, these aren't canonical.  However if a heading appears within a verse, I want it to be seen as a part of that verse.
+
+    m_TagDetails["para:toc#"] = TagDescriptor('N', 'N') // Table of contents.
+    m_TagDetails["para:toca#"] = TagDescriptor('N', 'N') // Alternate language long table of comments.
+    m_TagDetails["periph"] = TagDescriptor('N', 'N') // Peripheral material.  The USX spec has a whole section on this, which I have not read.
+    m_TagDetails["ref"] = TagDescriptor('N', 'N') // Reference.
+    m_TagDetails["row"] = TagDescriptor('?', 'N') // Row within table.
+
+    m_TagDetails["row:tr"] = TagDescriptor('?', 'N') // Row within table.
+    m_TagDetails["sidebar"] = TagDescriptor('N', 'N') // Note.  I assume this is much the same as note.
+    m_TagDetails["table"] = TagDescriptor('?', 'N') // Table.
+    m_TagDetails["usx"] = TagDescriptor('N', 'N') // Root node.  Assume direct children are non-canonical.
+    m_TagDetails["verse"] = TagDescriptor('N', 'N') // Verse.  See verse:v.  We have this alternative just in case a text does not include the style attribute.
+
+    m_TagDetails["verse:v"] = TagDescriptor('N', 'N') // Verse.  Need to have this because it's in USX.  However, it is replaced pretty sharpish during processing by the _X_ equivalent.
+
+    // *** End of replacement code. ***
 
 
-  private val m_TagsNonCanonical = setOf(
-    "#comment",
-    "_X_bracketStart:ili",
-    "_X_bracketEnd:ili",
-    "_X_bracketStart:io",
-    "_X_bracketEnd:io",
-    "_X_comment",
-    "_X_introductionBlock:book",
-    "_X_introductionBlock:chapter",
-    "_X_reversificationCalloutData",
-    "_X_reversificationMoveOriginalText",
-    "_X_reversificationSourceVerse",
-    "_X_subverseSeparator",
-    "_X_verseBoundaryWithinElidedTable",
-    "char:add",
-    "char:bk",
-    "char:fdc",
-    "char:fk",
-    "char:fl",
-    "char:fm",
-    "char:fp",
-    "char:fq",
-    "char:fqa",
-    "char:fr",
-    "char:ft",
-    "char:fv",
-    "char:fw",
-    "char:ior",
-    "char:iqt",
-    "char:jmp",
-    "char:k",
-    "char:lik",
-    "char:litl",
-    "char:liv#",
-    "char:ord",
-    "char:pn",
-    "char:png",
-    "char:pro",
-    "char:qac",
-    "char:qs",
-    "char:rb",
-    "char:rq",
-    "char:va",
-    "char:vp",
-    "char:wa",
-    "char:wg",
-    "char:wh",
-    "char:xdc",
-    "char:xk",
-    "char:xnt",
-    "char:xo",
-    "char:xop",
-    "char:xot",
-    "char:xq",
-    "char:xq",
-    "char:xt",
-    "char:xta",
-    "figure",
-    "note:ef",
-    "note:ex",
-    "note:f",
-    "note:fe",
-    "note:x",
-    "optbreak",
-    "para:b",
-    "para:cd",
-    "para:cl",
-    "para:cp",
-    "para:h",
-    "para:ib",
-    "para:ide",
-    "para:ie",
-    "para:iex",
-    "para:ili#",
-    "para:im",
-    "para:imi",
-    "para:imq",
-    "para:imt#",
-    "para:imt#",
-    "para:io#",
-    "para:iot",
-    "para:ip",
-    "para:ipi",
-    "para:ipq",
-    "para:ipr",
-    "para:iq#",
-    "para:is#",
-    "para:lit",
-    "para:litl",
-    "para:mr",
-    "para:ms#",
-    "para:mt#",
-    "para:mte",
-    "para:qa",
-    "para:qd",
-    "para:r",
-    "para:rem",
-    "para:s#",
-    "para:sd#",
-    "para:sp",
-    "para:sr",
-    "para:toc#",
-    "para:toca#",
-    "periph",
-    "ref",
-    "sidebar",
-    "verse",
-    "verse:v",
-  )
+    /**************************************************************************/
+    m_TagsWithNumberedLevels = m_TagDetails.keys.filter { it.endsWith('#') } .map { it.substring(0, it.length - 1) } .toSet()
 
-
-  private val m_TagsWithNumberedLevels = setOf(
-    "cell:tc",
-    "cell:tcc",
-    "cell:tcr",
-    "cell:th",
-    "cell:thr",
-    "char:liv",
-    "para:ili",
-    "para:imt",
-    "para:imt",
-    "para:io",
-    "para:iq",
-    "para:is",
-    "para:li",
-    "para:lim", // Not sure whether this is a typo, or whether it was in an earlier version of USX.  Doesn't appear in the 4.7.0 documentation.  I presently treat it like li.
-    "para:ms",
-    "para:mt",
-    "para:ph",
-    "para:pi",
-    "para:q",
-    "para:qm",
-    "para:s",
-    "para:sd",
-    "para:toc",
-    "para:toca",
-  )
-
-
-
-  /****************************************************************************/
-  /*                                                                          */
-  /*               End of code generated by usxReference.xlsm.                */
-  /*                                                                          */
-  /****************************************************************************/
+    m_TagDetails.keys.filter { it.endsWith('#') } .forEach {// Remove #'s from keys.
+      m_TagDetails[it.substring(0, it.length - 1)] = m_TagDetails[it]!!
+      m_TagDetails.remove(it)
+    }
+  } // init
 }

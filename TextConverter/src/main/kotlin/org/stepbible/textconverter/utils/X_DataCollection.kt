@@ -13,6 +13,7 @@ import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
 import java.util.*
+import javax.print.Doc
 import kotlin.io.path.name
 
 /******************************************************************************/
@@ -73,7 +74,7 @@ import kotlin.io.path.name
  * @author ARA "Jamie" Jamieson
  */
 
-open class X_DataCollection protected constructor (fileProtocol: X_FileProtocol)
+open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -106,6 +107,28 @@ open class X_DataCollection protected constructor (fileProtocol: X_FileProtocol)
        those, use reloadBibleStructureFromRootNodes(true).
   */
   /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+  * Loads details a Document.  If the document contains multiple book nodes,
+  * I assume that this determines book order.  Otherwise, book order is as
+  * defined either by the metadata or by the UBS standard.  This replaces any
+  * existing data and updates BibleStructure.
+  *
+  * @param doc
+  */
+
+  fun loadFromDoc (doc: Document)
+  {
+    withThisBibleStructure {
+      clearAll()
+      addFromDoc(doc)
+      val rootNodes = doc.findNodesByName("book")
+      if (1 != rootNodes.size)
+        reloadBibleStructureFromRootNodes(false)
+    }
+  }
+
 
   /****************************************************************************/
   /**
@@ -423,6 +446,10 @@ open class X_DataCollection protected constructor (fileProtocol: X_FileProtocol)
 
 
   /****************************************************************************/
+  private fun addFromDoc (doc: Document): List<Int> = filterOutUnwantedBooksAndPopulateRootNodesStructure(doc)
+
+
+  /****************************************************************************/
   /**
   * Adds details from a string.  It is permissible to call this multiple times
   * with different strings.  The effect is then cumulative.
@@ -438,14 +465,10 @@ open class X_DataCollection protected constructor (fileProtocol: X_FileProtocol)
   private fun addFromText (text: String, saveText: Boolean): List<Int>
   {
     val doc = Dom.getDocumentFromText(text, retainComments = true)
-    val bookOrdering = filterOutUnwantedBooksAndPopulateRootNodesStructure(doc)
-
-    if (bookOrdering.isNotEmpty()) // Need to allow for the possibility that this doc was for just a single book, and we have filtered it out.
-    {
-      if (saveText) m_Text.append(text)
-    }
-
-    return bookOrdering
+    val res = addFromDoc(doc)
+    if (res.isNotEmpty() && saveText)
+      m_Text.append(text)
+    return res
   }
 
 

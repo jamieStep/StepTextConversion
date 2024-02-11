@@ -3,9 +3,7 @@ package org.stepbible.textconverter.processingelements
 
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.FileLocations
-import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.utils.OsisPhase1OutputDataCollection
-import org.stepbible.textconverter.utils.X_DataCollection
+import org.stepbible.textconverter.utils.Phase1TextOutput
 import java.io.File
 
 
@@ -37,5 +35,5 @@ object PE_Phase1_FromInputOsis: PE
 
 
   /****************************************************************************/
-  override fun process () = OsisPhase1OutputDataCollection.setText(File(FileLocations.getInputOsisFilePath()).readText())
+  override fun process () { Phase1TextOutput = File(FileLocations.getInputOsisFilePath()).readText() }
 }

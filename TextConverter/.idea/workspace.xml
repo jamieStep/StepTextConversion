@@ -10,17 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9495aca-7970-4593-a7e0-92356b5adca5" name="Changes" comment="Misc changes after IDEA messed things up.">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ElisionHandler.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_VerseEndInserter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_BookAndChapterConverter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/NodeMarker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Support/osisReference.xlsm" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/ProcessingController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/ProcessingController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_CrossReferenceChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_CrossReferenceChecker.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_DetermineReversificationTypeEtc.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_DetermineReversificationTypeEtc.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Osis2modInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Osis2modInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Utils.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase1_FromInputOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase1_FromInputOsis.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase1_FromInputUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase1_FromInputUsx.kt" afterDir="false" />
@@ -28,662 +23,29 @@
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToTempOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToTempOsis.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase3_To_SwordModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase3_To_SwordModule.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase4_To_RepositoryPackageAndOrSaveOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase4_To_RepositoryPackageAndOrSaveOsis.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_BasicValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_BasicValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_CalloutStandardiser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_CalloutStandardiser.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_CanonicalHeadings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_CanonicalHeadingsHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ContentValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ContentValidator.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ConversionTimeReversification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ConversionTimeReversification.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_CrossBoundaryMarkup.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_CrossBoundaryMarkupHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_Elisions.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_CrossBoundaryMarkupHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_CrossBoundaryMarkupHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_FeatureCollector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_FeatureCollector.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ListEncapsulator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ListEncapsulator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_RuntimeReversification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_RuntimeReversificationHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_Strongs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_StrongsHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_SubverseCollapser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_SubverseCollapser.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_Tables.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_TableHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookNames.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookNames.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookNamesOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookNamesOsis.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookNamesTextAsSupplied.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookNamesTextAsSupplied.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookNamesUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleBookNamesUsx.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BookToFileMapper.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigDataExternalFileInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigDataExternalFileInterface.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_TableHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_TableHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_VerseEndInserter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_VerseEndInserter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/FileLocations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/FileLocations.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Dbg.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Dbg.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Dom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Dom.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/StepStringFormatter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/StepStringFormatter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Translations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Translations.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/ref/Ref.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/ref/Ref.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/ref/RefBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/ref/RefBase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/ref/RefCollection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/ref/RefCollection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/ref/RefRange.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/ref/RefRange.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_CrossReferenceCanonicaliser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_CrossReferenceCanonicaliser.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_CrossReferenceChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_CrossReferenceChecker.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_OsisCreator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_OsisCreator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_Preprocessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_Preprocessor.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_Tidier.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_Tidier.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/CrossReferenceChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/CrossReferenceChecker.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Digest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Digest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/BibleStructure.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/BibleStructure.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/EmptyVerseHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/EmptyVerseHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Globals.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Globals.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/IssueAndInformationRecorder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/IssueAndInformationRecorder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/NodeMarker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/NodeMarker.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ProtocolConverters.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ProtocolConverters.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationRuleEvaluator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationRuleEvaluator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ThrowAwayCode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ThrowAwayCode.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Z_BibleStructure.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/BibleStructure.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Z_DataCollection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_DataCollection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Z_EmptyVerseHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/EmptyVerseHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Z_FileProtocol.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_FileProtocol.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Z_IssueAndInformationRecorder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/IssueAndInformationRecorder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Z_Utils.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TextTranslations/vernacularTextTranslations_deu.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TextTranslations/vernacularTextTranslations_deu.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/commonRoot.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/commonRoot.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/step.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/step.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/swordTemplateConfigFile.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/swordTemplateConfigFile.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_DataCollection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_DataCollection.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_FileProtocol.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_FileProtocol.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_amh_NASV/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_amh_NASV/Metadata/history.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_amh_NASV/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_amh_NASV/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_arb_KEH/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_arb_KEH/stepRawTextVersification.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ceb_APD/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ceb_APD/_MODULE_NAME_GENERATED_MANUALLY_.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ceb_APD/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ceb_APD/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ces_SNC/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ces_SNC/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ces_SNC/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ckb_KSS/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ckb_KSS/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ckb_KSS/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/cmn-Hans.ldml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/Miscellaneous/versification.vrs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/license.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/Metadata/metadata.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/1CH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/1CO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/1JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/1KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/1PE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/1SA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/1TH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/1TI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/2CH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/2CO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/2JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/2KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/2PE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/2SA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/2TH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/2TI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/3JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/ACT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/AMO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/COL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/DAN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/DEU.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/ECC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/EPH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/EST.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/EXO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/EZK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/EZR.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/GAL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/GEN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/HAB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/HAG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/HEB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/HOS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/ISA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/JAS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/JDG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/JER.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/JHN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/JOB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/JOL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/JON.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/JOS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/JUD.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/LAM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/LEV.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/LUK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/MAL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/MAT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/MIC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/MRK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/NAM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/NEH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/NUM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/OBA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/PHM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/PHP.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/PRO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/PSA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/REV.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/ROM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/RUT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/SNG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/TIT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/ZEC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/RawUsx/ZEP.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCB/stepRawTextVersification.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/Metadata/Miscellaneous/cmn-Hant.ldml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/Metadata/Miscellaneous/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/Metadata/Miscellaneous/versification.vrs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/Metadata/license.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/Metadata/metadata.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/1CH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/1CO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/1JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/1KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/1PE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/1SA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/1TH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/1TI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/2CH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/2CO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/2JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/2KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/2PE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/2SA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/2TH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/2TI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/3JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/ACT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/AMO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/COL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/DAN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/DEU.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/ECC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/EPH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/EST.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/EXO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/EZK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/EZR.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/GAL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/GEN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/HAB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/HAG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/HEB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/HOS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/ISA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/JAS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/JDG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/JER.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/JHN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/JOB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/JOL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/JON.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/JOS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/JUD.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/LAM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/LEV.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/LUK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/MAL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/MAT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/MIC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/MRK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/NAM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/NEH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/NUM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/OBA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/PHM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/PHP.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/PRO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/PSA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/REV.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/ROM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/RUT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/SNG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/TIT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/ZEC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/RawUsx/ZEP.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_cmn_CCBT/stepRawTextVersification.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_dan_BPH/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_dan_BPH/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_dan_BPH/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/1CH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/1CO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/1JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/1KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/1PE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/1SA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/1TH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/1TI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/2CH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/2CO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/2JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/2KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/2PE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/2SA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/2TH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/2TI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/3JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/ACT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/AMO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/COL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/DAN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/DEU.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/ECC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/EPH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/EST.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/EXO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/EZK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/EZR.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/GAL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/GEN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/HAB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/HAG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/HEB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/HOS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/ISA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/JAS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/JDG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/JER.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/JHN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/JOB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/JOL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/JON.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/JOS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/JUD.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/LAM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/LEV.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/LUK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/MAL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/MAT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/MIC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/MRK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/NAM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/NEH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/NUM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/OBA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/PHM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/PHP.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/PRO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/PSA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/REV.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/ROM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/RUT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/SNG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/TIT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/ZEC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/RawUsx/ZEP.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_HFA/stepRawTextVersification.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/Miscellaneous/deu_de.ldml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/Miscellaneous/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/Miscellaneous/versification.vrs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/history.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/license.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/Metadata/metadata.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1CH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1CO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1PE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1SA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1TH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/1TI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2CH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2CO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2PE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2SA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2TH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/2TI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/3JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/ACT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/AMO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/COL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/DAN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/DEU.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/ECC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/EPH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/EST.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/EXO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/EZK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/EZR.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/GAL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/GEN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/HAB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/HAG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/HEB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/HOS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/ISA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JAS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JDG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JER.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JHN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JOB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JOL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JON.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JOS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/JUD.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/LAM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/LEV.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/LUK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/MAL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/MAT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/MIC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/MRK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/NAM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/NEH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/NUM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/OBA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/PHM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/PHP.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/PRO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/PSA_modified.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/REV.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/ROM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/RUT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/SNG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/Save/2KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/Save/NEH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/Save/PSA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/Save/ZEC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/TIT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/ZEC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/RawUsx/ZEP.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/_SavedTestData_/Sami1009T1013Sami1009T1013DeuXXX.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/_SavedTestData_/Sami1009T1013deu_XXX_osis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/build.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_deu_XXX/stepRawTextVersification.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/Metadata/Miscellaneous/eng_en.ldml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/Metadata/Miscellaneous/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/Metadata/Miscellaneous/versification.vrs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/Metadata/license.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/Metadata/metadata.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/1CH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/1CO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/1JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/1KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/1PE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/1SA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/1TH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/1TI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/2CH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/2CO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/2JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/2KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/2PE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/2SA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/2TH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/2TI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/3JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/ACT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/AMO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/COL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/DAN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/DEU.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/ECC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/EPH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/EST.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/EXO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/EZK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/EZR.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/GAL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/GEN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/HAB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/HAG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/HEB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/HOS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/ISA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/JAS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/JDG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/JER.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/JHN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/JOB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/JOL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/JON.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/JOS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/JUD.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/LAM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/LEV.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/LUK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/MAL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/MAT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/MIC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/MRK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/NAM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/NEH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/NUM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/OBA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/PHM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/PHP.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/PRO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/PSA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/REV.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/ROM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/RUT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/SNG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/TIT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/ZEC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/RawUsx/ZEP.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_GW/stepRawTextVersification.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/Metadata/history.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/RawUsx/EXO.usx" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIV/RawUsx/EXO.usx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIrV/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIrV/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_eng_NIrV/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ewe_BEE/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ewe_BEE/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ewe_BEE/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_fra_BDS/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_fra_BDS/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_fra_BDS/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_gbr_GAW/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_gbr_GAW/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_gbr_GAW/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hau_SRK/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hau_SRK/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hau_SRK/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_heb_HD/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_heb_HD/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_heb_HD/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hil_APD/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hil_APD/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hil_APD/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hin_HSS/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hin_HSS/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hin_HSS/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hne_NNC/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hne_NNC/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hne_NNC/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hrv_KOK/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hrv_KOK/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_hrv_KOK/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ibo_BIU/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ibo_BIU/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ibo_BIU/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ind_FAYH/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ind_FAYH/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ind_FAYH/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ita_PEV/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ita_PEV/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ita_PEV/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_jpn_JCB/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_jpn_JCB/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_jpn_JCB/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kik_GKY/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kik_GKY/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kik_GKY/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kor_KLB/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kor_KLB/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_kor_KLB/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lin_MNB/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lin_MNB/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lin_MNB/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lug_EEEE/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lug_EEEE/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_lug_EEEE/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_mal_MCV/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_mal_MCV/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_mal_MCV/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nde_BEN/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nde_BEN/RawUsx/JHN.usx" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nde_BEN/RawUsx/JHN.usx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nde_BEN/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nde_BEN/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nob_ELB/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nob_ELB/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nob_ELB/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nya_CCL/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nya_CCL/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_nya_CCL/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pes_PCB/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pes_PCB/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pes_PCB/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pol_PSZ/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pol_PSZ/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_pol_PSZ/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_por_NVI/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_por_NVI/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_por_NVI/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ron_NTR/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ron_NTR/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_ron_NTR/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARS/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARS/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARS/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARSA/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARSA/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARSA/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARST/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARST/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_CARST/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_NRT/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_NRT/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_rus_NRT/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_slv_ZNZ/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_slv_ZNZ/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_slv_ZNZ/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_sna_BDSC/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_sna_BDSC/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_sna_BDSC/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVI/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVI/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVI/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVIC/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVIC/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_spa_NVIC/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swe_NB/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swe_NB/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swe_NB/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swh_NEN/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swh_NEN/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_swh_NEN/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_tgl_ASD/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_tgl_ASD/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_tgl_ASD/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_tha_TNCV/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_twi_NAK/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_twi_NAK/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_twi_NAK/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_vie_KTHD/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_vie_KTHD/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_vie_KTHD/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_yom_NWM/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_yom_NWM/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_yom_NWM/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_yor_BMYO/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_yor_BMYO/stepRawTextVersification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_yor_BMYO/stepRawTextVersification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/_Metadata_/biblicaCommonConfig.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../Texts/Dbl/Biblica/_Metadata_/biblicaCommonConfig.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/__US_VERSION_NOT_USED_Text_eng_NIVUS/Metadata/license.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/Metadata/config.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/1CH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/1ES.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/1KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/1MA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/1SA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/2CH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/2KI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/2MA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/2SA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/3MA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/4MA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/AMO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/BAR.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/BEL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/DAN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/DEU.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/ECC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/EST.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/EXO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/EZK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/EZR.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/GEN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/HAB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/HAG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/HOS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/ISA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JDG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JDT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JER.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JOB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JOL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JON.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/JOS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/LAM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/LEV.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/LJE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/MAL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/MAN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/MIC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/NAM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/NEH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/NUM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/OBA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/PRO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/PS2.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/PSA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/PSS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/RUT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/SIR.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/SNG.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/SUS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/TOB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/WIS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/ZEC.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/RawUsx/ZEP.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0831T1005NRSVA.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0831T1005en_NETSLXX_osis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0831T1016NRSVA.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0831T1016en_NETSLXX_osis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0831T2059NRSVA.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0831T2059en_NETSLXX_osis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2011NRSVA.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2011en_NETSLXX_osis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2013NRSVA.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2013en_NETSLXX_osis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2022NRSVA.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2022en_NETSLXX_osis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2034NRSVA.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_NETSLXX/_SavedTestData_/Sami0901T2034en_NETSLXX_osis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Metadata/copr.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/040MAT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/041MRK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/042LUK.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/043JHN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/044ACT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/045ROM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0461CO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0472CO.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/048GAL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/049EPH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/050PHP.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/051COL.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0521TH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0532TH.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0541TI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0552TI.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/056TIT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/057PHM.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/058HEB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/059JAS.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0601PE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0612PE.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0621JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0632JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/0643JN.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/065JUD.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/066REV.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/093XXA.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/094XXB.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/RawUsx/107INT.usx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/01-INTengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/46-MATengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/47-MRKengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/48-LUKengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/49-JHNengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/50-ACTengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/51-ROMengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/52-1COengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/53-2COengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/54-GALengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/55-EPHengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/56-PHPengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/57-COLengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/58-1THengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/59-2THengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/60-1TIengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/61-2TIengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/62-TITengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/63-PHMengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/64-HEBengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/65-JASengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/66-1PEengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/67-2PEengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/68-1JNengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/69-2JNengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/70-3JNengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/71-JUDengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/72-REVengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/75-XXAengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/Usfm/76-XXBengtcent.usfm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_en_TCENT/_Miscellaneous/dejavuserif.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -726,27 +88,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Gradle.Build TextConverter.executor": "Run",
-    "Kotlin.deu_HFA.executor": "Debug",
-    "Kotlin.deu_Lut1545.executor": "Debug",
-    "KotlinFunctionFindUsagesOptions.isIncludeOverloadUsages": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/TextConverter/src/main/resources",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.23793103",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.Build TextConverter.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.deu_HFA.executor&quot;: &quot;Debug&quot;,
+    &quot;Kotlin.deu_Lut1545.executor&quot;: &quot;Debug&quot;,
+    &quot;KotlinFunctionFindUsagesOptions.isIncludeOverloadUsages&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/TextConverter/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.23793103&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\TextConverter\src\main\resources" />
@@ -861,7 +223,7 @@
     <configuration name="deu_HFA" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_deu_HFA -runType evaluationOnly -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\Biblica\Text_deu_HFA -runType evalOnly -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -1464,18 +826,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ThrowAwayCode.kt</url>
-          <line>33</line>
+          <line>31</line>
           <option name="timeStamp" value="399" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ThrowAwayCode.kt</url>
-          <line>25</line>
-          <option name="timeStamp" value="441" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Logger.kt</url>
-          <line>132</line>
-          <option name="timeStamp" value="520" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/ref/RefFormatHandlerWriterUsx.kt</url>
@@ -1483,29 +835,9 @@
           <option name="timeStamp" value="613" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToTempOsis.kt</url>
-          <line>124</line>
-          <option name="timeStamp" value="641" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ContentValidator.kt</url>
-          <line>271</line>
-          <option name="timeStamp" value="651" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ContentValidator.kt</url>
-          <line>95</line>
-          <option name="timeStamp" value="657" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToTempOsis.kt</url>
-          <line>104</line>
-          <option name="timeStamp" value="658" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToTempOsis.kt</url>
-          <line>93</line>
-          <option name="timeStamp" value="659" />
+          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_VerseEndInserter.kt</url>
+          <line>60</line>
+          <option name="timeStamp" value="688" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

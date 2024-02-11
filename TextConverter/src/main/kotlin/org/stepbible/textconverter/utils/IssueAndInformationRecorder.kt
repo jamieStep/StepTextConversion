@@ -66,6 +66,13 @@ object IssueAndInformationRecorder
   /* Definite issues which may usefully be reported and / or stored within the
      TextFeatures information, but which don't turn up in config files etc. */
 
+  fun crossVerseBoundaryMarkup (badRef: String, location: RefKey, forceError: Boolean = false, reassurance: String? = null)
+  {
+    val locationAsString = Ref.rd(location).toString()
+    report("Cross-verse-boundary markup at ${locationAsString}.", forceError, "LogWarning,Report", location, null, reassurance)
+    m_BibleTextStructure.CrossVerseBoundaryMarkupLocations.add(locationAsString)
+  }
+
   fun crossReferenceInternalAndVernacularTargetDoNotMatch (badRef: String, location: RefKey, forceError: Boolean = false, reassurance: String? = null) =
     report("Cross-reference: Internal and vernacular references do not match '$badRef' at ${Ref.rd(location)}.", forceError, "LogWarning,Report", location, m_CrossReferencesInvalidInternalReference, reassurance)
 
@@ -310,6 +317,12 @@ object IssueAndInformationRecorder
     /**************************************************************************/
     var HasElidedSubverses = false
     val SubverseElisionLocations: MutableList<String> = ArrayList() // Elisions which start and end with a subverse.
+
+
+
+    /**************************************************************************/
+    var HasCrossVerseBoundaryMarkup = false
+    val CrossVerseBoundaryMarkupLocations: MutableList<String> = ArrayList() // Elisions which start with a verse and end with a subverse or vice versa.
 
 
 
