@@ -85,6 +85,20 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
   /****************************************************************************/
 
   /****************************************************************************/
+  /**
+   * Returns an UNPOPULATED X_DataCollection of the same flavour as the present
+   * one.
+   *
+   * @return X_DataCollection
+   */
+
+  fun makeDataCollectionOfThisFlavour () : X_DataCollection = X_DataCollection(m_FileProtocol)
+
+
+
+
+
+  /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
   /**                             Load data                                  **/

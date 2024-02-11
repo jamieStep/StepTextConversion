@@ -49,7 +49,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process () { TODO("Not used at all, and not fully converted from the previous implementation."); doIt(m_DataCollection) }
+  override fun process () { TODO("Not used at all, and not fully converted from the previous implementation."); doIt(m_DataCollectionInput) }
 
 
 
@@ -64,6 +64,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
   protected lateinit var m_BibleStructure: BibleStructure
   private lateinit var m_EmptyVerseHandler: EmptyVerseHandler
   private lateinit var m_ReversificationData: ReversificationData
+  private lateinit var m_DataCollectionWorking: X_DataCollection
 
 
 
@@ -137,9 +138,6 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
 
   private fun doIt (dataCollection: X_DataCollection)
   {
-    IssueAndInformationRecorder.setConversionTimeReversification()
-    dataCollection.loadWordCounts()
-
     initialise()
     m_ReversificationData.getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart1(it) }
     m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "renumber") }
@@ -166,7 +164,11 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
 
   private fun initialise ()
   {
-     m_FootnoteCalloutGenerator = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!)
+    IssueAndInformationRecorder.setConversionTimeReversification() // Record the fact that we're applying conversion time reversification.
+    m_DataCollectionInput.loadWordCounts() // Reversific
+    m_DataCollectionWorking = m_DataCollectionInput.makeDataCollectionOfThisFlavour()
+
+    m_FootnoteCalloutGenerator = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!)
      getReversificationNotesLevel()
      checkExistenceCriteriaForCrossBookMappings(m_ReversificationData.getBookMappings())
      m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()
@@ -196,7 +198,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
     if (null == Dom.findNodeByName(bookDetails.m_RootNode, m_FileProtocol.tagName_chapter(), false))
     {
       m_BookDetails.remove(bookNo)
-      m_DataCollection.removeBook(bookNo)
+      m_DataCollectionInput.removeBook(bookNo)
       return
     }
 
