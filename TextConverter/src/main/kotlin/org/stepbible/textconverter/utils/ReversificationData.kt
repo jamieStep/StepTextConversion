@@ -586,9 +586,9 @@ object ReversificationData
   * Does what it says on the tin.
   */
 
-  fun process (bibleStructure: BibleStructure)
+  fun process (dataCollection: X_DataCollection)
   {
-    initialise(bibleStructure)
+    initialise(dataCollection)
   }
 
 
@@ -623,7 +623,7 @@ object ReversificationData
   /* Locates the relevant data within the input file and then reads it in and
      arranges to parse and filter it. */
 
-  private fun initialise (bibleStructure: BibleStructure)
+  private fun initialise (dataCollection: X_DataCollection)
   {
     /**************************************************************************/
     Dbg.reportProgress("Reading reversification data.  (This contains data needed even if not reversifying.)")
@@ -631,8 +631,8 @@ object ReversificationData
 
 
     /**************************************************************************/
-    m_BibleStructure = bibleStructure
-    m_RuleEvaluator = ReversificationRuleEvaluator(bibleStructure)
+    m_BibleStructure = dataCollection.BibleStructure
+    m_RuleEvaluator = ReversificationRuleEvaluator(dataCollection)
 
 
 

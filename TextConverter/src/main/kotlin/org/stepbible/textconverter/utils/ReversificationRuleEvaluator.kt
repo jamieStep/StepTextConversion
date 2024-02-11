@@ -13,7 +13,7 @@ import org.stepbible.textconverter.support.stepexception.StepException
  * @author A Jamieson www.stepbible.org
  */
 
-open class ReversificationRuleEvaluator (bibleStructure: BibleStructure)
+open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -315,9 +315,17 @@ open class ReversificationRuleEvaluator (bibleStructure: BibleStructure)
 
 
   /****************************************************************************/
-  private val m_BibleStructure = bibleStructure
+  private val m_BibleStructure = dataCollection.BibleStructure
   private val m_BackstopDefaultRef = Ref.rd(999, 999, 999, 0)
+  private val m_DataCollection = dataCollection
   private lateinit var m_Row: ReversificationDataRow
   private val m_KnownResults: MutableMap<String, Boolean> = HashMap()
+
+
+  /****************************************************************************/
+  init {
+    if (!m_BibleStructure.hasWordCounts())
+      m_DataCollection.reloadBibleStructureFromRootNodes(wantWordCount = true)
+  }
 }
 

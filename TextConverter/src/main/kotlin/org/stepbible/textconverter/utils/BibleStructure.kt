@@ -358,6 +358,8 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   /****************************************************************************/
 
   /****************************************************************************/
+  fun hasWordCounts () = m_CollectingWordCounts
+
   open fun getAllBookNumbers   () = m_Text.m_Content.m_ContentMap.keys
   open fun getAllBookNumbersOt () = m_Text.m_Content.m_ContentMap.keys.filter { BibleAnatomy.isOt(it) }
   open fun getAllBookNumbersNt () = m_Text.m_Content.m_ContentMap.keys.filter { BibleAnatomy.isNt(it) }
@@ -1440,7 +1442,6 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   private val m_BookAbbreviationToFilePathMappings: MutableMap<String, String> = mutableMapOf()
   private var m_CollectingWordCounts = false
   private var m_Populated = false // Used to make sure we don't use the facilities without first populating things.
-  protected lateinit var m_RefRangeParser: (String) -> RefRange  // A routine to parse individual references.
   private var m_Text = TextDescriptor() // The root of the structure.
 
   private var m_CurrentCanonicalTitleNode: Node? = null

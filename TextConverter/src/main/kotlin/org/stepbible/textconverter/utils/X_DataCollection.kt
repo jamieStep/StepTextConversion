@@ -126,26 +126,6 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 
 
   /****************************************************************************/
-  fun loadFromDocsInOther (other: X_DataCollection)
-  {
-    /*************************************************************************/
-    if (1 == other.getNumberOfDocuments())
-    {
-      loadFromDoc(other.getDocument())
-      return
-    }
-
-
-    /*************************************************************************/
-    withThisBibleStructure {
-      clearAll()
-      other.getDocuments().forEach(::addFromDoc)
-    }
-
-  }
-
-
-  /****************************************************************************/
   /**
   * Loads details from all files in a given folder.  If the folder contains only
   * a single file, I assume that the content of that file determines book order.

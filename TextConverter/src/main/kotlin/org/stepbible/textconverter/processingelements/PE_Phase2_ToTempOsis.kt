@@ -233,7 +233,7 @@ object PE_Phase2_ToTempOsis : PE
        rather than copy, I load the OsisTempDataCollection document into
        OsisPhase2SavedDataCollection, which will do the necessary. */
 
-    OsisPhase2SavedDataCollection.loadFromDoc(OsisTempDataCollection.getDocument())
+    OsisPhase2SavedDataCollection.loadFromDocs(listOf(OsisTempDataCollection.getDocument()))
 
 
 
