@@ -49,8 +49,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process () { TODO("Not tried at all, and not fully converted from the previous implementation."); doIt(m_DataCollectionInput) }
-
+  override fun process () { TODO("Not tried at all, and not fully converted from the previous implementation."); doIt(m_DataCollection) }
 
 
   /****************************************************************************/
@@ -64,9 +63,6 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
   private lateinit var m_BibleStructure: BibleStructure
   private lateinit var m_EmptyVerseHandler: EmptyVerseHandler
   private lateinit var m_ReversificationData: ReversificationData
-  private lateinit var m_DataCollectionInput: X_DataCollection
-  private lateinit var m_DataCollectionWorking: X_DataCollection
-
 
 
 
@@ -162,7 +158,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
        it with the stuff we've been working on.  We achieve that by having the
        caller pick it up after the processing here has finished. */
 
-    m_DataCollectionInput.clearAll()
+    m_DataCollection.clearAll()
   }
 
 
@@ -183,14 +179,6 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
   {
     /**************************************************************************/
     IssueAndInformationRecorder.setConversionTimeReversification() // Record the fact that we're applying conversion time reversification.
-
-
-
-    /**************************************************************************/
-    /* Sort out the XML data we're going to be working with. */
-
-    m_DataCollectionWorking = X_DataCollection(m_DataCollectionInput.getFileProtocol()) // Create a new version to work in ...
-    m_DataCollectionWorking.loadFromDocs(m_DataCollectionInput.getDocuments())          // ... and populate it from the data as it stands.
 
 
 
@@ -242,7 +230,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
     if (null == Dom.findNodeByName(bookDetails.m_RootNode, m_FileProtocol.tagName_chapter(), false))
     {
       m_BookDetails.remove(bookNo)
-      m_DataCollectionInput.removeBook(bookNo)
+      m_DataCollection.removeBook(bookNo)
       return
     }
 

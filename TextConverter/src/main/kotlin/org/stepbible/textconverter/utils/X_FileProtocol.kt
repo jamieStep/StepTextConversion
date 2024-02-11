@@ -84,8 +84,6 @@ open class X_FileProtocol
   open fun isCrossReferenceFootnoteNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isDummySid (sidVerse: Node): Boolean = RefBase.isDummyValue(Ref.getV(getSidAsRefKey(sidVerse)))
   open fun isExplanatoryFootnoteNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
-  open fun isInherentlyCanonicalTag (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
-  open fun isInherentlyNonCanonicalTag (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isIntroductionNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isNoteNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isNumberedLevelTag (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
@@ -167,6 +165,29 @@ open class X_FileProtocol
 
     return false
   }
+
+
+  /****************************************************************************/
+  /**
+   * Returns an indication of whether a given node is definitely canonical.
+   *
+   * @param node Node of interest.
+   * @return True if node is inherently non-canonical.
+   */
+
+  fun isInherentlyCanonicalTag (node: Node) = 'Y' == m_TagDetails[Dom.getNodeName(node)]!!.canonicity
+
+
+  /****************************************************************************/
+  /**
+   * Returns an indication of whether a given node is non-canonical in its own
+   * right (not by reference to ancestors).
+   *
+   * @param node Node of interest.
+   * @return True if node is inherently non-canonical.
+   */
+
+  fun isInherentlyNonCanonicalTag (node: Node) = 'N' == m_TagDetails[Dom.getNodeName(node)]!!.canonicity
 
 
   /****************************************************************************/
@@ -310,29 +331,6 @@ object Osis_FileProtocol: X_FileProtocol()
   */
 
   override fun isExplanatoryFootnoteNode (node: Node) = "note" == Dom.getNodeName(node) && "explanation" == node["type"]
-
-
-  /****************************************************************************/
-  /**
-   * Returns an indication of whether a given node is definitely canonical.
-   *
-   * @param node Node of interest.
-   * @return True if node is inherently non-canonical.
-   */
-
-  override fun isInherentlyCanonicalTag (node: Node) = 'Y' == m_TagDetails[Dom.getNodeName(node)]!!.canonicity
-
-
-  /****************************************************************************/
-  /**
-   * Returns an indication of whether a given node is non-canonical in its own
-   * right (not by reference to ancestors).
-   *
-   * @param node Node of interest.
-   * @return True if node is inherently non-canonical.
-   */
-
-  override fun isInherentlyNonCanonicalTag (node: Node) = 'N' == m_TagDetails[Dom.getNodeName(node)]!!.canonicity
 
 
   /****************************************************************************/
@@ -834,6 +832,7 @@ object Usx_FileProtocol: X_FileProtocol()
    {
       var res = Dom.getNodeName(node)
       if ("style" in node) res += ":" + node["style"]
+      if (res.last() in "123456") res = res.substring(0, res.length - 1)
       return res
    }
 
@@ -882,36 +881,6 @@ object Usx_FileProtocol: X_FileProtocol()
   */
 
   override fun isExplanatoryFootnoteNode (node: Node) = "note" == Dom.getNodeName(node) && "explanation" == node["type"]
-
-
-  /****************************************************************************/
-  /**
-   * Returns an indication of whether a given node is definitely canonical.
-   * Really intended for Strong's tags because we can be confident that these
-   * contain canonical text, and it's much quicker if we don't have to examine
-   * the content of the tag to ascertain that.
-   *
-   * @param node Node of interest.
-   * @return True if node is inherently non-canonical.
-   */
-
-  override fun isInherentlyCanonicalTag (node: Node) = "char:w" == getExtendedNodeName(node)
-
-
-  /****************************************************************************/
-  /**
-   * Returns an indication of whether a given node is non-canonical in its own right (not by reference to ancestors).
-   *
-   * @param node Node of interest.
-   * @return True if node is inherently non-canonical.
-   */
-
-  override fun isInherentlyNonCanonicalTag (node: Node): Boolean
-  {
-    var extendedNodeName = getExtendedNodeName(node)
-    if (isNumberedLevelTag(node)) extendedNodeName += "1" // Force numbered level tags to have a digit on the end.
-    return false // $$$$$$$$$ m_TagsNonCanonical.contains(extendedNodeName.replace("\\d+$".toRegex(), "#"))
-  }
 
 
   /****************************************************************************/
