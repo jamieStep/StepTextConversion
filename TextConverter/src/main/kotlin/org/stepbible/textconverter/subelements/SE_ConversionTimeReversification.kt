@@ -49,7 +49,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process () { TODO("Not used at all, and not fully converted from the previous implementation."); doIt(m_DataCollectionInput) }
+  override fun process () { TODO("Not tried at all, and not fully converted from the previous implementation."); doIt(m_DataCollectionInput) }
 
 
 
@@ -61,9 +61,10 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
     m_ReversificationData = reversificationData
   }
   
-  protected lateinit var m_BibleStructure: BibleStructure
+  private lateinit var m_BibleStructure: BibleStructure
   private lateinit var m_EmptyVerseHandler: EmptyVerseHandler
   private lateinit var m_ReversificationData: ReversificationData
+  private lateinit var m_DataCollectionInput: X_DataCollection
   private lateinit var m_DataCollectionWorking: X_DataCollection
 
 
@@ -138,14 +139,30 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
 
   private fun doIt (dataCollection: X_DataCollection)
   {
+    /**************************************************************************/
     initialise()
+
+
+
+    /**************************************************************************/
+    /* Process the various actions. */
+
     m_ReversificationData.getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart1(it) }
     m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "renumber") }
     m_ReversificationData.getStandardBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart2(it) }
     m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "") }
     insertMoveOriginals()
     m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { terminate(it) }
-    m_BookDetails.clear() // Free up memory.
+    m_BookDetails.clear() // Free up the memory used in this processing.
+
+
+
+    /**************************************************************************/
+    /* We don't need the original input any more.  Instead, we need to replace
+       it with the stuff we've been working on.  We achieve that by having the
+       caller pick it up after the processing here has finished. */
+
+    m_DataCollectionInput.clearAll()
   }
 
 
@@ -164,16 +181,43 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
 
   private fun initialise ()
   {
+    /**************************************************************************/
     IssueAndInformationRecorder.setConversionTimeReversification() // Record the fact that we're applying conversion time reversification.
-    m_DataCollectionInput.loadWordCounts() // Reversific
-    m_DataCollectionWorking = m_DataCollectionInput.makeDataCollectionOfThisFlavour()
+
+
+
+    /**************************************************************************/
+    /* Sort out the XML data we're going to be working with. */
+
+    m_DataCollectionWorking = X_DataCollection(m_DataCollectionInput.getFileProtocol()) // Create a new version to work in ...
+    m_DataCollectionWorking.loadFromDocs(m_DataCollectionInput.getDocuments())          // ... and populate it from the data as it stands.
+
+
+
+    /**************************************************************************/
+    /* Footnote information. */
 
     m_FootnoteCalloutGenerator = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!)
-     getReversificationNotesLevel()
-     checkExistenceCriteriaForCrossBookMappings(m_ReversificationData.getBookMappings())
-     m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()
-       .map {BibleBookNamesUsx.abbreviatedNameToNumber(it) } // USX really _is_ intended here -- the reversification data operates with USX names.
-       .forEach { BookDetails(it) } // Create BookDetails entry and carry out any pre-processing.
+    getReversificationNotesLevel() // So we know what kinds of footnotes are needed,
+
+
+
+    /**************************************************************************/
+    /* Some reversification statements may move verses to different books.  In
+       some cases, we expect these books already to exist; in others, we expect
+       them _not_ to exist.  Check that these expectations are met. */
+
+    checkExistenceCriteriaForCrossBookMappings(m_ReversificationData.getBookMappings())
+
+
+
+    /**************************************************************************/
+    /* Create the basic information we're going to need for each book which is
+       subject to reversification. */
+
+    m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()
+      .map { BibleBookNamesUsx.abbreviatedNameToNumber(it) } // USX really _is_ intended here -- the reversification data operates with USX names.
+      .forEach { BookDetails(it) } // Create BookDetails entry and carry out any pre-processing.
   }
 
 

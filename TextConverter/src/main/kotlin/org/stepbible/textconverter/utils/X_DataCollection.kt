@@ -85,20 +85,6 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
   /****************************************************************************/
 
   /****************************************************************************/
-  /**
-   * Returns an UNPOPULATED X_DataCollection of the same flavour as the present
-   * one.
-   *
-   * @return X_DataCollection
-   */
-
-  fun makeDataCollectionOfThisFlavour () : X_DataCollection = X_DataCollection(m_FileProtocol)
-
-
-
-
-
-  /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
   /**                             Load data                                  **/
@@ -124,23 +110,38 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 
   /****************************************************************************/
   /**
-  * Loads details a Document.  If the document contains multiple book nodes,
-  * I assume that this determines book order.  Otherwise, book order is as
-  * defined either by the metadata or by the UBS standard.  This replaces any
-  * existing data and updates BibleStructure.
-  *
-  * @param doc
-  */
+   * Loads details from a collection of one or more documents.
+   *
+   * @param docs
+   */
 
-  fun loadFromDoc (doc: Document)
+  fun loadFromDocs (docs: List<Document>)
   {
     withThisBibleStructure {
       clearAll()
-      addFromDoc(doc)
-      val rootNodes = doc.findNodesByName("book")
-      if (1 != rootNodes.size)
-        reloadBibleStructureFromRootNodes(false)
+      docs.forEach(::addFromDoc)
+      reloadBibleStructureFromRootNodes(false)
     }
+  }
+
+
+  /****************************************************************************/
+  fun loadFromDocsInOther (other: X_DataCollection)
+  {
+    /*************************************************************************/
+    if (1 == other.getNumberOfDocuments())
+    {
+      loadFromDoc(other.getDocument())
+      return
+    }
+
+
+    /*************************************************************************/
+    withThisBibleStructure {
+      clearAll()
+      other.getDocuments().forEach(::addFromDoc)
+    }
+
   }
 
 
