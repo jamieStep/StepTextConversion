@@ -109,6 +109,10 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
   /****************************************************************************/
 
   /****************************************************************************/
+  fun addFromDoc (doc: Document): List<Int> = filterOutUnwantedBooksAndPopulateRootNodesStructure(doc)
+
+
+  /****************************************************************************/
   /**
    * Loads details from a collection of one or more documents.
    *
@@ -214,6 +218,27 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
   fun clearText () = m_Text.clear()
 
 
+
+  /****************************************************************************/
+  /**
+  * Finds the book number of the book in the internal structures which
+  * precedes a given book.  Useful in reversification where we may need to
+  * create a new book and insert it at the right place in the document.
+  *
+  * Note that I throw an exception if I fail to find a location.  Strictly this
+  * is wrong -- if we want to insert Genesis, then that would preclude doing so.
+  * But at least in terms of reversification, we never _are_ going to want to
+  * insert Genesis.
+  *
+  * @param bookNo Book number we want to insert.
+  * @return Number of preceding book.
+  */
+
+  fun findPredecessorBook (bookNo: Int): Int
+  {
+    var res = m_BookNumberToRootNode.keys.reversed().find { it < bookNo && null != m_BookNumberToRootNode[it] }
+    return res ?: throw StepException("findPredecessorBook failed.")
+  }
 
   /****************************************************************************/
   /**
@@ -363,6 +388,20 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 
   /****************************************************************************/
   /**
+  * Sets the root node for a given book.
+  *
+  * @param bookNo
+  * @param rootNode
+  */
+
+  fun setRootNode (bookNo: Int, rootNode: Node)
+  {
+    m_BookNumberToRootNode[bookNo] = rootNode
+  }
+
+
+  /****************************************************************************/
+  /**
   * Sets the text details.  Use with care, because this doesn't parse the
   * details into the BibleStructure member etc -- it gives you the
   * wherewithal to store the text, but doesn't set up any of the things which
@@ -438,10 +477,6 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
   */
 
   private fun addFromFile (filePath: String, saveText: Boolean) = addFromText(File(filePath).readText(), saveText)
-
-
-  /****************************************************************************/
-  private fun addFromDoc (doc: Document): List<Int> = filterOutUnwantedBooksAndPopulateRootNodesStructure(doc)
 
 
   /****************************************************************************/

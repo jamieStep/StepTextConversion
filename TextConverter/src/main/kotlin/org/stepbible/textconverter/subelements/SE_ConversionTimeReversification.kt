@@ -61,7 +61,6 @@ open class SE_ConversionTimeReversification
   override fun process()
   {
     TODO("SE_ConversionTimeReversification checked (ish), but never tested ...")
-    TODO("OSIS class needs to be implemented.  And makeBook is an issue, because in USX it creates a new file, whereas here it should just add to the collection.")
   }
 
   protected val m_BibleStructure = dataCollection.BibleStructure
@@ -79,7 +78,7 @@ open class SE_ConversionTimeReversification
   /****************************************************************************/
   /****************************************************************************/
 
-  protected open fun makeBook (bookNo: Int): Node = throw StepExceptionShouldHaveBeenOverridden()
+  protected open fun makeBook (bookNo: Int): Unit = throw StepExceptionShouldHaveBeenOverridden()
   protected open fun makeChapter (rootNode: Node, bookAbbreviation: String, chapterNo: Int): Unit = throw StepExceptionShouldHaveBeenOverridden()
   protected open fun makeFootnote (doc: Document, refKey: RefKey, text: String, callout: String): Node = throw StepExceptionShouldHaveBeenOverridden()
 
@@ -152,6 +151,7 @@ open class SE_ConversionTimeReversification
     ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "") }
     ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { terminate(it) }
     m_BookDetails.clear() // Free up the memory used in this processing.
+    m_DataCollection.reloadBibleStructureFromRootNodes(false) // Rebuild to reflect new structure.
   }
 
 
@@ -1500,6 +1500,9 @@ open class SE_ConversionTimeReversification
     /**************************************************************************/
     init
     {
+      if (null == m_DataCollection.getRootNode(m_BookNumber))
+        makeBook(m_BookNumber)
+
       when (m_BookNumber)
       {
         BibleBookNamesUsx.C_BookNo_Psa, BibleBookNamesUsx.C_BookNo_Hab -> canonicalTitlesPre(m_RootNode)
@@ -1547,35 +1550,36 @@ class Osis_SE_ConversiontimeReversification (dataCollection: X_DataCollection):
   SE_ConversionTimeReversification(dataCollection, EmptyVerseHandler(dataCollection))
 {
   /****************************************************************************/
-  override fun makeBook (bookNo: Int): Node
+  /* I assume here that we have a single document covering the whole of the
+     OSIS, and need to insert into it.  The node I create here isn't actually
+     valid OSIS.  Elsewhere I have converted div:book into <book>, and this
+     latter is what I create. */
+
+  override fun makeBook (bookNo: Int)
   {
-    TODO()
     val bookName = BibleBookNamesOsis.numberToAbbreviatedName(bookNo)
+    val rootNode = m_DataCollection.getDocument().createNode("<book canonical='false' osisID='$bookName' type='book'/>")
 
-    val factory = DocumentBuilderFactory.newInstance()
-    val builder = factory.newDocumentBuilder()
+    m_DataCollection.setRootNode(bookNo, rootNode) // Insert into data structure.
 
-    val doc = builder.newDocument()
-    val documentRoot = doc.createElement("<usx version='3.0'>")
-    val bookRoot = Dom.createNode(doc, "<book code='$bookName'/>")
-    documentRoot.appendChild(bookRoot)
-    for (i in 1 .. BibleStructure.makeOsis2modNrsvxSchemeInstance(m_BibleStructure).getLastChapterNo(bookName)) makeChapter(bookRoot, bookName, i)
-
-    return bookRoot
+    val insertAfterBookNo = m_DataCollection.findPredecessorBook(bookNo) // Insert into document.
+    val insertAfterNode = m_DataCollection.getDocument().findNodesByName("book").find { insertAfterBookNo == BibleBookNamesOsis.abbreviatedNameToNumber(it["osisId"]!!) }
+    Dom.insertNodeAfter(insertAfterNode!!, rootNode)
   }
 
 
   /****************************************************************************/
   override fun makeChapter (rootNode: Node, bookAbbreviation: String, chapterNo: Int)
   {
-    TODO()
-    val chapterNode = Dom.createNode(rootNode.ownerDocument, "<chapter sid='$bookAbbreviation $chapterNo' _X_revAction='generatedChapter'>")
+    val chapterNode = Dom.createNode(rootNode.ownerDocument, "<chapter osisID='$bookAbbreviation $chapterNo'>")
     rootNode.appendChild(chapterNode)
 
-    var verseNode = Dom.createNode(rootNode.ownerDocument, "<verse sid='$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}'/>"); NodeMarker.setDummy(verseNode)
+    val verseId = "$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}"
+
+    var verseNode = Dom.createNode(rootNode.ownerDocument, "<verse osisID='$verseId' sID='$verseId'/>"); NodeMarker.setDummy(verseNode)
     chapterNode.appendChild(verseNode)
 
-    verseNode = Dom.createNode(rootNode.ownerDocument, "<verse eid='$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}'/>"); NodeMarker.setDummy(verseNode)
+    verseNode = Dom.createNode(rootNode.ownerDocument, "<verse eID='verseId'/>"); NodeMarker.setDummy(verseNode)
     chapterNode.appendChild(verseNode)
   }
 }
@@ -1589,7 +1593,7 @@ class Usx_SE_ConversiontimeReversification(dataCollection: X_DataCollection):
   SE_ConversionTimeReversification(dataCollection, EmptyVerseHandler(dataCollection))
 {
   /****************************************************************************/
-  override fun makeBook (bookNo: Int): Node
+  override fun makeBook (bookNo: Int)
   {
     val bookName = BibleBookNamesUsx.numberToAbbreviatedName(bookNo)
 
@@ -1602,7 +1606,7 @@ class Usx_SE_ConversiontimeReversification(dataCollection: X_DataCollection):
     documentRoot.appendChild(bookRoot)
     for (i in 1 .. BibleStructure.makeOsis2modNrsvxSchemeInstance(m_BibleStructure).getLastChapterNo(bookName)) makeChapter(bookRoot, bookName, i)
 
-    return bookRoot
+    m_DataCollection.addFromDoc(doc)
   }
 
 
