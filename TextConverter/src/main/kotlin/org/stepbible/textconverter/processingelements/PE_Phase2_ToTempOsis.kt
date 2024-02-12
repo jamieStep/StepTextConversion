@@ -129,7 +129,7 @@ object PE_Phase2_ToTempOsis : PE
 
   private fun handleReversification ()
   {
-    ReversificationData.process(OsisTempDataCollection.BibleStructure)
+    ReversificationData.process(OsisTempDataCollection)
     Osis_DetermineReversificationTypeEtc.process(OsisTempDataCollection.BibleStructure)
 
     when (ConfigData["stepReversificationType"]!!.lowercase())

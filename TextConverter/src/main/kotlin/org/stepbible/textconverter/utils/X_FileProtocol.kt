@@ -93,6 +93,7 @@ open class X_FileProtocol
   open fun isSpeakerNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isStrongsNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isXrefNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
+  open fun makeCanonicalTitleNode (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeDoNothingMarkup (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeFootnoteNode (doc: Document, refKeyForOsisIdOfFootnote: RefKey, text: String, caller: String? = null): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeItalicsNode (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
@@ -417,6 +418,21 @@ object Osis_FileProtocol: X_FileProtocol()
   */
 
   override fun isStrongsNode (node: Node): Boolean = "w" == Dom.getNodeName(node) && "lemma" in node
+
+
+  /****************************************************************************/
+  /**
+   * Does what it says on the tin.
+   *
+   * @param doc
+   * @return Canonical title node.
+   */
+
+  override fun makeCanonicalTitleNode (doc: Document): Node
+  {
+    return doc.createNode("<title type='psalm' canonical='true'>")
+  }
+
 
 
   /****************************************************************************/
@@ -974,6 +990,21 @@ object Usx_FileProtocol: X_FileProtocol()
   */
 
   override fun isStrongsNode (node: Node): Boolean = "char" == Dom.getNodeName(node) && "strong" in node
+
+
+  /****************************************************************************/
+  /**
+   * Does what it says on the tin.
+   *
+   * @param doc
+   * @return Canonical title node.
+   */
+
+  override fun makeCanonicalTitleNode (doc: Document): Node
+  {
+    return doc.createNode("<para style='d'/>")
+  }
+
 
 
   /****************************************************************************/

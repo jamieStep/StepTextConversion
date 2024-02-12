@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.subelements
 
+import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Logger
@@ -35,11 +36,19 @@ import kotlin.collections.HashMap
  * of interest largely to academic audiences who will understand the changes
  * which have been applied.
  *
+ * The class is passed the data collection to work on when it is constructed,
+ * and this is updated in situ.  I assume here that the reversification data
+ * (which will probably have been obtained earlier in the processing) will
+ * have been selected against this particular data collection.  In other
+ * words, other processing may have been applied since the reversification
+ * data was read and selected, but I make the assumption that this other
+ * processing will not have altered the book / chapter / verse structure.
+ *
  * @author ARA "Jamie" Jamieson
  */
 
-open class SE_ConversionTimeReversification protected constructor (dataCollection: X_DataCollection): SE(dataCollection)
-{
+open class SE_ConversionTimeReversification
+  protected constructor (dataCollection: X_DataCollection, emptyVerseHandler: EmptyVerseHandler): SE(dataCollection) {
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -49,20 +58,14 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process () { TODO("Not tried at all, and not fully converted from the previous implementation."); doIt(m_DataCollection) }
-
-
-  /****************************************************************************/
-  fun setParameters (reversificationData: ReversificationData,
-                     emptyVerseHandler: EmptyVerseHandler)
+  override fun process()
   {
-    m_EmptyVerseHandler = emptyVerseHandler
-    m_ReversificationData = reversificationData
+    TODO("SE_ConversionTimeReversification checked (ish), but never tested ...")
+    TODO("OSIS class needs to be implemented.  And makeBook is an issue, because in USX it creates a new file, whereas here it should just add to the collection.")
   }
-  
-  private lateinit var m_BibleStructure: BibleStructure
-  private lateinit var m_EmptyVerseHandler: EmptyVerseHandler
-  private lateinit var m_ReversificationData: ReversificationData
+
+  protected val m_BibleStructure = dataCollection.BibleStructure
+  private val m_EmptyVerseHandler = emptyVerseHandler
 
 
 
@@ -143,23 +146,14 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
     /**************************************************************************/
     /* Process the various actions. */
 
-    m_ReversificationData.getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart1(it) }
-    m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "renumber") }
-    m_ReversificationData.getStandardBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart2(it) }
-    m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "") }
-    insertMoveOriginals()
-    m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { terminate(it) }
+    ReversificationData.getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart1(it) }
+    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "renumber") }
+    ReversificationData.getStandardBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart2(it) }
+    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "") }
+    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { terminate(it) }
     m_BookDetails.clear() // Free up the memory used in this processing.
-
-
-
-    /**************************************************************************/
-    /* We don't need the original input any more.  Instead, we need to replace
-       it with the stuff we've been working on.  We achieve that by having the
-       caller pick it up after the processing here has finished. */
-
-    m_DataCollection.clearAll()
   }
+
 
 
 
@@ -178,7 +172,9 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
   private fun initialise ()
   {
     /**************************************************************************/
-    IssueAndInformationRecorder.setConversionTimeReversification() // Record the fact that we're applying conversion time reversification.
+    /* Record the fact that we're applying conversion time reversification. */
+
+    IssueAndInformationRecorder.setConversionTimeReversification()
 
 
 
@@ -195,7 +191,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
        some cases, we expect these books already to exist; in others, we expect
        them _not_ to exist.  Check that these expectations are met. */
 
-    checkExistenceCriteriaForCrossBookMappings(m_ReversificationData.getBookMappings())
+    checkExistenceCriteriaForCrossBookMappings(ReversificationData.getBookMappings())
 
 
 
@@ -203,7 +199,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
     /* Create the basic information we're going to need for each book which is
        subject to reversification. */
 
-    m_ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()
+    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()
       .map { BibleBookNamesUsx.abbreviatedNameToNumber(it) } // USX really _is_ intended here -- the reversification data operates with USX names.
       .forEach { BookDetails(it) } // Create BookDetails entry and carry out any pre-processing.
   }
@@ -237,8 +233,27 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
 
 
     /**************************************************************************/
+    /* This is basically a backstop introduced to tidy up empty verses where
+       I've got the processing wrong.  I don't know what happened to make this
+       necessary, nor whether it is still needed, but I don't think there's any
+       harm in retaining it, and possibly some benefit. */
+
     deleteVersesWhichWereEmptyInRawTextButWhichHaveBeenOverwritten(bookDetails.m_RootNode)
+
+
+
+    /**************************************************************************/
+    /* Reversification may have renumbered verses which were the target of
+       cross-references, and we may want to update the cross-references in the
+       light of this. */
+
     doCrossReferenceMappings(bookDetails.m_RootNode)
+
+
+
+    /**************************************************************************/
+    /* General tidying up. */
+
     bookDetails.finalise()
   }
 
@@ -407,7 +422,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
 
   private fun doCrossReferenceMappings (rootNode: Node)
   {
-    //val mappings = m_ReversificationData.getReferenceMappings() as MutableMap<RefKey, RefKey>
+    //val mappings = ReversificationData.getReferenceMappings() as MutableMap<RefKey, RefKey>
     //if (C_CollapseSubverses) mappings.keys.forEach { if (Ref.hasS(mappings[it]!!)) mappings[it] = Ref.clearS(mappings[it]!!) }
     //m_CrossReferenceChecker.process(rootNode, mappings)
   }
@@ -427,7 +442,6 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
        "academic" -> m_ReversificationNotesLevel = C_ReversificationNotesLevel_Academic
      }
   }
-
 
 
 
@@ -472,11 +486,13 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
        fact), and in this guise they behave the same way as any other verse.
 
      - Sometimes we are turning verses or subverses in the original into
-       subverses into the target book.  At the time of writing we have
-       decided we never want subverses there, so the subverses need to be
-       collapsed down to their owning verse.  I do this elsewhere as part of
-       the tidying up process, so in the context of the move processing there
-       is no problem in creating subverses if that is what is requested.
+       subverses into the target book.  Subverses are somewhat of a
+       complication.  I _believe_ that Crosswire osis22mod cannot cope with them,
+       that therefore they should be collapsed where that is being used.  But I
+       believe that our own version of osis2mod _can_ cope, and so when using
+       that they should be retained.  I defer the decision to later here:
+       reversifiction will leave things as subverses, and something further
+       down the food chain will decide whether they should be collapsed.
 
 
      The main complication with move processing is the fact that we may be
@@ -484,40 +500,27 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
      but v23 may already exist.  Of course if that situation persisted, we'd
      have a problem, because we'd be losing information.  But normally there
      would be another reversification row which would get v23 out of the way,
-     in which case the main issue is just trying to make sure that it has had
-     a chance to do that before we overwrite it.
+     in which case we just need to try to make sure that it has had a chance to
+     do that before we overwrite it.
 
-     There is a further issue here, though, because we are experimenting with
-     the notion of leaving the source verses for MOVEs in place.  Or rather,
-     leaving in place ths source verses for _some_ MOVEs.  The reason for doing
-     this is that MOVEs have a fairly dramatic effect upon the structure of the
-     text, and in many cases the licence conditions applied to a text may not
-     give us the leeway to make those kinds of changes.  Of course this may
-     leave us with a text which is no longer NRSVA-compliant, but for the
-     perhaps of this experiment we will be using a version of osis2mod and
-     JSword which have been modified to cope with this.
-
-     Of course, it will remain the case that we cannot retain the original
-     source if something else also targets it, or information will be lost,
-     so I have had to beef up the validation to confirm that we're ok in
-     that respect.
-
-     Whether the original text is left in its original location or removed
-     from it is controlled by a flag setting in the reversification rows.
-     This is set in m_ReversificationData.  At the time of writing, it is set
-     automatically by examining what a given reversification statement is
-     doing, although it looks as though we may need to be able to go beyond
-     this at some point -- that it may not be possible to detect
-     automatically all of the places where original verses should be retained
-     in situ, and that we may need some way of specifying individual cases
-     manually.
+     There is a further issue here, though.  At one stage, we were contemplating
+     both moving the verses to their new location _and_ leaving them in their
+     original location as well.  The idea was that this would let us reversify
+     the text whilst at the same time camouflaging to some extent the fact that
+     we had done so, thus making the text more acceptable to people who were
+     familiar with its canonical form.  In fact, this was never really destined
+     to be entirely successful, and since the introduction of our own version
+     of osis2mod is unnecessary.  However, it did influence the processing (and
+     significantly complicated it), and I haven't felt able to revert to the
+     earlier slightly simpler processing.  You can at least console yourself
+     with the thought that it was only _slightly_ simpler ...
 
      The approach I originally adopted here (ie before this idea of retaining some
      source verses in situ) was to run over all of the books which act
      as _sources_ for moves, shifting to a temporary storage area the data to be
-     moved (and in so doing, deleting it from the source document).  I then do
-     all of the non-move-related processing on each book; and then finally pick
-     up any move data from the temporary storage areas.
+     moved (and in so doing, deleting it from the source document).  I then did
+     all of the non-move-related processing on each book; and then finally
+     picked up any move data from the temporary storage areas.
 
      This approach also had the benefit that the renumbering involved in moves
      can be handled in exactly the same way as RenumberInSitu -- ie I can use
@@ -540,7 +543,8 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
      that again we can simply pick things up without consideration of cross-
      boundary markup.  However, these are special cases of the more general
      situation where, for all of my attempts earlier in the processing to
-     avoid cross-boundary, we do at least need to consider its implications.
+     avoid cross-boundary markup, we do at least need to consider its
+     implications.
 
      We need, therefore, to consider the data available to us.  In particular,
      we get a list of nodes, ordered such that the parent of a given group
@@ -599,7 +603,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
   {
     val bookThunk = m_BookDetails[bookNo]!!
     val structure = getNodesAndIndices(bookThunk.m_RootNode)
-    m_ReversificationData.getMoveGroupsWithBookAsSource(bookNo).forEach { processMovePart1(it, bookThunk, structure) }
+    ReversificationData.getMoveGroupsWithBookAsSource(bookNo).forEach { processMovePart1(it, bookThunk, structure) }
   }
 
 
@@ -631,7 +635,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
     val sidNode = structure.nodeList[sidIx]
     val eidNode = structure.nodeList[eidIx]
 
-    if (Dom.isSiblingOf(sidNode, eidNode) || m_FileProtocol.tagName_chapter() == Dom.getNodeName(eidNode.parentNode))
+    if (sidNode.isSiblingOf(eidNode) || m_FileProtocol.tagName_chapter() == Dom.getNodeName(eidNode.parentNode))
       movePart1BlockEasy(structure.nodeList.subList(sidIx, eidIx + 1), moveGroup, sourceBookDetails)
     else
       movePart1BlockDifficult(structure, sidIx, eidIx, moveGroup, sourceBookDetails)
@@ -887,278 +891,13 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
     val targetBookDetails = if (moveGroup.crossBook) m_BookDetails[BibleBookNamesUsx.nameToNumber(moveGroup.getStandardBookAbbreviatedName())]!! else sourceBookDetails
     val targetDoc = targetBookDetails.m_RootNode.ownerDocument
     val clonedNodes = Dom.cloneNodes(targetDoc, nodes, true)
-    val container = Dom.createNode(targetDoc, "<_NODE_container/>")
+    val container = Dom.createNode(targetDoc, "<_X_container/>")
     Dom.addChildren(container, clonedNodes)
     targetBookDetails.m_MoveDataForInsertionIntoTarget.add(container)
     NodeMarker.setReversificationLastEid(container, moveGroup.rows.last().standardRef.toString()) // Useful when working out where to insert the block.
-    cloneMoveNodesIfNecessary(nodes, moveGroup)
     return container
   }
 
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                         Original text for Move                         **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  private class SavedMoveDetailsOriginal (container: Node,moveGroup: ReversificationMoveGroup)
-  {
-
-    override fun toString (): String
-    {
-      return "SavedMoveDetailsOriginal: ${Ref.rd(m_FirstSourceRefKey)} / ${Ref.rd(m_LastSourceRefKey)}"
-    }
-
-    var m_Container: Node=container
-    var m_FirstSourceRefKey: Long
-    var m_LastSourceRefKey: Long
-    var m_FirstStandardRefKey: Long
-    var m_LastStandardRefKey: Long
-
-    init {
-      m_FirstSourceRefKey = moveGroup.rows[0].sourceRefAsRefKey
-      m_LastSourceRefKey = moveGroup.rows.last().sourceRefAsRefKey
-      m_FirstStandardRefKey = moveGroup.rows[0].standardRefAsRefKey
-      m_LastStandardRefKey = moveGroup.rows.last().standardRefAsRefKey
-    }
-  }
-
-  private val m_MoveOriginals: MutableList<SavedMoveDetailsOriginal> = ArrayList()
-
-
-
-  /****************************************************************************/
-  /* Moves generally are a bit of a problem.  Unless we move the text, we end
-     up with something not aligned with NRSV(A); if we _do_ move the text, we
-     end up with something which looks wrong from the user perspective (and
-     more significantly, from the perspective of copyright holders).  At the
-     time of writing we are investigating a couple of ways of addressing
-     this.  One of them lies entirely beyond my control, but the other -- the
-     one addressed here -- can be handled purely within the converter.
-
-     So whatever we do, we are going to carry out the Move.  But with the
-     processing here, we also retain a copy of the text which is being moved,
-     and we insert this again later (albeit now as a perhaps very long
-     series of pseudo subverses of the verse which falls immediately before
-     the Move'd text).  This means that we can have the original text still
-     visible at the original position (albeit not in the form of verses, and
-     therefore not accessible via searching etc)' _and_ at the Move target
-     location, which is where STEP needs it in order for its added value
-     features to work.
-  */
-
-  /****************************************************************************/
-  /* This does nothing except on cross-chapter Moves.  On these, it stores up
-     a modified copy of the source nodes, for use later. */
-
-  private fun cloneMoveNodesIfNecessary (nodes: List<Node>, moveGroup: ReversificationMoveGroup)
-  {
-    /**************************************************************************/
-    /* Do nothing unless this is a cross-chapter Move. */
-
-    val firstRow = moveGroup.rows[0]; if (firstRow.sourceRef.toRefKey_bc() == firstRow.standardRef.toRefKey_bc()) return
-
-
-
-    /**************************************************************************/
-    /* Create a copy of the nodes which are being moved. */
-
-    val sourceDoc = nodes[0].ownerDocument
-    val clonedNodes = Dom.cloneNodes(sourceDoc, nodes, true).toMutableList()
-
-
-
-    /**************************************************************************/
-    /* Turn verse sids into _NODE_verse sids, and make a note of any additional
-       information we may require later.  Then get rid of all eids -- we don't
-       need them later, and they may confuse things. */
-
-    var moveGroupIx = 0
-    clonedNodes.filter { m_FileProtocol.tagName_verse() == Dom.getNodeName(it) && m_FileProtocol.attrName_verseSid() in it }. forEach { Dom.setNodeName(it, "_NODE_verse"); Dom.setAttribute(it, "_X_standardRefKey", moveGroup.rows[moveGroupIx++].standardRefAsRefKey.toString()) }
-    clonedNodes.removeIf { m_FileProtocol.tagName_verse() == Dom.getNodeName(it) }
-
-
-
-    /**************************************************************************/
-    /* Package the cloned data and store it for later use. */
-
-    val container = Dom.createNode(sourceDoc, "<_X_reversificationMoveOriginalText/>")
-    Dom.addChildren(container, clonedNodes)
-    val savedDetails = SavedMoveDetailsOriginal(container, moveGroup)
-    m_MoveOriginals.add(savedDetails)
-  }
-
-
-  /****************************************************************************/
-  /* Orders the saved details, and amalgamates adjacent elements where
-     appropriate.  In other words, if we have a block which has moved, say
-     vv 1-10 to some other chapter, and another block which has moved vv 11-20
-     (perhaps to somewhere entirely different) we want to amalgamate the
-     cloned source data for these two blocks, so we can output it en masse. */
-
-  private fun consolidateMoveOriginals ()
-  {
-    m_MoveOriginals.sortBy { it.m_FirstSourceRefKey }
-    for (i in m_MoveOriginals.size - 2 downTo 0 step 1)
-    {
-      val nextStart = m_MoveOriginals[i + 1].m_FirstSourceRefKey
-      val thisEnd = m_MoveOriginals[i].m_LastSourceRefKey
-      if (!m_BibleStructure.isAdjacent(thisEnd, nextStart)) continue
-
-      val childNodes = m_MoveOriginals[i + 1].m_Container.childNodes
-      Dom.addChildren(m_MoveOriginals[i].m_Container, childNodes)
-      m_MoveOriginals[i].m_LastSourceRefKey = m_MoveOriginals[i + 1].m_LastSourceRefKey
-      m_MoveOriginals[i].m_LastStandardRefKey = m_MoveOriginals[i + 1].m_LastStandardRefKey
-
-      m_MoveOriginals.removeAt(i + 1)
-    }
-  }
-
-
-  /****************************************************************************/
-  /* This controls the process of reinserting the cloned source material.
-     We start off by working in turn through each book which has such material,
-     building up, for that book, a map relating the eid refKeys to the eid
-     nodes.  We then use that map to carry out the actual reinsertion. */
-
-  private fun insertMoveOriginals ()
-  {
-    val eidMap: MutableMap<Int, NavigableMap<RefKey, Node>> = HashMap()
-
-    fun getEids (refKey: RefKey)
-    {
-      val bookNo = Ref.getB(refKey)
-      if (null != eidMap[bookNo]) return
-      val document = m_BookDetails[bookNo]!!.m_RootNode.ownerDocument
-      var eids = Dom.findNodesByAttributeName(document, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid())
-      eids = eids.subList(0, eids.size - 1) // Don't want to insert stuff in the dummy verse at the end of the chapter.
-      val map: NavigableMap<RefKey, Node> = TreeMap()
-      eids.forEach { map[m_FileProtocol.readRefCollection(it[m_FileProtocol.attrName_verseEid()]!!).getFirstAsRefKey()] = it }
-      eidMap[bookNo] = map
-   }
-
-    consolidateMoveOriginals() // Amalgamate adjacent cloned source blocks.
-    m_MoveOriginals.forEach { getEids(it.m_FirstSourceRefKey) }
-    m_MoveOriginals.forEach { insertMoveOriginals(it, eidMap[Ref.getB(it.m_FirstSourceRefKey)]!!) }
-  }
-
-
-  /****************************************************************************/
-  /* This does the actual reinsertion.  'details' is a structure which
-     describes a single block of cloned source material which is to be
-     reinserted, and eids maps refKeys to verse:eid nodes in the book which is
-     covered by this particular block. */
-
-  private fun insertMoveOriginals (details: SavedMoveDetailsOriginal, eids: NavigableMap<RefKey, Node>)
-  {
-    return
-//
-//
-//
-//    /**************************************************************************/
-//    /* details.m_FirstSourceRefKey gives us the starting sid for the block which
-//       we are inserting.  We want to append this material to the end of the
-//       closest verse prior to that sid. */
-//
-//    val insertBefore = eids.floorEntry(details.m_FirstSourceRefKey).value
-//    val document = insertBefore.ownerDocument
-//
-//
-//
-//    /**************************************************************************/
-//    /* We now know where material is to be inserted; we now need to run over
-//       all of the _NODE_verse nodes in that material, transforming it into the
-//       form required, and then insert it. */
-//
-//    val owningRef = m_FileProtocol.readRef(Dom.getAttribute(insertBefore, m_FileProtocol.attrName_verseEid())!!).toRefKey()
-//
-//    fun replaceVerseNode (verseNode: Node)
-//    {
-//      /************************************************************************/
-//      val ref = m_FileProtocol.readRef(Dom.getAttribute(verseNode, m_FileProtocol.attrName_verseSid())!!)
-//
-//
-//      /************************************************************************/
-//      /* If the verse is the first in its chapter, we need to insert a pretend
-//         chapter header before it. */
-//
-//      if (1 == ref.getV())
-//      {
-//        val headerNode = Dom.createNode(document, "<para style='ms'/>")
-//        val rc = RefCollection(ref)
-//        headerNode.appendChild(Dom.createTextNode(document, stringFormat("%RefV<b+c>", rc)))
-//        Dom.insertNodeBefore(verseNode,Dom.createNode(document, "<para style='p'/>"))
-//        Dom.insertNodeBefore(verseNode, headerNode)
-//      }
-//
-//
-//
-//      /************************************************************************/
-//      /* Create a footnote to record details of the location where the verse is
-//         duplicated. */
-//
-//      val standardRef = Ref.rd(Dom.getAttribute(verseNode, "_X_standardRefKey")!!.toLong())
-//      val footnoteText =Translations.stringFormatWithLookup("V_reversification_toDetailsForUseWithRetainedSourceDataForBlockMove", RefCollection(standardRef))
-//      val footnoteNode = MiscellaneousUtils.makeFootnote(document, owningRef, footnoteText, null)
-//
-//
-//
-//      /************************************************************************/
-//      /* From the verse tag generate into a suitably formatted piece of text
-//         which we simply include in the canonical text, along with the
-//         footnote.  Then update the DOM. */
-//
-//      ref.clearB(); ref.clearC()
-//      val textNode = Dom.createTextNode(document, " " + Translations.stringFormatWithLookup("V_reversification_alternativeReferenceFormat", ref))
-//      val containerNode = Dom.createNode(document, "<_X_reversificationCalloutAlternativeRefCollection/>")
-//      containerNode.appendChild(textNode)
-//      containerNode.appendChild(footnoteNode)
-//      Dom.insertNodeAfter(verseNode, containerNode)
-//      Dom.deleteNode(verseNode)
-//    }
-//
-//
-//
-//    /**************************************************************************/
-//    /* Process all of the _NODE_verses. */
-//
-//    Dom.findNodesByName(details.m_Container, "_NODE_verse", false).forEach { replaceVerseNode(it) }
-//
-//
-//
-//    /**************************************************************************/
-//    /* Insert a textual marker at top and bottom of the cloned source nodes to
-//       give a bit more information about what is going on. */
-//
-//    val standardRange = RefCollection()
-//    if (details.m_FirstStandardRefKey == details.m_LastSourceRefKey)
-//      standardRange.add(Ref.rd(details.m_FirstStandardRefKey))
-//    else
-//      standardRange.add(RefRange(Ref.rd(details.m_FirstStandardRefKey), Ref.rd(details.m_LastStandardRefKey)))
-//
-//    val headerText = Translations.stringFormatWithLookup("V_reversification_xxxOriginalSourceBlockHeader", standardRange)
-//    val trailerText = Translations.stringFormatWithLookup("V_reversification_xxxOriginalSourceBlockTrailer", standardRange)
-//    val headerNode = Dom.createTextNode(document, headerText)
-//    val trailerNode = Dom.createTextNode(document, trailerText)
-//
-//    Dom.insertAsFirstChild(details.m_Container, Dom.createNode(document, "<para style='p'/>"))
-//    Dom.insertAsFirstChild(details.m_Container, headerNode)
-//    Dom.insertAsFirstChild(details.m_Container, Dom.createNode(document, "<para style='p'/>"))
-//
-//    Dom.insertAsLastChild(details.m_Container, Dom.createNode(document, "<para style='p'/>"))
-//    Dom.insertAsLastChild (details.m_Container, trailerNode)
-//
-//    Dom.insertAsLastChild(details.m_Container, Dom.createNode(document, "<para style='p'/>"))
-//    Dom.deleteNode(details.m_Container)
-//    Dom.insertNodeBefore(insertBefore, details.m_Container)
-  }
 
 
 
@@ -1172,15 +911,15 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
   /****************************************************************************/
 
   /****************************************************************************/
-  /* Just one comment on why I use getNonMoveRowsWithBookAsSTANDARD below.
+  /* Just one comment on why I use getNonMoveRowsWithBookAs STANDARD below.
      We are dealing here with non-move statements.  This includes Renumbers
-     which aren't shifting stuff to a new book, and non-renumbers.
-   */
+     which aren't shifting stuff to a new book, and non-renumbers. */
+
   private fun processNonMove (bookNo: Int, selector: String)
   {
     val bookThunk = m_BookDetails[bookNo]!!
     //Dbg.outputDom(bookThunk.m_Document, "a")
-    val rows = m_ReversificationData.getNonMoveRowsWithBookAsStandard(bookNo)
+    val rows = ReversificationData.getNonMoveRowsWithBookAsStandard(bookNo)
     processSimpleRows(bookThunk.m_RootNode, rows, selector)
   }
 
@@ -1335,7 +1074,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
      end of the processing here.
 
      All of this does rely upon certain changes to the reversification data,
-     which are deal with by m_ReversificationData.  Where the sourceRef contains
+     which are dealt with by ReversificationData.  Where the sourceRef contains
      the word 'title', I change it so that it is a reference to v499 of the
      chapter.  And where the standardRef contains 'title', I alter it, either
      just to v0 if the sourceRef is also v0, or else to subverse n of v0, where
@@ -1416,7 +1155,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
     val topLevelNodes = Dom.pruneToTopLevelOnly(allNodes.subList(firstSpecialVerseSidIx, lastSpecialVerseEidIx + 1))
     topLevelNodes.forEach { Dom.deleteNode(it) } // No need to delete recursively up the tree -- these won't be under anything relevant.
 
-    val canonicalTitle = Dom.createNode(ownerDocument, "<para style='d'/>"); NodeMarker.setCanonicalHeaderLocation(canonicalTitle, "start")
+    val canonicalTitle = m_FileProtocol.makeCanonicalTitleNode(ownerDocument); NodeMarker.setCanonicalHeaderLocation(canonicalTitle, "start")
     val insertBefore = Dom.findNodeByName(chapterNode, m_FileProtocol.tagName_verse(), false)
     Dom.insertNodeBefore(insertBefore!!, canonicalTitle)
     Dom.addChildren(canonicalTitle, topLevelNodes)
@@ -1424,6 +1163,12 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
     Dom.findNodesByName(canonicalTitle, m_FileProtocol.tagName_verse(), false).forEach { val x = Dom.createTextNode(ownerDocument, " "); Dom.insertNodeBefore(it, x); Dom.deleteNode(it)}
     Dom.deleteNode(canonicalTitle.firstChild) // That's replaced each verse:sid by a space to act as a separator, and then got rid of the first one.
 
+
+    /**************************************************************************/
+    /* Footnote reference nodes are relevant only to USX, but aside from using
+       up a little processing time, there's no harm in having the code here
+       run against OSIS too -- it simply won't find anything to process. */
+    
     Dom.findNodesByAttributeValue(canonicalTitle, "char", "style", "fr").forEach {
       val owner = it.firstChild.textContent
       if (C_Marker in owner)
@@ -1486,7 +1231,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
         else
           null
       }
-      else if ("para:d" == m_FileProtocol.getExtendedNodeName(node) && null != sid)
+      else if (m_FileProtocol.isCanonicalTitleNode(node) && null != sid)
       {
         Dom.deleteNode(node)
         Dom.insertNodeBefore(sid!!, node)
@@ -1551,7 +1296,7 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
     /* We only want the footnote if we are applying an appropriate level of
        reversification. */
 
-    val wantFootnote = m_ReversificationData.wantFootnote(row, 'C', if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A')
+    val wantFootnote = ReversificationData.wantFootnote(row, 'C', if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A')
     val calloutDetails = row.calloutDetails
     val document = sidNode.ownerDocument
     val res = Dom.createNode(document, "<_X_reversificationCalloutData/>")
@@ -1576,9 +1321,9 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
 
     if (wantFootnote)
     {
-      var text  = m_ReversificationData.getFootnoteReversification(row)
+      var text  = ReversificationData.getFootnoteReversification(row)
       text = text.replace("S3y", "S3Y") // DIB prefers this.
-      val ancientVersions = if (m_ReversificationNotesLevel > C_ReversificationNotesLevel_Basic) m_ReversificationData.getAncientVersions(row) else null
+      val ancientVersions = if (m_ReversificationNotesLevel > C_ReversificationNotesLevel_Basic) ReversificationData.getAncientVersions(row) else null
       if (null != ancientVersions) text += " $ancientVersions"
       val noteNode = makeFootnote(document, row.standardRefAsRefKey, text, callout)
       res.appendChild(noteNode)
@@ -1798,13 +1543,14 @@ open class SE_ConversionTimeReversification protected constructor (dataCollectio
 
 
 /******************************************************************************/
-class Osis_SE_ConversiontimeReversification (dataCollection: X_DataCollection): SE_ConversionTimeReversification(dataCollection)
+class Osis_SE_ConversiontimeReversification (dataCollection: X_DataCollection):
+  SE_ConversionTimeReversification(dataCollection, EmptyVerseHandler(dataCollection))
 {
   /****************************************************************************/
   override fun makeBook (bookNo: Int): Node
   {
     TODO()
-    val bookName = BibleBookNamesUsx.numberToAbbreviatedName(bookNo)
+    val bookName = BibleBookNamesOsis.numberToAbbreviatedName(bookNo)
 
     val factory = DocumentBuilderFactory.newInstance()
     val builder = factory.newDocumentBuilder()
@@ -1839,7 +1585,8 @@ class Osis_SE_ConversiontimeReversification (dataCollection: X_DataCollection): 
 
 
 /******************************************************************************/
-class Usx_SE_ConversiontimeReversification (dataCollection: X_DataCollection): SE_ConversionTimeReversification(dataCollection)
+class Usx_SE_ConversiontimeReversification(dataCollection: X_DataCollection):
+  SE_ConversionTimeReversification(dataCollection, EmptyVerseHandler(dataCollection))
 {
   /****************************************************************************/
   override fun makeBook (bookNo: Int): Node

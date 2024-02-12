@@ -164,6 +164,15 @@ object NodeMarker
 
 
   /****************************************************************************/
+  fun deleteStandardRefKey (node: Node) = deleteTemporaryAttribute(node, C_StandardRefKey)
+  fun getStandardRefKey (node: Node) = node[C_StandardRefKey]
+  fun hasStandardRefKey (node: Node) = null != getStandardRefKey(node)
+  fun setStandardRefKey (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_StandardRefKey, value); return this }
+  private const val C_StandardRefKey = "_StandardRefKey"
+
+
+
+  /****************************************************************************/
   fun deleteSubverseCoverage (node: Node) = deleteTemporaryAttribute(node, C_SubverseCoverage)
   fun getSubverseCoverage (node: Node) = node[C_SubverseCoverage]
   fun hasSubverseCoverage (node: Node) = null != getSubverseCoverage(node)
