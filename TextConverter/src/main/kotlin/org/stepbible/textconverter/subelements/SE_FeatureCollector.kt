@@ -3,6 +3,7 @@ package org.stepbible.textconverter.subelements
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.getAllNodes
 import org.stepbible.textconverter.support.shared.FeatureIdentifier
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.*
@@ -102,16 +103,20 @@ class SE_FeatureCollector (dataCollection: X_DataCollection): SE(dataCollection)
 
 
   /****************************************************************************/
-  /* Sets the sample text needed by ConfigData to determine text direction. */
+  /* Sets the sample text needed by ConfigData to determine text direction.
+     This looks for the first text canonical text node after the first verse
+     node whose non-blank length is greater then give. */
 
   private fun getSampleTextForConfigData (rootNode: Node)
   {
     if (m_AlreadyGotSampleText)
       return
 
-    val x = Dom.findAllTextNodes(rootNode)
-      .filter { m_FileProtocol.isCanonicalNode(it) }
-      .first { Dom.toString(it); it.textContent.length > 5 }.textContent
+    var hadVerse = false
+
+    val x = rootNode.getAllNodes()
+      .first { if (m_FileProtocol.tagName_verse() == Dom.getNodeName(it)) hadVerse = true;
+               hadVerse && Dom.isTextNode(it) && m_FileProtocol.isCanonicalNode(it) && it.textContent.replace("\\s+".toRegex(), "").length > 5 }.textContent
 
     ConfigData.setSampleText(x)
   }

@@ -9,7 +9,7 @@ import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.miscellaneous.Zip
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.OsisPhase2SavedDataCollection
-import org.stepbible.textconverter.utils.ProtocolConverterExtendedOsisToStandardOsis
+import org.stepbible.textconverter.utils.ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -150,7 +150,6 @@ object PE_Phase4_To_RepositoryPackageAndOrSaveOsis: PE
     if ("osis" == ConfigData["stepOriginData"]) return
     StepFileUtils.deleteFolder(FileLocations.getInputOsisFolderPath())
     StepFileUtils.createFolderStructure(FileLocations.getInputOsisFolderPath())
-    ProtocolConverterExtendedOsisToStandardOsis.process(OsisPhase2SavedDataCollection.getDocument())
     Dom.outputDomAsXml(OsisPhase2SavedDataCollection.getDocument(), FileLocations.makeInputOsisFilePath(), null)
   }
 }

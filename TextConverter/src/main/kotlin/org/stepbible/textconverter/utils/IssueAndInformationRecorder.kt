@@ -494,9 +494,18 @@ object IssueAndInformationRecorder
 
 
     /**************************************************************************/
+    if (ConfigData["stepVersificationScheme"]!!.startsWith("v11n_"))
+    {
+      m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA= "We are using our own versification scheme, to which the text necessarily conforms, so the following information is irrelevant."
+      return
+    }
+
+
+
+    /**************************************************************************/
     m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA= "Because reversification is not being applied, the text needs to conform to the selected osis2mod versification scheme.  The following details highlight any issues."
 
-    val analysis = PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.evaluateSingleSchemeDetailed(ConfigData["stepReversificationType"]!!, DataCollection.BibleStructure)
+    val analysis = PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.evaluateSingleSchemeDetailed(ConfigData["stepVersificationScheme"]!!, DataCollection.BibleStructure)
 
     m_BibleTextStructure.DCPresence = analysis.DCPresence
 

@@ -1,59 +1,49 @@
 package org.stepbible.textconverter.utils
 
+import org.stepbible.textconverter.subelements.SE_CanonicalHeadingsHandler
+import org.stepbible.textconverter.subelements.SE_CrossBoundaryMarkupHandler
+import org.stepbible.textconverter.subelements.SE_TableHandler
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.*
-import org.stepbible.textconverter.support.ref.RefCollection
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
 /******************************************************************************/
 /**
-* We are concerned here with USX, standard OSIS, extended OSIS and STEP-internal
-* OSIS.
+* Phase 1 processing is responsible for supplying us with OSIS in a form which
+* could be passed to third parties.
 *
-* All of the code in this file converts one form of OSIS to another.
+* (Almost.  OSIS requires that lists and poetry be encapsulated in tags
+* equivalent to HTML's ul.  It's difficult to do this because there is no USX
+* equivalent, and it gets in the way of processing and actually makes the
+* rendered appearance _worse_.  Given that things seem to work perfectly well
+* without them, I don't bother with them.  To this extent, therefore, the OSIS
+* may not comply with standards.)
 *
-* **Standard OSIS** is ... well, just OSIS.  'Standard' means that it contains
-* just the standard OSIS tags and attributes.  It *doesn't* necessarily mean
-* that the file complies with the OSIS XSD.  For example, translators often use
-* poetry tags in the hope that this will simply generate fully indented
-* paragraphs (it won't).  In OSIS, poetry tags are supposed to be encapsulated
-* within the OSIS equivalent of HTML's ul tags.  However, when we start from
-* USX there is no corresponding USX enclosing tag.  Fabricating one and
-* positioning it correctly is difficult; it also tends to introduce cross-verse-
-* boundary markup; things seem to work perfectly well without; and having it
-* introduces excessive vertical whitespace when rendered.  We therefore don't
-* bother with it.  This means that we are not conformant, and therefore limits
-* our ability to share stuff.  But it does save a lot of work.
+* Aside from that caveat, we would be able to supply this OSIS to third parties
+* if we wished to.
 *
-* If OSIS is all we have available for a given text, then it will be standard
-* OSIS.  I also save, for possible future use, any OSIS which I generate from
-* USX of VL on runs which originate with those and, for the sake of
-* consistency, I always save that in standard OSIS form too.  It goes into
-* the InputOsis folder -- which means that on *any* run which starts from
-* OSIS, we will be dealing with standard OSIS, regardless of whether that
-* was all we had, was generated from VL or USX, has ben manually tweaked, etc.
+* However, this format is not very amenable to further processing.  To this
+* end, [ProtocolConverterOsisForThirdPartiesToInternalOsis] converts it to a
+* more useful form (and should therefore be used early in the processing).
 *
+* The bulk of the rest of the processing then makes use of this form and adds
+* to it.  Working this way makes processing easier, but the result is
+* something which cannot be passed to osis2mod.  At the end of OSIS processing,
+* therefore, you use [ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse]
+* to convert the data into a form which osis2mod *can* work with.  This class
+* removes the temporary props from the data, and also performs various totally
+* implausible modifications which experience suggests are necessary in order
+* for STEP to render stuff correctly.
 *
-* **Extended OSIS** is basically just standard OSIS with some extra tags and
-* attributes.  These are there to simplify processing and to retain information
-* which standard OSIS cannot handle.  Extended OSIS is used only during a given
-* run -- it is never stored.
+* This form may possibly be retained for debugging, but other than that, it
+* should be regarded as throw-away: nothing else should make use of it.
 *
-*
-* **STEP-internal OSIS** is needed because of issues within STEP (issues which
-* I think really ought to be fixed within STEPBible itself, but probably won't
-* be).  So, for example, OSIS has a <speaker> tag to indicate who is speaking
-* (eg in Job and Song of Songs); and since it has this tag it seems to make
-* sense to use it (and in any case, we have to cater for it, because OSIS
-* supplied by third parties may contain it).  But STEPBible doesn't render it
-* well, so we need to change it to pure formatting markup.  But we don't want
-* this to be reflected in any OSIS we retain for future use, because to do so
-* would mean we would have lost semantic information.  So, at the very last
-* minute, I apply any tweaks needed to work around STEPBible bugs, thus
-* creating STEP-internal OSIS, and it is this which is passed to osis2mod.
-* This is in standard OSIS form, but is a temporary which can be disposed of
-* once osis2mod has run (although I may perhaps retain it for debug purposes).
+* (One of the reasons for this are the ad hoc changes mentioned above.  Some
+* of them involve ditching semantic markup which STEP renders wrongly in
+* favour of formatting markup over which we have slightly more control.  Doing
+* this, of course, means that we lose semantic information, and we don't really
+* want to retain an impoverished version of the text.
 *
 * @author ARA "Jamie" Jamieson
 */
@@ -69,7 +59,7 @@ class ProtocolConverters // Just here to give the documentation processor someth
 * @author ARA "Jamie" Jamieson
 */
 
-object ProtocolConverterExtendedOsisToStandardOsis
+object ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -80,88 +70,62 @@ object ProtocolConverterExtendedOsisToStandardOsis
   /****************************************************************************/
 
   /****************************************************************************/
-  fun process (doc: Document)
-  {
-    Dbg.reportProgress("Converting to standard OSIS.")
-    m_Document = doc
-    doMappings()
-    NodeMarker.deleteAllMarkers(m_Document)
-  }
+  /**
+  * Applies modifications to the working OSIS so that it can be fed to osis2mod.
+  *
+  * @param dataCollection
+  */
 
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                 Private                                **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  fun doMappings ()
-  {
-
-  }
-
-
-  /****************************************************************************/
-  private lateinit var m_Document: Document
-}
-
-
-
-
-/******************************************************************************/
-/**
-* See [ProtocolConverters].
-*
-* @author ARA "Jamie" Jamieson
-*/
-
-object ProtocolConverterStandardOsisToExtendedOsis
-{
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                 Public                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  fun process (doc: Document)
+  fun process (dataCollection: X_DataCollection)
   {
     /**************************************************************************/
-    /* This one needs to be undone again.  It's more convenient to locate book
-       nodes via a tag name rather than via an attribute value, so I change
-       the tag name here, but the result isn't valid OSIS, so it will need to
-       be changed back before I do anything 'official' with the OSIS. */
-
-    doc.findNodesByAttributeValue("div", "type", "book").forEach { Dom.setNodeName(it, "book") }
+    Dbg.reportProgress("Converting OSIS for use by osis2mod.")
+    val doc = dataCollection.getDocument()
 
 
 
     /**************************************************************************/
-    /* This can be left as-is.  div/type=chapter and <chapter> are synonyms in
-       OSIS, but the <chapter> version is more convenient. */
+    /* Introduce pointless markup around notes to get round some random problem
+       in STEP rendering. */
 
-    doc.findNodesByAttributeValue("div", "type", "chapter").forEach { Dom.setNodeName(it, "chapter") }
+    doCommaNote(doc)
 
 
 
     /**************************************************************************/
-    doc.getAllNodes().filter { "_wantPointlessHiTag" in it }.forEach {
-      val pointlessNode = doc.createNode("<hi type='normal'")
-      Dom.insertNodeBefore(it, pointlessNode)
+    /* Sort out individual characters which would otherwise not work. */
+
+    doUnacceptableTextCharacters(doc)
+
+
+
+    /**************************************************************************/
+    /* Tidy up vertical whitespace. */
+
+    doLineBreaks(doc)
+
+
+
+    /**************************************************************************/
+    /* Some nodes were generated for temporary purposes and need to go.  Others
+       may need some somewhat random modifications to sort out problems in STEP
+        rendering. */
+
+    doc.getAllNodes().forEach {
+      if (NodeMarker.hasDeleteMe(it))
+        Dom.deleteNode(it)
+      else
+        doMapping(it)
     }
 
 
 
     /**************************************************************************/
-    markCanonicalHeaderLocations(doc)
+    /* In the course of processing, we introduce quite a lot of temporary
+       markers.  I doubt osis2mod would be unduly worried, but get rid of them
+       just in case. */
+
+    NodeMarker.deleteAllMarkers(doc)
   }
 
 
@@ -175,95 +139,6 @@ object ProtocolConverterStandardOsisToExtendedOsis
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
-
-  /****************************************************************************/
-  /* Canonical headings normally appear at the start of Psalms, but occasionally
-     (in Psalms and -- is it Habakkuk), you may get one at the end.  I need to
-     distinguish between the two, because osis2mod / JSword / STEPBible gets
-     confused if presented with a canonical heading at the end of a chapter,
-     so the version of the OSIS which I feed to osis2mod has to be changed so
-     that the heading is changed to some kind of characteristic formatting,
-     rather than keeping it marked as a heading. */
-
-  private fun markCanonicalHeaderLocations (doc: Document)
-  {
-    /**************************************************************************/
-    var verseNo = 0
-
-
-
-    /**************************************************************************/
-    fun processNode (node: Node)
-    {
-      if (Osis_FileProtocol.isCanonicalTitleNode(node))
-        NodeMarker.setCanonicalHeaderLocation(node, if (verseNo <= 3) "start" else "end")
-      else if ("chapter" == Dom.getNodeName(node))
-        verseNo = 0
-      else if ("verse" == Dom.getNodeName(node) && "sID" in node)
-        verseNo = RefCollection.rdOsis(node["sID"]!!).getLowAsRef().getV()
-    }
-
-
-
-    /**************************************************************************/
-    Dom.getNodesInTree(doc).forEach(::processNode)
-  }
-}
-
-
-
-
-
-/******************************************************************************/
-/**
-* See [ProtocolConverters].
-*
-* @author ARA "Jamie" Jamieson
-*/
-
-object ProtocolConverterExtendedOsisToStepOsis
-{
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                 Public                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  /* Note that in this method, we assume that the OSIS file has already been
-     created, and we apply changes which require an understanding of the DOM
-     structure.  Compare and contrast with the pre method. */
-
-  fun process (document: Document)
-  {
-    Dbg.reportProgress("Applying late tweaks.")
-    m_Document = document
-    doChanges()
-  }
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                 Private                                **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  private fun doChanges ()
-  {
-    doCommaNote()
-    doUnacceptableTextCharacters()
-    doLineBreaks()
-    m_Document.getAllNodes().forEach(::doMapping)
-  }
-
 
   /****************************************************************************/
   /* We have discovered that with something like:
@@ -281,18 +156,18 @@ object ProtocolConverterExtendedOsisToStepOsis
      I attempt to be slightly more refined here, in that if it looks as though
      the text has already been tweaked in this manner, I don't do anything. */
 
-  private fun doCommaNote (): Boolean
+  private fun doCommaNote (doc: Document): Boolean
   {
     var changed = false
 
     fun insertNode (before: Node)
     {
-      val newNode = Dom.createNode(m_Document, "<hi type='normal'/>")
+      val newNode = doc.createNode("<hi type='normal'/>")
       Dom.insertNodeBefore(before, newNode)
       changed = true
     }
 
-    Dom.findNodesByName(m_Document, "note")
+    Dom.findNodesByName(doc, "note")
       .filter { null != it.previousSibling && "#text" != Dom.getNodeName(it.previousSibling) && "," == it.previousSibling.textContent.trim() }
       .forEach { insertNode(it) }
 
@@ -306,7 +181,7 @@ object ProtocolConverterExtendedOsisToStepOsis
     _probably_ motivated by some of the stuff in Appendix F of the OSIS
     reference manual. */
 
-  private fun doLineBreaks ()
+  private fun doLineBreaks (doc: Document)
   {
     /**************************************************************************/
     fun processLineBreak (node: Node)
@@ -346,7 +221,7 @@ object ProtocolConverterExtendedOsisToStepOsis
 
 
     /**************************************************************************/
-    val lineBreaks = Dom.findNodesByName(m_Document, "l")
+    val lineBreaks = Dom.findNodesByName(doc, "l")
         .filter { "l" == Dom.getNodeName(it) && !it.hasChildNodes() }
     lineBreaks.forEach { processLineBreak(it) }
   }
@@ -358,7 +233,38 @@ object ProtocolConverterExtendedOsisToStepOsis
   private fun doMapping (node: Node)
   {
     /**************************************************************************/
-    val extendedNodeName = Dom.getNodeName(node)
+    val extendedNodeName = Osis_FileProtocol.getExtendedNodeName(node)
+
+
+
+    /**************************************************************************/
+    /* Selah doesn't get formatted well, so change it to italic. */
+
+    if ("l:selah" == extendedNodeName)
+    {
+      Dom.deleteAllAttributes(node)
+      node["type"] = "italic"
+      Dom.setNodeName(node, "hi")
+      return
+    }
+
+
+
+    /**************************************************************************/
+    /* There are various other forms of 'l' tag.  Some of these carry 'type'
+       attributes, and I have to admit to not knowing how to handle them (so
+       hope we'll never see them).  But there are other plain vanilla ones
+       which, for some bizarre reason sometimes don't get rendered correctly
+       if I leave them as-is, but are ok if I insert an entirely irrelevant
+       markup before them -- see discussion of xWeird in
+       usxToOsisTagConversionsEtc.conf. */
+
+    if ("l" == extendedNodeName)
+    {
+      val pointlessNode = node.ownerDocument.createNode("<hi type='normal'/>")
+      Dom.insertNodeBefore(node, pointlessNode)
+      return
+    }
 
 
 
@@ -391,37 +297,6 @@ object ProtocolConverterExtendedOsisToStepOsis
 
 
     /**************************************************************************/
-    /* Selah doesn't get formatted well either, so change it to italic. */
-
-    if ("l:selah" == extendedNodeName)
-    {
-      Dom.deleteAllAttributes(node)
-      node["type"] = "italic"
-      Dom.setNodeName(node, "hi")
-      return
-    }
-
-
-
-    /**************************************************************************/
-    /* There are various other forms of 'l' tag.  Some of these carry 'type'
-       attributes, and I have to admit to not knowing how to handle them (so
-       hope we'll never see them.  But there are other plain vanilla ones
-       which, for some bizarre reason sometimes don't get rendered correctly
-       if I leave them as-is, but are ok if I insert an entirely irrelevant
-       markup before them -- see discussion of xWeird in
-       usxToOsisTagConversionsEtc.conf. */
-
-    if ("l" == extendedNodeName)
-    {
-      val pointlessNode = node.ownerDocument.createNode("<hi type='normal'/>")
-      Dom.insertNodeBefore(node, pointlessNode)
-      return
-    }
-
-
-
-    /**************************************************************************/
     /* Acrostic elements come in two forms -- as titles and as hi:acrostic.
        In fact, STEP doesn't render either of them correctly, so we need to
        convert them to something else.
@@ -447,8 +322,10 @@ object ProtocolConverterExtendedOsisToStepOsis
       Dom.setNodeName(node, "hi"); Dom.deleteAllAttributes(node); node["type"] = "italic"
 
       // Create a bold node, insert it before the node itself, and then move the target node into the bold node.
-      val bold = node.ownerDocument.createTextNode("<hi type='bold'/>")
-      Dom.insertNodeBefore(node, bold); Dom.deleteNode(node); bold.appendChild(node)
+      val bold = node.ownerDocument.createNode("<hi type='bold'/>")
+      Dom.insertNodeBefore(node, bold)
+      Dom.deleteNode(node)
+      bold.appendChild(node)
     }
 
 
@@ -492,7 +369,7 @@ object ProtocolConverterExtendedOsisToStepOsis
      \u000c because it results in nice formatting in his editor.  Unfortunately,
      this is an invalid character. */
 
-  private fun doUnacceptableTextCharacters ()
+  private fun doUnacceptableTextCharacters (doc: Document)
   {
     fun doIt (node: Node)
     {
@@ -503,10 +380,107 @@ object ProtocolConverterExtendedOsisToStepOsis
     }
 
 
-    Dom.findAllTextNodes(m_Document).forEach { doIt(it)}
+    Dom.findAllTextNodes(doc).forEach { doIt(it)}
+  }
+}
+
+
+
+
+/******************************************************************************/
+/**
+* See [ProtocolConverters].
+*
+* @author ARA "Jamie" Jamieson
+*/
+
+object ProtocolConverterOsisForThirdPartiesToInternalOsis
+{
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                 Public                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  fun process (dataCollection: X_DataCollection)
+  {
+    /**************************************************************************/
+    val doc = dataCollection.getDocument()
+
+
+
+    /**************************************************************************/
+    /* This one needs to be undone again.  It's more convenient to locate book
+       nodes via a tag name rather than via an attribute value, so I change
+       the tag name here, but the result isn't valid OSIS, so it will need to
+       be changed back before we do anything 'official' with the OSIS. */
+
+    doc.findNodesByAttributeValue("div", "type", "book").forEach { Dom.setNodeName(it, "book") }
+
+
+
+    /**************************************************************************/
+    /* This can be left as-is.  div/type=chapter and <chapter> are synonyms in
+       OSIS, but the <chapter> version is more convenient. */
+
+    doc.findNodesByAttributeValue("div", "type", "chapter").forEach { Dom.setNodeName(it, "chapter") }
+
+
+
+    /**************************************************************************/
+    /* Need to tidy up canonical headings to make processing more uniform. */
+
+    SE_CanonicalHeadingsHandler(dataCollection).process()
+
+
+
+    /**************************************************************************/
+    /* OSIS supports (or strictly, _requires_ that bullet-point lists and
+       poetry tags be wrapped in enclosing tags.  These get in the way of other
+       processing and don't actually seem to be relevant to whether things work
+       or not, so it's convenient to ditch them. */
+
+    removeListBrackets(doc)
+
+
+
+    /**************************************************************************/
+    /* We'll need to position verse ends in a moment, but tables can get in the
+       way of doing that, so we need to do something to get round that. */
+
+    SE_TableHandler(dataCollection).process()
+
+
+
+    /**************************************************************************/
+    /* Position verse ends so as to avoid cross-boundary markup. */
+
+    SE_CrossBoundaryMarkupHandler(dataCollection).process()
   }
 
 
+
+
+
   /****************************************************************************/
-  private lateinit var m_Document: Document
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                 Private                                **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /* Removes list brackets -- <lg> etc.  This gives us invalid OSIS, but it
+     still works and renders better than if we retain the <lg>.  Plus unless we
+     do this, we almost invariably end up with cross-boundary markup. */
+
+  private fun removeListBrackets (doc: Document)
+  {
+    doc.findNodesByName("lg").forEach { Dom.promoteChildren(it); Dom.deleteNode(it) }
+    //doc.findNodesByName("list").forEach { Dom.promoteChildren(it); Dom.deleteNode(it) }
+  }
 }

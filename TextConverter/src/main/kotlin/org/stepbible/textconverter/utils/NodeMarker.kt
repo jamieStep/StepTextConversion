@@ -116,6 +116,14 @@ object NodeMarker
 
 
   /****************************************************************************/
+  fun deleteElisionType (node: Node) = deleteTemporaryAttribute(node, C_ElisionType)
+  fun getElisionType (node: Node) = node[C_ElisionType]
+  fun hasElisionType (node: Node) = null != getElisionType(node)
+  fun setElisionType (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_ElisionType, value); return this }
+  private const val C_ElisionType = "_ElisionType"
+
+
+  /****************************************************************************/
   fun deleteEmptyVerseType (node: Node) = deleteTemporaryAttribute(node, C_EmptyVerseType)
   fun getEmptyVerseType (node: Node) = node[C_EmptyVerseType]
   fun hasEmptyVerseType (node: Node) = null != getEmptyVerseType(node)
@@ -132,14 +140,6 @@ object NodeMarker
 
 
   /****************************************************************************/
-  fun deleteElisionType (node: Node) = deleteTemporaryAttribute(node, C_ElisionType)
-  fun getElisionType (node: Node) = node[C_ElisionType]
-  fun hasElisionType (node: Node) = null != getElisionType(node)
-  fun setElisionType (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_ElisionType, value); return this }
-  private const val C_ElisionType = "_ElisionType"
-
-
-  /****************************************************************************/
   fun deleteMasterForElisionOfLength (node: Node) = deleteTemporaryAttribute(node, C_MasterForElisionOfLength)
   fun getMasterForElisionOfLength (node: Node) = node[C_MasterForElisionOfLength]
   fun hasMasterForElisionOfLength (node: Node) = null != getMasterForElisionOfLength(node)
@@ -148,6 +148,14 @@ object NodeMarker
 
 
   /****************************************************************************/
+  fun deleteDeleteMe (node: Node) = deleteTemporaryAttribute(node, C_CrossBoundaryMarkup)
+  fun getDeleteMe (node: Node) = node[C_DeleteMe]
+  fun hasDeleteMe (node: Node) = null != getDeleteMe(node)
+  fun setDeleteMe (node: Node): NodeMarker { addTemporaryAttribute(node, C_DeleteMe, "y"); return this }
+  private const val C_DeleteMe = "_DeleteMe"
+
+
+ /****************************************************************************/
   fun deleteMoveNoteToStartOfVerse (node: Node) = deleteTemporaryAttribute(node, C_MoveNoteToStartOfVerse)
   fun getMoveNoteToStartOfVerse (node: Node) = node[C_MoveNoteToStartOfVerse]
   fun hasMoveNoteToStartOfVerse (node: Node) = null != getMoveNoteToStartOfVerse(node)

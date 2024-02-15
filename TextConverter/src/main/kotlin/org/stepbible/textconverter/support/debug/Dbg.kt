@@ -2,15 +2,14 @@
 package org.stepbible.textconverter.support.debug
 
 import org.stepbible.textconverter.support.bibledetails.BibleBookNames
-import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.utils.ReversificationDataRow
-import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
+import java.nio.file.Paths
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import kotlin.system.exitProcess
@@ -553,7 +552,7 @@ object Dbg
 
   fun dToFile (text: String, fileName: String = "a.xml")
   {
-    File("C:/Users/Jamie/Desktop/$fileName").bufferedWriter().use { it.write(text) }
+    File("$fileName").bufferedWriter().use { it.write(text) }
   }
 
 
@@ -618,7 +617,7 @@ object Dbg
 
   
   /****************************************************************************/
-  @Synchronized fun d (document : Document, fileName: String = "a"): Document
+  @Synchronized fun d (document : Document, fileName: String = "a.xml"): Document
   {
     outputDom(document, fileName)
     return document
@@ -693,9 +692,9 @@ object Dbg
    *                 written to the desktop.
    */
 
-  fun outputDom (doc: Document, fileName: String = "a")
+  fun outputDom (doc: Document, fileName: String = "a.xml")
   {
-    Dom.outputDomAsXml(doc, "C:/Users/Jamie/Desktop/$fileName.usx", null)
+    Dom.outputDomAsXml(doc, Paths.get(FileLocations.getTemporaryInvestigationsFolderPath(), fileName).toString(),null)
   }
 
 

@@ -286,7 +286,6 @@ object PackageContentHandler
     ProcessingDetails(::ifUsingStepOsis2mod, ::osis2modDataHandler,    FileLocations.getOsis2ModSupportFilePath()),
     ProcessingDetails(::doItAlways,          null,             FileLocations.getSwordConfigFolderPath()),
     ProcessingDetails(::doItAlways,          null,             Paths.get(FileLocations.getSwordTextFolderPath(), "dummyFile.txt").toString()),
-    ProcessingDetails(::doItAlways,          ::swordConfigFileHandler, FileLocations.getSwordConfigFilePath()),
   )
 
 
@@ -295,8 +294,9 @@ object PackageContentHandler
     ProcessingDetails(::doItAlways, null,                           FileLocations.getSwordZipFilePath()),
     ProcessingDetails(::doItAlways, ::featuresSummaryBibleStructureHandler, FileLocations.getTextFeaturesFilePath()),
     ProcessingDetails(::doItAlways, ::featuresSummaryRunParametersHandler,  FileLocations.getRunFeaturesFilePath()),
-    ProcessingDetails(::doItAlways, ::osisSaver,                            FileLocations.makeInputOsisFilePath())
-  )
+    ProcessingDetails(::doItAlways, ::osisSaver,                            FileLocations.makeInputOsisFilePath()),
+    ProcessingDetails(::doItAlways, ::swordConfigFileHandler,               FileLocations.getSwordConfigFilePath()),
+ )
 
 
   /****************************************************************************/
@@ -324,12 +324,22 @@ object PackageContentHandler
 
   private fun osisSaver (filePath: String)
   {
-    if ("osis" == ConfigData["stepOriginData"]!!)
-      return
+    val revisedName = "osis" + ConfigData["stepModuleName"]!! + ".xml"
+    val revisedPath = Paths.get(FileLocations.getInputOsisFolderPath(), revisedName).toString()
 
-    StepFileUtils.deleteFileOrFolder(FileLocations.getInputOsisFolderPath())
-    StepFileUtils.createFolderStructure(FileLocations.getInputOsisFolderPath())
-    Dom.outputDomAsXml(OsisPhase2SavedDataCollection.getDocument(), FileLocations.getInputOsisFolderPath(),null)
+    if ("osis" == ConfigData["stepOriginData"]!!) // We started from OSIS.  I simply need to convert the name to standard form.
+    {
+      val existingName = File(FileLocations.getInputOsisFilePath()!!).name
+      if (!existingName.equals(revisedName, ignoreCase = true))
+        StepFileUtils.renameFile(revisedPath, FileLocations.getInputOsisFilePath()!!)
+    }
+
+    else // Started from USX or OSIS.
+    {
+      StepFileUtils.deleteFileOrFolder(FileLocations.getInputOsisFolderPath())
+      StepFileUtils.createFolderStructure(FileLocations.getInputOsisFolderPath())
+      Dom.outputDomAsXml(OsisPhase2SavedDataCollection.getDocument(), revisedPath,null)
+    }
   }
 
 

@@ -188,6 +188,7 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
 
     var additionalInformation = ""
     if (!bibleStructureToCompareWith.otBooksAreInOrder() || !bibleStructureToCompareWith.ntBooksAreInOrder()) additionalInformation  = "*** Text contains out-of-order books. ***\n"
+    if (bibleStructureToCompareWith.hasSubverses()) additionalInformation += "*** Text contains subverses. ***\n"
     if (!bibleStructureToCompareWith.versesAreInOrder()) additionalInformation += "*** Text contains out-of-order verses. ***"
     if (additionalInformation.endsWith("\n")) additionalInformation = additionalInformation.substring(0, additionalInformation.length - 1)
     outputDetails(details, additionalInformation)

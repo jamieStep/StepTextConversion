@@ -2,6 +2,7 @@ package org.stepbible.textconverter.usxinputonly
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.*
@@ -1101,7 +1102,7 @@ import java.util.*
   {
     /**************************************************************************/
     if (!m_CanReadAndWriteVernacular)
-      return "Needed to parse vernacular content but don't have details of format"
+      return "Xref markup _could_ be turned into a functioning xref, but I lack the information to parse the vernacular content"
 
 
 

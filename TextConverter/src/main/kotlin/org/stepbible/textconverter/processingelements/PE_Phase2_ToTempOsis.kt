@@ -11,8 +11,6 @@ import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.utils.*
-import org.w3c.dom.Document
-import javax.print.Doc
 
 
 /****************************************************************************/
@@ -89,7 +87,6 @@ object PE_Phase2_ToTempOsis : PE
        be USX analogues, but they're likely to be different enough that I've
        decided there is little point in trying to set up common structures. */
 
-    ProtocolConverterStandardOsisToExtendedOsis.process(doc) // It's safe to do this, regardless of whether the input is in standard or extended form.
     SE_BasicValidator(OsisTempDataCollection).structuralValidation(OsisTempDataCollection) // Checks for basic things like all verses being under chapters.
 
 
@@ -101,7 +98,6 @@ object PE_Phase2_ToTempOsis : PE
     SE_StrongsHandler(OsisTempDataCollection).process(); x()
     Osis_CrossReferenceChecker.process(OsisTempDataCollection); x()
     SE_CalloutStandardiser(OsisTempDataCollection).process(); x()
-    SE_CanonicalHeadingsHandler(OsisTempDataCollection).process(); x()
     SE_ListEncapsulator(OsisTempDataCollection).process(); x()
 
 
@@ -112,12 +108,12 @@ object PE_Phase2_ToTempOsis : PE
        specifically for USX. */
 
     handleReversification(); x()
-    removeTemporarySupportStructure(OsisTempDataCollection)
+    removeDummyVerses(OsisTempDataCollection)
     ContentValidator.process(OsisTempDataCollection, Osis_FileProtocol, OsisPhase2SavedDataCollection, Osis_FileProtocol)
     EmptyVerseHandler.preventSuppressionOfEmptyVerses(OsisTempDataCollection)
     EmptyVerseHandler(OsisTempDataCollection).markVersesWhichWereEmptyInTheRawText()
     SE_FeatureCollector(OsisTempDataCollection).process()
-    ProtocolConverterExtendedOsisToStepOsis.process(doc)
+    ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse.process(OsisTempDataCollection)
     Dom.outputDomAsXml(doc, FileLocations.getTempOsisFilePath(), null)
   }
 
@@ -148,29 +144,16 @@ object PE_Phase2_ToTempOsis : PE
 
 
   /****************************************************************************/
-  /* Removes list brackets -- <lg> etc.  This gives us invalid OSIS, but it
-     still works and renders better than if we retain the <l>.  Plus unless we
-     do this, we almost invariably end up with cross-boundary markup. */
+  /* Earlier processing -- here or in things it relies upon -- may have
+     introduced dummy verses.  We now remove them. */
 
-  private fun removeListBrackets (doc: Document)
+  private fun removeDummyVerses (dataCollection: X_DataCollection)
   {
-    doc.findNodesByName("lg").forEach {Dom.promoteChildren(it); Dom.deleteNode(it) }
-    doc.findNodesByName("l").forEach { Dom.promoteChildren(it); Dom.deleteNode(it) }
-  }
-
-
-  /****************************************************************************/
-  /* Removes any temporary items added to support processing. */
-
-  private fun removeTemporarySupportStructure (dataCollection: X_DataCollection)
-  {
-    Dbg.reportProgress("Removing temporary support details from OSIS.")
+    Dbg.reportProgress("Removing any dummy verses.")
     dataCollection.getRootNodes().forEach {rootNode ->
       Dom.findNodesByName(rootNode, dataCollection.getFileProtocol().tagName_verse(), false).filter { NodeMarker.hasDummy(it) }.forEach { Dom.deleteNode(it) }
       Dom.setNodeName(rootNode, "div")
     }
-
-    NodeMarker.deleteAllMarkers(dataCollection)
   }
 
 
@@ -219,9 +202,7 @@ object PE_Phase2_ToTempOsis : PE
   {
     /**************************************************************************/
     OsisTempDataCollection.loadFromText(Phase1TextOutput, false)
-    removeListBrackets(OsisTempDataCollection.getDocument())
-    SE_TableHandler(OsisTempDataCollection).process()
-    SE_CrossBoundaryMarkupHandler(OsisTempDataCollection).process()
+    Phase1TextOutput = ""
 
 
 
@@ -238,10 +219,10 @@ object PE_Phase2_ToTempOsis : PE
 
 
     /**************************************************************************/
-    /* We no longer need this.  Empty it to free up space and also to remove
-       any temptation to use it. */
+    /* Apply temporary (or permanent) changes to make the data more amenable to
+       processing. */
 
-    Phase1TextOutput = ""
+    ProtocolConverterOsisForThirdPartiesToInternalOsis.process(OsisTempDataCollection)
 
 
 

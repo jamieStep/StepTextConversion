@@ -231,7 +231,7 @@ object Dom
     fun getNodesInTree (startNode: Node): List<Node>
     {
         val res: MutableList<Node> = ArrayList()
-        res.add(startNode)
+        if ("#document" != Dom.getNodeName(startNode)) res.add(startNode)
         getNodesInTree(res, startNode)
         return res
     }

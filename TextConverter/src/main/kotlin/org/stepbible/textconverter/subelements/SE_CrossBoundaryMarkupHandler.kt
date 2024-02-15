@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.subelements
 
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
@@ -63,11 +64,14 @@ class SE_CrossBoundaryMarkupHandler (dataCollection: X_DataCollection) : SE(data
 
   private fun changeParaPToMilestone (rootNode: Node)
   {
-    val paras = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isPlainVanillaPara(it) }
-    paras.forEach { Dom.convertToSelfClosingNode(it) }
-    if (paras.isNotEmpty())
-      IssueAndInformationRecorder.setForcedSelfClosingParas()
+    val vanillaParas = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isPlainVanillaPara(it) }
+    vanillaParas.forEach { Dom.convertToSelfClosingNode(it) }
 
+    val poetryParas = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isPoetryPara(it) }
+    poetryParas.forEach { Dom.convertToSelfClosingNode(it) }
+
+    if (vanillaParas.isNotEmpty() || poetryParas.isNotEmpty())
+      IssueAndInformationRecorder.setForcedSelfClosingParas()
   }
 
 
@@ -89,6 +93,10 @@ class SE_CrossBoundaryMarkupHandler (dataCollection: X_DataCollection) : SE(data
 
 
   /****************************************************************************/
+  /* The verse is a child of a span type, and I assume that a span can be
+     split into two, one part before the verse node, then the verse, and then
+     the rest.  Doing this means we don't have cross-boundary markup. */
+
   private fun splitEnclosingSpanTypeNode (verse: Node)
   {
     /**************************************************************************/
@@ -98,7 +106,10 @@ class SE_CrossBoundaryMarkupHandler (dataCollection: X_DataCollection) : SE(data
 
 
 
-    /****************************************************************************/
+   /****************************************************************************/
+   /* If the verse is the first child of the parent, we can simply delete the
+      verse and then reinsert it before the parent. */
+
    if (0 == versePos)
    {
      Dom.deleteNode(verse)
@@ -109,6 +120,9 @@ class SE_CrossBoundaryMarkupHandler (dataCollection: X_DataCollection) : SE(data
 
 
     /****************************************************************************/
+    /* If the verse is the last child of the parent, we can delete the verse and
+       insert it after the parent. */
+
     if (siblings.size - 1 == versePos)
     {
       Dom.deleteNode(verse)
@@ -119,14 +133,18 @@ class SE_CrossBoundaryMarkupHandler (dataCollection: X_DataCollection) : SE(data
 
 
     /****************************************************************************/
+    /* The verse is somewhere in the middle of the children of the parents, so we
+       have to split things out into a before, the verse, and an after. */
+
     val pre = parent.cloneNode(true)
     val post = parent.cloneNode(true)
-    Dom.getChildren(post).subList(0, versePos).forEach { Dom.deleteNode(it) }
-    Dom.getChildren(pre).subList(versePos, siblings.size).forEach { Dom.deleteNode(it) }
+    Dom.getChildren(post).subList(0, versePos + 1).forEach { Dom.deleteNode(it) } // Delete everything prior to and including the verse.
+    Dom.getChildren(pre).subList(versePos, siblings.size).forEach { Dom.deleteNode(it) } // Delete the verse and everything after it.
     Dom.insertNodeBefore(parent, pre)
     Dom.deleteNode(verse)
     Dom.insertNodeBefore(parent, verse)
     Dom.insertNodeAfter(parent, post)
     Dom.deleteNode(parent)
+    //Dbg.d(parent.ownerDocument)
   }
 }

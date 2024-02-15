@@ -1601,10 +1601,13 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   private fun handleVerseEid (id: String, wordCount: Int)
   {
+    //Dbg.d(id)
     val refKeys = m_FileProtocol!!.readRefCollection(id).getAllAsRefs()
     val isElision = refKeys.size > 1
 
     refKeys.forEach {
+      //if (Dbg.d(it.toString(), "Psa 11:1"))
+      //  debugDisplayStructure()
       val v = getVerseDescriptor(it.getCopyOfElements())!!
       v.m_WordCount = if (isElision) C_ElementInElision else wordCount
     }

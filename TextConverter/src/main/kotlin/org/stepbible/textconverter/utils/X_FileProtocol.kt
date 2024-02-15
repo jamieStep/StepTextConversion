@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.utils
 
+import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
@@ -49,6 +50,12 @@ open class X_FileProtocol
   /****************************************************************************/
 
   /****************************************************************************/
+  enum class ProtocolType { USX, OSIS, UNKNOWN }
+  protected lateinit var Type: ProtocolType
+  fun getProtocolType () = Type
+
+
+  /****************************************************************************/
   open fun readRef (node: Node, attrId: String) = readRef(node[attrId]!!)
   open fun readRef (text: String) = readRefCollection(text).getFirstAsRef()
   open fun readRefCollection (node: Node, attrId: String) = readRefCollection(node[attrId]!!)
@@ -89,6 +96,7 @@ open class X_FileProtocol
   open fun isNumberedLevelTag (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isParaWhichCouldContainMultipleVerses (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isPlainVanillaPara (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
+  open fun isPoetryPara (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isSpanType (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isSpeakerNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isStrongsNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
@@ -135,13 +143,66 @@ open class X_FileProtocol
    *         'N' (definitely does not contain canonical text);
    *         '?' (may or may not contain canonical text -- deduce from context)
    *         'X' (a node of a type we are not presently catering.
+   *         Plus the node which gave us the definite decision.
    */
 
-  fun getVerseEndInteraction (node: Node): Char
+  fun getVerseEndInteraction (node: Node): Pair<Char, Node>
   {
-    val key = Osis_FileProtocol.getExtendedNodeName(node)
-    if (isNoteNode(node) || isXrefNode(node)) return 'Y'
-    return m_TagDetails[key]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity
+    var n = node
+    while (true)
+    {
+      var key = Osis_FileProtocol.getExtendedNodeName(n)
+
+
+
+      /************************************************************************/
+      /* Deal with text and comments first. */
+
+      if ('#' == key[0])
+      {
+        when (key[1])
+        {
+          'c' -> return Pair('N', n) // Comment: definitely non-canonical.
+
+          't' -> // Text: Can skip whitespace.
+          {
+            if (n.textContent.trim().isEmpty())
+              return Pair('N', n) // Can always skip whitespace.
+
+            n = n.parentNode
+            continue
+          }
+        } // when
+      } // if ('#' == key[0])
+
+
+
+      /************************************************************************/
+      /* I _think_ it's also always ok to skip over an empty node. */
+
+      if (!n.hasChildNodes())
+        return Pair('N', n)
+
+
+
+      /************************************************************************/
+      /* Not text or comment.  Look up in table. */
+
+      if (key.last() in "123456")  // USX node names may contain levels.  The lookup table we use here does not.
+        key = key.substring(0, key.length - 1)
+
+      if (isNoteNode(n) || isXrefNode(n)) return Pair('Y', n) // Treat notes and xrefs as though they were canonical, so they remain with the verse.
+
+      val res = m_TagDetails[key]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity // Try looking up the extended name, and failing that, the non-extended version.
+
+      when (res)
+      {
+        'Y', 'N' -> return Pair(res, n)
+        'X' -> throw StepException("Encountered node for which we have no canonicity details: ${Dom.toString(n)}.")
+      }
+
+      n = n.parentNode
+    } // while
   }
 
 
@@ -161,7 +222,7 @@ open class X_FileProtocol
       val canonicity = getTagDescriptor(node).canonicity
       if ('Y' == canonicity || "chapter" == Dom.getNodeName(p)) return true
       if ('N' == canonicity) break
-      p = p.parentNode
+      p = p.parentNode ?: return false
     }
 
     return false
@@ -176,7 +237,7 @@ open class X_FileProtocol
    * @return True if node is inherently non-canonical.
    */
 
-  fun isInherentlyCanonicalTag (node: Node) = 'Y' == m_TagDetails[Dom.getNodeName(node)]!!.canonicity
+  fun isInherentlyCanonicalTag (node: Node) = 'Y' == (m_TagDetails[getExtendedNodeName(node)]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity)
 
 
   /****************************************************************************/
@@ -188,7 +249,8 @@ open class X_FileProtocol
    * @return True if node is inherently non-canonical.
    */
 
-  fun isInherentlyNonCanonicalTag (node: Node) = 'N' == m_TagDetails[Dom.getNodeName(node)]!!.canonicity
+  fun isInherentlyNonCanonicalTag (node: Node) = 'N' == (m_TagDetails[getExtendedNodeName(node)]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity)
+
 
 
   /****************************************************************************/
@@ -385,6 +447,17 @@ object Osis_FileProtocol: X_FileProtocol()
   */
 
   override fun isPlainVanillaPara (node: Node): Boolean = "p" == Dom.getNodeName(node)
+
+
+  /****************************************************************************/
+  /**
+  * Returns an indication of whether this node is a poetry para.
+  *
+  * @param node Node to be examined.
+  * @return True if this is a poetry para.
+  */
+
+  override fun isPoetryPara (node: Node): Boolean = "l" == Dom.getNodeName(node)
 
 
   /****************************************************************************/
@@ -650,6 +723,7 @@ object Osis_FileProtocol: X_FileProtocol()
 
   /****************************************************************************/
   init {
+    Type = ProtocolType.OSIS
 
     //*** Replace any code below with the *** OSIS *** code generated by protocolDetails.xlsm. ***
 
@@ -702,8 +776,8 @@ object Osis_FileProtocol: X_FileProtocol()
     m_TagDetails["div:imprimatur"] = TagDescriptor('X', 'N') //
 
     m_TagDetails["div:index"] = TagDescriptor('X', 'N') //
-    m_TagDetails["div:introduction"] = TagDescriptor('X', 'N') //
-    m_TagDetails["div:majorSection"] = TagDescriptor('X', 'N') //
+    m_TagDetails["div:introduction"] = TagDescriptor('N', 'N') //
+    m_TagDetails["div:majorSection"] = TagDescriptor('N', 'N') //
     m_TagDetails["div:map"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:outline"] = TagDescriptor('X', 'N') //
 
@@ -848,7 +922,6 @@ object Usx_FileProtocol: X_FileProtocol()
    {
       var res = Dom.getNodeName(node)
       if ("style" in node) res += ":" + node["style"]
-      if (res.last() in "123456") res = res.substring(0, res.length - 1)
       return res
    }
 
@@ -957,6 +1030,17 @@ object Usx_FileProtocol: X_FileProtocol()
   */
 
   override fun isPlainVanillaPara (node: Node): Boolean = "para" == Dom.getNodeName(node) && "p" == node["style"]!!
+
+
+  /****************************************************************************/
+  /**
+  * Returns an indication of whether this node is a poetry para.
+  *
+  * @param node Node to be examined.
+  * @return True if this is a poetry para.
+  */
+
+  override fun isPoetryPara (node: Node): Boolean = getExtendedNodeName(node).startsWith("para:q")
 
 
   /****************************************************************************/
@@ -1218,6 +1302,7 @@ object Usx_FileProtocol: X_FileProtocol()
 
   /****************************************************************************/
   init {
+    Type = ProtocolType.USX
 
     //*** Replace any code below with the *** USX *** code generated by protocolDetails.xlsm. ***
 

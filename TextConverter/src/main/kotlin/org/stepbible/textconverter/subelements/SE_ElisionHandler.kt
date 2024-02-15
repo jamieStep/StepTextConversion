@@ -105,7 +105,7 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
   private fun processElision (verse: Node)
   {
     val refKeys = m_FileProtocol.readRefCollection(verse, m_FileProtocol.attrName_verseSid()).getAllAsRefKeys()
-    IssueAndInformationRecorder.elidedVerse(refKeys, Dom.toString(verse))
+    IssueAndInformationRecorder.elidedVerse(refKeys, verse[m_FileProtocol.attrName_verseSid()]!!)
 
     if ("tableElision" == NodeMarker.getElisionType(verse))
        refKeys.subList(1, refKeys.size).forEach {
@@ -122,7 +122,7 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
          Dom.insertNodesBefore(verse, nodeList)
       }
 
-    addTemporaryAttributesToMasterVerse(verse, NodeMarker.getElisionType(verse)!!)
+    addTemporaryAttributesToMasterVerse(verse, NodeMarker.getElisionType(verse) ?: "elision")
     m_FileProtocol.updateVerseSid(verse, refKeys.last())
     if (refKeys.size <= 2) return // No footnote on master verse if there is only one other verse in the elision.
 

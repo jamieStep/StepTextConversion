@@ -165,6 +165,7 @@ object FileLocations
   fun getConverterLogFilePath () = Paths.get(m_RootFolderPath, "converterLog.txt").toString()
   fun getOsisToModLogFilePath () = Paths.get(m_RootFolderPath, "osis2ModLog.txt").toString()
   fun getDebugOutputFilePath () = Paths.get(m_RootFolderPath, "debugLog.txt").toString()
+  fun getTemporaryInvestigationsFolderPath() = ConfigData["stepTemporaryInvestigationsFolderPath"]!!
 
 
   /****************************************************************************/

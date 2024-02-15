@@ -210,7 +210,7 @@ object Osis_DetermineReversificationTypeEtc
        If the setting is 'tbd', the choice is determined by whether there are
        grounds for needing our version or not. */
 
-    fun groundsForUsingStepOsis2mod () = ConfigData["stepForceReversificationType"]!! !in "none.conversiontime" || bibleStructureUnderConstruction.versesAreInOrder()
+    fun groundsForUsingStepOsis2mod () = ConfigData["stepForceReversificationType"]!! !in "none.conversiontime" || !bibleStructureUnderConstruction.versesAreInOrder()
 
     var osis2modType = (ConfigData["stepForceOsis2modType"] ?: "tbd").lowercase()
     if (osis2modType.isEmpty()) osis2modType = "tbd"

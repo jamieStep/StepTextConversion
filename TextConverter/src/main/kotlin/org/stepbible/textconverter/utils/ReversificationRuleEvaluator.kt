@@ -1,6 +1,7 @@
 /******************************************************************************/
 package org.stepbible.textconverter.utils
 
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefCollection
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -324,6 +325,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
 
   /****************************************************************************/
   init {
+    //Dbg.d(m_DataCollection.getDocument())
     if (!m_BibleStructure.hasWordCounts())
       m_DataCollection.reloadBibleStructureFromRootNodes(wantWordCount = true)
   }

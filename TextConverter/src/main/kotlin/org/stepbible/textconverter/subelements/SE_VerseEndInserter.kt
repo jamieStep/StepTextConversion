@@ -2,9 +2,9 @@ package org.stepbible.textconverter.subelements
 
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.*
-import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
+import java.io.File
 import java.util.*
 
 
@@ -52,12 +52,13 @@ class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection
   /****************************************************************************/
   override fun process (rootNode: Node)
   {
+    //Dbg.d(rootNode.ownerDocument)
     Dbg.reportProgress("Handling cross-boundary markup for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     deleteVerseEnds(rootNode)                                   // Remove any existing verse ends so we can reposition them.
     Utils.insertDummyVerseTags(m_FileProtocol, rootNode)     // Dummy verse end at the end of each chapter, so we always have something to insert before.
     insertVerseEnds(rootNode)                                   // Initial positioning.
     Utils.deleteDummyVerseTags(m_FileProtocol, rootNode) // Get rid of the dummy nodes.
-    Dbg.d(rootNode.ownerDocument) // $$$$$$$$$$
+    //Dbg.d(rootNode.ownerDocument) // $$$$$$$$$$
   }
 
 
@@ -183,10 +184,14 @@ class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection
 
   private fun insertVerseEnd (id: String, sidWhoseEidWeAreCreating: Node, nextVerseSid: Node)
   {
-    Dbg.dCont(id, "Ps.1.3")
+//    Dbg.d(sidWhoseEidWeAreCreating)
+//    if (Dbg.dCont(Dom.toString(sidWhoseEidWeAreCreating), "Ps.1.1"))
+//      Dbg.d(sidWhoseEidWeAreCreating.ownerDocument)
+
     val verseEnd = m_FileProtocol.makeVerseEidNode(sidWhoseEidWeAreCreating.ownerDocument, id)
     val thunk = insertVerseEnd_locatePositionForEid(sidWhoseEidWeAreCreating, nextVerseSid)
     val insertPos = m_AllNodes[thunk.ix]
+
     when (thunk.action)
     {
       SKIP -> Dom.insertNodeBefore(insertPos, verseEnd)
@@ -194,80 +199,11 @@ class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection
     }
     if (!thunk.isSiblingOfSid)
     {
+//      Dbg.d(if (sidWhoseEidWeAreCreating.isSiblingOf(verseEnd)) "True" else "False")
+//      Dbg.d(sidWhoseEidWeAreCreating.parentNode); Dbg.d(verseEnd.parentNode)
       NodeMarker.setCrossBoundaryMarkup(verseEnd)
       IssueAndInformationRecorder.crossVerseBoundaryMarkup("", m_FileProtocol.readRefCollection(id).getFirstAsRefKey(), forceError = false)
-    }
-  }
-
-
-  /****************************************************************************/
-  /* Works up the hierarchy looking for a definitive assessment of whether this
-     node can be skipped or not.
-
-     STOP: If the caller chooses to work with the node which gave rise to this
-           result, the eid should be inserted _after_ thunk.ix.  No more
-           searches should be carried out after receiving this result.
-
-     SKIP: If the caller chooses to work with the node which gave rise to this
-           result, the eid should be inserted _before_ thunk.ix.  If more
-           searches are carried out, the search should resume from the node
-           _before_ thunk.ix.
-     */
-
-  private fun insertVerseEnd_getAction (node: Node): InsertVerseEndThunk
-  {
-    var p = node
-
-    while (true)
-    {
-      /************************************************************************/
-      /* Deal with text and comment nodes first.  (We'll hit this, if at all,
-         only on the first iteration of this loop.  After that we'll be working
-         up the hierarchy, and text nodes and comment nodes don't feature as
-         the parents of anything.) */
-
-      val nodeName = Dom.getNodeName(p)
-      if ('#' == nodeName[0])
-      {
-        when (nodeName[1])
-        {
-          'c' -> return InsertVerseEndThunk(SKIP, m_NodeMap[p]!!) // Can always skip comments.
-
-          't' -> // Can skip whitespace.
-          {
-            if (p.textContent.trim().isEmpty())
-              return InsertVerseEndThunk(SKIP, m_NodeMap[p]!!) // Can always skip whitespace.
-            else
-              p = p.parentNode // Will need to assess based upon parent node.
-          }
-        } // when
-      }
-
-
-
-      /************************************************************************/
-      /* Anything other than text and comment. */
-
-      val thisAction = m_FileProtocol.getVerseEndInteraction(p)
-
-      when (thisAction)
-      {
-        // Say we can skip, and give the index of the node which told us so,
-        // because we can skip directly to a point before that one, even if
-        // it's higher up the hierarchy.
-        SKIP -> return InsertVerseEndThunk(SKIP, m_NodeMap[p]!!)
-
-
-        // Say we have to stop, and return the original node.  The verse-end
-        // will have to be inserted immediately after that.
-        STOP -> return InsertVerseEndThunk(STOP, m_NodeMap[node]!!)
-
-
-        OOPS -> throw StepException("Uncatered for node when placing verse ends: $p")
-      }
-
-
-      p = p.parentNode
+      //Dbg.d(sidWhoseEidWeAreCreating.ownerDocument)
     }
   }
 
@@ -300,7 +236,7 @@ class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection
       }
 
       siblingThunk = thunk // Must be a sibling, and must be better than any previous one.  Save this and move back.
-      ix = thunk.ix - 1
+      ix = thunk.ix
     }
 
 
@@ -317,33 +253,33 @@ class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection
 
   private fun insertVerseEnd_skipBackToSiblingOrStop (sidWhoseEidWeAreCreating: Node, startingIx: Int): InsertVerseEndThunk
   {
-    /**************************************************************************/
     var ix = startingIx
-    var thunk: InsertVerseEndThunk
-
-
-
-    /**************************************************************************/
     while (true)
     {
-      thunk = insertVerseEnd_getAction(m_AllNodes[--ix])
+      /************************************************************************/
+      val nodeAtWhichToStart = m_AllNodes[--ix]
+      val (action, nodeWhichDeterminedAction) = m_FileProtocol.getVerseEndInteraction(nodeAtWhichToStart)
+      when (action)
+      {
+        STOP -> { // We can't pass this node, so we will have to insert after it.
+            return InsertVerseEndThunk(action, ix, sidWhoseEidWeAreCreating.isSiblingOf(nodeAtWhichToStart))
+        }
 
-      // If this is returned, the caller should not look further; and if the
-      // caller accepts this option, the eid should be placed _after_ this node.
-      if (STOP == thunk.action) // If this output is accepted, have to insert _after_ thunk.ix.
-        break
+        SKIP -> { // We're allowed to skip this node (and possibly an ancestor).  There may be a still better position further to the left, but the caller can worry about that.
+          if (sidWhoseEidWeAreCreating.isSiblingOf(nodeAtWhichToStart))
+            return InsertVerseEndThunk(action, m_NodeMap[nodeWhichDeterminedAction]!!, sidWhoseEidWeAreCreating.isSiblingOf(nodeWhichDeterminedAction))
+        }
+      }
 
 
-      thunk.isSiblingOfSid = sidWhoseEidWeAreCreating.isSiblingOf(m_AllNodes[thunk.ix])
-      if (thunk.isSiblingOfSid)
-        break
 
-      ix = thunk.ix
+      /************************************************************************/
+      /* If we're the first child of our parent and haven't yet hit a STOP, it's
+         ok to move up so as to start scanning from the parent. */
+
+      if (nodeAtWhichToStart.parentNode.firstChild === nodeAtWhichToStart)
+        ix = m_NodeMap[nodeAtWhichToStart.parentNode]!!
     }
-
-
-    /**************************************************************************/
-    return thunk
   }
 
 
@@ -375,7 +311,6 @@ class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection
   private val STOP = 'Y'
   private val SKIP = 'N'
   private val CALC = '?'
-  private val OOPS = 'X'
 
 
   /****************************************************************************/
@@ -385,6 +320,7 @@ class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection
   private fun markTags (rootNode: Node)
   {
     m_AllNodes = rootNode.getAllNodes()
+    //debugPrintOrderedNodeList(m_AllNodes)
     m_AllNodes.indices.forEach { m_NodeMap[m_AllNodes[it]] = it }
     m_AllNodes.filter { m_FileProtocol.tagName_chapter() == Dom.getNodeName(it) } .forEach {
       it["_vEnd"] = STOP.toString() // If we reach chapter level with no firm decision as to canonicity, we must be dealing with canonical text, and can't skip it.
@@ -399,7 +335,7 @@ class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection
   private fun markHierarchy (node: Node, fromAbove: Char)
   {
     if (Dom.getNodeName(node).startsWith('#')) return // Can't mark text or comment nodes.
-    val myMarker = if (CALC == fromAbove) m_FileProtocol.getVerseEndInteraction(node) else fromAbove
+    val myMarker = if (CALC == fromAbove) m_FileProtocol.getVerseEndInteraction(node).first else fromAbove
     node["_vEnd"] = myMarker.toString()
     Dom.getChildren(node).forEach { markHierarchy(it, myMarker) }
   }
@@ -420,240 +356,17 @@ class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                            Old version                                 **/
+  /**                              Debug                                    **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
 
   /****************************************************************************/
-  /* See discussion at 'New version'. */
-
-  /****************************************************************************/
-  /* We have a fair degree of liberty when placing end nodes, so long as all
-     canonical text remains within verses.
-
-     We are placing the eid for sid sidWhoseEidWeAreCreating.  nextVerseSid is
-     the next sid after that one.  We know that the new eid must be somewhere
-     _before_ the latter.
-
-     But we can probably do better than place it _immediately_ before
-     nextVerseSid, because we can work leftwards through the siblings of
-     nextVerseSid, and we need stop only if we find one which is itself
-     canonical or contains canonical material.  If we do find one of these
-     'stop' nodes, then the verse-end is inserted after it and that's the end
-     of the processing.
-
-     If we end up being able to move past _all_ of the left-hand siblings of
-     nextVerseSid, we can move up to the parent of nextVerseSid, and work through
-     _it's_ left-hand siblings in the same way ... and so on.
-
-     If we haven't already inserted the verse end, eventually, given that
-     chapters are enclosing nodes, we must end up at the same level as
-     sidWhoseEidWeAreCreating, or else at the same level as some ancestor of
-     sidWhoseEidWeAreCreating.  At this point, we can still carry on moving left,
-     though, because we are bound to hit one of three cases: a) a canonical text
-     node; b) a node which _contains_ canonical text; or c) an ancestor of
-     sidWhoseEidWeAreCreating.
-
-     Cases a) and b) we have already mentioned above in essence -- they
-     represent stop nodes, and the new eid needs to be inserted immediately to
-     their right.
-
-     We're only going to hit case c) (I think) if this ancestor of
-     sidWhoseEidWeAreCreating contains canonical text as well as
-     sidWhoseEidWeAreCreating itself.
-
-     In this case, we can now work our way down the tree, tentatively placing
-     the eid as the last child of each node, and then moving leftwards over any
-     non-canonical nodes.  If at this point, the eid will be a sibling of
-     sidWhoseEidWeAreCreating, we can place the eid at this point.  Otherwise we
-     can work down into this node and repeat the process -- the main refinement
-     being the extent to which we can optimise this process.
-
-     This then leaves only the case where we have been trying to worm our way
-     downwards, but have concluded that this isn't going to let us place the eid
-     as a sibling of sidWhoseEidWeAreCreating.  There seem to be two obvious
-     options here -- place the eid at the _lowest_ place in the hierarchy which
-     we have found for it, or place it at the _highest_ (ie adjacent to the
-     highest level ancestor of sidWhoseEidWeAreCreating which we found in
-     previous processing. */
-
-  private fun insertVerseEndOld (id: String, sidWhoseEidWeAreCreating: Node, nextVerseSid: Node)
+  private fun debugPrintOrderedNodeList (nodes: List<Node>)
   {
-    /**************************************************************************/
-    //Dbg.d("=============================")
-    //Dbg.dCont(id, "1KI 7:1-12")
-    //Dbg.d(sidWhoseEidWeAreCreating)
-    //Dbg.d(nextVerseSid)
-    //val dbg = Dbg.dCont(id, "HAB 3:1")
-
-
-
-    /**************************************************************************/
-    val verseEnd = sidWhoseEidWeAreCreating.ownerDocument.createNode("<${m_FileProtocol.tagName_verse()} ${m_FileProtocol.attrName_verseEid()}='$id'/>") // The new node.
-
-
-
-    /**************************************************************************/
-    /* Don't be put off by the name.  This initial setting isn't a putative
-       insertion point, but we will progressively refine things. */
-
-    var putativeInsertionPoint = nextVerseSid
-
-
-
-    /**************************************************************************/
-    /* For the remaining discussion, let's simplify the job of isSkippable, and
-       imagine it simply looks for a node which is inherently canonical, which
-       is of interest, because we can't place the eid before canonical text.
-       So we start off by running left across the siblings looking for such a
-       node.  If we find one, then that's the place of interest (but will need
-       further refinement).  If we don't find one (ie there are no blockages
-       left of where we are), then we move up a level, and work left from that
-       point, and so on. */
-
-    while (true)
-    {
-      val p = Dom.getPreviousSiblingNotSatisfying(putativeInsertionPoint, ::insertVerseEnd_canBeRegardedAsNonCanonical)
-
-      if (null != p) // We've found a place we can't go beyond.
-      {
-        putativeInsertionPoint = p
-        break
-      }
-
-      putativeInsertionPoint = putativeInsertionPoint.parentNode
+    File("C:/Users/Jamie/Desktop/nodeList.txt").bufferedWriter().use { writer ->
+      var n = 0
+      nodes.forEach { writer.write("${n++}: ${Dom.toString(it)}\n") }
     }
-
-
-
-    /**************************************************************************/
-    /* putativeInsertionPoint is now pointing at a node which we can't skip
-       _past_, but we may be able to work our way down _into_ it, so long we
-       stay to the right of any canonical content.  However, given that the
-       whole point of what we're doing here is to try and get the sid and eid
-       as siblings, there's no point in trying this at all unless the sid is a
-       descendant of the putative insertion point. */
-
-   if (Dom.hasAsAncestor(sidWhoseEidWeAreCreating, putativeInsertionPoint))
-   {
-     var improvedInsertionPoint = putativeInsertionPoint
-     val dummyNode = Dom.createNode(sidWhoseEidWeAreCreating.ownerDocument, "<TEMP/>")
-     while (true)
-     {
-       if (Dom.isSiblingOf(improvedInsertionPoint, sidWhoseEidWeAreCreating)) break
-       if (isInherentlyNonCanonicalTag(improvedInsertionPoint)) break
-       if (!improvedInsertionPoint.hasChildNodes()) break
-       improvedInsertionPoint.appendChild(dummyNode)
-       val p = Dom.getPreviousSiblingNotSatisfying(improvedInsertionPoint.lastChild, ::insertVerseEnd_canBeRegardedAsNonCanonical) ?: throw StepException("!!!!")
-       Dom.deleteNode(dummyNode)
-       improvedInsertionPoint = p
-     }
-
-     if (Dom.isSiblingOf(improvedInsertionPoint, sidWhoseEidWeAreCreating))
-     {
-       Dom.insertNodeAfter(improvedInsertionPoint, verseEnd)
-       return
-     }
-   }
-
-
-
-    /**************************************************************************/
-    /* Nowhere good to put it, so may as well leave it at the top of the
-       structure until experience teaches us there's something better we can
-       do. */
-
-    if (Dom.hasAsAncestor(nextVerseSid, putativeInsertionPoint))
-      Dom.insertNodeBefore(putativeInsertionPoint, verseEnd)
-    else
-      Dom.insertNodeAfter(putativeInsertionPoint, verseEnd)
-
-    if (!Dom.isSiblingOf(sidWhoseEidWeAreCreating, verseEnd))
-      insertVerseEnd_flagFailure(sidWhoseEidWeAreCreating, verseEnd)
   }
-
-
-  /****************************************************************************/
-  fun insertVerseEnd_flagFailure (a: Node, b:Node)
-  {
-    NodeMarker.setCrossBoundaryMarkup(a)
-    NodeMarker.setCrossBoundaryMarkup(b)
-  }
-
-
-  /****************************************************************************/
-  /* Determines whether a given node should be regarded as containing
-     canonical text, or being a canonical text node.  Actually, perhaps that
-     is slightly misleading.  This method is used only when attempting to
-     place a verse eid node, where basically we can move it towards the
-     start of the node list so long as any nodes we skip over are definitely
-     non-canonical.
-
-     Returns true if ...
-
-     - The node is a non-whitespace text node and is _not_ under a node whose
-       contents we know a priori will always be non-canonical.
-
-     - The node contains a verse node.  (This is a late addition -- it caters
-       for the situation where we have an empty verse within, say, a para.  We
-       want to treat empty verses as being canonical -- or more to the point,
-       we can't move the eid for a given verse back past the sid, so we
-       therefore also can't traverse anything which contains the sid.)
-
-     - Any text node under the given node is canonical.
-   */
-
-  fun insertVerseEnd_containsCanonicalText (node: Node): Boolean
-  {
-    if (isInherentlyCanonicalTag(node)) return true
-    if (Dom.isTextNode(node) && !Dom.isWhitespace(node) && !isInherentlyNonCanonicalTagOrIsUnderNonCanonicalTag(node)) return true
-    if (null != Dom.findNodeByName(node, m_FileProtocol.tagName_verse(), false)) return true
-    return Dom.findAllTextNodes(node).filter { !Dom.isWhitespace(it) }.any { !isInherentlyNonCanonicalTagOrIsUnderNonCanonicalTag(it) }
-  }
-
-
-
-  /****************************************************************************/
-  /* I take whitespace as skippable, plus any empty para, and any kind of tag
-     known to be non-canonical, except that I _think_ we want to treat notes
-     as not skippable (ie we want to retain them _inside_ verses). */
-
-  fun insertVerseEnd_canBeRegardedAsNonCanonical (node: Node): Boolean
-  {
-    if (Dom.isWhitespace(node)) return true // You can skip whitespace.
-    if (m_FileProtocol.isPlainVanillaPara(node) && !node.hasChildNodes()) return true // You can skip empty paras.
-    val nodeName = Dom.getNodeName(node)
-    if (m_FileProtocol.tagName_verse() == nodeName) return false // You can't skip verses.
-    if (m_FileProtocol.tagName_note()  == nodeName) return false // You can't skip notes.
-    if ("#text" == nodeName) return false // You can't skip non-blank text.
-    if (isInherentlyNonCanonicalTag(node) || !insertVerseEnd_containsCanonicalText(node)) return true // You can skip non-canonical tags, or any tag which has no canonical text nodes below it.
-    return false
-  }
-
-
-
-  /****************************************************************************/
-  /* I take whitespace as skippable, plus any empty para, and any kind of tag
-     known to be non-canonical, except that I _think_ we want to treat notes
-     as not skippable (ie we want to retain them _inside_ verses). */
-
-  fun insertVerseEnd_canBeRegardedAsNonCanonicalOld (node: Node): Boolean
-  {
-    if (Dom.isWhitespace(node)) return true // You can skip whitespace.
-    if (m_FileProtocol.isPlainVanillaPara(node) && !node.hasChildNodes()) return true // You can skip empty paras.
-    val nodeName = Dom.getNodeName(node)
-    if (m_FileProtocol.tagName_verse() == nodeName) return false // You can't skip verses.
-    if (m_FileProtocol.tagName_note()  == nodeName) return false // You can't skip notes.
-    if ("#text" == nodeName) return false // You can't skip non-blank text.
-    if (isInherentlyNonCanonicalTag(node) || !insertVerseEnd_containsCanonicalText(node)) return true // You can skip non-canonical tags, or any tag which has no canonical text nodes below it.
-    return false
-  }
-
-
-
-  /****************************************************************************/
-  private fun isInherentlyCanonicalTag (node: Node) = m_FileProtocol.isInherentlyCanonicalTag(node)
-  private fun isInherentlyNonCanonicalTag (node: Node) = m_FileProtocol.isInherentlyNonCanonicalTag(node)
-  private fun isInherentlyNonCanonicalTagOrIsUnderNonCanonicalTag (node: Node) = m_FileProtocol.isInherentlyNonCanonicalTagOrIsUnderNonCanonicalTag(node)
 }
