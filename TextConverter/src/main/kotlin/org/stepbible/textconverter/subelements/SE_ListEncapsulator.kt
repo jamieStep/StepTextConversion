@@ -1,6 +1,7 @@
 package org.stepbible.textconverter.subelements
 
 import org.stepbible.textconverter.support.debug.Dbg
+import org.stepbible.textconverter.utils.ProcessRegistry
 import org.stepbible.textconverter.utils.X_DataCollection
 import org.w3c.dom.Node
 
@@ -27,7 +28,11 @@ open class SE_ListEncapsulator (dataCollection: X_DataCollection): SE(dataCollec
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process (rootNode: Node)
+  override fun thingsIveDone () = listOf(ProcessRegistry.ListsEncapsulated)
+
+
+  /****************************************************************************/
+  override fun processRootNodeInternal (rootNode: Node)
   {
     Dbg.reportProgress("Possibly encapsulating lists (but probably not) for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     encapsulateLists(rootNode)

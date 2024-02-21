@@ -79,6 +79,10 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
   /****************************************************************************/
 
   /****************************************************************************/
+  override fun thingsIveDone() = listOf(ProcessRegistry.RuntimeReversificationHandled)
+
+
+  /****************************************************************************/
   /**
   * Applies the changes associated with this variant of reversification (ie the
   * one where any significant changes are left to STEPBible to apply at run
@@ -89,7 +93,7 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
   * @return True if any changes made.
   */
 
-  override fun process (rootNode: Node)
+  override fun processRootNodeInternal (rootNode: Node)
   {
     if ("runtime" == ConfigData["stepReversificationType"]!!.lowercase())
     {

@@ -2,6 +2,7 @@ package org.stepbible.textconverter.subelements
 
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.findNodesByName
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
 
@@ -19,7 +20,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-class SE_CrossBoundaryMarkupHandler (dataCollection: X_DataCollection) : SE(dataCollection)
+class SE_EnhancedVerseEndInsertionPreparer (dataCollection: X_DataCollection) : SE(dataCollection)
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -30,11 +31,15 @@ class SE_CrossBoundaryMarkupHandler (dataCollection: X_DataCollection) : SE(data
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process (rootNode: Node)
+  override fun thingsIveDone () = listOf(ProcessRegistry.CrossBoundaryMarkupSimplified)
+
+
+  /****************************************************************************/
+  override fun processRootNodeInternal (rootNode: Node)
   {
+    //Dbg.d(rootNode.ownerDocument)
     changeParaPToMilestone(rootNode)                        // Possibly change para:p to milestone, to make cross-boundary markup less of an issue.
     splitEnclosingSpanTypeNodes(rootNode)                   // If a sid happens to be directly within a char node, split the char node so that the verse can be moved out of it.
-    SE_VerseEndInserter(m_DataCollection).process(rootNode) // Position verse ends so as to reduce the chances of cross-boundary markup.
   }
 
 
@@ -86,21 +91,44 @@ class SE_CrossBoundaryMarkupHandler (dataCollection: X_DataCollection) : SE(data
 
   private fun splitEnclosingSpanTypeNodes (rootNode: Node)
   {
-    var doneSomething = false
-    Dom.findNodesByName(rootNode, m_FileProtocol.tagName_verse(), false).filter { isSpanType(it.parentNode) } .forEach { splitEnclosingSpanTypeNode(it); doneSomething = true }
-    if (doneSomething) IssueAndInformationRecorder.setSplitCrossVerseBoundarySpanTypeTags()
+    val versesUnderSpan = Dom.findNodesByName(rootNode, m_FileProtocol.tagName_verse(), false).filter { isSpanType(it.parentNode) }
+    if (versesUnderSpan.isEmpty()) return
+
+    var ix = 0
+    while (true)
+    {
+      ix += splitEnclosingSpanTypeNode(versesUnderSpan[ix])
+      if (ix >= versesUnderSpan.size)
+        break
+    }
+
+    IssueAndInformationRecorder.setSplitCrossVerseBoundarySpanTypeTags()
   }
 
 
   /****************************************************************************/
   /* The verse is a child of a span type, and I assume that a span can be
      split into two, one part before the verse node, then the verse, and then
-     the rest.  Doing this means we don't have cross-boundary markup. */
+     the rest.  Doing this means we don't have cross-boundary markup.
 
-  private fun splitEnclosingSpanTypeNode (verse: Node)
+     It's always possible that the one span-type container holds more than one
+     verse, in which case I don't want to repeat this processing on the
+     others.  I therefore return to the caller a count of the number of
+     verses within this container, so the caller can avoid calling this method
+     to process the others. */
+
+  private fun splitEnclosingSpanTypeNode (verse: Node): Int
   {
     /**************************************************************************/
+//    Dbg.d(Dom.toString(verse))
+//    if (Dbg.dCont(Dom.toString(verse), "<verse _t='y', _usx='verse', osisID='Ps.51.2', sID='Ps.51.2'>"))
+//      Dbg.d(verse.ownerDocument)
+
+
+
+    /**************************************************************************/
     val parent = verse.parentNode
+    val res = parent.findNodesByName(m_FileProtocol.tagName_verse()).count()
     val siblings = Dom.getSiblings(verse)
     val versePos = Dom.getChildNumber(verse)
 
@@ -114,7 +142,7 @@ class SE_CrossBoundaryMarkupHandler (dataCollection: X_DataCollection) : SE(data
    {
      Dom.deleteNode(verse)
      Dom.insertNodeBefore(parent, verse)
-     return
+     return res
    }
 
 
@@ -127,7 +155,7 @@ class SE_CrossBoundaryMarkupHandler (dataCollection: X_DataCollection) : SE(data
     {
       Dom.deleteNode(verse)
       Dom.insertNodeAfter(parent, verse)
-      return
+      return res
     }
 
 
@@ -146,5 +174,6 @@ class SE_CrossBoundaryMarkupHandler (dataCollection: X_DataCollection) : SE(data
     Dom.insertNodeAfter(parent, post)
     Dom.deleteNode(parent)
     //Dbg.d(parent.ownerDocument)
+    return res
   }
 }

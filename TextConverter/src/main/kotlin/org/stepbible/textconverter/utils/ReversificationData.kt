@@ -631,7 +631,7 @@ object ReversificationData
 
 
     /**************************************************************************/
-    m_BibleStructure = dataCollection.BibleStructure
+    m_BibleStructure = dataCollection.getBibleStructure()
     m_RuleEvaluator = ReversificationRuleEvaluator(dataCollection)
 
 
@@ -1357,7 +1357,7 @@ object ReversificationData
       if (1 != grp.rows.first().standardRef.getV()) return
 
       if (m_BibleStructure.getLastVerseNo(grp.rows.first().sourceRef) != grp.rows.last().sourceRef.getV()) return
-      if (BibleStructure.makeOsis2modNrsvxSchemeInstance(DataCollection.BibleStructure).getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
+      if (BibleStructure.makeOsis2modNrsvxSchemeInstance(DataCollection.getBibleStructure()).getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
 
       grp.isEntireChapter = true
     }
@@ -1884,7 +1884,7 @@ object ReversificationData
     /**************************************************************************/
     /* Ignore lines where the source ref relates to a book we don't have. */
 
-   if (!DataCollection.BibleStructure.bookExists(row.sourceRef.getB())) return
+   if (!DataCollection.getBibleStructure().bookExists(row.sourceRef.getB())) return
 
 
 

@@ -38,7 +38,7 @@ object Osis_CrossReferenceChecker: CrossReferenceChecker
   /****************************************************************************/
   override fun process (dataCollection: X_DataCollection)
   {
-    m_BibleStructure = dataCollection.BibleStructure
+    m_BibleStructure = dataCollection.getBibleStructure()
     dataCollection.getRootNodes().forEach(::process)
   }
 

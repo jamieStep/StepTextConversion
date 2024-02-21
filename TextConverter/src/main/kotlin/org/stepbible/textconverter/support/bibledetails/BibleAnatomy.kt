@@ -27,8 +27,41 @@ object BibleAnatomy
   /****************************************************************************/
 
   /****************************************************************************/
+  /** All books which may contain chapters with canonical headers. */
+
+  val C_BookNumberForPsa = BibleBookNamesUsx.abbreviatedNameToNumber("Psa")
+  val C_BookNumberForHab = BibleBookNamesUsx.abbreviatedNameToNumber("Hab")
+  val C_BookNumbersOfBooksWhichMayHaveCanonicalHeaders = setOf(C_BookNumberForPsa, C_BookNumberForHab)
+
+
+
+  /****************************************************************************/
+  /** All Psalms which have canonical headers. */
+
   val C_PsalmsWithCanonicalHeaders = setOf(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 97, 98, 99, 100, 101, 102, 103, 107, 108, 109, 110, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 137, 138, 139, 140, 141, 142, 143, 144, 145)
-  val C_AbbreviatedNamesOfBooksWhichMayHaveCanonicalHeaders = setOf("Psa", "Hab")
+
+
+
+  /****************************************************************************/
+  /** All Psalms where at least one verse may turn into a canonical header.
+  *   Note that whether verses *do* turn into canonical headers depends upon
+  *   which versification scheme we are dealing with -- things may already be
+  *   set up correctly in some (most) texts. */
+
+  val C_PsalmsWhereVersesTurnsIntoCanonicalHeader = setOf(3, 4, 5, 6, 7, 8, 9, 10, 12, 11, 13, 18, 17, 19, 20, 21, 22, 30, 29, 31, 34, 33, 36, 35, 38, 37, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 50, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 67, 66, 68, 69, 70, 75, 74, 76, 77, 80, 79, 81, 83, 82, 84, 85, 88, 87, 89, 92, 91, 102, 101, 108, 107, 127, 140, 139, 142, 141)
+
+
+
+  /****************************************************************************/
+  /** ALl Psalms where it is possible that vv1-2 may turn into the canonical
+  *   header.  Note that it does not follow that they will do so on all texts
+  *   -- it depends which versification scheme we are dealing with.  In some
+  *   texts, the canonical header may already exist, and therefore no verses
+  *   need to be moved into the header.  In others only v1 may need to be
+  *   moved.  But in some verses 1 and 2 may need to be moved.  This list is a
+  *   subset of C_PsalmsWhereVersesTurnsIntoCanonicalHeader. */
+  
+  val C_PsalmsWhereMoreThanOneVerseMayTurnIntoCanonicalHeader = setOf(50, 51, 52, 53, 54, 59, 60)
 
   
   /****************************************************************************/

@@ -8,6 +8,7 @@ import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.utils.ReversificationData
+import org.stepbible.textconverter.utils.StepSoftwareVersionSelector
 
 
 /******************************************************************************/
@@ -248,6 +249,14 @@ object Osis_DetermineReversificationTypeEtc
     /**************************************************************************/
     ConfigData.delete("stepOsis2modType")
     ConfigData["stepOsis2modType"] = ConfigData["stepForceOsis2modType"]!!.lowercase()
+
+
+
+    /**************************************************************************/
+    StepSoftwareVersionSelector.setStepSoftwareVersionRequired()
+
+
+    /**************************************************************************/
     Osis_Osis2modInterface.instance().initialise()
   }
 

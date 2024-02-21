@@ -13,7 +13,6 @@ import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
 import java.util.*
-import javax.print.Doc
 import kotlin.io.path.name
 
 /******************************************************************************/
@@ -74,7 +73,7 @@ import kotlin.io.path.name
  * @author ARA "Jamie" Jamieson
  */
 
-open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
+open class X_DataCollection (fileProtocol: X_FileProtocol)
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -109,7 +108,24 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
   /****************************************************************************/
 
   /****************************************************************************/
-  fun addFromDoc (doc: Document): List<Int> = filterOutUnwantedBooksAndPopulateRootNodesStructure(doc)
+  fun addFromDoc (docIn: Document): List<Int>
+  {
+    val res = filterOutUnwantedBooksAndPopulateRootNodesStructure(docIn)
+    return res
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Copies the ProcessRegistry details from another instance.
+  *
+  * @param otherDataCollection
+  */
+
+  fun copyProcessRegistryFrom (otherDataCollection: X_DataCollection)
+  {
+    getProcessRegistry().setDoneDetails(otherDataCollection.getProcessRegistry())
+  }
 
 
   /****************************************************************************/
@@ -124,8 +140,22 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
     withThisBibleStructure {
       clearAll()
       docs.forEach(::addFromDoc)
-      reloadBibleStructureFromRootNodes(false)
     }
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Returns the BibleStructre data, first loading it if necessary.
+  *
+  * @return BibleStructure
+  */
+
+  fun getBibleStructure (): BibleStructure
+  {
+    if (!m_BibleStructureIsValid)
+      reloadBibleStructureFromRootNodes(false)
+   return m_BibleStructure
   }
 
 
@@ -151,7 +181,7 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
       val orderedBookList: MutableList<Int> = mutableListOf()
       files.forEach { Dbg.reportProgress("Loading ${it.name}."); orderedBookList.addAll(addFromFile(it.toString(), saveText)) }
       if (1 == files.size) sortStructuresByBookOrder(orderedBookList)
-      reloadBibleStructureFromRootNodes(false)
+      //reloadBibleStructureFromRootNodes(false)
     }
   }
 
@@ -170,15 +200,12 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 
   fun loadFromText (text: String, saveText: Boolean)
   {
-    withThisBibleStructure {
-      BibleStructure.clear()
-      restoreBookNumberToRootNodeMappings()
-      // Don't clear the text here, in case it's actually coming from the present class.
+    Dbg.reportProgress("Loading data from XML text.")
 
-      Dbg.reportProgress("Loading data from XML text.")
+    withThisBibleStructure { // Don't clear the text here, in case it's actually coming from the present class.
+      restoreBookNumberToRootNodeMappings()
       val orderedBookList = addFromText(text, saveText)
       sortStructuresByBookOrder(orderedBookList)
-      reloadBibleStructureFromRootNodes(false)
       if (saveText)
         setText(text)
     }
@@ -203,7 +230,7 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 
   fun clearAll ()
   {
-    BibleStructure.clear()
+    clearBibleStructure()
     restoreBookNumberToRootNodeMappings()
     clearText()
   }
@@ -236,7 +263,7 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 
   fun findPredecessorBook (bookNo: Int): Int
   {
-    var res = m_BookNumberToRootNode.keys.reversed().find { it < bookNo && null != m_BookNumberToRootNode[it] }
+    val res = m_BookNumberToRootNode.keys.reversed().find { it < bookNo && null != m_BookNumberToRootNode[it] }
     return res ?: throw StepException("findPredecessorBook failed.")
   }
 
@@ -260,10 +287,12 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 
   fun getDocument (): Document
   {
-    if (1 == getNumberOfDocuments())
-      return m_BookNumberToRootNode.values.first { null != it }!!.ownerDocument
-    else
-      throw StepException("getDocument called where more than one document is available.")
+    when (getNumberOfDocuments())
+    {
+       0    -> throw StepException("getDocument called where no document is available.")
+       1    -> return m_BookNumberToRootNode.values.first { null != it }!!.ownerDocument
+       else -> throw StepException("getDocument called where more than one document is available.")
+    }
   }
 
 
@@ -342,6 +371,17 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 
   /****************************************************************************/
   /**
+  * Returns the process registry for this collection of data.
+  *
+  * @return Process registry.
+  */
+
+  fun getProcessRegistry () = m_ProcessRegistry
+
+
+
+  /****************************************************************************/
+  /**
   * Returns any saved text.
   *
   * @return Saved text.
@@ -352,13 +392,14 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 
   /****************************************************************************/
   /**
-  * By default, we do not bother to accumulate word counts.  For conversion-
-  * time reversification, however, this is necessary, so this rescans the data
-  * in order to acquire them.
+  * Flags the BibleStructure element as invalid.
   */
 
-  fun loadWordCounts () = reloadBibleStructureFromRootNodes(true)
-
+  fun invalidateBibleStructure ()
+  {
+    clearBibleStructure()
+    RefBase.setBibleStructure(null)
+  }
 
 
   /****************************************************************************/
@@ -371,8 +412,12 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 
   fun reloadBibleStructureFromRootNodes (wantWordCount: Boolean)
   {
-    BibleStructure.clear()
-    m_BookNumberToRootNode.filter { null != it.value }.forEach { BibleStructure.addFromBookRootNode("", it.value!!, wantWordCount = wantWordCount )}
+    clearBibleStructure()
+    withThisBibleStructure {
+      RefBase.setBibleStructure(m_BibleStructure)
+      m_BookNumberToRootNode.filter { null != it.value }.forEach { m_BibleStructure.addFromBookRootNode("", it.value!!, wantWordCount = wantWordCount )}
+      m_BibleStructureIsValid = true
+    }
   }
 
 
@@ -429,7 +474,7 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
   * Displays the content of the BibleStructure.
   */
 
-  fun debugDisplayBibleStructure () = withThisBibleStructure { BibleStructure.debugDisplayStructure() }
+  fun debugDisplayBibleStructure () = withThisBibleStructure { getBibleStructure().debugDisplayStructure() }
 
 
 
@@ -449,9 +494,8 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
    * records details of the rest.
    */
 
-  protected open fun filterOutUnwantedBooksAndPopulateRootNodesStructure (doc: Document): List<Int>
+  protected open fun filterOutUnwantedBooksAndPopulateRootNodesStructure (docIn: Document): List<Int>
     = throw StepExceptionShouldHaveBeenOverridden()
-
 
 
 
@@ -503,6 +547,14 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 
 
   /****************************************************************************/
+  private fun clearBibleStructure ()
+  {
+    m_BibleStructure.clear()
+    m_BibleStructureIsValid = false
+  }
+
+
+  /****************************************************************************/
   /* Restores the book-number-to-root-node mapping to its default state --
      either that defined by the configuration data, or the UBS ordering. */
 
@@ -534,16 +586,19 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
   private fun withThisBibleStructure (fn: () -> Unit)
   {
     val save: BibleStructure? = RefBase.getBibleStructure()
-    RefBase.setBibleStructure(BibleStructure)
+    RefBase.setBibleStructure(m_BibleStructure)
     fn()
     RefBase.setBibleStructure(save)
   }
 
 
   /****************************************************************************/
-  lateinit var BibleStructure: BibleStructure
   protected var m_BookNumberToRootNode: MutableMap<Int, Node?> = mutableMapOf()
   protected val m_FileProtocol = fileProtocol
+
+  private val m_BibleStructure = BibleStructure(m_FileProtocol)
+  private var m_BibleStructureIsValid = false
+  private var m_ProcessRegistry = ProcessRegistry()
   private var m_Text = StringBuilder()
 
 
@@ -562,10 +617,16 @@ open class X_DataCollection constructor (fileProtocol: X_FileProtocol)
 class Osis_DataCollection: X_DataCollection(Osis_FileProtocol)
 {
   /****************************************************************************/
-  override fun filterOutUnwantedBooksAndPopulateRootNodesStructure (doc: Document): List<Int>
+  override fun filterOutUnwantedBooksAndPopulateRootNodesStructure (docIn: Document): List<Int>
   {
+    val docOut = Dom.createDocument()
+    val importedNode = docOut.importNode(docIn.documentElement, true)
+    docOut.appendChild(importedNode)
+//    Dbg.d(docIn)
+//    Dbg.d(docOut)
+
     val res: MutableList<Int> = mutableListOf()
-    val nodeList = Dom.findNodesByAttributeValue(doc, "div", "type", "book").toSet() union Dom.findNodesByName(doc, "book")
+    val nodeList = Dom.findNodesByAttributeValue(docOut, "div", "type", "book").toSet() union Dom.findNodesByName(docOut, "book")
     nodeList.forEach {
       if (Dbg.wantToProcessBookByAbbreviatedName(it["osisID"]!!))
       {
@@ -579,13 +640,6 @@ class Osis_DataCollection: X_DataCollection(Osis_FileProtocol)
 
     return res
   }
-
-
-
-  /****************************************************************************/
-  init {
-    BibleStructure = BibleStructure(Osis_FileProtocol)
-  }
 }
 
 
@@ -596,13 +650,19 @@ class Osis_DataCollection: X_DataCollection(Osis_FileProtocol)
 class Usx_DataCollection: X_DataCollection(Usx_FileProtocol)
 {
   /****************************************************************************/
-  override fun filterOutUnwantedBooksAndPopulateRootNodesStructure (doc: Document): List<Int>
+  override fun filterOutUnwantedBooksAndPopulateRootNodesStructure (docIn: Document): List<Int>
   {
+    val docOut = Dom.createDocument()
+    val importedNode = docOut.importNode(docIn.documentElement, true)
+    docOut.appendChild(importedNode)
+//    Dbg.d(docIn)
+//    Dbg.d(docOut)
+
     val res: MutableList<Int> = mutableListOf()
 
-    Usx_BookAndChapterConverter.process(doc) // The material may need restructuring so that books and chapters are enclosing nodes.
+    Usx_BookAndChapterConverter.process(docOut) // The material may need restructuring so that books and chapters are enclosing nodes.
 
-    doc.findNodesByName("book").forEach {
+    docOut.findNodesByName("book").forEach {
       if (Dbg.wantToProcessBookByAbbreviatedName(it["code"]!!))
       {
         val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(it["code"]!!)
@@ -615,10 +675,5 @@ class Usx_DataCollection: X_DataCollection(Usx_FileProtocol)
 
     return res
   }
-
-
-  /****************************************************************************/
-  init {
-    BibleStructure = BibleStructure(Usx_FileProtocol)
-  }
 }
+

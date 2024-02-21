@@ -1,13 +1,12 @@
 package org.stepbible.textconverter.usxinputonly
 
-import org.stepbible.textconverter.subelements.SE_VerseEndInserter
+import org.stepbible.textconverter.subelements.SE_EnhancedVerseEndInserter
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Document
 import org.w3c.dom.Node
-import javax.print.Doc
 
 
 /******************************************************************************/
@@ -205,8 +204,8 @@ object Usx_Tidier
     if (ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "no"))
       return
 
-    val processor = SE_VerseEndInserter(UsxDataCollection)
-    doc.findNodesByName("book").forEach(processor::process)
+    val processor = SE_EnhancedVerseEndInserter(UsxDataCollection)
+    doc.findNodesByName("book").forEach(processor::processRootNode)
   }
 
 

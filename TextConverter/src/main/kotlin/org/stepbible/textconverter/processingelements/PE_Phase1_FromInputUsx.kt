@@ -68,7 +68,7 @@ object PE_Phase1_FromInputUsx: PE
   /****************************************************************************/
   private fun doIt ()
   {
-    RefBase.setBibleStructure(UsxDataCollection.BibleStructure)
+    RefBase.setBibleStructure(UsxDataCollection.getBibleStructure())
     UsxDataCollection.loadFromFolder(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForUsx(), false)
     Usx_Preprocessor.process(UsxDataCollection)
     Usx_Tidier.process(UsxDataCollection)

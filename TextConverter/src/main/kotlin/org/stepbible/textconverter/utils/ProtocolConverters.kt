@@ -1,8 +1,5 @@
 package org.stepbible.textconverter.utils
 
-import org.stepbible.textconverter.subelements.SE_CanonicalHeadingsHandler
-import org.stepbible.textconverter.subelements.SE_CrossBoundaryMarkupHandler
-import org.stepbible.textconverter.subelements.SE_TableHandler
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.w3c.dom.Document
@@ -280,14 +277,14 @@ object ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse
       val wrapperPara = Dom.createNode(node.ownerDocument, "<p/>")
       Dom.insertNodeBefore(node, wrapperPara)
 
-       val wrapperHi = Dom.createTextNode(node.ownerDocument, "hi type='bold'/>")
+       val wrapperHi = Dom.createNode(node.ownerDocument, "<hi type='bold'/>")
        wrapperPara.appendChild(wrapperHi)
 
        Dom.deleteNode(node)
        wrapperHi.appendChild(node)
 
       // Turn the node into hi:italic.
-      node -= "who"
+      Dom.deleteAllAttributes(node)
       node["type"] = "italic"
       Dom.setNodeName(node, "hi")
 
@@ -336,29 +333,6 @@ object ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse
     if ("hi:acrostic" == extendedNodeName)
     {
       node["type"] = "italic"
-      return
-    }
-
-
-
-    /**************************************************************************/
-    /* Canonical titles at the ends of books don't work either.  The code
-       below turns this into a bold italic para, but I can't recall whether
-       this is what we had before. */
-
-    if (Osis_FileProtocol.isCanonicalTitleNode(node) && "end" == NodeMarker.getCanonicalHeaderLocation(node)!!)
-    {
-      // Turn the node itself into hi:italic.
-      Dom.setNodeName(node, "hi"); Dom.deleteAllAttributes(node); node["type"] = "italic"
-
-      // Create a bold node, insert it before the node itself, and then move the target node into the bold node.
-      val bold = node.ownerDocument.createTextNode("<hi type='bold'/>")
-      Dom.insertNodeBefore(node, bold); Dom.deleteNode(node); bold.appendChild(node)
-
-      // Ditto with a para.
-      val para = node.ownerDocument.createTextNode("<p/>")
-      Dom.insertNodeBefore(bold, para); Dom.deleteNode(bold); para.appendChild(bold)
-
       return
     }
   }
@@ -431,34 +405,12 @@ object ProtocolConverterOsisForThirdPartiesToInternalOsis
 
 
     /**************************************************************************/
-    /* Need to tidy up canonical headings to make processing more uniform. */
-
-    SE_CanonicalHeadingsHandler(dataCollection).process()
-
-
-
-    /**************************************************************************/
     /* OSIS supports (or strictly, _requires_ that bullet-point lists and
        poetry tags be wrapped in enclosing tags.  These get in the way of other
        processing and don't actually seem to be relevant to whether things work
        or not, so it's convenient to ditch them. */
 
     removeListBrackets(doc)
-
-
-
-    /**************************************************************************/
-    /* We'll need to position verse ends in a moment, but tables can get in the
-       way of doing that, so we need to do something to get round that. */
-
-    SE_TableHandler(dataCollection).process()
-
-
-
-    /**************************************************************************/
-    /* Position verse ends so as to avoid cross-boundary markup. */
-
-    SE_CrossBoundaryMarkupHandler(dataCollection).process()
   }
 
 

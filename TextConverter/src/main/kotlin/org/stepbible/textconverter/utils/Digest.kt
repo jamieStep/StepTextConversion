@@ -107,7 +107,7 @@ object Digest
   {
     val inputOsisFilePath = FileLocations.getInputOsisFilePath()!!
     var res = getDigests().joinToString("\n") { "#  SHA256: ${Paths.get(it.first).fileName}: ${it.second}" }
-    res += "\n#  SHA256 for saved OSIS: ${Paths.get(inputOsisFilePath).fileName}: ${MiscellaneousUtils.getSha256(inputOsisFilePath)}"
+    res += "\n#  SHA256 for OSIS available for future input: ${Paths.get(inputOsisFilePath).fileName}: ${MiscellaneousUtils.getSha256(inputOsisFilePath)}"
     return res
   }
 

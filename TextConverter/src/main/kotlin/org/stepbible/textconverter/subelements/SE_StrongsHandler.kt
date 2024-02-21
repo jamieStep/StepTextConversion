@@ -30,6 +30,10 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
 
   /****************************************************************************/
+  override fun thingsIveDone () = listOf(ProcessRegistry.StrongsCanonicalised)
+
+
+  /****************************************************************************/
   /**
   * See head-of-class comments.
   *
@@ -37,7 +41,7 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
   *   processed.
   */
 
-  override fun process (rootNode: Node)
+  override fun processRootNodeInternal (rootNode: Node)
   {
     Dbg.reportProgress("Handling Strongs for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     val strongs = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isStrongsNode(it) }

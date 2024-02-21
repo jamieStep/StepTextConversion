@@ -58,12 +58,18 @@ open class SE_ConversionTimeReversification
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process()
+  override fun myPrerequisites () = listOf(ProcessRegistry.CanonicalHeadingsCanonicalised, ProcessRegistry.CrossBoundaryMarkupSimplified, ProcessRegistry.ElisionsExpanded, ProcessRegistry.TablesRestructured, ProcessRegistry.EnhancedVerseEndPositioning)
+  override fun thingsIveDone () = listOf(ProcessRegistry.ConversionTimeReversificationHandled)
+
+
+  /****************************************************************************/
+  override fun processDataCollectionInternal ()
   {
-    TODO("SE_ConversionTimeReversification checked (ish), but never tested ...")
+    doIt()
+    m_DataCollection.invalidateBibleStructure() // We've changed the structure, so nothing should rely upon it as-is.
   }
 
-  protected val m_BibleStructure = dataCollection.BibleStructure
+  protected val m_BibleStructure = dataCollection.getBibleStructure()
   private val m_EmptyVerseHandler = emptyVerseHandler
 
 
@@ -135,7 +141,7 @@ open class SE_ConversionTimeReversification
      form if necessary before I do anything else.
   */
 
-  private fun doIt (dataCollection: X_DataCollection)
+  private fun doIt ()
   {
     /**************************************************************************/
     initialise()
@@ -1155,7 +1161,7 @@ open class SE_ConversionTimeReversification
     val topLevelNodes = Dom.pruneToTopLevelOnly(allNodes.subList(firstSpecialVerseSidIx, lastSpecialVerseEidIx + 1))
     topLevelNodes.forEach { Dom.deleteNode(it) } // No need to delete recursively up the tree -- these won't be under anything relevant.
 
-    val canonicalTitle = m_FileProtocol.makeCanonicalTitleNode(ownerDocument); NodeMarker.setCanonicalHeaderLocation(canonicalTitle, "start")
+    val canonicalTitle = m_FileProtocol.makeCanonicalTitleNode(ownerDocument)
     val insertBefore = Dom.findNodeByName(chapterNode, m_FileProtocol.tagName_verse(), false)
     Dom.insertNodeBefore(insertBefore!!, canonicalTitle)
     Dom.addChildren(canonicalTitle, topLevelNodes)
@@ -1208,9 +1214,9 @@ open class SE_ConversionTimeReversification
       Dom.insertNodeAfter(heading, eidNode)
     }
 
-    getCanonicalTitles(rootNode)
-      .filter { "start" == NodeMarker.getCanonicalHeaderLocation(it) }
-      .forEach { encapsulate(it) }
+//    getCanonicalTitles(rootNode)
+//      .filter { "start" == NodeMarker.getCanonicalHeaderLocation(it) }
+//      .forEach { encapsulate(it) }
   }
 
 
@@ -1513,32 +1519,6 @@ open class SE_ConversionTimeReversification
   }
 
   private val m_BookDetails: MutableMap<Int, BookDetails> = HashMap(150)
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                               Protected                                **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-
-  /****************************************************************************/
-  /**
-  * Applies the changes associated with this variant of reversification (ie the
-  * one where any significant changes are left to STEPBible to apply at run
-  * time).  This entails adding footnotes and possibly creating empty verses
-  * where there are holes at the beginning or in the middle of chapters.
-  *
-  * @param rootNode The document to be processed.
-  * @return True if any changes made.
-  */
-
-  override fun process (rootNode: Node) = throw StepExceptionShouldHaveBeenOverridden()
 }
 
 

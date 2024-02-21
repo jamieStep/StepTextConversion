@@ -316,7 +316,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
 
 
   /****************************************************************************/
-  private val m_BibleStructure = dataCollection.BibleStructure
+  private val m_BibleStructure = dataCollection.getBibleStructure()
   private val m_BackstopDefaultRef = Ref.rd(999, 999, 999, 0)
   private val m_DataCollection = dataCollection
   private lateinit var m_Row: ReversificationDataRow

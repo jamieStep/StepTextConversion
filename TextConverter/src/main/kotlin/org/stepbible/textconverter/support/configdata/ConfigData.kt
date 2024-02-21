@@ -887,7 +887,7 @@ object ConfigData
     * Replaces any existing value.
     *
     * @param key Key.
-    * @param theValue Associated value.
+    * @param value Associated value.
     * @param force If true, later calls for this same key are ignored.
     */
 
@@ -1621,9 +1621,9 @@ object ConfigData
     {
         /************************************************************************/
         val C_MaxIndividualBooksToReport = 5
-        val otBooks = OsisTempDataCollection.BibleStructure.getAllBookAbbreviationsOt()
-        val ntBooks = OsisTempDataCollection.BibleStructure.getAllBookAbbreviationsNt()
-        val dcBooks = OsisTempDataCollection.BibleStructure.getAllBookAbbreviationsDc()
+        val otBooks = OsisTempDataCollection.getBibleStructure().getAllBookAbbreviationsOt()
+        val ntBooks = OsisTempDataCollection.getBibleStructure().getAllBookAbbreviationsNt()
+        val dcBooks = OsisTempDataCollection.getBibleStructure().getAllBookAbbreviationsDc()
 
 
 

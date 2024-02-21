@@ -316,30 +316,23 @@ object PackageContentHandler
 
 
   /****************************************************************************/
-  /* Saves the OSIS to the InputOsis folder if appropriate ...
+  /* Early on in the processing, we saved the OSIS to InputOsis under a
+     temporary name -- temporary to discourage people from using it if
+     something went wrong with the processing subsequently.  We've now
+     progressed far enough for us to be confident the OSIS was ok, so we need to
+     rename it to something more meaningful.
 
-     If the original input for this run was OSIS, then we wish to retain that
-     OSIS, and there is therefore nothing to do here.
-  */
+     If we originally started from OSIS, I merely need to make sure the file
+     name reflects the module name. */
 
-  private fun osisSaver (filePath: String)
+  private fun osisSaver (dummy: String)
   {
-    val revisedName = "osis" + ConfigData["stepModuleName"]!! + ".xml"
+    val revisedName = ConfigData["stepModuleName"]!! + ".xml"
     val revisedPath = Paths.get(FileLocations.getInputOsisFolderPath(), revisedName).toString()
 
-    if ("osis" == ConfigData["stepOriginData"]!!) // We started from OSIS.  I simply need to convert the name to standard form.
-    {
-      val existingName = File(FileLocations.getInputOsisFilePath()!!).name
-      if (!existingName.equals(revisedName, ignoreCase = true))
-        StepFileUtils.renameFile(revisedPath, FileLocations.getInputOsisFilePath()!!)
-    }
-
-    else // Started from USX or OSIS.
-    {
-      StepFileUtils.deleteFileOrFolder(FileLocations.getInputOsisFolderPath())
-      StepFileUtils.createFolderStructure(FileLocations.getInputOsisFolderPath())
-      Dom.outputDomAsXml(OsisPhase2SavedDataCollection.getDocument(), revisedPath,null)
-    }
+    val existingName = File(FileLocations.getInputOsisFilePath()!!).name
+    if (!existingName.equals(revisedName, ignoreCase = true))
+      StepFileUtils.renameFile(revisedPath, FileLocations.getInputOsisFilePath()!!)
   }
 
 

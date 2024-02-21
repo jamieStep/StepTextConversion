@@ -380,7 +380,7 @@ object Logger
     var me: MutableList<String>? = messageContainer[refKey]
     if (null == me) { me = mutableListOf(); messageContainer[refKey] = me }
     var s = if (m_Prefix.isEmpty()) "" else m_Prefix.peek() + ": "
-    s += text
+    s += "\u0001" + text // Let's us distinguish content and prefix later.
     me.add(s)
   }
   
@@ -412,11 +412,24 @@ object Logger
     val fileAlreadyExists = (File(m_LogFilePath)).exists()
     if (!fileAlreadyExists) File(m_LogFilePath).appendText(File(m_LogFilePath).parent + "\n\n")
     messageContainer.forEach { convertToDisplayableForm(it.key) }
-    val filteredContent = content.filter { it !in m_MessageDeduplicator }
-    if (filteredContent.isNotEmpty())
-    {
-      filteredContent.forEach { m_MessageDeduplicator.add(it); outputter("$it\n") }
-      outputter("\n")
+
+
+
+    /**************************************************************************/
+    /* Earlier processing separated the prefix for each message from its main
+       content using \u0001.  We can use this to split the message into prefix
+       and content, and I am presently making the assumption that if we have
+       two identical contents, regardless of prefix, I don't need to display
+       both. */
+
+    content.forEach {
+      val x = it.split("\u0001")[1]
+      if (x !in m_MessageDeduplicator)
+      {
+        m_MessageDeduplicator.add(x)
+        outputter(it.replace("\u0001", ""))
+        outputter("\n")
+      }
     }
   }
   

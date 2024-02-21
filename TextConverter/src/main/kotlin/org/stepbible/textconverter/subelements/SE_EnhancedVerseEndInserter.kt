@@ -39,7 +39,7 @@ import java.util.*
 * @author ARA "Jamie" Jamieson
 */
 
-class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection)
+class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection)
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -50,14 +50,18 @@ class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process (rootNode: Node)
+  override fun thingsIveDone() = listOf(ProcessRegistry.EnhancedVerseEndPositioning)
+
+
+  /****************************************************************************/
+  override fun processRootNodeInternal (rootNode: Node)
   {
     //Dbg.d(rootNode.ownerDocument)
     Dbg.reportProgress("Handling cross-boundary markup for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     deleteVerseEnds(rootNode)                                   // Remove any existing verse ends so we can reposition them.
-    Utils.insertDummyVerseTags(m_FileProtocol, rootNode)     // Dummy verse end at the end of each chapter, so we always have something to insert before.
+    Utils.insertDummyVerseTags(m_FileProtocol, rootNode)        // Dummy verse end at the end of each chapter, so we always have something to insert before.
     insertVerseEnds(rootNode)                                   // Initial positioning.
-    Utils.deleteDummyVerseTags(m_FileProtocol, rootNode) // Get rid of the dummy nodes.
+    Utils.deleteDummyVerseTags(m_FileProtocol, rootNode)        // Get rid of the dummy nodes.
     //Dbg.d(rootNode.ownerDocument) // $$$$$$$$$$
   }
 
@@ -185,7 +189,7 @@ class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection
   private fun insertVerseEnd (id: String, sidWhoseEidWeAreCreating: Node, nextVerseSid: Node)
   {
 //    Dbg.d(sidWhoseEidWeAreCreating)
-//    if (Dbg.dCont(Dom.toString(sidWhoseEidWeAreCreating), "Ps.1.1"))
+//    if (Dbg.dCont(Dom.toString(sidWhoseEidWeAreCreating), "2Pet.2.22"))
 //      Dbg.d(sidWhoseEidWeAreCreating.ownerDocument)
 
     val verseEnd = m_FileProtocol.makeVerseEidNode(sidWhoseEidWeAreCreating.ownerDocument, id)
@@ -261,11 +265,36 @@ class SE_VerseEndInserter (dataCollection: X_DataCollection) : SE(dataCollection
       val (action, nodeWhichDeterminedAction) = m_FileProtocol.getVerseEndInteraction(nodeAtWhichToStart)
       when (action)
       {
-        STOP -> { // We can't pass this node, so we will have to insert after it.
-            return InsertVerseEndThunk(action, ix, sidWhoseEidWeAreCreating.isSiblingOf(nodeAtWhichToStart))
+        /**********************************************************************/
+        /* We can't pass this node, so we will have to insert after it.  But
+           because of the way things are ordered, we may have reached this
+           conclusion when deeply nested within the structure where we aren't
+           a sibling of the start node, but we may be able to move up the
+           structure to a position where we _would_ be a sibling.
+
+           Note that it may seem at first sight that we can do this only if we
+           set out positioned as the last child of the parent node.  However,
+           I believe this not to be the case: we should be able to apply the
+           same approach anywhere I think. */
+
+        STOP -> {
+            var node = nodeAtWhichToStart
+            while (!sidWhoseEidWeAreCreating.isSiblingOf(node) && "chapter" != Dom.getNodeName(node))
+              node = node.parentNode
+            if (!sidWhoseEidWeAreCreating.isSiblingOf(node))
+              node = nodeAtWhichToStart
+
+            return InsertVerseEndThunk(action, m_NodeMap[node]!!, sidWhoseEidWeAreCreating.isSiblingOf(node))
         }
 
-        SKIP -> { // We're allowed to skip this node (and possibly an ancestor).  There may be a still better position further to the left, but the caller can worry about that.
+
+
+        /**********************************************************************/
+        /* We're allowed to skip this node (and possibly an ancestor).  There
+           may be a still better position further to the left, but the caller
+           can worry about that. */
+
+        SKIP -> {
           if (sidWhoseEidWeAreCreating.isSiblingOf(nodeAtWhichToStart))
             return InsertVerseEndThunk(action, m_NodeMap[nodeWhichDeterminedAction]!!, sidWhoseEidWeAreCreating.isSiblingOf(nodeWhichDeterminedAction))
         }

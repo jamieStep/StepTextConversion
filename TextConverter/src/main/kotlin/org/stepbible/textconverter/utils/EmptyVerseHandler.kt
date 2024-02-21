@@ -33,7 +33,7 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
     {
       var toggle = true
       dataCollection.getRootNodes().forEach { rootNode ->
-        val emptyVerses = Dom.getNodesInTree(rootNode).filter { NodeMarker.hasEmptyVerseType(it) }.forEach { verse ->
+        Dom.getNodesInTree(rootNode).filter { NodeMarker.hasEmptyVerseType(it) }.forEach { verse ->
           toggle = !toggle
           if (toggle)
           {
@@ -89,7 +89,7 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
 
   private fun annotateEmptyVerse (sid: Node)
   {
-    val sidAsRefKey = m_FileProtocol.readRef(sid!![m_FileProtocol.attrName_verseSid()]!!).toRefKey()
+    val sidAsRefKey = m_FileProtocol.readRef(sid[m_FileProtocol.attrName_verseSid()]!!).toRefKey()
     IssueAndInformationRecorder.verseEmptyInRawText(sidAsRefKey)
     val footnoteNode = m_FileProtocol.makeFootnoteNode(sid.ownerDocument, sidAsRefKey, ReversificationData.getFootnoteForEmptyVerses(sidAsRefKey), caller = null)
     Dom.insertNodeAfter(sid, footnoteNode)
@@ -120,15 +120,19 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
   * be differentiated, it is down to the caller to organise that.
   *
   * @param doc Verse which is marked as being an elision.
+  * @param refKey Identifies the scripture reference for the new verse.
+  * @param wantEid Determines whether we return an eid.
   */
 
-  fun createEmptyVerseForElision (doc: Document, refKey: RefKey): List<Node>
+  fun createEmptyVerseForElision (doc: Document, refKey: RefKey, wantEid: Boolean): List<Node>
   {
     val sid = m_FileProtocol.makeVerseSidNode(doc, Pair(refKey, null))
     val content = createEmptyContent(doc, m_Content_Elision)
-    val eid = m_FileProtocol.makeVerseEidNode(doc, Pair(refKey, null))
     NodeMarker.setEmptyVerseType(sid, "elision") // May be overwritten with a more specific value by the caller.
-    return listOf(sid, content, eid)
+    return if (wantEid)
+      listOf(sid, content, m_FileProtocol.makeVerseEidNode(doc, Pair(refKey, null)))
+    else
+      listOf(sid, content)
   }
 
 
@@ -145,7 +149,7 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
   fun createEmptyVersesForMissingVerses (dataCollection: X_DataCollection): Boolean
   {
     var doneSomething = false
-    dataCollection.BibleStructure.getMissingEmbeddedVersesForText()
+    dataCollection.getBibleStructure().getMissingEmbeddedVersesForText()
       .groupBy { Ref.getB(it) }
       .forEach {
          val rootNode = dataCollection.getRootNode(it.key)

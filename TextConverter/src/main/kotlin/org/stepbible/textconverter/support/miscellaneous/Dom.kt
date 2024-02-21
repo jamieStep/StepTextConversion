@@ -220,6 +220,25 @@ object Dom
   }
 
 
+  /****************************************************************************/
+  /**
+  * Creates and returns an empty document.
+  *
+  * @return Document.
+  */
+
+  fun createDocument (): Document
+  {
+    System.setProperty("javax.xml.xpath.XPathFactory:" + NamespaceConstant.OBJECT_MODEL_SAXON, "net.sf.saxon.xpath.XPathFactoryImpl")
+    val factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
+    factory.isNamespaceAware = true // See comments above.
+    factory.isIgnoringComments = false
+    factory.isIgnoringElementContentWhitespace = false
+    val builder: DocumentBuilder = factory.newDocumentBuilder()
+    return builder.newDocument()
+  }
+
+
     /****************************************************************************/
     /**
      * Generates a collection of all the nodes below a given node, depth first.

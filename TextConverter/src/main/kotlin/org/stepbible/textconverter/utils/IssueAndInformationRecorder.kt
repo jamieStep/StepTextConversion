@@ -201,7 +201,7 @@ object IssueAndInformationRecorder
     if ("tbd" == (ConfigData["stepVersificationScheme"] ?: "tbd"))
       ConfigData["stepVersificationScheme"] = "v11n_" + ConfigData["stepModuleName"]
 
-    outputBibleStructureToJson(outputFilePath, m_DataCollection.BibleStructure)
+    outputBibleStructureToJson(outputFilePath, m_DataCollection.getBibleStructure())
   }
 
 
@@ -505,7 +505,7 @@ object IssueAndInformationRecorder
     /**************************************************************************/
     m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA= "Because reversification is not being applied, the text needs to conform to the selected osis2mod versification scheme.  The following details highlight any issues."
 
-    val analysis = PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.evaluateSingleSchemeDetailed(ConfigData["stepVersificationScheme"]!!, DataCollection.BibleStructure)
+    val analysis = PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.evaluateSingleSchemeDetailed(ConfigData["stepVersificationScheme"]!!, DataCollection.getBibleStructure())
 
     m_BibleTextStructure.DCPresence = analysis.DCPresence
 

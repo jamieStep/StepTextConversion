@@ -188,10 +188,10 @@ open class X_FileProtocol
       /************************************************************************/
       /* Not text or comment.  Look up in table. */
 
-      if (key.last() in "123456")  // USX node names may contain levels.  The lookup table we use here does not.
+      if (key.last() in "123456")  // USX node names may contain levels.  The lookup table we use here does not.  OSIS doesn't have things ending in numbers, so there's no harm in applying this regardless.
         key = key.substring(0, key.length - 1)
 
-      if (isNoteNode(n) || isXrefNode(n)) return Pair('Y', n) // Treat notes and xrefs as though they were canonical, so they remain with the verse.
+      if (isNoteNode(n) || isXrefNode(n)) return Pair('N', n) // Treat notes and xrefs as though they were canonical, so they remain with the verse.
 
       val res = m_TagDetails[key]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity // Try looking up the extended name, and failing that, the non-extended version.
 
@@ -255,7 +255,8 @@ open class X_FileProtocol
 
   /****************************************************************************/
   /**
-   * Returns an indication of whether a given node is non-canonical in its own right (not by reference to ancestors).
+   * Returns an indication of whether a given node is non-canonical in its own
+   * right (not by reference to ancestors).
    *
    * @param node Node of interest.
    * @return True if node is inherently non-canonical.

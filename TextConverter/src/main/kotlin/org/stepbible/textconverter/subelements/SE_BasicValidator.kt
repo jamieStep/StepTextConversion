@@ -2,7 +2,6 @@ package org.stepbible.textconverter.subelements
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.contains
@@ -10,7 +9,6 @@ import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.ref.RefRange
-import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
 
@@ -36,8 +34,9 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process () = doIt(m_DataCollection)
-  override fun process (rootNode: Node) = throw StepException("Should not be called directly")
+  override fun myPrerequisites () = listOf(ProcessRegistry.EnhancedVerseEndPositioning)
+  override fun thingsIveDone () = listOf(ProcessRegistry.BasicValidation)
+  override fun processDataCollectionInternal () = doIt(m_DataCollection)
 
 
 
@@ -80,7 +79,7 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
   private fun basicValidationAndCorrection (dataCollection: X_DataCollection)
   {
     /**************************************************************************/
-    val bibleStructure = dataCollection.BibleStructure
+    val bibleStructure = dataCollection.getBibleStructure()
 
 
 
@@ -90,9 +89,9 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
 
     if ("step" != ConfigData["stepOsis2modType"])
     {
-      if (dataCollection.BibleStructure.hasSubverses())
+      if (bibleStructure.hasSubverses())
       {
-        Logger.error("Text contains subverses, but that would require us to use our own version of osis2mod: " + dataCollection.BibleStructure.getAllSubverses().joinToString(", "){ Ref.rd(it).toString() } )
+        Logger.error("Text contains subverses, but that would require us to use our own version of osis2mod: " + bibleStructure.getAllSubverses().joinToString(", "){ Ref.rd(it).toString() } )
         return
       }
     }
@@ -256,7 +255,7 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
       }
     }
 
-    //checkVerseSidsAndEidsAlternate(verseNodes)
+    checkVerseSidsAndEidsAlternate(verseNodes)
   }
 
 
@@ -265,22 +264,22 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
   {
     val softReporter: (String) -> Unit = if ("step" == ConfigData["stepOsis2modType"]!!) Logger::warning else Logger::error
 
-    val outOfOrderVerses = dataCollection.BibleStructure.getOutOfOrderVerses() // I think this will cover chapters too.
+    val outOfOrderVerses = dataCollection.getBibleStructure().getOutOfOrderVerses() // I think this will cover chapters too.
     if (outOfOrderVerses.isNotEmpty())
       softReporter("Locations where verses are out of order: " + outOfOrderVerses.joinToString(", "){ Ref.rd(it).toString() })
 
-    if (!dataCollection.BibleStructure.standardBooksAreInOrder())
+    if (!dataCollection.getBibleStructure().standardBooksAreInOrder())
       softReporter("OT / NT books are not in order.")
 
-    val missingEmbeddedChapters = dataCollection.BibleStructure.getMissingEmbeddedChaptersForText()
+    val missingEmbeddedChapters = dataCollection.getBibleStructure().getMissingEmbeddedChaptersForText()
     if (missingEmbeddedChapters.isNotEmpty())
       Logger.error("Locations where embedded chapters are missing: " + missingEmbeddedChapters.joinToString(", "){ Ref.rd(it).toString() })
 
-    val missingEmbeddedVerses = dataCollection.BibleStructure.getMissingEmbeddedVersesForText()
+    val missingEmbeddedVerses = dataCollection.getBibleStructure().getMissingEmbeddedVersesForText()
     if (missingEmbeddedVerses.isNotEmpty())
       Logger.error("Locations where embedded verses are missing: " + missingEmbeddedVerses.joinToString(", "){ Ref.rd(it).toString() })
 
-    val duplicateVerses = dataCollection.BibleStructure.getDuplicateVersesForText()
+    val duplicateVerses = dataCollection.getBibleStructure().getDuplicateVersesForText()
     if (duplicateVerses.isNotEmpty())
       Logger.error("Locations where embedded verses are missing: " + duplicateVerses.joinToString(", "){ Ref.rd(it).toString() })
   }

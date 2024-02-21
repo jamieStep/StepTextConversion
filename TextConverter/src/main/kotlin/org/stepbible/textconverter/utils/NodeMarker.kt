@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.utils
 
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.miscellaneous.minusAssign
@@ -89,14 +90,6 @@ object NodeMarker
   fun hasAddedFootnote (node: Node) = null != getAddedFootnote(node)
   fun setAddedFootnote (node: Node): NodeMarker { addTemporaryAttribute(node, C_AddedFootnote, "y"); return this }
   private const val C_AddedFootnote = "_AddedFootnote"
-
-
-  /****************************************************************************/
-  fun deleteCanonicalHeaderLocation (node: Node) = deleteTemporaryAttribute(node, C_CanonicalHeaderLocation)
-  fun getCanonicalHeaderLocation (node: Node) = node[C_CanonicalHeaderLocation]
-  fun hasCanonicalHeaderLocation (node: Node) = null != getCanonicalHeaderLocation(node)
-  fun setCanonicalHeaderLocation (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_CanonicalHeaderLocation, value); return this }
-  private const val C_CanonicalHeaderLocation = "_CanonicalHeaderLocation"
 
 
   /****************************************************************************/

@@ -66,6 +66,8 @@ object ContentValidator
     m_ImplicitReversificationRenumbers = ReversificationData.getImplicitRenumbers()
     m_ReversificationRowsForAllBooks = ReversificationData.getAllAcceptedRows()
     dataCollectionNew.getBookNumbers().forEach { contentValidationForBook(it) }
+
+    dataCollectionNew.getProcessRegistry().iHaveDone(this, listOf(ProcessRegistry.DetailedContentValidated))
   }
 
 
@@ -791,11 +793,8 @@ object ContentValidator
 
       else if (fileProtocol.isCanonicalTitleNode(node))
       {
-        if ("start" == NodeMarker.getCanonicalHeaderLocation(node))
-        {
-          val sidRefKey = fileProtocol.readRef(Dom.getAttribute(Dom.getAncestorNamed(node, fileProtocol.tagName_chapter())!!, fileProtocol.attrName_chapterSid())!!).toRefKey()
-          res.m_chapterSidToPsalmTitle[sidRefKey] = node
-        }
+        val sidRefKey = fileProtocol.readRef(Dom.getAttribute(Dom.getAncestorNamed(node, fileProtocol.tagName_chapter())!!, fileProtocol.attrName_chapterSid())!!).toRefKey()
+        res.m_chapterSidToPsalmTitle[sidRefKey] = node
       }
     } // for
 

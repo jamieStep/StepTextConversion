@@ -4,6 +4,7 @@ import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.shared.Language
+import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
 
@@ -17,7 +18,7 @@ import org.w3c.dom.Node
  *
  * Originally I was offering three approaches to handling tables:
  *
- * 1. Tables which didn't cross verse-boundaries could be left as-is
+ * 1. Tables which didn't cross verse-boundaries could be left as-is.
  *
  * 2. Tables could be converted to flat form (plain text).  This would respect
  *    verse boundaries, but you'd lose the table layout.
@@ -35,6 +36,13 @@ import org.w3c.dom.Node
  * is there mainly because a table which fitted option 1 might be an
  * embarrassment if I attempted to apply option 3 processing.
  *
+ * (Having said this, option 2 may actually have a fair bit going for it.
+ * I've seen the results of sticking to table format, and in some cases you
+ * end up with a table whose left column is very wide, in order to accommodate
+ * a single very long entry, and in consequence, the right hand column in most
+ * cases is so far from the text in the left column that you can't work out
+ * what goes with what.)
+ *
  * Of course, there is a problem with option 3, in that it does mean that
  * although all of the verses making up the table continue to exist, their
  * content is all wrong -- most are empty, and one is huge.  But that's tough.
@@ -49,12 +57,28 @@ import org.w3c.dom.Node
 class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
 {
   /****************************************************************************/
+  /* NOTE: Previous versions of this code assumed that verse ends were already
+     in place.  However, that strikes me now as a complication: it is simpler
+     to run this at a time when we have only sids, and then insert the eids
+     later. */
+  /****************************************************************************/
+
+
+
+
+
+  /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
   /**                               Public                                   **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  override fun myPrerequisites () = listOf(ProcessRegistry.VerseMarkersReducedToSidsOnly, !ProcessRegistry.BasicVerseEndPositioning, !ProcessRegistry.EnhancedVerseEndPositioning, !ProcessRegistry.ElisionsExpanded)
+  override fun thingsIveDone () = listOf(ProcessRegistry.TablesRestructured)
+
 
   /****************************************************************************/
   /**
@@ -64,23 +88,15 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
   *   processing.
   */
 
-  override fun process (rootNode: Node)
+  override fun processRootNodeInternal (rootNode: Node)
   {
-    var hasInsertedDummyElements = false
-    requireHasNotRun(SE_ElisionHandler::class.java)
     Dbg.reportProgress("Handling tables.")
     Dom.findNodesByName(rootNode, m_FileProtocol.tagName_table(), false).forEach {
       if (Dom.findNodesByName(it, "verse", false).any())
-      {
-        if (!hasInsertedDummyElements) { insertDummyElements(rootNode); hasInsertedDummyElements = true }
         restructureTablesConvertToElidedForm(it)
-      }
       else
         reformatTableWhichDidNotRequireElision(it)
     }
-
-    if (hasInsertedDummyElements)
-      deleteDummyElements(rootNode)
   }
 
 
@@ -96,40 +112,12 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
 
   /****************************************************************************/
-  /* Deletes any dummy elements inserted to make processing easier. */
-
-  private fun deleteDummyElements (rootNode: Node)
-  {
-    Utils.deleteDummyVerseTags(m_FileProtocol, rootNode)
-    rootNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid()).forEach(Dom::deleteNode)
-  }
-
-
   /****************************************************************************/
-  /* This was originally written to work where we already have verse ends.  It
-     now needs to work where we don't necessarily have verse ends.  To save
-     rewriting it, I add temporary verse ends here if necessary, and then
-     delete them again later.
-
-     I assume that if it already has any verse ends, it will have all the ones
-     it needs.
-
-     I assume further that if I need to create them, it's enough to place them
-     immediately before the next verse sid. */
-
-
-  private fun insertDummyElements (rootNode: Node)
-  {
-    val sidNodes = rootNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid())
-    for (i in 1 ..< sidNodes.size - 1 )
-    {
-      val eidNode = m_FileProtocol.makeVerseEidNode(rootNode.ownerDocument, sidNodes[i - 1][m_FileProtocol.attrName_verseSid()]!!)
-      Dom.insertNodeBefore(sidNodes[i], eidNode) //
-    }
-
-    Utils.insertDummyVerseTags(m_FileProtocol, rootNode)
-  }
-
+  /**                                                                        **/
+  /**                          Non-elided tables                             **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
 
   /****************************************************************************/
   /* If we temporarily changed tag names above, we have some 'proper' tables
@@ -160,14 +148,25 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
 
     /**************************************************************************/
-    val rows  = Dom.findNodesByName(tableNode, m_FileProtocol.tagName_row(), false)
-    val cells  = Dom.findNodesByName(rows[0], m_FileProtocol.tagName_cell(), false) // Header.
+    val rows = tableNode.findNodesByName(m_FileProtocol.tagName_row(), false)
+    val cells  = rows[0].findNodesByName(m_FileProtocol.tagName_cell(), false) // Header.
     cells.forEach { restructureTablesEmboldenTableHeaderCell(it) }
     rows.forEach { processRowContent(it) }
     Dom.setNodeName(tableNode, m_FileProtocol.tagName_table())
     m_FileProtocol.insertBlankLineIntoTable(tableNode)
   }
 
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                            Elided tables                               **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
 
   /****************************************************************************/
   /* The aim here time is to encapsulate the entire table within an elision,
@@ -184,98 +183,10 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
   private fun restructureTablesConvertToElidedForm (table: Node)
   {
     /**************************************************************************/
-    val verseTags = Dom.findNodesByName(table, m_FileProtocol.tagName_verse(), false) .toMutableList()
-    var verseStarts = verseTags.filter { m_FileProtocol.attrName_verseSid() in it } .toMutableList()
-    val verseEnds   = verseTags.filter { m_FileProtocol.attrName_verseEid() in it } .toMutableList()
-    val owningVerseSid: Node?
+    /* Work out which verse should own the table, and position it if
+       necessary. */
 
-
-
-    /**************************************************************************/
-    /* For error messages. */
-
-    val location = if (verseStarts.isNotEmpty()) verseStarts[0][m_FileProtocol.attrName_verseSid()]!! else verseEnds[0][m_FileProtocol.attrName_verseEid()]!!
-    val locationAsRefKey = m_FileProtocol.readRef(location).toRefKey()
-
-
-
-    /**************************************************************************/
-    /* Until we know otherwise, we'll close the elision after the table. */
-
-    var closeElisionAfterNode = table
-
-
-
-    /**************************************************************************/
-    /* If the last verse tag within the table is a sid, it's fairly easy to
-       cope if the eid more or less follows the end of the table -- we just
-       move the eid back inside the table. */
-
-    if (m_FileProtocol.attrName_verseSid() in verseTags.last())
-    {
-     val eid = Dom.findNodeByAttributeValue(m_RootNode, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid(), Dom.getAttribute(verseTags.last(), "sid")!!)!!
-     if (Dom.isNextSiblingOf(table, eid, true))
-      {
-        Dom.deleteNode(eid)
-        table.appendChild(eid)
-        verseTags.add(eid)
-        verseEnds.add(eid)
-      }
-      else // The eid isn't conveniently placed just after the table.
-        closeElisionAfterNode = eid
-    }
-
-
-
-    /**************************************************************************/
-    /* If the very first non-blank node in the table is a sid, move the sid
-       immediately before the table so that the verse can contain the entire
-       table. */
-
-    if (Dom.isFirstNonBlankChildOf(table, verseStarts[0]))
-    {
-      owningVerseSid = verseStarts[0]
-      Dom.deleteNode(owningVerseSid)
-      Dom.insertNodeBefore(table, owningVerseSid)
-      verseStarts = verseStarts.subList(1, verseStarts.size)
-    }
-
-
-
-    /**************************************************************************/
-    /* If we haven't identified the owning verse, the owning verse must be the
-       one which comes before the first verse start in the table, and we can
-       find this based upon the sid. */
-
-    else
-    {
-      val ref = m_FileProtocol.readRef(verseStarts[0], m_FileProtocol.attrName_verseSid())
-      ref.setV(ref.getV() - 1)
-      owningVerseSid = Dom.findNodeByAttributeValue(m_RootNode, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid(), ref.toString())
-      if (null == owningVerseSid)
-      {
-        Logger.error(locationAsRefKey, "Table: Failed to find owning verse at or about $location")
-        return
-      }
-    }
-
-
-
-    /**************************************************************************/
-    /* By this point, owningVerse points to the verse within which the table
-       starts.  verseTags contains all of the verse tags _within_ the table,
-       verseStarts all of the sids, and verseEnds all of the eids.  The last
-       entry in verseEnds is an eid at the end of the table -- ie with no
-       following canonical text. */
-
-
-
-    /**************************************************************************/
-    /* We're going to create an eid for the owning verse and position it at the
-       other end of the table, so we no longer want its existing eid. */
-
-    val existingEid = Dom.findNodeByAttributeValue(m_RootNode, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid(), owningVerseSid[m_FileProtocol.attrName_verseSid()]!!)
-    Dom.deleteNode(existingEid!!)
+    val owningVerseSid = identifyAndPositionTableOwnerNode(table)
 
 
 
@@ -284,8 +195,6 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
        explanatory footnote. */
 
     val startOfElisionRef = m_FileProtocol.readRef(owningVerseSid, m_FileProtocol.attrName_verseSid())
-    val endOfElisionRef   = m_FileProtocol.readRef(verseStarts.last(), m_FileProtocol.attrName_verseSid())
-
     owningVerseSid[m_FileProtocol.attrName_verseSid()] = startOfElisionRef.toString()
     NodeMarker.setElisionType(owningVerseSid, "tableElision")
     val owningVerseFootnote = m_FileProtocol.makeFootnoteNode(m_RootNode.ownerDocument, startOfElisionRef.toRefKey(), Translations.stringFormat("V_tableElision_owningVerse"))
@@ -294,25 +203,9 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
 
     /**************************************************************************/
-    /* Insert an eid after the table to correspond to the owning verse. */
-
-    val owningVerseEid = Dom.createNode(m_RootNode.ownerDocument, "<${m_FileProtocol.tagName_verse()} ${m_FileProtocol.attrName_verseEid()}='$startOfElisionRef'/>")
-    Dom.insertNodeAfter(closeElisionAfterNode, owningVerseEid)
-    if (closeElisionAfterNode !== table) Dom.deleteNode(closeElisionAfterNode) // We're closing after an eid which is no longer required.
-
-
-
-    /**************************************************************************/
-    /* Delete all eids within the table. */
-
-    verseEnds.forEach { Dom.deleteNode(it) }
-
-
-
-    /**************************************************************************/
     /* Replace all sids by visible verse-boundary markers. */
 
-    fun insertVerseBoundaryMarker (sid: Node)
+    fun replaceVerseWithBoundaryMarker (sid: Node)
     {
       val sidText = sid[m_FileProtocol.attrName_verseSid()]!!
       val markerText = Translations.stringFormat(Language.Vernacular, "V_tableElision_verseBoundary", m_FileProtocol.readRef(sidText))
@@ -322,8 +215,74 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
       Dom.deleteNode(sid)
     }
 
-    verseStarts.forEach { insertVerseBoundaryMarker(it) }
+    table.findNodesByName(m_FileProtocol.tagName_verse()).forEach { replaceVerseWithBoundaryMarker(it) }
   }
+
+
+  /****************************************************************************/
+  /* Works out which verse should own the table, and therefore acts as master
+     for the elision.  If the table starts off with a verse node, then I move
+     that outside of the table and it becomes the owner.  If it doesn't start
+     with a verse node, then the verse which immediately precedes the table is
+     the owner. */
+
+  private fun identifyAndPositionTableOwnerNode (table: Node): Node
+  {
+    /**************************************************************************/
+    val owningVerseSid: Node?
+    var ix = -1
+    val allNodesInTable = table.getAllNodes()
+
+
+
+    /**************************************************************************/
+    /* Sets ix to the first verse in the table if that's at the start; otherwise
+       leaves it unchanged. */
+
+    for (i in allNodesInTable.indices)
+    {
+      val node = allNodesInTable[i]
+      if (m_FileProtocol.isInherentlyNonCanonicalTagOrIsUnderNonCanonicalTag(node))
+        break
+
+      if (m_FileProtocol.tagName_verse() == Dom.getNodeName(node))
+      {
+        ix = i
+        break
+      }
+    }
+
+
+
+    /**************************************************************************/
+    /* If the first verse _was_ at the front, reposition it to just before the
+       table. */
+
+    if (ix >= 0)
+    {
+      owningVerseSid = allNodesInTable[ix]
+      Dom.deleteNode(owningVerseSid)
+      Dom.insertNodeBefore(table, owningVerseSid)
+    }
+
+
+
+    /**************************************************************************/
+    /* Otherwise, the first verse _wasn't_ at the start of the table, so we
+       make the verse prior to the table into the owner. */
+
+    val ref = m_FileProtocol.readRef(table.findNodeByName(m_FileProtocol.tagName_verse(), false)!!, m_FileProtocol.attrName_verseSid())
+    ref.setV(ref.getV() - 1)
+    val res = Dom.findNodeByAttributeValue(m_RootNode, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid(), ref.toString())
+    if (null == res)
+    {
+      Logger.error(ref.toRefKey(), "Table: Failed to find owning verse at or about $ref")
+      throw StepException("Table: Failed to find owning verse at or about $ref")
+    }
+
+    return res
+  }
+
 
 
   /****************************************************************************/

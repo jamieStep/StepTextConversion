@@ -192,6 +192,9 @@ object FileLocations
     return res[0].toString()
   }
 
+  // Lets us save the file speculatively.  Providing the processing goes ok, we rename it later.
+  fun getInputOsisFilePathTemp () = Paths.get(getInputOsisFolderPath(), "DO_NOT_USE_SOMETHING_WENT_WRONG_DURING_PROCESSING.${getFileExtensionForOsis()}").toString()
+
   fun makeInputOsisFilePath (): String // If we are making a file path so as to store the output, we give it a name based on the module name.
   {
     return Paths.get(getInputOsisFolderPath(), "osis_${ConfigData["stepModuleName"]!!}.xml").toString()

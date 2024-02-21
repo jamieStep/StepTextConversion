@@ -287,6 +287,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   open fun addFromBookRootNode (prompt: String, rootNode: Node, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
   {
+    //Dbg.d(rootNode.ownerDocument)
     m_Populated = true
     if (null != bookName) Dbg.reportProgress("  $prompt: Determining Bible structure for ${bookName.uppercase()}")
     m_CollectingWordCounts = wantWordCount
@@ -1326,7 +1327,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
-    rootNode.getAllNodes().forEach {
+    rootNode.getAllNodes().forEach { //Dbg.dCont(Dom.toString(it), "<verse eID='Ps.4.1'>")
       var processNode = true
       while (processNode)
       {
@@ -1601,7 +1602,9 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   private fun handleVerseEid (id: String, wordCount: Int)
   {
-    //Dbg.d(id)
+//    if (Dbg.d(id, "Zech.4.10!a"))
+//      Dbg.d(OsisTempDataCollection.getDocument())
+
     val refKeys = m_FileProtocol!!.readRefCollection(id).getAllAsRefs()
     val isElision = refKeys.size > 1
 
@@ -1618,6 +1621,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   private fun handleVerseSid (node: Node, id: String): VerseDescriptor
   {
     /**************************************************************************/
+    //Dbg.d(node)
     val idAsRef = m_FileProtocol!!.readRefCollection(id)
     val refKeys = idAsRef.getAllAsRefKeys()
     var res: VerseDescriptor? = null

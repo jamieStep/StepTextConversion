@@ -33,7 +33,11 @@ class SE_FeatureCollector (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process (rootNode: Node)
+  override fun thingsIveDone () = listOf(ProcessRegistry.FeatureDataCollected)
+
+
+  /****************************************************************************/
+  override fun processRootNodeInternal (rootNode: Node)
   {
     Dbg.reportProgress("Collecting feature details.")
     countVersesInParas(rootNode)
@@ -105,7 +109,7 @@ class SE_FeatureCollector (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
   /* Sets the sample text needed by ConfigData to determine text direction.
      This looks for the first text canonical text node after the first verse
-     node whose non-blank length is greater then give. */
+     node whose non-blank length is 'long enough'. */
 
   private fun getSampleTextForConfigData (rootNode: Node)
   {

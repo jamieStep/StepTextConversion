@@ -207,7 +207,7 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
         PE_Phase1_FromInputOsis.process()
         val dataCollection = X_DataCollection(Osis_FileProtocol)
         dataCollection.loadFromText(Phase1TextOutput, false)
-        return dataCollection.BibleStructure
+        return dataCollection.getBibleStructure()
       }
 
 
@@ -215,7 +215,7 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
       {
         PE_Phase1_FromInputUsx.pre()
         PE_Phase1_FromInputUsx.process()
-        return UsxDataCollection.BibleStructure
+        return UsxDataCollection.getBibleStructure()
       }
 
 
@@ -225,7 +225,7 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
         PE_Phase1_FromInputVl.process()
         val dataCollection = X_DataCollection(Osis_FileProtocol)
         dataCollection.loadFromText(Phase1TextOutput, false)
-        return dataCollection.BibleStructure
+        return dataCollection.getBibleStructure()
       }
     }
 

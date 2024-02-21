@@ -188,7 +188,7 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
   override fun createSupportingDataIfRequired (filePath: String)
   {
     ConfigData["stepVersificationScheme"] = "v11n_" + ConfigData["stepModuleName"]!!
-    populateBibleStructure(OsisTempDataCollection.BibleStructure) // We _must_ be dealing with OsisTemp by now.
+    populateBibleStructure(OsisTempDataCollection.getBibleStructure()) // We _must_ be dealing with OsisTemp by now.
     m_BibleStructure.jswordMappings = ReversificationData.getReversificationMappings()
     outputJson(filePath)
   }

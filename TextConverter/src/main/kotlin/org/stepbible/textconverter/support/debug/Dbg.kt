@@ -578,7 +578,7 @@ object Dbg
     if (x is Iterable<*>)
       x.forEachIndexed { ix, value -> d(String.format("%3d", ix) + ": " + value.toString()) }
     else
-      System.err.println("$x")
+      doPrint("$x")
 
     return x
   }
@@ -587,7 +587,7 @@ object Dbg
   /****************************************************************************/
   @Synchronized fun d (n: Int): Int
   {
-    System.err.println(n)
+    doPrint(n.toString())
     return n
   }
 
@@ -595,7 +595,7 @@ object Dbg
   /****************************************************************************/
   @Synchronized fun d (n: Long): Long
   {
-    System.err.println(n)
+    doPrint(n.toString())
     return n
   }
 
@@ -603,7 +603,7 @@ object Dbg
   /****************************************************************************/
   @Synchronized fun d (s: String?): String?
   {
-    System.err.println(s ?: "NULL")
+    doPrint(s ?: "NULL")
     return s
   }
 
@@ -627,7 +627,7 @@ object Dbg
   /****************************************************************************/
   @Synchronized fun d (n : Node): Node
   {
-    System.err.println(Dom.toString(n))
+    doPrint(Dom.toString(n))
     return n
   }
 
@@ -635,7 +635,7 @@ object Dbg
   /****************************************************************************/
   @Synchronized fun d (prefix: String, n: Node): Node
   {
-    System.err.println(prefix + ": " + Dom.toString(n))
+    doPrint(prefix + ": " + Dom.toString(n))
     return n
   }
 
@@ -718,6 +718,13 @@ object Dbg
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  private fun doPrint (s: String)
+  {
+    System.err.println(s)
+  }
+
 
   /****************************************************************************/
   private var m_DebugRunningOnPartialCollectionOfBooksOnly = false

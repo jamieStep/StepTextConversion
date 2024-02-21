@@ -16,6 +16,10 @@ class SE_CalloutStandardiser (dataCollection: X_DataCollection): SE(dataCollecti
   /****************************************************************************/
 
   /****************************************************************************/
+  override fun thingsIveDone() = listOf(ProcessRegistry.CalloutsStandardised)
+
+
+  /****************************************************************************/
   /**
    * Forces callouts into standard form.  I'm not sure of the desirability of
    * this, but that's a consideration for another day.
@@ -23,7 +27,7 @@ class SE_CalloutStandardiser (dataCollection: X_DataCollection): SE(dataCollecti
    * @param rootNode
    */
 
-  override fun process (rootNode: Node)
+  override fun processRootNodeInternal (rootNode: Node)
   {
     Dbg.reportProgress("Standardising callouts for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
 

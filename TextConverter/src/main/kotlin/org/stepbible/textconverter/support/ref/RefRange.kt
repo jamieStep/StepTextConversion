@@ -540,7 +540,7 @@ class RefRange: RefCollectionPart
     /* That leaves cross-verse ranges with a subverse at one or other end, etc.
        Anything like this we can't cope with. */
 
-    Logger.warning("Cross-verse subverse range (may not expand correctly): " + toString())
+    Logger.warning("Cross-verse subverse range (may not expand correctly should that prove necessary): " + toString())
     return null
   }
 

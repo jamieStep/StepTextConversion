@@ -47,7 +47,6 @@ object Globals
 
 
 /******************************************************************************/
-var OsisPhase2SavedDataCollection = Osis_DataCollection()
 var OsisTempDataCollection = Osis_DataCollection()
 var UsxDataCollection = Usx_DataCollection()
 

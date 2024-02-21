@@ -17,10 +17,11 @@ import org.stepbible.textconverter.support.stepexception.StepException
 
 fun main (args: Array<String>)
 {
-  Dbg.setBooksToBeProcessed("Zec")
+  //Dbg.setBooksToBeProcessed("Num")
   //ThrowAwayCode.validateXmlFileStructure()
   //ThrowAwayCode.tryXslt()
   //ThrowAwayCode.makeDigest()
+
 
   try
   {
