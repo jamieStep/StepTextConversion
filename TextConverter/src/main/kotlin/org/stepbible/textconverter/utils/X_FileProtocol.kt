@@ -139,7 +139,8 @@ open class X_FileProtocol
    * pretend they are, because they need to remain as part of the verse.
    *
    * @param node
-   * @return 'Y' (definitely contains canonical text or is a note node);
+   * @return 'Y' (definitely contains canonical text or is a node which should
+   *            stay with canonical text);
    *         'N' (definitely does not contain canonical text);
    *         '?' (may or may not contain canonical text -- deduce from context)
    *         'X' (a node of a type we are not presently catering.
@@ -191,7 +192,8 @@ open class X_FileProtocol
       if (key.last() in "123456")  // USX node names may contain levels.  The lookup table we use here does not.  OSIS doesn't have things ending in numbers, so there's no harm in applying this regardless.
         key = key.substring(0, key.length - 1)
 
-      if (isNoteNode(n) || isXrefNode(n)) return Pair('N', n) // Treat notes and xrefs as though they were canonical, so they remain with the verse.
+      if (isNodeWhichNeedsToStickWithCanonicalText(n))
+        return Pair('N', n) // Treat notes and xrefs as though they were canonical, so they remain with the verse.
 
       val res = m_TagDetails[key]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity // Try looking up the extended name, and failing that, the non-extended version.
 
@@ -203,6 +205,35 @@ open class X_FileProtocol
 
       n = n.parentNode
     } // while
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Like getVerseEndInteration, qv, except that it works up the parent chain
+   * if necessary (ie if the value which would be returned for the node itself
+   * would be a question mark.  As a result, '?' can never be returned.
+   *
+   * @param node
+   * @return 'Y' (definitely contains canonical text or is a node which should
+   *            stay with canonical text);
+   *         'N' (definitely does not contain canonical text);
+   *         'X' (a node of a type we are not presently catering.
+   *         Plus the node which gave us the definite decision.
+   */
+
+  fun getVerseEndInteractionSelfOrAncestor (node: Node): Pair<Char, Node>
+  {
+    var n = node
+
+    while (true)
+    {
+      val res = getVerseEndInteraction(n)
+      if ('?' != res.first)
+        return res
+
+      n = n.parentNode
+    }
   }
 
 
@@ -273,6 +304,18 @@ open class X_FileProtocol
       if (n is Document) return true
     }
   }
+
+
+  /****************************************************************************/
+  /**
+   * Certain nodes, although not necessary canonical, nonetheless effective
+   * form part of the canonical text, and need to remain with it.
+   *
+   * @param node
+   * @return True if this is one of those nodes.
+  */
+
+  fun isNodeWhichNeedsToStickWithCanonicalText (node: Node) = isNoteNode(node) || isXrefNode(node)
   
   
   
@@ -819,7 +862,7 @@ object Osis_FileProtocol: X_FileProtocol()
     m_TagDetails["milestoneStart"] = TagDescriptor('N', 'N') // This element should not be used in current OSIS documents. It has been replaced by
 
     m_TagDetails["name"] = TagDescriptor('?', 'Y') // The name element is used to mark place, personal and other names in an OSIS text. The
-    m_TagDetails["note"] = TagDescriptor('Y', 'N') // The note element is used for all notes on a text. Liberal use of the type attribute will enable
+    m_TagDetails["note"] = TagDescriptor('N', 'N') // The note element is used for all notes on a text. Liberal use of the type attribute will enable
     m_TagDetails["osis"] = TagDescriptor('X', 'N') // The osis element is the root element of all OSIS texts.
     m_TagDetails["osisCorpus"] = TagDescriptor('X', 'N') // The osisCorpus element has no attributes and may have a header, followed by an
     m_TagDetails["osisText"] = TagDescriptor('X', 'N') // The osisText element is the main container for a text encoded in OSIS. It is composed of
@@ -860,7 +903,7 @@ object Osis_FileProtocol: X_FileProtocol()
     m_TagDetails["title:sub"] = TagDescriptor('N', 'N') //
     m_TagDetails["titlePage"] = TagDescriptor('X', 'N') // The titlePage element is used to specify a particular title page for an OSIS document.
 
-    m_TagDetails["transChange"] = TagDescriptor('Y', 'N') // The transChange element is used to mark text that is not present in the original  Moot point whether to regard this as canonical or not.
+    m_TagDetails["transChange"] = TagDescriptor('?', 'N') // The transChange element is used to mark text that is not present in the original  Moot point whether to regard this as canonical or not.
     m_TagDetails["type"] = TagDescriptor('X', 'N') // The type element occurs only in a work element. It is used to indicate to the reader the type of
     m_TagDetails["verse"] = TagDescriptor('Y', 'N') // The verse element should almost always be used in its milestoneable form. While some older  I've marked this as non-canonical purely because it does not normally contain anything.
     m_TagDetails["w"] = TagDescriptor('Y', 'N') // The w element is used to encode particular words in a text.  eg Strongs.

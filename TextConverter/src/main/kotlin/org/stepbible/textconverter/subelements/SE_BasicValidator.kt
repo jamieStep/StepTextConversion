@@ -306,7 +306,7 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
         if (null != expectedId)
         {
           m_VersesWhereSidAndEidDoNotAlternate.add(m_FileProtocol.readRef(verseNode[m_FileProtocol.attrName_verseSid()]!!).toRefKey())
-          return@forEach
+          return@forEach // Equivalent of continue.
         }
 
         expectedId = m_FileProtocol.readRefCollection(verseNode[m_FileProtocol.attrName_verseSid()]!!).toString()
@@ -317,7 +317,7 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
         if (null == expectedId)
         {
           m_VersesWhereSidAndEidDoNotAlternate.add(m_FileProtocol.readRef(verseNode[m_FileProtocol.attrName_verseEid()]!!).toRefKey())
-          return@forEach
+          return@forEach // Equivalent of continue.
         }
 
         if (expectedId != m_FileProtocol.readRefCollection(verseNode[m_FileProtocol.attrName_verseEid()]!!).toString())

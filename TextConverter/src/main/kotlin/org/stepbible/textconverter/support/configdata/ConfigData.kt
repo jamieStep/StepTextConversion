@@ -10,7 +10,7 @@ import org.stepbible.textconverter.support.iso.IsoLanguageCodes
 import org.stepbible.textconverter.support.iso.Unicode
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.stepexception.StepException
-import org.stepbible.textconverter.utils.OsisTempDataCollection
+import org.stepbible.textconverter.utils.InternalOsisDataCollection
 import java.io.*
 import java.text.SimpleDateFormat
 import java.time.LocalDate
@@ -1587,7 +1587,7 @@ object ConfigData
 
         /**********************************************************************/
         var officialYear = makeStepDescription_getOfficialYear()
-        val biblePortion = "%%%biblePortion%%%"
+        val biblePortion = makeStepDescription_getBiblePortion() // "%%%biblePortion%%%"
         val language = makeStepDescription_getLanguage(englishTitle)
         val moduleMonthYear = makeStepDescription_getModuleMonthYear().trim()
 
@@ -1621,9 +1621,9 @@ object ConfigData
     {
         /************************************************************************/
         val C_MaxIndividualBooksToReport = 5
-        val otBooks = OsisTempDataCollection.getBibleStructure().getAllBookAbbreviationsOt()
-        val ntBooks = OsisTempDataCollection.getBibleStructure().getAllBookAbbreviationsNt()
-        val dcBooks = OsisTempDataCollection.getBibleStructure().getAllBookAbbreviationsDc()
+        val otBooks = InternalOsisDataCollection.getBibleStructure().getAllBookAbbreviationsOt()
+        val ntBooks = InternalOsisDataCollection.getBibleStructure().getAllBookAbbreviationsNt()
+        val dcBooks = InternalOsisDataCollection.getBibleStructure().getAllBookAbbreviationsDc()
 
 
 

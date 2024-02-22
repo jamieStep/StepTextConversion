@@ -160,7 +160,7 @@ object ContentValidator
     fun check (refKey: RefKey)
     {
       /************************************************************************/
-      //Dbg.d("Jos 12:8", Ref.rd(refKey).toString())
+      //Dbg.d("Gen 2:2", Ref.rd(refKey).toString())
 
 
 
@@ -203,11 +203,17 @@ object ContentValidator
 
       var skipTest = newSid == -1
 
-      if (!skipTest) skipTest = m_FileProtocolNew.isDummySid(m_BookAnatomyNew.m_AllNodes[newSid]) // Ignore dummy verses.
+      if (!skipTest)
+        skipTest = m_FileProtocolNew.isDummySid(m_BookAnatomyNew.m_AllNodes[newSid]) // Ignore dummy verses.
 
-      if (!skipTest) skipTest = null == anatomyOld.m_SidToIndex[refKey] // Verses which didn't exist in the original (presumably ones which were part of an elision).
+      if (!skipTest) // Verses which didn't exist in the original (presumably ones which were part of an elision).
+      {
+        val sid = m_BookAnatomyNew.m_AllNodes[newSid]
+        skipTest = NodeMarker.hasElisionType(sid) && !NodeMarker.hasMasterForElisionOfLength(sid) // It's an elided verse, but not the master.
+      }
 
-      if (!skipTest) skipTest = Dom.hasAttribute(m_BookAnatomyNew.m_AllNodes[newSid], "_X_reasonEmpty") // Verses flagged as legitimately empty.
+      if (!skipTest)
+        skipTest = Dom.hasAttribute(m_BookAnatomyNew.m_AllNodes[newSid], "_X_reasonEmpty") // Verses flagged as legitimately empty.
 
 
 
@@ -577,7 +583,7 @@ object ContentValidator
 
     if (contentInput.replace("\\s+".toRegex(), "") == contentEnhanced.replace("\\s+".toRegex(), "")) return
 
-    val message = "Verse mismatch:<nl>  Enhanced = '$contentEnhanced'<nl>  Raw      = '$contentInput'<nl>"
+    val message = "Verse mismatch:<nl>  Original = '$contentEnhanced'<nl>     Final = '$contentInput'<nl>"
     error(enhancedRefKey, message)
   }
 
@@ -605,8 +611,7 @@ object ContentValidator
      Note that the Ref.clearS(refKey) call below ought to be redundant, because
      I kinda think I should be called here only with verse refKeys, not with
      subverse ones.  However, I must be wrong about that, because it _is_
-     needed.
-   */
+     needed. */
 
   private fun done (refKey: RefKey)
   {
@@ -625,8 +630,7 @@ object ContentValidator
     {
       val node = allNodes[i]
       if ("#text" == Dom.getNodeName(node) &&                                         // The content is limited to text nodes.
-          !fileProtocol.isInherentlyNonCanonicalTagOrIsUnderNonCanonicalTag(node) &&  // And they're excluded if we know for sure they're non-canonical.
-          NodeMarker.hasReversificationWasCanonicalTitle(node))                       // And by the same token, we need to exclude things which _were_ canonical titles, but have had to be changed to plain-ish text
+          !fileProtocol.isInherentlyNonCanonicalTagOrIsUnderNonCanonicalTag(node))    // And by the same token, we need to exclude things which _were_ canonical titles, but have had to be changed to plain-ish text
       {
         res.append(" ")
         res.append(node.textContent)
@@ -765,7 +769,7 @@ object ContentValidator
   private fun getBookAnatomy (rootNode: Node, fileProtocol: X_FileProtocol): BookAnatomy
   {
     /**************************************************************************/
-    //Dbg.outputDom(rootNode.ownerDocument, "a")
+    //Dbg.outputDom(rootNode.ownerDocument)
 
 
 
@@ -782,13 +786,15 @@ object ContentValidator
       val node = res.m_AllNodes[i]
       if (fileProtocol.tagName_verse() == Dom.getNodeName(node))
       {
+        //Dbg.dCont(Dom.toString(node), ".2.2")
         if (fileProtocol.attrName_verseSid() in node)
         {
-          mostRecentSidRefKey = fileProtocol.readRef(node[fileProtocol.attrName_verseSid()]!!).toRefKey()
+          //mostRecentSidRefKey = fileProtocol.readRef(node[fileProtocol.attrName_verseSid()]!!).toRefKey() $$$$
+          mostRecentSidRefKey = fileProtocol.readRefCollection(node[fileProtocol.attrName_verseSid()]!!).getLastAsRefKey()
           res.m_SidToIndex[mostRecentSidRefKey] = i
         }
         else
-          res.m_EidToIndex[fileProtocol.readRef(node[fileProtocol.attrName_verseEid()]!!).toRefKey()] = i
+          res.m_EidToIndex[fileProtocol.readRefCollection(node[fileProtocol.attrName_verseEid()]!!).getLastAsRefKey()] = i
       }
 
       else if (fileProtocol.isCanonicalTitleNode(node))

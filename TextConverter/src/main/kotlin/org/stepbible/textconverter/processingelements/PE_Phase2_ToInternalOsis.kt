@@ -12,6 +12,7 @@ import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.utils.*
+import kotlin.math.E
 
 
 /****************************************************************************/
@@ -34,7 +35,7 @@ import org.stepbible.textconverter.utils.*
  * @author ARA "Jamie" Jamieson
  */
 
-object PE_Phase2_ToTempOsis : PE
+object PE_Phase2_ToInternalOsis : PE
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -117,51 +118,47 @@ object PE_Phase2_ToTempOsis : PE
     /***************************************************************************/
     /* Pick up the input data. */
 
-    StepFileUtils.createFolderStructure(FileLocations.getTempOsisFolderPath())
-    OsisTempDataCollection.loadFromText(Phase1TextOutput, false)
-    RefBase.setBibleStructure(OsisTempDataCollection.getBibleStructure())
-    val doc = OsisTempDataCollection.getDocument()
-    DataCollection = OsisTempDataCollection
+    StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath())
+    InternalOsisDataCollection.loadFromText(Phase1TextOutput, false)
+    RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()) // Needed to cater for the possible requirement to expand ranges.
+    val doc = InternalOsisDataCollection.getDocument()
     Phase1TextOutput = ""
 
 
 
     /***************************************************************************/
     /* We may or may not have verse ends in the data.  We definitely need them
-       though, so I first delete any that we already have (to get things to a
-       common state), and then insert them in an acceptable (but probably non-
-       optimal) position.
+       though.
 
-       Naturally I'd _prefer_ them to be located optimally (by which I mean in
-       places which avoid cross-boundary markup).  However, to achieve that
-       I have to do certain fairly unpalatable things to the OSIS (replacing
-       semantic markup by formatting markup etc), and we need to have OSIS
-       which we can pass to third parties where appropriate, and I assume the
-       third parties would rather have the semantic information available.
+       I first delete any that we already have (to get things to a common
+       state).
 
-       So, the verse-end placement here would be good enough to create valid
-       OSIS without losing semantic information.  I do better later on, once
-       we've taken a copy of the data with a possible view to making it
-       available to third parties, or using it ourselves as input on future
-       runs.
+       I'm going to need them in both the externally-facing and the internally-
+       facing OSIS.
 
-       Having applied these tweaks, I then save the OSIS (or I do if we weren't
-       starting from OSIS in the first place), but under a temporary name just
-       in case later processing fails.
+       As regards the former, I want to do absolutely minimal work to it, so I
+       simply place verse ends immediately before the following verse start.
 
-       I use originalDataCollection here to retain a copy of the original data,
-       because I need it later for validation. */
+       As regards the internally-facing OSIS, I need to place the verse ends
+       rather more carefully with a view to avoiding cross-boundary markup.
+       This I defer for a moment -- see the lines starting SE_EnhancedVerseEnd
+       below.
 
-    SE_VerseEndRemover(OsisTempDataCollection).processAllRootNodes()
-    val originalDataCollection = Osis_DataCollection()
-    originalDataCollection.loadFromDocs(listOf(OsisTempDataCollection.getDocument()))
-    originalDataCollection.copyProcessRegistryFrom(OsisTempDataCollection)
+       At this point, I've done everything I'm going to do to the externally-
+       facing OSIS and on runs which are starting from VL or USX, I'm going to
+       need to save it in case we want to apply manual tweaks to it in future
+       and then use it as input.  I don't save it until much later in the
+       processing, in case anything goes wrong -- otherwise people might find
+       a saved version lying around and automatically assume it's ok. */
+
+    SE_VerseEndRemover(InternalOsisDataCollection).processAllRootNodes()
+    ExternalOsisDataCollection.loadFromDocs(listOf(InternalOsisDataCollection.getDocument()))
+    ExternalOsisDataCollection.copyProcessRegistryFrom(InternalOsisDataCollection)
 
     if ("osis" != ConfigData["stepOriginData"]!!)
     {
       StepFileUtils.clearFolder(FileLocations.getInputOsisFolderPath())
-      SE_BasicVerseEndInserter(originalDataCollection).processAllRootNodes(); x()
-      Dom.outputDomAsXml(originalDataCollection.getDocument(), FileLocations.getInputOsisFilePathTemp(), null)
+      SE_BasicVerseEndInserter(ExternalOsisDataCollection).processAllRootNodes(); x()
     }
 
 
@@ -171,37 +168,37 @@ object PE_Phase2_ToTempOsis : PE
        continue with any other changes which are easy because they don't rely
        on anything much and / or don't markedly affect other processing. */
 
-    ProtocolConverterOsisForThirdPartiesToInternalOsis.process(OsisTempDataCollection); x() // Minor changes to make processing easier (some of which may have to be undone later).
-    SE_StrongsHandler(OsisTempDataCollection).processAllRootNodes(); x()                    // Canonicalises Strong's references.
+    ProtocolConverterOsisForThirdPartiesToInternalOsis.process(InternalOsisDataCollection); x() // Minor changes to make processing easier (some of which may have to be undone later).
+    SE_StrongsHandler(InternalOsisDataCollection).processAllRootNodes(); x()                    // Canonicalises Strong's references.
 
 
 
     /**************************************************************************/
     /* Things concerned with possibly significant restructuring of the text. */
 
-    SE_TableHandler(OsisTempDataCollection).processAllRootNodes(); x()                      // Collapses tables which span verses into a single elided verse.
-    SE_ElisionHandler(OsisTempDataCollection).processAllRootNodes(); x()                    // Expands elisions out into individual verses.
-    Osis_CanonicalHeadingsHandler(OsisTempDataCollection).process(); x()                    // Simplifies canonical headings to reduce the chance of cross-boundary markup.
-    SE_EnhancedVerseEndInsertionPreparer(OsisTempDataCollection).processAllRootNodes(); x() // Continues the work of SE_CanonicalHeadingsHandler, making things easier to insert verse ends..
-    SE_EnhancedVerseEndInserter(OsisTempDataCollection).processAllRootNodes(); x()          // Position verse ends so as to reduce the chances of cross-boundary markup.
-    SE_SubverseCollapser(OsisTempDataCollection).processAllRootNodes(); x()                 // Collapses subverses into the owning verses, if that's what we're doing.
-    OsisTempDataCollection.reloadBibleStructureFromRootNodes(wantWordCount = false); x()    // Probably a good idea to build / rebuild the structure here.
+    SE_TableHandler(InternalOsisDataCollection).processAllRootNodes(); x()                      // Collapses tables which span verses into a single elided verse.
+    SE_ElisionHandler(InternalOsisDataCollection).processAllRootNodes(); x()                    // Expands elisions out into individual verses.
+    Osis_CanonicalHeadingsHandler(InternalOsisDataCollection).process(); x()                    // Simplifies canonical headings to reduce the chance of cross-boundary markup.
+    SE_EnhancedVerseEndInsertionPreparer(InternalOsisDataCollection).processAllRootNodes(); x() // Continues the work of SE_CanonicalHeadingsHandler, making things easier to insert verse ends..
+    SE_EnhancedVerseEndInserter(InternalOsisDataCollection).processAllRootNodes(); x()          // Position verse ends so as to reduce the chances of cross-boundary markup.
+    SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()                 // Collapses subverses into the owning verses, if that's what we're doing.
+    InternalOsisDataCollection.reloadBibleStructureFromRootNodes(wantWordCount = false); x()    // Probably a good idea to build / rebuild the structure here.
 
 
 
     /**************************************************************************/
-    SE_BasicValidator(OsisTempDataCollection).structuralValidation(OsisTempDataCollection)  // Checks for basic things like all verses being under chapters.
-    SE_ListEncapsulator(OsisTempDataCollection).processAllRootNodes(); x()                  // Might encapsulate lists (but in fact does not do so currently).
-    Osis_CrossReferenceChecker.process(OsisTempDataCollection); x()                         // Checks for invalid cross-references, or cross-references which point to non-existent places.
+    SE_BasicValidator(InternalOsisDataCollection).structuralValidation(InternalOsisDataCollection)  // Checks for basic things like all verses being under chapters.
+    SE_ListEncapsulator(InternalOsisDataCollection).processAllRootNodes(); x()                  // Might encapsulate lists (but in fact does not do so currently).
+    Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                         // Checks for invalid cross-references, or cross-references which point to non-existent places.
     handleReversification(); x()                                                            // Does what it says on the tin.
-    SE_CalloutStandardiser(OsisTempDataCollection).processAllRootNodes(); x()               // Force callouts to be in house style, assuming that's what we want.
-    removeDummyVerses(OsisTempDataCollection)                                               // Ditto.
-    ContentValidator.process(OsisTempDataCollection, Osis_FileProtocol, originalDataCollection, Osis_FileProtocol) // Checks current canonical content against original.
-    EmptyVerseHandler.preventSuppressionOfEmptyVerses(OsisTempDataCollection)               // Unless we take steps, empty verses tend to be suppressed when rendered.
-    EmptyVerseHandler(OsisTempDataCollection).markVersesWhichWereEmptyInTheRawText()        // Back to doing what it says on the tin.
-    SE_FeatureCollector(OsisTempDataCollection).processAllRootNodes()                       // Gather up information which might be useful to someone administering texts.
-    ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse.process(OsisTempDataCollection)  // Converts what we have back to something close enough to standard OSIS to be reasonably confident osis2mod can handle it.
-    Dom.outputDomAsXml(doc, FileLocations.getTempOsisFilePath(), null)           // Save the OSIS so it's available to osis2mod.
+    SE_CalloutStandardiser(InternalOsisDataCollection).processAllRootNodes(); x()               // Force callouts to be in house style, assuming that's what we want.
+    removeDummyVerses(InternalOsisDataCollection)                                               // Ditto.
+    ContentValidator.process(InternalOsisDataCollection, Osis_FileProtocol, ExternalOsisDataCollection, Osis_FileProtocol) // Checks current canonical content against original.
+    EmptyVerseHandler.preventSuppressionOfEmptyVerses(InternalOsisDataCollection)               // Unless we take steps, empty verses tend to be suppressed when rendered.
+    EmptyVerseHandler(InternalOsisDataCollection).markVersesWhichWereEmptyInTheRawText()        // Back to doing what it says on the tin.
+    SE_FeatureCollector(InternalOsisDataCollection).processAllRootNodes()                       // Gather up information which might be useful to someone administering texts.
+    ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse.process(InternalOsisDataCollection)  // Converts what we have back to something close enough to standard OSIS to be reasonably confident osis2mod can handle it.
+    Dom.outputDomAsXml(doc, FileLocations.getInternalOsisFilePath(), null)           // Save the OSIS so it's available to osis2mod.
   }
 
 
@@ -212,19 +209,19 @@ object PE_Phase2_ToTempOsis : PE
 
   private fun handleReversification ()
   {
-    ReversificationData.process(OsisTempDataCollection)
-    Osis_DetermineReversificationTypeEtc.process(OsisTempDataCollection.getBibleStructure())
+    ReversificationData.process(InternalOsisDataCollection)
+    Osis_DetermineReversificationTypeEtc.process(InternalOsisDataCollection.getBibleStructure())
 
     when (ConfigData["stepReversificationType"]!!.lowercase())
     {
       "runtime" ->
       {
-        SE_RuntimeReversificationHandler(OsisTempDataCollection).processAllRootNodes()
+        SE_RuntimeReversificationHandler(InternalOsisDataCollection).processAllRootNodes()
       }
 
       "conversiontime" ->
       {
-        Osis_SE_ConversiontimeReversification(OsisTempDataCollection).processDataCollection()
+        Osis_SE_ConversiontimeReversification(InternalOsisDataCollection).processDataCollection()
       }
     }
   }

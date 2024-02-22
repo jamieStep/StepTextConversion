@@ -157,10 +157,7 @@ var header =
   * @return File trailer.
   */
 
-  fun fileTrailer (): String
-  {
-     return "</osisText>\n</osis>\n"
-  }
+  fun fileTrailer () = "</osisText>\n</osis>\n"
 
 
   /****************************************************************************/
@@ -220,8 +217,5 @@ var header =
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun getOsisXsdLocation (): String
-  {
-    return ConfigData["stepExternalDataPath_OsisXsd"]!! // With Crosswire tweaks.
-  }
+  private fun getOsisXsdLocation () = ConfigData["stepExternalDataPath_OsisXsd"]!! // With Crosswire tweaks.
 }

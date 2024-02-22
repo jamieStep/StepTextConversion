@@ -106,7 +106,7 @@ object ProcessingController
 
   /****************************************************************************/
   private val C_ProcessingElementsStarters = listOf(PE_Phase1_FromInputVl, PE_Phase1_FromInputUsx, PE_Phase1_FromInputOsis)
-  private val C_ProcessingElementsFromInternalOsis = listOf(PE_Phase2_ToTempOsis, PE_Phase3_To_SwordModule, PE_Phase4_To_RepositoryPackageAndOrSaveOsis)
+  private val C_ProcessingElementsFromInternalOsis = listOf(PE_Phase2_ToInternalOsis, PE_Phase3_To_SwordModule, PE_Phase4_To_RepositoryPackageAndOrSaveOsis)
   private val m_AllAvailableProcessingElements = listOf(C_ProcessingElementsStarters, C_ProcessingElementsFromInternalOsis).flatten()
   private val m_ProcessingElements = mutableListOf<PE>()
 

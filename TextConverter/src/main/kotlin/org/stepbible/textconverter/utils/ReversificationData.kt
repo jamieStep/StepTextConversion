@@ -35,8 +35,8 @@ import java.util.*
  * There are two flavours of reversification processing.  One, which I have
  * dubbed 'conversionTime', generates a fully NRSVA-compliant module during
  * the conversion process.  The other ('runTime') leaves the text largely as
- * received from the translators (apart the addition of some footnotes), and
- * relies upon the text being restructured on the fly at run time when it
+ * received from the translators (apart from the addition of some footnotes),
+ * and relies upon the text being restructured on the fly at run time when it
  * needs to be NRSVA-compliant in order to support STEP's added value
  * features.
  *
@@ -130,13 +130,12 @@ import java.util.*
  *   embedded in the canonical text to make it *look* as though a given verse
  *   has not been reversified.
  *
- * - ReversificationNote gives the footnote to be added to the *standard*
- *   verse (ie the verse after restructuring) where footnotes are indeed
- *   being added and we are doing conversionTime restructuring.
+ * - NoteA gives the footnote to be added to the *standard* verse (ie the verse
+ *   after restructuring) where footnotes are indeed being added and we are
+ *   doing conversionTime restructuring.
  *
- * - VersificationFootnote gives the footnote to be added to the *source*
- *   verse where footnotes are indeed being added and we are doing runTime
- *   restructuring.
+ * - NoteB gives the footnote to be added to the *source* verse where footnotes
+ *   are indeed being added and we are doing runTime restructuring.
  *
  * - AncientVersions gives additional information to be added to footnotes
  *   where we are doing conversionTime restructuring and are generating a
@@ -169,29 +168,7 @@ import java.util.*
  *   RenumberVerse* the source content is moved to a new location and
  *   renumbered.
  *
- * - The standard verse may or may not be annotatd -- see discussion below.
- *
- *
- *
- *
- *
- * ## Investigation of existing reversification data
- *
- * The reversification data is complicated, and has also changed a lot recently.
- * As a result, I suspect there are some places where it may now be wrong (or
- * where, at the very least, I don't understand it, which means I may now be
- * applying the wrong processing).  Investigating it also forces me to confirm
- * any assumptions I may be making.
- *
- *
- * - RenumberVerse: In all cases, the source and standard refs differ, which is
- *   what I should expect.  Most -- but not all -- action fields contain Nec;
- *   there are a few which contain Opt.  All rows have a ReversificationNote;
- *   Most, but not all have a VersificationNote.
- *
- * -
- *
- *
+ * - The standard verse may or may not be annotated -- see discussion below.
  *
  * @author ARA "Jamie" Jamieson
 **/
@@ -251,10 +228,7 @@ class ReversificationDataRow (owningInstance: ReversificationData, rowNo: Int)
   * Footnotes for AllBibles rows need to be moved to the start of the verse.
   */
 
-  fun requiresNotesToBeMovedToStartOfVerse (): Boolean
-  {
-    return "AllBibles" == owner.getField("SourceType", this)
-  }
+  fun requiresNotesToBeMovedToStartOfVerse () = "AllBibles" == owner.getField("SourceType", this)
 
 
   /****************************************************************************/
@@ -274,10 +248,10 @@ class ReversificationDataRow (owningInstance: ReversificationData, rowNo: Int)
 class ReversificationMoveGroup (theRows: List<ReversificationDataRow>)
 {
   //fun getSourceBookAbbreviatedName (): String { return BibleBookNamesUsx.numberToAbbreviatedName(rows[0].sourceRef.getB()) }
-  fun getStandardBookAbbreviatedName (): String { return BibleBookNamesUsx.numberToAbbreviatedName(rows[0].standardRef.getB()) }
+  fun getStandardBookAbbreviatedName () = BibleBookNamesUsx.numberToAbbreviatedName(rows[0].standardRef.getB())
 
-  fun getSourceChapterRefAsString   (): String { return rows.first().sourceRef  .toString("bc")}
-  fun getStandardChapterRefAsString (): String { return rows.first().standardRef.toString("bc")}
+  fun getSourceChapterRefAsString   () = rows.first().sourceRef  .toString("bc")
+  fun getStandardChapterRefAsString () = rows.first().standardRef.toString("bc")
 
   var crossBook = false
   var isEntireChapter: Boolean = false
@@ -411,7 +385,6 @@ object ReversificationData
       /************************************************************************/
       return stepRef
     }
-  //}
 
 
 
@@ -442,7 +415,7 @@ object ReversificationData
       "CB" -> C_FootnoteLevelNec == row.footnoteLevel || C_FootnoteLevelOpt == row.footnoteLevel
       "RB" -> C_FootnoteLevelNec == row.footnoteLevel
       "CA" -> true
-      "RA" -> true
+      "RA" -> C_FootnoteLevelOpt != row.footnoteLevel
       else -> throw StepException("wantFootnote: Invalid parameter.")
     }
   }
@@ -631,6 +604,7 @@ object ReversificationData
 
 
     /**************************************************************************/
+    m_DataCollection = dataCollection
     m_BibleStructure = dataCollection.getBibleStructure()
     m_RuleEvaluator = ReversificationRuleEvaluator(dataCollection)
 
@@ -1357,7 +1331,7 @@ object ReversificationData
       if (1 != grp.rows.first().standardRef.getV()) return
 
       if (m_BibleStructure.getLastVerseNo(grp.rows.first().sourceRef) != grp.rows.last().sourceRef.getV()) return
-      if (BibleStructure.makeOsis2modNrsvxSchemeInstance(DataCollection.getBibleStructure()).getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
+      if (BibleStructure.makeOsis2modNrsvxSchemeInstance(m_DataCollection.getBibleStructure()).getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
 
       grp.isEntireChapter = true
     }
@@ -1884,7 +1858,7 @@ object ReversificationData
     /**************************************************************************/
     /* Ignore lines where the source ref relates to a book we don't have. */
 
-   if (!DataCollection.getBibleStructure().bookExists(row.sourceRef.getB())) return
+   if (!m_DataCollection.getBibleStructure().bookExists(row.sourceRef.getB())) return
 
 
 
@@ -1922,6 +1896,7 @@ object ReversificationData
 
   /****************************************************************************/
   private lateinit var m_BibleStructure: BibleStructure
+  private lateinit var m_DataCollection: X_DataCollection
 
 
   /****************************************************************************/

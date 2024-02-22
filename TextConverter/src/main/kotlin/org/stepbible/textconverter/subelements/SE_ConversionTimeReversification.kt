@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.subelements
 
+import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
@@ -42,13 +43,15 @@ import kotlin.collections.HashMap
  * have been selected against this particular data collection.  In other
  * words, other processing may have been applied since the reversification
  * data was read and selected, but I make the assumption that this other
- * processing will not have altered the book / chapter / verse structure.
+ * processing will not have altered the book / chapter / verse structure or
+ * the verse content upon which reversification data rows are selected.
  *
  * @author ARA "Jamie" Jamieson
  */
 
 open class SE_ConversionTimeReversification
-  protected constructor (dataCollection: X_DataCollection, emptyVerseHandler: EmptyVerseHandler): SE(dataCollection) {
+  protected constructor (dataCollection: X_DataCollection, emptyVerseHandler: EmptyVerseHandler): SE(dataCollection)
+{
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -143,21 +146,19 @@ open class SE_ConversionTimeReversification
 
   private fun doIt ()
   {
-    /**************************************************************************/
     initialise()
-
-
-
-    /**************************************************************************/
-    /* Process the various actions. */
+    ReversificationData.getAllAcceptedRows().filter { it.sourceIsPsalmTitle() }.forEach(::processCanonicalTitles_turnSourceIntoVerseZero)
 
     ReversificationData.getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart1(it) }
     ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "renumber") }
     ReversificationData.getStandardBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart2(it) }
     ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "") }
     ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { terminate(it) }
+
+    processCanonicalTitles_turnVerseZerosIntoCanonicalTitle()
+
     m_BookDetails.clear() // Free up the memory used in this processing.
-    m_DataCollection.reloadBibleStructureFromRootNodes(false) // Rebuild to reflect new structure.
+    m_DataCollection.invalidateBibleStructure()
   }
 
 
@@ -254,13 +255,6 @@ open class SE_ConversionTimeReversification
        light of this. */
 
     doCrossReferenceMappings(bookDetails.m_RootNode)
-
-
-
-    /**************************************************************************/
-    /* General tidying up. */
-
-    bookDetails.finalise()
   }
 
 
@@ -1040,217 +1034,105 @@ open class SE_ConversionTimeReversification
      elsewhere -- for example in Hab 3 -- but only Psalms is of interest here,
      because only the titles in Psalms are subject to reversification.
 
-     In Psalms, most titles appear at the start of the chapter, although in a
-     few cases there are canonical titles at the end as well.  Only the ones
-     at the start are of interest here, and these can be recognised because
-     earlier processing will have added an attribute canonicalHeaderLocation=
-     'start'.
+     Not all psalms have canonical titles.  Of those that do, most have titles
+     at the start of the chapter, but a few have a canonical title at the end
+     (instead of or as well as one at the start).  The processing here is
+     concerned only with canonical titles at the _start_ of the chapter.
 
-     Regrettably there are a lot of different cases which we need to cater for.
+     A psalm is regarded here as already having a canonical title ...
 
-     The simplest is where the canonical title is overtly marked as such in the
-     raw data (using para:d), and is positioned prior to verse 1.
-     Reversification may add annotation to the title in such cases, but it does
-     nothing beyond this.
+     - Not if it has a para:d or title:psalm heading: not all texts will do so.
 
-     There is a variant of this which I have seen in a few texts, where the
-     canonical title is marked, but is actually positioned _within_ v1 (forming
-     just a part of it).  I don't believe the reversification data overtly
-     caters for this.  The processing here moves the title so that it falls just
-     before v1, but does not annotate it.
+     - Not if according to NRSVA we would _expect_ this psalm to have a
+       canonical title.
 
-     (Presumably there may be other similar variants where the title forms part
-     of v1 but is _not_ marked as such; these cannot be handled at all.)
+     - But if it has any canonical text prior to the first verse sid.
 
-     And then there are the various cases identified by the reversification data
-     where we have to do more than just annotate the title -- we may have to move
-     the title to a different book and / or create it either from v1 of the raw
-     text or jointly from v1 and v2.
 
-     In what I hope is a stunningly brilliant insight, and not just a completely
-     stupid idea, it occurred to me that we might temporarily turn existing
-     titles into an ordinary verse (or not _quite_ an ordinary one -- I give it
-     a special verse number to make sure it can't be confused with anything
-     else).  At the time of writing, the special verse number I use for this is
-     499.
+     This fact is really not particularly of interest here, since the rule
+     processing will already have worked out which reversification rows apply,
+     and if one of those rows involves a source title, we can be confident that
+     the text does indeed have something which constitutes a title.
 
-     Turning it into a verse means that all of the normal processing for verses
-     can be applied to it -- annotating, renumbering, etc; whilst the fact that
-     it is recognisable means I can turn it back into a canonical title at the
-     end of the processing here.
+     The processing may simply add footnotes to existing titles; it may move
+     existing titles to different chapters; or it may turn v1 (or in some cases
+     v1 and v2) into a canonical title.
 
-     All of this does rely upon certain changes to the reversification data,
-     which are dealt with by ReversificationData.  Where the sourceRef contains
-     the word 'title', I change it so that it is a reference to v499 of the
-     chapter.  And where the standardRef contains 'title', I alter it, either
-     just to v0 if the sourceRef is also v0, or else to subverse n of v0, where
-     n is the verse number of the sourceRef.  This latter is mainly to cater for
-     the situation where the canonical title is made up of v1+v2 of the source:
-     I can create v0 as being made up of two subverses, and then amalgamate
-     them. */
+     At the time the processing here is invoked, the text will not contain any
+     markup for canonical headings: even if the reversification data requires
+     us merely to keep an 'existing' heading in place, we still need to mark
+     it up appropriately.
+
+     The reversification data does indeed contain 'Title' in either the source
+     or standard refs (or both).  However, I realised a while back that if I
+     change that to refer instead to verse zero, all of the normal Renumber /
+     Move processing could be applied, and by the time we reach here, the
+     reversification data will have been changed to reflect that intuition.
+
+     All we need to here, therefore, is turn any existing canonical title
+     material (available from the BibleStructure class) into verse zero,
+     run the normal Renumber and Move processing, and then convert anything
+     now marked as verse zero into title tags. */
+
 
   /****************************************************************************/
-  /* Undoes the sneaky changes used to make psalm titles amenable to 'standard'
-     processing. */
+  /* By turning existing titles into verse 0, ordinary Move and Renumber
+     processing can be applied.  So here I look up to find out what nodes
+     form the title, and then insert a sid for verse zero before them, and an
+     eid for verse zero after them, also marking sid and eid with attributes
+     which will make it easy to find them. */
 
-  private fun canonicalTitlesPost (rootNode: Node)
+  private fun processCanonicalTitles_turnSourceIntoVerseZero (row: ReversificationDataRow)
   {
-    Dom.findNodesByName(rootNode, m_FileProtocol.tagName_chapter(), false). forEach { canonicalTitlesPostDoChapter(it) }
+    processCanonicalTitles_turnIntoVerseZero(m_DataCollection.getBibleStructure().getNodeListForCanonicalTitle(row.sourceRefAsRefKey)!!, row.sourceRefAsRefKey)
   }
 
 
   /****************************************************************************/
-  /* Where titles were _created_ (as opposed to just being carried through from
-     the source), they will unfortunately be near the _end_ of the chapter, and
-     need to be moved to the beginning.  In addition, they may be made up of
-     more than one input verse, in which case the elements need to be
-     amalgamated. */
+  /* Turns a collection of nodes into verse zero. */
 
-  private fun canonicalTitlesPostDoChapter (chapterNode: Node)
+  private fun processCanonicalTitles_turnIntoVerseZero (nodesInTitle: List<Node>, chapterRefKey: RefKey)
+  {
+    val sid = m_FileProtocol.makeVerseSidNode(nodesInTitle[0].ownerDocument, Pair(Ref.setV(chapterRefKey, 0), null))
+    val eid = m_FileProtocol.makeVerseEidNode(nodesInTitle[0].ownerDocument, Pair(Ref.setV(chapterRefKey, 0), null))
+
+    m_DataCollection.getRootNode(BibleAnatomy.C_BookNumberForPsa)!!.getAllNodes().forEach {
+      if (nodesInTitle[0] === it)
+        Dom.insertNodeBefore(it, sid)
+      else if (nodesInTitle.last() === it)
+      {
+        Dom.insertNodeAfter(it, eid)
+        return
+      }
+    }
+  }
+
+
+  /****************************************************************************/
+  /* Turns verse zero into a canonical title tag. */
+
+  private fun processCanonicalTitles_turnVerseZerosIntoCanonicalTitle ()
   {
     /**************************************************************************/
-    //val dbg = Dbg.dCont(Dom.toString(chapterNode), "51")
-
-
-
-    /**************************************************************************/
-    val C_Marker = RefBase.C_TitlePseudoVerseNumber.toString()
-    val allNodes = Dom.getNodesInTree(chapterNode)
-    val firstSpecialVerseSidIx = allNodes.indexOfFirst { m_FileProtocol.tagName_verse() == Dom.getNodeName(it) && m_FileProtocol.attrName_verseSid() in it && C_Marker in it[m_FileProtocol.attrName_verseSid()]!! }
-    if (-1 == firstSpecialVerseSidIx) return
-
-
-
-    /**************************************************************************/
-    /* If the original text had a canonical title which has merely been carried
-       forward, we'll have a temporary verse marked _wasCanonicalTitle
-       which contains it.  If this is the case, we simply need to restore it
-       to its former glory.  (There will only be one such verse, and it will be
-       the first verse in the chapter.) */
-
-    val sidNode = allNodes[firstSpecialVerseSidIx]
-    if (NodeMarker.hasReversificationWasCanonicalTitle(sidNode))
+    fun processChapter (chapterNode: Node)
     {
-      val eid = allNodes.find { m_FileProtocol.tagName_verse() == Dom.getNodeName(it) && m_FileProtocol.attrName_verseEid() in it }!!
+      val verseZeroNodes = m_DataCollection.getBibleStructure().getNodeListForCanonicalTitle(m_FileProtocol.getSidAsRefKey(chapterNode)) ?: return
+      val sid = verseZeroNodes[0].previousSibling
+      val eid = verseZeroNodes.last().nextSibling
+      val titleNode = m_FileProtocol.makeCanonicalTitleNode(sid.ownerDocument)
+      Dom.deleteNodes(verseZeroNodes)
+      Dom.addChildren(titleNode, verseZeroNodes)
+      Dom.insertNodeBefore(sid, titleNode)
+      Dom.deleteNode(sid)
       Dom.deleteNode(eid)
-
-      val footnoteNode = sidNode.nextSibling
-      val headingNode = sidNode.nextSibling.nextSibling
-      Dom.deleteNode(footnoteNode)
-      Dom.insertAsFirstChild(headingNode, footnoteNode)
-      Dom.deleteNode(sidNode)
-      return
     }
 
 
 
     /**************************************************************************/
-    /* The more complicated case.  The special verse(s) were generated rather
-       than being carried over.  They will currently lie at the _end_ of the
-       chapter, and there may be either one or two of them.  If there are two,
-       they need to be amalgamated into one, and then the whole thing needs to
-       be turned into a canonical title and placed at the front of the chapter.
-       And one other thing -- any footnotes within these verses will have a
-       char:fr which points to v499, and we need them instead to point to the
-       chapter. */
-
-    val chapterNodeSid = chapterNode[m_FileProtocol.attrName_chapterSid()]
-    val ownerDocument = chapterNode.ownerDocument
-    val lastSpecialVerseEidIx = allNodes.indexOfLast { m_FileProtocol.tagName_verse() == Dom.getNodeName(it) && m_FileProtocol.attrName_verseEid() in it && C_Marker in it[m_FileProtocol.attrName_verseEid()]!! }
-
-    val topLevelNodes = Dom.pruneToTopLevelOnly(allNodes.subList(firstSpecialVerseSidIx, lastSpecialVerseEidIx + 1))
-    topLevelNodes.forEach { Dom.deleteNode(it) } // No need to delete recursively up the tree -- these won't be under anything relevant.
-
-    val canonicalTitle = m_FileProtocol.makeCanonicalTitleNode(ownerDocument)
-    val insertBefore = Dom.findNodeByName(chapterNode, m_FileProtocol.tagName_verse(), false)
-    Dom.insertNodeBefore(insertBefore!!, canonicalTitle)
-    Dom.addChildren(canonicalTitle, topLevelNodes)
-    Dom.findNodesByAttributeName(canonicalTitle, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid()).forEach { Dom.deleteNode(it) }
-    Dom.findNodesByName(canonicalTitle, m_FileProtocol.tagName_verse(), false).forEach { val x = Dom.createTextNode(ownerDocument, " "); Dom.insertNodeBefore(it, x); Dom.deleteNode(it)}
-    Dom.deleteNode(canonicalTitle.firstChild) // That's replaced each verse:sid by a space to act as a separator, and then got rid of the first one.
-
-
-    /**************************************************************************/
-    /* Footnote reference nodes are relevant only to USX, but aside from using
-       up a little processing time, there's no harm in having the code here
-       run against OSIS too -- it simply won't find anything to process. */
-    
-    Dom.findNodesByAttributeValue(canonicalTitle, "char", "style", "fr").forEach {
-      val owner = it.firstChild.textContent
-      if (C_Marker in owner)
-      {
-        Dom.deleteNode(it.firstChild)
-        val revisedOwner = Dom.createTextNode(ownerDocument, chapterNodeSid!!)
-        it.appendChild(revisedOwner)
-      }
-    }
+    val rootNode = m_DataCollection.getRootNode(BibleAnatomy.C_BookNumberForPsa) ?: return
+    rootNode.findNodesByName(m_FileProtocol.tagName_chapter()).forEach { processChapter(it) }
   }
-
-
-  /****************************************************************************/
-  /* Changes needed before we can apply reversification. */
-
-  private fun canonicalTitlesPre (rootNode: Node)
-  {
-    canonicalTitlesPreMoveEmbeddedTitles(rootNode)
-    canonicalTitlesPreConvertTitlesToSpecialVerses(rootNode)
-  }
-
-
-  /****************************************************************************/
-  /* Encapsulates all canonical headings (para:d) in a sid / eid pair for verse
-     0.  This makes canonical headings look like verses, which means I can press
-     general processing into use for handling psalm titles. */
-
-  private fun canonicalTitlesPreConvertTitlesToSpecialVerses (rootNode: Node)
-  {
-    fun encapsulate (heading: Node)
-    {
-      val chapter = Dom.findAncestorByNodeName(heading, m_FileProtocol.tagName_chapter())!!
-      val id = Dom.getAttribute(chapter, m_FileProtocol.attrName_chapterSid()) + RefBase.C_TitlePseudoVerseNumber.toString()
-      val sidNode = Dom.createNode(rootNode.ownerDocument, "<${m_FileProtocol.tagName_verse()} ${m_FileProtocol.attrName_verseSid()}='$id'/>"); NodeMarker.setReversificationWasCanonicalTitle(sidNode)
-      val eidNode = Dom.createNode(rootNode.ownerDocument, "<${m_FileProtocol.tagName_verse()} ${m_FileProtocol.attrName_verseEid()}='$id'/>"); NodeMarker.setReversificationWasCanonicalTitle(eidNode)
-      Dom.insertNodeBefore(heading, sidNode)
-      Dom.insertNodeAfter(heading, eidNode)
-    }
-
-//    getCanonicalTitles(rootNode)
-//      .filter { "start" == NodeMarker.getCanonicalHeaderLocation(it) }
-//      .forEach { encapsulate(it) }
-  }
-
-
-  /****************************************************************************/
-  /* If we have para:d's positioned after the v1 sid, reposition them before
-     it. */
-
-  private fun canonicalTitlesPreMoveEmbeddedTitles (rootNode: Node)
-  {
-    var sid: Node? = null
-
-    fun process (node: Node)
-    {
-      if (m_FileProtocol.tagName_verse() == Dom.getNodeName(node))
-      {
-        sid = if (m_FileProtocol.attrName_verseSid() in node && 1 == m_FileProtocol.readRef(node[m_FileProtocol.attrName_verseSid()]!!).getV())
-          node
-        else
-          null
-      }
-      else if (m_FileProtocol.isCanonicalTitleNode(node) && null != sid)
-      {
-        Dom.deleteNode(node)
-        Dom.insertNodeBefore(sid!!, node)
-        sid = null
-      }
-    }
-
-    Dom.getNodesInTree(rootNode).forEach { process(it) }
-  }
-
-
-  /****************************************************************************/
-  private fun getCanonicalTitles (rootNode: Node) = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isCanonicalTitleNode(it) }
 
 
 
@@ -1494,26 +1376,10 @@ open class SE_ConversionTimeReversification
 
 
     /**************************************************************************/
-    fun finalise ()
-    {
-      when (m_BookNumber)
-      {
-        BibleBookNamesUsx.C_BookNo_Psa, BibleBookNamesUsx.C_BookNo_Hab -> canonicalTitlesPost(m_RootNode)
-      }
-    }
-
-
-    /**************************************************************************/
     init
     {
       if (null == m_DataCollection.getRootNode(m_BookNumber))
         makeBook(m_BookNumber)
-
-      when (m_BookNumber)
-      {
-        BibleBookNamesUsx.C_BookNo_Psa, BibleBookNamesUsx.C_BookNo_Hab -> canonicalTitlesPre(m_RootNode)
-      }
-
       m_BookDetails[m_BookNumber] = this
     }
   }

@@ -452,6 +452,14 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
 
+  fun getNodeListForCanonicalTitle (chapterRef: Ref)                        = commonGetNodeListForCanonicalTitle(makeElts(chapterRef.getB(), chapterRef.getC(), 0, 0))
+  fun getNodeListForCanonicalTitle (chapterRefKey: RefKey)                  = commonGetNodeListForCanonicalTitle(makeElts(Ref.getB(chapterRefKey), Ref.getC(chapterRefKey), 0, 0))
+  fun getNodeListForCanonicalTitle (b: Int, c: Int, v: Int = 0, s: Int = 0) = commonGetNodeListForCanonicalTitle(makeElts(b, c, 0, 0))
+  fun getNodeListForCanonicalTitle (chapterRefAsString: String)             = getNodeListForCanonicalTitle(m_FileProtocol!!.readRef(chapterRefAsString).toRefKey())
+  fun getNodeListForCanonicalTitle (elts: IntArray)                         = commonGetNodeListForCanonicalTitle(makeElts(elts[0], elts[1], 0, 0))
+
+
+
   fun getWordCount (verseOrSubverseRef: Ref)            = commonGetWordCount(makeElts(verseOrSubverseRef))
   fun getWordCount (verseOrSubverseRefKey: RefKey)      = commonGetWordCount(makeElts(verseOrSubverseRefKey))
   fun getWordCount (b: Int, c: Int, v: Int, s: Int = 0) = commonGetWordCount(makeElts(b, c, v, s))
@@ -460,11 +468,11 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
 
-  fun getWordCountForCanonicalTitle (verseOrSubverseRef: Ref)            = commonGetWordCountForCanonicalTitle(makeElts(verseOrSubverseRef))
-  fun getWordCountForCanonicalTitle (verseOrSubverseRefKey: RefKey)      = commonGetWordCountForCanonicalTitle(makeElts(verseOrSubverseRefKey))
-  fun getWordCountForCanonicalTitle (b: Int, c: Int, v: Int, s: Int = 0) = commonGetWordCountForCanonicalTitle(makeElts(b, c, v, s))
-  fun getWordCountForCanonicalTitle (verseOrSubverseRefAsString: String) = commonGetWordCountForCanonicalTitle(makeElts(verseOrSubverseRefAsString))
-  fun getWordCountForCanonicalTitle (elts: IntArray)                     = commonGetWordCountForCanonicalTitle(elts)
+  fun getWordCountForCanonicalTitle (chapterRef: Ref)                        = commonGetWordCountForCanonicalTitle(makeElts(chapterRef.getB(), chapterRef.getC(), 0, 0))
+  fun getWordCountForCanonicalTitle (chapterRefKey: RefKey)                  = commonGetWordCountForCanonicalTitle(makeElts(Ref.getB(chapterRefKey), Ref.getC(chapterRefKey), 0, 0))
+  fun getWordCountForCanonicalTitle (b: Int, c: Int, v: Int = 0, s: Int = 0) = commonGetWordCountForCanonicalTitle(makeElts(b, c, 0, 0))
+  fun getWordCountForCanonicalTitle (chapterRefAsString: String)             = getWordCountForCanonicalTitle(m_FileProtocol!!.readRef(chapterRefAsString).toRefKey())
+  fun getWordCountForCanonicalTitle (elts: IntArray)                         = commonGetWordCountForCanonicalTitle(makeElts(elts[0], elts[1], 0, 0))
 
 
 
@@ -486,11 +494,13 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
 
-  fun hasCanonicalTitle (chapterRef: Ref)                        = commonHasCanonicalTitle(makeElts(chapterRef))
-  fun hasCanonicalTitle (chapterRefKey: RefKey)                  = commonHasCanonicalTitle(makeElts(chapterRefKey))
+  fun hasCanonicalTitle (chapterRef: Ref)                        = commonHasCanonicalTitle(makeElts(chapterRef.getB(), chapterRef.getC(), 0, 0))
+  fun hasCanonicalTitle (chapterRefKey: RefKey)                  = commonHasCanonicalTitle(makeElts(Ref.getB(chapterRefKey), Ref.getC(chapterRefKey), 0, 0))
   fun hasCanonicalTitle (b: Int, c: Int, v: Int = 0, s: Int = 0) = commonHasCanonicalTitle(makeElts(b, c, 0, 0))
-  fun hasCanonicalTitle (chapterRefAsString: String)             = commonHasCanonicalTitle(makeElts(chapterRefAsString))
-  fun hasCanonicalTitle (elts: IntArray)                         = commonHasCanonicalTitle(elts)
+  fun hasCanonicalTitle (chapterRefAsString: String)             = hasCanonicalTitle(m_FileProtocol!!.readRef(chapterRefAsString).toRefKey())
+  fun hasCanonicalTitle (elts: IntArray)                         = commonHasCanonicalTitle(makeElts(elts[0], elts[1], 0, 0))
+
+
 
   fun hasSubverses () = m_Text.m_SubverseDetails.isNotEmpty()
   fun getAllSubverses () = m_Text.m_SubverseDetails.keys
@@ -1122,17 +1132,15 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
   /****************************************************************************/
-  protected open fun commonGetWordCountForCanonicalTitle (elts: IntArray): Int
-  {
-    return m_Text.m_CanonicalTitleDetails[Ref.rd(elts[0], elts[1], 0).toRefKey()]!!
-  }
+  protected open fun commonGetNodeListForCanonicalTitle (elts: IntArray) = m_Text.m_CanonicalTitleDetails[Ref.rd(elts[0], elts[1], 0).toRefKey()]?.nodes
 
 
   /****************************************************************************/
-  protected open fun commonHasCanonicalTitle (elts: IntArray) :Boolean
-  {
-    return Ref.rd(elts[0], elts[1], 0).toRefKey() in m_Text.m_CanonicalTitleDetails
-  }
+  protected open fun commonGetWordCountForCanonicalTitle (elts: IntArray) = m_Text.m_CanonicalTitleDetails[Ref.rd(elts[0], elts[1], 0).toRefKey()]?.wordCount
+
+
+  /****************************************************************************/
+  protected open fun commonHasCanonicalTitle (elts: IntArray) = Ref.rd(elts[0], elts[1], 0).toRefKey() in m_Text.m_CanonicalTitleDetails
 
 
   /****************************************************************************/
@@ -1178,57 +1186,33 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   /****************************************************************************/
   /* This determines the relevance of any given node to the 'load' function
-     in BibleStructure.  That function is interested in verse starts and ends,
-     and canonical title starts and ends.
-
-     Canonical titles are rather more complicated because this definitely _is_
-     an enclosing node.  The processing here tells 'load' when we both enter
-     and leave the title, and in order to achieve this, it has to retain the
-     node itself so it can check when subsequent nodes cease to be contained
-     within it. */
+     in BibleStructure.  That function is interested in verse starts and ends.
+     Previously it was also interested in canonical titles, but that was based
+     on a misunderstanding on my part as to what actually _was_ a canonical
+     title from the perspective of reversification, and I now have to handle
+     canonical titles separately. */
 
   protected open fun getRelevanceOfNode (node: Node): NodeRelevance
   {
-    val selector = if (m_FileProtocol!!.isCanonicalTitleNode(node)) "@canonicalTitle" else Dom.getNodeName(node)
-    when (selector)
-    {
-      m_FileProtocol!!.tagName_verse() ->
-      {
-        val id = node[m_FileProtocol!!.attrName_verseSid()] ?: node[m_FileProtocol!!.attrName_verseEid()]!!
-        if (RefBase.C_DummyElement == m_FileProtocol!!.readRefCollection(id).getLowAsRef().getV()) // Ignore dummy verses which I insert at the ends of chapters to simplify processing.
-          return NodeRelevance(NodeRelevanceType.Boring, "", false)
+    /**************************************************************************/
+    /* Not a verse. */
 
-        return if (m_FileProtocol.attrName_verseSid() in node)
-          NodeRelevance(NodeRelevanceType.VerseStart, id, false)
-        else
-          NodeRelevance(NodeRelevanceType.VerseEnd, id, false)
-      }
+    if (m_FileProtocol!!.tagName_verse() != Dom.getNodeName(node))
+      return NodeRelevance(NodeRelevanceType.Boring, "", false)
 
 
-      m_FileProtocol!!.tagName_verse() ->
-      {
-        m_CurrentChapterRefAsString = node[m_FileProtocol!!.attrName_chapterSid()]!!
-      }
 
+    /**************************************************************************/
+    /* It's a verse ... */
 
-      "@canonicalTitle" ->
-      {
-        m_CurrentCanonicalTitleNode = node
-        return NodeRelevance(NodeRelevanceType.CanonicalTitleStart, m_CurrentChapterRefAsString, false)
-      }
+    val id = node[m_FileProtocol!!.attrName_verseSid()] ?: node[m_FileProtocol!!.attrName_verseEid()]!!
+    if (RefBase.C_DummyElement == m_FileProtocol!!.readRefCollection(id).getLowAsRef().getV()) // Ignore dummy verses which I insert at the ends of chapters to simplify processing.
+      return NodeRelevance(NodeRelevanceType.Boring, "", false)
 
-
-      else ->
-      {
-        if (null != m_CurrentCanonicalTitleNode)
-        {
-          m_CurrentCanonicalTitleNode = null
-          return NodeRelevance(NodeRelevanceType.CanonicalTitleEnd, m_CurrentChapterRefAsString, false)
-        }
-      }
-    } // when
-
-    return NodeRelevance(NodeRelevanceType.Boring, "", false)
+    return if (m_FileProtocol.attrName_verseSid() in node)
+      NodeRelevance(NodeRelevanceType.VerseStart, id, false)
+    else
+      NodeRelevance(NodeRelevanceType.VerseEnd, id, false)
   }
 
 
@@ -1290,6 +1274,12 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
+    /* I aim to make this class usable under various circumstances.  In
+       particular I want to be able to use it even if the text lacks eids.
+       However, if it _does_ lack them, I insert them (in a valid but non-
+       optimal position, because that's quite easy) to simplify later
+       processing.  I then delete them again when I've finished. */
+
     val neededToInsertVerseEids = rootNode.findNodesByAttributeName(m_FileProtocol!!.tagName_verse(), m_FileProtocol!!.attrName_verseEid()).isEmpty()
     if (neededToInsertVerseEids)
       rootNode.findNodesByName(m_FileProtocol!!.tagName_chapter()).forEach(::insertVerseEids)
@@ -1348,20 +1338,6 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
           }
 
 
-          NodeRelevanceType.CanonicalTitleStart ->
-          {
-            canonicalTitleWordCount = 0
-            inCanonicalTitle = true
-          }
-
-
-          NodeRelevanceType.CanonicalTitleEnd ->
-          {
-            m_Text.m_CanonicalTitleDetails[m_FileProtocol!!.readRef(relevance.idAsString).toRefKey()] = canonicalTitleWordCount
-            inCanonicalTitle = false
-          }
-
-
           NodeRelevanceType.Text ->
           {
             processText(it)
@@ -1380,6 +1356,14 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
+    /* On Psalms only, I need to see if we have canonical titles. */
+
+    if (BibleAnatomy.C_BookNumberForPsa == m_FileProtocol.bookNameToNumber(m_FileProtocol!!.getBookAbbreviation(rootNode)))
+      rootNode.findNodesByName(m_FileProtocol.tagName_chapter()).forEach(::processCanonicalTitleForChapter)
+
+
+
+    /**************************************************************************/
     /* If I inserted eids here, it was only as a temporary measure, and they
        need to go again. */
 
@@ -1389,15 +1373,82 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
   /****************************************************************************/
+  /* Looks for canonical title details (I anticipate this being called only on
+     Psalms.
+
+     A psalm is regarded as having a canonical title ...
+
+     - Not if it has a para:d or title:psalm heading: not all texts will do so.
+
+     - Not if according to NRSVA we would _expect_ this psalm to have a
+       canonical title.
+
+     - But if it has any canonical text prior to the first verse sid.
+
+
+     The method takes all nodes from the start of the first such canonical
+     text node to the end of the last one and retains a list of pointers to
+     all of them.  (I'm very much hoping that they will all be direct children
+     of the chapter, and not be contained in anything else -- if they _are_
+     contained in anything else, I'm not too sure what the implications may
+     be.)
+
+     It retains a list of these nodes, along with a combined count of the
+     number of words in all of the canonical text nodes. */
+
+  private fun processCanonicalTitleForChapter (chapterNode: Node)
+  {
+    /**************************************************************************/
+    val nodesOfInterest: MutableList<Node> = mutableListOf()
+    var wordCount = 0
+    val allNodes = chapterNode.getAllNodes()
+
+
+
+    /**************************************************************************/
+    for (i in allNodes.indices)
+    {
+      val n = allNodes[i]
+
+      if (m_FileProtocol!!.tagName_verse() == Dom.getNodeName(n))
+        break
+
+      val verseEndInteraction = m_FileProtocol!!.getVerseEndInteractionSelfOrAncestor(n) // How this interacts with verse-ends if also good enough for us.
+      when (verseEndInteraction.first)
+      {
+        'Y' ->
+        {
+          if (!Dom.isWhitespace(n) || nodesOfInterest.isNotEmpty())
+          {
+            if (Dom.isTextNode(n))
+              wordCount += StepStringUtils.wordCount(n.textContent)
+            nodesOfInterest.add(n)
+          }
+        }
+
+        'N' -> nodesOfInterest.add(n)
+
+        'X' -> throw StepException("BibleStructure canonical title processing: Unknown node: ${Dom.toString(n)}")
+      } // when
+    } // for
+
+
+
+    /**************************************************************************/
+    if (nodesOfInterest.isNotEmpty())
+      m_Text.m_CanonicalTitleDetails[m_FileProtocol!!.readRef(chapterNode[m_FileProtocol.attrName_chapterSid()]!!).toRefKey_bc()] =
+        CanonicalTitleDetails(wordCount, nodesOfInterest.filter { m_FileProtocol!!.tagName_chapter() == Dom.getNodeName(it.parentNode) })
+  }
+
+
+  /****************************************************************************/
   /**
   * Assesses whether a node is of relevance to the processing here.
-  * Relevance is determined mainly in terms of whether the node impacts the
-  * job of gathering word counts and canonical title starts and ends.
-  *
-  * The return value
+  * Relevance is determined purely in terms of whether the node impacts the
+  * job of gathering word counts.
   */
 
-  protected enum class NodeRelevanceType { VerseStart, VerseEnd, CanonicalTitleStart, CanonicalTitleEnd, Text, Boring }
+  protected enum class NodeRelevanceType { VerseStart, VerseEnd, Text, Boring }
   protected data class NodeRelevance (val nodeType: NodeRelevanceType, val idAsString: String, val andProcessThisNode: Boolean)
 
 
@@ -1444,9 +1495,6 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   private var m_CollectingWordCounts = false
   private var m_Populated = false // Used to make sure we don't use the facilities without first populating things.
   private var m_Text = TextDescriptor() // The root of the structure.
-
-  private var m_CurrentCanonicalTitleNode: Node? = null
-  private var m_CurrentChapterRefAsString: String = ""
 
 
 
@@ -1499,10 +1547,14 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
   /****************************************************************************/
+  private data class CanonicalTitleDetails (val wordCount: Int, val nodes: List<Node>)
+
+
+  /****************************************************************************/
   private class TextDescriptor
   {
     val m_Content = ContentHolder<BookDescriptor>() // The text is made up of books.
-    val m_CanonicalTitleDetails: MutableMap<RefKey, Int> = mutableMapOf()
+    val m_CanonicalTitleDetails: MutableMap<RefKey, CanonicalTitleDetails> = mutableMapOf()
     val m_DuplicateVerses: MutableList<RefKey> = mutableListOf() // Just a list of refkeys.
     val m_ElisionDetails = LinkedHashMap<RefKey, Node>() // Maps the refKey of any verse in an elision to the pair comprising the first and last refKey.
     val m_SubverseDetails: MutableMap<RefKey, Limits> = mutableMapOf() // Maps the refKey of the master verse for a subverse to the low and high subverse numbers making it up.
@@ -1754,8 +1806,8 @@ open class BibleStructureOsis2ModScheme (scheme: String): BibleStructure(null)
 
   /****************************************************************************/
   override fun addFromDoc (prompt: String, doc: Document, wantWordCount: Boolean, filePath: String?, bookName: String?) { throw StepException("Can't populate osis2mod scheme from text.") }
-  override fun commonGetWordCount(elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
-  override fun commonGetWordCountForCanonicalTitle(elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
+  override fun commonGetWordCount (elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
+  override fun commonGetWordCountForCanonicalTitle (elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
   override fun getRelevanceOfNode (node: Node): NodeRelevance { throw StepException("getRelevanceOfNode should not be being called on an osis2mod scheme.") }
   override fun addFromDoc (doc: Document, wantWordCount: Boolean) { throw StepException("load should not be being called on an osis2mod scheme.") }
 

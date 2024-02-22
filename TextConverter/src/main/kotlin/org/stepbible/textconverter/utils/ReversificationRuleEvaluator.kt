@@ -91,7 +91,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
     {
       if (0 == sourceRef.getV()) // Within the reversification data, the canonical title is held as v0, but we need to split that case out for existence checks.
       {
-          if (!m_BibleStructure.hasCanonicalTitle(sourceRef)) return false
+        if (!m_BibleStructure.hasCanonicalTitle(sourceRef)) return false
       }
       else
       {
@@ -201,7 +201,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
 
         refs.forEach {
           ref = Ref.rd(it, ref)
-          val thisNWords = if (isTitle) m_BibleStructure.getWordCountForCanonicalTitle(ref.toRefKey_bc()) else m_BibleStructure.getWordCount(ref.toRefKey_bcvs())
+          val thisNWords = if (isTitle) m_BibleStructure.getWordCountForCanonicalTitle(ref.toRefKey_bc())!! else m_BibleStructure.getWordCount(ref.toRefKey_bcvs())
 
           when (thisNWords)
           {

@@ -124,7 +124,7 @@ object PE_Phase3_To_SwordModule : PE
     val swordExternalConversionCommand: MutableList<String> = ArrayList()
     swordExternalConversionCommand.add("\"$programName\"")
     swordExternalConversionCommand.add("\"" + FileLocations.getSwordTextFolderPath() + "\"")
-    swordExternalConversionCommand.add("\"" + FileLocations.getTempOsisFilePath() + "\"")
+    swordExternalConversionCommand.add("\"" + FileLocations.getInternalOsisFilePath() + "\"")
 
     if (usingStepOsis2Mod)
     {
@@ -193,7 +193,7 @@ object PE_Phase3_To_SwordModule : PE
 
     FileLocations.getInputStream(file.toString(), null)!!.bufferedReader().readLines().forEach {
       if (it.startsWith("WARNING(PARSE): SWORD does not search numeric entities"))
-        return@forEach  // osis2mod doesn't like things like &#9999;, but apparently we need them and they do work.
+        return@forEach  // osis2mod doesn't like things like &#9999;, but apparently we need them and they do work.  @forEach continues with the next item.
       else if (it.startsWith("SUCCESS"))
       {
         Logger.info(it)
@@ -311,28 +311,19 @@ object PackageContentHandler
 
   /****************************************************************************/
   private fun osis2modDataHandler (filePath: String) = Osis_Osis2modInterface.instance().createSupportingDataIfRequired(filePath)
-  private fun featuresSummaryBibleStructureHandler (filePath: String) = IssueAndInformationRecorder.processFeaturesSummaryBibleDetails(filePath, OsisTempDataCollection)
+  private fun featuresSummaryBibleStructureHandler (filePath: String) = IssueAndInformationRecorder.processFeaturesSummaryBibleDetails(filePath, InternalOsisDataCollection)
   private fun featuresSummaryRunParametersHandler (filePath: String) = IssueAndInformationRecorder.processFeaturesSummaryRunDetails(filePath)
 
 
   /****************************************************************************/
-  /* Early on in the processing, we saved the OSIS to InputOsis under a
-     temporary name -- temporary to discourage people from using it if
-     something went wrong with the processing subsequently.  We've now
-     progressed far enough for us to be confident the OSIS was ok, so we need to
-     rename it to something more meaningful.
-
-     If we originally started from OSIS, I merely need to make sure the file
-     name reflects the module name. */
+  /* We need to save the external OSIS.  I didn't do this earlier on, because
+     the run might have failed, in which case OSIS would have been left lying
+     around, which people might mistakenly have believed was usable. */
 
   private fun osisSaver (dummy: String)
   {
-    val revisedName = ConfigData["stepModuleName"]!! + ".xml"
-    val revisedPath = Paths.get(FileLocations.getInputOsisFolderPath(), revisedName).toString()
-
-    val existingName = File(FileLocations.getInputOsisFilePath()!!).name
-    if (!existingName.equals(revisedName, ignoreCase = true))
-      StepFileUtils.renameFile(revisedPath, FileLocations.getInputOsisFilePath()!!)
+    val filePath = Paths.get(FileLocations.getInputOsisFolderPath(), ConfigData["stepModuleName"]!! + ".xml").toString()
+    Dom.outputDomAsXml(ExternalOsisDataCollection.getDocument(), filePath, null)
   }
 
 
@@ -555,7 +546,7 @@ object PackageContentHandler
     */
 
     var res = ""
-    FeatureIdentifier.process(FileLocations.getTempOsisFilePath())
+    FeatureIdentifier.process(FileLocations.getInternalOsisFilePath())
     if (FeatureIdentifier.hasLemma()) res += "GlobalOptionFilter=OSISLemma\n"
     if (FeatureIdentifier.hasMorphologicalSegmentation()) res += "GlobalOptionFilter=OSISMorphSegmentation\n"
     if (FeatureIdentifier.hasStrongs()) res += "GlobalOptionFilter=OSISStrongs\n"

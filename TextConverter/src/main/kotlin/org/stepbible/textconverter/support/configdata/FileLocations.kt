@@ -193,8 +193,6 @@ object FileLocations
   }
 
   // Lets us save the file speculatively.  Providing the processing goes ok, we rename it later.
-  fun getInputOsisFilePathTemp () = Paths.get(getInputOsisFolderPath(), "DO_NOT_USE_SOMETHING_WENT_WRONG_DURING_PROCESSING.${getFileExtensionForOsis()}").toString()
-
   fun makeInputOsisFilePath (): String // If we are making a file path so as to store the output, we give it a name based on the module name.
   {
     return Paths.get(getInputOsisFolderPath(), "osis_${ConfigData["stepModuleName"]!!}.xml").toString()
@@ -231,8 +229,8 @@ object FileLocations
   fun getInternalSwordFolderPath               () = Paths.get(getOutputFolderPath(), "Sword").toString()
   private fun getMasterMiscellaneousFolderPath () = Paths.get(getOutputFolderPath(), "FilesForRepositoryEtc").toString()
 
-  fun getTempOsisFolderPath                    () = Paths.get(getOutputFolderPath(), "TempOsis").toString()
-  fun getTempOsisFilePath                      () = Paths.get(getTempOsisFolderPath(), "tempOsis.${getFileExtensionForOsis()}").toString()
+  fun getInternalOsisFolderPath                () = Paths.get(getOutputFolderPath(), "InternalOsis").toString()
+  fun getInternalOsisFilePath                  () = Paths.get(getInternalOsisFolderPath(), "InternalOsis.${getFileExtensionForOsis()}").toString()
 
   fun getOutputFolderPath                      () = Paths.get(getRootFolderPath(), "_Output").toString()
 

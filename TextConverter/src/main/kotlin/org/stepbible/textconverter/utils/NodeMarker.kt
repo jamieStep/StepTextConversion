@@ -205,16 +205,6 @@ object NodeMarker
   private const val C_ReversificationLastEid = "_ReversificationLastEid"
 
 
-  /****************************************************************************/
-  fun deleteReversificationWasCanonicalTitle (node: Node) = deleteTemporaryAttribute(node, C_ReversificationWasCanonicalTitle)
-  fun getReversificationWasCanonicalTitle (node: Node) = node[C_ReversificationWasCanonicalTitle]
-  fun hasReversificationWasCanonicalTitle (node: Node) = null != getReversificationWasCanonicalTitle(node)
-  fun setReversificationWasCanonicalTitle (node: Node): NodeMarker { addTemporaryAttribute(node, C_ReversificationWasCanonicalTitle, "y"); return this }
-  private const val C_ReversificationWasCanonicalTitle = "_ReversificationWasCanonicalTitle"
-
-
-
-
 
 
 
