@@ -50,7 +50,7 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
   /****************************************************************************/
   override fun banner () = "Evaluating schemes"
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
-  override fun pre () { StepFileUtils.deleteFile(FileLocations.getOsis2modVersificationDetailsFilePath()) }
+  override fun pre () { StepFileUtils.deleteFile(FileLocations.getVersificationFilePath()) }
   override fun process () = doIt()
 
 

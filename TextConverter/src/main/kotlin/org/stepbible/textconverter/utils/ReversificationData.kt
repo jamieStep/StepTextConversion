@@ -559,10 +559,7 @@ object ReversificationData
   * Does what it says on the tin.
   */
 
-  fun process (dataCollection: X_DataCollection)
-  {
-    initialise(dataCollection)
-  }
+  fun process (dataCollection: X_DataCollection) = doIt(dataCollection)
 
 
 
@@ -596,7 +593,7 @@ object ReversificationData
   /* Locates the relevant data within the input file and then reads it in and
      arranges to parse and filter it. */
 
-  private fun initialise (dataCollection: X_DataCollection)
+  private fun doIt (dataCollection: X_DataCollection)
   {
     /**************************************************************************/
     Dbg.reportProgress("Reading reversification data.  (This contains data needed even if not reversifying.)")
@@ -872,12 +869,12 @@ object ReversificationData
   private fun convertToProcessedForm (dataRow: ReversificationDataRow): Pair<ReversificationDataRow, Boolean>
   {
     /**************************************************************************/
-    //Dbg.d(20772 == rowNumber)
+    //Dbg.d(5406 == dataRow.rowNumber)
 
 
 
     /**************************************************************************/
-    var accepted = true
+    var accepted = false
     dataRow.action = getField("Action", dataRow)
     dataRow.sourceRef   = Ref.rdUsx(getField("SourceRef", dataRow))
     dataRow.standardRef = Ref.rdUsx(getField("StandardRef", dataRow))
@@ -893,9 +890,10 @@ object ReversificationData
        may be useful for debugging. */
 
     val ruleData = getField("Tests", dataRow)
+    //Dbg.d(ruleData, "Psa.18:51=Last & Psa.18:Title=NotExist")
     val sourceRef = if ("AllBiblesEvenIfNotReversifying" == getField("SourceType", dataRow)) null else dataRow.sourceRef
     if (m_RuleEvaluator.rulePasses(sourceRef, ruleData, dataRow))
-      accepted = false
+      accepted = true
 
 
 
@@ -910,8 +908,8 @@ object ReversificationData
         "IfEmpty"        -> 0
         "KeepVerse"      -> getAllBiblesComplaintFlag(dataRow)
         "MergedVerse"    -> C_CreateIfNecessary
-        "Psalm Title"    -> C_ComplainIfStandardRefDidNotExist
-        "Renumber Title" -> C_ComplainIfStandardRefExisted.or(C_StandardIsPsalmTitle).or(if ("title" in getField("SourceRef", dataRow).lowercase()) C_SourceIsPsalmTitle else 0).or(if ("title" in getField("StandardRef", dataRow).lowercase()) C_StandardIsPsalmTitle else 0)
+        "PsalmTitle"     -> C_ComplainIfStandardRefDidNotExist
+        "RenumberTitle"  -> C_ComplainIfStandardRefExisted.or(C_StandardIsPsalmTitle).or(if ("title" in getField("SourceRef", dataRow).lowercase()) C_SourceIsPsalmTitle else 0).or(if ("title" in getField("StandardRef", dataRow).lowercase()) C_StandardIsPsalmTitle else 0)
         "RenumberVerse"  -> C_ComplainIfStandardRefExisted.or(C_Renumber)
         "RenumberVerse*" -> C_ComplainIfStandardRefExisted.or(C_Renumber).or(C_Move)
         else             -> 0

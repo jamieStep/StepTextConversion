@@ -220,7 +220,7 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
        refKeys.subList(0, refKeys.size - 1).forEach {
          val nodeList = m_EmptyVerseHandler.createEmptyVerseForElision(verse.ownerDocument, it, false) // Start, content, and optionally footnote (but no eid).
          addTemporaryAttributesToEmptyVerse(nodeList[0], "elision")
-          m_FileProtocol.updateVerseSid(verse, refKeys.last())
+         m_FileProtocol.updateVerseSid(verse, refKeys.last())
          Dom.insertNodesBefore(verse, nodeList)
       }
 

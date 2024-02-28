@@ -230,7 +230,7 @@ object FileLocations
   private fun getMasterMiscellaneousFolderPath () = Paths.get(getOutputFolderPath(), "FilesForRepositoryEtc").toString()
 
   fun getInternalOsisFolderPath                () = Paths.get(getOutputFolderPath(), "InternalOsis").toString()
-  fun getInternalOsisFilePath                  () = Paths.get(getInternalOsisFolderPath(), "InternalOsis.${getFileExtensionForOsis()}").toString()
+  fun getInternalOsisFilePath                  () = Paths.get(getInternalOsisFolderPath(), "internalOsis.${getFileExtensionForOsis()}").toString()
 
   fun getOutputFolderPath                      () = Paths.get(getRootFolderPath(), "_Output").toString()
 

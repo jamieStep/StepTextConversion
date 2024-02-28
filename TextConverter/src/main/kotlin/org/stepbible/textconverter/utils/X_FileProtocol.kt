@@ -250,7 +250,7 @@ open class X_FileProtocol
     var p = node
     while (true)
     {
-      val canonicity = getTagDescriptor(node).canonicity
+      val canonicity = getTagDescriptor(p).canonicity
       if ('Y' == canonicity || "chapter" == Dom.getNodeName(p)) return true
       if ('N' == canonicity) break
       p = p.parentNode ?: return false
@@ -580,7 +580,7 @@ object Osis_FileProtocol: X_FileProtocol()
   {
     val theCaller = caller ?: m_ExplanationFootnoteCalloutGenerator.get()
     val id = Ref.rd(refKeyForOsisIdOfFootnote).toStringOsis()
-    val footnoteNode = Dom.createNode(doc, "<note type='explanation' osisRef='$id' osisID='$id!${Globals.getUniqueIdCounter()}' n='$theCaller'/>")
+    val footnoteNode = Dom.createNode(doc, "<note type='explanation' osisID='$id!${Globals.getUniqueIdCounter()}' n='$theCaller'/>")
     val textNode = Dom.createTextNode(doc, text)
     footnoteNode.appendChild(textNode)
     return footnoteNode
@@ -899,7 +899,7 @@ object Osis_FileProtocol: X_FileProtocol()
 
     m_TagDetails["title:main"] = TagDescriptor('N', 'N') //
     m_TagDetails["title:parallel"] = TagDescriptor('N', 'N') //
-    m_TagDetails["title:psalm"] = TagDescriptor('?', 'N') //   We may need to look inside this, because some texts place verse tags inside the canonical title.
+    m_TagDetails["title:psalm"] = TagDescriptor('Y', 'N') //   We may need to look inside this, because some texts place verse tags inside the canonical title.
     m_TagDetails["title:sub"] = TagDescriptor('N', 'N') //
     m_TagDetails["titlePage"] = TagDescriptor('X', 'N') // The titlePage element is used to specify a particular title page for an OSIS document.
 

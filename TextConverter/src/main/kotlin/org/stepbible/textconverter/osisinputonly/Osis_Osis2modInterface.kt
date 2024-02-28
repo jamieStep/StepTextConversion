@@ -187,7 +187,7 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
 
   override fun createSupportingDataIfRequired (filePath: String)
   {
-    ConfigData["stepVersificationScheme"] = "v11n_" + ConfigData["stepModuleName"]!!
+    ConfigData["stepVersificationScheme"] = /* "x11n_" + */ ConfigData["stepModuleName"]!!
     populateBibleStructure(InternalOsisDataCollection.getBibleStructure()) // We _must_ be dealing with OsisTemp by now.
     m_BibleStructure.jswordMappings = ReversificationData.getReversificationMappings()
     outputJson(filePath)
@@ -221,6 +221,8 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
 
 
 
+
+
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -249,8 +251,7 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
        outputBookDetails(writer,"ntbooks", ntBooks)
 
        print(writer, "  'vm': [")
-       outputMaxVerses(writer, otBooks, true)
-       outputMaxVerses(writer, ntBooks, false)
+       outputMaxVerses(writer, otBooks.subList(0, otBooks.size - 1) union ntBooks.subList(0, ntBooks.size - 1))
        print(writer, "    ],\n")
 
        outputMappings(writer)
@@ -277,11 +278,10 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
     }
 
 
-    fun outputMaxVerses (writer: PrintWriter, content: List<BookDetails>, moreToCome: Boolean)
+    fun outputMaxVerses (writer: PrintWriter, content: Set<BookDetails>)
     {
-      val s = content.subList(0, content.size - 1).filter { it.chapMax > 0} .joinToString(",\n\n") { it.maxVersesToJson() }
+      val s = content.filter { it.chapMax > 0} .joinToString(",\n\n") { it.maxVersesToJson() }
       print(writer, s)
-      if (moreToCome && s.isNotEmpty()) print(writer, ",\n")
       print(writer, "\n")
     }
   }

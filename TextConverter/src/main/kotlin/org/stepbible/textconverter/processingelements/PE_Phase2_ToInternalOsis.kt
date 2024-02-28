@@ -12,6 +12,8 @@ import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.utils.*
+import org.w3c.dom.Document
+import org.w3c.dom.Node
 import kotlin.math.E
 
 
@@ -111,6 +113,11 @@ object PE_Phase2_ToInternalOsis : PE
   private fun doIt ()
   {
     /***************************************************************************/
+    fun addComment (doc: Document, text: String) = Dom.insertNodeBefore(doc.documentElement.firstChild, Dom.createCommentNode(doc, " $text "))
+
+
+
+    /***************************************************************************/
     fun x () = Logger.announceAllAndTerminateImmediatelyIfErrors()
 
 
@@ -159,6 +166,7 @@ object PE_Phase2_ToInternalOsis : PE
     {
       StepFileUtils.clearFolder(FileLocations.getInputOsisFolderPath())
       SE_BasicVerseEndInserter(ExternalOsisDataCollection).processAllRootNodes(); x()
+      addComment(ExternalOsisDataCollection.getDocument(), "Externally-facing OSIS")
     }
 
 
@@ -168,6 +176,7 @@ object PE_Phase2_ToInternalOsis : PE
        continue with any other changes which are easy because they don't rely
        on anything much and / or don't markedly affect other processing. */
 
+    addComment(doc, "Internally-facing OSIS")
     ProtocolConverterOsisForThirdPartiesToInternalOsis.process(InternalOsisDataCollection); x() // Minor changes to make processing easier (some of which may have to be undone later).
     SE_StrongsHandler(InternalOsisDataCollection).processAllRootNodes(); x()                    // Canonicalises Strong's references.
 
@@ -190,7 +199,7 @@ object PE_Phase2_ToInternalOsis : PE
     SE_BasicValidator(InternalOsisDataCollection).structuralValidation(InternalOsisDataCollection)  // Checks for basic things like all verses being under chapters.
     SE_ListEncapsulator(InternalOsisDataCollection).processAllRootNodes(); x()                  // Might encapsulate lists (but in fact does not do so currently).
     Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                         // Checks for invalid cross-references, or cross-references which point to non-existent places.
-    handleReversification(); x()                                                            // Does what it says on the tin.
+    handleReversification(); x()                                                                // Does what it says on the tin.
     SE_CalloutStandardiser(InternalOsisDataCollection).processAllRootNodes(); x()               // Force callouts to be in house style, assuming that's what we want.
     removeDummyVerses(InternalOsisDataCollection)                                               // Ditto.
     ContentValidator.process(InternalOsisDataCollection, Osis_FileProtocol, ExternalOsisDataCollection, Osis_FileProtocol) // Checks current canonical content against original.
@@ -198,7 +207,8 @@ object PE_Phase2_ToInternalOsis : PE
     EmptyVerseHandler(InternalOsisDataCollection).markVersesWhichWereEmptyInTheRawText()        // Back to doing what it says on the tin.
     SE_FeatureCollector(InternalOsisDataCollection).processAllRootNodes()                       // Gather up information which might be useful to someone administering texts.
     ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse.process(InternalOsisDataCollection)  // Converts what we have back to something close enough to standard OSIS to be reasonably confident osis2mod can handle it.
-    Dom.outputDomAsXml(doc, FileLocations.getInternalOsisFilePath(), null)           // Save the OSIS so it's available to osis2mod.
+    Dom.outputDomAsXml(InternalOsisDataCollection.getDocument(), FileLocations.getInternalOsisFilePath(), null)
+                                                                                                // Save the OSIS so it's available to osis2mod.
   }
 
 
@@ -209,6 +219,7 @@ object PE_Phase2_ToInternalOsis : PE
 
   private fun handleReversification ()
   {
+    //Dbg.d(InternalOsisDataCollection.getDocument())
     ReversificationData.process(InternalOsisDataCollection)
     Osis_DetermineReversificationTypeEtc.process(InternalOsisDataCollection.getBibleStructure())
 

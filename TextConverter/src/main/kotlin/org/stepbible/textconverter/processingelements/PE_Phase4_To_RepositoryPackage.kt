@@ -3,7 +3,6 @@ package org.stepbible.textconverter.processingelements
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
-import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.miscellaneous.Zip
@@ -19,7 +18,7 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
-object PE_Phase4_To_RepositoryPackageAndOrSaveOsis: PE
+object PE_Phase4_To_RepositoryPackage: PE
  {
   /****************************************************************************/
   /****************************************************************************/

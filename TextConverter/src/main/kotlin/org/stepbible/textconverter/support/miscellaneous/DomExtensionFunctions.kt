@@ -1,6 +1,8 @@
 package org.stepbible.textconverter.support.miscellaneous
 
-import org.w3c.dom.*import java.util.*import kotlin.collections.ArrayList
+import org.w3c.dom.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 /******************************************************************************/
 /**
@@ -46,7 +48,7 @@ fun Node.getAttributeMap (): Map<String, String>
   val res: MutableMap<String, String> = TreeMap<String, String>(java.lang.String.CASE_INSENSITIVE_ORDER)
   if (!hasAttributes()) return res
   val attributeMap: NamedNodeMap = this.attributes
-  for (i in 0 until attributeMap.length)
+  for (i in 0..< attributeMap.length)
   {
       val n: Node = attributeMap.item(i)
       res[n.nodeName] = n.nodeValue

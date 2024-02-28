@@ -68,6 +68,7 @@ open class SE_ConversionTimeReversification
   /****************************************************************************/
   override fun processDataCollectionInternal ()
   {
+    TODO("Not tested in the new implementation, and probably doesn't work")
     doIt()
     m_DataCollection.invalidateBibleStructure() // We've changed the structure, so nothing should rely upon it as-is.
   }

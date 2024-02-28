@@ -122,7 +122,7 @@ object ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse
        markers.  I doubt osis2mod would be unduly worried, but get rid of them
        just in case. */
 
-    NodeMarker.deleteAllMarkers(doc)
+    NodeMarker.deleteAllMarkers(dataCollection)
   }
 
 
@@ -230,110 +230,135 @@ object ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse
   private fun doMapping (node: Node)
   {
     /**************************************************************************/
-    val extendedNodeName = Osis_FileProtocol.getExtendedNodeName(node)
-
-
-
-    /**************************************************************************/
-    /* Selah doesn't get formatted well, so change it to italic. */
-
-    if ("l:selah" == extendedNodeName)
+    when (Osis_FileProtocol.getExtendedNodeName(node))
     {
-      Dom.deleteAllAttributes(node)
-      node["type"] = "italic"
-      Dom.setNodeName(node, "hi")
-      return
-    }
+      /************************************************************************/
+      /* There are various other forms of 'l' tag.  Some of these carry 'type'
+         attributes, and I have to admit to not knowing how to handle them (so
+         hope we'll never see them).  But there are other plain vanilla ones
+         which, for some bizarre reason sometimes don't get rendered correctly
+         if I leave them as-is, but are ok if I insert an entirely irrelevant
+         markup before them -- see discussion of xWeird in
+        usxToOsisTagConversionsEtc.conf. */
+
+      "l" ->
+      {
+        val pointlessNode = node.ownerDocument.createNode("<hi type='normal'/>")
+        Dom.insertNodeBefore(node, pointlessNode)
+        return
+      }
 
 
 
-    /**************************************************************************/
-    /* There are various other forms of 'l' tag.  Some of these carry 'type'
-       attributes, and I have to admit to not knowing how to handle them (so
-       hope we'll never see them).  But there are other plain vanilla ones
-       which, for some bizarre reason sometimes don't get rendered correctly
-       if I leave them as-is, but are ok if I insert an entirely irrelevant
-       markup before them -- see discussion of xWeird in
-       usxToOsisTagConversionsEtc.conf. */
+      /************************************************************************/
+      /* Selah doesn't get formatted well, so change it to italic. */
 
-    if ("l" == extendedNodeName)
-    {
-      val pointlessNode = node.ownerDocument.createNode("<hi type='normal'/>")
-      Dom.insertNodeBefore(node, pointlessNode)
-      return
-    }
+      "l:selah" ->
+      {
+        Dom.deleteAllAttributes(node)
+        node["type"] = "italic"
+        Dom.setNodeName(node, "hi")
+        return
+      }
 
 
 
-    /**************************************************************************/
-    /* Speaker is legit OSIS, but it doesn't get rendered well, so we need to
-       do something about it.  More specifically, we convert it to
+      /************************************************************************/
+      /* In collapsing tables, we will have marked what were the verse
+         boundaries.  Here we turn them into superscripts. */
 
-         <p><hi type='bold'><hi type='italic'> ... </hi></hi></p>
-     */
-
-    if ("speaker" == extendedNodeName)
-    {
-      val wrapperPara = Dom.createNode(node.ownerDocument, "<p/>")
-      Dom.insertNodeBefore(node, wrapperPara)
-
-       val wrapperHi = Dom.createNode(node.ownerDocument, "<hi type='bold'/>")
-       wrapperPara.appendChild(wrapperHi)
-
-       Dom.deleteNode(node)
-       wrapperHi.appendChild(node)
-
-      // Turn the node into hi:italic.
-      Dom.deleteAllAttributes(node)
-      node["type"] = "italic"
-      Dom.setNodeName(node, "hi")
-
-      return
-    }
+      "_X_verseBoundaryWithinElidedTable" ->
+      {
+        Dom.deleteAllAttributes(node)
+        node["type"] = "super"
+        Dom.setNodeName(node, "hi")
+        return
+      }
 
 
 
-    /**************************************************************************/
-    /* Acrostic elements come in two forms -- as titles and as hi:acrostic.
-       In fact, STEP doesn't render either of them correctly, so we need to
-       convert them to something else.
+      /************************************************************************/
+      /* Subverse boundaries may have been marked in earlier processing.  If so,
+         the present requirement is that we don't mark them after all. */
 
-       Here we deal with the title form.  The bold/italic version used here
-       represents DIB's preferred option.
-
-       To make the native title:acrostic acceptable, you'd need a change in the
-       stylesheet (STEP\step-web\scss\step-template.css):
-
-         h3.canonicalHeading.acrostic {
-           font-style: italic;
-           font-weight: bold;
-           color: #333;
-           margin-bottom: 0;
-           margin-left: 0;
-           margin-top: 20px;
-         } */
-
-    if ("title:acrostic" == extendedNodeName)
-    {
-      // Turn the node itself into hi:italic.
-      Dom.setNodeName(node, "hi"); Dom.deleteAllAttributes(node); node["type"] = "italic"
-
-      // Create a bold node, insert it before the node itself, and then move the target node into the bold node.
-      val bold = node.ownerDocument.createNode("<hi type='bold'/>")
-      Dom.insertNodeBefore(node, bold)
-      Dom.deleteNode(node)
-      bold.appendChild(node)
-    }
+      "_X_subverseSeparator" ->
+      {
+        Dom.deleteNode(node)
+        return
+      }
 
 
 
-    /**************************************************************************/
-    /* The other form of acrostic. */
+      /************************************************************************/
+      /* Speaker is legit OSIS, but it doesn't get rendered well, so we need to
+         do something about it.  More specifically, we convert it to
 
-    if ("hi:acrostic" == extendedNodeName)
-    {
-      node["type"] = "italic"
-      return
+           <p><hi type='bold'><hi type='italic'> ... </hi></hi></p>
+      */
+
+      "speaker" ->
+      {
+        val wrapperPara = Dom.createNode(node.ownerDocument, "<p/>")
+        Dom.insertNodeBefore(node, wrapperPara)
+
+        val wrapperHi = Dom.createNode(node.ownerDocument, "<hi type='bold'/>")
+        wrapperPara.appendChild(wrapperHi)
+
+        Dom.deleteNode(node)
+        wrapperHi.appendChild(node)
+
+        // Turn the node into hi:italic.
+        Dom.deleteAllAttributes(node)
+        node["type"] = "italic"
+        Dom.setNodeName(node, "hi")
+
+        return
+      }
+
+
+
+      /************************************************************************/
+      /* Acrostic elements come in two forms -- as titles and as hi:acrostic.
+         In fact, STEP doesn't render either of them correctly, so we need to
+         convert them to something else.
+
+         Here we deal with the title form.  The bold/italic version used here
+         represents DIB's preferred option.
+
+         To make the native title:acrostic acceptable, you'd need a change in the
+         stylesheet (STEP\step-web\scss\step-template.css):
+
+           h3.canonicalHeading.acrostic {
+             font-style: italic;
+             font-weight: bold;
+             color: #333;
+             margin-bottom: 0;
+             margin-left: 0;
+             margin-top: 20px;
+           } */
+
+      "title:acrostic" ->
+      {
+        // Turn the node itself into hi:italic.
+        Dom.setNodeName(node, "hi"); Dom.deleteAllAttributes(node); node["type"] = "italic"
+
+        // Create a bold node, insert it before the node itself, and then move the target node into the bold node.
+        val bold = node.ownerDocument.createNode("<hi type='bold'/>")
+        Dom.insertNodeBefore(node, bold)
+        Dom.deleteNode(node)
+        bold.appendChild(node)
+      }
+
+
+
+      /************************************************************************/
+      /* The other form of acrostic. */
+
+      "hi:acrostic" ->
+      {
+        node["type"] = "italic"
+        return
+      }
     }
   }
 

@@ -17,7 +17,8 @@ object VersificationSchemesSupportedByOsis2mod
   /****************************************************************************/
   /**
    * osis2mod is sensitive to the case of the scheme name passed to it, so this
-   * method gives back the canonical form.  Names starting v11n are takig
+   * method gives back the canonical form.  'tbd' indicates a situation in
+   * which we are creating our own details, and the tbd is resolved elsewhere.
    *
    * @param schemeName
    * @return Canonical form of scheme name.
@@ -32,7 +33,7 @@ object VersificationSchemesSupportedByOsis2mod
   /****************************************************************************/
   /**
   * Returns a sorted list of all of the schemes supported by osis2mod (or at
-  * lest, those we're prepared to countenance using).
+  * least, those we're prepared to countenance using).
   *
   * @return List of schemes.
   */

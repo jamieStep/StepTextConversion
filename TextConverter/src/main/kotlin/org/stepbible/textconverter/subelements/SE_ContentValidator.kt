@@ -56,6 +56,9 @@ object ContentValidator
   fun process (dataCollectionNew: X_DataCollection, fileProtocolNew: X_FileProtocol,
                dataCollectionOld: X_DataCollection, fileProtocolOld: X_FileProtocol)
   {
+//    Dbg.d(dataCollectionOld.getDocument(), "a.xml")
+//    Dbg.d(dataCollectionNew.getDocument(), "b.xml")
+
     m_DataCollectionNew = dataCollectionNew
     m_DataCollectionOld = dataCollectionOld
     m_FileProtocolNew = fileProtocolNew
@@ -583,7 +586,7 @@ object ContentValidator
 
     if (contentInput.replace("\\s+".toRegex(), "") == contentEnhanced.replace("\\s+".toRegex(), "")) return
 
-    val message = "Verse mismatch:<nl>  Original = '$contentEnhanced'<nl>     Final = '$contentInput'<nl>"
+    val message = "Verse mismatch:<nl>  Original = '$contentInput'<nl>     Final = '$contentEnhanced'<nl>"
     error(enhancedRefKey, message)
   }
 
@@ -829,6 +832,9 @@ object ContentValidator
   {
     val res = ReversificationDetails()
 
+    if ("conversiontime" != ConfigData["stepReversificationType"]!!)
+      return res
+
     // All the reversification rows which target this book.
     res.m_AllRows = m_ReversificationRowsForAllBooks.filter { bookNo == Ref.getB(it.standardRefAsRefKey) }
 
@@ -873,9 +879,9 @@ object ContentValidator
 
   private class ReversificationDetails
   {
-    lateinit var m_AllRows: List<ReversificationDataRow>                        // All reversification rows for the current enhanced text, in order.
-    lateinit var m_CanonicalTitleRows: List<ReversificationDataRow>             // All rows for the current enhanced text which contain 'Title' in source or standard ref, in order.
-    lateinit var m_MapNonTitleItemsStandardRefKeyToAssociatedReversificationRows: Map<RefKey, List<ReversificationDataRow>> // Maps enhanced refKey to all of the rows involved in producing it.
+    var m_AllRows: List<ReversificationDataRow> = listOf()                       // All reversification rows for the current enhanced text, in order.
+    var m_CanonicalTitleRows: List<ReversificationDataRow> = listOf()            // All rows for the current enhanced text which contain 'Title' in source or standard ref, in order.
+    var m_MapNonTitleItemsStandardRefKeyToAssociatedReversificationRows: Map<RefKey, List<ReversificationDataRow>> = mutableMapOf() // Maps enhanced refKey to all of the rows involved in producing it.
   }
 
 

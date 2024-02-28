@@ -11,7 +11,8 @@ import org.stepbible.textconverter.support.ref.*
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.w3c.dom.Document
 import org.w3c.dom.Node
-import java.util.ArrayList
+import java.util.*
+import kotlin.collections.LinkedHashMap
 import kotlin.math.abs
 
 
@@ -1195,6 +1196,12 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   protected open fun getRelevanceOfNode (node: Node): NodeRelevance
   {
     /**************************************************************************/
+    if (Dom.isTextNode(node))
+      return NodeRelevance(NodeRelevanceType.Text, "", false)
+
+
+
+    /**************************************************************************/
     /* Not a verse. */
 
     if (m_FileProtocol!!.tagName_verse() != Dom.getNodeName(node))
@@ -1289,11 +1296,16 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
     /**************************************************************************/
     fun textIsOfInterest (textNode: Node): Boolean
     {
+      if (Dom.isWhitespace(textNode))
+        return false
+
       var parent = textNode
       while (true)
      {
         parent = parent.parentNode ?: break
-        if (isNonCanonical(parent))
+        if (m_FileProtocol.tagName_chapter() == Dom.getNodeName(parent))
+          return true
+        else if (isNonCanonical(parent))
           return false
       }
 
@@ -1307,10 +1319,13 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
     fun processText (node: Node)
     {
-      if (inCanonicalTitle && textIsOfInterest(node))
+      if (!textIsOfInterest(node))
+        return
+
+      if (inCanonicalTitle)
         canonicalTitleWordCount += StepStringUtils.wordCount(node.textContent)
 
-      else if (inVerse && !isElision && textIsOfInterest(node))
+      else if (inVerse && !isElision)
         verseWordCount += StepStringUtils.wordCount(node.textContent)
     }
 
@@ -1327,20 +1342,21 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
           NodeRelevanceType.VerseStart ->
           {
             handleVerseSid(it, relevance.idAsString)
-            isElision = "-" in relevance.idAsString; verseWordCount = 0; inVerse = true
+            isElision = "-" in relevance.idAsString || NodeMarker.hasElisionType(it); verseWordCount = 0; inVerse = true
           }
 
 
           NodeRelevanceType.VerseEnd ->
           {
-            handleVerseEid(relevance.idAsString, verseWordCount)
+            handleVerseEid(relevance.idAsString, if (isElision) C_ElementInElision else verseWordCount)
             isElision = false; inVerse = false
           }
 
 
           NodeRelevanceType.Text ->
           {
-            processText(it)
+            if (m_CollectingWordCounts)
+              processText(it)
           }
 
 
@@ -1374,7 +1390,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   /****************************************************************************/
   /* Looks for canonical title details (I anticipate this being called only on
-     Psalms.
+     Psalms).
 
      A psalm is regarded as having a canonical title ...
 
@@ -1399,14 +1415,29 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   private fun processCanonicalTitleForChapter (chapterNode: Node)
   {
     /**************************************************************************/
-    val nodesOfInterest: MutableList<Node> = mutableListOf()
+    Dbg.dCont(Dom.toString(chapterNode), "Ps.18")
+
+
+
+    /**************************************************************************/
+    fun containsCanonicalText (n: Node) = null != n.getAllNodes().firstOrNull { Dom.isTextNode(it) && !Dom.isWhitespace(it) && m_FileProtocol!!.isCanonicalNode(it) }
+
+
+
+    /**************************************************************************/
+    var nodesOfInterest: MutableList<Node> = mutableListOf()
+    val nodesWhoseCanonicityWasDeterminedByHittingChapterNode = IdentityHashMap<Node, Int>()
     var wordCount = 0
     val allNodes = chapterNode.getAllNodes()
 
 
 
     /**************************************************************************/
-    for (i in allNodes.indices)
+    /* Run through all nodes which precede the first verse node.  I ignore
+       leading whitespace and leading nodes which definitely aren't canonical,
+       and accumulate everything else. */
+
+    for (i in 1 .. allNodes.size) // Node zero is the chapter, which is not itself of interest.
     {
       val n = allNodes[i]
 
@@ -1416,21 +1447,154 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
       val verseEndInteraction = m_FileProtocol!!.getVerseEndInteractionSelfOrAncestor(n) // How this interacts with verse-ends if also good enough for us.
       when (verseEndInteraction.first)
       {
-        'Y' ->
+        'Y' -> // This is recorded as canonical.
         {
+          if (Dom.isTextNode(n)) // Accumulate word count if it's a text node.
+            wordCount += StepStringUtils.wordCount(n.textContent)
+
           if (!Dom.isWhitespace(n) || nodesOfInterest.isNotEmpty())
-          {
-            if (Dom.isTextNode(n))
-              wordCount += StepStringUtils.wordCount(n.textContent)
-            nodesOfInterest.add(n)
-          }
+            nodesOfInterest.add(n) // Add to collection if either this has made a contribution or we're already collecting stuff.
+
+          if (chapterNode == verseEndInteraction.second)
+            nodesWhoseCanonicityWasDeterminedByHittingChapterNode[n] = 0
         }
 
-        'N' -> nodesOfInterest.add(n)
+        'N' ->
+        {
+          if (nodesOfInterest.isNotEmpty())
+            nodesOfInterest.add(n)
+        }
 
         'X' -> throw StepException("BibleStructure canonical title processing: Unknown node: ${Dom.toString(n)}")
       } // when
     } // for
+
+
+
+    /**************************************************************************/
+    /* Reduce to top level nodes only. */
+
+    nodesOfInterest = nodesOfInterest.filter { m_FileProtocol!!.tagName_chapter() == Dom.getNodeName(it.parentNode) } .toMutableList()
+
+
+
+    /**************************************************************************/
+    /* Bit difficult to explain, but let's try an example.
+
+       At this point, nodesOfInterest contains a lst of nodes which precede
+       the first verse tag and which are direct children of the chapter.
+       (The list may be empty.)
+
+       I now want to remove from the front of the list any nodes which don't
+       actually reflect a canonical title.
+
+       Any leading whitespace can definitely go (although I think earlier
+       processing will probably have excluded this anyway).
+
+       What remains are nodes which we know are definitely canonical, or
+       nodes whose canonicity has to be deduced from context.  The latter
+       are the remaining ones which may need to be pruned -- they need to
+       go if they actually contain no canonical content. */
+
+    while (nodesOfInterest.isNotEmpty())
+    {
+      /************************************************************************/
+      val n = nodesOfInterest[0]
+
+
+
+      /************************************************************************/
+      if (Dom.isWhitespace(n)) // Definitely don't want leading whitespace.
+      {
+        nodesOfInterest = nodesOfInterest.subList(1, nodesOfInterest.size)
+        continue
+      }
+
+
+
+      /************************************************************************/
+      if (Dom.isTextNode(n)) // Definitely do want leading text.
+        break
+
+
+
+      /************************************************************************/
+      if ('N' == m_FileProtocol!!.getVerseEndInteraction(n).first)
+      {
+        nodesOfInterest = nodesOfInterest.subList(1, nodesOfInterest.size)
+        continue
+      }
+
+
+
+      /************************************************************************/
+      /* This looks for nodes which are inherently canonical.  If we hit one of
+         these, we definitely need to retain it. */
+
+      if (n !in nodesWhoseCanonicityWasDeterminedByHittingChapterNode)
+        break
+
+
+
+      /************************************************************************/
+      if (containsCanonicalText(n))
+        break
+      else
+        nodesOfInterest = nodesOfInterest.subList(1, nodesOfInterest.size)
+    }
+
+
+
+    /**************************************************************************/
+    /* We now do something similar, but running back from the end of the
+       list. */
+
+    while (nodesOfInterest.isNotEmpty())
+    {
+      /************************************************************************/
+      val n = nodesOfInterest.last()
+
+
+
+      /************************************************************************/
+      if (Dom.isWhitespace(n)) // Definitely don't want leading whitespace.
+      {
+        nodesOfInterest = nodesOfInterest.subList(0, nodesOfInterest.size - 1)
+        continue
+      }
+
+
+
+      /************************************************************************/
+      if (Dom.isTextNode(n)) // Definitely do want leading text.
+        break
+
+
+
+      /************************************************************************/
+      if ('N' == m_FileProtocol!!.getVerseEndInteraction(n).first)
+      {
+        nodesOfInterest = nodesOfInterest.subList(0, nodesOfInterest.size - 1)
+        continue
+      }
+
+
+
+      /************************************************************************/
+      /* This looks for nodes which are inherently canonical.  If we hit one of
+         these, we definitely need to retain it. */
+
+      if (n !in nodesWhoseCanonicityWasDeterminedByHittingChapterNode)
+        break
+
+
+
+      /************************************************************************/
+      if (containsCanonicalText(n))
+        break
+      else
+        nodesOfInterest = nodesOfInterest.subList(0, nodesOfInterest.size - 1)
+    }
 
 
 
@@ -1623,6 +1787,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   fun clear ()
   {
     m_Text = TextDescriptor()
+    m_Populated = false
   }
 
 
@@ -1665,6 +1830,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
       //  debugDisplayStructure()
       val v = getVerseDescriptor(it.getCopyOfElements())!!
       v.m_WordCount = if (isElision) C_ElementInElision else wordCount
+      //Dbg.d(Ref.rd(it).toString() + ": " + v.m_WordCount)
     }
   }
 
@@ -1683,7 +1849,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
     /**************************************************************************/
     /* If this is an elision, create an elision entry for each verse. */
 
-    if (refKeys.size > 1)
+    if (refKeys.size > 1 || NodeMarker.hasElisionType(node))
       refKeys.forEach { m_Text.m_ElisionDetails[it] = node }
 
 

@@ -18,35 +18,43 @@ import org.w3c.dom.Node
  * nodes they may give rise to cross-boundary markup; and because they also
  * interact with reversification.
  *
- * As regards cross-boundary markup, the problem can be handled relatively
- * easily.  Looking at existing modules, canonical titles seem to be rendered
- * merely in standard italicised text on a line of their own.  The 'line of
- * their own' bit can be addressed by introducing an empty para.  And the
- * italics can be handled by a span-type tag -- which is something verse-end
- * placement can cope with.
+ * This class deals with only a single aspect of things: texts may already be
+ * marked up with canonical title tags (USX para:d or OSIS psalm:title) or
+ * they may not; and so for the sake of later processing it is convenient
+ * to reduce things to a common form:
  *
- * As regards reversification, there are three different situations to
- * consider:
+ * - If we are doing conversion-time reversification, I drop any title markup
+ *   altogether, promoting the nodes which make up the title.
  *
- * - The text may already be NRSVA-compliant (or may deviate only in a 'good'
- *   way).  In this case, but for the change of tagging already mentioned,
- *   I should be able to leave things as they are -- and indeed _ought_ to
- *   do that, to avoid changing the appearance of the text.
+ * - If we are _not_ doing conversion-time reversification (ie if we are
+ *   doing runtime reversification or not applying reversification at all,
+ *   both of which largely entail leaving the text as-is), I replace the
+ *   title markup by formatting markup which achieves the same appearance
+ *   when rendered.
  *
- * - The same also holds good for those cases where we will be using our
- *   own osis2mod: we need to retain something akin to the original formatting
- *   in order to stay compliant with any licensing conditions, so I simply make
- *   the mild formatting change discussed above, and hope that any
- *   reversification information I supply to osis2mod will do the trick.
  *
- * - This just leaves those (probably very few) cases where we are actually
- *   going to restructure the text during the conversion process in order to
- *   render it NRSVA-compliant.  Given that at least some texts will lack
- *   any markup, I work here on the assumption that the best thing to do is
- *   reduce all texts to a common denominator by removing the markup
- *   altogether.
+ * Both of these may seem rather odd at first sight ...
  *
-  * @author ARA "Jamie" Jamieson
+ * Why drop existing markup in the case of conversion-time reversification?
+ * Because as far as that processing is concerned, a canonical title is marked
+ * not by having a specific canonical title tag, but by the existence of
+ * canonical text prior to v1.  Dropping the tag does not lose us anything from
+ * that point of view, but it makes things more uniform because different
+ * translators have different ideas regarding canonical title markup.
+ *
+ * And why change the tag when not doing conversion-time reversification?
+ * Because para:d / psalm:title is a div-type tag, which can give a problem with
+ * cross-boundary markup.  The change I make turns this into a span-type tag,
+ * and I have processing which can cope with that.
+ *
+ *
+ * One final thing.  All of the above relates to canonical titles at the *start*
+ * of chapters.  A few psalms have canonical titles at the end.  Here, too, I
+ * change the markup to a form of formatting markup -- this time because
+ * STEPBible goes wrong when it encounters canonical title tags at the ends of
+ * chapters, and starts putting verse numbers in the wrong place.
+ *
+ * @author ARA "Jamie" Jamieson
  */
 
 class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
@@ -67,7 +75,7 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
   fun process ()
   {
     //Dbg.d(m_DataCollection.getDocument())
-    val rootNode = m_DataCollection.getRootNode(BibleAnatomy.C_BookNumberForPsa) ?: return // May not be processing Psalms.
+    val rootNode = m_DataCollection.getRootNode(BibleAnatomy.C_BookNumberForPsa) ?: return // 'return' because we may be processing a text which lacks Psalms, or may not be processing Psalms on this run.
     Dbg.reportProgress("Handling canonical headings.")
     rootNode.findNodesByName("chapter").forEach(::processCanonicalTitles)
     m_DataCollection.getProcessRegistry().iHaveDone(this, listOf(ProcessRegistry.CanonicalHeadingsCanonicalised))
@@ -86,6 +94,28 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  /* Replaces anything actually marked up as a canonical title (psalm:title)
+     with a span-type markup.  This loses semantics, but it has the advantage
+     of moving from a para markup which may give rise to cross-boundary
+     markup to a spa-style markup which I can cope with. */
+
+  private fun convertCanonicalTitleToFormattingMarkup (titleNodes: List<Node>, whereToPutPara: Char)
+  {
+    titleNodes.forEach {
+      Dom.setNodeName(it, "hi") // Want to turn the header into italic.
+      Dom.deleteAllAttributes(it)
+      it["type"] = "italic"
+
+      val paraNode = titleNodes[0].ownerDocument.createNode("<p/>")
+      if ('A' == whereToPutPara)
+        Dom.insertNodeAfter(it, paraNode)
+      else
+        Dom.insertNodeBefore(it, paraNode)
+    }
+  }
+
 
   /****************************************************************************/
   /* Marks canonical titles which appear near the start of chapters, since
@@ -126,34 +156,34 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
   /****************************************************************************/
   private fun processCanonicalTitles (chapterNode: Node)
   {
+    /**************************************************************************/
+    /* This gives a Pair containing two lists, the first containing all of the
+       canonical title details which appear at the start of chapters, and the
+       second giving those which appear at the end.  Just to be clear, we are
+       looking for things actually marked para:d (in USX) or psalm:title (in
+       OSIS); in general canonical titles are taken as any canonical text prior
+       to v1, regardless of how that text was marked, but here we are
+       concerned with stuff already specifically marked up. */
+
     val titleNodes = identifyCanonicalTitleLocations(chapterNode.getAllNodes())
+
+
+
+    /**************************************************************************/
+    /* If we're dealing with conversion-time reversification (ie if we're going
+       to be physically restructuring the text), it will make things more
+       uniform if we promote the content of any of these existing title nodes,
+       and delete the nodes themselves.
+
+       Otherwise, I simply replace the psalm:title with a span-type markup. */
 
     if ("conversiontime" == ConfigData["stepReversificationType"]!!)
       titleNodes.first.forEach { Dom.promoteChildren(it); Dom.deleteNode(it) } // Promote children of title node and then delete the node itself.
     else
-      processCanonicalTitles(titleNodes.first, 'A')
+      convertCanonicalTitleToFormattingMarkup(titleNodes.first, 'A')
 
-    processCanonicalTitles(titleNodes.second, 'B')
+    convertCanonicalTitleToFormattingMarkup(titleNodes.second, 'B')
  }
-
-
-  /****************************************************************************/
-  /* Replaces any canonical title nodes with alternative markup. */
-
-  private fun processCanonicalTitles (titleNodes: List<Node>, whereToPutPara: Char)
-  {
-    titleNodes.forEach {
-      Dom.setNodeName(it, "hi") // Want to turn the header into italic.
-      Dom.deleteAllAttributes(it)
-      it["type"] = "italic"
-
-      val paraNode = titleNodes[0].ownerDocument.createNode("<p/>")
-      if ('A' == whereToPutPara)
-        Dom.insertNodeAfter(it, paraNode)
-      else
-        Dom.insertNodeBefore(it, paraNode)
-    }
-  }
 
 
   /****************************************************************************/

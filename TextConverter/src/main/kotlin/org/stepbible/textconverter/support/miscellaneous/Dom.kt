@@ -2789,7 +2789,6 @@ fun Node.findNodeByAttributeName (nodeName: String, attributeName: String) = Dom
 fun Node.findNodeByName (nodeName: String, includeThisNode: Boolean) = Dom.findNodeByName(this, nodeName, includeThisNode)
 fun Node.findNodesByAttributeName (nodeName: String, attributeName: String) = Dom.findNodesByAttributeName(this, nodeName, attributeName)
 fun Node.findNodesByAttributeValue (nodeName: String, attributeName: String, attributeValue: String) = Dom.findNodesByAttributeValue(this, nodeName, attributeName, attributeValue)
-fun Node.getPreviousSibling () = Dom.getPreviousSibling(this)
 fun Node.isCommentNode () = Dom.isCommentNode(this)
 fun Node.isWhitespace () = Dom.isWhitespace(this)
 fun Node.isSiblingOf (node: Node) = Dom.isSiblingOf(this, node)

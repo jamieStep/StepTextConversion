@@ -3,6 +3,7 @@ package org.stepbible.textconverter.utils
 import com.google.gson.GsonBuilder
 import org.stepbible.textconverter.processingelements.PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.support.bibledetails.VersificationSchemesSupportedByOsis2mod
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.ref.RefCollection
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -199,7 +200,7 @@ object IssueAndInformationRecorder
     m_FileProtocol = m_DataCollection.getFileProtocol()
 
     if ("tbd" == (ConfigData["stepVersificationScheme"] ?: "tbd"))
-      ConfigData["stepVersificationScheme"] = "v11n_" + ConfigData["stepModuleName"]
+      ConfigData["stepVersificationScheme"] = /* "x11n_" + */ ConfigData["stepModuleName"]!!
 
     outputBibleStructureToJson(outputFilePath)
   }
@@ -209,7 +210,7 @@ object IssueAndInformationRecorder
   fun processFeaturesSummaryRunDetails (filePath: String)
   {
     if ("tbd" == (ConfigData["stepVersificationScheme"] ?: "tbd"))
-      ConfigData["stepVersificationScheme"] = "v11n_" + ConfigData["stepModuleName"]
+      ConfigData["stepVersificationScheme"] = /* "x11n_" + */ ConfigData["stepModuleName"]!!
 
     outputRunDetailsToJson(filePath)
   }
@@ -480,13 +481,13 @@ object IssueAndInformationRecorder
     {
       "conversiontime" ->
       {
-        m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA= "Conversion-time reversification is being applied.  As a result, the text will be forced to be NRSVA compliant, and therefore the following data is not meaningful."
+        m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA = "Conversion-time reversification is being applied.  As a result, the text will be forced to be NRSVA compliant, and therefore the following data is not meaningful."
         return
       }
 
       "runtime" ->
       {
-        m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA= "We are using a bespoke versification scheme.  The text will necessarily comply with that, and therefore the following data is not meaningful."
+        m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA = "We are using a bespoke versification scheme.  The text will necessarily comply with that, and therefore the following data is not meaningful."
         return
       }
     }
@@ -494,16 +495,16 @@ object IssueAndInformationRecorder
 
 
     /**************************************************************************/
-    if (ConfigData["stepVersificationScheme"]!!.startsWith("v11n_"))
+    if (ConfigData["stepVersificationScheme"]!! !in VersificationSchemesSupportedByOsis2mod.getSchemes())
     {
-      m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA= "We are using our own versification scheme, to which the text necessarily conforms, so the following information is irrelevant."
+      m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA = "We are using our own versification scheme, to which the text necessarily conforms, so the following information is irrelevant."
       return
     }
 
 
 
     /**************************************************************************/
-    m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA= "Because reversification is not being applied, the text needs to conform to the selected osis2mod versification scheme.  The following details highlight any issues."
+    m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA = "Because reversification is not being applied, the text needs to conform to the selected osis2mod versification scheme.  The following details highlight any issues."
 
     val analysis = PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.evaluateSingleSchemeDetailed(ConfigData["stepVersificationScheme"]!!, m_DataCollection.getBibleStructure())
 

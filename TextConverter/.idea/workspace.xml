@@ -10,26 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9495aca-7970-4593-a7e0-92356b5adca5" name="Changes" comment="Misc changes after IDEA messed things up.">
+      <change beforePath="$PROJECT_DIR$/../Support/converterUserGuide.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Support/converterUserGuide.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Support/protocolDetails.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/../Support/protocolDetails.xlsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Support/reversificationRaw.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/../Support/reversificationRaw.xlsm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/ProcessingController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/ProcessingController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_CanonicalHeadingsHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_CanonicalHeadingsHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Osis2modInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Osis2modInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToTempOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToInternalOsis.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase3_To_SwordModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase3_To_SwordModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_BasicValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_BasicValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToInternalOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToInternalOsis.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase4_To_RepositoryPackageAndOrSaveOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase4_To_RepositoryPackage.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ContentValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ContentValidator.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ConversionTimeReversification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ConversionTimeReversification.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ElisionHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ElisionHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_RuntimeReversificationHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_RuntimeReversificationHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/VersificationSchemesSupportedByOsis2mod.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/VersificationSchemesSupportedByOsis2mod.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/FileLocations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/FileLocations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Dom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Dom.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/DomExtensionFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/DomExtensionFunctions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/BibleStructure.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/BibleStructure.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Globals.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Globals.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/IssueAndInformationRecorder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/IssueAndInformationRecorder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/NodeMarker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/NodeMarker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ProtocolConverters.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ProtocolConverters.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationRuleEvaluator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationRuleEvaluator.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_FileProtocol.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_FileProtocol.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,27 +75,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Gradle.Build TextConverter.executor": "Run",
-    "Kotlin.deu_HFA.executor": "Run",
-    "Kotlin.deu_Lut1545.executor": "Debug",
-    "KotlinFunctionFindUsagesOptions.isIncludeOverloadUsages": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/TextConverter/src/main/resources",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.23793103",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.Build TextConverter.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.deu_HFA.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.deu_Lut1545.executor&quot;: &quot;Debug&quot;,
+    &quot;KotlinFunctionFindUsagesOptions.isIncludeOverloadUsages&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/TextConverter/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.23793103&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\TextConverter\src\main\resources" />
@@ -835,29 +837,19 @@
           <option name="timeStamp" value="754" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Dbg.kt</url>
-          <line>724</line>
-          <option name="timeStamp" value="755" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ContentValidator.kt</url>
-          <line>788</line>
+          <line>791</line>
           <option name="timeStamp" value="761" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToInternalOsis.kt</url>
-          <line>159</line>
-          <option name="timeStamp" value="767" />
+          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ContentValidator.kt</url>
+          <line>121</line>
+          <option name="timeStamp" value="822" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt</url>
-          <line>1589</line>
-          <option name="timeStamp" value="768" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt</url>
-          <line>1622</line>
-          <option name="timeStamp" value="769" />
+          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ContentValidator.kt</url>
+          <line>120</line>
+          <option name="timeStamp" value="823" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
