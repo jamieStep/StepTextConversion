@@ -5,6 +5,7 @@ import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.stepexception.StepBreakOutOfProcessing
 import org.stepbible.textconverter.support.stepexception.StepException
+import org.stepbible.textconverter.utils.ThrowAwayCode
 
 
 
@@ -20,7 +21,7 @@ fun main (args: Array<String>)
   //Dbg.setBooksToBeProcessed("Psa")
   //ThrowAwayCode.validateXmlFileStructure()
   //ThrowAwayCode.tryXslt()
-  //ThrowAwayCode.makeDigest()
+  //ThrowAwayCode.convertNivToVL()
 
 
   try

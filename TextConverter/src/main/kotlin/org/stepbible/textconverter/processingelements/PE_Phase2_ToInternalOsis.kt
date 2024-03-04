@@ -13,8 +13,6 @@ import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Document
-import org.w3c.dom.Node
-import kotlin.math.E
 
 
 /****************************************************************************/
@@ -205,7 +203,7 @@ object PE_Phase2_ToInternalOsis : PE
     ContentValidator.process(InternalOsisDataCollection, Osis_FileProtocol, ExternalOsisDataCollection, Osis_FileProtocol) // Checks current canonical content against original.
     EmptyVerseHandler.preventSuppressionOfEmptyVerses(InternalOsisDataCollection)               // Unless we take steps, empty verses tend to be suppressed when rendered.
     EmptyVerseHandler(InternalOsisDataCollection).markVersesWhichWereEmptyInTheRawText()        // Back to doing what it says on the tin.
-    SE_FeatureCollector(InternalOsisDataCollection).processAllRootNodes()                       // Gather up information which might be useful to someone administering texts.
+    SE_TextAnalyser(InternalOsisDataCollection).processAllRootNodes()                       // Gather up information which might be useful to someone administering texts.
     ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse.process(InternalOsisDataCollection)  // Converts what we have back to something close enough to standard OSIS to be reasonably confident osis2mod can handle it.
     Dom.outputDomAsXml(InternalOsisDataCollection.getDocument(), FileLocations.getInternalOsisFilePath(), null)
                                                                                                 // Save the OSIS so it's available to osis2mod.

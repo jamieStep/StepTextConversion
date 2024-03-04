@@ -12,17 +12,13 @@ import org.w3c.dom.Node
 
 /****************************************************************************/
 /**
- * In theory, certain flavours of list need to be encapsulated in OSIS with
- * bracketing markers.  In practice, we don't do this at present, because
- * osis2mod doesn't seem to require it, and having the tags there introduces
- * excessive vertical whitespace into the rendering.  The downside is that we
- * generate non-compliant OSIS, and therefore can't make our modules available
- * to Crosswire.
+ * Collects certain ad hoc information needed to work out what to put into the
+ * Sword configuration file.
  *
  * @author ARA "Jamie" Jamieson
  */
 
-class SE_FeatureCollector (dataCollection: X_DataCollection): SE(dataCollection)
+class SE_TextAnalyser (dataCollection: X_DataCollection): SE(dataCollection)
 {
   /****************************************************************************/
   /****************************************************************************/

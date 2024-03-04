@@ -243,7 +243,19 @@ object IssueAndInformationRecorder
       m_BibleTextStructure.SpeakerLocations.add(m_CurrentVerseSid)
       m_BibleTextStructure.HasSpeakers = true
     }
-  } // populateTextFeaturesFromNode
+
+    else if (m_FileProtocol.isAcrosticSpanNode(node))
+    {
+      m_BibleTextStructure.SpeakerLocations.add(m_CurrentVerseSid)
+      m_BibleTextStructure.HasSpeakers = true
+    }
+
+    else if (m_FileProtocol.isAcrosticDivNode(node))
+    {
+      m_BibleTextStructure.SpeakerLocations.add(m_CurrentVerseSid)
+      m_BibleTextStructure.HasSpeakers = true
+    }
+  }// populateTextFeaturesFromNode
 
 
   /****************************************************************************/
@@ -346,6 +358,18 @@ object IssueAndInformationRecorder
 
 
     /**************************************************************************/
+    var HasAcrosticSpanTags = false
+    val AcrosticSpanTagLocations: MutableList<String> = ArrayList()
+
+
+
+    /**************************************************************************/
+    var HasAcrosticDivTags = false
+    val AcrosticDivTagLocations: MutableList<String> = ArrayList()
+
+
+
+    /**************************************************************************/
     var TagNames: List<String>? = null
 
 
@@ -433,8 +457,13 @@ object IssueAndInformationRecorder
                  // * HasSpeakers / SpeakerLocations: SpeakerLocations lists the locations of all
                  //   speaker markup.  HasSpeakers will be true if SpeakerLocations is non-empty.
                  //
-                 // * HasTables / TableLocations: TableLocations lists the locations of all tables.
-                 //   HasTables will be true if TableLocations is non-empty.
+                 // * HasTables / TableLocations: TableLocations lists the locations of all.
+                 //   tables.  HasTables will be true if TableLocations is non-empty.
+                 //
+                 // * HasAcrosticSpanTags / AcrosticSpanTagLocations / HasAcrosticDivTags /
+                 //   AcrosticDivTagLocations: Locations of acrostic tags.  OSIS supports two
+                 //   flavours -- a span-type which is usually used to mark single letters
+                 //   (hi:acrostic), and a div-type which is used as a heading (title:acrostic).
                  //
                  // * TagNames: a full list of tag names.
                  //
