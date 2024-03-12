@@ -1,5 +1,7 @@
 package org.stepbible.textconverter.usxinputonly
 
+import org.stepbible.textconverter.support.debug.Dbg
+import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.utils.Usx_FileProtocol
 import org.w3c.dom.Node
@@ -61,6 +63,8 @@ object Usx_BookAndChapterConverter
   {
     if (!turnBookTagsIntoEnclosingTags(bookRoot.ownerDocument)) return
     deleteEids(bookRoot)
+    attemptToRemedyChaptersWhichAreNotDirectChildrenOfBookNode(bookRoot)
+    validateChapterLocations(bookRoot)
     turnChapterTagsIntoEnclosingTags(bookRoot)
     sidifyContent(bookRoot)
   }
@@ -78,6 +82,28 @@ object Usx_BookAndChapterConverter
   /****************************************************************************/
 
   /****************************************************************************/
+  /* Attempt to remedy any chapters which are not direct children of the
+     book node.  I do this by splitting the parent node.  However, without
+     further thought, I assume I can do this only if the chapter is a child
+     of para:p, with the latter being a direct child of the book node. */
+
+  private fun attemptToRemedyChaptersWhichAreNotDirectChildrenOfBookNode (bookRoot: Node)
+  {
+    val bookAbbrev = bookRoot["code"]!!
+    val badChapters = getChaptersWhichAreNotChildrenOfBook(bookRoot)
+    badChapters.forEach {
+      val id = if ("sid" in it) it["sid"] else it["number"]
+      if ("para:p" != Usx_FileProtocol.getExtendedNodeName(it.parentNode))
+        Logger.error("Chapter $bookAbbrev $id is not a direct child of he book node, and its parent (${Usx_FileProtocol.getExtendedNodeName(it)}) is not one I can split currently.")
+      else if (bookRoot != it.parentNode.parentNode)
+        Logger.error("Chapter $bookAbbrev $id is not a direct child of he book node, and nor its parent.  This represents a case I can't currently handle.")
+      else
+        Dom.splitParentAtNode(it)
+    }
+  }
+
+
+  /****************************************************************************/
   /* I _think_ we may have chapter eids in some cases, but we certainly don't
      in all cases.  To make things more uniform, I delete the eids.  Ditto for
      verses.  Chapters are dealt with shortly when I convert them to enclosing
@@ -91,6 +117,57 @@ object Usx_BookAndChapterConverter
   {
     val elements = Dom.findNodesByName(bookRoot, "chapter", false).toSet() union Dom.findNodesByName(bookRoot, "verse", false).toSet()
     elements.forEach { if ("eid" in it) Dom.deleteNode(it) else it -= "style" }
+  }
+
+
+  /****************************************************************************/
+  fun getChaptersWhichAreNotChildrenOfBook (bookRoot: Node) = Dom.findNodesByName(bookRoot.ownerDocument, "chapter").filter { bookRoot != it.parentNode }
+
+
+  /****************************************************************************/
+  private fun makeEnclosingTags (parentNode: Node, tagNameToBeProcessed: String)
+  {
+    /***************************************************************************/
+    /* Create a dummy node to make processing more uniform. */
+
+    val dummyNode = Dom.createNode(parentNode.ownerDocument, "<$tagNameToBeProcessed _dummy_='y'/>")
+    parentNode.appendChild(dummyNode)
+
+
+
+    /***************************************************************************/
+    /* Locate the nodes to be processed within the overall collection. */
+
+    val allNodes = Dom.getNodesInTree(parentNode)
+    val indexes: MutableList<Int> = mutableListOf()
+    allNodes.indices.forEach {
+      if (tagNameToBeProcessed == Dom.getNodeName(allNodes[it]))
+        indexes.add(it)
+    }
+
+
+
+    /***************************************************************************/
+    /* Turn things into enclosing nodes. */
+
+    for (i in 0..< indexes.size - 1)
+    {
+      val targetNode = allNodes[indexes[i]]
+      for (j in indexes[i] + 1 ..< indexes[i + 1])
+      {
+        val thisNode = allNodes[j]
+        if (parentNode == Dom.getParent(thisNode))
+        {
+          Dom.deleteNode(allNodes[j])
+          targetNode.appendChild(thisNode)
+        }
+      }
+    }
+
+
+
+    /***************************************************************************/
+    Dom.deleteNode(dummyNode)
   }
 
 
@@ -165,49 +242,17 @@ object Usx_BookAndChapterConverter
   private fun turnChapterTagsIntoEnclosingTags (bookRoot: Node) = makeEnclosingTags(bookRoot, "chapter")
 
 
-  /****************************************************************************/
-  private fun makeEnclosingTags (parentNode: Node, tagNameToBeProcessed: String)
+ /****************************************************************************/
+  /* The processing relies upon chapter tags being direct children of book.
+     I do check for this not being the case earlier, and attempt to remedy it,
+     but if I haven't been able to remedy it, I give up. */
+
+  private fun validateChapterLocations (bookRoot: Node)
   {
-    /***************************************************************************/
-    /* Create a dummy node to make processing more uniform. */
-
-    val dummyNode = Dom.createNode(parentNode.ownerDocument, "<$tagNameToBeProcessed _dummy_='y'/>")
-    parentNode.appendChild(dummyNode)
-
-
-
-    /***************************************************************************/
-    /* Locate the nodes to be processed within the overall collection. */
-
-    val allNodes = Dom.getNodesInTree(parentNode)
-    val indexes: MutableList<Int> = mutableListOf()
-    allNodes.indices.forEach {
-      if (tagNameToBeProcessed == Dom.getNodeName(allNodes[it]))
-        indexes.add(it)
-      }
-
-
-
-    /***************************************************************************/
-    /* Turn things into enclosing nodes. */
-
-    for (i in 0..< indexes.size - 1)
-    {
-      val targetNode = allNodes[indexes[i]]
-      for (j in indexes[i] + 1 ..< indexes[i + 1])
-      {
-        val thisNode = allNodes[j]
-        if (parentNode == Dom.getParent(thisNode))
-        {
-          Dom.deleteNode(allNodes[j])
-          targetNode.appendChild(thisNode)
-        }
-      }
+    val bookAbbrev = bookRoot["code"]!!
+    getChaptersWhichAreNotChildrenOfBook(bookRoot).forEach {
+      val id = if ("sid" in it) it["sid"] else it["number"]
+      Logger.error("Markup '${Dom.toString(it.parentNode)} runs across chapter boundary at chapter $bookAbbrev $id.")
     }
-
-
-
-    /***************************************************************************/
-    Dom.deleteNode(dummyNode)
   }
 }

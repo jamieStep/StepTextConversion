@@ -212,6 +212,23 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   }
 
 
+  /****************************************************************************/
+  /**
+  * Replaces the details of a single document.  This is intended mainly for
+  * use when carrying out XSLT-based tweaks to an input document which is not
+  * fully USX-conformant.  I am assuming, at the very least, that it will be
+  * called early, so that nothing much will be dependent upon the previous
+  * version of the document, since I do nothing here other than overwrite the
+  * previous version.
+  *
+  * @param doc
+  */
+
+  fun replaceDocumentStructure (doc: Document)
+  {
+    addFromDoc(doc)
+  }
+
 
 
 
@@ -661,7 +678,6 @@ class Usx_DataCollection: X_DataCollection(Usx_FileProtocol)
     val res: MutableList<Int> = mutableListOf()
 
     Usx_BookAndChapterConverter.process(docOut) // The material may need restructuring so that books and chapters are enclosing nodes.
-
     docOut.findNodesByName("book").forEach {
       if (Dbg.wantToProcessBookByAbbreviatedName(it["code"]!!))
       {

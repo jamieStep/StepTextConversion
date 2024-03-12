@@ -1956,9 +1956,9 @@ object ConfigData
     val bits = FileLocations.getRootFolderName().split("_")
     return when (key.lowercase())
     {
-      "steplanguagecode"                   -> bits[1]
-      "stepvernacularabbreviation"         -> bits[2]
-      else /* stepModuleSuffixOverride */  -> if (bits.size > 3) bits[3] else ""
+      "steplanguagecode"           -> bits[1]
+      "stepvernacularabbreviation" -> bits[2]
+      else /* suffix */            -> if (bits.size > 3) bits[3] else ""
     }
   }
 
@@ -2058,25 +2058,12 @@ object ConfigData
   fun calc_stepModuleName (): String
   {
     /**************************************************************************/
-    /* We require a suffix on the ends of the names of some modules to indicate
-       the intended audience ...
+    /* In the past, some modules were given suffixes (eg _th).  For backward
+       compatibility, we need to retain such suffixes. */
 
-       - If the root folder for the text already has a suffix (implying that it
-         was given a suffix at some point in its history), we retain that for
-         the sake of backward compatibility.
-
-       - Otherwise if the module could, in theory, be made publicly available,
-         we add _sb in the hope that this will avoid name clashes with other
-         versions of the same text supplied by other people.
-
-       - Otherwise the module must be intended for use only within STEPBible,
-         and in this case we don't have a suffix. */
-
-    var audienceRelatedSuffix = parseRootFolderName("stepModuleSuffixOverride")
-    if (audienceRelatedSuffix.isEmpty())
-      audienceRelatedSuffix = if ("public" == ConfigData["stepIntendedAudience"]) "sb" else ""
-    if (audienceRelatedSuffix.isNotEmpty())
-      audienceRelatedSuffix = "_$audienceRelatedSuffix"
+    var suffix = parseRootFolderName("suffix")
+    if (suffix.isNotEmpty())
+      suffix = "_$suffix"
 
 
 
@@ -2099,7 +2086,7 @@ object ConfigData
       }
 
 
-     return calc_stepModuleNameBase() + testRelatedSuffix + audienceRelatedSuffix
+     return calc_stepModuleNameBase() + testRelatedSuffix + suffix
   }
 
 

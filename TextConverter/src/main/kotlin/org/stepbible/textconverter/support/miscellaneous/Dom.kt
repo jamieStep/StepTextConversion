@@ -150,6 +150,9 @@ object Dom
   * stylesheet for yourself, including all the nasty boring bits, and call
   * [applyStylesheet] instead.
   *
+  * IMPORTANT: Note that this returns a *NEW* document -- it doesn't update the
+  * document in situ.
+  *
   * @param document The document to be processed.
   * @param basicStylesheet The stylesheet.
   * @return Modified document.
@@ -2470,6 +2473,52 @@ object Dom
         val doc = node.ownerDocument
         doc.renameNode(node, null, name)
     }
+
+
+    /****************************************************************************/
+    /**
+    * Splits the parent of a node at the node itself, so that the node is
+    * promoted.  Any nodes within the parent and prior to the target node go into
+    * one copy of the parent node; any nodes within the parent and after the
+    * target node go into another copy.
+    *
+    * @param splitAt Node at which to split.
+    */
+
+    fun splitParentAtNode (splitAt:Node)
+    {
+      /************************************************************************/
+      val parent = splitAt.parentNode
+      val pre  = cloneNode(parent.ownerDocument, parent, false)
+      val post = cloneNode(parent.ownerDocument, parent, false)
+      var hitTarget = false
+
+
+
+      /************************************************************************/
+      getChildren(parent).forEach {
+        deleteNode(it)
+        if (it === splitAt)
+          hitTarget = true
+        else if (hitTarget)
+          post.appendChild(it)
+        else
+          pre.appendChild(it)
+      }
+
+
+
+      /************************************************************************/
+      if (pre.hasChildNodes())
+        insertNodeBefore(parent, pre)
+
+      insertNodeBefore(parent, splitAt)
+
+      if (post.hasChildNodes())
+        insertNodeBefore(parent, post)
+
+      deleteNode(parent)
+   }
 
 
     /****************************************************************************/

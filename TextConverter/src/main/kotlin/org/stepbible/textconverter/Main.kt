@@ -18,7 +18,7 @@ import org.stepbible.textconverter.utils.ThrowAwayCode
 
 fun main (args: Array<String>)
 {
-  //Dbg.setBooksToBeProcessed("Psa")
+  //Dbg.setBooksToBeProcessed("Act")
   //ThrowAwayCode.validateXmlFileStructure()
   //ThrowAwayCode.tryXslt()
   //ThrowAwayCode.convertNivToVL()
@@ -61,7 +61,6 @@ fun main (args: Array<String>)
 private fun mainCommon (args: Array<String>)
 {
   ProcessingController.process(args)
-  //TestController.instance().terminate()
   Logger.summariseResults()
 }
 

@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.utils
 
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.Ref
@@ -217,7 +218,7 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
         else
         {
           if (null != couldBeEmpty)
-            res.add(node)
+            res.add(couldBeEmpty!!)
           couldBeEmpty = null
         }
       }

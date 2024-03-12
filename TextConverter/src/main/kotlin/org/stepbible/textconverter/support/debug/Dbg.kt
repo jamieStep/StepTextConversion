@@ -484,7 +484,8 @@ object Dbg
     BookSelector("XXX"),
     BookSelector("EZA"),
     BookSelector("5EZ"),
-    BookSelector("6EZ")
+    BookSelector("6EZ"),
+    BookSelector("DAG")
   )
 
   

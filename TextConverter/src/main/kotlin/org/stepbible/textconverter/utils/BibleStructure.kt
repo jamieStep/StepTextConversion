@@ -1332,6 +1332,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
+    //Dbg.d(rootNode.ownerDocument)
     rootNode.getAllNodes().forEach { //Dbg.dCont(Dom.toString(it), "<verse eID='Ps.4.1'>")
       var processNode = true
       while (processNode)
@@ -1415,7 +1416,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   private fun processCanonicalTitleForChapter (chapterNode: Node)
   {
     /**************************************************************************/
-    Dbg.dCont(Dom.toString(chapterNode), "Ps.18")
+    //Dbg.dCont(Dom.toString(chapterNode), "Ps.18")
 
 
 
@@ -1826,8 +1827,11 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
     val isElision = refKeys.size > 1
 
     refKeys.forEach {
-      //if (Dbg.d(it.toString(), "Psa 11:1"))
+      //if (Dbg.d(it.toString(), "Act 24:7"))
+      //{
       //  debugDisplayStructure()
+      //}
+
       val v = getVerseDescriptor(it.getCopyOfElements())!!
       v.m_WordCount = if (isElision) C_ElementInElision else wordCount
       //Dbg.d(Ref.rd(it).toString() + ": " + v.m_WordCount)

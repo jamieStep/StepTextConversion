@@ -62,7 +62,7 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
     Utils.insertDummyVerseTags(m_FileProtocol, rootNode)        // Dummy verse end at the end of each chapter, so we always have something to insert before.
     insertVerseEnds(rootNode)                                   // Initial positioning.
     Utils.deleteDummyVerseTags(m_FileProtocol, rootNode)        // Get rid of the dummy nodes.
-    //Dbg.d(rootNode.ownerDocument) // $$$$$$$$$$
+    //Dbg.d(rootNode.ownerDocument)
   }
 
 
@@ -189,7 +189,7 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
   private fun insertVerseEnd (id: String, sidWhoseEidWeAreCreating: Node, nextVerseSid: Node)
   {
 //    Dbg.d(sidWhoseEidWeAreCreating)
-//    if (Dbg.dCont(Dom.toString(sidWhoseEidWeAreCreating), "2Pet.2.22"))
+//    if (Dbg.dCont(Dom.toString(sidWhoseEidWeAreCreating), "Acts.24.7"))
 //      Dbg.d(sidWhoseEidWeAreCreating.ownerDocument)
 
     val verseEnd = m_FileProtocol.makeVerseEidNode(sidWhoseEidWeAreCreating.ownerDocument, id)
@@ -374,9 +374,6 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
   /* Removes all canonicity markers. */
 
   private fun unmarkTags (rootNode: Node) = rootNode.getAllNodes().forEach { it -= "vEnd" }
-
-
-
 
 
 

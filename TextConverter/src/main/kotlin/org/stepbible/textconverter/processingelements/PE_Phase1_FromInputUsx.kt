@@ -3,6 +3,7 @@ package org.stepbible.textconverter.processingelements
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.usxinputonly.Usx_OsisCreator

@@ -182,9 +182,10 @@ open class X_FileProtocol
 
 
       /************************************************************************/
-      /* I _think_ it's also always ok to skip over an empty node. */
+      /* I _think_ it's also always ok to skip over an empty node, unless it's
+         a verse node. */
 
-      if (!n.hasChildNodes())
+      if (!n.hasChildNodes() && tagName_verse() != key)
         return Pair('N', n)
 
 
@@ -528,7 +529,7 @@ object Osis_FileProtocol: X_FileProtocol()
   * @return True if this is a poetry para.
   */
 
-  override fun isPoetryPara (node: Node): Boolean = "l" == Dom.getNodeName(node)
+  override fun isPoetryPara (node: Node): Boolean = "l" == Dom.getNodeName(node) && "l:refrain" != getExtendedNodeName(node)
 
 
   /****************************************************************************/

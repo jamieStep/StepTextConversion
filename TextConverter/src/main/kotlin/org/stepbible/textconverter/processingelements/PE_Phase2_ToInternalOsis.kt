@@ -128,6 +128,7 @@ object PE_Phase2_ToInternalOsis : PE
     RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()) // Needed to cater for the possible requirement to expand ranges.
     val doc = InternalOsisDataCollection.getDocument()
     Phase1TextOutput = ""
+    //Dbg.d(doc)
 
 
 

@@ -71,7 +71,11 @@ object Usx_Preprocessor
   {
     Dbg.reportProgress("USX: Applying pre-processing if necessary.")
     initialiseXsltStylesheets()
-    usxDataCollection.getDocuments().forEach { applyXslt(it) }
+    usxDataCollection.getDocuments().forEach {
+      val newDoc = applyXslt(it)
+      if (null != newDoc)
+        usxDataCollection.replaceDocumentStructure(newDoc)
+    }
   }
 
 
@@ -87,16 +91,16 @@ object Usx_Preprocessor
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun applyXslt (doc: Document)
+  private fun applyXslt (doc: Document): Document?
   {
     val books = Dom.findNodesByName(doc, "book")
     if (books.size > 1 && m_HavePerBookStylesheet)
       throw StepException("Have per-book stylesheet and more than one book in a file.")
 
     val bookName = books[0]["code"]!!
-    val stylesheetContent = m_Stylesheets[bookName.lowercase()] ?: m_Stylesheets[""] ?: return
+    val stylesheetContent = m_Stylesheets[bookName.lowercase()] ?: m_Stylesheets[""] ?: return null
 
-    if ("xsl:stylesheet" in stylesheetContent)
+    return if ("xsl:stylesheet" in stylesheetContent)
       Dom.applyStylesheet(doc, stylesheetContent)
     else
       Dom.applyBasicStylesheet(doc, stylesheetContent)
