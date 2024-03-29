@@ -147,7 +147,7 @@ object VersionAndHistoryHandler
 
   fun getHistoryLines (): List<String>
   {
-    return if ("eval" !in ConfigData["stepRunType"]!!)
+    return if ("eval" in ConfigData["stepRunType"]!!)
       listOf()
     else
       m_HistoryLines.map { it.toString() }

@@ -308,7 +308,7 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
 
     fun maxVersesToJson (): String
     {
-      return """    // $name ($chapMax chapters).
+      return """    // $name
     ${vm.joinToString(", ")}"""
     }
   }

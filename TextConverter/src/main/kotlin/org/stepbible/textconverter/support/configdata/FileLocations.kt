@@ -324,8 +324,6 @@ object FileLocations
   fun getRunFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), "runFeatures.json").toString()
   fun getTextFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), "textFeatures.json").toString()
 
-  fun getRepositoryReadMeFilePath () = Paths.get(getMasterMiscellaneousFolderPath(), "_README_.txt").toString()
-
   fun getOsis2ModSupportFolderPath() = Paths.get(getEncryptionAndBespokeOsisToModDataRootFolder(), "versification").toString()
   fun getOsis2ModSupportFilePath() = Paths.get(getOsis2ModSupportFolderPath(), getModuleName() + ".json").toString()
 
@@ -345,7 +343,6 @@ object FileLocations
     "forRepository_" +
     ConfigData["stepLanguageCode3Char"]!! + "_" +
     ConfigData["stepVernacularAbbreviation"]!! +
-    ConfigData["stepModuleNameAudienceRelatedSuffix"]!! +
     ".zip"
 
 

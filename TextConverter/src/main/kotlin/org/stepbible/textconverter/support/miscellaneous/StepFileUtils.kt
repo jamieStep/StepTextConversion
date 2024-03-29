@@ -3,11 +3,11 @@ package org.stepbible.textconverter.support.miscellaneous
 
 import org.apache.commons.io.FilenameUtils
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.File
-import java.nio.file.Files
-import java.nio.file.Path
-import java.nio.file.Paths
+import java.nio.file.*
+import java.nio.file.attribute.BasicFileAttributes
 import kotlin.io.path.notExists
 
 
@@ -172,6 +172,31 @@ object StepFileUtils
     {
       throw StepException("Failed to delete folder $path")
     }
+  }
+
+
+  /******************************************************************************/
+  /**
+  * Deletes all temporary files in or below a given folder.  (Intended mainly to
+  * enable us to get rid of Emacs ~ and # files).
+  *
+  * @param rootFolder Folder of interest.
+  * @param recurse If true recurses down through the folder structure.
+  */
+
+  fun deleteTemporaryFiles (rootFolder: String, recurse: Boolean = true)
+  {
+    class Visitor: SimpleFileVisitor<Path> () {
+      override fun visitFile (file: Path, attrs: BasicFileAttributes): FileVisitResult
+      {
+        val fileName = file.fileName
+        if (attrs.isRegularFile && (fileName.startsWith("#") || fileName.endsWith("~")))
+          Dbg.d("Need to delete $fileName")
+        return FileVisitResult.CONTINUE
+      }
+    }
+
+    Files.walkFileTree(File(rootFolder).toPath(), Visitor())
   }
 
 

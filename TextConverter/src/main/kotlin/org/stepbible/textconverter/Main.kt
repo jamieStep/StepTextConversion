@@ -18,7 +18,7 @@ import org.stepbible.textconverter.utils.ThrowAwayCode
 
 fun main (args: Array<String>)
 {
-  //Dbg.setBooksToBeProcessed("Act")
+  //Dbg.setBooksToBeProcessed("3Jn")
   //ThrowAwayCode.validateXmlFileStructure()
   //ThrowAwayCode.tryXslt()
   //ThrowAwayCode.convertNivToVL()

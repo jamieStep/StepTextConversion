@@ -265,27 +265,24 @@ object Osis_DetermineReversificationTypeEtc
   /* Returns the versification scheme which would be used if we were to run
      Crosswire's version of osis2mod.
 
-     If no setting has been specified in the configuration data, we proceed as
-     though NRSV had been specified.
+     Note that I'm _not_ looking for the best option here.  If you want to
+     discover that, run the converter with -evaluateSchemesOnly.
 
-     If the value is anything other than NRSV(A) or KJV(A) -- both of which
-     exist in one form _with_ DC and one _without_, we take the value as-is,
-     except for converting it to the canonical lowercase / upper case form
-     required by osis2mod.
+     Rather I'm taking any scheme which has been overtly specified in the
+     configuration data, or NRSV if none has been specified.
 
-     If the value is either of NRSV(A) or KJV(A), we look to see whether DC
-     books are actually involved (by seeing which books are available in the
-     text and which might be created if reversification were applied) and
-     convert the value to the appropriate form.
+     If the result of this is KJV, KJVA, NRSV or NRSVA, I then alter it if
+     necessary to take into account the presence or absence of DC books.
 
-     Note that this method merely returns details of what the versification
-     scheme might be should we choose to go with it.  It is down to the caller
-     to decide whether or not to go with it. */
+     And then finally I convert the result to canonical form (ie to the mix of
+     uppercase / lowercase letters which osis2mod uses to identify the scheme).
+ */
 
   private fun getVersificationSchemeWhichWouldBeUsedByCrosswireOsis2mod (bibleStructureUnderConstruction: BibleStructure): String
   {
-    var versificationScheme = ConfigData["stepVersificationScheme"] ?: "NRSV"
-    val existsAsBothWithAndWithoutDc= versificationScheme.uppercase().substring(0,3) in "KJV.NRSV"
+    var versificationScheme = (ConfigData["stepVersificationScheme"] ?: "TBD").uppercase()
+    if ("TBD" == versificationScheme) versificationScheme = "NRSV"
+    val existsAsBothWithAndWithoutDc = versificationScheme.startsWith("KJV") || versificationScheme.startsWith("NRSV")
     if (existsAsBothWithAndWithoutDc)
     {
       val requiresDc = bibleStructureUnderConstruction.hasAnyBooksDc() || ReversificationData.reversificationTargetsDc()

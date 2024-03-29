@@ -534,6 +534,7 @@ object ReversificationData
     val psalmTitles = getAllAcceptedRows().filter { 0 != it.processingFlags.and(C_StandardIsPsalmTitle) }
 
     renumbers.forEach { res.add(Pair(it.key, it.value)) }
+    //renumbers.forEach { res.add(Pair(it.value, it.key)) }
     psalmTitles.forEach { res.add(Pair(it.sourceRefAsRefKey, Ref.setV(it.standardRefAsRefKey, 0))) }
     res.sortBy { it.first }
 

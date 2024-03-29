@@ -2010,8 +2010,7 @@ object ConfigData
   fun calc_stepLanguageCode2Char (): String
   {
     var languageCode = getInternal("stepLanguageCodeFromRootFolderName", false)!!.lowercase()
-    if (2 != languageCode.length) languageCode = IsoLanguageCodes.get2CharacterIsoCode(languageCode)
-    return languageCode
+    return IsoLanguageCodes.get2CharacterIsoCode(languageCode)
   }
 
 
@@ -2019,7 +2018,7 @@ object ConfigData
   fun calc_stepLanguageCode3Char (): String
   {
     var languageCode = getInternal("stepLanguageCodeFromRootFolderName", false)!!.lowercase()
-    if (3 != languageCode.length) languageCode = IsoLanguageCodes.get3CharacterIsoCode(languageCode)
+    if (3 != languageCode.length) languageCode = IsoLanguageCodes.get3PreferredCharacterIsoCode(languageCode)
     return languageCode
   }
 
@@ -2031,24 +2030,15 @@ object ConfigData
      able to read it.  We therefore need to rely upon it appearing in the
      root folder, and at present the name there is of the form eg Text_deuHFA. */
 
-  fun calc_stepLanguageCodeFromRootFolderName (): String
-  {
-    return parseRootFolderName("stepLanguageCode")
-  }
+  fun calc_stepLanguageCodeFromRootFolderName () = IsoLanguageCodes.get3PreferredCharacterIsoCode(parseRootFolderName("stepLanguageCode"))
 
 
   /****************************************************************************/
-  fun calc_stepLanguageNameInEnglish (): String
-  {
-    return IsoLanguageCodes.getLanguageName(getInternal("stepLanguageCode3Char", false)!!)
-  }
+  fun calc_stepLanguageNameInEnglish () = IsoLanguageCodes.getLanguageName(getInternal("stepLanguageCode3Char", false)!!)
 
 
   /****************************************************************************/
-  fun calc_stepModuleCreationDate (): String
-  {
-    return SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date())
-  }
+  fun calc_stepModuleCreationDate () = SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date())
 
 
   /****************************************************************************/
@@ -2119,10 +2109,7 @@ object ConfigData
 
 
   /****************************************************************************/
-  fun calc_stepTextDirection (): String
-  {
-    return Unicode.getTextDirection(m_SampleText) // Need a string taken from a canonical portion of the scripture as input.
-  }
+  fun calc_stepTextDirection () = Unicode.getTextDirection(m_SampleText) // Need a string taken from a canonical portion of the scripture as input.
 
 
   /****************************************************************************/
@@ -2139,10 +2126,7 @@ object ConfigData
   /* We may well have a supplied value for this; if not, then this method will
      supply a default. */
 
-  fun calc_stepTextModifiedDate (): String
-  {
-    return SimpleDateFormat("dd-MMM-yyyy").format(Date())
-  }
+  fun calc_stepTextModifiedDate () = SimpleDateFormat("dd-MMM-yyyy").format(Date())
 
 
   /****************************************************************************/
@@ -2152,10 +2136,7 @@ object ConfigData
      been able to read it.  We therefore need to rely upon it appearing in the
      root folder, and at present the name there is of the form eg Text_deuHFA. */
 
-  fun calc_stepVernacularAbbreviation (): String
-  {
-    return parseRootFolderName("stepVernacularAbbreviation")
-  }
+  fun calc_stepVernacularAbbreviation () = parseRootFolderName("stepVernacularAbbreviation")
 
 
   /****************************************************************************/

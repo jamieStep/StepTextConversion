@@ -10,21 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9495aca-7970-4593-a7e0-92356b5adca5" name="Changes" comment="Misc changes after IDEA messed things up.">
+      <change afterPath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_deu_Lut1545/InputOsis/GerLut1545.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Texts/Miscellaneous/Text_deu_Lut1545/_Output/GerLut1545.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase1_FromInputUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase1_FromInputUsx.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToInternalOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToInternalOsis.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_EnhancedVerseEndInserter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_EnhancedVerseEndInserter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_DetermineReversificationTypeEtc.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_DetermineReversificationTypeEtc.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Osis2modInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Osis2modInterface.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase4_To_RepositoryPackage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase4_To_RepositoryPackage.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Dbg.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Dbg.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Dom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Dom.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_BookAndChapterConverter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_BookAndChapterConverter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_Preprocessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_Preprocessor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/BibleStructure.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/BibleStructure.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/EmptyVerseHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/EmptyVerseHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_DataCollection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_DataCollection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_FileProtocol.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_FileProtocol.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/FileLocations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/FileLocations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/iso/IsoLanguageCodes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/iso/IsoLanguageCodes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/StepFileUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/StepFileUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/VersionAndHistoryHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/VersionAndHistoryHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/commonRoot.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/commonRoot.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Gradle.Build TextConverter.executor&quot;: &quot;Run&quot;,
     &quot;Kotlin.deu_HFA.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.deu_Lut1545.executor&quot;: &quot;Debug&quot;,
+    &quot;Kotlin.deu_Lut1545.executor&quot;: &quot;Run&quot;,
     &quot;Kotlin.eng_NETfull.executor&quot;: &quot;Run&quot;,
     &quot;KotlinFunctionFindUsagesOptions.isIncludeOverloadUsages&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -118,7 +117,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.deu_HFA">
+  <component name="RunManager" selected="Kotlin.deu_Lut1545">
     <configuration name="Temp" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
@@ -212,7 +211,7 @@
     <configuration name="deu_Lut1545" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Miscellaneous\Text_deu_Lut1545 -runType evaluationOnly -updateReason &quot;First release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Miscellaneous\Text_deu_Lut1545 -runType release -updateReason &quot;First release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -272,10 +271,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="eng_NETfull" type="JetRunConfigurationType">
+    <configuration name="eng_NETfull2" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Miscellaneous\Text_eng_NETfull -runType evaluationOnly -updateReason &quot;First release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Miscellaneous\Text_eng_NETfull2 -runType evaluationOnly -updateReason &quot;First release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -688,45 +687,34 @@
     </configuration>
     <list>
       <item itemvalue="Kotlin.Temp" />
-      <item itemvalue="Kotlin.eng_LSB" />
-      <item itemvalue="Kotlin.eng_QQQTest" />
-      <item itemvalue="Kotlin.eng_ESV" />
-      <item itemvalue="Kotlin.eng_NASB2020" />
-      <item itemvalue="Kotlin.grc_SRGNT" />
-      <item itemvalue="Kotlin.eng_NASB1995" />
-      <item itemvalue="Kotlin.grc_THGNT" />
       <item itemvalue="Kotlin.amh_NASV" />
       <item itemvalue="Kotlin.arb_KEH" />
       <item itemvalue="Kotlin.ceb_APD" />
       <item itemvalue="Kotlin.ces_SNC" />
+      <item itemvalue="Kotlin.chi_CCBT" />
+      <item itemvalue="Kotlin.chi_CCB" />
+      <item itemvalue="Kotlin.ckb_KSS" />
+      <item itemvalue="Kotlin.dan_BPH" />
+      <item itemvalue="Kotlin.deu_HFA" />
+      <item itemvalue="Kotlin.deu_Lut1545" />
+      <item itemvalue="Kotlin.en_GW" />
+      <item itemvalue="Kotlin.en_NIV" />
+      <item itemvalue="Kotlin.eng_ESV" />
+      <item itemvalue="Kotlin.eng_LSB" />
+      <item itemvalue="Kotlin.eng_NASB1995" />
+      <item itemvalue="Kotlin.eng_NASB2020" />
+      <item itemvalue="Kotlin.eng_NETfull2" />
+      <item itemvalue="Kotlin.eng_NIrV" />
+      <item itemvalue="Kotlin.eng_QQQTest" />
+      <item itemvalue="Kotlin.ewe_BEE" />
       <item itemvalue="Kotlin.fra_BDS" />
-      <item itemvalue="Kotlin.nde_BEN" />
-      <item itemvalue="Kotlin.nob_ELB" />
-      <item itemvalue="Kotlin.nya_CCL" />
-      <item itemvalue="Kotlin.pes_PCB" />
-      <item itemvalue="Kotlin.pol_PSZ" />
-      <item itemvalue="Kotlin.tgl_ASD" />
-      <item itemvalue="Kotlin.tha_TNCV" />
-      <item itemvalue="Kotlin.twi_NAK" />
-      <item itemvalue="Kotlin.vie_KTHD" />
-      <item itemvalue="Kotlin.yom_NWM" />
-      <item itemvalue="Kotlin.yor_BMYO" />
-      <item itemvalue="Kotlin.rus_CARS" />
-      <item itemvalue="Kotlin.rus_CARSA" />
-      <item itemvalue="Kotlin.rus_CARST" />
-      <item itemvalue="Kotlin.rus_NRT" />
-      <item itemvalue="Kotlin.slv_ZNZ" />
-      <item itemvalue="Kotlin.sna_BDSC" />
-      <item itemvalue="Kotlin.spa_NVI" />
-      <item itemvalue="Kotlin.tsn_LEFT" />
-      <item itemvalue="Kotlin.spa_NVIC" />
-      <item itemvalue="Kotlin.por_NVI" />
-      <item itemvalue="Kotlin.ron_NTR" />
       <item itemvalue="Kotlin.gbr_GAW" />
+      <item itemvalue="Kotlin.grc_SRGNT" />
+      <item itemvalue="Kotlin.grc_THGNT" />
       <item itemvalue="Kotlin.hau_SRK" />
       <item itemvalue="Kotlin.heb_HD" />
-      <item itemvalue="Kotlin.hin_HSS" />
       <item itemvalue="Kotlin.hil_APD" />
+      <item itemvalue="Kotlin.hin_HSS" />
       <item itemvalue="Kotlin.hne_NNC" />
       <item itemvalue="Kotlin.hrv_KOK" />
       <item itemvalue="Kotlin.ibo_BIU" />
@@ -737,19 +725,30 @@
       <item itemvalue="Kotlin.lin_MNB" />
       <item itemvalue="Kotlin.lug_EEEE" />
       <item itemvalue="Kotlin.mal_MCV" />
+      <item itemvalue="Kotlin.nde_BEN" />
+      <item itemvalue="Kotlin.nob_ELB" />
+      <item itemvalue="Kotlin.nya_CCL" />
+      <item itemvalue="Kotlin.pes_PCB" />
+      <item itemvalue="Kotlin.pol_PSZ" />
+      <item itemvalue="Kotlin.por_NVI" />
+      <item itemvalue="Kotlin.ron_NTR" />
+      <item itemvalue="Kotlin.rus_CARSA" />
+      <item itemvalue="Kotlin.rus_CARST" />
+      <item itemvalue="Kotlin.rus_CARS" />
+      <item itemvalue="Kotlin.rus_NRT" />
+      <item itemvalue="Kotlin.slv_ZNZ" />
+      <item itemvalue="Kotlin.sna_BDSC" />
+      <item itemvalue="Kotlin.spa_NVIC" />
+      <item itemvalue="Kotlin.spa_NVI" />
       <item itemvalue="Kotlin.swe_NB" />
       <item itemvalue="Kotlin.swh_NEN" />
-      <item itemvalue="Kotlin.chi_CCB" />
-      <item itemvalue="Kotlin.chi_CCBT" />
-      <item itemvalue="Kotlin.ckb_KSS" />
-      <item itemvalue="Kotlin.dan_BPH" />
-      <item itemvalue="Kotlin.ewe_BEE" />
-      <item itemvalue="Kotlin.eng_NIrV" />
-      <item itemvalue="Kotlin.deu_HFA" />
-      <item itemvalue="Kotlin.deu_Lut1545" />
-      <item itemvalue="Kotlin.eng_NETfull" />
-      <item itemvalue="Kotlin.en_GW" />
-      <item itemvalue="Kotlin.en_NIV" />
+      <item itemvalue="Kotlin.tgl_ASD" />
+      <item itemvalue="Kotlin.tha_TNCV" />
+      <item itemvalue="Kotlin.tsn_LEFT" />
+      <item itemvalue="Kotlin.twi_NAK" />
+      <item itemvalue="Kotlin.vie_KTHD" />
+      <item itemvalue="Kotlin.yom_NWM" />
+      <item itemvalue="Kotlin.yor_BMYO" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -803,7 +802,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt</url>
-          <line>2170</line>
+          <line>2151</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -880,9 +879,27 @@
           <option name="timeStamp" value="858" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/EmptyVerseHandler.kt</url>
-          <line>92</line>
-          <option name="timeStamp" value="884" />
+          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase4_To_RepositoryPackage.kt</url>
+          <line>65</line>
+          <option name="timeStamp" value="861" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/VersionAndHistoryHandler.kt</url>
+          <line>164</line>
+          <option name="timeStamp" value="862" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/VersionAndHistoryHandler.kt</url>
+          <line>149</line>
+          <option name="timeStamp" value="863" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase3_To_SwordModule.kt</url>
+          <line>409</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="865" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
