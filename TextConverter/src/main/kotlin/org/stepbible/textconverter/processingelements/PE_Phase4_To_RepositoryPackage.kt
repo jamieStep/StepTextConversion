@@ -31,8 +31,8 @@ object PE_Phase4_To_RepositoryPackage: PE
   /****************************************************************************/
   override fun banner () = "Generating package for repository"
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
-  override fun process () = doIt()
   override fun pre () = StepFileUtils.deleteFileOrFolder(FileLocations.getRepositoryPackageFilePath())
+  override fun process () = doIt()
 
 
 
@@ -49,13 +49,9 @@ object PE_Phase4_To_RepositoryPackage: PE
   /****************************************************************************/
   private fun doIt()
   {
-    createRepositoryPackage()
-  }
-
-  /****************************************************************************/
-  private fun createRepositoryPackage ()
-  {
     if ("release" != ConfigData["stepRunType"]!!.lowercase()) return
+
+    StepFileUtils.deleteTemporaryFiles(FileLocations.getRootFolderPath())
 
     val inputOsis = if (FileLocations.getInputOsisFileExists()) FileLocations.getInputOsisFolderPath() else null
     val inputUsx  = if (FileLocations.getInputUsxFilesExist())  FileLocations.getInputUsxFolderPath()  else null
@@ -72,6 +68,4 @@ object PE_Phase4_To_RepositoryPackage: PE
                                FileLocations.getSwordZipFilePath()).filterNotNull()
     Zip.createZipFile(zipPath, 9, null, inputs)
   }
-
-
 }

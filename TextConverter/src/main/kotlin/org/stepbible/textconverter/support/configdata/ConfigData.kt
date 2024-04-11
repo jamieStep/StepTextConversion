@@ -427,7 +427,7 @@ object ConfigData
         {
           //Dbg.d(x)
           val line = x.trim().replace("@home", System.getProperty("user.home"))
-          if (processConfigLine(line, configFilePath, callingFilePath, )) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
+          if (processConfigLine(line, configFilePath, callingFilePath)) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
           throw StepException("Couldn't process config line: $line")
         } // for
 
@@ -616,6 +616,15 @@ object ConfigData
 
 
       /**************************************************************************/
+      if (directive.matches(Regex("(?i)stepRegex.*")))
+      {
+        processRegexLine(directive)
+        return true
+      }
+
+
+
+      /**************************************************************************/
       if (directive.contains("=")) // I think this should account for all remaining lines.
       {
         var x = directive.replace("(?i)\\.totextdirection\\s*\\(\\s*\\)".toRegex(), ".#toTextDirection")
@@ -628,6 +637,20 @@ object ConfigData
 
       /**************************************************************************/
       return false // In other words, we haven't managed to process it.
+    }
+
+
+    /****************************************************************************/
+    /* Takes a regex definition, splits it into its two elements (pattern and
+       replacement) and adds it to the regex collection.  Regexes represent
+       pattern match and replacements which are applied to incoming USX before
+       processing. */
+
+    private fun processRegexLine (line: String)
+    {
+      val x = line.substring(line.indexOf("=") + 1)
+      val (pattern, replacement) = x.split("=>")
+      m_Regexes.add(Pair(tidyVal(pattern).toRegex(), tidyVal(replacement)))
     }
 
 
@@ -651,6 +674,7 @@ object ConfigData
      *
      * @param key
      */
+
     fun delete (key: String)
     {
       if (key in m_Metadata) m_Metadata.remove(key)
@@ -696,10 +720,7 @@ object ConfigData
     *  @return Keys.
     */
 
-    fun getKeys () : Set<String>
-    {
-      return m_Metadata.keys
-    }
+    fun getKeys () : Set<String> = m_Metadata.keys
 
 
     /****************************************************************************/
@@ -709,10 +730,8 @@ object ConfigData
     *
     * @return As-is lines.
     */
-    fun getCopyAsIsLines (): List<String>
-    {
-      return m_CopyAsIsLines
-    }
+
+    fun getCopyAsIsLines (): List<String> = m_CopyAsIsLines
 
 
 
@@ -779,10 +798,19 @@ object ConfigData
      *  @return True if this is the English version of a piece of translatable
      *    text.
      */
-    fun isEnglishTranslatableText (key: String): Boolean
-    {
-      return m_EnglishDefinitions.contains(key)
-    }
+
+    fun isEnglishTranslatableText (key: String) = m_EnglishDefinitions.contains(key)
+
+
+    /****************************************************************************/
+    /**
+    * Returns any pattern match / replacement details.
+    *
+    * @return Details.
+    */
+
+    fun getRegexes () = m_Regexes
+
 
 
     /****************************************************************************/
@@ -1879,8 +1907,10 @@ object ConfigData
     private var m_Initialised: Boolean = false
     private val m_Metadata = TreeMap<String, ParameterSetting?>(String.CASE_INSENSITIVE_ORDER)
     private var m_ProcessingEnglishMessageDefinitions = false
-    private val m_UsxToOsisTagTranslationDetails: MutableMap<String, Pair<String, TagAction>> = TreeMap(String.CASE_INSENSITIVE_ORDER)
     private val m_RawUsxToOsisTagTranslationLines: MutableList<String> = ArrayList()
+    private val m_Regexes: MutableList<Pair<Regex, String>> = mutableListOf()
+    private val m_UsxToOsisTagTranslationDetails: MutableMap<String, Pair<String, TagAction>> = TreeMap(String.CASE_INSENSITIVE_ORDER)
+
 
 
     /****************************************************************************/

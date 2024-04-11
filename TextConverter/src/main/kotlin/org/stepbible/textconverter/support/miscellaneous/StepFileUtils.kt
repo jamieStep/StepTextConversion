@@ -2,7 +2,6 @@
 package org.stepbible.textconverter.support.miscellaneous
 
 import org.apache.commons.io.FilenameUtils
-import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.File
@@ -187,11 +186,11 @@ object StepFileUtils
   fun deleteTemporaryFiles (rootFolder: String, recurse: Boolean = true)
   {
     class Visitor: SimpleFileVisitor<Path> () {
-      override fun visitFile (file: Path, attrs: BasicFileAttributes): FileVisitResult
+      override fun visitFile (filePath: Path, attrs: BasicFileAttributes): FileVisitResult
       {
-        val fileName = file.fileName
+        val fileName = filePath.fileName.toString()
         if (attrs.isRegularFile && (fileName.startsWith("#") || fileName.endsWith("~")))
-          Dbg.d("Need to delete $fileName")
+          deleteFile(filePath)
         return FileVisitResult.CONTINUE
       }
     }
@@ -294,7 +293,7 @@ object StepFileUtils
       Long.MAX_VALUE
     else
     {
-      val files = StepFileUtils.getMatchingFilesFromFolder(folder, ".*\\.$extension".toRegex())
+      val files = getMatchingFilesFromFolder(folder, ".*\\.$extension".toRegex())
       return files.minOfOrNull{ File(it.toString()).lastModified() } ?: Long.MAX_VALUE
     }
   }
@@ -472,12 +471,12 @@ object StepFileUtils
                                 sorter: Comparator<String>?): List<String>
   {
     /**************************************************************************/
-    var filePattern = theFilePattern ?: ".*\\..*".toRegex()
+    val filePattern = theFilePattern ?: ".*\\..*".toRegex()
 
 
 
     /**************************************************************************/
-    val filePaths = getMatchingFilesFromFolder(folderPath, filePattern!!)
+    val filePaths = getMatchingFilesFromFolder(folderPath, filePattern)
     var filePathsAsString = filePaths.map { it.toString() }
     if (null != sorter) filePathsAsString = filePathsAsString.sortedWith(sorter)
     if (null != processor) filePathsAsString.forEach { processor(it) }

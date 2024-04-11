@@ -694,9 +694,9 @@ object IssueAndInformationRecorder
 
 
     /**************************************************************************/
-    val referenceMappings = ReversificationData.getReferenceMappings()
+    val referenceMappings = ReversificationData.getAugmentedReferenceMappings()
     if (referenceMappings.isNotEmpty())
-      m_RunFeatures.ReversificationMappings = referenceMappings.map { Ref.rd(it.key).toString() + " -> " + Ref.rd(it.value).toString() }
+      m_RunFeatures.ReversificationMappings = referenceMappings.map { Ref.rd(it.key).toString() + " -> " + Ref.rd(it.value.first).toString() + ", " + ReversificationData.getSourceType(it.value.second) }
 
 
 

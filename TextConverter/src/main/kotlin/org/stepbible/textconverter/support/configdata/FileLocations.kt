@@ -156,7 +156,7 @@ object FileLocations
   /* Root folder for text. */
 
   fun getRootFolderName () = m_RootFolderName
-  private fun getRootFolderPath () = m_RootFolderPath
+  fun getRootFolderPath () = m_RootFolderPath
 
 
   /****************************************************************************/

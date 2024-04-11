@@ -434,6 +434,7 @@ object ReversificationData
   fun getAncientVersions (row: ReversificationDataRow): String { return row.ancientVersions }
   fun getFootnoteReversification (row: ReversificationDataRow): String { return getFootnote(row, "Reversification Note") }
   fun getFootnoteVersification (row: ReversificationDataRow): String { return getFootnote(row, "Versification Note") }
+  fun getSourceType (row: ReversificationDataRow): String { return getField("sourceType", row)}
   //fun getFootnoteDetails (row: ReversificationDataRow): CalloutDetails { return row.calloutDetails }
   //fun getSourceRef (row: ReversificationDataRow): Ref { return row.sourceRef }
   //fun getSourceRefAsRefKey (row: ReversificationDataRow): RefKey { return row.sourceRefAsRefKey }
@@ -468,6 +469,7 @@ object ReversificationData
   fun getStandardBooksInvolvedInReversificationMoveActionsAbbreviatedNames (): List<String> { return m_StandardBooksInvolvedInMoveActions }
 
   fun getBookMappings (): Set<String> { return m_BookMappings } // String of the form abc.xyz, indicating there is a mapping from book abc to xyz.
+  fun getAugmentedReferenceMappings (): Map<RefKey, Pair<RefKey, ReversificationDataRow>> { return m_SelectedRows.filter { 0 != it.processingFlags.and(C_Renumber) }. associate { it.sourceRefAsRefKey to Pair(it.standardRefAsRefKey, it) } } // Note 1 above.
   fun getReferenceMappings (): Map<RefKey, RefKey> { return m_SelectedRows.filter { 0 != it.processingFlags.and(C_Renumber) }. associate { it.sourceRefAsRefKey to it.standardRefAsRefKey } } // Note 1 above.
 
   fun getAllMoveGroups (): List<ReversificationMoveGroup> { return m_MoveGroups }
@@ -1523,7 +1525,7 @@ object ReversificationData
   private fun setField (dataRow: ReversificationDataRow, key: String, value: String)
   {
     val ix = m_Headers[key]!!
-    dataRow.fields[ix] =value
+    dataRow.fields[ix] = value
   }
 
 
