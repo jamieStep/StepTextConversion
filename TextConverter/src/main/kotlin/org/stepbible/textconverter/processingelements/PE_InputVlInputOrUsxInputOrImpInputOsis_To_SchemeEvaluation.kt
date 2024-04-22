@@ -37,7 +37,7 @@ import java.io.File
 * @author ARA 'Jamie' Jamieson
 */
 
-object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
+object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -147,7 +147,7 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
   * @return Result of evaluating against the given scheme.
   */
 
-  fun evaluateSingleScheme (schemeName: String, bibleStructureToCompareWith: BibleStructure): Evaluation?
+  fun evaluateSingleScheme (schemeName: String, bibleStructureToCompareWith: BibleStructure): Evaluation
   {
     //???val bookNumbersInRawUsx = bibleStructureToCompareWith.getAllBookNumbers().toList()
     return evaluateScheme(schemeName, bibleStructureToCompareWith)
@@ -201,12 +201,20 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
     /**************************************************************************/
     when (ConfigData["stepOriginData"]!!)
     {
+      "imp" ->
+      {
+        val inFiles = StepFileUtils.getMatchingFilesFromFolder(FileLocations.getInputImpFolderPath(), ".*\\.${FileLocations.getFileExtensionForImp()}".toRegex()).map { it.toString() }
+        if (1 != inFiles.size) throw StepException("Expecting precisely one IMP file, but ${inFiles.size} files available.")
+        return BibleStructureImp(inFiles[0])
+      }
+
+
       "osis" ->
       {
         PE_Phase1_FromInputOsis.pre()
         PE_Phase1_FromInputOsis.process()
         val dataCollection = X_DataCollection(Osis_FileProtocol)
-        dataCollection.loadFromText(Phase1TextOutput, false)
+        dataCollection.loadFromText(Phase1TextOutput)
         return dataCollection.getBibleStructure()
       }
 
@@ -224,7 +232,7 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
         PE_Phase1_FromInputVl.pre()
         PE_Phase1_FromInputVl.process()
         val dataCollection = X_DataCollection(Osis_FileProtocol)
-        dataCollection.loadFromText(Phase1TextOutput, false)
+        dataCollection.loadFromText(Phase1TextOutput)
         return dataCollection.getBibleStructure()
       }
     }
@@ -237,23 +245,11 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
 
 
   /****************************************************************************/
-  private fun evaluateScheme (scheme: String, bibleStructureToCompareWith: BibleStructure): Evaluation?
+  private fun evaluateScheme (scheme: String, bibleStructureToCompareWith: BibleStructure): Evaluation
   {
     /**************************************************************************/
     //Dbg.dCont(scheme, "nrsv")
     //Dbg.dCont(scheme, "kjv")
-
-
-
-    /**************************************************************************/
-    /* "tbd" is used where we are doing runtime reversification and have not
-       yet decided on a scheme name.  Even if we had an actual scheme name
-       available here, there would be no point in evaluating against it,
-       because the scheme would be a bespoke one, and we're guaranteed to fit
-       that. */
-
-    if ("tbd" == scheme)
-      return null
 
 
 
@@ -376,17 +372,17 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
                     #
                     ################################################################################
                     
-                    ${ConfigData["stepModuleNameBase"]!!}
+                    ${ConfigData["stepModuleName"]!!}
                     
                     """.trimIndent()
 
    File(FileLocations.getVersificationFilePath()).printWriter().use { writer ->
-      writer.println(header)
-      details.forEach { writer.println(it.toString()); println(it.toString()) }
+      writer.print(header + "\n")
+      details.forEach { writer.print(it.toString()); writer.print("\n"); println(it.toString()) }
       if (additionalInformation.isNotEmpty())
       {
-        writer.println(""); println("")
-        writer.println(additionalInformation); println(additionalInformation)
+        writer.print("\n"); println("")
+        writer.print(additionalInformation + "\n"); println(additionalInformation)
       }
     }
   }
@@ -401,6 +397,8 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
                          val versesInExcessInOsis2modScheme: Int,
                          val text: String?)
   {
+    fun exactMatch (): Boolean = 0 == booksMissingInOsis2modScheme && 0 == versesMissingInOsis2modScheme && 0 == booksInExcessInOsis2modScheme && 0 == versesInExcessInOsis2modScheme
+
     override fun toString (): String
     {
       return if (Int.MAX_VALUE == score)
@@ -408,6 +406,28 @@ object PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation: PE
       else
         String.format("Scheme: %12s   Score: %12d   Based upon    %3d books and %6d verses which osis2mod lacks   AND   %3d books and %6d verses which osis2mod has in excess.%s",
                       scheme, score, booksMissingInOsis2modScheme, versesMissingInOsis2modScheme, booksInExcessInOsis2modScheme, versesInExcessInOsis2modScheme, if (null == text) "" else "  $text")
+    }
+
+    fun toStringShort (): String?
+    {
+      return if (0 == booksMissingInOsis2modScheme && 0 == versesMissingInOsis2modScheme && 0 == booksInExcessInOsis2modScheme && 0 == versesInExcessInOsis2modScheme)
+        null
+      else
+      {
+        val xbooksMissingInOsis2modScheme = if (0 == booksMissingInOsis2modScheme) "" else "$booksMissingInOsis2modScheme books"
+        val xversesMissingInOsis2modScheme = if (0 == versesMissingInOsis2modScheme) "" else "$versesMissingInOsis2modScheme verses"
+        var xand = if (booksMissingInOsis2modScheme > 0 && versesMissingInOsis2modScheme > 0) "" else " and "
+        val textExcess = if (0 == booksMissingInOsis2modScheme && 0 == versesMissingInOsis2modScheme) "" else "BAD divergences: Text has $xbooksMissingInOsis2modScheme$xand$xversesMissingInOsis2modScheme which the scheme lacks."
+
+        val xbooksInExcessInOsis2modScheme = if (0 == booksInExcessInOsis2modScheme) "" else "$booksInExcessInOsis2modScheme books"
+        val xversesInExcessInOsis2modScheme = if (0 == versesInExcessInOsis2modScheme) "" else "$versesInExcessInOsis2modScheme verses"
+        xand = if (booksInExcessInOsis2modScheme > 0 && versesInExcessInOsis2modScheme > 0) "" else " and "
+        val textLacks = if (0 == booksInExcessInOsis2modScheme && 0 == versesInExcessInOsis2modScheme) "" else "OK-ish divergences: Text lacks $xbooksInExcessInOsis2modScheme$xand$xversesInExcessInOsis2modScheme which the scheme expects."
+
+        val sep = if (textExcess.isEmpty() || textLacks.isEmpty()) "" else "  "
+
+        return textExcess + sep + textLacks
+      }
     }
 
     // Want to favour NRSV(A) over other schemes which may score the same.

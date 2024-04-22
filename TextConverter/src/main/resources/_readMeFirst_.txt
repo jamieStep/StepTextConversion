@@ -39,7 +39,7 @@
 #!
 #! The good news, though, is that that amount of configuring you _have_ to do
 #! for any individual text is usually quite modest, and in the main covers the
-#! sorts of things you would expect to have to supply, like copyright
+#! sorts of things you would _expect_ to have to supply, like copyright
 #! information.  And in fact if you have a number of texts from the same source,
 #! you can often reduce this further by sharing information between them.
 #!
@@ -114,8 +114,8 @@
 #!
 #!
 #! The tool ascribes no significance to the manner in which configuration data
-#! is split between files, so you split things up as you like.  Obviously it may
-#! be useful to group associated data into the same file.  In particular, if
+#! is split between files, so you can split things up as you like.  Obviously it
+#! may be useful to group associated data into the same file.  In particular, if
 #! you have data which could usefully be shared between a number of texts
 #! (for example details of a common copyright holder), you may want to put that
 #! information in a separate file and store it somewhere where it can be found
@@ -136,13 +136,13 @@
 #! All of these texts need access to information about Biblica as an organisation,
 #! so it has been convenient to augment the above structure with a folder which I
 #! have chosen to call _Metadata_ (the name doesn't matter to the processing), in
-#! which I have stored a configuration file biblica.conf:
+#! which I have stored a common Biblica .conf files:
 #!
 #!   Biblica
 #!   |
 #!   +--- _Metadata_
 #!   |    |
-#!   |    +--- biblica.conf
+#!   |    +--- Common Biblica .conf files
 #!   |
 #!   +--- Text_deu_HFA
 #!   |
@@ -154,7 +154,7 @@
 #! This file can then be reached from each text using a $include statement of
 #! the form:
 #!
-#!  $include $root/_Metadata_/biblica.conf
+#!  $include $root/../_Metadata_/biblica.conf
 #!
 #!
 #!

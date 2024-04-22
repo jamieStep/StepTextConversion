@@ -1540,6 +1540,7 @@ object Dom
         factory.isIgnoringElementContentWhitespace = false
         val builder: DocumentBuilder = factory.newDocumentBuilder()
         val inputData = ByteArrayInputStream(text.replace("\u00a0", "&#160;").toByteArray()) // Unicode non-breaking space.
+        //Dbg.outputText(text.replace("\u00a0", "&#160;"))
         val doc =  builder.parse(inputData)
         doc.normalizeDocument()
         return doc

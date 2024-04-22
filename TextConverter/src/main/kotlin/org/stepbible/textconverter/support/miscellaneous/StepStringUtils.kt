@@ -1,6 +1,5 @@
 package org.stepbible.textconverter.support.miscellaneous
 
-import org.stepbible.textconverter.support.debug.Dbg
 import java.util.*
 
 object StepStringUtils
@@ -45,6 +44,20 @@ object StepStringUtils
     text = text.trim { it <= ' ' }.lowercase()
     return text.startsWith("y") || text.startsWith("t")
   }
+
+
+  /****************************************************************************/
+  /**
+  * Checks if all characters in a given string are ASCII.  (Strictly, we're
+  * really more interested in whether they're all letters, numbers or a few
+  * punctuation characters, because this is normally used when looking at
+  * module names, but ASCII is probably good enough.
+  *
+  * @param s String to be examined.
+  * @return True if all characters are ASCII.
+  */
+
+  fun isAsciiCharacters (s: String): Boolean = null == s.firstOrNull { it.code > 127}
 
 
   /****************************************************************************/

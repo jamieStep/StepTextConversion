@@ -136,7 +136,7 @@ open class X_FileProtocol
 
   /****************************************************************************/
   /**
-   * Essentially this indicates the canonicity of a given node, which
+   * Essentially this indicates the canonicity of a given node, which tells us
    * whether we can step over the node when trying to place verse ends.  The
    * one exception is notes: they obviously aren't canonical, but we need to
    * pretend they are, because they need to remain as part of the verse.
@@ -155,7 +155,7 @@ open class X_FileProtocol
     var n = node
     while (true)
     {
-      var key = Osis_FileProtocol.getExtendedNodeName(n)
+      var key = getExtendedNodeName(n)
 
 
 

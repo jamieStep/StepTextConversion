@@ -1,7 +1,9 @@
 package org.stepbible.textconverter.subelements
 
+import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
+import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.miscellaneous.set
@@ -59,6 +61,7 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
   override fun processRootNodeInternal (rootNode: Node)
   {
     Dbg.reportProgress("Handling Strongs for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
+    m_CorrectStrong = ConfigData.getAsBoolean("stepCorrectStrongs", "yes")
     val strongs = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isStrongsNode(it) }
     strongs.forEach { doStrong(it) }
     if (strongs.isNotEmpty()) IssueAndInformationRecorder.setStrongs()
@@ -83,22 +86,18 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
   {
     var prefix = ""
 
-    val strongsElts = node[m_FileProtocol.attrName_strong()]!!.split("\\W+".toRegex())
-      .map { it.trim().uppercase() } // I believe uppercase is ok, and possibly that it is required.
+    val rawElts = node[m_FileProtocol.attrName_strong()]!!.uppercase().replace("STRONG:", "").split("\\W+".toRegex())
 
-      .map {// Split out any prefix from the rest of the reference.
-        var strong = it.replace("strong:", "")
+    val strongsElts = rawElts
+      .map {
+        var strong = it.trim() // I believe uppercase is ok, and possibly that it is required.
+        val orig = strong
+
         if (strong.substring(0, 1) in "GH")
         {
           prefix = strong.substring(0, 1)
           strong = strong.substring(1)
         }
-
-        strong
-      }
-
-      .map {// Do everything else.
-        var strong = it
 
         val suffix = if (strong.last().isLetter()) strong.last().toString().uppercase() else "" // See if there's an alphabetic suffix.
 
@@ -106,11 +105,15 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
         if (strong.length >= 5 && strong[0] == '0') strong = strong.substring(1) // If the result is 5 or more characters and starts with '0', we have a leading zero we don't want.
 
-        strong = prefix + "0".repeat(4 - strong.length) + strong // If too short, prepend leading zeroes.
-
-        strong = prefix + strong + suffix
-        strong = getCorrection(strong)
-        "strong:$strong"
+        if (strongIsValidish(prefix, strong) && m_CorrectStrong)
+        {
+          strong = prefix + "0".repeat(4 - strong.length) + strong // If too short, prepend leading zeroes.
+          strong += suffix
+          strong = getCorrection(strong)
+          "strong:$strong"
+        }
+        else
+          "strong:$orig"
       }
 
     node[m_FileProtocol.attrName_strong()] = strongsElts.joinToString(",")
@@ -149,7 +152,17 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
 
     /**************************************************************************/
+    private fun strongIsValidish (prefix: String, strong: String): Boolean
+    {
+      val ok = prefix in "GH" && strong.length <= 4 && null != strong.toIntOrNull()
+      if (!ok && m_CorrectStrong) Logger.warning("Invalid Strong: $prefix$strong.")
+      return ok
+    }
+
+
+    /**************************************************************************/
     private val m_Corrections: MutableMap<String, String> = TreeMap(String.CASE_INSENSITIVE_ORDER)
+    private var m_CorrectStrong = true
   }
 }
 

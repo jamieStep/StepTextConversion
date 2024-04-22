@@ -217,5 +217,5 @@ var header =
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun getOsisXsdLocation () = ConfigData["stepExternalDataPath_OsisXsd"]!! // With Crosswire tweaks.
+  fun getOsisXsdLocation () = ConfigData["stepExternalDataPath_OsisXsd"]!! // With Crosswire tweaks.
 }

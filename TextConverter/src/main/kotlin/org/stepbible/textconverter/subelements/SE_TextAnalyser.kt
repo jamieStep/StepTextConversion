@@ -35,7 +35,7 @@ class SE_TextAnalyser (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
   override fun processRootNodeInternal (rootNode: Node)
   {
-    Dbg.reportProgress("Collecting feature details.")
+    Dbg.reportProgress("Collecting feature details for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     countVersesInParas(rootNode)
     getSampleTextForConfigData(rootNode)
   }

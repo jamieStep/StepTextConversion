@@ -7,8 +7,9 @@ import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.get
+import org.stepbible.textconverter.support.ref.Ref
+import org.stepbible.textconverter.support.ref.RefCollection
 import org.stepbible.textconverter.support.stepexception.StepException
-import org.stepbible.textconverter.utils.UsxDataCollection
 import org.stepbible.textconverter.utils.X_DataCollection
 import org.w3c.dom.Document
 
@@ -63,11 +64,36 @@ object Usx_Preprocessor
 
   /****************************************************************************/
   /**
-  * Applies any XSLT manipulation to each file, and sets up UsxDataCollection
-  * to hold the details.
+  * Applies any preprocessing regexes to the incoming USX.
+  *
+  * @param inputText Text to be processed.
   */
 
-  fun process (usxDataCollection: X_DataCollection)
+  fun processRegex (inputText: String): String
+  {
+    val regexes = ConfigData.getRegexes()
+    if (regexes.isEmpty()) return inputText
+
+    var revisedText = inputText
+
+    regexes.forEach {
+      revisedText = applyRegex(it, revisedText)
+    }
+
+    return revisedText
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Applies any XSLT manipulation to each file, and sets up UsxDataCollection
+  * to hold the details.  To state the obvious, this can be called only after
+  * the USX text has been read and converted to DOM format.
+  *
+  * @param usxDataCollection All the documents we may need to process.
+  */
+
+  fun processXslt (usxDataCollection: X_DataCollection)
   {
     Dbg.reportProgress("USX: Applying pre-processing if necessary.")
     initialiseXsltStylesheets()
@@ -89,6 +115,48 @@ object Usx_Preprocessor
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  /* Applies any regex processing to the input text.  regexDetails is a pair,
+     the first part of which should be a regex pattern, and the second of which
+     is a replacement.
+
+     I'm having a little trouble working out how to do this consistently, simply
+     and with a reasonable degree of flexibility.  As things stand, unless
+     the replacement contains @convertRef, I assume that the pattern and
+     replacement are mutually compatible in terms of capturing groups, and apply
+     a simple replacement.
+
+     If it does contain @convertRef, I assume that the pattern contains a single
+     capturing group which is a reference in vernacular form, and that the
+     replacement is made up purely of @convertRef.  In this case I take the
+     capturing group and convert it to USX form.
+
+     Actually, it's not @convertRef -- it's either @convertRefVernacularToUsx
+     or @convertRefVernacularToOsis.
+   */
+
+  private fun applyRegex (regexDetails: Pair<Regex, String>, inputText: String): String
+  {
+    /**************************************************************************/
+    fun convertRefVernacularToOsis (s: String) = RefCollection.rdVernacular(s).toStringUsx()
+    fun convertRefVernacularToUsx (s: String) = RefCollection.rdVernacular(s).toStringUsx()
+    var converter: ((String) -> String)? = null
+
+    if ("@convertRefVernacularToUsx" in regexDetails.second)
+      converter = ::convertRefVernacularToUsx
+    else if ("@convertRefVernacularToOsis" in regexDetails.second)
+      converter = ::convertRefVernacularToOsis
+
+
+
+    /**************************************************************************/
+    return if (null == converter)
+      inputText.replace(regexDetails.first, regexDetails.second)
+    else
+      regexDetails.first.replace(inputText) { matchResult -> converter(matchResult.groupValues[1]) }
+  }
+
 
   /****************************************************************************/
   private fun applyXslt (doc: Document): Document?

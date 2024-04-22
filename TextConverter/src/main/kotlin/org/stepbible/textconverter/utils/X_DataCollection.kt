@@ -9,6 +9,7 @@ import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.support.stepexception.StepExceptionShouldHaveBeenOverridden
 import org.stepbible.textconverter.usxinputonly.Usx_BookAndChapterConverter
+import org.stepbible.textconverter.usxinputonly.Usx_Preprocessor
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
@@ -168,18 +169,15 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   *
   * @param folderPath
   * @param fileExtension Extension used to select files from folder.
-  * @param saveText If true the text is saved.  Useful where it may need to
-  *          be used for two different purposes.  Perhaps a good idea to
-  *          call clearText when no longer needed.
   */
 
-  fun loadFromFolder (folderPath: String, fileExtension: String, saveText: Boolean)
+  fun loadFromFolder (folderPath: String, fileExtension: String)
   {
     withThisBibleStructure {
       clearAll()
       val files = StepFileUtils.getMatchingFilesFromFolder(folderPath, ".*\\.$fileExtension".toRegex())
       val orderedBookList: MutableList<Int> = mutableListOf()
-      files.forEach { Dbg.reportProgress("Loading ${it.name}."); orderedBookList.addAll(addFromFile(it.toString(), saveText)) }
+      files.forEach { Dbg.reportProgress("Loading ${it.name}."); orderedBookList.addAll(addFromFile(it.toString())) }
       if (1 == files.size) sortStructuresByBookOrder(orderedBookList)
       //reloadBibleStructureFromRootNodes(false)
     }
@@ -193,21 +191,16 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   * BibleStructure.
   *
   * @param text
-  * @param saveText If true the text is saved.  Useful where it may need to
-  *          be used for two different purposes.  Perhaps a good idea to
-  *          call clearText when no longer needed.
   */
 
-  fun loadFromText (text: String, saveText: Boolean)
+  fun loadFromText (text: String)
   {
     Dbg.reportProgress("Loading data from XML text.")
 
     withThisBibleStructure { // Don't clear the text here, in case it's actually coming from the present class.
       restoreBookNumberToRootNodeMappings()
-      val orderedBookList = addFromText(text, saveText)
+      val orderedBookList = addFromText(text)
       sortStructuresByBookOrder(orderedBookList)
-      if (saveText)
-        setText(text)
     }
   }
 
@@ -249,17 +242,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   {
     clearBibleStructure()
     restoreBookNumberToRootNodeMappings()
-    clearText()
   }
-
-
-
-  /****************************************************************************/
-  /**
-  * Can be used to release memory when saved text is no longer needed.
-  */
-
-  fun clearText () = m_Text.clear()
 
 
 
@@ -399,16 +382,6 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   /****************************************************************************/
   /**
-  * Returns any saved text.
-  *
-  * @return Saved text.
-  */
-
-  fun getText () = m_Text.toString()
-
-
-  /****************************************************************************/
-  /**
   * Flags the BibleStructure element as invalid.
   */
 
@@ -462,19 +435,6 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   }
 
 
-  /****************************************************************************/
-  /**
-  * Sets the text details.  Use with care, because this doesn't parse the
-  * details into the BibleStructure member etc -- it gives you the
-  * wherewithal to store the text, but doesn't set up any of the things which
-  * would normally be based upon it.
-  *
-  * @param text
-  */
-
-  fun setText (text: String) { m_Text.clear(); m_Text.append(text) }
-
-
 
 
 
@@ -508,12 +468,32 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   /***************************************************************************/
   /**
    * Gets rid of any books which we have decided to exclude on this run and
-   * records details of the rest.
+   * records details of the rest.  Previously this root version was a dummy
+   * which simply threw an exception.  On balance, I think I need it to be
+   * a dummy only in the sense that it selects absolutely everything for
+   * processing.
+   *
+   * @param docIn
+   *
+   * @return List of book numbers to be processed.
    */
 
   protected open fun filterOutUnwantedBooksAndPopulateRootNodesStructure (docIn: Document): List<Int>
-    = throw StepExceptionShouldHaveBeenOverridden()
+   {
+     val docOut = Dom.createDocument()
+     val importedNode = docOut.importNode(docIn.documentElement, true)
+     docOut.appendChild(importedNode)
 
+     val res: MutableList<Int> = mutableListOf()
+     val nodeList = Dom.findNodesByAttributeValue(docOut, "div", "type", "book").toSet() union Dom.findNodesByName(docOut, "book")
+     nodeList.forEach {
+         val bookNo = BibleBookNamesOsis.abbreviatedNameToNumber(it["osisID"]!!)
+         res.add(bookNo)
+         m_BookNumberToRootNode[bookNo] = it
+     }
+
+     return res
+   }
 
 
 
@@ -532,12 +512,9 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   * with different files.  The effect is then cumulative.
   *
   * @param filePath
-  * @param saveText If true the text is saved.  Useful where it may need to
-  *          be used for two different purposes.  Perhaps a good idea to
-  *          call clearText when no longer needed.
   */
 
-  private fun addFromFile (filePath: String, saveText: Boolean) = addFromText(File(filePath).readText(), saveText)
+  private fun addFromFile (filePath: String) = addFromText(File(filePath).readText())
 
 
   /****************************************************************************/
@@ -546,20 +523,27 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   * with different strings.  The effect is then cumulative.
   *
   * @param text
-  * @param saveText If true the text is saved.  Useful where it may need to
-  *          be used for two different purposes.  Perhaps a good idea to
-  *          call clearText when no longer needed.
   * @return List of books added (may be empty if none have been selected for
   *   processing).
   */
 
-  private fun addFromText (text: String, saveText: Boolean): List<Int>
+  private fun addFromText (text: String): List<Int>
   {
-    val doc = Dom.getDocumentFromText(text, retainComments = true)
-    val res = addFromDoc(doc)
-    if (res.isNotEmpty() && saveText)
-      m_Text.append(text)
-    return res
+    //x(text); return listOf()
+    val revisedText = Usx_Preprocessor.processRegex(text)
+    val doc = Dom.getDocumentFromText(revisedText, retainComments = true)
+    return addFromDoc(doc)
+  }
+
+  private fun x (text: String)
+  {
+    val res: MutableList<String> = mutableListOf()
+    val C_Pat = Regex("\"(Bible[^:]+?:[^\"]+?)\"")
+    val m = C_Pat.findAll(text)
+    m.forEach {
+      Dbg.d("+++" + it.groups[1]!!.value)
+    }
+
   }
 
 
@@ -616,7 +600,6 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   private val m_BibleStructure = BibleStructure(m_FileProtocol)
   private var m_BibleStructureIsValid = false
   private var m_ProcessRegistry = ProcessRegistry()
-  private var m_Text = StringBuilder()
 
 
 

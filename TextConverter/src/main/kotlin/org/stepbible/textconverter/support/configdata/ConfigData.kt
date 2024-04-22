@@ -355,6 +355,99 @@ object ConfigData
     private var m_SampleText = ""
 
 
+  /****************************************************************************/
+  /* Parses data from the module name, changing it as necessary.  Module names
+     are derived from the name of the root folder, which should be structured as
+     follows:
+
+       GerHFA:   That's the 3-character ISO language code, followed by the
+                 abbreviated form of the Bible name.  The parts can be
+                 accessed in the present method using languageCode and
+                 abbreviatedName.  Except that I think it's safer to pick
+                 the abbreviated name up from the
+
+       GerHFA_xx: Retained for backward compatibility.  Some existing texts
+                  have an additional suffix. This can be accessed using
+                  'suffix'.
+
+       GerHFA_p / GerHFA_xx_p: The trailing _p indicates that we intend to
+                  generate a public module from this text (without the _p
+                  we generate STEP-only modules).  This is returned as part
+                  of 'suffix' -- so that with GerHFA_xx_p, requesting 'suffix'
+                  returns 'xx_p'.
+
+     The revised module name has the language code and abbreviated name in
+     canonical form, followed by any suffixes (ie the first underscore and
+     anything after it), and then, on eval runs, 'eval' followed by a time/
+     date stamp so that multiple versions of the module will have different
+     names and can therefore be loaded into STEP at the same time if
+     required for testing purposes. */
+
+  fun extractDataFromModuleName ()
+  {
+    /**************************************************************************/
+    var moduleName = FileLocations.getRootFolderName().replace("Text_", "").replace("_public", "")
+
+
+
+    /**************************************************************************/
+    /* Language code is first 3 characters.  But it's a bit more complicated
+       than that: certain languages have two alternative codes, so this selects
+       the one we've decided to standardise on; and if, after that, we end up
+       with English or one of the ancient language codes, we drop the code
+       altogether. */
+
+    var languageCode = getInternal("stepLanguageCode3Char", false)!!
+    moduleName = moduleName.substring(4)
+    if (languageCode in listOf("eng", "grc", "hbo")) languageCode = "" // This is the code we use within the module name.
+
+
+
+    /**************************************************************************/
+    /* Abbreviated name is whatever follows the language code (which we have
+       now removed from the copy of the module name) -- everything from there
+       up to the end of the string, or the next underscore if there is one.
+
+       Except again, I try to force matters here if I can.  If
+       stepVernacularAbbreviation is defined and is made up entirely of
+       Roman characters, then I use that in preference.  Otherwise if
+       stepEnglishAbbreviation is defined, I use that.  Only if neither of
+       these rides to the rescue do I trust the value which appaers within
+       the module name. */
+
+    var abbreviatedName = if ("_" in moduleName) moduleName.split("_")[0] else moduleName
+    moduleName = moduleName.substring(abbreviatedName.length)
+    val x = get("stepVernacularAbbreviation")
+    abbreviatedName = if (null != x && StepStringUtils.isAsciiCharacters(x)) x else get("stepEnglishAbbreviation") ?: abbreviatedName
+
+
+
+    /**************************************************************************/
+    /* A potential further addition to module names.  On release runs, it adds
+       nothing.  On non-release runs it adds a timestamp etc to the name, so
+       that we can have multiple copies of a module lying around without them
+       clashing.  This part of the processing can be run at any time, because
+       the parameters it looks at will normally come direct from the command
+       line. */
+
+    val testRelatedSuffix =
+      if ("release" in ConfigData["stepRunType"]!!.lowercase())
+        ""
+      else
+      {
+        var xx = ConfigData["stepRunType"]!!
+        if ("evaluation" in xx.lowercase()) xx = "eval"
+        "_" + xx + "_" + ConfigData["stepBuildTimestamp"]!!
+      }
+
+
+
+    /**************************************************************************/
+    moduleName = StepStringUtils.sentenceCaseFirstLetter(languageCode) + abbreviatedName + moduleName + testRelatedSuffix
+    delete("stepModuleName"); put("stepModuleName", moduleName, force = true)
+  }
+
+
     /****************************************************************************/
     /**
     * We need some sample text in order to be able to assess text direction when
@@ -383,6 +476,7 @@ object ConfigData
     {
         if (m_Initialised) return // Guard against multiple initialisation.
         m_Initialised = true
+        extractLanguageCodeFromModuleName()
         load(rootConfigFilePath, null, false) // User overrides.
         loadDone()
     }
@@ -472,6 +566,20 @@ object ConfigData
     }
 
 
+  /****************************************************************************/
+  /* See extractDataFromModuleName for details of format. */
+
+  private fun extractLanguageCodeFromModuleName ()
+  {
+    /**************************************************************************/
+    val moduleName = FileLocations.getRootFolderName().replace("Text_", "")
+    val languageCode = IsoLanguageCodes.get3PreferredCharacterIsoCode(moduleName.substring(0, 3))
+    delete("stepLanguageCode"); put("stepLanguageCode", languageCode, force = true)
+    delete("stepLanguageCode3Char"); put("stepLanguageCode3Char", languageCode, force = true)
+    delete("stepLanguageCode2Char"); put("stepLanguageCode2Char", IsoLanguageCodes.get2CharacterIsoCode(languageCode), force = true)
+  }
+
+
     /****************************************************************************/
     /* Obtains the configuration lines from a given file, which may be specified
        as being relative to the root folder, relative to the calling file (if
@@ -533,9 +641,9 @@ object ConfigData
 
         m_Mandatories.keys.filter { it !in m_Metadata } .forEach { Logger.error("No value supplied for mandatory parameter $it.")}
         m_Mandatories.keys
-            .filter { !m_Mandatories[it]!! } // Not permitted to be empty.
-            .filter { it in m_Metadata } // We do have an associated value.
-            .filter { get(it)!!.isEmpty() } // But the value is empty.
+            .filter { it in m_Metadata } // Selects the ones not dealt with in the previous statement.
+            .filter { !m_Mandatories[it]!! } // Selects those not permitted to be empty.
+            .filter { get(it).isNullOrEmpty() } // But the value is empty.
             .forEach { Logger.error("Null / empty value not permitted for parameter $it.")}
     }
 
@@ -564,6 +672,7 @@ object ConfigData
     {
       /**************************************************************************/
       val lineLowerCase = directive.lowercase()
+      //Dbg.dCont(directive, "stepAboutAsSupp")
 
 
 
@@ -664,6 +773,26 @@ object ConfigData
     /**                                                                        **/
     /****************************************************************************/
     /****************************************************************************/
+
+    /****************************************************************************/
+    /**
+    * When making changes to derived works, we may be required to add details of
+    * the changes we have made.  The present method adds a given text.  It is
+    * intended to cope with the possibility that different parts of the processing
+    * may need to add to this collection.
+    *
+    * @param text
+    */
+
+    fun addDetailsOfDerivedWork (text: String)
+    {
+      var s = get("stepChangesMadeByUsInDerivedWork", "")
+      if (text in s) return
+      s += "  $text"
+      delete("stepChangesMadeByUsInDerivedWork")
+      put("stepChangesMadeByUsInDerivedWork", s, false)
+    }
+
 
     /****************************************************************************/
     /**
@@ -826,11 +955,6 @@ object ConfigData
     fun put (key: String, theValue: String, force: Boolean)
     {
       /************************************************************************/
-      //Dbg.d(key, "stepForceOsis2modType")
-
-
-
-      /************************************************************************/
       /* If this is a 'force' setting and we already have a force setting, we
          retain the existing one. */
 
@@ -900,7 +1024,7 @@ object ConfigData
 
     private fun getInternal (key: String, nullsOk: Boolean): String?
     {
-      //Dbg.d(key, "stepTextDirection")
+      //Dbg.d(key, "stepAcknowledgmentOfDerivedWork")
 
       val calculated = getCalculatedValue(key)
       if (null != calculated && "@get" !in calculated) return calculated
@@ -1978,18 +2102,20 @@ object ConfigData
   /****************************************************************************/
   /* The various calc_ modules have to be public in order to be able to call
      them as required.  Ignore the fact that IDEA says they are not used --
-     they are accessed using reflection. */
+     they are accessed using reflection (and therefore also have to be public,
+     even if some of them are used only from code in this present class). */
+
 
   /****************************************************************************/
-  fun parseRootFolderName (key: String): String
+  /* On open access texts, we may need to include details of changes we have
+     made.  This method enables us to make this dependent upon
+   */
+  fun calc_stepAcknowledgmentOfDerivedWork (): String
   {
-    val bits = FileLocations.getRootFolderName().split("_")
-    return when (key.lowercase())
-    {
-      "steplanguagecode"           -> bits[1]
-      "stepvernacularabbreviation" -> bits[2]
-      else /* suffix */            -> if (bits.size > 3) bits[3] else ""
-    }
+    return if (get("stepChangesMadeByUsInDerivedWork", "").isEmpty())
+      ""
+    else
+      "<p>" + getInternal("stepChangesMadeByUsInDerivedWork", false)!! + " " + get("stepWordingForDerivedWorkStipulatedByTextSupplier", "")
   }
 
 
@@ -2025,117 +2151,11 @@ object ConfigData
 
 
   /****************************************************************************/
-  /* Says whether the module is intended for STEP only or for potential public
-     distribution. */
-
-  fun calc_stepIntendedAudience (): String
-  {
-    if (getAsBoolean("stepEncryptionRequired")) return "step"
-    if ("step" == get("stepOsis2ModType")!!.lowercase()) return "step"
-    return "public"
-  }
-
-
-  /****************************************************************************/
-  fun calc_stepLanguageCode2Char (): String
-  {
-    var languageCode = getInternal("stepLanguageCodeFromRootFolderName", false)!!.lowercase()
-    return IsoLanguageCodes.get2CharacterIsoCode(languageCode)
-  }
-
-
-  /****************************************************************************/
-  fun calc_stepLanguageCode3Char (): String
-  {
-    var languageCode = getInternal("stepLanguageCodeFromRootFolderName", false)!!.lowercase()
-    if (3 != languageCode.length) languageCode = IsoLanguageCodes.get3PreferredCharacterIsoCode(languageCode)
-    return languageCode
-  }
-
-
-  /****************************************************************************/
-  /* The language name will often be available from the metadata.  However, we
-     can't pick it up from there conveniently, because we may need it while
-     processing the configuration data at a point before we've actually been
-     able to read it.  We therefore need to rely upon it appearing in the
-     root folder, and at present the name there is of the form eg Text_deuHFA. */
-
-  fun calc_stepLanguageCodeFromRootFolderName () = IsoLanguageCodes.get3PreferredCharacterIsoCode(parseRootFolderName("stepLanguageCode"))
-
-
-  /****************************************************************************/
   fun calc_stepLanguageNameInEnglish () = IsoLanguageCodes.getLanguageName(getInternal("stepLanguageCode3Char", false)!!)
 
 
   /****************************************************************************/
   fun calc_stepModuleCreationDate () = SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date())
-
-
-  /****************************************************************************/
-  /* This can be used only once things like encryption, reversification, etc
-     have been determined. */
-
-  fun calc_stepModuleName (): String
-  {
-    /**************************************************************************/
-    /* In the past, some modules were given suffixes (eg _th).  For backward
-       compatibility, we need to retain such suffixes. */
-
-    var suffix = parseRootFolderName("suffix")
-    if (suffix.isNotEmpty())
-      suffix = "_$suffix"
-
-
-
-    /**************************************************************************/
-    /* A potential further addition to module names.  On release runs, it adds
-       nothing.  On non-release runs it adds a timestamp etc to the name, so
-       that we can have multiple copies of a module lying around without them
-       clashing.  This part of the processing can be run at any time, because
-       the parameters it looks at will normally come direct from the command
-       line. */
-
-    var testRelatedSuffix =
-      if ("release" in ConfigData["stepRunType"]!!.lowercase())
-        ""
-      else
-      {
-        var x = ConfigData["stepRunType"]!!
-        if ("evaluation" in x.lowercase()) x = "eval"
-        "_" + x + "_" + ConfigData["stepBuildTimestamp"]!!
-      }
-
-
-     return calc_stepModuleNameBase() + testRelatedSuffix + suffix
-  }
-
-
-  /****************************************************************************/
-  /* Returns the basic module name devoid of disambiguation suffix etc.
-
-     Typically something like DeuHFA, comprising the three-character ISO
-     language code (first letter upper case, rest lower case), followed by the
-     abbreviated name of the text.  The abbreviated name should be as supplied
-     by the translators (and should be the vernacular abbreviation in preference
-     to the English abbreviation where the vernacular abbreviation uses suitable
-     Roman characters).  Hopefully it will be all upper case, but we need to go
-     with whatever the translators give us.
-
-     Note the use of 'hbo' as a language code for ancient Hebrew.  I am not sure
-     of the extent to which this has official status, having been unable to find
-     it in any online lists.  However, apparently STEP is set up to accept this.
-     The alternative -- heb -- covers both ancient and modern Hebrew, which
-     would mean that using just this abbreviation we could not distinguish
-     between an ancient text and a modern Hebrew translation.
- */
-
-  fun calc_stepModuleNameBase (): String
-  {
-    var moduleName = getInternal("stepLanguageCode3Char", false)!!.lowercase()
-    moduleName = if (moduleName in listOf("eng", "grc", "hbo")) "" else (moduleName[0].uppercase() + moduleName.substring(1).lowercase())
-    moduleName += getInternal("stepVernacularAbbreviation", false)!!
-    return moduleName
-  }
 
 
   /****************************************************************************/
@@ -2157,34 +2177,6 @@ object ConfigData
      supply a default. */
 
   fun calc_stepTextModifiedDate () = SimpleDateFormat("dd-MMM-yyyy").format(Date())
-
-
-  /****************************************************************************/
-  /* The vernacular abbreviation will often be available from the metadata.
-     However, we can't pick it up from there conveniently, because we may need
-     it while processing the configuration data at a point before we've actually
-     been able to read it.  We therefore need to rely upon it appearing in the
-     root folder, and at present the name there is of the form eg Text_deuHFA. */
-
-  fun calc_stepVernacularAbbreviation () = parseRootFolderName("stepVernacularAbbreviation")
-
-
-  /****************************************************************************/
-  /* Forces the versification scheme to canonical form.  This basically means
-     sorting adding (or removing) the 'a' on texts like kjv and nrsv each of
-     which comes in two forms, one which includes DC books and one which does
-     not; and sorting out lower case / upper case issues (osis2mod is sensitive
-     to case). */
-
-//  fun calc_stepVersificationScheme (): String
-//  {
-//    var schemeNameRaw = getInternal("stepVersificationScheme", false)!!
-//    if ("step" == getInternal("stepOsis2modType", false)) return schemeNameRaw // Our own scheme used by Sami's software.
-//    schemeNameRaw = schemeNameRaw.lowercase()
-//    if (schemeNameRaw.startsWith("nrsv") || schemeNameRaw.startsWith("kjv"))
-//      schemeNameRaw = schemeNameRaw.replace("a", "") + if (BibleStructure.UsxUnderConstructionInstance().hasAnyBooksDc() || ReversificationData.reversificationTargetsDc()) "a" else ""
-//    return canonicaliseSchemeName(schemeNameRaw)
-//  }
 
 
   /****************************************************************************/

@@ -172,7 +172,7 @@ object RefFormatHandlerReaderVernacular
      to recognise any of these (except b) in connection with specific
      disambiguating text, like the 'v' in 'v16'.
 
-     The first section below ses up the information needed to recognise the
+     The first section below sets up the information needed to recognise the
      individual elements (b, c, v, s) both when we know a priori that the text
      string we are parsing contains nothing more than a reference and when we
      do not.

@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.subelements
 
+import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
@@ -15,60 +16,22 @@ import org.w3c.dom.Node
 /**
  * Collapses subverses into the owning verse.
  *
- * At present I think the jury is still rather out on this.  Crosswire's
- * osis2mod / JSword cannot, so far as I know, cope with subverses.  Our own
- * can, at least in theory, although at the time of writing I'm not entirely
- * convinced it always receives enough information to be able to do so.
+ * This is basically an issue only for public modules ...
  *
- * We have a number of cases to consider:
+ * If we are running a module through our own osis2mod etc, subverses are not,
+ * so far as I know, a problem.  If they appear in the input, the
+ * reversification data should be able to cope.  If they appear in the output,
+ * our modified version of JSword should cope.
  *
- * - We may have a raw text which is fully NRSV(A) compliant, or at most lacks
- *   some verses which NRSV(A) expects.  To be fully compliant, it would have
- *   to be without subverses, so there is definitely nothing for the present
- *   processing to do there.
+ * The problem comes where we have decided *not* to use our own osis2mod --
+ * where we are using the Crosswire version because we wish to generate a
+ * publicly-accessible version.
  *
- * - We may have a text which is NRSV(A) compliant in the above sense but for
- *   the existence of subverses.  We have said here that we will definitely
- *   use our own osis2mod on this because it can cope with subverses.  I don't
- *   think it would need to be reversified (and if it were, reversification
- *   presumably would not do anything), so there *will* be subverses in the
- *   module, and we are indeed reliant upon our stuff to cope.
- *
- * - We may have a text which requires reversification, and we may decide to
- *   apply conversion-time reversification.  This is supposed to create an
- *   OSIS which is fully NRSV(A) compliant, so we would be reliant upon
- *   reversification a) turning any already-existing subverses into verses;
- *   and b) not creating any subverses.  I have not been asked to collapse
- *   any subverses here, but rather to report them as indicative of drop-offs
- *   in the reversification data.
- *
- * - We may have a text which requires reversification, and we may decide to
- *   apply runtime reversification.  In this case the idea is that we don't
- *   apply reversification-related changes up-front: the text is passed
- *   through as-is, and it's down to our stuff to cope.  I'm not too sure
- *   about this case, but at present I'm assuming that the text just is what
- *   it is, and our osis2mod etc has to be able to handle it.
- *
- *
- * All of which suggests that this class presently doesn't need to do anything
- * at all.  I've retained it against the inevitable time when we decide that it
- * *does* need to do something after all, but at present the main method simply
- * returns immediately.
- *
- * Incidentally, the reason I have my doubts about our stuff always coping is
- * that as presently defined, it does not always receive information about the
- * existence of subverses, and I think it does need this information ahead of
- * time.
- *
- * It receives information about the structure of the text (which books, which
- * chapters per book, which *verses* per book), but this information says
- * nothing about subverses.  And it receives information about applicable
- * reversification Moves and Renumbers.  These will tell it about subverses if
- * the Move or Renumber begins with a subverse or ends with one.  But it won't
- * hear about subverses which were there in the raw text and which are subject
- * to reversification KeepVerse; and nor will it hear about subverses which
- * appeared in the raw text and were not subject to any reversification
- * statement at all.
+ * Crosswire's osis2mod / JSword cannot, so far as I know, cope with subverses.
+ * We therefore need to collapse them into the owning verse in this case,
+ * marking their original boundaries (or for that matter not doing so) as
+ * will be apparent below.  (I'm deliberately not giving details here because
+ * we change our minds.)
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -97,7 +60,7 @@ open class SE_SubverseCollapser (dataCollection: X_DataCollection): SE(dataColle
 
   override fun processRootNodeInternal (rootNode: Node)
   {
-    return // $$$ See head-of-class comments.
+    if ("P" !in ConfigData["stepTargetAudience"]!!) return
     Dbg.reportProgress("Handling subverses.")
     Dom.findNodesByName(rootNode, m_FileProtocol.tagName_chapter(), false).forEach { doChapter(it) }
   }

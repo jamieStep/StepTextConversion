@@ -42,8 +42,11 @@ object FileLocations
    *   return fileNameOrEntryNameWithinJar as-is.</li>
    * 
    * - If fileNameOrEntryNameWithinJar starts with '$metadata/', it is assumed
-   *   to be relative to the ConfigData folder), and the return value is just
+   *   to be relative to the Metadata folder), and the return value is just
    *   the original, but with $configData replaced by the path to the that folder.
+   *
+   * - If fileNameOrEntryNameWithinJar has no parent folder, it is assumed to
+   *   be relative to the calling file path.
    *
    * - $root is the root folder for the text.
    *
@@ -89,7 +92,7 @@ object FileLocations
       Paths.get(fileNameOrEntryNameWithinJar).normalize().toString()
     else
     {
-      val callingFilePath = if (null == theCallingFilePath || "step.conf" == theCallingFilePath) getMetadataFolderPath() else (File(theCallingFilePath)).parent
+      val callingFilePath = if (null == theCallingFilePath || "step.conf" == theCallingFilePath) getMetadataFolderPath() else (File(getInputPath(theCallingFilePath, null))).parent
       Paths.get(callingFilePath, fileNameOrEntryNameWithinJar).normalize().toString()
     }
   }
@@ -147,6 +150,7 @@ object FileLocations
   /* All the obvious things ... */
 
   /****************************************************************************/
+  fun getFileExtensionForImp()   = "imp"
   fun getFileExtensionForOsis () = "xml"
   fun getFileExtensionForUsx()   = "usx"
   fun getFileExtensionForVl()    = "txt"
@@ -179,6 +183,7 @@ object FileLocations
   /****************************************************************************/
   /* Input folders. */
 
+  fun getInputImpFolderPath  () = Paths.get(getRootFolderPath(), "InputImp" ).toString()
   fun getInputOsisFolderPath () = Paths.get(getRootFolderPath(), "InputOsis").toString()
   fun getInputUsxFolderPath  () = Paths.get(getRootFolderPath(), "InputUsx" ).toString()
   fun getInputVlFolderPath   () = Paths.get(getRootFolderPath(), "InputVl"  ).toString()
@@ -227,7 +232,6 @@ object FileLocations
      I've forgotten to do something. */
 
   fun getInternalSwordFolderPath               () = Paths.get(getOutputFolderPath(), "Sword").toString()
-  private fun getMasterMiscellaneousFolderPath () = Paths.get(getOutputFolderPath(), "FilesForRepositoryEtc").toString()
 
   fun getInternalOsisFolderPath                () = Paths.get(getOutputFolderPath(), "InternalOsis").toString()
   fun getInternalOsisFilePath                  () = Paths.get(getInternalOsisFolderPath(), "internalOsis.${getFileExtensionForOsis()}").toString()
@@ -319,12 +323,12 @@ object FileLocations
 
      */
 
-  fun getTextFeaturesRootFolderPath () = Paths.get(getInternalSwordFolderPath(), "textFeatures").toString()
+  private fun getTextFeaturesRootFolderPath () = Paths.get(getInternalSwordFolderPath(), "textFeatures").toString()
   fun getTextFeaturesFolderPath () = makeTextFeaturesFolderPath()
   fun getRunFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), "runFeatures.json").toString()
   fun getTextFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), "textFeatures.json").toString()
 
-  fun getOsis2ModSupportFolderPath() = Paths.get(getEncryptionAndBespokeOsisToModDataRootFolder(), "versification").toString()
+  private fun getOsis2ModSupportFolderPath() = Paths.get(getEncryptionAndBespokeOsisToModDataRootFolder(), "versification").toString()
   fun getOsis2ModSupportFilePath() = Paths.get(getOsis2ModSupportFolderPath(), getModuleName() + ".json").toString()
 
 
@@ -341,8 +345,8 @@ object FileLocations
   fun getRepositoryPackageFilePath (): String { return Paths.get(getOutputFolderPath(), getRepositoryPackageFileName()).toString() }
   private fun getRepositoryPackageFileName () =
     "forRepository_" +
-    ConfigData["stepLanguageCode3Char"]!! + "_" +
-    ConfigData["stepVernacularAbbreviation"]!! +
+    ConfigData["stepModuleName"]!! + "_" +
+    ConfigData["stepTargetAudience"]!! +
     ".zip"
 
 
@@ -393,7 +397,6 @@ object FileLocations
   
   /****************************************************************************/
   private fun getModuleName () = ConfigData["stepModuleName"]!!
-  private fun makeOsisFileName () = "osis${ConfigData["stepModuleNameBase"]}.${getFileExtensionForOsis()}"
   private fun makeTextFeaturesFolderPath () = Paths.get(getTextFeaturesRootFolderPath(), getModuleName()).toString()
 
 

@@ -612,7 +612,7 @@ object Dbg
   /****************************************************************************/
   @Synchronized fun <T> d (things : Iterable<T>): Iterable<T>
   {
-    things.forEachIndexed { ix, value -> d(String.format("%3d", ix) + ": " + value.toString()) }
+    things.forEachIndexed { ix, value -> d(String.format("%4d", ix) + ": " + value.toString()) }
     return things
   }
 
@@ -696,6 +696,22 @@ object Dbg
   fun outputDom (doc: Document, fileName: String = "a.xml")
   {
     Dom.outputDomAsXml(doc, Paths.get(FileLocations.getTemporaryInvestigationsFolderPath(), fileName).toString(),null)
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Outputs contents of DOM.  Note that this uses a hard-coded output
+   * location, and will therefore need changing for use on other systems.
+   *
+   * @param doc Document.
+   * @param fileName Just the file name (not extension) for output.  Data is
+   *                 written to the desktop.
+   */
+
+  fun outputText (text: String, fileName: String = "a.txt")
+  {
+    File(Paths.get(FileLocations.getTemporaryInvestigationsFolderPath(), fileName).toString()).bufferedWriter().write(text)
   }
 
 

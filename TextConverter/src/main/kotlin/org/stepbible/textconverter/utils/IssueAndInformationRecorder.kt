@@ -1,7 +1,7 @@
 package org.stepbible.textconverter.utils
 
 import com.google.gson.GsonBuilder
-import org.stepbible.textconverter.processingelements.PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation
+import org.stepbible.textconverter.processingelements.PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.bibledetails.VersificationSchemesSupportedByOsis2mod
 import org.stepbible.textconverter.support.configdata.ConfigData
@@ -115,14 +115,15 @@ object IssueAndInformationRecorder
 
 
   /****************************************************************************/
-  fun setChangedFootnoteCalloutsToHouseStyle ()     { m_RunFeatures.ChangedFootnoteCalloutsToHouseStyle = true }
-  fun setConversionTimeReversification ()           { m_RunFeatures.ReversificationType = "Conversion time" }
-  fun setRuntimeReversification ()                  { m_RunFeatures.ReversificationType = "Run time" }
-  fun setConvertedCrossReferencesToCanonicalForm () { m_RunFeatures.ConvertedCrossReferencesToCanonicalForm = true }
-  fun setForcedSelfClosingParas ()                  { m_RunFeatures.ForcedSelfClosingParas = true }
-  fun setReformattedTrailingCanonicalTitles ()      { m_RunFeatures.ReformattedTrailingCanonicalTitles = true }
-  fun setSplitCrossVerseBoundarySpanTypeTags ()     { m_RunFeatures.SplitCrossVerseBoundarySpanTypeTags = true }
-  fun setStrongs ()                                 { m_RunFeatures.ModifiedStrongsReferences = true }
+  fun setDivergencesFromSelectedVersificationScheme (text: String) { m_RunFeatures.DivergencesFromSelectedVersificationScheme = text }
+  fun setChangedFootnoteCalloutsToHouseStyle ()                    { m_RunFeatures.ChangedFootnoteCalloutsToHouseStyle = true }
+  fun setConversionTimeReversification ()                          { m_RunFeatures.ReversificationType = "Conversion time" }
+  fun setRuntimeReversification ()                                 { m_RunFeatures.ReversificationType = "Run time" }
+  fun setConvertedCrossReferencesToCanonicalForm ()                { m_RunFeatures.ConvertedCrossReferencesToCanonicalForm = true }
+  fun setForcedSelfClosingParas ()                                 { m_RunFeatures.ForcedSelfClosingParas = true }
+  fun setReformattedTrailingCanonicalTitles ()                     { m_RunFeatures.ReformattedTrailingCanonicalTitles = true }
+  fun setSplitCrossVerseBoundarySpanTypeTags ()                    { m_RunFeatures.SplitCrossVerseBoundarySpanTypeTags = true }
+  fun setStrongs ()                                                { m_RunFeatures.ModifiedStrongsReferences = true }
 
   fun setHasMultiVerseParagraphs () { TODO() } // Needs to turn up in Sword config.
 
@@ -535,7 +536,7 @@ object IssueAndInformationRecorder
     /**************************************************************************/
     m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA = "Because reversification is not being applied, the text needs to conform to the selected osis2mod versification scheme.  The following details highlight any issues."
 
-    val analysis = PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.evaluateSingleSchemeDetailed(ConfigData["stepVersificationScheme"]!!, m_DataCollection.getBibleStructure())
+    val analysis = PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.evaluateSingleSchemeDetailed(ConfigData["stepVersificationScheme"]!!, m_DataCollection.getBibleStructure())
 
     m_BibleTextStructure.DCPresence = analysis.DCPresence
 
@@ -592,6 +593,7 @@ object IssueAndInformationRecorder
     var ReversificationDataIssues: MutableList<String>? = null
     var ReversificationMappings: List<String>? = null
     var AcceptedReversificationRows: List<String>? = null
+    var DivergencesFromSelectedVersificationScheme = "N/A -- applies to open access modules only."
 
 
 

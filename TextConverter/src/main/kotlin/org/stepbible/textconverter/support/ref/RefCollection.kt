@@ -452,15 +452,17 @@ class RefCollection: RefBase
   companion object
   {
     /**************************************************************************/
-    /* The various read methods.  We definitely shouldn't need to read OSIS,
-       so there's no method for that (OSIS is write-only).  And we probably
-       shouldn't need to read USX collections either if people follow the rules
-       about not having collections in cross-references, but they don't.
+    /* The various read methods.  We probably shouldn't need to read USX
+       collections if people follow the rules about not having collections in
+       cross-references, but they don't.
 
-       We may well need to read vernacular references, but that's dealt with
-       in RefFormatHandlerVernacular, since we have to assume they will be
-       embedded in a larger text string, and therefore can't be returned as a
-       simple collection.
+       We may well need to read vernacular references, and at one stage I was
+       assuming we'd have to handle that in RefFormatHandlerVernacular, since
+       we'd have to assume they would be embedded in a larger text string, and
+       therefore couldn't be returned as a simple collection.  However, I've
+       now come across a text where we have straightforward vernacular
+       references, so I've provided a wrapper to RefFormatHandlerVernacular
+       calls here to make this more straightforward.
 
        The version of rd with the extensive parameter list is just a shorthand
        version of rdUsx. */
@@ -468,6 +470,7 @@ class RefCollection: RefBase
     fun rd           (text: String, dflt: Ref? = null, resolveAmbiguitiesAs: String? = null): RefCollection { return rdUsx(text, dflt, resolveAmbiguitiesAs)  }
     fun rdOsis       (text: String, dflt: Ref? = null, resolveAmbiguitiesAs: String? = null): RefCollection { return rdOsisInternal(text, dflt, resolveAmbiguitiesAs)  }
     fun rdUsx        (text: String, dflt: Ref? = null, resolveAmbiguitiesAs: String? = null): RefCollection { return rdUsxInternal(text, dflt, resolveAmbiguitiesAs)  }
+    fun rdVernacular (text: String, dflt: Ref? = null, resolveAmbiguitiesAs: String? = null): RefCollection { return rdVernacularInternal(text, dflt, resolveAmbiguitiesAs)  }
 
     fun rd (ref: RefCollectionPart): RefCollection { return RefCollection(ref) }
     fun rd (refs: List<Any>): RefCollection { return RefCollection(refs) } // May be List<RefKey> or List<RefCollectionPart>.
@@ -528,6 +531,23 @@ class RefCollection: RefBase
       }
 
       return res
+    }
+
+
+    /**************************************************************************/
+    /* Specialist reader for vernacular text -- and more particularly for
+       non-embedded collections.  (Vernacular text may contain collections
+       embedded within larger text strings, and indeed often will do so, but
+       to handle those, you need to rely upon RefFormatHandlerReaderVernacular
+       directly.  Here I assume something simpler. */
+
+    private fun rdVernacularInternal (text: String, context: Ref?, resolveAmbiguitiesAs: String?): RefCollection
+    {
+      val x = RefFormatHandlerReaderVernacular.readEmbedded(text, context, resolveAmbiguitiesAs)
+      if (x.size != 1 || x[0] !is RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection)
+        throw StepException("Invalid vernacular reference: $text.")
+      else
+        return (x[0] as RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection).rc
     }
   }
 }

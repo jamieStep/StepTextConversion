@@ -142,7 +142,7 @@ object IsoLanguageCodes {
     {
       if (2 == isoCode.length) return isoCode.lowercase()
       val key = m_3CharToPreferred3Char[isoCode.lowercase()]
-      return m_Preferred3CharToDetails[key]!!.first!!
+      return m_Preferred3CharToDetails[key]!!.first ?: isoCode
     }
 
 
@@ -438,6 +438,7 @@ object IsoLanguageCodes {
     addIso639_2_LanguageDetails("anp", null, null, "Angika")
     addIso639_2_LanguageDetails("apa", null, null, "Apache languages")
     addIso639_2_LanguageDetails("ara", null, "ar", "Arabic")
+    addIso639_2_LanguageDetails("arb", null, null, "Arabic")
     addIso639_2_LanguageDetails("arc", null, null, "Official Aramaic (700-300 BCE); Imperial Aramaic (700-300 BCE)")
     addIso639_2_LanguageDetails("arg", null, "an", "Aragonese")
     addIso639_2_LanguageDetails("arm", "hye", "hy", "Armenian")

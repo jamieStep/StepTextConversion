@@ -11,6 +11,7 @@ import org.stepbible.textconverter.support.ref.*
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import java.io.File
 import java.util.*
 import kotlin.collections.LinkedHashMap
 import kotlin.math.abs
@@ -258,6 +259,9 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
       val versesInTextUnderConstructionButNotInOtherScheme = versesInTextUnderConstruction subtract versesInOtherScheme
       val versesInOtherSchemeButNotInTextUnderConstruction = versesInOtherScheme subtract versesInTextUnderConstruction
       val versesInBoth = versesInTextUnderConstruction intersect versesInOtherScheme
+
+//      Dbg.d(versesInTextUnderConstructionButNotInOtherScheme.map { Ref.rd(it).toString() })
+//      Dbg.d(versesInOtherSchemeButNotInTextUnderConstruction.map { Ref.rd(it).toString() })
 
       val chaptersInTextUnderConstruction = versesInTextUnderConstruction.map { Ref.clearV(Ref.clearS(it)) }.toSet()
       val chaptersInOtherScheme = versesInOtherScheme.map { Ref.clearV(Ref.clearS(it)) }.toSet()
@@ -1975,7 +1979,7 @@ open class BibleStructureOsis2ModScheme (scheme: String): BibleStructure(null)
 
 
   /****************************************************************************/
-  override fun addFromDoc (prompt: String, doc: Document, wantWordCount: Boolean, filePath: String?, bookName: String?) { throw StepException("Can't populate osis2mod scheme from text.") }
+  override fun addFromDoc (prompt: String, doc: Document, wantWordCount: Boolean, filePath: String?, bookName: String?) { throw StepException("Can't populate osis2mod scheme from Document.") }
   override fun commonGetWordCount (elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
   override fun commonGetWordCountForCanonicalTitle (elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
   override fun getRelevanceOfNode (node: Node): NodeRelevance { throw StepException("getRelevanceOfNode should not be being called on an osis2mod scheme.") }
@@ -2016,5 +2020,49 @@ open class BibleStructureOsis2ModScheme (scheme: String): BibleStructure(null)
   init {
     m_Scheme = VersificationSchemesSupportedByOsis2mod.canonicaliseSchemeName(scheme)
     parseData()
+  }
+}
+
+
+
+
+
+/******************************************************************************/
+/**
+* BibleStructure derived from IMP format.
+*/
+
+open class BibleStructureImp (filePath: String): BibleStructure(null)
+{
+  /****************************************************************************/
+  override fun addFromDoc (prompt: String, doc: Document, wantWordCount: Boolean, filePath: String?, bookName: String?) { throw StepException("Can't populate osis2mod scheme from Document.") }
+  override fun commonGetWordCount (elts: IntArray): Int { throw StepException("Not yet set up to provide word counts on an IMP file.") }
+  override fun commonGetWordCountForCanonicalTitle (elts: IntArray): Int { throw StepException("Not yet set up to provide word counts on an IMP file.") }
+  override fun getRelevanceOfNode (node: Node): NodeRelevance { throw StepException("getRelevanceOfNode should not be being called on an IMP file.") }
+  override fun addFromDoc (doc: Document, wantWordCount: Boolean) { throw StepException("load should not be being called on an IMP file.") }
+
+
+  /****************************************************************************/
+  /* We are interested only in verse lines, which look like eg Genesis 1:1. */
+
+  private fun processLine (theLine: String)
+  {
+    var line = theLine.trim()
+    if (!line.startsWith("$$$")) return
+    if ("[" in line) return
+
+    line = line.substring(3)
+    var bits = line.split(" ")
+    val bookNo = BibleBookNamesUsx.nameToNumber(bits[0].trim())
+    bits = bits[1].trim().split(":")
+    val chapterNo = bits[0].trim().toInt()
+    val verseNo = bits[1].trim().toInt()
+    addVerse(Ref.rd(bookNo, chapterNo, verseNo).toRefKey())
+  }
+
+
+  /****************************************************************************/
+  init {
+    File(filePath).bufferedReader().lines().forEach { processLine(it) }
   }
 }

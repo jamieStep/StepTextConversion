@@ -4,12 +4,9 @@ import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProce
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.miscellaneous.Zip
 import org.stepbible.textconverter.support.stepexception.StepException
-import java.io.File
-import java.text.SimpleDateFormat
-import java.util.*
+
 
 /******************************************************************************/
 /**
@@ -31,7 +28,7 @@ object PE_Phase4_To_RepositoryPackage: PE
   /****************************************************************************/
   override fun banner () = "Generating package for repository"
   override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
-  override fun pre () = StepFileUtils.deleteFileOrFolder(FileLocations.getRepositoryPackageFilePath())
+  override fun pre () {} // No need to delete the repository file here, because earlier processing will have deleted the entire output folder structure.
   override fun process () = doIt()
 
 

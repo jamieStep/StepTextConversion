@@ -124,7 +124,7 @@ object PE_Phase2_ToInternalOsis : PE
     /* Pick up the input data. */
 
     StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath())
-    InternalOsisDataCollection.loadFromText(Phase1TextOutput, false)
+    InternalOsisDataCollection.loadFromText(Phase1TextOutput)
     RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()) // Needed to cater for the possible requirement to expand ranges.
     val doc = InternalOsisDataCollection.getDocument()
     Phase1TextOutput = ""
@@ -186,10 +186,8 @@ object PE_Phase2_ToInternalOsis : PE
 
     SE_TableHandler(InternalOsisDataCollection).processAllRootNodes(); x()                      // Collapses tables which span verses into a single elided verse.
     SE_ElisionHandler(InternalOsisDataCollection).processAllRootNodes(); x()                    // Expands elisions out into individual verses.
-    Osis_CanonicalHeadingsHandler(InternalOsisDataCollection).process(); x()                    // Simplifies canonical headings to reduce the chance of cross-boundary markup.
     SE_EnhancedVerseEndInsertionPreparer(InternalOsisDataCollection).processAllRootNodes(); x() // Continues the work of SE_CanonicalHeadingsHandler, making things easier to insert verse ends..
     SE_EnhancedVerseEndInserter(InternalOsisDataCollection).processAllRootNodes(); x()          // Position verse ends so as to reduce the chances of cross-boundary markup.
-    SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()                 // Collapses subverses into the owning verses, if that's what we're doing.
     InternalOsisDataCollection.reloadBibleStructureFromRootNodes(wantWordCount = false); x()    // Probably a good idea to build / rebuild the structure here.
 
 
@@ -199,6 +197,7 @@ object PE_Phase2_ToInternalOsis : PE
     SE_ListEncapsulator(InternalOsisDataCollection).processAllRootNodes(); x()                  // Might encapsulate lists (but in fact does not do so currently).
     Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                         // Checks for invalid cross-references, or cross-references which point to non-existent places.
     handleReversification(); x()                                                                // Does what it says on the tin.
+    SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()                 // Collapses subverses into the owning verses, if that's what we're doing (mainly or exclusively on public modules).
     SE_CalloutStandardiser(InternalOsisDataCollection).processAllRootNodes(); x()               // Force callouts to be in house style, assuming that's what we want.
     removeDummyVerses(InternalOsisDataCollection)                                               // Ditto.
     ContentValidator.process(InternalOsisDataCollection, Osis_FileProtocol, ExternalOsisDataCollection, Osis_FileProtocol) // Checks current canonical content against original.
@@ -221,6 +220,8 @@ object PE_Phase2_ToInternalOsis : PE
     //Dbg.d(InternalOsisDataCollection.getDocument())
     ReversificationData.process(InternalOsisDataCollection)
     Osis_DetermineReversificationTypeEtc.process(InternalOsisDataCollection.getBibleStructure())
+
+    Osis_CanonicalHeadingsHandler(InternalOsisDataCollection).process()
 
     when (ConfigData["stepReversificationType"]!!.lowercase())
     {

@@ -660,7 +660,8 @@ object ReversificationData
   private fun loadRow (rawData: String, rowNumber: Int, rawDataSize: Int)
   {
     /**************************************************************************/
-    //Dbg.d(rowNumber)
+    Dbg.d(rowNumber)
+    Dbg.d(rawData)
     //Dbg.dCont(rawData, "Gen.32:33")
 
 

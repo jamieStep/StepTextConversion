@@ -416,6 +416,7 @@ object PackageContentHandler
       line = line.split("#!")[0].trim() // Remove any trailing comment.
       line = line.replace("@reversificationMap", m_ReversificationMap) // Could use ordinary dollar expansions here, but it's too slow because the map is so big.
       //Dbg.dCont(line, "stepOriginDataAdditionalInfo")
+      //Dbg.d(line)
       writer.write(ConfigData.expandReferences(line, false)!!)
       writer.write("\n")
     }

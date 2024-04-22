@@ -70,8 +70,8 @@ object PE_Phase1_FromInputUsx: PE
   private fun doIt ()
   {
     RefBase.setBibleStructure(UsxDataCollection.getBibleStructure())
-    UsxDataCollection.loadFromFolder(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForUsx(), false)
-    Usx_Preprocessor.process(UsxDataCollection)
+    UsxDataCollection.loadFromFolder(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForUsx())
+    Usx_Preprocessor.processXslt(UsxDataCollection)
     Usx_Tidier.process(UsxDataCollection)
     if (!ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "no"))
        Usx_OsisCreator.process(UsxDataCollection)

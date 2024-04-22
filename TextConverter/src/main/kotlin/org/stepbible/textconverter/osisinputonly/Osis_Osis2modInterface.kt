@@ -3,6 +3,7 @@ package org.stepbible.textconverter.osisinputonly
 import org.stepbible.textconverter.utils.BibleStructure
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -444,6 +445,7 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
     {
       val missingBook = !bibleStructureUnderConstruction.bookExists(bookNo)
       if (skipMissingBooks && missingBook) continue
+      if (!Dbg.wantToProcessBook(bookNo)) continue
 
       val header = BookDetails()
       headers.add(header)

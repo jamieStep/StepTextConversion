@@ -17,7 +17,7 @@ import org.stepbible.textconverter.support.stepexception.StepException
 
 fun main (args: Array<String>)
 {
-  //Dbg.setBooksToBeProcessed("1Sa")
+  //Dbg.setBooksToBeProcessed("Isa")
   //ThrowAwayCode.validateXmlFileStructure()
   //ThrowAwayCode.tryXslt()
   //ThrowAwayCode.convertNivToVL()
@@ -30,7 +30,7 @@ fun main (args: Array<String>)
     if (majorWarnings.isNotEmpty())
     {
       print(majorWarnings)
-      Logger.specialMessage(majorWarnings)
+      majorWarnings.split("\n").forEach { Logger.specialMessage(it) } // Split because otherwise we get double blank lines.
       Logger.announceAll(false)
     }
 

@@ -105,7 +105,7 @@ object ProcessingController
 
 
   /****************************************************************************/
-  private val C_ProcessingElementsStarters = listOf(PE_Phase1_FromInputVl, PE_Phase1_FromInputUsx, PE_Phase1_FromInputOsis)
+  private val C_ProcessingElementsStarters = listOf(PE_Phase1_FromInputVl, PE_Phase1_FromInputUsx, PE_Phase1_FromInputImp, PE_Phase1_FromInputOsis)
   private val C_ProcessingElementsFromInternalOsis = listOf(PE_Phase2_ToInternalOsis, PE_Phase3_To_SwordModule, PE_Phase4_To_RepositoryPackage)
   private val m_AllAvailableProcessingElements = listOf(C_ProcessingElementsStarters, C_ProcessingElementsFromInternalOsis).flatten()
   private val m_ProcessingElements = mutableListOf<PE>()
@@ -115,6 +115,7 @@ object ProcessingController
   private fun determineProcessingSteps ()
   {
     /**************************************************************************/
+    val haveImp   = FileLocations.getInputVlFilesExist()
     val haveOsis = FileLocations.getInputOsisFileExists()
     val haveUsx  = FileLocations.getInputUsxFilesExist()
     val haveVl   = FileLocations.getInputVlFilesExist()
@@ -127,8 +128,10 @@ object ProcessingController
       }
       else if (haveUsx)
         "usx"
-      else
+      else if (haveVl)
         "vl"
+      else
+        "imp"
 
 
 
@@ -163,12 +166,19 @@ object ProcessingController
     /**************************************************************************/
     if (seeIfWeAreCheckingInputDataAgainstPrevious()) exitProcess(0)
     if (seeIfWeAreEvaluatingSchemes()) exitProcess(0)
+    StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
 
 
 
     /**************************************************************************/
     when (startFrom)
     {
+      "imp" ->
+      {
+        m_ProcessingElements.add(PE_Phase1_FromInputImp)
+        m_ProcessingElements.addAll(C_ProcessingElementsFromInternalOsis)
+      }
+
       "osis" ->
       {
         m_ProcessingElements.add(PE_Phase1_FromInputOsis)
@@ -235,7 +245,7 @@ object ProcessingController
 
 
     /**************************************************************************/
-    /* If supplied, this could be something like   <Isa   or it could be a
+    /* If supplied, this could be something like   Isa   or it could be a
        comma-separated list of USX abbreviations.  */
 
     if (null != ConfigData["dbgSelectBooks"])
@@ -262,8 +272,6 @@ object ProcessingController
 
     /**************************************************************************/
     ConfigData["stepBuildTimestamp"] = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
-    if (null == ConfigData["stepVersificationScheme"])                  // Where we are doing runtime reversification, we have had to defer working out the scheme name because we use one of our own making and only now have all the inputs.
-      ConfigData["stepVersificationScheme"] = "tbd"
   }
 
 
@@ -318,6 +326,7 @@ object ProcessingController
     FileLocations.initialise(rootFolderPath)
     ConfigData.load(FileLocations.getStepConfigFileName())
     CommandLineProcessor.copyCommandLineOptionsToConfigData("TextConverter")
+    ConfigData.extractDataFromModuleName()
 
 
 
@@ -411,7 +420,7 @@ object ProcessingController
     /**************************************************************************/
     Dbg.reportProgress("Evaluating fit with versification schemes")
     Dbg.resetBooksToBeProcessed() // Force all books to be included.
-    PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.process()
+    PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.process()
     return true
   }
 

@@ -90,7 +90,7 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
   override fun processRootNodeInternal (rootNode: Node)
   {
-    Dbg.reportProgress("Handling tables.")
+    Dbg.reportProgress("Handling tables for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     Dom.findNodesByName(rootNode, m_FileProtocol.tagName_table(), false).forEach {
       if (Dom.findNodesByName(it, "verse", false).any())
         restructureTablesConvertToElidedForm(it)

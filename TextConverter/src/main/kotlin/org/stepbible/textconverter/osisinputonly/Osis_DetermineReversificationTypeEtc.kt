@@ -1,14 +1,16 @@
 /******************************************************************************/
 package org.stepbible.textconverter.osisinputonly
 
-import org.stepbible.textconverter.processingelements.PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation
+import org.stepbible.textconverter.processingelements.PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation
 import org.stepbible.textconverter.utils.BibleStructure
 import org.stepbible.textconverter.support.bibledetails.VersificationSchemesSupportedByOsis2mod
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
+import org.stepbible.textconverter.support.stepexception.StepException
+import org.stepbible.textconverter.utils.IssueAndInformationRecorder
 import org.stepbible.textconverter.utils.ReversificationData
-import org.stepbible.textconverter.utils.StepSoftwareVersionSelector
 
 
 /******************************************************************************/
@@ -73,225 +75,199 @@ object Osis_DetermineReversificationTypeEtc
 
 
     /**************************************************************************/
-    val versificationSchemeWhichWouldBeUsedByCrosswireOsis2mod = getVersificationSchemeWhichWouldBeUsedByCrosswireOsis2mod(bibleStructureUnderConstruction)
+    /* If the root folder name contains _public, we're creating a public module.
+       Otherwise we are creating a STEP-internal module.
 
+       If we are creating a public module:
 
+       1. An osis2mod versification scheme must have been overtly specified.
 
-    /**************************************************************************/
-    fun reversificationTypeNeeded (): String
+       2. Encryption must not have been requested.
+
+       3. Reversification type may optionally have been specified (the default,
+          if not specified, is 'none').  It must be either 'none' or
+          'conversionTime'.
+
+       4. Reversification may be applied, as determined by the reversification
+          type (but obviously if applied will be conversion-time
+          reversification).
+
+       5. We will use the Crosswire version of osis2mod.
+
+       6. As a corollary of 5), version 1 of the STEP software will suffice.
+
+       1-3 are checks which are applied here.  4-6 are settings which are forced
+       here.
+
+       In addition to the above, if crating a public module and the selected
+       scheme is NRSV(A), and if the text fits NRSV(A) exactly, we will not
+       both to generate a STEP-only version.
+    */
+
+    if ("_public" in FileLocations.getRootFolderName().lowercase())
     {
-      val schemeEvaluation = PE_InputVlInputOrUsxInputOsis_To_SchemeEvaluation.evaluateSingleScheme(versificationSchemeWhichWouldBeUsedByCrosswireOsis2mod, bibleStructureUnderConstruction)
-      return if (null == schemeEvaluation)
-          "runtime" // We're using a bespoke scheme, in which case we do need reversification.  Runtime will do,
-        else if (schemeEvaluation.booksMissingInOsis2modScheme > 0 || schemeEvaluation.versesMissingInOsis2modScheme > 0 || bibleStructureUnderConstruction.hasSubverses())
-          "either"
-        else
-          "none"
+      var targetAudience = "P" // Public.
+
+
+
+      // Validation.
+      val versificationScheme = ConfigData["stepVersificationScheme"] ?: throw StepException("For public modules, you must overtly define stepVersificationScheme")
+      if (ConfigData.getAsBoolean("stepEncryptionRequired", "no")) throw StepException("You have requested encryption, but encryption cannot be applied to public modules.")
+      val reversificationType = ConfigData.get("stepReversificationType", "none").lowercase()
+      if ("runtime" == reversificationType) throw StepException("You have requested runtime reversification, but runtime reversification cannot be applied to a public text.")
+
+
+
+      // Force the correct data.
+      ConfigData.delete("stepVersificationScheme"); ConfigData.put("stepVersificationScheme", VersificationSchemesSupportedByOsis2mod.canonicaliseSchemeName(versificationScheme), force = true)
+      ConfigData.delete("stepReversificationType"); ConfigData.put("stepReversificationType", reversificationType, force = true)
+      ConfigData.delete("stepOsis2modType"); ConfigData.put("stepOsis2modType", "crosswire", force = true)
+      ConfigData.put("stepSoftwareVersionRequired", "1", force = false)
+      val reversificationFootnoteLevel = ConfigData["stepReversificationFootnoteLevel"]?.lowercase() ?: "basic"
+      ConfigData.delete("stepReversificationFootnoteLevel"); ConfigData["stepReversificationFootnoteLevel"] = reversificationFootnoteLevel
+      val reversificationFootnoteDescription = if ("none" == reversificationType) " with $reversificationFootnoteLevel footnotes" else ""
+
+
+      // Check the goodness of fit of the selected scheme.
+      val schemeEvaluation = PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.evaluateSingleScheme(versificationScheme, bibleStructureUnderConstruction)
+      val schemeEvaluationSummary = schemeEvaluation.toStringShort()
+      if (null == schemeEvaluationSummary) // It fits exactly.
+      {
+        if (versificationScheme.startsWith("NRSV"))
+          targetAudience += "S" // This module can also be used for STEP.
+      }
+      else
+      {
+        Logger.warning(schemeEvaluationSummary)
+        IssueAndInformationRecorder.setDivergencesFromSelectedVersificationScheme(schemeEvaluationSummary)
+        ConfigData.addDetailsOfDerivedWork(ConfigData["stepStandardWordingForDerivedWorkWeHaveChangedVersification"]!!)
+      }
+
+
+      // Record information for use later.
+      ConfigData["stepTargetAudience"] = targetAudience
+
+
+
+      // Record details of what's going on.
+      Logger.info("Target audience is $targetAudience.")
+      Logger.info("Reversification type is $reversificationType$reversificationFootnoteDescription.")
+      Logger.info("osis2mod type is Crosswire, with STEP software version specified as 1.")
+
+      return
     }
 
 
 
     /**************************************************************************/
-    /* To begin with, reversification type.
-
-       It is possible to attempt to force the reversification type by setting
-       stepForceReversificationType to runTime, conversionTime, none or tbd.
-
-       If forced to be runTime or conversionTime, the setting is always
-       honoured, although a warning will be issued if the text would have been
-       NRSV(A) compliant even without reversification.
-
-       If forced to be none, it is an error if the text is not NRSV(A)
-       compliant.
-
-       (NRSV(A) compliant means that the text does not contain any verses not
-       catered for by NRSV(A).  It is not a problem if the text _lacks_ verses
-       required by NRSV(A).)
-
-       If left as TBD (which is the default), the text is checked against
-       NRSV(A). If compliant, it is as though None had been specified.  Otherwise
-       it is as though runTime had been specified. */
-
-    var reversificationType = (ConfigData["stepForceReversificationType"] ?: "tbd").lowercase()
-    if (reversificationType.isEmpty()) reversificationType = "tbd"
-    when (reversificationType)
+    fun getNrsvVersificationScheme (bibleStructureUnderConstruction: BibleStructure): String
     {
-      "conversiontime" ->
-      {
-        if ("none" == reversificationTypeNeeded())
-          Logger.warning("Conversion-time reversification specified (and honoured), but reversification not needed.")
-      }
-
-      "runtime" ->
-      {
-        if ("none" == reversificationTypeNeeded())
-          Logger.warning("Run-time reversification specified (and honoured), but reversification not needed.")
-      }
-
-      "none" ->
-      {
-        if ("none" != reversificationTypeNeeded())
-          Logger.error("Reversification prohibited but text requires it.")
-      }
-
-      "tbd" ->
-      {
-        when (reversificationTypeNeeded())
-        {
-          "none" ->
-          {
-            ConfigData["stepForceReversificationType"] = "none"
-            Logger.info("Processing has decided no reversification is needed.")
-          }
-
-          "runtime", "either" -> // Prefer runtime reversification if it is needed at all
-          {
-            ConfigData["stepForceReversificationType"] = "runtime"
-            Logger.info("Processing has decided to apply runtime reversification.")
-          }
-        }
-      }
+      var versificationScheme = (ConfigData["stepVersificationScheme"] ?: "NRSV").uppercase().replace("A", "")
+      if (!versificationScheme.startsWith("NRSV")) throw StepException("For STEP-internal modules, versification scheme must, if specified, be NRSV(A).")
+      val requiresDc = bibleStructureUnderConstruction.hasAnyBooksDc() || ReversificationData.reversificationTargetsDc()
+      if (requiresDc) versificationScheme += "A"
+      return versificationScheme
     }
 
 
 
     /**************************************************************************/
-    /* Record relevant details. */
+    /* Not a public module.  As a result:
 
-    ConfigData.delete("stepReversificationType")
-    ConfigData["stepReversificationType"] = ConfigData["stepForceReversificationType"]!!.lowercase()
-    val reversificationFootnoteLevel = ConfigData["stepReversificationFootnoteLevel"]?.lowercase() ?: "basic"
-    ConfigData.delete("stepReversificationFootnoteLevel")
-    ConfigData["stepReversificationFootnoteLevel"] = reversificationFootnoteLevel
+       1. The versification scheme is determined by the processing here (which
+          means that no scheme should have been selected in advance).  It will
+          be NRSV(A) for texts which conform to those schemes, or else will be
+          a made-up name reflecting the fact that we shall be using a bespoke
+          scheme.
+
+       2. Reversification type can be anything (none / runTime / conversionTime).
+
+       3. If reversification type is runtime or if encryption has been
+          requested, osis2modType will be set to 'step'.  Otherwise it will
+          be set to 'crosswire'.
+
+       4. If osis2modType is set to 'Crosswire', then stepSoftwareLevel will
+          be set to at least 1.  Otherwise it will be set to at least 2.
+     */
+
+    /**************************************************************************/
+    val targetAudience = "S"
+    ConfigData["stepTargetAudience"] = targetAudience
 
 
 
     /**************************************************************************/
-    /* On to the versification scheme.
+    /* First, the versification scheme.  NRSV(A) if one of those fits and if
+       the text does not contain subverses; otherwise a bespoke scheme. */
 
-       If we have accepted 'None' for the reversification type, then we can
-       go with whatever has been specified in the configuration data, or
-       NRSV(A) if nothing has been specified.  We already have this information
-       in versificationSchemeWhichWouldBeUsedByCrosswireOsis2mod.
-
-       Otherwise, if conversiontime has been specified for the reversification
-       type, then irrespective of anything which may have been stipulated, we
-       want NRSV(A).
-
-       And finally, if runtime has been specified, we will be making up our
-       own name in due course, but can't do so yet because we have not
-       established all the necessary information.  In this case,
-       stepVersificationScheme remains undefined here. */
-
-    ConfigData.delete("stepVersificationScheme")
-    when (ConfigData["stepReversificationType"])
+    var versificationScheme = getNrsvVersificationScheme(bibleStructureUnderConstruction) // Will be either NRSV or NRSVA.
+    val schemeEvaluation = PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.evaluateSingleScheme(versificationScheme, bibleStructureUnderConstruction)
+    if (schemeEvaluation.exactMatch() && !bibleStructureUnderConstruction.hasSubverses())
     {
-      "none"           -> ConfigData["stepVersificationScheme"] = versificationSchemeWhichWouldBeUsedByCrosswireOsis2mod
-      "conversiontime" -> ConfigData["stepVersificationScheme"] = VersificationSchemesSupportedByOsis2mod.canonicaliseSchemeName("NRSV" + if ("a" in versificationSchemeWhichWouldBeUsedByCrosswireOsis2mod.lowercase()) "A" else "")
-      "runtime"        -> ConfigData.delete("stepVersificationScheme")
+      ConfigData.delete("stepVersificationScheme"); ConfigData.put("stepVersificationScheme", versificationScheme, force = true)
+      Logger.info("Using versification scheme $versificationScheme.")
+    }
+    else
+    {
+      ConfigData.delete("stepVersificationScheme") // The absence of this setting is used elsewhere to flag the fact that we need a bespoke scheme.
+      Logger.info("Using bespoke versification scheme.")
     }
 
 
 
     /**************************************************************************/
-    /* Determine what kind of osis2mod we are going to run -- Crosswire's or
-       ours.
+    /* Now reversification.  If the versification scheme is NRSV(A), then
+       I take it that none is needed.  Otherwise, either conversiontime or
+       runtime must have been specified, and we can go with that. */
 
-       A force-setting is available.  If this is not supplied, it is as though
-       the force-setting were 'tbd.'
-
-       If the force-setting is 'step', it is honoured, but a warning is issued
-       if there appear to be no grounds for using our own version.  (I take
-       grounds for using it as being either that we are applying runtime
-       reversification, or that the text contains out-of-order verses.)
-        If the setting is crosswire, it's an error if there are grounds for
-       needing to use our version (see above); otherwise, the setting is
-       honoured.
-
-       If the setting is 'tbd', the choice is determined by whether there are
-       grounds for needing our version or not. */
-
-    fun groundsForUsingStepOsis2mod () = ConfigData["stepForceReversificationType"]!! !in "none.conversiontime" || !bibleStructureUnderConstruction.versesAreInOrder()
-
-    var osis2modType = (ConfigData["stepForceOsis2modType"] ?: "tbd").lowercase()
-    if (osis2modType.isEmpty()) osis2modType = "tbd"
-    when (osis2modType)
+    var reversificationType: String
+    if (versificationScheme.startsWith("NRSV"))
     {
-      "step" ->
-      {
-        if (!groundsForUsingStepOsis2mod())
-          Logger.warning("Use of STEP osis2mod stipulated (and honoured), but the usual grounds for requiring (ie reversification or out of order verses) it do not apply.")
-      }
+      reversificationType = "none"
+      Logger.info("ReversificationType is $reversificationType")
+    }
+    else
+    {
+      reversificationType = ConfigData.get("stepReversificationType", "").lowercase()
+      if ("conversiontime" != reversificationType && "runtime" != reversificationType) throw StepException("This text needs some form of reversification: you need to set stepReversificationType to conversionTime or runTime")
+      ConfigData.delete("stepReversificationType"); ConfigData.put("stepReversificationType", reversificationType, force = true)
 
-      "crosswire" ->
-      {
-        if (groundsForUsingStepOsis2mod())
-          Logger.error("Use of Crosswire osis2mod stipulated, but text requires reversification, and Crosswire osis2mod won't work with that.")
-      }
+      val reversificationFootnoteLevel = ConfigData["stepReversificationFootnoteLevel"]?.lowercase() ?: "basic"
+      ConfigData.delete("stepReversificationFootnoteLevel"); ConfigData["stepReversificationFootnoteLevel"] = reversificationFootnoteLevel
 
-      "tbd" ->
-      {
-        if (groundsForUsingStepOsis2mod())
-        {
-          ConfigData["stepForceOsis2modType"] = "step"
-          Logger.info("Processing has decided to use STEP osis2mod.")
-        }
-        else
-        {
-          ConfigData["stepForceOsis2modType"] = "crosswire"
-          Logger.info("Processing has decided to use Crosswire osis2mod.")
-        }
-      }
+      Logger.info("Reversification type is $reversificationType with $reversificationFootnoteLevel footnotes.")
     }
 
 
 
     /**************************************************************************/
-    ConfigData.delete("stepOsis2modType")
-    ConfigData["stepOsis2modType"] = ConfigData["stepForceOsis2modType"]!!.lowercase()
+    /* We must require encryption or be using runtime reversification or else
+       there's no point in doing a STEP-only module. */
+
+    if ("none" == reversificationType && !ConfigData.getAsBoolean("stepEncryptionRequired", "no"))
+      throw StepException("You have requested a STEP-only module, but no reversification is needed and you have not asked for encryption, so this could be a public module.")
 
 
 
     /**************************************************************************/
-    StepSoftwareVersionSelector.setStepSoftwareVersionRequired()
+    /* So finally we know that we must be using STEP osis2mod, and that implies
+       also that the module will run only with STEP software version 2 or
+       later. */
+
+    ConfigData.delete("stepOsis2modType"); ConfigData.put("stepOsis2modType", "step", force = true)
+    var softwareVersion = ConfigData.get("stepSoftwareVersionRequired", "2").toInt()
+    if (softwareVersion < 2) softwareVersion = 2
+    ConfigData.put("stepSoftwareVersionRequired", softwareVersion.toString(), force = false)
+
+
+
+    /**************************************************************************/
+    Logger.info("osis2mod type is STEP, with STEP software version specified as $softwareVersion.")
+    Logger.info("Target audience is $targetAudience.")
+
 
 
     /**************************************************************************/
     Osis_Osis2modInterface.instance().initialise()
-  }
-
-
-  /****************************************************************************/
-  /* Returns the versification scheme which would be used if we were to run
-     Crosswire's version of osis2mod.
-
-     Note that I'm _not_ looking for the best option here.  If you want to
-     discover that, run the converter with -evaluateSchemesOnly.
-
-     Rather I'm taking any scheme which has been overtly specified in the
-     configuration data, or NRSV if none has been specified.
-
-     If the result of this is KJV, KJVA, NRSV or NRSVA, I then alter it if
-     necessary to take into account the presence or absence of DC books.
-
-     And then finally I convert the result to canonical form (ie to the mix of
-     uppercase / lowercase letters which osis2mod uses to identify the scheme).
- */
-
-  private fun getVersificationSchemeWhichWouldBeUsedByCrosswireOsis2mod (bibleStructureUnderConstruction: BibleStructure): String
-  {
-    var versificationScheme = (ConfigData["stepVersificationScheme"] ?: "TBD").uppercase()
-    if ("TBD" == versificationScheme) versificationScheme = "NRSV"
-    val existsAsBothWithAndWithoutDc = versificationScheme.startsWith("KJV") || versificationScheme.startsWith("NRSV")
-    if (existsAsBothWithAndWithoutDc)
-    {
-      val requiresDc = bibleStructureUnderConstruction.hasAnyBooksDc() || ReversificationData.reversificationTargetsDc()
-      if (requiresDc && "A" !in versificationScheme)
-        versificationScheme += "A"
-      else if (!requiresDc)
-        versificationScheme = versificationScheme.replace("A", "")
-    }
-
-    return VersificationSchemesSupportedByOsis2mod.canonicaliseSchemeName(versificationScheme)
   }
 }
