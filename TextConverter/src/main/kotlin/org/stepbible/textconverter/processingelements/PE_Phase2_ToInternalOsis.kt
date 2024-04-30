@@ -197,7 +197,7 @@ object PE_Phase2_ToInternalOsis : PE
     SE_ListEncapsulator(InternalOsisDataCollection).processAllRootNodes(); x()                  // Might encapsulate lists (but in fact does not do so currently).
     Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                         // Checks for invalid cross-references, or cross-references which point to non-existent places.
     handleReversification(); x()                                                                // Does what it says on the tin.
-    SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()                 // Collapses subverses into the owning verses, if that's what we're doing (mainly or exclusively on public modules).
+    // $$$ SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()                 // Collapses subverses into the owning verses, if that's what we're doing (mainly or exclusively on public modules).
     SE_CalloutStandardiser(InternalOsisDataCollection).processAllRootNodes(); x()               // Force callouts to be in house style, assuming that's what we want.
     removeDummyVerses(InternalOsisDataCollection)                                               // Ditto.
     ContentValidator.process(InternalOsisDataCollection, Osis_FileProtocol, ExternalOsisDataCollection, Osis_FileProtocol) // Checks current canonical content against original.

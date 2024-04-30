@@ -12,6 +12,7 @@ import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.InternalOsisDataCollection
 import java.io.*
+import java.nio.file.Paths
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -320,15 +321,15 @@ import kotlin.reflect.KFunction
 
 object ConfigData
 {
-    /****************************************************************************/
-    /****************************************************************************/
-    /**                                                                        **/
-    /**                                 Public                                 **/
-    /**                                                                        **/
-    /****************************************************************************/
-    /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                 Public                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
 
-    /****************************************************************************/
+  /****************************************************************************/
     data class VernacularBookDescriptor
     (
         var ubsAbbreviation: String,
@@ -336,6 +337,223 @@ object ConfigData
         var vernacularShort: String,
         var vernacularLong: String
     )
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                 Root folder parsing and module naming                  **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /* I use a naming convention for root folders which is described below.
+     From this I need to extract various information very early on, because a
+     lot of other things rely upon it (including the general loading of config
+     information -- $include statements may be tailored to the particular
+     circumstances which are encoded within the root folder name).
+
+     In fact, I need to do this in two passes.  The first, handled by
+     extractDataFromRootFolderName, extracts basic information which may be
+     needed when loading config data.  The second, handled by
+     generateModuleName, cannot be run until we have read the config data
+     and checked certain settings.  Only once we have carried out this second
+     analysis are we in a position to determine the actual module name to be
+     used: the first part gives us an initial stab, but the second part may
+     alter this.
+
+     Given this extensive preamble, it will probably already be apparent that
+     this is revoltingly complicated, so prepare for a long explanation
+
+
+
+     Root folder name
+     ================
+
+     The root folder name may come in one of two different formats (both of
+     which are prefixed by Text_, which I have omitted below):
+
+       deuHFA:     That's the 3-character ISO language code, followed by the
+                   abbreviated form of the Bible name.
+
+       deuHFA_xx:  That's the 3-character ISO language code, followed by the
+                   abbreviated form of the Bible name, followed by a suffix
+                   (shown here as being two characters, although I'm not sure
+                   it's always two).  This form is used only for backward
+                   compatibility -- we have some existing modules which have
+                   a suffix which we need to retain.
+
+       ..._public: Either of the two forms above may have _public appended to
+                   them.  This says that the module is regarded as open access.
+                   It will not be encrypted, and nor will it be subject to
+                   reversication-related restrucutring or to what we have
+                   called 'samification'.
+
+     How you determine the language code and abbreviated name will differ
+     from one text to another.  WIth texts supplied by DBL, the metadata.xml
+     file normally gives you all the information you need.  With texts from
+     other sources, you may need to look elsewhere.
+
+     There are a few points to make here:
+
+     - Give the language code as three characters, all lower-case.  ISO supports
+       alternative language codes for some languages.  My experience of DBL
+       texts to date is that they normally use the code which ISO prefers.
+       Unfortunately we _don't_ always do so -- we have historical modules
+       which have used the non-preferred code, and for compatibility we need to
+       continue doing that.  There is no need to worry about this -- just use
+       the code which appears in the metadata (where you _have_ suitable
+       metadata, as is the case with DBL), and the processing will convert it
+       if necessary.
+
+     - Again referring to the DBL metadata, which is the main thing I have
+       worked with to date, the abbreviated name should be the vernacular form
+       where this is available and is in Roman characters, or failing that
+       the English version.  Follow the capitalisation supplied.  (If you
+       have to make up an abbreviation for yourself, try to keep it compact
+       -- it is used where screen real-estate is at a premium.)
+
+
+
+     Module names
+     ============
+
+     In essence, module names follow the root folder name, so typically they
+     will look like FraBDS or FraBDS_th (the latter if historically we have
+     used a _th suffix with this text).
+
+     The name starts with the language code, determined as follows:
+
+     - We start on the assumption that we will use the code as specified.
+
+     - Except that if the code is one where ISO supports alternative codes and
+       we have chosen in the past to use an alternative, we use our alternative
+       instead.  For example the 'deu' in the examples above is replaced by
+       'ger'.
+
+     - Except that if the code is eng or one of the codes for the ancient
+       languages ("grc" or "hbo"), we suppress the code altogether.
+
+     - And if the abbreviated name is one of the ones in the specialNaming
+       structure below, then again we suppress the language code.
+
+     - If, after all of this, we still have a language code, we upper-case
+       the first letter only.
+
+
+     So much for the language code portion of the module name.  Moving on
+     to the abbreviated name ...
+
+     - As indicated above, if we are supplied with a vernacular abbreviated name
+       and it is in Roman characters, we use that.  Otherwise we use the English
+       vernacular name.  Either way, we follow the capitalisation supplied to
+       us.
+
+     - Except that if the abbreviated name appears in the specialNaming list,
+       then we use the abbreviation specified there instead.
+
+
+     The combined languageCode+abbreviation are followed by the suffix if the
+     root folder name had one.  Note, though, that the optional _public prefix
+     is _not_ retained -- we simply record here the fact that it existed, so
+     that later processing can proceed appropriately.
+
+     If we are specifically building a module for evaluation purposes (and
+     _only_ then), the module name has a further suffix added, recording the
+     fact that it is for evaluation only, and giving a time / date stamp, so
+     that multiple copies can be loaded into offline STEP at the same time
+     if necessary.  This suffix is handled by generateModuleName, because we
+     need to have read the config data before we are in a position to decide
+     whether it is needed.
+  */
+
+  fun extractDataFromRootFolderName ()
+  {
+    /**************************************************************************/
+    val C_specialNaming =
+      listOf("ArbKEH" to "NAV",
+             "ChiCCB" to "CCB",
+              "PesPCB" to "FCB",
+               "PorNVI" to "PNVI",
+                "RonNTR" to "NTLR",
+                 "RusNRT" to "NRT",
+                  "SpaNVI" to "NVI",
+                   "SwhNEN" to "Neno")
+
+
+
+    /**************************************************************************/
+    var moduleName = FileLocations.getRootFolderName().replace("Text_", "")
+    val lastBit = moduleName.split("_").last()
+    val targetAudience = if ("public" in lastBit.lowercase()) "P" else ""
+    if (targetAudience.isNotEmpty()) moduleName = moduleName.substring(0, moduleName.lastIndexOf("_"))
+    put("stepTargetAudience", targetAudience, false)
+
+
+
+    /**************************************************************************/
+    /* Language code is first 3 characters.  But it's a bit more complicated
+       than that: certain languages have two alternative codes, so this selects
+       the one we've decided to standardise on; and if, after that, we end up
+       with English or one of the ancient language codes, we drop the code
+       altogether. */
+
+    extractLanguageCodeFromModuleName()
+    var languageCode = getInternal("stepLanguageCode3Char", false)!!
+    moduleName = moduleName.substring(4)
+    if (languageCode in listOf("eng", "grc", "hbo")) languageCode = "" // This is the code we use within the module name.
+
+
+
+    /**************************************************************************/
+    /* Abbreviated name is whatever follows the language code (which we have
+       now removed from the copy of the module name) -- everything from there
+       up to the end of the string, or the next underscore if there is one.
+
+       Except again, I try to force matters here if I can.  If
+       stepVernacularAbbreviation is defined and is made up entirely of
+       Roman characters, then I use that in preference.  Otherwise if
+       stepEnglishAbbreviation is defined, I use that.  Only if neither of
+       these rides to the rescue do I trust the value which appears within
+       the module name. */
+
+    var abbreviatedName = if ("_" in moduleName) moduleName.split("_")[0] else moduleName
+    moduleName = moduleName.substring(abbreviatedName.length)
+    val x = get("stepVernacularAbbreviation")
+    abbreviatedName = if (null != x && StepStringUtils.isAsciiCharacters(x)) x else get("stepEnglishAbbreviation") ?: abbreviatedName
+
+
+
+    /**************************************************************************/
+    moduleName = StepStringUtils.sentenceCaseFirstLetter(languageCode) + abbreviatedName + moduleName
+    moduleName = C_specialNaming.find { it.first == moduleName } ?.second ?: moduleName
+    delete("stepModuleName"); put("stepModuleName", moduleName, force = true)
+  }
+
+
+  /****************************************************************************/
+  /* A potential further addition to module names.  On release runs, we add
+     nothing.  On non-release runs we add a timestamp etc to the name, so
+     that we can have multiple copies of a module lying around without them
+     clashing.  This part of the processing can be run at any time, because
+     the parameters it looks at will normally come direct from the command
+     line. */
+
+  fun generateModuleName ()
+  {
+    if ("release" in ConfigData["stepRunType"]!!.lowercase())
+      return
+
+    var testRelatedSuffix = ConfigData["stepRunType"]!!
+    if ("evaluation" in testRelatedSuffix.lowercase()) testRelatedSuffix = "eval"
+    testRelatedSuffix = "_" + testRelatedSuffix + "_" + ConfigData["stepBuildTimestamp"]!!
+    val moduleName = getInternal("stepModuleName", false) + testRelatedSuffix
+    delete("stepModuleName"); put("stepModuleName", moduleName, force = true)
+  }
 
 
 
@@ -353,99 +571,6 @@ object ConfigData
     private val m_AlreadyLoaded: MutableSet<String> = mutableSetOf()
     private val m_Mandatories: MutableMap<String, Boolean> = mutableMapOf()
     private var m_SampleText = ""
-
-
-  /****************************************************************************/
-  /* Parses data from the module name, changing it as necessary.  Module names
-     are derived from the name of the root folder, which should be structured as
-     follows:
-
-       GerHFA:   That's the 3-character ISO language code, followed by the
-                 abbreviated form of the Bible name.  The parts can be
-                 accessed in the present method using languageCode and
-                 abbreviatedName.  Except that I think it's safer to pick
-                 the abbreviated name up from the
-
-       GerHFA_xx: Retained for backward compatibility.  Some existing texts
-                  have an additional suffix. This can be accessed using
-                  'suffix'.
-
-       GerHFA_p / GerHFA_xx_p: The trailing _p indicates that we intend to
-                  generate a public module from this text (without the _p
-                  we generate STEP-only modules).  This is returned as part
-                  of 'suffix' -- so that with GerHFA_xx_p, requesting 'suffix'
-                  returns 'xx_p'.
-
-     The revised module name has the language code and abbreviated name in
-     canonical form, followed by any suffixes (ie the first underscore and
-     anything after it), and then, on eval runs, 'eval' followed by a time/
-     date stamp so that multiple versions of the module will have different
-     names and can therefore be loaded into STEP at the same time if
-     required for testing purposes. */
-
-  fun extractDataFromModuleName ()
-  {
-    /**************************************************************************/
-    var moduleName = FileLocations.getRootFolderName().replace("Text_", "").replace("_public", "")
-
-
-
-    /**************************************************************************/
-    /* Language code is first 3 characters.  But it's a bit more complicated
-       than that: certain languages have two alternative codes, so this selects
-       the one we've decided to standardise on; and if, after that, we end up
-       with English or one of the ancient language codes, we drop the code
-       altogether. */
-
-    var languageCode = getInternal("stepLanguageCode3Char", false)!!
-    moduleName = moduleName.substring(4)
-    if (languageCode in listOf("eng", "grc", "hbo")) languageCode = "" // This is the code we use within the module name.
-
-
-
-    /**************************************************************************/
-    /* Abbreviated name is whatever follows the language code (which we have
-       now removed from the copy of the module name) -- everything from there
-       up to the end of the string, or the next underscore if there is one.
-
-       Except again, I try to force matters here if I can.  If
-       stepVernacularAbbreviation is defined and is made up entirely of
-       Roman characters, then I use that in preference.  Otherwise if
-       stepEnglishAbbreviation is defined, I use that.  Only if neither of
-       these rides to the rescue do I trust the value which appaers within
-       the module name. */
-
-    var abbreviatedName = if ("_" in moduleName) moduleName.split("_")[0] else moduleName
-    moduleName = moduleName.substring(abbreviatedName.length)
-    val x = get("stepVernacularAbbreviation")
-    abbreviatedName = if (null != x && StepStringUtils.isAsciiCharacters(x)) x else get("stepEnglishAbbreviation") ?: abbreviatedName
-
-
-
-    /**************************************************************************/
-    /* A potential further addition to module names.  On release runs, it adds
-       nothing.  On non-release runs it adds a timestamp etc to the name, so
-       that we can have multiple copies of a module lying around without them
-       clashing.  This part of the processing can be run at any time, because
-       the parameters it looks at will normally come direct from the command
-       line. */
-
-    val testRelatedSuffix =
-      if ("release" in ConfigData["stepRunType"]!!.lowercase())
-        ""
-      else
-      {
-        var xx = ConfigData["stepRunType"]!!
-        if ("evaluation" in xx.lowercase()) xx = "eval"
-        "_" + xx + "_" + ConfigData["stepBuildTimestamp"]!!
-      }
-
-
-
-    /**************************************************************************/
-    moduleName = StepStringUtils.sentenceCaseFirstLetter(languageCode) + abbreviatedName + moduleName + testRelatedSuffix
-    delete("stepModuleName"); put("stepModuleName", moduleName, force = true)
-  }
 
 
     /****************************************************************************/
@@ -476,8 +601,8 @@ object ConfigData
     {
         if (m_Initialised) return // Guard against multiple initialisation.
         m_Initialised = true
-        extractLanguageCodeFromModuleName()
-        load(rootConfigFilePath, null, false) // User overrides.
+        val configFilePath = if (File(rootConfigFilePath).isAbsolute) rootConfigFilePath else Paths.get(FileLocations.getMetadataFolderPath(), rootConfigFilePath).toString()
+        load(configFilePath, false) // User overrides.
         loadDone()
     }
 
@@ -486,7 +611,7 @@ object ConfigData
     /* Need this as a separate function because $include's involve recursive
        calls. */
 
-    private fun load (configFilePath: String, callingFilePath: String?, okIfNotExists: Boolean)
+    private fun load (configFilePath: String, okIfNotExists: Boolean)
     {
         /**************************************************************************/
         //Dbg.d("Loading config file: " + configFilePath)
@@ -516,12 +641,11 @@ object ConfigData
 
 
         /**************************************************************************/
-        val lines = getConfigLines(configFilePath, callingFilePath, okIfNotExists)
-        for (x in lines)
+        for (x in getConfigLines(configFilePath, okIfNotExists))
         {
           //Dbg.d(x)
           val line = x.trim().replace("@home", System.getProperty("user.home"))
-          if (processConfigLine(line, configFilePath, callingFilePath)) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
+          if (processConfigLine(line, configFilePath)) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
           throw StepException("Couldn't process config line: $line")
         } // for
 
@@ -560,7 +684,7 @@ object ConfigData
       parmList = parmList.replace("\\\\", "\u0001").replace("\\;", "\u0002")
       val settings = parmList.split(";").map { it.trim().replace("\u0001", "\\").replace("\u0002", ";") }
       settings.forEach {
-        if (!processConfigLine(it, null, null))
+        if (!processConfigLine(it, ""))
           throw StepException("Couldn't parse setting from environment variable: $it")
       }
     }
@@ -593,12 +717,12 @@ object ConfigData
        all of the old files.
      */
 
-    private fun getConfigLines (configFilePath: String, callingFilePath: String?, okIfNotExists: Boolean): List<String>
+    private fun getConfigLines (configFilePath: String, okIfNotExists: Boolean): List<String>
     {
         /************************************************************************/
         try
         {
-            val rawLines = FileLocations.getInputStream(configFilePath, callingFilePath)!!.bufferedReader().use { it.readText() } .lines()
+            val rawLines = FileLocations.getInputStream(configFilePath)!!.bufferedReader().use { it.readText() } .lines()
             val lines: MutableList<String> = rawLines.map{ it.split("#!")[0].trim() }.filter{ it.isNotEmpty() }.toMutableList() // Ditch comments and remove blank lines.
             for (i in lines.size - 2 downTo 0) // Join continuation lines.
                 if (lines[i].endsWith("\\"))
@@ -668,7 +792,7 @@ object ConfigData
        turn up both in config files and in the converter's environment
        variable. */
 
-    private fun processConfigLine (directive: String, configFilePath: String?, callingFilePath: String?): Boolean
+    private fun processConfigLine (directive: String, callerFilePath: String): Boolean
     {
       /**************************************************************************/
       val lineLowerCase = directive.lowercase()
@@ -682,7 +806,9 @@ object ConfigData
         var newFilePath = directive.replace("${'$'}includeIfExists", "")
         newFilePath = newFilePath.replace("${'$'}include", "").trim()
         newFilePath = expandReferences(newFilePath, false)!!
-        load(newFilePath, configFilePath, lineLowerCase.contains("exist"))
+        if (!newFilePath.startsWith("$") && !File(newFilePath).isAbsolute)
+          newFilePath = Paths.get(File(callerFilePath).parent, newFilePath).toString()
+        load(newFilePath, lineLowerCase.contains("exist"))
         return true
       }
 
@@ -709,7 +835,7 @@ object ConfigData
       /**************************************************************************/
       if (directive.matches(Regex("(?i)stepExternalDataSource.*")))
       {
-        ConfigDataExternalFileInterface.recordDataSourceMapping(directive, configFilePath!!)
+        ConfigDataExternalFileInterface.recordDataSourceMapping(directive, callerFilePath)
         return true
       }
 
@@ -1094,7 +1220,7 @@ object ConfigData
 
       try
       {
-        //Dbg.dCont(theLine ?: "", "revision")
+        //Dbg.dCont(theLine ?: "", "getExt")
         return expandReferencesTopLevel(theLine, nullsOk, errorStack)
       }
       catch (_: StepException)

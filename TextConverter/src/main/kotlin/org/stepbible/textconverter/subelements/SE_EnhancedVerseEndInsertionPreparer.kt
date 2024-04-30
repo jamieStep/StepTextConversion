@@ -5,6 +5,7 @@ import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.findNodesByName
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
+import java.util.IdentityHashMap
 
 /****************************************************************************/
 /**
@@ -69,12 +70,51 @@ class SE_EnhancedVerseEndInsertionPreparer (dataCollection: X_DataCollection) : 
 
   private fun changeParaPToMilestone (rootNode: Node)
   {
+    /**************************************************************************/
+    /* A bit awkward.  I have come across at least one text which has nested
+       plain vanilla paragraphs.  If I simply take all of the vanilla paras
+       which the document contains as they stand, there is a risk that I
+       may process a parent -- which entails moving / recreating children --
+       and then find I need to process a child, and the child may have been
+       replaced by this point.
+
+       To cater for this, the processing below looks to see if the list of
+       plain vanilla nodes contains nodes which appear under other nodes in
+       the list, and then arranges to process the most deeply nested first. */
+
+    fun convertToSelfClosingNode (nodes: List<Node>)
+    {
+      val map = IdentityHashMap<Node, MutableList<Node>>()
+      nodes.forEach { map[it] = mutableListOf() }
+      nodes.forEach { node ->
+        var p = node.parentNode
+        while (null != p)
+        {
+          map[p]?.let { map[node]!!.add(p) }
+          p = p.parentNode
+        }
+      }
+
+      nodes.sortedByDescending { map[it]!!.size } .forEach { Dom.convertToSelfClosingNode(it) }
+    }
+
+
+
+   /**************************************************************************/
     val vanillaParas = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isPlainVanillaPara(it) }
-    vanillaParas.forEach { Dom.convertToSelfClosingNode(it) }
+    convertToSelfClosingNode(vanillaParas)
+
+
+
+   /**************************************************************************/
+   /* For these, nesting should not be an issue. */
 
     val poetryParas = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isPoetryPara(it) }
     poetryParas.forEach { Dom.convertToSelfClosingNode(it) }
 
+
+
+   /**************************************************************************/
     if (vanillaParas.isNotEmpty() || poetryParas.isNotEmpty())
       IssueAndInformationRecorder.setForcedSelfClosingParas()
   }

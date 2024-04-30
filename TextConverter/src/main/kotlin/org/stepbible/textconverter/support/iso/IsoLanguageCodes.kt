@@ -498,6 +498,7 @@ object IsoLanguageCodes {
     addIso639_2_LanguageDetails("chg", null, null, "Chagatai")
     addIso639_2_LanguageDetails("chi", "zho", "zh", "Chinese")
     addIso639_2_LanguageDetails("chk", null, null, "Chuukese")
+    addIso639_2_LanguageDetails("ckb", null, null, "Central Kurdish")
     addIso639_2_LanguageDetails("chm", null, null, "Mari")
     addIso639_2_LanguageDetails("chn", null, null, "Chinook jargon")
     addIso639_2_LanguageDetails("cho", null, null, "Choctaw")

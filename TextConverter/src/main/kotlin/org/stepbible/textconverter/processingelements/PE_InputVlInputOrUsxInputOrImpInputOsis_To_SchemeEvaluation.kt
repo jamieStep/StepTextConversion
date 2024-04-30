@@ -416,12 +416,12 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
       {
         val xbooksMissingInOsis2modScheme = if (0 == booksMissingInOsis2modScheme) "" else "$booksMissingInOsis2modScheme books"
         val xversesMissingInOsis2modScheme = if (0 == versesMissingInOsis2modScheme) "" else "$versesMissingInOsis2modScheme verses"
-        var xand = if (booksMissingInOsis2modScheme > 0 && versesMissingInOsis2modScheme > 0) "" else " and "
+        var xand = if (0 == booksMissingInOsis2modScheme && 0 == versesMissingInOsis2modScheme) "" else " and "
         val textExcess = if (0 == booksMissingInOsis2modScheme && 0 == versesMissingInOsis2modScheme) "" else "BAD divergences: Text has $xbooksMissingInOsis2modScheme$xand$xversesMissingInOsis2modScheme which the scheme lacks."
 
         val xbooksInExcessInOsis2modScheme = if (0 == booksInExcessInOsis2modScheme) "" else "$booksInExcessInOsis2modScheme books"
         val xversesInExcessInOsis2modScheme = if (0 == versesInExcessInOsis2modScheme) "" else "$versesInExcessInOsis2modScheme verses"
-        xand = if (booksInExcessInOsis2modScheme > 0 && versesInExcessInOsis2modScheme > 0) "" else " and "
+        xand = if (0 == booksInExcessInOsis2modScheme && 0 == versesInExcessInOsis2modScheme) "" else " and "
         val textLacks = if (0 == booksInExcessInOsis2modScheme && 0 == versesInExcessInOsis2modScheme) "" else "OK-ish divergences: Text lacks $xbooksInExcessInOsis2modScheme$xand$xversesInExcessInOsis2modScheme which the scheme expects."
 
         val sep = if (textExcess.isEmpty() || textLacks.isEmpty()) "" else "  "

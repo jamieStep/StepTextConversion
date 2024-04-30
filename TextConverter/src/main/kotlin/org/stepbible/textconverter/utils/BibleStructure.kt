@@ -2009,7 +2009,7 @@ open class BibleStructureOsis2ModScheme (scheme: String): BibleStructure(null)
 
     /**************************************************************************/
     val selector = "$m_Scheme/"
-    FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath(), null)!!.bufferedReader().use { it.readText() } .lines()
+    FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath())!!.bufferedReader().use { it.readText() } .lines()
       .map { it.trim() }
       .filter { it.startsWith(selector) } // Limit to the lines for this text.
       .forEach { processLine(it) }

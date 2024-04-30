@@ -213,7 +213,7 @@ import java.util.*
        more's the pity.  Where this is the case, try to work out the equivalent
        USX. */
 
-    diffs = canonicaliseCharXtsReliantUponVernacularText(charXtsLackingRefs)
+    diffs = canonicaliseCharXtsReliantUponVernacularText(charXtsLackingRefs, getRefAsStringForIntroductoryMaterial(rootNode))
     charXtsLackingRefs = charXtsLackingRefs - diffs.toSet()
     charXtsHavingRefs = charXtsHavingRefs + diffs.toSet()
 
@@ -308,6 +308,12 @@ import java.util.*
     /**************************************************************************/
     reportWarnings()
   }
+
+
+  /****************************************************************************/
+  /* Special pseudo reference used to mark book introductions. */
+
+  private fun getRefAsStringForIntroductoryMaterial (rootNode: Node) = rootNode["code"]!! + " 0"
 
 
 
@@ -447,7 +453,7 @@ import java.util.*
      but we straighten that out later.  Returns a list of nodes which have
      been amended. */
 
-  private fun canonicaliseCharXtsReliantUponVernacularText (charXtsLackingRefs: List<Node>): List<Node>
+  private fun canonicaliseCharXtsReliantUponVernacularText (charXtsLackingRefs: List<Node>, initialRef: String): List<Node>
   {
     /**************************************************************************/
     val res: MutableList<Node> = mutableListOf()
@@ -456,7 +462,7 @@ import java.util.*
 
 
     /**************************************************************************/
-    var mostRecentRef: Ref? = null
+    var mostRecentRef = Ref.rdUsx(initialRef)
     fun makeOwners ()
     {
       charXtsLackingRefs[0].ownerDocument.getAllNodes().forEach {
@@ -471,7 +477,7 @@ import java.util.*
           "char" ->
           {
             if ("xt" == it["style"])
-              owners[it] = mostRecentRef!!
+              owners[it] = mostRecentRef
           }
         } // when
       } // forEach
@@ -493,7 +499,7 @@ import java.util.*
 
 
     /**************************************************************************/
-    var toBeProcessed = charXtsLackingRefs.filter { "href-link" !in it }
+    val toBeProcessed = charXtsLackingRefs.filter { "href-link" !in it }
     if (toBeProcessed.isNotEmpty())
     {
        makeOwners()
@@ -784,7 +790,7 @@ import java.util.*
 
 
 
- /****************************************************************************/
+  /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
   /**                                Reporting                               **/
@@ -1019,7 +1025,7 @@ import java.util.*
 
   private fun addBelongsTo (rootNode: Node)
   {
-    var chapterRef = ""
+    var chapterRef = getRefAsStringForIntroductoryMaterial(rootNode)
     var theRef = ""
 
     fun processNode (node: Node)

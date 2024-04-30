@@ -51,15 +51,12 @@ abstract class ConfigDataExternalFileInterfaceBase
    * Initialises the data store by reading data from a given file.
    *
    * @param filePath File from which to obtain data.
-   * @param callingFilePath The path of the file being processed when this
-   *        method was invoked (used when trying to resolve relative paths).
    */
 
-  internal abstract fun initialise (filePath: String, callingFilePath: String?)
+  internal abstract fun initialise (filePath: String)
 
 
   /****************************************************************************/
-  internal var m_CallingFilePath: String? = null
   internal var m_IsInUse = false
   internal var m_OkIfNotExists = false
   internal var m_Path = ""
@@ -111,7 +108,7 @@ object ConfigDataExternalFileInterface
     {
       try
       {
-        processor.initialise(processor.m_Path, processor.m_CallingFilePath)
+        processor.initialise(processor.m_Path)
         processor.m_Status = Status.Ok
       }
       catch (_: Exception)
@@ -180,7 +177,6 @@ object ConfigDataExternalFileInterface
 
     val newEntry = makeConcreteInstance(type)
     newEntry.m_Path = path
-    newEntry.m_CallingFilePath = callingFilePath
     newEntry.m_Status = Status.NotTried
     newEntry.m_OkIfNotExists = ifExists
     m_ConfigDataExternalProcessors[logicalName] = newEntry
@@ -216,9 +212,9 @@ object ConfigDataExternalFileInterface
 
 abstract class ConfigDataExternalFileInterfaceXmlCommon: ConfigDataExternalFileInterfaceBase()
 {
-  override fun initialise (filePath: String, callingFilePath: String?)
+  override fun initialise (filePath: String)
   {
-    val path = FileLocations.getInputPath(filePath, callingFilePath)
+    val path = FileLocations.getInputPath(filePath)
     m_XmlDocument = Dom.getDocument(path)
   }
 

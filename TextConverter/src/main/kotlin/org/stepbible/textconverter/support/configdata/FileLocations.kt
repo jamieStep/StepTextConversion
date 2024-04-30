@@ -14,6 +14,103 @@ import java.io.InputStream
  * A central location for handling file paths, thus making it easy to change
  * things.
  *
+ * The overall structure for the data for a given text looks something like
+ * this:
+ *
+ *      Text_gerHFA --- the root folder.
+ *      |
+ *      +-- InputUsx or InputVl or InputImp or InputOsis --- see notes.
+ *      |
+ *      +-- InputOsis
+ *      |
+ *      +-- Metadata
+ *      |   |
+ *      |   + -- step.conf
+ *      |   |
+ *      |   + -- Possibly metadata.xml, licence.xml, etc.
+ *      |
+ *      +-- _Output
+ *      |   |
+ *      |   + -- InternalOsis
+ *      |   |
+ *      |   + -- Sword
+ *      |   |    |
+ *      |   |    + -- mods.d
+ *      |   |    \
+ *      \   \    + -- modules
+ *      |   |    |
+ *      \   \    + -- step
+ *      \   |
+ *      \   +-- textFeatures
+ *      |   |
+ *      |   +-- forRepository_GerHFA_S.zip
+ *      |   \
+ *      \   + -- GerHFA.zip
+ *      \
+ *      + -- converterLog.txt
+ *      |
+ *      + -- osis2modLog.txt
+ *
+ *
+ * Root folders always start Text_.  This is followed by the 3-character ISO
+ * language code in lower case, and then the abbreviated name of the text in
+ * whatever form it is supplied (vernacular if that uses Roman characters,
+ * otherwise English).  For historical reasons, some texts have an additional
+ * suffix -- eg gerHFA_th.  And the whole may be terminated with _public to
+ * indicate that this data is to be converted to a publicly available module.
+ * Without _public, the processing generates a STEP-only module.
+ *
+ * Module names are derived mainly from this root folder name.  They comprise
+ * the language code with first character upper-cased (except where the
+ * language is English or one of the ancient languages: in this case, the
+ * language code is dropped), followed by the remainder of the folder name but
+ * devoid of _public.
+ *
+ * The Input* folders contain whatever we have been given by way of input.
+ * InputOsis will be present if either we have been given OSIS as the input,
+ * or OSIS was generated previously (under which circumstances it is possible
+ * to start processing direct from this OSIS if that is preferred).
+ *
+ * The Metadata folder must have a step.conf file, which may or may not refer
+ * out to other files.  Where we have the opportunity to pick up metadata from
+ * files supplied to us (presently only with DBL texts) the metadata folder
+ * may contain other files (with DBL that would be metadata.xml and
+ * licence.xml).
+ *
+ * The _Output folder contains all of the data generated and used for output
+ * purposes.
+ *
+ * The InternalOsis folder contains the OSIS actually used in generating the
+ * module.  This OSIS may differ from that in InputOsis because we may need
+ * to tweak the OSIS in rather ad hoc ways, which are there simply to make
+ * things work in our particular environment, but which should not be
+ * incorporated into the OSIS stored in InputOsis (this latter data being
+ * potentially available to third parties who would not wish to have our
+ * tweaked data).
+ *
+ * The Sword folder contains things which go into the module.  The step
+ * folder within this exists only if we are samifying or encrypting texts, in
+ * which case it contains data which supports these two activities.
+ *
+ * textFeatures contains files which describe the input data and the processing
+ * applied to it.  Nothing actively uses this: I am recording it purely in case
+ * we need to identify texts with some particular characteristic at some point
+ * -- perhaps because we have identified a problem which applies specifically
+ * to such texts and need to rebuild them.
+ *
+ * forRepository_GerHFA_S.zip (or whatever) is a file whose contents are
+ * stored in one of the STEP repositories.  It merely packages up various of
+ * the other files described here.  The name will end _S if it contains data
+ * for a STEP-only module, _P if it contains data for a public-facing module,
+ * or _PS if it contains a public-facing module which can also be used as-is
+ * within STEP.
+ *
+ * GerHFA.zip is the module.
+ *
+ * And finally, converterLog.txt and osis2modLog.txt contain information
+ * describing the processing applied and highlighting any issues arising from
+ * a particular run.
+ *
  * @author ARA "Jamie" Jamieson
  */
 
@@ -50,21 +147,21 @@ object FileLocations
    *
    * - $root is the root folder for the text.
    *
-   * @param fileNameOrEntryNameWithinJar See above.
+   * @param fileFolderPath See above.
    * 
-   * @param theCallingFilePath The path of the file from which this new file is
+   * @param fileName The path of the file from which this new file is
    *   being loaded (null if being called to load the initial file).
    * 
    * @return Path.
    */
   
-  fun getInputPath (fileNameOrEntryNameWithinJar: String, theCallingFilePath: String?): String
+  fun getInputPath (filePath: String): String
   {
     /**************************************************************************/
     /* In resources section of jar FILE? */
     
-    if (fileNameOrEntryNameWithinJar.lowercase().startsWith("\$common/"))
-      return fileNameOrEntryNameWithinJar
+    if (filePath.lowercase().startsWith("\$common"))
+      return filePath
 
 
 
@@ -72,29 +169,23 @@ object FileLocations
     /* $root: Root folder for text.  CAUTION: Not backward compatible.  In a
        previous version, this pointed to the Metadata folder.*/
 
-    if (fileNameOrEntryNameWithinJar.lowercase().startsWith("\$root/"))
-      return Paths.get(fileNameOrEntryNameWithinJar.replace("\$root", getRootFolderPath())).normalize().toString()
+    if (filePath.lowercase().startsWith("\$root/"))
+      return Paths.get(filePath.replace("\$root", getRootFolderPath(), ignoreCase = true)).normalize().toString()
 
 
 
     /**************************************************************************/
     /* $metadata -- ie co-located with step.conf */
 
-    if (fileNameOrEntryNameWithinJar.lowercase().startsWith("\$metadata/"))
-      return Paths.get(fileNameOrEntryNameWithinJar.replace("\$metadata", getMetadataFolderPath())).normalize().toString()
+    if (filePath.lowercase().startsWith("\$metadata/"))
+      return Paths.get(filePath.replace("\$metadata", getMetadataFolderPath(), ignoreCase = true)).normalize().toString()
 
 
 
     /**************************************************************************/
     /* General path, which is assumed to be relative to the calling path. */
 
-    return if (Paths.get(fileNameOrEntryNameWithinJar).isAbsolute)
-      Paths.get(fileNameOrEntryNameWithinJar).normalize().toString()
-    else
-    {
-      val callingFilePath = if (null == theCallingFilePath || "step.conf" == theCallingFilePath) getMetadataFolderPath() else (File(getInputPath(theCallingFilePath, null))).parent
-      Paths.get(callingFilePath, fileNameOrEntryNameWithinJar).normalize().toString()
-    }
+    return Paths.get(filePath).normalize().toString()
   }
     
   
@@ -106,31 +197,26 @@ object FileLocations
    * with file locations, and this processing is location-dependent, it seems
    * reasonable to have it here.)
    * 
-   * @param theFileNameOrEntryNameWithinJar If this starts with $common/, it
+   * @param filePath If this starts with $common/, it
    *   is assumed to give the name of a file within the resources section of
    *   the current JAR.  Otherwise it is taken to be a full path name.
    * 
-   * @param callingFilePath Used where the path required is given relative to
+   * @param fileName Used where the path required is given relative to
    *   another file.
    * 
    * @return Stream.
    */
   
-  fun getInputStream (theFileNameOrEntryNameWithinJar: String, callingFilePath: String?): InputStream?
+  fun getInputStream (filePath: String): InputStream?
   {
-    /**************************************************************************/
-    val fileNameOrEntryNameWithinJar = getInputPath(theFileNameOrEntryNameWithinJar, callingFilePath)
-    
-    
-    
     /**************************************************************************/
     /* In resources section of JAR file? */
     
-    if (fileNameOrEntryNameWithinJar.lowercase().startsWith("\$common/"))
+    if (filePath.lowercase().startsWith("\$common/"))
     {
-      val ix = fileNameOrEntryNameWithinJar.indexOf("/")
-      val fileName = fileNameOrEntryNameWithinJar.substring(ix + 1)
-      return {}::class.java.getResourceAsStream("/$fileName")
+      val ix = filePath.indexOf("/")
+      val newFileName = filePath.substring(ix + 1)
+      return {}::class.java.getResourceAsStream("/$newFileName")
     }
     
     
@@ -138,13 +224,21 @@ object FileLocations
     /**************************************************************************/
     /* In ordinary file. */
     
-    val file = File(fileNameOrEntryNameWithinJar)
-    val folderPath = file.parent
-    val fileName = file.name
-    val path = StepFileUtils.getSingleMatchingFileFromFolder(folderPath, ("\\Q$fileName\\E").toRegex()) ?: return null
+    val file = File(filePath)
+     val fileName = file.name
+     var folderPath = file.parent
+
+    if (folderPath.lowercase().startsWith("\$root"))
+      folderPath = folderPath.replace("\$root", getRootFolderPath(), ignoreCase = true)
+    else if (folderPath.lowercase().startsWith("\$metadata"))
+      folderPath = folderPath.replace("\$metadata", getMetadataFolderPath(), ignoreCase = true)
+
+    folderPath = Paths.get(folderPath).normalize().toString()
+
+   val path = StepFileUtils.getSingleMatchingFileFromFolder(folderPath, ("\\Q$fileName\\E").toRegex()) ?: return null
     return FileInputStream(path.toString())
   }
-    
+
   
   /****************************************************************************/
   /* All the obvious things ... */
@@ -264,65 +358,6 @@ object FileLocations
 
 
   /****************************************************************************/
-  /* Text and run features, and also the file used to communicate
-     versification information when using our bespoke osis2mod (the latter
-     being absent if we are _not_ using the bespoke osis2mod).
-
-     These can be created only when building a module starting at VL or USX.
-     If the _only_ input is OSIS, then we can't build them at all presently,
-     because I don't have any processing capable of generating these files from
-     OSIS.
-
-     If we have VL or USX, though, it's still possible at a later date that we
-     might want to modify the OSIS and regenerate the module from that.  I'd
-     much rather we didn't, but unfortunately it's a requirement.  Here I'm
-     trusting it's relatively safe to generate the text and run features files
-     and the bespoke osis2mod data when we do a run from VL or USX, and simply
-     retain it for use if we do a later run from OSIS.  This isn't entirely
-     true -- I can't legislate for what changes might be applied to OSIS.  In
-     fact it wouldn't matter hugely if the text and run features files ended
-     up being slightly wrong, because nothing relies upon them -- they're for
-     interest only.  But it would be a problem if the changes invalidated the
-     bespoke osis2mod data, because then there would be problems when the text
-     was displayed in STEPBible.  So we'd better hope that doesn't happen.
-
-     Anyway, in support of this, all of this various data is written to an
-     'internal' folder, where it remains until overwritten.  From there, it's
-     copied into the relevant places when we generate the module (and
-     repository package).
-
-     Methods below with 'Master' in their name refer to this internal copy.
-     Other methods refer to the locations which the things assume when written
-     to the module or the repository package
-
-     So, the master structure looks like this:
-
-       Text_deuHFA
-         _InternalE_FilesForRepositoryEtc
-           textFeatures
-             ToBeRenamed (changed to reflect module name when module or repo package is generated)
-               runFeatures.json
-               textFeatures.json
-           versification
-             osis2modSupportToBeRenamed.json (on selected runs)
-
-      And when the repository or module is created, you get:
-
-        <moduleRoot>
-          Usual gubbins ...
-          step
-            jsword-mods.d
-              encryptionFileNameBasedOnModuleName.conf
-              osis2modSupportFileNameBasedOnModuleName.conf -- Copied from master folder.
-
-      and the repository package contains
-
-        _README_.txt
-        textFeatures
-          Copy of ToBeRenamed, with name changed to reflect module name.
-
-     */
-
   private fun getTextFeaturesRootFolderPath () = Paths.get(getInternalSwordFolderPath(), "textFeatures").toString()
   fun getTextFeaturesFolderPath () = makeTextFeaturesFolderPath()
   fun getRunFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), "runFeatures.json").toString()

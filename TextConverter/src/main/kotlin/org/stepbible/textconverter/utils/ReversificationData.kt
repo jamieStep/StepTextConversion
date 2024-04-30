@@ -518,28 +518,177 @@ object ReversificationData
 
   /****************************************************************************/
   /**
-  * Returns information needed in STEPBible when we are relying upon it to
-  * handle reversification-related text restructuring, rather than doing it
-  * ourselves in the converter.
+  * Returns information needed by our own version of osis2mod and JSword to
+  * handle the situation where we have a Bible which is not NRSV(A)-compliant,
+  * and which we are not restructuring during the conversion process.  By *not*
+  * restructuring, we are able to ensure that when displayed stand-alone, the
+  * text is in it's 'natural' form; but we then need this additional information
+  * so that the necessary modifications can be made on-the-fly to align it with
+  * NRSV(A) when using added-value features such as interlinear display.
   *
-  * The return value is a list of RefKey -> RefKey pairs, covering all
-  * reversification rows where a source verse is renumbered or moved, given
-  * the source and target RefKey.
+  * The return value is a list of RefKey -> RefKey pairs:-
+  *
+  * - It covers all Move and Renumber rows.
+  *
+  * - It also covers all MergedVerse and EmptyVerse rows where the target verse
+  *   does not exist in the input.
+  *
+  * There is a further wrinkle, in that with MergedVerse and EmptyVerse rows,
+  * the source has to be shown as a subverse of the source verse as it appears
+  * in the reversification data.  This will start from 'b' if there is also a
+  * Move or Renumber for the same source verse, and from 'a' otherwise.
   *
   * @return List of mappings, ordered by source RefKey.
   */
 
   fun getReversificationMappings (): List<Pair<RefKey, RefKey>>
   {
-    val res: MutableList<Pair<RefKey, RefKey>> = mutableListOf()
-    val renumbers = getReferenceMappings()
-    val psalmTitles = getAllAcceptedRows().filter { 0 != it.processingFlags.and(C_StandardIsPsalmTitle) }
+    /**************************************************************************/
+    /* What we need to do depends in part upon the actions applied by each row,
+       in part by whether we have more than one action applied to a given
+       source reference, and in part by whether standard verses already exist.
 
-    renumbers.forEach { res.add(Pair(it.key, it.value)) }
-    //renumbers.forEach { res.add(Pair(it.value, it.key)) }
-    psalmTitles.forEach { res.add(Pair(it.sourceRefAsRefKey, Ref.setV(it.standardRefAsRefKey, 0))) }
+       We begin by building up a map relating the source refkey to the list of
+       reversification rows which have that refkey as source.  This will make
+       it possible to identify those source verses which are subject to more
+       than one action. */
+
+    val acceptedRowsKeyedOnSourceRefKey: MutableMap<RefKey, MutableList<ReversificationDataRow>> = mutableMapOf()
+    getAllAcceptedRows()
+      .forEach {
+      val sourceRefKey = it.sourceRefAsRefKey
+      var existingList = acceptedRowsKeyedOnSourceRefKey[sourceRefKey]
+      if (null == existingList)
+        acceptedRowsKeyedOnSourceRefKey[sourceRefKey] = mutableListOf(it)
+      else
+        existingList.add(it)
+    }
+
+
+
+    /**************************************************************************/
+    /* Exclude from that collection any singleton IfEmpty rows whose target
+       already exists.  Ditto IfAbsent and EmptyVerse.  And also singleton
+       KeepVerse. */
+
+    val delenda: MutableList<RefKey> = mutableListOf()
+
+    acceptedRowsKeyedOnSourceRefKey.forEach { (refKey, reversificationDataRows) ->
+      if (1 == reversificationDataRows.size)
+        reversificationDataRows.forEach {
+          when (it.action)
+          {
+            "KeepVerse" -> delenda.add(refKey)
+
+            "IfEmpty", "IfAbsent", "EmptyVerse" ->
+            {
+              if (InternalOsisDataCollection.getBibleStructure().thingExists(it.standardRef))
+                delenda.add(refKey)
+            }
+         }
+      }
+    }
+
+    delenda.forEach { acceptedRowsKeyedOnSourceRefKey.remove(it) }
+
+
+
+   /**************************************************************************/
+   /* Basically all that remains is to create the mapping for each of the
+      items which remain in our collection.  The only slight wrinkle is that
+      PsalmTitle rows need to be forced to point to the 'pretend' verse 0. */
+      
+   val res: MutableList<Pair<RefKey, RefKey>> = mutableListOf()
+    acceptedRowsKeyedOnSourceRefKey.values.forEach { reversificationDataRows ->
+      reversificationDataRows.forEach {
+        if ("PsalmTitle" == it.action)
+          res.add(Pair(it.sourceRefAsRefKey, Ref.setV(it.standardRefAsRefKey, 0)))
+        else
+          res.add(Pair(it.sourceRefAsRefKey, it.standardRefAsRefKey))
+      }
+    }
+
+
+
+    /**************************************************************************/
     res.sortBy { it.first }
+    //res.forEach { Dbg.d("" + it.first + "=" + it.second)}
+    return res
+  }
 
+
+  /****************************************************************************/
+  /**
+  * Returns information needed by our own version of osis2mod and JSword to
+  * handle the situation where we have a Bible which is not NRSV(A)-compliant,
+  * and which we are not restructuring during the conversion process.  By *not*
+  * restructuring, we are able to ensure that when displayed stand-alone, the
+  * text is in it's 'natural' form; but we then need this additional information
+  * so that the necessary modifications can be made on-the-fly to align it with
+  * NRSV(A) when using added-value features such as interlinear display.
+  *
+  * The return value is a list of RefKey -> RefKey pairs:-
+  *
+  * - It covers all Move and Renumber rows.
+  *
+  * - It also covers all MergedVerse and EmptyVerse rows where the target verse
+  *   does not exist in the input.
+  *
+  * There is a further wrinkle, in that with MergedVerse and EmptyVerse rows,
+  * the source has to be shown as a subverse of the source verse as it appears
+  * in the reversification data.  This will start from 'b' if there is also a
+  * Move or Renumber for the same source verse, and from 'a' otherwise.
+  *
+  * @return List of mappings, ordered by source RefKey.
+  */
+
+  fun getReversificationMappingOld (): List<Pair<RefKey, RefKey>>
+  {
+    /**************************************************************************/
+    val res: MutableList<Pair<RefKey, RefKey>> = mutableListOf()
+
+
+
+    /**************************************************************************/
+    /* The easy bit first -- renumbers and psalm titles. */
+
+    val renumbers = getReferenceMappings() // This covers anything where the reference changes -- Move or Renumber.
+    val psalmTitles = getAllAcceptedRows().filter { 0 != it.processingFlags.and(C_StandardIsPsalmTitle) }
+    renumbers.forEach { res.add(Pair(it.key, it.value)) }
+    psalmTitles.forEach { res.add(Pair(it.sourceRefAsRefKey, Ref.setV(it.standardRefAsRefKey, 0))) }
+
+
+
+    /**************************************************************************/
+    /* The difficult bit.  First, collect all rows which could in theory
+       require the target verse to be created, and then filter so as to get
+       just those rows where the verse does indeed have to be created.
+
+       There may be more than one element for a given sourceRef; where this is
+       the case, I assume that they follow the order in the reversification
+       data, and that the reversification data is ordered such that the
+       changes I make here will be correct. */
+
+    val rowsForVersesAbsentInOriginalText = getAllAcceptedRows()
+      .filter { 0 != it.processingFlags.and(C_CreateIfNecessary) }
+      //.filter { !InternalOsisDataCollection.getBibleStructure().thingExists(it.standardRef) }
+
+
+
+    /**************************************************************************/
+    val groupedRowsForVersesAbsentInOriginalText = rowsForVersesAbsentInOriginalText.groupBy { it.sourceRefAsRefKey }
+    groupedRowsForVersesAbsentInOriginalText.forEach {
+      var subverse = if (null != renumbers[it.key]) 2 else 1
+      val thisGroup = it.value
+      thisGroup.forEach {
+        res.add(Pair(Ref.setS(it.sourceRefAsRefKey, subverse++), it.standardRefAsRefKey))
+      }
+    }
+
+
+
+    /**************************************************************************/
+    res.sortBy { it.first }
     //res.forEach { Dbg.d("" + it.first + "=" + it.second)}
     return res
   }
@@ -660,8 +809,8 @@ object ReversificationData
   private fun loadRow (rawData: String, rowNumber: Int, rawDataSize: Int)
   {
     /**************************************************************************/
-    Dbg.d(rowNumber)
-    Dbg.d(rawData)
+    //Dbg.d(rowNumber)
+    //Dbg.d(rawData)
     //Dbg.dCont(rawData, "Gen.32:33")
 
 

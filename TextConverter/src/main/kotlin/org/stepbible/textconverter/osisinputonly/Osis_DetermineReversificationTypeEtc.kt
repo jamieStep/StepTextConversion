@@ -104,14 +104,11 @@ object Osis_DetermineReversificationTypeEtc
        both to generate a STEP-only version.
     */
 
-    if ("_public" in FileLocations.getRootFolderName().lowercase())
+    var targetAudience = ConfigData["stepTargetAudience"]!!
+    if ("P" in targetAudience)
     {
-      var targetAudience = "P" // Public.
-
-
-
       // Validation.
-      val versificationScheme = ConfigData["stepVersificationScheme"] ?: throw StepException("For public modules, you must overtly define stepVersificationScheme")
+      var versificationScheme = ConfigData["stepVersificationScheme"] ?: throw StepException("For public modules, you must overtly define stepVersificationScheme")
       if (ConfigData.getAsBoolean("stepEncryptionRequired", "no")) throw StepException("You have requested encryption, but encryption cannot be applied to public modules.")
       val reversificationType = ConfigData.get("stepReversificationType", "none").lowercase()
       if ("runtime" == reversificationType) throw StepException("You have requested runtime reversification, but runtime reversification cannot be applied to a public text.")
@@ -119,7 +116,8 @@ object Osis_DetermineReversificationTypeEtc
 
 
       // Force the correct data.
-      ConfigData.delete("stepVersificationScheme"); ConfigData.put("stepVersificationScheme", VersificationSchemesSupportedByOsis2mod.canonicaliseSchemeName(versificationScheme), force = true)
+      versificationScheme = VersificationSchemesSupportedByOsis2mod.canonicaliseSchemeName(versificationScheme)
+      ConfigData.delete("stepVersificationScheme"); ConfigData.put("stepVersificationScheme", versificationScheme, force = true)
       ConfigData.delete("stepReversificationType"); ConfigData.put("stepReversificationType", reversificationType, force = true)
       ConfigData.delete("stepOsis2modType"); ConfigData.put("stepOsis2modType", "crosswire", force = true)
       ConfigData.put("stepSoftwareVersionRequired", "1", force = false)
@@ -128,19 +126,20 @@ object Osis_DetermineReversificationTypeEtc
       val reversificationFootnoteDescription = if ("none" == reversificationType) " with $reversificationFootnoteLevel footnotes" else ""
 
 
-      // Check the goodness of fit of the selected scheme.
-      val schemeEvaluation = PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.evaluateSingleScheme(versificationScheme, bibleStructureUnderConstruction)
-      val schemeEvaluationSummary = schemeEvaluation.toStringShort()
-      if (null == schemeEvaluationSummary) // It fits exactly.
-      {
-        if (versificationScheme.startsWith("NRSV"))
+      // If NRSV(A) has been specified, assume we're good for STEP as well as open access.
+      if (versificationScheme.startsWith("NRSV")) // It fits exactly.
           targetAudience += "S" // This module can also be used for STEP.
-      }
       else
       {
-        Logger.warning(schemeEvaluationSummary)
-        IssueAndInformationRecorder.setDivergencesFromSelectedVersificationScheme(schemeEvaluationSummary)
-        ConfigData.addDetailsOfDerivedWork(ConfigData["stepStandardWordingForDerivedWorkWeHaveChangedVersification"]!!)
+        val schemeEvaluation = PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.evaluateSingleScheme(versificationScheme, bibleStructureUnderConstruction)
+        val schemeEvaluationSummary = schemeEvaluation.toStringShort()
+
+        if (null != schemeEvaluationSummary)
+        {
+          Logger.warning(schemeEvaluationSummary)
+          IssueAndInformationRecorder.setDivergencesFromSelectedVersificationScheme(schemeEvaluationSummary)
+          ConfigData.addDetailsOfDerivedWork(ConfigData["stepStandardWordingForDerivedWorkWeHaveChangedVersification"]!!)
+        }
       }
 
 
@@ -191,8 +190,7 @@ object Osis_DetermineReversificationTypeEtc
      */
 
     /**************************************************************************/
-    val targetAudience = "S"
-    ConfigData["stepTargetAudience"] = targetAudience
+    ConfigData["stepTargetAudience"] = "S"
 
 
 
@@ -206,6 +204,7 @@ object Osis_DetermineReversificationTypeEtc
     {
       ConfigData.delete("stepVersificationScheme"); ConfigData.put("stepVersificationScheme", versificationScheme, force = true)
       Logger.info("Using versification scheme $versificationScheme.")
+      ConfigData.delete("stepOsis2modType"); ConfigData.put("stepOsis2modType", "crosswire", force = true)
     }
     else
     {

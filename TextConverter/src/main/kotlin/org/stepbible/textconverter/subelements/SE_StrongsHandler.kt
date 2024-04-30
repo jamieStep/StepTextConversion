@@ -90,12 +90,12 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
     val strongsElts = rawElts
       .map {
-        var strong = it.trim() // I believe uppercase is ok, and possibly that it is required.
+        var strong = it.trim()
         val orig = strong
 
-        if (strong.substring(0, 1) in "GH")
+        if (strong.substring(0, 1).uppercase() in "GH")
         {
-          prefix = strong.substring(0, 1)
+          prefix = strong.substring(0, 1).uppercase() // I believe uppercase is ok, and possibly that it is required.
           strong = strong.substring(1)
         }
 
@@ -139,7 +139,7 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
     /**************************************************************************/
     private fun readCorrectionsData ()
     {
-      FileLocations.getInputStream(FileLocations.getStrongsCorrectionsFilePath(), null)!!.bufferedReader().use { it.readText() } .lines()
+      FileLocations.getInputStream(FileLocations.getStrongsCorrectionsFilePath())!!.bufferedReader().use { it.readText() } .lines()
         .forEach {
           val line = it.trim()
           if (line.isNotEmpty() && '#' != line[0])

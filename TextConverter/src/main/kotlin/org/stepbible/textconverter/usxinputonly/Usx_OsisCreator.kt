@@ -354,32 +354,32 @@ object Usx_OsisCreator
       }
 
 
-      "strong" ->
-       {
-        val strongsElts = Dom.getAttribute(node, "strong")!!.trim().split(",")
-        val revisedStrongsElts: MutableList<String> = mutableListOf()
-        var prevSelector = ""
-        fun tidy (ix: Int)
-        {
-          var elt = strongsElts[ix].trim { it <= ' ' }
-          if (!elt.startsWith("H") && !elt.startsWith("G")) elt = prevSelector + elt
-          val m = C_Pattern_Strongs.matcher(elt)
-          m.find()
-          revisedStrongsElts.add("strong:" + m.group("gOrH") + String.format("%04d", m.group("digits").toInt()) + m.group("letters"))
-          if (m.group("gOrH").isNotEmpty()) prevSelector = m.group("gOrH")
-        }
-
-        strongsElts.indices.forEach { tidy(it) }
-        val strongs = java.lang.String.join(" ", revisedStrongsElts)
-        //val lemma: String? = if (Dom.hasAttribute(node, "lemma")) Dom.getAttribute(node, "lemma")!!.trim() else null
-        val morph: String? = if (Dom.hasAttribute(node, "morph")) Dom.getAttribute(node, "morph")!!.trim() else null // Wishful thinking: in fact I can't see anything anywhere at all in the USX 3 spec to suggest it supports morphology.
-        val srcloc: String? = if ("srcloc" in node) node["srcloc"]!!.trim() else null // Wishful thinking: in fact I can't see anything anywhere at all in the USX 3 spec to suggest it supports this.
-        Dom.deleteAllAttributes(node)
-        node["lemma"] = strongs // _Not_ 'gloss' as per OSIS documentation.
-        //if (null != lemma)  Dom.setAttribute(node, "lemma",  lemma); Can't use lemma, because that holds the Strong's number.
-        if (null != morph) node["morph"] = morph
-        if (null != srcloc) node["src"] = srcloc
-      }
+//      "char:w" ->
+//       {
+//        val strongsElts = Dom.getAttribute(node, "strong")!!.trim().split(",")
+//        val revisedStrongsElts: MutableList<String> = mutableListOf()
+//        var prevSelector = ""
+//        fun tidy (ix: Int)
+//        {
+//          var elt = strongsElts[ix].trim { it <= ' ' }
+//          if (!elt.startsWith("H") && !elt.startsWith("G")) elt = prevSelector + elt
+//          val m = C_Pattern_Strongs.matcher(elt)
+//          m.find()
+//          revisedStrongsElts.add("strong:" + m.group("gOrH") + String.format("%04d", m.group("digits").toInt()) + m.group("letters"))
+//          if (m.group("gOrH").isNotEmpty()) prevSelector = m.group("gOrH")
+//        }
+//
+//        strongsElts.indices.forEach { tidy(it) }
+//        val strongs = java.lang.String.join(" ", revisedStrongsElts)
+//        //val lemma: String? = if (Dom.hasAttribute(node, "lemma")) Dom.getAttribute(node, "lemma")!!.trim() else null
+//        val morph: String? = if (Dom.hasAttribute(node, "morph")) Dom.getAttribute(node, "morph")!!.trim() else null // Wishful thinking: in fact I can't see anything anywhere at all in the USX 3 spec to suggest it supports morphology.
+//        val srcloc: String? = if ("srcloc" in node) node["srcloc"]!!.trim() else null // Wishful thinking: in fact I can't see anything anywhere at all in the USX 3 spec to suggest it supports this.
+//        Dom.deleteAllAttributes(node)
+//        node["lemma"] = strongs // _Not_ 'gloss' as per OSIS documentation.
+//        //if (null != lemma)  Dom.setAttribute(node, "lemma",  lemma); Can't use lemma, because that holds the Strong's number.
+//        if (null != morph) node["morph"] = morph
+//        if (null != srcloc) node["src"] = srcloc
+//      }
 
       "verse", "verse:sid" ->
       {

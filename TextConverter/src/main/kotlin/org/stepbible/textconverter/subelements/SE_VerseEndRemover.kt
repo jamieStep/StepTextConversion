@@ -45,7 +45,7 @@ class SE_VerseEndRemover (dataCollection: X_DataCollection) : SE(dataCollection)
   /****************************************************************************/
   override fun processRootNodeInternal (rootNode: Node)
   {
-    Dbg.reportProgress("Deleting any existing verse ends for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
+    Dbg.reportProgress("Preparing verse tags for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     deleteVerseEnds(rootNode)
     convertEnclosingVersesToSids(rootNode)
     markVersesWithSids(rootNode)

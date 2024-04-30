@@ -55,7 +55,7 @@ object VersificationSchemesSupportedByOsis2mod
   init
   {
     val C_UnwantedSchemes = ".calvin.darbyfr."
-    FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath(), null)!!.bufferedReader().use { it.readText() } .lines()
+    FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath())!!.bufferedReader().use { it.readText() } .lines()
       .map { it.trim() }
       .filter { it.isNotEmpty() && !it.startsWith('#') } // Remove comments and blanks
       .map { it.substring(0, it.indexOf('/')) }          // Get the scheme name

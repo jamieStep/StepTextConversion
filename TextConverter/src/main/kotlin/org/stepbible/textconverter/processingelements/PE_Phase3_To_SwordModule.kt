@@ -192,7 +192,7 @@ object PE_Phase3_To_SwordModule : PE
     var warnings = 0
     Logger.setPrefix("osis2mod")
 
-    FileLocations.getInputStream(file.toString(), null)!!.bufferedReader().readLines().forEach {
+    FileLocations.getInputStream(file.toString())!!.bufferedReader().readLines().forEach {
       if (it.startsWith("WARNING(PARSE): SWORD does not search numeric entities"))
         return@forEach  // osis2mod doesn't like things like &#9999;, but apparently we need them and they do work.  @forEach continues with the next item.
       else if (it.startsWith("SUCCESS"))
@@ -390,7 +390,7 @@ object PackageContentHandler
     /**************************************************************************/
     val configFile = File(filePath)
     VersionAndHistoryHandler.process()
-    val lines = FileLocations.getInputStream(FileLocations.getSwordTemplateConfigFilePath(), null)!!.bufferedReader().readLines()
+    val lines = FileLocations.getInputStream(FileLocations.getSwordTemplateConfigFilePath())!!.bufferedReader().readLines()
     val writer = configFile.bufferedWriter()
 
 

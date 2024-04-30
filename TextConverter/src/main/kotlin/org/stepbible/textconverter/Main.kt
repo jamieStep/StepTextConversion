@@ -5,6 +5,7 @@ import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.stepexception.StepBreakOutOfProcessing
 import org.stepbible.textconverter.support.stepexception.StepException
+import org.stepbible.textconverter.utils.ThrowAwayCode
 
 
 
@@ -17,15 +18,20 @@ import org.stepbible.textconverter.support.stepexception.StepException
 
 fun main (args: Array<String>)
 {
-  //Dbg.setBooksToBeProcessed("Isa")
+  /****************************************************************************/
+  //Dbg.setBooksToBeProcessed("3Jn")
   //ThrowAwayCode.validateXmlFileStructure()
   //ThrowAwayCode.tryXslt()
-  //ThrowAwayCode.convertNivToVL()
+  //ThrowAwayCode.lookForNestedParas()
 
 
+
+  /****************************************************************************/
   try
   {
-    mainCommon(args)
+    ProcessingController.process(args)
+    Logger.summariseResults()
+
     val majorWarnings = ProcessingController.getMajorWarningsAsBigCharacters()
     if (majorWarnings.isNotEmpty())
     {
@@ -37,16 +43,28 @@ fun main (args: Array<String>)
     Dbg.endOfRun()
     println("Finished\n")
   }
+
+
+
+  /****************************************************************************/
   catch (_: StepBreakOutOfProcessing)
   {
     Dbg.endOfRun()
   }
+
+
+
+  /****************************************************************************/
   catch (e: StepException)
   {
     Dbg.endOfRun()
     if (null != e.message) println(e.message)
     if (!e.getSuppressStackTrace()) e.printStackTrace()
   }
+
+
+
+  /****************************************************************************/
   catch (e: Exception)
   {
     Dbg.endOfRun()
@@ -54,13 +72,4 @@ fun main (args: Array<String>)
     e.printStackTrace()
   }
 }
-
-
-/******************************************************************************/
-private fun mainCommon (args: Array<String>)
-{
-  ProcessingController.process(args)
-  Logger.summariseResults()
-}
-
 

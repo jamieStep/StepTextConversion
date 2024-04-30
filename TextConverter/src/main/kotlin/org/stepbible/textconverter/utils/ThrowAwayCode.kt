@@ -11,6 +11,36 @@ object ThrowAwayCode
 
 
 /******************************************************************************/
+fun lookForNestedParas ()
+{
+  var files = StepFileUtils.getMatchingFilesFromFolder("C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/Texts/Miscellaneous/Text_eng_NETfull2_public/InputUsx", ".+\\.usx".toRegex())
+  files.forEach {filePath ->
+    val fileName = File(filePath.toString()).name
+    val doc = Dom.getDocument(filePath.toString())
+    val paras = Dom.findNodesByName(doc, "para")
+
+    var madeChange = false
+
+    paras.forEach {
+      if (null != Dom.findNodeByName(it, "para", false))
+      {
+        it["XXX"] = "XXX"
+        madeChange = true
+      }
+    }
+
+    if (madeChange)
+    {
+       println(fileName)
+       Dom.outputDomAsXml(doc, filePath.toString() + "xxx", null)
+    }
+  }
+
+  exitProcess(0)
+}
+
+
+/******************************************************************************/
 fun convertNivToVL ()
 {
   var line = ""

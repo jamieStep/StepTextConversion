@@ -562,7 +562,7 @@ object Osis_FileProtocol: X_FileProtocol()
   * @return True if this is a Strong's node.
   */
 
-  override fun isStrongsNode (node: Node): Boolean = "w" == Dom.getNodeName(node) && "lemma" in node
+  override fun isStrongsNode (node: Node): Boolean = "w" == Dom.getNodeName(node) && attrName_strong() in node
 
 
   /****************************************************************************/
@@ -695,10 +695,7 @@ object Osis_FileProtocol: X_FileProtocol()
   * @return Tag.
   */
 
-  override fun makeVerseSidNode (doc: Document, refAsString: String): Node
-  {
-    return Dom.createNode(doc, "<verse osisID='$refAsString' sID='$refAsString'/>")
-  }
+  override fun makeVerseSidNode (doc: Document, refAsString: String) = Dom.createNode(doc, "<verse osisID='$refAsString' sID='$refAsString'/>")
 
 
   /****************************************************************************/

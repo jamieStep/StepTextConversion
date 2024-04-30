@@ -115,7 +115,7 @@ object ProcessingController
   private fun determineProcessingSteps ()
   {
     /**************************************************************************/
-    val haveImp   = FileLocations.getInputVlFilesExist()
+    val haveImp  = FileLocations.getInputVlFilesExist()
     val haveOsis = FileLocations.getInputOsisFileExists()
     val haveUsx  = FileLocations.getInputUsxFilesExist()
     val haveVl   = FileLocations.getInputVlFilesExist()
@@ -240,6 +240,11 @@ object ProcessingController
   private fun initialise (args: Array<String>)
   {
     /**************************************************************************/
+    ConfigData["stepBuildTimestamp"] = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
+
+
+
+    /**************************************************************************/
     initialiseCommandLineArgsAndConfigData(args)
 
 
@@ -267,11 +272,6 @@ object ProcessingController
       "minorrelease" -> { ConfigData["stepReleaseType"] = "minor"; ConfigData.delete("stepRunType"); ConfigData["stepRunType"] = "release" }
       else           -> { val x = ConfigData["stepRunType"]!!.lowercase(); ConfigData.delete("stepRunType"); ConfigData["stepRunType"] = x }
     }
-
-
-
-    /**************************************************************************/
-    ConfigData["stepBuildTimestamp"] = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
   }
 
 
@@ -324,9 +324,10 @@ object ProcessingController
       }
 
     FileLocations.initialise(rootFolderPath)
+    ConfigData.extractDataFromRootFolderName()
     ConfigData.load(FileLocations.getStepConfigFileName())
     CommandLineProcessor.copyCommandLineOptionsToConfigData("TextConverter")
-    ConfigData.extractDataFromModuleName()
+    ConfigData.generateModuleName()
 
 
 
