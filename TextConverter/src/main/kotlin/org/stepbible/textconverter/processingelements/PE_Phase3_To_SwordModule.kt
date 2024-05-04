@@ -433,8 +433,8 @@ object PackageContentHandler
   private fun swordConfigFileHandler_addCalculatedValuesToMetadata()
   {
     /**************************************************************************/
-    var stepInfo = """
-¬¬Sword module @(stepModuleName) created @(stepModuleCreationDate) (@(stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation)).
+    var stepInfo = """¬<hr/>
+Sword module @(stepModuleName) created by the STEPBible project @(stepModuleCreationDate) (@(stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation)).
 ¬@(stepThanks)
 @(AddedValue)
 """

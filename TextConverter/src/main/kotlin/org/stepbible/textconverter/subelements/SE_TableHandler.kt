@@ -3,6 +3,8 @@ package org.stepbible.textconverter.subelements
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
+import org.stepbible.textconverter.support.ref.RefCollection
+import org.stepbible.textconverter.support.ref.RefRange
 import org.stepbible.textconverter.support.shared.Language
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.*
@@ -10,7 +12,8 @@ import org.w3c.dom.Node
 
 /****************************************************************************/
 /**
- * THIS MUST BE RUN *PRIOR* TO ELISION EXPANSION.
+ * THIS MUST BE RUN *PRIOR* TO ELISION EXPANSION AND EID PLACEMENT, BUT
+ * AFTER DELETION OF ANY EXISTING EIDS.
  *
  * Table processing.  Tables are problematical because they almost always
  * run across verse boundaries, something which osis2mod isn't too keen on
@@ -23,9 +26,9 @@ import org.w3c.dom.Node
  * 2. Tables could be converted to flat form (plain text).  This would respect
  *    verse boundaries, but you'd lose the table layout.
  *
- * 3. The table layout could be retained effectively by taking the last verse
+ * 3. The table layout could be retained effectively by taking the first verse
  *    associated with the table and moving the entire table within that
- *    verse, dropping the earlier ones and treating the last one as one
+ *    verse, dropping the earlier ones and treating the first one as one
  *    massive elision.
  *
  *
@@ -91,12 +94,18 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
   override fun processRootNodeInternal (rootNode: Node)
   {
     Dbg.reportProgress("Handling tables for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
-    Dom.findNodesByName(rootNode, m_FileProtocol.tagName_table(), false).forEach {
+    //Dbg.outputDom(rootNode.ownerDocument)
+
+    m_RootNode = rootNode
+    val tableNodes = Dom.findNodesByName(rootNode, m_FileProtocol.tagName_table(), false)
+    tableNodes.forEach {
       if (Dom.findNodesByName(it, "verse", false).any())
         restructureTablesConvertToElidedForm(it)
       else
         reformatTableWhichDidNotRequireElision(it)
     }
+
+    //Dbg.outputDom(rootNode.ownerDocument)
   }
 
 
@@ -191,23 +200,13 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
 
     /**************************************************************************/
-    /* Change the sid of the owning verse to reflect the elision, and add an
-       explanatory footnote. */
-
-    val startOfElisionRef = m_FileProtocol.readRef(owningVerseSid, m_FileProtocol.attrName_verseSid())
-    owningVerseSid[m_FileProtocol.attrName_verseSid()] = startOfElisionRef.toString()
-    NodeMarker.setElisionType(owningVerseSid, "tableElision")
-    val owningVerseFootnote = m_FileProtocol.makeFootnoteNode(m_RootNode.ownerDocument, startOfElisionRef.toRefKey(), Translations.stringFormat("V_tableElision_owningVerse"))
-    Dom.insertNodeAfter(owningVerseSid, owningVerseFootnote)
-
-
-
-    /**************************************************************************/
     /* Replace all sids by visible verse-boundary markers. */
 
+    var lastSidWithinTable: String? = null
     fun replaceVerseWithBoundaryMarker (sid: Node)
     {
       val sidText = sid[m_FileProtocol.attrName_verseSid()]!!
+      lastSidWithinTable = sidText
       val markerText = Translations.stringFormat(Language.Vernacular, "V_tableElision_verseBoundary", m_FileProtocol.readRef(sidText))
       val markerNode = Dom.createNode(m_RootNode.ownerDocument, "<_X_verseBoundaryWithinElidedTable/>")
       markerNode.appendChild(Dom.createTextNode(m_RootNode.ownerDocument, markerText))
@@ -216,6 +215,29 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
     }
 
     table.findNodesByName(m_FileProtocol.tagName_verse()).forEach { replaceVerseWithBoundaryMarker(it) }
+
+
+    /**************************************************************************/
+    /* Turn the original verse into an elision covering the entire table.
+       Change the sid of the owning verse to reflect the elision, and add an
+       explanatory footnote. */
+
+    val startOfElisionRef = m_FileProtocol.readRef(owningVerseSid, m_FileProtocol.attrName_verseSid())
+    m_FileProtocol.updateVerseSid(owningVerseSid, startOfElisionRef.toRefKey())
+    NodeMarker.setElisionType(owningVerseSid, "tableElision")
+
+    val uniqueId = Globals.getUniqueInternalId() // Link the table with its associated sid to help later processing (SE_EnhancedVerseEndInserter).
+    NodeMarker.setUniqueId(owningVerseSid, uniqueId)
+    NodeMarker.setUniqueId(table, uniqueId)
+
+    if (null != lastSidWithinTable)
+    {
+      m_FileProtocol.updateVerseSid(owningVerseSid, startOfElisionRef.toRefKey(), m_FileProtocol.readRef(lastSidWithinTable!!).toRefKey())
+      val range = RefRange(startOfElisionRef, m_FileProtocol.readRef(lastSidWithinTable!!))
+      range.getLowAsRef().setV(range.getLowAsRef().getV() + 1)
+      val owningVerseFootnote = m_FileProtocol.makeFootnoteNode(m_RootNode.ownerDocument, startOfElisionRef.toRefKey(), Translations.stringFormatWithLookup("V_tableElision_owningVerse", range))
+      Dom.insertNodeAfter(owningVerseSid, owningVerseFootnote)
+    }
   }
 
 
@@ -242,10 +264,9 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
     for (i in allNodesInTable.indices)
     {
       val node = allNodesInTable[i]
-      if (m_FileProtocol.isInherentlyNonCanonicalTagOrIsUnderNonCanonicalTag(node))
-        break
-
-      if (m_FileProtocol.tagName_verse() == Dom.getNodeName(node))
+      if (Dom.isWhitespace(node)) continue
+      if (Dom.isTextNode(node) && m_FileProtocol.isCanonicalNode(node)) break
+      if (m_FileProtocol.tagName_verse() == Dom.getNodeName(node) && m_FileProtocol.attrName_verseSid() in node)
       {
         ix = i
         break
@@ -263,6 +284,8 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
       owningVerseSid = allNodesInTable[ix]
       Dom.deleteNode(owningVerseSid)
       Dom.insertNodeBefore(table, owningVerseSid)
+      NodeMarker.setTableOwnerType(owningVerseSid, "wasFirstVerseInsideTable")
+      return owningVerseSid
     }
 
 
@@ -273,13 +296,14 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
     val ref = m_FileProtocol.readRef(table.findNodeByName(m_FileProtocol.tagName_verse(), false)!!, m_FileProtocol.attrName_verseSid())
     ref.setV(ref.getV() - 1)
-    val res = Dom.findNodeByAttributeValue(m_RootNode, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid(), ref.toString())
+    val res = Dom.findNodeByAttributeValue(m_RootNode, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid(), m_FileProtocol.refToString(ref.toRefKey()))
     if (null == res)
     {
       Logger.error(ref.toRefKey(), "Table: Failed to find owning verse at or about $ref")
       throw StepException("Table: Failed to find owning verse at or about $ref")
     }
 
+    NodeMarker.setTableOwnerType(res, "wasLastVerseBeforeTable")
     return res
   }
 

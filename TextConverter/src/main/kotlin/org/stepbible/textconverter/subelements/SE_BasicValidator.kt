@@ -2,6 +2,7 @@ package org.stepbible.textconverter.subelements
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.contains

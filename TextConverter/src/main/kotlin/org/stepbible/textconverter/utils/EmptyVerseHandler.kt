@@ -125,11 +125,11 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
   * @param wantEid Determines whether we return an eid.
   */
 
-  fun createEmptyVerseForElision (doc: Document, refKey: RefKey, wantEid: Boolean): List<Node>
+  fun createEmptyVerseForElision (doc: Document, refKey: RefKey, wantEid: Boolean, elisionMarker: String = "elision"): List<Node>
   {
     val sid = m_FileProtocol.makeVerseSidNode(doc, Pair(refKey, null))
     val content = createEmptyContent(doc, m_Content_Elision)
-    NodeMarker.setEmptyVerseType(sid, "elision") // May be overwritten with a more specific value by the caller.
+    NodeMarker.setEmptyVerseType(sid, elisionMarker) // May be overwritten with a more specific value by the caller.
     return if (wantEid)
       listOf(sid, content, m_FileProtocol.makeVerseEidNode(doc, Pair(refKey, null)))
     else

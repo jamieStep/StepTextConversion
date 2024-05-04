@@ -3,6 +3,7 @@ package org.stepbible.textconverter.support.miscellaneous
 
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
+import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.StepStringFormatter.convertNameAndValueListToMap
 import org.stepbible.textconverter.support.shared.Language
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -113,7 +114,15 @@ object Translations
        book names, and that looks odd. */
 
     if (ConfigData.isEnglishTranslatableText(key) && ConfigData["stepLanguageCode3Char"] !="eng")
-      text = text.replace("%refV", "%refU%")
+    {
+      text = text.replace("%refV", "%refU")
+
+      if (key !in m_WarnedAboutUseOfEnglishTranslations)
+      {
+        m_WarnedAboutUseOfEnglishTranslations.add(key)
+        Logger.warning("Used English text for $key in non-English text.")
+      }
+    }
 
 
 
@@ -153,4 +162,6 @@ object Translations
   }
 
 
+  /****************************************************************************/
+  private val m_WarnedAboutUseOfEnglishTranslations: MutableSet<String> = mutableSetOf()
 }

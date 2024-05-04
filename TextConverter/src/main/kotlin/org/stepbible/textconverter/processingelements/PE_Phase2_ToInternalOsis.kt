@@ -186,7 +186,7 @@ object PE_Phase2_ToInternalOsis : PE
 
     SE_TableHandler(InternalOsisDataCollection).processAllRootNodes(); x()                      // Collapses tables which span verses into a single elided verse.
     SE_ElisionHandler(InternalOsisDataCollection).processAllRootNodes(); x()                    // Expands elisions out into individual verses.
-    SE_EnhancedVerseEndInsertionPreparer(InternalOsisDataCollection).processAllRootNodes(); x() // Continues the work of SE_CanonicalHeadingsHandler, making things easier to insert verse ends..
+    SE_EnhancedVerseEndInsertionPreparer(InternalOsisDataCollection).processAllRootNodes(); x() // Continues the work of SE_CanonicalHeadingsHandler, making things easier to insert verse ends.
     SE_EnhancedVerseEndInserter(InternalOsisDataCollection).processAllRootNodes(); x()          // Position verse ends so as to reduce the chances of cross-boundary markup.
     InternalOsisDataCollection.reloadBibleStructureFromRootNodes(wantWordCount = false); x()    // Probably a good idea to build / rebuild the structure here.
 
@@ -194,19 +194,20 @@ object PE_Phase2_ToInternalOsis : PE
 
     /**************************************************************************/
     SE_BasicValidator(InternalOsisDataCollection).structuralValidation(InternalOsisDataCollection)  // Checks for basic things like all verses being under chapters.
-    SE_ListEncapsulator(InternalOsisDataCollection).processAllRootNodes(); x()                  // Might encapsulate lists (but in fact does not do so currently).
-    Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                         // Checks for invalid cross-references, or cross-references which point to non-existent places.
-    handleReversification(); x()                                                                // Does what it says on the tin.
-    // $$$ SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()                 // Collapses subverses into the owning verses, if that's what we're doing (mainly or exclusively on public modules).
-    SE_CalloutStandardiser(InternalOsisDataCollection).processAllRootNodes(); x()               // Force callouts to be in house style, assuming that's what we want.
-    removeDummyVerses(InternalOsisDataCollection)                                               // Ditto.
-    ContentValidator.process(InternalOsisDataCollection, Osis_FileProtocol, ExternalOsisDataCollection, Osis_FileProtocol) // Checks current canonical content against original.
-    EmptyVerseHandler.preventSuppressionOfEmptyVerses(InternalOsisDataCollection)               // Unless we take steps, empty verses tend to be suppressed when rendered.
-    EmptyVerseHandler(InternalOsisDataCollection).markVersesWhichWereEmptyInTheRawText()        // Back to doing what it says on the tin.
-    SE_TextAnalyser(InternalOsisDataCollection).processAllRootNodes()                       // Gather up information which might be useful to someone administering texts.
-    ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse.process(InternalOsisDataCollection)  // Converts what we have back to something close enough to standard OSIS to be reasonably confident osis2mod can handle it.
+    SE_ListEncapsulator(InternalOsisDataCollection).processAllRootNodes(); x()                      // Might encapsulate lists (but in fact does not do so currently).
+    Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                             // Checks for invalid cross-references, or cross-references which point to non-existent places.
+    handleReversification(); x()                                                                    // Does what it says on the tin.
+    // $$$ SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()              // Collapses subverses into the owning verses, if that's what we're doing (mainly or exclusively on public modules).
+    SE_CalloutStandardiser(InternalOsisDataCollection).processAllRootNodes(); x()                   // Force callouts to be in house style, assuming that's what we want.
+    removeDummyVerses(InternalOsisDataCollection); x()                                              // Ditto.
+    ContentValidator.process(InternalOsisDataCollection, Osis_FileProtocol, ExternalOsisDataCollection, Osis_FileProtocol); x() // Checks current canonical content against original.
+    EmptyVerseHandler.preventSuppressionOfEmptyVerses(InternalOsisDataCollection); x()              // Unless we take steps, empty verses tend to be suppressed when rendered.
+    EmptyVerseHandler(InternalOsisDataCollection).markVersesWhichWereEmptyInTheRawText(); x()       // Back to doing what it says on the tin.
+    SE_TextAnalyser(InternalOsisDataCollection).processAllRootNodes(); x()                          // Gather up information which might be useful to someone administering texts.
+    SE_LastDitchTidier(InternalOsisDataCollection).processAllRootNodes(); x()                       // Ad hoc last minute tidying.
+    ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse.process(InternalOsisDataCollection); x() // Converts what we have back to something close enough to standard OSIS to be reasonably confident osis2mod can handle it.
     Dom.outputDomAsXml(InternalOsisDataCollection.getDocument(), FileLocations.getInternalOsisFilePath(), null)
-                                                                                                // Save the OSIS so it's available to osis2mod.
+                                                                                                    // Save the OSIS so it's available to osis2mod.
   }
 
 

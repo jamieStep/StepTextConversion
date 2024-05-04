@@ -110,7 +110,7 @@ class SE_EnhancedVerseEndInsertionPreparer (dataCollection: X_DataCollection) : 
    /* For these, nesting should not be an issue. */
 
     val poetryParas = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isPoetryPara(it) }
-    poetryParas.forEach { Dom.convertToSelfClosingNode(it) }
+    convertToSelfClosingNode(poetryParas)
 
 
 

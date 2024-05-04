@@ -218,6 +218,9 @@ object ContentValidator
       if (!skipTest)
         skipTest = Dom.hasAttribute(m_BookAnatomyNew.m_AllNodes[newSid], "_X_reasonEmpty") // Verses flagged as legitimately empty.
 
+      if (!skipTest)
+        skipTest = "tableElision" == NodeMarker.getEmptyVerseType(m_BookAnatomyNew.m_AllNodes[newSid])
+
 
 
       /************************************************************************/

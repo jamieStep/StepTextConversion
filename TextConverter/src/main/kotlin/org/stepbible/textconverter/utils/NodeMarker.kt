@@ -1,6 +1,5 @@
 package org.stepbible.textconverter.utils
 
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.miscellaneous.minusAssign
@@ -24,7 +23,7 @@ import org.w3c.dom.Node
 * rules, you will use *only* the facilities here to add and check for these
 * temporary attributes.  This ensures that the correct names are used.  And also
 * it is just painful enough to add new attributes here (which you do by copying
-* and existing block) ... just painful enough to discourage profligate use of
+* an existing block) ... just painful enough to discourage profligate use of
 * the facility.
 *
 * Attributes come in two forms.  In one, we are interested purely in the
@@ -148,6 +147,14 @@ object NodeMarker
   private const val C_DeleteMe = "_DeleteMe"
 
 
+  /****************************************************************************/
+  fun deleteExcludeFromValidation (node: Node) = deleteTemporaryAttribute(node, C_ExcludeFromValidation)
+  fun getExcludeFromValidation (node: Node) = node[C_ExcludeFromValidation]
+  fun hasExcludeFromValidation (node: Node) = null != getExcludeFromValidation(node)
+  fun setExcludeFromValidation (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_ExcludeFromValidation, value); return this }
+  private const val C_ExcludeFromValidation = "_ExcludeFromValidation"
+
+
  /****************************************************************************/
   fun deleteMoveNoteToStartOfVerse (node: Node) = deleteTemporaryAttribute(node, C_MoveNoteToStartOfVerse)
   fun getMoveNoteToStartOfVerse (node: Node) = node[C_MoveNoteToStartOfVerse]
@@ -172,13 +179,28 @@ object NodeMarker
   private const val C_StandardRefKey = "_StandardRefKey"
 
 
-
   /****************************************************************************/
   fun deleteSubverseCoverage (node: Node) = deleteTemporaryAttribute(node, C_SubverseCoverage)
   fun getSubverseCoverage (node: Node) = node[C_SubverseCoverage]
   fun hasSubverseCoverage (node: Node) = null != getSubverseCoverage(node)
   fun setSubverseCoverage (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_SubverseCoverage, value); return this }
   private const val C_SubverseCoverage = "_SubverseCoverage"
+
+
+  /****************************************************************************/
+  fun deleteTableOwnerType (node: Node) = deleteTemporaryAttribute(node, C_CrossBoundaryMarkup)
+  fun getTableOwnerType (node: Node) = node[C_TableOwnerType]
+  fun hasTableOwnerType (node: Node) = null != getTableOwnerType(node)
+  fun setTableOwnerType (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_TableOwnerType, value); return this }
+  private const val C_TableOwnerType = "_TableOwnerType"
+
+
+  /****************************************************************************/
+  fun deleteUniqueId (node: Node) = deleteTemporaryAttribute(node, C_UniqueId)
+  fun getUniqueId (node: Node) = node[C_UniqueId]
+  fun hasUniqueId (node: Node) = null != getUniqueId(node)
+  fun setUniqueId (node: Node, value: Int): NodeMarker { addTemporaryAttribute(node, C_UniqueId, value.toString()); return this }
+  private const val C_UniqueId = "_UniqueId"
 
 
 

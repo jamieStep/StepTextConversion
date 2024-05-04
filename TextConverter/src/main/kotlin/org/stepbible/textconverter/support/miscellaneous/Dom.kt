@@ -2310,6 +2310,18 @@ object Dom
 
     /****************************************************************************/
     /**
+    * Makes a mutable map given a list of nodes.  keyFn takes a node and returns
+    * a key value for it.
+    *
+    * @param keyFn Key generator.
+    * @return Mutable map associating key values with nodes.
+    */
+
+    fun <T> List<Node>.makeNodeMap (keyFn: (Node) -> T): MutableMap<T, Node> = this.associateBy { keyFn(it) } .toMutableMap()
+
+
+    /****************************************************************************/
+    /**
      * Outputs the DOM as XML, to a file or to System.out.
      *
      * @param doc Document.

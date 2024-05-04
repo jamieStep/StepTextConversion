@@ -87,9 +87,12 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
     Dbg.reportProgress("Handling elisions for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
 
-    rootNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid())
-      .filter { m_FileProtocol.readRefCollection(it, m_FileProtocol.attrName_verseSid()).isRange() }
-      .forEach { processElision(it) }
+    rootNode.findNodesByName(m_FileProtocol.tagName_chapter()).forEach { chapterNode ->
+      val verses = chapterNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid())
+      for (ix in verses.indices)
+        if (m_FileProtocol.readRefCollection(verses[ix], m_FileProtocol.attrName_verseSid()).isRange())
+          processElision(verses[ix], if (ix + 1 >= verses.size) null else verses[ix + 1], chapterNode)
+    }
   }
 
 
@@ -199,7 +202,7 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
      the master verse.  For table elisions, the master comes first followed by
      the empty verses. */
 
-  private fun processElision (verse: Node)
+  private fun processElision (verse: Node, nextVerse: Node?, chapterNode: Node)
   {
     /**************************************************************************/
     //Dbg.dCont(Dom.toString(verse), "!a")
@@ -210,27 +213,57 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
     val refKeys = getRefKeysForRefRange(verse[m_FileProtocol.attrName_verseSid()]!!)
     IssueAndInformationRecorder.elidedVerse(refKeys, verse[m_FileProtocol.attrName_verseSid()]!!)
 
+
+
+    /**************************************************************************/
+    /* If it's a table elision, the expanded verses need to go before the
+       _next_ sid -- unless there _is_ no next sid, because we're at the end
+       of the chapter (recognisable because nextVerse will be null).  In this
+       case I create a temporary node right at the end of the chapter and do
+       the insertions before that, and then delete the temporary node again. */
+
     if ("tableElision" == NodeMarker.getElisionType(verse))
-       refKeys.subList(1, refKeys.size).forEach {
-          val nodeList = m_EmptyVerseHandler.createEmptyVerseForElision(verse.ownerDocument, it, false) // Start, content, and optionally footnote (but no eid).
-          m_FileProtocol.updateVerseSid(verse, refKeys[0])
-          Dom.insertNodesAfter(verse, nodeList)
-       }
-     else
-       refKeys.subList(0, refKeys.size - 1).forEach {
-         val nodeList = m_EmptyVerseHandler.createEmptyVerseForElision(verse.ownerDocument, it, false) // Start, content, and optionally footnote (but no eid).
-         addTemporaryAttributesToEmptyVerse(nodeList[0], "elision")
-         m_FileProtocol.updateVerseSid(verse, refKeys.last())
-         Dom.insertNodesBefore(verse, nodeList)
+    {
+      var insertionPoint = nextVerse
+      if (null == nextVerse)
+      {
+        insertionPoint = Dom.createNode(verse.ownerDocument, "<XXX/>")
+        chapterNode.appendChild(insertionPoint)
       }
 
+      refKeys.subList(1, refKeys.size).forEach {
+        val nodeList = m_EmptyVerseHandler.createEmptyVerseForElision(verse.ownerDocument, it, false, "tableElision") // Start, content, and optionally footnote (but no eid).
+          m_FileProtocol.updateVerseSid(verse, refKeys[0])
+          Dom.insertNodesBefore(insertionPoint!!, nodeList)
+          // No need to add a footnote here -- the table processing will already have handled that.
+       }
+
+       if (null == nextVerse)
+         Dom.deleteNode(insertionPoint!!)
+    }
+
+
+
+    /**************************************************************************/
+    else // Not a table elision.
+      refKeys.subList(0, refKeys.size - 1).forEach {
+        val nodeList = m_EmptyVerseHandler.createEmptyVerseForElision(verse.ownerDocument, it, false) // Start, content, and optionally footnote (but no eid).
+        addTemporaryAttributesToEmptyVerse(nodeList[0], "elision")
+        m_FileProtocol.updateVerseSid(verse, refKeys.last())
+        Dom.insertNodesBefore(verse, nodeList)
+        if (refKeys.size > 2) // No footnote on master verse if there is only one other verse in the elision.
+        {
+          val footnote = m_FileProtocol.makeFootnoteNode(verse.ownerDocument, m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!).getLowAsRefKey(), Translations.stringFormat(Language.Vernacular, "V_elision_containsTextFromOtherVerses", m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!)))
+          Dom.insertNodeAfter(verse, footnote)
+          NodeMarker.setAddedFootnote(verse)
+        }
+     }
+
+
+
+    /**************************************************************************/
     addTemporaryAttributesToMasterVerse(verse, NodeMarker.getElisionType(verse) ?: "elision")
     m_FileProtocol.updateVerseSid(verse, refKeys.last())
-    if (refKeys.size <= 2) return // No footnote on master verse if there is only one other verse in the elision.
-
-    val footnote = m_FileProtocol.makeFootnoteNode(verse.ownerDocument, m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!).getLowAsRefKey(), Translations.stringFormat(Language.Vernacular, "V_elision_containsTextFromOtherVerses", m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!)))
-    Dom.insertNodeAfter(verse, footnote)
-    NodeMarker.setAddedFootnote(verse)
   }
 
 

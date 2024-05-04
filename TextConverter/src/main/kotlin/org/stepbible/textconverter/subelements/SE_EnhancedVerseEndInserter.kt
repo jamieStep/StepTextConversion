@@ -90,19 +90,40 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
 
 
   /****************************************************************************/
+  /* Adds verse ends for each sid.  We treat each chapter separately.  Within
+     this, we treat verses separately according as they are or are not
+     associated with a table.
+
+     Where a verse is associated with a table in the sense that the verse owns
+     it, we need to place the eid immediately after the table.
+
+     For other sids, we need to do rather more processing. */
+
   private fun insertVerseEnds (rootNode: Node)
   {
-    // Dbg.outputDom(m_Document)
+    //Dbg.outputDom(rootNode.ownerDocument)
     markTags(rootNode) // $$$
+
     Dom.findNodesByName(rootNode, m_FileProtocol.tagName_chapter(), false).forEach { chapterNode ->
       val verses = Dom.findNodesByName(chapterNode, m_FileProtocol.tagName_verse(), false)
+      val tables: Map<Int, Node> = Dom.findNodesByName(chapterNode, m_FileProtocol.tagName_table(), false)
+        .filter { NodeMarker.hasUniqueId(it) }
+        .associateBy { NodeMarker.getUniqueId(it)!!.toInt() }
+
+      verses.filter { "tableElision" == NodeMarker.getElisionType(it) } .forEach {
+        val table = tables[NodeMarker.getUniqueId(it)!!.toInt()]!!
+        val verseEnd = m_FileProtocol.makeVerseEidNode(it.ownerDocument, it[m_FileProtocol.attrName_verseSid()]!!)
+        Dom.insertNodeAfter(table, verseEnd)
+      }
+
       for (i in 0 ..< verses.size - 1) // -1 so we don't process the dummy verse.
-        insertVerseEnd(verses[i][m_FileProtocol.attrName_verseSid()]!!, verses[i], verses[i + 1])
+        if ("tableElision" != NodeMarker.getElisionType(verses[i]))
+          insertVerseEnd(verses[i][m_FileProtocol.attrName_verseSid()]!!, verses[i], verses[i + 1])
     }
 
+    //Dbg.outputDom(rootNode.ownerDocument)
     unmarkTags(rootNode) // $$$
  }
-
 
 
 

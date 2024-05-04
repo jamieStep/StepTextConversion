@@ -19,7 +19,7 @@ import org.stepbible.textconverter.utils.ThrowAwayCode
 fun main (args: Array<String>)
 {
   /****************************************************************************/
-  //Dbg.setBooksToBeProcessed("3Jn")
+  //Dbg.setBooksToBeProcessed("Gen")
   //ThrowAwayCode.validateXmlFileStructure()
   //ThrowAwayCode.tryXslt()
   //ThrowAwayCode.lookForNestedParas()

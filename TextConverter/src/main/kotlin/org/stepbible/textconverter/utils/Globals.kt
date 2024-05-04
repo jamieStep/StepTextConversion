@@ -20,12 +20,28 @@ object Globals
   /****************************************************************************/
   /**
   * Returns a counter which can be used to generate unique ids, for example
-  * for use in OSIS references.
+  * for use in OSIS references.  This counter is intended for applications
+  * where the value will continue to be visible to human readers at the end
+  * of processing, and where a hole in the numbering scheme might otherwise
+  * cause consternation as to whether something has gone wrong.
   *
   * @return Counter
   */
 
-  fun getUniqueIdCounter () = ++m_UniqueIdCounter
+  fun getUniqueExternal () = ++m_UniqueExternalId
+
+
+  /****************************************************************************/
+  /**
+  * Returns a counter which can be used to generate unique ids.  This counter
+  * is intended for applications where the value is required only during
+  * processing, and will therefore not be apparent to human readers once
+  * processing is complete.
+  *
+  * @return Counter
+  */
+
+  fun getUniqueInternalId () = ++m_UniqueInternalId
 
 
 
@@ -40,7 +56,8 @@ object Globals
   /****************************************************************************/
 
   /**************************************************************************/
-  private var m_UniqueIdCounter = 0
+  private var m_UniqueExternalId = 0
+  private var m_UniqueInternalId = 0
 }
 
 

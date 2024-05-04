@@ -9,10 +9,7 @@ import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.support.miscellaneous.findNodeByName
-import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.*
 import java.io.BufferedWriter
@@ -301,7 +298,7 @@ object PE_Phase1_FromInputVl: PE
     val content = substitutions[key]
     substitutions.remove(key)
     val id = "$owningChapter.$owningVerse"
-    return "<note type='explanation' osisRef='$id' osisID='$id!${Globals.getUniqueIdCounter()}' n='▼'>$content</note>"
+    return "<note type='explanation' osisRef='$id' osisID='$id!${Globals.getUniqueExternal()}' n='▼'>$content</note>"
   }
 
 

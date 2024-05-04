@@ -489,8 +489,12 @@ object ConfigData
     /**************************************************************************/
     var moduleName = FileLocations.getRootFolderName().replace("Text_", "")
     val lastBit = moduleName.split("_").last()
-    val targetAudience = if ("public" in lastBit.lowercase()) "P" else ""
-    if (targetAudience.isNotEmpty()) moduleName = moduleName.substring(0, moduleName.lastIndexOf("_"))
+    var targetAudience = if ("public" in lastBit.lowercase()) "P" else ""
+    if (targetAudience.isEmpty())
+      targetAudience = "S"
+    else
+      moduleName = moduleName.substring(0, moduleName.lastIndexOf("_"))
+
     put("stepTargetAudience", targetAudience, false)
 
 
@@ -695,7 +699,6 @@ object ConfigData
 
   private fun extractLanguageCodeFromModuleName ()
   {
-    /**************************************************************************/
     val moduleName = FileLocations.getRootFolderName().replace("Text_", "")
     val languageCode = IsoLanguageCodes.get3PreferredCharacterIsoCode(moduleName.substring(0, 3))
     delete("stepLanguageCode"); put("stepLanguageCode", languageCode, force = true)
