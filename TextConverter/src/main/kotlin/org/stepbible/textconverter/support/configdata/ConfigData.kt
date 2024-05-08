@@ -3,6 +3,7 @@ package org.stepbible.textconverter.support.configdata
 
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
+import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
@@ -10,7 +11,6 @@ import org.stepbible.textconverter.support.iso.IsoLanguageCodes
 import org.stepbible.textconverter.support.iso.Unicode
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.stepexception.StepException
-import org.stepbible.textconverter.utils.InternalOsisDataCollection
 import java.io.*
 import java.nio.file.Paths
 import java.text.SimpleDateFormat
@@ -488,12 +488,15 @@ object ConfigData
 
     /**************************************************************************/
     var moduleName = FileLocations.getRootFolderName().replace("Text_", "")
-    val lastBit = moduleName.split("_").last()
-    var targetAudience = if ("public" in lastBit.lowercase()) "P" else ""
+    val lastBit = moduleName.split("_").last().lowercase()
+    var targetAudience = ""
+    if ("public" in lastBit) targetAudience += "P"
+    if ("step" in lastBit) targetAudience += "S"
     if (targetAudience.isEmpty())
       targetAudience = "S"
     else
       moduleName = moduleName.substring(0, moduleName.lastIndexOf("_"))
+
 
     put("stepTargetAudience", targetAudience, false)
 
@@ -700,7 +703,7 @@ object ConfigData
   private fun extractLanguageCodeFromModuleName ()
   {
     val moduleName = FileLocations.getRootFolderName().replace("Text_", "")
-    val languageCode = IsoLanguageCodes.get3PreferredCharacterIsoCode(moduleName.substring(0, 3))
+    val languageCode = IsoLanguageCodes.get3CharacterIsoCode(moduleName.substring(0, 3))
     delete("stepLanguageCode"); put("stepLanguageCode", languageCode, force = true)
     delete("stepLanguageCode3Char"); put("stepLanguageCode3Char", languageCode, force = true)
     delete("stepLanguageCode2Char"); put("stepLanguageCode2Char", IsoLanguageCodes.get2CharacterIsoCode(languageCode), force = true)
@@ -951,6 +954,7 @@ object ConfigData
     operator fun get (key: String): String?
     {
       //Dbg.d(key, "stepTextOwnerOrganisationFullName")
+      //Dbg.d(key)
       return getInternal(key, true)
     }
 
@@ -1223,7 +1227,7 @@ object ConfigData
 
       try
       {
-        //Dbg.dCont(theLine ?: "", "getExt")
+        //Dbg.dCont(theLine ?: "", "stepAdminLine")
         return expandReferencesTopLevel(theLine, nullsOk, errorStack)
       }
       catch (_: StepException)
@@ -1516,6 +1520,7 @@ object ConfigData
       {
         revisedValue = revisedValue.lowercase()
         revisedValue = if (revisedValue == "ltr") "LtoR" else "RtoL"
+        if ("RtoL" == revisedValue) revisedValue = "BiDi" // Assume bidirectional on all RTL scripts.
       }
     } // when
 
@@ -1657,7 +1662,7 @@ object ConfigData
 
     fun getUsxToOsisTagTranslation (extendedUsxTagName: String): Pair<String, TagAction>?
     {
-        return m_UsxToOsisTagTranslationDetails[extendedUsxTagName]
+      return m_UsxToOsisTagTranslationDetails[extendedUsxTagName]
     }
 
 
@@ -1817,7 +1822,7 @@ object ConfigData
     * @return Text for use in short description.
     */
 
-    fun makeStepDescription (): String
+    fun makeStepDescription (bookNumbers: List<Int>): String
     {
         /**********************************************************************/
         /* We want the English and vernacular titles, except where they are
@@ -1868,7 +1873,7 @@ object ConfigData
 
         /**********************************************************************/
         var officialYear = makeStepDescription_getOfficialYear()
-        val biblePortion = makeStepDescription_getBiblePortion() // "%%%biblePortion%%%"
+        val biblePortion = makeStepDescription_getBiblePortion(bookNumbers)
         val language = makeStepDescription_getLanguage(englishTitle)
         val moduleMonthYear = makeStepDescription_getModuleMonthYear().trim()
 
@@ -1880,6 +1885,8 @@ object ConfigData
         var text = "$name$abbreviatedNameOfRightsHolder$officialYear $biblePortion$language" // $moduleMonthYear"
         text = expandReferences(text, false)!!
         text = text.replace("\\s+".toRegex(), " ").trim()
+
+        set("StepDescription", text)
         return text
     }
 
@@ -1898,13 +1905,13 @@ object ConfigData
        text as eg 'OT incomplete +NT'.
     */
 
-    fun makeStepDescription_getBiblePortion (): String
+    fun makeStepDescription_getBiblePortion (bookNumbers: List<Int>): String
     {
         /************************************************************************/
         val C_MaxIndividualBooksToReport = 5
-        val otBooks = InternalOsisDataCollection.getBibleStructure().getAllBookAbbreviationsOt()
-        val ntBooks = InternalOsisDataCollection.getBibleStructure().getAllBookAbbreviationsNt()
-        val dcBooks = InternalOsisDataCollection.getBibleStructure().getAllBookAbbreviationsDc()
+        val otBooks = bookNumbers.filter{ BibleAnatomy.isOt(it) }.map{ BibleBookNamesOsis.numberToAbbreviatedName(it) }
+        val ntBooks = bookNumbers.filter{ BibleAnatomy.isNt(it) }.map{ BibleBookNamesOsis.numberToAbbreviatedName(it) }
+        val dcBooks = bookNumbers.filter{ BibleAnatomy.isDc(it) }.map{ BibleBookNamesOsis.numberToAbbreviatedName(it) }
 
 
 
@@ -1927,8 +1934,8 @@ object ConfigData
 
         /************************************************************************/
         if (fullOt && fullNt) return if (dcBooks.isEmpty()) "" else "+OT2 "
-        if (fullOt && ntBooks.isEmpty()) return if (dcBooks.isEmpty()) "OT " else "OT+OT2 "
-        if (fullNt && otBooks.isEmpty()) return if (dcBooks.isEmpty()) "NT " else "OT2+NT "
+        if (fullOt && ntBooks.isEmpty()) return if (dcBooks.isEmpty()) "OT only " else "OT+OT2 only "
+        if (fullNt && otBooks.isEmpty()) return if (dcBooks.isEmpty()) "NT only " else "OT2+NT only "
 
 
 
@@ -1944,11 +1951,11 @@ object ConfigData
           else if (otBooks.isEmpty())
               ""
           else if (otBooks.size > C_MaxIndividualBooksToReport)
-               "OT (incomplete) "
+               "OT (partial) "
           else
           {
               val fullBookList = otBooks.sortedBy { BibleBookNamesUsx.nameToNumber(it) }
-              fullBookList.joinToString(", ") + " "
+              fullBookList.joinToString(", ") + " only "
           }
 
 
@@ -1960,17 +1967,17 @@ object ConfigData
           else if (ntBooks.isEmpty())
               ""
           else if (ntBooks.size > C_MaxIndividualBooksToReport)
-              "NT (incomplete) "
+              "NT (partial) "
           else
           {
               val fullBookList = ntBooks.sortedBy { BibleBookNamesUsx.nameToNumber(it) }
-              fullBookList.joinToString(", ") + " "
+              fullBookList.joinToString(", ") + " only "
           }
 
 
 
         /************************************************************************/
-        val apocPortion = if (dcBooks.isEmpty()) "" else " Apocrypha "
+        val apocPortion = if (dcBooks.isEmpty()) "" else " Deuterocanon "
 
 
 

@@ -33,10 +33,11 @@ object Osis_Utils
   * @return File header.
   */
 
-  fun fileHeader (scope: String?): String
+  fun fileHeader (bookNumbers: List<Int>): String
   {
     /**************************************************************************/
-    var reportableChangesAsList = listOf<String>() // $$$ ValueAddedSupplier.getReportableChanges()
+    val scope = makeScope(bookNumbers)
+    var reportableChangesAsList = listOf<String>()
     var reportableChanges = ""
     if (reportableChangesAsList.isNotEmpty())
        reportableChanges = reportableChangesAsList.joinToString(prefix="     StepChange: ", separator = "\n     StepChange: ", postfix="\n")
@@ -127,7 +128,7 @@ var header =
     vals["revisionDesc"] = ConfigData["revisionDesc"] ?: "" // See note above.
     vals["scope"] = scope
     vals["shortCopyright"] = ConfigData["stepShortCopyright"]!!.replace("<.*?>".toRegex(), " ").replace("&copy;", "(c)")
-    vals["title"] = ConfigData.makeStepDescription()
+    vals["title"] = ConfigData.makeStepDescription(bookNumbers)
     vals["toLowerPublicationType"] = publicationType.lowercase(Locale.getDefault())
     vals["yearOfText"] = yearOfText
 

@@ -104,9 +104,13 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
   private fun convertCanonicalTitleToFormattingMarkup (titleNodes: List<Node>, whereToPutPara: Char)
   {
     titleNodes.forEach {
+      val retainOriginal = it["X.retainOriginal"]
+
       Dom.setNodeName(it, "hi") // Want to turn the header into italic.
-      Dom.deleteAllAttributes(it)
-      it["type"] = "italic"
+      Dom.deleteAllAttributes(it); it["type"] = "italic"
+
+      if (null != retainOriginal)
+        it["X.retainOriginal"] = retainOriginal
 
       val paraNode = titleNodes[0].ownerDocument.createNode("<p/>")
       if ('A' == whereToPutPara)

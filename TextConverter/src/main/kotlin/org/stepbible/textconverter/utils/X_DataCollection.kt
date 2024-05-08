@@ -177,7 +177,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
       clearAll()
       val files = StepFileUtils.getMatchingFilesFromFolder(folderPath, ".*\\.$fileExtension".toRegex())
       val orderedBookList: MutableList<Int> = mutableListOf()
-      files.forEach { Dbg.reportProgress("Loading ${it.name}."); orderedBookList.addAll(addFromFile(it.toString())) }
+      files.forEach { orderedBookList.addAll(addFromFile(it.toString())) }
       if (1 == files.size) sortStructuresByBookOrder(orderedBookList)
       //reloadBibleStructureFromRootNodes(false)
     }
@@ -274,7 +274,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   * @return book numbers.
   */
 
-  fun getBookNumbers () = m_BookNumberToRootNode.keys.toList()
+  fun getBookNumbers () = m_BookNumberToRootNode.keys.filter { Dbg.wantToProcessBook(it) }
 
 
   /****************************************************************************/
@@ -529,8 +529,8 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   private fun addFromText (text: String): List<Int>
   {
-    //x(text); return listOf()
-    val revisedText = Usx_Preprocessor.processRegex(text)
+    var revisedText = Usx_Preprocessor.processRegex(text)
+    revisedText = revisedText.replace("&lt;", "^lt;").replace("&gt;", "^gt;")
     val doc = Dom.getDocumentFromText(revisedText, retainComments = true)
     return addFromDoc(doc)
   }
@@ -567,7 +567,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
 
   /****************************************************************************/
-  /* In some cases, the book ordering is driven frm the content of the data
+  /* In some cases, the book ordering is driven from the content of the data
      files.  This arranges to have the internal data structures ordered
      correctly. */
 

@@ -324,6 +324,7 @@ object PackageContentHandler
   private fun osisSaver (dummy: String)
   {
     val filePath = Paths.get(FileLocations.getInputOsisFolderPath(), ConfigData["stepModuleName"]!! + ".xml").toString()
+    NodeMarker.deleteAllMarkers(ExternalOsisDataCollection)
     Dom.outputDomAsXml(ExternalOsisDataCollection.getDocument(), filePath, null)
   }
 
@@ -382,6 +383,22 @@ object PackageContentHandler
 
   private fun swordConfigFileHandler (filePath: String)
   {
+    /**************************************************************************/
+//    Dbg.d("stepModuleCreationDate=" + ConfigData["stepModuleCreationDate"])
+//    Dbg.d("stepTextIdSuppliedBySourceRepositoryOrOwnerOrganisation=" + ConfigData["stepTextIdSuppliedBySourceRepositoryOrOwnerOrganisation"])
+//    Dbg.d("stepModuleName=" + ConfigData["stepModuleName"])
+//    Dbg.d("stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation=" + ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"])
+//    Dbg.d("stepBibleNameInEnglish=" + ConfigData["stepBibleNameEnglish"])
+//    Dbg.d("stepOwnerOrganisation=" + ConfigData["stepTextOwnerOrganisationFullName"])
+//    Dbg.d("stepRepository=" + ConfigData["stepDisambiguatorForId"])
+//    Dbg.d("LicenceId=" + ConfigData["stepLicenceId"])
+//    Dbg.d("stepLicenceExpiryDate=" + ConfigData["stepLicenceExpiryDate"])
+//    Dbg.d("stepSoftwareVersionRequired=" + ConfigData["stepSoftwareVersionRequired"])
+//    Dbg.d("stepOriginData=" + ConfigData["stepOriginData"])
+//    Dbg.d("stepTarget=" + ConfigData["stepTargetAudience"])
+
+
+
     /**************************************************************************/
     swordConfigFileHandler_addCalculatedValuesToMetadata()
 
@@ -570,7 +587,6 @@ Sword module @(stepModuleName) created by the STEPBible project @(stepModuleCrea
 
     /**************************************************************************/
     ConfigData["stepInputFileDigests"] = Digest.makeFileDigests()
-    ConfigData["stepDescription"] = ConfigData.makeStepDescription()
   }
 
 

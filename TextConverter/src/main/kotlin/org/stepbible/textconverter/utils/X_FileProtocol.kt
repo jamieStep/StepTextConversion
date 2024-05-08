@@ -70,6 +70,7 @@ open class X_FileProtocol
   open fun tagName_book (): String = throw StepExceptionShouldHaveBeenOverridden()
   open fun tagName_chapter (): String = throw StepExceptionShouldHaveBeenOverridden()
   open fun tagName_note (): String = throw StepExceptionShouldHaveBeenOverridden()
+  open fun tagName_strong (): String = throw StepExceptionShouldHaveBeenOverridden()
   open fun tagName_verse (): String = throw StepExceptionShouldHaveBeenOverridden()
 
   fun tagName_cell () = "cell"
@@ -361,6 +362,7 @@ object Osis_FileProtocol: X_FileProtocol()
 
   override fun tagName_chapter () = "chapter"
   override fun tagName_note () = "note"
+  override fun tagName_strong () = "w"
   override fun tagName_verse () = "verse"
 
   override fun bookNameToNumber (name: String) = BibleBookNamesOsis.nameToNumber(name)
@@ -983,6 +985,7 @@ object Usx_FileProtocol: X_FileProtocol()
   override fun attrName_strong () = "lemma"
   override fun tagName_chapter () = "chapter"
   override fun tagName_note () = "note"
+  override fun tagName_strong () = "w"
   override fun tagName_verse () = "verse"
 
   override fun attrName_tableHeaderCellStyle () = "style"

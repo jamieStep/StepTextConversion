@@ -389,6 +389,10 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
 
 
   /****************************************************************************/
+  enum class VersificationDeviationType { EXACT_MATCH, BAD, OK }
+
+
+  /****************************************************************************/
   data class Evaluation (val scheme: String,
                          val score: Int,
                          val booksMissingInOsis2modScheme: Int,
@@ -398,6 +402,16 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
                          val text: String?)
   {
     fun exactMatch (): Boolean = 0 == booksMissingInOsis2modScheme && 0 == versesMissingInOsis2modScheme && 0 == booksInExcessInOsis2modScheme && 0 == versesInExcessInOsis2modScheme
+
+    fun getDeviationType (): VersificationDeviationType
+    {
+      return if (0 == score)
+        VersificationDeviationType.EXACT_MATCH
+      else if (booksMissingInOsis2modScheme > 0 || versesMissingInOsis2modScheme > 0)
+        VersificationDeviationType.BAD
+      else
+        VersificationDeviationType.OK
+    }
 
     override fun toString (): String
     {

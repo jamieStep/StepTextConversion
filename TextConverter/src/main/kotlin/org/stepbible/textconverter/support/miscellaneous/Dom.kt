@@ -2327,10 +2327,15 @@ object Dom
      * @param doc Document.
      * @param filePath File or null if you want output to System.out.
      * @param theComment Any comment which you wish to have at the top of the file,
-     * or null.
+     *   or null.
+     * @param textPatchUpFn Makes any changes to the text.  For example, I've
+     *   found it necessary to replace &lt; and &gt; to ^lt; and ^gt; in some
+     *   places because I've been processing USX which contains these entities,
+     *   and left as such in the input, they mess things up.  But having done that,
+     *   I need to change them back again here.
      */
 
-    fun outputDomAsXml (doc: Document, filePath: String?, theComment: String?)
+    fun outputDomAsXml (doc: Document, filePath: String?, theComment: String?, textPatchUpFn: ((String) -> String)? = null)
     {
         try
         {
@@ -2340,7 +2345,8 @@ object Dom
             val result = StreamResult(StringWriter())
             val source = DOMSource(doc)
             transformer.transform(source, result)
-            val xmlOutput: String = result.writer.toString().replace("\r", "")
+            var xmlOutput = result.writer.toString().replace("\r", "")
+            if (null != textPatchUpFn) xmlOutput = textPatchUpFn(xmlOutput)
             val ix = xmlOutput.indexOf(">") + 1
             val firstBit = xmlOutput.substring(0, ix)
             val comment = if (null == theComment) "" else "<!-- $theComment -->\n"

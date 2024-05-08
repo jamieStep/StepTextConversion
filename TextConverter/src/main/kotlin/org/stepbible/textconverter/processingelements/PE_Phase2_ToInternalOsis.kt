@@ -124,8 +124,9 @@ object PE_Phase2_ToInternalOsis : PE
     /* Pick up the input data. */
 
     StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath())
-    InternalOsisDataCollection.loadFromText(Phase1TextOutput)
-    RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()) // Needed to cater for the possible requirement to expand ranges.
+    InternalOsisDataCollection.loadFromText(Phase1TextOutput); x()
+    SE_LastDitchTidier(InternalOsisDataCollection).preProcessNodesMarkedRetainOriginal()
+    RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()); x() // Needed to cater for the possible requirement to expand ranges.
     val doc = InternalOsisDataCollection.getDocument()
     Phase1TextOutput = ""
     //Dbg.d(doc)
@@ -206,8 +207,11 @@ object PE_Phase2_ToInternalOsis : PE
     SE_TextAnalyser(InternalOsisDataCollection).processAllRootNodes(); x()                          // Gather up information which might be useful to someone administering texts.
     SE_LastDitchTidier(InternalOsisDataCollection).processAllRootNodes(); x()                       // Ad hoc last minute tidying.
     ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse.process(InternalOsisDataCollection); x() // Converts what we have back to something close enough to standard OSIS to be reasonably confident osis2mod can handle it.
-    Dom.outputDomAsXml(InternalOsisDataCollection.getDocument(), FileLocations.getInternalOsisFilePath(), null)
-                                                                                                    // Save the OSIS so it's available to osis2mod.
+    Dom.outputDomAsXml(InternalOsisDataCollection.getDocument(),                                    // Save the OSIS so it's available to osis2mod.
+                       FileLocations.getInternalOsisFilePath(),
+            null)
+                       { x -> x.replace("^lt;", "&lt;").replace("^gt;", "&gt;") }
+
   }
 
 

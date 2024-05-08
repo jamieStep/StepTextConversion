@@ -106,7 +106,7 @@ object PE_Phase1_FromInputImp: PE
 
 
   /****************************************************************************/
-  private fun fileHeader () = appendText(Osis_Utils.fileHeader(null))
+  private fun fileHeader () = appendText(Osis_Utils.fileHeader(m_BookNumbers))
   private fun fileTrailer () = appendText(Osis_Utils.fileTrailer())
 
 
@@ -152,6 +152,7 @@ object PE_Phase1_FromInputImp: PE
     line = line.substring(3)
     val m = C_BookChapterVerseHeader.matchEntire(line) ?: throw StepException("Invalid IMP line: $line")
     val bookNameFull = m.groups["bookNameFull"]!!.value
+    m_BookNumbers.add(BibleBookNamesUsx.nameToNumber(bookNameFull))
     val chapter = m.groups["chapter"]!!.value.toInt()
     val verse = m.groups["verse"]!!.value.toInt()
 
@@ -252,6 +253,7 @@ object PE_Phase1_FromInputImp: PE
   private var m_ActiveBook = -1
   private var m_ActiveChapter = -1
   private var m_ActiveVerse = -1
+  private val m_BookNumbers: MutableList<Int> = mutableListOf()
   private lateinit var m_OsisFilePath: String
   private lateinit var m_OutputFile: BufferedWriter
 }

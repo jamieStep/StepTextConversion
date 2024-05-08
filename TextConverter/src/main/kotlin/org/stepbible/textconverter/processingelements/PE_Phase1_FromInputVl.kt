@@ -131,7 +131,7 @@ object PE_Phase1_FromInputVl: PE
     fun writeFn (writer: BufferedWriter)
     {
       m_Writer = writer
-      writeln(Osis_Utils.fileHeader(Osis_Utils.makeScope(groupedLines.keys.toList())))
+      writeln(Osis_Utils.fileHeader(groupedLines.keys.map { it.toInt() }))
       groupedLines.keys.forEach { processBook(groupedLines[it]!!) }
       writeln(Osis_Utils.fileTrailer())
     }

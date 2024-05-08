@@ -76,10 +76,7 @@ object Usx_Tidier
   * disclaimers elsewhere, this does actually currently assume that each
   * book comes in a separate document.
 */
-  fun process (dataCollection: X_DataCollection)
-  {
-    dataCollection.getDocuments().forEach(::doIt)
-  }
+  fun process (dataCollection: X_DataCollection) = dataCollection.getDocuments().forEach(::doIt)
 
 
 

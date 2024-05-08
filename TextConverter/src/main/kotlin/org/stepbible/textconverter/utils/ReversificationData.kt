@@ -575,21 +575,23 @@ object ReversificationData
 
     acceptedRowsKeyedOnSourceRefKey.forEach { (refKey, reversificationDataRows) ->
       if (1 == reversificationDataRows.size)
-        reversificationDataRows.forEach {
-          when (it.action)
-          {
-            "KeepVerse" -> delenda.add(refKey)
+      {
+        val row = reversificationDataRows[0]
+        when (row.action.lowercase())
+        {
+          "keepverse" -> delenda.add(refKey)
 
-            "IfEmpty", "IfAbsent", "EmptyVerse" ->
-            {
-              if (InternalOsisDataCollection.getBibleStructure().thingExists(it.standardRef))
-                delenda.add(refKey)
-            }
-         }
+          "ifempty", "ifabsent", "emptyverse" ->
+          {
+            if (InternalOsisDataCollection.getBibleStructure().thingExists(row.standardRef))
+              delenda.add(refKey)
+          }
+        }
       }
     }
 
     delenda.forEach { acceptedRowsKeyedOnSourceRefKey.remove(it) }
+    acceptedRowsKeyedOnSourceRefKey.forEach { Dbg.d("---"); it.value.forEach { Dbg.d(it.toString())}}
 
 
 
@@ -1045,7 +1047,9 @@ object ReversificationData
     val ruleData = getField("Tests", dataRow)
     //Dbg.d(ruleData, "Psa.18:51=Last & Psa.18:Title=NotExist")
     val sourceRef = if ("AllBiblesEvenIfNotReversifying" == getField("SourceType", dataRow)) null else dataRow.sourceRef
-    if (m_RuleEvaluator.rulePasses(sourceRef, ruleData, dataRow))
+    if (!m_BibleStructure.bookExists(dataRow.sourceRef))
+      accepted = false // Without this, AllBibles rows would turn up even where we don't have the source book, and I don't think that's what we want.
+    else if (m_RuleEvaluator.rulePasses(sourceRef, ruleData, dataRow))
       accepted = true
 
 

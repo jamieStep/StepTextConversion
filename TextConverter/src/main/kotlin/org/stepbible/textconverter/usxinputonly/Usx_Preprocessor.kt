@@ -12,6 +12,7 @@ import org.stepbible.textconverter.support.ref.RefCollection
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.X_DataCollection
 import org.w3c.dom.Document
+import org.w3c.dom.Node
 
 
 /******************************************************************************/
@@ -100,8 +101,45 @@ object Usx_Preprocessor
     usxDataCollection.getDocuments().forEach {
       val newDoc = applyXslt(it)
       if (null != newDoc)
+      {
+        //temp(newDoc)
         usxDataCollection.replaceDocumentStructure(newDoc)
+        //Dbg.outputDom(newDoc)
+      }
     }
+  }
+
+
+  private fun temp (doc: Document)
+  {
+    fun wrapInWj (node: Node)
+    {
+      val wrapper = Dom.createNode(node.ownerDocument, "<char style='wj'/>")
+      Dom.insertNodeBefore(node, wrapper)
+      Dom.deleteNode(node)
+      wrapper.appendChild(node)
+    }
+
+    Dom.findNodesByAttributeValue(doc, "char", "style", "bd")
+      .forEach {
+        if (Dom.hasAncestorNamed(it, "note"))
+          Dom.setAttribute(it, "XInNote", "1")
+        else
+        {
+          val textContent = it.textContent.trim()
+          if (2 != textContent.length)
+            Dom.setAttribute(it, "XBoring", "1")
+          else
+            if (null == Dom.getChildren(it).find { !Dom.isTextNode(it) } )
+            {
+              Dom.setAttribute(it, "XNotInNote", "1")
+              wrapInWj(it)
+            }
+            else
+              Dom.setAttribute(it, "XBoring", "1")
+        }
+      }
+    //Dbg.outputDom(doc)
   }
 
 

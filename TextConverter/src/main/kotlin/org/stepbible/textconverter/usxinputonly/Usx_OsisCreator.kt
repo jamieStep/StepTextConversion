@@ -59,7 +59,7 @@ object Usx_OsisCreator
     fun writeFn (writer: BufferedWriter)
     {
       m_Out = writer
-      m_Out.write(Osis_Utils.fileHeader(Osis_Utils.makeScope(usxDataCollection.getBookNumbers())))
+      m_Out.write(Osis_Utils.fileHeader(usxDataCollection.getBookNumbers()))
 
       if (1 == usxDataCollection.getNumberOfDocuments()) // All books in a single file.
       {
@@ -424,7 +424,7 @@ object Usx_OsisCreator
        to put certain checks into the output routine, and those were made
        simpler with this kind of split. */
 
-    if (!isClosing && null != tagProcessDetails && ConfigData.TagAction.SuppressContent === tagProcessDetails.second) ++m_SuppressOutput
+    if (!isClosing && null != tagProcessDetails && ConfigData.TagAction.SuppressContent == tagProcessDetails.second) ++m_SuppressOutput
 
     if (tags.isNotEmpty())
     {
@@ -433,7 +433,7 @@ object Usx_OsisCreator
       for (i in 1..< splitTags.size) output("<" + splitTags[i]) // This assumes no inter-tag text, but does permit text at the end.
     }
 
-    if (isClosing && null != tagProcessDetails && ConfigData.TagAction.SuppressContent === tagProcessDetails.second) --m_SuppressOutput
+    if (isClosing && null != tagProcessDetails && ConfigData.TagAction.SuppressContent == tagProcessDetails.second) --m_SuppressOutput
   }
 
 
