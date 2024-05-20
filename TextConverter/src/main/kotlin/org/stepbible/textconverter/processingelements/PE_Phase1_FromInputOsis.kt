@@ -35,5 +35,5 @@ object PE_Phase1_FromInputOsis: PE
 
 
   /****************************************************************************/
-  override fun process () { Phase1TextOutput = File(FileLocations.getInputOsisFilePath()).readText() }
+  override fun process () { Phase1TextOutput = File(FileLocations.getInputOsisFilePath()).readText().replace("\u000c", "") }
 }

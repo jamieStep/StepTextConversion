@@ -23,7 +23,7 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
     /**************************************************************************/
     /* 'Empty' verses are usually given some standard markup like, say, a dash,
        to indicate that they have not been left empty accidentally.
-       Unfortunately, something (osis2mod? STEPBible) suppresses adjacent
+       Unfortunately, something (osis2mod? STEPBible?) suppresses adjacent
        verses whose content is too similar.  With a view to getting around this,
        I include here a stylised comment before the text node.  Later in the
        processing (ie at the point where I am outputting this in the form we
@@ -123,13 +123,44 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
   * @param doc Verse which is marked as being an elision.
   * @param refKey Identifies the scripture reference for the new verse.
   * @param wantEid Determines whether we return an eid.
+  * @param reasonMarker Text to explain why the empty verse has been created.
   */
 
-  fun createEmptyVerseForElision (doc: Document, refKey: RefKey, wantEid: Boolean, elisionMarker: String = "elision"): List<Node>
+  fun createEmptyVerse (doc: Document, refKey: RefKey, wantEid: Boolean, reasonMarker: String): List<Node>
+  {
+    val sid = m_FileProtocol.makeVerseSidNode(doc, Pair(refKey, null))
+    val content = createEmptyContent(doc, m_Content_EmptyVerse)
+    NodeMarker.setEmptyVerseType(sid, reasonMarker) // May be overwritten with a more specific value by the caller.
+    return if (wantEid)
+      listOf(sid, content, m_FileProtocol.makeVerseEidNode(doc, Pair(refKey, null)))
+    else
+      listOf(sid, content)
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Creates an empty verse for use in an elision.  (In fact, the verse does
+  * actually have content -- it carries a marker (a dash, for instance) to help
+  * make it clear that it has been left empty deliberately.)  Note that no
+  * footnote is added to the verse: if we are expanding out elisions, we add
+  * a footnote only to the 'master' verse.
+  *
+  * This is called both for verses which were empty in the raw text and for
+  * empty verse created as a result of processing tables.  If they need to
+  * be differentiated, it is down to the caller to organise that.
+  *
+  * @param doc Verse which is marked as being an elision.
+  * @param refKey Identifies the scripture reference for the new verse.
+  * @param wantEid Determines whether we return an eid.
+  * @param reasonMarker Text to explain why the empty verse has been created.
+  */
+
+  fun createEmptyVerseForElision (doc: Document, refKey: RefKey, wantEid: Boolean, reasonMarker: String = "elision"): List<Node>
   {
     val sid = m_FileProtocol.makeVerseSidNode(doc, Pair(refKey, null))
     val content = createEmptyContent(doc, m_Content_Elision)
-    NodeMarker.setEmptyVerseType(sid, elisionMarker) // May be overwritten with a more specific value by the caller.
+    NodeMarker.setEmptyVerseType(sid, reasonMarker) // May be overwritten with a more specific value by the caller.
     return if (wantEid)
       listOf(sid, content, m_FileProtocol.makeVerseEidNode(doc, Pair(refKey, null)))
     else
@@ -255,10 +286,8 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
   {
     Logger.info(refKey, "Created verse which was missing from the original text.")
 
-    val sidAsString = m_FileProtocol.refToString(refKey)
-    val template = "<verse ID/>"
-    val start = Dom.createNode(rootNode.ownerDocument, template.replace("ID", "${m_FileProtocol.attrName_verseSid()}='$sidAsString'"))
-    val end   = Dom.createNode(rootNode.ownerDocument, template.replace("ID", "${m_FileProtocol.attrName_verseSid()}='$sidAsString'"))
+    val start = m_FileProtocol.makeVerseSidNode(rootNode.ownerDocument, Pair(refKey, null))
+    val end   = m_FileProtocol.makeVerseEidNode(rootNode.ownerDocument, Pair(refKey, null))
     NodeMarker.setAddedFootnote(start).setEmptyVerseType(start, "missingInRawText")
 
     val ib = insertBefore ?: Dom.createNode(rootNode.ownerDocument,"<TempNode/>")

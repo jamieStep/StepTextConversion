@@ -287,7 +287,7 @@ object ContentValidator
         inputContent += " " + gatherContent(anatomyOld.m_AllNodes, rawSid, rawEid, m_FileProtocolOld)
       }
 
-      compare(contentNew, inputContent, refKey, refKey)
+      compare(contentNew, inputContent, refKey, refKey, getAssociatedHeaderMaterial(sidNodeNew))
     } // fun
 
     m_BookAnatomyNew.m_SidToIndex.keys.forEach { check(it) }
@@ -382,7 +382,7 @@ object ContentValidator
     val paraNew = m_BookAnatomyNew.m_chapterSidToPsalmTitle[row.standardRefAsRefKey]!!
     val contentOld = gatherContentForCanonicalTitle(paraOld, m_FileProtocolOld)
     val contentNew = gatherContentForCanonicalTitle(paraNew, m_FileProtocolNew)
-    compare(contentNew, contentOld, row.standardRefAsRefKey, row.sourceRefAsRefKey)
+    compare(contentNew, contentOld, row.standardRefAsRefKey, row.sourceRefAsRefKey, "")
     // No need to call 'done' here because done is concerned only with verses, and here we are effectively dealing with a chapter.
   }
 
@@ -393,7 +393,7 @@ object ContentValidator
 
   private fun checkReversifiedCanonicalTitles_VersesToTitle (owningStandardRefKey: RefKey, rows: List<ReversificationDataRow>)
   {
-    // Dbg.d(owningStandardRefKey.toString())
+    Dbg.d(owningStandardRefKey.toString())
     fun getInputRefKeyUsingSourceField   (row: ReversificationDataRow): RefKey { return row.sourceRefAsRefKey }
 
     val paraNew = m_BookAnatomyNew.m_chapterSidToPsalmTitle[owningStandardRefKey]!!
@@ -402,7 +402,7 @@ object ContentValidator
     val bibleAnatomyOld = m_RawBookAnatomies[Ref.getB(rows[0].sourceRefAsRefKey)]!!
     val contentOld = gatherContentForAllConstituents(bibleAnatomyOld, ::getInputRefKeyUsingSourceField, rows, m_FileProtocolOld)
 
-    compare(contentNew, contentOld, owningStandardRefKey, rows[0].sourceRefAsRefKey)
+    compare(contentNew, contentOld, owningStandardRefKey, rows[0].sourceRefAsRefKey, "")
     // No need to call 'done' here because done is concerned only with verses, and here we are effectively dealing with a chapter.
   }
 
@@ -526,7 +526,7 @@ object ContentValidator
         }
       }
       else
-        compare(contentNew, contentOld, rows[0].standardRefAsRefKey, rows[0].sourceRefAsRefKey)
+        compare(contentNew, contentOld, rows[0].standardRefAsRefKey, rows[0].sourceRefAsRefKey, "")
 
       done(rows[0].standardRefAsRefKey)
     } // fun check
@@ -571,10 +571,18 @@ object ContentValidator
 
      Similarly, &#2013 is an en-dash. */
 
-  private fun compare (enhanced: String, input: String, enhancedRefKey: RefKey, inputRefKey: RefKey)
+  private fun compare (enhanced: String, input: String, enhancedRefKey: RefKey, inputRefKey: RefKey, associatedHeaderContent: String)
   {
+    /**************************************************************************/
+    /* Forgotten what this means.  I _think_ I was using it to mark places
+       where I reckoned the situation was too complicated for validation to be
+       feasible. */
+
     if ('\u0001' in enhanced) return
 
+
+
+    /**************************************************************************/
     val contentEnhanced = enhanced.replace("&#160;".toRegex(), " ") // XML non-breaking space.
                                   .replace("&#x2013;".toRegex(), " ")  // En-dash.
                                   .replace("&nbsp;", " ")
@@ -589,6 +597,33 @@ object ContentValidator
 
     if (contentInput.replace("\\s+".toRegex(), "") == contentEnhanced.replace("\\s+".toRegex(), "")) return
 
+
+
+    /**************************************************************************/
+    /* This is getting too complicated to explain.  Some psalm title checking
+       is driven by what reversification does, and in those cases, I will
+       already have arranged things above such that the test we have just
+       carried out is enough.
+
+       But there are some cases where, irrespective of what reversification
+       might entail, I may have been forced to rearrange things myself.  In
+       these cases, I will have separate title and v1, but may have not done
+       so in the original text.  And in these cases, I will have the content of
+       the associated header in associatedHeaderContent, and will need to try
+       prepending that to the text I am checking. */
+
+    if (associatedHeaderContent.isNotEmpty())
+    {
+      val associatedHeader = associatedHeaderContent.replace("&#160;".toRegex(), " ") // XML non-breaking space.
+                                                    .replace("&#x2013;".toRegex(), " ") // En-dash.
+                                                    .replace("&nbsp;", " ")
+                                                    .replace("\u00a0", " ") // Unicode non-breaking space.
+                                                    .replace("\\s+".toRegex(), " ").trim()
+      if (contentInput.replace("\\s+".toRegex(), "") == (associatedHeader + contentEnhanced).replace("\\s+".toRegex(), "")) return
+    }
+
+
+    /**************************************************************************/
     val message = "Verse mismatch:<nl>  Original = '$contentInput'<nl>     Final = '$contentEnhanced'<nl>"
     error(enhancedRefKey, message)
   }
@@ -644,6 +679,28 @@ object ContentValidator
     }
 
     return res.toString()
+  }
+
+
+  /****************************************************************************/
+  /* In Psalms only (and even then, only on v1) looks to see if the chapter has
+     a canonical title.  If it does, returns the content of the title. */
+
+  private fun getAssociatedHeaderMaterial (v1Sid: Node): String
+  {
+    val sidRef = m_FileProtocolNew.readRef(v1Sid[m_FileProtocolNew.attrName_verseSid()]!!)
+    if (1 != sidRef.getV() || "Psa" != BibleBookNamesUsx.numberToAbbreviatedName(sidRef.getB())) return ""
+
+    var res = ""
+    val chapterNode = Dom.findAncestorByNodeName(v1Sid, m_FileProtocolNew.tagName_chapter())!!
+    val canonicalHeaderNode = Dom.getNodesInTree(chapterNode).firstOrNull { m_FileProtocolNew.isCanonicalTitleNode(it) } ?: return ""
+
+    Dom.getNodesInTree(canonicalHeaderNode).forEach {
+      if (m_FileProtocolNew.isCanonicalNode(it) && Dom.isTextNode(it))
+        res += it.textContent
+    }
+
+    return res
   }
 
 

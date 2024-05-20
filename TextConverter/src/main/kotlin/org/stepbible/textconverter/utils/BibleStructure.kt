@@ -1420,59 +1420,47 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   private fun processCanonicalTitleForChapter (chapterNode: Node)
   {
     /**************************************************************************/
-    //Dbg.dCont(Dom.toString(chapterNode), "Ps.18")
-
-
-
-    /**************************************************************************/
-    fun containsCanonicalText (n: Node) = null != n.getAllNodes().firstOrNull { Dom.isTextNode(it) && !Dom.isWhitespace(it) && m_FileProtocol!!.isCanonicalNode(it) }
+//    Dbg.dCont(Dom.toString(chapterNode), "Ps.11")
+//    Dbg.d(Dom.toString(chapterNode))
 
 
 
     /**************************************************************************/
     var nodesOfInterest: MutableList<Node> = mutableListOf()
-    val nodesWhoseCanonicityWasDeterminedByHittingChapterNode = IdentityHashMap<Node, Int>()
     var wordCount = 0
     val allNodes = chapterNode.getAllNodes()
 
 
 
     /**************************************************************************/
-    /* Run through all nodes which precede the first verse node.  I ignore
-       leading whitespace and leading nodes which definitely aren't canonical,
-       and accumulate everything else. */
+    /* Get a list of canonical nodes prior to the first verse node.  We skip
+       the first node, because that's the chapter*/
 
-    for (i in 1 .. allNodes.size) // Node zero is the chapter, which is not itself of interest.
+    for (i in 1 ..< allNodes.size)
     {
       val n = allNodes[i]
 
-      if (m_FileProtocol!!.tagName_verse() == Dom.getNodeName(n))
+      if (m_FileProtocol!!.tagName_verse() == Dom.getNodeName(n)) // Stop when we hit the first verse.
         break
 
-      val verseEndInteraction = m_FileProtocol!!.getVerseEndInteractionSelfOrAncestor(n) // How this interacts with verse-ends if also good enough for us.
-      when (verseEndInteraction.first)
-      {
-        'Y' -> // This is recorded as canonical.
-        {
-          if (Dom.isTextNode(n)) // Accumulate word count if it's a text node.
-            wordCount += StepStringUtils.wordCount(n.textContent)
-
-          if (!Dom.isWhitespace(n) || nodesOfInterest.isNotEmpty())
-            nodesOfInterest.add(n) // Add to collection if either this has made a contribution or we're already collecting stuff.
-
-          if (chapterNode == verseEndInteraction.second)
-            nodesWhoseCanonicityWasDeterminedByHittingChapterNode[n] = 0
-        }
-
-        'N' ->
-        {
-          if (nodesOfInterest.isNotEmpty())
-            nodesOfInterest.add(n)
-        }
-
-        'X' -> throw StepException("BibleStructure canonical title processing: Unknown node: ${Dom.toString(n)}")
-      } // when
+      if (m_FileProtocol.isCanonicalNode(n))
+        nodesOfInterest.add(n)
     } // for
+
+
+
+    /**************************************************************************/
+    /* Get word count.  I _believe_ I'm correct in saying here that we will
+       have all relevant text nodes in the list, and none which are
+       irrelevant, so the isCanonicalNode test below is probably redundant.
+       I believe I'll get the correct word count even if we have a node which
+       spans the first verse node and has text before it.  Mind you, if we
+       have that situation, I'm not too sure what's going to happen with
+       the processing more generally. */
+
+    nodesOfInterest
+      .filter { Dom.isTextNode(it) && m_FileProtocol!!.isCanonicalNode(it) }
+      .forEach { wordCount += StepStringUtils.wordCount(it.textContent) }
 
 
 
@@ -1484,127 +1472,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
-    /* Bit difficult to explain, but let's try an example.
-
-       At this point, nodesOfInterest contains a lst of nodes which precede
-       the first verse tag and which are direct children of the chapter.
-       (The list may be empty.)
-
-       I now want to remove from the front of the list any nodes which don't
-       actually reflect a canonical title.
-
-       Any leading whitespace can definitely go (although I think earlier
-       processing will probably have excluded this anyway).
-
-       What remains are nodes which we know are definitely canonical, or
-       nodes whose canonicity has to be deduced from context.  The latter
-       are the remaining ones which may need to be pruned -- they need to
-       go if they actually contain no canonical content. */
-
-    while (nodesOfInterest.isNotEmpty())
-    {
-      /************************************************************************/
-      val n = nodesOfInterest[0]
-
-
-
-      /************************************************************************/
-      if (Dom.isWhitespace(n)) // Definitely don't want leading whitespace.
-      {
-        nodesOfInterest = nodesOfInterest.subList(1, nodesOfInterest.size)
-        continue
-      }
-
-
-
-      /************************************************************************/
-      if (Dom.isTextNode(n)) // Definitely do want leading text.
-        break
-
-
-
-      /************************************************************************/
-      if ('N' == m_FileProtocol!!.getVerseEndInteraction(n).first)
-      {
-        nodesOfInterest = nodesOfInterest.subList(1, nodesOfInterest.size)
-        continue
-      }
-
-
-
-      /************************************************************************/
-      /* This looks for nodes which are inherently canonical.  If we hit one of
-         these, we definitely need to retain it. */
-
-      if (n !in nodesWhoseCanonicityWasDeterminedByHittingChapterNode)
-        break
-
-
-
-      /************************************************************************/
-      if (containsCanonicalText(n))
-        break
-      else
-        nodesOfInterest = nodesOfInterest.subList(1, nodesOfInterest.size)
-    }
-
-
-
-    /**************************************************************************/
-    /* We now do something similar, but running back from the end of the
-       list. */
-
-    while (nodesOfInterest.isNotEmpty())
-    {
-      /************************************************************************/
-      val n = nodesOfInterest.last()
-
-
-
-      /************************************************************************/
-      if (Dom.isWhitespace(n)) // Definitely don't want leading whitespace.
-      {
-        nodesOfInterest = nodesOfInterest.subList(0, nodesOfInterest.size - 1)
-        continue
-      }
-
-
-
-      /************************************************************************/
-      if (Dom.isTextNode(n)) // Definitely do want leading text.
-        break
-
-
-
-      /************************************************************************/
-      if ('N' == m_FileProtocol!!.getVerseEndInteraction(n).first)
-      {
-        nodesOfInterest = nodesOfInterest.subList(0, nodesOfInterest.size - 1)
-        continue
-      }
-
-
-
-      /************************************************************************/
-      /* This looks for nodes which are inherently canonical.  If we hit one of
-         these, we definitely need to retain it. */
-
-      if (n !in nodesWhoseCanonicityWasDeterminedByHittingChapterNode)
-        break
-
-
-
-      /************************************************************************/
-      if (containsCanonicalText(n))
-        break
-      else
-        nodesOfInterest = nodesOfInterest.subList(0, nodesOfInterest.size - 1)
-    }
-
-
-
-    /**************************************************************************/
-    if (nodesOfInterest.isNotEmpty())
+    if (wordCount > 0 && nodesOfInterest.isNotEmpty())
       m_Text.m_CanonicalTitleDetails[m_FileProtocol!!.readRef(chapterNode[m_FileProtocol.attrName_chapterSid()]!!).toRefKey_bc()] =
         CanonicalTitleDetails(wordCount, nodesOfInterest.filter { m_FileProtocol!!.tagName_chapter() == Dom.getNodeName(it.parentNode) })
   }
@@ -1646,11 +1514,11 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   {
     val dummyNode = chapterNode.ownerDocument.createNode("<${m_FileProtocol!!.tagName_verse()}/>")
     chapterNode.appendChild(dummyNode)
-    val verseNodes = chapterNode.findNodesByName(m_FileProtocol!!.tagName_verse())
+    val verseNodes = chapterNode.findNodesByName(m_FileProtocol.tagName_verse())
     for (i in 1..< verseNodes.size)
     {
-      val newNode = chapterNode.ownerDocument.createNode("<${m_FileProtocol!!.tagName_verse()}/>")
-      newNode[m_FileProtocol!!.attrName_verseEid()] = verseNodes[i - 1][m_FileProtocol!!.attrName_verseSid()]!!
+      val newNode = chapterNode.ownerDocument.createNode("<${m_FileProtocol.tagName_verse()}/>")
+      newNode[m_FileProtocol.attrName_verseEid()] = verseNodes[i - 1][m_FileProtocol.attrName_verseSid()]!!
       Dom.insertNodeBefore(verseNodes[i], newNode)
     }
 

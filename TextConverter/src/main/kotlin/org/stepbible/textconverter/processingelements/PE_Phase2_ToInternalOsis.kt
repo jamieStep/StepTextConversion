@@ -125,7 +125,6 @@ object PE_Phase2_ToInternalOsis : PE
 
     StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath())
     InternalOsisDataCollection.loadFromText(Phase1TextOutput); x()
-    SE_LastDitchTidier(InternalOsisDataCollection).preProcessNodesMarkedRetainOriginal()
     RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()); x() // Needed to cater for the possible requirement to expand ranges.
     val doc = InternalOsisDataCollection.getDocument()
     Phase1TextOutput = ""
@@ -158,9 +157,11 @@ object PE_Phase2_ToInternalOsis : PE
        processing, in case anything goes wrong -- otherwise people might find
        a saved version lying around and automatically assume it's ok. */
 
-    SE_VerseEndRemover(InternalOsisDataCollection).processAllRootNodes()
-    ExternalOsisDataCollection.loadFromDocs(listOf(InternalOsisDataCollection.getDocument()))
-    ExternalOsisDataCollection.copyProcessRegistryFrom(InternalOsisDataCollection)
+    SE_VerseEndRemover(InternalOsisDataCollection).processAllRootNodes(); x()
+    ExternalOsisDataCollection.loadFromDocs(listOf(InternalOsisDataCollection.getDocument())); x()
+    ExternalOsisDataCollection.copyProcessRegistryFrom(InternalOsisDataCollection); x()
+
+    Osis_CanonicalHeadingsHandler(InternalOsisDataCollection).process()
 
     if ("osis" != ConfigData["stepOriginData"]!!)
     {
@@ -168,6 +169,8 @@ object PE_Phase2_ToInternalOsis : PE
       SE_BasicVerseEndInserter(ExternalOsisDataCollection).processAllRootNodes(); x()
       addComment(ExternalOsisDataCollection.getDocument(), "Externally-facing OSIS")
     }
+
+    //Dbg.d(InternalOsisDataCollection.getDocument())
 
 
 
@@ -194,19 +197,21 @@ object PE_Phase2_ToInternalOsis : PE
 
 
     /**************************************************************************/
-    SE_BasicValidator(InternalOsisDataCollection).structuralValidation(InternalOsisDataCollection)  // Checks for basic things like all verses being under chapters.
+    SE_BasicValidator(InternalOsisDataCollection).structuralValidation(); x()                       // Checks for basic things like all verses being under chapters.
     SE_ListEncapsulator(InternalOsisDataCollection).processAllRootNodes(); x()                      // Might encapsulate lists (but in fact does not do so currently).
     Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                             // Checks for invalid cross-references, or cross-references which point to non-existent places.
     handleReversification(); x()                                                                    // Does what it says on the tin.
+    SE_BasicValidator(InternalOsisDataCollection).finalValidationAndCorrection(); x()               // Final checks.  May create empty verses if necessary.
     // $$$ SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()              // Collapses subverses into the owning verses, if that's what we're doing (mainly or exclusively on public modules).
     SE_CalloutStandardiser(InternalOsisDataCollection).processAllRootNodes(); x()                   // Force callouts to be in house style, assuming that's what we want.
-    removeDummyVerses(InternalOsisDataCollection); x()                                              // Ditto.
+    removeDummyVerses(InternalOsisDataCollection); x()                                              // Does what it says on the tin.
     ContentValidator.process(InternalOsisDataCollection, Osis_FileProtocol, ExternalOsisDataCollection, Osis_FileProtocol); x() // Checks current canonical content against original.
     EmptyVerseHandler.preventSuppressionOfEmptyVerses(InternalOsisDataCollection); x()              // Unless we take steps, empty verses tend to be suppressed when rendered.
     EmptyVerseHandler(InternalOsisDataCollection).markVersesWhichWereEmptyInTheRawText(); x()       // Back to doing what it says on the tin.
+Dbg.d(InternalOsisDataCollection.getDocument())
     SE_TextAnalyser(InternalOsisDataCollection).processAllRootNodes(); x()                          // Gather up information which might be useful to someone administering texts.
-    SE_LastDitchTidier(InternalOsisDataCollection).processAllRootNodes(); x()                       // Ad hoc last minute tidying.
-    ProtocolConverterInternalOsisToOsisWhichOsis2modCanUse.process(InternalOsisDataCollection); x() // Converts what we have back to something close enough to standard OSIS to be reasonably confident osis2mod can handle it.
+    SE_FinalInternalOsisTidier(InternalOsisDataCollection).processAllRootNodes(); x()                       // Ad hoc last minute tidying.
+    SE_LastDitchValidator(InternalOsisDataCollection).processAllRootNodes(); x()                    // Final health checks.
     Dom.outputDomAsXml(InternalOsisDataCollection.getDocument(),                                    // Save the OSIS so it's available to osis2mod.
                        FileLocations.getInternalOsisFilePath(),
             null)
@@ -218,15 +223,43 @@ object PE_Phase2_ToInternalOsis : PE
   /***************************************************************************/
   /* Time to worry about reversification.  First off, we need to read the
      data and determine how far adrift of NRSVA we are, so we can decide what
-     kind of reversification (if any) might be appropriate. */
+     kind of reversification (if any) might be appropriate.
+
+     There are then three possible values for stepReversificationType:
+
+     - runtime: This says that any restructuring will be carried out within
+       STEPBible at run-time when necessary to support added value features.
+
+     - conversiontime: This says that we will restructure the text during the
+       conversion process so as to produce something which is already NRSV(A)
+       compliant.  This will probably not be used much, because the sort of
+       large-scale changes which it gives rise to are usually rules out by
+       licence conditions.  (We may use it on public domain texts aimed mainly
+       at an academic audience who can understand what's going on.)
+
+     - none: This rules out most restructuring (but not all - see below).  It
+       will be selected where we are definitely generating public domain texts
+       and conversion-time restructuring has not been chosen; and where texts
+       are already NRSV(A) compliant, so that no restructuring is required.
+
+     There is one particular consideration -- missing verses.  Even where texts
+     are 'complete' in the sense that they contain a full complement of books
+     and chapters, it is not always the case that they contain all verses.
+
+     Sometimes, verses may be missing at the ends of chapters.  In general, this
+     is not a problem -- nothing will break as a result.  But sometimes verses
+     may be missing within the body of a chapter, and this _is_ a problem.
+
+     The reversification data foresees this issue in 'recognised' cases and
+     includes data rows which address it.  But it is always possible that
+     texts may lack verses nonetheless.
+   */
 
   private fun handleReversification ()
   {
-    //Dbg.d(InternalOsisDataCollection.getDocument())
-    ReversificationData.process(InternalOsisDataCollection)
-    Osis_DetermineReversificationTypeEtc.process(InternalOsisDataCollection.getBibleStructure())
-
-    Osis_CanonicalHeadingsHandler(InternalOsisDataCollection).process()
+     //Dbg.d(InternalOsisDataCollection.getDocument())
+    ReversificationData.process(InternalOsisDataCollection) // Read the data.
+    Osis_DetermineReversificationTypeEtc.process(InternalOsisDataCollection.getBibleStructure()) // Use that to work out what we need to do.
 
     when (ConfigData["stepReversificationType"]!!.lowercase())
     {
@@ -250,9 +283,8 @@ object PE_Phase2_ToInternalOsis : PE
   private fun removeDummyVerses (dataCollection: X_DataCollection)
   {
     Dbg.reportProgress("Removing any dummy verses.")
-    dataCollection.getRootNodes().forEach {rootNode ->
+    dataCollection.getRootNodes().forEach { rootNode ->
       Dom.findNodesByName(rootNode, dataCollection.getFileProtocol().tagName_verse(), false).filter { NodeMarker.hasDummy(it) }.forEach { Dom.deleteNode(it) }
-      Dom.setNodeName(rootNode, "div")
     }
   }
 }

@@ -591,7 +591,7 @@ object ReversificationData
     }
 
     delenda.forEach { acceptedRowsKeyedOnSourceRefKey.remove(it) }
-    acceptedRowsKeyedOnSourceRefKey.forEach { Dbg.d("---"); it.value.forEach { Dbg.d(it.toString())}}
+    //acceptedRowsKeyedOnSourceRefKey.forEach { Dbg.d("---"); it.value.forEach { Dbg.d(it.toString())}}
 
 
 
@@ -778,7 +778,7 @@ object ReversificationData
 
     /**************************************************************************/
     var rowNumber = 0
-    filteredData.forEach { loadRow(it, ++rowNumber, rawData.size) }
+    filteredData.forEach { loadRow(it, ++rowNumber, filteredData.size) }
     //$$$Dbg.displayReversificationRows(getAllAcceptedRows())
 
 
@@ -2091,6 +2091,7 @@ object ReversificationData
     m_TextKeyMap["As normal in this Bible the text for this verse is included in the previous verse"] = "V_reversification_asNormalInThisBibleTheTextForThisVerseIsIncludedInThePreviousVerse"
     m_TextKeyMap["As normal in this Bible the text for this verse is merged with"] = "V_reversification_asNormalInThisBibleTheTextForThisVerseIsMergedWith"
     m_TextKeyMap["As normal in this Bible the text for this verse is merged with"] = "V_reversification_asNormalInThisBibleTheTextForThisVerseIsMergedWith"
+    m_TextKeyMap["As normal in this Bible this verse contains the text of"] = "V_reversification_asNormalInThisBibleThisVerseContainsTheTextOf"
     m_TextKeyMap["As normal in this Bible this verse includes the text of"] = "V_reversification_asNormalInThisBibleThisVerseIncludesTheTextOf"
     m_TextKeyMap["As normal in this Bible this verse is followed by the contents of"] = "V_reversification_asNormalInThisBibleThisVerseIsFollowedByTheContentsOf"
     m_TextKeyMap["At the end of this verse some manuscripts add information such as where this letter was written"] = "V_reversification_atTheEndOfThisVerseSomeManuscriptsAddInformationSuchAsWhereThisLetterWasWritten"
@@ -2111,6 +2112,7 @@ object ReversificationData
     m_TextKeyMap["Normally in this Bible similar text is found at"] = "V_reversification_normallyInThisBibleSimilarTextIsFoundAt"
     m_TextKeyMap["Normally in this Bible the verse numbering here is"] = "V_reversification_normallyInThisBibleTheVerseNumberingHereIs"
     m_TextKeyMap["In many Bibles this is split into more than one verse"] = "V_reversification_inManyBiblesThisIsSplitIntoMoreThanOneVerse"
+    m_TextKeyMap["Normally in this Bible this verse and the next occur as one verse that is numbered"] = "V_reversification_normallyInThisBibleThisVerseAndTheNextOccurAsOneVerseThatIsNumbered"
     m_TextKeyMap["Normally in this Bible this verse does not contain any text"] = "V_reversification_normallyInThisBibleThisVerseDoesNotContainAnyText"
     m_TextKeyMap["Normally in this Bible this verse includes words that are at"] = "V_reversification_normallyInThisBibleThisVerseIncludesWordsThatAreAt"
     m_TextKeyMap["Normally in this Bible this verse is followed by contents similar to"] = "V_reversification_normallyInThisBibleThisVerseIsFollowedByContentsSimilarTo"

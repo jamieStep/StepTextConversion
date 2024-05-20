@@ -53,25 +53,6 @@ object Dom
 
     /****************************************************************************/
     /**
-     * Adds a list of children to the existing children of a given node.
-     *
-     * @param parent Parent node.
-     * @param newChildren Children to be added (null or empty are ok).
-     */
-
-    fun addChildren (parent: Node, newChildren: NodeList?)
-    {
-        if (null == newChildren) return
-        for (i in 0..< newChildren.length)
-        {
-            val n = createNode(parent.ownerDocument, newChildren.item(i), true)
-            parent.appendChild(n)
-        }
-    }
-
-
-    /****************************************************************************/
-    /**
      * Adds a list of children to the existing children of a given node.  Note
      * that there is no need for the children and the new parent to be in the same
      * document.
@@ -253,7 +234,7 @@ object Dom
     fun getNodesInTree (startNode: Node): List<Node>
     {
         val res: MutableList<Node> = ArrayList()
-        if ("#document" != Dom.getNodeName(startNode)) res.add(startNode)
+        if ("#document" != getNodeName(startNode)) res.add(startNode)
         getNodesInTree(res, startNode)
         return res
     }
@@ -661,36 +642,6 @@ object Dom
 
     /****************************************************************************/
     /**
-     * Returns the closest ancestor of a given node having a given name with a
-     * given attribute, the latter having a given value.  Returns null if not
-     * found.
-     *
-     * @param descendant Node from which we work.
-     * @param nodeName Node name of ancestor.
-     * @param attributeName What it says on the tin.
-     * @param attributeValue What it says on the tin.
-     * @return Ancestor.
-     */
-
-    fun findAncestorByAttributeValue (descendant: Node, nodeName: String, attributeName: String, attributeValue: String): Node?
-    {
-        var n: Node? = descendant
-        while (true)
-        {
-            n = getParent(n!!)
-            if (null == n) break
-            if (nodeName != getNodeName(n)) continue
-            if (!hasAttribute(n, attributeName)) continue
-            if (attributeValue != getAttribute(n, attributeName)) continue
-            return n
-        }
-
-        return null
-    }
-
-
-    /****************************************************************************/
-    /**
      * Returns a list of all comment nodes.
      */
 
@@ -728,14 +679,15 @@ object Dom
      * @return Node list or null.
      */
 
-    fun findNodesByAttributeName (n: Node?, nodeName: String, attributeName: String): List<Node>
+    fun findNodesByAttributeName (n: Node?, nodeName: String, attributeName: String, xPathConstant: javax.xml.namespace.QName = XPathConstants.NODESET): List<Node>
     {
         return try
         {
             val xPathFactory = XPathFactory.newInstance()
             val xPath = xPathFactory.newXPath()
-            val expr = xPath.compile(".//$nodeName[@$attributeName]")
-            val res = expr.evaluate(n, XPathConstants.NODESET) as NodeList
+            //val expr = xPath.compile(".//$nodeName[@$attributeName]")
+            val expr = xPath.compile(".//*[local-name()='$nodeName' and @$attributeName]")
+            val res = expr.evaluate(n, xPathConstant) as NodeList
             toListOfNodes(res)
         }
         catch (e: Exception)
@@ -777,7 +729,7 @@ object Dom
         {
             val xPathFactory = XPathFactory.newInstance()
             val xPath = xPathFactory.newXPath()
-            val expr = xPath.compile(".//$nodeName[@$attributeName][1]")
+            val expr = xPath.compile(".//*[local-name()='$nodeName' and @$attributeName][1]")
             expr.evaluate(n, XPathConstants.NODE) as Node
         }
         catch (e: Exception)
@@ -795,13 +747,13 @@ object Dom
      * @param doc Owning document.
      * @param nodeName Node type.
      * @param attributeName Name of attribute.
-     * @param value Value of attribute.
+     * @param value Exact value of attribute (except case-insensitive).
      * @return Node or null.
      */
 
     fun findNodeByAttributeValue (doc: Document, nodeName: String, attributeName: String, value: String): Node?
     {
-        return findNodeByAttributeValue(doc.documentElement, nodeName, attributeName, value)
+      return findNodeByAttributeValue(doc.documentElement, nodeName, attributeName, value)
     }
 
 
@@ -810,72 +762,126 @@ object Dom
      * Finds the first node of a given type having a given attribute with a given
      * value.  Matching is case-insensitive.
      *
-     * @param n Owning node.
+     * @param parent Node below which other nodes are located.
      * @param nodeName Node type.
      * @param attributeName Name of attribute.
-     * @param value Value of attribute.
+     * @param value Exact value of attribute (except case-insensitive).
      * @return Node or null.
      */
 
-    fun findNodeByAttributeValue (n: Node, nodeName: String, attributeName: String, value: String): Node?
+    fun findNodeByAttributeValue (parent: Node, nodeName: String, attributeName: String, value: String): Node?
     {
-        return try
-        {
-            val xpath = m_xPathFactory.newXPath()
-            val expr = xpath.compile(".//$nodeName[matches(@$attributeName, '^$value$', 'i')][1]")
-            val res = expr.evaluate(n, XPathConstants.NODE)
-            return if (null == res) null else res as Node
-        }
-        catch (e: Exception)
-        {
-            throw StepException(e)
-        }
+       return findNodeByAttributeValueInternal(parent, nodeName, attributeName, value)
     }
 
 
     /****************************************************************************/
     /**
-     * Returns a list of nodes of a given type having a given attribute with a
-     * given value.  Matching is case-insensitive.
+     * Finds the first node of a given type having a given attribute with a given
+     * value.  Matching is case-insensitive.
      *
      * @param doc Owning document.
      * @param nodeName Node type.
      * @param attributeName Name of attribute.
-     * @param value Value of attribute.
-     * @return Node list or null.
+     * @param value Value of attribute as Regex.
+     * @return Node or null.
      */
 
-    fun findNodesByAttributeValue (doc: Document, nodeName: String, attributeName: String, value: String): List<Node>
+    fun findNodeByAttributeValue (doc: Document, nodeName: String, attributeName: String, value: Regex): Node?
     {
-        return findNodesByAttributeValue(doc.documentElement, nodeName, attributeName, value)
+      return findNodeByAttributeValueInternal(doc.documentElement, nodeName, attributeName, value)
     }
 
 
     /****************************************************************************/
     /**
-     * Returns a list of nodes of a given type having a given attribute with a
-     * given value.
+     * Finds the first node of a given type having a given attribute with a given
+     * value.  Matching is case-insensitive.
      *
-     * @param n Owning Node.
+     * @param parent Node below which search occurs.
      * @param nodeName Node type.
      * @param attributeName Name of attribute.
-     * @param value Value of attribute.
-     * @return Node list or null.
+     * @param value Value of attribute as Regex.
+     * @return Node or null.
      */
 
-    fun findNodesByAttributeValue (n: Node, nodeName: String, attributeName: String, value: String): List<Node>
+    fun findNodeByAttributeValue (parent: Node, nodeName: String, attributeName: String, value: Regex): Node?
     {
-        return try
-        {
-            val xpath = m_xPathFactory.newXPath()
-            val expr = xpath.compile(".//$nodeName[matches(@$attributeName, '^$value$', 'i')]")
-            toListOfNodes(expr.evaluate(n, XPathConstants.NODESET) as NodeList)
-        }
-        catch (e: Exception)
-        {
-            throw StepException(e)
-        }
+      return findNodeByAttributeValueInternal(parent, nodeName, attributeName, value)
     }
+
+
+    /****************************************************************************/
+    /**
+     * Finds the first node of a given type having a given attribute with a given
+     * value.  Matching is case-insensitive.
+     *
+     * @param doc Owning document.
+     * @param nodeName Node type.
+     * @param attributeName Name of attribute.
+     * @param value Exact value of attribute (except case-insensitive).
+     * @return Node or null.
+     */
+
+    fun findNodesByAttributeValue (doc: Document, nodeName: String, attributeName: String, value: String): List<Node>
+    {
+      return findNodesByAttributeValueInternal(doc.documentElement, nodeName, attributeName, value)
+    }
+
+
+    /****************************************************************************/
+    /**
+     * Finds the first node of a given type having a given attribute with a given
+     * value.  Matching is case-insensitive.
+     *
+     * @param parent Node below which other nodes are located.
+     * @param nodeName Node type.
+     * @param attributeName Name of attribute.
+     * @param value Exact value of attribute (except case-insensitive).
+     * @return Node or null.
+     */
+
+    fun findNodesByAttributeValue (parent: Node, nodeName: String, attributeName: String, value: String): List<Node>
+    {
+       return findNodesByAttributeValueInternal(parent, nodeName, attributeName, value)
+    }
+
+
+    /****************************************************************************/
+    /**
+     * Finds the first node of a given type having a given attribute with a given
+     * value.  Matching is case-insensitive.
+     *
+     * @param doc Owning document.
+     * @param nodeName Node type.
+     * @param attributeName Name of attribute.
+     * @param value Value of attribute as Regex.
+     * @return Node or null.
+     */
+
+    fun findNodesByAttributeValue (doc: Document, nodeName: String, attributeName: String, value: Regex): List<Node>
+    {
+      return findNodesByAttributeValueInternal(doc.documentElement, nodeName, attributeName, value)
+    }
+
+
+    /****************************************************************************/
+    /**
+     * Finds the first node of a given type having a given attribute with a given
+     * value.  Matching is case-insensitive.
+     *
+     * @param parent Node below which search occurs.
+     * @param nodeName Node type.
+     * @param attributeName Name of attribute.
+     * @param value Value of attribute as Regex.
+     * @return Node or null.
+     */
+
+    fun findNodesByAttributeValue (parent: Node, nodeName: String, attributeName: String, value: Regex): List<Node>
+    {
+      return findNodesByAttributeValueInternal(parent, nodeName, attributeName, value)
+    }
+
 
 
     /****************************************************************************/
@@ -896,7 +902,7 @@ object Dom
     }
 
 
-     /****************************************************************************/
+    /****************************************************************************/
     /**
      * Returns the first node with a given name under a given node, or null if not
      * found.
@@ -1022,173 +1028,6 @@ object Dom
         val res = toListOfNodes((node as Element).getElementsByTagName(nodeName)).toMutableList()
         if (includeParent && nodeName == getNodeName(node)) res.add(0, node)
         return res
-    }
-
-
-    /****************************************************************************/
-    /**
-     * Returns a list of nodes whose names match the given regular expression.
-     *
-     *
-     * CAUTION: Experience suggests that this can return nodes with partial
-     * matches.  For example, if you ask for FRED, it will also return FREDERICK.
-     * If this is an issue, you should use ^ and $ to bracket the strings of
-     * interest.
-     *
-     * IMPORTANT: You can't use this method to find text nodes.
-     *
-     * @param doc Owning document.
-     * @param nodeNameRegex Regular expression for node name.
-     * @return Node list.
-     */
-
-    fun findNodesByRegexNodeName (doc: Document, nodeNameRegex: String): List<Node>
-    {
-        return findNodesByRegexNodeName(doc.documentElement, nodeNameRegex)
-    }
-
-
-    /****************************************************************************/
-    /**
-     * Returns the first node whose name matches the given regular expression.
-     *
-     *
-     * CAUTION: Experience suggests that this can return nodes with partial
-     * matches.  For example, if you ask for FRED, it will also return FREDERICK.
-     * If this is an issue, you should use ^ and $ to bracket the strings of
-     * interest.
-     *
-     *
-     * IMPORTANT: You can't use this method to find text nodes.
-     *
-     * @param n Parent node.
-     * @param nodeNameRegex Regular expression for node name.
-     * @return Node or null.
-     */
-
-    fun findNodeByRegexNodeName (n: Node, nodeNameRegex: String): Node
-    {
-        return try
-        {
-            val xpath = m_xPathFactory.newXPath()
-            val expr = xpath.compile(".//*[matches(name(), '$nodeNameRegex')][1]")
-            expr.evaluate(n, XPathConstants.NODE) as Node
-        }
-        catch (e: Exception)
-        {
-            throw StepException(e)
-        }
-    }
-
-
-    /****************************************************************************/
-    /**
-     * Returns a list of nodes whose names match the given regular expression.
-     *
-     *
-     * CAUTION: Experience suggests that this can return nodes with partial
-     * matches.  For example, if you ask for FRED, it will also return FREDERICK.
-     * If this is an issue, you should use ^ and $ to bracket the strings of
-     * interest.
-     *
-     *
-     * IMPORTANT: You can't use this method to find text nodes.
-     *
-     * @param node Node below which we search.
-     * @param nodeNameRegex Regular expression for node name.
-     * @return Node list.
-     */
-
-    fun findNodesByRegexNodeName (node: Node, nodeNameRegex: String): List<Node>
-    {
-        return try
-        {
-            val xpath = m_xPathFactory.newXPath()
-            val expr = xpath.compile(".//*[matches(name(), '$nodeNameRegex')]")
-            toListOfNodes(expr.evaluate(node, XPathConstants.NODESET) as NodeList)
-        }
-        catch (e: Exception)
-        {
-            throw StepException(e)
-        }
-    }
-
-
-    /****************************************************************************/
-    /**
-     * Returns the first node selected by the given xpath.
-     *
-     * @param doc Owning document.
-     * @param xpathExpression XPath expression.
-     * @return Node or null.
-     */
-
-    fun findNodeByXpath (doc: Document, xpathExpression: String): Node
-    {
-        return findNodeByXpath(doc.documentElement, xpathExpression)
-    }
-
-
-    /****************************************************************************/
-    /**
-     * Returns the first node selected by the given xpath.
-     *
-     * @param node Node below which evaluation occurs.
-     * @param xpathExpression XPath expression.
-     * @return Node or null.
-     */
-
-    fun findNodeByXpath (node: Node, xpathExpression: String): Node
-    {
-        return try
-        {
-            val xpath = m_xPathFactory.newXPath()
-            val expr = xpath.compile("$xpathExpression[1]")
-            expr.evaluate(node, XPathConstants.NODE) as Node
-        }
-        catch (e: Exception)
-        {
-            throw StepException(e)
-        }
-    }
-
-
-    /****************************************************************************/
-    /**
-     * Returns a list of those nodes selected by the given xpath.
-     *
-     * @param doc Owning document.
-     * @param xpathExpression XPath expression.
-     * @return Node list.
-     */
-
-    fun findNodesByXpath (doc: Document, xpathExpression: String?): List<Node>
-    {
-        return findNodesByXpath(doc.documentElement, xpathExpression)
-    }
-
-
-     /****************************************************************************/
-    /**
-     * Returns a list of those nodes selected by the given xpath.
-     *
-     * @param node Owning node.
-     * @param xpathExpression XPath expression.
-     * @return Node list.
-     */
-
-    fun findNodesByXpath (node: Node, xpathExpression: String?): List<Node>
-    {
-        return try
-        {
-            val xpath = m_xPathFactory.newXPath()
-            val expr = xpath.compile(xpathExpression)
-            toListOfNodes(expr.evaluate(node, XPathConstants.NODESET) as NodeList)
-        }
-        catch (e: Exception)
-        {
-            throw StepException(e)
-        }
     }
 
 
@@ -1381,24 +1220,6 @@ object Dom
 
     /****************************************************************************/
     /**
-     * If a node has a child with a given name, returns the first such child.
-     * Otherwise returns null.
-     *
-     * @param n Node.
-     * @param childName Required name.
-     * @return First child of the given name, or null.
-     */
-
-    fun getChildNamed (n: Node, childName: String): Node?
-    {
-        val nl = n.childNodes
-        for (i in 0..< nl.length) if (childName == nl.item(i).nodeName) return nl.item(i)
-        return null
-    }
-
-
-    /****************************************************************************/
-    /**
      * Looks at the children of the parent of a given node, and determines the
      * index within the list of children at which the given node resides.
      *
@@ -1519,19 +1340,14 @@ object Dom
          be made namespace aware below.  Parsing USX is fine because it has no
          namespace setting.  But parsing OSIS (which recent requirement changes
          have made necessary) is a problem, because according to the
-         documentation you do need namespace details there.  The problem is
-         that if the namespace is included in the OSIS, then the various 'find'
-         facilities here don't work, and I don't know how to fix them -- the
-         only workaround I've been able to find is to make the factory non-
-         namespace aware.  But if I do that, then if I have to write out
-         revised OSIS, you get a warning saying that a default namespace has
-         been defined but things aren't namespace aware.
+         documentation you do need namespace details there.
 
-         The fix I've adopted overall (until I discover that it doesn't work)
-         is to remove the namespace details from the OSIS (but I've left a
-         comment there to indicate what they would have been.  As a matter of
-         fact, none of the URI's given in the OSIS reference manual for the
-         namespace exists anyway. */
+         I have decided to retain namespace awareness.  However this means you
+         have to be careful within the implementation of the various find*
+         methods here to use name-local() to pick up the node names.
+
+         (For some reason, findNodesByName doesn't seem to be affected by this
+         issue.) */
 
         System.setProperty("javax.xml.xpath.XPathFactory:" + NamespaceConstant.OBJECT_MODEL_SAXON, "net.sf.saxon.xpath.XPathFactoryImpl")
         val factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
@@ -1787,29 +1603,28 @@ object Dom
      * @return Node list (empty if no siblings).
      */
 
-    fun getSiblings(node: Node): List<Node>
+    fun getSiblings (node: Node): List<Node>
     {
-        val parent = getParent(node) ?: return ArrayList()
+        val parent = getParent(node) ?: return listOf()
         return toListOfNodes(parent.childNodes)
     }
 
 
     /****************************************************************************/
     /**
-     * Assumes that 'start' and 'end' are siblings, and returns a list of all of
-     * their siblings which lie strictly between start and end.
+     * Gets all younger siblings of a given node.
      *
      * @param start Start node.
-     * @param end End node (must be sibling of start node).
+     * @param includeStart If true, the start node is included in the result.
      * @return List of siblings.
      */
 
-    fun getSiblingsBetween (start: Node, end: Node): List<Node>
+    fun getSiblingsStartingAt (start: Node, includeStart: Boolean): List<Node>
     {
-        val res: MutableList<Node> = ArrayList()
-        var sibling = start
-        while (end !== sibling.nextSibling.also { sibling = it }) res.add(sibling)
-        return res
+      val allSiblings = getSiblings(start)
+      val ix = allSiblings.indexOf(start)
+      if (1 == allSiblings.size && !includeStart) return listOf()
+      return allSiblings.subList(if (includeStart) ix else ix + 1, allSiblings.size)
     }
 
 
@@ -2137,30 +1952,6 @@ object Dom
 
     /****************************************************************************/
     /**
-     * Determines whether a given node is followed, amongst its siblings, by a
-     * node which satisfies a given condition.
-     *
-     * @param child Child node.
-     * @param test Test to apply.
-     * @return True if any succeeding sibling satisfies the condition.
-     */
-
-    fun isFollowedBySiblingsSatisfying (child: Node, test: Predicate<Node?>): Boolean
-    {
-        val children = child.parentNode.childNodes
-        for (i in children.length - 1 downTo 0)
-        {
-            val n = children.item(i)
-            if (n === child) return true
-            if (!test.test(n)) return false
-        }
-
-        throw StepException("Dom.isFollowedBySiblingsSatisfying error")
-    }
-
-
-    /****************************************************************************/
-    /**
      * Determines whether a given node is the last non-blank child of another.
      *
      * @param parent Parent node.
@@ -2233,10 +2024,7 @@ object Dom
      * @return True if 'parent' is the parent of 'child'.
      */
 
-    fun isParentOf (parent: Node, child: Node): Boolean
-    {
-        return getParent(child) === parent
-    }
+    fun isParentOf (parent: Node, child: Node) = getParent(child) === parent
 
 
     /****************************************************************************/
@@ -2272,10 +2060,7 @@ object Dom
      * @return True if 'parent' is the parent of 'child'.
      */
 
-    fun isSiblingOf (a: Node, b: Node): Boolean
-    {
-        return getParent(a) === getParent(b)
-    }
+    fun isSiblingOf (a: Node, b: Node) = getParent(a) === getParent(b)
 
 
     /****************************************************************************/
@@ -2286,10 +2071,7 @@ object Dom
      * @return True if text node.
      */
 
-    fun isTextNode (node: Node): Boolean
-    {
-        return "#text" == getNodeName(node)
-    }
+    fun isTextNode (node: Node) = "#text" == getNodeName(node)
 
 
     /****************************************************************************/
@@ -2310,6 +2092,103 @@ object Dom
 
     /****************************************************************************/
     /**
+     * Takes a parent node, and starting at the front of its children, applies fn
+     * to each until a node is encountered which does not satisfy 'test'.
+     *
+     * @param parent: Parent node.
+     * @param fn: Function to be applied to selected nodes.
+     * @param test: Function which determines which nodes to process.  Default is to
+     *          run over all nodes.
+     * @param giveUpOnFailedTest: If true, gives up as soon as 'test' returns false.
+     * @return Pair comprising Nodes which were passed to fn, and the node at which
+     *         processing ended (null if all nodes were processed)
+     */
+
+    fun iterateOverLeadingChildrenSatisfyingCondition (parent: Node, fn: (Node) -> Any, test: ((Node) -> Boolean)?, giveUpOnFailedTest: Boolean = true):
+      Pair<List<Node>, Node?>
+    {
+      return iterateOverLeadingNodesSatisfyingCondition(getChildren(parent), fn, test, giveUpOnFailedTest)
+    }
+
+
+   /****************************************************************************/
+   /**
+    * Takes a list of nodes, and starting at the front of the list, applies fn
+    * to each until a node is encountered which does not satisfy 'test'.
+    *
+    * @param nodes: List of nodes to be processed.
+    * @param fn: Function to be applied to selected nodes.
+    * @param test: Function which determines which nodes to process.  Default is to
+    *          run over all nodes.
+    * @param giveUpOnFailedTest: If true, gives up as soon as 'test' returns false.
+    * @return Pair comprising Nodes which were passed to fn, and the node at which
+    *         processing ended (null if all nodes were processed)
+    */
+
+   fun iterateOverLeadingNodesSatisfyingCondition (nodes: List<Node>, fn: (Node) -> Any, test: ((Node) -> Boolean)?, giveUpOnFailedTest: Boolean = true):
+     Pair<List<Node>, Node?>
+   {
+     val returnedNodeList: MutableList<Node> = mutableListOf()
+     var failedNode: Node? = null
+
+     for (n in nodes)
+     {
+       if (null != test && giveUpOnFailedTest && !test(n))
+       {
+         failedNode = n
+         break
+       }
+
+       returnedNodeList.add(n)
+       fn(n)
+     }
+
+     return Pair(returnedNodeList, failedNode)
+   }
+
+
+   /****************************************************************************/
+   /**
+    * Takes a parent node, and starting at the front of its children, applies fn
+    * to each until a node is encountered which does not satisfy 'test'.
+    *
+    * @param start: First node.
+    * @param fn: Function to be applied to selected nodes.
+    * @param test: Function which determines which nodes to process.  Default is to
+    *          run over all nodes.
+    * @param giveUpOnFailedTest: If true, gives up as soon as 'test' returns false.
+    * @param includeStart: Determines whether the first node is included.
+    * @return Pair comprising Nodes which were passed to fn, and the node at which
+    *         processing ended (null if all nodes were processed)
+    */
+
+   fun iterateOverYoungerSiblingsSatisfyingCondition (start: Node, fn: (Node) -> Any, test: ((Node) -> Boolean)?, giveUpOnFailedTest: Boolean = true, includeStart: Boolean = true):
+     Pair<List<Node>, Node?>
+   {
+     val returnedNodeList: MutableList<Node> = mutableListOf()
+     var failedNode: Node? = null
+     var n = if (includeStart) start else start.nextSibling
+
+     while (null != n)
+     {
+       if (null != test && giveUpOnFailedTest && !test(n))
+       {
+         failedNode = n
+         break
+       }
+
+       returnedNodeList.add(n)
+       fn(n)
+
+       n = n.nextSibling
+     }
+
+      return Pair(returnedNodeList, failedNode)
+    }
+
+
+    /****************************************************************************/
+    /**
     * Makes a mutable map given a list of nodes.  keyFn takes a node and returns
     * a key value for it.
     *
@@ -2318,6 +2197,48 @@ object Dom
     */
 
     fun <T> List<Node>.makeNodeMap (keyFn: (Node) -> T): MutableMap<T, Node> = this.associateBy { keyFn(it) } .toMutableMap()
+
+
+    /****************************************************************************/
+    /**
+    * Checks if two nodes are adjacent but for whitespace.
+    *
+    * @param firstNode Must be guaranteed to be the earlier of the two nodes as
+    *   would appear if we applied getNodesInTree to the parent node.
+    *
+    * @param lastNode Last node.
+    *
+    * @param ignoreWhitespace What it says on the tin -- nodes will still be
+    *   regarded as adjacent even if separated by whitespace.
+    *
+    * @return True if nodes are adjacent.
+    */
+
+    fun nodesAreAdjacent (firstNode: Node, lastNode: Node, ignoreWhitespace: Boolean = true): Boolean
+    {
+      val parent = firstNode.parentNode
+      if (lastNode.parentNode !== parent)
+        return false
+
+      var checking = false
+
+      for (sibling in getChildren(parent))
+      {
+        if (sibling === firstNode)
+          checking = true
+        else if (sibling == lastNode)
+          return true
+        else if (checking)
+        {
+          if (isWhitespace(sibling) && ignoreWhitespace)
+            continue
+          else
+            return false
+        }
+      } // for
+
+      throw StepException("nodesAreAdjacent: Unexpected case.")
+    }
 
 
     /****************************************************************************/
@@ -2542,22 +2463,6 @@ object Dom
 
     /****************************************************************************/
     /**
-     * Converts a NodeList structure to List&lt;Node&gt;>.
-     *
-     * @param nl Node list to be converted.
-     * @return Revised structure.
-     */
-
-    private fun toListOfNodes (nl: NodeList): List<Node>
-    {
-        val res: MutableList<Node> = ArrayList(nl.length)
-        for (i in 0..< nl.length) res.add(nl.item(i))
-        return res
-    }
-
-
-    /****************************************************************************/
-    /**
      * Generates a printable representation of a node and its attributes.
      *
      * @param node Node.
@@ -2606,6 +2511,74 @@ object Dom
    }
 
 
+    /****************************************************************************/
+    private fun findNodeByAttributeValueInternal (parent: Node, nodeName: String, attributeName: String, value: String): Node?
+    {
+      if ('*' in value || '+' in value) throw StepException("Calling findNodeByAttributeValue with string which contains wildcards.")
+      return try
+      {
+        val lcValue = value.lowercase()
+        val xpath = m_xPathFactory.newXPath()
+        val expr = xpath.compile(".//*[local-name()='$nodeName' and lower-case(@$attributeName) = '$lcValue']") //*[local-name()='$nodeName'][@$attributeName and matches(@$attributeName, '$value', 'i')]")
+        expr.evaluate(parent, XPathConstants.NODE) as Node
+      }
+      catch (e: Exception)
+      {
+        throw StepException(e)
+      }
+    }
+
+
+    /****************************************************************************/
+    private fun findNodeByAttributeValueInternal (parent: Node, nodeName: String, attributeName: String, value: Regex): Node?
+    {
+      return try
+      {
+        val xpath = m_xPathFactory.newXPath()
+        val expr = xpath.compile(".//*[local-name()='$nodeName'][@$attributeName and matches(@$attributeName, '$value', 'i')]")
+        expr.evaluate(parent, XPathConstants.NODE) as Node
+      }
+      catch (e: Exception)
+      {
+        throw StepException(e)
+      }
+    }
+
+
+    /****************************************************************************/
+    private fun findNodesByAttributeValueInternal (parent: Node, nodeName: String, attributeName: String, value: String): List<Node>
+    {
+      if ('*' in value || '+' in value) throw StepException("Calling findNodesByAttributeValue with string which contains wildcards.")
+      return try
+      {
+        val lcValue = value.lowercase()
+        val xpath = m_xPathFactory.newXPath()
+        val expr = xpath.compile(".//*[local-name()='$nodeName' and lower-case(@$attributeName) = '$lcValue']")
+        toListOfNodes(expr.evaluate(parent, XPathConstants.NODESET) as NodeList)
+      }
+      catch (e: Exception)
+      {
+        throw StepException(e)
+      }
+    }
+
+
+    /****************************************************************************/
+    private fun findNodesByAttributeValueInternal (parent: Node, nodeName: String, attributeName: String, value: Regex): List<Node>
+    {
+      return try
+      {
+        val xpath = m_xPathFactory.newXPath()
+        val expr = xpath.compile(".//*[local-name()='$nodeName'][@$attributeName and matches(@$attributeName, '$value', 'i')]")
+        toListOfNodes(expr.evaluate(parent, XPathConstants.NODESET) as NodeList)
+      }
+      catch (e: Exception)
+      {
+        throw StepException(e)
+      }
+    }
+
+
    /****************************************************************************/
    private fun getNodesInTree(res: MutableList<Node>, startNode: Node) {
         val children = startNode.childNodes
@@ -2614,6 +2587,21 @@ object Dom
             res.add(n)
             getNodesInTree(res, n)
         }
+    }
+
+    /****************************************************************************/
+    /**
+     * Converts a NodeList structure to List&lt;Node&gt;>.
+     *
+     * @param nl Node list to be converted.
+     * @return Revised structure.
+     */
+
+    private fun toListOfNodes (nl: NodeList): List<Node>
+    {
+        val res: MutableList<Node> = ArrayList(nl.length)
+        for (i in 0..< nl.length) res.add(nl.item(i))
+        return res
     }
 
 

@@ -80,11 +80,6 @@ object Usx_OsisCreator
 
 
     /**************************************************************************/
-    //if (false) { val validationErrors = validateXmlAgainstSchema(FileLocations.getInternalOsisFilePath()); if (null != validationErrors) Logger.error(validationErrors) }
-
-
-
-    /**************************************************************************/
     Dbg.setReportProgressPrefix("")
   }
 

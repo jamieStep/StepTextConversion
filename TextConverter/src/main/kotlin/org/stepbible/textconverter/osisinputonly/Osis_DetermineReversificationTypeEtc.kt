@@ -168,7 +168,6 @@ object Osis_DetermineReversificationTypeEtc
     }
 
 
-
     /**************************************************************************/
     /* Another go at forcing reversification type to fit the circumstances ...
 
@@ -194,8 +193,7 @@ object Osis_DetermineReversificationTypeEtc
       {
         if (null != reversificationType)
           Logger.info("Forcing stepReversificationType = 'none' because no reversification rows apply or because the text fits NRSV.")
-        ConfigData.delete("stepReversificationType")
-        ConfigData.put("stepReversificationType", "none", force = true)
+        ConfigData.delete("stepReversificationType"); ConfigData.put("stepReversificationType", "none", force = true)
        }
     }
 
@@ -206,8 +204,7 @@ object Osis_DetermineReversificationTypeEtc
         if ("conversiontime" != reversificationType)
         {
           Logger.info("Forcing stepReversificationType = 'conversionTime' because reversification rows apply and this module has been specified as being publicly available.")
-          ConfigData.delete("stepReversificationType")
-          ConfigData.put("stepReversificationType", "conversionTime", force = true)
+          ConfigData.delete("stepReversificationType"); ConfigData.put("stepReversificationType", "conversionTime", force = true)
         }
       }
 
@@ -216,8 +213,7 @@ object Osis_DetermineReversificationTypeEtc
         if ("runtime" != reversificationType)
        {
           Logger.info("Forcing stepReversificationType = 'runTime' because reversification rows apply and this module has been specified as being STEP-only.")
-          ConfigData.delete("stepReversificationType")
-          ConfigData.put("stepReversificationType", "runTime", force = true)
+          ConfigData.delete("stepReversificationType"); ConfigData.put("stepReversificationType", "runTime", force = true)
         }
       }
     }
@@ -272,6 +268,14 @@ object Osis_DetermineReversificationTypeEtc
     /**************************************************************************/
     /* Deal with reversification footnote level if necessary. */
 
+         ConfigData.delete("stepReversificationType"); ConfigData.put("stepReversificationType", "runtime", force = true)
+          versificationScheme = null
+          ConfigData.delete("stepVersificationScheme")
+
+        ConfigData.delete("stepReversificationType"); ConfigData.put("stepReversificationType", "none", force = true)
+         versificationScheme = "German"
+         ConfigData.delete("stepVersificationScheme"); ConfigData.put("stepVersificationScheme", "German", force = true)
+
     reversificationType = ConfigData["stepReversificationType"]!!.lowercase()
     if ("none" != reversificationType && null == ConfigData["stepReversificationFootnoteLevel"]?.lowercase())
     {
@@ -297,7 +301,7 @@ object Osis_DetermineReversificationTypeEtc
     /* For Crosswire osis2mod, the STEP software version must be at least 1.
        For STEP osis2mod, it must be at least 2. */
 
-    val minStepSoftwareVersionRequired = if ("runtime" == ConfigData["stepOsis2modType"]) 2 else 1
+    val minStepSoftwareVersionRequired = if ("runtime" == reversificationType) 2 else 1
     val stepSoftwareVersionRequired = ConfigData["stepSoftwareVersionRequired"]?.toInt() ?: 1
     ConfigData.delete("stepSoftwareVersionRequired"); ConfigData.put("stepSoftwareVersionRequired", minStepSoftwareVersionRequired.toString(), force=true)
     if (stepSoftwareVersionRequired < minStepSoftwareVersionRequired)
@@ -308,6 +312,7 @@ object Osis_DetermineReversificationTypeEtc
 
 
 
+   //  ConfigData.delete("stepVersificationScheme"); ConfigData.put("stepVersificationScheme", "KJV", force = true)
     /**************************************************************************/
     Logger.info("Versification scheme is $versificationScheme.")
     Logger.info("ReversificationType is $reversificationType")

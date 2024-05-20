@@ -37,7 +37,6 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
   override fun myPrerequisites () = listOf(ProcessRegistry.EnhancedVerseEndPositioning)
   override fun thingsIveDone () = listOf(ProcessRegistry.BasicValidation)
-  override fun processDataCollectionInternal () = doIt(m_DataCollection)
 
 
 
@@ -46,27 +45,7 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                Private -- Basic checks and corrections                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  private fun doIt (dataCollection: X_DataCollection)
-  {
-    basicValidationAndCorrection(dataCollection)
-    structuralValidation(dataCollection)
-    validationForOrderingAndHoles(dataCollection)
-  }
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                Private -- Basic checks and corrections                 **/
+  /**                     General checks and corrections                     **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
@@ -77,7 +56,15 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
      some of these we may be able to remedy; others we may simply have to
      report, and abandon further processing. */
 
-  private fun basicValidationAndCorrection (dataCollection: X_DataCollection)
+  fun finalValidationAndCorrection ()
+  {
+    finalValidationAndCorrection(m_DataCollection)
+    validationForOrderingAndHoles(m_DataCollection)
+  }
+
+
+  /****************************************************************************/
+  private fun finalValidationAndCorrection (dataCollection: X_DataCollection)
   {
     /**************************************************************************/
     val bibleStructure = dataCollection.getBibleStructure()
@@ -170,7 +157,7 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                      Private -- Structural checks                      **/
+  /**                           Structural checks                            **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
@@ -179,9 +166,9 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
   /* Checks the basis structure -- are all chapters within books, all verses
      within chapters, etc. */
 
-  fun structuralValidation (dataCollection: X_DataCollection)
+  fun structuralValidation ()
   {
-    dataCollection.getRootNodes().forEach { structuralValidationForBook(it) }
+    m_DataCollection.getRootNodes().forEach { structuralValidationForBook(it) }
 
     if (m_ChaptersWithBadIds.isNotEmpty())
       Logger.error("Chapters with bad ids: " + m_ChaptersWithBadIds.joinToString(", "))
@@ -282,7 +269,7 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
 
     val duplicateVerses = dataCollection.getBibleStructure().getDuplicateVersesForText()
     if (duplicateVerses.isNotEmpty())
-      Logger.error("Locations where embedded verses are missing: " + duplicateVerses.joinToString(", "){ Ref.rd(it).toString() })
+      Logger.error("Locations where we have duplicate verses: " + duplicateVerses.joinToString(", "){ Ref.rd(it).toString() })
   }
 
 
@@ -366,18 +353,4 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
       return 0
     }
   }
-
-
-  /****************************************************************************/
-  /* Where we are applying reversification, reversification sometimes creates
-     a subverse b without having a row which creates the subverse a.  Where this
-     is the case, the reversification data implicitly assumes that the verse
-     itself fulfils the role of subverse a.  In such cases we will hit
-     subverse b without having seen subverse explicitly identified as such, but
-     we don't want to see this as an ordering error.  The variable below
-     records the refKeys of all the subverse b's where we don't want to report
-     the lack of subverse a as an error.
-  */
-
-  private lateinit var m_SubverseTwosWhichDontNeedChecking: Set<RefKey>
 }

@@ -65,6 +65,13 @@ import org.w3c.dom.Node
  * cannot have missing verses within chapters, so we have to create any verses
  * to fill in any gaps.)
  *
+ * Note that some rows would, in a run where we were actually restructuring the
+ * text rather than 'just' recording what mappings are to be applied, create
+ * verses where none exist at present.
+ *
+ * Even though we are in theory not restructuring the text, we do need to create
+ * these empty verses here.
+ *
  * @author ARA "Jamie" Jamieson
  */
 
@@ -100,6 +107,7 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
       Dbg.reportProgress("Applying reversification footnotes for runtime reversification for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
       IssueAndInformationRecorder.setRuntimeReversification()
       addFootnotes(rootNode)
+      //createEmptyVerses(rootNode)
     }
   }
 
@@ -162,13 +170,39 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
 
   private fun addFootnotes (rootNode: Node): Boolean
   {
-    val bookName = m_FileProtocol.getBookAbbreviation(rootNode)
     initialise()
     var res = false
-    val reversificationRows = m_FootnoteReversificationRows!![BibleBookNamesUsx.nameToNumber(bookName)] ?: return false
+    val reversificationRows = m_FootnoteReversificationRows!![m_FileProtocol.getBookNumber(rootNode)] ?: return false
     val sidNodes = Dom.findNodesByAttributeName(rootNode, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid()). associateBy { m_FileProtocol.readRef(it, m_FileProtocol.attrName_verseSid()).toRefKey() }
-    reversificationRows.filter { it.sourceRefAsRefKey in sidNodes } .forEach { res = true; addFootnote(sidNodes[it.sourceRefAsRefKey]!!, it) }
+    reversificationRows.filter { it.sourceRefAsRefKey in sidNodes } .forEach { res = true; m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(sidNodes[it.sourceRefAsRefKey]!!, it) }
+    // Previously had this in the .forEach above: addFootnote(sidNodes[it.sourceRefAsRefKey]!!, it)
     return res
+  }
+
+
+  /****************************************************************************/
+  private fun createEmptyVerses (rootNode: Node)
+  {
+    /**************************************************************************/
+    fun createEmptyVerse (row: ReversificationDataRow)
+    {
+      val thisRefKey = row.standardRefAsRefKey
+      val nodes = m_EmptyVerseHandler.createEmptyVerse(rootNode.ownerDocument, thisRefKey, true, "Samification")
+      val insertBefore = Dom.findNodesByAttributeName(rootNode, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid())
+         .find { m_FileProtocol.readRef(it[m_FileProtocol.attrName_verseSid()]!!).toRefKey() > thisRefKey }!!
+      Dom.insertNodeBefore(insertBefore, nodes[0])
+      Dom.insertNodeBefore(insertBefore, nodes[1])
+      m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(nodes[0], row)
+    }
+
+
+
+    /**************************************************************************/
+    val reversificationRows = m_AllReversificationRows[m_FileProtocol.getBookNumber(rootNode)] ?: return
+    reversificationRows
+      .filter { 0 != (it.processingFlags and ReversificationData.C_CreateIfNecessary) } // Rows which might result in the creation of a verse.
+      .filter { !m_DataCollection.getBibleStructure().verseExistsWithOrWithoutSubverses(it.standardRefAsRefKey) }  // Rows corresponding to verses which don't exist.
+      .forEach(::createEmptyVerse)
   }
 
 
@@ -245,4 +279,9 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
      verses, rather than use the callout defined in the reversification data. */
 
   private lateinit var m_FootnoteCalloutGenerator: MarkerHandler
+
+
+  /****************************************************************************/
+  private val m_EmptyVerseHandler = EmptyVerseHandler(dataCollection)
+  private val m_FootnoteHandler = SE_ReversificationFootnoteHandler(m_FileProtocol)
 }

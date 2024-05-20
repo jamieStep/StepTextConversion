@@ -130,8 +130,10 @@ object ProcessingController
         "usx"
       else if (haveVl)
         "vl"
-      else
+      else if (haveImp)
         "imp"
+      else
+        "osis"
 
 
 

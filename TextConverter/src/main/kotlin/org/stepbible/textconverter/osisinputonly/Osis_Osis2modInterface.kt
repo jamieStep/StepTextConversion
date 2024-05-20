@@ -5,6 +5,7 @@ import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.ref.Ref
+import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.InternalOsisDataCollection
@@ -272,8 +273,24 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
 
     fun outputMappings (writer: PrintWriter)
     {
+      // WARNING: I've added this because psalm titles were coming out wrong.
+      // In fact, where Psalm titles are concerned, by the time I get here,
+      // it seems that there is always a subverse reference, and I presume
+      // we might have both !a and !b.  The processing below ignores that
+      // possibility, and simply strips off the subverse.  That's probably
+      // not good enough.
+
+      fun convertToRefAllowingForPsalmTitles (refKey: RefKey): String
+      {
+        val ref = Ref.rd(refKey)
+        if (ref.getV() == RefBase.C_TitlePseudoVerseNumber)
+          return ref.toStringOsis().replace(RefBase.C_TitlePseudoVerseNumber.toString(), "0").split("!")[0]
+        else
+          return ref.toStringOsis()
+      }
+
       print(writer, "  'jsword_mappings': [\n")
-      val mappings = m_BibleStructure.jswordMappings.map { "${Ref.rd(it.first).toStringOsis()}=${Ref.rd(it.second).toStringOsis()}" }
+      val mappings = m_BibleStructure.jswordMappings.map { "${Ref.rd(it.first).toStringOsis()}=${convertToRefAllowingForPsalmTitles(it.second)}" }
       print(writer, "    \"" + mappings.joinToString("\",\n    \""))
       print(writer, "\"\n    ]\n")
     }

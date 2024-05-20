@@ -87,6 +87,11 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
   fun rulePasses (sourceRef: Ref?, theRuleData: String, row: ReversificationDataRow): Boolean
   {
     /**************************************************************************/
+//    Dbg.d(row.rowNumber in listOf(5148, 5149, 5150, 5193, 5202, 5203, 5204))
+
+
+
+    /**************************************************************************/
     if (null != sourceRef)
     {
       if (0 == sourceRef.getV()) // Within the reversification data, the canonical title is held as v0, but we need to split that case out for existence checks.

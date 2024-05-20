@@ -414,6 +414,7 @@ object IsoLanguageCodes {
   {
     addIso639ToLanguageDetails("aar", "aa", "Afar")
     addIso639ToLanguageDetails("abk", "ab", "Abkhazian")
+    addIso639ToLanguageDetails("abm", null, "Abanyom") // Ethnologue.
     addIso639ToLanguageDetails("ace", null, "Achinese")
     addIso639ToLanguageDetails("ach", null, "Acoli")
     addIso639ToLanguageDetails("ada", null, "Adangme")
@@ -426,6 +427,7 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("akk", null, "Akkadian")
     addIso639ToLanguageDetails("alb", "sq", "Albanian")
     addIso639ToLanguageDetails("ale", null, "Aleut")
+    addIso639ToLanguageDetails("alf", null, "Elege") // Ethnologue.
     addIso639ToLanguageDetails("alg", null, "Algonquian languages")
     addIso639ToLanguageDetails("alt", null, "Southern Altai")
     addIso639ToLanguageDetails("amh", "am", "Amharic")
@@ -479,6 +481,7 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("bug", null, "Buginese")
     addIso639ToLanguageDetails("bul", "bg", "Bulgarian")
     addIso639ToLanguageDetails("bur", "my", "Burmese")
+    addIso639ToLanguageDetails("bux", null, "Boghom") // Ethnologue.
     addIso639ToLanguageDetails("byn", null, "Blin; Bilin")
     addIso639ToLanguageDetails("cad", null, "Caddo")
     addIso639ToLanguageDetails("cai", null, "Central American Indian languages")
@@ -487,13 +490,13 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("cau", null, "Caucasian languages")
     addIso639ToLanguageDetails("ceb", null, "Cebuano")
     addIso639ToLanguageDetails("cel", null, "Celtic languages")
+    addIso639ToLanguageDetails("ces", "ch", "Czech")
     addIso639ToLanguageDetails("cha", "ch", "Chamorro")
     addIso639ToLanguageDetails("chb", null, "Chibcha")
     addIso639ToLanguageDetails("che", "ce", "Chechen")
     addIso639ToLanguageDetails("chg", null, "Chagatai")
     addIso639ToLanguageDetails("chi", "zh", "Chinese")
     addIso639ToLanguageDetails("chk", null, "Chuukese")
-    addIso639ToLanguageDetails("ckb", null, "Central Kurdish")
     addIso639ToLanguageDetails("chm", null, "Mari")
     addIso639ToLanguageDetails("chn", null, "Chinook jargon")
     addIso639ToLanguageDetails("cho", null, "Choctaw")
@@ -502,6 +505,9 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("chu", "cu", "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic")
     addIso639ToLanguageDetails("chv", "cv", "Chuvash")
     addIso639ToLanguageDetails("chy", null, "Cheyenne")
+    addIso639ToLanguageDetails("ckb", null, "Central Kurdish")
+    addIso639ToLanguageDetails("ckl", null, "Kibaku") // Ethnologue.
+    addIso639ToLanguageDetails("cky", null, "Cakfem-Mushere") // Ethnologue.
     addIso639ToLanguageDetails("cmc", null, "Chamic languages")
     addIso639ToLanguageDetails("cnr", null, "Montenegrin")
     addIso639ToLanguageDetails("cop", null, "Coptic")
@@ -538,6 +544,8 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("egy", null, "Egyptian (Ancient)")
     addIso639ToLanguageDetails("eka", null, "Ekajuk")
     addIso639ToLanguageDetails("ekk", null, "Standard Estonian")
+    addIso639ToLanguageDetails("eky", null, "Kayah, Eastern") // Ethnologue.
+    addIso639ToLanguageDetails("eky", null, "Kayah, Eastern") // Ethnologue.
     addIso639ToLanguageDetails("elx", null, "Elamite")
     addIso639ToLanguageDetails("eng", "en", "English")
     addIso639ToLanguageDetails("enm", null, "English, Middle (1100-1500)")
@@ -566,6 +574,8 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("gay", null, "Gayo")
     addIso639ToLanguageDetails("gaz", null, "West Central Oromo")
     addIso639ToLanguageDetails("gba", null, "Gbaya")
+    addIso639ToLanguageDetails("gbr", null, "Gbagyi")
+    addIso639ToLanguageDetails("gek", null, "Ywom") // Ethnologue.
     addIso639ToLanguageDetails("gem", null, "Germanic languages")
     addIso639ToLanguageDetails("geo", "ka", "Georgian")
     addIso639ToLanguageDetails("ger", "de", "German")
@@ -587,6 +597,7 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("gsw", null, "Swiss German; Alemannic; Alsatian")
     addIso639ToLanguageDetails("guj", "gu", "Gujarati")
     addIso639ToLanguageDetails("gwi", null, "Gwich'in")
+    addIso639ToLanguageDetails("gyz", null, "Gyaazi") // Ethnologue.
     addIso639ToLanguageDetails("hai", null, "Haida")
     addIso639ToLanguageDetails("hat", "ht", "Haitian; Haitian Creole")
     addIso639ToLanguageDetails("hau", "ha", "Hausa")
@@ -598,17 +609,20 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("hin", "hi", "Hindi")
     addIso639ToLanguageDetails("hit", null, "Hittite")
     addIso639ToLanguageDetails("hmn", null, "Hmong; Mong")
+    addIso639ToLanguageDetails("hne", null, "Chhattisgarhi")
     addIso639ToLanguageDetails("hmo", "ho", "Hiri Motu")
     addIso639ToLanguageDetails("hrv", "hr", "Croatian")
     addIso639ToLanguageDetails("hsb", null, "Upper Sorbian")
     addIso639ToLanguageDetails("hun", "hu", "Hungarian")
     addIso639ToLanguageDetails("hup", null, "Hupa")
+    addIso639ToLanguageDetails("hwo", null, "Hwana") // Ethnologue.
     addIso639ToLanguageDetails("iba", null, "Iban")
     addIso639ToLanguageDetails("ibo", "ig", "Igbo")
     addIso639ToLanguageDetails("ice", "is", "Icelandic")
     addIso639ToLanguageDetails("ido", "io", "Ido")
     addIso639ToLanguageDetails("iii", "ii", "Sichuan Yi; Nuosu")
     addIso639ToLanguageDetails("ijo", null, "Ijo languages")
+    addIso639ToLanguageDetails("iko", null, "Olulumo-Ikom") // Ethnologue.
     addIso639ToLanguageDetails("iku", "iu", "Inuktitut")
     addIso639ToLanguageDetails("ile", "ie", "Interlingue; Occidental")
     addIso639ToLanguageDetails("ilo", null, "Iloko")
@@ -620,9 +634,12 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("ipk", "ik", "Inupiaq")
     addIso639ToLanguageDetails("ira", null, "Iranian languages")
     addIso639ToLanguageDetails("iro", null, "Iroquoian languages")
+    addIso639ToLanguageDetails("isl", null, "Icelandic")
     addIso639ToLanguageDetails("ita", "it", "Italian")
     addIso639ToLanguageDetails("jav", "jv", "Javanese")
     addIso639ToLanguageDetails("jbo", null, "Lojban")
+    addIso639ToLanguageDetails("jer", null, "Jere") // Ethnologue.
+    addIso639ToLanguageDetails("jgk", null, "Gwak") // Ethnologue.
     addIso639ToLanguageDetails("jpn", "ja", "Japanese")
     addIso639ToLanguageDetails("jpr", null, "Judeo-Persian")
     addIso639ToLanguageDetails("jrb", null, "Judeo-Arabic")
@@ -650,6 +667,7 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("kok", null, "Konkani")
     addIso639ToLanguageDetails("kom", "kv", "Komi")
     addIso639ToLanguageDetails("kon", "kg", "Kongo")
+    addIso639ToLanguageDetails("koq", null, "Kota") // Ethnologue.
     addIso639ToLanguageDetails("kor", "ko", "Korean")
     addIso639ToLanguageDetails("kos", null, "Kosraean")
     addIso639ToLanguageDetails("kpe", null, "Kpelle")
@@ -661,6 +679,9 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("kum", null, "Kumyk")
     addIso639ToLanguageDetails("kur", "ku", "Kurdish")
     addIso639ToLanguageDetails("kut", null, "Kutenai")
+    addIso639ToLanguageDetails("kvy", null, "Yintale") // Ethnologue.
+    addIso639ToLanguageDetails("kxf", null, "Kawyaw") // Ethnologue.
+    addIso639ToLanguageDetails("kxf", null, "Kawyaw") // Ethnologue.
     addIso639ToLanguageDetails("lad", null, "Ladino")
     addIso639ToLanguageDetails("lah", null, "Lahnda")
     addIso639ToLanguageDetails("lam", null, "Lamba")
@@ -671,6 +692,7 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("lim", "li", "Limburgan; Limburger; Limburgish")
     addIso639ToLanguageDetails("lin", "ln", "Lingala")
     addIso639ToLanguageDetails("lit", "lt", "Lithuanian")
+    addIso639ToLanguageDetails("lla", null, "Lala-Roba") // Ethnologue.
     addIso639ToLanguageDetails("lol", null, "Mongo")
     addIso639ToLanguageDetails("loz", null, "Lozi")
     addIso639ToLanguageDetails("ltz", "lb", "Luxembourgish; Letzeburgesch")
@@ -696,11 +718,16 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("may", "ms", "Malay")
     addIso639ToLanguageDetails("mdf", null, "Moksha")
     addIso639ToLanguageDetails("mdr", null, "Mandar")
+    addIso639ToLanguageDetails("mdt", null, "Mbere") // Ethnologue.
     addIso639ToLanguageDetails("men", null, "Mende")
+    addIso639ToLanguageDetails("mfn", null, "Mbembe, Cross River") // Ethnologue.
     addIso639ToLanguageDetails("mga", null, "Irish, Middle (900-1200)")
+    addIso639ToLanguageDetails("mgj", null, "Abureni") // Ethnologue.
+    addIso639ToLanguageDetails("mho", null, "Mashi") // Ethnologue.
     addIso639ToLanguageDetails("mic", null, "Mi'kmaq; Micmac")
     addIso639ToLanguageDetails("min", null, "Minangkabau")
     addIso639ToLanguageDetails("mis", null, "Uncoded languages")
+    addIso639ToLanguageDetails("mkf", null, "Vune mi") // Ethnologue.
     addIso639ToLanguageDetails("mkh", null, "Mon-Khmer languages")
     addIso639ToLanguageDetails("mlg", "mg", "Malagasy")
     addIso639ToLanguageDetails("mlt", "mt", "Maltese")
@@ -723,6 +750,7 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("nau", "na", "Nauru")
     addIso639ToLanguageDetails("nav", "nv", "Navajo; Navaho")
     addIso639ToLanguageDetails("nbl", "nr", "Ndebele, South; South Ndebele")
+    addIso639ToLanguageDetails("ndd", null, "Nde-Nsele-Nta") // Ethnologue.
     addIso639ToLanguageDetails("nde", "nd", "Ndebele, North; North Ndebele")
     addIso639ToLanguageDetails("ndo", "ng", "Ndonga")
     addIso639ToLanguageDetails("nds", null, "Low German; Low Saxon; German, Low; Saxon, Low")
@@ -744,8 +772,10 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("nym", null, "Nyamwezi")
     addIso639ToLanguageDetails("nyn", null, "Nyankole")
     addIso639ToLanguageDetails("nyo", null, "Nyoro")
+    addIso639ToLanguageDetails("nzb", null, "Njebi") // Ethnologue.
     addIso639ToLanguageDetails("nzi", null, "Nzima")
     addIso639ToLanguageDetails("oci", "oc", "Occitan (post 1500)")
+    addIso639ToLanguageDetails("ofu", null, "Efutop") // Ethnologue.
     addIso639ToLanguageDetails("oji", "oj", "Ojibwa")
     addIso639ToLanguageDetails("ori", "or", "Oriya")
     addIso639ToLanguageDetails("orm", "om", "Oromo")
@@ -762,6 +792,7 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("pau", null, "Palauan")
     addIso639ToLanguageDetails("peo", null, "Persian, Old (ca.600-400 B.C.)")
     addIso639ToLanguageDetails("per", "fa", "Persian")
+    addIso639ToLanguageDetails("pes", null, "Persian, Iranian")
     addIso639ToLanguageDetails("phi", null, "Philippine languages")
     addIso639ToLanguageDetails("phn", null, "Phoenician")
     addIso639ToLanguageDetails("pli", "pi", "Pali")
@@ -772,14 +803,17 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("pra", null, "Prakrit languages")
     addIso639ToLanguageDetails("pro", null, "Provençal, Old (to 1500); Occitan, Old (to 1500)")
     addIso639ToLanguageDetails("pus", "ps", "Pushto; Pashto")
+    addIso639ToLanguageDetails("pym", null, "Pyam") // Ethnologue.
     addIso639ToLanguageDetails("qaa-qtz", null, "Reserved for local use")
     addIso639ToLanguageDetails("que", "qu", "Quechua")
     addIso639ToLanguageDetails("raj", null, "Rajasthani")
     addIso639ToLanguageDetails("rap", null, "Rapanui")
     addIso639ToLanguageDetails("rar", null, "Rarotongan; Cook Islands Maori")
+    addIso639ToLanguageDetails("rmz", null, "Marma") // Ethnologue.
     addIso639ToLanguageDetails("roa", null, "Romance languages")
     addIso639ToLanguageDetails("roh", "rm", "Romansh")
     addIso639ToLanguageDetails("rom", null, "Romany")
+    addIso639ToLanguageDetails("ron", null, "Romanian")
     addIso639ToLanguageDetails("rum", "ro", "Romanian; Moldavian; Moldovan")
     addIso639ToLanguageDetails("run", "rn", "Rundi")
     addIso639ToLanguageDetails("rup", null, "Aromanian; Arumanian; Macedo-Romanian")
@@ -805,6 +839,7 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("sio", null, "Siouan languages")
     addIso639ToLanguageDetails("sit", null, "Sino-Tibetan languages")
     addIso639ToLanguageDetails("sla", null, "Slavic languages")
+    addIso639ToLanguageDetails("slk", "sk", "Slovak")
     addIso639ToLanguageDetails("slo", "sk", "Slovak")
     addIso639ToLanguageDetails("slv", "sl", "Slovenian")
     addIso639ToLanguageDetails("sma", null, "Southern Sami")
@@ -817,6 +852,7 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("sna", "sn", "Shona")
     addIso639ToLanguageDetails("snd", "sd", "Sindhi")
     addIso639ToLanguageDetails("snk", null, "Soninke")
+    addIso639ToLanguageDetails("snq", null, "Sangu") // Ethnologue.
     addIso639ToLanguageDetails("sog", null, "Sogdian")
     addIso639ToLanguageDetails("som", "so", "Somali")
     addIso639ToLanguageDetails("son", null, "Songhai languages")
@@ -830,10 +866,13 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("ssw", "ss", "Swati")
     addIso639ToLanguageDetails("suk", null, "Sukuma")
     addIso639ToLanguageDetails("sun", "su", "Sundanese")
+    addIso639ToLanguageDetails("suq", null, "Tirmaga-Chai Suri") // Ethnologue.
     addIso639ToLanguageDetails("sus", null, "Susu")
     addIso639ToLanguageDetails("sux", null, "Sumerian")
     addIso639ToLanguageDetails("swa", "sw", "Swahili")
     addIso639ToLanguageDetails("swe", "sv", "Swedish")
+    addIso639ToLanguageDetails("swh", null, "Swahili") // Ethnologue.
+    addIso639ToLanguageDetails("swj", null, "Sira") // Ethnologue.
     addIso639ToLanguageDetails("syc", null, "Classical Syriac")
     addIso639ToLanguageDetails("syr", null, "Syriac")
     addIso639ToLanguageDetails("tah", "ty", "Tahitian")
@@ -854,10 +893,12 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("tkl", null, "Tokelau")
     addIso639ToLanguageDetails("tlh", null, "Klingon; tlhIngan-Hol")
     addIso639ToLanguageDetails("tli", null, "Tlingit")
+    addIso639ToLanguageDetails("tmf", null, "Toba-Maskoy") // Ethnologue.
     addIso639ToLanguageDetails("tmh", null, "Tamashek")
     addIso639ToLanguageDetails("tog", null, "Tonga (Nyasa)")
     addIso639ToLanguageDetails("ton", "to", "Tonga (Tonga Islands)")
     addIso639ToLanguageDetails("tpi", null, "Tok Pisin")
+    addIso639ToLanguageDetails("tpj", null, "Ñandeva") // Ethnologue.
     addIso639ToLanguageDetails("tsi", null, "Tsimshian")
     addIso639ToLanguageDetails("tsn", "tn", "Tswana")
     addIso639ToLanguageDetails("tso", "ts", "Tsonga")
@@ -869,6 +910,7 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("tvl", null, "Tuvalu")
     addIso639ToLanguageDetails("twi", "tw", "Twi")
     addIso639ToLanguageDetails("tyv", null, "Tuvinian")
+    addIso639ToLanguageDetails("tyy", null, "Tiyaa") // Ethnologue.
     addIso639ToLanguageDetails("udm", null, "Udmurt")
     addIso639ToLanguageDetails("uga", null, "Ugaritic")
     addIso639ToLanguageDetails("uig", "ug", "Uighur; Uyghur")
@@ -888,13 +930,18 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("was", null, "Washo")
     addIso639ToLanguageDetails("wel", "cy", "Welsh")
     addIso639ToLanguageDetails("wen", null, "Sorbian languages")
+    addIso639ToLanguageDetails("wji", null, "Warji") // Ethnologue.
     addIso639ToLanguageDetails("wln", "wa", "Walloon")
     addIso639ToLanguageDetails("wol", "wo", "Wolof")
+    addIso639ToLanguageDetails("wum", null, "Wumbvu") // Ethnologue.
     addIso639ToLanguageDetails("xal", null, "Kalmyk; Oirat")
     addIso639ToLanguageDetails("xho", "xh", "Xhosa")
+    addIso639ToLanguageDetails("xsn", null, "Sanga") // Ethnologue.
+    addIso639ToLanguageDetails("xte", null, "Ketengban") // Ethnologue.
     addIso639ToLanguageDetails("yao", null, "Yao")
     addIso639ToLanguageDetails("yap", null, "Yapese")
     addIso639ToLanguageDetails("yid", "yi", "Yiddish")
+    addIso639ToLanguageDetails("yom", null, "Kiyombe")
     addIso639ToLanguageDetails("yor", "yo", "Yoruba")
     addIso639ToLanguageDetails("ypk", null, "Yupik languages")
     addIso639ToLanguageDetails("zap", null, "Zapotec")
@@ -902,6 +949,7 @@ object IsoLanguageCodes {
     addIso639ToLanguageDetails("zen", null, "Zenaga")
     addIso639ToLanguageDetails("zgh", null, "Standard Moroccan Tamazight")
     addIso639ToLanguageDetails("zha", "za", "Zhuang; Chuang")
+    addIso639ToLanguageDetails("zmb", null, "Zimba") // Ethnologue.
     addIso639ToLanguageDetails("znd", null, "Zande languages")
     addIso639ToLanguageDetails("zul", "zu", "Zulu")
     addIso639ToLanguageDetails("zun", null, "Zuni")

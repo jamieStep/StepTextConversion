@@ -4,6 +4,7 @@ import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.Ref
@@ -51,7 +52,7 @@ open class X_FileProtocol
 
   /****************************************************************************/
   enum class ProtocolType { USX, OSIS, UNKNOWN }
-  protected lateinit var Type: ProtocolType
+  lateinit var Type: ProtocolType
   fun getProtocolType () = Type
 
 
@@ -82,6 +83,8 @@ open class X_FileProtocol
   open fun bookNameToNumber (name: String): Int = throw StepExceptionShouldHaveBeenOverridden()
   open fun getBookAbbreviation (doc: Document): String = throw StepExceptionShouldHaveBeenOverridden() // Assumes just one book per file.
   open fun getBookAbbreviation (rootNode: Node): String = throw StepExceptionShouldHaveBeenOverridden()
+  open fun getBookNumber (doc: Document): Int = throw StepExceptionShouldHaveBeenOverridden() // Assumes just one book per file.
+  open fun getBookNumber (rootNode: Node): Int = throw StepExceptionShouldHaveBeenOverridden()
   open fun getBookNode (doc: Document): Node? = throw StepExceptionShouldHaveBeenOverridden()
   open fun getExtendedNodeName (node: Node): String = throw StepExceptionShouldHaveBeenOverridden()
   open fun getSidAsRefKey (sidVerse: Node) = readRef(getSid(sidVerse)).toRefKey()
@@ -103,6 +106,7 @@ open class X_FileProtocol
   open fun isSpanType (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isSpeakerNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isStrongsNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
+  open fun isTitleNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun isXrefNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeCanonicalTitleNode (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeDoNothingMarkup (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
@@ -130,7 +134,14 @@ open class X_FileProtocol
 
   fun getTagDescriptor (node: Node): TagDescriptor
   {
-    val key = getExtendedNodeName(node)
+    var key = getExtendedNodeName(node)
+
+    if (key.startsWith("para:") || key.startsWith("char:"))
+    {
+      if (key.last().isDigit())
+      key = key.substring(0, key.length - 1)// + "#"
+    }
+
     return m_TagDetails[key] ?: m_TagDetails[Dom.getNodeName(node)]!!
   }
 
@@ -147,7 +158,7 @@ open class X_FileProtocol
    *            stay with canonical text);
    *         'N' (definitely does not contain canonical text);
    *         '?' (may or may not contain canonical text -- deduce from context)
-   *         'X' (a node of a type we are not presently catering.
+   *         'X' (a node of a type we are not presently catering for).
    *         Plus the node which gave us the definite decision.
    */
 
@@ -368,6 +379,8 @@ object Osis_FileProtocol: X_FileProtocol()
   override fun bookNameToNumber (name: String) = BibleBookNamesOsis.nameToNumber(name)
   override fun getBookAbbreviation (doc: Document) = getBookAbbreviation(Dom.findNodeByName(doc,"book", false)!!)
   override fun getBookAbbreviation (rootNode: Node) = rootNode["osisID"]!!
+  override fun getBookNumber (doc: Document) = BibleBookNamesOsis.nameToNumber(getBookAbbreviation(doc))
+  override fun getBookNumber (rootNode: Node) = BibleBookNamesOsis.nameToNumber(getBookAbbreviation(rootNode))
   override fun getBookNode (doc: Document) = Dom.findNodeByName(doc, "book") ?: Dom.findNodeByAttributeValue(doc, "div", "type", "book")!!
   override fun isBookNode (node: Node) = "book" == Dom.getNodeName(node) || "div:book" == getExtendedNodeName(node)
   override fun isNoteNode (node: Node) = "note" == Dom.getNodeName(node)
@@ -565,6 +578,16 @@ object Osis_FileProtocol: X_FileProtocol()
   */
 
   override fun isStrongsNode (node: Node): Boolean = "w" == Dom.getNodeName(node) && attrName_strong() in node
+
+
+  /****************************************************************************/
+  /**
+  * Returns an indication of whether the given node is a title.
+  *
+  * @return True if this is a title.
+  */
+
+  override fun isTitleNode (node: Node): Boolean = "title" == Dom.getNodeName(node)
 
 
   /****************************************************************************/
@@ -820,144 +843,147 @@ object Osis_FileProtocol: X_FileProtocol()
     m_TagDetails["#document"] = TagDescriptor('N', 'N') //
     m_TagDetails["#text"] = TagDescriptor('?', 'N') // Text.  EndVerseInteraction is Skip for empty tags, and from context for others.
     m_TagDetails["#comment"] = TagDescriptor('N', 'N') // Comment.
+    m_TagDetails["_X_reversificationCalloutData"] = TagDescriptor('N', 'N') // Used to mark data used as callouts.
+    m_TagDetails["_X_reversificationCalloutSourceRefCollection"] = TagDescriptor('N', 'N') // Callout data.
+
     m_TagDetails["_X_verseBoundaryWithinElidedTable"] = TagDescriptor('N', 'N') // Used to mark verse boundaries where we have elided verses so that a table lies entirely within a single verse.
     m_TagDetails["a"] = TagDescriptor('X', 'N') // Similar to an HTML link. The "http://..." is recorded in the href attribute of this element. The
-
     m_TagDetails["abbr"] = TagDescriptor('X', 'N') // Abbreviations should be encoded using this element. The expansion attribute records the full
     m_TagDetails["actor"] = TagDescriptor('X', 'N') // Actor is used to encode the name of an actor in a castItem element, which itself occurs in a
     m_TagDetails["book"] = TagDescriptor('N', 'N') // I turn div type='book' into <book> to make processing easier.  There is no need for it to be marked as canonical, because the chapters it contains wil be marked as such.
+
     m_TagDetails["caption"] = TagDescriptor('X', 'N') // Caption is used in the figure element to record the caption for a map, image or similar items.
     m_TagDetails["castGroup"] = TagDescriptor('X', 'N') // The castGroup element does not allow text content.
-
     m_TagDetails["castItem"] = TagDescriptor('X', 'N') // The castItem is a container that groups together information for a particular member of a
     m_TagDetails["castList"] = TagDescriptor('X', 'N') // The castList element appears in the work element of an OSIS document to contain one or
     m_TagDetails["catchWord"] = TagDescriptor('N', 'N') // The catchWord element is used in note and p elements that may appear in note
+
     m_TagDetails["cell"] = TagDescriptor('?', 'N') // Cell within row.
     m_TagDetails["chapter"] = TagDescriptor('Y', 'N') // Chapter is used as syntactic sugar for the div element. It will most often be found in nonbiblical  I turn div type='chapter' into <chapter>, so there is no need to worry about div type='chapter'.
-
     m_TagDetails["closer"] = TagDescriptor('Y', 'N') // The closer element is used for the closing portion of a letter, usually containing a final
     m_TagDetails["contributor"] = TagDescriptor('X', 'N') // The contributor element appears only in a work element. It is used to list a person or
     m_TagDetails["coverage"] = TagDescriptor('X', 'N') // The coverage element appears only in a work element. It is used to specify what is
+
     m_TagDetails["creator"] = TagDescriptor('X', 'N') // The creator element appears only in a work element. The person or organization principally
     m_TagDetails["date"] = TagDescriptor('X', 'N') // The date element is used to record a date in an OSIS document. The type attribute is used to
-
     m_TagDetails["description"] = TagDescriptor('X', 'N') // The description element is only within a work element. It is used to provide a reader
     m_TagDetails["div:acknowledgement"] = TagDescriptor('X', 'N') // I have to admit I have no clue how most of these are used.  I believe there are many we will never encounter.  Book and chapter are not relevant because I don't mark these as div.  Of the others, I think perhaps paragraph, section and subSection are of interest.
     m_TagDetails["div:afterword"] = TagDescriptor('X', 'N') //
+
     m_TagDetails["div:annotant"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:appendix"] = TagDescriptor('X', 'N') //
-
     m_TagDetails["div:article"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:back"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:bibliography"] = TagDescriptor('X', 'N') //
+
     m_TagDetails["div:body"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:book"] = TagDescriptor('X', 'N') //   Won't encounter div:book because I change it internally to <book>.
-
     m_TagDetails["div:bookGroup"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:bridge"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:chapter"] = TagDescriptor('X', 'N') //   Won't encounter div:chapter because I change it to <chapter>.
+
     m_TagDetails["div:colophon"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:commentary"] = TagDescriptor('X', 'N') //
-
     m_TagDetails["div:concordance"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:coverPage"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:dedication"] = TagDescriptor('X', 'N') //
+
     m_TagDetails["div:devotional"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:entry"] = TagDescriptor('X', 'N') //
-
     m_TagDetails["div:front"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:gazetteer"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:glossary"] = TagDescriptor('X', 'N') //
+
     m_TagDetails["div:imprimatur"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:index"] = TagDescriptor('X', 'N') //
-
     m_TagDetails["div:introduction"] = TagDescriptor('N', 'N') //
     m_TagDetails["div:majorSection"] = TagDescriptor('N', 'N') //
     m_TagDetails["div:map"] = TagDescriptor('X', 'N') //
+
     m_TagDetails["div:outline"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:paragraph"] = TagDescriptor('?', 'N') //
-
     m_TagDetails["div:part"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:preface"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:publicationData"] = TagDescriptor('X', 'N') //
+
     m_TagDetails["div:section"] = TagDescriptor('?', 'N') //
     m_TagDetails["div:subSection"] = TagDescriptor('?', 'N') //
-
     m_TagDetails["div:summary"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:tableofContents"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:titlePage"] = TagDescriptor('X', 'N') //
+
     m_TagDetails["divineName"] = TagDescriptor('Y', 'Y') // The divineName element is used to mark the name of the Deity only. Other names,
     m_TagDetails["figure"] = TagDescriptor('X', 'N') // The figure element is used to insert maps, images and other materials into an OSIS document.
-
     m_TagDetails["foreign"] = TagDescriptor('Y', 'Y') // The foreign element is used to mark "foreign" words or phrases in a text. That is words or
     m_TagDetails["format"] = TagDescriptor('X', 'N') // The format element appears only in a work element. It is recommended that the format of a
     m_TagDetails["head"] = TagDescriptor('X', 'N') // The head element is used for book, chapter and other headings. While those are sometimes
+
     m_TagDetails["header"] = TagDescriptor('X', 'N') // The header element is a container that appears only in the osisCorpus or osisText elements.
     m_TagDetails["identifier"] = TagDescriptor('X', 'N') // The identifier element appears only in the work element. The value of the type attribute
-
     m_TagDetails["hi"] = TagDescriptor('?', 'Y') // The hi element provides a simple text highlighting mechanism.
     m_TagDetails["index"] = TagDescriptor('X', 'N') // The index element has no content and can appear anywhere in the body of an OSIS document.
     m_TagDetails["inscription"] = TagDescriptor('Y', 'Y') // The inscription element is used to mark text that reports a written inscription.
+
     m_TagDetails["item"] = TagDescriptor('?', 'N') // The item element is used within a list element to hold the content of each item in the list. An
     m_TagDetails["l"] = TagDescriptor('?', 'N') // The l element is used to mark separate lines in a lg (line group) element. This will be most
-
     m_TagDetails["label"] = TagDescriptor('N', 'N') // The label element is used in an item element to provide a label for the content of an item.
     m_TagDetails["language"] = TagDescriptor('X', 'N') // The language element appears only in a work element. There can be multiple language
     m_TagDetails["lb"] = TagDescriptor('N', 'N') // The lb element is used to indicate a typographical line break in a text. As a milestone type
+
     m_TagDetails["lg"] = TagDescriptor('?', 'N') // The lg element is generally used to group other lg (line group) and l (line) elements together.
     m_TagDetails["list"] = TagDescriptor('?', 'N') // The list element is used to represent lists and can include a head element for the list.
-
     m_TagDetails["mentioned"] = TagDescriptor('Y', 'Y') // The mentioned element is used when a name, for instance, is mentioned but not used as
     m_TagDetails["milestone"] = TagDescriptor('N', 'N') // The milestone element is used to mark a location in the text. It does not permit any
     m_TagDetails["milestoneEnd"] = TagDescriptor('N', 'N') // This element should not be used in current OSIS documents. It has been replaced by
+
     m_TagDetails["milestoneStart"] = TagDescriptor('N', 'N') // This element should not be used in current OSIS documents. It has been replaced by
     m_TagDetails["name"] = TagDescriptor('?', 'Y') // The name element is used to mark place, personal and other names in an OSIS text. The
-
     m_TagDetails["note"] = TagDescriptor('N', 'N') // The note element is used for all notes on a text. Liberal use of the type attribute will enable
     m_TagDetails["osis"] = TagDescriptor('X', 'N') // The osis element is the root element of all OSIS texts.
     m_TagDetails["osisCorpus"] = TagDescriptor('X', 'N') // The osisCorpus element has no attributes and may have a header, followed by an
+
     m_TagDetails["osisText"] = TagDescriptor('X', 'N') // The osisText element is the main container for a text encoded in OSIS. It is composed of
     m_TagDetails["p"] = TagDescriptor('?', 'N') // The p element is used to mark paragraphs in a text. Since paragraphs are one of the most common
-
     m_TagDetails["publisher"] = TagDescriptor('X', 'N') // The publisher element occurs only in a work element.
     m_TagDetails["q"] = TagDescriptor('?', 'N') // The q element is used to mark quotations in a text.
     m_TagDetails["rdg"] = TagDescriptor('N', 'N') // The rdg element is used to record a variant reading of a text. Most often seen where a note says:
+
     m_TagDetails["reference"] = TagDescriptor('N', 'N') // The reference element is used to mark references in one text to another text. The type
     m_TagDetails["refSystem"] = TagDescriptor('X', 'N') // The refSystem element occurs only in a work element. It has text only content and is
-
     m_TagDetails["relation"] = TagDescriptor('X', 'N') // The relation element occurs only in a work element. It has only text only content and is
     m_TagDetails["revisionDesc"] = TagDescriptor('X', 'N') // The revisionDesc element is used only in a header element. It is used to record
     m_TagDetails["rights"] = TagDescriptor('X', 'N') // The rights element is used only in a work element. It is used to specify for a reader the
+
     m_TagDetails["role"] = TagDescriptor('X', 'N') // Role is used in a castItem element to identify the role of a particular actor.
     m_TagDetails["roleDesc"] = TagDescriptor('X', 'N') // The roleDesc element is used to provide a description of a role in a castItem element.
-
     m_TagDetails["row"] = TagDescriptor('?', 'N') // The row element occurs only in table elements and is used to contain cell elements.
     m_TagDetails["salute"] = TagDescriptor('?', 'N') // The salute element is used to mark a saluation or opening comments. It is most generally
     m_TagDetails["scope"] = TagDescriptor('X', 'N') // The scope element is used only in a work element. The general area covered by a text is
+
     m_TagDetails["seg"] = TagDescriptor('Y', 'N') // The seg element should be used for very small divisions, such as within word elements. The  Not sure whether to make this canonical or not, but it looks as though we're not really going to come across it.
     m_TagDetails["signed"] = TagDescriptor('Y', 'N') // The signed element is used to mark the signer of a letter within a closer element.
-
     m_TagDetails["source"] = TagDescriptor('X', 'N') // The source element appears only in a work element. It is used to indicate the source for a
     m_TagDetails["speaker"] = TagDescriptor('Y', 'N') // The speaker element is used to mark the speaker in a text. It will be used when the speaker
     m_TagDetails["speech"] = TagDescriptor('?', 'N') // The speech element is used to mark speeches in a text.
+
     m_TagDetails["subject"] = TagDescriptor('X', 'N') // The subject element occurs only in a work element. It consists only of text drawn from a
     m_TagDetails["table"] = TagDescriptor('?', 'N') // The table element contains an optional head element and one or more row elements.
-
     m_TagDetails["teiHeader"] = TagDescriptor('X', 'N') // The teiHeader element occurs only in a header element. It is used to contain a TEI
     m_TagDetails["title"] = TagDescriptor('N', 'N') // The title element is used to record a title both in a work element and elsewhere in an OSIS text.
     m_TagDetails["title:acrostic"] = TagDescriptor('Y', 'Y') // Acrostic title.
+
     m_TagDetails["title:continued"] = TagDescriptor('N', 'N') //
     m_TagDetails["title:main"] = TagDescriptor('N', 'N') //
-
     m_TagDetails["title:parallel"] = TagDescriptor('N', 'N') //
     m_TagDetails["title:psalm"] = TagDescriptor('Y', 'N') //   We may need to look inside this, because some texts place verse tags inside the canonical title.
     m_TagDetails["title:sub"] = TagDescriptor('N', 'N') //
+
     m_TagDetails["titlePage"] = TagDescriptor('X', 'N') // The titlePage element is used to specify a particular title page for an OSIS document.
     m_TagDetails["transChange"] = TagDescriptor('?', 'N') // The transChange element is used to mark text that is not present in the original  Has to come from context, because I've seen it used both in the main text and in footnotes.
-
     m_TagDetails["type"] = TagDescriptor('X', 'N') // The type element occurs only in a work element. It is used to indicate to the reader the type of
     m_TagDetails["verse"] = TagDescriptor('Y', 'N') // The verse element should almost always be used in its milestoneable form. While some older  I've marked this as non-canonical purely because it does not normally contain anything.
     m_TagDetails["w"] = TagDescriptor('Y', 'N') // The w element is used to encode particular words in a text.  eg Strongs.
+
     m_TagDetails["work"] = TagDescriptor('X', 'N') // The work element occurs only in a header element. It provides all the basic identification and
 
     // *** End of replacement code. ***
@@ -994,6 +1020,8 @@ object Usx_FileProtocol: X_FileProtocol()
 
   override fun getBookAbbreviation (doc: Document) = getBookAbbreviation(Dom.findNodeByName(doc,"book", false)!!)
   override fun getBookAbbreviation (rootNode: Node) = rootNode["code"]!!
+  override fun getBookNumber (doc: Document) = BibleBookNamesUsx.nameToNumber(Osis_FileProtocol.getBookAbbreviation(doc))
+  override fun getBookNumber (rootNode: Node) = BibleBookNamesUsx.nameToNumber(Osis_FileProtocol.getBookAbbreviation(rootNode))
   override fun bookNameToNumber (name: String) = BibleBookNamesUsx.nameToNumber(name)
 
   override fun getBookNode (doc: Document) = Dom.findNodeByName(doc, "book")
@@ -1169,6 +1197,36 @@ object Usx_FileProtocol: X_FileProtocol()
   */
 
   override fun isStrongsNode (node: Node): Boolean = "char" == Dom.getNodeName(node) && "strong" in node
+
+
+  /****************************************************************************/
+  /**
+  * Returns an indication of whether the given node is title.
+  *
+  * @return True if this is a title.
+  */
+
+  override fun isTitleNode (node: Node): Boolean
+  {
+    // CAUTION: Lists may be incomplete.
+    val exactMatches = setOf("main", "iot", "mr", "im", "imt", "qa", "r")
+    val regexes = listOf("is\\d?".toRegex(),
+                         "ms\\d?".toRegex(),
+                         "mt\\d?".toRegex(),
+                         "imt\\d?".toRegex(),
+                         "s\\d?".toRegex()
+    )
+
+    val extendedNodeName = getExtendedNodeName(node)
+    if (!extendedNodeName.startsWith("para")) return false
+    val style = extendedNodeName.split(":")[1]
+
+    if (style in exactMatches)
+      return true
+
+    regexes.firstOrNull {style.matches(it) } ?: return false
+    return true
+  }
 
 
   /****************************************************************************/

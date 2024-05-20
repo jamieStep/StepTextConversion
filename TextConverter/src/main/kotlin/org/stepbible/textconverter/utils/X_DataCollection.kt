@@ -529,7 +529,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   private fun addFromText (text: String): List<Int>
   {
-    var revisedText = Usx_Preprocessor.processRegex(text)
+    var revisedText = if (X_FileProtocol.ProtocolType.USX == m_FileProtocol.Type) Usx_Preprocessor.processRegex(text) else text
     revisedText = revisedText.replace("&lt;", "^lt;").replace("&gt;", "^gt;")
     val doc = Dom.getDocumentFromText(revisedText, retainComments = true)
     return addFromDoc(doc)
@@ -622,11 +622,18 @@ class Osis_DataCollection: X_DataCollection(Osis_FileProtocol)
     val docOut = Dom.createDocument()
     val importedNode = docOut.importNode(docIn.documentElement, true)
     docOut.appendChild(importedNode)
-//    Dbg.d(docIn)
-//    Dbg.d(docOut)
+
+    //--------------------------------------------------
+    //val nodeList = Dom.findNodesByName(docIn, "div").filter { "book" == it["type"] }.toSet() union Dom.findNodesByName(docOut, "book")
+    //Dbg.d(docIn, "in.xml")
+    //Dbg.d(docOut, "out.xml")
+    val nodeListIn = Dom.findNodesByAttributeValue(docIn, "div", "type", "book")
+    val nodeListOut = Dom.findNodesByAttributeValue(docOut, "div", "type", "book")
+    //--------------------------------------------------
+
 
     val res: MutableList<Int> = mutableListOf()
-    val nodeList = Dom.findNodesByAttributeValue(docOut, "div", "type", "book").toSet() union Dom.findNodesByName(docOut, "book")
+    val nodeList = Dom.findNodesByAttributeValue(docOut, "div", "type", "book").toSet() union Dom.findNodesByName(docOut, "book") // Worryingly, not sure why I need the above instead.
     nodeList.forEach {
       if (Dbg.wantToProcessBookByAbbreviatedName(it["osisID"]!!))
       {

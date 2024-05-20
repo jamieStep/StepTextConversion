@@ -224,9 +224,11 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
     }
     if (!thunk.isSiblingOfSid)
     {
+      //Dbg.d(sidWhoseEidWeAreCreating.ownerDocument)
 //      Dbg.d(if (sidWhoseEidWeAreCreating.isSiblingOf(verseEnd)) "True" else "False")
 //      Dbg.d(sidWhoseEidWeAreCreating.parentNode); Dbg.d(verseEnd.parentNode)
       NodeMarker.setCrossBoundaryMarkup(verseEnd)
+      //Dbg.d(sidWhoseEidWeAreCreating.ownerDocument)
       IssueAndInformationRecorder.crossVerseBoundaryMarkup("", m_FileProtocol.readRefCollection(id).getFirstAsRefKey(), forceError = false)
       //Dbg.d(sidWhoseEidWeAreCreating.ownerDocument)
     }

@@ -11,6 +11,27 @@ object ThrowAwayCode
 
 
 /******************************************************************************/
+fun testFindNodesByAttributeValue ()
+{
+  val osisDoc = Dom.getDocument("C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Miscellaneous\\Text_eng_NASB1995\\InputOsis\\SB-tagged nasb1995_osis.xml")
+  val usxDoc = Dom.getDocument("C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Dbl\\BiblicaCopyright\\Text_eng_NIV\\InputUsx\\3jn.usx")
+  val selectedOsis = Dom.findNodesByAttributeValue(osisDoc, "div", "type", "book")
+  val selectedUsx = Dom.findNodesByAttributeValue(usxDoc, "chapter", "style", "c.?".toRegex())
+
+  var nodeOsis = Dom.findNodeByAttributeName(osisDoc, "note", "type")
+  var nodeUsx = Dom.findNodeByAttributeName(usxDoc, "verse", "number")
+
+  while (true)
+  {
+    Dbg.d(Dom.toString(nodeOsis!!))
+    nodeOsis = Dom.getParent(nodeOsis)
+    if (null == nodeOsis) break
+  }
+  exitProcess(0)
+}
+
+
+/******************************************************************************/
 fun lookForNestedParas ()
 {
   var files = StepFileUtils.getMatchingFilesFromFolder("C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/Texts/Miscellaneous/Text_eng_NETfull2_public/InputUsx", ".+\\.usx".toRegex())
