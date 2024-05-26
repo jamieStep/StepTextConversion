@@ -1,6 +1,5 @@
 package org.stepbible.textconverter.subelements
 
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.findNodesByName
 import org.stepbible.textconverter.utils.*
@@ -101,7 +100,7 @@ class SE_EnhancedVerseEndInsertionPreparer (dataCollection: X_DataCollection) : 
 
 
    /**************************************************************************/
-    val vanillaParas = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isPlainVanillaPara(it) }
+    val vanillaParas = Dom.getAllNodesBelow(rootNode).filter { m_FileProtocol.isPlainVanillaPara(it) }
     convertToSelfClosingNode(vanillaParas)
 
 
@@ -109,7 +108,7 @@ class SE_EnhancedVerseEndInsertionPreparer (dataCollection: X_DataCollection) : 
    /**************************************************************************/
    /* For these, nesting should not be an issue. */
 
-    val poetryParas = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isPoetryPara(it) }
+    val poetryParas = Dom.getAllNodesBelow(rootNode).filter { m_FileProtocol.isPoetryPara(it) }
     convertToSelfClosingNode(poetryParas)
 
 

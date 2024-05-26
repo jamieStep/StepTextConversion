@@ -484,7 +484,7 @@ object IssueAndInformationRecorder
   private fun populateBibleDetails (bibleStructure: BibleStructure)
   {
     /**************************************************************************/
-    m_DataCollection.getRootNodes().forEach { Dom.getNodesInTree(it).forEach { node -> populateTextFeaturesFromNode(node) } }
+    m_DataCollection.getRootNodes().forEach { Dom.getAllNodesBelow(it).forEach { node -> populateTextFeaturesFromNode(node) } }
 
 
 

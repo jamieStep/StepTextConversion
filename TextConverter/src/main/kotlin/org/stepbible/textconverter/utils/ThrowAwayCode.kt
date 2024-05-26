@@ -66,7 +66,7 @@ fun convertNivToVL ()
 {
   var line = ""
   File("C://Users//Jamie//Desktop//niv.txt").bufferedWriter().use { writer ->
-    Dom.getDocument("C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Dbl\\Biblica\\Text_eng_NIrV\\Osis\\osis.xml").getAllNodes().forEach {
+    Dom.getDocument("C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\Dbl\\Biblica\\Text_eng_NIrV\\Osis\\osis.xml").getAllNodesBelow().forEach {
       if ("verse" == Dom.getNodeName(it) && "sID" in it)
       {
         line = line.replace("\\s+".toRegex(), " ").trim()

@@ -371,7 +371,7 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
 
   private fun markTags (rootNode: Node)
   {
-    m_AllNodes = rootNode.getAllNodes()
+    m_AllNodes = rootNode.getAllNodesBelow()
     //debugPrintOrderedNodeList(m_AllNodes)
     m_AllNodes.indices.forEach { m_NodeMap[m_AllNodes[it]] = it }
     m_AllNodes.filter { m_FileProtocol.tagName_chapter() == Dom.getNodeName(it) } .forEach {
@@ -396,7 +396,7 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
   /****************************************************************************/
   /* Removes all canonicity markers. */
 
-  private fun unmarkTags (rootNode: Node) = rootNode.getAllNodes().forEach { it -= "vEnd" }
+  private fun unmarkTags (rootNode: Node) = rootNode.getAllNodesBelow().forEach { it -= "vEnd" }
 
 
 

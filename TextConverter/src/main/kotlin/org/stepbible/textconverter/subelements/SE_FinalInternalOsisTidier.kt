@@ -47,7 +47,6 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
     handleVerticalWhitespace(rootNode)
     handle_X_tags(rootNode)
     NodeMarker.deleteAllMarkers(rootNode) // Remove any temporary markers.
-    Dom.setNodeName(rootNode, "div") // Book nodes should be div, but we set them temporarily to <book> earlier.
   }
 
 
@@ -110,7 +109,7 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
   {
     var doneSomething = false
     var inVerse = false
-    val allNodes = Dom.getNodesInTree(chapterNode)
+    val allNodes = chapterNode.getAllNodesBelow()
 
     for (node in allNodes)
     {
@@ -119,7 +118,7 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
       if (m_FileProtocol.tagName_verse() == nodeName)
         inVerse = m_FileProtocol.attrName_verseSid() in node
       else if (!inVerse && m_FileProtocol.isTitleNode(node) && !m_FileProtocol.isCanonicalTitleNode(node)) // The !isCanonicalTitleNode is there on the assumption notes in canonical titles work.  Need to check this.
-        Dom.getNodesInTree(node).filter { m_FileProtocol.isNoteNode(it) }.forEach { Dom.deleteNode(it); doneSomething = true}
+        node.getAllNodesBelow().filter { m_FileProtocol.isNoteNode(it) }.forEach { Dom.deleteNode(it); doneSomething = true}
     }
 
     if (doneSomething)
@@ -133,7 +132,7 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
   /****************************************************************************/
   private fun deleteTemporaryNodes (rootNode: Node)
   {
-    rootNode.getAllNodes().forEach {
+    rootNode.getAllNodesBelow().forEach {
       if (NodeMarker.hasDeleteMe(it))
         Dom.deleteNode(it)
     }
@@ -156,7 +155,7 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
 
   private fun handle_X_tags (rootNode: Node)
   {
-    Dom.getNodesInTree(rootNode)
+    rootNode.getAllNodesBelow()
       .filter { Dom.getNodeName(it).startsWith("_X_") }
       .forEach {
         when (val nodeName = Dom.getNodeName(it))
@@ -212,7 +211,7 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
     /************************************************************************/
     /* The span-type form. */
 
-    val allNodes = Dom.getNodesInTree(rootNode)
+    val allNodes = rootNode.getAllNodesBelow()
     allNodes.filter { "hi:acrostic" == m_FileProtocol.getExtendedNodeName(it) } .forEach {
       it["type"] = "italic"
     }
@@ -469,7 +468,7 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
   private fun moveNotesInsideVerses (rootNode: Node)
   {
     var eid: Node? = null
-    Dom.getNodesInTree(rootNode)
+    rootNode.getAllNodesBelow()
       .filter { !Dom.hasAncestorNamed(it, "note") } // Hitting the children of moved note nodes can mess the processing up.
       .forEach {
       when (Dom.getNodeName(it))

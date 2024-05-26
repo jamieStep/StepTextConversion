@@ -7,7 +7,7 @@ import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.contains
 import org.stepbible.textconverter.support.miscellaneous.get
-import org.stepbible.textconverter.support.miscellaneous.getAllNodes
+import org.stepbible.textconverter.support.miscellaneous.getAllNodesBelow
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.utils.*
@@ -693,9 +693,9 @@ object ContentValidator
 
     var res = ""
     val chapterNode = Dom.findAncestorByNodeName(v1Sid, m_FileProtocolNew.tagName_chapter())!!
-    val canonicalHeaderNode = Dom.getNodesInTree(chapterNode).firstOrNull { m_FileProtocolNew.isCanonicalTitleNode(it) } ?: return ""
+    val canonicalHeaderNode = Dom.getAllNodesBelow(chapterNode).firstOrNull { m_FileProtocolNew.isCanonicalTitleNode(it) } ?: return ""
 
-    Dom.getNodesInTree(canonicalHeaderNode).forEach {
+    Dom.getAllNodesBelow(canonicalHeaderNode).forEach {
       if (m_FileProtocolNew.isCanonicalNode(it) && Dom.isTextNode(it))
         res += it.textContent
     }
@@ -838,7 +838,7 @@ object ContentValidator
 
     /**************************************************************************/
     val res = BookAnatomy()
-    res.m_AllNodes = rootNode.getAllNodes()
+    res.m_AllNodes = rootNode.getAllNodesBelow()
 
 
 

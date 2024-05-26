@@ -1,9 +1,6 @@
 package org.stepbible.textconverter.utils
 
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.*
-import org.w3c.dom.Document
-import org.w3c.dom.Node
 
 /******************************************************************************/
 /**
@@ -21,7 +18,7 @@ import org.w3c.dom.Node
 * if we wished to.
 *
 * However, this format is not very amenable to further processing.  To this
-* end, [ProtocolConverterOsisForThirdPartiesToInternalOsis] converts it to a
+* end, [BasicOsisTweaker] converts it to a
 * more useful form (and should therefore be used early in the processing).
 *
 * @author ARA "Jamie" Jamieson
@@ -38,7 +35,7 @@ class ProtocolConverters // Just here to give the documentation processor someth
 * @author ARA "Jamie" Jamieson
 */
 
-object ProtocolConverterOsisForThirdPartiesToInternalOsis
+object BasicOsisTweaker
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -81,5 +78,19 @@ object ProtocolConverterOsisForThirdPartiesToInternalOsis
        or not, so it's convenient to ditch them. */
 
     doc.findNodesByName("lg").forEach { Dom.promoteChildren(it); Dom.deleteNode(it) }
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Undoes those effects of 'process' which were intended only to be temporary.
+  *
+  * @param dataCollection The data to be handled.
+  */
+
+  fun unprocess (dataCollection: X_DataCollection)
+  {
+    val doc = dataCollection.getDocument()
+    doc.findNodesByName("book").forEach { Dom.setNodeName(it, "div") }
   }
 }

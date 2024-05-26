@@ -71,7 +71,7 @@ class SE_LastDitchValidator (dataCollection: X_DataCollection): SE(dataCollectio
     val problems: MutableSet<RefKey> = mutableSetOf()
     var chapterRefKey = Ref.rdOsis(chapterNode[m_FileProtocol.attrName_chapterSid()]!!).toRefKey()
 
-    Dom.getNodesInTree(chapterNode).forEach {
+    Dom.getAllNodesBelow(chapterNode).forEach {
       if (m_FileProtocol.isCanonicalTitleNode(it))
       {
         canonicalTitleNode = it

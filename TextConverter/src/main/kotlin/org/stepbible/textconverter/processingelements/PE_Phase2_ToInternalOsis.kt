@@ -111,68 +111,99 @@ object PE_Phase2_ToInternalOsis : PE
   private fun doIt ()
   {
     /***************************************************************************/
+    /* Inserts a comment near the front of the DOM to help identify different
+       versions. */
+
     fun addComment (doc: Document, text: String) = Dom.insertNodeBefore(doc.documentElement.firstChild, Dom.createCommentNode(doc, " $text "))
 
 
 
     /***************************************************************************/
-    fun x () = Logger.announceAllAndTerminateImmediatelyIfErrors()
+    fun x () = Logger.announceAllAndTerminateImmediatelyIfErrors() // A little shorthand.
 
 
 
     /***************************************************************************/
+    /***************************************************************************/
+    /*
+       Interface to phase 1 to pick things up.
+    */
+    /***************************************************************************/
+    /***************************************************************************/
+
+    /***************************************************************************/
     /* Pick up the input data. */
 
-    StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath())
-    InternalOsisDataCollection.loadFromText(Phase1TextOutput); x()
-    RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()); x() // Needed to cater for the possible requirement to expand ranges.
+    StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath()) // Create a home for what we're about to generate.
+    InternalOsisDataCollection.loadFromText(Phase1TextOutput); x()                 // Phase 1 creates OSIS _text_ in memory, so we need to load it as a DOM.
+    Phase1TextOutput = ""                                                          // Free up space -- we don't need the OSIS text any more.
+    RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()); x() // $$$Needed to cater for the possible requirement to expand ranges.
     val doc = InternalOsisDataCollection.getDocument()
-    Phase1TextOutput = ""
     //Dbg.d(doc)
 
 
 
     /***************************************************************************/
-    /* We may or may not have verse ends in the data.  We definitely need them
-       though.
+    /***************************************************************************/
+    /*
+       We may or may not have verse ends in the data.  We definitely need them
+       though.  The following deals with that ...
+    */
+    /***************************************************************************/
+    /***************************************************************************/
 
-       I first delete any that we already have (to get things to a common
-       state).
-
-       I'm going to need them in both the externally-facing and the internally-
-       facing OSIS.
-
-       As regards the former, I want to do absolutely minimal work to it, so I
-       simply place verse ends immediately before the following verse start.
-
-       As regards the internally-facing OSIS, I need to place the verse ends
-       rather more carefully with a view to avoiding cross-boundary markup.
-       This I defer for a moment -- see the lines starting SE_EnhancedVerseEnd
-       below.
-
-       At this point, I've done everything I'm going to do to the externally-
-       facing OSIS and on runs which are starting from VL or USX, I'm going to
-       need to save it in case we want to apply manual tweaks to it in future
-       and then use it as input.  I don't save it until much later in the
-       processing, in case anything goes wrong -- otherwise people might find
-       a saved version lying around and automatically assume it's ok. */
+    /***************************************************************************/
+    /* Not all documents have verse-ends.  We start by deleting any that _are_
+       present.  This reduces everything to the same state, and also frees
+       things up so that we can decide for ourselves where the verse-ends should
+       go. */
 
     SE_VerseEndRemover(InternalOsisDataCollection).processAllRootNodes(); x()
-    ExternalOsisDataCollection.loadFromDocs(listOf(InternalOsisDataCollection.getDocument())); x()
-    ExternalOsisDataCollection.copyProcessRegistryFrom(InternalOsisDataCollection); x()
 
-    Osis_CanonicalHeadingsHandler(InternalOsisDataCollection).process()
+
+
+    /***************************************************************************/
+    /* If this run started from OSIS, then we don't actually need to worry about
+       the external OSIS, because that OSIS _is_ the external OSIS.  Otherwise,
+       we need to create the external OSIS.  I'd rather not be doing that quite
+       this early because we do nothing with it other than save it, and having
+       it lying around soaks up memory and also introduces potential confusion.
+       However, I want it to be based upon the InternalOsis at a point before
+       I've done much to it, and that point is now.
+
+       I therefore copy the DOM across to the external collection, and also
+       the process registry, which I use to record what processing has been
+       applied to the data.  I use this for defensive programming.  There are
+       a lot of dependencies in what follows, and each step checks the
+       registry to confirm that its requirements have been met, and records
+       what it has done in the registry so that later steps are satisfied.
+
+       For the OSIS to be valid, we also need verse-ends.  These I insert
+       in a rudimentary manner (so as to minimise the amount of processing
+       which has been applied).  With the _internal_ OSIS I do rather better,
+       but that comes later. */
 
     if ("osis" != ConfigData["stepOriginData"]!!)
     {
-      StepFileUtils.clearFolder(FileLocations.getInputOsisFolderPath())
-      SE_BasicVerseEndInserter(ExternalOsisDataCollection).processAllRootNodes(); x()
-      addComment(ExternalOsisDataCollection.getDocument(), "Externally-facing OSIS")
+      ExternalOsisDataCollection.loadFromDocs(listOf(InternalOsisDataCollection.getDocument())); x()  // Copy all DOM information to external OSIS DOM ...
+      ExternalOsisDataCollection.copyProcessRegistryFrom(InternalOsisDataCollection); x()             // ... along with details of what work has been applied to the text.  (I use this for defensive programming purposes -- much
+      StepFileUtils.clearFolder(FileLocations.getInputOsisFolderPath())                               // Clear the folder which will be used to store the external OSIS.
+      SE_BasicVerseEndInserter(ExternalOsisDataCollection).processAllRootNodes(); x()                 // Add verse-ends in a rudimentary manner.
+      addComment(ExternalOsisDataCollection.getDocument(), "Externally-facing OSIS")             // Mark the DOM so we know what this is.
     }
 
     //Dbg.d(InternalOsisDataCollection.getDocument())
 
 
+
+
+    /***************************************************************************/
+    /***************************************************************************/
+    /*
+       And all of the main processing.
+    */
+    /***************************************************************************/
+    /***************************************************************************/
 
     /**************************************************************************/
     /* I start here with changes that everything else relies on, and then
@@ -180,7 +211,7 @@ object PE_Phase2_ToInternalOsis : PE
        on anything much and / or don't markedly affect other processing. */
 
     addComment(doc, "Internally-facing OSIS")
-    ProtocolConverterOsisForThirdPartiesToInternalOsis.process(InternalOsisDataCollection); x() // Minor changes to make processing easier (some of which may have to be undone later).
+    BasicOsisTweaker.process(InternalOsisDataCollection); x()                                   // Minor changes to make processing easier (some of which may have to be undone later).
     SE_StrongsHandler(InternalOsisDataCollection).processAllRootNodes(); x()                    // Canonicalises Strong's references.
 
 
@@ -190,29 +221,51 @@ object PE_Phase2_ToInternalOsis : PE
 
     SE_TableHandler(InternalOsisDataCollection).processAllRootNodes(); x()                      // Collapses tables which span verses into a single elided verse.
     SE_ElisionHandler(InternalOsisDataCollection).processAllRootNodes(); x()                    // Expands elisions out into individual verses.
+    Osis_CanonicalHeadingsHandler(InternalOsisDataCollection).process(); x()                    // $$$ NOt sure about this step at present.
     SE_EnhancedVerseEndInsertionPreparer(InternalOsisDataCollection).processAllRootNodes(); x() // Continues the work of SE_CanonicalHeadingsHandler, making things easier to insert verse ends.
-    SE_EnhancedVerseEndInserter(InternalOsisDataCollection).processAllRootNodes(); x()          // Position verse ends so as to reduce the chances of cross-boundary markup.
+    SE_EnhancedVerseEndInserter(InternalOsisDataCollection).processAllRootNodes(); x()          // Positions verse ends so as to reduce the chances of cross-boundary markup.
     InternalOsisDataCollection.reloadBibleStructureFromRootNodes(wantWordCount = false); x()    // Probably a good idea to build / rebuild the structure here.
 
 
 
     /**************************************************************************/
-    SE_BasicValidator(InternalOsisDataCollection).structuralValidation(); x()                       // Checks for basic things like all verses being under chapters.
-    SE_ListEncapsulator(InternalOsisDataCollection).processAllRootNodes(); x()                      // Might encapsulate lists (but in fact does not do so currently).
-    Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                             // Checks for invalid cross-references, or cross-references which point to non-existent places.
-    handleReversification(); x()                                                                    // Does what it says on the tin.
-    SE_BasicValidator(InternalOsisDataCollection).finalValidationAndCorrection(); x()               // Final checks.  May create empty verses if necessary.
-    // $$$ SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()              // Collapses subverses into the owning verses, if that's what we're doing (mainly or exclusively on public modules).
-    SE_CalloutStandardiser(InternalOsisDataCollection).processAllRootNodes(); x()                   // Force callouts to be in house style, assuming that's what we want.
-    removeDummyVerses(InternalOsisDataCollection); x()                                              // Does what it says on the tin.
-    ContentValidator.process(InternalOsisDataCollection, Osis_FileProtocol, ExternalOsisDataCollection, Osis_FileProtocol); x() // Checks current canonical content against original.
-    EmptyVerseHandler.preventSuppressionOfEmptyVerses(InternalOsisDataCollection); x()              // Unless we take steps, empty verses tend to be suppressed when rendered.
-    EmptyVerseHandler(InternalOsisDataCollection).markVersesWhichWereEmptyInTheRawText(); x()       // Back to doing what it says on the tin.
-Dbg.d(InternalOsisDataCollection.getDocument())
-    SE_TextAnalyser(InternalOsisDataCollection).processAllRootNodes(); x()                          // Gather up information which might be useful to someone administering texts.
-    SE_FinalInternalOsisTidier(InternalOsisDataCollection).processAllRootNodes(); x()                       // Ad hoc last minute tidying.
-    SE_LastDitchValidator(InternalOsisDataCollection).processAllRootNodes(); x()                    // Final health checks.
-    Dom.outputDomAsXml(InternalOsisDataCollection.getDocument(),                                    // Save the OSIS so it's available to osis2mod.
+    SE_BasicValidator(InternalOsisDataCollection).structuralValidation(); x()                   // Checks for basic things like all verses being under chapters.
+    SE_ListEncapsulator(InternalOsisDataCollection).processAllRootNodes(); x()                  // Might encapsulate lists (but in fact does not do so currently).
+    Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                         // Checks for invalid cross-references, or cross-references which point to non-existent places.
+    handleReversification(); x()                                                                // Does what it says on the tin.
+    SE_BasicValidator(InternalOsisDataCollection).finalValidationAndCorrection(); x()           // Final checks.  May create empty verses if necessary.
+    // $$$ SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()          // Collapses subverses into the owning verses, if that's what we're doing (mainly or exclusively on public modules).
+    SE_CalloutStandardiser(InternalOsisDataCollection).processAllRootNodes(); x()               // Force callouts to be in house style, assuming that's what we want.
+    removeDummyVerses(InternalOsisDataCollection); x()                                          // Does what it says on the tin.
+    ContentValidator.process(InternalOsisDataCollection, Osis_FileProtocol,                     // Checks current canonical content against original.
+                             ExternalOsisDataCollection, Osis_FileProtocol); x()
+    EmptyVerseHandler.preventSuppressionOfEmptyVerses(InternalOsisDataCollection); x()          // Unless we take steps, empty verses tend to be suppressed when rendered.
+    EmptyVerseHandler(InternalOsisDataCollection).markVersesWhichWereEmptyInTheRawText(); x()   // Back to doing what it says on the tin.
+    SE_TextAnalyser(InternalOsisDataCollection).processAllRootNodes(); x()                      // Gather up information which might be useful to someone administering texts.
+    SE_FinalInternalOsisTidier(InternalOsisDataCollection).processAllRootNodes(); x()           // Ad hoc last minute tidying.
+    BasicOsisTweaker.unprocess(InternalOsisDataCollection); x()                                 // Undoes any temporary tweaks which were applied to make the overall processing easier.
+    SE_LastDitchValidator(InternalOsisDataCollection).processAllRootNodes(); x()                // Final health checks.
+
+
+
+    /**************************************************************************/
+    /* Save the OSIS so it's available to osis2mod.
+
+       I don't really like the final code fragment (^lt etc) below.  It's there
+       to undo temporary changes to text content which may have been applied
+       much earlier in the processing (in this case, to replace things like
+       '&lt;', because the many transformations applied here start getting
+       confused as to whether we have '&lt;' or '<', the latter being a problem
+       in some cases).  But this architecture means that we apply these changes
+       somewhere miles away in the code (in X_DataCollection), and then undo them
+       again here, which isn't ideal.
+
+       Note, incidentally, that this is different from BasicOsisTweaker.unprocess.
+       That applies changes to the DOM.  Here we are applying changes to the XML
+       text to which the DOM is converted.  Hence, unfortunately, it's not
+       possible to combine the two steps into one. */
+
+    Dom.outputDomAsXml(InternalOsisDataCollection.getDocument(),
                        FileLocations.getInternalOsisFilePath(),
             null)
                        { x -> x.replace("^lt;", "&lt;").replace("^gt;", "&gt;") }

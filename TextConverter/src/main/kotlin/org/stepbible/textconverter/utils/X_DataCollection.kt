@@ -530,7 +530,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   private fun addFromText (text: String): List<Int>
   {
     var revisedText = if (X_FileProtocol.ProtocolType.USX == m_FileProtocol.Type) Usx_Preprocessor.processRegex(text) else text
-    revisedText = revisedText.replace("&lt;", "^lt;").replace("&gt;", "^gt;")
+    revisedText = revisedText.replace("&lt;", "^lt;").replace("&gt;", "^gt;") // It's just too difficult to retain &lt etc as-is.
     val doc = Dom.getDocumentFromText(revisedText, retainComments = true)
     return addFromDoc(doc)
   }

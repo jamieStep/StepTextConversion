@@ -1254,7 +1254,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   protected open fun addFromDoc (doc: Document, wantWordCount: Boolean)
   {
-    doc.getAllNodes()
+    doc.getAllNodesBelow()
       .filter { m_FileProtocol!!.isBookNode(it) }
       .forEach { addFromRootNode(it, wantWordCount) }
   }
@@ -1337,7 +1337,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
     /**************************************************************************/
     //Dbg.d(rootNode.ownerDocument)
-    rootNode.getAllNodes().forEach { //Dbg.dCont(Dom.toString(it), "<verse eID='Ps.4.1'>")
+    rootNode.getAllNodesBelow().forEach { //Dbg.dCont(Dom.toString(it), "<verse eID='Ps.4.1'>")
       var processNode = true
       while (processNode)
       {
@@ -1428,7 +1428,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
     /**************************************************************************/
     var nodesOfInterest: MutableList<Node> = mutableListOf()
     var wordCount = 0
-    val allNodes = chapterNode.getAllNodes()
+    val allNodes = chapterNode.getAllNodesBelow()
 
 
 

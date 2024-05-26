@@ -1,6 +1,5 @@
 package org.stepbible.textconverter.usxinputonly
 
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.utils.Usx_FileProtocol
@@ -138,7 +137,7 @@ object Usx_BookAndChapterConverter
     /***************************************************************************/
     /* Locate the nodes to be processed within the overall collection. */
 
-    val allNodes = Dom.getNodesInTree(parentNode)
+    val allNodes = Dom.getAllNodesBelow(parentNode)
     val indexes: MutableList<Int> = mutableListOf()
     allNodes.indices.forEach {
       if (tagNameToBeProcessed == Dom.getNodeName(allNodes[it]))
@@ -179,7 +178,7 @@ object Usx_BookAndChapterConverter
     val bookName = bookRoot["code"]!!
     var chapterSid = ""
 
-    Dom.getNodesInTree(bookRoot).forEach {
+    Dom.getAllNodesBelow(bookRoot).forEach {
       when (Dom.getNodeName(it))
       {
         "chapter" ->

@@ -340,7 +340,7 @@ open class SE_ConversionTimeReversification
     /**************************************************************************/
     /* Identify duplicate sids. */
 
-    val allNodes = Dom.getNodesInTree(rootNode)
+    val allNodes = Dom.getAllNodesBelow(rootNode)
     val duplicateDetails: TreeMap<String, MutableList<Thunk>> = TreeMap(String.CASE_INSENSITIVE_ORDER)
     var activeList: MutableList<Thunk>? = null
     fun collectDuplicates (ix: Int)
@@ -1096,7 +1096,7 @@ open class SE_ConversionTimeReversification
     val sid = m_FileProtocol.makeVerseSidNode(nodesInTitle[0].ownerDocument, Pair(Ref.setV(chapterRefKey, 0), null))
     val eid = m_FileProtocol.makeVerseEidNode(nodesInTitle[0].ownerDocument, Pair(Ref.setV(chapterRefKey, 0), null))
 
-    m_DataCollection.getRootNode(BibleAnatomy.C_BookNumberForPsa)!!.getAllNodes().forEach {
+    m_DataCollection.getRootNode(BibleAnatomy.C_BookNumberForPsa)!!.getAllNodesBelow().forEach {
       if (nodesInTitle[0] === it)
         Dom.insertNodeBefore(it, sid)
       else if (nodesInTitle.last() === it)
@@ -1215,7 +1215,7 @@ open class SE_ConversionTimeReversification
         res.eidMap[getSelectedIdAsRefKey(node, m_FileProtocol.attrName_verseEid())] = ix
     }
 
-    res.nodeList = Dom.getNodesInTree(startNode)
+    res.nodeList = Dom.getAllNodesBelow(startNode)
     res.nodeList.indices.forEach { addToMaps(it) }
 
     return res

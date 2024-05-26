@@ -62,7 +62,7 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
   {
     Dbg.reportProgress("Handling Strongs for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     m_CorrectStrong = ConfigData.getAsBoolean("stepCorrectStrongs", "yes")
-    val strongs = Dom.getNodesInTree(rootNode).filter { m_FileProtocol.isStrongsNode(it) }
+    val strongs = Dom.getAllNodesBelow(rootNode).filter { m_FileProtocol.isStrongsNode(it) }
     strongs.forEach { doStrong(it) }
     if (strongs.isNotEmpty()) IssueAndInformationRecorder.setStrongs()
   }

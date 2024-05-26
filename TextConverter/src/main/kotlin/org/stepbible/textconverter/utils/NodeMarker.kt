@@ -78,7 +78,7 @@ object NodeMarker
   {
     dataCollection.getRootNodes().forEach { rootNode ->
       deleteAllMarkers(rootNode)
-      Dom.getNodesInTree(rootNode).filter { null != it["_t"] }.forEach { deleteAllMarkers(it) }
+      Dom.getAllNodesBelow(rootNode).filter { null != it["_t"] }.forEach { deleteAllMarkers(it) }
     }
   }
 

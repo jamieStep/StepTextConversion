@@ -231,11 +231,11 @@ object Dom
      * @return List of nodes.
      */
 
-    fun getNodesInTree (startNode: Node): List<Node>
+    fun getAllNodesBelow (startNode: Node): List<Node>
     {
         val res: MutableList<Node> = ArrayList()
         if ("#document" != getNodeName(startNode)) res.add(startNode)
-        getNodesInTree(res, startNode)
+        getAllNodesBelow(res, startNode)
         return res
     }
 
@@ -647,7 +647,7 @@ object Dom
 
     fun findCommentNodes (doc: Document): List<Comment>
     {
-      return getNodesInTree(doc).filter { it.nodeType == Node.COMMENT_NODE } .map { it as Comment}
+      return getAllNodesBelow(doc).filter { it.nodeType == Node.COMMENT_NODE } .map { it as Comment}
     }
 
 
@@ -2580,12 +2580,12 @@ object Dom
 
 
    /****************************************************************************/
-   private fun getNodesInTree(res: MutableList<Node>, startNode: Node) {
+   private fun getAllNodesBelow(res: MutableList<Node>, startNode: Node) {
         val children = startNode.childNodes
         for (i in 0..< children.length) {
             val n = children.item(i)
             res.add(n)
-            getNodesInTree(res, n)
+            getAllNodesBelow(res, n)
         }
     }
 
@@ -2706,7 +2706,7 @@ object Dom
 
 
         /****************************************************************************/
-        val allNodes = getNodesInTree(a.ownerDocument)
+        val allNodes = getAllNodesBelow(a.ownerDocument)
         val ixA = IntStream.range(0, allNodes.size - 1).filter { ix: Int -> allNodes[ix] === a }.findFirst()
         if (!ixA.isPresent) throw StepException("getNodesBetween couldn't find node " + toString(a)) // For some reason, isEmpty gives a syntax error.
 
@@ -2840,7 +2840,7 @@ operator fun Node.minus (attributeName: String): Node { Dom.deleteAttribute(this
 operator fun Node.minusAssign (attributeName: String) { Dom.deleteAttribute(this, attributeName) }                // node -= "attrName" (delete attribute)
 operator fun Node.contains (attributeName: String): Boolean { return Dom.hasAttribute(this, attributeName) }      // "attrName" in node (or !in)
 
-fun Node.getAllNodes (): List<Node> = Dom.getNodesInTree(this)
+fun Node.getAllNodesBelow (): List<Node> = Dom.getAllNodesBelow(this)
 fun Node.findNodeByAttributeName (nodeName: String, attributeName: String) = Dom.findNodeByAttributeName(this, nodeName, attributeName)
 fun Node.findNodeByName (nodeName: String, includeThisNode: Boolean) = Dom.findNodeByName(this, nodeName, includeThisNode)
 fun Node.findNodesByAttributeName (nodeName: String, attributeName: String) = Dom.findNodesByAttributeName(this, nodeName, attributeName)
@@ -2850,7 +2850,7 @@ fun Node.isWhitespace () = Dom.isWhitespace(this)
 fun Node.isSiblingOf (node: Node) = Dom.isSiblingOf(this, node)
 
 fun Document.createNode (textForTag: String): Node = Dom.createNode(this, textForTag)
-fun Document.getAllNodes (): List<Node> = Dom.getNodesInTree(this)
+fun Document.getAllNodesBelow (): List<Node> = Dom.getAllNodesBelow(this)
 fun Document.findNodeByName (nodeName: String) = Dom.findNodeByName(this, nodeName)
 fun Document.findNodesByName (nodeName: String) = Dom.findNodesByName(this, nodeName)
 fun Document.findNodesByAttributeName (nodeName: String, attributeName: String) = Dom.findNodesByAttributeName(this, nodeName, attributeName)

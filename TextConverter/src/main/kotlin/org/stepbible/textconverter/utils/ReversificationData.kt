@@ -2074,7 +2074,22 @@ object ReversificationData
      key values against which translations are stored.  This serves both to
      give us the translations and also as a check that the data in the
      reversification file uses only things already known to us.
-  */
+
+     Just to emphasise what's going on here ...
+
+     ConfigData maps text-keys to actual text strings; and elsewhere that's
+     all you need.  But with reversification, the reversification data doesn't
+     give us the key -- it gives us an approximation to the text (by which I
+     mean that we get a generic version of the text, which is then tailored each
+     time it is used to contain scripture references.
+
+     The code below maps this generic text back to keys, which makes it possible,
+     in particular, to handle language-specific aspects of things (French
+     translations, German translations, etc) in a uniform manner.
+
+     It's not ideal, because every time the repertoire of reversification
+     footnotes changes, we have to update the code below.  But it's the best I
+     can come up with. */
 
   init
   {

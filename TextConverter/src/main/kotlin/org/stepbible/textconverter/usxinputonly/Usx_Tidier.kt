@@ -341,7 +341,7 @@ object Usx_Tidier
       } // when
     }
 
-    Dom.getNodesInTree(doc).forEach { processNode(it) }
+    Dom.getAllNodesBelow(doc).forEach { processNode(it) }
 
     return res
   }

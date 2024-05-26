@@ -323,6 +323,7 @@ object PackageContentHandler
 
   private fun osisSaver (dummy: String)
   {
+    if ("osis" == ConfigData["stepOriginData"]!!) return // Nothing to do if this run started from OSIS, because that _is_ the external OSIS.
     val filePath = Paths.get(FileLocations.getInputOsisFolderPath(), ConfigData["stepModuleName"]!! + ".xml").toString()
     NodeMarker.deleteAllMarkers(ExternalOsisDataCollection)
     Dom.outputDomAsXml(ExternalOsisDataCollection.getDocument(), filePath, null)

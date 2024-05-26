@@ -2,7 +2,6 @@ package org.stepbible.textconverter.usxinputonly
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.*
@@ -465,7 +464,7 @@ import java.util.*
     var mostRecentRef = Ref.rdUsx(initialRef)
     fun makeOwners ()
     {
-      charXtsLackingRefs[0].ownerDocument.getAllNodes().forEach {
+      charXtsLackingRefs[0].ownerDocument.getAllNodesBelow().forEach {
         when (Dom.getNodeName(it))
         {
           "chapter", "verse" ->
@@ -1042,7 +1041,7 @@ import java.util.*
       }
     }
 
-    rootNode.getAllNodes().forEach { processNode(it) }
+    rootNode.getAllNodesBelow().forEach { processNode(it) }
   }
 
 

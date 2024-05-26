@@ -103,7 +103,7 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
        canonical text prior to v1, regardless of how that text was marked,
        but here we are concerned with stuff already specifically marked up. */
 
-    val titleNodes = identifyCanonicalTitleLocations(chapterNode.getAllNodes()).first
+    val titleNodes = identifyCanonicalTitleLocations(chapterNode.getAllNodesBelow()).first
     if (titleNodes.isEmpty())
       return
 
@@ -181,7 +181,7 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
     fun getHeaderContentLength (node: Node): Int
     {
       var res = 0
-      Dom.getNodesInTree(node).forEach {
+      Dom.getAllNodesBelow(node).forEach {
         if (fileProtocol.isCanonicalNode(it) && Dom.isTextNode(it))
           res += it.textContent.replace("\\s+".toRegex(), "").length
       }
@@ -214,7 +214,7 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
        outside of the canonical title tag. */
 
     val chapterNode = Dom.findAncestorByNodeName(v1, fileProtocol.tagName_chapter())!!
-    for (node in Dom.getNodesInTree(chapterNode))
+    for (node in Dom.getAllNodesBelow(chapterNode))
     {
       if (fileProtocol.isCanonicalTitleNode(node))
         canonicalTitleTextLength = getHeaderContentLength(node)

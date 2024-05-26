@@ -14,6 +14,21 @@ import org.stepbible.textconverter.utils.IssueAndInformationRecorder
 /**
  * Supports translations of keys to either English or vernacular text.
  *
+ * PLEASE READ ME ...
+ *
+ * One thing you might perhaps want to be aware of (but will inevitably forget).
+ * We are dealing here with texts which may be translated into non-English
+ * languages.  The basic text for each message is in English; and it may contain
+ * place-holders to be filled in with scripture references etc.  These place-
+ * holders contain Latin characters, and must remain unchanged in the translated
+ * form of the message.  When you are dealing with RTL languages, such as
+ * Arabic, and have Latin characters mixed in, the result can look odd, and
+ * things can appear to be in the wrong order.  However, I *think* (hope) that
+ * once the placeholders are themselves replaced with the RTL text which they
+ * are intended to display, things seem to come out ok.  In other words, matters
+ * can be extremely confusing during development work, but the end result still
+ * looks ok.
+ *
  *
  * @author ARA "Jamie" Jamieson
  */

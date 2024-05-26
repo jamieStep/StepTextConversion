@@ -99,7 +99,7 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
         BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { refKey -> Logger.error(refKey, "Chapter in NRSV(A) but not in supplied text.") }
         BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error(refKey, "Chapter in in supplied text but not in NRSV(A).") }
         BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).versesInTargetSchemeButNotInTextUnderConstruction.forEach   { refKey -> Logger.error(refKey, "Verse in NRSV(A) but not in supplied text.") }
-        BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error(refKey, "Verse in in supplied text but not in NRSV(A).") }
+        BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error(refKey, "Verse in supplied text but not in NRSV(A).") }
       }
 
       Logger.announceAll(true)
@@ -127,8 +127,8 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
       val scheme = BibleStructure.makeOsis2modSchemeInstance(schemeName)
       dataCollection.getBookNumbers().forEach { bookNo ->
         BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { refKey -> Logger.warning(refKey, "Chapter in $schemeName but not in supplied text.") }
-        BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error  (refKey, "Chapter in in supplied text but not in $schemeName.") }
-        BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).versesInTextUnderConstructionButNotInTargetScheme  .forEach { refKey -> Logger.error  (refKey, "Verse in in supplied text but not in $schemeName.") }
+        BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error  (refKey, "Chapter in supplied text but not in $schemeName.") }
+        BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).versesInTextUnderConstructionButNotInTargetScheme  .forEach { refKey -> Logger.error  (refKey, "Verse in supplied text but not in $schemeName.") }
 
         val missingVerses = BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).versesInTargetSchemeButNotInTextUnderConstruction.toSet()
         val commonlyMissingVerses = BibleAnatomy.getCommonlyMissingVerses().toSet()

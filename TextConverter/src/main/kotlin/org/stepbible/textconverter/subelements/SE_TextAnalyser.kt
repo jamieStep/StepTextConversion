@@ -3,7 +3,7 @@ package org.stepbible.textconverter.subelements
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
-import org.stepbible.textconverter.support.miscellaneous.getAllNodes
+import org.stepbible.textconverter.support.miscellaneous.getAllNodesBelow
 import org.stepbible.textconverter.support.shared.FeatureIdentifier
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.*
@@ -77,7 +77,7 @@ class SE_TextAnalyser (dataCollection: X_DataCollection): SE(dataCollection)
       if (!m_FileProtocol.isParaWhichCouldContainMultipleVerses(x))
         return
 
-      val descendants = Dom.getNodesInTree(x)
+      val descendants = Dom.getAllNodesBelow(x)
       val n = descendants.count { m_FileProtocol.tagName_verse() == Dom.getNodeName(it) }
       if (n > 1)
       {
@@ -114,7 +114,7 @@ class SE_TextAnalyser (dataCollection: X_DataCollection): SE(dataCollection)
 
     var hadVerse = false
 
-    val x = rootNode.getAllNodes()
+    val x = rootNode.getAllNodesBelow()
       .first { if (m_FileProtocol.tagName_verse() == Dom.getNodeName(it)) hadVerse = true;
                hadVerse && Dom.isTextNode(it) && m_FileProtocol.isCanonicalNode(it) && it.textContent.replace("\\s+".toRegex(), "").length > 5 }.textContent
 

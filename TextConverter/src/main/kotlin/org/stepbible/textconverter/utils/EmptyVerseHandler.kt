@@ -1,6 +1,5 @@
 package org.stepbible.textconverter.utils
 
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.Ref
@@ -34,7 +33,7 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
     {
       var toggle = true
       dataCollection.getRootNodes().forEach { rootNode ->
-        Dom.getNodesInTree(rootNode).filter { NodeMarker.hasEmptyVerseType(it) }.forEach { verse ->
+        rootNode.getAllNodesBelow().filter { NodeMarker.hasEmptyVerseType(it) }.forEach { verse ->
           toggle = !toggle
           if (toggle)
           {
@@ -261,7 +260,7 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
 
 
     /**************************************************************************/
-    Dom.getNodesInTree(rootNode).forEach { processNode(it) }
+    Dom.getAllNodesBelow(rootNode).forEach { processNode(it) }
     return res
   }
 

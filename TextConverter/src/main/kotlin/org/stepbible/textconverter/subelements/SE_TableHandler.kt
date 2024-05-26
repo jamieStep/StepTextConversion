@@ -3,7 +3,6 @@ package org.stepbible.textconverter.subelements
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
-import org.stepbible.textconverter.support.ref.RefCollection
 import org.stepbible.textconverter.support.ref.RefRange
 import org.stepbible.textconverter.support.shared.Language
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -253,7 +252,7 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
     /**************************************************************************/
     val owningVerseSid: Node?
     var ix = -1
-    val allNodesInTable = table.getAllNodes()
+    val allNodesInTable = table.getAllNodesBelow()
 
 
 
