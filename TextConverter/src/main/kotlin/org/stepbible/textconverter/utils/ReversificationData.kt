@@ -257,12 +257,7 @@ class ReversificationMoveGroup (theRows: List<ReversificationDataRow>)
   var isEntireChapter: Boolean = false
   val rows = theRows
   val sourceRange = RefRange(theRows.first().sourceRef, theRows.last().sourceRef)
-  val standardRange: RefRange
-
-  init
-  {
-    standardRange = RefRange(theRows.first().standardRef, theRows.last().standardRef)
-  }
+  val standardRange = RefRange(theRows.first().standardRef, theRows.last().standardRef)
 }
 
 
@@ -402,24 +397,27 @@ object ReversificationData
   /**
   * Determines whether a given footnote should be output or not.
   *
+  * With academic modules, we always output footnotes.  With basic modules, we
+  * suppress footnotes on runtime runs.  (This suppression was introduced on
+  * 04-Jun-24; before that, basic modules always included Nec notes.)
+  *
   * @param row Data row containing the footnote.
   * @param reversificationType R(untime) or C(onversionTime).
   * @param reversificationNoteType B(asic) or A(cademic).
   * @return True if note should be output.
   */
 
-  fun wantFootnote (row: ReversificationDataRow, reversificationType: Char, reversificationNoteType: Char): Boolean
+  fun outputFootnote (row: ReversificationDataRow, reversificationType: Char, reversificationNoteType: Char): Boolean
   {
     return when ("$reversificationType$reversificationNoteType")
     {
-      "CB" -> C_FootnoteLevelNec == row.footnoteLevel || C_FootnoteLevelOpt == row.footnoteLevel
-      "RB" -> C_FootnoteLevelNec == row.footnoteLevel
+      "CB" -> C_FootnoteLevelNec == row.footnoteLevel
+      "RB" -> false
       "CA" -> true
-      "RA" -> C_FootnoteLevelOpt != row.footnoteLevel
-      else -> throw StepException("wantFootnote: Invalid parameter.")
+      "RA" -> true
+      else -> throw StepException("outputFootnote: Invalid parameter.")
     }
   }
-
 
 
   /****************************************************************************/
@@ -557,7 +555,7 @@ object ReversificationData
     getAllAcceptedRows()
       .forEach {
       val sourceRefKey = it.sourceRefAsRefKey
-      var existingList = acceptedRowsKeyedOnSourceRefKey[sourceRefKey]
+      val existingList = acceptedRowsKeyedOnSourceRefKey[sourceRefKey]
       if (null == existingList)
         acceptedRowsKeyedOnSourceRefKey[sourceRefKey] = mutableListOf(it)
       else
@@ -1550,11 +1548,60 @@ object ReversificationData
     /**************************************************************************/
     /* Is there in fact any footnote at all? */
 
-    var content = getField(selector, row)
+    val content = getField(selector, row)
     if (content.isEmpty()) return ""
 
 
 
+    /**************************************************************************/
+    var res = ""
+
+
+
+    /**************************************************************************/
+    /* Time was when we would only ever have a single chunk of text, and either
+       zero or one associated reference, which appeared after the text.  This
+       is not longer the case.  We may have one or two chunks of text; and
+       there may or may not be a reference associated with either or both of
+       them, and references may occur either at the front or the end. */
+
+    val textParts = content.split("%")
+    val refs: MutableList<String> = mutableListOf()
+    val texts: MutableList<String> = mutableListOf()
+    for (i in textParts.indices step 2)
+    {
+      refs.add(textParts[i].trim())
+      texts.add(if (i + 1 < textParts.size) textParts[i + 1] else "")
+    }
+
+    for (i in texts.indices)
+      if (!texts[i].isEmpty())
+      {
+        val thisChunk: String
+        val x = Translations.lookupText(Language.Vernacular, getTextKey(texts[i]))
+
+        thisChunk = if (x.startsWith("%ref"))
+          refs[i].trim() + " %" + texts[i] + "%"
+        else if (x.contains("%ref"))
+          "%" + texts[i] + "% " + refs[i + 1]
+        else
+          "%" + texts[i] + "%"
+
+        res += " " + getFootnote(thisChunk)
+      }
+
+    return res.trim()
+  }
+
+
+  /*****************************************************************************/
+  /* Support method for the previous method.  This works the way it does (taking
+     a possible concatenation of a text string and a reference) because I've
+     hived it off from an earlier method which was created when footnotes only
+     ever consisted of one string to look up. */
+
+  private fun getFootnote (contentAsSupplied: String): String
+  {
     /**************************************************************************/
     /* A change in December 2023 introduced some NoteB footnotes which have
        a reference at the front, and then '%in some Bibles%' or '%in most Bibles%'.
@@ -1562,6 +1609,7 @@ object ReversificationData
        entries to the same form as the footnotes which we have processed
        previously. */
 
+    var content = contentAsSupplied
     val contentLowercase = content.lowercase()
     if ("%in some bibles%" in contentLowercase || "%in most bibles%" in contentLowercase)
     {
@@ -1591,6 +1639,7 @@ object ReversificationData
 
     content += "\u0001" // Ensure split always gives two elements.
     val bits = content.split("%")
+    val key = getTextKey(bits[0])
 
 
 
@@ -1599,7 +1648,7 @@ object ReversificationData
        text itself. */
 
     if (1 == bits[1].length)
-      return Translations.stringFormat(Language.Vernacular, getTextKey(bits[0].trim())!!)
+      return Translations.stringFormat(Language.Vernacular, key)
 
 
 
@@ -1616,13 +1665,15 @@ object ReversificationData
        can't be parsed as collections.  We'll deal with the easy cases first
        (the ones where we don't have these odd separators. */
 
-    val refAsString = bits[1].replace("\u0001", "").trim()
+    var refAsString = bits[1].replace("\u0001", "").trim()
     val containsSlash = '/' in refAsString
     val containsPlus = '+' in refAsString
     if (!containsSlash && !containsPlus)
     {
+      if (refAsString.endsWith("."))
+        refAsString = refAsString.substring(0, refAsString.length - 1)
       val rc = RefCollection.rdUsx(usxifyFromStepFormat(refAsString), dflt = null, resolveAmbiguitiesAs = "v")
-      return Translations.stringFormat(Language.Vernacular, getTextKey(bits[0].trim())!!, rc)
+      return Translations.stringFormat(Language.Vernacular, key, rc)
     }
 
 
@@ -1663,15 +1714,8 @@ object ReversificationData
    *  the corresponding key which we can use to look up translations.
    */
 
-  private fun getTextKey (lookupVal: String): String?
-  {
-    val res = m_TextKeyMap[lookupVal]
-     if (null != res) return res
-     Logger.error("Reversification: Invalid footnote text: $lookupVal")
-     return null
-  }
+  private fun getTextKey (lookupVal: String) = "V_reversification_[${lookupVal.trim()}]"
 
-  private val m_TextKeyMap: MutableMap<String, String> = HashMap() // Footnote texts.
   private val m_Headers: MutableMap<String, Int>  = TreeMap(String.CASE_INSENSITIVE_ORDER) // Headers of reversification data file.
 
 
@@ -2068,88 +2112,7 @@ object ReversificationData
           val C_StandardIsPsalmTitle             = 0x0040
 
 
-
   /****************************************************************************/
-  /* Sets up a table converting actual text from the reversification data to
-     key values against which translations are stored.  This serves both to
-     give us the translations and also as a check that the data in the
-     reversification file uses only things already known to us.
-
-     Just to emphasise what's going on here ...
-
-     ConfigData maps text-keys to actual text strings; and elsewhere that's
-     all you need.  But with reversification, the reversification data doesn't
-     give us the key -- it gives us an approximation to the text (by which I
-     mean that we get a generic version of the text, which is then tailored each
-     time it is used to contain scripture references.
-
-     The code below maps this generic text back to keys, which makes it possible,
-     in particular, to handle language-specific aspects of things (French
-     translations, German translations, etc) in a uniform manner.
-
-     It's not ideal, because every time the repertoire of reversification
-     footnotes changes, we have to update the code below.  But it's the best I
-     can come up with. */
-
-  init
-  {
-    m_TextKeyMap["in most Bibles"] = "V_reversification_inMostBibles"
-    m_TextKeyMap["in some Bibles"] = "V_reversification_inSomeBibles"
-
-    m_TextKeyMap["Some manuscripts have no text here. Others have text similar to"] = "V_emptyContentFootnote_someManuscriptsHaveNoTextHereOthersHaveTextSimilarTo"
-    m_TextKeyMap["Some manuscripts have no text here"] = "V_emptyContentFootnote_someManuscriptsHaveNoTextHere"
-    m_TextKeyMap["Some manuscripts have no text at"] = "V_emptyContentFootnote_someManuscriptsHaveNoTextAt"
-    m_TextKeyMap["As normal in this Bible the text for this verse is included in the previous verse"] = "V_emptyContentFootnote_asNormalInThisBibleTheTextForThisVerseIsIncludedInThePreviousVerse"
-    m_TextKeyMap["As normal in this Bible the text for this verse is included in an adjacent verse"] = "V_emptyContentFootnote_asNormalInThisBibleTheTextForThisVerseIsIncludedInAnAdjacentVerse"
-
-    m_TextKeyMap["As normal in this Bible the text for this verse is included at"] = "V_reversification_asNormalInThisBibleTheTextForThisVerseIsIncludedAt"
-    m_TextKeyMap["As normal in this Bible the text for this verse is included in the previous verse"] = "V_reversification_asNormalInThisBibleTheTextForThisVerseIsIncludedInThePreviousVerse"
-    m_TextKeyMap["As normal in this Bible the text for this verse is merged with"] = "V_reversification_asNormalInThisBibleTheTextForThisVerseIsMergedWith"
-    m_TextKeyMap["As normal in this Bible the text for this verse is merged with"] = "V_reversification_asNormalInThisBibleTheTextForThisVerseIsMergedWith"
-    m_TextKeyMap["As normal in this Bible this verse contains the text of"] = "V_reversification_asNormalInThisBibleThisVerseContainsTheTextOf"
-    m_TextKeyMap["As normal in this Bible this verse includes the text of"] = "V_reversification_asNormalInThisBibleThisVerseIncludesTheTextOf"
-    m_TextKeyMap["As normal in this Bible this verse is followed by the contents of"] = "V_reversification_asNormalInThisBibleThisVerseIsFollowedByTheContentsOf"
-    m_TextKeyMap["At the end of this verse some manuscripts add information such as where this letter was written"] = "V_reversification_atTheEndOfThisVerseSomeManuscriptsAddInformationSuchAsWhereThisLetterWasWritten"
-    m_TextKeyMap["from"] = "V_reversification_fromForUseAtStartOfBulkMoveBlock"
-    m_TextKeyMap["In some Bibles only the start of this verse is present"] = "V_reversification_inSomeBiblesOnlyTheStartOfThisVerseIsPresent"
-    m_TextKeyMap["In some Bibles similar text is found at"] = "V_reversification_inSomeBiblesSimilarTextIsFoundAt"
-    m_TextKeyMap["In some Bibles the verse numbering here is"] = "V_reversification_inSomeBiblesTheVerseNumberingHereIs"
-    m_TextKeyMap["In some Bibles this book is found at"] = "V_reversification_inSomeBiblesThisBookIsFoundAt"
-    m_TextKeyMap["In some Bibles this chapter is a separate book"] = "V_reversification_inSomeBiblesThisChapterIsASeparateBook"
-    m_TextKeyMap["In some Bibles this verse contains extra text"] = "V_reversification_inSomeBiblesThisVerseContainsExtraText"
-    m_TextKeyMap["In some Bibles this verse is followed by the contents of"] = "V_reversification_inSomeBiblesThisVerseIsFollowedByTheContentsOf"
-    m_TextKeyMap["In some Bibles this verse is followed by the contents of PrAzar or S3Y (Prayer of Azariah or Song of Three Youths/Children)"] = "V_reversification_inSomeBiblesThisVerseIsFollowedByTheContentsOfPrAzarOrS3Y"
-    m_TextKeyMap["In some Bibles this verse is followed by the contents of Sus (Susanna) and Bel (Bel and the Dragon)"] = "V_reversification_inSomeBiblesThisVerseIsFollowedByTheContentsOfSusAndBel"
-    m_TextKeyMap["In some Bibles this verse may contain text similar to"] = "V_reversification_inSomeBiblesThisVerseMayContainTextSimilarTo"
-    m_TextKeyMap["In some Bibles this verse may not contain any text"] = "V_reversification_inSomeBiblesThisVerseMayNotContainAnyText"
-    m_TextKeyMap["In some Bibles this verse starts on a different word"] = "V_reversification_inSomeBiblesThisVerseStartsOnADifferentWord"
-    m_TextKeyMap["Normally in this Bible only the start of this verse is present"] = "V_reversification_normallyInThisBibleOnlyTheStartOfThisVerseIsPresent"
-    m_TextKeyMap["Normally in this Bible similar text is found at"] = "V_reversification_normallyInThisBibleSimilarTextIsFoundAt"
-    m_TextKeyMap["Normally in this Bible the verse numbering here is"] = "V_reversification_normallyInThisBibleTheVerseNumberingHereIs"
-    m_TextKeyMap["In many Bibles this is split into more than one verse"] = "V_reversification_inManyBiblesThisIsSplitIntoMoreThanOneVerse"
-    m_TextKeyMap["Normally in this Bible this verse and the next occur as one verse that is numbered"] = "V_reversification_normallyInThisBibleThisVerseAndTheNextOccurAsOneVerseThatIsNumbered"
-    m_TextKeyMap["Normally in this Bible this verse does not contain any text"] = "V_reversification_normallyInThisBibleThisVerseDoesNotContainAnyText"
-    m_TextKeyMap["Normally in this Bible this verse includes words that are at"] = "V_reversification_normallyInThisBibleThisVerseIncludesWordsThatAreAt"
-    m_TextKeyMap["Normally in this Bible this verse is followed by contents similar to"] = "V_reversification_normallyInThisBibleThisVerseIsFollowedByContentsSimilarTo"
-    m_TextKeyMap["Normally in this Bible this verse is followed by the contents of"] = "V_reversification_normallyInThisBibleThisVerseIsFollowedByTheContentsOf"
-    m_TextKeyMap["Normally in this Bible this verse is followed by the contents of PrAzar or S3Y (Prayer of Azariah or Song of Three Youths/Children)"] = "V_reversification_normallyInThisBibleThisVerseIsFollowedByTheContentsOfPrAzarOrS3Y"
-    m_TextKeyMap["Normally in this Bible verse numbering here is"] = "V_reversification_normallyInThisBibleVerseNumberingHereIs"
-    m_TextKeyMap["Similar words are found at"] = "V_reversification_similarWordsAreFoundAt"
-    m_TextKeyMap["Some manuscripts have no text at"] = "V_reversification_someManuscriptsHaveNoTextAt"
-    m_TextKeyMap["Some manuscripts have no text here. Others have text similar to"] = "V_reversification_someManuscriptsHaveNoTextHere.OthersHaveTextSimilarTo"
-    m_TextKeyMap["The extra words are found at"] = "V_reversification_theExtraWordsAreFoundAt"
-    m_TextKeyMap["This verse may not contain any text"] = "V_reversification_thisVerseMayNotContainAnyText"
-
-    m_TextKeyMap["In some Bibles this verse is followed by the contents of Man.1 (Prayer of Manasseh)"] = "V_reversification_inSomeBiblesThisVerseIsFollowedByTheContentsOfMan1"
-    m_TextKeyMap["In some Bibles this chapter is the separate book LJe or EpJ (Epistle of Jeremiah)"] = "V_reversification_inSomeBiblesThisIsTheSeparateBookLje"
-
-    m_TextKeyMap["Greek"] = "V_reversification_languageGreek"
-    m_TextKeyMap["Greek2"] = "V_reversification_languageGreek"
-    m_TextKeyMap["Hebrew"] = "V_reversification_languageHebrew"
-    m_TextKeyMap["Latin"] = "V_reversification_languageLatin"
-    m_TextKeyMap["Latin2"] = "V_reversification_languageLatin"
-  }
-
   private lateinit var m_RuleEvaluator: ReversificationRuleEvaluator
 }
 

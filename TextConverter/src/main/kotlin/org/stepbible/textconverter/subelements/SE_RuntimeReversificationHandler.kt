@@ -1,6 +1,5 @@
 package org.stepbible.textconverter.subelements
 
-import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.*
@@ -95,6 +94,9 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
   * one where any significant changes are left to STEPBible to apply at run
   * time).  This entails adding footnotes and possibly creating empty verses
   * where there are holes at the beginning or in the middle of chapters.
+  * Except a) we add footnotes only if academic notes have been selected; and
+  * b) at present I don't create empty verses here after all -- later backstop
+  * processing deals with that.
   *
   * @param rootNode The document to be processed.
   * @return True if any changes made.
@@ -174,7 +176,7 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
     var res = false
     val reversificationRows = m_FootnoteReversificationRows!![m_FileProtocol.getBookNumber(rootNode)] ?: return false
     val sidNodes = Dom.findNodesByAttributeName(rootNode, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid()). associateBy { m_FileProtocol.readRef(it, m_FileProtocol.attrName_verseSid()).toRefKey() }
-    reversificationRows.filter { it.sourceRefAsRefKey in sidNodes } .forEach { res = true; m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(sidNodes[it.sourceRefAsRefKey]!!, it) }
+    reversificationRows.filter { it.sourceRefAsRefKey in sidNodes } .forEach { res = true; m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(sidNodes[it.sourceRefAsRefKey]!!, it, 'R') }
     // Previously had this in the .forEach above: addFootnote(sidNodes[it.sourceRefAsRefKey]!!, it)
     return res
   }
@@ -192,7 +194,7 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
          .find { m_FileProtocol.readRef(it[m_FileProtocol.attrName_verseSid()]!!).toRefKey() > thisRefKey }!!
       Dom.insertNodeBefore(insertBefore, nodes[0])
       Dom.insertNodeBefore(insertBefore, nodes[1])
-      m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(nodes[0], row)
+      m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(nodes[0], row, 'R')
     }
 
 
@@ -211,13 +213,15 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
      integer value against which we can check each row to see if its footnote
      is required or not. */
 
-  private fun getReversificationNotesLevel ()
+  private fun getReversificationNotesLevel (): Int
   {
      when (ConfigData["stepReversificationFootnoteLevel"]!!.lowercase())
      {
        "basic" ->    m_ReversificationNotesLevel = C_ReversificationNotesLevel_Basic
        "academic" -> m_ReversificationNotesLevel = C_ReversificationNotesLevel_Academic
      }
+
+     return m_ReversificationNotesLevel
   }
 
 
@@ -226,13 +230,14 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
   {
     if (null != m_FootnoteReversificationRows) return // Already initialised.
 
-    getReversificationNotesLevel() // Determine what kind of footnotes are required on this run.
     m_FootnoteCalloutGenerator = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!)
+
+    getReversificationNotesLevel()
 
     val allReversificationRows = ReversificationData.getAllAcceptedRows()
     m_AllReversificationRows = allReversificationRows.groupBy { Ref.getB(it.sourceRefAsRefKey) }
     m_FootnoteReversificationRows = allReversificationRows
-      .filter { ReversificationData.wantFootnote(it, 'R', if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A') }
+      //.filter { ReversificationData.outputFootnote(it, 'R', if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A') }
       .groupBy { Ref.getB(it.sourceRefAsRefKey) }
     m_IfAbsentReversificationRows = allReversificationRows.filter { "IfAbsent" == it.action} .groupBy { Ref.getB(it.sourceRefAsRefKey) }
   }

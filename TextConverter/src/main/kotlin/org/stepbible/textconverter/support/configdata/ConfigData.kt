@@ -97,9 +97,8 @@ import kotlin.reflect.KFunction
  * - $metadata implies the path is relative to the Metadata folder for the
  *   text.
  *
- * - $common implies the file lies within the present JAR file, which is where
- *   I store a lot of defaults.  There is no level structure here (yet), so
- *   paths will always be of the form $common/fileName.
+ * - $jarResources implies the file lies within the resources section of the
+ *   present JAR file, which is where I store a lot of defaults.
  *
  * - Anything else implies the path is relative to the path of the file in
  *   which the $include appears.
@@ -599,7 +598,7 @@ object ConfigData
      * Loads metadata
      *
      * @param rootConfigFilePath The configuration file.  If the name starts
-     *   '$common/', it is assumed that it names a file within the resources
+     *   '$jarResources/', it is assumed that it names a file within the resources
      *   section of the present JAR file.  Otherwise, it is taken as being an
      *   actual path name.
      */

@@ -317,16 +317,17 @@ object PackageContentHandler
 
 
   /****************************************************************************/
-  /* We need to save the external OSIS.  I didn't do this earlier on, because
-     the run might have failed, in which case OSIS would have been left lying
-     around, which people might mistakenly have believed was usable. */
+  /* Originally I left saving the external OSIS to this point so as not to
+     have it lying around if the processing failed.  However, doing that
+     entails soaking up an awful lot of memory for very little purpose.
+     Instead, therefore, I actually save the OSIS at the earliest possible
+     opportunity, but under a discouraging name, and then rename it here. */
 
   private fun osisSaver (dummy: String)
   {
     if ("osis" == ConfigData["stepOriginData"]!!) return // Nothing to do if this run started from OSIS, because that _is_ the external OSIS.
-    val filePath = Paths.get(FileLocations.getInputOsisFolderPath(), ConfigData["stepModuleName"]!! + ".xml").toString()
-    NodeMarker.deleteAllMarkers(ExternalOsisDataCollection)
-    Dom.outputDomAsXml(ExternalOsisDataCollection.getDocument(), filePath, null)
+    StepFileUtils.renameFile(Paths.get(FileLocations.getInputOsisFolderPath(), ConfigData["stepModuleName"]!! + ".xml").toString(),
+                             Paths.get(FileLocations.getInputOsisFolderPath(), "DONT_USE_ME.xml").toString())
   }
 
 

@@ -1,10 +1,9 @@
 package org.stepbible.textconverter.subelements
 
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.miscellaneous.MarkerHandler
-import org.stepbible.textconverter.support.miscellaneous.Dom
-import org.stepbible.textconverter.support.miscellaneous.MarkerHandlerFactory
-import org.stepbible.textconverter.support.miscellaneous.Translations
+import org.stepbible.textconverter.support.debug.Logger
+import org.stepbible.textconverter.support.miscellaneous.*
+import org.stepbible.textconverter.support.ref.RefCollection
 import org.stepbible.textconverter.utils.NodeMarker
 import org.stepbible.textconverter.utils.ReversificationData
 import org.stepbible.textconverter.utils.ReversificationDataRow
@@ -38,37 +37,63 @@ class SE_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
    * callout, something which gave information about the verse involved in the
    * reversification activity.
    *
-   * A subsequent change to the STEP renderer, however, meant that regardless of
-   * what callout I requested here, the callout was actually shown as a down-
-   * arrow, which meant that the information contained within the callout was no
-   * longer visible.
+   * It is probably a little invidious to say exactly what happens here now,
+   * because it seems to change quite regularly.
    *
-   * In view of this, we took to including the text of the callout actually as
-   * part of the canonical text.
+   * We may or may not have a footnote, depending upon the type of
+   * reversification run (conversion-time or runtime) and whether we are
+   * creating a basic or an academic module.
    *
-   * This has grown in complexity over time.  The reversification data may now
-   * call for a) The footnote itself; b) some text which will typically end
-   * up in brackets and superscripted or subscripted; and c) another piece
-   * of text which will typically end up in boldface.  Not all of these will
-   * necessarily be present in all cases.
+   * We may or may not take verse details from the NoteMarker details in the
+   * reversification row and embed them in the output (standard) verse, normally
+   * to indicate what served as the source verse.
+   *
+   * One thing we *don't* do any more, though, is to use information from the
+   * NoteMarker details as the callout for the reversification footnote.  There
+   * is no point in doing so, because STEPBible always renders the callout as a
+   * down-arrow, regardless of what we request here.
    *
    * @param sidNode The sid node of the verse to which the footnote is to be
    *   added.
    *
    * @param row: The reversification row which gives the salient details.
    *
+   * @param reversificationType C(onversionTime) or R(untime)
+   *
    */
 
-  fun addFootnoteAndSourceVerseDetailsToVerse (sidNode: Node, row: ReversificationDataRow)
+  fun addFootnoteAndSourceVerseDetailsToVerse (sidNode: Node, row: ReversificationDataRow, reversificationType: Char)
   {
     /**************************************************************************/
-    /* We only want the footnote if we are applying an appropriate level of
-       reversification. */
+     val calloutDetails = row.calloutDetails
+     val document = sidNode.ownerDocument
+     val res: MutableList<Node> = mutableListOf()
 
-    val wantFootnote = ReversificationData.wantFootnote(row, 'C', if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A')
-    val calloutDetails = row.calloutDetails
-    val document = sidNode.ownerDocument
-    val res: MutableList<Node> = mutableListOf()
+
+
+    /**************************************************************************/
+    /* We want the footnote only for certain combinations of reversification
+       type (conversion-time vs runtime) and notes level (basic vs academic). */
+
+    var wantFootnote = if (C_ReversificationNotesLevel_None == m_ReversificationNotesLevel) false else ReversificationData.outputFootnote(row, reversificationType, if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A')
+
+
+
+    /**************************************************************************/
+    /* We want to include the alternative (source) verse details in visible
+       form in the output only on non-conversion-time runs, and even then only
+       if we are generating a footnote. */
+
+    val wantVisibleSourceVerseDetails = wantFootnote && 'C' == reversificationType
+
+
+
+    /**************************************************************************/
+    /* And finally on conversion-time runs, we want to check the source verse
+       details.  (Possibly we'll want this on runtime runs too in due course
+       -- TBD.) */
+
+    val checkSourceVerseDetails = 'R' == reversificationType
 
 
 
@@ -135,19 +160,33 @@ class SE_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
 
 
     /**************************************************************************/
-    /* Add the source verse details. */
+    /* Add the source verse details.  I do this in two bites.  I always add
+       a stylised comment giving the source verse details.  */
 
     val sourceRefCollection = calloutDetails.sourceVerseCollection
     if (null != sourceRefCollection)
     {
-      //if (res.hasChildNodes())
-      //  res.appendChild(Dom.createTextNode(document, " "))
+      if (checkSourceVerseDetails)
+      {
+        val sourceRefCollectionAsPossiblyAbbreviatedString = sourceRefCollection.toStringUsx()
+        val sidRefLow = RefCollection.rdOsis(sidNode["sID"]!!).getLowAsRef()
+        val sourceRefLow = RefCollection.rdUsx(sourceRefCollectionAsPossiblyAbbreviatedString, sidRefLow, "v").getLowAsRef()
+        if (sidRefLow != sourceRefLow)
+          Logger.error(sidRefLow.toRefKey(), "altVerse error (reversification data gives $sourceRefCollectionAsPossiblyAbbreviatedString.")
+      }
 
-      val basicContent = sourceRefCollection.toString("a")
-      val textNode = Dom.createTextNode(document, Translations.stringFormatWithLookup("V_reversification_alternativeReferenceFormat", basicContent))
-      val containerNode = Dom.createNode(document, "<_X_reversificationCalloutSourceRefCollection/>")
-      containerNode.appendChild(textNode)
-      res.add(containerNode)
+
+//      val commentNode = Dom.createCommentNode(document, "altVerse: $altVerseNumber")
+//      res.add(commentNode)
+      if (wantVisibleSourceVerseDetails)
+      {
+        val basicContent = sourceRefCollection.toString("a")
+        val altVerseNumber = Translations.stringFormatWithLookup("V_reversification_alternativeReferenceFormat", basicContent)
+        val textNode = Dom.createTextNode(document, altVerseNumber)
+        val containerNode = Dom.createNode(document, "<_X_reversificationCalloutSourceRefCollection/>")
+        containerNode.appendChild(textNode)
+        res.add(containerNode)
+      }
     }
 
 

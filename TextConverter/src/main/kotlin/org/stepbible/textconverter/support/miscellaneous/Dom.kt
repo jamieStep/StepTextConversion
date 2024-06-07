@@ -234,7 +234,7 @@ object Dom
     fun getAllNodesBelow (startNode: Node): List<Node>
     {
         val res: MutableList<Node> = ArrayList()
-        if ("#document" != getNodeName(startNode)) res.add(startNode)
+        //if ("#document" != getNodeName(startNode)) res.add(startNode)
         getAllNodesBelow(res, startNode)
         return res
     }

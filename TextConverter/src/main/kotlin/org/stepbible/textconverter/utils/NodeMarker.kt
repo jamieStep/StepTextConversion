@@ -53,9 +53,7 @@ object NodeMarker
   /****************************************************************************/
   /**
   * Deletes all the temporary markers from the given node.  This can be called
-  * on *any* node, under a book node or outside of a book.  At the time of
-  * writing, though, if you use the facilities here they will add temporary
-  * attributes only on or below book nodes.
+  * on *any* node, under a book node or outside of a book.
   *
   * @param node
   *

@@ -136,7 +136,7 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
         val nonReportableMissings = commonlyMissingVerses - reportableMissings
 
         val missingsAsString = if (missingVerses.isEmpty()) "" else missingVerses.sorted().joinToString(", "){ Ref.rd(it).toString("bcv") }
-        val nonReportableMissingsAsString = if (nonReportableMissings.isEmpty()) "" else ("  (The following verse(s) are absent in many Bibles, and therefore are not of concern: " + nonReportableMissings.sorted().joinToString(", "){ Ref.getV(it).toString() } + ".)")
+        val nonReportableMissingsAsString = if (nonReportableMissings.isEmpty()) "" else ("  (The following verse(s) are absent in many Bibles, and therefore are not of concern: " + nonReportableMissings.sorted().joinToString(", "){ Ref.rd(it).toString() } + ".)")
 
         if (missingVerses.isNotEmpty())
         {

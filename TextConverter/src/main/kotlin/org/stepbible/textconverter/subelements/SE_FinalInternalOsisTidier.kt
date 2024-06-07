@@ -6,6 +6,7 @@ import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
+import java.util.*
 
 
 /****************************************************************************/
@@ -31,22 +32,69 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
 
 
   /****************************************************************************/
+  private fun getNodeListByAttributeValue (allNodes: List<Node>, nodeName: String, attributeName: String, attributeValue: String): List<Node>
+  {
+    return allNodes
+      .filter { nodeName == Dom.getNodeName(it) }
+      .filter { attributeValue == it[attributeName] }
+  }
+
+
+  /****************************************************************************/
   override fun processRootNodeInternal (rootNode: Node)
   {
-    Dbg.reportProgress("Last ditch tidying. ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
+    /**************************************************************************/
+    Dbg.reportProgress("Final OSIS tidying. ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
+
+
+
+    /**************************************************************************/
+    /* Repeatedly building up a full list of nodes is expensive.  I therefore
+       do it once here, and then create sublists of interest to the various
+       processors which don't delete things from this list, and therefore
+       don't undermine later processing. */
+
     deleteTemporaryNodes(rootNode)
+    val allNodes = rootNode.getAllNodesBelow()
+    val acrosticDivTypeList = allNodes.filter { "title:acrostic" == m_FileProtocol.getExtendedNodeName(it) }
+    val acrosticSpanTypeList = allNodes.filter { "hi:acrostic" == m_FileProtocol.getExtendedNodeName(it) }
+    val newLinesList = allNodes.filter { "l" == Dom.getNodeName(it) }
+    val notesList = allNodes.filter { "note" == Dom.getNodeName(it) }
+    val selahList = getNodeListByAttributeValue(allNodes, "l", "type", "selah")
+    val speakerList = allNodes.filter { "speaker" == Dom.getNodeName(it) }
+    val titlesList = allNodes.filter { "title" == Dom.getNodeName(it) }
+    val xTagsList = allNodes.filter { Dom.getNodeName(it).startsWith("_X_")}
+
+
+
+    /**************************************************************************/
+    /* Things which do not tread on each other's toes, and can therefore run
+       with the lists we established above. */
+
+    allNodes.forEach(NodeMarker::deleteAllMarkers)
+    deleteTemporaryAttributes(allNodes)
+    collapseNestedStrongs(allNodes)
+    handleSelah(selahList)
+    handleAcrosticSpanType(acrosticSpanTypeList)
+    handleAcrosticDivType(acrosticDivTypeList)
+    handleSpeaker(speakerList)
+    deleteHorizontalWhitespaceFromStartOfTitles(titlesList)
+    handleCallouts(notesList)
+    handle_X_tags(xTagsList)
+    deleteAdjacentNewLineTags(newLinesList)
+
+
+
+    /**************************************************************************/
+    /* Things which need to run based upon the structure as it stands at the
+       time they are called, and therefore can't rely upon the lists
+       established above. */
+
     handleUnacceptableCharacters(rootNode)
-    handleAcrostic(rootNode)
-    handleSelah(rootNode)
-    handleSpeaker(rootNode)
-    moveNotesInsideVerses(rootNode)
-    collapseNestedStrongs(rootNode)
-    handleCallouts(rootNode)
     deleteNotesFromHeaders(rootNode)
-    handleHorizontalWhitespace(rootNode)
     handleVerticalWhitespace(rootNode)
-    handle_X_tags(rootNode)
-    NodeMarker.deleteAllMarkers(rootNode) // Remove any temporary markers.
+    moveNotesInsideVerses(rootNode)
+    handleVersesWithinSpanTypeTags(rootNode)
   }
 
 
@@ -64,30 +112,68 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
   /****************************************************************************/
   /* Some texts nest Strongs. */
 
-  private fun collapseNestedStrongs (rootNode: Node)
+  private fun collapseNestedStrongs (allNodes: List<Node>)
   {
-    while (true)
+    /**************************************************************************/
+    val nodeMap = IdentityHashMap<Node, Boolean>()
+    allNodes
+      .filter { m_FileProtocol.tagName_strong() == Dom.getNodeName(it) }
+      .filter { m_FileProtocol.attrName_strong() in it }
+      .forEach { nodeMap[it] = true }
+
+
+
+    /**************************************************************************/
+    for (node in nodeMap.keys)
     {
-      val nestedStrongs = Dom.findNodesByName(rootNode, m_FileProtocol.tagName_strong(), false)
-        .filter { m_FileProtocol.attrName_strong() in it }
-        .filter { it.parentNode.nodeName == m_FileProtocol.tagName_strong() }
+      if (!nodeMap[node]!!)
+        continue
 
-      if (nestedStrongs.isEmpty()) break
+      val children: MutableList<Node> = mutableListOf()
+      var p = node
+      while (true)
+      {
+        val firstChild = p.firstChild
+        if (m_FileProtocol.tagName_strong() != Dom.getNodeName(firstChild))
+          break
 
-      nestedStrongs.forEach {
-        val parent = it.parentNode
+        if (m_FileProtocol.attrName_strong() !in firstChild)
+          break
 
-        val lowerStrong = Dom.getAttribute(it, m_FileProtocol.attrName_strong())!!
-        val upperStrong = Dom.getAttribute(parent, m_FileProtocol.attrName_strong())!!
-        Dom.setAttribute(parent, m_FileProtocol.attrName_strong(), "$upperStrong $lowerStrong")
-
-        val lowerContent = Dom.getChildren(it)
-        lowerContent.forEach(Dom::deleteNode)
-        Dom.addChildren(parent, lowerContent)
-
-        Dom.deleteNode(it)
+        children.add(firstChild)
+        nodeMap[firstChild] = false
+        p = firstChild
       }
+
+      if (children.isEmpty())
+        continue
+
+      var revisedStrong = node[m_FileProtocol.attrName_strong()]!!
+      children.forEach { revisedStrong += " " + it[m_FileProtocol.attrName_strong()]!! }
+      node[m_FileProtocol.attrName_strong()] = revisedStrong
+      children.reversed().forEach { descendant -> Dom.promoteChildren(descendant); Dom.deleteNode(descendant) }
     }
+
+//    Dbg.d(allNodes[0].ownerDocument)
+  } // fun
+
+
+  /****************************************************************************/
+  /* Not 100% sure about this ...  It is convenient, at some points in the
+     processing, to add a newline to ensure that adjacent material doesn't end
+     up on the same line -- and convenient to do this without worrying about
+     whether we already have a newline.  However, I don't think we ever want to
+     have two adjacent ones by the time we've finished.
+
+     Note, incidentally, that I use <l level='...'/> to force newlines.  <lb/>
+     sometimes seems to do nothing. */
+
+  private fun deleteAdjacentNewLineTags (nodeList: List<Node>)
+  {
+    val newLineTags = nodeList.filter { !it.hasChildNodes() }
+    for (i in 1 ..< newLineTags.size)
+      if (newLineTags[i - 1] == newLineTags[i].previousSibling)
+        Dom.deleteNode(newLineTags[i - 1])
   }
 
 
@@ -140,9 +226,18 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
 
 
   /****************************************************************************/
+  private fun deleteTemporaryAttributes (nodeList: List<Node>)
+  {
+    nodeList
+      .filter { "_t" in it }
+      .forEach { node -> Dom.getAttributes(node).filter { it.key.startsWith("_") }. forEach { attr -> Dom.deleteAttribute(node, attr.key ) } }
+  }
+
+
+  /****************************************************************************/
   /* A bit of a kluge.  The OSIS may end up containing _X_... tags (at the time
      of writing, only as a result of handling reversification / samification
-     footnotes.
+     footnotes).
 
      Originally I was adding these during the USX processing, and could rely
      upon the USX-to-OSIS conversion processing to convert them to proper
@@ -153,9 +248,9 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
      changes in usxToOsisTagConversionsEtc.conf at the places where the
      USX translations for the_X_ tags below are defined. */
 
-  private fun handle_X_tags (rootNode: Node)
+  private fun handle_X_tags (nodeList: List<Node>)
   {
-    rootNode.getAllNodesBelow()
+    nodeList
       .filter { Dom.getNodeName(it).startsWith("_X_") }
       .forEach {
         when (val nodeName = Dom.getNodeName(it))
@@ -164,7 +259,7 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
           {
             Dom.setNodeName(it, "hi")
             it["style"] = "super"
-            Dom.insertNodeAfter(it, Dom.createTextNode(rootNode.ownerDocument, " "))
+            Dom.insertNodeAfter(it, Dom.createTextNode(nodeList[0].ownerDocument, " "))
           }
 
 
@@ -173,7 +268,7 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
           {
             Dom.setNodeName(it, "hi")
             it["style"] = "bold"
-            Dom.insertNodeAfter(it, Dom.createTextNode(rootNode.ownerDocument, " "))
+            Dom.insertNodeAfter(it, Dom.createTextNode(nodeList[0].ownerDocument, " "))
           }
 
 
@@ -206,18 +301,24 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
      fact, STEP doesn't render either of them correctly, so we need to convert
      them to something else. */
 
-  private fun handleAcrostic (rootNode: Node)
+  private fun handleAcrosticSpanType (nodeList: List<Node>)
   {
     /************************************************************************/
     /* The span-type form. */
 
-    val allNodes = rootNode.getAllNodesBelow()
-    allNodes.filter { "hi:acrostic" == m_FileProtocol.getExtendedNodeName(it) } .forEach {
+    nodeList.filter { "hi:acrostic" == m_FileProtocol.getExtendedNodeName(it) } .forEach {
       it["type"] = "italic"
     }
+  }
 
 
+  /****************************************************************************/
+  /* Acrostic elements come in two forms -- as titles and as hi:acrostic. In
+     fact, STEP doesn't render either of them correctly, so we need to convert
+     them to something else. */
 
+  private fun handleAcrosticDivType (nodeList: List<Node>)
+  {
     /**************************************************************************/
     /* The title form.  The bold/italic version used here represents DIB's
        preferred option.
@@ -234,7 +335,7 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
            margin-top: 20px;
          } */
 
-    allNodes.filter { "title:acrostic" == m_FileProtocol.getExtendedNodeName(it) } .forEach {
+    nodeList.forEach {
       // Turn the node itself into hi:italic.
       Dom.setNodeName(it, "hi"); Dom.deleteAllAttributes(it); it["type"] = "italic"
 
@@ -248,10 +349,9 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
 
 
   /****************************************************************************/
-  private fun handleCallouts (rootNode: Node)
+  private fun handleCallouts (nodeList: List<Node>)
   {
-    var notes = Dom.findNodesByName(rootNode, "note", false)
-    notes = (notes.toSet() subtract handleCallouts_preventCommasBeingRenderedBetweenAdjacentCallouts(notes).toSet()).toList()
+    val notes = (nodeList.toSet() subtract handleCallouts_preventCommasBeingRenderedBetweenAdjacentCallouts(nodeList).toSet()).toList()
     handleCallouts_preventCommasBeingSuppressedBetweenAdjacentCallouts(notes)
   }
 
@@ -324,12 +424,12 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
 
 
   /***************************************************************************/
-  private fun handleHorizontalWhitespace (rootNode: Node)
+  private fun deleteHorizontalWhitespaceFromStartOfTitles (nodeList: List<Node>)
   {
     /**************************************************************************/
     /* Remove whitespace at the start of titles. */
 
-    Dom.findNodesByName(rootNode, "title", false).forEach {
+    nodeList.forEach {
       val children = Dom.getChildren(it)
       for (c in children)
       {
@@ -344,9 +444,9 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
   /****************************************************************************/
   /* The OSIS Selah tag isn't formatted well, so convert it to italic. */
 
-  private fun handleSelah (rootNode: Node)
+  private fun handleSelah (nodeList: List<Node>)
   {
-    Dom.findNodesByAttributeValue(rootNode, "l", "type", "selah").forEach {
+    nodeList.forEach {
       Dom.deleteAllAttributes(it)
         it["type"] = "italic"
         Dom.setNodeName(it, "hi")
@@ -361,9 +461,9 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
            <p><hi type='bold'><hi type='italic'> ... </hi></hi></p>
   */
 
-  private fun handleSpeaker (rootNode: Node)
+  private fun handleSpeaker (nodeList: List<Node>)
   {
-    Dom.findNodesByName(rootNode, "speaker", false).forEach {
+    nodeList.forEach {
       val wrapperPara = Dom.createNode(it.ownerDocument, "<p/>")
       Dom.insertNodeBefore(it, wrapperPara)
 
@@ -390,14 +490,69 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
   {
     fun doIt (node: Node)
     {
-      val s1 = node.textContent
-      val s2 = s1.replace("\u000c", "")
-      if (s1.length != s2.length)
-        node.textContent = s2
+      val s = node.textContent
+      if (s.indexOf("\u000c") < 0) return
+      node.textContent = s.replace("\u000c", "")
+    }
+
+    Dom.findAllTextNodes(rootNode).forEach { doIt(it)}
+  }
+
+
+  /****************************************************************************/
+  /* It may seem that having verse tags within span-type tags -- say a verse
+     tag within a hi:italic -- would be uncontroversial.  In fact, it is
+     outlawed by the OSIS XSD, and seems to cause problems in osis2mod.
+
+     I'm not sure what tags this might cover (it's not easy to work all the way
+     through the XSD to check), so this may need to be extended in future. */
+
+  private fun handleVersesWithinSpanTypeTags (rootNode: Node) // DON'T CHANGE THIS TO WORK USE A PREDEFINED NODE LIST -- NEED TO DETERMINE IT FROM THE STRUCTURE AS IT NOW STANDS.
+  {
+    val nodesOfInterest = rootNode.findNodesByName("hi")
+    handleVersesWithinSpanTypeTags(nodesOfInterest)
+  }
+
+
+  /****************************************************************************/
+  private fun handleVersesWithinSpanTypeTags (nodeList: List<Node>): Boolean
+  {
+    var res = false
+
+    fun doIt (originalNode: Node)
+    {
+      val originalVerseTag = originalNode.findNodeByName("verse", false) ?: return // Nothing to do unless the tag contains a verse tag,
+      res = true
+
+      val newNode = Dom.cloneNode(originalNode.ownerDocument, originalNode) // Create a deep copy of the node, and insert it before the node itself.
+      Dom.insertNodeBefore(originalNode, newNode)
+
+      // We now want to delete everything _after_ the verse tag in the cloned node, and everything _before_ it in the original.
+      val newVerseTag = newNode.findNodeByName("verse", false)
+      var doDelete = false
+      for (n in newNode.getAllNodesBelow())
+        if (n === newVerseTag)
+          doDelete = true
+        else if (doDelete)
+          try { Dom.deleteNode(n) } catch (_: Exception) {}
+
+
+      for (n in originalNode.getAllNodesBelow())
+        if (n === originalVerseTag)
+          break
+        else
+          try { Dom.deleteNode(n) } catch (_: Exception) {}
+
+      if (!originalNode.hasChildNodes())
+        Dom.deleteNode(originalNode)
+
+      if (!newNode.hasChildNodes())
+        Dom.deleteNode(newNode)
     }
 
 
-    Dom.findAllTextNodes(rootNode).forEach { doIt(it)}
+    nodeList.forEach(::doIt)
+    return res
   }
 
 
@@ -467,26 +622,67 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
 
   private fun moveNotesInsideVerses (rootNode: Node)
   {
+    /**************************************************************************/
+    val allNodes = rootNode.getAllNodesBelow()
+
+
+
+    /**************************************************************************/
+    /* It's convenient to add an end marker to each note node.  That way
+       when I run over all nodes as a list, I can use that to track whether I'm
+       in a note node or not.  This is useful because I need to be able to
+       detect when I'm inside a note node, and the alternative -- that of
+       checking whether the current node has a note node as an ancestor -- is
+       computationally expensive. */
+
+    allNodes
+      .filter { "note" == Dom.getNodeName(it) }
+      .forEach {
+        val marker = Dom.createNode(rootNode.ownerDocument, "<X_NoteEnd/>")
+        it.appendChild(marker)
+      }
+
+
+
+    /**************************************************************************/
     var eid: Node? = null
-    rootNode.getAllNodesBelow()
+    var inNote = false
+
+    allNodes
       .filter { !Dom.hasAncestorNamed(it, "note") } // Hitting the children of moved note nodes can mess the processing up.
       .forEach {
-      when (Dom.getNodeName(it))
-      {
-        m_FileProtocol.tagName_verse() ->
-          eid = if (m_FileProtocol.attrName_verseEid() in it) it else null
+        val nodeName = Dom.getNodeName(it)
 
-        m_FileProtocol.tagName_note() ->
-          if (null != eid)
-          {
-            Dom.deleteNode(eid!!)
-            Dom.insertNodeAfter(it, eid!!)
-          }
+        if (inNote && "X_NoteEnd" == nodeName)
+        {
+          inNote = false
+          Dom.deleteNode(it)
+          return@forEach
+        }
 
-        else ->
-          if (!Dom.isWhitespace(it))
-            eid = null
-      }
-    }
-  }
+        if (inNote)
+          return@forEach
+
+        when (nodeName)
+        {
+          m_FileProtocol.tagName_note() ->
+            inNote = true
+
+
+          m_FileProtocol.tagName_verse() ->
+            eid = if (m_FileProtocol.attrName_verseEid() in it) it else null
+
+          m_FileProtocol.tagName_note() ->
+            if (null != eid)
+            {
+              Dom.deleteNode(eid!!)
+              Dom.insertNodeAfter(it, eid!!)
+            }
+
+          else ->
+            if (!Dom.isWhitespace(it))
+              eid = null
+        } // when
+      } // forEach
+  } // fun
 }

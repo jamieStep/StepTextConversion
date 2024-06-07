@@ -19,7 +19,7 @@ import org.stepbible.textconverter.utils.ThrowAwayCode
 fun main (args: Array<String>)
 {
   /****************************************************************************/
-  Dbg.setBooksToBeProcessed("Psa")
+  //Dbg.setBooksToBeProcessed("Hab")
   //ThrowAwayCode.testFindNodesByAttributeValue()
 
 

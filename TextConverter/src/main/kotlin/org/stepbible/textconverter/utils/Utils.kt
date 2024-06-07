@@ -29,20 +29,6 @@ object Utils
 
   /****************************************************************************/
   /**
-  * Deletes dummy verses which were added at the ends of chapters
-  *
-  * @param fileProtocol Supplies things like tag names for USX / OSIS.
-  * @param bookNode Node for book being processed.
-  */
-
-  fun deleteDummyVerseTags (fileProtocol: X_FileProtocol, rootNode: Node)
-  {
-    rootNode.findNodesByName(fileProtocol.tagName_verse()).filter { NodeMarker.hasDummy(it) }.forEach(Dom::deleteNode)
-  }
-
-
-  /****************************************************************************/
-  /**
   * Gets the explanation callout for a footnote.
   *
   * @param Details of proposed callout.  If null, we use a value from the
@@ -60,28 +46,6 @@ object Utils
         is String -> callout
         else      -> (callout as MarkerHandler).get()
       }
-  }
-
-
-  /****************************************************************************/
-  /**
-   * Inserts dummy verse sids at the ends of chapters so we always have
-   * something we can insert stuff before.
-   *
-   * @param fileProtocol Supplies things like tag names for USX / OSIS.
-   * @param bookNode Node for book being processed.
-   */
-
-  fun insertDummyVerseTags (fileProtocol: X_FileProtocol, bookNode: Node)
-  {
-    bookNode.findNodesByName(fileProtocol.tagName_chapter(), false).forEach { chapterNode ->
-      val dummySidRef = fileProtocol.readRef(chapterNode[fileProtocol.attrName_chapterSid()]!!)
-      dummySidRef.setV(RefBase.C_BackstopVerseNumber)
-      val dummySidRefAsString = fileProtocol.refToString(dummySidRef.toRefKey())
-      val dummySid = bookNode.ownerDocument.createNode("<verse ${fileProtocol.attrName_verseSid()}='$dummySidRefAsString'/>")
-      NodeMarker.setDummy(dummySid)
-      chapterNode.appendChild(dummySid)
-    }
   }
 
 

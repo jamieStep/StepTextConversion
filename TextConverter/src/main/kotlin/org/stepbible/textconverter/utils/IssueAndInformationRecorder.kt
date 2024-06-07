@@ -67,7 +67,7 @@ object IssueAndInformationRecorder
   /* Definite issues which may usefully be reported and / or stored within the
      TextFeatures information, but which don't turn up in config files etc. */
 
-  fun crossVerseBoundaryMarkup (badRef: String, location: RefKey, forceError: Boolean = false, reassurance: String? = null)
+  fun crossVerseBoundaryMarkup (location: RefKey, forceError: Boolean = false, reassurance: String? = null)
   {
     val locationAsString = Ref.rd(location).toString()
     report("Cross-verse-boundary markup at ${locationAsString}.", forceError, "LogWarning,Report", location, null, reassurance)

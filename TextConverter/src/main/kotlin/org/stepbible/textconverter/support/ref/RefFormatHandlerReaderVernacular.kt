@@ -35,7 +35,7 @@ import kotlin.collections.HashSet
  * assumptions baked into what I have done, and some things which I have not
  * tested (and probably not even implemented).  I give some details below.
  * (Incidentally, refer to the common configuration file itself for information
- * about configuration -- $common/referenceFormatVernacularDefaults.conf.
+ * about configuration -- $jarResources/referenceFormatVernacularDefaults.conf.
  *
  * - I make the assumption that a given element will always be represented in
  *   the same way regardless of context.  For example, I assume that if a

@@ -197,6 +197,9 @@ open class X_FileProtocol
       /* I _think_ it's also always ok to skip over an empty node, unless it's
          a verse node. */
 
+      if (isNodeWhichNeedsToStickWithCanonicalText(n)) // 06-Jun-24 Moved from position below with this same datestamp.  Also changed to 'Y'.
+        return Pair('Y', n) // Treat notes and xrefs as though they were canonical, so they remain with the verse.
+
       if (!n.hasChildNodes() && tagName_verse() != key)
         return Pair('N', n)
 
@@ -208,8 +211,8 @@ open class X_FileProtocol
       if (key.last() in "123456")  // USX node names may contain levels.  The lookup table we use here does not.  OSIS doesn't have things ending in numbers, so there's no harm in applying this regardless.
         key = key.substring(0, key.length - 1)
 
-      if (isNodeWhichNeedsToStickWithCanonicalText(n))
-        return Pair('N', n) // Treat notes and xrefs as though they were canonical, so they remain with the verse.
+//      if (isNodeWhichNeedsToStickWithCanonicalText(n)) // Moved to 06-Jun-24 above.
+//        return Pair('Y', n) // Treat notes and xrefs as though they were canonical, so they remain with the verse.
 
       val res = m_TagDetails[key]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity // Try looking up the extended name, and failing that, the non-extended version.
 
@@ -912,7 +915,7 @@ object Osis_FileProtocol: X_FileProtocol()
     m_TagDetails["div:tableofContents"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:titlePage"] = TagDescriptor('X', 'N') //
 
-    m_TagDetails["divineName"] = TagDescriptor('Y', 'Y') // The divineName element is used to mark the name of the Deity only. Other names,
+    m_TagDetails["divineName"] = TagDescriptor('?', 'Y') // The divineName element is used to mark the name of the Deity only. Other names,
     m_TagDetails["figure"] = TagDescriptor('X', 'N') // The figure element is used to insert maps, images and other materials into an OSIS document.
     m_TagDetails["foreign"] = TagDescriptor('Y', 'Y') // The foreign element is used to mark "foreign" words or phrases in a text. That is words or
     m_TagDetails["format"] = TagDescriptor('X', 'N') // The format element appears only in a work element. It is recommended that the format of a
@@ -960,7 +963,7 @@ object Osis_FileProtocol: X_FileProtocol()
     m_TagDetails["salute"] = TagDescriptor('?', 'N') // The salute element is used to mark a saluation or opening comments. It is most generally
     m_TagDetails["scope"] = TagDescriptor('X', 'N') // The scope element is used only in a work element. The general area covered by a text is
 
-    m_TagDetails["seg"] = TagDescriptor('Y', 'N') // The seg element should be used for very small divisions, such as within word elements. The  Not sure whether to make this canonical or not, but it looks as though we're not really going to come across it.
+    m_TagDetails["seg"] = TagDescriptor('N', 'N') // The seg element should be used for very small divisions, such as within word elements.  Not sure whether to make this canonical or not, but it looks as though we're not really going to come across it.
     m_TagDetails["signed"] = TagDescriptor('Y', 'N') // The signed element is used to mark the signer of a letter within a closer element.
     m_TagDetails["source"] = TagDescriptor('X', 'N') // The source element appears only in a work element. It is used to indicate the source for a
     m_TagDetails["speaker"] = TagDescriptor('Y', 'N') // The speaker element is used to mark the speaker in a text. It will be used when the speaker

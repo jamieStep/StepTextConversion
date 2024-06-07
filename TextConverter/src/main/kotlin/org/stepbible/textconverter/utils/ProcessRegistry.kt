@@ -55,7 +55,7 @@ class ProcessRegistry
     }
   }
 
-  // YOu can use these two to give meaningful names where nothing much is required / happening.
+  // You can use these two to give meaningful names where nothing much is required / happening.
   object NoSignificantRequirements            : Functionality(0x0000_0000_0000_0000, null)
   object NothingSignificantToReport           : Functionality(0x0000_0000_0000_0000, null)
 
@@ -76,7 +76,7 @@ class ProcessRegistry
    object VerseMarkersReducedToSidsOnly        : Functionality(0x0000_0000_0000_4000, "VerseMarkersReducedToSidsOnly")
    object BasicVerseEndPositioning             : Functionality(0x0000_0000_0000_8000, "BasicVerseEndPositioning")
 
-  object Reversification                       : Functionality(RuntimeReversificationHandled.bitMap.or(ConversionTimeReversificationHandled.bitMap), null)
+   object Reversification                      : Functionality(RuntimeReversificationHandled.bitMap.or(ConversionTimeReversificationHandled.bitMap), null)
 
 
   /****************************************************************************/

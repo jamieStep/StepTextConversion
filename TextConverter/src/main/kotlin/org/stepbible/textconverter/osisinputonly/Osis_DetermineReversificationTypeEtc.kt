@@ -172,7 +172,7 @@ object Osis_DetermineReversificationTypeEtc
     /* Another go at forcing reversification type to fit the circumstances ...
 
        - If there is applicable reversification data, then 'none' is not
-         acceptable ... Or is it
+         acceptable ... Or is it?
 
        - Otherwise, if we're creating a public-facing module, we must force
          conversionTime.
@@ -250,7 +250,7 @@ object Osis_DetermineReversificationTypeEtc
 
     if (null != versificationScheme)
     {
-      val selectedSchemeEvaluation = PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.evaluateSingleScheme(versificationScheme, bibleStructureUnderConstruction)
+      val selectedSchemeEvaluation = if (versificationScheme == nrsvScheme) nrsvEvaluation else PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.evaluateSingleScheme(versificationScheme, bibleStructureUnderConstruction)
       if (isDefinedAsPublicOnly &&
           ConfigData["stepVersificationScheme"]!!.startsWith("NRSV") &&
           PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.VersificationDeviationType.BAD != selectedSchemeEvaluation.getDeviationType())
@@ -267,14 +267,6 @@ object Osis_DetermineReversificationTypeEtc
 
     /**************************************************************************/
     /* Deal with reversification footnote level if necessary. */
-
-         ConfigData.delete("stepReversificationType"); ConfigData.put("stepReversificationType", "runtime", force = true)
-          versificationScheme = null
-          ConfigData.delete("stepVersificationScheme")
-
-        ConfigData.delete("stepReversificationType"); ConfigData.put("stepReversificationType", "none", force = true)
-         versificationScheme = "German"
-         ConfigData.delete("stepVersificationScheme"); ConfigData.put("stepVersificationScheme", "German", force = true)
 
     reversificationType = ConfigData["stepReversificationType"]!!.lowercase()
     if ("none" != reversificationType && null == ConfigData["stepReversificationFootnoteLevel"]?.lowercase())
@@ -312,11 +304,10 @@ object Osis_DetermineReversificationTypeEtc
 
 
 
-   //  ConfigData.delete("stepVersificationScheme"); ConfigData.put("stepVersificationScheme", "KJV", force = true)
     /**************************************************************************/
-    Logger.info("Versification scheme is $versificationScheme.")
+    Logger.info("Versification scheme is ${versificationScheme ?: "STEP-internal"}.")
     Logger.info("ReversificationType is $reversificationType")
-    Logger.info("osis2mod type is STEP, with STEP software version specified as $stepSoftwareVersionRequired.")
+    Logger.info("osis2mod type is ${ConfigData["stepOsis2modType"]!!}, with STEP software version specified as $stepSoftwareVersionRequired.")
     Logger.info("Target audience is ${ConfigData["stepTargetAudience"]!!}.")
 
 

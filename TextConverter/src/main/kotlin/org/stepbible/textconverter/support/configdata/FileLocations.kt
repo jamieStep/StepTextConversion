@@ -134,34 +134,44 @@ object FileLocations
    *
    * There are a number of possible cases :-
    *
-   * - If fileNameOrEntryNameWithinJar starts with '$common/', the file is
-   *   actually within the resources section of this JAR file, and we simply
-   *   return fileNameOrEntryNameWithinJar as-is.</li>
-   * 
-   * - If fileNameOrEntryNameWithinJar starts with '$metadata/', it is assumed
-   *   to be relative to the Metadata folder), and the return value is just
-   *   the original, but with $configData replaced by the path to the that folder.
+   * - If filePath starts with '$jarResources/', the file is actually within
+   *   the resources section of this JAR file, and we simply return filePath
+   *   as-is (except for replacing backslash by slash).
    *
-   * - If fileNameOrEntryNameWithinJar has no parent folder, it is assumed to
-   *   be relative to the calling file path.
+   * - Ditto if it starts with $common (an earlier synonym for $jarResources).
    *
-   * - $root is the root folder for the text.
+   * - If it starts with $root or $metadata, this is altered to point to the
+   *   actual location of the root or metadata folder for the present text.
    *
-   * @param fileFolderPath See above.
-   * 
-   * @param fileName The path of the file from which this new file is
-   *   being loaded (null if being called to load the initial file).
-   * 
+   * - Otherwise it is returned as-is.
+   *
+   * @param filePath The file path in our own internal format.
+   *
    * @return Path.
    */
   
   fun getInputPath (filePath: String): String
   {
     /**************************************************************************/
+    val canonicalFilePath = filePath.replace("\\", "/")
+
+
+
+    /**************************************************************************/
     /* In resources section of jar FILE? */
     
-    if (filePath.lowercase().startsWith("\$common"))
-      return filePath
+    if (canonicalFilePath.lowercase().startsWith("\$jarresources"))
+      return canonicalFilePath
+
+
+
+    /**************************************************************************/
+    /* In resources section of jar FILE?  (Previously I used the name $common
+       in place of jarResources.  This is retained for backward
+       compatibility. */
+
+    if (canonicalFilePath.lowercase().startsWith("\$common"))
+      return canonicalFilePath.replace("\$common", "\$jarResources")
 
 
 
@@ -169,23 +179,31 @@ object FileLocations
     /* $root: Root folder for text.  CAUTION: Not backward compatible.  In a
        previous version, this pointed to the Metadata folder.*/
 
-    if (filePath.lowercase().startsWith("\$root/"))
-      return Paths.get(filePath.replace("\$root", getRootFolderPath(), ignoreCase = true)).normalize().toString()
+    if (canonicalFilePath.lowercase().startsWith("\$root"))
+      return Paths.get(canonicalFilePath.replace("\$root", getRootFolderPath(), ignoreCase = true)).normalize().toString()
 
 
 
     /**************************************************************************/
     /* $metadata -- ie co-located with step.conf */
 
-    if (filePath.lowercase().startsWith("\$metadata/"))
-      return Paths.get(filePath.replace("\$metadata", getMetadataFolderPath(), ignoreCase = true)).normalize().toString()
+    if (canonicalFilePath.lowercase().startsWith("\$metadata"))
+      return Paths.get(canonicalFilePath.replace("\$metadata", getMetadataFolderPath(), ignoreCase = true)).normalize().toString()
+
+
+
+    /**************************************************************************/
+    /* sharedConfig -- shared configuration data */
+
+    if (canonicalFilePath.lowercase().startsWith("\$sharedconfig"))
+      return Paths.get(canonicalFilePath.replace("\$sharedConfig", getSharedDataFolderPath(), ignoreCase = true)).normalize().toString()
 
 
 
     /**************************************************************************/
     /* General path, which is assumed to be relative to the calling path. */
 
-    return Paths.get(filePath).normalize().toString()
+    return Paths.get(canonicalFilePath).normalize().toString()
   }
     
   
@@ -197,7 +215,7 @@ object FileLocations
    * with file locations, and this processing is location-dependent, it seems
    * reasonable to have it here.)
    * 
-   * @param filePath If this starts with $common/, it
+   * @param filePath If this starts with $jarResources/, it
    *   is assumed to give the name of a file within the resources section of
    *   the current JAR.  Otherwise it is taken to be a full path name.
    * 
@@ -210,12 +228,17 @@ object FileLocations
   fun getInputStream (filePath: String): InputStream?
   {
     /**************************************************************************/
+    val expandedFilePath = getInputPath(filePath)
+
+
+
+    /**************************************************************************/
     /* In resources section of JAR file? */
     
-    if (filePath.lowercase().startsWith("\$common/"))
+    if (expandedFilePath.lowercase().startsWith("\$jarresources") || filePath.lowercase().startsWith("\$common"))
     {
-      val ix = filePath.indexOf("/")
-      val newFileName = filePath.substring(ix + 1)
+      val ix = expandedFilePath.indexOf("/")
+      val newFileName = expandedFilePath.substring(ix + 1)
       return {}::class.java.getResourceAsStream("/$newFileName")
     }
     
@@ -224,18 +247,10 @@ object FileLocations
     /**************************************************************************/
     /* In ordinary file. */
     
-    val file = File(filePath)
-     val fileName = file.name
-     var folderPath = file.parent
-
-    if (folderPath.lowercase().startsWith("\$root"))
-      folderPath = folderPath.replace("\$root", getRootFolderPath(), ignoreCase = true)
-    else if (folderPath.lowercase().startsWith("\$metadata"))
-      folderPath = folderPath.replace("\$metadata", getMetadataFolderPath(), ignoreCase = true)
-
-    folderPath = Paths.get(folderPath).normalize().toString()
-
-   val path = StepFileUtils.getSingleMatchingFileFromFolder(folderPath, ("\\Q$fileName\\E").toRegex()) ?: return null
+    val file = File(expandedFilePath)
+    val fileName = file.name
+    var folderPath = Paths.get(file.parent).toString()
+    val path = StepFileUtils.getSingleMatchingFileFromFolder(folderPath, ("\\Q$fileName\\E").toRegex()) ?: return null
     return FileInputStream(path.toString())
   }
 
@@ -270,6 +285,7 @@ object FileLocations
   /* Metadata. */
 
   fun getMetadataFolderPath () = Paths.get(m_RootFolderPath, "Metadata").toString()
+  private fun getSharedDataFolderPath () = ConfigData["stepSharedConfigFolder"]!!
   fun getStepConfigFileName () = "step.conf"
   fun getStepConfigFilePath () = Paths.get(getMetadataFolderPath(), getStepConfigFileName()).toString()
 
@@ -345,7 +361,7 @@ object FileLocations
   fun getSwordConfigFilePath (): String { return Paths.get(getSwordConfigFolderPath(), "${getModuleName()}.conf").toString() }
   fun getSwordConfigFolderPath (): String = Paths.get(getInternalSwordFolderPath(), "mods.d").toString()
 
-  fun getSwordTemplateConfigFilePath () = "\$common/swordTemplateConfigFile.conf"
+  fun getSwordTemplateConfigFilePath () = "\$jarResources/swordTemplateConfigFile.conf"
 
   fun getSwordTextFolderPath () = Paths.get(Paths.get(getInternalSwordFolderPath(), "modules").toString(), "texts", "ztext", getModuleName()).toString()
   fun getSwordZipFilePath () = Paths.get(getOutputFolderPath(), "${getModuleName()}.zip").toString()
@@ -370,7 +386,7 @@ object FileLocations
   /****************************************************************************/
   /* Miscellaneous. */
 
-  fun getOsis2modVersificationDetailsFilePath () = "\$common/osis2modVersification.txt"
+  fun getOsis2modVersificationDetailsFilePath () = "\$jarResources/osis2modVersification.txt"
 
 
 
@@ -395,7 +411,7 @@ object FileLocations
      anyway -- I may require that a proper step.conf is set up, in which case
      this special-case processing will not be needed. */
 
-  fun getStrongsCorrectionsFilePath () = "\$common/strongsCorrections.txt"
+  fun getStrongsCorrectionsFilePath () = "\$jarResources/strongsCorrections.txt"
   private fun getThirdPartySwordConfigFileName () = "sword.conf"
   fun getThirdPartySwordConfigFilePath () = Paths.get(getMetadataFolderPath(), getThirdPartySwordConfigFileName()).toString()
 

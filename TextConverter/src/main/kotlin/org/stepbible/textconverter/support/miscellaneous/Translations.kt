@@ -27,7 +27,7 @@ import org.stepbible.textconverter.utils.IssueAndInformationRecorder
  * once the placeholders are themselves replaced with the RTL text which they
  * are intended to display, things seem to come out ok.  In other words, matters
  * can be extremely confusing during development work, but the end result still
- * looks ok.
+ * looks ok.  Hopefully.
  *
  *
  * @author ARA "Jamie" Jamieson

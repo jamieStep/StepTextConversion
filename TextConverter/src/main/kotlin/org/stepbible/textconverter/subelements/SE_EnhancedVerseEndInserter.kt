@@ -2,6 +2,7 @@ package org.stepbible.textconverter.subelements
 
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.*
+import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
 import java.io.File
@@ -58,10 +59,11 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
   {
     //Dbg.d(rootNode.ownerDocument)
     Dbg.reportProgress("Handling cross-boundary markup for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
-    deleteVerseEnds(rootNode)                                   // Remove any existing verse ends so we can reposition them.
-    Utils.insertDummyVerseTags(m_FileProtocol, rootNode)        // Dummy verse end at the end of each chapter, so we always have something to insert before.
-    insertVerseEnds(rootNode)                                   // Initial positioning.
-    Utils.deleteDummyVerseTags(m_FileProtocol, rootNode)        // Get rid of the dummy nodes.
+    //deleteVerseEnds(rootNode)                                      // Remove any existing verse ends so we can reposition them.
+    val chapterNodes = rootNode.findNodesByName(m_FileProtocol.tagName_chapter(), false)
+    val dummies = insertDummyVerseTags(m_FileProtocol, chapterNodes) // Dummy verse end at the end of each chapter, so we always have something to insert before.
+    insertVerseEnds(rootNode, chapterNodes)                          // Initial positioning.
+    dummies.forEach(Dom::deleteNode)                                 // Get rid of the dummy nodes.
     //Dbg.d(rootNode.ownerDocument)
   }
 
@@ -90,6 +92,28 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
 
 
   /****************************************************************************/
+  /**
+   * Inserts dummy verse sids at the ends of chapters so we always have
+   * something we can insert stuff before. */
+
+  private fun insertDummyVerseTags (fileProtocol: X_FileProtocol, chapterNodes: List<Node>): List<Node>
+  {
+    val res: MutableList<Node> = mutableListOf()
+    chapterNodes.forEach { chapterNode ->
+      val dummySidRef = fileProtocol.readRef(chapterNode[fileProtocol.attrName_chapterSid()]!!)
+      dummySidRef.setV(RefBase.C_BackstopVerseNumber)
+      val dummySidRefAsString = fileProtocol.refToString(dummySidRef.toRefKey())
+      val dummySid = chapterNodes[0].ownerDocument.createNode("<verse ${fileProtocol.attrName_verseSid()}='$dummySidRefAsString'/>")
+      NodeMarker.setDummy(dummySid)
+      chapterNode.appendChild(dummySid)
+      res.add(dummySid)
+    }
+
+    return res
+  }
+
+
+  /****************************************************************************/
   /* Adds verse ends for each sid.  We treat each chapter separately.  Within
      this, we treat verses separately according as they are or are not
      associated with a table.
@@ -99,12 +123,12 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
 
      For other sids, we need to do rather more processing. */
 
-  private fun insertVerseEnds (rootNode: Node)
+  private fun insertVerseEnds (rootNode: Node, chapterNodes: List<Node>)
   {
     //Dbg.outputDom(rootNode.ownerDocument)
     markTags(rootNode) // $$$
 
-    Dom.findNodesByName(rootNode, m_FileProtocol.tagName_chapter(), false).forEach { chapterNode ->
+    chapterNodes.forEach { chapterNode ->
       val verses = Dom.findNodesByName(chapterNode, m_FileProtocol.tagName_verse(), false)
       val tables: Map<Int, Node> = Dom.findNodesByName(chapterNode, m_FileProtocol.tagName_table(), false)
         .filter { NodeMarker.hasUniqueId(it) }
@@ -222,16 +246,6 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
       SKIP -> Dom.insertNodeBefore(insertPos, verseEnd)
       STOP -> Dom.insertNodeAfter(insertPos, verseEnd)
     }
-    if (!thunk.isSiblingOfSid)
-    {
-      //Dbg.d(sidWhoseEidWeAreCreating.ownerDocument)
-//      Dbg.d(if (sidWhoseEidWeAreCreating.isSiblingOf(verseEnd)) "True" else "False")
-//      Dbg.d(sidWhoseEidWeAreCreating.parentNode); Dbg.d(verseEnd.parentNode)
-      NodeMarker.setCrossBoundaryMarkup(verseEnd)
-      //Dbg.d(sidWhoseEidWeAreCreating.ownerDocument)
-      IssueAndInformationRecorder.crossVerseBoundaryMarkup("", m_FileProtocol.readRefCollection(id).getFirstAsRefKey(), forceError = false)
-      //Dbg.d(sidWhoseEidWeAreCreating.ownerDocument)
-    }
   }
 
 
@@ -241,6 +255,11 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
 
   private fun insertVerseEnd_locatePositionForEid (sidWhoseEidWeAreCreating: Node, nextVerseSid: Node): InsertVerseEndThunk
   {
+    /**************************************************************************/
+    //Dbg.dCont(Dom.toString(sidWhoseEidWeAreCreating), "19.2")
+
+
+
     /**************************************************************************/
     var ix = m_NodeMap[nextVerseSid]!! // Start looking from before the next sid.
     var siblingThunk: InsertVerseEndThunk? = null
@@ -389,6 +408,7 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
     if (Dom.getNodeName(node).startsWith('#')) return // Can't mark text or comment nodes.
     val myMarker = if (CALC == fromAbove) m_FileProtocol.getVerseEndInteraction(node).first else fromAbove
     node["_vEnd"] = myMarker.toString()
+    node["_t"] = "y"
     Dom.getChildren(node).forEach { markHierarchy(it, myMarker) }
   }
 

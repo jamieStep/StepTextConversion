@@ -46,67 +46,15 @@ class SE_VerseEndRemover (dataCollection: X_DataCollection) : SE(dataCollection)
   override fun processRootNodeInternal (rootNode: Node)
   {
     Dbg.reportProgress("Preparing verse tags for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
-    deleteVerseEnds(rootNode)
-    convertEnclosingVersesToSids(rootNode)
-    markVersesWithSids(rootNode)
-  }
+    val allVerseTags = rootNode.findNodesByName(m_FileProtocol.tagName_verse(), false)
 
+    allVerseTags.filter { it.hasChildNodes() } .forEach(Dom::promoteChildren) // Replace enclosing sids by a non-enclosing sid, followed by the children of the original.
 
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                               Private                                  **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  /* The OSIS reference manual strongly counsels against using enclosing tags
-     for verses.  Which of course means that I've encountered texts which have
-     them.  It seems an awful shame to ditch them all, but to avoid complicating
-     later processing, it's going to be easier if they are converted to sids.
-
-     I can't recall offhand whether this would also be an issue for USX, but I'm
-     assuming pro tem that if it _isn't_, running the following code will simply
-     do nothing. */
-
-  private fun convertEnclosingVersesToSids (rootNode: Node)
-  {
-    rootNode.findNodesByName(m_FileProtocol.tagName_verse(), false)
-      .filter { it.hasChildNodes() }
-      .forEach {
-        Dom.promoteChildren(it)
-      }
-  }
-
-
-  /****************************************************************************/
-  /* Remove all existing verse ends, so we can insert them in what we see as
-     the optimal position. */
-
-  private fun deleteVerseEnds (rootNode: Node)
-  {
-    rootNode.findNodesByName(m_FileProtocol.tagName_chapter(), false).forEach { chapterNode ->
-      chapterNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid()).forEach(Dom::deleteNode)
+    allVerseTags.forEach { // Delete eids, and ensure that any remaining verse tags are marked with a sid (the latter will simply be ignored when processing USX).
+      if (m_FileProtocol.attrName_verseEid() in it)
+        Dom.deleteNode(it)
+      else if ("osisID" in it && "sID" !in it)
+       it["sID"] = it["osisID"]!!
     }
-  }
-
-
-
-  /****************************************************************************/
-  /* As for convertEnclosingVersesToSids, this _may_ be an OSIS-only issue, but
-     running it against USX will simply leave things unchanged.
-
-     If OSIS had enclosing nodes (rather than milestones), they will have had
-     an osisID but not a sID.  I need to copy the osisID to the sID. */
-
-  private fun markVersesWithSids (rootNode: Node)
-  {
-    rootNode.findNodesByName(m_FileProtocol.tagName_verse(), false)
-      .filter { "osisID" in it && "sID" !in it }
-      .forEach { it["sID"] = it["osisID"]!! }
   }
 }

@@ -984,7 +984,7 @@ open class SE_ConversionTimeReversification
 
 
     /**************************************************************************/
-    m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(sidNode, row)
+    m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(sidNode, row, 'C')
   }
 
 
@@ -1013,7 +1013,7 @@ open class SE_ConversionTimeReversification
     val newId = row.standardRef.toString()
     changeId(sidNode!!, m_FileProtocol.attrName_verseSid(), newId)
     changeId(eidNode!!, m_FileProtocol.attrName_verseEid(), newId)
-    m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(sidNode, row)
+    m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(sidNode, row, 'C')
   }
 
 

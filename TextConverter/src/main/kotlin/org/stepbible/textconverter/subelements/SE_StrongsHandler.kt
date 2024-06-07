@@ -89,6 +89,7 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
     val rawElts = node[m_FileProtocol.attrName_strong()]!!.uppercase().replace("STRONG:", "").split("\\W+".toRegex())
 
     val strongsElts = rawElts
+      .filter { it.isNotEmpty() } // Not all char:w's have a Strong's entry.  In USX, for instance, they may simply mark a glossary entry.
       .map {
         var strong = it.trim()
         val orig = strong
@@ -116,7 +117,8 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
           "strong:$orig"
       }
 
-    node[m_FileProtocol.attrName_strong()] = strongsElts.joinToString(",")
+    if (strongsElts.isNotEmpty())
+      node[m_FileProtocol.attrName_strong()] = strongsElts.joinToString(",")
   }
 
 

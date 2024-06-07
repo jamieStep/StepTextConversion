@@ -3,6 +3,7 @@ package org.stepbible.textconverter.osisinputonly
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.*
+import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
 
@@ -10,7 +11,7 @@ import org.w3c.dom.Node
 /******************************************************************************/
 /**
  * Canonical titles are awkward, because the different versification traditions
- * handle them different, and also different translators make them up in
+ * handle them different, and also different translators mark them up in
  * different ways.
  *
  * The purpose of the present class is to make changes as necessary in order
@@ -41,13 +42,12 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
 
   fun process ()
   {
-    //Dbg.d(m_DataCollection.getDocument())
-    val rootNode = m_DataCollection.getRootNode(BibleAnatomy.C_BookNumberForPsa) ?: return // 'return' because we may be processing a text which lacks Psalms, or may not be processing Psalms on this run.
     Dbg.reportProgress("Handling canonical headings.")
-    rootNode.findNodesByName("chapter").forEach(::doIt)
+
+    for (bookNumber in BibleAnatomy.C_BookNumbersOfBooksWhichMayHaveCanonicalHeaders)
+      m_DataCollection.getRootNode(bookNumber)?.findNodesByName("chapter")?.forEach(::doIt)
+
     m_DataCollection.getProcessRegistry().iHaveDone(this, listOf(ProcessRegistry.CanonicalHeadingsCanonicalised))
-    //Dbg.d(rootNode.ownerDocument)
-    //Dbg.d(m_DataCollection.getDocument())
   }
 
 
@@ -63,35 +63,6 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
   /****************************************************************************/
 
   /****************************************************************************/
-  /* There are a few Psalms where the canonical title contains the content of
-     what, in other texts, comprises the first _two_ verses.  In some texts we
-     have something like:
-
-       <para:d><v1>Blah</v1></para:d>  <para:d><v2>Blah</v2></para:d>
-
-     Or in other words, we have _two_ canonical title tags, each containing
-     one verse.  Later processing is simplified if we combine the two into a
-     single tag. */
-
-  private fun combineAdjacentCanonicalHeaders (titleNodesInChapter: List<Node>): List<Node>
-  {
-    if (titleNodesInChapter.size < 2) // Nothing to combine if fewer than two titles.
-      return titleNodesInChapter
-
-    //Dbg.d(Dom.toString(titleNodesInChapter[0].parentNode))
-    //Dbg.d(titleNodesInChapter[0].ownerDocument)
-
-    if (!Dom.nodesAreAdjacent(titleNodesInChapter[0], titleNodesInChapter[1], ignoreWhitespace = true)) // Can't combine titles which aren't adjacent.
-      return titleNodesInChapter
-
-    val childNodesOfSecondNode = Dom.getChildren(titleNodesInChapter[1])
-    Dom.deleteNode(titleNodesInChapter[1])
-    Dom.addChildren(titleNodesInChapter[0], childNodesOfSecondNode)
-    return listOf(titleNodesInChapter[0]) // There's now only the one title node in the chapter.
-  }
-
-
-  /****************************************************************************/
   private fun doIt (chapterNode: Node)
   {
     /**************************************************************************/
@@ -103,179 +74,42 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
        canonical text prior to v1, regardless of how that text was marked,
        but here we are concerned with stuff already specifically marked up. */
 
-    val titleNodes = identifyCanonicalTitleLocations(chapterNode.getAllNodesBelow()).first
-    if (titleNodes.isEmpty())
-      return
+    val titleNodes = identifyCanonicalTitleLocations(chapterNode.getAllNodesBelow())
 
+    if (titleNodes.first.isNotEmpty())
+      processTitlesAtStartOfChapter(titleNodes.first)
 
-
-    /**************************************************************************/
-    /* If we get this far, we have either one or two title nodes at the start
-       of the chapter.  If we have two, we combine them.  As a result, there is
-       only one title node for handleCasesWhereCanonicalTitleOverlapsWithVerse
-       to handle. */
-
-    combineAdjacentCanonicalHeaders(titleNodes)
-    handleCasesWhereCanonicalTitleOverlapsWithVerse(titleNodes[0])
-}
+    if (titleNodes.second.isNotEmpty())
+      processTitlesAtEndOfChapter(titleNodes.second)
+  }
 
 
   /****************************************************************************/
-  /* This receives all canonical title nodes, and processes some where the
-     canonical title _contains_ the v1 marker.
+  /* Delete contained whitespace at front or end of title. */
 
-     (In what follows, my examples are based upon USX markup, but the processing
-     here should work with either USX or OSIS.)
-
-     Unfortunately, life is complicated by the fact that not only do different
-     versification traditions differ as to whether the record canonical titles
-     separately or include them in v1; but also different texts have different
-     approaches to markup.
-
-     We are concerned here with two particular approaches, both distinguishable
-     from the various others by the fact that they have a canonical title tag,
-     and that a verse marker appears within that tag.
-
-     The first alternative occurs where we have something like:
-
-       <para:d><v1>The entire text of v1</para>
-
-    In other words, it occurs where the whole of the first verse has been
-    enclosed in the canonical heading tag.
-
-    This, I believe, needs to be left as-is.
-
-
-    The other alternative looks something like:
-
-      <para:d><v1>This is heading text</para>This is verse 1 text proper ...
-
-    or in other words where we have cross-boundary markup in which v1 contains
-    both the text which should appear in the canonical header and text which
-    in other Bibles would appear in v1 itself.
-
-    This we do need to address -- by which I mean it needs to turn into:
-
-      <para:d>This is the heading</para><v1> This is verse 1 text proper ...
-
-
-   There is on further wrinkle here, in that the need for this processing was
-   uncovered after we encountered one particular text which looked like this,
-   and that text also had a <para:b> to force a blank line before 'This is
-   verse 1 text proper'.  After making the above change, this blank line is
-   no longer needed, so I remove it.
-
-
-   Note that there are a few psalms which the canonical title contains what,
-   in other Bibles, would be not the first verse, but the first two verses.
-   I have not got my head around what the issues might be here, so at present
-   I am adopting the simple expedient of assuming there _are_ none. */
-
-  private fun handleCasesWhereCanonicalTitleOverlapsWithVerse (titleNode: Node)
+  private fun deleteLeadingAndTrailingWhitespace (titleNode: Node)
   {
     /**************************************************************************/
-    /* Extracts the text content from the header, strips whitespace, and
-       returns the length of the string. */
-
-    val fileProtocol = m_DataCollection.getFileProtocol()
-    fun getHeaderContentLength (node: Node): Int
-    {
-      var res = 0
-      Dom.getAllNodesBelow(node).forEach {
-        if (fileProtocol.isCanonicalNode(it) && Dom.isTextNode(it))
-          res += it.textContent.replace("\\s+".toRegex(), "").length
-      }
-
-      return res
-    }
+    val allNodes = titleNode.getAllNodesBelow()
 
 
 
     /**************************************************************************/
-    /* We're interested only in header nodes which contain verse tags. */
-
-    val v1 = Dom.findNodeByName(titleNode, "verse", false) ?: return
-
-
-
-    /**************************************************************************/
-    var canonicalTitleTextLength = 0
-    var v1Length = 0
-    var accumulating = false
+    for (n in allNodes) // Delete leading whitespace within the title.
+      if (isExtendedWhitespace(n))
+        Dom.deleteNode(n)
+      else
+        break
 
 
 
     /**************************************************************************/
-    /* Get the owning chapter, and then an appropriately ordered list of all of
-       the nodes in the chapter.  When we hit the canonical title, we obtain
-       the length of its text content.  When we hit the first verse node, we
-       start accumulating canonical textual content for the verse, and we
-       continue doing that until we hit the verse start for the first verse
-       outside of the canonical title tag. */
-
-    val chapterNode = Dom.findAncestorByNodeName(v1, fileProtocol.tagName_chapter())!!
-    for (node in Dom.getAllNodesBelow(chapterNode))
-    {
-      if (fileProtocol.isCanonicalTitleNode(node))
-        canonicalTitleTextLength = getHeaderContentLength(node)
-
-      else if (fileProtocol.tagName_verse() == Dom.getNodeName(node) && fileProtocol.attrName_verseSid() in node)
-      {
-        if (Dom.isAncestorOf(titleNode, node))
-          accumulating = true
-        else
-          break
-      }
-
-      else if (accumulating && fileProtocol.isCanonicalNode(node) && Dom.isTextNode(node))
-        v1Length += node.textContent.replace("\\s+".toRegex(), "").length
-    } // forChapterNode.
-
-
-
-    /**************************************************************************/
-    /* See if the canonical title and v1 coincide.  If so, leave as-is. */
-
-    if (v1Length == canonicalTitleTextLength)
-      return
-
-
-
-    /**************************************************************************/
-    /* The more complicated case -- where we need to remove some text from v1
-       and put it into the header. */
-
-    Dom.deleteNode(v1)
-    Dom.insertNodeAfter(titleNode, v1)
-    var nodeForConsideration = v1.nextSibling
-
-
-
-    /**************************************************************************/
-    /* Deletes consecutive blank nodes and returns the first non-blank one. */
-
-    fun deleteBlank (node: Node) = Dom.iterateOverYoungerSiblingsSatisfyingCondition(node, fn = Dom::deleteNode, test = Dom::isWhitespace, giveUpOnFailedTest = true, includeStart = true).second
-
-
-
-    /**************************************************************************/
-    /* Rather half-hearted.  This looks to see if the text was originally
-       forcing a blank line between the heading text and the verse text.
-       If it was, this is no longer needed now we have moved stuff into the
-       heading tag.  I say this is half-hearted because at present it works
-       only on OSIS which originated from USX and carries temporary tags like
-       _usx to tell us what the original looked like.  May have to beef this
-       up at some point. */
-
-    nodeForConsideration = deleteBlank(nodeForConsideration)
-    if (null != nodeForConsideration && "_usx" in nodeForConsideration && "para:b" == nodeForConsideration["_usx"])
-    {
-      val x = nodeForConsideration.nextSibling
-      Dom.deleteNode(nodeForConsideration)
-      nodeForConsideration = x
-      deleteBlank(nodeForConsideration)
-    }
-  } // fun
+    for (n in allNodes.reversed()) // Delete trailing whitespace within the title.
+      if (isExtendedWhitespace(n))
+        Dom.deleteNode(n)
+      else
+        break
+  }
 
 
   /****************************************************************************/
@@ -311,6 +145,302 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
 
     /**************************************************************************/
     return Pair(titlesAtStart, titlesAtEnd)
+  }
+
+
+   /****************************************************************************/
+   /* Whitespace is represented by a number of different things by the time we
+      get here. */
+
+   private fun isExtendedWhitespace (node: Node): Boolean = Dom.isWhitespace(node) || "lb" == Dom.getNodeName(node) || ("l" == Dom.getNodeName(node) && !node.hasChildNodes())
+
+
+
+  /****************************************************************************/
+  /* At the end of the chapter I hope for the best, and simply turn the
+     title node into hi:italic. */
+
+  private fun processTitlesAtEndOfChapter (titleNodesInChapter: List<Node>)
+  {
+    val titleNode = titleNodesInChapter[0]
+    deleteLeadingAndTrailingWhitespace(titleNode)
+    Dom.setNodeName(titleNode, "hi")
+    Dom.deleteAllAttributes(titleNode)
+    titleNode["type"] = "italic"
+    Dom.insertNodeBefore(titleNode, Dom.createNode(titleNode.ownerDocument, "<l level='1'/>")) // Add vertical whitespace after title.
+
+    val verseTags = titleNode.findNodesByName("verse")
+    when (verseTags.size)
+    {
+      0 -> return
+
+      2 ->
+      {
+        Dom.deleteNode(verseTags[0])
+        Dom.insertNodeBefore(titleNode, verseTags[0])
+        Dom.deleteNode(verseTags[1])
+        Dom.insertNodeAfter(titleNode, verseTags[1])
+      }
+
+      else -> throw StepException("processTitlesAtEndOfChapter: Invalid number of contained verse tags: ${verseTags.size}.")
+    }
+  }
+
+
+  /****************************************************************************/
+  /* This is somewhat tentative.  Also it is being driven by experience, and
+     at the time of writing, experience is rather limited -- beyond the fact
+     that every single text seems to do something different.
+
+     There are all sorts of other things which will have to be taken into
+     account at some point -- the needs of reversification / samification;
+     texts which follow other versification schemes; alternative forms of
+     markup; etc.  However we have to start somewhere.  Obviously I am hoping
+     that this one revised approach will cater for everything, but that
+     remains to be seen.
+
+     At present, therefore, I am addressing three different situations within
+     GerHFA, and hoping that in fact this will cover all of them:
+
+     At Ps 3 we have (slightly simplified):
+
+       <para style="d">
+           <verse number="1" style="v"/>Ein Lied ...
+       </para>
+
+    In other words, the title is given by v1, and in the USX v1 is within the
+    title tag.
+
+
+
+    At Ps 11 we have:
+
+       <para style="d">
+         <verse number="1" style="v"/>Von David.
+       </para>
+       <para style="b"/>
+       <para style="q1">Bei dem Herrn ...</para>
+       <para style="q2">»Du musst ins Gebirge fliehen! ...</para>
+
+    Here the title covers just the first two words in v1.  The remainder of
+    v1 as per the USX is what should actually appear in v1.
+
+
+
+    At Ps 51 we have:
+
+       <para style="d">
+         <verse number="1" style="v"/>Ein Lied von David.</para>
+       <para style="d">
+         <verse number="2" style="v"/>Er schrieb es ...</para>
+
+    Here the title covers the first _two_ verses.
+
+    Experience suggests that we cannot use para:d (title:psalm) here: the best
+    we can do (in OSIS form) is to convert the tag to hi:italic.  This looks
+    roughly similar to psalm:title, except for a slight difference in font size,
+    and the use of a serif, rather than a sans serif, font.
+
+    In fact there is a further issue, in that hi:italic cannot contain verse
+    tags, so we also need to reorder things so that the hi:italic falls between
+    sid and eid, rather than containing them.
+
+    Apart from that, it's just a matter of taking care of vertical line-
+    spacing (psalm:title is set off automatically from the rest of the text
+    with a newline, but hi:italic is not)
+
+    This may be called with a single title node, or with two (eg in Ps 51,
+    where the header appears as the first _two_ verses in some texts, and
+    in some cases the markup gives each as a separate header).
+
+    Uh-oh.  FreBDS gives us yet another variant:
+
+    <para style="d">
+        <verse number="1" style="v" sid="PSA 18:1"/>Au chef de chœur, ...<verse eid="PSA 18:1"/>
+        <verse number="2" style="v" sid="PSA 18:2"/>Il dit ceci</para>
+    ... <verse eid="PSA 18:2"/>
+
+    So here we have the whole of v1 and part of v2 contained within a single
+    header tag.
+
+  */
+
+  private fun processTitlesAtStartOfChapter (titleNodesInChapter: List<Node>)
+  {
+    /**************************************************************************/
+//    if ("18" in Dom.toString(titleNodesInChapter[0].parentNode) || titleNodesInChapter.size > 1)
+//      Dbg.d(titleNodesInChapter[0].ownerDocument)
+
+
+
+    /**************************************************************************/
+    /* Delete vertical whitespace surrounding each title node.  We have to do
+       this as a separate step.  Otherwise, if the present call is handling
+       _two_ title:psalms (as may be the case, eg, in Ps 51, where the heading
+       sometimes appears as the first two verses), when we process the first
+       tag, we'll add vertical whitespace after it, and when we process the
+       second we'll delete that vertical whitespace. */
+
+    titleNodesInChapter.forEach { titleNode ->
+      while (null != titleNode.previousSibling && isExtendedWhitespace(titleNode.previousSibling))
+        Dom.deleteNode(titleNode.previousSibling) // Delete whitespace before title.
+
+      while (null != titleNode.nextSibling && isExtendedWhitespace(titleNode.nextSibling))
+        Dom.deleteNode(titleNode.nextSibling) // Delete whitespace after title.
+    }
+
+
+
+    /**************************************************************************/
+    titleNodesInChapter.forEach(::deleteLeadingAndTrailingWhitespace)
+
+
+
+    /**************************************************************************/
+    /* Turn the header into hi:italic, and add some vertical whitespace. */
+
+    fun rejigTitleNode (titleNode: Node)
+    {
+      Dom.insertNodeAfter(titleNode, Dom.createNode(titleNode.ownerDocument, "<l level='1'/>")) // Add vertical whitespace after title.
+      Dom.setNodeName(titleNode, "hi")
+      Dom.deleteAllAttributes(titleNode)
+      titleNode["type"] = "italic"
+    }
+
+
+
+    /**************************************************************************/
+    fun firstPartOfVerseOneIsTitle (titleNode: Node, sid: Node)
+    {
+      Dom.deleteNode(sid)
+      Dom.insertNodeBefore(titleNode, sid)
+      rejigTitleNode(titleNode)
+    }
+
+
+
+    /**************************************************************************/
+    fun verseOneAndFirstPartOfVerseTwoIsTitle (titleNode: Node, sidA: Node, eidA: Node, sidB: Node)
+    {
+      val children = Dom.getChildren(titleNode)
+
+      val ixEidA = children.indexOf(eidA)
+      val ixSidB = children.indexOf(sidB)
+
+      val contentOfV1 = children.subList(1, ixEidA) // I assume here that sidA is the first node, and therefore don't check for it.  I want only the
+      val betweenList = children.subList(ixEidA + 1, ixSidB)
+      val contentOfHeaderPortionOfV2 = children.subList(ixSidB + 1, 1 + children.indexOf(titleNode.lastChild))
+
+      val firstContainer  = Dom.createNode(titleNode.ownerDocument, "<hi type='italic'/>")
+      val secondContainer = Dom.createNode(titleNode.ownerDocument, "<hi type='italic'/>")
+
+      contentOfV1.forEach                 { Dom.deleteNode(it); firstContainer .appendChild(it) }
+      contentOfHeaderPortionOfV2.forEach  { Dom.deleteNode(it); secondContainer.appendChild(it) }
+      betweenList.forEach                 { Dom.deleteNode(it) }
+
+      Dom.insertNodeBefore(titleNode, sidA)
+      Dom.insertNodeBefore(titleNode, firstContainer)
+      Dom.insertNodeBefore(titleNode, eidA)
+      Dom.insertNodeAfter(eidA, Dom.createNode(titleNode.ownerDocument, "<l level='1'/>"))
+
+      Dom.insertNodeAfter(titleNode, secondContainer)
+      Dom.insertNodeAfter(titleNode, sidB)
+
+      Dom.deleteNode(titleNode)
+
+      Dom.insertNodesAfter(eidA, betweenList)
+    }
+
+
+    /**************************************************************************/
+    /* This is almost identical to verseOneAndFirstPartOfVerseTwoIsTitle, except
+       for the two lines marked with asterisks. */
+
+    fun verseOneAndTwoAndTitleCoincide (titleNode: Node, sidA: Node, eidA: Node, sidB: Node, eidB: Node)
+   {
+      val children = Dom.getChildren(titleNode)
+
+      val ixEidA = children.indexOf(eidA)
+      val ixSidB = children.indexOf(sidB)
+
+      val contentOfV1 = children.subList(1, ixEidA) // I assume here that sidA is the first node, and therefore don't check for it.  I want only the
+      val betweenList = children.subList(ixEidA + 1, ixSidB)
+      val contentOfHeaderPortionOfV2 = children.subList(ixSidB + 1, 1 + children.indexOf(eidB)) // ***
+
+      val firstContainer = Dom.createNode(titleNode.ownerDocument, "<hi type='italic'/>")
+      val secondContainer = Dom.createNode(titleNode.ownerDocument, "<hi type='italic'/>")
+
+      contentOfV1.forEach                 { Dom.deleteNode(it); firstContainer .appendChild(it) }
+      contentOfHeaderPortionOfV2.forEach  { Dom.deleteNode(it); secondContainer.appendChild(it) }
+      betweenList.forEach                 { Dom.deleteNode(it) }
+
+      Dom.insertNodeBefore(titleNode, sidA)
+      Dom.insertNodeBefore(titleNode, firstContainer)
+      Dom.insertNodeBefore(titleNode, eidA)
+      Dom.insertNodeAfter(eidA, Dom.createNode(titleNode.ownerDocument, "<l level='1'/>"))
+
+      Dom.insertNodeAfter(titleNode, eidB) // ***
+      Dom.insertNodeAfter(titleNode, secondContainer)
+      Dom.insertNodeAfter(titleNode, sidB)
+      Dom.insertNodeAfter(eidB, Dom.createNode(titleNode.ownerDocument, "<l level='1'/>"))
+
+      Dom.deleteNode(titleNode)
+
+      Dom.insertNodesAfter(eidA, betweenList)
+    }
+
+
+
+
+    /**************************************************************************/
+    /* The verse equates to the entire content of the header.  In this case, we
+       just move the sid and eid outside the title, and then change the header
+       to be hi:italic. */
+
+    fun verseOneAndTitleCoincide (titleNode: Node, sid: Node, eid: Node)
+    {
+      Dom.deleteNode(sid)
+      Dom.insertNodeBefore(titleNode, sid)
+      Dom.deleteNode(eid)
+      Dom.insertNodeAfter(titleNode, eid)
+      rejigTitleNode(titleNode)
+    }
+
+
+
+    /**************************************************************************/
+    /* I do make certain assumptions here about the structure being vaguely
+       plausible.  Assuming it is, then ...
+
+       - We'll have _one_ verse tag (a sid) inside the title if the title
+         comprises some, but not all, of v1.
+
+       - We'll have _two_ verse tags (the sid and eid for v1) inside the title
+         if the title corresponds to the whole of v1.
+
+       - We'll have _three_ verse tags (the sid and eid for v1 and the sid for
+         v2) if the title contains the whole of v1 and part of v2.
+
+       - We'll have _four_ verse tags (the sid and eid for each of v1 and v2) if
+         the title contains the whole of v1 and v2.
+     */
+
+    titleNodesInChapter.forEach {
+      val verseTagsInTitleNode = it.findNodesByName("verse")
+      when (verseTagsInTitleNode.size)
+      {
+        0 -> { Dbg.d(Dom.getAncestorNamed(titleNodesInChapter[0], "chapter")!!) }
+        1 -> firstPartOfVerseOneIsTitle(it, verseTagsInTitleNode[0])
+        2 -> verseOneAndTitleCoincide(it, verseTagsInTitleNode[0], verseTagsInTitleNode[1])
+        3 -> verseOneAndFirstPartOfVerseTwoIsTitle(it, verseTagsInTitleNode[0], verseTagsInTitleNode[1], verseTagsInTitleNode[2])
+        4 -> verseOneAndTwoAndTitleCoincide(it, verseTagsInTitleNode[0], verseTagsInTitleNode[1], verseTagsInTitleNode[2], verseTagsInTitleNode[3])
+        else ->
+        {
+          Dbg.d(titleNodesInChapter[0].ownerDocument)
+          throw StepException("processCanonicalHeaders: Bad verse tag count: ${verseTagsInTitleNode.size} at ${Dom.getAncestorNamed(titleNodesInChapter[0], "chapter")!!}.")
+        }
+      }
+    }
   }
 
 

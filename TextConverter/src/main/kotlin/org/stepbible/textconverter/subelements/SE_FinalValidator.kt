@@ -6,6 +6,7 @@ import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.contains
+import org.stepbible.textconverter.support.miscellaneous.findNodesByName
 import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefCollection
@@ -22,7 +23,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-class SE_LastDitchValidator (dataCollection: X_DataCollection): SE(dataCollection)
+class SE_FinalValidator (dataCollection: X_DataCollection): SE(dataCollection)
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -40,6 +41,7 @@ class SE_LastDitchValidator (dataCollection: X_DataCollection): SE(dataCollectio
   override fun processRootNodeInternal (rootNode: Node)
   {
     Dbg.reportProgress("Last ditch validation. ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
+    checkForCrossBoundaryMarkup(rootNode)
     checkForSubversesAndMissingVerses(rootNode)
     checkForNotesOutsideOfVerses(rootNode)
   }
@@ -55,6 +57,22 @@ class SE_LastDitchValidator (dataCollection: X_DataCollection): SE(dataCollectio
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  private fun checkForCrossBoundaryMarkup (rootNode: Node)
+  {
+    fun checkChapter (chapter: Node)
+    {
+//      if (Dbg.d(Dom.toString(chapter), "<chapter osisID='Ps.72'>"))
+//        Dbg.d(rootNode.ownerDocument)
+      val verses = chapter.findNodesByName("verse")
+      for (i in verses.indices step 2)
+        if (!Dom.isSiblingOf(verses[i], verses[i + 1]))
+          IssueAndInformationRecorder.crossVerseBoundaryMarkup(Ref.rdOsis(verses[i]["sID"]!!).toRefKey())
+    }
+
+    rootNode.findNodesByName("chapter").forEach(::checkChapter)
+  }
+
 
   /****************************************************************************/
   private fun checkForNotesOutsideOfVerses (rootNode: Node)
@@ -145,7 +163,7 @@ class SE_LastDitchValidator (dataCollection: X_DataCollection): SE(dataCollectio
 
         val sid = it[m_FileProtocol.attrName_verseSid()]!!
         if ("Dummy" != currentId)
-          m_MismatchedEidsAndSids.add(RefCollection.rd(sid))
+          m_MismatchedEidsAndSids.add(RefCollection.rdOsis(sid))
         currentId = sid
 
 
