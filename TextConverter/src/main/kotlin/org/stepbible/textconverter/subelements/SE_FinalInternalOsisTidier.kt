@@ -72,6 +72,7 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
        with the lists we established above. */
 
     allNodes.forEach(NodeMarker::deleteAllMarkers)
+    deleteTemporaryAttributes(rootNode)
     deleteTemporaryAttributes(allNodes)
     collapseNestedStrongs(allNodes)
     handleSelah(selahList)
@@ -226,12 +227,8 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
 
 
   /****************************************************************************/
-  private fun deleteTemporaryAttributes (nodeList: List<Node>)
-  {
-    nodeList
-      .filter { "_t" in it }
-      .forEach { node -> Dom.getAttributes(node).filter { it.key.startsWith("_") }. forEach { attr -> Dom.deleteAttribute(node, attr.key ) } }
-  }
+  private fun deleteTemporaryAttributes (nodeList: List<Node>) = nodeList.filter { "_t" in it }.forEach { deleteTemporaryAttributes(it) }
+  private fun deleteTemporaryAttributes (node: Node) = Dom.getAttributes(node).filter{ it.key.startsWith("_") }.forEach { attr -> Dom.deleteAttribute(node, attr.key ) }
 
 
   /****************************************************************************/

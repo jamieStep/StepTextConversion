@@ -160,9 +160,12 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
 
     val footnoteText = makeFootnoteText(row) ?: return
     val noteNode = makeFootnote(sidNode.ownerDocument, row.sourceRefAsRefKey, footnoteText, callout)
-    if ("AllBibles" == row.action)
-      NodeMarker.setMoveNoteToStartOfVerse(noteNode)
-    Dom.insertNodeAfter(sidNode, noteNode)
+    if (null != noteNode)
+    {
+      if ("AllBibles" == row.action)
+        NodeMarker.setMoveNoteToStartOfVerse(noteNode)
+      Dom.insertNodeAfter(sidNode, noteNode)
+    }
   }
 
 
@@ -244,7 +247,7 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
 
 
   /****************************************************************************/
-  private fun makeFootnote (document: Document, refKeyToAttachNoteTo: RefKey, text: String, callout: Any? = null): Node
+  private fun makeFootnote (document: Document, refKeyToAttachNoteTo: RefKey, text: String, callout: Any? = null): Node?
   {
     val note = m_FileProtocol.makeFootnoteNode(document, refKeyToAttachNoteTo, text, Utils.getCallout(callout))
     return note

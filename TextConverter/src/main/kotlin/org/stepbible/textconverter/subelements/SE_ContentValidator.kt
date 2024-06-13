@@ -12,6 +12,7 @@ import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
+import java.util.IdentityHashMap
 
 /******************************************************************************/
 /**
@@ -837,8 +838,15 @@ object ContentValidator
 
 
     /**************************************************************************/
+    /* We want a list of all nodes, with a view to checking them.  All, that is,
+       except note nodes and the things underneath them which I don't include in
+       the checking. */
+
     val res = BookAnatomy()
-    res.m_AllNodes = rootNode.getAllNodesBelow()
+    val ignoreNodes = IdentityHashMap<Node, Byte>()
+    val allNodes = rootNode.getAllNodesBelow()
+    allNodes.filter { "note" == Dom.getNodeName(it) }.forEach{ node -> ignoreNodes[node] = 0; node.getAllNodesBelow().forEach { ignoreNodes[it] = 0 }}
+    res.m_AllNodes = allNodes.filter { it !in ignoreNodes }
 
 
 

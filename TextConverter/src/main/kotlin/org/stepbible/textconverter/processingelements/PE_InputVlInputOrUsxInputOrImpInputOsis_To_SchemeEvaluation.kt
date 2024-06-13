@@ -147,11 +147,8 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
   * @return Result of evaluating against the given scheme.
   */
 
-  fun evaluateSingleScheme (schemeName: String, bibleStructureToCompareWith: BibleStructure): Evaluation
-  {
-    //???val bookNumbersInRawUsx = bibleStructureToCompareWith.getAllBookNumbers().toList()
-    return evaluateScheme(schemeName, bibleStructureToCompareWith)
-  }
+  fun evaluateSingleScheme (schemeName: String, bibleStructureToCompareWith: BibleStructure) =
+    evaluateScheme(schemeName, bibleStructureToCompareWith)
 
 
 
@@ -265,7 +262,7 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
     val osis2modSchemeHasDc = bibleStructureForScheme.hasAnyBooksDc()
     if (bibleStructureToCompareWithHasDc && !osis2modSchemeHasDc)
     {
-      val x = Evaluation(scheme, Int.MAX_VALUE, 0, 0, 0, 0, text = "Rejected because it lacks DC.")
+      val x = Evaluation(scheme, Int.MAX_VALUE, 0, 0, 0, 0, 0, text = "Rejected because it lacks DC.")
       m_Evaluations.add(x)
       return x
     }
@@ -283,6 +280,7 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
     var booksInExcessInOsis2modScheme = 0
     var versesMissingInOsis2modScheme = 0
     var versesInExcessInOsis2modScheme = 0
+    var versesOutOfOrder = 0
 
     fun evaluate (bookNumber: Int)
     {
@@ -300,6 +298,7 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
         val comparisonDetails = BibleStructure.compareWithGivenScheme(bookNumber, bibleStructureToCompareWith, bibleStructureForScheme)
         versesMissingInOsis2modScheme += comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.size
         versesInExcessInOsis2modScheme += comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.size
+        versesOutOfOrder += comparisonDetails.versesInTextUnderConstructionOutOfOrder.size
       }
     }
 
@@ -308,8 +307,8 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
 
 
     /**************************************************************************/
-    val score = booksMissingInOsis2modScheme * 1_000_000 + versesMissingInOsis2modScheme * 1000 + versesInExcessInOsis2modScheme
-    val res = Evaluation(scheme, score, booksMissingInOsis2modScheme, versesMissingInOsis2modScheme, booksInExcessInOsis2modScheme, versesInExcessInOsis2modScheme, additionalText)
+    val score = 1_000_000_000 * versesOutOfOrder.coerceAtMost(1) + booksMissingInOsis2modScheme * 1_000_000 + versesMissingInOsis2modScheme * 1000 + versesInExcessInOsis2modScheme
+    val res = Evaluation(scheme, score, booksMissingInOsis2modScheme, versesMissingInOsis2modScheme, booksInExcessInOsis2modScheme, versesInExcessInOsis2modScheme, versesOutOfOrder, additionalText)
     m_Evaluations.add(res)
     return res
   }
@@ -399,6 +398,7 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
                          val versesMissingInOsis2modScheme: Int,
                          val booksInExcessInOsis2modScheme: Int,
                          val versesInExcessInOsis2modScheme: Int,
+                         val versesOutOfOrder: Int,
                          val text: String?)
   {
     fun exactMatch (): Boolean = 0 == booksMissingInOsis2modScheme && 0 == versesMissingInOsis2modScheme && 0 == booksInExcessInOsis2modScheme && 0 == versesInExcessInOsis2modScheme
@@ -407,7 +407,7 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
     {
       return if (0 == score)
         VersificationDeviationType.EXACT_MATCH
-      else if (booksMissingInOsis2modScheme > 0 || versesMissingInOsis2modScheme > 0)
+      else if (booksMissingInOsis2modScheme > 0 || versesMissingInOsis2modScheme > 0 || versesOutOfOrder > 0)
         VersificationDeviationType.BAD
       else
         VersificationDeviationType.OK

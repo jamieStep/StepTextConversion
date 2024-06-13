@@ -1,7 +1,7 @@
 package org.stepbible.textconverter.osisinputonly
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
-import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.text.SimpleDateFormat
@@ -198,9 +198,9 @@ var header =
     val hasFullNt = hasNt && ntBooks.size == BibleAnatomy.getNumberOfBooksInNt() && ntBooks.min() == BibleAnatomy.getBookNumberForStartOfNt() && ntBooks.max() == BibleAnatomy.getBookNumberForEndOfNt()
 
     if (hasFullOt && hasFullNt) return null
-    var resOt = ""; if (hasFullOt) resOt = "GEN-MAL" else if (hasOt) resOt = otBooks.joinToString(" "){ BibleBookNamesUsx.numberToAbbreviatedName(it) }
-    var resNt = ""; if (hasFullNt) resNt = "MAT-REV" else if (hasNt) resNt = ntBooks.joinToString(" "){ BibleBookNamesUsx.numberToAbbreviatedName(it) }
-    var resDc = ""; if (hasDc) resDc = dcBooks.joinToString(" "){ BibleBookNamesUsx.numberToAbbreviatedName(it) }
+    var resOt = ""; if (hasFullOt) resOt = "Gen-Mal"  else if (hasOt) resOt = otBooks.joinToString(" "){ BibleBookNamesOsis.numberToAbbreviatedName(it) }
+    var resNt = ""; if (hasFullNt) resNt = "Matt-Rev" else if (hasNt) resNt = ntBooks.joinToString(" "){ BibleBookNamesOsis.numberToAbbreviatedName(it) }
+    var resDc = ""; if (hasDc) resDc = dcBooks.joinToString(" "){ BibleBookNamesOsis.numberToAbbreviatedName(it) }
     var res = "$resOt $resNt $resDc"
     res = res.trim().replace("\\s+".toRegex(), " ")
     return res

@@ -238,7 +238,8 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
                                           val chaptersInBoth: List<RefKey>,
                                           val versesInTextUnderConstructionButNotInTargetScheme: List<RefKey>,
                                           val versesInTargetSchemeButNotInTextUnderConstruction: List<RefKey>,
-                                          val versesInBoth: List<RefKey>)
+                                          val versesInBoth: List<RefKey>,
+                                          val versesInTextUnderConstructionOutOfOrder: List<RefKey>)
 
 
     /****************************************************************************/
@@ -259,17 +260,15 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
       val versesInTextUnderConstructionButNotInOtherScheme = versesInTextUnderConstruction subtract versesInOtherScheme
       val versesInOtherSchemeButNotInTextUnderConstruction = versesInOtherScheme subtract versesInTextUnderConstruction
       val versesInBoth = versesInTextUnderConstruction intersect versesInOtherScheme
-
-//      Dbg.d(versesInTextUnderConstructionButNotInOtherScheme.map { Ref.rd(it).toString() })
-//      Dbg.d(versesInOtherSchemeButNotInTextUnderConstruction.map { Ref.rd(it).toString() })
-
       val chaptersInTextUnderConstruction = versesInTextUnderConstruction.map { Ref.clearV(Ref.clearS(it)) }.toSet()
       val chaptersInOtherScheme = versesInOtherScheme.map { Ref.clearV(Ref.clearS(it)) }.toSet()
       val chaptersInTextUnderConstructionButNotInOtherScheme = chaptersInTextUnderConstruction subtract chaptersInOtherScheme
       val chaptersInOtherSchemeButNotInTextUnderConstruction = chaptersInOtherScheme subtract chaptersInTextUnderConstruction
       val chaptersInBoth = chaptersInTextUnderConstructionButNotInOtherScheme intersect chaptersInOtherScheme
+      val versesOutOfOrder = schemeA.getOutOfOrderVerses()
       return ComparisonWithOtherScheme(chaptersInTextUnderConstructionButNotInOtherScheme.sorted(), chaptersInOtherSchemeButNotInTextUnderConstruction.sorted(), chaptersInBoth.sorted(),
-                                       versesInTextUnderConstructionButNotInOtherScheme.sorted(), versesInOtherSchemeButNotInTextUnderConstruction.sorted(), versesInBoth.sorted())
+                                       versesInTextUnderConstructionButNotInOtherScheme.sorted(), versesInOtherSchemeButNotInTextUnderConstruction.sorted(), versesInBoth.sorted(),
+                                       versesOutOfOrder)
     } // compareWithGivenScheme
   } // companion object
 

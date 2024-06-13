@@ -96,10 +96,12 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
     {
       val nrsvx = BibleStructure.makeOsis2modNrsvxSchemeInstance(bibleStructure)
       dataCollection.getBookNumbers().forEach {
-        BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { refKey -> Logger.error(refKey, "Chapter in NRSV(A) but not in supplied text.") }
-        BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error(refKey, "Chapter in in supplied text but not in NRSV(A).") }
-        BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).versesInTargetSchemeButNotInTextUnderConstruction.forEach   { refKey -> Logger.error(refKey, "Verse in NRSV(A) but not in supplied text.") }
-        BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error(refKey, "Verse in supplied text but not in NRSV(A).") }
+        val comparison = BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx)
+        comparison.chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { refKey -> Logger.error (refKey, "Chapter in NRSV(A) but not in supplied text.") }
+        comparison.chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error (refKey, "Chapter in in supplied text but not in NRSV(A).") }
+        comparison.versesInTargetSchemeButNotInTextUnderConstruction  .forEach { refKey -> Logger.error (refKey, "Verse in NRSV(A) but not in supplied text.") }
+        comparison.chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error (refKey, "Verse in supplied text but not in NRSV(A).") }
+        comparison.versesInTextUnderConstructionOutOfOrder            .forEach { refKey -> Logger.warning(refKey,"Verse out of order.") }
       }
 
       Logger.announceAll(true)
@@ -126,11 +128,13 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
       val schemeName = ConfigData["stepVersificationScheme"]!!
       val scheme = BibleStructure.makeOsis2modSchemeInstance(schemeName)
       dataCollection.getBookNumbers().forEach { bookNo ->
-        BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { refKey -> Logger.warning(refKey, "Chapter in $schemeName but not in supplied text.") }
-        BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error  (refKey, "Chapter in supplied text but not in $schemeName.") }
-        BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).versesInTextUnderConstructionButNotInTargetScheme  .forEach { refKey -> Logger.error  (refKey, "Verse in supplied text but not in $schemeName.") }
+        val comparison = BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme)
+        comparison.chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { refKey -> Logger.warning(refKey, "Chapter in $schemeName but not in supplied text.") }
+        comparison.chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error  (refKey, "Chapter in supplied text but not in $schemeName.") }
+        comparison.versesInTextUnderConstructionButNotInTargetScheme  .forEach { refKey -> Logger.error  (refKey, "Verse in supplied text but not in $schemeName.") }
+        comparison.versesInTextUnderConstructionOutOfOrder            .forEach { refKey -> Logger.warning (refKey, "Verse out of order.") }
 
-        val missingVerses = BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme).versesInTargetSchemeButNotInTextUnderConstruction.toSet()
+        val missingVerses = comparison.versesInTargetSchemeButNotInTextUnderConstruction.toSet()
         val commonlyMissingVerses = BibleAnatomy.getCommonlyMissingVerses().toSet()
         val reportableMissings = missingVerses - commonlyMissingVerses
         val nonReportableMissings = commonlyMissingVerses - reportableMissings

@@ -91,7 +91,7 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
   {
     val sidAsRefKey = m_FileProtocol.readRef(sid[m_FileProtocol.attrName_verseSid()]!!).toRefKey()
     IssueAndInformationRecorder.verseEmptyInRawText(sidAsRefKey)
-    val footnoteNode = m_FileProtocol.makeFootnoteNode(sid.ownerDocument, sidAsRefKey, ReversificationData.getFootnoteForEmptyVerses(sidAsRefKey), caller = null)
+    val footnoteNode = m_FileProtocol.makeFootnoteNode(sid.ownerDocument, sidAsRefKey, ReversificationData.getFootnoteForEmptyVerses(sidAsRefKey), caller = null) ?: return
     Dom.insertNodeAfter(sid, footnoteNode)
     NodeMarker.setEmptyVerseType(sid, "emptyInRawText")
     Dom.insertNodeAfter(footnoteNode, createEmptyContent(sid.ownerDocument, m_Content_EmptyVerse))
@@ -292,7 +292,7 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
     val ib = insertBefore ?: Dom.createNode(rootNode.ownerDocument,"<TempNode/>")
     Dom.insertNodeBefore(ib, start)
     val footnoteNode = m_FileProtocol.makeFootnoteNode(rootNode.ownerDocument, refKey, ReversificationData.getFootnoteForNewlyCreatedVerses(refKey))
-    Dom.insertNodeBefore(ib, footnoteNode)
+    if (null != footnoteNode) Dom.insertNodeBefore(ib, footnoteNode)
     Dom.insertNodeBefore(ib, createEmptyContent(rootNode.ownerDocument, m_Content_MissingVerse))
     Dom.insertNodeBefore(ib, end)
 

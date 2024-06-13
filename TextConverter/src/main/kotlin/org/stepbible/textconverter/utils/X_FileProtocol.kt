@@ -110,7 +110,7 @@ open class X_FileProtocol
   open fun isXrefNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeCanonicalTitleNode (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeDoNothingMarkup (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
-  open fun makeFootnoteNode (doc: Document, refKeyForOsisIdOfFootnote: RefKey, text: String, caller: String? = null): Node = throw StepExceptionShouldHaveBeenOverridden()
+  open fun makeFootnoteNode (doc: Document, refKeyForOsisIdOfFootnote: RefKey, text: String, caller: String? = null): Node? = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeItalicsNode (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makePlainVanillaParaNode (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeVerseEidNode (doc: Document, refKey: Pair<RefKey, RefKey?>): Node = throw StepExceptionShouldHaveBeenOverridden()
@@ -214,8 +214,8 @@ open class X_FileProtocol
 //      if (isNodeWhichNeedsToStickWithCanonicalText(n)) // Moved to 06-Jun-24 above.
 //        return Pair('Y', n) // Treat notes and xrefs as though they were canonical, so they remain with the verse.
 
+Dbg.dCont(key + " : " + Dom.getNodeName(node), "speaker")
       val res = m_TagDetails[key]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity // Try looking up the extended name, and failing that, the non-extended version.
-
       when (res)
       {
         'Y', 'N' -> return Pair(res, n)
@@ -558,7 +558,10 @@ object Osis_FileProtocol: X_FileProtocol()
   * @return True if this is a span type.
   */
 
-  override fun isSpanType (node: Node) = 'Y' == m_TagDetails[Dom.getNodeName(node)]!!.span
+  override fun isSpanType (node: Node): Boolean
+  {
+    return 'Y' == m_TagDetails[getExtendedNodeName(node)]!!.span
+  }
 
 
   /****************************************************************************/
@@ -632,8 +635,9 @@ object Osis_FileProtocol: X_FileProtocol()
   * @return Footnote node.
   */
 
-  override fun makeFootnoteNode (doc: Document, refKeyForOsisIdOfFootnote: RefKey, text: String, caller: String?): Node
+  override fun makeFootnoteNode (doc: Document, refKeyForOsisIdOfFootnote: RefKey, text: String, caller: String?): Node?
   {
+    if (!ConfigData.getAsBoolean("stepOkToGenerateFootnotes")) return null
     val theCaller = caller ?: m_ExplanationFootnoteCalloutGenerator.get()
     val id = Ref.rd(refKeyForOsisIdOfFootnote).toStringOsis()
     val footnoteNode = Dom.createNode(doc, "<note type='explanation' osisID='$id!${Globals.getUniqueExternal()}' n='$theCaller'/>")
@@ -941,7 +945,7 @@ object Osis_FileProtocol: X_FileProtocol()
 
     m_TagDetails["milestoneStart"] = TagDescriptor('N', 'N') // This element should not be used in current OSIS documents. It has been replaced by
     m_TagDetails["name"] = TagDescriptor('?', 'Y') // The name element is used to mark place, personal and other names in an OSIS text. The
-    m_TagDetails["note"] = TagDescriptor('N', 'N') // The note element is used for all notes on a text. Liberal use of the type attribute will enable
+    m_TagDetails["note"] = TagDescriptor('?', 'N') // The note element is used for all notes on a text. Liberal use of the type attribute will enable
     m_TagDetails["osis"] = TagDescriptor('X', 'N') // The osis element is the root element of all OSIS texts.
     m_TagDetails["osisCorpus"] = TagDescriptor('X', 'N') // The osisCorpus element has no attributes and may have a header, followed by an
 
@@ -966,7 +970,7 @@ object Osis_FileProtocol: X_FileProtocol()
     m_TagDetails["seg"] = TagDescriptor('N', 'N') // The seg element should be used for very small divisions, such as within word elements.  Not sure whether to make this canonical or not, but it looks as though we're not really going to come across it.
     m_TagDetails["signed"] = TagDescriptor('Y', 'N') // The signed element is used to mark the signer of a letter within a closer element.
     m_TagDetails["source"] = TagDescriptor('X', 'N') // The source element appears only in a work element. It is used to indicate the source for a
-    m_TagDetails["speaker"] = TagDescriptor('Y', 'N') // The speaker element is used to mark the speaker in a text. It will be used when the speaker
+    m_TagDetails["speaker"] = TagDescriptor('N', 'N') // The speaker element is used to mark the speaker in a text. It will be used when the speaker
     m_TagDetails["speech"] = TagDescriptor('?', 'N') // The speech element is used to mark speeches in a text.
 
     m_TagDetails["subject"] = TagDescriptor('X', 'N') // The subject element occurs only in a work element. It consists only of text drawn from a
@@ -1271,8 +1275,9 @@ object Usx_FileProtocol: X_FileProtocol()
   * @return Footnote node.
   */
 
-  override fun makeFootnoteNode (doc: Document, refKeyForUsxIdOfFootnote: RefKey, text: String, caller: String?): Node
+  override fun makeFootnoteNode (doc: Document, refKeyForUsxIdOfFootnote: RefKey, text: String, caller: String?): Node?
   {
+    if (!ConfigData.getAsBoolean("stepOkToGenerateFootnotes")) return null
     TODO()
   }
 

@@ -942,6 +942,29 @@ object ConfigData
 
 
     /****************************************************************************/
+    /* Deletes any existing setting for a parameter and then applies a new
+     * setting.
+     *
+     * A little care my be required here in order to understand the 'force'
+     * setting.  The effect of deleteAndPut is to forcibly replace any existing
+     * setting with a new value.  The 'force' parameter says whether that new
+     * setting is to be regarded as a forcible one, in the sense that no attempt
+     * to revise it (other than another call to deleteAndPut) will replace it.
+     *
+     * @param key Key.
+     * @param theValue Associated value.
+     * @param force If true, later calls for this same key are ignored.
+     *
+     */
+
+    fun deleteAndPut (key: String, theValue: String, force: Boolean)
+    {
+      delete(key)
+      put(key, theValue, force)
+    }
+
+
+    /****************************************************************************/
     /**
     * Gets the value associated with a given key, or returns null if the key
     * has no associated value.

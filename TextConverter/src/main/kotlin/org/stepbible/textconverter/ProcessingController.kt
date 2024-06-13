@@ -334,6 +334,17 @@ object ProcessingController
 
 
     /**************************************************************************/
+    /* I'd rather not do this here, because it seems a bit specialist for this
+       context.  But it needs to be done early, because other things need to
+       know whether they can generate footnotes or not. */
+
+    val isCopyrightText = ConfigData.getAsBoolean("stepIsCopyrightText", "yes") // Default to text being copyright -- that's safer.
+    if (null == ConfigData["stepOkToGenerateFootnotes"]) // Unless we've specifically been told we can generate footnotes, derive the setting from the copyright setting.
+      ConfigData.put("stepOkToGenerateFootnotes", if (isCopyrightText) "no" else "yes", force = true)
+
+
+
+    /**************************************************************************/
     Logger.setLogFile(FileLocations.getConverterLogFilePath())
     Logger.announceAll(true)
   }

@@ -75,7 +75,7 @@ class SE_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
     /* We want the footnote only for certain combinations of reversification
        type (conversion-time vs runtime) and notes level (basic vs academic). */
 
-    var wantFootnote = if (C_ReversificationNotesLevel_None == m_ReversificationNotesLevel) false else ReversificationData.outputFootnote(row, reversificationType, if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A')
+    val wantFootnote = if (C_ReversificationNotesLevel_None == m_ReversificationNotesLevel) false else ReversificationData.outputFootnote(row, reversificationType, if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A')
 
 
 
@@ -120,8 +120,11 @@ class SE_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
       val ancientVersions = if (m_ReversificationNotesLevel > C_ReversificationNotesLevel_Basic) ReversificationData.getAncientVersions(row) else null
       if (null != ancientVersions) text += " $ancientVersions"
       val noteNode = m_FileProtocol.makeFootnoteNode(document, row.standardRefAsRefKey, text, callout)
-      res.add(noteNode)
-      res.add(Dom.createTextNode(document, " "))
+      if (null != noteNode)
+      {
+        res.add(noteNode)
+        res.add(Dom.createTextNode(document, " "))
+      }
 
 
 
@@ -131,7 +134,7 @@ class SE_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
          natural position would be later.  I flag such notes here with a special
          attribute and then move them later. */
 
-      if (row.requiresNotesToBeMovedToStartOfVerse())
+      if (null != noteNode && row.requiresNotesToBeMovedToStartOfVerse())
         NodeMarker.setMoveNoteToStartOfVerse(noteNode)
 
 

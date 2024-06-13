@@ -137,9 +137,18 @@ object PE_Phase2_ToInternalOsis : PE
     /* Pick up the input data. */
 
     StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath()) // Create a home for what we're about to generate.
+
     InternalOsisDataCollection.loadFromText(Phase1TextOutput); x()                 // Phase 1 creates OSIS _text_ in memory, so we need to load it as a DOM.
-    Phase1TextOutput = ""                                                          // Free up space -- we don't need the OSIS text any more.
     RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()); x() // Needed to cater for the possible requirement to expand ranges.
+
+    if ("osis" == ConfigData["stepOriginData"]!!) // If starting from OSIS, then for validation purposes we need a second copy of the original text.
+    {
+      Dbg.reportProgress("The following is not an error -- when using OSIS input, I need two copies of the OSIS: one to work on, and one against which to validate.")
+      ExternalOsisDataCollection.loadFromText(Phase1TextOutput); x()
+      RefBase.setBibleStructure(ExternalOsisDataCollection.getBibleStructure()); x()
+    }
+
+    Phase1TextOutput = ""                                                          // Free up space -- we don't need the OSIS text any more.
     val doc = InternalOsisDataCollection.getDocument()
     //Dbg.d(doc)
 
@@ -224,7 +233,6 @@ object PE_Phase2_ToInternalOsis : PE
 
     SE_TableHandler(InternalOsisDataCollection).processAllRootNodes(); x()                      // Collapses tables which span verses into a single elided verse.
     SE_ElisionHandler(InternalOsisDataCollection).processAllRootNodes(); x()                    // Expands elisions out into individual verses.
-//$$$
     SE_EnhancedVerseEndInsertionPreparer(InternalOsisDataCollection).processAllRootNodes(); x() // Continues the work of SE_CanonicalHeadingsHandler, making things easier to insert verse ends.
     SE_EnhancedVerseEndInserter(InternalOsisDataCollection).processAllRootNodes(); x()          // Positions verse ends so as to reduce the chances of cross-boundary markup.
     Osis_CanonicalHeadingsHandler(InternalOsisDataCollection).process(); x()                    // Not sure about this step at present.
@@ -233,6 +241,7 @@ object PE_Phase2_ToInternalOsis : PE
 
 
     /**************************************************************************/
+    //Dbg.d(InternalOsisDataCollection.getDocument())
     SE_BasicValidator(InternalOsisDataCollection).structuralValidation(); x()                   // Checks for basic things like all verses being under chapters.
     SE_ListEncapsulator(InternalOsisDataCollection).processAllRootNodes(); x()                  // Might encapsulate lists (but in fact does not do so currently).
     Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                         // Checks for invalid cross-references, or cross-references which point to non-existent places.

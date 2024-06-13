@@ -235,7 +235,8 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
       val range = RefRange(startOfElisionRef, m_FileProtocol.readRef(lastSidWithinTable!!))
       range.getLowAsRef().setV(range.getLowAsRef().getV() + 1)
       val owningVerseFootnote = m_FileProtocol.makeFootnoteNode(m_RootNode.ownerDocument, startOfElisionRef.toRefKey(), Translations.stringFormatWithLookup("V_tableElision_owningVerse", range))
-      Dom.insertNodeAfter(owningVerseSid, owningVerseFootnote)
+      if (null != owningVerseFootnote)
+        Dom.insertNodeAfter(owningVerseSid, owningVerseFootnote)
     }
   }
 

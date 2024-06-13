@@ -89,22 +89,22 @@ object Dbg
    * Sets the list of books to be processed.  Give either an array of UBS
    * abbreviations, or null if all books are to be processed.
    * 
-   * @param abbrevs Comma-separated list of abbreviations.
+   * @param usxAbbrevs Comma-separated list of abbreviations.
    * @param test One of <, <=, =, !=, >=, >.  If = or !=, abbrevs can contain a
    *             list; otherwise it should be only a single book and the test is
    *             based on a comparison with that book.
    */
   
-  fun setBooksToBeProcessed (abbrevs: String?, test: String = "=")
+  fun setBooksToBeProcessed (usxAbbrevs: String?, test: String = "=")
   {
     /**************************************************************************/
-    if (abbrevs.isNullOrEmpty())
+    if (usxAbbrevs.isNullOrEmpty())
       return
     
     
     
     /**************************************************************************/
-    val booksRequested = abbrevs.uppercase().split("\\W+".toRegex()).toSet()
+    val booksRequested = usxAbbrevs.uppercase().split("\\W+".toRegex()).toSet()
     m_DebugRunningOnPartialCollectionOfBooksOnly = true
 
     if ("!=" == test)
@@ -118,13 +118,13 @@ object Dbg
     when (test)
     {
       "<" -> {
-        val bookNo = getBookNo(abbrevs)
+        val bookNo = getBookNo(usxAbbrevs)
         for (i in 0..< bookNo) m_BooksToBeProcessed[i].m_Process = true
       }
 
 
       "<=" -> {
-        val bookNo = getBookNo(abbrevs)
+        val bookNo = getBookNo(usxAbbrevs)
         for (i in 0.. bookNo) m_BooksToBeProcessed[i].m_Process = true
       }
 
@@ -143,14 +143,14 @@ object Dbg
 
       ">" ->
       {
-        val bookNo = getBookNo(abbrevs)
+        val bookNo = getBookNo(usxAbbrevs)
         for (i in bookNo + 1..< m_BooksToBeProcessed.size) m_BooksToBeProcessed[i].m_Process = true
       }
       
       
       ">=" ->
       {
-        val bookNo = getBookNo(abbrevs)
+        val bookNo = getBookNo(usxAbbrevs)
         for (i in bookNo..< m_BooksToBeProcessed.size) m_BooksToBeProcessed[i].m_Process = true
       }
     }

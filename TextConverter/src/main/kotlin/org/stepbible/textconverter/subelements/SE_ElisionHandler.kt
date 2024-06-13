@@ -260,8 +260,11 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
         if (refKeys.size > 2) // No footnote on master verse if there is only one other verse in the elision.
         {
           val footnote = m_FileProtocol.makeFootnoteNode(verse.ownerDocument, m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!).getLowAsRefKey(), Translations.stringFormat(Language.Vernacular, "V_elision_containsTextFromOtherVerses", m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!)))
-          Dom.insertNodeAfter(verse, footnote)
-          NodeMarker.setAddedFootnote(verse)
+          if (null != footnote)
+          {
+            Dom.insertNodeAfter(verse, footnote)
+            NodeMarker.setAddedFootnote(verse)
+          }
         }
      }
 

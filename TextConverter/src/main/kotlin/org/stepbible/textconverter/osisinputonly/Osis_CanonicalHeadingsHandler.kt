@@ -429,7 +429,7 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
       val verseTagsInTitleNode = it.findNodesByName("verse")
       when (verseTagsInTitleNode.size)
       {
-        0 -> { Dbg.d(Dom.getAncestorNamed(titleNodesInChapter[0], "chapter")!!) }
+        0 -> { }
         1 -> firstPartOfVerseOneIsTitle(it, verseTagsInTitleNode[0])
         2 -> verseOneAndTitleCoincide(it, verseTagsInTitleNode[0], verseTagsInTitleNode[1])
         3 -> verseOneAndFirstPartOfVerseTwoIsTitle(it, verseTagsInTitleNode[0], verseTagsInTitleNode[1], verseTagsInTitleNode[2])

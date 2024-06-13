@@ -1353,7 +1353,8 @@ object Dom
         val factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
         factory.isNamespaceAware = true // See comments above.
         factory.isIgnoringComments = !retainComments
-        factory.isIgnoringElementContentWhitespace = false
+        factory.isIgnoringElementContentWhitespace = true
+        factory.isCoalescing = true
         val builder: DocumentBuilder = factory.newDocumentBuilder()
         val inputData = ByteArrayInputStream(text.replace("\u00a0", "&#160;").toByteArray()) // Unicode non-breaking space.
         //Dbg.outputText(text.replace("\u00a0", "&#160;"))

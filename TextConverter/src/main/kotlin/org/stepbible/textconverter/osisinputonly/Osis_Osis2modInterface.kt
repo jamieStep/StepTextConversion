@@ -65,7 +65,11 @@ abstract class Osis_Osis2modInterface
     fun instance (): Osis_Osis2modInterface
     {
       if (null == m_Instance)
+      {
         m_Instance = if ("step" == ConfigData["stepOsis2modType"]!!) Osis2ModInterfaceStep else Osis2ModInterfaceCrosswire
+        m_Instance!!.initialise()
+      }
+
       return m_Instance!!
     }
 
@@ -333,10 +337,12 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
 
 
   /****************************************************************************/
-  /* If creating the JSON file needed by our own version of ossi2mod, we need
+  /* If creating the JSON file needed by our own version of osis2mod, we need
      Crosswire book abbreviations, which unfortunately differ from USX and
      OSIS.  (Crosswire also differs from other schemes in terms of the DC books
-     it supports -- there's a lot of overlap, but it's not an exact match.) */
+     it supports -- there's a lot of overlap, but it's not an exact match.)
+
+     Note that these are indexed on UBS abbreviations. */
 
   private fun initialiseBookDetails ()
   {

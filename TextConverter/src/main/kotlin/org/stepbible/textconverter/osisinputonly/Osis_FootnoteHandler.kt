@@ -88,6 +88,7 @@ object Osis_FootnoteHandler
       .filter { "crossReference" != it["type"]}
       .forEach {
         val clonedNode = Dom.cloneNode(m_SavedData!!, it, deep = true)
+        removeTemporaryAttributes(clonedNode)
         val ix = (m_Index++).toString()
         clonedNode["X_index"] = ix
         val placeHolder = Dom.cloneNode(it.ownerDocument, it, deep = false)
@@ -111,6 +112,15 @@ object Osis_FootnoteHandler
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  private fun removeTemporaryAttributes (node: Node)
+  {
+    fun deleteTemporaries (node: Node) = Dom.getAttributes(node).filter { it.key.startsWith("_") }. forEach { attr -> Dom.deleteAttribute(node, attr.key) }
+    node.getAllNodesBelow().filter { "_t" in it }.forEach(::deleteTemporaries)
+    deleteTemporaries(node)
+  }
+
 
   /****************************************************************************/
   private var m_Index = 0
