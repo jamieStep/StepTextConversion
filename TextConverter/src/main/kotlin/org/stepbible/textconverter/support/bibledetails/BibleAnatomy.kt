@@ -31,7 +31,8 @@ object BibleAnatomy
 
   val C_BookNumberForPsa = BibleBookNamesUsx.abbreviatedNameToNumber("Psa")
   val C_BookNumberForHab = BibleBookNamesUsx.abbreviatedNameToNumber("Hab")
-  val C_BookNumbersOfBooksWhichMayHaveCanonicalHeaders = listOf(C_BookNumberForPsa, C_BookNumberForHab)
+  val C_BookNumberForMal = BibleBookNamesUsx.abbreviatedNameToNumber("Mal")
+  val C_BookNumbersOfBooksWhichMayHaveCanonicalHeaders = listOf(C_BookNumberForPsa, C_BookNumberForHab, C_BookNumberForMal)
 
 
 

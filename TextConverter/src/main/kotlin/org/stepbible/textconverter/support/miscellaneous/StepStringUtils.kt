@@ -194,6 +194,29 @@ object StepStringUtils
   {
     return if (s.isEmpty()) s else s.substring(0, 1).uppercase() + s.substring(1).lowercase()
   }
+}
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                      String receiver functions                         **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+   * Returns a count of the number of characters in a string, excluding
+   * punctuation and all flavours of space.
+   *
+   * @param text String to be examined.
+   * @return Count of words.
+   */
+
+  fun String.characterCount () = this.replace("\n", "").replace("\\W+".toRegex(), "").length
 
 
   /****************************************************************************/
@@ -204,9 +227,8 @@ object StepStringUtils
    * @return Count of words.
    */
 
-  fun wordCount (text: String): Int
+  fun String.wordCount (): Int
   {
-    val s = text.replace("\n", " ").trim { it <= ' ' }
+    val s = this.replace("\n", " ").replace("\\W+".toRegex(), " ").trim { it <= ' ' }.replace("\\s+".toRegex(), " ")
     return if (s.isBlank()) 0 else s.split("\\p{Z}+".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray().size
   }
-}

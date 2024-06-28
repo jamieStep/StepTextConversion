@@ -40,7 +40,7 @@ class SE_FinalValidator (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
   override fun processRootNodeInternal (rootNode: Node)
   {
-    Dbg.reportProgress("Last ditch validation. ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
+    Dbg.reportProgress("Final validation. ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     checkForCrossBoundaryMarkup(rootNode)
     checkForSubversesAndMissingVerses(rootNode)
     checkForNotesOutsideOfVerses(rootNode)
@@ -101,7 +101,7 @@ class SE_FinalValidator (dataCollection: X_DataCollection): SE(dataCollection)
       {
         if (!inVerse && (null == canonicalTitleNode || !Dom.isAncestorOf(canonicalTitleNode!!, it))) // This assumes that notes inside canonical titles will work and therefore don't represent errors.  If they _don't_ work, remove the ancestor processing here and change SE_LastDitchTidier to delete notes from canonical titles.
         {
-          Dbg.d(chapterNode[m_FileProtocol.attrName_chapterSid()]!! + ": " + it.textContent)
+          //Dbg.d(chapterNode[m_FileProtocol.attrName_chapterSid()]!! + ": " + it.textContent)
           problems.add(chapterRefKey)
         }
       }
@@ -116,11 +116,9 @@ class SE_FinalValidator (dataCollection: X_DataCollection): SE(dataCollection)
           chapterRefKey = RefCollection.rdOsis(chapterNode[m_FileProtocol.attrName_chapterSid()]!!).getFirstAsRefKey()
         }
       }
-
     }
 
-    if (problems.isNotEmpty()) Dbg.d(chapterNode.ownerDocument)
-    problems.forEach { Logger.error(it, "Notes outside of verse at this location or nearby.")}
+    //problems.forEach { Logger.error(it, "Notes outside of verse at this location or nearby.")} $$$$$$$$$$$$$$$$$$$$
   }
 
 
@@ -135,6 +133,12 @@ class SE_FinalValidator (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
   private fun checkForSubversesAndMissingVerses_1 (chapterNode: Node, outOfOrderReporter: (RefKey, String) -> Unit)
   {
+    /**************************************************************************/
+    //Dbg.d(chapterNode.ownerDocument)
+    //Dbg.dCont(Dom.toString(chapterNode), "7")
+
+
+
     /**************************************************************************/
     var currentId = "Dummy"
     var expectedVerse = 1
@@ -198,7 +202,7 @@ class SE_FinalValidator (dataCollection: X_DataCollection): SE(dataCollection)
           val verse = ref.getV()
           var badVerse = verse != expectedVerse
           if (badVerse && ref.hasS())
-            badVerse = verse == expectedVerse - 1
+            badVerse = verse != expectedVerse - 1
 
           if (badVerse)
             m_MissingVerses.add(ref)

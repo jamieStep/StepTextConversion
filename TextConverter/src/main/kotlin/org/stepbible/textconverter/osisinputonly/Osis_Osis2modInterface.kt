@@ -194,8 +194,8 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
   override fun createSupportingDataIfRequired (filePath: String)
   {
     ConfigData["stepVersificationScheme"] = /* "x11n_" + */ ConfigData["stepModuleName"]!!
-    populateBibleStructure(InternalOsisDataCollection.getBibleStructure()) // We _must_ be dealing with OsisTemp by now.
-    m_BibleStructure.jswordMappings = ReversificationData.getReversificationMappings()
+    populateBibleStructure(InternalOsisDataCollection.getBibleStructure())
+    m_BibleStructure.jswordMappings = ReversificationData.getRuntimeReversificationMappings()
     outputJson(filePath)
   }
 
@@ -462,7 +462,7 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
 
 
   /****************************************************************************/
-  private fun populateBibleStructure (bibleStructureUnderConstruction: BibleStructure, headers: MutableList<BookDetails>, bookLow: Int, bookHigh: Int, skipMissingBooks: Boolean = false)
+  private fun populateBibleStructure (bibleStructureUnderConstruction: BibleStructure, headers: MutableList<BookDetails>, bookLow: Int, bookHigh: Int, skipMissingBooks: Boolean = true)
   {
     for (bookNo in bookLow .. bookHigh)
     {

@@ -3,6 +3,7 @@ package org.stepbible.textconverter.support.debug
 //import org.stepbible.textconverter.TestController
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefKey
+import org.stepbible.textconverter.support.stepexception.StepAbandonRun
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.File
 import java.util.*
@@ -36,10 +37,7 @@ object Logger
    * @return Number of errors.
    */
   
-  fun getNumberOfErrors (): Int
-  {
-    return m_Errors!!.size
-  }
+  fun getNumberOfErrors () = m_Errors!!.size
   
   
   /****************************************************************************/
@@ -49,10 +47,7 @@ object Logger
    * @return Number of information messages.
    */
   
-  fun getNumberOfInformations (): Int
-  {
-    return m_Info!!.size
-  }
+  fun getNumberOfInformations () = m_Info!!.size
   
   
   /****************************************************************************/
@@ -62,10 +57,7 @@ object Logger
    * @return Number of warnings.
    */
   
-  fun getNumberOfWarnings () : Int
-  {
-    return m_Warnings!!.size
-  }
+  fun getNumberOfWarnings () = m_Warnings!!.size
   
   
   /****************************************************************************/
@@ -96,7 +88,6 @@ object Logger
     announce(m_Errors!!,   "Error"      ); if (m_LogFilePath.isNotEmpty()) m_Errors!!.clear()
     announce(m_Warnings!!, "Warning"    ); if (m_LogFilePath.isNotEmpty()) m_Warnings!!.clear()
     announce(m_Info!!,     "Information"); if (m_LogFilePath.isNotEmpty()) m_Info!!.clear()
-    sortLogFile()
 
     announceSpecial(); if (m_LogFilePath.isNotEmpty()) m_SpecialMessages.clear()
 
@@ -117,7 +108,7 @@ object Logger
     if (0 == m_ErrorCount) return
     System.err.println("Fatal errors.  Terminating immediately.  See converterLog.txt and previous program output.")
     announceAll(false)
-    exitProcess(0)
+    throw StepAbandonRun()
   }
 
   
@@ -156,17 +147,6 @@ object Logger
     addMessage(m_Errors, refKey, text)
   }
   
-
-  /****************************************************************************/
-  /**
-  * Returns the current prefix.
-  *
-  * @return Current prefix.
-  */
-
-  fun getPrefix () = m_Prefix
-
-
 
   /****************************************************************************/
   /**
@@ -223,6 +203,50 @@ object Logger
   }
   
   
+  /****************************************************************************/
+  /** Sorts the log file so that errors come before warnings come before
+   *  information messages.  Does nothing if we are not logging to a file.
+   */
+
+  fun sortLogFile ()
+  {
+    /**************************************************************************/
+    if (m_LogFilePath.isEmpty() || !(File(m_LogFilePath)).exists())
+      return
+
+
+    /**************************************************************************/
+    val errors: MutableList<String> = ArrayList()
+    val informations: MutableList<String> = ArrayList()
+    val warnings: MutableList<String> = ArrayList()
+    val others: MutableList<String> = ArrayList()
+
+    fun partition (line: String) {
+      if (line.startsWith("Info"))
+        informations.add(line)
+      else if (line.startsWith("Warn"))
+        warnings.add(line)
+      else if (line.startsWith("Error"))
+        errors.add(line)
+      else if (line.trim().isNotEmpty())
+        others.add("$line<nl>")
+    }
+
+    File(m_LogFilePath).useLines{ sequence -> sequence.forEach{ partition(it) } }
+
+
+
+    /**************************************************************************/
+    val output: MutableList<String> = ArrayList()
+    output.addAll(others) // Make sure the file prefix is retained at the top of the file.  (I'm not actually expecting 'others' to contain more than just this one line.
+    output.addAll(errors)
+    output.addAll(warnings)
+    output.addAll(informations)
+    output.add("")
+    File(m_LogFilePath).writeText(output.joinToString(separator = "\n"){ it.replace("<nl>", "\n") })
+  }
+
+
   /****************************************************************************/
   /**
   * Records details of a 'special' message.  Special messages come out at the
@@ -357,6 +381,7 @@ object Logger
 
   @Synchronized fun warning (refKey: Long, text: String)
   {
+    Dbg.dCont(text, "Verse mismatch")
     ++m_WarningCount
     addMessage(m_Warnings, refKey, text)
   }
@@ -454,50 +479,6 @@ object Logger
   }
 
 
-  /****************************************************************************/
-  /** Sorts the log file so that errors come before warnings come before
-   *  information messages.
-   */
-  
-  private fun sortLogFile ()
-  {
-    /******************************************************************************************************************/
-    if (m_LogFilePath.isEmpty() || !(File(m_LogFilePath)).exists())
-      return
-
-
-    /******************************************************************************************************************/
-    val errors: MutableList<String> = ArrayList()
-    val informations: MutableList<String> = ArrayList()
-    val warnings: MutableList<String> = ArrayList()
-    val others: MutableList<String> = ArrayList()
-
-    fun partition (line: String) {
-      if (line.startsWith("Info"))
-        informations.add(line)
-      else if (line.startsWith("Warn"))
-        warnings.add(line)
-      else if (line.startsWith("Error"))
-        errors.add(line)
-      else if (line.trim().isNotEmpty())
-        others.add("$line<nl>")
-    }
-
-    File(m_LogFilePath).useLines{ sequence -> sequence.forEach{ partition(it) } }
-
-
-
-    /******************************************************************************************************************/
-    val output: MutableList<String> = ArrayList()
-    output.addAll(others) // Make sure the file prefix is retained at the top of the file.  (I'm not actually expecting 'others' to contain more than just this one line.
-    output.addAll(errors)
-    output.addAll(warnings)
-    output.addAll(informations)
-    output.add("")
-    File(m_LogFilePath).writeText(output.joinToString(separator = "\n"){ it.replace("<nl>", "\n") })
-  }
-  
-  
   /********************************************************************************************************************/
   private var m_Errors  : SortedMap<RefKey, MutableList<String>>? = TreeMap()
   private var m_Info    : SortedMap<RefKey, MutableList<String>>? = TreeMap()

@@ -11,7 +11,7 @@ import org.w3c.dom.Node
 /******************************************************************************/
 /**
  * Canonical titles are awkward, because the different versification traditions
- * handle them different, and also different translators mark them up in
+ * handle them differently, and also different translators mark them up in
  * different ways.
  *
  * The purpose of the present class is to make changes as necessary in order
@@ -44,8 +44,11 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
   {
     Dbg.reportProgress("Handling canonical headings.")
 
-    for (bookNumber in BibleAnatomy.C_BookNumbersOfBooksWhichMayHaveCanonicalHeaders)
-      m_DataCollection.getRootNode(bookNumber)?.findNodesByName("chapter")?.forEach(::doIt)
+    for (rootNode in m_DataCollection.getRootNodes())
+      rootNode.findNodesByName("chapter")?.forEach(::doIt)
+
+//    for (bookNumber in BibleAnatomy.C_BookNumbersOfBooksWhichMayHaveCanonicalHeaders)
+//      m_DataCollection.getRootNode(bookNumber)?.findNodesByName("chapter")?.forEach(::doIt)
 
     m_DataCollection.getProcessRegistry().iHaveDone(this, listOf(ProcessRegistry.CanonicalHeadingsCanonicalised))
   }
@@ -169,6 +172,8 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
     titleNode["type"] = "italic"
     Dom.insertNodeBefore(titleNode, Dom.createNode(titleNode.ownerDocument, "<l level='1'/>")) // Add vertical whitespace after title.
 
+//    Dbg.d(titleNodesInChapter[0].ownerDocument)
+
     val verseTags = titleNode.findNodesByName("verse")
     when (verseTags.size)
     {
@@ -268,7 +273,7 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
   private fun processTitlesAtStartOfChapter (titleNodesInChapter: List<Node>)
   {
     /**************************************************************************/
-//    if ("18" in Dom.toString(titleNodesInChapter[0].parentNode) || titleNodesInChapter.size > 1)
+//    if ("12" in Dom.toString(titleNodesInChapter[0].parentNode) || titleNodesInChapter.size > 1)
 //      Dbg.d(titleNodesInChapter[0].ownerDocument)
 
 
@@ -424,6 +429,9 @@ class Osis_CanonicalHeadingsHandler (dataCollection: X_DataCollection)
        - We'll have _four_ verse tags (the sid and eid for each of v1 and v2) if
          the title contains the whole of v1 and v2.
      */
+
+//    if ("12" in Dom.toString(titleNodesInChapter[0].parentNode) || titleNodesInChapter.size > 1)
+//      Dbg.d(titleNodesInChapter[0].ownerDocument)
 
     titleNodesInChapter.forEach {
       val verseTagsInTitleNode = it.findNodesByName("verse")

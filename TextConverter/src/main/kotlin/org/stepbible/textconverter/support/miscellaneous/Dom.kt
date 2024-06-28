@@ -88,6 +88,59 @@ object Dom
     }
 
 
+   /****************************************************************************/
+    /**
+     * Determines whether all siblings prior to a given node satisfy a given
+     * condition.  (If there are no prior siblings, the return value is
+     * determined by ifNoPriorSiblings.
+     *
+     * @param child Child node.
+     * @param test Test to apply.
+     * @return True if all preceding siblings satisfy the test.
+     */
+
+    fun allFollowingSiblingsSatisfy (child: Node, test: Predicate<Node>, ifNoFollowingSiblings: Boolean = true): Boolean
+    {
+        val children = child.parentNode.childNodes
+        var doTest = false
+        for (i in 0..< children.length)
+        {
+            val n = children.item(i)
+            if (n === child)
+              doTest = true
+            else if (doTest && !test.test(n))
+              return false
+        }
+
+        return ifNoFollowingSiblings
+    }
+
+
+   /****************************************************************************/
+    /**
+     * Determines whether all siblings prior to a given node satisfy a given
+     * condition.  (If there are no prior siblings, the return value is
+     * determined by ifNoPriorSiblings.
+     *
+     * @param child Child node.
+     * @param test Test to apply.
+     * @return True if all preceding siblings satisfy the test.
+     */
+
+    fun allPrecedingSiblingsSatisfy (child: Node, test: Predicate<Node>, ifNoPriorSiblings: Boolean = true): Boolean
+    {
+        val children = child.parentNode.childNodes
+        for (i in 0..< children.length)
+        {
+            val n = children.item(i)
+            if (n === child) return true
+            if (!test.test(n)) return false
+        }
+
+        return ifNoPriorSiblings
+    }
+
+
     /****************************************************************************/
     /**
      * Checks if two nodes, one a descendant of the other, are separated by at most
@@ -2028,31 +2081,7 @@ object Dom
     fun isParentOf (parent: Node, child: Node) = getParent(child) === parent
 
 
-    /****************************************************************************/
-    /**
-     * Determines whether a given node is preceded, either amongst its siblings,
-     * by a node which satisfies a given condition.
-     *
-     * @param child Child node.
-     * @param test Test to apply.
-     * @return True if any preceding sibling satisfies the condition.
-     */
-
-    fun isPrecededBySiblingsSatisfying (child: Node, test: Predicate<Node?>): Boolean
-    {
-        val children = child.parentNode.childNodes
-        for (i in 0..< children.length)
-        {
-            val n = children.item(i)
-            if (n === child) return true
-            if (!test.test(n)) return false
-        }
-
-        throw StepException("Dom.isPrecededBySiblingsSatisfying error")
-    }
-
-
-    /****************************************************************************/
+     /****************************************************************************/
     /**
      * Returns true if 'parent' is the parent of 'child'.
      *
@@ -2846,6 +2875,7 @@ fun Node.findNodeByAttributeName (nodeName: String, attributeName: String) = Dom
 fun Node.findNodeByName (nodeName: String, includeThisNode: Boolean) = Dom.findNodeByName(this, nodeName, includeThisNode)
 fun Node.findNodesByAttributeName (nodeName: String, attributeName: String) = Dom.findNodesByAttributeName(this, nodeName, attributeName)
 fun Node.findNodesByAttributeValue (nodeName: String, attributeName: String, attributeValue: String) = Dom.findNodesByAttributeValue(this, nodeName, attributeName, attributeValue)
+fun Node.hasAncestorNamed (name: String) = Dom.hasAncestorNamed(this, name)
 fun Node.isCommentNode () = Dom.isCommentNode(this)
 fun Node.isWhitespace () = Dom.isWhitespace(this)
 fun Node.isSiblingOf (node: Node) = Dom.isSiblingOf(this, node)

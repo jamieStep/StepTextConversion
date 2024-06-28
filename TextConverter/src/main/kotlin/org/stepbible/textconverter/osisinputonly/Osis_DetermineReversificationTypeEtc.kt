@@ -1,17 +1,19 @@
 /******************************************************************************/
 package org.stepbible.textconverter.osisinputonly
 
-import org.stepbible.textconverter.processingelements.PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation
 import org.stepbible.textconverter.utils.BibleStructure
 import org.stepbible.textconverter.support.bibledetails.VersificationSchemesSupportedByOsis2mod
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
+import org.stepbible.textconverter.support.stepexception.StepException
 
 
 /******************************************************************************/
 /**
-* Determines reversification and osis2mod types etc.
+* Determines reversification and osis2mod types etc.  This has turned out to be
+* remarkably difficult to pin down.  Comments deferred to later, so I can put
+* them adjacent to the code which may change again.
 *
 * @author ARA "Jamie" Jamieson
 */
@@ -27,7 +29,7 @@ object Osis_DetermineReversificationTypeEtc
   /****************************************************************************/
 
   /****************************************************************************/
-  fun process (bibleStructureUnderConstruction: BibleStructure) = doIt(bibleStructureUnderConstruction)
+  fun process (bibleStructureUnderConstruction: BibleStructure) = doIt()
 
 
 
@@ -42,9 +44,26 @@ object Osis_DetermineReversificationTypeEtc
   /****************************************************************************/
 
   /****************************************************************************/
+  /* At one point I was hoping, with open access texts which were
+     NRSV-compliant, to be able to build just a single module which could be
+     made publicly available and also used within STEP.  And this looked to be
+     something which might be feasible with quite a number of modules, because
+     lots of them looked to be NRSV-compliant, or to deviate only in a 'good'
+     way.
+
+     However, I then discovered that the Crosswire header file for NRSV is
+     wrong.  (Wrong certainly in that it contains 2Cor 13:14, where NRSV does
+     not -- and possibly, for all I know, wrong elsewhere too.)  This meant
+     that most or all of the texts which had appeared to be compliant in fact
+     were not.  And since DIB reckons that an awful lot of texts are based
+     upon NIV (which itself is not NRSV compliant), the idea of shared modules
+     looks like a forlorn hope.  In view of this, I have dropped the attempts
+     in this present class to determine whether texts are compliant or not. */
+
+  /****************************************************************************/
   /* Hmm ... this gets rather complicated, as will shortly be apparent. */
 
-  private fun doIt (bibleStructureUnderConstruction: BibleStructure)
+  private fun doIt ()
   {
     /**************************************************************************/
     Dbg.reportProgress("Determining reversification requirements etc.")
@@ -54,10 +73,67 @@ object Osis_DetermineReversificationTypeEtc
     /**************************************************************************/
     /* The parameters which control what we're going to do. */
 
-    m_NrsvScheme = "NRSV" + if (bibleStructureUnderConstruction.hasAnyBooksDc()) "A" else "" // _If_ this text fitted NRSV(A), would we want NRSV or NRSVA?
-    m_FitsWithNrsv = fitsWithNrsv(bibleStructureUnderConstruction)                           // _Does_ it actually fit with NRSV?
-    m_IsCopyrightText = ConfigData.getAsBoolean("stepIsCopyrightText")                   // What it says on the tin.
-    getCanonicalisedVersificationSchemeIfAny()                                               // Check if we've been given a scheme, and if so, convert the name to canonical form.
+    val isCopyrightText = ConfigData.getAsBoolean("stepIsCopyrightText")
+    val forcedVersificationScheme = getCanonicalisedVersificationSchemeIfAny() // Check if we've been given a scheme, and if so, convert the name to canonical form.
+    var reversificationType = getReversificationType()
+    val targetAudience = ConfigData["stepTargetAudience"]!!
+
+
+
+    /**************************************************************************/
+    /* We always samify modules destined for use in STEP, unless we are doing
+       runtime restructuring. */
+
+    if ("S" in targetAudience && "none" == reversificationType)
+      reversificationType = "runtime"
+
+
+
+    /**************************************************************************/
+    /* A bit of validation. */
+
+    if ("P" in targetAudience && isCopyrightText)
+      throw StepException("Can't create a public module for copyright text")
+
+    if (isCopyrightText && "conversiontime" == reversificationType)
+      throw StepException("Can't apply conversion-time reversification (ie physical restructuring) to a copyright text.")
+
+    when (reversificationType)
+    {
+      "none" ->
+      {
+        if ("S" in targetAudience && !forcedVersificationScheme.startsWith("NRSV"))
+          throw StepException("Not reversifying, so you must specify NRSV or NRSVA as the versification scheme when creating a module for use in STEPBible.")
+
+        if ("P" in targetAudience && forcedVersificationScheme.isEmpty())
+          throw StepException("If you are building a public module without reversification, you must specify a Crosswire versification scheme.")
+      }
+
+      "runtime" ->
+      {
+        if (forcedVersificationScheme.isNotEmpty())
+          throw StepException("Applying samification, so you must not specify a versification scheme.")
+
+        if ("P" in targetAudience)
+          throw StepException("Applying samification, so you can't create a public module.")
+      }
+
+      "conversiontime" ->
+      {
+        if (!forcedVersificationScheme.startsWith("NRSV"))
+          throw StepException("Applying run-time reversification, so you must specify NRSV or NRSVA as the versification scheme.")
+      }
+    }
+
+
+
+    /**************************************************************************/
+    when (reversificationType)
+    {
+      "none"           -> setNoReversificationActionRequired()
+      "runtime"        -> setSamification()
+      "conversiontime" -> setConversionTimeRestructuring(forcedVersificationScheme)
+    }
 
 
 
@@ -67,10 +143,15 @@ object Osis_DetermineReversificationTypeEtc
        However, the issue of whether or not it is a copyright text is probably
        the most important, because it has external (legal) implications. */
 
-    if (m_IsCopyrightText)
-      doCopyrightText()
+    if (isCopyrightText)
+    {
+      setCopyrightLimitations() // There are certain things -- like generating footnotes -- which we assume we aren't allowed to do.
+      setEncryption()           // Copyright text always has to be encrypted.
+    }
     else
-      doNonCopyrightText()
+    {
+      setFreedomsForNonCopyrightTexts()
+    }
 
 
 
@@ -79,11 +160,9 @@ object Osis_DetermineReversificationTypeEtc
 
    val okToGenerateFootnotes = ConfigData.getAsBoolean("stepOkToGenerateFootnotes")
    val osis2modType = ConfigData["stepOsis2modType"]!!
-   val reversificationType = ConfigData["stepReversificationType"]
    val stepSoftwareVersionRequired = ConfigData["stepSoftwareVersionRequired"]
-   val targetAudience = ConfigData["stepTargetAudience"]!!
    val versificationScheme = ConfigData["stepVersificationScheme"]
-   Logger.info("Treating this as a ${if (m_IsCopyrightText) "copyright" else "non-copyright"} text.")
+   Logger.info("Treating this as a ${if (isCopyrightText) "copyright" else "non-copyright"} text.")
    Logger.info("Generation of our own footnotes is ${if (!okToGenerateFootnotes) "NOT" else ""} permitted.")
    Logger.info("Versification scheme is ${versificationScheme ?: "STEP-internal"}.")
    Logger.info("ReversificationType is $reversificationType")
@@ -104,31 +183,24 @@ object Osis_DetermineReversificationTypeEtc
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun doCopyrightText ()
+  private fun getCanonicalisedVersificationSchemeIfAny (): String
   {
-    setSamificationIfNecessary()
-    setCopyrightLimitations()
-    setEncryption() // Always do this last -- it sets the target audience, and we need to make sure its setting prevails over any others.
+    var res = ConfigData["stepVersificationScheme"] ?: return ""
+    res = VersificationSchemesSupportedByOsis2mod.canonicaliseSchemeName(res)
+    ConfigData.deleteAndPut("stepVersificationScheme", res, force = true)
+    return res
   }
 
 
   /****************************************************************************/
-  private fun doNonCopyrightText ()
+  /* Canonicalises the value and returns it. */
+
+  private fun getReversificationType (): String
   {
-    setNonCopyrightFreedoms()
-
-    if (isConversionTimeRestructuring())
-      setConversionTimeRestructuring()
-    else
-     setSamificationIfNecessary()
-  }
-
-
-  /****************************************************************************/
-  private fun isConversionTimeRestructuring (): Boolean
-  {
-    val x = ConfigData.get("stepReversificationType", "none").lowercase(); ConfigData.deleteAndPut("stepReversificationType", x, force = true)
-    return "conversiontime" == x
+    var x = ConfigData.get("stepReversificationType", "none").lowercase()
+    if (x.isEmpty()) x = "none"
+    ConfigData.deleteAndPut("stepReversificationType", x, force = true)
+    return x
   }
 
 
@@ -142,9 +214,16 @@ object Osis_DetermineReversificationTypeEtc
      Suppressing the footnotes doesn't get rid of those changes -- it merely
      prevents us from explaining why they were made. */
 
-  private fun setCopyrightLimitations ()
+  private fun setCopyrightLimitations () = ConfigData.deleteAndPut("stepOkToGenerateFootnotes", "no", force = true)
+
+
+  /****************************************************************************/
+  /* Record that we definitely want to encrypt. */
+
+  private fun setEncryption (): Boolean
   {
-    ConfigData.deleteAndPut("stepOkToGenerateFootnotes", "no", force = true)
+    ConfigData.deleteAndPut("stepEncryptionRequired", "yes", force = true)
+    return ConfigData.getAsBoolean("stepEncryptionRequired")
   }
 
 
@@ -152,21 +231,10 @@ object Osis_DetermineReversificationTypeEtc
   /* It's always ok to generate footnotes, and the reversification footnote
      level defaults to basic. */
 
-  private fun setNonCopyrightFreedoms ()
+  private fun setFreedomsForNonCopyrightTexts ()
   {
     ConfigData.deleteAndPut("stepOkToGenerateFootnotes", "yes", force = true)
     val x = ConfigData.get("stepReversificationFootnoteLevel", "basic"); ConfigData.deleteAndPut("reversificationFootnoteLevel", x, force = true)
-  }
-
-
-  /****************************************************************************/
-  /* Record that we definitely want to encrypt; and if we do that, the target
-     audience must be STEP-only. */
-
-  private fun setEncryption ()
-  {
-    ConfigData.deleteAndPut("stepEncryptionRequired", "yes", force = true)
-    ConfigData.deleteAndPut("stepTargetAudience", "S", force = true)
   }
 
 
@@ -196,12 +264,12 @@ object Osis_DetermineReversificationTypeEtc
       - The module can be used both within STEP and for a public audience.
   */
 
-  private fun setConversionTimeRestructuring ()
+  private fun setConversionTimeRestructuring (versificationScheme: String)
   {
     ConfigData.deleteAndPut("stepReversificationType", "conversiontime", force = true)
     ConfigData.deleteAndPut("stepOsis2modType", "crosswire", force = true)
     ConfigData.deleteAndPut("stepSoftwareVersionRequired", 1.toString(), force=true)
-    ConfigData.deleteAndPut("stepVersificationScheme", m_NrsvScheme, force = true)
+    ConfigData.deleteAndPut("stepVersificationScheme", versificationScheme, force = true)
     ConfigData.deleteAndPut("stepTargetAudience", "PS", force = true)
   }
 
@@ -222,7 +290,6 @@ object Osis_DetermineReversificationTypeEtc
      ConfigData.deleteAndPut("stepReversificationType", "none", force = true)
      ConfigData.deleteAndPut("stepOsis2modType", "crosswire", force = true)
      ConfigData.deleteAndPut("stepSoftwareVersionRequired", 1.toString(), force=true)
-     ConfigData.deleteAndPut("stepTargetAudience", "PS", force = true)
    }
 
 
@@ -247,89 +314,7 @@ object Osis_DetermineReversificationTypeEtc
     ConfigData.deleteAndPut("stepReversificationType", "runtime", force = true)
     ConfigData.deleteAndPut("stepOsis2modType", "step", force = true)
     ConfigData.deleteAndPut("stepSoftwareVersionRequired", 2.toString(), force=true)
-    ConfigData.deleteAndPut("stepTargetAudience", "S", force = true)
     ConfigData.delete("stepVersificationScheme")
   }
 
-
-  /****************************************************************************/
-  /* Records that we do, or do not, need to samify, according to whether the
-     text fits with NRSV(A).
-
-     Actually, currently I'm being asked to samify absolutely _everything_,
-     even if it NRSV(A)-compliant.  The rationale is that if we do this, then
-     we have a uniform and simple way of applying reversification-related
-     tweaks to things (by making changes to the samification JSON file).
-
-     I have to say I'm not at all sure about this, on quite a number of grounds:
-
-     - Applying tweaks just ain't that easy.  It's not just a case of changing
-       the OSIS -- you then have to update history and version information in
-       both step.conf and the Sword config file; you have to decide whether to
-       use a new encryption key (and update the config file if you do); you have
-       to work out what the osis2mod command line should look like and run it;
-       you have to create the module zip file and the repository zip file; and
-       throughout you have to make sure that all of the names continue to marry
-       up.
-
-     - Samifying a text means that existing offline STEP users will _have_ to
-       upgrade their software, because samified texts can't be used with old
-       software.
-
-     - If the text is open access, we'll need to have _two_ versions of the
-       module, one for public access, and one for use within STEP.  If we
-       didn't samify, one version would do.
-
-     - Having two versions of the module also means two different folder
-       structures to update each time any change is made.
-
-     - And I can't actually see what benefit accrues in this case, because
-       we know a priori that the text is NRSV(A)-compliant (or deviates
-       only in a good way), so samification shouldn't actually be doing
-       anything anyway.
-  */
-
-  private fun setSamificationIfNecessary ()
-  {
-    if (m_FitsWithNrsv && false) // $$$
-    {
-      ConfigData.deleteAndPut("stepVersificationScheme", m_NrsvScheme, force = true)
-      setNoReversificationActionRequired()
-    }
-    else
-      setSamification()
-  }
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                             Miscellaneous                              **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  /* Included speculatively.  Returns OK or BAD depending upon whether this
-     text fits with NRSV(A), or at most deviates from it only in that NRSV(A)
-     expects verses which the text does not supply. */
-
-  private fun fitsWithNrsv (bibleStructureUnderConstruction: BibleStructure) =
-    PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.VersificationDeviationType.BAD != PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.evaluateSingleScheme(m_NrsvScheme, bibleStructureUnderConstruction).getDeviationType()
-
-
-  /****************************************************************************/
-  private fun getCanonicalisedVersificationSchemeIfAny ()
-  {
-    m_ForcedVersificationScheme = ConfigData["stepVersificationScheme"] ?: return
-    m_ForcedVersificationScheme = VersificationSchemesSupportedByOsis2mod.canonicaliseSchemeName(m_ForcedVersificationScheme!!)
-    ConfigData.deleteAndPut("stepVersificationScheme", m_ForcedVersificationScheme!!, force = true)
-  }
-
-
-  /****************************************************************************/
-  private var m_FitsWithNrsv = false // True if versification exactly matches NRSV(A), or deviates only in a good way.
-  private var m_ForcedVersificationScheme: String? = null // Non-null if a versification scheme has been overtly specified.
-  private var m_IsCopyrightText = false
-  private lateinit var m_NrsvScheme: String // NRSV or NRSVA, depending upon whether or not the text contains DC books.  Note there is no implication that the text actually _fits_ NRSV(A); merely that if it did, this is the version we'd need.
 }

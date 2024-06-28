@@ -1249,7 +1249,7 @@ object ConfigData
 
       try
       {
-        //Dbg.dCont(theLine ?: "", "stepAdminLine")
+        //Dbg.d(theLine ?: "")
         return expandReferencesTopLevel(theLine, nullsOk, errorStack)
       }
       catch (_: StepException)
@@ -1844,7 +1844,7 @@ object ConfigData
     * @return Text for use in short description.
     */
 
-    fun makeStepDescription (bookNumbers: List<Int>): String
+    fun makeBibleDescriptionAsItAppearsOnBibleList (bookNumbers: List<Int>): String
     {
         /**********************************************************************/
         /* We want the English and vernacular titles, except where they are
@@ -1894,10 +1894,10 @@ object ConfigData
 
 
         /**********************************************************************/
-        var officialYear = makeStepDescription_getOfficialYear()
-        val biblePortion = makeStepDescription_getBiblePortion(bookNumbers)
-        val language = makeStepDescription_getLanguage(englishTitle)
-        val moduleMonthYear = makeStepDescription_getModuleMonthYear().trim()
+        var officialYear = makeStepBibleDescriptionAsItAppearsOnBibleList_getOfficialYear()
+        val biblePortion = makeStepBibleDescriptionAsItAppearsOnBibleList_getBiblePortion(bookNumbers)
+        val language = makeStepBibleDescriptionAsItAppearsOnBibleList_getLanguage(englishTitle)
+        val moduleMonthYear = makeStepBibleDescriptionAsItAppearsOnBibleList_getModuleMonthYear().trim()
 
         var abbreviatedNameOfRightsHolder = get("stepTextOwnerOrganisationAbbreviatedName") ?: ""
         if (abbreviatedNameOfRightsHolder.isNotEmpty()) abbreviatedNameOfRightsHolder += " "
@@ -1908,7 +1908,7 @@ object ConfigData
         text = expandReferences(text, false)!!
         text = text.replace("\\s+".toRegex(), " ").trim()
 
-        set("StepDescription", text)
+        set("stepBibleDescriptionAsItAppearsOnBibleList", text)
         return text
     }
 
@@ -1927,13 +1927,13 @@ object ConfigData
        text as eg 'OT incomplete +NT'.
     */
 
-    fun makeStepDescription_getBiblePortion (bookNumbers: List<Int>): String
+    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getBiblePortion (bookNumbers: List<Int>): String
     {
         /************************************************************************/
         val C_MaxIndividualBooksToReport = 5
-        val otBooks = bookNumbers.filter{ BibleAnatomy.isOt(it) }.map{ BibleBookNamesOsis.numberToAbbreviatedName(it) }
-        val ntBooks = bookNumbers.filter{ BibleAnatomy.isNt(it) }.map{ BibleBookNamesOsis.numberToAbbreviatedName(it) }
-        val dcBooks = bookNumbers.filter{ BibleAnatomy.isDc(it) }.map{ BibleBookNamesOsis.numberToAbbreviatedName(it) }
+        val otBooks = bookNumbers.filter{ BibleAnatomy.isOt(it) }.map{ BibleBookNamesUsx.numberToAbbreviatedName(it) }
+        val ntBooks = bookNumbers.filter{ BibleAnatomy.isNt(it) }.map{ BibleBookNamesUsx.numberToAbbreviatedName(it) }
+        val dcBooks = bookNumbers.filter{ BibleAnatomy.isDc(it) }.map{ BibleBookNamesUsx.numberToAbbreviatedName(it) }
 
 
 
@@ -2074,7 +2074,7 @@ object ConfigData
        my processing in this respect to be comprehensive).  If I _can't_ get it by
        this means, then I don't bother to give a year at all. */
 
-    private fun makeStepDescription_getOfficialYear (): String
+    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getOfficialYear (): String
     {
         /************************************************************************/
         val mainPat = Regex("(?i)(&copy;|©|(copyright))\\W*(?<years>\\d{4}(\\W+\\d{4})*)") // &copy; or copyright symbol or the word 'copyright' followed by any number of blanks and four digits.
@@ -2110,7 +2110,7 @@ object ConfigData
     /* We want the language name only if it's not English, and is not already
     mentioned in the Bible name. */
 
-    private fun makeStepDescription_getLanguage (bibleNameInEnglish: String): String
+    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getLanguage (bibleNameInEnglish: String): String
     {
         val languageName = get("stepLanguageNameInEnglish")
         val languageNameLowerCase = languageName!!.lowercase()
@@ -2126,7 +2126,7 @@ object ConfigData
        run across verse boundaries (to keep osis2mod happy), we almost always
        _will_ be making changes, so I always give the date.*/
 
-    private fun makeStepDescription_getModuleMonthYear (): String
+    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getModuleMonthYear (): String
     {
         val s = DateTimeFormatter.ofPattern("MMM@yy").format(LocalDate.now())
         return s.replace("@", "'")

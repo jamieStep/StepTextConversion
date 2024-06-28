@@ -1,5 +1,7 @@
 package org.stepbible.textconverter.utils
 
+import org.w3c.dom.Node
+
 
 /******************************************************************************/
 /**
@@ -20,5 +22,5 @@ interface CrossReferenceChecker
   /****************************************************************************/
 
   /****************************************************************************/
-  fun process (dataCollection: X_DataCollection)
+  fun process (dataCollection: X_DataCollection, xrefNodes: List<Node>)
 }

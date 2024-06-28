@@ -284,19 +284,19 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   *
   * @param prompt Output to screen as part of progress indicator.
   * @param rootNode
-  * @param wantWordCount True if we need to accumulate the word count.
+  * @param wantCanonicalTextSize True if we need to accumulate the word count.
   * @param filePath: Optional: used for debugging and progress reporting only.
   * @param bookName USX abbreviation.
   */
 
-  open fun addFromBookRootNode (prompt: String, rootNode: Node, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
+  open fun addFromBookRootNode (prompt: String, rootNode: Node, wantCanonicalTextSize: Boolean, filePath: String? = null, bookName: String? = null)
   {
     //Dbg.d(rootNode.ownerDocument)
     m_Populated = true
     if (null != bookName) Dbg.reportProgress("  $prompt: Determining Bible structure for ${bookName.uppercase()}")
-    m_CollectingWordCounts = wantWordCount
+    m_CollectingCanonicalTextSize = wantCanonicalTextSize
     if (null != bookName && null != filePath) m_BookAbbreviationToFilePathMappings[bookName.lowercase()] = filePath
-    addFromRootNode(rootNode, wantWordCount)
+    addFromRootNode(rootNode, wantCanonicalTextSize)
   }
 
 
@@ -308,18 +308,18 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   *
   * @param prompt Output to screen as part of progress indicator.
   * @param doc
-  * @param wantWordCount True if we need to accumulate the word count.
+  * @param wantCanonicalTextSize True if we need to accumulate the word count.
   * @param filePath: Optional: used for debugging and progress reporting only.
   * @param bookName USX abbreviation.
   */
 
-  open fun addFromDoc (prompt: String, doc: Document, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
+  open fun addFromDoc (prompt: String, doc: Document, wantCanonicalTextSize: Boolean, filePath: String? = null, bookName: String? = null)
   {
     m_Populated = true
     if (null != bookName) Dbg.reportProgress("  $prompt: Determining Bible structure for ${bookName.uppercase()}")
-    m_CollectingWordCounts = wantWordCount
+    m_CollectingCanonicalTextSize = wantCanonicalTextSize
     if (null != bookName && null != filePath) m_BookAbbreviationToFilePathMappings[bookName.lowercase()] = filePath
-    addFromDoc(doc, wantWordCount)
+    addFromDoc(doc, wantCanonicalTextSize)
   }
 
 
@@ -339,15 +339,15 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   *
   * @param prompt Output to screen as part of progress indicator.
   * @param doc
-  * @param wantWordCount True if we need to accumulate the word count.
+  * @param wantCanonicalTextSize True if we need to accumulate the word count.
   * @param filePath: Optional: used for debugging and progress reporting only.
   * @param bookName USX abbreviation.
   */
 
-  fun populateFromDom (prompt: String, doc: Document, wantWordCount: Boolean, filePath: String? = null, bookName: String? = null)
+  fun populateFromDom (prompt: String, doc: Document, wantCanonicalTextSize: Boolean, filePath: String? = null, bookName: String? = null)
   {
     clear()
-    addFromDoc(prompt = prompt, doc, wantWordCount, bookName = bookName)
+    addFromDoc(prompt = prompt, doc, wantCanonicalTextSize, bookName = bookName)
   }
 
 
@@ -363,7 +363,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   /****************************************************************************/
 
   /****************************************************************************/
-  fun hasWordCounts () = m_CollectingWordCounts
+  fun hasCanonicalTextSize () = m_CollectingCanonicalTextSize
 
   open fun getAllBookNumbers   () = m_Text.m_Content.m_ContentMap.keys
   open fun getAllBookNumbersOt () = m_Text.m_Content.m_ContentMap.keys.filter { BibleAnatomy.isOt(it) }
@@ -375,8 +375,8 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   open fun getAllBookAbbreviationsNt () = getAllBookNumbersNt().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
   open fun getAllBookAbbreviationsDc () = getAllBookNumbersDc().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
 
-  
-  
+
+
   open fun getAllBookAbbreviationsUsx  () = m_Text.m_Content.m_ContentMap.keys.map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
   open fun getAllBookAbbreviationsOsis () = m_Text.m_Content.m_ContentMap.keys.map { BibleBookNamesOsis.numberToAbbreviatedName(it) }
 
@@ -464,19 +464,19 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
 
-  fun getWordCount (verseOrSubverseRef: Ref)            = commonGetWordCount(makeElts(verseOrSubverseRef))
-  fun getWordCount (verseOrSubverseRefKey: RefKey)      = commonGetWordCount(makeElts(verseOrSubverseRefKey))
-  fun getWordCount (b: Int, c: Int, v: Int, s: Int = 0) = commonGetWordCount(makeElts(b, c, v, s))
-  fun getWordCount (verseOrSubverseRefAsString: String) = commonGetWordCount(makeElts(verseOrSubverseRefAsString))
-  fun getWordCount (elts: IntArray)                     = commonGetWordCount(elts)
+  fun getCanonicalTextSize (verseOrSubverseRef: Ref)            = commonGetCanonicalTextSize(makeElts(verseOrSubverseRef))
+  fun getCanonicalTextSize (verseOrSubverseRefKey: RefKey)      = commonGetCanonicalTextSize(makeElts(verseOrSubverseRefKey))
+  fun getCanonicalTextSize (b: Int, c: Int, v: Int, s: Int = 0) = commonGetCanonicalTextSize(makeElts(b, c, v, s))
+  fun getCanonicalTextSize (verseOrSubverseRefAsString: String) = commonGetCanonicalTextSize(makeElts(verseOrSubverseRefAsString))
+  fun getCanonicalTextSize (elts: IntArray)                     = commonGetCanonicalTextSize(elts)
 
 
 
-  fun getWordCountForCanonicalTitle (chapterRef: Ref)                        = commonGetWordCountForCanonicalTitle(makeElts(chapterRef.getB(), chapterRef.getC(), 0, 0))
-  fun getWordCountForCanonicalTitle (chapterRefKey: RefKey)                  = commonGetWordCountForCanonicalTitle(makeElts(Ref.getB(chapterRefKey), Ref.getC(chapterRefKey), 0, 0))
-  fun getWordCountForCanonicalTitle (b: Int, c: Int, v: Int = 0, s: Int = 0) = commonGetWordCountForCanonicalTitle(makeElts(b, c, 0, 0))
-  fun getWordCountForCanonicalTitle (chapterRefAsString: String)             = getWordCountForCanonicalTitle(m_FileProtocol!!.readRef(chapterRefAsString).toRefKey())
-  fun getWordCountForCanonicalTitle (elts: IntArray)                         = commonGetWordCountForCanonicalTitle(makeElts(elts[0], elts[1], 0, 0))
+  fun getCanonicalTextSizeForCanonicalTitle (chapterRef: Ref)                        = commonGetCanonicalTextSizeForCanonicalTitle(makeElts(chapterRef.getB(), chapterRef.getC(), 0, 0))
+  fun getCanonicalTextSizeForCanonicalTitle (chapterRefKey: RefKey)                  = commonGetCanonicalTextSizeForCanonicalTitle(makeElts(Ref.getB(chapterRefKey), Ref.getC(chapterRefKey), 0, 0))
+  fun getCanonicalTextSizeForCanonicalTitle (b: Int, c: Int, v: Int = 0, s: Int = 0) = commonGetCanonicalTextSizeForCanonicalTitle(makeElts(b, c, 0, 0))
+  fun getCanonicalTextSizeForCanonicalTitle (chapterRefAsString: String)             = getCanonicalTextSizeForCanonicalTitle(m_FileProtocol!!.readRef(chapterRefAsString).toRefKey())
+  fun getCanonicalTextSizeForCanonicalTitle (elts: IntArray)                         = commonGetCanonicalTextSizeForCanonicalTitle(makeElts(elts[0], elts[1], 0, 0))
 
 
 
@@ -1082,10 +1082,10 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
   /****************************************************************************/
-  protected open fun commonGetWordCount (elts: IntArray): Int
+  protected open fun commonGetCanonicalTextSize (elts: IntArray): Int
   {
     /**************************************************************************/
-    if (!m_CollectingWordCounts)
+    if (!m_CollectingCanonicalTextSize)
       throw StepException("Word count for verse requested, but never asked to accumulate word counts.")
 
 
@@ -1096,7 +1096,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
        worry about that here. */
 
     if (RefBase.C_DummyElement != elts[3]) // If asked for a subverse, return precisely that.
-      return getVerseDescriptor(elts)!!.m_WordCount
+      return getVerseDescriptor(elts)!!.m_CanonicalTextSize
 
 
 
@@ -1128,7 +1128,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
     for (subverse in lowSubverse .. highSubverse)
     {
       tempElts[3] = subverse
-      count += getVerseDescriptor(tempElts)!!.m_WordCount
+      count += getVerseDescriptor(tempElts)!!.m_CanonicalTextSize
     }
 
     return count
@@ -1140,7 +1140,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
   /****************************************************************************/
-  protected open fun commonGetWordCountForCanonicalTitle (elts: IntArray) = m_Text.m_CanonicalTitleDetails[Ref.rd(elts[0], elts[1], 0).toRefKey()]?.wordCount
+  protected open fun commonGetCanonicalTextSizeForCanonicalTitle (elts: IntArray) = m_Text.m_CanonicalTitleDetails[Ref.rd(elts[0], elts[1], 0).toRefKey()]?.canonicalTextSize
 
 
   /****************************************************************************/
@@ -1248,14 +1248,14 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   * @param doc Document from which data is taken.  (This data is added to any
   *   data already stored -- it does not *replace* it.)
   *
-  * @param wantWordCount What it says on the tin.
+  * @param wantCanonicalTextSize What it says on the tin.
   */
 
-  protected open fun addFromDoc (doc: Document, wantWordCount: Boolean)
+  protected open fun addFromDoc (doc: Document, wantCanonicalTextSize: Boolean)
   {
     doc.getAllNodesBelow()
       .filter { m_FileProtocol!!.isBookNode(it) }
-      .forEach { addFromRootNode(it, wantWordCount) }
+      .forEach { addFromRootNode(it, wantCanonicalTextSize) }
   }
 
 
@@ -1269,17 +1269,17 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   * @param rootNode Book node from which data is taken.  (This data is added
   *   to any data already stored -- it does not *replace* it.)
   *
-  * @param wantWordCount What it says on the tin.
+  * @param wantCanonicalTextSize What it says on the tin.
   */
 
-  protected open fun addFromRootNode (rootNode: Node, wantWordCount: Boolean)
+  protected open fun addFromRootNode (rootNode: Node, wantCanonicalTextSize: Boolean)
   {
     /**************************************************************************/
-    var canonicalTitleWordCount = 0
+    var canonicalTitleCanonicalTextSize = 0
     var inCanonicalTitle = false
     var inVerse = false
     var isElision = false
-    var verseWordCount = 0
+    var verseCanonicalTextSize = 0
 
 
 
@@ -1308,6 +1308,8 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
         parent = parent.parentNode ?: break
         if (m_FileProtocol.tagName_chapter() == Dom.getNodeName(parent))
           return true
+        else if (m_FileProtocol.tagName_note() == Dom.getNodeName(parent))
+          return false
         else if (isNonCanonical(parent))
           return false
       }
@@ -1326,10 +1328,10 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
         return
 
       if (inCanonicalTitle)
-        canonicalTitleWordCount += StepStringUtils.wordCount(node.textContent)
+        canonicalTitleCanonicalTextSize += getCanonicalTextSizeForVerse(node.textContent)
 
       else if (inVerse && !isElision)
-        verseWordCount += StepStringUtils.wordCount(node.textContent)
+        verseCanonicalTextSize += getCanonicalTextSizeForVerse(node.textContent)
     }
 
 
@@ -1337,6 +1339,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
     /**************************************************************************/
     //Dbg.d(rootNode.ownerDocument)
     rootNode.getAllNodesBelow().forEach { //Dbg.dCont(Dom.toString(it), "<verse eID='Ps.4.1'>")
+      //Dbg.d(Dom.toString(it))
       var processNode = true
       while (processNode)
       {
@@ -1345,21 +1348,23 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
         {
           NodeRelevanceType.VerseStart ->
           {
+//            Dbg.dCont(Dom.toString(it), "<verse osisID='Phil.1.16', sID='Phil.1.16'>")
+//            Dbg.dCont(Dom.toString(it), "<verse osisID='Phil.1.17', sID='Phil.1.17'>")
             handleVerseSid(it, relevance.idAsString)
-            isElision = "-" in relevance.idAsString || NodeMarker.hasElisionType(it); verseWordCount = 0; inVerse = true
+            isElision = "-" in relevance.idAsString || NodeMarker.hasElisionType(it); verseCanonicalTextSize = 0; inVerse = true
           }
 
 
           NodeRelevanceType.VerseEnd ->
           {
-            handleVerseEid(relevance.idAsString, if (isElision) C_ElementInElision else verseWordCount)
+            handleVerseEid(relevance.idAsString, if (isElision) C_ElementInElision else verseCanonicalTextSize)
             isElision = false; inVerse = false
           }
 
 
           NodeRelevanceType.Text ->
           {
-            if (m_CollectingWordCounts)
+            if (m_CollectingCanonicalTextSize)
               processText(it)
           }
 
@@ -1426,7 +1431,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
     /**************************************************************************/
     var nodesOfInterest: MutableList<Node> = mutableListOf()
-    var wordCount = 0
+    var canonicalTextSize = 0
     val allNodes = chapterNode.getAllNodesBelow()
 
 
@@ -1459,7 +1464,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
     nodesOfInterest
       .filter { Dom.isTextNode(it) && m_FileProtocol!!.isCanonicalNode(it) }
-      .forEach { wordCount += StepStringUtils.wordCount(it.textContent) }
+      .forEach { canonicalTextSize += getCanonicalTextSizeForVerse(it.textContent) }
 
 
 
@@ -1471,9 +1476,9 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
-    if (wordCount > 0 && nodesOfInterest.isNotEmpty())
+    if (canonicalTextSize > 0 && nodesOfInterest.isNotEmpty())
       m_Text.m_CanonicalTitleDetails[m_FileProtocol!!.readRef(chapterNode[m_FileProtocol.attrName_chapterSid()]!!).toRefKey_bc()] =
-        CanonicalTitleDetails(wordCount, nodesOfInterest.filter { m_FileProtocol!!.tagName_chapter() == Dom.getNodeName(it.parentNode) })
+        CanonicalTitleDetails(canonicalTextSize, nodesOfInterest.filter { m_FileProtocol!!.tagName_chapter() == Dom.getNodeName(it.parentNode) })
   }
 
 
@@ -1498,6 +1503,17 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  /* This takes a string containing canonical content (possibly a number of
+     words, along with spaces, punctuation, etc, and returns either a count
+     of the actual word characters or the number of words.  I've hived this off
+     to a separate method because we keep changing our minds as to whether we
+     want words or characters. */
+
+  private fun getCanonicalTextSizeForVerse (s: String) = s.characterCount()
+
+
 
   /****************************************************************************/
   /* In order to make the parsing work, it is convenient to have eids even if
@@ -1528,7 +1544,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   /****************************************************************************/
   private val C_Multiplier = RefBase.C_Multiplier.toInt()
   private val m_BookAbbreviationToFilePathMappings: MutableMap<String, String> = mutableMapOf()
-  private var m_CollectingWordCounts = false
+  private var m_CollectingCanonicalTextSize = false
   private var m_Populated = false // Used to make sure we don't use the facilities without first populating things.
   private var m_Text = TextDescriptor() // The root of the structure.
 
@@ -1583,7 +1599,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
   /****************************************************************************/
-  private data class CanonicalTitleDetails (val wordCount: Int, val nodes: List<Node>)
+  private data class CanonicalTitleDetails (val canonicalTextSize: Int, val nodes: List<Node>)
 
 
   /****************************************************************************/
@@ -1618,7 +1634,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   protected class VerseDescriptor
   {
-    var m_WordCount: Int = 0
+    var m_CanonicalTextSize: Int = 0
   }
 
 
@@ -1628,13 +1644,13 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   *
   * @param prompt Output to screen as part of progress indicator.
   * @param filePath
-  * @param wantWordCount True if we need to accumulate the word count.
+  * @param wantCanonicalTextSize True if we need to accumulate the word count.
   * @param bookName USX abbreviation.
  */
 
-  private fun addFromFile (prompt: String, filePath: String, wantWordCount: Boolean, bookName: String? = null)
+  private fun addFromFile (prompt: String, filePath: String, wantCanonicalTextSize: Boolean, bookName: String? = null)
   {
-    addFromDoc(prompt = prompt, Dom.getDocument(filePath, false), wantWordCount, filePath = filePath, bookName = bookName)
+    addFromDoc(prompt = prompt, Dom.getDocument(filePath, false), wantCanonicalTextSize, filePath = filePath, bookName = bookName)
   }
 
 
@@ -1689,7 +1705,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
      verse, it will store the actual word count.  For an elision, each verse
      will be given the dummy value C_ElementInElision. */
 
-  private fun handleVerseEid (id: String, wordCount: Int)
+  private fun handleVerseEid (id: String, canonicalTextSize: Int)
   {
 //    if (Dbg.d(id, "Zech.4.10!a"))
 //      Dbg.d(OsisTempDataCollection.getDocument())
@@ -1704,8 +1720,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
       //}
 
       val v = getVerseDescriptor(it.getCopyOfElements())!!
-      v.m_WordCount = if (isElision) C_ElementInElision else wordCount
-      //Dbg.d(Ref.rd(it).toString() + ": " + v.m_WordCount)
+      v.m_CanonicalTextSize = if (isElision) C_ElementInElision else canonicalTextSize
     }
   }
 
@@ -1783,7 +1798,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
           val refKey = Ref.rd(book, chapter, (verse / RefBase.C_Multiplier).toInt(), (verse % RefBase.C_Multiplier).toInt()).toRefKey()
           val elisionMarker = if (refKey in m_Text.m_ElisionDetails.keys) "*" else ""
           val descriptor = m_Text.m_Content.m_ContentMap[book]!!.m_Content.m_ContentMap[chapter]!!.m_Content.m_ContentMap[verse]
-          val wc = if (elisionMarker.isNotEmpty() || 0 == descriptor!!.m_WordCount) "" else "(${descriptor!!.m_WordCount})"
+          val wc = if (elisionMarker.isNotEmpty() || 0 == descriptor!!.m_CanonicalTextSize) "" else "(${descriptor!!.m_CanonicalTextSize})"
           verseDetails += "${Ref.rd(verse + 0L).toString("vs")}$elisionMarker$wc, "
         }
 
@@ -1846,11 +1861,11 @@ open class BibleStructureOsis2ModScheme (scheme: String): BibleStructure(null)
 
 
   /****************************************************************************/
-  override fun addFromDoc (prompt: String, doc: Document, wantWordCount: Boolean, filePath: String?, bookName: String?) { throw StepException("Can't populate osis2mod scheme from Document.") }
-  override fun commonGetWordCount (elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
-  override fun commonGetWordCountForCanonicalTitle (elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
+  override fun addFromDoc (prompt: String, doc: Document, wantCanonicalTextSize: Boolean, filePath: String?, bookName: String?) { throw StepException("Can't populate osis2mod scheme from Document.") }
+  override fun commonGetCanonicalTextSize (elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
+  override fun commonGetCanonicalTextSizeForCanonicalTitle (elts: IntArray): Int { throw StepException("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
   override fun getRelevanceOfNode (node: Node): NodeRelevance { throw StepException("getRelevanceOfNode should not be being called on an osis2mod scheme.") }
-  override fun addFromDoc (doc: Document, wantWordCount: Boolean) { throw StepException("load should not be being called on an osis2mod scheme.") }
+  override fun addFromDoc (doc: Document, wantCanonicalTextSize: Boolean) { throw StepException("load should not be being called on an osis2mod scheme.") }
 
 
   /****************************************************************************/
@@ -1902,11 +1917,11 @@ open class BibleStructureOsis2ModScheme (scheme: String): BibleStructure(null)
 open class BibleStructureImp (filePath: String): BibleStructure(null)
 {
   /****************************************************************************/
-  override fun addFromDoc (prompt: String, doc: Document, wantWordCount: Boolean, filePath: String?, bookName: String?) { throw StepException("Can't populate osis2mod scheme from Document.") }
-  override fun commonGetWordCount (elts: IntArray): Int { throw StepException("Not yet set up to provide word counts on an IMP file.") }
-  override fun commonGetWordCountForCanonicalTitle (elts: IntArray): Int { throw StepException("Not yet set up to provide word counts on an IMP file.") }
+  override fun addFromDoc (prompt: String, doc: Document, wantCanonicalTextSize: Boolean, filePath: String?, bookName: String?) { throw StepException("Can't populate osis2mod scheme from Document.") }
+  override fun commonGetCanonicalTextSize (elts: IntArray): Int { throw StepException("Not yet set up to provide word counts on an IMP file.") }
+  override fun commonGetCanonicalTextSizeForCanonicalTitle (elts: IntArray): Int { throw StepException("Not yet set up to provide word counts on an IMP file.") }
   override fun getRelevanceOfNode (node: Node): NodeRelevance { throw StepException("getRelevanceOfNode should not be being called on an IMP file.") }
-  override fun addFromDoc (doc: Document, wantWordCount: Boolean) { throw StepException("load should not be being called on an IMP file.") }
+  override fun addFromDoc (doc: Document, wantCanonicalTextSize: Boolean) { throw StepException("load should not be being called on an IMP file.") }
 
 
   /****************************************************************************/

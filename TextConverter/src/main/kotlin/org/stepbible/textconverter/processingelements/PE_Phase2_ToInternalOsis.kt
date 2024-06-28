@@ -2,8 +2,7 @@ package org.stepbible.textconverter.processingelements
 
 import org.stepbible.textconverter.osisinputonly.Osis_CanonicalHeadingsHandler
 import org.stepbible.textconverter.osisinputonly.Osis_DetermineReversificationTypeEtc
-import org.stepbible.textconverter.osisinputonly.Osis_CrossReferenceChecker
-import org.stepbible.textconverter.osisinputonly.Osis_FootnoteHandler
+import org.stepbible.textconverter.osisinputonly.Osis_ElementArchiver
 import org.stepbible.textconverter.subelements.*
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
@@ -137,7 +136,6 @@ object PE_Phase2_ToInternalOsis : PE
     /* Pick up the input data. */
 
     StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath()) // Create a home for what we're about to generate.
-
     InternalOsisDataCollection.loadFromText(Phase1TextOutput); x()                 // Phase 1 creates OSIS _text_ in memory, so we need to load it as a DOM.
     RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()); x() // Needed to cater for the possible requirement to expand ranges.
 
@@ -221,10 +219,10 @@ object PE_Phase2_ToInternalOsis : PE
        continue with any other changes which are easy because they don't rely
        on anything much and / or don't markedly affect other processing. */
 
-    Osis_FootnoteHandler.removeFootnotes(doc)                                                   // Hive off footnotes to separate document to speed up main processing.
+    Osis_ElementArchiver.archiveElements(doc)                                                   // Hive off footnotes to separate document to speed up main processing.
     addComment(doc, "Internally-facing OSIS")                                              // Add a note to say what this OSIS is.
     BasicOsisTweaker.process(InternalOsisDataCollection); x()                                   // Minor changes to make processing easier (some of which may have to be undone later).
-    SE_StrongsHandler(InternalOsisDataCollection).processAllRootNodes(); x()                    // Canonicalises Strong's references.
+    SE_StrongsHandler(InternalOsisDataCollection).processAllRootNodes(); x()                    // Canonicalise Strong's references.
 
 
 
@@ -233,18 +231,19 @@ object PE_Phase2_ToInternalOsis : PE
 
     SE_TableHandler(InternalOsisDataCollection).processAllRootNodes(); x()                      // Collapses tables which span verses into a single elided verse.
     SE_ElisionHandler(InternalOsisDataCollection).processAllRootNodes(); x()                    // Expands elisions out into individual verses.
-    SE_EnhancedVerseEndInsertionPreparer(InternalOsisDataCollection).processAllRootNodes(); x() // Continues the work of SE_CanonicalHeadingsHandler, making things easier to insert verse ends.
+    SE_EnhancedVerseEndInsertionPreparer(InternalOsisDataCollection).processAllRootNodes(); x() // Relatively simple and hopefully uncontentious tweaks to make it easier to insert verse ends.
     SE_EnhancedVerseEndInserter(InternalOsisDataCollection).processAllRootNodes(); x()          // Positions verse ends so as to reduce the chances of cross-boundary markup.
     Osis_CanonicalHeadingsHandler(InternalOsisDataCollection).process(); x()                    // Not sure about this step at present.
-    InternalOsisDataCollection.reloadBibleStructureFromRootNodes(wantWordCount = false); x()    // Probably a good idea to build / rebuild the structure here.
+    InternalOsisDataCollection.reloadBibleStructureFromRootNodes(wantCanonicalTextSize = false); x()
+                                                                                                // Probably a good idea to build / rebuild the structure here.
 
 
 
     /**************************************************************************/
-    //Dbg.d(InternalOsisDataCollection.getDocument())
+//    Dbg.d(InternalOsisDataCollection.getDocument())
     SE_BasicValidator(InternalOsisDataCollection).structuralValidation(); x()                   // Checks for basic things like all verses being under chapters.
     SE_ListEncapsulator(InternalOsisDataCollection).processAllRootNodes(); x()                  // Might encapsulate lists (but in fact does not do so currently).
-    Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                         // Checks for invalid cross-references, or cross-references which point to non-existent places.
+//    Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                       // Checks for invalid cross-references, or cross-references which point to non-existent places.
     handleReversification(); x()                                                                // Does what it says on the tin.
     SE_BasicValidator(InternalOsisDataCollection).finalValidationAndCorrection(); x()           // Final checks.  May create empty verses if necessary.
     // $$$ SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()          // Collapses subverses into the owning verses, if that's what we're doing (mainly or exclusively on public modules).
@@ -258,32 +257,71 @@ object PE_Phase2_ToInternalOsis : PE
     SE_TextAnalyser(InternalOsisDataCollection).processAllRootNodes(); x()                      // Gather up information which might be useful to someone administering texts.
     SE_FinalInternalOsisTidier(InternalOsisDataCollection).processAllRootNodes(); x()           // Ad hoc last minute tidying.
     BasicOsisTweaker.unprocess(InternalOsisDataCollection); x()                                 // Undoes any temporary tweaks which were applied to make the overall processing easier.
-    SE_FinalValidator(InternalOsisDataCollection).processAllRootNodes(); x()                // Final health checks.
+    SE_FinalValidator(InternalOsisDataCollection).processAllRootNodes(); x()                     // Final health checks.
 
 
 
     /**************************************************************************/
     /* Save the OSIS so it's available to osis2mod.
 
-       I don't really like the final code fragment (^lt etc) below.  It's there
-       to undo temporary changes to text content which may have been applied
-       much earlier in the processing (in this case, to replace things like
-       '&lt;', because the many transformations applied here start getting
-       confused as to whether we have '&lt;' or '<', the latter being a problem
-       in some cases).  But this architecture means that we apply these changes
-       somewhere miles away in the code (in X_DataCollection), and then undo them
-       again here, which isn't ideal.
+       We have two options here.
+
+       The more normal one appears in the else clause, and writes the internal
+       OSIS to the output file.
+
+       In this respect, I don't really like the final code fragment (^lt etc)
+       below.  It's there to undo temporary changes to text content which may
+       have been applied much earlier in the processing (in this case, to replace
+       things like '&lt;', because the many transformations applied here start
+       getting confused as to whether we have '&lt;' or '<', the latter being a
+       problem in some cases).  But this architecture means that we apply these
+       changes somewhere miles away in the code (in X_DataCollection), and then
+       undo them again here, which isn't ideal.
 
        Note, incidentally, that this is different from BasicOsisTweaker.unprocess.
        That applies changes to the DOM.  Here we are applying changes to the XML
        text to which the DOM is converted.  Hence, unfortunately, it's not
-       possible to combine the two steps into one. */
+       possible to combine the two steps into one.
 
-    Osis_FootnoteHandler.reinstateFootnotes(InternalOsisDataCollection.getDocument())
-    Dom.outputDomAsXml(InternalOsisDataCollection.getDocument(),
-                       FileLocations.getInternalOsisFilePath(),
-            null)
-                       { x -> x.replace("^lt;", "&lt;").replace("^gt;", "&gt;") }
+       I said there were two options.  The other ignores all the work done thus
+       far in creating an internal DOM representation, and simply assumes (where
+       starting from OSIS) that the original OSIS was ok).  I have added this
+       option because with ESV we do start from OSIS, and there was some concern
+       that we had a version of ESV which was apparently working, and didn't
+       want to risk introducing errors into it.
+
+       If used commonly, this is a somewhat risky undertaking, because I don't
+       do things to the internal OSIS for the sake of it: for instance, I make
+       sure there are no holes in the versification scheme, and I also apply
+       tweaks which are needed to ensure the rendering looks ok.  If we don't
+       use the internal OSIS, any such tweaks are lost.
+
+       Note that I still need to generate the internal OSIS, even if I then
+       throw it away, because one of the side-effects of doing that is that I
+       generate the supporting information needed for the various configuration
+       files (the Sword configuration file, the samification JSON file, etc).
+       This highlights another potential issue, in that this data will be based
+       upon the _internal_ OSIS.  We will now be replacing that internal OSIS
+       with the original OSIS, so we have to assume that the two are
+       sufficiently similar that the supporting information remains relevant.
+       This is definitely not a foregone conclusion. */
+
+    ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(InternalOsisDataCollection.getBookNumbers())
+    Dbg.reportProgress("Writing version of OSIS needed for use with osis2mod.")
+
+    if (ConfigData.getAsBoolean("stepUseOriginalOsis", "no") && ConfigData["stepOriginData"] == "osis")
+      StepFileUtils.copyFile(FileLocations.getInternalOsisFilePath(), FileLocations.getInputOsisFilePath()!!)
+    else
+    {
+      Osis_ElementArchiver.processElements()
+      Osis_ElementArchiver.restoreElements(InternalOsisDataCollection.getDocument())
+      Dom.outputDomAsXml(InternalOsisDataCollection.getDocument(),
+                         FileLocations.getInternalOsisFilePath(),
+              null)
+                         { x -> x.replace("^lt;", "&lt;")
+                                 .replace("^gt;", "&gt;")
+                                 .replace("xmlns=\"\" ", "") }
+    }
   }
 
 
@@ -324,21 +362,14 @@ object PE_Phase2_ToInternalOsis : PE
 
   private fun handleReversification ()
   {
-     //Dbg.d(InternalOsisDataCollection.getDocument())
+    //Dbg.d(InternalOsisDataCollection.getDocument())
     ReversificationData.process(InternalOsisDataCollection) // Read the data.
     Osis_DetermineReversificationTypeEtc.process(InternalOsisDataCollection.getBibleStructure()) // Use that to work out what we need to do.
 
     when (ConfigData["stepReversificationType"]!!.lowercase())
     {
-      "runtime" ->
-      {
-        SE_RuntimeReversificationHandler(InternalOsisDataCollection).processAllRootNodes()
-      }
-
-      "conversiontime" ->
-      {
-        Osis_SE_ConversiontimeReversification(InternalOsisDataCollection).processDataCollection()
-      }
+      "runtime" -> SE_RuntimeReversificationHandler(InternalOsisDataCollection).processAllRootNodes()
+      "conversiontime" -> Osis_SE_ConversiontimeReversification(InternalOsisDataCollection).processDataCollection()
     }
   }
 

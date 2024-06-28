@@ -110,7 +110,7 @@ open class X_FileProtocol
   open fun isXrefNode (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeCanonicalTitleNode (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeDoNothingMarkup (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
-  open fun makeFootnoteNode (doc: Document, refKeyForOsisIdOfFootnote: RefKey, text: String, caller: String? = null): Node? = throw StepExceptionShouldHaveBeenOverridden()
+  open fun makeFootnoteNode (doc: Document, refKeyForIdOfFootnote: RefKey, text: String, caller: String? = null): Node? = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeItalicsNode (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makePlainVanillaParaNode (doc: Document): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun makeVerseEidNode (doc: Document, refKey: Pair<RefKey, RefKey?>): Node = throw StepExceptionShouldHaveBeenOverridden()
@@ -120,6 +120,7 @@ open class X_FileProtocol
   open fun recordTagChange (node: Node, newTag: String, newStyleOrType: String? = null, reason: String? = null): Node = throw StepExceptionShouldHaveBeenOverridden()
   open fun refToString (refKey: RefKey): String = throw StepExceptionShouldHaveBeenOverridden()
   open fun standardiseCallout (noteNode: Node): Unit = throw StepExceptionShouldHaveBeenOverridden()
+  open fun treatAsCanonicalNodeEvenThoughNot (node: Node): Boolean = throw StepExceptionShouldHaveBeenOverridden()
   open fun updateVerseSid (verse: Node, refKey: RefKey): Unit = throw StepExceptionShouldHaveBeenOverridden()
   open fun updateVerseSid (verse: Node, refKeyLow: RefKey, refKeyHigh: RefKey): Unit = throw StepExceptionShouldHaveBeenOverridden()
 
@@ -629,17 +630,17 @@ object Osis_FileProtocol: X_FileProtocol()
   * Does what it says on the tin.
   *
   * @param doc Document within which the footnote node is created.
-  * @param refKeyForOsisIdOfFootnote Reference with which the footnote is associated.
+  * @param refKeyForIdOfFootnote Reference with which the footnote is associated.
   * @param text Text of footnote.
   * @param caller Callout for footnote.
   * @return Footnote node.
   */
 
-  override fun makeFootnoteNode (doc: Document, refKeyForOsisIdOfFootnote: RefKey, text: String, caller: String?): Node?
+  override fun makeFootnoteNode (doc: Document, refKeyForIdOfFootnote: RefKey, text: String, caller: String?): Node?
   {
     if (!ConfigData.getAsBoolean("stepOkToGenerateFootnotes")) return null
     val theCaller = caller ?: m_ExplanationFootnoteCalloutGenerator.get()
-    val id = Ref.rd(refKeyForOsisIdOfFootnote).toStringOsis()
+    val id = Ref.rd(refKeyForIdOfFootnote).toStringOsis()
     val footnoteNode = Dom.createNode(doc, "<note type='explanation' osisID='$id!${Globals.getUniqueExternal()}' n='$theCaller'/>")
     val textNode = Dom.createTextNode(doc, text)
     footnoteNode.appendChild(textNode)
@@ -740,6 +741,26 @@ object Osis_FileProtocol: X_FileProtocol()
   override fun standardiseCallout (noteNode: Node)
   {
     noteNode["n"] = ConfigData[if ("explanation" == noteNode["type"]) "stepExplanationCallout" else "stepCrossReferenceCallout"]!!
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Difficult to explain this.  There are some nodes which we want to treat
+  * as though they were canonical even though they aren't, with a view to
+  * keeping them with the canonical text of a verse.  The obvious thing which
+  * this ought to cover is <note>, but sadly we've already got this one too
+  * deeply embedded in code elsewhere to bring it under the current umbrella.
+  * At present, though, it's convenient to treat <speaker> and its
+  * descendants as being canonical.
+  *
+  * @param node
+  * @return True if should be treated as canonical.
+  */
+
+  override fun treatAsCanonicalNodeEvenThoughNot (node: Node): Boolean
+  {
+    return node.hasAncestorNamed("speaker")
   }
 
 
@@ -1269,13 +1290,13 @@ object Usx_FileProtocol: X_FileProtocol()
   * Does what it says on the tin.
   *
   * @param doc Document within which the footnote node is created.
-  * @param refKeyForUsxIdOfFootnote Reference with which the footnote is associated.
+  * @param refKeyForIdOfFootnote Reference with which the footnote is associated.
   * @param text Text of footnote.
   * @param caller Callout for footnote.
   * @return Footnote node.
   */
 
-  override fun makeFootnoteNode (doc: Document, refKeyForUsxIdOfFootnote: RefKey, text: String, caller: String?): Node?
+  override fun makeFootnoteNode (doc: Document, refKeyForIdOfFootnote: RefKey, text: String, caller: String?): Node?
   {
     if (!ConfigData.getAsBoolean("stepOkToGenerateFootnotes")) return null
     TODO()
@@ -1378,6 +1399,26 @@ object Usx_FileProtocol: X_FileProtocol()
   override fun standardiseCallout (noteNode: Node)
   {
     noteNode["callout"] = ConfigData[if ("f" == noteNode["style"]) "stepExplanationCallout" else "stepCrossReferenceCallout"]!!
+  }
+
+
+ /****************************************************************************/
+  /**
+  * Difficult to explain this.  There are some nodes which we want to treat
+  * as though they were canonical even though they aren't, with a view to
+  * keeping them with the canonical text of a verse.  The obvious thing which
+  * this ought to cover is <note>, but sadly we've already got this one too
+  * deeply embedded in code elsewhere to bring it under the current umbrella.
+  * At present, though, it's convenient to treat <para:sp> and its
+  * descendants as being canonical.
+  *
+  * @param node
+  * @return True if should be treated as canonical.
+  */
+
+  override fun treatAsCanonicalNodeEvenThoughNot (node: Node): Boolean
+  {
+    TODO() // Need to look for para:sp and since this isn't presently used, I can't be bothered to implement it.
   }
 
 

@@ -311,7 +311,7 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
   /****************************************************************************/
   private val m_DataCollection = dataCollection
   private val m_FileProtocol = dataCollection.getFileProtocol()
-  private val m_Content_Elision = Translations.stringFormatWithLookup("V_contentForEmptyVerse_verseInElision")
-  private val m_Content_EmptyVerse = Translations.stringFormatWithLookup("V_contentForEmptyVerse_verseEmptyInThisTranslation")
-  private val m_Content_MissingVerse = Translations.stringFormatWithLookup("V_contentForEmptyVerse_verseWasMissing")
+  private val m_Content_Elision by lazy { Translations.stringFormatWithLookup("V_contentForEmptyVerse_verseInElision") }
+  private val m_Content_EmptyVerse by lazy { Translations.stringFormatWithLookup("V_contentForEmptyVerse_verseEmptyInThisTranslation") }
+  private val m_Content_MissingVerse by lazy { Translations.stringFormatWithLookup("V_contentForEmptyVerse_verseWasMissing") }
 }

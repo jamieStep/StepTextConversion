@@ -39,22 +39,17 @@ object Usx_CrossReferenceChecker: CrossReferenceChecker
 
 
   /****************************************************************************/
-  override fun process (dataCollection: X_DataCollection)
+  override fun process (dataCollection: X_DataCollection, xRefNodes: List<Node>)
   {
     m_BibleStructure = dataCollection.getBibleStructure()
-    dataCollection.getRootNodes().forEach(::process)
+    process(xRefNodes)
   }
 
 
   /****************************************************************************/
-  fun process (rootNode: Node)
+  fun process (xRefNodes: List<Node>)
   {
     TODO("The code below is copied from OSIS, and is therefore wrong.  Need to go back to an earlier version to find out what this should look like.")
-    m_BibleStructure = UsxDataCollection.getBibleStructure()
-    var refs = Dom.findNodesByAttributeValue(rootNode, "note", "type", "crossReference")
-    refs = validateRefs(refs)
-    refs = checkTargetsExist(refs)
-    compareLocAndContent(refs)
   }
 
 

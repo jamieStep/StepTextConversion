@@ -128,7 +128,7 @@ var header =
     vals["revisionDesc"] = ConfigData["revisionDesc"] ?: "" // See note above.
     vals["scope"] = scope
     vals["shortCopyright"] = ConfigData["stepShortCopyright"]!!.replace("<.*?>".toRegex(), " ").replace("&copy;", "(c)")
-    vals["title"] = ConfigData.makeStepDescription(bookNumbers)
+    vals["title"] = ConfigData["stepBibleDescriptionAsItAppearsOnBibleList"]!!
     vals["toLowerPublicationType"] = publicationType.lowercase(Locale.getDefault())
     vals["yearOfText"] = yearOfText
 

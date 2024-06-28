@@ -153,6 +153,8 @@ class StepException: RuntimeException
 * Used to make it possible to break out of processing.
 */
 
+class StepAbandonRun: RuntimeException()
+
 data class StepBreakOutOfProcessing (val reason: String): RuntimeException()
 
 class StepExceptionShouldHaveBeenOverridden (): RuntimeException("Function should have been overridden.")

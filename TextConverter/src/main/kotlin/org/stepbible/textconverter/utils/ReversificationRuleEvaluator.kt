@@ -87,7 +87,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
   fun rulePasses (sourceRef: Ref?, theRuleData: String, row: ReversificationDataRow): Boolean
   {
     /**************************************************************************/
-//    Dbg.d(row.rowNumber in listOf(5148, 5149, 5150, 5193, 5202, 5203, 5204))
+    //Dbg.d(row.rowNumber in listOf(20673, 20674))
 
 
 
@@ -206,7 +206,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
 
         refs.forEach {
           ref = Ref.rd(it, ref)
-          val thisNWords = if (isTitle) m_BibleStructure.getWordCountForCanonicalTitle(ref.toRefKey_bc())!! else m_BibleStructure.getWordCount(ref.toRefKey_bcvs())
+          val thisNWords = if (isTitle) m_BibleStructure.getCanonicalTextSizeForCanonicalTitle(ref.toRefKey_bc())!! else m_BibleStructure.getCanonicalTextSize(ref.toRefKey_bcvs())
 
           when (thisNWords)
           {
@@ -331,8 +331,8 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
   /****************************************************************************/
   init {
     //Dbg.d(m_DataCollection.getDocument())
-    if (!m_BibleStructure.hasWordCounts())
-      m_DataCollection.reloadBibleStructureFromRootNodes(wantWordCount = true)
+    if (!m_BibleStructure.hasCanonicalTextSize())
+      m_DataCollection.reloadBibleStructureFromRootNodes(wantCanonicalTextSize = true)
   }
 }
 

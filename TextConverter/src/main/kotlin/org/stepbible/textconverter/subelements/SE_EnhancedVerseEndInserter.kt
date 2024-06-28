@@ -150,6 +150,8 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
   {
     /**************************************************************************/
     val eid = m_FileProtocol.makeVerseEidNode(sidWhoseEidWeAreCreating.ownerDocument, sidWhoseEidWeAreCreating[m_FileProtocol.attrName_verseSid()]!!)
+//    Dbg.d(Dom.toString(eid))
+//    Dbg.dCont(Dom.toString(eid), "Song.1.1")
 
 
 
@@ -168,24 +170,41 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
     {
       val node = m_AllNodes[ix]
 
-      if (m_FileProtocol.isCanonicalTitleNode(node) || m_FileProtocol.isAcrosticDivNode(node))
-        break
+      if (m_FileProtocol.isCanonicalTitleNode(node) || m_FileProtocol.isAcrosticDivNode(node) || m_FileProtocol.isSpeakerNode(node))
+        continue
 
       when (Dom.getNodeName(node))
       {
         "#text" ->
         {
-          if (!Dom.isWhitespace(node) && m_FileProtocol.isCanonicalNode(node))
+          if (!Dom.isWhitespace(node) && (m_FileProtocol.isCanonicalNode(node) || m_FileProtocol.treatAsCanonicalNodeEvenThoughNot(node)))
             lastCanonicalIx = ix
         }
 
-        "note" -> // 'note' is usually going to be pseudo canonical (ie it has to remain with the verse content).  But there may also be instances where words are annotated with notes outside of verses.
+
+
+        // 'note' is usually going to be pseudo canonical (ie it has to remain with the verse content).
+        // But there may also be instances where words are annotated with notes outside of verses.
+        // Processing should be simplified here, because earlier processing removes the content of
+        // note nodes to speed things up.  At this point, therefore, we shouldn't have to worry about
+        // the content.  The content is restored later.
+
+        "note" ->
         {
           if (m_FileProtocol.isCanonicalNode(node))
             lastCanonicalIx = ix
         }
-      }
-    }
+
+
+        //
+        "q" ->
+        {
+          //if (!node["marker"].isNullOrEmpty())
+          //Dbg.d("***" + Dom.toString(node))
+          lastCanonicalIx = ix
+        }
+      } // when
+    } // while
 
 
 
@@ -206,27 +225,33 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
 
     /**************************************************************************/
     /* At this point, we know that lastCanonicalIx is pointing to the rightmost
-       node which has to be within the verse.  However, there is still some
-       wiggle room -- we can move the node further to the right if needs be
-       (admittedly then accepting non-canonical nodes into the verse, which may
-       not be entirely idea) until either we hit the next verse or until we
-       succeed in finding a position such that inserting the eid after that
-       location would make the eid the sibling of the sid.  Note that there's
-       no guarantee this will be successful: some structures are such that
-       we simply _will_ end up with cross-boundary markup. */
+       node which _has_ to be within the verse.  However, there is still some
+       wiggle room (or there is if we are prepared to accept non-canonical
+       nodes into the verse if necessary).
+
+       If the proposed eid position would not make the eid into a sibling of
+       the sid, we can try positioning the eid after the parent of the
+       proposed position, so long as any tags which we have to skip over to
+       do that are non-canonical -- and we can repeat this up the tree if
+       necessary. */
 
     ix = lastCanonicalIx
+    var proposedInsertAfter = m_AllNodes[ix]
     while (true)
     {
-      val proposedInsertAfter = m_AllNodes[ix]
       if (Dom.isSiblingOf(sidWhoseEidWeAreCreating, proposedInsertAfter))
       {
         Dom.insertNodeAfter(proposedInsertAfter, eid)
         return
       }
 
-      if (++ix == ixPastEnd)
+      if (m_FileProtocol.tagName_chapter() == Dom.getNodeName(proposedInsertAfter)) // No point in even thinking of going above chapter level.
         break
+
+      if (!Dom.allFollowingSiblingsSatisfy(proposedInsertAfter, { n -> !m_FileProtocol.isCanonicalNode(n) } ))
+        break
+
+      proposedInsertAfter = proposedInsertAfter.parentNode
     }
 
 

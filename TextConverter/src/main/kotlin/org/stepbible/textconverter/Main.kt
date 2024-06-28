@@ -19,7 +19,8 @@ import org.stepbible.textconverter.utils.ThrowAwayCode
 fun main (args: Array<String>)
 {
   /****************************************************************************/
-  Dbg.setBooksToBeProcessed("3Jn")
+  //Dbg.setBooksToBeProcessed("Sng")
+  //Dbg.setBooksToBeProcessed("Hab")
   //ThrowAwayCode.testFindNodesByAttributeValue()
 
 
@@ -68,6 +69,16 @@ fun main (args: Array<String>)
     Dbg.endOfRun()
     if (null != e.message) println(e.message)
     e.printStackTrace()
+  }
+
+
+
+  /****************************************************************************/
+  /* If logging to a file, sort so that errors come out before warnings, etc. */
+
+  finally
+  {
+    Logger.sortLogFile()
   }
 }
 

@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.subelements
 
+import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
@@ -92,7 +93,8 @@ object ContentValidator
    /**************************************************************************/
    if (null == m_DataCollectionNew.getRootNode(bookNo)) return
    Dbg.reportProgress("Checking " + BibleBookNamesUsx.numberToAbbreviatedName(bookNo))
-   //Dbg.outputDom(m_DataCollectionNew.getRootNode(bookNo)!!.ownerDocument)
+//   if (BibleBookNamesUsx.numberToAbbreviatedName(bookNo).equals("Hab", ignoreCase = true))
+//     Dbg.outputDom(m_DataCollectionNew.getRootNode(bookNo)!!.ownerDocument)
 
 
 
@@ -625,8 +627,21 @@ object ContentValidator
 
 
     /**************************************************************************/
-    val message = "Verse mismatch:<nl>  Original = '$contentInput'<nl>     Final = '$contentEnhanced'<nl>"
-    error(enhancedRefKey, message)
+    /* If we might be dealing with canonical titles, I issue a warning rather
+       than an error.  This is rather an admission of defeat on my part -- I
+       ought to be able to work out precise details for checking purposes, but
+       it's a bit too complicated. */
+
+    if (BibleAnatomy.C_BookNumberForPsa == Ref.getB(enhancedRefKey) && 1 == Ref.getV(enhancedRefKey))
+    {
+      val message = "Verse mismatch (warning only, because canonical titles are difficult to validate):<nl>  Original = '$contentInput'<nl>     Final = '$contentEnhanced'<nl>"
+      warning(enhancedRefKey, message)
+    }
+    else
+    {
+      val message = "Verse mismatch:<nl>  Original = '$contentInput'<nl>     Final = '$contentEnhanced'<nl>"
+      error(enhancedRefKey, message)
+    }
   }
 
 
@@ -926,6 +941,13 @@ object ContentValidator
   private fun error (refKey: RefKey, message: String)
   {
     Logger.error(refKey, message)
+  }
+
+
+  /****************************************************************************/
+  private fun warning (refKey: RefKey, message: String)
+  {
+    Logger.warning(refKey, message)
   }
 
 

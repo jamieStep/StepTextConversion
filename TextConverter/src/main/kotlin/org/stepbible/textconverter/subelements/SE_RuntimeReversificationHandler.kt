@@ -104,13 +104,16 @@ class SE_RuntimeReversificationHandler (dataCollection: X_DataCollection): SE(da
 
   override fun processRootNodeInternal (rootNode: Node)
   {
-    if ("runtime" == ConfigData["stepReversificationType"]!!.lowercase())
-    {
-      Dbg.reportProgress("Applying reversification footnotes for runtime reversification for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
-      IssueAndInformationRecorder.setRuntimeReversification()
-      addFootnotes(rootNode)
-      //createEmptyVerses(rootNode)
-    }
+    if ("runtime" != ConfigData["stepReversificationType"]!!.lowercase())
+      return
+
+    if (!ConfigData.getAsBoolean("stepOkToGenerateFootnotes"))
+      return
+
+    Dbg.reportProgress("Applying reversification footnotes for runtime reversification for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
+    IssueAndInformationRecorder.setRuntimeReversification()
+    addFootnotes(rootNode)
+    //createEmptyVerses(rootNode)
   }
 
 

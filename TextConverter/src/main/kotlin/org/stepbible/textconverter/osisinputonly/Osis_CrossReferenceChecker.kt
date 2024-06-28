@@ -14,12 +14,8 @@ import org.w3c.dom.Node
 
 /****************************************************************************/
 /**
- * In theory, certain flavours of list need to be encapsulated in OSIS with
- * bracketing markers.  In practice, we don't do this at present, because
- * osis2mod doesn't seem to require it, and having the tags there introduces
- * excessive vertical whitespace into the rendering.  The downside is that we
- * generate non-compliant OSIS, and therefore can't make our modules available
- * to Crosswire.
+ * Checks cross-references -- eg do targets exist, are they corrrectly
+ * formatted, etc.
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -36,12 +32,12 @@ object Osis_CrossReferenceChecker: CrossReferenceChecker
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process (dataCollection: X_DataCollection)
+  override fun process (dataCollection: X_DataCollection, xrefNodes: List<Node>)
   {
+    Dbg.reportProgress("Checking for dangling cross-references etc.")
     m_BibleStructure = dataCollection.getBibleStructure()
-    dataCollection.getRootNodes().forEach(::process)
+    process(xrefNodes)
   }
-
 
 
 
@@ -152,11 +148,9 @@ object Osis_CrossReferenceChecker: CrossReferenceChecker
 
 
   /****************************************************************************/
-  private fun process (rootNode: Node)
+  private fun process (theRefs: List<Node>)
   {
-    Dbg.reportProgress("Checking for dangling cross-references ${Osis_FileProtocol.getBookAbbreviation(rootNode)}.")
-    var refs = Dom.findNodesByAttributeValue(rootNode, "note", "type", "crossReference")
-    refs = validateRefs(refs)
+    var refs = validateRefs(theRefs)
     refs = checkTargetsExist(refs)
     compareLocAndContent(refs)
   }

@@ -9,6 +9,7 @@ import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.usxinputonly.Usx_OsisCreator
 import org.stepbible.textconverter.usxinputonly.Usx_Preprocessor
 import org.stepbible.textconverter.usxinputonly.Usx_Tidier
+import org.stepbible.textconverter.utils.InternalOsisDataCollection
 import org.stepbible.textconverter.utils.UsxDataCollection
 
 
@@ -73,6 +74,7 @@ object PE_Phase1_FromInputUsx: PE
     UsxDataCollection.loadFromFolder(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForUsx())
     Usx_Preprocessor.processXslt(UsxDataCollection)
     Usx_Tidier.process(UsxDataCollection)
+    ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(UsxDataCollection.getBookNumbers())
     if (!ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "no"))
        Usx_OsisCreator.process(UsxDataCollection)
     RefBase.setBibleStructure(null)

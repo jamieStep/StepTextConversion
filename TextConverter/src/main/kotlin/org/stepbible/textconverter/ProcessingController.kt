@@ -370,6 +370,7 @@ object ProcessingController
       if (!e.getSuppressStackTrace()) e.printStackTrace(System.err)
       System.err.println("Fatal error: " + processor.banner() + ": " + e.toString())
       System.err.flush()
+      Logger.sortLogFile()
       exitProcess(1)
     }
     catch (e: Exception)
@@ -377,6 +378,7 @@ object ProcessingController
       e.printStackTrace(System.err)
       System.err.println("Fatal error: " + processor.banner() + ": " + e.toString())
       System.err.flush()
+      Logger.sortLogFile()
       exitProcess(1)
     }
     finally

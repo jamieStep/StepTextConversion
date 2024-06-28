@@ -174,7 +174,7 @@ import java.util.*
        later processing, we can simply build up some lists here. */
 
     val charXts = canonicaliseCharXtsStandardiseStyles(rootNode)
-    var charXtsHavingRefs = canonicaliseCharXtsFindCharXtsHavingRefs(rootNode)
+    val charXtsHavingRefs = canonicaliseCharXtsFindCharXtsHavingRefs(rootNode)
     var charXtsLackingRefs = charXts - charXtsHavingRefs.toSet()
 
 
@@ -214,7 +214,7 @@ import java.util.*
 
     diffs = canonicaliseCharXtsReliantUponVernacularText(charXtsLackingRefs, getRefAsStringForIntroductoryMaterial(rootNode))
     charXtsLackingRefs = charXtsLackingRefs - diffs.toSet()
-    charXtsHavingRefs = charXtsHavingRefs + diffs.toSet()
+    //charXtsHavingRefs = charXtsHavingRefs + diffs.toSet()
 
     haveGeneratedNewRefs = haveGeneratedNewRefs || diffs.isNotEmpty()
     if (haveGeneratedNewRefs) addBelongsTo(rootNode)
@@ -612,7 +612,7 @@ import java.util.*
       {
         val charNodes = noteNode.findNodesByName("char", false)
         val canonicalText = charNodes.joinToString(" ") { Dom.getCanonicalTextContentToAnyDepth(it) }
-        if (StepStringUtils.wordCount(canonicalText) < C_NoOfCanonicalWordsWhichMeansThisIsANoteF)
+        if (canonicalText.wordCount() < C_NoOfCanonicalWordsWhichMeansThisIsANoteF)
           Usx_FileProtocol.recordTagChange(noteNode, "note", "x", "Style was 'f' but contains cross-reference details.")
       }
     }
@@ -1170,5 +1170,5 @@ import java.util.*
 
 
   /****************************************************************************/
-  private var m_CanReadAndWriteVernacular =  ConfigData.getAsBoolean("stepUseVernacularFormats")
+  private val m_CanReadAndWriteVernacular by lazy { ConfigData.getAsBoolean("stepUseVernacularFormats") }
  }

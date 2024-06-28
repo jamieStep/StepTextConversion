@@ -91,6 +91,7 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
        time they are called, and therefore can't rely upon the lists
        established above. */
 
+    deleteWhitespaceWhichFollowsLTags(rootNode)
     handleUnacceptableCharacters(rootNode)
     deleteNotesFromHeaders(rootNode)
     handleVerticalWhitespace(rootNode)
@@ -194,6 +195,9 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
 
   private fun deleteNotesFromHeadersInChapter (chapterNode: Node)
   {
+//    if (Dbg.d(chapterNode.parentNode["osisID"]!!, "Song"))
+//      Dbg.d(chapterNode.ownerDocument)
+    return
     var doneSomething = false
     var inVerse = false
     val allNodes = chapterNode.getAllNodesBelow()
@@ -204,13 +208,20 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
 
       if (m_FileProtocol.tagName_verse() == nodeName)
         inVerse = m_FileProtocol.attrName_verseSid() in node
-      else if (!inVerse && m_FileProtocol.isTitleNode(node) && !m_FileProtocol.isCanonicalTitleNode(node)) // The !isCanonicalTitleNode is there on the assumption notes in canonical titles work.  Need to check this.
-        node.getAllNodesBelow().filter { m_FileProtocol.isNoteNode(it) }.forEach { Dom.deleteNode(it); doneSomething = true}
+      else if (!inVerse &&
+               m_FileProtocol.isTitleNode(node) &&
+               !m_FileProtocol.isCanonicalTitleNode(node) && // The !isCanonicalTitleNode is there on the assumption notes in canonical titles work. Need to check this.
+               !Dom.hasAncestorNamed(node, "speaker")) // Speaker nodes are transformed into ordinary text shortly, so it's ok to retain notes there.
+        node.getAllNodesBelow().filter { m_FileProtocol.isNoteNode(it) }.forEach {
+          Dom.deleteNode(it)
+          doneSomething = true
+        }
     }
 
     if (doneSomething)
     {
-      Logger.warning(m_FileProtocol.readRef(chapterNode[m_FileProtocol.attrName_chapterSid()]!!).toRefKey(), "One or more <note> nodes suppressed in one or more non-canonical titles.")
+      val ref = m_FileProtocol.readRef(chapterNode[m_FileProtocol.attrName_chapterSid()]!!)
+      Logger.warning(ref.toRefKey(), "One or more <note> nodes suppressed in one or more non-canonical titles in $ref.")
       //Dbg.d(chapterNode.ownerDocument)
     }
   }
@@ -229,6 +240,23 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
   /****************************************************************************/
   private fun deleteTemporaryAttributes (nodeList: List<Node>) = nodeList.filter { "_t" in it }.forEach { deleteTemporaryAttributes(it) }
   private fun deleteTemporaryAttributes (node: Node) = Dom.getAttributes(node).filter{ it.key.startsWith("_") }.forEach { attr -> Dom.deleteAttribute(node, attr.key ) }
+
+
+  /****************************************************************************/
+  private fun deleteWhitespaceWhichFollowsLTags (rootNode: Node)
+  {
+    return
+    Dom.findNodesByName(rootNode, "l", false)
+      .forEach {
+        var sibling = it.nextSibling
+        while (null != sibling && Dom.isTextNode(sibling))
+        {
+          val nextSibling = sibling.nextSibling
+          Dom.deleteNode(sibling)
+          sibling = nextSibling
+        }
+      }
+  }
 
 
   /****************************************************************************/
@@ -461,6 +489,9 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
   private fun handleSpeaker (nodeList: List<Node>)
   {
     nodeList.forEach {
+      if (null != it.nextSibling && null != it.nextSibling.nextSibling && "l" == Dom.getNodeName(it.nextSibling.nextSibling))
+        Dom.deleteNode(it.nextSibling.nextSibling)
+
       val wrapperPara = Dom.createNode(it.ownerDocument, "<p/>")
       Dom.insertNodeBefore(it, wrapperPara)
 
@@ -632,11 +663,13 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
        checking whether the current node has a note node as an ancestor -- is
        computationally expensive. */
 
+    val markers: MutableList<Node> = mutableListOf()
     allNodes
       .filter { "note" == Dom.getNodeName(it) }
       .forEach {
         val marker = Dom.createNode(rootNode.ownerDocument, "<X_NoteEnd/>")
         it.appendChild(marker)
+        markers.add(marker)
       }
 
 
@@ -681,5 +714,10 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
               eid = null
         } // when
       } // forEach
+
+
+
+    /**************************************************************************/
+    Dom.deleteNodes(markers)
   } // fun
 }

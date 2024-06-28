@@ -7,14 +7,12 @@ import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.support.stepexception.StepException
-import org.stepbible.textconverter.support.stepexception.StepExceptionShouldHaveBeenOverridden
 import org.stepbible.textconverter.usxinputonly.Usx_BookAndChapterConverter
 import org.stepbible.textconverter.usxinputonly.Usx_Preprocessor
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
 import java.util.*
-import kotlin.io.path.name
 
 /******************************************************************************/
 /**
@@ -178,7 +176,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
       val files = StepFileUtils.getMatchingFilesFromFolder(folderPath, ".*\\.$fileExtension".toRegex())
       val orderedBookList: MutableList<Int> = mutableListOf()
       files.forEach { orderedBookList.addAll(addFromFile(it.toString())) }
-      if (1 == files.size) sortStructuresByBookOrder(orderedBookList)
+      sortStructuresByBookOrder(orderedBookList)
       //reloadBibleStructureFromRootNodes(false)
     }
   }
@@ -199,8 +197,8 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
     withThisBibleStructure { // Don't clear the text here, in case it's actually coming from the present class.
       restoreBookNumberToRootNodeMappings()
-      val orderedBookList = addFromText(text)
-      sortStructuresByBookOrder(orderedBookList)
+      val bookList = addFromText(text)
+      sortStructuresByBookOrder(bookList)
     }
   }
 
@@ -397,15 +395,15 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   * Reloads the BibleStructure element -- for example after creating empty
   * verses to fill in blanks in the text.
   *
-  * @param wantWordCount If true, accumulates word counts for all verses.
+  * @param wantCanonicalTextSize If true, accumulates word counts for all verses.
   */
 
-  fun reloadBibleStructureFromRootNodes (wantWordCount: Boolean)
+  fun reloadBibleStructureFromRootNodes (wantCanonicalTextSize: Boolean)
   {
     clearBibleStructure()
     withThisBibleStructure {
       RefBase.setBibleStructure(m_BibleStructure)
-      m_BookNumberToRootNode.filter { null != it.value }.forEach { m_BibleStructure.addFromBookRootNode("", it.value!!, wantWordCount = wantWordCount )}
+      m_BookNumberToRootNode.filter { null != it.value }.forEach { m_BibleStructure.addFromBookRootNode("", it.value!!, wantCanonicalTextSize = wantCanonicalTextSize )}
       m_BibleStructureIsValid = true
     }
   }
@@ -571,11 +569,11 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
      files.  This arranges to have the internal data structures ordered
      correctly. */
 
-  private fun sortStructuresByBookOrder (orderedBookList: List<Int>)
+  private fun sortStructuresByBookOrder (bookList: List<Int>)
   {
     val newBookNumberToRootNode: MutableMap<Int, Node?> = mutableMapOf()
-    orderedBookList.forEach { newBookNumberToRootNode[it] = m_BookNumberToRootNode[it]!! }
-    m_BookNumberToRootNode = newBookNumberToRootNode
+    bookList.forEach { newBookNumberToRootNode[it] = m_BookNumberToRootNode[it]!! }
+    m_BookNumberToRootNode = newBookNumberToRootNode.toSortedMap()
   }
 
 

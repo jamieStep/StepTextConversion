@@ -62,7 +62,7 @@ object Globals
 
 
 /******************************************************************************/
-var ExternalOsisDataCollection = Osis_DataCollection()
-var InternalOsisDataCollection = Osis_DataCollection()
-var UsxDataCollection = Usx_DataCollection()
+val ExternalOsisDataCollection by lazy { Osis_DataCollection() }
+val InternalOsisDataCollection by lazy { Osis_DataCollection() }
+val UsxDataCollection by lazy { Usx_DataCollection() }
 lateinit var Phase1TextOutput: String

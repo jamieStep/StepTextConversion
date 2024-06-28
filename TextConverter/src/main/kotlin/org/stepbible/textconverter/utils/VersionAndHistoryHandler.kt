@@ -167,11 +167,11 @@ object VersionAndHistoryHandler
 
     val nonHistoryLines =
       File(FileLocations.getStepConfigFilePath())
-        .readLines()
+        .readLines(Charsets.UTF_8)
         .filter { !it.trim().lowercase().startsWith("history_") }
         .dropLastWhile { it.trim().isEmpty() }
 
-    val writer = File(FileLocations.getStepConfigFilePath()).bufferedWriter()
+    val writer = File(FileLocations.getStepConfigFilePath()).bufferedWriter(Charsets.UTF_8) // Should default to UTF-8 anyway, but I have my doubts.
     nonHistoryLines.forEach { writer.write(it); writer.write("\n") }
     writer.write("\n")
     m_HistoryLines.forEach { writer.write(it.toString()); writer.write("\n") }
