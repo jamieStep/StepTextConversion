@@ -73,10 +73,11 @@ object Osis_DetermineReversificationTypeEtc
     /**************************************************************************/
     /* The parameters which control what we're going to do. */
 
-    val isCopyrightText = ConfigData.getAsBoolean("stepIsCopyrightText")
     val forcedVersificationScheme = getCanonicalisedVersificationSchemeIfAny() // Check if we've been given a scheme, and if so, convert the name to canonical form.
     var reversificationType = getReversificationType()
     val targetAudience = ConfigData["stepTargetAudience"]!!
+    if ("P" in targetAudience) ConfigData.deleteAndPut("stepIsCopyrightText", "no", force = true) // Public texts can't be copyright, and vice-versa.
+    val isCopyrightText = ConfigData.getAsBoolean("stepIsCopyrightText")
 
 
 
@@ -91,9 +92,6 @@ object Osis_DetermineReversificationTypeEtc
 
     /**************************************************************************/
     /* A bit of validation. */
-
-    if ("P" in targetAudience && isCopyrightText)
-      throw StepException("Can't create a public module for copyright text")
 
     if (isCopyrightText && "conversiontime" == reversificationType)
       throw StepException("Can't apply conversion-time reversification (ie physical restructuring) to a copyright text.")
@@ -146,12 +144,13 @@ object Osis_DetermineReversificationTypeEtc
     if (isCopyrightText)
     {
       setCopyrightLimitations() // There are certain things -- like generating footnotes -- which we assume we aren't allowed to do.
-      setEncryption()           // Copyright text always has to be encrypted.
+      setEncryption(true)       // Copyright text always has to be encrypted.
     }
     else
     {
-      setFreedomsForNonCopyrightTexts()
-    }
+      setFreedomsForNonCopyrightTexts() // Things you're allowed to do on non-copyright texts.
+      setEncryption(false)              // Copyright text always has to be encrypted.
+   }
 
 
 
@@ -220,9 +219,9 @@ object Osis_DetermineReversificationTypeEtc
   /****************************************************************************/
   /* Record that we definitely want to encrypt. */
 
-  private fun setEncryption (): Boolean
+  private fun setEncryption (wantEncryption: Boolean): Boolean
   {
-    ConfigData.deleteAndPut("stepEncryptionRequired", "yes", force = true)
+    ConfigData.deleteAndPut("stepEncryptionRequired", if (wantEncryption) "yes" else "no", force = true)
     return ConfigData.getAsBoolean("stepEncryptionRequired")
   }
 

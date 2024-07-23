@@ -2872,6 +2872,7 @@ operator fun Node.contains (attributeName: String): Boolean { return Dom.hasAttr
 
 fun Node.getAllNodesBelow (): List<Node> = Dom.getAllNodesBelow(this)
 fun Node.findNodeByAttributeName (nodeName: String, attributeName: String) = Dom.findNodeByAttributeName(this, nodeName, attributeName)
+fun Node.findNodeByAttributeValue (nodeName: String, attributeName: String, attributeValue: String) = Dom.findNodeByAttributeValue(this, nodeName, attributeName, attributeValue)
 fun Node.findNodeByName (nodeName: String, includeThisNode: Boolean) = Dom.findNodeByName(this, nodeName, includeThisNode)
 fun Node.findNodesByAttributeName (nodeName: String, attributeName: String) = Dom.findNodesByAttributeName(this, nodeName, attributeName)
 fun Node.findNodesByAttributeValue (nodeName: String, attributeName: String, attributeValue: String) = Dom.findNodesByAttributeValue(this, nodeName, attributeName, attributeValue)

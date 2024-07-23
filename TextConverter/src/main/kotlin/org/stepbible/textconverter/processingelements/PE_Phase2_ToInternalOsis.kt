@@ -194,7 +194,7 @@ object PE_Phase2_ToInternalOsis : PE
       StepFileUtils.clearFolder(FileLocations.getInputOsisFolderPath())                               // Clear the folder which will be used to store the external OSIS.
       SE_BasicVerseEndInserter(ExternalOsisDataCollection).processAllRootNodes(); x()                 // Add verse-ends in a rudimentary manner.
       addComment(ExternalOsisDataCollection.getDocument(), "Externally-facing OSIS")             // Mark the DOM so we know what this is.
-
+      SE_StrongsHandler(ExternalOsisDataCollection).processAllRootNodes(); x()                        // Canonicalise Strong's references.  (Actually, I think this should be done later, but we need it so that Patrick can further mark up NETfull2 with morphology.)
       NodeMarker.deleteAllMarkers(ExternalOsisDataCollection)
       val filePath = Paths.get(FileLocations.getInputOsisFolderPath(), "DONT_USE_ME.xml").toString()
       StepFileUtils.createFolderStructure(Paths.get(filePath).parent.toString())

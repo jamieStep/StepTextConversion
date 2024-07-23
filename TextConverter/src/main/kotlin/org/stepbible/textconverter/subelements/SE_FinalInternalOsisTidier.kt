@@ -6,7 +6,6 @@ import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Node
-import java.util.*
 
 
 /****************************************************************************/
@@ -74,7 +73,6 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
     allNodes.forEach(NodeMarker::deleteAllMarkers)
     deleteTemporaryAttributes(rootNode)
     deleteTemporaryAttributes(allNodes)
-    collapseNestedStrongs(allNodes)
     handleSelah(selahList)
     handleAcrosticSpanType(acrosticSpanTypeList)
     handleAcrosticDivType(acrosticDivTypeList)
@@ -110,55 +108,6 @@ class SE_FinalInternalOsisTidier (dataCollection: X_DataCollection): SE(dataColl
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
-
-  /****************************************************************************/
-  /* Some texts nest Strongs. */
-
-  private fun collapseNestedStrongs (allNodes: List<Node>)
-  {
-    /**************************************************************************/
-    val nodeMap = IdentityHashMap<Node, Boolean>()
-    allNodes
-      .filter { m_FileProtocol.tagName_strong() == Dom.getNodeName(it) }
-      .filter { m_FileProtocol.attrName_strong() in it }
-      .forEach { nodeMap[it] = true }
-
-
-
-    /**************************************************************************/
-    for (node in nodeMap.keys)
-    {
-      if (!nodeMap[node]!!)
-        continue
-
-      val children: MutableList<Node> = mutableListOf()
-      var p = node
-      while (true)
-      {
-        val firstChild = p.firstChild
-        if (m_FileProtocol.tagName_strong() != Dom.getNodeName(firstChild))
-          break
-
-        if (m_FileProtocol.attrName_strong() !in firstChild)
-          break
-
-        children.add(firstChild)
-        nodeMap[firstChild] = false
-        p = firstChild
-      }
-
-      if (children.isEmpty())
-        continue
-
-      var revisedStrong = node[m_FileProtocol.attrName_strong()]!!
-      children.forEach { revisedStrong += " " + it[m_FileProtocol.attrName_strong()]!! }
-      node[m_FileProtocol.attrName_strong()] = revisedStrong
-      children.reversed().forEach { descendant -> Dom.promoteChildren(descendant); Dom.deleteNode(descendant) }
-    }
-
-//    Dbg.d(allNodes[0].ownerDocument)
-  } // fun
-
 
   /****************************************************************************/
   /* Not 100% sure about this ...  It is convenient, at some points in the

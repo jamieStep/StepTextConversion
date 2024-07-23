@@ -473,8 +473,9 @@ Sword module @(stepModuleName) created by the STEPBible project @(stepModuleCrea
 
     /**************************************************************************/
     val texts: MutableList<String> = ArrayList()
-    if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Morphology"))
-    if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) texts.add(Translations.stringFormatWithLookup("V_AddedValue_Strongs"))
+    if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) texts.add(Translations.stringFormatWithLookup("V_addedValue_Morphology"))
+    if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) texts.add(Translations.stringFormatWithLookup("V_addedValue_Strongs"))
+    if ("P" == ConfigData["stepTargetAudience"]) texts.add(Translations.stringFormatWithLookup("V_addedValue_Reversification"))
 
 
 
@@ -568,6 +569,7 @@ Sword module @(stepModuleName) created by the STEPBible project @(stepModuleCrea
 
     var res = ""
     FeatureIdentifier.process(FileLocations.getInternalOsisFilePath())
+    if ("ar" == ConfigData["stepLanguageCode2Char"]) res += "GlobalOptionFilter=UTF8ArabicPoints\n"
     if (FeatureIdentifier.hasLemma()) res += "GlobalOptionFilter=OSISLemma\n"
     if (FeatureIdentifier.hasMorphologicalSegmentation()) res += "GlobalOptionFilter=OSISMorphSegmentation\n"
     if (FeatureIdentifier.hasStrongs()) res += "GlobalOptionFilter=OSISStrongs\n"

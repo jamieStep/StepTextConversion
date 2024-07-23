@@ -10,43 +10,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9495aca-7970-4593-a7e0-92356b5adca5" name="Changes" comment="Misc changes after IDEA messed things up.">
-      <change beforePath="$PROJECT_DIR$/../Support/converterUserGuide.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Support/converterUserGuide.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Support/reversificationRaw.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/../Support/reversificationRaw.xlsm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/TranslatableFixedText.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/isoLanguageCodes.tsv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/ProcessingController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/ProcessingController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_CanonicalHeadingsHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_CanonicalHeadingsHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_CrossReferenceChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_CrossReferenceChecker.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_DetermineReversificationTypeEtc.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_DetermineReversificationTypeEtc.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_FootnoteHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_ElementArchiver.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Osis2modInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Osis2modInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/osisinputonly/Osis_Utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase1_FromInputUsx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase1_FromInputUsx.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToInternalOsis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase2_ToInternalOsis.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase3_To_SwordModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/processingelements/PE_Phase3_To_SwordModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_BasicValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_BasicValidator.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ContentValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ContentValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_EnhancedVerseEndInserter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_EnhancedVerseEndInserter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ElisionHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ElisionHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_FinalInternalOsisTidier.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_FinalInternalOsisTidier.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_FinalValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_FinalValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_RuntimeReversificationHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_RuntimeReversificationHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ReversificationFootnoteHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ReversificationFootnoteHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_StrongsHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_StrongsHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_TableHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_TableHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleAnatomy.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/bibledetails/BibleAnatomy.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/FileLocations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/FileLocations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Dbg.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Dbg.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Logger.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Logger.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/iso/IsoLanguageCodes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/iso/IsoLanguageCodes.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Dom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Dom.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/StepStringUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/StepStringUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/stepexception/StepException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/stepexception/StepException.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_CrossReferenceCanonicaliser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_CrossReferenceCanonicaliser.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_CrossReferenceChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_CrossReferenceChecker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Translations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/miscellaneous/Translations.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/BibleStructure.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/BibleStructure.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/CrossReferenceChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/CrossReferenceChecker.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/EmptyVerseHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/EmptyVerseHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Globals.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/Globals.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationRuleEvaluator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationRuleEvaluator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/VersionAndHistoryHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/VersionAndHistoryHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_DataCollection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_DataCollection.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_FileProtocol.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_FileProtocol.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/PerTextRepositoryOrganisation/Dbl.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/PerTextRepositoryOrganisation/Dbl.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/commonRoot.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/commonRoot.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/swordTemplateConfigFile.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/swordTemplateConfigFile.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/step.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/step.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/usxToOsisTagConversionsEtc.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_amh_NASV/Metadata/Miscellaneous/amh_am.ldml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Texts/Dbl/Biblica/Text_amh_NASV/Metadata/Miscellaneous/styles.xml" beforeDir="false" />
@@ -3241,6 +3232,7 @@
     "Kotlin.BiblicaCopyright_spa_NVI.executor": "Run",
     "Kotlin.BiblicaCopyright_spa_NVIC.executor": "Run",
     "Kotlin.BiblicaCopyright_swe_NB.executor": "Run",
+    "Kotlin.BiblicaCopyright_swe_NUB.executor": "Run",
     "Kotlin.BiblicaCopyright_swh_NEN.executor": "Run",
     "Kotlin.BiblicaCopyright_tgl_ASD.executor": "Run",
     "Kotlin.BiblicaCopyright_tha_TNCV.executor": "Run",
@@ -3250,51 +3242,91 @@
     "Kotlin.BiblicaCopyright_yom_NWM.executor": "Run",
     "Kotlin.BiblicaCopyright_yor_BMYO.executor": "Run",
     "Kotlin.BiblicaOpen__hun_EIV_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_arb_KEH_public.executor": "Run",
     "Kotlin.BiblicaOpen_arb_KEH_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_ben_BSS_public.executor": "Debug",
     "Kotlin.BiblicaOpen_ben_BSS_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_ces_SNC_public.executor": "Run",
     "Kotlin.BiblicaOpen_ces_SNC_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_chi_CCBT_public.executor": "Debug",
     "Kotlin.BiblicaOpen_chi_CCBT_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_chi_CCB_public.executor": "Run",
     "Kotlin.BiblicaOpen_chi_CCB_publicAndStep.executor": "Run",
     "Kotlin.BiblicaOpen_ckb_KSS_public.executor": "Run",
+    "Kotlin.BiblicaOpen_ekk_PKEK_public.executor": "Run",
     "Kotlin.BiblicaOpen_ekk_PKEK_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_ewe_AL_public.executor": "Run",
     "Kotlin.BiblicaOpen_ewe_AL_publicAndStep.executor": "Run",
     "Kotlin.BiblicaOpen_ewe_TBD_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_fin_EUUT_public.executor": "Run",
     "Kotlin.BiblicaOpen_fin_EUUT_publicAndStep.executor": "Run",
     "Kotlin.BiblicaOpen_gaz_HABH_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_gaz_HABl_public.executor": "Run",
+    "Kotlin.BiblicaOpen_gaz_NCVl_public.executor": "Run",
     "Kotlin.BiblicaOpen_gaz_NOCV_publicAndstep.executor": "Run",
+    "Kotlin.BiblicaOpen_gaz_NOCVe_public.executor": "Run",
+    "Kotlin.BiblicaOpen_hau_SRK_public.executor": "Run",
     "Kotlin.BiblicaOpen_hau_SRK_publicAndstep.executor": "Run",
     "Kotlin.BiblicaOpen_heb_HD_public.executor": "Run",
     "Kotlin.BiblicaOpen_heb_HD_publicAndStep.executor": "Run",
     "Kotlin.BiblicaOpen_hin_HSS_public.executor": "Run",
+    "Kotlin.BiblicaOpen_hrv_KOK_public.executor": "Run",
     "Kotlin.BiblicaOpen_hrv_KOK_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_hun_EIV_public.executor": "Run",
     "Kotlin.BiblicaOpen_hun_EIV_publicAndStep.executor": "Run",
     "Kotlin.BiblicaOpen_ibo_BIU_public.executor": "Run",
     "Kotlin.BiblicaOpen_ibo_BIU_publicAndStep.executor": "Run",
     "Kotlin.BiblicaOpen_isl_OL_public.executor": "Run",
+    "Kotlin.BiblicaOpen_kan_KCB_public.executor": "Run",
+    "Kotlin.BiblicaOpen_kan_KCV_public.executor": "Run",
     "Kotlin.BiblicaOpen_kan_KCV_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_kan_KSB_public.executor": "Run",
+    "Kotlin.BiblicaOpen_kik_KGNK_public.executor": "Run",
     "Kotlin.BiblicaOpen_kik_KGNK_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_kik_KGN_public.executor": "Run",
+    "Kotlin.BiblicaOpen_lin_MNB_public.executor": "Run",
     "Kotlin.BiblicaOpen_lin_MNB_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_lit_JJP_public.executor": "Run",
     "Kotlin.BiblicaOpen_lit_JJP_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_lug_LCB_public.executor": "Run",
     "Kotlin.BiblicaOpen_lug_LCB_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_luo_NLT_public.executor": "Run",
     "Kotlin.BiblicaOpen_luo_NLT_publicAndStep.executor": "Run",
     "Kotlin.BiblicaOpen_mal_MCV_public.executor": "Run",
     "Kotlin.BiblicaOpen_nde_BEN_public.executor": "Run",
+    "Kotlin.BiblicaOpen_nob_ELB_public.executor": "Run",
     "Kotlin.BiblicaOpen_nob_ELB_publicAndStep.executor": "Run",
     "Kotlin.BiblicaOpen_nya_CCLTBD_public.executor": "Run",
+    "Kotlin.BiblicaOpen_nya_CCL_public.executor": "Run",
+    "Kotlin.BiblicaOpen_pes_PCB_public.executor": "Run",
     "Kotlin.BiblicaOpen_pes_PCB_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_pol_PSZ_public.executor": "Run",
     "Kotlin.BiblicaOpen_pol_PSZ_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_slk_NPK_public.executor": "Run",
     "Kotlin.BiblicaOpen_slk_NPK_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_sna_BDSC_public.executor": "Run",
     "Kotlin.BiblicaOpen_sna_BDSC_publicAndStep.executor": "Run",
     "Kotlin.BiblicaOpen_srp_NSPCyr_publicAndStep.executor": "Run",
     "Kotlin.BiblicaOpen_srp_NSPLat_publicAndStep.executor": "Run",
     "Kotlin.BiblicaOpen_srp_NSP_public.executor": "Run",
     "Kotlin.BiblicaOpen_srp_NSP_publicAndstep.executor": "Run",
+    "Kotlin.BiblicaOpen_srp_NSPc_public.executor": "Run",
+    "Kotlin.BiblicaOpen_srp_NSPl_public.executor": "Run",
+    "Kotlin.BiblicaOpen_swh_NEN_public.executor": "Debug",
     "Kotlin.BiblicaOpen_swh_NEN_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_tam_TCV_public.executor": "Run",
     "Kotlin.BiblicaOpen_tam_TCV_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_tsn_LEF_public.executor": "Run",
     "Kotlin.BiblicaOpen_tsn_LEF_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_tur_TTT_public.executor": "Run",
     "Kotlin.BiblicaOpen_tur_TTT_publicAndStep.executor": "Run",
+    "Kotlin.BiblicaOpen_twi_AKNA_public.executor": "Run",
+    "Kotlin.BiblicaOpen_twi_WAKNA_public.executor": "Run",
     "Kotlin.BiblicaOpen_twi_WAKNA_publicAndStep.executor": "Run",
     "Kotlin.BiblicaOpen_ukr_NPU_public.executor": "Run",
+    "Kotlin.BiblicaOpen_vie_VCB_public.executor": "Run",
+    "Kotlin.BiblicaOpen_yom_NWM_public.executor": "Run",
+    "Kotlin.BiblicaOpen_yor_YCB_public.executor": "Run",
     "Kotlin.Misc_eng_ESV.executor": "Debug",
     "Kotlin.Misc_eng_ESV_th.executor": "Run",
     "Kotlin.Misc_eng_LSB.executor": "Run",
@@ -3303,6 +3335,10 @@
     "Kotlin.Misc_eng_NETSL.executor": "Run",
     "Kotlin.Misc_eng_NETfull2.executor": "Run",
     "Kotlin.Misc_ger_Lut1545.executor": "Run",
+    "Kotlin.MiscellaneousCopyright_ger_Sch.executor": "Debug",
+    "Kotlin.MiscellaneousCopyright_ger_Sch2000.executor": "Debug",
+    "Kotlin.MiscellaneousCopyright_ger_Schachtel1951.executor": "Run",
+    "Kotlin.MiscellaneousCopyright_ger_Schachtel2000.executor": "Run",
     "Kotlin.SeedCompanyCopyright_Text_abm_ABM.executor": "Run",
     "Kotlin.SeedCompanyCopyright_abm_ABM_step.executor": "Run",
     "Kotlin.SeedCompanyCopyright_abm_SC_step.executor": "Run",
@@ -3345,7 +3381,7 @@
     "Kotlin.SeedCompanyCopyright_lla_LLA.executor": "Run",
     "Kotlin.SeedCompanyCopyright_lla_SC_step.executor": "Run",
     "Kotlin.SeedCompanyCopyright_mal_MAL.executor": "Run",
-    "Kotlin.SeedCompanyCopyright_mal_SC_step.executor": "Debug",
+    "Kotlin.SeedCompanyCopyright_mal_SC_step.executor": "Run",
     "Kotlin.SeedCompanyCopyright_mdt_MDT.executor": "Run",
     "Kotlin.SeedCompanyCopyright_mdt_SC_step.executor": "Run",
     "Kotlin.SeedCompanyCopyright_mfn_MFN.executor": "Run",
@@ -3390,6 +3426,7 @@
     "Kotlin.SeedCompanyCopyright_xte_XTE.executor": "Run",
     "Kotlin.SeedCompanyCopyright_zmb_SC_step.executor": "Run",
     "Kotlin.SeedCompanyCopyright_zmb_ZMB.executor": "Run",
+    "Kotlin.SeedCompanyOpenAccess_mal_SC_public.executor": "Run",
     "Kotlin.Test.executor": "Run",
     "Kotlin.Test_alf_XXXFootnoteTestXXX_step.executor": "Debug",
     "Kotlin.arb_KEH.executor": "Debug",
@@ -3482,11 +3519,11 @@
       <recent name="org.stepbible.textconverter" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.SeedCompanyCopyright_mal_SC_step">
+  <component name="RunManager" selected="Kotlin.BiblicaOpen_swh_NEN_public">
     <configuration name="BiblicaCopyright_arb_KEH" type="JetRunConfigurationType" folderName="DblBiblicaCopyright">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaCopyright\Text_arb_KEH -evaluateSchemesOnly -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaCopyright\Text_arb_KEH -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -3870,10 +3907,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaCopyright_swe_NB" type="JetRunConfigurationType" folderName="DblBiblicaCopyright">
+    <configuration name="BiblicaCopyright_swe_NUB" type="JetRunConfigurationType" folderName="DblBiblicaCopyright">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaCopyright\Text_swe_NB -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaCopyright\Text_swe_NUB -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -3960,37 +3997,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_arb_KEH_step" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_ben_BSS_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder Dbl\BiblicaOpenAccess\Text_arb_KEH_step -runType release &quot;OpenAccess first release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder Dbl\BiblicaOpenAccess\Text_ben_BSS_public -runType release &quot;OpenAccess first release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_ces_SNC_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_ces_SNC_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder Dbl\BiblicaOpenAccess\Text_ces_SNC_publicAndStep -runType release &quot;OpenAccess first release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder Dbl\BiblicaOpenAccess\Text_ces_SNC_public -runType release &quot;OpenAccess first release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_chi_CCBT_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_chi_CCBT_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_chi_CCBT_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_chi_CCBT_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_chi_CCB_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_chi_CCB_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_chi_CCB_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_chi_CCB_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -3999,70 +4036,70 @@
     <configuration name="BiblicaOpen_ckb_KSS_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_ckb_KSS_publicAndStep -runType majorRelease -updateReason &quot;First open access issue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_ckb_KSS_public -runType majorRelease -updateReason &quot;First open access issue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_ekk_PKEK_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_ekk_PKEK_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_ekk_PKEK_publicAndStep -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_ekk_PKEK_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_ewe_AL_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_ewe_AL_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_ewe_AL_publicAndStep -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_ewe_AL_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_fin_EUUT_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_fin_EUUT_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_fin_EUUT_publicAndStep -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_fin_EUUT_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_gaz_HABl_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_gaz_NCVl_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_gaz_HABHl_publicAndstep -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_gaz_NCVl_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_gaz_HAHe_publicAndstep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_gaz_NOCVe_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_gaz_HAHe_publicAndstep -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_gaz_NOCVe_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_hau_SRK_publicAndstep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_hau_SRK_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_hau_SRK_publicAndstep -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_hau_SRK_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_heb_HD_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_heb_HD_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_heb_HD_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_heb_HD_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -4077,10 +4114,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_hrv_KOK_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_hrv_KOK_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_hrv_KOK_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_hrv_KOK_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -4095,28 +4132,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_hun_EIV_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_hun_EIV_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_hun_EIV_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_hun_EIV_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_hun_EIV_step" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_ibo_BIU_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_hun_EIV_step -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BiblicaOpen_ibo_BIU_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
-      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
-      <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_ibo_BIU_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_ibo_BIU_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -4131,64 +4159,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_isl_OL_step" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_kan_KSB_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_isl_LO_step -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_kan_KSB_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_kan_KCV_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_kik_KGN_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_kan_KCV_publicAndStep -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_kik_KGN_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_kik_KGNK_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_lin_MNB_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_kik_KGNK_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_lin_MNB_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_lin_MNB_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_lit_JJP_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_lin_MNB_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_lit_JJP_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_lit_JJP_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_lug_LCB_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_lit_JJP_publicAndStep -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_lug_LCB_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_lug_LCB_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_luo_NLT_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_lug_LCB_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BiblicaOpen_luo_NLT_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
-      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
-      <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_luo_NLT_publicAndStep -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_luo_NLT_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -4212,55 +4231,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_nob_ELB_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_nob_ELB_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_nob_ELB_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_nob_ELB_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_nya_CCL_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_nya_CCL_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_nya_CCL_publicAndStep -runType majorRelease -updateReason &quot;First version&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_nya_CCL_public -runType majorRelease -updateReason &quot;First version&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_pes_PCB_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_pes_PCB_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_pes_PCB_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_pes_PCB_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_pol_PSZ_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_pol_PSZ_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_pol_PSZ_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_pol_PSZ_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_slk_NPK_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_slk_NPK_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_slk_NPK_publicAndStep -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_slk_NPK_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_sna_BDSC_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_sna_BDSC_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_sna_BDSC_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_sna_BDSC_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -4275,15 +4294,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_srp_NSPc_step" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
-      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
-      <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_srp_NSPc_step -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BiblicaOpen_srp_NSPl_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
@@ -4293,55 +4303,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_srp_NSPl_step" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_swh_NEN_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_srp_NSPl_step -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_swh_NEN_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_swh_NEN_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_tam_TCV_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_swh_NEN_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_tam_TCV_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_tam_TCV_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_tsn_LEF_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_tam_TCV_publicAndStep -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_tsn_LEF_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_tsn_LEF_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_tur_TTT_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_tsn_LEF_publicAndStep -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_tur_TTT_public -runType release -updateReason &quot;First open access release&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_tur_TTT_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_twi_AKNA_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_tur_TTT_publicAndStep -runType release -updateReason &quot;First open access release&quot;" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BiblicaOpen_twi_WAKNA_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
-      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
-      <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_twi_WAKNA_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_twi_AKNA_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -4356,37 +4357,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_ukr_NPU_step" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_vie_VCB_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_ukr_NPU_step -runType release -updateReason &quot;First open access release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_vie_VCB_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_vie_VCB_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_yom_NWM_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_vie_VCB_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_yom_NWM_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BiblicaOpen_yom_NWM_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
+    <configuration name="BiblicaOpen_yor_YCB_public" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_yom_NWM_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BiblicaOpen_yor_YCB_publicAndStep" type="JetRunConfigurationType" folderName="DblBiblicaOpenAccess">
-      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
-      <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_yor_YCB_publicAndStep -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Dbl\BiblicaOpenAccess\Text_yor_YCB_public -runType majorRelease -updateReason &quot;Following licence reissue&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -4449,7 +4441,7 @@
     <configuration name="Misc_eng_NETfull2" type="JetRunConfigurationType" folderName="Miscellaneous">
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
-      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Miscellaneous\Text_eng_NET2full_step -runType release -updateReason &quot;Revision 2 first release&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\Miscellaneous\Text_eng_NET2full_step -runType minorrelease -updateReason &quot;Regularise repository structure&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -4486,6 +4478,24 @@
       <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
       <module name="TextConverter.main" />
       <option name="PROGRAM_PARAMETERS" value="-rootFolder Miscellaneous\Text_grc_THGNT -runType majorRelease -updateReason &quot;Add Pericope Adulterae&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MiscellaneousCopyright_ger_Sch" type="JetRunConfigurationType" folderName="MiscellaneousCopyright">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\MiscellaneousCopyright\Schlachter\Text_ger_Sch_stepOnlineOnly -runType majorRelease -updateReason &quot;First release in STEP&quot;" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MiscellaneousCopyright_ger_Sch2000" type="JetRunConfigurationType" folderName="MiscellaneousCopyright">
+      <option name="MAIN_CLASS_NAME" value="org.stepbible.textconverter.MainKt" />
+      <module name="TextConverter.main" />
+      <option name="PROGRAM_PARAMETERS" value="-rootFolder C:\Users\Jamie\RemotelyBackedUp\Git\StepTextConversion\Texts\MiscellaneousCopyright\Schlachter\Text_ger_Sch2000_stepOnlineOnly -runType majorRelease -updateReason &quot;First release in STEP&quot;" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -4940,7 +4950,7 @@
       <item itemvalue="Kotlin.BiblicaCopyright_sna_BDSC" />
       <item itemvalue="Kotlin.BiblicaCopyright_spa_NVIC" />
       <item itemvalue="Kotlin.BiblicaCopyright_spa_NVI" />
-      <item itemvalue="Kotlin.BiblicaCopyright_swe_NB" />
+      <item itemvalue="Kotlin.BiblicaCopyright_swe_NUB" />
       <item itemvalue="Kotlin.BiblicaCopyright_swh_NEN" />
       <item itemvalue="Kotlin.BiblicaCopyright_tgl_ASD" />
       <item itemvalue="Kotlin.BiblicaCopyright_tha_TNCV" />
@@ -4950,54 +4960,48 @@
       <item itemvalue="Kotlin.BiblicaCopyright_yom_NWM" />
       <item itemvalue="Kotlin.BiblicaCopyright_yor_BMYO" />
       <item itemvalue="Kotlin.BiblicaOpen_arb_KEH_public" />
-      <item itemvalue="Kotlin.BiblicaOpen_arb_KEH_step" />
-      <item itemvalue="Kotlin.BiblicaOpen_ces_SNC_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_chi_CCBT_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_chi_CCB_publicAndStep" />
+      <item itemvalue="Kotlin.BiblicaOpen_ben_BSS_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_ces_SNC_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_chi_CCBT_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_chi_CCB_public" />
       <item itemvalue="Kotlin.BiblicaOpen_ckb_KSS_public" />
-      <item itemvalue="Kotlin.BiblicaOpen_ekk_PKEK_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_ewe_AL_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_fin_EUUT_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_gaz_HABl_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_gaz_HAHe_publicAndstep" />
-      <item itemvalue="Kotlin.BiblicaOpen_hau_SRK_publicAndstep" />
-      <item itemvalue="Kotlin.BiblicaOpen_heb_HD_publicAndStep" />
+      <item itemvalue="Kotlin.BiblicaOpen_ekk_PKEK_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_ewe_AL_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_fin_EUUT_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_gaz_NCVl_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_gaz_NOCVe_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_hau_SRK_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_heb_HD_public" />
       <item itemvalue="Kotlin.BiblicaOpen_hin_HSS_public" />
-      <item itemvalue="Kotlin.BiblicaOpen_hrv_KOK_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_hun_EIV_publicAndStep" />
+      <item itemvalue="Kotlin.BiblicaOpen_hrv_KOK_public" />
       <item itemvalue="Kotlin.BiblicaOpen_hun_EIV_public" />
-      <item itemvalue="Kotlin.BiblicaOpen_hun_EIV_step" />
-      <item itemvalue="Kotlin.BiblicaOpen_ibo_BIU_publicAndStep" />
+      <item itemvalue="Kotlin.BiblicaOpen_ibo_BIU_public" />
       <item itemvalue="Kotlin.BiblicaOpen_isl_OL_public" />
-      <item itemvalue="Kotlin.BiblicaOpen_isl_OL_step" />
-      <item itemvalue="Kotlin.BiblicaOpen_kan_KCV_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_kik_KGNK_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_lin_MNB_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_lit_JJP_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_lug_LCB_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_luo_NLT_publicAndStep" />
+      <item itemvalue="Kotlin.BiblicaOpen_kan_KSB_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_kik_KGN_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_lin_MNB_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_lit_JJP_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_lug_LCB_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_luo_NLT_public" />
       <item itemvalue="Kotlin.BiblicaOpen_mal_MCV_public" />
       <item itemvalue="Kotlin.BiblicaOpen_nde_BEN_public" />
-      <item itemvalue="Kotlin.BiblicaOpen_nob_ELB_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_nya_CCL_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_pes_PCB_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_pol_PSZ_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_slk_NPK_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_sna_BDSC_publicAndStep" />
+      <item itemvalue="Kotlin.BiblicaOpen_nob_ELB_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_nya_CCL_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_pes_PCB_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_pol_PSZ_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_slk_NPK_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_sna_BDSC_public" />
       <item itemvalue="Kotlin.BiblicaOpen_srp_NSPc_public" />
-      <item itemvalue="Kotlin.BiblicaOpen_srp_NSPc_step" />
       <item itemvalue="Kotlin.BiblicaOpen_srp_NSPl_public" />
-      <item itemvalue="Kotlin.BiblicaOpen_srp_NSPl_step" />
-      <item itemvalue="Kotlin.BiblicaOpen_swh_NEN_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_tam_TCV_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_tsn_LEF_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_tur_TTT_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_twi_WAKNA_publicAndStep" />
+      <item itemvalue="Kotlin.BiblicaOpen_swh_NEN_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_tam_TCV_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_tsn_LEF_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_tur_TTT_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_twi_AKNA_public" />
       <item itemvalue="Kotlin.BiblicaOpen_ukr_NPU_public" />
-      <item itemvalue="Kotlin.BiblicaOpen_ukr_NPU_step" />
-      <item itemvalue="Kotlin.BiblicaOpen_vie_VCB_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_yom_NWM_publicAndStep" />
-      <item itemvalue="Kotlin.BiblicaOpen_yor_YCB_publicAndStep" />
+      <item itemvalue="Kotlin.BiblicaOpen_vie_VCB_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_yom_NWM_public" />
+      <item itemvalue="Kotlin.BiblicaOpen_yor_YCB_public" />
       <item itemvalue="Kotlin.Misc_eng_LSB" />
       <item itemvalue="Kotlin.Misc_en_GW" />
       <item itemvalue="Kotlin.SeedCompanyCopyright_abm_SC_step" />
@@ -5052,6 +5056,8 @@
       <item itemvalue="Kotlin.Misc_grc_LXX_th" />
       <item itemvalue="Kotlin.Misc_grc_SRGNT" />
       <item itemvalue="Kotlin.Misc_grc_THGNT" />
+      <item itemvalue="Kotlin.MiscellaneousCopyright_ger_Sch2000" />
+      <item itemvalue="Kotlin.MiscellaneousCopyright_ger_Sch" />
       <item itemvalue="Kotlin.Test_alf_XXXFootnoteTestXXX_step" />
       <item itemvalue="Kotlin.Test_eng_QQQTest" />
     </list>
@@ -5107,7 +5113,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ContentValidator.kt</url>
-          <line>874</line>
+          <line>864</line>
           <option name="timeStamp" value="761" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
@@ -5142,7 +5148,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/configdata/ConfigData.kt</url>
-          <line>1256</line>
+          <line>1329</line>
           <option name="timeStamp" value="967" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
@@ -5193,18 +5199,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ReversificationFootnoteHandler.kt</url>
-          <line>177</line>
+          <line>178</line>
           <option name="timeStamp" value="1081" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_ReversificationFootnoteHandler.kt</url>
-          <line>155</line>
+          <line>156</line>
           <option name="timeStamp" value="1101" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_BasicValidator.kt</url>
-          <line>151</line>
-          <option name="timeStamp" value="1116" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Dbg.kt</url>
@@ -5217,63 +5218,29 @@
           <option name="timeStamp" value="1123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Dbg.kt</url>
-          <line>606</line>
-          <option name="timeStamp" value="1127" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt</url>
-          <line>80</line>
-          <option name="timeStamp" value="1130" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt</url>
-          <line>50</line>
+          <line>51</line>
           <option name="timeStamp" value="1131" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt</url>
-          <line>33</line>
-          <option name="timeStamp" value="1132" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt</url>
-          <line>58</line>
+          <line>59</line>
           <option name="timeStamp" value="1133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt</url>
-          <line>68</line>
+          <line>69</line>
           <option name="timeStamp" value="1134" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/Main.kt</url>
-          <line>82</line>
-          <option name="timeStamp" value="1135" />
+          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/ReversificationRuleEvaluator.kt</url>
+          <line>257</line>
+          <option name="timeStamp" value="1140" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/support/debug/Logger.kt</url>
-          <line>110</line>
-          <option name="timeStamp" value="1136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_FileProtocol.kt</url>
-          <line>866</line>
-          <option name="timeStamp" value="1145" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/usxinputonly/Usx_Tidier.kt</url>
-          <line>115</line>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/subelements/SE_TableHandler.kt</url>
+          <line>247</line>
           <option name="timeStamp" value="1146" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/org/stepbible/textconverter/utils/X_DataCollection.kt</url>
-          <line>614</line>
-          <properties class="org.stepbible.textconverter.utils.Osis_DataCollection" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1142" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

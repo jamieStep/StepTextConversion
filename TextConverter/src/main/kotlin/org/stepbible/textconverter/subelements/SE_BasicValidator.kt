@@ -121,7 +121,12 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
 
     /**************************************************************************/
     /* Unless we're using our own version of osis2mod, we need to be reasonably
-       well aligned with whatever versification scheme has been selected. */
+       well aligned with whatever versification scheme has been selected.
+
+       At one time I regarded it as an error if the target scheme made no
+       provision for a verse present in the supplied text.  However, on a
+       non-Samification run we _have_ to use a Crosswire scheme even if
+       it's not an ideal fit, so I've had to reduce it to a warning. */
 
     if ("step" != ConfigData["stepOsis2modType"])
     {
@@ -131,22 +136,19 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
         val comparison = BibleStructure.compareWithGivenScheme(bookNo, bibleStructure, scheme)
         comparison.chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { refKey -> Logger.warning(refKey, "Chapter in $schemeName but not in supplied text.") }
         comparison.chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error  (refKey, "Chapter in supplied text but not in $schemeName.") }
-        comparison.versesInTextUnderConstructionButNotInTargetScheme  .forEach { refKey -> Logger.error  (refKey, "Verse in supplied text but not in $schemeName.") }
+        comparison.versesInTextUnderConstructionButNotInTargetScheme  .forEach { refKey -> Logger.warning(refKey, "Verse in supplied text but not in $schemeName.") }
         comparison.versesInTextUnderConstructionOutOfOrder            .forEach { refKey -> Logger.warning (refKey, "Verse out of order.") }
 
         val missingVerses = comparison.versesInTargetSchemeButNotInTextUnderConstruction.toSet()
         val commonlyMissingVerses = BibleAnatomy.getCommonlyMissingVerses().toSet()
-        val reportableMissings = missingVerses - commonlyMissingVerses
-        val nonReportableMissings = commonlyMissingVerses - reportableMissings
+        val unexpectedMissings = missingVerses - commonlyMissingVerses
+        val expectedMissings = missingVerses intersect commonlyMissingVerses
 
-        val missingsAsString = if (missingVerses.isEmpty()) "" else missingVerses.sorted().joinToString(", "){ Ref.rd(it).toString("bcv") }
-        val nonReportableMissingsAsString = if (nonReportableMissings.isEmpty()) "" else ("  (The following verse(s) are absent in many Bibles, and therefore are not of concern: " + nonReportableMissings.sorted().joinToString(", "){ Ref.rd(it).toString() } + ".)")
-
-        if (missingVerses.isNotEmpty())
-        {
-          val missingMsg = "Text lacks verse(s) which target versification scheme expects: $missingsAsString$nonReportableMissingsAsString"
-          Logger.info(missingMsg)
-        }
+        val unexpectedMissingsAsString = if (unexpectedMissings.isEmpty()) "" else "The text lacks the following verse(s) which the target versification scheme expects: " + unexpectedMissings.sorted().joinToString(", "){ Ref.rd(it).toString("bcv") }
+        val expectedMissingsAsString   = if (expectedMissings.isEmpty())   "" else "The text lacks the following verse(s) which the target versification scheme expects.  However, many texts lack these verses, so this is not of particular concern.: " + expectedMissings.sorted().joinToString(", "){ Ref.rd(it).toString() }
+        val msg = (unexpectedMissingsAsString + expectedMissingsAsString).trim()
+        if (msg.isNotEmpty())
+           Logger.info(msg)
       }
 
       Logger.announceAll(true)
@@ -184,10 +186,10 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
       Logger.error("Chapters which are not under a book, or are under the wrong book: " + m_ChaptersWithBadBookAncestor.joinToString(", "){ Ref.rd(it).toString() })
 
     if (m_VersesWithBadChapterAncestor.isNotEmpty())
-      Logger.error("Verses which are not under a chapter, or are under the wrong chapter: " + m_VersesWithBadChapterAncestor.joinToString(", "){ Ref.rd(it).toString() })
+      Logger.error("Verses which are under the wrong chapter: " + m_VersesWithBadChapterAncestor.toSet().joinToString(", "){ Ref.rd(it).toString() })
 
-    if (m_VersesWithBadChapterAncestor.isNotEmpty())
-      Logger.error("Verses which are not under a chapter, or are under the wrong chapter: " + m_VersesWithBadChapterAncestor.joinToString(", "){ Ref.rd(it).toString() })
+    if (m_VersesWithNoChapterAncestor.isNotEmpty())
+      Logger.error("Verses which are not under a chapter: " + m_VersesWithNoChapterAncestor.joinToString(", "){ Ref.rd(it).toString() })
 
     if (m_VersesWhereSidAndEidDoNotAlternate.isNotEmpty())
       Logger.error("Locations where verse sids and eids do not alternate: " + m_VersesWhereSidAndEidDoNotAlternate.joinToString(", "){ Ref.rd(it).toString() })
@@ -230,7 +232,7 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
     val verseNodes = Dom.findNodesByName(chapterNode, m_FileProtocol.tagName_verse(), false)
     verseNodes.forEach { verseNode ->
       if (!Dom.hasAsAncestor(verseNode, chapterNode))
-        m_VersesWithBadChapterAncestor.add(m_FileProtocol.readRef(verseNode[m_FileProtocol.attrName_verseSid()]!!).toRefKey())
+        m_VersesWithNoChapterAncestor.add(m_FileProtocol.readRef(verseNode[m_FileProtocol.attrName_verseSid()]!!).toRefKey())
       else
       {
         val id = if (m_FileProtocol.attrName_verseSid() in verseNode) m_FileProtocol.attrName_verseSid() else m_FileProtocol.attrName_verseEid()
@@ -258,7 +260,10 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
 
     val outOfOrderVerses = dataCollection.getBibleStructure().getOutOfOrderVerses() // I think this will cover chapters too.
     if (outOfOrderVerses.isNotEmpty())
-      softReporter("Locations where verses are out of order: " + outOfOrderVerses.joinToString(", "){ Ref.rd(it).toString() })
+    {
+      val reporter = if (ConfigData.getAsBoolean("stepValidationReportOutOfOrderAsError", "y")) softReporter else Logger::warning
+      reporter("Locations where verses are out of order: " + outOfOrderVerses.joinToString(", "){ Ref.rd(it).toString() })
+    }
 
     if (!dataCollection.getBibleStructure().standardBooksAreInOrder())
       softReporter("OT / NT books are not in order.")
@@ -327,6 +332,7 @@ class SE_BasicValidator (dataCollection: X_DataCollection): SE(dataCollection)
   private val m_ElidedSubverses: MutableList<String> = mutableListOf()
   private val m_ChaptersWithBadBookAncestor: MutableList<RefKey> = mutableListOf()
   private val m_VersesWithBadChapterAncestor: MutableList<RefKey> = mutableListOf()
+  private val m_VersesWithNoChapterAncestor: MutableList<RefKey> = mutableListOf()
   private val m_VersesWhereSidAndEidDoNotAlternate: MutableList<RefKey> = mutableListOf()
   private val m_VersesWhereSidAndEidDoNotMatch: MutableList<RefKey> = mutableListOf()
 

@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.subelements
 
+import org.stepbible.textconverter.support.configdata.TranslatableFixedText
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
@@ -199,14 +200,18 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
 
     /**************************************************************************/
-    /* Replace all sids by visible verse-boundary markers. */
+    /* Replace all sids by visible verse-boundary markers.  I'm not really sure
+       what to do about the verse-boundary markup.  I suspect the actual
+       numerals need to be in English so they look like verse numbers.  But
+       the enclosing markup (eg parens) may need to be converted to vernacular.
+       Can't achieve that combination at present. */
 
     var lastSidWithinTable: String? = null
     fun replaceVerseWithBoundaryMarker (sid: Node)
     {
       val sidText = sid[m_FileProtocol.attrName_verseSid()]!!
       lastSidWithinTable = sidText
-      val markerText = Translations.stringFormat(Language.Vernacular, "V_tableElision_verseBoundary", m_FileProtocol.readRef(sidText))
+      val markerText = TranslatableFixedText.stringFormat(Language.Vernacular, "V_tableElision_verseBoundary", m_FileProtocol.readRef(sidText))
       val markerNode = Dom.createNode(m_RootNode.ownerDocument, "<_X_verseBoundaryWithinElidedTable/>")
       markerNode.appendChild(Dom.createTextNode(m_RootNode.ownerDocument, markerText))
       Dom.insertNodeAfter(sid, markerNode)
@@ -214,6 +219,7 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
     }
 
     table.findNodesByName(m_FileProtocol.tagName_verse()).forEach { replaceVerseWithBoundaryMarker(it) }
+
 
 
     /**************************************************************************/
@@ -234,10 +240,12 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
       m_FileProtocol.updateVerseSid(owningVerseSid, startOfElisionRef.toRefKey(), m_FileProtocol.readRef(lastSidWithinTable!!).toRefKey())
       val range = RefRange(startOfElisionRef, m_FileProtocol.readRef(lastSidWithinTable!!))
       range.getLowAsRef().setV(range.getLowAsRef().getV() + 1)
-      val owningVerseFootnote = m_FileProtocol.makeFootnoteNode(m_RootNode.ownerDocument, startOfElisionRef.toRefKey(), Translations.stringFormatWithLookup("V_tableElision_owningVerse", range))
+      val owningVerseFootnote = m_FileProtocol.makeFootnoteNode(m_RootNode.ownerDocument, startOfElisionRef.toRefKey(), TranslatableFixedText.stringFormatWithLookup("V_tableElision_owningVerse", range))
       if (null != owningVerseFootnote)
         Dom.insertNodeAfter(owningVerseSid, owningVerseFootnote)
     }
+
+    Dbg.d(table.ownerDocument)
   }
 
 
@@ -284,6 +292,7 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
       owningVerseSid = allNodesInTable[ix]
       Dom.deleteNode(owningVerseSid)
       Dom.insertNodeBefore(table, owningVerseSid)
+      NodeMarker.setOriginalId(owningVerseSid, owningVerseSid[m_FileProtocol.attrName_verseSid()]!!)
       NodeMarker.setTableOwnerType(owningVerseSid, "wasFirstVerseInsideTable")
       return owningVerseSid
     }

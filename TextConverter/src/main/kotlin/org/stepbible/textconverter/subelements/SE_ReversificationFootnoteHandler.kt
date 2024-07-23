@@ -1,6 +1,7 @@
 package org.stepbible.textconverter.subelements
 
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.configdata.TranslatableFixedText
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.RefCollection
@@ -147,13 +148,13 @@ class SE_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
       if (null != alternativeRefCollection)
       {
         val basicContent = if (calloutDetails.alternativeRefCollectionHasEmbeddedPlusSign)
-          alternativeRefCollection.getLowAsRef().toString("a") + Translations.stringFormatWithLookup("V_reversification_alternativeReferenceEmbeddedPlusSign") + alternativeRefCollection.getHighAsRef().toString("a")
+          alternativeRefCollection.getLowAsRef().toString("a") + TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferenceEmbeddedPlusSign") + alternativeRefCollection.getHighAsRef().toString("a")
         else if (calloutDetails.alternativeRefCollectionHasPrefixPlusSign)
-          Translations.stringFormatWithLookup("V_reversification_alternativeReferencePrefixPlusSign") + alternativeRefCollection.toString("a")
+          TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferencePrefixPlusSign") + alternativeRefCollection.toString("a")
         else
           alternativeRefCollection.toString("a")
 
-        val textNode = Dom.createTextNode(document, Translations.stringFormatWithLookup("V_reversification_alternativeReferenceFormat", basicContent))
+        val textNode = Dom.createTextNode(document, TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferenceFormat", basicContent))
         val containerNode = Dom.createNode(document, "<_X_reversificationCalloutAlternativeRefCollection/>")
         containerNode.appendChild(textNode)
         res.add(containerNode)
@@ -184,7 +185,7 @@ class SE_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
       if (wantVisibleSourceVerseDetails)
       {
         val basicContent = sourceRefCollection.toString("a")
-        val altVerseNumber = Translations.stringFormatWithLookup("V_reversification_alternativeReferenceFormat", basicContent)
+        val altVerseNumber = TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferenceFormat", basicContent)
         val textNode = Dom.createTextNode(document, altVerseNumber)
         val containerNode = Dom.createNode(document, "<_X_reversificationCalloutSourceRefCollection/>")
         containerNode.appendChild(textNode)

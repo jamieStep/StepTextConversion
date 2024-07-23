@@ -3,13 +3,13 @@ package org.stepbible.textconverter.support.configdata
 
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
-import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.iso.IsoLanguageCodes
 import org.stepbible.textconverter.support.iso.Unicode
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
+import org.stepbible.textconverter.support.shared.Language
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.io.*
 import java.nio.file.Paths
@@ -350,193 +350,263 @@ object ConfigData
   /****************************************************************************/
 
   /****************************************************************************/
-  /* I use a naming convention for root folders which is described below.
-     From this I need to extract various information very early on, because a
-     lot of other things rely upon it (including the general loading of config
-     information -- $include statements may be tailored to the particular
-     circumstances which are encoded within the root folder name).
+  /* You need to store the data for each module under a folder whose name
+     follows certain conventions.  The conventions matter because I extract
+     information from the folder name.  I do this extraction here in two passes.
 
-     In fact, I need to do this in two passes.  The first, handled by
-     extractDataFromRootFolderName, extracts basic information which may be
-     needed when loading config data.  The second, handled by
-     generateModuleName, cannot be run until we have read the config data
-     and checked certain settings.  Only once we have carried out this second
-     analysis are we in a position to determine the actual module name to be
-     used: the first part gives us an initial stab, but the second part may
-     alter this.
+     The first is handled by extractDataFromRootFolderName, which extracts basic
+     information which may be needed when loading config data.
 
-     Given this extensive preamble, it will probably already be apparent that
-     this is revoltingly complicated, so prepare for a long explanation
+     The second, handled by generateModuleName, gives the actual module name,
+     but cannot be run until significantly later in proceedings.
 
 
 
      Root folder name
      ================
 
-     The root folder name may come in one of two different formats (both of
-     which are prefixed by Text_, which I have omitted below):
+     As I say, the name you choose for the root folder has to follow certain
+     conventions.
 
-       deuHFA:     That's the 3-character ISO language code, followed by the
-                   abbreviated form of the Bible name.
+     All names should start 'Text_ccc_AbBr', where ccc is the 3-character ISO
+     language code, in lower case, and AbBr is an abbreviated name for the text,
+     and uses whatever uppercase / lowercase combination may seem appropriate.
 
-       deuHFA_xx:  That's the 3-character ISO language code, followed by the
-                   abbreviated form of the Bible name, followed by a suffix
-                   (shown here as being two characters, although I'm not sure
-                   it's always two).  This form is used only for backward
-                   compatibility -- we have some existing modules which have
-                   a suffix which we need to retain.
+     Some legacy modules have a suffix -- eg '_th'.  Where this is the case,
+     you should give that suffix next (including the preceding underscore).
 
-       ..._public: Either of the two forms above may have _public appended to
-                   them.  This says that the module is regarded as open access.
-                   It will not be encrypted, and nor will it be subject to
-                   reversication-related restrucutring or to what we have
-                   called 'samification'.
+     And then after this, you may give an additional suffix, again preceded
+     by an underscore -- '_public' for '_onlineOnly' for modules which must
+     not be made available offline.
 
-     How you determine the language code and abbreviated name will differ
-     from one text to another.  WIth texts supplied by DBL, the metadata.xml
-     file normally gives you all the information you need.  With texts from
-     other sources, you may need to look elsewhere.
+     You can optionally also give '_step' for modules which can be used only
+     within STEP, although this is the default, and is therefore optional.
 
-     There are a few points to make here:
+     A few examples:
 
-     - Give the language code as three characters, all lower-case.  ISO supports
-       alternative language codes for some languages.  My experience of DBL
-       texts to date is that they normally use the code which ISO prefers.
-       Unfortunately we _don't_ always do so -- we have historical modules
-       which have used the non-preferred code, and for compatibility we need to
-       continue doing that.  There is no need to worry about this -- just use
-       the code which appears in the metadata (where you _have_ suitable
-       metadata, as is the case with DBL), and the processing will convert it
-       if necessary.
+       Text_eng_KJV_public: An English language text with the abbreviated name
+         'KJV', which can be turned into a publicly available module.  (By this
+         I mean that we are free to generate a module which can then be offered
+         in our repository for use even outside of STEP.)
 
-     - Again referring to the DBL metadata, which is the main thing I have
-       worked with to date, the abbreviated name should be the vernacular form
-       where this is available and is in Roman characters, or failing that
-       the English version.  Follow the capitalisation supplied.  (If you
-       have to make up an abbreviation for yourself, try to keep it compact
-       -- it is used where screen real-estate is at a premium.)
+       Text_ger_HFA or Text_ger_HFA_step: A German language text with the
+         abbreviated name HFA which must give rise to a module which is used
+         only within STEP.
+
+       Text_ger_XyZ_onlineOnly: A German language text with the abbreviated name
+         XyZ, where permissions limit us to creating only a STEP-internal
+         version which we are not permitted to make available in offline STEP.
 
 
 
-     Module names
-     ============
+     Language code
+     -------------
 
-     In essence, module names follow the root folder name, so typically they
-     will look like FraBDS or FraBDS_th (the latter if historically we have
-     used a _th suffix with this text).
+     The language code should be the three character ISO code, all lowercase.
+     Some languages have more than one ISO code, and here we normally have our
+     own preference -- 'ger' rather than 'deu' for instance.  Note that where
+     this is the case, our preference may not always reflect either the ISO
+     preference or the code preferred by the translators.
 
-     The name starts with the language code, determined as follows:
-
-     - We start on the assumption that we will use the code as specified.
-
-     - Except that if the code is one where ISO supports alternative codes and
-       we have chosen in the past to use an alternative, we use our alternative
-       instead.  For example the 'deu' in the examples above is replaced by
-       'ger'.
-
-     - Except that if the code is eng or one of the codes for the ancient
-       languages ("grc" or "hbo"), we suppress the code altogether.
-
-     - And if the abbreviated name is one of the ones in the specialNaming
-       structure below, then again we suppress the language code.
-
-     - If, after all of this, we still have a language code, we upper-case
-       the first letter only.
+     At present we have not given any consideration to how to handle things if
+     it is ever necessary to hve a country-specific language code (eg Latin
+     American Spanish).
 
 
-     So much for the language code portion of the module name.  Moving on
-     to the abbreviated name ...
 
-     - As indicated above, if we are supplied with a vernacular abbreviated name
-       and it is in Roman characters, we use that.  Otherwise we use the English
-       vernacular name.  Either way, we follow the capitalisation supplied to
-       us.
+     Abbreviated name
+     ----------------
 
-     - Except that if the abbreviated name appears in the specialNaming list,
-       then we use the abbreviation specified there instead.
+     This is complicated.
+
+     If we are given an abbreviated name (as is the case with DBL, where the
+     abbreviation is given in the metadata), we normally go with what we are
+     given -- the vernacular abbreviation if that exists and is in Latin
+     characters, or else the English abbreviation.
+
+     There are exceptions to this, however:
+
+     - Most / all of the texts we have seen from the SeedCompany use the
+       language code as the abbreviated name for the text.  Where this is
+       the case, we give the abbreviated name as 'SC' for SeedCompany.
+
+     - Ditto ULB texts.  Here we give the abbreviated name as ULB.
+
+     - Biblica have a collection of copyright texts (where we follow the
+       initial rule above, and take the abbreviation straight from the
+       metadata), and a collection of open access texts.  There is a lot of
+       overlap between the two, and where this is the case I imagine
+       ultimately we will move to using the open access version.  Pro tem,
+       though, the open access texts usually have an 'O' (for Open) in the
+       abbreviated name (and an equivalent letter in the vernacular form),
+       which we don't want.  Where a corresponding copyright version exists,
+       therefore, we take the abbreviation from that for use with the open
+       access version.  Where there is no corresponding copyright version,
+       I try to use Google Translate to help me work out which letter to
+       remove.
 
 
-     The combined languageCode+abbreviation are followed by the suffix if the
-     root folder name had one.  Note, though, that the optional _public prefix
-     is _not_ retained -- we simply record here the fact that it existed, so
-     that later processing can proceed appropriately.
+     This still leaves some cases where we have no abbreviation (because one
+     has not been supplied); or where the abbreviation looks to have been a
+     typo; or where the abbreviation duplicates the language code but is not
+     covered by the exceptions above.
 
-     If we are specifically building a module for evaluation purposes (and
-     _only_ then), the module name has a further suffix added, recording the
-     fact that it is for evaluation only, and giving a time / date stamp, so
-     that multiple copies can be loaded into offline STEP at the same time
-     if necessary.  This suffix is handled by generateModuleName, because we
-     need to have read the config data before we are in a position to decide
-     whether it is needed.
+     Here, we have to work something out for ourselves.  bible.com may help,
+     or open.bible, but it will be a case of a fair bit of spade work.
+
+     Oh yes, and finally there may be a few odd ones where the code below
+     contains a mapping to force the abbreviation to the 'right' thing because
+     historically we haven't properly followed our own rules, and can't afford
+     to start doing so now.
+
+
+
+     Module and file names -- STEP-internal
+     ======================================
+
+     Probably best done by example.
+
+     Text_fra_BDS gives rise to a MODULE called FraBDS.  This is true also of
+     Text_fra_BDS_step -- as mentioned above, the _step is optional, because the
+     default is that modules are intended for use only within STEP.  And it is
+     true too of Text_fra_BDS_onlineOnly.
+
+     Note that the language code is converted to uppercase-lowercase-lowercase.
+
+     The language code is suppressed on English language and ancient language
+     texts.
+
+     Modules are held in a zip file.  The zip file has a name of the form
+     <moduleName>.zip, where <moduleName> duplicates the module name exactly.
+
+     The Sword config file appears within this zip file.  Its name is of the
+     form <lcModuleName>.conf, where lcModuleName is the module name, forced to
+     lowercase.  (This is not a complication of our own choosing: it is a
+     requirement specified by Crosswire.)
+
+     The first 'active' line of the Sword config file is of the form
+     [<moduleName>].  Here moduleName is the name of the module _not_ forced to
+     lowercase.
+
+     All of the files associated with the module are collected together into a
+     file destined for our repository.  The name of this file is either
+
+       forRepository_<moduleName>_S.zip or
+       forRepository_<moduleName>_S_onlineUsageOnly.zip
+
+     where the _S indicates that the module is for use only within STEP, and the
+     onlineOnly means what it looks as though it means.
+
+
+
+     Module and file names -- Public
+     ===============================
+
+     These work pretty much as above, but with a few minor exceptions:
+
+     - The language code is never suppressed.
+
+     - The language code is always followed by an underscore in the module name.
+       (This gives us a subtle means of distinguishing public and STEP-internal
+       modules: the public ones have an underscore as their fourth character.)
+
+     - The repository files have names ending in _P (for Public) rather than _S.
   */
 
   fun extractDataFromRootFolderName ()
   {
     /**************************************************************************/
-    val C_specialNaming =
+    val C_SpecialNaming =
       listOf("ArbKEH" to "NAV",
-             "ChiCCB" to "CCB",
-              "PesPCB" to "FCB",
-               "PorNVI" to "PNVI",
-                "RonNTR" to "NTLR",
-                 "RusNRT" to "NRT",
-                  "SpaNVI" to "NVI",
-                   "SwhNEN" to "Neno")
+              "ChiCCB" to "CCB",
+               "PesPCB" to "FCB",
+                "PorNVI" to "PNVI",
+                 "RonNTR" to "NTLR",
+                  "RusNRT" to "NRT",
+                   "SpaNVI" to "NVI",
+                    "SwhNEN" to "Neno")
 
 
 
     /**************************************************************************/
-    var moduleName = FileLocations.getRootFolderName().replace("Text_", "")
-    val lastBit = moduleName.split("_").last().lowercase()
-    var targetAudience = ""
-    if ("public" in lastBit) targetAudience += "P"
-    if ("step" in lastBit) targetAudience += "S"
-    if (targetAudience.isEmpty())
-      targetAudience = "S"
-    else
-      moduleName = moduleName.substring(0, moduleName.lastIndexOf("_"))
+    val parsedFolderName = "Text_(?<languageCode>...)_(?<abbreviation>[^_]+)(_(?<rest>.*)?)?".toRegex().matchEntire(FileLocations.getRootFolderName())
+    var languageCode = canonicaliseLanguageCode(parsedFolderName!!.groups["languageCode"]!!.value)
+    var abbreviatedName = parsedFolderName.groups["abbreviation"]!!.value
+    val rest = parsedFolderName.groups["rest"]?.value
+    var legacySuffix = ""
+    var operationalSuffix = ""
 
-
-    put("stepTargetAudience", targetAudience, false)
+    if (null != rest)
+    {
+      val x = rest.split("_")
+      if (2 == x.size)
+      {
+        legacySuffix = x[0]
+        operationalSuffix = x[1].lowercase()
+      }
+      else
+      {
+        val lc = x[0].lowercase()
+        if ("step" in lc || "onlineonly" in lc || "public" in lc)
+        {
+          operationalSuffix = lc
+          legacySuffix = ""
+        }
+        else
+          legacySuffix = x[0]
+      }
+    }
 
 
 
     /**************************************************************************/
-    /* Language code is first 3 characters.  But it's a bit more complicated
-       than that: certain languages have two alternative codes, so this selects
-       the one we've decided to standardise on; and if, after that, we end up
-       with English or one of the ancient language codes, we drop the code
-       altogether. */
-
-    extractLanguageCodeFromModuleName()
-    var languageCode = getInternal("stepLanguageCode3Char", false)!!
-    moduleName = moduleName.substring(4)
-    if (languageCode in listOf("eng", "grc", "hbo")) languageCode = "" // This is the code we use within the module name.
+    val isPublic = "public" in operationalSuffix
+    val targetAudience = if (isPublic) "P" else "S"
+    put("stepTargetAudience", targetAudience, true)
+    put("stepOnlineUsageOnly", if ("onlineonly" in operationalSuffix) "yes" else "no", true)
 
 
 
     /**************************************************************************/
-    /* Abbreviated name is whatever follows the language code (which we have
-       now removed from the copy of the module name) -- everything from there
-       up to the end of the string, or the next underscore if there is one.
+    /* Legacy code -- can't recall why I had this.
 
-       Except again, I try to force matters here if I can.  If
-       stepVernacularAbbreviation is defined and is made up entirely of
-       Roman characters, then I use that in preference.  Otherwise if
-       stepEnglishAbbreviation is defined, I use that.  Only if neither of
-       these rides to the rescue do I trust the value which appears within
-       the module name. */
+       By this point, I've extracted the abbreviated name from the folder name.
+       However, it appears that in some cases, the folder name may be wrong,
+       and I wanted to have the opportunity to override it.
 
-    var abbreviatedName = if ("_" in moduleName) moduleName.split("_")[0] else moduleName
-    moduleName = moduleName.substring(abbreviatedName.length)
+       I'm assuming I may need to retain this -- and that at the least, that
+       retaining it will have no adverse consequences. */
+
     val x = get("stepVernacularAbbreviation")
     abbreviatedName = if (null != x && StepStringUtils.isAsciiCharacters(x)) x else get("stepEnglishAbbreviation") ?: abbreviatedName
 
 
 
     /**************************************************************************/
-    moduleName = StepStringUtils.sentenceCaseFirstLetter(languageCode) + abbreviatedName + moduleName
-    moduleName = C_specialNaming.find { it.first == moduleName } ?.second ?: moduleName
+    if (legacySuffix.isNotEmpty()) legacySuffix = "_$legacySuffix"
+    languageCode = StepStringUtils.sentenceCaseFirstLetter(languageCode)
+
+    val revisedAbbreviation = C_SpecialNaming.find { it.first == languageCode + abbreviatedName } ?.second
+    if (null != revisedAbbreviation)
+      abbreviatedName = revisedAbbreviation
+
+
+
+    /**************************************************************************/
+    val moduleName: String =
+      if (isPublic)
+        languageCode + "_" + abbreviatedName + legacySuffix
+      else
+      {
+        if (languageCode in listOf("Eng", "Grc", "Hbo"))
+          languageCode = ""
+
+        languageCode + abbreviatedName + legacySuffix
+      }
+
+
+
+    /**************************************************************************/
     delete("stepModuleName"); put("stepModuleName", moduleName, force = true)
   }
 
@@ -697,15 +767,13 @@ object ConfigData
 
 
   /****************************************************************************/
-  /* See extractDataFromModuleName for details of format. */
-
-  private fun extractLanguageCodeFromModuleName ()
+  private fun canonicaliseLanguageCode (rawLanguageCode: String): String
   {
-    val moduleName = FileLocations.getRootFolderName().replace("Text_", "")
-    val languageCode = IsoLanguageCodes.get3CharacterIsoCode(moduleName.substring(0, 3))
+    val languageCode = IsoLanguageCodes.get3CharacterIsoCode(rawLanguageCode)
     delete("stepLanguageCode"); put("stepLanguageCode", languageCode, force = true)
     delete("stepLanguageCode3Char"); put("stepLanguageCode3Char", languageCode, force = true)
     delete("stepLanguageCode2Char"); put("stepLanguageCode2Char", IsoLanguageCodes.get2CharacterIsoCode(languageCode), force = true)
+    return languageCode
   }
 
 
@@ -1110,6 +1178,11 @@ object ConfigData
     fun put (key: String, theValue: String, force: Boolean)
     {
       /************************************************************************/
+      //Dbg.d("$key = $theValue (Force=$force)")
+
+
+
+      /************************************************************************/
       /* If this is a 'force' setting and we already have a force setting, we
          retain the existing one. */
 
@@ -1260,7 +1333,7 @@ object ConfigData
 
 
     /**************************************************************************/
-    private val C_Pat_ExpandReferences = "(?i)(?<at>(@|@getExternal|@choose))\\(\\.(\\d\\d\\d)\\.(?<content>.*?)\\.\\3\\.\\)(?<additionalProcessing>(\\.#\\w+))?".toRegex()
+    private val C_Pat_ExpandReferences = "(?i)(?<at>(@|@getExternal|@choose|@getTranslation))\\(\\.(\\d\\d\\d)\\.(?<content>.*?)\\.\\3\\.\\)(?<additionalProcessing>(\\.#\\w+))?".toRegex()
     private val C_Pat_ExpandReferences_AdditionalProcessing = "(?<additionalProcessing>(\\.#\\w+))".toRegex()
 
 
@@ -1279,11 +1352,13 @@ object ConfigData
       val C_Evaluate = 1
       val C_Choose = 2
       val C_GetExternal = 3
+      val C_GetTranslation = 4
       val atType =
-        when (at)
+        when (at.lowercase())
         {
           "@" -> C_Evaluate
           "@choose" -> C_Choose
+          "@gettranslation" -> C_GetTranslation
           else -> C_GetExternal
         }
       //Dbg.d(C_Choose == atType)
@@ -1299,13 +1374,28 @@ object ConfigData
       /* Split off the default, if any. */
 
       val (line, dflt) = if ("=" in theLine) theLine.split("=").map { it.trim() } else listOf(theLine, null)
+      var args = splitStringAtCommasOutsideOfParens(line!!)
+
+
+
+      /************************************************************************/
+      /* Deal with getTranslation, which is of the form
+
+           @getTranslation(key)   OR
+           @getTranslation(key, eng)
+
+         I don't really do any checking here: if there is more than one
+         argument, I simply assume that it is the second form above.
+      */
+
+      if (C_GetTranslation == atType)
+        return TranslatableFixedText.lookupText(if (1 == args.size) Language.Vernacular else Language.English, args[0])
 
 
 
       /************************************************************************/
       /* If this is a getExternal, the first element is the file selector. */
 
-      var args = splitStringAtCommasOutsideOfParens(line!!)
       var fileSelector: String? = null
       if (C_GetExternal == atType)
       {
@@ -1391,7 +1481,7 @@ object ConfigData
       /************************************************************************/
       /* Nothing to do unless the string contains "@(" or "@getExternal(". */
 
-      if ("@(" !in line && "@getExternal(" !in line && "@choose(" !in line)
+      if ("@(" !in line && "@getExternal(" !in line && "@choose(" !in line && "@getTranslation(" !in line)
         return line
 
 
@@ -1416,7 +1506,7 @@ object ConfigData
 
       /************************************************************************/
       /* Called when we have an @-thing to expand.  Parses the @-thing to
-         determine whether it's @() or @getExternal() and to obtain its content.
+         determine if it's @(), @getExternal(), etc and to obtain its content.
          Removes from the content the markers introduced by
          StepStringUtils.markBalancedParens because this method may be called
          recursively on the content, and we don't want the markers to confuse

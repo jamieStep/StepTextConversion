@@ -1,6 +1,7 @@
 package org.stepbible.textconverter.subelements
 
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.configdata.TranslatableFixedText
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
@@ -90,15 +91,18 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
 //    rootNode.findNodesByName(m_FileProtocol.tagName_chapter()).forEach { chapterNode ->
 //      val verses = chapterNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid())
 //      for (ix in verses.indices)
-////        if (m_FileProtocol.readRefCollection(verses[ix], m_FileProtocol.attrName_verseSid()).isRange())
+//        if (m_FileProtocol.readRefCollection(verses[ix], m_FileProtocol.attrName_verseSid()).isRange())
 //        if ('-' in verses[ix][m_FileProtocol.attrName_verseSid()]!!)
 //          processElision(verses[ix], if (ix + 1 >= verses.size) null else verses[ix + 1], chapterNode)
 
 
-    val verses = rootNode.findNodesByName(m_FileProtocol.tagName_verse())
-    for (ix in verses.indices)
-      if ('-' in verses[ix][m_FileProtocol.attrName_verseSid()]!!)
-        processElision(verses[ix], if (ix + 1 >= verses.size) null else verses[ix + 1], Dom.findAncestorByNodeName(verses[ix], m_FileProtocol.tagName_chapter())!!)
+    val chapters = rootNode.findNodesByName(m_FileProtocol.tagName_chapter())
+    chapters.forEach { chapter ->
+      val verses = chapter.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid())
+      for (ix in verses.indices)
+        if ('-' in verses[ix][m_FileProtocol.attrName_verseSid()]!!)
+          processElision(verses[ix], if (ix + 1 >= verses.size) null else verses[ix + 1], Dom.findAncestorByNodeName(verses[ix], m_FileProtocol.tagName_chapter())!!)
+    }
   }
 
 
@@ -111,13 +115,12 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
 
   /****************************************************************************/
-  private fun addTemporaryAttributesToMasterVerse (verse: Node, elisionType: String)
+  private fun addTemporaryAttributesToMasterVerse (verse: Node, elisionType: String, origSidAsString: String, nRefKeys: Int)
   {
-    val sidAsString = verse[m_FileProtocol.attrName_verseSid()]!!
-    val rc = m_FileProtocol.readRefCollection(sidAsString)
+    val rc = m_FileProtocol.readRefCollection(origSidAsString)
     NodeMarker.setOriginalId(verse, rc.toString()) // Force to USX format.
     NodeMarker.setElisionType(verse, elisionType)
-    NodeMarker.setMasterForElisionOfLength(verse, "" + (rc.getAllAsRefs().size + 1))
+    NodeMarker.setMasterForElisionOfLength(verse, "" + nRefKeys)
   }
 
 
@@ -217,7 +220,8 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
     /**************************************************************************/
     val refKeys = getRefKeysForRefRange(verse[m_FileProtocol.attrName_verseSid()]!!)
-    IssueAndInformationRecorder.elidedVerse(refKeys, verse[m_FileProtocol.attrName_verseSid()]!!)
+    val origSid = verse[m_FileProtocol.attrName_verseSid()]!!
+    IssueAndInformationRecorder.elidedVerse(refKeys, origSid)
 
 
 
@@ -246,6 +250,8 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
        if (null == nextVerse)
          Dom.deleteNode(insertionPoint!!)
+
+       m_FileProtocol.updateVerseSid(verse, refKeys.first())
     }
 
 
@@ -259,20 +265,21 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
         Dom.insertNodesBefore(verse, nodeList)
         if (refKeys.size > 2) // No footnote on master verse if there is only one other verse in the elision.
         {
-          val footnote = m_FileProtocol.makeFootnoteNode(verse.ownerDocument, m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!).getLowAsRefKey(), Translations.stringFormat(Language.Vernacular, "V_elision_containsTextFromOtherVerses", m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!)))
+          val footnote = m_FileProtocol.makeFootnoteNode(verse.ownerDocument, m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!).getLowAsRefKey(), TranslatableFixedText.stringFormat(Language.Vernacular, "V_elision_containsTextFromOtherVerses", m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!)))
           if (null != footnote)
           {
             Dom.insertNodeAfter(verse, footnote)
             NodeMarker.setAddedFootnote(verse)
           }
         }
+
+       m_FileProtocol.updateVerseSid(verse, refKeys.last())
      }
 
 
 
     /**************************************************************************/
-    addTemporaryAttributesToMasterVerse(verse, NodeMarker.getElisionType(verse) ?: "elision")
-    m_FileProtocol.updateVerseSid(verse, refKeys.last())
+    addTemporaryAttributesToMasterVerse(verse, NodeMarker.getElisionType(verse) ?: "elision", origSid, refKeys.size)
   }
 
 

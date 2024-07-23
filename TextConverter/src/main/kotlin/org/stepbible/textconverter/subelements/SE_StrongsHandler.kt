@@ -5,6 +5,7 @@ import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.contains
 import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.miscellaneous.set
 import org.stepbible.textconverter.utils.*
@@ -62,8 +63,11 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
   {
     Dbg.reportProgress("Handling Strongs for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     m_CorrectStrong = ConfigData.getAsBoolean("stepCorrectStrongs", "yes")
-    val strongs = Dom.getAllNodesBelow(rootNode).filter { m_FileProtocol.isStrongsNode(it) }
+    val strongs = Dom.getAllNodesBelow(rootNode)
+      .filter { m_FileProtocol.isStrongsNode(it) }
+      .filter { m_FileProtocol.attrName_strong() in it }
     strongs.forEach { doStrong(it) }
+    collapseNestedStrongs(strongs)
     if (strongs.isNotEmpty()) IssueAndInformationRecorder.setStrongs()
   }
 
@@ -78,6 +82,52 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  /* Some texts nest Strongs. */
+
+  private fun collapseNestedStrongs (strongs: List<Node>)
+  {
+    /**************************************************************************/
+    val nodeMap = IdentityHashMap<Node, Boolean>()
+    strongs.forEach { nodeMap[it] = true }
+
+
+
+    /**************************************************************************/
+    for (node in nodeMap.keys)
+    {
+      if (!nodeMap[node]!!)
+        continue
+
+      val children: MutableList<Node> = mutableListOf()
+      var p = node
+      while (true)
+      {
+        val firstChild = p.firstChild
+        if (m_FileProtocol.tagName_strong() != Dom.getNodeName(firstChild))
+          break
+
+        if (m_FileProtocol.attrName_strong() !in firstChild)
+          break
+
+        children.add(firstChild)
+        nodeMap[firstChild] = false
+        p = firstChild
+      }
+
+      if (children.isEmpty())
+        continue
+
+      var revisedStrong = node[m_FileProtocol.attrName_strong()]!!
+      children.forEach { revisedStrong += " " + it[m_FileProtocol.attrName_strong()]!! }
+      node[m_FileProtocol.attrName_strong()] = revisedStrong
+      children.reversed().forEach { descendant -> Dom.promoteChildren(descendant); Dom.deleteNode(descendant) }
+    }
+
+//    Dbg.d(allNodes[0].ownerDocument)
+  } // fun
+
 
   /****************************************************************************/
   /* Processes a single Strongs node. */

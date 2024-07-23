@@ -218,10 +218,7 @@ object FileLocations
    * @param filePath If this starts with $jarResources/, it
    *   is assumed to give the name of a file within the resources section of
    *   the current JAR.  Otherwise it is taken to be a full path name.
-   * 
-   * @param fileName Used where the path required is given relative to
-   *   another file.
-   * 
+   *
    * @return Stream.
    */
   
@@ -249,7 +246,7 @@ object FileLocations
     
     val file = File(expandedFilePath)
     val fileName = file.name
-    var folderPath = Paths.get(file.parent).toString()
+    val folderPath = Paths.get(file.parent).toString()
     val path = StepFileUtils.getSingleMatchingFileFromFolder(folderPath, ("\\Q$fileName\\E").toRegex()) ?: return null
     return FileInputStream(path.toString())
   }
@@ -356,9 +353,9 @@ object FileLocations
 
   fun getEncryptionAndBespokeOsisToModDataRootFolder ()= Paths.get(getInternalSwordFolderPath(), "step").toString()
   private fun getEncryptionDataFolder () = Paths.get(getEncryptionAndBespokeOsisToModDataRootFolder(), "jsword-mods.d").toString()
-  fun getEncryptionDataFilePath () = Paths.get(getEncryptionDataFolder(), "${getModuleName()}.conf").toString()
+  fun getEncryptionDataFilePath () = Paths.get(getEncryptionDataFolder(), "${getModuleName().lowercase()}.conf").toString()
 
-  fun getSwordConfigFilePath (): String { return Paths.get(getSwordConfigFolderPath(), "${getModuleName()}.conf").toString() }
+  fun getSwordConfigFilePath (): String { return Paths.get(getSwordConfigFolderPath(), "${getModuleName().lowercase()}.conf").toString() }
   fun getSwordConfigFolderPath (): String = Paths.get(getInternalSwordFolderPath(), "mods.d").toString()
 
   fun getSwordTemplateConfigFilePath () = "\$jarResources/swordTemplateConfigFile.conf"
@@ -380,13 +377,16 @@ object FileLocations
   fun getTextFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), "textFeatures.json").toString()
 
   private fun getOsis2ModSupportFolderPath() = Paths.get(getEncryptionAndBespokeOsisToModDataRootFolder(), "versification").toString()
-  fun getOsis2ModSupportFilePath() = Paths.get(getOsis2ModSupportFolderPath(), getModuleName() + ".json").toString()
+  fun getOsis2ModSupportFilePath() = Paths.get(getOsis2ModSupportFolderPath(), getModuleName().lowercase() + ".json").toString()
 
 
   /****************************************************************************/
   /* Miscellaneous. */
 
+  fun getVernacularTextDatabaseFilePath () = ConfigData["stepVernacularTranslationsDatabasePath"]!! // Should be defined in the STEP environment variable.
+  fun getIsoLanguageCodesFilePath () = "\$jarResources/isoLanguageCodes.tsv"
   fun getOsis2modVersificationDetailsFilePath () = "\$jarResources/osis2modVersification.txt"
+  fun getTranslationsDatabasePath () = ConfigData["stepTranslationsDatabasePath"]!!
 
 
 
@@ -398,6 +398,7 @@ object FileLocations
     "forRepository_" +
     ConfigData["stepModuleName"]!! + "_" +
     ConfigData["stepTargetAudience"]!! +
+    (if (ConfigData.getAsBoolean("stepOnlineUsageOnly")) "_onlineUsageOnly" else "") +
     ".zip"
 
 

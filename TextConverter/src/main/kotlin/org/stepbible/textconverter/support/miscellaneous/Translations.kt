@@ -2,7 +2,6 @@
 package org.stepbible.textconverter.support.miscellaneous
 
 import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.StepStringFormatter.convertNameAndValueListToMap
 import org.stepbible.textconverter.support.shared.Language
@@ -117,6 +116,7 @@ object Translations
   fun stringFormatWithLookup (key: String, vararg otherBits: Any): String
   {
     /**************************************************************************/
+    //var text = TranslatableFixedText[key]
     var text = ConfigData[key] ?: throw StepException("stringFormatWithLookup lookup failed on $key")
     if (text.isEmpty()) return ""
 
@@ -132,7 +132,7 @@ object Translations
     {
       text = text.replace("%refV", "%refU")
 
-      if (key !in m_WarnedAboutUseOfEnglishTranslations)
+      if (key !in m_WarnedAboutUseOfEnglishTranslations && text.isNotEmpty() && !text.matches("^\\&\\#x\\d\\d\\d\\d\\;$".toRegex()))
       {
         m_WarnedAboutUseOfEnglishTranslations.add(key)
         Logger.warning("Used English text for $key in non-English text.")

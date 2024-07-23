@@ -704,7 +704,7 @@ object Dbg
    * Outputs contents of DOM.  Note that this uses a hard-coded output
    * location, and will therefore need changing for use on other systems.
    *
-   * @param doc Document.
+   * @param text Text to be written out.
    * @param fileName Just the file name (not extension) for output.  Data is
    *                 written to the desktop.
    */

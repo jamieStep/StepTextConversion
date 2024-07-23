@@ -193,19 +193,10 @@ object ContentValidator
            we genuinely know that it's empty, but this content won't be the
            same as that in the original.
 
-         - There is also one case related to tables which needs to be
-           excluded.  Depending upon which form of table processing we have
-           opted to apply, we may have taken a table which spans multiple
-           verses and emptied out all verses but one, creating an elision
-           which puts the entire table into the last verse.  This elision
-           will then itself have been subject to the normal elision processing,
-           such that all but this last verse will be empty.  In this case,
-           the original verses will exist and have content (and hence the
-           'null==' test below won't pick things up); but they will legitimately
-           be empty in the enhanced text, so we need to avoid checking them.
-           (The full content is picked up and handled in one of the code paras
-           below, when we are processing the one verse of the elision which now
-           contains the entire content.) */
+         - Tables made up of several verses may also have been converted to
+           elisions, with the first verse containing the entire content of
+           the table.  In this case, we need to test the new master verse
+           against the concatenated input verses. */
 
       var skipTest = newSid == -1
 
@@ -236,7 +227,7 @@ object ContentValidator
 
 
       /************************************************************************/
-      /* We're always interested in the content of a single enhanced verse, so
+      /* We're always interested in the content of a single _enhanced_ verse, so
          that much is straightforward. */
 
       val contentNew = gatherContent(m_BookAnatomyNew.m_AllNodes, newSid, newEid, m_FileProtocolNew)
@@ -263,15 +254,14 @@ object ContentValidator
          content of all of the individual input verses implied by that
          range. */
 
-      val sidNodeNew = m_BookAnatomyNew.m_AllNodes[newSid]
-      val sidRefNewAsString = if (Dom.hasAttribute(sidNodeNew, "_X_originalId")) Dom.getAttribute(sidNodeNew, "_X_originalId")!! else m_FileProtocolNew.getSid(sidNodeNew)
-
       val lowRefKey: RefKey
       val highRefKey: RefKey
+      val sidNodeNew = m_BookAnatomyNew.m_AllNodes[newSid]
+      val sidRefNewAsString = if (NodeMarker.hasOriginalId(sidNodeNew)) NodeMarker.getOriginalId(sidNodeNew)!! else m_FileProtocolNew.getSid(sidNodeNew)
 
       if ("-" in sidRefNewAsString)
       {
-        val rng = m_FileProtocolNew.readRefCollection(sidRefNewAsString)
+        val rng = Usx_FileProtocol.readRefCollection(sidRefNewAsString) // OriginalId is always in USX format.
         lowRefKey = rng.getLowAsRefKey()
         highRefKey = rng.getHighAsRefKey()
       }

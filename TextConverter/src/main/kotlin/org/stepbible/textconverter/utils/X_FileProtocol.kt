@@ -682,7 +682,8 @@ object Osis_FileProtocol: X_FileProtocol()
 
   override fun makeVerseEidNode (doc: Document, refKey: Pair<RefKey, RefKey?>): Node
   {
-    val refAsString = if (null == refKey.second) Ref.rd(refKey.first).toStringOsis() else RefCollection.rd(listOf(refKey.first, refKey.second!!)).toStringOsis()
+    var refAsString = Ref.rd(refKey.first).toStringOsis()
+    if (null != refKey.second) refAsString += "-" + Ref.rd(refKey.second!!).toStringOsis()
     return makeVerseEidNode(doc, refAsString)
   }
 

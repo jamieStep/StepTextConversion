@@ -381,7 +381,7 @@ object Logger
 
   @Synchronized fun warning (refKey: Long, text: String)
   {
-    Dbg.dCont(text, "Verse mismatch")
+    //Dbg.dCont(text, "Verse mismatch")
     ++m_WarningCount
     addMessage(m_Warnings, refKey, text)
   }

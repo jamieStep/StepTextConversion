@@ -66,33 +66,33 @@ object BibleAnatomy
 
   
   /****************************************************************************/
-  /** @return UBS book number. */ fun getBookNumberForStartOfOt (): Int { return m_OtStart }
-  /** @return UBS book number. */ fun getBookNumberForEndOfOt   (): Int { return m_OtEnd }
-  /** @return UBS book number. */ fun getBookNumberForStartOfNt (): Int { return m_NtStart }
-  /** @return UBS book number. */ fun getBookNumberForEndOfNt   (): Int { return m_NtEnd }
-  /** @return UBS book number. */ fun getBookNumberForStartOfDc (): Int { return m_DcStart }
-  /** @return UBS book number. */ fun getBookNumberForEndOfDc   (): Int { return m_DcEnd }
+  /** @return UBS book number. */ fun getBookNumberForStartOfOt () = m_OtStart
+  /** @return UBS book number. */ fun getBookNumberForEndOfOt   () = m_OtEnd
+  /** @return UBS book number. */ fun getBookNumberForStartOfNt () = m_NtStart
+  /** @return UBS book number. */ fun getBookNumberForEndOfNt   () = m_NtEnd
+  /** @return UBS book number. */ fun getBookNumberForStartOfDc () = m_DcStart
+  /** @return UBS book number. */ fun getBookNumberForEndOfDc   () = m_DcEnd
   
-  /** @return UBS book number. */ fun getBookNumberForStartOfGospels (): Int { return m_GospelsStart }
-  /** @return UBS book number. */ fun getBookNumberForEndOfGospels   (): Int { return m_GospelsEnd }
+  /** @return UBS book number. */ fun getBookNumberForStartOfGospels () = m_GospelsStart
+  /** @return UBS book number. */ fun getBookNumberForEndOfGospels   () = m_GospelsEnd
   
-  /** @return UBS book number. */ fun getBookNumberForStartOfEpistles (): Int { return m_EpistlesStart }
-  /** @return UBS book number. */ fun getBookNumberForEndOfEpistles   (): Int  { return m_EpistlesEnd }
+  /** @return UBS book number. */ fun getBookNumberForStartOfEpistles () = m_EpistlesStart
+  /** @return UBS book number. */ fun getBookNumberForEndOfEpistles   () = m_EpistlesEnd
   
-  /** @return Number of books. */ fun getNumberOfBooksInNt (): Int { return getBookNumberForEndOfNt() - getBookNumberForStartOfNt() + 1 }
-  /** @return Number of books. */ fun getNumberOfBooksInOt (): Int { return getBookNumberForEndOfOt() - getBookNumberForStartOfOt() + 1 }
+  /** @return Number of books. */ fun getNumberOfBooksInNt () = getBookNumberForEndOfNt() - getBookNumberForStartOfNt() + 1
+  /** @return Number of books. */ fun getNumberOfBooksInOt () = getBookNumberForEndOfOt() - getBookNumberForStartOfOt() + 1
   
   /** @param bookNumber UBS book number
    * @return True if condition satisfied. */
-  fun isDc (bookNumber: Int): Boolean { return !isNt(bookNumber) && !isOt(bookNumber) }
+  fun isDc (bookNumber: Int) = !isNt(bookNumber) && !isOt(bookNumber)
 
   /** @param bookNumber UBS book number
    * @return True if condition satisfied. */
-  fun isNt (bookNumber: Int): Boolean { return getBookNumberForStartOfNt() <= bookNumber && bookNumber <= getBookNumberForEndOfNt() }
+  fun isNt (bookNumber: Int) = getBookNumberForStartOfNt() <= bookNumber && bookNumber <= getBookNumberForEndOfNt()
   
   /** @param bookNumber UBS book number
    * @return True if condition satisfied. */
- fun isOt (bookNumber: Int): Boolean { return getBookNumberForStartOfOt() <= bookNumber && bookNumber <= getBookNumberForEndOfOt() }
+ fun isOt (bookNumber: Int)= getBookNumberForStartOfOt() <= bookNumber && bookNumber <= getBookNumberForEndOfOt()
 
 
 
@@ -121,10 +121,7 @@ object BibleAnatomy
   * @return Commonly missing verses.
   */
 
-  fun getCommonlyMissingVerses (): List<RefKey>
-  {
-    return m_CommonlyMissingVerses
-  }
+  fun getCommonlyMissingVerses () = m_CommonlyMissingVerses
 
 
   /****************************************************************************/
@@ -137,10 +134,7 @@ object BibleAnatomy
    * @return True if verse is in list.
    */
 
-  fun isCommonlyMissingVerse (refAsUsxString: String): Boolean
-  {
-      return isCommonlyMissingVerse(Ref.rdUsx(refAsUsxString).toRefKey_bcv())
-  }
+  fun isCommonlyMissingVerse (refAsUsxString: String) = isCommonlyMissingVerse(Ref.rdUsx(refAsUsxString).toRefKey_bcv())
 
 
   /****************************************************************************/
@@ -153,10 +147,7 @@ object BibleAnatomy
    * @return True if verse is in list.
    */
 
-  fun isCommonlyMissingVerse (refKey: Long): Boolean
-  {
-        return m_CommonlyMissingVerses.contains(refKey)
-  }
+  fun isCommonlyMissingVerse (refKey: Long) = m_CommonlyMissingVerses.contains(refKey)
 
 
   /****************************************************************************/
@@ -168,10 +159,7 @@ object BibleAnatomy
    * @return 
    */
   
-  fun isSingleChapterBook (bookNumber: Int): Boolean
-  {
-    return isSingleChapterBook(BibleBookNamesUsx.numberToAbbreviatedName(bookNumber))
-  }
+  fun isSingleChapterBook (bookNumber: Int) = isSingleChapterBook(BibleBookNamesUsx.numberToAbbreviatedName(bookNumber))
 
 
   /****************************************************************************/
@@ -183,10 +171,7 @@ object BibleAnatomy
    * @return
    */
 
-  fun isSingleChapterBook (usxReference: String): Boolean
-  {
-    return ".oba.phm.2jn.3jn.jud.s3y.sus.bel.man.blt.".contains(usxReference.split(" ")[0].lowercase())
-  }
+  fun isSingleChapterBook (usxReference: String) = ".oba.phm.2jn.3jn.jud.s3y.sus.bel.man.blt.".contains(usxReference.split(" ")[0].lowercase())
 
 
 

@@ -932,6 +932,12 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   protected fun addVerse (refKey: RefKey): VerseDescriptor
   {
     /**************************************************************************/
+//    Dbg.d(Ref.rd(refKey).toString())
+//    Dbg.d(Ref.rd(refKey).toString(), "Psa 44:1")
+
+
+
+    /**************************************************************************/
     /* Find or create the book entry within the text. */
 
     var refNo = Ref.getB(refKey)
@@ -1424,7 +1430,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   private fun processCanonicalTitleForChapter (chapterNode: Node)
   {
     /**************************************************************************/
-//    Dbg.dCont(Dom.toString(chapterNode), "Ps.11")
+//    Dbg.dCont(Dom.toString(chapterNode), "Ps.44")
 //    Dbg.d(Dom.toString(chapterNode))
 
 
@@ -1437,17 +1443,14 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
-    /* Get a list of canonical nodes prior to the first verse node.  We skip
-       the first node, because that's the chapter*/
+    /* Get a list of canonical nodes prior to the first verse node. */
 
-    for (i in 1 ..< allNodes.size)
+    for (n in allNodes)
     {
-      val n = allNodes[i]
-
       if (m_FileProtocol!!.tagName_verse() == Dom.getNodeName(n)) // Stop when we hit the first verse.
         break
 
-      if (m_FileProtocol.isCanonicalNode(n))
+      if (m_FileProtocol.isCanonicalNode(n) && "#text" == n.nodeName)
         nodesOfInterest.add(n)
     } // for
 
