@@ -32,7 +32,7 @@ import org.stepbible.textconverter.utils.IssueAndInformationRecorder
  * @author ARA "Jamie" Jamieson
  */
 
-object Translations
+object Translations_NOT_USED
 {
   /****************************************************************************/
   /****************************************************************************/

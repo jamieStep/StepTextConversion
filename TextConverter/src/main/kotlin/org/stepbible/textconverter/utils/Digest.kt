@@ -110,7 +110,7 @@ object Digest
     var res = getDigests().joinToString("\n") { "#  SHA256: ${Paths.get(it.first).fileName}: ${it.second}" }
     res += "\n#  SHA256 for OSIS available for future input: ${Paths.get(inputOsisFilePath).fileName}: ${MiscellaneousUtils.getSha256(inputOsisFilePath)}"
     if (null != versificationJsonFilePath)
-      res += "\n# SHA256 for versification JSON: ${Paths.get(versificationJsonFilePath).fileName}: ${MiscellaneousUtils.getSha256(versificationJsonFilePath)}"
+      res += "\n#  SHA256 for versification JSON: ${Paths.get(versificationJsonFilePath).fileName}: ${MiscellaneousUtils.getSha256(versificationJsonFilePath)}"
     return res
   }
 

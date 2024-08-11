@@ -3,10 +3,10 @@ package org.stepbible.textconverter.utils
 
 import org.stepbible.textconverter.support.bibledetails.*
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.configdata.TranslatableFixedText
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.convertNumberToRepeatingString
-import org.stepbible.textconverter.support.miscellaneous.Translations
 import org.stepbible.textconverter.support.ref.*
 import org.stepbible.textconverter.support.shared.Language
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -477,8 +477,8 @@ object ReversificationData
 
   fun reversificationTargetsDc (): Boolean { return try { m_StandardBooks.any { BibleAnatomy.isDc(BibleBookNamesUsx.abbreviatedNameToNumber(it)) } } catch (_: Exception) { false } }
 
-  fun getFootnoteForEmptyVerses (refKey: RefKey)       : String { return m_IfEmptyFootnotes [refKey] ?: Translations.stringFormatWithLookup("V_emptyContentFootnote_verseEmptyInThisTranslation") }
-  fun getFootnoteForNewlyCreatedVerses (refKey: RefKey): String { return m_IfAbsentFootnotes[refKey] ?: Translations.stringFormatWithLookup("V_emptyContentFootnote_verseEmptyInThisTranslation") }
+  fun getFootnoteForEmptyVerses (refKey: RefKey)       : String { return m_IfEmptyFootnotes [refKey] ?: TranslatableFixedText.stringFormatWithLookup("V_emptyContentFootnote_verseEmptyInThisTranslation") }
+  fun getFootnoteForNewlyCreatedVerses (refKey: RefKey): String { return m_IfAbsentFootnotes[refKey] ?: TranslatableFixedText.stringFormatWithLookup("V_emptyContentFootnote_verseEmptyInThisTranslation") }
 
 
   /****************************************************************************/
@@ -1458,7 +1458,7 @@ object ReversificationData
       if (texts[i].isNotEmpty())
       {
         val thisChunk: String
-        val x = Translations.lookupText(Language.Vernacular, getTextKey(texts[i]))
+        val x = TranslatableFixedText.lookupText(Language.Vernacular, getTextKey(texts[i]))
 
         thisChunk = if (x.startsWith("%ref"))
           refs[i].trim() + " %" + texts[i] + "%"
@@ -1528,7 +1528,7 @@ object ReversificationData
        text itself. */
 
     if (1 == bits[1].length)
-      return Translations.stringFormat(Language.Vernacular, key)
+      return TranslatableFixedText.stringFormat(Language.Vernacular, key)
 
 
 
@@ -1553,7 +1553,7 @@ object ReversificationData
       if (refAsString.endsWith("."))
         refAsString = refAsString.substring(0, refAsString.length - 1)
       val rc = RefCollection.rdUsx(usxifyFromStepFormat(refAsString), dflt = null, resolveAmbiguitiesAs = "v")
-      return Translations.stringFormat(Language.Vernacular, key, rc)
+      return TranslatableFixedText.stringFormat(Language.Vernacular, key, rc)
     }
 
 
@@ -1577,13 +1577,13 @@ object ReversificationData
        fixed portions of the text.
     */
 
-    val rawMessage = Translations.lookupText(Language.English, getTextKey(bits[0].trim())!!)
+    val rawMessage = TranslatableFixedText.lookupText(Language.English, getTextKey(bits[0].trim()))
     val regex = "(?i)(?<pre>.*)(?<ref>%Ref.*?>)(?<post>.*)".toRegex()
     val match = regex.matchEntire(rawMessage)
     val refFormat = match!!.groups["ref"]!!.value
 
-    val elts = refAsString.split('/', '+').map { Translations.stringFormat(refFormat, RefCollection.rdUsx(it.trim(), dflt = null, resolveAmbiguitiesAs = "v")) }
-    val eltsAssembled = elts.joinToString(Translations.stringFormat(Language.Vernacular, if (containsSlash) "V_reversification_ancientVersionsAlternativeRefsSeparator" else "V_reversification_alternativeReferenceEmbeddedPlusSign"))
+    val elts = refAsString.split('/', '+').map { TranslatableFixedText.stringFormat(refFormat, RefCollection.rdUsx(it.trim(), dflt = null, resolveAmbiguitiesAs = "v")) }
+    val eltsAssembled = elts.joinToString(TranslatableFixedText.stringFormat(Language.Vernacular, if (containsSlash) "V_reversification_ancientVersionsAlternativeRefsSeparator" else "V_reversification_alternativeReferenceEmbeddedPlusSign"))
     return match.groups["pre"]!!.value + eltsAssembled + match.groups["post"]!!.value
   }
 
@@ -1591,7 +1591,7 @@ object ReversificationData
   /****************************************************************************/
   /**
    *  Given a piece of footnote text from the reversification data, gives back
-   *  the corresponding key which we can use to look up translations.
+   *  the corresponding key which we can use to look up TranslatableFixedText.
    */
 
   private fun getTextKey (lookupVal: String) = "V_reversification_[${lookupVal.trim()}]"
@@ -1647,17 +1647,17 @@ object ReversificationData
       fun processMainElementRefCollection (refAsString: String): String
       {
         return if ("--" == refAsString)
-          Translations.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsNoReference")
+          TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsNoReference")
         else
-          Translations.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsMainRefFormat", RefCollection.rd(usxifyFromStepFormat(refAsString), null,"v"))
+          TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsMainRefFormat", RefCollection.rd(usxifyFromStepFormat(refAsString), null,"v"))
       }
 
       fun processMainElementDelimiter (delim: String): String
       {
         return when (delim)
         {
-          "/" -> Translations.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsAlternativeRefsSeparator")
-          "+" -> Translations.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsJointRefsSeparator")
+          "/" -> TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsAlternativeRefsSeparator")
+          "+" -> TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsJointRefsSeparator")
           else -> throw StepException("AncientVersions delimiter not handled: $delim")
         }
       }
@@ -1674,13 +1674,13 @@ object ReversificationData
 
       var equivalenceInformation = ""
       if (null != m_EquivalenceInformationReferenceCollection)
-        equivalenceInformation = " " + Translations.stringFormat(m_EquivalenceInformationFormatString, m_EquivalenceInformationReferenceCollection!!)
+        equivalenceInformation = " " + TranslatableFixedText.stringFormat(m_EquivalenceInformationFormatString, m_EquivalenceInformationReferenceCollection!!)
 
 
 
       /************************************************************************/
-      val tradition: String = Translations.stringFormat(Language.Vernacular, "V_reversification_language$m_Tradition")
-      return Translations.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsTraditionFormat", "tradition", tradition, "main", mainEltsAsString, "equivalenceInformation", equivalenceInformation)
+      val tradition: String = TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_language$m_Tradition")
+      return TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsTraditionFormat", "tradition", tradition, "main", mainEltsAsString, "equivalenceInformation", equivalenceInformation)
     }
 
 
@@ -1762,19 +1762,19 @@ object ReversificationData
         {
           '+' ->
            {
-              m_EquivalenceInformationFormatString = ConfigData["V_reversification_ancientVersionsEquivalencePlus"]!!
+              m_EquivalenceInformationFormatString = TranslatableFixedText.lookupText(Language.Vernacular, "V_reversification_ancientVersionsEquivalencePlus")
               equivalenceInformation = equivalenceInformation!!.substring(1)
            }
 
            '=' ->
             {
-              m_EquivalenceInformationFormatString = ConfigData["V_reversification_ancientVersionsEquivalenceEquals"]!!
+              m_EquivalenceInformationFormatString = TranslatableFixedText.lookupText(Language.Vernacular, "V_reversification_ancientVersionsEquivalenceEquals")
               equivalenceInformation = equivalenceInformation!!.substring(1)
             }
 
             else ->
             {
-              m_EquivalenceInformationFormatString = ConfigData["V_reversification_ancientVersionsEquivalenceUndecorated"]!!
+              m_EquivalenceInformationFormatString = TranslatableFixedText.lookupText(Language.Vernacular, "V_reversification_ancientVersionsEquivalenceUndecorated")
               equivalenceInformation = equivalenceInformation!!.substring(1)
            }
         }
@@ -1799,8 +1799,8 @@ object ReversificationData
     traditions.forEach { x -> resElements.add(x.toString()) }
     if (resElements.isEmpty()) return ""
 
-    var res = resElements.joinToString(Translations.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsTraditionSeparator"))
-    res = Translations.stringFormat(Language.Vernacular, "V_reversification_ancientVersions", res)
+    var res = resElements.joinToString(TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsTraditionSeparator"))
+    res = TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersions", res)
     return res
   }
 
@@ -1983,13 +1983,13 @@ object ReversificationData
      things should be annotated, because I assume that circumstances
      permitting, _all_ should. */
 
-  private val C_Move                             = 0x0001
-          val C_Renumber                         = 0x0002
-          val C_CreateIfNecessary                = 0x0004
-  private val C_ComplainIfStandardRefExisted     = 0x0008
-          val C_ComplainIfStandardRefDidNotExist = 0x0010
-          val C_SourceIsPsalmTitle               = 0x0020
-          val C_StandardIsPsalmTitle             = 0x0040
+  private const val C_Move                             = 0x0001
+          const val C_Renumber                         = 0x0002
+          const val C_CreateIfNecessary                = 0x0004
+  private const val C_ComplainIfStandardRefExisted     = 0x0008
+          const val C_ComplainIfStandardRefDidNotExist = 0x0010
+          const val C_SourceIsPsalmTitle               = 0x0020
+          const val C_StandardIsPsalmTitle             = 0x0040
 
 
   /****************************************************************************/

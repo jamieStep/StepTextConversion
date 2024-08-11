@@ -561,7 +561,8 @@ object Osis_FileProtocol: X_FileProtocol()
 
   override fun isSpanType (node: Node): Boolean
   {
-    return 'Y' == m_TagDetails[getExtendedNodeName(node)]!!.span
+    val entry = (m_TagDetails[getExtendedNodeName(node)] ?: m_TagDetails[Dom.getNodeName(node)])!!
+    return 'Y' == entry.span
   }
 
 

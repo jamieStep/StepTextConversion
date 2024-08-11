@@ -5,7 +5,7 @@ import org.stepbible.textconverter.support.configdata.FileLocations
 
 /******************************************************************************/
 /**
- * Information related to ISO language codes.
+ * Information related to ISO language codes and countries.
  *
  *
  *
@@ -119,7 +119,7 @@ import org.stepbible.textconverter.support.configdata.FileLocations
  * @author ARA "Jamie" Jamieson
  */
 
-object IsoLanguageCodes {
+object IsoLanguageAndCountryCodes {
     /****************************************************************************/
     /****************************************************************************/
     /**                                                                        **/
@@ -142,7 +142,7 @@ object IsoLanguageCodes {
     {
       val asSupplied = isoCode.lowercase()
       if (2 == isoCode.length) return isoCode.lowercase()
-      return m_3CharToDetails[asSupplied]!!.first ?: asSupplied
+      return m_3CharToLanguageDetails[asSupplied]!!.first ?: asSupplied
     }
 
 
@@ -165,6 +165,18 @@ object IsoLanguageCodes {
 
     /****************************************************************************/
     /**
+    * Given a 3-char ISO language code, returns the list of countries where that
+    * language is used, or null if no details are found
+    *
+    * @param code3Char
+    * @return List of countries where the language is used.
+    */
+
+    fun getCountriesWhereUsed (code3Char: String) = m_3CharToCountriesWhereUsed[code3Char]
+
+
+    /****************************************************************************/
+    /**
      * Given a language code, returns the corresponding language name.  The code
      * may be 2- or 3- char, and in the latter may be the default name or our
      * preferred one where both are defined (ie in ISO terms may be either the
@@ -178,7 +190,7 @@ object IsoLanguageCodes {
     {
       val asSupplied = isoCode.lowercase()
       val key = if (2 == isoCode.length) m_2CharTo3Char[asSupplied] else asSupplied
-      return m_3CharToDetails[key]!!.second
+      return m_3CharToLanguageDetails[key]!!.second
     }
 
 
@@ -195,20 +207,39 @@ object IsoLanguageCodes {
 
   /****************************************************************************/
   private val m_2CharTo3Char: MutableMap<String, String> = mutableMapOf()
-  private val m_3CharToDetails: MutableMap<String, Pair<String?, String>> = mutableMapOf()
+  private val m_3CharToCountriesWhereUsed: MutableMap<String, String> = mutableMapOf()
+  private val m_3CharToLanguageDetails: MutableMap<String, Pair<String?, String>> = mutableMapOf()
 
 
   /****************************************************************************/
   init
   {
+    /**************************************************************************/
+    val countryNameMappings: MutableMap<String, String> = mutableMapOf()
+    FileLocations.getInputStream(FileLocations.getCountryCodeInfoFilePath())!!.bufferedReader().lines().forEach {
+      val line = it.trim()
+      if (line.isEmpty() || line.startsWith("#!"))
+        return@forEach
+
+      val (longForm, shortForm) = (line + "\t").split("\t")
+      countryNameMappings[longForm] = shortForm
+    }
+
+
+    /**************************************************************************/
+    /* 3char language code to combination (2char code + list of countries where
+       used.  I used shortened country names where these are defined. */
+       
     FileLocations.getInputStream(FileLocations.getIsoLanguageCodesFilePath())!!.bufferedReader().lines().forEach {
       val line = it.trim()
       if (line.isEmpty() || line.startsWith("#!"))
         return@forEach
 
-      val (code3Char, code2Char, languageName, comment) = (line + "\t").split("\t")
+      val (code3Char, code2Char, languageName, countriesWhereUsed) = (line + "\t").split("\t")
+      val revisedLanguageName = countryNameMappings[languageName] ?: languageName
       if (code2Char.isNotEmpty()) m_2CharTo3Char[code2Char] = code3Char
-      m_3CharToDetails[code3Char] = Pair(code2Char, languageName)
+      m_3CharToLanguageDetails[code3Char] = Pair(code2Char, revisedLanguageName)
+      m_3CharToCountriesWhereUsed[code3Char] = countriesWhereUsed
     }
   }
 }

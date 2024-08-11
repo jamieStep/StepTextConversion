@@ -87,7 +87,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
   fun rulePasses (sourceRef: Ref?, theRuleData: String, row: ReversificationDataRow): Boolean
   {
     /**************************************************************************/
-    //Dbg.d(row.rowNumber in listOf(7020))
+    //Dbg.d(row.rowNumber in listOf(1123))
 
 
 

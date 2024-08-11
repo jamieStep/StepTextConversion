@@ -317,7 +317,7 @@ object FeatureIdentifier
         
         if (!m_HasStrongs)
         {
-          val s = getAttribute(reader, "gloss")
+          val s = getAttribute(reader, "lemma")
           m_HasStrongs = null != s && (s.matches(Regex(".*H\\d+.*")) || s.matches(Regex(".*G\\d+.*")))
         }
       } // w

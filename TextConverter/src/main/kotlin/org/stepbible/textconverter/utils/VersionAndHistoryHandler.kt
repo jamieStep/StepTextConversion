@@ -237,7 +237,7 @@ object VersionAndHistoryHandler
     val text =
        when (m_ReleaseType)
        {
-         ReleaseType.Major -> "SupplierReason: " + ConfigData.get("stepSupplierUpdateReason", "Unknown") + "; StepReason: ${ConfigData.get("stepUpdateReason", "Supplier updated source documents.")}"
+         ReleaseType.Major -> "SupplierReason: " + ConfigData.get("stepSupplierUpdateReason", "N/A") + "; StepReason: ${ConfigData.get("stepUpdateReason", "Supplier updated source documents.")}"
          else -> "StepReason: " + (ConfigData["stepUpdateReason"] ?: "Unspecified.")
        }
 

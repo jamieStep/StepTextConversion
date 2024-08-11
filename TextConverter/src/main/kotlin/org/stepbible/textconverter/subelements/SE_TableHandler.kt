@@ -245,7 +245,7 @@ class SE_TableHandler (dataCollection: X_DataCollection): SE(dataCollection)
         Dom.insertNodeAfter(owningVerseSid, owningVerseFootnote)
     }
 
-    Dbg.d(table.ownerDocument)
+    //Dbg.d(table.ownerDocument)
   }
 
 

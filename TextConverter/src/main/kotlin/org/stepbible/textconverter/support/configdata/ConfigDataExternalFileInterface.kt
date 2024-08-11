@@ -176,7 +176,7 @@ object ConfigDataExternalFileInterface
     if (null != existingEntry && existingEntry.m_IsInUse) return
 
     val newEntry = makeConcreteInstance(type)
-    newEntry.m_Path = path
+    newEntry.m_Path = path.replace("\$metadata", FileLocations.getMetadataFolderPath())
     newEntry.m_Status = Status.NotTried
     newEntry.m_OkIfNotExists = ifExists
     m_ConfigDataExternalProcessors[logicalName] = newEntry

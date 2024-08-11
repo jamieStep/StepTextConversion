@@ -61,7 +61,6 @@ object ProcessingController
   {
     initialise(args)
     deleteLogFilesEtc()
-    //ThrowAwayCode.testOsis() // $$$
     determineProcessingSteps()
     runProcessors()
   }
@@ -78,7 +77,7 @@ object ProcessingController
     // The try below is required because if we start from OSIS, we won't have any reversification details.
     var res = ""
     try { if (!ConfigData["stepReversificationDataLocation"]!!.startsWith("http")) res += C_Local_ReversificationData } catch (_: Exception) {}
-    if (!ConfigData.getAsBoolean("stepEncryptionRequired", "no")) res += C_NotEncrypted
+    if (!ConfigData.getAsBoolean("stepEncrypted", "no")) res += C_NotEncrypted
     if ("evaluationonly" == ConfigData["stepRunType"]!!.lowercase()) res += C_NonRelease
     return res
   }
@@ -115,7 +114,7 @@ object ProcessingController
   private fun determineProcessingSteps ()
   {
     /**************************************************************************/
-    val haveImp  = FileLocations.getInputVlFilesExist()
+    val haveImp  = FileLocations.getInputImpFilesExist()
     val haveOsis = FileLocations.getInputOsisFileExists()
     val haveUsx  = FileLocations.getInputUsxFilesExist()
     val haveVl   = FileLocations.getInputVlFilesExist()
@@ -223,6 +222,9 @@ object ProcessingController
     commandLineProcessor.addCommandLineOption("runType", 1, "Type of run.", listOf("Release", "MajorRelease", "MinorRelease", "EvalOnly", "EvaluationOnly"), "EvaluationOnly", true)
     commandLineProcessor.addCommandLineOption("checkInputsAgainstPreviousModule", 0, "Check whether the current inputs were used to build the existing module.", null, null, false)
     commandLineProcessor.addCommandLineOption("evaluateSchemesOnly", 0, "Evaluate alternative osis2mod versification schemes only.", null, null, false)
+    commandLineProcessor.addCommandLineOption("forceTargetAudience", 0, "Create module for public or STEP-only use.", listOf("Public", "Step"), null, false)
+    commandLineProcessor.addCommandLineOption("conversionTimeReversification", 0, "Use to force conversion time restructuring (you will seldom want this).", null, null, false)
+    commandLineProcessor.addCommandLineOption("targetAudience", 1, "If it is possible to build both STEP-only and public version, selects the one required.", listOf("Public", "Step"), null, false)
 
 
 

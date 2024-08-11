@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.utils
 
+import org.stepbible.textconverter.support.configdata.TranslatableFixedText
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.Ref
@@ -311,7 +312,7 @@ class EmptyVerseHandler (dataCollection: X_DataCollection)
   /****************************************************************************/
   private val m_DataCollection = dataCollection
   private val m_FileProtocol = dataCollection.getFileProtocol()
-  private val m_Content_Elision by lazy { Translations.stringFormatWithLookup("V_contentForEmptyVerse_verseInElision") }
-  private val m_Content_EmptyVerse by lazy { Translations.stringFormatWithLookup("V_contentForEmptyVerse_verseEmptyInThisTranslation") }
-  private val m_Content_MissingVerse by lazy { Translations.stringFormatWithLookup("V_contentForEmptyVerse_verseWasMissing") }
+  private val m_Content_Elision by lazy { TranslatableFixedText.stringFormatWithLookup("V_contentForEmptyVerse_verseInElision") }
+  private val m_Content_EmptyVerse by lazy { TranslatableFixedText.stringFormatWithLookup("V_contentForEmptyVerse_verseEmptyInThisTranslation") }
+  private val m_Content_MissingVerse by lazy { TranslatableFixedText.stringFormatWithLookup("V_contentForEmptyVerse_verseWasMissing") }
 }

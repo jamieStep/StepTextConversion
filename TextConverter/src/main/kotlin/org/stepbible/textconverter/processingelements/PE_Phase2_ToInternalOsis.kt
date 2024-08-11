@@ -135,6 +135,7 @@ object PE_Phase2_ToInternalOsis : PE
     /***************************************************************************/
     /* Pick up the input data. */
 
+    //Dbg.outputText(Phase1TextOutput)
     StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath()) // Create a home for what we're about to generate.
     InternalOsisDataCollection.loadFromText(Phase1TextOutput); x()                 // Phase 1 creates OSIS _text_ in memory, so we need to load it as a DOM.
     RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()); x() // Needed to cater for the possible requirement to expand ranges.

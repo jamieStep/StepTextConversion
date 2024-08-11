@@ -2,7 +2,10 @@ package org.stepbible.textconverter.support.commandlineprocessor
 
 import org.apache.commons.cli.*
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.stepexception.StepException
+import org.w3c.dom.Node
 import java.util.*
 import kotlin.system.exitProcess
 
@@ -238,3 +241,7 @@ object CommandLineProcessor
     private var m_ParsedCommandLine: CommandLine? = null
     private var m_Parser = DefaultParser()
 }
+
+
+/******************************************************************************/
+operator fun CommandLineProcessor.get (parameterName: String): String? { return CommandLineProcessor.getOptionValue(parameterName) }

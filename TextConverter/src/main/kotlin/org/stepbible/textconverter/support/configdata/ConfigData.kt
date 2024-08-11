@@ -4,9 +4,11 @@ package org.stepbible.textconverter.support.configdata
 
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
+import org.stepbible.textconverter.support.commandlineprocessor.get
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.iso.IsoLanguageCodes
+import org.stepbible.textconverter.support.iso.IsoLanguageAndCountryCodes
 import org.stepbible.textconverter.support.iso.Unicode
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.support.shared.Language
@@ -19,6 +21,7 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.io.path.Path
 import kotlin.reflect.full.memberFunctions
 import kotlin.reflect.KFunction
 
@@ -560,10 +563,52 @@ object ConfigData
 
 
     /**************************************************************************/
-    val isPublic = "public" in operationalSuffix
-    val targetAudience = if (isPublic) "P" else "S"
-    put("stepTargetAudience", targetAudience, true)
-    put("stepOnlineUsageOnly", if ("onlineonly" in operationalSuffix) "yes" else "no", true)
+    /* Work out the target audience (STEP-only or public).  This comes either
+       from the root folder name or from a command-line argument.
+
+       If the root folder name states public or step unambiguously then we use
+       that (and the command-line argument is optional, but if given must state
+       the same as the folder name).
+
+       If the root folder states both public and step, then the command-line
+       argument must be present and we go with that.
+
+       If the root folder states neither, it is as though it stated step -- see
+       above. */
+
+    val mayBePublic   = "public" in operationalSuffix
+    val mayBeStepOnly = "step"   in operationalSuffix
+    val optionFromCommandLine = CommandLineProcessor["targetAudience"]?.first()?.uppercase()
+    val targetAudience: String
+    if (mayBeStepOnly && mayBePublic)
+    {
+       if (null == optionFromCommandLine) throw StepException("Could be public or STEP-only run.  Need targetAudience on command line to indicate which.")
+       targetAudience = optionFromCommandLine
+    }
+
+    else if (mayBeStepOnly)
+    {
+      targetAudience = "S"
+      if (null != optionFromCommandLine && "S" != optionFromCommandLine)
+        throw StepException("Folder name implies this is a STEP-only build, but targetAudience on the command line says otherwise.")
+    }
+
+    else if (mayBePublic)
+    {
+      targetAudience = "P"
+       if (null != optionFromCommandLine && "P" != optionFromCommandLine)
+         throw StepException("Folder name implies this is a public build, but targetAudience on the command line says otherwise.")
+    }
+
+    else
+    {
+      targetAudience = "S"
+      if (null != optionFromCommandLine && "S" != optionFromCommandLine)
+        throw StepException("Folder name implies this is a STEP-only build, but targetAudience on the command line says otherwise.")
+    }
+
+    deleteAndPut("stepTargetAudience", targetAudience, true)
+    deleteAndPut("stepOnlineUsageOnly", if ("onlineonly" in operationalSuffix) "Yes" else "No", true)
 
 
 
@@ -594,7 +639,7 @@ object ConfigData
 
     /**************************************************************************/
     val moduleName: String =
-      if (isPublic)
+      if ("P" == targetAudience)
         languageCode + "_" + abbreviatedName + legacySuffix
       else
       {
@@ -690,14 +735,7 @@ object ConfigData
     private fun load (configFilePath: String, okIfNotExists: Boolean)
     {
         /**************************************************************************/
-        //Dbg.d("Loading config file: " + configFilePath)
-
-
-
-        /**************************************************************************/
-        val handlingEnglishTranslationsFile = configFilePath.endsWith("vernacularTextTranslations_eng.conf")
-        if (handlingEnglishTranslationsFile)
-          m_ProcessingEnglishMessageDefinitions = true
+        // Dbg.d("Loading config file: " + configFilePath)
 
 
 
@@ -709,32 +747,35 @@ object ConfigData
            in the resources section and then copy this as the template step.conf
            file for each new text.  To minimise the number of changes required to
            that template file, it is convenient if the template file $include's
-           itself, but I want the file to be included only once. */
+           itself, but I want the file to be included only once.) */
 
-        if (m_AlreadyLoaded.contains(configFilePath)) return
-        m_AlreadyLoaded.add(configFilePath)
+        val inputPath = FileLocations.getInputPath(configFilePath)
+        if (m_AlreadyLoaded.contains(inputPath)) return
+        m_AlreadyLoaded.add(inputPath)
 
 
 
         /**************************************************************************/
-        for (x in getConfigLines(configFilePath, okIfNotExists))
+        val modifiedConfigFilePath = FileLocations.getInputPath(configFilePath)
+        val sharedConfigFolderPath = FileLocations.getSharedConfigFolderPath()
+        if (null != sharedConfigFolderPath && Path(modifiedConfigFilePath).startsWith(Path(sharedConfigFolderPath)))
         {
-          //Dbg.d(x)
+          val x = Path(modifiedConfigFilePath.substring(sharedConfigFolderPath.length))
+          m_SharedConfigFolderPathAccesses.add(Paths.get(sharedConfigFolderPath, x.getName(0).toString()).toString())
+        }
+
+        for (x in getConfigLines(modifiedConfigFilePath, okIfNotExists))
+        {
+          //Dbg.d("$configFilePath: $x")
           val line = x.trim().replace("@home", System.getProperty("user.home"))
-          if (processConfigLine(line, configFilePath)) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
+          if (processConfigLine(line, modifiedConfigFilePath)) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
           throw StepException("Couldn't process config line: $line")
         } // for
 
 
 
         /**************************************************************************/
-        /* Clear m_ProcessingEnglishDefinitions only if we're actually processing
-           the English message file.  We can't clear it willy-nilly because it's
-           always possible the English file may include other files of different
-           names, but they'll all be contributing to the English definitions. */
-
-        if (handlingEnglishTranslationsFile)
-          m_ProcessingEnglishMessageDefinitions = false
+        // Dbg.d("Finished loading config file: " + configFilePath)
     }
 
 
@@ -769,10 +810,10 @@ object ConfigData
   /****************************************************************************/
   private fun canonicaliseLanguageCode (rawLanguageCode: String): String
   {
-    val languageCode = IsoLanguageCodes.get3CharacterIsoCode(rawLanguageCode)
+    val languageCode = IsoLanguageAndCountryCodes.get3CharacterIsoCode(rawLanguageCode)
     delete("stepLanguageCode"); put("stepLanguageCode", languageCode, force = true)
     delete("stepLanguageCode3Char"); put("stepLanguageCode3Char", languageCode, force = true)
-    delete("stepLanguageCode2Char"); put("stepLanguageCode2Char", IsoLanguageCodes.get2CharacterIsoCode(languageCode), force = true)
+    delete("stepLanguageCode2Char"); put("stepLanguageCode2Char", IsoLanguageAndCountryCodes.get2CharacterIsoCode(languageCode).ifEmpty { languageCode }, force = true)
     return languageCode
   }
 
@@ -868,6 +909,9 @@ object ConfigData
     private fun processConfigLine (directive: String, callerFilePath: String): Boolean
     {
       /**************************************************************************/
+      if (directive.isEmpty())
+        return true
+
       val lineLowerCase = directive.lowercase()
       //Dbg.dCont(directive, "stepAboutAsSupp")
 
@@ -1043,7 +1087,7 @@ object ConfigData
 
     operator fun get (key: String): String?
     {
-      //Dbg.d(key, "stepTextOwnerOrganisationFullName")
+      //Dbg.d(key, "stepBibleDescriptionAsItAppearsOnBibleList")
       //Dbg.d(key)
       return getInternal(key, true)
     }
@@ -1210,33 +1254,6 @@ object ConfigData
       /* Sort out special markers. */
 
       val value = tidyVal(theValue)
-
-
-
-      /************************************************************************/
-      /* This may be a bit flaky, but here goes ...
-
-         We're concerned here only with translatable text strings (which we can
-         recognise because their names start 'V_', and nothing else is supposed
-         to do so).
-
-         We have a set of English definitions which act as a default, which are
-         used on English texts; but some or all of these may be overridden by
-         vernacular translations on some texts.  And the aim here is to keep
-         track of which definitions end up still in English, and which have been
-         overridden.
-
-         m_ProcessingEnglishDefinitions is set elsewhere to tell us whether we're
-         processing the English definitions or not.  If we are, we add them to the
-         list of English keys.  If we're not, we remove them from that list. */
-
-      if (key.startsWith("V_"))
-      {
-        if (m_ProcessingEnglishMessageDefinitions)
-          m_EnglishDefinitions.add(key)
-        else
-          m_EnglishDefinitions.remove(key)
-      }
 
 
 
@@ -1728,6 +1745,18 @@ object ConfigData
 
     /****************************************************************************/
     /**
+    * Returns a list of all the folders under the shared config folder which have
+    * been accessed (with the exception of _Common_).  This list can be used to
+    * make sure we include all relevant config data in the repository package.
+    *
+    * @return List of folders.
+    */
+
+    fun getSharedConfigFolderPathAccesses() = m_SharedConfigFolderPathAccesses
+
+
+    /****************************************************************************/
+    /**
     * Does what it says on the tin.  Intended presently only for use by the
     * various reference readers and writers.
     *
@@ -1930,28 +1959,29 @@ object ConfigData
     *  this in the same was as all the other config information -- ie in a config
     *  file -- but there are just too many conditional inclusions etc for this
     *  to be really feasible.
-    *
-    * @return Text for use in short description.
     */
 
-    fun makeBibleDescriptionAsItAppearsOnBibleList (bookNumbers: List<Int>): String
+    fun makeBibleDescriptionAsItAppearsOnBibleList (bookNumbers: List<Int>)
     {
         /**********************************************************************/
         /* We want the English and vernacular titles, except where they are
            basically the same thing, in which case the vernacular is essentially
-           irrelevant. */
+           irrelevant.  I further assume here that the vernacular title may not
+           be available, but that the English title will always be available. */
 
-        val englishTitle = get("stepBibleNameEnglish")!!
-        var vernacularTitle = get("stepBibleNameVernacular") ?: "\u0001" // Dummy value if not defined.
+        var englishTitle = get("stepBibleNameEnglish")!!
+        var vernacularTitle = get("stepBibleNameVernacular")
 
-        val englishTitleLowerCase = englishTitle.lowercase()
-        val vernacularTitleLowerCase = vernacularTitle.lowercase()
+        if (null != vernacularTitle)
+        {
+          val englishTitleLowerCase = englishTitle.lowercase()
+          val vernacularTitleLowerCase = vernacularTitle.lowercase()
 
-        if ("eng".equals(get("stepLanguageCode3Char"), ignoreCase = true) ||
-            "\u0001" == vernacularTitle ||
-            vernacularTitleLowerCase in englishTitleLowerCase ||
-            englishTitleLowerCase in vernacularTitle)
-          vernacularTitle = "\u0001"
+          if ("eng".equals(get("stepLanguageCode3Char"), ignoreCase = true) ||
+              vernacularTitleLowerCase in englishTitleLowerCase ||
+              englishTitleLowerCase in vernacularTitleLowerCase)
+            vernacularTitle = null
+        }
 
 
 
@@ -1960,46 +1990,73 @@ object ConfigData
            they are essentially the same thing. */
 
         val englishAbbreviation = get("stepAbbreviationEnglish")!!
-        var vernacularAbbreviation = get("stepAbbreviationVernacular") ?: "\u0001"
+        var vernacularAbbreviation = get("stepAbbreviationVernacular")
 
-        if (englishAbbreviation.lowercase() == vernacularAbbreviation.lowercase() ||
-            vernacularAbbreviation == "\u0001")
-          vernacularAbbreviation = "\u0001"
+        if (null != vernacularAbbreviation && englishAbbreviation.lowercase() == vernacularAbbreviation.lowercase())
+          vernacularAbbreviation = null
+
+
+
+         /**********************************************************************/
+         englishTitle = "$englishTitle ($englishAbbreviation)"
+         if (null != vernacularAbbreviation && null != vernacularTitle) vernacularTitle = "$vernacularTitle ($vernacularAbbreviation)"
+         val titlePortion = listOfNotNull(englishTitle, vernacularTitle).joinToString(" / ")
 
 
 
         /**********************************************************************/
-        /* This hairy piece of code does nothing more interesting than try to
-           format the above information in a nice way, where 'nice' depends
-           upon which bits of information we have and which we don't. */
-
-        var name = "$englishTitle ($englishAbbreviation) "
-        if ("\u0001" != vernacularTitle || "\u0001" != vernacularAbbreviation) name += " \u0002 "
-        if ("\u0001" != vernacularTitle) name += "$vernacularTitle "
-        if ("\u0001" != vernacularAbbreviation) name += "($vernacularAbbreviation) "
-        name = name.replace(") \u0002 (", " \u0002 ")
-        name = name.replace("\u0002", "/")
-
+        var abbreviatedNameOfRightsHolder = get("stepTextOwnerOrganisationAbbreviatedName")
+        if (null != abbreviatedNameOfRightsHolder && abbreviatedNameOfRightsHolder.lowercase() in titlePortion.lowercase()) abbreviatedNameOfRightsHolder = null
 
 
 
         /**********************************************************************/
         var officialYear = makeStepBibleDescriptionAsItAppearsOnBibleList_getOfficialYear()
-        val biblePortion = makeStepBibleDescriptionAsItAppearsOnBibleList_getBiblePortion(bookNumbers)
-        val language = makeStepBibleDescriptionAsItAppearsOnBibleList_getLanguage(englishTitle)
-        val moduleMonthYear = makeStepBibleDescriptionAsItAppearsOnBibleList_getModuleMonthYear().trim()
+        if (null != officialYear)
+        {
+           if (englishTitle.contains(officialYear))
+             officialYear = null
+           else if (null != vernacularTitle && vernacularTitle.contains(officialYear))
+             officialYear = null
+        }
 
-        var abbreviatedNameOfRightsHolder = get("stepTextOwnerOrganisationAbbreviatedName") ?: ""
-        if (abbreviatedNameOfRightsHolder.isNotEmpty()) abbreviatedNameOfRightsHolder += " "
 
-        if (englishTitle.contains(officialYear.trim()) || vernacularTitle.contains(officialYear.trim())) officialYear = "" // DIB: 2021-09-10.
 
-        var text = "$name$abbreviatedNameOfRightsHolder$officialYear $biblePortion$language" // $moduleMonthYear"
-        text = expandReferences(text, false)!!
-        text = text.replace("\\s+".toRegex(), " ").trim()
+        /**********************************************************************/
+        var abbreviatedNameOfRightsHolderAndOfficialYearPortion: String? = listOfNotNull(abbreviatedNameOfRightsHolder, officialYear).joinToString(" ")
 
-        set("stepBibleDescriptionAsItAppearsOnBibleList", text)
-        return text
+
+
+        /**********************************************************************/
+        var coveragePortion: String? = makeStepBibleDescriptionAsItAppearsOnBibleList_getBiblePortion(bookNumbers)
+
+
+
+        /**********************************************************************/
+        var languagePortion: String? = makeStepBibleDescriptionAsItAppearsOnBibleList_getLanguage(englishTitle)
+
+
+
+        /**********************************************************************/
+        val languageCode = get("stepLanguageCode3Char")!!
+        val countriesWhereUsedPortion =
+          if (languageCode in "grc.hbo.cmn.deu.eng.fra.fre.ger.nld.por.spa.") // Don't give details for ancient languages, common European languages and a few others.
+            null
+          else
+            "${IsoLanguageAndCountryCodes.getCountriesWhereUsed(languageCode)}."
+
+
+
+        /**********************************************************************/
+        //val moduleMonthYear = makeStepBibleDescriptionAsItAppearsOnBibleList_getModuleMonthYear().trim()
+
+
+        /**********************************************************************/
+        if (null != abbreviatedNameOfRightsHolderAndOfficialYearPortion && abbreviatedNameOfRightsHolderAndOfficialYearPortion.isBlank()) abbreviatedNameOfRightsHolderAndOfficialYearPortion= null
+        if (null != coveragePortion && coveragePortion.isBlank()) coveragePortion= null
+        if (null != languagePortion && languagePortion.isBlank()) languagePortion= null
+        ConfigData["stepBibleDescriptionAsItAppearsOnBibleList"] =
+          listOfNotNull(titlePortion, abbreviatedNameOfRightsHolderAndOfficialYearPortion, coveragePortion, languagePortion, countriesWhereUsedPortion).joinToString(" | ")
     }
 
 
@@ -2017,7 +2074,7 @@ object ConfigData
        text as eg 'OT incomplete +NT'.
     */
 
-    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getBiblePortion (bookNumbers: List<Int>): String
+    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getBiblePortion (bookNumbers: List<Int>): String?
     {
         /************************************************************************/
         val C_MaxIndividualBooksToReport = 5
@@ -2045,14 +2102,14 @@ object ConfigData
 
 
         /************************************************************************/
-        if (fullOt && fullNt) return if (dcBooks.isEmpty()) "" else "+OT2 "
-        if (fullOt && ntBooks.isEmpty()) return if (dcBooks.isEmpty()) "OT only " else "OT+OT2 only "
-        if (fullNt && otBooks.isEmpty()) return if (dcBooks.isEmpty()) "NT only " else "OT2+NT only "
+        if (fullOt && fullNt) return if (dcBooks.isEmpty()) null else "+OT2"
+        if (fullOt && ntBooks.isEmpty()) return if (dcBooks.isEmpty()) "OT only" else "OT+OT2 only"
+        if (fullNt && otBooks.isEmpty()) return if (dcBooks.isEmpty()) "NT only" else "OT2+NT only"
 
 
 
         /************************************************************************/
-        if (ntBooks.isEmpty() && otBooks.isEmpty()) return "OT2 only "
+        if (ntBooks.isEmpty() && otBooks.isEmpty()) return "OT2 only"
 
 
 
@@ -2089,7 +2146,7 @@ object ConfigData
 
 
         /************************************************************************/
-        val apocPortion = if (dcBooks.isEmpty()) "" else " Deuterocanon "
+        val apocPortion = if (dcBooks.isEmpty()) "" else " OT2 "
 
 
 
@@ -2102,7 +2159,7 @@ object ConfigData
 
         if (res.startsWith("+ ")) res = res.substring(2)
 
-        return if (res.isEmpty()) "" else "$res "
+        return res.ifEmpty { null }
     }
 
 
@@ -2164,12 +2221,12 @@ object ConfigData
        my processing in this respect to be comprehensive).  If I _can't_ get it by
        this means, then I don't bother to give a year at all. */
 
-    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getOfficialYear (): String
+    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getOfficialYear (): String?
     {
         /************************************************************************/
         val mainPat = Regex("(?i)(&copy;|©|(copyright))\\W*(?<years>\\d{4}(\\W+\\d{4})*)") // &copy; or copyright symbol or the word 'copyright' followed by any number of blanks and four digits.
         val subPat = Regex("(?<year>\\d{4})$") // eg ', 2012' -- ie permits the copyright details to have more than one date, in which case we take the last.
-        var res = ""
+        var res: String? = null
 
 
 
@@ -2192,7 +2249,7 @@ object ConfigData
 
 
         /************************************************************************/
-        return res
+        return res?.trim()
     }
 
 
@@ -2200,12 +2257,12 @@ object ConfigData
     /* We want the language name only if it's not English, and is not already
     mentioned in the Bible name. */
 
-    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getLanguage (bibleNameInEnglish: String): String
+    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getLanguage (bibleNameInEnglish: String): String?
     {
         val languageName = get("stepLanguageNameInEnglish")
         val languageNameLowerCase = languageName!!.lowercase()
-        if ("english" == languageNameLowerCase) return ""
-        return if (bibleNameInEnglish.lowercase().contains(languageNameLowerCase)) "" else " in $languageName "
+        if ("english" == languageNameLowerCase) return null
+        return if (bibleNameInEnglish.lowercase().contains(languageNameLowerCase)) null else " In $languageName "
     }
 
 
@@ -2278,9 +2335,9 @@ object ConfigData
     private val m_EnglishDefinitions: MutableSet<String> = mutableSetOf()
     private var m_Initialised: Boolean = false
     private val m_Metadata = TreeMap<String, ParameterSetting?>(String.CASE_INSENSITIVE_ORDER)
-    private var m_ProcessingEnglishMessageDefinitions = false
     private val m_RawUsxToOsisTagTranslationLines: MutableList<String> = ArrayList()
     private val m_Regexes: MutableList<Pair<Regex, String>> = mutableListOf()
+    private val m_SharedConfigFolderPathAccesses: MutableSet<String> = mutableSetOf()
     private val m_UsxToOsisTagTranslationDetails: MutableMap<String, Pair<String, TagAction>> = TreeMap(String.CASE_INSENSITIVE_ORDER)
 
 
@@ -2399,7 +2456,11 @@ object ConfigData
 
 
   /****************************************************************************/
-  fun calc_stepLanguageNameInEnglish () = IsoLanguageCodes.getLanguageName(getInternal("stepLanguageCode3Char", false)!!)
+  fun calc_stepLanguageNameInEnglish () = IsoLanguageAndCountryCodes.getLanguageName(getInternal("stepLanguageCode3Char", false)!!)
+
+
+  /****************************************************************************/
+  fun calc_stepMetadataFolderPath () = FileLocations.getMetadataFolderPath()
 
 
   /****************************************************************************/

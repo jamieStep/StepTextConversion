@@ -145,7 +145,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   /****************************************************************************/
   /**
-  * Returns the BibleStructre data, first loading it if necessary.
+  * Returns the BibleStructure data, first loading it if necessary.
   *
   * @return BibleStructure
   */
@@ -261,7 +261,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   fun findPredecessorBook (bookNo: Int): Int
   {
-    val res = m_BookNumberToRootNode.keys.reversed().find { it < bookNo && null != m_BookNumberToRootNode[it] }
+    val res = m_BookNumberToRootNode.keys.reversed().find { it < bookNo && null != getRootNode(it) }
     return res ?: throw StepException("findPredecessorBook failed.")
   }
 
@@ -427,7 +427,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   * @param rootNode
   */
 
-  fun setRootNode (bookNo: Int, rootNode: Node)
+  fun setRootNode (bookNo: Int, rootNode: Node?)
   {
     m_BookNumberToRootNode[bookNo] = rootNode
   }
@@ -487,7 +487,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
      nodeList.forEach {
          val bookNo = BibleBookNamesOsis.abbreviatedNameToNumber(it["osisID"]!!)
          res.add(bookNo)
-         m_BookNumberToRootNode[bookNo] = it
+         setRootNode(bookNo, it)
      }
 
      return res
@@ -560,7 +560,10 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   private fun restoreBookNumberToRootNodeMappings ()
   {
     m_BookNumberToRootNode.clear()
-    ConfigData.getBookDescriptors().map { BibleBookNamesUsx.abbreviatedNameToNumber(it.ubsAbbreviation) }.forEach { m_BookNumberToRootNode[it] = null }
+    ConfigData.getBookDescriptors()
+      .filter { it.ubsAbbreviation.isNotEmpty() }
+      .map { BibleBookNamesUsx.abbreviatedNameToNumber(it.ubsAbbreviation) }
+      .forEach { setRootNode(it, null) }
   }
 
 
@@ -572,7 +575,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   private fun sortStructuresByBookOrder (bookList: List<Int>)
   {
     val newBookNumberToRootNode: MutableMap<Int, Node?> = mutableMapOf()
-    bookList.forEach { newBookNumberToRootNode[it] = m_BookNumberToRootNode[it]!! }
+    bookList.forEach { newBookNumberToRootNode[it] = getRootNode(it) }
     m_BookNumberToRootNode = newBookNumberToRootNode.toSortedMap()
   }
 
@@ -617,6 +620,7 @@ class Osis_DataCollection: X_DataCollection(Osis_FileProtocol)
   /****************************************************************************/
   override fun filterOutUnwantedBooksAndPopulateRootNodesStructure (docIn: Document): List<Int>
   {
+    //Dbg.d(docIn)
     val docOut = Dom.createDocument()
     val importedNode = docOut.importNode(docIn.documentElement, true)
     docOut.appendChild(importedNode)
@@ -637,7 +641,7 @@ class Osis_DataCollection: X_DataCollection(Osis_FileProtocol)
       {
         val bookNo = BibleBookNamesOsis.abbreviatedNameToNumber(it["osisID"]!!)
         res.add(bookNo)
-        m_BookNumberToRootNode[bookNo] = it
+        setRootNode(bookNo, it)
       }
       else
         Dom.deleteNode(it)

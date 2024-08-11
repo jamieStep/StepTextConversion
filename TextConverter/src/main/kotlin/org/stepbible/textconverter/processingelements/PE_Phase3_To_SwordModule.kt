@@ -5,6 +5,7 @@ import org.stepbible.textconverter.osisinputonly.Osis_Osis2modInterface
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
+import org.stepbible.textconverter.support.configdata.TranslatableFixedText
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.miscellaneous.*
@@ -68,7 +69,7 @@ object PE_Phase3_To_SwordModule : PE
   private fun doIt ()
   {
     /**************************************************************************/
-    if (!ConfigData.getAsBoolean("stepEncryptionRequired", "no")) Logger.warning("********** NOT ENCRYPTED **********")
+    if (!ConfigData.getAsBoolean("stepEncrypted", "no")) Logger.warning("********** NOT ENCRYPTED **********")
     StepFileUtils.createFolderStructure(FileLocations.getInternalSwordFolderPath())
     PackageContentHandler.processPreOsis2mod()
     handleOsis2modCall()
@@ -91,7 +92,7 @@ object PE_Phase3_To_SwordModule : PE
     PackageContentHandler.processPostOsis2mod()
     getFileSizeIndicator()
     VersionAndHistoryHandler.appendHistoryLinesToStepConfigFile()
-    createZip()
+    createModuleZip()
   }
 
 
@@ -193,8 +194,12 @@ object PE_Phase3_To_SwordModule : PE
     Logger.setPrefix("osis2mod")
 
     FileLocations.getInputStream(file.toString())!!.bufferedReader().readLines().forEach {
-      if (it.startsWith("WARNING(PARSE): SWORD does not search numeric entities"))
+      if (it.startsWith("You are running osis2mod"))
+        ConfigData["stepOsis2ModVersion"] = Regex("Rev: (\\S+)").find(it)!!.groups[1]!!.value
+
+      else if (it.startsWith("WARNING(PARSE): SWORD does not search numeric entities"))
         return@forEach  // osis2mod doesn't like things like &#9999;, but apparently we need them and they do work.  @forEach continues with the next item.
+
       else if (it.startsWith("SUCCESS"))
       {
         Logger.info(it)
@@ -240,7 +245,7 @@ object PE_Phase3_To_SwordModule : PE
   /****************************************************************************/
   /* This is the _module_ zip, not the repository zip. */
 
-  private fun createZip()
+  private fun createModuleZip()
   {
     val zipPath: String = FileLocations.getSwordZipFilePath()
     val inputs = mutableListOf(FileLocations.getSwordConfigFolderPath(), FileLocations.getSwordTextFolderPath())
@@ -277,7 +282,7 @@ object PackageContentHandler
   /****************************************************************************/
   data class ProcessingDetails (val wantIt: () -> Boolean, val processor: ((String) -> Unit)?, val filePath: String)
   private fun doItAlways () = true
-  private fun ifEncrypting () = ConfigData.getAsBoolean("stepEncryptionRequired")
+  private fun ifEncrypting () = ConfigData.getAsBoolean("stepEncrypted")
   private fun ifUsingStepOsis2mod () = ConfigData["stepOsis2modType"]!!.lowercase() == "step"
 
 
@@ -355,7 +360,7 @@ object PackageContentHandler
   private fun encryptionDataHandler (filePath: String)
   {
     /**************************************************************************/
-    if (!ConfigData.getAsBoolean("stepEncryptionRequired"))
+    if (!ConfigData.getAsBoolean("stepEncrypted"))
       return
 
 
@@ -473,9 +478,9 @@ Sword module @(stepModuleName) created by the STEPBible project @(stepModuleCrea
 
     /**************************************************************************/
     val texts: MutableList<String> = ArrayList()
-    if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) texts.add(Translations.stringFormatWithLookup("V_addedValue_Morphology"))
-    if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) texts.add(Translations.stringFormatWithLookup("V_addedValue_Strongs"))
-    if ("P" == ConfigData["stepTargetAudience"]) texts.add(Translations.stringFormatWithLookup("V_addedValue_Reversification"))
+    if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) texts.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Morphology"))
+    if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) texts.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Strongs"))
+    if ("P" == ConfigData["stepTargetAudience"]) texts.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Reversification"))
 
 
 
@@ -483,7 +488,7 @@ Sword module @(stepModuleName) created by the STEPBible project @(stepModuleCrea
     var text = ""
     if (texts.isNotEmpty())
     {
-      text = Translations.stringFormatWithLookup("V_addedValue_AddedValue") + " "
+      text = TranslatableFixedText.stringFormatWithLookup("V_addedValue_AddedValue") + " "
       text += java.lang.String.join("; ", texts)
     }
 

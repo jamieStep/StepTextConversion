@@ -6,6 +6,7 @@ import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.Zip
 import org.stepbible.textconverter.support.stepexception.StepException
+import java.nio.file.Paths
 
 
 /******************************************************************************/
@@ -56,8 +57,11 @@ object PE_Phase4_To_RepositoryPackage: PE
 
     if (null == inputOsis) throw StepException("No OSIS available to store in repository package.")
 
+   createSharedConfigZip()
+
     val zipPath: String = FileLocations.getRepositoryPackageFilePath()
     val inputs = mutableListOf(FileLocations.getMetadataFolderPath(),
+                               FileLocations.getSharedConfigZipFilePath(),
                                inputOsis,
                                inputUsx,
                                inputVl,
@@ -65,4 +69,22 @@ object PE_Phase4_To_RepositoryPackage: PE
                                FileLocations.getSwordZipFilePath()).filterNotNull()
     Zip.createZipFile(zipPath, 9, null, inputs)
   }
+
+
+  /****************************************************************************/
+  /* A zip file to contain the shared config data.  This is going to be a bit
+     over the top, in that it will always contain all common shared data, such
+     as the message-translation database, but I can't think of a better way of
+     doing things. */
+
+  private fun createSharedConfigZip()
+  {
+    val zipPath: String = FileLocations.getSharedConfigZipFilePath()
+    val inputs = mutableListOf(Paths.get(FileLocations.getSharedConfigFolderPath(), "_Common_").toString())
+    inputs.addAll(ConfigData.getSharedConfigFolderPathAccesses())
+    Zip.createZipFile(zipPath, 9, FileLocations.getSharedConfigFolderPath(), inputs)
+  }
+
+
+
 }

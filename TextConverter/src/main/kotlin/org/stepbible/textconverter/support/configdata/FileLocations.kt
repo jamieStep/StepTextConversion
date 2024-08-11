@@ -7,6 +7,8 @@ import java.io.File
 import java.io.FileInputStream
 import java.nio.file.Paths
 import java.io.InputStream
+import kotlin.io.path.Path
+import kotlin.io.path.exists
 
 
 /******************************************************************************/
@@ -138,12 +140,12 @@ object FileLocations
    *   the resources section of this JAR file, and we simply return filePath
    *   as-is (except for replacing backslash by slash).
    *
-   * - Ditto if it starts with $common (an earlier synonym for $jarResources).
+   * - With one exception, any other directive is expanded out using standard
+   *   configuration expansion, and then treated as an absolute path.
    *
-   * - If it starts with $root or $metadata, this is altered to point to the
-   *   actual location of the root or metadata folder for the present text.
-   *
-   * - Otherwise it is returned as-is.
+   * - The one exception is that you can start a path '$find', in which case
+   *   I scan the root folder, the metadata folder and the shared config
+   *   folder in that order until I find the file.
    *
    * @param filePath The file path in our own internal format.
    *
@@ -166,42 +168,53 @@ object FileLocations
 
 
     /**************************************************************************/
-    /* In resources section of jar FILE?  (Previously I used the name $common
-       in place of jarResources.  This is retained for backward
-       compatibility. */
+    /* Just locate it?  We look here through a series of folders, and attempt
+       to locate the file anywhere under any of them.  The first match is
+       returned. */
 
-    if (canonicalFilePath.lowercase().startsWith("\$common"))
-      return canonicalFilePath.replace("\$common", "\$jarResources")
+    if (canonicalFilePath.lowercase().startsWith("\$find"))
+    {
+      val endOfPath = canonicalFilePath.substring("\$find/".length)
+      val fileName = Path(endOfPath).fileName
+      for (folderPath in listOf(getRootFolderPath(), getMetadataFolderPath(), getSharedConfigFolderPath()).filterNotNull())
+      {
+        val file = File(folderPath).walk(FileWalkDirection.BOTTOM_UP).firstOrNull { Path(it.toString()).endsWith(fileName) }
+        if (null != file)
+          return file.toString()
+      }
+
+      throw StepException("Can't locate file $canonicalFilePath.")
+    }
+
+
+
+//    /**************************************************************************/
+//    /* $root: Root folder for text.  CAUTION: Not backward compatible.  In a
+//       previous version, this pointed to the Metadata folder. */
+//
+//    if (canonicalFilePath.lowercase().startsWith("\$root"))
+//      return Paths.get(canonicalFilePath.replace("\$root", getRootFolderPath(), ignoreCase = true)).normalize().toString()
+
+
+
+//    /**************************************************************************/
+//    /* $metadata -- ie co-located with step.conf */
+//
+//    if (canonicalFilePath.lowercase().startsWith("\$metadata"))
+//      return Paths.get(canonicalFilePath.replace("\$metadata", getMetadataFolderPath(), ignoreCase = true)).normalize().toString()
+
+
+
+//    /**************************************************************************/
+//    /* sharedConfig -- shared configuration data */
+//
+//    if (canonicalFilePath.lowercase().startsWith("\$stepsharedconfigfolder"))
+//      return Paths.get(canonicalFilePath.replace("\$stepSharedConfigFolder", getSharedDataFolderPath(), ignoreCase = true)).normalize().toString()
 
 
 
     /**************************************************************************/
-    /* $root: Root folder for text.  CAUTION: Not backward compatible.  In a
-       previous version, this pointed to the Metadata folder.*/
-
-    if (canonicalFilePath.lowercase().startsWith("\$root"))
-      return Paths.get(canonicalFilePath.replace("\$root", getRootFolderPath(), ignoreCase = true)).normalize().toString()
-
-
-
-    /**************************************************************************/
-    /* $metadata -- ie co-located with step.conf */
-
-    if (canonicalFilePath.lowercase().startsWith("\$metadata"))
-      return Paths.get(canonicalFilePath.replace("\$metadata", getMetadataFolderPath(), ignoreCase = true)).normalize().toString()
-
-
-
-    /**************************************************************************/
-    /* sharedConfig -- shared configuration data */
-
-    if (canonicalFilePath.lowercase().startsWith("\$sharedconfig"))
-      return Paths.get(canonicalFilePath.replace("\$sharedConfig", getSharedDataFolderPath(), ignoreCase = true)).normalize().toString()
-
-
-
-    /**************************************************************************/
-    /* General path, which is assumed to be relative to the calling path. */
+    /* Fully specified path. */
 
     return Paths.get(canonicalFilePath).normalize().toString()
   }
@@ -232,7 +245,7 @@ object FileLocations
     /**************************************************************************/
     /* In resources section of JAR file? */
     
-    if (expandedFilePath.lowercase().startsWith("\$jarresources") || filePath.lowercase().startsWith("\$common"))
+    if (expandedFilePath.lowercase().startsWith("\$jarresources"))
     {
       val ix = expandedFilePath.indexOf("/")
       val newFileName = expandedFilePath.substring(ix + 1)
@@ -282,7 +295,8 @@ object FileLocations
   /* Metadata. */
 
   fun getMetadataFolderPath () = Paths.get(m_RootFolderPath, "Metadata").toString()
-  private fun getSharedDataFolderPath () = ConfigData["stepSharedConfigFolder"]!!
+  fun getSharedConfigFolderPath () = ConfigData["stepSharedConfigFolder"]
+  fun getSharedConfigZipFilePath () = Paths.get(getOutputFolderPath(), "sharedMetadata.zip").toString() // Place to store zipped
   fun getStepConfigFileName () = "step.conf"
   fun getStepConfigFilePath () = Paths.get(getMetadataFolderPath(), getStepConfigFileName()).toString()
 
@@ -322,9 +336,10 @@ object FileLocations
     return StepFileUtils.getMatchingFilesFromFolder(getInputVlFolderPath(), ".*\\.${getFileExtensionForVl()}".toRegex()).map { it.toString() }
   }
 
+  fun getInputImpFilesExist  () = if (!StepFileUtils.fileOrFolderExists(getInputImpFolderPath()))  false else StepFileUtils.getMatchingFilesFromFolder(getInputImpFolderPath(),  ".*\\.${getFileExtensionForImp()}" .toRegex()).isNotEmpty()
   fun getInputOsisFileExists () = if (!StepFileUtils.fileOrFolderExists(getInputOsisFolderPath())) false else StepFileUtils.getMatchingFilesFromFolder(getInputOsisFolderPath(), ".*\\.${getFileExtensionForOsis()}".toRegex()).isNotEmpty()
-  fun getInputUsxFilesExist  () = if (!StepFileUtils.fileOrFolderExists(getInputUsxFolderPath()))  false else StepFileUtils.getMatchingFilesFromFolder(getInputUsxFolderPath(), ".*\\.${getFileExtensionForUsx()}".toRegex()).isNotEmpty()
-  fun getInputVlFilesExist   () = if (!StepFileUtils.fileOrFolderExists(getInputVlFolderPath()))   false else StepFileUtils.getMatchingFilesFromFolder(getInputVlFolderPath(), ".*\\.${getFileExtensionForVl()}".toRegex()).isNotEmpty()
+  fun getInputUsxFilesExist  () = if (!StepFileUtils.fileOrFolderExists(getInputUsxFolderPath()))  false else StepFileUtils.getMatchingFilesFromFolder(getInputUsxFolderPath(),  ".*\\.${getFileExtensionForUsx()}" .toRegex()).isNotEmpty()
+  fun getInputVlFilesExist   () = if (!StepFileUtils.fileOrFolderExists(getInputVlFolderPath()))   false else StepFileUtils.getMatchingFilesFromFolder(getInputVlFolderPath(),   ".*\\.${getFileExtensionForVl()}"  .toRegex()).isNotEmpty()
 
 
 
@@ -343,7 +358,7 @@ object FileLocations
   fun getInternalOsisFolderPath                () = Paths.get(getOutputFolderPath(), "InternalOsis").toString()
   fun getInternalOsisFilePath                  () = Paths.get(getInternalOsisFolderPath(), "internalOsis.${getFileExtensionForOsis()}").toString()
 
-  fun getOutputFolderPath                      () = Paths.get(getRootFolderPath(), "_Output").toString()
+  fun getOutputFolderPath                      () = Paths.get(getRootFolderPath(), "_Output_" + ConfigData["stepTargetAudience"]!!).toString()
 
 
 
@@ -383,10 +398,10 @@ object FileLocations
   /****************************************************************************/
   /* Miscellaneous. */
 
-  fun getVernacularTextDatabaseFilePath () = ConfigData["stepVernacularTranslationsDatabasePath"]!! // Should be defined in the STEP environment variable.
+  fun getCountryCodeInfoFilePath () = "\$jarResources/countryNamesToShortenedForm.tsv"
   fun getIsoLanguageCodesFilePath () = "\$jarResources/isoLanguageCodes.tsv"
   fun getOsis2modVersificationDetailsFilePath () = "\$jarResources/osis2modVersification.txt"
-  fun getTranslationsDatabasePath () = ConfigData["stepTranslationsDatabasePath"]!!
+  fun getVernacularTextDatabaseFilePath () = ConfigData["stepSharedConfigFolder"]!! + "/_Common_/vernacularTranslationsDb.txt"
 
 
 

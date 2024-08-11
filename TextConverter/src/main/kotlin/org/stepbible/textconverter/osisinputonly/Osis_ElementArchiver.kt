@@ -109,7 +109,7 @@ object Osis_ElementArchiver
   /****************************************************************************/
   private fun processCrossReferences (extendedTagName: String)
   {
-    Osis_CrossReferenceChecker.process(InternalOsisDataCollection, getNodeListFromArchive(extendedTagName))
+    Osis_CrossReferenceChecker.process(InternalOsisDataCollection, getNodeListFromArchive(extendedTagName).filter { "crossReference" == it["type"] })
   }
 
 

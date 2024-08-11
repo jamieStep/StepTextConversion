@@ -15,6 +15,23 @@ import org.stepbible.textconverter.support.stepexception.StepException
 * remarkably difficult to pin down.  Comments deferred to later, so I can put
 * them adjacent to the code which may change again.
 *
+* IMPORTANT * IMPORTANT * IMPORTANT * IMPORTANT * IMPORTANT * IMPORTANT
+*
+* We had intended to support three kinds of reversification -- 'none',
+* run-time and conversion-time.  'none' is ok (this would be used when creating
+* a public module).  Run-time is ok (this is what we use for all STEP-
+* internal modules.  Conversion-time is more problematical, however.
+*
+* We never anticipated using this much anyway -- it entails physically
+* restructuring modules during the conversion process, and licence
+* conditions will normally preclude that.  But the problem is that we'd be
+* restructuring them to align them with NRSV, and we'd thought that could
+* then be put through the Crosswire osis2mod.  However, an NRSV-compliant
+* text does not fit with Crosswire's NRSV scheme, because that scheme is
+* not, itself, NRSV-compliant.  This means that physically restructured
+* texts would still need to be samified, and the processing to do that
+* still needs sorting out.
+*
 * @author ARA "Jamie" Jamieson
 */
 
@@ -74,36 +91,46 @@ object Osis_DetermineReversificationTypeEtc
     /* The parameters which control what we're going to do. */
 
     val forcedVersificationScheme = getCanonicalisedVersificationSchemeIfAny() // Check if we've been given a scheme, and if so, convert the name to canonical form.
-    var reversificationType = getReversificationType()
     val targetAudience = ConfigData["stepTargetAudience"]!!
-    if ("P" in targetAudience) ConfigData.deleteAndPut("stepIsCopyrightText", "no", force = true) // Public texts can't be copyright, and vice-versa.
-    val isCopyrightText = ConfigData.getAsBoolean("stepIsCopyrightText")
+    var reversificationType = getReversificationType(targetAudience)
+
+    val isCopyrightText: Boolean
+    when (if (null == ConfigData["stepIsCopyrightText"]) null else ConfigData.getAsBoolean("stepIsCopyrightText"))
+    {
+      true ->
+      {
+        if ("P" == targetAudience)
+          throw StepException("Target audience cannot be Public if the text is marked as being copyright.")
+        isCopyrightText = true
+      }
+      
+      false ->
+        isCopyrightText = false // If the text isn't copyright, there's no need to check if we're doing a public or STEP build: either is possible.
+        
+      null ->
+      {
+        if ("P" == targetAudience)
+          throw StepException("If target audience is Public you must overtly set stepIsCopyrightText to confirm this is not a copyright text.")
+        isCopyrightText = "S" == targetAudience // Assume we have a copyright text if creating a STEP-only module.
+      }  
+    }
+
+    ConfigData.deleteAndPut("stepIsCopyrightText", if (isCopyrightText) "yes" else "no", force = true) // Public texts can't be copyright, and vice-versa.
 
 
 
     /**************************************************************************/
-    /* We always samify modules destined for use in STEP, unless we are doing
-       runtime restructuring. */
-
-    if ("S" in targetAudience && "none" == reversificationType)
-      reversificationType = "runtime"
-
-
-
-    /**************************************************************************/
-    /* A bit of validation. */
-
-    if (isCopyrightText && "conversiontime" == reversificationType)
-      throw StepException("Can't apply conversion-time reversification (ie physical restructuring) to a copyright text.")
+    /* A bit of validation.  This may actually implicitly simply repeat some
+       of the validation above, but better safe than sorry. */
 
     when (reversificationType)
     {
       "none" ->
       {
-        if ("S" in targetAudience && !forcedVersificationScheme.startsWith("NRSV"))
-          throw StepException("Not reversifying, so you must specify NRSV or NRSVA as the versification scheme when creating a module for use in STEPBible.")
+        if ("S" == targetAudience)
+          throw StepException("Must apply run-time reversifiation when the target audience is STEP.")
 
-        if ("P" in targetAudience && forcedVersificationScheme.isEmpty())
+        if ("P" == targetAudience && forcedVersificationScheme.isEmpty())
           throw StepException("If you are building a public module without reversification, you must specify a Crosswire versification scheme.")
       }
 
@@ -112,14 +139,13 @@ object Osis_DetermineReversificationTypeEtc
         if (forcedVersificationScheme.isNotEmpty())
           throw StepException("Applying samification, so you must not specify a versification scheme.")
 
-        if ("P" in targetAudience)
+        if ("P" == targetAudience)
           throw StepException("Applying samification, so you can't create a public module.")
       }
 
       "conversiontime" ->
       {
-        if (!forcedVersificationScheme.startsWith("NRSV"))
-          throw StepException("Applying run-time reversification, so you must specify NRSV or NRSVA as the versification scheme.")
+        throw StepException("I'm not actually sure we can do conversion-time reversification: we can't convert to Crosswire NRSV, because that's not NRSV-compliant.")
       }
     }
 
@@ -162,7 +188,7 @@ object Osis_DetermineReversificationTypeEtc
    val stepSoftwareVersionRequired = ConfigData["stepSoftwareVersionRequired"]
    val versificationScheme = ConfigData["stepVersificationScheme"]
    Logger.info("Treating this as a ${if (isCopyrightText) "copyright" else "non-copyright"} text.")
-   Logger.info("Generation of our own footnotes is ${if (!okToGenerateFootnotes) "NOT" else ""} permitted.")
+   Logger.info("Generation of our own footnotes is${if (!okToGenerateFootnotes) " NOT" else ""} permitted.")
    Logger.info("Versification scheme is ${versificationScheme ?: "STEP-internal"}.")
    Logger.info("ReversificationType is $reversificationType")
    Logger.info("osis2mod type is $osis2modType with STEP software version specified as $stepSoftwareVersionRequired.")
@@ -194,12 +220,14 @@ object Osis_DetermineReversificationTypeEtc
   /****************************************************************************/
   /* Canonicalises the value and returns it. */
 
-  private fun getReversificationType (): String
+  private fun getReversificationType (targetAudience: String): String
   {
-    var x = ConfigData.get("stepReversificationType", "none").lowercase()
-    if (x.isEmpty()) x = "none"
-    ConfigData.deleteAndPut("stepReversificationType", x, force = true)
-    return x
+    return if (ConfigData.getAsBoolean("conversionTimeReversification", "no"))
+      "conversiontime"
+    else if ("S" == targetAudience)
+      "runtime"
+    else
+      "none"
   }
 
 
@@ -221,8 +249,8 @@ object Osis_DetermineReversificationTypeEtc
 
   private fun setEncryption (wantEncryption: Boolean): Boolean
   {
-    ConfigData.deleteAndPut("stepEncryptionRequired", if (wantEncryption) "yes" else "no", force = true)
-    return ConfigData.getAsBoolean("stepEncryptionRequired")
+    ConfigData.deleteAndPut("stepEncrypted", if (wantEncryption) "Yes" else "No", force = true)
+    return ConfigData.getAsBoolean("stepEncrypted")
   }
 
 
@@ -259,17 +287,15 @@ object Osis_DetermineReversificationTypeEtc
         will be good enough.
 
       - The target scheme will be NRSV or NRSV(A) as appropriate.
-
-      - The module can be used both within STEP and for a public audience.
   */
 
   private fun setConversionTimeRestructuring (versificationScheme: String)
   {
+    throw StepException("Needs more thought.  We thought we could do conversion-time restructuring and then use Crosswire osis2mod.  But we can't, because we'd have to target NRSV, and Crosswire NRSV isn't NRSV-compliant.")
     ConfigData.deleteAndPut("stepReversificationType", "conversiontime", force = true)
     ConfigData.deleteAndPut("stepOsis2modType", "crosswire", force = true)
-    ConfigData.deleteAndPut("stepSoftwareVersionRequired", 1.toString(), force=true)
+    ConfigData.deleteAndPut("stepVersified", "No", force = true)
     ConfigData.deleteAndPut("stepVersificationScheme", versificationScheme, force = true)
-    ConfigData.deleteAndPut("stepTargetAudience", "PS", force = true)
   }
 
 
@@ -288,6 +314,7 @@ object Osis_DetermineReversificationTypeEtc
    {
      ConfigData.deleteAndPut("stepReversificationType", "none", force = true)
      ConfigData.deleteAndPut("stepOsis2modType", "crosswire", force = true)
+     ConfigData.deleteAndPut("stepVersified", "No", force = true)
      ConfigData.deleteAndPut("stepSoftwareVersionRequired", 1.toString(), force=true)
    }
 
@@ -312,6 +339,7 @@ object Osis_DetermineReversificationTypeEtc
   {
     ConfigData.deleteAndPut("stepReversificationType", "runtime", force = true)
     ConfigData.deleteAndPut("stepOsis2modType", "step", force = true)
+    ConfigData.deleteAndPut("stepVersified", "Yes", force = true)
     ConfigData.deleteAndPut("stepSoftwareVersionRequired", 2.toString(), force=true)
     ConfigData.delete("stepVersificationScheme")
   }

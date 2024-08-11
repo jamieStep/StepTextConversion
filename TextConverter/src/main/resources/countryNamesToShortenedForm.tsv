@@ -1,0 +1,29 @@
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#!
+#! Converts the longer ISO country names to acceptable shorter forms.  This list
+#! is probably not comprehensive: indeed having been drawn up manually with the
+#! assistance of AI, I'm not even clear what 'comprehensive' would mean since it
+#! is down to us to decide which names are worth abbreviating.
+#!
+#! Format is:
+#!
+#!   Long form name | Short form name.
+#!
+#! where ' | ' represents a tab.
+#!
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Antigua and Barbuda	Antigua
+Bosnia and Herzegovina	Bosnia
+Cocos (Keeling) Islands	Cocos Islands
+Democratic Republic of the Congo	DR Congo
+Cape Verde Islands	Cape Verde
+China–Hong Kong	Hong Kong
+Saint Kitts and Nevis	Saint Kitts
+North Macedonia	N Macedonia
+Northern Mariana Islands	Mariana Islands
+French Polynesia	Polynesia
+Russian Federation	Russia
+São Tomé e Príncipe	São Tomé
+Trinidad and Tobago	Trinidad
+Saint Vincent and the Grenadines	Saint Vincent

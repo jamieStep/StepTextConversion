@@ -2,8 +2,9 @@
 package org.stepbible.textconverter.processingelements
 
 import org.stepbible.textconverter.osisinputonly.Osis_Utils
-import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
+import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
@@ -72,8 +73,9 @@ object PE_Phase1_FromInputImp: PE
     m_OsisFilePath = FileLocations.makeInputOsisFilePath()
     m_OutputFile = File(m_OsisFilePath).bufferedWriter()
 
+    File(inFiles[0]).bufferedReader().lines().forEach { processLine(it, doOutput = false) } // Just determine which books we have.
     fileHeader()
-    File(inFiles[0]).bufferedReader().lines().forEach { processLine(it) }
+    File(inFiles[0]).bufferedReader().lines().forEach { processLine(it, doOutput = true) } // This time do the actual output.
     bookTrailer()
     fileTrailer()
 
@@ -106,12 +108,19 @@ object PE_Phase1_FromInputImp: PE
 
 
   /****************************************************************************/
-  private fun fileHeader () = appendText(Osis_Utils.fileHeader(m_BookNumbers))
+  private fun fileHeader ()
+  {
+    ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(m_BookNumbers.toList())
+    appendText(Osis_Utils.fileHeader(m_BookNumbers.toList()))
+  }
+
+
+  /****************************************************************************/
   private fun fileTrailer () = appendText(Osis_Utils.fileTrailer())
 
 
   /****************************************************************************/
-  private fun processLine (theLine: String)
+  private fun processLine (theLine: String, doOutput: Boolean)
   {
     /**************************************************************************/
     var line = theLine.trim()
@@ -130,7 +139,7 @@ object PE_Phase1_FromInputImp: PE
 
     if (!line.startsWith("\$\$\$"))
     {
-      appendText(line)
+      if (doOutput) appendText(modifyVerseContent(line))
       return
     }
 
@@ -152,24 +161,24 @@ object PE_Phase1_FromInputImp: PE
     line = line.substring(3)
     val m = C_BookChapterVerseHeader.matchEntire(line) ?: throw StepException("Invalid IMP line: $line")
     val bookNameFull = m.groups["bookNameFull"]!!.value
-    m_BookNumbers.add(BibleBookNamesUsx.nameToNumber(bookNameFull))
+    m_BookNumbers.add(BibleBookNamesOsis.nameToNumber(bookNameFull))
     val chapter = m.groups["chapter"]!!.value.toInt()
     val verse = m.groups["verse"]!!.value.toInt()
 
     if (0 == chapter)
     {
-      bookHeader(bookNameFull)
+      if (doOutput) bookHeader(bookNameFull)
       return
     }
 
     else if (0 == verse)
     {
-      chapterHeader(chapter)
+      if (doOutput) chapterHeader(chapter)
       return
     }
 
     else
-      verseHeader(verse)
+      if (doOutput) verseHeader(verse)
   }
 
 
@@ -177,7 +186,7 @@ object PE_Phase1_FromInputImp: PE
    private fun bookHeader (bookNameFull: String)
    {
      bookTrailer()
-     m_ActiveBook = BibleBookNamesUsx.nameToNumber(bookNameFull)
+     m_ActiveBook = BibleBookNamesOsis.nameToNumber(bookNameFull)
      val abbreviatedName = Ref.rd(m_ActiveBook, 1, RefBase.C_DummyElement).toStringOsis("b")
      appendText("\n\n\n\n\n\n\n\n\n\n")
      appendText("<!-- ========================================================================================= -->\n")
@@ -223,6 +232,28 @@ object PE_Phase1_FromInputImp: PE
 
 
   /****************************************************************************/
+  /* I'm not too sure about this.  I have seen a text which contains just
+     <note> markers.  This is not really all that helpful, because it gives
+     none of the additional information required in OSIS, like whether this
+     is an explanatory note or a cross-reference.  In the one text where I have
+     seen this problem, all the notes were, in fact, explanatory. */
+
+  private fun modifyVerseContent (theLine: String): String
+  {
+    var line = theLine
+    var n = 0
+
+    while ("<note>" in line)
+    {
+      val replacement =  "<note n='+' osisID='$m_VerseRef!fref_${++n}' osisRef='$m_VerseRef' type='explanation'>"
+      line = line.replaceFirst("<note>", replacement)
+    }
+
+    return line
+  }
+
+
+  /****************************************************************************/
   private fun verseHeader (verseNo: Int)
   {
     verseTrailer()
@@ -230,6 +261,7 @@ object PE_Phase1_FromInputImp: PE
     appendText("\n")
     val ref = makeOsisVerseRef()
     appendText("<verse osisID='$ref' sID='$ref'/>")
+    m_VerseRef = ref
   }
 
 
@@ -253,8 +285,9 @@ object PE_Phase1_FromInputImp: PE
   private var m_ActiveBook = -1
   private var m_ActiveChapter = -1
   private var m_ActiveVerse = -1
-  private val m_BookNumbers: MutableList<Int> = mutableListOf()
+  private val m_BookNumbers: MutableSet<Int> = mutableSetOf()
   private lateinit var m_OsisFilePath: String
   private lateinit var m_OutputFile: BufferedWriter
+  private var m_VerseRef = ""
 }
 

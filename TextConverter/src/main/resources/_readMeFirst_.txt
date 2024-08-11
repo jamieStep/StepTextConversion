@@ -37,20 +37,39 @@
 #! mainly because we never quite know in advance what we may need to configure:
 #! new texts often bring new surprises.
 #!
-#! The good news, though, is that that amount of configuring you _have_ to do
+#! The good news, though, is that the amount of configuring you _have_ to do
 #! for any individual text is usually quite modest, and in the main covers the
 #! sorts of things you would _expect_ to have to supply, like copyright
 #! information.  And in fact if you have a number of texts from the same source,
 #! you can often reduce this further by sharing information between them.
 #!
-#! Configuration information comes from one of four places.  You can place
-#! settings into an environment variable -- StepTextConverterParameters.
-#! A few parameters you supply on the command line when you run the converter.
-#! Then there are a lot of default settings built into the Resources section of
-#! the present JAR file.  And finally, you supply your own settings in
-#! configuration files you construct yourself.
+#! Configuration information comes from one of four places ...
 #!
-#! Each of the configuration files in this Resources section work in the same
+#! - You can place settings into an environment variable --
+#!   StepTextConverterParameters.  This  is handy for settings which apply to
+#!   _every_ module, and which you need to be in place at the very start of
+#!   processing.
+#!
+#! - You can supply settings on the comment line.  You use this for certain
+#!   control information specific to the text you are working on (like .
+#!
+#! - There is a lot of configuration data built into the Resources section of
+#!   the current JAR file.  This is standard stuff which is probably going to
+#!   be correct for every module, but which you can override where necessary.
+#!   You should never need to refer to these files yourself: they are used
+#!   only within the converter software.
+#!
+#! - And you can set up and store configuration files of your own.  This is
+#!   where you store material specific to a given module (or shared between
+#!   a collection of modules) which is unlikely to change all that often.
+#!
+#!
+#!
+#! Having said that you will not need to refer to the Resources section, you
+#! may, in fact, need to read through the files there to understand what they
+#! do, and therefore what things you might usefully override.
+#!
+#! Each of the configuration files in the Resources section work in the same
 #! way (hopefully _exactly_ the same way), but each sets out to do different
 #! things, and will therefore contain different kinds of data.  Each file
 #! gives more details of what it sets out to achieve and what data it defines
@@ -97,24 +116,40 @@
 #! you can't use '..' to take you up above where $jarResources points (because
 #! there _is_ nothing above it).
 #!
-#! With the other options, there is no such limitation.  The other options are:
+#! With the other options, there is no such limitation.  The other options are,
+#! with one exception, all based upon you giving full path names -- either
+#! overtly (C:\MyFolder\myfile.conf) or using the substitution mechanism
+#! supported by the configuration data and discussed in hugely boring detail
+#! below.  Thus you might have something like:
 #!
-#! $root/         Points to the root folder for the text (the folder you specify
-#!                on the command line when running the converter, via the
-#!                rootFolder parameter).
+#!  @(stepSharedConfigFolder)/myfile.conf
 #!
-#! $metadata/     Points to the Metadata folder for the text being processed.
+#! and the processing will substitute for @(stepSharedConfigFolder) whatever
+#! value you have associated with stepSharedConfigFolder, and then work with
+#! that expanded path.
 #!
-#! $sharedConfig/ Points to a shared data folder.  The name is taken from the
-#!                environment variable stepSharedConfigFolder.
+#! While you _can_ do anything you like with paths (including giving
+#! absolute paths), using absolute paths will make your data non-portable.
+#! I therefore strongly recommend that you limit yourself to paths starting:
 #!
-#! Other          If this is an absolute path (eg C:/MyFolder/myConf.conf) then
-#!                that path is used.  If it is a relative path
-#!                (eg YourFolder/yourConf.conf), it is taken as being relative
-#!                to the file currently being processed.  So if you are
-#!                processing C:/MyFolder/myConf.conf when you encounter the above
-#!                include, the file to be processed is
-#!                C:/MyFolder/YourFolder/yourConf.conf.
+#! - @(stepRootFolder), which points to the folder within which all of the
+#!   data for the module exists.
+#!
+#! - @(stepMetadataFolder), which points to the subfolder 'Metadata' of the
+#!   root folder.  This is the folder in which your store the step.conf file
+#!   for the module.  This is the master config file, under control of which
+#!   everything else is included.
+#!
+#! - @(stepSharedConfigFolder), which you must define in the STEP environment
+#!   variable, and under which you can store config information used in
+#!   common by multiple modules.
+#!
+#!
+#! Alternatively, you can simply give the file path as $find/myfile.conf, and
+#! the processing will look in the root folder, the metadata folder and the
+#! shared config folder until it finds a file of that name.  (Best to avoid
+#! having files with the same name in more than one of these places, therefore.)
+#!
 #!
 #!
 #! The tool ascribes no significance to the manner in which configuration data
@@ -122,43 +157,12 @@
 #! may be useful to group associated data into the same file.  In particular, if
 #! you have data which could usefully be shared between a number of texts
 #! (for example details of a common copyright holder), you may want to put that
-#! information in a separate file and store it somewhere where it can be found
-#! via a relative path from each text.
+#! information in a separate file and store it somewhere under the shared config
+#! folder.
 #!
-#! Thus, for example, we have a number of texts from Biblica, all of which I
-#! have stored under a common folder called BiblicaCopyright on my computer :-
-#!
-#!   BiblicaCopyright
-#!   |
-#!   +--- Text_deu_HFA
-#!   |
-#!   +--- Text_Eng_NIV
-#!   |
-#!   +--- etc
-#!
-#!
-#! All of these texts need access to information about Biblica as an organisation,
-#! so it has been convenient to augment the above structure with a folder which I
-#! have chosen to call _Metadata_ (the name doesn't matter to the processing), in
-#! which I have stored a common Biblica .conf files:
-#!
-#!   BiblicaCopyright
-#!   |
-#!   +--- _Metadata_
-#!   |    |
-#!   |    +--- Common Biblica .conf files
-#!   |
-#!   +--- Text_deu_HFA
-#!   |
-#!   +--- Text_Eng_NIV
-#!   |
-#!   +--- etc
-#!
-#!
-#! This file can then be reached from each text using a $include statement of
-#! the form:
-#!
-#!  $include $root/../_Metadata_/biblica.conf
+#! I strongly recommend storing _all_ shared data of this kind under that folder.
+#! This makes it easy to locate, and also makes it easy to include it within
+#! repository files so that it can be available for future builds.
 #!
 #!
 #!

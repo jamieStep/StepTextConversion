@@ -145,7 +145,7 @@ object TranslatableFixedText
     /**************************************************************************/
     var (type, text) = getVernacular(key)
     val isEnglish = 'E' == type
-    text = text.substring(2)
+    //text = text.substring(2)
     if (text.isEmpty()) return ""
 
 
@@ -203,7 +203,7 @@ object TranslatableFixedText
 
   private fun getVernacular (key: String): Pair<Char, String>
   {
-     when (val res = if ("eng" == m_VernacularCode) m_Vernacular[key] else m_English[key])
+     when (val res = if ("eng" == m_VernacularCode) m_English[key] else m_Vernacular[key])
      {
        null ->
        {

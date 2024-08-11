@@ -19,10 +19,7 @@ import org.stepbible.textconverter.utils.ThrowAwayCode
 fun main (args: Array<String>)
 {
   /****************************************************************************/
-  Dbg.setBooksToBeProcessed("Jos")
-  //Dbg.setBooksToBeProcessed("Hab")
-  //ThrowAwayCode.testFindNodesByAttributeValue()
-  //TextTranslator.translate("fr", "", "")
+  //Dbg.setBooksToBeProcessed("Mal")
 
 
 

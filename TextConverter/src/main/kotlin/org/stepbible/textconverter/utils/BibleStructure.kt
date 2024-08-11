@@ -284,14 +284,13 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   *
   * @param prompt Output to screen as part of progress indicator.
   * @param rootNode
-  * @param wantCanonicalTextSize True if we need to accumulate the word count.
+  * @param wantCanonicalTextSize True if we need to accumulate the text size.
   * @param filePath: Optional: used for debugging and progress reporting only.
   * @param bookName USX abbreviation.
   */
 
   open fun addFromBookRootNode (prompt: String, rootNode: Node, wantCanonicalTextSize: Boolean, filePath: String? = null, bookName: String? = null)
   {
-    //Dbg.d(rootNode.ownerDocument)
     m_Populated = true
     if (null != bookName) Dbg.reportProgress("  $prompt: Determining Bible structure for ${bookName.uppercase()}")
     m_CollectingCanonicalTextSize = wantCanonicalTextSize
@@ -339,7 +338,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   *
   * @param prompt Output to screen as part of progress indicator.
   * @param doc
-  * @param wantCanonicalTextSize True if we need to accumulate the word count.
+  * @param wantCanonicalTextSize True if we need to accumulate the text size.
   * @param filePath: Optional: used for debugging and progress reporting only.
   * @param bookName USX abbreviation.
   */
@@ -1092,7 +1091,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   {
     /**************************************************************************/
     if (!m_CollectingCanonicalTextSize)
-      throw StepException("Word count for verse requested, but never asked to accumulate word counts.")
+      throw StepException("Canonical text size for verse requested, but never asked to accumulate this information.")
 
 
 
@@ -1333,6 +1332,8 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
       if (!textIsOfInterest(node))
         return
 
+      //Dbg.d(getCanonicalTextSizeForVerse(node.textContent).toString() + ": " + node.textContent)
+
       if (inCanonicalTitle)
         canonicalTitleCanonicalTextSize += getCanonicalTextSizeForVerse(node.textContent)
 
@@ -1344,7 +1345,8 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
     /**************************************************************************/
     //Dbg.d(rootNode.ownerDocument)
-    rootNode.getAllNodesBelow().forEach { //Dbg.dCont(Dom.toString(it), "<verse eID='Ps.4.1'>")
+    rootNode.getAllNodesBelow().forEach {
+      //Dbg.dCont(Dom.toString(it), "Num.10.34")
       //Dbg.d(Dom.toString(it))
       var processNode = true
       while (processNode)
@@ -1512,9 +1514,27 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
      words, along with spaces, punctuation, etc, and returns either a count
      of the actual word characters or the number of words.  I've hived this off
      to a separate method because we keep changing our minds as to whether we
-     want words or characters. */
+     want words or characters.
 
-  private fun getCanonicalTextSizeForVerse (s: String) = s.characterCount()
+     .length and .codePointCount both seem to give back the same number here.
+     Don't be tempted to use .characterCount -- it _is_ tempting, because it
+     claims to exclude spaces and punctuation from the count, but in fact it
+     works only with Latin characters.
+
+     I have wondered about applying a regex here myself to as to exclude spaces
+     and punctuation, but it would slow the processing and I think there's
+     probably no need: the count is used only when selecting reversification
+     data, where a rough idea of the size is good enough.
+
+     Talking of which, I have no idea whether this actually does give back
+     anything meaningful -- the numbers I get here don't seem to correspond
+     to the number of hits of the right-arrow key needed to step through the
+     text in, say, Word.  However, we use the numbers only to compare the
+     lengths of verses, and if the lengths are wrong, that doesn't matter too
+     much so long as they're reasonably consistently wrong. */
+
+  private val C_WordCharsRegex = "\\p{L}}".toRegex()
+  private fun getCanonicalTextSizeForVerse (s: String) = s.length // s.replace(C_WordCharsRegex, "").trim().length // s.trim().codePointCount(0, s.length - 1)
 
 
 
@@ -1647,7 +1667,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   *
   * @param prompt Output to screen as part of progress indicator.
   * @param filePath
-  * @param wantCanonicalTextSize True if we need to accumulate the word count.
+  * @param wantCanonicalTextSize True if we need to accumulate the text size.
   * @param bookName USX abbreviation.
  */
 

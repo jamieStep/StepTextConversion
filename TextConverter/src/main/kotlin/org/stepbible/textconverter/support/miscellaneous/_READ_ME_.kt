@@ -1,5 +1,7 @@
 package org.stepbible.textconverter.support.miscellaneous
 
+import org.stepbible.textconverter.support.configdata.TranslatableFixedText
+
 /******************************************************************************/
 /**
 * This package contains miscellaneous utilities.
@@ -29,9 +31,9 @@ package org.stepbible.textconverter.support.miscellaneous
 *   string formatting utilities, to give additional flexibility and to
 *   cater for including references in formatted strings.
 *
-* - **[Translations]** is concerned with supplying text in the vernacular
-*   language where we have translations available.  (Where we do not, it
-*   simply uses the English language version of the text.)
+* - **[TranslatableFixedText]** is concerned with supplying text in the
+*   vernacular language where we have translations available.  (Where we do not,
+*   it simply uses the English language version of the text.)
 *
 * - **[Zip]** creates zip the zip files needed for Sword modules.
 *
