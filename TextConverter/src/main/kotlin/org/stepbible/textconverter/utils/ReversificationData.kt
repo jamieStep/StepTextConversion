@@ -639,7 +639,7 @@ object ReversificationData
 
 
     /**************************************************************************/
-    val dataLocation = ConfigData["stepReversificationDataLocation"]!!
+    val dataLocation = ConfigData["stepExternalDataPath_ReversificationData"]!!
     if (!dataLocation.startsWith("http")) Logger.warning("Running with local copy of reversification data.")
     val rawData = (if (dataLocation.contains("http")) URL(dataLocation).readText() else File(dataLocation).readText()).split("\n")
 
@@ -1902,7 +1902,7 @@ object ReversificationData
 
 
   /****************************************************************************/
-  /* stepDebugReversificationAnticipatedSourceType, if defined at all, should
+  /* stepDbgReversificationAnticipatedSourceType, if defined at all, should
      have one of the values English, Hebrew, Latin or Greek.
 
      The processing then expects rows whose SourceType contains the relevant
@@ -1927,7 +1927,7 @@ object ReversificationData
 
     if (m_AnticipatedSourceType!!.isEmpty())
     {
-      m_AnticipatedSourceType = ConfigData["stepDebugReversificationAnticipatedSourceType"]
+      m_AnticipatedSourceType = ConfigData["stepDbgReversificationAnticipatedSourceType"]
       if (null == m_AnticipatedSourceType) return
       m_AnticipatedSourceType = m_AnticipatedSourceType!!.lowercase()
     }

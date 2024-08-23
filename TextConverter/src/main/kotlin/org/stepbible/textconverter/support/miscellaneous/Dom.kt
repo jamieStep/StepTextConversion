@@ -978,7 +978,8 @@ object Dom
         {
           val xPathFactory = XPathFactory.newInstance()
           val xPath = xPathFactory.newXPath()
-          val expr = xPath.compile(".//$nodeName[1]")
+          //val expr = xPath.compile(".//$nodeName[1]")$
+          val expr = xPath.compile(".//*[local-name()='$nodeName'][1]")
           res = expr.evaluate(node, XPathConstants.NODE) as Node?
         }
         catch (e: Exception)
@@ -1397,14 +1398,14 @@ object Dom
 
          I have decided to retain namespace awareness.  However this means you
          have to be careful within the implementation of the various find*
-         methods here to use name-local() to pick up the node names.
+         methods here to use local-name() to pick up the node names.
 
          (For some reason, findNodesByName doesn't seem to be affected by this
          issue.) */
 
         System.setProperty("javax.xml.xpath.XPathFactory:" + NamespaceConstant.OBJECT_MODEL_SAXON, "net.sf.saxon.xpath.XPathFactoryImpl")
         val factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
-        factory.isNamespaceAware = true // See comments above.
+        factory.isNamespaceAware = false // See comments above.
         factory.isIgnoringComments = !retainComments
         factory.isIgnoringElementContentWhitespace = true
         factory.isCoalescing = true

@@ -10,7 +10,14 @@ import java.time.LocalDate
 /**
  * Handles the history information required in the Sword configuration file.
  *
- * Note that no history is output on an evaluation run.
+ * Note that no history is output on an evaluation run.  Apart from this,
+ * history and version information is normally up-issued except where the
+ * history line would be basically the same as the most recent one (if any).
+ * In that case, I assume that things should *not* be up-issued, since very
+ * likely this is just a rerun of the most recent build in order to correct a
+ * bug, or else we are producing both a public and a STEP-only version of this
+ * module, have just produced one of them, and are mow simply producing the
+ * other.
  *
  * The Crosswire documentation gives details of a version indicator and history
  * details which are to appear in the Sword configuration file.
@@ -140,7 +147,7 @@ object VersionAndHistoryHandler
   /****************************************************************************/
   /**
   * Returns a list of history lines in order.  Can be called only after
-  * process has been called.
+  * 'process' has been called.
   *
   * @return History lines.
   */
@@ -210,16 +217,15 @@ object VersionAndHistoryHandler
 
     /**************************************************************************/
     /* We now need the most recent previous revision.  This is the latest of
-       anything available from the STEP configuration information, any third
-       party Sword config file, or anything we can obtain from the history.
-       if none of these works, then we take it as 0.0. */
+       any third party Sword config data, or anything we can obtain from the
+       history.  If none of these works, then we take it as 0.0. */
 
     val previousVersion: String
     run {
-      val versionFromConfig = ConfigData["stepVersion"] ?: "0.0"
+      val fallbackValue = "0.0"
       val versionFromThirdPartyVersionStatement = getVersionFromThirdPartyConfig()
       val versionFromHistory = if (m_HistoryLines.isEmpty()) "0.0" else m_HistoryLines[0].stepVersion
-      val maxKey = maxOf(makeKey(versionFromConfig), makeKey(versionFromThirdPartyVersionStatement), makeKey(versionFromHistory))
+      val maxKey = maxOf(makeKey(fallbackValue), makeKey(versionFromThirdPartyVersionStatement), makeKey(versionFromHistory))
       val x = maxKey.split('.')
       previousVersion = x[0].toInt().toString() + "." + x[1].toInt().toString()
     }
@@ -233,14 +239,30 @@ object VersionAndHistoryHandler
 
 
     /**************************************************************************/
-    val today = dateToString(LocalDate.now())
     val text =
        when (m_ReleaseType)
        {
-         ReleaseType.Major -> "SupplierReason: " + ConfigData.get("stepSupplierUpdateReason", "N/A") + "; StepReason: ${ConfigData.get("stepUpdateReason", "Supplier updated source documents.")}"
-         else -> "StepReason: " + (ConfigData["stepUpdateReason"] ?: "Unspecified.")
+         ReleaseType.Major -> "SupplierReason: " + ConfigData.get("stepSupplierUpdateReason", "N/A") + "; StepReason: ${ConfigData.get("stepStepUpdateReason", "Supplier updated source documents.")}"
+         else -> "StepReason: " + (ConfigData["stepStepUpdateReason"] ?: "Unspecified.")
        }
 
+
+
+    /**************************************************************************/
+    val prevText = if (m_HistoryLines.isEmpty()) "" else m_HistoryLines[0].text.lowercase() ?: ""
+    val newText = text.lowercase()
+    if (newText in prevText && !ConfigData.getAsBoolean("stepForceUpIssue", "no"))
+    {
+      ConfigData["stepUpIssued"] = "n"
+      return
+    }
+    else
+      ConfigData["stepUpIssued"] = "y"
+
+
+
+    /**************************************************************************/
+    val today = dateToString(LocalDate.now())
     ConfigData.getKeys().filter { it.startsWith("stepHistory_") }. forEach { ConfigData.delete(it) }
     val newHistoryLine = makeHistoryLine(newStepVersion, today, ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!!, text)
     ConfigData["stepHistory_$newStepVersion"] = newHistoryLine
@@ -415,7 +437,7 @@ object VersionAndHistoryHandler
     /**************************************************************************/
     /* Take the previous version from the most recent history entry.  The new
        version is then an amended version of that, with the modification
-        depending upon whether this is a major or a minor release. */
+       depending upon whether this is a major or a minor release. */
 
     val x = previousStepVersion.split('.')
     return when (m_ReleaseType)

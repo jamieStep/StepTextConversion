@@ -55,6 +55,10 @@ open class X_FileProtocol
   lateinit var Type: ProtocolType
   fun getProtocolType () = Type
 
+  protected val m_OkToGenerateFootnotes: Boolean = ConfigData.getAsBoolean("stepOkToGenerateFootnotes")
+  protected val m_StepCrossReferenceCallout = ConfigData["stepCrossReferenceCallout"]!!
+  protected val m_StepExplanationCallout = ConfigData["stepExplanationCallout"]!!
+
 
   /****************************************************************************/
   open fun readRef (node: Node, attrId: String) = readRef(node[attrId]!!)
@@ -62,6 +66,7 @@ open class X_FileProtocol
   open fun readRefCollection (node: Node, attrId: String) = readRefCollection(node[attrId]!!)
   open fun readRefCollection (text: String): RefCollection = throw StepExceptionShouldHaveBeenOverridden()
 
+  open fun attrName_chapterEid (): String = throw StepExceptionShouldHaveBeenOverridden()
   open fun attrName_chapterSid (): String = throw StepExceptionShouldHaveBeenOverridden()
   open fun attrName_note () = "note"
   open fun attrName_verseEid (): String = throw StepExceptionShouldHaveBeenOverridden()
@@ -369,7 +374,8 @@ Dbg.dCont(key + " : " + Dom.getNodeName(node), "speaker")
 object Osis_FileProtocol: X_FileProtocol()
 {
   /****************************************************************************/
-  override fun attrName_chapterSid () = "osisID"
+  override fun attrName_chapterEid () = "eID"
+  override fun attrName_chapterSid () = "sID"
   override fun attrName_strong () = "lemma"
   override fun attrName_tableHeaderCellStyle () = "%%%garbage%%%" // OSIS doesn't have one of these.
   override fun attrName_verseEid () = "eID"
@@ -639,7 +645,7 @@ object Osis_FileProtocol: X_FileProtocol()
 
   override fun makeFootnoteNode (doc: Document, refKeyForIdOfFootnote: RefKey, text: String, caller: String?): Node?
   {
-    if (!ConfigData.getAsBoolean("stepOkToGenerateFootnotes")) return null
+    if (!m_OkToGenerateFootnotes) return null
     val theCaller = caller ?: m_ExplanationFootnoteCalloutGenerator.get()
     val id = Ref.rd(refKeyForIdOfFootnote).toStringOsis()
     val footnoteNode = Dom.createNode(doc, "<note type='explanation' osisID='$id!${Globals.getUniqueExternal()}' n='$theCaller'/>")
@@ -742,7 +748,7 @@ object Osis_FileProtocol: X_FileProtocol()
 
   override fun standardiseCallout (noteNode: Node)
   {
-    noteNode["n"] = ConfigData[if ("explanation" == noteNode["type"]) "stepExplanationCallout" else "stepCrossReferenceCallout"]!!
+    noteNode["n"] = if ("explanation" == noteNode["type"]) m_StepExplanationCallout else m_StepCrossReferenceCallout
   }
 
 
@@ -927,7 +933,7 @@ object Osis_FileProtocol: X_FileProtocol()
     m_TagDetails["div:imprimatur"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:index"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:introduction"] = TagDescriptor('N', 'N') //
-    m_TagDetails["div:majorSection"] = TagDescriptor('N', 'N') //
+    m_TagDetails["div:majorSection"] = TagDescriptor('Y', 'N') //
     m_TagDetails["div:map"] = TagDescriptor('X', 'N') //
 
     m_TagDetails["div:outline"] = TagDescriptor('X', 'N') //
@@ -1300,7 +1306,7 @@ object Usx_FileProtocol: X_FileProtocol()
 
   override fun makeFootnoteNode (doc: Document, refKeyForIdOfFootnote: RefKey, text: String, caller: String?): Node?
   {
-    if (!ConfigData.getAsBoolean("stepOkToGenerateFootnotes")) return null
+    if (!m_OkToGenerateFootnotes) return null
     TODO()
   }
 
@@ -1400,7 +1406,7 @@ object Usx_FileProtocol: X_FileProtocol()
 
   override fun standardiseCallout (noteNode: Node)
   {
-    noteNode["callout"] = ConfigData[if ("f" == noteNode["style"]) "stepExplanationCallout" else "stepCrossReferenceCallout"]!!
+    noteNode["callout"] = if ("f" == noteNode["style"]) m_StepExplanationCallout else m_StepCrossReferenceCallout
   }
 
 

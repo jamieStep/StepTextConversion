@@ -45,7 +45,7 @@ class SE_VerseEndRemover (dataCollection: X_DataCollection) : SE(dataCollection)
   /****************************************************************************/
   override fun processRootNodeInternal (rootNode: Node)
   {
-    Dbg.reportProgress("Preparing verse tags for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
+    Dbg.reportProgress("- Preparing verse tags for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     val allVerseTags = rootNode.findNodesByName(m_FileProtocol.tagName_verse(), false)
 
     allVerseTags.filter { it.hasChildNodes() } .forEach(Dom::promoteChildren) // Replace enclosing sids by a non-enclosing sid, followed by the children of the original.

@@ -42,7 +42,7 @@ object Utils
   {
     return when (callout)
       {
-        null      -> ConfigData["stepExplanationCallout"]!!
+        null      -> m_StepExplanationCallout
         is String -> callout
         else      -> (callout as MarkerHandler).get()
       }
@@ -109,4 +109,18 @@ object Utils
     rest = rest[0].uppercase() + rest.substring(1).lowercase()
     return number + rest
   }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                              Private                                   **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  private val m_StepExplanationCallout by lazy { ConfigData["stepExplanationCallout"]!! }
 }

@@ -84,8 +84,6 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
   private fun doIt (rootNode: Node)
   {
-    if (!ConfigData.getAsBoolean("stepExpandElisions")) return
-
     Dbg.reportProgress("Handling elisions for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
 
 //    rootNode.findNodesByName(m_FileProtocol.tagName_chapter()).forEach { chapterNode ->
@@ -95,12 +93,12 @@ class SE_ElisionHandler (dataCollection: X_DataCollection): SE(dataCollection)
 //        if ('-' in verses[ix][m_FileProtocol.attrName_verseSid()]!!)
 //          processElision(verses[ix], if (ix + 1 >= verses.size) null else verses[ix + 1], chapterNode)
 
-
+    val attrNameSid = m_FileProtocol.attrName_verseSid()
     val chapters = rootNode.findNodesByName(m_FileProtocol.tagName_chapter())
     chapters.forEach { chapter ->
-      val verses = chapter.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid())
+      val verses = chapter.findNodesByAttributeName(m_FileProtocol.tagName_verse(), attrNameSid)
       for (ix in verses.indices)
-        if ('-' in verses[ix][m_FileProtocol.attrName_verseSid()]!!)
+        if ('-' in verses[ix][attrNameSid]!!)
           processElision(verses[ix], if (ix + 1 >= verses.size) null else verses[ix + 1], Dom.findAncestorByNodeName(verses[ix], m_FileProtocol.tagName_chapter())!!)
     }
   }

@@ -152,10 +152,11 @@ object Usx_BookAndChapterConverter
     for (i in 0..< indexes.size - 1)
     {
       val targetNode = allNodes[indexes[i]]
+      val targetNodeParent = Dom.getParent(targetNode)
       for (j in indexes[i] + 1 ..< indexes[i + 1])
       {
         val thisNode = allNodes[j]
-        if (parentNode == Dom.getParent(thisNode))
+        if (targetNodeParent == Dom.getParent(thisNode))
         {
           Dom.deleteNode(allNodes[j])
           targetNode.appendChild(thisNode)

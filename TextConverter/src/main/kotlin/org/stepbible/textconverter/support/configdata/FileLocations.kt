@@ -299,6 +299,8 @@ object FileLocations
   fun getSharedConfigZipFilePath () = Paths.get(getOutputFolderPath(), "sharedMetadata.zip").toString() // Place to store zipped
   fun getStepConfigFileName () = "step.conf"
   fun getStepConfigFilePath () = Paths.get(getMetadataFolderPath(), getStepConfigFileName()).toString()
+  fun getConfigDescriptorsFilePath () = "\$jarResources/configDataDescriptors.tsv"
+
 
 
   /****************************************************************************/

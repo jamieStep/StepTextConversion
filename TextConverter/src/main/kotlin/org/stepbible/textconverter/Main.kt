@@ -19,7 +19,7 @@ import org.stepbible.textconverter.utils.ThrowAwayCode
 fun main (args: Array<String>)
 {
   /****************************************************************************/
-  //Dbg.setBooksToBeProcessed("Mal")
+  //Dbg.setBooksToBeProcessed("3Jn")
 
 
 
@@ -38,7 +38,7 @@ fun main (args: Array<String>)
     }
 
     Dbg.endOfRun()
-    println("Finished\n")
+    println("\nFinished\n")
   }
 
 

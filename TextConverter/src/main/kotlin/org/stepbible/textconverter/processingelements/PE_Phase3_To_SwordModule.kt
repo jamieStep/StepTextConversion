@@ -42,7 +42,7 @@ object PE_Phase3_To_SwordModule : PE
   {
     commandLineProcessor.addCommandLineOption("manualOsis2mod", 0, "Run osis2mod manually (useful where osis2mod fails to complete under control of the converter).", null, "n", false)
     commandLineProcessor.addCommandLineOption("forceOsis2modType", 0, "Force a particular version of osis2mod to be used (as opposed to letting the converter decide).", listOf("crosswire", "step"), null, false)
-    commandLineProcessor.addCommandLineOption("updateReason", 1, "A reason for creating this version of the module (required only if runType is Release and the release arises because of changes to the converter as opposed to a new release from he text suppliers).", null, "Unknown", false)
+    commandLineProcessor.addCommandLineOption("stepUpdateReason", 1, "A reason for creating this version of the module (required only if runType is Release and the release arises because of changes to the converter as opposed to a new release from he text suppliers).", null, "Unknown", false)
   }
 
 
@@ -439,13 +439,9 @@ object PackageContentHandler
       if (line.startsWith("#!")) continue // Internal comment only.
       line = line.split("#!")[0].trim() // Remove any trailing comment.
       line = line.replace("@reversificationMap", m_ReversificationMap) // Could use ordinary dollar expansions here, but it's too slow because the map is so big.
-      //Dbg.dCont(line, "stepOriginDataAdditionalInfo")
-      //Dbg.d(line)
       writer.write(ConfigData.expandReferences(line, false)!!)
       writer.write("\n")
     }
-
-
 
 
     /**************************************************************************/
@@ -511,7 +507,7 @@ Sword module @(stepModuleName) created by the STEPBible project @(stepModuleCrea
 
 
     /**************************************************************************/
-    var textSource = ConfigData["stepSourceRepositoryForText"] ?: ""
+    var textSource = ""
     if (textSource.isEmpty()) textSource = ConfigData["stepTextRepositoryOrganisationAbbreviatedName"] ?: ""
     if (textSource.isEmpty()) textSource = ConfigData["stepTextRepositoryOrganisationFullName"] ?: ""
     if (textSource.isEmpty()) textSource = "Unknown"

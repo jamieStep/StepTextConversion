@@ -352,11 +352,11 @@ abstract class RefBase
 
     /**************************************************************************/
     /**
-    * Sets the Z_BibleStructure instance which can be used to determine things
+    * Sets the BibleStructure instance which can be used to determine things
     * like how many verses there are in a range which runs across a chapter
     * boundary.
     *
-    * @param bibleStructure Z_BibleStructure instance.
+    * @param bibleStructure BibleStructure instance.
     */
 
     fun setBibleStructure (bibleStructure: BibleStructure?) { m_BibleStructure = bibleStructure }

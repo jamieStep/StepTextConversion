@@ -2,6 +2,7 @@ package org.stepbible.textconverter.support.commandlineprocessor
 
 import org.apache.commons.cli.*
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.stepexception.StepException

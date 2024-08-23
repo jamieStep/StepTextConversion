@@ -7,7 +7,6 @@ import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.commandlineprocessor.get
 import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.iso.IsoLanguageAndCountryCodes
 import org.stepbible.textconverter.support.iso.Unicode
 import org.stepbible.textconverter.support.miscellaneous.StepStringUtils
@@ -622,8 +621,8 @@ object ConfigData
        I'm assuming I may need to retain this -- and that at the least, that
        retaining it will have no adverse consequences. */
 
-    val x = get("stepVernacularAbbreviation")
-    abbreviatedName = if (null != x && StepStringUtils.isAsciiCharacters(x)) x else get("stepEnglishAbbreviation") ?: abbreviatedName
+    val x = get("stepAbbreviationVernacular")
+    abbreviatedName = if (null != x && StepStringUtils.isAsciiCharacters(x)) x else get("stepAbbreviationEnglish") ?: abbreviatedName
 
 
 
@@ -690,7 +689,6 @@ object ConfigData
 
     /****************************************************************************/
     private val m_AlreadyLoaded: MutableSet<String> = mutableSetOf()
-    private val m_Mandatories: MutableMap<String, Boolean> = mutableMapOf()
     private var m_SampleText = ""
 
 
@@ -764,6 +762,8 @@ object ConfigData
           m_SharedConfigFolderPathAccesses.add(Paths.get(sharedConfigFolderPath, x.getName(0).toString()).toString())
         }
 
+        ConfigFilesStack.push(modifiedConfigFilePath)
+
         for (x in getConfigLines(modifiedConfigFilePath, okIfNotExists))
         {
           //Dbg.d("$configFilePath: $x")
@@ -772,6 +772,7 @@ object ConfigData
           throw StepException("Couldn't process config line: $line")
         } // for
 
+        ConfigFilesStack.pop()
 
 
         /**************************************************************************/
@@ -797,6 +798,8 @@ object ConfigData
 
     fun loadFromEnvironmentVariable ()
     {
+      ConfigFilesStack.push("StepTextConverterParameters environment variable")
+
       var parmList = System.getenv("StepTextConverterParameters") ?: return
       parmList = parmList.replace("\\\\", "\u0001").replace("\\;", "\u0002")
       val settings = parmList.split(";").map { it.trim().replace("\u0001", "\\").replace("\u0002", ";") }
@@ -804,6 +807,8 @@ object ConfigData
         if (!processConfigLine(it, ""))
           throw StepException("Couldn't parse setting from environment variable: $it")
       }
+
+      ConfigFilesStack.pop()
     }
 
 
@@ -811,7 +816,6 @@ object ConfigData
   private fun canonicaliseLanguageCode (rawLanguageCode: String): String
   {
     val languageCode = IsoLanguageAndCountryCodes.get3CharacterIsoCode(rawLanguageCode)
-    delete("stepLanguageCode"); put("stepLanguageCode", languageCode, force = true)
     delete("stepLanguageCode3Char"); put("stepLanguageCode3Char", languageCode, force = true)
     delete("stepLanguageCode2Char"); put("stepLanguageCode2Char", IsoLanguageAndCountryCodes.get2CharacterIsoCode(languageCode).ifEmpty { languageCode }, force = true)
     return languageCode
@@ -871,18 +875,6 @@ object ConfigData
         /* Convert any saved tag translation details to usable form. */
 
         generateTagTranslationDetails()
-
-
-
-        /**************************************************************************/
-        /* Check that everything has been handled. */
-
-        m_Mandatories.keys.filter { it !in m_Metadata } .forEach { Logger.error("No value supplied for mandatory parameter $it.")}
-        m_Mandatories.keys
-            .filter { it in m_Metadata } // Selects the ones not dealt with in the previous statement.
-            .filter { !m_Mandatories[it]!! } // Selects those not permitted to be empty.
-            .filter { get(it).isNullOrEmpty() } // But the value is empty.
-            .forEach { Logger.error("Null / empty value not permitted for parameter $it.")}
     }
 
 
@@ -893,11 +885,7 @@ object ConfigData
     {
         val force = line.contains("#=")
         val parts = line.split(Regex(if (force) "\\#\\=" else "\\="), 2)
-
-        if (parts[1].startsWith("@Mandatory", ignoreCase = true))
-          m_Mandatories[parts[0]] = parts[1].contains("MayBeEmpty", ignoreCase = true)
-        else
-          put(parts[0].trim(), parts[1].trim(), force)
+        put(parts[0].trim(), parts[1].trim(), force)
     }
 
 
@@ -968,9 +956,29 @@ object ConfigData
 
 
       /**************************************************************************/
+      /* Retained for backward compatibility. */
+
       if (directive.matches(Regex("(?i)stepRegex.*")))
       {
-        processRegexLine(directive)
+        processRegexLine(m_NonOsisRegexes, directive)
+        return true
+      }
+
+
+
+      /**************************************************************************/
+      if (directive.matches(Regex("(?i)stepNonOsisRegex.*")))
+      {
+        processRegexLine(m_NonOsisRegexes, directive)
+        return true
+      }
+
+
+
+      /**************************************************************************/
+      if (directive.matches(Regex("(?i)stepOsisRegex.*")))
+      {
+        processRegexLine(m_OsisRegexes, directive)
         return true
       }
 
@@ -998,11 +1006,11 @@ object ConfigData
        pattern match and replacements which are applied to incoming USX before
        processing. */
 
-    private fun processRegexLine (line: String)
+    private fun processRegexLine (collection: MutableList<Pair<Regex, String>>, line: String)
     {
       val x = line.substring(line.indexOf("=") + 1)
       val (pattern, replacement) = x.split("=>")
-      m_Regexes.add(Pair(tidyVal(pattern).toRegex(), tidyVal(replacement)))
+      collection.add(Pair(tidyVal(pattern).toRegex(), tidyVal(replacement)))
     }
 
 
@@ -1035,6 +1043,20 @@ object ConfigData
       delete("stepChangesMadeByUsInDerivedWork")
       put("stepChangesMadeByUsInDerivedWork", s, false)
     }
+
+
+    /****************************************************************************/
+    /**
+    * For use only by ConfigDataSupport.  We need to know if something is the
+    * name of an existing configuration parameter or not, but we don't want to
+    * look the thing up 'properly' and risk it being calculated and assigned a
+    * value at this point.
+    *
+    * @param purportedKey
+    * @return Value associated with key, or null if not a key.
+    */
+
+    fun checkIfIsParameterKey (purportedKey: String) = m_Metadata[purportedKey]
 
 
     /****************************************************************************/
@@ -1087,7 +1109,7 @@ object ConfigData
 
     operator fun get (key: String): String?
     {
-      //Dbg.d(key, "stepBibleDescriptionAsItAppearsOnBibleList")
+      //Dbg.d(key, "stepBibleDescriptionAsItAppearsOnBiblePicker")
       //Dbg.d(key)
       return getInternal(key, true)
     }
@@ -1142,7 +1164,7 @@ object ConfigData
 
     fun getOrError (key: String): String
     {
-      return get(key) ?: throw StepException("No metadata found for $key.")
+      return get(key) ?: throw StepException("No metadata found for $key ${ConfigDataSupport.getDescriptorAsString(key)}.")
     }
 
 
@@ -1188,6 +1210,28 @@ object ConfigData
 
     /****************************************************************************/
     /**
+    * Returns any pattern match / replacement details to be applied to USX.
+    *
+    * @return Details.
+    */
+
+    fun getNonOsisRegexes () = m_NonOsisRegexes
+
+
+
+    /****************************************************************************/
+    /**
+    * Returns any pattern match / replacement details to be applied to USX.
+    *
+    * @return Details.
+    */
+
+    fun getOsisRegexes () = m_OsisRegexes
+
+
+
+    /****************************************************************************/
+    /**
      *  Checks if a given key corresponds to translatable text which has no
      *  vernacular override, and is therefore in English.
      *
@@ -1196,17 +1240,6 @@ object ConfigData
      */
 
     fun isEnglishTranslatableText (key: String) = m_EnglishDefinitions.contains(key)
-
-
-    /****************************************************************************/
-    /**
-    * Returns any pattern match / replacement details.
-    *
-    * @return Details.
-    */
-
-    fun getRegexes () = m_Regexes
-
 
 
     /****************************************************************************/
@@ -1227,11 +1260,29 @@ object ConfigData
 
 
       /************************************************************************/
+      /* Dummy placeholder -- parameters may be included in files for reference
+         purposes, but given the value '%%%UNDEFINED', in which case it is as
+         though they had not been mentioned at all. */
+         
+      if ("%%%UNDEFINED" == theValue)
+        return
+
+
+
+      /************************************************************************/
+      ConfigDataSupport.reportIfMissingDebugInfo(key, "Put")
+
+
+
+      /************************************************************************/
       /* If this is a 'force' setting and we already have a force setting, we
          retain the existing one. */
 
       if (force && key in m_Metadata && m_Metadata[key]!!.m_Force)
-        return
+      {
+         ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), "Skipped because forced value already in effect")
+         return
+      }
 
 
 
@@ -1245,7 +1296,11 @@ object ConfigData
       if (!force)
       {
         val tmp = m_Metadata[key]  // If we're not forcing, it's ok to store the new data if either there's no existing entry, or the existing one is not marked force.
-        if (null != tmp && tmp.m_Force) return
+        if (null != tmp && tmp.m_Force)
+        {
+          ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), "Skipped because forced value already in effect")
+          return
+        }
       }
 
 
@@ -1258,6 +1313,7 @@ object ConfigData
 
 
       /************************************************************************/
+      ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), null)
       m_Metadata[key] = ParameterSetting(value, force)
     }
 
@@ -1269,12 +1325,28 @@ object ConfigData
 
     private fun getInternal (key: String, nullsOk: Boolean): String?
     {
-      //Dbg.d(key, "stepAcknowledgmentOfDerivedWork")
+      /************************************************************************/
+      /* CAUTION: With something like @(stepVersificationScheme, NRSV), "NRSV"
+         is received here as though it were the key for an item of config data,
+         when in fact, of course, it's simply a default value for the @(...).
+         reportIfMissingDebugInfo therefore needs to be able to cater for this
+         possibility, and not treat it as a key. */
 
+      ConfigDataSupport.reportIfMissingDebugInfo(key, "Get")
+
+
+
+      /************************************************************************/
       val calculated = getCalculatedValue(key)
       if (null != calculated && "@get" !in calculated) return calculated
 
+
+
+      /************************************************************************/
       val parmDetails = m_Metadata[key] ?: return null
+      if (null != parmDetails.m_Value && parmDetails.m_Value!!.startsWith("%%%"))
+        throw StepException("ConfigData.get for $key: value was recorded as ${parmDetails.m_Value} and no value has been supplied.")
+
       return expandReferences(parmDetails.m_Value, nullsOk)
     }
 
@@ -1302,6 +1374,7 @@ object ConfigData
     * @param key
     * @param value
     */
+
     operator fun set (key: String, value: String)
     {
       put(key, value, false)
@@ -1963,7 +2036,17 @@ object ConfigData
 
     fun makeBibleDescriptionAsItAppearsOnBibleList (bookNumbers: List<Int>)
     {
-        /**********************************************************************/
+       /**********************************************************************/
+       /* Allow the user to specify a value where it is necessary to force the
+          issue (typically this will be where a module already exists and we
+          want to retain its name). */
+
+       if (null != ConfigData["stepBibleDescriptionAsItAppearsOnBiblePicker"])
+         return
+
+
+
+       /**********************************************************************/
         /* We want the English and vernacular titles, except where they are
            basically the same thing, in which case the vernacular is essentially
            irrelevant.  I further assume here that the vernacular title may not
@@ -2011,7 +2094,7 @@ object ConfigData
 
 
         /**********************************************************************/
-        var officialYear = makeStepBibleDescriptionAsItAppearsOnBibleList_getOfficialYear()
+        var officialYear = makeStepBibleDescriptionAsItAppearsOnBiblePicker_getOfficialYear()
         if (null != officialYear)
         {
            if (englishTitle.contains(officialYear))
@@ -2028,12 +2111,12 @@ object ConfigData
 
 
         /**********************************************************************/
-        var coveragePortion: String? = makeStepBibleDescriptionAsItAppearsOnBibleList_getBiblePortion(bookNumbers)
+        var coveragePortion: String? = makeStepBibleDescriptionAsItAppearsOnBiblePicker_getBiblePortion(bookNumbers)
 
 
 
         /**********************************************************************/
-        var languagePortion: String? = makeStepBibleDescriptionAsItAppearsOnBibleList_getLanguage(englishTitle)
+        var languagePortion: String? = makeStepBibleDescriptionAsItAppearsOnBiblePicker_getLanguage(englishTitle)
 
 
 
@@ -2048,14 +2131,14 @@ object ConfigData
 
 
         /**********************************************************************/
-        //val moduleMonthYear = makeStepBibleDescriptionAsItAppearsOnBibleList_getModuleMonthYear().trim()
+        //val moduleMonthYear = makeStepBibleDescriptionAsItAppearsOnBiblePicker_getModuleMonthYear().trim()
 
 
         /**********************************************************************/
         if (null != abbreviatedNameOfRightsHolderAndOfficialYearPortion && abbreviatedNameOfRightsHolderAndOfficialYearPortion.isBlank()) abbreviatedNameOfRightsHolderAndOfficialYearPortion= null
         if (null != coveragePortion && coveragePortion.isBlank()) coveragePortion= null
         if (null != languagePortion && languagePortion.isBlank()) languagePortion= null
-        ConfigData["stepBibleDescriptionAsItAppearsOnBibleList"] =
+        ConfigData["stepBibleDescriptionAsItAppearsOnBiblePicker"] =
           listOfNotNull(titlePortion, abbreviatedNameOfRightsHolderAndOfficialYearPortion, coveragePortion, languagePortion, countriesWhereUsedPortion).joinToString(" | ")
     }
 
@@ -2074,7 +2157,7 @@ object ConfigData
        text as eg 'OT incomplete +NT'.
     */
 
-    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getBiblePortion (bookNumbers: List<Int>): String?
+    private fun makeStepBibleDescriptionAsItAppearsOnBiblePicker_getBiblePortion (bookNumbers: List<Int>): String?
     {
         /************************************************************************/
         val C_MaxIndividualBooksToReport = 5
@@ -2221,7 +2304,7 @@ object ConfigData
        my processing in this respect to be comprehensive).  If I _can't_ get it by
        this means, then I don't bother to give a year at all. */
 
-    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getOfficialYear (): String?
+    private fun makeStepBibleDescriptionAsItAppearsOnBiblePicker_getOfficialYear (): String?
     {
         /************************************************************************/
         val mainPat = Regex("(?i)(&copy;|©|(copyright))\\W*(?<years>\\d{4}(\\W+\\d{4})*)") // &copy; or copyright symbol or the word 'copyright' followed by any number of blanks and four digits.
@@ -2257,7 +2340,7 @@ object ConfigData
     /* We want the language name only if it's not English, and is not already
     mentioned in the Bible name. */
 
-    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getLanguage (bibleNameInEnglish: String): String?
+    private fun makeStepBibleDescriptionAsItAppearsOnBiblePicker_getLanguage (bibleNameInEnglish: String): String?
     {
         val languageName = get("stepLanguageNameInEnglish")
         val languageNameLowerCase = languageName!!.lowercase()
@@ -2273,7 +2356,7 @@ object ConfigData
        run across verse boundaries (to keep osis2mod happy), we almost always
        _will_ be making changes, so I always give the date.*/
 
-    private fun makeStepBibleDescriptionAsItAppearsOnBibleList_getModuleMonthYear (): String
+    private fun makeStepBibleDescriptionAsItAppearsOnBiblePicker_getModuleMonthYear (): String
     {
         val s = DateTimeFormatter.ofPattern("MMM@yy").format(LocalDate.now())
         return s.replace("@", "'")
@@ -2335,11 +2418,35 @@ object ConfigData
     private val m_EnglishDefinitions: MutableSet<String> = mutableSetOf()
     private var m_Initialised: Boolean = false
     private val m_Metadata = TreeMap<String, ParameterSetting?>(String.CASE_INSENSITIVE_ORDER)
+    private val m_OsisRegexes: MutableList<Pair<Regex, String>> = mutableListOf()
     private val m_RawUsxToOsisTagTranslationLines: MutableList<String> = ArrayList()
-    private val m_Regexes: MutableList<Pair<Regex, String>> = mutableListOf()
+    private val m_NonOsisRegexes: MutableList<Pair<Regex, String>> = mutableListOf()
     private val m_SharedConfigFolderPathAccesses: MutableSet<String> = mutableSetOf()
     private val m_UsxToOsisTagTranslationDetails: MutableMap<String, Pair<String, TagAction>> = TreeMap(String.CASE_INSENSITIVE_ORDER)
 
+
+   /****************************************************************************/
+   /* Used for debug purposes. */
+
+    private object ConfigFilesStack
+    {
+      fun getSummary () = if (m_Summary.isEmpty()) "Calculated" else m_Summary
+
+      fun pop ()
+      {
+        val x = m_Summary.split(" / ")
+        m_Summary = x.subList(0, x.size - 1).joinToString(" / ")
+      }
+
+      fun push (path: String)
+      {
+        if (m_Summary.isNotEmpty()) m_Summary += " | "
+        m_Summary += path
+      }
+
+
+      private var m_Summary = ""
+    }
 
 
     /****************************************************************************/

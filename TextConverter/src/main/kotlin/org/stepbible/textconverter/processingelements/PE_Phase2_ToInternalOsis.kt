@@ -3,6 +3,7 @@ package org.stepbible.textconverter.processingelements
 import org.stepbible.textconverter.osisinputonly.Osis_CanonicalHeadingsHandler
 import org.stepbible.textconverter.osisinputonly.Osis_DetermineReversificationTypeEtc
 import org.stepbible.textconverter.osisinputonly.Osis_ElementArchiver
+import org.stepbible.textconverter.osisinputonly.Osis_Preprocessor
 import org.stepbible.textconverter.subelements.*
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
@@ -133,22 +134,44 @@ object PE_Phase2_ToInternalOsis : PE
     /***************************************************************************/
 
     /***************************************************************************/
-    /* Pick up the input data. */
+    /* Create a home for what we're about to generate. */
 
     //Dbg.outputText(Phase1TextOutput)
-    StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath()) // Create a home for what we're about to generate.
-    InternalOsisDataCollection.loadFromText(Phase1TextOutput); x()                 // Phase 1 creates OSIS _text_ in memory, so we need to load it as a DOM.
-    RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()); x() // Needed to cater for the possible requirement to expand ranges.
+    StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath())
 
-    if ("osis" == ConfigData["stepOriginData"]!!) // If starting from OSIS, then for validation purposes we need a second copy of the original text.
+
+
+    /***************************************************************************/
+    /* Read the OSIS created by the previous processing and apply
+       pre-processing. */
+
+    //Dbg.outputText(Phase1TextOutput)
+    var preprocessedOsisDoc = Dom.getDocumentFromText(Osis_Preprocessor.processRegex(Phase1TextOutput), retainComments = true); x()
+    Phase1TextOutput = ""                                                          // Free up space -- we don't need the OSIS text any more.
+    preprocessedOsisDoc = Osis_Preprocessor.processXslt(preprocessedOsisDoc); x()
+    Osis_Preprocessor.tidyChapters(preprocessedOsisDoc); x()
+    Osis_Preprocessor.insertMissingChapters(preprocessedOsisDoc); x()
+    //Osis_Preprocessor.deleteXmlns(preprocessedOsisDoc)
+    Dbg.reportProgress("Loading and evaluating data.")
+    InternalOsisDataCollection.loadFromDocs(listOf(preprocessedOsisDoc)); x()
+    RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()); x()  // Needed to cater for the possible requirement to expand ranges.
+
+
+
+    /***************************************************************************/
+    /* If starting from OSIS, then for validation purposes we need a second copy
+     of the original text. */
+
+    if ("osis" == ConfigData["stepOriginData"]!!)
     {
       Dbg.reportProgress("The following is not an error -- when using OSIS input, I need two copies of the OSIS: one to work on, and one against which to validate.")
-      ExternalOsisDataCollection.loadFromText(Phase1TextOutput); x()
+      ExternalOsisDataCollection.loadFromDocs(listOf(preprocessedOsisDoc)); x()
       RefBase.setBibleStructure(ExternalOsisDataCollection.getBibleStructure()); x()
     }
 
-    Phase1TextOutput = ""                                                          // Free up space -- we don't need the OSIS text any more.
-    val doc = InternalOsisDataCollection.getDocument()
+
+    /***************************************************************************/
+     val doc = InternalOsisDataCollection.getDocument()
     //Dbg.d(doc)
 
 
@@ -168,6 +191,7 @@ object PE_Phase2_ToInternalOsis : PE
        things up so that we can decide for ourselves where the verse-ends should
        go. */
 
+    Dbg.reportProgress("Preparing verse tags.")
     SE_VerseEndRemover(InternalOsisDataCollection).processAllRootNodes(); x()
     modifyGlossaryEntries(doc)
 
@@ -247,7 +271,7 @@ object PE_Phase2_ToInternalOsis : PE
 //    Osis_CrossReferenceChecker.process(InternalOsisDataCollection); x()                       // Checks for invalid cross-references, or cross-references which point to non-existent places.
     handleReversification(); x()                                                                // Does what it says on the tin.
     SE_BasicValidator(InternalOsisDataCollection).finalValidationAndCorrection(); x()           // Final checks.  May create empty verses if necessary.
-    // $$$ SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()          // Collapses subverses into the owning verses, if that's what we're doing (mainly or exclusively on public modules).
+//    SE_SubverseCollapser(InternalOsisDataCollection).processAllRootNodes(); x()          // Collapses subverses into the owning verses, if that's what we're doing (mainly or exclusively on public modules).
     SE_CalloutStandardiser(InternalOsisDataCollection).processAllRootNodes(); x()               // Force callouts to be in house style, assuming that's what we want.
     removeDummyVerses(InternalOsisDataCollection); x()                                          // Does what it says on the tin.
     ContentValidator.process(InternalOsisDataCollection, Osis_FileProtocol,                     // Checks current canonical content against original.
@@ -273,7 +297,7 @@ object PE_Phase2_ToInternalOsis : PE
        In this respect, I don't really like the final code fragment (^lt etc)
        below.  It's there to undo temporary changes to text content which may
        have been applied much earlier in the processing (in this case, to replace
-       things like '&lt;', because the many transformations applied here start
+       things like '&lt;', because many transformations applied here start
        getting confused as to whether we have '&lt;' or '<', the latter being a
        problem in some cases).  But this architecture means that we apply these
        changes somewhere miles away in the code (in X_DataCollection), and then
@@ -310,7 +334,7 @@ object PE_Phase2_ToInternalOsis : PE
     ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(InternalOsisDataCollection.getBookNumbers())
     Dbg.reportProgress("Writing version of OSIS needed for use with osis2mod.")
 
-    if (ConfigData.getAsBoolean("stepUseOriginalOsis", "no") && ConfigData["stepOriginData"] == "osis")
+    if (ConfigData.getAsBoolean("stepStartProcessFromOsis", "no") && ConfigData["stepOriginData"] == "osis")
       StepFileUtils.copyFile(FileLocations.getInternalOsisFilePath(), FileLocations.getInputOsisFilePath()!!)
     else
     {

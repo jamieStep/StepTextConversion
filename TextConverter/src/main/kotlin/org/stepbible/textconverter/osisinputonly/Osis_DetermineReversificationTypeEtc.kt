@@ -91,7 +91,7 @@ object Osis_DetermineReversificationTypeEtc
     /* The parameters which control what we're going to do. */
 
     val forcedVersificationScheme = getCanonicalisedVersificationSchemeIfAny() // Check if we've been given a scheme, and if so, convert the name to canonical form.
-    val targetAudience = ConfigData["stepTargetAudience"]!!
+    val targetAudience = ConfigData["stepTargetAudience"]!!.first().uppercase()
     var reversificationType = getReversificationType(targetAudience)
 
     val isCopyrightText: Boolean
@@ -128,7 +128,7 @@ object Osis_DetermineReversificationTypeEtc
       "none" ->
       {
         if ("S" == targetAudience)
-          throw StepException("Must apply run-time reversifiation when the target audience is STEP.")
+          throw StepException("Must apply run-time reversification when the target audience is STEP.")
 
         if ("P" == targetAudience && forcedVersificationScheme.isEmpty())
           throw StepException("If you are building a public module without reversification, you must specify a Crosswire versification scheme.")
@@ -136,8 +136,7 @@ object Osis_DetermineReversificationTypeEtc
 
       "runtime" ->
       {
-        if (forcedVersificationScheme.isNotEmpty())
-          throw StepException("Applying samification, so you must not specify a versification scheme.")
+        ConfigData.delete("stepVersificationScheme")
 
         if ("P" == targetAudience)
           throw StepException("Applying samification, so you can't create a public module.")
@@ -222,7 +221,7 @@ object Osis_DetermineReversificationTypeEtc
 
   private fun getReversificationType (targetAudience: String): String
   {
-    return if (ConfigData.getAsBoolean("conversionTimeReversification", "no"))
+    return if (ConfigData.getAsBoolean("stepConversionTimeReversification", "no"))
       "conversiontime"
     else if ("S" == targetAudience)
       "runtime"
@@ -261,7 +260,7 @@ object Osis_DetermineReversificationTypeEtc
   private fun setFreedomsForNonCopyrightTexts ()
   {
     ConfigData.deleteAndPut("stepOkToGenerateFootnotes", "yes", force = true)
-    val x = ConfigData.get("stepReversificationFootnoteLevel", "basic"); ConfigData.deleteAndPut("reversificationFootnoteLevel", x, force = true)
+    val x = ConfigData.get("stepReversificationFootnoteLevel", "basic"); ConfigData.deleteAndPut("stepReversificationFootnoteLevel", x, force = true)
   }
 
 

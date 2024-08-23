@@ -65,7 +65,6 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
     val dummies = insertDummyVerseTags(m_FileProtocol, chapterNodes) // Dummy verse end at the end of each chapter, so we always have something to insert _before_.
     insertVerseEnds(rootNode, chapterNodes)                          // Initial positioning.
     dummies.forEach(Dom::deleteNode)                                 // Get rid of the dummy nodes.
-    //Dbg.d(rootNode.ownerDocument)
   }
 
 
@@ -149,9 +148,16 @@ class SE_EnhancedVerseEndInserter (dataCollection: X_DataCollection) : SE(dataCo
   private fun insertVerseEnd (sidWhoseEidWeAreCreating: Node, nextVerseSid: Node)
   {
     /**************************************************************************/
+    if ("_Dummy" in sidWhoseEidWeAreCreating)
+      return
+
+
+
+    /**************************************************************************/
     val eid = m_FileProtocol.makeVerseEidNode(sidWhoseEidWeAreCreating.ownerDocument, sidWhoseEidWeAreCreating[m_FileProtocol.attrName_verseSid()]!!)
 //    Dbg.d(Dom.toString(eid))
-//    Dbg.dCont(Dom.toString(eid), "Song.1.1")
+//    if ("Gen.2.1" in Dom.toString(eid))
+//      Dbg.d(sidWhoseEidWeAreCreating.ownerDocument)
 
 
 

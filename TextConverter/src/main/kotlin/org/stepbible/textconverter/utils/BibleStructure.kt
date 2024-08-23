@@ -292,7 +292,6 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   open fun addFromBookRootNode (prompt: String, rootNode: Node, wantCanonicalTextSize: Boolean, filePath: String? = null, bookName: String? = null)
   {
     m_Populated = true
-    if (null != bookName) Dbg.reportProgress("  $prompt: Determining Bible structure for ${bookName.uppercase()}")
     m_CollectingCanonicalTextSize = wantCanonicalTextSize
     if (null != bookName && null != filePath) m_BookAbbreviationToFilePathMappings[bookName.lowercase()] = filePath
     addFromRootNode(rootNode, wantCanonicalTextSize)
@@ -1233,6 +1232,18 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   /****************************************************************************/
   /**
+  * Indicates whether a given node is canonical.  Need cater only for
+  * node which can legitimately appear within a verse or a canonical title.
+  *
+  * @param node
+  * @return True if node is canonical
+  */
+
+  private fun isCanonical (node: Node): Boolean = m_FileProtocol!!.isCanonicalNode(node)
+
+
+  /****************************************************************************/
+  /**
   * Indicates whether a given node is non-canonical.  Need cater only for
   * node which can legitimately appear within a verse or a canonical title.
   *
@@ -1280,6 +1291,12 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   protected open fun addFromRootNode (rootNode: Node, wantCanonicalTextSize: Boolean)
   {
     /**************************************************************************/
+    val bookName = m_FileProtocol!!.getBookAbbreviation(rootNode)
+    Dbg.reportProgress("- Determining Bible structure for $bookName.")
+
+
+
+    /**************************************************************************/
     var canonicalTitleCanonicalTextSize = 0
     var inCanonicalTitle = false
     var inVerse = false
@@ -1309,7 +1326,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
       var parent = textNode
       while (true)
-     {
+      {
         parent = parent.parentNode ?: break
         if (m_FileProtocol.tagName_chapter() == Dom.getNodeName(parent))
           return true
@@ -1317,6 +1334,9 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
           return false
         else if (isNonCanonical(parent))
           return false
+        else if (isCanonical(parent))
+          return true
+        // In case the above looks odd, sometimes we don't know whether a node is canonical except by reference to an ancestor.
       }
 
       return true
@@ -1511,7 +1531,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   /****************************************************************************/
   /* This takes a string containing canonical content (possibly a number of
-     words, along with spaces, punctuation, etc, and returns either a count
+     words, along with spaces, punctuation, etc), and returns either a count
      of the actual word characters or the number of words.  I've hived this off
      to a separate method because we keep changing our minds as to whether we
      want words or characters.
@@ -1730,7 +1750,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   private fun handleVerseEid (id: String, canonicalTextSize: Int)
   {
-//    if (Dbg.d(id, "Zech.4.10!a"))
+    //Dbg.d(id + ": " + canonicalTextSize.toString())
 //      Dbg.d(OsisTempDataCollection.getDocument())
 
     val refKeys = m_FileProtocol!!.readRefCollection(id).getAllAsRefs()

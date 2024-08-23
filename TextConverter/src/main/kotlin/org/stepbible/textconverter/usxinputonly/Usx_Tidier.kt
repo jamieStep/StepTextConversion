@@ -44,18 +44,8 @@ import org.w3c.dom.Node
 *
 * - stepOriginData will be VL, USX or OSIS.  This represents the
 *   raw data upon which the run was based.  In other words, if InputVl exists,
-*   it will be 'VL'; if InputUsx exists it will be USX< and if neither exists,
-*   it will be OSIS.  With VL, however, the run may not have started from that
-*   folder: VL is always subject to pre-processing to turn it into USX, and if
-*   that USX already exists (and postdates the VL), that may have been used
-*   instead if the command-line parameters permitted it.  Similarly InputUsx
-*   *may* have been pre-processed to produce revised USX, and again if the
-*   revised USX already exists, the run may have started with that.
-*
-* - stepOriginDataAdditionalInfo contains additional text
-*   explaining this issue of pre-processing where we have started from the
-*   pre-processed text.  (The parameter will be undefined where we have
-*   started from the raw text.)
+*   it will be 'VL'; if InputUsx exists it will be USX, and if neither exists,
+*   it will be OSIS.
 *
 * @author ARA "Jamie" Jamieson
 */

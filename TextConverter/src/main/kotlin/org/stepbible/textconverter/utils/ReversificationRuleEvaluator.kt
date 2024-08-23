@@ -88,6 +88,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
   {
     /**************************************************************************/
     //Dbg.d(row.rowNumber in listOf(1123))
+    //Dbg.dCont(theRuleData, "Num.26:28>Num.26:29")
 
 
 
@@ -201,14 +202,14 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
 
         val refs = RefCollection.rdUsx(ReversificationData.usxifyFromStepFormat(refCollectionAsString)).getAllAsRefs()
 
-        var nWords = 0
+        var overallSize = 0
         var ref = m_BackstopDefaultRef
 
         refs.forEach {
           ref = Ref.rd(it, ref)
-          val thisNWords = if (isTitle) m_BibleStructure.getCanonicalTextSizeForCanonicalTitle(ref.toRefKey_bc())!! else m_BibleStructure.getCanonicalTextSize(ref.toRefKey_bcvs())
+          val thisSize = if (isTitle) m_BibleStructure.getCanonicalTextSizeForCanonicalTitle(ref.toRefKey_bc())!! else m_BibleStructure.getCanonicalTextSize(ref.toRefKey_bcvs())
 
-          when (thisNWords)
+          when (thisSize)
           {
             BibleStructure.C_ElementInElision   ->
             {
@@ -216,11 +217,11 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
               return false
             }
 
-            else -> nWords += (fac * thisNWords).toInt()
+            else -> overallSize += (fac * thisSize).toInt()
           }
         } // refs.forEach
 
-        totalLengths[side] += nWords
+        totalLengths[side] += overallSize
       } // elts
     } // sides
 

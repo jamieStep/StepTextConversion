@@ -62,7 +62,6 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
   override fun processRootNodeInternal (rootNode: Node)
   {
     Dbg.reportProgress("Handling Strongs for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
-    m_CorrectStrong = ConfigData.getAsBoolean("stepCorrectStrongs", "yes")
     val strongs = Dom.getAllNodesBelow(rootNode)
       .filter { m_FileProtocol.isStrongsNode(it) }
       .filter { m_FileProtocol.attrName_strong() in it }
@@ -99,6 +98,9 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
     {
       if (!nodeMap[node]!!)
         continue
+
+        Dbg.d(node)
+        Dbg.dCont(Dom.toString(node), "<w lemma='strong:H3045', morph='strongMorph:TH8799'>")
 
       val children: MutableList<Node> = mutableListOf()
       var p = node
@@ -156,7 +158,7 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
         if (strong.length >= 5 && strong[0] == '0') strong = strong.substring(1) // If the result is 5 or more characters and starts with '0', we have a leading zero we don't want.
 
-        if (strongIsValidish(prefix, strong) && m_CorrectStrong)
+        if (strongIsValidish(prefix, strong))
         {
           strong = prefix + "0".repeat(4 - strong.length) + strong // If too short, prepend leading zeroes.
           strong += suffix
@@ -207,14 +209,13 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
     private fun strongIsValidish (prefix: String, strong: String): Boolean
     {
       val ok = prefix in "GH" && strong.length <= 4 && null != strong.toIntOrNull()
-      if (!ok && m_CorrectStrong) Logger.warning("Invalid Strong: $prefix$strong.")
+      if (!ok) Logger.warning("Invalid Strong: $prefix$strong.")
       return ok
     }
 
 
     /**************************************************************************/
     private val m_Corrections: MutableMap<String, String> = TreeMap(String.CASE_INSENSITIVE_ORDER)
-    private var m_CorrectStrong = true
   }
 }
 

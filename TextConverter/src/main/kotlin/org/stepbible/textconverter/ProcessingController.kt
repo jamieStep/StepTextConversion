@@ -6,6 +6,7 @@ import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
+import org.stepbible.textconverter.support.configdata.ConfigDataSupport
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.stepexception.StepException
@@ -27,17 +28,7 @@ import kotlin.system.exitProcess
 * - stepOriginData will be VL, USX or OSIS.  This represents the
 *   raw data upon which the run was based.  In other words, if InputVl exists,
 *   it will be 'VL'; if InputUsx exists it will be USX< and if neither exists,
-*   it will be OSIS.  With VL, however, the run may not have started from that
-*   folder: VL is always subject to pre-processing to turn it into USX, and if
-*   that USX already exists (and postdates the VL), that may have been used
-*   instead if the command-line parameters permitted it.  Similarly InputUsx
-*   *may* have been pre-processed to produce revised USX, and again if the
-*   revised USX already exists, the run may have started with that.
-*
-* - stepOriginDataAdditionalInfo contains additional text
-*   explaining this issue of pre-processing where we have started from the
-*   pre-processed text.  (The parameter will be undefined where we have
-*   started from the raw text.)
+*   it will be OSIS.
 *
 * @author ARA "Jamie" Jamieson
 */
@@ -76,8 +67,9 @@ object ProcessingController
   {
     // The try below is required because if we start from OSIS, we won't have any reversification details.
     var res = ""
-    try { if (!ConfigData["stepReversificationDataLocation"]!!.startsWith("http")) res += C_Local_ReversificationData } catch (_: Exception) {}
+    try { if (!ConfigData["stepExternalDataPath_ReversificationData"]!!.startsWith("http")) res += C_Local_ReversificationData } catch (_: Exception) {}
     if (!ConfigData.getAsBoolean("stepEncrypted", "no")) res += C_NotEncrypted
+    if (!ConfigData.getAsBoolean("stepUpIssued", "no")) res += C_NotUpIssued
     if ("evaluationonly" == ConfigData["stepRunType"]!!.lowercase()) res += C_NonRelease
     return res
   }
@@ -217,13 +209,15 @@ object ProcessingController
     /*************************************************************************/
     /* Common or not otherwise available. */
 
-    commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
-    commandLineProcessor.addCommandLineOption("startProcessFromOsis", 0, "Forces the processing to start from OSIS rather than VL / USX.", null, null, false)
-    commandLineProcessor.addCommandLineOption("runType", 1, "Type of run.", listOf("Release", "MajorRelease", "MinorRelease", "EvalOnly", "EvaluationOnly"), "EvaluationOnly", true)
     commandLineProcessor.addCommandLineOption("checkInputsAgainstPreviousModule", 0, "Check whether the current inputs were used to build the existing module.", null, null, false)
-    commandLineProcessor.addCommandLineOption("evaluateSchemesOnly", 0, "Evaluate alternative osis2mod versification schemes only.", null, null, false)
-    commandLineProcessor.addCommandLineOption("forceTargetAudience", 0, "Create module for public or STEP-only use.", listOf("Public", "Step"), null, false)
     commandLineProcessor.addCommandLineOption("conversionTimeReversification", 0, "Use to force conversion time restructuring (you will seldom want this).", null, null, false)
+    commandLineProcessor.addCommandLineOption("evaluateSchemesOnly", 0, "Evaluate alternative osis2mod versification schemes only.", null, null, false)
+    commandLineProcessor.addCommandLineOption("forceUpIssue", 0, "Normally up-issue is suppressed if the update reason has not changed.  This lets you override this.", null, null, false)
+    commandLineProcessor.addCommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true)
+    commandLineProcessor.addCommandLineOption("runType", 1, "Type of run.", listOf("MajorRelease", "MinorRelease", "EvalOnly", "EvaluationOnly"), "EvaluationOnly", true)
+    commandLineProcessor.addCommandLineOption("startProcessFromOsis", 0, "Forces the processing to start from OSIS rather than VL / USX.", null, null, false)
+    commandLineProcessor.addCommandLineOption("stepUpdateReason", 1, "The reason STEP is making the update (if the supplier has also supplied a reason, this will appear too).", null, null, false)
+    commandLineProcessor.addCommandLineOption("supplierUpdateReason", 1, "The reason STEP is making the update (if the supplier has also supplied a reason, this will appear too).", null, null, false)
     commandLineProcessor.addCommandLineOption("targetAudience", 1, "If it is possible to build both STEP-only and public version, selects the one required.", listOf("Public", "Step"), null, false)
 
 
@@ -232,10 +226,12 @@ object ProcessingController
     /* Debug. */
 
     commandLineProcessor.addCommandLineOption("dbgAddDebugAttributesToNodes", 0, "Add debug attributes to nodes.", null, "no", false)
+    commandLineProcessor.addCommandLineOption("dbgConfigData", 1, "Controls config data debugging.   Use generateStepConfig[All] / reportSet / reportMissingDebugInfor",null, null, false )
+
     val commonText = ": 'No' or anything containing 'screen' (output to screen), 'file' (output to debugLog.txt), or both.  Include 'deferred' if you want screen output at the end of the run, rather than as it occurs.  Not case-sensitive."
     commandLineProcessor.addCommandLineOption("dbgDisplayReversificationRows", 1, "Display selected reversification rows$commonText", null, "no", false)
     commandLineProcessor.addCommandLineOption("dbgSelectBooks", 1, "Limits processing to selected books.  Either <, <=, -, >=, > followed by the USX abbreviation for a book, or else a comma-separated list of books.",null, null, false )
-  }
+   }
 
 
   /****************************************************************************/
@@ -244,12 +240,12 @@ object ProcessingController
   private fun initialise (args: Array<String>)
   {
     /**************************************************************************/
-    ConfigData["stepBuildTimestamp"] = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
+    initialiseCommandLineArgsAndConfigData(args)
 
 
 
     /**************************************************************************/
-    initialiseCommandLineArgsAndConfigData(args)
+    ConfigData["stepBuildTimestamp"] = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMdd_HHmm")).replace("_", "T")
 
 
 
@@ -295,6 +291,12 @@ object ProcessingController
 
 
     /**************************************************************************/
+    val dbgConfigData = CommandLineProcessor.getOptionValue("dbgConfigData")
+    ConfigDataSupport.initialise(dbgConfigData ?: "")
+
+
+
+    /**************************************************************************/
     /* We look for a particular environment variable which may contain
        configuration settings.  These may be of the form key=val or key#=val,
        and are treated in the normal way.  Because they are loaded first, it
@@ -328,6 +330,7 @@ object ProcessingController
       }
 
     FileLocations.initialise(rootFolderPath)
+    Logger.setLogFile(FileLocations.getConverterLogFilePath())
     ConfigData.extractDataFromRootFolderName()
     ConfigData.load(FileLocations.getStepConfigFileName())
     CommandLineProcessor.copyCommandLineOptionsToConfigData("TextConverter")
@@ -347,7 +350,7 @@ object ProcessingController
 
 
     /**************************************************************************/
-    Logger.setLogFile(FileLocations.getConverterLogFilePath())
+    ConfigDataSupport.checkMandatories()
     Logger.announceAll(true)
   }
 
@@ -478,4 +481,21 @@ object ProcessingController
   |_| \_|  \___/    |_|     |_____| |_| \_|  \____| |_| \_\   |_|   |_|       |_|   |_____| |____/
                        
        """
+
+   /******************************************************************************/
+  private const val C_NotUpIssued = """
+   _   _  ____ _______   _    _ _____             _____  _____ _____ _    _ ______ _____  
+  | \ | |/ __ \__   __| | |  | |  __ \           |_   _|/ ____/ ____| |  | |  ____|  __ \ 
+  |  \| | |  | | | |    | |  | | |__) |  ______    | | | (___| (___ | |  | | |__  | |  | |
+  | . ` | |  | | | |    | |  | |  ___/  |______|   | |  \___ \\___ \| |  | |  __| | |  | |
+  | |\  | |__| | | |    | |__| | |                _| |_ ____) |___) | |__| | |____| |__| |
+  |_| \_|\____/  |_|     \____/|_|               |_____|_____/_____/ \____/|______|_____/ 
+                       
+       """
+
+
+
+
+
+
 }

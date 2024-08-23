@@ -49,8 +49,8 @@ object PE_Phase1_FromInputImp: PE
      or a mutable list.  However, both of these seemed to give up just short of
      the end on very large files, which perhaps suggests that they were not set
      up to hold as much data as these large files contained.  I have therefore
-     been forced to write the data out to accumulate the data to a file and then
-     read it back in again.
+     been forced to accumulate the data to a file and then read it back in
+     again.
   */
   /****************************************************************************/
 
@@ -160,7 +160,9 @@ object PE_Phase1_FromInputImp: PE
 
     line = line.substring(3)
     val m = C_BookChapterVerseHeader.matchEntire(line) ?: throw StepException("Invalid IMP line: $line")
-    val bookNameFull = m.groups["bookNameFull"]!!.value
+    var bookNameFull = m.groups["bookNameFull"]!!.value
+    if (bookNameFull.matches("I+ .+".toRegex())) bookNameFull = bookNameFull.replaceFirst(" ", "")
+    if (bookNameFull.startsWith("IV ")) bookNameFull = bookNameFull.replaceFirst(" ", "")
     m_BookNumbers.add(BibleBookNamesOsis.nameToNumber(bookNameFull))
     val chapter = m.groups["chapter"]!!.value.toInt()
     val verse = m.groups["verse"]!!.value.toInt()
@@ -232,11 +234,23 @@ object PE_Phase1_FromInputImp: PE
 
 
   /****************************************************************************/
-  /* I'm not too sure about this.  I have seen a text which contains just
-     <note> markers.  This is not really all that helpful, because it gives
-     none of the additional information required in OSIS, like whether this
-     is an explanatory note or a cross-reference.  In the one text where I have
-     seen this problem, all the notes were, in fact, explanatory. */
+  /* The individual lines are sometimes not ideal ...
+
+     - div:bookGroup doesn't seem to be particular useful for our purposes,
+       so I ditch it.
+
+     - div:book positively gets in the way, because I want to generate my
+       own version, so I ditch that too.
+
+     - Ditto <chapter>.
+
+     - And at least one text which had <note> markers contained no additional
+       information explaining whether they were explanation notes or whatever.
+       Since in that text they all _were_ explanation notes, I'm going to take
+       the easy way out, and assume they always are. */
+
+  private val C_VerseContentRegexes = listOf("<div .+?type=.book.*?>\\s*".toRegex(), // This covers both book and bookGroup.
+                                             "<chapter .+?>".toRegex())
 
   private fun modifyVerseContent (theLine: String): String
   {
@@ -248,6 +262,8 @@ object PE_Phase1_FromInputImp: PE
       val replacement =  "<note n='+' osisID='$m_VerseRef!fref_${++n}' osisRef='$m_VerseRef' type='explanation'>"
       line = line.replaceFirst("<note>", replacement)
     }
+
+    C_VerseContentRegexes.forEach { line = line.replace(it, "") }
 
     return line
   }

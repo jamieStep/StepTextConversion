@@ -485,6 +485,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
      val res: MutableList<Int> = mutableListOf()
      val nodeList = Dom.findNodesByAttributeValue(docOut, "div", "type", "book").toSet() union Dom.findNodesByName(docOut, "book")
      nodeList.forEach {
+         Dbg.reportProgress("- Loading data for ${it["osisID"]!!}.")
          val bookNo = BibleBookNamesOsis.abbreviatedNameToNumber(it["osisID"]!!)
          res.add(bookNo)
          setRootNode(bookNo, it)
@@ -629,8 +630,8 @@ class Osis_DataCollection: X_DataCollection(Osis_FileProtocol)
     //val nodeList = Dom.findNodesByName(docIn, "div").filter { "book" == it["type"] }.toSet() union Dom.findNodesByName(docOut, "book")
     //Dbg.d(docIn, "in.xml")
     //Dbg.d(docOut, "out.xml")
-    val nodeListIn = Dom.findNodesByAttributeValue(docIn, "div", "type", "book")
-    val nodeListOut = Dom.findNodesByAttributeValue(docOut, "div", "type", "book")
+    //val nodeListIn = Dom.findNodesByAttributeValue(docIn, "div", "type", "book")
+    //val nodeListOut = Dom.findNodesByAttributeValue(docOut, "div", "type", "book")
     //--------------------------------------------------
 
 

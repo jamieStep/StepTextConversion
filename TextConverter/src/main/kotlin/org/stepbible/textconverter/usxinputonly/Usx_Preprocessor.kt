@@ -7,7 +7,6 @@ import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.Dom
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.get
-import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefCollection
 import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.X_DataCollection
@@ -72,7 +71,7 @@ object Usx_Preprocessor
 
   fun processRegex (inputText: String): String
   {
-    val regexes = ConfigData.getRegexes()
+    val regexes = ConfigData.getNonOsisRegexes()
     if (regexes.isEmpty()) return inputText
 
     var revisedText = inputText
@@ -256,7 +255,7 @@ object Usx_Preprocessor
   private fun initialiseXsltStylesheets ()
   {
     ConfigData.getKeys()
-      .filter { it.lowercase().startsWith("stepxsltstylesheet") }
+      .filter { it.lowercase().startsWith("stepnonosisxsltstylesheet") || it.lowercase().startsWith("stepxsltstylesheet") }
       .forEach {
         val value = ConfigData[it]
         if (!value.isNullOrBlank())

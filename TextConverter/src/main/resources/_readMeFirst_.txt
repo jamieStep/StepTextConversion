@@ -1,8 +1,8 @@
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #!
 #! To save you having to dig around for the information below, if there is
-#! more than one definition for a given item, the definition which takes
-#! precedence is the one which is encountered
+#! more than one non-forced definition for a given item, the definition which
+#! takes precedence is the one which is encountered
 #!
 #!  .----------------.  .----------------.  .----------------.  .----------------. 
 #! | .--------------. || .--------------. || .--------------. || .--------------. |

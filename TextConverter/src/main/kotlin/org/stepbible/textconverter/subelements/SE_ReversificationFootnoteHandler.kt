@@ -94,7 +94,7 @@ class SE_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
        details.  (Possibly we'll want this on runtime runs too in due course
        -- TBD.) */
 
-    val checkSourceVerseDetails = 'R' == reversificationType
+    val checkSourceVerseDetails = 'C' == reversificationType
 
 
 
@@ -176,7 +176,7 @@ class SE_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
         val sidRefLow = RefCollection.rdOsis(sidNode["sID"]!!).getLowAsRef()
         val sourceRefLow = RefCollection.rdUsx(sourceRefCollectionAsPossiblyAbbreviatedString, sidRefLow, "v").getLowAsRef()
         if (sidRefLow != sourceRefLow)
-          Logger.error(sidRefLow.toRefKey(), "altVerse error (reversification data gives $sourceRefCollectionAsPossiblyAbbreviatedString.")
+          Logger.error(sidRefLow.toRefKey(), "altVerse error (reversification data gives $sourceRefCollectionAsPossiblyAbbreviatedString).")
       }
 
 
