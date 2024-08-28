@@ -13,7 +13,6 @@ import kotlin.system.exitProcess
 /**
  * Provides support for debugging ConfigData activities.
  *
- *
  * @author ARA "Jamie" Jamieson
  */
 
@@ -30,8 +29,8 @@ object ConfigDataSupport
   /****************************************************************************/
   /* Handlers. */
 
-  lateinit var reportSet: (key: String, value: String?, location: String, additionalInfo: String?) -> Unit
-  lateinit var reportIfMissingDebugInfo: (key: String, type: String) -> Unit
+  var reportSet: (key: String, value: String?, location: String, additionalInfo: String?) -> Unit = ::reportSetNull
+  var reportIfMissingDebugInfo: (key: String, type: String) -> Unit = ::reportMissingDebugInfoNull
 
 
   /****************************************************************************/
@@ -77,14 +76,17 @@ object ConfigDataSupport
   * @param dbgSetting Command-line setting.
   */
 
-  fun initialise (dbgSetting: String)
+  fun initialise (dbgSetting: String?)
   {
+    if (null == dbgSetting)
+      return
+
     val dbgSettingLc = dbgSetting.lowercase()
 
     if ("generateconfig" in dbgSettingLc)
     {
       generateOutlineStepConfig("generateconfigall" in dbgSettingLc)
-      exitProcess(0)
+      throw StepBreakOutOfProcessing("")
     }
 
     reportSet = if ("reportset" in dbgSetting.lowercase()) ::reportSet else ::reportSetNull

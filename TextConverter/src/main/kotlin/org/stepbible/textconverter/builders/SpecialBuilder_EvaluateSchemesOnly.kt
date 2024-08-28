@@ -1,154 +1,38 @@
-/******************************************************************************/
-package org.stepbible.textconverter.processingelements
+package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.support.bibledetails.*
+import org.stepbible.textconverter.support.bibledetails.VersificationSchemesSupportedByOsis2mod
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.support.ref.RefKey
-import org.stepbible.textconverter.support.stepexception.StepException
+import org.stepbible.textconverter.support.stepexception.StepBreakOutOfProcessing
 import org.stepbible.textconverter.utils.*
 import java.io.File
 
+
 /******************************************************************************/
 /**
-* Evaluates the alternative versification schemes to see which is the best
-* fit.  Note that on a run which invokes this processing, nothing else is
-* done.
-*
-* This is organised as a descendant of [PE], and
-* indeed at one point it was used that way.  This is no longer the case,
-* however, because now one of its primary functions is to evaluate the
-* fit between the text and the osis2mod versification schemes in a run which
-* does no more than that -- ie it doesn't really fit into the
-* TextConverterProcessorBase processing philosophy.  I have nonetheless
-* retained it as a descendant of that class in case I change my mind
-* some time about the way things should be organised.
-*
-* Note that I make the assumption that any pre-processing which will be applied
-* to the text during an actual run of the converter will not change the
-* versification structure of the text, and that therefore it is ok to evaluate
-* the versification schemes against the raw USX.
-*
-* Input comes from OsisInternal.  Output goes to the screen and to a log file.
-*
-* @author ARA 'Jamie' Jamieson
-*/
+  * Checks to see if all we are doing is to evaluate schemes.
+  *
+  * @author ARA "Jamie" Jamieson
+  */
 
-object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
+object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder
 {
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                               Public                                   **/
+  /**                                Public                                  **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun banner () = "Evaluating schemes"
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
-  override fun pre () { StepFileUtils.deleteFile(FileLocations.getVersificationFilePath()) }
-  override fun process () = doIt()
-
-
-
-  /****************************************************************************/
-  class DetailedEvaluation
-  {
-    lateinit var DCPresence: String
-    var booksMissingInOsis2modScheme: MutableList<Int> = mutableListOf()
-    var booksInExcessInOsis2modScheme: MutableList<Int> = mutableListOf()
-    var versesMissingInOsis2modScheme: MutableList<RefKey> = mutableListOf()
-    var versesInExcessInOsis2modScheme: MutableList<RefKey> = mutableListOf()
-  }
-
-
-  /****************************************************************************/
-  /**
-  * A late addition.  Compares a given text with a specified scheme and returns
-  * a detailed analysis.  This was introduced to make it possible to report any
-  * issues in the TextFeatures details.  I really ought to make the time to
-  * integrate it properly -- the outline analysis reported in Evaluation
-  * could make use of this, for instance.
-  *
-  * @param scheme osis2mod scheme to be analysed.
-  * @param bibleStructureToCompareWith Scheme against which we are comparing.
-  * @return Detailed evaluation.
-  */
-
-  fun evaluateSingleSchemeDetailed (scheme: String, bibleStructureToCompareWith: BibleStructure): DetailedEvaluation
-  {
-    /**************************************************************************/
-    Dbg.reportProgress("Evaluating $scheme")
-    val res = DetailedEvaluation()
-    val bibleStructureOsis2mod = BibleStructure.makeOsis2modSchemeInstance(scheme)
-
-
-
-    /**************************************************************************/
-    val bibleStructureToCompareWithHasDc = bibleStructureToCompareWith.hasAnyBooksDc()
-    val schemeHasDc = bibleStructureOsis2mod.hasAnyBooksDc()
-
-
-
-    /**************************************************************************/
-    res.DCPresence =
-      if (!bibleStructureToCompareWithHasDc && schemeHasDc)
-        "MAJOR ISSUE: Input text contains DC, but selected scheme does not"
-      else if (bibleStructureToCompareWithHasDc && !schemeHasDc)
-        "MODERATE ISSUE: Selected scheme contains DC, but input text does not"
-      else if (bibleStructureToCompareWithHasDc)
-        "DC present"
-      else
-        "DC absent"
-
-
-
-    /**************************************************************************/
-    fun evaluate (bookNumber: Int)
-     {
-       if (!bibleStructureToCompareWith.bookExists(bookNumber) && !bibleStructureOsis2mod.bookExists(bookNumber))
-         return
-
-       else if (!bibleStructureToCompareWith.bookExists(bookNumber))
-         res.booksInExcessInOsis2modScheme.add(bookNumber)
-
-       else if (!bibleStructureOsis2mod.bookExists(bookNumber))
-         res.booksMissingInOsis2modScheme.add(bookNumber)
-
-       else
-       {
-         val comparisonDetails = BibleStructure.compareWithGivenScheme(bookNumber, bibleStructureToCompareWith, bibleStructureOsis2mod)
-         res.versesMissingInOsis2modScheme.addAll(comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme)
-         res.versesInExcessInOsis2modScheme.addAll(comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction)
-       }
-     }
-
-     bibleStructureToCompareWith.getAllBookNumbersOt().forEach { evaluate(it) }
-     bibleStructureToCompareWith.getAllBookNumbersNt().forEach { evaluate(it) }
-     bibleStructureToCompareWith.getAllBookNumbersDc().forEach { evaluate(it) }
-
-
-
-     /**************************************************************************/
-     return res
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Returns the evaluation details for a single scheme.
-  *
-  * @param schemeName Must be in canonical form.
-  * @param bibleStructureToCompareWith Scheme against which we are comparing.
-  * @return Result of evaluating against the given scheme.
-  */
-
-  fun evaluateSingleScheme (schemeName: String, bibleStructureToCompareWith: BibleStructure) =
-    evaluateScheme(schemeName, bibleStructureToCompareWith)
+  override fun banner () = "Evaluating fit with versification schemes"
+  override fun commandLineOptions () = listOf(
+    CommandLineProcessor.CommandLineOption("evaluateSchemesOnly", 0, "Evaluate alternative osis2mod versification schemes only.", null, null, false),
+  )
 
 
 
@@ -161,6 +45,24 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  override fun doIt ()
+  {
+    /**************************************************************************/
+    if (!ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "no"))
+      return
+
+
+
+    /**************************************************************************/
+    StepFileUtils.deleteFile(FileLocations.getVersificationFilePath())
+    Dbg.reportProgress(banner())
+    Dbg.resetBooksToBeProcessed() // Force all books to be included.
+    Builder_InitialOsisRepresentationOfInputs.process()
+    evaluate()
+  }
+
 
   /****************************************************************************/
   /* We will get here only under one of two circumstances.  The user may have
@@ -176,9 +78,12 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
      the necessary call and then update various configuration options to reflect
      the decision, but we don't create the report file. */
 
-  private fun doIt ()
+  private fun evaluate ()
   {
-    val bibleStructureToCompareWith = determineInput()
+    val dataCollection = X_DataCollection(Osis_FileProtocol)
+    dataCollection.loadFromText(Phase1TextOutput)
+    val bibleStructureToCompareWith = dataCollection.getBibleStructure()
+
     m_Evaluations.clear() // Just in case we've already evaluated a scheme, perhaps to see if the text needs reversifying.  Avoids duplicating the output.
     VersificationSchemesSupportedByOsis2mod.getSchemes().forEach { evaluateScheme(it, bibleStructureToCompareWith) }
     val details = m_Evaluations.sortedBy { it.scoreForSorting }
@@ -188,56 +93,10 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
     if (bibleStructureToCompareWith.hasSubverses()) additionalInformation += "*** Text contains subverses. ***\n"
     if (!bibleStructureToCompareWith.versesAreInOrder()) additionalInformation += "*** Text contains out-of-order verses. ***"
     if (additionalInformation.endsWith("\n")) additionalInformation = additionalInformation.substring(0, additionalInformation.length - 1)
+
     outputDetails(details, additionalInformation)
-  }
 
-
-  /****************************************************************************/
-  private fun determineInput (): BibleStructure
-  {
-    /**************************************************************************/
-    when (ConfigData["stepOriginData"]!!)
-    {
-      "imp" ->
-      {
-        val inFiles = StepFileUtils.getMatchingFilesFromFolder(FileLocations.getInputImpFolderPath(), ".*\\.${FileLocations.getFileExtensionForImp()}".toRegex()).map { it.toString() }
-        if (1 != inFiles.size) throw StepException("Expecting precisely one IMP file, but ${inFiles.size} files available.")
-        return BibleStructureImp(inFiles[0])
-      }
-
-
-      "osis" ->
-      {
-        PE_Phase1_FromInputOsis.pre()
-        PE_Phase1_FromInputOsis.process()
-        val dataCollection = X_DataCollection(Osis_FileProtocol)
-        dataCollection.loadFromText(Phase1TextOutput)
-        return dataCollection.getBibleStructure()
-      }
-
-
-      "usx" ->
-      {
-        PE_Phase1_FromInputUsx.pre()
-        PE_Phase1_FromInputUsx.process()
-        return UsxDataCollection.getBibleStructure()
-      }
-
-
-      "vl" ->
-      {
-        PE_Phase1_FromInputVl.pre()
-        PE_Phase1_FromInputVl.process()
-        val dataCollection = X_DataCollection(Osis_FileProtocol)
-        dataCollection.loadFromText(Phase1TextOutput)
-        return dataCollection.getBibleStructure()
-      }
-    }
-
-
-
-    /**************************************************************************/
-    throw StepException("Invalid case")
+    throw StepBreakOutOfProcessing("")
   }
 
 
@@ -451,4 +310,5 @@ object PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation: PE
 
   /****************************************************************************/
   private val m_Evaluations: MutableList<Evaluation> = ArrayList()
+
 }

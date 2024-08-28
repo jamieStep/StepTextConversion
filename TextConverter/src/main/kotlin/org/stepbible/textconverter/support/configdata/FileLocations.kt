@@ -176,7 +176,7 @@ object FileLocations
     {
       val endOfPath = canonicalFilePath.substring("\$find/".length)
       val fileName = Path(endOfPath).fileName
-      for (folderPath in listOf(getRootFolderPath(), getMetadataFolderPath(), getSharedConfigFolderPath()).filterNotNull())
+      for (folderPath in listOfNotNull(getRootFolderPath(), getMetadataFolderPath(), getSharedConfigFolderPath()))
       {
         val file = File(folderPath).walk(FileWalkDirection.BOTTOM_UP).firstOrNull { Path(it.toString()).endsWith(fileName) }
         if (null != file)
@@ -185,31 +185,6 @@ object FileLocations
 
       throw StepException("Can't locate file $canonicalFilePath.")
     }
-
-
-
-//    /**************************************************************************/
-//    /* $root: Root folder for text.  CAUTION: Not backward compatible.  In a
-//       previous version, this pointed to the Metadata folder. */
-//
-//    if (canonicalFilePath.lowercase().startsWith("\$root"))
-//      return Paths.get(canonicalFilePath.replace("\$root", getRootFolderPath(), ignoreCase = true)).normalize().toString()
-
-
-
-//    /**************************************************************************/
-//    /* $metadata -- ie co-located with step.conf */
-//
-//    if (canonicalFilePath.lowercase().startsWith("\$metadata"))
-//      return Paths.get(canonicalFilePath.replace("\$metadata", getMetadataFolderPath(), ignoreCase = true)).normalize().toString()
-
-
-
-//    /**************************************************************************/
-//    /* sharedConfig -- shared configuration data */
-//
-//    if (canonicalFilePath.lowercase().startsWith("\$stepsharedconfigfolder"))
-//      return Paths.get(canonicalFilePath.replace("\$stepSharedConfigFolder", getSharedDataFolderPath(), ignoreCase = true)).normalize().toString()
 
 
 
@@ -288,14 +263,14 @@ object FileLocations
   fun getConverterLogFilePath () = Paths.get(m_RootFolderPath, "converterLog.txt").toString()
   fun getOsisToModLogFilePath () = Paths.get(m_RootFolderPath, "osis2ModLog.txt").toString()
   fun getDebugOutputFilePath () = Paths.get(m_RootFolderPath, "debugLog.txt").toString()
-  fun getTemporaryInvestigationsFolderPath() = ConfigData["stepTemporaryInvestigationsFolderPath"]!!
+  fun getTemporaryInvestigationsFolderPath() = Paths.get(ConfigData["stepTextConverterOverallDataRoot"]!!, "_DebugOutput_").toString()
 
 
   /****************************************************************************/
   /* Metadata. */
 
   fun getMetadataFolderPath () = Paths.get(m_RootFolderPath, "Metadata").toString()
-  fun getSharedConfigFolderPath () = ConfigData["stepSharedConfigFolder"]
+  fun getSharedConfigFolderPath () = Paths.get(ConfigData["stepTextConverterOverallDataRoot"]!!, "_SharedConfig_").toString()
   fun getSharedConfigZipFilePath () = Paths.get(getOutputFolderPath(), "sharedMetadata.zip").toString() // Place to store zipped
   fun getStepConfigFileName () = "step.conf"
   fun getStepConfigFilePath () = Paths.get(getMetadataFolderPath(), getStepConfigFileName()).toString()

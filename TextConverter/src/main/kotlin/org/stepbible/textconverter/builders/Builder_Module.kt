@@ -1,5 +1,4 @@
-/******************************************************************************/
-package org.stepbible.textconverter.processingelements
+package org.stepbible.textconverter.builders
 
 import org.stepbible.textconverter.osisinputonly.Osis_Osis2modInterface
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
@@ -8,66 +7,66 @@ import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.configdata.TranslatableFixedText
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.miscellaneous.*
+import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils
 import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.runCommand
+import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
+import org.stepbible.textconverter.support.miscellaneous.Zip
 import org.stepbible.textconverter.support.shared.FeatureIdentifier
 import org.stepbible.textconverter.utils.*
 import java.io.File
 import java.nio.file.Paths
-import java.util.*
+import java.util.ArrayList
+
 
 /******************************************************************************/
 /**
- * Main program which handles the conversion of the OSIS to a Sword module.
- *
- * @author ARA "Jamie" Jamieson
- */
+  * Carries out the processing required to create the output implied by the
+  * class name.
+  *
+  * @author ARA "Jamie" Jamieson
+  */
 
-object PE_Phase3_To_SwordModule : PE
- {
+object Builder_Module: Builder
+{
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                               Public                                   **/
+  /**                                Public                                  **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun banner () = "Converting OSIS to Sword"
+  override fun banner () = "Creating Sword module."
 
 
   /****************************************************************************/
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor)
+  override fun commandLineOptions () = listOf(
+    CommandLineProcessor.CommandLineOption("manualOsis2mod", 0, "Run osis2mod manually (useful where osis2mod fails to complete under control of the converter).", null, "n", false),
+    CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "A reason for creating this version of the module (required only if runType is Release and the release arises because of changes to the converter as opposed to a new release from he text suppliers).", null, "Unknown", false)
+  )
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Private                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  override fun doIt ()
   {
-    commandLineProcessor.addCommandLineOption("manualOsis2mod", 0, "Run osis2mod manually (useful where osis2mod fails to complete under control of the converter).", null, "n", false)
-    commandLineProcessor.addCommandLineOption("forceOsis2modType", 0, "Force a particular version of osis2mod to be used (as opposed to letting the converter decide).", listOf("crosswire", "step"), null, false)
-    commandLineProcessor.addCommandLineOption("stepUpdateReason", 1, "A reason for creating this version of the module (required only if runType is Release and the release arises because of changes to the converter as opposed to a new release from he text suppliers).", null, "Unknown", false)
-  }
-
-
-  /****************************************************************************/
-  override fun pre () = StepFileUtils.deleteFolder(FileLocations.getInternalSwordFolderPath())
-
-
-  /****************************************************************************/
-  override fun process () = doIt()
+    /**************************************************************************/
+    Builder_InternalOsis.process()
+    Dbg.reportProgress(banner())
 
 
 
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                               Private                                  **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  private fun doIt ()
-  {
     /**************************************************************************/
     if (!ConfigData.getAsBoolean("stepEncrypted", "no")) Logger.warning("********** NOT ENCRYPTED **********")
     StepFileUtils.createFolderStructure(FileLocations.getInternalSwordFolderPath())

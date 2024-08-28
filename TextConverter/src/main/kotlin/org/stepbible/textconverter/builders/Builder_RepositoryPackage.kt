@@ -1,70 +1,90 @@
-package org.stepbible.textconverter.processingelements
+package org.stepbible.textconverter.builders
 
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
+import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.miscellaneous.Zip
 import org.stepbible.textconverter.support.stepexception.StepException
 import java.nio.file.Paths
 
-
 /******************************************************************************/
 /**
- * Generates a package for uploading to the STEP text repository.
+ * Builds a repository package.
  *
  * @author ARA "Jamie" Jamieson
  */
 
-object PE_Phase4_To_RepositoryPackage: PE
- {
+object Builder_RepositoryPackage: Builder
+{
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                               Public                                   **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  override fun banner () = "Generating package for repository"
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
-  override fun pre () {} // No need to delete the repository file here, because earlier processing will have deleted the entire output folder structure.
-  override fun process () = doIt()
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                               Private                                  **/
+  /**                                Public                                  **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun doIt()
+  override fun banner () = "Converting OSIS to Sword"
+
+
+  /****************************************************************************/
+  override fun commandLineOptions () = listOf(
+    CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "Where a new release is being made because of changes _we_ have decided are needed, the reason for the update.  Must have either or both of this and supplierUpdateReason.", null, "Unknown", false),
+    CommandLineProcessor.CommandLineOption("supplierUpdateReason", 1, "Wherre a new release is being made because of changes the _supplier_ has made, the reason they gave for their changes.  Must have either or both of this and stepUpdateReason.", null, "Unknown", false)
+  )
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Private                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  override fun doIt ()
   {
-    if ("release" != ConfigData["stepRunType"]!!.lowercase()) return
+    /**************************************************************************/
+    Builder_Module.process()
+    Dbg.reportProgress(banner())
 
+
+
+    /**************************************************************************/
     StepFileUtils.deleteTemporaryFiles(FileLocations.getRootFolderPath())
 
+
+
+    /**************************************************************************/
+    val inputImp  = if (FileLocations.getInputImpFilesExist())  FileLocations.getInputImpFolderPath()  else null
     val inputOsis = if (FileLocations.getInputOsisFileExists()) FileLocations.getInputOsisFolderPath() else null
     val inputUsx  = if (FileLocations.getInputUsxFilesExist())  FileLocations.getInputUsxFolderPath()  else null
     val inputVl   = if (FileLocations.getInputVlFilesExist())   FileLocations.getInputVlFolderPath()   else null
 
     if (null == inputOsis) throw StepException("No OSIS available to store in repository package.")
 
-   createSharedConfigZip()
 
+
+    /**************************************************************************/
+    val haveSharedConfig = createSharedConfigZip()
+
+
+
+    /**************************************************************************/
     val zipPath: String = FileLocations.getRepositoryPackageFilePath()
     val inputs = mutableListOf(FileLocations.getMetadataFolderPath(),
-                               FileLocations.getSharedConfigZipFilePath(),
+                               if (haveSharedConfig) FileLocations.getSharedConfigZipFilePath() else null,
                                inputOsis,
                                inputUsx,
                                inputVl,
+                               inputImp,
                                FileLocations.getTextFeaturesFolderPath(),
                                FileLocations.getSwordZipFilePath()).filterNotNull()
     Zip.createZipFile(zipPath, 9, null, inputs)
@@ -77,14 +97,12 @@ object PE_Phase4_To_RepositoryPackage: PE
      as the message-translation database, but I can't think of a better way of
      doing things. */
 
-  private fun createSharedConfigZip()
+  private fun createSharedConfigZip (): Boolean
   {
     val zipPath: String = FileLocations.getSharedConfigZipFilePath()
-    val inputs = mutableListOf(Paths.get(FileLocations.getSharedConfigFolderPath(), "_Common_").toString())
+    val inputs = if (null == FileLocations.getSharedConfigFolderPath()) mutableListOf() else mutableListOf(Paths.get(FileLocations.getSharedConfigFolderPath(), "_Common_").toString())
     inputs.addAll(ConfigData.getSharedConfigFolderPathAccesses())
     Zip.createZipFile(zipPath, 9, FileLocations.getSharedConfigFolderPath(), inputs)
+    return inputs.isNotEmpty()
   }
-
-
-
 }

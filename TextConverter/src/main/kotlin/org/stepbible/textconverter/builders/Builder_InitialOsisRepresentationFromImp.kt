@@ -1,12 +1,11 @@
-/******************************************************************************/
-package org.stepbible.textconverter.processingelements
+package org.stepbible.textconverter.builders
 
 import org.stepbible.textconverter.osisinputonly.Osis_Utils
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
+import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.processRegexes
 import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.support.ref.Ref
 import org.stepbible.textconverter.support.ref.RefBase
@@ -27,15 +26,34 @@ import java.io.File
  * OSIS tags.
  *
  * This present class converts an IMP file to OSIS form.
+ *
  * @author ARA "Jamie" Jamieson
  */
 
-object PE_Phase1_FromInputImp: PE
+
+
+object Builder_InitialOsisRepresentationFromImp: Builder
 {
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
   /**                                Public                                  **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  override fun banner () = "Converting InputImp to InternalOsis"
+  override fun commandLineOptions () = null
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Private                                 **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
@@ -56,14 +74,10 @@ object PE_Phase1_FromInputImp: PE
 
 
   /****************************************************************************/
-  override fun banner () = "Converting InputImp to InternalOsis"
-  override fun getCommandLineOptions(commandLineProcessor: CommandLineProcessor) {}
-  override fun pre () { }
-
-
-  /****************************************************************************/
-  override fun process ()
+  override fun doIt ()
   {
+    Dbg.reportProgress(banner())
+
     val inFiles = StepFileUtils.getMatchingFilesFromFolder(FileLocations.getInputImpFolderPath(), ".*\\.${FileLocations.getFileExtensionForImp()}".toRegex()).map { it.toString() }
     if (1 != inFiles.size) throw StepException("Expecting precisely one IMP file, but ${inFiles.size} files available.")
 
@@ -265,7 +279,7 @@ object PE_Phase1_FromInputImp: PE
 
     C_VerseContentRegexes.forEach { line = line.replace(it, "") }
 
-    return line
+    return processRegexes(ConfigData.getNonOsisRegexes(), line)
   }
 
 
@@ -306,4 +320,3 @@ object PE_Phase1_FromInputImp: PE
   private lateinit var m_OutputFile: BufferedWriter
   private var m_VerseRef = ""
 }
-

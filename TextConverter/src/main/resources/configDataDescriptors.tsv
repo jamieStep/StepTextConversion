@@ -41,7 +41,7 @@ stepOriginData	Set to USX, VL, OSIS, etc, reflecting the input data used on this
 stepOsis2ModEncryptionKey	Used to hold the encryption key to be used when generating the module.	Calculated	Calculated			Calculated	Calculated
 stepOsis2modType	Determines whether we use the STEP version of osis2mod or the Crosswire version.	Calculated	Calculated			Calculated	Calculated	Deduced from the type of module being generated.
 stepOsis2ModVersion	Gives the software version number reported by osis2mod.  Used for admin purposes, so we know which osis2mod was used.	Calculated	Calculated			Calculated	Calculated
-stepReleaseType	Deduced from stepRunType, qv.  Distiguishes major and minor releases.	Calculated	Calculated			Calculated	Calculated
+stepReleaseType	Distinguishes major and minor releases.	Calculated	Calculated			Calculated	Calculated
 stepReversificationMap	Used internally to hold mapping details for run-time reversification.	Calculated	Calculated			Calculated	Calculated
 stepReversificationType	Indicates whether to apply runtime, conversion-time or no reversification.	Calculated	Calculated	Depends on various parameters.		Calculated	Calculated	if conversionTimeReversification is set to yes on the command line, then conversion-time is used.  Otherwise all STEP modules use runtime reversification, and all public modules use none.  Conversion-time has not been exercised currently.
 stepSoftwareVersionRequired	Indicates which version of the STEP software is required to display the module.	Calculated	Calculated			Calculated	Calculated
@@ -128,9 +128,7 @@ stepAddedValueStrongs	Set this to yes if STEP has added Strongs.  Used to includ
 # Converter environment.
 stepCrosswireOsis2ModFolderPath	Path to the location of the Crosswire version of osis2mod.	UserSpecified	MandatoryAlways		Path.	EnvironmentVariable	IfComputingEnvironmentChanges	I'm not sure whether we can get away without this, relying on the program to be in the path.  I'm assuming not because of needing to pick up the right DLLs on Windows.
 stepStepOsis2ModFolderPath	Path to the location of the STEP version of osis2mod.	UserSpecified	MandatoryAlways	Path	Path.	EnvironmentVariable	IfComputingEnvironmentChanges	I'm not sure whether we can get away without this, relying on the program to be in the path.  I'm assuming not because of needing to pick up the right DLLs on Windows.
-stepSharedConfigFolder	Defines a folder within which commonly used configuration can be stored.	UserSpecifiedOrCalculated	Optional		Path.	EnvironmentVariable	IfYouOptToUseThis	Needed only if you choose to use it include statements.  Probably best defined in the StepTextConverterParameters environment variable.
-stepTemporaryInvestigationsFolderPath	Location for storing any temporary files used while carrying out investigations.	UserSpecified	Optional		Path.	EnvironmentVariable	IfYouOptToUseThis
-stepTextConverterDataRoot	It may be convenient to store _all_ data under a given folder.  If you define this variable to identify that folder, you can then use relative paths elsewhere, and have things work relative to this one.  That way, it's easy to move everything to a new location if necessary.	UserSpecified	Optional		Path.	EnvironmentVariable	IfYouOptToUseThis
+stepTextConverterOverallDataRoot	It may be convenient to store _all_ data under a given folder.  If you define this variable to identify that folder, you can then use relative paths elsewhere, and have things work relative to this one.  That way, it's easy to move everything to a new location if necessary.	UserSpecified	Optional		Path.	EnvironmentVariable	IfYouOptToUseThis
 
 
 # Interface to external metadata.
@@ -142,7 +140,6 @@ stepFileSelectorForOwnerOrganisation	For Biblica texts, give Biblica here.  Othe
 stepCheckInputsAgainstPreviousModule	Checks the SHA-256 of the present inputs against those for the previous version of the module.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunIfNecessary
 stepEvaluateSchemesOnly	If yes, the run simply scores the text against the schemes available in Crosswire's osis2mod.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunIfNecessary
 stepRootFolder	The root folder holding data for the module.	UserSpecified	MandatoryAlways		Path.	CommandLine	PerTextAlways
-stepRunType	Determines whether this is a minor release run or a major release run (or for evaluation only).	UserSpecified	MandatoryAlways		majorRelease / minorRelease / release / evaluationOnly.	CommandLine	PerTextAlways	This is used to set the value of stepReleaseType to major, minor or tbd (to be determined during processing).  stepRunType is then itself set to 'release' or 'evaluationOnly'.
 stepStartProcessFromOsis	Used where we have non-OSIS inputs available, but nonetheless want to start from the current OSIS.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerTextIfDesired	Where alternative inputs are available, you will be warned if you opt to use OSIS and the other inputs are more up to date.
 stepStepUpdateReason	Text to be recorded on History line to explain why the module has been generated (used when the new module has been occasioned by STEP itself).	UserSpecified	Optional	"Unspecified"	Arbitrary string.	CommandLine	PerRunIfNecessary
 stepSupplierUpdateReason	Where the new module is being produced because the supplier has changed things, details of those changes.	UserSpecified	Optional		Arbitrary string.	CommandLine	PerRunIfNecessary

@@ -152,13 +152,7 @@ object VersionAndHistoryHandler
   * @return History lines.
   */
 
-  fun getHistoryLines (): List<String>
-  {
-    return if ("eval" in ConfigData["stepRunType"]!!)
-      listOf()
-    else
-      m_HistoryLines.map { it.toString() }
-  }
+  fun getHistoryLines (): List<String> = m_HistoryLines.map { it.toString() }
 
 
   /****************************************************************************/
@@ -169,9 +163,6 @@ object VersionAndHistoryHandler
 
   fun appendHistoryLinesToStepConfigFile ()
   {
-    if ("eval" in ConfigData["stepRunType"]!!.lowercase())
-      return // Don't update history on an evaluation module.
-
     val nonHistoryLines =
       File(FileLocations.getStepConfigFilePath())
         .readLines(Charsets.UTF_8)
@@ -203,15 +194,6 @@ object VersionAndHistoryHandler
       val combinedHistoryLines = (historyLinesFromStepConfig + historyLinesFromThirdPartyConfig) // If there are clashes, STEP config wins.
       m_HistoryLines = combinedHistoryLines.keys.sortedDescending().map { combinedHistoryLines[it]!! } .toMutableList()
     }
-
-
-
-    /**************************************************************************/
-    /* We need to have the history information available on all runs, but we
-       update things only on release runs. */
-
-    if ("release" != ConfigData["stepRunType"]!!.lowercase())
-      ConfigData["stepTextRevision"] = "0.0" // Dummy version.
 
 
 
@@ -249,10 +231,11 @@ object VersionAndHistoryHandler
 
 
     /**************************************************************************/
-    val prevText = if (m_HistoryLines.isEmpty()) "" else m_HistoryLines[0].text.lowercase() ?: ""
+    val prevText = if (m_HistoryLines.isEmpty()) "" else m_HistoryLines[0].text.lowercase()
     val newText = text.lowercase()
     if (newText in prevText && !ConfigData.getAsBoolean("stepForceUpIssue", "no"))
     {
+      ConfigData["stepTextRevision"] = previousVersion.split('.').map { it.toInt().toString() }.joinToString(".") // Need to keep the old revision number.
       ConfigData["stepUpIssued"] = "n"
       return
     }
@@ -305,8 +288,8 @@ object VersionAndHistoryHandler
     val writer = File(FileLocations.getSwordConfigFilePath()).bufferedWriter()
 
     writer.write("[${ConfigData["stepModuleName"]!!}]"); writer.write("\n")
-    writer.write("# " + ConfigData["stepAdminLine"]!!); writer.write("\n");
-    writer.write("DataPath=./modules/texts/ztext/${ConfigData["stepModuleName"]!!}/"); writer.write("\n");
+    writer.write("# " + ConfigData["stepAdminLine"]!!); writer.write("\n")
+    writer.write("DataPath=./modules/texts/ztext/${ConfigData["stepModuleName"]!!}/"); writer.write("\n")
     linesToBeCarriedThrough.forEach { writer.write(it); writer.write("\n") }
     writer.write("\n")
 
@@ -315,7 +298,7 @@ object VersionAndHistoryHandler
     if (!evalVersionOnly)
        m_HistoryLines.forEach { writer.write(it.toString()); writer.write("\n") }
 
-    ConfigData.getCopyAsIsLines().forEach { writer.write(it.toString()); writer.write("\n") }
+    ConfigData.getCopyAsIsLines().forEach { writer.write(it); writer.write("\n") }
 
     writer.close()
   }
@@ -409,27 +392,10 @@ object VersionAndHistoryHandler
 
   private fun getNewVersion (previousStepVersion: String, historyLines: List<ParsedHistoryLine>): String
   {
-    /**************************************************************************/
-    /* Unless stepRunType contains 'release', this is a non-release run.
-
-       If it _does_ contain 'release' we need to know whether it's a major
-       release or not.  It is if stepRunType included the word 'major'.  It's
-       a minor release if it included the word 'minor'.  If it included neither,
-       then it's a major release if the version number supplied by the text
-       supplier differs from the previous version number. */
-
-    val thisSupplierVersion = ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!!
-    val previousSupplierVersion = if (historyLines.isEmpty() || !historyLines[0].isStepFormat) "Unknown" else historyLines[0].supplierVersion
-
-    m_ReleaseType = ReleaseType.NonRelease
-    if ("release" == ConfigData["stepRunType"]!!)
+    when (ConfigData["stepReleaseType"])
     {
-      when (ConfigData["stepReleaseType"])
-      {
-        "major" -> m_ReleaseType = ReleaseType.Major
-        "minor" -> m_ReleaseType = ReleaseType.Minor
-        else    -> m_ReleaseType = if (previousSupplierVersion == thisSupplierVersion) ReleaseType.Minor else ReleaseType.Major
-      }
+      "major" -> m_ReleaseType = ReleaseType.Major
+      "minor" -> m_ReleaseType = ReleaseType.Minor
     }
 
 
@@ -480,7 +446,7 @@ object VersionAndHistoryHandler
 
 
   /****************************************************************************/
-  private enum class ReleaseType { NonRelease, Major, Minor, Unknown }
+  private enum class ReleaseType { Major, Minor, Unknown }
   private val C_HistoryLineNonStepPat = "(?i)History_(?<stepVersion>.*?)=(?<preDate>.*?)(?<date>\\d\\d\\d\\d-\\d\\d-\\d\\d)?(?<postDate>.*?)".toRegex()
   private val C_HistoryLineStepPat = "(?i)History_(?<stepVersion>.*?)=(?<date>.*?)\\s+\\[SupplierVersion: (?<supplierVersion>.*?)]\\s*(?<text>.*)".toRegex()
   private var m_ReleaseType = ReleaseType.Unknown

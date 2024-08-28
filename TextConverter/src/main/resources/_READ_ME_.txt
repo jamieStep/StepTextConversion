@@ -4,17 +4,13 @@
 #! more than one non-forced definition for a given item, the definition which
 #! takes precedence is the one which is encountered
 #!
-#!  .----------------.  .----------------.  .----------------.  .----------------. 
-#! | .--------------. || .--------------. || .--------------. || .--------------. |
-#! | |   _____      | || |      __      | || |    _______   | || |  _________   | |
-#! | |  |_   _|     | || |     /  \     | || |   /  ___  |  | || | |  _   _  |  | |
-#! | |    | |       | || |    / /\ \    | || |  |  (__ \_|  | || | |_/ | | \_|  | |
-#! | |    | |   _   | || |   / ____ \   | || |   '.___`-.   | || |     | |      | |
-#! | |   _| |__/ |  | || | _/ /    \ \_ | || |  |`\____) |  | || |    _| |_     | |
-#! | |  |________|  | || ||____|  |____|| || |  |_______.'  | || |   |_____|    | |
-#! | |              | || |              | || |              | || |              | |
-#! | '--------------' || '--------------' || '--------------' || '--------------' |
-#!  '----------------'  '----------------'  '----------------'  '----------------' 
+#!     _                    _____   _______
+#!    | |          /\      / ____| |__   __|
+#!    | |         /  \    | (___      | |
+#!    | |        / /\ \    \___ \     | |
+#!    | |____   / ____ \   ____) |    | |
+#!    |______| /_/    \_\ |_____/     |_|
+#!
 #!
 #! unless any earlier definitions have been marked as 'force'.  With things marked
 #! 'force', the _first_ definition is used.
@@ -50,14 +46,15 @@
 #!   _every_ module, and which you need to be in place at the very start of
 #!   processing.
 #!
-#! - You can supply settings on the comment line.  You use this for certain
-#!   control information specific to the text you are working on (like .
+#! - You can supply settings on the command line.  You use this for certain
+#!   control information specific to the text you are working on (like the
+#!   name of the folder where the data files for the text reside).
 #!
 #! - There is a lot of configuration data built into the Resources section of
 #!   the current JAR file.  This is standard stuff which is probably going to
 #!   be correct for every module, but which you can override where necessary.
-#!   You should never need to refer to these files yourself: they are used
-#!   only within the converter software.
+#!   You probably need to consider very carefully before changing anything here
+#!   or overriding any of the definitions.
 #!
 #! - And you can set up and store configuration files of your own.  This is
 #!   where you store material specific to a given module (or shared between
@@ -65,11 +62,11 @@
 #!
 #!
 #!
-#! Having said that you will not need to refer to the Resources section, you
+#! Having said that you will not need to refer to this Resources section, you
 #! may, in fact, need to read through the files there to understand what they
 #! do, and therefore what things you might usefully override.
 #!
-#! Each of the configuration files in the Resources section work in the same
+#! Most of the configuration files in the Resources section work in the same
 #! way (hopefully _exactly_ the same way), but each sets out to do different
 #! things, and will therefore contain different kinds of data.  Each file
 #! gives more details of what it sets out to achieve and what data it defines
@@ -77,10 +74,43 @@
 #! information here.  Instead I restrict myself here to detailing the common
 #! syntax rules and mechanics.
 #!
-#! Key to all of this is a mechanism which lets you include one file from
-#! another, along with rules which dictate how duplicate definitions for the
-#! same parameter are handled.  These are covered in the next two sections,
+#! (I say 'most' of the configuration files work the same way because there
+#! are a few tab-separated variable files and / or text files which contain
+#! fixed information, and which don't need to participate in the overall
+#! scheme for configuration data.  All 'genuine' configuration files here
+#! have an extension of '.conf'.)
+#!
+#! Key to all the config data is a mechanism which lets you include one file
+#! from another, along with rules which dictate how duplicate definitions for
+#! the same parameter are handled.  These are covered in the next two sections,
 #! before we look in more detail at the mechanics.
+#!
+#!
+#!
+#!
+#!
+#! Kicking things off
+#! ==================
+#!
+#! All texts have to have a Metadata folder, and that folder must contain a
+#! file called step.conf.  (It may contain other things too, but it must have
+#! step.conf.)
+#!
+#! You put into step.conf (or into files included from step.conf) the
+#! definitions of any configuration information relevant to that particular
+#! text.
+#!
+#! You also include from step.conf a file 'commonRoot.conf' which arranges for
+#! default values for any parameters to which you have not assigned a specific
+#! value.
+#!
+#! If you run the converter with the parameter '-dbgConfigData generateStepConfig[All]',
+#! it will output to stdout an outline version of step.conf.  You can paste this
+#! into a file and then alter it as necessary.  Giving the parameter as
+#! generateStepConfig limits the output to the configuration parameters you are
+#! most likely to want to change (although even then you probably won't change
+#! _all_ of them).  Giving the parameter as generateStepConfigAll gives details
+#! of additional parameters which it may occasionally be useful to know about.
 #!
 #!
 #!
@@ -112,25 +142,28 @@
 #! A path starting $jarResources/ refers to files in the resources section of this
 #! JAR.  So $jarResources/ReferenceFormats/referenceFormatVernacularDefaults.conf
 #! points to a file of the given name in the ReferenceFormats subfolder of the
-#! Resources section.  This is the only case where use of '..' is restricted:
-#! you can't use '..' to take you up above where $jarResources points (because
-#! there _is_ nothing above it).
+#! Resources section.
 #!
-#! With the other options, there is no such limitation.  The other options are,
-#! with one exception, all based upon you giving full path names -- either
-#! overtly (C:\MyFolder\myfile.conf) or using the substitution mechanism
-#! supported by the configuration data and discussed in hugely boring detail
-#! below.  Thus you might have something like:
+#! A path starting $find/ examines a predefined list of locations in a predefined
+#! order: the root folder for the text, the metadata folder for the text, and
+#! the shared configuration folder (_SharedConfig_).
 #!
-#!  @(stepSharedConfigFolder)/myfile.conf
+#! Or you can give an absolute path.  I recommend against this, however, because
+#! it will make your configuration data less portable.
 #!
-#! and the processing will substitute for @(stepSharedConfigFolder) whatever
-#! value you have associated with stepSharedConfigFolder, and then work with
+#! $include statements are subject to substitution in the normal way (which we
+#! discuss at exhausting length shortly).  Thus you can have something like:
+#!
+#!  @(stepMyPredefinedFolder)/myfile.conf
+#!
+#! and the processing will substitute for @(stepMyPredefinedFolder) whatever
+#! value you have associated with stepMyPredefinedFolder, and then work with
 #! that expanded path.
 #!
-#! While you _can_ do anything you like with paths (including giving
-#! absolute paths), using absolute paths will make your data non-portable.
-#! I therefore strongly recommend that you limit yourself to paths starting:
+#! Of particular relevance are the names for the three folders which $find
+#! examines.  If you want to prevent it from searching for files through
+#! those folders, or don't like the order in which it examines them, you
+#! can use the following built-in names:
 #!
 #! - @(stepRootFolder), which points to the folder within which all of the
 #!   data for the module exists.
@@ -140,15 +173,8 @@
 #!   for the module.  This is the master config file, under control of which
 #!   everything else is included.
 #!
-#! - @(stepSharedConfigFolder), which you must define in the STEP environment
-#!   variable, and under which you can store config information used in
-#!   common by multiple modules.
-#!
-#!
-#! Alternatively, you can simply give the file path as $find/myfile.conf, and
-#! the processing will look in the root folder, the metadata folder and the
-#! shared config folder until it finds a file of that name.  (Best to avoid
-#! having files with the same name in more than one of these places, therefore.)
+#! - @(stepSharedConfigFolder) -- _SharedConfig_ within the overall folder
+#!   below which all of your texts lie, directly or indirectly.
 #!
 #!
 #!
@@ -160,9 +186,19 @@
 #! information in a separate file and store it somewhere under the shared config
 #! folder.
 #!
-#! I strongly recommend storing _all_ shared data of this kind under that folder.
-#! This makes it easy to locate, and also makes it easy to include it within
-#! repository files so that it can be available for future builds.
+#! My strong recommendation is that you do not avail yourself of all this
+#! flexibility. If you want your own configuration files, then ...
+#!
+#! - If they are specific to an individual text, put them in the Metadata folder
+#!   for that text.
+#!
+#! - If they are going to be shared by multiple texts, put them in the shared
+#!   configuration folder.
+#!
+#!
+#! Files from these two areas are automatically included in the repository
+#! package which the converter generates, and therefore will be available
+#! should we need to rebuild the module.
 #!
 #!
 #!
@@ -179,26 +215,23 @@
 #! else, so that any further definitions for the same parameter are ignored.
 #!
 #! After this, it is as though any definitions in the environment variable
-#! StepTextConverterParameters were expanded out as though they appeared in a
-#! text file of their own; and then after processing this pseudo file, all of
-#! the other configuration files were expanded out as described above.
+#! StepTextConverterParameters appeared in a config file of their own, and
+#! this pseudo file were expanded out before anything else.  Then after
+#! processing this pseudo file, all of the other configuration files are
+#! expanded out as described above.
 #!
-#! The resulting text is processed in order from start to end, and the
+#! The resulting expanded text is processed in order from start to end, and the
 #!
-#!  .----------------.  .----------------.  .----------------.  .----------------.
-#! | .--------------. || .--------------. || .--------------. || .--------------. |
-#! | |   _____      | || |      __      | || |    _______   | || |  _________   | |
-#! | |  |_   _|     | || |     /  \     | || |   /  ___  |  | || | |  _   _  |  | |
-#! | |    | |       | || |    / /\ \    | || |  |  (__ \_|  | || | |_/ | | \_|  | |
-#! | |    | |   _   | || |   / ____ \   | || |   '.___`-.   | || |     | |      | |
-#! | |   _| |__/ |  | || | _/ /    \ \_ | || |  |`\____) |  | || |    _| |_     | |
-#! | |  |________|  | || ||____|  |____|| || |  |_______.'  | || |   |_____|    | |
-#! | |              | || |              | || |              | || |              | |
-#! | '--------------' || '--------------' || '--------------' || '--------------' |
-#!  '----------------'  '----------------'  '----------------'  '----------------'
+#!     _                    _____   _______
+#!    | |          /\      / ____| |__   __|
+#!    | |         /  \    | (___      | |
+#!    | |        / /\ \    \___ \     | |
+#!    | |____   / ____ \   ____) |    | |
+#!    |______| /_/    \_\ |_____/     |_|
+#!
 #!
 #! definition one to be encountered takes precedence unless you indicate otherwise.
-#! (How you do this is discussed shortly.)
+#! (How you _do_ indicate otherwise is discussed shortly.)
 #!
 #! (There are a few special exceptions to this: some parameters can take
 #! multiple values, and where this is the case, typically you give multiple
@@ -212,21 +245,19 @@
 #! General syntax
 #! ==============
 #!
-#! Internally, all parameters have names starting with 'step'.  (Parameters on
-#! the command line do not have this prefix, but they are converted so that,
-#! for example, the command line parameter rootFolder becomes stepRootFolder
-#! when referred to internally.)
-#!
 #! Comments are marked with #!.  The #! may occur anywhere on a line: you may
 #! use it to comment out an entire line, or you may use it to add some
 #! explanatory text on to the end of some other statement.
 #!
 #! Blank lines and pure comment lines are ignored.
 #!
-#! You may split a statement across multiple lines -- simply end the earlier
-#! lines with a backslash.
+#! You may split a statement across multiple lines -- simply end the all but the
+#! last line with a backslash.
 #!
-#!
+#! Internally, all parameters have names starting with 'step'.  (Parameters on
+#! the command line do not have this prefix, but they are converted so that,
+#! for example, the command line parameter rootFolder becomes stepRootFolder
+#! when referred to internally.)
 #!
 #! The most common type of a statement is a definition, which, in its
 #! simplest form, looks like:
@@ -238,24 +269,46 @@
 #! by this value.  Parameter names are case-sensitive.
 #!
 #! Leading and trailing spaces in the value are ignored.  If you wish to include
-#! a space there, give it as {space}.
+#! a space there, give it as '{space}'.
 #!
-#! Definitions which lack a right-hand side (stepMyThing=   or stepMyThing#=   )
+#! Definitions which lack a right-hand side
+#!
+#!   stepMyThing=
+#!
 #! associate an empty string with the key.  For the sake of clarity, you
-#! can also give the right-hand side as {empty} to achieve the same effect.
+#! can also give the right-hand side as '{empty}' to achieve the same effect,
+#! and I recommend you do so.
 #!
 #! This is the 'standard' form of definition.  If more than one definition like
 #! this for stepSong exists, only the latest one to be encountered is
-#! actually used.
+#! actually used.  So
+#!
+#!   stepSong=Jingle bells
+#!   stepSong=Happy birthday
+#!
+#! associates 'Happy birthday' with stepSong.
 #!
 #! There is a variant of the above, which looks like:
 #!
 #!   stepSong#=Jingle bells
 #!
-#! (note the #).  This represents a forcible assignment.  To be specific, the
-#! first #= definition for a given parameter overrides any earlier non-forcible
-#! definitions.  If you have more than one #= definition for the same item,
-#! only the _first_ is taken into account.
+#! (note the #).  This represents a _forcible_ definition.  Things work as
+#! follows:
+#!
+#! - If you have multiple non-forced ('=') definitions, the _last_ one to be
+#!   encountered takes precedence.
+#!
+#! - If you have a single forced definition, that takes precedence over any
+#!   non-forced assignments, regardless of whether they are encountered before
+#!   or after the forced definition.
+#!
+#! - If you have more than one forced definition, the _first_ takes precedence.
+#!
+#!
+#! You should always end your step.conf file by including commonRoot.conf (the
+#! sample step.conf generated by the converter does this for you).  I
+#! recommend inserting all of your own parameter definitions _before_ that
+#! $include statement, and making them all forcible definitions.
 #!
 #!
 #!
@@ -274,12 +327,12 @@
 #! form shown here, it is an error if stepYourName is undefined.  There are
 #! related alternatives, though:
 #!
-#!   stepWelcome=Welcome, @(stepMyName, stepYourName, ..., =friend)
+#!   stepWelcome=Welcome, @(stepYourName, stepMyName, ..., =friend)
 #!
 #! In this case, the processing runs through the list of parameter names from
 #! the left until it finds one which is defined, in which case it uses that.  If
 #! none is defined, it uses the default value (which must be prefixed with '=').
-#! So if stepMyName and stepYourName etc are all undefined, stepWelcome becomes
+#! So if stepYourName and stepMyName etc are all undefined, stepWelcome becomes
 #! 'Welcome, friend'.  The default value (which is treated as literal text) is
 #! optional.  It is again an error if the processing needs to fall back upon a
 #! default and none has been defined.
@@ -288,79 +341,21 @@
 #!
 #!   stepWelcome=Welcome, @choose(@(stepMyName), @(stepYourName), =friend)
 #!
-#! In fact this is so subtle as to be difficult to explain (and indeed I'm no
-#! longer sure I can really remember what it means anyway), but I _think_
-#! @() takes each argument in turn until it finds one that is defined; and then
-#! it looks as the associated value to see if that itself needs to be expanded
-#! out, and so on.  @choose by contrast merely takes the initial value -- it
-#! does not then expand things out further.
+#! Where @(...) finds the first acceptable value, and then expands @-references
+#! in that if there are any, and so on until there are no more @-references ...
+#! where @(...) does that, @choose(...) simply finds the first acceptable value
+#! and then does no further expansion.
 #!
 #! You may also use @getExternal to obtain data from an external metadata file
 #! (currently available only with DBL files).  This is discussed in more detail
-#! in PreTextRepositoryOrganisation/Dbl.conf.
+#! in PerTextRepositoryOrganisation/Dbl.conf.
 #!
 #! These various @-things can be nested in any way you like to any depth -- eg
 #!
 #!   @choose( @(myImportantParameter), @getExternal(metadata, DBLMetadata/thing), =DEFAULT VALUE)
 #!
-#! I wouldn't advise doing much of this, though -- debugging complex
+#! I wouldn't advise doing much of this nesting, though -- debugging complex
 #! configuration information can be difficult.
-#!
-#!
-#!
-#!
-#! How to set up configuration information
-#! =======================================
-#!
-#! Every text has to have, in its Metadata folder, a file called step.conf
-#! which acts as the root for all the configuration information.  If you're
-#! working with a text from DBL, you probably also want to store DBL's
-#! metadata.xml and license.xml files there too.
-#!
-#! Far and away the easiest way to do set up your step.conf file is to look
-#! around for an existing step.conf -- particularly if your text is one of
-#! a collection having something in common (like all originating from Biblica.)
-#!
-#! Otherwise, take a copy of step.conf from this present Resources section,
-#! and follow the instructions there.  (If you use an existing step.conf as
-#! your template instead, you may well find that it lacks a lot of the
-#! parameters mentioned in the step.conf here.  This will be either that it
-#! has accepted the defaults for those settings, or because a lot of the
-#! settings have been moved out elsewhere -- perhaps to a common file shared
-#! with a number of other texts.)
-#!
-#! You will find configuration parameters fall into a number of different
-#! categories:
-#!
-#! - A very few reflect your computing environment, and tell the processing
-#!   things like where it can find external executables and so on.  You
-#!   may want to store these in a common file which _all_ texts can access.
-#!   That way if you need to change things, there's only one place to change.
-#!   If you use this shared file approach, you will need to set this up only
-#!   once.
-#!
-#! - Some reflect the specific text (description, copyright owner, etc), and
-#!   these you have to set up separately for every text.  (You may be lucky,
-#!   though -- on DBL texts the processing can often pick up this kind of
-#!   information direct from DBL's metadata.xml file, so there is no need for
-#!   you to transcribe it in such cases.)
-#!
-#! - Others do reflect the specific text, but you can almost certainly accept
-#!   the default values.  For example, stepTextDirection tells STEP whether a
-#!   text is written right-to-left or left-to-right, but the default (left to
-#!   right) works for most texts.
-#!
-#! - Some may be language-specific -- for example you may want to set up
-#!   definitions for the footnotes which STEP generates under certain
-#!   circumstances.  In a similar vein, some define how scripture references
-#!   are formatted in this particular text.  This may be specific to the text,
-#!   or it may be language related.  (Or you may want to set up defaults for the
-#!   language and then override them for particular texts.)
-#!
-#! - And the remainder are hardly ever going to want to be changed.  A very
-#!   little more information about these appears below, and you can find
-#!   detailed information in the header comments for each configuration file
-#!   in this Resources section.
 #!
 #!
 #!
@@ -370,22 +365,13 @@
 #! =========================
 #!
 #! The conversion process makes use of certain standard pieces of text, for
-#! example in reversification footnotes.  You can, if you wish, create files
-#! containing vernacular translations for these standard pieces of text.
+#! example in reversification footnotes.  There is a file
+#! vernacularTranslationsDb.txt which contains translations of all of these.
+#! I keep this in my shared configuration data folder, and I recommend you
+#! do the same.
 #!
-#! The processing here looks for a folder whose name is given by the
-#! configuration parameter stepSharedConfigFolder (you should define a value for
-#! this in your StepTextConverterParameters environment variable).  Within this,
-#! it looks in a folder VernacularTextTranslations which contains the per-
-#! vernacular files.
-#!
-#! Each must have a name of the form vernacularTextTranslations_xxx.conf, where
-#! xxx is the 3-letter ISO code for the language.  If a file is present, its
-#! contents will be picked up automatically -- there is no need for you to make
-#! reference to it.  If no file is available for the given language, or if the
-#! file does not contain a particular definition, the English version will be
-#! used instead.  Refer to the head-of-file comments for
-#! vernacularTextTranslations_xxx.conf for more information.
+#! The file contains more comments about its structure and how you can set it
+#! up or alter it.
 #!
 #!
 #!
@@ -400,7 +386,7 @@
 #! history lines used most recently are available for use in future runs.
 #!
 #! You can seed step.conf with an initial collection of history lines (so long
-#! as you use the correct format), although there is no need for you to do so;
+#! as you use the correct format), although there is no _need_ for you to do so;
 #! and you can also modify the history rows which appear in the file at any time
 #! so that the revised lines will be used as input next time round.
 #!
@@ -418,6 +404,16 @@
 #!   and things will get confusing if you also had history lines in some other
 #!   file.
 #!
+#! - When you do a new run, you supply details on the command line of why the
+#!   run is being carried out -- because the supplier has given us a new
+#!   version or for some reason of our own.  The module is then automatically
+#!   given a new version number and a new history line.  EXCEPT ... if the
+#!   reason details have not changed, I assume we're simply having another go
+#!   at a module which was wrong for some reason, and don't up-issue or alter
+#!   the history information.  If you want to have the module up-issued
+#!   regardless, you can give the setting '-forceUpIssue yes' on the command-
+#!   line.
+#!
 #!
 #!
 #!
@@ -426,30 +422,27 @@
 #! =============
 #!
 #! * There are some calculated values which can be accessed as though they
-#!   were ordinary configuration parameters.  These all have 'calc' in their
-#!   key names.  These can be a little difficult to use, because they
-#!   become available only after the processing which generates them has
-#!   run, so you have to know when it is safe to attempt to access them.
+#!   These can be a little difficult to use, because they become available only
+#!   after the processing which generates them has run, so you have to know when
+#!   it is safe to attempt to access them.
 #!
 #! * Reference was made above to the StepTextConverterParameters environment
-#!   variable.  This is probably best limited just to parameter settings (a=b or
-#!   a#=b), and must contain at least two settings:
+#!   variable.  This is probably best limited just to simple parameter settings
+#!   (a=b or a#=b), with no @-processing.  It must contain at least the
+#!   following settings:
 #!
-#!     stepStepOsis2ModFolderPath=somePath; stepCrosswireOsis2ModFolderPath=someOtherPath
+#!     stepTextConverterOverallDataRoot=somePath; stepStepOsis2ModFolderPath=somePath; stepCrosswireOsis2ModFolderPath=someOtherPath
 #!
-#!   which tell the processing where to find the Crosswire and STEP versions of
-#!   osis2mod respectively.
-#!
-#!   You may also find it useful to include a setting:
-#!
-#!     stepTextConverterDataRoot=someFolderPath
+#!   which give the path to the folder under which all of your texts fall
+#!   (directly or indirectly), and then, respectively where to find the
+#!   Crosswire and STEP versions of osis2mod respectively.
 #!
 #!   If you do this, then when you supply the command line parameter rootFolder,
 #!   the processing will assume this as the start of the path, and you need only
 #!   add the remainder.  No particular benefit as far as processing is concerned,
 #!   but it will save a little typing, perhaps.
 #!
-#!   You can add other setting too if you wish.  It will be apparent from above
+#!   You can add other settings too if you wish.  It will be apparent from above
 #!   that settings must be separated by a semicolon (which can optionally be
 #!   preceded or followed by spaces).  If a setting needs to include a semicolon,
 #!   give it as \;.  If you need a backslash, give it as \\.
@@ -490,28 +483,12 @@
 #!   needs to include this.  (The standard template for step.conf _does_ include
 #!   it, so in the normal course of events you don't need to worry about it.)
 #!
-#! - dummyMandatoryValuesForUseWhereSwordConfigHasBeenSupplied.conf: When
-#!   working with OSIS as the initial input, rather than USX, there are certain
-#!   parameters which we don't need to supply because they normal come from a
-#!   previous version of the Sword configuration file.  This file provides dummy
-#!   values for parameters whose absence would otherwise bother the processing.
-#!
 #! - externalDataPaths.conf: Mainly URLs to data which the processing needs to
-#!   pick up from the internet.
-#!
-#! - osis2modVersification.txt: Not a configuration file.
-#!
-#! - overrides.conf: A convenient place to lodge any overrides which you may
-#!   want to apply to everything while testing or debugging.  This file should
-#!   normally be empty.
-#!
-#! - PerOwnerOrganisation: Common information about owner organisations.
-#!   Currently limited to Biblica.
+#!   pick up from the internet, or standard URLs which it may be useful to
+#!   include in copyright information.
 #!
 #! - PerTextRepositoryOrganisation: Common information about text repositories.
 #!   Currently limited to DBL.
-#!
-#! - _readMeFirst_.txt: This present file.
 #!
 #! - ReferenceFormats: Describes how references are formatted.  Contains just
 #!   one file (which actually defines the format for USX).  You probably
@@ -522,13 +499,6 @@
 #!   long form.  You can use this as a model for your own list if you need
 #!   to support vernacular forms.  (If you have a DBL metadata file, the
 #!   necessary information can often be picked up from that file automatically.)
-#!
-#! - step.conf: You need a copy of this file in the Metadata folder for each
-#!   text (or you need the _effect_ of having a copy of it -- there is nothing
-#!   to stop you splitting parts of it out into other files, perhaps shared
-#!   ones.
-#!
-#! - strongsCorrections.txt: Not a configuration file.
 #!
 #! - swordTemplateConfigFile.conf: Used by the processing to determine what a
 #!   Sword configuration file should look like.  In the normal course of events,
@@ -542,5 +512,25 @@
 #!   handling the generated OSIS correctly.  Note also that at the time of
 #!   writing, I don't have translations for all possible USX tags -- only for
 #!   the ones we have encountered to date.
+#!
+#!
+#!
+#! And there are a few files in the resources section which don't function as
+#! configuration files, but which fulfil a vaguely similar role:
+#!
+#! - configDataDescriptors.tsv: Descriptions of all of the configuration
+#!   information.
+#!
+#! - countryNamesToShortenedForm.tsv: Details of countries whose names might
+#!   reasonably be converted to a rather shorter form.
+#!
+#! - isoLanguageCodes.tsv: Details of language codes.
+#!
+#! - osis2modVersification.txt: Details of the versification schemes supported
+#!   by Crosswire's version of osis2mod.
+#!
+#! - strongsCorrections.txt: Replacement values for Strong's code which are
+#!   are often incorrect when provided to us.
+#!
 #!
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -238,6 +238,12 @@ object Zip
                      inputs: List<String>)
   {
      /*************************************************************************/
+     if (inputs.isEmpty())
+       return
+
+
+
+     /*************************************************************************/
      /* Sort out relative paths etc. */
 
      val relativeTo = if (null == theRelativeTo) null else File(theRelativeTo).canonicalPath

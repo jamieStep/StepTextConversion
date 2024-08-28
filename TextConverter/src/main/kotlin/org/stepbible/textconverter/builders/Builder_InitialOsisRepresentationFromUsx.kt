@@ -1,22 +1,20 @@
-package org.stepbible.textconverter.processingelements
+package org.stepbible.textconverter.builders
 
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.miscellaneous.*
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.usxinputonly.Usx_OsisCreator
 import org.stepbible.textconverter.usxinputonly.Usx_Preprocessor
 import org.stepbible.textconverter.usxinputonly.Usx_Tidier
-import org.stepbible.textconverter.utils.InternalOsisDataCollection
-import org.stepbible.textconverter.utils.UsxDataCollection
+import org.stepbible.textconverter.utils.*
 
 
 /******************************************************************************/
 /**
 * Takes data from InputUsx, applies any necessary pre-processing, and then
-* converts the result to expanded OSIS in [OsOsisPhase1OutputDataCollection].
+* converts the result to expanded OSIS.
 *
 * In a previous implementation, I did a lot of work here.  In this latest
 * incarnation all of that work has been deferred to later in the processing
@@ -32,51 +30,43 @@ import org.stepbible.textconverter.utils.UsxDataCollection
 * at present for retaining it in the OSIS side of the system, and so long as
 * this remains the case, you should avoid doing anything very much here.)
 *
-* The output forms the text element of [OsisPhase1OutputDataCollection].  Note
-* that it is *not* fed into the parsed data structures of that item, nor its
-* associated BibleStructure.
-*
 * @author ARA "Jamie" Jamieson
 */
 
-object PE_Phase1_FromInputUsx: PE
+object Builder_InitialOsisRepresentationFromUsx: Builder
 {
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                               Public                                   **/
+  /**                                Public                                  **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
 
   /****************************************************************************/
   override fun banner () = "Preparing USX and converting to OSIS"
-  override fun getCommandLineOptions(commandLineProcessor: CommandLineProcessor) {}
-  override fun pre () { }
-  override fun process () = doIt()
-
-
+  override fun commandLineOptions () = null
 
 
 
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                               Private                                  **/
+  /**                                Private                                 **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun doIt ()
+  override fun doIt ()
   {
+    Dbg.reportProgress(banner())
     RefBase.setBibleStructure(UsxDataCollection.getBibleStructure())
     UsxDataCollection.loadFromFolder(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForUsx())
     Usx_Preprocessor.processXslt(UsxDataCollection)
     Usx_Tidier.process(UsxDataCollection)
     ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(UsxDataCollection.getBookNumbers())
-    if (!ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "no"))
-       Usx_OsisCreator.process(UsxDataCollection)
+    Usx_OsisCreator.process(UsxDataCollection)
     RefBase.setBibleStructure(null)
   }
 }

@@ -1,4 +1,4 @@
-package org.stepbible.textconverter.processingelements
+package org.stepbible.textconverter.builders
 
 import org.stepbible.textconverter.osisinputonly.Osis_CanonicalHeadingsHandler
 import org.stepbible.textconverter.osisinputonly.Osis_DetermineReversificationTypeEtc
@@ -10,48 +10,35 @@ import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.configdata.FileLocations
 import org.stepbible.textconverter.support.debug.Dbg
 import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.miscellaneous.*
+import org.stepbible.textconverter.support.miscellaneous.Dom
+import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.processRegexes
+import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
+import org.stepbible.textconverter.support.miscellaneous.findNodesByName
+import org.stepbible.textconverter.support.miscellaneous.get
 import org.stepbible.textconverter.support.ref.RefBase
 import org.stepbible.textconverter.utils.*
 import org.w3c.dom.Document
 import java.nio.file.Paths
 
-
-/****************************************************************************/
+/******************************************************************************/
 /**
- * This object expects to receive standard or expanded OSIS as input.  It
- * has one main task and one subsidiary one.  Its main task is to generate
- * a temporary OSIS file in standard OSIS syntax, but possibly modified so
- * that after feeding it through osis2mod, it will produce a module which
- * STEPBible renders properly.  And its subsidiary task (where the run is
- * starting either from VL or from USX) is to save a standard version of the
- * OSIS which could be used for future input (perhaps after manual tweaks
- * have been applied to it).
- *
- * Note that the two versions of OSIS are not identical.  The version saved
- * for future use retains teh original semantic and formatting markup as far
- * as possible.  The version fed to osis2mod may have been modified to
- * account for the fact that there are certain OSIS constructs which STEPBible
- * does not render well.
+ * Builds a repository package.
  *
  * @author ARA "Jamie" Jamieson
  */
 
-object PE_Phase2_ToInternalOsis : PE
+object Builder_InternalOsis: Builder
 {
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                               Public                                   **/
+  /**                                Public                                  **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
 
-  /****************************************************************************/
   override fun banner () = "Converting Internal OSIS to version required for Sword module"
-  override fun getCommandLineOptions (commandLineProcessor: CommandLineProcessor) {}
-  override fun pre () { StepFileUtils.clearFolder(FileLocations.getOutputFolderPath()) }
-  override fun process () = doIt()
+  override fun commandLineOptions () = null
 
 
 
@@ -60,7 +47,7 @@ object PE_Phase2_ToInternalOsis : PE
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                              Private                                   **/
+  /**                                Private                                 **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
@@ -110,8 +97,14 @@ object PE_Phase2_ToInternalOsis : PE
      position to create a module, but I do that to a separate throw-away copy
      which is held in OsisTempDataCollection. */
 
-  private fun doIt ()
+  override fun doIt ()
   {
+    /***************************************************************************/
+    Builder_InitialOsisRepresentationOfInputs.process()
+    Dbg.reportProgress((banner()))
+
+
+
     /***************************************************************************/
     /* Inserts a comment near the front of the DOM to help identify different
        versions. */
@@ -146,8 +139,11 @@ object PE_Phase2_ToInternalOsis : PE
        pre-processing. */
 
     //Dbg.outputText(Phase1TextOutput)
-    var preprocessedOsisDoc = Dom.getDocumentFromText(Osis_Preprocessor.processRegex(Phase1TextOutput), retainComments = true); x()
-    Phase1TextOutput = ""                                                          // Free up space -- we don't need the OSIS text any more.
+
+    val regexes = ConfigData.getOsisRegexes()
+    if (regexes.isNotEmpty()) Dbg.reportProgress("Applying regex preprocessing.")
+    var preprocessedOsisDoc = Dom.getDocumentFromText(processRegexes(ConfigData.getOsisRegexes(), Phase1TextOutput), retainComments = true); x()
+    Phase1TextOutput = "" // Free up space -- we don't need the OSIS text any more.
     preprocessedOsisDoc = Osis_Preprocessor.processXslt(preprocessedOsisDoc); x()
     Osis_Preprocessor.tidyChapters(preprocessedOsisDoc); x()
     Osis_Preprocessor.insertMissingChapters(preprocessedOsisDoc); x()
@@ -220,6 +216,7 @@ object PE_Phase2_ToInternalOsis : PE
       SE_BasicVerseEndInserter(ExternalOsisDataCollection).processAllRootNodes(); x()                 // Add verse-ends in a rudimentary manner.
       addComment(ExternalOsisDataCollection.getDocument(), "Externally-facing OSIS")             // Mark the DOM so we know what this is.
       SE_StrongsHandler(ExternalOsisDataCollection).processAllRootNodes(); x()                        // Canonicalise Strong's references.  (Actually, I think this should be done later, but we need it so that Patrick can further mark up NETfull2 with morphology.)
+//      Dbg.d(ExternalOsisDataCollection.getDocument())
       NodeMarker.deleteAllMarkers(ExternalOsisDataCollection)
       val filePath = Paths.get(FileLocations.getInputOsisFolderPath(), "DONT_USE_ME.xml").toString()
       StepFileUtils.createFolderStructure(Paths.get(filePath).parent.toString())

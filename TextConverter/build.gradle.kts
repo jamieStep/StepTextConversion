@@ -12,15 +12,17 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
-    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.google.code.gson:gson:2.10")
     implementation("commons-cli:commons-cli:1.5.0")
-    implementation("commons-codec:commons-codec:1.16.0")
-    implementation("commons-io:commons-io:2.13.0")
-    implementation("net.sf.saxon:Saxon-HE:12.3")
+    implementation("commons-codec:commons-codec:1.17.0")
+    implementation("commons-io:commons-io:2.16.1")
+    implementation("net.sf.saxon:Saxon-HE:12.5")
     implementation("org.jasypt:jasypt:1.9.3")
     implementation(kotlin("reflect"))
-    implementation("io.arrow-kt:arrow-core:1.2.0")
-    implementation("io.arrow-kt:arrow-fx-coroutines:1.2.0")
+//    implementation("io.arrow-kt:arrow-core:1.2.0")
+//    implementation("io.arrow-kt:arrow-fx-coroutines:1.2.0")
+
+//    implementation("org.reflections:reflections:0.10.2")
 }
 
 

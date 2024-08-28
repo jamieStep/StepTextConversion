@@ -1,12 +1,12 @@
 package org.stepbible.textconverter.support.commandlineprocessor
 
 import org.apache.commons.cli.*
+import org.stepbible.textconverter.C_ReleaseVersion
+import org.stepbible.textconverter.C_TestSubversion
 import org.stepbible.textconverter.support.configdata.ConfigData
 import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.miscellaneous.Dom
-import org.stepbible.textconverter.support.miscellaneous.get
+import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.getJarFileName
 import org.stepbible.textconverter.support.stepexception.StepException
-import org.w3c.dom.Node
 import java.util.*
 import kotlin.system.exitProcess
 
@@ -28,7 +28,21 @@ object CommandLineProcessor
     /****************************************************************************/
 
     /****************************************************************************/
-    private data class CommandLineOption (val name: String, val nArgs: Int, val description: String, val options: List<String>?, val default: String?, val required: Boolean)
+    data class CommandLineOption (val name: String, val nArgs: Int, val description: String, val options: List<String>?, val default: String?, val required: Boolean, val forceLc: Boolean = false)
+
+
+    /****************************************************************************/
+    /**
+     * Adds a command line option, avoiding duplication and beefing up the
+     * description where possible.
+     *
+     * @param commandLineLOption
+     */
+
+    fun addCommandLineOption (option: CommandLineOption)
+    {
+      addCommandLineOption(option.name, option.nArgs, option.description, option.options, option.default, option.required)
+    }
 
 
     /****************************************************************************/
@@ -42,16 +56,17 @@ object CommandLineProcessor
      * @param options Permitted options.
      * @param default Default value.
      * @param required True if parameter is mandatory.
+     * @param forceLc True if value should be forced to lower case.
      */
 
-    fun addCommandLineOption (name: String, nArgs: Int, description: String, options: List<String>?, default: String?, required: Boolean)
+    fun addCommandLineOption (name: String, nArgs: Int, description: String, options: List<String>?, default: String?, required: Boolean, forceLc: Boolean = false)
     {
         if (m_CommandLineOptions.containsKey(name)) return
 
         var desc = description
         if (null != options) desc += "  Options: " + options.joinToString(" / ") + "."
         if (null != default) desc += "  Default: $default."
-        val clo = CommandLineOption(name, nArgs, desc, options, default, required)
+        val clo = CommandLineOption(name, nArgs, desc, options, default, required, forceLc)
 
         m_CommandLineOptions[name] = clo // Add raw details to our own structure.
 
@@ -66,18 +81,13 @@ object CommandLineProcessor
     /**
      * Copies command line data to the configuration data, so that it is
      * available in a manner consistent with everything else.
-     *
-     * @param jarFileName Name of containing JAR file.
      */
 
-    fun copyCommandLineOptionsToConfigData (jarFileName: String)
+    fun copyCommandLineOptionsToConfigData ()
     {
         /************************************************************************/
         if (m_ParsedCommandLine!!.hasOption("help"))
-        {
-          showHelp(jarFileName)
-          exitProcess(0)
-        }
+          showHelpAndExit()
 
 
 
@@ -128,8 +138,13 @@ object CommandLineProcessor
         if (null == res)
         {
             val opt = m_CommandLineOptions[optionName]
+
             if (opt?.default != null)
                 res = opt.default
+
+            if ((opt?.forceLc == true) && null != res)
+              res = res.lowercase()
+
             return res
         }
 
@@ -137,7 +152,15 @@ object CommandLineProcessor
         if (null != options)
         {
             val found = options.any { res.equals(it, ignoreCase = true) }
-            return if (found) res else throw StepException("Invalid value for command-line parameter $optionName: $res")
+            if (!found)
+              throw StepException("Invalid value for command-line parameter $optionName: $res")
+            else
+            {
+              return if (true == m_CommandLineOptions[optionName]?.forceLc)
+                res.lowercase()
+              else
+                res
+            }
         }
 
         return res
@@ -176,7 +199,6 @@ object CommandLineProcessor
     }
 
 
-
     /****************************************************************************/
     /**
      * Parses the command line.  If successful, the method squirrels away the
@@ -193,14 +215,27 @@ object CommandLineProcessor
     {
         return try
         {
-            m_ParsedCommandLine = m_Parser.parse(m_Options, args)
-            true
+          m_ParsedCommandLine = m_Parser.parse(m_Options, args)
+          validateOptions()
+          true
         }
         catch (e: ParseException)
         {
-            showHelp(jarFileName)
+            showHelpAndExit()
             false
         }
+    }
+
+
+    /****************************************************************************/
+    /**
+    * Does what it says on the tin.
+    */
+
+    fun showHelpAndExit ()
+    {
+      HelpFormatter().printHelp("java -jar ${getJarFileName()}.jar org.stepbible.textconverter.MainKt\nVersion: ${ConfigData["stepJarVersion"]!!}\n", m_Options)
+      exitProcess(0)
     }
 
 
@@ -228,11 +263,25 @@ object CommandLineProcessor
 
 
     /****************************************************************************/
-    private fun showHelp (jarFileName: String)
+    private fun validateOptions ()
     {
-      val formatter = HelpFormatter()
-      formatter.printHelp("java -jar $jarFileName.jar org.stepbible.textconverter.MainKt\n", m_Options)
-      exitProcess(0)
+      var ok = true
+
+      m_ParsedCommandLine!!.options.forEach { option ->
+        val permittedValues = m_CommandLineOptions[option.opt]!!.options
+        if (null != permittedValues)
+        {
+          val v = option.value.lowercase()
+          if (null == permittedValues.map { it.lowercase() }. firstOrNull { v == it })
+          {
+            Dbg.d("Invalid value for command-line parameter ${option.opt}.  Value must be one of: ${permittedValues.joinToString(", ")}.")
+            ok = false
+          }
+        }
+      }
+
+      if (!ok)
+        exitProcess(1)
     }
 
 

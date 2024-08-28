@@ -2,6 +2,8 @@
 package org.stepbible.textconverter.support.configdata
 
 
+import org.stepbible.textconverter.C_ReleaseVersion
+import org.stepbible.textconverter.C_TestSubversion
 import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
@@ -655,30 +657,6 @@ object ConfigData
   }
 
 
-  /****************************************************************************/
-  /* A potential further addition to module names.  On release runs, we add
-     nothing.  On non-release runs we add a timestamp etc to the name, so
-     that we can have multiple copies of a module lying around without them
-     clashing.  This part of the processing can be run at any time, because
-     the parameters it looks at will normally come direct from the command
-     line. */
-
-  fun generateModuleName ()
-  {
-    if ("release" in ConfigData["stepRunType"]!!.lowercase())
-      return
-
-    var testRelatedSuffix = ConfigData["stepRunType"]!!
-    if ("evaluation" in testRelatedSuffix.lowercase()) testRelatedSuffix = "eval"
-    testRelatedSuffix = "_" + testRelatedSuffix + "_" + ConfigData["stepBuildTimestamp"]!!
-    val moduleName = getInternal("stepModuleName", false) + testRelatedSuffix
-    delete("stepModuleName"); put("stepModuleName", moduleName, force = true)
-  }
-
-
-
-
-
     /**************************************************************************/
     /**************************************************************************/
     /**                                                                      **/
@@ -740,12 +718,7 @@ object ConfigData
         /**************************************************************************/
         /* Originally I would have regarded any attempt to load the same file twice
            as probably indicating an error.  However, it is convenient to accept
-           this and simply not load the file a second time.  (Slightly obscure
-           rationale: this lets me create a bog-standard base configuration file
-           in the resources section and then copy this as the template step.conf
-           file for each new text.  To minimise the number of changes required to
-           that template file, it is convenient if the template file $include's
-           itself, but I want the file to be included only once.) */
+           this and simply not load the file a second time.  */
 
         val inputPath = FileLocations.getInputPath(configFilePath)
         if (m_AlreadyLoaded.contains(inputPath)) return
@@ -2560,6 +2533,10 @@ object ConfigData
     // return if ("RTL" == getInternal("stepTextDirection", false)).uppercase() "true" else "false"
     return "false"
   }
+
+
+  /****************************************************************************/
+  fun calc_stepJarVersion () = if (C_TestSubversion.isEmpty()) "R$C_ReleaseVersion" else "T$C_ReleaseVersion/$C_TestSubversion"
 
 
   /****************************************************************************/

@@ -1,5 +1,4 @@
-/******************************************************************************/
-package org.stepbible.textconverter.processingelements
+package org.stepbible.textconverter.builders
 
 import org.stepbible.textconverter.osisinputonly.Osis_Utils
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
@@ -14,7 +13,6 @@ import org.stepbible.textconverter.support.stepexception.StepException
 import org.stepbible.textconverter.utils.*
 import java.io.BufferedWriter
 import java.io.File
-import kotlin.collections.HashMap
 
 
 /******************************************************************************/
@@ -46,11 +44,6 @@ import kotlin.collections.HashMap
  *   VL are in fact standard USX abbreviations.
  *
  *
- * The output forms the text element of [OsisPhase1OutputDataCollection].  Note
- * that it is *not* fed into the parsed data structures of that item, nor its
- * associated BibleStructure.
- *
- *
  * IMPORTANT: VerseLine is not a standard.  Each instance of VerseLine which I've
  * seen is different from every other, in terms both of syntax (eg how the
  * verse references are represented) and in terms of what additional features it
@@ -65,7 +58,7 @@ import kotlin.collections.HashMap
  * @author ARA "Jamie" Jamieson
  */
 
-object PE_Phase1_FromInputVl: PE
+object Builder_InitialOsisRepresentationFromVl: Builder
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -76,18 +69,8 @@ object PE_Phase1_FromInputVl: PE
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun banner () = "Converting InputVl to InternalOsis"
-  override fun getCommandLineOptions(commandLineProcessor: CommandLineProcessor) {}
-  override fun pre () { }
-
-
-  /****************************************************************************/
-  override fun process ()
-  {
-    val inFiles = StepFileUtils.getMatchingFilesFromFolder(FileLocations.getInputVlFolderPath(), ".*\\.${FileLocations.getFileExtensionForVl()}".toRegex()).map { it.toString() }
-    if (inFiles.isEmpty()) throw StepException("Expecting VL files, but none available.")
-    doIt(inFiles)
-  }
+  override fun banner () = "Converting InputVl to initial OSIS"
+  override fun commandLineOptions () = null
 
 
 
@@ -102,8 +85,19 @@ object PE_Phase1_FromInputVl: PE
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun doIt (inFilePaths: List<String>)
+  override fun doIt ()
   {
+    /**************************************************************************/
+    Dbg.reportProgress(banner())
+
+
+
+    /**************************************************************************/
+    val inFilePaths = StepFileUtils.getMatchingFilesFromFolder(FileLocations.getInputVlFolderPath(), ".*\\.${FileLocations.getFileExtensionForVl()}".toRegex()).map { it.toString() }
+    if (inFilePaths.isEmpty()) throw StepException("Expecting VL files, but none available.")
+
+
+
     /**************************************************************************/
     val commentMarker = ConfigData["stepVlCommentMarker"] ?: "\u0001" // If no comment marker is defined, use a dummy value which we'll never actually encounter.
     val linePattern = ConfigData["stepVlLineFormat"]!!.toRegex()
@@ -305,13 +299,13 @@ object PE_Phase1_FromInputVl: PE
   /****************************************************************************/
   /* Weird markup for a plain vanilla para -- forced on us by a distressing bug
      in STEPBible whereby paras occasionally go missing. */
-     
+
   private fun makeParaMarker (): String
   {
     return "<hi type='bold'/><p/>"
   }
-  
-  
+
+
   /****************************************************************************/
   private fun writeln (text: String?)
   {
@@ -349,4 +343,3 @@ object PE_Phase1_FromInputVl: PE
   private lateinit var m_BookDescriptors: Map<String, String>
   private lateinit var m_Writer: BufferedWriter
 }
-

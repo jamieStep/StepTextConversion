@@ -184,8 +184,8 @@ object Usx_Tidier
   /****************************************************************************/
   /* Strictly we could position verse ends later, which on some runs would make
      the processing faster.  However, it helps make things more uniform if I
-     insert verse ends here.
-   */
+     insert verse ends here. */
+
   private fun positionVerseEnds (doc: Document)
   {
     if (ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "no"))

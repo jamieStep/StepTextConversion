@@ -2511,7 +2511,7 @@ object Dom
         if (node.hasAttributes())
         {
             val attribs = getAttributes(node)
-            for (k in attribs.keys) attributes += k + "='" + attribs[k] + "', "
+            for (k in attribs.keys) attributes += k + "='" + attribs[k] + "' "
         }
 
         if (attributes.isNotEmpty()) attributes = attributes.substring(0, attributes.length - 2)

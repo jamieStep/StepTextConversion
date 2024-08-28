@@ -1,7 +1,6 @@
 package org.stepbible.textconverter.utils
 
 import com.google.gson.GsonBuilder
-import org.stepbible.textconverter.processingelements.PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation
 import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.support.bibledetails.VersificationSchemesSupportedByOsis2mod
 import org.stepbible.textconverter.support.configdata.ConfigData
@@ -533,24 +532,24 @@ object IssueAndInformationRecorder
 
 
 
-    /**************************************************************************/
-    m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA = "Because reversification is not being applied, the text needs to conform to the selected osis2mod versification scheme.  The following details highlight any issues."
-
-    val analysis = PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.evaluateSingleSchemeDetailed(ConfigData["stepVersificationScheme"]!!, m_DataCollection.getBibleStructure())
-
-    m_BibleTextStructure.DCPresence = analysis.DCPresence
-
-    m_BibleTextStructure.BooksInTextWhichOsis2modDoesNotSupport = analysis.booksMissingInOsis2modScheme.map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
-    m_BibleTextStructure.HasBooksInTextWhichOsis2modDoesNotSupport = m_BibleTextStructure.BooksInTextWhichOsis2modDoesNotSupport!!.isNotEmpty()
-
-    m_BibleTextStructure.BooksInOsis2modWhichTextDoesNotProvide = analysis.booksInExcessInOsis2modScheme.map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
-    m_BibleTextStructure.HasBooksInOsis2modWhichTextDoesNotProvide = m_BibleTextStructure.BooksInTextWhichOsis2modDoesNotSupport!!.isNotEmpty()
-
-    m_BibleTextStructure.VersesInTextWhichOsis2modDoesNotSupport = analysis.versesMissingInOsis2modScheme.map { Ref.rd(it).toString() }
-    m_BibleTextStructure.HasVersesInTextWhichOsis2modDoesNotSupport = m_BibleTextStructure.BooksInTextWhichOsis2modDoesNotSupport!!.isNotEmpty()
-
-    m_BibleTextStructure.VersesInOsis2modWhichTextDoesNotProvide = analysis.versesInExcessInOsis2modScheme.map { Ref.rd(it).toString() }
-    m_BibleTextStructure.HasVersesInOsis2modWhichTextDoesNotProvide = m_BibleTextStructure.VersesInTextWhichOsis2modDoesNotSupport!!.isNotEmpty()
+//    /**************************************************************************/
+//    m_BibleTextStructure.ABOUT_THE_FOLLOWING_VERSIFICATION_DATA = "Because reversification is not being applied, the text needs to conform to the selected osis2mod versification scheme.  The following details highlight any issues."
+//
+//    val analysis = PE_InputVlInputOrUsxInputOrImpInputOsis_To_SchemeEvaluation.evaluateSingleSchemeDetailed(ConfigData["stepVersificationScheme"]!!, m_DataCollection.getBibleStructure())
+//
+//    m_BibleTextStructure.DCPresence = analysis.DCPresence
+//
+//    m_BibleTextStructure.BooksInTextWhichOsis2modDoesNotSupport = analysis.booksMissingInOsis2modScheme.map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
+//    m_BibleTextStructure.HasBooksInTextWhichOsis2modDoesNotSupport = m_BibleTextStructure.BooksInTextWhichOsis2modDoesNotSupport!!.isNotEmpty()
+//
+//    m_BibleTextStructure.BooksInOsis2modWhichTextDoesNotProvide = analysis.booksInExcessInOsis2modScheme.map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
+//    m_BibleTextStructure.HasBooksInOsis2modWhichTextDoesNotProvide = m_BibleTextStructure.BooksInTextWhichOsis2modDoesNotSupport!!.isNotEmpty()
+//
+//    m_BibleTextStructure.VersesInTextWhichOsis2modDoesNotSupport = analysis.versesMissingInOsis2modScheme.map { Ref.rd(it).toString() }
+//    m_BibleTextStructure.HasVersesInTextWhichOsis2modDoesNotSupport = m_BibleTextStructure.BooksInTextWhichOsis2modDoesNotSupport!!.isNotEmpty()
+//
+//    m_BibleTextStructure.VersesInOsis2modWhichTextDoesNotProvide = analysis.versesInExcessInOsis2modScheme.map { Ref.rd(it).toString() }
+//    m_BibleTextStructure.HasVersesInOsis2modWhichTextDoesNotProvide = m_BibleTextStructure.VersesInTextWhichOsis2modDoesNotSupport!!.isNotEmpty()
   }
 
 

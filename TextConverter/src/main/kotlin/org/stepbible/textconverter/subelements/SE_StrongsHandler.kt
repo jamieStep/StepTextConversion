@@ -29,6 +29,10 @@ import java.util.*
  *    put 'H' or 'G' only on the first, using the convention that the later
  *    ones default to the original prefix.  These I make explicit.
  *
+ * -- Some texts have additional information within the lemma attribute --
+ *    eg lemma = "strong:G0520 lemma.TR:απαγαγετε".  This is ok, and is
+ *    retained.
+ *
  * -- There are a few Strong's numbers which need to be corrected.  I handle
  *    this.
  *
@@ -61,13 +65,14 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
 
   override fun processRootNodeInternal (rootNode: Node)
   {
+    //Dbg.d(rootNode.ownerDocument)
     Dbg.reportProgress("Handling Strongs for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
     val strongs = Dom.getAllNodesBelow(rootNode)
       .filter { m_FileProtocol.isStrongsNode(it) }
       .filter { m_FileProtocol.attrName_strong() in it }
     strongs.forEach { doStrong(it) }
-    collapseNestedStrongs(strongs)
-    if (strongs.isNotEmpty()) IssueAndInformationRecorder.setStrongs()
+    val nStrongs = strongs.size - collapseNestedStrongs(strongs)
+    if (nStrongs > 0) IssueAndInformationRecorder.setStrongs()
   }
 
 
@@ -82,12 +87,14 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
   /****************************************************************************/
   /****************************************************************************/
 
+  //private var overallCount = 0 // $$$
   /****************************************************************************/
   /* Some texts nest Strongs. */
 
-  private fun collapseNestedStrongs (strongs: List<Node>)
+  private fun collapseNestedStrongs (strongs: List<Node>): Int
   {
     /**************************************************************************/
+    var deletedCount = 0
     val nodeMap = IdentityHashMap<Node, Boolean>()
     strongs.forEach { nodeMap[it] = true }
 
@@ -99,14 +106,26 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
       if (!nodeMap[node]!!)
         continue
 
-        Dbg.d(node)
-        Dbg.dCont(Dom.toString(node), "<w lemma='strong:H3045', morph='strongMorph:TH8799'>")
+      //node["ZZZ"] = (overallCount++).toString() // $$$
 
       val children: MutableList<Node> = mutableListOf()
       var p = node
       while (true)
       {
         val firstChild = p.firstChild
+
+        if (null == firstChild) // This shouldn't happen -- we should never have an entirely empty Strong's tag -- but I've seen texts where it does.
+        {
+          val text = "Empty Strong's reference: ${Dom.toString(node)}."
+          Logger.warning(text)
+          //Dbg.d(Dom.findAncestorByNodeName(p, "chapter")!!)
+          //if (1 == ++overallCount) Dbg.d(node.ownerDocument)
+          Dbg.d(text)
+          Dom.deleteNode(node) // No point in retaining an empty Strong's tag.
+          ++deletedCount
+          break
+        }
+
         if (m_FileProtocol.tagName_strong() != Dom.getNodeName(firstChild))
           break
 
@@ -128,49 +147,63 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
     }
 
 //    Dbg.d(allNodes[0].ownerDocument)
+
+    return deletedCount
   } // fun
 
 
   /****************************************************************************/
   /* Processes a single Strongs node. */
 
+  private val C_ExtendedStrongInfo = "(?i)(G|H)\\d\\d\\d\\d".toRegex()
+  private val C_LemmaWithinStrongs = "(?i)^lemma.+".toRegex()
+  private val C_MultiStrongSeparator = "(\\s*,\\s*|\\s+)".toRegex() // Comma optionally preceded and / or followed by spaces, or just one or more spaces.
+
   private fun doStrong (node: Node)
   {
+    /**************************************************************************/
     var prefix = ""
 
-    val rawElts = node[m_FileProtocol.attrName_strong()]!!.uppercase().replace("STRONG:", "").split("\\W+".toRegex())
 
-    val strongsElts = rawElts
-      .filter { it.isNotEmpty() } // Not all char:w's have a Strong's entry.  In USX, for instance, they may simply mark a glossary entry.
-      .map {
-        var strong = it.trim()
-        val orig = strong
 
-        if (strong.substring(0, 1).uppercase() in "GH")
-        {
-          prefix = strong.substring(0, 1).uppercase() // I believe uppercase is ok, and possibly that it is required.
-          strong = strong.substring(1)
-        }
+    /**************************************************************************/
+    fun rejigStrongs (attr: String): String
+    {
+      var strong = attr.trim()
+      if (strong.matches(C_ExtendedStrongInfo))
+        return strong.uppercase()
+      else if (strong.matches(C_LemmaWithinStrongs))
+        return strong
 
-        val suffix = if (strong.last().isLetter()) strong.last().toString().uppercase() else "" // See if there's an alphabetic suffix.
-
-        strong = strong.substring(0, strong.length - suffix.length) // Get rid of any suffix.
-
-        if (strong.length >= 5 && strong[0] == '0') strong = strong.substring(1) // If the result is 5 or more characters and starts with '0', we have a leading zero we don't want.
-
-        if (strongIsValidish(prefix, strong))
-        {
-          strong = prefix + "0".repeat(4 - strong.length) + strong // If too short, prepend leading zeroes.
-          strong += suffix
-          strong = getCorrection(strong)
-          "strong:$strong"
-        }
-        else
-          "strong:$orig"
+      if (strong.substring(0, 1).uppercase() in "GH")
+      {
+        prefix = strong.substring(0, 1).uppercase() // I believe uppercase is ok, and possibly that it is required.
+        strong = strong.substring(1)
       }
 
-    if (strongsElts.isNotEmpty())
-      node[m_FileProtocol.attrName_strong()] = strongsElts.joinToString(",")
+      val suffix = if (strong.last().isLetter()) strong.last().toString().uppercase() else "" // See if there's an alphabetic suffix.
+
+      strong = strong.substring(0, strong.length - suffix.length) // Get rid of any suffix.
+
+      if (strong.length >= 5 && strong[0] == '0') strong = strong.substring(1) // If the result is 5 or more characters and starts with '0', we have a leading zero we don't want.
+
+      return if (strongIsValidish(prefix, strong))
+      {
+        strong = prefix + "0".repeat(4 - strong.length) + strong // If too short, prepend leading zeroes.
+        strong += suffix
+        strong = getCorrection(strong)
+        "strong:$strong"
+      }
+      else
+        "strong:$attr"
+    }
+
+
+
+    /**************************************************************************/
+    val rawElts = node[m_FileProtocol.attrName_strong()]!!.replace("(?i)STRONG:".toRegex(), "").split(C_MultiStrongSeparator)
+    val strongsElts = rawElts.map(::rejigStrongs)
+    node[m_FileProtocol.attrName_strong()] = strongsElts.joinToString(" ")
   }
 
 
@@ -218,4 +251,3 @@ class SE_StrongsHandler (dataCollection: X_DataCollection): SE(dataCollection)
     private val m_Corrections: MutableMap<String, String> = TreeMap(String.CASE_INSENSITIVE_ORDER)
   }
 }
-
