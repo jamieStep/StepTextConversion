@@ -1,16 +1,15 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.osisinputonly.Osis_Utils
-import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.FileLocations
-import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.miscellaneous.MiscellaneousUtils.processRegexes
-import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.support.ref.Ref
-import org.stepbible.textconverter.support.ref.RefBase
-import org.stepbible.textconverter.support.stepexception.StepException
-import org.stepbible.textconverter.utils.*
+import org.stepbible.textconverter.osisonly.Osis_Utils
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import java.io.BufferedWriter
 import java.io.File
 
@@ -25,14 +24,28 @@ import java.io.File
  * verse, the content occupies a single line, and comprises a collection of
  * OSIS tags.
  *
- * This present class converts an IMP file to OSIS form.
+ * This present class converts an IMP file to initial OSIS form.
+ *
+ * <span class='important'>CAUTION:</span>
+ * Crosswire suggest there are limitations in the *mod2imp* utility used to
+ * create .imp files, as a result of which they say they do not rely upon it.
+ * It is not clear whether the issues they describe would affect us or not.
+ *
+ *
+ *
+ *
+ *
+ * ## Preprocessing and filtering
+ * IMP processing does not create a Document representation of its data, and
+ * therefore does not support XSLT preprocessing.
+ *
+ * It *does* support filtering by book, so you can limit the number of books
+ * processed on a given run (particularly where you are debugging).
  *
  * @author ARA "Jamie" Jamieson
  */
 
-
-
-object Builder_InitialOsisRepresentationFromImp: Builder
+object Builder_InitialOsisRepresentationFromImp: Builder()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -53,7 +66,7 @@ object Builder_InitialOsisRepresentationFromImp: Builder
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                                Private                                 **/
+  /**                               Protected                                **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
@@ -76,27 +89,40 @@ object Builder_InitialOsisRepresentationFromImp: Builder
   /****************************************************************************/
   override fun doIt ()
   {
-    Dbg.reportProgress(banner())
+    Dbg.withReportProgressMain(banner(), ::doIt1)
+  }
 
-    val inFiles = StepFileUtils.getMatchingFilesFromFolder(FileLocations.getInputImpFolderPath(), ".*\\.${FileLocations.getFileExtensionForImp()}".toRegex()).map { it.toString() }
-    if (1 != inFiles.size) throw StepException("Expecting precisely one IMP file, but ${inFiles.size} files available.")
 
-    m_OsisFilePath = FileLocations.makeInputOsisFilePath()
-    StepFileUtils.deleteFileOrFolder(FileLocations.getInputOsisFolderPath())
-    StepFileUtils.createFolderStructure(FileLocations.getInputOsisFolderPath())
-    m_OsisFilePath = FileLocations.makeInputOsisFilePath()
-    m_OutputFile = File(m_OsisFilePath).bufferedWriter()
+  /****************************************************************************/
+  private fun doIt1 ()
+  {
+    /**************************************************************************/
+    val inFile = BuilderUtils.getInputFiles(FileLocations.getInputImpFolderPath(), FileLocations.getFileExtensionForImp(), 1)[0]
 
-    File(inFiles[0]).bufferedReader().lines().forEach { processLine(it, doOutput = false) } // Just determine which books we have.
+
+
+    /**************************************************************************/
+    val osisFilePath = BuilderUtils.createExternalOsisFolderStructure()
+    m_Writer = File(osisFilePath).bufferedWriter()
+
+
+
+    /**************************************************************************/
+    val lines = filterForBooksOfInterest(File(inFile).bufferedReader().readLines())
+    lines.forEach { processLine(it, doOutput = false) } // Just determine which books we have.
     fileHeader()
-    File(inFiles[0]).bufferedReader().lines().forEach { processLine(it, doOutput = true) } // This time do the actual output.
+    lines.forEach { processLine(it, doOutput = true) } // This time do the actual output.
     bookTrailer()
     fileTrailer()
+    m_Writer.close()
 
-    m_OutputFile.close()
 
-    Phase1TextOutput = File(m_OsisFilePath).readText()
-    //Dbg.outputText(Phase1TextOutput)
+
+    /**************************************************************************/
+    ExternalOsisDoc = Dom.getDocument(osisFilePath, retainComments = true)
+    tidyNodes()
+    BuilderUtils.processXslt(ExternalOsisDoc)
+    //Dbg.d(ExternalOsisDoc)
   }
 
 
@@ -112,12 +138,35 @@ object Builder_InitialOsisRepresentationFromImp: Builder
   /****************************************************************************/
 
   /****************************************************************************/
+  private fun filterForBooksOfInterest (lines: List<String>): List<String>
+  {
+    /**************************************************************************/
+    /* We just accept all lines unless we're limiting the processing of books
+       because we're debugging and have limited interests. */
+
+    if (!Dbg.runningOnPartialCollectionOfBooksOnly())
+      return lines
+
+
+
+    /**************************************************************************/
+    val res: MutableList<String> = mutableListOf()
+     lines.indices
+      .filter { lines[it].startsWith("\$\$\$") && "[" !in lines[it] }
+      .filter { !Dbg.wantToProcessBook(getBookNumberFromName(matchReferenceLine(lines[it]).groups["bookNameFull"]!!.value)) }
+      .forEach { res.add(lines[it]); res.add(lines[it + 1]) }
+
+    return res
+  }
+
+
+  /****************************************************************************/
   /* Useful for debug purposes -- you can breakpoint here to see what is being
      written out. */
 
   private fun appendText (text: String)
   {
-    m_OutputFile.write(text)
+    m_Writer.write(text)
   }
 
 
@@ -137,7 +186,7 @@ object Builder_InitialOsisRepresentationFromImp: Builder
   private fun processLine (theLine: String, doOutput: Boolean)
   {
     /**************************************************************************/
-    var line = theLine.trim()
+    val line = theLine.trim()
 
 
 
@@ -172,18 +221,15 @@ object Builder_InitialOsisRepresentationFromImp: Builder
        with subverses -- I have no documentation, and am therefore reliant
        upon examples; and I have yet to see an example of a subverse. */
 
-    line = line.substring(3)
-    val m = C_BookChapterVerseHeader.matchEntire(line) ?: throw StepException("Invalid IMP line: $line")
-    var bookNameFull = m.groups["bookNameFull"]!!.value
-    if (bookNameFull.matches("I+ .+".toRegex())) bookNameFull = bookNameFull.replaceFirst(" ", "")
-    if (bookNameFull.startsWith("IV ")) bookNameFull = bookNameFull.replaceFirst(" ", "")
-    m_BookNumbers.add(BibleBookNamesOsis.nameToNumber(bookNameFull))
+    val m = matchReferenceLine(line)
+    val bookNo = getBookNumberFromName(m.groups["bookNameFull"]!!.value)
+    m_BookNumbers.add(bookNo)
     val chapter = m.groups["chapter"]!!.value.toInt()
     val verse = m.groups["verse"]!!.value.toInt()
 
     if (0 == chapter)
     {
-      if (doOutput) bookHeader(bookNameFull)
+      if (doOutput) bookHeader(bookNo)
       return
     }
 
@@ -199,10 +245,10 @@ object Builder_InitialOsisRepresentationFromImp: Builder
 
 
    /****************************************************************************/
-   private fun bookHeader (bookNameFull: String)
+   private fun bookHeader (bookNo:Int)
    {
      bookTrailer()
-     m_ActiveBook = BibleBookNamesOsis.nameToNumber(bookNameFull)
+     m_ActiveBook = bookNo
      val abbreviatedName = Ref.rd(m_ActiveBook, 1, RefBase.C_DummyElement).toStringOsis("b")
      appendText("\n\n\n\n\n\n\n\n\n\n")
      appendText("<!-- ========================================================================================= -->\n")
@@ -248,6 +294,24 @@ object Builder_InitialOsisRepresentationFromImp: Builder
 
 
   /****************************************************************************/
+  private fun getBookNumberFromName (name: String): Int
+  {
+    var bookNameFull = name
+    if (bookNameFull.matches("I+ .+".toRegex())) bookNameFull = bookNameFull.replaceFirst(" ", "")
+    if (bookNameFull.startsWith("IV ")) bookNameFull = bookNameFull.replaceFirst(" ", "")
+    return BibleBookNamesOsis.nameToNumber(bookNameFull)
+  }
+
+
+  /****************************************************************************/
+  private fun matchReferenceLine (line: String): MatchResult
+  {
+    val m = C_BookChapterVerseHeader.matchEntire(line.substring(3)) ?: throw StepExceptionBase("Invalid IMP line: $line")
+    return m
+  }
+
+
+  /****************************************************************************/
   /* The individual lines are sometimes not ideal ...
 
      - div:bookGroup doesn't seem to be particular useful for our purposes,
@@ -256,12 +320,7 @@ object Builder_InitialOsisRepresentationFromImp: Builder
      - div:book positively gets in the way, because I want to generate my
        own version, so I ditch that too.
 
-     - Ditto <chapter>.
-
-     - And at least one text which had <note> markers contained no additional
-       information explaining whether they were explanation notes or whatever.
-       Since in that text they all _were_ explanation notes, I'm going to take
-       the easy way out, and assume they always are. */
+     - Ditto <chapter>.*/
 
   private val C_VerseContentRegexes = listOf("<div .+?type=.book.*?>\\s*".toRegex(), // This covers both book and bookGroup.
                                              "<chapter .+?>".toRegex())
@@ -269,17 +328,60 @@ object Builder_InitialOsisRepresentationFromImp: Builder
   private fun modifyVerseContent (theLine: String): String
   {
     var line = theLine
-    var n = 0
-
-    while ("<note>" in line)
-    {
-      val replacement =  "<note n='+' osisID='$m_VerseRef!fref_${++n}' osisRef='$m_VerseRef' type='explanation'>"
-      line = line.replaceFirst("<note>", replacement)
-    }
-
     C_VerseContentRegexes.forEach { line = line.replace(it, "") }
+    return BuilderUtils.processRegexes(line, ConfigData.getPreprocessingRegexes())
+  }
 
-    return processRegexes(ConfigData.getNonOsisRegexes(), line)
+
+  /****************************************************************************/
+  /* Some nodes appear to be incomplete in some files.  In particular, <note>
+     nodes often seem to lack certain essential attributes. */
+
+  private fun tidyNodes ()
+  {
+    tidyNotes()
+  }
+
+
+  /****************************************************************************/
+  /* In various IMP files I've come across <note> nodes which lack the 'n'
+     and / or 'osisId' and / or 'osisRef' attributes.  Some of them also lack a
+     'type', and here I assume that the type should be 'explanation'. */
+
+  private fun tidyNotes ()
+  {
+    var counter = 0
+    var verseRef = Ref.rd(0, 0, 0, 0)
+
+    val allNodes = ExternalOsisDoc.getAllNodesBelow()
+    allNodes.forEach {
+      val nodeName = Dom.getNodeName(it)
+      when (nodeName)
+      {
+        Osis_FileProtocol.tagName_note() ->
+        {
+          if ("n" !in it)
+            it["n"] = "+"
+
+          if ("osisID" !in it)
+            it["osisID"] = "$verseRef!fref_${++counter}"
+
+          if ("osisRef" !in it)
+            it["osisRef"] = "$verseRef"
+
+          if ("type" !in it) // If 'type' is lacking, assume 'explanation'.
+            it["type"] = "explanation"
+        }
+
+
+
+        Osis_FileProtocol.tagName_verse() ->
+        {
+          if (Osis_FileProtocol.attrName_verseSid() in it)
+            verseRef = Osis_FileProtocol.readRef(it[Osis_FileProtocol.attrName_verseSid()]!!)
+        }
+      }
+    }
   }
 
 
@@ -316,7 +418,6 @@ object Builder_InitialOsisRepresentationFromImp: Builder
   private var m_ActiveChapter = -1
   private var m_ActiveVerse = -1
   private val m_BookNumbers: MutableSet<Int> = mutableSetOf()
-  private lateinit var m_OsisFilePath: String
-  private lateinit var m_OutputFile: BufferedWriter
+  private lateinit var m_Writer: BufferedWriter
   private var m_VerseRef = ""
 }

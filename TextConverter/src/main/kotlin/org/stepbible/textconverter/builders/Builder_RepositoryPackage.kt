@@ -1,12 +1,12 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.FileLocations
-import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.support.miscellaneous.Zip
-import org.stepbible.textconverter.support.stepexception.StepException
+import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Zip
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import java.nio.file.Paths
 
 /******************************************************************************/
@@ -16,7 +16,7 @@ import java.nio.file.Paths
  * @author ARA "Jamie" Jamieson
  */
 
-object Builder_RepositoryPackage: Builder
+object Builder_RepositoryPackage: Builder()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -27,36 +27,27 @@ object Builder_RepositoryPackage: Builder
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun banner () = "Converting OSIS to Sword"
+  override fun banner () = "Creating repository package"
 
 
   /****************************************************************************/
   override fun commandLineOptions () = listOf(
     CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "Where a new release is being made because of changes _we_ have decided are needed, the reason for the update.  Must have either or both of this and supplierUpdateReason.", null, "Unknown", false),
-    CommandLineProcessor.CommandLineOption("supplierUpdateReason", 1, "Wherre a new release is being made because of changes the _supplier_ has made, the reason they gave for their changes.  Must have either or both of this and stepUpdateReason.", null, "Unknown", false)
+    CommandLineProcessor.CommandLineOption("supplierUpdateReason", 1, "Where a new release is being made because of changes the _supplier_ has made, the reason they gave for their changes.  Must have either or both of this and stepUpdateReason.", null, "Unknown", false)
   )
 
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                Private                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
 
   /****************************************************************************/
   override fun doIt ()
   {
-    /**************************************************************************/
     Builder_Module.process()
-    Dbg.reportProgress(banner())
+    Dbg.withReportProgressMain(banner(), ::doIt1)
+  }
 
 
-
+  /****************************************************************************/
+  private fun doIt1 ()
+  {
     /**************************************************************************/
     StepFileUtils.deleteTemporaryFiles(FileLocations.getRootFolderPath())
 
@@ -68,7 +59,7 @@ object Builder_RepositoryPackage: Builder
     val inputUsx  = if (FileLocations.getInputUsxFilesExist())  FileLocations.getInputUsxFolderPath()  else null
     val inputVl   = if (FileLocations.getInputVlFilesExist())   FileLocations.getInputVlFolderPath()   else null
 
-    if (null == inputOsis) throw StepException("No OSIS available to store in repository package.")
+    if (null == inputOsis) throw StepExceptionBase("No OSIS available to store in repository package.")
 
 
 
@@ -90,6 +81,17 @@ object Builder_RepositoryPackage: Builder
     Zip.createZipFile(zipPath, 9, null, inputs)
   }
 
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Private                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
 
   /****************************************************************************/
   /* A zip file to contain the shared config data.  This is going to be a bit

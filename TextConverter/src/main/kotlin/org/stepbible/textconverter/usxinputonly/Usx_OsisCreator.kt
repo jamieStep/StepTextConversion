@@ -1,23 +1,20 @@
 /******************************************************************************/
 package org.stepbible.textconverter.usxinputonly
 
-import org.stepbible.textconverter.osisinputonly.Osis_Utils
-import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
-import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.miscellaneous.*
-import org.stepbible.textconverter.support.ref.*
-import org.stepbible.textconverter.utils.*
+import org.stepbible.textconverter.builders.BuilderUtils
+import org.stepbible.textconverter.osisonly.Osis_Utils
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
+import org.stepbible.textconverter.applicationspecificutils.*
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.BufferedWriter
 import java.io.File
-import java.net.URL
 import java.util.regex.Pattern
-import javax.xml.XMLConstants
-import javax.xml.transform.stream.StreamSource
-import javax.xml.validation.SchemaFactory
 
 
 /******************************************************************************/
@@ -48,39 +45,42 @@ object Usx_OsisCreator
 
   fun process (usxDataCollection: X_DataCollection)
   {
-    /**************************************************************************/
-    Dbg.reportProgress("")
-    Dbg.reportProgress("Converting to OSIS")
-    Dbg.setReportProgressPrefix("Converting to OSIS")
+    Dbg.withReportProgressMain("Converting to OSIS") {
+      process1(usxDataCollection)
+    }
+  }
+
+
+  /****************************************************************************/
+  private fun process1 (usxDataCollection: X_DataCollection)
+  {
+    val outputFilePath = BuilderUtils.createExternalOsisFolderStructure()
+    m_Writer = File(outputFilePath).bufferedWriter()
 
 
 
     /**************************************************************************/
-    fun writeFn (writer: BufferedWriter)
+    m_Writer.write(Osis_Utils.fileHeader(usxDataCollection.getBookNumbers()))
+
+    if (1 == usxDataCollection.getNumberOfDocuments()) // All books in a single file.
     {
-      m_Out = writer
-      m_Out.write(Osis_Utils.fileHeader(usxDataCollection.getBookNumbers()))
-
-      if (1 == usxDataCollection.getNumberOfDocuments()) // All books in a single file.
-      {
-        m_Document = usxDataCollection.getRootNodes().firstOrNull()!!.ownerDocument
-        usxDataCollection.getRootNodes().forEach { processRootNode(it) }
-      }
-      else // The normal case -- a file per book.
-        usxDataCollection.getRootNodes().forEach {
-          m_Document = it.ownerDocument
-          processRootNode(it)
-      }
-
-      m_Out.write(Osis_Utils.fileTrailer())
+      m_Document = usxDataCollection.getRootNodes().firstOrNull()!!.ownerDocument
+      usxDataCollection.getRootNodes().forEach { processRootNode(it) }
+    }
+    else // The normal case -- a file per book.
+      usxDataCollection.getRootNodes().forEach {
+        m_Document = it.ownerDocument
+        processRootNode(it)
     }
 
-    Phase1TextOutput = Utils.outputToFileOrString(null, ::writeFn)!!
+    m_Writer.write(Osis_Utils.fileTrailer())
+    m_Writer.close()
 
 
 
     /**************************************************************************/
-    Dbg.setReportProgressPrefix("")
+    ExternalOsisDoc = Dom.getDocument(outputFilePath, retainComments = true)
+    NodeMarker.deleteAllMarkers(ExternalOsisDoc)  // Make sure we didn't leave any temporary markers lying around.
   }
 
 
@@ -99,10 +99,9 @@ object Usx_OsisCreator
   private fun processRootNode (rootNode: Node)
   {
     val bookName = rootNode["code"]!!
-    Logger.setPrefix("Converting to OSIS $bookName")
-    Dbg.reportProgress("Processing $bookName.")
+    //Logger.setPrefix("Converting to OSIS $bookName")
+    Dbg.reportProgress("- Processing $bookName.")
     processNode(m_Document.documentElement)
-    Logger.setPrefix(null)
   }
 
 
@@ -270,7 +269,7 @@ object Usx_OsisCreator
       s = s.replace("‘\\s+".toRegex(), "‘").replace("\\s+’".toRegex(), "’")
     }
 
-    m_Out.write(s)
+    m_Writer.write(s)
     m_JustOutputNewLine = s.endsWith("\n")
   }
 
@@ -452,23 +451,23 @@ object Usx_OsisCreator
      include thm.
    */
 
-  private fun validateXmlAgainstSchema (xmlPath: String): String?
-  {
-      return try
-      {
-        Dbg.reportProgress("\nReading XSD")
-        val factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
-        val schema = factory.newSchema(URL(ConfigData["stepExternalDataPath_OsisXsd"]!!)) // Version with Crosswire tweaks.
-        val validator = schema.newValidator()
-        Dbg.reportProgress("  Validating OSIS")
-        validator.validate(StreamSource(File(xmlPath)))
-        null
-      }
-      catch (e: Exception)
-      {
-        e.toString()
-      }
-    }
+//  private fun validateXmlAgainstSchema (xmlPath: String): String?
+//  {
+//      return try
+//      {
+//        Dbg.reportProgress("\nReading XSD")
+//        val factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
+//        val schema = factory.newSchema(URL(ConfigData["stepExternalDataPath_OsisXsd"]!!)) // Version with Crosswire tweaks.
+//        val validator = schema.newValidator()
+//        Dbg.reportProgress("  Validating OSIS")
+//        validator.validate(StreamSource(File(xmlPath)))
+//        null
+//      }
+//      catch (e: Exception)
+//      {
+//        e.toString()
+//      }
+//    }
 
 
 
@@ -507,7 +506,7 @@ object Usx_OsisCreator
   /****************************************************************************/
   /* Fairly obvious, I guess. */
 
-  private lateinit var m_Out: BufferedWriter
+  private lateinit var m_Writer: BufferedWriter
 
 
   /****************************************************************************/

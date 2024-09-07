@@ -1,21 +1,29 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
-import org.stepbible.textconverter.builders.Builder_Root
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.stepexception.StepBreakOutOfProcessing
-import org.stepbible.textconverter.support.stepexception.StepException
-import org.stepbible.textconverter.utils.ThrowAwayCode
+import org.stepbible.textconverter.builders.Builder_Master
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import kotlin.system.exitProcess
 
 
 /******************************************************************************/
-public const val C_JarFileName = "TextConverter"
-public const val C_ReleaseVersion = "1.0"
-public const val C_TestSubversion = ""
+/**
+* Main program.
+*
+* @author ARA "Jamie" Jamieson
+*/
 
+
+/******************************************************************************/
+/******************************************************************************/
+/**                                                                          **/
+/**                                  Public                                  **/
+/**                                                                          **/
+/******************************************************************************/
+/******************************************************************************/
 
 /******************************************************************************/
 /**
@@ -27,15 +35,15 @@ public const val C_TestSubversion = ""
 fun main (args: Array<String>)
 {
   /****************************************************************************/
-  //Dbg.setBooksToBeProcessed("3Jn")
-
+  //Dbg.setBooksToBeProcessed("Gen")
+  //ThrowAwayCode.testGetVersion()
 
 
   /****************************************************************************/
-  var returnCode = 0
+  var returnCode = 1
   try
   {
-    Builder_Root.process(args)
+    Builder_Master.process(args)
     //ProcessingController.process(args)
     Logger.summariseResults()
 
@@ -49,38 +57,26 @@ fun main (args: Array<String>)
 
     Dbg.endOfRun()
     println("\nFinished\n")
+
+    returnCode = 0
   }
 
 
 
   /****************************************************************************/
-  catch (_: StepBreakOutOfProcessing)
+  catch (e: StepExceptionBase)
   {
-    Dbg.endOfRun()
+    e.terminate()
   }
-
-
-
-  /****************************************************************************/
-  catch (e: StepException)
-  {
-    Dbg.endOfRun()
-    if (null != e.message) println(e.message)
-    if (!e.getSuppressStackTrace()) e.printStackTrace()
-    System.err.println("Fatal error: " + Builder_Root.getProcessorName() + ": " + e.toString())
-    System.err.flush()
-    returnCode = 1
-  }
-
 
 
   /****************************************************************************/
   catch (e: Exception)
   {
-    Dbg.endOfRun()
+   Dbg.endOfRun()
     if (null != e.message) println(e.message)
     e.printStackTrace()
-    System.err.println("Fatal error: " + Builder_Root.getProcessorName() + ": " + e.toString())
+    System.err.println("Fatal error: " + Dbg.getActiveProcessingId() + ": " + e.toString())
     System.err.flush()
     returnCode = 1
   }
@@ -97,6 +93,17 @@ fun main (args: Array<String>)
   }
 }
 
+
+
+
+
+/******************************************************************************/
+/******************************************************************************/
+/**                                                                          **/
+/**                                 Private                                  **/
+/**                                                                          **/
+/******************************************************************************/
+/******************************************************************************/
 
 /****************************************************************************/
 /**

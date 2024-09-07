@@ -1,10 +1,9 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.ConfigDataSupport
-import org.stepbible.textconverter.support.stepexception.StepBreakOutOfProcessing
-import org.stepbible.textconverter.utils.Digest
+import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.applicationspecificutils.Digest
+import kotlin.system.exitProcess
 
 
 /******************************************************************************/
@@ -15,7 +14,7 @@ import org.stepbible.textconverter.utils.Digest
   * @author ARA "Jamie" Jamieson
   */
 
-object SpecialBuilder_CompareInputsWithPrevious: SpecialBuilder
+object SpecialBuilder_CompareInputsWithPrevious: SpecialBuilder()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -32,17 +31,6 @@ object SpecialBuilder_CompareInputsWithPrevious: SpecialBuilder
   )
 
 
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                Private                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
   /****************************************************************************/
   override fun doIt ()
   {
@@ -50,6 +38,6 @@ object SpecialBuilder_CompareInputsWithPrevious: SpecialBuilder
       return
 
     Digest.checkFileDigests()
-    throw StepBreakOutOfProcessing("")
+    exitProcess(0)
   }
 }

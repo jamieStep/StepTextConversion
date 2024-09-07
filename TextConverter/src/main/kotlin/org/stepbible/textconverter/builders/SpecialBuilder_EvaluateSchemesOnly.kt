@@ -1,24 +1,26 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.support.bibledetails.VersificationSchemesSupportedByOsis2mod
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.FileLocations
-import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.support.stepexception.StepBreakOutOfProcessing
-import org.stepbible.textconverter.utils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.VersificationSchemesSupportedByOsis2mod
+import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
+import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
 import java.io.File
+import kotlin.system.exitProcess
 
 
 /******************************************************************************/
 /**
-  * Checks to see if all we are doing is to evaluate schemes.
+  * Checks to see if all we are doing is to evaluate schemes, and if so,
+  * invokes the appropriate processing.
   *
   * @author ARA "Jamie" Jamieson
   */
 
-object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder
+object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -35,17 +37,6 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder
   )
 
 
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                Private                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
   /****************************************************************************/
   override fun doIt ()
   {
@@ -57,7 +48,6 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder
 
     /**************************************************************************/
     StepFileUtils.deleteFile(FileLocations.getVersificationFilePath())
-    Dbg.reportProgress(banner())
     Dbg.resetBooksToBeProcessed() // Force all books to be included.
     Builder_InitialOsisRepresentationOfInputs.process()
     evaluate()
@@ -81,7 +71,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder
   private fun evaluate ()
   {
     val dataCollection = X_DataCollection(Osis_FileProtocol)
-    dataCollection.loadFromText(Phase1TextOutput)
+    dataCollection.loadFromDocs(listOf(ExternalOsisDoc))
     val bibleStructureToCompareWith = dataCollection.getBibleStructure()
 
     m_Evaluations.clear() // Just in case we've already evaluated a scheme, perhaps to see if the text needs reversifying.  Avoids duplicating the output.
@@ -96,7 +86,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder
 
     outputDetails(details, additionalInformation)
 
-    throw StepBreakOutOfProcessing("")
+    exitProcess(0)
   }
 
 

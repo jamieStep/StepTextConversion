@@ -1,51 +1,26 @@
 package org.stepbible.textconverter.usxinputonly
 
-import org.stepbible.textconverter.subelements.SE_EnhancedVerseEndInserter
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.miscellaneous.*
-import org.stepbible.textconverter.utils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
+import org.stepbible.textconverter.applicationspecificutils.*
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
 
 /******************************************************************************/
 /**
-* In a previous implementation, I did a lot of work here.  This reflected the
-* fact that so far as I knew, all texts were likely to be in USX form (or in
-* VL form, which I translated to USX).  Latterly, though, it has become
-* apparent that we may need to work with OSIS as input -- either because that's
-* all we have available, or because it is more convenient to apply tagging
-* changes to OSIS than to USX etc.
+* Applies various forms of tidying to USX.
 *
-* In the previous implementation, it seemed to make sense to apply things like
-* reversification to USX.  Now that we have to cater for OSIS as an *input*
-* (where previously to all intents and purposes it was an *output*), it is
-* necessary to move much of this processing further down the processing chain,
-* to a point where OSIS is available, either because it is what was supplied to
-* us, or because I have generated it from USX etc.
-*
-* This means that the processing here, although still quite extensive, is much
-* less extensive than was the case.  In the main, I concern myself here with
-* getting the USX into canonical form (ironing out the differences between
-* USX 2 and USX 3, for instance), and addressing certain things which we know
-* people often get wrong in USX (or which, at least, they do in ways not to
-* our liking).  What I *don't* do is any of the significant validation,
-* restructuring, etc.
+* In this latest implementation of the converter, we apply as little processing
+* as possible to the USX: the aim is to produce an initial version of OSIS which
+* is as close as we can make it to the USX.  Any further tidying is then applied
+* to the OSIS (which is a better place to handle such processing, because all
+* forms of input go via OSIS).
 *
 * Having said this, there may be a few aspects of the processing which are
-* duplicated here or in the things which the present class relies upon.  In
-* particular, I validate cross-references here when in fact I'm going to have
-* to validate them in OSIS too; and I do this simply so as to avoid having to
-* make too many changes to existing code.
-*
-* At the end of processing, two configuration parameters have been set up with
-* information which will be useful later on:
-*
-* - stepOriginData will be VL, USX or OSIS.  This represents the
-*   raw data upon which the run was based.  In other words, if InputVl exists,
-*   it will be 'VL'; if InputUsx exists it will be USX, and if neither exists,
-*   it will be OSIS.
+* duplicated, in that they are carried out both here and in the later OSIS
+* processing.
 *
 * @author ARA "Jamie" Jamieson
 */
@@ -65,7 +40,10 @@ object Usx_Tidier
   * Applies general processing to a data collection.  Note that despite
   * disclaimers elsewhere, this does actually currently assume that each
   * book comes in a separate document.
-*/
+  *
+  * @param dataCollection: Data to be processed.
+  */
+
   fun process (dataCollection: X_DataCollection) = dataCollection.getDocuments().forEach(::doIt)
 
 
@@ -94,7 +72,7 @@ object Usx_Tidier
   {
     /**************************************************************************/
     m_BookName = Dom.findNodeByName(doc, "book")!!["code"]!!
-    Dbg.reportProgress("Processing ${Utils.prettifyBookAbbreviation(m_BookName)}.", 1)
+    Dbg.reportProgress("- Tidying ${Utils.prettifyBookAbbreviation(m_BookName)}.")
 
 
 
@@ -178,21 +156,6 @@ object Usx_Tidier
   {
     Dom.findNodesByAttributeValue(doc, "para", "style", "toc\\d").forEach { Dom.deleteNode(it) }
     Dom.findNodesByName(doc, "figure").forEach { Dom.deleteNode(it) }
-  }
-
-
-  /****************************************************************************/
-  /* Strictly we could position verse ends later, which on some runs would make
-     the processing faster.  However, it helps make things more uniform if I
-     insert verse ends here. */
-
-  private fun positionVerseEnds (doc: Document)
-  {
-    if (ConfigData.getAsBoolean("stepEvaluateSchemesOnly", "no"))
-      return
-
-    val processor = SE_EnhancedVerseEndInserter(UsxDataCollection)
-    doc.findNodesByName("book").forEach(processor::processRootNode)
   }
 
 

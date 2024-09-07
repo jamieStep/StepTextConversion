@@ -1,24 +1,21 @@
 package org.stepbible.textconverter.usxinputonly
 
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.miscellaneous.Dom
-import org.stepbible.textconverter.support.miscellaneous.get
-import org.stepbible.textconverter.support.miscellaneous.set
-import org.stepbible.textconverter.support.ref.Ref
-import org.stepbible.textconverter.support.ref.RefCollection
-import org.stepbible.textconverter.support.ref.RefFormatHandlerReaderVernacular
-import org.stepbible.textconverter.support.ref.RefKey
-import org.stepbible.textconverter.utils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.set
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefFormatHandlerReaderVernacular
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
+import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
 import org.w3c.dom.Node
 
 /****************************************************************************/
 /**
- * In theory, certain flavours of list need to be encapsulated in OSIS with
- * bracketing markers.  In practice, we don't do this at present, because
- * osis2mod doesn't seem to require it, and having the tags there introduces
- * excessive vertical whitespace into the rendering.  The downside is that we
- * generate non-compliant OSIS, and therefore can't make our modules available
- * to Crosswire.
+ * Validates the content of USX cross-reference tags.
+ *
+ * <span class='important'>At the time of writing, this class does nothing.</span>
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -35,10 +32,6 @@ object Usx_CrossReferenceChecker: CrossReferenceChecker
   /****************************************************************************/
 
   /****************************************************************************/
-  fun doNothing (rootNode: Node? = null) { }
-
-
-  /****************************************************************************/
   override fun process (dataCollection: X_DataCollection, xRefNodes: List<Node>)
   {
     m_BibleStructure = dataCollection.getBibleStructure()
@@ -47,6 +40,12 @@ object Usx_CrossReferenceChecker: CrossReferenceChecker
 
 
   /****************************************************************************/
+  /**
+  * Processes a list of cross-reference nodes.
+  *
+  * @param xRefNodes List of nodes to be processed.
+  */
+
   fun process (xRefNodes: List<Node>)
   {
     TODO("The code below is copied from OSIS, and is therefore wrong.  Need to go back to an earlier version to find out what this should look like.")

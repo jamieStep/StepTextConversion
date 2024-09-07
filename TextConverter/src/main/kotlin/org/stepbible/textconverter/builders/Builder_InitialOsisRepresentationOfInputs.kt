@@ -1,21 +1,26 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.FileLocations
-import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.support.stepexception.StepException
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 
 
 /******************************************************************************/
 /**
- * Builds a repository package.
+ * Arranges to turn whatever input is available to us into an initial OSIS
+ * textual representation.
+ *
+ * We can accept a number of alternative forms of input.  This object
+ * determines what is available, along with any user-defined overrides,
+ * and invokes the appropriate builder.
  *
  * @author ARA "Jamie" Jamieson
  */
 
-object Builder_InitialOsisRepresentationOfInputs: Builder
+object Builder_InitialOsisRepresentationOfInputs: Builder()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -26,8 +31,26 @@ object Builder_InitialOsisRepresentationOfInputs: Builder
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun banner () = ""
+  override fun banner () = "@Selecting type of input"
   override fun commandLineOptions () = null
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                              Protected                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  override fun doIt ()
+  {
+    Dbg.withReportProgressMain(banner()) {
+      StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
+      determineInput().second.process()
+    }
+  }
 
 
 
@@ -40,18 +63,8 @@ object Builder_InitialOsisRepresentationOfInputs: Builder
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
-
   /****************************************************************************/
-  override fun doIt ()
-  {
-    Dbg.reportProgress(banner())
-    StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
-    determineInput().second.process()
-  }
-
-
-  /****************************************************************************/
-  private fun determineInput (): Pair<String, Builder>
+  private fun determineInput (): Pair<String, BuilderRoot>
   {
     /**************************************************************************/
     val haveImp  = FileLocations.getInputImpFilesExist()
@@ -62,7 +75,7 @@ object Builder_InitialOsisRepresentationOfInputs: Builder
     val res =
       if (ConfigData.getAsBoolean("stepStartProcessFromOsis", "no"))
       {
-        if (!haveOsis) throw StepException("Requested to start from OSIS, but no OSIS exists.")
+        if (!haveOsis) throw StepExceptionBase("Requested to start from OSIS, but no OSIS exists.")
         Pair("osis", Builder_InitialOsisRepresentationFromOsis)
       }
       else if (haveUsx)

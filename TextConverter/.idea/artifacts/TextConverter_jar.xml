@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="TextConverter:jar">
+  <artifact type="jar" build-on-make="true" name="TextConverter:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/TextConverter_jar</output-path>
     <root id="archive" name="TextConverter.jar">
       <element id="dir-copy" path="$PROJECT_DIR$/src/main/resources/META-INF" />
@@ -30,6 +30,9 @@
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-junit5/1.9.0/f8d6b4256f6e7bd4d7cc0179943eb1534d6e9706/kotlin-test-junit5-1.9.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.client5/httpclient5/5.1.3/13c984b7b881afcff3a7f0bb95878724a48a4b66/httpclient5-5.1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.reflections/reflections/0.10.2/b638d7ca0e0fe0146b60a0e7ba232ad852a73b31/reflections-0.10.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.30.2-GA/284580b5e42dfa1b8267058566435d9e93fae7f7/javassist-3.30.2-GA.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.9.22/761ab33cf85f03a3a24595e1b92639d82e7a9564/kotlin-reflect-1.9.22.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

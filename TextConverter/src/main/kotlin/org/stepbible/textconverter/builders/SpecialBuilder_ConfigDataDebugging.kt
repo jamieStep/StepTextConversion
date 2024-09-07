@@ -1,8 +1,8 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.ConfigDataSupport
+import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigDataSupport
 
 
 /******************************************************************************/
@@ -13,7 +13,7 @@ import org.stepbible.textconverter.support.configdata.ConfigDataSupport
   * @author ARA "Jamie" Jamieson
   */
 
-object SpecialBuilder_ConfigDataDebugging: SpecialBuilder
+object SpecialBuilder_ConfigDataDebugging: SpecialBuilder()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -29,17 +29,6 @@ object SpecialBuilder_ConfigDataDebugging: SpecialBuilder
     CommandLineProcessor.CommandLineOption("dbgConfigData", 1, "Controls config data debugging.   Use generateStepConfig[All] / reportSet / reportMissingDebugInfo.",null, null, false),
   )
 
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                Private                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
 
   /****************************************************************************/
   override fun doIt () = ConfigDataSupport.initialise(ConfigData["stepDbgConfigData"])

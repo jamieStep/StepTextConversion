@@ -1,8 +1,8 @@
 package org.stepbible.textconverter.usxinputonly
 
-import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.miscellaneous.*
-import org.stepbible.textconverter.utils.Usx_FileProtocol
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
+import org.stepbible.textconverter.applicationspecificutils.Usx_FileProtocol
 import org.w3c.dom.Node
 import org.w3c.dom.Document
 
@@ -37,7 +37,7 @@ import org.w3c.dom.Document
 * remove any which already exist to improve uniformity -- not all texts
 * have them).  I could, of course, sort this out here, but since we are
 * likely to have to do this in OSIS anyway, to cater for situations where
-* we don't have USX in the first place), I simply provide code to deal
+* we don't have USX in the first place, I simply provide code to deal
 * with that separately.
 *
 * @author ARA "Jamie" Jamieson
@@ -54,10 +54,22 @@ object Usx_BookAndChapterConverter
   /****************************************************************************/
 
   /****************************************************************************/
+  /**
+  * Processes an entire document.
+  *
+  * @param doc: Document to be processed.
+  */
+
   fun process (doc: Document) = Dom.findNodesByName(doc, "book").forEach(::process)
 
 
   /****************************************************************************/
+  /**
+  * Processes a single book.
+  *
+  * @param bookRoot Root node for book.
+  */
+
   fun process (bookRoot: Node)
   {
     if (!turnBookTagsIntoEnclosingTags(bookRoot.ownerDocument)) return
@@ -75,7 +87,7 @@ object Usx_BookAndChapterConverter
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                               Public                                   **/
+  /**                              Private                                   **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
@@ -120,7 +132,7 @@ object Usx_BookAndChapterConverter
 
 
   /****************************************************************************/
-  fun getChaptersWhichAreNotChildrenOfBook (bookRoot: Node) = Dom.findNodesByName(bookRoot.ownerDocument, "chapter").filter { bookRoot != it.parentNode }
+  private fun getChaptersWhichAreNotChildrenOfBook (bookRoot: Node) = Dom.findNodesByName(bookRoot.ownerDocument, "chapter").filter { bookRoot != it.parentNode }
 
 
   /****************************************************************************/

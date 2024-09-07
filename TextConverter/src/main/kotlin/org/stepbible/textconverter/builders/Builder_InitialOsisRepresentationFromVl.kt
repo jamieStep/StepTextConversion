@@ -1,16 +1,14 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.osisinputonly.Osis_Utils
-import org.stepbible.textconverter.support.bibledetails.BibleBookNamesOsis
-import org.stepbible.textconverter.support.bibledetails.BibleBookNamesUsx
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.FileLocations
-import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.support.stepexception.StepException
-import org.stepbible.textconverter.utils.*
+import org.stepbible.textconverter.osisonly.Osis_Utils
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
+import org.stepbible.textconverter.applicationspecificutils.*
 import java.io.BufferedWriter
 import java.io.File
 
@@ -27,11 +25,11 @@ import java.io.File
  *
  * The processing relies upon the following configuration parameters:
  *
- * - stepVlCommentMarker: Defines the comment marker.  Blank lines and lines
- *   starting with this marker are ignored.  May be left undefined if there
- *   are no comment lines.
+ * - stepVlCommentMarker: Defines the comment marker used in the VL (if any).
+ *   Blank lines and lines starting with this marker are ignored.  May be left
+ *   undefined if there are no comment lines.
  *
- * - stepVlLineFormat -- eg ?<bookAbbrev>.*?)\.(?<chapter>\d+)\.(?<verse>\d+)\t(?<text>.*)
+ * - stepVlLineFormat -- eg (?<bookAbbrev>.*?)\.(?<chapter>\d+)\.(?<verse>\d+)\t(?<text>.*)
  *   A regular expression which makes it possible to extract the various parts
  *   of each line.  You must define the named fields listed above.
  *
@@ -41,24 +39,36 @@ import java.io.File
  *   names to the corresponding USX abbreviation.  You need one entry for each
  *   book which appears in the VL data (or which may be created as a result of
  *   reversification).  This may be omitted if the names which appear in the
- *   VL are in fact standard USX abbreviations.
+ *   VL are in fact standard USX abbreviations.)
  *
  *
- * IMPORTANT: VerseLine is not a standard.  Each instance of VerseLine which I've
- * seen is different from every other, in terms both of syntax (eg how the
- * verse references are represented) and in terms of what additional features it
- * supports (footnotes, Strong's, etc).  The processing here supports the few
- * examples I've seen, but there's no guarantee it will cope with the next one
- * which comes along.  You therefore need to be reconciled to the possible need to
- * do additional coding work each time.  At the same time, we don't really want the
- * converter to grow and grow merely to accommodate new texts, so you may possibly
- * need to consider some way of offloading this additional processing to something
- * outside the converter -- a pre-processor of some kind.
+ * <span class='important'>IMPORTANT</span>: VerseLine is not a standard.  Each
+ * instance of VerseLine which I've seen is different from every other, in terms
+ * both of syntax (eg how the verse references are represented) and in terms of
+ * what additional features it supports (footnotes, Strong's, etc).  The
+ * processing here supports the few examples I've seen, but there's no guarantee
+ * it will cope with the next one which comes along.  You therefore need to be
+ * reconciled to the possible need to do additional coding work each time.  At
+ * the same time, we don't really want the converter to grow and grow merely to
+ * accommodate new texts, so you may possibly need to consider some way of
+ * offloading this additional processing to something outside the converter --
+ * a pre-processor of some kind.
+ *
+ *
+ *
+ *
+ *
+ * ## Preprocessing and filtering
+ * VL processing does not create a Document representation of its data, and
+ * therefore does not support XSLT preprocessing.
+ *
+ * It *does* support filtering by book, so you can limit the number of books
+ * processed on a given run (particularly where you are debugging).
  *
  * @author ARA "Jamie" Jamieson
  */
 
-object Builder_InitialOsisRepresentationFromVl: Builder
+object Builder_InitialOsisRepresentationFromVl: Builder()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -79,7 +89,7 @@ object Builder_InitialOsisRepresentationFromVl: Builder
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                                Private                                 **/
+  /**                              Protected                                 **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
@@ -87,14 +97,21 @@ object Builder_InitialOsisRepresentationFromVl: Builder
   /****************************************************************************/
   override fun doIt ()
   {
+    Dbg.withReportProgressMain(Builder_InitialOsisRepresentationFromUsx.banner(), ::doIt1)
+  }
+
+  
+  /****************************************************************************/
+  private fun doIt1 ()
+  {
     /**************************************************************************/
-    Dbg.reportProgress(banner())
+    val inFile = BuilderUtils.getInputFiles(FileLocations.getInputVlFolderPath(),FileLocations.getFileExtensionForVl(), 1)[0]
 
 
 
     /**************************************************************************/
-    val inFilePaths = StepFileUtils.getMatchingFilesFromFolder(FileLocations.getInputVlFolderPath(), ".*\\.${FileLocations.getFileExtensionForVl()}".toRegex()).map { it.toString() }
-    if (inFilePaths.isEmpty()) throw StepException("Expecting VL files, but none available.")
+    val osisFilePath = BuilderUtils.createExternalOsisFolderStructure()
+    m_Writer = File(osisFilePath).bufferedWriter()
 
 
 
@@ -112,41 +129,45 @@ object Builder_InitialOsisRepresentationFromVl: Builder
     fun gatherContent (filePath: String)
     {
       File(filePath).useLines { lines ->
-        allParsedLines.addAll(lines.map { it.trim() }.filter { it.isNotEmpty() && !it.startsWith(commentMarker) }.map { ParsedLine(linePattern.matchEntire(it)!!, it) })
-        }
+        allParsedLines.addAll(
+          lines
+            .map { Builder_Master.processRegexes(it.trim(), ConfigData.getPreprocessingRegexes()) } // Apply regex to each line.
+            .filter { it.isNotEmpty() && !it.startsWith(commentMarker) } // Ignore blank lines and comments.
+            .map { ParsedLine(linePattern.matchEntire(it)!!, it) } // Convert to ParsedLine structure.
+            .filter { Dbg.wantToProcessBook(it.m_UbsBookNo) } // Drop data for books we don't want to bother processing on this run.
+        )
+      }
     }
 
-    inFilePaths.forEach { gatherContent(it) }
+    gatherContent(inFile)
     val groupedLines = allParsedLines.groupBy { it.m_UbsBookNo }
 
 
 
     /**************************************************************************/
-    fun writeFn (writer: BufferedWriter)
-    {
-      m_Writer = writer
-      writeln(Osis_Utils.fileHeader(groupedLines.keys.map { it.toInt() }))
-      groupedLines.keys.forEach { processBook(groupedLines[it]!!) }
-      writeln(Osis_Utils.fileTrailer())
-    }
-
-    val text = Utils.outputToFileOrString(null, ::writeFn)!!
+    ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(groupedLines.keys.toList()) // The argument gives us the list of book numbers.
+    writeln(Osis_Utils.fileHeader(groupedLines.keys.map { it }))
+    groupedLines.keys.forEach { processBook(groupedLines[it]!!) }
+    writeln(Osis_Utils.fileTrailer())
+    m_Writer.close()
 
 
 
     /**************************************************************************/
-    /* Load the data from the text string, and then modify the bible-portion
-       information which appears in the header -- I need to have the bulk of
-       the data loaded before I can to work out what this should be. */
-
-//    val doc = Dom.getDocumentFromText(text!!, retainComments = true)
-//    val titleNode = doc.findNodeByName("title")!!
-//    val textContent = titleNode.textContent.replace("%%%biblePortion%%%", ConfigData.makeStepDescription_getBiblePortion()).replace("\\s+".toRegex(), " ")
-//    titleNode.textContent = textContent
-
-    Phase1TextOutput = text
+    ExternalOsisDoc = Dom.getDocument(osisFilePath, retainComments = true)
+    BuilderUtils.processXslt(ExternalOsisDoc)
   }
 
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                               Private                                  **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
 
    /****************************************************************************/
    private fun processBook (parsedLines: List<ParsedLine>)

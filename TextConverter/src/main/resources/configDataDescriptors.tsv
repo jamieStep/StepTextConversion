@@ -29,6 +29,7 @@ stepDataPath	Holds a relative data path pointing to data within the module zip f
 stepEncrypted	Set to Yes on copyright texts.	Calculated	Calculated			Calculated	Calculated
 stepExtendedLanguageCode	Language code plus script code and / or country code where appropriate.  (To date, this has never done anything with script- or country- codes.)	Calculated	Calculated			Calculated	Calculated
 stepInputFileDigests	Used internally to hold digests of the input files.	Calculated	Calculated			Calculated	Calculated
+stepJarVersion	Version number for converter JAR.	Calculated	Calculated			Calculated	Calculated
 stepLanguageCode2Char	2-character language code.	Calculated	Calculated			Calculated	Calculated	Determined from name of root folder.
 stepLanguageCode3Char	3-character language code.	Calculated	Calculated			Calculated	Calculated	Determined from name of root folder.
 stepLanguageNameInEnglish	Language name in English.	Calculated	Calculated			Calculated	Calculated	Determined from language code in name of root folder.
@@ -101,13 +102,13 @@ stepTextDirection	LTR, RTL or BiDi (currently we've never used BiDi).  May be sp
 
 
 # Preprocessing.
-stepNonOsisRegex	May occur multiple times.  Lines should be of the form 'stepOsisRegex=regex=>replacement'.  Each statement defines a modification to be applied to the input data before processing.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
-stepNonOsisXsltStyleSheet	An XSLT stylesheet used to pre-process theinput data where where we are starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
-stepOsisRegex	May occur multiple times.  Lines should be of the form 'stepOsisRegex=regex=>replacement'.  Each statement defines a modification to be applied to the OSIS before processing.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
-stepOsisXsltStylesheet	An XSLT stylesheet used to pre-process the OSIS file where we are starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
+stepRegexForForcedOsisPreprocessing	May occur multiple times.  Lines should be of the form 'stepRegexForForcedOsisPreprocessing=regex=>replacement'.  Each statement defines a modification to be applied to the OSIS before processing.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
+stepRegexForGeneralInputPreprocessing	May occur multiple times.  Lines should be of the form 'stepRegexForGeneralInputPreprocessing=regex=>replacement'.  Each statement defines a modification to be applied to the input data before processing.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
 stepSimplePreprocessTagModifications	A string of the form 'mapping | mapping | …' where each mapping looks like 'para:li4 -> para:li1' or  note -> specialNote to change a given _USX_ tag or tag and style attribute.  You can also specify eg tag:attr -> tag, to remove the attribute altogether.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
 stepVlCommentMarker	Used when processing VL to indicate how comments (if any) are marked in the VL text.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
 stepVlLineFormat	Regular expression which defines how lines in VL format should be parsed.   Needs to hold named capturing groups called bookAbbrev, chapter, verse and text.	UserSpecified	Optional		Regex.	File	PerTextIfNecessary
+stepXsltStylesheetForForcedOsisPreprocessing	An XSLT stylesheet used to pre-process the OSIS file where we are forcibly starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
+stepXsltStylesheetForGeneralInputPreprocessing	An XSLT stylesheet used to pre-process theinput data where where we are starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
 
 
 # Process control.
@@ -127,6 +128,7 @@ stepAddedValueStrongs	Set this to yes if STEP has added Strongs.  Used to includ
 
 # Converter environment.
 stepCrosswireOsis2ModFolderPath	Path to the location of the Crosswire version of osis2mod.	UserSpecified	MandatoryAlways		Path.	EnvironmentVariable	IfComputingEnvironmentChanges	I'm not sure whether we can get away without this, relying on the program to be in the path.  I'm assuming not because of needing to pick up the right DLLs on Windows.
+stepSharedConfigFolder	Path to folder containing shared config information.	UserSpecified	MandatoryAlways		Path.	EnvironmentVariable	IfOutsideWorldChanges
 stepStepOsis2ModFolderPath	Path to the location of the STEP version of osis2mod.	UserSpecified	MandatoryAlways	Path	Path.	EnvironmentVariable	IfComputingEnvironmentChanges	I'm not sure whether we can get away without this, relying on the program to be in the path.  I'm assuming not because of needing to pick up the right DLLs on Windows.
 stepTextConverterOverallDataRoot	It may be convenient to store _all_ data under a given folder.  If you define this variable to identify that folder, you can then use relative paths elsewhere, and have things work relative to this one.  That way, it's easy to move everything to a new location if necessary.	UserSpecified	Optional		Path.	EnvironmentVariable	IfYouOptToUseThis
 
@@ -139,12 +141,14 @@ stepFileSelectorForOwnerOrganisation	For Biblica texts, give Biblica here.  Othe
 # Command-line.
 stepCheckInputsAgainstPreviousModule	Checks the SHA-256 of the present inputs against those for the previous version of the module.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunIfNecessary
 stepEvaluateSchemesOnly	If yes, the run simply scores the text against the schemes available in Crosswire's osis2mod.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunIfNecessary
+stepHelp	Requests the version of the converter JAR.	UserSpecified	Optional	Not requested		CommandLine	PerRunIfNecessary
 stepRootFolder	The root folder holding data for the module.	UserSpecified	MandatoryAlways		Path.	CommandLine	PerTextAlways
 stepStartProcessFromOsis	Used where we have non-OSIS inputs available, but nonetheless want to start from the current OSIS.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerTextIfDesired	Where alternative inputs are available, you will be warned if you opt to use OSIS and the other inputs are more up to date.
 stepStepUpdateReason	Text to be recorded on History line to explain why the module has been generated (used when the new module has been occasioned by STEP itself).	UserSpecified	Optional	"Unspecified"	Arbitrary string.	CommandLine	PerRunIfNecessary
 stepSupplierUpdateReason	Where the new module is being produced because the supplier has changed things, details of those changes.	UserSpecified	Optional		Arbitrary string.	CommandLine	PerRunIfNecessary
 stepSwordSoftwareDefaultVersion	The default version of Sword software needed to render the module.  There is a default value for this, so you shouldn't normally need to set it.	UserSpecified	MandatoryAlways	1.7.2	Arbitrary string.	File	IfCrosswireInternalsChange
 stepTargetAudience	Determines whether we are building a STEP-internal or a public facing module.	UserSpecified	MandatorySometimes	Calculated	Public / Step.	CommandLine	PerRunIfNecessary	Needed only where the root folder name ends in PublicStep, indicating that both forms of module can be built from the same source data.  In this case, says which should be built.
+stepVersion	Requests the version of the converter JAR.	UserSpecified	Optional	Not requested		CommandLine	PerRunIfNecessary
 
 
 # Rendering.
@@ -162,6 +166,7 @@ stepDbgAddDebugAttributesToNodes	Used to add debug attributes to XML nodes to as
 stepDbgConfigData	Outputs information which may be of use when trying to debug config data.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunForDebugging
 stepDbgDisplayReversificationRows	Used to display active reversification rows for debugging purposes.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunForDebugging
 stepDbgReversificationAnticipatedSourceType	Used to indicate what flavour of versification we believe the text follows, so as to be able to check whether the correct reversification rows are selected.  Actually of very limited use.	UserSpecified	Optional		English / Hebrew / Latin / Greek.	File	PerRunForDebugging
+stepTemporaryInvestigationsFolderPath	Location for any temporaries generated while debugging.	UserSpecified	Optional		Path.		ProbablyNever
 
 
 # External data paths and URLs.  With the exception of Reversification data, in general these aren't used or will be fixed.  They are available if you need to refer out to them from your own config file.
@@ -170,7 +175,6 @@ stepExternalDataPath_CrosswireModuleListCommentaries	Points to the list of comme
 stepExternalDataPath_CrosswireModuleListDevotionals	Points to the list of devotionals available from Crosswire.  Not used currently so far as I can see.	UserSpecified	NotUsed	URL.	URL.	File	IfOutsideWorldChanges
 stepExternalDataPath_CrosswireWebsite	Points to Crosswire website.	UserSpecified	NotUsed	URL.	URL.	File	IfOutsideWorldChanges
 stepExternalDataPath_DblWebsite	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	MandatoryAlways	URL.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_OsisXsd	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	MandatoryAlways	URL of the OSIS XSD.	URL.	File	IfOutsideWorldChanges	This is required in the OSIS header.  In fact the value they specify (which is the one I use) no longer exists, so it's a bit pointless.
 stepExternalDataPath_ReversificationData	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	MandatoryAlways	The URL of the tab-separated form of the reversification data within the STEP repository.	URL.	File	IfOutsideWorldChanges
 stepExternalDataPath_StepDataRepository	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	NotUsed	URL.	URL.	File	IfOutsideWorldChanges
 stepExternalDataPath_TaggingActRev	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	NotUsed	The URL of a portion of the tagging data within the STEP data repository.	URL.	File	IfOutsideWorldChanges
@@ -183,7 +187,7 @@ stepExternalDataPath_TaggingMatJhn	Path from which to obtain reversification dat
 
 
 # Standard values.
-stepStandardWordingForDerivedWorkWeHaveChangedVersification	Standard wording explaining we may have changed the versification structure.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.		File	ProbablyNever
+stepStandardWordingForDerivedWorkWeHaveChangedVersification	Standard wording explaining we may have changed the versification structure.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
 stepStepDidTheSwordConversion	Standard text explaining that we did the conversion.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
 stepThanks	Standard rubric thanking people who have supplied texts.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
 stepThanksToCrosswire	Standard text thanking Crosswire for their software etc.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever

@@ -1,12 +1,12 @@
 package org.stepbible.textconverter.usxinputonly
 
-import org.stepbible.textconverter.support.bibledetails.BibleAnatomy
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.debug.Logger
-import org.stepbible.textconverter.support.miscellaneous.*
-import org.stepbible.textconverter.support.ref.*
-import org.stepbible.textconverter.support.ref.RefFormatHandlerReaderVernacular.readEmbedded
-import org.stepbible.textconverter.utils.Usx_FileProtocol
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleAnatomy
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefFormatHandlerReaderVernacular.readEmbedded
+import org.stepbible.textconverter.applicationspecificutils.Usx_FileProtocol
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.util.*
@@ -111,26 +111,26 @@ import java.util.*
  *
  * Other tags which may appear within *note* include :-
  *
- *  - char:xo, which gives the identifier of the verse in which the note
- *    appears, and is of no interest for our purposes.
+ * - **char:xo**, which gives the identifier of the verse in which the note
+ *   appears, and is of no interest for our purposes.
  *
- *  - char:xop, which (I think) gives a preferred displayable representation
- *    of the value associated with xo, and again is of no interest.
+ * - **char:xop**, which (I think) gives a preferred displayable representation
+ *   of the value associated with xo, and again is of no interest.
  *
- * - char:xta, which is used to include non-cross reference text within a
+ * - **char:xta**, which is used to include non-cross reference text within a
  *   run of cross-references, so that you might have 'SEE Jn 3:16 AND
  *   Mat 1:1', where the SEE and AND appear within xta, and the references
  *   appear within xt.  (In fact noise words like this appear relatively
  *   frequently.  Unfortunately it is frequently the case that they are *not*
  *   enclosed in char:xta.)
  *
- * - char:xk and char:xq, representing keywords and scripture quotations
+ * - **char:xk** and **char:xq**, representing keywords and scripture quotations
  *   respectively.  Unfortunately the documentation gives no example of
  *   their use.  I assume here they are simply carried through as-is
  *   (except possibly for reformatting).
  *
- * - char:xot, char:xnt and char:xdc I think are equivalent to char:xt.
- *   They are used where a particular tag is intended to take effect
+ * - **char:xot**, **char:xnt88 and **char:xdc8* I think are equivalent to
+ *   char:xt. They are used where a particular tag is intended to take effect
  *   only if the OT, NT or DC is present (respectively).  I convert all
  *   of them to char:xt, and then subject them to the usual checks on
  *   whether the target exists.
@@ -148,9 +148,24 @@ import java.util.*
   /****************************************************************************/
   /****************************************************************************/
 
-   /****************************************************************************/
-   fun process (doc: Document) = doc.findNodesByName("book").forEach(::process)
-   fun process (rootNode: Node) = doIt(rootNode)
+  /****************************************************************************/
+  /**
+  * Processes a single document.
+  *
+  * @param doc Document to be processed.
+  */
+
+  fun process (doc: Document) = doc.findNodesByName("book").forEach(::process)
+
+
+  /****************************************************************************/
+  /**
+  * Documents a single book.
+  *
+  * @param rootNode Root node for book.
+  */
+
+  fun process (rootNode: Node) = doIt(rootNode)
 
 
 

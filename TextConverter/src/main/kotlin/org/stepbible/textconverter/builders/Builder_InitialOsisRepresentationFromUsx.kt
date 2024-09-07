@@ -1,14 +1,18 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.support.commandlineprocessor.CommandLineProcessor
-import org.stepbible.textconverter.support.configdata.ConfigData
-import org.stepbible.textconverter.support.configdata.FileLocations
-import org.stepbible.textconverter.support.debug.Dbg
-import org.stepbible.textconverter.support.ref.RefBase
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodeByName
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.usxinputonly.Usx_OsisCreator
-import org.stepbible.textconverter.usxinputonly.Usx_Preprocessor
 import org.stepbible.textconverter.usxinputonly.Usx_Tidier
-import org.stepbible.textconverter.utils.*
+import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.protocolagnosticutils.PA_BasicVerseEndInserter
+import java.io.File
 
 
 /******************************************************************************/
@@ -20,7 +24,7 @@ import org.stepbible.textconverter.utils.*
 * incarnation all of that work has been deferred to later in the processing
 * chain, and is applied not to the USX but to the OSIS generated from it.
 * It is important that the work in this present class should therefore be kept
-* to an absolute minimum.  It's ok to apply simple modifications to the OSIS,
+* to an absolute minimum.  It's ok to apply simple modifications to the data,
 * for example to correct systematic errors in it; but you should avoid changing
 * the verse structure, expanding elisions etc.
 *
@@ -30,10 +34,17 @@ import org.stepbible.textconverter.utils.*
 * at present for retaining it in the OSIS side of the system, and so long as
 * this remains the case, you should avoid doing anything very much here.)
 *
+* ## Preprocessing and filtering
+* USX processing works with a Document representation, and therefore supports
+* XSLT preprocessing (both for the overall text and also selectively per book).
+*
+* It also supports filtering by book, so you can limit the number of books
+* processed on a given run (particularly where you are debugging).
+*
 * @author ARA "Jamie" Jamieson
 */
 
-object Builder_InitialOsisRepresentationFromUsx: Builder
+object Builder_InitialOsisRepresentationFromUsx: Builder()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -49,6 +60,41 @@ object Builder_InitialOsisRepresentationFromUsx: Builder
 
 
 
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                              Protected                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  override fun doIt ()
+  {
+    Dbg.withReportProgressMain(banner(), ::doIt1)
+  }
+
+
+  /****************************************************************************/
+  private fun doIt1 ()
+  {
+    BuilderUtils.getInputFiles(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForUsx(), -1).forEach(::loadFile)
+    BuilderUtils.processXslt(UsxDataCollection)
+    Usx_Tidier.process(UsxDataCollection)
+    RefBase.setBibleStructure(UsxDataCollection.getBibleStructure())
+    ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(UsxDataCollection.getBookNumbers())
+    Usx_OsisCreator.process(UsxDataCollection)
+    PA_BasicVerseEndInserter.process(ExternalOsisDoc, Osis_FileProtocol)
+    RefBase.setBibleStructure(null)
+    //Dbg.d(ExternalOsisDoc)
+  }
+
+
+
+
+
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -58,15 +104,12 @@ object Builder_InitialOsisRepresentationFromUsx: Builder
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun doIt ()
+  private fun loadFile (filePath: String)
   {
-    Dbg.reportProgress(banner())
-    RefBase.setBibleStructure(UsxDataCollection.getBibleStructure())
-    UsxDataCollection.loadFromFolder(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForUsx())
-    Usx_Preprocessor.processXslt(UsxDataCollection)
-    Usx_Tidier.process(UsxDataCollection)
-    ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(UsxDataCollection.getBookNumbers())
-    Usx_OsisCreator.process(UsxDataCollection)
-    RefBase.setBibleStructure(null)
+    val text = Builder_Master.processRegexes(File(filePath).bufferedReader().readText(), ConfigData.getPreprocessingRegexes())
+    val doc = Dom.getDocumentFromText(text, true)
+    val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(doc.findNodeByName("book")!!["code"]!!)
+    if (Dbg.wantToProcessBook(bookNo))
+      UsxDataCollection.addFromDoc(doc)
   }
 }
