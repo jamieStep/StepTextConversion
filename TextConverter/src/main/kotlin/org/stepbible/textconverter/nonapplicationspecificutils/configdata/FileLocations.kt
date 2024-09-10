@@ -383,7 +383,7 @@ object FileLocations
   fun getCountryCodeInfoFilePath () = "\$jarResources/countryNamesToShortenedForm.tsv"
   fun getIsoLanguageCodesFilePath () = "\$jarResources/isoLanguageCodes.tsv"
   fun getOsis2modVersificationDetailsFilePath () = "\$jarResources/osis2modVersification.txt"
-  fun getVernacularTextDatabaseFilePath () = ConfigData["stepSharedConfigFolder"]!! + "/_Common_/vernacularTranslationsDb.txt"
+  fun getVernacularTextDatabaseFilePath () = getSharedConfigFolderPath() + "/_Common_/vernacularTranslationsDb.txt"
 
 
 

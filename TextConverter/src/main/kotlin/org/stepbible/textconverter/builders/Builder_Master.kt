@@ -4,6 +4,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.commandlineproces
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigDataSupport
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.TranslatableFixedText
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
@@ -173,8 +174,12 @@ object Builder_Master: Builder()
   /****************************************************************************/
   private fun runProcess ()
   {
+    val targetAudience = ConfigData["stepTargetAudience"] ?: "step"
+    Dbg.reportProgress(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+    Dbg.reportProgress(">>>>>>>>>> Start of processing for ${ConfigData["stepModuleName"]} ($targetAudience).")
     deleteLogFilesEtc()
     StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
+    getSpecialBuilders().forEach { it.process() } // These aren't supposed to generate a repository package, and will exit after processing if they are invoked.
     Builder_RepositoryPackage.process()
   }
 

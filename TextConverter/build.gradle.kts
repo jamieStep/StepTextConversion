@@ -12,7 +12,8 @@ version = "2.0.0"
 /******************************************************************************/
 plugins {
     //id("com.github.johnrengelman.shadow") version "8.1.1"  // Add Shadow plugin.
-    kotlin("jvm") version "1.9.0"
+    //kotlin("jvm") version "1.9.0"
+    kotlin("jvm") version "2.0.20"
     id("org.jetbrains.dokka") version "1.9.20"
     application
 }

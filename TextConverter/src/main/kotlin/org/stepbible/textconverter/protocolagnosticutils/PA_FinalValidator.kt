@@ -37,11 +37,13 @@ object PA_FinalValidator: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    dataCollection.getRootNodes().forEach { rootNode ->
-      Dbg.withReportProgressSub("Final health check ${m_FileProtocol.getBookAbbreviation(rootNode)}.") {
-        checkForCrossBoundaryMarkup(rootNode)
-        checkForSubversesAndMissingVerses(rootNode)
-        checkForNotesOutsideOfVerses(rootNode)
+    Dbg.withProcessingBooks("Final health check ...") {
+      dataCollection.getRootNodes().forEach { rootNode ->
+        Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
+          checkForCrossBoundaryMarkup(rootNode)
+          checkForSubversesAndMissingVerses(rootNode)
+          checkForNotesOutsideOfVerses(rootNode)
+        }
       }
     }
   }

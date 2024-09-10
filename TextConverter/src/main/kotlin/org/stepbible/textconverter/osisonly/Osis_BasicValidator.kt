@@ -14,6 +14,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Bibl
 import org.stepbible.textconverter.protocolagnosticutils.PA_EmptyVerseHandler
 import org.stepbible.textconverter.applicationspecificutils.Osis_FileProtocol
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.w3c.dom.Node
 
 /*******************************************************************************/
@@ -89,9 +90,9 @@ object Osis_BasicValidator
       dataCollection.getBookNumbers().forEach {
         val comparison = BibleStructure.compareWithGivenScheme(it, bibleStructure, nrsvx)
         comparison.chaptersInTargetSchemeButNotInTextUnderConstruction.forEach { refKey -> Logger.error (refKey, "Chapter in NRSV(A) but not in supplied text.") }
-        comparison.chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error (refKey, "Chapter in in supplied text but not in NRSV(A).") }
+        comparison.chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error (refKey, "Chapter in supplied text but not in NRSV(A).") }
         comparison.versesInTargetSchemeButNotInTextUnderConstruction  .forEach { refKey -> Logger.error (refKey, "Verse in NRSV(A) but not in supplied text.") }
-        comparison.chaptersInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error (refKey, "Verse in supplied text but not in NRSV(A).") }
+        comparison.versesInTextUnderConstructionButNotInTargetScheme.forEach { refKey -> Logger.error (refKey, "Verse in supplied text but not in NRSV(A).") }
         comparison.versesInTextUnderConstructionOutOfOrder            .forEach { refKey -> Logger.warning(refKey,"Verse out of order.") }
       }
 
@@ -106,7 +107,7 @@ object Osis_BasicValidator
        but we must now fill them all in. */
 
     if (PA_EmptyVerseHandler(dataCollection.getFileProtocol()).createEmptyVersesForMissingVerses(dataCollection))
-      dataCollection.reloadBibleStructureFromRootNodes(false)
+      dataCollection.reloadBibleStructureFromRootNodes(true)
 
 
 
@@ -169,8 +170,9 @@ object Osis_BasicValidator
 
   fun structuralValidation (dataCollection: X_DataCollection)
   {
-    Dbg.d(dataCollection.getDocument()) // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-    dataCollection.getRootNodes().forEach { structuralValidationForBook(it) }
+    Dbg.withProcessingBooks("Performing structural validation for ...") {
+      dataCollection.getRootNodes().forEach { structuralValidationForBook(it) }
+    }
 
     if (m_ChaptersWithBadIds.isNotEmpty())
       Logger.error("Chapters with bad ids: " + m_ChaptersWithBadIds.joinToString(", "))
@@ -201,7 +203,7 @@ object Osis_BasicValidator
   /****************************************************************************/
   private fun structuralValidationForBook (bookNode: Node)
   {
-    Dbg.withReportProgressSub("Performing structural validation for ${Osis_FileProtocol.getBookAbbreviation(bookNode)}.") {
+    Dbg.withProcessingBook(Osis_FileProtocol.getBookAbbreviation(bookNode)) {
       structuralValidationForBook1(bookNode)
     }
   }

@@ -248,8 +248,9 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
     fun compareWithGivenScheme (bookNumber: Int, schemeA: BibleStructure, schemeB: BibleStructure): ComparisonWithOtherScheme
     {
-      val versesInTextUnderConstruction = schemeA.getAllRefKeysForBook(bookNumber).toSet()
-      val versesInOtherScheme = try { schemeB.getAllRefKeysForBook(bookNumber).toSet() } catch (_: Exception) { setOf() }
+      fun isBackstopVerse (refKey: RefKey) = RefBase.C_BackstopVerseNumber == Ref.getV(refKey)
+      val versesInTextUnderConstruction = schemeA.getAllRefKeysForBook(bookNumber).filterNot { isBackstopVerse(it) } .toSet()
+      val versesInOtherScheme = try { schemeB.getAllRefKeysForBook(bookNumber).filterNot { isBackstopVerse(it) }.toSet() } catch (_: Exception) { setOf() }
       val versesInTextUnderConstructionButNotInOtherScheme = versesInTextUnderConstruction subtract versesInOtherScheme
       val versesInOtherSchemeButNotInTextUnderConstruction = versesInOtherScheme subtract versesInTextUnderConstruction
       val versesInBoth = versesInTextUnderConstruction intersect versesInOtherScheme
@@ -1264,9 +1265,15 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   protected open fun addFromDoc (doc: Document, wantCanonicalTextSize: Boolean)
   {
-    doc.getAllNodesBelow()
-      .filter { m_FileProtocol!!.isBookNode(it) }
-      .forEach { addFromRootNode(it, wantCanonicalTextSize) }
+    Dbg.withProcessingBooks("Determining Bible structure ...") {
+      doc.getAllNodesBelow()
+        .filter { m_FileProtocol!!.isBookNode(it) }
+        .forEach {
+          Dbg.withProcessingBook(m_FileProtocol!!.getBookAbbreviation(it)) {
+            addFromRootNode(it, wantCanonicalTextSize)
+          }
+        }
+    }
   }
 
 
@@ -1286,18 +1293,12 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   protected open fun addFromRootNode (rootNode: Node, wantCanonicalTextSize: Boolean)
   {
     /**************************************************************************/
-    val bookName = m_FileProtocol!!.getBookAbbreviation(rootNode)
-    val wantDescription = if (wantCanonicalTextSize) " (with canonical text length)" else ""
-    Dbg.reportProgress("- Determining Bible structure for $bookName$wantDescription.")
-
-
-
-    /**************************************************************************/
     var canonicalTitleCanonicalTextSize = 0
     val inCanonicalTitle = false
     var inVerse = false
     var isElision = false
     var verseCanonicalTextSize = 0
+    m_FileProtocol!! // Just to establish that we don't expect it to be null.
 
 
 
@@ -1405,9 +1406,10 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
-    /* On Psalms only, I need to see if we have canonical titles. */
+    /* On Psalms only, I need to see if we have canonical titles.  Or I do if
+       we want content size. */
 
-    if (BibleAnatomy.C_BookNumberForPsa == m_FileProtocol.bookNameToNumber(m_FileProtocol.getBookAbbreviation(rootNode)))
+    if (wantCanonicalTextSize && BibleAnatomy.C_BookNumberForPsa == m_FileProtocol.bookNameToNumber(m_FileProtocol.getBookAbbreviation(rootNode)))
       rootNode.findNodesByName(m_FileProtocol.tagName_chapter()).forEach(::processCanonicalTitleForChapter)
 
 

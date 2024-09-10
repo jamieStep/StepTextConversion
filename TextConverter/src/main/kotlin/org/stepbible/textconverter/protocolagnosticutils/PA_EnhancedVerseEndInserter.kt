@@ -68,7 +68,9 @@ object PA_EnhancedVerseEndInserter: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    dataCollection.getRootNodes().forEach(::processRootNode)
+    Dbg.withProcessingBooks("Handling cross-boundary markup ...") {
+      dataCollection.getRootNodes().forEach(::processRootNode)
+    }
   }
   
   
@@ -86,7 +88,7 @@ object PA_EnhancedVerseEndInserter: PA()
   /****************************************************************************/
   private fun processRootNode (rootNode: Node)
   {
-    Dbg.withReportProgressSub("Handling cross-boundary markup for ${m_FileProtocol.getBookAbbreviation(rootNode)}.") {
+    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
       val chapterNodes = rootNode.findNodesByName(m_FileProtocol.tagName_chapter(), false)
       insertVerseEnds(rootNode, chapterNodes) // Initial positioning.
     }

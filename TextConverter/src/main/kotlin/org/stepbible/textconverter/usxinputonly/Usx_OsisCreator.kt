@@ -46,7 +46,9 @@ object Usx_OsisCreator
   fun process (usxDataCollection: X_DataCollection)
   {
     Dbg.withReportProgressMain("Converting to OSIS") {
-      process1(usxDataCollection)
+      Dbg.withProcessingBooks("Processing ...") {
+        process1(usxDataCollection)
+      }
     }
   }
 
@@ -100,8 +102,9 @@ object Usx_OsisCreator
   {
     val bookName = rootNode["code"]!!
     //Logger.setPrefix("Converting to OSIS $bookName")
-    Dbg.reportProgress("- Processing $bookName.")
-    processNode(m_Document.documentElement)
+    Dbg.withProcessingBook(bookName) {
+      processNode(m_Document.documentElement)
+    }
   }
 
 

@@ -6,6 +6,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Ste
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.applicationspecificutils.IssueAndInformationRecorder
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 
 /******************************************************************************/
 /**
@@ -32,8 +33,8 @@ import org.stepbible.textconverter.applicationspecificutils.IssueAndInformationR
  *   required but is not available, then the code throws an exception.
  *
  * - If you ask for a vernacular text, and the value associated with that key
- *   is #ERR#, this indicates that you have made an attempt to obtain a
- *   translation, but Google Translate has failed to supply one (perhaps
+ *   is #Untranslateble#, this indicates that you have made an attempt to obtain
+ *   a translation, but Google Translate has failed to supply one (perhaps
  *   because this is a language it does not presently cater for).  In this
  *   case the English text is returned, and no warning is issued.
  *
@@ -82,12 +83,15 @@ object TranslatableFixedText
 
   fun lookupText (languageSelector: Language, key: String): String
   {
-    val res = when (languageSelector)
+    var res = when (languageSelector)
     {
       Language.AsIs       -> return key
       Language.Vernacular -> getVernacular(key).second
       else                -> getEnglish(key)
     }
+
+    if ("#Untranslatable#" == res)
+      res = getEnglish(key)
 
     return res
   }
@@ -181,7 +185,7 @@ object TranslatableFixedText
   /****************************************************************************/
   private val m_English   : MutableMap<String, String> = mutableMapOf()
   private val m_Vernacular: MutableMap<String, String> = mutableMapOf() // Contains definitions for the vernacular specific to this run only.  Does not get populated if the vernacular is eng.
-  private val m_VernacularCode: String = ConfigData["stepLanguageCode3Char"] ?: throw StepExceptionBase("Initialising TranslatableFixedText too early.") // The language code for the text being processed.
+  private val m_VernacularCode: String = ConfigData["stepLanguageCode3Char"] ?: throw StepExceptionWithStackTraceAbandonRun("Initialising TranslatableFixedText too early.") // The language code for the text being processed.
   private val m_WarnedAboutUseOfEnglishTranslations: MutableSet<String> = mutableSetOf() // Used to prevent duplication of warnings.
 
 
@@ -202,7 +206,8 @@ object TranslatableFixedText
 
   private fun getVernacular (key: String): Pair<Char, String>
   {
-     when (val res = if ("eng" == m_VernacularCode) m_English[key] else m_Vernacular[key])
+     val res = if ("eng" == m_VernacularCode) m_English[key] else m_Vernacular[key]
+     when (res)
      {
        null ->
        {
@@ -216,7 +221,7 @@ object TranslatableFixedText
        }
 
 
-       "#ERR#" ->
+       "#Untranslatable#" ->
          return Pair('E', getEnglish(key))
 
 

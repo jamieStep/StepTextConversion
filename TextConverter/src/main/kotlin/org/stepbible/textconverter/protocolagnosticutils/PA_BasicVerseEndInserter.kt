@@ -49,9 +49,12 @@ object PA_BasicVerseEndInserter: PA()
     if (null != rootNodes[0].findNodeByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid()))
       return // Already have eids.
 
-    rootNodes.forEach {
-      Dbg.reportProgress("- Handling initial placement of verse-ends: ${m_FileProtocol.getBookAbbreviation(it)}.")
-      it.findNodesByName(m_FileProtocol.tagName_chapter()).forEach(::insertVerseEnds)
+    Dbg.withProcessingBooks("Handling initial placement of verse-ends ...") {
+      rootNodes.forEach {
+        Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(it)) {
+          it.findNodesByName(m_FileProtocol.tagName_chapter()).forEach(::insertVerseEnds)
+        }
+      }
     }
   }
 
@@ -73,9 +76,12 @@ object PA_BasicVerseEndInserter: PA()
     if (null != rootNodes[0].findNodeByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid()))
       return // Already have eids.
 
-    rootNodes.forEach {
-      Dbg.reportProgress("- Handling initial placement of verse-ends: ${m_FileProtocol.getBookAbbreviation(it)}.")
-      it.findNodesByName(m_FileProtocol.tagName_chapter()).forEach(::insertVerseEnds)
+    Dbg.withProcessingBooks("Handling initial placement of verse-ends ... ") {
+      rootNodes.forEach {
+        Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(it)) {
+          it.findNodesByName(m_FileProtocol.tagName_chapter()).forEach(::insertVerseEnds)
+        }
+      }
     }
   }
 

@@ -84,7 +84,7 @@ object Builder_InternalOsis: Builder()
        kinds of changes reduce the number of nodes to be processed, so
        probably better to make them as early as possible. */
 
-    Dbg.reportProgress("\nLoading and initialising OSIS.")
+    Dbg.reportProgress("Loading and initialising OSIS.")
     InternalOsisDataCollection.loadFromDocs(listOf(ExternalOsisDoc)); x()
     archiver.archiveElements(InternalOsisDataCollection, InternalOsisDataCollection.getFileProtocol()::isNoteNode); x()  // Hive off footnotes to separate document to speed up main processing.
     PA_StrongsHandler.process(InternalOsisDataCollection); x()                           // Canonicalise Strong's markup.
@@ -95,7 +95,7 @@ object Builder_InternalOsis: Builder()
 
 
     /***************************************************************************/
-    Dbg.reportProgress("\nLoading and evaluating data.  (I need two copies -- one to work on and one against which to validate.")
+    Dbg.reportProgress("\nLoading and evaluating data.  (I need two copies -- one to work on and one against which to validate.)")
     RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()); x()
 
     m_OriginalOsisDataCollection = Osis_DataCollection()
@@ -109,7 +109,7 @@ object Builder_InternalOsis: Builder()
        I begin here by deleting them, before reinstating them later.  There are
        then a few things which have to be run while the eids are absent. */
 
-    Dbg.reportProgress("\nRemove eids; sort out tables and elisions.")
+    Dbg.reportProgress("\nRemoving eids; sorting out tables and elisions.")
     val dummyVerses = insertDummyVerses(InternalOsisDataCollection); x() // Insert dummy verses at the ends of chapters so we can always insert _before_ something.
     PA_VerseEndRemover.process(InternalOsisDataCollection); x()          // Removes verse-ends.
     PA_TableHandler.process(InternalOsisDataCollection); x()             // Collapses tables which span verses into a single elided verse.
@@ -120,7 +120,7 @@ object Builder_InternalOsis: Builder()
     /**************************************************************************/
     /* Time to put the eids back again, but hopefully in a better location. */
     
-    Dbg.reportProgress("\nReinsert eids.")
+    Dbg.reportProgress("\nReinserting eids.")
     PA_EnhancedVerseEndInsertionPreparer.process(InternalOsisDataCollection); x() // Relatively simple and hopefully uncontentious tweaks to make it easier to insert verse ends.
     PA_EnhancedVerseEndInserter.process(InternalOsisDataCollection); x()          // Positions verse ends so as to reduce the chances of cross-boundary markup.
     
@@ -137,7 +137,7 @@ object Builder_InternalOsis: Builder()
     /**************************************************************************/
     /* It's probably a good idea to build / rebuild the structure details. */
     
-    InternalOsisDataCollection.reloadBibleStructureFromRootNodes(wantCanonicalTextSize = false); x()
+    InternalOsisDataCollection.reloadBibleStructureFromRootNodes(wantCanonicalTextSize = true); x()
                                                              
 
 

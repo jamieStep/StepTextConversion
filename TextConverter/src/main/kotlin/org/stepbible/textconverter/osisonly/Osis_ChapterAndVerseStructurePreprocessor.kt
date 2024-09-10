@@ -39,9 +39,13 @@ object Osis_ChapterAndVerseStructurePreprocessor
   fun process (dataCollection: X_DataCollection)
   {
     m_FileProtocol = dataCollection.getFileProtocol()
-    dataCollection.getRootNodes().forEach {
-      insertMissingChapters(it)
-      tidyChapters(it)
+    Dbg.withProcessingBooks("Tidying chapters and creating missing ones if necessary ...") {
+      dataCollection.getRootNodes().forEach {
+        Dbg.withProcessingBook(it["osisID"]!!) {
+          insertMissingChapters(it)
+          tidyChapters(it)
+        }
+      }
     }
   }
   
@@ -103,18 +107,16 @@ object Osis_ChapterAndVerseStructurePreprocessor
 
 
     /**************************************************************************/
-    Dbg.withReportProgressSub("Creating missing chapters for ${rootNode["osisID"]!!} if necessary.") {
-      val firstExistingChapterNode = rootNode.findNodeByName("chapter", false)!!
-      val ref = Ref.rdOsis((firstExistingChapterNode["osisID"] ?: firstExistingChapterNode["sID"])!!)
-      val firstChapterNo = ref.getC()
-      val newRef = Ref.rdOsis(rootNode["osisID"]!!)
+    val firstExistingChapterNode = rootNode.findNodeByName("chapter", false)!!
+    val ref = Ref.rdOsis((firstExistingChapterNode["osisID"] ?: firstExistingChapterNode["sID"])!!)
+    val firstChapterNo = ref.getC()
+    val newRef = Ref.rdOsis(rootNode["osisID"]!!)
 
-      for (chapterNo in 1 ..< firstChapterNo)
-      {
-        newRef.setC(chapterNo)
-        Logger.info(newRef.toRefKey(), "Created chapter which was missing from the original text.")
-        addChapter(chapterNo, firstExistingChapterNode, ref)
-      }
+    for (chapterNo in 1 ..< firstChapterNo)
+    {
+      newRef.setC(chapterNo)
+      Logger.info(newRef.toRefKey(), "Created chapter which was missing from the original text.")
+      addChapter(chapterNo, firstExistingChapterNode, ref)
     }
 
     //Dbg.d(doc)
@@ -175,18 +177,6 @@ object Osis_ChapterAndVerseStructurePreprocessor
   private fun tidyChapters (rootNode: Node)
   {
     /**************************************************************************/
-    Dbg.withReportProgressSub("OSIS: Tidying chapter structure for ${m_FileProtocol.getBookAbbreviation(rootNode)}.") {
-      tidyChapters1(rootNode)
-    }
-  }
-
-
-  /****************************************************************************/
-  /* Turns div:chapter into chapter.  Turns milestone chapters into enclosing
-     chapters.  Makes osisID and sID the same. */
-
-  private fun tidyChapters1 (rootNode: Node)
-  {
     val doc = rootNode.ownerDocument
 
 

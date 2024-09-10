@@ -358,7 +358,13 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
     clearBibleStructure()
     withThisBibleStructure {
       RefBase.setBibleStructure(m_BibleStructure)
-      m_BookNumberToRootNode.filter { null != it.value }.forEach { m_BibleStructure.addFromBookRootNode("", it.value!!, wantCanonicalTextSize = wantCanonicalTextSize )}
+      Dbg.withProcessingBooks("Determining Bible structure ...") {
+        m_BookNumberToRootNode.filter { null != it.value }.forEach {
+          Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(it.value!!)) {
+            m_BibleStructure.addFromBookRootNode("", it.value!!, wantCanonicalTextSize = wantCanonicalTextSize)
+          }
+        }
+      }
       m_BibleStructureIsValid = true
     }
   }
@@ -439,11 +445,13 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
      val res: MutableList<Int> = mutableListOf()
      val nodeList = m_FileProtocol.getBookNodes(docOut)
-     nodeList.forEach {
-       Dbg.withReportProgressSub("\"- Loading data for ${it["osisID"]!!}.") {
-         val bookNo = BibleBookNamesOsis.abbreviatedNameToNumber(it["osisID"]!!)
-         res.add(bookNo)
-         setRootNode(bookNo, it)
+     Dbg.withProcessingBooks("Loading data ...") {
+       nodeList.forEach {
+         Dbg.withProcessingBook(it["osisID"]!!) {
+           val bookNo = BibleBookNamesOsis.abbreviatedNameToNumber(it["osisID"]!!)
+           res.add(bookNo)
+           setRootNode(bookNo, it)
+         }
        }
      }
 
@@ -541,7 +549,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
 
   /****************************************************************************/
-  protected var m_BookNumberToRootNode: MutableMap<Int, Node?> = mutableMapOf()
+  protected var m_BookNumberToRootNode: SortedMap<Int, Node?> = TreeMap()
   protected val m_FileProtocol = fileProtocol
 
   private val m_BibleStructure = BibleStructure(m_FileProtocol)

@@ -35,8 +35,9 @@ import kotlin.system.exitProcess
 fun main (args: Array<String>)
 {
   /****************************************************************************/
-  //Dbg.setBooksToBeProcessed("Gen")
+  Dbg.setBooksToBeProcessed("3Jn")
   //ThrowAwayCode.testGetVersion()
+
 
 
   /****************************************************************************/
@@ -44,7 +45,6 @@ fun main (args: Array<String>)
   try
   {
     Builder_Master.process(args)
-    //ProcessingController.process(args)
     Logger.summariseResults()
 
     val majorWarnings = getMajorWarningsAsBigCharacters()
@@ -88,6 +88,12 @@ fun main (args: Array<String>)
 
   finally
   {
+    val moduleName = ConfigData["stepModuleName"] ?: "UNKNOWN MODULE"
+    val targetAudience = ConfigData["stepTargetAudience"] ?: "step"
+    if (0 != returnCode) Dbg.reportProgress("\n!!!!! RUN FAILED: " + args.joinToString(" "))
+    Dbg.reportProgress("\n>>>>>>>>>> End of processing for $moduleName ($targetAudience).")
+    Dbg.reportProgress(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
+
     Logger.sortLogFile()
     exitProcess(returnCode)
   }

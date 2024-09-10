@@ -60,7 +60,9 @@ object PA_StrongsHandler: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    dataCollection.getRootNodes().forEach(::processRootNode)
+    Dbg.withProcessingBooks("Handling Strongs ...") {
+      dataCollection.getRootNodes().forEach(::processRootNode)
+    }
   }
 
 
@@ -85,7 +87,7 @@ object PA_StrongsHandler: PA()
 
   private fun processRootNode (rootNode: Node)
   {
-    Dbg.withReportProgressSub("Handling strongs for ${m_FileProtocol.getBookAbbreviation(rootNode)}.") {
+    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
       processRootNode1(rootNode)
     }
   }

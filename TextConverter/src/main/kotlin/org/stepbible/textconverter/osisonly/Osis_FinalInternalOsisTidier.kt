@@ -29,8 +29,10 @@ class Osis_FinalInternalOsisTidier
   fun process (dataCollection: X_DataCollection)
   {
     m_FileProtocol = dataCollection.getFileProtocol()
-    dataCollection.getRootNodes().forEach(::processRootNode)
-    dataCollection.getDocument().findNodeByName("osis")!!.getAllNodesBelow().forEach { it -= "xmlns" } // Delete all xmlns attributes.
+    Dbg.withProcessingBooks("Applying add hoc tweaks needed to ensure rendering is ok ...") {
+      dataCollection.getRootNodes().forEach(::processRootNode)
+      dataCollection.getDocument().findNodeByName("osis")!!.getAllNodesBelow().forEach { it -= "xmlns" } // Delete all xmlns attributes.
+    }
   }
 
 
@@ -57,7 +59,7 @@ class Osis_FinalInternalOsisTidier
   /****************************************************************************/
   private fun processRootNode (rootNode: Node)
   {
-    Dbg.withReportProgressSub("Applying ad hoc tweaks needed to ensure rendering is ok ${m_FileProtocol.getBookAbbreviation(rootNode)}.") {
+    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
       processRootNode1(rootNode)
     }
   }

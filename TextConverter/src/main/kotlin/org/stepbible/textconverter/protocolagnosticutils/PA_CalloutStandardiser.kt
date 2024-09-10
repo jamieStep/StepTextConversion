@@ -31,7 +31,7 @@ object PA_CalloutStandardiser: PA()
 
   fun process (dataCollection: X_DataCollection)
   {
-    Dbg.withReportProgressSub("Forcing callouts into house style.") {
+    Dbg.withProcessingBooks("Forcing callouts into house style.") {
       extractCommonInformation(dataCollection)
       dataCollection.getRootNodes().forEach(::processRootNode)
     }
@@ -59,7 +59,7 @@ object PA_CalloutStandardiser: PA()
 
   private fun processRootNode (rootNode: Node)
   {
-    Dbg.withReportProgressSub("Standardising callouts for ${m_FileProtocol.getBookAbbreviation(rootNode)}.") {
+    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
       var doneSomething = false
 
       fun convert (x: Node)

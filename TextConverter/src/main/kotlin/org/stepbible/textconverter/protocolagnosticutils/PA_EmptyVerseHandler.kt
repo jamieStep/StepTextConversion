@@ -151,7 +151,7 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
            val map = getSidMap(rootNode, m_FileProtocol.tagName_verse())
            it.value.forEach { refKey ->
              doneSomething = true
-             Dbg.d(refKey.toString() + " / " + map.ceilingKey(refKey)) /*^^^**/
+             //Dbg.d(refKey.toString() + " / " + map.ceilingKey(refKey)) /*^^^**/
              createEmptyVerseForMissingVerse(rootNode, refKey, map[map.ceilingKey(refKey)]) }
          }
       }

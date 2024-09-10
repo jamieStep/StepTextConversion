@@ -872,7 +872,6 @@ object ConfigData
         return true
 
       val lineLowerCase = directive.lowercase()
-      //Dbg.dCont(directive, "stepAboutAsSupp")
 
 
 
@@ -1080,7 +1079,7 @@ object ConfigData
 
     operator fun get (key: String): String?
     {
-      //Dbg.d(key, "stepBibleDescriptionAsItAppearsOnBiblePicker")
+      //Dbg.d(key, "stepAboutAsSupplied")
       //Dbg.d(key)
       return getInternal(key, true)
     }

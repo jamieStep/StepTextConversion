@@ -240,28 +240,7 @@ object MiscellaneousUtils
   * @return JAR version as string.
   */
 
-  fun getJarVersion (): String
-  {
-    /**************************************************************************/
-    /* I don't pretend to have investigated what all of the following does. */
-
-    return try {
-      val clazz: Class<*> = this::class.java
-      val className = clazz.simpleName + ".class"
-      val classPath = clazz.getResource(className)?.toString() ?: ""
-      if (!classPath.startsWith("jar")) throw StepExceptionBase("")
-
-      val manifestPath = classPath.substring(0, classPath.lastIndexOf("!") + 1) + "/META-INF/MANIFEST.MF"
-      val manifest = Manifest(URL(manifestPath).openStream())
-      val attr = manifest.mainAttributes
-      val value: String = attr.getValue("Implementation-Version")
-      value
-    }
-    catch (_: Exception)
-    {
-      "IDE_VERSION"
-    }
-  }
+  fun getJarVersion () = m_JarVersion
 
 
   /***************************************************************************/
@@ -332,6 +311,26 @@ object MiscellaneousUtils
   }
 
 
+  /***************************************************************************/
+  /**
+  * Checks if we are running from the IDE.
+  *
+  * @return True if running from IDE.
+  */
+
+  fun runningFromIde () = getJarVersion().startsWith("IDE")
+
+
+  /***************************************************************************/
+  /**
+  * Checks if we are running from a JAR.
+  *
+  * @return True if running from a JAR.
+  */
+
+  fun runningFromJar () = !runningFromIde()
+
+
 
 
 
@@ -342,6 +341,39 @@ object MiscellaneousUtils
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /***************************************************************************/
+  /**
+  * Gets the version number from the JAR manifest.  (This is available only
+  * if we *are* actually running the JAR.  Otherwise I simply give back a
+  * dummy value.)
+  *
+  * @return JAR version as string.
+  */
+
+  private fun getJarVersionInternal (): String
+  {
+    /**************************************************************************/
+    /* I don't pretend to have investigated what all of the following does. */
+
+    return try {
+      val clazz: Class<*> = this::class.java
+      val className = clazz.simpleName + ".class"
+      val classPath = clazz.getResource(className)?.toString() ?: ""
+      if (!classPath.startsWith("jar")) throw StepExceptionBase("")
+
+      val manifestPath = classPath.substring(0, classPath.lastIndexOf("!") + 1) + "/META-INF/MANIFEST.MF"
+      val manifest = Manifest(URL(manifestPath).openStream())
+      val attr = manifest.mainAttributes
+      val value: String = attr.getValue("Implementation-Version")
+      value
+    }
+    catch (_: Exception)
+    {
+      "IDE_VERSION"
+    }
+  }
+
 
   /****************************************************************************/
   /**
@@ -372,4 +404,8 @@ object MiscellaneousUtils
 
     return null
   }
+
+
+  /****************************************************************************/
+  private val m_JarVersion: String by lazy { getJarVersionInternal() }
 }

@@ -44,7 +44,9 @@ object PA_VerseEndRemover: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    dataCollection.getRootNodes().forEach(::processRootNode)
+    Dbg.withProcessingBooks("Preparing verse tags ...") {
+      dataCollection.getRootNodes().forEach(::processRootNode)
+    }
   }
 
 
@@ -62,7 +64,7 @@ object PA_VerseEndRemover: PA()
   /****************************************************************************/
   private fun processRootNode (rootNode: Node)
   {
-    Dbg.withReportProgressSub("Preparing verse tags for ${m_FileProtocol.getBookAbbreviation(rootNode)}.") {
+    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
       val allVerseTags = rootNode.findNodesByName(m_FileProtocol.tagName_verse(), false)
 
       allVerseTags.filter { it.hasChildNodes() } .forEach(Dom::promoteChildren) // Replace enclosing sids by a non-enclosing sid, followed by the children of the original.

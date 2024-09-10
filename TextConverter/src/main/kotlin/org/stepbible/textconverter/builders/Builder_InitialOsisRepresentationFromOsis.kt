@@ -132,7 +132,7 @@ object Builder_InitialOsisRepresentationFromOsis: Builder ()
     val dataCollection = Osis_DataCollection()
     dataCollection.loadFromDocs(listOf(doc))
     PA_BasicVerseEndInserter.process(dataCollection)
-    Dom.deleteAllAttributes(doc.findNodeByName("osis")!!) // This removes xmlns, which confuses our processing, and doesn't seem to add anything.
+    Dom.deleteAllAttributes(doc.findNodeByName("osis")!!) // This removes xmlns.  xlmns confuses our processing, and doesn't seem to add anything.
 
 
 

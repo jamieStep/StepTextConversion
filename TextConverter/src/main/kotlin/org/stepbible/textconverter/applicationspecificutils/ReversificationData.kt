@@ -645,28 +645,17 @@ object ReversificationData
 
 
     /**************************************************************************/
-    Dbg.reportProgress("- Parsing reversification data")
     val ixLow = findLine(rawData, "#DataStart(Expanded)", 0)
     val ixHigh = findLine(rawData, "#DataEnd", ixLow)
     val filteredData = rawData.subList(ixLow + 1, ixHigh).map { it.trim() }.filterNot { it.startsWith('#') || it.isBlank() || it.startsWith('=') || it.startsWith('\'')  }
-
-
-
-    /**************************************************************************/
-    var rowNumber = 0
-    filteredData.forEach { loadRow(it, ++rowNumber, filteredData.size) }
-    //$$$Dbg.displayReversificationRows(getAllAcceptedRows())
-
-
-
-    /**************************************************************************/
-    Logger.announceAllAndTerminateImmediatelyIfErrors()
-
-
-
-    /**************************************************************************/
-    aggregateData()
-    debugOutputDebugData()
+    Dbg.withProcessingBooks("Parsing reversification data (total of ${filteredData.size} rows) ...") { // Report progress in the same way as when processing books.
+      var rowNumber = 0
+      filteredData.forEach { loadRow(it, ++rowNumber) }
+      //$$$Dbg.displayReversificationRows(getAllAcceptedRows())
+      Logger.announceAllAndTerminateImmediatelyIfErrors()
+      aggregateData()
+      debugOutputDebugData()
+    }
   }
 
 
@@ -684,7 +673,7 @@ object ReversificationData
   /****************************************************************************/
   /* Adds details of a single row, assuming it passes the relevant tests. */
 
-  private fun loadRow (rawData: String, rowNumber: Int, rawDataSize: Int)
+  private fun loadRow (rawData: String, rowNumber: Int)
   {
     /**************************************************************************/
     //Dbg.d(rowNumber)
@@ -695,7 +684,7 @@ object ReversificationData
 
     /**************************************************************************/
     if (rowNumber == 1000 * (rowNumber / 1000))
-      Dbg.reportProgress("  - Processing reversification data row $rowNumber of $rawDataSize", 1)
+      Dbg.withProcessingBook(rowNumber.toString()) {} // Want the progress output, but don't want to run anything under control of withProcessingBook.
 
 
 
@@ -1832,7 +1821,7 @@ object ReversificationData
   private fun setAncientVersions (theText: String?): String
   {
     /**************************************************************************/
-    //Dbg.dCont(theText ?: "", "Latin=4:17; 13.8-14:9 / C:1-30")
+    //Dbg.dCont(theText ?: "", "(Greek=1:14 / 1:14a)")
 
 
 

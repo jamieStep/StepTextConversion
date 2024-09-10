@@ -38,10 +38,12 @@ object PA_TextAnalyser: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    dataCollection.getRootNodes().forEach {
-      Dbg.withReportProgressSub("Collecting feature details for ${m_FileProtocol.getBookAbbreviation(it)}.") {
-        countVersesInParas(it)
-        getSampleTextForConfigData(it)
+    Dbg.withProcessingBooks("Collecting feature details for ...") {
+      dataCollection.getRootNodes().forEach {
+        Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(it)) {
+          countVersesInParas(it)
+          getSampleTextForConfigData(it)
+        }
       }
     }
   }

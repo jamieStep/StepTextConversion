@@ -26,7 +26,7 @@ object SpecialBuilder_ConfigDataDebugging: SpecialBuilder()
   /****************************************************************************/
   override fun banner () = ""
   override fun commandLineOptions () = listOf(
-    CommandLineProcessor.CommandLineOption("dbgConfigData", 1, "Controls config data debugging.   Use generateStepConfig[All] / reportSet / reportMissingDebugInfo.",null, null, false),
+    CommandLineProcessor.CommandLineOption("dbgConfigData", 1, "Controls config data debugging.   Use generateStepConfig[All] to generate a template step.config / reportSet to give details of what is set where / reportMissingDebugInfo to check the program has a comprehensive list of config parameters.",listOf("generateStepConfig", "generateStepConfigAll", "reportSet", "reportMissingDebugInfo"), null, false),
   )
 
 

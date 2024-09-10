@@ -209,6 +209,16 @@ class StepExceptionWithStackTraceShouldHaveBeenOverridden: StepExceptionWithStac
 
 
 /******************************************************************************/
+class StepExceptionWithStackTraceAbandonRun: StepExceptionWithStackTraceBase
+{
+  constructor()
+  constructor (e: Exception): super(e)
+  constructor (e: Exception, overrideReason: String): super(e, overrideReason)
+  constructor (msg: String): super(msg)
+}
+
+
+/******************************************************************************/
 class StepExceptionWithoutStackTraceAbandonRun: StepExceptionWithoutStackTraceBase
 {
   constructor()

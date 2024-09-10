@@ -87,7 +87,9 @@ object PA_TableHandler: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    dataCollection.getRootNodes().forEach(::processRootNode)
+    Dbg.withProcessingBooks("Handling tables ...") {
+      dataCollection.getRootNodes().forEach(::processRootNode)
+    }
   }
   
   
@@ -112,7 +114,7 @@ object PA_TableHandler: PA()
 
   private fun processRootNode (rootNode: Node)
   {
-    Dbg.withReportProgressSub("Handling tables for ${m_FileProtocol.getBookAbbreviation(rootNode)}.") {
+    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
       //Dbg.outputDom(rootNode.ownerDocument)
 
       m_RootNode = rootNode

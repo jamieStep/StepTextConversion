@@ -71,7 +71,9 @@ object PA_ElisionHandler: PA()
   {
     extractCommonInformation(dataCollection)
     m_EmptyVerseHandler = PA_EmptyVerseHandler(dataCollection.getFileProtocol())
-    dataCollection.getRootNodes().forEach(::doIt)
+    Dbg.withProcessingBooks("Expanding elisions ...") {
+      dataCollection.getRootNodes().forEach(::doIt)
+    }
   }
 
 
@@ -89,7 +91,7 @@ object PA_ElisionHandler: PA()
   /****************************************************************************/
   private fun doIt (rootNode: Node)
   {
-    Dbg.withReportProgressSub("Handling elisions for ${m_FileProtocol.getBookAbbreviation(rootNode)}.") {
+    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
 
 //    rootNode.findNodesByName(m_FileProtocol.tagName_chapter()).forEach { chapterNode ->
 //      val verses = chapterNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid())

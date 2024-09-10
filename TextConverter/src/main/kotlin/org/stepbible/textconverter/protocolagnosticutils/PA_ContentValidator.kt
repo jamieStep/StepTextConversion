@@ -60,7 +60,9 @@ object PA_ContentValidator
 
     m_ImplicitReversificationRenumbers = ReversificationData.getImplicitRenumbers()
     m_ReversificationRowsForAllBooks = ReversificationData.getAllAcceptedRows()
-    dataCollectionNew.getBookNumbers().forEach { contentValidationForBook(it) }
+    Dbg.withProcessingBooks("Checking ...") {
+      dataCollectionNew.getBookNumbers().forEach { contentValidationForBook(it) }
+    }
   }
 
 
@@ -79,7 +81,7 @@ object PA_ContentValidator
   private fun contentValidationForBook (bookNo: Int)
   {
     if (null == m_DataCollectionNew.getRootNode(bookNo)) return
-    Dbg.withReportProgressSub("Checking " + BibleBookNamesUsx.numberToAbbreviatedName(bookNo) + ".") {
+    Dbg.withProcessingBook(BibleBookNamesUsx.numberToAbbreviatedName(bookNo)) {
       contentValidationForBook1(bookNo)
     }
   }

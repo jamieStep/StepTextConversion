@@ -38,7 +38,9 @@ object PA_ListEncapsulator: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    dataCollection.getRootNodes().forEach(::processRootNode)
+    Dbg.withProcessingBooks("Possibly encapsulating lists (but probably not) ...") {
+      dataCollection.getRootNodes().forEach(::processRootNode)
+    }
   }
 
 
@@ -56,8 +58,9 @@ object PA_ListEncapsulator: PA()
   /****************************************************************************/
   private fun processRootNode (rootNode: Node)
   {
-    Dbg.reportProgress("Possibly encapsulating lists (but probably not) for ${m_FileProtocol.getBookAbbreviation(rootNode)}.")
-    encapsulateLists(rootNode)
+    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
+      encapsulateLists(rootNode)
+    }
   }
 
 

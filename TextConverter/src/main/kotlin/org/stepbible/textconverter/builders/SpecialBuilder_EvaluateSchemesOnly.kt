@@ -51,6 +51,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder()
     Dbg.resetBooksToBeProcessed() // Force all books to be included.
     Builder_InitialOsisRepresentationOfInputs.process()
     evaluate()
+    exitProcess(0)
   }
 
 
@@ -85,8 +86,6 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder()
     if (additionalInformation.endsWith("\n")) additionalInformation = additionalInformation.substring(0, additionalInformation.length - 1)
 
     outputDetails(details, additionalInformation)
-
-    exitProcess(0)
   }
 
 
@@ -100,7 +99,6 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder()
 
 
     /**************************************************************************/
-    Dbg.reportProgress("Evaluating $scheme")
     val bibleStructureForScheme = BibleStructure.makeOsis2modSchemeInstance(scheme)
     var additionalText: String? = null
 

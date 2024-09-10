@@ -82,7 +82,7 @@ object Osis_DetermineReversificationTypeEtc
   private fun doIt ()
   {
     /**************************************************************************/
-    Dbg.reportProgress("Determining reversification requirements etc.")
+    Dbg.reportProgress("\nDetermining reversification requirements etc.")
 
 
 

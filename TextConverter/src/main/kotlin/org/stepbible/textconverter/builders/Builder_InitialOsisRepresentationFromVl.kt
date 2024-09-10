@@ -147,7 +147,11 @@ object Builder_InitialOsisRepresentationFromVl: Builder()
     /**************************************************************************/
     ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(groupedLines.keys.toList()) // The argument gives us the list of book numbers.
     writeln(Osis_Utils.fileHeader(groupedLines.keys.map { it }))
-    groupedLines.keys.forEach { processBook(groupedLines[it]!!) }
+    Dbg.withProcessingBooks("Creating books ...") {
+      groupedLines.keys.forEach {
+        processBook(groupedLines[it]!!)
+      }
+    }
     writeln(Osis_Utils.fileTrailer())
     m_Writer.close()
 
@@ -174,10 +178,11 @@ object Builder_InitialOsisRepresentationFromVl: Builder()
    {
      val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(parsedLines[0].m_UbsBookAbbreviation)
      val bookNameOsis = BibleBookNamesOsis.numberToAbbreviatedName(bookNo)
-     Dbg.reportProgress("Creating $bookNameOsis.")
-     bookHeader(bookNameOsis)
-     parsedLines.groupBy { Integer.parseInt(it.m_ChapterNo) }. forEach { processChapter(bookNameOsis, it.value) }
-     bookTrailer()
+     Dbg.withProcessingBook(bookNameOsis) {
+       bookHeader(bookNameOsis)
+       parsedLines.groupBy { Integer.parseInt(it.m_ChapterNo) }. forEach { processChapter(bookNameOsis, it.value) }
+       bookTrailer()
+     }
    }
 
 

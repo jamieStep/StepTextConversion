@@ -160,22 +160,6 @@
 #! value you have associated with stepMyPredefinedFolder, and then work with
 #! that expanded path.
 #!
-#! Of particular relevance are the names for the three folders which $find
-#! examines.  If you want to prevent it from searching for files through
-#! those folders, or don't like the order in which it examines them, you
-#! can use the following built-in names:
-#!
-#! - @(stepRootFolder), which points to the folder within which all of the
-#!   data for the module exists.
-#!
-#! - @(stepMetadataFolder), which points to the subfolder 'Metadata' of the
-#!   root folder.  This is the folder in which your store the step.conf file
-#!   for the module.  This is the master config file, under control of which
-#!   everything else is included.
-#!
-#! - @(stepSharedConfigFolder) -- _SharedConfig_ within the overall folder
-#!   below which all of your texts lie, directly or indirectly.
-#!
 #!
 #!
 #! The tool ascribes no significance to the manner in which configuration data
@@ -431,7 +415,7 @@
 #!   (a=b or a#=b), with no @-processing.  It must contain at least the
 #!   following settings:
 #!
-#!     stepTextConverterOverallDataRoot=somePath; stepStepOsis2ModFolderPath=somePath; stepCrosswireOsis2ModFolderPath=someOtherPath
+#!     stepTextConverterOverallDataRoot=somePath; stepStepOsis2modFilePath=somePath; stepCrosswireOsis2modFilePath=someOtherPath
 #!
 #!   which give the path to the folder under which all of your texts fall
 #!   (directly or indirectly), and then, respectively where to find the

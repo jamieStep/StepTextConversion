@@ -97,7 +97,9 @@ object PA_RuntimeReversificationHandler: PA()
     extractCommonInformation(dataCollection)
     m_EmptyVerseHandler = PA_EmptyVerseHandler(dataCollection.getFileProtocol())
     m_FootnoteHandler = PA_ReversificationFootnoteHandler(m_FileProtocol)
-    dataCollection.getRootNodes().forEach(::processRootNode)
+    Dbg.withProcessingBooks("Applying reversification footnotes for runtime reversification ...") {
+      dataCollection.getRootNodes().forEach(::processRootNode)
+    }
   }
 
 
@@ -123,10 +125,9 @@ object PA_RuntimeReversificationHandler: PA()
     if (!ConfigData.getAsBoolean("stepOkToGenerateFootnotes"))
       return
 
-    Dbg.withReportProgressSub("Applying reversification footnotes for runtime reversification for ${m_FileProtocol.getBookAbbreviation(rootNode)}.") {
+    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
       IssueAndInformationRecorder.setRuntimeReversification()
       addFootnotes(rootNode)
-      //createEmptyVerses(rootNode)
     }
   }
 

@@ -124,7 +124,7 @@ object Builder_Module: Builder()
     */
 
     val usingStepOsis2Mod = "step" == ConfigData["stepOsis2modType"]!!
-    val programName = if (usingStepOsis2Mod) ConfigData["stepStepOsis2ModFolderPath"]!! else ConfigData["stepCrosswireOsis2ModFolderPath"]!!
+    val programName = if (usingStepOsis2Mod) ConfigData["stepStepOsis2modFilePath"]!! else ConfigData["stepCrosswireOsis2modFilePath"]!!
     val swordExternalConversionCommand: MutableList<String> = ArrayList()
     swordExternalConversionCommand.add("\"$programName\"")
     swordExternalConversionCommand.add("\"" + FileLocations.getSwordTextFolderPath() + "\"")
@@ -161,7 +161,28 @@ object Builder_Module: Builder()
 
 
     /**************************************************************************/
-    if (ConfigData.getAsBoolean("stepManualOsis2mod"))
+    /* Sometimes -- under circumstances I cannot fathom -- osis2mod hangs when
+       run under control of the converter (either as a JAR or from the IDE).
+       It seems to be something to do with the fact that it is generating
+       output to explain changes it has made; but then it always generates
+       _some_ output, if only to explain that it has succeeded.
+
+       Under these circumstances, the only workaround I can find is to copy
+       the command line which I would like to run to the clipboard, and then
+       run it manually in a command window before permitting the converter to
+       continue and create the repository package.
+
+       In fact, to date this has been an issue only when creating public modules
+       -- STEP versions seem to work ok (probably because they don't generate
+       this output).
+
+       Given that it may be convenient to record in step.conf that manual
+       operation is required, and given that where a text can be used to
+       generate both a public and a STEP module, step.conf will be shared
+       by both, I take note of the manual osis2mod request only if this is
+       not a STEP run. */
+
+    if (ConfigData.getAsBoolean("stepManualOsis2mod") && "step" != ConfigData["stepTargetAudience"])
     {
       val commandAsString = swordExternalConversionCommand.joinToString(" ") + " > ${FileLocations.getOsisToModLogFilePath()} 2>&1"
       MiscellaneousUtils.copyTextToClipboard(commandAsString)
@@ -451,25 +472,18 @@ object PackageContentHandler
 
 
   /****************************************************************************/
-  private fun swordConfigFileHandler_addCalculatedValuesToMetadata()
+  private fun swordConfigFileHandler_addCalculatedValuesToMetadata ()
   {
     /**************************************************************************/
     var stepInfo = """¬<hr/>
-Sword module @(stepModuleName) created by the STEPBible project @(stepModuleCreationDate) (@(stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation)).
-¬@(stepThanks)
-@(AddedValue)
+Sword module ${ConfigData["stepModuleName"]!!} created by the STEPBible project ${ConfigData["stepModuleCreationDate"]!!} (${ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""}).
+¬${ConfigData["stepThanks"]!!}
+XXX_AddedValue_XXX
 """
 
     stepInfo = stepInfo.replace("-", "&nbsp;")
-      .replace("@(stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation)", ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: "")
-      .replace("@(stepTextModifiedDate)", ConfigData["stepTextModifiedDate"]!!)
-      .replace("@(stepModuleName)", ConfigData["stepModuleName"]!!)
-      .replace("@(stepThanks)", ConfigData["stepThanks"]!!)
-      .replace("@(stepModuleCreationDate)", ConfigData["stepModuleCreationDate"]!!)
-      //.replace("@(OsisSha256)", osisSha256)
       .replace("\n", "NEWLINE")
-
-    stepInfo = stepInfo.replace("^¬*(&nbsp;)*\\s*\\u0001".toRegex(), "") // Get rid of entirely 'blank' lines.
+      .replace("^¬*(&nbsp;)*\\s*\\u0001".toRegex(), "") // Get rid of entirely 'blank' lines.
 
 
 
@@ -489,8 +503,8 @@ Sword module @(stepModuleName) created by the STEPBible project @(stepModuleCrea
       text += java.lang.String.join("; ", texts)
     }
 
-    if (text.isNotEmpty()) text = "¬¬$text."
-    stepInfo = stepInfo.replace("@(AddedValue)", text)
+    if (text.isNotEmpty()) text = "¬¬$text"
+    stepInfo = stepInfo.replace("XXX_AddedValue_XXX", text)
 
 
 

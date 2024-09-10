@@ -398,7 +398,7 @@ object VersionAndHistoryHandler
 
   private fun getNewVersion (previousStepVersion: String, historyLines: List<ParsedHistoryLine>): String
   {
-    when (ConfigData["stepReleaseType"])
+    when (ConfigData["stepReleaseType"]!!.lowercase())
     {
       "major" -> m_ReleaseType = ReleaseType.Major
       "minor" -> m_ReleaseType = ReleaseType.Minor

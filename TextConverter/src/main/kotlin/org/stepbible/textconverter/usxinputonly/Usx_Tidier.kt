@@ -44,7 +44,12 @@ object Usx_Tidier
   * @param dataCollection: Data to be processed.
   */
 
-  fun process (dataCollection: X_DataCollection) = dataCollection.getDocuments().forEach(::doIt)
+  fun process (dataCollection: X_DataCollection)
+  {
+    Dbg.withProcessingBooks("Tidying ...") {
+      dataCollection.getDocuments().forEach(::doIt)
+    }
+  }
 
 
 
@@ -72,17 +77,14 @@ object Usx_Tidier
   {
     /**************************************************************************/
     m_BookName = Dom.findNodeByName(doc, "book")!!["code"]!!
-    Dbg.reportProgress("- Tidying ${Utils.prettifyBookAbbreviation(m_BookName)}.")
-
-
-
-    /**************************************************************************/
-    deleteIgnorableTags(doc)                           // Anything of no interest to our processing.
-    correctCommonUsxIssues(doc)                        // Correct common errors.
-    simplePreprocessTagModifications(doc)              // Sort out things we don't think we like.
-    convertTagsToLevelOneWhereAppropriate(doc)         // Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
-    Usx_CrossReferenceCanonicaliser.process(doc)       // Cross-refs can be represented in a number of different ways, and we'd rather have just one way.
-    tidyUpMain(doc)
+    Dbg.withProcessingBook(Utils.prettifyBookAbbreviation(m_BookName)) {
+      deleteIgnorableTags(doc)                           // Anything of no interest to our processing.
+      correctCommonUsxIssues(doc)                        // Correct common errors.
+      simplePreprocessTagModifications(doc)              // Sort out things we don't think we like.
+      convertTagsToLevelOneWhereAppropriate(doc)         // Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
+      Usx_CrossReferenceCanonicaliser.process(doc)       // Cross-refs can be represented in a number of different ways, and we'd rather have just one way.
+      tidyUpMain(doc)
+    }
   }
 
 
