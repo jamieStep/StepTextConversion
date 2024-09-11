@@ -6,6 +6,7 @@ import org.jasypt.util.text.BasicTextEncryptor
 import org.reflections.Reflections
 import org.reflections.scanners.Scanners
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotify
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
@@ -296,18 +297,19 @@ object MiscellaneousUtils
     * @param command Command to be run.
     * @param workingDirectory Directory to move to before running command.
     * @param errorFilePath If non-null, output is redirected to here
+    * @return Return code from process which is being run.
     * @throws StepExceptionBase Any exception noticed while attempting to rub the commands.
     */
 
-  fun runCommand (prompt: String?, command: List<String>, errorFilePath: String? = null, workingDirectory: String? = null)
+  fun runCommand (prompt: String?, command: List<String>, errorFilePath: String? = null, workingDirectory: String? = null): Int
   {
-    if (null != prompt) Dbg.reportProgress(prompt + java.lang.String.join(" ", command))
+    if (null != prompt) Dbg.reportProgress(prompt + command.joinToString(" "){ quotify(it) })
     val pb = ProcessBuilder(command)
     if (null != errorFilePath) pb.redirectError(File(errorFilePath))
     if (null != workingDirectory) pb.directory(File(workingDirectory))
-    val process = pb.start()
-    process.waitFor()
+    val res = pb.start().waitFor()
     Dbg.reportProgress("- External command completed")
+    return res
   }
 
 

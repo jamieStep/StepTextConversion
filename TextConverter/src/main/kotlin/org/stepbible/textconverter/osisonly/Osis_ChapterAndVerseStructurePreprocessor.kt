@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.osisonly
 
+import org.stepbible.textconverter.applicationspecificutils.Permissions
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
@@ -90,14 +91,14 @@ object Osis_ChapterAndVerseStructurePreprocessor
       newVerseSidNode["osisID"] = newRef.toStringOsis()
       newVerseSidNode["sID"] = newRef.toStringOsis()
 
-      val footnoteNode = m_FileProtocol.makeFootnoteNode(doc, newRef.toRefKey(), TranslatableFixedText.stringFormat(Language.Vernacular, "V_emptyContentFootnote_chapterMissingInThisTranslation"))
+      val footnoteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToVerseGeneratedBecauseWeNeedToAddAChapter, doc, newRef.toRefKey(), TranslatableFixedText.stringFormat(Language.Vernacular, "V_emptyContentFootnote_chapterMissingInThisTranslation"))
       val textNode = doc.createTextNode(TranslatableFixedText.stringFormatWithLookup("V_contentForEmptyVerse_verseWasMissing"))
 
       val newVerseEidNode = doc.createNode("<verse/>")
       newVerseEidNode["eID"] = newRef.toStringOsis()
 
       newChapterNode.appendChild(newVerseSidNode)
-      newChapterNode.appendChild(footnoteNode)
+      if (null != footnoteNode) newChapterNode.appendChild(footnoteNode)
       newChapterNode.appendChild(textNode)
       newChapterNode.appendChild(newVerseEidNode)
 

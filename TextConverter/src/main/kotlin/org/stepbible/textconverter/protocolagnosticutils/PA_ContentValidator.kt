@@ -50,7 +50,7 @@ object PA_ContentValidator
 
   fun process (dataCollectionNew: X_DataCollection, dataCollectionOld: X_DataCollection)
   {
-    Dbg.d(dataCollectionOld.getDocument(), "a.xml")
+//    Dbg.d(dataCollectionOld.getDocument(), "a.xml")
 //    Dbg.d(dataCollectionNew.getDocument(), "b.xml")
 
     m_DataCollectionNew = dataCollectionNew

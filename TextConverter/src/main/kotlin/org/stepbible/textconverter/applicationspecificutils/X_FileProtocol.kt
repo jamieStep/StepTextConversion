@@ -49,7 +49,7 @@ open class X_FileProtocol
 
   open fun getEmptyVerseHandler (): PA_EmptyVerseHandler = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
 
-  protected val m_OkToGenerateFootnotes: Boolean = ConfigData.getAsBoolean("stepOkToGenerateFootnotes")
+  // $$$ protected val m_OkToGenerateFootnotes: Boolean = ConfigData.getAsBoolean("stepOkToGenerateFootnotes")
   protected val m_StepCrossReferenceCallout = ConfigData["stepCrossReferenceCallout"]!!
   protected val m_StepExplanationCallout = ConfigData["stepExplanationCallout"]!!
 
@@ -112,7 +112,7 @@ open class X_FileProtocol
   open fun isXrefNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun makeCanonicalTitleNode (doc: Document): Node = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun makeDoNothingMarkup (doc: Document): Node = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
-  open fun makeFootnoteNode (doc: Document, refKeyForIdOfFootnote: RefKey, text: String, caller: String? = null): Node? = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
+  open fun makeFootnoteNode (footnoteAction: Permissions.FootnoteAction, doc: Document, refKeyForIdOfFootnote: RefKey, text: String, caller: String? = null): Node? = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun makeItalicsNode (doc: Document): Node = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun makePlainVanillaParaNode (doc: Document): Node = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun makeVerseEidNode (doc: Document, refKey: Pair<RefKey, RefKey?>): Node = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
@@ -633,6 +633,7 @@ object Osis_FileProtocol: X_FileProtocol()
   /**
   * Does what it says on the tin.
   *
+  * @param footnoteAction Indicates the type of footnote we are trying to add.
   * @param doc Document within which the footnote node is created.
   * @param refKeyForIdOfFootnote Reference with which the footnote is associated.
   * @param text Text of footnote.
@@ -640,9 +641,9 @@ object Osis_FileProtocol: X_FileProtocol()
   * @return Footnote node.
   */
 
-  override fun makeFootnoteNode (doc: Document, refKeyForIdOfFootnote: RefKey, text: String, caller: String?): Node?
+  override fun makeFootnoteNode (footnoteAction: Permissions.FootnoteAction, doc: Document, refKeyForIdOfFootnote: RefKey, text: String, caller: String?): Node?
   {
-    if (!m_OkToGenerateFootnotes) return null
+    if (!Permissions.okToProcess(footnoteAction)) return null
     val theCaller = caller ?: m_ExplanationFootnoteCalloutGenerator.get()
     val id = Ref.rd(refKeyForIdOfFootnote).toStringOsis()
     val footnoteNode = Dom.createNode(doc, "<note type='explanation' osisID='$id!${Globals.getUniqueExternal()}' n='$theCaller'/>")
@@ -1298,6 +1299,7 @@ object Usx_FileProtocol: X_FileProtocol()
   /**
   * Does what it says on the tin.
   *
+  * @param footnoteAction Indicates the type of footnote we are trying to add.
   * @param doc Document within which the footnote node is created.
   * @param refKeyForIdOfFootnote Reference with which the footnote is associated.
   * @param text Text of footnote.
@@ -1305,9 +1307,9 @@ object Usx_FileProtocol: X_FileProtocol()
   * @return Footnote node.
   */
 
-  override fun makeFootnoteNode (doc: Document, refKeyForIdOfFootnote: RefKey, text: String, caller: String?): Node?
+  override fun makeFootnoteNode (footnoteAction: Permissions.FootnoteAction, doc: Document, refKeyForIdOfFootnote: RefKey, text: String, caller: String?): Node?
   {
-    if (!m_OkToGenerateFootnotes) return null
+    if (!Permissions.okToProcess(footnoteAction)) return null
     TODO()
   }
 

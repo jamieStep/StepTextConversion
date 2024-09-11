@@ -35,7 +35,7 @@ import kotlin.system.exitProcess
 fun main (args: Array<String>)
 {
   /****************************************************************************/
-  Dbg.setBooksToBeProcessed("3Jn")
+  //Dbg.setBooksToBeProcessed("3Jn")
   //ThrowAwayCode.testGetVersion()
 
 

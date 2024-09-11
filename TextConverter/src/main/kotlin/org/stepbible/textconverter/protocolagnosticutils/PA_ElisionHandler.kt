@@ -69,6 +69,9 @@ object PA_ElisionHandler: PA()
 
   fun process (dataCollection: X_DataCollection)
   {
+    if (!Permissions.okToProcess(Permissions.RestructureAction.ExpandElisions))
+      return // At present, I assume we always will expand elisions -- and indeed I think things will go wrong if we don't.
+
     extractCommonInformation(dataCollection)
     m_EmptyVerseHandler = PA_EmptyVerseHandler(dataCollection.getFileProtocol())
     Dbg.withProcessingBooks("Expanding elisions ...") {
@@ -276,7 +279,7 @@ object PA_ElisionHandler: PA()
         Dom.insertNodesBefore(verse, nodeList)
         if (refKeys.size > 2) // No footnote on master verse if there is only one other verse in the elision.
         {
-          val footnote = m_FileProtocol.makeFootnoteNode(verse.ownerDocument, m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!).getLowAsRefKey(), TranslatableFixedText.stringFormat(Language.Vernacular, "V_elision_containsTextFromOtherVerses", m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!)))
+          val footnote = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToMasterVerseInElision, verse.ownerDocument, m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!).getLowAsRefKey(), TranslatableFixedText.stringFormat(Language.Vernacular, "V_elision_containsTextFromOtherVerses", m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!)))
           if (null != footnote)
           {
             Dom.insertNodeAfter(verse, footnote)

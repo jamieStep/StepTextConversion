@@ -109,6 +109,18 @@ object StepStringUtils
 
   /****************************************************************************/
   /**
+  * Surrounds a string with quote marks.
+  *
+  * @param s: String to be handled.
+  * @param quote: Quote mark.
+  * @return Quoted string.
+  */
+
+  fun quotify (s: String, quote: String = "\"") = quote + s + quote
+
+
+  /****************************************************************************/
+  /**
   * Replaces all matches for a given regular expression by something based upon
   * the matched value.  A sample call might look like:
   *

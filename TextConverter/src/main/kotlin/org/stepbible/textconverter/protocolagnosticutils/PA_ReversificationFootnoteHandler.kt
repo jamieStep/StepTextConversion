@@ -1,14 +1,10 @@
 package org.stepbible.textconverter.protocolagnosticutils
 
-import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.applicationspecificutils.*import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.TranslatableFixedText
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
-import org.stepbible.textconverter.applicationspecificutils.NodeMarker
-import org.stepbible.textconverter.applicationspecificutils.ReversificationData
-import org.stepbible.textconverter.applicationspecificutils.ReversificationDataRow
-import org.stepbible.textconverter.applicationspecificutils.X_FileProtocol
 import org.w3c.dom.Node
 
 /******************************************************************************/
@@ -120,7 +116,7 @@ class PA_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
       text = text.replace("S3y", "S3Y") // DIB prefers this.
       val ancientVersions = if (m_ReversificationNotesLevel > C_ReversificationNotesLevel_Basic) ReversificationData.getAncientVersions(row) else null
       if (null != ancientVersions) text += " $ancientVersions"
-      val noteNode = m_FileProtocol.makeFootnoteNode(document, row.standardRefAsRefKey, text, callout)
+      val noteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToGeneralVerseAffectedByReversification, document, row.standardRefAsRefKey, text, callout)
       if (null != noteNode)
       {
         res.add(noteNode)

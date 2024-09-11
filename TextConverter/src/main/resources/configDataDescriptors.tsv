@@ -127,8 +127,8 @@ stepAddedValueStrongs	Set this to yes if STEP has added Strongs.  Used to includ
 
 
 # Converter environment.
-stepCrosswireOsis2ModFilePath	Path to the  Crosswire version of osis2mod.	UserSpecified	MandatoryAlways		Path.	EnvironmentVariable	IfComputingEnvironmentChanges	I'm not sure whether we can get away without this, relying on the program to be in the path.  I'm assuming not because of needing to pick up the right DLLs on Windows.
-stepStepOsis2ModFilePath	Path to the  STEP version of osis2mod.	UserSpecified	MandatoryAlways	Path	Path.	EnvironmentVariable	IfComputingEnvironmentChanges	I'm not sure whether we can get away without this, relying on the program to be in the path.  I'm assuming not because of needing to pick up the right DLLs on Windows.
+stepOsis2ModFilePath	Path to the STEP version of osis2mod.  (The STEP version can be used both for STEP-only and for public modules -- it works in the same way as the Crosswire version when given the appropriate command line parameters.)	UserSpecified	MandatoryAlways		Path.	EnvironmentVariable	IfComputingEnvironmentChanges	I'm not sure whether we can get away without this, relying on the program to be in the path.  I'm assuming not because of needing to pick up the right DLLs on Windows.
+stepOsis2modReturnCode	Return code from running osis2mod.	Calculated	Calculated		Integer.	Calculated	Calculated
 stepTextConverterOverallDataRoot	It may be convenient to store _all_ data under a given folder.  If you define this variable to identify that folder, you can then use relative paths elsewhere, and have things work relative to this one.  That way, it's easy to move everything to a new location if necessary.	UserSpecified	Optional		Path.	EnvironmentVariable	IfYouOptToUseThis
 
 

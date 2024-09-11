@@ -415,7 +415,7 @@
 #!   (a=b or a#=b), with no @-processing.  It must contain at least the
 #!   following settings:
 #!
-#!     stepTextConverterOverallDataRoot=somePath; stepStepOsis2modFilePath=somePath; stepCrosswireOsis2modFilePath=someOtherPath
+#!     stepTextConverterOverallDataRoot=somePath; stepOsis2modFilePath=somePath
 #!
 #!   which give the path to the folder under which all of your texts fall
 #!   (directly or indirectly), and then, respectively where to find the

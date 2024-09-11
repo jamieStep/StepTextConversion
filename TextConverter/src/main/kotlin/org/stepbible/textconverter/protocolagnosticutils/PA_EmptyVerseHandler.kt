@@ -203,7 +203,7 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
     Dbg.withReportProgressSub("Marking verses which were empty in the raw text.") {
       dataCollection.getRootNodes().forEach { rootNode ->
         val emptyVerses = getEmptyVerses(rootNode)
-        emptyVerses.forEach { annotateEmptyVerse(it) }
+        emptyVerses.forEach { annotateVerseWhichWasEmptyInRawText(it) }
       }
     }
   }
@@ -230,14 +230,22 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
    * @param sid Node to be processed.
    */
 
-  private fun annotateEmptyVerse (sid: Node)
+  private fun annotateVerseWhichWasEmptyInRawText (sid: Node)
   {
     val sidAsRefKey = m_FileProtocol.readRef(sid[m_FileProtocol.attrName_verseSid()]!!).toRefKey()
     IssueAndInformationRecorder.verseEmptyInRawText(sidAsRefKey)
-    val footnoteNode = m_FileProtocol.makeFootnoteNode(sid.ownerDocument, sidAsRefKey, ReversificationData.getFootnoteForEmptyVerses(sidAsRefKey), caller = null) ?: return
-    Dom.insertNodeAfter(sid, footnoteNode)
-    NodeMarker.setEmptyVerseType(sid, "emptyInRawText")
-    Dom.insertNodeAfter(footnoteNode, createEmptyContent(sid.ownerDocument, m_Content_EmptyVerse))
+    val footnoteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToVerseWhichWasEmptyInRawText, sid.ownerDocument, sidAsRefKey, ReversificationData.getFootnoteForEmptyVerses(sidAsRefKey), caller = null)
+    if (null == footnoteNode)
+    {
+      NodeMarker.setEmptyVerseType(sid, "emptyInRawText")
+      Dom.insertNodeAfter(sid, createEmptyContent(sid.ownerDocument, m_Content_EmptyVerse))
+    }
+    else
+    {
+      Dom.insertNodeAfter(sid, footnoteNode)
+      NodeMarker.setEmptyVerseType(sid, "emptyInRawText")
+      Dom.insertNodeAfter(footnoteNode, createEmptyContent(sid.ownerDocument, m_Content_EmptyVerse))
+    }
   }
 
 
@@ -261,7 +269,7 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
 
     val ib = insertBefore ?: Dom.createNode(rootNode.ownerDocument,"<TempNode/>")
     Dom.insertNodeBefore(ib, start)
-    val footnoteNode = m_FileProtocol.makeFootnoteNode(rootNode.ownerDocument, refKey, ReversificationData.getFootnoteForNewlyCreatedVerses(refKey))
+    val footnoteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToVerseGeneratedToFillHoles, rootNode.ownerDocument, refKey, ReversificationData.getFootnoteForNewlyCreatedVerses(refKey))
     if (null != footnoteNode) Dom.insertNodeBefore(ib, footnoteNode)
     Dom.insertNodeBefore(ib, createEmptyContent(rootNode.ownerDocument, m_Content_MissingVerse))
     Dom.insertNodeBefore(ib, end)

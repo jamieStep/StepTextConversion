@@ -144,50 +144,6 @@ object PA_RuntimeReversificationHandler: PA()
   /****************************************************************************/
 
   /****************************************************************************/
-  /* $$$ Do I always add the footnote if one is available, or do I need to take
-     Nec / Acd / Opt into account?
-
-     The reversification data defines various actions which must be applied
-     to the text if we are actually restructuring it.  In this present class,
-     we are _not_ restructuring -- we are merely adding footnotes.
-
-     We are applying footnotes to _source_ verses, and the reversification
-     data will have been filtered so that rows will have been selected only
-     if their source verses exist.  There is therefore never any need to create
-     verses here. */
-
-  private fun addFootnote (sidNode: Node, row: ReversificationDataRow)
-  {
-    /**************************************************************************/
-    /* This is the 'pukka' callout -- ie the piece of text which you click on in
-       order to reveal the footnote.  Originally it was expected to be taken
-       from the NoteMarker text in the reversification data.  However, we then
-       found that STEP always rendered it as a down-arrow; and latterly DIB has
-       decided he wants it that way even if STEP is fixed to display the actual
-       callout text we request.  I therefore need to generate a down-arrow here,
-       which is what the callout generator gives me. */
-
-    val callout = m_FootnoteCalloutGenerator.get()
-
-
-
-    /**************************************************************************/
-    /* I have been asked to force certain footnotes to the start of the owning
-       verse, even if their natural position would be later.  I flag such notes
-       here with a special attribute and then move them later. */
-
-    val footnoteText = makeFootnoteText(row) ?: return
-    val noteNode = makeFootnote(sidNode.ownerDocument, row.sourceRefAsRefKey, footnoteText, callout)
-    if (null != noteNode)
-    {
-      if ("AllBibles" == row.action)
-        NodeMarker.setMoveNoteToStartOfVerse(noteNode)
-      Dom.insertNodeAfter(sidNode, noteNode)
-    }
-  }
-
-
-  /****************************************************************************/
   /* Runs over all reversification rows for this book and adds footnotes as
      necessary. */
 
@@ -261,26 +217,6 @@ object PA_RuntimeReversificationHandler: PA()
       //.filter { ReversificationData.outputFootnote(it, 'R', if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A') }
       .groupBy { Ref.getB(it.sourceRefAsRefKey) }
     m_IfAbsentReversificationRows = allReversificationRows.filter { "IfAbsent" == it.action} .groupBy { Ref.getB(it.sourceRefAsRefKey) }
-  }
-
-
-  /****************************************************************************/
-  private fun makeFootnote (document: Document, refKeyToAttachNoteTo: RefKey, text: String, callout: Any? = null): Node?
-  {
-    val note = m_FileProtocol.makeFootnoteNode(document, refKeyToAttachNoteTo, text, Utils.getCallout(callout))
-    return note
-  }
-
-
-  /****************************************************************************/
-  private fun makeFootnoteText (row: ReversificationDataRow): String?
-  {
-    var text  = ReversificationData.getFootnoteVersification(row)
-    if (text.isEmpty()) return null
-    text = text.replace("S3y", "S3Y") // DIB prefers this.
-    val ancientVersions = if (m_ReversificationNotesLevel > C_ReversificationNotesLevel_Basic) ReversificationData.getAncientVersions(row) else null
-    if (null != ancientVersions) text += " $ancientVersions"
-    return text
   }
 
 

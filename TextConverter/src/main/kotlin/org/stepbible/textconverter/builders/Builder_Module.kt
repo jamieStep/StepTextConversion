@@ -13,6 +13,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Ste
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Zip
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.FeatureIdentifier
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotify
 import java.io.File
 import java.nio.file.Paths
 import java.util.ArrayList
@@ -121,19 +122,38 @@ object Builder_Module: Builder()
        control of the converter -- there are problems with system utilities which
        mean this doesn't work properly -- see head-of-method comments to
        runCommand.
-    */
+
+       Re enclosing the program path in quotes below ...
+
+       Enclosing the path in quotes seems to make sense if you think in terms of
+       the command actually being expanded into something which is then run as
+       though from the command line -- otherwise, if the path contains spaces,
+       things won't be handled correctly.
+
+       And if you do that on Windows, things are indeed fine.  But not on Linux,
+       where things work only if you do _not_ enclose the path in quotes.
+
+       In fact, I get the impression that under the hood the processing _isn't_
+       actually just creating a command line, but instead is doing something
+       special with the first element -- and quotes get in the way of that on
+       Linux.
+
+       I have therefore stopped adding the quotes.  What I now have seems to
+       work on both Windows and Linux -- although I have to admit I suspect
+       that on neither platform have we actually had a path which contained
+       spaces. */
 
     val usingStepOsis2Mod = "step" == ConfigData["stepOsis2modType"]!!
-    val programName = if (usingStepOsis2Mod) ConfigData["stepStepOsis2modFilePath"]!! else ConfigData["stepCrosswireOsis2modFilePath"]!!
+    val programPath = ConfigData["stepOsis2modFilePath"]!!
     val swordExternalConversionCommand: MutableList<String> = ArrayList()
-    swordExternalConversionCommand.add("\"$programName\"")
-    swordExternalConversionCommand.add("\"" + FileLocations.getSwordTextFolderPath() + "\"")
-    swordExternalConversionCommand.add("\"" + FileLocations.getInternalOsisFilePath() + "\"")
+    swordExternalConversionCommand.add(programPath) // Don't enclose the path in quotes -- see note above.
+    swordExternalConversionCommand.add(FileLocations.getSwordTextFolderPath())
+    swordExternalConversionCommand.add(FileLocations.getInternalOsisFilePath())
 
     if (usingStepOsis2Mod)
     {
       swordExternalConversionCommand.add("-V")
-      swordExternalConversionCommand.add("\"" + FileLocations.getOsis2ModSupportFilePath() + "\"")
+      swordExternalConversionCommand.add(FileLocations.getOsis2ModSupportFilePath())
     }
     else
     {
@@ -147,7 +167,7 @@ object Builder_Module: Builder()
     if (null != osis2modEncryptionKey)
     {
       swordExternalConversionCommand.add("-c")
-      swordExternalConversionCommand.add("\"" + osis2modEncryptionKey + "\"")
+      swordExternalConversionCommand.add(osis2modEncryptionKey)
     }
 
 
@@ -184,7 +204,7 @@ object Builder_Module: Builder()
 
     if (ConfigData.getAsBoolean("stepManualOsis2mod") && "step" != ConfigData["stepTargetAudience"])
     {
-      val commandAsString = swordExternalConversionCommand.joinToString(" ") + " > ${FileLocations.getOsisToModLogFilePath()} 2>&1"
+      val commandAsString = swordExternalConversionCommand.joinToString(" "){ quotify(it) } + " > ${quotify(FileLocations.getOsisToModLogFilePath())} 2>&1"
       MiscellaneousUtils.copyTextToClipboard(commandAsString)
       println("")
       println("The command to run osis2mod has been copied to the clipboard.  Open a plain vanilla command window and run it from there.")
@@ -193,7 +213,8 @@ object Builder_Module: Builder()
     }
     else
     {
-      runCommand("- Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = FileLocations.getOsisToModLogFilePath())
+      val rc = runCommand("- Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = FileLocations.getOsisToModLogFilePath())
+      ConfigData["stepOsis2modReturnCode"] = rc.toString()
       Dbg.reportProgress("- osis2mod completed")
     }
   }
@@ -312,8 +333,8 @@ object PackageContentHandler
   private val m_DataPreOsis2mod = listOf(
     ProcessingDetails(::ifEncrypting,        ::encryptionDataHandler,  FileLocations.getEncryptionDataFilePath()),
     ProcessingDetails(::ifUsingStepOsis2mod, ::osis2modDataHandler,    FileLocations.getOsis2ModSupportFilePath()),
-    ProcessingDetails(::doItAlways,          null,             FileLocations.getSwordConfigFolderPath()),
-    ProcessingDetails(::doItAlways,          null,             Paths.get(FileLocations.getSwordTextFolderPath(), "dummyFile.txt").toString()),
+    ProcessingDetails(::doItAlways,          null,            FileLocations.getSwordConfigFolderPath()),
+    ProcessingDetails(::doItAlways,          null,            Paths.get(FileLocations.getSwordTextFolderPath(), "dummyFile.txt").toString()),
   )
 
 
