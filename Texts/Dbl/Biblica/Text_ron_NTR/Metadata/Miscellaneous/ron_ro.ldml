@@ -1,26 +1,0 @@
-﻿<ldml><identity><version number="" /><generation date="0001-01-01T06:00:00Z" /><language type="ro" /></identity><characters><exemplarCharacters>[A-Za-z\u00C2\u00CE\u00E2\u00EE\u0102\u0103\u0218-\u021B]</exemplarCharacters><exemplarCharacters type="punctuation">[!%(),-/\:;=?\[\]~\u00A9\u00AB\u00AE\u00BB\u02BC\u200C\u200D\u2011\u2013-\u2015\u2018\u2019\u201C\u201E\u2026{!(}{!),}{!).}{!)\:}{!,}{!.\u00BB\u201C}{!/}{!?}{!?\u201C}{!\[}{!\u00AB}{!\u00BB}{!\u00BB,}{!\u00BB.}{!\u00BB\:}{!\u00BB;}{!\u00BB?}{!\u00BB?\u201C}{!\u00BB\u2013}{!\u00BB\u2014}{!\u00BB\u201C}{!\u00BB\u201C,}{!\u00BB\u201C?}{!\u2013}{!\u2013,}{!\u2014}{!\u2014,}{!\u2019}{!\u2019,}{!\u2019?}{!\u2019\u00BB}{!\u2019\u00BB,}{!\u2019\u00BB,\u2013}{!\u2019\u00BB,\u2014}{!\u2019\u00BB?}{!\u2019\u00BB\u201C}{!\u201C}{!\u201C)}{!\u201C,}{!\u201C,\u201E}{!\u201C;}{!\u201C?}{!\u201C?!}{!\u201C\u2013}{!\u201C\u2014}{!\u201C\u201E}{!\u201E}{%)}{(\u201E}{),}{),/}{),\u2013}{),\u2014}{).}{).\[}{)/}{)\:}{);}{);(}{);\[}{)\[}{)~}{)\u2013}{)\u2013,}{)\u2014}{)\u2014,}{)\u201C,}{)\u201C;(}{,(}{,/}{,\[}{,\u00AB}{,\u00BB\u201C}{,\u2013}{,\u2013\u201E}{,\u2014}{,\u2014\u201E}{,\u2018}{,\u2019\u2013}{,\u2019\u2014}{,\u201C}{,\u201E}{,\u2026}{.(}{.)}{.),}{.).}{.)\:}{.);}{.)\[}{.,}{.,(}{.,\u201E}{./}{.\:}{.\:\[}{.\:\u02BC}{.;}{.\[}{.\]}{.\](}{.\];}{.\u00AB}{.\u00AE}{.\u00BB}{.\u00BB(}{.\u00BB/}{.\u00BB?}{.\u00BB\u201C}{.\u00BB\u201C\u201E}{.\u2013}{.\u2014}{.\u2019}{.\u2019\u00BB}{.\u2019\u00BB?\u201C}{.\u2019\u00BB\u201C}{.\u201C}{.\u201C(}{.\u201C,}{.\u201C?}{.\u201C\u201E}{.\u201E}{\:(}{\:/}{\:/\u201E}{\:\u00AB}{\:\u2013}{\:\u2014}{\:\u2018}{\:\u201E}{\:\u201E\u00AB}{\:\u2026}{;(}{;/}{;\[}{?!}{?!).}{?!\u00BB}{?!\u201C}{?(}{?)}{?,}{?/}{?;}{?\u00BB}{?\u00BB,}{?\u00BB\u201C}{?\u00BB\u201C\u2013}{?\u00BB\u201C\u2014}{?\u2013}{?\u2013,}{?\u2014}{?\u2014,}{?\u2019}{?\u2019,}{?\u2019.}{?\u2019\u00BB}{?\u2019\u00BB\u201C}{?\u201C}{?\u201C!}{?\u201C,}{?\u201C?}{?\u201C\u2013}{?\u201C\u2014}{?\u201E}{?\u2026}{\](}{\])}{\]),}{\]).}{\],}{\].}{\];}{\u00BB!}{\u00BB!\u00AB}{\u00BB!\u201C}{\u00BB,}{\u00BB,\u2013}{\u00BB,\u2014}{\u00BB.}{\u00BB.)}{\u00BB.\u201C}{\u00BB;}{\u00BB?}{\u00BB\u201C}{\u00BB\u201C.}{\u00BB\u201C\u2013}{\u00BB\u201C\u2013,}{\u00BB\u201C\u2014}{\u00BB\u201C\u2014,}{\u02BC)}{\u02BC,}{\u2013(}{\u2013,}{\u2013,\u00AB}{\u2013;}{\u2013\u00AB}{\u2013\u2018}{\u2013\u201E}{\u2013\u2026}{\u2014(}{\u2014,}{\u2014,\u00AB}{\u2014;}{\u2014\u00AB}{\u2014\u2018}{\u2014\u201E}{\u2014\u2026}{\u2019,}{\u2019.}{\u2019.\u00BB}{\u2019\u00BB\u201C.}{\u2019\u00BB\u201C?}{\u201C!}{\u201C(}{\u201C)}{\u201C),}{\u201C).}{\u201C)\:}{\u201C);}{\u201C)\u2013}{\u201C)\u2014}{\u201C,}{\u201C,\u2013}{\u201C,\u2014}{\u201C,\u201E}{\u201C.}{\u201C.\u201E}{\u201C\:}{\u201C;}{\u201C;(}{\u201C;\u201E}{\u201C?}{\u201C?!}{\u201C\u2013}{\u201C\u2013,}{\u201C\u2014}{\u201C\u2014,}{\u201E\u2026}{\u2026!}{\u2026(}{\u2026,}{\u2026.}{\u2026/}{\u2026;}{\u2026?}{\u2026\u2013}{\u2026\u2014}{\u2026\u201C}{\u2026\u201C?!}]</exemplarCharacters><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:exemplarCharacters type="diacritics">[]</sil:exemplarCharacters><sil:exemplarCharacters type="wordFormingPunctuation">[\-\u02BC]</sil:exemplarCharacters><sil:exemplarCharacters type="footnotes">[a b c d e f g h i j k l m n o p q r s t u v w x y z]</sil:exemplarCharacters><sil:exemplarCharacters type="crossrefs">[]</sil:exemplarCharacters><sil:exemplarCharacters type="verseSegments">[a b c d e f g h i j k l m n o p q r s t u v w x y z {aa} {bb} {cc} {dd} {ee} {ff} {gg} {hh} {ii} {jj} {kk} {ll} {mm} {nn} {oo} {pp} {qq} {rr} {ss} {tt} {uu} {vv} {ww} {xx} {yy} {zz}]</sil:exemplarCharacters><sil:exemplarCharacters type="wordBreaks">[]</sil:exemplarCharacters></special></characters><delimiters><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:matched-pairs><sil:matched-pair open="(" close=")" paraClose="false" /><sil:matched-pair open="[" close="]" paraClose="false" /><sil:matched-pair open="{" close="}" paraClose="false" /></sil:matched-pairs><sil:quotation-marks paraContinueType="all"><sil:quotationContinue></sil:quotationContinue><sil:quotation open="‘" close="’" level="3" /></sil:quotation-marks></special><quotationStart>„</quotationStart><quotationEnd>“</quotationEnd><alternateQuotationStart>«</alternateQuotationStart><alternateQuotationEnd>»</alternateQuotationEnd></delimiters><layout><orientation><characterOrder>left-to-right</characterOrder></orientation></layout><collations><defaultCollation>standard</defaultCollation><collation type="standard"><cr><![CDATA[&[before 1] [first regular] < a\/A << ă\/Ă << â\/Â < b\/B < c\/C < d\/D < e\/E < f\/F < g\/G < h\/H < i\/I << î\/Î < j\/J < k\/K < l\/L < m\/M < n\/N < o\/O < p\/P < q\/Q < r\/R < s\/S << ș\/Ș < t\/T << ț\/Ț < u\/U < v\/V < w\/W < x\/X < y\/Y < z\/Z]]></cr><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:simple><![CDATA[a/A ă/Ă â/Â
-b/B
-c/C
-d/D
-e/E
-f/F
-g/G
-h/H
-i/I î/Î
-j/J
-k/K
-l/L
-m/M
-n/N
-o/O
-p/P
-q/Q
-r/R
-s/S ș/Ș
-t/T ț/Ț
-u/U
-v/V
-w/W
-x/X
-y/Y
-z/Z]]></sil:simple></special></collation></collations><special xmlns:sil="urn://www.sil.org/ldml/0.1"><sil:external-resources><sil:font name="Times New Roman" types="default" lang="ro" /><sil:font name="Charis SIL" types="default" size="1.2" /></sil:external-resources></special></ldml>

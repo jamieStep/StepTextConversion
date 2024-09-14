@@ -4,7 +4,11 @@ import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.Ste
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
+import org.stepbible.textconverter.protocolagnosticutils.PA_ElementArchiver
+import org.w3c.dom.Document
 import org.w3c.dom.Node
+import kotlin.system.measureTimeMillis
 
 
 /****************************************************************************/
@@ -26,12 +30,76 @@ class Osis_FinalInternalOsisTidier
   /****************************************************************************/
 
   /****************************************************************************/
+  /**
+  * Does the bulk of the work.
+  *
+  * @param dataCollection Data to be processed.
+  */
+
   fun process (dataCollection: X_DataCollection)
   {
+    throw StepExceptionWithStackTraceAbandonRun("Should call the alternative version of this method.")
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Does the bulk of the work.
+  *
+  * @param dataCollection Data to be processed.
+  * @param archiver I am assuming that note nodes have been archived in this
+  *   item.  I need to restore them part way through the processing here --
+  *   not too early or there will be needless nodes for things to work through.
+  *   Not too late, or the note node processing will have nothing to work on.
+  */
+
+  fun process (dataCollection: X_DataCollection, archiver: PA_ElementArchiver)
+  {
     m_FileProtocol = dataCollection.getFileProtocol()
-    Dbg.withProcessingBooks("Applying add hoc tweaks needed to ensure rendering is ok ...") {
+    Dbg.withProcessingBooks("Applying ad hoc tweaks needed to ensure rendering is ok ...") {
+      /************************************************************************/
       dataCollection.getRootNodes().forEach(::processRootNode)
-      dataCollection.getDocument().findNodeByName("osis")!!.getAllNodesBelow().forEach { it -= "xmlns" } // Delete all xmlns attributes.
+
+
+
+      /************************************************************************/
+      var noteList = archiver.restoreElements(dataCollection)
+      noteList -= deleteNotesFromHeaders(dataCollection.getDocument())
+      moveNotesInsideVerses(dataCollection.getDocument())
+      handleCallouts(noteList)
+
+      //dataCollection.getDocument().findNodeByName("osis")!!.getAllNodesBelow().forEach { it -= "xmlns" } // Delete all xmlns attributes.
+    }
+  }
+
+
+  /****************************************************************************/
+  /**
+  * The processing associated with 'process' may wrap some nodes in
+  * _X_nonCanonical.  It does this where, in the raw text, the data is wrapped
+  * in a semantic tag such as 'speaker', which causes the text to be seen as
+  * non-canonical ... and where the processing here replaces that semantic tag
+  * with formatting markup which would make the content now appear to be
+  * canonical.
+  *
+  * Such a situation would be a problem when we compare the working text against
+  * the original version for validation purposes.  Wrapping things in this
+  * special tag gets round this.  But it does mean we have to unwrap them again
+  * when validation is complete.
+  *
+  * @param dataCollection Data to be processed.
+  */
+
+  fun removeTemporaryCanonicityMarkers (dataCollection: X_DataCollection)
+  {
+    m_FileProtocol = dataCollection.getFileProtocol()
+    Dbg.withProcessingBooks("Removing any temporary canonicity markers ...") {
+      dataCollection.getRootNodes().forEach { rootNode ->
+        rootNode.findNodesByName("_X_nonCanonical").forEach {
+          Dom.promoteChildren(it)
+          Dom.deleteNode(it)
+        }
+      }
     }
   }
 
@@ -74,16 +142,50 @@ class Osis_FinalInternalOsisTidier
        processors which don't delete things from this list, and therefore
        don't undermine later processing. */
 
-    deleteTemporaryNodes(rootNode)
     val allNodes = rootNode.getAllNodesBelow()
-    val acrosticDivTypeList = allNodes.filter { "title:acrostic" == m_FileProtocol.getExtendedNodeName(it) }
-    val acrosticSpanTypeList = allNodes.filter { "hi:acrostic" == m_FileProtocol.getExtendedNodeName(it) }
-    val newLinesList = allNodes.filter { "l" == Dom.getNodeName(it) }
-    val notesList = allNodes.filter { "note" == Dom.getNodeName(it) }
-    val selahList = getNodeListByAttributeValue(allNodes, "l", "type", "selah")
-    val speakerList = allNodes.filter { "speaker" == Dom.getNodeName(it) }
-    val titlesList = allNodes.filter { "title" == Dom.getNodeName(it) }
-    val xTagsList = allNodes.filter { Dom.getNodeName(it).startsWith("_X_")}
+
+
+
+    /**************************************************************************/
+    val acrosticSpanTypeList: MutableList<Node> = mutableListOf()
+    val acrosticDivTypeList: MutableList<Node> = mutableListOf()
+    val newLinesList: MutableList<Node> = mutableListOf()
+    val selahList: MutableList<Node> = mutableListOf()
+    val speakerList: MutableList<Node> = mutableListOf()
+    val titlesList: MutableList<Node> = mutableListOf()
+    val xTagsList: MutableList<Node> = mutableListOf()
+
+    allNodes.forEach {
+      when (val nodeName = Dom.getNodeName(it))
+      {
+        "speaker" -> speakerList.add(it)
+
+
+        "l" -> {
+          newLinesList.add(it)
+          if ("selah" == it["type"])
+            selahList.add(it)
+        }
+
+
+        "hi" -> {
+          if ("hi:acrostic" == m_FileProtocol.getExtendedNodeName(it))
+            acrosticSpanTypeList.add(it)
+        }
+
+
+        "title" -> {
+          titlesList.add(it)
+          if ("title:acrostic" == m_FileProtocol.getExtendedNodeName(it))
+            acrosticDivTypeList.add(it)
+        }
+
+
+        else ->
+          if (nodeName.startsWith("_X_"))
+            xTagsList.add(it)
+      }
+    }
 
 
 
@@ -91,15 +193,11 @@ class Osis_FinalInternalOsisTidier
     /* Things which do not tread on each other's toes, and can therefore run
        with the lists we established above. */
 
-    allNodes.forEach(NodeMarker::deleteAllMarkers)
-    deleteTemporaryAttributes(rootNode)
-    deleteTemporaryAttributes(allNodes)
     handleSelah(selahList)
     handleAcrosticSpanType(acrosticSpanTypeList)
     handleAcrosticDivType(acrosticDivTypeList)
     handleSpeaker(speakerList)
     deleteHorizontalWhitespaceFromStartOfTitles(titlesList)
-    handleCallouts(notesList)
     handle_X_tags(xTagsList)
     deleteAdjacentNewLineTags(newLinesList)
 
@@ -112,9 +210,7 @@ class Osis_FinalInternalOsisTidier
 
     deleteWhitespaceWhichFollowsLTags(rootNode)
     handleUnacceptableCharacters(rootNode)
-    deleteNotesFromHeaders(rootNode)
     handleVerticalWhitespace(rootNode)
-    moveNotesInsideVerses(rootNode)
     handleVersesWithinSpanTypeTags(rootNode)
   }
 
@@ -150,9 +246,11 @@ class Osis_FinalInternalOsisTidier
 
 
   /****************************************************************************/
-  private fun deleteNotesFromHeaders (rootNode: Node)
+  private fun deleteNotesFromHeaders (doc: Document): List<Node>
   {
-    Dom.findNodesByName(rootNode, m_FileProtocol.tagName_chapter(), false).forEach(::deleteNotesFromHeadersInChapter)
+    val res: MutableList<Node> = mutableListOf()
+    doc.findNodesByName(m_FileProtocol.tagName_chapter()).forEach { res += deleteNotesFromHeadersInChapter(it) }
+    return res
   }
 
 
@@ -163,11 +261,11 @@ class Osis_FinalInternalOsisTidier
      notes within canonical text which has been placed outside of verses --
      are flagged elsewhere as an error.) */
 
-  private fun deleteNotesFromHeadersInChapter (chapterNode: Node)
+  private fun deleteNotesFromHeadersInChapter (chapterNode: Node): List<Node>
   {
 //    if (Dbg.d(chapterNode.parentNode["osisID"]!!, "Song"))
 //      Dbg.d(chapterNode.ownerDocument)
-    return
+    return listOf()
 //    var doneSomething = false
 //    var inVerse = false
 //    val allNodes = chapterNode.getAllNodesBelow()
@@ -195,21 +293,6 @@ class Osis_FinalInternalOsisTidier
 //      //Dbg.d(chapterNode.ownerDocument)
 //    }
   }
-
-
-  /****************************************************************************/
-  private fun deleteTemporaryNodes (rootNode: Node)
-  {
-    rootNode.getAllNodesBelow().forEach {
-      if (NodeMarker.hasDeleteMe(it))
-        Dom.deleteNode(it)
-    }
-  }
-
-
-  /****************************************************************************/
-  private fun deleteTemporaryAttributes (nodeList: List<Node>) = nodeList.filter { "_t" in it }.forEach { deleteTemporaryAttributes(it) }
-  private fun deleteTemporaryAttributes (node: Node) = Dom.getAttributes(node).filter{ it.key.startsWith("_") }.forEach { attr -> Dom.deleteAttribute(node, attr.key ) }
 
 
   /****************************************************************************/
@@ -462,8 +545,11 @@ class Osis_FinalInternalOsisTidier
       if (null != it.nextSibling && null != it.nextSibling.nextSibling && "l" == Dom.getNodeName(it.nextSibling.nextSibling))
         Dom.deleteNode(it.nextSibling.nextSibling)
 
+      val wrapperNonCanonical = Dom.createNode(it.ownerDocument, "<_X_nonCanonical/>") // The other changes here would turn this from canonical to non-canonical.  We need to have it still regarded as non-canonical until validation is complete.
+      Dom.insertNodeBefore(it, wrapperNonCanonical)
+
       val wrapperPara = Dom.createNode(it.ownerDocument, "<p/>")
-      Dom.insertNodeBefore(it, wrapperPara)
+      wrapperNonCanonical.appendChild(wrapperPara)
 
       val wrapperHi = Dom.createNode(it.ownerDocument, "<hi type='bold'/>")
       wrapperPara.appendChild(wrapperHi)
@@ -507,50 +593,45 @@ class Osis_FinalInternalOsisTidier
 
   private fun handleVersesWithinSpanTypeTags (rootNode: Node) // DON'T CHANGE THIS TO WORK USE A PREDEFINED NODE LIST -- NEED TO DETERMINE IT FROM THE STRUCTURE AS IT NOW STANDS.
   {
-    val nodesOfInterest = rootNode.findNodesByName("hi")
-    handleVersesWithinSpanTypeTags(nodesOfInterest)
+    val nodesForInvestigation: MutableList<Pair<Node, Node>> = mutableListOf()
+    rootNode.findNodesByName("verse").forEach {
+      val iffyAncestor = Dom.getAncestorNamed(it, "hi") ?: return@forEach
+      nodesForInvestigation.add(Pair(iffyAncestor, it))
+    }
+
+    //Dbg.d("\n+++ Found: ${nodesForInvestigation.size}")
+
+    nodesForInvestigation.forEach(::handleVersesWithinSpanTypeTag)
   }
 
 
   /****************************************************************************/
-  private fun handleVersesWithinSpanTypeTags (nodeList: List<Node>): Boolean
+  private fun handleVersesWithinSpanTypeTag (details: Pair<Node, Node>)
   {
-    var res = false
+    val (spanTypeNode, originalVerseNode) = details
+    val newNode = Dom.cloneNode(spanTypeNode.ownerDocument, spanTypeNode) // Create a deep copy of the spanning node, and insert it before the node itself.
+    Dom.insertNodeBefore(spanTypeNode, newNode)
 
-    fun doIt (originalNode: Node)
-    {
-      val originalVerseTag = originalNode.findNodeByName("verse", false) ?: return // Nothing to do unless the tag contains a verse tag,
-      res = true
+    // We now want to delete everything _after_ the verse tag in the cloned node, and everything _before_ it in the original.
+    val newVerseTag = newNode.findNodeByName("verse", false)
+    var doDelete = false
+    for (n in newNode.getAllNodesBelow())
+      if (n === newVerseTag)
+        doDelete = true
+      else if (doDelete)
+        try { Dom.deleteNode(n) } catch (_: Exception) {}
 
-      val newNode = Dom.cloneNode(originalNode.ownerDocument, originalNode) // Create a deep copy of the node, and insert it before the node itself.
-      Dom.insertNodeBefore(originalNode, newNode)
+    for (n in spanTypeNode.getAllNodesBelow())
+      if (n === originalVerseNode)
+        break
+      else
+        try { Dom.deleteNode(n) } catch (_: Exception) {}
 
-      // We now want to delete everything _after_ the verse tag in the cloned node, and everything _before_ it in the original.
-      val newVerseTag = newNode.findNodeByName("verse", false)
-      var doDelete = false
-      for (n in newNode.getAllNodesBelow())
-        if (n === newVerseTag)
-          doDelete = true
-        else if (doDelete)
-          try { Dom.deleteNode(n) } catch (_: Exception) {}
+    if (!spanTypeNode.hasChildNodes())
+      Dom.deleteNode(spanTypeNode)
 
-
-      for (n in originalNode.getAllNodesBelow())
-        if (n === originalVerseTag)
-          break
-        else
-          try { Dom.deleteNode(n) } catch (_: Exception) {}
-
-      if (!originalNode.hasChildNodes())
-        Dom.deleteNode(originalNode)
-
-      if (!newNode.hasChildNodes())
-        Dom.deleteNode(newNode)
-    }
-
-
-    nodeList.forEach(::doIt)
-    return res
+    if (!newNode.hasChildNodes())
+      Dom.deleteNode(newNode)
   }
 
 
@@ -561,39 +642,32 @@ class Osis_FinalInternalOsisTidier
   private fun handleVerticalWhitespace (rootNode: Node)
   {
     /**************************************************************************/
-    /* Remove whitespace following linebreaks.  The main purpose of this is to
-       avoid having newline characters after linebreaks, but there's no harm,
-       and possibly some advantage, in getting rid of all whitespace after
-       linebreaks. */
+    /* Remove whitespace before and after linebreaks.  The main purpose of this
+       is to avoid having newline characters after linebreaks, but there's no
+       harm, and possibly some advantage, in getting rid of all whitespace
+       adjacent to linebreaks.  Also 'l' after a linebreak seems to give too
+       much vertical whitespace, to ditch that too. */
 
-    val lbNodes = Dom.findNodesByName(rootNode, "lb", false)
-    lbNodes.forEach {
-      val sibling = it.nextSibling
-      if (null != sibling && Dom.isWhitespace((sibling)))
+    Dom.findNodesByName(rootNode, "lb", false).forEach {
+      var sibling = it.nextSibling
+      while (true)
+      {
+        if (null == sibling) break
+        if (!Dom.isWhitespace(sibling) && "l" != Dom.getNodeName(sibling)) break
+        val siblingSibling = sibling.nextSibling
         Dom.deleteNode(sibling)
-    }
+        sibling = siblingSibling
+      }
 
-
-
-    /**************************************************************************/
-    /* Remove whitespace before linebreaks.  Similar argument to above. */
-
-    lbNodes.forEach {
-      val sibling = it.previousSibling
-      if (null != sibling && Dom.isWhitespace((sibling)))
+      sibling = it.previousSibling
+      while (true)
+      {
+        if (null == sibling) break
+        if (!Dom.isWhitespace(sibling)) break
+        val siblingSibling = sibling.previousSibling
         Dom.deleteNode(sibling)
-    }
-
-
-
-    /**************************************************************************/
-    /* There seems to be some evidence that linebreak followed by 'l' gives too
-       much vertical whitespace, so ditch the linebreaks in such cases. */
-
-    lbNodes.forEach {
-      val sibling = it.nextSibling
-      if (null != sibling && "l" == Dom.getNodeName(sibling))
-        Dom.deleteNode(it)
+        sibling = siblingSibling
+      }
     }
 
 
@@ -618,10 +692,10 @@ class Osis_FinalInternalOsisTidier
      If this happens, then at best the note doesn't appear, and at worst
      it messes up the positioning of the verse number. */
 
-  private fun moveNotesInsideVerses (rootNode: Node)
+  private fun moveNotesInsideVerses (doc: Document)
   {
     /**************************************************************************/
-    val allNodes = rootNode.getAllNodesBelow()
+    val allNodes = doc.getAllNodesBelow()
 
 
 
@@ -637,7 +711,7 @@ class Osis_FinalInternalOsisTidier
     allNodes
       .filter { "note" == Dom.getNodeName(it) }
       .forEach {
-        val marker = Dom.createNode(rootNode.ownerDocument, "<X_NoteEnd/>")
+        val marker = Dom.createNode(doc, "<X_NoteEnd/>")
         it.appendChild(marker)
         markers.add(marker)
       }

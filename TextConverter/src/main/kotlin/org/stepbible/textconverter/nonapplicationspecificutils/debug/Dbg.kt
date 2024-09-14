@@ -16,6 +16,7 @@ import java.nio.file.Paths
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
+import kotlin.system.measureTimeMillis
 
 
 /******************************************************************************/
@@ -118,6 +119,23 @@ object Dbg
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+  * Reports the amount of time in ms taken to execute a given piece of code.
+  *
+  * @param label Label to explain what the figure refers to.
+  * @param fn Code being timed.
+  */
+
+  inline fun measureTime (label: String, fn: () -> Unit)
+  {
+    val time = measureTimeMillis(fn)
+    d("\n+++ $label: $time\n")
+  }
+
+
+
 
   /****************************************************************************/
   /****************************************************************************/

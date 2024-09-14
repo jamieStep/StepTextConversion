@@ -114,7 +114,6 @@ object IssueAndInformationRecorder
 
 
   /****************************************************************************/
-  fun setDivergencesFromSelectedVersificationScheme (text: String) { m_RunFeatures.DivergencesFromSelectedVersificationScheme = text }
   fun setChangedFootnoteCalloutsToHouseStyle ()                    { m_RunFeatures.ChangedFootnoteCalloutsToHouseStyle = true }
   fun setConversionTimeReversification ()                          { m_RunFeatures.ReversificationType = "Conversion time" }
   fun setRuntimeReversification ()                                 { m_RunFeatures.ReversificationType = "Run time" }
@@ -592,7 +591,6 @@ object IssueAndInformationRecorder
     var ReversificationDataIssues: MutableList<String>? = null
     var ReversificationMappings: List<String>? = null
     var AcceptedReversificationRows: List<String>? = null
-    var DivergencesFromSelectedVersificationScheme = "N/A -- applies to open access modules only."
 
 
 
@@ -686,11 +684,10 @@ object IssueAndInformationRecorder
 
   private fun populateRunFeatures ()
   {
-    val isOsisRun = "osis" == ConfigData["stepOriginData"]
     m_RunFeatures.ModuleName = ConfigData["stepModuleName"]!!
     m_RunFeatures.RunStartedFrom = ConfigData["stepOriginData"]!!
     m_RunFeatures.VersificationScheme = ConfigData["stepVersificationScheme"]!!
-    m_RunFeatures.ReversificationType = if (isOsisRun) "ReversificationType and related parameters are not meaningful when starting from OSIS" else ConfigData["stepReversificationType"]!!
+    m_RunFeatures.ReversificationType = ConfigData["stepReversificationType"]!!
 
 
 

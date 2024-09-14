@@ -206,13 +206,13 @@ object VersionAndHistoryHandler
     /**************************************************************************/
     /* We now need the most recent previous revision.  This is the latest of
        any third party Sword config data, or anything we can obtain from the
-       history.  If none of these works, then we take it as 0.0. */
+       history.  If none of these works, then we take it as 1.0. */
 
     val previousVersion: String
     run {
-      val fallbackValue = "0.0"
+      val fallbackValue = "1.0"
       val versionFromThirdPartyVersionStatement = getVersionFromThirdPartyConfig()
-      val versionFromHistory = if (m_HistoryLines.isEmpty()) "0.0" else m_HistoryLines[0].stepVersion
+      val versionFromHistory = if (m_HistoryLines.isEmpty()) "1.0" else m_HistoryLines[0].stepVersion
       val maxKey = maxOf(makeKey(fallbackValue), makeKey(versionFromThirdPartyVersionStatement), makeKey(versionFromHistory))
       val x = maxKey.split('.')
       previousVersion = x[0].toInt().toString() + "." + x[1].toInt().toString()
@@ -221,18 +221,18 @@ object VersionAndHistoryHandler
 
 
     /**************************************************************************/
+    /* If this is a major revision, then we take the previous highest revision,
+       throw away any dot part, and then add one to the whole number part.
+
+       If this is a minor revision, we just up the dot part by one. */
+
     val newStepVersion = getNewVersion(previousVersion, m_HistoryLines)
     ConfigData["stepTextRevision"] = newStepVersion
 
 
 
     /**************************************************************************/
-    val text =
-       when (m_ReleaseType)
-       {
-         ReleaseType.Major -> "SupplierReason: " + ConfigData.get("stepSupplierUpdateReason", "N/A") + "; StepReason: ${ConfigData.get("stepStepUpdateReason", "Supplier updated source documents.")}"
-         else -> "StepReason: " + (ConfigData["stepStepUpdateReason"] ?: "Unspecified.")
-       }
+    val text ="SupplierReason: " + ConfigData.get("stepSupplierUpdateReason", "N/A") + "; StepReason: ${ConfigData.get("stepStepUpdateReason", "N/A")}"
 
 
 

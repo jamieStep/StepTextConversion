@@ -48,14 +48,14 @@ object Builder_Master: Builder()
       /*************************************************************************/
       /* Common or not otherwise available. */
 
-      CommandLineProcessor.CommandLineOption("conversionTimeReversification", 0, "Use to force conversion time restructuring (you will seldom want this).", null, null, false),
+      //CommandLineProcessor.CommandLineOption("conversionTimeReversification", 0, "Use to force conversion time restructuring (you will seldom want this).", null, null, false),
       CommandLineProcessor.CommandLineOption("forceUpIssue", 0, "Normally up-issue is suppressed if the update reason has not changed.  This lets you override this.", null, null, false),
       CommandLineProcessor.CommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true),
       CommandLineProcessor.CommandLineOption("releaseType", 1, "Type of release.", listOf("Major", "Minor"), null, true, forceLc = true),
-      CommandLineProcessor.CommandLineOption("startProcessFromOsis", 0, "Forces the processing to start from OSIS rather than VL / USX.", null, null, false),
       CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "The reason STEP is making the update (if the supplier has also supplied a reason, this will appear too).", null, null, false),
       CommandLineProcessor.CommandLineOption("supplierUpdateReason", 1, "The reason STEP is making the update (if the supplier has also supplied a reason, this will appear too).", null, null, false),
       CommandLineProcessor.CommandLineOption("targetAudience", 1, "If it is possible to build both STEP-only and public version, selects the one required.", listOf("Public", "Step"), null, false, forceLc = true),
+      CommandLineProcessor.CommandLineOption("useExistingOsis", 1, "Ignore other inputs and start from OSIS.  asInput => Use existing OSIS as input but change it as necessary; asOutput => Use existing OSIS unchanged as far as possible.", listOf("asInput", "asOutput"), null, false),
 
 
 
@@ -174,9 +174,15 @@ object Builder_Master: Builder()
   /****************************************************************************/
   private fun runProcess ()
   {
-    val targetAudience = ConfigData["stepTargetAudience"] ?: "step"
+    when (ConfigData["stepTargetAudience"])
+    {
+      "P" -> ConfigData["stepReadableTargetAudience"] = "Public"
+      "S" -> ConfigData["stepReadableTargetAudience"] = "STEPBible"
+      else -> ConfigData["stepReadableTargetAudience"] = "STEPBible"
+    }
+
     Dbg.reportProgress(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-    Dbg.reportProgress(">>>>>>>>>> Start of processing for ${ConfigData["stepModuleName"]} ($targetAudience).")
+    Dbg.reportProgress(">>>>>>>>>> Start of processing for ${ConfigData["stepModuleName"]} (${ConfigData["stepReadableTargetAudience"]} use).")
     deleteLogFilesEtc()
     StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
     getSpecialBuilders().forEach { it.process() } // These aren't supposed to generate a repository package, and will exit after processing if they are invoked.

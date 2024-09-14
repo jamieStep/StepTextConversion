@@ -91,7 +91,7 @@ fun main (args: Array<String>)
     val moduleName = ConfigData["stepModuleName"] ?: "UNKNOWN MODULE"
     val targetAudience = ConfigData["stepTargetAudience"] ?: "step"
     if (0 != returnCode) Dbg.reportProgress("\n!!!!! RUN FAILED: " + args.joinToString(" "))
-    Dbg.reportProgress("\n>>>>>>>>>> End of processing for $moduleName ($targetAudience).")
+    Dbg.reportProgress("\n>>>>>>>>>> End of processing for $moduleName (${ConfigData["stepReadableTargetAudience"]} use).")
     Dbg.reportProgress(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
     Logger.sortLogFile()

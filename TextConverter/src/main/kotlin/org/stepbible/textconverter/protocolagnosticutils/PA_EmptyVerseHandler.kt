@@ -7,6 +7,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.util.*
@@ -15,6 +16,67 @@ import java.util.*
 /**
  * Provides a uniform place for handling the creation of and / or labelling
  * of empty verses.
+ *
+ * It may be useful to understand how this works and how it fits in with the
+ * reversification processing.
+ *
+ * We must not have missing verses at the start of chapters or anywhere in
+ * the middle.  (Missing verses at the *ends* of chapters are ok, and I
+ * have been asked not to do anything to make good such verses.)
+ *
+ * In theory reversification is capable of supply certain missing verses.
+ * This, however, is academic -- there is no guarantee that we will use
+ * reversification on a given text, and even if we did, we are no longer
+ * planning to have the reversification processing carry out the kind of
+ * physical restructuring of the text which would be necessary.
+ *
+ * We therefore fill in empty verses entirely independently of
+ * reversification.  And we may do this for a number of reasons:
+ *
+ * - We may expand elisions out into the individual verses which make
+ *   them up.
+ *
+ * - We may process tables.  This is really just a special case of
+ *   elision processing, because the verses which make up the table
+ *   are just converted into a giant elision.
+ *
+ * - We may need to create new verses because even after all of this
+ *   processing, holes remain in the text.
+ *
+ *
+ * In addition to actually creating the verses, we may or may not need to
+ * annotate them with footnotes.  In the general case, we know in advance
+ * what the footnote should be.  But the reversification data contains
+ * details of a few verses which are commonly missing, for which it holds
+ * special footnotes, and we need to use those in preference where they
+ * are relevant.
+ *
+ *
+ * There are vaguely similar issues with empty verses.  Here at least we
+ * are dealing with only one case -- that where the
+ *
+ * Missing verses may appear in the text for a number of reasons.
+ *
+ * - They may have been empty in the raw text.
+ *
+ * - We may have added them when expanding out elisions.
+ *
+ * - We may have created them when processing tables (which itself entails
+ *   turning the table into a large elision, and therefore, from the point of
+ *   view of handling empty verses, is not so very different from a plain
+ *   vanilla elision).
+ *
+ * - We may have created them because there were holes in the text.  (Things do
+ *   not work if verses are missing at the start of chapters or in the middle
+ *   of them, so we have to fill in the blanks.  Verses missing at the *ends*
+ *   of chapters are not a problem, and I have been asked not to fill in
+ *   these trailing verses.)
+ *
+ *
+ * The reversification data itself interacts with this in two ways -- one at
+ * present purely theoretical, and one actual.
+ *
+ * In theory, the reversification data may recognise the need to supply an
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -27,10 +89,10 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
      * 'Empty' verses are usually given some standard markup like, say, a dash,
      *  to indicate that they have not been left empty accidentally.
      *  Unfortunately, something (osis2mod? STEPBible?) suppresses adjacent
-     *  verses whose content is too similar.  With a view to getting around this,
-     *  I include here a stylised comment before the text node.  Later in the
-     *  processing (ie at the point where I am outputting this in the form we
-     *  will actually use to generate the module) I make use of this to avoid
+     *  verses whose content is too similar.  With a view to getting around
+     *  this, I include here a stylised comment before the text node.  Later in
+     *  the processing (ie at the point where I am outputting this in the form
+     *  we will actually use to generate the module) I make use of this to avoid
      *  this unwanted suppression.
      *
      *  @param dataCollection Data to be processed.
@@ -73,39 +135,10 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
   /**
   * Creates an empty verse for use in an elision.  (In fact, the verse does
   * actually have content -- it carries a marker (a dash, for instance) to help
-  * make it clear that it has been left empty deliberately.)  Note that no
-  * footnote is added to the verse: if we are expanding out elisions, we add
-  * a footnote only to the 'master' verse.
-  *
-  * This is called both for verses which were empty in the raw text and for
-  * empty verse created as a result of processing tables.  If they need to
-  * be differentiated, it is down to the caller to organise that.
-  *
-  * @param doc Verse which is marked as being an elision.
-  * @param refKey Identifies the scripture reference for the new verse.
-  * @param wantEid Determines whether we return an eid.
-  * @param reasonMarker Text to explain why the empty verse has been created.
-  */
-
-  fun createEmptyVerse (doc: Document, refKey: RefKey, wantEid: Boolean, reasonMarker: String): List<Node>
-  {
-    val sid = m_FileProtocol.makeVerseSidNode(doc, Pair(refKey, null))
-    val content = createEmptyContent(doc, m_Content_EmptyVerse)
-    NodeMarker.setEmptyVerseType(sid, reasonMarker) // May be overwritten with a more specific value by the caller.
-    return if (wantEid)
-      listOf(sid, content, m_FileProtocol.makeVerseEidNode(doc, Pair(refKey, null)))
-    else
-      listOf(sid, content)
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Creates an empty verse for use in an elision.  (In fact, the verse does
-  * actually have content -- it carries a marker (a dash, for instance) to help
-  * make it clear that it has been left empty deliberately.)  Note that no
-  * footnote is added to the verse: if we are expanding out elisions, we add
-  * a footnote only to the 'master' verse.
+  * make it clear that it has been left empty deliberately.)  NOTE THAT NO
+  * FOOTNOTE IS ADDED TO THE VERSE: IF WE ARE EXPANDING OUT ELISIONS, WE ADD
+  * A FOOTNOTE ONLY TO THE 'MASTER' VERSE (and, depending upon permissions,
+  * perhaps not even there).
   *
   * This is called both for verses which were empty in the raw text and for
   * empty verse created as a result of processing tables.  If they need to
@@ -174,6 +207,9 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
    * @param sidRefKey sid to be used in new verse.
    *
    * @return A pair containing the sid and eid nodes.
+   *
+   * <span class='important'>DON'T BOTHER TOO MUCH ABOUT THIS -- IT IS USED ONLY
+   * BY CONVERSION-TIME REVERSIFICATION, AND WE DON'T INTEND TO USE THAT.</span>
    */
 
   fun createEmptyVerseForReversification (insertBefore: Node, sidRefKey: RefKey): Pair<Node, Node>
@@ -232,9 +268,10 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
 
   private fun annotateVerseWhichWasEmptyInRawText (sid: Node)
   {
+    val footnoteText = AnticipatedIfEmptyDetails.getFootnote(m_FileProtocol.getSidAsRefKey(sid)) ?: TranslatableFixedText.stringFormat(Language.Vernacular, "V_emptyContentFootnote_verseEmptyInThisTranslation")
     val sidAsRefKey = m_FileProtocol.readRef(sid[m_FileProtocol.attrName_verseSid()]!!).toRefKey()
     IssueAndInformationRecorder.verseEmptyInRawText(sidAsRefKey)
-    val footnoteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToVerseWhichWasEmptyInRawText, sid.ownerDocument, sidAsRefKey, ReversificationData.getFootnoteForEmptyVerses(sidAsRefKey), caller = null)
+    val footnoteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToVerseWhichWasEmptyInRawText, sid.ownerDocument, sidAsRefKey, footnoteText, caller = null)
     if (null == footnoteNode)
     {
       NodeMarker.setEmptyVerseType(sid, "emptyInRawText")
@@ -263,13 +300,15 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
   {
     Logger.info(refKey, "Created verse which was missing from the original text.")
 
+    val footnoteText = AnticipatedIfEmptyDetails.getFootnote(refKey) ?: TranslatableFixedText.stringFormat(Language.Vernacular, "V_emptyContentFootnote_verseWasMissing")
+
     val start = m_FileProtocol.makeVerseSidNode(rootNode.ownerDocument, Pair(refKey, null))
     val end   = m_FileProtocol.makeVerseEidNode(rootNode.ownerDocument, Pair(refKey, null))
     NodeMarker.setEmptyVerseType(start, "missingInRawText")
 
     val ib = insertBefore ?: Dom.createNode(rootNode.ownerDocument,"<TempNode/>")
     Dom.insertNodeBefore(ib, start)
-    val footnoteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToVerseGeneratedToFillHoles, rootNode.ownerDocument, refKey, ReversificationData.getFootnoteForNewlyCreatedVerses(refKey))
+    val footnoteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToVerseGeneratedToFillHoles, rootNode.ownerDocument, refKey, footnoteText)
     if (null != footnoteNode) Dom.insertNodeBefore(ib, footnoteNode)
     Dom.insertNodeBefore(ib, createEmptyContent(rootNode.ownerDocument, m_Content_MissingVerse))
     Dom.insertNodeBefore(ib, end)

@@ -160,32 +160,6 @@ object PA_RuntimeReversificationHandler: PA()
 
 
   /****************************************************************************/
-  private fun createEmptyVerses (rootNode: Node)
-  {
-    /**************************************************************************/
-    fun createEmptyVerse (row: ReversificationDataRow)
-    {
-      val thisRefKey = row.standardRefAsRefKey
-      val nodes = m_EmptyVerseHandler.createEmptyVerse(rootNode.ownerDocument, thisRefKey, true, "Samification")
-      val insertBefore = Dom.findNodesByAttributeName(rootNode, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid())
-         .find { m_FileProtocol.readRef(it[m_FileProtocol.attrName_verseSid()]!!).toRefKey() > thisRefKey }!!
-      Dom.insertNodeBefore(insertBefore, nodes[0])
-      Dom.insertNodeBefore(insertBefore, nodes[1])
-      m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(nodes[0], row, 'R')
-    }
-
-
-
-    /**************************************************************************/
-    val reversificationRows = m_AllReversificationRows[m_FileProtocol.getBookNumber(rootNode)] ?: return
-    reversificationRows
-      .filter { 0 != (it.processingFlags and ReversificationData.C_CreateIfNecessary) } // Rows which might result in the creation of a verse.
-      .filter { !m_DataCollection.getBibleStructure().verseExistsWithOrWithoutSubverses(it.standardRefAsRefKey) }  // Rows corresponding to verses which don't exist.
-      .forEach(::createEmptyVerse)
-  }
-
-
-  /****************************************************************************/
   /* Converts the reversification footnote flavour required on this run to an
      integer value against which we can check each row to see if its footnote
      is required or not. */

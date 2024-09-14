@@ -62,6 +62,7 @@ class PA_ElementArchiver
   * Restores the elements which we archived earlier.
   *
   * @param dataCollection Data to be processed.
+  * @return List of restored elements in the target document.
   */
 
   fun restoreElements (dataCollection: X_DataCollection) = restoreElements(dataCollection.getDocument())
@@ -120,21 +121,24 @@ class PA_ElementArchiver
 
 
   /****************************************************************************/
-  private fun restoreElements (targetDoc: Document)
+  private fun restoreElements (targetDoc: Document): List<Node>
   {
+    val res: MutableList<Node> = mutableListOf()
     val placeHolders = targetDoc.getAllNodesBelow().filter { "X_Index" in it } // List of all placeholders in the document into which we are reinstating things.
     Dbg.withReportProgressSub("Reinstating archived nodes if any.") {
-      restoreElements(targetDoc, placeHolders)
+      res.addAll(restoreElements(targetDoc, placeHolders))
     }
+
+    return res
   }
 
 
   /****************************************************************************/
-  private fun restoreElements (targetDoc: Document, placeHolders: List<Node>)
+  private fun restoreElements (targetDoc: Document, placeHolders: List<Node>): List<Node>
   {
     /**************************************************************************/
     if (placeHolders.isEmpty())
-      return
+      return listOf()
 
 
 
@@ -142,6 +146,7 @@ class PA_ElementArchiver
     /* Map index attribute of nodes in the saved document to the nodes
        themselves. */
 
+    val res: MutableList<Node> = mutableListOf()
     val map: MutableMap<Int, Node> = mutableMapOf()
     Dom.getChildren(m_Archive.documentElement). forEach { map[it["X_index"]!!.toInt()] = it }
 
@@ -164,8 +169,11 @@ class PA_ElementArchiver
         newNode -= "X_index"                                               // Remove the X_index attribute.
         Dom.insertNodeBefore(it, newNode)                                  // Position the cloned node before the place-holder.
         Dom.deleteNode(it)                                                 // And delete the place-holder.
+        res += newNode
       }
     }
+
+    return res
   }
 
 

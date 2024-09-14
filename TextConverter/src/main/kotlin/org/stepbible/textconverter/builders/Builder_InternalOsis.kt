@@ -114,7 +114,7 @@ object Builder_InternalOsis: Builder()
     PA_VerseEndRemover.process(InternalOsisDataCollection); x()          // Removes verse-ends.
     PA_TableHandler.process(InternalOsisDataCollection); x()             // Collapses tables which span verses into a single elided verse.
     PA_ElisionHandler.process(InternalOsisDataCollection); x()           // Expands elisions out into individual verses.
-    
+
     
     
     /**************************************************************************/
@@ -186,10 +186,11 @@ object Builder_InternalOsis: Builder()
       .markVersesWhichWereEmptyInTheRawText(InternalOsisDataCollection); x()
 
     PA_TextAnalyser.process(InternalOsisDataCollection)  ; x()                             // Gather up information which might be useful to someone administering texts.
-    Osis_FinalInternalOsisTidier().process(InternalOsisDataCollection); x()                // Ad hoc last minute tidying.
+    Osis_FinalInternalOsisTidier().process(InternalOsisDataCollection, archiver); x()      // Ad hoc last minute tidying.
     Osis_BasicTweaker.unprocess(InternalOsisDataCollection); x()                           // Undoes any temporary tweaks which were applied to make the overall processing easier.
     PA_FinalValidator.process(InternalOsisDataCollection); x()                             // Final health checks.
-
+    Osis_FinalInternalOsisTidier().removeTemporaryCanonicityMarkers(InternalOsisDataCollection); x()
+                                                                                           // Remove any temporary markers which were introduced specifically to help validation work.
 
 
     /**************************************************************************/
@@ -216,7 +217,7 @@ object Builder_InternalOsis: Builder()
 
        I said there were two options.  The other ignores all the work done thus
        far in creating an internal DOM representation, and simply assumes (where
-       starting from OSIS) that the original OSIS was ok).  I have added this
+       starting from OSIS) that the original OSIS was ok.  I have added this
        option because with ESV we do start from OSIS, and there was some concern
        that we had a version of ESV which was apparently working, and didn't
        want to risk introducing errors into it.
@@ -239,7 +240,7 @@ object Builder_InternalOsis: Builder()
 
     ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(InternalOsisDataCollection.getBookNumbers())
 
-    if (ConfigData.getAsBoolean("stepStartProcessFromOsis", "no") && ConfigData["stepOriginData"] == "osis")
+    if ("asoutput" == ConfigData["stepUseExistingOsis"]?.lowercase())
     {
       Dbg.reportProgress("\nWriting version of OSIS needed for use with osis2mod.")
       StepFileUtils.copyFile(FileLocations.getInternalOsisFilePath(), FileLocations.getInputOsisFilePath()!!)
@@ -247,8 +248,7 @@ object Builder_InternalOsis: Builder()
     else
     {
       // Note that PA_CalloutStandardiser and Osis_CrossReferenceChecker can't be used earlier, because we archived all of the notes nodes and removed then from the document.
-      Dbg.reportProgress("\nRestoring notes nodes etc and writing version of OSIS needed for use with osis2mod.")
-      archiver.restoreElements(InternalOsisDataCollection)
+      Dbg.reportProgress("\nWriting version of OSIS needed for use with osis2mod.")
       PA_CalloutStandardiser.process(InternalOsisDataCollection); x() // Force callouts to be in house style, assuming that's what we want.
       Osis_CrossReferenceChecker.process(InternalOsisDataCollection)
       Dom.outputDomAsXml(InternalOsisDataCollection.getDocument(),

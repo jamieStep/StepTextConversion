@@ -279,7 +279,7 @@ object Builder_Module: Builder()
     else if (warnings > 0)
       System.err.println("CAUTION: osis2mod.exe reports $warnings warning(s).  Please check the OSIS log file to see if the conversion to Sword format has worked.")
     else if (!hadSuccess)
-      System.err.println("CAUTION: osis2mod.exe has not reported success.  Please check the OSIS log file to see if the conversion to Sword format has worked.")
+      System.err.println("CAUTION: osis2mod.exe has not reported success (return code was ${ConfigData["stepOsis2modReturnCode"]!!}.  Please check the OSIS log file to see if the conversion to Sword format has worked.")
 
     return hadSuccess
   }
@@ -481,7 +481,6 @@ object PackageContentHandler
 
       if (line.startsWith("#!")) continue // Internal comment only.
       line = line.split("#!")[0].trim() // Remove any trailing comment.
-      line = line.replace("@reversificationMap", m_ReversificationMap) // Could use ordinary dollar expansions here, but it's too slow because the map is so big.
       writer.write(ConfigData.expandReferences(line, false)!!)
       writer.write("\n")
     }
@@ -509,22 +508,45 @@ XXX_AddedValue_XXX
 
 
     /**************************************************************************/
-    val texts: MutableList<String> = ArrayList()
-    if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) texts.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Morphology"))
-    if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) texts.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Strongs"))
-    if ("P" == ConfigData["stepTargetAudience"]) texts.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Reversification"))
+    val changesAppliedByStep: MutableList<String> = ArrayList()
+    if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) changesAppliedByStep.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Morphology"))
+    if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) changesAppliedByStep.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Strongs"))
+    if ("crosswire" == ConfigData["stepOsis2modType"]!!)
+    { // Both English and vernacular forms of text, assuming they differ.
+      val english = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
+      val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
+      changesAppliedByStep.add(vernacular)
+      if (vernacular != english) changesAppliedByStep.add(english)
+    }
 
 
 
     /**************************************************************************/
     var text = ""
-    if (texts.isNotEmpty())
+    if (changesAppliedByStep.isNotEmpty())
     {
-      text = TranslatableFixedText.stringFormatWithLookup("V_addedValue_AddedValue") + " "
-      text += java.lang.String.join("; ", texts)
+      text = TranslatableFixedText.stringFormatWithLookup("V_addedValue_AddedValue")
+      var s =  changesAppliedByStep.joinToString(separator = "¬&nbsp;&nbsp;")
+      if (s.isNotEmpty()) s= "¬&nbsp;&nbsp;$s"
+      text += s
     }
 
-    if (text.isNotEmpty()) text = "¬¬$text"
+
+
+    /**************************************************************************/
+    val acknowledgementOfDerivedWork = ConfigData["stepWordingForDerivedWorkStipulatedByTextSupplier"]
+    if (null != acknowledgementOfDerivedWork) text += "¬¬$acknowledgementOfDerivedWork"
+
+
+
+    /**************************************************************************/
+    if (null != ConfigData["stepManuallySuppliedDetailsOfChangesApplied"])
+      text += (if (text.isEmpty()) "" else "¬") + ConfigData["stepManuallySuppliedDetailsOfChangesApplied"]
+
+
+
+    /**************************************************************************/
+    if (text.isNotEmpty()) text = "¬$text"
     stepInfo = stepInfo.replace("XXX_AddedValue_XXX", text)
 
 
@@ -567,22 +589,6 @@ XXX_AddedValue_XXX
 
     textSource = "$textSource $ownerOrganisation $textCombinedId"
     ConfigData.put("stepTextSource", textSource, true)
-
-
-
-    /**************************************************************************/
-    /* For the sake of clarity and uniformity, ideally I'd save the
-       reversificationMap as stepReversificationMap, and then simply go
-       with the standard facilities for handling expansions.  Unfortunately,
-       if I work that way, the reversificationMap will be expanded out into the
-       element which contains it, and that element is then subject to @(...)
-       expansion, which, on something as large as the reversificationMap can be,
-       is horrendously slow.  So instead I simply arrange for
-       stepReversificationMap to example to a special marker, and then
-       I replace that marker with the designated value later. */
-
-    m_ReversificationMap = swordConfigFileHandler_getReversificationMap(ReversificationData.getAllMoveGroups())
-    ConfigData.put("stepReversificationMap", "@reversificationMap", true)
 
 
 
@@ -631,72 +637,71 @@ XXX_AddedValue_XXX
   }
 
 
-  /****************************************************************************/
-  /* More than a little complicated.  We have a list of mappings giving the
-     source and standard verses which have been involved in reversification.
-
-     We want to convert this into a list of mappings for display to the user.
-     However, this could be a very _long_ list, and therefore perhaps unwieldy,
-     so ideally it would be good to coalesce runs of verses into a single
-     mapping.
-
-     First off, there's no absolute guarantee this is ordered by ref, so we
-     need to reorder based on the 'from' ref.
-
-     Then I need to run though the list looking for adjacent references (which
-     must be adjacent in terms of both the source and the standard reference);
-     and then finally I need to output this lot in human-readable form.
-  */
-
-  private fun swordConfigFileHandler_getReversificationMap (data: List<ReversificationMoveGroup>): String
-  {
-    /**************************************************************************/
-    if (data.isEmpty()) return ""
-
-
-
-    /**************************************************************************/
-    fun comparator (a: ReversificationMoveGroup, b: ReversificationMoveGroup): Int
-    {
-      var res = a.sourceRange.getLowAsRefKey().compareTo(b.sourceRange.getLowAsRefKey())
-      if (0 == res) res = a.standardRange.getLowAsRefKey().compareTo(b.standardRange.getLowAsRefKey())
-      return res
-    }
-
-    val mappings = data.sortedWith(::comparator)
-
-
-
-    /**************************************************************************/
-    val res = StringBuilder(100000)
-    res.append("<p>The changes are as follows:<table>")
-
-
-
-    /**************************************************************************/
-    /* Convert the data into an HTML table, taking into account the fact that
-       a value of zero for the verse number corresponds to a canonical title. */
-
-    mappings.forEach {
-      var sourceRef   = if (it.sourceRange  .isSingleReference()) it.sourceRange  .getLowAsRef().toString() else it.sourceRange  .toString()
-      var standardRef = if (it.standardRange.isSingleReference()) it.standardRange.getLowAsRef().toString() else it.standardRange.toString()
-      sourceRef   = sourceRef.  replace(":0", ":title")
-      standardRef = standardRef.replace(":0", ":title")
-      res.append("<tr><td>")
-      res.append(sourceRef)
-      res.append("</td><td>&#x25b6; ")
-      res.append(standardRef)
-      res.append("</td></tr>")
-    }
-
-
-
-    /**************************************************************************/
-    res.append("</table>")
-    return res.toString()
-  }
-
-
-  /****************************************************************************/
-  private var m_ReversificationMap = ""
+//  /****************************************************************************/
+//  /* More than a little complicated.  We have a list of mappings giving the
+//     source and standard verses which have been involved in reversification.
+//
+//     We want to convert this into a list of mappings for display to the user.
+//     However, this could be a very _long_ list, and therefore perhaps unwieldy,
+//     so ideally it would be good to coalesce runs of verses into a single
+//     mapping.
+//
+//     First off, there's no absolute guarantee this is ordered by ref, so we
+//     need to reorder based on the 'from' ref.
+//
+//     Then I need to run though the list looking for adjacent references (which
+//     must be adjacent in terms of both the source and the standard reference);
+//     and then finally I need to output this lot in human-readable form.
+//
+//     I'm not sure about this -- may really be relevant only with conversion-time
+//     processing.
+//  */
+//
+//  private fun swordConfigFileHandler_getReversificationMap (data: List<ReversificationMoveGroup>): String
+//  {
+//    /**************************************************************************/
+//    if (data.isEmpty()) return ""
+//
+//
+//
+//    /**************************************************************************/
+//    fun comparator (a: ReversificationMoveGroup, b: ReversificationMoveGroup): Int
+//    {
+//      var res = a.sourceRange.getLowAsRefKey().compareTo(b.sourceRange.getLowAsRefKey())
+//      if (0 == res) res = a.standardRange.getLowAsRefKey().compareTo(b.standardRange.getLowAsRefKey())
+//      return res
+//    }
+//
+//    val mappings = data.sortedWith(::comparator)
+//
+//
+//
+//    /**************************************************************************/
+//    val res = StringBuilder(100000)
+//    res.append("<p>The changes are as follows:<table>")
+//
+//
+//
+//    /**************************************************************************/
+//    /* Convert the data into an HTML table, taking into account the fact that
+//       a value of zero for the verse number corresponds to a canonical title. */
+//
+//    mappings.forEach {
+//      var sourceRef   = if (it.sourceRange  .isSingleReference()) it.sourceRange  .getLowAsRef().toString() else it.sourceRange  .toString()
+//      var standardRef = if (it.standardRange.isSingleReference()) it.standardRange.getLowAsRef().toString() else it.standardRange.toString()
+//      sourceRef   = sourceRef.  replace(":0", ":title")
+//      standardRef = standardRef.replace(":0", ":title")
+//      res.append("<tr><td>")
+//      res.append(sourceRef)
+//      res.append("</td><td>&#x25b6; ")
+//      res.append(standardRef)
+//      res.append("</td></tr>")
+//    }
+//
+//
+//
+//    /**************************************************************************/
+//    res.append("</table>")
+//    return res.toString()
+//  }
 }

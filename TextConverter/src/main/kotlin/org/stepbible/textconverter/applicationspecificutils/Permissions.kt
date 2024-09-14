@@ -99,7 +99,7 @@ object Permissions
   {
     return when (type)
     {
-      RestructureAction.ConversionTimeReversification -> !m_IsCopyrightText
+      RestructureAction.ConversionTimeReversification -> false // !m_IsCopyrightText // I've retained the code for this, but I we no longer expect to use conversion-time reversification.
       RestructureAction.ExpandElisions                -> true
       RestructureAction.ConvertTablesToElisions       -> true
     }

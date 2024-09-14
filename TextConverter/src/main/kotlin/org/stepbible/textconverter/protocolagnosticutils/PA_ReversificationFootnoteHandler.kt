@@ -5,6 +5,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.Transl
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Node
 
 /******************************************************************************/
@@ -62,6 +63,12 @@ class PA_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
   fun addFootnoteAndSourceVerseDetailsToVerse (sidNode: Node, row: ReversificationDataRow, reversificationType: Char)
   {
     /**************************************************************************/
+    if ('C' == reversificationType)
+      throw StepExceptionWithStackTraceAbandonRun("Not expecting to handle conversion-time reversification.")
+
+
+
+    /**************************************************************************/
      val calloutDetails = row.calloutDetails
      val document = sidNode.ownerDocument
      val res: MutableList<Node> = mutableListOf()
@@ -72,13 +79,13 @@ class PA_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
     /* We want the footnote only for certain combinations of reversification
        type (conversion-time vs runtime) and notes level (basic vs academic). */
 
-    val wantFootnote = if (C_ReversificationNotesLevel_None == m_ReversificationNotesLevel) false else ReversificationData.outputFootnote(row, reversificationType, if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A')
+    val wantFootnote = if (C_ReversificationNotesLevel_None == m_ReversificationNotesLevel) false else ReversificationData.wantFootnote(row, reversificationType, if (C_ReversificationNotesLevel_Basic == m_ReversificationNotesLevel) 'B' else 'A')
 
 
 
     /**************************************************************************/
     /* We want to include the alternative (source) verse details in visible
-       form in the output only on non-conversion-time runs, and even then only
+       form in the output only on conversion-time runs, and even then only
        if we are generating a footnote. */
 
     val wantVisibleSourceVerseDetails = wantFootnote && 'C' == reversificationType

@@ -877,6 +877,7 @@ object Osis_FileProtocol: X_FileProtocol()
     m_TagDetails["#document"] = TagDescriptor('N', 'N') //
     m_TagDetails["#text"] = TagDescriptor('?', 'N') // Text.  EndVerseInteraction is Skip for empty tags, and from context for others.
     m_TagDetails["#comment"] = TagDescriptor('N', 'N') // Comment.
+    m_TagDetails["_X_nonCanonical"] = TagDescriptor('N', 'N') // Temporary used to force content to be seen as non-canonical.
     m_TagDetails["_X_reversificationCalloutData"] = TagDescriptor('N', 'N') // Used to mark data used as callouts.
     m_TagDetails["_X_reversificationCalloutSourceRefCollection"] = TagDescriptor('N', 'N') // Callout data.
 
@@ -1555,6 +1556,7 @@ object Usx_FileProtocol: X_FileProtocol()
     m_TagDetails["_X_introductionBlock:book"] = TagDescriptor('N', 'N') // Encapsulates introductory material.
     m_TagDetails["_X_introductionBlock:chapter"] = TagDescriptor('N', 'N') // Encapsulates introductory material.
 
+    m_TagDetails["_X_nonCanonical"] = TagDescriptor('N', 'N') // Temporary used to force content to be seen as non-canonical.
     m_TagDetails["_X_reversificationCalloutData"] = TagDescriptor('N', 'N') // Encapsulates callout information in reversified text.
     m_TagDetails["_X_reversificationMoveOriginalText"] = TagDescriptor('N', 'N') // Optionally on cross-chapter Moves we leave the original source in place (but changed, roughly speaking, to subverses of the preceding non-moved verse).  This enables us to ignore this text when carrying out validation.
     m_TagDetails["_X_reversificationSourceVerse"] = TagDescriptor('N', 'N') // A char-level marker which encloses an indicator of the source verse for a reversification action.

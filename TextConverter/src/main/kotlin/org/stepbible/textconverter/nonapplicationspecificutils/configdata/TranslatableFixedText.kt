@@ -171,6 +171,36 @@ object TranslatableFixedText
   }
 
 
+  /****************************************************************************/
+  /**
+   * Creates a formatted string, but supports an awful lot of extensions en
+   * route to that point.  For more details, see StepStringFormatter.  The
+   * basic string is obtained by looking up a key.
+   *
+   * @param key The keys for the translatable portion of the message.
+   * @param otherBits Elements to be filled into string.
+   *
+   * @return Formatted string.
+   */
+
+  fun stringFormatWithLookupEnglish (key: String, vararg otherBits: Any): String
+  {
+    /**************************************************************************/
+    /* Force references to come out in English, not in the vernacular --
+       vernacular references in an English text will look odd. */
+
+    var text = m_English[key]!!.replace("%refV", "%refU")
+    if (text.isEmpty()) return ""
+
+
+
+    /**************************************************************************/
+    val res = StepStringFormatter.format(text, if (1 == otherBits.size) otherBits[0] else convertNameAndValueListToMap(*otherBits))
+    IssueAndInformationRecorder.addTranslatableText(key, text) // Record details of which translation keys are used.
+    return res
+  }
+
+
 
 
 

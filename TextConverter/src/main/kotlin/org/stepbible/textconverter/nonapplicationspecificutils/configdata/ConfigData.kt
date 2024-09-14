@@ -997,26 +997,6 @@ object ConfigData
 
     /****************************************************************************/
     /**
-    * When making changes to derived works, we may be required to add details of
-    * the changes we have made.  The present method adds a given text.  It is
-    * intended to cope with the possibility that different parts of the processing
-    * may need to add to this collection.
-    *
-    * @param text
-    */
-
-    fun addDetailsOfDerivedWork (text: String)
-    {
-      var s = get("stepChangesMadeByUsInDerivedWork", "")
-      if (text in s) return
-      s += "  $text"
-      delete("stepChangesMadeByUsInDerivedWork")
-      put("stepChangesMadeByUsInDerivedWork", s, false)
-    }
-
-
-    /****************************************************************************/
-    /**
     * For use only by ConfigDataSupport.  We need to know if something is the
     * name of an existing configuration parameter or not, but we don't want to
     * look the thing up 'properly' and risk it being calculated and assigned a
@@ -1199,7 +1179,7 @@ object ConfigData
     */
 
     fun getPreprocessingRegexes () =
-      if (getAsBoolean("startProcessFromOsis", "no"))
+      if ("osis" == ConfigData["stepOriginData"])
         m_RegexesForForcedOsisPreprocessing
       else
         m_RegexesForGeneralInputPreprocessing
@@ -1214,7 +1194,7 @@ object ConfigData
     */
 
     fun getPreprocessingXslt () =
-      if (getAsBoolean("startProcessFromOsis", "no"))
+      if ("osis" == ConfigData["stepOriginData"])
         get("stepXsltStylesheetForForcedOsisPreprocessing")
       else
         get("stepXsltStylesheetForGeneralInputPreprocessing")
@@ -2505,13 +2485,6 @@ object ConfigData
   /* Various methods which calculate config data on demand. */
 
   private val m_DataCalculators: Map<String, () -> String?> = mapOf(
-    "stepAcknowledgmentOfDerivedWork" to
-      { if (get("stepChangesMadeByUsInDerivedWork", "").isEmpty())
-          ""
-        else
-          "<p>" + getInternal("stepChangesMadeByUsInDerivedWork", false)!! + " " + get("stepWordingForDerivedWorkStipulatedByTextSupplier", "")
-      },
-
     "stepExtendedLanguageCode" to
       {
         val languageCode = get("stepLanguageCode2Char")!!

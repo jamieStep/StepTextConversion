@@ -82,7 +82,7 @@ object Usx_OsisCreator
 
     /**************************************************************************/
     ExternalOsisDoc = Dom.getDocument(outputFilePath, retainComments = true)
-    NodeMarker.deleteAllMarkers(ExternalOsisDoc)  // Make sure we didn't leave any temporary markers lying around.
+    NodeMarker.deleteAllMarkers()  // Make sure we didn't leave any temporary markers lying around.
   }
 
 

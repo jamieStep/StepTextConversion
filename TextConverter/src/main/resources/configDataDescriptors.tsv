@@ -18,12 +18,10 @@
 
 step_TMP_garbage	Used internally only.	Calculated	Calculated			Calculated	Calculated
 stepAbout	Used as part of the information on the copyright page, via the About parameter in the Sword config file.  Calculated from various other elements.	Calculated	Calculated			Calculated	Calculated
-stepAcknowledgmentOfDerivedWork	??? An intermediate calculated value, which returns a formatted version stepChangesMadeByUsInDerivedWork if the latter is defined, and otherwise an empty string.	Calculated	Calculated			Calculated	Calculated
 stepAddedValueLinesForSwordConfigComments	???	Calculated	Calculated			Calculated	Calculated
 stepAdminLine	Used to hold the line of admin data which is stored as a comment near the top of Sword config files.	Calculated	Calculated			Calculated	Calculated
 stepBookList	Used to obtain a list of book names and abbreviations from an external metadata source where available.	Calculated	Calculated			Calculated	Calculated
 stepBuildTimestamp	Present date / time in specific format.	Calculated	Calculated			Calculated	Calculated
-stepChangesMadeByUsInDerivedWork	???	Calculated	Calculated			Calculated	Calculated
 stepConversionInfo	Used to hold complex information about the conversion processing	Calculated	Calculated			Calculated	Calculated
 stepDataPath	Holds a relative data path pointing to data within the module zip file.	Calculated	Calculated			Calculated	Calculated
 stepEncrypted	Set to Yes on copyright texts.	Calculated	Calculated			Calculated	Calculated
@@ -142,11 +140,12 @@ stepCheckInputsAgainstPreviousModule	Checks the SHA-256 of the present inputs ag
 stepEvaluateSchemesOnly	If yes, the run simply scores the text against the schemes available in Crosswire's osis2mod.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunIfNecessary
 stepHelp	Requests the version of the converter JAR.	UserSpecified	Optional	Not requested		CommandLine	PerRunIfNecessary
 stepRootFolder	The root folder holding data for the module.	UserSpecified	MandatoryAlways		Path.	CommandLine	PerTextAlways
-stepStartProcessFromOsis	Used where we have non-OSIS inputs available, but nonetheless want to start from the current OSIS.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerTextIfDesired	Where alternative inputs are available, you will be warned if you opt to use OSIS and the other inputs are more up to date.
+
 stepStepUpdateReason	Text to be recorded on History line to explain why the module has been generated (used when the new module has been occasioned by STEP itself).	UserSpecified	Optional	"Unspecified"	Arbitrary string.	CommandLine	PerRunIfNecessary
 stepSupplierUpdateReason	Where the new module is being produced because the supplier has changed things, details of those changes.	UserSpecified	Optional		Arbitrary string.	CommandLine	PerRunIfNecessary
 stepSwordSoftwareDefaultVersion	The default version of Sword software needed to render the module.  There is a default value for this, so you shouldn't normally need to set it.	UserSpecified	MandatoryAlways	1.7.2	Arbitrary string.	File	IfCrosswireInternalsChange
 stepTargetAudience	Determines whether we are building a STEP-internal or a public facing module.	UserSpecified	MandatorySometimes	Calculated	Public / Step.	CommandLine	PerRunIfNecessary	Needed only where the root folder name ends in PublicStep, indicating that both forms of module can be built from the same source data.  In this case, says which should be built.
+stepUseExistingOsis	Says to start the process from OSIS rather than any other input.	UserSpecified	Optional		AsInput / AsOutput	CommandLine	PerRunIfNecessary	Where alternative inputs are available, you will be warned if you opt to use OSIS and the other inputs are more up to date.
 stepVersion	Requests the version of the converter JAR.	UserSpecified	Optional	Not requested		CommandLine	PerRunIfNecessary
 
 
@@ -186,7 +185,6 @@ stepExternalDataPath_TaggingMatJhn	Path from which to obtain reversification dat
 
 
 # Standard values.
-stepStandardWordingForDerivedWorkWeHaveChangedVersification	Standard wording explaining we may have changed the versification structure.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
 stepStepDidTheSwordConversion	Standard text explaining that we did the conversion.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
 stepThanks	Standard rubric thanking people who have supplied texts.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
 stepThanksToCrosswire	Standard text thanking Crosswire for their software etc.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever

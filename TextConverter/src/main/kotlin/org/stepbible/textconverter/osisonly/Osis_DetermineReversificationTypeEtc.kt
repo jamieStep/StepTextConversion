@@ -143,7 +143,7 @@ object Osis_DetermineReversificationTypeEtc
 
       "conversiontime" ->
       {
-        throw StepExceptionBase("I'm not actually sure we can do conversion-time reversification: we can't convert to Crosswire NRSV, because that's not NRSV-compliant.")
+        throw StepExceptionBase("Conversion-time reversification probably no longer wanted.  If we reinstate this, note we can't convert to Crosswire NRSV, because that's not NRSV-compliant.")
       }
     }
 

@@ -25,7 +25,8 @@ import kotlin.collections.HashMap
 /******************************************************************************/
 /**
  * <span class='important'>This code has never been used and almost certainly
- * is nowhere near working.</span>
+ * is nowhere near working.  At the time of writing we don't actually
+  * anticipate reviving it.</span>
  *
  * Handles the flavour of reversification which entails restructuring the text
  * during the conversion process.
@@ -53,7 +54,7 @@ import kotlin.collections.HashMap
  * @author ARA "Jamie" Jamieson
  */
 
-open class PA_ConversionTimeReversification: PA()
+open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -62,6 +63,10 @@ open class PA_ConversionTimeReversification: PA()
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  fun isRunnable () = !this::class.simpleName!!.startsWith("PROBABLY_NOT")
+
 
   /****************************************************************************/
   /**
@@ -1294,7 +1299,7 @@ open class PA_ConversionTimeReversification: PA()
 
 
 /******************************************************************************/
-class Osis_ConversiontimeReversification: PA_ConversionTimeReversification()
+class PROBABLY_NOT_WORKING_Osis_ConversiontimeReversification: PROBABLY_NOT_WORKING_PA_ConversionTimeReversification()
 {
   /****************************************************************************/
   /* I assume here that we have a single document covering the whole of the
@@ -1336,7 +1341,7 @@ class Osis_ConversiontimeReversification: PA_ConversionTimeReversification()
 
 
 /******************************************************************************/
-class Usx_ConversiontimeReversificationHandler: PA_ConversionTimeReversification()
+class PROBABLY_NOT_WORKING_Usx_ConversiontimeReversificationHandler: PROBABLY_NOT_WORKING_PA_ConversionTimeReversification()
 {
   /****************************************************************************/
   override fun makeBook (bookNo: Int)

@@ -52,33 +52,17 @@ object NodeMarker
 
   /****************************************************************************/
   /**
-  * Deletes all the temporary markers from the given node.  This can be called
-  * on *any* node, under a book node or outside of a book.
-  *
-  * @param node
+  * Deletes all the temporary markers.
   *
   */
 
-  fun deleteAllMarkers (node: Node) = Dom.getAttributes(node).keys.filter { it.startsWith("_") }.forEach { Dom.deleteAttribute(node, it) }
-
-
-
-  /****************************************************************************/
-  /**
-  * Deletes all the temporary markers.  NOTE THAT THIS LOOKS *ONLY* AT BOOK
-  * NODES AND THE THINGS BELOW THEM.
-  *
-  * @param dataCollection: Contains the document / root nodes to be dealt with.
-  *
-  */
-
-  fun deleteAllMarkers (dataCollection: X_DataCollection)
+  fun deleteAllMarkers ()
   {
-    dataCollection.getRootNodes().forEach { rootNode ->
-      deleteAllMarkers(rootNode)
-      Dom.getAllNodesBelow(rootNode).filter { null != it["_t"] }.forEach { deleteAllMarkers(it) }
+    m_MarkedNodes.forEach { node ->
+      try { Dom.getAttributes(node).keys.filter { it.startsWith("_") }.forEach { Dom.deleteAttribute(node, it) } } catch (_: Exception) {}
     }
   }
+
 
 
   /****************************************************************************/
@@ -135,14 +119,6 @@ object NodeMarker
   fun hasMasterForElisionOfLength (node: Node) = null != getMasterForElisionOfLength(node)
   fun setMasterForElisionOfLength (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_MasterForElisionOfLength, value); return this }
   private const val C_MasterForElisionOfLength = "_MasterForElisionOfLength"
-
-
-  /****************************************************************************/
-  fun deleteDeleteMe (node: Node) = deleteTemporaryAttribute(node, C_CrossBoundaryMarkup)
-  fun getDeleteMe (node: Node) = node[C_DeleteMe]
-  fun hasDeleteMe (node: Node) = null != getDeleteMe(node)
-  fun setDeleteMe (node: Node): NodeMarker { addTemporaryAttribute(node, C_DeleteMe, "y"); return this }
-  private const val C_DeleteMe = "_DeleteMe"
 
 
   /****************************************************************************/
@@ -241,6 +217,7 @@ object NodeMarker
   {
     node[attributeName] = attributeValue
     node["_t"] = "y"
+    m_MarkedNodes.add(node)
   }
 
 
@@ -251,4 +228,8 @@ object NodeMarker
     if (!Dom.getAttributes(node).any { it.key.startsWith("_") })
       node -= "_t"
   }
+
+
+  /****************************************************************************/
+  private val m_MarkedNodes: MutableList<Node> = mutableListOf()
 }

@@ -73,7 +73,7 @@ object Builder_InitialOsisRepresentationOfInputs: Builder()
     val haveVl   = FileLocations.getInputVlFilesExist()
 
     val res =
-      if (ConfigData.getAsBoolean("stepStartProcessFromOsis", "no"))
+      if (null != ConfigData["stepUseExistingOsis"])
       {
         if (!haveOsis) throw StepExceptionBase("Requested to start from OSIS, but no OSIS exists.")
         Pair("osis", Builder_InitialOsisRepresentationFromOsis)
