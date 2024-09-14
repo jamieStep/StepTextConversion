@@ -223,7 +223,6 @@ object VersionAndHistoryHandler
     /**************************************************************************/
     /* If this is a major revision, then we take the previous highest revision,
        throw away any dot part, and then add one to the whole number part.
-
        If this is a minor revision, we just up the dot part by one. */
 
     val newStepVersion = getNewVersion(previousVersion, m_HistoryLines)
@@ -241,7 +240,7 @@ object VersionAndHistoryHandler
     val newText = text.lowercase()
     if (newText in prevText && !ConfigData.getAsBoolean("stepForceUpIssue", "no"))
     {
-      ConfigData["stepTextRevision"] = previousVersion.split('.').joinToString("."){ it.toInt().toString() } // Need to keep the old revision number.
+      ConfigData["stepTextRevision"] = newStepVersion.split('.').joinToString("."){ it.toInt().toString() } // Need to keep the old revision number.
       ConfigData["stepUpIssued"] = "n"
       return
     }
@@ -425,7 +424,7 @@ object VersionAndHistoryHandler
   {
     val revisedText = text + (if (text.endsWith('.')) "" else ".")
     val revisedModuleDate = if (moduleDate.isBlank()) "" else "$moduleDate "
-    return "History_$stepVersion=$revisedModuleDate[SupplierVersion: ${supplierVersion.ifEmpty { "Unknown" }}] $revisedText"
+    return "History_$stepVersion=$revisedModuleDate[SupplierVersion: ${supplierVersion.ifEmpty { "N/A" }}] $revisedText"
   }
 
 

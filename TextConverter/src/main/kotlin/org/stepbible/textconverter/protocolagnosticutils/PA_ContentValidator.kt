@@ -384,7 +384,7 @@ object PA_ContentValidator
 
   private fun checkReversifiedCanonicalTitles_VersesToTitle (owningStandardRefKey: RefKey, rows: List<ReversificationDataRow>)
   {
-    Dbg.d(owningStandardRefKey.toString())
+    //Dbg.d(owningStandardRefKey.toString())
     fun getInputRefKeyUsingSourceField   (row: ReversificationDataRow): RefKey { return row.sourceRefAsRefKey }
 
     val paraNew = m_BookAnatomyNew.m_chapterSidToPsalmTitle[owningStandardRefKey]!!

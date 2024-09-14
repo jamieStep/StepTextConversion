@@ -219,7 +219,7 @@ object PA_FinalValidator: PA()
 
 
     /**************************************************************************/
-    m_Subverses.forEach { Logger.warning( it.toRefKey(), "Subverse.") }
+    m_Subverses.forEach { Logger.error( it.toRefKey(), "Subverse.") }
     m_MismatchedEidsAndSids.forEach { Logger.error( it.getFirstAsRefKey(),"Mismatched sid/eid near here.") }
     m_MissingVerses.forEach { outOfOrderReporter(it.toRefKey(), "Missing / out of order verse.") }
     m_MissingSubverses.forEach { outOfOrderReporter(it.toRefKey(), "Missing / out of order subverse.") }

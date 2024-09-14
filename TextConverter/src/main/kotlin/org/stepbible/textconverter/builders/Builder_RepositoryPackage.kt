@@ -32,8 +32,8 @@ object Builder_RepositoryPackage: Builder()
 
   /****************************************************************************/
   override fun commandLineOptions () = listOf(
-    CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "Where a new release is being made because of changes _we_ have decided are needed, the reason for the update.  Must have either or both of this and supplierUpdateReason.", null, "Unknown", false),
-    CommandLineProcessor.CommandLineOption("supplierUpdateReason", 1, "Where a new release is being made because of changes the _supplier_ has made, the reason they gave for their changes.  Must have either or both of this and stepUpdateReason.", null, "Unknown", false)
+    CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "Where a new release is being made because of changes _we_ have decided are needed, the reason for the update.  Must have either or both of this and supplierUpdateReason.", null, "N/A", false),
+    CommandLineProcessor.CommandLineOption("supplierUpdateReason", 1, "Where a new release is being made because of changes the _supplier_ has made, the reason they gave for their changes.  Must have either or both of this and stepUpdateReason.", null, "N/A", false)
   )
 
 

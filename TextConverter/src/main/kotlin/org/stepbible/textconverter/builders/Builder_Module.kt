@@ -44,7 +44,7 @@ object Builder_Module: Builder()
   /****************************************************************************/
   override fun commandLineOptions () = listOf(
     CommandLineProcessor.CommandLineOption("manualOsis2mod", 0, "Run osis2mod manually (useful where osis2mod fails to complete under control of the converter).", null, "n", false),
-    CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "A reason for creating this version of the module (required only if runType is Release and the release arises because of changes to the converter as opposed to a new release from he text suppliers).", null, "Unknown", false)
+    CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "A reason for creating this version of the module (required only if runType is Release and the release arises because of changes to the converter as opposed to a new release from the text suppliers).", null, null, false)
   )
 
 
