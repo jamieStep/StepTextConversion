@@ -79,6 +79,7 @@ object Builder_RepositoryPackage: Builder()
                                FileLocations.getTextFeaturesFolderPath(),
                                FileLocations.getSwordZipFilePath()).filterNotNull()
     Zip.createZipFile(zipPath, 9, null, inputs)
+    StepFileUtils.deleteFile(FileLocations.getSharedConfigZipFilePath()) // Don't need this any more, now that it's in the zip file.
   }
 
 
@@ -102,7 +103,7 @@ object Builder_RepositoryPackage: Builder()
   private fun createSharedConfigZip (): Boolean
   {
     val zipPath: String = FileLocations.getSharedConfigZipFilePath()
-    val inputs = if (null == FileLocations.getSharedConfigFolderPath()) mutableListOf() else mutableListOf(Paths.get(FileLocations.getSharedConfigFolderPath(), "_Common_").toString())
+    val inputs = mutableListOf(Paths.get(FileLocations.getSharedConfigFolderPath(), "_Common_").toString())
     inputs.addAll(ConfigData.getSharedConfigFolderPathAccesses())
     Zip.createZipFile(zipPath, 9, FileLocations.getSharedConfigFolderPath(), inputs)
     return inputs.isNotEmpty()

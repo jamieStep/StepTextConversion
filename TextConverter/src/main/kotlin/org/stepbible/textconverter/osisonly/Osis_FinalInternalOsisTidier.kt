@@ -170,14 +170,20 @@ class Osis_FinalInternalOsisTidier
 
         "hi" -> {
           if ("hi:acrostic" == m_FileProtocol.getExtendedNodeName(it))
+          {
             acrosticSpanTypeList.add(it)
+            IssueAndInformationRecorder.setHasAcrosticSpanTags()
+          }
         }
 
 
         "title" -> {
           titlesList.add(it)
           if ("title:acrostic" == m_FileProtocol.getExtendedNodeName(it))
+          {
             acrosticDivTypeList.add(it)
+            IssueAndInformationRecorder.setHasAcrosticDivTags()
+          }
         }
 
 

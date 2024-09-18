@@ -503,6 +503,27 @@ object StepFileUtils
   }
 
 
+  /****************************************************************************/
+  /**
+  * Returns the latest file date (in ms since the epoch) of any element in a
+  * given folder structure.
+  *
+  * @param folderPath Folder to examine.
+  * @return Most recent modification date.
+  */
+
+  fun latestFileDateInEntireStructure (folderPath: String): Long
+  {
+    var lastModified = -1L
+
+    File(folderPath).walkTopDown().forEach {
+      lastModified = maxOf(it.lastModified(), lastModified)
+    }
+
+    return lastModified
+  }
+
+
   /******************************************************************************/
   /**
    * Renames a file from fromName to toName.

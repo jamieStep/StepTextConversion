@@ -100,13 +100,13 @@ stepTextDirection	LTR, RTL or BiDi (currently we've never used BiDi).  May be sp
 
 
 # Preprocessing.
-stepRegexForForcedOsisPreprocessing	May occur multiple times.  Lines should be of the form 'stepRegexForForcedOsisPreprocessing=regex=>replacement'.  Each statement defines a modification to be applied to the OSIS before processing.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
-stepRegexForGeneralInputPreprocessing	May occur multiple times.  Lines should be of the form 'stepRegexForGeneralInputPreprocessing=regex=>replacement'.  Each statement defines a modification to be applied to the input data before processing.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
+stepPreprocessingRegexWhenStartingFromOsis	May occur multiple times.  Lines should be of the form 'stepPreprocessingRegexWhenStartingFromOsis=regex=>replacement'.  Each statement defines a modification to be applied to the input data before processing.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
+stepPreprocessingRegexWhenNotStartingFromOsis	May occur multiple times.  Lines should be of the form 'stepPreprocessingRegexWhenNotStartingFromOsis=regex=>replacement'.  Each statement defines a modification to be applied to the input data before processing.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
 stepSimplePreprocessTagModifications	A string of the form 'mapping | mapping | …' where each mapping looks like 'para:li4 -> para:li1' or  note -> specialNote to change a given _USX_ tag or tag and style attribute.  You can also specify eg tag:attr -> tag, to remove the attribute altogether.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
 stepVlCommentMarker	Used when processing VL to indicate how comments (if any) are marked in the VL text.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
 stepVlLineFormat	Regular expression which defines how lines in VL format should be parsed.   Needs to hold named capturing groups called bookAbbrev, chapter, verse and text.	UserSpecified	Optional		Regex.	File	PerTextIfNecessary
-stepXsltStylesheetForForcedOsisPreprocessing	An XSLT stylesheet used to pre-process the OSIS file where we are forcibly starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
-stepXsltStylesheetForGeneralInputPreprocessing	An XSLT stylesheet used to pre-process theinput data where where we are starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
+stepPreprocessingXsltStylesheetWhenStartingFromOsis	An XSLT stylesheet used to pre-process the OSIS file where we are starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
+stepPreprocessingXsltStylesheetWhenNotStartingFromOsis	An XSLT stylesheet used to pre-process theinput data where where we are not starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
 
 
 # Process control.

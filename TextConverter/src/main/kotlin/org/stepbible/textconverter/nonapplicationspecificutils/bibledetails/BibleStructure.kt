@@ -1375,15 +1375,27 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
           {
 //            Dbg.dCont(Dom.toString(it), "<verse osisID='Phil.1.16', sID='Phil.1.16'>")
 //            Dbg.dCont(Dom.toString(it), "<verse osisID='Phil.1.17', sID='Phil.1.17'>")
-            handleVerseSid(it, relevance.idAsString)
-            isElision = "-" in relevance.idAsString || NodeMarker.hasElisionType(it); verseCanonicalTextSize = 0; inVerse = true
+
+            if (RefBase.C_BackstopVerseNumber == m_FileProtocol.readRefCollection(relevance.idAsString).getLowAsRef().getV()) // Ignore dummy verses.
+              isElision = false
+            else
+            {
+              handleVerseSid(it, relevance.idAsString)
+              isElision = "-" in relevance.idAsString || NodeMarker.hasElisionType(it)
+            }
+
+            verseCanonicalTextSize = 0
+            inVerse = true
           }
 
 
           NodeRelevanceType.VerseEnd ->
           {
-            handleVerseEid(relevance.idAsString, if (isElision) C_ElementInElision else verseCanonicalTextSize)
-            isElision = false; inVerse = false
+            if (RefBase.C_BackstopVerseNumber != m_FileProtocol.readRefCollection(relevance.idAsString).getLowAsRef().getV()) // Ignore dummy verses.
+              handleVerseEid(relevance.idAsString, if (isElision) C_ElementInElision else verseCanonicalTextSize)
+
+            isElision = false
+            inVerse = false
           }
 
 

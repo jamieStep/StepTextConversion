@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.osisonly
 
+import org.stepbible.textconverter.applicationspecificutils.IssueAndInformationRecorder
 import org.stepbible.textconverter.applicationspecificutils.Permissions
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
@@ -103,6 +104,9 @@ object Osis_ChapterAndVerseStructurePreprocessor
       newChapterNode.appendChild(newVerseEidNode)
 
       Dom.insertNodeBefore(firstExistingChapterNode, newChapterNode)
+
+      IssueAndInformationRecorder.addChapterWhichWasMissingInTheRawText(newRef.toString())
+      if (null != footnoteNode) IssueAndInformationRecorder.addGeneratedFootnote(newRef.toString() + " (AddedChapter)")
     }
 
 

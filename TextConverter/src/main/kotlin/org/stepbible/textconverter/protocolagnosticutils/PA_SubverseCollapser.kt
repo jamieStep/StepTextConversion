@@ -41,7 +41,7 @@ object PA_SubverseCollapser: PA()
 
   fun process (dataCollection: X_DataCollection)
   {
-    if ("P" !in ConfigData["stepTargetAudience"]!!) return
+    if ("public" !in ConfigData["stepTargetAudience"]!!) return
     extractCommonInformation(dataCollection)
     Dbg.reportProgress("Handling subverses.")
     dataCollection.getRootNodes().forEach { rootNode -> Dom.findNodesByName(rootNode, m_FileProtocol.tagName_chapter(), false).forEach(::doChapter) }

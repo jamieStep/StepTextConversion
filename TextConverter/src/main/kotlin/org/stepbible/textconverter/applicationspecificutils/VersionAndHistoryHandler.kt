@@ -153,21 +153,27 @@ object VersionAndHistoryHandler
   /****************************************************************************/
   /**
   * Returns a list of history lines in order.  Can be called only after
-  * 'process' has been called.
+  * 'process' has been called.  This should be used only when setting up the
+  * Sword config file (where we want only those lines relevant to the present
+  * target audience).
   *
   * @return History lines.
   */
 
-  fun getHistoryLines (): List<String> = m_HistoryLines.map { it.toString() }
+  fun getHistoryLinesForThisAudience (): List<String>
+  {
+    val audience = "_${ConfigData["stepTargetAudience"]!!}"
+    return m_HistoryLinesForThisAudience.map { it.toString().replaceFirst(audience, "") }
+  }
 
 
   /****************************************************************************/
   /**
-  * Appends history lines to the main config file.  You can't call this until
+  * Appends history lines to the step.conf file.  You can't call this until
   * 'process' has been called.
   */
 
-  fun appendHistoryLinesToStepConfigFile ()
+  fun appendHistoryLinesForAllAudiencesToStepConfigFile ()
   {
     val nonHistoryLines =
       File(FileLocations.getStepConfigFilePath())
@@ -178,7 +184,8 @@ object VersionAndHistoryHandler
     val writer = File(FileLocations.getStepConfigFilePath()).bufferedWriter(Charsets.UTF_8) // Should default to UTF-8 anyway, but I have my doubts.
     nonHistoryLines.forEach { writer.write(it); writer.write("\n") }
     writer.write("\n")
-    m_HistoryLines.forEach { writer.write(it.toString()); writer.write("\n") }
+    m_HistoryLinesForThisAudience   .forEach { writer.write(it.toString()); writer.write("\n") }
+    m_HistoryLinesNotForThisAudience.forEach { writer.write(it.toString()); writer.write("\n") }
     writer.close()
   }
 
@@ -187,35 +194,57 @@ object VersionAndHistoryHandler
   fun process ()
   {
     /**************************************************************************/
-    /* Get a list of any existing history lines in descending version order,
-       along with the version number from the most recent history line, or 0.0
-       if there are no history lines. */
+    fun parseHistoryLines (keys: List<String>): MutableList<ParsedHistoryLine>
+    {
+      val res: MutableMap<String, ParsedHistoryLine> = mutableMapOf()
+      keys.forEach {
+        val x = parseHistoryLine("$it=" + ConfigData[it]!!)
+        res[x.stepVersionAsKey()] = x
+      }
 
-    /**************************************************************************/
-    /* Don't update history on evaluation runs. */
-
-    run {
-      val historyLinesFromStepConfig = getHistoryLinesFromConfigData()
-      val historyLinesFromThirdPartyConfig = getHistoryLinesFromThirdPartyConfig()
-      val combinedHistoryLines = (historyLinesFromStepConfig + historyLinesFromThirdPartyConfig) // If there are clashes, STEP config wins.
-      m_HistoryLines = combinedHistoryLines.keys.sortedDescending().map { combinedHistoryLines[it]!! } .toMutableList()
+      return res.keys.sortedDescending().map { res[it]!! } .toMutableList()
     }
 
 
 
     /**************************************************************************/
-    /* We now need the most recent previous revision.  This is the latest of
-       any third party Sword config data, or anything we can obtain from the
-       history.  If none of these works, then we take it as 1.0. */
+    /* Get the parsed history lines for this target audience, and also those
+       _not_ for this target audience. */
 
-    val previousVersion: String
+    val targetAudienceSelector = ConfigData["stepTargetAudience"]!!
+    val allHistoryLineKeys = ConfigData.getKeys().filter { it.startsWith("History_") }
+    m_HistoryLinesForThisAudience    = parseHistoryLines(allHistoryLineKeys.filter {  it.startsWith("History_$targetAudienceSelector") } )
+    m_HistoryLinesNotForThisAudience = parseHistoryLines(allHistoryLineKeys.filter { !it.startsWith("History_$targetAudienceSelector") } )
+
+
+
+    /**************************************************************************/
+    /* We now need the most recent previous revision.  This is taken from
+       history or else defaults to 1.0. */
+
+    val previousStepVersion: String
     run {
       val fallbackValue = "1.0"
-      val versionFromThirdPartyVersionStatement = getVersionFromThirdPartyConfig()
-      val versionFromHistory = if (m_HistoryLines.isEmpty()) "1.0" else m_HistoryLines[0].stepVersion
-      val maxKey = maxOf(makeKey(fallbackValue), makeKey(versionFromThirdPartyVersionStatement), makeKey(versionFromHistory))
+      val versionFromHistory = if (m_HistoryLinesForThisAudience.isEmpty()) "1.0" else m_HistoryLinesForThisAudience[0].stepVersion
+      val maxKey = maxOf(makeKey(fallbackValue), makeKey(versionFromHistory))
       val x = maxKey.split('.')
-      previousVersion = x[0].toInt().toString() + "." + x[1].toInt().toString()
+      previousStepVersion = x[0].toInt().toString() + "." + x[1].toInt().toString()
+    }
+
+
+
+    /**************************************************************************/
+    /* If the reason details haven't changed, then I assume we're simply having
+       another attempt at building the same module, and don't want to update
+       history and version -- unless we're forcing an up-issue. */
+
+    val newText ="SupplierReason: " + ConfigData.get("stepSupplierUpdateReason", "N/A") + "; StepReason: ${ConfigData.get("stepStepUpdateReason", "N/A")}."
+    val prevText = if (m_HistoryLinesForThisAudience.isEmpty()) "" else m_HistoryLinesForThisAudience[0].text
+    if (newText.lowercase() == prevText.lowercase() && !ConfigData.getAsBoolean("stepForceUpIssue", "no"))
+    {
+      ConfigData["stepTextRevision"] = previousStepVersion
+      ConfigData["stepUpIssued"] = "n"
+      return
     }
 
 
@@ -225,37 +254,17 @@ object VersionAndHistoryHandler
        throw away any dot part, and then add one to the whole number part.
        If this is a minor revision, we just up the dot part by one. */
 
-    val newStepVersion = getNewVersion(previousVersion, m_HistoryLines)
+    val newStepVersion = getNewVersion(previousStepVersion)
     ConfigData["stepTextRevision"] = newStepVersion
+    ConfigData["stepUpIssued"] = "y"
+    m_HistoryLinesForThisAudience.add(0, ParsedHistoryLine(targetAudienceSelector, newStepVersion, dateToString(LocalDate.now()), ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!!, newText))
 
 
 
     /**************************************************************************/
-    val text ="SupplierReason: " + ConfigData.get("stepSupplierUpdateReason", "N/A") + "; StepReason: ${ConfigData.get("stepStepUpdateReason", "N/A")}"
+    /* Delete. */
 
-
-
-    /**************************************************************************/
-    val prevText = if (m_HistoryLines.isEmpty()) "" else m_HistoryLines[0].text.lowercase()
-    val newText = text.lowercase()
-    if (newText in prevText && !ConfigData.getAsBoolean("stepForceUpIssue", "no"))
-    {
-      ConfigData["stepTextRevision"] = newStepVersion.split('.').joinToString("."){ it.toInt().toString() } // Need to keep the old revision number.
-      ConfigData["stepUpIssued"] = "n"
-      return
-    }
-    else
-      ConfigData["stepUpIssued"] = "y"
-
-
-
-    /**************************************************************************/
-    val today = dateToString(LocalDate.now())
-    ConfigData.getKeys().filter { it.startsWith("stepHistory_") }. forEach { ConfigData.delete(it) }
-    val newHistoryLine = makeHistoryLine(newStepVersion, today, ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!!, text)
-    ConfigData["stepHistory_$newStepVersion"] = newHistoryLine
-    m_HistoryLines.forEach { ConfigData["stepHistory_${it.stepVersion}"] = makeHistoryLine(it.stepVersion, it.moduleDate, it.supplierVersion, it.text)}
-    m_HistoryLines.add(0, ParsedHistoryLine(true, newStepVersion, today, ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!!, text))
+    ConfigData.getKeys().filter { it.startsWith("History_") }. forEach { ConfigData.delete(it) }
   }
 
 
@@ -271,104 +280,9 @@ object VersionAndHistoryHandler
   /****************************************************************************/
 
   /****************************************************************************/
-  /* This is for use only when taking OSIS as the input, when the assumption is
-     that you will have been given a ready-made Sword config file, and need to
-     update it and store the result into the Sword mods.d folder (which is
-     assumed to exist).  You can't call this until you have already called
-     'process'. */
-
-  private fun createUpdatedSwordConfigFileFromThirdPartyFile (evalVersionOnly: Boolean)
-  {
-    val x =
-      File(FileLocations.getThirdPartySwordConfigFilePath())
-        .readLines()
-        .dropLastWhile { it.trim().isEmpty() }
-        .map { it.trim() }
-
-    val linesToBeCarriedThrough =
-      x.filter { val lc = it.lowercase(); !lc.startsWith("history_") && !lc.startsWith("version")&& !lc.startsWith("datapath") }
-       .filter { !(it.startsWith('[') && it.endsWith(']')) }
-
-
-    val writer = File(FileLocations.getSwordConfigFilePath()).bufferedWriter()
-
-    writer.write("[${ConfigData["stepModuleName"]!!}]"); writer.write("\n")
-    writer.write("# " + ConfigData["stepAdminLine"]!!); writer.write("\n")
-    writer.write("DataPath=./modules/texts/ztext/${ConfigData["stepModuleName"]!!}/"); writer.write("\n")
-    linesToBeCarriedThrough.forEach { writer.write(it); writer.write("\n") }
-    writer.write("\n")
-
-    writer.write("Version=" + ConfigData["stepTextRevision"]!!); writer.write("\n")
-
-    if (!evalVersionOnly)
-       m_HistoryLines.forEach { writer.write(it.toString()); writer.write("\n") }
-
-    ConfigData.getCopyAsIsLines().forEach { writer.write(it); writer.write("\n") }
-
-    writer.close()
-  }
-
-
-  /****************************************************************************/
   private fun dateToString (moduleDate: LocalDate): String
   {
     return moduleDate.year.toString() + "-" + String.format("%02d", moduleDate.month.value) + "-" + String.format("%02d", moduleDate.dayOfMonth)
-  }
-
-
-  /****************************************************************************/
-  /* Looks for any history lines in the standard configuration data. */
-
-  private fun getHistoryLinesFromConfigData (): Map<String, ParsedHistoryLine>
-  {
-    val res: MutableMap<String, ParsedHistoryLine> = mutableMapOf()
-    ConfigData.getKeys().filter { it.startsWith("History_") }. forEach {
-      val x = parseHistoryLine("$it=" + ConfigData[it]!!)
-      res[x.stepVersionAsKey()] = x
-    }
-
-    return res
-  }
-
-
-  /****************************************************************************/
-  /* Looks for any history lines in any third party configuration file.  This
-     is basically of interest where we are taking OSIS as our original input,
-     and have therefore been supplied with a prebuilt Sword configuration file,
-     rather than constructing one ourselves. */
-
-  private fun getHistoryLinesFromThirdPartyConfig (): Map<String, ParsedHistoryLine>
-  {
-    val filePath = FileLocations.getThirdPartySwordConfigFilePath()
-
-    if (!File(filePath).exists())
-      return mapOf()
-
-    val res: MutableMap<String, ParsedHistoryLine> = mutableMapOf()
-    File(filePath)
-      .readLines()
-      .filter { it.trim().lowercase().startsWith("history_") }
-      .forEach { val x = parseHistoryLine(it); res[x.stepVersionAsKey()] = x }
-    return res
-  }
-
-
-  /****************************************************************************/
-  /* If a third party Sword config file exists and it contains a Version=,
-     return the version from that. */
-
-  private fun getVersionFromThirdPartyConfig (): String
-  {
-    val filePath = FileLocations.getThirdPartySwordConfigFilePath()
-    if (!File(filePath).exists())
-      return "0.0"
-
-    val line = File(filePath)
-      .readLines()
-      .firstOrNull { it.trim().lowercase().replace("\\s+".toRegex(), "").startsWith("version=") }
-      ?: return "0.0"
-
-    return line.split("=")[1].replace("\\s+".toRegex(), "")
   }
 
 
@@ -381,12 +295,8 @@ object VersionAndHistoryHandler
 
   private fun parseHistoryLine (line: String): ParsedHistoryLine
   {
-    var mc = C_HistoryLineStepPat.matchEntire(line)
-    if (null != mc)
-      return ParsedHistoryLine(true, mc.groups["stepVersion"]!!.value, mc.groups["date"]!!.value, mc.groups["supplierVersion"]!!.value, mc.groups["text"]!!.value)
-
-    mc = C_HistoryLineNonStepPat.matchEntire(line)!!
-    return ParsedHistoryLine(false, mc.groups["stepVersion"]!!.value, mc.groups["date"]?.value ?: "", "",(mc.groups["preDate"]!!.value + " " + mc.groups["postDate"]!!.value).replace("\\s+".toRegex(), " "))
+    val mc = C_HistoryLineStepPat.matchEntire(line)!!
+    return ParsedHistoryLine(mc.groups["targetAudience"]!!.value, mc.groups["stepVersion"]!!.value, mc.groups["date"]!!.value, mc.groups["supplierVersion"]!!.value, mc.groups["text"]!!.value)
   }
 
 
@@ -395,7 +305,7 @@ object VersionAndHistoryHandler
      history details should look like.  It then adds these details at the top
      of the collection, and also sets the stepTextRevision config parameter. */
 
-  private fun getNewVersion (previousStepVersion: String, historyLines: List<ParsedHistoryLine>): String
+  private fun getNewVersion (previousStepVersion: String): String
   {
     when (ConfigData["stepReleaseType"]!!.lowercase())
     {
@@ -420,11 +330,11 @@ object VersionAndHistoryHandler
 
 
   /****************************************************************************/
-  private fun makeHistoryLine (stepVersion: String, moduleDate: String, supplierVersion: String, text: String): String
+  private fun makeHistoryLine (targetAudience: String, stepVersion: String, moduleDate: String, supplierVersion: String, text: String): String
   {
     val revisedText = text + (if (text.endsWith('.')) "" else ".")
     val revisedModuleDate = if (moduleDate.isBlank()) "" else "$moduleDate "
-    return "History_$stepVersion=$revisedModuleDate[SupplierVersion: ${supplierVersion.ifEmpty { "N/A" }}] $revisedText"
+    return "History_${targetAudience}_$stepVersion=$revisedModuleDate[SupplierVersion: ${supplierVersion.ifEmpty { "N/A" }}] $revisedText"
   }
 
 
@@ -442,19 +352,18 @@ object VersionAndHistoryHandler
 
 
   /****************************************************************************/
-  private data class ParsedHistoryLine (val isStepFormat: Boolean, val stepVersion: String, val moduleDate: String, val supplierVersion: String, val text: String)
+  private data class ParsedHistoryLine (val targetAudience: String, val stepVersion: String, val moduleDate: String, val supplierVersion: String, var text: String)
   {
     fun stepVersionAsKey (): String { return makeKey(stepVersion) }
-    override fun toString (): String { return makeHistoryLine(stepVersion, moduleDate, supplierVersion, text) }
+    override fun toString (): String { return makeHistoryLine(targetAudience, stepVersion, moduleDate, supplierVersion, text) }
   }
 
 
 
   /****************************************************************************/
   private enum class ReleaseType { Major, Minor, Unknown }
-  private val C_HistoryLineNonStepPat = "(?i)History_(?<stepVersion>.*?)=(?<preDate>.*?)(?<date>\\d\\d\\d\\d-\\d\\d-\\d\\d)?(?<postDate>.*?)".toRegex()
-  private val C_HistoryLineStepPat = "(?i)History_(?<stepVersion>.*?)=(?<date>.*?)\\s+\\[SupplierVersion: (?<supplierVersion>.*?)]\\s*(?<text>.*)".toRegex()
+  private val C_HistoryLineStepPat = "(?i)History_(?<targetAudience>.*?)_(?<stepVersion>.*?)=(?<date>.*?)\\s+\\[SupplierVersion: (?<supplierVersion>.*?)]\\s*(?<text>.*)".toRegex()
   private var m_ReleaseType = ReleaseType.Unknown
-  private var m_HistoryLines: MutableList<ParsedHistoryLine> = mutableListOf()
-
+  private var m_HistoryLinesForThisAudience: MutableList<ParsedHistoryLine> = mutableListOf()
+  private var m_HistoryLinesNotForThisAudience: List<ParsedHistoryLine> = mutableListOf()
 }

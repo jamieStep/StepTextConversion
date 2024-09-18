@@ -173,6 +173,7 @@ object PA_CanonicalHeadingsHandler: PA()
     Dom.deleteAllAttributes(titleNode)
     titleNode["type"] = "italic"
     Dom.insertNodeBefore(titleNode, Dom.createNode(titleNode.ownerDocument, "<l level='1'/>")) // Add vertical whitespace after title.
+    IssueAndInformationRecorder.setReformattedTrailingCanonicalTitles()
 
 //    Dbg.d(titleNodesInChapter[0].ownerDocument)
 

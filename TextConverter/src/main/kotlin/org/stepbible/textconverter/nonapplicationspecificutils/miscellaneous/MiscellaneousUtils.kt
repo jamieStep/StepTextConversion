@@ -227,7 +227,7 @@ object MiscellaneousUtils
     }
     catch (_: Exception)
     {
-      "IDE_PSEUDO_JAR_NAME"
+      "TextConverter"
     }
   }
 

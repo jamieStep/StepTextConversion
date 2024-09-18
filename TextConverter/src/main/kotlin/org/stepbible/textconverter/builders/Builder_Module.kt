@@ -83,7 +83,7 @@ object Builder_Module: Builder()
     /**************************************************************************/
     PackageContentHandler.processPostOsis2mod()
     getFileSizeIndicator()
-    VersionAndHistoryHandler.appendHistoryLinesToStepConfigFile()
+    VersionAndHistoryHandler.appendHistoryLinesForAllAudiencesToStepConfigFile()
     createModuleZip()
   }
 
@@ -185,7 +185,8 @@ object Builder_Module: Builder()
        run under control of the converter (either as a JAR or from the IDE).
        It seems to be something to do with the fact that it is generating
        output to explain changes it has made; but then it always generates
-       _some_ output, if only to explain that it has succeeded.
+       _some_ output, if only to explain that it has succeeded, so I can't see
+       that generating explanatory output _can_ be the issue.
 
        Under these circumstances, the only workaround I can find is to copy
        the command line which I would like to run to the clipboard, and then
@@ -450,13 +451,13 @@ object PackageContentHandler
 
 
     /**************************************************************************/
+    VersionAndHistoryHandler.process()
     swordConfigFileHandler_addCalculatedValuesToMetadata()
 
 
 
     /**************************************************************************/
     val configFile = File(filePath)
-    VersionAndHistoryHandler.process()
     val lines = FileLocations.getInputStream(FileLocations.getSwordTemplateConfigFilePath())!!.bufferedReader().readLines()
     val writer = configFile.bufferedWriter()
 
@@ -475,7 +476,7 @@ object PackageContentHandler
 
       if ("\$includeChangeHistory".equals(line, ignoreCase = true))
       {
-        VersionAndHistoryHandler.getHistoryLines().forEach { writer.write(it); writer.write("\n") }
+        VersionAndHistoryHandler.getHistoryLinesForThisAudience().forEach { writer.write(it); writer.write("\n") }
         continue
       }
 
@@ -496,7 +497,7 @@ object PackageContentHandler
   {
     /**************************************************************************/
     var stepInfo = """¬<hr/>
-Sword module ${ConfigData["stepModuleName"]!!} created by the STEPBible project ${ConfigData["stepModuleCreationDate"]!!} (${ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""}).
+Sword module ${ConfigData["stepModuleName"]!!} Rev ${ConfigData["stepTextRevision"]!!} created by the STEPBible project ${ConfigData["stepModuleCreationDate"]!!} (${ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""}).
 ¬${ConfigData["stepThanks"]!!}
 XXX_AddedValue_XXX
 """

@@ -325,6 +325,6 @@ object ConfigDataSupport
     m_SpecialDescriptors["stepHistory_"] = Descriptor("History lines.", "Calculated", "Calculated", "", "", "", "Calculated", "")
     m_SpecialDescriptors["V_"] = Descriptor("Pieces of text, or fragments such as '[...]', of which a vernacular form may be desirable.", "UserSpecified", "MandatoryAlways", "Defaults to English version, which is built in to the converter.", "", "File", "PerhapsPerLanguage", "")
     m_SpecialDescriptors["stepDistributionLicence_"] = Descriptor("Standard rubrics describing the various typed of copyright (eg CC_BY_SA_4.0).", "UserSpecified", "MandatoryAlways", "", "", "File", "ProbablyNever", "All of the most likely values are already built into a file in the Resources section of the JAR file.")
-    m_SpecialDescriptors["stepNonOsisXsltStylesheet_"] = Descriptor("Stylesheets to be applied to a particular non-OSIS books before the main processing occurs.", "UserSpecified", "Optional", "", "", "File", "PerTextIfNecessary", "")
+    //m_SpecialDescriptors["stepNonOsisXsltStylesheet_"] = Descriptor("Stylesheets to be applied to a particular non-OSIS books before the main processing occurs.", "UserSpecified", "Optional", "", "", "File", "PerTextIfNecessary", "")
   }
 }

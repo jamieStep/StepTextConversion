@@ -298,7 +298,7 @@ object ReversificationData
       "CB" -> C_FootnoteLevelNec == row.footnoteLevel // Should not see "C." because conversion-time restructuring is no longer supported at present.
       "CA" -> true
 
-      "RB" -> false
+      "RB" -> C_FootnoteLevelNec == row.footnoteLevel
       "RA" -> true
       else -> throw StepExceptionBase("outputFootnote: Invalid parameter.")
     }
@@ -504,6 +504,7 @@ object ReversificationData
 
 
     /**************************************************************************/
+    m_LimitToAllBiblesRows = "none" == ConfigData["stepReversificationType"]!!.lowercase()
     val ixLow = findLine(rawData, "#DataStart(Expanded)", 0)
     val ixHigh = findLine(rawData, "#DataEnd", ixLow)
     val filteredData = rawData.subList(ixLow + 1, ixHigh).map { it.trim() }.filterNot { it.startsWith('#') || it.isBlank() || it.startsWith('=') || it.startsWith('\'')  }
@@ -714,7 +715,17 @@ object ReversificationData
        because we need them still to be recognised in the row-number setting. */
 
     val sourceRef = getField("SourceRef", row)
-    if (sourceRef.contains("4es", ignoreCase = true)) return true
+    if (sourceRef.contains("4es", ignoreCase = true))
+      return true
+
+
+
+    /**************************************************************************/
+    /* If we are not reversifying, we still want to process 'AllBibles' rows,
+       but _only_ those. */
+
+    if (m_LimitToAllBiblesRows && "allbibles" != getField("SourceType", row).lowercase())
+      return true
 
 
 
@@ -1049,9 +1060,6 @@ object ReversificationData
 
   /****************************************************************************/
   private val m_SelectedRows: MutableList<ReversificationDataRow> = ArrayList(10000)
-
-  private val m_IfAbsentFootnotes: MutableMap<RefKey, String> = mutableMapOf()
-  private val m_IfEmptyFootnotes: MutableMap<RefKey, String> = mutableMapOf()
 
   private val m_MoveGroups: MutableList<ReversificationMoveGroup> = ArrayList()
 
@@ -1929,6 +1937,7 @@ object ReversificationData
   fun getStandardBooksInvolvedInReversificationMoveActionsAbbreviatedNames (): List<String> { return m_StandardBooksInvolvedInMoveActions }
 
   private var m_BookMappings: MutableSet<String> = HashSet()
+  private var m_LimitToAllBiblesRows = false
 }
 
 

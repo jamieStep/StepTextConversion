@@ -576,8 +576,9 @@ object ConfigData
        above. */
 
     val mayBePublic   = "public" in operationalSuffix
-    val mayBeStepOnly = "step"   in operationalSuffix
-    val optionFromCommandLine = CommandLineProcessor["targetAudience"]?.first()?.uppercase()
+    var mayBeStepOnly = "step"   in operationalSuffix
+    if (!mayBeStepOnly && !mayBePublic) mayBeStepOnly = true // If the module name doesn't indicate public or step, assume step.
+    val optionFromCommandLine = CommandLineProcessor["targetAudience"]
     val targetAudience: String
     if (mayBeStepOnly && mayBePublic)
     {
@@ -587,27 +588,28 @@ object ConfigData
 
     else if (mayBeStepOnly)
     {
-      targetAudience = "S"
-      if (null != optionFromCommandLine && "S" != optionFromCommandLine)
+      targetAudience = "step"
+      if (null != optionFromCommandLine && "step" != optionFromCommandLine)
         throw StepExceptionBase("Folder name implies this is a STEP-only build, but targetAudience on the command line says otherwise.")
     }
 
     else if (mayBePublic)
     {
-      targetAudience = "P"
-       if (null != optionFromCommandLine && "P" != optionFromCommandLine)
+      targetAudience = "public"
+       if (null != optionFromCommandLine && "public" != optionFromCommandLine)
          throw StepExceptionBase("Folder name implies this is a public build, but targetAudience on the command line says otherwise.")
     }
 
     else
     {
-      targetAudience = "S"
-      if (null != optionFromCommandLine && "S" != optionFromCommandLine)
+      targetAudience = "step"
+      if ("step" != optionFromCommandLine)
         throw StepExceptionBase("Folder name implies this is a STEP-only build, but targetAudience on the command line says otherwise.")
     }
 
     deleteAndPut("stepTargetAudience", targetAudience, true)
-    deleteAndPut("stepOnlineUsageOnly", if ("onlineonly" in operationalSuffix) "Yes" else "No", true)
+    if (null == ConfigData["stepOnlineUsageOnly"])
+      deleteAndPut("stepOnlineUsageOnly", if ("onlineonly" in operationalSuffix) "Yes" else "No", true)
 
 
 
@@ -638,7 +640,7 @@ object ConfigData
 
     /**************************************************************************/
     val moduleName: String =
-      if ("P" == targetAudience)
+      if ("public" == targetAudience)
         languageCode + "_" + abbreviatedName + legacySuffix
       else
       {
@@ -697,8 +699,86 @@ object ConfigData
         if (m_Initialised) return // Guard against multiple initialisation.
         m_Initialised = true
         val configFilePath = if (File(rootConfigFilePath).isAbsolute) rootConfigFilePath else Paths.get(FileLocations.getMetadataFolderPath(), rootConfigFilePath).toString()
+        legacyPreprocessRootFile(configFilePath)
         load(configFilePath, false) // User overrides.
         loadDone()
+    }
+
+
+    /****************************************************************************/
+    /* Rather late in the day, I realised that we might be using this one
+       step.conf file for building both STEPBible and Public versions -- and that
+       there is no absolute guarantee that the two are going to follow the same
+       history path: the two are subject to different processing, and therefore
+       may be updated at different times and for different reasons.
+
+       I toyed with the idea of setting up separate history files for STEPBible
+       and Public history, but the more separate files we have, the more likely
+       it is that sooner or later something will be lost.  So in the end I
+       decided the best course was to continue storing all history lines in
+       step.conf, but to have one set for STEPBible and one for Public -- and
+       to simplify processing, to have both sets even in texts which, at
+       present, are generating only a single flavour of output.  That way we
+       have the necessary history should we decide to add a new flavour in future.
+
+       However, there is one further complication, in that we have to cope with
+       legacy modules, where all we have are history lines not flagged as being
+       for STEPBible or Public.  This is the purpose of the present method: it
+       pre-processes the config file, removing such lines and replacing them by
+       STEPBible and Public copies. */
+
+    private fun legacyPreprocessRootFile (rootConfigFilePath: String)
+    {
+      /**************************************************************************/
+      val revised: MutableList<String> = mutableListOf()
+      val publicHistoryLines: MutableList<String> = mutableListOf()
+      val stepHistoryLines: MutableList<String> = mutableListOf()
+      var madeChanges = false
+
+
+
+      /**************************************************************************/
+      File(rootConfigFilePath).bufferedReader().lines().forEach {
+        if (!it.startsWith("History"))
+        {
+          revised.add(it)
+          return@forEach
+        }
+
+        if ("History_step_" in it)
+          stepHistoryLines.add(it)
+        else if ("History_public_" in it)
+          publicHistoryLines.add(it)
+        else
+        {
+          madeChanges = true
+          stepHistoryLines.add(it.replace("History_", "History_step_"))
+          publicHistoryLines.add(it.replace("History_", "History_public_"))
+        }
+      } // forEach
+
+
+
+      /**************************************************************************/
+      if (!madeChanges) return
+
+      revised.add("")
+      revised.add("")
+      revised.add("")
+      revised.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+      revised.add("#!")
+      revised.add("#! History lines.  Even if the module is currently only for one target (STEPBible")
+      revised.add("#! or Public), I store lines for both here, in case we ever change our minds.")
+      revised.add("#!")
+      revised.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+      revised.add("")
+
+      revised.addAll(stepHistoryLines)
+      revised.addAll(publicHistoryLines)
+
+      val writer = File(rootConfigFilePath).bufferedWriter()
+      revised.forEach { writer.appendLine(it) }
+      writer.close()
     }
 
 
@@ -799,12 +879,7 @@ object ConfigData
        supplied) or within the JAR.
 
        The returned list will have had comments and blank lines removed and
-       continuation lines combined into a single line.
-
-       I also replace *= by =.  *= was used under particular circumstances in the
-       old config files.  I no longer need it, but I don't want to have to change
-       all of the old files.
-     */
+       continuation lines combined into a single line. */
 
     private fun getConfigLines (configFilePath: String, okIfNotExists: Boolean): List<String>
     {
@@ -937,7 +1012,7 @@ object ConfigData
 
 
       /**************************************************************************/
-      if (directive.matches(Regex("(?i)stepRegexForGeneralInputPreprocessing.*")))
+      if (directive.matches(Regex("(?i)stepPreprocessingRegexWhenNotStartingFromOsis.*")))
       {
         processRegexLine(m_RegexesForGeneralInputPreprocessing, directive)
         return true
@@ -946,7 +1021,7 @@ object ConfigData
 
 
       /**************************************************************************/
-      if (directive.matches(Regex("(?i)stepRegexForForcedOsisPreprocessing.*")))
+      if (directive.matches(Regex("(?i)stepPreprocessingRegexWhenStartingFromOsis.*")))
       {
         processRegexLine(m_RegexesForForcedOsisPreprocessing, directive)
         return true
@@ -1195,9 +1270,9 @@ object ConfigData
 
     fun getPreprocessingXslt () =
       if ("osis" == ConfigData["stepOriginData"])
-        get("stepXsltStylesheetForForcedOsisPreprocessing")
+        get("stepPreprocessingXsltStylesheetWhenStartingFromOsis")
       else
-        get("stepXsltStylesheetForGeneralInputPreprocessing")
+        get("stepPreprocessingXsltStylesheetWhenNotStartingFromOsis")
 
 
     /****************************************************************************/
@@ -1225,7 +1300,7 @@ object ConfigData
     fun put (key: String, theValue: String, force: Boolean)
     {
       /************************************************************************/
-      //Dbg.d("$key = $theValue (Force=$force)")
+      //Dbg.dCont(key, "stepTargetAudience")
 
 
 

@@ -111,10 +111,10 @@ class PA_ElementArchiver
       val ix = (m_Index++).toString()                             // Unique index.
       val clonedNode = Dom.cloneNode(m_Archive, it, deep = true)  // Clone the node to be archived into the temporary document.
       removeTemporaryAttributes(clonedNode)                       // When we reinstate this later, I don't _think_ we want any temporary attributes.
-      clonedNode["X_index"] = ix                                  // Give the clone a unique index which ties it back to the original document.
+      clonedNode["_X_index"] = ix                                  // Give the clone a unique index which ties it back to the original document.
       rootNodeForArchive.appendChild(clonedNode)                  // Store the cloned node in the temporary document.
 
-      it["X_index"] = ix                                          // Give the original node the same index we've just added to the clone.
+      it["_X_index"] = ix                                          // Give the original node the same index we've just added to the clone.
       Dom.deleteChildren(it)                                      // And remove the substructure.  This is the main thing which speeds up other processing.
     }
   }
@@ -123,10 +123,10 @@ class PA_ElementArchiver
   /****************************************************************************/
   private fun restoreElements (targetDoc: Document): List<Node>
   {
-    val res: MutableList<Node> = mutableListOf()
-    val placeHolders = targetDoc.getAllNodesBelow().filter { "X_Index" in it } // List of all placeholders in the document into which we are reinstating things.
+    var res: List<Node> = listOf()
+    val placeHolders = targetDoc.getAllNodesBelow().filter { "_X_index" in it } // List of all placeholders in the document into which we are reinstating things.
     Dbg.withReportProgressSub("Reinstating archived nodes if any.") {
-      res.addAll(restoreElements(targetDoc, placeHolders))
+      res = restoreElements(targetDoc, placeHolders)
     }
 
     return res
@@ -148,12 +148,12 @@ class PA_ElementArchiver
 
     val res: MutableList<Node> = mutableListOf()
     val map: MutableMap<Int, Node> = mutableMapOf()
-    Dom.getChildren(m_Archive.documentElement). forEach { map[it["X_index"]!!.toInt()] = it }
+    Dom.getChildren(m_Archive.documentElement). forEach { map[it["_X_index"]!!.toInt()] = it }
 
 
 
     /**************************************************************************/
-    /* The place-holders live in the target document, and their X_index
+    /* The place-holders live in the target document, and their _X_index
        attribute relates them to nodes in one or other of the saved documents
        (bearing in mind that we have a separate saved document for each type
        of node we have archived).  We run over the place-holders looking for
@@ -162,11 +162,11 @@ class PA_ElementArchiver
        document. */
 
     placeHolders.forEach {
-      val ix = it["X_index"]!!.toInt()
+      val ix = it["_X_index"]!!.toInt()
       if (ix in map)
       {
         val newNode = Dom.cloneNode(targetDoc, map[ix]!!, deep = true)     // Clone the archived node back into the original document.
-        newNode -= "X_index"                                               // Remove the X_index attribute.
+        newNode -= "_X_index"                                              // Remove the _X_index attribute.
         Dom.insertNodeBefore(it, newNode)                                  // Position the cloned node before the place-holder.
         Dom.deleteNode(it)                                                 // And delete the place-holder.
         res += newNode

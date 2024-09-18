@@ -116,7 +116,7 @@ object Osis_CrossReferenceChecker
     fun validate (node: Node)
     {
       /************************************************************************/
-      val usxCollection = RefCollection.rdOsis(node["loc"]!!).getAllAsRefKeys()
+      val formalCollection = RefCollection.rdOsis(node["loc"]!!).getAllAsRefKeys()
       val vernacularCollection: List<RefKey>?
 
 
@@ -147,7 +147,7 @@ object Osis_CrossReferenceChecker
 
 
       /************************************************************************/
-      if (usxCollection != vernacularCollection)
+      if (formalCollection != vernacularCollection)
         IssueAndInformationRecorder.crossReferenceInternalAndVernacularTargetDoNotMatch(node.textContent.trim(), getOsisIdAsRefKey(node), forceError = false, reassurance = "Cross-reference has been retained regardless.")
     } // fun
 
@@ -181,7 +181,7 @@ object Osis_CrossReferenceChecker
     fun processRef (node: Node)
     {
       try {
-        RefCollection.rdOsis(node["osisRef"]!!)
+        RefCollection.rdOsis(node["osisRef"]!!) // Simply checks we can read things.
         res.add(node)
       }
       catch (_: Exception)

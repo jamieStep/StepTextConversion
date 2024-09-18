@@ -166,7 +166,7 @@ object TranslatableFixedText
 
     /**************************************************************************/
     val res = StepStringFormatter.format(text, if (1 == otherBits.size) otherBits[0] else convertNameAndValueListToMap(*otherBits))
-    IssueAndInformationRecorder.addTranslatableText(key, text) // Record details of which translation keys are used.
+    IssueAndInformationRecorder.addTranslatableTextWhichWasInEnglishWhenVernacularWouldBeBetter(key, text) // Record details of which translation keys are used.
     return res
   }
 
@@ -196,7 +196,7 @@ object TranslatableFixedText
 
     /**************************************************************************/
     val res = StepStringFormatter.format(text, if (1 == otherBits.size) otherBits[0] else convertNameAndValueListToMap(*otherBits))
-    IssueAndInformationRecorder.addTranslatableText(key, text) // Record details of which translation keys are used.
+    IssueAndInformationRecorder.addTranslatableTextWhichWasInEnglishWhenVernacularWouldBeBetter(key, text) // Record details of which translation keys are used.
     return res
   }
 

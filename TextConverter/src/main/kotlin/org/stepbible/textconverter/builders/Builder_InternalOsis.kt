@@ -310,8 +310,8 @@ object Builder_InternalOsis: Builder()
   private fun handleReversification ()
   {
     //Dbg.d(InternalOsisDataCollection.getDocument())
+    Osis_DetermineReversificationTypeEtc.process()
     ReversificationData.process(InternalOsisDataCollection) // Read the data.
-    Osis_DetermineReversificationTypeEtc.process() // Use that to work out what we need to do.
 
     when (ConfigData["stepReversificationType"]!!.lowercase())
     {

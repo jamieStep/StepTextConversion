@@ -90,7 +90,7 @@ object Osis_DetermineReversificationTypeEtc
     /* The parameters which control what we're going to do. */
 
     val forcedVersificationScheme = getCanonicalisedVersificationSchemeIfAny() // Check if we've been given a scheme, and if so, convert the name to canonical form.
-    val targetAudience = ConfigData["stepTargetAudience"]!!.first().uppercase()
+    val targetAudience = ConfigData["stepTargetAudience"]!!
     val reversificationType = getReversificationType(targetAudience)
 
     val isCopyrightText: Boolean
@@ -98,7 +98,7 @@ object Osis_DetermineReversificationTypeEtc
     {
       true ->
       {
-        if ("P" == targetAudience)
+        if ("public" == targetAudience)
           throw StepExceptionBase("Target audience cannot be Public if the text is marked as being copyright.")
         isCopyrightText = true
       }
@@ -108,9 +108,9 @@ object Osis_DetermineReversificationTypeEtc
         
       null ->
       {
-        if ("P" == targetAudience)
+        if ("public" == targetAudience)
           throw StepExceptionBase("If target audience is Public you must overtly set stepIsCopyrightText to confirm this is not a copyright text.")
-        isCopyrightText = "S" == targetAudience // Assume we have a copyright text if creating a STEP-only module.
+        isCopyrightText = "step" == targetAudience // Assume we have a copyright text if creating a STEP-only module.
       }  
     }
 
@@ -126,10 +126,10 @@ object Osis_DetermineReversificationTypeEtc
     {
       "none" ->
       {
-        if ("S" == targetAudience)
+        if ("step" == targetAudience)
           throw StepExceptionBase("Must apply run-time reversification when the target audience is STEP.")
 
-        if ("P" == targetAudience && forcedVersificationScheme.isEmpty())
+        if ("public" == targetAudience && forcedVersificationScheme.isEmpty())
           throw StepExceptionBase("If you are building a public module without reversification, you must specify a Crosswire versification scheme.")
       }
 
@@ -137,7 +137,7 @@ object Osis_DetermineReversificationTypeEtc
       {
         ConfigData.delete("stepVersificationScheme")
 
-        if ("P" == targetAudience)
+        if ("public" == targetAudience)
           throw StepExceptionBase("Applying samification, so you can't create a public module.")
       }
 
@@ -222,7 +222,7 @@ object Osis_DetermineReversificationTypeEtc
   {
     return if (ConfigData.getAsBoolean("stepConversionTimeReversification", "no"))
       "conversiontime"
-    else if ("S" == targetAudience)
+    else if ("step" == targetAudience)
       "runtime"
     else
       "none"

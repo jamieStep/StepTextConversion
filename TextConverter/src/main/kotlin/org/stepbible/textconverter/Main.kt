@@ -1,11 +1,16 @@
 /******************************************************************************/
 package org.stepbible.textconverter
 
+import org.stepbible.textconverter.applicationspecificutils.ThrowAwayCode
 import org.stepbible.textconverter.builders.Builder_Master
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import java.io.File
+import java.nio.file.Paths
 import kotlin.system.exitProcess
 
 
@@ -36,7 +41,7 @@ fun main (args: Array<String>)
 {
   /****************************************************************************/
   //Dbg.setBooksToBeProcessed("3Jn")
-  //ThrowAwayCode.testGetVersion()
+  //ThrowAwayCode.getMostRecentModificationDate("C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\_SharedConfig_")
 
 
 
@@ -73,7 +78,7 @@ fun main (args: Array<String>)
   /****************************************************************************/
   catch (e: Exception)
   {
-   Dbg.endOfRun()
+    Dbg.endOfRun()
     if (null != e.message) println(e.message)
     e.printStackTrace()
     System.err.println("Fatal error: " + Dbg.getActiveProcessingId() + ": " + e.toString())
@@ -89,12 +94,21 @@ fun main (args: Array<String>)
   finally
   {
     val moduleName = ConfigData["stepModuleName"] ?: "UNKNOWN MODULE"
-    val targetAudience = ConfigData["stepTargetAudience"] ?: "step"
     if (0 != returnCode) Dbg.reportProgress("\n!!!!! RUN FAILED: " + args.joinToString(" "))
-    Dbg.reportProgress("\n>>>>>>>>>> End of processing for $moduleName (${ConfigData["stepReadableTargetAudience"]} use).")
+    Dbg.reportProgress("\n>>>>>>>>>> End of processing for $moduleName (${ConfigData["stepTargetAudience"]} use).")
     Dbg.reportProgress(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 
     Logger.sortLogFile()
+
+    if (File(FileLocations.getOutputFolderPath()).exists()) // If a given text can be used to generate both a public and a STEP module, the log files will get overwritten, so save copies in the _Output_X folders.
+    {
+      if (File(FileLocations.getConverterLogFilePath()).exists())
+        StepFileUtils.copyFile(Paths.get(FileLocations.getOutputFolderPath(), FileLocations.getConverterLogFileName()).toString(), FileLocations.getConverterLogFilePath())
+
+      if (File(FileLocations.getOsisToModLogFilePath()).exists())
+        StepFileUtils.copyFile(Paths.get(FileLocations.getOutputFolderPath(), FileLocations.getOsisToModLogFileName()).toString(), FileLocations.getOsisToModLogFilePath())
+    }
+
     exitProcess(returnCode)
   }
 }

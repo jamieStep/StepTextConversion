@@ -174,15 +174,8 @@ object Builder_Master: Builder()
   /****************************************************************************/
   private fun runProcess ()
   {
-    when (ConfigData["stepTargetAudience"])
-    {
-      "P" -> ConfigData["stepReadableTargetAudience"] = "Public"
-      "S" -> ConfigData["stepReadableTargetAudience"] = "STEPBible"
-      else -> ConfigData["stepReadableTargetAudience"] = "STEPBible"
-    }
-
     Dbg.reportProgress(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-    Dbg.reportProgress(">>>>>>>>>> Start of processing for ${ConfigData["stepModuleName"]} (${ConfigData["stepReadableTargetAudience"]} use).")
+    Dbg.reportProgress(">>>>>>>>>> Start of processing for ${ConfigData["stepModuleName"]} (${ConfigData["stepTargetAudience"]} use).")
     deleteLogFilesEtc()
     StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
     getSpecialBuilders().forEach { it.process() } // These aren't supposed to generate a repository package, and will exit after processing if they are invoked.

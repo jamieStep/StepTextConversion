@@ -2641,7 +2641,7 @@ object Dom
       </xsl:stylesheet>
     """
 
-    Dbg.outputText(stylesheet)
+    //Dbg.outputText(stylesheet)
 
     return stylesheet
   }

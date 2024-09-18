@@ -259,8 +259,10 @@ object FileLocations
   /****************************************************************************/
   /* Log files. */
 
-  fun getConverterLogFilePath () = Paths.get(m_RootFolderPath, "converterLog.txt").toString()
-  fun getOsisToModLogFilePath () = Paths.get(m_RootFolderPath, "osis2ModLog.txt").toString()
+  fun getConverterLogFileName () = "converterLog.txt"
+  fun getConverterLogFilePath () = Paths.get(m_RootFolderPath, getConverterLogFileName()).toString()
+  fun getOsisToModLogFileName () = "osis2ModLog.txt"
+  fun getOsisToModLogFilePath () = Paths.get(m_RootFolderPath, getOsisToModLogFileName()).toString()
   fun getDebugOutputFilePath () = Paths.get(m_RootFolderPath, "debugLog.txt").toString()
   fun getTemporaryInvestigationsFolderPath() =
     if (null == ConfigData["stepTemporaryInvestigationsFolderPath"])

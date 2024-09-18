@@ -4,6 +4,7 @@ import org.stepbible.textconverter.applicationspecificutils.*import org.stepbibl
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.TranslatableFixedText
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Node
@@ -128,6 +129,7 @@ class PA_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
       {
         res.add(noteNode)
         res.add(Dom.createTextNode(document, " "))
+        IssueAndInformationRecorder.addGeneratedFootnote(Ref.rd(row.sourceRefAsRefKey).toString() + " (ReversificationFootnote)")
       }
 
 
@@ -224,7 +226,7 @@ class PA_ReversificationFootnoteHandler (fileProtocol: X_FileProtocol)
   /****************************************************************************/
   private fun getReversificationNotesLevel ()
   {
-     when (ConfigData["stepReversificationFootnoteLevel"])
+     when (ConfigData["stepReversificationFootnoteLevel"]!!.lowercase())
      {
        "basic" ->    m_ReversificationNotesLevel = C_ReversificationNotesLevel_Basic
        "academic" -> m_ReversificationNotesLevel = C_ReversificationNotesLevel_Academic

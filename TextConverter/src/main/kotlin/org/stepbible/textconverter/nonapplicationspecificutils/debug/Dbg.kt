@@ -991,7 +991,6 @@ object Dbg
 
   fun outputText (text: String, fileName: String = "a.txt")
   {
-    //File(Paths.get(FileLocations.getTemporaryInvestigationsFolderPath(), fileName).toString()).bufferedWriter().write(text)
     File(Paths.get(FileLocations.getTemporaryInvestigationsFolderPath(), fileName).toString()).bufferedWriter().use { it.write(text) }
   }
 

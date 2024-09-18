@@ -222,6 +222,8 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
     Dom.insertNodeBefore(insertBefore, start)
     Dom.insertNodeBefore(insertBefore, end)
 
+    IssueAndInformationRecorder.addEmptyVerseGeneratedForReversification(Ref.rd(sidRefKey).toString())
+
     return Pair(start, end)
   }
 
@@ -270,7 +272,6 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
   {
     val footnoteText = AnticipatedIfEmptyDetails.getFootnote(m_FileProtocol.getSidAsRefKey(sid)) ?: TranslatableFixedText.stringFormat(Language.Vernacular, "V_emptyContentFootnote_verseEmptyInThisTranslation")
     val sidAsRefKey = m_FileProtocol.readRef(sid[m_FileProtocol.attrName_verseSid()]!!).toRefKey()
-    IssueAndInformationRecorder.verseEmptyInRawText(sidAsRefKey)
     val footnoteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToVerseWhichWasEmptyInRawText, sid.ownerDocument, sidAsRefKey, footnoteText, caller = null)
     if (null == footnoteNode)
     {
@@ -283,6 +284,9 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
       NodeMarker.setEmptyVerseType(sid, "emptyInRawText")
       Dom.insertNodeAfter(footnoteNode, createEmptyContent(sid.ownerDocument, m_Content_EmptyVerse))
     }
+
+    IssueAndInformationRecorder.addVerseWhichWasEmptyInTheRawText(m_FileProtocol.getSid(sid) + (if (null == footnoteNode) "" else " (with footnote)"))
+    if (null != footnoteNode) IssueAndInformationRecorder.addGeneratedFootnote(m_FileProtocol.getSid(sid) + " (VerseEmptyInRawText)")
   }
 
 
@@ -315,6 +319,10 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
 
     if (null == insertBefore)
       Dom.deleteNode(ib)
+
+    val sidAsString = Ref.rd(refKey).toString()
+    IssueAndInformationRecorder.addVerseWhichWasMissingInTheRawText(sidAsString + (if (null == footnoteNode) "" else " (with footnote)"))
+    if (null != footnoteNode) IssueAndInformationRecorder.addGeneratedFootnote("$sidAsString (VerseMissingInRawText)")
 
     return Pair(start, end)
   }
