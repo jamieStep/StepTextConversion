@@ -42,8 +42,10 @@ object Permissions
   /****************************************************************************/
 
   /****************************************************************************/
-  enum class FootnoteAction { AddFootnoteToVerseWhichWasEmptyInRawText,
-                              AddFootnoteToVerseGeneratedToFillHoles,
+  enum class FootnoteAction { AddFootnoteToVerseWhichWasEmptyInRawTextGeneric,
+                              AddFootnoteToVerseWhichWasEmptyInRawTextReversification,
+                              AddFootnoteToVerseGeneratedToFillHolesGeneric,
+                              AddFootnoteToVerseGeneratedToFillHolesReversification,
                               AddFootnoteToVerseGeneratedBecauseWeNeedToAddAChapter,
                               AddFootnoteToSlaveVerseInElision,
                               AddFootnoteToMasterVerseInElision,
@@ -65,8 +67,10 @@ object Permissions
   {
     return when (type)
     {
-      FootnoteAction.AddFootnoteToVerseWhichWasEmptyInRawText -> false // We assume if a verse is empty in the raw text, the translators _may_ have added their own footnote, and we don't want to risk duplicating things.
-      FootnoteAction.AddFootnoteToVerseGeneratedToFillHoles -> false
+      FootnoteAction.AddFootnoteToVerseWhichWasEmptyInRawTextGeneric -> false // We assume if a verse is empty in the raw text, the translators _may_ have added their own footnote, and we don't want to risk duplicating things.
+      FootnoteAction.AddFootnoteToVerseGeneratedToFillHolesGeneric -> m_IsOkToGenerateFootnotes
+      FootnoteAction.AddFootnoteToVerseWhichWasEmptyInRawTextReversification -> m_IsOkToGenerateFootnotes
+      FootnoteAction.AddFootnoteToVerseGeneratedToFillHolesReversification -> m_IsOkToGenerateFootnotes
       FootnoteAction.AddFootnoteToVerseGeneratedBecauseWeNeedToAddAChapter -> true
       FootnoteAction.AddFootnoteToSlaveVerseInElision -> false
       FootnoteAction.AddFootnoteToMasterVerseInElision -> m_IsOkToGenerateFootnotes

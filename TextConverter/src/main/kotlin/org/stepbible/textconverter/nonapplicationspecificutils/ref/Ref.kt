@@ -831,7 +831,7 @@ class Ref : RefCollectionPart
       }
       catch (_: Exception)
       {
-        throw StepExceptionBase("Could not read as USX ref: $theText")
+        throw StepExceptionBase("\nCould not read as USX ref: $theText")
       }
     }
 

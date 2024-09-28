@@ -41,7 +41,7 @@ fun main (args: Array<String>)
 {
   /****************************************************************************/
   //Dbg.setBooksToBeProcessed("3Jn")
-  //ThrowAwayCode.getMostRecentModificationDate("C:\\Users\\Jamie\\RemotelyBackedUp\\Git\\StepTextConversion\\Texts\\_SharedConfig_")
+  //ThrowAwayCode.testCharacterEntitySize()
 
 
 

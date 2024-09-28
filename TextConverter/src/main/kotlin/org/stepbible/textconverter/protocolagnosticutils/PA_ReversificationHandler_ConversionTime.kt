@@ -1,60 +1,53 @@
+/******************************************************************************/
 package org.stepbible.textconverter.protocolagnosticutils
 
+import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
-import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
-import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
-import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
-import org.stepbible.textconverter.applicationspecificutils.*
-import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceShouldHaveBeenOverridden
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.util.*
 import javax.xml.parsers.DocumentBuilderFactory
-import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
-
 
 
 /******************************************************************************/
 /**
- * <span class='important'>This code has never been used and almost certainly
- * is nowhere near working.  At the time of writing we don't actually
-  * anticipate reviving it.</span>
+ * Performs conversion-time reversification.  This entails making potentially
+ * significant changes to the text so as to force it to conform to the NRSVA
+ * structure.
  *
- * Handles the flavour of reversification which entails restructuring the text
- * during the conversion process.
+ * <span class='important'>At the time of writing, we are not anticipating that
+ * this form of reversification will actually be used, since on copyright texts
+ * the licence conditions almost certainly preclude the kinds of changes we may
+ * need to make.  The code here mostly dates back a long way and has not been
+ * used recently.  The chances of it actually working, therefore, are probably
+ * remote.</span>
  *
- * The aim here is to generate a module which is inherently NRSV(A) compliant.
- * In fact, it is unlikely that we will do this very often.  Restructuring the
- * text will entail producing something which, in some areas, no longer looks
- * like the original (the version which will presumably be familiar to people).
- * This may not sit well with the average reader, and is also going to be ruled
- * out by licence conditions on most copyright texts.
  *
- * If used at all, therefore, it is likely to be limited to public domain texts
- * of interest largely to academic audiences who will understand the changes
- * which have been applied.
  *
- * The class is passed the data collection to work on when it is constructed,
- * and this is updated in situ.  I assume here that the reversification data
- * (which will probably have been obtained earlier in the processing) will
- * have been selected against this particular data collection.  In other
- * words, other processing may have been applied since the reversification
- * data was read and selected, but I make the assumption that this other
- * processing will not have altered the book / chapter / verse structure or
- * the verse content upon which reversification data rows are selected.
+ *
+ *
+ * ## Functionality
+ *
+ * The processing here may create 'empty' verses to fill in any holes in the
+ * versification scheme where the reversification data requires it.  It may
+ * renumber verses in situ, reorder them, move them to different locations
+ * within the chapter, to different chapters, or to different books (in some
+ * cases even books which do not exist in the source text).  And it may add
+ * footnotes to give more information about the verse structure.
  *
  * @author ARA "Jamie" Jamieson
  */
 
-open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
+/******************************************************************************/
+object PA_ReversificationHandler_ConversionTime: PA_ReversificationHandler()
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -65,69 +58,287 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
   /****************************************************************************/
 
   /****************************************************************************/
-  fun isRunnable () = !this::class.simpleName!!.startsWith("PROBABLY_NOT")
+  /* General notes:
+
+      The assessment of whether a row applies or not is determined statically
+      -- ie we look at the text as it stands before any of the processing here
+      is applied, rather than checking it incrementally as changes are applied.
+
+      The main complication here are those rows which entail moving stuff
+      elsewhere -- you cannot simply go ahead and action them as you encounter
+      them, because it may be that they are targetting verses which already
+      exist, but which are, themselves, going to be moved in due course, and
+      you don't want to overwrite them before you've had a chance to move them.
+   */
+
+  /****************************************************************************/
+  override fun process (dataCollection: X_DataCollection)
+  {
+    TODO("HERE BE DRAGONS!  Conversion-time reversification: This code hasn't been used for ages, and we may well no longer want it anyway.  I have retained it just in case, but it is so far out of data that it will almost certainly require significant rework.")
+    super.process(dataCollection)
+    aggregateData()
+    doIt()
+    markFootnoteTargets()
+    val callout = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!).get()
+    addFootnotes("Reversification Note"){ _ -> callout }
+    m_DataCollection.reloadBibleStructureFromRootNodes(false) // We've almost certainly invalidated the structure information by now.
+  }
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                           Data aggregation                             **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /* Carries out the various forms of data aggregation required by this
+     flavour of reversification.  This is in addition to that already carried
+     out by PA_ReversificationHandler. */
+
+  private fun aggregateData ()
+  {
+    aggregateBooks()
+    aggregateBooksInvolvedInMoveActions()
+    aggregateMoveGroups()
+    markSpecialistMoves()
+    recordBookMappings()
+  }
+
+
+  /****************************************************************************/
+  /* Generates lists containing:
+
+     a) All books mentioned in the selected reversification rows.
+     b) All source books.
+     c) All standard books.
+     Etc.
+  */
+
+  private fun aggregateBooks ()
+  {
+    val allBooks:     MutableSet<Int> = HashSet()
+    val bookMappings: MutableSet<String> = HashSet()
+    val sourceBooks:  MutableSet<Int> = HashSet()
+    val targetBooks:  MutableSet<Int> = HashSet()
+
+    getSelectedRows().forEach {
+      allBooks.add(it.sourceRef.getB())
+      allBooks.add(it.standardRef.getB())
+      sourceBooks.add(it.sourceRef.getB())
+      targetBooks.add(it.standardRef.getB())
+      bookMappings.add(BibleBookNamesUsx.numberToAbbreviatedName(it.sourceRef.getB()) + "." + BibleBookNamesUsx.numberToAbbreviatedName(it.standardRef.getB()))
+    }
+
+    m_AllBooks      = allBooks   .sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
+    m_SourceBooks   = sourceBooks.sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
+    m_StandardBooks = targetBooks.sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
+  }
+
+
+  /****************************************************************************/
+  /* Generates lists containing:
+
+     a) All books involved in Move actions.
+     b) All source books.
+     c) All standard books.
+  */
+
+  private fun aggregateBooksInvolvedInMoveActions ()
+  {
+    val allBooks:    MutableSet<Int> = HashSet()
+    val sourceBooks: MutableSet<Int> = HashSet()
+    val targetBooks: MutableSet<Int> = HashSet()
+
+    getSelectedRows().filter { it.action.isMove }
+      .forEach { allBooks.add(it.sourceRef.getB()); allBooks.add(it.standardRef.getB()); sourceBooks.add(it.sourceRef.getB()); targetBooks.add(it.standardRef.getB()) }
+
+    m_AllBooksInvolvedInMoveActions      = allBooks   .sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
+    m_SourceBooksInvolvedInMoveActions   = sourceBooks.sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
+    m_StandardBooksInvolvedInMoveActions = targetBooks.sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
+  }
+
+
+  /****************************************************************************/
+  /* Collects together consecutive Move rows which can be actioned as a block.
+
+     Note that where dealing with subverses, groups do not extend across the
+     owning verse boundary.
+
+     The aim here is to identify groups of consecutive rows where ...
+
+     * All the source elements are verses, or all are subverses.
+
+     * All of the standard elements are verses, or all are subverses.
+
+     * The source elements increment by one verse if they are verses, or by one
+       subverse if they are subverses.
+
+     * Ditto for standard elements.
+
+     The reason for this rather fiddly method is that when processing Moves, it
+     is desirable to move entire blocks if possible, rather than move one verse
+     at a time.  This way, cross-verse-boundary markup is less of an issue --
+     cross-boundary markup would be an issue only if it runs across the boundary
+     of the entire block, rather than being an issue for each individual verse.
+  */
+
+  private fun aggregateMoveGroups ()
+  {
+    /**************************************************************************/
+    val rows = getSelectedRows().filter { it.action.isMove }
+    if (rows.isEmpty()) return
+
+
+
+    /**************************************************************************/
+    val sortedRows = rows.sortedWith(::cfForMoveGroups)
+    var  ixLow = 0
+    while (ixLow < sortedRows.size)
+    {
+      var refKeySourcePrev = sortedRows[ixLow].sourceRefAsRefKey
+      var refKeyStandardPrev = sortedRows[ixLow].standardRefAsRefKey
+      val refKeySourceInterval = if (Ref.hasS(refKeySourcePrev)) 1 else RefBase.C_Multiplier
+      val refKeyStandardInterval = if (Ref.hasS(refKeyStandardPrev)) 1 else RefBase.C_Multiplier
+
+      var  ixHigh = ixLow + 1
+      while (ixHigh < sortedRows.size)
+      {
+        val refKeySourceThis = sortedRows[ixHigh].sourceRefAsRefKey
+        val refKeyStandardThis = sortedRows[ixHigh].standardRefAsRefKey
+        if (refKeySourceThis - refKeySourcePrev != refKeySourceInterval) break
+        if (refKeyStandardThis - refKeyStandardPrev != refKeyStandardInterval) break
+        refKeySourcePrev = refKeySourceThis
+        refKeyStandardPrev = refKeyStandardThis
+        ++ixHigh
+      }
+
+      m_MoveGroups.add(ReversificationMoveGroup(sortedRows.subList(ixLow, ixHigh)))
+      ixLow = ixHigh
+    }
+  }
 
 
   /****************************************************************************/
   /**
-  * Carries out conversion-time reversification.  Or would do if it were
-  * properly implemented.  Not sure we'll ever want to use this.
-  *
-  * @param dataCollection Data to be processed.
-  */
+   * Gives ordering information.  Rows will be ordered on increasing source
+   * refKey, and within that on increasing standard refKey.
+   *
+   * @param a Row to compare.
+   * @param b Row to compare.
+   *
+   * @return  Ordering information.
+   */
 
-  fun process (dataCollection: X_DataCollection)
+  private fun cfForMoveGroups (a: ReversificationDataRow, b: ReversificationDataRow): Int
   {
-    extractCommonInformation(dataCollection, true)
-    m_FootnoteHandler  = PA_ReversificationFootnoteHandler(m_FileProtocol)
-    processDataCollection()
+    fun zeroiseSubverseIfLacking (x: RefKey): RefKey = if (Ref.hasS(x)) x else Ref.setS(x, 0)
+
+    val aSourceRefKey   = zeroiseSubverseIfLacking(a.sourceRefAsRefKey)
+    val bSourceRefKey   = zeroiseSubverseIfLacking(b.sourceRefAsRefKey)
+    val aStandardRefKey = zeroiseSubverseIfLacking(a.standardRefAsRefKey)
+    val bStandardRefKey = zeroiseSubverseIfLacking(b.standardRefAsRefKey)
+
+    return if (aSourceRefKey < bSourceRefKey) -1
+           else if (aSourceRefKey > bSourceRefKey) 1
+           else if (aStandardRefKey < bStandardRefKey) -1
+           else if (aStandardRefKey > bStandardRefKey) 1
+           else 0
   }
 
 
+  /****************************************************************************/
+  /* Marks groups which involve an entire chapter, or which target a different
+     book. */
 
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                               Private                                  **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  private fun processDataCollection ()
+  private fun markSpecialistMoves ()
   {
-    TODO("Not tested in the new implementation, and probably doesn't work")
-//    doIt()
-//    m_DataCollection.invalidateBibleStructure() // We've changed the structure, so nothing should rely upon it as-is.
+    fun process (grp: ReversificationMoveGroup)
+    {
+      if (grp.rows.first().sourceRef.hasS()) return
+      if (grp.rows.first().standardRef.hasS()) return
+
+      if (1 != grp.rows.first().sourceRef.getV()) return
+      if (1 != grp.rows.first().standardRef.getV()) return
+
+      if (m_BibleStructure!!.getLastVerseNo(grp.rows.first().sourceRef) != grp.rows.last().sourceRef.getV()) return
+      if (BibleStructure.makeOsis2modNrsvxSchemeInstance(m_DataCollection.getBibleStructure()).getLastVerseNo(grp.rows.first().standardRef) != grp.rows.last().standardRef.getV()) return
+
+      grp.isEntireChapter = true
+    }
+
+    m_MoveGroups.forEach { process(it) }
+    m_MoveGroups.forEach { it.crossBook = it.rows.first().sourceRef.getB() != it.rows.first().standardRef.getB() }
   }
 
 
+  /****************************************************************************/
+  /* Generates a set containing source/standard pairs detailing which source
+     books map to which standard books. */
 
+  private fun recordBookMappings ()
+  {
+    fun addMapping (row: ReversificationDataRow)
+    {
+      val sourceBook   = BibleBookNamesUsx.numberToAbbreviatedName(row.sourceRef  .getB())
+      val standardBook = BibleBookNamesUsx.numberToAbbreviatedName(row.standardRef.getB())
+      m_BookMappings.add("$sourceBook.$standardBook")
+    }
+
+    getSelectedRows().forEach { addMapping(it) }
+  }
 
 
   /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                     Protected -- need overriding                       **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
+  /* It is convenient to group together adjacent rows all of which involve
+     Move actions, and which effectively involve moving an entire contiguous
+     block of text from one place to another. */
 
-  protected open fun makeBook (bookNo: Int): Unit = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
-  protected open fun makeChapter (rootNode: Node, bookAbbreviation: String, chapterNo: Int): Unit = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
+  class ReversificationMoveGroup (theRows: List<ReversificationDataRow>)
+  {
+    fun getSourceBookAbbreviatedName (): String { return BibleBookNamesUsx.numberToAbbreviatedName(rows[0].sourceRef.getB()) }
+    fun getStandardBookAbbreviatedName () = BibleBookNamesUsx.numberToAbbreviatedName(rows[0].standardRef.getB())
+
+    fun getSourceChapterRefAsString   () = rows.first().sourceRef  .toString("bc")
+    fun getStandardChapterRefAsString () = rows.first().standardRef.toString("bc")
+
+    var crossBook = false
+    var isEntireChapter: Boolean = false
+    val rows = theRows
+    val sourceRange = RefRange(theRows.first().sourceRef, theRows.last().sourceRef)
+    val standardRange = RefRange(theRows.first().standardRef, theRows.last().standardRef)
+  }
+
+
+  /****************************************************************************/
+  fun getBookMappings (): Set<String> { return m_BookMappings } // String of the form abc.xyz, indicating there is a mapping from book abc to xyz.
+  private fun getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing (): List<String> { return m_AllBooks } // All book names subject to reversification processing.
+  fun getAllMoveGroups (): List<ReversificationMoveGroup> { return m_MoveGroups }
+  fun getMoveGroupsWithBookAsSource (bookNo: Int): List<ReversificationMoveGroup> = m_MoveGroups.filter { bookNo == it.sourceRange.getLowAsRef().getB() }
+  fun getNonMoveRowsWithBookAsStandard (bookNo: Int): List<ReversificationDataRow> = getSelectedRows().filter { it.isMove && bookNo == it.standardRef.getB() }
+  private fun getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames (): List<String> { return m_SourceBooksInvolvedInMoveActions }
+  private fun getStandardBooksInvolvedInReversificationMoveActionsAbbreviatedNames (): List<String> { return m_StandardBooksInvolvedInMoveActions }
+
+
+  /****************************************************************************/
+  private val m_MoveGroups: MutableList<ReversificationMoveGroup> = ArrayList()
+
+  private var m_BookMappings: MutableSet<String> = HashSet()
+  private lateinit var m_AllBooks: List<String>
+  private lateinit var m_SourceBooks: List<String>
+  private lateinit var m_StandardBooks: List<String>
+
+  private lateinit var m_AllBooksInvolvedInMoveActions: List<String>
+  private lateinit var m_SourceBooksInvolvedInMoveActions: List<String>
+  private lateinit var m_StandardBooksInvolvedInMoveActions: List<String>
 
 
 
 
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                           Private -- Control                           **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
 
   /****************************************************************************/
   /* This may seem to duplicate the Z_DataCollection facilities to some extent.
@@ -174,18 +385,16 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
   private fun doIt ()
   {
     initialise()
-    ReversificationData.getAllAcceptedRows().filter { it.sourceIsPsalmTitle() }.forEach(::processCanonicalTitles_turnSourceIntoVerseZero)
+    getSelectedRows().filter { it.sourceIsPsalmTitle } .forEach(::processCanonicalTitles_turnSourceIntoVerseZero)
 
-    ReversificationData.getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart1(it) }
-    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "renumber") }
-    ReversificationData.getStandardBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart2(it) }
-    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "") }
-    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { terminate(it) }
+    getSourceBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart1(it) }
+    getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "renumber") }
+    getStandardBooksInvolvedInReversificationMoveActionsAbbreviatedNames().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processMovePart2(it) }
+    getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { processNonMove(it, "") }
+    getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }.forEach { terminate(it) }
 
     processCanonicalTitles_turnVerseZerosIntoCanonicalTitle()
-
     m_BookDetails.clear() // Free up the memory used in this processing.
-    m_DataCollection.invalidateBibleStructure()
   }
 
 
@@ -213,19 +422,11 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
 
 
     /**************************************************************************/
-    /* Footnote information. */
-
-    m_FootnoteCalloutGenerator = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!)
-    getReversificationNotesLevel() // So we know what kinds of footnotes are needed,
-
-
-
-    /**************************************************************************/
     /* Some reversification statements may move verses to different books.  In
        some cases, we expect these books already to exist; in others, we expect
        them _not_ to exist.  Check that these expectations are met. */
 
-    checkExistenceCriteriaForCrossBookMappings(ReversificationData.getBookMappings())
+    checkExistenceCriteriaForCrossBookMappings(getBookMappings())
 
 
 
@@ -233,7 +434,7 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
     /* Create the basic information we're going to need for each book which is
        subject to reversification. */
 
-    ReversificationData.getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()
+    getAbbreviatedNamesOfAllBooksSubjectToReversificationProcessing()
       .map { BibleBookNamesUsx.abbreviatedNameToNumber(it) } // USX really _is_ intended here -- the reversification data operates with USX names.
       .forEach { BookDetails(it) } // Create BookDetails entry and carry out any pre-processing.
   }
@@ -294,13 +495,13 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
     fun dontWantTarget (from: String, to: String, message: String)
     {
       if (!crossBookMappings.contains("$from.$to")) return
-      if (m_BibleStructure!!.bookExists(to)) throw StepExceptionBase(message)
+      if (m_BibleStructure!!.bookExists(to)) throw StepExceptionWithStackTraceAbandonRun(message)
     }
 
     fun doWantTarget (from: String, to: String, message: String)
     {
       if (!crossBookMappings.contains("$from.$to")) return
-      if (!m_BibleStructure!!.bookExists(to)) throw StepExceptionBase(message)
+      if (!m_BibleStructure!!.bookExists(to)) throw StepExceptionWithStackTraceAbandonRun(message)
     }
 
     dontWantTarget("dan", "bel", "Need to move text from Dan to Bel, but Bel already exists")
@@ -310,13 +511,6 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
     dontWantTarget("2ch", "man", "Need to move text from 2Ch to Man, but Man already exists")
     dontWantTarget("psa", "ps2", "Need to move text from Psa to Ps2, but Ps2 already exists")
   }
-
-
-  /****************************************************************************/
-  /* Used where we want to have a standard footnote callout on reversified
-     verses, rather than use the callout defined in the reversification data. */
-
-  private lateinit var m_FootnoteCalloutGenerator: MarkerHandler
 
 
   /****************************************************************************/
@@ -452,22 +646,6 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
     //val mappings = ReversificationData.getReferenceMappings() as MutableMap<RefKey, RefKey>
     //if (C_CollapseSubverses) mappings.keys.forEach { if (Ref.hasS(mappings[it]!!)) mappings[it] = Ref.clearS(mappings[it]!!) }
     //m_CrossReferenceChecker.process(rootNode, mappings)
-  }
-
-
-  /****************************************************************************/
-  private val C_ReversificationNotesLevel_None = 999
-  private val C_ReversificationNotesLevel_Basic = 0
-  private val C_ReversificationNotesLevel_Academic = 1
-  private var m_ReversificationNotesLevel = C_ReversificationNotesLevel_None
-
-  private fun getReversificationNotesLevel ()
-  {
-     when (ConfigData["stepReversificationFootnoteLevel"])
-     {
-       "basic" ->    m_ReversificationNotesLevel = C_ReversificationNotesLevel_Basic
-       "academic" -> m_ReversificationNotesLevel = C_ReversificationNotesLevel_Academic
-     }
   }
 
 
@@ -630,7 +808,7 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
   {
     val bookThunk = m_BookDetails[bookNo]!!
     val structure = getNodesAndIndices(bookThunk.m_RootNode)
-    ReversificationData.getMoveGroupsWithBookAsSource(bookNo).forEach { processMovePart1(it, bookThunk, structure) }
+    getMoveGroupsWithBookAsSource(bookNo).forEach { processMovePart1(it, bookThunk, structure) }
   }
 
 
@@ -855,6 +1033,8 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
 
 
   /****************************************************************************/
+  // !!! Why isn't this called any more ???
+
   private fun movePart1EntireChapter (moveGroup: ReversificationMoveGroup, bookDetails: BookDetails)
   {
     /**************************************************************************/
@@ -946,7 +1126,7 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
   {
     val bookThunk = m_BookDetails[bookNo]!!
     //Dbg.outputDom(bookThunk.m_Document, "a")
-    val rows = ReversificationData.getNonMoveRowsWithBookAsStandard(bookNo)
+    val rows = getNonMoveRowsWithBookAsStandard(bookNo)
     processSimpleRows(bookThunk.m_RootNode, rows, selector)
   }
 
@@ -964,10 +1144,12 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
          eidMap[getSelectedIdAsRefKey(it, m_FileProtocol.attrName_verseEid())] = it
      }
 
+     fun isRenumber (row: ReversificationDataRow) = Action.RenumberVerse == row.action || Action.RenumberTitle == row.action
+
      if ("renumber" == selector)
-       rows.filter { it.action.contains("renumber")  } .forEach { processSimpleRowRenumber  (rootNode.ownerDocument, it, sidMap, eidMap) }
+       rows.filter { isRenumber(it)  } .forEach { processSimpleRowRenumber  (rootNode.ownerDocument, it, sidMap, eidMap) }
      else
-       rows.filter { !it.action.contains("renumber") } .forEach { processSimpleRowNonRenumber(rootNode.ownerDocument, it, sidMap, eidMap) }
+       rows.filter { !isRenumber(it) } .forEach { processSimpleRowNonRenumber(rootNode.ownerDocument, it, sidMap, eidMap) }
 
      //if (0 != m_Dbg)
      //  Dbg.d(Dom.findNodeByAttributeValue(rootNode.ownerDocument, m_FileProtocol.tagName_verse(), "_X_originalId", "1KI 22:46").toString())
@@ -988,15 +1170,6 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
   private fun processSimpleRowNonRenumber (document: Document, row: ReversificationDataRow, sidMap: Map<RefKey, Node>, eidMap: Map<RefKey, Node>)
   {
     /**************************************************************************/
-    //val dbg = row.rowNumber == 902
-    //Dbg.d(row.rowNumber == 902)
-    //Dbg.d(row.rowNumber == 906)
-    //Dbg.d(row.toString())
-    //if (dbg) Dbg.d(document, "a")
-
-
-
-    /**************************************************************************/
     var sidNode = sidMap[row.standardRefAsRefKey]
 
 
@@ -1007,11 +1180,6 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
 
     if (null == sidNode)
       sidNode = m_EmptyVerseHandler.createEmptyVerseForReversification(getInsertionPoint(document, row.standardRef), row.standardRef.toRefKey()).first
-
-
-
-    /**************************************************************************/
-    m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(sidNode, row, 'C')
   }
 
 
@@ -1040,7 +1208,6 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
     val newId = row.standardRef.toString()
     changeId(sidNode!!, m_FileProtocol.attrName_verseSid(), newId)
     changeId(eidNode!!, m_FileProtocol.attrName_verseEid(), newId)
-    m_FootnoteHandler.addFootnoteAndSourceVerseDetailsToVerse(sidNode, row, 'C')
   }
 
 
@@ -1267,12 +1434,24 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
   /****************************************************************************/
 
   /****************************************************************************/
+  /* Indicates whether footnotes should be attached to source or standard ref.
+
+     This is probably going to be 'standard' throughout, but having this method
+     gives us the chance to be slightly more flexible. */
+
+  private fun markFootnoteTargets ()
+  {
+    getSelectedRows().forEach { it.attachFootnoteTo = ReversificationDataRow.AttachFootnoteTo.Standard }
+  }
+
+
+  /****************************************************************************/
   /* There is special processing here for Psalms, where it is useful to treat
      canonical titles in a special way.  In fact a canonical title may appear
      also in Hab 3, but apparently is never likely to be subject to
      reversification processing. */
 
-  private inner class BookDetails (bookNumber: Int)
+  private class BookDetails (bookNumber: Int)
   {
     /**************************************************************************/
     val m_BookNumber = bookNumber
@@ -1285,21 +1464,32 @@ open class PROBABLY_NOT_WORKING_PA_ConversionTimeReversification: PA()
     init
     {
       if (null == m_DataCollection.getRootNode(m_BookNumber))
-        makeBook(m_BookNumber)
+      {
+        if (m_FileProtocol === Osis_FileProtocol)
+          Osis_BookAndChapterCreator.makeBook(m_DataCollection, m_BookNumber)
+        else
+          Osis_BookAndChapterCreator.makeBook(m_DataCollection, m_BookNumber)
+      }
+
       m_BookDetails[m_BookNumber] = this
     }
-  }
+  } // class BookDetails
 
   private val m_BookDetails: MutableMap<Int, BookDetails> = HashMap(150)
-  private lateinit var m_FootnoteHandler: PA_ReversificationFootnoteHandler
-}
-
-
-
+  private lateinit var m_BookAndChapterCreator: X_BookAndChapterCreator
+} // PA_ReversificationHandler_ConversionTime
 
 
 /******************************************************************************/
-class PROBABLY_NOT_WORKING_Osis_ConversiontimeReversification: PROBABLY_NOT_WORKING_PA_ConversionTimeReversification()
+private interface X_BookAndChapterCreator
+{
+  fun makeBook (dataCollection: X_DataCollection, bookNo: Int)
+  fun makeChapter (rootNode: Node, bookAbbreviation: String, chapterNo: Int)
+}
+
+
+/******************************************************************************/
+private object Osis_BookAndChapterCreator: X_BookAndChapterCreator
 {
   /****************************************************************************/
   /* I assume here that we have a single document covering the whole of the
@@ -1307,15 +1497,15 @@ class PROBABLY_NOT_WORKING_Osis_ConversiontimeReversification: PROBABLY_NOT_WORK
      valid OSIS.  Elsewhere I have converted div:book into <book>, and this
      latter is what I create. */
 
-  override fun makeBook (bookNo: Int)
+  override fun makeBook (dataCollection: X_DataCollection, bookNo: Int)
   {
     val bookName = BibleBookNamesOsis.numberToAbbreviatedName(bookNo)
-    val rootNode = m_DataCollection.getDocument().createNode("<book canonical='false' osisID='$bookName' type='book'/>")
+    val rootNode = dataCollection.getDocument().createNode("<book canonical='false' osisID='$bookName' type='book'/>")
 
-    m_DataCollection.setRootNode(bookNo, rootNode) // Insert into data structure.
+    dataCollection.setRootNode(bookNo, rootNode) // Insert into data structure.
 
-    val insertAfterBookNo = m_DataCollection.findPredecessorBook(bookNo) // Insert into document.
-    val insertAfterNode = m_DataCollection.getDocument().findNodesByName("book").find { insertAfterBookNo == BibleBookNamesOsis.abbreviatedNameToNumber(it["osisId"]!!) }
+    val insertAfterBookNo = dataCollection.findPredecessorBook(bookNo) // Insert into document.
+    val insertAfterNode = dataCollection.getDocument().findNodesByName("book").find { insertAfterBookNo == BibleBookNamesOsis.abbreviatedNameToNumber(it["osisId"]!!) }
     Dom.insertNodeAfter(insertAfterNode!!, rootNode)
   }
 
@@ -1341,10 +1531,10 @@ class PROBABLY_NOT_WORKING_Osis_ConversiontimeReversification: PROBABLY_NOT_WORK
 
 
 /******************************************************************************/
-class PROBABLY_NOT_WORKING_Usx_ConversiontimeReversificationHandler: PROBABLY_NOT_WORKING_PA_ConversionTimeReversification()
+class Usx_BookAndChapterCreator: X_BookAndChapterCreator
 {
   /****************************************************************************/
-  override fun makeBook (bookNo: Int)
+  override fun makeBook (dataCollection: X_DataCollection, bookNo: Int)
   {
     val bookName = BibleBookNamesUsx.numberToAbbreviatedName(bookNo)
 
@@ -1355,9 +1545,9 @@ class PROBABLY_NOT_WORKING_Usx_ConversiontimeReversificationHandler: PROBABLY_NO
     val documentRoot = doc.createElement("<usx version='3.0'>")
     val bookRoot = Dom.createNode(doc, "<book code='$bookName'/>")
     documentRoot.appendChild(bookRoot)
-    for (i in 1 .. BibleStructure.makeOsis2modNrsvxSchemeInstance(m_BibleStructure!!).getLastChapterNo(bookName)) makeChapter(bookRoot, bookName, i)
+    for (i in 1 .. BibleStructure.makeOsis2modNrsvxSchemeInstance(dataCollection.getBibleStructure()).getLastChapterNo(bookName)) makeChapter(bookRoot, bookName, i)
 
-    m_DataCollection.addFromDoc(doc)
+    dataCollection.addFromDoc(doc)
   }
 
 
@@ -1374,3 +1564,298 @@ class PROBABLY_NOT_WORKING_Usx_ConversiontimeReversificationHandler: PROBABLY_NO
     chapterNode.appendChild(verseNode)
   }
 }
+
+
+
+
+///******************************************************************************/
+///**
+// * Handles footnotes for verses affected by reversification and
+// * samification.
+// *
+// * @author ARA "Jamie" Jamieson
+// */
+//
+//class PA_ReversificationFootnoteHandler (caller: PA_ReversificationHandler_ConversionTime)
+// {
+//  /****************************************************************************/
+//  /****************************************************************************/
+//  /**                                                                        **/
+//  /**                                Public                                  **/
+//  /**                                                                        **/
+//  /****************************************************************************/
+//  /****************************************************************************/
+//
+//  /****************************************************************************/
+//  /**
+//   * This method has changed a lot over time.
+//   *
+//   * The fundamental aim was to have it create the content required for a
+//   * reversification footnote; and in particular, that footnote would use, as
+//   * callout, something which gave information about the verse involved in the
+//   * reversification activity.
+//   *
+//   * It is probably a little invidious to say exactly what happens here now,
+//   * because it seems to change quite regularly.
+//   *
+//   * We may or may not have a footnote, depending upon the type of
+//   * reversification run (conversion-time or runtime) and whether we are
+//   * creating a basic or an academic module.
+//   *
+//   * We may or may not take verse details from the NoteMarker details in the
+//   * reversification row and embed them in the output (standard) verse, normally
+//   * to indicate what served as the source verse.
+//   *
+//   * One thing we *don't* do any more, though, is to use information from the
+//   * NoteMarker details as the callout for the reversification footnote.  There
+//   * is no point in doing so, because STEPBible always renders the callout as a
+//   * down-arrow, regardless of what we request here.
+//   *
+//   * @param sidNode The sid node of the verse to which the footnote is to be
+//   *   added.
+//   *
+//   * @param row: The reversification row which gives the salient details.
+//   *
+//   * @param reversificationType C(onversionTime) or R(untime)
+//   *
+//   */
+//
+//  fun addFootnoteAndSourceVerseDetailsToVerse (sidNode: Node, row: ReversificationDataRow, reversificationType: Char)
+//  {
+//    /**************************************************************************/
+//    val reversificationType = 'C' // Runtime.
+//    val reversificationNoteType = ConfigData["stepReversificationNoteType"]?.first()?.uppercaseChar() ?: 'B' // A(cademic) or B(asic).
+//    val footnoteNodes = m_Caller.makeFootnote(sidNode.ownerDocument, row, reversificationType, reversificationNoteType) as MutableList<Node> ?: return
+//    if (footnoteNodes.isNotEmpty())
+//      IssueAndInformationRecorder.addGeneratedFootnote(Ref.rd(row.sourceRefAsRefKey).toString() + " (ReversificationFootnote)")
+//
+//
+//
+//    /**************************************************************************/
+//    /* Check if we need the text which will typically be superscripted and
+//       bracketed. */
+//
+//    val alternativeRefCollection = row.calloutDetails.alternativeRefCollection
+//    if (null != alternativeRefCollection)
+//    {
+//      val basicContent = if (row.calloutDetails.alternativeRefCollectionHasEmbeddedPlusSign)
+//        alternativeRefCollection.getLowAsRef().toString("a") + TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferenceEmbeddedPlusSign") + alternativeRefCollection.getHighAsRef().toString("a")
+//      else if (row.calloutDetails.alternativeRefCollectionHasPrefixPlusSign)
+//        TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferencePrefixPlusSign") + alternativeRefCollection.toString("a")
+//      else
+//        alternativeRefCollection.toString("a")
+//
+//      val textNode = Dom.createTextNode(sidNode.ownerDocument, TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferenceFormat", basicContent))
+//      val containerNode = Dom.createNode(sidNode.ownerDocument, "<_X_reversificationCalloutAlternativeRefCollection/>")
+//      containerNode.appendChild(textNode)
+//      footnoteNodes.add(containerNode)
+//    }
+//
+//
+//
+//    /**************************************************************************/
+//    /* Add the source verse details.  I do this in two bites.  I always add
+//       a stylised comment giving the source verse details.  */
+//
+//    val sourceRefCollection = row.calloutDetails.sourceVerseCollection
+//    if (null != sourceRefCollection)
+//    {
+//      val sourceRefCollectionAsPossiblyAbbreviatedString = sourceRefCollection.toStringUsx()
+//      val sidRefLow = RefCollection.rdOsis(sidNode["sID"]!!).getLowAsRef()
+//      val sourceRefLow = RefCollection.rdUsx(sourceRefCollectionAsPossiblyAbbreviatedString, sidRefLow, "v").getLowAsRef()
+//      if (sidRefLow != sourceRefLow)
+//        Logger.error(sidRefLow.toRefKey(), "altVerse error (reversification data gives $sourceRefCollectionAsPossiblyAbbreviatedString).")
+//
+//      val basicContent = sourceRefCollection.toString("a")
+//      val altVerseNumber = TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferenceFormat", basicContent)
+//      val textNode = Dom.createTextNode(sidNode.ownerDocument, altVerseNumber)
+//      val containerNode = Dom.createNode(sidNode.ownerDocument, "<_X_reversificationCalloutSourceRefCollection/>")
+//      containerNode.appendChild(textNode)
+//      footnoteNodes.add(containerNode)
+//    }
+//
+//
+//
+//    /**************************************************************************/
+//    footnoteNodes.reversed().forEach { Dom.insertNodeAfter(sidNode, it) }
+//  }
+//
+//
+//
+//
+//
+//  /****************************************************************************/
+//  /****************************************************************************/
+//  /**                                                                        **/
+//  /**                                Private                                 **/
+//  /**                                                                        **/
+//  /****************************************************************************/
+//  /****************************************************************************/
+//
+//  /****************************************************************************/
+//  private val C_ReversificationNotesLevel_None = 999
+//  private val C_ReversificationNotesLevel_Basic = 0
+//  private val C_ReversificationNotesLevel_Academic = 1
+//  private var m_ReversificationNotesLevel = C_ReversificationNotesLevel_None
+//
+//
+//  /****************************************************************************/
+//  private fun getReversificationNotesLevel ()
+//  {
+//     when (ConfigData["stepReversificationFootnoteLevel"]!!.lowercase())
+//     {
+//       "basic" ->    m_ReversificationNotesLevel = C_ReversificationNotesLevel_Basic
+//       "academic" -> m_ReversificationNotesLevel = C_ReversificationNotesLevel_Academic
+//     }
+//  }
+//
+//
+//  /****************************************************************************/
+//  /* Used where we want to have a standard footnote callout on reversified
+//     verses, rather than use the callout defined in the reversification data. */
+//
+//  private var m_FootnoteCalloutGenerator: MarkerHandler =
+//    MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!)
+//
+//  private val m_Caller: PA_ReversificationHandler_ConversionTime
+//
+//  init {
+//    getReversificationNotesLevel() // So we know what kinds of footnotes are needed,
+//    m_Caller = caller
+//  }
+//
+//
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+////  /****************************************************************************/
+////  override fun makeChapter (rootNode: Node, bookAbbreviation: String, chapterNo: Int)
+////  {
+////    val chapterNode = Dom.createNode(rootNode.ownerDocument, "<chapter osisID='$bookAbbreviation $chapterNo'>")
+////    rootNode.appendChild(chapterNode)
+////
+////    val verseId = "$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}"
+////
+////    var verseNode = Dom.createNode(rootNode.ownerDocument, "<verse osisID='$verseId' sID='$verseId'/>"); NodeMarker.setDummy(verseNode)
+////    chapterNode.appendChild(verseNode)
+////
+////    verseNode = Dom.createNode(rootNode.ownerDocument, "<verse eID='verseId'/>"); NodeMarker.setDummy(verseNode)
+////    chapterNode.appendChild(verseNode)
+////  }
+////}
+//
+//
+//
+//
+//
+/////******************************************************************************/
+////class PROBABLY_NOT_WORKING_Usx_ConversiontimeReversificationHandler: PROBABLY_NOT_WORKING_PA_ConversionTimeReversification()
+////{
+////  /****************************************************************************/
+////  override fun makeBook (bookNo: Int)
+////  {
+////    val bookName = BibleBookNamesUsx.numberToAbbreviatedName(bookNo)
+////
+////    val factory = DocumentBuilderFactory.newInstance()
+////    val builder = factory.newDocumentBuilder()
+////
+////    val doc = builder.newDocument()
+////    val documentRoot = doc.createElement("<usx version='3.0'>")
+////    val bookRoot = Dom.createNode(doc, "<book code='$bookName'/>")
+////    documentRoot.appendChild(bookRoot)
+////    for (i in 1 .. BibleStructure.makeOsis2modNrsvxSchemeInstance(m_BibleStructure!!).getLastChapterNo(bookName)) makeChapter(bookRoot, bookName, i)
+////
+////    m_DataCollection.addFromDoc(doc)
+////  }
+////
+////
+////  /****************************************************************************/
+////  fun makeChapter (rootNode: Node, bookAbbreviation: String, chapterNo: Int)
+////  {
+////    val chapterNode = Dom.createNode(rootNode.ownerDocument, "<chapter sid='$bookAbbreviation $chapterNo' _X_revAction='generatedChapter'>")
+////    rootNode.appendChild(chapterNode)
+////
+////    var verseNode = Dom.createNode(rootNode.ownerDocument, "<verse sid='$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}'/>"); NodeMarker.setDummy(verseNode)
+////    chapterNode.appendChild(verseNode)
+////
+////    verseNode = Dom.createNode(rootNode.ownerDocument, "<verse eid='$bookAbbreviation $chapterNo:${RefBase.C_BackstopVerseNumber}'/>"); NodeMarker.setDummy(verseNode)
+////    chapterNode.appendChild(verseNode)
+////  }
+//
+//
+///******************************************************************************/
+///* Code from the most recent previous version.   The first portion -- headed
+//   'Data aggregation' -- contains code needed to pick up Moves and to
+//   accumulate them into collections such that the collection can be moved en
+//   masse, rather than moving verses one at a time.  Something along these lines
+//   will be needed if we ever decide to reinstate conversion-time
+//   restructuring. */
+//
+//
+//
+//
+//
+
+//    dataRow.processingFlags = dataRow.processingFlags.or(
+//      when (dataRow.action)
+//      {
+//        "emptyverse"     -> C_CreateIfNecessary
+//        "ifabsent"       -> C_CreateIfNecessary
+//        "ifempty"        -> 0
+//        "keepverse"      -> getAllBiblesComplaintFlag(dataRow)
+//        "mergedverse"    -> C_CreateIfNecessary
+//        "missingverse"   -> C_CreateIfNecessary
+//        "psalmtitle"     -> C_ComplainIfStandardRefDidNotExist
+//        "renumbertitle"  -> C_ComplainIfStandardRefExisted.or(C_StandardIsPsalmTitle).or(if ("title" in getField("SourceRef", dataRow).lowercase()) C_SourceIsPsalmTitle else 0).or(if ("title" in getField("StandardRef", dataRow).lowercase()) C_StandardIsPsalmTitle else 0)
+//        "renumberverse"  -> C_ComplainIfStandardRefExisted.or(C_Renumber)
+//        "renumberverse*" -> C_ComplainIfStandardRefExisted.or(C_Renumber).or(C_Move)
+//        else             -> 0
+//    })
+//
+//
+//  /****************************************************************************/
+//  /* This is revolting; I can only assume that the need for it became apparent
+//     late in the day, when it would have been too difficult to rejig the
+//     reversification data to handle it properly.
+//
+//     Lots of rows are marked 'AllBibles' in the SourceType field, and most of
+//     these are marked KeepVerse.  Normally KeepVerse retains an existing verse
+//     and complains if the verse does not already exist.
+//
+//     However, on AllBibles rows, KeepVerse is allowed to create verses if they
+//     don't already exist -- except that in a further twist, it has to issue a
+//     warning in some cases (but not all) if it has to create the verse.
+//
+//     And just to make life thoroughly awful, the way I am required to
+//     distinguish these cases has to be based upon the contents of the FootnoteA
+//     column -- certain things there imply that a warning is needed, while others
+//     do not.  (The problem being here that this field is free-form text, so
+//     sooner or later it is going to change, sure as eggs is eggs, and I shan't
+//     realise that's an issue.) */
+//
+//  private val m_NoteAOptionsText = listOf("At the end of this verse some manuscripts add information such as where this letter was written",
+//                                          "In some Bibles this verse is followed by the contents of Man.1 (Prayer of Manasseh)",
+//                                          "In some Bibles this verse starts on a different word")
+//
+//  private fun getAllBiblesComplaintFlag (row: ReversificationDataRow): Int
+//  {
+//    val noteA = getField("Reversification Note", row)
+//    return if (m_NoteAOptionsText.contains(noteA)) C_ComplainIfStandardRefDidNotExist else 0
+//  }
+//
+//
+//
+//
+//

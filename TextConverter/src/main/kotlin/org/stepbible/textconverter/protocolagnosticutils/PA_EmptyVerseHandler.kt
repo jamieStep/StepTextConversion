@@ -152,6 +152,7 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
 
   fun createEmptyVerseForElision (doc: Document, refKey: RefKey, wantEid: Boolean, reasonMarker: String = "elision"): List<Node>
   {
+    //Dbg.d("EmptyVerseForElision: " + Ref.rd(refKey).toString())
     val sid = m_FileProtocol.makeVerseSidNode(doc, Pair(refKey, null))
     val content = createEmptyContent(doc, m_Content_Elision)
     NodeMarker.setEmptyVerseType(sid, reasonMarker) // May be overwritten with a more specific value by the caller.
@@ -214,6 +215,7 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
 
   fun createEmptyVerseForReversification (insertBefore: Node, sidRefKey: RefKey): Pair<Node, Node>
   {
+    //Dbg.d("EmptyVerseForReversification: " + Ref.rd(sidRefKey).toString())
     val start = m_FileProtocol.makeVerseSidNode(insertBefore.ownerDocument, Pair(sidRefKey, null))
     val end   = m_FileProtocol.makeVerseEidNode(insertBefore.ownerDocument, Pair(sidRefKey, null))
 
@@ -270,9 +272,9 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
 
   private fun annotateVerseWhichWasEmptyInRawText (sid: Node)
   {
-    val footnoteText = AnticipatedIfEmptyDetails.getFootnote(m_FileProtocol.getSidAsRefKey(sid)) ?: TranslatableFixedText.stringFormat(Language.Vernacular, "V_emptyContentFootnote_verseEmptyInThisTranslation")
+    val footnoteText = TranslatableFixedText.stringFormat(Language.Vernacular, "V_emptyContentFootnote_verseEmptyInThisTranslation")
     val sidAsRefKey = m_FileProtocol.readRef(sid[m_FileProtocol.attrName_verseSid()]!!).toRefKey()
-    val footnoteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToVerseWhichWasEmptyInRawText, sid.ownerDocument, sidAsRefKey, footnoteText, caller = null)
+    val footnoteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToVerseWhichWasEmptyInRawTextGeneric, sid.ownerDocument, sidAsRefKey, footnoteText, caller = null)
     if (null == footnoteNode)
     {
       NodeMarker.setEmptyVerseType(sid, "emptyInRawText")
@@ -302,9 +304,10 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
 
   private fun createEmptyVerseForMissingVerse (rootNode: Node, refKey: RefKey, insertBefore: Node?): Pair<Node, Node>
   {
+    //Dbg.d("EmptyVerseForMissingVerse: " + Ref.rd(refKey).toString())
     Logger.info(refKey, "Created verse which was missing from the original text.")
 
-    val footnoteText = AnticipatedIfEmptyDetails.getFootnote(refKey) ?: TranslatableFixedText.stringFormat(Language.Vernacular, "V_emptyContentFootnote_verseWasMissing")
+    val footnoteText = TranslatableFixedText.stringFormat(Language.Vernacular, "V_emptyContentFootnote_verseWasMissing")
 
     val start = m_FileProtocol.makeVerseSidNode(rootNode.ownerDocument, Pair(refKey, null))
     val end   = m_FileProtocol.makeVerseEidNode(rootNode.ownerDocument, Pair(refKey, null))
@@ -312,7 +315,7 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
 
     val ib = insertBefore ?: Dom.createNode(rootNode.ownerDocument,"<TempNode/>")
     Dom.insertNodeBefore(ib, start)
-    val footnoteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToVerseGeneratedToFillHoles, rootNode.ownerDocument, refKey, footnoteText)
+    val footnoteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToVerseGeneratedToFillHolesGeneric, rootNode.ownerDocument, refKey, footnoteText)
     if (null != footnoteNode) Dom.insertNodeBefore(ib, footnoteNode)
     Dom.insertNodeBefore(ib, createEmptyContent(rootNode.ownerDocument, m_Content_MissingVerse))
     Dom.insertNodeBefore(ib, end)

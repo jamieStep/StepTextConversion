@@ -1,6 +1,5 @@
 package org.stepbible.textconverter.applicationspecificutils
 
-import org.stepbible.textconverter.protocolagnosticutils.PA_EmptyVerseHandler
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
@@ -13,6 +12,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceShouldHaveBeenOverridden
+import org.stepbible.textconverter.protocolagnosticutils.PA_EmptyVerseHandler
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
@@ -43,9 +43,8 @@ open class X_FileProtocol
   /****************************************************************************/
 
   /****************************************************************************/
-  enum class ProtocolType { USX, OSIS, UNKNOWN }
+  enum class ProtocolType { USX, OSIS }
   lateinit var Type: ProtocolType
-  fun getProtocolType () = Type
 
   open fun getEmptyVerseHandler (): PA_EmptyVerseHandler = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
 

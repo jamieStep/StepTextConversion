@@ -285,7 +285,10 @@ object Osis_BasicValidator
 
     val duplicateVerses = dataCollection.getBibleStructure().getDuplicateVersesForText()
     if (duplicateVerses.isNotEmpty())
+    {
+      Dbg.d(dataCollection.getDocument())
       Logger.error("Locations where we have duplicate verses: " + duplicateVerses.joinToString(", "){ Ref.rd(it).toString() })
+    }
   }
 
 

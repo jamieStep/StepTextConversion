@@ -238,7 +238,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   * @return book numbers.
   */
 
-  fun getBookNumbers () = m_BookNumberToRootNode.keys.filter { Dbg.wantToProcessBook(it) }
+  fun getBookNumbers () = m_BookNumberToRootNode.keys.filter { null != m_BookNumberToRootNode[it] && Dbg.wantToProcessBook(it) }
 
 
   /****************************************************************************/

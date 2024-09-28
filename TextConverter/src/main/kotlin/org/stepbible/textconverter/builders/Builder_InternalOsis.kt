@@ -8,9 +8,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.applicationspecificutils.*
-import org.w3c.dom.Document
 import org.w3c.dom.Node
 
 /******************************************************************************/
@@ -149,7 +147,8 @@ object Builder_InternalOsis: Builder()
 
     /**************************************************************************/
     Dbg.reportProgress("\nPerforming reversification if necessary.")
-    handleReversification(); x()   // Does what it says on the tin.
+    Osis_DetermineReversificationTypeEtc.process()
+    PA_ReversificationHandler.instance().process(InternalOsisDataCollection); x()
 
 
 
@@ -272,55 +271,6 @@ object Builder_InternalOsis: Builder()
   /****************************************************************************/
   /****************************************************************************/
 
-  /***************************************************************************/
-  /* Time to worry about reversification.  First off, we need to read the
-     data and determine how far adrift of NRSVA we are, so we can decide what
-     kind of reversification (if any) might be appropriate.
-
-     There are then three possible values for stepReversificationType:
-
-     - runtime: This says that any restructuring will be carried out within
-       STEPBible at run-time when necessary to support added value features.
-
-     - conversiontime: This says that we will restructure the text during the
-       conversion process so as to produce something which is already NRSV(A)
-       compliant.  This will probably not be used much, because the sort of
-       large-scale changes which it gives rise to are usually rules out by
-       licence conditions.  (We may use it on public domain texts aimed mainly
-       at an academic audience who can understand what's going on.)
-
-     - none: This rules out most restructuring (but not all - see below).  It
-       will be selected where we are definitely generating public domain texts
-       and conversion-time restructuring has not been chosen; and where texts
-       are already NRSV(A) compliant, so that no restructuring is required.
-
-     There is one particular consideration -- missing verses.  Even where texts
-     are 'complete' in the sense that they contain a full complement of books
-     and chapters, it is not always the case that they contain all verses.
-
-     Sometimes, verses may be missing at the ends of chapters.  In general, this
-     is not a problem -- nothing will break as a result.  But sometimes verses
-     may be missing within the body of a chapter, and this _is_ a problem.
-
-     The reversification data foresees this issue in 'recognised' cases and
-     includes data rows which address it.  But it is always possible that
-     texts may lack verses nonetheless.
-   */
-
-  private fun handleReversification ()
-  {
-    //Dbg.d(InternalOsisDataCollection.getDocument())
-    Osis_DetermineReversificationTypeEtc.process()
-    ReversificationData.process(InternalOsisDataCollection) // Read the data.
-
-    when (ConfigData["stepReversificationType"]!!.lowercase())
-    {
-      "runtime" -> PA_RuntimeReversificationHandler.process(InternalOsisDataCollection)
-      "conversiontime" -> throw StepExceptionBase("Conversion-time reversification probably doesn't work at present.") // Osis_SE_ConversiontimeReversification(InternalOsisDataCollection).processDataCollection()
-    }
-  }
-
-
   /****************************************************************************/
   /* Inserts dummy verse sids at the ends of chapters so we always have
      something we can insert stuff _before_. */
@@ -347,7 +297,7 @@ object Builder_InternalOsis: Builder()
 
 
     /**************************************************************************/
-    val chapterNodes = dataCollection.getRootNodes().forEach { bookNode ->
+    dataCollection.getRootNodes().forEach { bookNode ->
       bookNode.findNodesByName(dataCollection.getFileProtocol().tagName_chapter()).forEach(::addDummyVerseToChapter)
     }
 

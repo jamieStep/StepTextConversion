@@ -21,6 +21,23 @@ object StepStringUtils
 
   /****************************************************************************/
   /**
+   * Takes a string comprising one or more whitespace-separated words, trims
+   * it, and returns a string where the first letter of each word is capitalsed,
+   * with words separated by a single space.
+   *
+   * @param s String to be processed.
+   * @return Capitalised string.
+   */
+
+  fun capitaliseWords (s: String): String
+  {
+    val x = s.split("\\s+".toRegex()).toMutableList()
+    return x.joinToString(" "){ it[0].uppercase() + it.substring(1) }
+  }
+
+
+  /****************************************************************************/
+  /**
   * Takes a potentially multi-line string.  Replaces newlines by spaces,
   * multiple spaces by single spaces, and trims spaces from start and end.
   *

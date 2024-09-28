@@ -504,6 +504,15 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
 
+  fun isEmptyVerse (verseOrSubverseRef: Ref)            = commonIsEmptyVerse(makeElts(verseOrSubverseRef))
+  fun isEmptyVerse (verseOrSubverseRefKey: RefKey)      = commonIsEmptyVerse(makeElts(verseOrSubverseRefKey))
+  fun isEmptyVerse (b: Int, c: Int, v: Int, s: Int = 0) = commonIsEmptyVerse(makeElts(b, c, v, s))
+  fun isEmptyVerse (verseOrSubverseRefAsString: String) = commonIsEmptyVerse(makeElts(verseOrSubverseRefAsString))
+  fun isEmptyVerse (elts: IntArray)                     = commonIsEmptyVerse(elts)
+
+
+
+
 
   /****************************************************************************/
   /* Errors, issues and oddities. */
@@ -1145,6 +1154,11 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   /****************************************************************************/
   protected open fun commonHasCanonicalTitle (elts: IntArray) = Ref.rd(elts[0], elts[1], 0).toRefKey() in m_Text.m_CanonicalTitleDetails
+
+
+  /****************************************************************************/
+  private val C_CanonicalTextSizeWhichRepresentsEmptyVerse = 5
+  protected open fun commonIsEmptyVerse (elts: IntArray) = commonGetCanonicalTextSize(elts) <= C_CanonicalTextSizeWhichRepresentsEmptyVerse
 
 
   /****************************************************************************/

@@ -8,6 +8,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.protocolagnosticutils.PA_ReversificationHandler
 import java.io.File
 import java.io.PrintWriter
 
@@ -165,7 +166,7 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
   {
     ConfigData["stepVersificationScheme"] = /* "x11n_" + */ ConfigData["stepModuleName"]!!
     populateBibleStructure(InternalOsisDataCollection.getBibleStructure())
-    m_BibleStructure.jswordMappings = ReversificationData.getRuntimeReversificationMappings()
+    m_BibleStructure.jswordMappings = PA_ReversificationHandler.instance().getRuntimeReversificationMappings()
     outputJson(filePath)
   }
 

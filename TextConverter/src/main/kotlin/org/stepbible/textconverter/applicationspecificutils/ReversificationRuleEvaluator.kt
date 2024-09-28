@@ -5,6 +5,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Bibl
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.protocolagnosticutils.PA_ReversificationHandler
 
 
 /******************************************************************************/
@@ -78,13 +79,12 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
   /**
    * Checks to see if a given rule passes.
    *
-   * @param sourceRef The reference for the source verse.
    * @param theRuleData The rule.
-   * @param row Raw row data, used only in error messages.
+   * @param rowAsString Raw row data, used only in error messages.
    * @return True if the rule passes.
    */
 
-  fun rulePasses (sourceRef: Ref?, theRuleData: String, row: ReversificationDataRow): Boolean
+  fun rulePasses (theRuleData: String, rowAsString: String): Boolean
   {
     /**************************************************************************/
     //Dbg.d(row.rowNumber in listOf(1123))
@@ -93,22 +93,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
 
 
     /**************************************************************************/
-    if (null != sourceRef)
-    {
-      if (0 == sourceRef.getV()) // Within the reversification data, the canonical title is held as v0, but we need to split that case out for existence checks.
-      {
-        if (!m_BibleStructure.hasCanonicalTitle(sourceRef)) return false
-      }
-      else
-      {
-        if (!m_BibleStructure.verseOrSubverseExistsAsSpecified(sourceRef)) return false
-      }
-    }
-
-
-
-    /**************************************************************************/
-    m_Row = row
+    m_RowAsString = rowAsString
     val ruleData = theRuleData.replace("\\s+".toRegex(), "").lowercase()
     if (ruleData.isEmpty()) return true
 
@@ -200,7 +185,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
             refCollectionAsString = bits[1]
         }
 
-        val refs = RefCollection.rdUsx(ReversificationData.usxifyFromStepFormat(refCollectionAsString)).getAllAsRefs()
+        val refs = RefCollection.rdUsx(PA_ReversificationHandler.usxifyFromStepFormat(refCollectionAsString)).getAllAsRefs()
 
         var overallSize = 0
         var ref = m_BackstopDefaultRef
@@ -236,7 +221,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
   /****************************************************************************/
   private fun lengthWarning (theMsg: String)
   {
-    val msg = "$theMsg ($m_Row)"
+    val msg = "$theMsg ($m_RowAsString)"
     IssueAndInformationRecorder.reversificationIssue(msg)
   }
 
@@ -269,12 +254,27 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
 
 
     /**************************************************************************/
-    var text = theText
+    var text = theText.lowercase()
+    if ("empty" in text) // This caters for empty / emptyOrNotExist.  In fact at the time of writing I anticipate only the latter will be of interest.
+    {
+      if ("exist" in text)
+      {
+        if (subrulePasses(text.replace("emptyor", ""))) // Try the 'notExist' part.
+          return true
+      }
+
+      val ref = Ref.rdUsx(PA_ReversificationHandler.usxifyFromStepFormat(text.split("=")[0]), m_BackstopDefaultRef, "v")
+      return m_BibleStructure.isEmptyVerse(ref)
+    }
+
+
+
+    /**************************************************************************/
     if (text.contains("last"))
     {
       var ref = m_BackstopDefaultRef
       text = text.replace("last", "").replace("=", "").trim()
-      ref = RefCollection.rdUsx(ReversificationData.usxifyFromStepFormat(text), ref, "v").getFirstAsRef()
+      ref = RefCollection.rdUsx(PA_ReversificationHandler.usxifyFromStepFormat(text), ref, "v").getFirstAsRef()
       return m_BibleStructure.getLastVerseNo(ref.toRefKey_bc()) == ref.getV()
     }
 
@@ -296,12 +296,12 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
       if (text.contains(":title"))
       {
         text = text.split(":")[0]
-        ref = RefCollection.rdUsx(ReversificationData.usxifyFromStepFormat(text), ref, "v").getFirstAsRef()
+        ref = RefCollection.rdUsx(PA_ReversificationHandler.usxifyFromStepFormat(text), ref, "v").getFirstAsRef()
         res = m_BibleStructure.hasCanonicalTitle(ref)
       }
       else
       {
-        ref = RefCollection.rdUsx(ReversificationData.usxifyFromStepFormat(text), ref).getFirstAsRef()
+        ref = RefCollection.rdUsx(PA_ReversificationHandler.usxifyFromStepFormat(text.uppercase()), ref).getFirstAsRef()
         res = m_BibleStructure.verseOrSubverseExistsAsSpecified(ref.toRefKey_bcvs())
       }
 
@@ -325,7 +325,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
   private val m_BibleStructure = dataCollection.getBibleStructure()
   private val m_BackstopDefaultRef = Ref.rd(999, 999, 999, 0)
   private val m_DataCollection = dataCollection
-  private lateinit var m_Row: ReversificationDataRow
+  private lateinit var m_RowAsString: String
   private val m_KnownResults: MutableMap<String, Boolean> = HashMap()
 
 

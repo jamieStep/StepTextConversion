@@ -30,7 +30,7 @@ import kotlin.io.path.Path
  *      |   |
  *      |   + -- Possibly metadata.xml, licence.xml, etc.
  *      |
- *      +-- _Output
+ *      +-- _Output_xxx (xxx = step, or public, or may have two _Output_ folders.
  *      |   |
  *      |   + -- InternalOsis
  *      |   |
@@ -260,10 +260,10 @@ object FileLocations
   /* Log files. */
 
   fun getConverterLogFileName () = "converterLog.txt"
-  fun getConverterLogFilePath () = Paths.get(m_RootFolderPath, getConverterLogFileName()).toString()
+  fun getConverterLogFilePath () = Paths.get(getOutputFolderPath(), getConverterLogFileName()).toString()
   fun getOsisToModLogFileName () = "osis2ModLog.txt"
-  fun getOsisToModLogFilePath () = Paths.get(m_RootFolderPath, getOsisToModLogFileName()).toString()
-  fun getDebugOutputFilePath () = Paths.get(m_RootFolderPath, "debugLog.txt").toString()
+  fun getOsisToModLogFilePath () = Paths.get(getOutputFolderPath(), getOsisToModLogFileName()).toString()
+  fun getDebugOutputFilePath () = Paths.get(getOutputFolderPath(), "debugLog.txt").toString()
   fun getTemporaryInvestigationsFolderPath() =
     if (null == ConfigData["stepTemporaryInvestigationsFolderPath"])
       Paths.get(ConfigData["stepTextConverterOverallDataRoot"]!!, "_DebugOutput_").toString()
@@ -337,12 +337,12 @@ object FileLocations
      need renaming -- if we have an xxx file in the repository, it's a sure sign
      I've forgotten to do something. */
 
-  fun getInternalSwordFolderPath               () = Paths.get(getOutputFolderPath(), "Sword").toString()
+  fun getInternalSwordFolderPath () = Paths.get(getOutputFolderPath(), "Sword").toString()
 
-  fun getInternalOsisFolderPath                () = Paths.get(getOutputFolderPath(), "InternalOsis").toString()
-  fun getInternalOsisFilePath                  () = Paths.get(getInternalOsisFolderPath(), "internalOsis.${getFileExtensionForOsis()}").toString()
+  fun getInternalOsisFolderPath  () = Paths.get(getOutputFolderPath(), "InternalOsis").toString()
+  fun getInternalOsisFilePath    () = Paths.get(getInternalOsisFolderPath(), "internalOsis.${getFileExtensionForOsis()}").toString()
 
-  fun getOutputFolderPath                      () = Paths.get(getRootFolderPath(), "_Output_" + ConfigData["stepTargetAudience"]!!).toString()
+  fun getOutputFolderPath      () = Paths.get(getRootFolderPath(), "_Output_" + ConfigData["stepTargetAudience"]!!).toString()
 
 
 

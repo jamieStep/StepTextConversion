@@ -15,6 +15,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.con
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
+import org.stepbible.textconverter.protocolagnosticutils.PA_ReversificationHandler
 import org.w3c.dom.Node
 
 
@@ -648,20 +649,20 @@ object IssueAndInformationRecorder
 
 
     /**************************************************************************/
-    val referenceMappings = ReversificationData.getAugmentedReferenceMappings()
+    val referenceMappings = PA_ReversificationHandler.instance().getRuntimeReversificationMappings()
     if (referenceMappings.isNotEmpty())
     {
       m_RunFeatures.HasReversificationMappings = true
-      m_RunFeatures.ReversificationMappings = referenceMappings.map { Ref.rd(it.key).toString() + " -> " + Ref.rd(it.value.first).toString() + ", " + ReversificationData.getSourceType(it.value.second) }
+      m_RunFeatures.ReversificationMappings = referenceMappings.map { Ref.rd(it.first).toString() + " -> " + Ref.rd(it.second).toString() }
     }
 
 
 
     /**************************************************************************/
-    val acceptedRows = ReversificationData.getAllAcceptedRows()
+    val acceptedRows = PA_ReversificationHandler.instance().getSelectedRowsAsStrings()
     if (acceptedRows.isNotEmpty())
     {
-      m_RunFeatures.AcceptedReversificationRows = acceptedRows.map { it.toString() }
+      m_RunFeatures.AcceptedReversificationRows = acceptedRows
       m_RunFeatures.HasAcceptedReversificationRows = true
     }
 

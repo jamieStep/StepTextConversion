@@ -176,9 +176,12 @@ object Builder_Master: Builder()
   {
     Dbg.reportProgress(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
     Dbg.reportProgress(">>>>>>>>>> Start of processing for ${ConfigData["stepModuleName"]} (${ConfigData["stepTargetAudience"]} use).")
+
+    getSpecialBuilders().forEach { it.process() } // These aren't supposed to generate a repository package, and will exit after processing if they are invoked.
+
     deleteLogFilesEtc()
     StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
-    getSpecialBuilders().forEach { it.process() } // These aren't supposed to generate a repository package, and will exit after processing if they are invoked.
+
     Builder_RepositoryPackage.process()
   }
 
@@ -282,8 +285,8 @@ object Builder_Master: Builder()
       }
 
     FileLocations.initialise(rootFolderPath)
-    Logger.setLogFile(FileLocations.getConverterLogFilePath())
     ConfigData.extractDataFromRootFolderName()
+    Logger.setLogFile(FileLocations.getConverterLogFilePath())
     ConfigData.load(FileLocations.getStepConfigFileName())
     CommandLineProcessor.copyCommandLineOptionsToConfigData()
 

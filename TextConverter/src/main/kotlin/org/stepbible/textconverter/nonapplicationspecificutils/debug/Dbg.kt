@@ -2,13 +2,11 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.debug
 
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNames
-import org.stepbible.textconverter.applicationspecificutils.ReversificationDataRow
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceBase
+import org.stepbible.textconverter.protocolagnosticutils.ReversificationDataRow
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
@@ -435,7 +433,7 @@ object Dbg
   * @return Latest message.
   */
 
-  fun getActiveProcessingId () = if (m_ActiveProcessingIds.isEmpty()) "" else m_ActiveProcessingIds.peek()
+  fun getActiveProcessingId (): String = if (m_ActiveProcessingIds.isEmpty()) "" else m_ActiveProcessingIds.peek()
 
 
   /****************************************************************************/
@@ -445,7 +443,7 @@ object Dbg
   * @return What, until now, was the message at the top of the stack.
   */
 
-  fun popActiveProcessingIds () = m_ActiveProcessingIds.pop()
+  fun popActiveProcessingIds (): String = m_ActiveProcessingIds.pop()
 
 
   /****************************************************************************/

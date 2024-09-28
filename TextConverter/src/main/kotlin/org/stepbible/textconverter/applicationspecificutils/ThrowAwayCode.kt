@@ -20,6 +20,15 @@ import kotlin.system.exitProcess
 object ThrowAwayCode
 {
   /****************************************************************************/
+  fun testCharacterEntitySize ()
+  {
+    var doc = Dom.getDocumentFromText("<a>&#8212;</a>",false)
+    println(doc.documentElement.textContent.length)
+    exitProcess(0)
+  }
+
+
+  /****************************************************************************/
   fun testGetVersion ()
   {
     val clazzA = object {}.javaClass.enclosingClass
